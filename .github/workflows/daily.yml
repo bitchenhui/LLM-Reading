@@ -1,0 +1,64 @@
+name: daily
+
+# 引擎定时化：每日拉取→审阅→深读(增量3篇)→周报→校验→提交推送。
+# push 触发 Pages 工作流，前端随之自动更新——整条链路无人值守。
+# 需要 repo secret：ZHIPU_API_KEY（zhipu 密钥）。
+
+on:
+  schedule:
+    - cron: "30 1 * * *"   # UTC 01:30 = 北京 09:30
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+
+      - name: 写入 LLM 配置（密钥来自 secret，不入库）
+        run: |
+          cat > config/llm.local.yaml <<EOF
+          base_url: https://open.bigmodel.cn/api/v1
+          api_key: ${ZHIPU_API_KEY}
+          wire: responses
+          models:
+            review: glm-5.3-flash
+            deep: glm-5.3
+          request:
+            review_reasoning: high
+            deep_reasoning: max
+            max_output_tokens: 8000
+          EOF
+        env:
+          ZHIPU_API_KEY: ${{ secrets.ZHIPU_API_KEY }}
+
+      - name: 检索（arXiv 增量 + 仓库 releases）
+        run: |
+          uv run --with pyyaml python scripts/fetch_arxiv.py
+          uv run --with pyyaml python scripts/fetch_releases.py
+
+      - name: 审阅入库
+        run: uv run --with pyyaml python scripts/llm_review.py
+
+      - name: 深读（每日 3 篇增量消化 deep_read 积压）
+        run: uv run --with pyyaml --with pymupdf python scripts/deep_read.py --limit 3
+
+      - name: 周报、语料与校验
+        run: |
+          uv run --with pyyaml python scripts/make_digest.py --days 7
+          uv run --with pyyaml python scripts/export_corpus.py
+          uv run --with pyyaml python scripts/validate_kb.py
+
+      - name: 提交推送
+        run: |
+          find paper -size +90M -delete 2>/dev/null || true   # 防 GitHub 100MB 拒收
+          git config user.name "engine-bot"
+          git config user.email "engine-bot@users.noreply.github.com"
+          git add kb/ queue/ docs/ paper/ corpus/
+          git diff --cached --quiet || git commit -m "chore(engine): daily run $(date -u +%F)"
+          git push
