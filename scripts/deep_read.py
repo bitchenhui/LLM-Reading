@@ -151,6 +151,9 @@ def main() -> int:
                               d["time"]["published"]), reverse=True)
     cands = cands[: args.limit]
     print(f"deep_read 候选 {len(cands)} 篇（本次处理）\n")
+    if not cands:
+        print("无候选（全部已深读或无 deep_read 判定）——正常退出")
+        return 0
 
     today = date.today().isoformat()
     n_ok = 0
