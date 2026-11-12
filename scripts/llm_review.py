@@ -121,11 +121,13 @@ class LLM:
                 raise RuntimeError(f"HTTP {e.code}: {body}") from e
         raise RuntimeError(f"重试耗尽: {last}")
 
-    def chat(self, prompt: str, tier: str = "review") -> str:
+    def chat(self, prompt: str, tier: str = "review", instructions: str | None = None,
+             max_tokens: int | None = None) -> str:
         model = self.models[tier]
-        max_tok = self.req.get("max_output_tokens", 4000)
+        max_tok = max_tokens or self.req.get("max_output_tokens", 4000)
+        system = instructions if instructions is not None else INSTRUCTIONS
         if self.wire == "responses":
-            payload = {"model": model, "input": prompt, "instructions": INSTRUCTIONS,
+            payload = {"model": model, "input": prompt, "instructions": system,
                        "max_output_tokens": max_tok}
             effort = self.req.get(f"{tier}_reasoning")
             if effort:
@@ -140,7 +142,7 @@ class LLM:
                 raise
             self._track(resp.get("usage"))
             return self._extract_responses(resp)
-        messages = [{"role": "system", "content": INSTRUCTIONS},
+        messages = [{"role": "system", "content": system},
                     {"role": "user", "content": prompt}]
         resp = self._post(f"{self.base}/chat/completions",
                           {"model": model, "messages": messages, "max_tokens": max_tok})
@@ -182,6 +184,34 @@ def parse_llm_json(text: str) -> dict:
 
 # ---------- 裁剪与落库 ----------
 
+# research_lines 的实体启发式：LLM 漏填时兜底（顺序即优先级，具体方向先于笼统方向）
+LINE_MARKERS: list[tuple[str, set[str]]] = [
+    ("coding_for_machines", {"concept:ICM"}),
+    ("generative_compression", {"concept:DiffusionPrior", "concept:ConsistencySampling",
+                                "concept:TrainingFree", "impl:CausalForcing", "impl:GLC-Video",
+                                "impl:OneDC", "impl:WanVAE"}),
+    ("inr_representation", {"concept:INR", "concept:FeatureGrid", "impl:HiNeRV", "impl:HiNeRV++",
+                            "impl:NVRC", "impl:NVRC++", "impl:C3"}),
+    ("systems_deployment", {"concept:NPU"}),
+    ("learned_codec", {"impl:DCVC-RT", "impl:DCVC-FM", "impl:TIC", "impl:TinyLIC", "impl:TCM",
+                       "concept:Hyperprior", "concept:EntropyModel", "impl:MoECodec"}),
+    ("traditional_codec_opt", {"impl:VVenC", "impl:VTM", "impl:HM", "impl:x264", "impl:x265",
+                               "impl:SVT-AV1", "impl:HEVC-QSV", "concept:QP", "concept:RDO",
+                               "concept:MMVD", "concept:LTR"}),
+]
+
+
+# 这些角色表达的是「对比锚点/机构/平台」，不能作为主线归类依据
+NON_CLASSIFYING_ROLES = {"compared_against", "affiliation", "platform", "evaluated_on", "measured_by"}
+
+
+def infer_research_lines(entity_links: list) -> list[str]:
+    refs = {lk["ref"] for lk in entity_links
+            if isinstance(lk, dict) and lk.get("role") not in NON_CLASSIFYING_ROLES}
+    out = [line for line, markers in LINE_MARKERS if refs & markers]
+    return out[:3]
+
+
 def sanitize(out: dict, rec: dict, entities: dict, known_ids: set[str], today: str) -> dict | None:
     """词表裁剪 + 引用校验。decision=skip 返回 None。"""
     decision = out.get("decision") if out.get("decision") in ("deep_read", "summary_only", "skip") else "summary_only"
@@ -219,13 +249,14 @@ def sanitize(out: dict, rec: dict, entities: dict, known_ids: set[str], today: s
     if decision == "skip" or not ents or not claims:
         return None
 
+    rl = [l for l in out.get("research_lines", []) if l in RESEARCH_LINES]
     return {
         "decision": decision, "relevance": relevance,
         "reason": str(out.get("reason", ""))[:200] or "（模型未给理由）",
         "title_zh": str(out.get("title_zh", "")) or None,
         "one_liner": str(out.get("one_liner_zh", "")) or None,
         "abstract_zh": str(out.get("abstract_zh", "")) or None,
-        "research_lines": [l for l in out.get("research_lines", []) if l in RESEARCH_LINES],
+        "research_lines": rl or infer_research_lines(ents),
         "entities": ents, "claims": claims, "relations": rels,
     }
 
@@ -266,7 +297,22 @@ def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--limit", type=int, default=0, help="本次最多处理条数（0=全部）")
     ap.add_argument("--dry-run", action="store_true", help="只打印判定，不落库")
+    ap.add_argument("--backfill-lines", action="store_true",
+                    help="只为 research_lines 为空的存量 items 补实体启发式分类（无 LLM 调用）")
     args = ap.parse_args()
+
+    if args.backfill_lines:
+        n = 0
+        for p in sorted(ITEMS.glob("*.yaml")):
+            d = yaml.safe_load(open(p, encoding="utf-8"))
+            if not d.get("research_lines"):
+                d["research_lines"] = infer_research_lines(d["entities"])
+                if d["research_lines"]:
+                    yaml.safe_dump(d, open(p, "w", encoding="utf-8"),
+                                   allow_unicode=True, sort_keys=False, width=100)
+                    n += 1
+        print(f"回填 research_lines {n} 条")
+        return 0
 
     cfg = yaml.safe_load(open(CONFIG, encoding="utf-8"))
     llm = LLM(cfg)
