@@ -34,7 +34,8 @@ JVET/MPEG/AOM 文档     ├→ 归一化 → 实体对齐 → 落地沉淀 → 
 
 - ✅ 学术源（arXiv）的手工原型跑通：6 篇论文 → 6 个结构化信息项（34 论断/24 量化指标）
 - ✅ item/entity schema 定稿，实体注册表初版，校验脚本通过
-- ⬜ 检索 adapter：arXiv 增量拉取 → 实体对齐 → 精度过滤（assessment）→ 自动生成 item
+- ✅ 检索 adapter（规则部分）：`scripts/fetch_arxiv.py` 增量拉取 → 实体对齐打分 → `queue/papers/` 候选队列（pending/skipped）
+- ⬜ 检索 adapter（LLM 部分）：消费 pending 队列 → 自动生成 item（等 LLM 配置）
 - ⬜ 第二信息源：JVET 文档列表（音视频领域前瞻性最强的来源）
 - ⬜ 消费端：RAG 问答 → digest 周报 → 语料导出（按 source.license 过滤）
 
@@ -50,5 +51,7 @@ JVET/MPEG/AOM 文档     ├→ 归一化 → 实体对齐 → 落地沉淀 → 
 ## 工具
 
 ```bash
-uv run --with pyyaml python scripts/validate_kb.py   # 校验基底一致性
+uv run --with pyyaml python scripts/validate_kb.py                        # 校验基底一致性
+uv run --with pyyaml python scripts/fetch_arxiv.py                        # 增量拉取（默认回看 30 天）
+uv run --with pyyaml python scripts/fetch_arxiv.py --days 150             # 补历史窗口
 ```

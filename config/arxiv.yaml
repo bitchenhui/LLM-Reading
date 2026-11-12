@@ -1,0 +1,20 @@
+# arXiv 检索 adapter 配置
+# 主题口径用 arXiv API 查询语法书写（脚本负责 URL 编码与时间窗拼接）；
+# 领域精度靠实体对齐打分（kb/entities/ 注册表），不靠关键词堆砌。
+
+search_query: '(cat:eess.IV OR cat:cs.MM) AND (abs:"video compression" OR abs:"video coding" OR abs:"image compression" OR abs:"image coding" OR abs:"video codec" OR abs:"image codec" OR abs:"neural compression")'
+
+page_size: 100          # 每页条数（arXiv API 上限内）
+default_days: 30        # 无 --since/--days 时的回看窗口
+
+# 实体对齐打分：具体标准/实现是强信号；数据集/指标/概念/组织是弱信号
+weights:
+  codec_standard: 3
+  implementation: 3
+  dataset: 1
+  metric: 1
+  concept: 1
+  org: 1
+
+thresholds:
+  pending: 3            # 总分 >= 该值 → pending（待 LLM 精读过滤）；低于 → skipped
