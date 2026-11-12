@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-01-06'
   collected: '2026-11-12'
+  updated: '2026-11-12'
 entities:
 - ref: codec:AV2
   role: subject
@@ -36,6 +37,7 @@ summaries:
   one_liner_zh: 介绍 AV2 标准的变换、量化与熵编码设计，涵盖 IST、TCQ、ATC、FSC 等新编码工具及其压缩增益。
   abstract_zh: 本文阐述 AV1 后继标准 AV2 中的变换、量化与熵编码设计，包括重新设计的变换核、数据驱动变换、扩展的变换划分以及模式与系数依赖的变换信令。AV2 引入多项新编码工具：帧内/帧间二次变换（IST）、栅格编码量化（TCQ）、自适应变换编码（ATC）、概率自适应速率调整（PARA）、前向跳过编码（FSC）、跨色度分量变换（CCTX）、奇偶隐藏（PH）以及改进的无损编码。这些设计在保持较低编解码复杂度的同时带来显著压缩增益，使
     AV2 能以更低的码率提供更高质量的视频体验。
+  deep_dive: docs/auto/2601.02712.md
 assessment:
   relevance: high
   decision: deep_read

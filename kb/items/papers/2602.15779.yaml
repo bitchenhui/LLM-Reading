@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-02-17'
   collected: '2026-11-12'
+  updated: '2026-11-12'
 entities:
 - ref: concept:RDO
   role: subject
@@ -34,6 +35,7 @@ summaries:
   one_liner_zh: 将无参考指标集成与梯度平滑引入LNRM框架，在AVC和Cool-chic上实现跨指标一致的码率节省并大幅降低编码耗时。
   abstract_zh: 无参考质量指标（NRM）适合评估无参考的用户生成内容，但视频编码的率失真优化（RDO）仍主要依赖平方误差等全参考指标。将单个NRM线性化用于RDO（LNRM）时，由于NRM是局部梯度不稳定的强非线性预测器，优化单一指标可能利用模型特有偏差，在其他指标评估下收益有限甚至退化。作者将LNRM扩展为优化NRM集成，并引入基于平滑的公式在线性化前稳定NRM梯度以增强鲁棒性。该框架适用于混合编码器与过拟合式编码器，可避免神经NRM的迭代评估与反向传播。在AVC与Cool-chic上基于YouTube
     UGC数据集的实验表明：多个NRM下均获得一致的码率节省且无解码端复杂度开销，Cool-chic上相比直接NRM优化编码运行时间大幅下降。
+  deep_dive: docs/auto/2602.15779.md
 assessment:
   relevance: high
   decision: deep_read

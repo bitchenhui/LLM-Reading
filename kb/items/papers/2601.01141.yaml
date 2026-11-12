@@ -11,6 +11,7 @@ source:
 time:
   published: '2026-01-03'
   collected: '2026-11-12'
+  updated: '2026-11-12'
 entities:
 - ref: metric:LPIPS
   role: subject
@@ -36,6 +37,7 @@ summaries:
   abstract_zh: 针对一步扩散模型在视频压缩中应用受限的问题，作者提出 YODA。区别于已有工作依赖预训练 2D 自编码器逐帧独立生成 latent、忽略时序依赖的做法，YODA 从时域参考中提取多尺度特征并同时嵌入
     latent 生成与 latent 编码两个环节，以更好利用时空相关性获得更紧凑的表示。为提升效率，YODA 采用线性 DiT（Diffusion Transformer）实现高效的一步去噪。实验表明，YODA
     在 LPIPS、DISTS、FID、KID 等感知指标上达到 SOTA，一致优于传统编码器与深度学习基线。源代码计划在 GitHub 开源。
+  deep_dive: docs/auto/2601.01141.md
 assessment:
   relevance: high
   decision: deep_read

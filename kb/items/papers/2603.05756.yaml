@@ -11,6 +11,7 @@ source:
 time:
   published: '2026-03-05'
   collected: '2026-11-12'
+  updated: '2026-11-12'
 entities:
 - ref: codec:VVC
   role: subject
@@ -36,6 +37,7 @@ summaries:
   one_liner_zh: 提出单模型统一支持帧内/帧间与低延迟/随机访问模式的学习式视频压缩，率失真性能优越。
   abstract_zh: 现有学习式视频压缩通常需要帧内与帧间分离模型，且时间参考不可靠时性能退化。Uni-LVC 将帧间编码建模为以参考帧提取的时间信息为条件的帧内编码，在单一模型中同时支持帧内/帧间编码及低延迟与随机访问两种配置。方法上设计了高效的跨注意力适配模块以融合时间线索，支持单向（低延迟）与双向（随机访问）预测；并提出可靠性感知分类器选择性缩放时间线索，使参考不可靠时行为趋近帧内编码，配合多阶段训练策略适配多种编码模式。实验表明
     Uni-LVC 在帧内与帧间配置下均取得优越的率失真性能，同时保持相当的计算效率。
+  deep_dive: docs/auto/2603.05756.md
 assessment:
   relevance: high
   decision: deep_read

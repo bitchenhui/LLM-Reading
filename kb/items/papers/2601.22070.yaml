@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-01-29'
   collected: '2026-11-12'
+  updated: '2026-11-12'
 entities:
 - ref: concept:RDO
   role: subject
@@ -40,6 +41,7 @@ summaries:
   one_liner_zh: 提出包装器感知加权SSE的WA-RDO改造内部编码器比特分配，使HEVC级联FCM追平VVC级最优性能。
   abstract_zh: 论文研究面向机器的特征编码（FCM）：发送端将神经网络前半部分输出以'预处理网络—传统编码器—后处理网络'的三明治结构压缩后传输。由于传统编码器不可微，包装器需用代理编码器训练，且内部编码器的RDO基于SSE、不考虑后处理包装器，导致比特被花在后处理会丢弃的信息上。作者提出包装器感知的加权SSE指标修改内部编码器比特分配（WA-RDO），并通过GOP内权重时域复用与离线训练的固定架构/任务相关权重使其工程可用。在MPEG测试条件下，基于HEVC的实现追平了基于VVC的FCM最优方法，跨越一代编码器代差，且相对SSE-RDO
     HEVC的运行时开销极小。
+  deep_dive: docs/auto/2601.22070.md
 assessment:
   relevance: high
   decision: deep_read

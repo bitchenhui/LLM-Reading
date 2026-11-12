@@ -11,6 +11,7 @@ source:
 time:
   published: '2026-01-15'
   collected: '2026-11-12'
+  updated: '2026-11-12'
 entities:
 - ref: codec:VVC
   role: subject
@@ -52,6 +53,7 @@ claims:
 summaries:
   one_liner_zh: 提出JRQT-PF/JQT-PF帕累托前沿框架，为VVC流媒体构建质量单调的内容自适应码率梯子，联合优化码率、质量与解码复杂度。
   abstract_zh: 论文提出多目标帕累托前沿优化框架，为VVC自适应流媒体构建质量单调、内容自适应的码率梯子，联合优化视频质量、码率与解码时间（作为解码能量的实用代理）。方法引入两种策略：JRQT-PF与JQT-PF，采用不同的权衡建模与目标优先级，并在质量单调性约束下保证一致的QoE。实验基于大规模UHD数据集Inter-4K，质量用PSNR、VMAF与XPSNR评估，复杂度用解码时间与能耗衡量。JQT-PF相对广泛使用的固定梯子在同XPSNR下平均节省11.76%码率并降低0.29%解码时间，更激进配置最高节省27.88%码率（代价是复杂度上升）；JRQT-PF则提供更可控的权衡，实现6.38%码率节省与6.17%解码时间下降。该框架优于固定梯子、基于VMAF/XPSNR的动态分辨率选择及复杂度感知基准方法。
+  deep_dive: docs/auto/2601.10607.md
 assessment:
   relevance: high
   decision: deep_read

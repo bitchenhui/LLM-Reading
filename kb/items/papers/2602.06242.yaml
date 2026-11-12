@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-02-05'
   collected: '2026-11-12'
+  updated: '2026-11-12'
 entities:
 - ref: codec:VVC
   role: subject
@@ -46,6 +47,7 @@ claims:
 summaries:
   one_liner_zh: 用VCA轻量特征与QP经随机森林预测VVC帧级比特消耗，替代两遍码率控制，编码时间减少33.3%且编码效率相当。
   abstract_zh: 传统VVC两遍码率控制（2pRC）依赖解析式rate-QP模型，难以刻画非线性时空变化，且多次试验编码导致复杂度高。本文提出内容自适应框架，基于视频复杂度分析器（VCA）的轻量特征与量化参数QP，用随机森林回归预测帧级比特消耗。在VVenC编码的超高清序列上，I/P/B帧预测的R²分别达0.93、0.88、0.77。将该预测嵌入码率控制回路后，编码效率与2pRC相当，同时总编码时间降低33.3%，表明VCA驱动的比特预测是传统rate-QP模型的高效准确替代方案。
+  deep_dive: docs/auto/2602.06242.md
 assessment:
   relevance: high
   decision: deep_read

@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-01-15'
   collected: '2026-11-12'
+  updated: '2026-11-12'
 entities:
 - ref: concept:DiffusionPrior
   role: subject
@@ -48,6 +49,7 @@ summaries:
   abstract_zh: 论文提出 DiffCR，一种利用预训练潜在扩散模型生成先验的高效低码率图像压缩框架。其核心频率感知跳跃估计（FaSE）模块通过频率解耦注意力（FDA），在不同时间步上将 ε
     预测先验与压缩隐变量对齐。轻量一致性估计器在保持扩散采样语义轨迹的同时实现两步快速解码，且全程无需更新骨干扩散模型。实验表明，相对 SOTA 扩散式压缩基线，DiffCR 在 LPIPS 口径节省
     27.2% BD-rate、PSNR 口径节省 65.1% BD-rate，解码加速超过 10 倍。
+  deep_dive: docs/auto/2601.10373.md
 assessment:
   relevance: high
   decision: deep_read
