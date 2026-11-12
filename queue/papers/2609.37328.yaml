@@ -1,0 +1,65 @@
+id: paper:arxiv:2609.37328
+status: reviewed
+score: 11
+matched:
+- ref: codec:VVC
+  count: 2
+  weight: 3
+- ref: impl:VTM
+  count: 1
+  weight: 3
+- ref: concept:QP
+  count: 1
+  weight: 1
+- ref: dataset:JVET-CTC
+  count: 1
+  weight: 1
+- ref: metric:BD-Rate
+  count: 1
+  weight: 1
+- ref: org:JVET
+  count: 1
+  weight: 1
+- ref: org:MPEG
+  count: 1
+  weight: 1
+meta:
+  title: 'CASR: Content-Adaptive Neural Super-Resolution Post-Filter for Versatile Video Coding via Low-Rank
+    Overfitting'
+  authors:
+  - Khoa Pham-Dinh
+  - Francesco Cricri
+  - Maria Santamaria
+  - Honglei Zhang
+  - Hamed R. Tavakoli
+  - Moncef Gabbouj
+  - Juho Kannala
+  - Miska M. Hannuksela
+  published: '2026-09-29'
+  updated: '2026-09-29'
+  categories:
+  - eess.IV
+  abstract: The use of super-resolution as a post-processing step following a video codec allows videos
+    to be encoded at reduced spatial resolution at the encoder side and to be reconstructed and upsampled
+    to the original resolution at the decoder side. In this way, the required bitrate is reduced and the
+    quality of the reconstructed frames is improved without modifying the core coding architecture. However,
+    generic SR models are typically trained offline and lack sufficient adaptability to the diverse content
+    characteristics and compression artifacts produced by video codecs, which limits their effectiveness
+    during test time. To address the limitation, this paper proposes CASR (Content-Adaptive Super-Resolution),
+    a content-adaptive SR post-filter framework for Versatile Video Coding (VVC), based on encoder-side
+    overfitting on each input sequence. In order to limit the bitrate overhead required for signalling
+    the content adaptation signal, i.e. the weight-update, Low-Rank Adaptation (LoRA) is leveraged. The
+    method freezes the convolution kernels of a pretrained SR network and fine-tunes only lightweight
+    rank-r matrices attached to selected convolution layers, using VVC decoded frames and quantization-parameter
+    (QP) maps of test sequences as supervision. The resulting low-rank update is compressed with the MPEG
+    Neural Network Compression and Representation (NNR) standard. Experiments on the JVET common test
+    conditions (CTC) class A1 and A2 sequences indicate that LoRA-based content adaptation provides bitrate
+    savings over a non-adapted SR post-filter at a small signalling cost. Compared with the VVC Test Model
+    (VTM21), the proposed method achieves BD-rate savings of -10.93% (Y), -15.39% (U), -24.41% (V) under
+    random access and -13.43% (Y), -5.75% (U), -22.94% (V) under all-intra. An ablation of the LoRA rank
+    r further shows that r=4 provides the best trade-off between coding gain and signalling cost.
+  url: https://arxiv.org/abs/2609.37328
+  pdf_url: https://arxiv.org/pdf/2609.37328v1
+  version: v1
+fetched: '2026-11-12'
+llm_decision: deep_read

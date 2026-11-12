@@ -1,0 +1,42 @@
+id: paper:arxiv:2610.41924
+status: skipped
+score: 1
+matched:
+- ref: concept:INR
+  count: 1
+  weight: 1
+meta:
+  title: 'IGDA-ICMH: an Importance Guided Feature and Network Dual Adaptation Framework towards Image
+    Compression for Machine and Human Vision'
+  authors:
+  - Yanbo Gao
+  - Xinyu Zhao
+  - Shuai Li
+  - Xun Cai
+  - Mao Ye
+  - Li Li
+  published: '2026-10-30'
+  updated: '2026-10-30'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: With the surge of machine vision applications, image compression for both machine and human
+    vision (ICMH) has become an important research area. Existing studies mainly focus on task-specific
+    adaptation or multi-task joint optimization, yet they often overlook the unequal contributions of
+    different features and network layers to downstream machine vision tasks. To address this issue, we
+    first quantitatively investigate the impact of different feature and network layers on machine vision
+    performance, providing a principled understanding of their importance. Based on this analysis, an
+    Importance Guided feature and network Dual Adaptation (IGDA) framework is developed for ICMH. It adopts
+    implicit neural representation as the basic architecture and designs an efficient adaptation structure
+    with both feature and network weight adaptation. An Importance-Guided Network Adaptation (IGNA) module
+    is developed with a low-rank adaptation strategy to selectively adjust key network layers according
+    to their importance in different tasks. An Importance-Guided Feature Adaptation (IGFA) module is developed
+    with a low-rank and Kronecker product-based transform to explore the non-local property of the features
+    in order to reduce the number of adaptation parameters. Extensive experiments on representative machine
+    vision tasks, including image classification and object detection, demonstrate that our IGDA-ICMH
+    framework achieves significantly better performance than the existing implicit neural representation-based
+    methods for ICMH.
+  url: https://arxiv.org/abs/2610.41924
+  pdf_url: https://arxiv.org/pdf/2610.41924v1
+  version: v1
+fetched: '2026-11-12'

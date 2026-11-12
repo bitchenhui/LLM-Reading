@@ -1,0 +1,43 @@
+id: paper:arxiv:2609.14129
+status: reviewed
+score: 6
+matched:
+- ref: codec:HEVC
+  count: 1
+  weight: 3
+- ref: concept:GOP
+  count: 2
+  weight: 1
+- ref: concept:INR
+  count: 1
+  weight: 1
+- ref: metric:LPIPS
+  count: 1
+  weight: 1
+meta:
+  title: Deformable 2D Gaussian Splatting for Efficient 4K Video Compression
+  authors:
+  - Chenhao Zhang
+  - Fengqing Zhu
+  published: '2026-09-12'
+  updated: '2026-09-12'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: Ultra-High-Definition (UHD) video presents significant challenges for efficient storage and
+    real-time decoding. Learning-based methods, such as Neural Video Compression (NVC) and Implicit Neural
+    Representations (INR), achieve competitive rate-distortion performance but suffer from high decoding
+    latency and excessive memory usage. Meanwhile, Gaussian Splatting has recently attracted attention
+    in the computer graphics community due to its ultra-fast rendering and high-fidelity visual quality.
+    Despite these advantages, its application in video compression remains largely unexplored. To bridge
+    this gap, we propose a real-time video compression framework that represents and compresses a Group
+    of Pictures (GOP) using a coarse-to-fine multi-scale 2D Gaussian Splatting (2DGS) structure coupled
+    with a lightweight deformation network. Experiments demonstrate that our method delivers rate-distortion
+    performance in LPIPS that surpasses H.265 and other state-of-the-art learning-based video compression
+    methods. Our work demonstrates the potential of Gaussian Splatting as a practical solution for efficient
+    high-resolution video compression.
+  url: https://arxiv.org/abs/2609.14129
+  pdf_url: https://arxiv.org/pdf/2609.14129v1
+  version: v1
+fetched: '2026-11-12'
+llm_decision: deep_read

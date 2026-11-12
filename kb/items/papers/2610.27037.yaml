@@ -1,0 +1,70 @@
+id: paper:arxiv:2610.27037
+type: paper
+title: Channel-Level Mask Guidance for Slimmable Image Compression
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2610.27037v1
+  url: https://arxiv.org/abs/2610.27037
+  pdf_url: https://arxiv.org/pdf/2610.27037v1
+  venue: arXiv preprint
+time:
+  published: '2026-10-19'
+  collected: '2026-11-12'
+entities:
+- ref: concept:Hyperprior
+  role: subject
+- ref: dataset:Kodak
+  role: evaluated_on
+- ref: metric:BD-Rate
+  role: measured_by
+claims:
+- statement: 在 w=48 宽度下，该方法相对同宽度 Slimmable 基线在 Kodak 上于三种骨干均取得显著 BD-rate 节省，窄模型低码率场景收益最大
+  confidence: reported
+  metrics:
+  - name: BD-Rate节省
+    value: 19.22%
+    scope: Kodak，E2E 骨干，w=48，对比同宽度 Slimmable 基线
+  - name: BD-Rate节省
+    value: 24.11%
+    scope: Kodak，Hyperprior 骨干，w=48，对比同宽度 Slimmable 基线
+  - name: BD-Rate节省
+    value: 22.76%
+    scope: Kodak，Checkerboard(CKBD) 骨干，w=48，对比同宽度 Slimmable 基线
+  evidence: abstract（初筛，未读全文）
+- statement: 单一 VBR 模型可替代 40 个独立模型，存储开销降低一个数量级以上
+  confidence: reported
+  metrics:
+  - name: 替代独立模型数
+    value: '40'
+    scope: 单模型变码率控制覆盖的独立模型数量
+  - name: 存储缩减倍数
+    value: 14.8x-15.9x
+    scope: 单一 VBR 模型对比 40 个独立模型的存储量
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 以可学习通道掩码实现非连续通道选择的精简图像压缩，兼得稳定变码率控制，窄模型低码率性能大幅提升
+  abstract_zh: 针对现有 slimmable 学习式图像压缩被迫连续选通道导致窄模型低码率性能下降、且缺乏稳定变码率控制的问题，提出通道级掩码引导方法：通过带稀疏正则的可学习逐通道掩码实现非连续
+    top-w 通道选择，训练后经掩码合并与通道重排（M2S 转换）化为标准 slimmable 网络以高效推理。变码率方面结合 lambda 与宽度条件调制、量化步长缩放及先冻结后微调的渐进训练策略。在
+    Kodak 上于 E2E、Hyperprior、Checkerboard 三种骨干跨宽度跨码率取得更优率失真表现，w=48 时相对同宽度 Slimmable 基线最高节省 19.22%/24.11%/22.76%
+    BD-rate；单一 VBR 模型可替代 40 个独立模型，存储降低 14.8 至 15.9 倍。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 学习式图像压缩核心工作，针对跨平台可伸缩性与变码率控制两大部署痛点，BD-rate 与存储收益显著
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 面向精简图像压缩的通道级掩码引导方法
+relations:
+- type: same_topic
+  ref: paper:arxiv:2610.33616
+  note: 同为学习式图像压缩的网络改进方法
+- type: same_topic
+  ref: paper:arxiv:2610.22421
+  note: 同属端到端学习图像编码及其面向实际部署的研究线
+- type: same_topic
+  ref: paper:arxiv:2607.13723
+  note: 同关注神经图像编码的轻量化与编解码复杂度可调节性

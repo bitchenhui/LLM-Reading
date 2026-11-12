@@ -1,0 +1,91 @@
+id: paper:arxiv:2609.29727
+type: paper
+title: 'VQ-LIC: Shared Vector-Quantized Learned Image Compression on a Resource-Constrained FPGA'
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2609.29727v1
+  url: https://arxiv.org/abs/2609.29727
+  pdf_url: https://arxiv.org/pdf/2609.29727v1
+  venue: arXiv preprint
+time:
+  published: '2026-09-24'
+  collected: '2026-11-12'
+entities:
+- ref: metric:PSNR
+  role: subject
+- ref: metric:MS-SSIM
+  role: measured_by
+- ref: metric:kMAC-per-pixel
+  role: measured_by
+claims:
+- statement: 将VQ码字匹配表达为点积并复用PW引擎，免去独立VQ计算阵列，作者称此为FPGA学习式图像压缩中的首次。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 基于RTL确定性周期数（读、DW、PW、写开销）建立的延迟模型可直接以硅片验证，对分析变换与VQ的部署延迟预测误差极小。
+  confidence: reported
+  metrics:
+  - name: 延迟预测误差(分析变换)
+    value: 0.26%
+    scope: 硅片实测对比, 分析变换逐块延迟
+  - name: 延迟预测误差(VQ)
+    value: 0.05%
+    scope: 硅片实测对比, 共享PW数据通路
+  evidence: abstract（初筛，未读全文）
+- statement: 训练后码本缩减同时削减VQ运算量与码本存储，并压缩定宽潜在表示。
+  confidence: reported
+  metrics:
+  - name: VQ运算量缩减
+    value: 4×
+    scope: 训练后码本缩减
+  - name: 码本存储缩减
+    value: 4×
+    scope: 训练后码本缩减
+  evidence: abstract（初筛，未读全文）
+- statement: 在220-DSP Zynq-7020上，中码率档性能优于同等规模神经编码器，率失真范围可比拟约大三个数量级的编解码器，且DSP用量比同类FPGA LIC加速器低一个数量级、码率更低、吞吐更高、每帧能耗更低（以适度PSNR为代价）。
+  confidence: reported
+  metrics:
+  - name: bpp
+    value: '0.1398'
+    scope: Zynq-7020中码率档, CLIC 2017
+  - name: PSNR
+    value: 28.69 dB
+    scope: 同上
+  - name: MS-SSIM
+    value: 13.06 dB
+    scope: 同上
+  - name: 吞吐率
+    value: 47.98 fps
+    scope: 硅片实测, 分析+VQ流水线
+  - name: 每帧能耗
+    value: 42.84 mJ
+    scope: 硅片实测
+  - name: 计算密度
+    value: 0.1945 kMAC/pixel
+    scope: 分析+VQ流水线
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 边云非对称学习式图像编解码器：边缘端INT8分析变换与向量量化共享PW引擎，Zynq-7020上达47.98fps、0.1398bpp。
+  abstract_zh: 论文提出VQ-LIC，一种非对称边云编解码器：边缘端以紧凑的INT8深度可分离(DW)-逐点(PW)分析变换配合多码本向量量化(VQ)完成编码，重建由更大的云端解码器承担。由于VQ码字匹配可表达为点积，作者将其直接映射到同一PW引擎，省去独立的VQ计算阵列，据称是FPGA学习式图像压缩中的首次。基于RTL确定性周期数推导的延迟模型可直接以硅片验证，对分析变换与VQ的部署延迟预测误差分别仅0.26%和0.05%，并据此选定16-48-64三块变换结构；训练后码本缩减使VQ运算量与码本存储各降4倍。在220-DSP的Zynq-7020上，中码率档在CLIC
+    2017上达到0.1398 bpp、28.69 dB PSNR、13.06 dB MS-SSIM，分析-VQ流水线以0.1945 kMAC/像素实现47.98 fps、每帧42.84 mJ，DSP用量比同类FPGA
+    LIC加速器低一个数量级。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 学习式图像压缩在资源受限FPGA上的完整硬件部署与硅片实测，属系统部署/跨平台核心收录范围。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: VQ-LIC：面向资源受限FPGA的共享向量量化学习式图像压缩
+relations:
+- type: same_topic
+  ref: paper:arxiv:2610.22421
+  note: 同为学习式图像编码从率失真优化到实际部署的线路
+- type: same_topic
+  ref: paper:arxiv:2607.13723
+  note: 同为降低神经图像压缩编解码复杂度/轻量化的方向
+- type: same_topic
+  ref: paper:arxiv:2607.23366
+  note: 同涉及码本/离散化压缩中码本容量与感知质量的关联

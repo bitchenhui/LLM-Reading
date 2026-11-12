@@ -1,0 +1,50 @@
+id: paper:arxiv:2611.10073
+status: reviewed
+score: 6
+matched:
+- ref: impl:VTM
+  count: 1
+  weight: 3
+- ref: concept:EntropyModel
+  count: 2
+  weight: 1
+- ref: concept:Hyperprior
+  count: 1
+  weight: 1
+- ref: metric:BD-Rate
+  count: 1
+  weight: 1
+meta:
+  title: Noise-Regularized Training for Learned Image Compression
+  authors:
+  - Renjie Zou
+  - Zhiwei Huang
+  - Dong Jiang
+  published: '2026-11-06'
+  updated: '2026-11-06'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: 'Learned image compression (LIC) is trained almost exclusively on clean images: the only stochastic
+    perturbation in the loop is an additive uniform proxy injected in the latent domain to keep the entropy
+    model differentiable. Outside compression, by contrast, a long line of work---from Tikhonov regularization
+    and contractive autoencoders through denoising score matching and modern diffusion models---has established
+    that Gaussian noise at the input of a network with a clean target acts as a structured probe of the
+    data manifold rather than as data augmentation. Building on this view, we introduce noise-regularized
+    training for LIC: at every training step we add Gaussian noise to the encoder input while keeping
+    the distortion target, the latent uniform proxy, the hyperprior, and the entropy coding pipeline unchanged.
+    The recipe is architecture-agnostic and adds essentially no training or inference overhead. Across
+    backbones and operating regimes it yields consistent BD-Rate gains: -2.60% on a reproduced ELIC and
+    -0.85% / -1.05% / -2.38% on the Base/Medium/Large scales of a variable-rate DMCI codec, with DMCI-Large
+    reaching -22.02% against VTM-22.0. A second-order expansion of the noisy RD loss accounts for these
+    gains: because the noise enters upstream of the analysis transform, it converts the clean RD objective
+    into a structured $O(σ^{2})$ regularizer comprising an information-weighted encoder-Jacobian penalty
+    (rate side) and a Frobenius contractive penalty on the end-to-end reconstruction map (distortion side).
+    A finite-difference Lipschitz analysis shows corresponding sensitivity reductions of ~12% for the
+    encoder and ~8% for the end-to-end codec, while an exact-JVP test further shows preferential contraction
+    of high-information directions. Code and trained models are available at https://github.com/Googolxx/NoiseRegu-LIC.'
+  url: https://arxiv.org/abs/2611.10073
+  pdf_url: https://arxiv.org/pdf/2611.10073v1
+  version: v1
+fetched: '2026-11-12'
+llm_decision: deep_read

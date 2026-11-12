@@ -1,0 +1,45 @@
+id: paper:arxiv:2610.02265
+status: reviewed
+score: 3
+matched:
+- ref: metric:BD-Rate
+  count: 1
+  weight: 1
+- ref: metric:LPIPS
+  count: 1
+  weight: 1
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+meta:
+  title: Event-guided Neural Video Compression
+  authors:
+  - Jiyun Kong
+  - Jungwoo Kim
+  - Enes Eray Demirtas
+  - Touradj Ebrahimi
+  - Jong-Seok Lee
+  published: '2026-10-01'
+  updated: '2026-10-01'
+  categories:
+  - eess.IV
+  - cs.CV
+  - cs.MM
+  abstract: Neural video codecs derive motion and temporal contexts mainly from RGB frames, leaving room
+    for cross-modal guidance from complementary temporal observations. Event streams can provide such
+    observations by recording brightness changes between frames. In this work, we propose an Event-guided
+    Neural Video Codec (ENVC) that uses events shared by the encoder and decoder to improve RGB compression
+    efficiency. For motion coding, ENVC forms an event-guided motion prior and codes the remaining motion
+    residual. For frame coding, an event-conditioned predictor supplies multi-scale features for gated
+    temporal context refinement. To support training and evaluation on standard video datasets, we synthesize
+    paired RGB-event data and assess its predictive utility through comparisons with real events. Across
+    six benchmarks, ENVC achieves average BD-rate savings of 39.13% using PSNR-RGB and 67.63% using LPIPS
+    relative to DCMVC. Further analyses show that our gains persist on large-motion sequences and that
+    ENVC effectively learns to integrate event information. These results demonstrate the potential of
+    events as a complementary modality for reducing the RGB coding rate. Our model and code are available
+    at https://github.com/kjungwoo03/ENVC.
+  url: https://arxiv.org/abs/2610.02265
+  pdf_url: https://arxiv.org/pdf/2610.02265v1
+  version: v1
+fetched: '2026-11-12'
+llm_decision: deep_read

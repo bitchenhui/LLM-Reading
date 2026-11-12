@@ -1,0 +1,47 @@
+id: paper:arxiv:2607.10478
+status: reviewed
+score: 6
+matched:
+- ref: codec:AVC
+  count: 1
+  weight: 3
+- ref: concept:QP
+  count: 3
+  weight: 1
+- ref: metric:BD-Rate
+  count: 1
+  weight: 1
+- ref: metric:MS-SSIM
+  count: 1
+  weight: 1
+meta:
+  title: Differentiable Proxy Learning for Adaptive Quantization Control in H.264 Video Coding
+  authors:
+  - Qihan Xu
+  - Ivan V. Bajić
+  published: '2026-07-11'
+  updated: '2026-07-11'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: 'H.264 has been the most widely used video coding format for the past two decades due to its
+    relative simplicity, efficiency, and wide availability of software and hardware implementations. However,
+    optimizing codec parameters such as the quantization parameter (QP) for specific objectives (e.g.,
+    perceptual quality or machine vision tasks) is challenging due to the non-differentiable nature of
+    standard video codecs. While differentiable proxies have recently been used to enable gradient-based
+    optimization around standard codecs, their fidelity to the target codec is rarely explicitly characterized.
+    In this paper, we propose a differentiable proxy learning method for H.264 intra codec to enable adaptive
+    quantization control. Built upon a variable-rate learned compression model, the proposed proxy is
+    made differentiable with respect to codec QP through a soft-indexing mechanism. It is then trained
+    to approximate the rate-distortion behavior of H.264 under two quantization settings: global-QP, which
+    uses one QP per image, and spatial-QP, which assigns QPs at the macroblock level. Using the frozen
+    trained proxy, we develop a proxy-based adaptive quantization (AQ) framework for both perceptual optimization
+    and machine vision tasks. Experimental results demonstrate that the proposed proxies closely approximate
+    the rate-distortion behavior of H.264 intra codec. The resulting proxy-based AQ framework consistently
+    improves rate-task trade-offs over fixed-QP H.264 baselines, achieving BD-rate reduction of up to
+    17.12% for semantic segmentation and 15.30% for MS-SSIM.'
+  url: https://arxiv.org/abs/2607.10478
+  pdf_url: https://arxiv.org/pdf/2607.10478v1
+  version: v1
+fetched: '2026-11-12'
+llm_decision: deep_read

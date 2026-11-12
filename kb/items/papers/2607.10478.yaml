@@ -1,0 +1,63 @@
+id: paper:arxiv:2607.10478
+type: paper
+title: Differentiable Proxy Learning for Adaptive Quantization Control in H.264 Video Coding
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2607.10478v1
+  url: https://arxiv.org/abs/2607.10478
+  pdf_url: https://arxiv.org/pdf/2607.10478v1
+  venue: arXiv preprint
+time:
+  published: '2026-07-11'
+  collected: '2026-11-12'
+entities:
+- ref: codec:AVC
+  role: subject
+- ref: concept:QP
+  role: uses
+- ref: metric:BD-Rate
+  role: measured_by
+- ref: metric:MS-SSIM
+  role: measured_by
+claims:
+- statement: 所提可微代理在global-QP与spatial-QP两种设置下均能紧密逼近H.264帧内编码器的率失真行为。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 基于冻结代理的自适应量化框架相对固定QP的H.264基线持续改善率-任务权衡，语义分割任务BD-rate最高降低17.12%。
+  confidence: reported
+  metrics:
+  - name: BD-Rate
+    value: -17.12%
+    scope: 语义分割任务，proxy-based AQ 对比固定QP H.264基线，最大降幅（码率节省）
+  evidence: abstract（初筛，未读全文）
+- statement: 在感知优化目标下，代理驱动的AQ框架相对固定QP H.264基线MS-SSIM指标BD-rate最高降低15.30%。
+  confidence: reported
+  metrics:
+  - name: BD-Rate
+    value: -15.30%
+    scope: MS-SSIM感知目标，proxy-based AQ 对比固定QP H.264基线，最大降幅（码率节省）
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 构建对QP可微的H.264帧内编码代理，实现感知质量与机器视觉任务的自适应量化控制。
+  abstract_zh: 针对标准视频编码器不可微导致QP难以面向特定目标（如感知质量或机器视觉任务）优化的问题，提出一种面向H.264帧内编码器的可微代理学习方法。该方法基于变速率学习压缩模型，通过软索引机制使代理对QP可微，并在global-QP（整图单QP）与spatial-QP（宏块级QP）两种量化设置下训练以逼近H.264的率失真行为。利用冻结后的代理，作者构建了代理驱动的自适应量化（AQ）框架，统一支持感知优化与机器视觉任务。实验表明所提代理能紧密逼近H.264帧内编码器的率失真行为，代理驱动的AQ框架相对固定QP的H.264基线持续改善率-任务权衡，语义分割BD-rate最高降低17.12%，MS-SSIM最高降低15.30%。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 直击H.264标准编码器的可微代理建模与QP自适应控制，属标准编码器优化的核心收录方向，且同时覆盖感知与机器视觉两类优化目标。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 面向H.264视频编码自适应量化控制的可微代理学习
+relations:
+- type: same_topic
+  ref: paper:arxiv:2608.07799
+  note: 同为面向传统视频编码器的感知质量参数优化（码率分配/QP控制）
+- type: same_topic
+  ref: paper:arxiv:2606.20847
+  note: 同为标准编码器（H.264/VVenC）的帧级/块级QP自适应控制
+- type: same_topic
+  ref: paper:arxiv:2606.21033
+  note: 同为兼顾人眼感知与机器视觉任务的压缩优化目标

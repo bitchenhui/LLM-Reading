@@ -1,0 +1,38 @@
+id: paper:arxiv:2608.01653
+status: skipped
+score: 0
+matched: []
+meta:
+  title: Hadamard-Domain Model Quantization for Learned Image Coding
+  authors:
+  - Junqi Shi
+  - Chongzhi Wang
+  - Yiwen He
+  - Ming Lu
+  - Zhan Ma
+  published: '2026-08-03'
+  updated: '2026-08-03'
+  categories:
+  - eess.IV
+  abstract: Uniform INT8 quantization is attractive for deploying learned image coding (LIC), but its
+    rate--distortion (R--D) performance is often limited by heavy-tailed tensors and large inter-channel
+    variations. Existing methods mainly adapt the quantizer through mixed precision or non-uniform codebooks.
+    We propose Hadamard-Transform-domain Quantization (HaTQ), which uses orthogonal Hadamard reparameterization
+    before quantization to redistribute weight and activation responses in the original domain across
+    channels. The reparameterization preserves the original function mapping of each linear operator,
+    while making its weights and activations more amenable to uniform INT8 quantization. HaTQ provides
+    two complementary forms. Double-Hadamard quantization transforms both the input activations and weights,
+    whereas weight-only Hadamard quantization transforms only the weights. This distinction is important
+    because the constant Hadamard basis can coherently accumulate a nonzero channel mean and enlarge the
+    activation range in sensitive layers. We identify these sensitive layers through offline profiling
+    and assign the appropriate form to each layer without input-dependent branching. HaTQ supports both
+    post-training quantization (PTQ) and quantization-aware training (QAT), uses uniform INT8 quantizers,
+    and is compatible with integer-only execution. Experiments on representative LIC architectures and
+    datasets demonstrate consistent improvements across different quantization settings. The resulting
+    QAT models further outperform competing mixed-precision and non-uniform quantization methods. TensorRT
+    deployment results demonstrate practical INT8 inference efficiency. The source code will be publicly
+    released.
+  url: https://arxiv.org/abs/2608.01653
+  pdf_url: https://arxiv.org/pdf/2608.01653v1
+  version: v1
+fetched: '2026-11-12'

@@ -1,0 +1,54 @@
+id: paper:arxiv:2607.22772
+status: reviewed
+score: 3
+matched:
+- ref: metric:FID
+  count: 1
+  weight: 1
+- ref: metric:FPS
+  count: 1
+  weight: 1
+- ref: metric:LPIPS
+  count: 1
+  weight: 1
+meta:
+  title: Generative Video Compression with Adaptive Score Distillation
+  authors:
+  - Naifu Xue
+  - Zhaoyang Jia
+  - Haosen Li
+  - Zihan Zheng
+  - Jiahao Li
+  - Bin Li
+  - Xiaoyi Zhang
+  - Qi Meng
+  - Yuan Zhang
+  - Yan Lu
+  published: '2026-07-24'
+  updated: '2026-07-24'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: 'Diffusion models provide strong generative capabilities for video compression at ultra-low
+    bitrates. Existing diffusion-based video codecs adapt base models originally developed for text-conditioned
+    generation, whereas diffusion models designed and trained specifically for compression remain unexplored.
+    To fill this gap, we introduce our Generative Video Codec (GenVC), built on a video diffusion model
+    trained from scratch for compression. To our knowledge, this is the first compression-oriented video
+    diffusion model. We realize this model directly in pixel space with a global-to-local hierarchy that
+    recovers fine spatio-temporal details, enabling high-quality generative reconstruction from compressed
+    representations. To accelerate inference, we distill the multi-step model into one step using distribution
+    matching distillation (DMD). Applying DMD directly, however, drives the student toward motion-stalled
+    reconstructions. We trace this to a teacher-side guidance failure: once student-induced perturbations
+    leave the frozen teacher''s training region, its guidance can become misleading, causing DMD updates
+    to reinforce rather than correct the student drift. To break the resulting feedback loop, we propose
+    Adaptive Score Distillation, which gates DMD updates according to their alignment with the ground-truth
+    direction, enabling high-quality reconstruction with coherent motion. Experimental results show that
+    GenVC achieves state-of-the-art perceptual quality at ultra-low bitrates, with average bitrate savings
+    of 62.5% at matched LPIPS and 71.3% at matched FID over GLVC. Unlike prior codecs that inherit billion-scale
+    pretrained backbones, our diffusion model has only 478.0M parameters and decodes 1080p video in a
+    single step at 15.1 fps on an A100 GPU.'
+  url: https://arxiv.org/abs/2607.22772
+  pdf_url: https://arxiv.org/pdf/2607.22772v1
+  version: v1
+fetched: '2026-11-12'
+llm_decision: deep_read

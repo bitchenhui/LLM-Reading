@@ -1,0 +1,59 @@
+id: paper:arxiv:2609.34725
+status: reviewed
+score: 16
+matched:
+- ref: codec:ECM
+  count: 1
+  weight: 3
+- ref: impl:DCVC-RT
+  count: 1
+  weight: 3
+- ref: impl:HM
+  count: 1
+  weight: 3
+- ref: impl:VTM
+  count: 1
+  weight: 3
+- ref: metric:DISTS
+  count: 1
+  weight: 1
+- ref: metric:LPIPS
+  count: 1
+  weight: 1
+- ref: metric:MS-SSIM
+  count: 1
+  weight: 1
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+meta:
+  title: 'Gen2-VC: Unlocking Generative Priors for Video Compression'
+  authors:
+  - Yinhuan Huang
+  - Jingkai Ying
+  - Pu Chen
+  - Zhijin Qin
+  published: '2026-09-28'
+  updated: '2026-09-28'
+  categories:
+  - eess.IV
+  abstract: 'Under stringent bitrate constraints, existing video codecs struggle to balance source fidelity
+    and perceptual realism. Distortion-oriented codecs often oversmooth details, while generative codecs
+    risk introducing content and structural deviations and rely on codec-specific designs. This motivates
+    a question: Can existing codecs achieve a better distortion--perception trade-off through simple,
+    reusable adaptation? Our insight is that native codec reconstructions provide a shared interface through
+    which generative refinement is anchored to source content while remaining decoupled from codec-specific
+    representations. We therefore propose Gen2-VC, a generative video compression framework that enhances
+    the outputs of learned and conventional codecs with a pretrained video prior, leaving their bitstreams
+    and reference update processes unchanged. With the codec, VAE, and generative backbone frozen, lightweight
+    LoRA adapters refine codec reconstruction through single-frame spatial adaptation followed by multi-frame
+    temporal adaptation with the video prior. Using Wan2.1-T2V-1.3B, Gen2-VC-DCVC-UF outperforms previous
+    leading codecs in LPIPS/DISTS and, to our knowledge, is the first generative video codec to surpass
+    VTM-23.0 in both PSNR and MS-SSIM at low bitrates, based on BD-rates averaged over six datasets. Compared
+    to VTM-23.0, it reduces bitrate by an average of 86.65% and 94.24% at matched LPIPS and DISTS, respectively.
+    Adapters trained only on DCVC-UF improve perceptual quality on DCVC-RT, ECM, VTM, and HM without retraining.'
+  url: https://arxiv.org/abs/2609.34725
+  pdf_url: https://arxiv.org/pdf/2609.34725v1
+  version: v1
+fetched: '2026-11-12'
+llm_decision: deep_read

@@ -1,0 +1,39 @@
+id: paper:arxiv:2610.33351
+status: skipped
+score: 0
+matched: []
+meta:
+  title: Real Time Motion Detection in Video Inspired by Photonic Time Stretch
+  authors:
+  - Callen MacPhee
+  - Yiming Zhou
+  - Bahram Jalali
+  published: '2026-10-23'
+  updated: '2026-10-23'
+  categories:
+  - cs.CV
+  - eess.IV
+  - physics.optics
+  abstract: Motion perception is fundamental to computer vision and physical AI, and plays a central role
+    in robotics, autonomous vehicles, human-computer interaction, and video compression. Traditional approaches
+    such as background subtraction, frame-differencing and optical flow algorithms often struggle in complex
+    or dynamic scenes, typically sacrificing spatial resolution for computational tractability. Here we
+    introduce MoViD (Motion estimation via Virtual dispersion and phase Detection), a physics-inspired
+    algorithm grounded in the principles that govern photonic time stretch - a highly successful ultrafast
+    realtime data acquisition platform. Drawing inspiration from the optical physics therein, MoViD treats
+    video as a collection of optical time series waveforms associated with pixels. Motion of an object
+    through a pixel broadens the time series spectrum and, after group delay dispersion, induces a temporal
+    phase that exists only if there is motion. Spatiotemporal group delay dispersion templates, corresponding
+    to dielectric functions, classify specific motion trajectories. Unlike conventional empirical phase-based
+    motion-analysis pipelines that require narrow-band spatial channelization and pyramid reconstruction,
+    the physics-based MoViD operates directly on the broadband video signal, vastly increasing its computational
+    speed. The resulting algorithm achieves unprecedented performance in both motion characterization
+    and motion magnification, providing full-resolution motion mapping in real time at nearly 200 frames
+    per second at 4K resolution and 70 frames per second for 8K video - orders of magnitude faster than
+    classical optical flow approaches or learning-based methods. Notably, such extreme performance enables
+    real time motion analysis at ultrahigh resolution for motion detection and compensation in robotics
+    and other autonomous devices.
+  url: https://arxiv.org/abs/2610.33351
+  pdf_url: https://arxiv.org/pdf/2610.33351v1
+  version: v1
+fetched: '2026-11-12'

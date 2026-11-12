@@ -1,0 +1,65 @@
+id: paper:arxiv:2610.33616
+type: paper
+title: Semantic-Guided Frequency Modulation for Learned Image Compression
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2610.33616v1
+  url: https://arxiv.org/abs/2610.33616
+  pdf_url: https://arxiv.org/pdf/2610.33616v1
+  venue: arXiv preprint
+time:
+  published: '2026-10-24'
+  collected: '2026-11-12'
+entities:
+- ref: impl:TCM
+  role: subject
+- ref: metric:BD-Rate
+  role: measured_by
+- ref: metric:PSNR
+  role: measured_by
+claims:
+- statement: SG-AFM在六个数据集上相对TCM平均降低PSNR口径BD-rate 13.17%。
+  confidence: reported
+  metrics:
+  - name: PSNR-BD-rate
+    value: -13.17%
+    scope: 六个数据集平均，相对TCM锚点
+  evidence: abstract（初筛，未读全文）
+- statement: SG-AFM在ExDark、NightCity、OnePlus三个数据集上取得对比方法中的最佳BD-rate，平均降幅16.80%。
+  confidence: reported
+  metrics:
+  - name: PSNR-BD-rate
+    value: -16.80%
+    scope: ExDark/NightCity/OnePlus三数据集平均，相对TCM锚点
+  evidence: abstract（初筛，未读全文）
+- statement: SG-AFM的语义先验仅在编码端计算，不传输语义图、不增加解码器模块，保持解码端结构不变。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: OnePlus数据集上的消融实验表明空间对齐的语义引导是性能收益的关键因素。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出SG-AFM：用仅编码端的语义先验调制潜变量高频子带，六数据集相对TCM平均降PSNR-BD-rate 13.17%。
+  abstract_zh: 论文针对高频衰减降码率但损伤目标边界与细节的问题，提出语义引导自适应潜频率调制（SG-AFM），以语义结构先验引导编码器潜变量的高频衰减。方法对潜变量施加Haar小波变换，将固定语义-频率乘子与有界可学习校正相结合来调制高频子带；语义先验仅在编码端计算，无需传输语义图，也不给解码器增加任何模块。在六个数据集上，SG-AFM相对TCM平均降低PSNR口径BD-rate
+    13.17%，并在ExDark、NightCity、OnePlus上取得对比方法中的最佳BD-rate，平均降幅16.80%。OnePlus上的消融实验验证了空间对齐语义引导的收益，视觉对比显示局部结构重建得到改善。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 属于学习式图像压缩核心工作，提出语义引导的潜变量高频调制方法，相对TCM有显著BD-rate收益。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 面向学习式图像压缩的语义引导频率调制
+relations:
+- type: same_topic
+  ref: paper:arxiv:2606.21033
+  note: 同为学习式图像压缩方法研究（MoECodec），共享图像编解码与率失真优化主题
+- type: same_topic
+  ref: paper:arxiv:2609.04274
+  note: 同为图像表示压缩方向（多尺度图像表示压缩），与本文频域潜表示调制主题相关
+- type: same_topic
+  ref: paper:arxiv:2610.22421
+  note: 同为端到端学习式图像编码研究，涵盖率失真优化与部署，主题高度重合

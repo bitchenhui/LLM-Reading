@@ -1,0 +1,37 @@
+id: paper:arxiv:2608.00483
+status: skipped
+score: 0
+matched: []
+meta:
+  title: 'Streamable Neural Video Compression: A Mixed Precision Approach for Cross-Platform Deployment'
+  authors:
+  - Kasidis Arunruangsirilert
+  - Heming Sun
+  - Jiro Katto
+  published: '2026-08-01'
+  updated: '2026-08-01'
+  categories:
+  - eess.IV
+  - cs.MM
+  abstract: Neural Video Codecs (NVCs) offer unprecedented rate-distortion performance, making them highly
+    attractive for bandwidth-constrained environments like 5G cellular networks and emerging satellite
+    direct-to-cell (D2C) links. However, deploying NVCs in real-world streaming applications is severely
+    hindered by cross-platform floating-point non-determinism, which causes arithmetic entropy coders
+    to desynchronize and crash across different GPU architectures. While recent integer-based quantization
+    methods address this, they incur either massive degradation in compression efficiency (INT8) or severe
+    computational bottlenecks by bypassing hardware acceleration (INT16). In this paper, we propose a
+    streamable, client-server NVC architecture featuring a novel Mixed Precision (FP16/FP32) strategy.
+    By strategically executing P-frames in hardware-accelerated FP16 for real-time throughput, while forcing
+    I-frames and periodic feature-adapter resets to IEEE-754 compliant FP32, we guarantee deterministic
+    synchronization at critical boundaries. Through extensive cross-encode/decode evaluations across 12
+    GPUs spanning four architectural generations, we demonstrate that our approach successfully eliminates
+    intra-generation fragmentation and substantially broadens cross-die interoperability, achieving seamless
+    cross-generation decodability for recent architectures at 1080p. Crucially, this is achieved with
+    a negligible impact on compression efficiency. Furthermore, we evaluate the system's end-to-end latency
+    across diverse real-world networks, including Wi-Fi 6, 5G NR (FDD/TDD), and Starlink D2C, proving
+    the practical viability of streamable learned video compression while highlighting unique challenges
+    in Non-Terrestrial Networks.
+  url: https://arxiv.org/abs/2608.00483
+  pdf_url: https://arxiv.org/pdf/2608.00483v1
+  version: v1
+fetched: '2026-11-12'

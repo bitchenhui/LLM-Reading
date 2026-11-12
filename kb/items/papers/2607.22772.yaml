@@ -1,0 +1,71 @@
+id: paper:arxiv:2607.22772
+type: paper
+title: Generative Video Compression with Adaptive Score Distillation
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2607.22772v1
+  url: https://arxiv.org/abs/2607.22772
+  pdf_url: https://arxiv.org/pdf/2607.22772v1
+  venue: arXiv preprint
+time:
+  published: '2026-07-24'
+  collected: '2026-11-12'
+entities:
+- ref: metric:LPIPS
+  role: subject
+- ref: metric:FID
+  role: measured_by
+- ref: metric:FPS
+  role: measured_by
+claims:
+- statement: GenVC在超低码率下取得最先进的感知质量，较GLVC显著节省码率。
+  confidence: reported
+  metrics:
+  - name: 平均码率节省
+    value: 62.5%
+    scope: 匹配LPIPS条件下相对GLVC
+  - name: 平均码率节省
+    value: 71.3%
+    scope: 匹配FID条件下相对GLVC
+  evidence: abstract（初筛，未读全文）
+- statement: GenVC是首个专门为压缩任务从零训练的视频扩散模型，在像素空间采用全局到局部层级结构恢复细粒度时空细节。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 直接应用DMD蒸馏会使学生模型趋向运动停滞的重建，根源是学生扰动离开冻结教师训练区域后教师引导失效并形成自我强化的反馈回路；自适应得分蒸馏通过按真值方向对齐度门控DMD更新打破该回路。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: GenVC无需依赖十亿级预训练骨干，模型轻量且解码高效。
+  confidence: reported
+  metrics:
+  - name: 参数量
+    value: 478.0M
+    scope: GenVC扩散模型总参数
+  - name: 解码速度
+    value: 15.1 fps
+    scope: 1080p视频单步解码，A100 GPU
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 首个从零训练的面向压缩视频扩散模型GenVC，一步解码并用自适应得分蒸馏修复运动停滞，超低码率感知质量SOTA。
+  abstract_zh: 论文提出GenVC，据称是首个专为压缩任务从零训练的视频扩散模型，直接在像素空间以全局到局部层级恢复细粒度时空细节，实现高质量生成式重建。为加速推理，作者用分布匹配蒸馏（DMD）将多步模型压缩为单步，但发现直接蒸馏会使学生模型趋向运动停滞的重建，并将其归因于学生扰动脱离冻结教师训练区域后的教师引导失效与反馈回路。为此提出自适应得分蒸馏（Adaptive
+    Score Distillation），按更新与真值方向的对齐程度门控DMD更新，从而获得运动连贯的高质量重建。实验显示GenVC在超低码率下达到SOTA感知质量：匹配LPIPS时较GLVC平均节省62.5%码率，匹配FID时节省71.3%；模型仅478.0M参数，单步解码1080p视频在A100上达15.1fps。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 首个面向压缩从零训练的视频扩散编解码器，属生成式压缩核心方向，方法与部署指标俱备，值得精读。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 基于自适应得分蒸馏的生成式视频压缩
+relations:
+- type: same_topic
+  ref: paper:arxiv:2609.34725
+  note: 同为利用生成先验的生成式视频压缩
+- type: same_topic
+  ref: paper:arxiv:2606.22371
+  note: 同为基于扩散先验的生成式视频压缩
+- type: same_topic
+  ref: paper:arxiv:2607.28144
+  note: 同为超低码率实时生成式视频编码

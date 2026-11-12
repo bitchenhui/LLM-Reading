@@ -1,0 +1,52 @@
+id: paper:arxiv:2609.29041
+type: paper
+title: 'From Scattered Gaussians to Structured Maps: Efficient Gaussian Splatting Coding via Dual-phase
+  Morton Sorting'
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2609.29041v1
+  url: https://arxiv.org/abs/2609.29041
+  pdf_url: https://arxiv.org/pdf/2609.29041v1
+  venue: arXiv preprint
+time:
+  published: '2026-09-24'
+  collected: '2026-11-12'
+entities:
+- ref: codec:HEVC
+  role: subject
+- ref: codec:VVC
+  role: uses
+- ref: org:MPEG
+  role: builds_on
+claims:
+- statement: 双阶段Morton排序（第一阶段Morton一维索引增强空间局部性，第二阶段结构化2D Morton映射表强化空间邻接）可将3DGS属性整理为高度规则、块状且局部相关性强的特征图，适合传统基于块的编码工具压缩。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 与现有排序策略PLAS和Morton ordering相比，所提方法在压缩性能与运行效率上均显著更优，且计算代价更低，提供标准兼容的3DGS数据编码方案。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 投影式3DGS编码的有效性高度依赖投影视频的空间相关性，现有排序方法要么计算成本高（PLAS）要么相关性保持有限（Morton ordering）。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出双阶段Morton空间排序，将3DGS属性转为强局部相关2D特征图，提升标准视频编码器压缩效率与运行速度。
+  abstract_zh: 3DGS因非结构化表示带来过大存储与带宽开销，将其属性投影为2D映射并用HEVC/VVC压缩已成为MPEG标准化支持的主流路线，但效果依赖投影视频的空间相关性，现有PLAS与Morton排序或计算代价高或相关性保持不足。该文提出双阶段Morton空间排序：第一阶段对高维属性做Morton一维索引以增强空间局部性，第二阶段通过结构化2D
+    Morton映射表强制空间邻接以细化布局连续性。该分层策略生成高度规则、块状、局部相关性强的特征图，非常适合传统基于块的编码工具压缩。实验表明该方法在压缩性能与运行效率上均显著优于现有方法，提供实用且标准兼容的3DGS编码方案。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 3DGS投影式编码直接基于HEVC/VVC压缩并契合MPEG标准化路线，属标准兼容的编码优化核心工作。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 从散乱高斯到结构化映射：基于双阶段Morton排序的高效高斯泼溅编码
+relations:
+- type: same_topic
+  ref: paper:arxiv:2609.04273
+  note: 同属新型表示压缩路线：均将高维表示（3DGS/神经视频表示）适配视频编码器进行压缩
+- type: same_topic
+  ref: paper:arxiv:2606.28163
+  note: 同属表示压缩方向，均利用视频编码框架压缩高维表示数据

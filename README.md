@@ -32,10 +32,10 @@ JVET/MPEG/AOM 文档     ├→ 归一化 → 实体对齐 → 落地沉淀 → 
 
 ## 当前状态
 
-- ✅ 学术源（arXiv）的手工原型跑通：6 篇论文 → 6 个结构化信息项（34 论断/24 量化指标）
-- ✅ item/entity schema 定稿，实体注册表初版，校验脚本通过
-- ✅ 检索 adapter（规则部分）：`scripts/fetch_arxiv.py` 增量拉取 → 实体对齐打分 → `queue/papers/` 候选队列（pending/skipped）
-- ⬜ 检索 adapter（LLM 部分）：消费 pending 队列 → 自动生成 item（等 LLM 配置）
+- ✅ 学术源（arXiv）全链路闭环：`fetch_arxiv`（拉取/实体对齐/队列）→ `llm_review`（glm-5.3-flash 精度终审 + 中文初筛）→ `kb/items/`（过校验落库）
+- ✅ 基底：**35 个信息项**（6 篇手工精读回填 + 29 篇 pipeline 自动审阅）、135 条论断、111 处量化指标、90 实体
+- ✅ 首轮 150 天回补：队列 56 条（reviewed 29 / 规则 skipped 26 / LLM skipped 1）
+- ⬜ deep_read 深读阶段：glm-5.3 强档消费 deep_read 候选，下载 PDF 产出 docs/ 长文精读
 - ⬜ 第二信息源：JVET 文档列表（音视频领域前瞻性最强的来源）
 - ⬜ 消费端：RAG 问答 → digest 周报 → 语料导出（按 source.license 过滤）
 

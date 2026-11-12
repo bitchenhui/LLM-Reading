@@ -1,0 +1,81 @@
+id: paper:arxiv:2607.23366
+type: paper
+title: Codebook Capacity Governs Perceptual Quality Across Resolutions in Hierarchical Discrete Video
+  Compression
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2607.23366v1
+  url: https://arxiv.org/abs/2607.23366
+  pdf_url: https://arxiv.org/pdf/2607.23366v1
+  venue: arXiv preprint
+time:
+  published: '2026-07-25'
+  collected: '2026-11-12'
+entities:
+- ref: codec:AVC
+  role: subject
+- ref: codec:HEVC
+  role: compared_against
+- ref: metric:LPIPS
+  role: measured_by
+claims:
+- statement: 在分层离散视频编码中，码本容量K对感知质量（LPIPS）的影响远大于空间分辨率，是主导设计变量；对数线性模型显示码本项显著而分辨率项不显著。
+  confidence: reported
+  metrics:
+  - name: α（log2K系数）
+    value: '-0.0094'
+    scope: 12个工作点拟合，t=-6.6，p<0.001
+  - name: β（log2r系数）
+    value: '-0.0009'
+    scope: 12个工作点拟合，t=-0.43，p=0.68，不显著
+  - name: R²
+    value: '0.82'
+    scope: Q(K,r)对数线性模型拟合
+  - name: 影响比
+    value: 约10×
+    scope: 码本容量相对空间分辨率，每对数单位增量
+  evidence: abstract（初筛，未读全文）
+- statement: 底层码字熵效率随分辨率提高保持稳定或改善，说明更大空间网格被更高效利用。
+  confidence: reported
+  metrics:
+  - name: η=H(z)/log2K
+    value: 84-87%
+    scope: 64×64分辨率
+  - name: η=H(z)/log2K
+    value: 92-94%
+    scope: 256×256分辨率
+  evidence: abstract（初筛，未读全文）
+- statement: 在同等或更低码率下，所提离散视频编码器在LPIPS上超越H.264与H.265。
+  confidence: reported
+  metrics:
+  - name: LPIPS增益
+    value: 25-52%
+    scope: 128×128，相对H.264，同等或更低码率
+  - name: LPIPS增益
+    value: 21-37%
+    scope: 256×256，相对H.265（HEVC）
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 分层离散视频压缩中，码本容量K而非空间分辨率主导LPIPS感知质量，可简化多分辨率部署。
+  abstract_zh: 论文以MS-VQ-VAE分层离散视频编码器为对象，在UCF101上系统扫描码本大小K∈{128,256,512,1024}与分辨率64×64至256×256共12个工作点，考察感知质量对二者的敏感性。对LPIPS拟合对数线性模型Q(K,r)=α·log2K+β·log2r+γ，得到α=-0.0094（显著）而β=-0.0009（不显著），表明码本容量每增加一个对数单位的影响约为分辨率的10倍。同时底层熵效率η=H(z)/log2K随分辨率从84-87%升至92-94%，说明更大的空间网格被更充分利用而非浪费。在同等或更低码率下，模型在LPIPS上全面超越H.264（128×128增益25-52%）并在256×256超过H.265（增益21-37%），提示K是分层离散视频编码器的主导设计变量，有助于免重训的多分辨率部署与生成式视频模型的可扩展离散分词器设计。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 学习式离散视频编码（MS-VQ-VAE）的系统实证研究，直接涉及码本设计、感知质量优化与多分辨率部署，属核心收录范围。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 码本容量决定分层离散视频压缩中跨分辨率的感知质量
+relations:
+- type: same_topic
+  ref: paper:arxiv:2609.04273
+  note: 同属学习式视频压缩与跨分辨率/可扩展表示研究
+- type: same_topic
+  ref: paper:arxiv:2607.28144
+  note: 同属面向生成式先验/生成式视频模型的视频编码方向
+- type: same_topic
+  ref: paper:arxiv:2609.34725
+  note: 均探讨生成式视频压缩与离散表示在低码率下的应用

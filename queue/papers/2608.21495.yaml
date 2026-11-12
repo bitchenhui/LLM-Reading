@@ -1,0 +1,44 @@
+id: paper:arxiv:2608.21495
+status: reviewed
+score: 7
+matched:
+- ref: codec:HEVC
+  count: 2
+  weight: 3
+- ref: codec:VVC
+  count: 2
+  weight: 3
+- ref: concept:QP
+  count: 1
+  weight: 1
+meta:
+  title: 'MDFI: A Multi-Domain Features Integration for Compressed Video Quality Enhancement'
+  authors:
+  - Sang NguyenQuang
+  - Hieu Bui Minh
+  - Dang BuiDinh
+  - Xiem HoangVan
+  published: '2026-08-21'
+  updated: '2026-08-21'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: 'The latest video coding standard, H.266/VVC, has demonstrated significant improvements in
+    compression efficiency compared to H.265/HEVC. Despite its advanced coding techniques, H.266/VVC still
+    faces challenges in meeting the increasing demand for higher perceptual quality and enhanced compression
+    performance. To address these limitations, we propose MDFI (Multi-Domain Features Integration), a
+    compressed video quality enhancement approach that features a novel Frame-Prediction Feature Transform
+    (FPFT) module to process prediction information. Moreover, MDFI integrates a multi-domain feature
+    fusion strategy that effectively combines spatiotemporal characteristics, cross-frequency representations,
+    and compressed-domain prediction information to enhance decoded video quality. Additionally, we introduce
+    a comprehensive dataset that encompasses uncompressed video sequences, corresponding reconstructed
+    versions at multiple QP levels, and predicted frames generated from H.266/VVC compressed bitstreams,
+    providing essential resources for developing and benchmarking video enhancement approaches. Extensive
+    experiments demonstrate that our MDFI approach achieves superior performance to state-of-the-art methods
+    in both objective metrics and visual quality, effectively mitigating video compression artifacts.
+    The code is available at: https://github.com/dangdinh17/MDFI.git.'
+  url: https://arxiv.org/abs/2608.21495
+  pdf_url: https://arxiv.org/pdf/2608.21495v1
+  version: v1
+fetched: '2026-11-12'
+llm_decision: deep_read

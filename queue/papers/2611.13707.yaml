@@ -1,0 +1,29 @@
+id: paper:arxiv:2611.13707
+status: skipped
+score: 0
+matched: []
+meta:
+  title: Joint Activation and Weight Quantization for Learned Image Compression
+  authors:
+  - Yile Tu
+  - Heming Sun
+  published: '2026-11-10'
+  updated: '2026-11-10'
+  categories:
+  - eess.IV
+  - cs.MM
+  abstract: Learned image compression (LIC) models achieve competitive rate-distortion performance with
+    increasingly large networks, making network quantization important for efficient deployment. Directly
+    quantizing LIC models remains difficult in post-training quantization (PTQ) because compression performance
+    is highly sensitive to quantization noise. Existing methods typically focus on optimizing either the
+    weights or the activations, resulting in substantial rate-distortion degradation. To address this
+    limitation, we introduce a two-stage pipeline that uses SmoothQuant to balance activation and weight
+    ranges, followed by GPTQ to adapt the transformed weights. The proposed joint search framework optimizes
+    the balancing transformation and adapted weights under the rate-distortion objective, accounting for
+    the coupling between the two stages. Experiments across multiple LIC architectures and activation
+    quantization configurations show that the joint search strategy consistently reduces rate-distortion
+    degradation after quantization.
+  url: https://arxiv.org/abs/2611.13707
+  pdf_url: https://arxiv.org/pdf/2611.13707v1
+  version: v1
+fetched: '2026-11-12'

@@ -1,0 +1,53 @@
+id: paper:arxiv:2611.00181
+status: reviewed
+score: 6
+matched:
+- ref: codec:HEVC
+  count: 1
+  weight: 3
+- ref: concept:GOP
+  count: 1
+  weight: 1
+- ref: concept:Hyperprior
+  count: 1
+  weight: 1
+- ref: metric:BD-Rate
+  count: 1
+  weight: 1
+meta:
+  title: A Rate-Distortion Optimized Skip Mode Coding Framework for Neural Video Compression in AVS
+  authors:
+  - Yuntian Jiang
+  - Shuai Li
+  - Yanbo Gao
+  - Jinglin Zhang
+  - Hui Yuan
+  - Mao Ye
+  published: '2026-10-30'
+  updated: '2026-10-30'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: With the development of deep learning, neural video compression (NVC) is gaining increasing
+    interest and is currently under standardization in the AVS (Audio Video Coding Standard). Skip mode
+    coding, a crucial component in the traditional video compression, is also adopted in AVS NVC. Although
+    the skip mode takes a large portion in encoding the motion and residual features in the NVC, there
+    is a lack of investigation on the rate distortion performance of the skip mode coding. In this paper,
+    we first thoroughly investigate the rate and distortion distribution in the skip mode coding within
+    a spatial frame and under different temporal reference qualities, and demonstrate that distortion
+    distribution changes spatially and temporally. Therefore, a rate-distortion optimized skip mode coding
+    (RDOSkip) framework is proposed, where the rate and distortion in the skip mode coding is formulated
+    based on a statistical distribution predicted by the hyperprior and the Bayes' theorem. An adaptive
+    skip mode decision method based on spatial-temporal joint RD optimization is developed for the skip
+    mode coding among channels and frames in a group of pictures. It addresses the limitation of the rigid
+    fixed-distortion distribution assumption in skip mode coding within the existing methods that rely
+    on a fixed skip threshold. The temporal skip mode decision method has been adopted in the ongoing
+    AVS NVC standard and incorporated into the reference software. The proposed RDOSkip can be directly
+    used in the inference without any training and with negligible complexity increase. Experimental results
+    further demonstrate that the proposed RDOSkip can improve the performance by 0.90% and 1.29% on AVS
+    and HEVC datasets, respectively, in terms of BD-rate saving.
+  url: https://arxiv.org/abs/2611.00181
+  pdf_url: https://arxiv.org/pdf/2611.00181v1
+  version: v1
+fetched: '2026-11-12'
+llm_decision: deep_read

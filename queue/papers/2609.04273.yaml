@@ -1,0 +1,52 @@
+id: paper:arxiv:2609.04273
+status: reviewed
+score: 9
+matched:
+- ref: impl:NVRC
+  count: 2
+  weight: 3
+- ref: impl:VTM
+  count: 1
+  weight: 3
+- ref: concept:INR
+  count: 2
+  weight: 1
+- ref: dataset:UVG
+  count: 1
+  weight: 1
+- ref: metric:BD-Rate
+  count: 1
+  weight: 1
+meta:
+  title: Scalable Neural Video Representation Compression
+  authors:
+  - Tianhao Peng
+  - Ho Man Kwan
+  - Fan Zhang
+  - Shan Liu
+  - David Bull
+  published: '2026-09-02'
+  updated: '2026-11-03'
+  categories:
+  - eess.IV
+  - cs.CV
+  - cs.MM
+  abstract: 'Scalable video coding (SVC) encodes a video into a layered bitstream of a base layer and
+    one or more enhancement layers, enabling decoding at different bitrate/quality/resolution operating
+    points for diverse devices and network conditions. SVC has been incorporated into major video coding
+    standards and has recently attracted growing interest for both scene-agnostic and scene-adaptive neural
+    video codecs. Among the latter, implicit neural representation (INR) based codecs overfit a compact
+    neural network to an individual video, offering fast decoding and competitive coding efficiency. However,
+    research on scalable INR-based compression remains in its infancy: existing methods introduce additional
+    network layers, which couple the bitrate with the decoding complexity and cannot match strong scalable/non-scalable
+    codecs. This paper proposes S-NVRC, a scalable INR-based video codec that jointly supports fine-grained
+    bitrate and decoding complexity scalability from a single embedded bitstream. It adopts a coarse-to-fine
+    prefix for feature grids and a nested prefix for network layers, which scale bitrate and decoding
+    complexity, respectively. With a single encoding, S-NVRC spans a wide range of bitrate and decoding
+    complexity and outperforms SHM-12.4 and the multi-layer VTM-20.0 by 43.7% and 5.6% in BD-rate on the
+    UVG dataset.'
+  url: https://arxiv.org/abs/2609.04273
+  pdf_url: https://arxiv.org/pdf/2609.04273v2
+  version: v2
+fetched: '2026-11-12'
+llm_decision: deep_read

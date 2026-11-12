@@ -1,0 +1,61 @@
+id: paper:arxiv:2608.07799
+status: reviewed
+score: 21
+matched:
+- ref: codec:AVC
+  count: 2
+  weight: 3
+- ref: codec:HEVC
+  count: 2
+  weight: 3
+- ref: codec:VVC
+  count: 2
+  weight: 3
+- ref: impl:DCVC-FM
+  count: 1
+  weight: 3
+- ref: impl:HM
+  count: 1
+  weight: 3
+- ref: impl:VTM
+  count: 1
+  weight: 3
+- ref: concept:QP
+  count: 3
+  weight: 1
+- ref: concept:RDO
+  count: 2
+  weight: 1
+- ref: metric:MS-SSIM
+  count: 1
+  weight: 1
+meta:
+  title: Bit Allocation Transfer for Perceptual Quality Enhancement of Traditional Video Codecs
+  authors:
+  - Runyu Yang
+  - Ivan V. Bajić
+  published: '2026-08-07'
+  updated: '2026-08-07'
+  categories:
+  - eess.IV
+  - cs.MM
+  abstract: Traditional block-based video codecs, such as H.264/AVC, H.265/HEVC and H.266/VVC, rely on
+    hand-crafted Rate-Distortion Optimization (RDO) processes that primarily minimize Mean Squared Error
+    (MSE), which correlates poorly with human perceptual quality. While neural video compression methods
+    can easily optimize perceptually aligned metrics like MS-SSIM, their high computational complexity
+    limits practical deployment. This paper proposes a novel bit allocation transfer framework that bridges
+    these two paradigms to enhance the perceptual quality of conventional video codecs. Specifically,
+    we train a quantization step generation model using a perceptual loss within a neural video compression
+    framework (DCVC-FM). The model takes the original frame and a motion-compensated prediction as input
+    and outputs a quantization step map. We then derive a block-wise bit ratio from this map and convert
+    it into a Quantization Parameter (QP) map for a traditional video codec. Experimental results on the
+    HEVC B$\sim$D dataset demonstrate that our method achieves 20.20\%, 8.25\%, and 8.37\% bitrate savings
+    in terms of MS-SSIM compared with the standard reference software JM-19.0, HM-16.20, and VTM-23.0,
+    respectively, with additional gains when utilizing predicted frames. Our approach effectively transfers
+    the implicit perceptual importance learned by neural video compression models to guide block-level
+    bit allocation in traditional video codecs without modifying their core decoding syntax.
+  url: https://arxiv.org/abs/2608.07799
+  pdf_url: https://arxiv.org/pdf/2608.07799v1
+  version: v1
+fetched: '2026-11-12'
+llm_decision: deep_read

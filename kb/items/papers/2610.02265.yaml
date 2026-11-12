@@ -1,0 +1,64 @@
+id: paper:arxiv:2610.02265
+type: paper
+title: Event-guided Neural Video Compression
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2610.02265v1
+  url: https://arxiv.org/abs/2610.02265
+  pdf_url: https://arxiv.org/pdf/2610.02265v1
+  venue: arXiv preprint
+time:
+  published: '2026-10-01'
+  collected: '2026-11-12'
+entities:
+- ref: metric:BD-Rate
+  role: subject
+- ref: metric:PSNR
+  role: measured_by
+- ref: metric:LPIPS
+  role: measured_by
+claims:
+- statement: 在六个基准上，ENVC以PSNR-RGB为质量口径相对DCMVC平均取得39.13%的BD-rate节省。
+  confidence: reported
+  metrics:
+  - name: BD-Rate
+    value: 39.13%
+    scope: 相对DCMVC，PSNR-RGB口径，六个基准平均
+  evidence: abstract（初筛，未读全文）
+- statement: 在六个基准上，ENVC以LPIPS为质量口径相对DCMVC平均取得67.63%的BD-rate节省。
+  confidence: reported
+  metrics:
+  - name: BD-Rate
+    value: 67.63%
+    scope: 相对DCMVC，LPIPS口径，六个基准平均
+  evidence: abstract（初筛，未读全文）
+- statement: ENVC的性能增益在大运动序列上依然保持，表明事件信息在剧烈时域变化场景下尤为有效。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 作者提出在标准视频数据集上合成成对RGB-事件数据的方案，并通过与真实事件的对比验证了其预测效用。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出ENVC：用编码解码端共享的事件流引导运动先验与时域上下文精炼，大幅降低RGB神经视频编码码率。
+  abstract_zh: 该工作提出事件引导神经视频编解码器ENVC，利用编码端与解码端共享的事件流为RGB压缩提供跨模态时域观测。在运动编码上，ENVC构建事件引导的运动先验并仅编码剩余运动残差；在帧编码上，事件条件预测器提供多尺度特征，经门控机制精炼时域上下文。为在标准视频数据集上训练与评估，作者合成了成对RGB-事件数据，并与真实事件对比验证其预测效用。在六个基准上，ENVC相对DCMVC平均取得39.13%（PSNR-RGB口径）和67.63%（LPIPS口径）的BD-rate节省，且在大运动序列上增益依然保持。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 提出利用事件相机流引导运动与时域上下文的神经视频编解码器，属于学习式视频编码核心创新且结果显著。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 事件引导的神经视频压缩
+relations:
+- type: same_topic
+  ref: paper:arxiv:2611.00181
+  note: 同为神经视频压缩的码率-失真优化工具设计
+- type: same_topic
+  ref: paper:arxiv:2609.16279
+  note: 同为面向特定增强目标的神经视频编解码器
+- type: same_topic
+  ref: paper:arxiv:2606.28027
+  note: 同为学习式视频编码，关注不同部署/增强维度

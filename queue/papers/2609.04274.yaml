@@ -1,0 +1,50 @@
+id: paper:arxiv:2609.04274
+status: reviewed
+score: 10
+matched:
+- ref: codec:VVC
+  count: 1
+  weight: 3
+- ref: impl:NVRC
+  count: 1
+  weight: 3
+- ref: impl:VTM
+  count: 1
+  weight: 3
+- ref: metric:BD-Rate
+  count: 1
+  weight: 1
+meta:
+  title: Multi-scale Image Representation Compression
+  authors:
+  - Tianhao Peng
+  - Ho Man Kwan
+  - Fan Zhang
+  - Shan Liu
+  - David Bull
+  published: '2026-09-02'
+  updated: '2026-09-02'
+  categories:
+  - eess.IV
+  - cs.CV
+  - cs.MM
+  abstract: 'Overfitted codecs have demonstrated promising performance for image and video compression.
+    In particular, for image compression, the Cool-chic family of models has shown competitive performance
+    against scene-agnostic models, with orders of magnitude lower decoding complexity at the cost of a
+    longer overfitting process. However, these overfitted image codecs are not fully optimized toward
+    the rate-distortion objective: their network weights remain in full precision during training, and
+    the associated quantization parameters are selected in a separate post-training stage. Furthermore,
+    their synthesis operates at a single scale, which overlooks cross-scale redundancy. In this paper,
+    we propose MIRC, an overfitted image codec in which every coded component, including the latents,
+    the synthesis network, and the entropy models, is quantized and entropy coded under a single rate-distortion
+    objective, adopting the end-to-end compression pipeline of the neural video representation codec NVRC.
+    We further introduce a multi-scale representation with cross-stage parameter sharing, which improves
+    coding efficiency at a small transmitted overhead. On the CLIC2020 professional validation set, MIRC
+    achieves a 10.5% BD-rate saving against VVC (VTM 22.0). Moreover, MIRC offers a family of configurations
+    spanning 1.2 to 2.9 kMAC per pixel, so the decoding budget can be selected to match the deployment
+    target.'
+  url: https://arxiv.org/abs/2609.04274
+  pdf_url: https://arxiv.org/pdf/2609.04274v1
+  version: v1
+fetched: '2026-11-12'
+llm_decision: deep_read

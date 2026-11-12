@@ -1,0 +1,50 @@
+id: paper:arxiv:2609.29727
+status: reviewed
+score: 3
+matched:
+- ref: metric:MS-SSIM
+  count: 1
+  weight: 1
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+- ref: metric:kMAC-per-pixel
+  count: 1
+  weight: 1
+meta:
+  title: 'VQ-LIC: Shared Vector-Quantized Learned Image Compression on a Resource-Constrained FPGA'
+  authors:
+  - Muhammad Fahd Ibrahim Bhatti
+  - Abdullah Bin Faisal
+  - Ahsan Usman
+  - Naveed Anwar Bhatti
+  - Muhammad Ali Siddiqi
+  published: '2026-09-24'
+  updated: '2026-09-24'
+  categories:
+  - cs.AR
+  - eess.IV
+  abstract: Learned image compression (LIC) is hard to deploy on severely resource-constrained FPGAs,
+    since how fast it actually runs depends not just on arithmetic count, but also on memory traffic,
+    imbalance between different operations, and how the hardware batches its work. We present VQ-LIC,
+    an asymmetric edge-cloud codec in which a compact INT8 depthwise (DW)-pointwise (PW) analysis transform
+    and multi-codebook vector quantization (VQ) run at the edge on a reusable DW/PW engine pair, while
+    reconstruction is handled by a larger cloud decoder. Since VQ codeword matching is expressible as
+    a dot product, it is mapped directly onto the same PW engine, removing the need for a separate VQ
+    compute array, to our knowledge a first for FPGA LIC. A novel latency model, derived from deterministic
+    RTL cycle counts of an FPGA's read, DW, PW, and write costs, predicts an analysis transform's per-block
+    latency; since VQ shares the same PW datapath, the model applies to VQ as well. Validated directly
+    against silicon, the model predicts deployed analysis and VQ latency within 0.26\% and 0.05\%, and
+    guides the selection of a three-block $16$-$48$-$64$ transform. Post-training codebook reduction then
+    cuts VQ arithmetic and codebook storage by $4\times$ and shrinks the fixed-width latent representation.
+    On a 220-DSP Zynq-7020, VQ-LIC's mid-rate preset reaches 0.1398 bits per pixel at 28.69 dB PSNR and
+    13.06 dB MS-SSIM on CLIC~2017, outperforming a similarly sized neural encoder and reaching a rate-distortion
+    range comparable to a codec three orders of magnitude larger. The complete 0.1945-kMAC/pixel analysis-VQ
+    pipeline runs at 47.98 frames per second and 42.84 mJ per frame on silicon, using an order of magnitude
+    fewer DSPs than comparable FPGA LIC accelerators while achieving lower bitrate, higher throughput,
+    and lower energy per frame at a modest PSNR tradeoff.
+  url: https://arxiv.org/abs/2609.29727
+  pdf_url: https://arxiv.org/pdf/2609.29727v1
+  version: v1
+fetched: '2026-11-12'
+llm_decision: deep_read

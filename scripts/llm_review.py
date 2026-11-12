@@ -1,0 +1,341 @@
+#!/usr/bin/env python3
+"""LLM 审阅器：消费 queue/papers/ 的 pending 记录 → 精度终审 → 产出 kb items。
+
+对应 kb/README.md 入库五步的 3-5 步：
+  3. 精度终审（assessment：relevance/decision/reason）
+  4. 提炼 claims（摘要可支撑的论断）+ 中文 summaries
+  5. 落库 kb/items/papers/{id}.yaml，随后跑一致性校验
+
+LLM 输出全部做词表裁剪与引用校验后才开始拼 item——模型说错枚举/编造实体时
+降级处理而不是污染基底。decision=skip 的只回写队列状态，不落库。
+
+用法：
+  uv run --with pyyaml python scripts/llm_review.py --limit 5    # 先试跑几条看质量
+  uv run --with pyyaml python scripts/llm_review.py              # 全量处理 pending
+配置：config/llm.local.yaml（复制自 cc-switch Zhipu GLM，已 gitignore）
+"""
+from __future__ import annotations
+
+import argparse
+import json
+import re
+import subprocess
+import sys
+import time
+import urllib.error
+import urllib.request
+from datetime import date
+from pathlib import Path
+
+import yaml
+
+ROOT = Path(__file__).resolve().parent.parent
+KB = ROOT / "kb"
+QUEUE = ROOT / "queue" / "papers"
+ITEMS = KB / "items" / "papers"
+CONFIG = ROOT / "config" / "llm.local.yaml"
+
+ROLES = ["subject", "uses", "builds_on", "evaluated_on", "measured_by",
+         "compared_against", "affiliation", "platform"]
+RELATION_TYPES = ["cites", "builds_on", "improves_on", "compares_with",
+                  "same_topic", "complements", "contrasts_with"]
+RESEARCH_LINES = ["traditional_codec_opt", "learned_codec", "coding_for_machines",
+                  "generative_compression", "inr_representation", "systems_deployment"]
+
+INSTRUCTIONS = """你是音视频/图像编码领域信息整合引擎的精度过滤器与初筛摘要器。
+对给定论文完成三件事：判定收录级别、写中文初筛摘要、提炼结构化论断。
+只输出 JSON 本体，不要 markdown 代码块、不要解释。
+
+收录基准：视频/图像压缩与编码（标准编码器优化、学习式编码、生成式压缩、INR 表示、
+面向机器的编码、系统部署/跨平台）。纯理论、纯感知实验、与编码无关的应用 → skip。"""
+
+
+def build_prompt(rec: dict, entities: dict, known_items: list[tuple[str, str]]) -> str:
+    meta = rec["meta"]
+    matched = ", ".join(f"{m['ref']}(×{m['count']})" for m in rec.get("matched", [])) or "无"
+    ent_list = "\n".join(f"  {eid}  [{entities[eid]['type']}]" for eid in
+                         sorted({m["ref"] for m in rec.get("matched", [])} & entities.keys()))
+    item_list = "\n".join(f"  {iid}  {title}" for iid, title in known_items) or "  （空）"
+    return f"""论文元数据：
+标题: {meta['title']}
+作者: {', '.join(meta['authors'][:8])}
+arXiv 分类: {', '.join(meta['categories'])}
+摘要: {meta['abstract']}
+
+规则阶段实体匹配（可能含噪声）: {matched}
+
+可挂接实体（只能从下列中选择，剔除噪声匹配）:
+{ent_list}
+
+角色词表: subject=研究对象 uses=使用 builds_on=基于 evaluated_on=数据集 measured_by=指标 compared_against=对比锚点 affiliation=作者机构 platform=硬件平台
+已有信息项（relations 只能引用下列 id，仅在确有联系时给）:
+{item_list}
+
+输出 JSON：
+{{
+ "decision": "deep_read|summary_only|skip",
+ "relevance": "high|medium|low",
+ "reason": "一句话中文理由",
+ "title_zh": "中文标题",
+ "one_liner_zh": "一句话总结（中文，≤60字）",
+ "abstract_zh": "3-5句方法与结果中文摘要",
+ "research_lines": [],
+ "entities": [{{"ref": "…", "role": "…"}}],
+ "claims": [{{"statement": "中文论断", "confidence": "reported", "metrics": [{{"name": "指标名", "value": "数值", "scope": "口径"}}]}}],
+ "relations": [{{"type": "same_topic", "ref": "…", "note": "依据"}}]
+}}
+要求：entities 至少 1 条（subject 必须有）；claims 至少 1 条（摘要里有数字就带 metrics，
+value 用字符串原样保留数值与单位，scope 写清锚点/条件；没有可靠数字就纯 statement）。"""
+
+
+# ---------- LLM 客户端（Responses / chat-completions 自适应） ----------
+
+class LLM:
+    def __init__(self, cfg: dict):
+        self.base = cfg["base_url"].rstrip("/")
+        self.key = cfg["api_key"]
+        self.models = cfg["models"]
+        self.req = cfg.get("request", {})
+        self.wire = cfg.get("wire", "responses")  # 先按配置的协议试
+        self.usage = {"in": 0, "out": 0, "calls": 0}
+
+    def _post(self, url: str, payload: dict) -> dict:
+        data = json.dumps(payload).encode()
+        req = urllib.request.Request(url, data=data, headers={
+            "Authorization": f"Bearer {self.key}",
+            "Content-Type": "application/json",
+        })
+        last = None
+        for attempt in range(1, 4):
+            try:
+                with urllib.request.urlopen(req, timeout=180) as resp:
+                    return json.loads(resp.read())
+            except urllib.error.HTTPError as e:
+                body = e.read()[:300].decode(errors="replace")
+                if e.code in (429, 500, 502, 503, 504):
+                    wait = 20 * attempt
+                    print(f"    [HTTP {e.code}] 退避 {wait}s", flush=True)
+                    time.sleep(wait)
+                    last = f"HTTP {e.code}: {body}"
+                    continue
+                raise RuntimeError(f"HTTP {e.code}: {body}") from e
+        raise RuntimeError(f"重试耗尽: {last}")
+
+    def chat(self, prompt: str, tier: str = "review") -> str:
+        model = self.models[tier]
+        max_tok = self.req.get("max_output_tokens", 4000)
+        if self.wire == "responses":
+            payload = {"model": model, "input": prompt, "instructions": INSTRUCTIONS,
+                       "max_output_tokens": max_tok}
+            effort = self.req.get(f"{tier}_reasoning")
+            if effort:
+                payload["reasoning"] = {"effort": effort}
+            try:
+                resp = self._post(f"{self.base}/responses", payload)
+            except RuntimeError as e:
+                if "404" in str(e) or "400" in str(e):  # 端点不支持 Responses → 降级
+                    print("    [wire] responses 不可用，切换 chat/completions", flush=True)
+                    self.wire = "chat"
+                    return self.chat(prompt, tier)
+                raise
+            self._track(resp.get("usage"))
+            return self._extract_responses(resp)
+        messages = [{"role": "system", "content": INSTRUCTIONS},
+                    {"role": "user", "content": prompt}]
+        resp = self._post(f"{self.base}/chat/completions",
+                          {"model": model, "messages": messages, "max_tokens": max_tok})
+        self._track(resp.get("usage"))
+        return resp["choices"][0]["message"]["content"]
+
+    @staticmethod
+    def _extract_responses(resp: dict) -> str:
+        if isinstance(resp.get("output_text"), str) and resp["output_text"]:
+            return resp["output_text"]
+        parts = []
+        for blk in resp.get("output", []):
+            if blk.get("type") != "message":
+                continue
+            for c in blk.get("content", []):
+                if c.get("type") in ("output_text", "text"):
+                    parts.append(c.get("text", ""))
+        if not parts:
+            raise RuntimeError(f"responses 输出无法解析: {json.dumps(resp, ensure_ascii=False)[:400]}")
+        return "".join(parts)
+
+    def _track(self, usage: dict | None) -> None:
+        if usage:
+            self.usage["in"] += usage.get("input_tokens") or usage.get("prompt_tokens") or 0
+            self.usage["out"] += usage.get("output_tokens") or usage.get("completion_tokens") or 0
+            self.usage["calls"] += 1
+
+
+def parse_llm_json(text: str) -> dict:
+    text = re.sub(r"^```(?:json)?\s*|\s*```$", "", text.strip())
+    try:
+        return json.loads(text)
+    except json.JSONDecodeError:
+        m = re.search(r"\{.*\}", text, re.S)  # 模型偶发前后缀说明，抠出最外层花括号
+        if m:
+            return json.loads(m.group(0))
+        raise
+
+
+# ---------- 裁剪与落库 ----------
+
+def sanitize(out: dict, rec: dict, entities: dict, known_ids: set[str], today: str) -> dict | None:
+    """词表裁剪 + 引用校验。decision=skip 返回 None。"""
+    decision = out.get("decision") if out.get("decision") in ("deep_read", "summary_only", "skip") else "summary_only"
+    relevance = out.get("relevance") if out.get("relevance") in ("high", "medium", "low") else "medium"
+
+    allowed = {m["ref"] for m in rec.get("matched", [])}
+    ents = []
+    for e in out.get("entities", []):
+        if isinstance(e, dict) and e.get("ref") in allowed and e.get("role") in ROLES \
+                and not any(x["ref"] == e["ref"] for x in ents):
+            ents.append({"ref": e["ref"], "role": e["role"]})
+    if ents and not any(e["role"] == "subject" for e in ents):
+        ents[0] = {"ref": ents[0]["ref"], "role": "subject"}
+
+    claims = []
+    for c in out.get("claims", []):
+        if not isinstance(c, dict) or not c.get("statement"):
+            continue
+        cl = {"statement": str(c["statement"]),
+              "confidence": c.get("confidence") if c.get("confidence") in ("reported", "verified", "inferred") else "reported"}
+        metrics = []
+        for m in c.get("metrics", []):
+            if isinstance(m, dict) and m.get("value") is not None and (m.get("name") or m.get("ref")):
+                metrics.append({k: m[k] for k in ("ref", "name", "value", "unit", "scope") if m.get(k)})
+        if metrics:
+            cl["metrics"] = metrics
+        cl["evidence"] = "abstract（初筛，未读全文）"
+        claims.append(cl)
+
+    rels = []
+    for r in out.get("relations", []):
+        if isinstance(r, dict) and r.get("ref") in known_ids and r.get("type") in RELATION_TYPES:
+            rels.append({k: r[k] for k in ("type", "ref", "note") if r.get(k)})
+
+    if decision == "skip" or not ents or not claims:
+        return None
+
+    return {
+        "decision": decision, "relevance": relevance,
+        "reason": str(out.get("reason", ""))[:200] or "（模型未给理由）",
+        "title_zh": str(out.get("title_zh", "")) or None,
+        "one_liner": str(out.get("one_liner_zh", "")) or None,
+        "abstract_zh": str(out.get("abstract_zh", "")) or None,
+        "research_lines": [l for l in out.get("research_lines", []) if l in RESEARCH_LINES],
+        "entities": ents, "claims": claims, "relations": rels,
+    }
+
+
+def build_item(rec: dict, s: dict, today: str, model: str) -> dict:
+    meta = rec["meta"]
+    arxiv_id = rec["id"].split(":")[-1]
+    item = {
+        "id": rec["id"],
+        "type": "paper",
+        "title": meta["title"],
+        "research_lines": s["research_lines"],
+        "source": {
+            "channel": "arxiv",
+            "external_id": arxiv_id + meta.get("version", ""),
+            "url": meta["url"],
+            "pdf_url": meta["pdf_url"],
+            "venue": "arXiv preprint",
+        },
+        "time": {"published": meta["published"], "collected": today},
+        "entities": s["entities"],
+        "claims": s["claims"],
+        "summaries": {"one_liner_zh": s["one_liner"], "abstract_zh": s["abstract_zh"]},
+        "assessment": {
+            "relevance": s["relevance"], "decision": s["decision"],
+            "reason": s["reason"], "reviewer": f"{model}(llm_review)",
+        },
+        "provenance": {"created": today, "actor": "pipeline-v0", "pipeline": "llm_review"},
+    }
+    if s["title_zh"]:
+        item["title_zh"] = s["title_zh"]
+    if s["relations"]:
+        item["relations"] = s["relations"]
+    return item
+
+
+def main() -> int:
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--limit", type=int, default=0, help="本次最多处理条数（0=全部）")
+    ap.add_argument("--dry-run", action="store_true", help="只打印判定，不落库")
+    args = ap.parse_args()
+
+    cfg = yaml.safe_load(open(CONFIG, encoding="utf-8"))
+    llm = LLM(cfg)
+    entities: dict[str, dict] = {}
+    for p in sorted((KB / "entities").glob("*.yaml")):
+        for e in yaml.safe_load(open(p, encoding="utf-8")):
+            entities[e["id"]] = e
+    known_items = []
+    for p in sorted(ITEMS.glob("*.yaml")):
+        d = yaml.safe_load(open(p, encoding="utf-8"))
+        known_items.append((d["id"], d["title"]))
+    known_ids = {i for i, _ in known_items}
+
+    pendings = []
+    for p in sorted(QUEUE.glob("*.yaml")):
+        d = yaml.safe_load(open(p, encoding="utf-8"))
+        if d.get("status") == "pending":
+            pendings.append(d)
+    pendings.sort(key=lambda d: -d.get("score", 0))
+    if args.limit:
+        pendings = pendings[: args.limit]
+    print(f"pending 待审 {len(pendings)} 条（按规则分排序）\n")
+
+    today = date.today().isoformat()
+    n_item = n_skip = n_fail = 0
+    for rec in pendings:
+        title = rec["meta"]["title"][:60]
+        print(f"[{rec['id'].split(':')[-1]}] score={rec.get('score')} {title}")
+        try:
+            raw = llm.chat(build_prompt(rec, entities, known_items))
+            out = parse_llm_json(raw)
+        except Exception as e:  # noqa: BLE001
+            n_fail += 1
+            print(f"    ✗ 调用/解析失败: {e}")
+            continue
+        s = sanitize(out, rec, entities, known_ids, today)
+        qpath = QUEUE / f"{rec['id'].split(':')[-1]}.yaml"
+        if s is None:
+            n_skip += 1
+            rec["status"] = "skipped_by_llm"
+            rec["llm_decision"] = out.get("decision", "skip")
+            rec["llm_reason"] = str(out.get("reason", ""))[:200]
+            print(f"    → skip（{rec['llm_reason'][:50]}）")
+            if not args.dry_run:
+                yaml.safe_dump(rec, open(qpath, "w", encoding="utf-8"),
+                               allow_unicode=True, sort_keys=False, width=100)
+            continue
+        n_item += 1
+        item = build_item(rec, s, today, llm.models["review"])
+        print(f"    → {s['decision']} / {s['relevance']}｜{s['one_liner'][:50]}")
+        if not args.dry_run:
+            yaml.safe_dump(item, open(ITEMS / f"{rec['id'].split(':')[-1]}.yaml", "w", encoding="utf-8"),
+                           allow_unicode=True, sort_keys=False, width=100)
+            rec["status"] = "reviewed"
+            rec["llm_decision"] = s["decision"]
+            yaml.safe_dump(rec, open(qpath, "w", encoding="utf-8"),
+                           allow_unicode=True, sort_keys=False, width=100)
+            known_items.append((item["id"], item["title"]))
+            known_ids.add(item["id"])
+
+    print(f"\n产出 item {n_item}，LLM skip {n_skip}，失败 {n_fail}；"
+          f"tokens in={llm.usage['in']} out={llm.usage['out']} calls={llm.usage['calls']}")
+
+    if not args.dry_run and n_item:
+        print("\n运行基底校验：")
+        r = subprocess.run([sys.executable, str(ROOT / "scripts" / "validate_kb.py")])
+        return r.returncode
+    return 0 if n_fail == 0 else 1
+
+
+if __name__ == "__main__":
+    sys.exit(main())

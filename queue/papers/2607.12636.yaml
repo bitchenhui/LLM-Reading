@@ -1,0 +1,30 @@
+id: paper:arxiv:2607.12636
+status: skipped
+score: 0
+matched: []
+meta:
+  title: Spatially-Aligned Chroma from Luma Prediction for Lossless JPEG XS Raw Image Compression
+  authors:
+  - Taizo Suzuki
+  - Soma Yokota
+  - Masaki Onuki
+  published: '2026-07-14'
+  updated: '2026-07-14'
+  categories:
+  - eess.IV
+  abstract: This study proposes a Chroma from Luma (CfL)-enhanced Star-Tetrix transform (STT), referred
+    to as CfL-STT, for improving raw image compression in JPEG XS. The proposed CfL-STT integrates CfL
+    prediction into the STT to predict chroma components from the luma component in CFA-sampled raw images.
+    Unlike conventional CfL prediction designed for full-color images, the proposed method employs spatially
+    aligned luma samples obtained via linear interpolation along the horizontal and vertical directions
+    to match the chroma sampling grid. This spatial alignment suppresses high-frequency sensor noise while
+    preserving cross-channel correlation, resulting in a more decorrelated Y-Delta-Du-Dv color space.
+    The proposed method was implemented in the JPEG XS reference software and evaluated on raw image datasets.
+    Experimental results demonstrate that a direct application of CfL prediction yields image-dependent
+    performance and may degrade coding efficiency due to the lack of spatial alignment, whereas the proposed
+    CfL-STT consistently improves coding efficiency in lossless raw image compression while preserving
+    exact reversibility.
+  url: https://arxiv.org/abs/2607.12636
+  pdf_url: https://arxiv.org/pdf/2607.12636v1
+  version: v1
+fetched: '2026-11-12'

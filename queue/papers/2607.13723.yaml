@@ -1,0 +1,33 @@
+id: paper:arxiv:2607.13723
+status: reviewed
+score: 3
+matched:
+- ref: codec:VVC
+  count: 1
+  weight: 3
+meta:
+  title: 'N-O Cool-chic: reconcile fast encoding with lightweight decoding for neural image compression'
+  authors:
+  - Théophile Blard
+  - Théo Ladune
+  - Pierrick Philippe
+  - Xiaoran Jiang
+  - Olivier Déforges
+  published: '2026-07-15'
+  updated: '2026-07-15'
+  categories:
+  - eess.IV
+  abstract: Overfitted image codecs achieve strong compression performance and low decoder complexity
+    by learning a lightweight decoder for each image. Such codecs include Cool-chic, which presents image
+    coding performance on par with VVC while requiring around 2000 multiplications per decoded pixel.
+    However, the encoding time associated with overfitted codecs may be prohibitively long for real-time
+    applications, posing a challenge to their practical implementation in such scenarios. To address this
+    issue, this paper proposes to decrease the encoding complexity of Cool-chic by bypassing the overfitting
+    procedure and complementing the decoder with an encoder network. The proposed non-overfitted (N-O)
+    Cool-chic, significantly reduces encoding complexity by a factor of 1000 compared to Cool-chic, while
+    maintaining competitive performance.
+  url: https://arxiv.org/abs/2607.13723
+  pdf_url: https://arxiv.org/pdf/2607.13723v1
+  version: v1
+fetched: '2026-11-12'
+llm_decision: deep_read

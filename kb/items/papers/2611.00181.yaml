@@ -1,0 +1,70 @@
+id: paper:arxiv:2611.00181
+type: paper
+title: A Rate-Distortion Optimized Skip Mode Coding Framework for Neural Video Compression in AVS
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2611.00181v1
+  url: https://arxiv.org/abs/2611.00181
+  pdf_url: https://arxiv.org/pdf/2611.00181v1
+  venue: arXiv preprint
+time:
+  published: '2026-10-30'
+  collected: '2026-11-12'
+entities:
+- ref: codec:HEVC
+  role: subject
+- ref: concept:GOP
+  role: uses
+- ref: concept:Hyperprior
+  role: uses
+- ref: metric:BD-Rate
+  role: measured_by
+claims:
+- statement: RDOSkip在AVS数据集上相比基线可节省0.90%的BD-rate
+  confidence: reported
+  metrics:
+  - name: BD-rate saving
+    value: 0.90%
+    scope: AVS数据集，相对基线NVC编码器
+  evidence: abstract（初筛，未读全文）
+- statement: RDOSkip在HEVC数据集上相比基线可节省1.29%的BD-rate
+  confidence: reported
+  metrics:
+  - name: BD-rate saving
+    value: 1.29%
+    scope: HEVC数据集，相对基线NVC编码器
+  evidence: abstract（初筛，未读全文）
+- statement: 所提出的时域跳过模式决策方法已被进行中的AVS NVC标准采纳并集成到参考软件中
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: RDOSkip可直接在推理阶段使用，无需任何额外训练，且复杂度增加可忽略
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 基于超先验统计分布与贝叶斯定理建模skip模式率失真，可克服现有固定跳过阈值方法的刚性失真分布假设限制
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 率失真优化跳过模式编码框架RDOSkip：时空联合自适应跳过决策，AVS/HEVC上BD-rate节省0.90%/1.29%。
+  abstract_zh: 论文系统分析了AVS神经视频压缩中跳过模式编码的率失真分布，发现其随空间位置和时域参考质量变化。据此提出率失真优化的RDOSkip框架，利用超先验预测的统计分布与贝叶斯定理对skip模式的码率和失真进行建模，并发展基于时空联合率失真优化的自适应跳过模式决策方法，突破了现有方法依赖固定跳过阈值的刚性失真分布假设。所提时域跳过模式决策已被进行中的AVS
+    NVC标准采纳并集成进参考软件，推理时无需训练且复杂度增加可忽略。实验显示RDOSkip在AVS和HEVC数据集上BD-rate分别节省0.90%和1.29%。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 面向AVS NVC标准化的神经视频压缩skip模式率失真优化，方法已入标准参考软件且给出明确BD-rate增益，属视频编码核心方向。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 面向AVS神经视频压缩的率失真优化跳过模式编码框架
+relations:
+- type: same_topic
+  ref: paper:arxiv:2606.31084
+  note: 同为编码标准中的帧间模式决策工具优化（VVenC的merge加速 vs AVS NVC的skip模式优化）
+- type: same_topic
+  ref: paper:arxiv:2609.01535
+  note: 均研究标准编码器中具体编码模式（planar/skip）的设计与优化
+- type: same_topic
+  ref: paper:arxiv:2609.04273
+  note: 同属神经视频压缩方向（本文为AVS NVC框架内skip模式优化，该文为可扩展神经视频表示压缩）

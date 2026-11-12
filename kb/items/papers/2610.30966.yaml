@@ -1,0 +1,72 @@
+id: paper:arxiv:2610.30966
+type: paper
+title: Bound-Conditioned Latent Inference for Progressive Image Compression
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2610.30966v1
+  url: https://arxiv.org/abs/2610.30966
+  pdf_url: https://arxiv.org/pdf/2610.30966v1
+  venue: arXiv preprint
+time:
+  published: '2026-10-22'
+  collected: '2026-11-12'
+entities:
+- ref: concept:Hyperprior
+  role: subject
+- ref: dataset:Kodak
+  role: evaluated_on
+- ref: metric:BD-Rate
+  role: measured_by
+claims:
+- statement: 在Kodak上，BLI相对DPICT降低BD-rate 17.78%
+  confidence: reported
+  metrics:
+  - name: BD-Rate降幅
+    value: 17.78%
+    scope: Kodak数据集，对比DPICT
+  evidence: abstract（初筛，未读全文）
+- statement: 在Kodak上，BLI相对CTC降低BD-rate 7.96%
+  confidence: reported
+  metrics:
+  - name: BD-Rate降幅
+    value: 7.96%
+    scope: Kodak数据集，对比CTC
+  evidence: abstract（初筛，未读全文）
+- statement: BLI用单一共享模型替换CTC的逐平面预测器，参数量约为CTC的1/5.3且延迟更低
+  confidence: reported
+  metrics:
+  - name: 参数量缩减倍数
+    value: 5.3×
+    scope: 相对CTC的plane-specific predictors
+  evidence: abstract（初筛，未读全文）
+- statement: BLI在Kodak、CLIC和JPEG-AI上取得渐进式图像编码器中最优的率失真性能
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 已解码三态定义隐元素上下界，可行区间随解码单调收缩，可联合精炼熵模型高斯参数与重建隐估计，并支持灵活的面内精细化调度
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出BLI框架，将渐进三态平面编码重构为区间收缩下的序贯隐变量推断，BD-rate与参数量、延迟均显著优于现有渐进编码器
+  abstract_zh: 渐进式图像压缩需从单一码流前缀重建图像，涉及部分观测下的序贯隐变量推断；已有三态平面编解码器大多仅将已解码三态视为离散符号用于概率预测，未充分利用其作为连续隐变量区间约束的作用。本文提出边界约束隐变量推断（BLI），在每个编码步骤用已解码三态构成的上下界，结合编解码端共享的超先验信息，联合精炼熵模型高斯参数与用于重建的隐变量估计；随更多三态解码，可行区间单调收缩，为下一步推断提供更紧约束并支持灵活的面内精细化调度。在Kodak、CLIC和JPEG-AI上，BLI取得渐进式图像编码器中最优的率失真性能：Kodak上较DPICT降低BD-rate
+    17.78%、较CTC降低7.96%；同时以共享模型替换CTC的逐平面预测器，参数量约为其1/5.3且延迟更低。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 核心学习式渐进图像压缩方法论文，提出新框架并报告对DPICT/CTC的显著BD-rate收益，与收录基准直接吻合
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 面向渐进式图像压缩的边界约束隐变量推断
+relations:
+- type: same_topic
+  ref: paper:arxiv:2609.04274
+  note: 同属渐进/多尺度图像表示压缩，均关注从单一码流前缀渐进重建图像
+- type: same_topic
+  ref: paper:arxiv:2610.22421
+  note: 同属端到端学习式图像编码研究线，关注率失真优化
+- type: same_topic
+  ref: paper:arxiv:2610.33616
+  note: 同为学习式图像压缩中的熵模型/隐变量建模改进工作

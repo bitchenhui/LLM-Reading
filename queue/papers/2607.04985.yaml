@@ -1,0 +1,39 @@
+id: paper:arxiv:2607.04985
+status: reviewed
+score: 6
+matched:
+- ref: codec:ECM
+  count: 2
+  weight: 3
+- ref: codec:VVC
+  count: 1
+  weight: 3
+meta:
+  title: Reduced-complexity Adaptive Loop Filtering via Input-dependent Graph Filters
+  authors:
+  - Wen-Yang Lu
+  - Eduardo Pavez
+  - Antonio Ortega
+  - Roman Chernyak
+  - Shan Liu
+  published: '2026-07-06'
+  updated: '2026-07-06'
+  categories:
+  - eess.IV
+  abstract: Adaptive Loop Filtering is an important tool for suppressing compression artifacts in modern
+    video codecs. In the enhanced compression model (ECM), a software test model used for experimenting
+    with video coding tools beyond Versatile Video Coding, fixed filters are trained offline and achieve
+    high signal adaptivity via a fine-grained gradient-based classifier, resulting in a large number of
+    fixed filters that introduce redundancy and increased implementation complexity. Reducing this redundancy
+    without compromising artifact suppression, therefore, remains a key challenge. This paper proposes
+    an alternative graph-based fixed-filtering framework for adaptive loop filtering. By using a graph
+    to encode pixel-intensity relationships, our approach captures local structural information more effectively
+    than gradient-based classification alone. Fixed filters are learned as polynomial graph filters, enabling
+    structurally similar local patterns to share common filtering behavior. Experimental results demonstrate
+    that the proposed approach achieves a comparable performance to the ECM baseline while reducing the
+    number of required filters by an order of magnitude.
+  url: https://arxiv.org/abs/2607.04985
+  pdf_url: https://arxiv.org/pdf/2607.04985v1
+  version: v1
+fetched: '2026-11-12'
+llm_decision: deep_read

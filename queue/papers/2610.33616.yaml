@@ -1,0 +1,40 @@
+id: paper:arxiv:2610.33616
+status: reviewed
+score: 5
+matched:
+- ref: impl:TCM
+  count: 1
+  weight: 3
+- ref: metric:BD-Rate
+  count: 1
+  weight: 1
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+meta:
+  title: Semantic-Guided Frequency Modulation for Learned Image Compression
+  authors:
+  - Gangyi Tian
+  - Wen Ji
+  - Alireza Furutanpey
+  - Mingxuan Li
+  published: '2026-10-24'
+  updated: '2026-10-24'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: High-frequency attenuation can reduce the rate of learned image codecs but also remove object
+    boundaries and fine detail. We propose Semantic-Guided Adaptive Latent-Frequency Modulation (SG-AFM),
+    which uses a semantic structural prior to guide attenuation of encoder latents. SG-AFM applies a Haar
+    wavelet transform and combines a fixed semantic-frequency multiplier with a bounded learned correction
+    to modulate high-frequency subbands. The semantic prior is computed only at the encoder. No semantic
+    map is transmitted, and no decoder modules are added. Across six datasets, SG-AFM reduces PSNR-based
+    BD-rate relative to TCM by an average of 13.17%. It achieves the best BD-rate among the compared methods
+    on ExDark, NightCity, and OnePlus, with a mean reduction of 16.80%. An ablation on OnePlus demonstrates
+    the benefit of spatially aligned semantic guidance, and visual comparisons illustrate improved reconstruction
+    of local structures.
+  url: https://arxiv.org/abs/2610.33616
+  pdf_url: https://arxiv.org/pdf/2610.33616v1
+  version: v1
+fetched: '2026-11-12'
+llm_decision: deep_read

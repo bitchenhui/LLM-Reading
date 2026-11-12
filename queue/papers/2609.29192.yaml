@@ -1,0 +1,46 @@
+id: paper:arxiv:2609.29192
+status: skipped
+score: 2
+matched:
+- ref: concept:EntropyModel
+  count: 1
+  weight: 1
+- ref: metric:BD-Rate
+  count: 1
+  weight: 1
+meta:
+  title: 'LC3EM: Long-Range Context Extrapolation Enhanced Entropy Model for Coordinate-based Overfitting
+    Image Codecs'
+  authors:
+  - Hao Wang
+  - Junyan Huo
+  - Fei Yang
+  - Shuai Wan
+  - Fuzheng Yang
+  published: '2026-09-24'
+  updated: '2026-09-24'
+  categories:
+  - eess.IV
+  abstract: 'Coordinate-based overfitting image codecs have attracted increasing attention for their low
+    decoding complexity and independence from cross-image generalization. However, representative approaches
+    such as COOL-CHIC face an inherent entropy-modeling trade-off: lightweight models have limited capacity,
+    while more expressive ones incur additional bitrate overhead from transmitting image-specific parameters.
+    Inspired by the prediction mechanism in traditional codecs, we propose a new entropy-modeling strategy
+    that introduces complementary prediction modes with region-adaptive soft mode selection, rather than
+    relying on a single learned predictor to model diverse types of redundancy. Based on this concept,
+    we develop a Long-Range Context Extrapolation Enhanced Entropy Model (LC3EM), which can be integrated
+    into coordinate-based overfitting codecs. Specifically, a parameter-free Neighborhood-based Linear
+    Extrapolation Mode (NLEM) complements the tiny MLP-based local predictor to exploit long-range contextual
+    redundancy and strongly directional structures. A Minimum-Entropy-Inspired Continuous Mode Selection
+    strategy is designed to adaptively fuse these two complementary modes, while requiring the transmission
+    of only the parameters of a single additional linear layer. Moreover, to alleviate the mismatch between
+    training-time relaxed and actual discrete quantization, we introduce a lightweight iterative latent
+    rounding refinement stage to improve compression performance. Experiments demonstrate consistent improvements
+    across diverse benchmarks, particularly on highly regular computer-generated images. When integrated
+    with COOL-CHIC 4.0, the proposed method achieves BD-rate gains of -3.43\% and -7.69\% on the SIQAD
+    and API datasets, respectively. With COOL-CHIC 5.0 as the backbone, the corresponding gains are -2.88\%
+    and -3.15\%, respectively. The code will be made publicly available soon.'
+  url: https://arxiv.org/abs/2609.29192
+  pdf_url: https://arxiv.org/pdf/2609.29192v1
+  version: v1
+fetched: '2026-11-12'

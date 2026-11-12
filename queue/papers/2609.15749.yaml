@@ -1,0 +1,33 @@
+id: paper:arxiv:2609.15749
+status: reviewed
+score: 3
+matched:
+- ref: codec:AVC
+  count: 1
+  weight: 3
+meta:
+  title: 'OASIS: Online Adaptive Video Compression via Closed-loop Feedback Control'
+  authors:
+  - Rentao Wan
+  - Jinho Park
+  - Mingoo Seok
+  published: '2026-09-14'
+  updated: '2026-09-14'
+  categories:
+  - eess.IV
+  abstract: Computer vision systems are a key building block in an autonomous vehicle, responsible for
+    a range of perception tasks. However, they incur massive data transmission over long communication
+    links from multiple cameras, creating a critical bandwidth and energy bottleneck. Although conventional
+    codecs such as H.264 can reduce data rates, they are ill-suited for real-time vision systems due to
+    high processing latency and energy consumption, as well as their reliance on static user-defined compression
+    settings. In light of these challenges, we propose OASIS, an adaptive video compression framework
+    that integrates lightweight in-sensor compression with task-aware compression ratio control. Based
+    on the real-time task performance, it dynamically updates the optimal compression ratio. Experimental
+    results demonstrate that OASIS generalizes across multiple vision tasks, achieving on average a 6x
+    data compression, 5.8x reduction in link power consumption, and 2.5x reduction in link latency, with
+    at most 1.5% performance degradation.
+  url: https://arxiv.org/abs/2609.15749
+  pdf_url: https://arxiv.org/pdf/2609.15749v1
+  version: v1
+fetched: '2026-11-12'
+llm_decision: deep_read

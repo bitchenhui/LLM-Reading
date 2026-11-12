@@ -1,0 +1,50 @@
+id: paper:arxiv:2608.30202
+type: paper
+title: 'ReLViC: Loss-Resilient Learned Video Coding with Dispersed Packetization and Controllable Packet
+  Dependencies'
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2608.30202v1
+  url: https://arxiv.org/abs/2608.30202
+  pdf_url: https://arxiv.org/pdf/2608.30202v1
+  venue: arXiv preprint
+time:
+  published: '2026-08-31'
+  collected: '2026-11-12'
+entities:
+- ref: codec:HEVC
+  role: subject
+claims:
+- statement: ReLViC将空间相邻的潜token分散到不同数据包，并用双用途Transformer在编码端估计熵模型参数、在接收端重建缺失潜token，从而联合解决潜变量编码与丢包恢复。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 通过段长参数化的周期性重置包上下文拓扑控制包间依赖，可在不重训练的情况下调节压缩效率与误差传播范围之间的权衡。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在突发丢包轨迹测试中，ReLViC相较Reed-Solomon FEC保护的H.265和抗丢包学习编解码器GRACE均取得更稳定的重建质量，在严重丢包下优于两个基线。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 采用三阶段渐进训练：先建立单帧编码，再学习时域上下文用于熵建模，最后在模拟丢包下优化掩码潜token的恢复。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 用分散打包潜token与双任务Transformer联合熵建模与丢包恢复，实现无需重训练的压缩-容错权衡。
+  abstract_zh: 丢包会同时破坏学习式视频编码的空间重建与时域预测，为此提出ReLViC框架，联合优化潜变量编码与丢包恢复。该方法将空间相邻的潜token分散到不同数据包中，并使用一个双用途Transformer：编码时估计熵模型参数，接收端重建缺失的潜token。通过以段长参数化的周期性重置包上下文拓扑控制包间依赖，无需重训练即可调节压缩效率与误差传播范围之间的权衡。训练采用三阶段渐进策略：先建立单帧编码，再学习时域上下文用于熵建模，最后在模拟丢包下优化被掩码潜token的恢复。在突发丢包轨迹下的实验表明，ReLViC重建更稳定，在严重丢包场景下优于采用Reed-Solomon前向纠错保护的H.265以及抗丢包学习编解码器GRACE。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 属于学习式视频编码与抗丢包传输的系统级优化，直接命中收录基准中的学习式编码与部署鲁棒性方向。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: ReLViC：基于分散打包与可控包依赖的抗丢包学习式视频编码
+relations:
+- type: same_topic
+  ref: paper:arxiv:2609.16279
+  note: 同为面向传输鲁棒性（错误恢复/丢包 resilience）的神经视频编解码研究
+- type: same_topic
+  ref: paper:arxiv:2606.28027
+  note: 同属学习式视频编码的实际部署/真实传输场景优化方向

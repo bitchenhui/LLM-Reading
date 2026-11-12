@@ -1,0 +1,37 @@
+id: paper:arxiv:2608.30202
+status: reviewed
+score: 3
+matched:
+- ref: codec:HEVC
+  count: 1
+  weight: 3
+meta:
+  title: 'ReLViC: Loss-Resilient Learned Video Coding with Dispersed Packetization and Controllable Packet
+    Dependencies'
+  authors:
+  - Xuyang Chen
+  - Daquan Feng
+  - Xianfu Chen
+  - Xiang-Gen Xia
+  published: '2026-08-31'
+  updated: '2026-08-31'
+  categories:
+  - eess.IV
+  - cs.MM
+  abstract: Packet loss can severely impair learned video coding because missing latent tokens compromise
+    both spatial reconstruction and temporal prediction. We present ReLViC, a loss-resilient learned video
+    coding framework that jointly addresses latent coding and packet-loss recovery. ReLViC disperses spatially
+    adjacent latent tokens across packets and employs a dual-purpose Transformer to estimate entropy-model
+    parameters during coding and reconstruct missing latent tokens at the receiver. It controls packet
+    dependencies through a periodic-reset packet-context topology parameterized by the segment length,
+    thereby tuning the trade-off between compression efficiency and error-propagation range without retraining.
+    A three-stage progressive training procedure establishes single-frame coding, learns temporal context
+    for entropy modeling, and then optimizes the recovery of masked latent tokens under simulated packet
+    loss. Experiments using burst-loss traces evaluate ReLViC against H.265 protected by Reed--Solomon
+    forward error correction (FEC) and GRACE, a loss-resilient learned video codec. ReLViC delivers more
+    stable reconstruction and outperforms both baselines under severe packet loss.
+  url: https://arxiv.org/abs/2608.30202
+  pdf_url: https://arxiv.org/pdf/2608.30202v1
+  version: v1
+fetched: '2026-11-12'
+llm_decision: deep_read

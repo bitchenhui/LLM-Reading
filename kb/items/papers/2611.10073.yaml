@@ -1,0 +1,82 @@
+id: paper:arxiv:2611.10073
+type: paper
+title: Noise-Regularized Training for Learned Image Compression
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2611.10073v1
+  url: https://arxiv.org/abs/2611.10073
+  pdf_url: https://arxiv.org/pdf/2611.10073v1
+  venue: arXiv preprint
+time:
+  published: '2026-11-06'
+  collected: '2026-11-12'
+entities:
+- ref: concept:EntropyModel
+  role: subject
+- ref: concept:Hyperprior
+  role: uses
+- ref: impl:VTM
+  role: compared_against
+- ref: metric:BD-Rate
+  role: measured_by
+claims:
+- statement: 在每个训练步对编码器输入加高斯噪声（保持失真目标、隐变量均匀代理、超先验与熵编码流程不变）是与架构无关的训练配方，几乎零额外开销，并带来一致的BD-Rate增益。
+  confidence: reported
+  metrics:
+  - name: BD-Rate
+    value: -2.60%
+    scope: 复现ELIC骨干
+  - name: BD-Rate
+    value: -0.85%
+    scope: 变码率DMCI编解码器Base档
+  - name: BD-Rate
+    value: -1.05%
+    scope: 变码率DMCI编解码器Medium档
+  - name: BD-Rate
+    value: -2.38%
+    scope: 变码率DMCI编解码器Large档
+  evidence: abstract（初筛，未读全文）
+- statement: 采用噪声正则化训练后，DMCI-Large相对VTM-22.0的BD-Rate达到-22.02%。
+  confidence: reported
+  metrics:
+  - name: BD-Rate
+    value: -22.02%
+    scope: DMCI-Large vs VTM-22.0
+  evidence: abstract（初筛，未读全文）
+- statement: 对含噪RD损失的二阶展开表明，注入于分析变换上游的噪声将干净RD目标转化为结构化O(σ²)正则项：率侧为信息加权的编码器Jacobian惩罚，失真侧为端到端重建映射的Frobenius收缩惩罚。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 有限差分Lipschitz分析显示噪声正则化使编码器敏感度降低约12%、端到端编解码器降低约8%；exact-JVP测试进一步表明高信息方向被优先收缩。
+  confidence: reported
+  metrics:
+  - name: 敏感度降低
+    value: ~12%
+    scope: 编码器（有限差分Lipschitz分析）
+  - name: 敏感度降低
+    value: ~8%
+    scope: 端到端编解码器（有限差分Lipschitz分析）
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 在编码器输入端注入高斯噪声作为结构化正则项，不改架构即可稳定提升学习式图像压缩的率失真性能。
+  abstract_zh: 该论文提出面向学习式图像压缩（LIC）的噪声正则化训练：在每个训练步向编码器输入加入高斯噪声，同时保持失真目标、隐变量均匀噪声代理、超先验与熵编码流程完全不变。该方法与具体架构无关，几乎不引入额外训练或推理开销。实验显示跨骨干、跨码率档位的一致BD-Rate增益：复现ELIC上为-2.60%，变码率DMCI编解码器的Base/Medium/Large档分别为-0.85%/-1.05%/-2.38%，其中DMCI-Large相对VTM-22.0达到-22.02%。理论上，对含噪RD损失做二阶展开可解释这些增益：噪声进入分析变换上游，将干净RD目标转化为结构化的O(σ²)正则项，包含率侧信息加权的编码器Jacobian惩罚与失真侧端到端重建映射的Frobenius收缩惩罚。有限差分Lipschitz分析显示编码器敏感度降低约12%、端到端编解码器降低约8%，exact-JVP测试进一步表明高信息方向被优先收缩。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 学习式图像压缩的核心训练方法创新，兼具理论解释与多骨干一致BD-Rate增益，属视频/图像编码主线方向。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 面向学习式图像压缩的噪声正则化训练
+relations:
+- type: same_topic
+  ref: paper:arxiv:2610.22421
+  note: 同属端到端学习式图像编码的率失真优化与部署主线
+- type: same_topic
+  ref: paper:arxiv:2610.33616
+  note: 同属学习式图像压缩方法改进（训练/表示层面提升RD性能）
+- type: same_topic
+  ref: paper:arxiv:2606.23545
+  note: 同属学习式图像压缩模型评估与对比研究脉络

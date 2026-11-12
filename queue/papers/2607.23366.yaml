@@ -1,0 +1,48 @@
+id: paper:arxiv:2607.23366
+status: reviewed
+score: 7
+matched:
+- ref: codec:AVC
+  count: 1
+  weight: 3
+- ref: codec:HEVC
+  count: 1
+  weight: 3
+- ref: metric:LPIPS
+  count: 1
+  weight: 1
+meta:
+  title: Codebook Capacity Governs Perceptual Quality Across Resolutions in Hierarchical Discrete Video
+    Compression
+  authors:
+  - Manikanta Kotthapalli
+  - Banafsheh Rekabdar
+  published: '2026-07-25'
+  updated: '2026-07-25'
+  categories:
+  - eess.IV
+  - cs.CV
+  - cs.MM
+  abstract: Learned video codecs based on continuous latent representations typically require resolution-specific
+    retraining or rate-distortion (RD) recalibration when scaling to new spatial resolutions, because
+    entropy models and Lagrangian weights are tightly coupled to the operating point. We investigate whether
+    hierarchical discrete latent codecs exhibit the same sensitivity. Using a controlled empirical study
+    of MS-VQ-VAE video compression across codebook sizes $K \in \{128,256,512,1024\}$ and resolutions
+    $64\times64$, $128\times128$, and $256\times256$ on UCF101, we show that perceptual quality (LPIPS)
+    depends strongly on codebook capacity but only negligibly on spatial resolution. Fitting a log-linear
+    model $Q(K,r) = α\log_2 K + β\log_2 r + γ$ to all 12 operating points yields $α=-0.0094$ ($t=-6.6$,
+    $p<0.001$) and $β=-0.0009$ ($t=-0.43$, $p=0.68$, not significant), with $R^2=0.82$. Codebook capacity
+    is therefore roughly $10\times$ more influential than spatial resolution per log-unit increase. In
+    parallel, bottom-level entropy efficiency $η=H(z)/\log_2 K$ remains stable or improves with resolution
+    (84-87% at $64\times64$; 92-94% at $256\times256$), confirming that larger spatial grids are utilized
+    more efficiently rather than less. Across all resolutions and codebook sizes, our models outperform
+    H.264 on LPIPS at matched or lower bitrate, with gains of 25-52% at $128\times128$ and 21-37% over
+    H.265 at $256\times256$. These findings suggest that codebook size $K$, not spatial resolution, is
+    the dominant design variable governing perceptual compression quality in hierarchical discrete video
+    codecs -- a property that may simplify multi-resolution deployment and inform the design of scalable
+    discrete tokenizers for generative video models.
+  url: https://arxiv.org/abs/2607.23366
+  pdf_url: https://arxiv.org/pdf/2607.23366v1
+  version: v1
+fetched: '2026-11-12'
+llm_decision: deep_read

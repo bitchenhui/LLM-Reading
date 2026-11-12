@@ -1,0 +1,58 @@
+id: paper:arxiv:2609.14129
+type: paper
+title: Deformable 2D Gaussian Splatting for Efficient 4K Video Compression
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2609.14129v1
+  url: https://arxiv.org/abs/2609.14129
+  pdf_url: https://arxiv.org/pdf/2609.14129v1
+  venue: arXiv preprint
+time:
+  published: '2026-09-12'
+  collected: '2026-11-12'
+entities:
+- ref: codec:HEVC
+  role: subject
+- ref: concept:GOP
+  role: uses
+- ref: concept:INR
+  role: compared_against
+- ref: metric:LPIPS
+  role: measured_by
+claims:
+- statement: 提出以粗到细多尺度2D高斯泼溅结构耦合轻量形变网络的实时视频压缩框架，以GOP为单元进行表示与压缩。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在LPIPS率失真性能上超过H.265及其他最先进学习式视频压缩方法。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 相比NVC与INR方法，该框架可显著降低解码延迟与内存占用，面向UHD/4K视频实现实时解码。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 论证了高斯泼溅作为高分辨率视频压缩实用解决方案的可行性。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出多尺度2D高斯泼溅加轻量形变网络的4K视频实时压缩框架，LPIPS率失真超过H.265及学习式方法。
+  abstract_zh: 针对超高清（UHD）视频的存储与实时解码难题，论文提出以粗到细的多尺度二维高斯泼溅（2DGS）结构结合轻量形变网络、按GOP进行表示与压缩的实时视频压缩框架。该方法利用高斯泼溅超快渲染与高保真重建的优势，规避了神经视频压缩（NVC）与隐式神经表示（INR）解码延迟高、内存占用大的缺陷。实验表明，其LPIPS率失真性能超过H.265及其他最先进学习式视频压缩方法。该工作展示了高斯泼溅作为高效高分辨率视频压缩实用方案的潜力。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 提出基于可变形2D高斯泼溅的实时4K视频压缩框架，属表示式视频编码核心主题，且LPIPS性能超越H.265与SOTA学习式方法。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 面向高效4K视频压缩的可变形二维高斯泼溅
+relations:
+- type: same_topic
+  ref: paper:arxiv:2609.29041
+  note: 同为Gaussian Splatting高效编码/压缩方向，可对比表示结构化与码流组织方式
+- type: same_topic
+  ref: paper:arxiv:2606.28163
+  note: 同为神经视频表示压缩（NVC/INR路线），本文以其高解码延迟与内存占用为对比动机
+- type: same_topic
+  ref: paper:arxiv:2609.04274
+  note: 同为多尺度表示压缩思路，与本文粗到细多尺度2DGS结构相关

@@ -1,0 +1,79 @@
+id: paper:arxiv:2607.28144
+type: paper
+title: 'ReGenVC: End-to-End Real-Time Generative Video Coding at Ultra-Low Bitrate'
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2607.28144v1
+  url: https://arxiv.org/abs/2607.28144
+  pdf_url: https://arxiv.org/pdf/2607.28144v1
+  venue: arXiv preprint
+time:
+  published: '2026-07-30'
+  collected: '2026-11-12'
+entities:
+- ref: concept:DiffusionPrior
+  role: subject
+- ref: impl:x264
+  role: compared_against
+- ref: impl:x265
+  role: compared_against
+- ref: metric:FPS
+  role: measured_by
+claims:
+- statement: ReGenVC 将 77 帧说话人视频压缩为约 26 kB 的码流，码率约为传统编解码器（x264/x265）的十分之一，且在同等超低码率下传统编码器出现块状伪影而 ReGenVC
+    借助生成先验保持清晰。
+  confidence: reported
+  metrics:
+  - name: 码流大小
+    value: 约 26 kB
+    scope: ReGenVC，77 帧序列整体码流
+  - name: 码流大小
+    value: 250–280 kB
+    scope: x264/x265 达到基本无伪影重建所需码流
+  - name: 码率比
+    value: 约 1/10
+    scope: ReGenVC 相对 x264/x265
+  evidence: abstract（初筛，未读全文）
+- statement: 经四步蒸馏与三项模型保持型系统优化（八卡统一序列并行、空间切分VAE、三阶段重叠流水线）后，解码器在 8-GPU 节点上实现实时输出。
+  confidence: reported
+  metrics:
+  - name: FPS
+    value: 24 fps
+    scope: 8-GPU 节点持续输出帧率
+  - name: 窗口延迟
+    value: 972 ms
+    scope: 25 帧窗口，在 1000 ms 实时预算内
+  evidence: abstract（初筛，未读全文）
+- statement: 混合 CPU-GPU 部署将编码器运行在 CPU（24 fps）并把解码端一次性条件编码器卸载到 CPU，使每 GPU 显存峰值大幅下降。
+  confidence: reported
+  metrics:
+  - name: 每GPU显存峰值
+    value: 21.1 GB → 约 7.7 GB
+    scope: 优化前后对比
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 以神经压缩首帧加姿态关键点为码流，用四步蒸馏扩散Transformer实现超低码率实时说话人视频解码。
+  abstract_zh: ReGenVC 将说话人视频压缩为神经压缩首帧、逐帧姿态关键点和元数据构成的紧凑码流，77帧序列仅约26 kB。解码端采用四步蒸馏的扩散Transformer，以姿态与参考帧为条件重建视频；相比x264/x265码率降至约十分之一（约26
+    kB 对 250–280 kB），而在同等超低码率下传统编码器出现块状伪影而 ReGenVC 仍保持清晰。针对多步扩散采样解码延迟问题，作者通过四步蒸馏与三项系统技术（八卡Ulysses & Ring统一序列并行、空间切分VAE、三阶段重叠流水线）实现实时解码，并给出实时可行域的解析计时模型。在8-GPU节点上系统维持24
+    fps输出（25帧窗口972 ms，低于1000 ms预算），支持浏览器直播且未观察到帧欠载。混合CPU-GPU部署将每GPU显存峰值从21.1 GB降至约7.7 GB。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 端到端生成式视频编解码，结合超低码率压缩与8-GPU实时系统部署，完全落在收录范围内且含丰富可量化结果。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: ReGenVC：超低码率下的端到端实时生成式视频编码
+relations:
+- type: same_topic
+  ref: paper:arxiv:2609.34725
+  note: 同为利用生成先验（generative priors）的视频压缩工作
+- type: same_topic
+  ref: paper:arxiv:2606.22371
+  note: 同为基于扩散先验的生成式视频压缩
+- type: same_topic
+  ref: paper:arxiv:2606.28027
+  note: 同为学习式视频编解码器的实时/多平台系统部署方向

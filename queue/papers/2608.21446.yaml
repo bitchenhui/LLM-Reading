@@ -1,0 +1,38 @@
+id: paper:arxiv:2608.21446
+status: skipped
+score: 1
+matched:
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+meta:
+  title: 'HiFiC-G: Adapting HiFiC for Hi-C Contact Matrices'
+  authors:
+  - Andre Antonio Straton
+  published: '2026-08-19'
+  updated: '2026-08-19'
+  categories:
+  - eess.IV
+  - cs.CV
+  - q-bio.GN
+  abstract: We study whether the loss design of High-Fidelity Generative Image Compression (HiFiC), a
+    GAN-based neural codec originally built for natural photographs, can be adapted to preserve biologically
+    meaningful structure in Hi-C chromatin contact maps under lossy compression. Standard image compression,
+    including HiFiC in its original form, optimizes for human visual perception; but a Hi-C contact map
+    is normally distributed together with its numeric matrix file (.cool/.mcool), which downstream genomic
+    analysis tools consume directly. Aggressive compression that looks acceptable to the eye can nonetheless
+    blur or delete loops and topologically associating domain (TAD) boundaries that these tools depend
+    on. We modify HiFiC's distortion term with a spatially-weighted MSE that up-weights biologically salient
+    regions (loops, TAD boundaries, stripes, compartment structure) and add an insulation-score loss term
+    that directly penalizes loss of TAD boundary sharpness. We describe a three-phase fine-tuning strategy
+    that adapts a pretrained HiFiC checkpoint to the Hi-C domain without catastrophic forgetting. We evaluate
+    the resulting system, HiFiC-G, using both conventional image-quality metrics (PSNR, SSIM) and genomics-domain
+    preservation metrics (loop/TAD/compartment/stripe preservation percentage) across two cell lines.
+    HiFiC-G preserves local structure, meaning stripes and TAD boundaries, substantially better than the
+    metrics alone would suggest, while long-range A/B compartment structure remains poorly preserved;
+    we show this gap tracks genomic scale and is consistent with a specific architectural cause, the fixed-size
+    tiling that both HiFiC-G and the original HiFiC rely on for memory efficiency.
+  url: https://arxiv.org/abs/2608.21446
+  pdf_url: https://arxiv.org/pdf/2608.21446v1
+  version: v1
+fetched: '2026-11-12'

@@ -1,0 +1,57 @@
+id: paper:arxiv:2607.13723
+type: paper
+title: 'N-O Cool-chic: reconcile fast encoding with lightweight decoding for neural image compression'
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2607.13723v1
+  url: https://arxiv.org/abs/2607.13723
+  pdf_url: https://arxiv.org/pdf/2607.13723v1
+  venue: arXiv preprint
+time:
+  published: '2026-07-15'
+  collected: '2026-11-12'
+entities:
+- ref: codec:VVC
+  role: subject
+claims:
+- statement: Cool-chic解码端仅需约每像素2000次乘法即可达到与VVC相当的图像编码性能。
+  confidence: reported
+  metrics:
+  - name: 解码乘法复杂度
+    value: 约2000次乘法/解码像素
+    scope: Cool-chic解码端，锚点为与VVC性能相当
+  evidence: abstract（初筛，未读全文）
+- statement: N-O Cool-chic通过旁路过拟合流程并增设编码器网络，将编码复杂度较Cool-chic降低1000倍。
+  confidence: reported
+  metrics:
+  - name: 编码复杂度降低倍数
+    value: 1000倍
+    scope: 相对Cool-chic逐图过拟合式编码
+  evidence: abstract（初筛，未读全文）
+- statement: N-O Cool-chic在编码复杂度大幅下降的同时保持了有竞争力的压缩性能。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 以编码器网络绕过逐图过拟合训练，使Cool-chic编码复杂度降低约1000倍并保持接近VVC的性能。
+  abstract_zh: 过拟合式图像编解码器通过为每张图像学习轻量解码器，在获得强压缩性能的同时保持极低解码复杂度，其代表Cool-chic以约每解码像素2000次乘法的代价达到与VVC相当的编码性能。然而该类编解码器的逐图过拟合训练导致编码时间过长，难以满足实时应用需求。本文提出非过拟合（N-O）Cool-chic，绕过过拟合流程，为原有轻量解码器补充一个编码器网络。该方法将编码复杂度较Cool-chic降低约1000倍，同时保持有竞争力的压缩性能。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 学习式图像编码核心工作：针对过拟合式编解码器（Cool-chic）的编码耗时瓶颈提出免过拟合的编码器网络方案，并与VVC直接对标，属于标准编码器对比与复杂度优化的高相关主题。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: N-O Cool-chic：在神经图像压缩中兼得快速编码与轻量解码
+relations:
+- type: same_topic
+  ref: paper:arxiv:2609.04274
+  note: 同为图像表示式压缩方向，属Cool-chic一脉的表示式编解码研究
+- type: same_topic
+  ref: paper:arxiv:2609.04273
+  note: 神经表示压缩（视频版），同属表示式/过拟合式编解码主题
+- type: same_topic
+  ref: paper:arxiv:2610.22421
+  note: 同为端到端学习图像编码及其实用部署主题

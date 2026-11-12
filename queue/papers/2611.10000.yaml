@@ -1,0 +1,44 @@
+id: paper:arxiv:2611.10000
+status: reviewed
+score: 5
+matched:
+- ref: impl:TCM
+  count: 1
+  weight: 3
+- ref: dataset:Kodak
+  count: 1
+  weight: 1
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+meta:
+  title: Benchmarking Neural Image Compression with DCT-Based Spectral Diagnostics
+  authors:
+  - Nikolay I. Kalmykov
+  - Razan Dibo
+  - Yujun Du
+  - Yipeng Liu
+  - Ivan Oseledets
+  - Anh-Huy Phan
+  published: '2026-11-03'
+  updated: '2026-11-03'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: 'Neural image compression (NIC) models are commonly evaluated with scalar rate-distortion
+    metrics, which do not show how a codec treats individual spatial frequencies. We propose a benchmark
+    that probes codecs with the DCT basis matrix and single-frequency test images. We measure relative
+    off-target energy (leakage), the fraction of reconstruction energy outside the probed frequency, together
+    with target-frequency gain. Exact decompositions and bounds relate these measurements to reconstruction
+    error. At operating points nearest 1 bpp, the BMSHJ, MBT, and Cheng2020 models leave 80-97% of their
+    reconstructed high-band energy outside the target bin and have target-frequency gains of 0.02-0.23,
+    whereas TCM and FTIC attain off-target energy in the classical-codec range. Both probe types identify
+    behavior absent from scalar metrics: released Cheng2020-Anchor models produce extreme pre-clamp outputs
+    on isolated single-frequency inputs. Finally, decoder-only fine-tuning with natural-image and leakage
+    losses reduces basis off-target energy by 90-99.8% across all eight evaluated architectures while
+    keeping the bitstream fixed, at a Kodak PSNR cost of 0.09-0.59 dB.'
+  url: https://arxiv.org/abs/2611.10000
+  pdf_url: https://arxiv.org/pdf/2611.10000v1
+  version: v1
+fetched: '2026-11-12'
+llm_decision: deep_read

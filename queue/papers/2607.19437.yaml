@@ -1,0 +1,44 @@
+id: paper:arxiv:2607.19437
+status: skipped
+score: 0
+matched: []
+meta:
+  title: 'Group-of-Latents: Perceptual Video Compression at Extreme Bitrates via Masked Latent Generative
+    Modeling'
+  authors:
+  - Shaokang Wang
+  - Jinchang Xu
+  - Peidong Jia
+  - Zhijian Hao
+  - Siyuan Qian
+  - Fei Zhao
+  - Rui Ma
+  - Xiaozhu Ju
+  - Jian Tang
+  - Xiaodong Xie
+  - Shanghang Zhang
+  - Huizhu Jia
+  published: '2026-07-21'
+  updated: '2026-07-21'
+  categories:
+  - eess.IV
+  - cs.CV
+  - cs.MM
+  abstract: Most existing video compression algorithms follow a paradigm of transformation and quantization,
+    optimizing the trade-off between distortion and bitrate. However, extremely low-bitrate compression
+    remains an underexplored frontier where perceptual quality optimization under severely constrained
+    coding resources has not been adequately addressed. In this paper, we propose a unified generative
+    framework that leverages pre-trained Diffusion Transformer (DiT) priors to achieve high perceptual
+    quality at extremely low bitrates. We first introduce a flexible Group-of-Latents (GoL) strategy within
+    the latent space of a causal tokenizer, explicitly partitioning the latent stream into intra $I$-latents
+    and inter $P$-latents. The Deep Compression Module (I-DCM) then encodes key $I$-latents to preserve
+    perceptual anchors with minimal overhead. Building upon these anchors, the DiT-based Unified Latent
+    Denoising Module (U-LDM) refines intra-frame textures and synthesizes $P$-latents from noise, reconstructing
+    temporal dynamics at zero additional bitrate cost. Extensive experiments demonstrate that our method
+    uniquely operates in the extreme-low-bitrate regime (e.g., (<0.005) bpp), achieving state-of-the-art
+    perceptual fidelity with rich spatial details and robust temporal consistency. The code will be made
+    publicly available.
+  url: https://arxiv.org/abs/2607.19437
+  pdf_url: https://arxiv.org/pdf/2607.19437v1
+  version: v1
+fetched: '2026-11-12'

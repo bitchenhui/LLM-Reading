@@ -1,0 +1,83 @@
+id: paper:arxiv:2609.34725
+type: paper
+title: 'Gen2-VC: Unlocking Generative Priors for Video Compression'
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2609.34725v1
+  url: https://arxiv.org/abs/2609.34725
+  pdf_url: https://arxiv.org/pdf/2609.34725v1
+  venue: arXiv preprint
+time:
+  published: '2026-09-28'
+  collected: '2026-11-12'
+entities:
+- ref: impl:DCVC-RT
+  role: subject
+- ref: codec:ECM
+  role: uses
+- ref: impl:VTM
+  role: compared_against
+- ref: impl:HM
+  role: uses
+- ref: metric:LPIPS
+  role: measured_by
+- ref: metric:DISTS
+  role: measured_by
+- ref: metric:PSNR
+  role: measured_by
+- ref: metric:MS-SSIM
+  role: measured_by
+claims:
+- statement: Gen2-VC-DCVC-UF 据称是首个在低码率下 PSNR 与 MS-SSIM 均超越 VTM-23.0 的生成式视频编码器
+  confidence: reported
+  metrics:
+  - name: PSNR
+    value: BD-rate优于VTM-23.0
+    scope: 低码率，六数据集BD-rate均值
+  - name: MS-SSIM
+    value: BD-rate优于VTM-23.0
+    scope: 低码率，六数据集BD-rate均值
+  evidence: abstract（初筛，未读全文）
+- statement: 相比 VTM-23.0，Gen2-VC 在匹配感知质量下大幅节省码率
+  confidence: reported
+  metrics:
+  - name: 码率节省
+    value: 86.65%
+    scope: 匹配LPIPS下相对VTM-23.0的平均码率节省
+  - name: 码率节省
+    value: 94.24%
+    scope: 匹配DISTS下相对VTM-23.0的平均码率节省
+  evidence: abstract（初筛，未读全文）
+- statement: 仅在 DCVC-UF 上训练的 LoRA 适配器无需重训练即可泛化提升 DCVC-RT、ECM、VTM、HM 的感知质量，验证了跨编码器可复用性
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: Gen2-VC-DCVC-UF 在 LPIPS 与 DISTS 感知指标上优于此前领先的编码方法
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 用预训练视频生成先验以轻量 LoRA 适配器增强现有编码器重建，不改码流即可大幅提升感知与率失真性能。
+  abstract_zh: 提出 Gen2-VC 框架，以原生编码器重建作为共享接口，用预训练视频生成先验（Wan2.1-T2V-1.3B）对学习式与传统编码器输出进行生成式精修，完全保留原码流与参考帧更新流程。编码器、VAE
+    与生成骨干全部冻结，仅训练轻量 LoRA 适配器，先做单帧空间适配再做多帧时序适配。Gen2-VC-DCVC-UF 在 LPIPS/DISTS 上优于此前领先编码器，并据称是首个在低码率下 PSNR
+    与 MS-SSIM 均超越 VTM-23.0 的生成式视频编码器（六数据集 BD-rate 均值）。相对 VTM-23.0，在匹配 LPIPS 与 DISTS 下平均分别节省码率 86.65% 与
+    94.24%；且仅在 DCVC-UF 上训练的适配器无需重训练即可提升 DCVC-RT、ECM、VTM、HM 的感知质量。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 生成式视频压缩核心工作，冻结生成先验对学习式与传统编码器输出做轻量增强，率失真与感知指标均超越 VTM-23.0，属领域前沿。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: Gen2-VC：释放生成式先验赋能视频压缩
+relations:
+- type: same_topic
+  ref: paper:arxiv:2606.22371
+  note: 同为基于扩散/生成先验的视频压缩，Gen2-VC 用生成先验增强编码器重建，与 ZeroGVC 的生成式视频压缩主题相同
+- type: same_topic
+  ref: paper:arxiv:2608.07799
+  note: 同为对传统视频编码器做感知质量增强，Gen2-VC 以生成先验后处理 ECM/VTM/HM，与该文目标互补
+- type: same_topic
+  ref: paper:arxiv:2606.28027
+  note: 同属学习式视频编码方向，Gen2-VC 增强 DCVC 系列等学习式编码器输出

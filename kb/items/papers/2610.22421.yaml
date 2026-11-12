@@ -1,0 +1,69 @@
+id: paper:arxiv:2610.22421
+type: paper
+title: 'End-to-End Learned Image Coding: From Rate-Distortion Optimization to Practical Deployment'
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2610.22421v1
+  url: https://arxiv.org/abs/2610.22421
+  pdf_url: https://arxiv.org/pdf/2610.22421v1
+  venue: arXiv preprint
+time:
+  published: '2026-10-15'
+  collected: '2026-11-12'
+entities:
+- ref: impl:TinyLIC
+  role: subject
+- ref: concept:RDO
+  role: uses
+- ref: dataset:Kodak
+  role: evaluated_on
+- ref: codec:HEVC
+  role: compared_against
+- ref: codec:VVC
+  role: compared_against
+claims:
+- statement: TinyLIC在约10 KMACs/pixel解码复杂度下于Kodak测试集上显著优于H.265/HEVC图像档锚点
+  confidence: reported
+  metrics:
+  - name: 解码复杂度
+    value: 约10 KMACs/pixel
+    scope: TinyLIC解码端配置
+  - name: R-D性能
+    value: 显著优于HEVC图像档锚点
+    scope: Kodak，对比H.265/HEVC image-profile
+  evidence: abstract（初筛，未读全文）
+- statement: TinyLIC 50 KMACs/pixel配置在多个测试集上达到与H.266/VVC图像档锚点相当的R-D性能
+  confidence: reported
+  metrics:
+  - name: 解码复杂度
+    value: 50 KMACs/pixel
+    scope: TinyLIC解码端配置
+  - name: R-D性能
+    value: 与VVC图像档锚点相当
+    scope: 多个测试集，对比H.266/VVC image-profile
+  evidence: abstract（初筛，未读全文）
+- statement: 学习式图像编码的实际部署需在压缩效率、计算复杂度、数值一致性与鲁棒性之间进行联合权衡，变码率、整数精度推理、跨平台一致性与标准化互操作是关键系统级扩展方向
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 面向部署综述学习式图像编码的系统级约束，并以TinyLIC基准分析率失真-复杂度权衡。
+  abstract_zh: 该文面向实际部署综述端到端学习式图像编码（LIC），梳理学习变换、量化、熵建模与率失真优化的基础框架，并评述变码率与码率控制、整数精度推理与跨平台一致性、鲁棒性与通信韧性、轻量硬件感知实现及标准化互操作等系统级扩展。作者进一步提出TinyLIC作为开放基准与可复现案例，用于率失真-复杂度联合分析。实验表明，约10
+    KMACs/pixel解码复杂度的TinyLIC在Kodak上显著优于H.265/HEVC图像档锚点；50 KMACs/pixel配置在多个测试集上达到与H.266/VVC图像档锚点相当的性能。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 面向实际部署的学习式图像编码系统级综述，并给出TinyLIC开放基准，直击跨平台一致性与复杂度权衡等收录核心议题。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 端到端学习式图像编码：从率失真优化到实际部署
+relations:
+- type: same_topic
+  ref: paper:arxiv:2606.28027
+  note: 均关注学习式编解码器的实际部署与跨平台实现，MLVC是多平台学习式视频编码的系统实例
+- type: same_topic
+  ref: paper:arxiv:2606.21033
+  note: 同属学习式图像压缩方向，MoECodec面向人机联合感知，可视为本综述所涵盖LIC模型层面的分支

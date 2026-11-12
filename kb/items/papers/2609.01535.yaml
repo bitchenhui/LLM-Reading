@@ -1,0 +1,54 @@
+id: paper:arxiv:2609.01535
+type: paper
+title: Can LLMs Design Video Coding Tools? A Case Study on Planar Mode
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2609.01535v2
+  url: https://arxiv.org/abs/2609.01535
+  pdf_url: https://arxiv.org/pdf/2609.01535v2
+  venue: arXiv preprint
+time:
+  published: '2026-09-01'
+  collected: '2026-11-12'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: impl:VVenC
+  role: uses
+- ref: codec:ECM
+  role: uses
+claims:
+- statement: LLM在生成-评估闭环中生成的Planar预测器，在VVenC faster预设下直接替换默认Planar模式可超越传统Planar模式
+  confidence: reported
+  metrics:
+  - name: 码率节省
+    value: 0.18%
+    scope: VVenC faster预设替换默认Planar模式，标准测试集
+  - name: 复杂度开销
+    value: 0.4%
+    scope: 同上设置下的编码复杂度增量
+  evidence: abstract（初筛，未读全文）
+- statement: 在ECM中，直接替换新引入的方向性Planar模式、或将LLM生成预测器作为带新语法元素的附加预测模式，两种集成策略在受限低分辨率设置下均可带来编码增益
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 通过生成-评估闭环让LLM设计Planar预测器，在VVenC上取得0.18%码率节省并验证ECM集成可行性。
+  abstract_zh: 本文实证探索LLM能否设计视频编码工具，以编码标准中历史悠久的帧内预测Planar模式为案例。研究采用生成-评估闭环：LLM生成新的Planar预测器，编码器试编码评估其性能，LLM再依据反馈迭代改进实现。在VVenC的faster预设下直接替换默认Planar模式，LLM生成的模式在标准测试集上取得0.18%码率节省、仅0.4%复杂度开销。进一步在ECM上利用新引入的方向性Planar模式，考察直接替换与作为新增预测模式（引入新语法元素）两种集成策略，两者在受限低分辨率设置下均可带来编码增益。研究为基于LLM的编码工具设计提供了初步证据与实践洞见，同时指出其潜力与开放挑战。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 以LLM生成Planar帧内预测器并在VVenC/ECM实测编码增益，属于标准编码器工具设计的实证研究，直接契合编码优化主题。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 大语言模型能否设计视频编码工具？以Planar模式为例
+relations:
+- type: same_topic
+  ref: paper:arxiv:2606.20847
+  note: 同为LLM驱动的VVenC编码工具设计研究
+- type: same_topic
+  ref: paper:arxiv:2606.31084
+  note: 同为面向VVenC的编码模式/工具优化实证研究

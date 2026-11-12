@@ -1,0 +1,85 @@
+id: paper:arxiv:2609.37328
+type: paper
+title: 'CASR: Content-Adaptive Neural Super-Resolution Post-Filter for Versatile Video Coding via Low-Rank
+  Overfitting'
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2609.37328v1
+  url: https://arxiv.org/abs/2609.37328
+  pdf_url: https://arxiv.org/pdf/2609.37328v1
+  venue: arXiv preprint
+time:
+  published: '2026-09-29'
+  collected: '2026-11-12'
+entities:
+- ref: codec:VVC
+  role: subject
+- ref: impl:VTM
+  role: compared_against
+- ref: concept:QP
+  role: uses
+- ref: dataset:JVET-CTC
+  role: evaluated_on
+- ref: metric:BD-Rate
+  role: measured_by
+- ref: org:MPEG
+  role: builds_on
+claims:
+- statement: 相对VVC参考软件VTM21，CASR在随机访问配置下取得BD-rate节省：Y -10.93%、U -15.39%、V -24.41%。
+  confidence: reported
+  metrics:
+  - name: BD-rate
+    value: -10.93%
+    scope: 对比VTM21，随机访问配置，Y分量，JVET CTC A1/A2序列
+  - name: BD-rate
+    value: -15.39%
+    scope: 对比VTM21，随机访问配置，U分量，JVET CTC A1/A2序列
+  - name: BD-rate
+    value: -24.41%
+    scope: 对比VTM21，随机访问配置，V分量，JVET CTC A1/A2序列
+  evidence: abstract（初筛，未读全文）
+- statement: 在全帧内配置下相对VTM21取得BD-rate节省：Y -13.43%、U -5.75%、V -22.94%。
+  confidence: reported
+  metrics:
+  - name: BD-rate
+    value: -13.43%
+    scope: 对比VTM21，全帧内配置，Y分量，JVET CTC A1/A2序列
+  - name: BD-rate
+    value: -5.75%
+    scope: 对比VTM21，全帧内配置，U分量，JVET CTC A1/A2序列
+  - name: BD-rate
+    value: -22.94%
+    scope: 对比VTM21，全帧内配置，V分量，JVET CTC A1/A2序列
+  evidence: abstract（初筛，未读全文）
+- statement: LoRA内容自适应相比未自适应的通用SR后滤波器可在较小信令代价下带来码率节省。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: LoRA秩消融实验显示r=4在编码增益与信令开销之间取得最佳折中。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 在编码端用LoRA低秩矩阵对预训练超分网络做逐序列过拟合，作为VVC后处理滤波，经NNR压缩信令开销小并取得显著BD-rate节省。
+  abstract_zh: 该论文提出CASR框架，将超分作为VVC的后处理步骤：编码端以测试序列的VVC解码帧及QP图为监督，冻结预训练超分网络的卷积核，仅微调挂接在选定卷积层上的轻量秩-r矩阵（LoRA），实现逐序列内容自适应过拟合。低秩权重更新经MPEG
+    NNR标准压缩后作为信令传输，大幅降低码率开销。在JVET CTC A1/A2类序列上，相比未自适应的超分后滤波器，LoRA内容自适应以较小信令代价带来码率节省。相对VTM21，随机访问配置下BD-rate为Y
+    -10.93%、U -15.39%、V -24.41%，全帧内配置下为Y -13.43%、U -5.75%、V -22.94%。LoRA秩的消融实验表明r=4在编码增益与信令开销之间达到最佳折中。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 面向VVC的编码端内容自适应神经超分后处理，涉及NNR标准压缩与BD-rate评测，属编码器优化核心方向。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: CASR：基于低秩过拟合的通用视频编码内容自适应神经超分后处理滤波器
+relations:
+- type: same_topic
+  ref: paper:arxiv:2606.20847
+  note: 同为VVC/VVenC编码器端内容自适应优化（QP自适应 vs 超分后滤波自适应）
+- type: same_topic
+  ref: paper:arxiv:2606.31084
+  note: 同属传统视频编码器（VVC族）工具级优化改进
+- type: same_topic
+  ref: paper:arxiv:2608.07799
+  note: 均针对传统视频编码器的质量增强/后处理环节

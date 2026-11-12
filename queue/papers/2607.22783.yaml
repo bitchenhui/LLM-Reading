@@ -1,0 +1,43 @@
+id: paper:arxiv:2607.22783
+status: skipped
+score: 0
+matched: []
+meta:
+  title: 'JPEG AIC2026: A large-scale dataset for fine-grained assessment of image coding'
+  authors:
+  - Mohsen Jenadeleh
+  - Jon Sneyers
+  - João Ascenso
+  - Thomas Richter
+  - Alexander Karabutov
+  - Panqi Jia
+  - Elena Alshina
+  - Osamu Watanabe
+  - António Pinheiro
+  - Touradj Ebrahimi
+  - Dietmar Saupe
+  published: '2026-07-24'
+  updated: '2026-07-24'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: Recent advances in conventional and learning-based image coding have increased the demand
+    for benchmark datasets that support fine-grained assessment of compressed image quality, particularly
+    for learning-based image compression methods. This paper introduces Assessment of Image Coding 2026
+    (AIC2026), a large-scale dataset for high-fidelity image compression containing 70 source images selected
+    from 2,787 candidates using semantic clustering, inter-metric disagreement among objective image quality
+    assessment (IQA) methods, and manual inspection and refinement. The dataset covers a wide range of
+    compression artifacts produced by eight conventional and four learning-based codecs across 17 coding
+    configurations. Each source image is encoded using seven codecs. For each source-codec pair, decoded
+    images are provided at 20 perceptually spaced distortion levels, corresponding approximately to 0.2-4.0
+    just-noticeable difference (JND) units using the ColorVideoVDP (CVVDP) metric for distortion estimation,
+    yielding 9,618 distorted images. This fine-grained sampling enables analysis of rate-distortion behavior
+    and objective metric evaluation for subtle quality differences across a wide range of compression
+    artifacts. We report an extensive objective analysis using 24 conventional and 12 learning-based IQA
+    methods. The results show substantial disagreement among current IQA methods for fine-grained quality
+    differences, particularly for artifacts introduced by learning-based codecs. The complete dataset
+    is publicly available at https://doi.org/10.18419/DARUS-6156.
+  url: https://arxiv.org/abs/2607.22783
+  pdf_url: https://arxiv.org/pdf/2607.22783v1
+  version: v1
+fetched: '2026-11-12'

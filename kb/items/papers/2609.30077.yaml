@@ -1,0 +1,67 @@
+id: paper:arxiv:2609.30077
+type: paper
+title: Rate-distortion optimization for full-reference image quality metrics via stochastic Hessian estimates
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2609.30077v1
+  url: https://arxiv.org/abs/2609.30077
+  pdf_url: https://arxiv.org/pdf/2609.30077v1
+  venue: arXiv preprint
+time:
+  published: '2026-09-24'
+  collected: '2026-11-12'
+entities:
+- ref: concept:RDO
+  role: subject
+- ref: codec:VVC
+  role: uses
+- ref: dataset:Kodak
+  role: evaluated_on
+- ref: metric:BD-Rate
+  role: measured_by
+- ref: metric:LPIPS
+  role: measured_by
+- ref: metric:MS-SSIM
+  role: measured_by
+claims:
+- statement: 将FR-IQA度量近似为输入相关二次失真（IDQD）后，可在VVC中按块执行RDO，在目标度量下取得显著BD-rate节省且无需修改解码器。
+  confidence: reported
+  metrics:
+  - name: BD-rate节省
+    value: 14.2-36.7%
+    scope: 五种FR-IQA目标度量，VVC，Kodak与CLIC数据集
+  evidence: abstract（初筛，未读全文）
+- statement: IDQD-RDO的额外开销集中在编码端，来自基于自动微分的随机Hessian估计。
+  confidence: reported
+  metrics:
+  - name: 编码复杂度开销
+    value: 10-30%
+    scope: 编码端相对基线，解码器无变化
+  evidence: abstract（初筛，未读全文）
+- statement: 提出块对角与纯对角两种Hessian近似及相应估计器，仅需Hessian的矩阵-向量积即可按块计算IDQD失真。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 用源图像处Hessian二次化近似FR-IQA失真，实现块级RDO，VVC上目标度量BD-rate节省14.2–36.7%。
+  abstract_zh: 块级视频编码器传统上以SSE作为RDO失真，因其可按块分解而便于独立优化，但MS-SSIM、LPIPS等全参考质量度量虽更贴近人眼感知却无法在编码环路内直接使用。该文基于度量二次化（quadratization）的已有结果，将一大类FR-IQA度量近似为输入相关二次失真（IDQD），其二次型矩阵取自度量在源视频处的Hessian。为支持按块计算，作者提出保留块对角与仅保留对角两种Hessian近似，并给出只需Hessian矩阵-向量积（经自动微分实现）的随机估计器。在VVC下对Kodak与CLIC数据集的五种目标度量进行评测，IDQD-RDO在目标度量下取得14.2–36.7%的BD-rate节省，无需修改解码器，编码端复杂度增加10–30%。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 直接属于标准编码器（VVC）中面向感知质量度量的率失真优化，方法与实验结果均为编码核心内容。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 基于随机Hessian估计的全参考图像质量度量率失真优化
+relations:
+- type: same_topic
+  ref: paper:arxiv:2608.07799
+  note: 同为传统编码器中以感知质量为目标（非SSE失真）的优化方法
+- type: same_topic
+  ref: paper:arxiv:2606.20847
+  note: 同为VVC/VVenC编码器内部的参数优化（QP/编码参数选择）
+- type: same_topic
+  ref: paper:arxiv:2610.22421
+  note: 同属率失真优化主线（学习式编码视角），RDO方法可相互参照

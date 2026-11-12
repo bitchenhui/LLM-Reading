@@ -1,0 +1,81 @@
+id: paper:arxiv:2608.07799
+type: paper
+title: Bit Allocation Transfer for Perceptual Quality Enhancement of Traditional Video Codecs
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2608.07799v1
+  url: https://arxiv.org/abs/2608.07799
+  pdf_url: https://arxiv.org/pdf/2608.07799v1
+  venue: arXiv preprint
+time:
+  published: '2026-08-07'
+  collected: '2026-11-12'
+entities:
+- ref: codec:HEVC
+  role: subject
+- ref: codec:AVC
+  role: subject
+- ref: codec:VVC
+  role: subject
+- ref: concept:QP
+  role: uses
+- ref: concept:RDO
+  role: uses
+- ref: impl:DCVC-FM
+  role: builds_on
+- ref: impl:HM
+  role: compared_against
+- ref: impl:VTM
+  role: compared_against
+- ref: metric:MS-SSIM
+  role: measured_by
+claims:
+- statement: 在HEVC B~D数据集上以MS-SSIM衡量，所提码率分配迁移方法相比JM-19.0节省20.20%码率。
+  confidence: reported
+  metrics:
+  - name: MS-SSIM码率节省
+    value: 20.20%
+    scope: HEVC B~D，对比锚点JM-19.0
+  evidence: abstract（初筛，未读全文）
+- statement: 在HEVC B~D数据集上以MS-SSIM衡量，该方法相比HM-16.20节省8.25%码率。
+  confidence: reported
+  metrics:
+  - name: MS-SSIM码率节省
+    value: 8.25%
+    scope: HEVC B~D，对比锚点HM-16.20
+  evidence: abstract（初筛，未读全文）
+- statement: 在HEVC B~D数据集上以MS-SSIM衡量，该方法相比VTM-23.0节省8.37%码率。
+  confidence: reported
+  metrics:
+  - name: MS-SSIM码率节省
+    value: 8.37%
+    scope: HEVC B~D，对比锚点VTM-23.0
+  evidence: abstract（初筛，未读全文）
+- statement: 该方法在不修改传统编解码器核心解码语法的前提下，将DCVC-FM中学到的隐式感知重要性迁移为传统编码器的块级QP图。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 利用运动补偿预测帧作为量化步长生成模型的输入可带来额外码率节省。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 用神经压缩模型学到的感知重要性生成QP图指导传统编码器块级码率分配，不改解码语法即获显著MS-SSIM码率节省。
+  abstract_zh: 论文提出码率分配迁移框架：在神经视频压缩框架DCVC-FM内以感知损失训练量化步长生成模型，输入原始帧与运动补偿预测帧，输出量化步长图，再将其转换为块级码率比例并映射为传统编码器的QP图。该方法在不修改传统编解码器核心解码语法的前提下，将神经模型隐式学到的感知重要性迁移到H.264/AVC、H.265/HEVC和H.266/VVC的块级码率分配中。在HEVC
+    B~D测试集上，以MS-SSIM衡量分别相对JM-19.0、HM-16.20和VTM-23.0取得20.20%、8.25%和8.37%的码率节省，利用预测帧还可获得额外增益。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 将神经压缩学到的感知重要性迁移为传统编码器QP级码率分配，属核心编码器优化方向且实验对比锚点清晰。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 面向传统视频编解码器感知质量提升的码率分配迁移
+relations:
+- type: same_topic
+  ref: paper:arxiv:2606.20847
+  note: 同为面向传统/VVC编码器的QP自适应码率控制优化，主题高度相近
+- type: same_topic
+  ref: paper:arxiv:2606.31084
+  note: 同属VVC传统编码器内部优化（VVenC编码加速 vs 本文的感知码率分配）

@@ -1,0 +1,54 @@
+id: paper:arxiv:2609.16279
+type: paper
+title: Semantic-Aware Neural Video Codec for Error-Resilient Low-Latency Transmission
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2609.16279v1
+  url: https://arxiv.org/abs/2609.16279
+  pdf_url: https://arxiv.org/pdf/2609.16279v1
+  venue: arXiv preprint
+time:
+  published: '2026-09-14'
+  collected: '2026-11-12'
+entities:
+- ref: impl:DCVC-RT
+  role: subject
+- ref: concept:EntropyModel
+  role: uses
+claims:
+- statement: 提出语义与特征感知的编码策略，将编码表示按语义与潜在特征重要性划分为不同数据包并分配到不同优先级流，适配多级丢包信道。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 设计抗差错熵模型，去除包间依赖，使每个数据包在丢包情形下均可独立解码。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 系统在抽象的多级丢包信道上端到端训练，同时学习信道感知表示与重要性感知分包，并便于网络进行差异化包优先级调度。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在丢包条件下相较基线DCVC-RT鲁棒性显著提升，实现次要区域优雅退化同时更好保留任务相关视觉内容（摘要未给出具体数值）。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 基于DCVC-RT引入语义/特征重要性分包与抗差错熵模型，在丢包信道下实现任务相关内容的鲁棒低时延视频传输。
+  abstract_zh: 针对物理AI系统在不可靠信道上的低时延任务导向视频通信需求，作者在实时神经编解码器DCVC-RT基础上提出语义感知的多级编码框架。该方法将编码表示按语义与潜在特征重要性划分到不同包并分配至不同优先级流，适配多级丢包信道模型。同时设计抗差错熵模型，消除包间依赖，使每个数据包在丢包时仍可独立解码。整个系统在多级丢包信道抽象上端到端训练，联合学习信道感知表示与重要性感知分包。实验表明，相较基线DCVC-RT，该框架在丢包条件下鲁棒性显著提升，次要区域优雅退化而任务相关视觉内容得到更好保护。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 基于DCVC-RT的语义感知神经视频编码，面向不可靠信道抗差错低时延传输，属于学习式编码与系统部署核心议题。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 面向抗差错低时延传输的语义感知神经视频编解码器
+relations:
+- type: same_topic
+  ref: paper:arxiv:2606.28027
+  note: 同为学习式视频编解码器面向实际部署/低时延场景（MLVC多平台部署 vs 本文抗差错低时延传输）
+- type: same_topic
+  ref: paper:arxiv:2607.28144
+  note: 同为实时神经视频编码方向（ReGenVC实时生成式编码 vs 本文基于DCVC-RT的低时延抗差错编码）
+- type: same_topic
+  ref: paper:arxiv:2609.04273
+  note: 同属神经视频表示压缩与可分级编码研究线，均涉及按重要性组织编码表示

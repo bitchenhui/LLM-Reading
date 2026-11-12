@@ -1,0 +1,47 @@
+id: paper:arxiv:2609.29041
+status: reviewed
+score: 7
+matched:
+- ref: codec:HEVC
+  count: 1
+  weight: 3
+- ref: codec:VVC
+  count: 1
+  weight: 3
+- ref: org:MPEG
+  count: 1
+  weight: 1
+meta:
+  title: 'From Scattered Gaussians to Structured Maps: Efficient Gaussian Splatting Coding via Dual-phase
+    Morton Sorting'
+  authors:
+  - Bolin Chen
+  - Shanzhi Yin
+  - Ru-Ling Liao
+  - Yibo Fan
+  - Yan Ye
+  published: '2026-09-24'
+  updated: '2026-09-24'
+  categories:
+  - cs.MM
+  abstract: 3D Gaussian Splatting (3DGS) enables high fidelity novel view synthesis but suffers from excessive
+    storage and bandwidth requirements due to its unstructured representation. To address this, a projection
+    based video coding framework has emerged as a leading approach, supported by MPEG's ongoing standardization,
+    where 3DGS attributes are converted into 2D maps to take advantage of efficient compression using
+    established video codecs such as HEVC and VVC. However, the effectiveness of this approach depends
+    heavily on the spatial coherence of the projected video, which current sorting strategies such as
+    PLAS and Morton ordering fail to preserve adequately, either incurring high computational cost or
+    achieving limited correlation retention. To overcome these limitations, we propose a dual phase Morton
+    spatial sorting algorithm that improves both coding efficiency and processing speed. In the first
+    phase, Morton based 1D indexing is applied to high dimensional attributes to enhance spatial locality.
+    The second phase further refines layout continuity through a structured 2D Morton mapping table that
+    enforces spatial adjacency. This hierarchical strategy generates highly regular, block wise feature
+    maps with strong local correlation, making them well suited for compression via conventional block
+    based coding tools. Experimental results show that our method significantly outperforms existing approaches
+    in both compression performance and runtime efficiency, providing a practical and standard compatible
+    solution for 3DGS data coding.
+  url: https://arxiv.org/abs/2609.29041
+  pdf_url: https://arxiv.org/pdf/2609.29041v1
+  version: v1
+fetched: '2026-11-12'
+llm_decision: deep_read

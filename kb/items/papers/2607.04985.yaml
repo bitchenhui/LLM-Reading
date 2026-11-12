@@ -1,0 +1,49 @@
+id: paper:arxiv:2607.04985
+type: paper
+title: Reduced-complexity Adaptive Loop Filtering via Input-dependent Graph Filters
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2607.04985v1
+  url: https://arxiv.org/abs/2607.04985
+  pdf_url: https://arxiv.org/pdf/2607.04985v1
+  venue: arXiv preprint
+time:
+  published: '2026-07-06'
+  collected: '2026-11-12'
+entities:
+- ref: codec:ECM
+  role: subject
+- ref: codec:VVC
+  role: builds_on
+claims:
+- statement: 在ECM自适应环路滤波中，基于多项式图滤波器的固定滤波框架可将所需固定滤波器数量减少一个数量级，同时保持与ECM基线相当的压缩性能
+  confidence: reported
+  metrics:
+  - name: 固定滤波器数量减少
+    value: 一个数量级（约10×）
+    scope: 相比ECM基线ALF所需的细粒度梯度分类固定滤波器集合
+  evidence: abstract（初筛，未读全文）
+- statement: 以图编码像素强度关系可捕捉局部结构信息，使结构相似的局部模式共享滤波行为，比单独依赖梯度分类更有效
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 用多项式图滤波器替代ECM细粒度梯度分类固定滤波，滤波器数量减少一个数量级且性能相当。
+  abstract_zh: 论文针对ECM中自适应环路滤波（ALF）依赖大量离线训练固定滤波器与细粒度梯度分类器导致的冗余与实现复杂度问题，提出基于图的固定滤波框架。该方法用图结构编码像素强度关系，比单纯梯度分类更有效地捕捉局部结构信息，并将固定滤波器学习为多项式图滤波器，使结构相似的局部模式共享滤波行为。实验表明其压缩性能与ECM基线相当，同时所需滤波器数量减少约一个数量级。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 直接针对ECM标准测试模型中的自适应环路滤波工具做复杂度优化，属标准编码器优化核心方向。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 基于输入相关图滤波器的低复杂度自适应环路滤波
+relations:
+- type: same_topic
+  ref: paper:arxiv:2609.37328
+  note: 同为VVC/ECM体系内的环路滤波/后处理滤波工具改进
+- type: same_topic
+  ref: paper:arxiv:2606.31084
+  note: 同为VVC系标准编码器工具的复杂度降低方向
