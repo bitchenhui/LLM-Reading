@@ -13,6 +13,7 @@ source:
 time:
   published: '2026-05-27'
   collected: '2026-11-12'
+  updated: '2026-11-12'
 entities:
 - ref: concept:EntropyModel
   role: subject
@@ -44,6 +45,7 @@ summaries:
   one_liner_zh: 提出通道级小波域Transformer注意力与小波包切片熵模型，大幅提升CNN-Transformer混合学习图像压缩的率失真性能。
   abstract_zh: 该论文面向基于CNN-Transformer混合架构的学习图像压缩（LIC），提出通道级小波域Transformer注意力机制（ChWDTA）：保留现代LIC骨干中高效的窗口空间自注意力，但在通道级小波变换后的特征上计算Q/K/V投影，再经逆变换映射回注意力输出，构成ChWDTB模块，在保持窗口注意力空间标记化的同时稀疏化注意力投影所见的通道协方差。在熵编码阶段，引入通道级小波包（ChWP）分解生成四个等尺寸子带，更好适配通道级切片式自回归熵建模。当每个通道子带划分为两个切片（共八切片）时，方案在Kodak、CLIC
     Professional Validation和Tecnick测试集上分别取得-17.82%、-19.15%和-22.56%的BD-rate降低。即使每个通道子带按单切片编码，仍能以更低复杂度保留大部分编码增益。
+  deep_dive: docs/auto/2606.00111.md
 assessment:
   relevance: high
   decision: deep_read

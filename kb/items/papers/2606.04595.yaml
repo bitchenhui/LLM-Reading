@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-06-03'
   collected: '2026-11-12'
+  updated: '2026-11-12'
 entities:
 - ref: impl:VTM
   role: subject
@@ -39,6 +40,7 @@ summaries:
   one_liner_zh: 提出两阶段搜索-蒸馏框架KD-NVC，通过模块级架构搜索与能量感知特征蒸馏加速神经视频编码，实现1080p 69FPS解码且RD性能接近VTM-LDB。
   abstract_zh: 针对神经视频编码（NVC）解码复杂度高、难以在边缘设备实时解码的问题，提出两阶段蒸馏框架KD-NVC。第一阶段提出基于加速效率的神经架构搜索算法AE-NAS，探索模块级帕累托前沿以在异构子模块间自适应分配加速预算，并引入加速效率指标，无需实际训练全部架构候选即可确定最终学生架构。第二阶段设计能量感知特征蒸馏损失EFD，对齐师生编解码器间空间聚合的特征能量签名，传递率约束诱导的稀疏模式以保持压缩效率。实验表明该框架持续优于现有面向编解码器的蒸馏方法，在RTX
     5060上实现1080p 69FPS解码，同时RD性能与VTM-LDB相当。
+  deep_dive: docs/auto/2606.04595.md
 assessment:
   relevance: high
   decision: deep_read

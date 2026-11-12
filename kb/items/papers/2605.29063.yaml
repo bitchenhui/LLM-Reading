@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-05-27'
   collected: '2026-11-12'
+  updated: '2026-11-12'
 entities:
 - ref: codec:HEVC
   role: subject
@@ -63,6 +64,7 @@ summaries:
   abstract_zh: 针对HEVC递归四叉树划分中穷举率失真优化（RDO）导致的CTU划分预测计算开销，提出混合快速视觉Transformer（HFViT）。该方法将重参数化深度可分离卷积骨干与带carrier
     token机制的层级注意力Transformer（HAT）融合，以低于二次方的复杂度实现全局信息传播，并通过训练后结构融合将批归一化折叠进前层以降低延迟。在JCT-VC标准测试序列上，相比ETH-CNN基线，HFViT在A、B、E类的平均VMAF
     BD-rate损失分别减少2.4、2.6、7.9个百分点。CPU推理延迟保持在CNN基线的8%以内，GPU上则比CNN基线快40%，具备实时编码器集成的可行性。
+  deep_dive: docs/auto/2605.29063.md
 assessment:
   relevance: high
   decision: deep_read
