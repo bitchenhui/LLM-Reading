@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-11-06'
   collected: '2026-11-12'
+  updated: '2026-11-12'
 entities:
 - ref: concept:EntropyModel
   role: subject
@@ -61,6 +62,7 @@ claims:
 summaries:
   one_liner_zh: 在编码器输入端注入高斯噪声作为结构化正则项，不改架构即可稳定提升学习式图像压缩的率失真性能。
   abstract_zh: 该论文提出面向学习式图像压缩（LIC）的噪声正则化训练：在每个训练步向编码器输入加入高斯噪声，同时保持失真目标、隐变量均匀噪声代理、超先验与熵编码流程完全不变。该方法与具体架构无关，几乎不引入额外训练或推理开销。实验显示跨骨干、跨码率档位的一致BD-Rate增益：复现ELIC上为-2.60%，变码率DMCI编解码器的Base/Medium/Large档分别为-0.85%/-1.05%/-2.38%，其中DMCI-Large相对VTM-22.0达到-22.02%。理论上，对含噪RD损失做二阶展开可解释这些增益：噪声进入分析变换上游，将干净RD目标转化为结构化的O(σ²)正则项，包含率侧信息加权的编码器Jacobian惩罚与失真侧端到端重建映射的Frobenius收缩惩罚。有限差分Lipschitz分析显示编码器敏感度降低约12%、端到端编解码器降低约8%，exact-JVP测试进一步表明高信息方向被优先收缩。
+  deep_dive: docs/auto/2611.10073.md
 assessment:
   relevance: high
   decision: deep_read

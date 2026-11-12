@@ -35,9 +35,10 @@ JVET/MPEG/AOM 文档     ├→ 归一化 → 实体对齐 → 落地沉淀 → 
 - ✅ 学术源（arXiv）全链路闭环：`fetch_arxiv`（拉取/实体对齐/队列）→ `llm_review`（glm-5.3-flash 精度终审 + 中文初筛）→ `kb/items/`（过校验落库）
 - ✅ 基底：**35 个信息项**（6 篇手工精读回填 + 29 篇 pipeline 自动审阅）、135 条论断、111 处量化指标、90 实体
 - ✅ 首轮 150 天回补：队列 56 条（reviewed 29 / 规则 skipped 26 / LLM skipped 1）
-- ⬜ deep_read 深读阶段：glm-5.3 强档消费 deep_read 候选，下载 PDF 产出 docs/ 长文精读
-- ⬜ 第二信息源：JVET 文档列表（音视频领域前瞻性最强的来源）
-- ⬜ 消费端：RAG 问答 → digest 周报 → 语料导出（按 source.license 过滤）
+- ✅ 消费端 v0：`make_digest` 按时间窗+研究主线生成周报 → `docs/digests/`
+- 🔶 deep_read 深读（试点中）：`deep_read` 下载 PDF → glm-5.3 流式全文精读 → `docs/auto/` 笔记回链 item
+- ⬜ 第二信息源：JVET 文档列表（站点对数据中心 IP 不开放，可能需要成员凭据或改用 AOMedia GitHub 等开放源）
+- ⬜ 消费端：RAG 问答 → 语料导出（按 source.license 过滤）
 
 ## 设计决策（为什么长这样）
 

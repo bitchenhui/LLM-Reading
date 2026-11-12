@@ -99,17 +99,74 @@ class LLM:
         self.wire = cfg.get("wire", "responses")  # 先按配置的协议试
         self.usage = {"in": 0, "out": 0, "calls": 0}
 
-    def _post(self, url: str, payload: dict) -> dict:
+    def chat(self, prompt: str, tier: str = "review", instructions: str | None = None,
+             max_tokens: int | None = None) -> str:
+        model = self.models[tier]
+        max_tok = max_tokens or self.req.get("max_output_tokens", 4000)
+        system = instructions if instructions is not None else INSTRUCTIONS
+        payload = {"stream": True, "max_output_tokens": max_tok}
+        if self.wire == "responses":
+            payload.update({"model": model, "input": prompt, "instructions": system})
+            effort = self.req.get(f"{tier}_reasoning")
+            if effort:
+                payload["reasoning"] = {"effort": effort}
+            url = f"{self.base}/responses"
+        else:
+            payload.update({"model": model, "stream_options": {"include_usage": True},
+                            "messages": [{"role": "system", "content": system},
+                                         {"role": "user", "content": prompt}]})
+            url = f"{self.base}/chat/completions"
+        try:
+            return self._post_stream(url, payload)
+        except RuntimeError as e:
+            if self.wire == "responses" and ("404" in str(e) or "400" in str(e)):
+                print("    [wire] responses 不可用，切换 chat/completions", flush=True)
+                self.wire = "chat"
+                return self.chat(prompt, tier, instructions, max_tokens)
+            raise
+
+    def _post_stream(self, url: str, payload: dict) -> str:
+        """SSE 流式：分块持续到达，避免长推理（深读 5-15 分钟）触发读超时。"""
         data = json.dumps(payload).encode()
-        req = urllib.request.Request(url, data=data, headers={
-            "Authorization": f"Bearer {self.key}",
-            "Content-Type": "application/json",
-        })
         last = None
         for attempt in range(1, 4):
             try:
-                with urllib.request.urlopen(req, timeout=180) as resp:
-                    return json.loads(resp.read())
+                req = urllib.request.Request(url, data=data, headers={
+                    "Authorization": f"Bearer {self.key}",
+                    "Content-Type": "application/json",
+                    "Accept": "text/event-stream",
+                })
+                # timeout 是单次 read 的上限：SSE 心跳/增量会不断刷新它
+                with urllib.request.urlopen(req, timeout=300) as resp:
+                    parts: list[str] = []
+                    usage: dict = {}
+                    for raw in resp:
+                        line = raw.decode("utf-8", errors="replace").strip()
+                        if not line.startswith("data:"):
+                            continue
+                        body = line[5:].strip()
+                        if body == "[DONE]":
+                            break
+                        try:
+                            ev = json.loads(body)
+                        except json.JSONDecodeError:
+                            continue
+                        if self.wire == "responses":
+                            t = ev.get("type", "")
+                            if t == "response.output_text.delta":
+                                parts.append(ev.get("delta", ""))
+                            elif t == "response.completed":
+                                usage = (ev.get("response") or {}).get("usage") or usage
+                        else:
+                            if ev.get("usage"):
+                                usage = ev["usage"]
+                            for ch in ev.get("choices", []):
+                                parts.append((ch.get("delta") or {}).get("content") or "")
+                    self._track(usage)
+                    out = "".join(parts)
+                    if not out:
+                        raise RuntimeError(f"流式响应无文本输出（wire={self.wire}）")
+                    return out
             except urllib.error.HTTPError as e:
                 body = e.read()[:300].decode(errors="replace")
                 if e.code in (429, 500, 502, 503, 504):
@@ -119,50 +176,12 @@ class LLM:
                     last = f"HTTP {e.code}: {body}"
                     continue
                 raise RuntimeError(f"HTTP {e.code}: {body}") from e
-        raise RuntimeError(f"重试耗尽: {last}")
-
-    def chat(self, prompt: str, tier: str = "review", instructions: str | None = None,
-             max_tokens: int | None = None) -> str:
-        model = self.models[tier]
-        max_tok = max_tokens or self.req.get("max_output_tokens", 4000)
-        system = instructions if instructions is not None else INSTRUCTIONS
-        if self.wire == "responses":
-            payload = {"model": model, "input": prompt, "instructions": system,
-                       "max_output_tokens": max_tok}
-            effort = self.req.get(f"{tier}_reasoning")
-            if effort:
-                payload["reasoning"] = {"effort": effort}
-            try:
-                resp = self._post(f"{self.base}/responses", payload)
-            except RuntimeError as e:
-                if "404" in str(e) or "400" in str(e):  # 端点不支持 Responses → 降级
-                    print("    [wire] responses 不可用，切换 chat/completions", flush=True)
-                    self.wire = "chat"
-                    return self.chat(prompt, tier)
-                raise
-            self._track(resp.get("usage"))
-            return self._extract_responses(resp)
-        messages = [{"role": "system", "content": system},
-                    {"role": "user", "content": prompt}]
-        resp = self._post(f"{self.base}/chat/completions",
-                          {"model": model, "messages": messages, "max_tokens": max_tok})
-        self._track(resp.get("usage"))
-        return resp["choices"][0]["message"]["content"]
-
-    @staticmethod
-    def _extract_responses(resp: dict) -> str:
-        if isinstance(resp.get("output_text"), str) and resp["output_text"]:
-            return resp["output_text"]
-        parts = []
-        for blk in resp.get("output", []):
-            if blk.get("type") != "message":
-                continue
-            for c in blk.get("content", []):
-                if c.get("type") in ("output_text", "text"):
-                    parts.append(c.get("text", ""))
-        if not parts:
-            raise RuntimeError(f"responses 输出无法解析: {json.dumps(resp, ensure_ascii=False)[:400]}")
-        return "".join(parts)
+            except Exception as e:  # noqa: BLE001
+                wait = 15 * attempt
+                print(f"    [流中断 {type(e).__name__}] 退避 {wait}s", flush=True)
+                time.sleep(wait)
+                last = repr(e)
+        raise RuntimeError(f"流式重试耗尽: {last}")
 
     def _track(self, usage: dict | None) -> None:
         if usage:

@@ -84,4 +84,4 @@ uv run --with pyyaml python scripts/validate_kb.py
 ## 当前规模
 
 - 实体 90 个（codec 7 / org 21 / impl 25 / dataset 7 / metric 14 / concept 16）
-- 信息项 6 个（2026-06 arXiv 论文，34 条论断 / 24 处量化指标）
+- 信息项 35 个（6 篇手工精读回填 + 29 篇 pipeline 自动审阅；135 条论断 / 111 处量化指标）

@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-11-03'
   collected: '2026-11-12'
+  updated: '2026-11-12'
 entities:
 - ref: impl:TCM
   role: subject
@@ -50,6 +51,7 @@ summaries:
   one_liner_zh: 用DCT基与单频图像探测神经图像编解码器的频谱泄漏与增益，并以解码器微调将泄漏降低90%以上。
   abstract_zh: 针对神经图像压缩（NIC）仅用标量率失真指标、无法反映各空间频率处理能力的缺陷，作者提出用DCT基矩阵和单频测试图像探测编解码器的基准方法，度量非目标能量泄漏（leakage）与目标频率增益，并给出与重建误差的精确分解和界。在接近1bpp的工作点，BMSHJ、MBT、Cheng2020模型有80-97%的高频重建能量落在目标频带之外，目标频率增益仅0.02-0.23，而TCM与FTIC的非目标能量达到传统编解码器水平。该探测还发现标量指标无法暴露的问题：公开发布的Cheng2020-Anchor模型在孤立单频输入下产生极端的钳位前输出。此外，仅解码器微调（自然图像损失+泄漏损失）在码流不变的前提下，将八种架构的基频泄漏能量降低90-99.8%，Kodak
     PSNR仅损失0.09-0.59 dB。
+  deep_dive: docs/auto/2611.10000.md
 assessment:
   relevance: high
   decision: deep_read
