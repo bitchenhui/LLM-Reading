@@ -13,6 +13,7 @@ source:
 time:
   published: '2026-09-29'
   collected: '2026-11-12'
+  updated: '2026-11-12'
 entities:
 - ref: codec:VVC
   role: subject
@@ -64,6 +65,7 @@ summaries:
   abstract_zh: 该论文提出CASR框架，将超分作为VVC的后处理步骤：编码端以测试序列的VVC解码帧及QP图为监督，冻结预训练超分网络的卷积核，仅微调挂接在选定卷积层上的轻量秩-r矩阵（LoRA），实现逐序列内容自适应过拟合。低秩权重更新经MPEG
     NNR标准压缩后作为信令传输，大幅降低码率开销。在JVET CTC A1/A2类序列上，相比未自适应的超分后滤波器，LoRA内容自适应以较小信令代价带来码率节省。相对VTM21，随机访问配置下BD-rate为Y
     -10.93%、U -15.39%、V -24.41%，全帧内配置下为Y -13.43%、U -5.75%、V -22.94%。LoRA秩的消融实验表明r=4在编码增益与信令开销之间达到最佳折中。
+  deep_dive: docs/auto/2609.37328.md
 assessment:
   relevance: high
   decision: deep_read

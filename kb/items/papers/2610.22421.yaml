@@ -13,6 +13,7 @@ source:
 time:
   published: '2026-10-15'
   collected: '2026-11-12'
+  updated: '2026-11-12'
 entities:
 - ref: impl:TinyLIC
   role: subject
@@ -52,6 +53,7 @@ summaries:
   one_liner_zh: 面向部署综述学习式图像编码的系统级约束，并以TinyLIC基准分析率失真-复杂度权衡。
   abstract_zh: 该文面向实际部署综述端到端学习式图像编码（LIC），梳理学习变换、量化、熵建模与率失真优化的基础框架，并评述变码率与码率控制、整数精度推理与跨平台一致性、鲁棒性与通信韧性、轻量硬件感知实现及标准化互操作等系统级扩展。作者进一步提出TinyLIC作为开放基准与可复现案例，用于率失真-复杂度联合分析。实验表明，约10
     KMACs/pixel解码复杂度的TinyLIC在Kodak上显著优于H.265/HEVC图像档锚点；50 KMACs/pixel配置在多个测试集上达到与H.266/VVC图像档锚点相当的性能。
+  deep_dive: docs/auto/2610.22421.md
 assessment:
   relevance: high
   decision: deep_read

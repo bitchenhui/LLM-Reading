@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-10-22'
   collected: '2026-11-12'
+  updated: '2026-11-12'
 entities:
 - ref: concept:Hyperprior
   role: subject
@@ -51,6 +52,7 @@ summaries:
   one_liner_zh: 提出BLI框架，将渐进三态平面编码重构为区间收缩下的序贯隐变量推断，BD-rate与参数量、延迟均显著优于现有渐进编码器
   abstract_zh: 渐进式图像压缩需从单一码流前缀重建图像，涉及部分观测下的序贯隐变量推断；已有三态平面编解码器大多仅将已解码三态视为离散符号用于概率预测，未充分利用其作为连续隐变量区间约束的作用。本文提出边界约束隐变量推断（BLI），在每个编码步骤用已解码三态构成的上下界，结合编解码端共享的超先验信息，联合精炼熵模型高斯参数与用于重建的隐变量估计；随更多三态解码，可行区间单调收缩，为下一步推断提供更紧约束并支持灵活的面内精细化调度。在Kodak、CLIC和JPEG-AI上，BLI取得渐进式图像编码器中最优的率失真性能：Kodak上较DPICT降低BD-rate
     17.78%、较CTC降低7.96%；同时以共享模型替换CTC的逐平面预测器，参数量约为其1/5.3且延迟更低。
+  deep_dive: docs/auto/2610.30966.md
 assessment:
   relevance: high
   decision: deep_read

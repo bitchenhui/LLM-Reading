@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-09-24'
   collected: '2026-11-12'
+  updated: '2026-11-12'
 entities:
 - ref: codec:HEVC
   role: subject
@@ -33,6 +34,7 @@ summaries:
   one_liner_zh: 提出双阶段Morton空间排序，将3DGS属性转为强局部相关2D特征图，提升标准视频编码器压缩效率与运行速度。
   abstract_zh: 3DGS因非结构化表示带来过大存储与带宽开销，将其属性投影为2D映射并用HEVC/VVC压缩已成为MPEG标准化支持的主流路线，但效果依赖投影视频的空间相关性，现有PLAS与Morton排序或计算代价高或相关性保持不足。该文提出双阶段Morton空间排序：第一阶段对高维属性做Morton一维索引以增强空间局部性，第二阶段通过结构化2D
     Morton映射表强制空间邻接以细化布局连续性。该分层策略生成高度规则、块状、局部相关性强的特征图，非常适合传统基于块的编码工具压缩。实验表明该方法在压缩性能与运行效率上均显著优于现有方法，提供实用且标准兼容的3DGS编码方案。
+  deep_dive: docs/auto/2609.29041.md
 assessment:
   relevance: high
   decision: deep_read

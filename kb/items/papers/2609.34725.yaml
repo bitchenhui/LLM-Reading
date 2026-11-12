@@ -13,6 +13,7 @@ source:
 time:
   published: '2026-09-28'
   collected: '2026-11-12'
+  updated: '2026-11-12'
 entities:
 - ref: impl:DCVC-RT
   role: subject
@@ -63,6 +64,7 @@ summaries:
     与生成骨干全部冻结，仅训练轻量 LoRA 适配器，先做单帧空间适配再做多帧时序适配。Gen2-VC-DCVC-UF 在 LPIPS/DISTS 上优于此前领先编码器，并据称是首个在低码率下 PSNR
     与 MS-SSIM 均超越 VTM-23.0 的生成式视频编码器（六数据集 BD-rate 均值）。相对 VTM-23.0，在匹配 LPIPS 与 DISTS 下平均分别节省码率 86.65% 与
     94.24%；且仅在 DCVC-UF 上训练的适配器无需重训练即可提升 DCVC-RT、ECM、VTM、HM 的感知质量。
+  deep_dive: docs/auto/2609.34725.md
 assessment:
   relevance: high
   decision: deep_read

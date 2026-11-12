@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-10-19'
   collected: '2026-11-12'
+  updated: '2026-11-12'
 entities:
 - ref: concept:Hyperprior
   role: subject
@@ -49,6 +50,7 @@ summaries:
     top-w 通道选择，训练后经掩码合并与通道重排（M2S 转换）化为标准 slimmable 网络以高效推理。变码率方面结合 lambda 与宽度条件调制、量化步长缩放及先冻结后微调的渐进训练策略。在
     Kodak 上于 E2E、Hyperprior、Checkerboard 三种骨干跨宽度跨码率取得更优率失真表现，w=48 时相对同宽度 Slimmable 基线最高节省 19.22%/24.11%/22.76%
     BD-rate；单一 VBR 模型可替代 40 个独立模型，存储降低 14.8 至 15.9 倍。
+  deep_dive: docs/auto/2610.27037.md
 assessment:
   relevance: high
   decision: deep_read

@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-10-24'
   collected: '2026-11-12'
+  updated: '2026-11-12'
 entities:
 - ref: impl:TCM
   role: subject
@@ -44,6 +45,7 @@ summaries:
   one_liner_zh: 提出SG-AFM：用仅编码端的语义先验调制潜变量高频子带，六数据集相对TCM平均降PSNR-BD-rate 13.17%。
   abstract_zh: 论文针对高频衰减降码率但损伤目标边界与细节的问题，提出语义引导自适应潜频率调制（SG-AFM），以语义结构先验引导编码器潜变量的高频衰减。方法对潜变量施加Haar小波变换，将固定语义-频率乘子与有界可学习校正相结合来调制高频子带；语义先验仅在编码端计算，无需传输语义图，也不给解码器增加任何模块。在六个数据集上，SG-AFM相对TCM平均降低PSNR口径BD-rate
     13.17%，并在ExDark、NightCity、OnePlus上取得对比方法中的最佳BD-rate，平均降幅16.80%。OnePlus上的消融实验验证了空间对齐语义引导的收益，视觉对比显示局部结构重建得到改善。
+  deep_dive: docs/auto/2610.33616.md
 assessment:
   relevance: high
   decision: deep_read
