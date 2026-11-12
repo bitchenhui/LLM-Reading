@@ -1,0 +1,144 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "item.schema.json",
+  "title": "KB 信息项 (Information Item)",
+  "description": "信息整合引擎的原子单元：一条从某个来源渠道归一化沉淀下来的信息。所有消费端（digest 推送 / RAG 问答 / 语料导出）只读这一层，不直接接触来源。",
+  "type": "object",
+  "required": ["id", "type", "title", "source", "time", "entities", "claims", "summaries", "assessment", "provenance"],
+  "additionalProperties": true,
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "全局唯一 ID，格式 {type}:{channel}:{external_id}，例如 paper:arxiv:2606.20847",
+      "pattern": "^(paper|standard_proposal|standard_update|repo_release|blog|benchmark_report|patent|industry_news|dataset_release):[a-z0-9_.-]+:[A-Za-z0-9_.+-]+$"
+    },
+    "type": {
+      "description": "信息项类型。扩充此枚举属于 schema 变更，需同步更新 kb/README.md 的词表。",
+      "enum": ["paper", "standard_proposal", "standard_update", "repo_release", "blog", "benchmark_report", "patent", "industry_news", "dataset_release"]
+    },
+    "title": { "type": "string", "description": "原文标题" },
+    "title_zh": { "type": "string", "description": "中文标题（翻译层落在基底里，消费端不再翻译）" },
+    "research_lines": {
+      "type": "array",
+      "description": "所属研究主线（可多条），与 docs/README.md 的谱系对应",
+      "items": { "enum": ["traditional_codec_opt", "learned_codec", "coding_for_machines", "generative_compression", "inr_representation", "systems_deployment"] }
+    },
+    "source": {
+      "type": "object",
+      "required": ["channel", "url"],
+      "additionalProperties": true,
+      "properties": {
+        "channel": { "type": "string", "description": "来源渠道标识，如 arxiv / jvet / github / blog" },
+        "external_id": { "type": "string", "description": "渠道内唯一 ID（含版本号，如 2606.20847v1）" },
+        "url": { "type": "string", "format": "uri", "description": "原文出处（provenance 之锚）" },
+        "venue": { "type": "string", "description": "发表 venue（arXiv preprint / CVPR / DCC…）" },
+        "local_pdf": { "type": "string", "description": "本地留档 PDF 路径（相对仓库根）" },
+        "license": { "type": "string", "description": "内容许可（语料导出端按此过滤；未确认则省略，不要猜）" }
+      }
+    },
+    "time": {
+      "type": "object",
+      "required": ["published", "collected"],
+      "additionalProperties": false,
+      "properties": {
+        "published": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$", "description": "原文发布日期（YYYY-MM-DD，YAML 中注意加引号）" },
+        "collected": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$", "description": "引擎收录日期" },
+        "updated": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$", "description": "本记录最后修订日期（如 arXiv 出 v2 时）" }
+      }
+    },
+    "entities": {
+      "type": "array",
+      "minItems": 1,
+      "description": "本信息项挂接的实体（来自实体注册表），role 表达挂接方式。实体间静态关系（谁实现谁、谁继承谁）放注册表，不放这里。",
+      "items": {
+        "type": "object",
+        "required": ["ref", "role"],
+        "additionalProperties": false,
+        "properties": {
+          "ref": { "type": "string", "pattern": "^(codec|org|impl|dataset|metric|concept):[A-Za-z0-9][A-Za-z0-9+._-]*$" },
+          "role": {
+            "enum": ["subject", "uses", "builds_on", "evaluated_on", "measured_by", "compared_against", "affiliation", "platform"]
+          }
+        }
+      }
+    },
+    "claims": {
+      "type": "array",
+      "minItems": 1,
+      "description": "结构化论断：引擎与普通摘要的分水岭。每条是一个可引用、可量化、可溯源的事实断言。",
+      "items": {
+        "type": "object",
+        "required": ["statement"],
+        "additionalProperties": false,
+        "properties": {
+          "statement": { "type": "string", "description": "论断本身（中文）" },
+          "metrics": {
+            "type": "array",
+            "description": "论断涉及的量化指标。优先用注册表 ref；领域外或一次性的指标可用 name 内联。",
+            "items": {
+              "type": "object",
+              "required": ["value"],
+              "additionalProperties": false,
+              "properties": {
+                "ref": { "type": "string", "pattern": "^metric:[A-Za-z0-9][A-Za-z0-9+._-]*$" },
+                "name": { "type": "string", "description": "内联指标名（仅当无注册表实体时）" },
+                "value": { "type": ["number", "string"], "description": "数值；范围/定性结论用字符串" },
+                "unit": { "type": "string" },
+                "scope": { "type": "string", "description": "口径：锚点、数据集切片、前提条件——没有口径的数字不可入库" }
+              }
+            }
+          },
+          "evidence": { "type": "string", "description": "出处定位：论文表号 / 精读笔记章节" },
+          "confidence": { "enum": ["reported", "verified", "inferred"], "description": "reported=转述原文；verified=本引擎复测过；inferred=从多处推断" }
+        }
+      }
+    },
+    "relations": {
+      "type": "array",
+      "description": "信息项之间的关联（仅 item→item）。注意区分：事实性引用用 cites；编辑部观察到的联系用 same_topic/complements/contrasts_with 并在 note 里写明。",
+      "items": {
+        "type": "object",
+        "required": ["type", "ref"],
+        "additionalProperties": false,
+        "properties": {
+          "type": { "enum": ["cites", "builds_on", "improves_on", "compares_with", "same_topic", "complements", "contrasts_with"] },
+          "ref": { "type": "string", "description": "目标信息项 ID" },
+          "note": { "type": "string" }
+        }
+      }
+    },
+    "summaries": {
+      "type": "object",
+      "required": ["one_liner_zh"],
+      "additionalProperties": true,
+      "properties": {
+        "one_liner_zh": { "type": "string", "description": "一句话总结（digest 与推送直接用这层）" },
+        "abstract_zh": { "type": "string", "description": "3-5 句方法/结果摘要" },
+        "deep_dive": { "type": "string", "description": "长文精读笔记路径（相对仓库根），如 docs/01_LLM-VVenC-QP.md" },
+        "tags": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "assessment": {
+      "type": "object",
+      "required": ["relevance", "decision", "reason", "reviewer"],
+      "additionalProperties": false,
+      "description": "精度过滤层的判定记录：为什么这条信息进了基底、值不值得精读。检索 adapter 产出候选后必须填这一段才算入库。",
+      "properties": {
+        "relevance": { "enum": ["high", "medium", "low"] },
+        "decision": { "enum": ["deep_read", "summary_only", "skip"] },
+        "reason": { "type": "string" },
+        "reviewer": { "type": "string", "description": "manual / pipeline-v0 / 具体模型名" }
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "required": ["created", "actor"],
+      "additionalProperties": true,
+      "properties": {
+        "created": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$" },
+        "actor": { "type": "string", "description": "谁生产的这条记录（manual-backfill / pipeline 名）" },
+        "pipeline": { "type": "string" }
+      }
+    }
+  }
+}

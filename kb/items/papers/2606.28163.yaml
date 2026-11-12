@@ -1,0 +1,75 @@
+# 来源：docs/06_NVRC++.md
+id: paper:arxiv:2606.28163
+type: paper
+title: "NVRC++: Enhanced Neural Video Representation Compression across Extreme Complexity and Quality Scales"
+title_zh: "NVRC++：跨极端复杂度与质量尺度的神经视频表示压缩增强"
+research_lines: [inr_representation]
+source:
+  channel: arxiv
+  external_id: 2606.28163v1
+  url: https://arxiv.org/abs/2606.28163
+  local_pdf: paper/2606.28163v1.pdf
+  venue: arXiv preprint
+time:
+  published: "2026-06-26"
+  collected: "2026-07-01"
+entities:
+  - {ref: impl:NVRC++, role: subject}
+  - {ref: impl:HiNeRV, role: builds_on}
+  - {ref: impl:NVRC, role: builds_on}
+  - {ref: concept:INR, role: uses}
+  - {ref: concept:FeatureGrid, role: uses}
+  - {ref: concept:EntropyModel, role: uses}
+  - {ref: dataset:UVG, role: evaluated_on}
+  - {ref: dataset:MCL-JCV, role: evaluated_on}
+  - {ref: metric:BD-Rate, role: measured_by}
+  - {ref: metric:kMAC-per-pixel, role: measured_by}
+  - {ref: metric:FPS, role: measured_by}
+  - {ref: impl:x265, role: compared_against}
+  - {ref: impl:HM, role: compared_against}
+  - {ref: impl:VTM, role: compared_against}
+  - {ref: impl:DCVC-FM, role: compared_against}
+  - {ref: impl:DCVC-RT, role: compared_against}
+  - {ref: impl:C3, role: compared_against}
+  - {ref: org:Bristol, role: affiliation}
+  - {ref: org:BT, role: affiliation}
+claims:
+  - statement: 范式转变：把表达负担从网络卸载到高分辨率 feature grid、网络做轻——HiNeRV++ 相对 HiNeRV(S)：grid 参数 0.35M→100.06M、层参数 2.84M→1.23M，MAC/pixel 87.3→24.8，解码 35.5→162.9 FPS，PSNR(300ep) 35.27→39.46，全面占优。
+    evidence: "docs/06_NVRC++.md §6, Table 3"
+    confidence: reported
+  - statement: 四档复杂度 S1-S4（7.3/25.1/92.5/357.7 kMAC/pixel）单配置覆盖全码率区间且每档复杂度固定——修复 INR 编码「模型大小随目标质量变化」的结构缺陷。
+    evidence: "docs/06_NVRC++.md §7"
+  - statement: S3 性能接近 NVRC（UVG PSNR 口径 -69.23 vs -73.74）但解码快 7.6 倍（73.4 vs 9.7 FPS）；S1 仅 7.3 kMAC/pixel 即大幅胜 x265 与 C3，MS-SSIM 口径匹敌 HM。
+    metrics:
+      - {ref: metric:BD-Rate, value: -69.23, unit: "%", scope: "S3, UVG, PSNR, vs x265 veryslow"}
+      - {ref: metric:kMAC-per-pixel, value: 7.3, scope: "S1 档"}
+      - {ref: metric:FPS, value: 73.4, scope: "S3 解码, UVG"}
+    evidence: "docs/06_NVRC++.md §7"
+  - statement: In-parameter coding structure（仿 Hierarchical-B 的 grid 时间切片依赖）+ unconditional symmetric quantization + random slice sampling，首次让 100M+ 参数 grid 在单张 24GB 消费级 GPU 上可训（600 帧 1080p）。
+    evidence: "docs/06_NVRC++.md §3"
+    confidence: reported
+  - statement: 三项关键技术缺一不可（UVG 消融）：无 multi-reference 输入 +35.55%、无 feature grid masking +30.33%、退回低分辨率 grid +44.01%；scale/temporal/spatial 三 prior 分别值 6.12/5.13/1.42%。
+    evidence: "docs/06_NVRC++.md §8, Table 2"
+  - statement: 高分辨率 grid 在低码率下反而退化（特征映射到单像素级削弱空间冗余共享），用带退火的 grid dropout（对 rate 与 distortion 同时生效）解决。
+    evidence: "docs/06_NVRC++.md §4"
+    confidence: reported
+relations:
+  - {type: same_topic, ref: "paper:arxiv:2606.28027", note: 都在拆质量↔复杂度耦合：NVRC++ 用 grid 卸载+优化 pipeline，MLVC 用 fp16+硬件友好架构}
+  - {type: same_topic, ref: "paper:arxiv:2606.21033", note: 都在动态分配算力：NVRC++ 训练时定 grid 分辨率池，MoECodec 运行时逐 token 路由}
+  - {type: same_topic, ref: "paper:arxiv:2606.22371", note: 都在「少 bit 结构+先验补细节」，NVRC++ 逐序列 overfitting vs ZeroGVC 免训练}
+summaries:
+  one_liner_zh: 轻量 HiNeRV++ + 多个高分辨率 feature grid 把复杂度与质量解耦，四档（7k-360k MACs/pixel）单模型跨全码率区间，S3 与 NVRC 相当且解码快 7.6 倍。
+  abstract_zh: >
+    把 INR 视频编码从「复杂度随码率变化」改为「固定复杂度覆盖全码率」：表达负担卸给高分辨率 grid，
+    网络只留 1.23M 层参数；in-parameter 编码结构 + 随机切片采样让 100M grid 单卡可训；
+    scale/temporal/spatial 三 prior 组成快而强的 grid 熵模型；masking 与 multi-reference 输入是消融中最大贡献项。
+  deep_dive: docs/06_NVRC++.md
+  tags: [INR, video-compression, feature-grid, scalable-complexity]
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: INR 压缩主线最新进展；「表达负担卸给 grid」对表示学习与压缩交叉方向有方法论价值
+  reviewer: manual
+provenance:
+  created: "2026-07-01"
+  actor: manual-backfill

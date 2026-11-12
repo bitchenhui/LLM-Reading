@@ -1,0 +1,197 @@
+# 实体注册表 · 实现与模型 (implementation)
+# kind: production_encoder | production_decoder | reference_software | research_model | framework | hw_accel
+# 论文提出的新方法以 research_model 收录，并回指 proposed_in。
+
+## —— 生产级/开源编码器 ——
+
+- id: impl:VVenC
+  type: implementation
+  kind: production_encoder
+  name: VVenC
+  full_name: Fraunhofer Versatile Video Encoder
+  aliases: [VVenC encoder]
+  developed_by: [org:Fraunhofer-HHI]
+  relations: [{type: implements, ref: codec:VVC}]
+  links: [{label: github, url: https://github.com/fraunhoferhhi/vvenc}]
+  notes: VVC 主流开源实现；fast/RDO 优化的最常见宿主（本库 2606.20847 / 2606.31084 两篇的改造对象）
+
+- id: impl:x264
+  type: implementation
+  kind: production_encoder
+  name: x264
+  aliases: [VideoLAN x264]
+  relations: [{type: implements, ref: codec:AVC}]
+
+- id: impl:x265
+  type: implementation
+  kind: production_encoder
+  name: x265
+  aliases: [MulticoreWare x265]
+  relations: [{type: implements, ref: codec:HEVC}]
+  notes: veryslow 档常被用作 INR/学习式编码器锚点
+
+- id: impl:SVT-AV1
+  type: implementation
+  kind: production_encoder
+  name: SVT-AV1
+  developed_by: [org:Intel, org:Netflix]
+  relations: [{type: implements, ref: codec:AV1}]
+
+- id: impl:HEVC-QSV
+  type: implementation
+  kind: hw_accel
+  name: HEVC-QSV
+  full_name: Intel Quick Sync Video HEVC
+  developed_by: [org:Intel]
+  relations: [{type: implements, ref: codec:HEVC}]
+  notes: MLVC 论证「可部署」时的最强传统 baseline（硬件编码器）
+
+## —— 参考软件 ——
+
+- id: impl:VTM
+  type: implementation
+  kind: reference_software
+  name: VTM
+  full_name: VVC Test Model
+  aliases: [VTM reference software]
+  developed_by: [org:JVET]
+  relations: [{type: implements, ref: codec:VVC}]
+  notes: 标准参考实现，压缩率上限锚点；版本号出现在论文里时要记录（如 VTM-17.1）
+
+- id: impl:HM
+  type: implementation
+  kind: reference_software
+  name: HM
+  full_name: HEVC Test Model
+  developed_by: [org:JCT-VC]
+  relations: [{type: implements, ref: codec:HEVC}]
+
+## —— 框架 ——
+
+- id: impl:FFmpeg
+  type: implementation
+  kind: framework
+  name: FFmpeg
+  notes: 编解码生态的胶水层，其集成动态是技术落地信号
+
+## —— 学习式编码研究模型 ——
+
+- id: impl:DCVC-RT
+  type: implementation
+  kind: research_model
+  name: DCVC-RT
+  full_name: Deep Contextual Video Compression - Real Time
+  developed_by: [org:Microsoft]
+  notes: MLVC 的直接基座；跨平台熵解码崩溃问题的「当事人」
+
+- id: impl:DCVC-FM
+  type: implementation
+  kind: research_model
+  name: DCVC-FM
+  full_name: Deep Contextual Video Compression - Feature Modulation
+  developed_by: [org:Microsoft]
+
+- id: impl:TIC
+  type: implementation
+  kind: research_model
+  name: TIC
+  full_name: Transformer-based Image Compression
+  notes: MoECodec 的主干之一；transformer LIC 的代表
+
+- id: impl:TinyLIC
+  type: implementation
+  kind: research_model
+  name: TinyLIC
+
+- id: impl:TCM
+  type: implementation
+  kind: research_model
+  name: TCM
+  full_name: Transformer-based image Compression with Mix_modules
+
+## —— INR 视频编码模型 ——
+
+- id: impl:HiNeRV
+  type: implementation
+  kind: research_model
+  name: HiNeRV
+  developed_by: [org:Bristol]
+  notes: INR 视频编码代表性骨干
+
+- id: impl:HiNeRV++
+  type: implementation
+  kind: research_model
+  name: HiNeRV++
+  developed_by: [org:Bristol]
+  proposed_in: paper:arxiv:2606.28163
+  notes: NVRC++ 的轻量骨干（表达负担卸载给高分辨率 feature grid）
+
+- id: impl:NVRC
+  type: implementation
+  kind: research_model
+  name: NVRC
+  full_name: Neural Video Representation Compression
+  developed_by: [org:Bristol]
+
+- id: impl:NVRC++
+  type: implementation
+  kind: research_model
+  name: NVRC++
+  developed_by: [org:Bristol, org:BT]
+  proposed_in: paper:arxiv:2606.28163
+
+- id: impl:C3
+  type: implementation
+  kind: research_model
+  name: C3
+  notes: 轻量 INR 编码器（低复杂度代表）
+
+## —— 生成式压缩相关模型 ——
+
+- id: impl:CausalForcing
+  type: implementation
+  kind: research_model
+  name: Causal Forcing
+  aliases: [CF, CF++]
+  notes: 预训练自回归视频扩散模型，ZeroGVC 的先验
+
+- id: impl:WanVAE
+  type: implementation
+  kind: research_model
+  name: WanVAE
+  notes: Wan 系视频 VAE，ZeroGVC 的 latent 空间编解码器
+
+- id: impl:OneDC
+  type: implementation
+  kind: research_model
+  name: OneDC
+  notes: 生成式图像编码器，ZeroGVC 的 GOP 首帧编码器
+
+- id: impl:GLC-Video
+  type: implementation
+  kind: research_model
+  name: GLC-Video
+  notes: 生成式视频压缩对比基线之一
+
+## —— 本库论文提出的方法 ——
+
+- id: impl:MoECodec
+  type: implementation
+  kind: research_model
+  name: MoECodec
+  proposed_in: paper:arxiv:2606.21033
+
+- id: impl:ZeroGVC
+  type: implementation
+  kind: research_model
+  name: ZeroGVC
+  proposed_in: paper:arxiv:2606.22371
+
+- id: impl:MLVC
+  type: implementation
+  kind: research_model
+  name: MLVC
+  full_name: Multi-platform Learned Video Codec
+  developed_by: [org:Microsoft]
+  proposed_in: paper:arxiv:2606.28027
+  relations: [{type: based_on, ref: impl:DCVC-RT}]

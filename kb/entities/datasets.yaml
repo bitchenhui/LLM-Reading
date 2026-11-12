@@ -1,0 +1,49 @@
+# 实体注册表 · 数据集 (dataset)
+# kind: video | image | image_set | general
+
+- id: dataset:JVET-CTC
+  type: dataset
+  kind: video
+  name: JVET CTC
+  full_name: JVET Common Test Conditions sequences
+  aliases: [CTC, JVET 测试序列, CTC B, CTC A1, CTC A2, CTC C, CTC D, CTC E]
+  notes: VVC 标准评测序列集，按类别 A1/A2(4K)/B(1080p 通用)/C(832x480)/D(416x240)/E(会议) 切分；引用时在 claim 的 scope 里写明类别
+
+- id: dataset:UVG
+  type: dataset
+  kind: video
+  name: UVG
+  full_name: Ultra Video Group dataset
+  notes: 1080p 高帧率视频集，学习式/INR 视频编码最常用基准之一
+
+- id: dataset:MCL-JCV
+  type: dataset
+  kind: video
+  name: MCL-JCV
+  notes: 主观质量标注丰富的视频集，常与 UVG 配对使用
+
+- id: dataset:VCD
+  type: dataset
+  kind: video
+  name: VCD
+  full_name: Video Conferencing Dataset
+  notes: MLVC 用的视频会议场景基准，MOS 主观评分
+
+- id: dataset:Kodak
+  type: dataset
+  kind: image
+  name: Kodak
+  notes: 图像压缩经典小集，重建质量（BD-Rate vs VTM）常用
+
+- id: dataset:ImageNet
+  type: dataset
+  kind: image_set
+  name: ImageNet
+  notes: 通用视觉分类；ICM（面向机器的编码）下游任务用
+
+- id: dataset:COCO
+  type: dataset
+  kind: image_set
+  name: COCO
+  full_name: Common Objects in Context
+  notes: 检测/实例分割下游任务用

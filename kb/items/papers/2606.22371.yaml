@@ -1,0 +1,76 @@
+# 来源：docs/04_ZeroGVC.md
+id: paper:arxiv:2606.22371
+type: paper
+title: "ZeroGVC: Zero-Shot Generative Video Compression with Autoregressive Diffusion Priors"
+title_zh: "ZeroGVC：基于自回归扩散先验的零样本生成式视频压缩"
+research_lines: [generative_compression]
+source:
+  channel: arxiv
+  external_id: 2606.22371v2
+  url: https://arxiv.org/abs/2606.22371
+  local_pdf: paper/2606.22371v2.pdf
+  venue: arXiv preprint
+time:
+  published: "2026-06-23"
+  collected: "2026-07-01"
+entities:
+  - {ref: impl:ZeroGVC, role: subject}
+  - {ref: impl:CausalForcing, role: builds_on}
+  - {ref: impl:WanVAE, role: uses}
+  - {ref: impl:OneDC, role: uses}
+  - {ref: concept:DiffusionPrior, role: uses}
+  - {ref: concept:ConsistencySampling, role: uses}
+  - {ref: concept:TrainingFree, role: uses}
+  - {ref: concept:GOP, role: uses}
+  - {ref: dataset:JVET-CTC, role: evaluated_on}
+  - {ref: dataset:UVG, role: evaluated_on}
+  - {ref: dataset:MCL-JCV, role: evaluated_on}
+  - {ref: metric:LPIPS, role: measured_by}
+  - {ref: metric:DISTS, role: measured_by}
+  - {ref: metric:FID, role: measured_by}
+  - {ref: metric:DOVER, role: measured_by}
+  - {ref: impl:VTM, role: compared_against}
+  - {ref: impl:DCVC-FM, role: compared_against}
+  - {ref: impl:DCVC-RT, role: compared_against}
+  - {ref: impl:GLC-Video, role: compared_against}
+  - {ref: org:USTC, role: affiliation}
+  - {ref: org:Huawei, role: affiliation}
+  - {ref: org:NVIDIA, role: platform}
+claims:
+  - statement: 首个低延迟、training-free、面向自回归视频扩散先验的生成式视频压缩框架：GOP 首帧用 OneDC，P 帧只传「码本原子索引 + 量化系数」引导预训练模型的少步一致性采样，完全免训练。
+    evidence: "docs/04_ZeroGVC.md §3, §7"
+    confidence: reported
+  - statement: 关键洞察：DDCM 式码本噪声压缩在 few-step 一致性采样中依然有效——每步选并传重注入噪声去最小化目标残差，为把新高效扩散范式引入压缩打开口子。
+    evidence: "docs/04_ZeroGVC.md §4"
+    confidence: reported
+  - statement: JVET Class C 上 LPIPS/DISTS/FID/DOVER 全面领先 VVC/HEVC/DCVC-FM/DCVC-RT/GLC-Video；Class B/UVG/MCL-JCV 上 LPIPS 与 DOVER 一致最好，高分辨率高码率下优势收窄（推测 tiling 弱化生成先验）。
+    evidence: "docs/04_ZeroGVC.md §6.2"
+  - statement: A800 上 training-free 达到 5-10 FPS：CF++ N=2 时编码 96 ms/帧、解码 124 ms/帧。
+    metrics:
+      - {ref: metric:FPS, value: "5-10", scope: "A800, CF++/CF, N∈{2,4,6}"}
+    evidence: "docs/04_ZeroGVC.md §6.3"
+  - statement: 零码率开销的双向参考：把未来 I 帧 latent 作为额外 KV context，配合 RoPE 位置补偿缓解自回归误差累积；4 个未来参考帧是甜点。
+    evidence: "docs/04_ZeroGVC.md §5, §6.4"
+  - statement: 码本大小 K=16384 恰好，更大边际收益递减且编码端内积搜索变贵；I 帧质量 λ=1.0 最好（低质量首帧会带偏整条自回归链）。
+    evidence: "docs/04_ZeroGVC.md §6.4"
+relations:
+  - {type: contrasts_with, ref: "paper:arxiv:2606.28027", note: 两极策略：ZeroGVC 拥抱预训练生成模型表达力（不管硬件同一性），MLVC 追求确定性可部署}
+  - {type: same_topic, ref: "paper:arxiv:2606.21033", note: 都在挖内容自适应：一个挑采样轨迹，一个挑算力路径}
+  - {type: same_topic, ref: "paper:arxiv:2606.28163", note: 都在「少 bit 编结构 + 先验补细节」，但 ZeroGVC 免训练、NVRC++ 需逐序列 overfitting}
+summaries:
+  one_liner_zh: GOP 首帧用图像编码器、P 帧只传码本噪声原子索引+系数来引导预训练自回归视频扩散模型的少步一致性采样，完全免训练实现低延迟生成式视频压缩。
+  abstract_zh: >
+    把 Turbo-DDCM 的确定性码本采样扩展到 few-step consistency sampling：每步以共享种子复现高斯码本、
+    只编码选中原子索引与量化系数，decoder 侧重复同样采样轨迹。配 RoPE 补偿的零开销双向参考抑制误差累积。
+    感知指标（LPIPS/DOVER）对 VVC/HEVC/DCVC 系/GCL-Video 一致领先，A800 上 5-10 FPS。
+    意义：压缩可「免费搭车」快速迭代的预训练生成模型。
+  deep_dive: docs/04_ZeroGVC.md
+  tags: [generative-compression, diffusion-prior, zero-shot, low-latency]
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 生成式压缩免训练路线代表；「压缩搭车预训练模型」是范式级信号，跟踪价值高
+  reviewer: manual
+provenance:
+  created: "2026-07-01"
+  actor: manual-backfill

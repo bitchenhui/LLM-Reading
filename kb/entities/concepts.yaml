@@ -1,0 +1,93 @@
+# 实体注册表 · 概念 (concept)
+# 技术概念/方法范式。检索过滤与跨论文关联靠它们。
+
+- id: concept:QP
+  type: concept
+  name: QP
+  full_name: Quantization Parameter
+  aliases: [量化参数, quantization parameter]
+
+- id: concept:RDO
+  type: concept
+  name: RDO
+  full_name: Rate-Distortion Optimization
+  aliases: [率失真优化, Lagrangian RDO]
+
+- id: concept:MMVD
+  type: concept
+  name: MMVD
+  full_name: Merge with Motion Vector Difference
+  notes: VVC Merge 扩展；候选 = 方向(4) × 距离(8)，分数插值搜索开销大
+
+- id: concept:MoE
+  type: concept
+  name: MoE
+  full_name: Mixture-of-Experts
+  aliases: [混合专家, Expert-Choice Routing, token routing]
+
+- id: concept:INR
+  type: concept
+  name: INR
+  full_name: Implicit Neural Representation
+  aliases: [隐式神经表示, NeRF-style representation]
+
+- id: concept:FeatureGrid
+  type: concept
+  name: Feature Grid
+  aliases: [feature grid, 多分辨率网格, hash grid]
+
+- id: concept:Hyperprior
+  type: concept
+  name: Hyperprior
+  notes: 学习式编码的边信息分支，传送 latent 分布参数
+
+- id: concept:EntropyModel
+  type: concept
+  name: Entropy Model
+  aliases: [熵模型, entropy coding, arithmetic coding]
+  notes: 学习式编码跨平台一致性的核心风险点（逐位一致才可解码）
+
+- id: concept:DiffusionPrior
+  type: concept
+  name: Diffusion Prior
+  aliases: [扩散先验, generative prior, DDCM]
+
+- id: concept:ConsistencySampling
+  type: concept
+  name: Consistency Sampling
+  aliases: [few-step sampling, 一致性模型采样]
+
+- id: concept:TrainingFree
+  type: concept
+  name: Training-free
+  aliases: [zero-shot compression, 免训练]
+
+- id: concept:NPU
+  type: concept
+  name: NPU
+  full_name: Neural Processing Unit
+  aliases: [ANE, Hexagon NPU, neural engine]
+
+- id: concept:LTR
+  type: concept
+  name: LTR
+  full_name: Long-Term Reference
+  notes: 传统编码器概念，被 MLVC 引入学习式编码做漂移恢复
+
+- id: concept:GOP
+  type: concept
+  name: GOP
+  full_name: Group of Pictures
+
+- id: concept:ICM
+  type: concept
+  name: ICM
+  full_name: Image Coding for Machines
+  aliases: [面向机器视觉的编码, coding for machines]
+
+- id: concept:LLM
+  type: concept
+  name: LLM
+  full_name: Large Language Model
+  aliases: [大语言模型, DeepSeek, code evolution]
+  notes: AI-for-Codec 方向：LLM 生成/进化编码器内部启发式（如 EoH/FunSearch 范式）

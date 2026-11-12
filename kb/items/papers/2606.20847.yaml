@@ -1,0 +1,66 @@
+# 来源：docs/01_LLM-VVenC-QP.md（人工精读笔记的结构化回填）
+id: paper:arxiv:2606.20847
+type: paper
+title: "LLM-Driven Heuristic Frame-Level QP Adaptation for VVenC"
+title_zh: "LLM 驱动的 VVenC 帧级 QP 启发式自适应"
+research_lines: [traditional_codec_opt]
+source:
+  channel: arxiv
+  external_id: 2606.20847v1
+  url: https://arxiv.org/abs/2606.20847
+  local_pdf: paper/2606.20847v1.pdf
+  venue: arXiv preprint
+time:
+  published: "2026-06-18"
+  collected: "2026-07-01"
+entities:
+  - {ref: impl:VVenC, role: subject}
+  - {ref: concept:QP, role: uses}
+  - {ref: concept:RDO, role: uses}
+  - {ref: concept:LLM, role: uses}
+  - {ref: dataset:JVET-CTC, role: evaluated_on}
+  - {ref: dataset:UVG, role: evaluated_on}
+  - {ref: dataset:MCL-JCV, role: evaluated_on}
+  - {ref: metric:BD-Rate, role: measured_by}
+  - {ref: org:CityU-HK, role: affiliation}
+  - {ref: org:HIT, role: affiliation}
+  - {ref: org:Lingnan-U, role: affiliation}
+claims:
+  - statement: LLM 闭环进化（DeepSeek，种群 K=4，10 轮，Exploration/Modification 双提示）自动发现的帧级 QP 启发式等价于「熵约束 RDO」——score = weighted_PSNR / (1+H_QP) / log(1+total_bits)，隐式抑制 QP 抖动并自适应内容。
+    evidence: "docs/01_LLM-VVenC-QP.md §3"
+    confidence: reported
+  - statement: 相对 VVenC-1.7.0 faster 固定 QP，CTC B 类平均 BD-Rate -1.73%（YUV-PSNR）。
+    metrics:
+      - {ref: metric:BD-Rate, value: -1.73, unit: "%", scope: "CTC B 平均, vs 固定QP, YUV-PSNR, VVenC-1.7.0 faster/RA"}
+    evidence: "docs/01_LLM-VVenC-QP.md §4"
+  - statement: UVG 平均 -1.00%、MCL-JCV 平均 -1.06%；三库总平均约省 1.26% 码率。
+    metrics:
+      - {ref: metric:BD-Rate, value: -1.00, unit: "%", scope: "UVG 平均"}
+      - {ref: metric:BD-Rate, value: -1.06, unit: "%", scope: "MCL-JCV 平均"}
+  - statement: 经典 Lagrangian RDO 启发式同配置下反而退化（CTC B +2.68% / UVG +3.09% / MCL-JCV +2.52%），说明朴素 λ 估计在帧级 QP 上不成立，该问题需要跨帧统计结构。
+    metrics:
+      - {ref: metric:BD-Rate, value: 2.68, unit: "%", scope: "Lagrangian 基线退化, CTC B"}
+    evidence: "docs/01_LLM-VVenC-QP.md §4"
+  - statement: 工程上把「启发式定义」与「编码器内部 RDO」解耦——multi-pass 编码收集 5 个候选 QP（±1/±2）的完整历史统计，评分完全在 Python 层做，实现成本低、可迁移到其他编码器决策。
+    evidence: "docs/01_LLM-VVenC-QP.md §5"
+    confidence: inferred
+relations:
+  - {type: complements, ref: "paper:arxiv:2606.31084", note: 同为 VVenC 内部提效，本文走 LLM 发现评估函数，对方走信号分析剪枝候选，方向正交}
+  - {type: complements, ref: "paper:arxiv:2606.28027", note: "MLVC 视角互补：传统编码器仍是 deployable baseline，其 RDO 仍有明显改进空间"}
+summaries:
+  one_liner_zh: 用 DeepSeek 闭环进化 Python 启发式为 VVenC 逐帧选 QP，自动发现「熵约束 RDO」，比固定 QP 平均省约 1.26% 码率。
+  abstract_zh: >
+    把帧级 QP 决策外置为 Python solver（multi-pass 收集 5 个候选 QP 的历史统计），
+    用 LLM 以 Exploration/Modification 两种进化提示 + BD-Rate fitness 迭代启发式，
+    最终得到带 QP 序列熵惩罚项的 RDO 评分函数，在 CTC/UVG/MCL-JCV 上稳定优于固定 QP 与朴素 Lagrangian。
+    局限：QP-wise 训练、固定 5 邻域候选集。
+  deep_dive: docs/01_LLM-VVenC-QP.md
+  tags: [AI-for-codec, QP-adaptation, VVenC, evolutionary-search]
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 直接命中主题——LLM 优化标准编码器决策，「启发式外置 + 进化搜索」范式可迁移到其他编码器内部决策
+  reviewer: manual
+provenance:
+  created: "2026-07-01"
+  actor: manual-backfill

@@ -1,0 +1,55 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "entity.schema.json",
+  "title": "KB 实体 (Entity)",
+  "description": "实体注册表的条目。垂类引擎的可行性建立在『核心实体是有界闭集』上——音视频领域的标准/组织/实现/数据集/指标/概念拢共百级，人工可维护。实体间的静态关系（实现、继承、隶属）放这里，不放进 item。",
+  "type": "object",
+  "required": ["id", "type", "name"],
+  "additionalProperties": true,
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "格式 {prefix}:{CanonicalName}，prefix 与 type 一一对应",
+      "pattern": "^(codec|org|impl|dataset|metric|concept):[A-Za-z0-9][A-Za-z0-9+._-]*$"
+    },
+    "type": {
+      "enum": ["codec_standard", "org", "implementation", "dataset", "metric", "concept"],
+      "description": "codec→codec_standard, org→org, impl→implementation, dataset→dataset, metric→metric, concept→concept"
+    },
+    "name": { "type": "string", "description": "规范名（通常英文通用叫法）" },
+    "full_name": { "type": "string" },
+    "aliases": { "type": "array", "items": { "type": "string" }, "description": "别名/曾用名/中文名，检索与实体对齐时用于匹配" },
+    "kind": {
+      "type": "string",
+      "description": "类型内细分：org→standards_body|company|university|lab|research_institute；implementation→production_encoder|production_decoder|reference_software|research_model|framework|hw_accel；dataset→video|image|image_set|general；codec_standard 见 status"
+    },
+    "status": { "type": "string", "description": "codec_standard: ratified|in_development|historical" },
+    "first_release": { "type": "string", "description": "标准批准/项目首发年份（字符串，避免 YAML 当数字解析）" },
+    "developed_by": { "type": "array", "items": { "type": "string" }, "description": "开发方（org ref 列表）" },
+    "proposed_in": { "type": "string", "description": "research_model 类实体：提出它的信息项 ID" },
+    "relations": {
+      "type": "array",
+      "description": "实体间静态关系",
+      "items": {
+        "type": "object",
+        "required": ["type", "ref"],
+        "properties": {
+          "type": { "enum": ["successor_of", "implements", "developed_by", "predecessor_of", "based_on", "competes_with"] },
+          "ref": { "type": "string" },
+          "note": { "type": "string" }
+        }
+      }
+    },
+    "links": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["label", "url"],
+        "properties": { "label": { "type": "string" }, "url": { "type": "string", "format": "uri" } }
+      }
+    },
+    "lower_is_better": { "type": "boolean", "description": "仅 metric：数值越低越好（如 BD-Rate）；方向信息让自动化推理不必再猜" },
+    "unit": { "type": "string", "description": "仅 metric：常用单位" },
+    "notes": { "type": "string", "description": "口径说明、坑位备注（如指标的定义前提）" }
+  }
+}

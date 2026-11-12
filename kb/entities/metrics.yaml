@@ -1,0 +1,93 @@
+# 实体注册表 · 指标 (metric)
+# lower_is_better 给自动化推理提供方向；口径前提写 notes。
+
+- id: metric:BD-Rate
+  type: metric
+  name: BD-Rate
+  full_name: Bjontegaard Delta Rate
+  lower_is_better: true
+  unit: "%"
+  notes: 同质量下的码率变化。负值=省码率。必须带锚点与失真测度（如 vs 固定QP, YUV-PSNR / vs x265 veryslow, MS-SSIM），无锚点的 BD-Rate 不可比
+
+- id: metric:BD-PSNR
+  type: metric
+  name: BD-PSNR
+  lower_is_better: false
+  unit: dB
+  notes: 同码率下的质量差
+
+- id: metric:PSNR
+  type: metric
+  name: PSNR
+  lower_is_better: false
+  unit: dB
+
+- id: metric:MS-SSIM
+  type: metric
+  name: MS-SSIM
+  lower_is_better: false
+
+- id: metric:LPIPS
+  type: metric
+  name: LPIPS
+  full_name: Learned Perceptual Image Patch Similarity
+  lower_is_better: true
+  notes: 感知距离，生成式压缩的主指标之一
+
+- id: metric:DISTS
+  type: metric
+  name: DISTS
+  lower_is_better: true
+
+- id: metric:FID
+  type: metric
+  name: FID
+  full_name: Fréchet Inception Distance
+  lower_is_better: true
+  notes: 分布距离，生成式压缩分布级评价
+
+- id: metric:DOVER
+  type: metric
+  name: DOVER
+  lower_is_better: true
+  notes: 无参考视频质量评估（技术/美学双分支）
+
+- id: metric:VMAF
+  type: metric
+  name: VMAF
+  full_name: Video Multi-method Assessment Fusion
+  lower_is_better: false
+
+- id: metric:MOS
+  type: metric
+  name: MOS
+  full_name: Mean Opinion Score
+  lower_is_better: false
+  notes: 主观评分，视频会议场景的金标准
+
+- id: metric:kMAC-per-pixel
+  type: metric
+  name: kMAC/pixel
+  lower_is_better: true
+  unit: kMAC/px
+  notes: 解码复杂度度量；注意区分 MAC 与 FLOPs 口径
+
+- id: metric:FPS
+  type: metric
+  name: FPS
+  lower_is_better: false
+  unit: fps
+  notes: 必须带硬件与精度（如 A800 fp16 / Apple ANE fp16）
+
+- id: metric:EncodeTimeSaving
+  type: metric
+  name: ΔT_enc
+  lower_is_better: false
+  unit: "%"
+  notes: 编码时间节省比例（相对 baseline），快速算法论文用语
+
+- id: metric:Eta
+  type: metric
+  name: η
+  lower_is_better: true
+  notes: 效率-复杂度比 η = -ΔT_enc / BD-Rate（2606.31084 定义）；越低说明用更少时间换到更多增益

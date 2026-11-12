@@ -1,0 +1,70 @@
+# 实体注册表 · 编解码标准 (codec_standard)
+# 静态关系（谁继承谁）放这里，不放进 item。
+
+- id: codec:AVC
+  type: codec_standard
+  name: AVC
+  full_name: Advanced Video Coding
+  aliases: [H.264, H264, MPEG-4 Part 10]
+  status: ratified
+  first_release: "2003"
+  developed_by: [org:VCEG, org:MPEG]
+  relations: [{type: predecessor_of, ref: codec:HEVC}]
+  notes: 部署量最大的标准，视频会议（MLVC 对比锚点之一）仍大量使用
+
+- id: codec:HEVC
+  type: codec_standard
+  name: HEVC
+  full_name: High Efficiency Video Coding
+  aliases: [H.265, H265]
+  status: ratified
+  first_release: "2013"
+  developed_by: [org:JCT-VC]
+  relations: [{type: successor_of, ref: codec:AVC}, {type: predecessor_of, ref: codec:VVC}]
+  notes: 学习式编码器现阶段最常用的「可部署 baseline」参照系
+
+- id: codec:VVC
+  type: codec_standard
+  name: VVC
+  full_name: Versatile Video Coding
+  aliases: [H.266, H266]
+  status: ratified
+  first_release: "2020"
+  developed_by: [org:JVET]
+  relations: [{type: successor_of, ref: codec:HEVC}]
+  links: [{label: jvet-experts, url: https://jvet-experts.org/}]
+
+- id: codec:AV1
+  type: codec_standard
+  name: AV1
+  aliases: [AOMedia Video 1]
+  status: ratified
+  first_release: "2018"
+  developed_by: [org:AOMedia]
+  relations: [{type: competes_with, ref: codec:VVC}]
+
+- id: codec:AV2
+  type: codec_standard
+  name: AV2
+  status: in_development
+  developed_by: [org:AOMedia]
+  relations: [{type: successor_of, ref: codec:AV1}]
+  notes: AOMedia 下一代标准，尚在制定中；跟踪 AOM 仓库与提案可见走向
+
+- id: codec:LCEVC
+  type: codec_standard
+  name: LCEVC
+  full_name: Low Complexity Enhancement Video Coding (MPEG-5 Part 2)
+  aliases: [MPEG-5 LCEVC]
+  status: ratified
+  first_release: "2020"
+  developed_by: [org:MPEG]
+
+- id: codec:ECM
+  type: codec_standard
+  name: ECM
+  full_name: Enhanced Compression Model
+  aliases: [H.267 探索模型]
+  status: in_development
+  developed_by: [org:JVET]
+  notes: JVET 的超越 VVC 探索软件（非正式标准），常被学习式编码器用作压缩率上界参照
