@@ -1,9 +1,9 @@
-# 来源：docs/02_MMVD-Fast.md
 id: paper:arxiv:2606.31084
 type: paper
-title: "Accelerating Merge with Motion Vector Difference via Filter Difference Analysis for VVenC"
-title_zh: "基于滤波器差分分析的 VVenC MMVD 加速"
-research_lines: [traditional_codec_opt]
+title: Accelerating Merge with Motion Vector Difference via Filter Difference Analysis for VVenC
+title_zh: 基于滤波器差分分析的 VVenC MMVD 加速
+research_lines:
+- traditional_codec_opt
 source:
   channel: arxiv
   external_id: 2606.31084v1
@@ -11,55 +11,89 @@ source:
   local_pdf: paper/2606.31084v1.pdf
   venue: arXiv preprint
 time:
-  published: "2026-06-30"
-  collected: "2026-07-01"
+  published: '2026-06-30'
+  collected: '2026-07-01'
 entities:
-  - {ref: impl:VVenC, role: subject}
-  - {ref: concept:MMVD, role: uses}
-  - {ref: concept:RDO, role: uses}
-  - {ref: dataset:JVET-CTC, role: evaluated_on}
-  - {ref: metric:BD-Rate, role: measured_by}
-  - {ref: metric:EncodeTimeSaving, role: measured_by}
-  - {ref: metric:Eta, role: measured_by}
-  - {ref: org:USTC, role: affiliation}
-  - {ref: org:Hupan-Lab, role: affiliation}
+- ref: impl:VVenC
+  role: subject
+- ref: concept:MMVD
+  role: uses
+- ref: concept:RDO
+  role: uses
+- ref: dataset:JVET-CTC
+  role: evaluated_on
+- ref: metric:BD-Rate
+  role: measured_by
+- ref: metric:EncodeTimeSaving
+  role: measured_by
+- ref: metric:Eta
+  role: measured_by
+- ref: org:USTC
+  role: affiliation
+- ref: org:Hupan-Lab
+  role: affiliation
 claims:
-  - statement: 把 VVC 8-tap 分数插值近似为 2-tap 后，MMVD 候选是否值得计算可归结为一次残差-梯度内积的符号（-α·⟨e,g⟩≥0 则跳过），判决成本从「完整运动补偿」降到「一次内积」。
-    evidence: "docs/02_MMVD-Fast.md §2-3"
-    confidence: reported
-  - statement: fast preset 下 +Ours 相对 full MMVD baseline：BD-Rate -0.35% vs -0.64%，编码时间节省 2.23% vs 21.10%——几乎不损失压缩率地拿走大部分加速收益。
-    metrics:
-      - {ref: metric:BD-Rate, value: -0.35, unit: "%", scope: "+Ours, fast, CTC 全类, PSNR, vs anchor"}
-      - {ref: metric:EncodeTimeSaving, value: 2.23, unit: "%", scope: "+Ours, fast"}
-    evidence: "docs/02_MMVD-Fast.md §6"
-  - statement: faster preset 下 +Ours 保持 BD-Rate -0.72%、时间节省 4.64%（baseline 36.39%）。
-    metrics:
-      - {ref: metric:BD-Rate, value: -0.72, unit: "%", scope: "+Ours, faster"}
-      - {ref: metric:EncodeTimeSaving, value: 4.64, unit: "%", scope: "+Ours, faster"}
-  - statement: 效率-复杂度比 η：fast preset 从 +Fast123 的 11.79 降到 7.10（baseline 35.17），权衡显著改善。
-    metrics:
-      - {ref: metric:Eta, value: 7.10, scope: "+Ours, fast"}
-      - {ref: metric:Eta, value: 11.79, scope: "+Fast123, fast"}
-  - statement: 平均每 CTU 的 MMVD 尝试次数比例从 +Fast123 的 21.07% 降到 11.05%，候选数再减半（r≈0.52）。
-    evidence: "docs/02_MMVD-Fast.md §6"
-  - statement: 对称偏移推断 + 十字采样点积 + SIMD 把额外开销从 4.21% 压到 2.23%；判据目前仅支持标准四正交方向，对角方向留作未来工作。
-    evidence: "docs/02_MMVD-Fast.md §4, §7"
+- statement: 把 VVC 8-tap 分数插值近似为 2-tap 后，MMVD 候选是否值得计算可归结为一次残差-梯度内积的符号（-α·⟨e,g⟩≥0 则跳过），判决成本从「完整运动补偿」降到「一次内积」。
+  evidence: docs/02_MMVD-Fast.md §2-3
+  confidence: reported
+- statement: fast preset 下 +Ours 相对 full MMVD baseline：BD-Rate -0.35% vs -0.64%，编码时间节省 2.23% vs 21.10%——几乎不损失压缩率地拿走大部分加速收益。
+  metrics:
+  - ref: metric:BD-Rate
+    value: -0.35
+    unit: '%'
+    scope: +Ours, fast, CTC 全类, PSNR, vs anchor
+  - ref: metric:EncodeTimeSaving
+    value: 2.23
+    unit: '%'
+    scope: +Ours, fast
+  evidence: docs/02_MMVD-Fast.md §6
+- statement: faster preset 下 +Ours 保持 BD-Rate -0.72%、时间节省 4.64%（baseline 36.39%）。
+  metrics:
+  - ref: metric:BD-Rate
+    value: -0.72
+    unit: '%'
+    scope: +Ours, faster
+  - ref: metric:EncodeTimeSaving
+    value: 4.64
+    unit: '%'
+    scope: +Ours, faster
+- statement: 效率-复杂度比 η：fast preset 从 +Fast123 的 11.79 降到 7.10（baseline 35.17），权衡显著改善。
+  metrics:
+  - ref: metric:Eta
+    value: 7.1
+    scope: +Ours, fast
+  - ref: metric:Eta
+    value: 11.79
+    scope: +Fast123, fast
+- statement: 平均每 CTU 的 MMVD 尝试次数比例从 +Fast123 的 21.07% 降到 11.05%，候选数再减半（r≈0.52）。
+  evidence: docs/02_MMVD-Fast.md §6
+- statement: 对称偏移推断 + 十字采样点积 + SIMD 把额外开销从 4.21% 压到 2.23%；判据目前仅支持标准四正交方向，对角方向留作未来工作。
+  evidence: docs/02_MMVD-Fast.md §4, §7
 relations:
-  - {type: complements, ref: "paper:arxiv:2606.20847", note: 同为 VVenC 内部提效，本文走信号处理近似，对方走 LLM 搜索，路径正交可叠加}
-  - {type: same_topic, ref: "paper:arxiv:2606.28027", note: 传统编码器优化持续为神经编码器提供最强 deployable baseline}
+- type: complements
+  ref: paper:arxiv:2606.20847
+  note: 同为 VVenC 内部提效，本文走信号处理近似，对方走 LLM 搜索，路径正交可叠加
+- type: same_topic
+  ref: paper:arxiv:2606.28027
+  note: 传统编码器优化持续为神经编码器提供最强 deployable baseline
 summaries:
   one_liner_zh: 用 2-tap 滤波器差分近似把 VVenC 的 MMVD 候选判决降为一次残差-梯度内积，MMVD 搜索比从 21% 降到 11%，η 从 11.79 降到 7.10。
-  abstract_zh: >
-    观察 8-tap DCT-IF 主能量集中在两个整像素，推出任意两分数相位的滤波器差 ∝ [-1,1]，
-    进而把 MMVD 候选增益判断化为参考块空间梯度与 regular-merge 残差的一次内积符号检验；
-    配合对称偏移推断与十字采样把开销压到 2.23%。理论清晰、可并入现有 Fast1/2/3 规则链。
+  abstract_zh: '观察 8-tap DCT-IF 主能量集中在两个整像素，推出任意两分数相位的滤波器差 ∝ [-1,1]， 进而把 MMVD 候选增益判断化为参考块空间梯度与 regular-merge
+    残差的一次内积符号检验； 配合对称偏移推断与十字采样把开销压到 2.23%。理论清晰、可并入现有 Fast1/2/3 规则链。
+
+    '
   deep_dive: docs/02_MMVD-Fast.md
-  tags: [fast-algorithm, MMVD, VVenC, signal-analysis]
+  tags:
+  - fast-algorithm
+  - MMVD
+  - VVenC
+  - signal-analysis
 assessment:
   relevance: high
   decision: deep_read
   reason: 传统编码器快速算法代表作；「信号级近似换判决复杂度」思路与学习式方法的剪枝可对照
   reviewer: manual
 provenance:
-  created: "2026-07-01"
+  created: '2026-07-01'
   actor: manual-backfill
+domain: video_image_coding

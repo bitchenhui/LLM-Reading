@@ -1,0 +1,82 @@
+id: paper:arxiv:2605.20672
+type: paper
+title: 'LANCE: Locally Adaptive Neural Context Estimation for Overfitted Image Compression'
+research_lines:
+- learned_codec
+source:
+  channel: arxiv
+  external_id: 2605.20672v2
+  url: https://arxiv.org/abs/2605.20672
+  pdf_url: https://arxiv.org/pdf/2605.20672v2
+  venue: arXiv preprint
+time:
+  published: '2026-05-20'
+  collected: '2026-11-12'
+entities:
+- ref: concept:EntropyModel
+  role: subject
+- ref: concept:Hyperprior
+  role: uses
+- ref: dataset:Kodak
+  role: evaluated_on
+- ref: metric:BD-Rate
+  role: measured_by
+claims:
+- statement: LANCE在解码复杂度区间高端相对Cool-Chic 4.0取得BD-rate降低：Kodak上1.40%，CLIC 2020上1.97%。
+  confidence: reported
+  metrics:
+  - name: BD-Rate
+    value: 1.40%
+    scope: 相对Cool-Chic 4.0的降低，Kodak，解码复杂度高端（606-1483 MAC/pixel）
+  - name: BD-Rate
+    value: 1.97%
+    scope: 相对Cool-Chic 4.0的降低，CLIC 2020，解码复杂度高端（606-1483 MAC/pixel）
+  evidence: abstract（初筛，未读全文）
+- statement: 在解码复杂度区间低端，LANCE相对Cool-Chic 4.0的BD-rate增益更大：Kodak上2.41%，CLIC 2020上2.99%。
+  confidence: reported
+  metrics:
+  - name: BD-Rate
+    value: 2.41%
+    scope: 相对Cool-Chic 4.0的降低，Kodak，解码复杂度低端
+  - name: BD-Rate
+    value: 2.99%
+    scope: 相对Cool-Chic 4.0的降低，CLIC 2020，解码复杂度低端
+  evidence: abstract（初筛，未读全文）
+- statement: LANCE的解码复杂度范围为606-1483 MAC/pixel。
+  confidence: reported
+  metrics:
+  - name: 解码复杂度
+    value: 606-1483 MAC/pixel
+    scope: LANCE评估所覆盖的解码器计算量区间
+  evidence: abstract（初筛，未读全文）
+- statement: 学习到的空间超先验能将图像区域自动划分为统计特性相似的内容感知区块，作为OIC的自动自适应层。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 为Cool-Chic类过拟合图像压缩引入前向传输空间超先验，实现熵模型区域自适应并降低BD-rate。
+  abstract_zh: LANCE是针对Cool-Chic等过拟合图像压缩（OIC）框架的新扩展，解决其轻量自回归网络全局参数难以应对非平稳图像统计的问题。方法引入前向传输的空间超先验，使熵模型可分区域自适应，并采用静态MED与轻量学习上下文模型结合的预测编码方案以控制信令开销。在606-1483
+    MAC/pixel解码复杂度区间的高端，LANCE相对Cool-Chic 4.0在Kodak和CLIC 2020上分别取得1.40%和1.97%的BD-rate降低；复杂度低端的增益扩大至2.41%和2.99%。定性分析表明学习到的空间超先验能自动将图像分割为统计特性相似的内容感知区域。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 提出面向Cool-Chic类过拟合图像压缩的熵模型空间超先验扩展，属神经图像压缩核心方法，且与库内Cool-Chic改进工作直接同线。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: LANCE：面向过拟合图像压缩的局部自适应神经上下文估计
+relations:
+- type: same_topic
+  ref: paper:arxiv:2607.13723
+  note: 同属Cool-Chic过拟合图像压缩改进线，均面向快编码轻解码的神经图像压缩
+- type: same_topic
+  ref: paper:arxiv:2603.06766
+  note: 均为学习式图像压缩的熵建模改进工作（空间超先验 vs 分层字典熵模型）
+- type: same_topic
+  ref: paper:arxiv:2603.10188
+  note: 均涉及自回归上下文与超先验结构的学习式图像压缩
+- type: same_topic
+  ref: paper:arxiv:2609.04274
+  note: 同属图像表示压缩（过拟合/神经表示）研究方向
+domain: video_image_coding

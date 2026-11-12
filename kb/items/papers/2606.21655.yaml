@@ -1,0 +1,59 @@
+id: paper:arxiv:2606.21655
+type: paper
+title: 'PaaF: Raising the perceived quality of INR-Based Image Compression'
+research_lines:
+- inr_representation
+- learned_codec
+source:
+  channel: arxiv
+  external_id: 2606.21655v1
+  url: https://arxiv.org/abs/2606.21655
+  pdf_url: https://arxiv.org/pdf/2606.21655v1
+  venue: arXiv preprint
+time:
+  published: '2026-06-19'
+  collected: '2026-11-12'
+entities:
+- ref: concept:INR
+  role: subject
+- ref: concept:EntropyModel
+  role: uses
+- ref: metric:PSNR
+  role: measured_by
+claims:
+- statement: 现有INR图像压缩方法存在编码时间长、在PSNR等经典质量指标上与主流编解码器有明显差距的问题。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: PaaF通过改进架构设计、自适应量化与高效熵编码三项组件提升率失真性能，同时保持INR解码的简洁性和可并行性。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 实验结果显示PaaF在定量指标（含PSNR）与感知质量上均一致优于现有INR图像压缩方法。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出INR图像编解码器PaaF，以改进架构、自适应量化与熵编码缩窄与传统编解码器的差距。
+  abstract_zh: 针对INR图像压缩长期存在的编码耗时过长、PSNR等经典指标落后的问题，论文提出纯INR编解码器PaaF（Picture as a Function）。该方法引入改进的网络架构设计、自适应量化机制与高效熵编码方案，在提升率失真性能的同时保留INR解码的简洁性与可并行性。实验表明，PaaF在定量指标与感知质量上均一致优于现有INR压缩方法。该工作凸显了函数式表示压缩的潜力，有助于缩窄其与成熟压缩范式之间的性能差距。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 提出纯INR图像编解码器PaaF，属INR表示压缩的核心创新工作，直接契合收录基准。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: PaaF：提升基于INR的图像压缩的感知质量
+relations:
+- type: same_topic
+  ref: paper:arxiv:2605.20672
+  note: 同为过拟合式（INR）神经图像压缩方向，均关注INR编解码的率失真优化
+- type: same_topic
+  ref: paper:arxiv:2609.04274
+  note: 同为神经图像表示压缩，研究函数式/隐式表示的编码效率
+- type: same_topic
+  ref: paper:arxiv:2607.13723
+  note: 同为神经图像压缩编解码器设计，均兼顾编码效率与轻量解码
+- type: same_topic
+  ref: paper:arxiv:2604.08329
+  note: 均以INR作为压缩表示的核心组件，属同一技术路线
+domain: video_image_coding

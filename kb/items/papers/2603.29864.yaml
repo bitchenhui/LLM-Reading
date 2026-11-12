@@ -1,0 +1,79 @@
+id: paper:arxiv:2603.29864
+type: paper
+title: 'HLC: A High-Quality Lightweight Mezzanine Codec Featuring High-Throughput Palette'
+research_lines:
+- learned_codec
+- traditional_codec_opt
+source:
+  channel: arxiv
+  external_id: 2603.29864v1
+  url: https://arxiv.org/abs/2603.29864
+  pdf_url: https://arxiv.org/pdf/2603.29864v1
+  venue: arXiv preprint
+time:
+  published: '2026-03-31'
+  collected: '2026-11-12'
+entities:
+- ref: concept:RDO
+  role: subject
+- ref: concept:EntropyModel
+  role: uses
+- ref: metric:BD-PSNR
+  role: measured_by
+claims:
+- statement: HLC 的无数据依赖调色板设计消除了传统 palette 编码的吞吐瓶颈，使高吞吐 palette 模式可实际用于中间码编码
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 协同设计的 RDO 模块在调色板与传统预测模式间仲裁，保证工具对所有内容类型有效；率估计与熵编码间的数据复用降低系统硬件资源
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: HLC 在达到与 4K@120fps JPEG-XS 编码器相同吞吐量的同时，LUT 资源占用仅为其一半
+  confidence: reported
+  metrics:
+  - name: LUT资源
+    value: 50%
+    scope: 相对4K@120fps JPEG-XS编码器，相同吞吐条件下
+  - name: 吞吐量
+    value: 4K@120fps
+    scope: 与JPEG-XS编码器相同
+  evidence: abstract（初筛，未读全文）
+- statement: 相比 JPEG-XS 编码器，HLC 在游戏、自然和文字内容数据集上均取得显著 BD-PSNR 增益，文字内容收益最大
+  confidence: reported
+  metrics:
+  - name: BD-PSNR增益
+    value: 3.461dB
+    scope: 游戏内容数据集，对比4K@120fps JPEG-XS
+  - name: BD-PSNR增益
+    value: 3.299dB
+    scope: 自然内容数据集，对比4K@120fps JPEG-XS
+  - name: BD-PSNR增益
+    value: 5.312dB
+    scope: 文字内容数据集，对比4K@120fps JPEG-XS
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出无数据依赖高吞吐调色板的轻量级中间码编解码器HLC，同吞吐下LUT资源减半，BD-PSNR较JPEG-XS最高提升5.312dB。
+  abstract_zh: 现有中间码（mezzanine）图像编解码器缺乏专门的屏幕内容编码工具，在带宽受限尤其是密集文字场景下难以保证高质量，而标准编码器中的屏幕内容压缩技术计算复杂度过高，不适用于中间码编码。HLC
+    的核心创新是一种无数据依赖的调色板（palette）编码模式，消除了吞吐瓶颈，使高吞吐 palette 编码切实可行。系统还协同设计了率失真优化（RDO）模块，在调色板与传统预测模式之间仲裁，并通过率估计与熵编码之间的数据复用策略降低整体硬件资源开销。实验表明，与
+    4K@120fps JPEG-XS 编码器相比，HLC 在相同吞吐下仅用一半 LUT 资源，在游戏、自然和文字内容数据集上分别取得 3.461dB、3.299dB 和 5.312dB 的 BD-PSNR
+    提升。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 面向制作级中间码场景的高吞吐屏幕内容编解码器及硬件实现，属核心编码工具与系统部署范畴，且量化结果详实。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: HLC：具备高吞吐调色板编码的高质量轻量级中间码编解码器
+relations:
+- type: same_topic
+  ref: paper:arxiv:2609.29727
+  note: 同为面向资源受限硬件平台的轻量级图像编解码器设计
+- type: same_topic
+  ref: paper:arxiv:2605.27024
+  note: 同为屏幕内容（screen content）编码工具研究
+- type: same_topic
+  ref: paper:arxiv:2606.28027
+  note: 同属面向实际部署的系统级/多平台视频编解码器研究
+domain: video_image_coding

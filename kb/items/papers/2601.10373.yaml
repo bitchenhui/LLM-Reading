@@ -1,0 +1,74 @@
+id: paper:arxiv:2601.10373
+type: paper
+title: Towards Efficient Low-rate Image Compression with Frequency-aware Diffusion Prior Refinement
+research_lines:
+- generative_compression
+source:
+  channel: arxiv
+  external_id: 2601.10373v1
+  url: https://arxiv.org/abs/2601.10373
+  pdf_url: https://arxiv.org/pdf/2601.10373v1
+  venue: arXiv preprint
+time:
+  published: '2026-01-15'
+  collected: '2026-11-12'
+entities:
+- ref: concept:DiffusionPrior
+  role: subject
+- ref: metric:BD-Rate
+  role: measured_by
+- ref: metric:LPIPS
+  role: measured_by
+- ref: metric:PSNR
+  role: measured_by
+claims:
+- statement: DiffCR 在不更新骨干扩散模型的前提下，相对 SOTA 扩散式压缩基线在 LPIPS 口径实现 27.2% 的 BD-rate 码率节省。
+  confidence: reported
+  metrics:
+  - name: BD-Rate
+    value: 27.2%
+    scope: LPIPS 口径，相对 SOTA 扩散式图像压缩基线
+  evidence: abstract（初筛，未读全文）
+- statement: DiffCR 相对 SOTA 扩散式压缩基线在 PSNR 口径实现 65.1% 的 BD-rate 码率节省。
+  confidence: reported
+  metrics:
+  - name: BD-Rate
+    value: 65.1%
+    scope: PSNR 口径，相对 SOTA 扩散式图像压缩基线
+  evidence: abstract（初筛，未读全文）
+- statement: 轻量一致性估计器使 DiffCR 仅需两步即可完成解码，相对基线取得超过 10 倍的加速。
+  confidence: reported
+  metrics:
+  - name: 解码加速比
+    value: 10×
+    scope: 相对 SOTA 扩散式压缩基线，两步解码
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 通过频率感知先验精炼与轻量一致性估计实现两步解码的扩散式低码率图像压缩，显著省码率并提速超10倍。
+  abstract_zh: 论文提出 DiffCR，一种利用预训练潜在扩散模型生成先验的高效低码率图像压缩框架。其核心频率感知跳跃估计（FaSE）模块通过频率解耦注意力（FDA），在不同时间步上将 ε
+    预测先验与压缩隐变量对齐。轻量一致性估计器在保持扩散采样语义轨迹的同时实现两步快速解码，且全程无需更新骨干扩散模型。实验表明，相对 SOTA 扩散式压缩基线，DiffCR 在 LPIPS 口径节省
+    27.2% BD-rate、PSNR 口径节省 65.1% BD-rate，解码加速超过 10 倍。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 提出基于扩散先验精炼的生成式低码率图像压缩框架，属核心收录范围，码率与解码效率结果显著，值得深读。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 面向高效低码率图像压缩的频率感知扩散先验精炼
+relations:
+- type: same_topic
+  ref: paper:arxiv:2604.08329
+  note: 同为基于扩散先验的低码率压缩工作（DiV-INR 面向视频，本文面向图像）
+- type: same_topic
+  ref: paper:arxiv:2606.22371
+  note: ZeroGVC 同样利用扩散生成先验进行压缩，可对照先验利用方式
+- type: same_topic
+  ref: paper:arxiv:2609.34725
+  note: Gen2-VC 同属解锁生成先验用于压缩的研究线
+- type: same_topic
+  ref: paper:arxiv:2610.33616
+  note: 同为面向学习式图像压缩的频率域引导方法，与本文频率解耦注意力思路相关
+domain: video_image_coding

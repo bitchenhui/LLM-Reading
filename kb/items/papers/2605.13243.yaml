@@ -1,0 +1,59 @@
+id: paper:arxiv:2605.13243
+type: paper
+title: Spatial Competition for Low-Complexity Learned Image Compression
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2605.13243v1
+  url: https://arxiv.org/abs/2605.13243
+  pdf_url: https://arxiv.org/pdf/2605.13243v1
+  venue: arXiv preprint
+time:
+  published: '2026-05-13'
+  collected: '2026-11-12'
+entities:
+- ref: codec:HEVC
+  role: subject
+claims:
+- statement: 基于空间竞争的多编解码器选择框架在 CLIC 2020 上相对单一编解码器最多可节省 14.5% 码率。
+  confidence: reported
+  metrics:
+  - name: 码率节省
+    value: -14.5%
+    scope: CLIC 2020 数据集，相对单一编解码器的最大降幅
+  evidence: abstract（初筛，未读全文）
+- statement: 该方法在解码复杂度仅 1433 MACs/像素的条件下达到 HEVC 水平的压缩性能。
+  confidence: reported
+  metrics:
+  - name: 解码复杂度
+    value: 1433 MACs/pixel
+    scope: 达到 HEVC 同等性能时的每像素乘累加运算数
+  evidence: abstract（初筛，未读全文）
+- statement: 以模式图作为边信息传输区域级编解码器选择，使解码端复杂度保持与单一编解码器相当，同时实现逐图自适应与快速编码。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 通过多个专用神经编解码器的区域级空间竞争与模式图选择，在保持单编解码器解码复杂度的同时实现自适应压缩。
+  abstract_zh: 自编码器图像编解码器压缩性能领先但解码计算复杂度高。本文提出基于多个专用神经编解码器空间竞争的低复杂度学习式图像压缩框架：编码端按率失真代价为每个图像区域选择最匹配的编解码器，并将区域级选择以模式图作为边信息传输；解码端仅依据模式图执行相应重建，复杂度与单一编解码器相当。该设计实现逐图自适应、低解码复杂度与快速编码。在
+    CLIC 2020 数据集上，相对单一编解码器最多节省 14.5% 码率，并以每像素 1433 次 MAC 的解码复杂度达到 HEVC 水平的性能。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 核心学习式图像压缩工作，提出低解码复杂度的多编解码器空间竞争框架，直接符合收录基准。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 基于空间竞争的低复杂度学习式图像压缩
+relations:
+- type: same_topic
+  ref: paper:arxiv:2607.13723
+  note: 同为兼顾快速编码与轻量解码的低复杂度学习式图像压缩方向
+- type: same_topic
+  ref: paper:arxiv:2606.21033
+  note: 均采用多专家/多专用编解码器按内容区域选择的混合架构思路
+- type: same_topic
+  ref: paper:arxiv:2610.22421
+  note: 同属端到端学习图像编码及其实用化部署研究线
+domain: video_image_coding

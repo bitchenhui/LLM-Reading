@@ -1,0 +1,55 @@
+id: paper:arxiv:2606.13366
+type: paper
+title: Dual-Constrained Diffusion Image Compression for Operational Rate-Distortion-Perception Optimization
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2606.13366v1
+  url: https://arxiv.org/abs/2606.13366
+  pdf_url: https://arxiv.org/pdf/2606.13366v1
+  venue: arXiv preprint
+time:
+  published: '2026-06-11'
+  collected: '2026-11-12'
+entities:
+- ref: dataset:ImageNet
+  role: subject
+- ref: metric:BD-PSNR
+  role: measured_by
+- ref: metric:FID
+  role: measured_by
+claims:
+- statement: DCIC以幂等约束（对恢复图像再编码可还原基础编码重建）作为分布感知要求的可处理代理，结合失真约束引导扩散反向去噪，经一致性噪声注入实现解码端共同随机性且无额外码率开销。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 双衰减因子(K_D, K_P)允许在固定码率下从单一比特流连续调节保真-真实感权衡，导航失真-感知平面的Pareto前沿；DCIC_RD(K_P=0)与DCIC_RP(K_D=0)为边界曲线，DCIC_RDP(K_D=K_P=1)为内部最优工作点。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在CelebA-HQ、CLIC2020、ImageNet-1K三个数据集及CNN、Transformer、混合架构上，DCIC_RDP的BD-PSNR优于所有感知编码器，DCIC_RP在BD-FID上与专用感知导向方法相当。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 双约束扩散解码器实现单码流下失真-感知Pareto前沿连续调节与完整RDP面导航。
+  abstract_zh: 论文提出DCIC，将学习式编码器与扩散解码器结合，通过联合失真约束与幂等约束引导反向去噪过程：失真约束限定重建相对基础编码输出的保真度，幂等约束（要求对恢复图像再编码可还原基础编码重建）作为分布感知要求的可处理代理。两者配合一致性噪声注入实现解码端共同随机性，且不引入额外码率开销。双衰减因子(K_D,
+    K_P)可在固定码率下连续调节保真-真实感权衡，其中DCIC_RD与DCIC_RP构成边界曲线，DCIC_RDP实现内部最优工作点。在CelebA-HQ、CLIC2020、ImageNet-1K上并覆盖CNN、Transformer与混合架构的实验表明，DCIC_RDP的BD-PSNR优于所有感知编码器，DCIC_RP在BD-FID上与专用感知导向方法相当。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 核心的扩散式学习图像压缩工作，显式实现率-失真-感知(RDP)优化与单码流Pareto前沿导航，直接命中生成式压缩方向。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 面向可操作率-失真-感知优化的双约束扩散图像压缩
+relations:
+- type: same_topic
+  ref: paper:arxiv:2601.10373
+  note: 同为基于扩散先验的低码率学习图像压缩
+- type: same_topic
+  ref: paper:arxiv:2606.21033
+  note: 同为面向感知权衡（保真-真实感/人机感知）的神经图像压缩
+- type: same_topic
+  ref: paper:arxiv:2604.08329
+  note: 同为扩散模型驱动的生成式极低码率压缩（本文面向图像，该文面向视频）
+domain: video_image_coding

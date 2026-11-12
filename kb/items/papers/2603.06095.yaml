@@ -1,0 +1,57 @@
+id: paper:arxiv:2603.06095
+type: paper
+title: Enhancing Neural Video Compression of Static Scenes with Positive-Incentive Noise
+research_lines:
+- learned_codec
+source:
+  channel: arxiv
+  external_id: 2603.06095v2
+  url: https://arxiv.org/abs/2603.06095
+  pdf_url: https://arxiv.org/pdf/2603.06095v2
+  venue: arXiv preprint
+time:
+  published: '2026-03-06'
+  collected: '2026-11-12'
+entities:
+- ref: impl:DCVC-FM
+  role: subject
+claims:
+- statement: PIC在静态场景上以0.009%的极低压缩率实现视觉无损重构。
+  confidence: reported
+  metrics:
+  - name: 压缩率
+    value: 0.009%
+    scope: 静态场景视觉无损重构
+  evidence: abstract（初筛，未读全文）
+- statement: 与PIC相比，DCVC-FM基线需要高20.5%的Bjøntegaard delta码率才能达到相当质量。
+  confidence: reported
+  metrics:
+  - name: BD-rate
+    value: 20.5%
+    scope: DCVC-FM相对PIC的码率增加
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出PIC框架，将静态场景短期时变重释为正向激励噪声以微调NVC，在0.009%压缩率下实现视觉无损重构。
+  abstract_zh: 针对监控、视频通话等静态场景视频，传统编码器时间冗余利用不足、神经视频压缩（NVC）又存在训练-测试分布鸿沟，而生成式压缩会引入不可接受的幻觉细节。论文提出正向激励相机（PIC）框架，将短期时变内容重新解释为正向激励噪声用于NVC模型微调，把瞬态变化与持久背景解耦，使结构化先验内化到压缩模型中。推理时仅不变分量需少量信令，在保持像素级保真的同时大幅降低传输数据量。实验表明PIC在0.009%的极低压缩率下对静态场景实现视觉无损重构，而DCVC-FM基线需要高20.5%的Bjøntegaard
+    delta码率。该方法以算力换带宽，适用于恶劣网络下的鲁棒传输和监控 footage 的长期经济存储。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 核心神经视频压缩方法论文，面向静态场景超低码率像素级保真编码，并以DCVC-FM为基线给出量化对比，完全符合收录基准。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 利用正向激励噪声增强静态场景神经视频压缩
+relations:
+- type: same_topic
+  ref: paper:arxiv:2606.28163
+  note: 同为神经视频表示压缩，面向低码率高质量视频编码
+- type: same_topic
+  ref: paper:arxiv:2607.28144
+  note: 同为超低码率视频编码，PIC强调像素级保真以规避生成式幻觉，与ReGenVC的生成式路线形成互补对照
+- type: same_topic
+  ref: paper:arxiv:2609.16279
+  note: 同属面向低码率可靠传输的神经视频编解码系统
+domain: video_image_coding

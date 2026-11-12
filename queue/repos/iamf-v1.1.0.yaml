@@ -1,0 +1,125 @@
+id: repo_release:github:iamf-v1.1.0
+kind: release
+status: reviewed
+score: 3
+matched:
+- ref: codec:IAMF
+  count: 1
+  weight: 3
+meta:
+  repo: AOMediaCodec/iamf
+  tag: v1.1.0
+  name: v1.1.0
+  prerelease: false
+  published: '2024-11-08'
+  url: https://github.com/AOMediaCodec/iamf/releases/tag/v1.1.0
+  notes: '## What''s Changed
+
+    * convert to working draft as of Nov. 6 by @sunghee-hwang in https://github.com/AOMediaCodec/iamf/pull/775
+
+    * Reference v1.0.0.html and create a copy of v1 images by @felicialim in https://github.com/AOMediaCodec/iamf/pull/777
+
+    * Fix #769, fix typos in base profile by @sunghee-hwang in https://github.com/AOMediaCodec/iamf/pull/780
+
+    * Fix #761, removed unclear sentence in section 9.2 by @sunghee-hwang in https://github.com/AOMediaCodec/iamf/pull/781
+
+    * Fix #762, deleted duplicated sentence by @sunghee-hwang in https://github.com/AOMediaCodec/iamf/pull/782
+
+    * Fix #763, clarification in section 9.1.4 by @sunghee-hwang in https://github.com/AOMediaCodec/iamf/pull/783
+
+    * Fix #792: Define a box for `configOBUs`. by @jwcullen in https://github.com/AOMediaCodec/iamf/pull/794
+
+    * Fix #793, updated due to reserved OBUs by @sunghee-hwang in https://github.com/AOMediaCodec/iamf/pull/795
+
+    * Update references for ACN and SN3D by @felicialim in https://github.com/AOMediaCodec/iamf/pull/790
+
+    * Fix #766, Duplicate values of audio_element_ids in one MixPresentatio… by @sunghee-hwang in https://github.com/AOMediaCodec/iamf/pull/786
+
+    * Fix #797, More update on spec header by @sunghee-hwang in https://github.com/AOMediaCodec/iamf/pull/798
+
+    * Fix typo in `IAConfigurationBox`. by @jwcullen in https://github.com/AOMediaCodec/iamf/pull/801
+
+    * Fix #796: Changes since V1.0.0 Release by @sunghee-hwang in https://github.com/AOMediaCodec/iamf/pull/799
+
+    * Update the date and the link of the reference implementation by @sunghee-hwang in https://github.com/AOMediaCodec/iamf/pull/800
+
+    * spec header update for Working Group Approval by @sunghee-hwang in https://github.com/AOMediaCodec/iamf/pull/802
+
+    * Update spec header and add html file and images(folder) for the release of v1.0.0-errata by @sunghee-hwang
+    in https://github.com/AOMediaCodec/iamf/pull/804
+
+    * Update auto-publish.yml (missed when PR #804 is merged) by @sunghee-hwang in https://github.com/AOMediaCodec/iamf/pull/809
+
+    * Update v1.0.0-errata.html by @sunghee-hwang in https://github.com/AOMediaCodec/iamf/pull/810
+
+    * Remove pip cache for setup-python action. by @tdaede in https://github.com/AOMediaCodec/iamf/pull/812
+
+    * Remove unnecessary conformance page generation steps by @tdaede in https://github.com/AOMediaCodec/iamf/pull/813
+
+    * Convert to WGD as of May 09 by @sunghee-hwang in https://github.com/AOMediaCodec/iamf/pull/814
+
+    * Fix #764, channel clarification by @sunghee-hwang in https://github.com/AOMediaCodec/iamf/pull/784
+
+    * Fix #765, Profile clarification regarding channels by @sunghee-hwang in https://github.com/AOMediaCodec/iamf/pull/785
+
+    * Fix #768, Improve scalable channel group and layer text by @sunghee-hwang in https://github.com/AOMediaCodec/iamf/pull/787
+
+    * Fix wrong positioned, broken and old references by @sunghee-hwang in https://github.com/AOMediaCodec/iamf/pull/803
+
+    * Fix #815, typo correction on static down-mix matrix by @sunghee-hwang in https://github.com/AOMediaCodec/iamf/pull/822
+
+    * Fix #816, delete unused image file by @sunghee-hwang in https://github.com/AOMediaCodec/iamf/pull/823
+
+    * Fix #817, leb128() is limited to 8 bytes. by @sunghee-hwang in https://github.com/AOMediaCodec/iamf/pull/824
+
+    * Clarify text indicating the input layout to use for rendering by @felicialim in https://github.com/AOMediaCodec/iamf/pull/825
+
+    * Reword restriction on obu_size by @felicialim in https://github.com/AOMediaCodec/iamf/pull/826
+
+    * Fix #819, Base-Enhanced Profile by @sunghee-hwang in https://github.com/AOMediaCodec/iamf/pull/828
+
+    * Fix #821, updated version of Expanded Loudspeaker Layout by @sunghee-hwang in https://github.com/AOMediaCodec/iamf/pull/831
+
+    * Specify CENC by @felicialim in https://github.com/AOMediaCodec/iamf/pull/827
+
+    * MixPresentationTags syntax and semantics by @felicialim in https://github.com/AOMediaCodec/iamf/pull/832
+
+    * To implement new layouts related to 9.1.6ch by @sunghee-hwang in https://github.com/AOMediaCodec/iamf/pull/834
+
+    * Fix #835, use case for multi-language service by @sunghee-hwang in https://github.com/AOMediaCodec/iamf/pull/836
+
+    * Update the date as of July 1st (Bitstream frozen) by @sunghee-hwang in https://github.com/AOMediaCodec/iamf/pull/845
+
+    * Fix #838 (0bxxxx to decimal value) by @sunghee-hwang in https://github.com/AOMediaCodec/iamf/pull/841
+
+    * Fix #839 (Center to Centre) by @sunghee-hwang in https://github.com/AOMediaCodec/iamf/pull/842
+
+    * The Missed text for Base-Enhanced profile during merging PR #828 by @sunghee-hwang in https://github.com/AOMediaCodec/iamf/pull/843
+
+    * Fix #760, Mix Presentation OBU Simplication by @sunghee-hwang in https://github.com/AOMediaCodec/iamf/pull/844
+
+    * Fix #626, clarification on the meaning of discarding a sample by @sunghee-hwang in https://github.com/AOMediaCodec/iamf/pull/846
+
+    * Fix #840, align of the keywords for conformance (UPPERCASE <-> lowerc… by @sunghee-hwang in https://github.com/AOMediaCodec/iamf/pull/847
+
+    * Grammar and typo correction by @sunghee-hwang in https://github.com/AOMediaCodec/iamf/pull/848
+
+    * Fix #850, no PARAMETER_DEFINITION_DEMIXING for expanded layouts by @sunghee-hwang in https://github.com/AOMediaCodec/iamf/pull/852
+
+    * Fix #855, Typo: defintion to definition by @sunghee-hwang in https://github.com/AOMediaCodec/iamf/pull/856
+
+    * Fix #851, Move up a new paragraph the sentence about the additional p… by @sunghee-hwang in https://github.com/AOMediaCodec/iamf/pull/853
+
+    * The missed spec text for Track Language. by @sunghee-hwang in https://github.com/AOMediaCodec/iamf/pull/857
+
+    * Fix #858, clarification on non-scalable layer config by @sunghee-hwang in https://github.com/AOMediaCodec/iamf/pull/859
+
+    * Fix #849, reserved for future use by @sunghee-hwang in https://github.com/AOMediaCodec/iamf/pull/854
+
+    * Fix #860, num_layers -> num_layouts by @sunghee-hwang in https://github.com/AOMediaCodec/iamf/pull/861
+
+    * The missed properties during merging PR #833 by @sunghee-hwang in https://github.com/AOMediaCodec/iamf/pull/862
+
+    * Fix #864, fix incorrect coefficients in 22.2 to 9.1.6ch down-mix matrix '
+fetched: '2026-11-12'
+llm_decision: deep_read

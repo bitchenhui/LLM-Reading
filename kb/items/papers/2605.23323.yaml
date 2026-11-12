@@ -1,0 +1,66 @@
+id: paper:arxiv:2605.23323
+type: paper
+title: Efficient Learned Image Compression without Entropy Coding
+research_lines:
+- learned_codec
+source:
+  channel: arxiv
+  external_id: 2605.23323v1
+  url: https://arxiv.org/abs/2605.23323
+  pdf_url: https://arxiv.org/pdf/2605.23323v1
+  venue: arXiv preprint
+time:
+  published: '2026-05-22'
+  collected: '2026-11-12'
+entities:
+- ref: concept:EntropyModel
+  role: subject
+- ref: dataset:Kodak
+  role: evaluated_on
+- ref: metric:LPIPS
+  role: measured_by
+claims:
+- statement: EF-LIC在Kodak上以LPIPS衡量，相比MS-ILLM最高可实现67.86%的码率降低。
+  confidence: reported
+  metrics:
+  - name: 码率降低
+    value: 67.86%
+    scope: Kodak数据集、LPIPS口径、对比MS-ILLM的最大值
+  evidence: abstract（初筛，未读全文）
+- statement: EF-LIC的压缩性能与其基于熵编码的变体相当，同时编码提速超过3倍、解码提速超过5倍。
+  confidence: reported
+  metrics:
+  - name: 编码加速
+    value: '>3×'
+    scope: 相对自身entropy-coding变体的消融对比
+  - name: 解码加速
+    value: '>5×'
+    scope: 相对自身entropy-coding变体的消融对比
+  evidence: abstract（初筛，未读全文）
+- statement: 理论证明无约束向量量化的索引分布逼近最大熵界，因而统计冗余最小；上下文条件自回归变换可达到与典型带熵编码LIC相当的相关性冗余去除效果。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: EF-LIC用无约束向量量化和上下文条件自回归变换取代熵编码，性能相当且编码提速3倍、解码提速5倍。
+  abstract_zh: 论文提出无熵编码的学习图像压缩框架EF-LIC，通过多速率表示去除统计与相关冗余，规避熵编码的串行延迟瓶颈。方法上引入无约束向量量化并证明其索引分布逼近最大熵界，从而最小化统计冗余；同时提出上下文条件自回归变换直接重参数化潜在变量以降低相互依赖。理论分析表明EF-LIC可像带熵编码的典型LIC一样有效去除相关性冗余。实验显示在Kodak上以LPIPS衡量，相比MS-ILLM最高降低67.86%码率；消融表明其压缩性能与带熵编码的变体相当，同时编码提速超过3倍、解码提速超过5倍。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 直击学习式图像压缩中熵编码延迟瓶颈这一核心问题，提出无熵编码框架并有理论与实测结果，属编码领域核心贡献。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 无需熵编码的高效学习式图像压缩
+relations:
+- type: same_topic
+  ref: paper:arxiv:2603.06766
+  note: 同属学习式图像压缩中的熵建模研究，本文提出绕开熵编码的替代路线
+- type: same_topic
+  ref: paper:arxiv:2609.29727
+  note: 均以向量量化为核心机制构建学习式图像压缩
+- type: same_topic
+  ref: paper:arxiv:2607.13723
+  note: 同面向降低神经图像压缩编解码延迟的快速编码方案
+domain: video_image_coding

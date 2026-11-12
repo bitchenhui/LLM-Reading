@@ -1,9 +1,10 @@
-# 来源：docs/05_MLVC.md
 id: paper:arxiv:2606.28027
 type: paper
-title: "MLVC: A Multi-platform Learned Video Codec for Real-World Deployment"
-title_zh: "MLVC：面向真实部署的多平台学习式视频编码器"
-research_lines: [learned_codec, systems_deployment]
+title: 'MLVC: A Multi-platform Learned Video Codec for Real-World Deployment'
+title_zh: MLVC：面向真实部署的多平台学习式视频编码器
+research_lines:
+- learned_codec
+- systems_deployment
 source:
   channel: arxiv
   external_id: 2606.28027v1
@@ -11,64 +12,102 @@ source:
   local_pdf: paper/2606.28027v1.pdf
   venue: arXiv preprint
 time:
-  published: "2026-06-26"
-  collected: "2026-07-01"
+  published: '2026-06-26'
+  collected: '2026-07-01'
 entities:
-  - {ref: impl:MLVC, role: subject}
-  - {ref: impl:DCVC-RT, role: builds_on}
-  - {ref: impl:HEVC-QSV, role: compared_against}
-  - {ref: concept:EntropyModel, role: uses}
-  - {ref: concept:Hyperprior, role: uses}
-  - {ref: concept:LTR, role: uses}
-  - {ref: concept:NPU, role: uses}
-  - {ref: dataset:VCD, role: evaluated_on}
-  - {ref: metric:MOS, role: measured_by}
-  - {ref: metric:BD-Rate, role: measured_by}
-  - {ref: metric:FPS, role: measured_by}
-  - {ref: org:Microsoft, role: affiliation}
-  - {ref: org:Apple, role: platform}
-  - {ref: org:Intel, role: platform}
-  - {ref: org:Qualcomm, role: platform}
+- ref: impl:MLVC
+  role: subject
+- ref: impl:DCVC-RT
+  role: builds_on
+- ref: impl:HEVC-QSV
+  role: compared_against
+- ref: concept:EntropyModel
+  role: uses
+- ref: concept:Hyperprior
+  role: uses
+- ref: concept:LTR
+  role: uses
+- ref: concept:NPU
+  role: uses
+- ref: dataset:VCD
+  role: evaluated_on
+- ref: metric:MOS
+  role: measured_by
+- ref: metric:BD-Rate
+  role: measured_by
+- ref: metric:FPS
+  role: measured_by
+- ref: org:Microsoft
+  role: affiliation
+- ref: org:Apple
+  role: platform
+- ref: org:Intel
+  role: platform
+- ref: org:Qualcomm
+  role: platform
 claims:
-  - statement: 核心障碍定位：熵解码要求两端逐位一致的概率分布，而不同厂商 NPU 的浮点/整数运算无法逐位复现，一个 index 错位级联时域预测即灾难性失败——DCVC-RT 在 Apple 编/Intel 解场景完全崩溃。
-    evidence: "docs/05_MLVC.md §1"
-    confidence: reported
-  - statement: Scale Sending 提供硬保证：σ 从隐式推断转为由 hyperlatent（固定 factorized 熵编码、两端逐位相同）经 abs+expand+lookup 显式导出，结构化共享压缩约 128×（s²·r），熵解码不再有失配风险；副作用是所有 latent group 可一次性 AD，解码加速。
-    evidence: "docs/05_MLVC.md §3"
-    confidence: reported
-  - statement: 三招压制浮点漂移并恢复码率：ReLU 系激活（Apple NE 仅 ReLU/LeakyReLU 零误差）+ ReGLU 门控；LTR 恢复帧；定期 I 帧硬同步。消融中跨平台 TH XP 列只有 MLVC 家族为负（+LReLU +6.7 → +Mem -21.9 → +ReGLU -39.8 → full+LTR -58.7）。
-    metrics:
-      - {ref: metric:BD-Rate, value: -58.7, unit: "%", scope: "MLVC full+LTR, 跨平台(TH XP), vs HEVC-QSV"}
-    evidence: "docs/05_MLVC.md §4, §6"
-  - statement: VCD 视频会议基准（MOS 口径）相对 HEVC-QSV（最强可部署 baseline）BD-Rate 提升超 70%；主观质量与 DCVC-RT 相当但后者无法跨平台。
-    metrics:
-      - {ref: metric:BD-Rate, value: -70, unit: "%", scope: "VCD, MOS 感知口径, vs HEVC-QSV, >70% 提升"}
-    evidence: "docs/05_MLVC.md §7"
-  - statement: 编码+解码平均 100 FPS 跑在 Apple/Intel/Qualcomm 商用 NPU 上（fp16 推理而非 INT 量化）——首个「竞争压缩率+实时+跨平台鲁棒」三合一的神经视频编码器。
-    metrics:
-      - {ref: metric:FPS, value: 100, scope: "enc+dec 平均, Apple ANE / Intel / Qualcomm NPU, fp16"}
-    evidence: "docs/05_MLVC.md §7"
-  - statement: 工程配方四件套：Unified I/P Model（I 帧当全灰参考的 P 帧，DCVC-RT 的 174M+79M 双模型合一）；I-Frame Dropout（p=0.5）；Gated Memory（decoder 显式 LSTM 式记忆）；LPIPS+人脸 ROI 感知损失、刻意不用 GAN 防时序 flicker。
-    evidence: "docs/05_MLVC.md §5"
-    confidence: reported
+- statement: 核心障碍定位：熵解码要求两端逐位一致的概率分布，而不同厂商 NPU 的浮点/整数运算无法逐位复现，一个 index 错位级联时域预测即灾难性失败——DCVC-RT 在 Apple
+    编/Intel 解场景完全崩溃。
+  evidence: docs/05_MLVC.md §1
+  confidence: reported
+- statement: Scale Sending 提供硬保证：σ 从隐式推断转为由 hyperlatent（固定 factorized 熵编码、两端逐位相同）经 abs+expand+lookup 显式导出，结构化共享压缩约
+    128×（s²·r），熵解码不再有失配风险；副作用是所有 latent group 可一次性 AD，解码加速。
+  evidence: docs/05_MLVC.md §3
+  confidence: reported
+- statement: 三招压制浮点漂移并恢复码率：ReLU 系激活（Apple NE 仅 ReLU/LeakyReLU 零误差）+ ReGLU 门控；LTR 恢复帧；定期 I 帧硬同步。消融中跨平台
+    TH XP 列只有 MLVC 家族为负（+LReLU +6.7 → +Mem -21.9 → +ReGLU -39.8 → full+LTR -58.7）。
+  metrics:
+  - ref: metric:BD-Rate
+    value: -58.7
+    unit: '%'
+    scope: MLVC full+LTR, 跨平台(TH XP), vs HEVC-QSV
+  evidence: docs/05_MLVC.md §4, §6
+- statement: VCD 视频会议基准（MOS 口径）相对 HEVC-QSV（最强可部署 baseline）BD-Rate 提升超 70%；主观质量与 DCVC-RT 相当但后者无法跨平台。
+  metrics:
+  - ref: metric:BD-Rate
+    value: -70
+    unit: '%'
+    scope: VCD, MOS 感知口径, vs HEVC-QSV, >70% 提升
+  evidence: docs/05_MLVC.md §7
+- statement: 编码+解码平均 100 FPS 跑在 Apple/Intel/Qualcomm 商用 NPU 上（fp16 推理而非 INT 量化）——首个「竞争压缩率+实时+跨平台鲁棒」三合一的神经视频编码器。
+  metrics:
+  - ref: metric:FPS
+    value: 100
+    scope: enc+dec 平均, Apple ANE / Intel / Qualcomm NPU, fp16
+  evidence: docs/05_MLVC.md §7
+- statement: 工程配方四件套：Unified I/P Model（I 帧当全灰参考的 P 帧，DCVC-RT 的 174M+79M 双模型合一）；I-Frame Dropout（p=0.5）；Gated
+    Memory（decoder 显式 LSTM 式记忆）；LPIPS+人脸 ROI 感知损失、刻意不用 GAN 防时序 flicker。
+  evidence: docs/05_MLVC.md §5
+  confidence: reported
 relations:
-  - {type: contrasts_with, ref: "paper:arxiv:2606.22371", note: 两极策略：MLVC 追求确定性与部署，ZeroGVC 拥抱 zero-shot 生成先验}
-  - {type: same_topic, ref: "paper:arxiv:2606.28163", note: 都在拆质量↔复杂度强耦合：MLVC 用硬件友好架构+部署优化，NVRC++ 用 grid 卸载}
-  - {type: same_topic, ref: "paper:arxiv:2606.21033", note: 算力分配问题的部署侧 vs 多任务侧}
+- type: contrasts_with
+  ref: paper:arxiv:2606.22371
+  note: 两极策略：MLVC 追求确定性与部署，ZeroGVC 拥抱 zero-shot 生成先验
+- type: same_topic
+  ref: paper:arxiv:2606.28163
+  note: 都在拆质量↔复杂度强耦合：MLVC 用硬件友好架构+部署优化，NVRC++ 用 grid 卸载
+- type: same_topic
+  ref: paper:arxiv:2606.21033
+  note: 算力分配问题的部署侧 vs 多任务侧
 summaries:
-  one_liner_zh: 把 DCVC-RT 的 scale 参数经 hyperprior 显式传输避免 NPU 跨平台熵解码崩溃，配 Gated Memory/ReGLU/LTR 恢复码率，首次在 Apple/Intel/Qualcomm NPU 上 100 FPS 跑通神经视频编码，MOS 超 HEVC-QSV 70%+。
-  abstract_zh: >
-    指出神经视频编码落地的真障碍是跨平台逐位一致性而非算力：Scale Sending 让熵先验由逐位一致的
-    hyperlatent 导出（硬保证），ReLU 系激活规避 NPU 数值分歧，LTR/定期 I 帧压制特征漂移，
-    单一 Unified I/P 模型 + Gated Memory + 感知损失面向视频会议优化。
-    消融表格是「每项工程决策值多少 BD-Rate」的宝贵数据源。
+  one_liner_zh: 把 DCVC-RT 的 scale 参数经 hyperprior 显式传输避免 NPU 跨平台熵解码崩溃，配 Gated Memory/ReGLU/LTR 恢复码率，首次在
+    Apple/Intel/Qualcomm NPU 上 100 FPS 跑通神经视频编码，MOS 超 HEVC-QSV 70%+。
+  abstract_zh: '指出神经视频编码落地的真障碍是跨平台逐位一致性而非算力：Scale Sending 让熵先验由逐位一致的 hyperlatent 导出（硬保证），ReLU 系激活规避 NPU
+    数值分歧，LTR/定期 I 帧压制特征漂移， 单一 Unified I/P 模型 + Gated Memory + 感知损失面向视频会议优化。 消融表格是「每项工程决策值多少 BD-Rate」的宝贵数据源。
+
+    '
   deep_dive: docs/05_MLVC.md
-  tags: [deployable-neural-codec, cross-platform, NPU, entropy-consistency]
+  tags:
+  - deployable-neural-codec
+  - cross-platform
+  - NPU
+  - entropy-consistency
 assessment:
   relevance: high
   decision: deep_read
   reason: 神经编码器从实验室到产品的分水岭工作；工程配方（每个决策带 BD-Rate 代价）对产研两线都关键
   reviewer: manual
 provenance:
-  created: "2026-07-01"
+  created: '2026-07-01'
   actor: manual-backfill
+domain: video_image_coding

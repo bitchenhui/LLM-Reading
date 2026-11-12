@@ -1,0 +1,67 @@
+id: paper:arxiv:2606.00111
+type: paper
+title: 'ChWDTA: Channel-wise Wavelet-Domain Transformer Attention and Entropy Modeling for Learned Image
+  Compression'
+research_lines:
+- learned_codec
+source:
+  channel: arxiv
+  external_id: 2606.00111v1
+  url: https://arxiv.org/abs/2606.00111
+  pdf_url: https://arxiv.org/pdf/2606.00111v1
+  venue: arXiv preprint
+time:
+  published: '2026-05-27'
+  collected: '2026-11-12'
+entities:
+- ref: concept:EntropyModel
+  role: subject
+- ref: dataset:Kodak
+  role: evaluated_on
+- ref: metric:BD-Rate
+  role: measured_by
+claims:
+- statement: ChWDTA在保留窗口空间自注意力标记化模式的前提下，将Q/K/V投影作用于通道级小波变换特征并经逆变换映射回，稀疏化注意力投影所见通道协方差，构成ChWDTB模块。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 熵编码阶段采用通道级小波包分解生成四个等尺寸子带，适配通道级切片式自回归熵建模；八切片配置下在Kodak、CLIC Professional Validation、Tecnick测试集分别取得显著BD-rate降低。
+  confidence: reported
+  metrics:
+  - name: BD-Rate
+    value: -17.82%
+    scope: Kodak测试集，通道子带两切片（共八切片）配置
+  - name: BD-Rate
+    value: -19.15%
+    scope: CLIC Professional Validation测试集，八切片配置
+  - name: BD-Rate
+    value: -22.56%
+    scope: Tecnick测试集，八切片配置
+  evidence: abstract（初筛，未读全文）
+- statement: 每个通道子带按单切片编码时，方案仍保留大部分编码增益且复杂度更低。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出通道级小波域Transformer注意力与小波包切片熵模型，大幅提升CNN-Transformer混合学习图像压缩的率失真性能。
+  abstract_zh: 该论文面向基于CNN-Transformer混合架构的学习图像压缩（LIC），提出通道级小波域Transformer注意力机制（ChWDTA）：保留现代LIC骨干中高效的窗口空间自注意力，但在通道级小波变换后的特征上计算Q/K/V投影，再经逆变换映射回注意力输出，构成ChWDTB模块，在保持窗口注意力空间标记化的同时稀疏化注意力投影所见的通道协方差。在熵编码阶段，引入通道级小波包（ChWP）分解生成四个等尺寸子带，更好适配通道级切片式自回归熵建模。当每个通道子带划分为两个切片（共八切片）时，方案在Kodak、CLIC
+    Professional Validation和Tecnick测试集上分别取得-17.82%、-19.15%和-22.56%的BD-rate降低。即使每个通道子带按单切片编码，仍能以更低复杂度保留大部分编码增益。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 核心学习图像压缩方法论文，将通道级小波变换引入Transformer注意力与熵建模，BD-rate增益显著，属学习式编码重点收录范围。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: ChWDTA：面向学习图像压缩的通道级小波域Transformer注意力与熵建模
+relations:
+- type: same_topic
+  ref: paper:arxiv:2603.06766
+  note: 同为学习图像压缩的熵建模研究，可对照分层字典熵模型与通道级小波包熵建模思路
+- type: same_topic
+  ref: paper:arxiv:2610.33616
+  note: 同为利用频率域手段改进学习图像压缩的工作
+- type: same_topic
+  ref: paper:arxiv:2605.23323
+  note: 同为学习图像压缩且围绕熵编码设计取舍的工作
+domain: video_image_coding

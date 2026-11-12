@@ -1,0 +1,60 @@
+id: paper:arxiv:2606.05861
+type: paper
+title: 'LLMCodec: Adapting Video Codecs for Efficient Weight Compression of Large Language Models'
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2606.05861v3
+  url: https://arxiv.org/abs/2606.05861
+  pdf_url: https://arxiv.org/pdf/2606.05861v3
+  venue: arXiv preprint
+time:
+  published: '2026-06-04'
+  collected: '2026-11-12'
+entities:
+- ref: codec:VVC
+  role: uses
+- ref: concept:LLM
+  role: subject
+claims:
+- statement: 在LLaMA-3-8B模型2-bit精度下，LLMCodec相比现有方法将困惑度（perplexity）降低超过1.5倍
+  confidence: reported
+  metrics:
+  - name: 困惑度降低倍数
+    value: 1.5x
+    scope: LLaMA-3-8B，2-bit精度，相比现有方法
+  evidence: abstract（初筛，未读全文）
+- statement: 在LLaMA-3-8B模型2-bit精度下，LLMCodec相比现有方法将下游任务准确率提升21%
+  confidence: reported
+  metrics:
+  - name: 下游任务准确率提升
+    value: 21%
+    scope: LLaMA-3-8B，2-bit精度，相比现有方法
+  evidence: abstract（初筛，未读全文）
+- statement: 视频编码器因与矩阵结构数据天然兼容、压缩策略可配置、且拥有高度优化的现成实现，是LLM压缩的有前景方案
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: LLMCodec整合仿射量化与VVC/H.266编码，并系统比较了多种视频编码器及编码配置对压缩性能的影响，在不同模型上表现出鲁棒性与通用性
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出LLMCodec，将仿射量化与VVC视频编码结合压缩LLM权重，2-bit下困惑度降低超1.5倍、下游准确率提升21%
+  abstract_zh: 大语言模型规模增长带来存储、传输与部署挑战，而现有模型压缩与量化方法常依赖微调或校准数据，跨张量类型的泛化能力有限。论文提出LLMCodec，将仿射量化与VVC/H.266视频编码器相结合，利用视频编码器对矩阵结构数据的天然兼容性、可配置的压缩策略及高度优化的现成实现来压缩LLM权重。除VVC外，作者还比较了多种视频编码器及其编码配置（profile）对压缩性能的影响。在不同模型上的实验验证了该方法的鲁棒性与通用性：在LLaMA-3-8B的2-bit精度下，相比现有方法困惑度降低超过1.5倍，下游任务准确率提升21%。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 提出将VVC/H.266视频编码器与仿射量化结合用于LLM权重压缩的创新跨域方法，直接使用编解码器技术且有显著量化结果，与编码领域高度相关
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: LLMCodec：将视频编解码器改造用于大语言模型的高效权重压缩
+relations:
+- type: same_topic
+  ref: paper:arxiv:2609.01535
+  note: 同属LLM与视频编码技术交叉方向：本文用视频编码器压缩LLM，该文探索LLM辅助设计视频编码工具
+- type: same_topic
+  ref: paper:arxiv:2606.20847
+  note: 同属LLM与视频编码技术交叉方向：该文用LLM驱动VVenC的QP自适应，本文反向将VVC编码器用于LLM权重压缩
+domain: video_image_coding

@@ -1,0 +1,39 @@
+id: repo_release:github:iamf-v1.0.0
+type: repo_release
+title: IAMF Specification v1.0.0
+research_lines: []
+source:
+  channel: github
+  external_id: AOMediaCodec/iamf@v1.0.0
+  url: https://github.com/AOMediaCodec/iamf/releases/tag/v1.0.0
+time:
+  published: '2023-11-07'
+  collected: '2026-11-12'
+entities:
+- ref: codec:IAMF
+  role: subject
+claims:
+- statement: IAMF 规范 v1.0.0 为该标准的首个版本，定义了沉浸式音频的模型与格式（Immersive Audio Model and Formats）
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: IAMF 支持在流媒体与离线应用中提供沉浸式音频内容，覆盖互联网音频流、组播/广播、文件下载、游戏、通信及 VR/AR 等场景
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: IAMF 可在耳机、手机、平板、电视、Soundbar、家庭影院及大屏等多种设备上呈现
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: AOMedia 发布沉浸式音频标准 IAMF 首个正式规范 v1.0.0，面向流媒体与离线场景的沉浸声体验
+  abstract_zh: IAMF（Immersive Audio Model and Formats）首个正式规范 v1.0.0 发布，定义了为终端用户提供沉浸式音频体验的模型与格式。该标准面向流媒体、广播、游戏、通信及
+    VR/AR 等广泛应用场景，支持耳机、手机、电视、家庭影院等多类设备的呈现。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: AOMedia 发布沉浸式音频标准 IAMF 的首个正式规格 v1.0.0，属新标准诞生的重大里程碑
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: IAMF 发布规范 v1.0.0
+domain: audio_coding

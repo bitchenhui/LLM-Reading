@@ -1,0 +1,47 @@
+id: repo_release:github:iamf-v1.0.0-errata
+type: repo_release
+title: v1.0.0-errata
+research_lines: []
+source:
+  channel: github
+  external_id: AOMediaCodec/iamf@v1.0.0-errata
+  url: https://github.com/AOMediaCodec/iamf/releases/tag/v1.0.0-errata
+time:
+  published: '2024-05-06'
+  collected: '2026-11-12'
+entities:
+- ref: codec:IAMF
+  role: subject
+claims:
+- statement: 规范为 configOBUs 定义专用 Box，明确了 OBU 配置数据的封装方式
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 更新保留 OBU 相关规范条款，并修订 ACN 与 SN3D 的规范引用
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 约束同一 MixPresentation 中 audio_element_id 取值不得重复
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 清理规范文本中的笔误、重复与模糊表述，含 base profile 勘误与 9.1.4/9.2 节澄清
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 更新参考实现日期与链接，并完成规范头与 HTML 发布流程的工程性调整
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: AOMedia 发布 IAMF v1.0.0 勘误版，清理规范文本并明确 configOBUs 封装与保留 OBU 处理。
+  abstract_zh: 该版本为 IAMF v1.0.0 规范的官方勘误修订，集中清理了笔误、重复与模糊表述（含 base profile 部分）。同时包含实质性规范修正：为 configOBUs
+    定义专用 Box、更新保留 OBU 相关规则、修订 ACN/SN3D 规范引用，并约束同一 MixPresentation 内 audio_element_id 不得重复。另更新了参考实现链接及规范头与
+    HTML 发布流程。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: IAMF v1.0.0 勘误版除笔误清理外含规范级修正（configOBUs Box 定义、保留 OBU 处理、audio_element_id 唯一性约束），有实质内容但非架构级变化，收录为
+    summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: IAMF 发布 v1.0.0-errata 勘误版
+domain: audio_coding

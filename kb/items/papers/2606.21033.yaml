@@ -1,9 +1,10 @@
-# 来源：docs/03_MoECodec.md
 id: paper:arxiv:2606.21033
 type: paper
-title: "MoECodec: Image Compression for Joint Human & Machine Perception via Mixture-of-Experts"
-title_zh: "MoECodec：基于 MoE 的人机联合感知图像压缩"
-research_lines: [learned_codec, coding_for_machines]
+title: 'MoECodec: Image Compression for Joint Human & Machine Perception via Mixture-of-Experts'
+title_zh: MoECodec：基于 MoE 的人机联合感知图像压缩
+research_lines:
+- learned_codec
+- coding_for_machines
 source:
   channel: arxiv
   external_id: 2606.21033v1
@@ -11,61 +12,109 @@ source:
   local_pdf: paper/2606.21033v1.pdf
   venue: arXiv preprint
 time:
-  published: "2026-06-19"
-  collected: "2026-07-01"
+  published: '2026-06-19'
+  collected: '2026-07-01'
 entities:
-  - {ref: impl:MoECodec, role: subject}
-  - {ref: concept:MoE, role: uses}
-  - {ref: concept:ICM, role: uses}
-  - {ref: impl:TIC, role: builds_on}
-  - {ref: impl:TinyLIC, role: builds_on}
-  - {ref: impl:TCM, role: builds_on}
-  - {ref: dataset:Kodak, role: evaluated_on}
-  - {ref: dataset:ImageNet, role: evaluated_on}
-  - {ref: dataset:COCO, role: evaluated_on}
-  - {ref: metric:BD-Rate, role: measured_by}
-  - {ref: impl:VTM, role: compared_against}
-  - {ref: org:UTokyo, role: affiliation}
+- ref: impl:MoECodec
+  role: subject
+- ref: concept:MoE
+  role: uses
+- ref: concept:ICM
+  role: uses
+- ref: impl:TIC
+  role: builds_on
+- ref: impl:TinyLIC
+  role: builds_on
+- ref: impl:TCM
+  role: builds_on
+- ref: dataset:Kodak
+  role: evaluated_on
+- ref: dataset:ImageNet
+  role: evaluated_on
+- ref: dataset:COCO
+  role: evaluated_on
+- ref: metric:BD-Rate
+  role: measured_by
+- ref: impl:VTM
+  role: compared_against
+- ref: org:UTokyo
+  role: affiliation
 claims:
-  - statement: 首次把 token 级 MoE 结构化引入 LIC：冻结主干、仅将 encoder/decoder 的 FFN 换成 MoE 层，一个模型内同时容纳重建+分类+检测+分割多目标，取代外挂 adapter 范式。
-    evidence: "docs/03_MoECodec.md §2, §7"
-    confidence: reported
-  - statement: TIC 主干上 Kodak 重建 BD-Rate 从 26.98 降到 15.44（vs VTM-17.1, PSNR）；TinyLIC -3.42→-11.54、TCM -5.45→-11.87——主干无关的稳定增益。
-    metrics:
-      - {ref: metric:BD-Rate, value: 15.44, unit: "%", scope: "TIC+MoECodec, Kodak, vs VTM-17.1, PSNR"}
-      - {ref: metric:BD-Rate, value: -11.54, unit: "%", scope: "TinyLIC+MoECodec, Kodak"}
-      - {ref: metric:BD-Rate, value: -11.87, unit: "%", scope: "TCM+MoECodec, Kodak"}
-    evidence: "docs/03_MoECodec.md §5.1"
-  - statement: 下游机器任务（vs Full-Finetune 锚点）大幅超过 adaptation 基线：分类 -7.74 / 检测 -8.98 / 分割 -9.72 BD-Rate（TransTIC 分别为 +35.77/+26.09/+12.83）。
-    metrics:
-      - {ref: metric:BD-Rate, value: -7.74, unit: "%", scope: "ImageNet 分类, vs TransTIC +35.77"}
-      - {ref: metric:BD-Rate, value: -8.98, unit: "%", scope: "COCO 检测, vs TransTIC +26.09"}
-      - {ref: metric:BD-Rate, value: -9.72, unit: "%", scope: "COCO 实例分割, vs TransTIC +12.83"}
-    evidence: "docs/03_MoECodec.md §5.2"
-  - statement: 两个可复用组件：Expert-Choice 路由+空间 TV 正则解决盐-胡椒路由散乱（TC→EC 19.57→15.90，+TV→15.44）；GShMLP 控参数（7.17M vs FFN-ratio1 7.53M 但 BD-Rate 15.44 vs 19.07）。
-    metrics:
-      - {ref: metric:BD-Rate, value: 15.44, unit: "%", scope: "EC+TV+GShMLP 最终配置"}
-    evidence: "docs/03_MoECodec.md §3-4"
-  - statement: 相对 TIC 参数还减少 4.5%，每 token 激活参数减约 17%，端到端延迟反而快 8.4%——自适应计算没有付出推理代价。
-    evidence: "docs/03_MoECodec.md §5.1"
+- statement: 首次把 token 级 MoE 结构化引入 LIC：冻结主干、仅将 encoder/decoder 的 FFN 换成 MoE 层，一个模型内同时容纳重建+分类+检测+分割多目标，取代外挂
+    adapter 范式。
+  evidence: docs/03_MoECodec.md §2, §7
+  confidence: reported
+- statement: TIC 主干上 Kodak 重建 BD-Rate 从 26.98 降到 15.44（vs VTM-17.1, PSNR）；TinyLIC -3.42→-11.54、TCM -5.45→-11.87——主干无关的稳定增益。
+  metrics:
+  - ref: metric:BD-Rate
+    value: 15.44
+    unit: '%'
+    scope: TIC+MoECodec, Kodak, vs VTM-17.1, PSNR
+  - ref: metric:BD-Rate
+    value: -11.54
+    unit: '%'
+    scope: TinyLIC+MoECodec, Kodak
+  - ref: metric:BD-Rate
+    value: -11.87
+    unit: '%'
+    scope: TCM+MoECodec, Kodak
+  evidence: docs/03_MoECodec.md §5.1
+- statement: 下游机器任务（vs Full-Finetune 锚点）大幅超过 adaptation 基线：分类 -7.74 / 检测 -8.98 / 分割 -9.72 BD-Rate（TransTIC
+    分别为 +35.77/+26.09/+12.83）。
+  metrics:
+  - ref: metric:BD-Rate
+    value: -7.74
+    unit: '%'
+    scope: ImageNet 分类, vs TransTIC +35.77
+  - ref: metric:BD-Rate
+    value: -8.98
+    unit: '%'
+    scope: COCO 检测, vs TransTIC +26.09
+  - ref: metric:BD-Rate
+    value: -9.72
+    unit: '%'
+    scope: COCO 实例分割, vs TransTIC +12.83
+  evidence: docs/03_MoECodec.md §5.2
+- statement: 两个可复用组件：Expert-Choice 路由+空间 TV 正则解决盐-胡椒路由散乱（TC→EC 19.57→15.90，+TV→15.44）；GShMLP 控参数（7.17M
+    vs FFN-ratio1 7.53M 但 BD-Rate 15.44 vs 19.07）。
+  metrics:
+  - ref: metric:BD-Rate
+    value: 15.44
+    unit: '%'
+    scope: EC+TV+GShMLP 最终配置
+  evidence: docs/03_MoECodec.md §3-4
+- statement: 相对 TIC 参数还减少 4.5%，每 token 激活参数减约 17%，端到端延迟反而快 8.4%——自适应计算没有付出推理代价。
+  evidence: docs/03_MoECodec.md §5.1
 relations:
-  - {type: same_topic, ref: "paper:arxiv:2606.28027", note: 都在精细分配算力：MoECodec 管多任务/内容自适应，MLVC 管跨平台部署}
-  - {type: same_topic, ref: "paper:arxiv:2606.28163", note: 都在解耦复杂度与目标：MoE 运行时路由 vs NVRC++ 外置高分辨率 grid}
-  - {type: same_topic, ref: "paper:arxiv:2606.22371", note: 都在挖内容自适应：MoE 挑算力路径，ZeroGVC 挑采样轨迹}
+- type: same_topic
+  ref: paper:arxiv:2606.28027
+  note: 都在精细分配算力：MoECodec 管多任务/内容自适应，MLVC 管跨平台部署
+- type: same_topic
+  ref: paper:arxiv:2606.28163
+  note: 都在解耦复杂度与目标：MoE 运行时路由 vs NVRC++ 外置高分辨率 grid
+- type: same_topic
+  ref: paper:arxiv:2606.22371
+  note: 都在挖内容自适应：MoE 挑算力路径，ZeroGVC 挑采样轨迹
 summaries:
-  one_liner_zh: 把 transformer LIC 的 FFN 换成 Expert-Choice 路由 + GShMLP 专家，一个模型服务重建与多种机器视觉任务，重建 BD-Rate 提升 6-12%、下游任务再提 8-10%。
-  abstract_zh: >
-    针对 ICM 的「task-specific 参数爆炸 vs 外挂 adapter 静态计算」两难，把 MoE 内建到 LIC 主干：
-    Expert-Choice Routing + 空间 TV 正则解决 dense-tokenization 下的路由散乱与负载不均，
-    GShMLP 控制参数膨胀，task token 触发不同路由实现一模型多任务。
-    重建与下游任务同时超过 adaptation 基线，且激活参数更少、延迟更低。
+  one_liner_zh: 把 transformer LIC 的 FFN 换成 Expert-Choice 路由 + GShMLP 专家，一个模型服务重建与多种机器视觉任务，重建 BD-Rate 提升
+    6-12%、下游任务再提 8-10%。
+  abstract_zh: '针对 ICM 的「task-specific 参数爆炸 vs 外挂 adapter 静态计算」两难，把 MoE 内建到 LIC 主干： Expert-Choice Routing
+    + 空间 TV 正则解决 dense-tokenization 下的路由散乱与负载不均， GShMLP 控制参数膨胀，task token 触发不同路由实现一模型多任务。 重建与下游任务同时超过
+    adaptation 基线，且激活参数更少、延迟更低。
+
+    '
   deep_dive: docs/03_MoECodec.md
-  tags: [learned-image-compression, MoE, coding-for-machines, adaptive-compute]
+  tags:
+  - learned-image-compression
+  - MoE
+  - coding-for-machines
+  - adaptive-compute
 assessment:
   relevance: high
   decision: deep_read
   reason: 本期唯一一篇 ICM/多任务编码；EC 路由与 GShMLP 组件在 dense-token 场景可复用
   reviewer: manual
 provenance:
-  created: "2026-07-01"
+  created: '2026-07-01'
   actor: manual-backfill
+domain: video_image_coding

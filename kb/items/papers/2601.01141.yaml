@@ -1,0 +1,65 @@
+id: paper:arxiv:2601.01141
+type: paper
+title: 'YODA: Yet Another One-step Diffusion-based Video Compressor'
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2601.01141v1
+  url: https://arxiv.org/abs/2601.01141
+  pdf_url: https://arxiv.org/pdf/2601.01141v1
+  venue: arXiv preprint
+time:
+  published: '2026-01-03'
+  collected: '2026-11-12'
+entities:
+- ref: metric:LPIPS
+  role: subject
+- ref: metric:DISTS
+  role: measured_by
+- ref: metric:FID
+  role: measured_by
+claims:
+- statement: YODA 在 LPIPS、DISTS、FID、KID 四个感知指标上达到当前最优，一致优于传统编码器与深度学习基线。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: YODA 从时域参考中提取多尺度特征，同时用于 latent 生成与 latent 编码，相比逐帧独立生成 latent 的方案能更好利用时空相关性、获得更紧凑表示。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: YODA 采用线性 Diffusion Transformer（DiT）实现一步去噪，将扩散压缩的解码/重建过程约束在单步内以提升效率。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 源代码将开源（github.com/NJUVISION/YODA）。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出一步扩散视频压缩器YODA，以时域参考多尺度特征与线性DiT一步去噪实现感知质量SOTA。
+  abstract_zh: 针对一步扩散模型在视频压缩中应用受限的问题，作者提出 YODA。区别于已有工作依赖预训练 2D 自编码器逐帧独立生成 latent、忽略时序依赖的做法，YODA 从时域参考中提取多尺度特征并同时嵌入
+    latent 生成与 latent 编码两个环节，以更好利用时空相关性获得更紧凑的表示。为提升效率，YODA 采用线性 DiT（Diffusion Transformer）实现高效的一步去噪。实验表明，YODA
+    在 LPIPS、DISTS、FID、KID 等感知指标上达到 SOTA，一致优于传统编码器与深度学习基线。源代码计划在 GitHub 开源。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 核心生成式视频压缩工作：一步扩散+时域参考特征建模，感知指标SOTA，且来自活跃的开源团队，值得深读。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: YODA：又一种一步扩散视频压缩器
+relations:
+- type: same_topic
+  ref: paper:arxiv:2606.22371
+  note: 同为基于扩散先验的生成式视频压缩（ZeroGVC）
+- type: same_topic
+  ref: paper:arxiv:2609.34725
+  note: 同为利用生成式先验的视频压缩（Gen2-VC）
+- type: same_topic
+  ref: paper:arxiv:2604.08329
+  note: 同为扩散模型驱动的低码率视频压缩（DiV-INR）
+- type: same_topic
+  ref: paper:arxiv:2607.22772
+  note: 同为生成式视频压缩路线，关注扩散先验的蒸馏与适配
+- type: same_topic
+  ref: paper:arxiv:2606.13366
+  note: 同为扩散式压缩，面向 RDP 优化的图像版本，可作单步扩散压缩对照
+domain: video_image_coding

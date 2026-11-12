@@ -1,0 +1,64 @@
+id: paper:arxiv:2605.14629
+type: paper
+title: Efficient Dense Matching for Enhanced Gaussian Splatting Using AV1 Motion Vectors
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2605.14629v1
+  url: https://arxiv.org/abs/2605.14629
+  pdf_url: https://arxiv.org/pdf/2605.14629v1
+  venue: arXiv preprint
+time:
+  published: '2026-05-14'
+  collected: '2026-11-12'
+entities:
+- ref: codec:AV1
+  role: subject
+- ref: metric:VMAF
+  role: measured_by
+claims:
+- statement: 基于AV1运动矢量的匹配管线生成的初始点云密度最高达经典SfM的8倍。
+  confidence: reported
+  metrics:
+  - name: 点云密度倍数
+    value: 8×
+    scope: 相对经典SfM（COLMAP流程）初始点云，上限口径
+  evidence: abstract（初筛，未读全文）
+- statement: 稠密初始化使3DGS渲染质量的VMAF提升9分。
+  confidence: reported
+  metrics:
+  - name: VMAF
+    value: +9分
+    scope: 3DGS渲染质量，相对COLMAP标准初始化基线
+  evidence: abstract（初筛，未读全文）
+- statement: 增强初始化使3DGS达到基线质量所需的训练时间平均减少63%。
+  confidence: reported
+  metrics:
+  - name: 训练时间减少
+    value: 63%
+    scope: 达到基线质量所需训练时间的平均降幅
+  evidence: abstract（初筛，未读全文）
+- statement: 复用AV1固有运动矢量可在绕开穷举式匹配的同时保持几何鲁棒性，显著降低SfM处理开销。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 复用AV1编码器自带运动矢量替代穷举特征匹配，生成更稠密SfM点云，加速并提升3DGS重建质量。
+  abstract_zh: 该论文提出一种基于AV1的特征检测与匹配管线，直接复用AV1视频编解码器中固有的运动矢量，绕开SfM中计算开销巨大的穷举式匹配，同时保持几何鲁棒性。相比基于COLMAP的标准流程，该管线生成的初始点云密度最高达到传统SfM的8倍，可缓解弱纹理区域的稀疏问题。更稠密的初始化直接改善3DGS重建：渲染质量VMAF提升9分，达到基线质量所需训练时间平均缩短63%。项目页面已公开。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 核心贡献是借AV1运动矢量改进3DGS重建初始化而非编码技术本身，属编码器内部机制的跨域复用，与库内高斯泼溅编码方向相关但非编码主线。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 利用AV1运动矢量实现高效稠密匹配以增强高斯泼溅
+relations:
+- type: same_topic
+  ref: paper:arxiv:2609.14129
+  note: 同属高斯泼溅与视频编码交叉方向；本文通过AV1运动矢量增强3DGS初始化质量，可支撑GS类视频压缩的重建底座
+- type: same_topic
+  ref: paper:arxiv:2609.29041
+  note: 均围绕3DGS表示的效率与质量优化，本文从初始点云稠密度切入训练加速
+domain: video_image_coding

@@ -1,0 +1,53 @@
+id: paper:arxiv:2606.13110
+type: paper
+title: 'JOMP: Jointly-Optimized Mixed-Precision Quantization Across Neural Video Coding Frameworks and
+  Buffering Strategies'
+research_lines:
+- learned_codec
+source:
+  channel: arxiv
+  external_id: 2606.13110v1
+  url: https://arxiv.org/abs/2606.13110
+  pdf_url: https://arxiv.org/pdf/2606.13110v1
+  venue: arXiv preprint
+time:
+  published: '2026-06-11'
+  collected: '2026-11-12'
+entities:
+- ref: impl:DCVC-FM
+  role: subject
+claims:
+- statement: JOMP是首个面向神经视频编解码器的混合精度量化框架，在训练中将量化参数与位宽作为可学习变量，使各编解码模块以不同精度运行并联合优化率失真-复杂度权衡。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: JOMP应用于其最佳模型时，整数化神经视频编解码器在率失真性能与DCVC-FM相当的前提下，位操作减少87.6%。
+  confidence: reported
+  metrics:
+  - name: 位操作（bit operations）减少
+    value: 87.6%
+    scope: JOMP应用于其最佳混合精度整数化模型，率失真性能对标DCVC-FM条件下的降幅
+  evidence: abstract（初筛，未读全文）
+- statement: 论文构建了完整的整数化流水线以实现确定性解码，并首次对现代编码框架与时域缓冲策略在量化下的联合影响给出统一分析。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 首个神经视频编解码器混合精度量化框架，将量化参数与位宽作为可学习变量，实现整数化部署并大幅削减位操作。
+  abstract_zh: 针对VAE神经视频编解码器计算复杂度过高、跨平台互操作性受限的问题，本文提出JOMP联合优化混合精度量化框架，在训练中将量化参数与位宽视为可学习变量，使不同编解码模块运行在不同精度并联合优化率失真-复杂度权衡。论文对不同编码框架与时域缓冲策略下的量化行为进行了系统研究，首次给出二者的统一分析，并构建完整整数化流水线以保证确定性解码。将该框架应用于其最佳模型后，整数化神经视频编解码器在率失真性能与SOTA方法DCVC-FM相当的情况下，位操作减少87.6%。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 首个面向神经视频编解码器的混合精度量化与整数化部署框架，直接命中编码器优化与跨平台落地主题。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: JOMP：跨神经视频编码框架与时域缓冲策略的联合优化混合精度量化
+relations:
+- type: same_topic
+  ref: paper:arxiv:2606.28027
+  note: 同属学习式视频编解码器的跨平台/真实部署方向，均涉及整数化实现问题
+- type: same_topic
+  ref: paper:arxiv:2606.04595
+  note: 同属降低神经视频编解码器计算复杂度的优化工作（搜索蒸馏 vs 混合精度量化）
+domain: video_image_coding

@@ -1,0 +1,57 @@
+id: paper:arxiv:2605.15086
+type: paper
+title: 'FaSST: Fast Sparsifying Secondary Transform'
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2605.15086v1
+  url: https://arxiv.org/abs/2605.15086
+  pdf_url: https://arxiv.org/pdf/2605.15086v1
+  venue: arXiv preprint
+time:
+  published: '2026-05-14'
+  collected: '2026-11-12'
+entities:
+- ref: codec:AV2
+  role: subject
+- ref: metric:BD-Rate
+  role: measured_by
+claims:
+- statement: 模式自适应FaSST在匹配LFNST率失真性能的同时，将计算量减少83.67%。
+  confidence: reported
+  metrics:
+  - name: 计算量降幅
+    value: 83.67%
+    scope: AV2帧内编码，模式自适应FaSST相对LFNST，RD性能持平
+  evidence: abstract（初筛，未读全文）
+- statement: 通过避免固定系数截断，FaSST相对LFNST最高可获1.80%的BD-rate节省，同时复杂度降低66.24%。
+  confidence: reported
+  metrics:
+  - name: BD-rate节省
+    value: 1.80%
+    scope: 相对LFNST，最优情形
+  - name: 复杂度降幅
+    value: 66.24%
+    scope: 相对LFNST
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出基于Givens旋转分解的快速二次变换FaSST，在AV2帧内编码中以远低于LFNST的复杂度实现持平乃至更优的编码性能。
+  abstract_zh: 针对数据依赖二次变换计算复杂度高且缺乏显式率失真最优设计准则的问题，本文提出快速稀疏化二次变换（FaSST）设计框架。方法将数据驱动的稀疏正交变换分解为一系列Givens旋转，通过交替最小化结合近似Givens分解高效确定各旋转参数。旋转数量依据预测模式自适应调整以进一步降低计算量。作者用FaSST为AV2帧内预测残差设计了模式相关二次变换，模式自适应FaSST在匹配LFNST率失真性能的同时减少83.67%的计算量；并通过避免固定系数截断，相对LFNST最高取得1.80%的BD-rate节省，且复杂度低66.24%。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 面向AV2帧内编码的低复杂度二次变换设计，属标准编码器变换工具优化，实体匹配可靠且结果量化充分。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: FaSST：快速稀疏化二次变换
+relations:
+- type: same_topic
+  ref: paper:arxiv:2601.02712
+  note: 同为AV2变换与熵编码工具设计，可直接互为背景引用
+- type: same_topic
+  ref: paper:arxiv:2607.04985
+  note: 同为低复杂度数据依赖编解码工具（图滤波自适应环路滤波 vs 旋转分解二次变换）
+domain: video_image_coding

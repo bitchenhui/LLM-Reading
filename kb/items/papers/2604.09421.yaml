@@ -1,0 +1,73 @@
+id: paper:arxiv:2604.09421
+type: paper
+title: 'Multi-task Just Recognizable Difference for Video Coding for Machines: Database, Model, and Coding
+  Application'
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2604.09421v1
+  url: https://arxiv.org/abs/2604.09421
+  pdf_url: https://arxiv.org/pdf/2604.09421v1
+  venue: arXiv preprint
+time:
+  published: '2026-04-10'
+  collected: '2026-11-12'
+entities:
+- ref: codec:VVC
+  role: subject
+claims:
+- statement: 基于AMT-JRD预测JRD的VCM在三个机器视觉任务上相对VVC与JPEG基线均取得BD-mAP编码增益，可在保精度前提下降码率。
+  confidence: reported
+  metrics:
+  - name: BD-mAP增益
+    value: 3.861%
+    scope: AMT-JRD-based VCM 对比 VVC 基线（检测/分割/关键点三任务平均）
+  - name: BD-mAP增益
+    value: 7.886%
+    scope: AMT-JRD-based VCM 对比 JPEG 基线（三任务平均）
+  evidence: abstract（初筛，未读全文）
+- statement: AMT-JRD在三个任务上实现精确稳健的多任务JRD预测，优于最先进单任务预测模型。
+  confidence: reported
+  metrics:
+  - name: 平均绝对误差(MAE)
+    value: '3.781'
+    scope: AMT-JRD在目标检测/实例分割/关键点检测三任务上的JRD预测
+  - name: 误差方差
+    value: '5.332'
+    scope: 同上三任务
+  - name: MAE相对提升
+    value: 6.7%
+    scope: 对比SOTA单任务JRD预测模型
+  - name: 误差方差相对提升
+    value: 6.3%
+    scope: 对比SOTA单任务JRD预测模型
+  evidence: abstract（初筛，未读全文）
+- statement: 构建了面向机器视觉的多任务JRD数据集MT-JRD，标注全部来自机器视角。
+  confidence: reported
+  metrics:
+  - name: JRD标注数量
+    value: 27,264
+    scope: MT-JRD数据集，覆盖目标检测、实例分割、关键点检测三类任务
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 构建27264条标注的MT-JRD数据集并提出属性辅助预测模型AMT-JRD，在VCM中降码率且保住多任务机器视觉精度。
+  abstract_zh: 该文将仅适用于单任务的恰可辨识差异(JRD)建模扩展到多任务场景，构建了包含27,264条机器JRD标注的MT-JRD数据集，覆盖目标检测、实例分割与关键点检测三类任务。提出的属性辅助AMT-JRD预测模型通过广义/专用特征提取模块(GFEM/SFEM)实现多任务联合学习，并以属性特征融合模块(AFFM)引入目标尺寸与位置先验。在三任务上AMT-JRD的平均绝对误差为3.781、误差方差为5.332，较最先进单任务预测模型分别提升6.7%和6.3%。将预测的JRD应用于VCM后，相对VVC与JPEG基线平均提升BD-mAP
+    3.861%与7.886%，在保持多任务机器视觉精度的同时降低编码码率。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 该文属面向机器的视频编码(VCM)核心方向，提出多任务JRD数据集与预测模型并在VVC/JPEG编码上验证增益，与收录基准高度契合。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 面向机器视频编码的多任务恰可辨识差异：数据库、模型与编码应用
+relations:
+- type: same_topic
+  ref: paper:arxiv:2601.22070
+  note: 同属面向机器的特征/视频编码(FCM/VCM)，均以保持机器视觉任务精度的码率节省为目标
+- type: same_topic
+  ref: paper:arxiv:2605.19397
+  note: 同为面向机器视觉的感知/语义导向视频编码与传输
+domain: video_image_coding

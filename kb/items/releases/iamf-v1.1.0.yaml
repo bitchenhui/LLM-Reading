@@ -1,0 +1,55 @@
+id: repo_release:github:iamf-v1.1.0
+type: repo_release
+title: v1.1.0
+research_lines: []
+source:
+  channel: github
+  external_id: AOMediaCodec/iamf@v1.1.0
+  url: https://github.com/AOMediaCodec/iamf/releases/tag/v1.1.0
+time:
+  published: '2024-11-08'
+  collected: '2026-11-12'
+entities:
+- ref: codec:IAMF
+  role: subject
+claims:
+- statement: IAMF v1.1.0 规范于 7 月 1 日完成比特流冻结（bitstream frozen）
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 规范新增 Base-Enhanced Profile 定义
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 规范新增 CENC（Common Encryption）通用加密规范
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 新增 MixPresentationTags 的语法与语义定义
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 新增 9.1.6ch 相关的扩展扬声器布局，并修正 22.2 至 9.1.6ch 下混矩阵中的错误系数
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 比特流约束调整：leb128() 限制为 8 字节、obu_size 限制表述更新、configOBUs 定义为独立 box
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 新增多语言服务用例与 Track Language 规范文本
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: Mix Presentation OBU 语法简化
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: IAMF v1.1.0 完成比特流冻结，新增 Base-Enhanced Profile、CENC 加密与 9.1.6ch 等新布局。
+  abstract_zh: IAMF（沉浸式音频模型与格式）发布 v1.1.0 正式版，于 7 月 1 日完成比特流冻结，是 v1.0.0 之后的首个规范大版本。新版本引入 Base-Enhanced
+    Profile 定义、CENC 通用加密规范及 MixPresentationTags 语法语义，并新增 9.1.6ch 相关扩展扬声器布局与多语言服务用例。同时调整 leb128() 8 字节上限等比特流约束，并修正
+    22.2 至 9.1.6ch 下混矩阵的错误系数。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: IAMF 规范第二版正式发布，含 Base-Enhanced Profile、CENC 加密、新扬声器布局与比特流冻结等标准级重大变化。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: IAMF 规范发布 v1.1.0
+domain: audio_coding

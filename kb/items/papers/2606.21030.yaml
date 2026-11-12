@@ -1,0 +1,62 @@
+id: paper:arxiv:2606.21030
+type: paper
+title: 'Gen2-IC: Bridging Generative Models and Image Codecs through Latent Transport'
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2606.21030v2
+  url: https://arxiv.org/abs/2606.21030
+  pdf_url: https://arxiv.org/pdf/2606.21030v2
+  venue: arXiv preprint
+time:
+  published: '2026-06-19'
+  collected: '2026-11-12'
+entities:
+- ref: metric:PSNR
+  role: subject
+- ref: metric:LPIPS
+  role: measured_by
+- ref: metric:DISTS
+  role: measured_by
+claims:
+- statement: Gen2-IC 通过潜空间传输将预训练生成基础模型与图像压缩相连，无需辅助条件信号或任务特定骨干修改，经轻量适配（无蒸馏）即支持快速编码、一步解码与多码率。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在 SD-2.1、SANA-1.5、FLUX.1-dev 与 Qwen-Image-2512 四个骨干（覆盖 U-Net/Transformer 与扩散/流匹配建模式）上验证；更强先验下，Qwen
+    变体在 PSNR、LPIPS、DISTS 及语义保真指标（OCR CER/WER、人脸 ROI 相似度）上于四个基准全面领先扩散式生成编解码器。
+  confidence: reported
+  metrics:
+  - name: 码率区间
+    value: <0.05 bpp
+    scope: Qwen 变体相对扩散式生成编解码器取得领先的工作码率区间
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出潜空间压缩+潜空间传输两阶段框架，以通用接口复用预训练生成基础模型做图像压缩，超低码率下保真度领先。
+  abstract_zh: 论文认为更强的生成先验可支撑更简的编解码接口，并通过潜空间传输将生成与压缩内在关联。Gen2-IC 分两阶段：先将干净图像潜变量映射为熵约束潜变量（Latent Compression），再基于预训练生成模型进行一次近端更新（Latent
+    Transport）。方法无需辅助条件信号、无需任务特定的骨干修改，经轻量适配（无蒸馏）即可支持快速编码、一步解码与多码率。作者在 SD-2.1、SANA-1.5、FLUX.1-dev 与 Qwen-Image-2512
+    四个骨干上验证，覆盖 U-Net/Transformer 架构与扩散/流匹配两类建模式。结果显示在更强先验下增益出现在低于 0.05 bpp 的区间，Qwen 变体在四个基准上于 PSNR、LPIPS、DISTS
+    以及基于识别器的语义保真（OCR CER/WER、人脸 ROI 相似度）上领先扩散式生成编解码器。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 提出将预训练生成基础模型通过潜空间传输接入图像压缩的通用两阶段框架，属生成式压缩核心方法论文，与收录基准高度契合。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: Gen2-IC：通过潜空间传输桥接生成模型与图像编解码器
+relations:
+- type: same_topic
+  ref: paper:arxiv:2609.34725
+  note: 同属 Gen2 系列工作，均研究将生成先验解锁用于压缩，本篇面向图像、Gen2-VC 面向视频
+- type: same_topic
+  ref: paper:arxiv:2606.22371
+  note: 同属利用（预训练/零样本）生成扩散先验的压缩方向，均强调先验可复用性
+- type: same_topic
+  ref: paper:arxiv:2606.13366
+  note: 同为扩散式图像压缩方法，均以感知/重建质量权衡（RDP）为目标
+- type: same_topic
+  ref: paper:arxiv:2601.10373
+  note: 同属基于扩散先验精化的低码率图像压缩研究线
+domain: video_image_coding
