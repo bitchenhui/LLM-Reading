@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-05-19'
   collected: '2026-11-12'
+  updated: '2026-11-12'
 entities:
 - ref: impl:VTM
   role: subject
@@ -51,6 +52,7 @@ summaries:
   one_liner_zh: 提出PVSC语义视频通信框架，免运动矢量传输、时空特征编码，较VTM+5G LDPC基线节省最高约75%~87%带宽并实时推理。
   abstract_zh: 论文提出PVSC，一个面向实时无线视频传输的感知感知语义通信框架，取消显式运动矢量传输，采用时空特征编码生成紧凑且信道鲁棒的符号流。框架还规范了边信息格式、参考帧缓冲管理与轻量级码率控制，使单模型即可支持稳定接收端重建与带宽自适应推理。相比工程化的VTM+5G
     LDPC基线，PVSC在可比LPIPS与DISTS下分别节省最高约75%与87%带宽，并在单张NVIDIA RTX 4090 GPU上实现实时推理。实验覆盖多数据集、多分辨率、多种GOP配置与信道条件，均表现优于基线。
+  deep_dive: docs/auto/2605.19397.md
 assessment:
   relevance: high
   decision: deep_read

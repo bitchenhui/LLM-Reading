@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-04-22'
   collected: '2026-11-12'
+  updated: '2026-11-12'
 entities:
 - ref: impl:TCM
   role: subject
@@ -54,6 +55,7 @@ claims:
 summaries:
   one_liner_zh: 提出反馈驱动的学习式视频编码码率控制框架，用log域PI/PID闭环与GRU调节器实现精准码率跟踪与BD-rate增益。
   abstract_zh: 该文针对端到端学习式视频压缩中码率控制研究不足的问题，提出反馈驱动的码率控制框架。首先在DCVC风格框架上构建单模型多码率编码接口，通过率失真参数λ实现连续比特率调节；随后采用log域PI/PID闭环控制器，根据目标码率与熵估计码率之间的偏差在线更新λ，实现稳定的目标码率跟踪。为进一步优化预算约束下的帧级比特分配，引入基于双分支GRU的调节控制器，利用预算状态特征与因果编码统计信息对基础控制信号进行修正。在UVG和HEVC数据集上，PI/PID控制器在DCVC与DCVC-TCM上分别取得2.88%与2.95%的平均码率误差；加入调节控制器后，平均BD-rate分别降低5.69%与4.49%，码率误差进一步降至2.13%与2.24%。
+  deep_dive: docs/auto/2604.20104.md
 assessment:
   relevance: high
   decision: deep_read

@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-05-22'
   collected: '2026-11-12'
+  updated: '2026-11-12'
 entities:
 - ref: concept:EntropyModel
   role: subject
@@ -43,6 +44,7 @@ claims:
 summaries:
   one_liner_zh: EF-LIC用无约束向量量化和上下文条件自回归变换取代熵编码，性能相当且编码提速3倍、解码提速5倍。
   abstract_zh: 论文提出无熵编码的学习图像压缩框架EF-LIC，通过多速率表示去除统计与相关冗余，规避熵编码的串行延迟瓶颈。方法上引入无约束向量量化并证明其索引分布逼近最大熵界，从而最小化统计冗余；同时提出上下文条件自回归变换直接重参数化潜在变量以降低相互依赖。理论分析表明EF-LIC可像带熵编码的典型LIC一样有效去除相关性冗余。实验显示在Kodak上以LPIPS衡量，相比MS-ILLM最高降低67.86%码率；消融表明其压缩性能与带熵编码的变体相当，同时编码提速超过3倍、解码提速超过5倍。
+  deep_dive: docs/auto/2605.23323.md
 assessment:
   relevance: high
   decision: deep_read

@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-05-20'
   collected: '2026-11-12'
+  updated: '2026-11-12'
 entities:
 - ref: concept:EntropyModel
   role: subject
@@ -56,6 +57,7 @@ summaries:
   one_liner_zh: 为Cool-Chic类过拟合图像压缩引入前向传输空间超先验，实现熵模型区域自适应并降低BD-rate。
   abstract_zh: LANCE是针对Cool-Chic等过拟合图像压缩（OIC）框架的新扩展，解决其轻量自回归网络全局参数难以应对非平稳图像统计的问题。方法引入前向传输的空间超先验，使熵模型可分区域自适应，并采用静态MED与轻量学习上下文模型结合的预测编码方案以控制信令开销。在606-1483
     MAC/pixel解码复杂度区间的高端，LANCE相对Cool-Chic 4.0在Kodak和CLIC 2020上分别取得1.40%和1.97%的BD-rate降低；复杂度低端的增益扩大至2.41%和2.99%。定性分析表明学习到的空间超先验能自动将图像分割为统计特性相似的内容感知区域。
+  deep_dive: docs/auto/2605.20672.md
 assessment:
   relevance: high
   decision: deep_read

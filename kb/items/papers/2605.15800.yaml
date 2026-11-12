@@ -11,6 +11,7 @@ source:
 time:
   published: '2026-05-15'
   collected: '2026-11-12'
+  updated: '2026-11-12'
 entities:
 - ref: codec:AV2
   role: subject
@@ -47,6 +48,7 @@ summaries:
   abstract_zh: 本文系统阐述了 AOMedia 为 AV2 标准制定的公共测试条件（CTC）质量与性能评估方法，引入了基于凸包的自适应流（AS）配置、用户生成内容（UGC）以及扩展色度格式等新的评估方式和内容。作者以
     AV1 为基准，对 AV2（v13.0）进行了编码增益测试。实验结果显示，在随机访问（random access）配置下，AV2 相对 AV1 在 PSNR-YUV 和 VMAF 指标上分别取得
     29.81% 和 33.79% 的 Bjøntegaard-Delta 码率节省，验证了 AV2 作为下一代流媒体应用编码标准的压缩效率。
+  deep_dive: docs/auto/2605.15800.md
 assessment:
   relevance: high
   decision: deep_read

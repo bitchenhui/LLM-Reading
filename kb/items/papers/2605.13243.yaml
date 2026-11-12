@@ -11,6 +11,7 @@ source:
 time:
   published: '2026-05-13'
   collected: '2026-11-12'
+  updated: '2026-11-12'
 entities:
 - ref: codec:HEVC
   role: subject
@@ -36,6 +37,7 @@ summaries:
   one_liner_zh: 通过多个专用神经编解码器的区域级空间竞争与模式图选择，在保持单编解码器解码复杂度的同时实现自适应压缩。
   abstract_zh: 自编码器图像编解码器压缩性能领先但解码计算复杂度高。本文提出基于多个专用神经编解码器空间竞争的低复杂度学习式图像压缩框架：编码端按率失真代价为每个图像区域选择最匹配的编解码器，并将区域级选择以模式图作为边信息传输；解码端仅依据模式图执行相应重建，复杂度与单一编解码器相当。该设计实现逐图自适应、低解码复杂度与快速编码。在
     CLIC 2020 数据集上，相对单一编解码器最多节省 14.5% 码率，并以每像素 1433 次 MAC 的解码复杂度达到 HEVC 水平的性能。
+  deep_dive: docs/auto/2605.13243.md
 assessment:
   relevance: high
   decision: deep_read

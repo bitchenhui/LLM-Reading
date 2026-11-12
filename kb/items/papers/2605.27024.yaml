@@ -11,6 +11,7 @@ source:
 time:
   published: '2026-05-26'
   collected: '2026-11-12'
+  updated: '2026-11-12'
 entities:
 - ref: codec:AVC
   role: subject
@@ -42,6 +43,7 @@ summaries:
   one_liner_zh: 面向屏幕内容视频的神经表示框架，以可学习调色板、密集门控融合与零开销帧跳过策略实现低码率超越H.264/H.265。
   abstract_zh: 该论文针对屏幕内容视频（远程桌面、在线教育、云游戏）尖锐边缘、有限调色板、强时间冗余的统计特性，提出定制化神经表示框架 NeR-SC。方法基于 SNeRV 主干，引入三个专用模块：将低频子带约束到可学习颜色集的可学习调色板、以注意力门控实现跨阶段密集交互的多门控密集融合模块，以及让静态帧绕过冗余解码器调用的嵌入级帧跳过策略（零训练开销）。在
     DSCVC 和 VCD 数据集上分别取得 40.32 dB 与 41.73 dB 平均 PSNR，优于代表性神经视频表示方法，并在低码率下超越 H.264 和 H.265。帧跳过策略使解码达到实时且无质量损失。
+  deep_dive: docs/auto/2605.27024.md
 assessment:
   relevance: high
   decision: deep_read

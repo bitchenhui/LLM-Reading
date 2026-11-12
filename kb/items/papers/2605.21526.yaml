@@ -11,6 +11,7 @@ source:
 time:
   published: '2026-05-19'
   collected: '2026-11-12'
+  updated: '2026-11-12'
 entities:
 - ref: codec:VVC
   role: subject
@@ -36,6 +37,7 @@ summaries:
   one_liner_zh: 批判性综述VVC划分搜索加速技术，并评估其随VTM版本演进与内部启发式变化的适配性。
   abstract_zh: VVC凭借QTMTT（四叉树+多类型树）划分结构，在同等视觉质量下较HEVC节省40-50%码率，但分裂组合复杂度激增导致编码复杂度显著上升。本文对最先进的划分加速技术进行批判性评估，重点考察这些方法如何随VVC参考软件VTM
     successive版本的内部变化（如快速划分决策启发式更新）而演进适配。研究分析了在多种VTM配置和多个软件版本下评估复杂度与压缩效率权衡所面临的挑战，指出跨版本可比性是该方法领域的关键难题。
+  deep_dive: docs/auto/2605.21526.md
 assessment:
   relevance: high
   decision: deep_read
