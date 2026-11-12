@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-09-02'
   collected: '2026-11-12'
+  updated: '2026-11-12'
 entities:
 - ref: concept:INR
   role: subject
@@ -45,6 +46,7 @@ summaries:
   one_liner_zh: 提出S-NVRC：单一嵌入码流同时支持比特率与解码复杂度细粒度可扩展的INR视频编解码器
   abstract_zh: 针对现有INR视频编码的可扩展压缩研究不足、且额外网络层导致比特率与解码复杂度耦合的问题，本文提出S-NVRC，从单一嵌入码流联合支持细粒度的比特率可扩展与解码复杂度可扩展。方法上采用特征网格的由粗到精前缀（coarse-to-fine
     prefix）实现比特率扩展，采用网络层的嵌套前缀（nested prefix）实现解码复杂度扩展。一次编码即可覆盖宽范围的比特率与解码复杂度操作点。在UVG数据集上，S-NVRC在BD-rate上分别优于SHM-12.4达43.7%、优于多层配置的VTM-20.0达5.6%。
+  deep_dive: docs/auto/2609.04273.md
 assessment:
   relevance: high
   decision: deep_read

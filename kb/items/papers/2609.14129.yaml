@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-09-12'
   collected: '2026-11-12'
+  updated: '2026-11-12'
 entities:
 - ref: codec:HEVC
   role: subject
@@ -37,6 +38,7 @@ claims:
 summaries:
   one_liner_zh: 提出多尺度2D高斯泼溅加轻量形变网络的4K视频实时压缩框架，LPIPS率失真超过H.265及学习式方法。
   abstract_zh: 针对超高清（UHD）视频的存储与实时解码难题，论文提出以粗到细的多尺度二维高斯泼溅（2DGS）结构结合轻量形变网络、按GOP进行表示与压缩的实时视频压缩框架。该方法利用高斯泼溅超快渲染与高保真重建的优势，规避了神经视频压缩（NVC）与隐式神经表示（INR）解码延迟高、内存占用大的缺陷。实验表明，其LPIPS率失真性能超过H.265及其他最先进学习式视频压缩方法。该工作展示了高斯泼溅作为高效高分辨率视频压缩实用方案的潜力。
+  deep_dive: docs/auto/2609.14129.md
 assessment:
   relevance: high
   decision: deep_read

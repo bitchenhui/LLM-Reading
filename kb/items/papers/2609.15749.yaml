@@ -11,6 +11,7 @@ source:
 time:
   published: '2026-09-14'
   collected: '2026-11-12'
+  updated: '2026-11-12'
 entities:
 - ref: codec:AVC
   role: subject
@@ -48,6 +49,7 @@ summaries:
   abstract_zh: 针对自动驾驶中多摄像头经长距离链路传输造成的带宽与能耗瓶颈，论文指出 H.264 等传统编码器因高处理延迟、高能耗和依赖静态用户配置而不适合实时视觉系统。作者提出 OASIS
     框架，将轻量级传感器内压缩与任务感知的压缩率控制相结合，依据实时任务性能动态更新最优压缩率。该框架可泛化到多种视觉任务。实验结果显示平均取得 6 倍数据压缩、5.8 倍链路功耗降低和 2.5 倍链路延迟降低，任务性能退化至多
     1.5%。
+  deep_dive: docs/auto/2609.15749.md
 assessment:
   relevance: high
   decision: deep_read

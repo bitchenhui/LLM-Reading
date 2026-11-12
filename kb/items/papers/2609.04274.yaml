@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-09-02'
   collected: '2026-11-12'
+  updated: '2026-11-12'
 entities:
 - ref: codec:VVC
   role: subject
@@ -43,6 +44,7 @@ summaries:
   one_liner_zh: 提出过拟合式图像编解码器 MIRC，多尺度表示加端到端量化熵编码，较 VVC 节省 10.5% BD-rate。
   abstract_zh: 针对 Cool-chic 系过拟合图像编解码器率失真优化不足、单尺度合成忽略跨尺度冗余的问题，提出 MIRC。该方法借鉴神经视频表示编解码器 NVRC 的端到端压缩流程，将潜变量、合成网络与熵模型等所有编码组件统一量化并在单一率失真目标下熵编码。进一步引入带跨阶段参数共享的多尺度表示，以极小传输开销提升编码效率。在
     CLIC2020 专业验证集上，MIRC 相对 VVC（VTM 22.0）取得 10.5% BD-rate 节省，并提供 1.2 至 2.9 kMAC/pixel 的配置族以适配不同部署目标。
+  deep_dive: docs/auto/2609.04274.md
 assessment:
   relevance: high
   decision: deep_read

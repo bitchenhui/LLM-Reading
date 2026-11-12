@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-08-31'
   collected: '2026-11-12'
+  updated: '2026-11-12'
 entities:
 - ref: codec:HEVC
   role: subject
@@ -31,6 +32,7 @@ claims:
 summaries:
   one_liner_zh: 用分散打包潜token与双任务Transformer联合熵建模与丢包恢复，实现无需重训练的压缩-容错权衡。
   abstract_zh: 丢包会同时破坏学习式视频编码的空间重建与时域预测，为此提出ReLViC框架，联合优化潜变量编码与丢包恢复。该方法将空间相邻的潜token分散到不同数据包中，并使用一个双用途Transformer：编码时估计熵模型参数，接收端重建缺失的潜token。通过以段长参数化的周期性重置包上下文拓扑控制包间依赖，无需重训练即可调节压缩效率与误差传播范围之间的权衡。训练采用三阶段渐进策略：先建立单帧编码，再学习时域上下文用于熵建模，最后在模拟丢包下优化被掩码潜token的恢复。在突发丢包轨迹下的实验表明，ReLViC重建更稳定，在严重丢包场景下优于采用Reed-Solomon前向纠错保护的H.265以及抗丢包学习编解码器GRACE。
+  deep_dive: docs/auto/2608.30202.md
 assessment:
   relevance: high
   decision: deep_read

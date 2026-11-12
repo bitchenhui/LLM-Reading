@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-09-01'
   collected: '2026-11-12'
+  updated: '2026-11-12'
 entities:
 - ref: concept:LLM
   role: subject
@@ -36,6 +37,7 @@ claims:
 summaries:
   one_liner_zh: 通过生成-评估闭环让LLM设计Planar预测器，在VVenC上取得0.18%码率节省并验证ECM集成可行性。
   abstract_zh: 本文实证探索LLM能否设计视频编码工具，以编码标准中历史悠久的帧内预测Planar模式为案例。研究采用生成-评估闭环：LLM生成新的Planar预测器，编码器试编码评估其性能，LLM再依据反馈迭代改进实现。在VVenC的faster预设下直接替换默认Planar模式，LLM生成的模式在标准测试集上取得0.18%码率节省、仅0.4%复杂度开销。进一步在ECM上利用新引入的方向性Planar模式，考察直接替换与作为新增预测模式（引入新语法元素）两种集成策略，两者在受限低分辨率设置下均可带来编码增益。研究为基于LLM的编码工具设计提供了初步证据与实践洞见，同时指出其潜力与开放挑战。
+  deep_dive: docs/auto/2609.01535.md
 assessment:
   relevance: high
   decision: deep_read

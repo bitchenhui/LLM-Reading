@@ -11,6 +11,7 @@ source:
 time:
   published: '2026-09-24'
   collected: '2026-11-12'
+  updated: '2026-11-12'
 entities:
 - ref: metric:PSNR
   role: subject
@@ -69,6 +70,7 @@ summaries:
   abstract_zh: 论文提出VQ-LIC，一种非对称边云编解码器：边缘端以紧凑的INT8深度可分离(DW)-逐点(PW)分析变换配合多码本向量量化(VQ)完成编码，重建由更大的云端解码器承担。由于VQ码字匹配可表达为点积，作者将其直接映射到同一PW引擎，省去独立的VQ计算阵列，据称是FPGA学习式图像压缩中的首次。基于RTL确定性周期数推导的延迟模型可直接以硅片验证，对分析变换与VQ的部署延迟预测误差分别仅0.26%和0.05%，并据此选定16-48-64三块变换结构；训练后码本缩减使VQ运算量与码本存储各降4倍。在220-DSP的Zynq-7020上，中码率档在CLIC
     2017上达到0.1398 bpp、28.69 dB PSNR、13.06 dB MS-SSIM，分析-VQ流水线以0.1945 kMAC/像素实现47.98 fps、每帧42.84 mJ，DSP用量比同类FPGA
     LIC加速器低一个数量级。
+  deep_dive: docs/auto/2609.29727.md
 assessment:
   relevance: high
   decision: deep_read

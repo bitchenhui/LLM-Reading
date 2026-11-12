@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-09-24'
   collected: '2026-11-12'
+  updated: '2026-11-12'
 entities:
 - ref: concept:RDO
   role: subject
@@ -46,6 +47,7 @@ claims:
 summaries:
   one_liner_zh: 用源图像处Hessian二次化近似FR-IQA失真，实现块级RDO，VVC上目标度量BD-rate节省14.2–36.7%。
   abstract_zh: 块级视频编码器传统上以SSE作为RDO失真，因其可按块分解而便于独立优化，但MS-SSIM、LPIPS等全参考质量度量虽更贴近人眼感知却无法在编码环路内直接使用。该文基于度量二次化（quadratization）的已有结果，将一大类FR-IQA度量近似为输入相关二次失真（IDQD），其二次型矩阵取自度量在源视频处的Hessian。为支持按块计算，作者提出保留块对角与仅保留对角两种Hessian近似，并给出只需Hessian矩阵-向量积（经自动微分实现）的随机估计器。在VVC下对Kodak与CLIC数据集的五种目标度量进行评测，IDQD-RDO在目标度量下取得14.2–36.7%的BD-rate节省，无需修改解码器，编码端复杂度增加10–30%。
+  deep_dive: docs/auto/2609.30077.md
 assessment:
   relevance: high
   decision: deep_read

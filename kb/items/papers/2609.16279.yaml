@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-09-14'
   collected: '2026-11-12'
+  updated: '2026-11-12'
 entities:
 - ref: impl:DCVC-RT
   role: subject
@@ -33,6 +34,7 @@ claims:
 summaries:
   one_liner_zh: 基于DCVC-RT引入语义/特征重要性分包与抗差错熵模型，在丢包信道下实现任务相关内容的鲁棒低时延视频传输。
   abstract_zh: 针对物理AI系统在不可靠信道上的低时延任务导向视频通信需求，作者在实时神经编解码器DCVC-RT基础上提出语义感知的多级编码框架。该方法将编码表示按语义与潜在特征重要性划分到不同包并分配至不同优先级流，适配多级丢包信道模型。同时设计抗差错熵模型，消除包间依赖，使每个数据包在丢包时仍可独立解码。整个系统在多级丢包信道抽象上端到端训练，联合学习信道感知表示与重要性感知分包。实验表明，相较基线DCVC-RT，该框架在丢包条件下鲁棒性显著提升，次要区域优雅退化而任务相关视觉内容得到更好保护。
+  deep_dive: docs/auto/2609.16279.md
 assessment:
   relevance: high
   decision: deep_read
