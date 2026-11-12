@@ -1,0 +1,42 @@
+id: repo_release:github:libavif-v1.0.4
+type: repo_release
+title: v1.0.4
+research_lines:
+- traditional_codec_opt
+source:
+  channel: github
+  external_id: AOMediaCodec/libavif@v1.0.4
+  url: https://github.com/AOMediaCodec/libavif/releases/tag/v1.0.4
+time:
+  published: '2024-02-08'
+  collected: '2026-11-12'
+entities:
+- ref: impl:libavif
+  role: subject
+claims:
+- statement: 修复解码 tile 像素格式与重建输出图像像素格式不匹配时 alpha 平面被错误释放的问题（b/320234262）
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 修复写入动画数据时相同 chunk 跳过优化的缺陷（b/321189607）
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 修复解码各 tile 带关联辅助 alpha 图像 item 的网格时，人工网格 alpha item 的 ID 选择错误（oss-fuzz 65657）
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 构建选项 AVIF_ENABLE_WERROR 默认值改为 OFF
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 补丁版本，修复 alpha 平面错误释放、动画 chunk 跳过优化缺陷及网格 alpha item ID 选择问题。
+  abstract_zh: libavif v1.0.4 为稳定性修复版本。主要修复三处缺陷：解码 tile 像素格式与输出图像像素格式不匹配时 alpha 平面被错误释放；写入动画数据时相同 chunk
+    跳过优化出错；解码含辅助 alpha 图像 item 的 tile 网格时人工网格 alpha item 的 ID 选择错误。此外构建选项 AVIF_ENABLE_WERROR 默认改为 OFF。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 补丁版本，包含多项影响解码/编码正确性的功能性缺陷修复（alpha 平面释放、动画写入、网格 alpha item ID 选择），非纯打包噪声，但无新特性或性能改进，达不到重大版本级别。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: libavif 发布 v1.0.4

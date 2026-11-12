@@ -1,0 +1,46 @@
+id: repo_release:github:vvdec-v3.2.0
+type: repo_release
+title: '  vvdec-3.2.0'
+research_lines:
+- traditional_codec_opt
+source:
+  channel: github
+  external_id: fraunhoferhhi/vvdec@v3.2.0
+  url: https://github.com/fraunhoferhhi/vvdec/releases/tag/v3.2.0
+time:
+  published: '2026-07-28'
+  collected: '2026-11-12'
+entities:
+- ref: impl:VVdec
+  role: subject
+claims:
+- statement: 为大多数既有 SIMD 函数新增 ARM NEON、NEON-RDM、SVE 与 SVE2 实现，并正确实现 ARM CPU 特性检测
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: API 向后兼容地新增 vvdecSIMD_Extension 枚举值 VVDEC_SIMD_NEON_RDM、VVDEC_SIMD_SVE、VVDEC_SIMD_SVE2 与
+    VVDEC_SIMD_SIMDE_ANY
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 引入基于 libfuzzer 的模糊测试基础设施，通过构建选项 VVDEC_FUZZING_BUILD 启用
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 修复多处未定义行为（未初始化内存、负移位、整数溢出）以及坏码流触发的内存越界与内存泄漏，并增加码流一致性检查
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: x86 SIMD 代码在合适位置改用非对齐加载以优化性能
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: VVC 解码器新增 ARM NEON/SVE 系列 SIMD 支持并强化码流健壮性与模糊测试
+  abstract_zh: vvdec v3.2.0 为多数既有 SIMD 函数补齐 ARM NEON、NEON-RDM、SVE 与 SVE2 实现，并正确实现 ARM CPU 特性检测，同时向后兼容地扩展
+    SIMD 扩展枚举。版本引入 libfuzzer 模糊测试基础设施，修复大量未定义行为、坏码流触发的内存越界与泄漏，并增加码流一致性检查。x86 SIMD 代码亦在合适处改用非对齐加载。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 正式版包含 ARM SIMD 全面移植、模糊测试基础设施与大量健壮性修复等实质内容，但非架构级或新标准变化
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: vvdec 发布 v3.2.0

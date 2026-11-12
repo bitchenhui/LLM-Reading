@@ -1,0 +1,68 @@
+id: repo_release:github:SVT-AV1-v4.2.0
+type: repo_release
+title: v4.2.0
+research_lines:
+- learned_codec
+- traditional_codec_opt
+source:
+  channel: github
+  external_id: AOMediaCodec/SVT-AV1@v4.2.0
+  url: https://github.com/AOMediaCodec/SVT-AV1/releases/tag/v4.2.0
+time:
+  published: '2026-10-26'
+  collected: '2026-11-12'
+entities:
+- ref: impl:SVT-AV1
+  role: subject
+- ref: concept:LTR
+  role: uses
+- ref: concept:QP
+  role: uses
+- ref: concept:EntropyModel
+  role: uses
+- ref: metric:BD-Rate
+  role: measured_by
+- ref: metric:VMAF
+  role: measured_by
+- ref: metric:PSNR
+  role: measured_by
+claims:
+- statement: 新增 TUNE-VMAF 模式，目标实现约15% VMAF BD-rate 改进且 PSNR 损失极小
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: RTC 模式新增 CBR 码控，采用卡尔曼滤波 QP 估计、循环刷新与帧重编码
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 新增带 LTR 支持与两层 RPS 结构的参考帧管理 API
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: RTC 支持运行时动态调整 MG 尺寸、preset、码率与帧率，并优化小分辨率内存占用
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 重构熵编码：直接写 tile 缓冲、简化算术编码器与系数处理
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 新增 CLI 选项 --cqp、--enable-intrabc、--hbd-mds、--enable-kf-tf，并支持原始 OBU 输出格式
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: Arm 侧新增 8-bit int16 前向变换 NEON 内核、Neon SAD/SSIM/VMAF 等内核及 SVE2 VMAF 内核
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 修复 superres 重编码崩溃、RTC 码控竞态、越界读、内存泄漏等缺陷，并新增 NVTX 性能剖析钩子
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 新增 TUNE-VMAF 模式与 RTC CBR 码控/LTR API，重构熵编码，VMAF BD-rate 目标提升约15%。
+  abstract_zh: SVT-AV1 v4.2.0 在 VOD/RA 侧新增 TUNE-VMAF 模式（目标约15% VMAF BD-rate 改进、PSNR 损失极小）、原始 OBU 输出及多项新
+    CLI 选项；RTC/低延迟侧引入基于卡尔曼滤波 QP 估计的 CBR 码控、循环刷新、动态参数调整以及带 LTR 支持的参考帧管理 API。编码器核心重构了熵编码与 CDEF/MD/ME 优化，并为
+    Arm 补充 NEON 变换、SAD 及 SVE2 VMAF 等内核，另修复多处崩溃、UB 与内存泄漏问题。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 4.2.0 为重大功能版本：新增 TUNE-VMAF 编码模式与 RTC CBR 码控/LTR API，并重构熵编码，含约15% VMAF BD-rate 改进等实质性能与新特性。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: SVT-AV1 发布 v4.2.0

@@ -1,0 +1,56 @@
+id: repo_release:github:kvazaar-v1.1.0
+type: repo_release
+title: v1.1.0
+research_lines:
+- traditional_codec_opt
+source:
+  channel: github
+  external_id: ultravideo/kvazaar@v1.1.0
+  url: https://github.com/ultravideo/kvazaar/releases/tag/v1.1.0
+time:
+  published: '2017-02-16'
+  collected: '2026-11-12'
+entities:
+- ref: impl:kvazaar
+  role: subject
+- ref: concept:QP
+  role: uses
+- ref: concept:GOP
+  role: uses
+claims:
+- statement: 相比 v1.0.0，v1.1.0 在各 preset 下平均 BD 码率降低 0.5%–1.7%，其中 ultrafast 档降幅最大（-1.7%）
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 各 preset 平均加速 1.01x–1.14x，veryslow 档达 1.14x，但 E 类在 ultrafast/semifast 档略有回退（最低 0.97x）
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 码率控制改为 LCU 级以获得更一致的结果，并新增 --roi 参数实现 LCU 级 delta-QP 控制
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 新增 --slices 参数，将 tile 和 WPP 行封装进 slice NAL 而非使用码流偏移
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 时域运动矢量预测（TMVP）现已支持 B 帧
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 新增 AVX2 版 SSD，并优化帧内参考构建、码流写入与 CU 划分决策，修复 Linux 主线程忙循环与 OSX 线程挂起问题
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: API 现可正确传递 DTS/PTS 时间戳，并允许禁用 v1.0.0 默认开启的 GOP 结构
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: HEVC 编码器 Kvazaar v1.1.0 新增 LCU 级码控与 ROI/切片参数，BD-rate 降最多 1.7% 且速度提升。
+  abstract_zh: Kvazaar v1.1.0 相比 v1.0.0 在各 preset 下平均 BD 码率降低 0.5%–1.7%（超快档收益最大），平均加速 1.01x–1.14x。新特性包括
+    LCU 级码率控制、--roi 的 LCU 级 delta-QP 控制、--slices 切片封装以及支持 B 帧的时域运动矢量预测。同时新增 AVX2 版 SSD 等多项优化，修复了 API 时间戳传递、tile
+    内亚像素运动估计等若干问题。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 正式版包含明确压缩率收益（BD-rate 最高 -1.7%）、LCU 级码控与 ROI 等新特性及 AVX2 优化，属实质性版本发布。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: Kvazaar 发布 v1.1.0

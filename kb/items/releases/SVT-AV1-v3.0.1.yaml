@@ -1,0 +1,47 @@
+id: repo_release:github:SVT-AV1-v3.0.1
+type: repo_release
+title: v3.0.1
+research_lines:
+- traditional_codec_opt
+source:
+  channel: github
+  external_id: AOMediaCodec/SVT-AV1@v3.0.1
+  url: https://github.com/AOMediaCodec/SVT-AV1/releases/tag/v3.0.1
+time:
+  published: '2026-10-25'
+  collected: '2026-11-12'
+entities:
+- ref: impl:SVT-AV1
+  role: subject
+- ref: impl:FFmpeg
+  role: uses
+- ref: impl:libavif
+  role: uses
+claims:
+- statement: 进一步改进 Arm 实现，并修复 Arm 与 x86 输出不一致问题
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 修复 compute_global_motion 内存泄漏与 subpel search 整数溢出断言问题，并清理部分未定义行为
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 针对 3.0 API 变更的修复已可用，FFmpeg 与 GStreamer 均已合入相关适配
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 已知问题：macOS M1 上与 libavif 的 avifsvttest 配合使用时偶发难以复现的 SIGTRAP
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: SVT-AV1 3.0.1 修复 Arm 与 x86 输出不一致、内存泄漏及整数溢出，API 修复已合入 FFmpeg 与 GStreamer。
+  abstract_zh: SVT-AV1 v3.0.1 为 3.0 系列的编码器清理与缺陷修复版本：进一步增强 Arm 平台并修复 Arm 与 x86 输出不一致问题，同时修复 compute_global_motion
+    内存泄漏、subpel search 整数溢出及若干未定义行为。针对上一版 API 变更的适配修复现已可用，FFmpeg 与 GStreamer 已合入相关修复。已知问题包括 macOS M1 上配合
+    libavif 的 avifsvttest 偶发 SIGTRAP。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 补丁版本包含编码器实质修复（Arm/x86 输出一致性、内存泄漏、整数溢出）及 FFmpeg/GStreamer API 兼容性修复，非重大版本亦非纯噪声。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: SVT-AV1 发布 v3.0.1

@@ -1,0 +1,59 @@
+id: repo_release:github:SVT-AV1-v3.1.0
+type: repo_release
+title: v3.1.0
+research_lines:
+- traditional_codec_opt
+source:
+  channel: github
+  external_id: AOMediaCodec/SVT-AV1@v3.1.0
+  url: https://github.com/AOMediaCodec/SVT-AV1/releases/tag/v3.1.0
+time:
+  published: '2026-10-26'
+  collected: '2026-11-12'
+entities:
+- ref: impl:SVT-AV1
+  role: subject
+- ref: org:AOMedia
+  role: subject
+- ref: codec:AV1
+  role: uses
+- ref: concept:QP
+  role: uses
+- ref: metric:BD-Rate
+  role: measured_by
+claims:
+- statement: 新增 --rtc 旗标设置 RTC 默认参数，并启用 M11/M12 预设，RTC 模式在 M7-M10 各预设相近复杂度下取得约 5-10% BD-Rate 改善
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 随机接入模式 fast-decode 0 下 M1-M5 在同质量水平提速约 15-25%，fast-decode 1,2 下 M3-M7 提速约 15-20%
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: M0 MR 模式获得 1-1.5% BD-Rate 改进，Low Delay 模式通过补齐缺失编码工具实现显著改进并开放预设 0-6
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 新增随机接入模式的 S-Frame 支持，并从 SVT-AV1-PSY 移植 variance boost 特性与 --chroma-qm-min/--chroma-qm-max
+    旗标
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: Arm Neon 与 SVE2 优化使低分辨率高比特深度编码平均提速约 5%；在 AWS Graviton4 (Clang 20) 上相对 v3.0.2 各分辨率整体提速 3-8%
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 移除 cpuinfo 依赖改用 aom 的 CPU 检测代码，并提供面向 RTC 用例的精简构建选项；修复 QP 处理、VBR 稳定性、屏幕内容与 resize-mode 问题
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: SVT-AV1 3.1.0 新增 RTC 模式与 S-Frame 支持，随机接入提速 15-25%，RTC 场景 BD-Rate 改善 5-10%
+  abstract_zh: SVT-AV1 v3.1.0 引入 --rtc 旗标与 M11/M12 预设，RTC 模式在相近复杂度下取得约 5-10% BD-Rate 改善；随机接入 fast-decode
+    模式下 M1-M5 提速 15-25%、M3-M7 提速 15-20%，M0 MR 获得 1-1.5% BD-Rate 提升。同时支持随机接入模式的 S-Frame、移植 SVT-AV1-PSY
+    的色度 QM 与 variance boost 特性，Arm Neon/SVE2 优化使低分辨率高比特深度编码平均提速约 5%，并在 AWS Graviton4 上相对 v3.0.2 取得 3-8%
+    的整体加速。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 正式版本包含实质性性能改进、新特性（RTC 模式、S-Frame 支持）与 API 更新，但非架构级变化或新标准支持
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: SVT-AV1 发布 v3.1.0

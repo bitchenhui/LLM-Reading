@@ -1,0 +1,41 @@
+id: repo_release:github:SVT-AV1-v3.0.2
+type: repo_release
+title: v3.0.2
+research_lines:
+- traditional_codec_opt
+source:
+  channel: github
+  external_id: AOMediaCodec/SVT-AV1@v3.0.2
+  url: https://github.com/AOMediaCodec/SVT-AV1/releases/tag/v3.0.2
+time:
+  published: '2026-10-25'
+  collected: '2026-11-12'
+entities:
+- ref: impl:SVT-AV1
+  role: subject
+- ref: concept:QP
+  role: uses
+claims:
+- statement: 本版本包含多项 ARM SIMD 优化，继续提升 Arm 平台编码性能
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 修复了无损（lossless）与 AVIF 模式缺失初始化的缺陷
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 补充了 --luminance-qp-bias 参数的缺失文档
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: SVT-AV1 v3.0.2 持续优化 ARM SIMD 性能，并修复无损与 AVIF 编码初始化缺失问题。
+  abstract_zh: SVT-AV1 v3.0.2 为补丁版本，包含多项 ARM 平台 SIMD 指令级优化，进一步提升 Arm 架构编码性能。同时修复了无损（lossless）与 AVIF 模式下缺失初始化的问题，并补充了
+    --luminance-qp-bias 参数的文档说明。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 补丁版本含 ARM SIMD 性能优化与无损/AVIF 初始化修复，有实质内容但非架构级重大更新
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: SVT-AV1 发布 v3.0.2

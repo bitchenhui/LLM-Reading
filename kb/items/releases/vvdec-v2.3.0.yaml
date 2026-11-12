@@ -1,0 +1,39 @@
+id: repo_release:github:vvdec-v2.3.0
+type: repo_release
+title: vvdec-2.3.0
+research_lines:
+- traditional_codec_opt
+source:
+  channel: github
+  external_id: fraunhoferhhi/vvdec@v2.3.0
+  url: https://github.com/fraunhoferhhi/vvdec/releases/tag/v2.3.0
+time:
+  published: '2024-04-29'
+  collected: '2026-11-12'
+entities:
+- ref: impl:VVdec
+  role: subject
+claims:
+- statement: 改进了错误处理机制，包括早期损坏检测（early corruption detection）
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在 vvdec/vvdec.h 接口中将 parseThreads 重命名为 parseDelay，且保持向后兼容
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 修复了禁用 BTT 时的边界处理问题
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: vvDec 2.3.0 增强错误处理与早期损坏检测，并将接口参数 parseThreads 更名为 parseDelay（向后兼容）。
+  abstract_zh: vvDec v2.3.0 改进了码流错误处理机制，新增早期损坏检测能力，提升解码器鲁棒性。公开接口中将 parseThreads 重命名为 parseDelay，保持向后兼容。同时修复了禁用
+    BTT 时的边界处理问题并做少量内部优化。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 包含错误处理增强、API 参数更名与缺陷修复等实质工程改进，但非架构级或新标准重大版本
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: vvDec 发布 v2.3.0

@@ -1,0 +1,38 @@
+id: repo_release:github:vvdec-v2.1.2
+type: repo_release
+title: vvdec-2.1.2
+research_lines:
+- traditional_codec_opt
+source:
+  channel: github
+  external_id: fraunhoferhhi/vvdec@v2.1.2
+  url: https://github.com/fraunhoferhhi/vvdec/releases/tag/v2.1.2
+time:
+  published: '2023-09-20'
+  collected: '2026-11-12'
+entities:
+- ref: impl:VVdec
+  role: subject
+claims:
+- statement: 修复了 RPR（参考图像重采样）处理中的一处越界读取缺陷
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 改进了所有外部接口函数中的异常处理
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 发布 vvDec v2.1.2 补丁版本
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: VVdec 2.1.2 修复 RPR 越界读取，并增强全部外部接口的异常处理
+  abstract_zh: vvDec 2.1.2 为缺陷修复版本，修复了 RPR（参考图像重采样）路径中的越界读取问题，并改进了所有外部接口函数的异常处理以提升健壮性。该版本不包含性能改进或新特性，仅附带少量次要修复。
+assessment:
+  relevance: low
+  decision: summary_only
+  reason: 仅为补丁级修复版本，含 RPR 越界读取等真实缺陷修复，非纯打包/CI 噪声，但无性能或功能实质内容
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: VVdec 发布 v2.1.2

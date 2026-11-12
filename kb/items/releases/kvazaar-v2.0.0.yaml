@@ -1,0 +1,58 @@
+id: repo_release:github:kvazaar-v2.0.0
+type: repo_release
+title: v2.0.0
+research_lines:
+- traditional_codec_opt
+source:
+  channel: github
+  external_id: ultravideo/kvazaar@v2.0.0
+  url: https://github.com/ultravideo/kvazaar/releases/tag/v2.0.0
+time:
+  published: '2020-04-22'
+  collected: '2026-11-12'
+entities:
+- ref: impl:kvazaar
+  role: subject
+- ref: codec:HEVC
+  role: uses
+- ref: concept:GOP
+  role: uses
+- ref: concept:QP
+  role: uses
+- ref: concept:RDO
+  role: uses
+claims:
+- statement: 相比 v1.3，各速度档总平均 BD-Bitrate 降低 15.4%–31.1%，个别组合如 hevc-D@2-vf 达 -37.4%
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 新增备选码控算法 oba（optimal bit allocation，--rc-algorithm oba）与方差自适应量化 --vaq
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 更新 GOP 定义为 QP offset 模型，新增 16 帧层级 GOP --gop=16，PU 深度可按 GOP 层分别配置
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 新增帧内 QP 偏移选项 --intra-qp-offset（默认自动）、可配置 zero-coeff-rdo、帧内码控分析 --intra-bits，以及基于机器学习的帧内 PU
+    深度约束 --ml-pu-depth-intra
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 扩展 AVX2 优化至 SAO、变换、帧内预测与方差计算；因栈对齐问题 MinGW GCC 下禁用 AVX2，建议改用 Clang 获取 AVX2 性能
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 中慢速档（5-m 至 7-sr）较 v1.3 提速约 1.18–1.29 倍，最快档（1-sf 至 3-fr）约 0.80–0.83 倍，反映压缩效率与速度的权衡
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: Kvazaar 2.0 正式发布：新增 OBA 码控与 VAQ，BD-Bitrate 较 v1.3 平均降低 15–31%。
+  abstract_zh: Kvazaar v2.0.0 是自 1.3 以来的重大版本，引入最优比特分配码控算法（--rc-algorithm oba）、方差自适应量化（--vaq）、基于 QP offset
+    模型的 GOP 定义（新增 16 帧层级 GOP）以及机器学习帧内 PU 深度约束等特性。相比 v1.3，全速度档总平均 BD-Bitrate 降低 15.4%–31.1%，中慢速档提速约 1.18–1.29
+    倍，并扩展了 SAO、变换、帧内预测等模块的 AVX2 优化。注意因栈对齐问题 MinGW GCC 下已禁用 AVX2，需 AVX2 支持建议改用 Clang。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: Kvazaar 重大版本 2.0，引入新码控算法与 GOP/QP 体系重构，BD-Bitrate 较 v1.3 大幅下降，属架构级更新的正式版。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: Kvazaar 发布 v2.0.0

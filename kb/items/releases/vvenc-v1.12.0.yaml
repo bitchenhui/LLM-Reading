@@ -1,0 +1,47 @@
+id: repo_release:github:vvenc-v1.12.0
+type: repo_release
+title: vvenc-v1.12.0
+research_lines:
+- traditional_codec_opt
+source:
+  channel: github
+  external_id: fraunhoferhhi/vvenc@v1.12.0
+  url: https://github.com/fraunhoferhhi/vvenc/releases/tag/v1.12.0
+time:
+  published: '2024-06-27'
+  collected: '2026-11-12'
+entities:
+- ref: impl:VVenC
+  role: subject
+- ref: concept:QP
+  role: uses
+claims:
+- statement: 新增封顶恒定质量模式（CQF），在设置固定 QP 并启用 QPA 且施加最大码率约束时生效
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: simple app 新增单色（monochrome）视频支持
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 新增多线程选项自动配置以改善扩展性，simple app 默认开启、FF-app 默认关闭，可通过 mtprofile 选项禁用，且结果会随线程数变化
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: faster 预设编码速度提升约5%
+  confidence: reported
+  metrics:
+  - name: 编码速度提升
+    value: ~5%
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: VVenC 1.12.0 新增封顶恒定质量模式 CQF 与自动多线程配置，faster 预设提速约5%。
+  abstract_zh: 本版本新增封顶恒定质量模式（CQF），在固定 QP 结合 QPA 与最大码率约束时启用；simple app 增加单色视频支持。多线程选项改为自动配置以改善扩展性（simple
+    app 默认开启、FF-app 默认关闭，可用 mtprofile 禁用），编码结果将随线程数变化。此外 faster 预设速度提升约5%。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 正式次要版本，含新编码模式（CQF）、单色视频支持、多线程自动配置及约5%提速，属实质内容更新但非架构级变化。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: VVenC 发布 v1.12.0

@@ -1,0 +1,38 @@
+id: repo_release:github:dav1d-0.1.0
+type: repo_release
+title: dav1d 0.1.0 'Gazelle'
+research_lines: []
+source:
+  channel: github
+  external_id: videolan/dav1d@0.1.0
+  url: https://github.com/videolan/dav1d/releases/tag/0.1.0
+time:
+  published: '2018-12-15'
+  collected: '2026-11-12'
+entities:
+- ref: codec:AV1
+  role: subject
+claims:
+- statement: dav1d 0.1.0 支持全部 AV1 特性、8-12 bit 全部位深以及全部色度子采样格式
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在支持 AVX-2 的处理器上，dav1d 解码速度显著快于其他 AV1 解码器
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 该版本已包含 SSSE3 与 NEON 架构的汇编优化代码
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: dav1d 首个版本，快速轻量 AV1 解码器，全特性支持并带 AVX-2/SSSE3/NEON 优化。
+  abstract_zh: dav1d 0.1.0（代号 Gazelle）是该项目的首个正式版本，定位为快速、小巧的 AV1 解码器。它宣称支持全部 AV1 特性、8 到 12 bit 的所有位深及全部色度采样格式。性能上，其在支持
+    AVX-2 的处理器上明显快于其他 AV1 解码器，并已包含 SSSE3 与 NEON 汇编优化，后续将持续增加。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 全新 AV1 解码器 dav1d 的首个正式版本，宣称完整支持 AV1 全部特性并带多级 SIMD 优化，属重大工程里程碑与新标准支持。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: dav1d 发布 0.1.0 'Gazelle'：首个正式版本

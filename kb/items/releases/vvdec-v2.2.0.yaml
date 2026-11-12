@@ -1,0 +1,45 @@
+id: repo_release:github:vvdec-v2.2.0
+type: repo_release
+title: v2.2.0
+research_lines:
+- traditional_codec_opt
+source:
+  channel: github
+  external_id: fraunhoferhhi/vvdec@v2.2.0
+  url: https://github.com/fraunhoferhhi/vvdec/releases/tag/v2.2.0
+time:
+  published: '2024-01-25'
+  collected: '2026-11-12'
+entities:
+- ref: impl:VVdec
+  role: subject
+claims:
+- statement: 修复 simd-everywhere 中的 bug 后启用 AVX2 到 NEON 指令转译，扩展 ARM 平台的 SIMD 支持
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 修复线程池死锁并移除 64 线程数量限制
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 播放期间通过休眠所有线程提升功耗效率
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 默认解析延迟提升至 1.5 * num_threads 以改善 CPU 利用率
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 修正长期参考图像的 POC 设置
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 修复线程池死锁并解除64线程限制，启用AVX2到NEON转译，提升播放能效与CPU利用率。
+  abstract_zh: vvdec v2.2.0 修复 simd-everywhere 中的缺陷，从而启用 AVX2 到 NEON 的指令转译，扩展了对 ARM 平台的优化支持。同时修复线程池死锁并移除
+    64 线程数量上限，通过播放时休眠空闲线程降低功耗。此外将默认解析延迟提升至 1.5 倍线程数以改善 CPU 利用率，并修正长期参考图像的 POC 设置及若干小问题。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 补丁级版本但含实质工程改进：修复线程池死锁、解除64线程限制、启用AVX2到NEON转译并优化功耗与CPU利用率，非重大架构变化也非纯噪声。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: VVDec 发布 v2.2.0

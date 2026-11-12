@@ -1,0 +1,57 @@
+id: repo_release:github:libavif-v1.3.0
+type: repo_release
+title: v1.3.0
+research_lines:
+- traditional_codec_opt
+source:
+  channel: github
+  external_id: AOMediaCodec/libavif@v1.3.0
+  url: https://github.com/AOMediaCodec/libavif/releases/tag/v1.3.0
+time:
+  published: '2025-05-09'
+  collected: '2026-11-12'
+entities:
+- ref: impl:libavif
+  role: subject
+- ref: org:AOMedia
+  role: subject
+- ref: codec:AV1
+  role: uses
+claims:
+- statement: avifImageRGBToYUV 与 avifImageYUVToRGB 新增灰度转换支持，并新增 avifRGBFormatIsGray API 用于判断 avifRGBFormat
+    是否为灰度格式
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 为符合 AV1 规范，禁止使用 AVIF_MATRIX_COEFFICIENTS_IDENTITY 与 AVIF_PIXEL_FORMAT_YUV400 组合进行编码
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: avifenc 默认改为自动 tiling 模式
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 解码器新增对 tmap 项 ispe 属性的校验，编码器修复 tmap 配合 grid 时 ispe 属性错误
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: avifenc/avifdec 读写灰度 PNG/JPEG 时不再经由 RGB 路径转换
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 修复 avifdec 输出 JPEG/PNG 时 ImageRotation 角度为 1 或 3 的 Exif 方向错误问题
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 依赖更新：libaom v3.12.1、libyuv、libpng 1.6.47、libjpeg 3.1.0 等
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 新增灰度图像转换支持与相关 API，并强化 AV1 规范兼容性与编解码健壮性
+  abstract_zh: libavif v1.3.0 在 RGB/YUV 互转中新增灰度（grayscale）转换支持，并提供 avifRGBFormatIsGray 查询 API。兼容性方面，禁止
+    AVIF_MATRIX_COEFFICIENTS_IDENTITY 与 YUV400 组合编码以满足 AV1 规范，同时修复 tmap 项 ispe 校验与 grid 编码问题。此外 avifenc
+    默认启用自动 tiling 模式，并升级了 aom（v3.12.1）、libyuv、libpng 等多项依赖。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: v1.3.0 为含新特性与 API 变化（灰度转换、avifRGBFormatIsGray）、AV1 规范兼容性修正及多项编码/解码修复的正式版本，属实质内容小版本而非架构级重大版本
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: libavif 发布 v1.3.0

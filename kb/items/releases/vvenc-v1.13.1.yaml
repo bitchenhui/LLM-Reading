@@ -1,0 +1,43 @@
+id: repo_release:github:vvenc-v1.13.1
+type: repo_release
+title: vvenc-v1.13.1
+research_lines:
+- traditional_codec_opt
+source:
+  channel: github
+  external_id: fraunhoferhhi/vvenc@v1.13.1
+  url: https://github.com/fraunhoferhhi/vvenc/releases/tag/v1.13.1
+time:
+  published: '2025-03-21'
+  collected: '2026-11-12'
+entities:
+- ref: impl:VVenC
+  role: subject
+claims:
+- statement: x86(_64) 架构最低指令集要求提升为必须支持 SSE 4.1，同时修复旧 x86 CPU 上因非法指令导致的库加载错误
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 修复启用 slice type adaptation 时因缺少统计信息导致码率控制精度下降的 bug
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 修复 ARM 平台非对齐 load/store、32 位 ARM SIMD 水平加法及 FGA 行/列访问问题
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 新增默认关闭的可选不稳定 API 扩展，允许随输入帧传递用户数据，同时保持 API 与 ABI 兼容；并支持使用外部 nlohmann_json
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: VVenC v1.13.1 修复 ARM/SIMD 与码控缺陷，x86 最低要求提升至 SSE 4.1，新增可选帧级用户数据 API 扩展
+  abstract_zh: 本版本修复多项问题：ARM 平台非对齐 load/store、32 位 ARM SIMD 水平加法、FGA 行/列访问，以及启用 slice type adaptation
+    时因统计缺失导致码率控制精度下降的 bug。兼容性方面，要求 x86(_64) 平台支持 SSE 4.1，并修复旧 x86 CPU 上因非法指令导致的库加载错误。此外允许链接外部 nlohmann_json，并新增默认关闭、保持
+    API/ABI 兼容的可选扩展，支持随输入帧传递用户数据。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 正式补丁版，含码控修复、x86 最低指令集要求变更与可选 API 扩展，有实质内容但非架构级更新
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: VVenC 发布 v1.13.1

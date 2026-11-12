@@ -1,0 +1,39 @@
+id: repo_release:github:libavif-v1.2.1
+type: repo_release
+title: v1.2.1
+research_lines:
+- traditional_codec_opt
+source:
+  channel: github
+  external_id: AOMediaCodec/libavif@v1.2.1
+  url: https://github.com/AOMediaCodec/libavif/releases/tag/v1.2.1
+time:
+  published: '2025-03-17'
+  collected: '2026-11-12'
+entities:
+- ref: impl:libavif
+  role: subject
+claims:
+- statement: avifdec 新增 --index all 选项，支持将 AVIF 图像序列的所有帧导出为零填充编号的 PNG 文件
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 修复 macOS 10.15 及更早版本上 libargparse 本地依赖的补丁步骤，以及 gcc 10 下 libyuv 的兼容性问题
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 采用更严格的 C99 语法以规避相关编译问题，并将 SVT 构建脚本更新至 v3.0.1
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 补丁版：avifdec 支持序列全帧导出，并修复多平台构建兼容性问题。
+  abstract_zh: libavif v1.2.1 为 avifdec 新增 --index all 选项，可将 AVIF 图像序列的全部帧导出为零填充编号的 PNG 文件。同时修复 macOS
+    10.15 及更早版本的 libargparse 依赖补丁步骤、gcc 10 下 libyuv 兼容性问题，并采用更严格的 C99 语法。构建脚本中 SVT 依赖更新至 v3.0.1。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 补丁版含一项实用新特性（avifdec 序列全帧导出）及多项构建兼容性修复，非纯噪声也非重大版本。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: libavif 发布 v1.2.1

@@ -1,0 +1,58 @@
+id: repo_release:github:SVT-AV1-v4.1.0
+type: repo_release
+title: v4.1.0
+research_lines:
+- learned_codec
+- traditional_codec_opt
+source:
+  channel: github
+  external_id: AOMediaCodec/SVT-AV1@v4.1.0
+  url: https://github.com/AOMediaCodec/SVT-AV1/releases/tag/v4.1.0
+time:
+  published: '2026-10-26'
+  collected: '2026-11-12'
+entities:
+- ref: impl:SVT-AV1
+  role: subject
+- ref: codec:AV1
+  role: uses
+- ref: concept:EntropyModel
+  role: uses
+- ref: concept:QP
+  role: uses
+claims:
+- statement: 重构模式决策（MD）、EncDec 与熵编码内核
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 提升静图编码效率并针对静图优化屏幕内容编码
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 对 M3 及以下预设更改色度 Wiener 滤波等级
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: Arm 平台重构亚像素方差内核并优化 16b SAD 内核
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 通过引入互斥锁修复同一进程运行多编码器实例时的挂起问题
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 修复循环 QP 刷新的运动计算与深度细化算法缺陷
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 恢复无 SVT_AV1 前缀的 PredStructure 枚举，并重命名 svt_log 以避免与 SVT-JPEG-XS 符号冲突
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: SVT-AV1 v4.1.0 重构核心编码内核并提升静图编码效率，修复多实例挂起等问题。
+  abstract_zh: SVT-AV1 v4.1.0 对模式决策、EncDec 与熵编码内核进行重构，提升静图编码效率并优化屏幕内容编码，同时调整 M3 及以下预设的色度 Wiener 滤波等级。Arm
+    侧重构亚像素方差并优化 16b SAD 内核。修复了多实例编码挂起、循环 QP 刷新运动计算等问题，并重命名 svt_log 以避免与 SVT-JPEG-XS 冲突。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 该版本包含编码内核重构、静图与屏幕内容编码效率提升等实质算法改进，属有内容价值的正式版本更新。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: SVT-AV1 发布 v4.1.0

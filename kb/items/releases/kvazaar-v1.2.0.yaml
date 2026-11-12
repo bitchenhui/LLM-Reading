@@ -1,0 +1,63 @@
+id: repo_release:github:kvazaar-v1.2.0
+type: repo_release
+title: v1.2.0
+research_lines:
+- traditional_codec_opt
+source:
+  channel: github
+  external_id: ultravideo/kvazaar@v1.2.0
+  url: https://github.com/ultravideo/kvazaar/releases/tag/v1.2.0
+time:
+  published: '2017-11-17'
+  collected: '2026-11-12'
+entities:
+- ref: impl:kvazaar
+  role: subject
+- ref: codec:HEVC
+  role: uses
+- ref: concept:QP
+  role: uses
+- ref: concept:GOP
+  role: uses
+- ref: metric:PSNR
+  role: measured_by
+- ref: impl:FFmpeg
+  role: uses
+claims:
+- statement: 相比 v1.1，全部速度预设平均提速 1.19–1.28 倍，hevc-D 类在 2-vf 预设下最高达 1.64 倍
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 快速预设压缩效率显著改善：BD-Bitrate 总体 0-uf 降 14.80%、1-sf 降 6.59%、2-vf 降 4.68%，hevc-B 0-uf 降 19.04%
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 新增帧内预测模式加密功能，提供 --crypto=intra_pred_modes 与 --key 密钥设置选项
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 新增 360° 视频 ERP 投影的自适应 QP 选项 --erp-aqp，并新增 --sao=band/edge 限制 SAO 类型
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 改进 --owf=auto 与 --threads=auto 的自动选择算法，并降低 SAO 引起的帧间 CTU 依赖以提升并行效率
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: API 变更：kvz_config.roi.dqps 类型由 uint8_t* 改为 int8_t，ROI 增量 QP 支持负值
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 修复 GOP 模式下 I 帧非 IRAP、QP 过大产生非法码流、死锁竞态、加密内存泄漏、非最小 CU 整数倍尺寸崩溃等多处缺陷
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: Kvazaar v1.2.0 全预设提速1.19–1.28倍，快速预设码率最多降14.8%并新增加密与360°自适应QP。
+  abstract_zh: Kvazaar v1.2.0 相比 v1.1 在全部速度预设上平均提速 1.19–1.28 倍，快速预设的 BD-Bitrate 大幅下降（0-uf 总体 -14.80%，1-sf
+    -6.59%）。新增帧内预测模式加密（--crypto、--key）、360° ERP 自适应 QP（--erp-aqp）及 --sao=band/edge 限制选项，并优化 --rd=2 帧内模式检查与
+    SAO 跨帧 CTU 依赖。同时修复 GOP 下 I 帧非 IRAP、QP 过大致非法码流、死锁、内存泄漏等多项问题，API 层面 kvz_config.roi.dqps 改为 int8_t 以支持负增量
+    QP。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 正式小版本发布，含全预设性能提升、压缩率改进、加密与360°自适应QP等新特性及API类型变更，内容实质但非架构级或新标准支持。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: Kvazaar 发布 v1.2.0

@@ -1,0 +1,42 @@
+id: repo_release:github:SVT-AV1-v4.0.1
+type: repo_release
+title: v4.0.1
+research_lines:
+- traditional_codec_opt
+source:
+  channel: github
+  external_id: AOMediaCodec/SVT-AV1@v4.0.1
+  url: https://github.com/AOMediaCodec/SVT-AV1/releases/tag/v4.0.1
+time:
+  published: '2026-10-26'
+  collected: '2026-11-12'
+entities:
+- ref: impl:SVT-AV1
+  role: subject
+claims:
+- statement: 修复 quantize_inv_quantize 中错误的平面选择缺陷
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 修复 pic_manager_process 中循环变量错误更新导致的挂起问题
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 共享库与 pkg-config 版本号现绑定至 CMake 项目版本，并新增 CI 校验防止再次错标
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 清理旧调试打印、修复 Windows 构建警告，并纠正帮助输出中 tf-strength 默认值
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: SVT-AV1 4.0.1 修复量化平面选择错误、pic_manager 挂起及库版本号错标等缺陷
+  abstract_zh: 该补丁版本修复了 quantize_inv_quantize 中平面选择错误，以及 pic_manager_process 循环变量更新不当导致的挂起问题。同时将共享库与 pkg-config
+    版本号绑定至 CMake 项目版本并新增 CI 检查，另清理调试打印、修复 Windows 构建警告并纠正帮助输出中 tf-strength 默认值。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 补丁版本包含量化平面选择错误、运行挂起等实质性缺陷修复，超出纯打包/CI噪声，但无性能或新特性内容
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: SVT-AV1 发布 v4.0.1

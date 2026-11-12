@@ -1,0 +1,49 @@
+id: repo_release:github:kvazaar-v2.3.2
+type: repo_release
+title: v2.3.2
+research_lines:
+- traditional_codec_opt
+source:
+  channel: github
+  external_id: ultravideo/kvazaar@v2.3.2
+  url: https://github.com/ultravideo/kvazaar/releases/tag/v2.3.2
+time:
+  published: '2025-09-17'
+  collected: '2026-11-12'
+entities:
+- ref: impl:kvazaar
+  role: subject
+- ref: codec:HEVC
+  role: uses
+- ref: metric:PSNR
+  role: measured_by
+claims:
+- statement: 修复10位编码与SMP/AMP块代价计算，veryslow预设因AMP代价修复而启用AMP
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 修复后veryslow预设整体BD-BR(PSNR)降1.2%、BD-BR(SSIM)降1.4%，速度为0.98×
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: veryslow预设v2.3.2对比v2.3.1整体BD-BR(PSNR)降2.7%、BD-BR(SSIM)降3.0%，速度为0.77×
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 修复SATD计算、y4m读取、--no-early-skip、无损模式误选skip，并改进码率控制与tr splits/smp的比特代价计算
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 默认配置更新为与medium预设一致，并修复iOS/Android/Windows ARM64/emscripten等多平台构建问题
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 修复10位编码与SMP/AMP代价计算，veryslow预设BD-BR(PSNR)降2.7%
+  abstract_zh: 该版本无重大新特性，但包含多项关键修复，最显著的是10位编码修复以及SMP/AMP块的代价计算修正，使veryslow预设重新启用AMP。修复使veryslow预设整体BD-BR(PSNR)下降约1.2%，与v2.3.1的veryslow相比BD-BR(PSNR)下降2.7%，代价是编码速度降至0.77×。此外还改进了码率控制，修复y4m读取、--no-early-skip、无损模式误选skip等问题，并补充iOS、Android、Windows
+    ARM64、emscripten等多平台构建修复。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 正式补丁版但含实质压缩率改进（veryslow 预设 BD-BR 显著下降）与预设行为变化，属有实质内容的正式版，不构成架构级重大版本
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: Kvazaar 发布 v2.3.2

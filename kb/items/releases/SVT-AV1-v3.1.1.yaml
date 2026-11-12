@@ -1,0 +1,44 @@
+id: repo_release:github:SVT-AV1-v3.1.1
+type: repo_release
+title: v3.1.1
+research_lines:
+- traditional_codec_opt
+source:
+  channel: github
+  external_id: AOMediaCodec/SVT-AV1@v3.1.1
+  url: https://github.com/AOMediaCodec/SVT-AV1/releases/tag/v3.1.1
+time:
+  published: '2026-10-26'
+  collected: '2026-11-12'
+entities:
+- ref: impl:SVT-AV1
+  role: subject
+- ref: concept:QP
+  role: uses
+claims:
+- statement: 修复 10bit 无损编码功能
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 修复 --tune ssim 调优模式（#2293）
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 修复 min-qp 与 max-qp 的范围检查及错误提示
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 修复 NEON 函数中的溢出缺陷及单元测试取值范围
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: SVT-AV1 v3.1.1 补丁版，修复 10bit 无损编码、--tune ssim 及 QP 范围检查等缺陷。
+  abstract_zh: SVT-AV1 v3.1.1 为维护性补丁版本，集中修复多项编码正确性问题：包括 10bit 无损编码失效、--tune ssim 调优模式异常，以及 min-qp/max-qp
+    的取值范围检查与报错信息。另修复单元测试取值范围与 NEON 函数中的一处溢出 bug，未包含性能或压缩率改进。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 为功能缺陷修复的补丁版本（10bit 无损、--tune ssim、QP 范围检查、NEON 溢出），非纯噪声但无性能或新特性内容。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: SVT-AV1 发布 v3.1.1

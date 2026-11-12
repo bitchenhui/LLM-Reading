@@ -1,0 +1,63 @@
+id: repo_release:github:libavif-v1.4.0
+type: repo_release
+title: v1.4.0
+research_lines:
+- traditional_codec_opt
+source:
+  channel: github
+  external_id: AOMediaCodec/libavif@v1.4.0
+  url: https://github.com/AOMediaCodec/libavif/releases/tag/v1.4.0
+time:
+  published: '2026-03-04'
+  collected: '2026-11-12'
+entities:
+- ref: impl:libavif
+  role: subject
+- ref: org:AOMedia
+  role: subject
+- ref: codec:AV1
+  role: uses
+- ref: concept:QP
+  role: uses
+- ref: metric:PSNR
+  role: uses
+- ref: org:Apple
+  role: uses
+claims:
+- statement: 新增对 AVIF 规范 v1.2 中部分 Sample Transform 方案的支持，包括 16-bit Sample-Transform AVIF 解码及与 grid 输入图像项的组合，并移除原实验性
+    CMake 开关
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: avifenc 支持通过 --stdin-format 从 stdin 读取 PNG/JPEG，并新增 Apple 风格 gain map JPEG 的转换支持
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 解码 PNG 文件时支持 cICP chunk，存在时按 PNG 第三版规范优先于 iCCP 等其他色彩信息 chunk
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 编码默认调优变更：alpha 编码使用 AOM_TUNE_PSNR（避免 SSIM 导致振铃），非 RGB 彩色样本在 libaom v3.13.0+ 下默认使用 AOM_TUNE_IQ，并采用面向
+    AOM_TUNE_IQ 设计的 quality-to-QP 映射公式
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 分层图像当总层数为 2 且第一层质量极低（q ≤ 10）时改用 all-intra 编码
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 移除对 libaom 2.0.0 及更早版本的支持，C++ API 新增 avif::RGBImageCleanup，依赖更新包括 dav1d 1.5.3、libaom v3.13.1、rav1e
+    v0.8.1 等
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: libavif 1.4.0 新增 AVIF v1.2 Sample Transform 与 Apple gain map 支持，优化编码调优策略。
+  abstract_zh: libavif v1.4.0 支持了 AVIF 规范 v1.2 中的部分 Sample Transform 方案，包括 16-bit Sample-Transform 文件解码、与
+    grid 图像项的组合，并新增 Apple 风格 gain map JPEG 转换、PNG cICP chunk 解码及 stdin 输入等特性。编码侧默认调优策略调整：alpha 通道使用 AOM_TUNE_PSNR，非
+    RGB 彩色样本在 libaom v3.13.0+ 下启用 AOM_TUNE_IQ，并采用面向 AOM_TUNE_IQ 的 quality-to-QP 映射公式。此外移除对 libaom 2.0.0
+    及更早版本的支持，批量更新 dav1d、aom、rav1e 等第三方依赖。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 正式版引入 AVIF 规范 v1.2 的 Sample Transform 标准特性支持，并含编码调优策略变更与 API 调整，属新标准适配的重大更新。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: libavif 发布 v1.4.0

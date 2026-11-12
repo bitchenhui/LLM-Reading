@@ -1,0 +1,39 @@
+id: repo_release:github:kvazaar-v2.3.1
+type: repo_release
+title: V2.3.1
+research_lines:
+- traditional_codec_opt
+source:
+  channel: github
+  external_id: ultravideo/kvazaar@v2.3.1
+  url: https://github.com/ultravideo/kvazaar/releases/tag/v2.3.1
+time:
+  published: '2024-04-10'
+  collected: '2026-11-12'
+entities:
+- ref: impl:kvazaar
+  role: subject
+claims:
+- statement: 新增 AVX2 帧内角度预测优化，编码器速度提升 1-5%（取决于配置），并规避 MSVC > 19.36 的编译器代码生成问题。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: '修复 array_checksum_generic8 的非对齐访问问题及外部报告的缺失 _mm256_storeu2_m128i 宏问题（issue #394）。'
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 对 CMakeLists.txt 进行多处构建修复，并将 CMakeLists.txt 纳入发行包。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 新增 AVX2 帧内角度预测优化使编码器提速 1-5%，并修复构建与对齐等问题。
+  abstract_zh: Kvazaar v2.3.1 为帧内角度预测引入新的 AVX2 优化，官方报告编码器速度提升 1-5%（视配置而定），同时规避了 MSVC 19.36 以上版本的代码生成问题。此外修复了
+    CMake 构建脚本多处问题、array_checksum_generic8 的非对齐访问，以及缺少 _mm256_storeu2_m128i 宏等外部贡献问题。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 补丁版本包含实质性能改进（AVX2 帧内角度预测优化使编码器提速 1-5%）及多项构建修复，非架构级重大版本。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: Kvazaar 发布 v2.3.1

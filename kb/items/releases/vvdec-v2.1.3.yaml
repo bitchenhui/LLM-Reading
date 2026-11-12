@@ -1,0 +1,38 @@
+id: repo_release:github:vvdec-v2.1.3
+type: repo_release
+title: vvdec-2.1.3
+research_lines:
+- traditional_codec_opt
+source:
+  channel: github
+  external_id: fraunhoferhhi/vvdec@v2.1.3
+  url: https://github.com/fraunhoferhhi/vvdec/releases/tag/v2.1.3
+time:
+  published: '2023-11-09'
+  collected: '2026-11-12'
+entities:
+- ref: impl:VVdec
+  role: subject
+claims:
+- statement: 在 2.1.2 修复之后，降低了 RPR 所需的填充量
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 修复了 armv7 架构的构建问题
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 简化了线程实现
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 减少 RPR 所需填充、修复 armv7 构建并简化线程实现
+  abstract_zh: 该补丁版本在 2.1.2 修复的基础上进一步降低了 RPR（参考图重采样）所需的填充量。同时修复了 armv7 平台的构建问题，并简化了线程实现。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 补丁版本，含 RPR 填充需求减少等功能性修复及 armv7 构建修复与线程简化，改动较小但非纯噪声
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: VVdec 发布 v2.1.3

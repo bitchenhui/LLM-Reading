@@ -1,0 +1,39 @@
+id: repo_release:github:vvdec-v2.1.0
+type: repo_release
+title: vvdec-2.1.0
+research_lines:
+- traditional_codec_opt
+source:
+  channel: github
+  external_id: fraunhoferhhi/vvdec@v2.1.0
+  url: https://github.com/fraunhoferhhi/vvdec/releases/tag/v2.1.0
+time:
+  published: '2023-07-10'
+  collected: '2026-11-12'
+entities:
+- ref: impl:VVdec
+  role: subject
+claims:
+- statement: 新增初始的原生 ARM SIMD 解码实现，提升 ARM 平台的 VVC 解码性能
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 重构 RPL（参考图像列表）管理并完成 CU=PU 结构重构
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 修复子图像场景下仿射运动裁剪的错误
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: vvDec 2.1.0 引入首批原生 ARM SIMD 解码优化并完成 CU=PU 内部重构
+  abstract_zh: vvDec 2.1.0 实现了首个原生 ARM SIMD 解码路径，扩展了 VVC 解码在 ARM 平台（如服务器与 Apple Silicon）上的性能支持。版本同时重构了参考图像列表（RPL）管理并完成
+    CU=PU 结构重构，简化解码器内部架构。另修复了子图像场景下仿射运动裁剪的错误。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 包含首批原生 ARM SIMD 实现、RPL 管理重构与 CU=PU 重构完成等实质工程与性能改进，属有内容的功能性小版本
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: vvDec 发布 v2.1.0

@@ -1,0 +1,50 @@
+id: repo_release:github:kvazaar-v2.1.0
+type: repo_release
+title: v2.1.0
+research_lines:
+- traditional_codec_opt
+source:
+  channel: github
+  external_id: ultravideo/kvazaar@v2.1.0
+  url: https://github.com/ultravideo/kvazaar/releases/tag/v2.1.0
+time:
+  published: '2021-10-13'
+  collected: '2026-11-12'
+entities:
+- ref: impl:kvazaar
+  role: subject
+- ref: concept:GOP
+  role: uses
+claims:
+- statement: 许可证从 LGPL2.1 变更为 3-Clause BSD，允许更自由的使用
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 为插值滤波器新增 AVX2 实现，提升编码性能
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 新增 Y4M 输入格式支持（自动检测，可用 --input-file-format=y4m 手动启用）
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 新增快速码率估计权重自定义表选项（--fast-coeff-table）及权重集采样与精度校验工具（--fast-rd-sampling 等）
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 支持通过 --stats-file-prefix 输出块统计信息用于调试
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 修复 GOP 场景下序列起始 DTS 偏移错误，并在 VPS 中补充重排序与缓冲信息以修复 VLC 播放问题
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: Kvazaar 2.1.0：许可证改为 BSD-3，新增 AVX2 插值优化与 Y4M 输入支持
+  abstract_zh: Kvazaar v2.1.0 将许可证从 LGPL2.1 变更为 3-Clause BSD，放宽了使用限制。新特性包括快速码率估计权重自定义表及配套采样工具、Y4M 输入自动检测支持、调试用块统计输出，并为插值滤波器新增
+    AVX2 实现。同时修复了 GOP 下序列起始 DTS 偏移错误、VPS 缺少重排序/缓冲信息导致的 VLC 播放问题，以及 mingw 与 FreeBSD 构建问题。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 正式版包含许可证变更、AVX2 插值优化、Y4M 输入等实质特性与修复，但非架构级重大版本
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: Kvazaar 发布 v2.1.0

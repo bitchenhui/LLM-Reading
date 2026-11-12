@@ -1,0 +1,51 @@
+id: repo_release:github:libavif-v1.4.2
+type: repo_release
+title: v1.4.2
+research_lines:
+- traditional_codec_opt
+source:
+  channel: github
+  external_id: AOMediaCodec/libavif@v1.4.2
+  url: https://github.com/AOMediaCodec/libavif/releases/tag/v1.4.2
+time:
+  published: '2026-05-26'
+  collected: '2026-11-12'
+entities:
+- ref: impl:libavif
+  role: subject
+- ref: org:AOMedia
+  role: subject
+claims:
+- statement: avifgainmaputil 新增 --jobs 标志支持多线程读写 AVIF，并启用自动 tiling
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 编译要求从 C99 提升至 C11，公共头文件保持 C99 兼容
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 分层图像帧间编码改用 libaom 的 AOM_TUNE_IQ 调优
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 修复 gain map 色调映射中 NaN 旁路 AVIF_CLAMP 及传递函数 11 缺陷
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 修复 altICC 内存泄漏、avifImageCopy 空指针解引用及多层缩放 alpha 分层图像解码错误
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 依赖更新：libaom v3.14.1、SVT-AV1 v4.1.0、libpng 1.6.58 等
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: libavif v1.4.2 新增 gain map 工具多线程支持，修复色调映射与分层图像解码多项缺陷。
+  abstract_zh: 该版本为 avifgainmaputil 新增 --jobs 多线程读写标志并启用自动 tiling，分层图像帧间编码改用 libaom 的 AOM_TUNE_IQ。编译要求提升至
+    C11（公共头文件保持 C99），并同步更新 libaom v3.14.1、SVT-AV1 v4.1.0 等依赖。同时修复 gain map 色调映射 NaN 旁路与传递函数 11 缺陷、altICC
+    内存泄漏、多层缩放 alpha 分层图像解码及 avifImageCopy 空指针解引用等多个问题。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 补丁版本但含实质内容：新增 avifgainmaputil 多线程 --jobs 特性、编译要求升至 C11、修复 gain map 色调映射与分层图像解码等多处缺陷并更新依赖。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: libavif 发布 v1.4.2

@@ -1,0 +1,58 @@
+id: repo_release:github:libavif-v1.1.0
+type: repo_release
+title: v1.1.0
+research_lines:
+- traditional_codec_opt
+source:
+  channel: github
+  external_id: AOMediaCodec/libavif@v1.1.0
+  url: https://github.com/AOMediaCodec/libavif/releases/tag/v1.1.0
+time:
+  published: '2024-07-11'
+  collected: '2026-11-12'
+entities:
+- ref: impl:libavif
+  role: subject
+- ref: org:AOMedia
+  role: subject
+- ref: codec:AV1
+  role: uses
+- ref: impl:SVT-AV1
+  role: uses
+claims:
+- statement: 新增实验性增益图读写 API 与 JPEG 增益图转 AVIF 功能，使图像在 HDR 和 SDR 显示器上均能良好显示，需 AVIF_ENABLE_EXPERIMENTAL_GAIN_MAP
+    编译开关启用
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: avifenc 新增 --layered 实验性分层 AVIF 编码与 --scaling-mode 选项，支持在 Chrome 94+ 等查看器上渐进式渲染，目前仅 aom 编码器支持
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: avifImageScale() 纳入公开 ABI，新增 avif_cxx.h C++ 头文件、avifHeaderFormat 与若干枚举别名，默认强制依赖 libyuv
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 内存分配失败改为返回 AVIF_RESULT_OUT_OF_MEMORY 而非中止，修复复旦大学报告的多个内存错误及 iloc/infe/Exif 解析问题
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 更新编码依赖至 aom v3.9.1、avm research-v7.0.1、dav1d 1.4.3、rav1e v0.7.1、SVT-AV1 v2.1.1，并修复 SVT-AV1
+    接口未设置视频范围的问题
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: avifdec/avifenc 的 --jobs 默认值由 1 改为全部核心，构建选项 AVIF_CODEC_*/AVIF_LOCAL_* 合并为统一的 OFF/LOCAL/SYSTEM
+    取值
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 新增实验性增益图与分层 AVIF 支持，扩展 API/ABI 并修复多个安全内存错误。
+  abstract_zh: libavif v1.1.0 引入实验性增益图读写 API 与 JPEG 增益图转 AVIF 功能，可让图像在 HDR 与 SDR 显示器上均有良好呈现，并新增 avifenc
+    --layered 分层编码支持渐进式渲染。版本将 avifImageScale() 纳入公开 ABI、新增 avif_cxx.h C++ 头文件并默认依赖 libyuv；同时修复复旦大学报告的多个内存错误及
+    iloc/infe 盒解析问题，更新 aom v3.9.1、dav1d 1.4.3、rav1e v0.7.1、SVT-AV1 v2.1.1 等依赖。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: libavif 次版本正式发布，包含实验性增益图/分层编码等大量新特性、API/ABI 扩展与安全修复，内容实质但非架构级重构。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: libavif 发布 v1.1.0

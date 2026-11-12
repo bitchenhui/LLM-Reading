@@ -1,0 +1,39 @@
+id: repo_release:github:vvdec-v2.1.1
+type: repo_release
+title: vvdec-2.1.1
+research_lines:
+- traditional_codec_opt
+source:
+  channel: github
+  external_id: fraunhoferhhi/vvdec@v2.1.1
+  url: https://github.com/fraunhoferhhi/vvdec/releases/tag/v2.1.1
+time:
+  published: '2023-08-10'
+  collected: '2026-11-12'
+entities:
+- ref: impl:VVdec
+  role: subject
+claims:
+- statement: 修复了跳过 RASL 图像的解码缺陷
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 修复了内部图像释放相关的资源管理问题
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 清理了 RPR 与 simdFilter 代码并改进 makefile 构建
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: vvdec 2.1.1 修复跳过 RASL 及内部图像释放等解码缺陷，并清理 RPR 与 simdFilter 代码
+  abstract_zh: 该补丁版本修复了两处解码缺陷：跳过 RASL 图像的问题和内部图像释放问题，可能影响解码正确性与资源管理。同时清理了 RPR 与 simdFilter 相关代码，并改进了 makefile
+    构建。版本未包含新特性、性能数据或 API 变化。
+assessment:
+  relevance: low
+  decision: summary_only
+  reason: 补丁版仅含解码缺陷修复、代码清理与构建改进，无新特性或性能数据，属低影响的正式修复版
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: vvdec 发布 v2.1.1

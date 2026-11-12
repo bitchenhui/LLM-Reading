@@ -1,0 +1,45 @@
+id: repo_release:github:libavif-v1.4.1
+type: repo_release
+title: v1.4.1
+research_lines:
+- traditional_codec_opt
+source:
+  channel: github
+  external_id: AOMediaCodec/libavif@v1.4.1
+  url: https://github.com/AOMediaCodec/libavif/releases/tag/v1.4.1
+time:
+  published: '2026-03-20'
+  collected: '2026-11-12'
+entities:
+- ref: impl:libavif
+  role: subject
+- ref: org:AOMedia
+  role: subject
+claims:
+- statement: avifenc 的 --progressive、--layered、--scaling-mode 选项及 avifEncoder 的 extraLayerCount 不再标记为实验性，分层/渐进式编码特性正式稳定
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 修复 avifgainmaputil 中的 CICP 管理问题与内存泄漏
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 新增 Windows 长路径名支持并修复 CMake 3.22 构建兼容性
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 内置依赖更新至 aom v3.13.2、libxml2 v2.15.2 及新版 libyuv
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 补丁版修复构建与内存泄漏，渐进式/分层编码等实验特性正式转正
+  abstract_zh: libavif v1.4.1 修复 CMake 3.22 构建问题，支持 Windows 长路径名，并修复 avifgainmaputil 中的 CICP 管理与内存泄漏。同时将
+    avifenc 的 --progressive、--layered、--scaling-mode 及 avifEncoder 的 extraLayerCount 从实验性状态转正，标志分层与渐进式
+    AVIF 编码能力进入稳定阶段。依赖同步更新至 aom v3.13.2、libxml2 v2.15.2 及新版 libyuv。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 补丁版本含内存泄漏修复、Windows 长路径支持及分层/渐进式编码特性转正等实质内容，但无架构级变化，不足以 deep_read
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: libavif 发布 v1.4.1

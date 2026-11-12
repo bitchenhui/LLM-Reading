@@ -1,0 +1,67 @@
+id: repo_release:github:SVT-AV1-v4.0.0
+type: repo_release
+title: v4.0.0
+research_lines:
+- traditional_codec_opt
+source:
+  channel: github
+  external_id: AOMediaCodec/SVT-AV1@v4.0.0
+  url: https://github.com/AOMediaCodec/SVT-AV1/releases/tag/v4.0.0
+time:
+  published: '2026-10-26'
+  collected: '2026-11-12'
+entities:
+- ref: impl:SVT-AV1
+  role: subject
+- ref: codec:AV1
+  role: uses
+- ref: concept:QP
+  role: uses
+- ref: metric:BD-Rate
+  role: measured_by
+- ref: metric:MS-SSIM
+  role: measured_by
+- ref: metric:PSNR
+  role: measured_by
+- ref: impl:FFmpeg
+  role: uses
+claims:
+- statement: 重大版本发布，包含不向后兼容的 API 更新：CRF 范围扩展至 70 并新增四分之一粒度步进，清理废弃的宏、结构体与字段及 SVT_AV1_CHECK_VERSION() 标记项
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: AVIF 与静图模式在 tune MS-SSIM 下同质量 M11-M0 提速约 5-8 倍，同等复杂度下 BD-Rate 改善约 5-8%
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: RTC 模式在预设 7-11 同等质量下提速约 5-15%，Random Access 模式（VOD）在 --fast-decode 1/2 下预设 M7-M0 提速 10-25%
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 完成 SVT-AV1-PSY 全部特性向 --tune vq（视频）与 --tune iq（AVIF）的移植，新增改善细节保留与胶片颗粒保持的 AC Bias 心理视觉特性，并支持自定义全局
+    logger
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 新增逐帧 PSNR 与 SSIM 指标计算能力，并为静图编码模式新增 tune IQ 与 MS-SSIM 选项
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: Arm Neon 与 SVE2 优化使低分辨率高比特深度编码平均提速约 5%；AVIF 模式支持 1-4 帧输入用于 alpha 层编码
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 修复多项缺陷：高度≤24 像素输入挂起、RTC 高 QP 无效码流、VBR 编码挂起、低时延模式 recon 输出挂起、RTC 非 16 整除分辨率预设≥11 崩溃，并修正码流
+    level tier 对 AV1 规范的符合性；另移除树内 gstreamer 插件并新增基于 Python 的编解码性能质量对比测试框架
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: SVT-AV1 4.0.0 重大版本：破坏性 API 更新，AVIF 提速 5-8 倍，新增 AC Bias 心理视觉特性
+  abstract_zh: SVT-AV1 v4.0.0 为重大版本，引入不向后兼容的 API 更新，包括 CRF 范围扩展至 70 并支持四分之一细粒度步进、清理废弃 API 元素、新增逐帧 PSNR/SSIM
+    计算与自定义全局日志接口。编码性能显著提升：AVIF/静图模式在 tune MS-SSIM 下同质量提速 5-8 倍、BD-Rate 改善 5-8%；RTC 模式提速 5-15%，Random Access
+    模式在 --fast-decode 下提速 10-25%。完成 SVT-AV1-PSY 特性向 --tune vq/--tune iq 的移植并新增 AC Bias 心理视觉特性，同时修复编码器挂起、无效码流等多项缺陷并修正
+    AV1 码流 level tier 规范符合性。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: v4.0.0 为不向后兼容的重大版本，含 API 破坏性变更、AVIF/RTC/RA 大幅性能提升及 SVT-AV1-PSY 心理视觉特性完整移植，属架构级重大发布
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: SVT-AV1 发布 v4.0.0

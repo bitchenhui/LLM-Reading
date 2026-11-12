@@ -1,0 +1,43 @@
+id: repo_release:github:vvdec-v3.2.1
+type: repo_release
+title: vvdec-3.2.1
+research_lines:
+- traditional_codec_opt
+source:
+  channel: github
+  external_id: fraunhoferhhi/vvdec@v3.2.1
+  url: https://github.com/fraunhoferhhi/vvdec/releases/tag/v3.2.1
+time:
+  published: '2026-10-07'
+  collected: '2026-11-12'
+entities:
+- ref: impl:VVdec
+  role: subject
+claims:
+- statement: 修复五个安全漏洞：ALF APS 参数集与子图边界扩展任务的 use-after-free、嵌套 buffering-period SEI 堆越界读与堆信息泄露、越界参考图像列表索引导致的未受信指针解引用、SPS
+    图像尺寸整数溢出导致堆缓冲区溢出
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 增强非法码流拒绝能力：拒绝重叠或不完整切片覆盖、越界 sps_num_subpics_minus1、超过 10bit 的位深
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 新增 ARM NEON 实现，覆盖反量化、色度角度帧内预测与逆 LFNST
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 修复单线程模式无限循环、不完整编码图像导致的挂起，以及 NAL 单元尾部零字节的一致性问题
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: VVDec 3.2.1 修复五个安全漏洞与多项内存安全问题，新增 ARM NEON 解码优化。
+  abstract_zh: VVDec 3.2.1 修复五个安全漏洞（use-after-free、堆越界读、未受信指针解引用、整数溢出堆溢出）及更多由损坏码流触发的内存安全问题。该版本增强码流校验，拒绝重叠/不完整切片覆盖、越界子图数、超过10bit位深等非法码流，并修复单线程死循环与不完整编码图像挂起问题。此外新增
+    ARM NEON 实现，覆盖反量化、色度角度帧内预测和逆 LFNST。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 补丁版本修复五个安全漏洞并新增 ARM NEON 优化，有实质内容但无架构级变化，不属于重大版本。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: VVDec 发布 v3.2.1

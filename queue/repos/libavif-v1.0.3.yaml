@@ -1,6 +1,6 @@
 id: repo_release:github:libavif-v1.0.3
 kind: release
-status: pending
+status: skipped_by_llm
 score: 3
 matched:
 - ref: impl:libavif
@@ -17,3 +17,5 @@ meta:
     * Fix memory errors reported in crbug.com/1504792 by [Fudan\n  University](https://secsys.fudan.edu.cn/).\n\
     * src/reformat.c: Allocate the threadData array directly."
 fetched: '2026-11-12'
+llm_decision: skip
+llm_reason: 补丁版本仅包含两处内存错误修复与一处内部分配调整，无性能、新特性、API 或标准适配等实质内容。

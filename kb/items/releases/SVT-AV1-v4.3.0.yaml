@@ -1,0 +1,67 @@
+id: repo_release:github:SVT-AV1-v4.3.0
+type: repo_release
+title: v4.3.0
+research_lines:
+- traditional_codec_opt
+source:
+  channel: github
+  external_id: AOMediaCodec/SVT-AV1@v4.3.0
+  url: https://github.com/AOMediaCodec/SVT-AV1/releases/tag/v4.3.0
+time:
+  published: '2026-11-02'
+  collected: '2026-11-12'
+entities:
+- ref: impl:SVT-AV1
+  role: subject
+- ref: codec:AV1
+  role: uses
+- ref: concept:GOP
+  role: uses
+- ref: concept:LTR
+  role: uses
+- ref: concept:QP
+  role: uses
+- ref: metric:VMAF
+  role: measured_by
+- ref: org:Apple
+  role: uses
+claims:
+- statement: 所有 preset 在相近质量下 cycle 效率提升约 5-8%，多线程模式运行时间缩短约 10-11%
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 新增实验性 --fast-decode 3 静图解码速度等级，在模式决策 RD 代价中引入解码复杂度项
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 新增 --fgs-table 定时胶片颗粒表与 FILM_GRAIN_EVENT 逐图胶片颗粒参数 API
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: RTC 方向新增低延迟 tile 并行、I 帧 IntraBC、帧内调色板、CBR 预编码跳帧及 LTR 流的 AV1 frame_id 信令
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 新增 MOBILE_BUILD 单一 8-bit 库构建选项与 CONFIG_ENABLE_* 编码工具裁剪开关，显著缩减二进制体积
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: x86 新增原生 8-bit CDEF 内核与 AVX-512 int16 正变换，Arm 新增 SVE2 Hadamard SATD 内核，并优化 VMAF tune 相关内核
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 修复分数 CRF/QP 超过 63 时的码率倒挂，以及无损帧启用量化矩阵导致的编解码不匹配
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 修复多实例与 TSan 数据竞争、--enable-overlays 1 与 --lookahead 0 下的非确定输出及 Apple 平台退出 SIGTRAP 等问题
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: SVT-AV1 4.3.0 全 preset 编码效率提升 5-8%，新增 RTC 屏幕内容工具、低延迟 tile 并行与胶片颗粒 API
+  abstract_zh: 该版本在所有 preset 上实现约 5-8% 的 cycle 效率提升与多线程下约 10-11% 的运行时间缩短。RTC 方向新增低延迟 tile 并行、IntraBC/调色板屏幕内容工具、CBR
+    预编码跳帧与 LTR frame_id 信令；同时引入实验性 --fast-decode 3 静图解码速度等级和 FILM_GRAIN_EVENT 胶片颗粒 API。工程上新增 MOBILE_BUILD
+    精简二进制选项、CONFIG_ENABLE_* 工具裁剪开关，并扩充 x86（AVX2/SSE4.1/AVX-512）与 Arm（Neon/SVE2）内核优化。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 常规 minor 正式版，含跨 preset 编码效率提升、RTC 屏幕内容工具、胶片颗粒 API 等实质内容，但无架构级变化或新标准支持
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: SVT-AV1 发布 v4.3.0

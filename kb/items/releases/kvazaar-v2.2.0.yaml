@@ -1,0 +1,57 @@
+id: repo_release:github:kvazaar-v2.2.0
+type: repo_release
+title: v2.2.0
+research_lines:
+- traditional_codec_opt
+source:
+  channel: github
+  external_id: ultravideo/kvazaar@v2.2.0
+  url: https://github.com/ultravideo/kvazaar/releases/tag/v2.2.0
+time:
+  published: '2023-01-04'
+  collected: '2026-11-12'
+entities:
+- ref: impl:kvazaar
+  role: subject
+- ref: codec:HEVC
+  role: uses
+- ref: codec:VVC
+  role: uses
+claims:
+- statement: ROI 功能更新为支持每帧独立的 ROI 映射
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 改进帧间搜索并在搜索过程中更新 CABAC 上下文以提升比特代价估计精度
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: CLI 选项重组：rd 最大级别改为 4，intra chroma search 与 fast bipred 拆分为独立开关，新增 --combine-intra-cus 与 --force-inter
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 新增双向混合（bidirectional blending）的 AVX2 实现
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 相比 v2.1，8-vs 速度档总平均 BD-Bitrate 降低 5.6%，其余速度档码率基本持平；多数速度档加速 1.07–1.15x，但 8-vs 档速度降至 0.68x
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 修复 DPB 与 max_num_reorder_pics 的关系校验及 VPS/SPS 中缓冲帧数计算问题
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 项目宣布推出 VVC 编码器 uvg266，未来开发重心将转向 uvg266，但 Kvazaar 不会被放弃
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 开源 HEVC 编码器 Kvazaar v2.2.0：ROI 逐帧映射与 AVX2 优化，8-vs 档 BD-rate 降低 5.6%。
+  abstract_zh: Kvazaar v2.2.0 更新 ROI 功能以支持每帧独立 ROI 映射，改进帧间搜索并在搜索中更新 CABAC 上下文以提升比特代价估计精度，同时重组 CLI 选项（rd
+    最大级别改为 4，新增 intra-chroma-search、fast-bipred、combine-intra-cus 等）。性能方面新增双向混合的 AVX2 实现，相比 v2.1 在 8-vs
+    档总平均 BD-Bitrate 降低 5.6%，多数速度档加速 1.07–1.15x 但 8-vs 档降至 0.68x。发布公告称团队推出 VVC 编码器 uvg266，未来开发重心将转移，但 Kvazaar
+    仍会继续维护。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 常规小版本但内容实质：ROI 逐帧映射、帧间搜索与 CABAC 上下文改进、AVX2 优化及量化 BD-rate/加速比数据，无架构级变化故不做深读
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: Kvazaar 发布 v2.2.0

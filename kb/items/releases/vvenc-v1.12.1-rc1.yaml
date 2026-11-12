@@ -1,0 +1,36 @@
+id: repo_release:github:vvenc-v1.12.1-rc1
+type: repo_release
+title: vvenc-v1.12.1-rc1
+research_lines:
+- traditional_codec_opt
+source:
+  channel: github
+  external_id: fraunhoferhhi/vvenc@v1.12.1-rc1
+  url: https://github.com/fraunhoferhhi/vvenc/releases/tag/v1.12.1-rc1
+time:
+  published: '2024-10-21'
+  collected: '2026-11-12'
+entities:
+- ref: impl:VVenC
+  role: subject
+claims:
+- statement: 将 VUI 标志设置为符合 DVB 规范，改善广播场景的码流一致性
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 命令行新增对更多 VUI 标志的控制能力
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: VVenC v1.12.1-rc1 使 VUI 标志符合 DVB 规范，并开放更多 VUI 标志的命令行控制
+  abstract_zh: VVenC v1.12.1-rc1 将 VUI 标志设置为符合 DVB 规范，提升广播场景下的码流兼容性。同时新增了通过命令行控制更多 VUI 标志的能力。该版本为面向 1.12.1
+    正式版的候选预发布。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: rc 版本包含 VUI 标志 DVB 规范适配与 CLI 控制扩展，属实质性小改动但非重大版本
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: VVenC 发布 v1.12.1-rc1

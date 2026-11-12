@@ -1,0 +1,65 @@
+id: repo_release:github:kvazaar-v1.0.0
+type: repo_release
+title: v1.0.0
+research_lines:
+- traditional_codec_opt
+source:
+  channel: github
+  external_id: ultravideo/kvazaar@v1.0.0
+  url: https://github.com/ultravideo/kvazaar/releases/tag/v1.0.0
+time:
+  published: '2016-10-04'
+  collected: '2026-11-12'
+entities:
+- ref: impl:kvazaar
+  role: subject
+- ref: concept:GOP
+  role: uses
+- ref: concept:QP
+  role: measured_by
+claims:
+- statement: 全部预设经率失真-复杂度搜索重优化，veryslow 预设平均提速约12.4倍（官方称约10倍）
+  confidence: reported
+  metrics:
+  - name: 平均加速比(8-vs)
+    value: 12.42x
+  evidence: abstract（初筛，未读全文）
+- statement: 相比 v0.8.3，中高速预设 BD-rate 显著改善，3-fr 档全序列平均下降 31.0%，2-vf 档平均下降 27.1%（QP 17/22/27/32 测试）
+  confidence: reported
+  metrics:
+  - name: BD-rate(3-fr 全序列)
+    value: -31.0%
+  - name: BD-rate(2-vf 全序列)
+    value: -27.1%
+  evidence: abstract（初筛，未读全文）
+- statement: 新增 --lossless 无损编码、单色编码、--crypto 码流选择性加密、--mv-constraint、--tmpv 时间域运动矢量预测、--subme 分像素运动预测复杂度控制等特性，并加入
+    4x8 SMP 与 4x12 AMP 运动分割
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 默认启用 WPP 与多线程并自动检测核心数，默认参数对齐 medium 预设：帧内周期 64、QP 22、--gop=lp-g4d3t1
+  confidence: reported
+  metrics:
+  - name: 默认QP
+    value: '22'
+  evidence: abstract（初筛，未读全文）
+- statement: 新增 AVX2 优化：SAO、分像素运动估计/补偿滤波、半像素色度采样、批量 SATD 计算，并重写运动矢量代价计算使 BD-rate 明显改善
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 修复码率控制在编码 2^31 比特（约2GB）后的整型溢出、tiles 内非确定性输出、tiles 色度重建错误、OWF 与 SMP/AMP 竞态等多个 bug
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: Kvazaar 1.0.0 里程碑：预设重优化使 veryslow 提速约10倍、BD-rate 最高降约31%，新增无损/选择性加密等特性。
+  abstract_zh: Kvazaar 从 0.8.3 跳版至 1.0.0，对所有预设进行率失真-复杂度联合重优化，veryslow 平均提速约12.4倍，中快档预设 BD-rate 平均改善最高约31%。新增无损编码、单色编码、选择性加密、4x8
+    SMP/4x12 AMP 分割、时间域运动矢量预测等特性，并默认开启 WPP 多线程与多核检测。同时修复码率控制 2^31 比特溢出、tiles 非确定性等多个 bug，并加入 AVX2 版本的
+    SAO、分像素滤波与 SATD 优化。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 1.0.0 重大版本里程碑：预设重优化带来最高约10倍提速与最高31% BD-rate改进，并新增大量编码特性。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: Kvazaar 发布 v1.0.0

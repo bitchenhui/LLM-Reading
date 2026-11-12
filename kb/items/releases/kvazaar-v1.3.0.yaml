@@ -1,0 +1,57 @@
+id: repo_release:github:kvazaar-v1.3.0
+type: repo_release
+title: v1.3.0
+research_lines:
+- traditional_codec_opt
+source:
+  channel: github
+  external_id: ultravideo/kvazaar@v1.3.0
+  url: https://github.com/ultravideo/kvazaar/releases/tag/v1.3.0
+time:
+  published: '2019-07-09'
+  collected: '2026-11-12'
+entities:
+- ref: impl:kvazaar
+  role: subject
+- ref: codec:HEVC
+  role: uses
+- ref: concept:GOP
+  role: uses
+- ref: concept:QP
+  role: uses
+- ref: concept:RDO
+  role: uses
+claims:
+- statement: 相较 v1.2，v1.3.0 在全部 HEVC 测试类上取得显著码率节省：0-uf 档总平均 BD-Bitrate 为 -22.7%，2-vf 档为 -5.7%，中间预设介于 -5.3%
+    至 -21.5%
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 编码速度随预设差异明显：4-f 档平均加速 x1.33，而 8-vs 档降至 x0.35、5-m 档 x0.74，压缩率提升以部分预设速度下降为代价
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 新增多个编码选项：--fast-residual-cost、--(no-)open-gop、--set-qp-in-cu（QP 信令下移到 CU 级）、--scaling-list、--max-merge、--early-skip、--me=dia
+    菱形搜索、--me-steps，以及 --level/--force-level/--high-tier 设置码流 level 与 tier
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 多项算法与优化改进：--rd=2 改用 SSD 度量做 CU 模式决策、支持 --bipred --gop=lp-g4d3t1 低延迟 B 帧 GOP、TZ 搜索更快更优、新增
+    AVX2 优化（符号位隐藏、系数编码、双预测 blending、部分 SAD 函数）
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: Windows 构建不再依赖 pthreads，改用自研 ThreadWrapper（基于 C++ 标准线程，ISC 许可，独立开源），并从本版本起提供 Windows 二进制发布
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: Kvazaar v1.3.0 压缩效率大幅提升，最快档 BD-Bitrate 较 v1.2 平均降 22.7%。
+  abstract_zh: Kvazaar v1.3.0 是时隔两年的重大版本，相较 v1.2 各预设均取得显著码率节省（总平均 -5.7% 至 -22.7%），并新增 --open-gop、--scaling-list、--set-qp-in-cu、菱形搜索
+    ME 及 level/tier 控制等大量编码选项。性能上引入多项 AVX2 优化（符号位隐藏、系数编码、双预测 blending、SAD），--rd=2 改用 SSD 度量并支持低延迟 B 帧
+    GOP。工程上 Windows 构建弃用 pthreads 改用自研 ThreadWrapper（C++ 标准线程，ISC 许可），并首次提供 Windows 二进制。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 时隔近两年的重大版本：全预设压缩效率大幅提升（最快档 BD-Bitrate 达 -22.7%）、线程后端由 pthreads 重构为 ThreadWrapper，属架构级里程碑。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: Kvazaar 发布 v1.3.0

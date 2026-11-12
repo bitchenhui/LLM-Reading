@@ -1,0 +1,47 @@
+id: repo_release:github:vvdec-v3.0.0
+type: repo_release
+title: vvdec-3.0.0
+research_lines:
+- traditional_codec_opt
+source:
+  channel: github
+  external_id: fraunhoferhhi/vvdec@v3.0.0
+  url: https://github.com/fraunhoferhhi/vvdec/releases/tag/v3.0.0
+time:
+  published: '2024-10-25'
+  collected: '2026-11-12'
+entities:
+- ref: impl:VVdec
+  role: subject
+- ref: impl:VVenC
+  role: uses
+claims:
+- statement: v3.0.0 变更了 API，与 1.x 和 2.x ABI 不兼容，依赖应用需重新构建
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 新增胶片颗粒（film grain）支持
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 从 VVenC 移植外部 ARM SIMD 优化
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 完成解码一致性（conformance）改进与构建改进
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 输出上采样功能从库中移除，迁移至应用层
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: VVdec 3.0.0 发布：破坏性 API 变更、新增胶片颗粒支持、移植 VVenC 的 ARM SIMD 优化
+  abstract_zh: VVdec v3.0.0 为重大版本，API 发生变更且与 1.x/2.x ABI 不兼容，依赖应用需重新构建。新增胶片颗粒（film grain）支持，并将 VVenC 的外部
+    ARM SIMD 优化移植到解码器。同时完成一致性（conformance）改进与构建优化，并将输出上采样功能从库中移出至应用层。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 3.0.0 重大版本，含破坏性 API/ABI 变更、胶片颗粒新特性及源自 VVenC 的 ARM SIMD 移植，属架构级更新
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: VVdec 发布 v3.0.0

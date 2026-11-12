@@ -1,0 +1,46 @@
+id: repo_release:github:kvazaar-v2.3.0
+type: repo_release
+title: V2.3.0
+research_lines:
+- traditional_codec_opt
+source:
+  channel: github
+  external_id: ultravideo/kvazaar@v2.3.0
+  url: https://github.com/ultravideo/kvazaar/releases/tag/v2.3.0
+time:
+  published: '2024-01-17'
+  collected: '2026-11-12'
+entities:
+- ref: impl:kvazaar
+  role: subject
+claims:
+- statement: RDOQ 中查找最后非零系数的 AVX2 优化使使用 RDOQ 的配置编码速度提升约 1-3%
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: RD 性能（压缩率）与 v2.2.0 完全一致，无编码效率变化
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 新增 --(no-)enable-logging 选项，可控制 stderr 上正常编码性能日志的开关，错误仍输出到 stderr
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 移除 YASM 依赖以简化 Visual Studio 编译，并新增实验性 CMake 支持，计划未来淘汰 automake 与 Visual Studio 工程
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 修复 encoder_headers 在未推送任何帧时调用的崩溃、win+gcc（mingw/msys/cygwin）下优化函数段错误及 automake 的 GCC 检测问题
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: Kvazaar v2.3.0：RDOQ AVX2 优化提速 1-3%，新增日志开关与实验性 CMake 支持
+  abstract_zh: Kvazaar v2.3.0 对 RDOQ 中查找最后非零系数的环节做了 AVX2 优化，使用 RDOQ 的配置可提速约 1-3%，RD 性能与 v2.2.0 完全一致。版本新增
+    --(no-)enable-logging 日志开关，移除 YASM 依赖以简化 Visual Studio 编译，并引入实验性 CMake 支持，计划未来淘汰 automake 与 VS 工程。同时修复了
+    encoder_headers 在无帧输入时的崩溃、win+gcc 下优化函数段错误等问题，并合入多项来自社区的可移植性修复。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 常规功能版本，含 RDOQ AVX2 性能优化、构建系统改进和多项修复，但非架构级或新标准支持。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: Kvazaar 发布 v2.3.0

@@ -1,0 +1,43 @@
+id: repo_release:github:vvdec-v3.1.0
+type: repo_release
+title: vvdec-3.1.0
+research_lines:
+- traditional_codec_opt
+source:
+  channel: github
+  external_id: fraunhoferhhi/vvdec@v3.1.0
+  url: https://github.com/fraunhoferhhi/vvdec/releases/tag/v3.1.0
+time:
+  published: '2025-11-18'
+  collected: '2026-11-12'
+entities:
+- ref: impl:VVdec
+  role: subject
+claims:
+- statement: API 向后兼容扩展：输入 access unit 与输出 frame 增加 opaque userData 指针，vvdecSeqInfo 暴露 max reorder pics
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 通过 simd-everywhere 新增 Loongarch 平台支持
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 新增 ARM 架构 SIMD 优化并优化 scaling list 反量化，提升解码性能
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: vvdecapp 新增 packed YUV 输出支持，并引入单元测试框架
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: vvdec 3.1.0 带来向后兼容 API 扩展、Loongarch 支持与 ARM SIMD 优化
+  abstract_zh: vvdec v3.1.0 以向后兼容方式扩展 API：输入 access unit 与输出 frame 新增 opaque userData 指针，vvdecSeqInfo
+    暴露最大重排序图像数。通过 simd-everywhere 新增 Loongarch 支持，并针对 ARM 做 SIMD 优化，同时优化 scaling list 反量化。vvdecapp 新增
+    packed YUV 输出，引入单元测试框架并修复若干线程相关缺陷。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 正式版本包含向后兼容 API 扩展、Loongarch 平台支持与 ARM SIMD 性能优化，属实质内容但非架构级重大版本
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: vvdec 发布 v3.1.0

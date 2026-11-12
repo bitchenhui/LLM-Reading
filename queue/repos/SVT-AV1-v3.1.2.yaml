@@ -1,6 +1,6 @@
 id: repo_release:github:SVT-AV1-v3.1.2
 kind: release
-status: pending
+status: skipped_by_llm
 score: 3
 matched:
 - ref: impl:SVT-AV1
@@ -18,3 +18,5 @@ meta:
 
     Fix missing version bump'
 fetched: '2026-11-12'
+llm_decision: skip
+llm_reason: 仅为修复版本号遗漏的维护性发布，无性能、特性或 API 层面的实质内容。

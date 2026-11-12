@@ -1,0 +1,56 @@
+id: repo_release:github:libavif-v1.2.0
+type: repo_release
+title: v1.2.0
+research_lines:
+- traditional_codec_opt
+source:
+  channel: github
+  external_id: AOMediaCodec/libavif@v1.2.0
+  url: https://github.com/AOMediaCodec/libavif/releases/tag/v1.2.0
+time:
+  published: '2025-02-25'
+  collected: '2026-11-12'
+entities:
+- ref: impl:libavif
+  role: subject
+- ref: org:AOMedia
+  role: subject
+claims:
+- statement: 正式启用增益图 API，移除 AVIF_ENABLE_EXPERIMENTAL_GAIN_MAP 编译开关，并简化接口（移除 avifGainMapMetadata 等结构体，改用位域选择解码内容）
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 支持 YCgCo_Re/YCgCo_Ro 编解码，枚举值更新至最新 CICP 规范，移除 AVIF_ENABLE_EXPERIMENTAL_YCGCO_R 开关
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: avifImage 新增 properties/numProperties 字段，解码时填充未被识别的属性，编码时由编码器写入
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 弃用 avifEncoder 的 minQuantizer/maxQuantizer/minQuantizerAlpha/maxQuantizerAlpha 字段及 avifenc
+    对应命令行参数，改用 quality/qualityAlpha；alpha 默认质量改为与色彩一致
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 实验性支持 HEIF 第三版 Amd2 的 PixelInformationProperty（PIXI）语法，并将实验性精简头格式更新至最新规范草案（MetaV1 更名为 MINI）
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 依赖更新：libaom v3.12.0（新增 tune=iq 图像质量选项）、dav1d 1.5.1、SVT-AV1 v3.0.0（接入 lossless 与 level_of_parallelism
+    配置）
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 修复非视频轨道（音频/字幕）图像序列解码问题，并修正辅助轨道类型判断（不再默认所有辅助轨道为 alpha）
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 正式启用增益图 API 与 YCgCo-R 编解码，弃用旧量化器参数并更新核心依赖至 libaom 3.12.0。
+  abstract_zh: libavif v1.2.0 将增益图 API 与 YCgCo_Re/Ro 编解码从实验状态转正，简化增益图接口并移除旧结构体，属于破坏性 API 变更；同时弃用 avifEncoder
+    的 min/maxQuantizer 系列字段，统一改用 quality/qualityAlpha，alpha 默认质量改为与色彩一致。新增 avifImage 属性透传字段、avifgainmaputil
+    工具安装及 HEIF 第三版 Amd2 PIXI 属性的实验支持；依赖更新至 libaom v3.12.0（新增 tune=iq）、dav1d 1.5.1、SVT-AV1 v3.0.0，并修复含音频/字幕轨道序列解码等问题。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 增益图 API 从实验性转正并伴随破坏性 API 重构（移除旧结构体、弃用量化器字段），并引入 HEIF 第三版 Amd2 实验特性，属架构级 API 变化。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: libavif 发布 v1.2.0

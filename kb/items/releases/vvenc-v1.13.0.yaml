@@ -1,0 +1,59 @@
+id: repo_release:github:vvenc-v1.13.0
+type: repo_release
+title: vvenc-v1.13.0
+research_lines:
+- traditional_codec_opt
+source:
+  channel: github
+  external_id: fraunhoferhhi/vvenc@v1.13.0
+  url: https://github.com/fraunhoferhhi/vvenc/releases/tag/v1.13.0
+time:
+  published: '2024-12-13'
+  collected: '2026-11-12'
+entities:
+- ref: impl:VVenC
+  role: subject
+- ref: concept:GOP
+  role: uses
+- ref: concept:QP
+  role: uses
+claims:
+- statement: 新增多项 ARM 平台优化
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 新增面向 DASH 的解码器刷新模式 idr_no_radl
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 新增 GOP 自适应 QP 级联（仅限非 QPA 情形）
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 改进码率控制与 QPA 的协同，尤其针对 fast 预设
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 新增实验性胶片颗粒分析功能
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: faster/fast/medium 预设内存占用降低
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 预设调优后 medium 提速 5%，slow/slower 提速 2%
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 相较 rc1 移除 gcc_s 链接依赖
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: VVenC v1.13.0 引入 ARM 优化、实验性胶片颗粒分析，中等预设提速 5%
+  abstract_zh: VVenC v1.13.0 相较 1.12.1 新增多项 ARM 平台优化、DASH 场景的解码刷新模式 idr_no_radl 以及非 QPA 情形下的 GOP 自适应 QP
+    级联，并引入实验性胶片颗粒分析功能。码控与 QPA 协同性改善（尤其 fast 预设），faster/fast/medium 预设内存占用下降；预设调优使 medium 提速 5%，slow/slower
+    提速 2%。相较 rc1 仅移除 gcc_s 链接依赖。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 正式版含实质性内容：ARM 优化、胶片颗粒分析实验特性、码控/QPA 协同改进及中等预设 5% 提速，属特性型版本而非架构级大版本
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: VVenC 发布 v1.13.0

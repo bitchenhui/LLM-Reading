@@ -1,0 +1,43 @@
+id: repo_release:github:vvenc-v1.13.1-rc1
+type: repo_release
+title: vvenc-v1.13.1-rc1
+research_lines:
+- traditional_codec_opt
+source:
+  channel: github
+  external_id: fraunhoferhhi/vvenc@v1.13.1-rc1
+  url: https://github.com/fraunhoferhhi/vvenc/releases/tag/v1.13.1-rc1
+time:
+  published: '2025-03-14'
+  collected: '2026-11-12'
+entities:
+- ref: impl:VVenC
+  role: subject
+claims:
+- statement: x86(_64) 架构的最低指令集要求提升至 SSE 4.1，旧 CPU 上的库加载非法指令错误得到修复
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 修复使用 slice type adaptation 时码率控制因缺少统计信息导致精度下降的 bug
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 修复 ARM 非对齐 load/store、32 位 ARM SIMD horizontal add 等平台相关问题
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 修复 FGA 中 row/cols 访问问题
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: VVenC v1.13.1-rc1 修复 ARM/x86 平台兼容性问题，并将 SSE 4.1 设为 x86 最低要求
+  abstract_zh: VVenC v1.13.1-rc1 为补丁级候选版本，主要修复 ARM 上的非对齐访存、32 位 ARM SIMD horizontal add 以及旧 x86 CPU 库加载时的非法指令错误等平台兼容性问题。同时将
+    x86(_64) 架构的最低指令集要求提升至 SSE 4.1，并修复了启用 slice type adaptation 时码控缺少统计信息导致精度下降的 bug 及 FGA 的 row/cols
+    访问问题。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 补丁级 rc，含平台兼容性修复与 x86 最低指令集要求提升至 SSE 4.1 等实质性变更，但无架构级变化或新标准支持
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: VVenC 发布 v1.13.1-rc1

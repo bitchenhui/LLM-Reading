@@ -1,0 +1,46 @@
+id: repo_release:github:libavif-v1.1.1
+type: repo_release
+title: v1.1.1
+research_lines:
+- traditional_codec_opt
+source:
+  channel: github
+  external_id: AOMediaCodec/libavif@v1.1.1
+  url: https://github.com/AOMediaCodec/libavif/releases/tag/v1.1.1
+time:
+  published: '2024-07-30'
+  collected: '2026-11-12'
+entities:
+- ref: impl:libavif
+  role: subject
+claims:
+- statement: '修复乱序 ''dimg'' 网格关联的正确性问题（issue #2311）'
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: gain map 元数据更新至 ISO 21496-1 当前草案
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 对含同一 item 出现在多个 'dimg' box 的文件改报 AVIF_RESULT_NOT_IMPLEMENTED，替代原 AVIF_RESULT_INVALID_IMAGE_GRID
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 调整 avif.h 中 AVIF_API 与 AVIF_NODISCARD 宏顺序，修复 Windows 共享库构建下 clang-cl 与 MSVC 编译错误
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 本地构建 aom 依赖时强制开启运行时 CPU 检测（CONFIG_RUNTIME_CPU_DETECT），修复非本机构建下被禁用的问题
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: libavif 1.1.1 修复 dimg 网格关联错误，增益图元数据对齐 ISO 21496-1 草案，并修复多处构建问题。
+  abstract_zh: libavif v1.1.1 为 v1.1.0 之后的补丁版本，核心修复包括乱序 'dimg' 网格关联的正确性问题，以及将 gain map 元数据更新至 ISO 21496-1
+    当前草案。同时对同一 item 出现在多个 'dimg' box 的文件改报 AVIF_RESULT_NOT_IMPLEMENTED（原为 AVIF_RESULT_INVALID_IMAGE_GRID），属于
+    API 行为变化。其余改动集中于 Windows/clang-cl 编译修复与 CMake 构建系统完善。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 补丁版本含实质修复：dimg 网格关联正确性修复、增益图元数据更新至 ISO 21496-1 草案及错误码行为变化，非纯构建噪声但非重大版本
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: libavif 发布 v1.1.1

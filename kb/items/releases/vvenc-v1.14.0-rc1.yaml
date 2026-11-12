@@ -1,0 +1,46 @@
+id: repo_release:github:vvenc-v1.14.0-rc1
+type: repo_release
+title: vvenc-v1.14.0-rc1
+research_lines:
+- traditional_codec_opt
+source:
+  channel: github
+  external_id: fraunhoferhhi/vvenc@v1.14.0-rc1
+  url: https://github.com/fraunhoferhhi/vvenc/releases/tag/v1.14.0-rc1
+time:
+  published: '2026-01-12'
+  collected: '2026-11-12'
+entities:
+- ref: impl:VVenC
+  role: subject
+claims:
+- statement: v1.14.0-rc1 进行了大量 ARM SIMD 优化（NEON 与 SVE），并在硬件支持时默认启用 SVE
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: vvenc.h 中 cts 与 dts 字段改为有符号整数，构成 API 兼容性变化
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 静态链接 libvvenc 时不再需要 nlohmann_json，捆绑的 nlohmann_json 更新至 v3.12.0
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在合理情况下自动启用 VUI，且 vvencapp/vvencFFapp 支持设置色彩范围
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: LMCS 工具被标记为弃用，将在未来版本中移除
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: VVenC v1.14.0-rc1 引入 ARM NEON/SVE 优化、API 调整并弃用 LMCS。
+  abstract_zh: VVenC v1.14.0-rc1 包含大量 ARM SIMD 优化（NEON 与 SVE），并在硬件支持时默认启用 SVE。API 层面将 vvenc.h 中 cts/dts
+    改为有符号整数，静态链接 libvvenc 不再依赖 nlohmann_json，并支持在 vvencapp/vvencFFapp 中设置色彩范围。此外版本自动启用 VUI，并宣布弃用 LMCS
+    工具（未来将移除）。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: rc 版本包含 ARM SIMD 性能优化、API 兼容性变化与 LMCS 弃用等实质内容，但无架构级重构或新标准支持，属常规实质性版本。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: VVenC 发布 v1.14.0-rc1
