@@ -13,6 +13,7 @@ source:
 time:
   published: '2026-03-26'
   collected: '2026-11-12'
+  updated: '2026-11-12'
 entities:
 - ref: concept:RDO
   role: subject
@@ -43,6 +44,7 @@ claims:
 summaries:
   one_liner_zh: 提出Mamba质量模型作感知损失并嵌入DCVC与HiNeRV的RDO，UGC转码较基线分别节省8.46%与12.89% BD-rate。
   abstract_zh: UGC源视频常因先前压缩、编辑或欠佳拍摄条件而带有失真，传统以参考视频为像素锚点的保真优化会迫使编解码器复制源本身缺陷。该文将参考视频的角色重新定位为上下文引导而非真值锚点，训练一个基于Mamba（选择性结构化状态空间模型）的轻量神经质量模型，并采用弱监督Siamese排序策略优化。该模型作为感知损失被集成进两个神经视频编解码器DCVC与HiNeRV的率失真优化（RDO）过程，以改善重建内容的感知质量。实验表明，该框架相对自编码器类基线与INR类基线分别取得8.46%和12.89%的BD-rate节省。
+  deep_dive: docs/auto/2603.25566.md
 assessment:
   relevance: high
   decision: deep_read

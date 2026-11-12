@@ -13,6 +13,7 @@ source:
 time:
   published: '2026-03-31'
   collected: '2026-11-12'
+  updated: '2026-11-12'
 entities:
 - ref: concept:RDO
   role: subject
@@ -56,6 +57,7 @@ summaries:
     的核心创新是一种无数据依赖的调色板（palette）编码模式，消除了吞吐瓶颈，使高吞吐 palette 编码切实可行。系统还协同设计了率失真优化（RDO）模块，在调色板与传统预测模式之间仲裁，并通过率估计与熵编码之间的数据复用策略降低整体硬件资源开销。实验表明，与
     4K@120fps JPEG-XS 编码器相比，HLC 在相同吞吐下仅用一半 LUT 资源，在游戏、自然和文字内容数据集上分别取得 3.461dB、3.299dB 和 5.312dB 的 BD-PSNR
     提升。
+  deep_dive: docs/auto/2603.29864.md
 assessment:
   relevance: high
   decision: deep_read

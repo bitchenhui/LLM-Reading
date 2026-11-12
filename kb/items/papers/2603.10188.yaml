@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-03-10'
   collected: '2026-11-12'
+  updated: '2026-11-12'
 entities:
 - ref: concept:Hyperprior
   role: subject
@@ -60,6 +61,7 @@ summaries:
   one_liner_zh: 统一分层/空间/通道先验的端到端学习图像压缩框架，Kodak上BD-Rate优于VVC Intra约5%。
   abstract_zh: 论文提出ARCHE，一个端到端学习式图像压缩框架，在单一概率框架内统一了分层先验、空间先验与通道先验，同时捕获潜表示中的全局与局部依赖，并通过自适应特征重标定（激励）与残差精炼提升潜表示质量。该方法不依赖循环网络或Transformer组件，仅用高效卷积设计实现精确的熵建模。在Kodak数据集上，ARCHE相对Balle等人基准模型降低BD-Rate约48%，相对Minnen
     & Singh通道自回归模型降低约30%，相对VVC Intra编码器降低约5%。模型参数量95M、单图推理222ms，视觉对比显示低码率下纹理更锐利、色彩保真度更高。
+  deep_dive: docs/auto/2603.10188.md
 assessment:
   relevance: high
   decision: deep_read

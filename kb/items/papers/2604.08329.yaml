@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-04-09'
   collected: '2026-11-12'
+  updated: '2026-11-12'
 entities:
 - ref: concept:INR
   role: subject
@@ -55,6 +56,7 @@ summaries:
   one_liner_zh: 结合INR紧凑表示与预训练视频扩散模型，在<0.05 bpp极低码率实现高感知质量的视频压缩。
   abstract_zh: 该文提出感知驱动的视频压缩框架DiV-INR，面向<0.05 bpp的极低码率区间，将隐式神经表示（INR）与预训练视频扩散模型结合。方法以INR条件化替代传统帧内编码关键帧，训练INR估计潜在特征并引导扩散过程，同时联合优化INR权重与扩散模型的参数高效适配器，以极小参数开销编码视频特定信息。在UVG、MCL-JCV与JVET
     Class-B基准上，感知指标（LPIPS、DISTS、FID）显著优于HEVC，BD-LPIPS最高提升0.214、BD-FID最高提升91.14，并同时超过VVC及已有神经与纯INR视频编解码器。分析还显示该方法先生成场景布局与物体身份、再细化纹理，揭示了从语义到视觉的生成层级。
+  deep_dive: docs/auto/2604.08329.md
 assessment:
   relevance: high
   decision: deep_read

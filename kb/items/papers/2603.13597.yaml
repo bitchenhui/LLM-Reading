@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-03-13'
   collected: '2026-11-12'
+  updated: '2026-11-12'
 entities:
 - ref: codec:VVC
   role: subject
@@ -57,6 +58,7 @@ summaries:
   one_liner_zh: 用深度强化学习构建时间与质量感知的码率阶梯，较HLS阶梯XPSNR BD-rate至少降10.3%、解码时间减22%。
   abstract_zh: 自适应HTTP流媒体通常依赖固定的码率-分辨率对（码率阶梯），忽略内容与解码复杂度差异，导致编码时间、解码效率与质量权衡欠佳。DQ-Ladder采用Deep Q-Network智能体，以每段预测的解码时间、质量分数和码率等级为输入，奖励函数为解码时间、视频质量与分辨率平滑度的加权和，构建时间与质量感知的码率阶梯；并利用机器学习模型预测解码时间、码率等级及客观质量指标（VMAF、XPSNR），避免穷举编码与质量计算。评估基于VVC工具链（VVenC/VVdeC），覆盖750条视频序列、6种Apple
     HLS兼容分辨率与41个量化参数。与四个基线相比，DQ-Ladder相对HLS阶梯取得至少10.3%的XPSNR BD-rate降低，同时解码时间减少22%，且在预测误差含高达20%噪声时仍保持鲁棒。
+  deep_dive: docs/auto/2603.13597.md
 assessment:
   relevance: high
   decision: deep_read

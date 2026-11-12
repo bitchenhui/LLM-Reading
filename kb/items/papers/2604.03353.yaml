@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-04-03'
   collected: '2026-11-12'
+  updated: '2026-11-12'
 entities:
 - ref: codec:AVC
   role: subject
@@ -42,6 +43,7 @@ summaries:
   one_liner_zh: 提出结合掩码扩散与I/P帧时间条件化的神经无损视频编解码器，在多种分辨率上无损性能超越H.264与H.265。
   abstract_zh: 论文提出NeuralLVC，一个将掩码扩散与I/P帧架构结合的神经无损视频编解码器。I帧模型采用双射线性token化保证像素级精确重建；P帧模型压缩相邻帧的时间残差，通过仅增加1.3%可训练参数的轻量参考嵌入条件化于前一已解码帧，并支持分组解码以调节速度-压缩率权衡。该方法在输入域实现严格无损：视频精确重建YUV420平面，图像精确重建RGB通道。在9条Xiph
     CIF序列以及24条720p/1080p HD序列（Xiph、UVG、BVI-AOM基准）上的实验显示，NeuralLVC在所有测试分辨率上均显著优于H.264与H.265无损模式，并通过端到端编解码加算术编码验证了精确重建。
+  deep_dive: docs/auto/2604.03353.md
 assessment:
   relevance: high
   decision: deep_read

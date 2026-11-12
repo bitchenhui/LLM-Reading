@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-04-10'
   collected: '2026-11-12'
+  updated: '2026-11-12'
 entities:
 - ref: codec:VVC
   role: subject
@@ -53,6 +54,7 @@ summaries:
   one_liner_zh: 构建27264条标注的MT-JRD数据集并提出属性辅助预测模型AMT-JRD，在VCM中降码率且保住多任务机器视觉精度。
   abstract_zh: 该文将仅适用于单任务的恰可辨识差异(JRD)建模扩展到多任务场景，构建了包含27,264条机器JRD标注的MT-JRD数据集，覆盖目标检测、实例分割与关键点检测三类任务。提出的属性辅助AMT-JRD预测模型通过广义/专用特征提取模块(GFEM/SFEM)实现多任务联合学习，并以属性特征融合模块(AFFM)引入目标尺寸与位置先验。在三任务上AMT-JRD的平均绝对误差为3.781、误差方差为5.332，较最先进单任务预测模型分别提升6.7%和6.3%。将预测的JRD应用于VCM后，相对VVC与JPEG基线平均提升BD-mAP
     3.861%与7.886%，在保持多任务机器视觉精度的同时降低编码码率。
+  deep_dive: docs/auto/2604.09421.md
 assessment:
   relevance: high
   decision: deep_read
