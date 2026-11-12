@@ -1,0 +1,79 @@
+id: paper:arxiv:2603.13597
+type: paper
+title: 'DQ-Ladder: A Deep Reinforcement Learning-based Bitrate Ladder for Adaptive Video Streaming'
+research_lines:
+- traditional_codec_opt
+source:
+  channel: arxiv
+  external_id: 2603.13597v1
+  url: https://arxiv.org/abs/2603.13597
+  pdf_url: https://arxiv.org/pdf/2603.13597v1
+  venue: arXiv preprint
+time:
+  published: '2026-03-13'
+  collected: '2026-11-12'
+entities:
+- ref: codec:VVC
+  role: subject
+- ref: impl:VVenC
+  role: uses
+- ref: impl:VVdec
+  role: uses
+- ref: metric:BD-Rate
+  role: measured_by
+- ref: metric:VMAF
+  role: measured_by
+- ref: org:Apple
+  role: compared_against
+claims:
+- statement: DQ-Ladder以预测解码时间、质量分数与码率等级为DQN输入，通过解码时间、视频质量与分辨率平滑度的加权奖励构建时间与质量感知的码率阶梯。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 相比Apple HLS码率阶梯，DQ-Ladder在XPSNR上取得至少10.3%的BD-rate降低。
+  confidence: reported
+  metrics:
+  - name: BD-rate (XPSNR)
+    value: ≥10.3%
+    scope: 相对HLS码率阶梯；VVC工具链(VVenC/VVdeC)，750序列×6分辨率×41QP
+  evidence: abstract（初筛，未读全文）
+- statement: DQ-Ladder相比基线减少22%的解码时间。
+  confidence: reported
+  metrics:
+  - name: 解码时间
+    value: -22%
+    scope: 相对基线阶梯方案，VVdeC解码
+  evidence: abstract（初筛，未读全文）
+- statement: DQ-Ladder对预测误差的敏感度显著低于对比方法，在预测值含最高20%噪声时仍保持鲁棒。
+  confidence: reported
+  metrics:
+  - name: 预测噪声鲁棒性
+    value: 20%
+    scope: 预测误差注入噪声比例上限内保持稳健
+  evidence: abstract（初筛，未读全文）
+- statement: 使用机器学习模型预测解码时间、码率等级与客观质量（VMAF、XPSNR），避免穷举编码与质量指标计算。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 用深度强化学习构建时间与质量感知的码率阶梯，较HLS阶梯XPSNR BD-rate至少降10.3%、解码时间减22%。
+  abstract_zh: 自适应HTTP流媒体通常依赖固定的码率-分辨率对（码率阶梯），忽略内容与解码复杂度差异，导致编码时间、解码效率与质量权衡欠佳。DQ-Ladder采用Deep Q-Network智能体，以每段预测的解码时间、质量分数和码率等级为输入，奖励函数为解码时间、视频质量与分辨率平滑度的加权和，构建时间与质量感知的码率阶梯；并利用机器学习模型预测解码时间、码率等级及客观质量指标（VMAF、XPSNR），避免穷举编码与质量计算。评估基于VVC工具链（VVenC/VVdeC），覆盖750条视频序列、6种Apple
+    HLS兼容分辨率与41个量化参数。与四个基线相比，DQ-Ladder相对HLS阶梯取得至少10.3%的XPSNR BD-rate降低，同时解码时间减少22%，且在预测误差含高达20%噪声时仍保持鲁棒。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 基于VVC工具链(VVenC/VVdeC)的学习式码率阶梯构建，属编码系统与码率控制优化，具有显著量化收益，与收录基准高度契合。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: DQ-Ladder：一种基于深度强化学习的自适应视频流码率阶梯
+relations:
+- type: same_topic
+  ref: paper:arxiv:2606.20847
+  note: 同为VVenC/VVC码率与量化控制的优化方法
+- type: same_topic
+  ref: paper:arxiv:2608.07799
+  note: 同属传统视频编码器的比特分配/码率优化主题
+- type: same_topic
+  ref: paper:arxiv:2609.15749
+  note: 同属闭环/自适应控制驱动的视频压缩优化主题

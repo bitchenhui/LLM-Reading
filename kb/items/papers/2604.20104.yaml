@@ -1,0 +1,76 @@
+id: paper:arxiv:2604.20104
+type: paper
+title: Feedback-Driven Rate Control for Learned Video Compression
+research_lines:
+- learned_codec
+source:
+  channel: arxiv
+  external_id: 2604.20104v1
+  url: https://arxiv.org/abs/2604.20104
+  pdf_url: https://arxiv.org/pdf/2604.20104v1
+  venue: arXiv preprint
+time:
+  published: '2026-04-22'
+  collected: '2026-11-12'
+entities:
+- ref: impl:TCM
+  role: subject
+- ref: codec:HEVC
+  role: evaluated_on
+- ref: dataset:UVG
+  role: evaluated_on
+- ref: metric:BD-Rate
+  role: measured_by
+claims:
+- statement: 在DCVC风格框架上构建单模型多码率编码接口，通过率失真参数λ实现连续比特率控制，替代传统的多模型/多点编码方式。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: log域PI/PID闭环控制器根据目标码率与熵估计码率的偏差在线更新λ，在DCVC与DCVC-TCM上实现稳定的目标准码率跟踪。
+  confidence: reported
+  metrics:
+  - name: 平均码率误差
+    value: 2.88%
+    scope: DCVC，UVG与HEVC测试集平均
+  - name: 平均码率误差
+    value: 2.95%
+    scope: DCVC-TCM，UVG与HEVC测试集平均
+  evidence: abstract（初筛，未读全文）
+- statement: 引入双分支GRU调节控制器后，在保持低码率误差的同时进一步改善率失真性能。
+  confidence: reported
+  metrics:
+  - name: 平均BD-rate降幅
+    value: 5.69%
+    scope: DCVC，UVG与HEVC测试集平均
+  - name: 平均BD-rate降幅
+    value: 4.49%
+    scope: DCVC-TCM，UVG与HEVC测试集平均
+  - name: 平均码率误差
+    value: 2.13%
+    scope: DCVC，加GRU调节控制器后
+  - name: 平均码率误差
+    value: 2.24%
+    scope: DCVC-TCM，加GRU调节控制器后
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出反馈驱动的学习式视频编码码率控制框架，用log域PI/PID闭环与GRU调节器实现精准码率跟踪与BD-rate增益。
+  abstract_zh: 该文针对端到端学习式视频压缩中码率控制研究不足的问题，提出反馈驱动的码率控制框架。首先在DCVC风格框架上构建单模型多码率编码接口，通过率失真参数λ实现连续比特率调节；随后采用log域PI/PID闭环控制器，根据目标码率与熵估计码率之间的偏差在线更新λ，实现稳定的目标码率跟踪。为进一步优化预算约束下的帧级比特分配，引入基于双分支GRU的调节控制器，利用预算状态特征与因果编码统计信息对基础控制信号进行修正。在UVG和HEVC数据集上，PI/PID控制器在DCVC与DCVC-TCM上分别取得2.88%与2.95%的平均码率误差；加入调节控制器后，平均BD-rate分别降低5.69%与4.49%，码率误差进一步降至2.13%与2.24%。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 学习式视频编码的码率控制是编码系统核心议题，本文给出完整方法与量化实验，值得深读。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 面向学习式视频压缩的反馈驱动码率控制
+relations:
+- type: same_topic
+  ref: paper:arxiv:2609.15749
+  note: 同为视频压缩的闭环反馈式自适应控制，本文面向学习式编码的码率跟踪
+- type: same_topic
+  ref: paper:arxiv:2607.10478
+  note: 同为码率/量化控制议题，该文针对H.264可微代理学习，本文针对学习式视频编码
+- type: same_topic
+  ref: paper:arxiv:2606.20847
+  note: 同为帧级码率控制（QP自适应），该文基于LLM作用于VVenC，本文用GRU调节器作用于学习式编码

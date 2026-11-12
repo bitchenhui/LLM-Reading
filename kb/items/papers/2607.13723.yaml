@@ -11,6 +11,7 @@ source:
 time:
   published: '2026-07-15'
   collected: '2026-11-12'
+  updated: '2026-11-12'
 entities:
 - ref: codec:VVC
   role: subject
@@ -35,6 +36,7 @@ claims:
 summaries:
   one_liner_zh: 以编码器网络绕过逐图过拟合训练，使Cool-chic编码复杂度降低约1000倍并保持接近VVC的性能。
   abstract_zh: 过拟合式图像编解码器通过为每张图像学习轻量解码器，在获得强压缩性能的同时保持极低解码复杂度，其代表Cool-chic以约每解码像素2000次乘法的代价达到与VVC相当的编码性能。然而该类编解码器的逐图过拟合训练导致编码时间过长，难以满足实时应用需求。本文提出非过拟合（N-O）Cool-chic，绕过过拟合流程，为原有轻量解码器补充一个编码器网络。该方法将编码复杂度较Cool-chic降低约1000倍，同时保持有竞争力的压缩性能。
+  deep_dive: docs/auto/2607.13723.md
 assessment:
   relevance: high
   decision: deep_read

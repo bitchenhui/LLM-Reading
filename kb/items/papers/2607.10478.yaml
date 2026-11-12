@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-07-11'
   collected: '2026-11-12'
+  updated: '2026-11-12'
 entities:
 - ref: codec:AVC
   role: subject
@@ -42,6 +43,7 @@ claims:
 summaries:
   one_liner_zh: 构建对QP可微的H.264帧内编码代理，实现感知质量与机器视觉任务的自适应量化控制。
   abstract_zh: 针对标准视频编码器不可微导致QP难以面向特定目标（如感知质量或机器视觉任务）优化的问题，提出一种面向H.264帧内编码器的可微代理学习方法。该方法基于变速率学习压缩模型，通过软索引机制使代理对QP可微，并在global-QP（整图单QP）与spatial-QP（宏块级QP）两种量化设置下训练以逼近H.264的率失真行为。利用冻结后的代理，作者构建了代理驱动的自适应量化（AQ）框架，统一支持感知优化与机器视觉任务。实验表明所提代理能紧密逼近H.264帧内编码器的率失真行为，代理驱动的AQ框架相对固定QP的H.264基线持续改善率-任务权衡，语义分割BD-rate最高降低17.12%，MS-SSIM最高降低15.30%。
+  deep_dive: docs/auto/2607.10478.md
 assessment:
   relevance: high
   decision: deep_read

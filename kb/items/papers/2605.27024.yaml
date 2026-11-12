@@ -1,0 +1,64 @@
+id: paper:arxiv:2605.27024
+type: paper
+title: 'NeR-SC: Adapting Neural Video Representation to Screen Content'
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2605.27024v1
+  url: https://arxiv.org/abs/2605.27024
+  pdf_url: https://arxiv.org/pdf/2605.27024v1
+  venue: arXiv preprint
+time:
+  published: '2026-05-26'
+  collected: '2026-11-12'
+entities:
+- ref: codec:AVC
+  role: subject
+- ref: codec:HEVC
+  role: compared_against
+- ref: dataset:VCD
+  role: evaluated_on
+- ref: metric:PSNR
+  role: measured_by
+claims:
+- statement: NeR-SC 在 DSCVC 数据集上平均 PSNR 达 40.32 dB，优于代表性神经视频表示方法。
+  confidence: reported
+  metrics:
+  - name: PSNR
+    value: 40.32 dB
+    scope: DSCVC 数据集平均
+  evidence: abstract（初筛，未读全文）
+- statement: NeR-SC 在 VCD 数据集上平均 PSNR 达 41.73 dB，且在低码率下超越 H.264 与 H.265。
+  confidence: reported
+  metrics:
+  - name: PSNR
+    value: 41.73 dB
+    scope: VCD 数据集平均
+  evidence: abstract（初筛，未读全文）
+- statement: 嵌入级帧跳过策略使静态帧绕过冗余解码器调用，实现实时解码且无质量损失，且不引入任何训练开销。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 面向屏幕内容视频的神经表示框架，以可学习调色板、密集门控融合与零开销帧跳过策略实现低码率超越H.264/H.265。
+  abstract_zh: 该论文针对屏幕内容视频（远程桌面、在线教育、云游戏）尖锐边缘、有限调色板、强时间冗余的统计特性，提出定制化神经表示框架 NeR-SC。方法基于 SNeRV 主干，引入三个专用模块：将低频子带约束到可学习颜色集的可学习调色板、以注意力门控实现跨阶段密集交互的多门控密集融合模块，以及让静态帧绕过冗余解码器调用的嵌入级帧跳过策略（零训练开销）。在
+    DSCVC 和 VCD 数据集上分别取得 40.32 dB 与 41.73 dB 平均 PSNR，优于代表性神经视频表示方法，并在低码率下超越 H.264 和 H.265。帧跳过策略使解码达到实时且无质量损失。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 面向屏幕内容的神经视频表示（INR）压缩框架，属学习式编码核心方向且有超越传统编码器的量化结果。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: NeR-SC：将神经视频表示适配于屏幕内容
+relations:
+- type: same_topic
+  ref: paper:arxiv:2606.28163
+  note: 同为神经视频表示（INR）压缩方法
+- type: same_topic
+  ref: paper:arxiv:2609.04273
+  note: 同为神经表示视频压缩（可扩展压缩方向）
+- type: same_topic
+  ref: paper:arxiv:2604.08329
+  note: 同为 INR 条件化的低码率视频压缩

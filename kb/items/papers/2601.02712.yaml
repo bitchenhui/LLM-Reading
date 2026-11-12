@@ -1,0 +1,52 @@
+id: paper:arxiv:2601.02712
+type: paper
+title: Transform and Entropy Coding in AV2
+research_lines:
+- learned_codec
+source:
+  channel: arxiv
+  external_id: 2601.02712v2
+  url: https://arxiv.org/abs/2601.02712
+  pdf_url: https://arxiv.org/pdf/2601.02712v2
+  venue: arXiv preprint
+time:
+  published: '2026-01-06'
+  collected: '2026-11-12'
+entities:
+- ref: codec:AV2
+  role: subject
+- ref: codec:AV1
+  role: builds_on
+- ref: org:AOMedia
+  role: affiliation
+- ref: concept:EntropyModel
+  role: subject
+claims:
+- statement: AV2 在 AV1 基础上重新设计变换核并引入数据驱动变换、扩展变换划分及模式/系数依赖的变换信令。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: AV2 新增编码工具包括 IST（帧内/帧间二次变换）、TCQ（栅格编码量化）、ATC（自适应变换编码）、PARA（概率自适应速率调整）、FSC（前向跳过编码）、CCTX（跨色度分量变换）与
+    PH（奇偶隐藏），并改进了无损编码。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 上述工具使 AV2 在保持较低编解码复杂度的同时实现显著压缩增益，以更低码率提供更高质量视频。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 介绍 AV2 标准的变换、量化与熵编码设计，涵盖 IST、TCQ、ATC、FSC 等新编码工具及其压缩增益。
+  abstract_zh: 本文阐述 AV1 后继标准 AV2 中的变换、量化与熵编码设计，包括重新设计的变换核、数据驱动变换、扩展的变换划分以及模式与系数依赖的变换信令。AV2 引入多项新编码工具：帧内/帧间二次变换（IST）、栅格编码量化（TCQ）、自适应变换编码（ATC）、概率自适应速率调整（PARA）、前向跳过编码（FSC）、跨色度分量变换（CCTX）、奇偶隐藏（PH）以及改进的无损编码。这些设计在保持较低编解码复杂度的同时带来显著压缩增益，使
+    AV2 能以更低的码率提供更高质量的视频体验。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 核心标准设计论文，系统描述 AV2 变换、量化与熵编码工具，属于标准编码器优化主赛道。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: AV2 中的变换与熵编码
+relations:
+- type: same_topic
+  ref: paper:arxiv:2605.15800
+  note: 同属 AV2 研究线：该文对 AV2 压缩性能进行视频质量评估，可与本文的工具设计互相印证

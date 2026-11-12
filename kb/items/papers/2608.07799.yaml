@@ -13,6 +13,7 @@ source:
 time:
   published: '2026-08-07'
   collected: '2026-11-12'
+  updated: '2026-11-12'
 entities:
 - ref: codec:HEVC
   role: subject
@@ -64,6 +65,7 @@ summaries:
   one_liner_zh: 用神经压缩模型学到的感知重要性生成QP图指导传统编码器块级码率分配，不改解码语法即获显著MS-SSIM码率节省。
   abstract_zh: 论文提出码率分配迁移框架：在神经视频压缩框架DCVC-FM内以感知损失训练量化步长生成模型，输入原始帧与运动补偿预测帧，输出量化步长图，再将其转换为块级码率比例并映射为传统编码器的QP图。该方法在不修改传统编解码器核心解码语法的前提下，将神经模型隐式学到的感知重要性迁移到H.264/AVC、H.265/HEVC和H.266/VVC的块级码率分配中。在HEVC
     B~D测试集上，以MS-SSIM衡量分别相对JM-19.0、HM-16.20和VTM-23.0取得20.20%、8.25%和8.37%的码率节省，利用预测帧还可获得额外增益。
+  deep_dive: docs/auto/2608.07799.md
 assessment:
   relevance: high
   decision: deep_read

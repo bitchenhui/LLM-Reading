@@ -1,0 +1,73 @@
+id: paper:arxiv:2605.19397
+type: paper
+title: Perception-Aware Video Semantic Communication
+research_lines:
+- traditional_codec_opt
+source:
+  channel: arxiv
+  external_id: 2605.19397v1
+  url: https://arxiv.org/abs/2605.19397
+  pdf_url: https://arxiv.org/pdf/2605.19397v1
+  venue: arXiv preprint
+time:
+  published: '2026-05-19'
+  collected: '2026-11-12'
+entities:
+- ref: impl:VTM
+  role: subject
+- ref: metric:LPIPS
+  role: measured_by
+- ref: metric:DISTS
+  role: measured_by
+- ref: concept:GOP
+  role: uses
+- ref: org:NVIDIA
+  role: platform
+claims:
+- statement: 在可比感知质量下，PVSC相对VTM+5G LDPC工程基线最高节省约75%（LPIPS可比）与87%（DISTS可比）的传输带宽。
+  confidence: reported
+  metrics:
+  - name: bandwidth_saving
+    value: 约75%
+    scope: 相对VTM+5G LDPC基线，LPIPS可比点
+  - name: bandwidth_saving
+    value: 约87%
+    scope: 相对VTM+5G LDPC基线，DISTS可比点
+  evidence: abstract（初筛，未读全文）
+- statement: PVSC可在单张NVIDIA RTX 4090 GPU上实现实时推理。
+  confidence: reported
+  metrics:
+  - name: platform
+    value: NVIDIA RTX 4090（单卡实时）
+    scope: 接收端/推理部署硬件
+  evidence: abstract（初筛，未读全文）
+- statement: PVSC取消显式运动矢量传输，通过时空特征编码生成紧凑且信道鲁棒的符号流，并配合边信息格式、参考缓冲管理与轻量码率控制实现单模型带宽自适应推理。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: PVSC在多数据集、多分辨率、多种GOP配置与不同信道条件下均取得优于基线的表现。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出PVSC语义视频通信框架，免运动矢量传输、时空特征编码，较VTM+5G LDPC基线节省最高约75%~87%带宽并实时推理。
+  abstract_zh: 论文提出PVSC，一个面向实时无线视频传输的感知感知语义通信框架，取消显式运动矢量传输，采用时空特征编码生成紧凑且信道鲁棒的符号流。框架还规范了边信息格式、参考帧缓冲管理与轻量级码率控制，使单模型即可支持稳定接收端重建与带宽自适应推理。相比工程化的VTM+5G
+    LDPC基线，PVSC在可比LPIPS与DISTS下分别节省最高约75%与87%带宽，并在单张NVIDIA RTX 4090 GPU上实现实时推理。实验覆盖多数据集、多分辨率、多种GOP配置与信道条件，均表现优于基线。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 面向实时无线视频传输的感知驱动学习式语义编码框架，与VTM+LDPC工程基线对比并给出带宽节省与实时部署结果，属于学习式编码与系统部署范畴。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 感知感知的视频语义通信
+relations:
+- type: same_topic
+  ref: paper:arxiv:2609.16279
+  note: 同为语义/感知导向的神经视频编码与低时延传输框架
+- type: same_topic
+  ref: paper:arxiv:2606.28027
+  note: 同为学习式视频编解码的实时/多平台部署研究，关注工程落地
+- type: same_topic
+  ref: paper:arxiv:2607.28144
+  note: 同为面向实时与超低码率的端到端视频编码系统

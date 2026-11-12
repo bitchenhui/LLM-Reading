@@ -1,0 +1,64 @@
+id: paper:arxiv:2604.03353
+type: paper
+title: 'NeuralLVC: Neural Lossless Video Compression via Masked Diffusion with Temporal Conditioning'
+research_lines:
+- learned_codec
+source:
+  channel: arxiv
+  external_id: 2604.03353v2
+  url: https://arxiv.org/abs/2604.03353
+  pdf_url: https://arxiv.org/pdf/2604.03353v2
+  venue: arXiv preprint
+time:
+  published: '2026-04-03'
+  collected: '2026-11-12'
+entities:
+- ref: codec:AVC
+  role: subject
+- ref: codec:HEVC
+  role: compared_against
+- ref: dataset:UVG
+  role: evaluated_on
+- ref: concept:EntropyModel
+  role: uses
+claims:
+- statement: NeuralLVC在所有测试分辨率（CIF、720p、1080p）上无损压缩性能均显著优于H.264与H.265无损模式。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: P帧模型的轻量参考嵌入仅增加1.3%的可训练参数即可实现时间条件化。
+  confidence: reported
+  metrics:
+  - name: 可训练参数增幅
+    value: 1.3%
+    scope: P帧参考嵌入相对基模型的参数占比
+  evidence: abstract（初筛，未读全文）
+- statement: I帧模型通过双射线性token化保证像素级精确重建，编解码器在输入域严格无损（YUV420平面/RGB通道精确重建），并经端到端编解码加算术编码验证。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 评估覆盖9条Xiph CIF序列与24条720p/1080p HD序列（来自Xiph、UVG、BVI-AOM基准），分组解码机制提供可控的速度-压缩率权衡。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出结合掩码扩散与I/P帧时间条件化的神经无损视频编解码器，在多种分辨率上无损性能超越H.264与H.265。
+  abstract_zh: 论文提出NeuralLVC，一个将掩码扩散与I/P帧架构结合的神经无损视频编解码器。I帧模型采用双射线性token化保证像素级精确重建；P帧模型压缩相邻帧的时间残差，通过仅增加1.3%可训练参数的轻量参考嵌入条件化于前一已解码帧，并支持分组解码以调节速度-压缩率权衡。该方法在输入域实现严格无损：视频精确重建YUV420平面，图像精确重建RGB通道。在9条Xiph
+    CIF序列以及24条720p/1080p HD序列（Xiph、UVG、BVI-AOM基准）上的实验显示，NeuralLVC在所有测试分辨率上均显著优于H.264与H.265无损模式，并通过端到端编解码加算术编码验证了精确重建。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 提出面向视频无损压缩的神经编解码器，属学习式编码核心主题，并在多分辨率标准测试集上与H.264/H.265系统对比。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: NeuralLVC：基于时间条件掩码扩散的神经无损视频压缩
+relations:
+- type: same_topic
+  ref: paper:arxiv:2606.22371
+  note: 同为基于扩散先验的神经视频压缩，可对比有损生成式与无损精确重建两条技术路线
+- type: same_topic
+  ref: paper:arxiv:2609.34725
+  note: 同属生成式/扩散模型驱动的视频编码方向，均利用时序建模压缩视频
+- type: same_topic
+  ref: paper:arxiv:2606.28027
+  note: 同为学习式视频编解码器，可对比编解码架构与实际部署可行性

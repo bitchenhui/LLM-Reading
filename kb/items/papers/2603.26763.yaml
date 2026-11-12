@@ -1,0 +1,93 @@
+id: paper:arxiv:2603.26763
+type: paper
+title: A Camera-Native Talking-Head Video Dataset for Various Computer Vision Tasks
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2603.26763v3
+  url: https://arxiv.org/abs/2603.26763
+  pdf_url: https://arxiv.org/pdf/2603.26763v3
+  venue: arXiv preprint
+time:
+  published: '2026-03-23'
+  collected: '2026-11-12'
+entities:
+- ref: codec:VVC
+  role: subject
+- ref: codec:HEVC
+  role: subject
+- ref: codec:AV1
+  role: subject
+- ref: codec:AVC
+  role: compared_against
+- ref: metric:BD-Rate
+  role: measured_by
+- ref: metric:VMAF
+  role: measured_by
+- ref: metric:MOS
+  role: measured_by
+claims:
+- statement: 在四数据集×四编码器（H.264/H.265/H.266/AV1）的效率评测中，H.266相对H.264取得最高-71.3%的VMAF BD-rate节省。
+  confidence: reported
+  metrics:
+  - name: BD-Rate (VMAF)
+    value: -71.3%
+    scope: H.266 vs H.264，四数据集×四编码器评测中的最大节省
+  evidence: abstract（初筛，未读全文）
+- statement: 编码器与数据集、编码器与内容条件（原始/背景虚化/背景替换）的交互效应均显著，说明内容类型与背景处理会影响压缩效率。
+  confidence: reported
+  metrics:
+  - name: 偏η²
+    value: '.112'
+    scope: 编码器×数据集交互效应量
+  - name: 偏η²
+    value: '.149'
+    scope: 编码器×内容条件交互效应量
+  evidence: abstract（初筛，未读全文）
+- statement: 数据集规模为最大既有网络摄像头谈话头数据集的5倍，并以FFV1无损保留相机原生信号，未做额外有损处理。
+  confidence: reported
+  metrics:
+  - name: 片段数
+    value: 838 vs 160
+    scope: 本数据集 vs 最大先前谈话头网络摄像头数据集
+  - name: 未压缩占比
+    value: 24.7%
+    scope: 相机原生信号中未压缩录像比例
+  - name: MJPEG编码占比
+    value: 75.3%
+    scope: 相机原生信号中MJPEG编码录像比例
+  evidence: abstract（初筛，未读全文）
+- statement: 每段录像附MOS与十个感知质量标签，后者联合解释大部分MOS方差。
+  confidence: reported
+  metrics:
+  - name: MOS方差解释率
+    value: 64.4%
+    scope: 十个感知质量标签对MOS的联合解释比例
+  evidence: abstract（初筛，未读全文）
+- statement: 四个超分辨率模型的初步评测显示，数据集显著影响绝对性能但保持模型排序，表明其适用性超出编解码器基准。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 开源838段相机原生FFV1无损谈话头数据集，四编码器评测中H.266较H.264的VMAF BD-rate最高节省71.3%。
+  abstract_zh: 作者开源了一个相机原生谈话头视频数据集：838段15秒录像（约210分钟），来自799名参与者、443种相机型号，全部以FFV1无损存储，保留未压缩（24.7%）或MJPEG编码（75.3%）的原始相机信号；每段附MOS及十个感知质量标签，联合解释64.4%的MOS方差。从中构建120段的分层基准子集，涵盖原始、背景虚化、背景替换三种内容条件。在四数据集×四编码器（H.264/H.265/H.266/AV1）效率评测中，H.266相对H.264的VMAF
+    BD-rate节省最高达-71.3%，且编码器×数据集（ηp²=.112）与编码器×内容条件（ηp²=.149）交互显著，表明内容类型与背景处理均影响压缩效率。初步超分辨率评测（四个SR模型）显示数据集显著影响绝对性能但保持模型排序，验证其可用于视频压缩、超分辨率与质量评估的基准测试。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 数据集资源类论文而非编码方法创新，但包含H.264/H.265/H.266/AV1的VMAF BD-rate基准评测与RTC谈话头压缩/超分基准，对编码评测有参考价值。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 面向多种计算机视觉任务的相机原生谈话头视频数据集
+relations:
+- type: same_topic
+  ref: paper:arxiv:2609.37328
+  note: 同为VVC相关：本文将H.266/VVC纳入编码评测并做SR模型基准，CASR是面向VVC的神经超分后滤波，此类SR后处理可用该数据集评测
+- type: same_topic
+  ref: paper:arxiv:2606.28027
+  note: 同为实时通信（RTC）视频编码场景，本数据集面向RTC谈话头内容，可用于这类编解码器/部署方案的压缩与质量基准
+- type: same_topic
+  ref: paper:arxiv:2608.21495
+  note: 面向压缩视频质量增强/评估，本数据集提供带MOS标注的无损相机原生参考，适合作为该类方法的评测素材

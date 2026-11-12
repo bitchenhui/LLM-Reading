@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-07-30'
   collected: '2026-11-12'
+  updated: '2026-11-12'
 entities:
 - ref: concept:DiffusionPrior
   role: subject
@@ -58,6 +59,7 @@ summaries:
   abstract_zh: ReGenVC 将说话人视频压缩为神经压缩首帧、逐帧姿态关键点和元数据构成的紧凑码流，77帧序列仅约26 kB。解码端采用四步蒸馏的扩散Transformer，以姿态与参考帧为条件重建视频；相比x264/x265码率降至约十分之一（约26
     kB 对 250–280 kB），而在同等超低码率下传统编码器出现块状伪影而 ReGenVC 仍保持清晰。针对多步扩散采样解码延迟问题，作者通过四步蒸馏与三项系统技术（八卡Ulysses & Ring统一序列并行、空间切分VAE、三阶段重叠流水线）实现实时解码，并给出实时可行域的解析计时模型。在8-GPU节点上系统维持24
     fps输出（25帧窗口972 ms，低于1000 ms预算），支持浏览器直播且未观察到帧欠载。混合CPU-GPU部署将每GPU显存峰值从21.1 GB降至约7.7 GB。
+  deep_dive: docs/auto/2607.28144.md
 assessment:
   relevance: high
   decision: deep_read

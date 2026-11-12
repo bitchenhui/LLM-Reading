@@ -1,0 +1,65 @@
+id: paper:arxiv:2603.25566
+type: paper
+title: A Mamba-based Perceptual Loss Function for Learning-based UGC Transcoding
+research_lines:
+- inr_representation
+- traditional_codec_opt
+source:
+  channel: arxiv
+  external_id: 2603.25566v1
+  url: https://arxiv.org/abs/2603.25566
+  pdf_url: https://arxiv.org/pdf/2603.25566v1
+  venue: arXiv preprint
+time:
+  published: '2026-03-26'
+  collected: '2026-11-12'
+entities:
+- ref: concept:RDO
+  role: subject
+- ref: impl:HiNeRV
+  role: uses
+- ref: concept:INR
+  role: compared_against
+- ref: metric:BD-Rate
+  role: measured_by
+claims:
+- statement: 将基于Mamba的感知损失集成进DCVC的RDO后，相对自编码器类基线取得8.46%的BD-rate节省。
+  confidence: reported
+  metrics:
+  - name: BD-Rate节省
+    value: 8.46%
+    scope: DCVC上集成所提损失，对比自编码器（autoencoder）类基线
+  evidence: abstract（初筛，未读全文）
+- statement: 将所提感知损失集成进HiNeRV的RDO后，相对INR类基线取得12.89%的BD-rate节省。
+  confidence: reported
+  metrics:
+  - name: BD-Rate节省
+    value: 12.89%
+    scope: HiNeRV上集成所提损失，对比INR（隐式神经表示）类基线
+  evidence: abstract（初筛，未读全文）
+- statement: 提出用弱监督Siamese排序策略训练基于Mamba的轻量神经质量模型，把参考视频从像素锚点重新定位为上下文引导。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出Mamba质量模型作感知损失并嵌入DCVC与HiNeRV的RDO，UGC转码较基线分别节省8.46%与12.89% BD-rate。
+  abstract_zh: UGC源视频常因先前压缩、编辑或欠佳拍摄条件而带有失真，传统以参考视频为像素锚点的保真优化会迫使编解码器复制源本身缺陷。该文将参考视频的角色重新定位为上下文引导而非真值锚点，训练一个基于Mamba（选择性结构化状态空间模型）的轻量神经质量模型，并采用弱监督Siamese排序策略优化。该模型作为感知损失被集成进两个神经视频编解码器DCVC与HiNeRV的率失真优化（RDO）过程，以改善重建内容的感知质量。实验表明，该框架相对自编码器类基线与INR类基线分别取得8.46%和12.89%的BD-rate节省。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 学习式视频编码核心工作：将基于Mamba的感知损失嵌入神经编解码器RDO，属编码优化与感知RDO主线且带明确BD-rate增益。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 基于Mamba的感知损失函数用于学习式UGC视频转码
+relations:
+- type: same_topic
+  ref: paper:arxiv:2609.30077
+  note: 同属将全参考质量度量嵌入RDO的感知优化方向
+- type: same_topic
+  ref: paper:arxiv:2609.04273
+  note: 同属INR神经视频表示压缩，与HiNeRV技术路线相关
+- type: same_topic
+  ref: paper:arxiv:2606.28163
+  note: 同属INR类神经视频表示压缩，可与本文HiNeRV结果对照

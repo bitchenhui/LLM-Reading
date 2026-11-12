@@ -1,0 +1,80 @@
+id: paper:arxiv:2604.08329
+type: paper
+title: 'DiV-INR: Extreme Low-Bitrate Diffusion Video Compression with INR Conditioning'
+research_lines:
+- inr_representation
+source:
+  channel: arxiv
+  external_id: 2604.08329v1
+  url: https://arxiv.org/abs/2604.08329
+  pdf_url: https://arxiv.org/pdf/2604.08329v1
+  venue: arXiv preprint
+time:
+  published: '2026-04-09'
+  collected: '2026-11-12'
+entities:
+- ref: concept:INR
+  role: subject
+- ref: codec:HEVC
+  role: compared_against
+- ref: codec:VVC
+  role: compared_against
+- ref: dataset:UVG
+  role: evaluated_on
+- ref: dataset:MCL-JCV
+  role: evaluated_on
+- ref: org:JVET
+  role: evaluated_on
+- ref: metric:LPIPS
+  role: measured_by
+- ref: metric:DISTS
+  role: measured_by
+- ref: metric:FID
+  role: measured_by
+claims:
+- statement: 在<0.05 bpp极低码率下，DiV-INR的感知质量显著优于HEVC。
+  confidence: reported
+  metrics:
+  - name: BD-LPIPS
+    value: '0.214'
+    scope: 相对HEVC的BD提升，极低码率区间（<0.05 bpp）
+  - name: BD-FID
+    value: '91.14'
+    scope: 相对HEVC的BD提升，极低码率区间（<0.05 bpp）
+  evidence: abstract（初筛，未读全文）
+- statement: DiV-INR在UVG、MCL-JCV与JVET Class-B基准上同时优于VVC及已有强基线神经与纯INR视频编解码器（以LPIPS/DISTS/FID衡量）。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 以INR条件化替代帧内编码关键帧，并与扩散模型的参数高效适配器联合优化，可在极小参数开销下编码视频特定信息。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: INR条件化的扩散视频压缩先生成场景布局与物体身份、再细化纹理，呈现从语义到视觉的生成层级。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 结合INR紧凑表示与预训练视频扩散模型，在<0.05 bpp极低码率实现高感知质量的视频压缩。
+  abstract_zh: 该文提出感知驱动的视频压缩框架DiV-INR，面向<0.05 bpp的极低码率区间，将隐式神经表示（INR）与预训练视频扩散模型结合。方法以INR条件化替代传统帧内编码关键帧，训练INR估计潜在特征并引导扩散过程，同时联合优化INR权重与扩散模型的参数高效适配器，以极小参数开销编码视频特定信息。在UVG、MCL-JCV与JVET
+    Class-B基准上，感知指标（LPIPS、DISTS、FID）显著优于HEVC，BD-LPIPS最高提升0.214、BD-FID最高提升91.14，并同时超过VVC及已有神经与纯INR视频编解码器。分析还显示该方法先生成场景布局与物体身份、再细化纹理，揭示了从语义到视觉的生成层级。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 提出INR条件化扩散视频压缩框架，属生成式压缩与INR表示的核心工作，且在主流测试集上对比HEVC/VVC，高度相关。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: DiV-INR：基于INR条件化的极低码率扩散视频压缩
+relations:
+- type: same_topic
+  ref: paper:arxiv:2606.22371
+  note: 同为利用扩散先验的生成式视频压缩
+- type: same_topic
+  ref: paper:arxiv:2609.34725
+  note: 同为将生成式先验引入视频压缩
+- type: same_topic
+  ref: paper:arxiv:2606.28163
+  note: 同为神经/INR式视频表示压缩，属INR-only基线方向
+- type: same_topic
+  ref: paper:arxiv:2607.28144
+  note: 同为超低码率生成式视频编码

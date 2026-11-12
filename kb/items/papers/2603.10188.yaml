@@ -1,0 +1,82 @@
+id: paper:arxiv:2603.10188
+type: paper
+title: 'ARCHE: Autoregressive Residual Compression with Hyperprior and Excitation'
+research_lines:
+- learned_codec
+source:
+  channel: arxiv
+  external_id: 2603.10188v1
+  url: https://arxiv.org/abs/2603.10188
+  pdf_url: https://arxiv.org/pdf/2603.10188v1
+  venue: arXiv preprint
+time:
+  published: '2026-03-10'
+  collected: '2026-11-12'
+entities:
+- ref: concept:Hyperprior
+  role: subject
+- ref: dataset:Kodak
+  role: evaluated_on
+- ref: metric:BD-Rate
+  role: measured_by
+- ref: codec:VVC
+  role: compared_against
+claims:
+- statement: ARCHE在Kodak数据集上相对Balle等人常用基准模型降低BD-Rate约48%。
+  confidence: reported
+  metrics:
+  - name: BD-Rate
+    value: ≈-48%
+    scope: 相对Balle et al.基准模型，Kodak数据集
+  evidence: abstract（初筛，未读全文）
+- statement: ARCHE相对Minnen & Singh通道自回归模型降低BD-Rate约30%。
+  confidence: reported
+  metrics:
+  - name: BD-Rate
+    value: ≈-30%
+    scope: 相对Minnen & Singh通道自回归模型，Kodak数据集
+  evidence: abstract（初筛，未读全文）
+- statement: ARCHE的率失真性能超过VVC Intra编码器，BD-Rate降低约5%。
+  confidence: reported
+  metrics:
+  - name: BD-Rate
+    value: ≈-5%
+    scope: 相对VVC Intra，Kodak数据集
+  evidence: abstract（初筛，未读全文）
+- statement: ARCHE在不使用循环或Transformer组件的情况下保持计算效率，参数量95M，单图运行时间222ms。
+  confidence: reported
+  metrics:
+  - name: 参数量
+    value: 95M
+    scope: ARCHE模型整体
+  - name: 单图运行时间
+    value: 222ms
+    scope: 每张图像
+  evidence: abstract（初筛，未读全文）
+- statement: ARCHE在单一概率框架内统一分层、空间与通道先验，并用自适应特征重标定与残差精炼增强潜表示，低码率下纹理更锐利、色彩保真度更好。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 统一分层/空间/通道先验的端到端学习图像压缩框架，Kodak上BD-Rate优于VVC Intra约5%。
+  abstract_zh: 论文提出ARCHE，一个端到端学习式图像压缩框架，在单一概率框架内统一了分层先验、空间先验与通道先验，同时捕获潜表示中的全局与局部依赖，并通过自适应特征重标定（激励）与残差精炼提升潜表示质量。该方法不依赖循环网络或Transformer组件，仅用高效卷积设计实现精确的熵建模。在Kodak数据集上，ARCHE相对Balle等人基准模型降低BD-Rate约48%，相对Minnen
+    & Singh通道自回归模型降低约30%，相对VVC Intra编码器降低约5%。模型参数量95M、单图推理222ms，视觉对比显示低码率下纹理更锐利、色彩保真度更高。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 学习式图像压缩核心工作，提出统一多先验的熵模型架构并在Kodak上BD-Rate超越VVC Intra约5%，兼具性能与复杂度分析。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: ARCHE：基于超先验与激励机制的自回归残差压缩
+relations:
+- type: same_topic
+  ref: paper:arxiv:2610.22421
+  note: 同为端到端学习式图像编码，关注RD优化与实际部署
+- type: same_topic
+  ref: paper:arxiv:2611.10073
+  note: 同属学习式图像压缩，聚焦压缩模型的训练与性能改进
+- type: same_topic
+  ref: paper:arxiv:2607.13723
+  note: 同为神经图像压缩，均权衡编码精度与计算效率/实用性

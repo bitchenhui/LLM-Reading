@@ -1,0 +1,72 @@
+id: paper:arxiv:2606.13957
+type: paper
+title: High-Fidelity Video Compression based on Invertible Neural Transform and Implicit Conditioning
+research_lines:
+- learned_codec
+source:
+  channel: arxiv
+  external_id: 2606.13957v1
+  url: https://arxiv.org/abs/2606.13957
+  pdf_url: https://arxiv.org/pdf/2606.13957v1
+  venue: arXiv preprint
+time:
+  published: '2026-06-11'
+  collected: '2026-11-12'
+entities:
+- ref: concept:EntropyModel
+  role: subject
+- ref: dataset:UVG
+  role: evaluated_on
+- ref: dataset:MCL-JCV
+  role: evaluated_on
+- ref: metric:BD-Rate
+  role: measured_by
+- ref: metric:PSNR
+  role: measured_by
+- ref: metric:MS-SSIM
+  role: measured_by
+- ref: impl:x265
+  role: compared_against
+claims:
+- statement: 在UVG基准上，InnVC相对x265实现PSNR BD-rate降低21.66%。
+  confidence: reported
+  metrics:
+  - name: PSNR BD-Rate
+    value: 21.66%
+    scope: 相对x265，UVG数据集（降低幅度）
+  evidence: abstract（初筛，未读全文）
+- statement: 在UVG基准上，InnVC相对x265实现MS-SSIM BD-rate降低46.06%。
+  confidence: reported
+  metrics:
+  - name: MS-SSIM BD-Rate
+    value: 46.06%
+    scope: 相对x265，UVG数据集（降低幅度）
+  evidence: abstract（初筛，未读全文）
+- statement: 作者声称InnVC是首个在单一架构尺度内覆盖从低码率到高保真工作点的神经视频编解码器。
+  confidence: reported
+  metrics:
+  - name: PSNR工作点跨度
+    value: '>20 dB'
+    scope: 单模型覆盖范围（作者声明）
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出InnVC：以可逆主变换路径结合隐式条件场与调度掩码策略，实现覆盖20 dB以上PSNR范围的宽质量高保真神经视频压缩。
+  abstract_zh: 针对现有学习式视频编码依赖不可逆分析-合成变换、重建同时受量化与变换近似误差制约的问题，提出InnVC，在量化前保持可逆的主变换路径，并通过紧凑的隐式条件场注入内容自适应上下文，将强相关的视频内容与难建模的细节解耦，使各组件分工完成互补的重建任务。进一步引入调度掩码策略，逐步将有效信息集中到更少的潜在通道以提升熵编码效率。在UVG和MCL-JCV基准上，InnVC在宽质量范围内取得强压缩性能，尤其在高保真区间有效，相对x265在UVG上PSNR
+    BD-rate降低21.66%、MS-SSIM BD-rate降低46.06%。作者称其为首个在单一架构尺度内覆盖从低码率到高保真、PSNR跨度超过20 dB的神经视频编解码器。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 核心学习式视频编码工作，提出可逆变换+隐式条件化的神经视频编解码器InnVC，并给出对x265的显著BD-rate收益，值得深读。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 基于可逆神经变换与隐式条件化的高保真视频压缩
+relations:
+- type: same_topic
+  ref: paper:arxiv:2606.28163
+  note: NVRC++同样面向神经视频表示压缩的极端复杂度与质量范围，与InnVC的宽质量范围高保真目标直接相关
+- type: same_topic
+  ref: paper:arxiv:2609.04273
+  note: Scalable Neural Video Representation Compression同样研究可扩展/多质量级的神经视频压缩

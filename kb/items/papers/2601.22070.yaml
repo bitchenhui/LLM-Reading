@@ -1,0 +1,62 @@
+id: paper:arxiv:2601.22070
+type: paper
+title: Wrapper-Aware Rate-Distortion Optimization in Feature Coding for Machines
+research_lines:
+- traditional_codec_opt
+source:
+  channel: arxiv
+  external_id: 2601.22070v1
+  url: https://arxiv.org/abs/2601.22070
+  pdf_url: https://arxiv.org/pdf/2601.22070v1
+  venue: arXiv preprint
+time:
+  published: '2026-01-29'
+  collected: '2026-11-12'
+entities:
+- ref: concept:RDO
+  role: subject
+- ref: codec:HEVC
+  role: uses
+- ref: codec:VVC
+  role: compared_against
+- ref: concept:GOP
+  role: uses
+- ref: org:MPEG
+  role: evaluated_on
+claims:
+- statement: 级联结构下内部编码器基于SSE的RDO未考虑后处理包装器，会把比特浪费在后处理阶段被丢弃的信息上。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 提出包装器感知加权SSE指标（WA-RDO），并以GOP内权重时域复用和离线训练的固定架构/任务相关权重两项手段实现工程落地。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在MPEG测试条件下，WA-RDO的HEVC实现性能追平基于VVC的FCM最优方法，弥合了一代编码器代差。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: WA-RDO相对SSE-RDO HEVC仅引入极小的运行时开销。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出包装器感知加权SSE的WA-RDO改造内部编码器比特分配，使HEVC级联FCM追平VVC级最优性能。
+  abstract_zh: 论文研究面向机器的特征编码（FCM）：发送端将神经网络前半部分输出以'预处理网络—传统编码器—后处理网络'的三明治结构压缩后传输。由于传统编码器不可微，包装器需用代理编码器训练，且内部编码器的RDO基于SSE、不考虑后处理包装器，导致比特被花在后处理会丢弃的信息上。作者提出包装器感知的加权SSE指标修改内部编码器比特分配（WA-RDO），并通过GOP内权重时域复用与离线训练的固定架构/任务相关权重使其工程可用。在MPEG测试条件下，基于HEVC的实现追平了基于VVC的FCM最优方法，跨越一代编码器代差，且相对SSE-RDO
+    HEVC的运行时开销极小。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 直接研究面向机器编码（FCM）中级联传统编码器的率失真优化改进，属于编码优化核心议题。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 面向机器的特征编码中包装器感知的率失真优化
+relations:
+- type: same_topic
+  ref: paper:arxiv:2606.21033
+  note: 同属面向机器感知的压缩编码方向（VCM/FCM）。
+- type: same_topic
+  ref: paper:arxiv:2607.10478
+  note: 共同面对传统编码器不可微、需代理学习改造量化/码控的主题。
+- type: same_topic
+  ref: paper:arxiv:2609.30077
+  note: 均研究将SSE之外的失真度量纳入率失真优化。

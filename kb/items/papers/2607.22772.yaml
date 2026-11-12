@@ -11,6 +11,7 @@ source:
 time:
   published: '2026-07-24'
   collected: '2026-11-12'
+  updated: '2026-11-12'
 entities:
 - ref: metric:LPIPS
   role: subject
@@ -49,6 +50,7 @@ summaries:
   one_liner_zh: 首个从零训练的面向压缩视频扩散模型GenVC，一步解码并用自适应得分蒸馏修复运动停滞，超低码率感知质量SOTA。
   abstract_zh: 论文提出GenVC，据称是首个专为压缩任务从零训练的视频扩散模型，直接在像素空间以全局到局部层级恢复细粒度时空细节，实现高质量生成式重建。为加速推理，作者用分布匹配蒸馏（DMD）将多步模型压缩为单步，但发现直接蒸馏会使学生模型趋向运动停滞的重建，并将其归因于学生扰动脱离冻结教师训练区域后的教师引导失效与反馈回路。为此提出自适应得分蒸馏（Adaptive
     Score Distillation），按更新与真值方向的对齐程度门控DMD更新，从而获得运动连贯的高质量重建。实验显示GenVC在超低码率下达到SOTA感知质量：匹配LPIPS时较GLVC平均节省62.5%码率，匹配FID时节省71.3%；模型仅478.0M参数，单步解码1080p视频在A100上达15.1fps。
+  deep_dive: docs/auto/2607.22772.md
 assessment:
   relevance: high
   decision: deep_read

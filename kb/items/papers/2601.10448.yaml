@@ -1,0 +1,73 @@
+id: paper:arxiv:2601.10448
+type: paper
+title: Subjective evaluation of UHD video coded using VVC with LCEVC and ML-VVC
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2601.10448v1
+  url: https://arxiv.org/abs/2601.10448
+  pdf_url: https://arxiv.org/pdf/2601.10448v1
+  venue: arXiv preprint
+time:
+  published: '2026-01-15'
+  collected: '2026-11-12'
+entities:
+- ref: codec:LCEVC
+  role: subject
+- ref: codec:VVC
+  role: uses
+- ref: metric:MOS
+  role: measured_by
+- ref: org:MPEG
+  role: builds_on
+claims:
+- statement: 在遵循 MPEG 多层视频编码评估的测试方法与条件下，将 LCEVC（LTM 8.1 编码）作为增强层叠加于 HD VVC 基础层生成 UHD 重建输出，并与上采样 VVC 基础层解码及
+    ML-VVC 两个参考进行主观质量对比。
+  confidence: reported
+  metrics:
+  - name: LCEVC 测试模型版本
+    value: LTM 8.1
+    scope: 增强层编码工具
+  evidence: abstract（初筛，未读全文）
+- statement: 测试覆盖两个增强层码率工作点，分别约占总码率的 10% 与 50%，用于比较不同增强层开销下的感知质量。
+  confidence: reported
+  metrics:
+  - name: 增强层码率占比
+    value: 约10%
+    scope: 工作点一
+  - name: 增强层码率占比
+    value: 约50%
+    scope: 工作点二
+  evidence: abstract（初筛，未读全文）
+- statement: 主观评估采用 DCR 方法，25 名参与者对 15 个 SDR 与 HDR 序列评分，结果以 MOS 及 95% 置信区间报告。
+  confidence: reported
+  metrics:
+  - name: 参与者人数
+    value: '25'
+    scope: DCR 主观测试
+  - name: 测试序列数
+    value: '15'
+    scope: SDR 与 HDR 序列
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 在 MPEG 多层测试条件下，用 DCR 主观评估 VVC+LCEVC 的 UHD 输出，并与上采样 VVC 和 ML-VVC 对比。
+  abstract_zh: 本文报告了一种多层视频编码配置的主观质量评估：在 HD 分辨率的 VVC 基础层之上叠加由 LCEVC 测试模型 LTM 8.1 编码的 LCEVC 增强层，重建生成 UHD
+    输出。测试遵循 MPEG 多层视频编码评估既定的方法与条件，将 VVC+LCEVC 配置与两个参考对比：上采样的 VVC 基础层解码输出以及多层 VVC（ML-VVC）。实验设置两个工作点，增强层码率约占总码率的
+    10% 与 50%。主观评估采用 DCR 方法，由 25 名参与者对 15 个 SDR 与 HDR 序列打分，结果以带 95% 置信区间的 MOS 呈现，用于比较各编码方案与工作点之间的感知质量。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 属 MPEG 式标准编解码配置（VVC+LCEVC 对比 ML-VVC）的主观验证测试，含具体 MOS 数据但无算法性贡献，适合初筛摘要收录。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 使用 LCEVC 与 ML-VVC 的 VVC UHD 视频编码主观评估
+relations:
+- type: same_topic
+  ref: paper:arxiv:2609.37328
+  note: 同样围绕 VVC 编码的质量增强与评估
+- type: same_topic
+  ref: paper:arxiv:2605.15800
+  note: 同为标准编解码器（AV2 vs VVC+LCEVC/ML-VVC）的编码性能主观质量评估

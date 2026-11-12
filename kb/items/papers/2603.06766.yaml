@@ -1,0 +1,68 @@
+id: paper:arxiv:2603.06766
+type: paper
+title: 'HiDE: Hierarchical Dictionary-Based Entropy Modeling for Learned Image Compression'
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2603.06766v1
+  url: https://arxiv.org/abs/2603.06766
+  pdf_url: https://arxiv.org/pdf/2603.06766v1
+  venue: arXiv preprint
+time:
+  published: '2026-03-06'
+  collected: '2026-11-12'
+entities:
+- ref: dataset:Kodak
+  role: subject
+- ref: impl:VTM
+  role: compared_against
+- ref: metric:BD-Rate
+  role: measured_by
+claims:
+- statement: HiDE在Kodak数据集上相对VTM-12.1取得18.5%的BD-rate节省。
+  confidence: reported
+  metrics:
+  - name: BD-rate savings
+    value: 18.5%
+    scope: Kodak数据集，锚点VTM-12.1
+  evidence: abstract（初筛，未读全文）
+- statement: HiDE在CLIC数据集上相对VTM-12.1取得21.99%的BD-rate节省。
+  confidence: reported
+  metrics:
+  - name: BD-rate savings
+    value: 21.99%
+    scope: CLIC数据集，锚点VTM-12.1
+  evidence: abstract（初筛，未读全文）
+- statement: HiDE在Tecnick数据集上相对VTM-12.1取得24.01%的BD-rate节省。
+  confidence: reported
+  metrics:
+  - name: BD-rate savings
+    value: 24.01%
+    scope: Tecnick数据集，锚点VTM-12.1
+  evidence: abstract（初筛，未读全文）
+- statement: HiDE将外部先验分解为全局结构字典与局部细节字典并采用级联检索，配合并行多感受野的上下文感知参数估计网络，缓解了单层字典先验利用不均衡的问题。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出分层字典熵建模HiDE，以全局-局部双字典级联检索利用外部先验，较VTM-12.1最多节省24%BD-rate。
+  abstract_zh: 该论文针对学习式图像压缩（LIC）中的熵建模问题，指出现有字典式熵模型将异构外部先验压入单层字典，导致先验利用不均衡、表示能力受限。HiDE框架将外部先验分解为全局结构字典与局部细节字典，并通过级联检索实现外部信息的结构化高效利用。同时设计具有并行多感受野的上下文感知参数估计网络，自适应融合异构上下文以精确估计条件概率。实验显示HiDE在Kodak、CLIC、Tecnick上分别相对VTM-12.1取得18.5%、21.99%、24.01%的BD-rate节省。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 学习式图像压缩熵建模的核心方法论文，提出分层字典外部先验框架并给出相对VTM-12.1的显著BD-rate收益，属编码领域主线工作。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: HiDE：面向学习式图像压缩的分层字典熵建模
+relations:
+- type: same_topic
+  ref: paper:arxiv:2606.21033
+  note: 同为学习式图像压缩方法研究（MoECodec面向人机联合感知）
+- type: same_topic
+  ref: paper:arxiv:2603.10188
+  note: 同为学习式图像压缩中的先验/熵建模设计（ARCHE基于超先验与激励）
+- type: same_topic
+  ref: paper:arxiv:2610.33616
+  note: 同为学习式图像压缩编码结构改进方法

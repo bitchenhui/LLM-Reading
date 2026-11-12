@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-08-21'
   collected: '2026-11-12'
+  updated: '2026-11-12'
 entities:
 - ref: codec:VVC
   role: subject
@@ -28,6 +29,7 @@ summaries:
   one_liner_zh: 提出融合时空、跨频域与压缩域预测特征的网络 MDFI，增强 H.266/VVC 解码视频质量并发布配套数据集。
   abstract_zh: 论文提出 MDFI，一种针对 H.266/VVC 压缩视频的质量增强方法，核心是新设计的帧预测特征变换（FPFT）模块，用于处理码流中的帧间预测信息。该方法采用多域特征融合策略，将时空特征、跨频域表示与压缩域预测信息结合，以缓解压缩伪影并提升重建质量。作者还构建了一个配套数据集，包含未压缩视频序列、多
     QP 级别的重建版本以及由 H.266/VVC 码流生成的预测帧。大量实验表明，MDFI 在客观指标和视觉质量上均优于现有最先进方法。代码已开源。
+  deep_dive: docs/auto/2608.21495.md
 assessment:
   relevance: high
   decision: deep_read

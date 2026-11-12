@@ -1,0 +1,58 @@
+id: paper:arxiv:2605.21526
+type: paper
+title: 'Partition Tree Search Acceleration for VVC: Survey and Evaluation with VTM Evolution'
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2605.21526v1
+  url: https://arxiv.org/abs/2605.21526
+  pdf_url: https://arxiv.org/pdf/2605.21526v1
+  venue: arXiv preprint
+time:
+  published: '2026-05-19'
+  collected: '2026-11-12'
+entities:
+- ref: codec:VVC
+  role: subject
+- ref: codec:HEVC
+  role: compared_against
+- ref: impl:VTM
+  role: evaluated_on
+claims:
+- statement: VVC相比其前身HEVC，在同等重建视频视觉质量下可节省40-50%码率，但代价是编码复杂度显著增加。
+  confidence: reported
+  metrics:
+  - name: 码率节省
+    value: 40-50%
+    scope: VVC相对HEVC，同等视觉质量
+  evidence: abstract（初筛，未读全文）
+- statement: VVC编码复杂度的增长主要源于QTMTT（四叉树+多类型树）划分结构带来的分裂组合复杂度提升。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 划分加速方法需随VTM内部变化（如快速划分决策启发式的更新）持续适配；跨多种VTM配置与多个软件版本评估复杂度-压缩效率权衡的挑战更为突出。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 批判性综述VVC划分搜索加速技术，并评估其随VTM版本演进与内部启发式变化的适配性。
+  abstract_zh: VVC凭借QTMTT（四叉树+多类型树）划分结构，在同等视觉质量下较HEVC节省40-50%码率，但分裂组合复杂度激增导致编码复杂度显著上升。本文对最先进的划分加速技术进行批判性评估，重点考察这些方法如何随VVC参考软件VTM
+    successive版本的内部变化（如快速划分决策启发式更新）而演进适配。研究分析了在多种VTM配置和多个软件版本下评估复杂度与压缩效率权衡所面临的挑战，指出跨版本可比性是该方法领域的关键难题。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: VVC划分树搜索加速的综述与实证评估，直接属于标准编码器优化领域，且系统关联VTM多版本演进，信息价值高。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 面向VVC的划分树搜索加速：综述与基于VTM演进的评估
+relations:
+- type: same_topic
+  ref: paper:arxiv:2606.31084
+  note: 同为VVC/VVenC编码器划分/合并搜索的复杂度加速
+- type: same_topic
+  ref: paper:arxiv:2607.04985
+  note: 同为降低标准编码工具计算复杂度的方法
+- type: same_topic
+  ref: paper:arxiv:2606.20847
+  note: 同为VVenC/VVC编码器端启发式优化工具

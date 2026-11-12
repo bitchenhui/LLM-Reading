@@ -11,6 +11,7 @@ source:
 time:
   published: '2026-07-06'
   collected: '2026-11-12'
+  updated: '2026-11-12'
 entities:
 - ref: codec:ECM
   role: subject
@@ -30,6 +31,7 @@ claims:
 summaries:
   one_liner_zh: 用多项式图滤波器替代ECM细粒度梯度分类固定滤波，滤波器数量减少一个数量级且性能相当。
   abstract_zh: 论文针对ECM中自适应环路滤波（ALF）依赖大量离线训练固定滤波器与细粒度梯度分类器导致的冗余与实现复杂度问题，提出基于图的固定滤波框架。该方法用图结构编码像素强度关系，比单纯梯度分类更有效地捕捉局部结构信息，并将固定滤波器学习为多项式图滤波器，使结构相似的局部模式共享滤波行为。实验表明其压缩性能与ECM基线相当，同时所需滤波器数量减少约一个数量级。
+  deep_dive: docs/auto/2607.04985.md
 assessment:
   relevance: high
   decision: deep_read

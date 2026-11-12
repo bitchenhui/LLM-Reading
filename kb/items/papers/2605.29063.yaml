@@ -1,0 +1,82 @@
+id: paper:arxiv:2605.29063
+type: paper
+title: Accelerating HEVC Intra Partitioning via a CNN-Hierarchical Attention Transformer Hybrid
+research_lines:
+- traditional_codec_opt
+source:
+  channel: arxiv
+  external_id: 2605.29063v1
+  url: https://arxiv.org/abs/2605.29063
+  pdf_url: https://arxiv.org/pdf/2605.29063v1
+  venue: arXiv preprint
+time:
+  published: '2026-05-27'
+  collected: '2026-11-12'
+entities:
+- ref: codec:HEVC
+  role: subject
+- ref: concept:RDO
+  role: uses
+- ref: metric:BD-Rate
+  role: measured_by
+- ref: metric:VMAF
+  role: measured_by
+- ref: org:JCT-VC
+  role: evaluated_on
+claims:
+- statement: HFViT以重参数化深度可分离卷积骨干结合带carrier token的HAT机制，以亚二次方复杂度实现全局信息传播用于HEVC帧内划分预测。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 相比ETH-CNN基线，HFViT在JCT-VC标准测试序列上平均VMAF BD-rate损失降低2.4个百分点。
+  confidence: reported
+  metrics:
+  - name: VMAF BD-rate penalty reduction
+    value: '2.4'
+    scope: percentage points，Class A，vs ETH-CNN基线
+  evidence: abstract（初筛，未读全文）
+- statement: 相比ETH-CNN基线，HFViT在Class B序列上平均VMAF BD-rate损失降低2.6个百分点。
+  confidence: reported
+  metrics:
+  - name: VMAF BD-rate penalty reduction
+    value: '2.6'
+    scope: percentage points，Class B，vs ETH-CNN基线
+  evidence: abstract（初筛，未读全文）
+- statement: 相比ETH-CNN基线，HFViT在Class E序列上平均VMAF BD-rate损失降低7.9个百分点。
+  confidence: reported
+  metrics:
+  - name: VMAF BD-rate penalty reduction
+    value: '7.9'
+    scope: percentage points，Class E，vs ETH-CNN基线
+  evidence: abstract（初筛，未读全文）
+- statement: HFViT的CPU推理延迟保持在CNN基线的8%以内，GPU推理则比CNN基线快40%，具备实时编码器集成可行性。
+  confidence: reported
+  metrics:
+  - name: CPU推理延迟差
+    value: within 8%
+    scope: 相对CNN基线
+  - name: GPU推理加速
+    value: 40%
+    scope: 相对CNN基线提升
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出CNN与层级注意力Transformer混合的HFViT，在近CNN级CPU延迟下显著降低HEVC帧内编码的BD-rate损失。
+  abstract_zh: 针对HEVC递归四叉树划分中穷举率失真优化（RDO）导致的CTU划分预测计算开销，提出混合快速视觉Transformer（HFViT）。该方法将重参数化深度可分离卷积骨干与带carrier
+    token机制的层级注意力Transformer（HAT）融合，以低于二次方的复杂度实现全局信息传播，并通过训练后结构融合将批归一化折叠进前层以降低延迟。在JCT-VC标准测试序列上，相比ETH-CNN基线，HFViT在A、B、E类的平均VMAF
+    BD-rate损失分别减少2.4、2.6、7.9个百分点。CPU推理延迟保持在CNN基线的8%以内，GPU上则比CNN基线快40%，具备实时编码器集成的可行性。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 针对HEVC帧内划分预测提出CNN-HAT混合架构HFViT，属标准编码器学习式加速且有完整BD-rate/延迟评测，与编码主题高度契合。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 基于CNN-层级注意力Transformer混合架构的HEVC帧内划分加速
+relations:
+- type: same_topic
+  ref: paper:arxiv:2605.21526
+  note: 同属编码器划分树搜索/划分决策加速主题，本文为HEVC帧内划分的学习式加速
+- type: same_topic
+  ref: paper:arxiv:2607.04985
+  note: 同属通过学习/轻量模型降低标准编码器工具计算复杂度的方向

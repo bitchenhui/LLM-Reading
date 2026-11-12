@@ -1,0 +1,61 @@
+id: paper:arxiv:2603.05756
+type: paper
+title: 'Uni-LVC: A Unified Method for Intra- and Inter-Mode Learned Video Compression'
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2603.05756v1
+  url: https://arxiv.org/abs/2603.05756
+  pdf_url: https://arxiv.org/pdf/2603.05756v1
+  venue: arXiv preprint
+time:
+  published: '2026-03-05'
+  collected: '2026-11-12'
+entities:
+- ref: codec:VVC
+  role: subject
+- ref: impl:DCVC-RT
+  role: compared_against
+claims:
+- statement: 以 DCVC-RT 为代表的学习式视频编解码器在压缩效率上已超越 H.266/VVC 低延迟模式。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: Uni-LVC 在单一模型中同时支持帧内与帧间编码，并覆盖低延迟与随机访问两种配置。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 跨注意力适配模块将时间线索整合进帧内编码条件框架，可无缝支持单向（低延迟）与双向（随机访问）预测。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 可靠性感知分类器选择性缩放时间线索，使模型在参考不可靠时行为趋近帧内编码，缓解性能退化。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: Uni-LVC 在帧内与帧间配置下均取得优越的率失真性能，且计算效率与现有方法相当。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出单模型统一支持帧内/帧间与低延迟/随机访问模式的学习式视频压缩，率失真性能优越。
+  abstract_zh: 现有学习式视频压缩通常需要帧内与帧间分离模型，且时间参考不可靠时性能退化。Uni-LVC 将帧间编码建模为以参考帧提取的时间信息为条件的帧内编码，在单一模型中同时支持帧内/帧间编码及低延迟与随机访问两种配置。方法上设计了高效的跨注意力适配模块以融合时间线索，支持单向（低延迟）与双向（随机访问）预测；并提出可靠性感知分类器选择性缩放时间线索，使参考不可靠时行为趋近帧内编码，配合多阶段训练策略适配多种编码模式。实验表明
+    Uni-LVC 在帧内与帧间配置下均取得优越的率失真性能，同时保持相当的计算效率。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 核心学习式视频编码工作，单模型统一帧内/帧间及低延迟/随机访问模式，率失真性能优越，与本库主题高度契合。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: Uni-LVC：帧内与帧间模式统一的学习式视频压缩方法
+relations:
+- type: same_topic
+  ref: paper:arxiv:2606.28027
+  note: 同为学习式视频编解码器（MLVC 面向多平台部署，Uni-LVC 面向模式统一）
+- type: same_topic
+  ref: paper:arxiv:2604.20104
+  note: 均属学习式视频压缩方法改进
+- type: same_topic
+  ref: paper:arxiv:2606.22371
+  note: 均属学习式视频压缩，ZeroGVC 走生成式先验路线，与 Uni-LVC 的神经编解码路线互补
+- type: same_topic
+  ref: paper:arxiv:2610.02265
+  note: 均为神经视频压缩，关注时间信息利用（事件引导 vs. 参考帧条件）
