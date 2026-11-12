@@ -1,0 +1,73 @@
+id: paper:arxiv:2610.25012
+type: paper
+title: 'Conjugate Compilation: Self-Improving Agentic Co-Compilation for Speculative Decoding'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2610.25012v1
+  url: https://arxiv.org/abs/2610.25012
+  pdf_url: https://arxiv.org/pdf/2610.25012v1
+  venue: arXiv preprint
+time:
+  published: '2026-10-18'
+  collected: '2026-11-12'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: uses
+- ref: org:NVIDIA
+  role: platform
+claims:
+- statement: Conjugate Compilation在6种单GPU投机解码配置上相对常规执行取得几何平均单轮加速1.37x。
+  confidence: reported
+  metrics:
+  - name: 几何平均单轮加速
+    value: 1.37x
+    scope: NVIDIA B300与RTX 5090上6种单GPU投机解码配置，对比常规执行
+  evidence: abstract（初筛，未读全文）
+- statement: 引入交错kernel布局后加速提升至1.45x，最佳情形达1.59x。
+  confidence: reported
+  metrics:
+  - name: 几何平均单轮加速（交错kernel）
+    value: 1.45x
+    scope: 同一6配置评测，引入交错kernel后
+  - name: 最佳情形加速
+    value: 1.59x
+    scope: 全部配置中的最优单点结果
+  evidence: abstract（初筛，未读全文）
+- statement: 系统平均提升GPU利用率：RTX 5090上1.46x，B300上1.50x。
+  confidence: reported
+  metrics:
+  - name: GPU利用率提升
+    value: 1.46x
+    scope: RTX 5090，6配置平均
+  - name: GPU利用率提升
+    value: 1.50x
+    scope: NVIDIA B300，6配置平均
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 用LLM智能体自改进搜索联合编译投机解码的草稿与目标模型共享执行，几何平均提速1.37倍。
+  abstract_zh: 该文将投机解码重构为跨模型编译问题，在草稿模型与目标模型的共享执行内联合优化，而非各自独立编译，核心洞察是跨模型优化应由共置共享执行的实测性能引导。为此设计了将两模型块交错排布于公共tile的操作数布局，使GEMM与非GEMM计算共置且不改变数学语义。系统以自我改进的智能体搜索实现：LLM以编译器和GPU执行为环境编辑跨模型优化计划，利用实测得分、kernel级判定与编译器反馈迭代提案，并用蒙特卡洛树搜索累积奖励指导探索。在NVIDIA
+    B300与RTX 5090上6种单GPU投机解码配置中，几何平均单轮加速1.37x，交错kernel后达1.45x（最佳1.59x），GPU利用率平均提升1.46x（RTX 5090）与1.50x（B300）。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: LLM智能体以编译器与GPU执行为环境自改进搜索优化计划，属自我改进AI域的非核心音视频工作，按规则给summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 共轭编译：面向投机解码的自我改进式智能体协同编译
+relations:
+- type: same_topic
+  ref: paper:arxiv:2609.35568
+  note: 同属LLM智能体驱动的硬件kernel优化：本文用自改进搜索优化GPU协同编译，后者用经验记忆学习做NPU kernel合成
+- type: same_topic
+  ref: paper:arxiv:2610.22791
+  note: 同属自我进化编码智能体：以编译/执行环境反馈为回路迭代改进优化方案
+- type: same_topic
+  ref: paper:arxiv:2610.32026
+  note: 同属递归自我改进智能体用于系统级优化的研究方向

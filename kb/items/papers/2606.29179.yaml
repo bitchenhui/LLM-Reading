@@ -1,0 +1,72 @@
+id: paper:arxiv:2606.29179
+type: paper
+title: Performance Analysis of Hardware-Accelerated 10-Bit 4:2:2 Encoding with Split-Frame Encoding for
+  High-Fidelity V-PCC Streaming
+domain: video_image_coding
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2606.29179v1
+  url: https://arxiv.org/abs/2606.29179
+  pdf_url: https://arxiv.org/pdf/2606.29179v1
+  venue: arXiv preprint
+time:
+  published: '2026-06-28'
+  collected: '2026-11-12'
+entities:
+- ref: codec:V-PCC
+  role: subject
+- ref: codec:HEVC
+  role: uses
+- ref: org:NVIDIA
+  role: platform
+- ref: metric:FPS
+  role: measured_by
+- ref: metric:BD-Rate
+  role: measured_by
+claims:
+- statement: 在Blackwell GPU上采用4路分帧编码（SFE），8K 10-bit 4:2:2 HEVC编码吞吐达122 fps，满足高密度动态点云V-PCC的实时编码约束。
+  confidence: reported
+  metrics:
+  - name: 编码吞吐
+    value: 122 fps
+    scope: Blackwell GPU、4-way SFE、8K 10-bit 4:2:2 HEVC
+  evidence: abstract（初筛，未读全文）
+- statement: 分帧编码在slice边界处无法利用跨块空间冗余，导致最高5%的BD-Rate惩罚。
+  confidence: reported
+  metrics:
+  - name: BD-Rate
+    value: 最高5%
+    scope: SFE切分相对无跨slice冗余利用编码的率失真代价
+  evidence: abstract（初筛，未读全文）
+- statement: 高密度动态点云采集要求8K分辨率与最高120 fps帧率，且需10-bit色深与4:2:2采样以避免空间失真和颜色渗色；旧GPU编码器缺乏4:2:2支持曾迫使实时V-PCC依赖定制ASIC。
+  confidence: reported
+  metrics:
+  - name: 目标帧率
+    value: 最高120 fps
+    scope: 高密度动态点云8K采集的编码参数需求
+  evidence: abstract（初筛，未读全文）
+- statement: 配备四路片上硬件编码器的商用现货GPU在吞吐与功耗效率上可作为实时体积视频流编码的高可行基线平台。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: Blackwell GPU上8K 10-bit 4:2:2 HEVC四路分帧编码达122fps，证明商用GPU可实时支撑高保真V-PCC体积视频流。
+  abstract_zh: V-PCC通过将3D几何与纹理投影到2D视频帧来压缩体积数据，需10-bit色深与4:2:2色度采样以避免三维重建时的空间失真与颜色渗色，且高密度动态点云要求8K分辨率、最高120fps的苛刻编码参数。此前旧款GPU硬件编码器不支持4:2:2，实时V-PCC只能依赖定制ASIC，而NVIDIA
+    Blackwell架构首次在商用GPU上提供10-bit 4:2:2片上硬件编码。论文在配备四个并行硬件编码器的Blackwell GPU上，评估了8K 10-bit 4:2:2 HEVC在不同分帧编码（SFE）配置下的吞吐、率失真性能与功耗。结果显示4路SFE达到122fps编码吞吐，满足实时约束，代价是slice边界无法利用跨块空间冗余，带来最高5%的BD-Rate惩罚。作者据此认为商用现货GPU可作为实时体积视频流的高可行基线平台。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 核心是对Blackwell GPU上10-bit 4:2:2 HEVC硬件编码吞吐/率失真/功耗的性能评估，属视频编码硬件可行性研究而非编码算法创新，摘要级收录即可。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 面向高保真V-PCC流媒体的10比特4:2:2分帧硬件加速编码性能分析
+relations:
+- type: same_topic
+  ref: paper:arxiv:2605.29063
+  note: 同属HEVC编码加速方向；该文为软件端帧内划分加速，本文为GPU硬件编码吞吐分析
+- type: same_topic
+  ref: paper:arxiv:2609.29041
+  note: 同属三维/点云媒体压缩，该文面向高斯泼溅编码，本文面向V-PCC点云流的实时视频后端

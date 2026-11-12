@@ -1,0 +1,73 @@
+id: paper:arxiv:2609.35568
+type: paper
+title: 'From Experience to Expertise: Adoption-Aware Memory Learning for Data-Scarce NPU Kernel Synthesis'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2609.35568v1
+  url: https://arxiv.org/abs/2609.35568
+  pdf_url: https://arxiv.org/pdf/2609.35568v1
+  venue: arXiv preprint
+time:
+  published: '2026-09-28'
+  collected: '2026-11-12'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:NPU
+  role: platform
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: 在NPUKernelBench上，SAGE执行率达95.5%，显著优于最强受控基线的84.1%。
+  confidence: reported
+  metrics:
+  - name: 执行率
+    value: 95.5%
+    scope: SAGE于NPUKernelBench
+  - name: 基线执行率
+    value: 84.1%
+    scope: NPUKernelBench最强受控基线
+  evidence: abstract（初筛，未读全文）
+- statement: SAGE已解算子中86.9%性能优于torch_npu参考实现。
+  confidence: reported
+  metrics:
+  - name: 超过torch_npu的已解算子占比
+    value: 86.9%
+    scope: NPUKernelBench已解算子
+  evidence: abstract（初筛，未读全文）
+- statement: 配合GLM-5.3，SAGE在稀疏flash attention算子上相对torch_npu参考实现取得约44倍加速。
+  confidence: reported
+  metrics:
+  - name: 加速比
+    value: 43.99x
+    scope: GLM-5.3下稀疏flash attention相对torch_npu参考
+  evidence: abstract（初筛，未读全文）
+- statement: ATU将显式采纳记录与内核评估结果结合实现采用感知信用分配，UGC按正效用与跨算子重复采纳将可复用规则固化进有界常驻上下文，降低重复检索开销并强化跨任务引导。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出持久自改进智能体SAGE，用采用感知效用估计与效用门控固化积累NPU算子知识，执行率达95.5%。
+  abstract_zh: 针对LLM的CUDA知识难以迁移到NPU等数据稀缺专用架构、后训练又依赖稀缺专家数据的问题，作者提出持久自改进智能体SAGE。其采用感知效用估计（ATU）将显式采纳记录与算子评估结果结合，实现采用感知的信用分配；效用门控固化（UGC）依据正效用与跨算子重复采纳，把可复用规则抽象进有界常驻上下文，兼顾检索开销与跨任务引导。在NPUKernelBench上，SAGE执行率达95.5%，优于最强受控基线的84.1%，且86.9%的已解算子性能超过torch_npu。配合GLM-5.3，在稀疏flash
+    attention算子上相对torch_npu参考实现取得43.99倍加速，表明采用感知信用分配与选择性固化能有效跨任务积累并复用硬件专属知识。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: LLM智能体记忆学习自改进（采用感知信用分配+知识固化）用于NPU算子合成，属自我改进AI追踪域但与音视频技术无直接关联。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 从经验到专长：面向数据稀缺NPU算子合成的采用感知记忆学习
+relations:
+- type: same_topic
+  ref: paper:arxiv:2610.24453
+  note: 同为基于记忆/经验回放机制的智能体自我进化（Hippo海马体回放 vs SAGE记忆学习固化）
+- type: same_topic
+  ref: paper:arxiv:2610.22791
+  note: 同为自进化编码智能体方向：SAGE面向NPU内核合成，该文通过harness-策略优化自进化编码智能体
+- type: same_topic
+  ref: paper:arxiv:2609.33867
+  note: 同属递归/经验驱动的技能演化自我改进路线

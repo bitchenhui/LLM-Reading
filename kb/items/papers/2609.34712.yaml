@@ -1,0 +1,83 @@
+id: paper:arxiv:2609.34712
+type: paper
+title: 'RSI-Router: Evolving Subtask-Level LLM Routing and Skills for Cost-Efficient Agents'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2609.34712v1
+  url: https://arxiv.org/abs/2609.34712
+  pdf_url: https://arxiv.org/pdf/2609.34712v1
+  venue: arXiv preprint
+time:
+  published: '2026-09-28'
+  collected: '2026-11-12'
+entities:
+- ref: concept:RSI
+  role: subject
+- ref: concept:SelfImprovement
+  role: builds_on
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: RSI-Router在五个智能体基准上以约一半的推理成本持续超越仅用DeepSeek大模型的基线
+  confidence: reported
+  metrics:
+  - name: 推理成本占比
+    value: 48.3%
+    scope: 相对DeepSeek-V4.1-Flash单独使用基线，五个智能体基准
+  evidence: abstract（初筛，未读全文）
+- statement: 在ALFWorld、ScienceWorld和WebShop上，RSI-Router在大幅削减推理成本的同时提升任务性能
+  confidence: reported
+  metrics:
+  - name: 推理成本削减
+    value: 74.7-82.2%
+    scope: ALFWorld/ScienceWorld/WebShop三基准，对比纯大模型基线
+  evidence: abstract（初筛，未读全文）
+- statement: 在Terminal-Bench 2.0上以更低成本取得相对性能增益
+  confidence: reported
+  metrics:
+  - name: 相对性能增益
+    value: 16.7%
+    scope: Terminal-Bench 2.0
+  - name: 推理成本降低
+    value: 18.0%
+    scope: Terminal-Bench 2.0
+  evidence: abstract（初筛，未读全文）
+- statement: RSI-Router建立了优于9种路由方法的性能-成本帕累托前沿
+  confidence: reported
+  metrics:
+  - name: 对比路由方法数
+    value: '9'
+    scope: 性能-成本帕累托前沿对比
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 通过递归自我改进构建子任务级大小模型路由与模型专属技能，在约一半推理成本下超越纯大模型基线。
+  abstract_zh: 论文提出RSI-Router，一个通过对积累经验进行递归自我改进（RSI）来构建子任务级模型分配与模型专属技能的LLM路由框架。每次迭代包含四个阶段：子任务挖掘从训练轨迹中提炼子任务定义与识别规则；路由策略演化提出并评估多样的模型分配方案；模型专属技能演化对比路由轨迹与纯大模型轨迹以诊断失败并沉淀可复用执行技能；帕累托最优路由器选择利用历史与新生成的路由器更新帕累托种群。在DeepSeek-V4.1-Flash与Qwen3.5-9B之间路由的实验中，RSI-Router在五个智能体基准上以约一半推理成本（48.3%）持续超越仅用大模型的基线；在ALFWorld、ScienceWorld和WebShop上削减74.7-82.2%推理成本的同时提升性能；在Terminal-Bench
+    2.0上以低18.0%的成本取得16.7%相对性能增益，并建立了优于9种路由方法的性能-成本帕累托前沿。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 论文属于递归自我改进（RSI）驱动的LLM智能体路由框架，精准命中self_improvement域，但与音视频核心技术无直接关联，按基准只做初筛摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: RSI-Router：演化子任务级LLM路由与技能，实现高性价比智能体
+relations:
+- type: same_topic
+  ref: paper:arxiv:2610.32026
+  note: 同为递归自我改进（RSI）智能体框架，本文将RSI应用于子任务级LLM路由
+- type: same_topic
+  ref: paper:arxiv:2610.34386
+  note: 同属RSI智能体研究且均采用帕累托多域评估思路，本文以帕累托种群更新选择最优路由器
+- type: same_topic
+  ref: paper:arxiv:2611.11558
+  note: 同为将RSI范式应用于特定系统环节（训练基础设施 vs 智能体路由）的工作
+- type: same_topic
+  ref: paper:arxiv:2609.33867
+  note: 同为基于递归技能演化的自我改进方法，本文的模型专属技能演化阶段与之主题相近
+- type: same_topic
+  ref: paper:arxiv:2610.24453
+  note: 同为智能体自我进化（经验积累驱动改进）方向的工作

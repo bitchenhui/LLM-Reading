@@ -1,0 +1,52 @@
+id: paper:arxiv:2610.08630
+type: paper
+title: Towards In-Parameter Memory Augmentation for Large Language Models
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2610.08630v1
+  url: https://arxiv.org/abs/2610.08630
+  pdf_url: https://arxiv.org/pdf/2610.08630v1
+  venue: arXiv preprint
+time:
+  published: '2026-10-06'
+  collected: '2026-11-12'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:RSI
+  role: subject
+claims:
+- statement: 参数内记忆作为ICL的互补基底，将可复用记忆表示在参数、适配器等参数化对象中并在推理时组合进前向传播，可避免随上下文长度增长的重复离散化编码开销
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 该综述以两个正交轴组织参数化记忆方法版图：参数放置位置（Embedding/Attention/FFN/混合）与参数获取时机（部署期在线/部署前离线）
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 综述指出参数化记忆领域的开放方向包括记忆干扰、安全、与ICL协同设计以及递归自我改进
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 综述LLM参数化记忆增强方法：按记忆参数的放置位置与获取时机两个正交轴组织方法版图。
+  abstract_zh: 该综述关注LLM及基于LLM的智能体如何吸收预训练后获得的知识（领域事实、用户偏好、文档与交互经验）。与消耗上下文容量且编码成本随上下文长度增长的ICL不同，参数内记忆将可复用的记忆信息表示在模型参数、适配器等参数化对象中，并在推理时组合进前向传播。作者以两个正交轴组织该领域：参数放置位置（Embedding、Attention、FFN层或混合）与参数获取时机（部署期在线获取与部署前离线获取）。综述厘清了方法边界并进行了比较，还讨论了干扰、安全、与ICL协同设计以及递归自我改进等开放方向。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: LLM参数化记忆综述，仅在开放方向中讨论递归自我改进，非音视频核心域，按非核心域初筛收录
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 迈向大语言模型的参数内记忆增强
+relations:
+- type: same_topic
+  ref: paper:arxiv:2610.24453
+  note: Hippo通过海马体重放实现免训练智能体自我进化，与本文综述的智能体经验记忆/参数化记忆主题相关
+- type: same_topic
+  ref: paper:arxiv:2609.35568
+  note: From Experience to Expertise研究经验记忆学习用于NPU核合成，与本文记忆获取（在线/离线）主题相关
+- type: same_topic
+  ref: paper:arxiv:2610.32026
+  note: 本文综述将递归自我改进列为开放方向，与RSI优化器智能体研究同属自我改进谱系

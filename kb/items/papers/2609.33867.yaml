@@ -1,0 +1,66 @@
+id: paper:arxiv:2609.33867
+type: paper
+title: 'R$^2$ Flow: Recursive Self-Improvement via Recursive Skill Evolution'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2609.33867v3
+  url: https://arxiv.org/abs/2609.33867
+  pdf_url: https://arxiv.org/pdf/2609.33867v3
+  venue: arXiv preprint
+time:
+  published: '2026-09-27'
+  collected: '2026-11-12'
+entities:
+- ref: concept:RSI
+  role: subject
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: R² Flow 通过交替策略学习、独立验证与版本化技能库更新实现递归技能演化，在问答、数学推理、交互决策和代码生成任务上优于启发式编排、强化学习与技能演化基线。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 共享状态编排图合并仅独立步骤顺序不同的执行历史，使 flow 训练能够在等价执行间汇集证据，缓解树状历史上的策略坍缩。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 采用对反向策略不变的 flow-share 读出与独立的有符号效用排序决定修改哪些技能，验证器证据决定是否编辑，残差方差平台决定更新时机，修正了非负 flow 信用将高频使用误当收益的问题。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: R² Flow 学到的技能库可跨执行器迁移。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 递归自我改进框架：在共享编排图上交替策略学习、独立验证与版本化技能库更新，实现递归技能演化。
+  abstract_zh: 该文针对基于 LLM 的智能体自我改进中 flow 训练的三类障碍——树状历史上的策略坍缩、非负 flow 信用将高频使用误当收益、技能库编辑仅依赖策略本身优化的任务奖励——提出递归自我改进框架
+    R² Flow。方法在共享状态编排图上交替进行策略学习、独立验证与版本化技能库更新：编排图合并仅独立步骤顺序不同的历史，使 flow 训练可在等价执行间汇集证据；用对反向策略不变的 flow-share
+    读出与独立的有符号效用排序决定修改哪些技能，由验证器证据决定是否编辑，残差方差进入平台期决定何时更新。已提交的技能库编辑会重塑后续策略学习的图结构，形成递归技能演化闭环。在问答、数学推理、交互决策与代码生成四类任务上，R²
+    Flow 相比启发式编排、强化学习与技能演化基线提升了任务准确率和技能库编辑精度，且可跨执行器迁移，代码已开源。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 典型的递归自我改进（RSI）论文：基于 LLM 智能体的技能库递归演化与 flow 信用分配，与音视频编码核心技术无关，按非核心域规则只做初筛摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: R² Flow：通过递归技能演化实现递归自我改进
+relations:
+- type: same_topic
+  ref: paper:arxiv:2610.32026
+  note: 同为递归自我改进（RSI）方向，面向模型训练优化的 RSI 智能体
+- type: same_topic
+  ref: paper:arxiv:2610.34386
+  note: 同属 RSI 主题：跨多领域改进语言模型的智能体基准
+- type: same_topic
+  ref: paper:arxiv:2611.11558
+  note: 同属 RSI 主题，该工作面向训练基础设施的自我改进
+- type: same_topic
+  ref: paper:arxiv:2610.24453
+  note: 同属智能体自我演化方向，均涉及技能/记忆复用驱动的自进化
+- type: same_topic
+  ref: paper:arxiv:2610.22791
+  note: 同属自演化智能体方向，均通过迭代改进智能体执行流程提升性能

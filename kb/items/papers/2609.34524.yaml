@@ -1,0 +1,67 @@
+id: paper:arxiv:2609.34524
+type: paper
+title: Measurement-Based Bitrate-Energy-Quality Analysis of Neural Audio Codec Decoders on Laptop and
+  Phone Platforms
+domain: audio_coding
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2609.34524v1
+  url: https://arxiv.org/abs/2609.34524
+  pdf_url: https://arxiv.org/pdf/2609.34524v1
+  venue: arXiv preprint
+time:
+  published: '2026-09-28'
+  collected: '2026-11-12'
+entities:
+- ref: concept:NeuralAudioCodec
+  role: subject
+- ref: codec:Opus
+  role: compared_against
+claims:
+- statement: 在质量匹配的工作点上，被评测的神经音频编解码器以更低码率达到相近 ViSQOL 分数，但解码端能耗通常高于适用的传统编解码器（AAC-LC、Opus）。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: EnCodec 在两组质量匹配队列、两种平台上均给出神经编解码器中最低的盈亏平衡传输能耗阈值。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 若干 DAC 与 SNAC 对比项在 Phone XNNPACK CPU 路径上的盈亏平衡传输能耗阈值超过 200 mJ/kbit。
+  confidence: reported
+  metrics:
+  - name: 盈亏平衡传输能耗阈值
+    value: '>200 mJ/kbit'
+    scope: DAC/SNAC 在 Phone XNNPACK CPU 路径的若干对比项
+  evidence: abstract（初筛，未读全文）
+- statement: DAC 与 SNAC 的全频段 Phone 配置解码 1 秒音频需超过 1 秒，无法满足实时解码。
+  confidence: reported
+  metrics:
+  - name: 解码时延
+    value: '>1 s'
+    scope: 全频段 Phone 配置解码 1 s 音频所需时长
+  evidence: abstract（初筛，未读全文）
+- statement: 方法上采用原始参考 ViSQOL 协议分语音/音乐评估，解码能耗按每秒音频的扣空闲能耗（J/s）测量并取三次重复运行中位数。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 实测四款神经音频编解码器解码端能耗：低码率并不必然带来端侧能耗收益。
+  abstract_zh: 本文对 EnCodec、DAC、HILCodec、SNAC 四种神经音频编解码器及 AAC-LC、Opus 两种传统基线，在笔记本与手机平台上开展基于实测的码率-能耗-质量分析。采用原始参考的
+    ViSQOL 协议分别评估语音与音乐，解码能耗按每秒音频的扣空闲能耗（J/s）测量，结果取三次重复运行的中位数，并由实测能耗与码率解析推导两两盈亏平衡传输能耗阈值。在质量匹配工作点上，神经编解码器以更低码率达到相近
+    ViSQOL 分数，但解码端能耗通常高于传统编解码器；EnCodec 在两组质量匹配队列、两种平台上给出最低的神经侧盈亏平衡阈值。部分 DAC 与 SNAC 在 Phone XNNPACK CPU
+    路径上的盈亏平衡阈值超过 200 mJ/kbit，其全频段手机配置解码 1 秒音频需超过 1 秒，表明低码率本身不保证能耗优势，部署效率还取决于解码复杂度、运行时与设备映射、执行有效性、加速器可用性及传输能耗系数。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 神经音频编解码器解码端码率-能耗-质量的实测分析，属音频编码领域但为测量型研究而非新编码方法，非核心域故仅初筛。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 基于实测的笔记本与手机平台上神经音频编解码器解码端码率-能耗-质量分析
+relations:
+- type: same_topic
+  ref: paper:arxiv:2609.09866
+  note: 同属神经音频编码研究，关注低码率流式音频编解码
+- type: same_topic
+  ref: paper:arxiv:2608.15369
+  note: 同属音频编解码器端侧（CPU/移动平台）效率与量化实现评估

@@ -1,0 +1,67 @@
+id: paper:arxiv:2611.10787
+type: paper
+title: Trustworthy Recursive Self-Improvement with Statistical Guarantees
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2611.10787v1
+  url: https://arxiv.org/abs/2611.10787
+  pdf_url: https://arxiv.org/pdf/2611.10787v1
+  venue: arXiv preprint
+time:
+  published: '2026-11-07'
+  collected: '2026-11-12'
+entities:
+- ref: concept:RSI
+  role: subject
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: TRUST 将在线多重假设检验用于自改进更新门控，在可解释假设下证明可限制被接受更新中造成不可接受性能损失的比例，并给出最终性能增益的下界。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在 HotpotQA、DROP、APPS 基准上，TRUST 将平均劣质更新接受率从贪心门控的 45.59% 降至 2.78%。
+  confidence: reported
+  metrics:
+  - name: 劣质更新接受率（贪心门控）
+    value: 45.59%
+    scope: HotpotQA/DROP/APPS 基准，DeepSeek-V4-Flash 与 Qwen-3.8-Flash 平均
+  - name: 劣质更新接受率（TRUST）
+    value: 2.78%
+    scope: HotpotQA/DROP/APPS 基准，DeepSeek-V4-Flash 与 Qwen-3.8-Flash 平均
+  evidence: abstract（初筛，未读全文）
+- statement: TRUST 的最终分数高于面向递归自改进的 SOTA 统计门控基线。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出 TRUST 框架，用在线多重假设检验为 LLM 智能体递归自改进控制错误进化率并提供统计保证。
+  abstract_zh: 递归自改进让智能体通过改造自身 harness 提升性能而无需重训底层 LLM，但仅凭验证分数的贪心门控易把偶然增益误判为真实进步导致性能退化，过于保守的统计门控又会错拒有益更新。论文提出
+    TRUST 框架，将在线多重假设检验程序用于控制跨轮次的错误进化率，并由 LLM 分析历史上下文决定接受更新所需证据量。在可解释假设下，作者证明 TRUST 能限制被接受更新中造成不可接受性能损失的比例，并推导出最终性能增益的下界。在
+    HotpotQA、DROP、APPS 三个基准上配合 DeepSeek-V4-Flash 与 Qwen-3.8-Flash，TRUST 把贪心门控平均 45.59% 的劣质更新接受率降到 2.78%，且最终分数高于现有
+    SOTA 统计门控基线。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: RSI 可信性方向的重要工作（统计保证的更新门控），但非核心视频编码域，按基准仅给 summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 具有统计保证的可信递归自我改进
+relations:
+- type: same_topic
+  ref: paper:arxiv:2610.26770
+  note: 同属递归 harness 自改进方向，HarnessPro 关注性能-成本权衡，本文关注更新接受的统计可靠性
+- type: same_topic
+  ref: paper:arxiv:2610.27610
+  note: 均关注 RSI 声明的可信性与评估证据，本文以统计检验提供形式化保证
+- type: same_topic
+  ref: paper:arxiv:2610.14224
+  note: 同属递归智能体 harness 改进方向（Harness^2）
+- type: same_topic
+  ref: paper:arxiv:2609.39306
+  note: 均针对自改进过程中的性能退化/崩溃问题，ReSAIL 面向迭代自蒸馏，本文面向更新门控

@@ -1,0 +1,66 @@
+id: paper:arxiv:2609.25423
+type: paper
+title: Objective Video Quality Assessment in FWA-Based Over-the-Top Content Delivery Across Open Source
+  5G Networks
+domain: quality_assessment
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2609.25423v1
+  url: https://arxiv.org/abs/2609.25423
+  pdf_url: https://arxiv.org/pdf/2609.25423v1
+  venue: arXiv preprint
+time:
+  published: '2026-09-21'
+  collected: '2026-11-12'
+entities:
+- ref: concept:IQA
+  role: subject
+- ref: concept:DASH
+  role: uses
+- ref: metric:PSNR
+  role: measured_by
+- ref: metric:VMAF
+  role: measured_by
+- ref: org:MPEG
+  role: uses
+claims:
+- statement: MIMO传输模式在吞吐量和视觉质量上整体持续优于SISO，即便用户负载增加也保持更高吞吐与更优画质。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在5个并发用户负载下，MIMO+256-QAM配置的VMAF仍保持在视觉无损阈值以上，而SISO配置出现显著质量退化。
+  confidence: reported
+  metrics:
+  - name: 并发用户数
+    value: '5'
+    scope: MIMO+256-QAM条件下维持视觉无损VMAF的负载上限
+  - name: VMAF
+    value: 高于视觉无损阈值
+    scope: MIMO+256-QAM、5并发用户条件（摘要未给出具体数值）
+  evidence: abstract（初筛，未读全文）
+- statement: 实验基于真实开源5G网络测试床而非仿真，通过MPEG-DASH交付4K视频并以PSNR/SSIM/VMAF全参考指标实现网络性能与体验的帧级关联。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 在真实开源5G FWA测试床上量化SISO/MIMO、调制方式与用户负载对DASH 4K视频PSNR/SSIM/VMAF质量的影响。
+  abstract_zh: 论文在真实开源5G固定无线接入（FWA）测试床上开展系统性的UHD视频质量实验，考察传输模式（SISO/MIMO）、调制方式（64-QAM/256-QAM）与网络负载（1至5个用户）对吞吐量和主观感知质量的影响。方法上通过MPEG-DASH自动化推流4K视频，并计算PSNR、SSIM、VMAF等全参考客观QoE指标，实现网络性能与用户体验的帧级关联。结果表明MIMO一致性优于SISO：在5个并发用户下，MIMO+256-QAM的VMAF仍保持高于视觉无损阈值，而SISO配置出现明显质量退化。研究为空间分集与高阶调制保障FWA上可靠UHD视频交付提供了实证依据，并给出可复现的质量评估框架。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 属5G FWA流媒体场景下的客观视频质量（QoE/VQA）实验评估，非核心编码域，按基准仅初筛收录。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 开源5G网络中基于FWA的OTT内容交付客观视频质量评估
+relations:
+- type: same_topic
+  ref: paper:arxiv:2605.15800
+  note: 同为客观视频质量评估方法学，均采用PSNR/SSIM/VMAF类全参考指标口径
+- type: same_topic
+  ref: paper:arxiv:2605.18378
+  note: 均使用客观质量指标评估视频（本文为传输链路影响，彼为压缩影响）
+- type: same_topic
+  ref: paper:arxiv:2603.13597
+  note: 同属DASH自适应流媒体场景下的质量评估/优化

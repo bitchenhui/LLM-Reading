@@ -1,0 +1,91 @@
+id: paper:arxiv:2610.29641
+type: paper
+title: Recursive Code Evolution for Task-Oriented Semantic Communications
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2610.29641v2
+  url: https://arxiv.org/abs/2610.29641
+  pdf_url: https://arxiv.org/pdf/2610.29641v2
+  venue: arXiv preprint
+time:
+  published: '2026-10-21'
+  collected: '2026-11-12'
+entities:
+- ref: concept:RSI
+  role: subject
+- ref: concept:SelfImprovement
+  role: uses
+- ref: concept:LLM
+  role: uses
+- ref: dataset:ImageNet
+  role: evaluated_on
+claims:
+- statement: ComRSI 十代演化中经八次接受修订后，注意力池化代码在 AWGN 信道下每图仅 32 个复符号即达 74.3% 测试精度，优于初始设计在 256 复符号下的 67.2%。
+  confidence: reported
+  metrics:
+  - name: 测试精度
+    value: 74.3%
+    scope: CIFAR-100，AWGN 信道，演化后注意力池化代码，32 复符号/图
+  - name: 测试精度
+    value: 67.2%
+    scope: CIFAR-100，AWGN 信道，初始设计，256 复符号/图
+  evidence: abstract（初筛，未读全文）
+- statement: 每方法 10 次搜索的重复实验中，ComRSI 在平衡精度、传输速率与计算成本的综合最终得分上最高，且平均接受修订数最多。
+  confidence: reported
+  metrics:
+  - name: 平均最终搜索得分
+    value: '0.7587'
+    scope: ComRSI，10 次搜索均值
+  - name: 平均最终搜索得分
+    value: '0.7376'
+    scope: 非递归 agent（带文本历史），10 次搜索均值
+  - name: 平均最终搜索得分
+    value: '0.7089'
+    scope: 非递归 agent（无历史），10 次搜索均值
+  - name: 平均接受修订数
+    value: '6.0'
+    scope: ComRSI
+  - name: 平均接受修订数
+    value: '5.0'
+    scope: 非递归 agent（带文本历史）
+  - name: 平均接受修订数
+    value: '2.1'
+    scope: 非递归 agent（无历史）
+  evidence: abstract（初筛，未读全文）
+- statement: 双侧秩检验支持 ComRSI 显著优于无记忆非递归 agent，但其与带文本历史 agent 的差异在当前样本量下统计不确定。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: CIFAR-100 上演化得到的通信程序重训后可迁移至 Tiny-ImageNet，且在该数据集上独立运行的 ComRSI 搜索进一步展示递归改进。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出 ComRSI 框架，用 LLM 递归演化语义通信程序代码，以更少信道符号换取更高推理精度。
+  abstract_zh: 该文提出 ComRSI（面向通信的递归自改进）框架，由 LLM agent 递归修改语义通信系统的编码器、信道适配器、解码器、损失与训练策略代码，并由受保护的评估器在预算与资源约束下筛选候选。在
+    CIFAR-100 十代演化中，八次被接受的修订产生注意力池化代码，在 AWGN 信道下以每图 32 个复符号达到 74.3% 测试精度，而初始设计需 256 符号才达 67.2%。演化所得程序重训后可迁移至
+    Tiny-ImageNet，且在该数据集上独立的 ComRSI 搜索带来进一步递归改进。每方法 10 次搜索的重复实验显示，ComRSI 平衡精度、速率与计算成本的平均最终得分为 0.7587，优于带/不带文本历史的非递归
+    agent（0.7376/0.7089），平均接受修订数分别为 6.0/5.0/2.1。双侧秩检验支持对无记忆 agent 的显著优势，但与带历史 agent 的差异在当前样本量下尚不显著，论文同时指出速率鲁棒性与计算放置上的折衷仍待解决。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 核心贡献是 LLM 驱动的递归自改进（ComRSI）框架应用于任务导向语义通信，属自改进 AI 域而非核心编解码域。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 面向任务导向语义通信的递归代码演化
+relations:
+- type: same_topic
+  ref: paper:arxiv:2610.32026
+  note: 同为 LLM 驱动的递归自改进 agent 框架，本文将其应用于语义通信程序演化
+- type: same_topic
+  ref: paper:arxiv:2610.34386
+  note: 同属 RSI agent 跨域能力研究，均以受保护评估器筛选候选改进
+- type: same_topic
+  ref: paper:arxiv:2610.22791
+  note: 同为通过 LLM 代码编辑实现自演化的 agent 机制
+- type: same_topic
+  ref: paper:arxiv:2605.19397
+  note: 同属任务导向语义通信方向，关注带宽与感知/任务性能权衡

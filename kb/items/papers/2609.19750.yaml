@@ -1,0 +1,61 @@
+id: paper:arxiv:2609.19750
+type: paper
+title: 'DELUGE: Decomposed Entropy-coded Live Unstructured Geometry Exchange for Real-time Particle Streaming'
+domain: immersive_media
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2609.19750v1
+  url: https://arxiv.org/abs/2609.19750
+  pdf_url: https://arxiv.org/pdf/2609.19750v1
+  venue: arXiv preprint
+time:
+  published: '2026-09-17'
+  collected: '2026-11-12'
+entities:
+- ref: codec:G-PCC
+  role: subject
+- ref: org:Apple
+  role: platform
+claims:
+- statement: DELUGE在动态点云数据集上解码速度较G-PCC (TMC13)快约20倍。
+  confidence: reported
+  metrics:
+  - name: 解码速度倍数
+    value: ≈20×
+    scope: vs G-PCC (TMC13)，动态点云数据集
+  evidence: abstract（初筛，未读全文）
+- statement: DELUGE编码速度较Draco快约6倍。
+  confidence: reported
+  metrics:
+  - name: 编码速度倍数
+    value: 6×
+    scope: vs Draco（Google Draco点云压缩）
+  evidence: abstract（初筛，未读全文）
+- statement: DELUGE利用物理模拟粒子的时间相干性与速度可预测性，实现亚帧延迟的编码与解码，满足实时传输需求。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 基于DELUGE的Web浏览器与Apple Vision Pro端到端客户端，经感知质量评估与双人协作任务研究验证可支持实时手部追踪流体交互协作。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出DELUGE，利用物理模拟粒子的时间相干性与速度可预测性实现亚帧延迟实时粒子流压缩。
+  abstract_zh: 针对社交VR与数字孪生中多人实时共享流体、烟雾、颗粒介质等物理模拟的需求，论文指出G-PCC(TMC13)与Draco等面向静态几何的点云压缩方法在动态粒子流场景下编码延迟超出帧周期。DELUGE通过三项互补技术利用物理模拟粒子固有的时间相干性与速度可预测性，实现亚帧级编解码。在动态点云数据集上，解码较G-PCC(TMC13)快约20倍、编码较Draco快约6倍。作者还构建了Web浏览器与Apple
+    Vision Pro端到端客户端，通过被试内感知质量评估与双人协作任务研究验证了手部追踪流体交互的实时协作体验。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 面向VR/AR社交共享的动态粒子/点云实时压缩与流传输，属沉浸式媒体而非核心视频编码域，且与G-PCC/Draco直接对比有参考价值。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: DELUGE：面向实时粒子流的分解式熵编码非结构化几何交换
+relations:
+- type: same_topic
+  ref: paper:arxiv:2606.29179
+  note: 均涉及点云/体积数据（V-PCC）的实时压缩与流传输
+- type: same_topic
+  ref: paper:arxiv:2609.29041
+  note: 均研究非结构化三维几何（点云/高斯）数据的压缩编码

@@ -1,0 +1,62 @@
+id: paper:arxiv:2610.22791
+type: paper
+title: Self-Evolving Coding Agents via Harness-Policy Optimization
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2610.22791v1
+  url: https://arxiv.org/abs/2610.22791
+  pdf_url: https://arxiv.org/pdf/2610.22791v1
+  venue: arXiv preprint
+time:
+  published: '2026-10-16'
+  collected: '2026-11-12'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:SelfImprovement
+  role: uses
+claims:
+- statement: Self-HPO在三个编码基准上一致超越仅harness与仅策略的基线，将Qwen3.5-35B-A3B的平均resolve rate从57.8%提升至64.8%，且增益可泛化到分布外设置。
+  confidence: reported
+  metrics:
+  - name: 平均resolve rate
+    value: 57.8%→64.8%
+    scope: Qwen3.5-35B-A3B，Self-HPO相对基线，三个编码基准平均
+  evidence: abstract（初筛，未读全文）
+- statement: harness与策略的联合增益超过两者单独增益之和，且各优化组件与基础对应版本配对时仍保留增益。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: Self-HPO同时提升智能体可靠性（Pass@1）并扩展能力边界（Pass@k）。
+  confidence: reported
+  metrics:
+  - name: Pass@1 / Pass@k
+    value: 均有提升（未给出具体数值）
+    scope: 相对基础智能体，三个编码基准
+  evidence: abstract（初筛，未读全文）
+- statement: 以更强外部模型（如Opus 4.8）作为harness提出者时，同一框架可获得进一步性能提升。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出Self-HPO递归自改进框架，交替优化编码智能体的harness与策略，平均解决率由57.8%升至64.8%。
+  abstract_zh: LLM编码智能体的表现由策略模型与中介其与环境交互的harness共同决定，单独演化任一组件均非最优。该文提出Self-HPO：每轮先由当前策略分析自身失败并提出新harness候选（H步），再在选定harness下用强化学习更新策略（P步），训练中识别的困难任务构成下一轮harness搜索集，使harness优化始终针对策略不断演化的失败模式。在三个编码基准上，Self-HPO持续超越仅harness与仅策略基线，将Qwen3.5-35B-A3B的平均resolve
+    rate从57.8%提升至64.8%，且增益可泛化到分布外设置。两个优化组件与各自基础版本配对时仍保留增益，联合增益超过各自增益之和，并同时提升Pass@1可靠性与Pass@k能力边界；以更强外部模型（如Opus
+    4.8）作harness提出者可获得进一步提升。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: LLM编码智能体的递归自我改进框架（Self-HPO），属自我改进AI核心工作，非音视频核心域故仅summary_only
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 通过Harness-策略协同优化的自进化编码智能体
+relations:
+- type: same_topic
+  ref: paper:arxiv:2610.32026
+  note: 同为递归自我改进（RSI）智能体优化框架，研究LLM/模型的自迭代提升
+- type: same_topic
+  ref: paper:arxiv:2610.34386
+  note: 同属AI智能体跨领域改进语言模型的自我改进研究线

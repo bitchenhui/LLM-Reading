@@ -1,0 +1,69 @@
+id: paper:arxiv:2610.19424
+type: paper
+title: 'VideoHarness-SRSI: Structured Recursive Self-Improvement for Video Understanding Harness'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2610.19424v2
+  url: https://arxiv.org/abs/2610.19424
+  pdf_url: https://arxiv.org/pdf/2610.19424v2
+  venue: arXiv preprint
+time:
+  published: '2026-10-14'
+  collected: '2026-11-12'
+entities:
+- ref: concept:RSI
+  role: subject
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: 在四个视频理解基准上，VideoHarness-SRSI 相对 VideoHarness-BRSI 将等权平均 held-out 分数相对提升 6.2%。
+  confidence: reported
+  metrics:
+  - name: 等权平均held-out分数相对提升
+    value: 6.2%
+    scope: 四个视频理解基准，VideoHarness-SRSI vs VideoHarness-BRSI，相对值
+  evidence: abstract（初筛，未读全文）
+- statement: VideoHarness-SRSI 将平均验证集-测试集差距缩小 37.9%，说明证据治理有效缓解验证过拟合。
+  confidence: reported
+  metrics:
+  - name: 平均验证-测试差距缩小
+    value: 37.9%
+    scope: 相对 VideoHarness-BRSI，四个基准
+  evidence: abstract（初筛，未读全文）
+- statement: 对超过 4000 个演化候选的分析揭示三种失败模式：验证过拟合、搜索预算稀释与早期经验陷阱，共同根源是同一不完美验证证据同时驱动harness修订与搜索策略。
+  confidence: reported
+  metrics:
+  - name: 演化候选分析数量
+    value: 4000+
+    scope: VHarness-BRSI 框架下演化出的候选harness
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出证据治理的结构化递归自我改进框架，在冻结VLM上演化视频理解harness，held-out成绩提升6.2%，验证-测试差距缩小37.9%。
+  abstract_zh: 该工作研究递归harness演化如何在有限、噪声且被反复复用的反馈下可靠发现可泛化的agent系统，并以agent式视频理解为实验载体。作者先提出VHarness-BRSI，围绕冻结视觉语言模型演化视频harness，分析超过4000个演化候选后识别出三种相互关联的失败模式：验证过拟合、搜索预算稀释与早期经验陷阱，并追溯到共同根源——同一份不完美的验证证据同时驱动harness修订和proposer的搜索策略。据此提出VHarness-SRSI证据治理框架：将proposer限制为只使用无内容反馈，用插桩预热实验指导探索，并在隔离的probe-race分支中开发机制后再进行因子化组合与联合精炼。在四个视频理解基准上，VideoHarness-SRSI的等权平均held-out分数相对VideoHarness-BRSI提升6.2%，验证-测试差距平均缩小37.9%，表明可靠的harness演化取决于搜索的组织与信息供给方式，而非仅优化验证性能。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 核心贡献是面向视频理解harness的递归自我改进（RSI）方法论，属非核心域，按基准仅summary_only；其视频理解应用使其与音视频生态中等相关。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: VideoHarness-SRSI：面向视频理解执行框架的结构化递归自我改进
+relations:
+- type: same_topic
+  ref: paper:arxiv:2610.14224
+  note: 同属递归agent harness演化（Harness^2）研究方向
+- type: same_topic
+  ref: paper:arxiv:2610.22791
+  note: 同属harness层面的自进化/策略优化（Self-Evolving Coding Agents via Harness-Policy Optimization）
+- type: same_topic
+  ref: paper:arxiv:2611.11558
+  note: 同属递归自我改进（RSI）框架族，应用域不同（训练基础设施 vs 视频理解harness）
+- type: same_topic
+  ref: paper:arxiv:2609.33867
+  note: 同为递归自我改进方法研究（递归技能演化 vs 结构化harness演化）

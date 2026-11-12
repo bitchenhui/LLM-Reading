@@ -1,0 +1,59 @@
+id: paper:arxiv:2610.24970
+type: paper
+title: 'PRECOCIAL: Pretraining with Code Curriculums via Iterative Search for Accelerated Learning'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2610.24970v1
+  url: https://arxiv.org/abs/2610.24970
+  pdf_url: https://arxiv.org/pdf/2610.24970v1
+  venue: arXiv preprint
+time:
+  published: '2026-10-18'
+  collected: '2026-11-12'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:FunSearch
+  role: compared_against
+- ref: concept:AlphaEvolve
+  role: compared_against
+claims:
+- statement: 在四个语言与代码数据集、固定微调预算下，PRECOCIAL 优化后的生成程序达到与人工设计课程相同困惑度所需微调步数减少 9-33%。
+  confidence: reported
+  metrics:
+  - name: 微调步数节省
+    value: 9-33%
+    scope: 四个语言/代码数据集，追平人工设计课程困惑度所需步数
+  evidence: abstract（初筛，未读全文）
+- statement: 在相同评估次数与更低计算成本下，PRECOCIAL 最终困惑度低于为每个候选重新训练网络的 FunSearch 与 AlphaEvolve。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 优化得到的生成器程序可从一个域迁移到其他域的数据集，并在四个不同的推理与问题求解任务上带来更好的下游性能。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 让 LLM 迭代改写合成预训练数据生成程序，以少 9-33% 的微调步数追平人工课程并超越 FunSearch/AlphaEvolve。
+  abstract_zh: 提出 PRECOCIAL，自动优化生成合成预训练数据的符号程序：LLM 从初始生成器出发迭代改写程序，每次改写通过'随机初始化 transformer 在该数据上预训练+下游任务微调'来评分。为控制评估成本，整个搜索全程复用单个网络，对被接受的程序继续预训练，而非每个候选重新训练一个网络。在四个语言与代码数据集上，固定微调预算下优化后的程序困惑度低于人工设计课程、已发表程序化生成器、随机程序变异及
+    LLM 首次迭代写出的程序；达到与人工课程相同困惑度仅需少 9-33% 的微调步数。在相同评估次数与更低成本下，最终困惑度优于为每个候选训练新网络的 FunSearch 和 AlphaEvolve。优化得到的生成程序可跨域迁移，并在四个推理与问题求解任务上带来更好的下游表现。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 属 LLM 迭代改写程序以自动优化合成预训练数据的自我改进 AI 工作（FunSearch/AlphaEvolve 同族），与音视频技术无直接关联，按规则仅摘要收录。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: PRECOCIAL：通过迭代搜索代码课程实现加速学习的预训练方法
+relations:
+- type: same_topic
+  ref: paper:arxiv:2610.23344
+  note: 同属 LLM 驱动改进语言模型训练（本工作改写预训练数据生成程序）
+- type: same_topic
+  ref: paper:arxiv:2610.32026
+  note: 同属面向模型训练的自我改进/优化器搜索方向
+- type: same_topic
+  ref: paper:arxiv:2611.11558
+  note: 同属通过自动搜索改进模型训练环节（数据课程 vs 训练基础设施）

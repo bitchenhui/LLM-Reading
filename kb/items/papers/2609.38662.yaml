@@ -1,0 +1,64 @@
+id: paper:arxiv:2609.38662
+type: paper
+title: 'CollabFlow: Recursive Self-Improvement of Agent Collaboration'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2609.38662v3
+  url: https://arxiv.org/abs/2609.38662
+  pdf_url: https://arxiv.org/pdf/2609.38662v3
+  venue: arXiv preprint
+time:
+  published: '2026-09-29'
+  collected: '2026-11-12'
+entities:
+- ref: concept:RSI
+  role: subject
+- ref: concept:SelfImprovement
+  role: builds_on
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: CollabFlow在12个数据集上优于所有对比基线，并跨轮次持续自我改进
+  confidence: reported
+  metrics:
+  - name: 评测数据集数量
+    value: '12'
+    scope: 覆盖全部对比实验的基准数据集总数
+  evidence: abstract（初筛，未读全文）
+- statement: 证据条件通信（ECC）协议规定接收方仅当发送方证据强度以边际优势更强时才采纳不同答案，从而抑制错误的逐字传播
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 协作轨迹平衡（CTB）流式目标对每个团队在其各构建顺序上只计一次信用，瞄准与奖励成比例的团队分布，避免奖励最大化导致团队过度集中
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 对CTB自生成目标在轮间的移动量给出理论上界，且该上界随记录累积而收缩
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出可训练Collab-Director、证据条件通信与流平衡目标的LLM多智能体协作递归自改进系统，在12个数据集上超越全部基线并跨轮持续提升。
+  abstract_zh: 针对现有多智能体协作闭环缺失的问题（协作预定义于算子层、仅学习拓扑导致错误逐字传播、奖励最大化使团队过度集中），提出CollabFlow。其可训练的Collab-Director构建由完整智能体组成的团队，由冻结执行器运行，每轮结果再训练Director。协作图的边上承载证据条件通信（ECC）协议：仅当发送方证据强度超出边际时接收方才采纳不同答案，使Director学会谁与谁通信及如何通信。跨轮提出协作轨迹平衡（CTB）流式目标，对每个团队在其构建顺序上只计一次信用并瞄准与奖励成比例的团队分布，使多个好团队保持活跃，同时给出自生成目标轮间移动随记录累积而收缩的界。在12个数据集上超越所有基线并跨轮持续改进。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 属自我改进AI域的LLM多智能体协作递归自改进工作，与音视频编码无关，按规则仅给初筛摘要
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: CollabFlow：智能体协作的递归自改进
+relations:
+- type: same_topic
+  ref: paper:arxiv:2610.32026
+  note: 同为LLM智能体的递归自改进（RSI）系统研究
+- type: same_topic
+  ref: paper:arxiv:2609.33867
+  note: 同为递归自改进方向，且CollabFlow的CTB亦采用flow-based目标
+- type: same_topic
+  ref: paper:arxiv:2609.34712
+  note: 同为面向LLM智能体效率/协作的进化式自改进方法
+- type: same_topic
+  ref: paper:arxiv:2610.24453
+  note: 同为无监督训练的智能体自我进化方法

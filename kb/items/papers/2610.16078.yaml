@@ -1,0 +1,58 @@
+id: paper:arxiv:2610.16078
+type: paper
+title: Heterogeneous Agentic Coevolution
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2610.16078v1
+  url: https://arxiv.org/abs/2610.16078
+  pdf_url: https://arxiv.org/pdf/2610.16078v1
+  venue: arXiv preprint
+time:
+  published: '2026-10-12'
+  collected: '2026-11-12'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:RSI
+  role: builds_on
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: HACE 通过监督学习改进专家模型、以在线策略强化自训练改进 LLM 智能体，并以专家模型上的验证性能增益引导双方互惠进化。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: HACE 采用进化搜索优化两个模型的交互框架（信息交换方式与训练经验选择），使其随双方能力演化而自适应调整。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在推荐系统、蛋白质功能预测（生物）与晶体稳定性预测（材料发现）三个领域中，HACE 在主要任务指标上均优于所评估的自改进方法。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出 HACE 框架，LLM 智能体与领域专家模型互惠协同进化，并以进化搜索优化两者交互框架。
+  abstract_zh: 论文提出异构智能体协同进化框架 HACE，通过互惠学习联合进化领域专家基础模型与 LLM 智能体。专家模型经监督学习改进，智能体采用在线策略强化自训练，并以当前专家模型上验证的性能增益作为引导信号；智能体的探索结果反过来为后续专家模型训练提供信息。为维持这种互惠学习，HACE
+    进一步用进化搜索优化两模型的交互框架，随能力演化自适应调整信息交换与训练经验选择方式。在推荐系统、蛋白质功能预测与晶体稳定性预测三个领域评估，HACE 在主要任务指标上均优于所对比的自改进方法。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 面向专家基础模型的异构协同进化 RSI 框架，属跟踪的自改进主线重要工作，但与音视频技术无直接关联，按非核心域收 summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 异构智能体协同进化
+relations:
+- type: same_topic
+  ref: paper:arxiv:2610.34386
+  note: 同为智能体跨领域改进基础模型的自改进框架（ParetoRSI-Gym 多域 vs HACE 推荐系统/蛋白/晶体三域）
+- type: same_topic
+  ref: paper:arxiv:2610.32026
+  note: 同属 RSI 优化器/智能体自改进主线，HACE 将 RSI 扩展到异构专家模型场景
+- type: same_topic
+  ref: paper:arxiv:2610.14224
+  note: 均涉及进化/递归优化智能体交互 harness，HACE 用进化搜索优化交互框架
+- type: same_topic
+  ref: paper:arxiv:2610.22791
+  note: 同为通过 harness 策略优化实现自进化的智能体方法，与 HACE 的交互框架进化思路相近

@@ -1,0 +1,64 @@
+id: paper:arxiv:2610.32981
+type: paper
+title: 'SEMAC: Spherical Energy Matching Ambisonics Codec for Efficient Higher-Order Ambisonics Compression'
+domain: audio_coding
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2610.32981v1
+  url: https://arxiv.org/abs/2610.32981
+  pdf_url: https://arxiv.org/pdf/2610.32981v1
+  venue: arXiv preprint
+time:
+  published: '2026-10-23'
+  collected: '2026-11-12'
+entities:
+- ref: codec:Opus
+  role: subject
+claims:
+- statement: Opus经Channel Mapping Families 2/3（RFC 8486）逐通道编码全部Ambisonics通道，码率随球谐阶数二次增长，是HOA编码的主要瓶颈。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: SEMAC以量化全阶方向性能量包络与更少的CELT编码传输通道表示HOA信号，解码端重新施加编码端观测的包络即可恢复全阶方向能量分布，是对CELT频带能量匹配原理向方向性信号的推广。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在五阶HOA素材、与Opus CMF 3匹配配置的MUSHRA主观测试中，仅使用36个传输通道中16个的SEMAC评分高于全阶CMF 3。
+  confidence: reported
+  metrics:
+  - name: 码率
+    value: 512 kbit/s 与 768 kbit/s
+    scope: SEMAC与Opus CMF 3匹配配置对比
+  - name: 传输通道数
+    value: 16 / 36
+    scope: SEMAC配置（全阶共36通道），评分高于全阶CMF 3
+  evidence: abstract（初筛，未读全文）
+- statement: 在相同传输通道数下，SEMAC优于直接阶数截断；“少传输通道+方向能量包络”策略在感知上优于以低精度编码全部HOA通道。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: SEMAC用量化方向能量包络加少量CELT通道压缩高阶Ambisonics，主观评分优于全通道Opus CMF 3。
+  abstract_zh: 高阶Ambisonics（HOA）通道数随球谐阶数平方增长，广泛部署的Opus通过Channel Mapping Families 2/3（RFC 8486）逐通道编码全部Ambisonics通道，码率随阶数二次增长。SEMAC改用量化的全阶方向性能量包络加上更少的CELT编码传输通道来表示信号，将CELT把频带能量包络与信号形状分离、量化后恢复包络的原则推广到方向性信号。由于降维传输仅覆盖低维子空间，解码端重新施加编码端观测到的能量包络，即可恢复全阶方向能量分布。在五阶素材、512与768
+    kbit/s匹配配置的MUSHRA测试中，使用36个传输通道中16个的SEMAC在两种码率下评分均高于全阶CMF 3，且在相同传输通道数下优于阶数截断。结果表明“少通道+方向包络”策略在感知上优于以低精度编码全部HOA通道。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 音频编码域：提出HOA高效压缩新编解码器SEMAC并与Opus CMF 3对比，属audio_coding收录范围，按规则不给deep_read。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: SEMAC：面向高阶Ambisonics高效压缩的球面能量匹配编解码器
+relations:
+- type: same_topic
+  ref: paper:arxiv:2609.09866
+  note: 同为音频编码器设计，关注低码率下的压缩效率与质量权衡
+- type: same_topic
+  ref: paper:arxiv:2609.15616
+  note: 同为传统（非神经）音频编解码器设计
+- type: same_topic
+  ref: paper:arxiv:2608.15369
+  note: 同为音频编码，围绕量化策略与感知质量
+- type: same_topic
+  ref: repo_release:github:iamf-v1.0.0
+  note: 同为沉浸式空间音频格式/编码生态（Ambisonics相关）

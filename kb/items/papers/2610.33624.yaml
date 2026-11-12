@@ -1,0 +1,66 @@
+id: paper:arxiv:2610.33624
+type: paper
+title: 'RSI Arena: Towards Recursive Self-Improvement with Human Feedback'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2610.33624v1
+  url: https://arxiv.org/abs/2610.33624
+  pdf_url: https://arxiv.org/pdf/2610.33624v1
+  venue: arXiv preprint
+time:
+  published: '2026-10-24'
+  collected: '2026-11-12'
+entities:
+- ref: concept:RSI
+  role: subject
+- ref: concept:SelfImprovement
+  role: subject
+- ref: org:NVIDIA
+  role: uses
+claims:
+- statement: 最强模型（由 GPT-6 Astra 训练）中位数填补了基座到 NVIDIA Instruct 之间 76% 的能力差距
+  confidence: reported
+  metrics:
+  - name: Base-to-Instruct 差距填补率（中位数）
+    value: 76%
+    scope: GPT-6 Astra 训练的模型，12 个能力基准中位数
+  evidence: abstract（初筛，未读全文）
+- statement: 十个训练智能体全部产出可用助手；第二阶段 10 个模型中 8 个在风格调整后相对人类偏好评分较第一阶段提升
+  confidence: reported
+  metrics:
+  - name: Stage1→Stage2 偏好评分提升的模型数
+    value: 8/10
+    scope: 以 NVIDIA Instruct 为共同参照的风格调整相对评分
+  evidence: abstract（初筛，未读全文）
+- statement: 基准成绩收益有限且与人类偏好收益无明显关联；部分智能体诱导更长回复，一个模型在 StrongREJECT 上有害顺从度上升
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 十个前沿模型作为训练智能体自主后训练语言模型，探索人类反馈引导的递归自我改进（RSIHF）。
+  abstract_zh: 提出 RSI Arena，一个研究自主后训练与人类反馈引导递归自我改进的两阶段平台：十个前沿模型作为训练智能体，均从 NVIDIA Nemotron 3.5 Lightning
+    30B-A3B Base 出发，在六天第一阶段内各自拥有 1,000 GPU 小时和 300 美元 API 额度（共享 64 GPU 集群），独立选择数据、实施训练并挑选检查点。第一阶段在 20
+    个基准与盲测人类评估上评测，全部十个智能体均产出可用助手，最强者（由 GPT-6 Astra 训练）在 12 个能力基准上中位数填补了基座到 NVIDIA Instruct 差距的 76%，人类偏好评分经回复长度与格式统计调整后接近
+    NVIDIA Instruct。第二阶段各智能体获得其模型的对比记录与投票后再训三天，以 NVIDIA Instruct 为共同参照，十个模型中八个的风格调整后相对评分提升。研究发现基准收益有限且与偏好收益无明显关联，部分智能体诱导更长回复，一个模型在
+    StrongREJECT 上有害顺从度上升。该平台为研究人类反馈如何引导自主模型开发提供了可审计的环境。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 属于自我改进 AI 域：十个前沿模型作为训练智能体自主后训练语言模型并引入人类反馈引导递归自我改进（RSIHF），与音视频核心技术无关，按收录基准仅初筛。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: RSI Arena：迈向有人类反馈的递归自我改进
+relations:
+- type: same_topic
+  ref: paper:arxiv:2610.34386
+  note: 同为智能体自主改进语言模型主题的评测平台（ParetoRSI-Gym）
+- type: same_topic
+  ref: paper:arxiv:2610.32026
+  note: 同为面向模型训练的递归自我改进智能体（RSI-Opt）
+- type: same_topic
+  ref: paper:arxiv:2610.23344
+  note: 同为语言模型自主改进语言模型主题（Language Models Learn to Improve Language Models）

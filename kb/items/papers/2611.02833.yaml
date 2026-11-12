@@ -1,0 +1,72 @@
+id: paper:arxiv:2611.02833
+type: paper
+title: Reimagining computational quantum research with AI scientists
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2611.02833v1
+  url: https://arxiv.org/abs/2611.02833
+  pdf_url: https://arxiv.org/pdf/2611.02833v1
+  venue: arXiv preprint
+time:
+  published: '2026-11-02'
+  collected: '2026-11-12'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: 自改进AI科学家RA在OmniQ上显著提升复现性能，将DeepSeek V4.1 Flash从68%提升至85%，并以更低成本匹配Claude Code+Opus 5。
+  confidence: reported
+  metrics:
+  - name: 复现性能
+    value: 68%→85%
+    scope: OmniQ基准、DeepSeek V4.1 Flash基座，固定基座模型与有限适配预算
+  - name: 运行成本
+    value: 1/3
+    scope: 相对Claude Code+Opus 5
+  - name: 基座模型
+    value: 更弱基座匹配更强基座
+    scope: DeepSeek V4.1 Flash+RA 对比 Claude Code+Opus 5
+  evidence: abstract（初筛，未读全文）
+- statement: 当前AI科学家在量子计算研究中普遍无法复现已发表结果，论文信息与智能体所需信息存在根本错配，专家干预可修复该缺失。
+  confidence: reported
+  metrics:
+  - name: 覆盖论文数
+    value: '59'
+    scope: OmniQ基准，涵盖经典模拟、量子算法与量子性质表征
+  - name: 被评智能体系统
+    value: '5'
+    scope: 基于LLM的agentic系统
+  - name: 第三方harness
+    value: '6'
+    scope: 第三方agent harness
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 构建专家审计的OmniQ量子复现基准并提出自改进AI科学家RA，将验证过的修复蒸馏为可复用经验，大幅提升LLM智能体复现成功率。
+  abstract_zh: 论文构建了专家审计的虚拟研究环境OmniQ，将59篇已发表量子研究论文转化为可执行复现任务，系统评测了5个基于大语言模型的智能体系统与6个第三方agent harness。结果显示当前AI科学家往往无法复现已发表结果，暴露出论文传递信息与自主智能体所需信息之间的根本错配；而人类专家干预可将失败转化为成功复现。据此作者提出面向量子领域的自改进AI科学家Residual
+    Agents（RA），将外部验证的工作流修复蒸馏为可复用研究经验，在固定基座模型与有限适配预算下将DeepSeek V4.1 Flash性能从68%提升至85%，以约三分之一成本匹配Claude
+    Code+Opus 5。全部复现结果被集成到基于模型上下文协议（MCP）的可扩展平台，支持新论文持续纳入。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 论文提出自改进AI科学家RA与量子复现基准OmniQ，属self_improvement域，与音视频核心技术无关，按非核心域规则仅摘要收录；规则匹配中的codec:Opus实为Claude
+    Opus模型名而非Opus音频编解码器，属噪声已剔除。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 以AI科学家重塑计算量子研究
+relations:
+- type: same_topic
+  ref: paper:arxiv:2610.22791
+  note: 同为自改进智能体研究，均通过harness层面优化与经验/修复积累提升智能体性能
+- type: same_topic
+  ref: paper:arxiv:2610.34386
+  note: 同评估AI智能体跨领域自我改进能力并以量化指标报告改进幅度
+- type: same_topic
+  ref: paper:arxiv:2610.22599
+  note: 同考察LLM智能体复现/预测已发表机器学习实验结果的能力与局限

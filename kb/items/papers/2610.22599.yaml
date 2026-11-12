@@ -1,0 +1,67 @@
+id: paper:arxiv:2610.22599
+type: paper
+title: Can LLMs predict the outcomes of machine learning experiments?
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2610.22599v1
+  url: https://arxiv.org/abs/2610.22599
+  pdf_url: https://arxiv.org/pdf/2610.22599v1
+  venue: arXiv preprint
+time:
+  published: '2026-10-15'
+  collected: '2026-11-12'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:RSI
+  role: subject
+- ref: concept:SelfImprovement
+  role: subject
+claims:
+- statement: 前沿 LLM 对 ML 实验结果的预测显著优于随机，但远未准确：表现最好的 Claude Opus 5.5 也仅解释约一半的结果方差。
+  confidence: reported
+  metrics:
+  - name: R²
+    value: '0.49'
+    scope: 最佳模型 Claude Opus 5.5 对 288 条自提实验想法实际结果的方差解释比例
+  evidence: abstract（初筛，未读全文）
+- statement: 所有被测 LLM 均系统性低估实验带来的变化幅度。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 预测质量在不同 MLE-bench 任务间差异很大；实现想法的编码 harness 选择对结果影响很小，且未发现模型自偏好证据。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 评测覆盖 8 个 MLE-bench 任务上 288 条 LLM 提出的实验想法，涉及 5 个前沿 LLM；更高推理档位与更多上下文仅带来小幅增益。
+  confidence: reported
+  metrics:
+  - name: 数据集规模
+    value: '288'
+    scope: LLM 提出的实验想法条数
+  - name: 任务数
+    value: '8'
+    scope: MLE-bench 任务
+  - name: 被测模型数
+    value: '5'
+    scope: 前沿 LLM 数量
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 构建288条LLM自提实验想法数据集，测得前沿LLM预判实验结果最多仅解释一半方差（R²=0.49），直觉有用但有限。
+  abstract_zh: 为检验 LLM 在长训练跑之前判断自生成 ML 实验想法是否值得执行的直觉，作者构建了覆盖 8 个 MLE-bench 任务、共 288 条 LLM 提出的实验想法的数据集，并让
+    5 个前沿 LLM 预测各想法的影响力，再与实际训练结果对比。结果显示：预测显著优于随机但远非准确，最佳的 Claude Opus 5.5 仅解释结果方差的约一半（R²=0.49）；所有被测模型系统性低估变化幅度，且预测质量在不同任务间差异很大。此外，实现想法所用编码
+    harness 的选择对结果影响很小，未发现自偏好证据，更高推理档位与更多上下文仅带来小幅提升。作者发布该数据集以支持后续研究。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 直接测量前沿 LLM 对自生成 ML 实验想法结果的预判直觉，属 RSI/自我改进域的支撑能力评测，非核心编码域故仅初筛。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: LLM 能否预测机器学习实验的结果？
+relations:
+- type: same_topic
+  ref: paper:arxiv:2609.01535
+  note: 同属 LLM 自动化科研/设计能力评测：该文评估 LLM 设计视频编码工具（平面模式），本文评估 LLM 预判 ML 实验结果的能力

@@ -1,0 +1,81 @@
+id: paper:arxiv:2611.06858
+type: paper
+title: 'CompressionBench: How can your coding agents compress LLMs?'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2611.06858v2
+  url: https://arxiv.org/abs/2611.06858
+  pdf_url: https://arxiv.org/pdf/2611.06858v2
+  venue: arXiv preprint
+time:
+  published: '2026-11-04'
+  collected: '2026-11-12'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:RSI
+  role: subject
+- ref: concept:SelfImprovement
+  role: subject
+claims:
+- statement: 在 6 个智能体 × 6 个模型-规模设定共 36 个提交中，29 个通过独立验证，表明当前编码智能体多数可完成合规的 LLM 压缩任务。
+  confidence: reported
+  metrics:
+  - name: 通过验证提交数
+    value: 29/36
+    scope: 6 智能体 × 6 模型-规模设定
+  evidence: abstract（初筛，未读全文）
+- statement: 逐任务选取困惑度最低的智能体设计，压缩后模型平均困惑度较 BF16 仅增加 3.4%，下游准确率 77.33%（BF16 为 79.56%）。
+  confidence: reported
+  metrics:
+  - name: 困惑度平均增幅
+    value: 3.4%
+    scope: 相对 BF16，按任务选取最优智能体设计
+  - name: 下游准确率
+    value: 77.33%
+    scope: 压缩后模型（最优智能体设计）
+  - name: 下游准确率
+    value: 79.56%
+    scope: BF16 基线
+  evidence: abstract（初筛，未读全文）
+- statement: 在近固定存储条件下，智能体的 24 次修订中有 21 次成功降低困惑度。
+  confidence: reported
+  metrics:
+  - name: 成功降 PPL 修订数
+    value: 21/24
+    scope: 近固定存储条件下的修订
+  evidence: abstract（初筛，未读全文）
+- statement: 完整模型级反馈推翻了此前基于局部（代理）指标的 79 个排名中的 17 个，说明局部优化信号与端到端表现存在显著错位。
+  confidence: reported
+  metrics:
+  - name: 被推翻的局部排名数
+    value: 17/79
+    scope: 完整模型反馈 vs 先前局部排名
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出 CompressionBench 基准，评测编码智能体在给定存储与时间预算下自主压缩 LLM 权重的能力。
+  abstract_zh: 论文将 LLM 压缩形式化为终端任务：智能体接收源检查点、存储上限、推理环境与时间预算，自行设计算法与实验，产出压缩权重及可执行推理代码，困惑度反馈引导搜索，最终由独立验证器核查。跨
+    6 个智能体与 6 个模型-规模设定，36 个提交中 29 个通过验证。逐任务选取困惑度最低的智能体设计，压缩模型平均困惑度较 BF16 仅增 3.4%，下游准确率 77.33%（BF16 为 79.56%）。记录的实验显示智能体在近固定存储下
+    24 次修订中 21 次降低困惑度，而完整模型级反馈推翻了 79 个先前局部排名中的 17 个，表明表示设计、实验判断与能力验证是智能体驱动压缩的核心环节。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 属于自我改进 AI 域：研究编码智能体自主压缩 LLM 权重，与音视频编码无直接关系，仅与语料中 LLM 权重压缩主题（如 LLMCodec）弱相关。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: CompressionBench：你的编码智能体能压缩大语言模型吗？
+relations:
+- type: same_topic
+  ref: paper:arxiv:2606.05861
+  note: 同为 LLM 权重压缩主题：LLMCodec 借用视频编解码器压缩 LLM 权重，本工作让编码智能体自主完成 LLM 压缩
+- type: same_topic
+  ref: paper:arxiv:2610.34386
+  note: 同属评测 AI 智能体改进语言模型能力的 RSI 基准类工作
+- type: same_topic
+  ref: paper:arxiv:2610.32026
+  note: 同属面向模型训练/压缩效率的递归自我改进智能体研究

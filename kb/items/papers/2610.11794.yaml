@@ -1,0 +1,71 @@
+id: paper:arxiv:2610.11794
+type: paper
+title: 'Memento 3: Model-Based Recursive Self-Improvement through Reflective Rulebooks'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2610.11794v1
+  url: https://arxiv.org/abs/2610.11794
+  pdf_url: https://arxiv.org/pdf/2610.11794v1
+  venue: arXiv preprint
+time:
+  published: '2026-10-08'
+  collected: '2026-11-12'
+entities:
+- ref: concept:RSI
+  role: subject
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: 在 ARC-AGI-3 基准上，单模型智能体通关全部 25 个公开游戏的所有关卡，平均相对人类动作效率（RHAE）达 100.0，动作数仅为人类用量的 44%。
+  confidence: reported
+  metrics:
+  - name: 平均RHAE
+    value: '100.0'
+    scope: ARC-AGI-3 全部25个公开游戏的均值
+  - name: 人类动作占比
+    value: 44%
+    scope: 相对人类动作数，ARC-AGI-3 25个公开游戏
+  - name: 通关游戏数
+    value: 25/25
+    scope: ARC-AGI-3 公开游戏全部通关
+  evidence: abstract（初筛，未读全文）
+- statement: Atari Pong 案例中，学习到的反馈控制器在三个不同开局的对局中均以 21:0 获胜，且对局过程中不再调用 LLM。
+  confidence: reported
+  metrics:
+  - name: 对局比分
+    value: '21:0'
+    scope: Atari Pong，3个不同开局的评估对局
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 冻结LLM智能体以自然语言规则手册为外部记忆，经反思-修订-编译-验证循环实现模型驱动RSI，在ARC-AGI-3上全部通关。
+  abstract_zh: Memento 3 让冻结参数的 LLM 智能体通过外部记忆持续学习显式世界模型：以自然语言规则书作为持久语义记忆，记录关于环境动态的可修正假设，并将其编译为可执行代码用于预测与规划。在观察、反思、规则修订、编译与验证的持续循环中，智能体利用预测误差同时细化规则书与代码；只有当
+    LLM 判定代码忠实于规则书且单元级回放能复现观测转移时，更新才被接受。该过程被作为一条通向递归自我改进（RSI）的模型驱动路径加以研究，底层 LLM 全程保持不变；种群扩展版本并行维护多个世界模型，共享交互证据并以预测引导探索。在
+    ARC-AGI-3 上，单模型智能体通关全部 25 个公开游戏的所有关卡，平均 RHAE 达 100.0，动作数仅为人类用量的 44%；Atari Pong 案例中学习到的反馈控制器在三个不同开局对局均以
+    21:0 获胜且无需进一步 LLM 调用。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 模型驱动递归自我改进（RSI）方向的重要工作（Memento系列续作，ARC-AGI-3全通关），属自我改进AI域而非音视频核心域，按规则仅摘要收录。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: Memento 3：基于反思式规则手册的模型驱动递归自我改进
+relations:
+- type: same_topic
+  ref: paper:arxiv:2610.32026
+  note: 同属递归自我改进（RSI）智能体研究线，Memento 3 为模型驱动路线
+- type: same_topic
+  ref: paper:arxiv:2609.33867
+  note: 同属 RSI 研究线，R² Flow 走递归技能演化路线，Memento 3 走世界模型/规则手册路线
+- type: same_topic
+  ref: paper:arxiv:2610.24453
+  note: 同为免训练、基于外部记忆的 agent 自我进化，与 Memento 3 的固定LLM+外部记忆思路相近
+- type: same_topic
+  ref: paper:arxiv:2609.38662
+  note: 同属递归自我改进研究线，CollabFlow 聚焦 agent 协作的 RSI

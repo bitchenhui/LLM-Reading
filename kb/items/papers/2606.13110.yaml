@@ -13,6 +13,7 @@ source:
 time:
   published: '2026-06-11'
   collected: '2026-11-12'
+  updated: '2026-11-12'
 entities:
 - ref: impl:DCVC-FM
   role: subject
@@ -33,6 +34,7 @@ claims:
 summaries:
   one_liner_zh: 首个神经视频编解码器混合精度量化框架，将量化参数与位宽作为可学习变量，实现整数化部署并大幅削减位操作。
   abstract_zh: 针对VAE神经视频编解码器计算复杂度过高、跨平台互操作性受限的问题，本文提出JOMP联合优化混合精度量化框架，在训练中将量化参数与位宽视为可学习变量，使不同编解码模块运行在不同精度并联合优化率失真-复杂度权衡。论文对不同编码框架与时域缓冲策略下的量化行为进行了系统研究，首次给出二者的统一分析，并构建完整整数化流水线以保证确定性解码。将该框架应用于其最佳模型后，整数化神经视频编解码器在率失真性能与SOTA方法DCVC-FM相当的情况下，位操作减少87.6%。
+  deep_dive: docs/auto/2606.13110.md
 assessment:
   relevance: high
   decision: deep_read

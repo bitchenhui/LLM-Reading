@@ -1,0 +1,92 @@
+id: paper:arxiv:2610.27610
+type: paper
+title: 'Auditing the Product, Not the Recursion: The Evaluation Evidence Behind Recursive Self-Improvement
+  Claims'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2610.27610v1
+  url: https://arxiv.org/abs/2610.27610
+  pdf_url: https://arxiv.org/pdf/2610.27610v1
+  venue: arXiv preprint
+time:
+  published: '2026-10-20'
+  collected: '2026-11-12'
+entities:
+- ref: concept:RSI
+  role: subject
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: subject
+claims:
+- statement: 在90项自称RSI的研究中，宽标准下90%报告了超出开发任务的产品评估，但仅60%在未用于选择的任务上评估，仅22%审计两次以上完整循环重跑。
+  confidence: reported
+  metrics:
+  - name: 产品评估报告率（宽标准）
+    value: 90%
+    scope: 90项自称RSI的研究，含部分或未声明分离
+  - name: 未用于选择任务的评估率
+    value: 60%
+    scope: 90项自称RSI的研究
+  - name: 两次以上完整循环重跑审计率
+    value: 22%
+    scope: 90项自称RSI的研究
+  evidence: abstract（初筛，未读全文）
+- statement: 人工编码随机样本中RSI研究的证据率显著更低：45%在未用于选择任务上评估，仅14%审计两次以上重跑。
+  confidence: reported
+  metrics:
+  - name: 未用于选择任务的评估率（人工编码）
+    value: 45%
+    scope: 人工编码随机样本
+  - name: 两次以上重跑审计率（人工编码）
+    value: 14%
+    scope: 人工编码随机样本
+  evidence: abstract（初筛，未读全文）
+- statement: 26项声称改进了改进程序的研究中，23项报告了相关比较，但仅4项在相同起始工件与匹配预算下比较早期与后期程序，改进程序声明的证据最为薄弱。
+  confidence: reported
+  metrics:
+  - name: 相关比较报告数
+    value: 23/26
+    scope: 26项声称更好改进程序的研究
+  - name: 同起点匹配预算比较数
+    value: '4'
+    scope: 26项声称更好改进程序的研究
+  evidence: abstract（初筛，未读全文）
+- statement: 研究总体基于对114项合格研究的全文编码，其中90项自称RSI，编码含双人独立编码、第三方裁决与盲法编码以评估信度。
+  confidence: reported
+  metrics:
+  - name: 合格研究数
+    value: '114'
+    scope: 2026年10月冻结的arXiv检索框
+  - name: 其中自称RSI研究数
+    value: '90'
+    scope: 114项合格研究之内
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 对114项RSI相关研究全文编码审计，发现产品评估常见而递归可重复性与改进程序对比证据薄弱，提出按声明索引的报告标准。
+  abstract_zh: 论文通过在2026年10月冻结的可复现arXiv检索框中对114项合格研究进行全文编码（其中90项自称RSI），测量RSI声明所需评估证据的实际报告率。在90项RSI研究中，宽标准下90%报告了超出开发任务的产品评估，但仅60%在未用于选择的任务上评估，仅22%审计了两次以上完整循环重跑；人工编码随机样本中对应比例降至45%与14%。在26项声称改进了改进程序的研究中，23项报告了相关比较，但仅4项在相同起始工件与匹配预算下比较前后程序。作者提出三个命题，说明选择效应、共享评估器错误与系统状态变化如何限制产品评估的证明力，并支持一项将每条声明与所需评估设计挂钩的'声明索引'报告标准。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 自我改进AI域内对114项RSI研究评估证据的系统性全文编码审计，为该域提供报告标准，但非音视频核心域，按基准只给初筛摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 审计产品而非递归：递归自我改进声明背后的评估证据
+relations:
+- type: same_topic
+  ref: paper:arxiv:2610.32026
+  note: 同属递归自我改进（RSI）研究方向，本文为其评估证据提供元审计
+- type: same_topic
+  ref: paper:arxiv:2610.34386
+  note: ParetoRSI-Gym研究LLM智能体多域自我改进，属本文审计的RSI声明类型
+- type: same_topic
+  ref: paper:arxiv:2611.11558
+  note: InfraRSI将RSI用于训练基础设施，同属RSI系统研究，受本文报告标准约束
+- type: same_topic
+  ref: paper:arxiv:2610.11794
+  note: Memento 3为基于反思规则书的模型式递归自我改进，属本文考察的RSI研究范畴

@@ -1,0 +1,65 @@
+id: paper:arxiv:2610.00972
+type: paper
+title: 'VeriHarness: Scaling Agentic Verification for Long-Horizon Tasks'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2610.00972v1
+  url: https://arxiv.org/abs/2610.00972
+  pdf_url: https://arxiv.org/pdf/2610.00972v1
+  venue: arXiv preprint
+time:
+  published: '2026-10-01'
+  collected: '2026-11-12'
+entities:
+- ref: concept:LLM
+  role: subject
+claims:
+- statement: 在五个长时程工作区基准与两个前沿模型上，VeriHarness在所评估基线中取得最高选择得分
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 基于证据的修订相对单次rollout带来平均性能增益：Gemini 3.5 Flash提升6.2分，Claude Opus 4.8提升6.4分
+  confidence: reported
+  metrics:
+  - name: 平均增益
+    value: 6.2 points
+    scope: Gemini 3.5 Flash，相对单次rollout
+  - name: 平均增益
+    value: 6.4 points
+    scope: Claude Opus 4.8，相对单次rollout
+  evidence: abstract（初筛，未读全文）
+- statement: 验证技能可从失败反馈中自我改进，实现验证能力的扩展
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 发布跨五个基准、两个模型的约26,000条rollout完整数据池，生产成本超10万美元
+  confidence: reported
+  metrics:
+  - name: rollout数量
+    value: approximately 26,000
+    scope: 五基准×两模型全池
+  - name: 生成成本
+    value: over $100,000
+    scope: rollout池生产成本
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 将LLM改造为带工作区与证据工具的智能体验证器，长时程基准上得分最优，验证技能可自改进。
+  abstract_zh: 针对LLM智能体长时程任务输出难以验证的问题，VeriHarness在测试时不依赖参考答案与评分规则，通过发现'分歧常暴露正确替代、共识可能掩盖错误'的规律，将底层LLM转化为配备工作区、证据工具与可复用验证技能的智能体验证器。分歧解决器依据环境证据检验相互竞争的论断，共识挑战者测试被共同认可的论断并搜索被遗漏的要求，其结论共同指导最终产物的选择与修订。在五个长时程工作区基准与两个前沿模型上，VeriHarness在所评估基线中取得最高选择得分；基于证据的修订使相对单次rollout的平均增益达6.2分（Gemini
+    3.5 Flash）与6.4分（Claude Opus 4.8）。验证技能还可从失败反馈中自我改进，作者发布了约2.6万条rollout的完整数据池（生产成本超10万美元）。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 面向LLM智能体长时程任务的验证能力扩展且验证技能可自失败反馈自改进，属自我改进AI核心追踪范围，与音视频编码无关，按规则仅初筛摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: VeriHarness：面向长时程任务的可扩展智能体验证
+relations:
+- type: same_topic
+  ref: paper:arxiv:2610.22791
+  note: 同为harness层面的智能体自我进化/验证机制研究（Self-Evolving Coding Agents via Harness-Policy Optimization）
+- type: same_topic
+  ref: paper:arxiv:2610.32026
+  note: 同属自我改进AI方向：递归自改进优化器与验证/反馈驱动的智能体能力提升（RSI-Opt）

@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-06-11'
   collected: '2026-11-12'
+  updated: '2026-11-12'
 entities:
 - ref: concept:EntropyModel
   role: subject
@@ -53,6 +54,7 @@ summaries:
   one_liner_zh: 提出InnVC：以可逆主变换路径结合隐式条件场与调度掩码策略，实现覆盖20 dB以上PSNR范围的宽质量高保真神经视频压缩。
   abstract_zh: 针对现有学习式视频编码依赖不可逆分析-合成变换、重建同时受量化与变换近似误差制约的问题，提出InnVC，在量化前保持可逆的主变换路径，并通过紧凑的隐式条件场注入内容自适应上下文，将强相关的视频内容与难建模的细节解耦，使各组件分工完成互补的重建任务。进一步引入调度掩码策略，逐步将有效信息集中到更少的潜在通道以提升熵编码效率。在UVG和MCL-JCV基准上，InnVC在宽质量范围内取得强压缩性能，尤其在高保真区间有效，相对x265在UVG上PSNR
     BD-rate降低21.66%、MS-SSIM BD-rate降低46.06%。作者称其为首个在单一架构尺度内覆盖从低码率到高保真、PSNR跨度超过20 dB的神经视频编解码器。
+  deep_dive: docs/auto/2606.13957.md
 assessment:
   relevance: high
   decision: deep_read

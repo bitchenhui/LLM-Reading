@@ -1,0 +1,50 @@
+id: paper:arxiv:2611.07755
+type: paper
+title: 'Automated Video-to-QA Pipeline: End-to-End Question Generation and Verification Using Large Language
+  Models'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2611.07755v1
+  url: https://arxiv.org/abs/2611.07755
+  pdf_url: https://arxiv.org/pdf/2611.07755v1
+  venue: arXiv preprint
+time:
+  published: '2026-11-05'
+  collected: '2026-11-12'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: impl:FFmpeg
+  role: uses
+claims:
+- statement: 集成FFmpeg音频提取、Whisper ASR、BART分段摘要与Llama-3.1-8B-Instruct问答生成，构成端到端视频转QA流水线
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 自验证循环让模型生成候选QA后自评其相关性与重要性，仅保留高质量对用于构建合成训练集
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 用合成数据集经LoRA微调Llama，作者声称无需人工标注即可获得领域对齐的测评题生成能力，形成自我改进的教育工具
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出FFmpeg+Whisper+BART+Llama的视频转问答流水线，经自验证循环过滤后LoRA微调，实现无人工标注的自我改进。
+  abstract_zh: 针对YouTube等平台海量教育视频的知识检索与测评需求，作者提出端到端自动流水线：用FFmpeg提取音轨，Whisper进行语音识别生成转写。为突破LLM token限制，转写被分段并用BART做摘要。核心创新是自验证与微调闭环：由Llama-3.1-8B-Instruct从转写片段生成候选问答对，再反馈给模型自评相关性与重要性，仅保留通过验证的高质量对构建合成数据集。该数据集经LoRA微调Llama得到能生成领域对齐测评题的专用模型，作者称无需人工标注即可构建自我改进的教育工具，模型与代码已在Kaggle和GitHub开放。
+assessment:
+  relevance: low
+  decision: summary_only
+  reason: 核心贡献是LLM自验证+LoRA微调的自我改进闭环，视频/ASR仅为输入管线，非音视频编码核心技术，按非核心域收录为初筛。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 自动化视频转问答流水线：基于大语言模型的端到端问题生成与验证
+relations:
+- type: same_topic
+  ref: paper:arxiv:2610.34386
+  note: 同属通过自动验证/迭代循环改进语言模型的研究方向
+- type: same_topic
+  ref: paper:arxiv:2610.32026
+  note: 同为自我改进优化器/闭环微调范式（RSI类）

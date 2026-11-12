@@ -1,0 +1,114 @@
+id: paper:arxiv:2610.25114
+type: paper
+title: 'Compile Once, Run Cheap: Frozen, Portable Skills for Embodied Agents, and What Recursive Self-Improvement
+  Adds'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2610.25114v1
+  url: https://arxiv.org/abs/2610.25114
+  pdf_url: https://arxiv.org/pdf/2610.25114v1
+  venue: arXiv preprint
+time:
+  published: '2026-10-18'
+  collected: '2026-11-12'
+entities:
+- ref: concept:RSI
+  role: subject
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: Claude Code 在 7 个 RoboTwin 2.0 杂乱桌面任务上将 4 个任务编译为 7 个冻结技能，其中 5 个首稿仅需资格考核即通过。
+  confidence: reported
+  metrics:
+  - name: 编译成功任务数
+    value: 4/7
+    scope: RoboTwin 2.0 任务，Claude Code 离线作者
+  - name: 冻结技能数
+    value: '7'
+    scope: 4 个编译成功任务产出
+  - name: 首稿通过数
+    value: '5'
+    scope: 7 个技能中首稿仅 qualification 即通过
+  - name: 单技能作者成本
+    value: USD 4.29-8.22
+    scope: 成功编译的技能
+  - name: 摊销后单技能成本
+    value: USD 55
+    scope: 计入 13 次失败活动
+  evidence: abstract（初筛，未读全文）
+- statement: 其余 3 个任务在 18 次活动中未编译成功（含 5 次 GPT-6 与预注册 150 布局运行）；最难任务各次活动得分 78-95/100 但有 3-16 次安全中止，未通过
+    95% 成功率且零中止的门槛，且 100 回合考试只能把中止率上界约束到 3.6%。
+  confidence: reported
+  metrics:
+  - name: 未编译任务数
+    value: '3'
+    scope: 18 次活动
+  - name: 最难任务得分区间
+    value: 78-95/100
+    scope: 各次活动
+  - name: 安全中止次数
+    value: 3-16
+    scope: 每次活动
+  - name: 考试中止率上界
+    value: 3.6%
+    scope: 100 回合考试的统计约束
+  evidence: abstract（初筛，未读全文）
+- statement: 隐藏布局上，继承前版本的修复在 8/8 受控活动中优于从零重写；仅继承谱系显示大部分差距来自继承，开发反馈增量较小，且 write-once 活动未发现可检测的首稿练习效应。
+  confidence: reported
+  metrics:
+  - name: 受控活动胜场
+    value: 8/8
+    scope: 继承式修复 vs 从零重写
+  - name: sign test p
+    value: '0.004'
+    scope: 8 场受控活动
+  - name: 开发反馈增量检验
+    value: 3/3, p=0.125
+    scope: 仅继承谱系对照
+  - name: 最小可检测效应
+    value: 14 分
+    scope: write-once 活动的首稿练习效应检验
+  evidence: abstract（初筛，未读全文）
+- statement: 冻结技能在冻结后抽取的新布局上保持高成功率：无模型 148/150，配 DeepSeek-flash 廉价调用器 147/150，每回合成本仅 0.00028-0.00054 美元；作者未运行直接控制基线。
+  confidence: reported
+  metrics:
+  - name: 成功率（无模型）
+    value: 148/150
+    scope: 新隐藏布局
+  - name: 成功率（DeepSeek-flash 调用器）
+    value: 147/150
+    scope: 新隐藏布局
+  - name: 每回合成本
+    value: USD 0.00028-0.00054
+    scope: DeepSeek-flash 调用器
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 强模型离线编写并修复具身操作技能，冻结为可移植代码后由廉价调用器运行，验证技能级RSI的增益。
+  abstract_zh: 提出技能级递归自我改进 Skill-RSI：强通用模型仅作离线作者，在仿真中编写、运行、诊断并修复操作技能直至通过冻结后抽取布局上的考试，技能随后以纯代码或廉价调用器独立运行。在
+    7 个 RoboTwin 2.0 杂乱桌面任务上，Claude Code 将 4 个任务编译为 7 个冻结技能，其中 5 个首稿即通过资格考核，单技能作者成本 4.29-8.22 美元（计入 13
+    次失败活动约 55 美元/技能），其余 3 个任务在 18 次活动中未编译成功。隐藏布局上，继承前版本的修复在 8/8 受控活动中优于从零重写（sign test p=0.004）。冻结技能在新布局上无模型时保持
+    148/150 成功，配 DeepSeek-flash 调用器为 147/150，每回合成本 0.00028-0.00054 美元。
+assessment:
+  relevance: low
+  decision: summary_only
+  reason: 纯具身智能体技能级递归自我改进（Skill-RSI）研究，与音视频技术无直接关联，按自我改进域收录为 summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 一次编译、廉价运行：具身智能体的冻结可移植技能及递归自我改进的增益
+relations:
+- type: same_topic
+  ref: paper:arxiv:2609.33867
+  note: 同属技能级递归自我改进（skill-level RSI/技能演化）路线
+- type: same_topic
+  ref: paper:arxiv:2610.17114
+  note: 同为具身智能体与递归自我改进结合的研究
+- type: same_topic
+  ref: paper:arxiv:2610.19424
+  note: 同属结构化递归自我改进（SRSI）协议设计

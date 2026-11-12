@@ -11,6 +11,7 @@ source:
 time:
   published: '2026-06-04'
   collected: '2026-11-12'
+  updated: '2026-11-12'
 entities:
 - ref: codec:VVC
   role: uses
@@ -40,6 +41,7 @@ claims:
 summaries:
   one_liner_zh: 提出LLMCodec，将仿射量化与VVC视频编码结合压缩LLM权重，2-bit下困惑度降低超1.5倍、下游准确率提升21%
   abstract_zh: 大语言模型规模增长带来存储、传输与部署挑战，而现有模型压缩与量化方法常依赖微调或校准数据，跨张量类型的泛化能力有限。论文提出LLMCodec，将仿射量化与VVC/H.266视频编码器相结合，利用视频编码器对矩阵结构数据的天然兼容性、可配置的压缩策略及高度优化的现成实现来压缩LLM权重。除VVC外，作者还比较了多种视频编码器及其编码配置（profile）对压缩性能的影响。在不同模型上的实验验证了该方法的鲁棒性与通用性：在LLaMA-3-8B的2-bit精度下，相比现有方法困惑度降低超过1.5倍，下游任务准确率提升21%。
+  deep_dive: docs/auto/2606.05861.md
 assessment:
   relevance: high
   decision: deep_read

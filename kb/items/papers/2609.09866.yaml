@@ -1,0 +1,82 @@
+id: paper:arxiv:2609.09866
+type: paper
+title: 'UniStream: Multi-Expert Residual Vector Quantization for 48 kHz Causal Streaming Audio Coding'
+domain: audio_coding
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2609.09866v1
+  url: https://arxiv.org/abs/2609.09866
+  pdf_url: https://arxiv.org/pdf/2609.09866v1
+  venue: arXiv preprint
+time:
+  published: '2026-09-09'
+  collected: '2026-11-12'
+entities:
+- ref: concept:NeuralAudioCodec
+  role: subject
+- ref: codec:Opus
+  role: compared_against
+- ref: metric:MOS
+  role: measured_by
+claims:
+- statement: UniStream 为全因果 48 kHz 编解码器，路由仅依赖历史解码量化状态、无需传输专家标识，支持 GPU 实时推理，ME-RVQ 仅增加 5.5M 参数。
+  confidence: reported
+  metrics:
+  - name: 参数增量
+    value: 5.5M
+    scope: ME-RVQ 专家码本相对单一共享码本
+  evidence: abstract（初筛，未读全文）
+- statement: 12 kbps 下 UniStream-Top1 的 PESQ 与 UTMOS 与 EnCodec 相当，同时将语音 Mel-D 从 13.07 降至 8.21。
+  confidence: reported
+  metrics:
+  - name: speech Mel-D
+    value: '8.21'
+    scope: UniStream-Top1 @ 12 kbps
+  - name: speech Mel-D
+    value: '13.07'
+    scope: EnCodec @ 12 kbps（对比基线）
+  evidence: abstract（初筛，未读全文）
+- statement: 22.5 kbps 的 UniStream-Top2 在 ViSQOL 语音模式达 4.67、环境声模式达 3.96，后者超过所有 ≤12 kbps 的被评估系统。
+  confidence: reported
+  metrics:
+  - name: ViSQOL speech-mode
+    value: '4.67'
+    scope: UniStream-Top2 @ 22.5 kbps
+  - name: ViSQOL audio-mode（环境声）
+    value: '3.96'
+    scope: UniStream-Top2 @ 22.5 kbps，超过所有 ≤12 kbps 系统
+  evidence: abstract（初筛，未读全文）
+- statement: 语音上，UniStream-Top2 在 ViSQOL audio 模式与 24 kbps Opus 的差距不超过 0.03 MOS-LQO。
+  confidence: reported
+  metrics:
+  - name: MOS-LQO 差距
+    value: '0.03'
+    scope: vs Opus @ 24 kbps，ViSQOL audio mode，语音
+  evidence: abstract（初筛，未读全文）
+- statement: 消融实验表明 ME-RVQ 是质量提升的主要来源，OT-CFM 在语音上带来感知增益但轻微增加谱失真。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 全因果 48kHz 神经音频编解码器，用多专家残差矢量量化(ME-RVQ)扩展量化容量，实时流式编码语音/音乐/环境声。
+  abstract_zh: UniStream 是面向流式语音、音乐与环境声的全因果 48 kHz 神经音频编解码器。其核心 ME-RVQ 用确定性 Top-K 路由控制的四个专家码本取代每层残差量化中的单一共享码本；路由决策仅依赖已解码的量化状态，解码端无需传输专家标识即可复现选择，仅增加
+    5.5M 参数。训练时引入最优传输条件流匹配（OT-CFM）辅助目标正则化量化潜空间，推理时完全移除该模块、无运行时开销。系统支持 12 kbps Top-1 与 22.5 kbps Top-2
+    两种模式并实现 GPU 实时推理：12 kbps 下 PESQ/UTMOS 与 EnCodec 相当且语音 Mel-D 从 13.07 降至 8.21；22.5 kbps 下 ViSQOL 语音/环境声模式达
+    4.67/3.96，语音上与 24 kbps Opus 的 ViSQOL 差距不超过 0.03 MOS-LQO。消融实验证实 ME-RVQ 是质量提升的主要来源。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 神经音频编码（非核心视频/图像编码域），为全因果48kHz流式神经编解码器的重要工作，按规则只给摘要级收录。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: UniStream：面向 48 kHz 因果流式音频编码的多专家残差矢量量化
+relations:
+- type: same_topic
+  ref: paper:arxiv:2606.21033
+  note: MoECodec 同样用混合专家（MoE）改进编解码器量化，本工作将该思路引入音频残差矢量量化码本
+- type: same_topic
+  ref: paper:arxiv:2607.23366
+  note: 均关注矢量量化码本容量/结构对感知质量的影响（该文为视频离散分层压缩）

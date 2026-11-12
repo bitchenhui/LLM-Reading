@@ -1,0 +1,71 @@
+id: paper:arxiv:2611.12109
+type: paper
+title: 'SkillDuet: Co-Evolving Models and Skills through Response Feedback'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2611.12109v1
+  url: https://arxiv.org/abs/2611.12109
+  pdf_url: https://arxiv.org/pdf/2611.12109v1
+  venue: arXiv preprint
+time:
+  published: '2026-11-09'
+  collected: '2026-11-12'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:RSI
+  role: builds_on
+- ref: concept:SelfImprovement
+  role: builds_on
+claims:
+- statement: 基于Qwen3-4B的SkillDuet在ALFWorld上成功率达98.57%，超过对齐的SEED-API基线2.86个百分点
+  confidence: reported
+  metrics:
+  - name: 成功率
+    value: 98.57%
+    scope: ALFWorld, Qwen3-4B
+  - name: 相对基线提升
+    value: '2.86'
+    scope: 对齐SEED-API基线, ALFWorld, 单位:百分点
+  evidence: abstract（初筛，未读全文）
+- statement: 基于Qwen3-4B的SkillDuet在WebShop上成功率达92.97%，超过对齐的SEED-API基线5.47个百分点
+  confidence: reported
+  metrics:
+  - name: 成功率
+    value: 92.97%
+    scope: WebShop, Qwen3-4B
+  - name: 相对基线提升
+    value: '5.47'
+    scope: 对齐SEED-API基线, WebShop, 单位:百分点
+  evidence: abstract（初筛，未读全文）
+- statement: 消融实验显示基于响应的技能选择与Global技能集固化均带来任务性能提升
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 保留技能的收益同时取决于技能内容及其与当前模型的兼容性，先前有益的技能会随模型能力演化而变得冗余或有害
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出SkillDuet框架，以响应反馈协同LLM参数更新与外部技能库演化，实现技能级递归自我改进。
+  abstract_zh: SkillDuet通过模型响应反馈协调参数更新与技能演化：从on-policy轨迹抽取的技能经OPD逐步指导参数更新；基于响应偏移幅度的分数Strength对候选技能排序，最高分技能周期性固化进持久全局技能集Global。更新后的模型与Global共同引导后续交互，生成新经验用于进一步的参数与技能更新。基于Qwen3-4B，SkillDuet在ALFWorld达98.57%成功率、WebShop达92.97%，分别超过对齐的SEED-API基线2.86和5.47个百分点。消融表明响应式技能选择与Global固化均提升性能，且保留技能的收益取决于技能内容及其与当前模型的兼容性。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: LLM智能体技能级递归自我改进（RSI）工作，与音视频编码无直接关联，按收录基准给summary_only
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: SkillDuet：通过响应反馈实现模型与技能的协同进化
+relations:
+- type: same_topic
+  ref: paper:arxiv:2609.33867
+  note: 同为技能演化驱动的递归自我改进（Recursive Skill Evolution）
+- type: same_topic
+  ref: paper:arxiv:2610.25114
+  note: 同样研究可复用技能在智能体自我改进中的角色与收益
+- type: same_topic
+  ref: paper:arxiv:2611.11509
+  note: 同为具身智能体经验/技能演化改进，评测任务域（ALFWorld类）相近

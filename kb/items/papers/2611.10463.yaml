@@ -1,0 +1,58 @@
+id: paper:arxiv:2611.10463
+type: paper
+title: 'LongCapHarness: Capability-Guided Auto-Harnessing for Long-Context Reasoning'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2611.10463v1
+  url: https://arxiv.org/abs/2611.10463
+  pdf_url: https://arxiv.org/pdf/2611.10463v1
+  venue: arXiv preprint
+time:
+  published: '2026-11-07'
+  collected: '2026-11-12'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:RSI
+  role: uses
+- ref: concept:SelfImprovement
+  role: uses
+claims:
+- statement: LongCapHarness无需数据合成与LLM后训练，在HELMET和RULER基准上显著优于近期基于数据合成的长上下文推理增强基线。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 框架通过递归自我改进递归修订并更新能力原语实现、能力状态与控制逻辑，可应用于Llama3-8B并迁移至Qwen2.5-3B。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: LongCapHarness的估计开发成本低于NExtLong与PolicyLong的估计训练成本的50%。
+  confidence: reported
+  metrics:
+  - name: 开发成本占比
+    value: <50%
+    scope: LongCapHarness估计开发成本相对NExtLong/PolicyLong估计训练成本
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 以递归自我改进挂接LLM长上下文推理底层能力，免数据合成与后训练即在HELMET/RULER超越基线且成本低于其50%。
+  abstract_zh: 现有增强LLM长上下文推理的方法多依赖数据合成加后续后训练，策略经验驱动且计算开销大。该文提出LongCapHarness框架，改为在开发集上通过递归自我改进递归修订与更新能力原语实现、能力状态和控制逻辑，从而挂接模型的底层能力。无需数据合成与LLM后训练，框架应用于Llama3-8B并可迁移至Qwen2.5-3B。在HELMET和RULER基准上显著优于近期基于数据合成的基线（NExtLong、PolicyLong），估计开发成本不足其估计训练成本的50%。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 该文用递归自我改进（RSI）自动挂接LLM长上下文推理能力，属自我改进AI核心方向，但非音视频编码核心域，按基准仅给summary_only
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: LongCapHarness：能力引导的长上下文推理自动挂接框架
+relations:
+- type: same_topic
+  ref: paper:arxiv:2610.14224
+  note: 同为递归自我改进式agent harness构建与演化（Harness^2）
+- type: same_topic
+  ref: paper:arxiv:2610.26770
+  note: 同属递归harness自我改进方向，关注性能-成本权衡的HarnessPro
+- type: same_topic
+  ref: paper:arxiv:2610.28201
+  note: 同为对agent harness做递归自我改进的MaD-RSI

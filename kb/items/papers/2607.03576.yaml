@@ -1,0 +1,65 @@
+id: paper:arxiv:2607.03576
+type: paper
+title: Motion Estimation Techniques for Volumetric Video Attribute Compression
+domain: immersive_media
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2607.03576v1
+  url: https://arxiv.org/abs/2607.03576
+  pdf_url: https://arxiv.org/pdf/2607.03576v1
+  venue: arXiv preprint
+time:
+  published: '2026-07-03'
+  collected: '2026-11-12'
+entities:
+- ref: codec:G-PCC
+  role: subject
+- ref: codec:V-PCC
+  role: compared_against
+- ref: org:MPEG
+  role: evaluated_on
+claims:
+- statement: 提出面向动态实体点云属性的基于几何的帧间编码方案，并给出基于图的运动估计方法以去除属性的时间冗余。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 提出免插值的分数体素运动估计方法，将属性压缩的运动精度细化至分数体素级。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在 MPEG 点云数据集上，所提方案在无损与有损几何条件下均优于 G-PCC、GeS-TM 与 V-PCC；有损几何下平均码率节省分别为 55.3%、42.3%、16.5%。
+  confidence: reported
+  metrics:
+  - name: 平均码率节省
+    value: 55.3%
+    scope: 有损几何条件，对比 G-PCC，MPEG 点云数据集
+  - name: 平均码率节省
+    value: 42.3%
+    scope: 有损几何条件，对比 GeS-TM，MPEG 点云数据集
+  - name: 平均码率节省
+    value: 16.5%
+    scope: 有损几何条件，对比 V-PCC，MPEG 点云数据集
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出基于图的帧间运动估计与免插值分数体素细化，动态点云属性压缩较 G-PCC 平均节省 55.3% 码率。
+  abstract_zh: 点云压缩需同时处理几何与属性，基于运动的几何压缩已在 G-PCC 框架内显著降低几何码率，但属性压缩的运动补偿技术仍探索不足。本文提出面向动态实体点云属性的基于几何的帧间编码方案，并设计基于图的运动估计方法以去除属性的时间冗余。进一步提出免插值的分数体素运动估计方法，将运动精度细化到分数体素级。在
+    MPEG 点云数据集上的实验表明，所提方案在无损与有损几何条件下均优于 G-PCC、GeS-TM 与 V-PCC，有损几何下平均码率较三者分别节省 55.3%、42.3% 和 16.5%。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 点云属性压缩属沉浸式媒体域（非核心域），但直接对标 MPEG G-PCC/V-PCC 且增益显著，按规则只给 summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 体积视频属性压缩的运动估计技术
+relations:
+- type: same_topic
+  ref: paper:arxiv:2606.29179
+  note: 均围绕 V-PCC 点云压缩/传输链路展开
+- type: same_topic
+  ref: paper:arxiv:2605.14629
+  note: 均为利用运动估计/运动矢量服务体积媒体编码的工作
+- type: same_topic
+  ref: paper:arxiv:2609.29041
+  note: 同属沉浸式三维媒体（点云/3DGS）压缩与码率优化方向

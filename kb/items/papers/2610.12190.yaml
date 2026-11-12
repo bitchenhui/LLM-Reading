@@ -1,0 +1,61 @@
+id: paper:arxiv:2610.12190
+type: paper
+title: 'DataSense-Bench: The First Step Toward an AI Scientist'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2610.12190v1
+  url: https://arxiv.org/abs/2610.12190
+  pdf_url: https://arxiv.org/pdf/2610.12190v1
+  venue: arXiv preprint
+time:
+  published: '2026-10-08'
+  collected: '2026-11-12'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:RSI
+  role: subject
+- ref: concept:SelfImprovement
+  role: subject
+claims:
+- statement: 在DataSense-Bench上，前沿AI代理相对随机选择的数据选择收益有限。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 代理无法可靠地对自身选出的数据子集的相对训练后性能进行排序。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 排序能力跨任务不一致：Astra在工具使用任务的三次运行中均识别出最优子集，而在终端任务的三次运行中仅一次命中。
+  confidence: reported
+  metrics:
+  - name: 最优组命中运行数
+    value: 3/3
+    scope: Astra，工具使用任务（BFCL）三次运行
+  - name: 最优组命中运行数
+    value: 1/3
+    scope: Astra，终端问题求解任务（TBLite）三次运行
+  evidence: abstract（初筛，未读全文）
+- statement: 执行轨迹分析显示，代理常使用相似的数据信号，但对这些信号训练价值的解读各不相同。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 构建DataSense-Bench，评测前沿AI代理为微调小型LLM挑选训练数据并预测性能的"数据直觉"能力。
+  abstract_zh: 针对RSI与AGI宣称盛行的现状，该工作提出DataSense-Bench，考察前沿AI模型是否具备可靠的数据选择能力。基准要求AI代理在禁止训练模型、禁止访问真实评测任务的约束下，通过检查数据、编写并执行分析代码、运行模型前向传播，为微调小型LLM挑选并排序候选训练子集；随后按标准化协议在各子集上微调基座模型并评估训练后性能，从最优子集训练后表现与排序准确性两个维度打分。基准在终端问题求解与工具使用两类任务上实例化，分别从OpenThoughts-Agent与EnvScaler选取训练轨迹，并在TBLite与BFCL上评测。结果显示：代理相对随机选择的收益有限，无法可靠排序所选子集，且排序能力跨任务不稳定；执行轨迹分析表明代理常使用相似的数据信号，却对其训练价值给出不同解读。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 属于自我改进AI主线的LLM数据选择能力基准，与音视频技术无直接关联，按规则仅做摘要收录。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: DataSense-Bench：迈向AI科学家的第一步
+relations:
+- type: same_topic
+  ref: paper:arxiv:2610.22599
+  note: 同为评测LLM在机器学习任务上判断/预测能力的基准研究
+- type: same_topic
+  ref: paper:arxiv:2610.34386
+  note: 同为评测AI代理改进/选择LLM训练的多域基准（ParetoRSI-Gym）

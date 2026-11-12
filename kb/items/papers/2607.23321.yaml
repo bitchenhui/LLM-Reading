@@ -1,0 +1,54 @@
+id: paper:arxiv:2607.23321
+type: paper
+title: A Reference-Free Framework for Evaluating Single-Frame ISP Pipelines
+domain: quality_assessment
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2607.23321v1
+  url: https://arxiv.org/abs/2607.23321
+  pdf_url: https://arxiv.org/pdf/2607.23321v1
+  venue: arXiv preprint
+time:
+  published: '2026-07-25'
+  collected: '2026-11-12'
+entities:
+- ref: concept:IQA
+  role: subject
+- ref: metric:PSNR
+  role: measured_by
+- ref: metric:LPIPS
+  role: measured_by
+claims:
+- statement: 所提代理参考框架在估计PSNR/SSIM/LPIPS指标值上优于直接指标回归，且与全参考排名的一致性高于常规盲IQA方法。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 代理参考模型可仅从合成数据学习并泛化应用到真实相机数据。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 采用LoRA轻量微调即可在ISP组件或流水线配置变更时实现高效适配。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 从处理后sRGB图与ISO元数据预测代理参考图，无参考估计PSNR/SSIM/LPIPS以评估相机ISP流水线。
+  abstract_zh: 评估相机ISP流水线需要测量去噪、去马赛克、色调映射与压缩等操作引入的低层伪影，但现有盲IQA方法偏重语义与高层线索，而PSNR/SSIM/LPIPS等全参考指标又要求难以获取的严格对齐图像对。为此，作者提出无参考学习框架：从处理后的sRGB图像及其ISO元数据预测一个代理sRGB参考图，再与处理图像按标准全参考形式计算PSNR、SSIM和LPIPS。实验表明该代理参考模型可从合成数据学习并应用于真实相机数据，且轻量LoRA微调能在ISP组件或流水线配置变化时高效适配。该方法在估计指标值上优于直接指标回归，与全参考排名的一致性也高于常规盲IQA方法。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 质量评估域：提出面向相机ISP流水线的无参考IQA框架，所用PSNR/LPIPS等指标与音视频评价体系相关，但非核心编码工作
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 一种无参考的单帧ISP流水线评估框架
+relations:
+- type: same_topic
+  ref: paper:arxiv:2609.30077
+  note: 同样围绕全参考图像质量指标（PSNR等）在编码/质量评估中的使用
+- type: same_topic
+  ref: paper:arxiv:2606.23545
+  note: 同属图像压缩/处理模型评估框架方向，涉及客观质量指标体系
+- type: same_topic
+  ref: paper:arxiv:2605.18378
+  note: 同属基于客观质量指标的编码效果评估研究

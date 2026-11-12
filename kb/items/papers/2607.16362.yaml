@@ -1,0 +1,52 @@
+id: paper:arxiv:2607.16362
+type: paper
+title: 'OmniStyle-INR: Universal and Multimodal Style Transfer for INRs'
+domain: immersive_media
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2607.16362v1
+  url: https://arxiv.org/abs/2607.16362
+  pdf_url: https://arxiv.org/pdf/2607.16362v1
+  venue: arXiv preprint
+time:
+  published: '2026-07-17'
+  collected: '2026-11-12'
+entities:
+- ref: concept:INR
+  role: subject
+- ref: concept:3DGS
+  role: compared_against
+claims:
+- statement: OmniStyle-INR 可在文本提示与视觉范例引导下，对2D图像、视频、3D场景及4D动态等全部视觉模态实现高质量风格迁移。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 用高斯泼溅表示视频与2D图像对稠密连续域在结构上欠优，所需高斯数量常逼近像素总数，削弱该表示在此类模态的实用性。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 隐式神经表示相对高斯泼溅更自然地适配各视觉域，天然提供数据压缩、超分辨能力以及与深度生成模型的无缝集成。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出OmniStyle-INR框架，以INR为统一连续表示，在文本提示与视觉范例引导下对图像、视频、3D及4D模态实现高质量风格迁移。
+  abstract_zh: 风格迁移是跨数据模态的基础任务，需同时支持参考图像与文本描述两种条件。作者指出近期基于高斯泼溅的统一表示虽覆盖2D图像、视频、3D场景与4D动态，但对稠密连续域在结构上欠优，所需高斯数量常接近像素总数。相比之下，隐式神经表示（INR）天然具备数据压缩、超分辨能力以及与深度生成模型无缝集成等优势。为此提出OmniStyle-INR，将网络化连续表示作为真正通用的域，在文本与视觉范例双重引导下对全部视觉模态实现高质量风格迁移。
+assessment:
+  relevance: low
+  decision: summary_only
+  reason: 以INR为统一表示做跨模态（图像/视频/3D/4D）风格迁移，属神经表示与视觉增强，非编码/传输/质量评估主线，与语料中INR压缩线仅有表征层面交集
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: OmniStyle-INR：面向隐式神经表示的通用多模态风格迁移
+relations:
+- type: same_topic
+  ref: paper:arxiv:2604.08329
+  note: 同以隐式神经表示（INR）为核心表示：DiV-INR将INR条件化用于极端低码率视频压缩
+- type: same_topic
+  ref: paper:arxiv:2606.21655
+  note: 同围绕INR表示的视觉质量：PaaF研究INR图像压缩的感知质量提升
+- type: same_topic
+  ref: paper:arxiv:2605.14629
+  note: 均涉及高斯泼溅视频表示：本文论证3DGS表示稠密域欠优，该工作则优化3DGS视频压缩的运动匹配

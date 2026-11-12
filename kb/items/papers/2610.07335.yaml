@@ -1,0 +1,65 @@
+id: paper:arxiv:2610.07335
+type: paper
+title: Selective Critique for Cost-Aware LLM Agents in Long-Horizon Decision Making
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2610.07335v1
+  url: https://arxiv.org/abs/2610.07335
+  pdf_url: https://arxiv.org/pdf/2610.07335v1
+  venue: arXiv preprint
+time:
+  published: '2026-10-05'
+  collected: '2026-11-12'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:SelfImprovement
+  role: uses
+- ref: concept:TrainingFree
+  role: uses
+claims:
+- statement: SAG在ALFWorld上将任务成功率从无批评基线的24.6%提升至78.4%，同时保持与ReAct相当的token预算，获得3.1倍归一化token效率提升。
+  confidence: reported
+  metrics:
+  - name: 任务成功率
+    value: 78.4%
+    scope: ALFWorld基准，SAG对比无批评智能体的24.6%
+  - name: 归一化token效率提升
+    value: 3.1×
+    scope: ALFWorld，token预算与ReAct相当的条件下
+  evidence: abstract（初筛，未读全文）
+- statement: 7B执行器搭配轻量3B批评器的SAG可达到无批评的14B执行器的性能水平，表明选择性批评能以大幅降低推理成本的方式恢复 deliberation 的多数可靠性收益。
+  confidence: reported
+  metrics:
+  - name: 等效性能规模
+    value: 7B+3B≈14B
+    scope: 三个长程交互基准，对比无批评的14B执行器
+  evidence: abstract（初筛，未读全文）
+- statement: 门控机制以动作级模糊性信号（全局熵与top-2间距）近似批评的信息价值（VoI），无需训练即可在性能-成本权衡上优于无批评与始终开启批评两种策略。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: SAG用免训练门控按需调用批评并结合在线自提升，大幅提升LLM智能体长程任务成功率与token效率。
+  abstract_zh: 论文提出SAG（Self-improving Agent with Gated critique），将批评机制的调用建模为长程交互中的逐步决策问题。其核心是轻量免训练门控：基于可行动作集上的全局熵与局部top-2间距等动作级模糊性信号估计批评的效用，从决策论角度近似信息价值（VoI），仅在预期收益大于成本时才触发昂贵反馈。框架还引入在线自举式自我改进，使执行器内化批评辅助的行为并逐步降低对批评的依赖。在三个长程交互基准和多个骨干模型上，SAG显著优于无批评与始终开启批评的智能体：在ALFWorld上任务成功率从24.6%提升至78.4%，在与ReAct相当的token预算下取得3.1倍归一化token效率提升；7B执行器加3B轻量批评器可达到14B执行器无批评时的性能。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 属LLM智能体自我改进方向（免训练门控批评+在线自提升），与自我改进AI收录线高度契合，但非核心编码域故仅summary_only
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 面向长程决策中代价感知LLM智能体的选择性批评机制
+relations:
+- type: same_topic
+  ref: paper:arxiv:2610.24453
+  note: 同为免训练（training-free）的LLM智能体自我改进/自我进化方法
+- type: same_topic
+  ref: paper:arxiv:2609.34712
+  note: 同属代价高效LLM智能体方向，均关注按需分配昂贵资源以降低推理成本
+- type: same_topic
+  ref: paper:arxiv:2609.38662
+  note: 同属智能体自我改进（agent self-improvement）研究方向

@@ -1,0 +1,61 @@
+id: paper:arxiv:2610.32423
+type: paper
+title: 'Cycle-of-Thought: Self-Evaluative Iterative Reasoning for Table Visual Question Answering in Document
+  Images'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2610.32423v1
+  url: https://arxiv.org/abs/2610.32423
+  pdf_url: https://arxiv.org/pdf/2610.32423v1
+  venue: arXiv preprint
+time:
+  published: '2026-10-23'
+  collected: '2026-11-12'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:TrainingFree
+  role: uses
+claims:
+- statement: Self-RefineVQA是免训练、推理时的自纠正框架，通过让单一VLM迭代扮演生成器、批评者与精炼者形成闭环自反馈，无需额外标注数据或模型更新即可提升表格VQA性能。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在表格VQA基准上，该方法在单语与跨语言理解中均取得一致的准确率提升，对轻量小模型的提升尤为显著，使其可媲美规模大得多的模型。
+  confidence: reported
+  metrics:
+  - name: 受益模型参数规模
+    value: 2B-7B
+    scope: 参数量处于2B-7B区间的轻量VLM，作者称其增益最显著
+  evidence: abstract（初筛，未读全文）
+- statement: 复杂度分析表明推理成本随迭代次数线性增加，但通过消除微调所需的大规模人工标注瓶颈，框架在数据效率与累计成本上优于监督微调路线。
+  confidence: reported
+  metrics:
+  - name: 推理成本增长趋势
+    value: 线性
+    scope: 随自纠正迭代次数增加，作者对比分析结论
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 免训练推理时自纠正框架Self-RefineVQA：单VLM迭代生成-批判-精炼，显著提升表格VQA准确率，小模型获益最大。
+  abstract_zh: 针对VLM在表格等结构化内容上推理不稳定、存在空间错位与逻辑幻觉的问题，作者提出Self-RefineVQA（Cycle-of-Thought），一个免训练、推理时的自纠正框架：单一VLM在提示引导下迭代扮演生成器、批评者与精炼者，形成闭环自反馈以修正推理错误，无需标注数据或模型更新。在表格VQA基准上，该方法在单语与跨语言理解中均取得一致的准确率提升，对2B-7B参数量的小模型增益尤为显著，使其可媲美大得多的模型。复杂度分析显示推理成本随迭代线性增长，但因消除了微调所需的人工标注瓶颈，数据效率更高、累计成本更低。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 面向文档表格VQA的免训练推理时自改进/自纠正框架，属自我改进AI域但与音视频编码核心无关，按基准仅做摘要收录。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 思维循环：面向文档图像中表格视觉问答的自评估迭代推理
+relations:
+- type: same_topic
+  ref: paper:arxiv:2610.24453
+  note: 同属免训练（training-free）的agent/模型自改进路线，本文用提示驱动自纠正替代参数更新
+- type: same_topic
+  ref: paper:arxiv:2610.19424
+  note: 同为基于VLM视觉理解任务的结构化自改进，本文聚焦文档表格VQA的推理时自评估迭代
+- type: same_topic
+  ref: paper:arxiv:2610.07335
+  note: 都涉及批评者（critic）反馈环节的成本与收益权衡

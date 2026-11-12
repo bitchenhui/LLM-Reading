@@ -1,0 +1,75 @@
+id: paper:arxiv:2610.20665
+type: paper
+title: 'The World Won''t Wait: Evaluating and Teaching Agents Under a Live Clock'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2610.20665v1
+  url: https://arxiv.org/abs/2610.20665
+  pdf_url: https://arxiv.org/pdf/2610.20665v1
+  venue: arXiv preprint
+time:
+  published: '2026-10-14'
+  collected: '2026-11-12'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:RSI
+  role: builds_on
+claims:
+- statement: RealtimeBench包含六类游戏共180个任务，在推理期间游戏持续运行，以评估智能体在实时变化环境中的决策能力
+  confidence: reported
+  metrics:
+  - name: 任务数
+    value: '180'
+    scope: RealtimeBench全部任务
+  - name: 游戏类型数
+    value: '6'
+    scope: RealtimeBench游戏类型
+  evidence: abstract（初筛，未读全文）
+- statement: 配对评估显示：游戏暂停时GPT-6.1-sol优于更快的Jev，但游戏持续运行时GPT-6.1-sol反而落后，说明推理延迟会侵蚀能力优势
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: TORSI采用慢教师离线分析失败并撰写可复用指令、快学生实时行动且无需教师调用的双时间尺度架构，验证分数决定更新采纳
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 两轮TORSI将Jev的平均测试分从13.51提升至24.19，且六类游戏全部获得改善
+  confidence: reported
+  metrics:
+  - name: Jev平均测试分（改进前）
+    value: '13.51'
+    scope: 0-100进度量表，两轮TORSI前
+  - name: Jev平均测试分（改进后）
+    value: '24.19'
+    scope: 0-100进度量表，两轮TORSI后
+  evidence: abstract（初筛，未读全文）
+- statement: TORSI产出的指令无需重新调优即可提升另外三个模型的平均分数，显示跨模型可迁移性
+  confidence: reported
+  metrics:
+  - name: 受益模型数
+    value: '3'
+    scope: 指令零调优迁移的其余模型
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出实时基准RealtimeBench与双时间尺度离线递归自改进TORSI，使LLM智能体在持续变化环境中保持有效
+  abstract_zh: 论文指出LLM智能体的推理与工具调用耗时，在持续变化的环境中正确但迟到的动作会失效。作者构建RealtimeBench，含六类游戏共180个任务，在推理期间游戏持续运行以考察实时能力；配对评估显示GPT-6.1-sol在游戏暂停时优于更快的Jev，但游戏持续运行时反而落后。为此提出TORSI（双时间尺度离线递归自改进）：慢速教师在暂停的游戏间研究失败并测试修正，撰写可复用指令给快速学生，学生行动时无需调用教师，验证分数决定更新是否采纳。两轮自改进将Jev的平均测试分从13.51提升到24.19（0-100进度量表），六类游戏全部改善，且产出的指令无需重新调优即可提升另外三个模型的平均分。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 论文提出实时智能体基准RealtimeBench与双时间尺度离线递归自改进方法TORSI，属自我改进AI核心主题，非音视频核心域，按规则仅summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 世界不会等待：在实时时钟下评估与教导智能体
+relations:
+- type: same_topic
+  ref: paper:arxiv:2610.11794
+  note: 该文为基于反思规则手册的模型化递归自改进，与本文TORSI的指令化离线自改进同属LLM递归自改进方向（依据标题，本文以教师撰写可复用指令类似规则手册）
+- type: same_topic
+  ref: paper:arxiv:2610.18083
+  note: 该文研究递归自改进的自适应扩展与协调，与本文TORSI同属LLM递归自改进（RSI）主题（依据标题）

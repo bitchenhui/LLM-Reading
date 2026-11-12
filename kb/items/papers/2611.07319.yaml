@@ -1,0 +1,66 @@
+id: paper:arxiv:2611.07319
+type: paper
+title: 'WeightLoop: Weight-Space Programming with Experimental Feedback'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2611.07319v1
+  url: https://arxiv.org/abs/2611.07319
+  pdf_url: https://arxiv.org/pdf/2611.07319v1
+  venue: arXiv preprint
+time:
+  published: '2026-11-05'
+  collected: '2026-11-12'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:RSI
+  role: builds_on
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: 针对性参数编辑在 8 个端点预算设置中的 7 个提升了平均排序效用；对比随机编辑作为基线时，全部 8 个设置均有提升。
+  confidence: reported
+  metrics:
+  - name: 提升平均排序效用的端点预算设置数
+    value: 7/8
+    scope: 离线回放，针对性编辑 vs 原模型
+  - name: 对比随机编辑的提升设置数
+    value: 8/8
+    scope: 离线回放，针对性编辑 vs 随机编辑基线
+  evidence: abstract（初筛，未读全文）
+- statement: 在 3 个序列任务上提升了平均最终发现（mean final discovery）。
+  confidence: reported
+  metrics:
+  - name: 序列任务数
+    value: '3'
+    scope: 离线回放序列任务实验
+  evidence: abstract（初筛，未读全文）
+- statement: 编辑器固定、预测器演化的设计使模型可在不调用 LLM、不进行梯度重训练的情况下反复更新，并保持原始推理接口不变。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: WeightLoop 让 LLM 生成有界参数编辑程序，用实验反馈持续改写已部署模型权重，无需重训练即可反复自改进。
+  abstract_zh: 论文提出 WeightLoop 框架，将权重空间编程（WSP）与受递归自改进（RSI）启发的反馈闭环结合。GPT-6 Astra 检查任务规范与模型实现后，编写一个有界、可复用的参数编辑程序；随着新测量数据到达，该程序识别预测偏差、用观测结果验证候选编辑，并把选定修改写回原模型。编辑器固定而预测器持续演化，因此无需进一步
+    LLM 调用或梯度重训练即可反复更新，且保留原始推理接口。离线回放实验中，针对性编辑在 8 个端点预算设置中的 7 个提升平均排序效用（对比随机编辑则 8 个全部提升），并在 3 个序列任务上提升平均最终发现数。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 属自我改进 AI 域的 RSI 核心工作（权重空间编程+实验反馈闭环），非音视频核心域，按基准给 summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: WeightLoop：结合实验反馈的权重空间编程
+relations:
+- type: same_topic
+  ref: paper:arxiv:2610.32026
+  note: 同为 RSI 优化/改进模型的 agent 工作，主题同属递归自改进
+- type: same_topic
+  ref: paper:arxiv:2610.08630
+  note: 同属直接在模型参数/权重层面做持久化更新的路线
+- type: same_topic
+  ref: paper:arxiv:2610.11794
+  note: 同为基于模型反思的递归自改进框架

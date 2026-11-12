@@ -1,0 +1,76 @@
+id: paper:arxiv:2611.03698
+type: paper
+title: Training LLM Agents to Automate LLM Post-Training with RSI-Dojo
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2611.03698v2
+  url: https://arxiv.org/abs/2611.03698
+  pdf_url: https://arxiv.org/pdf/2611.03698v2
+  venue: arXiv preprint
+time:
+  published: '2026-10-29'
+  collected: '2026-11-12'
+entities:
+- ref: concept:RSI
+  role: subject
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: RSI-Craft自动流水线将人类研究成果转化为可执行训练环境，经数据规模、执行可靠性与区分度过滤后构建出含281个种子模型训练任务的RSI-Dojo。
+  confidence: reported
+  metrics:
+  - name: 种子任务数
+    value: '281'
+    scope: RSI-Dojo过滤后的模型训练任务总数
+  evidence: abstract（初筛，未读全文）
+- statement: 在RSI-Dojo轨迹上微调的模型显著超越各自基座模型。
+  confidence: reported
+  metrics:
+  - name: PostTrainBench提升
+    value: '8.74'
+    scope: RSI-Dojo-9B 相对基座 Qwen3.5-9B
+  - name: PostTrainBench提升
+    value: '16.87'
+    scope: RSI-Dojo-35B-A3B 相对基座 Qwen3.6-35B-A3B
+  evidence: abstract（初筛，未读全文）
+- statement: RSI-Dojo-35B-A3B的绝对性能与GLM-5.2、GPT 5.5等前沿模型相当。
+  confidence: reported
+  metrics:
+  - name: PostTrainBench
+    value: '29.95'
+    scope: RSI-Dojo-35B-A3B
+  - name: PostTrainBench-Lite
+    value: '53.29'
+    scope: RSI-Dojo-35B-A3B
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 构建可执行模型训练环境集RSI-Dojo及其自动生成流水线RSI-Craft，微调出的智能体在PostTrainBench上达到前沿模型水平。
+  abstract_zh: 论文面向递归自我改进（RSI）中的核心能力——让智能体自主训练和改进基座模型，提出可执行模型训练环境集RSI-Dojo，教LLM智能体完成数据选择、模型训练、失败诊断与迭代改进等后训练全流程。为此作者开发自动流水线RSI-Craft：从顶级会议收集论文，将数据集与指标实例化为统一接口并复现评测依赖，再按数据规模、执行可靠性和区分度过滤，得到281个种子模型训练任务。基于RSI-Dojo，用改进harness从前沿模型收集高质量训练轨迹，并经量规与结果双重过滤保留样本。微调Qwen3.5-9B与Qwen3.6-35B-A3B后，RSI-Dojo-9B和RSI-Dojo-35B-A3B分别较基座提升8.74和16.87个PostTrainBench点，其中35B-A3B版本在PostTrainBench达29.95、PostTrainBench-Lite达53.29，与GLM-5.2、GPT
+    5.5等前沿模型持平。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 自我改进AI方向的核心工作（RSI智能体自动化模型后训练），但与音视频技术无直接关联，按非核心域规则仅收录为summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: RSI-Dojo：训练LLM智能体以自动化LLM后训练
+relations:
+- type: same_topic
+  ref: paper:arxiv:2610.32026
+  note: 同为面向模型训练的递归自我改进智能体（RSI优化智能体 vs RSI训练环境+微调智能体）
+- type: same_topic
+  ref: paper:arxiv:2610.34386
+  note: 同为用可执行环境/基准训练能改进语言模型的AI智能体
+- type: same_topic
+  ref: paper:arxiv:2611.11558
+  note: 同属RSI在模型训练环节（基础设施/后训练）的应用
+- type: same_topic
+  ref: paper:arxiv:2610.23344
+  note: 同为语言模型学习改进语言模型的自动化后训练路线

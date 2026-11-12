@@ -1,0 +1,72 @@
+id: paper:arxiv:2611.11509
+type: paper
+title: 'Review the Episodes, Refine the Lessons: Simple Memory Evolution for Embodied Agents'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2611.11509v1
+  url: https://arxiv.org/abs/2611.11509
+  pdf_url: https://arxiv.org/pdf/2611.11509v1
+  venue: arXiv preprint
+time:
+  published: '2026-11-08'
+  collected: '2026-11-12'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:RSI
+  role: compared_against
+claims:
+- statement: 在EBench上，SimplEvo将GPT-6-Astra直接控制下的成功率从46.7%提升至81.7%
+  confidence: reported
+  metrics:
+  - name: 成功率(SR)
+    value: 81.7%
+    scope: EBench，GPT-6-Astra直接控制，使用SimplEvo
+  - name: 基线成功率(SR)
+    value: 46.7%
+    scope: EBench，GPT-6-Astra直接控制，无记忆演化
+  evidence: abstract（初筛，未读全文）
+- statement: SimplEvo以69.63%成功率和75.32分数登顶RoboDojo榜单
+  confidence: reported
+  metrics:
+  - name: 成功率(SR)
+    value: 69.63%
+    scope: RoboDojo榜单
+  - name: 分数(score)
+    value: '75.32'
+    scope: RoboDojo榜单
+  evidence: abstract（初筛，未读全文）
+- statement: 仅用文本记忆即可达到与同时存储历史视觉帧的记忆相近的成功率，且消耗更少token
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 由GPT-6-Astra撰写的工作记忆可被更弱MLLM原样复用，在无需自身适配的情况下提升其性能
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 记忆在测试期冻结的条件下，SimplEvo可泛化到未见布局与随机化场景配置
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: SimplEvo用自写文本记忆与教训精炼实现免权重更新的自我改进，EBench成功率从46.7%升至81.7%。
+  abstract_zh: 提出SimplEvo，让多模态大模型在直接控制下通过自写文本记忆留存经验：由单次演示写一次无坐标任务记忆，仅在训练回合上维护有界工作记忆，并在每个回合后从流程、完成与恢复三方面精炼教训；测试时两份记忆冻结，无需权重更新、后训练策略或特权信息。在EBench上，SimplEvo将GPT-6-Astra直接控制的成功率从46.7%提升至81.7%，并以69.63%成功率、75.32分数登顶RoboDojo榜单。仅用文本记忆即可取得与存储历史视觉帧的记忆相近的成功率且token消耗更少。冻结的工作记忆可跨模型迁移：由GPT-6-Astra撰写后，更弱MLLM原样复用即获性能提升，并在未见布局与随机化场景下保持泛化。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 具身智能体的免权重更新记忆演化式自我改进，属自改进AI核心议题，但非视频/图像编码核心域，按规则仅初筛收录。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 回顾经历、精炼教训：面向具身智能体的简单记忆演化
+relations:
+- type: same_topic
+  ref: paper:arxiv:2610.24453
+  note: 同为免训练的智能体自进化方法：Hippo经海马回放实现自演化，与SimplEvo的记忆演化路线同题
+- type: same_topic
+  ref: paper:arxiv:2610.25114
+  note: 同样研究具身智能体的冻结可移植产物及RSI带来的增益，与SimplEvo冻结记忆跨模型迁移思路相近
+- type: same_topic
+  ref: paper:arxiv:2610.17114
+  note: 同涉具身智能体与递归自我改进：D-World探讨双控下的RSI，与本文直接控制下的记忆演化互补

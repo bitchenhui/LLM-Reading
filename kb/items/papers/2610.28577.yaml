@@ -1,0 +1,75 @@
+id: paper:arxiv:2610.28577
+type: paper
+title: Cache Engineering for Agents
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2610.28577v1
+  url: https://arxiv.org/abs/2610.28577
+  pdf_url: https://arxiv.org/pdf/2610.28577v1
+  venue: arXiv preprint
+time:
+  published: '2026-10-20'
+  collected: '2026-11-12'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:RSI
+  role: uses
+- ref: concept:SelfImprovement
+  role: uses
+claims:
+- statement: 工具响应滚动丢弃（rolling-drop）缓存策略相较常规阈值触发摘要化，平均基准分数提升1.7分，平均成本降低27.7%。
+  confidence: reported
+  metrics:
+  - name: 基准分数提升
+    value: '1.7'
+    scope: 相对阈值触发摘要化策略的平均基准分提升（分）
+  - name: 平均成本降低
+    value: 27.7%
+    scope: 相对阈值触发摘要化策略的平均成本降幅
+  evidence: abstract（初筛，未读全文）
+- statement: AKV服务引擎最高实现1.2倍输出吞吐提升与1.5倍P95请求延迟加速。
+  confidence: reported
+  metrics:
+  - name: 输出吞吐
+    value: 1.2x
+    scope: AKV对比基线的最高输出吞吐倍数
+  - name: P95请求延迟
+    value: 1.5x
+    scope: AKV的P95请求延迟加速倍数（最高）
+  evidence: abstract（初筛，未读全文）
+- statement: 缓存策略的递归自改进（RSI）较专家手工设计进一步降低成本7.1%。
+  confidence: reported
+  metrics:
+  - name: 成本降低
+    value: 7.1%
+    scope: 递归自改进缓存策略相对专家设计的成本降幅
+  evidence: abstract（初筛，未读全文）
+- statement: 相同token序列在不同缓存操作序列下产生不同缓存状态，导致历史依赖性使前缀匹配不足以正确复用缓存，需服务引擎内部管理有状态复用。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出'缓存工程'让LLM智能体通过drop/repos直接操控活跃KV缓存，配套AKV服务引擎实现精度与成本兼得。
+  abstract_zh: 针对LLM智能体长轨迹导致的KV缓存I/O与存储成本主导问题，作者提出'缓存工程'方案，让智能体通过drop与repos操作直接控制活跃缓存，无需修改轨迹前缀或对保留上下文重新预填充。由于相同token序列在不同缓存操作序列下产生不同缓存状态、前缀匹配不足以正确复用缓存，作者据此协同设计了AKV服务引擎：对外提供兼容现有API的无状态接口，内部管理有状态的缓存复用、驱逐与恢复。实验中，工具响应滚动丢弃缓存策略较常规阈值触发摘要化平均提升基准分1.7分、降低平均成本27.7%；配合AKV最高获得1.2倍输出吞吐与1.5倍P95请求延迟加速。缓存策略的递归自改进较专家手工设计进一步降低成本7.1%。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: LLM智能体KV缓存工程与服务引擎论文，其缓存策略递归自改进（RSI）成分与自我改进AI语料相关，但主体是推理服务系统，非音视频核心域。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 面向智能体的缓存工程
+relations:
+- type: same_topic
+  ref: paper:arxiv:2609.34712
+  note: 均以递归自改进优化LLM智能体服务成本：本文自改进KV缓存策略，RSI-Router自改进子任务路由与技能
+- type: same_topic
+  ref: paper:arxiv:2610.25012
+  note: 均为面向LLM推理/服务侧优化的自改进智能体工作（缓存工程 vs 推测解码协同编译）
+- type: same_topic
+  ref: paper:arxiv:2611.11558
+  note: 均将RSI应用于AI系统基础设施层：缓存策略自改进 vs 训练基础设施自改进

@@ -1,0 +1,63 @@
+id: paper:arxiv:2610.17114
+type: paper
+title: 'D-World: An Explicit World-Language-Action Model with Recursive Self-Improvement under Dual Control'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2610.17114v1
+  url: https://arxiv.org/abs/2610.17114
+  pdf_url: https://arxiv.org/pdf/2610.17114v1
+  venue: arXiv preprint
+time:
+  published: '2026-10-12'
+  collected: '2026-11-12'
+entities:
+- ref: concept:RSI
+  role: subject
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: D-World 的局部参数修正可在不重建孪生的前提下把渲染残差压回容限内、使执行继续：烤面包机任务中面包的渲染深度残差由 22.4 mm 降至 1.5 mm。
+  confidence: reported
+  metrics:
+  - name: 渲染深度残差（修正前）
+    value: 22.4 mm
+    scope: 双臂机器人烤面包机任务、局部修正前
+  - name: 渲染深度残差（修正后）
+    value: 1.5 mm
+    scope: 同一任务同一局部修正后
+  evidence: abstract（初筛，未读全文）
+- statement: 论文将以测量为依据的修正-修订循环定义为递归自我改进（RSI）：LLM 保持冻结，而智能体所处的世界模型（可执行数字孪生）持续被改进。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 把同时推进任务并暴露模型误差的动作选择建模为双控制问题，并论证纳入证据的成本设定了探测动作划算的阈值，廉价局部修订可抵消谨慎控制器的保守关停倾向。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出显式世界-语言-动作模型 D-World，经实-虚-实循环修正数字孪生，冻结 LLM 实现递归自我改进。
+  abstract_zh: 论文指出机器人策略背后的世界模型多为隐式、难以检视与修正，提出基于感知-规划-行动分解的显式世界-语言-动作模型 D-World：感知智能体用生成的视觉与几何代码将场景写成可执行数字孪生，规划智能体在仿真中搜索动作，并在每段动作块执行后按实测修正孪生的物体状态与物理参数。参数修正仅在重放最新动作块不使任何实测残差超出容限时才被接受，每个动作块先在更新后的孪生中校验，结构失配则回送感知重建。作者将这一测量驱动的修正循环称为递归自我改进（RSI），其中
+    LLM 保持冻结而世界模型持续改进，并把兼顾任务推进与暴露模型误差的动作选择建模为双控制问题，证明纳入证据的成本决定探测动作是否划算的阈值。在双臂机器人的毛巾与烤面包机任务上，局部修正（如面包渲染深度残差从
+    22.4 mm 降至 1.5 mm）使执行无需重建即可继续。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 以冻结 LLM 加可修正显式世界模型实现递归自我改进（RSI）并提出双控制理论，属自我改进 AI 域而非核心编码域，故仅初筛。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: D-World：双控制下具备递归自我改进的显式世界-语言-动作模型
+relations:
+- type: same_topic
+  ref: paper:arxiv:2610.11794
+  note: 同为模型侧递归自我改进：Memento 3 经反思规则手册改进模型，D-World 冻结 LLM 而持续修正显式世界模型
+- type: same_topic
+  ref: paper:arxiv:2609.38662
+  note: 均以递归自我改进为核心机制，D-World 将 RSI 扩展到具身世界模型修正
+- type: same_topic
+  ref: paper:arxiv:2610.32026
+  note: 同属 RSI 框架研究，改进对象分别为模型训练优化器与显式世界孪生

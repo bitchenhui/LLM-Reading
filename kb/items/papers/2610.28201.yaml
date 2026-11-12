@@ -1,0 +1,57 @@
+id: paper:arxiv:2610.28201
+type: paper
+title: 'MaD-RSI: Model-as-Data for Recursive Self-Improvement of Agent Harnesses'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2610.28201v1
+  url: https://arxiv.org/abs/2610.28201
+  pdf_url: https://arxiv.org/pdf/2610.28201v1
+  venue: arXiv preprint
+time:
+  published: '2026-10-20'
+  collected: '2026-11-12'
+entities:
+- ref: concept:RSI
+  role: subject
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: evaluated_on
+claims:
+- statement: 现有RSI方法在单一模型反馈下优化harness，导致harness与目标LLM强耦合，跨模型泛化受限且适配新LLM需大量计算资源。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: MaD-RSI将异构LLM的失败轨迹差异作为训练证据而非事后评估标准，直接优化跨多个异构LLM共享的harness，提升泛化能力并降低训练成本。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 论文提出包含两个互补指标的新评估框架，用于评估harness优化在跨模型场景下的有效性。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出"模型即数据"视角，把多模型失败轨迹作为训练证据，直接优化跨异构LLM共享的智能体外壳。
+  abstract_zh: 针对现有递归自我改进（RSI）方法所优化外壳与目标LLM强耦合、跨模型泛化差且适配新模型成本高的问题，论文提出以harness为优化中心的"模型即数据"新视角。MaD-RSI将多个异构LLM的多样失败轨迹纳入训练过程，把模型间差异从"泛化评估标准"转变为"优化训练证据"，直接优化一个跨模型共享的harness。论文还提出包含两个互补指标的新评估框架，用于衡量跨模型harness优化效果。多数据集、多LLM实验表明，MaD-RSI相较现有方法提升了泛化能力并降低了训练成本。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: LLM智能体外壳（harness）递归自我改进的核心研究，属自我改进AI主域而非音视频核心域，按基准仅给初筛摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: MaD-RSI：面向智能体外壳递归自我改进的"模型即数据"框架
+relations:
+- type: same_topic
+  ref: paper:arxiv:2610.26770
+  note: 同为递归harness自我改进，HarnessPro用帕累托优化处理性能-成本权衡
+- type: same_topic
+  ref: paper:arxiv:2610.14224
+  note: 同为agent harness递归自我改进方向
+- type: same_topic
+  ref: paper:arxiv:2610.18083
+  note: 同为RSI框架，研究自适应扩展与协调
+- type: same_topic
+  ref: paper:arxiv:2610.22791
+  note: 同为通过harness-策略优化实现agent自进化

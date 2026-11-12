@@ -1,0 +1,63 @@
+id: paper:arxiv:2610.24453
+type: paper
+title: 'Hippo: Training-Free Agent Self-Evolution via Hippocampal Replay'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2610.24453v2
+  url: https://arxiv.org/abs/2610.24453
+  pdf_url: https://arxiv.org/pdf/2610.24453v2
+  venue: arXiv preprint
+time:
+  published: '2026-10-17'
+  collected: '2026-11-12'
+entities:
+- ref: concept:RSI
+  role: builds_on
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: subject
+- ref: concept:TrainingFree
+  role: uses
+claims:
+- statement: Hippo在SWE-bench Verified、WebArena和Mind2Web三个智能体基准上均取得性能提升
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: Hippo保留的经验条目显著少于无整合的经验累积基线
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 无整合的经验累积基线呈先改善后退化趋势，最终性能低于无记忆基线
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 基于记忆的适应增益在所评估的不同能力基础模型上均成立，包括高能力模型
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: Hippo通过将新经验与既有记忆比对合并重叠、以显式适用条件消解冲突来修订既有指导，而非逐条存储每条经验
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 受海马选择性编码与回放启发的免训练外部记忆框架，让LLM智能体在不更新参数的情况下从经验中自我改进。
+  abstract_zh: 受递归自我改进（RSI）动机驱动，本文研究LLM智能体如何在不更新模型参数的前提下通过外部记忆学习。作者提出Hippo记忆框架，借鉴选择性海马编码与回放机制，在诊断出缺陷时通过对比同一任务的不同尝试来识别可复用决策并精化其适用条件；新经验与既有记忆合并重叠、以显式适用条件消解冲突，避免逐条堆积。实验显示无整合的经验累积基线先升后降、最终低于无记忆基线，而Hippo在SWE-bench
+    Verified、WebArena和Mind2Web三个基准上均取得提升且保留经验远少于累积基线。增益在不同能力的基础模型上均成立，表明即使对强模型，基于记忆的适应仍然有效。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 典型的LLM智能体免参数更新自我演化（RSI）工作，属self_improvement域，按基准仅给summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: Hippo：基于海马回放的无训练智能体自我演化
+relations:
+- type: same_topic
+  ref: paper:arxiv:2610.32026
+  note: 同为递归自我改进（RSI）智能体方向的工作
+- type: same_topic
+  ref: paper:arxiv:2610.34386
+  note: 同属AI智能体跨域自我改进语言模型的研究线
+- type: same_topic
+  ref: paper:arxiv:2610.22791
+  note: 同为编码智能体的自我演化机制研究

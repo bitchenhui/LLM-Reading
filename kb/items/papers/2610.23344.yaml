@@ -1,0 +1,64 @@
+id: paper:arxiv:2610.23344
+type: paper
+title: Language Models Learn to Improve Language Models
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2610.23344v2
+  url: https://arxiv.org/abs/2610.23344
+  pdf_url: https://arxiv.org/pdf/2610.23344v2
+  venue: arXiv preprint
+time:
+  published: '2026-10-16'
+  collected: '2026-11-12'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:RSI
+  role: uses
+- ref: concept:SelfImprovement
+  role: subject
+claims:
+- statement: LM2LM以RL训练LLM生成LM改进提案，用冻结LLM构成的研究世界模型（RWM）预测提案增益作为奖励，并通过定期真实执行高排名提案更新其上下文来抑制代理反馈随策略分布漂移而失效的问题。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在八个自回归与扩散LM开发环境的held-out任务真实执行评估中，经LM2LM训练的Qwen3.8-27B胜过GPT-6-sol，且数据生成成本更低。
+  confidence: reported
+  metrics:
+  - name: 数据生成成本降低
+    value: 33%
+    scope: LM2LM相对基线在held-out任务真实执行评估中的数据生成成本
+  - name: 对比时提供的真实实验记录数
+    value: 300条
+    scope: GPT-6-sol上下文中被给予的真实实验记录数量，Qwen3.8-27B仍占优
+  - name: 评估环境数量
+    value: 8个
+    scope: 覆盖自回归与扩散两类LM开发环境
+  evidence: abstract（初筛，未读全文）
+- statement: LM2LM可泛化到训练期间未见的模型家族。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出LM2LM：用RL训练LLM产出LM改进提案，以研究世界模型为奖励，胜过GPT-6-sol且数据生成成本降33%。
+  abstract_zh: 论文提出LM2LM，用强化学习训练LLM生成有效的语言模型改进提案，以逼近递归自我改进。针对真实反馈昂贵的问题，采用冻结LLM构成的研究世界模型（RWM）从上下文中的真实实验记录预测提案增益，作为RL奖励模型；并定期执行RWM高排名的当前策略提案，将实测结果加入其上下文以维持反馈可靠性。在八个自回归与扩散LM开发环境中，held-out任务的真实执行评估显示，LM2LM训练后的Qwen3.8-27B胜过即使被提供300条真实实验记录的GPT-6-sol，同时数据生成成本降低33%。该方法还能泛化到训练时未见的模型家族。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 属自我改进（RSI）域的代表性工作——训练LLM生成LM改进提案并逼近递归自我改进，非核心编码域故仅摘要收录。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 语言模型学习改进语言模型
+relations:
+- type: same_topic
+  ref: paper:arxiv:2610.34386
+  note: 同为AI agent跨多领域改进语言模型的RSI研究（LM改进环境/基准）
+- type: same_topic
+  ref: paper:arxiv:2610.32026
+  note: 同为面向模型训练的递归自我改进优化agent
+- type: same_topic
+  ref: paper:arxiv:2610.22599
+  note: 同涉及以LLM预测机器学习实验结果，与本文研究世界模型（RWM）思路相关

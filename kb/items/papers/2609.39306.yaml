@@ -1,0 +1,61 @@
+id: paper:arxiv:2609.39306
+type: paper
+title: 'ReSAIL: Mitigating Collapse in Iterative Agent Self-Distillation'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2609.39306v1
+  url: https://arxiv.org/abs/2609.39306
+  pdf_url: https://arxiv.org/pdf/2609.39306v1
+  venue: arXiv preprint
+time:
+  published: '2026-09-30'
+  collected: '2026-11-12'
+entities:
+- ref: concept:RSI
+  role: subject
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: 现有迭代自蒸馏方法随部署循环推进出现性能崩溃，PI条件下的任务性能同样下降。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 将ReSAIL加入自蒸馏基线后，在ALFWorld与TextCraft上末轮成功率平均绝对提升22.5%。
+  confidence: reported
+  metrics:
+  - name: 最终循环成功率平均绝对提升
+    value: 22.5%
+    scope: ALFWorld与TextCraft、多种模型规模、第三循环，相对自蒸馏基线
+  evidence: abstract（初筛，未读全文）
+- statement: 敏感度引导的离线数据选择可提升多模态GUI智能体在AITZ上的动作预测精度。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出ReSAIL即插即用增强，通过选择性蒸馏与特权信息行为保持缓解LLM智能体迭代自蒸馏的性能崩溃。
+  abstract_zh: 迭代自蒸馏让LLM智能体从连续部署中学习，是通向递归自改进（RSI）的途径，但作者实验发现现有方法随循环推进出现部署性能崩溃，特权信息（PI）条件下的任务性能也随之下降。ReSAIL作为迭代PI自蒸馏的即插即用增强，选择PI最能改变教师预测的交互步骤进行蒸馏并平衡跨轨迹蒸馏损失，同时将学生的PI条件输出分布向冻结教师正则化，以便在下一循环保留可用的PI条件监督。在ALFWorld和TextCraft上跨多种模型规模、三个循环的实验显示，加入ReSAIL后自蒸馏基线的末轮成功率平均绝对提升22.5%。敏感度引导的离线数据选择还能提升多模态GUI智能体在AITZ上的动作预测精度。作者称这是首个表明更稳健的学习机制可有效缓解迭代智能体自蒸馏性能崩溃的证据。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: LLM智能体迭代自蒸馏缓解RSI性能崩溃，属自我改进AI主题且工作重要，按规则仅给summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: ReSAIL：缓解迭代智能体自蒸馏中的性能崩溃
+relations:
+- type: same_topic
+  ref: paper:arxiv:2610.32026
+  note: 同属递归自改进（RSI）方向，RSI-Opt关注自改进优化器智能体
+- type: same_topic
+  ref: paper:arxiv:2609.33867
+  note: 同属RSI主题，R2 Flow基于递归技能进化实现递归自改进
+- type: same_topic
+  ref: paper:arxiv:2609.38662
+  note: 同属RSI主题，CollabFlow研究智能体协作的递归自改进
+- type: same_topic
+  ref: paper:arxiv:2610.24453
+  note: 同属智能体自我进化，Hippo为免训练经验回放式自我演化

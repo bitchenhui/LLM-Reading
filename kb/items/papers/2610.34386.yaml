@@ -1,0 +1,70 @@
+id: paper:arxiv:2610.34386
+type: paper
+title: 'ParetoRSI-Gym: Can AI Agents Improve Language Models Across Multiple Domains?'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2610.34386v1
+  url: https://arxiv.org/abs/2610.34386
+  pdf_url: https://arxiv.org/pdf/2610.34386v1
+  venue: arXiv preprint
+time:
+  published: '2026-10-25'
+  collected: '2026-11-12'
+entities:
+- ref: concept:RSI
+  role: subject
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: 在ParetoRSI-Gym中，最强的智能体系统Claude Code + Opus-5使代理最优检查点的泛化分数相对起始模型提升9.2%。
+  confidence: reported
+  metrics:
+  - name: 泛化分数相对提升
+    value: 9.2%
+    scope: Claude Code + Opus-5，3个基座模型×5个域等权平均，相对起始模型
+  - name: 绝对提升
+    value: '+2.3'
+    scope: 绝对百分点，同等平均口径
+  evidence: abstract（初筛，未读全文）
+- statement: 单域相对增益最高达63%，出现在Ministral-3-3B的医学域。
+  confidence: reported
+  metrics:
+  - name: 单域相对提升
+    value: 63%
+    scope: Ministral-3-3B，医学域，相对起始模型
+  evidence: abstract（初筛，未读全文）
+- statement: 实验覆盖3个智能体系统、3个基座模型、5轮迭代和多个随机种子，并通过各域泛化基准区分能力增益与对优化目标的过拟合。
+  confidence: reported
+  metrics:
+  - name: 评测设置
+    value: 3个智能体系统×3个基座模型×5轮×多种子
+    scope: ParetoRSI-Gym整体实验配置
+  evidence: abstract（初筛，未读全文）
+- statement: 评测框架（harness）对结果的影响与其驱动的模型相当，且不同智能体各自保留独特的数据选择策略。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出多域RSI评测环境ParetoRSI-Gym，智能体经数据搜索-训练-读回迭代改进LLM，最强系统泛化分数平均提升9.2%。
+  abstract_zh: 该工作提出ParetoRSI-Gym，一个面向递归自我改进（RSI）的多域评测环境：智能体在数学、代码、金融、医学、科学五个域中搜索并筛选数据、执行SFT训练、读回各域结果并循环迭代，其中初始LLM、域集合、工具集与训练管线全部固定，仅数据可变。各域泛化基准用于将真实能力提升与对优化得分的过拟合区分开。在3个智能体系统、3个基座模型、5轮迭代及多种子实验中，最强的Claude
+    Code + Opus-5系统使代理最优检查点的泛化分数相对起始模型平均提升9.2%（+2.3绝对百分点，3基座×5域等权平均），单域最高相对提升达63%（Ministral-3-3B上的医学域）。进一步分析表明评测框架（harness）与其驱动的模型同等重要，且各智能体保留了各自独特的数据选择策略。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 递归自我改进（RSI）智能体多域评测基准，属自我改进AI跟踪域，与音视频技术无直接关联，按非核心域收录为summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: ParetoRSI-Gym：AI智能体能跨多个领域改进语言模型吗？
+relations:
+- type: same_topic
+  ref: paper:arxiv:2610.32026
+  note: 同为递归自我改进（RSI）智能体用于模型训练的研究，主题高度相近
+- type: same_topic
+  ref: paper:arxiv:2610.22599
+  note: 同属LLM智能体在机器学习实验/工程中的能力评测方向

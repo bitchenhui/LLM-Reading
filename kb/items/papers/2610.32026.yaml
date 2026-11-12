@@ -1,0 +1,70 @@
+id: paper:arxiv:2610.32026
+type: paper
+title: 'RSI-Opt: Recursive Self-Improvement Optimizer Agents For Model Training'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2610.32026v1
+  url: https://arxiv.org/abs/2610.32026
+  pdf_url: https://arxiv.org/pdf/2610.32026v1
+  venue: arXiv preprint
+time:
+  published: '2026-10-23'
+  collected: '2026-11-12'
+entities:
+- ref: concept:RSI
+  role: subject
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: RSI-Opt 在进化套件上经 5 代进化，将代表性原始空间汇总 z-score 从 +10.48 提升至 +14.33（Opus 5.5）。
+  confidence: reported
+  metrics:
+  - name: raw-space summary z-score
+    value: +10.48→+14.33
+    scope: evolution suite，Opus 5.5，5代进化前后
+  evidence: abstract（初筛，未读全文）
+- statement: 通过跨模型策略迁移，GPT-5.5 在 held-out 任务上的汇总 z-score 从 -0.36 提升至 +3.11。
+  confidence: reported
+  metrics:
+  - name: raw-space summary z-score
+    value: -0.36→+3.11
+    scope: held-out tasks，GPT-5.5，跨模型策略迁移
+  evidence: abstract（初筛，未读全文）
+- statement: 在 Burgers PDE 任务上，RSI-Opt 相比固定提示 agent 基线降低平均相对 L2 误差约 2.7 倍（Opus 5.5）与 8.8 倍（GPT-6.1），但
+    PDE 迁移效果随 LLM 与任务而异。
+  confidence: reported
+  metrics:
+  - name: 平均相对L2误差降幅
+    value: ≈2.7倍
+    scope: Burgers PDE，Opus 5.5，相对固定提示agent基线
+  - name: 平均相对L2误差降幅
+    value: ≈8.8倍
+    scope: Burgers PDE，GPT-6.1，相对固定提示agent基线
+  evidence: abstract（初筛，未读全文）
+- statement: 控制对比显示进化策略结合了可复用优化知识与任务适应性：在已见任务上初始决策贡献大部分收益，持续适应则主要改善未见任务表现。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出即插即用递归自我改进框架RSI-Opt，元智能体跨训练运行演化优化器策略与代码库，显著提升优化器agent性能并支持跨模型迁移。
+  abstract_zh: 论文提出 RSI-Opt，一种即插即用的递归自我改进优化器智能体框架：元智能体基于先前训练运行的证据递归改写指导优化器调控行为的策略，涵盖提示词、流程手册、经测试的优化器代码库与决策节奏，并由存档保留已评估策略供后续进化。在三个训练任务上的
+    5 代进化中，元智能体发展出可复用的流程与代码，并自主开展 CPU 代理实验。结果显示，进化套件上 Opus 5.5 的代表性原始空间汇总 z-score 从 +10.48 升至 +14.33，经跨模型策略迁移
+    GPT-5.5 在 held-out 任务上从 -0.36 升至 +3.11。在 Burgers PDE 上，相比固定提示 agent 基线，平均相对 L2 误差分别降低约 2.7 倍（Opus
+    5.5）与 8.8 倍（GPT-6.1），但 PDE 迁移效果随 LLM 与任务而异。控制对比表明进化策略兼具可复用优化知识与任务适应性：初始决策贡献已见任务上的大部分收益，持续适应则改善未见任务结果。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 论文核心为递归自我改进（RSI）LLM agent 框架，属 self_improvement 域直接命中主题，但与音视频技术无关，按规则仅作初筛摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: RSI-Opt：面向模型训练的递归自我改进优化器智能体
+relations:
+- type: same_topic
+  ref: paper:arxiv:2610.22599
+  note: 两者均为 LLM agent 应用于机器学习训练/实验流程的研究，共享 LLM 辅助 ML 实验主题

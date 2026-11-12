@@ -1,0 +1,74 @@
+id: paper:arxiv:2610.26770
+type: paper
+title: 'HarnessPro: Recursive Harness Self-Improvement with Pareto Optimization for Performance-Cost Trade-offs'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2610.26770v2
+  url: https://arxiv.org/abs/2610.26770
+  pdf_url: https://arxiv.org/pdf/2610.26770v2
+  venue: arXiv preprint
+time:
+  published: '2026-10-19'
+  collected: '2026-11-12'
+entities:
+- ref: concept:RSI
+  role: subject
+- ref: concept:SelfImprovement
+  role: builds_on
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: HarnessPro 的 heavy 模式在 GPT-5.5+Codex 下相对 RHO 平均通过率提升 2.0 个百分点
+  confidence: reported
+  metrics:
+  - name: 平均通过率增益
+    value: 2.0 个百分点
+    scope: GPT-5.5+Codex，相对 RHO，Terminal-Bench 2/SWE-Bench Pro/ProgramBench 三基准平均
+  evidence: abstract（初筛，未读全文）
+- statement: HarnessPro 的 heavy 模式同时显著降低执行成本，相对 RHO 单任务平均成本下降 26.1%
+  confidence: reported
+  metrics:
+  - name: 单任务平均成本降幅
+    value: 26.1%
+    scope: GPT-5.5+Codex，相对 RHO，三基准平均
+  evidence: abstract（初筛，未读全文）
+- statement: 该性能-成本优势在 GLM-5.2+Claude Code 平台上同样成立
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 方法无标签：候选 harness 用 LLM 生成的测试评估，不依赖真实答案或官方测试，并通过归一化加权平方距离选择输出 lite/medium/heavy 三档 harness
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 无标签的 harness 递归自改进方法，用帕累托优化兼顾任务性能提升与执行成本下降，产出 lite/medium/heavy 三档 harness。
+  abstract_zh: 论文提出 HarnessPro，一种无标签的 harness 递归自改进方法：用 LLM 生成的测试评估候选 harness，无需真实答案或官方测试。专门化 agent 诊断执行轨迹、按不同性能-成本优先级规划更新并实现为候选
+    harness。不同于返回单一 harness，该方法用归一化加权平方距离选择机制，提供面向成本（lite）、均衡（medium）和面向性能（heavy）三种 harness 以适配不同部署预算，选中的
+    harness 进入下一轮迭代。在 Terminal-Bench 2、SWE-Bench Pro 和 ProgramBench 上，用 GPT-5.5+Codex 时，heavy 模式相对 RHO
+    平均通过率提升 2.0 个百分点、单任务平均成本降低 26.1%；用 GLM-5.2+Claude Code 也保持该优势。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 非核心音视频域，属 self_improvement 域的 harness RSI 方法论文，按基准只给 summary_only
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: HarnessPro：基于帕累托优化的递归 Harness 自改进方法，权衡性能与成本
+relations:
+- type: same_topic
+  ref: paper:arxiv:2610.22791
+  note: 同为 agent harness 的自改进/优化方法（Harness-Policy Optimization）
+- type: same_topic
+  ref: paper:arxiv:2610.14224
+  note: 同为递归 agent harness（Harness^2）方向
+- type: same_topic
+  ref: paper:arxiv:2610.34386
+  note: 同为跨域 RSI + 帕累托前沿性能-成本权衡
+- type: same_topic
+  ref: paper:arxiv:2610.32026
+  note: 同为 RSI 优化 agent 路线
+- type: same_topic
+  ref: paper:arxiv:2611.11558
+  note: 同为以 harness 为核心的递归自改进

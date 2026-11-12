@@ -1,0 +1,74 @@
+id: paper:arxiv:2610.32326
+type: paper
+title: 'TGR-EvoDAG: A DAG-based Multi-Agent Code Evolution Framework for Generative Recommendation on
+  Tencent'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2610.32326v1
+  url: https://arxiv.org/abs/2610.32326
+  pdf_url: https://arxiv.org/pdf/2610.32326v1
+  venue: arXiv preprint
+time:
+  published: '2026-10-23'
+  collected: '2026-11-12'
+entities:
+- ref: concept:RSI
+  role: subject
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: TGR-EvoDAG 在公开 Amazon 数据集上首次实现生成式推荐完整管线的自主演化，离线指标较最强基线最高提升 37.4%，Agent4Rec 模拟用户满意度提升 19.7%。
+  confidence: reported
+  metrics:
+  - name: 离线指标最高提升
+    value: 37.4%
+    scope: 公开 Amazon 数据集，相对最强基线
+  - name: Agent4Rec 模拟用户满意度提升
+    value: 19.7%
+    scope: 公开 Amazon 数据集，相对最强基线
+  evidence: abstract（初筛，未读全文）
+- statement: 在腾讯大规模商业媒体平台工业部署中，演化后的 GR 离线 Hit@1 相对提升 12.16%，在线 CTR 取得统计显著的 0.40% 提升。
+  confidence: reported
+  metrics:
+  - name: 离线 Hit@1 相对提升
+    value: 12.16%
+    scope: 腾讯大规模商业媒体平台工业部署
+  - name: 在线 CTR 提升
+    value: 0.40%
+    scope: 腾讯平台在线实验，统计显著
+  evidence: abstract（初筛，未读全文）
+- statement: TGR-EvoDAG 通过 DAG 多分支演化、阶段感知成本规划与主动下游协同适配，缓解生成式推荐级联管线中的成本盲区与短视评估问题。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出 DAG 式多智能体代码演化框架 TGR-EvoDAG，自主进化生成式推荐完整管线，腾讯在线 CTR 相对提升 0.40%。
+  abstract_zh: 针对生成式推荐（GR）模块级联管线（tokenization、预训练、对齐）中既有演化方法忽视分阶段重训成本、且评估短视丢弃暂退上游创新的问题，论文提出 TGR-EvoDAG。该框架将代码演化建模为有向无环图（DAG），维护多演化分支并合并互补创新，结合阶段感知的
+    GPU 时预算规划与主动下游协同适配。在公开 Amazon 数据集上首次实现完整 GR 管线的自主演化，离线指标较最强基线最高提升 37.4%，Agent4Rec 模拟用户满意度提升 19.7%。在腾讯大规模商业媒体平台工业部署中，演化后的
+    GR 离线 Hit@1 相对提升 12.16%，在线 CTR 统计显著提升 0.40%。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 论文是腾讯落地的 LLM 多智能体 DAG 式代码演化（递归自改进）框架，属自我改进 AI 域而非音视频技术，按基准仅收录摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: TGR-EvoDAG：腾讯面向生成式推荐的基于 DAG 的多智能体代码演化框架
+relations:
+- type: same_topic
+  ref: paper:arxiv:2610.32026
+  note: 同为 LLM 智能体递归自改进（RSI）框架，本文将 RSI 用于生成式推荐代码演化
+- type: same_topic
+  ref: paper:arxiv:2610.29641
+  note: 同属面向特定领域任务的递归代码演化
+- type: same_topic
+  ref: paper:arxiv:2610.16078
+  note: 同为基于智能体协同/演化的代码改进方法
+- type: same_topic
+  ref: paper:arxiv:2610.26770
+  note: 均关注自改进过程中的性能-成本权衡优化

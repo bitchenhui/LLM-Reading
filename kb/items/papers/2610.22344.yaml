@@ -1,0 +1,63 @@
+id: paper:arxiv:2610.22344
+type: paper
+title: 'MLExpert: Towards a Generalist Agentic Model for Autonomous Machine Learning Engineering'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2610.22344v1
+  url: https://arxiv.org/abs/2610.22344
+  pdf_url: https://arxiv.org/pdf/2610.22344v1
+  venue: arXiv preprint
+time:
+  published: '2026-10-15'
+  collected: '2026-11-12'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:RSI
+  role: builds_on
+- ref: concept:MoE
+  role: uses
+claims:
+- statement: MLExpert在MLE-Bench Lite上将基座模型的平均奖牌率从37.9%提升至72.7%，达到与Kimi-K3、GLM-5.3等更大前沿模型相当的水平
+  confidence: reported
+  metrics:
+  - name: MLE-Bench Lite平均奖牌率
+    value: 37.9%→72.7%
+    scope: 35B基座模型→经后训练的MLExpert
+  - name: 参数规模
+    value: 35B
+    scope: MoE智能体模型MLExpert
+  evidence: abstract（初筛，未读全文）
+- statement: 窗口化交互强化学习（WIRL）将相邻实验结果之间的多轮决策视为执行窗口并共享基于结果的奖励，可在长轨迹结束前完成策略更新
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 所学MLE优化能力可泛化至NatureBench Lite、智能体脚手架优化与算法优化等其他任务并带来性能提升
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 以层级智能体SFT与窗口化交互RL训练35B MoE模型MLExpert，MLE-Bench Lite奖牌率37.9%→72.7%
+  abstract_zh: 论文面向AI for AI（AI4AI）与递归自我改进（RSI），提出面向长时程自主机器学习工程（MLE）优化的后训练方法，训练出35B混合专家（MoE）智能体模型MLExpert。作者构建Kaggle-MLE
+    Factory生成可执行任务并设计模型主导实验的交互框架；层级智能体SFT以结果导向监督将通用工具使用与编码能力迁移到MLE。窗口化交互强化学习（WIRL）把相邻实验结果之间的多轮决策视为一个执行窗口并赋予共享的基于结果的奖励，配合异步轨迹收集与策略修正在轨迹结束前即可更新策略。在MLE-Bench
+    Lite上，MLExpert将基座模型平均奖牌率从37.9%提升至72.7%，与Kimi-K3、GLM-5.3等更大前沿模型相当；在NatureBench Lite、智能体脚手架优化与算法优化上亦有提升，表明所学优化能力可泛化。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 非音视频论文，属AI4AI/递归自我改进（RSI）方向的智能体机器学习工程模型，按收录基准给summary_only
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: MLExpert：迈向自主机器学习工程的通用智能体模型
+relations:
+- type: same_topic
+  ref: paper:arxiv:2610.32026
+  note: 同为面向模型训练/机器学习工程的递归自我改进（RSI）智能体工作
+- type: same_topic
+  ref: paper:arxiv:2610.34386
+  note: 同属用AI智能体跨域改进语言模型的自我改进研究
+- type: same_topic
+  ref: paper:arxiv:2610.22791
+  note: 同为智能体自我进化/工程优化方向的训练方法工作

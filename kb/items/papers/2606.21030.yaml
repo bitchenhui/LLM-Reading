@@ -11,6 +11,7 @@ source:
 time:
   published: '2026-06-19'
   collected: '2026-11-12'
+  updated: '2026-11-12'
 entities:
 - ref: metric:PSNR
   role: subject
@@ -36,6 +37,7 @@ summaries:
     Transport）。方法无需辅助条件信号、无需任务特定的骨干修改，经轻量适配（无蒸馏）即可支持快速编码、一步解码与多码率。作者在 SD-2.1、SANA-1.5、FLUX.1-dev 与 Qwen-Image-2512
     四个骨干上验证，覆盖 U-Net/Transformer 架构与扩散/流匹配两类建模式。结果显示在更强先验下增益出现在低于 0.05 bpp 的区间，Qwen 变体在四个基准上于 PSNR、LPIPS、DISTS
     以及基于识别器的语义保真（OCR CER/WER、人脸 ROI 相似度）上领先扩散式生成编解码器。
+  deep_dive: docs/auto/2606.21030.md
 assessment:
   relevance: high
   decision: deep_read

@@ -11,6 +11,7 @@ source:
 time:
   published: '2026-06-11'
   collected: '2026-11-12'
+  updated: '2026-11-12'
 entities:
 - ref: dataset:ImageNet
   role: subject
@@ -32,6 +33,7 @@ summaries:
   one_liner_zh: 双约束扩散解码器实现单码流下失真-感知Pareto前沿连续调节与完整RDP面导航。
   abstract_zh: 论文提出DCIC，将学习式编码器与扩散解码器结合，通过联合失真约束与幂等约束引导反向去噪过程：失真约束限定重建相对基础编码输出的保真度，幂等约束（要求对恢复图像再编码可还原基础编码重建）作为分布感知要求的可处理代理。两者配合一致性噪声注入实现解码端共同随机性，且不引入额外码率开销。双衰减因子(K_D,
     K_P)可在固定码率下连续调节保真-真实感权衡，其中DCIC_RD与DCIC_RP构成边界曲线，DCIC_RDP实现内部最优工作点。在CelebA-HQ、CLIC2020、ImageNet-1K上并覆盖CNN、Transformer与混合架构的实验表明，DCIC_RDP的BD-PSNR优于所有感知编码器，DCIC_RP在BD-FID上与专用感知导向方法相当。
+  deep_dive: docs/auto/2606.13366.md
 assessment:
   relevance: high
   decision: deep_read

@@ -1,0 +1,68 @@
+id: paper:arxiv:2610.14224
+type: paper
+title: 'Harness^2: Recursive Agent Harnessing for an Open World'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2610.14224v1
+  url: https://arxiv.org/abs/2610.14224
+  pdf_url: https://arxiv.org/pdf/2610.14224v1
+  venue: arXiv preprint
+time:
+  published: '2026-10-09'
+  collected: '2026-11-12'
+entities:
+- ref: concept:RSI
+  role: subject
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: 任务级递归采用对比式Propose-Probe-Compose步骤，可在缺乏真值验证器的开放世界条件下可靠引导执行框架的在线编辑。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 框架化递归从任务级编辑经验中提取知识并更新持续改进框架，使智能体更好适应未来新任务，实现跨任务泛化。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 单步递归即可在三项专业基准、四种模型-框架配置上稳定超越基础执行框架，且收益随任务级递归预算增加而扩大。
+  confidence: reported
+  metrics:
+  - name: WorkBuddy-Bench 提升
+    value: '11.5'
+    scope: 单步递归对比基础harness，最多提升（points），GLM-5/Gemini 3.5 Flash
+  - name: JobBench 提升
+    value: '4.5'
+    scope: 单步递归对比基础harness（points），GLM-5/Gemini 3.5 Flash
+  - name: LAB 提升
+    value: '11.8'
+    scope: 单步递归对比基础harness（百分点），GLM-5/Gemini 3.5 Flash
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出即插即用的双层递归框架，无需真值验证器即可自动进化LLM智能体执行框架，三项专业基准最多提升11.5分。
+  abstract_zh: 论文指出LLM智能体能力不仅取决于底层模型，还取决于其执行框架（harness），而开放世界场景下RSI面临任务测试时新颖、缺乏真值验证器、以及过程任务特异难以泛化两大挑战。Harness^2通过两层递归解决：任务级递归用对比式Propose-Probe-Compose步骤在没有真值验证器的情况下可靠引导框架编辑，并可通过并行或串行递归进一步扩展；框架化递归（harnessing-level
+    recursion）从编辑经验中提取知识更新持续改进框架，使智能体更适应未来任务。在三项专业基准与四种模型-框架配置上，单步递归即可稳定改进GLM-5与Gemini 3.5 Flash：WorkBuddy-Bench最高提升11.5分、JobBench提升4.5分、LAB提升11.8个百分点，且随任务级递归预算增加收益进一步提升。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: LLM智能体执行框架的递归自我改进（RSI）研究，属自我改进AI领域，按收录基准给summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: Harness^2：面向开放世界的递归式智能体执行框架自我改进
+relations:
+- type: same_topic
+  ref: paper:arxiv:2610.22791
+  note: 同属智能体执行框架（harness）自我进化方向，均为递归/迭代优化agent harness
+- type: same_topic
+  ref: paper:arxiv:2610.32026
+  note: 同为递归自我改进（RSI）智能体框架研究
+- type: same_topic
+  ref: paper:arxiv:2609.33867
+  note: 同为递归自我改进，本篇递归进化执行框架、该篇递归进化技能库
+- type: same_topic
+  ref: paper:arxiv:2611.11558
+  note: 同为RSI应用于工程场景：本篇面向开放世界任务harness，该篇面向训练基础设施

@@ -1,0 +1,53 @@
+id: paper:arxiv:2610.04651
+type: paper
+title: 'GS-Codec: A Gaussian-Splatting Bottleneck for Neural Audio Coding'
+domain: audio_coding
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2610.04651v1
+  url: https://arxiv.org/abs/2610.04651
+  pdf_url: https://arxiv.org/pdf/2610.04651v1
+  venue: arXiv preprint
+time:
+  published: '2026-10-03'
+  collected: '2026-11-12'
+entities:
+- ref: concept:NeuralAudioCodec
+  role: subject
+- ref: concept:3DGS
+  role: uses
+claims:
+- statement: GS-Codec以参数化信号分解（1D高斯基元加权和拟合）替代VQ-VAE式量化瓶颈，训练管线中不含任何量化器，仅在训练后对拟合参数做标量量化。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 单一训练后checkpoint可通过改变基元数量与每参数位深实现免重训练的细粒度码率-质量控制。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在可比码率下，GS-Codec在说话人相似度（SIM）、可懂度（STOI）与感知质量（UTMOS）上达到或超过开源编解码器EnCodec与DAC，语义性能（WER）相当。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 用一维高斯泼溅参数分解替代量化瓶颈的神经语音编解码器，单一checkpoint免重训练即可调码率。
+  abstract_zh: 主流神经音频编解码器（RVQ、FSQ、单码本）均沿用VQ-VAE式的码本或标量网格划分，本文质疑这一划分是否必要。GS-Codec将3D场景重建中的高斯泼溅迁移至一维潜在空间，通过内层优化把编码器每段拟合为1D高斯基元的加权和，解码器由渲染和重建波形。为避免推理时迭代内循环的开销，另训练轻量GS
+    Predictor Net单次前向回归基元参数；训练管线全程无量化器，仅训练后对拟合参数施加标量量化。该表示提供细粒度码率-质量权衡：单一checkpoint通过改变基元数量与每参数位深即可调整码率，无需重训练。在与EnCodec、DAC可比码率下，GS-Codec在说话人相似度（SIM）、可懂度（STOI）与感知质量（UTMOS）上持平或更优，语义性能（WER）相当。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 神经音频编码论文，用一维高斯泼溅分解替代量化瓶颈，属音频域而非核心视频/图像编码，按规则仅给 summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: GS-Codec：面向神经音频编码的高斯泼溅瓶颈
+relations:
+- type: same_topic
+  ref: paper:arxiv:2609.09866
+  note: 同为神经音频编解码器，UniStream基于残差矢量量化，与本工作的非量化瓶颈形成路线对照
+- type: same_topic
+  ref: paper:arxiv:2608.15369
+  note: 同为音频编码，AudioTQ采用Lloyd-Max量化，与本工作的去量化瓶颈设计同域
+- type: same_topic
+  ref: paper:arxiv:2609.34524
+  note: 同以神经音频编解码器为研究对象，关注解码端开销与码率-质量权衡

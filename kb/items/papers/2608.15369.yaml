@@ -1,0 +1,61 @@
+id: paper:arxiv:2608.15369
+type: paper
+title: 'AudioTQ: A Data-Oblivious 6-Bit CPU Audio Codec via Randomized Hadamard Rotation and Lloyd-Max
+  Quantization'
+domain: audio_coding
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2608.15369v1
+  url: https://arxiv.org/abs/2608.15369
+  pdf_url: https://arxiv.org/pdf/2608.15369v1
+  venue: arXiv preprint
+time:
+  published: '2026-08-15'
+  collected: '2026-11-12'
+entities:
+- ref: codec:Opus
+  role: subject
+- ref: concept:LLM
+  role: builds_on
+claims:
+- statement: AudioTQ用随机化FWHT正交旋转将时域幅度均匀化为标准正态分布，从而使逐坐标标量量化成为可能，是一种数据无关（data-oblivious）的时域有损音频编解码方案。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 基准测试中AudioTQ实现最高74.4%的物理体积缩减，SQNR约30 dB。
+  confidence: reported
+  metrics:
+  - name: 物理体积缩减
+    value: 74.4%
+    scope: 基准测试中的最大值（up to）
+  - name: SQNR
+    value: ~30 dB
+    scope: 重建音频的信号量化信噪比
+  evidence: abstract（初筛，未读全文）
+- statement: 6比特Lloyd-Max量化器加1比特QJL残差校正构成7比特虚拟索引，打包进8比特容器以对齐CPU寄存器边界，可在无硬件并行加速器的单线程CPU上实时执行。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 论文推导了该方案在稀疏输入下的数学失效模式，并给出24比特录音棚音轨的逐比特重建分析。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 借鉴LLM权重量化思想，用随机FWHT旋转加6比特Lloyd-Max量化与1比特残差校正实现单线程CPU实时音频压缩。
+  abstract_zh: 传统有损音频压缩依赖心理声学建模与频域表示（如MP3、AAC、Opus），计算复杂且领域专用。AudioTQ受LLM权重量化技术（TurboQuant框架）启发，直接在时域工作，用随机化快速Walsh-Hadamard变换（FWHT）正交旋转将易变的时域幅度均匀化为可预测的标准正态分布。在此基础上使用离线训练的MSE最优6比特Lloyd-Max标量量化器，并叠加1比特QJL残差校正层，7比特虚拟索引打包进原生8比特容器以对齐CPU寄存器边界，无需硬件并行加速器即可单线程实时执行。论文给出24比特录音棚音轨的逐比特重建细节、FWHT蝶形网络分析以及稀疏输入下的数学失效模式推导，基准测试显示物理体积最多缩减74.4%，SQNR约30
+    dB。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 非核心视频编码域的音频编解码器工作，借鉴LLM权重量化实现CPU实时有损音频压缩，按非核心域基准仅收录摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: AudioTQ：基于随机Hadamard旋转与Lloyd-Max量化的数据无关6比特CPU音频编解码器
+relations:
+- type: same_topic
+  ref: paper:arxiv:2609.09866
+  note: 同为音频编码器工作，均以量化为核心压缩手段（本文标量量化，UniStream残差矢量量化流式音频编码）
+- type: same_topic
+  ref: paper:arxiv:2606.05861
+  note: 方向互补：LLMCodec将视频编解码器用于LLM权重压缩，本文将LLM权重量化技术（TurboQuant）迁移到音频编码

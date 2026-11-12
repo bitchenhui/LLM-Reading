@@ -1,0 +1,77 @@
+id: paper:arxiv:2610.18083
+type: paper
+title: 'AReaL-RSI: Adaptive Scaling and Coordination of Recursive Self-Improvement'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2610.18083v1
+  url: https://arxiv.org/abs/2610.18083
+  pdf_url: https://arxiv.org/pdf/2610.18083v1
+  venue: arXiv preprint
+time:
+  published: '2026-10-13'
+  collected: '2026-11-12'
+entities:
+- ref: concept:RSI
+  role: subject
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: AReaL-RSI在两种骨干LLM下均将Terminal Bench性能提升2.2个百分点。
+  confidence: reported
+  metrics:
+  - name: Terminal Bench性能提升
+    value: 2.2个百分点
+    scope: 对比Codex-Goal，每种骨干模型下
+  evidence: abstract（初筛，未读全文）
+- statement: AReaL-RSI将KernelBench平均加速比提升32.2–36.8%。
+  confidence: reported
+  metrics:
+  - name: KernelBench平均加速比提升
+    value: 32.2-36.8%
+    scope: GPU核优化任务，对比Codex-Goal
+  evidence: abstract（初筛，未读全文）
+- statement: 经验共享与专业化研究者角色结合，比独立探索在全部七个可比任务—骨干对上降低核延迟1.9–27.5%。
+  confidence: reported
+  metrics:
+  - name: kernel延迟降低
+    value: 1.9-27.5%
+    scope: 对比独立探索，七个可比任务-骨干组合
+  evidence: abstract（初筛，未读全文）
+- statement: 经验共享与专业化研究者角色结合，比仅共享经验再降低核延迟1.3–33.9%。
+  confidence: reported
+  metrics:
+  - name: kernel延迟降低
+    value: 1.3-33.9%
+    scope: 对比仅经验共享，七个可比任务-骨干组合
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出无需更新LLM权重的递归自我改进框架，以领导者—研究者团队组织与条件化记忆共享实现研究能力持续进化。
+  abstract_zh: 论文提出AReaL-RSI，一个在不更新骨干LLM权重前提下组织持久智能体研究团队的递归自我改进框架。框架以评估产出与全系统资源开销形式化扩展问题：领导者智能体选择任务适配的研究方向并指导进行中的调查，条件化记忆共享区分未解问题与已验证结论并对接收者做适配。每轮战役结束后，基于证据的审查会修订后续战役所需的研究方向、知识与技能。实验在harness优化、GPU核优化和AI研究任务上对比Codex-Goal：两种骨干下Terminal
+    Bench均提升2.2个百分点，KernelBench平均加速比提升32.2–36.8%；可扩展性比较显示经验共享加专业化研究者角色组合，在全部七个可比任务—骨干对上比独立探索降低1.9–27.5%核延迟，比仅共享降低1.3–33.9%。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 论文主题为LLM智能体递归自我改进（RSI）的组织与扩展框架，属self_improvement域，与音视频技术无直接关联，按规则仅收录为初筛摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: AReaL-RSI：递归自我改进的自适应扩展与协调
+relations:
+- type: same_topic
+  ref: paper:arxiv:2610.32026
+  note: 同属递归自我改进（RSI）智能体优化器方向
+- type: same_topic
+  ref: paper:arxiv:2611.11558
+  note: 同为将RSI应用于训练基础设施/GPU优化的工作
+- type: same_topic
+  ref: paper:arxiv:2610.22791
+  note: AReaL-RSI以harness优化为评估任务，与该自我进化编码智能体/harness策略优化工作主题相近
+- type: same_topic
+  ref: paper:arxiv:2609.33867
+  note: 同属递归自我改进框架研究（递归技能演化）

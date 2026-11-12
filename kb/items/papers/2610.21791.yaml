@@ -1,0 +1,67 @@
+id: paper:arxiv:2610.21791
+type: paper
+title: 'RSIFlow: Adaptive Self-Improvement Workflows with an Evolving Meta-Agent'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2610.21791v2
+  url: https://arxiv.org/abs/2610.21791
+  pdf_url: https://arxiv.org/pdf/2610.21791v2
+  venue: arXiv preprint
+time:
+  published: '2026-10-15'
+  collected: '2026-11-12'
+entities:
+- ref: concept:RSI
+  role: subject
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: builds_on
+claims:
+- statement: RSIFlow在六个基准、两个骨干模型上均取得SOTA平均性能
+  confidence: reported
+  metrics:
+  - name: 覆盖基准数量
+    value: '6'
+    scope: 实验评测基准总数
+  - name: 骨干模型数量
+    value: '2'
+    scope: 实验所用LLM骨干模型总数
+  evidence: abstract（初筛，未读全文）
+- statement: RSIFlow从任务-代理轨迹与环境反馈中诊断性能瓶颈，并动态选择组件级改进工作流
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 元代理将工作流成果蒸馏为组件级技能与跨组件原则，实现自身harness演化以改进后续编排
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 消融实验证明自适应工作流编排与元harness演化两项机制均有效
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出RSIFlow递归自我改进框架，以自适应工作流编排加元代理harness演化提升LLM代理性能，六个基准全部SOTA。
+  abstract_zh: 论文提出RSIFlow，一个将自适应工作流编排与元代理能力演化相结合的递归自我改进（RSI）框架。该框架从任务-代理轨迹与环境反馈中诊断性能瓶颈，动态选择针对特定组件的改进工作流。元代理随后将工作流成果蒸馏为组件级技能与跨组件原则，并演化自身的harness，从而改进后续的工作流编排。在六个基准和两个骨干模型上的实验表明RSIFlow在所有基准上取得SOTA平均性能；消融实验进一步验证了自适应工作流编排与元harness演化各自的贡献。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: LLM递归自我改进（RSI）核心工作，非音视频核心域，按收录基准只给summary_only
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: RSIFlow：具备演化元代理的自适应自我改进工作流
+relations:
+- type: same_topic
+  ref: paper:arxiv:2609.33867
+  note: 同为递归自我改进，R² Flow侧重递归技能演化，与RSIFlow的技能蒸馏路线相近
+- type: same_topic
+  ref: paper:arxiv:2610.14224
+  note: 同为递归harness改进方向，RSIFlow的元harness演化与之同题
+- type: same_topic
+  ref: paper:arxiv:2609.34712
+  note: 同为面向LLM代理的工作流/技能演化与动态选择机制
+- type: same_topic
+  ref: paper:arxiv:2610.18083
+  note: 同为自适应扩展与协调的递归自我改进框架

@@ -1,0 +1,76 @@
+id: paper:arxiv:2611.11558
+type: paper
+title: 'InfraRSI: Harnessing Recursive Self-Improvement for Training Infrastructure'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2611.11558v1
+  url: https://arxiv.org/abs/2611.11558
+  pdf_url: https://arxiv.org/pdf/2611.11558v1
+  venue: arXiv preprint
+time:
+  published: '2026-11-08'
+  collected: '2026-11-12'
+entities:
+- ref: concept:RSI
+  role: subject
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: evaluated_on
+- ref: concept:MoE
+  role: evaluated_on
+claims:
+- statement: InfraRSI 在四个单/多节点稠密与 MoE LLM 训练负载上实现最高 2.75 倍加速。
+  confidence: reported
+  metrics:
+  - name: 加速比
+    value: 2.75×
+    scope: 四个稠密与 MoE LLM 训练负载中的最优结果
+  evidence: abstract（初筛，未读全文）
+- statement: InfraRSI 将平均模型浮点利用率（MFU）从 17.4% 提升至 30.0%。
+  confidence: reported
+  metrics:
+  - name: MFU
+    value: 30.0%
+    scope: 优化后均值
+  - name: MFU 基线
+    value: 17.4%
+    scope: 优化前均值
+  evidence: abstract（初筛，未读全文）
+- statement: InfraRSI 性能超越现有调优器与编码智能体，并可将经验跨 GPU 迁移。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: InfraRSI 构成双层递归自改进闭环：运行内在线修正 LLM 先验，跨集群蒸馏经验库。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: init 阶段通过锁定可编辑范围与基于负载、损失与时序不变量的固定任务契约来防止奖励作弊。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出 InfraRSI 智能体框架，经五阶段验证工作流将开放式指令转化为分布式 LLM 训练优化，最高加速 2.75 倍。
+  abstract_zh: InfraRSI 是一个智能体框架，将开放式人类指令转化为经过验证的分布式 LLM 训练基础设施优化，针对启动参数、算子内核与通信调度紧耦合导致的 OOM、编译冲突、测量抖动与数值漂移等难题。其五阶段工作流包括：init
+    锁定可编辑范围与固定任务契约以防奖励作弊，doctor 建立基线并校准集群噪声，run 协同优化启动旋钮与代码补丁并对最优候选复核回基线，report 与 apply 审计源路径、记录失败试验成本并提交变更。方法从多样化经验种子配置初始化，基于含
+    OOM 的全部试验拟合全局执行时间与删失峰值内存模型，据此为各设置定价内存成本、在线修正失准的 LLM 先验、并将高内存优化与省内存补丁配对。在四个单/多节点稠密与 MoE LLM 负载上，InfraRSI
+    最高取得 2.75 倍加速，平均 MFU 从 17.4% 提升至 30.0%，超越现有调优器与编码智能体，并可在不同 GPU 间迁移经验，形成运行内修正先验与跨集群蒸馏经验的双层递归自改进闭环。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 递归自改进智能体框架优化分布式 LLM 训练基础设施，属 self_improvement 域代表性工作，非核心编码域故仅初筛。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: InfraRSI：利用递归自我改进优化训练基础设施
+relations:
+- type: same_topic
+  ref: paper:arxiv:2610.32026
+  note: 同为递归自改进（RSI）智能体优化模型训练方向
+- type: same_topic
+  ref: paper:arxiv:2610.34386
+  note: 同为 RSI 智能体跨域改进语言模型的研究
+- type: same_topic
+  ref: paper:arxiv:2610.22791
+  note: 同为智能体 harness 层面的自演化/自改进机制

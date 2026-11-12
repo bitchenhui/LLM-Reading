@@ -1,0 +1,64 @@
+id: paper:arxiv:2609.33834
+type: paper
+title: 'CLIMB-flow: Coupled Linear Inverse posterior sampling via Multiscale-Based flow'
+domain: processing_enhancement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2609.33834v1
+  url: https://arxiv.org/abs/2609.33834
+  pdf_url: https://arxiv.org/pdf/2609.33834v1
+  venue: arXiv preprint
+time:
+  published: '2026-09-27'
+  collected: '2026-11-12'
+entities:
+- ref: concept:SuperResolution
+  role: subject
+- ref: dataset:ImageNet
+  role: evaluated_on
+- ref: metric:PSNR
+  role: measured_by
+claims:
+- statement: CLIMB-Flow 在每个尺度交替执行终点估计、数据一致性更新与再加噪三步，以近似吉布斯采样求取该尺度的后验分布。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在 CelebA 上，CLIMB-Flow 相对最强对比方法取得显著 PSNR 增益。
+  confidence: reported
+  metrics:
+  - name: PSNR增益
+    value: 1.37-7.66 dB
+    scope: CelebA数据集、相对最强对比方法
+  evidence: abstract（初筛，未读全文）
+- statement: 方法在像素域实现高分辨率重建，避免了潜空间自编码器压缩导致的细节损失。
+  confidence: reported
+  metrics:
+  - name: 最大重建分辨率
+    value: 512x512
+    scope: 像素域重建
+  evidence: abstract（初筛，未读全文）
+- statement: 实验覆盖修复、去模糊、超分辨率与加速 MRI 四类逆问题任务，验证了方法的跨任务泛化性。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出面向金字塔级联扩散架构的像素域由粗到细后验采样算法，求解超分、去模糊、修复与加速MRI等图像逆问题。
+  abstract_zh: 针对潜空间扩散模型因自编码器压缩损失空间细节、并将优化转为非线性问题的缺陷，论文提出适配金字塔/级联架构的像素域后验采样算法 CLIMB-Flow。方法采用由粗到细的分层策略，在每一尺度交替执行三步：从当前粗而带噪的图像估计终点、对干净图像做数据一致性更新、再重新加噪回网络期望的噪声水平，从而以两个条件分布间的近似吉布斯采样求取该尺度后验。实验在
+    ImageNet、CelebA、AFHQ 和 fastMRI 上覆盖修复、去模糊、超分辨率与加速 MRI 任务，像素域重建分辨率可达 512×512，在 CelebA 上相对最强对比方法取得 1.37–7.66
+    dB 的 PSNR 提升。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 扩散先验驱动的图像逆问题后验采样（含超分/去模糊），属增强类而非编码核心域，按规则仅收录为 summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-12'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: CLIMB-flow：基于多尺度流的耦合线性逆问题后验采样
+relations:
+- type: same_topic
+  ref: paper:arxiv:2606.13366
+  note: 均以扩散模型生成先验驱动图像重建/恢复类任务
+- type: same_topic
+  ref: paper:arxiv:2609.37328
+  note: 均涉及超分辨率重建任务（本文为通用逆问题超分，后者为VVC后滤波超分）
