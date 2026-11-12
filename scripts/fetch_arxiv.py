@@ -171,21 +171,36 @@ def main() -> int:
         days = args.days or cfg["default_days"]
         since = (now - timedelta(days=days)).strftime("%Y%m%d%H%M")
     until = now.strftime("%Y%m%d%H%M")
-    query = f'({cfg["search_query"]}) AND submittedDate:[{since} TO {until}]'
 
-    print(f"窗口 {since[:8]}..{until[:8]}，已处理 {len(seen)} 篇，拉取中…")
+    # 多 track（领域分类）检索；兼容旧版单 search_query 配置
+    tracks = cfg.get("tracks") or [{"name": "video_image_coding", "core": True,
+                                    "search_query": cfg["search_query"]}]
+    per_track_max = cfg.get("per_track_max", args.max_results)
+
+    print(f"窗口 {since[:8]}..{until[:8]}，已处理 {len(seen)} 篇")
     entries: list[dict] = []
-    start = 0
-    while start < args.max_results:
-        page = parse_atom(fetch_page(query, start, min(cfg["page_size"], args.max_results - start)))
-        entries.extend(page)
-        if len(page) < min(cfg["page_size"], args.max_results - start):
-            break
-        start += len(page)
-        time.sleep(3)  # arXiv 礼貌间隔
+    seen_in_run: set[str] = set()
+    for tr in tracks:
+        query = f'({tr["search_query"]}) AND submittedDate:[{since} TO {until}]'
+        cap = min(per_track_max, args.max_results)
+        tr_entries: list[dict] = []
+        start = 0
+        while start < cap:
+            page = parse_atom(fetch_page(query, start, min(cfg["page_size"], cap - start)))
+            tr_entries.extend(page)
+            if len(page) < min(cfg["page_size"], cap - start):
+                break
+            start += len(page)
+            time.sleep(3)  # arXiv 礼貌间隔
+        tr_entries = [e for e in tr_entries if e["arxiv_id"] not in seen_in_run]
+        seen_in_run.update(e["arxiv_id"] for e in tr_entries)
+        for e in tr_entries:
+            e["track"] = tr["name"]
+        entries.extend(tr_entries)
+        print(f"  [{tr['name']}] 命中 {len(tr_entries)}")
 
     new = [e for e in entries if e["arxiv_id"] not in seen]
-    print(f"命中 {len(entries)}，去重后新增 {len(new)}")
+    print(f"合计命中 {len(entries)}，去重后新增 {len(new)}")
 
     n_pending = n_skipped = 0
     for e in new:
@@ -196,6 +211,7 @@ def main() -> int:
             "id": f"paper:arxiv:{e['arxiv_id']}",
             "status": status,          # pending=待 LLM 精读过滤 / skipped=规则拒绝
             "score": score,
+            "track": e.get("track", "video_image_coding"),  # 领域分类（检索口径给的初值）
             "matched": matched,
             "meta": {
                 "title": e["title"],

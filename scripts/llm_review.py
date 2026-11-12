@@ -41,13 +41,26 @@ RELATION_TYPES = ["cites", "builds_on", "improves_on", "compares_with",
                   "same_topic", "complements", "contrasts_with"]
 RESEARCH_LINES = ["traditional_codec_opt", "learned_codec", "coding_for_machines",
                   "generative_compression", "inr_representation", "systems_deployment"]
+DOMAINS = ["video_image_coding", "audio_coding", "streaming_delivery",
+           "quality_assessment", "processing_enhancement", "immersive_media",
+           "standards_ecosystem"]
+CORE_DOMAIN = "video_image_coding"
 
-INSTRUCTIONS = """你是音视频/图像编码领域信息整合引擎的精度过滤器与初筛摘要器。
-对给定论文完成三件事：判定收录级别、写中文初筛摘要、提炼结构化论断。
+INSTRUCTIONS = """你是音视频领域信息整合引擎的精度过滤器与初筛摘要器。
+对给定论文完成四件事：判定领域大类（domain）、收录级别、中文初筛摘要、结构化论断。
 只输出 JSON 本体，不要 markdown 代码块、不要解释。
 
-收录基准：视频/图像压缩与编码（标准编码器优化、学习式编码、生成式压缩、INR 表示、
-面向机器的编码、系统部署/跨平台）。纯理论、纯感知实验、与编码无关的应用 → skip。"""
+领域大类（domain）：
+- video_image_coding 视频/图像编码（核心域）
+- audio_coding 音频/语音编码
+- streaming_delivery 流媒体与传输（DASH/WebRTC/ABR/低延迟）
+- quality_assessment 质量评估（IQA/VQA/QoE）
+- processing_enhancement 编码链路处理与增强（超分/去噪/HDR/后滤波）
+- immersive_media 沉浸式与三维（点云/NeRF/3DGS/光场）
+- standards_ecosystem 标准进程/专利/许可
+
+收录基准：核心域（video_image_coding）可给 deep_read；其余域默认 summary_only
+（重要工作最多 summary_only，不给 deep_read）。与音视频技术整体无关 → skip。"""
 
 RELEASE_INSTRUCTIONS = """你是音视频/图像编码领域信息引擎的版本动态审阅器。
 对开源编解码器仓库的 GitHub release 判定收录级别并写中文摘要。只输出 JSON 本体。
@@ -80,6 +93,7 @@ arXiv 分类: {', '.join(meta['categories'])}
 
 输出 JSON：
 {{
+ "domain": "video_image_coding|audio_coding|streaming_delivery|quality_assessment|processing_enhancement|immersive_media|standards_ecosystem",
  "decision": "deep_read|summary_only|skip",
  "relevance": "high|medium|low",
  "reason": "一句话中文理由",
@@ -273,6 +287,27 @@ def infer_research_lines(entity_links: list) -> list[str]:
     return out[:3]
 
 
+# domain 的实体启发式：LLM 漏判/错判时的兜底
+DOMAIN_MARKERS: list[tuple[str, set[str]]] = [
+    ("audio_coding", {"codec:IAMF", "codec:Opus", "codec:EVS", "codec:MPEG-H-Audio",
+                      "concept:NeuralAudioCodec"}),
+    ("immersive_media", {"concept:NeRF", "concept:3DGS", "codec:G-PCC", "codec:V-PCC"}),
+    ("streaming_delivery", {"concept:DASH", "concept:WebRTC", "concept:ABR"}),
+    ("quality_assessment", {"concept:IQA"}),
+    ("processing_enhancement", {"concept:SuperResolution"}),
+    ("standards_ecosystem", {"org:Access-Advance", "org:Via-LA"}),
+]
+
+
+def infer_domain(entity_links: list) -> str:
+    refs = {lk["ref"] for lk in entity_links
+            if isinstance(lk, dict) and lk.get("role") not in NON_CLASSIFYING_ROLES}
+    for domain, markers in DOMAIN_MARKERS:
+        if refs & markers:
+            return domain
+    return CORE_DOMAIN
+
+
 def sanitize(out: dict, rec: dict, entities: dict, known_ids: set[str], today: str) -> dict | None:
     """词表裁剪 + 引用校验。decision=skip 返回 None。"""
     decision = out.get("decision") if out.get("decision") in ("deep_read", "summary_only", "skip") else "summary_only"
@@ -311,13 +346,17 @@ def sanitize(out: dict, rec: dict, entities: dict, known_ids: set[str], today: s
         return None
 
     rl = [l for l in out.get("research_lines", []) if l in RESEARCH_LINES]
+    domain = out.get("domain") if out.get("domain") in DOMAINS else infer_domain(ents)
+    if domain != CORE_DOMAIN and decision == "deep_read":
+        decision = "summary_only"  # 非核心域降级：v1 只 summary 跟踪
     return {
         "decision": decision, "relevance": relevance,
+        "domain": domain,
         "reason": str(out.get("reason", ""))[:200] or "（模型未给理由）",
         "title_zh": str(out.get("title_zh", "")) or None,
         "one_liner": str(out.get("one_liner_zh", "")) or None,
         "abstract_zh": str(out.get("abstract_zh", "")) or None,
-        "research_lines": rl or infer_research_lines(ents),
+        "research_lines": rl or infer_research_lines(ents) if domain == CORE_DOMAIN else [],
         "entities": ents, "claims": claims, "relations": rels,
     }
 
@@ -329,6 +368,7 @@ def build_item(rec: dict, s: dict, today: str, model: str) -> dict:
         "id": rec["id"],
         "type": "paper",
         "title": meta["title"],
+        "domain": s["domain"],
         "research_lines": s["research_lines"],
         "source": {
             "channel": "arxiv",
@@ -360,6 +400,7 @@ def build_release_item(rec: dict, s: dict, today: str, model: str) -> dict:
         "id": rec["id"],
         "type": "repo_release",
         "title": meta.get("name") or f"{meta['repo'].split('/')[-1]} {meta['tag']}",
+        "domain": s["domain"],
         "research_lines": s["research_lines"],
         "source": {
             "channel": "github",

@@ -18,9 +18,15 @@
     },
     "title": { "type": "string", "description": "原文标题" },
     "title_zh": { "type": "string", "description": "中文标题（翻译层落在基底里，消费端不再翻译）" },
+    "domain": {
+      "enum": ["video_image_coding", "audio_coding", "streaming_delivery",
+               "quality_assessment", "processing_enhancement", "immersive_media",
+               "standards_ecosystem"],
+      "description": "音视频技术大类（详见 kb/README.md 分类表）。video_image_coding 为核心域（深读优先），其余域 v1 以 summary 级跟踪"
+    },
     "research_lines": {
       "type": "array",
-      "description": "所属研究主线（可多条），与 docs/README.md 的谱系对应",
+      "description": "研究主线（可多条）。video_image_coding 域内的细分；其余域暂用 domain 承载粒度",
       "items": { "enum": ["traditional_codec_opt", "learned_codec", "coding_for_machines", "generative_compression", "inr_representation", "systems_deployment"] }
     },
     "source": {

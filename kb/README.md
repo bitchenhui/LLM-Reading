@@ -19,6 +19,22 @@ kb/
 └── README.md          本文件
 ```
 
+## 领域分类（domain × research_line 两层）
+
+音视频技术远不止视频编码。`domain` 是大类（检索口径与优先级按它划分），`research_lines`
+是核心域内的细分主线。**video_image_coding 是本引擎的核心域**（深读资源优先），其余域
+v1 以 summary 级跟踪、积累实体与信号。
+
+| domain | 覆盖 | v1 深度 |
+|---|---|---|
+| `video_image_coding` | 视频/图像编码：标准编码器优化、学习式编码、生成式压缩、INR、ICM、部署 | **核心**：deep_read + 精读笔记 |
+| `audio_coding` | 音频/语音编码：IAMF、Opus/EVS、神经音频编码 | summary 跟踪 |
+| `streaming_delivery` | 流媒体与传输：DASH/HLS/CMAF、WebRTC、ABR、低延迟 | summary 跟踪 |
+| `quality_assessment` | 质量评估：IQA/VQA、无参考、QoE 主观实验 | summary 跟踪 |
+| `processing_enhancement` | 编码链路处理与增强：超分/去噪/HDR/后滤波 | summary 跟踪 |
+| `immersive_media` | 沉浸式与三维：点云压缩、NeRF/3DGS、光场、VR/AR | summary 跟踪 |
+| `standards_ecosystem` | 标准进程、专利池、许可、产业政策 | summary 跟踪 |
+
 ## 设计原则
 
 1. **item 是原子，不是文档**。`docs/` 里的精读笔记是长文形态；item 是同一信息打碎后的

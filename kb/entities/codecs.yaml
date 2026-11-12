@@ -71,6 +71,53 @@
   notes: 开源沉浸式音频标准（ITU-T H.6142 / ISO/IEC 23090-24），音视频领域「音」侧的公开标准线
   links: [{label: github, url: https://github.com/AOMediaCodec/iamf}]
 
+## —— 音频侧（audio_coding 域）———
+
+- id: codec:Opus
+  type: codec_standard
+  name: Opus
+  aliases: [RFC 6716, Opus codec]
+  status: ratified
+  first_release: "2012"
+  developed_by: [org:IETF]
+  notes: WebRTC 时代事实标准的通用音频编解码器，全开源免版税
+
+- id: codec:EVS
+  type: codec_standard
+  name: EVS
+  full_name: Enhanced Voice Services
+  aliases: [3GPP EVS]
+  status: ratified
+  first_release: "2015"
+  developed_by: [org:3GPP]
+  notes: VoLTE 语音编码标准
+
+- id: codec:MPEG-H-Audio
+  type: codec_standard
+  name: MPEG-H 3D Audio
+  aliases: [MPEG-H 3D Audio, ISO/IEC 23008-3]
+  status: ratified
+  first_release: "2015"
+  developed_by: [org:MPEG]
+
+## —— 沉浸式/三维（immersive_media 域）———
+
+- id: codec:G-PCC
+  type: codec_standard
+  name: G-PCC
+  full_name: Geometry-based Point Cloud Compression
+  aliases: [MPEG G-PCC, ISO/IEC 23090-9]
+  status: ratified
+  developed_by: [org:MPEG]
+
+- id: codec:V-PCC
+  type: codec_standard
+  name: V-PCC
+  full_name: Video-based Point Cloud Compression
+  aliases: [MPEG V-PCC]
+  status: ratified
+  developed_by: [org:MPEG]
+
 - id: codec:ECM
   type: codec_standard
   name: ECM

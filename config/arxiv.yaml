@@ -1,11 +1,25 @@
-# arXiv 检索 adapter 配置
-# 主题口径用 arXiv API 查询语法书写（脚本负责 URL 编码与时间窗拼接）；
-# 领域精度靠实体对齐打分（kb/entities/ 注册表），不靠关键词堆砌。
+# arXiv 检索 adapter 配置——按领域分类（domain）多 track 检索。
+# video_image_coding 为核心域（core: true，深读优先）；其余域 v1 以 summary 级跟踪。
+# 领域精度仍靠实体对齐打分（kb/entities/），关键词只是初筛。
 
-search_query: '(cat:eess.IV OR cat:cs.MM) AND (abs:"video compression" OR abs:"video coding" OR abs:"image compression" OR abs:"image coding" OR abs:"video codec" OR abs:"image codec" OR abs:"neural compression")'
+tracks:
+  - name: video_image_coding
+    core: true
+    search_query: '(cat:eess.IV OR cat:cs.MM) AND (abs:"video compression" OR abs:"video coding" OR abs:"image compression" OR abs:"image coding" OR abs:"video codec" OR abs:"image codec" OR abs:"neural compression")'
+  - name: audio_coding
+    search_query: '(cat:eess.AS OR cat:cs.SD) AND (abs:"neural audio codec" OR abs:"audio compression" OR abs:"speech coding" OR abs:"audio coding")'
+  - name: streaming_delivery
+    search_query: '(cat:cs.MM OR cat:cs.NI) AND (abs:"adaptive bitrate" OR abs:"MPEG-DASH" OR abs:"low latency streaming" OR abs:"low-latency video streaming" OR abs:"WebRTC video")'
+  - name: quality_assessment
+    search_query: '(cat:eess.IV OR cat:cs.MM) AND (abs:"video quality assessment" OR abs:"image quality assessment" OR abs:"no-reference quality" OR abs:"compression quality evaluation")'
+  - name: processing_enhancement
+    search_query: '(cat:eess.IV OR cat:cs.CV) AND (abs:"super resolution" OR abs:"post-filter") AND (abs:"compression" OR abs:"coded video" OR abs:"codec")'
+  - name: immersive_media
+    search_query: '(cat:eess.IV OR cat:cs.CV OR cat:cs.GR) AND (abs:"point cloud compression" OR abs:"NeRF compression" OR abs:"Gaussian splatting compression" OR abs:"light field compression")'
 
 page_size: 100          # 每页条数（arXiv API 上限内）
 default_days: 30        # 无 --since/--days 时的回看窗口
+per_track_max: 120      # 单 track 单次最多处理条数（防止泛化查询灌爆队列）
 
 # 实体对齐打分：具体标准/实现是强信号；数据集/指标/概念/组织是弱信号
 weights:

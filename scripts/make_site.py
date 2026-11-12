@@ -28,6 +28,15 @@ LINE_NAMES = {
     "inr_representation": "INR 表示压缩",
     "systems_deployment": "系统与部署",
 }
+DOMAIN_NAMES = {
+    "video_image_coding": "视频/图像编码",
+    "audio_coding": "音频编码",
+    "streaming_delivery": "流媒体传输",
+    "quality_assessment": "质量评估",
+    "processing_enhancement": "处理增强",
+    "immersive_media": "沉浸式/三维",
+    "standards_ecosystem": "标准生态",
+}
 
 
 def load(p: Path):
@@ -52,6 +61,7 @@ def build_data() -> dict:
         items.append({
             "id": d["id"],
             "type": d["type"],
+            "domain": d.get("domain") or "video_image_coding",
             "title": d["title"],
             "title_zh": d.get("title_zh"),
             "published": d["time"]["published"],
@@ -80,6 +90,7 @@ def build_data() -> dict:
         "generated": date.today().isoformat(),
         "repo_url": REPO_URL,
         "line_names": LINE_NAMES,
+        "domain_names": DOMAIN_NAMES,
         "stats": {
             "items": len(items),
             "papers": sum(1 for i in items if i["type"] == "paper"),
@@ -137,6 +148,7 @@ input[type=search] { flex: 1; min-width: 200px; }
 .b-deep { background: rgba(76,195,138,.15); color: var(--green); }
 .b-sum { background: rgba(177,140,255,.15); color: var(--purple); }
 .b-rel { background: rgba(91,157,255,.12); color: #9db8e0; }
+.b-dom { background: rgba(245,166,35,.14); color: var(--orange); }
 h3 { font-size: 15.5px; font-weight: 600; }
 h3 a { color: var(--text); text-decoration: none; }
 h3 a:hover { color: var(--accent); }
@@ -170,6 +182,7 @@ footer a { color: var(--dim); }
   <div class="chips" id="lineChips"></div>
   <div class="row">
     <input type="search" id="q" placeholder="搜索标题 / 摘要 / 论断 / 实体…">
+    <select id="dom"><option value="">全部大类</option></select>
     <select id="rel"><option value="">全部相关性</option><option value="high">高相关</option><option value="medium">中相关</option><option value="low">低相关</option></select>
     <select id="dec"><option value="">全部处置</option><option value="deep_read">深读</option><option value="summary_only">仅摘要</option></select>
   </div>
@@ -181,9 +194,10 @@ footer a { color: var(--dim); }
 <script>
 const DATA = __DATA__;
 const LINE = DATA.line_names;
+const DOMAIN = DATA.domain_names;
 const REL_ZH = { high: "高相关", medium: "中相关", low: "低相关" };
 const DEC_ZH = { deep_read: "深读", summary_only: "仅摘要" };
-const state = { lines: new Set(), q: "", rel: "", dec: "", ent: "" };
+const state = { lines: new Set(), q: "", rel: "", dec: "", ent: "", dom: "" };
 
 document.getElementById("stats").innerHTML =
   `<div class="stat"><b>${DATA.stats.items}</b>信息项（论文 ${DATA.stats.papers} + 版本 ${DATA.stats.releases}）</div>` +
@@ -207,12 +221,19 @@ allChip.onclick = () => { state.lines.clear();
   render(); };
 chips.prepend(allChip);
 
+const domSel = document.getElementById("dom");
+Object.entries(DOMAIN).forEach(([k, name]) => {
+  const o = document.createElement("option"); o.value = k; o.textContent = name;
+  domSel.appendChild(o);
+});
+domSel.onchange = e => { state.dom = e.target.value; render(); };
 document.getElementById("q").oninput = e => { state.q = e.target.value.toLowerCase(); render(); };
 document.getElementById("rel").onchange = e => { state.rel = e.target.value; render(); };
 document.getElementById("dec").onchange = e => { state.dec = e.target.value; render(); };
 window.filterEnt = ref => { state.ent = state.ent === ref ? "" : ref; render(); };
 
 function match(it) {
+  if (state.dom && it.domain !== state.dom) return false;
   if (state.lines.size && !it.lines.some(l => state.lines.has(l))) return false;
   if (state.rel && it.relevance !== state.rel) return false;
   if (state.dec && it.decision !== state.dec) return false;
@@ -239,9 +260,12 @@ function card(it) {
     .join("");
   const cls = it.manual ? "card manual" : (it.relevance === "high" ? "card top" : "card");
   const lines = it.lines.map(l => LINE[l] || l).join(" / ") || "未分类";
+  const domLabel = it.domain && it.domain !== "video_image_coding"
+    ? `<span class="badge b-dom">${DOMAIN[it.domain] || it.domain}</span>` : "";
   return `<div class="${cls}" id="${it.id}">
     <div class="meta"><span>${it.published}</span>
       ${it.type === "repo_release" ? '<span class="badge b-rel">版本动态</span>' : ""}
+      ${domLabel}
       <span class="badge b-${it.relevance}">${REL_ZH[it.relevance] || it.relevance}</span>
       <span class="badge ${it.decision === "deep_read" ? "b-deep" : "b-sum"}">${DEC_ZH[it.decision] || it.decision}</span>
       <span>${lines}</span></div>
