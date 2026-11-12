@@ -1,0 +1,58 @@
+id: repo_release:github:vvdec-v3.2.1
+kind: release
+status: pending
+score: 3
+matched:
+- ref: impl:VVdec
+  count: 1
+  weight: 3
+meta:
+  repo: fraunhoferhhi/vvdec
+  tag: v3.2.1
+  name: vvdec-3.2.1
+  prerelease: false
+  published: '2026-10-07'
+  url: https://github.com/fraunhoferhhi/vvdec/releases/tag/v3.2.1
+  notes: 'No API changes.
+
+
+    Security fixes:
+
+    - GHSA-52ww-pw96-mgcf: Use-after-free of ALF APS parameter sets when an aps_id is redefined
+
+    - GHSA-f464-2gch-9wj8: Use-after-free of sub-picture border-extension task parameters
+
+    - GHSA-h6mq-3rv5-2v7m: Heap out-of-bounds read and heap disclosure via nested buffering-period SEI
+
+    - GHSA-6fg2-jjxj-rp37: Untrusted pointer dereference via out-of-bounds reference picture list index
+
+    - GHSA-w829-5g45-5g7q: Integer overflow on unbounded SPS picture dimensions leads to heap buffer overflow
+    in picture allocation
+
+
+    Conformance fixes:
+
+    - trim trailing zeros from all NAL units
+
+
+    Other changes:
+
+    - fix further memory-safety issues (out-of-bounds reads, leaks, double free) triggered by broken bitstreams
+
+    - reject more invalid bitstreams: overlapping or incomplete slice coverage of a picture, out-of-range
+    `sps_num_subpics_minus1`, bit depths above 10
+
+    - fix an infinite loop in single-threaded mode and a hang on incompletely coded pictures
+
+    - fix exceptions escaping from destructors
+
+    - fix y4m color tag for monochrome output
+
+    - fix `make write-input-bitstream` option passing
+
+    - check `elf_aux_info()` return value when reading HWCAP on BSD
+
+    - add ARM NEON implementations for dequantization, chroma angular intra prediction and inverse LFNST
+
+    - some general code cleanup'
+fetched: '2026-11-12'

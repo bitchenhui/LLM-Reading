@@ -1,0 +1,24 @@
+id: repo_release:github:vvenc-v1.12.0
+kind: release
+status: pending
+score: 4
+matched:
+- ref: impl:VVenC
+  count: 1
+  weight: 3
+- ref: concept:QP
+  count: 1
+  weight: 1
+meta:
+  repo: fraunhoferhhi/vvenc
+  tag: v1.12.0
+  name: vvenc-v1.12.0
+  prerelease: false
+  published: '2024-06-27'
+  url: https://github.com/fraunhoferhhi/vvenc/releases/tag/v1.12.0
+  notes: "- Added capped constant quality mode (CQF), enabled when setting fixed QP with QPA and a maximal\
+    \ rate constraint\n- Added support for monochrome video in the simple app\n- Added automatic setting\
+    \ of multi-threading options to improve scaling\n  - will change results depending on the number of\
+    \ threads (on per default in the simple app, off in FF-app)\n  - can be disabled using the `mtprofile`\
+    \ option\n- Minor speedups to the faster preset (~5%)"
+fetched: '2026-11-12'

@@ -1,0 +1,143 @@
+id: repo_release:github:kvazaar-v2.3.2
+kind: release
+status: pending
+score: 7
+matched:
+- ref: codec:HEVC
+  count: 1
+  weight: 3
+- ref: impl:kvazaar
+  count: 1
+  weight: 3
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+meta:
+  repo: ultravideo/kvazaar
+  tag: v2.3.2
+  name: v2.3.2
+  prerelease: false
+  published: '2025-09-17'
+  url: https://github.com/ultravideo/kvazaar/releases/tag/v2.3.2
+  notes: '## Features
+
+
+    There are no major new features, but several fixes, most notably to 10 bit encoding and cost calculation
+    for smp and amp blocks. Due to the fixes to amp cost calculation, amp is now enabled on `veryslow`
+    preset.
+
+
+    Impact of fixes on the old veryslow preset
+
+    | Sequences| BD-BR (PSNR) | BD-BR (SSIM) | Speed |
+
+    |------------|--------------------------|--------------------------|-----------------------------|
+
+    | hevc-A     | -1.2 %                  | -1.4 %                  | 0.96×                       |
+
+    | hevc-B     | -1.4 %                  | -1.6 %                  | 0.97×                       |
+
+    | hevc-C     | -1.2 %                  | -1.4 %                  | 0.97×                       |
+
+    | hevc-D     | -1.3 %                  | -1.6 %                  | 0.98×                       |
+
+    | hevc-E     | -0.9 %                  | -1.0 %                  | 1.00×                       |
+
+    | hevc-F     | -1.1 %                  | -1.4 %                  | 0.98×                       |
+
+    | **Overall**|**-1.2 %**                  | **-1.4 %**                  | **0.98×**                       |
+
+
+    Veryslow of v2.3.1 vs v2.3.2
+
+    | Sequences| BD-BR (PSNR) | BD-BR (SSIM) | Speed |
+
+    |--------------|--------------------------|--------------------------|-----------------------------|
+
+    | hevc-A       | -3.1 %                  | -3.5 %                  | 0.69×                       |
+
+    | hevc-B       | -3.0 %                  | -3.2 %                  | 0.72×                       |
+
+    | hevc-C       | -2.9 %                  | -3.3 %                  | 0.78×                       |
+
+    | hevc-D       | -2.9 %                  | -3.3 %                  | 0.82×                       |
+
+    | hevc-E       | -2.3 %                  | -2.1 %                  | 0.83×                       |
+
+    | hevc-F       | -2.4 %                  | -2.8 %                  | 0.79×                       |
+
+    | **Overall**| **-2.7 %**                  | **-3.0 %**                  | **0.77×**                       |
+
+
+    To other presets the impact of fixes is smaller
+
+
+    ## Fixes
+
+    * Several fixes to 10 bit encoding
+
+    * Fix SATD calculation 36f7752d515aba01b9ba7f0a1d1fab6cb9d647a9
+
+    * Ensure proper stack size 1eeccb3c98da95601cff74849d24a14e98f4c56b
+
+    * Fix typing for threadwrapper a7aeb2361f8d1e5dc575d05c9ab563f47bdcd235
+
+    * Separate .pdb files for exe and library ccc643c8d2c1b5950c3bbd3e0f9ac50d7997acc9
+
+    * Fix y4m reading 4aeeba73e151d9c9878961f4de11ccbb5aaf29fd b8d918548d8928500e2f9f9516865c10a91993d4
+
+    * Update minimum CMake version 3393d56002237c780034be495c5346151268b742
+
+    * Fix `--no-early-skip` d1e11d84570bcc9c813ac251b4e764b5790b6852
+
+    * Fix lossless incorrectly selecting skip d1e11d84570bcc9c813ac251b4e764b5790b6852
+
+    * Rate control improvements 526c8db10e263719532afe6b0d01cf570a5d1b20 999c51252e4d6d3e70e0eab1efa9b71bd6345904
+
+    * Fix bit cost calculation for tr splits and smp 6957ceab9c104abcb529d3883bbd8221401dc6af
+
+    * Update the default configuration to match the medium preset 3eed14d590216a3aa544f0b0b09d2449021b9693
+
+
+    ## External contributions
+
+    * add missing files in distribution for compilation with cmake by @vtorri in https://github.com/ultravideo/kvazaar/pull/402
+
+    * encmain.c: guard WINVER and _WIN32_WINNT macros by @vtorri in https://github.com/ultravideo/kvazaar/pull/405
+
+    * ax_pthread/clang: move -pthread to LIBS by @1480c1 in https://github.com/ultravideo/kvazaar/pull/407
+
+    * fix ios build by @trittsv in https://github.com/ultravideo/kvazaar/pull/416
+
+    * fix android build by @trittsv in https://github.com/ultravideo/kvazaar/pull/415
+
+    * Fix Windows ARM64 builds when using MSVC by @anthony-linaro in https://github.com/ultravideo/kvazaar/pull/419
+
+    * Fix emscripten build by @meowtec in https://github.com/ultravideo/kvazaar/pull/422
+
+    * Add BSDs to exclusion list for compiler flag with cmake by @rhelmot in https://github.com/ultravideo/kvazaar/pull/426
+
+    * Avoid double free of roi.file_path by @bart-kroon in https://github.com/ultravideo/kvazaar/pull/428
+
+    * Fix passing too many arguments to "init_test_strategies". by @fancycode in https://github.com/ultravideo/kvazaar/pull/440
+
+
+    ## New Contributors
+
+    * @vtorri made their first contribution in https://github.com/ultravideo/kvazaar/pull/402
+
+    * @1480c1 made their first contribution in https://github.com/ultravideo/kvazaar/pull/407
+
+    * @trittsv made their first contribution in https://github.com/ultravideo/kvazaar/pull/416
+
+    * @anthony-linaro made their first contribution in https://github.com/ultravideo/kvazaar/pull/419
+
+    * @meowtec made their first contribution in https://github.com/ultravideo/kvazaar/pull/422
+
+    * @rhelmot made their first contribution in https://github.com/ultravideo/kvazaar/pull/426
+
+    * @bart-kroon made their first contribution in https://github.com/ultravideo/kvazaar/pull/428
+
+
+    **Full Changelog**: https://github.com/ultravideo/kvazaar/compare/v2.3.1...v2.3.2'
+fetched: '2026-11-12'

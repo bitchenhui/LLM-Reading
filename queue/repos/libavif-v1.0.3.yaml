@@ -1,0 +1,19 @@
+id: repo_release:github:libavif-v1.0.3
+kind: release
+status: pending
+score: 3
+matched:
+- ref: impl:libavif
+  count: 1
+  weight: 3
+meta:
+  repo: AOMediaCodec/libavif
+  tag: v1.0.3
+  name: v1.0.3
+  prerelease: false
+  published: '2023-12-04'
+  url: https://github.com/AOMediaCodec/libavif/releases/tag/v1.0.3
+  notes: "## [1.0.3] - 2023-12-03\n\n### Changed\n* Rewrite the fix for memory errors reported in crbug.com/1501770.\n\
+    * Fix memory errors reported in crbug.com/1504792 by [Fudan\n  University](https://secsys.fudan.edu.cn/).\n\
+    * src/reformat.c: Allocate the threadData array directly."
+fetched: '2026-11-12'

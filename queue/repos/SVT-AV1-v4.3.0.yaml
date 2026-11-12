@@ -1,0 +1,72 @@
+id: repo_release:github:SVT-AV1-v4.3.0
+kind: release
+status: reviewed
+score: 11
+matched:
+- ref: impl:SVT-AV1
+  count: 1
+  weight: 3
+- ref: codec:AV1
+  count: 1
+  weight: 3
+- ref: concept:GOP
+  count: 1
+  weight: 1
+- ref: concept:LTR
+  count: 1
+  weight: 1
+- ref: concept:QP
+  count: 1
+  weight: 1
+- ref: metric:VMAF
+  count: 1
+  weight: 1
+- ref: org:Apple
+  count: 1
+  weight: 1
+meta:
+  repo: AOMediaCodec/SVT-AV1
+  tag: v4.3.0
+  name: v4.3.0
+  prerelease: false
+  published: '2026-11-02'
+  url: https://github.com/AOMediaCodec/SVT-AV1/releases/tag/v4.3.0
+  notes: "## \\[4.3.0\\] - 2026-11-01\n\n\nEncoder (general)\n\n* Improved the quality vs. speed tradeoffs\
+    \ across all presets:\n  * \\~5-8% improvement in cycle efficiency at similar quality levels\n  *\
+    \ \\~10-11% run time reduction in multi-threaded mode\n* Speed optimizations in MD pruning, RDOQ and\
+    \ coefficient cost, MV cost and subpel search, loop filter parameter derivation, and block copies\n\
+    * Run anti-aliasing-aware screen content detection only on I-frames in multi-threaded mode\n\nVOD\
+    \ / Random Access / Still Image\n\n* Added experimental `--fast-decode 3` (`ENABLE_FAST_DECODE_3`\
+    \ CMake option): a decode-speed level for still images, with decoder-complexity terms in the mode\
+    \ decision RD cost\n* Added timed film grain tables (`--fgs-table`) and per-picture film grain parameters\
+    \ through a new `FILM_GRAIN_EVENT` API\n* Lossless coding fixes and speedups (recode, RDOQ, light\
+    \ PD1)\n* Fixed bitrate inversion at fractional CRF/QP above 63\n\nRTC / Low Delay\n\n* Added low-delay\
+    \ tile parallelism\n* Added opt-in CBR pre-encode frame skipping (`max_allowed_consecutive_frames_skips`,\
+    \ `EB_NoErrorFrameSkipped`)\n* Added screen content tools for RTC: IntraBC on I-frames and palette\
+    \ on intra blocks of inter frames\n* Signal AV1 `frame_id` for application-managed LTR streams, and\
+    \ keep LTR anchors in a dedicated half of the DPB\n* Added `max_hierarchical_levels` to size buffer\
+    \ pools for runtime mini-GOP size changes\n* Allow re-encoding of key frames and on max frame size\
+    \ conditions\n* RTC preset retuning (hierarchical levels 1-2, CDEF strength selection, ME segmentation\
+    \ right-sizing at 540p and below)\n\nBuild\n\n* Added `MOBILE_BUILD` CMake option (`build.sh --mobile-build`):\
+    \ one 8-bit library for RTC, VOD and AVIF at a fraction of the default binary size\n* Added `CONFIG_ENABLE_*`\
+    \ switches to compile out unused coding tools, and further binary size reduction for RTC and minimal\
+    \ builds (const-folding, dead-code stripping, PGO build script)\n* Reduced stack usage by hoisting\
+    \ large buffers off the stack\n\nx86\n\n* Added native 8-bit CDEF kernels (AVX2, SSE4.1) and int16\
+    \ lowbd forward transforms (AVX2, AVX-512)\n* Added an SSE4.1 tier for intra predictors, CfL, SAD,\
+    \ Hadamard, palette, and transform kernels\n* Optimized quantize, memcpy, block copy, full distortion,\
+    \ and sub-pixel variance kernels\n\nArm\n\n* Added Neon kernels for fwht4x4, highbd variance, k-means,\
+    \ OBMC weighted prediction, down2_symeven, and interpolate_core\n* Added Neon and SVE2 Hadamard SATD\
+    \ and psy distortion kernels\n* Optimized VMAF tune, variance, and sub-pixel variance kernels\n* Only\
+    \ read `MIDR_EL1` where the kernel advertises it\n\nBug fixes and documentation\n\n* Fixed multi-instance\
+    \ and TSan data races, and nondeterministic output with `--enable-overlays 1` or `--lookahead 0`\n\
+    * Fixed a low-delay deadlock, an Apple teardown SIGTRAP, and single-core encoding without `--lp`\n\
+    * Fixed out-of-bounds reads, a high bit depth Hadamard overflow, UBSan findings, and NaN/overflow\
+    \ in film grain and temporal filtering noise estimation\n* Fixed hidden-frame T.35 metadata output\
+    \ and recon output changing the deblocking level search\n* Fixed the `--tier` parameter being ignored\
+    \ when writing the sequence header\n* Fixed an encoder/decoder mismatch when quantization matrices\
+    \ were enabled on frames coded losslessly\n* Stricter configuration validation (switch frames with\
+    \ all-intra, forward key frames with CBR, RTC build settings)\n* Fixed Visual Studio 2026 and Windows\
+    \ Server 2016 issues\n* General code cleanup, CI and test improvements, and reformatting with clang-format\
+    \ 22"
+fetched: '2026-11-12'
+llm_decision: summary_only

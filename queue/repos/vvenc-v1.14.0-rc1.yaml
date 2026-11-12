@@ -1,0 +1,33 @@
+id: repo_release:github:vvenc-v1.14.0-rc1
+kind: release
+status: pending
+score: 3
+matched:
+- ref: impl:VVenC
+  count: 1
+  weight: 3
+meta:
+  repo: fraunhoferhhi/vvenc
+  tag: v1.14.0-rc1
+  name: vvenc-v1.14.0-rc1
+  prerelease: true
+  published: '2026-01-12'
+  url: https://github.com/fraunhoferhhi/vvenc/releases/tag/v1.14.0-rc1
+  notes: '* change cts and dts in vvenc.h to signed integers
+
+    * enable VUI automatically, when sensible
+
+    * many ARM SIMD optimizations (NEON & SVE) and enable SVE by default if supported
+
+    * remove requirement for nlohmann_json when linking static libvvenc
+
+    * update bundled nlohmann_json to v3.12.0
+
+    * allow setting colour range in vvencapp/vvencFFapp
+
+    * deprecate LMCS (will be removed in the future)
+
+    * improve and speed up unit test framework
+
+    * various smaller bug fixes and cleanups'
+fetched: '2026-11-12'

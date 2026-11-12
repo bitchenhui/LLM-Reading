@@ -1,0 +1,33 @@
+id: repo_release:github:libavif-v1.4.2
+kind: release
+status: pending
+score: 4
+matched:
+- ref: impl:libavif
+  count: 1
+  weight: 3
+- ref: org:AOMedia
+  count: 1
+  weight: 1
+meta:
+  repo: AOMediaCodec/libavif
+  tag: v1.4.2
+  name: v1.4.2
+  prerelease: false
+  published: '2026-05-26'
+  url: https://github.com/AOMediaCodec/libavif/releases/tag/v1.4.2
+  notes: "## [1.4.2] - 2026-05-26\n\n### Added since 1.4.1\n\n* Add --jobs flag to avifgainmaputil to\
+    \ use multiple worker threads when\n  reading/writing AVIF files.\n\n### Changed since 1.4.1\n\n*\
+    \ Require C11 for compilation. Public headers will remain C99.\n* Add --jobs flag to avifgainmaputil\
+    \ and enable auto tiling.\n* Use AOM_TUNE_IQ for layered image inter-frame encoding.\n* Update aom.cmd/LocalAom.cmake:\
+    \ v3.14.1\n* Update LocalAvm.cmake: research-v15.0.0\n* Update libjpeg.cmd/LocalJpeg.cmake: 3.1.4.1\n\
+    * Update libxml2.cmd/LocalLibXml2.cmake: v2.15.3\n* Update libyuv.cmd/LocalLibyuv.cmake: 644251f25\
+    \ (1924)\n* Update svt.cmd/svt.sh/LocalSvt.cmake: v4.1.0\n* Update zlibpng.cmd/LocalZlibpng.cmake:\
+    \ libpng 1.6.58\n* Fix memory leak of altICC if avifDecoderFindGainMapItem returns early.\n* Avoid\
+    \ MT loop restoration crash in libaom < 3.13.3\n* Fix decoding layered image with multiple scaled\
+    \ alpha layers\n* Fix NaN bypass of AVIF_CLAMP in gain map tone mapping (use fminf/fmaxf)\n* Fix null\
+    \ pointer dereference in avifImageCopy() when avifImageCreateEmpty()\n  fails to allocate the destination\
+    \ gain map image.\n* avifenc: reject mismatched --depth for Y4M input\n* Use libaom AOMD_SET_FRAME_SIZE_LIMIT\
+    \ if available\n* Fix bug in transfer function 11 (used for gain map creation/tone mapping)\n\n[1.4.2]:\
+    \ https://github.com/AOMediaCodec/libavif/compare/v1.4.1...v1.4.2"
+fetched: '2026-11-12'

@@ -1,0 +1,42 @@
+id: repo_release:github:SVT-AV1-v3.0.1
+kind: release
+status: reviewed
+score: 9
+matched:
+- ref: impl:SVT-AV1
+  count: 1
+  weight: 3
+- ref: impl:FFmpeg
+  count: 1
+  weight: 3
+- ref: impl:libavif
+  count: 1
+  weight: 3
+meta:
+  repo: AOMediaCodec/SVT-AV1
+  tag: v3.0.1
+  name: v3.0.1
+  prerelease: false
+  published: '2026-10-25'
+  url: https://github.com/AOMediaCodec/SVT-AV1/releases/tag/v3.0.1
+  notes: '## [3.0.1] - 2025-3-10
+
+
+    **Encoder cleanup and bug fixes**
+
+    - Further Arm improvements along with fixing arm vs x86 output mismatches (!2393, !2399, !2400, #2247)
+
+    - Fixed memory leak in compute_global_motion (!2395, #2248)
+
+    - Fixed integer overflow in subpel search to prevent an assertion (!2396, #2250)
+
+    - Clean up some undefined behavior (!2398)
+
+    - API change fixes now available in FFmpeg and GStreamer (#2249, #2252)
+
+
+    **Known issue**
+
+    - Hard to reproduce SIGTRAP being raised on macOS m1 with libavif''s avifsvttest (#2251)'
+fetched: '2026-11-12'
+llm_decision: summary_only

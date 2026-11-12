@@ -1,0 +1,36 @@
+id: repo_release:github:vvdec-v3.1.0
+kind: release
+status: pending
+score: 3
+matched:
+- ref: impl:VVdec
+  count: 1
+  weight: 3
+meta:
+  repo: fraunhoferhhi/vvdec
+  tag: v3.1.0
+  name: vvdec-3.1.0
+  prerelease: false
+  published: '2025-11-18'
+  url: https://github.com/fraunhoferhhi/vvdec/releases/tag/v3.1.0
+  notes: 'Backward compatible API changes:
+
+    * Add opaque userData pointer to input access units and output frames
+
+    * Expose max reorder pics on vvdecSeqInfo
+
+
+    Other changes:
+
+    * Add Loongarch support through simd-everywhere
+
+    * SIMD optimizations for ARM
+
+    * Optimize scaling list dequantization
+
+    * Packed YUV output support in vvdecapp
+
+    * Add unit test framework
+
+    * Some threading and other bug fixes'
+fetched: '2026-11-12'

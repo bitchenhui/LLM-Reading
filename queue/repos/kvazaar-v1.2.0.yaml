@@ -1,0 +1,181 @@
+id: repo_release:github:kvazaar-v1.2.0
+kind: release
+status: reviewed
+score: 13
+matched:
+- ref: codec:HEVC
+  count: 1
+  weight: 3
+- ref: impl:FFmpeg
+  count: 1
+  weight: 3
+- ref: impl:kvazaar
+  count: 1
+  weight: 3
+- ref: concept:GOP
+  count: 1
+  weight: 1
+- ref: concept:QP
+  count: 1
+  weight: 1
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+- ref: org:Intel
+  count: 1
+  weight: 1
+meta:
+  repo: ultravideo/kvazaar
+  tag: v1.2.0
+  name: v1.2.0
+  prerelease: false
+  published: '2017-11-17'
+  url: https://github.com/ultravideo/kvazaar/releases/tag/v1.2.0
+  notes: 'We are happy to release Kvazaar version 1.2. Since the last version, Kvazaar has obtained significant
+    speedups at all presets and the compression efficiency has improved for the fastest presets. Please
+    find the complete list of changes below.
+
+
+    ### Features
+
+    - Intra prediction mode encryption with `--crypto=intra_pred_modes` (2b8ce5e47c2baa489466b31c0bc8aeab4ad07563)
+
+    - Adaptive QP for 360° video with `--erp-aqp` (26adef44929e5722a9dbec537b662a3d683d1f03)
+
+    - New selection algorithm for `--owf=auto` and `--threads=auto` (8c4a3473a85152d692d43eaa5e5f0b9fda73738e)
+
+    - Added an option to set the encryption key using `--key` (2e130912cbdf8ce19b612c2f67bbcb551ec8a415)
+
+    - Added an option to limit SAO to band offset or edge offset only with `--sao=band` and `--sao=edge`
+    (8674c0f5eeee36f758e8838c898190e74c96d362)
+
+
+    ### Optimization
+
+    - Reduced number of intra modes checked when using `--rd=2` (2cad3173ecc7b8562bca5a138a560c45e1621a6f)
+
+    - Reduced inter-frame CTU dependencies caused by SAO (050e90dc0506e020bb7591544d3bb7341d2abe40)
+
+    - Changed to a faster calculation for coefficient costs when using `--rd=0` (1ead9c0c39da6ec4868f2c034355378d932732c3)
+
+
+    ### Fixes
+
+    - Fixed long motion vectors not getting clipped (#158, 85e2a40da3b8bee7d8fb6563a935e7117062b90b)
+
+    - Fixed order of pictures in reconstruction debug output when `--gop=8` is used (#101, aae141f2d385dafe314b4143430158314ad74170)
+
+    - Fixed a use-after-free when encoding very few frames with `--gop=8` (#161, 2991962033900806b5ba8f59feabf6fe58a54d58)
+
+    - Fixed a crash when video size is not a multiple of the smallest CU size (2f2405dfe66969d6e411a6c0c4b5b7626d5a9232)
+
+    - Fixed invalid bitstream when QP is too large (382636de55d36a34fd05475e506325235fe55ba6)
+
+    - Fixed a race condition causing a deadlock (5f8e17d4bac10731069b6904c7ed4f7e590ec8af)
+
+    - Fixed a memory leak in encryption (8654b48186d04011011adf03a1f7aa222f49f891)
+
+    - Fixed I-frames not being IRAP frames when using GOP (00c9f52bd4f6c7ccbf20e62bfd1e027d277da20d, 841597e12328656e2579b573f2e6c1f2e8e18809)
+
+    - Fixed computing inter and intra costs with different metrics (afc13f1974d86a6e85196eabcde1980957b6c6a3)
+
+    - Fixed reliance on undefined behavior (b41f0fa8e875876baa234471b780b25fc22fc64d, 924cf857ec29ecdb262fd415d1c77796dc5c73a3)
+
+    - Fixed `--mv-constraint=frametilemargin` constraining motion vectors too much (409d2114f0c92e7d174f83dc96cac1c14d94e528)
+
+    - Fixed using `--bipred` with `--tmvp` (#160, 9974380cdd7398af885f4f0b599cc58cdd643b0e)
+
+
+    ### User Interface
+
+    - Changed type of `kvz_config.roi.dqps` from `uint8_t*` to `int8_t`. Delta QP values for `--roi` may
+    now be negative. (79cb3a2fd32b56d5358c10dba8bd75b42c9d05fd)
+
+    - Changed PSNR display format (20d6444f07d1c2fa0cd95f3f3a1751b2877f5870)
+
+
+    ### Building
+
+    - Default to no `-Werror`. Run `configure` with `--enable-werror` to enable it. (033bc6bc45b0c6b200a4227208d2fa6263e09166)
+
+    - `make check` now runs valgrind tests that used to only run on Travis. Programs `ffmpeg`, `valgrind`
+    and `TAppDecoderStatic` should be found from `$PATH` (6bbe5e10cdaa71fdec4530852ef99c5203100520)
+
+
+    ### Refactoring
+
+    - Removed duplicate code in inter MVP and merge candidate selection (4fb0783cb07914404a93c8d10bfc8f22a1a819d7)
+
+    - Removed duplicate code in intra reconstruction for luma and chroma (e944416ae61c0b54824c444357579ae3cebd9500)
+
+    - Changed functions for writing the CU tree bitstream to use luma pixel coordinates (610c91b0c56d652bd7c39c9c78d4706a8ccba882,
+    f5eef7f33c4084309143c33f84901d7aaad0c4d0)
+
+    - Removed duplicate code in functions for writing intra CU bitstream with and without encryption (525a5180ff8a95991b0d6c905699fd28c198a8ea)
+
+    - Removed duplicate code in helper functions in `search.c` (2c734760bc9f7f751775878c6250aa73ca2dde59)
+
+    - Gathered function parameters for inter search functions into a single struct (2fa3d829462bed21631f278e45de6fac01f88353)
+
+
+    ### BD-Bitrate
+
+
+    Average BD-Bitrate compared with v1.1:
+
+
+    | Class | 0-uf | 1-sf | 2-vf | 3-fr | 4-f | 5-m | 6-s | 7-sr | 8-vs |
+
+    | --- | --: | --: | --: | --: | --: | --: | --: | --: | --: |
+
+    | hevc-A | -15.71&nbsp;% | -6.68&nbsp;% | -4.66&nbsp;% | -0.89&nbsp;% | -1.11&nbsp;% | -0.54&nbsp;%
+    |+0.04&nbsp;% | -0.02&nbsp;% | +0.32&nbsp;% |
+
+    | hevc-B | -19.04&nbsp;% | -8.15&nbsp;% | -6.92&nbsp;% | -1.26&nbsp;% | -1.48&nbsp;% | -0.65&nbsp;%
+    | -0.33&nbsp;% | -0.33&nbsp;% | -0.07&nbsp;% |
+
+    | hevc-C | -20.39&nbsp;% | -8.54&nbsp;% | -5.01&nbsp;% | -0.55&nbsp;% | -0.72&nbsp;% | -0.44&nbsp;%
+    |+0.03&nbsp;% | -0.00&nbsp;% | +0.23&nbsp;% |
+
+    | hevc-D | -13.24&nbsp;% | -5.15&nbsp;% | -2.54&nbsp;% | -0.33&nbsp;% | -0.51&nbsp;% | -0.32&nbsp;%
+    | -0.10&nbsp;% | -0.04&nbsp;% | +0.13&nbsp;% |
+
+    | hevc-E | -4.37&nbsp;% | -3.31&nbsp;% | -1.90&nbsp;% | -0.52&nbsp;% | -1.10&nbsp;% | -0.68&nbsp;%
+    | -0.74&nbsp;% | -0.86&nbsp;% | -0.78&nbsp;% |
+
+    | hevc-F | -12.42&nbsp;% | -6.15&nbsp;% | -5.25&nbsp;% |+0.04&nbsp;% |+0.24&nbsp;% |+0.25&nbsp;% |+0.32&nbsp;%
+    | +0.70&nbsp;% | +0.90&nbsp;% |
+
+    | | | | | | | | | | |
+
+    | Total | -14.80&nbsp;% | -6.59&nbsp;% | -4.68&nbsp;% | -0.60&nbsp;% | -0.78&nbsp;% | -0.39&nbsp;%
+    | -0.13&nbsp;% | -0.08&nbsp;% | +0.14&nbsp;% |
+
+
+    ### Speedup
+
+
+    Average speedup compared with v1.1 on an Intel Core i7-4770 machine:
+
+
+    | Class | 0-uf | 1-sf | 2-vf | 3-fr | 4-f | 5-m | 6-s | 7-sr | 8-vs |
+
+    | --- | --: | --: | --: | --: | --: | --: | --: | --: | --: |
+
+    | hevc-A | x1.07 | x1.06 | x1.10 | x1.10 | x1.09 | x1.11 | x1.10 | x1.11 | x1.10 |
+
+    | hevc-B | x1.06 | x1.07 | x1.09 | x1.11 | x1.09 | x1.13 | x1.12 | x1.13 | x1.14 |
+
+    | hevc-C | x1.22 | x1.27 | x1.32 | x1.35 | x1.33 | x1.37 | x1.39 | x1.42 | x1.41 |
+
+    | hevc-D | x1.34 | x1.58 | x1.64 | x1.60 | x1.58 | x1.54 | x1.55 | x1.57 | x1.54 |
+
+    | hevc-E | x1.20 | x1.17 | x1.16 | x1.18 | x1.16 | x1.17 | x1.16 | x1.20 | x1.19 |
+
+    | hevc-F | x1.25 | x1.20 | x1.20 | x1.23 | x1.20 | x1.24 | x1.24 | x1.27 | x1.27 |
+
+    | | | | | | | | | | |
+
+    | Total | x1.19 | x1.22 | x1.24 | x1.26 | x1.24 | x1.26 | x1.26 | x1.28 | x1.28 |'
+fetched: '2026-11-12'
+llm_decision: summary_only

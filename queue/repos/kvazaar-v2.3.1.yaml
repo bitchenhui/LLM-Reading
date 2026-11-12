@@ -1,0 +1,30 @@
+id: repo_release:github:kvazaar-v2.3.1
+kind: release
+status: pending
+score: 3
+matched:
+- ref: impl:kvazaar
+  count: 1
+  weight: 3
+meta:
+  repo: ultravideo/kvazaar
+  tag: v2.3.1
+  name: V2.3.1
+  prerelease: false
+  published: '2024-04-10'
+  url: https://github.com/ultravideo/kvazaar/releases/tag/v2.3.1
+  notes: "## Features\n\n* New AVX2 optimizations for intra angular predictions, faster and gets around\
+    \ [a code generation issue with MSVC > 19.36](https://developercommunity.visualstudio.com/t/Compiler-crashes-when-trying-to-compile-/10570391)\n\
+    \n## Fixes\n\n* Several fixes to CMakeLists.txt\n* fix unaligned access on array_checksum_generic8\
+    \ c6f2ba4711d42285636da97b133a7b5aa49c9533\n* fix preset log while enable-logging to false 7424474577cbda309beac2c4d6a071feb5f2f4d4\n\
+    * Include CMakeLists.txt in dist 3b1bcb62755adfd4c3c818838b5d09535198407e\n\n## External contributions\n\
+    * Fix typo in error message. by @fancycode in https://github.com/ultravideo/kvazaar/pull/386\n* Minor\
+    \ cmake fixes by @lgbaldoni and @kmilos in https://github.com/ultravideo/kvazaar/pull/385\n* Ignore\
+    \ \"\\*get_pc_thunk.\\*\" symbols in exported symbols test by @matoro in https://github.com/ultravideo/kvazaar/pull/392\n\
+    * Fixed issue #394 - missing _mm256_storeu2_m128i macro by @supersjgk in https://github.com/ultravideo/kvazaar/pull/395\n\
+    \n## New Contributors\n* @fancycode made their first contribution in https://github.com/ultravideo/kvazaar/pull/386\n\
+    * @lgbaldoni made their first contribution in https://github.com/ultravideo/kvazaar/pull/385\n* @supersjgk\
+    \ made their first contribution in https://github.com/ultravideo/kvazaar/pull/395\n\n## Performance\
+    \ \n\n* With the new AVX2 intra prediction the encoder is 1-5% faster, depending on settings\n\n**Full\
+    \ Changelog**: https://github.com/ultravideo/kvazaar/compare/v2.3.0...v2.3.1"
+fetched: '2026-11-12'

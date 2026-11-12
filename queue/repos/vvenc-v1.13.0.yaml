@@ -1,0 +1,28 @@
+id: repo_release:github:vvenc-v1.13.0
+kind: release
+status: pending
+score: 5
+matched:
+- ref: impl:VVenC
+  count: 1
+  weight: 3
+- ref: concept:GOP
+  count: 1
+  weight: 1
+- ref: concept:QP
+  count: 1
+  weight: 1
+meta:
+  repo: fraunhoferhhi/vvenc
+  tag: v1.13.0
+  name: vvenc-v1.13.0
+  prerelease: false
+  published: '2024-12-13'
+  url: https://github.com/fraunhoferhhi/vvenc/releases/tag/v1.13.0
+  notes: "Over 1.12.1\n* added various ARM optimization (thanks @georges-arm)\n* added a DASH optimized\
+    \ decoder refresh mode (`idr_no_radl`)\n* added a GOP adaptive QP cascade (only for non-QPA case,\
+    \ which already does it on GOP/frame/block level)\n* improved rate control and QPA harmonization,\
+    \ especially for preset fast\n* added experimental film grain analysis\n* memory reductions for presets\
+    \ faster/fast/medium\n* preset tuning\n  * 5% speedup for medium and 2% for slow/slower\n* other improvements,\
+    \ cleanups and fixes\n\nOver 1.13.0-rc1\n* removed gcc_s from link dependencies"
+fetched: '2026-11-12'

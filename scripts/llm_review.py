@@ -49,6 +49,13 @@ INSTRUCTIONS = """你是音视频/图像编码领域信息整合引擎的精度�
 收录基准：视频/图像压缩与编码（标准编码器优化、学习式编码、生成式压缩、INR 表示、
 面向机器的编码、系统部署/跨平台）。纯理论、纯感知实验、与编码无关的应用 → skip。"""
 
+RELEASE_INSTRUCTIONS = """你是音视频/图像编码领域信息引擎的版本动态审阅器。
+对开源编解码器仓库的 GitHub release 判定收录级别并写中文摘要。只输出 JSON 本体。
+
+收录基准：有实质内容（性能/压缩率改进、新特性、标准适配、API 变化、工程里程碑）的
+正式版与 rc → summary_only；重大版本（架构级变化、新标准支持）→ deep_read；
+纯噪声（仅 CI/拼写/打包修复、无内容预发布）→ skip。"""
+
 
 def build_prompt(rec: dict, entities: dict, known_items: list[tuple[str, str]]) -> str:
     meta = rec["meta"]
@@ -86,6 +93,40 @@ arXiv 分类: {', '.join(meta['categories'])}
 }}
 要求：entities 至少 1 条（subject 必须有）；claims 至少 1 条（摘要里有数字就带 metrics，
 value 用字符串原样保留数值与单位，scope 写清锚点/条件；没有可靠数字就纯 statement）。"""
+
+
+def build_release_prompt(rec: dict, entities: dict) -> str:
+    meta = rec["meta"]
+    ent_list = "\n".join(f"  {eid}  [{entities[eid]['type']}]" for eid in
+                         sorted({m["ref"] for m in rec.get("matched", [])} & entities.keys()))
+    notes = meta.get("notes") or "（无说明）"
+    return f"""仓库: {meta['repo']}
+版本: {meta['tag']}{'（预发布）' if meta.get('prerelease') else ''}
+发布日期: {meta['published']}
+Release 标题: {meta['name']}
+Release 说明:
+{notes}
+
+可挂接实体（只能从下列中选择）:
+{ent_list}
+
+角色词表: subject=发布主体 uses=涉及的技术/概念/标准 measured_by=提及指标
+
+输出 JSON：
+{{
+ "decision": "deep_read|summary_only|skip",
+ "relevance": "high|medium|low",
+ "reason": "一句话中文理由",
+ "title_zh": "中文标题（如 VVenC 发布 v1.14.0）",
+ "one_liner_zh": "一句话总结（中文，≤50字）",
+ "abstract_zh": "2-3句版本要点中文摘要",
+ "research_lines": [],
+ "entities": [{{"ref": "…", "role": "subject"}}],
+ "claims": [{{"statement": "版本要点论断", "confidence": "reported", "metrics": []}}],
+ "relations": []
+}}
+claims 从 release notes 提取有信息量的要点（性能数字/新特性/兼容性变化）；
+notes 无实质内容时 claims 只留一条「发布该版本」。"""
 
 
 # ---------- LLM 客户端（Responses / chat-completions 自适应） ----------
@@ -215,7 +256,8 @@ LINE_MARKERS: list[tuple[str, set[str]]] = [
     ("learned_codec", {"impl:DCVC-RT", "impl:DCVC-FM", "impl:TIC", "impl:TinyLIC", "impl:TCM",
                        "concept:Hyperprior", "concept:EntropyModel", "impl:MoECodec"}),
     ("traditional_codec_opt", {"impl:VVenC", "impl:VTM", "impl:HM", "impl:x264", "impl:x265",
-                               "impl:SVT-AV1", "impl:HEVC-QSV", "concept:QP", "concept:RDO",
+                               "impl:SVT-AV1", "impl:HEVC-QSV", "impl:VVdec", "impl:dav1d",
+                               "impl:libavif", "impl:kvazaar", "concept:QP", "concept:RDO",
                                "concept:MMVD", "concept:LTR"}),
 ]
 
@@ -312,6 +354,33 @@ def build_item(rec: dict, s: dict, today: str, model: str) -> dict:
     return item
 
 
+def build_release_item(rec: dict, s: dict, today: str, model: str) -> dict:
+    meta = rec["meta"]
+    item = {
+        "id": rec["id"],
+        "type": "repo_release",
+        "title": meta.get("name") or f"{meta['repo'].split('/')[-1]} {meta['tag']}",
+        "research_lines": s["research_lines"],
+        "source": {
+            "channel": "github",
+            "external_id": f"{meta['repo']}@{meta['tag']}",
+            "url": meta["url"],
+        },
+        "time": {"published": meta.get("published") or today, "collected": today},
+        "entities": s["entities"],
+        "claims": s["claims"],
+        "summaries": {"one_liner_zh": s["one_liner"], "abstract_zh": s["abstract_zh"]},
+        "assessment": {
+            "relevance": s["relevance"], "decision": s["decision"],
+            "reason": s["reason"], "reviewer": f"{model}(llm_review)",
+        },
+        "provenance": {"created": today, "actor": "pipeline-v0", "pipeline": "llm_review"},
+    }
+    if s["title_zh"]:
+        item["title_zh"] = s["title_zh"]
+    return item
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--limit", type=int, default=0, help="本次最多处理条数（0=全部）")
@@ -340,15 +409,16 @@ def main() -> int:
         for e in yaml.safe_load(open(p, encoding="utf-8")):
             entities[e["id"]] = e
     known_items = []
-    for p in sorted(ITEMS.glob("*.yaml")):
+    for p in sorted((KB / "items").glob("*/*.yaml")):
         d = yaml.safe_load(open(p, encoding="utf-8"))
         known_items.append((d["id"], d["title"]))
     known_ids = {i for i, _ in known_items}
 
     pendings = []
-    for p in sorted(QUEUE.glob("*.yaml")):
+    for p in sorted((ROOT / "queue").glob("*/*.yaml")):
         d = yaml.safe_load(open(p, encoding="utf-8"))
         if d.get("status") == "pending":
+            d["_kind"] = d.get("kind", "paper") if p.parent.name == "repos" else "paper"
             pendings.append(d)
     pendings.sort(key=lambda d: -d.get("score", 0))
     if args.limit:
@@ -358,19 +428,29 @@ def main() -> int:
     today = date.today().isoformat()
     n_item = n_skip = n_fail = 0
     for rec in pendings:
-        title = rec["meta"]["title"][:60]
-        print(f"[{rec['id'].split(':')[-1]}] score={rec.get('score')} {title}")
+        is_release = rec["_kind"] == "release"
+        label = rec["meta"]["repo"] + " " + rec["meta"]["tag"] if is_release \
+            else rec["meta"]["title"][:60]
+        print(f"[{rec['id'].split(':')[-1]}] score={rec.get('score')} {label}")
         try:
-            raw = llm.chat(build_prompt(rec, entities, known_items))
+            if is_release:
+                raw = llm.chat(build_release_prompt(rec, entities),
+                               instructions=RELEASE_INSTRUCTIONS)
+            else:
+                raw = llm.chat(build_prompt(rec, entities, known_items))
             out = parse_llm_json(raw)
         except Exception as e:  # noqa: BLE001
             n_fail += 1
             print(f"    ✗ 调用/解析失败: {e}")
             continue
         s = sanitize(out, rec, entities, known_ids, today)
-        qpath = QUEUE / f"{rec['id'].split(':')[-1]}.yaml"
+        stem = f"{rec['id'].split(':')[-1]}.yaml"
+        qpath = (ROOT / "queue" / "repos" / stem) if is_release else (QUEUE / stem)
+        out_dir = KB / "items" / ("releases" if is_release else "papers")
+        out_dir.mkdir(parents=True, exist_ok=True)
         if s is None:
             n_skip += 1
+            rec.pop("_kind", None)
             rec["status"] = "skipped_by_llm"
             rec["llm_decision"] = out.get("decision", "skip")
             rec["llm_reason"] = str(out.get("reason", ""))[:200]
@@ -380,11 +460,15 @@ def main() -> int:
                                allow_unicode=True, sort_keys=False, width=100)
             continue
         n_item += 1
-        item = build_item(rec, s, today, llm.models["review"])
+        if is_release:
+            item = build_release_item(rec, s, today, llm.models["review"])
+        else:
+            item = build_item(rec, s, today, llm.models["review"])
         print(f"    → {s['decision']} / {s['relevance']}｜{s['one_liner'][:50]}")
         if not args.dry_run:
-            yaml.safe_dump(item, open(ITEMS / f"{rec['id'].split(':')[-1]}.yaml", "w", encoding="utf-8"),
+            yaml.safe_dump(item, open(out_dir / stem, "w", encoding="utf-8"),
                            allow_unicode=True, sort_keys=False, width=100)
+            rec.pop("_kind", None)
             rec["status"] = "reviewed"
             rec["llm_decision"] = s["decision"]
             yaml.safe_dump(rec, open(qpath, "w", encoding="utf-8"),

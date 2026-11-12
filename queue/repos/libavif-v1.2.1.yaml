@@ -1,0 +1,23 @@
+id: repo_release:github:libavif-v1.2.1
+kind: release
+status: pending
+score: 3
+matched:
+- ref: impl:libavif
+  count: 1
+  weight: 3
+meta:
+  repo: AOMediaCodec/libavif
+  tag: v1.2.1
+  name: v1.2.1
+  prerelease: false
+  published: '2025-03-17'
+  url: https://github.com/AOMediaCodec/libavif/releases/tag/v1.2.1
+  notes: "## [1.2.1](https://github.com/AOMediaCodec/libavif/compare/v1.2.0...v1.2.1) - 2025-03-17\n\n\
+    ### Added since 1.2.0\n\n* Add support for outputting all frames of an image sequence in `avifdec`.\
+    \ \n  `avifdec --index all sequence.avif out.png` creates files named\n  `out-xxxxxxxxxx.png` where\
+    \ xxxxxxxxxx are the zero-padded frame indices.\n\n### Changed since 1.2.0\n\n* Fix local libargparse\
+    \ dependency patch step on macOS 10.15 and earlier.\n* Patch local libyuv dependency for compatibility\
+    \ with gcc 10.\n* Use stricter C99 syntax to avoid related compilation issues.\n* Update svt.cmd/svt.sh/LocalSvt.cmake\
+    \ to v3.0.1."
+fetched: '2026-11-12'

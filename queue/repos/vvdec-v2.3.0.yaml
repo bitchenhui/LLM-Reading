@@ -1,0 +1,23 @@
+id: repo_release:github:vvdec-v2.3.0
+kind: release
+status: pending
+score: 3
+matched:
+- ref: impl:VVdec
+  count: 1
+  weight: 3
+meta:
+  repo: fraunhoferhhi/vvdec
+  tag: v2.3.0
+  name: vvdec-2.3.0
+  prerelease: false
+  published: '2024-04-29'
+  url: https://github.com/fraunhoferhhi/vvdec/releases/tag/v2.3.0
+  notes: '* improved error handling, including early corruption detection
+
+    * renamed `parseThreads` to `parseDelay` in the `vvdec/vvdec,h` interface (backwards compatible)
+
+    * fixed boundary handling when BTT is disabled
+
+    * minor internal improvements'
+fetched: '2026-11-12'

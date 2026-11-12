@@ -1,0 +1,27 @@
+id: repo_release:github:vvdec-v3.2.0
+kind: release
+status: pending
+score: 3
+matched:
+- ref: impl:VVdec
+  count: 1
+  weight: 3
+meta:
+  repo: fraunhoferhhi/vvdec
+  tag: v3.2.0
+  name: '  vvdec-3.2.0'
+  prerelease: false
+  published: '2026-07-28'
+  url: https://github.com/fraunhoferhhi/vvdec/releases/tag/v3.2.0
+  notes: "Backward compatible API changes:\n- add `vvdecSIMD_Extension` enum values `VVDEC_SIMD_NEON_RDM`,\
+    \ `VVDEC_SIMD_SVE`, `VVDEC_SIMD_SVE2`, `VVDEC_SIMD_SIMDE_ANY`\n\nOther changes:\n- add ARM NEON, NEON-RDM,\
+    \ SVE and SVE2 implementations for most existing SIMD functions\n- properly implement ARM CPU feature\
+    \ detection\n- add fuzzing infrastructure using libfuzz (enabled by VVDEC_FUZZING_BUILD)\n- fix some\
+    \ PVS-Studio warnings\n- fix several cases of undefined behaviour (uninitialized memory, negative\
+    \ shifts, integer overflows)\n- fix memory overflows triggered by broken bitstreams\n- fix memory\
+    \ leaks when reading broken bitstreams\n- add more bitstream conformance checks to detect invalid\
+    \ bitstreams\n- use unaligned loads in x86 SIMD code where appropriate\n- add build option VVDEC_WRITE_INPUT_BITSTREAM\
+    \ for debugging\n- some general code cleanup\n\nKnown Issues:\n- There are several open issues, which\
+    \ we assume to have fixed, but they are still open in OSS-Fuzz:\n  * #356\n  * #350\n  * #349\n  *\
+    \ #348"
+fetched: '2026-11-12'

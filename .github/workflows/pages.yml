@@ -1,0 +1,37 @@
+name: pages
+
+# 消费端部署：push 到 main 触发，从 kb/ 基底重新生成 site/ 并发布到 GitHub Pages。
+# site/index.html 由脚本生成，不在 CI 里手工维护。
+
+on:
+  push:
+    branches: [main]
+    paths: ["kb/**", "scripts/make_site.py", ".github/workflows/pages.yml"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+      - name: 生成站点
+        run: uv run --with pyyaml python scripts/make_site.py
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+      - id: deployment
+        uses: actions/deploy-pages@v4

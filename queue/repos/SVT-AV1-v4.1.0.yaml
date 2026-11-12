@@ -1,0 +1,87 @@
+id: repo_release:github:SVT-AV1-v4.1.0
+kind: release
+status: pending
+score: 8
+matched:
+- ref: impl:SVT-AV1
+  count: 1
+  weight: 3
+- ref: codec:AV1
+  count: 1
+  weight: 3
+- ref: concept:EntropyModel
+  count: 1
+  weight: 1
+- ref: concept:QP
+  count: 1
+  weight: 1
+meta:
+  repo: AOMediaCodec/SVT-AV1
+  tag: v4.1.0
+  name: v4.1.0
+  prerelease: false
+  published: '2026-10-26'
+  url: https://github.com/AOMediaCodec/SVT-AV1/releases/tag/v4.1.0
+  notes: '## [4.1.0] - 2026-03-23
+
+
+    **Encoder**
+
+
+    - Refactor MD, EncDec, and Entropy Coding kernels (!2604)
+
+    - Improve Still Image coding efficiency (!2612, !2614)
+
+    - Change Wiener Filter level for chroma for presets M3 and below (!2620)
+
+    - Optimize Screen Content coding for Still Image (!2630)
+
+
+    **Arm**
+
+
+    - Refactor Subpixel Variance kernels (!2608)
+
+    - Optimize 16b SAD kernel (!2610)
+
+    - Fixed Neoverse V2 unit test detection (!2622)
+
+    - Update Arm build guide (!2625)
+
+
+    **Bug fixes and documentation**
+
+
+    - Fixed a hang caused by improper variable looping (#2338, !2600)
+
+    - Add missing option 2 for `--enable-dlf`''s help output (!2601)
+
+    - Depth Refinement algorithmic bug fix (!2602)
+
+    - Add mutexes to fix hangs when running multiple instances of the encoder in one process (!2603, !2605,
+    !2619)
+
+    - Fix motion calculation for cyclic QP refresh (!2613)
+
+    - Fixed a Debug vs Release mismatch (!2618)
+
+    - Fixed some new warnings with newer GCC versions (!2621, !2636)
+
+    - Changed Temporal Filtering distortion calculation to not include padding (!2623)
+
+    - Cleanup some dead unit tests (!2626)
+
+    - Benchmark framework improvements (!2627)
+
+    - CI/CD improvements (!2628)
+
+    - Fixed some niche crashes (!2629)
+
+    - Readd missing PredStructure enum without SVT_AV1 prefix (!2635)
+
+    - Rename svt_log to prevent conflict with SVT-JPEG-XS (!2634)
+
+    - General code and doc cleanup (!2606, !2607, !2609, !2611, !2616, !2617, !2624, !2631, !2633, !2637)
+
+    '
+fetched: '2026-11-12'

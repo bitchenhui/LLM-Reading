@@ -1,0 +1,37 @@
+id: repo_release:github:vvenc-v1.13.1
+kind: release
+status: pending
+score: 3
+matched:
+- ref: impl:VVenC
+  count: 1
+  weight: 3
+meta:
+  repo: fraunhoferhhi/vvenc
+  tag: v1.13.1
+  name: vvenc-v1.13.1
+  prerelease: false
+  published: '2025-03-21'
+  url: https://github.com/fraunhoferhhi/vvenc/releases/tag/v1.13.1
+  notes: 'Over 1.13.0
+
+    * fix unaligned load/stores on ARM
+
+    * fix errors during library loading on old x86 CPUs associated with invalid instructions
+
+    * necessitate SSE 4.1 support for x86(_64) architectures
+
+    * fix rate control bug when using slice type adaptation (missing stats reduce accuracy)
+
+    * fix horizontal add in 32-bit Arm SIMD
+
+    * fix row/cols access in FGA
+
+
+    Over 1.13.1-rc1
+
+    * allow usage of external nlohmann_json
+
+    * added optional unstable api extension (off per default, preserving API and ABI compatibility) allowing
+    passing user data with input frames'
+fetched: '2026-11-12'

@@ -1,0 +1,159 @@
+id: repo_release:github:kvazaar-v1.1.0
+kind: release
+status: pending
+score: 5
+matched:
+- ref: impl:kvazaar
+  count: 1
+  weight: 3
+- ref: concept:GOP
+  count: 1
+  weight: 1
+- ref: concept:QP
+  count: 1
+  weight: 1
+meta:
+  repo: ultravideo/kvazaar
+  tag: v1.1.0
+  name: v1.1.0
+  prerelease: false
+  published: '2017-02-16'
+  url: https://github.com/ultravideo/kvazaar/releases/tag/v1.1.0
+  notes: 'I think there are enough new features to call this v1.1.0.
+
+
+    Average BD bitrate (QP 17, 22, 27, 32) v1.1.0 vs v1.0.0
+
+
+    | Class | 0-uf | 1-sf | 2-vf | 3-fr | 4-f | 5-m | 6-s | 7-sr | 8-vs |
+
+    | --- | --: | --: | --: | --: | --: | --: | --: | --: | --: |
+
+    | A | -1.9% | -1.5% | -1.2% | -1.0% | -0.7% | -0.7% | -1.1% | -1.1% | -1.3% |
+
+    | B | -2.2% | -1.3% | -1.4% | -0.8% | -0.5% | -0.6% | -0.9% | -0.8% | -1.0% |
+
+    | C | -1.3% | -1.1% | -1.0% | -0.9% | -0.6% | -0.6% | -0.6% | -0.6% | -0.8% |
+
+    | D | -1.1% | -0.9% | -0.7% | -0.7% | -0.6% | -0.5% | -0.1% | -0.2% | -0.4% |
+
+    | E | -2.5% | -1.5% | -0.9% | -0.7% | -0.3% | -0.3% | -0.5% | -0.4% | -0.4% |
+
+    | F | -1.6% | -0.7% | -0.9% | -0.8% | -0.5% | -0.4% | -0.7% | -0.7% | -0.7% |
+
+    |  |  |  |  |  |  |  |  |  |  |
+
+    | _All_ | _-1.7%_ | _-1.2%_ | _-1.0%_ | _-0.8%_ | _-0.5%_ | _-0.5%_ | _-0.6%_ | _-0.6%_ | _-0.8%_
+    |
+
+
+    Average speedup (QP 17, 22, 27, 32) v1.1.0 vs v1.0.0
+
+
+    | Class | 0-uf | 1-sf | 2-vf | 3-fr | 4-f | 5-m | 6-s | 7-sr | 8-vs |
+
+    | --- | --: | --: | --: | --: | --: | --: | --: | --: | --: |
+
+    | A | 1.03x | 1.02x | 1.01x | 1.01x | 1.01x | 1.02x | 1.07x | 1.09x | 1.16x |
+
+    | B | 1.03x | 1.01x | 1.02x | 1.01x | 1.01x | 1.01x | 1.06x | 1.06x | 1.13x |
+
+    | C | 1.03x | 1.02x | 1.01x | 1.01x | 1.01x | 1.01x | 1.07x | 1.07x | 1.16x |
+
+    | D | 1.07x | 1.05x | 1.03x | 1.03x | 1.02x | 1.02x | 1.07x | 1.09x | 1.17x |
+
+    | E | 0.99x | 0.97x | 0.98x | 0.99x | 0.99x | 0.99x | 1.00x | 1.02x | 1.05x |
+
+    | F | 1.02x | 1.01x | 1.01x | 1.01x | 1.01x | 1.01x | 1.08x | 1.09x | 1.17x |
+
+    |  |  |  |  |  |  |  |  |  |  |
+
+    | _All_ | _1.03x_ | _1.02x_ | _1.01x_ | _1.01x_ | _1.01x_ | _1.01x_ | _1.06x_ | _1.07x_ | _1.14x_
+    |
+
+
+    Paramaters: `--threads=4 --owf=1 -p64`
+
+
+    ### Features
+
+    - Bitrate control now works at LCU level, giving more consistent results. (2318bd77ed01dc8960028b31ee9bd610c84cd72f)
+
+    - Added --roi parameter for LCU level delta-QP control. (4a0121ac42c37f62d9bd2e5eda5fe268f8fed9bb)
+
+    - Added --slices parameter for encapsulating tiles and WPP-rows into slice NAL''s instead of using
+    bitstream offsets. (1e6463c08bef7f72a9c6629f4cea549c806ddf9f)
+
+    - Temporal motion vector prediction now works with B-frames. (d892be51ec483b5470b85db6ffa0f4122e8677cf)
+
+
+    ### Optimization
+
+    - Added AVX2 version of SSD. (778e46dfd85a23ee3a76785af289fc10e26df750)
+
+    - Optimized intra reference building. (c31207ea7deb25617ed60591dcda6c101a629d91)
+
+    - Optimized bitstream writes. (a9e45efcfc82a0ee704357170d60df6fedc38d91)
+
+    - Optimized CU-split decision. (2c069a3e5fcb665a54e6c55490522526f6587453)
+
+    - Fix main-thread busy-looping on Linux. (a5a925fc283d01e844f4e8a4a6c4105f878f0504)
+
+    - Avoid initializing memory needlessly during RDOQ. (acd12cba1e1aaac6e15090552fe9e1b22bbb6eb7, b021d2244e18a45aca0a47747e999fcebf059c85)
+
+
+    ### Fixes
+
+    - Pass DTS and PTS timestamps correctly through the API. (d18de19d8a1bb49aa63349a57191d3d8cf013407)
+
+    - Fixed bug with subpixel motion estimation within tiles. (2c005cda25d6cf3030462b1c7d6ea5fbb87037b1)
+
+    - Improved 10-bit RD-performance. (70a52f0e4867c713c68005d65ce63c7b8e1d04b4)
+
+    - Fixed for stupendously large bitstreams when --mv-constraint was used with --subme. (937a7649873cece08bb42d723dd637d8c7221551)
+
+    - Fixed bug with --smp and --amp. (46c9a483c377c555a5b1890a75f2a3e858ca36c0)
+
+    - Fix problem with --bipred. (1e6463c08bef7f72a9c6629f4cea549c806ddf9f)
+
+    - Fixed hang with threading on OSX. (d893474babfa12494bdefeb357f495304ff78443)
+
+    - Fix crash when frame is less than 65 pixels high and WPP is used. (b8e3513a231678eaeeca5ca41e7d9db0e487a4bf)
+
+
+    ### User Interface
+
+    - Disabled WPP with tiles enabled. (cb6672b4526738625fd1c780d5df7b4c0899bf4d)
+
+    - Improved --help. (5bf745460da2ba9c75e2309cff0c3d104569f6f0, 78a28e033818700f7c7f62f81c4e261ff3180669)
+
+    - Made it possible to disable the gop-structure that was enabled by default in v.1.0.0. (deb63f735f9aa2e0597d52993b250e24a8f6bcb4)
+
+    - Have --threads=auto enable threading instead of disabling it. (db5e750c7f943dff436a172e9d3d1f81c6d5e0ee)
+
+    - Give errors on failures and handle them better. (97863cdaa26c1373767dd74d460cf1a46f248a22, 6a178dee963f4a05dcfdd3eb76f90e9935b074b0)
+
+    - Use reference picture number of medium preset by default. (7ff33e1bf2c44817f9b39748e769abd1f05b3a30)
+
+
+    ### Building
+
+    - Include optimizations on 32-bit. (1dcc9937439422c65ca3bf46d229f52ce3fe1bb9)
+
+    - Added appveyor CI tests for MSYS2. (e269b8653934d39ed9584d16843952ae73395770)
+
+    - Add pkg-config macros, so pkg-config doesn''t need to be installed anymore. (2d7daa1da7ce1db129ed7e6f12de6bb6d83d25ac)
+
+    - Travis CI OSX tests work again. (c32f5fafc9d3b4cd0486e89b0cc9e7e955715e79)
+
+
+    ### Refactoring
+
+    - Refactored deblocking and sign hiding. (7ec5f787920781d9c67e16923d63496ca28a5878)
+
+    - Removed Exp-Golomb lookup table. (ed3bd898fd2eeb3b34c7445275cfb39ab708f737)
+
+    - Copy kvz_config to encoder_control_t and remove duplicate fields. (e78a8dfcf521346cfe88ee56dc6c87af4d529a11)
+
+    '
+fetched: '2026-11-12'

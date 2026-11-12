@@ -1,0 +1,33 @@
+id: repo_release:github:libavif-v1.1.1
+kind: release
+status: pending
+score: 4
+matched:
+- ref: impl:libavif
+  count: 1
+  weight: 3
+- ref: org:AOMedia
+  count: 1
+  weight: 1
+meta:
+  repo: AOMediaCodec/libavif
+  tag: v1.1.1
+  name: v1.1.1
+  prerelease: false
+  published: '2024-07-30'
+  url: https://github.com/AOMediaCodec/libavif/releases/tag/v1.1.1
+  notes: "## [1.1.1](https://github.com/AOMediaCodec/libavif/compare/v1.1.0...v1.1.1) - 2024-07-30\n\n\
+    ### Changed since 1.1.0\n* In avif.h, change \"AVIF_API AVIF_NODISCARD\" back to \"AVIF_NODISCARD\
+    \ AVIF_API\"\n  to fix clang-cl and MSVC compilation errors in the shared library build on\n  Windows.\n\
+    * Fix -DAVIF_GTEST=SYSTEM, https://github.com/AOMediaCodec/libavif/issues/2258.\n* Fix infe_type and\
+    \ codec_config_type wrongly read as byte-aligned fields in the\n  experimental feature AVIF_ENABLE_EXPERIMENTAL_METAV1.\n\
+    * When building aom as a local dependency, runtime CPU detection\n  (`CONFIG_RUNTIME_CPU_DETECT`)\
+    \ is now always `ON`; in 1.1.0 it had been\n  disabled for non-native builds.\n* Fix CMake config\
+    \ shared library leaks\n  https://github.com/AOMediaCodec/libavif/issues/2264.\n* Fix clang-cl compilation.\n\
+    * Update gain map metadata to current ISO 21496-1 draft.\n* cmake: Only search for ASM_NASM language\
+    \ on x86_64 platforms.\n* Fix \"No known features for CXX compiler\" CMake error.\n* Fix aom link\
+    \ flags so that transitive library link flags are included when\n  aom is a static library\n  https://github.com/AOMediaCodec/libavif/issues/2274.\n\
+    * Fix out-of-order 'dimg' grid associations\n  https://github.com/AOMediaCodec/libavif/issues/2311.\n\
+    * Report files with an item used in multiple 'dimg' boxes with\n  AVIF_RESULT_NOT_IMPLEMENTED instead\
+    \ of AVIF_RESULT_INVALID_IMAGE_GRID."
+fetched: '2026-11-12'

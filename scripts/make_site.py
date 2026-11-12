@@ -16,7 +16,7 @@ from pathlib import Path
 import yaml
 
 ROOT = Path(__file__).resolve().parent.parent
-ITEMS = ROOT / "kb" / "items" / "papers"
+ITEMS = ROOT / "kb" / "items"
 SITE = ROOT / "site"
 REPO_URL = "https://github.com/bitchenhui/LLM-Reading"
 
@@ -46,11 +46,12 @@ def metric_text(m: dict) -> str:
 
 def build_data() -> dict:
     items = []
-    for p in sorted(ITEMS.glob("*.yaml")):
+    for p in sorted(ITEMS.glob("*/*.yaml")):
         d = load(p)
         deep = d["summaries"].get("deep_dive")
         items.append({
             "id": d["id"],
+            "type": d["type"],
             "title": d["title"],
             "title_zh": d.get("title_zh"),
             "published": d["time"]["published"],
@@ -81,6 +82,8 @@ def build_data() -> dict:
         "line_names": LINE_NAMES,
         "stats": {
             "items": len(items),
+            "papers": sum(1 for i in items if i["type"] == "paper"),
+            "releases": sum(1 for i in items if i["type"] == "repo_release"),
             "claims": n_claims,
             "deep_reads": sum(1 for i in items if i["deep_dive_url"]),
         },
@@ -133,6 +136,7 @@ input[type=search] { flex: 1; min-width: 200px; }
 .b-low { background: rgba(229,83,75,.15); color: var(--red); }
 .b-deep { background: rgba(76,195,138,.15); color: var(--green); }
 .b-sum { background: rgba(177,140,255,.15); color: var(--purple); }
+.b-rel { background: rgba(91,157,255,.12); color: #9db8e0; }
 h3 { font-size: 15.5px; font-weight: 600; }
 h3 a { color: var(--text); text-decoration: none; }
 h3 a:hover { color: var(--accent); }
@@ -182,7 +186,7 @@ const DEC_ZH = { deep_read: "深读", summary_only: "仅摘要" };
 const state = { lines: new Set(), q: "", rel: "", dec: "", ent: "" };
 
 document.getElementById("stats").innerHTML =
-  `<div class="stat"><b>${DATA.stats.items}</b>信息项</div>` +
+  `<div class="stat"><b>${DATA.stats.items}</b>信息项（论文 ${DATA.stats.papers} + 版本 ${DATA.stats.releases}）</div>` +
   `<div class="stat"><b>${DATA.stats.claims}</b>结构化论断</div>` +
   `<div class="stat"><b>${DATA.stats.deep_reads}</b>深读笔记</div>` +
   `<div class="stat">更新 ${DATA.generated}</div>`;
@@ -237,6 +241,7 @@ function card(it) {
   const lines = it.lines.map(l => LINE[l] || l).join(" / ") || "未分类";
   return `<div class="${cls}" id="${it.id}">
     <div class="meta"><span>${it.published}</span>
+      ${it.type === "repo_release" ? '<span class="badge b-rel">版本动态</span>' : ""}
       <span class="badge b-${it.relevance}">${REL_ZH[it.relevance] || it.relevance}</span>
       <span class="badge ${it.decision === "deep_read" ? "b-deep" : "b-sum"}">${DEC_ZH[it.decision] || it.decision}</span>
       <span>${lines}</span></div>

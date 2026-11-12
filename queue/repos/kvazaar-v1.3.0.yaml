@@ -1,0 +1,217 @@
+id: repo_release:github:kvazaar-v1.3.0
+kind: release
+status: reviewed
+score: 10
+matched:
+- ref: codec:HEVC
+  count: 1
+  weight: 3
+- ref: impl:kvazaar
+  count: 1
+  weight: 3
+- ref: concept:GOP
+  count: 1
+  weight: 1
+- ref: concept:QP
+  count: 1
+  weight: 1
+- ref: concept:RDO
+  count: 1
+  weight: 1
+- ref: org:Intel
+  count: 1
+  weight: 1
+meta:
+  repo: ultravideo/kvazaar
+  tag: v1.3.0
+  name: v1.3.0
+  prerelease: false
+  published: '2019-07-09'
+  url: https://github.com/ultravideo/kvazaar/releases/tag/v1.3.0
+  notes: 'Time has finally come for the long overdue release v1.3 of Kvazaar!
+
+
+    Since it has been such a long time after our previous release, many many new features, fixes, and
+    optimizations have been introduced and the coding efficiency is on a whole new level.
+
+
+    Binaries for Windows will be added starting from this release.
+
+
+    Pthreads is no longer needed to build and run Kvazaar on Windows. It has been replaced by our custom
+    ThreadWrapper so Kvazaar is able to use the new c++ standard threads. ThreadWrapper is also separately
+    available on repository https://github.com/ultravideo/ThreadWrapper and released under ISC lisence.
+    It is not complete yet, so contributions are welcome.
+
+
+    Performance figures and more up-to-date release notes will be added in the following days.
+
+
+    Some CI tests are failing at the moment, but there should not be any critical issues.
+
+
+    Edit (2.5.2020):
+
+    Here are some of the previously missing missing release notes:
+
+    ### Features
+
+    - Option `--fast-residual-cost` to gain speedup with less accurate mode decisions
+
+    - Option `--(no-)open-gop` to choose between open and closed GOP
+
+    - Option `--set-qp-in-cu` to move QP signalling into CU level for very specific use cases
+
+    - Option `--scaling-list` to enable choose enable and choose scaling lists
+
+    - Option `--max-merge` to set the maximum amount of merge candidates
+
+    - Option `--early-skip` to speed up coding at the cost of worse results
+
+
+    ### Optimizations
+
+    - Another version of interplation filters and fractional pixel motion estimation
+
+    - AVX2 optimized sign bit hiding
+
+    - AVX2/BMI2 optimized coefficient coding
+
+    - AVX2 blending for biprediction
+
+    - Improvements and AVX2 code for certain SAD functions
+
+
+    ### Building
+
+    - ASM: marked stack non-executable
+
+
+    The old notes:
+
+
+    ### Features
+
+    - Changed `--rd=2` to use SSD metric for CU mode decision (662430d441c09a85d2de0106c3adbdd5c5f196f0)
+
+    - Changed inter search to check the cost of flushing residual to zero (75a87006301ed892b3e3d74862ff5f297b5a45aa)
+
+    - Changed rectangular and asymmetric blocks to use a transform split (774c6665286d11b7299a0d76a013a21c93645c28)
+
+    - Added diamond search ME algorithm (4e13608b01ac18d543d500c582e2b5e72f9c92a1)
+
+    - Enabled low delay B GOP structure with `--bipred --gop=lp-g4d3t1` (7155dd0db72b0ecabe08ecd20db5ebaaefcaabc6)
+
+    - Added termination of intra search at zero residual with `--intra-rdo-et` (4fb1c16c6198b2c1774743349c0a03a786314c4d)
+
+
+    ### Optimization
+
+    - Made TZ search faster and slightly better (c13604468d95693c9cc26b749836221e13d4c339)
+
+    - Optimized bi-prediction (69756e24914000f5a1660b9a3f8ce0ea341a1a6c)
+
+
+    ### Fixes
+
+    - Fixed transform skip with rectangular inter blocks (fb462b25ef8faa6234ad89b7155d2842172f57f6)
+
+    - Fixed accidental inter search for 4x4 blocks (649113a8218bd9564b90edeac3c2a8d0ebabf354)
+
+
+    ### User Interface
+
+    - Changed options for all preset levels (f033ad0ad0817ee247180b7d4b1d3541d251dd96)
+
+    - Added an option for limiting the number of steps in motion estimation with `--me-steps` (39ed36830ef3411a50b56a06a73dad9a56e8390b)
+
+    - Added `--me=dia` (4e13608b01ac18d543d500c582e2b5e72f9c92a1)
+
+    - Added `--level`, `--force-level` and `--high-tier` for setting bitstream level and tier (bac07457ea078bcca582e9fefb327031a50574af)
+
+
+    ### Building
+
+    - Fixed issue with struct timespec redefinition with Visual Studio 2015 and later (713e694d82da77bb96fd86fd41da3f04f0f956b2)
+
+    - Fixed building .asm files in Visual Studio 2017 (6be81959d5381010f3c0bc4bf008ac4830d641fe)
+
+    - Fixed compatibility with crypto++ 6.0 (4b24cd03a24ee0290b39f10f49dad92c7a846652)
+
+    - Added support for crypto++ with the name libcryptopp (411276d6f2b236c6ebbe0482918c0bb158e8e21e)
+
+    - Dockerfile base image was updated to Ubuntu 18.04 (8380b6c0f3379a6d2132337426987e9a8c59d813)
+
+    - Enabled `-Wextra` by default (ff17e0ba179fe06c9bd86795c709c1a513f1012b)
+
+
+    ### Refactoring
+
+    - Inter motion vector cost functions (c73cce386a3b10c481b03bf5b51dc97311a528d8)
+
+    - Dockerfile (0164291688c8065f6e403fc725681a59192a24e4)
+
+
+    ### BD-Bitrate
+
+
+    Average BD-Bitrate compared with v1.2:
+
+
+    | Class  | 0-uf    | 1-sf    | 2-vf    | 3-fr    | 4-f     | 5-m     | 6-s     | 7-sr    | 8-vs    |
+
+    | --- | --: | --: | --: | --: | --: | --: | --: | --: | --: |
+
+    | hevc-A | -18.8&nbsp;% | -17.5&nbsp;% | -1.7&nbsp;%  | -6.2&nbsp;%  | -2.1&nbsp;%  | -6.1&nbsp;%  |
+    -8.7&nbsp;%  | -19.1&nbsp;% | -19.2&nbsp;% |
+
+    | hevc-B | -21.3&nbsp;% | -20.9&nbsp;% | -4.6&nbsp;%  | -5.7&nbsp;%  | -2.9&nbsp;%  | -6.6&nbsp;%  |
+    -11.8&nbsp;% | -26.4&nbsp;% | -23.9&nbsp;% |
+
+    | hevc-C | -26.6&nbsp;% | -24.9&nbsp;% | -2.4&nbsp;%  | -8.3&nbsp;%  | -3.7&nbsp;%  | -11.9&nbsp;%
+    | -11.0&nbsp;% | -26.1&nbsp;% | -21.0&nbsp;% |
+
+    | hevc-D | -33.3&nbsp;% | -31.1&nbsp;% | -1.8&nbsp;%  | -11.5&nbsp;% | -7.5&nbsp;%  | -16.5&nbsp;%
+    | -16.2&nbsp;% | -28.9&nbsp;% | -23.6&nbsp;% |
+
+    | hevc-E | -26.3&nbsp;% | -25.3&nbsp;% | -20.4&nbsp;% | -15.4&nbsp;% | -13.8&nbsp;% | -15.7&nbsp;%
+    | -21.3&nbsp;% | -26.3&nbsp;% | -25.9&nbsp;% |
+
+    | hevc-F | -9.2&nbsp;%  | -8.4&nbsp;%  | -5.2&nbsp;%  | -4.9&nbsp;%  | -3.0&nbsp;%  | -20.8&nbsp;%
+    | -17.3&nbsp;% | 0.2&nbsp;%   | 18.8&nbsp;%  |
+
+    |||||||||||
+
+    | Total  | -22.7&nbsp;% | -21.5&nbsp;% | -5.7&nbsp;%  | -8.4&nbsp;%  | -5.3&nbsp;%  | -13.2&nbsp;%
+    | -14.4&nbsp;% | -21.3&nbsp;% | -15.4&nbsp;% |
+
+
+    ### Speedup
+
+
+    Average speedup compared with v1.2 on an Intel Xeon E5-2620 v4 machine:
+
+
+    | class  | 0-uf | 1-sf | 2-vf | 3-fr | 4-f  | 5-m  | 6-s  | 7-sr | 8-vs |
+
+    | --- | --: | --: | --: | --: | --: | --: | --: | --: | --: |
+
+    | hevc-A | x0.88 | x0.91 | x1.02 | x1.19 | x1.37 | x0.76 | x0.93 | x0.58 | x0.36 |
+
+    | hevc-B | x0.90 | x0.92 | x1.08 | x1.21 | x1.40 | x0.81 | x0.99 | x0.62 | x0.38 |
+
+    | hevc-C | x0.87 | x0.88 | x0.96 | x1.11 | x1.24 | x0.59 | x0.72 | x0.40 | x0.26 |
+
+    | hevc-D | x0.92 | x0.97 | x1.03 | x1.23 | x1.34 | x0.65 | x0.74 | x0.38 | x0.27 |
+
+    | hevc-E | x0.97 | x0.94 | x1.08 | x1.15 | x1.34 | x0.86 | x1.05 | x0.74 | x0.54 |
+
+    | hevc-F | x0.81 | x0.91 | x1.01 | x1.09 | x1.30 | x0.78 | x0.88 | x0.49 | x0.35 |
+
+    |||||||||||
+
+    | Total  | x0.89 | x0.92 | x1.03 | x1.17 | x1.33 | x0.74 | x0.88 | x0.53 | x0.35 |
+
+    '
+fetched: '2026-11-12'
+llm_decision: deep_read

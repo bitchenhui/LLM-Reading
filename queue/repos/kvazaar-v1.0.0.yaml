@@ -1,0 +1,227 @@
+id: repo_release:github:kvazaar-v1.0.0
+kind: release
+status: pending
+score: 5
+matched:
+- ref: impl:kvazaar
+  count: 1
+  weight: 3
+- ref: concept:GOP
+  count: 1
+  weight: 1
+- ref: concept:QP
+  count: 1
+  weight: 1
+meta:
+  repo: ultravideo/kvazaar
+  tag: v1.0.0
+  name: v1.0.0
+  prerelease: false
+  published: '2016-10-04'
+  url: https://github.com/ultravideo/kvazaar/releases/tag/v1.0.0
+  notes: 'It''s been 9 months since last release. Now that the encoder just got 10x faster (on veryslow),
+    and quite a bit faster and better on every other preset as well, I think it''s time for a major verson
+    bump.
+
+
+    Average BD bitrate (QP 17, 22, 27, 32) v1.0.0 vs v0.8.3
+
+
+    | Class   |   0-uf |   1-sf |   2-vf |   3-fr |    4-f |    5-m |    6-s |   7-sr |   8-vs |
+
+    | ------- | -----: | -----: | -----: | -----: | -----: | -----: | -----: | -----: | -----: |
+
+    | A       | -16.4% | -26.9% | -27.5% | -31.0% | -11.2% | -11.9% | -11.3% |  -6.7% |  -4.8% |
+
+    | B       | -16.2% | -33.7% | -31.7% | -37.6% | -11.6% | -14.8% | -15.7% |  -9.1% |  -6.3% |
+
+    | C       |  -7.0% | -17.6% | -28.0% | -31.2% |  -8.3% |  -9.0% | -11.3% |  -7.1% |  -8.1% |
+
+    | D       |  -3.7% | -12.3% | -29.2% | -30.3% |  -5.4% |  -5.9% | -11.5% |  -8.3% |  -9.9% |
+
+    | E       | -28.4% | -42.6% | -33.5% | -39.4% | -22.6% | -28.5% | -20.3% |  -7.0% |  -0.7% |
+
+    | F       |  -6.1% | -11.3% | -12.8% | -16.5% | -10.1% |  -2.1% |   2.3% |  10.8% |   6.4% |
+
+    |
+
+    |*All*|*-13.0%*|*-24.1%*|*-27.1%*|*-31.0%*|*-11.5%*|*-12.0%*|*-11.3%*| *-4.6%*| *-3.9%*|
+
+
+    Average speedup (QP 17, 22, 27, 32) v1.0.0 vs v0.8.3
+
+
+    | Class   | 0-uf   | 1-sf   | 2-vf   | 3-fr   | 4-f    | 5-m    | 6-s    | 7-sr   | 8-vs   |
+
+    | ------- | -----: | -----: | -----: | -----: | -----: | -----: | -----: | -----: | -----: |
+
+    | A       |  1.61x |  1.91x |  1.89x |  1.37x |  2.69x |  3.33x |  4.79x |  7.32x | 11.06x |
+
+    | B       |  1.65x |  1.98x |  1.96x |  1.46x |  2.67x |  3.36x |  4.79x |  8.15x | 13.89x |
+
+    | C       |  1.76x |  1.97x |  1.98x |  1.45x |  2.52x |  2.97x |  4.87x |  9.32x | 15.77x |
+
+    | D       |  2.09x |  1.87x |  1.81x |  1.32x |  1.97x |  2.36x |  5.13x |  8.78x | 12.65x |
+
+    | E       |  1.91x |  1.96x |  1.75x |  1.40x |  3.00x |  3.70x |  4.87x |  6.06x |  7.56x |
+
+    | F       |  1.84x |  1.83x |  1.74x |  1.41x |  2.86x |  2.98x |  4.60x |  8.18x | 13.58x |
+
+    |
+
+    |*All*|*1.81x*|*1.92x*|*1.86x*|*1.40x*|*2.62x*|*3.12x*|*4.84x*|*7.97x*|*12.42x*|
+
+
+
+    Paramaeters: `--threads=4 --owf=1 --wpp -p64`
+
+
+
+    ### New Features
+
+    - --version
+
+    - --help
+
+    - --loop-input
+
+    - --mv-constraint to constrain motion vectors
+
+    - --tiles=2x2 as an alternative syntax for uniform tiles
+
+    - --hash=md5
+
+    - Print information about what SIMD optimizations are in use
+
+    - --mv=full8 --mv=full16 --mv=full32 --mv=full64
+
+    - --cu-split-termination=zero/off
+
+    - --crypto for selective encryption of bitstream (for OpenHEVC)
+
+    - --me-early-termination=sensitive/on/off for early termination of motion vector search
+
+    - Added 4x8 SMP and 4x12 AMP motion partitions
+
+    - --subme=0/1/2/3/4 for control over complexity of fractional pixel motion prediction
+
+    - --lossless for lossless coding
+
+    - Monochrome coding
+
+    - --input-format=420/400
+
+    - --input-bitdepth=8/10
+
+    - --tmpv for temporal motion vector predictor
+
+    - --rdoq-skip for not using rdoq for situations where it''s unlikely to improve BDRate
+
+    - Modified --gop=lp-g4d3r1t1 syntax to not take the reference frames as a parameter, it''s now --gop=lp-g4d3t1.
+
+    - Enable WPP and multithreading by default, with detection for number of cores
+
+    - Update all presets to ratedistortion-complexity optimized versions. These are based on a search
+    of all (~ish) possible encoding parameters and bring a huge boost to both speed and BDRate when encoding
+    with the presets (10x speed for veryslow, ~1.1x-4x for others, up to 30% improved BDRate for some
+    presets).
+
+    - Set default options to match medium with intra period of 64, QP 22 and --gop=lp-g4d3t1
+
+    - --implicit-rdpcm RExt feature
+
+
+    ### Optimizations
+
+    - AVX2 version for Sample Adaptive Offset (SAO)
+
+    - Optimized memory copying
+
+    - AVX2 versions of filters for fractional pixel motion estimation
+
+    - AVX2 version for half pixel chroma sampling for SMP/AMP
+
+    - AVX2 versions for calculating two or four SATD values at once for small blocks
+
+    - Rewrote AVX2 version of fractional pixel motion compensation
+
+    - Rewrote motion vector cost calculation. It only got slightly faster, but BDRate improved a bunch
+    due to the new implementation being more correct.
+
+    - Made AVX2 SAD use SSE4.1 for cases where there isn''t an AVX2 implementation, speeding up SMP/AMP.
+
+
+    ### Bugfixes
+
+    - Fixed a bug in rate control where an int overflowed after coding 2^31 bits (2Gb)
+
+    - Fixed non-determinism intiles
+
+    - Fixed chroma reconstruction bug in tiles
+
+    - Fixed a bug with calculating the number of bits used for intra mode on 4x4 CUs
+
+    - Stopped checking zero motion vector multiple times in motion compensation
+
+    - Fixed possible segfault in motion compensation
+
+    - Fixed a race condition with OWF and SMP/AMP
+
+    - Gave pthread_cond_timedwait time in correctly, such that main thread now sleeps instead of busylooping
+    when it has nothing to do
+
+    - Fixed rate control with lp-gop
+
+    - Fixed full search not taking temporal motion vector into account
+
+    - Allow non-gop-length intra period for lp-gop
+
+
+    ### Code / Building  / Testing
+
+    - Moved SAO to it''s own file
+
+    - Removed a ton of unnecessary includes
+
+    - Updated autotools ax_pthread
+
+    - Added build test for OS-X for Travis
+
+    - Made tests check for bitstream correctness
+
+    - Refactored some of the copypasta in motion vector search starting point selection
+
+    - Refactored the cu_info_t datastructures to hold information at a 4x4 resolution needed for AMP and
+    SMP
+
+    - Changed cu_info_t to use bitfields to negate the effect of increasing the cu_info_t array by a factor
+    of 4
+
+    - Moved bitstream generation from encoderstate.c to encode_coding_tree.c
+
+    - Renamed encoder_state_t.global to frame, which makes sense since it hold frame level data, not global
+    data
+
+    - Rewrote integer vector inter prediction, because it was so bad
+
+    - Refactored init_lcu_t
+
+    - Added more tests for inter SAD
+
+    - Added speed tests for dual intra SAD functions
+
+    - Added more realistic speed tests for inter SAD
+
+
+    ### Other
+
+    - Added a manpage
+
+    - Added scripts for updating manpage and README based on --usage.
+
+    - Added a Dockerfile. Just because.
+
+    - Added commit date to --version
+
+    '
+fetched: '2026-11-12'

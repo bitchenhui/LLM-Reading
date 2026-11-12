@@ -1,0 +1,64 @@
+id: repo_release:github:libavif-v1.2.0
+kind: release
+status: pending
+score: 4
+matched:
+- ref: impl:libavif
+  count: 1
+  weight: 3
+- ref: org:AOMedia
+  count: 1
+  weight: 1
+meta:
+  repo: AOMediaCodec/libavif
+  tag: v1.2.0
+  name: v1.2.0
+  prerelease: false
+  published: '2025-02-25'
+  url: https://github.com/AOMediaCodec/libavif/releases/tag/v1.2.0
+  notes: "## [1.2.0](https://github.com/AOMediaCodec/libavif/compare/v1.1.1...v1.2.0) - 2025-02-25\n\n\
+    ### Added since 1.1.1\n* Turn on the gain map API. Remove the AVIF_ENABLE_EXPERIMENTAL_GAIN_MAP CMake\n\
+    \  flag.\n* Allow YCgCo_Re and YCgCo_Ro encoding/decoding and update the enum values to\n  the latest\
+    \ CICP specification. Remove the AVIF_ENABLE_EXPERIMENTAL_YCGCO_R\n  CMake flag.\n* Add the properties\
+    \ and numProperties fields to avifImage. They are filled by\n  the avifDecoder instance with the properties\
+    \ unrecognized by libavif. They are\n  written by the avifEncoder.\n* Add avif(Un)SignedFraction structs\
+    \ and avifDoubleTo(Un)SignedFraction\n  utility functions.\n* Add 'avifgainmaputil' command line tool\
+    \ to installed apps.\n* Add avifCropRectRequiresUpsampling().\n* Add experimental support for PixelInformationProperty\
+    \ syntax from HEIF 3rd Ed.\n  Amd2 behind the compilation flag AVIF_ENABLE_EXPERIMENTAL_EXTENDED_PIXI.\n\
+    * Add experimental Sample Transform recipe\n  BIT_DEPTH_EXTENSION_12B_8B_OVERLAP_4B.\n\n### Changed\
+    \ since 1.1.1\n* avifenc: Allow large images to be encoded.\n* Fix empty CMAKE_CXX_FLAGS_RELEASE if\
+    \ -DAVIF_CODEC_AOM=LOCAL -DAVIF_LIBYUV=OFF\n  is specified. https://github.com/AOMediaCodec/libavif/issues/2365.\n\
+    * Rename AVIF_ENABLE_EXPERIMENTAL_METAV1 to AVIF_ENABLE_EXPERIMENTAL_MINI and\n  update the experimental\
+    \ reduced header feature to the latest specification\n  draft. Rename AVIF_HEADER_REDUCED to AVIF_HEADER_MINI.\n\
+    * Update the experimental Sample Transform feature behind the\n  AVIF_ENABLE_EXPERIMENTAL_SAMPLE_TRANSFORM\
+    \ CMake flag to the latest\n  specification draft.\n* Ignore gain maps with unsupported metadata.\
+    \ Handle gain maps with\n  writer_version > 0 correctly.\n* Simplify gain map API: remove the enableParsingGainMapMetadata\
+    \ setting, now\n  gain map metadata is always parsed if present and if this feature is compiled\n\
+    \  in. Replace enableDecodingGainMap and ignoreColorAndAlpha with a bit field to\n  choose image content\
+    \ to decode. Remove gainMapPresent: users can check if\n  decoder->image->gainMap != NULL instead.\
+    \ Remove avifGainMapMetadata and\n  avifGainMapMetadataDouble structs.\n* Write an empty HandlerBox\
+    \ name field instead of \"libavif\" (saves 7 bytes).\n* Check for FileTypeBox precedence in avifParse().\n\
+    * Do not write an alternative group with the same ID as an item.\n* Update aom.cmd/LocalAom.cmake:\
+    \ v3.12.0. The new codec-specific option tune=iq\n  (image quality) is added in libaom v3.12.0.\n\
+    * Update parseAV2SequenceHeader() and avm.cmd: research-v9.0.0\n* Update dav1d.cmd/dav1d_android.sh/LocalDav1d.cmake:\
+    \ 1.5.1\n* Update libjpeg.cmd/LocalJpeg.cmake: v3.0.4\n* Update libxml2.cmd/LocalLibXml2.cmake: v2.13.5\n\
+    * Update libyuv.cmd: ccdf87034 (1903)\n* Update svt.cmd/svt.sh/LocalSvt.cmake to v3.0.0. When available,\
+    \ use\n  EbSvtAv1EncConfiguration::lossless and ::level_of_parallelism in libavif.\n* Remove AVIF_ENABLE_GTEST\
+    \ CMake option. It's now implied by\n  AVIF_GTEST=LOCAL/SYSTEM.\n* Deprecate `avifEncoder`'s `minQuantizer`,\
+    \ `maxQuantizer`, `minQuantizerAlpha`,\n  and `maxQuantizerAlpha` fields. `quality` and `qualityAlpha` should\
+    \ be used\n  instead. Deprecate `avifenc`'s `--min`, `--max`, `--minalpha` and `--maxalpha`\n  flags.\
+    \ `-q` or `--qcolor` and `--qalpha` should be used instead.\n* For dependencies, the deprecated way\
+    \ of setting AVIF_LOCAL_* to ON is\n  removed. Dependency options can now only be set to OFF/LOCAL/SYSTEM.\n\
+    * Change the default quality for alpha to be the same as the quality for color.\n* Allow decoding\
+    \ subsampled images with odd Clean Aperture dimensions or offsets.\n* Deprecate avifCropRectConvertCleanApertureBox()\
+    \ and\n  avifCleanApertureBoxConvertCropRect(). Replace them with\n  avifCropRectFromCleanApertureBox()\
+    \ and avifCleanApertureBoxFromCropRect().\n* Write descriptive properties before transformative properties.\n\
+    * Reject non-essential transformative properties.\n* Treat avifenc --stdin as a regular positional\
+    \ file path argument.\n* Update man pages based on avifenc/dec's --help message.\n* android_jni: Support\
+    \ 16kb page size\n* android_jni: Set threads to 2 instead of CPU count\n* Fix overflows when dealing\
+    \ with alpha during YUV/RGB conversions and in\n  avifRGBImageAllocatePixels().\n* Make avifEncoder.headerFormat\
+    \ a flag combination for future features.\n* Rename AVIF_HEADER_FULL to AVIF_HEADER_DEFAULT. Deprecate\
+    \ AVIF_HEADER_FULL.\n* Fix decoding image sequences with non video tracks (such as audio or subtitles).\n\
+    * Fix type checking of auxiliary tracks: previously any auxiliary track was\n  assumed to be alpha,\
+    \ even if it was a different type. If the aux type is absent,\n  it is assumed to be alpha."
+fetched: '2026-11-12'

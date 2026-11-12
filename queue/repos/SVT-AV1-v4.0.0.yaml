@@ -1,0 +1,66 @@
+id: repo_release:github:SVT-AV1-v4.0.0
+kind: release
+status: reviewed
+score: 13
+matched:
+- ref: codec:AV1
+  count: 1
+  weight: 3
+- ref: impl:FFmpeg
+  count: 1
+  weight: 3
+- ref: impl:SVT-AV1
+  count: 1
+  weight: 3
+- ref: concept:QP
+  count: 1
+  weight: 1
+- ref: metric:BD-Rate
+  count: 1
+  weight: 1
+- ref: metric:MS-SSIM
+  count: 1
+  weight: 1
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+meta:
+  repo: AOMediaCodec/SVT-AV1
+  tag: v4.0.0
+  name: v4.0.0
+  prerelease: false
+  published: '2026-10-26'
+  url: https://github.com/AOMediaCodec/SVT-AV1/releases/tag/v4.0.0
+  notes: "## [4.0.0] - 2026-1-23\n\n**API updates**\n\n- Major release with new API updates that are not\
+    \ backwards compatible.\n- Extended the crf range to 70 reducing the impact or QP scaling allowing\
+    \ the encoder to reach lower bitrates\n- Added quarter steps between crf increments to allow for further\
+    \ granularity in qp selection\n- Added support for setting a custom global logger for library consumers\
+    \ (!2570, !2579)\n- Cleaned up public API headers including removal of deprecated macros, structs,\
+    \ and fields (!2565, !2568)\n  - Additionally cleaned up anything marked using SVT_AV1_CHECK_VERSION().\n\
+    - Added ability to calculate per-frame PSNR and SSIM metrics (!2521)\n- Allow sending more than 1\
+    \ but less than 4 frames with avif mode (This is not for AVIF image sequence, but for encoding an\
+    \ alpha layer) (!2551, !2560)\n- Added tune IQ and MS-SSIM for Still Image coding mode\n\n**Encoder**\n\
+    \n- Significant improvements in AVIF and still image modes (!2552,!2567):\n- ~5-8x speedup M11-M0\
+    \ at the same quality levels with tune MS-SSIM\n- ~5-8% BD-Rate improvements at the same complexity\
+    \ with tune MS-SSIM\n- Tradeoff improvements for the RTC modes (!2558):\n- ~5-15% speedup at similar\
+    \ quality levels in --rtc mode across presets 7 - 11\n- Tradeoff improvements for the Random Access\
+    \ mode (VOD use case) showing a 10-25% speedup across presets M7 down to M0 for --fast-decode 1 and\
+    \ 2 (!2558) \n- Major feature updates for the visual quality mode with the completion porting all\
+    \ SVT-AV1-PSY applicable features for --tune vq for video and --tune iq for avif (!2484, !2489, !2491,\
+    \ !2494, !2496, !2503, !2504, !2507, !2514, !2522 , !2561, !2562, !2576):\n- Added AC Bias, a psychovisual\
+    \ feature that improves detail preservation and film grain retention\n- Update S-Frame support to\
+    \ allow setting it in a specific decode order option and with more qp options (!2477 !2523 !2534)\n\
+    - Further Arm Neon and SVE2 optimizations that improve high bitdepth encoding by an average of ~5%\
+    \ in low resolutions\n\n**Cleanup, Build and bug fixes, testing and documentation**\n\n- General code\
+    \ cleanup, bugfixes, documentation and console output changes\n- Bugfixes: Fixed an issue with the\
+    \ encoder hanging when given an input with a height of 24 pixels or less (!2518)\n- Bugfixes: Fixed\
+    \ a bug that results in encoding an invalid bitstream when using rtc with a high QP value (!2502)\n\
+    - Bugfixes: Fixed a hang with VBR encoding (#2300, !2535)\n- Bugfixes: Fixed a hang when using recon\
+    \ output with low delay mode (#2315, !2544)\n- Bugfixes: Fixed an encoder crash when using RTC with\
+    \ resolutions not divisible by 16 and presets >= 11 (#2301, !2547)\n- Bugfixes: Fixed bitstream level\
+    \ tier compliance with AV1 specification (#2332, !2577, !2581, !2587)\n- Cleanup: Removed in-tree\
+    \ gstreamer plugin (!2586)\n- Cleanup: Code specific cleanup for slimmer binary sizes (!2476)\n- Testing:\
+    \ Added CI coverage for compiling FFmpeg on macOS Arm (!2536)\n- Testing: Added a python based testing\
+    \ framework for comparing codec performance and quality (!2532, !2550, !2556, !2563, !2564, !2566)"
+fetched: '2026-11-12'
+llm_decision: deep_read

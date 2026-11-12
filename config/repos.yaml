@@ -1,0 +1,17 @@
+# 开源仓库监控源配置（repo_release adapter）
+# 第二信息源：标准实现与开源编码器的版本动态 = 工业落地信号。
+# 仓库精挑而非堆量：每个仓库都是实体注册表里的 impl 主体。
+# 注：AV2 标准文本动态在 AOMediaCodec/av2-spec（公开），其用 tags 不用 releases，
+#     tags 跟踪（含 commit 日期）是下一增量；本 v0 只吃 releases。
+
+repos:
+  - {repo: "fraunhoferhhi/vvenc", subject: "impl:VVenC", why: "VVC 主流开源编码器"}
+  - {repo: "fraunhoferhhi/vvdec", subject: "impl:VVdec", why: "VVC 开源解码器"}
+  - {repo: "AOMediaCodec/SVT-AV1", subject: "impl:SVT-AV1", why: "AV1 生产级编码器（Intel/Netflix）"}
+  - {repo: "AOMediaCodec/libavif", subject: "impl:libavif", why: "AVIF 图像生态基准库"}
+  - {repo: "videolan/dav1d", subject: "impl:dav1d", why: "AV1 最快解码器（VideoLAN 镜像）"}
+  - {repo: "ultravideo/kvazaar", subject: "impl:kvazaar", why: "HEVC 开源编码器（学术起源）"}
+
+page_size: 10            # 每仓库取最近 N 个 release
+thresholds:
+  pending: 3             # 仓库本身已精选，subject 恒命中；分数只用于排序

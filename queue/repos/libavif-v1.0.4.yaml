@@ -1,0 +1,21 @@
+id: repo_release:github:libavif-v1.0.4
+kind: release
+status: pending
+score: 3
+matched:
+- ref: impl:libavif
+  count: 1
+  weight: 3
+meta:
+  repo: AOMediaCodec/libavif
+  tag: v1.0.4
+  name: v1.0.4
+  prerelease: false
+  published: '2024-02-08'
+  url: https://github.com/AOMediaCodec/libavif/releases/tag/v1.0.4
+  notes: "## [1.0.4] - 2024-02-08\n\n### Changed\n* `AVIF_ENABLE_WERROR` is set to `OFF` by default.\n\
+    * Fix wrong alpha plane deallocation when decoded tile pixel format does not\n  match reconstructed\
+    \ output image pixel format (b/320234262).\n* Fix identical chunk skipping optimization when writing\
+    \ animation data\n  (b/321189607).\n* Fix ID selection for artificial grid alpha item when decoding\
+    \ a grid of tiles\n  which each have an associated auxiliary alpha image item\n  (https://crbug.com/oss-fuzz/65657)."
+fetched: '2026-11-12'

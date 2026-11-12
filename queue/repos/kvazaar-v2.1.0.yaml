@@ -1,0 +1,56 @@
+id: repo_release:github:kvazaar-v2.1.0
+kind: release
+status: pending
+score: 4
+matched:
+- ref: impl:kvazaar
+  count: 1
+  weight: 3
+- ref: concept:GOP
+  count: 1
+  weight: 1
+meta:
+  repo: ultravideo/kvazaar
+  tag: v2.1.0
+  name: v2.1.0
+  prerelease: false
+  published: '2021-10-13'
+  url: https://github.com/ultravideo/kvazaar/releases/tag/v2.1.0
+  notes: 'Kvazaar 2.1 has been released!
+
+
+    # Important update on the license
+
+    With this release, the license was changed from LGPL2.1 to 3-Clause BSD, allowing more liberties in
+    using Kvazaar.
+
+
+    ## Features
+
+    - Option to use a custom table for fast bitrate estimation weights (`--fast-coeff-table <file>`)
+
+    - Tools to create new weight sets for fast bitrate estimation (`--fast-rd-sampling`, `--fastrd-accuracy-check`,
+    `--fastrd-outdir`), documented in `rdcost-weight-tool/README.txt`
+
+    - Added support for Y4M input in addition to YUV (Autodetected, manually enable using `--input-file-format=y4m`)
+
+    - Allow writing out block statistics for debugging (`--stats-file-prefix`)
+
+
+    ## Optimizations
+
+    - New AVX2 implementations for interpolation filters
+
+
+    ## Fixes
+
+    - DTS offset was incorrect at the beginning of the sequence when using GOP (7918628b8e447b7c410ab65fe4418197dbdb6b56
+
+    )
+
+    - Added VPS information about reordering and buffering, fixes VLC playback (b68625b8699abde4b0293c1fc302c52782bf4464)
+
+    - Removed pthread_exit() on mingw to fix media-autobuild suite (9a65617a34eccc46b80869895d9f30590f6e726e)
+
+    - Renamed truncate function to not overlap with POSIX one, fixed FreeBSD build (1fa69c705dd80d40bd55e63bbfce85e3388412a0)'
+fetched: '2026-11-12'

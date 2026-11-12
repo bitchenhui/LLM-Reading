@@ -37,6 +37,29 @@
   developed_by: [org:Intel, org:Netflix]
   relations: [{type: implements, ref: codec:AV1}]
 
+- id: impl:VVdec
+  type: implementation
+  kind: production_decoder
+  name: VVdec
+  full_name: Fraunhofer Versatile Video Decoder
+  developed_by: [org:Fraunhofer-HHI]
+  relations: [{type: implements, ref: codec:VVC}]
+  links: [{label: github, url: https://github.com/fraunhoferhhi/vvdec}]
+
+- id: impl:libavif
+  type: implementation
+  kind: framework
+  name: libavif
+  developed_by: [org:AOMedia]
+  relations: [{type: implements, ref: codec:AV1}]
+  notes: AV1 静态图像（AVIF）参考库
+
+- id: impl:kvazaar
+  type: implementation
+  kind: production_encoder
+  name: kvazaar
+  relations: [{type: implements, ref: codec:HEVC}]
+
 - id: impl:HEVC-QSV
   type: implementation
   kind: hw_accel

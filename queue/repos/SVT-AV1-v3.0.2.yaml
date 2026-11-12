@@ -1,0 +1,37 @@
+id: repo_release:github:SVT-AV1-v3.0.2
+kind: release
+status: pending
+score: 4
+matched:
+- ref: impl:SVT-AV1
+  count: 1
+  weight: 3
+- ref: concept:QP
+  count: 1
+  weight: 1
+meta:
+  repo: AOMediaCodec/SVT-AV1
+  tag: v3.0.2
+  name: v3.0.2
+  prerelease: false
+  published: '2026-10-25'
+  url: https://github.com/AOMediaCodec/SVT-AV1/releases/tag/v3.0.2
+  notes: '
+
+    ## [3.0.2] - 2025-3-21
+
+
+    Encoder
+
+
+    - More Arm simd improvements (!2401, !2402, !2403, !2405, !2409, !2410)
+
+    - Fixed mising initalization of lossless and avif (#2255, !2404)
+
+
+    Documentation
+
+    - Add missing `--luminance-qp-bias` documentation (!2407)
+
+    '
+fetched: '2026-11-12'

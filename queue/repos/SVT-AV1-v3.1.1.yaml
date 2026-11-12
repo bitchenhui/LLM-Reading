@@ -1,0 +1,34 @@
+id: repo_release:github:SVT-AV1-v3.1.1
+kind: release
+status: pending
+score: 4
+matched:
+- ref: impl:SVT-AV1
+  count: 1
+  weight: 3
+- ref: concept:QP
+  count: 1
+  weight: 1
+meta:
+  repo: AOMediaCodec/SVT-AV1
+  tag: v3.1.1
+  name: v3.1.1
+  prerelease: false
+  published: '2026-10-26'
+  url: https://github.com/AOMediaCodec/SVT-AV1/releases/tag/v3.1.1
+  notes: '## [3.1.1] - 2025-8-22
+
+
+    Bug Fixes
+
+
+    - Fixed range checks and error message for min-qp and max-qp (!2469, !2470)
+
+    - Fixed 10bit lossless encoding (!2470)
+
+    - Fixed value range in unit tests (!2473)
+
+    - Fixed --tune ssim (#2293, !2480)
+
+    - Fixed an overflow bug within a neon function (!2487)'
+fetched: '2026-11-12'
