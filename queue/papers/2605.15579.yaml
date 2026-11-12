@@ -1,0 +1,34 @@
+id: paper:arxiv:2605.15579
+status: skipped
+score: 0
+matched: []
+meta:
+  title: 'TVRN: Invertible Neural Networks for Compression-Aware Temporal Video Rescaling'
+  authors:
+  - Xinmin Feng
+  - Li Li
+  - Dong Liu
+  - Feng Wu
+  published: '2026-05-15'
+  updated: '2026-05-15'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: To fit diverse display and bandwidth constraints, high-frame-rate videos are temporally downscaled
+    to low-frame-rate (LFR) and later upscaled, requiring joint optimization for effective frame-rate
+    rescaling. However, existing methods typically link the two operations via training objectives, without
+    fully exploiting their reciprocal nature, which may cause high-frequency information loss. Moreover,
+    they overlook the impact of lossy codecs on LFR videos, limiting real-world applicability. In this
+    work, we propose an end-to-end framework for compression-aware frame-rate rescaling, named TVRN. To
+    regularize high-frequency information lost during frame-rate downscaling, TVRN adopts an invertible
+    architecture that combines a Multi-Input Multi-Output Temporal Wavelet Transform with a high-frequency
+    reconstruction module. To enable end-to-end training through non-differentiable lossy codecs, we design
+    a surrogate network that approximates their gradients. Finally, to improve robustness under various
+    compression levels, we extend TVRN to an asymmetric architecture by incorporating compression-aware
+    features learned via a learning-to-rank strategy. Extensive experiments show that TVRN outperforms
+    existing methods in reconstruction quality under industrial video compression settings. Source code
+    is publicly available at https://github.com/fengxinmin/TVRN_public.
+  url: https://arxiv.org/abs/2605.15579
+  pdf_url: https://arxiv.org/pdf/2605.15579v1
+  version: v1
+fetched: '2026-11-12'

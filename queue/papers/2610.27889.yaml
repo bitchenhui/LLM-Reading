@@ -1,0 +1,46 @@
+id: paper:arxiv:2610.27889
+status: skipped
+score: 2
+track: self_improvement
+matched:
+- ref: concept:RSI
+  count: 2
+  weight: 1
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+meta:
+  title: Elicitation or Expansion? Demystifying Gains from Agent Harness Optimization
+  authors:
+  - Younghyun Kim
+  - Wooseok Seo
+  - Minseo Kim
+  - Seunghyuk Oh
+  - Minjae Lee
+  - Donghoon Kim
+  - Hyung Il Koo
+  - Jaehyung Kim
+  - Wonjun Kang
+  published: '2026-10-20'
+  updated: '2026-10-20'
+  categories:
+  - cs.LG
+  abstract: Recent studies in harness optimization have shown substantial performance gains in language
+    model agents without updating model weights. A well-designed harness more effectively leverages the
+    underlying model's capabilities by shaping context, tool use, and execution workflows. However, naïve
+    success rates alone do not fully characterize whether optimized harness yields more reliable success
+    on tasks already within reach (elicitation) or a broader range of solvable tasks (expansion). This
+    distinction is crucial for recursive self-improvement and evolutionary search, as expansion may provide
+    a broader range of successful experiences to push the capability boundaries. Despite the growing significance,
+    this distinction remains underexplored in harness optimization. We conduct a systematic analysis to
+    study the effect of gains from harness optimization. Building on pass@k analyses in the reinforcement
+    learning (RL) literature that compare models before and after RL training, we compare optimized harnesses
+    with their pre-optimization counterparts. Specifically, we assess changes in reachable task coverage,
+    compare harness optimization with model scaling and increased inference-time compute, and examine
+    how gains vary with task difficulty. Across static prediction and dynamic tasks, we find that pass@1
+    advantages of harness over stronger interventions can reverse at larger attempt budgets and aggregate
+    gains conceal shortfalls on hard tasks, underscoring the need for a fine-grained diagnosis.
+  url: https://arxiv.org/abs/2610.27889
+  pdf_url: https://arxiv.org/pdf/2610.27889v1
+  version: v1
+fetched: '2026-11-12'

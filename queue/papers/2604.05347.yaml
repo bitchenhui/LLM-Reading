@@ -1,0 +1,43 @@
+id: paper:arxiv:2604.05347
+status: skipped
+score: 1
+matched:
+- ref: concept:ICM
+  count: 3
+  weight: 1
+meta:
+  title: 'CI-ICM: Channel Importance-driven Learned Image Coding for Machines'
+  authors:
+  - Yun Zhang
+  - Junle Liu
+  - Huan Zhang
+  - Zhaoqing Pan
+  - Gangyi Jiang
+  - Weisi Lin
+  published: '2026-04-07'
+  updated: '2026-04-07'
+  categories:
+  - eess.IV
+  - cs.CV
+  - cs.MM
+  abstract: Traditional human vision-centric image compression methods are suboptimal for machine vision
+    centric compression due to different visual properties and feature characteristics. To address this
+    problem, we propose a Channel Importance-driven learned Image Coding for Machines (CI-ICM), aiming
+    to maximize the performance of machine vision tasks at a given bitrate constraint. First, we propose
+    a Channel Importance Generation (CIG) module to quantify channel importance in machine vision and
+    develop a channel order loss to rank channels in descending order. Second, to properly allocate bitrate
+    among feature channels, we propose a Feature Channel Grouping and Scaling (FCGS) module that non-uniformly
+    groups the feature channels based on their importance and adjusts the dynamic range of each group.
+    Based on FCGS, we further propose a Channel Importance-based Context (CI-CTX) module to allocate bits
+    among feature groups and to preserve higher fidelity in critical channels. Third, to adapt to multiple
+    machine tasks, we propose a Task-Specific Channel Adaptation (TSCA) module to adaptively enhance features
+    for multiple downstream machine tasks. Experimental results on the COCO2017 dataset show that the
+    proposed CI-ICM achieves BD-mAP@50:95 gains of 16.25$\%$ in object detection and 13.72$\%$ in instance
+    segmentation over the established baseline codec. Ablation studies validate the effectiveness of each
+    contribution, and computation complexity analysis reveals the practicability of the CI-ICM. This work
+    establishes feature channel optimization for machine vision-centric compression, bridging the gap
+    between image coding and machine perception.
+  url: https://arxiv.org/abs/2604.05347
+  pdf_url: https://arxiv.org/pdf/2604.05347v1
+  version: v1
+fetched: '2026-11-12'

@@ -1,0 +1,35 @@
+id: paper:arxiv:2604.01122
+status: skipped
+score: 1
+matched:
+- ref: concept:EntropyModel
+  count: 1
+  weight: 1
+meta:
+  title: Region-Adaptive Generative Compression with Spatially Varying Diffusion Models
+  authors:
+  - Lucas Relic
+  - Roberto Azevedo
+  - Yang Zhang
+  - Stephan Mandt
+  - Markus Gross
+  - Christopher Schroers
+  published: '2026-04-01'
+  updated: '2026-04-01'
+  categories:
+  - eess.IV
+  abstract: 'Generative image codecs aim to optimize perceptual quality, producing realistic and detailed
+    reconstructions. However, they often overlook a key property of human vision: our tendency to focus
+    on particular aspects of a visual scene (e.g., salient objects) while giving less importance to other
+    regions. An ideal perceptual codec should be able to exploit this property by allocating more representational
+    capacity to perceptually important areas. To this end, we propose a region-adaptive diffusion-based
+    image codec that supports non-uniform bit allocation within an image. We design a novel spatially
+    varying diffusion model capable of denoising varying amounts of noise per pixel according to arbitrary
+    importance maps. We further identify that these maps can serve as effective priors on the latent representation,
+    and integrate them into our entropy model, improving rate-distortion performance. Built on these contributions,
+    our spatially-adaptive diffusion-based codec outperforms state-of-the-art ROI-controllable baselines
+    in both full-image and ROI-masked perceptual quality.'
+  url: https://arxiv.org/abs/2604.01122
+  pdf_url: https://arxiv.org/pdf/2604.01122v1
+  version: v1
+fetched: '2026-11-12'

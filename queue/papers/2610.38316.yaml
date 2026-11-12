@@ -1,0 +1,35 @@
+id: paper:arxiv:2610.38316
+status: skipped
+score: 1
+track: audio_coding
+matched:
+- ref: metric:MOS
+  count: 2
+  weight: 1
+meta:
+  title: 'DRC-TTS: A Dual-Resolution Codec-Based Architecture for Lexicon-Free Malay Speech Synthesis'
+  authors:
+  - Tianhui Su
+  - Tien-Ping Tan
+  published: '2026-10-28'
+  updated: '2026-10-28'
+  categories:
+  - eess.AS
+  abstract: Modern discrete neural audio codecs facilitate speech synthesis by replacing continuous acoustic
+    representations with low-frame-rate discrete token sequences. For Malay speech synthesis, character-level
+    input reduces reliance on pronunciation lexicons. However, combining character-level inputs with low-frame-rate
+    discrete codecs introduces a temporal alignment challenge. When predicted character durations are
+    quantized into frame counts at 12.5 Hz, durations shorter than one codec frame may be assigned zero
+    frames. Consequently, the corresponding character representations may be lost during length regulation,
+    potentially leading to pronunciation omissions. This study proposes DRC-TTS, a dual-resolution codec-based
+    architecture for lexicon-free Malay speech synthesis. The model expands character representations
+    at a temporal resolution of 50 Hz and subsequently downsamples them through strided convolution to
+    12.5 Hz for discrete codec-token prediction. Objective evaluations show that the proposed model reduces
+    the character error rate (CER) from 27.11% for the baseline to 21.86%, an absolute reduction of 5.25
+    percentage points. The proposed model also achieves a mean opinion score (MOS) of 4.30, compared with
+    4.12 for the baseline. These results suggest that the dual-resolution design may improve character-level
+    alignment and perceived speech naturalness under the evaluated conditions.
+  url: https://arxiv.org/abs/2610.38316
+  pdf_url: https://arxiv.org/pdf/2610.38316v1
+  version: v1
+fetched: '2026-11-12'

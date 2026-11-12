@@ -1,0 +1,47 @@
+id: paper:arxiv:2603.25566
+status: reviewed
+score: 6
+matched:
+- ref: impl:HiNeRV
+  count: 1
+  weight: 3
+- ref: concept:RDO
+  count: 2
+  weight: 1
+- ref: concept:INR
+  count: 1
+  weight: 1
+- ref: metric:BD-Rate
+  count: 1
+  weight: 1
+meta:
+  title: A Mamba-based Perceptual Loss Function for Learning-based UGC Transcoding
+  authors:
+  - Zihao Qi
+  - Chen Feng
+  - Fan Zhang
+  - Xiaozhong Xu
+  - Shan Liu
+  - David Bull
+  published: '2026-03-26'
+  updated: '2026-03-26'
+  categories:
+  - eess.IV
+  abstract: In user-generated content (UGC) transcoding, source videos typically suffer various degradations
+    due to prior compression, editing, or suboptimal capture conditions. Consequently, existing video
+    compression paradigms that solely optimize for fidelity relative to the reference become suboptimal,
+    as they force the codec to replicate the inherent artifacts of the non-pristine source. To address
+    this, we propose a novel perceptually inspired loss function for learning-based UGC video transcoding
+    that redefines the role of the reference video, shifting it from a ground-truth pixel anchor to an
+    informative contextual guide. Specifically, we train a lightweight neural quality model based on a
+    Selective Structured State-Space Model (Mamba) optimized using a weakly-supervised Siamese ranking
+    strategy. The proposed model is then integrated into the rate-distortion optimization (RDO) process
+    of two neural video codecs (DCVC and HiNeRV) as a loss function, aiming to generate reconstructed
+    content with improved perceptual quality. Our experiments demonstrate that this framework achieves
+    substantial coding gains over both autoencoder and implicit neural representation-based baselines,
+    with 8.46% and 12.89% BD-rate savings, respectively.
+  url: https://arxiv.org/abs/2603.25566
+  pdf_url: https://arxiv.org/pdf/2603.25566v1
+  version: v1
+fetched: '2026-11-12'
+llm_decision: deep_read

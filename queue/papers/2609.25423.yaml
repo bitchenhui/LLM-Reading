@@ -1,0 +1,57 @@
+id: paper:arxiv:2609.25423
+status: pending
+score: 5
+track: streaming_delivery
+matched:
+- ref: concept:DASH
+  count: 2
+  weight: 1
+- ref: concept:IQA
+  count: 2
+  weight: 1
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+- ref: metric:VMAF
+  count: 1
+  weight: 1
+- ref: org:MPEG
+  count: 1
+  weight: 1
+meta:
+  title: Objective Video Quality Assessment in FWA-Based Over-the-Top Content Delivery Across Open Source
+    5G Networks
+  authors:
+  - Nelson Ion
+  - FlÁvio Silva
+  - Paulo Silva
+  - Ricardo Silva
+  - Mathews Lima
+  - Daniel Luna
+  - Antonio Campos
+  - Augusto Neto
+  - Vicente Sousa
+  published: '2026-09-21'
+  updated: '2026-09-21'
+  categories:
+  - cs.NI
+  abstract: This paper presents a comprehensive experimental video quality assessment in 5G-based Fixed
+    Wireless Access (FWA) networks, leveraging a real open source 5G network testbed. Addressing the critical
+    need for robust UHD video delivery, the study systematically investigates the impact of transmission
+    modes (SISO and MIMO), modulation schemes (64-QAM and 256-QAM), and network load (one to five users)
+    on both network throughput and perceived video quality. Unlike simulation-based approaches, our methodology
+    integrates automated streaming campaigns with objective full-reference Quality of Experience (QoE)
+    metrics (PSNR, ssim, and VMAF) computed from 4K video streams delivered via MPEG-DASH, enabling frame-level
+    correlation between network performance and user experience. Key findings demonstrate that MIMO consistently
+    outperforms SISO, sustaining higher throughput and superior visual quality even under increasing user
+    demand. Specifically, MIMO with 256-QAM maintained VMAF scores above the visually lossless threshold
+    with five concurrent users, while SISO configurations experienced significant degradation. These results
+    provide empirical evidence for the critical role of spatial diversity and higher-order modulation
+    in ensuring reliable UHD video delivery over FWA. The proposed reproducible framework for detailed
+    quality assessment offers valuable insights for future optimization of 5G FWA deployments, contributing
+    to the practical understanding and deployment strategies for high-quality video services in Open RAN
+    environments.
+  url: https://arxiv.org/abs/2609.25423
+  pdf_url: https://arxiv.org/pdf/2609.25423v1
+  version: v1
+fetched: '2026-11-12'

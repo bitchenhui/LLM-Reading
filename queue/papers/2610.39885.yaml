@@ -1,0 +1,34 @@
+id: paper:arxiv:2610.39885
+status: skipped
+score: 0
+track: audio_coding
+matched: []
+meta:
+  title: 'AKDQ: Adaptive Key-Delta Quantization for Low-Bitrate RVQ-based Neural Speech Codecs'
+  authors:
+  - Xiao-Hang Jiang
+  - Yang Ai
+  - Zhen-Hua Ling
+  - Ji Wu
+  published: '2026-10-29'
+  updated: '2026-10-29'
+  categories:
+  - eess.AS
+  abstract: Low-bitrate speech coding is essential for bandwidth-constrained channels and on-device applications,
+    but conventional residual vector quantization (RVQ)-based codecs employ a fixed number of codebooks
+    per frame regardless of content. Adjacent speech frames often exhibit strong similarity, and quantizing
+    them independently with the same scheme results in redundant encoding, thereby wasting bitrate. Therefore,
+    we propose Adaptive Key-Delta Quantization (AKDQ), which replaces the fixed per-frame VQ allocation
+    of RVQ with an adaptive frame-wise key-or-delta policy. AKDQ is a plug-in strategy that requires no
+    modification to the codec's encoder-decoder backbone. Specifically, in AKDQ, each frame is classified
+    as either a key-frame (K-frame) quantized with all VQs, or a delta-frame (D-frame) quantized with
+    only a few VQs on a delta correction from the previous reconstruction, thereby reducing bitrate. The
+    K/D decision is made by a budget-aware causal scheduler through a bit-bank mechanism, keeping the
+    system streamable with no additional lookahead. Experiments on both causal and non-causal codec families
+    demonstrate that AKDQ effectively reduces bitrate redundancy. For instance, on DAC, using AKDQ at
+    1.5 kbps achieves reconstruction quality comparable to using the baseline RVQ at 2.0 kbps, saving
+    25% of the bitrate.
+  url: https://arxiv.org/abs/2610.39885
+  pdf_url: https://arxiv.org/pdf/2610.39885v1
+  version: v1
+fetched: '2026-11-12'

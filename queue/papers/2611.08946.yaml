@@ -1,0 +1,61 @@
+id: paper:arxiv:2611.08946
+status: skipped
+score: 2
+track: self_improvement
+matched:
+- ref: concept:RSI
+  count: 3
+  weight: 1
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+meta:
+  title: 'Flex-RSI: Benchmarking Recursive Self-Improvement of Frontier Agents'
+  authors:
+  - Jingdong Zhang
+  - Jionghao Wang
+  - Zhengming Yu
+  - Yancheng Cai
+  - Wei Chow
+  - Chris Choy
+  - Zhiyang Dou
+  - Hang Hua
+  - Jiachen Li
+  - Zhixuan Liu
+  - Chen Wang
+  - Songlin Wei
+  - Siyuan Yang
+  - Yu Yuan
+  - Xiaohang Zhan
+  - Yucheng Zhang
+  - Shuhong Zheng
+  - Xin Li
+  - Lingjie Liu
+  - Wojciech Matusik
+  - Zhengzhong Tu
+  - Wenping Wang
+  published: '2026-11-06'
+  updated: '2026-11-06'
+  categories:
+  - cs.AI
+  - cs.CV
+  - cs.RO
+  abstract: 'Frontier language models are increasingly deployed as agents, and how well an agent performs
+    depends not only on its model but also on its harness: the prompts, tools, memory, and control loop
+    through which the model acts. When an agent is applied to a new problem, a natural question is whether
+    it can use the feedback of the task to improve the way it works, and not merely its answer. Most existing
+    benchmarks keep the agent''s harness fixed and score the solution it produces, or target large-scale
+    model training. We introduce Flex-RSI, a benchmark for the recursive self-improvement of agents on
+    vision and robotics tasks under a fixed budget. In each round, an executor improves the task solution,
+    which is kept only if it scores higher on held-out validation data, and an improver then revises the
+    harness, including the executor and itself. Every run starts from the same general-purpose harness,
+    and the final solution is scored on hidden test data. Evaluating closed-source and open-weight models
+    on tasks spanning perception, reasoning, robot action, 3D reconstruction, visual creation, and infrastructure,
+    we find that self-improvement helps most when the agent builds its own solution, that feedback recording
+    only success or failure holds back open-weight models, and that open-weight models fall furthest behind
+    where outputs must pass strict checks of physical stability or exact correctness. Paired runs further
+    show that editing the harness itself contributes to the gains.'
+  url: https://arxiv.org/abs/2611.08946
+  pdf_url: https://arxiv.org/pdf/2611.08946v1
+  version: v1
+fetched: '2026-11-12'

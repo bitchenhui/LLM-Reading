@@ -34,6 +34,7 @@ v1 以 summary 级跟踪、积累实体与信号。
 | `processing_enhancement` | 编码链路处理与增强：超分/去噪/HDR/后滤波 | summary 跟踪 |
 | `immersive_media` | 沉浸式与三维：点云压缩、NeRF/3DGS、光场、VR/AR | summary 跟踪 |
 | `standards_ecosystem` | 标准进程、专利池、许可、产业政策 | summary 跟踪 |
+| `self_improvement` | 自我改进 AI：RSI（递归自我改进）、EoH/FunSearch/AlphaEvolve 式启发式进化、LLM agent 自改进 | summary 跟踪（与核心域交叉的 AI-for-Codec 工作仍归核心域） |
 
 ## 设计原则
 

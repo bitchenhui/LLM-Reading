@@ -1,0 +1,54 @@
+id: paper:arxiv:2610.11794
+status: pending
+score: 3
+track: self_improvement
+matched:
+- ref: concept:RSI
+  count: 3
+  weight: 1
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: 'Memento 3: Model-Based Recursive Self-Improvement through Reflective Rulebooks'
+  authors:
+  - Haoyu Zhao
+  - Zhengxu Yu
+  - Zhiyuan He
+  - Meng Fang
+  - Rasul Tutunov
+  - Haitham Bou-Ammar
+  - Weilin Luo
+  - Jun Wang
+  published: '2026-10-08'
+  updated: '2026-10-08'
+  categories:
+  - cs.AI
+  - cs.CL
+  - cs.CV
+  - cs.LG
+  abstract: 'Learning to act in unfamiliar environments requires agents to infer how the world works and
+    revise that understanding as new evidence arrives. Yet limited observations can support multiple world
+    models that explain past interactions but predict different outcomes in unseen states. We introduce
+    Memento 3, building on the Memento series to enable frozen LLM agents to continually learn explicit
+    world models through external memory. The agent maintains a natural-language rulebook as persistent
+    semantic memory, recording revisable hypotheses about environment dynamics while leaving unknown aspects
+    underspecified. It compiles this rulebook into executable code for prediction and planning. Through
+    a continual loop of observation, reflection, rule revision, compilation, and verification, the agent
+    uses prediction errors to refine both the rulebook and its code. Updated code is accepted only when
+    the LLM judges it faithful to the rulebook and cell-exact replay reproduces the observed transitions.
+    We investigate this process as a model-based route to recursive self-improvement (RSI): the agent
+    autonomously explores the environment, revises its world model, and uses verified updates to guide
+    subsequent interaction and learning, while the underlying LLM remains fixed. A population extension
+    maintains multiple world models in parallel, sharing interaction evidence and using their predictions
+    to guide exploration. On ARC-AGI-3, the single-model agent clears every level of all 25 public games,
+    achieves a mean Relative Human Action Efficiency (RHAE) of 100.0, and uses 44% of the human action
+    count. In an Atari Pong case study, a learned feedback controller wins 21:0 in each of three evaluated
+    episodes with different openings, without further LLM calls.'
+  url: https://arxiv.org/abs/2610.11794
+  pdf_url: https://arxiv.org/pdf/2610.11794v1
+  version: v1
+fetched: '2026-11-12'

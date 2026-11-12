@@ -1,0 +1,36 @@
+id: paper:arxiv:2611.01113
+status: skipped
+score: 1
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+meta:
+  title: 'CogRSI: Evolving and Auditing Cognitive Reasoning Strategies'
+  authors:
+  - Yandan zheng
+  - Haoran Luo
+  - Xinliang Zhou
+  - Anhtuan Luu
+  published: '2026-10-31'
+  updated: '2026-10-31'
+  categories:
+  - cs.CL
+  abstract: 'Can a language model learn better ways to reason about other people''s minds by improving
+    its own strategies, and are the strategies it learns actually right? We study this with cogrsi. A
+    grounded reader marks who saw each event in a story and uses a short written principle to settle disagreements
+    between its readings. With a principle written by experts, it beats self-consistency at the same token
+    cost. A self-improvement loop then writes the principle itself. It keeps an update only if accuracy
+    rises by a calibrated margin, and in one variant only if it also passes counterfactual test pairs.
+    The learned principles transfer: on 800 BigToM pairs that no system had seen, each of them scores
+    higher than the expert principle. We then check what the learned rules actually say. Each rule is
+    translated into code and run on thousands of small stories with known answers. Most of them give a
+    wrong answer in at least one situation they claim to cover, for example by treating a character who
+    is in the room as knowing what happened even while asleep. Accuracy does not reveal which rules are
+    wrong, and the counterfactual test does not fix this. A strategy can help in practice and still be
+    wrong as a rule, so both need checking. Our code and data are publicly available.'
+  url: https://arxiv.org/abs/2611.01113
+  pdf_url: https://arxiv.org/pdf/2611.01113v1
+  version: v1
+fetched: '2026-11-12'

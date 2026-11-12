@@ -1,0 +1,43 @@
+id: paper:arxiv:2607.03576
+status: pending
+score: 7
+track: immersive_media
+matched:
+- ref: codec:G-PCC
+  count: 2
+  weight: 3
+- ref: codec:V-PCC
+  count: 1
+  weight: 3
+- ref: org:MPEG
+  count: 1
+  weight: 1
+meta:
+  title: Motion Estimation Techniques for Volumetric Video Attribute Compression
+  authors:
+  - Haoran Hong
+  - Eduardo Pavez
+  - Antonio Ortega
+  - Ryosuke Watanabe
+  - Keisuke Nonaka
+  published: '2026-07-03'
+  updated: '2026-07-03'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: Point cloud compression relies on techniques to compress both geometry and attributes. Motion-based
+    approaches for dynamic solid point cloud geometry compression within the geometry-based point cloud
+    compression (G-PCC) framework have achieved significant reductions in geometry rate. However, motion-based
+    techniques for attribute compression remain underexplored, making it challenging to achieve significant
+    reductions in the temporal redundancy of attributes. Firstly, this paper proposes a geometry-based
+    inter-coding scheme to compress the attributes of dynamic solid point clouds. Secondly, a graph-based
+    motion-estimation scheme for point-cloud attribute compression is proposed. Thirdly, an interpolation-free
+    fractional-voxel motion estimation method is proposed to refine motion accuracy to fractional-voxel
+    precision. Our experimental results on the MPEG point cloud dataset show that the proposed scheme
+    outperforms G-PCC, GeS-TM, and V-PCC in lossless and lossy geometry conditions. We achieve average
+    bitrate savings of $55.3\%$, $42.3\%$, and $16.5\%$ over G-PCC, GeS-TM, and V-PCC, respectively, under
+    lossy-geometry conditions.
+  url: https://arxiv.org/abs/2607.03576
+  pdf_url: https://arxiv.org/pdf/2607.03576v1
+  version: v1
+fetched: '2026-11-12'

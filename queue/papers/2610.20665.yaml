@@ -1,0 +1,43 @@
+id: paper:arxiv:2610.20665
+status: pending
+score: 3
+track: self_improvement
+matched:
+- ref: concept:LLM
+  count: 2
+  weight: 1
+- ref: concept:RSI
+  count: 2
+  weight: 1
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+meta:
+  title: 'The World Won''t Wait: Evaluating and Teaching Agents Under a Live Clock'
+  authors:
+  - Ningxin Pan
+  - Hanyu Li
+  - Yeqing Shen
+  - Ning Ding
+  - Yehui Tang
+  - Wentao Zhang
+  published: '2026-10-14'
+  updated: '2026-10-14'
+  categories:
+  - cs.AI
+  abstract: 'Large language model (LLM) agents can solve complex interactive tasks, yet reasoning and
+    tool calls take time. In continuously changing environments, an otherwise correct action may arrive
+    too late. We introduce RealtimeBench, with 180 tasks across six game types, to evaluate agents while
+    games continue running during inference. Paired evaluations show that GPT-6.1-sol outperforms the
+    faster Jev when games are paused, but falls behind when they keep running. We propose Two-Timescale
+    Offline Recursive Self-Improvement (TORSI): a slow teacher studies failures and tests corrections
+    in paused games between attempts, then writes reusable instructions for a fast student. The student
+    acts without teacher calls during gameplay, and validation scores determine which updates are adopted.
+    Two rounds raise Jev''s average test score from 13.51 to 24.19 on a 0--100 progress scale, improving
+    all six game types. The instructions also improve average scores for three other models without retuning.
+    These findings point toward real-time intelligence: enabling powerful LLM agents to remain effective
+    in a continuously changing world by organizing deliberation, learning, and action across timescales.'
+  url: https://arxiv.org/abs/2610.20665
+  pdf_url: https://arxiv.org/pdf/2610.20665v1
+  version: v1
+fetched: '2026-11-12'

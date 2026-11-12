@@ -1,0 +1,52 @@
+id: paper:arxiv:2611.02833
+status: pending
+score: 5
+track: self_improvement
+matched:
+- ref: codec:Opus
+  count: 1
+  weight: 3
+- ref: concept:LLM
+  count: 1
+  weight: 1
+- ref: concept:SelfImprovement
+  count: 1
+  weight: 1
+meta:
+  title: Reimagining computational quantum research with AI scientists
+  authors:
+  - Yuxuan Du
+  - Hanqing Zhao
+  - Xinbiao Wang
+  - Yiming Lu
+  - Kaining Zhang
+  - Dacheng Tao
+  published: '2026-11-02'
+  updated: '2026-11-02'
+  categories:
+  - quant-ph
+  - cs.AI
+  - cs.LG
+  abstract: AI scientists are expanding automated research across scientific domains, yet their ability
+    to turn the scientific record into a foundation for autonomous discovery remains elusive. Here we
+    uncover a fundamental barrier to this transition and demonstrate a route to overcome it in computational
+    quantum science, where advances shape both what we can learn from complex quantum systems and what
+    quantum computing can ultimately deliver. To identify this barrier, we introduce OmniQ, an expert-audited
+    virtual research environment that converts published studies into executable reproduction tasks. Across
+    59 papers spanning classical simulation, quantum algorithms and quantum-property characterization,
+    we systematically evaluate five agentic systems powered by large language models and six third-party
+    agent harnesses. Our findings reveal that current AI scientists often fail to reproduce published
+    results, exposing a fundamental mismatch between what scientific papers communicate and what autonomous
+    agents require. By contrast, human expert intervention can turn these failures into successful reproductions,
+    showing that the missing information can be identified and converted into reusable research experience.
+    Guided by this observation, we develop Residual Agents (RA), a quantum-tailored self-improving AI
+    scientist that distils externally verified workflow repairs into such experience. RA substantially
+    improves research performance under fixed base models and limited adaptation budgets. For example,
+    RA raises DeepSeek V4.1 Flash performance from 68% to 85%, matching Claude Code with Opus 5 at a third
+    of its cost despite using a weaker base model. We integrate all reproduced results into an extensible
+    platform built on the model context protocol, making verified research workflows directly accessible
+    to AI scientists and allowing new scientific papers to be continuously incorporated.
+  url: https://arxiv.org/abs/2611.02833
+  pdf_url: https://arxiv.org/pdf/2611.02833v1
+  version: v1
+fetched: '2026-11-12'

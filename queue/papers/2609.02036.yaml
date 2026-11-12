@@ -1,0 +1,47 @@
+id: paper:arxiv:2609.02036
+status: skipped
+score: 2
+track: processing_enhancement
+matched:
+- ref: concept:SuperResolution
+  count: 1
+  weight: 1
+- ref: concept:TrainingFree
+  count: 1
+  weight: 1
+meta:
+  title: 'SelfLift: Accelerating Few-Step Diffusion via Self-Recovering Resolution Transition'
+  authors:
+  - Tingyan Wen
+  - Chenqian Yan
+  - Xurui Peng
+  - Xiazhang Fang
+  - Shuai Wang
+  - Xueqian Wang
+  - Songwei Liu
+  published: '2026-09-02'
+  updated: '2026-09-16'
+  categories:
+  - cs.CV
+  abstract: Few-step diffusion models substantially compress temporal computation, making the spatial
+    cost of each model evaluation an increasingly dominant source of inference latency. Progressive-resolution
+    inference reduces this cost by performing early denoising at low resolution and reserving high-resolution
+    computation for refinement. However, existing methods typically lift intermediate latents directly
+    and rely on subsequent steps to absorb the induced distribution mismatch. In the few-step regime,
+    the limited recovery budget leaves these errors as visible artifacts, constraining how late the transition
+    can occur and, consequently, how efficiently it can be performed. We introduce SelfLift, a self-recovering
+    progressive-resolution framework that derives both transition-repair signals and trajectory-aligned
+    supervision from the generative model itself. SelfLift-zero proposes a training-free Artifact-Aware
+    Consistency Lift, using disagreement between direct latent lifting and pixel-VAE re-encoding as both
+    a localized artifact-risk signal and a model-native correction direction. It enables reliable late
+    transitions without external super-resolution, extra denoiser evaluations, or sampling-schedule modifications.
+    Building on this robust transition, SelfLift-rich performs On-Policy Self Recovery on student-visited
+    states, transferring dense high-resolution guidance from an internal self-teacher while remaining
+    aligned with the altered progressive-resolution dynamics. Across FLUX.2-Klein and Z-Image-Turbo, SelfLift
+    reduces end-to-end latency by 41.5% and 44.1%, respectively. Combined with timestep distillation,
+    it delivers overall speedups of 29.61x and 19.21x over the corresponding 50-step models while preserving
+    competitive generation quality, establishing a stronger speed-quality frontier for few-step diffusion.
+  url: https://arxiv.org/abs/2609.02036
+  pdf_url: https://arxiv.org/pdf/2609.02036v2
+  version: v2
+fetched: '2026-11-12'

@@ -1,0 +1,46 @@
+id: paper:arxiv:2610.33799
+status: skipped
+score: 2
+track: self_improvement
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+- ref: concept:SelfImprovement
+  count: 1
+  weight: 1
+meta:
+  title: 'MTA-Zero: Self-Improving Multimodal Deep Search via Online QA-Solver Co-training'
+  authors:
+  - Xiangyu Peng
+  - Jiaxin Zhang
+  - An Yan
+  - Yu Li
+  - Ran Xu
+  - Zeyuan Chen
+  - Chien-Sheng Wu
+  published: '2026-10-24'
+  updated: '2026-10-24'
+  categories:
+  - cs.CL
+  abstract: 'Multimodal large language models (MLLMs) have become strong visual reasoners, yet remain
+    limited in open-world, multi-step search that requires grounding images, selecting tools, and integrating
+    web evidence. Existing approaches typically construct and filter fixed offline corpora whose question
+    distributions cannot adapt as the target deep-search agent improves. Building on MTA-Agent''s image-grounded
+    QA construction, we present MTA-Zero, an online multimodal QA-Solver co-training framework for self-improving
+    multimodal deep-search agents that requires no precomputed multi-hop corpus. Starting from image-grounded
+    VQA seed contexts, a trainable QA Generator retrieves evidence and constructs verified multi-hop questions
+    online. A separate deep-search Solver then selects tools, gathers evidence, and answers the generated
+    questions. To focus generation on the Solver''s learning frontier, we derive a Goldilocks reward for
+    the QA Generator from the Solver''s group-wise rollout success rate: questions solved by all rollouts
+    or by none receive zero reward, whereas questions near the current frontier are favored. We optimize
+    the two policies independently with GRPO, without sharing parameters or gradients. Across six multimodal
+    deep-search benchmarks, MTA-Zero improves a Qwen3-VL-8B Solver from 36.91% to 51.58% mean accuracy
+    and achieves performance comparable to GPT-5 under the same agent workflow. The same framework also
+    improves a newer Qwen3.6-27B Solver by 10.82 points. These results show that verified online question
+    generation provides a policy-specific curriculum for continually improving multimodal deep-search
+    agents.'
+  url: https://arxiv.org/abs/2610.33799
+  pdf_url: https://arxiv.org/pdf/2610.33799v1
+  version: v1
+fetched: '2026-11-12'

@@ -1,0 +1,44 @@
+id: paper:arxiv:2610.14460
+status: skipped
+score: 2
+track: self_improvement
+matched:
+- ref: concept:LLM
+  count: 2
+  weight: 1
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+meta:
+  title: 'Re-executing Coding-Agent Evaluations: Unchanged Decisions and Unresolved Policy Risk'
+  authors:
+  - Tianyu Ding
+  - Yaocheng Tong
+  - Muzhi Yang
+  - Fei Jiang
+  - Lei Yang
+  - Boya Yu
+  published: '2026-10-10'
+  updated: '2026-10-10'
+  categories:
+  - cs.SE
+  - cs.CL
+  abstract: Executable tests grade large language model (LLM) coding-agent patches for leaderboards, rewards
+    and self-improvement. Two preregistered re-execution studies returned negative results. SWE-bench
+    Pro v1's offline option rejected none of 59 accepted Go patches whose grading configuration changed.
+    Their exploratory, unweighted upper confidence limit is 4.95% under candidate independence, leaving
+    a 3% exposed-patch risk unresolved; the preregistered estimator uses inverse sampling-probability
+    weights. An extension was inconclusive. In a selected stratum, a reconstructed module cache built
+    from the reference solution's dependencies rejected accepted alternatives from four models that passed
+    with their own dependencies. Re-executing 1,929 selected agent-version/task evaluations from the Darwin
+    Gödel Machine's archive preserved best-agent selection and system-variant ranking, with search history
+    and scores of evaluations not rerun fixed. Exploratory host, image and adapted-grader comparisons
+    also preserved them. Seven of 23 disagreements with archived verdicts did not recur on a second host;
+    rebuilt images changed 16 three-run majority verdicts (0.83%) under four-CPU execution. We provide
+    an evidence-to-claim summary, lessons for grader audits and an anonymous replication package. These
+    results concern accepted patches and fixed-history decisions; general policy safety and adaptive-learning
+    robustness require broader evaluations.
+  url: https://arxiv.org/abs/2610.14460
+  pdf_url: https://arxiv.org/pdf/2610.14460v1
+  version: v1
+fetched: '2026-11-12'

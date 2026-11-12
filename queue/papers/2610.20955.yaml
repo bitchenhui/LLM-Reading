@@ -1,0 +1,39 @@
+id: paper:arxiv:2610.20955
+status: skipped
+score: 0
+track: audio_coding
+matched: []
+meta:
+  title: Probing Neural Audio Codecs with Speaker Traits and Speech Characteristics
+  authors:
+  - Jihwan Lee
+  - Tiantian Feng
+  - Minu Kim
+  - Junhyeok Lee
+  - Sean Foley
+  - Thanathai Lertpetchpun
+  - Najim Dehak
+  - Dani Byrd
+  - Shrikanth Narayanan
+  published: '2026-10-14'
+  updated: '2026-10-14'
+  categories:
+  - eess.AS
+  - cs.SD
+  abstract: 'Neural audio codecs are increasingly used for low-bitrate speech coding and serve as tokenizers
+    for speech language models, yet it remains unclear how their codebook hierarchies encode speaker traits
+    and speech characteristics. We systematically study 17 multi-codebook neural audio codecs across seven
+    traits: sex, age, accent, voice quality, emotion, speech flow, and non-verbal sounds. For each codec,
+    we reconstruct speech using partial codebooks and use machine listeners to compare trait predictions
+    on each reconstruction. We measure prediction agreement with reweighted Cohen''s \k{appa}, and define
+    trait depth as a proxy for the codebook depth by which each trait is encoded and recoverable. Overall,
+    sex has the shallowest trait depth, followed by speech flow, whereas voice quality and age group require
+    deeper stacks; emotion, accent, and non-verbal sounds fall in between. Within each trait, speech-flow
+    classes are at relatively similar trait depths, whereas emotion, accent, and non-verbal sounds differ
+    more. Additionally, we explore how certain codec design choices relate to trait depths. These findings
+    show that codebook hierarchies are trait-dependent and may not exhibit uniform coarse-to-fine structures,
+    motivating trait-specific codec evaluation and design for future applications.'
+  url: https://arxiv.org/abs/2610.20955
+  pdf_url: https://arxiv.org/pdf/2610.20955v1
+  version: v1
+fetched: '2026-11-12'

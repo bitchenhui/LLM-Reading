@@ -1,0 +1,48 @@
+id: paper:arxiv:2604.20104
+status: reviewed
+score: 8
+matched:
+- ref: codec:HEVC
+  count: 1
+  weight: 3
+- ref: impl:TCM
+  count: 1
+  weight: 3
+- ref: dataset:UVG
+  count: 1
+  weight: 1
+- ref: metric:BD-Rate
+  count: 1
+  weight: 1
+meta:
+  title: Feedback-Driven Rate Control for Learned Video Compression
+  authors:
+  - Zhiheng Xu
+  - Xuerui Ma
+  - Chunhua Peng
+  - Hao Zhang
+  published: '2026-04-22'
+  updated: '2026-04-22'
+  categories:
+  - cs.MM
+  abstract: End-to-end learned video compression has achieved strong rate-distortion performance, but
+    rate control remains underexplored, especially in target-bitrate-driven and budget-constrained scenarios.
+    Existing methods mainly rely on explicit R-D-lambda modeling or feed-forward prediction, which may
+    lack stable online adjustment when video content varies dynamically. We propose a feedback-driven
+    rate control framework for learned video compression. First, we build a single-model multi-rate coding
+    interface on top of a DCVC-style framework, enabling continuous bitrate control through the rate-distortion
+    parameter lambda. Then, a log-domain PI/PID closed-loop controller updates lambda online according
+    to the error between the target bitrate and the entropy-estimated bitrate, achieving stable target
+    bitrate tracking. To further improve frame-level bit allocation under budget constraints, we introduce
+    a dual-branch GRU-based adjustment controller that refines the base control signal using budget-state
+    features and causal coding statistics. Experiments on UVG and HEVC show that the proposed PI/PID controller
+    achieves average bitrate errors of 2.88% and 2.95% on DCVC and DCVC-TCM, respectively. With the proposed
+    adjustment controller, the method further achieves average BD-rate reductions of 5.69% and 4.49%,
+    while reducing the average bitrate errors to 2.13% and 2.24%. These results show that the proposed
+    method provides a practical solution for learned video compression with both controllable bitrate
+    and improved rate-distortion performance.
+  url: https://arxiv.org/abs/2604.20104
+  pdf_url: https://arxiv.org/pdf/2604.20104v1
+  version: v1
+fetched: '2026-11-12'
+llm_decision: deep_read

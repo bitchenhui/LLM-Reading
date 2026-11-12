@@ -1,0 +1,41 @@
+id: paper:arxiv:2605.23323
+status: pending
+score: 3
+matched:
+- ref: concept:EntropyModel
+  count: 1
+  weight: 1
+- ref: dataset:Kodak
+  count: 1
+  weight: 1
+- ref: metric:LPIPS
+  count: 1
+  weight: 1
+meta:
+  title: Efficient Learned Image Compression without Entropy Coding
+  authors:
+  - Hao Cao
+  - Wenqi Guo
+  - Zhijin Qin
+  - Jungong Han
+  published: '2026-05-22'
+  updated: '2026-05-22'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: Entropy coding is widely used in typical learned image compression (LIC) that converts latents
+    into a compact bitstream. However, entropy coding is typically sequential and becomes the coding latency
+    bottleneck. To overcome it, we present Entropy-Coding Free Learned Image Compression (EF-LIC), a multi-rate
+    framework that generates compact representation by removing statistical and correlation redundancy
+    with low coding latency. First, we introduce unconstrained vector quantization and prove that its
+    index distribution approaches the maximum-entropy bound, yielding minimal statistical redundancy.
+    Second, we propose a context-conditioned autoregressive transform that directly reparameterizes the
+    latents to reduce inter-dependency. Theoretical analysis shows that EF-LIC can remove correlation
+    redundancy as effectively as typical LIC with entropy coding, leading to comparable compression performance.
+    Experiments show EF-LIC achieves up to 67.86% bitrate reduction over MS-ILLM on Kodak with LPIPS.
+    Ablation studies further show EF-LIC matches the compression performance of its entropy-coding based
+    variant while achieving over $3\times$ faster encoding and $5\times$ faster decoding.
+  url: https://arxiv.org/abs/2605.23323
+  pdf_url: https://arxiv.org/pdf/2605.23323v1
+  version: v1
+fetched: '2026-11-12'

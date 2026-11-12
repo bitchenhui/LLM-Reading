@@ -1,0 +1,34 @@
+id: paper:arxiv:2609.38502
+status: skipped
+score: 1
+track: audio_coding
+matched:
+- ref: concept:NeuralAudioCodec
+  count: 1
+  weight: 1
+meta:
+  title: Multi-Rate Bandwidth Extension by Token Completion in Neural Audio Codecs
+  authors:
+  - Benoît Ginies
+  - Olivier Fercoq
+  - Gaël Richard
+  published: '2026-09-29'
+  updated: '2026-09-29'
+  categories:
+  - cs.SD
+  abstract: Bandwidth extension, the task of reconstructing the high-frequency components of an audio
+    signal from its low-passed counterpart, is a long-standing problem in audio processing. In this work,
+    we extend recent advances in neural architectures by framing bandwidth extension as an audio token
+    prediction problem. Specifically, we train a transformer-based language model on the discrete representations
+    produced by a disentangled neural audio codec, where the disentanglement is guided by a Harmonic-Percussive
+    decomposition of the input signals, highlighting spectral structures particularly relevant for bandwidth
+    extension. Our approach introduces a novel codec design that explicitly accounts for the downstream
+    token prediction task, enabling a more effective coupling between codec structure and transformer
+    modeling. This joint design yields high-quality reconstructions of the original signal, as measured
+    by both objective metrics and subjective evaluations. These results highlight the importance of aligning
+    codec disentanglement and representation learning with the generative modeling stage, and demonstrate
+    the potential of global, representation-aware design for advancing bandwidth extension.
+  url: https://arxiv.org/abs/2609.38502
+  pdf_url: https://arxiv.org/pdf/2609.38502v1
+  version: v1
+fetched: '2026-11-12'

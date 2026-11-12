@@ -1,0 +1,39 @@
+id: paper:arxiv:2609.27560
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 4
+  weight: 1
+meta:
+  title: 'When Visual Quality Misleads: Intent Recognition under Rendered Avatar Distortions'
+  authors:
+  - Ning-Hsuan Chang
+  - Kai-Siang Ma
+  - Yu-Chih Chen
+  published: '2026-09-23'
+  updated: '2026-09-23'
+  categories:
+  - cs.MM
+  - cs.CV
+  - cs.HC
+  abstract: Avatar-streaming systems are commonly evaluated with image and video quality assessment (IQA/VQA)
+    metrics, implicitly treating visual fidelity as a proxy for communicative success. We test this assumption
+    through a controlled behavioral study of rendered 3D avatars across a pristine condition and fourteen
+    geometric, photometric, temporal, and combined distortions. Fifty-nine participants contributed 2,688
+    judgments of perceived action, response confidence, and visual quality. We identify Misleading Quality
+    in this dataset as distorted renderings that retain above-average perceived quality but yield below-average
+    action-recognition accuracy. We also derive an Intent Quality Score (IQS) combining recognition correctness
+    and confidence as the behavioral target for objective metrics. Among 126 distorted content--condition
+    cells, 31 (24.6%) exhibited Misleading Quality; temporal and geometric distortions showed the highest
+    rates, at 50.0% and 31.1%, respectively. The results reveal a quality--accuracy dissociation where
+    distortion families affect appearance and communication differently. Across 24 direct-scoring IQA/VQA
+    metrics and three supervised feature-regression baselines, alignment with IQS remained limited; at
+    $λ=0.5$, the best leave-one-content-out baseline reached PLCC $=0.4435$. Under this controlled protocol,
+    visual fidelity alone is insufficient for avatar communication, motivating intent-aware quality assessment
+    and streaming objectives.
+  url: https://arxiv.org/abs/2609.27560
+  pdf_url: https://arxiv.org/pdf/2609.27560v1
+  version: v1
+fetched: '2026-11-12'

@@ -1,0 +1,32 @@
+id: paper:arxiv:2605.13243
+status: pending
+score: 3
+matched:
+- ref: codec:HEVC
+  count: 1
+  weight: 3
+meta:
+  title: Spatial Competition for Low-Complexity Learned Image Compression
+  authors:
+  - Théophile Blard
+  - Pierrick Philippe
+  - Théo Ladune
+  - Xiaoran Jiang
+  - Olivier Déforges
+  published: '2026-05-13'
+  updated: '2026-05-13'
+  categories:
+  - eess.IV
+  abstract: Autoencoder-based image codecs achieve state-of-the-art compression performance but often
+    incur high computational complexity, particularly at decoding time. This work introduces a low-complexity
+    learned image compression framework based on spatial competition between multiple specialized neural
+    codecs. For each image region, the encoder selects the codec that best matches the local content according
+    to a rate-distortion cost. A mode map is transmitted as side information to indicate the per-region
+    codec selection. At decoding time, this mode map-based selection guides reconstruction while preserving
+    the complexity of a single codec. This design enables per-image adaptation with low decoding complexity
+    and fast encoding. On the CLIC 2020 dataset, our method achieves up to -14.5% rate reduction compared
+    to a single codec and reaches HEVC-level performance with a decoding complexity of 1433 MACs per pixel.
+  url: https://arxiv.org/abs/2605.13243
+  pdf_url: https://arxiv.org/pdf/2605.13243v1
+  version: v1
+fetched: '2026-11-12'

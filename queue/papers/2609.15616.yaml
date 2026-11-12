@@ -1,0 +1,29 @@
+id: paper:arxiv:2609.15616
+status: pending
+score: 3
+track: audio_coding
+matched:
+- ref: codec:Opus
+  count: 2
+  weight: 3
+meta:
+  title: 'OLAC: An Overlapped Lossless Audio Codec in the Time-Domain with MDCT Compatibility'
+  authors:
+  - Jean-Marc Valin
+  published: '2026-09-14'
+  updated: '2026-09-14'
+  categories:
+  - eess.AS
+  abstract: Lossless audio coding is a highly mature field of research, with limited potential for significant
+    improvements in pure compression performance. However, emerging real-time wireless applications increasingly
+    require dynamic transitions between lossy and lossless coding to adapt to fluctuating network capacities.
+    Existing standalone lossless codecs cannot achieve this seamless switching without discontinuity.
+    In this paper, we propose a lossless codec based on time-domain aliasing cancellation (TDAC) that
+    can match the overlap in the CELT mode of the Opus codec. This allows the transition between lossy
+    and lossless coding to be achieved without discontinuity or the transmission of redundant information.
+    We show that the proposed codec still achieves state-of-the-art lossless compression without being
+    penalized by its use of TDAC.
+  url: https://arxiv.org/abs/2609.15616
+  pdf_url: https://arxiv.org/pdf/2609.15616v1
+  version: v1
+fetched: '2026-11-12'

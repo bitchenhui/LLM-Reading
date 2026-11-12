@@ -1,0 +1,33 @@
+id: paper:arxiv:2610.20471
+status: skipped
+score: 1
+track: audio_coding
+matched:
+- ref: concept:NeuralAudioCodec
+  count: 1
+  weight: 1
+meta:
+  title: Quantizer Redundancy and Exact Index Recoding in a Frozen Neural Audio Codec
+  authors:
+  - Youssef Hemimy
+  published: '2026-10-14'
+  updated: '2026-10-14'
+  categories:
+  - cs.SD
+  - eess.AS
+  abstract: Residual scalar quantization can produce highly dependent indices when successive stages reuse
+    identical, unscaled grids. This case study examines that behavior in a frozen neural audio codec and
+    develops an exact recoding procedure that reduces storage while preserving its decoder inputs. Analysis
+    of the repeated-grid recurrence identifies predictable stage sequences; finite-precision checks motivate
+    preserving every original index through explicit exception records. The model weights and reconstruction
+    graph remain fixed. On the studied 62- and 512-file cohorts, a predictor, adaptive coding and explicit
+    file selection reduce complete stored bytes. The final 512-file rate is 129.591 kbps including headers,
+    25.943% below an original-index XZ control. Original recorded CPU runs establish bitwise latent and
+    waveform preservation; independent readers verify exact index and metadata recovery in subsequent
+    saved-stream experiments. Later coding choices use previously studied cohorts, and fresh encoding
+    requires generating three alternatives. The engineering result is implementation-specific storage
+    reduction with exact index recovery; the underlying lossy reconstruction quality remains unchanged.
+  url: https://arxiv.org/abs/2610.20471
+  pdf_url: https://arxiv.org/pdf/2610.20471v1
+  version: v1
+fetched: '2026-11-12'

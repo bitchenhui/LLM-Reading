@@ -1,0 +1,34 @@
+id: paper:arxiv:2607.19315
+status: skipped
+score: 1
+track: processing_enhancement
+matched:
+- ref: concept:SuperResolution
+  count: 1
+  weight: 1
+meta:
+  title: ERank in Latent Space as an Image-Complexity and Richness Measure
+  authors:
+  - Maksim Smirnov
+  - Grigory Kononov
+  - Anastasiia Linich
+  - Egor Surkov
+  - Egor Shvetsov
+  published: '2026-07-21'
+  updated: '2026-07-23'
+  categories:
+  - cs.CV
+  abstract: We propose the effective rank (ERank) of the channel covariance of an image's deep feature
+    map as a per-sample, label-free measure of visual richness, computed from a single forward pass through
+    a frozen pretrained encoder. ERank counts how many decorrelated channel directions an image activates,
+    and we characterize its properties, including its behavior under noise. Empirically, ERank orders
+    images from plain to visually rich, correlates with codec bitrate, sharpness, and edge density, and
+    correlates with human complexity annotations on IC9600 with $r = 0.72$. As a data-selection criterion,
+    removing low-ERank samples improves super-resolution and removing high-ERank samples improves OCR,
+    in both pretraining and finetuning, while selection does not help classification, segmentation, or
+    denoising. ERank is thus a cheap richness signal, useful exactly when task difficulty is governed
+    by input richness.
+  url: https://arxiv.org/abs/2607.19315
+  pdf_url: https://arxiv.org/pdf/2607.19315v2
+  version: v2
+fetched: '2026-11-12'

@@ -1,0 +1,38 @@
+id: paper:arxiv:2605.01187
+status: skipped
+score: 2
+matched:
+- ref: metric:BD-Rate
+  count: 1
+  weight: 1
+- ref: org:NVIDIA
+  count: 1
+  weight: 1
+meta:
+  title: 'Evolution of NVENC Efficiency: A Longitudinal Analysis of HQ and UHQ Tuning Efficiency, Latency
+    and Energy Trade-offs'
+  authors:
+  - Kasidis Arunruangsirilert
+  - Jiro Katto
+  published: '2026-05-02'
+  updated: '2026-05-02'
+  categories:
+  - eess.IV
+  - cs.AR
+  - cs.MM
+  abstract: The rapid expansion of uplink-intensive applications necessitates video coding solutions that
+    balance high Rate-Distortion (RD) efficiency with ultra-low latency. This paper presents a longitudinal
+    performance analysis of NVIDIA hardware encoding (NVENC), spanning from Pascal to the emerging Blackwell
+    generation. We specifically evaluate the operational viability of the new "Ultra High Quality" (UHQ)
+    tuning mode against standard low-latency configurations. Our results demonstrate that while the Blackwell
+    architecture breaks historical efficiency plateaus, achieving a 5.94% BD-Rate gain in standard modes
+    and up to 22.79% in UHQ modes, these gains incur severe system-level penalties. We reveal that UHQ
+    operates as a hybrid pipeline, offloading complexity to CUDA cores and enforcing aggressive temporal
+    structures (up to 7 B-frames) that increase end-to-end latency by over 400% and GPU board power consumption
+    by up to 40%. Consequently, while UHQ successfully bridges the quality gap with software encoders,
+    its prohibitive serialization delay renders it unsuitable for interactive real-time communications,
+    positioning it instead as a specialized solution for Video-on-Demand (VoD) transcoding.
+  url: https://arxiv.org/abs/2605.01187
+  pdf_url: https://arxiv.org/pdf/2605.01187v1
+  version: v1
+fetched: '2026-11-12'

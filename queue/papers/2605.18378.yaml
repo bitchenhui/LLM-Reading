@@ -1,0 +1,38 @@
+id: paper:arxiv:2605.18378
+status: reviewed
+score: 9
+matched:
+- ref: codec:AV1
+  count: 1
+  weight: 3
+- ref: codec:AVC
+  count: 1
+  weight: 3
+- ref: codec:HEVC
+  count: 1
+  weight: 3
+meta:
+  title: Evaluating the Effect of Compression on Video Temporal Consistency Using Objective Quality Metrics
+  authors:
+  - Peter Zsoldos
+  published: '2026-05-18'
+  updated: '2026-05-18'
+  categories:
+  - eess.IV
+  - cs.MM
+  abstract: While video compression algorithms effectively reduce bitrate, aggressive quantization often
+    compromises temporal coherence, introducing artifacts such as flicker, motion inconsistency, and unstable
+    textures. Although spatial quality degradation is well-documented, the relationship between compression
+    intensity and temporal stability remains insufficiently characterized. This paper systematically examines
+    the progression of frame-to-frame coherence errors across different bitrate regimes, utilizing multiple
+    codecs (AV1, HEVC, VP9, H.264) and content types. Our findings reveal that temporal consistency degrades
+    non-linearly with increasing compression. Most critically, we identify a "Predictability anomaly"
+    where sequences with unpredictable or irregular dynamics experience disproportionately higher instability
+    than sequences with higher, but more predictable, motion magnitude. This challenges the conventional
+    assumption that motion volume alone dictates encoding difficulty and highlights the necessity of temporal-aware
+    metrics in compression pipelines.
+  url: https://arxiv.org/abs/2605.18378
+  pdf_url: https://arxiv.org/pdf/2605.18378v1
+  version: v1
+fetched: '2026-11-12'
+llm_decision: summary_only

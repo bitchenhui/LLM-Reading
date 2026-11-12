@@ -1,0 +1,39 @@
+id: paper:arxiv:2610.00154
+status: skipped
+score: 1
+track: audio_coding
+matched:
+- ref: concept:NeuralAudioCodec
+  count: 1
+  weight: 1
+meta:
+  title: How Robust Are Neural Audio Codecs for African Speech? A Multi-Task Benchmark and the Limits
+    of Perceptual Quality
+  authors:
+  - Chibuzor Okocha
+  - Christan Earl Grant
+  published: '2026-09-10'
+  updated: '2026-09-10'
+  categories:
+  - cs.SD
+  - cs.CL
+  abstract: 'Neural audio codecs enable low-bitrate speech compression and tokenization, yet their robustness
+    on accented and multilingual speech remains under-evaluated. We benchmark seven open-source neural
+    codecs (DAC, EnCodec, FocalCodec, LanguageCodec, SemantiCodec, UniCodec, WavTokenizer) on three African
+    speech datasets afrinames, afrispeech dialog, afrispeech multilingual, reporting signal-level quality
+    (NISQA, UTMOS, ViSQOL, STOI, F0-RMSE) alongside two downstream tasks: automatic speech recognition
+    (ASR) and speaker verification (ASV). Our analysis yields four findings. First, signal metrics differ
+    sharply in downstream validity: reference-based structural/intelligibility measures (ViSQOL, STOI)
+    and prosodic error (F0-RMSE) track ASR and ASV degradation far more reliably than neural mean-opinion-score
+    predictors (NISQA, UTMOS). Second, intelligibility and speaker-identity preservation diverge sharply
+    across architectures, and the apparent identity ranking itself depends on the ASV backend. Third,
+    degradation is strongly domain-dependent and largest for conversational dialog. Fourth, the resulting
+    degradation is partly recoverable: parameter-efficient \emph{codec} adaptation (LoRA, $\sim$1--3\%
+    of parameters) on roughly 35 hours of African speech reduces the compression-induced word-error-rate
+    gap, recovering recognition toward the uncompressed baseline (developed in companion work). These
+    results motivate task-aware, domain-representative, and adaptation-aware evaluation of speech codecs
+    as a prerequisite for inclusive deployment.'
+  url: https://arxiv.org/abs/2610.00154
+  pdf_url: https://arxiv.org/pdf/2610.00154v1
+  version: v1
+fetched: '2026-11-12'

@@ -1,0 +1,38 @@
+id: paper:arxiv:2605.16817
+status: skipped
+score: 2
+matched:
+- ref: dataset:Kodak
+  count: 1
+  weight: 1
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+meta:
+  title: Adaptive Fused Prior Transfer for Controllable Generative Image Compression
+  authors:
+  - Yifei Pei
+  - Ying Liu
+  - Nam Ling
+  published: '2026-05-16'
+  updated: '2026-10-05'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: 'At very low bitrates, image compression discards fine textures and local structures, while
+    distortion-oriented reconstruction often produces over-smoothed images. Generative codecs synthesize
+    missing details, but existing codebook-based controllable designs generally rely on single-codebook
+    reconstruction priors. We propose Adaptive Fused Prior Transfer for Controllable Generative Image
+    Compression (AFP-GIC), which transfers an image-adaptive fused prior from a frozen pretrained AdaCode
+    model. Encoder-side prior features guide latent formation, while the decoder predicts a compatible
+    fused prior from the compressed representation and control variables, without transmitting the prior
+    itself. A motivating analysis shows that better decoder-side prior alignment tightens a reconstruction-error
+    upper bound and that the fused-prior family includes single-codebook choices as special cases. A single
+    pretrained model supports five evaluated bitrate operating points. Under the unified benchmark, AFP-GIC
+    achieves 18.1% lower decoder latency and uses 31.10 million (20.5%) fewer inference parameters than
+    DC-VIC. Experiments on Kodak, CLIC2020, and DIV2K show competitive PSNR and SSIM, with the clearest
+    naturalness gains in NIQE scores and very-low-bitrate visual comparisons. Code: https://github.com/yifeipet/AFP_GIC.'
+  url: https://arxiv.org/abs/2605.16817
+  pdf_url: https://arxiv.org/pdf/2605.16817v4
+  version: v4
+fetched: '2026-11-12'

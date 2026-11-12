@@ -1,0 +1,52 @@
+id: paper:arxiv:2606.29179
+status: pending
+score: 9
+track: immersive_media
+matched:
+- ref: codec:V-PCC
+  count: 2
+  weight: 3
+- ref: codec:HEVC
+  count: 1
+  weight: 3
+- ref: metric:BD-Rate
+  count: 1
+  weight: 1
+- ref: metric:FPS
+  count: 1
+  weight: 1
+- ref: org:NVIDIA
+  count: 1
+  weight: 1
+meta:
+  title: Performance Analysis of Hardware-Accelerated 10-Bit 4:2:2 Encoding with Split-Frame Encoding
+    for High-Fidelity V-PCC Streaming
+  authors:
+  - Kasidis Arunruangsirilert
+  - Jiro Katto
+  published: '2026-06-28'
+  updated: '2026-06-28'
+  categories:
+  - eess.IV
+  - cs.AR
+  - cs.MM
+  abstract: Video-based Point Cloud Compression (V-PCC) encodes volumetric data by projecting 3D geometry
+    and texture onto 2D video frames. To prevent spatial distortion and color bleeding during 3D reconstruction,
+    this process requires 10-bit color depth and 4:2:2 chroma subsampling, rather than the standard 8-bit
+    4:2:0 format. Additionally, capturing high-density dynamic point clouds requires demanding encoding
+    parameters, such as 8K resolution at framerates up to 120 fps. Historically, the lack of 4:2:2 chroma
+    support in older GPU hardware encoders restricted real-time V-PCC to custom Application-Specific Integrated
+    Circuits (ASICs). However, the recent introduction of NVIDIA's Blackwell GPU architecture, featuring
+    on-chip hardware encoders with 10-bit 4:2:2 support, presents an opportunity to shift this workload
+    to general-purpose hardware. This paper investigates the feasibility of such an approach. Using a
+    commercially available Blackwell GPU equipped with four parallel on-die hardware encoders as a testbed,
+    we evaluate the throughput, rate-distortion (RD) performance, and power consumption of 8K 10-bit 4:2:2
+    HEVC across various Split-Frame Encoding (SFE) configurations. Our results demonstrate that 4-way
+    SFE achieves an encoding throughput of 122 fps, successfully meeting the strict real-time constraints
+    of high-density V-PCC. Although the inability to exploit spatial redundancies across slice boundaries
+    results in a BD-Rate penalty of up to 5%, the measured throughput and power efficiency establish standard,
+    commercial off-the-shelf GPUs as a highly viable baseline for real-time volumetric video streaming.
+  url: https://arxiv.org/abs/2606.29179
+  pdf_url: https://arxiv.org/pdf/2606.29179v1
+  version: v1
+fetched: '2026-11-12'

@@ -1,0 +1,40 @@
+id: paper:arxiv:2610.32981
+status: pending
+score: 3
+track: audio_coding
+matched:
+- ref: codec:Opus
+  count: 1
+  weight: 3
+meta:
+  title: 'SEMAC: Spherical Energy Matching Ambisonics Codec for Efficient Higher-Order Ambisonics Compression'
+  authors:
+  - Christoph Hold
+  - Jan Buethe
+  - Jean-Marc Valin
+  - Jan Skoglund
+  - Toni Hirvonen
+  - Nils Peters
+  published: '2026-10-23'
+  updated: '2026-10-23'
+  categories:
+  - eess.AS
+  - eess.SP
+  abstract: Higher-order Ambisonics (HOA) is an attractive format for immersive spatial audio, but its
+    high channel count and directional properties present significant audio coding challenges. The widely
+    deployed Opus audio codec supports HOA through Channel Mapping Families 2 and 3 (RFC 8486), which
+    code and transmit every Ambisonics channel, so the bitrate grows quadratically with the spherical
+    harmonic order. We introduce SEMAC, which instead represents an Ambisonics signal by a quantized full-order
+    directional energy envelope together with fewer CELT-coded transport channels. CELT separates a per-band
+    energy envelope from the signal shape and restores it after quantization, and SEMAC generalizes this
+    principle to directional signals. Since the reduced transport spans only a lower-dimensional subspace,
+    the decoder re-imposes the envelope observed at the encoder input, restoring the directional energy
+    distribution at full order. A MUSHRA test on fifth-order material compares SEMAC against Opus CMF~3
+    in matched configurations at 512 and 768 kbit/s. SEMAC with 16 of 36 transport channels is rated above
+    full-order CMF~3 at both rates, and at equal transport channel count above order truncation. The proposed
+    SEMAC strategy of coding fewer transport channels with the directional envelope is found perceptually
+    preferable to coding all HOA channels at low precision.
+  url: https://arxiv.org/abs/2610.32981
+  pdf_url: https://arxiv.org/pdf/2610.32981v1
+  version: v1
+fetched: '2026-11-12'

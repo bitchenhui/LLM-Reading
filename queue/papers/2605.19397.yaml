@@ -1,0 +1,49 @@
+id: paper:arxiv:2605.19397
+status: reviewed
+score: 7
+matched:
+- ref: impl:VTM
+  count: 1
+  weight: 3
+- ref: concept:GOP
+  count: 1
+  weight: 1
+- ref: metric:DISTS
+  count: 1
+  weight: 1
+- ref: metric:LPIPS
+  count: 1
+  weight: 1
+- ref: org:NVIDIA
+  count: 1
+  weight: 1
+meta:
+  title: Perception-Aware Video Semantic Communication
+  authors:
+  - Yinhuan Huang
+  - Zhijin Qin
+  published: '2026-05-19'
+  updated: '2026-05-19'
+  categories:
+  - eess.IV
+  - cs.MM
+  abstract: Ultra-high-resolution streaming and emerging immersive services are driving rapidly increasing
+    wireless video traffic. However, perceptually pleasing video transmission over bandwidth-limited and
+    latency-constrained wireless links remains challenging for conventional separated source-channel systems,
+    which primarily target bit-level reliability and often suffer performance degradation under short-blocklength
+    transmission. In addition, pixel-level distortion optimization does not necessarily align with human
+    perception, while existing learned video codecs may incur high complexity and raise deployment issues.
+    This paper proposes PVSC, a perception-aware video semantic communication framework for real-time
+    wireless video transmission. PVSC eliminates explicit motion-vector transmission and exploits spatio-temporal
+    feature coding to generate compact and channel-robust symbol streams. It also specifies side-information
+    formatting, reference-buffer management, and lightweight rate control, enabling stable receiver-side
+    reconstruction and bandwidth-adaptive inference with a single model. Extensive experiments demonstrate
+    that PVSC achieves superior performance across diverse datasets, resolutions, GOP configurations,
+    and channel conditions. Compared with the engineered ``VTM + 5G LDPC'' baseline, PVSC saves up to
+    about 75% and 87% bandwidth at comparable LPIPS and DISTS, respectively, while enabling real-time
+    inference on a single NVIDIA RTX 4090 GPU.
+  url: https://arxiv.org/abs/2605.19397
+  pdf_url: https://arxiv.org/pdf/2605.19397v1
+  version: v1
+fetched: '2026-11-12'
+llm_decision: deep_read

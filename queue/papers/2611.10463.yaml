@@ -1,0 +1,38 @@
+id: paper:arxiv:2611.10463
+status: pending
+score: 3
+track: self_improvement
+matched:
+- ref: concept:RSI
+  count: 2
+  weight: 1
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: 'LongCapHarness: Capability-Guided Auto-Harnessing for Long-Context Reasoning'
+  authors:
+  - Tao Zhang
+  - Yuhang He
+  published: '2026-11-07'
+  updated: '2026-11-07'
+  categories:
+  - cs.CL
+  abstract: Existing methods enhancing an LLM's long-context reasoning capability often rely on data synthesis
+    and follow-up LLM post-training. However, the data synthesis strategy and the post-training recipes
+    are empirically driven and computationally intensive. In this work, we propose a new framework, dubbed
+    LongCapHarness, to instead harness the underlying capabilities for long-context reasoning. The harnessing
+    process recursively revises and updates capability primitive implementation, capability state and
+    control logic through recursive self-improvement on the development set. With neither data synthesis
+    nor LLM post-training, LongCapHarness is applied to Llama3-8B and transferred to Qwen2.5-3B. LongCapHarness
+    substantially outperforms recent data-synthesis-based baselines on HELMET and RULER benchmarks; its
+    estimated development cost is less than 50% of the estimated training costs of NExtLong and PolicyLong.
+    We hope these results motivate further research into harnessing the latent capabilities of LLMs to
+    solve tasks beyond their explicit training.
+  url: https://arxiv.org/abs/2611.10463
+  pdf_url: https://arxiv.org/pdf/2611.10463v1
+  version: v1
+fetched: '2026-11-12'

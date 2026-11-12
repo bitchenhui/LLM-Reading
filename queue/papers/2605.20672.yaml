@@ -1,0 +1,42 @@
+id: paper:arxiv:2605.20672
+status: reviewed
+score: 4
+matched:
+- ref: concept:EntropyModel
+  count: 1
+  weight: 1
+- ref: concept:Hyperprior
+  count: 1
+  weight: 1
+- ref: dataset:Kodak
+  count: 1
+  weight: 1
+- ref: metric:BD-Rate
+  count: 1
+  weight: 1
+meta:
+  title: 'LANCE: Locally Adaptive Neural Context Estimation for Overfitted Image Compression'
+  authors:
+  - Martin Benjak
+  - Jörn Ostermann
+  published: '2026-05-20'
+  updated: '2026-07-07'
+  categories:
+  - eess.IV
+  abstract: This paper introduces Locally Adaptive Neural Context Estimation (LANCE), a novel extension
+    for overfitted image compression (OIC) frameworks like Cool-Chic. While traditional OIC methods rely
+    on lightweight autoregressive networks with globally signaled parameters, they struggle with non-stationary
+    image statistics. LANCE addresses this by incorporating a forward-signaled spatial hyperprior that
+    enables regional adaptation of the entropy model. To minimize overhead, we employ a predictive coding
+    scheme that combines a static Median Edge Detector (MED) with a lightweight learned context model.
+    Experiments demonstrate that LANCE achieves BD-rate reductions of 1.40% on the Kodak dataset and 1.97%
+    on CLIC 2020 over Cool-Chic 4.0 at the high end of our decoder complexity range of 606-1483 MAC/pixel.
+    At the low end of the complexity range, we outperform Cool-Chic 4.0 by 2.41% and 2.99% on Kodak and
+    CLIC, respectively. Qualitative analysis reveals that the learned spatial hyperprior effectively segments
+    image regions into areas of similar image statistics, providing an automated, content-aware adaptation
+    layer.
+  url: https://arxiv.org/abs/2605.20672
+  pdf_url: https://arxiv.org/pdf/2605.20672v2
+  version: v2
+fetched: '2026-11-12'
+llm_decision: deep_read

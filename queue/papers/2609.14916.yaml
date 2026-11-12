@@ -1,0 +1,33 @@
+id: paper:arxiv:2609.14916
+status: skipped
+score: 0
+track: audio_coding
+matched: []
+meta:
+  title: 'Tracing the Origins: Legacy Codec Identification in Neural Audio Transcoding'
+  authors:
+  - Wonje Heo
+  - Shinee Youn
+  - Yooshin Kim
+  - Chuck Chae
+  - Donghoon Shin
+  published: '2026-09-14'
+  updated: '2026-09-14'
+  categories:
+  - cs.SD
+  - cs.MM
+  - eess.AS
+  abstract: Residual Vector Quantization (RVQ)-based neural audio codecs (NACs) enable high-fidelity audio
+    distribution at unprecedentedly low bitrates through discrete token-based representations. However,
+    this shift disrupts traditional forensics, as non-linear neural transcoding obscures the underlying
+    traces of legacy compression. This study defines the forensic gap and proposes a Transformer-based
+    framework designed to leverage the hierarchical and temporal dependencies inherent in RVQ sequences.
+    By modeling inter-layer causal relationships and dynamic forensic significance, our model effectively
+    disentangles superimposed artifacts from legacy-to-neural transcoding. Experimental results achieve
+    97%+ accuracy for codec identification and robust joint identification performance across 32-128 kbps.
+    These results demonstrate that traditional codec traces persist even after neural transcoding, supporting
+    the feasibility and necessity of neural-codec-aware audio forensics.
+  url: https://arxiv.org/abs/2609.14916
+  pdf_url: https://arxiv.org/pdf/2609.14916v1
+  version: v1
+fetched: '2026-11-12'

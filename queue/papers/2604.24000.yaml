@@ -1,0 +1,34 @@
+id: paper:arxiv:2604.24000
+status: skipped
+score: 0
+matched: []
+meta:
+  title: Shared-kernel Wavelet Neural Networks for Poisson Image Reconstruction
+  authors:
+  - Yuanhao Gong
+  - Tan Tang
+  - Qianyan Liu
+  published: '2026-04-27'
+  updated: '2026-04-27'
+  categories:
+  - eess.IV
+  - cs.CV
+  - cs.MM
+  - stat.AP
+  abstract: The Laplacian operator transforms the image into its Laplacian field, which usually is sparse
+    and satisfies a stable distribution. On the other hand, an image can be uniquely reconstructed from
+    its Laplacian field via solving a Poisson equation with a proper boundary condition. Such uniqueness
+    is mathematically guaranteed. Thanks to these properties, we propose to use the sparse Laplacian field
+    to present the image. We first show that the Laplacian field is sparse and satisfies a stable distribution
+    on hundreds images. Then, we show that the image can be accurately reconstruct from its Laplacian
+    field. For the reconstruction task, we propose a shared-kernel wavelet neural network, which solves
+    the Poisson equation and has three advantages. First, it has less than {\bf 0.0002M} parameters, which
+    is compact enough for most of devices. Second, it has linear computation complexity, leading to a
+    real-time reconstruction. Third, it achieves higher accuracy than previous methods. Several numerical
+    experiments are conducted to show the effectiveness and efficiency of the sparse Laplacian field and
+    the proposed Poisson solver. The proposed method can be applied in a large range of applications such
+    as image compression, low light enhancement, object tracking, etc.
+  url: https://arxiv.org/abs/2604.24000
+  pdf_url: https://arxiv.org/pdf/2604.24000v1
+  version: v1
+fetched: '2026-11-12'

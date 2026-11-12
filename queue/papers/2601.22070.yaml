@@ -1,0 +1,53 @@
+id: paper:arxiv:2601.22070
+status: reviewed
+score: 10
+matched:
+- ref: codec:HEVC
+  count: 1
+  weight: 3
+- ref: codec:VVC
+  count: 1
+  weight: 3
+- ref: concept:RDO
+  count: 2
+  weight: 1
+- ref: concept:GOP
+  count: 1
+  weight: 1
+- ref: concept:ICM
+  count: 1
+  weight: 1
+- ref: org:MPEG
+  count: 1
+  weight: 1
+meta:
+  title: Wrapper-Aware Rate-Distortion Optimization in Feature Coding for Machines
+  authors:
+  - Samuel Fernández-Menduiña
+  - Hyomin Choi
+  - Fabien Racapé
+  - Eduardo Pavez
+  - Antonio Ortega
+  published: '2026-01-29'
+  updated: '2026-01-29'
+  categories:
+  - eess.IV
+  - eess.SP
+  abstract: 'Feature coding for machines (FCM) is a lossy compression paradigm for split-inference. The
+    transmitter encodes the outputs of the first part of a neural network before sending them to the receiver
+    for completing the inference. Practical FCM methods ``sandwich'''' a traditional codec between pre-
+    and post-processing neural networks, called wrappers, to make features easier to compress using video
+    codecs. Since traditional codecs are non-differentiable, the wrappers are trained using a proxy codec,
+    which is later replaced by a standard codec after training. These codecs perform rate-distortion optimization
+    (RDO) based on the sum of squared errors (SSE). Because the RDO does not consider the post-processing
+    wrapper, the inner codec can invest bits in preserving information that the post-processing later
+    discards. In this paper, we modify the bit-allocation in the inner codec via a wrapper-aware weighted
+    SSE metric. To make wrapper-aware RDO (WA-RDO) practical for FCM, we propose: 1) temporal reuse of
+    weights across a group of pictures and 2) fixed, architecture- and task-dependent weights trained
+    offline. Under MPEG test conditions, our methods implemented on HEVC match the VVC-based FCM state-of-the-art,
+    effectively bridging a codec generation gap with minimal runtime overhead relative to SSE-RDO HEVC.'
+  url: https://arxiv.org/abs/2601.22070
+  pdf_url: https://arxiv.org/pdf/2601.22070v1
+  version: v1
+fetched: '2026-11-12'
+llm_decision: deep_read

@@ -1,0 +1,37 @@
+id: paper:arxiv:2610.12855
+status: skipped
+score: 2
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: Mitigating Capability Degradation in LLM Self-Improvement via Representation Geometry Regularization
+  authors:
+  - Jiaqi Tian
+  - Ting Long
+  published: '2026-10-09'
+  updated: '2026-10-09'
+  categories:
+  - cs.AI
+  abstract: 'On-Policy Self-distillation is a self-improvement paradigm that enables large language models
+    (LLMs) to improve their capabilities by leveraging the same model as both teacher and student under
+    different conditioning contexts. However, we find that OPSD methods can progressively degrade previously
+    acquired capabilities: queries that are correctly responded at earlier training stages may become
+    incorrectly responded as optimization proceeds, even the overall performance continues to improve.
+    Further analysis reveals that this degradation coincides with a deterioration of the geometry of hidden
+    representations, characterized by reduced intra-cluster compactness and diminished inter-cluster separation.
+    Motivated by this observation, we propose Representation Geometry Regularization (RGR), which preserves
+    representation geometry during post-training by encouraging compactness within cluster and separation
+    across cluster. RGR can be seamlessly integrated into existing OPSD methods without altering their
+    core optimization procedures. Extensive experiments on multiple OPSD methods and benchmarks show that
+    RGR generally alleviates capability degradation while retaining capability improvements. Our code
+    is available in https://github.com/supermachinelearner/RGR.'
+  url: https://arxiv.org/abs/2610.12855
+  pdf_url: https://arxiv.org/pdf/2610.12855v1
+  version: v1
+fetched: '2026-11-12'

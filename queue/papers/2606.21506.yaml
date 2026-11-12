@@ -1,0 +1,31 @@
+id: paper:arxiv:2606.21506
+status: skipped
+score: 0
+matched: []
+meta:
+  title: Optimising Inpainting Data with Delaunay Averages
+  authors:
+  - Vassillen Chizhov
+  - Joachim Weickert
+  published: '2026-06-19'
+  updated: '2026-06-19'
+  categories:
+  - eess.IV
+  abstract: 'Inpainting-based image compression usually stores an optimised subset of all pixel locations
+    and their colour values. In the decoding phase, the missing data are approximated via inpainting.
+    Since the reconstruction quality depends critically on the selection of the stored data, we introduce
+    a novel feature type: We store the vertex locations of a Delaunay triangulation together with the
+    average colour values inside all triangles. We show that combining this feature type with homogeneous
+    diffusion inpainting creates an elegant mathematical formulation with a positive definite linear system
+    of equations. Even a simple solver such as the conjugate gradient method allows the handling of large
+    images. To make our Delaunay averages maximally adaptive to the image, we develop an efficient data
+    optimisation strategy specifically tailored to them. It incorporates ideas successfully used in the
+    stippling literature. Experiments show that our approach outperforms the popular inpainting with optimised
+    colour values by a large margin. Last but not least, we discover a favourable scaling behaviour: Doubling
+    the image resolution allows us to halve the percentage of stored data while maintaining the quality
+    level. This is attractive for compressing modern high-resolution images, where even data densities
+    below 1 % yield appealing reconstructions.'
+  url: https://arxiv.org/abs/2606.21506
+  pdf_url: https://arxiv.org/pdf/2606.21506v1
+  version: v1
+fetched: '2026-11-12'

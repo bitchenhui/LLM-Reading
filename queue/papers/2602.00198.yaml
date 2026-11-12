@@ -1,0 +1,45 @@
+id: paper:arxiv:2602.00198
+status: skipped
+score: 1
+matched:
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+meta:
+  title: 'SCALED : Surrogate-gradient for Codec-Aware Learning of Downsampling in ABR Streaming'
+  authors:
+  - Esteban Pesnel
+  - Julien Le Tanou
+  - Michael Ropert
+  - Thomas Maugey
+  - Aline Roumy
+  published: '2026-01-30'
+  updated: '2026-01-30'
+  categories:
+  - eess.IV
+  - cs.AI
+  - cs.MM
+  abstract: The rapid growth in video consumption has introduced significant challenges to modern streaming
+    architectures. Over-the-Top (OTT) video delivery now predominantly relies on Adaptive Bitrate (ABR)
+    streaming, which dynamically adjusts bitrate and resolution based on client-side constraints such
+    as display capabilities and network bandwidth. This pipeline typically involves downsampling the original
+    high-resolution content, encoding and transmitting it, followed by decoding and upsampling on the
+    client side. Traditionally, these processing stages have been optimized in isolation, leading to suboptimal
+    end-to-end rate-distortion (R-D) performance. The advent of deep learning has spurred interest in
+    jointly optimizing the ABR pipeline using learned resampling methods. However, training such systems
+    end-to-end remains challenging due to the non-differentiable nature of standard video codecs, which
+    obstructs gradient-based optimization. Recent works have addressed this issue using differentiable
+    proxy models, based either on deep neural networks or hybrid coding schemes with differentiable components
+    such as soft quantization, to approximate the codec behavior. While differentiable proxy codecs have
+    enabled progress in compression-aware learning, they remain approximations that may not fully capture
+    the behavior of standard, non-differentiable codecs. To our knowledge, there is no prior evidence
+    demonstrating the inefficiencies of using standard codecs during training. In this work, we introduce
+    a novel framework that enables end-to-end training with real, non-differentiable codecs by leveraging
+    data-driven surrogate gradients derived from actual compression errors. It facilitates the alignment
+    between training objectives and deployment performance. Experimental results show a 5.19\% improvement
+    in BD-BR (PSNR) compared to codec-agnostic training approaches, consistently across the entire rate-distortion
+    convex hull spanning multiple downsampling ratios.
+  url: https://arxiv.org/abs/2602.00198
+  pdf_url: https://arxiv.org/pdf/2602.00198v1
+  version: v1
+fetched: '2026-11-12'

@@ -1,0 +1,33 @@
+id: paper:arxiv:2604.00314
+status: skipped
+score: 1
+matched:
+- ref: concept:ICM
+  count: 3
+  weight: 1
+meta:
+  title: Prompt-Guided Prefiltering for VLM Image Compression
+  authors:
+  - Bardia Azizian
+  - Ivan V. Bajic
+  published: '2026-03-31'
+  updated: '2026-03-31'
+  categories:
+  - eess.IV
+  - cs.AI
+  abstract: The rapid progress of large Vision-Language Models (VLMs) has enabled a wide range of applications,
+    such as image understanding and Visual Question Answering (VQA). Query images are often uploaded to
+    the cloud, where VLMs are typically hosted, hence efficient image compression becomes crucial. However,
+    traditional human-centric codecs are suboptimal in this setting because they preserve many task-irrelevant
+    details. Existing Image Coding for Machines (ICM) methods also fall short, as they assume a fixed
+    set of downstream tasks and cannot adapt to prompt-driven VLMs with an open-ended variety of objectives.
+    We propose a lightweight, plug-and-play, prompt-guided prefiltering module to identify image regions
+    most relevant to the text prompt, and consequently to the downstream task. The module preserves important
+    details while smoothing out less relevant areas to improve compression efficiency. It is codec-agnostic
+    and can be applied before conventional and learned encoders. Experiments on several VQA benchmarks
+    show that our approach achieves a 25-50% average bitrate reduction while maintaining the same task
+    accuracy. Our source code is available at https://github.com/bardia-az/pgp-vlm-compression.
+  url: https://arxiv.org/abs/2604.00314
+  pdf_url: https://arxiv.org/pdf/2604.00314v1
+  version: v1
+fetched: '2026-11-12'

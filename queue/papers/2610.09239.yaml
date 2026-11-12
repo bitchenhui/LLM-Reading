@@ -1,0 +1,41 @@
+id: paper:arxiv:2610.09239
+status: skipped
+score: 2
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 3
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: 'The Winner''s Curse in LLM Self-Improvement Loops: Selection Noise, Lock-in, and Acceptance
+    Rules'
+  authors:
+  - Litao Hu
+  - Yutong Tang
+  published: '2026-10-07'
+  updated: '2026-10-07'
+  categories:
+  - cs.AI
+  - cs.LG
+  abstract: Self-improving LLM systems propose changes to themselves and keep those that score better
+    on a small evaluation set. We treat this keep-if-better step as selection under measurement noise,
+    model the correlated errors of the candidates in a single decision, and study empirically what happens
+    when the evaluation set is reused. In runs where Qwen models rewrite their own instructions and every
+    candidate is also scored on 600 held-out items, most proposals after the first are harmful, and the
+    model gives the size of the winner's curse of a generation's best candidate. With a prior from a separate
+    pilot, it matches the average overstatement of first-generation commits in native loops, though not
+    setting by setting. In a pre-registered study, the final selection-set score of greedy loops exceeded
+    held-out accuracy by 13 to 20 points with 16 selection items and by 1 to 5 points with 256. Held-out
+    gains grew with the selection set on TREC but not on GSM8K, and the tested acceptance rules did not
+    beat greedy acceptance over whole runs. Gains measured on the selection set also exceeded held-out
+    gains when a current model refined a competent instruction, and in the validation scores of GEPA and
+    MIPROv2. Scoring the starting and the current instruction on 64 items never used for selection removes
+    the average bias of a loop's reported gain, but single estimates remain off by about 6 points. Self-improvement
+    studies should report held-out gains with their uncertainty.
+  url: https://arxiv.org/abs/2610.09239
+  pdf_url: https://arxiv.org/pdf/2610.09239v1
+  version: v1
+fetched: '2026-11-12'

@@ -1,0 +1,51 @@
+id: paper:arxiv:2610.04651
+status: pending
+score: 3
+track: audio_coding
+matched:
+- ref: concept:3DGS
+  count: 1
+  weight: 1
+- ref: concept:NeuralAudioCodec
+  count: 1
+  weight: 1
+- ref: concept:WebRTC
+  count: 1
+  weight: 1
+meta:
+  title: 'GS-Codec: A Gaussian-Splatting Bottleneck for Neural Audio Coding'
+  authors:
+  - Ron Aluf
+  - Alon Canfi
+  - Eliya Nachmani
+  published: '2026-10-03'
+  updated: '2026-10-03'
+  categories:
+  - cs.SD
+  - cs.AI
+  - cs.LG
+  - eess.AS
+  - eess.SP
+  abstract: 'Neural audio codecs compress waveforms into compact discrete tokens that underpin speech
+    language models, real-time communication, and large-scale audio storage. Almost every dominant design,
+    including residual vector quantization, finite scalar quantization, and single-codebook variants,
+    follows the VQ-VAE template by partitioning the encoder latent through a learned codebook or a fixed
+    scalar grid. We ask whether this partition is necessary. We introduce GS-Codec, a neural speech codec
+    whose bottleneck is a parametric signal decomposition rather than a quantizer. We adapt Gaussian splatting
+    from 3D scene reconstruction to one-dimensional latents. An inner optimization loop fits each encoder
+    segment as a weighted sum of 1D Gaussian primitives. The decoder then reconstructs the waveform from
+    the rendered sum. To avoid the cost of this iterative inner loop at inference time, we additionally
+    train a lightweight GS Predictor Net that regresses the primitive parameters in a single forward pass.
+    The encoder and decoder are trained end-to-end through the inner loop, with no quantizer anywhere
+    in the training pipeline: the bottleneck is the decomposition itself, and scalar quantization is applied
+    only post-training to the fitted parameters. Rather than relying on discrete codebook stages for bitrate
+    control, our representation exposes a fine-grained rate-quality tradeoff: a single trained checkpoint
+    supports post-training bitrate control by varying the number of primitives and the per-parameter bit
+    depth, with no retraining required. GS-Codec matches or exceeds well-established open-source codecs
+    such as EnCodec and DAC on speaker similarity (SIM), intelligibility (STOI), and perceptual quality
+    (UTMOS) at comparable bitrates, while achieving comparable semantic performance (WER). Code and audio
+    samples are available at https://ronaluf.github.io/gs-codec/'
+  url: https://arxiv.org/abs/2610.04651
+  pdf_url: https://arxiv.org/pdf/2610.04651v1
+  version: v1
+fetched: '2026-11-12'

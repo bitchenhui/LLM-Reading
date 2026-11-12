@@ -1,0 +1,40 @@
+id: paper:arxiv:2609.27959
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 4
+  weight: 1
+meta:
+  title: Local SVD-Entropy Maps as a Complementary Structural Representation for Full-Reference and No-Reference
+    Image Quality Assessment
+  authors:
+  - Andrei Velichko
+  - Petr Boriskov
+  published: '2026-08-23'
+  updated: '2026-08-23'
+  categories:
+  - eess.IV
+  - cs.CV
+  - cs.MM
+  abstract: 'We investigate a local spectral-complexity representation for perceptual image quality assessment
+    (IQA) based on Shannon entropy of singular values computed directly from two-dimensional image patches.
+    For each $3\times3$-pixel grayscale patch, SVD is applied directly and the normalized singular-value
+    entropy defines one HSVD-map value. The construction requires neither flattening nor delay embedding,
+    uses no boundary padding, and is invariant to $90^{\circ}$ rotations and mirror reflections at the
+    local-descriptor level. A nested salt-and-pepper experiment on Lena separates absolute similarity
+    to a clean reference from sensitivity to an additional degradation step. HSVD-SSIM responds more strongly
+    to local corruption and retains a larger neighboring-state response at severe noise levels. Validation
+    on all 10,125 distorted KADID-10k images shows that HSVD-SSIM is weaker than conventional SSIM as
+    a standalone full-reference metric (SRCC $0.450$ vs. $0.619$), but complementary when combined with
+    it: grouped cross-validation increases SRCC from $0.618$ to $0.659$, with a bootstrap 95\% confidence
+    interval of $[0.036,0.046]$ for the gain. In a no-reference experiment, adding HSVD-derived single-image
+    descriptors improves the best nonlinear model from SRCC $0.528$ to $0.575$ (95\% CI $[0.033,0.061]$)
+    and also improves prediction of quality changes between neighboring distortion states. These results
+    support direct local SVD entropy as an interpretable structural channel that complements conventional
+    image-domain similarity and remains informative without a pristine reference.'
+  url: https://arxiv.org/abs/2609.27959
+  pdf_url: https://arxiv.org/pdf/2609.27959v1
+  version: v1
+fetched: '2026-11-12'

@@ -43,7 +43,7 @@ RESEARCH_LINES = ["traditional_codec_opt", "learned_codec", "coding_for_machines
                   "generative_compression", "inr_representation", "systems_deployment"]
 DOMAINS = ["video_image_coding", "audio_coding", "streaming_delivery",
            "quality_assessment", "processing_enhancement", "immersive_media",
-           "standards_ecosystem"]
+           "standards_ecosystem", "self_improvement"]
 CORE_DOMAIN = "video_image_coding"
 
 INSTRUCTIONS = """你是音视频领域信息整合引擎的精度过滤器与初筛摘要器。
@@ -58,6 +58,7 @@ INSTRUCTIONS = """你是音视频领域信息整合引擎的精度过滤器与�
 - processing_enhancement 编码链路处理与增强（超分/去噪/HDR/后滤波）
 - immersive_media 沉浸式与三维（点云/NeRF/3DGS/光场）
 - standards_ecosystem 标准进程/专利/许可
+- self_improvement 自我改进 AI（RSI/EoH/FunSearch/AlphaEvolve/LLM agent 自改进）
 
 收录基准：核心域（video_image_coding）可给 deep_read；其余域默认 summary_only
 （重要工作最多 summary_only，不给 deep_read）。与音视频技术整体无关 → skip。"""
@@ -93,7 +94,7 @@ arXiv 分类: {', '.join(meta['categories'])}
 
 输出 JSON：
 {{
- "domain": "video_image_coding|audio_coding|streaming_delivery|quality_assessment|processing_enhancement|immersive_media|standards_ecosystem",
+ "domain": "video_image_coding|audio_coding|streaming_delivery|quality_assessment|processing_enhancement|immersive_media|standards_ecosystem|self_improvement",
  "decision": "deep_read|summary_only|skip",
  "relevance": "high|medium|low",
  "reason": "一句话中文理由",
@@ -289,6 +290,8 @@ def infer_research_lines(entity_links: list) -> list[str]:
 
 # domain 的实体启发式：LLM 漏判/错判时的兜底
 DOMAIN_MARKERS: list[tuple[str, set[str]]] = [
+    ("self_improvement", {"concept:SelfImprovement", "concept:EoH", "concept:RSI",
+                          "concept:FunSearch", "concept:AlphaEvolve"}),
     ("audio_coding", {"codec:IAMF", "codec:Opus", "codec:EVS", "codec:MPEG-H-Audio",
                       "concept:NeuralAudioCodec"}),
     ("immersive_media", {"concept:NeRF", "concept:3DGS", "codec:G-PCC", "codec:V-PCC"}),
@@ -300,6 +303,13 @@ DOMAIN_MARKERS: list[tuple[str, set[str]]] = [
 
 
 def infer_domain(entity_links: list) -> str:
+    """subject 实体的归属优先（交叉方法论文：编码器主体→核心域，EoH 主体→self_improvement）；
+    subject 不在标记集内时再按 uses 弱信号。"""
+    subj = {lk["ref"] for lk in entity_links
+            if isinstance(lk, dict) and lk.get("role") == "subject"}
+    for domain, markers in DOMAIN_MARKERS:
+        if subj & markers:
+            return domain
     refs = {lk["ref"] for lk in entity_links
             if isinstance(lk, dict) and lk.get("role") not in NON_CLASSIFYING_ROLES}
     for domain, markers in DOMAIN_MARKERS:
@@ -428,7 +438,21 @@ def main() -> int:
     ap.add_argument("--dry-run", action="store_true", help="只打印判定，不落库")
     ap.add_argument("--backfill-lines", action="store_true",
                     help="只为 research_lines 为空的存量 items 补实体启发式分类（无 LLM 调用）")
+    ap.add_argument("--backfill-domain", action="store_true",
+                    help="为缺 domain 的存量 items 补领域大类（实体启发式，无 LLM 调用）")
     args = ap.parse_args()
+
+    if args.backfill_domain:
+        n = 0
+        for p in sorted((KB / "items").glob("*/*.yaml")):
+            d = yaml.safe_load(open(p, encoding="utf-8"))
+            if not d.get("domain"):
+                d["domain"] = infer_domain(d.get("entities", []))
+                yaml.safe_dump(d, open(p, "w", encoding="utf-8"),
+                               allow_unicode=True, sort_keys=False, width=100)
+                n += 1
+        print(f"回填 domain {n} 条")
+        return 0
 
     if args.backfill_lines:
         n = 0

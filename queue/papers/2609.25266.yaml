@@ -1,0 +1,29 @@
+id: paper:arxiv:2609.25266
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 3
+  weight: 1
+meta:
+  title: Entropy-map SSIM analysis of Salt and Pepper Noise Removal via Recursive Median Filterring
+  authors:
+  - Petr Boriskov
+  - Andrei Velichko
+  published: '2026-09-21'
+  updated: '2026-09-21'
+  categories:
+  - eess.IV
+  abstract: 'This paper studies the removal of salt-and-pepper (SP) noise from grayscale images using
+    a median filter (MF) within a recursive thresholding algorithm. Denoising performance is assessed
+    using two complementary metrics: SSIM-Img and SSIM-Map.SSIM-Img is standard Image Quality Assessment
+    (IQA), the conventional Structural Similarity Index (SSIM) computed between the restored and clean
+    images. SSIM-Map is novel IQA, an SSIM-based evaluation computed between entropy maps of these images,
+    where the maps are obtained using singular value-decomposition entropy in sliding windows. We show
+    that SSIM-Map is more sensitive to residual impulse artifacts, blur, and local intensity transitions,
+    and therefore complements the conventional SSIM-Img metric.'
+  url: https://arxiv.org/abs/2609.25266
+  pdf_url: https://arxiv.org/pdf/2609.25266v1
+  version: v1
+fetched: '2026-11-12'

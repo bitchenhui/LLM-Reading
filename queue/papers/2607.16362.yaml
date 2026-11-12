@@ -1,0 +1,43 @@
+id: paper:arxiv:2607.16362
+status: pending
+score: 3
+track: processing_enhancement
+matched:
+- ref: concept:3DGS
+  count: 1
+  weight: 1
+- ref: concept:INR
+  count: 1
+  weight: 1
+- ref: concept:SuperResolution
+  count: 1
+  weight: 1
+meta:
+  title: 'OmniStyle-INR: Universal and Multimodal Style Transfer for INRs'
+  authors:
+  - Rafał Kajca
+  - Michał Miziołek
+  - Kornel Howil
+  - Rafał Tobiasz
+  - Przemysław Spurek
+  published: '2026-07-17'
+  updated: '2026-07-17'
+  categories:
+  - cs.CV
+  abstract: Style transfer remains a fundamental and highly important task across various data modalities,
+    enabling creative manipulation conditioned by both reference images and textual descriptions. Recently,
+    methods utilizing Gaussian Splatting have emerged as a unified representation for 2D images, video,
+    3D scenes, and 4D dynamics. However, representing videos and 2D images with Gaussian Splatting is
+    structurally sub-optimal for dense continuous domains. The number of required Gaussians often approaches
+    the total number of pixels, raising questions about the actual utility of such a representation for
+    these specific modalities. In contrast, Implicit Neural Representations have established themselves
+    as a much more popular and natural choice across all these data domains. Implicit Neural Representations
+    naturally provide significant advantages, including data compression, inherent capabilities for super
+    resolution, and seamless integration with deep generative models. To this end, we introduce OmniStyle-INR,
+    a novel framework that leverages network-based continuous representations as a truly universal domain.
+    Our approach successfully performs high-quality style transfer across all visual modalities, guided
+    seamlessly by both text prompts and visual exemplars.
+  url: https://arxiv.org/abs/2607.16362
+  pdf_url: https://arxiv.org/pdf/2607.16362v1
+  version: v1
+fetched: '2026-11-12'

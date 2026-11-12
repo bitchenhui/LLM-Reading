@@ -1,0 +1,57 @@
+id: paper:arxiv:2603.13597
+status: reviewed
+score: 12
+matched:
+- ref: codec:VVC
+  count: 2
+  weight: 3
+- ref: impl:VVdec
+  count: 1
+  weight: 3
+- ref: impl:VVenC
+  count: 1
+  weight: 3
+- ref: metric:BD-Rate
+  count: 1
+  weight: 1
+- ref: metric:VMAF
+  count: 1
+  weight: 1
+- ref: org:Apple
+  count: 1
+  weight: 1
+meta:
+  title: 'DQ-Ladder: A Deep Reinforcement Learning-based Bitrate Ladder for Adaptive Video Streaming'
+  authors:
+  - Reza Farahani
+  - Zoha Azimi
+  - Vignesh V Menon
+  - Hermann Hellwagner
+  - Radu Prodan
+  - Schahram Dustdar
+  - Christian Timmerer
+  published: '2026-03-13'
+  updated: '2026-03-13'
+  categories:
+  - eess.IV
+  - cs.MM
+  abstract: Adaptive streaming of segmented video over HTTP typically relies on a predefined set of bitrate-resolution
+    pairs, known as a bitrate ladder. However, fixed ladders often overlook variations in content and
+    decoding complexities, leading to suboptimal trade-offs between encoding time, decoding efficiency,
+    and video quality. This article introduces DQ-Ladder, a deep reinforcement learning (DRL)-based scheme
+    for constructing time- and quality-aware bitrate ladders for adaptive video streaming applications.
+    DQ-Ladder employs predicted decoding time, quality scores, and bitrate levels per segment as inputs
+    to a Deep Q-Network (DQN) agent, guided by a weighted reward function of decoding time, video quality,
+    and resolution smoothness. We leverage machine learning models to predict decoding time, bitrate level,
+    and objective quality metrics (VMAF, XPSNR), eliminating the need for exhaustive encoding or quality
+    metric computation. We evaluate DQ-Ladder using the Versatile Video Coding (VVC) toolchain (VVenC/VVdeC)
+    on 750 video sequences across six Apple HLS-compliant resolutions and 41 quantization parameters.
+    Experimental results against four baselines show that DQ-Ladder achieves BD-rate reductions of at
+    least 10.3% for XPSNR compared to the HLS ladder, while reducing decoding time by 22%. DQ-Ladder shows
+    significantly lower sensitivity to prediction errors than competing methods, remaining robust even
+    with up to 20% noise.
+  url: https://arxiv.org/abs/2603.13597
+  pdf_url: https://arxiv.org/pdf/2603.13597v1
+  version: v1
+fetched: '2026-11-12'
+llm_decision: deep_read

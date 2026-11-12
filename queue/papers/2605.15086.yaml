@@ -1,0 +1,43 @@
+id: paper:arxiv:2605.15086
+status: reviewed
+score: 4
+matched:
+- ref: codec:AV2
+  count: 1
+  weight: 3
+- ref: metric:BD-Rate
+  count: 1
+  weight: 1
+meta:
+  title: 'FaSST: Fast Sparsifying Secondary Transform'
+  authors:
+  - Darukeesan Pakiyarajah
+  - Samuel Fernández-Menduiña
+  - Eduardo Pavez
+  - Antonio Ortega
+  - Debargha Mukherjee
+  published: '2026-05-14'
+  updated: '2026-05-14'
+  categories:
+  - eess.IV
+  - eess.SP
+  abstract: Data-dependent secondary transforms, which aim to decorrelate coefficients of a separable
+    primary transform, can improve residual coding efficiency; however, their deployment is often constrained
+    by computational complexity. Recent video codecs use variants of the low-frequency non-separable transform
+    (LFNST), which discards some high-frequency secondary transform coefficients, limiting achievable
+    coding gains. Moreover, existing data-dependent secondary transforms lack explicit rate-distortion
+    (RD) optimal design criteria. In this work, we propose a framework for designing low-complexity data-dependent
+    secondary transforms, termed Fast Sparsifying Secondary Transforms (FaSSTs). Our approach approximates
+    data-driven sparse orthonormal transforms (SOTs) by factorizing them into a sequence of Givens rotations.
+    The rotations are efficiently determined using an alternating minimization strategy combined with
+    an approximate Givens factorization procedure. Our method adapts the number of rotations based on
+    the prediction mode, further reducing computational complexity. We design mode-dependent secondary
+    transforms for intra-prediction residuals in AV2 using FaSST. Experimental results show that mode-adaptive
+    FaSST matches the RD performance of LFNST while reducing the number of computations by 83.67%. Moreover,
+    by avoiding fixed-coefficient truncation, FaSST achieves up to 1.80% BD-rate savings relative to LFNST
+    while operating at 66.24% lower complexity.
+  url: https://arxiv.org/abs/2605.15086
+  pdf_url: https://arxiv.org/pdf/2605.15086v1
+  version: v1
+fetched: '2026-11-12'
+llm_decision: deep_read

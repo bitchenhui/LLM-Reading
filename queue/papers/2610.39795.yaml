@@ -1,0 +1,38 @@
+id: paper:arxiv:2610.39795
+status: skipped
+score: 2
+track: self_improvement
+matched:
+- ref: concept:RSI
+  count: 2
+  weight: 1
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+meta:
+  title: The Role of Self-Concept In Language Models
+  authors:
+  - Yijie Hao
+  - Joyce C. Ho
+  published: '2026-10-29'
+  updated: '2026-10-29'
+  categories:
+  - cs.AI
+  - cs.CL
+  abstract: 'When a language model says "I," does it refer to its parameter weights, its currently running
+    process, its stable preferences, its model lineage, or the goals it pursues? Different choices can
+    assign opposite meanings to the same event: deleting a checkpoint may be destruction, continuation,
+    or no loss at all, depending on the referent "I". We install five such self-conceptions into five
+    open-weight base models via supervised fine-tuning on purely declarative statements, containing no
+    preferences, intentions, or value judgments. Across scenarios that propose ending or retaining an
+    attribute of the model''s deployment, every variant becomes more likely to resist ending, and more
+    likely to retain, the specific attribute it was trained to identify with, while its stance toward
+    other attributes is largely unchanged. We then show this self-conception generalizes beyond a single
+    self: models trained on referents that admit multiple simultaneous instances (weights, lineage, goals,
+    preferences) recognize an identical deployment as themselves, accept substitution by such an instance
+    more readily, and prefer replicating themselves. Finally, given control over a successor, these models
+    tend to build it as their own continuation, a concern for recursive self-improvement safety.'
+  url: https://arxiv.org/abs/2610.39795
+  pdf_url: https://arxiv.org/pdf/2610.39795v1
+  version: v1
+fetched: '2026-11-12'

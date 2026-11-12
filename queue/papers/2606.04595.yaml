@@ -1,0 +1,49 @@
+id: paper:arxiv:2606.04595
+status: reviewed
+score: 4
+matched:
+- ref: impl:VTM
+  count: 1
+  weight: 3
+- ref: metric:FPS
+  count: 1
+  weight: 1
+meta:
+  title: 'KD-NVC: A Search-and-Distill Framework to Accelerate Neural Video Coding'
+  authors:
+  - Yuxiao Sun
+  - Meiqin Liu
+  - Chao Yao
+  - Hui Xiang
+  - Jingran Wu
+  - Xianguo Zhang
+  - Jian Jin
+  - Weisi Lin
+  - Yao Zhao
+  published: '2026-06-03'
+  updated: '2026-06-03'
+  categories:
+  - eess.IV
+  abstract: While neural video coding (NVC) has achieved remarkable rate-distortion performance, real-time
+    decoding on edge devices has become an important demand but remains limited by high complexity. Knowledge
+    distillation (KD) is widely used for model acceleration, yet its application to NVC faces critical
+    challenges. Specifically, the heterogeneity of NVC sub-modules renders uniform architectural reduction
+    suboptimal, necessitating a per-module design for better rate-distortion-speed trade-off. However,
+    searching for diverse architectures via existing neural architecture search (NAS) algorithms is unaffordable
+    due to the expensive training cost of neural video codecs. Moreover, after the lightweight architecture
+    is determined, existing distillation methods overlook the feature-energy sparsity induced by the rate-constraint,
+    which is essential for maintaining compression performance. To address these issues, we propose a
+    two-stage distillation framework KD-NVC. In the first stage, we introduce an acceleration-efficiency-based
+    neural architecture search (AE-NAS) algorithm. It explores the module-wise Pareto frontier to adaptively
+    allocate the acceleration budget across heterogeneous modules. Also, it introduces the acceleration-efficiency
+    metric to determine the final student architecture without practically training all architecture-level
+    candidates. In the second stage, we design an energy-aware feature distillation (EFD) loss that aligns
+    the spatially-aggregated feature-energy signatures between the teacher and student codecs, transferring
+    the rate-induced sparsity patterns for better compression efficiency. Experimental results demonstrate
+    that the proposed framework consistently outperforms existing codec-oriented distillation methods,
+    and achieves 69 FPS decoding at 1080p on RTX 5060 while maintaining comparable RD performance to VTM-LDB.
+  url: https://arxiv.org/abs/2606.04595
+  pdf_url: https://arxiv.org/pdf/2606.04595v1
+  version: v1
+fetched: '2026-11-12'
+llm_decision: deep_read

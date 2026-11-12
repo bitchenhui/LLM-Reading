@@ -1,0 +1,38 @@
+id: paper:arxiv:2609.25379
+status: skipped
+score: 1
+track: audio_coding
+matched:
+- ref: concept:NeuralAudioCodec
+  count: 1
+  weight: 1
+meta:
+  title: Narrowband Voice Communication Using Streaming Neural Compression
+  authors:
+  - Dahong Luo
+  - Anannya Trehan
+  - Aritrik Ghosh
+  - Nirupam Roy
+  published: '2026-09-21'
+  updated: '2026-09-21'
+  categories:
+  - cs.SD
+  abstract: Low-bitrate speech communication on resource-constrained edge devices remains challenging
+    due to stringent computational, memory, and bandwidth constraints. We present TinyCall, a lightweight
+    neural audio codec designed for real-time speech communication on low-power platforms such as the
+    ESP32 microcontroller and Raspberry Pi. The proposed system targets emergency communication and other
+    bandwidth-limited scenarios while preserving speech intelligibility, speaker identity, and vocal expressiveness.
+    To enable efficient deployment, we propose a minimal neural audio codec architecture together with
+    a framework for converting a causally trained codec into a truly streamable codec through pseudo-lookahead
+    decoding and decoder-input caching. We further replace conventional residual vector quantization (RVQ)
+    with Residual Finite Scalar Quantization (RFSQ) to reduce inference complexity on edge processors
+    and employ a progressive three-stage training strategy for stable optimization under latent quantization.
+    An MFCC-based perceptual loss encourages preservation of speaker characteristics, including harmonic
+    structure and vocal timbre. Experimental results demonstrate real-time operation on a Raspberry Pi
+    3 while achieving intelligible speech reconstruction at bitrates as low as 2.3 kbps. The proposed
+    approach demonstrates that practical neural speech communication is feasible on highly resource-constrained
+    edge devices.
+  url: https://arxiv.org/abs/2609.25379
+  pdf_url: https://arxiv.org/pdf/2609.25379v1
+  version: v1
+fetched: '2026-11-12'

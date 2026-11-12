@@ -1,0 +1,45 @@
+id: paper:arxiv:2609.34524
+status: pending
+score: 4
+track: audio_coding
+matched:
+- ref: codec:Opus
+  count: 1
+  weight: 3
+- ref: concept:NeuralAudioCodec
+  count: 2
+  weight: 1
+meta:
+  title: Measurement-Based Bitrate-Energy-Quality Analysis of Neural Audio Codec Decoders on Laptop and
+    Phone Platforms
+  authors:
+  - Seunghyeon Shin
+  - Seokjin Lee
+  published: '2026-09-28'
+  updated: '2026-09-28'
+  categories:
+  - eess.AS
+  - eess.SP
+  abstract: 'Neural audio codecs can achieve similar objective quality at lower bitrates than conventional
+    codecs, but their decoder-side computational cost may offset this bitrate advantage on battery-powered
+    client devices. This paper presents a measurement-based rate--energy--quality analysis of four neural
+    audio codecs--EnCodec, DAC, HILCodec, and SNAC--and two conventional baselines, AAC-LC and Opus, on
+    laptop and phone platforms. Speech and music are evaluated separately using the original-reference
+    ViSQOL protocol. For the main comparison, operating points are matched by selecting the measured point
+    nearest to the midpoint of the common overlap in treatment-level mean ViSQOL. A secondary analysis
+    includes only explicitly evaluated bitrate settings. Decoder energy is measured as idle-subtracted
+    energy per second of audio (J/s), and results are summarized as the median of three repeated runs
+    for execution-valid runtime and device paths. Pairwise break-even transmission-energy thresholds are
+    then derived analytically from the measured decoder energy and bitrate. At the matched-quality operating
+    points, the evaluated neural codecs achieved similar ViSQOL scores at lower bitrates but generally
+    required more decoder-side energy than the applicable conventional codecs. EnCodec produced the lowest
+    neural break-even thresholds in both matched-quality cohorts on both platforms. By contrast, several
+    DAC and SNAC comparisons on the Phone XNNPACK CPU path exceeded 200 mJ/kbit, and their full-band Phone
+    configurations required more than 1 s to decode 1 s of audio. These results show that lower bitrate
+    alone does not guarantee an energy benefit: deployment efficiency also depends on decoder complexity,
+    the effective runtime and device mapping, execution validity, accelerator availability, and the transmission-energy
+    coefficient.'
+  url: https://arxiv.org/abs/2609.34524
+  pdf_url: https://arxiv.org/pdf/2609.34524v1
+  version: v1
+fetched: '2026-11-12'

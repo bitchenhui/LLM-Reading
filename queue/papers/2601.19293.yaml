@@ -1,0 +1,39 @@
+id: paper:arxiv:2601.19293
+status: skipped
+score: 1
+matched:
+- ref: concept:GOP
+  count: 2
+  weight: 1
+meta:
+  title: Reinforced Rate Control for Neural Video Compression via Inter-Frame Rate-Distortion Awareness
+  authors:
+  - Wuyang Cong
+  - Junqi Shi
+  - Lizhong Wang
+  - Weijing Shi
+  - Ming Lu
+  - Hao Chen
+  - Zhan Ma
+  published: '2026-01-27'
+  updated: '2026-02-01'
+  categories:
+  - eess.IV
+  abstract: Neural video compression (NVC) has demonstrated superior compression efficiency, yet effective
+    rate control remains a significant challenge due to complex temporal dependencies. Existing rate control
+    schemes typically leverage frame content to capture distortion interactions, overlooking inter-frame
+    rate dependencies arising from shifts in per-frame coding parameters. This often leads to suboptimal
+    bitrate allocation and cascading parameter decisions. To address this, we propose a reinforcement-learning
+    (RL)-based rate control framework that formulates the task as a frame-by-frame sequential decision
+    process. At each frame, an RL agent observes a spatiotemporal state and selects coding parameters
+    to optimize a long-term reward that reflects rate-distortion (R-D) performance and bitrate adherence.
+    Unlike prior methods, our approach jointly determines bitrate allocation and coding parameters in
+    a single step, independent of group of pictures (GOP) structure. Extensive experiments across diverse
+    NVC architectures show that our method reduces the average relative bitrate error to 1.20% and achieves
+    up to 13.45% bitrate savings at typical GOP sizes, outperforming existing approaches. In addition,
+    our framework demonstrates improved robustness to content variation and bandwidth fluctuations with
+    lower coding overhead, making it highly suitable for practical deployment.
+  url: https://arxiv.org/abs/2601.19293
+  pdf_url: https://arxiv.org/pdf/2601.19293v2
+  version: v2
+fetched: '2026-11-12'

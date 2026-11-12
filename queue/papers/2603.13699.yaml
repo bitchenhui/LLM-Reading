@@ -1,0 +1,39 @@
+id: paper:arxiv:2603.13699
+status: skipped
+score: 1
+matched:
+- ref: concept:RDO
+  count: 2
+  weight: 1
+meta:
+  title: 'D-Compress: Detail-Preserving LiDAR Range Image Compression for Real-Time Streaming on Resource-Constrained
+    Robots'
+  authors:
+  - Shengqian Wang
+  - Chang Tu
+  - He Chen
+  published: '2026-03-14'
+  updated: '2026-03-14'
+  categories:
+  - eess.IV
+  - cs.RO
+  abstract: Efficient 3D LiDAR point cloud compression (LPCC) and streaming are critical for edge server-assisted
+    robotic systems, enabling real-time communication with compact data representations. A widely adopted
+    approach represents LiDAR point clouds as range images, enabling the direct use of mature image and
+    video compression codecs. However, because these codecs are designed with human visual perception
+    in mind, they often compromise geometric details, which downgrades the performance of downstream robotic
+    tasks such as mapping and object detection. Furthermore, rate-distortion optimization (RDO)-based
+    rate control remains largely underexplored for range image compression (RIC) under dynamic bandwidth
+    conditions. To address these limitations, we propose D-Compress, a new detail-preserving and fast
+    RIC framework tailored for real-time streaming. D-Compress integrates both intra- and inter-frame
+    prediction with an adaptive discrete wavelet transform approach for precise residual compression.
+    Additionally, we introduce a new RDO-based rate control algorithm for RIC through new rate-distortion
+    modeling. Extensive evaluations on various datasets demonstrate the superiority of D-Compress, which
+    outperforms state-of-the-art (SOTA) compression methods in both geometric accuracy and downstream
+    task performance, particularly at compression ratios exceeding 100x, while maintaining real-time execution
+    on resource-constrained hardware. Moreover, evaluations under dynamic bandwidth conditions validate
+    the robustness of its rate control mechanism.
+  url: https://arxiv.org/abs/2603.13699
+  pdf_url: https://arxiv.org/pdf/2603.13699v1
+  version: v1
+fetched: '2026-11-12'

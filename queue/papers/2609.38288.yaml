@@ -1,0 +1,47 @@
+id: paper:arxiv:2609.38288
+status: skipped
+score: 2
+track: self_improvement
+matched:
+- ref: concept:LLM
+  count: 1
+  weight: 1
+- ref: concept:SelfImprovement
+  count: 1
+  weight: 1
+meta:
+  title: 'AREX-2: Advancing Self-Improving Agents through Long-Horizon Reflective Tasks'
+  authors:
+  - Hongjin Qian
+  - Chaofan Li
+  - Kun Luo
+  - Wenqing Wei
+  - Jianlyu Chen
+  - Shuqi Lu
+  - Yuyang Hu
+  - Hongwang Xiao
+  - Hui Wang
+  - Chaozhuo Li
+  - Qiwei Ye
+  - Zhicheng Dou
+  - Defu Lian
+  - Zheng Liu
+  published: '2026-09-29'
+  updated: '2026-09-29'
+  categories:
+  - cs.AI
+  abstract: 'We present AREX-2, an effort to advance the self-improving capability of LLM agents, which
+    we define as the ability to iteratively refine a solution at test time. This ability rests on two
+    complementary capabilities: reflection, which produces a solution better than the current one, and
+    long-horizon execution, which keeps the iteration effective over many rounds. We hypothesize that
+    both capabilities are domain-agnostic, and can therefore be learned in scenarios that are well suited
+    for supervision. Accordingly, we synthesize long-horizon improvement trajectories from machine learning
+    and algorithmic programming tasks, two domains that offer verifiable feedback and reward sustained
+    iteration. Trained on this data, our agent, built on Qwen3.8-27B, achieves strong results on MLE-bench
+    Lite (81.8) and Frontier-CS (70.7), transfers to deep research with 84.0 on BrowseComp, 52.6 on HLE,
+    92.2 on GAIA, and 93.8 on DeepSearchQA, and keeps improving as its budget of rounds grows. These results
+    show that long-horizon reflective data is an effective route toward self-improving agents.'
+  url: https://arxiv.org/abs/2609.38288
+  pdf_url: https://arxiv.org/pdf/2609.38288v1
+  version: v1
+fetched: '2026-11-12'

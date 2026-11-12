@@ -36,6 +36,7 @@ DOMAIN_NAMES = {
     "processing_enhancement": "处理增强",
     "immersive_media": "沉浸式/三维",
     "standards_ecosystem": "标准生态",
+    "self_improvement": "自我改进 AI",
 }
 
 

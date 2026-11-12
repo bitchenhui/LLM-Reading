@@ -1,0 +1,39 @@
+id: paper:arxiv:2601.01141
+status: pending
+score: 3
+matched:
+- ref: metric:DISTS
+  count: 1
+  weight: 1
+- ref: metric:FID
+  count: 1
+  weight: 1
+- ref: metric:LPIPS
+  count: 1
+  weight: 1
+meta:
+  title: 'YODA: Yet Another One-step Diffusion-based Video Compressor'
+  authors:
+  - Xingchen Li
+  - Junzhe Zhang
+  - Junqi Shi
+  - Ming Lu
+  - Zhan Ma
+  published: '2026-01-03'
+  updated: '2026-01-03'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: While one-step diffusion models have recently excelled in perceptual image compression, their
+    application to video remains limited. Prior efforts typically rely on pretrained 2D autoencoders that
+    generate per-frame latent representations independently, thereby neglecting temporal dependencies.
+    We present YODA--Yet Another One-step Diffusion-based Video Compressor--which embeds multiscale features
+    from temporal references for both latent generation and latent coding to better exploit spatial-temporal
+    correlations for more compact representation, and employs a linear Diffusion Transformer (DiT) for
+    efficient one-step denoising. YODA achieves state-of-the-art perceptual performance, consistently
+    outperforming traditional and deep-learning baselines on LPIPS, DISTS, FID, and KID. Source code will
+    be publicly available at https://github.com/NJUVISION/YODA.
+  url: https://arxiv.org/abs/2601.01141
+  pdf_url: https://arxiv.org/pdf/2601.01141v1
+  version: v1
+fetched: '2026-11-12'

@@ -1,0 +1,62 @@
+id: paper:arxiv:2610.33624
+status: pending
+score: 3
+track: self_improvement
+matched:
+- ref: concept:RSI
+  count: 3
+  weight: 1
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+- ref: org:NVIDIA
+  count: 1
+  weight: 1
+meta:
+  title: 'RSI Arena: Towards Recursive Self-Improvement with Human Feedback'
+  authors:
+  - Yue Huang
+  - Yanbo Wang
+  - Lichi Li
+  - Yuanyuan Chen
+  - Andreas Haupt
+  - Xiaonan Luo
+  - Zheyuan Liu
+  - Jihye Choi
+  - Felix Juefei-Xu
+  - Xiangliang Zhang
+  - Radha Poovendran
+  - Misha Sra
+  - Ying Liu
+  - Ben Burtenshaw
+  - Thomas Wolf
+  - Alex Pentland
+  - Zichen Chen
+  - Zhangchen Xu
+  published: '2026-10-24'
+  updated: '2026-10-24'
+  categories:
+  - cs.CL
+  - cs.AI
+  abstract: Can AI agents autonomously train useful language models and improve them using feedback from
+    users? We introduce RSI Arena, a two-stage study of autonomous post-training as a step toward recursive
+    self-improvement. Ten frontier models act as training agents, each starting from NVIDIA Nemotron 3.5
+    Lightning 30B-A3B Base. During a six-day first stage, each agent has 1,000 GPU-hours and $300 in API
+    credit on a shared 64-GPU cluster, independently selecting data, implementing training procedures,
+    and choosing checkpoints. We evaluate their models on 20 benchmarks and through blind human evaluations.
+    All ten agents produce working assistants, with the strongest model, trained by GPT-6 Astra, closing
+    a median of 76% of the base-to-Instruct gap across 12 capability benchmarks. Its human-preference
+    rating is also close to NVIDIA Instruct after statistical adjustment for answer length and formatting.
+    In Stage 2, each agent receives the comparison records and votes involving its Stage 1 model and is
+    given three additional days for further training. Using NVIDIA Instruct as a common reference across
+    the two evaluation rounds, we observe an improvement from Stage 1 to Stage 2 in the style-adjusted
+    relative rating of eight of the ten models. We show that benchmark gains were modest, with no clear
+    link to preference gains, while some agents encouraged longer responses and one model showed increased
+    harmful compliance on StrongREJECT. RSI Arena provides an auditable setting for studying how human
+    feedback can guide autonomous model development. It takes a step toward recursive self-improvement
+    with human feedback (RSIHF), in which people help define what improvement means for the AI systems
+    they use.
+  url: https://arxiv.org/abs/2610.33624
+  pdf_url: https://arxiv.org/pdf/2610.33624v1
+  version: v1
+fetched: '2026-11-12'

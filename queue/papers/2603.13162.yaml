@@ -1,0 +1,39 @@
+id: paper:arxiv:2603.13162
+status: skipped
+score: 0
+matched: []
+meta:
+  title: 'DiT-IC: Aligned Diffusion Transformer for Efficient Image Compression'
+  authors:
+  - Junqi Shi
+  - Ming Lu
+  - Xingchen Li
+  - Anle Ke
+  - Ruiqi Zhang
+  - Zhan Ma
+  published: '2026-03-13'
+  updated: '2026-03-13'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: 'Diffusion-based image compression has recently shown outstanding perceptual fidelity, yet
+    its practicality is hindered by prohibitive sampling overhead and high memory usage. Most existing
+    diffusion codecs employ U-Net architectures, where hierarchical downsampling forces diffusion to operate
+    in shallow latent spaces (typically with only 8x spatial downscaling), resulting in excessive computation.
+    In contrast, conventional VAE-based codecs work in much deeper latent domains (16x - 64x downscaled),
+    motivating a key question: Can diffusion operate effectively in such compact latent spaces without
+    compromising reconstruction quality? To address this, we introduce DiT-IC, an Aligned Diffusion Transformer
+    for Image Compression, which replaces the U-Net with a Diffusion Transformer capable of performing
+    diffusion in latent space entirely at 32x downscaled resolution. DiT-IC adapts a pretrained text-to-image
+    multi-step DiT into a single-step reconstruction model through three key alignment mechanisms: (1)
+    a variance-guided reconstruction flow that adapts denoising strength to latent uncertainty for efficient
+    reconstruction; (2) a self-distillation alignment that enforces consistency with encoder-defined latent
+    geometry to enable one-step diffusion; and (3) a latent-conditioned guidance that replaces text prompts
+    with semantically aligned latent conditions, enabling text-free inference. With these designs, DiT-IC
+    achieves state-of-the-art perceptual quality while offering up to 30x faster decoding and drastically
+    lower memory usage than existing diffusion-based codecs. Remarkably, it can reconstruct 2048x2048
+    images on a 16 GB laptop GPU.'
+  url: https://arxiv.org/abs/2603.13162
+  pdf_url: https://arxiv.org/pdf/2603.13162v1
+  version: v1
+fetched: '2026-11-12'

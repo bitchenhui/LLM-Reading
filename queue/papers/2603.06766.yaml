@@ -1,0 +1,47 @@
+id: paper:arxiv:2603.06766
+status: reviewed
+score: 5
+matched:
+- ref: impl:VTM
+  count: 1
+  weight: 3
+- ref: dataset:Kodak
+  count: 1
+  weight: 1
+- ref: metric:BD-Rate
+  count: 1
+  weight: 1
+meta:
+  title: 'HiDE: Hierarchical Dictionary-Based Entropy Modeling for Learned Image Compression'
+  authors:
+  - Haoxuan Xiong
+  - Yuanyuan Xu
+  - Kun Zhu
+  - Yiming Wang
+  - Baoliu Ye
+  published: '2026-03-06'
+  updated: '2026-03-06'
+  categories:
+  - eess.IV
+  - cs.CV
+  - cs.MM
+  abstract: Learned image compression (LIC) has achieved remarkable coding efficiency, where entropy modeling
+    plays a pivotal role in minimizing bitrate through informative priors. Existing methods predominantly
+    exploit internal contexts within the input image, yet the rich external priors embedded in large-scale
+    training data remain largely underutilized. Recent advances in dictionary-based entropy models have
+    demonstrated that incorporating external priors can substantially enhance compression performance.
+    However, current approaches organize heterogeneous external priors within a single-level dictionary,
+    resulting in imbalanced utilization and limited representational capacity. Moreover, effective entropy
+    modeling requires not only expressive priors but also a parameter estimation network capable of interpreting
+    them. To address these challenges, we propose HiDE, a Hierarchical Dictionary-based Entropy modeling
+    framework for learned image compression. HiDE decomposes external priors into global structural and
+    local detail dictionaries with cascaded retrieval, enabling structured and efficient utilization of
+    external information. Moreover, a context-aware parameter estimator with parallel multi-receptive-field
+    design is introduced to adaptively exploit heterogeneous contexts for accurate conditional probability
+    estimation. Experimental results show that HiDE achieves 18.5%, 21.99%, and 24.01% BD-rate savings
+    over VTM-12.1 on the Kodak, CLIC, and Tecnick datasets, respectively.
+  url: https://arxiv.org/abs/2603.06766
+  pdf_url: https://arxiv.org/pdf/2603.06766v1
+  version: v1
+fetched: '2026-11-12'
+llm_decision: deep_read

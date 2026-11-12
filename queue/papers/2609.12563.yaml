@@ -1,0 +1,40 @@
+id: paper:arxiv:2609.12563
+status: skipped
+score: 1
+track: audio_coding
+matched:
+- ref: metric:MOS
+  count: 1
+  weight: 1
+meta:
+  title: 'TokenMapper: A Step Toward Interoperable Speech Token Translation'
+  authors:
+  - Tal Kozakov
+  - Tal Rosenwein
+  - Eliya Nachmani
+  published: '2026-09-11'
+  updated: '2026-09-11'
+  categories:
+  - cs.LG
+  - cs.AI
+  - cs.SD
+  - eess.AS
+  abstract: Neural audio codecs discretize speech into token sequences, but the resulting token spaces
+    differ in vocabulary and codebook structure, preventing direct communication across models. This limitation
+    affects applications such as conversational voice agents and speech to speech translation systems
+    where multiple speech models must interact. As a result, transferring information between speech systems
+    typically requires decoding to waveform audio and re-encoding with a second tokenizer, increasing
+    latency and introducing potential information loss. To address these limitations, we present TokenMapper,
+    a direction aware framework for direct token to token translation between heterogeneous speech tokenizers
+    in the discrete domain. TokenMapper supports structurally mismatched token spaces, including mappings
+    between single codebook and multi codebook representations, under a shared effective token rate. Experiments
+    on GLM-4-Voice, MiMi and DualCodec show consistent cross model performance. Specifically, translation
+    WER approaches native reconstructions within 2.5-6.8% absolute WER, human MOS for TokenMapper outputs
+    ranges from 2.29 to 4.39, following the same direction level trends as UTMOS and end to end latency
+    is reduced by 4.8-94.5% relative to waveform bridging, reaching up to 972 ms per utterance. These
+    results provide a practical step toward cross model speech token interoperability without intermediate
+    waveform reconstruction.
+  url: https://arxiv.org/abs/2609.12563
+  pdf_url: https://arxiv.org/pdf/2609.12563v1
+  version: v1
+fetched: '2026-11-12'

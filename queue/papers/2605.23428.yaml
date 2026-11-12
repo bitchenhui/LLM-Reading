@@ -1,0 +1,36 @@
+id: paper:arxiv:2605.23428
+status: skipped
+score: 0
+matched: []
+meta:
+  title: 'FAST-ME: Foundation-aware Adaptive Stopping for Motion Estimation for Efficient IoT Video Analysis'
+  authors:
+  - Kakia Panagidi
+  - Stathes Hadjieftymiadis
+  published: '2026-05-22'
+  updated: '2026-05-22'
+  categories:
+  - cs.CV
+  - cs.MM
+  abstract: In modern multimedia systems, efficient video processing is critical, especially in resource-constrained
+    environments such as IoT-based camera networks, autonomous platforms, and wireless sensor multimedia
+    systems. A key bottleneck in video compression and understanding is block motion estimation (ME),
+    a process that remains computationally expensive despite the development of fast search techniques.
+    This work introduces an Optimal Stopping Theory (OST) algorithm for block motion estimation based
+    on the assessment of spatiotemporal differences within and across video frames. It also proposes a
+    semantic-aware motion estimation framework that integrates Foundation Models (FMs) with the OST-based
+    decision process. By leveraging pretrained visual models such as Vision Transformers (ViT) and the
+    Segment Anything Model (SAM), the framework extracts semantic attention scores that indicate the importance
+    of motion within specific spatial regions. These scores are fused with traditional distortion-based
+    metrics, such as the Sum of Absolute Differences (SAD), to guide a hybrid stopping criterion that
+    jointly considers motion magnitude and semantic relevance. The resulting adaptive algorithm stops
+    early in redundant regions while continuing the search in areas where motion is semantically significant.
+    Experiments compare the proposed solution with widely used approaches from the literature on benchmark
+    and multimodal video datasets. The proposed method achieves a significant reduction in computation
+    with minimal accuracy loss and improved semantic coverage. The results highlight the benefits of bridging
+    low-level motion analysis with high-level semantic reasoning, offering a promising direction for efficient
+    multimodal video understanding in next-generation smart systems.
+  url: https://arxiv.org/abs/2605.23428
+  pdf_url: https://arxiv.org/pdf/2605.23428v1
+  version: v1
+fetched: '2026-11-12'

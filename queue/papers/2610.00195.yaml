@@ -1,0 +1,38 @@
+id: paper:arxiv:2610.00195
+status: skipped
+score: 2
+track: quality_assessment
+matched:
+- ref: concept:3DGS
+  count: 1
+  weight: 1
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'GS-PQM: A Parameter-Domain Quality Metric for Compressed Gaussian Splatting'
+  authors:
+  - Pedro Martin
+  - António Rodrigues
+  - João Ascenso
+  - Maria Paula Queluz
+  published: '2026-09-18'
+  updated: '2026-09-18'
+  categories:
+  - cs.GR
+  - cs.CV
+  - cs.MM
+  abstract: Recent advances in Gaussian Splatting (GS) compression have enabled substantial reductions
+    in GS model size. Reliable objective quality assessment is therefore essential for comparing compression
+    methods and guiding the development of more efficient GS codecs. Existing GS quality assessment typically
+    relies on image and video quality metrics, requiring rendering of predefined viewpoints and making
+    the quality estimate dependent on the selected views. This paper introduces GS-PQM, a novel full-reference
+    quality metric for post-training GS compression that operates directly in the GS parameter domain.
+    GS-PQM estimates perceptual quality from a set of parameter-domain distortion errors using a Support
+    Vector Regression model. Experimental results show that GS-PQM outperforms 25 existing image, video,
+    and point-cloud quality metrics in assessing compressed GS content, providing an accurate and computationally
+    efficient alternative to rendering-based quality assessment.
+  url: https://arxiv.org/abs/2610.00195
+  pdf_url: https://arxiv.org/pdf/2610.00195v1
+  version: v1
+fetched: '2026-11-12'

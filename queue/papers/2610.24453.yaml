@@ -1,0 +1,47 @@
+id: paper:arxiv:2610.24453
+status: pending
+score: 4
+track: self_improvement
+matched:
+- ref: concept:RSI
+  count: 3
+  weight: 1
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+- ref: concept:TrainingFree
+  count: 1
+  weight: 1
+meta:
+  title: 'Hippo: Training-Free Agent Self-Evolution via Hippocampal Replay'
+  authors:
+  - Yutong Song
+  - Jiang Wu
+  - Yuxuan Ren
+  - Tony Qin
+  - Baoyuan Wang
+  published: '2026-10-17'
+  updated: '2026-10-29'
+  categories:
+  - cs.AI
+  abstract: 'Motivated by recursive self-improvement (RSI), we study how LLM agents can learn through
+    external memory without updating model parameters. Extracting useful experience from a single attempt
+    is difficult: flawed reasoning can produce success, while poor execution can obscure a sound strategy.
+    Preserving its value over time is also difficult: our accumulation baseline without consolidation
+    initially improves but eventually performs below a no-memory baseline. Our key idea is to compare
+    attempts at the same task to identify reusable decisions and refine when they apply. We introduce
+    Hippo, a memory framework inspired by selective hippocampal encoding and replay that learns from these
+    comparisons when shortcomings are diagnosed. It compares the resulting experience with existing memory
+    to merge overlaps and resolve conflicts through explicit applicability conditions. This allows prior
+    guidance to be revised without storing every lesson as a separate entry. Experiments on SWE-bench
+    Verified, WebArena, and Mind2Web show performance gains in all three settings and substantially fewer
+    retained experiences than the accumulation baseline. The gains extend across the evaluated base models
+    of varying capabilities, indicating that memory-based adaptation remains useful even for highly capable
+    models.'
+  url: https://arxiv.org/abs/2610.24453
+  pdf_url: https://arxiv.org/pdf/2610.24453v2
+  version: v2
+fetched: '2026-11-12'

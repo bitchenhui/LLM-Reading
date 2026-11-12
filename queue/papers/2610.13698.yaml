@@ -1,0 +1,38 @@
+id: paper:arxiv:2610.13698
+status: skipped
+score: 1
+track: streaming_delivery
+matched:
+- ref: concept:ABR
+  count: 3
+  weight: 1
+meta:
+  title: 'DIA: A Deep Reinforcement Learning-Based Interest-Aware ABR Scheme for Cloud Gaming'
+  authors:
+  - Zhe Zhang
+  - Haiwei Dong
+  - Marc St-Hilaire
+  - Abdulmotaleb El Saddik
+  published: '2026-10-09'
+  updated: '2026-10-09'
+  categories:
+  - cs.MM
+  abstract: The continuous evolution of cloud gaming has enabled users to play high-quality cloud games
+    on thin clients, such as smartphones and tablets. However, how to effectively transmit the gameplay
+    frames with high resolution and low latency, especially over wireless networks, remains a significant
+    challenge. To address this challenge, we propose a Deep Reinforcement Learning (DRL)-based Interest-Aware
+    Adaptive Bitrate (ABR) scheme, called DIA, that guarantees the quality of perceptually key objects
+    in each frame, while dynamically allocating lower resolutions for non-key objects to conserve bandwidth
+    under constrained network conditions. By leveraging an off-the-shelf semantic segmentation model,
+    the proposed DIA scheme can adjust the bitrate at the object-level. We also design a transformer-based
+    feature extractor and an interest-aware reward function to enable the proposed DIA scheme to identify
+    key objects and dynamically adjust their bitrates. This adaptation is guided by users' in-game movement
+    speed, object features, and prevailing network conditions and operates without requiring additional
+    hardware, such as gaze trackers. Extensive experiments show that the proposed DIA scheme outperforms
+    existing ABR schemes in dynamic wireless network environments. Notably, DIA achieves at least a 20%
+    higher normalized average Quality of Experience (QoE) than the State-Of-The-Art (SOTA) ABR algorithms
+    in 5G scenarios.
+  url: https://arxiv.org/abs/2610.13698
+  pdf_url: https://arxiv.org/pdf/2610.13698v1
+  version: v1
+fetched: '2026-11-12'

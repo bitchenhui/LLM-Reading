@@ -1,0 +1,37 @@
+id: paper:arxiv:2601.06170
+status: skipped
+score: 0
+matched: []
+meta:
+  title: Deep Joint Source-Channel Coding for Wireless Video Transmission with Asymmetric Context
+  authors:
+  - Xuechen Chen
+  - Junting Li
+  - Chuang Chen
+  - Hairong Lin
+  - Yishen Li
+  published: '2026-01-07'
+  updated: '2026-01-07'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: In this paper, we propose a high-efficiency deep joint source-channel coding (JSCC) method
+    for video transmission based on conditional coding with asymmetric context. The conditional coding-based
+    neural video compression requires to predict the encoding and decoding conditions from the same context
+    which includes the same reconstructed frames. However in JSCC schemes which fall into pseudo-analog
+    transmission, the encoder cannot infer the same reconstructed frames as the decoder even a pipeline
+    of the simulated transmission is constructed at the encoder. In the proposed method, without such
+    a pipeline, we guide and design neural networks to learn encoding and decoding conditions from asymmetric
+    contexts. Additionally, we introduce feature propagation, which allows intermediate features to be
+    independently propagated at the encoder and decoder and help to generate conditions, enabling the
+    framework to greatly leverage temporal correlation while mitigating the problem of error accumulation.
+    To further exploit the performance of the proposed transmission framework, we implement content-adaptive
+    coding which achieves variable bandwidth transmission using entropy models and masking mechanisms.
+    Experimental results demonstrate that our method outperforms existing deep video transmission frameworks
+    in terms of performance and effectively mitigates the error accumulation. By mitigating the error
+    accumulation, our schemes can reduce the frequency of inserting intra-frame coding modes, further
+    enhancing performance.
+  url: https://arxiv.org/abs/2601.06170
+  pdf_url: https://arxiv.org/pdf/2601.06170v1
+  version: v1
+fetched: '2026-11-12'

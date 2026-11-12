@@ -1,0 +1,39 @@
+id: paper:arxiv:2605.14629
+status: reviewed
+score: 4
+matched:
+- ref: codec:AV1
+  count: 1
+  weight: 3
+- ref: metric:VMAF
+  count: 1
+  weight: 1
+meta:
+  title: Efficient Dense Matching for Enhanced Gaussian Splatting Using AV1 Motion Vectors
+  authors:
+  - Julien Zouein
+  - Vibhoothi Vibhoothi
+  - François Pitié
+  - Anil Kokaram
+  published: '2026-05-14'
+  updated: '2026-05-14'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: '3D Gaussian Splatting (3DGS) has emerged as a prominent framework for real-time, photorealistic
+    scene reconstruction, offering significant speed-ups over Neural Radiance Fields (NeRF). However,
+    the fidelity of 3DGS representations remains heavily dependent on the quality of the initial point
+    cloud. While standard Structure-from-Motion (SfM) pipelines using COLMAP provide adequate initialisation,
+    they often suffer from high computational costs and sparsity in textureless regions, which degrades
+    subsequent reconstruction accuracy and convergence speed. In this work, we introduce an AV1-based
+    feature detection and matching pipeline that significantly reduces SfM processing overhead. By leveraging
+    motion vectors inherent to the AV1 video codec, we bypass computationally expensive exhaustive matching
+    while maintaining geometric robustness. Our pipeline produces substantially denser point clouds, with
+    up to eight times as many points as classical SfM. We demonstrate that this enhanced initialisation
+    directly improves 3DGS performance, yielding an 9-point increase in VMAF and a 63% average reduction
+    in training time required to reach baseline quality. The project page: https://sigmedia.tv/AV1-3DGS.github.io/'
+  url: https://arxiv.org/abs/2605.14629
+  pdf_url: https://arxiv.org/pdf/2605.14629v1
+  version: v1
+fetched: '2026-11-12'
+llm_decision: summary_only

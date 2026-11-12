@@ -1,0 +1,39 @@
+id: paper:arxiv:2606.21655
+status: pending
+score: 3
+matched:
+- ref: concept:EntropyModel
+  count: 1
+  weight: 1
+- ref: concept:INR
+  count: 1
+  weight: 1
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+meta:
+  title: 'PaaF: Raising the perceived quality of INR-Based Image Compression'
+  authors:
+  - Lorenzo Catania
+  - Dario Allegra
+  published: '2026-06-19'
+  updated: '2026-06-19'
+  categories:
+  - eess.IV
+  - cs.CV
+  - cs.MM
+  abstract: Implicit Neural Representations (INRs) have recently emerged as a promising paradigm for image
+    compression, offering a fundamentally different approach from traditional and learned codecs. Nevertheless,
+    INR-based methods for image compression suffer from long encoding times and a consistent performance
+    gap in classic quality metrics such as PSNR. In this work, we explore the potential of purely INR-based
+    compression methods and we propose PaaF (Picture as a Function), a novel INR-based image codec that
+    introduces improved architectural design, adaptive quantization, and an efficient entropy coding scheme.
+    These components are designed to enhance rate-distortion performance while preserving the simplicity
+    and parallelizability of INR-based decoding. Experimental results demonstrate consistent improvements
+    over existing INR-based methods in both quantitative metrics and perceptual quality. These findings
+    highlight the potential of INR-based approaches and contribute to narrowing the gap between functional
+    representations and more established compression paradigms.
+  url: https://arxiv.org/abs/2606.21655
+  pdf_url: https://arxiv.org/pdf/2606.21655v1
+  version: v1
+fetched: '2026-11-12'

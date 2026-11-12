@@ -1,0 +1,37 @@
+id: paper:arxiv:2603.22776
+status: skipped
+score: 0
+matched: []
+meta:
+  title: Viewport-based Neural 360° Image Compression
+  authors:
+  - Jingwei Liao
+  - Bo Chen
+  - Klara Nahrstedt
+  - Zhisheng Yan
+  published: '2026-03-24'
+  updated: '2026-03-24'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: 'Given the popularity of 360° images on social media platforms, 360° image compression becomes
+    a critical technology for media storage and transmission. Conventional 360° image compression pipeline
+    projects the spherical image into a single 2D plane, leading to issues of oversampling and distortion.
+    In this paper, we propose a novel viewport-based neural compression pipeline for 360° images. By replacing
+    the image projection in conventional 360° image compression pipelines with viewport extraction and
+    efficiently compressing multiple viewports, the proposed pipeline minimizes the inherent oversampling
+    and distortion issues. However, viewport extraction impedes information sharing between multiple viewports
+    during compression, causing the loss of global information about the spherical image. To tackle this
+    global information loss, we design a neural viewport codec to capture global prior information across
+    multiple viewports and maximally compress the viewport data. The viewport codec is empowered by a
+    transformer-based ViewPort ConText (VPCT) module that can be integrated with canonical learning-based
+    2D image compression structures. We compare the proposed pipeline with existing 360° image compression
+    models and conventional 360° image compression pipelines building on learning-based 2D image codecs
+    and standard hand-crafted codecs. Results show that our pipeline saves an average of $14.01\%$ bit
+    consumption compared to the best-performing 360° image compression methods without compromising quality.
+    The proposed VPCT-based codec also outperforms existing 2D image codecs in the viewport-based neural
+    compression pipeline. Our code can be found at: https://github.com/Jingwei-Liao/VPCT.'
+  url: https://arxiv.org/abs/2603.22776
+  pdf_url: https://arxiv.org/pdf/2603.22776v1
+  version: v1
+fetched: '2026-11-12'

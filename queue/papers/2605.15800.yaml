@@ -1,0 +1,54 @@
+id: paper:arxiv:2605.15800
+status: reviewed
+score: 11
+matched:
+- ref: codec:AV1
+  count: 1
+  weight: 3
+- ref: codec:AV2
+  count: 1
+  weight: 3
+- ref: org:AOMedia
+  count: 2
+  weight: 1
+- ref: dataset:JVET-CTC
+  count: 1
+  weight: 1
+- ref: metric:BD-Rate
+  count: 1
+  weight: 1
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+- ref: metric:VMAF
+  count: 1
+  weight: 1
+meta:
+  title: Video Quality Evaluation Methodology and Result of AV2 Compression Performance
+  authors:
+  - Zhijun Lei
+  - Vibhoothi Vibhoothi
+  - Dzung Hoang
+  - Yixin Du
+  - Ramzi Khsib
+  published: '2026-05-15'
+  updated: '2026-05-15'
+  categories:
+  - eess.IV
+  - cs.ET
+  - cs.MM
+  - eess.SP
+  abstract: The Alliance for Open Media (AOMedia) has developed the AV2 video coding standard to supersede
+    AV1, aiming for substantial compression efficiency gains across diverse media applications. This paper
+    details the quality and performance evaluation methodology defined in the AV2 Common Test Conditions
+    (CTC), which introduces new evaluation methods and content, including convex-hull-based adaptive streaming
+    (AS) configuration, user-generated content (UGC), and extended chroma formats. We present the coding
+    gains of the AV2 (v13.0) against the AV1 baseline. Experimental results show that AV2 achieves significant
+    Bjøntegaard-Delta Rate (BD-rate) reductions of 29.81\% and 33.79\% for PSNR-YUV and VMAF, respectively,
+    under random access configuration, validating the efficiency of AV2 for next-generation streaming
+    applications.
+  url: https://arxiv.org/abs/2605.15800
+  pdf_url: https://arxiv.org/pdf/2605.15800v1
+  version: v1
+fetched: '2026-11-12'
+llm_decision: deep_read

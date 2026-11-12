@@ -1,0 +1,39 @@
+id: paper:arxiv:2604.25330
+status: skipped
+score: 0
+matched: []
+meta:
+  title: Generalizable 3D Gaussian Splatting enabled Semantic Coding for Real-Time Immersive Video Communications
+  authors:
+  - Dingxi Yang
+  - Wenqi Guo
+  - Yue Liu
+  - Jungong Han
+  - Zhijin Qin
+  published: '2026-04-28'
+  updated: '2026-04-28'
+  categories:
+  - eess.IV
+  abstract: 'Real-time immersive video communications, particularly high-fidelity 3D telepresence, necessitates
+    a synergistic balance between instantaneous dynamic scene reconstruction and high-efficiency data
+    transmission. While recent advancements in feed-forward 3D Gaussian Splatting (3DGS) have enabled
+    real-time rendering, performing multi-view video coding and 3D reconstruction in a decoupled manner
+    leads to suboptimal compression efficiency and high computational complexity. To address this, we
+    propose GS-SCNet, the first unified end-to-end framework that seamlessly integrates generalizable
+    3DGS reconstruction with a dedicated deep Semantic Coding pipeline. Our architecture is underpinned
+    by two core technical contributions: (i) we introduce a Disparity-Guided Parallel Semantic Codec that
+    exploits epipolar geometric priors to facilitate cross-view contextual interaction via disparity compensation
+    and semantic fusion, thereby enabling real-time parallel processing of stereo streams while significantly
+    enhancing rate-distortion performance, and (ii) we develop a Lightweight Gaussian Parameter Predictor
+    which directly projects decoded semantic latents into 3DGS attributes, obviating the need for intermediate
+    pixel-domain reconstruction. By coupling the codec with the task-specific predictor, our framework
+    extracts geometric correlations only once, effectively eliminating the redundant computational bottleneck
+    inherent in conventional decoupled paradigms. Extensive evaluations on both synthetic and real-world
+    human datasets demonstrate that GS-SCNet achieves a superior trade-off across compression efficiency,
+    rendering quality, and real-time performance. Notably, our framework exhibits strong cross-domain
+    generalization and robustness against compression artifacts when applied to out-of-domain real-world
+    data, significantly outperforming conventional decoupled transmission paradigms.'
+  url: https://arxiv.org/abs/2604.25330
+  pdf_url: https://arxiv.org/pdf/2604.25330v1
+  version: v1
+fetched: '2026-11-12'

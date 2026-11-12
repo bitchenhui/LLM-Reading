@@ -1,0 +1,41 @@
+id: paper:arxiv:2608.15369
+status: pending
+score: 4
+track: audio_coding
+matched:
+- ref: codec:Opus
+  count: 1
+  weight: 3
+- ref: concept:LLM
+  count: 2
+  weight: 1
+meta:
+  title: 'AudioTQ: A Data-Oblivious 6-Bit CPU Audio Codec via Randomized Hadamard Rotation and Lloyd-Max
+    Quantization'
+  authors:
+  - Sahil Gangurde
+  published: '2026-08-15'
+  updated: '2026-08-15'
+  categories:
+  - cs.SD
+  - cs.AI
+  - cs.CR
+  abstract: Lossy audio compression algorithms traditionally rely on psychoacoustic modeling and frequency-domain
+    representations (e.g., MP3, AAC, and Opus) to discard information that is imperceptible to the human
+    auditory system. While highly effective, these approaches are computationally complex and domain-specific.
+    In this paper, we present the design and mathematical formulation of AudioTQ, a data-oblivious lossy
+    audio codec that operates directly in the time domain. Inspired by Large Language Model (LLM) weight
+    quantization techniques (specifically the TurboQuant framework), AudioTQ uniformizes volatile time-domain
+    amplitudes into a predictable standard normal distribution using an orthonormal, randomized Fast Walsh-Hadamard
+    Transform (FWHT) rotation. This enables coordinate-wise scalar quantization using an offline-trained,
+    MSE-optimal 6-bit Lloyd-Max quantizer, augmented by a 1-bit Quantized Joint Least-Squares (QJL) residual
+    correction layer. The resulting 7-bit virtual indices are packed into native 8-bit containers, aligning
+    with standard CPU register boundaries to ensure real-time single-threaded execution without hardware
+    parallel accelerators. We detail the bitwise reconstruction of 24-bit studio stems, analyze the butterfly
+    network of the FWHT, derive the mathematical failure modes under sparse inputs, and present benchmarks
+    showing up to 74.4% physical size reduction alongside a Signal-to-Quantization-Noise Ratio (SQNR)
+    of ~30 dB.
+  url: https://arxiv.org/abs/2608.15369
+  pdf_url: https://arxiv.org/pdf/2608.15369v1
+  version: v1
+fetched: '2026-11-12'

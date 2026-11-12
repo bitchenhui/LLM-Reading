@@ -1,0 +1,42 @@
+id: paper:arxiv:2606.29574
+status: skipped
+score: 1
+track: streaming_delivery
+matched:
+- ref: concept:ABR
+  count: 3
+  weight: 1
+meta:
+  title: Stateless Network-Aware Adaptive Bitrate Streaming over IPFS
+  authors:
+  - Iliya Mirzaei
+  - Shabnam Jafarzade Mojaveri
+  - Amirhossein Najafizadeh
+  published: '2026-06-28'
+  updated: '2026-06-28'
+  categories:
+  - cs.NI
+  - cs.DC
+  abstract: Modern content delivery is increasingly decentralized, improving availability, cost, and reach
+    for geographically distributed users. The InterPlanetary File System (IPFS) is a promising approach
+    that uses content-based identifiers distributed across a global peer-to-peer network. Although IPFS
+    improves fault tolerance, resilience, and censorship resistance, its unpredictable environment introduces
+    significant performance variability that limits conventional Adaptive Bitrate (ABR) streaming and
+    degrades Quality of Experience (QoE). Recent network-aware ABR solutions address this by incorporating
+    IPFS-specific information into bitrate decisions. However, they rely on maintaining continuously synchronized
+    state across consumers and providers, which can quickly become stale under peer churn, provider migrations,
+    network partitions, and changing content distributions, making existing policies less effective. We
+    investigate whether network-aware ABR can remain effective without synchronized adaptation state,
+    and present a stateless network-aware ABR policy for IPFS-based video streaming. Our approach replaces
+    provider-stateful adaptation with an observation-driven policy that recomputes the bitrate for each
+    segment using only locally observable request-time signals. To preserve adaptation context without
+    provider-side state, the client embeds its adaptation state in HTTP headers, keeping it under client
+    control and carried transparently across requests. By eliminating cross-provider state synchronization,
+    the framework improves robustness to failures and network reconfigurations while simplifying deployment
+    at scale. Early results show the approach maintains high QoE in faulty conditions, improving it by
+    up to roughly 6x over existing solutions. These findings demonstrate that stateless network-aware
+    adaptation provides a practical and scalable foundation for decentralized video delivery.
+  url: https://arxiv.org/abs/2606.29574
+  pdf_url: https://arxiv.org/pdf/2606.29574v1
+  version: v1
+fetched: '2026-11-12'

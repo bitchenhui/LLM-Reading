@@ -1,0 +1,29 @@
+id: paper:arxiv:2605.20977
+status: skipped
+score: 1
+matched:
+- ref: concept:Hyperprior
+  count: 1
+  weight: 1
+meta:
+  title: Parallel Context Modeling for Sliding Window Attention in Neural Video Coding
+  authors:
+  - Alexander Kopte
+  - André Kaup
+  published: '2026-05-20'
+  updated: '2026-05-20'
+  categories:
+  - eess.IV
+  abstract: Most neural video codecs rely on temporal conditioning, which makes them susceptible to error
+    propagation over long sequences. While Transformer-based architectures like the VCT offer a drift-free
+    alternative, they suffer from high computational complexity and inferior RD performance. The recent
+    SWA addresses these shortcomings by reducing complexity and enhancing RD performance, yet it restricts
+    decoding to a strictly sequential raster-scan order, creating a critical bottleneck in decoding latency.
+    To resolve this, we propose P-SWA, utilizing diagonal wavefronts to enable parallel decoding. By embedding
+    a hyperprior and introducing an accumulator to fuse side information and local spatial context, our
+    method increases decoding speed by 36% over the parallel VCT. Simultaneously, it achieves Bjøntegaard
+    Delta-rate savings of up to 10.0% for I-frames and 7.1% for P-frames over the SWA baseline.
+  url: https://arxiv.org/abs/2605.20977
+  pdf_url: https://arxiv.org/pdf/2605.20977v1
+  version: v1
+fetched: '2026-11-12'

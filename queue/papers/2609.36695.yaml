@@ -1,0 +1,41 @@
+id: paper:arxiv:2609.36695
+status: skipped
+score: 2
+track: self_improvement
+matched:
+- ref: concept:RSI
+  count: 2
+  weight: 1
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+meta:
+  title: 'Know Thyself, Teach Thyself: Internal Information Flow for Selective Self-Distillation'
+  authors:
+  - Rui Wang
+  - Ruijie Wang
+  - Bo Chen
+  - Jiangxuan Long
+  - Yingyu Liang
+  published: '2026-09-29'
+  updated: '2026-10-04'
+  categories:
+  - cs.LG
+  abstract: Self-distillation turns knowledge distillation into a closed learning loop and offers a path
+    toward recursive self-improvement. Without an external teacher, however, the model must determine
+    both what information can improve its supervision and which induced changes should be learned. Existing
+    methods typically improve teacher-generated data or select training examples in isolation, leaving
+    the information transferred between these stages unmeasured. We introduce InFlow, a retrieval-guided
+    on-policy self-distillation framework that models this process as potential-to-realized information
+    flow. InFlow first retrieves potentially informative sources using certainty-calibrated hidden-state
+    trajectories, then measures their realized effect through the Jensen--Shannon divergence between the
+    teacher's initial and retrieval-conditioned answer beliefs. Examples with larger belief shifts are
+    selected for on-policy distillation. Our analysis formalizes the information optimized by retrieval
+    and selection and relates the answer-level shift to the teacher--student distillation gap. Across
+    four open-weight language models and three knowledge domains, InFlow achieves the strongest cross-model
+    average among the compared selection methods, with ablations supporting both stages of the framework.
+    Our code is available at https://github.com/1240148048/INFLOW.
+  url: https://arxiv.org/abs/2609.36695
+  pdf_url: https://arxiv.org/pdf/2609.36695v2
+  version: v2
+fetched: '2026-11-12'

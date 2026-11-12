@@ -1,0 +1,37 @@
+id: paper:arxiv:2607.04606
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 3
+  weight: 1
+meta:
+  title: 'CompressedVQA-AEV: Full-Reference and No-Reference Quality Assessment Models for Asymmetric
+    Encoded Videos'
+  authors:
+  - Wei Sun
+  - Xingwei Liu
+  - Dandan Zhu
+  - Xiangyang Zhu
+  - Weixia Zhang
+  - Guangtao Zhai
+  published: '2026-07-06'
+  updated: '2026-07-06'
+  categories:
+  - eess.IV
+  - cs.CV
+  - cs.MM
+  abstract: This report presents our solutions to the QoMEX 2026 Grand Challenge on Video Quality Assessment
+    for Asymmetric Encoded Videos, comprising a full-reference (FR) model, CompressedVQA-AEV-FR, and a
+    no-reference (NR) model, CompressedVQA-AEV-NR. The FR approach leverages a Swin-B backbone to extract
+    multi-stage similarity statistics between reference and distorted videos for quality prediction. For
+    the NR setting, our model employs complementary frame-level encoders based on SigLIP2 and Swin-B,
+    followed by temporal mean pooling and cross-fold ensembling to estimate perceptual quality without
+    reference data. Our CompressedVQA-AEV-FR achieves first place in the FR track of QoMEX 2026 Grand
+    Challenge, while CompressedVQA-AEV-NR secures fourth place in the NR track, demonstrating the effectiveness
+    of our proposed models. The code is available at https://github.com/sunwei925/CompressedVQA-AEV.
+  url: https://arxiv.org/abs/2607.04606
+  pdf_url: https://arxiv.org/pdf/2607.04606v1
+  version: v1
+fetched: '2026-11-12'

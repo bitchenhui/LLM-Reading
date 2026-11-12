@@ -1,0 +1,35 @@
+id: paper:arxiv:2609.08542
+status: skipped
+score: 0
+track: audio_coding
+matched: []
+meta:
+  title: Spatial Audio Coding Through Relative Room Impulse Response Estimation
+  authors:
+  - Nour Bouayed
+  - Adrien Llave
+  - Jérôme Daniel
+  - Pascal Scalart
+  published: '2026-09-08'
+  updated: '2026-09-08'
+  categories:
+  - eess.AS
+  abstract: Immersive virtual listening relies on spatial audio technologies such as Higher-Order Ambisonics
+    (HOA), which represent sound scenes as multichannel signals. As the desired spatial resolution increases,
+    so does the number of channels, making efficient compression essential for transmission over bandwidth-limited
+    networks. Moreover, to facilitate deployment by network operators, the target bitrate for immersive
+    audio coding should ideally remain close to the 25 kbps currently allocated to VoLTE audio services.
+    State-of-the-art parametric codecs, such as the recently standardized Immersive Voice and Audio Services
+    (IVAS) codec, achieve compression by transmitting spatial metadata together with a reduced number
+    of transport channels. However, recent studies have shown that IVAS performance degrades on reverberant
+    content, particularly at low bitrates, a limitation that suggests its inability to accurately model
+    room acoustics. In this paper, we propose a novel HOA coding scheme based on the explicit and blind
+    estimation of the Relative Spatial Room Impulse Response (ReSRIR), using a beamformed version of the
+    HOA signal as a reference signal. By exploiting the structure and sparsity of the estimated ReSRIR,
+    we derive an efficient parametric representation for immersive audio coding. Experimental evaluations
+    show that the proposed method achieves higher compression than IVAS in the single-transport-channel
+    regime, while maintaining comparable to slightly better quality.
+  url: https://arxiv.org/abs/2609.08542
+  pdf_url: https://arxiv.org/pdf/2609.08542v1
+  version: v1
+fetched: '2026-11-12'

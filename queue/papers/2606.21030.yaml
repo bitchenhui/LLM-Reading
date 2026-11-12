@@ -1,0 +1,46 @@
+id: paper:arxiv:2606.21030
+status: pending
+score: 3
+matched:
+- ref: metric:DISTS
+  count: 1
+  weight: 1
+- ref: metric:LPIPS
+  count: 1
+  weight: 1
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+meta:
+  title: 'Gen2-IC: Bridging Generative Models and Image Codecs through Latent Transport'
+  authors:
+  - Yinhuan Huang
+  - Hao Cao
+  - Pu chen
+  - Wenqi Guo
+  - Jungong Han
+  - Zhijin Qin
+  published: '2026-06-19'
+  updated: '2026-09-29'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: 'Diffusion-based image compression has achieved strong perceptual quality at ultra-low bitrates.
+    However, existing codecs are often tied to specific backbones and specialized components, making diverse,
+    rapidly evolving generative models difficult to reuse. This raises a natural question: Can modern
+    generative foundation models be connected to image compression through a simple and extensible interface?
+    Two insights guide our design: stronger generative priors make a simpler codec interface viable, and
+    generation and compression can be intrinsically linked through latent transport. We therefore propose
+    Gen2-IC with two stages: (1) Latent Compression maps clean image latents to entropy-constrained latents;
+    and (2) Latent Transport refines them with one near-terminal update based on the pretrained model.
+    Gen2-IC requires neither auxiliary conditioning signals nor task-specific backbone modifications.
+    With lightweight adaptation and no distillation, it supports fast encoding and one-step decoding across
+    multiple bitrates. We validate Gen2-IC on SD-2.1, SANA-1.5, FLUX.1-dev, and Qwen-Image-2512, spanning
+    U-Net and Transformer architectures as well as diffusion and flow-matching formulations. With stronger
+    priors, Gen2-IC delivers gains below 0.05 bpp: the Qwen variant leads diffusion-based generative codecs
+    in reconstruction fidelity (PSNR), perceptual similarity (LPIPS and DISTS), and recognizer-based semantic
+    fidelity (OCR CER/WER and face-ROI similarity) across four benchmarks.'
+  url: https://arxiv.org/abs/2606.21030
+  pdf_url: https://arxiv.org/pdf/2606.21030v2
+  version: v2
+fetched: '2026-11-12'

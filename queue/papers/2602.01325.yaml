@@ -1,0 +1,38 @@
+id: paper:arxiv:2602.01325
+status: skipped
+score: 1
+matched:
+- ref: concept:RDO
+  count: 1
+  weight: 1
+meta:
+  title: Unified ROI-based Image Compression Paradigm with Generalized Gaussian Model
+  authors:
+  - Kai Hu
+  - Junfu Tan
+  - Fang Xu
+  - Ramy Samy
+  - Yu Liu
+  published: '2026-02-01'
+  updated: '2026-02-01'
+  categories:
+  - eess.IV
+  - cs.MM
+  abstract: Region-of-Interest (ROI)-based image compression allocates bits unevenly according to the
+    semantic importance of different regions. Such differentiated coding typically induces a sharp-peaked
+    and heavy-tailed distribution. This distribution characteristic mathematically necessitates a probability
+    model with adaptable shape parameters for accurate description. However, existing methods commonly
+    use a Gaussian model to fit this distribution, resulting in a loss of coding performance. To systematically
+    analyze the impact of this distribution on ROI coding, we develop a unified rate-distortion optimization
+    theoretical paradigm. Building on this paradigm, we propose a novel Generalized Gaussian Model (GGM)
+    to achieve flexible modeling of the latent variables distribution. To support stable optimization
+    of GGM, we introduce effective differentiable functions and further propose a dynamic lower bound
+    to alleviate train-test mismatch. Moreover, finite differences are introduced to solve the gradient
+    computation after GGM fits the distribution. Experiments on COCO2017 demonstrate that our method achieves
+    state-of-the-art in both ROI reconstruction and downstream tasks (e.g., Segmentation, Object Detection).
+    Furthermore, compared to classical probability models, our GGM provides a more precise fit to feature
+    distributions and achieves superior coding performance. The project page is at https://github.com/hukai-tju/ROIGGM.
+  url: https://arxiv.org/abs/2602.01325
+  pdf_url: https://arxiv.org/pdf/2602.01325v1
+  version: v1
+fetched: '2026-11-12'

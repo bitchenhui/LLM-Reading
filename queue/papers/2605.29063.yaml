@@ -1,0 +1,52 @@
+id: paper:arxiv:2605.29063
+status: reviewed
+score: 7
+matched:
+- ref: codec:HEVC
+  count: 2
+  weight: 3
+- ref: concept:RDO
+  count: 1
+  weight: 1
+- ref: metric:BD-Rate
+  count: 1
+  weight: 1
+- ref: metric:VMAF
+  count: 1
+  weight: 1
+- ref: org:JCT-VC
+  count: 1
+  weight: 1
+meta:
+  title: Accelerating HEVC Intra Partitioning via a CNN-Hierarchical Attention Transformer Hybrid
+  authors:
+  - Krishna Kumar Sharma
+  - Somdyuti Paul
+  published: '2026-05-27'
+  updated: '2026-05-27'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: 'The recursive quad-tree partitioning in High Efficiency Video Coding (HEVC) incurs considerable
+    computational overhead, with exhaustive rate-distortion optimization for CTU partition prediction
+    consuming the dominant share of encoding time. Although partition prediction through deep learning
+    has emerged as a viable encoding accelerator, an architectural dichotomy remains largely unaddressed:
+    CNNs are computationally efficient but spatially myopic due to their localized effective receptive
+    fields, failing to capture long range semantic relationships and repetitive textures; conversely,
+    transformer based architectures are better at capturing global context but incur prohibitive CPU latency,
+    a critical liability that impedes deployment which is predominantly CPU-bound. This paper introduces
+    Hybrid Fast Vision Transformer (HFViT), a hybrid architecture designed to accelerate HEVC intra-mode
+    partition prediction. HFViT fuses a reparameterized depthwise-separable convolutional backbone with
+    a Hierarchical Attention Transformer (HAT) mechanism, leveraging a carrier token scheme to enable
+    efficient global information propagation at sub-quadratic complexity. Post-training structural fusion
+    collapses batch normalization into preceding layers to further reduce latency. Comprehensive evaluation
+    reveals the efficacy of HFViT in accelerating HEVC intra-encoding across resolutions. On standard
+    JCT-VC test sequences, HFViT reduces the average VMAF BD-rate penalty by 2.4, 2.6, and 7.9 percentage
+    points on Classes A, B and E, respectively, as compared to the competing ETH-CNN baseline while maintaining
+    CPU inference latency within 8% of the CNN baseline and surpassing it on GPU by 40%, establishing
+    practical viability for real-time encoder integration.'
+  url: https://arxiv.org/abs/2605.29063
+  pdf_url: https://arxiv.org/pdf/2605.29063v1
+  version: v1
+fetched: '2026-11-12'
+llm_decision: deep_read

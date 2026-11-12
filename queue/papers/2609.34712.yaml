@@ -1,0 +1,49 @@
+id: paper:arxiv:2609.34712
+status: pending
+score: 3
+track: self_improvement
+matched:
+- ref: concept:LLM
+  count: 3
+  weight: 1
+- ref: concept:RSI
+  count: 3
+  weight: 1
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+meta:
+  title: 'RSI-Router: Evolving Subtask-Level LLM Routing and Skills for Cost-Efficient Agents'
+  authors:
+  - Hao Li
+  - Hangfan Zhang
+  - Zhiyao Cui
+  - Chunjiang Mu
+  - Yiqun Zhang
+  - Bo Zhang
+  - Danyang Jia
+  - Shuyue Hu
+  published: '2026-09-28'
+  updated: '2026-09-28'
+  categories:
+  - cs.AI
+  abstract: 'Practical deployment of large language model (LLM) agents requires strong task performance
+    at affordable inference cost. For long-horizon agentic tasks, this performance-cost trade-off can
+    be improved through within-task large-small model collaboration, as smaller models can handle some
+    stages even when they cannot solve the full task. In this paper, we introduce RSI-router, a routing
+    framework that constructs subtask-level model assignments and model-specific skills through recursive
+    self-improvement over accumulated experience. Each iteration consists of four stages: Subtask Mining
+    derives subtask definitions and identification rules from training trajectories; Routing Strategy
+    Evolution proposes and evaluates diverse model assignments; Model-Specific Skill Evolution compares
+    routed and large-model-only trajectories to diagnose failures and develop reusable execution skills;
+    and Pareto-Optimal Router Selection updates the Pareto population using historical and newly generated
+    routers while retaining dominated routers as experience for subsequent evolution. Routing between
+    DeepSeek-V4.1-Flash and Qwen3.5-9B, RSI-router consistently surpasses the DeepSeek-only baseline at
+    roughly half the inference cost (48.3%) across five agentic benchmarks. In particular, on ALFWorld,
+    ScienceWorld, and WebShop, it cuts inference cost by 74.7-82.2% while simultaneously improving performance;
+    on Terminal-Bench 2.0, it achieves a 16.7% relative performance gain at 18.0% lower cost. Moreover,
+    RSI-router establishes a stronger performance--cost Pareto frontier than 9 routing methods.'
+  url: https://arxiv.org/abs/2609.34712
+  pdf_url: https://arxiv.org/pdf/2609.34712v1
+  version: v1
+fetched: '2026-11-12'

@@ -1,0 +1,48 @@
+id: paper:arxiv:2603.29864
+status: reviewed
+score: 4
+matched:
+- ref: concept:EntropyModel
+  count: 1
+  weight: 1
+- ref: concept:RDO
+  count: 1
+  weight: 1
+- ref: metric:BD-PSNR
+  count: 1
+  weight: 1
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+meta:
+  title: 'HLC: A High-Quality Lightweight Mezzanine Codec Featuring High-Throughput Palette'
+  authors:
+  - Chenlong He
+  - Leilei Huang
+  - Wei Li
+  - Hanyang Cui
+  - Zhijian Hao
+  - Xiaoyang Zeng
+  - Yibo Fan
+  published: '2026-03-31'
+  updated: '2026-03-31'
+  categories:
+  - cs.AR
+  - cs.MM
+  abstract: Existing mezzanine image codecs lack specialized screen content coding tools and therefore
+    struggle to maintain high image quality under bandwidth constraints, especially in areas with dense
+    text. Although distribution codecs offer advanced screen content compression techniques, their high
+    computational complexity makes them impractical for mezzanine coding. To address this shortfall, we
+    introduce the High-quality Lightweight Codec (HLC), a solution centered on enabling practical, high-throughput
+    palette for mezzanine coding. The core innovation is a novel data-dependency-free palette that eliminates
+    the throughput bottlenecks. To ensure its effectiveness across all content, a co-designed rate-distortion
+    optimization module arbitrates between the palette and traditional prediction modes, while a data
+    reuse strategy between rate estimation and entropy coding minimizes the overall hardware resources
+    required for the system. Experimental results show that, compared with a 4K@120fps JPEG-XS encoder,
+    HLC achieves the same throughput while using only half the LUT resources and delivers BD-PSNR improvements
+    of 3.461dB, 3.299dB, and 5.312dB on gaming, natural, and text content datasets, respectively.
+  url: https://arxiv.org/abs/2603.29864
+  pdf_url: https://arxiv.org/pdf/2603.29864v1
+  version: v1
+fetched: '2026-11-12'
+llm_decision: deep_read

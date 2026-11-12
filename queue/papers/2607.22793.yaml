@@ -1,0 +1,39 @@
+id: paper:arxiv:2607.22793
+status: skipped
+score: 1
+track: processing_enhancement
+matched:
+- ref: concept:SuperResolution
+  count: 1
+  weight: 1
+meta:
+  title: 'Small, Bias-Free, Blind and Convolutional Denoiser: A compact ConvNeXt U-Net for blind Gaussian
+    color-image denoising'
+  authors:
+  - Nikolas Markou
+  published: '2026-07-24'
+  updated: '2026-07-24'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: 'We describe and evaluate BF-ConvUNeXt, a compact bias-free ConvNeXt U-Net for blind additive-white-Gaussian-noise
+    color image denoising, combining four existing ingredients so a single property survives end to end:
+    a frozen depthwise Gabor stem (oriented band-pass, zero trainable parameters), a Laplacian-pyramid
+    encoder routing the high-frequency residual into each skip connection, a ConvNeXt-V1 U-Net body, and
+    bias-free construction throughout (no additive bias, linear head, LeakyReLU, variance-only batch norm).
+    Together these make the 0.82M-parameter network exactly degree-1 homogeneous at inference, D(alpha
+    y) = alpha D(y), licensing a Miyasawa/Tweedie score reading of the residual and blind generalization
+    across noise levels from one model. We train a single blind model on a noise-sigma curriculum (sigma
+    approximately 6.4 to 64, 0-255 scale); it extrapolates past that ceiling without a cliff, degrading
+    smoothly to 22.8 dB at sigma=150 and 20.0 dB at sigma=200. Evaluated unchanged on four standard color
+    sets (CBSD68, Kodak24, McMaster, Urban100) at sigma in {15,25,50}, it matches or beats DnCNN and FFDNet
+    on every set and level, averaging about +0.7 dB over DnCNN. Against heavyweight CNN/transformer state
+    of the art it trails by a small margin (roughly 0.3-1.7 dB depending on set) at 1/15 to 1/39 of their
+    parameters. The homogeneity is inference-only and checkpoint-specific, and the learned residual is
+    a local, not global, score (non-conservative Jacobian), so plug-and-play/RED guarantees do not transfer;
+    it still drives stochastic sampling and linear inverse problems (inpainting, super-resolution, deblurring,
+    compressive sensing).'
+  url: https://arxiv.org/abs/2607.22793
+  pdf_url: https://arxiv.org/pdf/2607.22793v1
+  version: v1
+fetched: '2026-11-12'

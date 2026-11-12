@@ -1,0 +1,38 @@
+id: paper:arxiv:2607.26426
+status: skipped
+score: 1
+track: processing_enhancement
+matched:
+- ref: concept:SuperResolution
+  count: 1
+  weight: 1
+meta:
+  title: Decoder-Guided Lossy Contour Coding Via Anchor Refinement
+  authors:
+  - Ruoyu Yang
+  - Yichi Zhang
+  - Fengqing Zhu
+  published: '2026-07-29'
+  updated: '2026-11-06'
+  categories:
+  - eess.IV
+  abstract: 'Object contours serve as compact structural priors for many receiver-side vision tasks such
+    as image super-resolution, edge-conditioned generation, and machine vision. When such tasks are deployed
+    over a bandwidth-limited channel, the sender transmits the high-quality object contour as structural
+    side information to guide reconstruction at the receiver, while-to save bandwidth-only a low-quality
+    reference such as a downsampled image or base-layer reconstruction is delivered. As a result, the
+    decoder can already extract a coarse contour from this reference at no transmission cost, creating
+    an encoder-decoder asymmetry: the fine contour must be coded and sent, yet a free coarse version is
+    available at the decoder. This asymmetry is ignored by existing contour codecs such as JBIG2 and chain
+    coding, which are lossless, symmetric, and offer no rate-distortion control, leading to high bitrates.
+    In this paper, we propose a coarse-to-fine contour coding framework that models a high-quality contour
+    as a structured geometric refinement of the decoder-available coarse contour. The encoder extracts
+    ordered anchors along the fine contour and performs adaptive anchor skipping under a distortion constraint.
+    The decoder then reconstructs the contour by using the coarse prior to guide anchor connectivity.
+    This formulation enables lossy contour compression with an explicit rate-distortion trade-off. Experiments
+    show 54.5%-66.9% bitrate reduction over methods without decoder-side guidance, and up to 5 times savings
+    over JBIG2, while preserving high geometric accuracy.'
+  url: https://arxiv.org/abs/2607.26426
+  pdf_url: https://arxiv.org/pdf/2607.26426v2
+  version: v2
+fetched: '2026-11-12'

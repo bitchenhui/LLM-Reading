@@ -1,0 +1,36 @@
+id: paper:arxiv:2605.09479
+status: skipped
+score: 1
+matched:
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+meta:
+  title: 'ML-CLIPSim: Multi-Layer CLIP Similarity for Machine-Oriented Image Quality'
+  authors:
+  - Feng Ding
+  - Haisheng Fu
+  - Jie Liang
+  - Qihan Xu
+  - Siyu Zhu
+  - Jingning Han
+  published: '2026-05-10'
+  updated: '2026-05-10'
+  categories:
+  - eess.IV
+  - cs.CV
+  - cs.MM
+  abstract: We study full-reference image quality assessment from a machine-centric perspective, where
+    images are evaluated by how well they preserve information for downstream models. We formulate machine-oriented
+    quality as a latent machine utility and approximate it through pairwise predictive-consistency comparisons.
+    To this end, we construct PCMP, a dataset of PSNR-matched distortion pairs labeled by consistency
+    votes from multiple pretrained models. We further propose ML-CLIPSim, a differentiable quality metric
+    built on a frozen CLIP visual encoder, which aggregates intermediate patch-token similarities and
+    global image embeddings. Experiments on machine-preference benchmarks, human-IQA datasets, and learned
+    image compression show that ML-CLIPSim better aligns with machine-oriented preferences than conventional
+    fidelity and perceptual metrics, while remaining competitive for human quality prediction. Used as
+    a compression distortion term, it improves rate--task trade-offs across multiple downstream tasks.
+  url: https://arxiv.org/abs/2605.09479
+  pdf_url: https://arxiv.org/pdf/2605.09479v1
+  version: v1
+fetched: '2026-11-12'

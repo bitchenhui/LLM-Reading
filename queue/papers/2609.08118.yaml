@@ -1,0 +1,40 @@
+id: paper:arxiv:2609.08118
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 3
+  weight: 1
+meta:
+  title: 'GC360IQ: Generic-to-Individualized Quality Assessment for Stitched 360-Degree Panoramas'
+  authors:
+  - Jinghan Zhou
+  - Zhou Wang
+  published: '2026-09-08'
+  updated: '2026-09-08'
+  categories:
+  - eess.IV
+  abstract: Existing image quality assessment (IQA) methods typically predict mean opinion scores (MOSs)
+    but struggle to capture variations in individual subject behaviors. This limitation is highly pronounced
+    in immersive visual applications such as stitched 360-degree panoramas, where user opinions diverge
+    drastically based on personal sensitivity to blending-induced luminance inconsistency, detail loss,
+    and geometric misalignment. Here we propose GC360IQ, a novel Generic-to-Individualized IQA framework
+    that establishes a learned explicit feature space to characterize individual subject behaviors. First,
+    we construct a specialized 360-degree panorama database focusing on blending-induced luminance and
+    detail degradation while minimizing geometric misalignment, providing multidimensional quality ratings
+    alongside complete individual scores. Second, we develop a generic quality model that utilizes unblended
+    views as a perceptual reference. Dual feature extraction branches capture gradient and structural
+    information specifically around stitching regions to predict baseline quality. Third, we construct
+    a compact preference embedding space that acts as an explicit feature domain to model each subject's
+    deviation from generic quality perceptions. We also introduce a maximum a posteriori (MAP) adaptation
+    mechanism. By leveraging a preference prior learned within our explicit feature space, a new subject's
+    unique behavioral embedding is mapped progressively with an increasing number of anchor ratings. Experiments
+    demonstrate that the generic model provides accurate stitching quality predictions and that subject
+    adaptation further improves individual score predictions. Deeper analysis of the collected ratings
+    and learned embeddings reveals that observer differences contain structured variation related to scoring
+    tendencies and sensitivity to stitching artifacts, rather than merely random rating noise.
+  url: https://arxiv.org/abs/2609.08118
+  pdf_url: https://arxiv.org/pdf/2609.08118v1
+  version: v1
+fetched: '2026-11-12'

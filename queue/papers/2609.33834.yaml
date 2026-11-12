@@ -1,0 +1,41 @@
+id: paper:arxiv:2609.33834
+status: pending
+score: 3
+track: processing_enhancement
+matched:
+- ref: concept:SuperResolution
+  count: 1
+  weight: 1
+- ref: dataset:ImageNet
+  count: 1
+  weight: 1
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+meta:
+  title: 'CLIMB-flow: Coupled Linear Inverse posterior sampling via Multiscale-Based flow'
+  authors:
+  - Zeqiu Yu
+  - Ruizhi Yuan
+  - Mathews Jacob
+  published: '2026-09-27'
+  updated: '2026-09-27'
+  categories:
+  - cs.CV
+  - cs.LG
+  abstract: 'Diffusion models are now widely used in Bayesian inverse problems in imaging as priors, where
+    latent diffusion models are often used for larger scale problems to keep the computational complexity
+    and model-size manageable. Unfortunately, the auto-encoder based compression results in loss of spatial
+    detail. In addition, the optimization is converted to a non-linear problem. In this paper, we introduce
+    a posterior sampling algorithm customized for the pyramidal/cascaded architecture, which relies on
+    a coarse to fine hierarchical strategy to generate images in the pixel domain. We present CLIMB-Flow
+    which alternates between three steps: an end-point estimation from the current coarse and noisy image,
+    data-consistent update of the clean image, and re-noising it back to the level the network expects.
+    Together these steps sample the posterior at that scale using an approximate Gibbs sampling from two
+    conditional distributions. Experiments on ImageNet, CelebA, AFHQ and fastMRI span inpainting, deblurring,
+    super-resolution and accelerated MRI, with PSNR gains of 1.37-7.66 dB over the strongest competing
+    method on CelebA and pixel-domain reconstruction up to 512x512.'
+  url: https://arxiv.org/abs/2609.33834
+  pdf_url: https://arxiv.org/pdf/2609.33834v1
+  version: v1
+fetched: '2026-11-12'

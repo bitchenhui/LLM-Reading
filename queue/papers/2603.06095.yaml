@@ -1,0 +1,38 @@
+id: paper:arxiv:2603.06095
+status: pending
+score: 3
+matched:
+- ref: impl:DCVC-FM
+  count: 1
+  weight: 3
+meta:
+  title: Enhancing Neural Video Compression of Static Scenes with Positive-Incentive Noise
+  authors:
+  - Cheng Yuan
+  - Zhenyu Jia
+  - Jiawei Shao
+  - Xuelong Li
+  published: '2026-03-06'
+  updated: '2026-03-27'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: Static scene videos, such as surveillance feeds and videotelephony streams, constitute a dominant
+    share of storage consumption and network traffic. However, both traditional standardized codecs and
+    neural video compression (NVC) methods struggle to encode these videos efficiently due to inadequate
+    usage of temporal redundancy and severe distribution gaps between training and test data, respectively.
+    While recent generative compression methods improve perceptual quality, they introduce hallucinated
+    details that are unacceptable in authenticity-critical applications. To overcome these limitations,
+    we propose a positive-incentive camera (PIC) framework for static scene videos, where short-term temporal
+    changes are reinterpreted as positive-incentive noise to facilitate NVC model finetuning. By disentangling
+    transient variations from the persistent background, structured prior information is internalized
+    in the compression model. During inference, the invariant component requires minimal signaling, thus
+    reducing data transmission while maintaining pixel-level fidelity. Experiment results show that PIC
+    achieves visually lossless reconstruction for static scenes at an extremely low compression rate of
+    0.009%, while the DCVC-FM baseline requires 20.5% higher Bjøntegaard delta (BD) rate. Our method provides
+    an effective solution to trade computation for bandwidth, enabling robust video transmission under
+    adverse network conditions and economic long-term retention of surveillance footage.
+  url: https://arxiv.org/abs/2603.06095
+  pdf_url: https://arxiv.org/pdf/2603.06095v2
+  version: v2
+fetched: '2026-11-12'

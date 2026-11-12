@@ -1,0 +1,38 @@
+id: paper:arxiv:2610.07216
+status: skipped
+score: 0
+track: audio_coding
+matched: []
+meta:
+  title: Exposing and Mitigating Neural Codec Vulnerabilities in Audio Deepfake Detection
+  authors:
+  - ' Abdullah'
+  - Awais Khan
+  - Khalid Mahmood Malik
+  published: '2026-10-05'
+  updated: '2026-10-05'
+  categories:
+  - cs.SD
+  abstract: 'Existing audio deepfake detection (ADD) datasets and detectors are primarily built for vocoder-based
+    synthesis, evaluated against traditional post-hoc perturbations such as MP3/AAC compression or additive
+    noise, applied independently of generation. However, recent speech synthesizers, particularly ALM-based
+    systems, use neural audio codecs both for compression and as the resynthesis reconstructing waveforms
+    from generated tokens, producing artifacts distinct from post-hoc compression. Neural codecs thus
+    play a dual role: some are designed for pure compression under low-bandwidth communication, while
+    others serve as resynthesis components. Despite this dual role, robustness to codec-based compression,
+    unlike post-hoc compression, remains largely unexplored. We expose this gap, showing that state-of-the-art
+    (SOTA) ADD models degrade drastically on codec-compressed speech; in particular, systems trained on
+    Codec Resynthesized data as a proxy for codec-based generation prove most vulnerable, with legitimately
+    compressed bona fide speech often misclassified as fake. To investigate this, we construct the Audio
+    Neural Codec-Spoof dataset by applying seven neural codec algorithms to existing ADD benchmarks, isolating
+    codec-induced resynthesis artifacts as a controlled proxy for codec-based generation. As baseline
+    mitigation, we propose PCL-NET (Pairwise Consistency Learned Network), fine-tuning a pretrained XLS-R
+    (300M) encoder with a pairwise consistency objective that minimizes the representation distance between
+    an utterance''s uncompressed and codec-compressed versions, disentangling codec artifacts from the
+    real-versus-fake decision. As a result, PCL-NET reduces average EER under neural codec compression
+    from 28.67% to 12.77%, while preserving competitive CoSG-based deepfake detection performance. We
+    will also make the dataset publicly available on Hugging Face upon acceptance.'
+  url: https://arxiv.org/abs/2610.07216
+  pdf_url: https://arxiv.org/pdf/2610.07216v1
+  version: v1
+fetched: '2026-11-12'

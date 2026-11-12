@@ -1,0 +1,44 @@
+id: paper:arxiv:2610.29815
+status: skipped
+score: 1
+track: audio_coding
+matched:
+- ref: concept:NeuralAudioCodec
+  count: 1
+  weight: 1
+meta:
+  title: 'NeuroCodec: EEG-Guided Latent-Domain Generative Model for High-Fidelity Target Speaker Extraction'
+  authors:
+  - Julian Silva
+  - Jaliya Kodithuwakku
+  - Navindu Sirimanna
+  - Shaveen Herath
+  - Wageesha N. Manamperi
+  - Joshua P. Kulasingham
+  published: '2026-10-21'
+  updated: '2026-10-21'
+  categories:
+  - eess.AS
+  - cs.LG
+  abstract: Driven by recent advancements in hearing assistive devices, target speaker extraction (TSE)
+    in multi-talker environments has drawn significant attention. To address this, hearing technologies
+    identify attention using neural signals recorded via electroencephalography (EEG) to guide TSE, enabling
+    neuro-steered auditory attention decoding. However, most existing techniques rely on time-frequency
+    masking, which suffers from low fidelity in spectro-temporally overlapping regions and is often restricted
+    to narrowband audio. In contrast, we introduce NeuroCodec, which, to the best of our knowledge, is
+    the first generative EEG-guided TSE framework operating in the latent space of a neural audio codec.
+    Specifically, NeuroCodec models spatial EEG dependencies via graph convolutions and fuses cross-modal
+    EEG and speech representations through attention mechanisms and Mamba-based temporal modeling. We
+    further introduce a six-phase training curriculum that progressively incorporates latent reconstruction,
+    multi-scale spectral, and adversarial objectives to ensure stable, high-fidelity speech generation.
+    Experiments on the public Cocktail Party and KUL datasets show NeuroCodec outperforms baselines, across
+    several perceptual metrics. A listening experiment with 20 participants validated that NeuroCodec
+    offers greater perceptual accuracy, achieving a mean score of 82.24 compared with 49.63 for M3ANet.
+    Additionally, the proposed method is seen to enable 44.1 kHz reconstruction with spectral content
+    extending up to 20 kHz, further supporting the perceptual results. Finally, we extend NeuroCodec with
+    a causal streaming formulation suited for real-time processing, providing a basis for hearing assistive
+    devices.
+  url: https://arxiv.org/abs/2610.29815
+  pdf_url: https://arxiv.org/pdf/2610.29815v1
+  version: v1
+fetched: '2026-11-12'

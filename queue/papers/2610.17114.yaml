@@ -1,0 +1,48 @@
+id: paper:arxiv:2610.17114
+status: pending
+score: 3
+track: self_improvement
+matched:
+- ref: concept:RSI
+  count: 3
+  weight: 1
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: 'D-World: An Explicit World-Language-Action Model with Recursive Self-Improvement under Dual
+    Control'
+  authors:
+  - Xuan Wen
+  - Baichao Wang
+  published: '2026-10-12'
+  updated: '2026-10-12'
+  categories:
+  - cs.RO
+  - cs.AI
+  abstract: Frontier large language models (LLMs) now reason about space well enough to program robots,
+    yet the world models behind robot policies are implicit, held in network weights or predicted video,
+    and cannot be inspected or corrected directly. We present D-World, an explicit world-language-action
+    model built on the Sense, Plan and Act decomposition. A perception agent writes the scene as an executable
+    digital twin using generated vision and geometry code. A planning agent searches for actions in simulation
+    and, after each executed action chunk, revises the twin's object states and named physical parameters
+    against what the robot measured. A parameter revision is accepted only if replaying the latest chunk
+    does not increase any measured residual beyond its tolerance, and every chunk is checked in the updated
+    twin before it runs. Structural mismatches return to perception for reconstruction. We call this measurement-grounded
+    cycle of correction and revision recursive self-improvement (RSI), in which the LLM stays frozen while
+    the world it acts in improves. We model the choice of actions that both advance the task and expose
+    model error as a dual control problem and show that the cost of incorporating evidence into the twin
+    sets the threshold at which probing pays, so cheap local revision counteracts the turn-off of cautious
+    controllers. Each episode runs a real-to-sim-to-real loop, and its recorded twins can be refitted
+    and re-rendered offline into higher-fidelity environments for post-training. Because perception and
+    planning communicate only through the twin and language, either can be replaced by a learned model,
+    and since inference dominates the loop, the loop speeds up with faster models. On a dual-arm robot,
+    towel and toaster tasks show local revisions, such as one reducing the bread's rendered-depth residual
+    from 22.4 to 1.5 mm, that let execution continue without reconstruction.
+  url: https://arxiv.org/abs/2610.17114
+  pdf_url: https://arxiv.org/pdf/2610.17114v1
+  version: v1
+fetched: '2026-11-12'

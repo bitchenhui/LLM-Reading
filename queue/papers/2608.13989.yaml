@@ -1,0 +1,37 @@
+id: paper:arxiv:2608.13989
+status: skipped
+score: 2
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 3
+  weight: 1
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+meta:
+  title: A Subjective Study on a New Sharpness Informed Class of Metrics
+  authors:
+  - Uditangshu Aurangabadkar
+  - Vibhoothi Vibhoothi
+  - Darren Ramsook
+  - Anil Kokaram
+  published: '2026-08-14'
+  updated: '2026-08-14'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: Perceptual loss functions in Deep Neural Network (DNN) deblurring architectures improve the
+    overall quality of restored images. However, few focus on explicitly targeting sharpness in the restorations.
+    We conduct a subjective study of models trained with and without losses which explicitly target sharpness
+    using a four-protocol approach, exploring preferred sharpness levels and effects on image quality.
+    We introduce a novel dataset of images with uniform sharpness increments along with Difference Mean
+    Opinion Scores (DMOS). Additionally, we propose a novel class of Sharpness Informed (SI) Image Quality
+    Assessment (IQA) metrics which properly penalize over-sharpening. Our new SI-PSNR metric outperforms
+    all other PSNR variants in terms of correlation statistics on IQA benchmarking datasets. We show that,
+    on average, images restored using a sharpness-aware composite loss are preferred in 67% of binarized
+    comparisons, as opposed to losses that do not explicitly target sharpness.
+  url: https://arxiv.org/abs/2608.13989
+  pdf_url: https://arxiv.org/pdf/2608.13989v1
+  version: v1
+fetched: '2026-11-12'

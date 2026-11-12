@@ -1,0 +1,37 @@
+id: paper:arxiv:2611.05832
+status: skipped
+score: 1
+track: streaming_delivery
+matched:
+- ref: concept:ABR
+  count: 3
+  weight: 1
+meta:
+  title: 'StarWorld: A Cross-Layer World Model for Starlink Prediction and Streaming'
+  authors:
+  - Bowen Zhang
+  - Pengcheng Luo
+  - Hongjun Xie
+  - Shujin Jia
+  - Genke Yang
+  - Jian Chu
+  published: '2026-11-04'
+  updated: '2026-11-04'
+  categories:
+  - cs.NI
+  abstract: Starlink and other low Earth orbit (LEO) satellite broadband systems exhibit stochastic access
+    dynamics whose effects propagate from network measurements to throughput prediction and adaptive bitrate
+    (ABR) streaming, making reasoning over multiple plausible futures essential. Existing studies mainly
+    characterize realized traces or individual system layers, leaving cross-layer world modeling of these
+    evolving dynamics largely unexplored. To address this gap, we propose StarWorld, a cross-layer world
+    model for Starlink prediction and streaming. StarWorld couples learned stochastic network dynamics
+    with executable prediction, control, and playback processes to imagine multi-step cross-layer futures,
+    while a calibrated Trust Gate determines whether these futures are sufficiently reliable for use.
+    On real Starlink measurements, StarWorld achieves the lowest network-future distributional errors
+    among the comparison methods at the principal horizons and reduces pairwise controller quality-of-experience
+    (QoE) effect error by 76%. These results support StarWorld as a cross-layer imagination environment
+    for studying prediction and streaming outcomes under uncertain Starlink access conditions.
+  url: https://arxiv.org/abs/2611.05832
+  pdf_url: https://arxiv.org/pdf/2611.05832v1
+  version: v1
+fetched: '2026-11-12'

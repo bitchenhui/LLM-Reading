@@ -1,0 +1,37 @@
+id: paper:arxiv:2604.27441
+status: skipped
+score: 0
+matched: []
+meta:
+  title: 'ReVo: A Cross-Layer Reliable Volumetric Videoconferencing System'
+  authors:
+  - Ankur Aditya
+  - Diptyaroop Maji
+  - Lingdong Wang
+  - Bhavya Ramakrishna
+  - Ramesh Sitaraman
+  - Prashant Shenoy
+  published: '2026-04-30'
+  updated: '2026-04-30'
+  categories:
+  - cs.NI
+  - cs.MM
+  abstract: Volumetric videoconferencing enables immersive six Degrees of Freedom interactions by jointly
+    transmitting visual appearance and 3D geometry. However, delivering volumetric video over today's
+    networks remains challenging due to high bandwidth demands, strict real-time latency constraints,
+    and frequent packet loss. Packet loss not only degrades visual quality but also corrupts geometric
+    structure, leading to severe artifacts and video freezes that significantly degrade Quality of Experience.
+    Existing solutions either optimize volumetric videos assuming reliable networks or focus on loss recovery
+    for 2D video, and are insufficient for volumetric videoconferencing. In this paper, we present ReVo,
+    a loss-resilient volumetric videoconferencing system that jointly recovers RGB and depth content under
+    packet loss while meeting real-time constraints on desktop-grade hardware. ReVo leverages the insight
+    that effective recovery requires a cross-layer, modality-aware design. It decouples volumetric video
+    into RGB and depth streams, selectively protects critical content using network-layer FEC, and reconstructs
+    corrupted non-critical frames using a post-decode neural recovery module. ReVo is implemented end-to-end
+    over WebRTC and supports both traditional and neural video codecs. Our evaluations using real-world
+    loss traces show that ReVo improves median SSIM by up to 32% (resp. 13%) for RGB (resp. depth) content
+    and reduces video freezes by up to 95.7% compared to existing techniques.
+  url: https://arxiv.org/abs/2604.27441
+  pdf_url: https://arxiv.org/pdf/2604.27441v1
+  version: v1
+fetched: '2026-11-12'

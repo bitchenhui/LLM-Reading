@@ -1,0 +1,37 @@
+id: paper:arxiv:2604.06568
+status: skipped
+score: 0
+matched: []
+meta:
+  title: A Noise Constrained Diffusion (NC-Diffusion) Framework for High Fidelity Image Compression
+  authors:
+  - Zhenyu Du
+  - Yanbo Gao
+  - Shuai Li
+  - Yiyang Li
+  - Hui Yuan
+  - Mao Ye
+  published: '2026-04-08'
+  updated: '2026-04-08'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: With the great success of diffusion models in image generation, diffusion-based image compression
+    is attracting increasing interests. However, due to the random noise introduced in the diffusion learning,
+    they usually produce reconstructions with deviation from the original images, leading to suboptimal
+    compression results. To address this problem, in this paper, we propose a Noise Constrained Diffusion
+    (NC-Diffusion) framework for high fidelity image compression. Unlike existing diffusion-based compression
+    methods that add random Gaussian noise and direct the noise into the image space, the proposed NC-Diffusion
+    formulates the quantization noise originally added in the learned image compression as the noise in
+    the forward process of diffusion. Then a noise constrained diffusion process is constructed from the
+    ground-truth image to the initial compression result generated with quantization noise. The NC-Diffusion
+    overcomes the problem of noise mismatch between compression and diffusion, significantly improving
+    the inference efficiency. In addition, an adaptive frequency-domain filtering module is developed
+    to enhance the skip connections in the U-Net based diffusion architecture, in order to enhance high-frequency
+    details. Moreover, a zero-shot sample-guided enhancement method is designed to further improve the
+    fidelity of the image. Experiments on multiple benchmark datasets demonstrate that our method can
+    achieve the best performance compared with existing methods.
+  url: https://arxiv.org/abs/2604.06568
+  pdf_url: https://arxiv.org/pdf/2604.06568v1
+  version: v1
+fetched: '2026-11-12'

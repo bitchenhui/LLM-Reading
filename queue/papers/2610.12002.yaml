@@ -1,0 +1,39 @@
+id: paper:arxiv:2610.12002
+status: skipped
+score: 2
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: 'Agentic-TTT: Training test-time policy for test-time training'
+  authors:
+  - Jiahao Lu
+  - Mohan Kankanhalli
+  published: '2026-10-08'
+  updated: '2026-10-08'
+  categories:
+  - cs.LG
+  - cs.AI
+  - cs.CL
+  abstract: 'Test-time training (TTT) adapts an LLM''s parameters using signals derived from test inputs,
+    and can make striking improvements in pre-specified settings such as IMO competitions or designated
+    open problems. By turning deployment experience into parameter updates, TTT provides a direct mechanism
+    for model-level self-improvement. Yet TTT is not universally beneficial: each TTT algorithm works
+    in different settings, and applying an ill-suited method could waste test-time compute or even damage
+    model performance. Therefore, such parameter-level self-improvement requires agency: the model must
+    decide when TTT is warranted, which algorithm to invoke, and whether an existing skill can be reused.
+    To fill this gap, we introduce Agentic-TTT, which learns a test-time policy to govern those decisions.
+    Agentic-TTT turns TTT procedures into callable tools, treats accumulated skills as an evolving deployment
+    environment, and trains its policy using the observed utility gains from its decisions. On our benchmark,
+    Agentic-TTT nearly doubles the utility over the backbone model, learns to trade off utility against
+    compute, and generalizes to domains unseen during training. Together, these results point toward autonomous
+    self-improvement: models that can decide how to learn from their own deployment experience.'
+  url: https://arxiv.org/abs/2610.12002
+  pdf_url: https://arxiv.org/pdf/2610.12002v1
+  version: v1
+fetched: '2026-11-12'

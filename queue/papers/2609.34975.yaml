@@ -1,0 +1,47 @@
+id: paper:arxiv:2609.34975
+status: skipped
+score: 2
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 3
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: 'Teach to Learn: Hint Annealing for Self-improving LLM Reasoning'
+  authors:
+  - Zile Wang
+  - Zijian Li
+  - Haodong Wang
+  - Jian Liu
+  - Qianli Liu
+  - Lucas Muli
+  - Blaze Chen
+  - Song Guo
+  published: '2026-09-28'
+  updated: '2026-09-28'
+  categories:
+  - cs.LG
+  abstract: 'Group Relative Policy Optimization (GRPO) improves language-model reasoning by comparing
+    verified rewards among multiple solution rollouts for each query. However, difficult training queries
+    can yield only incorrect rollouts, leaving GRPO with no reward contrast or learning signal. Prior
+    hint-based methods construct auxiliary hints from solution evidence and use them to re-solve failed
+    queries, recovering learning signal. Yet the resulting trajectories are typically treated as ordinary
+    solution trajectories despite being generated under an assisted condition unavailable at evaluation.
+    We discover hinted reward shift: recovered reward contrast can concentrate policy updates on hinted
+    trajectories, limiting improvement without hints. This also creates a trade-off: increasing hinted
+    trajectories can accelerate early learning but intensify reward shift later. To address this problem,
+    we propose HATCH (Hint-Annealed Self-Teaching), an online single-policy framework that learns from
+    both generating and using its own hints to improve reasoning without assistance. To mitigate hinted
+    reward shift, we introduce online weighting to anneal the contribution of hinted trajectories. However,
+    learning to generate hints can conflict with improving query solving. We therefore use gradient projection
+    to remove the opposing component of hint-generation updates. Together, these designs support self-improvement
+    by enabling the policy to create learning opportunities for itself and turn them into stronger reasoning
+    without hints. We evaluate our method on mathematical reasoning benchmarks and outperform state-of-the-art
+    methods by 1.02 pp on Llama-3.2-1B-Instruct, 2.84 pp on Qwen3-1.7B, and 4.32 pp on Qwen3-8B.'
+  url: https://arxiv.org/abs/2609.34975
+  pdf_url: https://arxiv.org/pdf/2609.34975v1
+  version: v1
+fetched: '2026-11-12'

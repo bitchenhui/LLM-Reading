@@ -1,0 +1,35 @@
+id: paper:arxiv:2602.21336
+status: skipped
+score: 1
+matched:
+- ref: metric:VMAF
+  count: 2
+  weight: 1
+meta:
+  title: 'On Optimizing Image Codecs for VMAF NEG: Analysis, Issues, and a Robust Loss Proposal'
+  authors:
+  - Florian Fingscheidt
+  - Alexander Karabutov
+  - Panqi Jia
+  - Elena Alshina
+  - Jörn Ostermann
+  published: '2026-02-24'
+  updated: '2026-08-06'
+  categories:
+  - eess.IV
+  abstract: The VMAF (video multi-method assessment fusion) metric for image and video coding recently
+    gained more and more popularity as it is supposed to have a high correlation with human perception.
+    This makes training and particularly fine-tuning of machine-learned codecs on this metric interesting.
+    However, VMAF is shown to be attackable in a way that, e.g., unsharpening an image can lead to a gain
+    in VMAF quality while decreasing the quality in human perception. A particular version of VMAF called
+    VMAF NEG has been designed to be more robust against such attacks and therefore it should be more
+    useful for fine-tuning of codecs. In this paper, our contributions are threefold. First, we identify
+    and analyze the still existing vulnerability of VMAF NEG towards attacks, particulary towards the
+    attack that consists in employing VMAF NEG for image codec fine-tuning. Second, to benefit from VMAF
+    NEG's high correlation with human perception, we propose a robust loss including VMAF NEG for fine-tuning
+    either the encoder or the decoder. Third, we support our quantitative objective results by providing
+    perceptive impressions of some image examples.
+  url: https://arxiv.org/abs/2602.21336
+  pdf_url: https://arxiv.org/pdf/2602.21336v2
+  version: v2
+fetched: '2026-11-12'

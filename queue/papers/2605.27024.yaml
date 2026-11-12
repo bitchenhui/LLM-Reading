@@ -1,0 +1,46 @@
+id: paper:arxiv:2605.27024
+status: reviewed
+score: 8
+matched:
+- ref: codec:AVC
+  count: 1
+  weight: 3
+- ref: codec:HEVC
+  count: 1
+  weight: 3
+- ref: dataset:VCD
+  count: 1
+  weight: 1
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+meta:
+  title: 'NeR-SC: Adapting Neural Video Representation to Screen Content'
+  authors:
+  - Ruohan Shi
+  - Jiaoyan Zhao
+  - Haogang Feng
+  published: '2026-05-26'
+  updated: '2026-05-26'
+  categories:
+  - cs.CV
+  - cs.MM
+  abstract: 'Implicit neural representations have emerged as a promising paradigm for video compression,
+    with recent methods achieving competitive performance on natural video. However, screen content video
+    -- common in remote desktop, online education, and cloud gaming -- exhibits distinct statistics: sharp
+    edges, limited color palettes, and strong temporal redundancy. Existing neural representation methods,
+    designed for natural scenes, lack mechanisms to exploit these properties, leaving substantial room
+    for improvement. In this paper, we propose NeR-SC, a neural representation framework tailored for
+    screen content video. Building on the SNeRV backbone, NeR-SC introduces three screen-content-specific
+    modules: (i) a learnable color palette that models the discrete color structure of screen content
+    by restricting the low-frequency sub-band to a learned color set; (ii) a multi-gate dense fusion module
+    that replaces sequential feature fusion with dense, attention-gated cross-stage interaction; and (iii)
+    an embedding-level frame skip strategy that bypasses redundant decoder invocations for static frames,
+    with zero training overhead. Experiments on DSCVC and VCD show that NeR-SC achieves 40.32~dB and 41.73~dB
+    average PSNR, outperforming representative neural video representation methods and, at low bitrates,
+    surpassing H.264 and H.265. The skip strategy enables real-time decoding with no loss in quality.'
+  url: https://arxiv.org/abs/2605.27024
+  pdf_url: https://arxiv.org/pdf/2605.27024v1
+  version: v1
+fetched: '2026-11-12'
+llm_decision: deep_read

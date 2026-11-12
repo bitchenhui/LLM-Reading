@@ -1,0 +1,49 @@
+id: paper:arxiv:2603.10188
+status: reviewed
+score: 6
+matched:
+- ref: codec:VVC
+  count: 1
+  weight: 3
+- ref: concept:Hyperprior
+  count: 1
+  weight: 1
+- ref: dataset:Kodak
+  count: 1
+  weight: 1
+- ref: metric:BD-Rate
+  count: 1
+  weight: 1
+meta:
+  title: 'ARCHE: Autoregressive Residual Compression with Hyperprior and Excitation'
+  authors:
+  - Sofia Iliopoulou
+  - Dimitris Ampeliotis
+  - Athanassios Skodras
+  published: '2026-03-10'
+  updated: '2026-03-10'
+  categories:
+  - eess.IV
+  - cs.CV
+  - cs.LG
+  abstract: 'Recent progress in learning-based image compression has demonstrated that end-to-end optimization
+    can substantially outperform traditional codecs by jointly learning compact latent representations
+    and probabilistic entropy models. However, many existing approaches achieve high rate-distortion efficiency
+    at the expense of increased computational cost and limited parallelism. This paper presents ARCHE
+    - Autoregressive Residual Compression with Hyperprior and Excitation, an end-to-end learned image
+    compression framework that balances modeling accuracy and computational efficiency. The proposed architecture
+    unifies hierarchical, spatial, and channel-based priors within a single probabilistic framework, capturing
+    both global and local dependencies in the latent representation of the image, while employing adaptive
+    feature recalibration and residual refinement to enhance latent representation quality. Without relying
+    on recurrent or transformer-based components, ARCHE attains state-of-the-art rate-distortion efficiency:
+    it reduces the BD-Rate by approximately 48% relative to the commonly used benchmark model of Balle
+    et al., 30% relative to the channel-wise autoregressive model of Minnen & Singh and 5% against the
+    VVC Intra codec on the Kodak benchmark dataset. The framework maintains computational efficiency with
+    95M parameters and 222ms running time per image. Visual comparisons confirm sharper textures and improved
+    color fidelity, particularly at lower bit rates, demonstrating that accurate entropy modeling can
+    be achieved through efficient convolutional designs suitable for practical deployment.'
+  url: https://arxiv.org/abs/2603.10188
+  pdf_url: https://arxiv.org/pdf/2603.10188v1
+  version: v1
+fetched: '2026-11-12'
+llm_decision: deep_read

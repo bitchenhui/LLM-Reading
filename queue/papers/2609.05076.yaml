@@ -1,0 +1,36 @@
+id: paper:arxiv:2609.05076
+status: skipped
+score: 0
+track: audio_coding
+matched: []
+meta:
+  title: Enhancing Neural Speech Coding with Semantic and Visual Cues
+  authors:
+  - Yao Guo
+  - Yang Ai
+  - Hui-Peng Du
+  - Xiao-Hang Jiang
+  - Chen-Yuan Ning
+  - Zhen-Hua Ling
+  published: '2026-09-04'
+  updated: '2026-09-04'
+  categories:
+  - eess.AS
+  abstract: At low bitrates, neural speech codecs have limited capacity to encode all information needed
+    for high-quality re construction, especially when relying solely on speech-derived representations.
+    To address this limitation, this paper proposes a Semantic- and Visual-enhanced Speech Codec (SVSC),
+    which in corporates semantic and visual cues into the neural speech coding process. Specifically,
+    built upon a mainstream neural speech cod ing architecture, SVSC introduces a semantic encoding-decoding
+    branch and an image analysis-synthesis branch. It fuses deep semantic features with visual cues through
+    a cross-attention mech anism, forming an auxiliary high-level representation enriched with contextual
+    and articulatory information. To handle different inference scenarios, SVSC introduces two information-injection
+    strategies based on the availability of auxiliary semantic and vi sual cues. When such cues are available,
+    the fusion mode directly incorporates the auxiliary representations into the speech coding branch
+    through feature concatenation; otherwise, the distillation mode transfers auxiliary information into
+    the speech coding branch through knowledge distillation during training, enabling speech-only inference
+    without additional inputs. Experimental results validate the effectiveness of incorporating semantic
+    and visual cues, improving the ViSQOL score of reconstructed speech from 3.86 to 4.01.
+  url: https://arxiv.org/abs/2609.05076
+  pdf_url: https://arxiv.org/pdf/2609.05076v1
+  version: v1
+fetched: '2026-11-12'

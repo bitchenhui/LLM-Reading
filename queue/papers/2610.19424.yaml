@@ -1,0 +1,56 @@
+id: paper:arxiv:2610.19424
+status: pending
+score: 3
+track: self_improvement
+matched:
+- ref: concept:RSI
+  count: 2
+  weight: 1
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: 'VideoHarness-SRSI: Structured Recursive Self-Improvement for Video Understanding Harness'
+  authors:
+  - Zihao Lin
+  - Haoyu Dong
+  - Haobo Xu
+  - Chi-Chih Chang
+  - Xuying Ning
+  - Yinglong Xia
+  - Shuang Yang
+  - Zhuokai Zhao
+  - Xinying Song
+  - Dongfang Liu
+  - Lifu Huang
+  - Yang Song
+  - Qifan Wang
+  published: '2026-10-14'
+  updated: '2026-10-16'
+  categories:
+  - cs.CV
+  - cs.AI
+  abstract: 'LLM system capabilities depend not only on model parameters but also on the executable harnesses
+    that organize information acquisition, tool use, reasoning, and memory. Recursive harness evolution
+    can automate their design, but how it can reliably discover generalizable systems from limited, noisy,
+    and repeatedly reused feedback remains unclear. We study this question in agentic video understanding,
+    where rich multimodal evidence and coupled mechanisms make harness optimization challenging. We first
+    introduce VHarness-BRSI, a recursive self-improvement framework that evolves video harnesses around
+    a frozen vision-language model. Analyzing over 4,000 evolved candidates, we find it competitive with
+    hand-engineered systems but identify three interconnected failure modes: validation overfitting, search-budget
+    dilution, and the early-experience trap. We trace all three to a common root: the same imperfect validation
+    evidence drives both harness revisions and the proposer''s search strategy. We therefore propose VHarness-SRSI,
+    an evidence-governed framework in which every search decision rests on evidence that is transferable,
+    sufficient, and gathered before the search commits. It restricts the proposer to content-free feedback,
+    informs exploration with instrumented warm-up experiments, and develops mechanisms in isolated probe-race
+    branches before factorial composition and joint refinement. Across four video understanding benchmarks,
+    VideoHarness-SRSI improves the equally weighted mean held-out score by 6.2% relative to VideoHarness-BRSI
+    and reduces the mean validation-test gap by 37.9%. Reliable harness evolution thus depends on how
+    search is organized and informed, not only on how well it optimizes validation performance.'
+  url: https://arxiv.org/abs/2610.19424
+  pdf_url: https://arxiv.org/pdf/2610.19424v2
+  version: v2
+fetched: '2026-11-12'

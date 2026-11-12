@@ -1,0 +1,38 @@
+id: paper:arxiv:2601.22189
+status: skipped
+score: 2
+matched:
+- ref: metric:MS-SSIM
+  count: 1
+  weight: 1
+- ref: metric:VMAF
+  count: 1
+  weight: 1
+meta:
+  title: 'SCENE: Semantic-aware Codec Enhancement with Neural Embeddings'
+  authors:
+  - Han-Yu Lin
+  - Li-Wei Chen
+  - Hung-Shin Lee
+  published: '2026-01-29'
+  updated: '2026-01-29'
+  categories:
+  - eess.IV
+  - cs.CV
+  - cs.LG
+  - cs.MM
+  abstract: Compression artifacts from standard video codecs often degrade perceptual quality. We propose
+    a lightweight, semantic-aware pre-processing framework that enhances perceptual fidelity by selectively
+    addressing these distortions. Our method integrates semantic embeddings from a vision-language model
+    into an efficient convolutional architecture, prioritizing the preservation of perceptually significant
+    structures. The model is trained end-to-end with a differentiable codec proxy, enabling it to mitigate
+    artifacts from various standard codecs without modifying the existing video pipeline. During inference,
+    the codec proxy is discarded, and SCENE operates as a standalone pre-processor, enabling real-time
+    performance. Experiments on high-resolution benchmarks show improved performance over baselines in
+    both objective (MS-SSIM) and perceptual (VMAF) metrics, with notable gains in preserving detailed
+    textures within salient regions. Our results show that semantic-guided, codec-aware pre-processing
+    is an effective approach for enhancing compressed video streams.
+  url: https://arxiv.org/abs/2601.22189
+  pdf_url: https://arxiv.org/pdf/2601.22189v1
+  version: v1
+fetched: '2026-11-12'

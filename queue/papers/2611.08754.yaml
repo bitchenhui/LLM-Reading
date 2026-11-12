@@ -1,0 +1,39 @@
+id: paper:arxiv:2611.08754
+status: skipped
+score: 2
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 4
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: Measurement-Aware Multimodal LLM for No-Reference Low-Dose CT Quality Assessment
+  authors:
+  - Kerem Basim
+  - Tolga Demiroglu
+  - Mehmet Ozan Unal
+  - Metin Ertas
+  - Isa Yildirim
+  published: '2026-11-05'
+  updated: '2026-11-05'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: No-reference image quality assessment (IQA) of low-dose CT predicts the score that radiologists
+    would assign to a slice without a full-dose reference, as needed to compare dose protocols and denoisers.
+    Trained CT IQA networks agree well with radiologists but output only a score, whereas multimodal large
+    language models (MLLMs) can explain a score but perform poorly on CT when only prompted. We propose
+    a measurement-aware MLLM, built on Qwen3.8-27B, that rates a slice from its image together with six
+    image-domain measurements of noise, sharpness, high-frequency content and streaks, given to the language
+    model as percentiles in text. On the LDCT-IQA 2023 test set, it reaches an Overall score of 2.735,
+    on par with the retrained challenge winner (2.735) and MedSigLIP-FiLM (2.713), and substantially above
+    its base MLLM used as a zero-shot agent. Shuffling the measurements at test time reduces the score
+    by 0.048, mostly through noise, but the same measurements also lead the model to assign higher scores
+    to over-smoothed denoised images.
+  url: https://arxiv.org/abs/2611.08754
+  pdf_url: https://arxiv.org/pdf/2611.08754v1
+  version: v1
+fetched: '2026-11-12'

@@ -1,0 +1,38 @@
+id: paper:arxiv:2608.11845
+status: skipped
+score: 0
+track: immersive_media
+matched: []
+meta:
+  title: 'ResPCC: A Loss-Resilient Neural Point Cloud Codec over Lossy Networks'
+  authors:
+  - Xueqin Niu
+  - Mufan Liu
+  - Yifan Wang
+  - Le Yang
+  - Jun Sun
+  - Yiling Xu
+  published: '2026-08-12'
+  updated: '2026-08-12'
+  categories:
+  - eess.IV
+  - cs.MM
+  abstract: Point cloud compression (PCC) is critical for efficient storage and transmission of 3D data.
+    While recent learning-based PCC methods achieve good rate-distortion (R-D) performance, they generally
+    rely on ideal transmission conditions. In practice, packet loss is a common issue and can severely
+    distort latent features, causing coordinate drift and geometric degradation. To address this challenge,
+    we present ResPCC, the first end-to-end neural point cloud codec designed to offer intrinsic resilience
+    against data loss. Our framework is loss-rate-aware and adapts to diverse packet loss conditions.
+    At the encoder, we introduce a Condition-Adaptive Latent Modulation (CALM) module to adjust latent
+    feature distributions according to the perceived loss rate, as well as a Spatial-Channel Interleaving
+    (SCI) mechanism that transforms channel-wise data extinction into spatially scattered element-wise
+    missing patterns. At the decoder, we develop a Mask-Aware Graph-based Latent Restoration (MGLR) module,
+    followed by a Dictionary-based Refinement (DBR) stage to recover corrupted features and align them
+    with canonical priors. Evaluations on ShapeNet and SemanticKITTI under 5\% to 30\% packet loss rates
+    show that ResPCC consistently delivers superior stability and R-D performance over baselines. Our
+    framework maintains high reconstruction fidelity under lossy conditions, providing a reliable solution
+    for 3D data transmission over practical networks. Code is available at https://github.com/starrynight314/ResPCC.
+  url: https://arxiv.org/abs/2608.11845
+  pdf_url: https://arxiv.org/pdf/2608.11845v1
+  version: v1
+fetched: '2026-11-12'

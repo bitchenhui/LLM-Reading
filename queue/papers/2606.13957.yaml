@@ -1,0 +1,60 @@
+id: paper:arxiv:2606.13957
+status: reviewed
+score: 9
+matched:
+- ref: impl:x265
+  count: 1
+  weight: 3
+- ref: concept:EntropyModel
+  count: 1
+  weight: 1
+- ref: dataset:MCL-JCV
+  count: 1
+  weight: 1
+- ref: dataset:UVG
+  count: 1
+  weight: 1
+- ref: metric:BD-Rate
+  count: 1
+  weight: 1
+- ref: metric:MS-SSIM
+  count: 1
+  weight: 1
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+meta:
+  title: High-Fidelity Video Compression based on Invertible Neural Transform and Implicit Conditioning
+  authors:
+  - Siyue Teng
+  - Ho Man Kwan
+  - Yuxuan Jiang
+  - Fan Zhang
+  - David Bull
+  published: '2026-06-11'
+  updated: '2026-06-11'
+  categories:
+  - eess.IV
+  - cs.CV
+  - cs.MM
+  abstract: Learning-based video compression has recently achieved competitive rate-distortion performance
+    compared to conventional video codecs. However, most existing methods rely on non-invertible analysis-synthesis
+    transforms, with reconstruction quality subject to both quantization and transform approximation errors.
+    This limitation becomes particularly restrictive at higher quality points, where quantization errors
+    are small and transform-induced distortion dominates. To address this, we propose InnVC, an Invertible
+    neural network based Video Codec for wide-range and high-fidelity compression. The core idea is to
+    preserve an invertible main transform path prior to quantization, while injecting content-adaptive
+    context through a compact implicit conditioning field. This decouples strongly correlated video content
+    from harder-to-model fine details, allowing different components to specialize in complementary reconstruction
+    tasks for more efficient compression. To further improve compressibility, we introduce a scheduled
+    masking strategy that progressively concentrates informative content into fewer latent channels for
+    more effective entropy coding. Experiments on the UVG and MCL-JCV benchmarks show that InnVC achieves
+    strong compression performance over a broad quality range, being particularly effective in the high-quality
+    regime, yielding BD-rate reductions of 21.66% in PSNR and 46.06% in MS-SSIM relative to x265 on UVG.
+    To the best of our knowledge, InnVC is the first neural video codec covers operating poins from low
+    bitrate to high fidelity within a single architecture scale, spanning more than 20 dB in PSNR.
+  url: https://arxiv.org/abs/2606.13957
+  pdf_url: https://arxiv.org/pdf/2606.13957v1
+  version: v1
+fetched: '2026-11-12'
+llm_decision: deep_read

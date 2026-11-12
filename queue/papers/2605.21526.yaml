@@ -1,0 +1,44 @@
+id: paper:arxiv:2605.21526
+status: reviewed
+score: 9
+matched:
+- ref: codec:HEVC
+  count: 2
+  weight: 3
+- ref: codec:VVC
+  count: 2
+  weight: 3
+- ref: impl:VTM
+  count: 2
+  weight: 3
+meta:
+  title: 'Partition Tree Search Acceleration for VVC: Survey and Evaluation with VTM Evolution'
+  authors:
+  - M. E. A. Kherchouche
+  - F. Galpin
+  - T. Dumas
+  - L. Zhang
+  - D. Menard
+  published: '2026-05-19'
+  updated: '2026-05-19'
+  categories:
+  - eess.IV
+  - cs.MM
+  abstract: The Versatile Video Coding (VVC) standard, introduced in 2020, offers 40-50% bitrate savings
+    for equivalent visual quality of reconstructed videos over its predecessor, High Efficiency Video
+    Coding (HEVC), at the cost of significantly increased encoding complexity. This growth in encoding
+    complexity is mainly due to the addition of the Quad Tree Multi Type Tree (QTMTT) partitioning structure,
+    which increases the split combinatorial complexity. This paper presents a critical evaluation of state-of-the-art
+    (SOTA) partitioning acceleration techniques designed to reduce the complexity of the partitioning
+    search in VVC. Particular attention is given to how these methods have evolved alongside successive
+    versions of the VVC Test Model (VTM), which serves as the reference software for benchmarking coding
+    tools. These techniques are analyzed in the context of their adaptation to internal changes in VTM,
+    such as updated heuristics for fast partitioning decisions. The study also highlights the challenges
+    involved in improving the trade-off between encoding complexity and compression efficiency. This challenge
+    becomes more pronounced when evaluating methods across diverse VTM configurations and multiple software
+    versions.
+  url: https://arxiv.org/abs/2605.21526
+  pdf_url: https://arxiv.org/pdf/2605.21526v1
+  version: v1
+fetched: '2026-11-12'
+llm_decision: deep_read

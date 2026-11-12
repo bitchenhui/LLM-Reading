@@ -1,0 +1,38 @@
+id: paper:arxiv:2609.03283
+status: skipped
+score: 2
+track: audio_coding
+matched:
+- ref: metric:MOS
+  count: 2
+  weight: 1
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: Is Semantics Enough for Speech Mean Opinion Score Prediction?
+  authors:
+  - Tianyu Lan
+  - Yufei Shi
+  - Yang Ai
+  - Honghao Sun
+  - Huipeng Du
+  - Zhenhua Ling
+  published: '2026-09-03'
+  updated: '2026-09-03'
+  categories:
+  - cs.SD
+  abstract: 'Mean Opinion Score (MOS) is the gold standard for evaluating synthesized speech naturalness.
+    However, current automatic MOS predictors are dominated by self-supervised learning (SSL) models that
+    prioritize high-level semantics, potentially compromising their ability to capture critical acoustic
+    details. In this paper, we systematically investigate representations from three paradigms: SSLs,
+    acoustic-only neural audio codecs (NACs), and unified NACs that integrate semantics into reconstruction-based
+    architectures. Extensive benchmarking on the standard BVCC and multiple out-of-domain (OOD) datasets
+    demonstrates that features synergizing semantic understanding with fine-grained acoustic modeling
+    achieve a higher performance upper bound in speech quality assessment. Ultimately, our findings highlight
+    that semantics alone are not enough; a dual focus on semantic content and acoustic fidelity is essential
+    for robust MOS prediction.'
+  url: https://arxiv.org/abs/2609.03283
+  pdf_url: https://arxiv.org/pdf/2609.03283v1
+  version: v1
+fetched: '2026-11-12'

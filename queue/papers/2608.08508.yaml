@@ -1,0 +1,35 @@
+id: paper:arxiv:2608.08508
+status: skipped
+score: 2
+track: processing_enhancement
+matched:
+- ref: concept:IQA
+  count: 4
+  weight: 1
+- ref: concept:SuperResolution
+  count: 1
+  weight: 1
+meta:
+  title: Towards Adaptive Super-Resolution and Quality Assessment via Test-Time Adaptation
+  authors:
+  - Ajeet Kumar Verma
+  published: '2026-08-09'
+  updated: '2026-08-09'
+  categories:
+  - cs.CV
+  abstract: 'This paper presents doctoral research on adaptive video super-resolution and perceptual quality
+    modeling under real-world conditions. Existing video super-resolution (VSR) methods struggle to generalize
+    under unknown degradations arising from heterogeneous devices, codecs, and network environments. We
+    address this challenge through test-time adaptation (TTA), a unified paradigm that improves robustness
+    and perceptual quality without retraining or high-quality supervision. Specifically, we: 1) propose
+    a TTA-based framework for no-reference video quality assessment (VQA), where adapted quality predictions
+    provide perceptual guidance for VSR under unseen distortions; 2) develop a transformer-based architecture
+    for screen-content super-resolution that preserves text clarity and structural fidelity; and 3) introduce
+    a region-aware TTA strategy that selectively refines text and non-text regions without requiring high-resolution
+    ground truth. Experimental results across diverse benchmarks demonstrate consistent improvements in
+    perceptual quality and readability. We also outline ongoing work toward fully adaptive video enhancement
+    systems capable of generalizing across unseen domains.'
+  url: https://arxiv.org/abs/2608.08508
+  pdf_url: https://arxiv.org/pdf/2608.08508v1
+  version: v1
+fetched: '2026-11-12'

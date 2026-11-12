@@ -1,0 +1,40 @@
+id: paper:arxiv:2608.03021
+status: skipped
+score: 1
+track: audio_coding
+matched:
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: 'MeloCodec: Harnessing Melodic Priors for High-Fidelity Singing Voice Representation'
+  authors:
+  - Yizhong Geng
+  - Wenxin Fu
+  - Kecan Mao
+  - Qifei Li
+  - Yingming Gao
+  - Ruimin Wang
+  - Chunfeng Wang
+  - Hao Li
+  - Ya Li
+  - Wei Chen
+  published: '2026-08-04'
+  updated: '2026-08-04'
+  categories:
+  - cs.SD
+  abstract: Neural audio codecs serve as fundamental tokenizers for LLM-based audio generation. While
+    semantic priors are widely exploited to enhance linguistic intelligibility, the integration of explicit
+    acoustic priors remains underexplored, limiting synthesis fidelity in frequency-sensitive domains.
+    To address this gap, we introduce MeloCodec, a novel framework designed to effectively incorporate
+    melodic priors, a critical form of acoustic information for singing. To address the optimization instability
+    typically caused by the direct fusion of such explicit priors, we propose a Tokenize-then-Fuse paradigm
+    that pre-trains a discrete melodic branch to lock in structures before feature fusion. To robustly
+    realize this paradigm, we further propose a two-stage training strategy that prevents codebook collapse
+    and ensures stable convergence. Experiments show that MeloCodec outperforms baselines in singing voice
+    representation, improving pitch consistency and enabling controllable pitch manipulation with minimal
+    timbre degradation.
+  url: https://arxiv.org/abs/2608.03021
+  pdf_url: https://arxiv.org/pdf/2608.03021v1
+  version: v1
+fetched: '2026-11-12'

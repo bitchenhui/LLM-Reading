@@ -1,0 +1,47 @@
+id: paper:arxiv:2611.10787
+status: pending
+score: 3
+track: self_improvement
+matched:
+- ref: concept:LLM
+  count: 2
+  weight: 1
+- ref: concept:RSI
+  count: 2
+  weight: 1
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+meta:
+  title: Trustworthy Recursive Self-Improvement with Statistical Guarantees
+  authors:
+  - Zihe Gao
+  - Zhengling Qi
+  - Yifan Cui
+  published: '2026-11-07'
+  updated: '2026-11-07'
+  categories:
+  - stat.ML
+  - cs.AI
+  - cs.LG
+  - stat.ME
+  abstract: 'Recursive self-improvement offers a promising path toward AI agents that improve through
+    experience by refining their own harnesses without retraining their underlying large language models
+    (LLMs). Making this self-improvement process reliable, however, requires more than generating new
+    updates: agents must decide which changes are worth keeping. A greedy gate that accepts updates based
+    solely on higher validation scores can mistake an observed gain for genuine progress and lead to performance
+    degeneration, whereas overly conservative statistical gates may reject beneficial updates and hinder
+    performance improvement. We introduce Trustworthy Recursive Updates with Statistical Testing (TRUST),
+    a framework that adapts an online multiple hypothesis testing procedure to control the rate of false
+    evolution across rounds, with an LLM analyzing historical context to help determine how much evidence
+    is required to update the incumbent. Under interpretable assumptions, we prove that TRUST limits the
+    proportion of accepted updates that result in unacceptable performance loss. We further derive a lower
+    bound on the final performance gain. Across the benchmarks HotpotQA, DROP, and APPS with the models
+    DeepSeek-V4-Flash and Qwen-3.8-Flash, TRUST reduces the average ratio of accepted inferior updates
+    from the greedy gate''s 45.59% to 2.78%, while achieving higher final scores than the state-of-the-art
+    statistical gate baselines for recursive self-improvement. These findings demonstrate that TRUST strikes
+    a balance between statistical reliability and performance gain in recursive self-improvement.'
+  url: https://arxiv.org/abs/2611.10787
+  pdf_url: https://arxiv.org/pdf/2611.10787v1
+  version: v1
+fetched: '2026-11-12'

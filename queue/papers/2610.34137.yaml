@@ -1,0 +1,42 @@
+id: paper:arxiv:2610.34137
+status: skipped
+score: 1
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+meta:
+  title: 'Self-Evolution Reasoner: Continuous Optimization via Policy-Intrinsic Exploration and Exploitation'
+  authors:
+  - Wenhang Shi
+  - Yiren Chen
+  - Zhe Zhao
+  - Jinhao Dong
+  - Wei Lu
+  - Xiaoyong Du
+  published: '2026-10-25'
+  updated: '2026-10-25'
+  categories:
+  - cs.LG
+  - cs.CL
+  abstract: Reinforcement learning with verifiable rewards (RLVR) enables large language models (LLMs)
+    to continuously self-improve their reasoning capabilities. Compared to RLVR's scalar rewards, recent
+    self-supervised on-policy distillation methods leverage denser supervision signals. However, both
+    paradigms suffer from exploration bottlenecks, struggling to escape local optima when the policy fails
+    to sample valid solutions. Relying on external demonstrations can bypass this issue; however, the
+    off-policy nature hinders genuine self-improvement and the mismatched-distribution reasoning can not
+    be fully exploited. In this work, we propose Self-Evolution Policy Optimization (SEPO), a framework
+    that drives continuous reasoning capability evolution via guided exploration and in-distribution exploitation.
+    Specifically, SEPO utilizes labels to elicit correct reasoning from the policy, unlocking the exploration
+    potential. By treating current policy conditioned on this in-distribution reasoning as a self-teacher,
+    SEPO distills the newly discovered solution back into the policy. Through this iterative cycle of
+    policy-intrinsic exploration and exploitation, SEPO achieves robust and continuous capability evolution.
+    Across scientific, tool-use, and complex logical reasoning domains, SEPO consistently achieves the
+    best performance under identical training time or steps, demonstrating superior efficiency and convergence
+    ceilings. Notably, SEPO maintains stable improvements even in scenarios where baselines severely underperform
+    or fail entirely, such as on complex tasks or with small-scale models. Our code is available at https://github.com/Eric8932/SEPO.
+  url: https://arxiv.org/abs/2610.34137
+  pdf_url: https://arxiv.org/pdf/2610.34137v1
+  version: v1
+fetched: '2026-11-12'

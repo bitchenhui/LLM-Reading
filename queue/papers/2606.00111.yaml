@@ -1,0 +1,51 @@
+id: paper:arxiv:2606.00111
+status: pending
+score: 3
+matched:
+- ref: concept:EntropyModel
+  count: 1
+  weight: 1
+- ref: dataset:Kodak
+  count: 1
+  weight: 1
+- ref: metric:BD-Rate
+  count: 1
+  weight: 1
+meta:
+  title: 'ChWDTA: Channel-wise Wavelet-Domain Transformer Attention and Entropy Modeling for Learned Image
+    Compression'
+  authors:
+  - Haisheng Fu
+  - Runyu Yang
+  - Feng Ding
+  - Siyu Zhu
+  - Jie Liang
+  - Xiaoxiao Li
+  - Zhenman Fang
+  - Jingning Han
+  published: '2026-05-27'
+  updated: '2026-05-27'
+  categories:
+  - eess.IV
+  - cs.CV
+  - cs.LG
+  abstract: State-of-the-art learned image compression (LIC) schemes are increasingly based on hybrid
+    CNN-transformer architectures. To further improve rate-distortion performance, we introduce channel-wise
+    wavelet transforms into both the transformer and entropy-coding components. First, we propose a channel-wise
+    wavelet-domain transformer attention (ChWDTA) mechanism. ChWDTA keeps the efficient windowed spatial
+    self-attention used in modern LIC backbones, but computes the Q/K/V projections on channel-wise wavelet-transformed
+    features before mapping the attention output back with the inverse transform. The resulting Channel-wise
+    Wavelet-Domain Transformer Block (ChWDTB) therefore preserves the spatial tokenization pattern of
+    windowed attention while sparsifying the channel covariance seen by the attention projections. Second,
+    in the entropy-coding stage, we introduce a channel-wise wavelet packet (ChWP) decomposition that
+    produces four equal-sized subbands, which better fit channel-wise slice-based autoregressive entropy
+    modeling. When each channel-wise subband is divided into two slices, we use eight slices for entropy
+    coding. With this configuration, the proposed scheme obtains BD-rate reductions of -17.82%, -19.15%,
+    and -22.56% on the Kodak, CLIC Professional Validation, and Tecnick test sets, respectively. Even
+    when each channel-wise subband is coded as a single slice, the scheme still retains most of the coding
+    gains with lower complexity. The results confirm the advantage of introducing wavelet transform in
+    CNN-transformer-based LIC schemes.
+  url: https://arxiv.org/abs/2606.00111
+  pdf_url: https://arxiv.org/pdf/2606.00111v1
+  version: v1
+fetched: '2026-11-12'

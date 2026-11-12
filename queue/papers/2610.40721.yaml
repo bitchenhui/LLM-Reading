@@ -1,0 +1,50 @@
+id: paper:arxiv:2610.40721
+status: skipped
+score: 2
+track: self_improvement
+matched:
+- ref: concept:LLM
+  count: 1
+  weight: 1
+- ref: concept:SelfImprovement
+  count: 1
+  weight: 1
+meta:
+  title: 'MetaVul: Agentic Harness Discovery for Vulnerability Detection'
+  authors:
+  - Ira Ceka
+  - Arnav Garg
+  - Ryan Lutz
+  - Ting Zhang
+  - Ratnadira Widyasari
+  - Gail Kaiser
+  - Baishakhi Ray
+  published: '2026-10-29'
+  updated: '2026-10-29'
+  categories:
+  - cs.CR
+  - cs.AI
+  - cs.SE
+  abstract: 'LLM agents are increasingly used to automate vulnerability detection, but reliable detection
+    is challenging because agents must distinguish subtle, security-relevant fixes from benign code variation.
+    While underlying LLM capability has improved significantly, the accuracy of the agent still depends
+    heavily on the harness: the code that defines the scaffolding around the LLM. Harnesses are typically
+    fixed, and largely hand-written, limiting adaptation to evaluator feedback. Additionally, when harnesses
+    are static, improvements on one dataset or model may not transfer to others. To address these challenges,
+    we introduce MetaVul, a self-improving framework for harness discovery in vulnerability detection.
+    Starting from a seed structured reasoning scaffold, MetaVul uses a workflow-based optimization loop
+    to iteratively refine the harness using feedback from paired vulnerable and patched functions, while
+    preserving the structured reasoning and verdict format. At each iteration, it searches over the history
+    of prior harnesses, with access to their trajectories, logs, and metrics, and it returns a set of
+    Pareto-optimal harnesses. We apply MetaVul to discover agent harnesses for various architectures.
+    A validation set (202 pairs) is used for optimization, while an unseen dataset (430 pairs) is kept
+    as the held-out set. We test whether harnesses learned from one model transfer to others not seen
+    during optimization. Results on both frontier and small LLMs show that the optimized harnesses improve
+    pairwise vulnerability detection up to 23.3 percentage points on the validation set and up to 25.8
+    points on the held-out set with a Pareto-frontier harness. Harnesses learned with one model also transfer
+    to others. We show that harnesses optimized with one model transfer to another, improving held-out
+    pairwise accuracy by 14.7 points without further optimization.'
+  url: https://arxiv.org/abs/2610.40721
+  pdf_url: https://arxiv.org/pdf/2610.40721v1
+  version: v1
+fetched: '2026-11-12'

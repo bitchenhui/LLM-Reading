@@ -1,0 +1,45 @@
+id: paper:arxiv:2602.15779
+status: reviewed
+score: 4
+matched:
+- ref: codec:AVC
+  count: 1
+  weight: 3
+- ref: concept:RDO
+  count: 2
+  weight: 1
+meta:
+  title: Rate-Distortion Optimization for Ensembles of Non-Reference Metrics
+  authors:
+  - Xin Xiong
+  - Samuel Fernández-Menduiña
+  - Eduardo Pavez
+  - Antonio Ortega
+  - Neil Birkbeck
+  - Balu Adsumilli
+  published: '2026-02-17'
+  updated: '2026-02-17'
+  categories:
+  - eess.IV
+  abstract: Non-reference metrics (NRMs) can assess the visual quality of images and videos without a
+    reference, making them well-suited for the evaluation of user-generated content. Nonetheless, rate-distortion
+    optimization (RDO) in video coding is still mainly driven by full-reference metrics, such as the sum
+    of squared errors, which treat the input as an ideal target. A way to incorporate NRMs into RDO is
+    through linearization (LNRM), where the gradient of the NRM with respect to the input guides bit allocation.
+    While this strategy improves the quality predicted by some metrics, we show that it can yield limited
+    gains or degradations when evaluated with other NRMs. We argue that NRMs are highly non-linear predictors
+    with locally unstable gradients that can compromise the quality of the linearization; furthermore,
+    optimizing a single metric may exploit model-specific biases that do not generalize across quality
+    estimators. Motivated by this observation, we extend the LNRM framework to optimize ensembles of NRMs
+    and, to further improve robustness, we introduce a smoothing-based formulation that stabilizes NRM
+    gradients prior to linearization. Our framework is well-suited to hybrid codecs, and we advocate for
+    its use with overfitted codecs, where it avoids iterative evaluations and backpropagation of neural
+    network-based NRMs, reducing encoder complexity relative to direct NRM optimization. We validate the
+    proposed approach on AVC and Cool-chic, using the YouTube UGC dataset. Experiments demonstrate consistent
+    bitrate savings across multiple NRMs with no decoder complexity overhead and, for Cool-chic, a substantial
+    reduction in encoding runtime compared to direct NRM optimization.
+  url: https://arxiv.org/abs/2602.15779
+  pdf_url: https://arxiv.org/pdf/2602.15779v1
+  version: v1
+fetched: '2026-11-12'
+llm_decision: deep_read

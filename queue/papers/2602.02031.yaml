@@ -1,0 +1,32 @@
+id: paper:arxiv:2602.02031
+status: skipped
+score: 1
+matched:
+- ref: concept:MoE
+  count: 1
+  weight: 1
+meta:
+  title: Edge-Aligned Initialization of Kernels for Steered Mixture-of-Experts
+  authors:
+  - Martin Determann
+  - Elvira Fleig
+  published: '2026-02-02'
+  updated: '2026-02-02'
+  categories:
+  - eess.IV
+  abstract: Steered Mixture-of-Experts (SMoE) has recently emerged as a powerful framework for spatial-domain
+    image modeling, enabling high-fidelity image representation using a remarkably small number of parameters.
+    Its ability to steer kernel-based experts toward structural image features has led to successful applications
+    in image compression, denoising, super-resolution, and light field processing. However, practical
+    adoption is hindered by the reliance on gradient-based optimization to estimate model parameters on
+    a per-image basis - a process that is computationally intensive and difficult to scale. Initialization
+    strategies for SMoE are an essential component that directly affects convergence and reconstruction
+    quality. In this paper, we propose a novel, edge-based initialization scheme that achieves good reconstruction
+    qualities while reducing the need for stochastic optimization significantly. Through a method that
+    leverages Canny edge detection to extract a sparse set of image contours, kernel positions and orientations
+    are deterministically inferred. A separate approach enables the direct estimation of initial expert
+    coefficients. This initialization reduces both memory consumption and computational cost.
+  url: https://arxiv.org/abs/2602.02031
+  pdf_url: https://arxiv.org/pdf/2602.02031v1
+  version: v1
+fetched: '2026-11-12'

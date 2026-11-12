@@ -1,0 +1,40 @@
+id: paper:arxiv:2603.05756
+status: reviewed
+score: 6
+matched:
+- ref: codec:VVC
+  count: 2
+  weight: 3
+- ref: impl:DCVC-RT
+  count: 1
+  weight: 3
+meta:
+  title: 'Uni-LVC: A Unified Method for Intra- and Inter-Mode Learned Video Compression'
+  authors:
+  - Yichi Zhang
+  - Ruoyu Yang
+  - Fengqing Zhu
+  published: '2026-03-05'
+  updated: '2026-03-05'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: 'Recent advances in learned video compression (LVC) have led to significant performance gains,
+    with codecs such as DCVC-RT surpassing the H.266/VVC low-delay mode in compression efficiency. However,
+    existing LVCs still exhibit key limitations: they often require separate models for intra and inter
+    coding modes, and their performance degrades when temporal references are unreliable. To address this,
+    we introduce Uni-LVC, a unified LVC method that supports both intra and inter coding with low-delay
+    and random-access in a single model. Building on a strong intra-codec, Uni-LVC formulates inter-coding
+    as intra-coding conditioned on temporal information extracted from reference frames. We design an
+    efficient cross-attention adaptation module that integrates temporal cues, enabling seamless support
+    for both unidirectional (low-delay) and bidirectional (random-access) prediction modes. A reliability-aware
+    classifier is proposed to selectively scale the temporal cues, making Uni-LVC behave closer to intra
+    coding when references are unreliable. We further propose a multistage training strategy to facilitate
+    adaptive learning across various coding modes. Extensive experiments demonstrate that Uni-LVC achieves
+    superior rate-distortion performance in intra and inter configurations while maintaining comparable
+    computational efficiency.'
+  url: https://arxiv.org/abs/2603.05756
+  pdf_url: https://arxiv.org/pdf/2603.05756v1
+  version: v1
+fetched: '2026-11-12'
+llm_decision: deep_read

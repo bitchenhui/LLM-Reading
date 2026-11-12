@@ -1,0 +1,48 @@
+id: paper:arxiv:2607.23321
+status: pending
+score: 3
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 3
+  weight: 1
+- ref: metric:LPIPS
+  count: 1
+  weight: 1
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+meta:
+  title: A Reference-Free Framework for Evaluating Single-Frame ISP Pipelines
+  authors:
+  - Yujin Cho
+  - Sira Ferradans
+  - Jean-Michel Morel
+  - Gabriele Facciolo
+  - Thomas Eboli
+  published: '2026-07-25'
+  updated: '2026-07-25'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: Evaluating camera image signal processing (ISP) pipelines requires measuring low-level artifacts
+    introduced by operations such as denoising, demosaicing, tone mapping, and compression. Blind image
+    quality assessment (IQA) techniques can grade visual quality without a reference, but they typically
+    focus on semantic and high-level visual cues or human perceptual scores rather than the low-level
+    image-processing artifacts introduced by camera pipelines. In contrast, full-reference metrics such
+    as PSNR and SSIM measure pixel-level differences and structural similarity, while LPIPS measures perceptual
+    similarity in deep feature space. However, these metrics require perfectly aligned image pairs, which
+    are difficult to collect in practical settings. We propose a reference-free learning framework that
+    estimates full-reference image quality metrics from a processed sRGB image and its ISO metadata. Our
+    method predicts a proxy sRGB reference, which is then compared with the processed image to compute
+    PSNR, SSIM, and LPIPS in their standard full-reference form. Our experiments show that the proxy-reference
+    model can be learned from synthetic data and applied to real camera data. We further show that lightweight
+    LoRA fine-tuning enables efficient adaptation when ISP components or pipeline configurations are changed.
+    The proposed method outperforms direct metric regression in estimating metric values and achieves
+    higher agreement with full-reference rankings than conventional blind IQA methods. These results demonstrate
+    the feasibility of reference-free estimation of full-reference metrics for practical camera-pipeline
+    evaluation.
+  url: https://arxiv.org/abs/2607.23321
+  pdf_url: https://arxiv.org/pdf/2607.23321v1
+  version: v1
+fetched: '2026-11-12'

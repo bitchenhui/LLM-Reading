@@ -1,0 +1,31 @@
+id: paper:arxiv:2610.01961
+status: skipped
+score: 0
+track: audio_coding
+matched: []
+meta:
+  title: Multi-sample Synthetic Supervision for Accent Conversion
+  authors:
+  - Yangyang Qu
+  - Michele Panariello
+  - Massimiliano Todisco
+  - Nicholas Evans
+  published: '2026-10-01'
+  updated: '2026-10-01'
+  categories:
+  - eess.AS
+  abstract: Accent conversion (AC) requires changing accent while preserving speaker identity and linguistic
+    content, yet parallel recordings are scarce. Speech synthesis provides an alternative source of supervision,
+    but generated targets vary in accent realization and source preservation. We propose a multi-sample
+    synthetic supervision framework that constructs conversion targets by jointly assessing these properties
+    across candidate waveforms for each source--accent condition. Selected candidates provide associated
+    discrete speech codes, representing linguistic content, prosody, and speaking style, as targets for
+    accent-conditioned autoregressive adaptation. Compared with using one generated target per training
+    example, our method improves target-accent classification accuracy by 2.49 percentage points, while
+    speaker similarity remains nearly unchanged, and word error rate increases by 0.29 percentage points.
+    Across six target accents, our method achieves 7.81% WER and the highest mean listening ratings among
+    evaluated systems.
+  url: https://arxiv.org/abs/2610.01961
+  pdf_url: https://arxiv.org/pdf/2610.01961v1
+  version: v1
+fetched: '2026-11-12'

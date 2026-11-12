@@ -1,0 +1,37 @@
+id: paper:arxiv:2610.37024
+status: skipped
+score: 1
+track: audio_coding
+matched:
+- ref: concept:NeuralAudioCodec
+  count: 1
+  weight: 1
+meta:
+  title: 'StreamSE: Neural Audio Codec-based Streaming Speech Enhancement for On-device Inference'
+  authors:
+  - Hyunjin Choi
+  - Zinu Kim
+  - Junwon Moon
+  - Jeongyun Chae
+  - Seungbeom Kim
+  - Kyuhong Shim
+  published: '2026-10-27'
+  updated: '2026-10-27'
+  categories:
+  - eess.AS
+  abstract: Recent generative speech enhancement (SE) models achieve high perceptual quality, but their
+    non-causal processing and expensive computation make them difficult to use for streaming, on-device
+    inference. We propose StreamSE, a 20M-parameter streaming SE model that operates in the latent space
+    of a frozen pretrained neural audio codec. At each frame, StreamSE directly regresses a clean continuous
+    latent from the noisy continuous latent while conditioning on its own predictions from previous frames.
+    Enhancement therefore requires a single forward pass per frame and no iterative sampling or look-ahead.
+    We further truncate the codec's residual vector quantizer (RVQ) to its coarse levels, halving the
+    number of tokens per frame while improving robustness to reverberation. StreamSE is the only streaming
+    generative model in our comparison, yet it matches or exceeds the perceptual quality of the offline
+    generative baselines. Furthermore, the complete StreamSE pipeline runs in real time on a single smartphone
+    CPU core. Our results show that continuous latent regression provides a practical route to generative
+    SE under fully causal, on-device streaming constraints.
+  url: https://arxiv.org/abs/2610.37024
+  pdf_url: https://arxiv.org/pdf/2610.37024v1
+  version: v1
+fetched: '2026-11-12'

@@ -1,0 +1,47 @@
+id: paper:arxiv:2610.35077
+status: skipped
+score: 2
+track: self_improvement
+matched:
+- ref: concept:AlphaEvolve
+  count: 1
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: Improving VLMs on Scientific Chart Analysis via Autonomous Evolution
+  authors:
+  - Abhinav Sudhakar Dubey
+  - Vidushi Goel
+  - Kiran Rana
+  - Shikhar Mathur
+  - Vaggos Chatziafratis
+  published: '2026-10-26'
+  updated: '2026-10-26'
+  categories:
+  - cs.CV
+  - cs.CL
+  - cs.LG
+  abstract: 'Understanding and operating with scientific charts is a standard approach in data analysis,
+    and while humans are good at interpreting such charts, open vision-language models (VLMs) are known
+    to perform poorly when it comes to question answering based on such data types. Motivated by an initial
+    observation that many of their errors are due to inexact answering, we raise the following natural
+    question: how much accuracy can we recover without changing the model at all? In this paper, we study
+    this question by searching over inference programs and the code around a "frozen" version of the model.
+    Using ideas from autonomous evolution (famously used in AlphaEvolve), we first start from a baseline
+    inference program, and in each round we show an LLM judge the code together with a few failures on
+    training questions, and ask for an improving evolutionary move. As usual in autonomous evolution approaches,
+    the candidate programs are kept in a small pool ranked by training accuracy, and the next edit is
+    performed on top-scorers from this pool. We run this approach on three VLMs and four popular benchmarks
+    on scientific charts, and we measure the fraction of descriptive questions whose answer exactly matches
+    the ground truth. The accuracy improves in all experimental settings. On average, it rises from 16.6%
+    with the starting program to 41.3% with the evolved one, and the largest single increase is 55.2 percentage
+    points. As a side benefit, our evolved program is 3.8x faster than the starting program, because short
+    answers are easier to grade and faster to generate. Our results demonstrate that a large part of the
+    observed errors arise due to the inference pipeline, and that optimizing it can improve the "frozen"
+    VLM without the need to retrain it.'
+  url: https://arxiv.org/abs/2610.35077
+  pdf_url: https://arxiv.org/pdf/2610.35077v1
+  version: v1
+fetched: '2026-11-12'

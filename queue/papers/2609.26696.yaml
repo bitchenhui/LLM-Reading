@@ -1,0 +1,37 @@
+id: paper:arxiv:2609.26696
+status: skipped
+score: 0
+track: streaming_delivery
+matched: []
+meta:
+  title: 'Reading the Sky to Forecast the Ground: Physics-Informed Link-State Forecasting for LEO Networks
+    at Any Location'
+  authors:
+  - Yunxiang Chi
+  - Zhenlin An
+  - Longfei Shangguan
+  - Kyle Jamieson
+  published: '2026-09-22'
+  updated: '2026-09-22'
+  categories:
+  - cs.NI
+  abstract: 'In this paper, we introduce Gnomon, a physics-informed system that forecasts user-perceived
+    low-Earth-orbit (LEO) downlink throughput, uplink throughput, and round-trip time (RTT) under different
+    levels of trace availability. Gnomon''s physics layer reconstructs the serving geometry and four-leg
+    bent-pipe attenuation from public weather, orbital, routing, and licensing data. Based on what is
+    available, Gnomon conditions on the target terminal''s own history (Mode 1), measurements from nearby
+    publicly reachable dishes (Mode 2), or the physical covariates alone (Mode 3) to predict the link
+    state: Modes 1 and 2 share a fine-tuned time-series foundation model, while Mode 3 uses a compact
+    boosted-tree estimator. All three modes expose a common output interface and can be selected without
+    retraining. We evaluate Gnomon using 8,260 minutes of 1 Hz measurements collected at nine sites across
+    five states in the U.S. We train on three sites and hold out the remaining six sites and their serving
+    beams. On these unseen sites, the own-trace mode reduces downlink-throughput and RTT prediction error
+    by 17% and 11% relative to the strongest published baseline and, to our knowledge, provides the first
+    LEO uplink forecasts. The neighbor-trace mode requires no on-site hardware, while the covariate-only
+    mode reduces downlink-throughput and RTT error by 24.6% and 78.8% relative to the only prior covariate-only
+    forecaster. Moreover, experiments show that Gnomon provides calibrated quantile bands and improves
+    adaptive-bitrate streaming driven over real TCP flows on replayed Starlink links.'
+  url: https://arxiv.org/abs/2609.26696
+  pdf_url: https://arxiv.org/pdf/2609.26696v1
+  version: v1
+fetched: '2026-11-12'

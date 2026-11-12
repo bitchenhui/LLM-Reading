@@ -1,0 +1,38 @@
+id: paper:arxiv:2609.36393
+status: skipped
+score: 1
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+meta:
+  title: Reward-rate Policy Gradient for Efficient Machine Learning Engineering Agents
+  authors:
+  - Muhang Tian
+  - Sherry Yang
+  published: '2026-09-28'
+  updated: '2026-09-28'
+  categories:
+  - cs.LG
+  - cs.AI
+  abstract: Traditional reinforcement learning (RL) techniques focus on maximizing expected cumulative
+    reward, where each action assumes to take a constant unit of time. However, this assumption does not
+    hold for agentic RL tasks such as machine learning engineering (MLE) agents, where actions involve
+    data loading, feature engineering, and model training that take variable durations. Efficiency matters
+    in modern agentic RL where actions are costly. To address this limitation, we adapt from continuous-time
+    RL and Semi-Markov Decision Process (SMDP) formulation and propose Reward-rate Policy Gradient (RPG),
+    where we focus on optimizing the reward rate -- the long-term reward per unit of time. RPG estimates
+    the reward rate from off-policy samples, then charges each action for the time it consumes at that
+    rate. We first conduct theoretical analysis in the bandit setting to establish that RPG approximates
+    the optimal reward rate and empirically demonstrate it outperforms baselines while avoiding enumeration
+    over the policy space, a known issue for an existing method. We then further apply RPG on a small
+    language model (Qwen3.5-4B) with self-improvement loops and empirically show it obtains higher rewards
+    within a fixed time budget than vanilla RL on MLE-Bench and NanoGPT, with a 19.2% and 85.7% margin,
+    respectively. Our method provides a practical solution for optimizing performance under wait time
+    considerations in modern agentic RL tasks, where actions interact with external environments and cost
+    time.
+  url: https://arxiv.org/abs/2609.36393
+  pdf_url: https://arxiv.org/pdf/2609.36393v1
+  version: v1
+fetched: '2026-11-12'

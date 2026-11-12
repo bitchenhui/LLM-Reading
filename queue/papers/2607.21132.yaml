@@ -1,0 +1,36 @@
+id: paper:arxiv:2607.21132
+status: skipped
+score: 1
+track: audio_coding
+matched:
+- ref: concept:NeuralAudioCodec
+  count: 1
+  weight: 1
+meta:
+  title: Investigating Codec-Internal Latent Audio Watermarking for Neural Codec Robustness
+  authors:
+  - Zi Hu
+  - Houmin Sun
+  - Linxi Li
+  - Yechen Wang
+  - Liwei Jin
+  - Carsten Maple
+  - Ming Li
+  published: '2026-07-23'
+  updated: '2026-07-23'
+  categories:
+  - cs.SD
+  abstract: Neural audio codecs are challenging transformations for audio watermarking because they re-encode,
+    quantize, and resynthesize speech. This paper investigates continuous latent-space watermarking for
+    codec robustness. Instead of adding a watermark only to the waveform or spectrogram, we embed a 32-bit
+    message into the continuous latent representation of a codec-like speech autoencoder. The pipeline
+    uses a SEANet-style encoder-decoder, a Conformer-based message embedder, RVQ-guided latent decomposition,
+    and a latent-domain detector trained under signal-processing and neural-codec transformations. Rather
+    than proposing a final universal watermarking baseline, we characterize the trade-offs that appear
+    when the watermark carrier is moved before neural decoding. On 48 kHz speech, EnCodec-aware training
+    improves EnCodec-24k bit accuracy from 78.8% to 95.6% and 97.1%, while PESQ decreases from 3.727 to
+    3.514 and 3.427.
+  url: https://arxiv.org/abs/2607.21132
+  pdf_url: https://arxiv.org/pdf/2607.21132v1
+  version: v1
+fetched: '2026-11-12'

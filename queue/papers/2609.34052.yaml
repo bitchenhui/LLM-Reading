@@ -1,0 +1,37 @@
+id: paper:arxiv:2609.34052
+status: skipped
+score: 0
+track: audio_coding
+matched: []
+meta:
+  title: 'Towards Interpretable Framework for Neural Audio Codecs via Sparse Autoencoders: Exploration
+    toward Age, Gender, and Accent Steering'
+  authors:
+  - Shih-Heng Wang
+  - Tiantian Feng
+  - Aditya Kommineni
+  - Huang-Cheng Chou
+  - Bowen Yi
+  - Xuan Shi
+  - Shrikanth Narayanan
+  published: '2026-09-28'
+  updated: '2026-09-28'
+  categories:
+  - cs.SD
+  abstract: Neural audio codecs (NACs) are widely used in speech generation and audio-language modeling,
+    yet how they encode speaker-trait information remains poorly understood. Prior work applied sparse
+    autoencoders (SAEs) to investigate accent information in NACs through task-level analysis. Here, we
+    extend this analysis to the waveform level and to age, gender, and accent, using SAE steering to probe
+    trait-related information in sparse activations. We identify trait-associated dimensions, modify their
+    activations, and evaluate the resulting reconstructed speech. Across five NACs, steering the selected
+    dimensions induces target-directed shifts in speaker-trait predictions. A random-dimension baseline
+    on Mimi produces smaller shifts, supporting the relevance of the selected dimensions. However, responses
+    vary across codecs, traits, and steering directions, and increasing steering strength does not consistently
+    amplify the intended shifts. Steering also generally increases word error rates and lowers predicted
+    perceptual quality. These findings suggest that SAEs capture speaker-trait information in steerable
+    activations, while the accompanying quality degradation highlights the need to better separate trait-related
+    information from other information.
+  url: https://arxiv.org/abs/2609.34052
+  pdf_url: https://arxiv.org/pdf/2609.34052v1
+  version: v1
+fetched: '2026-11-12'

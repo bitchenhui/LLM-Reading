@@ -1,0 +1,41 @@
+id: paper:arxiv:2602.06242
+status: reviewed
+score: 7
+matched:
+- ref: codec:VVC
+  count: 2
+  weight: 3
+- ref: impl:VVenC
+  count: 1
+  weight: 3
+- ref: concept:QP
+  count: 1
+  weight: 1
+meta:
+  title: Content-Driven Frame-Level Bit Prediction for Rate Control in Versatile Video Coding
+  authors:
+  - Amritha Premkumar
+  - Prajit T Rajendran
+  - Vignesh V Menon
+  - Christian Herglotz
+  published: '2026-02-05'
+  updated: '2026-02-05'
+  categories:
+  - eess.IV
+  - cs.MM
+  abstract: Rate control allocates bits efficiently across frames to meet a target bitrate while maintaining
+    quality. Conventional two-pass rate control (2pRC) in Versatile Video Coding (VVC) relies on analytical
+    rate-QP models, which often fail to capture nonlinear spatial-temporal variations, causing quality
+    instability and high complexity due to multiple trial encodes. This paper proposes a content-adaptive
+    framework that predicts frame-level bit consumption using lightweight features from the Video Complexity
+    Analyzer (VCA) and quantization parameters within a Random Forest regression. On ultra-high-definition
+    sequences encoded with VVenC, the model achieves strong correlation with ground truth, yielding R2
+    values of 0.93, 0.88, and 0.77 for I-, P-, and B-frames, respectively. Integrated into a rate-control
+    loop, it achieves comparable coding efficiency to 2pRC while reducing total encoding time by 33.3%.
+    The results show that VCA-driven bit prediction provides a computationally efficient and accurate
+    alternative to conventional rate-QP models.
+  url: https://arxiv.org/abs/2602.06242
+  pdf_url: https://arxiv.org/pdf/2602.06242v1
+  version: v1
+fetched: '2026-11-12'
+llm_decision: deep_read

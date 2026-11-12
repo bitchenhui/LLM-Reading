@@ -1,0 +1,34 @@
+id: paper:arxiv:2602.00100
+status: skipped
+score: 1
+matched:
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+meta:
+  title: Frequent Pattern Mining approach to Image Compression
+  authors:
+  - Avinash Kadimisetty
+  - C. Oswald
+  - B. Sivalselvan
+  published: '2026-01-24'
+  updated: '2026-01-24'
+  categories:
+  - eess.IV
+  - cs.AI
+  - cs.CV
+  abstract: The paper focuses on Image Compression, explaining efficient approaches based on Frequent
+    Pattern Mining(FPM). The proposed compression mechanism is based on clustering similar pixels in the
+    image and thus using cluster identifiers in image compression. Redundant data in the image is effectively
+    handled by replacing the DCT phase of conventional JPEG through a mixture of k-means Clustering and
+    Closed Frequent Sequence Mining. To optimize the cardinality of pattern(s) in encoding, efficient
+    pruning techniques have been used through the refinement of Conventional Generalized Sequential Pattern
+    Mining(GSP) algorithm. We have proposed a mechanism for finding the frequency of a sequence which
+    will yield significant reduction in the code table size. The algorithm is tested by compressing benchmark
+    datasets yielding an improvement of 45% in compression ratios, often outperforming the existing alternatives.
+    PSNR and SSIM, which are the image quality metrics, have been tested which show a negligible loss
+    in visual quality.
+  url: https://arxiv.org/abs/2602.00100
+  pdf_url: https://arxiv.org/pdf/2602.00100v1
+  version: v1
+fetched: '2026-11-12'

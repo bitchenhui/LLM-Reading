@@ -1,0 +1,39 @@
+id: paper:arxiv:2610.04469
+status: skipped
+score: 1
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 3
+  weight: 1
+meta:
+  title: 'Trinity: Self-Evolving Vision-Language Models with a Self-Verifier'
+  authors:
+  - Youngwan Lee
+  - Yong-Ju Lee
+  - Sung Ju Hwang
+  published: '2026-10-03'
+  updated: '2026-10-03'
+  categories:
+  - cs.AI
+  abstract: 'Self-evolving vision-language models (VLMs), a form of self-improvement in which a model
+    generates its own training data from unlabeled images, are a promising route toward agents that expand
+    their reasoning capability in an unsupervised manner, without relying on ever-larger annotation budgets.
+    Existing methods pair a Questioner that proposes problems with a Solver that answers them, but reward
+    both roles mainly by agreement among sampled answers. Agreement is a weak proxy for truth: it cannot
+    tell whether a question is grounded in the image, whether the proposed reference answer is right,
+    or whether a confident majority is wrong in the same way. We present Trinity, in which one VLM plays
+    three roles, Questioner, Solver, and Verifier, and the Verifier is a self-verifier: an exponential
+    moving average (EMA) of the policy itself, requiring neither labels nor an external judge. The Verifier
+    screens every generated question for image grounding and answer correctness before it becomes supervision,
+    scores Solver reasoning against the image, and adjudicates disputes between the reference answer and
+    a strong Solver consensus, correcting the reference and penalizing the Questioner when the consensus
+    is right. Trained on images alone, Trinity improves Qwen3-VL-8B on mathematical visual reasoning and
+    on science benchmarks with biology content, for example, +8.6 points on the biology split of SciVQR
+    and +12.8 on MathVerse, and its reward dynamics behave as a healthy self-play curriculum should. These
+    results suggest that a self-evolving multimodal agent can strengthen its scientific reasoning from
+    unlabeled scientific images alone, with the model itself serving as the verifier.'
+  url: https://arxiv.org/abs/2610.04469
+  pdf_url: https://arxiv.org/pdf/2610.04469v1
+  version: v1
+fetched: '2026-11-12'

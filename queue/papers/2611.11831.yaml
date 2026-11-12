@@ -1,0 +1,42 @@
+id: paper:arxiv:2611.11831
+status: skipped
+score: 2
+track: processing_enhancement
+matched:
+- ref: concept:SuperResolution
+  count: 2
+  weight: 1
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+meta:
+  title: End-to-End Joint Training of Super-Resolution and Compression Artifact Removal for Industrial
+    Machine Vision
+  authors:
+  - Dang BuiDinh
+  - Sang NguyenQuang
+  - Anh NguyenPhuong
+  - Wen-Hsiao Peng
+  - Xiem HoangVan
+  published: '2026-11-09'
+  updated: '2026-11-09'
+  categories:
+  - cs.CV
+  abstract: In industrial machine vision, images captured by edge devices are often downsampled and compressed
+    to reduce bandwidth, introducing resolution loss and compression artifacts that severely degrade the
+    performance of downstream tasks, such as defect detection. Existing quality enhancement methods typically
+    apply super-resolution (SR) or compression artifact removal (CAR) independently or in a sequential
+    manner and are largely optimized for human visual fidelity rather than machine perception. This paper
+    proposes an end-to-end quality enhancement framework that integrates SR and CAR with a unified training
+    strategy that optimizes both human-perception and machine-perception objectives. We investigate fixed-weight
+    and uncertainty-based dynamic-weight loss functions to balance reconstruction quality and machine
+    vision task performance. Extensive experiments on PCB Defect, DeepPCB, and NEU-DET datasets show that
+    the proposed jointly trained model generally outperforms standalone and separately trained SR-CAR
+    pipelines. In particular, under severe JPEG compression, our method improves defect detection performance
+    from 0.461 to 0.887 mAP@50 on PCB Defect over sequential SR-CAR baselines, with only a slight reduction
+    in PSNR. These results demonstrate that joint optimization is critical for compression-aware industrial
+    machine vision systems.
+  url: https://arxiv.org/abs/2611.11831
+  pdf_url: https://arxiv.org/pdf/2611.11831v1
+  version: v1
+fetched: '2026-11-12'

@@ -1,0 +1,38 @@
+id: paper:arxiv:2605.17002
+status: skipped
+score: 2
+matched:
+- ref: metric:BD-PSNR
+  count: 1
+  weight: 1
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+meta:
+  title: 'A Single Atlas is All You Need: Decoder-Side Gaussian Splatting for Immersive Video'
+  authors:
+  - Dawid Mieloch
+  - Stuart Perry
+  published: '2026-05-16'
+  updated: '2026-05-16'
+  categories:
+  - cs.GR
+  - cs.MM
+  - eess.IV
+  abstract: 'Immersive video delivery is bottlenecked by pixel-rate constraints, making the transmission
+    of high-resolution depth maps or explicit 3D volumetric data expensive. Decoder-Side Depth Estimation
+    (DSDE) shifts depth computation to the client, but struggles with complex geometries, inter-view flickering,
+    and non-Lambertian reflections. Conversely, 3D Gaussian Splatting (3DGS) offers state-of-the-art view
+    synthesis, but transmitting splats (or their projected 2D maps) incurs prohibitive bandwidth costs
+    and is poorly aligned with standard video codecs. We propose Decoder-Side Gaussian Splatting (DSGS),
+    a framework that natively replaces the depth-estimation stage of DSDE with feed-forward 3DGS inference,
+    optimizing volumetric scenes entirely on the decoder side from compressed textures and metadata. A
+    central, counterintuitive finding is that lossy compression acts as an implicit low-pass filter stabilizing
+    feed-forward splat prediction: compressed bitstreams exceed lossless quality while shrinking tenfold.
+    Under extreme view sparsity (one 2D atlas comprising 4 input views), DSGS achieves a +5.79 dB BD-PSNR
+    and +0.054 BD-SSIM gain over the DSDE anchor while reducing maximum inter-view Delta IV-PSNR from
+    17.2 dB to 6.4 dB, minimizing the domain shift between transmitted and virtual viewports.'
+  url: https://arxiv.org/abs/2605.17002
+  pdf_url: https://arxiv.org/pdf/2605.17002v1
+  version: v1
+fetched: '2026-11-12'

@@ -1,0 +1,40 @@
+id: paper:arxiv:2609.37132
+status: skipped
+score: 1
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 1
+  weight: 1
+meta:
+  title: 'Train Ahead, Distill Back: Bootstrapping On-Policy Self-Distillation for Large Language Models'
+  authors:
+  - Zheng Zhang
+  - Xinyue Tan
+  - Lufei Li
+  - Xinyi Zhang
+  - Yexin Li
+  - Kan Ren
+  published: '2026-09-29'
+  updated: '2026-09-29'
+  categories:
+  - cs.AI
+  abstract: On-policy self-distillation (OPSD) improves large language models by letting a self-teacher
+    with privileged information provide dense token-level supervision on the model's own trajectories.
+    Yet existing methods typically construct the self-teacher from the current, initial, or slowly averaged
+    policy state, leaving the quality of supervision constrained by the teacher's ability to exploit privileged
+    information. We ask whether the model's own optimization progress can instead be recycled into a stronger
+    self-teacher. In this paper, we introduce Bootstrapped On-Policy Self-Distillation (B-OPSD), which
+    temporarily trains the policy ahead to obtain a future teacher, restores the student to the original
+    policy state, and then uses the future teacher to supervise the restarted student. The future teacher
+    improves supervision in two complementary ways, it can generate more reliable privileged trajectories
+    and, conditioned on them, provide more informative token-level targets along the restarted student's
+    on-policy trajectories. Experiments on mathematical reasoning with Qwen3-4B and Qwen3-8B show consistent
+    improvements over standard OPSD in both settings, including gains from 27.50 to 41.30 and from 48.80
+    to 64.44 in the rollout-privileged setting. Our findings point to a broader principle for self-improving
+    models that future learning progress can be distilled backward, preserving acquired knowledge while
+    bootstrapping beyond the optimization state that produced it.
+  url: https://arxiv.org/abs/2609.37132
+  pdf_url: https://arxiv.org/pdf/2609.37132v1
+  version: v1
+fetched: '2026-11-12'

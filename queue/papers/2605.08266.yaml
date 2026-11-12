@@ -1,0 +1,35 @@
+id: paper:arxiv:2605.08266
+status: skipped
+score: 1
+matched:
+- ref: dataset:ImageNet
+  count: 1
+  weight: 1
+meta:
+  title: 'Coarse-to-Fine: Progressive Image Compression for Semantically Hierarchical Classification'
+  authors:
+  - Jungwoo Kim
+  - Jun-Hyuk Kim
+  - Jong-Seok Lee
+  published: '2026-05-08'
+  updated: '2026-05-08'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: 'Recent advances in learned image compression (LIC) have enabled practical deployments, spurring
+    active research into image compression for machines and progressive coding schemes. However, their
+    integration remains under-explored: prior works on progressive machine codec predominantly target
+    sample-level difficulty adaptation (i.e., easy-to-hard), without considering semantic-level scalability.
+    In this work, we introduce a semantic hierarchy-aware progressive codec that enables semantic scalability
+    (i.e., coarse-to-fine) from a single bitstream. We first systematically categorize ImageNet-1K classes
+    into CLIP embedding-based semantic hierarchies. Based on a channel-wise autoregressive framework,
+    we decompose latent representations into hierarchically ordered channel blocks, each explicitly optimized
+    for a corresponding semantic hierarchy. Extensive experiments demonstrate that our approach substantially
+    improves coarse-level recognition at low bitrates while maintaining fine-grained accuracy at higher
+    bitrates. By reframing progressive transmission through the lens of semantic scalability, our work
+    provides an efficient and interpretable solution for task-adaptive image coding, outperforming existing
+    progressive codecs under hierarchical evaluation.'
+  url: https://arxiv.org/abs/2605.08266
+  pdf_url: https://arxiv.org/pdf/2605.08266v1
+  version: v1
+fetched: '2026-11-12'

@@ -1,0 +1,60 @@
+id: paper:arxiv:2607.26333
+status: skipped
+score: 2
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 3
+  weight: 1
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+meta:
+  title: 'Rethinking Clinical Relevance in Chest X-ray Machine Learning: How Evaluation References Define
+    Performance'
+  authors:
+  - Panagiotis Fytas
+  - Ian Selby
+  - Clemens Karner
+  - Judith Babar
+  - Simon Baker
+  - Jake Beckford
+  - Timothy J. Sadler
+  - Shahab Shahipasand
+  - Arthikkaa Thavakumar
+  - John Li Chen
+  - Alex Sawer
+  - Michael Roberts
+  - Jonathan Weir-McCall
+  - J. H. F. Rudd
+  - Carola-Bibiane Schönlieb
+  - Anna Korhonen
+  - Anna Breger
+  published: '2026-07-28'
+  updated: '2026-07-28'
+  categories:
+  - eess.IV
+  - cs.CV
+  - cs.LG
+  abstract: 'Chest X-ray (CXR) machine learning relies heavily on automated evaluation using reference
+    standards that aim to approximate clinical judgment. However, commonly used report-derived labels
+    for pathology classification or generic image quality metrics for reconstruction may not reliably
+    reflect clinical judgment. We systematically investigate how evaluation-reference choices affect model
+    performance and ranking in both pathology classification and image quality assessment (IQA). To enable
+    controlled comparison across evaluation references, we collected paired expert image- and report-derived
+    labels for thoracic findings from a clinical cohort at Cambridge University Hospitals (CUH) and curated
+    a subset of the public MIMIC-CXR dataset, along with expert ratings of diagnostic image quality. We
+    show that for supervised image classifiers (ResNet, DenseNet), several zero-shot and fine-tuned vision-language
+    models (e.g., MedKLIP, GLoRIA, and ConVIRT), changing the label source leads to substantial differences
+    not only in performance estimates but also in model rankings. In parallel, alignment of IQA measures
+    with expert judgment depends heavily on the choice of measure, and commonly used IQA metrics such
+    as SSIM and PSNR often fail to align with expert assessments of diagnostic usability. Our results
+    demonstrate that evaluation choices are crucial: they can determine which models and methods appear
+    best and are therefore selected for further development or deployment. The selection of evaluation
+    references should therefore be treated as a central component of clinical validity in CXR machine
+    learning, and justified with respect to the pathology, imaging task, and intended downstream clinical
+    use.'
+  url: https://arxiv.org/abs/2607.26333
+  pdf_url: https://arxiv.org/pdf/2607.26333v1
+  version: v1
+fetched: '2026-11-12'

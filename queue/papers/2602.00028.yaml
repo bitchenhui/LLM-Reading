@@ -1,0 +1,50 @@
+id: paper:arxiv:2602.00028
+status: reviewed
+score: 10
+matched:
+- ref: codec:VVC
+  count: 1
+  weight: 3
+- ref: impl:FFmpeg
+  count: 1
+  weight: 3
+- ref: impl:VVenC
+  count: 1
+  weight: 3
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: 'ELLMPEG: An Edge-based Agentic LLM Video Processing Tool'
+  authors:
+  - Zoha Azimi
+  - Reza Farahani
+  - Radu Prodan
+  - Christian Timmerer
+  published: '2026-01-17'
+  updated: '2026-01-17'
+  categories:
+  - cs.LG
+  - cs.MM
+  abstract: 'Large language models (LLMs), the foundation of generative AI systems like ChatGPT, are transforming
+    many fields and applications, including multimedia, enabling more advanced content generation, analysis,
+    and interaction. However, cloud-based LLM deployments face three key limitations: high computational
+    and energy demands, privacy and reliability risks from remote processing, and recurring API costs.
+    Recent advances in agentic AI, especially in structured reasoning and tool use, offer a better way
+    to exploit open and locally deployed tools and LLMs. This paper presents ELLMPEG, an edge-enabled
+    agentic LLM framework for the automated generation of video-processing commands. ELLMPEG integrates
+    tool-aware Retrieval-Augmented Generation (RAG) with iterative self-reflection to produce and locally
+    verify executable FFmpeg and VVenC commands directly at the edge, eliminating reliance on external
+    cloud APIs. To evaluate ELLMPEG, we collect a dedicated prompt dataset comprising 480 diverse queries
+    covering different categories of FFmpeg and the Versatile Video Codec (VVC) encoder (VVenC) commands.
+    We validate command generation accuracy and evaluate four open-source LLMs based on command validity,
+    tokens generated per second, inference time, and energy efficiency. We also execute the generated
+    commands to assess their runtime correctness and practical applicability. Experimental results show
+    that Qwen2.5, when augmented with the ELLMPEG framework, achieves an average command-generation accuracy
+    of 78 % with zero recurring API cost, outperforming all other open-source models across both the FFmpeg
+    and VVenC datasets.'
+  url: https://arxiv.org/abs/2602.00028
+  pdf_url: https://arxiv.org/pdf/2602.00028v1
+  version: v1
+fetched: '2026-11-12'
+llm_decision: summary_only

@@ -1,0 +1,37 @@
+id: paper:arxiv:2601.14240
+status: skipped
+score: 2
+matched:
+- ref: concept:QP
+  count: 2
+  weight: 1
+- ref: concept:ICM
+  count: 1
+  weight: 1
+meta:
+  title: 'LRC-DHVC: Towards Local Rate Control in Neural Video Compression'
+  authors:
+  - Marc Windsheimer
+  - Simon Deniffel
+  - André Kaup
+  published: '2026-01-20'
+  updated: '2026-01-20'
+  categories:
+  - eess.IV
+  abstract: Local rate control is a key enabler to generalize image and video compression for dedicated
+    challenges, such as video coding for machines. While traditional hybrid video coding can easily adapt
+    the local rate-distortion trade-off by changing the local quantization parameter, no such approach
+    is currently available for learning-based video compression. In this paper, we propose LRC-DHVC, a
+    hierarchical video compression network, which allows continuous local rate control on a pixel level
+    to vary the spatial quality distribution within individual video frames. This is achieved by concatenating
+    a quality map to the input frame and applying a weighted MSE loss which matches the pixelwise trade-off
+    factors in the quality map. During training, the model sees a variety of quality maps due to a constrained-random
+    generation. Our model is the first neural video compression network, which can continuously and spatially
+    adapt to varying quality constraints. Due to the wide quality and bit rate range, a single set of
+    network parameters is sufficient. Compared to single rate point networks, which scale linearly with
+    the number of rate points, the memory requirements for our network parameters remain constant. The
+    code and model are available at link-updated-upon-acceptance.
+  url: https://arxiv.org/abs/2601.14240
+  pdf_url: https://arxiv.org/pdf/2601.14240v1
+  version: v1
+fetched: '2026-11-12'

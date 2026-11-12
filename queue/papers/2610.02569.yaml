@@ -1,0 +1,47 @@
+id: paper:arxiv:2610.02569
+status: skipped
+score: 2
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: 'Pincer: Resource Authorization for Agents using a Digital Twin'
+  authors:
+  - Mayank Rathee
+  - Alexander Stepanov
+  - Shalin Madabhavi
+  - Jinhao Zhu
+  - Raluca Ada Popa
+  - Ion Stoica
+  published: '2026-10-01'
+  updated: '2026-10-01'
+  categories:
+  - cs.CR
+  - cs.AI
+  abstract: Coding agents have become increasingly long-horizon, autonomous, reliant on general-purpose
+    shell and maintain their own persistent memory for self-improvement. While these capabilities have
+    made the agents powerful, they have also made them harder to defend against external adversaries.
+    Defenses that restrict this architecture --- typed tools, information-flow control, or policy prediction
+    engines --- give up too much functionality to be adopted. Agents deployed today (e.g. Claude, Codex)
+    rely on a combination of user-mediated and automode sandboxing as their primary defense. In user-mediated
+    sandboxing, user-maintained policies decay over time and repeated permission requests cause user fatigue,
+    while auto mode's tool-call classifiers learn no user-specific policy and are not meant to defend
+    against adversarial setups. Pincer is a new defense that operates at the resource layer and works
+    alongside existing defenses at the tool-call layer like the auto mode. At the core of Pincer lies
+    a digital twin, an isolated-context model that automatically learns and enforces dynamic user-specific
+    least-privilege policies. The digital twin keeps continually learning the user's preferences allowing
+    it to act as the user's proxy for the agent's permission requests. To emulate the learning phase,
+    we propose a new usercentric dataset with examples following a multi-day transcript of user-agent
+    interaction. Our evaluation shows that Pincer performs strongly on both security and utility in comparison
+    to several baselines which includes variants of LLM judges and adaptations of Conseca (HotOS '25).
+    We highlight attack types where Pincer's design leads to a significant security improvement compared
+    to all other baselines, while outperforming the baselines even for other types of attacks.
+  url: https://arxiv.org/abs/2610.02569
+  pdf_url: https://arxiv.org/pdf/2610.02569v1
+  version: v1
+fetched: '2026-11-12'

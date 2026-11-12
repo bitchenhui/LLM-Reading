@@ -1,0 +1,40 @@
+id: paper:arxiv:2610.33120
+status: skipped
+score: 1
+track: streaming_delivery
+matched:
+- ref: concept:ABR
+  count: 3
+  weight: 1
+meta:
+  title: 'IAR: An Interaction-Aware Approach to Post-Seek Recovery in Adaptive HLS Streaming'
+  authors:
+  - Mahdi Naseri Majd
+  - Amirfarhad Farhadi
+  published: '2026-10-23'
+  updated: '2026-10-23'
+  categories:
+  - eess.IV
+  - cs.MM
+  abstract: After an unbuffered seek, an adaptive bitrate (ABR) player has little forward buffer at the
+    new position, while its controller may retain a bandwidth estimate from earlier downloads. An expensive
+    first request can delay resumption; later requests may interrupt playback while the buffer rebuilds.
+    We introduce Interaction-Aware Recovery (IAR), a temporary layer around the hls.js ABR controller.
+    After an unbuffered seek, IAR discounts the inherited estimate (γ=0.15) to set a representation ceiling.
+    Normal adaptation continues below it until 8 s of forward buffer has been rebuilt. In a 200-run paired
+    study spanning four network profiles, ten seek positions, and five strategies, a conservative first
+    request reduced resume delay by a paired median of 2.008 s relative to standard hls.js. Keeping a
+    low ceiling through recovery reduced later interruption under stronger degradation but lowered early
+    presented bitrate. IAR and Fixed-Low-Recovery both used L0 in this campaign, so the results did not
+    show an additional benefit from deriving the ceiling from inherited bandwidth. In 60 additional runs
+    under a fixed Moderate profile, we reset the estimator to six controlled scalar priors. IAR's ceiling
+    changed from L0 to L1 and L2 at the predicted thresholds. Resume and recovery times increased at those
+    transitions; presented bitrate varied non-monotonically and was highest at L2. No stalls occurred.
+    These reset-created priors do not reproduce complete, naturally evolved exponentially weighted moving
+    average (EWMA) histories. The results show the benefits and presented-quality costs of conservative
+    post-seek recovery, without establishing an advantage for a history-derived ceiling over a fixed low
+    ceiling.
+  url: https://arxiv.org/abs/2610.33120
+  pdf_url: https://arxiv.org/pdf/2610.33120v1
+  version: v1
+fetched: '2026-11-12'

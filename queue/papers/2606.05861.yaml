@@ -1,0 +1,40 @@
+id: paper:arxiv:2606.05861
+status: reviewed
+score: 4
+matched:
+- ref: codec:VVC
+  count: 2
+  weight: 3
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: 'LLMCodec: Adapting Video Codecs for Efficient Weight Compression of Large Language Models'
+  authors:
+  - Rui Wang
+  - Yan Zhao
+  - Li Song
+  - Zhengxue Cheng
+  published: '2026-06-04'
+  updated: '2026-11-03'
+  categories:
+  - cs.MM
+  - cs.AI
+  abstract: The rapid development of large language models(LLMs) has led to remarkable advances in natural
+    language processing. However, the increasing scale of these models introduces substantial challenges
+    in terms of storage, transmission, and deployment. Though great efforts have been devoted to model
+    compression and quantization, existing methods often rely on fine-tuning or calibration data, which
+    exhibit limited generalization across different tensor types. In this paper, we argue that video codecs
+    offer a promising solution for LLM compression, due to their inherent compatibility with matrix structured
+    data, configurable compression strategies, and the availability of highly optimized, off-the-shelf
+    implementations. Therefore, we present LLMCodec, a video codec-based LLM compression method that integrates
+    affine quantization with the recent VVC/H.266 video codec. Beyond VVC, we further compare a range
+    of video codecs and encoding profiles to evaluate their impact on compression performance. Experiments
+    on different models demonstrate the robustness and generality of LLMCodec. Notably, on LLaMA-3-8B
+    at 2-bit precision, LLMCodec reduces perplexity by over 1.5x and improves downstream task accuracy
+    by 21% compared with the existing method.
+  url: https://arxiv.org/abs/2606.05861
+  pdf_url: https://arxiv.org/pdf/2606.05861v3
+  version: v3
+fetched: '2026-11-12'
+llm_decision: deep_read

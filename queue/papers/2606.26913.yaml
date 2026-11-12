@@ -1,0 +1,30 @@
+id: paper:arxiv:2606.26913
+status: skipped
+score: 1
+track: processing_enhancement
+matched:
+- ref: concept:SuperResolution
+  count: 1
+  weight: 1
+meta:
+  title: Neural Texture Compression using Hypernetworks
+  authors:
+  - Belcour Laurent
+  published: '2026-06-25'
+  updated: '2026-06-25'
+  categories:
+  - cs.GR
+  - cs.CV
+  abstract: Recent work on neural texture compression has demonstrated that it is possible to learn small,
+    per-material texture representations (composed of latent textures and a small Multi-Layer Perceptron
+    decoder) that can be decoded in real-time during shading to reproduce the input to a physically based
+    shading model. However, existing methods require performing gradient-descent optimization per material
+    for a given MLP and latent configuration. In this work, we train a single hypernetwork that outputs
+    both the latent features and the MLP's weights and biases. Though the solution space is high-dimensional,
+    this approach produces results comparable in quality to the current reference neural texture compressors.
+    We further extend this approach to infer multiple decoders at once or even produce decoders that learn
+    super-resolution.
+  url: https://arxiv.org/abs/2606.26913
+  pdf_url: https://arxiv.org/pdf/2606.26913v1
+  version: v1
+fetched: '2026-11-12'

@@ -1,0 +1,33 @@
+id: paper:arxiv:2606.26368
+status: skipped
+score: 1
+track: streaming_delivery
+matched:
+- ref: concept:ABR
+  count: 3
+  weight: 1
+meta:
+  title: An Evaluation of ABR Switching for Time-Shifted Clients in MoQ
+  authors:
+  - Abanisenioluwa Orojo
+  - Tanvir Redoy
+  - Samira Afzal
+  - Andrew C. Freeman
+  published: '2026-06-24'
+  updated: '2026-06-24'
+  categories:
+  - eess.IV
+  - cs.MM
+  - cs.NI
+  abstract: Media over QUIC enables ultra low latency video streaming over QUIC, but its default quality-switching
+    semantics risk introducing playback gaps during periods of network congestion. The in-progress SWITCH
+    specification for MOQ Transport aims to streamline rate adaptation for MoQ. In this work, we characterize
+    the performance of SWITCH-style Adaptive Bitrate (ABR) for both live and time-shifted clients in a
+    Mininet simulated topology. We validate that standard ABR algorithms can be directly applied to time-shifted
+    playback without modification, yielding substantially higher throughput. We demonstrate that a subscriber
+    can experience increased overall throughput after a rebuffering scenario, and we identify focal points
+    for further optimizations of MoQ ABR switching.
+  url: https://arxiv.org/abs/2606.26368
+  pdf_url: https://arxiv.org/pdf/2606.26368v1
+  version: v1
+fetched: '2026-11-12'

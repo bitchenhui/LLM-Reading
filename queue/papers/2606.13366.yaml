@@ -1,0 +1,51 @@
+id: paper:arxiv:2606.13366
+status: reviewed
+score: 4
+matched:
+- ref: dataset:ImageNet
+  count: 1
+  weight: 1
+- ref: metric:BD-PSNR
+  count: 1
+  weight: 1
+- ref: metric:FID
+  count: 1
+  weight: 1
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+meta:
+  title: Dual-Constrained Diffusion Image Compression for Operational Rate-Distortion-Perception Optimization
+  authors:
+  - Sanxin Jiang
+  - Jiro Katto
+  - Heming Sun
+  published: '2026-06-11'
+  updated: '2026-06-11'
+  categories:
+  - cs.CV
+  - cs.MM
+  abstract: The rate-distortion-perception (RDP) trade-off extends classical rate--distortion theory by
+    imposing a distributional constraint on reconstructions, providing a unified framework for neural
+    image compression that jointly governs fidelity and perceptual realism. While prior work achieves
+    near-optimal rate--perception trade-offs, practical frameworks explicitly realizing the full RDP surface
+    remain scarce, primarily due to the difficulty of introducing common randomness at the decoder. We
+    propose DCIC (Dual-Constrained Diffusion Image Compression), which integrates a learned codec with
+    a diffusion-based decoder governed by joint distortion and idempotence constraints. The distortion
+    constraint bounds reconstruction fidelity relative to the base codec output; the idempotence constraint
+    -- requiring that re-encoding the restored image recovers the base codec reconstruction -- serves
+    as a tractable surrogate for the distributional perception requirement. Together, they steer the reverse
+    denoising process via iterative optimization with consistent noise injection, realizing common randomness
+    without additional rate overhead. At fixed rate, dual attenuation factors $(K_D, K_P)$ jointly navigate
+    the Pareto frontier of the distortion-perception plane, enabling continuously adjustable fidelity-realism
+    trade-offs from a single bitstream. DCIC$_{RD}$ ($K_P{=}0$) and DCIC$_{RP}$ ($K_D{=}0$) arise as boundary
+    curves, with DCIC$_{RDP}$ ($K_D = K_P=1$) realizing the optimal interior operating point. Experiments
+    on CelebA-HQ, CLIC2020, and ImageNet-1K across CNN, Transformer, and hybrid architectures confirm
+    that DCIC$_{RDP}$ achieves superior BD-PSNR over all perceptual codecs, while DCIC$_{RP}$ matches
+    dedicated perception-oriented methods in BD-FID, validating the practical value of full RDP surface
+    navigation.
+  url: https://arxiv.org/abs/2606.13366
+  pdf_url: https://arxiv.org/pdf/2606.13366v1
+  version: v1
+fetched: '2026-11-12'
+llm_decision: deep_read
