@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-10-19'
   collected: '2026-11-13'
+  updated: '2026-11-14'
 entities:
 - ref: concept:SelfImprovement
   role: subject
@@ -33,6 +34,7 @@ claims:
 summaries:
   one_liner_zh: 揭示记忆式自我改进中'抽象-执行-再抽象'的错误复现循环，提出用后即弃的Anti-Persistence记忆设计，提升成功率并降低LLM调用成本。
   abstract_zh: LLM智能体可将自身执行经验存入外部记忆并复用，在不更新参数的情况下跨任务改进，但存储的规则、总结与技能等抽象中一旦含有错误，便会经检索复用传播，并通过塑造执行轨迹、再抽象生成新错误，作者将这一反馈机制命名为'错误复现'。据此提出Anti-Persistence记忆设计：持续累积轨迹与结果，由自适应选择器依据先前结果决定是否及如何按需合成任务指导，执行后即丢弃，从而避免其作为存储对象被直接复用。在多个基准与骨干模型上，Anti-Persistence取得更高的held-out成功率，同时在受评估的记忆设计中平均LLM调用成本最低。结果支持在基于记忆的自我改进中将经验积累与抽象持久化分离。
+  deep_dive: docs/auto/2610.27406.md
 assessment:
   relevance: high
   decision: summary_only

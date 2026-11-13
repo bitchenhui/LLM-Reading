@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-10-19'
   collected: '2026-11-12'
+  updated: '2026-11-14'
 entities:
 - ref: concept:RSI
   role: subject
@@ -46,6 +47,7 @@ summaries:
     harness。不同于返回单一 harness，该方法用归一化加权平方距离选择机制，提供面向成本（lite）、均衡（medium）和面向性能（heavy）三种 harness 以适配不同部署预算，选中的
     harness 进入下一轮迭代。在 Terminal-Bench 2、SWE-Bench Pro 和 ProgramBench 上，用 GPT-5.5+Codex 时，heavy 模式相对 RHO
     平均通过率提升 2.0 个百分点、单任务平均成本降低 26.1%；用 GLM-5.2+Claude Code 也保持该优势。
+  deep_dive: docs/auto/2610.26770.md
 assessment:
   relevance: high
   decision: summary_only

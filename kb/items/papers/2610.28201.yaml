@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-10-20'
   collected: '2026-11-12'
+  updated: '2026-11-14'
 entities:
 - ref: concept:RSI
   role: subject
@@ -32,6 +33,7 @@ claims:
 summaries:
   one_liner_zh: 提出"模型即数据"视角，把多模型失败轨迹作为训练证据，直接优化跨异构LLM共享的智能体外壳。
   abstract_zh: 针对现有递归自我改进（RSI）方法所优化外壳与目标LLM强耦合、跨模型泛化差且适配新模型成本高的问题，论文提出以harness为优化中心的"模型即数据"新视角。MaD-RSI将多个异构LLM的多样失败轨迹纳入训练过程，把模型间差异从"泛化评估标准"转变为"优化训练证据"，直接优化一个跨模型共享的harness。论文还提出包含两个互补指标的新评估框架，用于衡量跨模型harness优化效果。多数据集、多LLM实验表明，MaD-RSI相较现有方法提升了泛化能力并降低了训练成本。
+  deep_dive: docs/auto/2610.28201.md
 assessment:
   relevance: high
   decision: summary_only

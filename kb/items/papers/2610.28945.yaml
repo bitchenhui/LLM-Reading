@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-10-20'
   collected: '2026-11-13'
+  updated: '2026-11-14'
 entities:
 - ref: concept:SelfImprovement
   role: subject
@@ -30,6 +31,7 @@ claims:
 summaries:
   one_liner_zh: 提出受MPPI启发的测试时框架，用世界模型多分支预测与双分支经验记忆实现LLM智能体自我改进。
   abstract_zh: 提出一种测试时框架，借鉴模型预测路径积分（MPPI）控制，将多分支预测分析与基于经验的适应相结合。智能体每步提出多个候选动作并用世界模型想象其结果，无需在环境中实际执行即可比较备选方案；针对语言环境缺乏显式动力学与代价的问题，按任务进展与风险对预测结果评估，并以MPPI式权重引导最终决策。双分支经验记忆支持自我改进：规划器分支细化候选生成与动作选择，世界模型分支改进下一观测预测。在ALFWorld和ScienceWorld上跨三个LLM骨干的实验验证了方法整体性能及经验引导预测控制的有效性，代码将开源。
+  deep_dive: docs/auto/2610.28945.md
 assessment:
   relevance: high
   decision: summary_only

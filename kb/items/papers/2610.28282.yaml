@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-10-20'
   collected: '2026-11-13'
+  updated: '2026-11-14'
 entities:
 - ref: concept:SelfImprovement
   role: subject
@@ -40,6 +41,7 @@ summaries:
   abstract_zh: 多模态大语言模型在常见图表上表现良好，但在视觉结构多样、推理需求各异的长尾图表上准确率急剧下降，而人工为异构长尾设计工具与策略难以规模化。为此作者提出递归自我改进框架 ChartEvo，通过经验驱动的
     harness 级自我改进，联合进化可复用的图表特定 Skills 与可执行 Tools，并学习可复用的局部工具调用链，在组合已进化能力的同时控制工具增强推理的开销。在 ChartBench 与
     ChartX 的长尾图表上，ChartEvo 相对基座模型 Qwen3.7-Plus 分别将准确率提升 45.6% 与 32.5%，验证了递归自我改进对长尾图表适配的有效性。
+  deep_dive: docs/auto/2610.28282.md
 assessment:
   relevance: high
   decision: summary_only

@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-10-20'
   collected: '2026-11-13'
+  updated: '2026-11-14'
 entities:
 - ref: concept:RSI
   role: subject
@@ -30,6 +31,7 @@ claims:
 summaries:
   one_liner_zh: 借鉴RL的pass@k分析，区分框架优化收益源自激发既有能力还是拓展可解任务边界，发现pass@1优势在大尝试预算下可能反转。
   abstract_zh: 该工作系统研究不改权重、仅优化智能体harness（上下文、工具使用与执行流程设计）所带来的性能收益的本质。作者借鉴强化学习文献中比较RL训练前后模型的pass@k分析方法，将优化后框架与其优化前版本进行对照。具体评估可达任务覆盖面的变化，将harness优化与模型扩容及增加推理时计算进行对比，并考察收益随任务难度的变化规律。在静态预测与动态任务上均发现：harness相对更强干预的pass@1优势在更大尝试预算下可能反转，且聚合收益会掩盖在困难任务上的不足，凸显细粒度诊断的必要性。作者指出激发（提升已可达任务的可靠性）与拓展（扩大可解任务范围）的区分对递归自我改进和进化搜索尤为关键，因为拓展才能为推动能力边界提供更广的成功经验。
+  deep_dive: docs/auto/2610.27889.md
 assessment:
   relevance: high
   decision: summary_only
