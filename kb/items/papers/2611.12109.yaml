@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-11-09'
   collected: '2026-11-12'
+  updated: '2026-11-14'
 entities:
 - ref: concept:LLM
   role: subject
@@ -49,6 +50,7 @@ claims:
 summaries:
   one_liner_zh: 提出SkillDuet框架，以响应反馈协同LLM参数更新与外部技能库演化，实现技能级递归自我改进。
   abstract_zh: SkillDuet通过模型响应反馈协调参数更新与技能演化：从on-policy轨迹抽取的技能经OPD逐步指导参数更新；基于响应偏移幅度的分数Strength对候选技能排序，最高分技能周期性固化进持久全局技能集Global。更新后的模型与Global共同引导后续交互，生成新经验用于进一步的参数与技能更新。基于Qwen3-4B，SkillDuet在ALFWorld达98.57%成功率、WebShop达92.97%，分别超过对齐的SEED-API基线2.86和5.47个百分点。消融表明响应式技能选择与Global固化均提升性能，且保留技能的收益取决于技能内容及其与当前模型的兼容性。
+  deep_dive: docs/auto/2611.12109.md
 assessment:
   relevance: high
   decision: summary_only

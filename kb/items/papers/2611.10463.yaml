@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-11-07'
   collected: '2026-11-12'
+  updated: '2026-11-14'
 entities:
 - ref: concept:LLM
   role: subject
@@ -36,6 +37,7 @@ claims:
 summaries:
   one_liner_zh: 以递归自我改进挂接LLM长上下文推理底层能力，免数据合成与后训练即在HELMET/RULER超越基线且成本低于其50%。
   abstract_zh: 现有增强LLM长上下文推理的方法多依赖数据合成加后续后训练，策略经验驱动且计算开销大。该文提出LongCapHarness框架，改为在开发集上通过递归自我改进递归修订与更新能力原语实现、能力状态和控制逻辑，从而挂接模型的底层能力。无需数据合成与LLM后训练，框架应用于Llama3-8B并可迁移至Qwen2.5-3B。在HELMET和RULER基准上显著优于近期基于数据合成的基线（NExtLong、PolicyLong），估计开发成本不足其估计训练成本的50%。
+  deep_dive: docs/auto/2611.10463.md
 assessment:
   relevance: high
   decision: summary_only

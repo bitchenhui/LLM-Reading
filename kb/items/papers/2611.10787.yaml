@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-11-07'
   collected: '2026-11-12'
+  updated: '2026-11-14'
 entities:
 - ref: concept:RSI
   role: subject
@@ -42,6 +43,7 @@ summaries:
     TRUST 框架，将在线多重假设检验程序用于控制跨轮次的错误进化率，并由 LLM 分析历史上下文决定接受更新所需证据量。在可解释假设下，作者证明 TRUST 能限制被接受更新中造成不可接受性能损失的比例，并推导出最终性能增益的下界。在
     HotpotQA、DROP、APPS 三个基准上配合 DeepSeek-V4-Flash 与 Qwen-3.8-Flash，TRUST 把贪心门控平均 45.59% 的劣质更新接受率降到 2.78%，且最终分数高于现有
     SOTA 统计门控基线。
+  deep_dive: docs/auto/2611.10787.md
 assessment:
   relevance: high
   decision: summary_only

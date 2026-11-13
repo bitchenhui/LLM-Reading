@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-11-08'
   collected: '2026-11-12'
+  updated: '2026-11-14'
 entities:
 - ref: concept:SelfImprovement
   role: subject
@@ -50,6 +51,7 @@ claims:
 summaries:
   one_liner_zh: SimplEvo用自写文本记忆与教训精炼实现免权重更新的自我改进，EBench成功率从46.7%升至81.7%。
   abstract_zh: 提出SimplEvo，让多模态大模型在直接控制下通过自写文本记忆留存经验：由单次演示写一次无坐标任务记忆，仅在训练回合上维护有界工作记忆，并在每个回合后从流程、完成与恢复三方面精炼教训；测试时两份记忆冻结，无需权重更新、后训练策略或特权信息。在EBench上，SimplEvo将GPT-6-Astra直接控制的成功率从46.7%提升至81.7%，并以69.63%成功率、75.32分数登顶RoboDojo榜单。仅用文本记忆即可取得与存储历史视觉帧的记忆相近的成功率且token消耗更少。冻结的工作记忆可跨模型迁移：由GPT-6-Astra撰写后，更弱MLLM原样复用即获性能提升，并在未见布局与随机化场景下保持泛化。
+  deep_dive: docs/auto/2611.11509.md
 assessment:
   relevance: high
   decision: summary_only

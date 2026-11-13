@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-11-10'
   collected: '2026-11-13'
+  updated: '2026-11-14'
 entities:
 - ref: concept:LLM
   role: subject
@@ -50,6 +51,7 @@ summaries:
   abstract_zh: 该方法将 89 个来自 KV-cache 驱逐、权重剪枝与投机解码的已发表算法形式化为带显式假设的证明图，并在 Lean 中校验。其搜索框架 AutoAssumption 对已发表方法放宽其中一条假设，重新推导并重新证明，再生成代码。在
     KV-cache 驱逐与权重剪枝任务上，该搜索跑赢了所有参与对比的已发表算法并产出最优方法：驱逐算法取得所运行已发表方法中最高的 RULER-4K 分数，剪枝算法在四个 LLaMA 模型上取得 13
     个方法中最低的困惑度。同等预算下，该框架得分与 OpenEvolve（AlphaEvolve 的开源实现）相差不到 1 分，且多次重复的方差更低。
+  deep_dive: docs/auto/2611.14844.md
 assessment:
   relevance: high
   decision: summary_only

@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-11-10'
   collected: '2026-11-13'
+  updated: '2026-11-14'
 entities:
 - ref: concept:SelfImprovement
   role: subject
@@ -64,6 +65,7 @@ claims:
 summaries:
   one_liner_zh: 提出FGSE框架，将经验教训作为可证伪假设经三类探针验证后再写入智能体记忆，兼顾性能与更新安全
   abstract_zh: 针对LLM智能体将回合经验教训直接写入记忆、使局部成功成为不可靠知识信号的问题，本文研究行为更新何时应被纳入智能体持久状态。提出证伪门控自我进化框架FGSE，将每条候选教训表示为带前置条件、行为变化、预期效果与验证器的结构化假设。该假设先仅在临时状态生效，经目标迁移、证伪与存档回归三类探针测试，再依据实测收益与风险决定提交、细化或拒绝。在Web、App、工具使用与长期记忆基准上，FGSE取得39.8的WebArena成功率、78.8的AppWorld平均完成率以及τ-Retail/τ-Airline上0.724/0.487的Pass^1，同时将证伪失败率降至5.0%、回归损害降至1.3%、有害提交更新降至3.6%。
+  deep_dive: docs/auto/2611.14326.md
 assessment:
   relevance: high
   decision: summary_only

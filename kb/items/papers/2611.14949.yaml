@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-11-11'
   collected: '2026-11-13'
+  updated: '2026-11-14'
 entities:
 - ref: concept:RSI
   role: subject
@@ -55,6 +56,7 @@ summaries:
   one_liner_zh: 提出含1001案例、42方程模板的PDE求解基准，并给出递归自我改进智能体框架RSI-PDE，显著提升通过率并降低调用成本。
   abstract_zh: 从采样解数据中识别并求解偏微分方程通常需要专家在方程发现、系数估计与数值求解器配置上投入大量精力，本文考察LLM智能体能否准确高效地自动化该流程。基准RSI-PDEbench包含1001个案例、覆盖42个方程模板（含经典与分数阶PDE），提供Full（无噪声数据）、Noisy（高斯噪声RMS为干净信号RMS的50%）与Hard-OOD（未见方程模板与系数偏移的外推泛化）三种评测设置。作者进一步提出递归自我改进智能体框架RSI-PDE：按残差损失筛选候选方程，用相对L²反馈精调系数与数值求解器，并以验证门控约束策略与记忆更新。在四个前沿模型上与单次运行基线及原生智能体harness（Claude
     Code或Codex）对比，RSI-PDE将跨模型平均通过率相对单次基线提升106.5–181.9%，相对原生harness提升3.0–19.6%，同时将12个模型-设置组合的总记录模型调用次数减少46.9%。
+  deep_dive: docs/auto/2611.14949.md
 assessment:
   relevance: high
   decision: summary_only

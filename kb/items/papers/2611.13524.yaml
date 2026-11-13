@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-11-10'
   collected: '2026-11-13'
+  updated: '2026-11-14'
 entities:
 - ref: concept:RSI
   role: subject
@@ -40,6 +41,7 @@ summaries:
   abstract_zh: 论文在持续任务流上评测递归自我改进（RSI）的性能收益与其全成本的权衡，在每条任务的反馈被用于后续更新之前先行打分，并将自我改进过程的 token 开销定义为 RSI Tax，与任务执行成本一并纳入端到端评估。在六个方法、两个语言模型的实验中，一个有界笔记（bounded-note）基线在精度上持平或超过
     Meta-Harness、EvoSkill 和 RRSI 三种 RSI 方法，平均总 token 节省 65.6–71.0%。作者将 RSI Tax 分解为验证、探索与写入三类成本，发现验证成本占三种方法聚合
     RSI Tax 的 74.8–93.6%，且相当一部分开销对应的状态或产物在后续任务流中并未被使用。结论指出昂贵的 RSI 流程未必物有所值，应联合优化 RSI Tax 与任务执行成本。
+  deep_dive: docs/auto/2611.13524.md
 assessment:
   relevance: high
   decision: summary_only
