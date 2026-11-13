@@ -359,8 +359,6 @@ def sanitize(out: dict, rec: dict, entities: dict, known_ids: set[str], today: s
 
     rl = [l for l in out.get("research_lines", []) if l in RESEARCH_LINES]
     domain = out.get("domain") if out.get("domain") in DOMAINS else infer_domain(ents)
-    if domain != CORE_DOMAIN and decision == "deep_read":
-        decision = "summary_only"  # 非核心域降级：v1 只 summary 跟踪
     return {
         "decision": decision, "relevance": relevance,
         "domain": domain,

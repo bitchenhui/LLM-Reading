@@ -45,6 +45,15 @@ DEEP_INSTRUCTIONS = """你是音视频/图像编码领域的资深研究员，�
 - 笔记全文控制在 6000-9000 字：方法机理写透，实验节保留关键行与结论数字，不逐表抄录。
 - 输出 markdown，遵循给定结构，七个小节完整写完。"""
 
+DEEP_INSTRUCTIONS_GENERIC = """你是音视频技术交叉方向的资深研究员，为领域信息整合引擎撰写论文精读笔记
+（论文属于非核心大类，按其自身领域的技术标准来评估与解读，并与音视频技术上下游的关联写清楚）。
+要求：
+- 忠实原文：所有量化结论必须来自论文文本，带口径（锚点/数据集/条件）；不确定的数字不写。
+- 中文、技术密度高：面向该领域研究者，直击方法机理与工程含义，不写科普腔。
+- 纯文本环境：不要引用/提及论文插图，不要输出图片占位。
+- 笔记全文控制在 6000-9000 字：方法机理写透，实验节保留关键行与结论数字，不逐表抄录。
+- 输出 markdown，遵循给定结构，七个小节完整写完。"""
+
 NOTE_TEMPLATE = """# {title}
 
 > {authors}. *arXiv:{external_id} ({pub})*
@@ -146,7 +155,9 @@ def main() -> int:
     all_items = [load_yaml(p) | {"_path": p} for p in sorted(ITEMS.glob("*.yaml"))]
 
     cands = [d for d in all_items
-             if d["assessment"]["decision"] == "deep_read" and not d["summaries"].get("deep_dive")]
+             if (d["assessment"]["decision"] == "deep_read"
+                 or d["assessment"]["relevance"] == "high")
+             and not d["summaries"].get("deep_dive")]
     cands.sort(key=lambda d: ({"high": 0, "medium": 1, "low": 2}[d["assessment"]["relevance"]],
                               d["time"]["published"]), reverse=True)
     cands = cands[: args.limit]
@@ -175,9 +186,11 @@ def main() -> int:
         related = related_items(item, all_items)
 
         note_path = DOCS_AUTO / f"{arxiv_id}.md"
+        instructions = (DEEP_INSTRUCTIONS if item.get("domain", "video_image_coding") == "video_image_coding"
+                        else DEEP_INSTRUCTIONS_GENERIC)
         try:
             note = llm.chat(build_prompt(item, text, related), tier="deep",
-                            instructions=DEEP_INSTRUCTIONS, max_tokens=30000)
+                            instructions=instructions, max_tokens=30000)
         except Exception as e:  # noqa: BLE001
             print(f"    ✗ LLM 失败: {e}")
             continue
