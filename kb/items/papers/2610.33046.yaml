@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-10-17'
   collected: '2026-11-13'
+  updated: '2026-11-14'
 entities:
 - ref: concept:SelfImprovement
   role: subject
@@ -53,6 +54,7 @@ summaries:
   abstract_zh: 论文指出 LLM 引导的演化搜索框架通常依赖固定搜索流程或仅允许调整预定义组件，难以适配多样的研究问题与运行时涌现的挑战。作者提出 Organon，一个面向科学发现的递归自改进智能体：单个持久智能体在执行中分析累积经验，自主修订自身的搜索策略、种群管理、诊断工具、记忆与工作者协调机制，且修订在运行时即时生效；它还能诊断并修正自身自适应流程中的缺陷，实现对自改进机制本身的递归改进。在覆盖算法设计、GPU
     核优化、数学构造与系统优化的21项计算发现任务上评测：ALE-Bench Lite 全部10个任务取得最优，平均留存性能较 EvoX 提升20.5%；KernelBench 四个工作负载中三个最优，相对最强对比方法加速最高达1.67倍。轨迹分析显示智能体发展出任务专属搜索策略、构建新诊断能力，并能纠正或回退自身的早期修订。系统基于
     DeepSeek Harness 与 Cordis 的时空可组合性实现，代码已开源。
+  deep_dive: docs/auto/2610.33046.md
 assessment:
   relevance: high
   decision: summary_only

@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-10-17'
   collected: '2026-11-13'
+  updated: '2026-11-14'
 entities:
 - ref: concept:RSI
   role: subject
@@ -37,6 +38,7 @@ claims:
 summaries:
   one_liner_zh: 提出MELD层级测试时训练框架，协调者与科学家策略交替GRPO更新，实现多智能体科学发现的递归自我改进。
   abstract_zh: 论文提出MELD，一个统一的层级测试时训练框架，在单一科学发现过程中联合自适应团队级Coordinator策略与个体级Scientist策略。Coordinator在共享推导树上生成联合搜索分支组合与研究指令，Scientist负责假设与执行计划，由共享的冻结Executor执行。两级策略在共享的平滑best-of-budget目标下交替接受GRPO式参数更新，使团队组织与个体研究行为在递归自我改进回路中共演化。理论分析证明层级目标对齐，刻画了相对独立并行发现的协调增益条件、私有适应的一阶收益，并给出自适应模型的有限预算遗憾界。在22个MLGym与MLE-bench任务上，MELD在其中20个上表现最佳，并在MLGym上取得最高聚合归一化分数，仅使用4B骨干模型。
+  deep_dive: docs/auto/2610.24454.md
 assessment:
   relevance: high
   decision: summary_only

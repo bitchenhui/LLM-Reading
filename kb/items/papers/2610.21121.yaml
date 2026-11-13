@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-10-15'
   collected: '2026-11-13'
+  updated: '2026-11-14'
 entities:
 - ref: concept:3DGS
   role: subject
@@ -51,6 +52,7 @@ summaries:
   one_liner_zh: 按高斯时间特性分流编码传输的3DGS框架，提升移动端体积视频流媒体的重建质量与带宽效率。
   abstract_zh: 论文指出V³等现有3DGS移动流媒体管线将所有高斯视为逐帧变化信号并统一视频编码，在复杂全场景内容的时间稳定区域造成质量退化。据此提出ResStreamGS残差敏感双流框架：先用轻量探测适配识别残差敏感高斯原语，再在GOP内复用稳定高斯（每个GOP仅传输一次），视频流中只保留残差敏感高斯以维持硬件解码能力。在复杂全场景体积视频上的实验显示，相比V³式全高斯基线，编码后PSNR提升7.51–8.35
     dB，摊销负载最多降低56.5%，并在高通骁龙778G平台上达到30.883 FPS实时渲染。
+  deep_dive: docs/auto/2610.21121.md
 assessment:
   relevance: high
   decision: summary_only

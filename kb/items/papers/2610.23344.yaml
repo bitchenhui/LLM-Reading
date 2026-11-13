@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-10-16'
   collected: '2026-11-12'
+  updated: '2026-11-14'
 entities:
 - ref: concept:LLM
   role: subject
@@ -42,6 +43,7 @@ claims:
 summaries:
   one_liner_zh: 提出LM2LM：用RL训练LLM产出LM改进提案，以研究世界模型为奖励，胜过GPT-6-sol且数据生成成本降33%。
   abstract_zh: 论文提出LM2LM，用强化学习训练LLM生成有效的语言模型改进提案，以逼近递归自我改进。针对真实反馈昂贵的问题，采用冻结LLM构成的研究世界模型（RWM）从上下文中的真实实验记录预测提案增益，作为RL奖励模型；并定期执行RWM高排名的当前策略提案，将实测结果加入其上下文以维持反馈可靠性。在八个自回归与扩散LM开发环境中，held-out任务的真实执行评估显示，LM2LM训练后的Qwen3.8-27B胜过即使被提供300条真实实验记录的GPT-6-sol，同时数据生成成本降低33%。该方法还能泛化到训练时未见的模型家族。
+  deep_dive: docs/auto/2610.23344.md
 assessment:
   relevance: high
   decision: summary_only

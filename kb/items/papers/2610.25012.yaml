@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-10-18'
   collected: '2026-11-12'
+  updated: '2026-11-14'
 entities:
 - ref: concept:SelfImprovement
   role: subject
@@ -51,6 +52,7 @@ summaries:
   one_liner_zh: 用LLM智能体自改进搜索联合编译投机解码的草稿与目标模型共享执行，几何平均提速1.37倍。
   abstract_zh: 该文将投机解码重构为跨模型编译问题，在草稿模型与目标模型的共享执行内联合优化，而非各自独立编译，核心洞察是跨模型优化应由共置共享执行的实测性能引导。为此设计了将两模型块交错排布于公共tile的操作数布局，使GEMM与非GEMM计算共置且不改变数学语义。系统以自我改进的智能体搜索实现：LLM以编译器和GPU执行为环境编辑跨模型优化计划，利用实测得分、kernel级判定与编译器反馈迭代提案，并用蒙特卡洛树搜索累积奖励指导探索。在NVIDIA
     B300与RTX 5090上6种单GPU投机解码配置中，几何平均单轮加速1.37x，交错kernel后达1.45x（最佳1.59x），GPU利用率平均提升1.46x（RTX 5090）与1.50x（B300）。
+  deep_dive: docs/auto/2610.25012.md
 assessment:
   relevance: high
   decision: summary_only

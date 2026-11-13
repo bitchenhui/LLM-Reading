@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-10-15'
   collected: '2026-11-12'
+  updated: '2026-11-14'
 entities:
 - ref: concept:RSI
   role: subject
@@ -42,6 +43,7 @@ claims:
 summaries:
   one_liner_zh: 提出RSIFlow递归自我改进框架，以自适应工作流编排加元代理harness演化提升LLM代理性能，六个基准全部SOTA。
   abstract_zh: 论文提出RSIFlow，一个将自适应工作流编排与元代理能力演化相结合的递归自我改进（RSI）框架。该框架从任务-代理轨迹与环境反馈中诊断性能瓶颈，动态选择针对特定组件的改进工作流。元代理随后将工作流成果蒸馏为组件级技能与跨组件原则，并演化自身的harness，从而改进后续的工作流编排。在六个基准和两个骨干模型上的实验表明RSIFlow在所有基准上取得SOTA平均性能；消融实验进一步验证了自适应工作流编排与元harness演化各自的贡献。
+  deep_dive: docs/auto/2610.21791.md
 assessment:
   relevance: high
   decision: summary_only

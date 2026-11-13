@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-10-16'
   collected: '2026-11-12'
+  updated: '2026-11-14'
 entities:
 - ref: concept:LLM
   role: subject
@@ -43,6 +44,7 @@ summaries:
   abstract_zh: LLM编码智能体的表现由策略模型与中介其与环境交互的harness共同决定，单独演化任一组件均非最优。该文提出Self-HPO：每轮先由当前策略分析自身失败并提出新harness候选（H步），再在选定harness下用强化学习更新策略（P步），训练中识别的困难任务构成下一轮harness搜索集，使harness优化始终针对策略不断演化的失败模式。在三个编码基准上，Self-HPO持续超越仅harness与仅策略基线，将Qwen3.5-35B-A3B的平均resolve
     rate从57.8%提升至64.8%，且增益可泛化到分布外设置。两个优化组件与各自基础版本配对时仍保留增益，联合增益超过各自增益之和，并同时提升Pass@1可靠性与Pass@k能力边界；以更强外部模型（如Opus
     4.8）作harness提出者可获得进一步提升。
+  deep_dive: docs/auto/2610.22791.md
 assessment:
   relevance: high
   decision: summary_only
