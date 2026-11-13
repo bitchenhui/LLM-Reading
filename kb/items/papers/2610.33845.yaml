@@ -13,6 +13,7 @@ source:
 time:
   published: '2026-10-24'
   collected: '2026-11-13'
+  updated: '2026-11-14'
 entities:
 - ref: concept:SelfImprovement
   role: subject
@@ -70,6 +71,7 @@ claims:
 summaries:
   one_liner_zh: 自我改进LLM代理系统AutoTavern在20天内自主构建炉石战棋模拟器与AI，天梯评分约15000，各项指标超越服务器前十玩家。
   abstract_zh: 论文提出AutoTavern，一个由专门化LLM研究代理组成的自我改进研究系统：代理共享类型化研究记忆，所有论断经验证门把关，并接入实时对局形成闭环，从而同时改进模拟器、对手、策略以及自身的研究流程，人类仅在机制歧义处设定目标与规则。20天内系统构建了首个忠实还原全内容的实时游戏复现TavernGym，并迭代出23版以PPO对抗校准对手训练的TavernAgent。TavernAgent可独立在天梯完成完整对局，评分从6,000升至约15,000，最后20场记录平均排名1.60、第一名比例80%，各项统计均优于服务器十名最高分玩家（2.34、59%）。TavernBench基准（40场景960任务）表明代理构建出的系统是最强玩家：TavernAgent玩法任务正确率91%而前沿LLM至多63%，决策用时0.03秒而前沿LLM最长需26秒；在实时回合1秒预算内仍保持90%，LLM不超过26%。
+  deep_dive: docs/auto/2610.33845.md
 assessment:
   relevance: high
   decision: summary_only

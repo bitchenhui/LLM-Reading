@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-10-26'
   collected: '2026-11-13'
+  updated: '2026-11-14'
 entities:
 - ref: concept:LLM
   role: subject
@@ -48,6 +49,7 @@ claims:
 summaries:
   one_liner_zh: 不改冻结VLM，用AlphaEvolve式自主进化搜索推理程序，图表问答平均精确匹配率从16.6%升至41.3%，且快3.8倍。
   abstract_zh: 针对开源视觉语言模型在科学图表问答中大量错误源于回答不精确的问题，本文在不改动冻结模型的前提下搜索优化推理程序。方法借鉴AlphaEvolve的自主进化思想：从基线推理程序出发，每轮由LLM判别器查看当前代码与若干训练失败样例并提出进化改写，候选程序按训练准确率存入小池，后续编辑作用于高分程序。在3个VLM和4个流行图表基准上，描述性问题的精确匹配准确率在所有设置中均获提升，平均从16.6%升至41.3%，最大单点提升55.2个百分点。附带收益是进化后的程序比初始程序快3.8倍，表明相当一部分误差来自推理流水线而非模型本身。
+  deep_dive: docs/auto/2610.35077.md
 assessment:
   relevance: high
   decision: summary_only

@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-10-23'
   collected: '2026-11-12'
+  updated: '2026-11-14'
 entities:
 - ref: codec:Opus
   role: subject
@@ -39,6 +40,7 @@ summaries:
   one_liner_zh: SEMAC用量化方向能量包络加少量CELT通道压缩高阶Ambisonics，主观评分优于全通道Opus CMF 3。
   abstract_zh: 高阶Ambisonics（HOA）通道数随球谐阶数平方增长，广泛部署的Opus通过Channel Mapping Families 2/3（RFC 8486）逐通道编码全部Ambisonics通道，码率随阶数二次增长。SEMAC改用量化的全阶方向性能量包络加上更少的CELT编码传输通道来表示信号，将CELT把频带能量包络与信号形状分离、量化后恢复包络的原则推广到方向性信号。由于降维传输仅覆盖低维子空间，解码端重新施加编码端观测到的能量包络，即可恢复全阶方向能量分布。在五阶素材、512与768
     kbit/s匹配配置的MUSHRA测试中，使用36个传输通道中16个的SEMAC在两种码率下评分均高于全阶CMF 3，且在相同传输通道数下优于阶数截断。结果表明“少通道+方向包络”策略在感知上优于以低精度编码全部HOA通道。
+  deep_dive: docs/auto/2610.32981.md
 assessment:
   relevance: high
   decision: summary_only

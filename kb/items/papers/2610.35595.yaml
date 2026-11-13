@@ -13,6 +13,7 @@ source:
 time:
   published: '2026-10-26'
   collected: '2026-11-13'
+  updated: '2026-11-14'
 entities:
 - ref: concept:LLM
   role: subject
@@ -54,6 +55,7 @@ summaries:
   abstract_zh: 论文提出模仿进化算法研究方法论的分阶段智能体流水线：LLM 智能体提出黑盒优化算法，由 Lean 守卫过滤有缺陷的设计，再定义势函数并证明漂移界以获得相对基线的期望运行时间改进保证，全流程不做任何经验比较。流水线为
     CycleUncover 问题设计出期望运行时间 O(n²) 的算法，而经典 (1+1) EA 需要 e^{Ω(n)}；还为整数次模最小化设计 O(n^{2+2c}) 算法，并在 LeadingOnes
     上匹配经典 O(n²)。在 8 个问题类上，前沿模型的 15 次运行中有 12 次完成流水线并产出机器检验的期望运行时间界。消融研究表明，去掉分阶段让智能体零样本直接设计会退化为复制种子基线（随机搜索）或产生不完整证明。
+  deep_dive: docs/auto/2610.35595.md
 assessment:
   relevance: high
   decision: summary_only

@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-10-21'
   collected: '2026-11-13'
+  updated: '2026-11-14'
 entities:
 - ref: concept:RSI
   role: subject
@@ -40,6 +41,7 @@ summaries:
   abstract_zh: 论文指出当前 AI 系统参数冻结、依赖外部更新，并提出递归自我改进（RSI）需要持续变化、客观可验证且自然锚定的环境。作者构建 EvoForesight：一个以真实未来事件预测为任务落地的可持续进化智能体系统，活的环境合成可验证任务，递归进化引擎将每次预测背后的推理轨迹转化为能力，通过搜索与预测解耦来适配易受污染的实时环境，并蒸馏可复用技能以在有限轨迹下持续进化。在外部
     FutureX 排行榜（按真实世界结果验证预测、每周更新）上，其自我改进的预测智能体连续三周在所有系统中排名第一，评分最高提升 195%；在自建合成评测上，四个基础 LLM 均进入前三，最多领先最强基线
     10.7 个 Bradley–Terry 分。
+  deep_dive: docs/auto/2610.29784.md
 assessment:
   relevance: high
   decision: summary_only

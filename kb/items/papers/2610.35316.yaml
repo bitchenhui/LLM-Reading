@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-10-26'
   collected: '2026-11-13'
+  updated: '2026-11-14'
 entities:
 - ref: concept:RSI
   role: subject
@@ -44,6 +45,7 @@ claims:
 summaries:
   one_liner_zh: 固定LLM权重，用递归自我改进从失败轨迹迭代修订代理支架，解决开放域对话式文本到可视化任务。
   abstract_zh: 用户请求图表时常不知相关数据在哪个库或表，请求可能含歧义，需澄清提问并跨轮跟踪意图、保留既有约束。现有text-to-visualization代理依赖预定义的静态支架，无法从跨任务重复失败中改进。RSIV-Harness保持语言模型权重固定，将递归自我改进应用于外围支架，从自身失败轨迹修订支架，并通过四层框架以锚点与记忆检查评估候选修订，通过则精化、否则回滚到最佳已验证支架。同时提出含640个任务的ODAC-Vis基准，联合评估开放域数据发现、歧义消解、多轮可视化精化与可执行图表生成。单轮RSIV-Harness即相对种子支架全面提升全部六项指标，可执行性+28.02分、图表结构+34.01分。
+  deep_dive: docs/auto/2610.35316.md
 assessment:
   relevance: high
   decision: summary_only

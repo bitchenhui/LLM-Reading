@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-10-24'
   collected: '2026-11-12'
+  updated: '2026-11-14'
 entities:
 - ref: concept:RSI
   role: subject
@@ -44,6 +45,7 @@ summaries:
     个基准与盲测人类评估上评测，全部十个智能体均产出可用助手，最强者（由 GPT-6 Astra 训练）在 12 个能力基准上中位数填补了基座到 NVIDIA Instruct 差距的 76%，人类偏好评分经回复长度与格式统计调整后接近
     NVIDIA Instruct。第二阶段各智能体获得其模型的对比记录与投票后再训三天，以 NVIDIA Instruct 为共同参照，十个模型中八个的风格调整后相对评分提升。研究发现基准收益有限且与偏好收益无明显关联，部分智能体诱导更长回复，一个模型在
     StrongREJECT 上有害顺从度上升。该平台为研究人类反馈如何引导自主模型开发提供了可审计的环境。
+  deep_dive: docs/auto/2610.33624.md
 assessment:
   relevance: high
   decision: summary_only

@@ -13,6 +13,7 @@ source:
 time:
   published: '2026-10-23'
   collected: '2026-11-12'
+  updated: '2026-11-14'
 entities:
 - ref: concept:RSI
   role: subject
@@ -49,6 +50,7 @@ summaries:
   abstract_zh: 针对生成式推荐（GR）模块级联管线（tokenization、预训练、对齐）中既有演化方法忽视分阶段重训成本、且评估短视丢弃暂退上游创新的问题，论文提出 TGR-EvoDAG。该框架将代码演化建模为有向无环图（DAG），维护多演化分支并合并互补创新，结合阶段感知的
     GPU 时预算规划与主动下游协同适配。在公开 Amazon 数据集上首次实现完整 GR 管线的自主演化，离线指标较最强基线最高提升 37.4%，Agent4Rec 模拟用户满意度提升 19.7%。在腾讯大规模商业媒体平台工业部署中，演化后的
     GR 离线 Hit@1 相对提升 12.16%，在线 CTR 统计显著提升 0.40%。
+  deep_dive: docs/auto/2610.32326.md
 assessment:
   relevance: high
   decision: summary_only
