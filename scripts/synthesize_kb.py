@@ -51,9 +51,15 @@ def pack_domain(items: list[dict]) -> str:
             ("".join(f" [{m.get('name') or m.get('ref','').split(':')[-1]}={m.get('value')}"
                      f"{'，'+m['scope'] if m.get('scope') else ''}]" for m in c.get("metrics", [])))
             for c in d.get("claims", [])[:4])
-        deep = "（有精读笔记）" if d["summaries"].get("deep_dive") else ""
-        lines.append(f"[{d['time']['published']}] {d['id']}｜{d.get('title_zh') or d['title']}{deep}"
-                     f"\n  摘要: {d['summaries'].get('one_liner_zh','')}{claims}")
+        note = ""
+        deep = d["summaries"].get("deep_dive")
+        if deep and (ROOT / deep).exists():
+            text = (ROOT / deep).read_text(encoding="utf-8")
+            # 去掉自动生成头两行，取笔记开头的方法动机部分
+            body = "\n".join(text.split("\n")[2:])
+            note = f"\n  精读摘录: {body[:900]}…"
+        lines.append(f"[{d['time']['published']}] {d['id']}｜{d.get('title_zh') or d['title']}"
+                     f"\n  摘要: {d['summaries'].get('one_liner_zh','')}{claims}{note}")
     return "\n".join(lines)
 
 
