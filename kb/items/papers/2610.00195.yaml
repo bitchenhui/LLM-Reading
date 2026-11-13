@@ -1,0 +1,56 @@
+id: paper:arxiv:2610.00195
+type: paper
+title: 'GS-PQM: A Parameter-Domain Quality Metric for Compressed Gaussian Splatting'
+domain: quality_assessment
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2610.00195v1
+  url: https://arxiv.org/abs/2610.00195
+  pdf_url: https://arxiv.org/pdf/2610.00195v1
+  venue: arXiv preprint
+time:
+  published: '2026-09-18'
+  collected: '2026-11-13'
+entities:
+- ref: concept:3DGS
+  role: subject
+- ref: concept:IQA
+  role: compared_against
+claims:
+- statement: GS-PQM 直接在 GS 参数域工作，从一组参数域失真误差出发，用支持向量回归模型估计训练后压缩GS内容的感知质量，无需渲染预定义视点，评估结果不再依赖所选视角。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在压缩GS内容的质量评估任务上，GS-PQM 优于25种现有图像、视频和点云质量指标。
+  confidence: reported
+  metrics:
+  - name: 优于的现有指标数量
+    value: '25'
+    scope: 压缩GS内容评估基准上 GS-PQM 优于的图像/视频/点云质量指标总数
+  evidence: abstract（初筛，未读全文）
+- statement: GS-PQM 计算高效，可作为基于渲染的质量评估的精确替代方案，服务于GS压缩方法比较与编解码器开发。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出直接在高斯泼溅参数域评估压缩失真的全参考指标GS-PQM，优于25种需渲染视点的现有图像/视频/点云指标且计算更高效。
+  abstract_zh: 高斯泼溅（GS）压缩技术已能大幅缩减模型体积，可靠的目标质量评估因此成为比较压缩方法、指导GS编解码器开发的关键。现有GS质量评估多沿用图像/视频质量指标，需渲染预定义视点，评估结果依赖视角选择。本文提出GS-PQM，一种面向训练后GS压缩的全参考质量指标，直接在GS参数域工作，从一组参数域失真误差出发用支持向量回归（SVR）模型估计感知质量。实验表明GS-PQM在压缩GS内容上优于25种现有图像、视频和点云质量指标，是渲染式质量评估的精确且计算高效的替代方案。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 面向压缩3DGS内容的参数域全参考质量指标，属质量评估域而非核心视频编码域，按规则仅初筛摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-13'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: GS-PQM：面向压缩高斯泼溅的参数域质量指标
+relations:
+- type: same_topic
+  ref: paper:arxiv:2609.29041
+  note: 同为高斯泼溅压缩工作，GS-PQM 这类参数域质量指标可用于评估此类GS编码方法的失真
+- type: same_topic
+  ref: paper:arxiv:2609.14129
+  note: 基于高斯泼溅的视频压缩，其压缩质量评估可受益于参数域质量指标
+- type: same_topic
+  ref: paper:arxiv:2609.18624
+  note: 3DGS渐进式流式传输与质量相关，依赖对压缩GS内容的质量度量

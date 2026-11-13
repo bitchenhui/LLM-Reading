@@ -1,0 +1,62 @@
+id: paper:arxiv:2611.13524
+type: paper
+title: 'The RSI Tax: When Recursive Self-Improvement Is Not Worth the Cost'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2611.13524v1
+  url: https://arxiv.org/abs/2611.13524
+  pdf_url: https://arxiv.org/pdf/2611.13524v1
+  venue: arXiv preprint
+time:
+  published: '2026-11-10'
+  collected: '2026-11-13'
+entities:
+- ref: concept:RSI
+  role: subject
+- ref: concept:SelfImprovement
+  role: subject
+claims:
+- statement: 在持续任务流的端到端评测中，有界笔记基线在精度上持平或超过 Meta-Harness、EvoSkill 与 RRSI 三种 RSI 方法，且总 token 消耗显著更低。
+  confidence: reported
+  metrics:
+  - name: 平均总token节省
+    value: 65.6-71.0%
+    scope: 六方法×两个语言模型，有界笔记基线对比三种RSI方法
+  evidence: abstract（初筛，未读全文）
+- statement: RSI Tax 的主要构成是验证成本：在三种被评测的 RSI 方法中，验证开销占聚合 RSI Tax 的绝大部分。
+  confidence: reported
+  metrics:
+  - name: 验证成本占RSI税比例
+    value: 74.8-93.6%
+    scope: RSI Tax 分解为验证/探索/写入成本，Meta-Harness、EvoSkill、RRSI 三方法聚合口径
+  evidence: abstract（初筛，未读全文）
+- statement: 相当比例的 RSI Tax 花费所产生的状态或产物，在后续被评测的任务流中并未被再次使用，说明自我改进过程存在大量无效开销。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出RSI税度量自我改进全成本，发现简单有界笔记基线精度持平下比三种RSI方法省65.6–71.0%总token。
+  abstract_zh: 论文在持续任务流上评测递归自我改进（RSI）的性能收益与其全成本的权衡，在每条任务的反馈被用于后续更新之前先行打分，并将自我改进过程的 token 开销定义为 RSI Tax，与任务执行成本一并纳入端到端评估。在六个方法、两个语言模型的实验中，一个有界笔记（bounded-note）基线在精度上持平或超过
+    Meta-Harness、EvoSkill 和 RRSI 三种 RSI 方法，平均总 token 节省 65.6–71.0%。作者将 RSI Tax 分解为验证、探索与写入三类成本，发现验证成本占三种方法聚合
+    RSI Tax 的 74.8–93.6%，且相当一部分开销对应的状态或产物在后续任务流中并未被使用。结论指出昂贵的 RSI 流程未必物有所值，应联合优化 RSI Tax 与任务执行成本。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: RSI 成本效益的批判性评测研究，属自我改进 AI 域，按基准只做初筛摘要不深读。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-13'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: RSI 税：递归自我改进何时得不偿失
+relations:
+- type: same_topic
+  ref: paper:arxiv:2610.26770
+  note: 同属 RSI 性能-成本权衡主题，HarnessPro 以帕累托优化处理自我改进的开销问题，与本文 RSI Tax 目标互补
+- type: same_topic
+  ref: paper:arxiv:2610.27610
+  note: 同属对 RSI 声明的批判性实证评估方向，均以评测证据审视递归自我改进的真实收益
+- type: same_topic
+  ref: paper:arxiv:2609.33867
+  note: 本文评测的 RRSI 方法很可能对应 Recursive Skill Evolution 路线（R² Flow），命名与主题高度吻合

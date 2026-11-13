@@ -1,0 +1,57 @@
+id: paper:arxiv:2609.36695
+type: paper
+title: 'Know Thyself, Teach Thyself: Internal Information Flow for Selective Self-Distillation'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2609.36695v2
+  url: https://arxiv.org/abs/2609.36695
+  pdf_url: https://arxiv.org/pdf/2609.36695v2
+  venue: arXiv preprint
+time:
+  published: '2026-09-29'
+  collected: '2026-11-13'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:RSI
+  role: builds_on
+claims:
+- statement: InFlow 在四个开源语言模型、三个知识领域上，于对比的样本选择方法中取得最强跨模型平均表现，消融实验支持检索与选择两个阶段各自的贡献。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 理论上，InFlow 将检索与选择建模为潜在到实现的信息流，并证明答案级信念偏移与师生蒸馏差距相关。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 以教师初始与检索条件化答案信念间的 Jensen-Shannon 散度作为样本实际信息增益的度量，可用于无需外部教师的选择性自蒸馏监督。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: InFlow 用隐藏状态轨迹检索与JSD信念偏移度量选样，实现检索引导的在策略自蒸馏。
+  abstract_zh: 自蒸馏将知识蒸馏变为闭环学习，无需外部教师即可实现递归自我改进。作者提出 InFlow 框架：先以确定性校准的隐藏状态轨迹检索潜在信息源，再用教师初始答案信念与检索条件化答案信念之间的
+    Jensen-Shannon 散度度量检索的实际信息流，选择信念偏移更大的样本进行在策略自蒸馏。理论分析形式化了检索与选择所优化的信息量，并将答案级信念偏移与师生蒸馏差距联系起来。在四个开源语言模型、三个知识领域上，InFlow
+    取得对比选择方法中最强的跨模型平均表现，消融实验支持检索与选择两阶段设计的有效性。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 论文提出无需外部教师的检索引导自蒸馏框架，直接面向递归自我改进，属自我改进AI域，按非核心域基准仅初筛。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-13'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 认识自我，教授自我：基于内部信息流的选择性自蒸馏
+relations:
+- type: same_topic
+  ref: paper:arxiv:2609.39306
+  note: 同为迭代式自蒸馏方向，ReSAIL 关注自蒸馏中的坍塌问题，与本框架互补
+- type: same_topic
+  ref: paper:arxiv:2609.33867
+  note: 同属递归自我改进（RSI）方向，本论文将自蒸馏定位为 RSI 路径
+- type: same_topic
+  ref: paper:arxiv:2609.34975
+  note: 同为面向 LLM 推理的自我改进训练方法，均涉及教师信号的自引导利用
+- type: same_topic
+  ref: paper:arxiv:2610.23344
+  note: 同属语言模型自我改进闭环研究

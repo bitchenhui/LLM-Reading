@@ -1,0 +1,54 @@
+id: paper:arxiv:2608.06102
+type: paper
+title: 'MultiMoQ: Multi-Access Media-Over-QUIC for Robust Immersive Video Streaming'
+domain: streaming_delivery
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2608.06102v1
+  url: https://arxiv.org/abs/2608.06102
+  pdf_url: https://arxiv.org/pdf/2608.06102v1
+  venue: arXiv preprint
+time:
+  published: '2026-08-06'
+  collected: '2026-11-13'
+entities:
+- ref: concept:QUIC
+  role: subject
+- ref: concept:DASH
+  role: compared_against
+claims:
+- statement: MultiMoQ 相比 DASH 提升了增强 tile 与基础视频的 goodput，并降低了增强 tile 的尾端到端时延。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在带宽受限条件下，MultiMoQ 能保持音频连续性并避免标准 MoQ 出现的持续播放卡顿。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 消融实验表明，多接入控制机制是 MultiMoQ 播放连续性收益的主要来源。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: MultiMoQ 支持跨多条接入路径的高码率传输、灵活 tile 调度与无缝接入切换，评估在网络仿真下的异构真实网络条件中完成。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出基于 MoQ 的多接入分块流框架 MultiMoQ，以多路径传输与灵活 tile 调度提升 360° 视频直播的吞吐与播放连续性。
+  abstract_zh: 针对 360° 沉浸式视频在大规模并发用户下高码率传输困难、粗粒度分发响应不足、并发 tile 流协调欠缺等问题，作者提出构建在 Media over QUIC（MoQ）之上的多接入
+    tile 流传输框架 MultiMoQ，重新设计其传输机制，支持跨多条接入路径的鲁棒高码率传输、灵活 tile 调度与无缝接入切换。团队实现了完整功能原型，并在网络仿真中于异构真实网络条件下与 DASH
+    和标准 MoQ 进行对比评估。结果显示，MultiMoQ 提升了增强 tile 与基础视频的 goodput，降低了增强 tile 的尾端到端时延，同时保持音频连续性并避免标准 MoQ 的持续卡顿。传输层收益转化为更流畅的视口播放，消融实验进一步证实了多接入控制对播放连续性的贡献。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 流媒体传输域工作：基于 MoQ 的多接入 360° 视频 tile 传输框架，与 DASH 对比；非核心编码域，按规则仅给 summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-13'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: MultiMoQ：面向鲁棒沉浸式视频流的多接入 Media-over-QUIC
+relations:
+- type: same_topic
+  ref: paper:arxiv:2601.10607
+  note: 同属流媒体传输优化主题：后者优化自适应 VVC 流传输，本文以 DASH 为基线优化 MoQ 多路径 tile 传输
+- type: same_topic
+  ref: paper:arxiv:2603.13597
+  note: 同属自适应视频流传输主题：DQ-Ladder 面向 ABR 码率梯优化，MultiMoQ 与 DASH/ABR 传输机制直接对比

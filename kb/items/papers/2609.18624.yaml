@@ -1,0 +1,54 @@
+id: paper:arxiv:2609.18624
+type: paper
+title: 'MoQSplat: Adaptive Progressive Streaming of 3D Gaussian Splatting via MoQ'
+domain: streaming_delivery
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2609.18624v1
+  url: https://arxiv.org/abs/2609.18624
+  pdf_url: https://arxiv.org/pdf/2609.18624v1
+  venue: arXiv preprint
+time:
+  published: '2026-09-16'
+  collected: '2026-11-13'
+entities:
+- ref: concept:3DGS
+  role: subject
+- ref: concept:QUIC
+  role: uses
+claims:
+- statement: 将 3DGS 的渐进质量子组映射到相互独立的 QUIC 流，可消除连接级队头（HOL）阻塞，克服传统 TCP 上 HTTP 自适应流媒体的粗分段问题
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: MoQSplat 采用空间轨道（Tracks）+ 语义聚类组（Groups）+ 渐进子组（Subgroups）的分层组织，并以无状态订阅者驱动闭环依据 6-DoF 视锥可见性、距离与注视点对齐动态请求空间区域和质量层级
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 原型评估显示，面向渐进式 3DGS 传输，基于不透明度（opacity）的剪枝优于基于尺度（scale）的剪枝
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 将 3DGS 场景映射到 MoQ 传输层次，以空间轨道与渐进质量子组配独立 QUIC 流，消除队头阻塞并支持 6-DoF 自适应请求
+  abstract_zh: 3DGS 可实现逼真的新视角合成，但吉字节量级的场景数据传输对沉浸式应用构成挑战；传统基于 TCP 的 HTTP 自适应流媒体存在队头（HOL）阻塞，且粗粒度分段不适合 3DGS
+    的细粒度分发。MoQSplat 将 3DGS 内容映射到 Media over QUIC 传输层次：场景划分为空间轨道（Tracks），高斯泼溅聚类为语义连贯的组（Groups），并构建渐进质量子组（Subgroups）映射到相互独立的
+    QUIC 流以消除连接级队头阻塞。系统采用无状态、订阅者驱动的自适应闭环，客户端依据 6-DoF 视锥可见性、距离与注视点对齐动态请求空间区域与质量层级。原型实现的核心组件评估表明，面向渐进式传输，基于不透明度的剪枝优于基于尺度的剪枝；源代码已开源。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 3DGS 沉浸式内容经 MoQ/QUIC 的自适应渐进流化传输，属流媒体传输域而非核心编码域，按规则仅初筛摘要
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-13'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: MoQSplat：基于 MoQ 的 3D 高斯泼溅自适应渐进式流媒体传输
+relations:
+- type: same_topic
+  ref: paper:arxiv:2608.06102
+  note: 同为 Media over QUIC（MoQ）体系下的沉浸式媒体流化传输
+- type: same_topic
+  ref: paper:arxiv:2609.29041
+  note: 同属 3DGS 内容的组织与编码（结构化排序 vs 空间轨道分组）
+- type: same_topic
+  ref: paper:arxiv:2605.14629
+  note: 同为 Gaussian Splatting 相关的编码/传输效率优化

@@ -1,0 +1,36 @@
+id: paper:arxiv:2609.19304
+status: skipped
+score: 1
+track: audio_coding
+matched:
+- ref: dataset:JVET-CTC
+  count: 1
+  weight: 1
+meta:
+  title: 'Decaf: A privacy preserving speech codec using speaker disentanglement and canonical voice conversion'
+  authors:
+  - Md Shakhrul Iman Siam
+  - Dushyant Sharma
+  - Stanislav Yu. Kruchinin
+  - Peter Skala
+  published: '2026-09-16'
+  updated: '2026-09-16'
+  categories:
+  - eess.AS
+  abstract: We present DECAF, a privacy preserving neural speech codec that obfuscates a speaker's voice
+    while preserving linguistic content while maintaining automatic speech recognition (ASR) performance
+    at very low bitrates, inspired by decaffeination. At the transmitter end, speech is encoded into speaker
+    independent content embeddings, which are compressed using residual vector quantization and transmitted
+    without any speaker related information. At the receiver, a canonical speaker embedding, shared a
+    priori between endpoints, is used for waveform reconstruction, enabling deterministic and consistent
+    obfuscation of a speaker's voice. The proposed framework leverages an information bottleneck applied
+    to self supervised representations, along with a separate speaker embedding branch, to achieve effective
+    speaker content disentanglement. We further incorporate a CTC-based auxiliary objective, encouraging
+    content representations that are well aligned with downstream ASR tasks. We show that DECAF operating
+    at a bit rate of 0.5 kbps achieves an Equal Error Rate (EER) of up to 43.5% for a speaker verification
+    system, while maintaining competitive ASR performance, yielding a relative reduction in word error
+    rate of 33.2% compared to a state of the art method.
+  url: https://arxiv.org/abs/2609.19304
+  pdf_url: https://arxiv.org/pdf/2609.19304v1
+  version: v1
+fetched: '2026-11-13'

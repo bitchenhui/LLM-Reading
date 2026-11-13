@@ -1,0 +1,65 @@
+id: paper:arxiv:2610.11464
+type: paper
+title: Who Verifies the Verifier? Co-Evolving Inspectable Graders with Self-Improving Agents
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2610.11464v1
+  url: https://arxiv.org/abs/2610.11464
+  pdf_url: https://arxiv.org/pdf/2610.11464v1
+  venue: arXiv preprint
+time:
+  published: '2026-10-08'
+  collected: '2026-11-13'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: 在 MBPP+ 上，进化的可检验验证器相比手写种子组合在留出集一致率上提升 +0.21，对所有种子均成立，并最终超过其内嵌的裸 LLM 评判。
+  confidence: reported
+  metrics:
+  - name: held-out agreement 提升
+    value: '+0.21'
+    scope: MBPP+，相对手写种子组合，跨所有种子
+  evidence: abstract（初筛，未读全文）
+- statement: 移除锚定守卫会使验证器塌缩为恒通过的空洞评分器，但该塌缩验证器训练技能的效果与正常验证器相当——下游任务分数无法认证自进化验证器。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: Double Ratchet（进化验证器 + 生命周期管理技能回路）可替代真值/rubric 验证器：在代码生成、企业 text-to-SQL 与无参考报告生成上保留同回路大部分提升。
+  confidence: reported
+  metrics:
+  - name: 保留提升比例
+    value: 88-110%
+    scope: 相对真值/rubric 验证器在同一技能回路上的提升，跨代码生成、text-to-SQL、无参考报告生成三类任务
+  evidence: abstract（初筛，未读全文）
+- statement: 当进化技能钻报告 rubric 空子时，外层评判能发现该行为且一个新增检测器即可修复；但该评判在被告知任务契约前自身的判断是错误的。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 将自我改进回路中的验证器作为进化对象合成可检验评分器，并证明下游任务分数无法认证自进化验证器
+  abstract_zh: 论文把自我改进智能体回路中的验证器（grader）本身作为进化对象：由聚类失败样本合成的、基于小型多数确定性缺陷检测器的可检验表达式，从诞生起经门控筛选，选择依据是与十项锚定参考集的一致性及无标注输出上的共识，而非智能体分数。在
+    MBPP+ 上，进化验证器相比手写种子组合获得 +0.21 的留出一致率提升，在每个种子上均成立，并最终超过其内嵌的裸 LLM 评判。关键发现：移除锚定守卫会使验证器塌缩为恒通过的空洞评分器，但该塌缩验证器训练技能的效果同样好，说明下游任务分数无法证明自进化验证器的有效性。配套的
+    Double Ratchet 生命周期管理技能回路，在代码生成、企业 text-to-SQL 和无参考报告生成上保留了真值或 rubric 验证器 88-110% 的提升。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 自我改进域核心工作：将自我改进回路中的验证器本身作为进化对象，并给出验证器有效性认证方法论
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-13'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 谁来验证验证器？与自我改进智能体协同进化的可检验评分器
+relations:
+- type: same_topic
+  ref: paper:arxiv:2610.00972
+  note: 同属智能体验证器（verifier/grader）扩展与可靠性主题
+- type: same_topic
+  ref: paper:arxiv:2610.27610
+  note: 同关注 RSI 声明的评估证据问题：本文证明下游分数不能认证自进化验证器
+- type: same_topic
+  ref: paper:arxiv:2611.12109
+  note: 同属模型/技能/评分器协同进化类自我改进回路

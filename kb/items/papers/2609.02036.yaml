@@ -1,0 +1,64 @@
+id: paper:arxiv:2609.02036
+type: paper
+title: 'SelfLift: Accelerating Few-Step Diffusion via Self-Recovering Resolution Transition'
+domain: processing_enhancement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2609.02036v2
+  url: https://arxiv.org/abs/2609.02036
+  pdf_url: https://arxiv.org/pdf/2609.02036v2
+  venue: arXiv preprint
+time:
+  published: '2026-09-02'
+  collected: '2026-11-13'
+entities:
+- ref: concept:SuperResolution
+  role: subject
+- ref: concept:TrainingFree
+  role: uses
+claims:
+- statement: SelfLift 在 FLUX.2-Klein 上将少步扩散推理的端到端延迟降低 41.5%
+  confidence: reported
+  metrics:
+  - name: 端到端延迟降低
+    value: 41.5%
+    scope: FLUX.2-Klein，少步扩散推理
+  evidence: abstract（初筛，未读全文）
+- statement: SelfLift 在 Z-Image-Turbo 上将端到端延迟降低 44.1%
+  confidence: reported
+  metrics:
+  - name: 端到端延迟降低
+    value: 44.1%
+    scope: Z-Image-Turbo，少步扩散推理
+  evidence: abstract（初筛，未读全文）
+- statement: 结合时间步蒸馏后，SelfLift 相对应的 50 步扩散模型分别取得 29.61 倍与 19.21 倍整体加速，同时保持有竞争力的生成质量
+  confidence: reported
+  metrics:
+  - name: 整体加速倍数
+    value: 29.61x
+    scope: FLUX.2-Klein vs 对应50步模型
+  - name: 整体加速倍数
+    value: 19.21x
+    scope: Z-Image-Turbo vs 对应50步模型
+  evidence: abstract（初筛，未读全文）
+- statement: 免训练的 SelfLift-zero 以直接潜变量提升与像素 VAE 重编码之间的分歧同时充当伪影风险信号与模型原生修正方向，无需外部超分、额外去噪器评估或采样日程修改即可实现可靠的晚期分辨率过渡
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出自恢复渐进分辨率框架SelfLift，免训练实现少步扩散可靠的晚期升分辨率，端到端延迟降41.5%/44.1%。
+  abstract_zh: 少步扩散模型中单次评估的空间计算已成为推理延迟主导来源，渐进式分辨率推理先低分辨率去噪再高分辨率精修，但现有方法直接提升中间潜变量、分布失配需后续步骤吸收，在少步场景留下可见伪影。SelfLift从生成模型自身导出过渡修复信号与轨迹对齐监督：SelfLift-zero提出免训练的伪影感知一致性提升，将直接潜变量提升与像素VAE重编码之间的分歧同时用作局部伪影风险信号和模型原生修正方向，无需外部超分、额外去噪器评估或采样日程修改即可支持可靠的晚期分辨率过渡。SelfLift-rich在此基础上对学生访问状态执行在策自恢复，从内部自教师迁移密集高分辨率引导。在FLUX.2-Klein与Z-Image-Turbo上端到端延迟分别降低41.5%与44.1%；结合时间步蒸馏，相对对应50步模型整体加速29.61倍与19.21倍，同时保持有竞争力的生成质量。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 面向少步扩散图像生成的免训练分辨率过渡加速（以模型原生一致性修正替代外部超分），属处理增强相邻方向而非编码核心域，按非核心域默认给摘要级收录。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-13'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: SelfLift：基于自恢复分辨率过渡的少步扩散加速
+relations:
+- type: same_topic
+  ref: paper:arxiv:2607.22772
+  note: 同属扩散生成模型高效推理与蒸馏方向：该文以分数蒸馏做生成式视频压缩，本文以内部自教师蒸馏与自恢复分辨率过渡加速少步扩散图像生成，联系较间接

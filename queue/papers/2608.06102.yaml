@@ -1,0 +1,43 @@
+id: paper:arxiv:2608.06102
+status: reviewed
+score: 2
+track: streaming_delivery
+matched:
+- ref: concept:DASH
+  count: 3
+  weight: 1
+- ref: concept:QUIC
+  count: 3
+  weight: 1
+meta:
+  title: 'MultiMoQ: Multi-Access Media-Over-QUIC for Robust Immersive Video Streaming'
+  authors:
+  - Yitong Li
+  - Xinjiao Li
+  - Ruonan Chai
+  - Dirk Kutscher
+  published: '2026-08-06'
+  updated: '2026-08-06'
+  categories:
+  - cs.NI
+  - cs.MM
+  abstract: Live immersive video streaming, particularly 360-degree video, is increasingly adopted in
+    applications such as virtual events, sports broadcasting, and remote education. Existing approaches
+    struggle to support high-bitrate immersive streaming for large numbers of concurrent users, with coarse-grained
+    delivery limiting responsiveness and insufficient support for coordinating concurrent tile streams.
+    Media over QUIC (MoQ) has recently emerged as a promising solution for large-scale media delivery,
+    yet it lacks robustness under bandwidth-constrained conditions, often resulting in playback stalls.
+    To address these challenges, we present MultiMoQ, a multi-access tile streaming framework built on
+    MoQ that redesigns its delivery mechanism for robust high-bitrate streaming across multiple access
+    paths while supporting flexible tile scheduling and seamless access switching. We implement a fully
+    functional prototype of MultiMoQ and evaluate it in network emulation under heterogeneous real-world
+    network conditions, comparing against Dynamic Adaptive Streaming over HTTP (DASH) and standard MoQ.
+    Results show that MultiMoQ increases goodput for enhancement tiles and base video and reduces enhancement-tile
+    tail end-to-end latency relative to DASH, while preserving audio continuity and avoiding the persistent
+    stalls of standard MoQ. These transport gains translate into smoother viewport playback, and the ablation
+    results further confirm the contribution of multi-access control to playback continuity.
+  url: https://arxiv.org/abs/2608.06102
+  pdf_url: https://arxiv.org/pdf/2608.06102v1
+  version: v1
+fetched: '2026-11-13'
+llm_decision: summary_only

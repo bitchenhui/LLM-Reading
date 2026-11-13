@@ -1,0 +1,51 @@
+id: paper:arxiv:2610.06413
+status: skipped_by_llm
+score: 2
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: 'SpatialChain: A Benchmark for Auditing Spatial Reasoning Faithfulness in VLMs'
+  authors:
+  - Rafael Teixeira Sousa
+  - Vinícius Paulo Lopes de Oliveira
+  - Elisa Ayumi Masasi de Oliveira
+  - Luiza Martins de Freitas Cintra
+  - Fernanda Bufon Färber
+  - Igor Dias Aguiar
+  - Julia Yasmim de Almeida Nobre
+  - Arlindo Rodrigues Galvão Filho
+  published: '2026-10-05'
+  updated: '2026-10-05'
+  categories:
+  - cs.CV
+  - cs.AI
+  - cs.CL
+  abstract: 'Thinking-enabled vision-language models (VLMs) report ever-higher accuracy on spatial benchmarks,
+    yet final-answer scores cannot reveal whether a correct prediction reflects faithful spatial reasoning
+    or a linguistic shortcut. We introduce SpatialChain, a dataset of 28,350 training and 899 test examples
+    pairing spatially-oriented GQA questions with scene-graph-grounded reasoning chains, retained only
+    when the generated answer matches the symbolic ground truth, and a two-axis evaluation combining objective
+    chain-overlap metrics with a scene-graph-aware LLM judge that scores faithfulness and completeness
+    independently of the final answer. Applied to nine thinking-enabled VLMs, the protocol surfaces three
+    findings invisible to standard accuracy: (i) four of nine models achieve $\geq$79% VQA accuracy while
+    exhibiting shortcut rates above 39%, i.e., correct answers whose reasoning the judge marks as unfaithful;
+    (ii) chain quality significantly predicts answer correctness for seven of nine models, but the two
+    exceptions (Claude Sonnet 4.6, InternVL3.5-8B) reveal qualitatively distinct failure modes, terse
+    output vs. verbose-decorative reasoning, that benchmark accuracy alone conflates; (iii) SFT on SpatialChain
+    improves Qwen3-VL-8B by +6.2 pp in-domain and reduces its shortcut rate to 22%, while a stylistic
+    specialization effect on external benchmarks motivates replay-augmented training as mitigation. The
+    faithfulness judge is validated against 198 human-annotated items, where judge-human agreement matches
+    human-human agreement, and against a second judge from a different provider, which preserves the model
+    ranking ($ρ$ = 0.88). Data, generation scripts, and evaluation code are released at https://github.com/spatialchain/SpatialChainBenchmark.'
+  url: https://arxiv.org/abs/2610.06413
+  pdf_url: https://arxiv.org/pdf/2610.06413v1
+  version: v1
+fetched: '2026-11-13'
+llm_decision: skip
+llm_reason: 该文是VLM空间推理忠实性评测基准，不涉音视频编码/传输/质量链路，也非RSI/agent自改进主题（SFT仅为基准效用验证），超出收录范围。

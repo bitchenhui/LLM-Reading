@@ -1,0 +1,50 @@
+id: paper:arxiv:2610.13698
+type: paper
+title: 'DIA: A Deep Reinforcement Learning-Based Interest-Aware ABR Scheme for Cloud Gaming'
+domain: streaming_delivery
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2610.13698v1
+  url: https://arxiv.org/abs/2610.13698
+  pdf_url: https://arxiv.org/pdf/2610.13698v1
+  venue: arXiv preprint
+time:
+  published: '2026-10-09'
+  collected: '2026-11-13'
+entities:
+- ref: concept:ABR
+  role: subject
+- ref: concept:QoE
+  role: measured_by
+claims:
+- statement: DIA在5G场景下归一化平均QoE至少比SOTA ABR算法高20%
+  confidence: reported
+  metrics:
+  - name: 归一化平均QoE提升
+    value: ≥20%
+    scope: 5G场景，相比SOTA ABR算法
+  evidence: abstract（初筛，未读全文）
+- statement: DIA借助现成语义分割模型实现对象级码率调整，通过transformer特征提取器与兴趣感知奖励函数识别关键对象，无需眼动追踪器等额外硬件
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出DRL驱动的兴趣感知ABR方案DIA，为云游戏做对象级码率分配，5G下归一化QoE较SOTA至少提升20%。
+  abstract_zh: 云游戏需在受限无线网络下高分辨率、低延迟地传输游戏画面。该文提出基于深度强化学习的兴趣感知ABR方案DIA：利用现成语义分割模型识别感知关键对象，在保障关键对象质量的同时为非关键对象分配较低分辨率以节省带宽，实现对象级码率调整。方案设计了基于Transformer的特征提取器与兴趣感知奖励函数，依据玩家游戏内移动速度、对象特征和网络状态动态调整码率，且无需眼动追踪器等额外硬件。大量实验表明DIA在动态无线环境中优于现有ABR方案，5G场景下归一化平均QoE比SOTA至少高20%。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 流媒体传输域的DRL兴趣感知ABR方案，QoE提升显著但非核心编码域，按基准仅给summary_only
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-13'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: DIA：面向云游戏的基于深度强化学习的兴趣感知自适应码率方案
+relations:
+- type: same_topic
+  ref: paper:arxiv:2603.13597
+  note: 同为基于深度强化学习的自适应码率/码率决策方案（DQ-Ladder）
+- type: same_topic
+  ref: paper:arxiv:2609.09490
+  note: 同为蜂窝网络中QoE感知的码率自适应研究

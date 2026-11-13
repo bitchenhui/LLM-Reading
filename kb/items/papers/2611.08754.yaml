@@ -1,0 +1,67 @@
+id: paper:arxiv:2611.08754
+type: paper
+title: Measurement-Aware Multimodal LLM for No-Reference Low-Dose CT Quality Assessment
+domain: quality_assessment
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2611.08754v1
+  url: https://arxiv.org/abs/2611.08754
+  pdf_url: https://arxiv.org/pdf/2611.08754v1
+  venue: arXiv preprint
+time:
+  published: '2026-11-05'
+  collected: '2026-11-13'
+entities:
+- ref: concept:IQA
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: 测量感知的多模态LLM在LDCT-IQA 2023测试集上Overall得分2.735，与重训后的挑战赛冠军持平。
+  confidence: reported
+  metrics:
+  - name: Overall score
+    value: '2.735'
+    scope: LDCT-IQA 2023测试集，本文方法
+  - name: Overall score（挑战赛冠军重训版）
+    value: '2.735'
+    scope: LDCT-IQA 2023测试集，对比锚点
+  - name: Overall score（MedSigLIP-FiLM）
+    value: '2.713'
+    scope: LDCT-IQA 2023测试集，对比方法
+  evidence: abstract（初筛，未读全文）
+- statement: 测试时打乱六项测量输入会使模型得分下降0.048，其中噪声测量的贡献最大，说明模型确实依赖测量信息。
+  confidence: reported
+  metrics:
+  - name: 打乱测量后的得分下降
+    value: '0.048'
+    scope: LDCT-IQA 2023测试集，消融实验
+  evidence: abstract（初筛，未读全文）
+- statement: 该组测量会导致模型对过度平滑的去噪图像给出偏高评分，是方法的一个局限。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 将六项图像域测量以文本形式注入多模态LLM，实现无参考低剂量CT质量评分，追平挑战赛冠军水平。
+  abstract_zh: 针对低剂量CT无参考质量评估（无需全剂量参考图即可预测放射科医生评分）的任务，作者在Qwen3.8-27B多模态大模型基础上引入测量感知机制：将噪声、清晰度、高频内容与条纹伪影等六项图像域测量以百分位文本形式提供给语言模型。在LDCT-IQA
+    2023测试集上，该方法Overall得分2.735，与重训后的挑战赛冠军（2.735）持平，优于MedSigLIP-FiLM（2.713），并显著高于零样本基座MLLM。消融显示测试时打乱测量输入会使得分下降0.048（主要来自噪声测量），但同一组测量也会使模型对过度平滑的去噪图像给出偏高评分，暴露出一定局限。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 属于无参考图像质量评估（IQA）方向，但对象为医学低剂量CT而非音视频编码内容，故非核心域仅作初筛摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-13'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 测量感知的多模态大语言模型用于无参考低剂量CT质量评估
+relations:
+- type: same_topic
+  ref: paper:arxiv:2602.15779
+  note: 同属无参考图像质量度量研究，该文将NR度量集成用于率失真优化，本文面向低剂量CT做无参考评估
+- type: same_topic
+  ref: paper:arxiv:2607.23321
+  note: 同为无参考（reference-free）单帧图像质量评估框架，对象分别为ISP流水线与低剂量CT
+- type: same_topic
+  ref: paper:arxiv:2609.30077
+  note: 该文面向全参考图像质量度量做RDO，与本文的无参考设定形成参照互补

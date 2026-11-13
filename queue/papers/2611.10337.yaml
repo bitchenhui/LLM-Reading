@@ -1,0 +1,36 @@
+id: paper:arxiv:2611.10337
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'TimeTraveler: Temporal Strategy Planning with Time Dictionary for Streaming Video Understanding'
+  authors:
+  - Minkuk Kim
+  - Junho Kim
+  - Seong Tae Kim
+  published: '2026-11-07'
+  updated: '2026-11-07'
+  categories:
+  - cs.CV
+  abstract: Streaming video understanding (SVU) requires models to answer user queries over continuously
+    evolving video streams. Unlike offline video QA, SVU must handle queries whose evidence may lie in
+    the past, appear in the current scene, or emerge only after future observations. Existing streaming
+    video systems often rely on compact visual memories or fixed evidence-access schemes, which can lose
+    fine-grained details and fail to adapt the answering process to the temporal intent of each query.
+    In this paper, we propose TimeTraveler, a streaming VQA framework that performs temporal strategy
+    planning with a Time Dictionary. Inspired by the need to search across different temporal regions
+    of a stream, TimeTraveler stores each observed moment as a timestamp-indexed structured caption and
+    uses this dictionary as an explicit source of queryable evidence. Given a query, TimeTraveler determines
+    whether to recall past evidence, read the present context, or wait for future observations, and then
+    applies a strategy-specific evidence acquisition process. Comparative experiments on streaming video
+    QA benchmarks show that TimeTraveler improves streaming question answering by preserving fine-grained
+    temporal evidence and selecting the appropriate temporal strategy for each query. The project page
+    is available at https://geppa.github.io/TimeTraveler.
+  url: https://arxiv.org/abs/2611.10337
+  pdf_url: https://arxiv.org/pdf/2611.10337v1
+  version: v1
+fetched: '2026-11-13'

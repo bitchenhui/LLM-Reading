@@ -1,0 +1,43 @@
+id: paper:arxiv:2610.11433
+status: reviewed
+score: 3
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+- ref: concept:SuperResolution
+  count: 1
+  weight: 1
+meta:
+  title: 'DLC: A Metric-Guided Dynamic Loss Controller for Multi-Objective Training'
+  authors:
+  - Jaewan Ko
+  - Janghoon Choi
+  published: '2026-10-08'
+  updated: '2026-10-08'
+  categories:
+  - cs.CV
+  abstract: 'In this paper, we introduce a metric-guided dynamic loss controller (DLC) for multi-objective
+    image restoration. Conventional image restoration pipelines usually train with a fixed weighted combination
+    of multiple losses, without changing the relative importance of fidelity, perceptual similarity, and
+    no-reference quality during optimization. DLC is an architecture- and loss-term-agnostic training-time
+    controller: it does not modify the restoration architecture or introduce new differentiable loss terms,
+    but dynamically reweights the existing training losses. During training, DLC periodically evaluates
+    the current model on a small fixed feedback subset and uses the resulting quality metrics to update
+    the loss-weight vector through an LLM-based controller. Because DLC operates on existing loss terms
+    rather than task-specific architectures, the same controller formulation can be instantiated across
+    diverse image restoration training pipelines. We evaluate DLC on three restoration domains: low-light
+    image enhancement, deraining, and real-world super-resolution, using both reference-based and no-reference
+    quality metrics. Across these settings, DLC considers metric-dependent trade-offs during optimization
+    and guides training toward balanced operating points across fidelity and perceptual quality. The results
+    show that DLC can move models toward more favorable operating points across different restoration
+    domains, supporting its role as a practical plug-in controller for multi-objective image restoration.'
+  url: https://arxiv.org/abs/2610.11433
+  pdf_url: https://arxiv.org/pdf/2610.11433v1
+  version: v1
+fetched: '2026-11-13'
+llm_decision: summary_only

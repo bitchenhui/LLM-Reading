@@ -1,0 +1,72 @@
+id: paper:arxiv:2608.21180
+type: paper
+title: Toward Vision Language Model-based Assessment of Clinical Quality and Usability of LGE-MR Images
+  for Cardiac Ablation Planning
+domain: quality_assessment
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2608.21180v1
+  url: https://arxiv.org/abs/2608.21180
+  pdf_url: https://arxiv.org/pdf/2608.21180v1
+  venue: arXiv preprint
+time:
+  published: '2026-08-21'
+  collected: '2026-11-13'
+entities:
+- ref: concept:IQA
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: 提出两阶段VLM框架：微调VLM生成放射学风格结构化质量报告（噪声、运动伪影、左心房边界准确性、肺静脉区域准确性、欠分割严重度五项判据），再由GPT推理模块映射为质量评分与二值临床可用性决策。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: InternVL2在五项判据上取得最高判据级评估精度。
+  confidence: reported
+  metrics:
+  - name: Avg ACC
+    value: '0.65'
+    scope: InternVL2 在五项质量判据上的平均准确率
+  - name: PLCC
+    value: '0.79'
+    scope: InternVL2 判据级预测与人标的相关性
+  evidence: abstract（初筛，未读全文）
+- statement: DeepSeek架构在临床可用性二值判定上与医生标注达到完全一致。
+  confidence: reported
+  metrics:
+  - name: Acc
+    value: '1.00'
+    scope: DeepSeek 临床可用性二分类一致率
+  - name: kappa
+    value: '1.00'
+    scope: DeepSeek 临床可用性判定与医生标注的Kappa一致性
+  evidence: abstract（初筛，未读全文）
+- statement: 构建了来自20名患者的60个LGE-MRI图像切片-文本标注对数据集用于训练与基准测试。
+  confidence: reported
+  metrics:
+  - name: 标注样本数
+    value: '60'
+    scope: 图像切片-文本对，来自20名患者
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出两阶段VLM框架，对心脏LGE-MRI生成结构化质量报告并输出消融规划的临床可用性判定。
+  abstract_zh: 针对房颤导管消融规划中左心房LGE-MRI图像质量评估依赖放射科医生主观判断、现有自动化方法仅输出不可解释标量分数的问题，该文提出两阶段视觉语言模型框架。第一阶段微调VLM生成放射学风格的结构化质量报告，预测噪声、运动伪影、左心房边界准确性、肺静脉区域准确性与欠分割严重度五项判据；第二阶段用基于GPT的推理模块将预测结果映射为结构化质量评分和二值临床可用性决策。作者构建了来自20名患者的60个图像切片-文本标注对数据集，并基准测试四种SOTA
+    VLM架构。结果表明InternVL2取得最高判据级精度（平均ACC=0.65，PLCC=0.79），DeepSeek在临床可用性判定上达到完全一致（Acc=1.00，kappa=1.00）。
+assessment:
+  relevance: low
+  decision: summary_only
+  reason: 属医学影像（心脏LGE-MRI）质量评估应用，与音视频编码/流媒体关联较弱，仅IQA与VLM评估方法论相关，按非核心域收录为summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-13'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 面向心脏消融规划的基于视觉语言模型的LGE-MRI图像临床质量与可用性评估
+relations:
+- type: same_topic
+  ref: paper:arxiv:2607.26333
+  note: 同属医学影像的机器学习质量/临床评估研究（胸部X光临床相关性 vs LGE-MRI质量与可用性评估）
+- type: same_topic
+  ref: paper:arxiv:2608.08508
+  note: 同属图像质量评估（IQA）方法研究，均涉及评估与自适应/生成模型结合

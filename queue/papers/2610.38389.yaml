@@ -1,0 +1,48 @@
+id: paper:arxiv:2610.38389
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: Visually Irrelevant Hallucinations in Medical Vision-Language Models
+  authors:
+  - Ke Zou
+  - Nan Zhou
+  - Tao Yang
+  - Meng Liu
+  - Linchao He
+  - Zehui Liao
+  - Ling Huang
+  - Guangren Huang
+  - Yidi Chen
+  - Yi Zhang
+  - Hu Chen
+  - Huazhu Fu
+  published: '2026-10-28'
+  updated: '2026-10-28'
+  categories:
+  - cs.CV
+  abstract: 'Medical vision-language models (VLMs) show strong performance in radiology report generation
+    (RRG) and medical visual question answering (Med-VQA), producing free-form clinical descriptions and
+    answers from medical images. However, they may generate clinically meaningful statements that lack
+    visual evidence or contradict image content. We refer to these errors as visually irrelevant hallucinations
+    and investigate them at the phrase level. We propose CLEAR (Counterfactual Localized Evaluation of
+    Alignment and Response), a model-agnostic post-hoc framework for phrase-level hallucination risk estimation.
+    CLEAR decomposes generated responses into visually assessable clinical phrases. For each phrase, phrase-conditioned
+    grounding identifies a candidate visual region, which is selectively perturbed by a localized counterfactual
+    intervention. CLEAR characterizes the intervention using two complementary auditing cues: response
+    cues, capturing semantic and clinically meaningful changes in the generated response, and alignment
+    cues, measuring changes in image-phrase compatibility. These cues are normalized and jointly modeled
+    to estimate phrase-level hallucination risk. Across four datasets spanning RRG and Med-VQA, CLEAR
+    outperforms state-of-the-art hallucination detection baselines across multiple medical and general-purpose
+    VLMs. On MIMIC-CXR, CLEAR improves AUPRC from 85.10% to 90.23%. Its effectiveness is further validated
+    on a GT-derived controlled VIH benchmark. These results establish visually irrelevant hallucination
+    as an important fine-grained reliability failure mode in medical VLMs and demonstrate the value of
+    model-agnostic visual-support auditing for more trustworthy multimodal clinical generation.'
+  url: https://arxiv.org/abs/2610.38389
+  pdf_url: https://arxiv.org/pdf/2610.38389v1
+  version: v1
+fetched: '2026-11-13'

@@ -1,0 +1,58 @@
+id: paper:arxiv:2609.38516
+type: paper
+title: 'From Solo to Social Learning: Characterizing Recursive Social Improvement in LLMs'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2609.38516v2
+  url: https://arxiv.org/abs/2609.38516
+  pdf_url: https://arxiv.org/pdf/2609.38516v2
+  venue: arXiv preprint
+time:
+  published: '2026-09-29'
+  collected: '2026-11-13'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: subject
+claims:
+- statement: 提出递归社会改进（recursive social improvement）概念：各智能体追求自身奖励的自改进LLM种群，可通过选择性互相复制实现整体种群改进。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在受控环境中，既有社会学习算法能从同伴中受益，但被测的三个LLM均不能：其每token获得的奖励低于单独学习者，原因是探索过窄或在行动前耗尽token预算。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 让模型编写并修订自身技能文件后，观察同伴改变了其改进方式：一个模型更快找到有用技能，另一个减少私有搜索开销，但同等成本下两者均不优于独立学习者。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 技能在种群中被复制、修订并传递，使单次发现可催生后续搜索，但社会交流使种群集中于更少的独立发现，降低多样性。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 总体结论：LLM通过向同伴复制可使学习更高效（省token），但尚未使学习更有效（更高回报）。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出递归社会改进概念，发现LLM能通过模仿同伴让学习更高效（省token），但同等成本下尚不能比独立学习者更有效。
+  abstract_zh: 论文提出递归社会改进（recursive social improvement）概念：种群中各自改进LLM智能体在追求自身奖励的同时，可选择是否、何时以及向谁复制技能文件，独立搜索、向同伴学习和行动共享同一token预算。在受控环境中，既有社会学习算法能从同伴中受益，但三个LLM均不能：其每token收益低于单独学习者，表现为探索过窄或在行动前耗尽token。进一步让模型自行编写和修订技能后，观察同伴确实改变了其改进方式——一个模型更快找到有用技能、另一个减少私有搜索开销，但在同等成本下均不优于独立学习者。技能的复制、修订与传递使单次发现可催生后续搜索，但这类交流使种群向更少的独立发现集中。总体结论：LLM可通过复制同伴使学习更高效，但尚未使其更有效。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 自我改进域论文：研究LLM种群通过互相模仿实现递归社会改进，属核心追踪主题但与音视频技术无直接关联，按基准给 summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-13'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 从单独学习到社会学习：刻画LLM中的递归社会改进
+relations:
+- type: same_topic
+  ref: paper:arxiv:2609.38662
+  note: 同属多智能体协作中的递归自改进研究，本文从社会学习/模仿角度刻画种群级改进。
+- type: same_topic
+  ref: paper:arxiv:2609.33867
+  note: 同属递归技能进化路线：均以技能文件的自编写与迭代修订为自改进载体。
+- type: same_topic
+  ref: paper:arxiv:2610.16078
+  note: 同属种群级智能体协同进化研究，关注多智能体间的知识交流与多样性。

@@ -1,0 +1,70 @@
+id: paper:arxiv:2610.40721
+type: paper
+title: 'MetaVul: Agentic Harness Discovery for Vulnerability Detection'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2610.40721v1
+  url: https://arxiv.org/abs/2610.40721
+  pdf_url: https://arxiv.org/pdf/2610.40721v1
+  venue: arXiv preprint
+time:
+  published: '2026-10-29'
+  collected: '2026-11-13'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: MetaVul 优化得到的 harness 在验证集上最高将成对漏洞检测准确率提升 23.3 个百分点。
+  confidence: reported
+  metrics:
+  - name: 成对漏洞检测准确率提升
+    value: 23.3 个百分点
+    scope: 202 对验证集，覆盖前沿与小尺寸 LLM 多种智能体架构的最大提升
+  evidence: abstract（初筛，未读全文）
+- statement: 在未见的 held-out 数据集上，帕累托前沿 harness 最高带来 25.8 个百分点的成对准确率提升。
+  confidence: reported
+  metrics:
+  - name: 成对漏洞检测准确率提升
+    value: 25.8 个百分点
+    scope: 430 对 held-out 集，帕累托前沿 harness
+  evidence: abstract（初筛，未读全文）
+- statement: 用单一模型优化学得的 harness 可迁移到其他未见模型，无需进一步优化即可提升 held-out 成对准确率 14.7 个百分点。
+  confidence: reported
+  metrics:
+  - name: 跨模型迁移成对准确率提升
+    value: 14.7 个百分点
+    scope: held-out 集，从一个模型迁移到另一模型且不再优化
+  evidence: abstract（初筛，未读全文）
+- statement: MetaVul 通过搜索历史 harness（含轨迹、日志与指标）并保留结构化推理与判定格式，返回帕累托最优 harness 集合，缓解静态 harness 不适应评估反馈、跨数据集迁移差的问题。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出自改进框架 MetaVul，通过工作流优化循环迭代发现漏洞检测 LLM 智能体的最优 harness 并支持跨模型迁移。
+  abstract_zh: LLM 智能体做漏洞检测时依赖固定且手工编写的 harness，难以适应评估反馈，且跨数据集与模型迁移性差。MetaVul 从种子结构化推理支架出发，利用配对的漏洞/修复函数反馈，在工作流优化循环中搜索
+    harness 历史（含轨迹、日志与指标），保留结构化推理与判定格式，并返回帕累托最优 harness 集合。作者在 202 对验证集上优化、430 对未见 held-out 集上评估，覆盖前沿与小尺寸
+    LLM 的多种智能体架构。结果显示成对漏洞检测在验证集最高提升 23.3 个百分点、held-out 集最高提升 25.8 个百分点；单模型学得的 harness 迁移到其他模型可在 held-out
+    集上再提升 14.7 个百分点。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 属于 LLM 智能体 harness 自改进研究（应用为漏洞检测），与音视频技术无直接关联，按非核心域收录为初筛摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-13'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: MetaVul：面向漏洞检测的智能体 Harness 自动发现
+relations:
+- type: same_topic
+  ref: paper:arxiv:2610.26770
+  note: 同为基于帕累托优化的智能体 harness 自改进框架，MetaVul 亦以帕累托前沿输出最优 harness 集合
+- type: same_topic
+  ref: paper:arxiv:2610.14224
+  note: 同为递归式智能体 harness 发现与自改进研究
+- type: same_topic
+  ref: paper:arxiv:2610.28201
+  note: 同为面向智能体 harness 的递归自改进（Model-as-Data）方向，MetaVul 用历史 harness 轨迹作为优化数据

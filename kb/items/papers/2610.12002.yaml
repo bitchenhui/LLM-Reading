@@ -1,0 +1,53 @@
+id: paper:arxiv:2610.12002
+type: paper
+title: 'Agentic-TTT: Training test-time policy for test-time training'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2610.12002v1
+  url: https://arxiv.org/abs/2610.12002
+  pdf_url: https://arxiv.org/pdf/2610.12002v1
+  venue: arXiv preprint
+time:
+  published: '2026-10-08'
+  collected: '2026-11-13'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: Agentic-TTT学习测试时策略来治理TTT决策（何时启用TTT、调用哪种算法、是否复用既有技能），在其基准上相比骨干模型使效用近乎翻倍。
+  confidence: reported
+  metrics:
+  - name: utility增益
+    value: ≈2×（近乎翻倍）
+    scope: 自建基准，相对骨干模型
+  evidence: abstract（初筛，未读全文）
+- statement: Agentic-TTT学会在效用与测试时算力之间进行权衡，并可泛化到训练期间未见的领域。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 将测试时训练封装为可调用工具并学习测试时策略，自主决定何时TTT、选哪种算法及是否复用技能，实现模型级自我改进。
+  abstract_zh: 测试时训练（TTT）利用测试输入的信号更新LLM参数，可在预设场景（如IMO竞赛）带来显著提升，为模型级自我改进提供直接机制，但不适配的方法会浪费算力甚至损害性能。作者提出Agentic-TTT，学习一个测试时策略来决定是否启用TTT、调用哪种算法以及是否复用已有技能：将TTT流程封装为可调用工具，把积累的技能视为演化的部署环境，并依据决策观测到的效用增益训练该策略。在自建基准上，Agentic-TTT相比骨干模型使效用近乎翻倍，学会在效用与算力之间权衡，并能泛化到训练未见的领域，指向自主自我改进。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 属于自我改进AI域：学习测试时策略治理LLM测试时训练（TTT）实现模型级自我改进，与音视频编码无直接关联，按基准仅收录摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-13'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: Agentic-TTT：为测试时训练学习测试时策略
+relations:
+- type: same_topic
+  ref: paper:arxiv:2610.08630
+  note: 均研究LLM测试时/参数内自适应机制（TTT与in-parameter memory），同属参数级模型自我改进方向
+- type: same_topic
+  ref: paper:arxiv:2609.33867
+  note: 均涉及技能演化与复用的递归自我改进
+- type: same_topic
+  ref: paper:arxiv:2611.12109
+  note: 均涉及模型与技能共同演化的自我改进机制

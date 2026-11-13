@@ -1,0 +1,37 @@
+id: paper:arxiv:2609.32427
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'CityToolVQA: Tool-Augmented Visual Question Answering for 3D Spatial Cognition in Urban Low-Altitude
+    Environments'
+  authors:
+  - Boao Yu
+  - Yingzhen Nie
+  - Yue Hu
+  - Zhengqiu Zhu
+  - Rusheng Ju
+  published: '2026-09-26'
+  updated: '2026-09-26'
+  categories:
+  - cs.CV
+  abstract: 'CityToolVQA addresses the weak performance of Vision-Language Models (VLMs) on quantitative
+    tasks in urban low-altitude visual question answering. We divide the seven tasks into qualitative
+    and quantitative groups: qualitative questions are answered directly by the VLM, whereas quantitative
+    questions are handled by an external visual-geometric toolchain that performs object grounding, segmentation,
+    depth back-projection, and spatial computation. The toolchain can be attached to different VLMs in
+    a zero-shot manner; a Depth-Assisted Prompt Inference (DAPI) fallback is triggered when the main-chain
+    detection is invalid or unreliable, and CityToolVQA-SFT adapts the 8B backbone to tool-conditioned
+    inputs. On the 73,324-question Open3D-VQA-v2 test set, CityToolVQA-SFT (Qwen3-VL-8B) reaches 67.6%
+    overall accuracy, and attaching the toolchain to ten open-source VLMs improves quantitative-task accuracy
+    by 12.7-36.9 percentage points. These results indicate that externalizing explicit 3D geometric computation
+    effectively complements the limited ability of RGB-only VLMs to estimate metric distances and object
+    sizes.'
+  url: https://arxiv.org/abs/2609.32427
+  pdf_url: https://arxiv.org/pdf/2609.32427v1
+  version: v1
+fetched: '2026-11-13'

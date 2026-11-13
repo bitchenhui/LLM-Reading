@@ -1,0 +1,55 @@
+id: paper:arxiv:2611.08946
+type: paper
+title: 'Flex-RSI: Benchmarking Recursive Self-Improvement of Frontier Agents'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2611.08946v1
+  url: https://arxiv.org/abs/2611.08946
+  pdf_url: https://arxiv.org/pdf/2611.08946v1
+  venue: arXiv preprint
+time:
+  published: '2026-11-06'
+  collected: '2026-11-13'
+entities:
+- ref: concept:RSI
+  role: subject
+- ref: concept:SelfImprovement
+  role: subject
+claims:
+- statement: 当智能体自行构建任务解法时，递归自我改进带来的收益最大。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 仅记录成功/失败的二元反馈会抑制开源权重模型的自我改进效果。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 开源权重模型在输出需通过物理稳定性或精确正确性等严格校验的任务上落后闭源模型最明显。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 成对运行对照实验表明，对harness本身的编辑（而非仅改进解法）对最终收益有贡献。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出Flex-RSI基准，在固定预算下评估智能体在视觉与机器人任务上通过递归修订harness实现自我改进的能力。
+  abstract_zh: Flex-RSI是一个评估智能体递归自我改进（RSI）的基准：每轮由执行器改进任务解法，且仅当其在留出验证集上得分更高时才被保留，随后由改进器修订harness（含执行器与自身）。每次运行均从同一通用harness出发，最终解法在隐藏测试集上评分。基准在固定预算下评估闭源与开源权重模型，任务覆盖感知、推理、机器人动作、3D重建、视觉创作与基础设施。结果显示：自我改进在智能体自行构建解法时收益最大；仅记录成败的反馈会限制开源模型；在需通过物理稳定性或精确正确性严格校验的任务上开源模型落后最多。成对运行实验进一步证实编辑harness本身对性能提升有贡献。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 递归自我改进（RSI）基准类重要工作，属自我改进AI域而非音视频编码核心域，按规则仅做初筛摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-13'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: Flex-RSI：面向前沿智能体递归自我改进的基准测试
+relations:
+- type: same_topic
+  ref: paper:arxiv:2609.37950
+  note: 同为递归自我改进+智能体harness进化研究，Flex-RSI覆盖视觉等任务
+- type: same_topic
+  ref: paper:arxiv:2610.14224
+  note: 均以递归修订agent harness为核心机制
+- type: same_topic
+  ref: paper:arxiv:2610.18083
+  note: 同属RSI扩展与评估研究线，Flex-RSI提供固定预算基准视角

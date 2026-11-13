@@ -1,0 +1,85 @@
+id: paper:arxiv:2610.24087
+type: paper
+title: 'OR-License: Evaluating LLM Agents as Real-World Operations Research Practitioners'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2610.24087v1
+  url: https://arxiv.org/abs/2610.24087
+  pdf_url: https://arxiv.org/pdf/2610.24087v1
+  venue: arXiv preprint
+time:
+  published: '2026-10-16'
+  collected: '2026-11-13'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:SelfImprovement
+  role: builds_on
+claims:
+- statement: 最强主配置 Claude Code 在全部 31 个实例上取得 88.39% 严格可行性与 0.87 的 DAQ，低于专家参照解的 1。
+  confidence: reported
+  metrics:
+  - name: 严格可行性
+    value: 88.39%
+    scope: 最强 Claude Code 主配置，31 实例交付判定
+  - name: DAQ
+    value: '0.87'
+    scope: 同配置，专家参照=1，不可行交付计 0
+  evidence: abstract（初筛，未读全文）
+- statement: 若干前沿 LLM 智能体在条件性目标质量上超过专家参照，但无一在 DAQ 上匹敌专家。
+  confidence: reported
+  metrics:
+  - name: 评测模型数
+    value: '11'
+    scope: 使用编码智能体框架的前沿 LLM
+  evidence: abstract（初筛，未读全文）
+- statement: 任务均衡后的研究链完成率在可评任务上跨模型为 24%–45%。
+  confidence: reported
+  metrics:
+  - name: 研究链完成率
+    value: 24%–45%
+    scope: 可评任务上按任务均衡的跨模型范围
+  evidence: abstract（初筛，未读全文）
+- statement: 基准由 10 个工业场景、31 个实例构成，源项目总金额 368 万美元。
+  confidence: reported
+  metrics:
+  - name: 实例数
+    value: '31'
+    scope: OR-License 基准
+  - name: 工业场景数
+    value: '10'
+    scope: OR-License 基准
+  - name: 项目总额
+    value: USD 3.68 million
+    scope: 源付费运筹咨询项目合同额
+  evidence: abstract（初筛，未读全文）
+- statement: 客户信息获取贯穿澄清之外的方案开发与验证阶段，部分后期的确认问题解决比例更高。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 构建源自真实付费运筹项目的端到端基准 OR-License，评测 11 个前沿 LLM 智能体从原始客户材料产出可用解的能力。
+  abstract_zh: 论文提出 OR-License 基准，包含 10 个工业场景、31 个实例，全部来自总额 368 万美元的真实付费运筹学咨询项目，保留原始需求、输入数据、交付格式与信息边界并去标识。引入受控客户模拟器
+    ORSim 研究信息获取（只披露业务事实不提供运筹专业知识），并用隐藏评测检验可行性、以部署调整质量（DAQ）对比构建基准前已被客户接受的专家参照解。对 11 个前沿 LLM 使用编码智能体框架评测：若干模型的条件性目标质量超过专家参照，但无一在
+    DAQ 上匹敌专家，最强 Claude Code 主配置严格可行性 88.39%、DAQ 0.87。轨迹分析揭示建模与实现环节的失败模式，任务均衡后的研究链完成率在可评任务上为 24%–45%，结论呼吁持续消解信息缺口、忠实问题建模与证据链式自改进以支撑可靠的长时程智能体。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: LLM 智能体在真实运筹任务上的长时程评测基准，结论明确指向证据链式自改进，属非核心域故按基准收录摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-13'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: OR-License：将 LLM 智能体作为真实世界运筹学从业者进行评测
+relations:
+- type: same_topic
+  ref: paper:arxiv:2610.00972
+  note: 同属长时程 LLM 智能体评测/验证基准，均以可行性核查为核心评价手段
+- type: same_topic
+  ref: paper:arxiv:2609.38288
+  note: 同为面向长时程任务推进自改进智能体的评测类工作
+- type: same_topic
+  ref: paper:arxiv:2610.22344
+  note: 同为评估智能体自主完成领域专家级工程任务（ML 工程 vs 运筹咨询）的基准

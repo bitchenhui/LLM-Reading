@@ -1,0 +1,47 @@
+id: paper:arxiv:2607.26333
+type: paper
+title: 'Rethinking Clinical Relevance in Chest X-ray Machine Learning: How Evaluation References Define
+  Performance'
+domain: quality_assessment
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2607.26333v1
+  url: https://arxiv.org/abs/2607.26333
+  pdf_url: https://arxiv.org/pdf/2607.26333v1
+  venue: arXiv preprint
+time:
+  published: '2026-07-28'
+  collected: '2026-11-13'
+entities:
+- ref: concept:IQA
+  role: subject
+- ref: metric:PSNR
+  role: subject
+claims:
+- statement: 对监督图像分类器（ResNet、DenseNet）及零样本/微调视觉-语言模型（MedKLIP、GLoRIA、ConVIRT），更换标签来源（报告衍生 vs 专家图像标注）不仅显著改变性能估计，还会改变模型排名。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 常用IQA指标（如SSIM、PSNR）与放射科专家对胸片诊断可用性的评估经常不一致，IQA度量与专家判断的契合度高度依赖所选择的度量。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 评估参考标准的选择应被视为胸片机器学习临床有效性的核心组成部分，并需结合病理类型、成像任务与预期下游临床用途进行论证。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 评估参考标准的选择会显著改变胸片模型性能估计与排名，SSIM/PSNR常与专家诊断可用性判断不一致。
+  abstract_zh: 该论文系统研究评估参考标准的选择如何影响胸片机器学习的性能评估与模型排名。作者在剑桥大学医院（CUH）临床队列中收集了胸部病灶的成对专家图像标注与报告衍生标注，并整理了MIMIC-CXR的子集及专家对诊断图像质量的评分。结果显示，对监督分类器（ResNet、DenseNet）及零样本/微调视觉-语言模型（如MedKLIP、GLoRIA、ConVIRT），仅更换标签来源就会带来性能估计和模型排名的显著差异。同时，IQA度量与专家判断的一致性高度依赖度量选择，常用的SSIM和PSNR往往无法对应专家对诊断可用性的评估。作者据此主张评估参考的选择应被视为临床有效性的核心组成部分，需结合病灶、成像任务与下游临床用途加以论证。
+assessment:
+  relevance: low
+  decision: summary_only
+  reason: 属医学影像领域的评估方法论研究，仅因考察SSIM/PSNR等IQA指标与专家判断的一致性与音视频质量评估存在方法学交集，整体关联度低。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-13'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 重新审视胸片机器学习中的临床相关性：评估参考如何决定性能
+relations:
+- type: same_topic
+  ref: paper:arxiv:2605.18378
+  note: 同属'客观质量指标能否反映人类/专家判断'的方法学议题；本文为胸片诊断质量场景，后者为编码视频时序一致性场景，仅方法学层面相关。

@@ -1,0 +1,66 @@
+id: paper:arxiv:2609.34975
+type: paper
+title: 'Teach to Learn: Hint Annealing for Self-improving LLM Reasoning'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2609.34975v1
+  url: https://arxiv.org/abs/2609.34975
+  pdf_url: https://arxiv.org/pdf/2609.34975v1
+  venue: arXiv preprint
+time:
+  published: '2026-09-28'
+  collected: '2026-11-13'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: 提出HATCH：单一策略同时学习生成并使用自身提示，通过在线权重退火缓解'提示奖励偏移'，并以梯度投影移除提示生成更新与求解提升相冲突的分量，实现无提示条件下的推理自提升。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在数学推理基准上，HATCH在Llama-3.2-1B-Instruct上超过SOTA方法1.02个百分点。
+  confidence: reported
+  metrics:
+  - name: 相对SOTA提升
+    value: 1.02 pp
+    scope: Llama-3.2-1B-Instruct，数学推理基准
+  evidence: abstract（初筛，未读全文）
+- statement: HATCH在Qwen3-1.7B上超过SOTA方法2.84个百分点。
+  confidence: reported
+  metrics:
+  - name: 相对SOTA提升
+    value: 2.84 pp
+    scope: Qwen3-1.7B，数学推理基准
+  evidence: abstract（初筛，未读全文）
+- statement: HATCH在Qwen3-8B上超过SOTA方法4.32个百分点。
+  confidence: reported
+  metrics:
+  - name: 相对SOTA提升
+    value: 4.32 pp
+    scope: Qwen3-8B，数学推理基准
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出HATCH单策略在线框架，通过在线权重退火与梯度投影缓解提示奖励偏移，实现无需辅助提示的LLM推理自提升。
+  abstract_zh: GRPO在困难查询上因全部 rollout 错误而缺乏奖励对比信号；已有提示方法用解证据构造辅助提示重解失败查询以恢复信号，但辅助轨迹会引发'提示奖励偏移'，使策略更新过度依赖有提示条件。HATCH（Hint-Annealed
+    Self-Teaching）让单一策略同时学习生成与使用自身提示，并用在线权重退火逐步削减提示轨迹的贡献以缓解偏移；同时用梯度投影移除提示生成更新与求解提升相冲突的分量。在数学推理基准上，该方法在
+    Llama-3.2-1B-Instruct、Qwen3-1.7B、Qwen3-8B 上分别超过SOTA 1.02、2.84、4.32个百分点。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 属于LLM推理自我改进（自提示退火训练）工作，与音视频技术无关，按基准给summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-13'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 教学相长：面向自提升LLM推理的提示退火方法（HATCH）
+relations:
+- type: same_topic
+  ref: paper:arxiv:2610.23344
+  note: 均为语言模型自我改进/自提升训练方法，同属LLM自改进研究线
+- type: same_topic
+  ref: paper:arxiv:2609.33867
+  note: 同为模型/技能自我演进（递归自我改进）方向的训练方法研究

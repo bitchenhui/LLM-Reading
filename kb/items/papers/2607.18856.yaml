@@ -1,0 +1,65 @@
+id: paper:arxiv:2607.18856
+type: paper
+title: 'Think Sparse, Predict Dense: Continuous Thought Machines for Image Super-Resolution'
+domain: processing_enhancement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2607.18856v1
+  url: https://arxiv.org/abs/2607.18856
+  pdf_url: https://arxiv.org/pdf/2607.18856v1
+  venue: arXiv preprint
+time:
+  published: '2026-07-21'
+  collected: '2026-11-13'
+entities:
+- ref: concept:SuperResolution
+  role: subject
+- ref: metric:PSNR
+  role: measured_by
+claims:
+- statement: DQ-CTM通过低秩、参数高效的紧凑到稠密查询机制，将窗口级CTM思考表示转化为窗口对齐的稠密查询，实现稀疏潜在思考支撑稠密空间重建的可行性。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: ThinkSR在固定四tick训练范围内呈渐进重建轨迹，PSNR-Y随思考tick持续提升。
+  confidence: reported
+  metrics:
+  - name: PSNR-Y
+    value: 28.1045→30.2817 dB
+    scope: 固定4 tick训练下，T=0至T=4
+  evidence: abstract（初筛，未读全文）
+- statement: PSNR-RGB与平均L1误差同样随思考tick单调改善。
+  confidence: reported
+  metrics:
+  - name: PSNR-RGB
+    value: 26.6271→28.7781 dB
+    scope: 固定4 tick训练下，T=0至T=4
+  - name: mean L1 error
+    value: 0.034602→0.023545
+    scope: 固定4 tick训练下，T=0至T=4
+  evidence: abstract（初筛，未读全文）
+- statement: 全部100张评测图像从T=1到T=4均获得改善，无退化样本。
+  confidence: reported
+  metrics:
+  - name: 改善图像数
+    value: 100张
+    scope: 全部评测图像，T=1至T=4
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出DQ-CTM将连续思维机器的窗口级思考动态经低秩紧凑-稠密查询机制扩展到超分任务ThinkSR，验证多tick逐步提升重建质量。
+  abstract_zh: 连续思维机器（CTM）在神经元级时间维度上演化表示，但直接用于超分辨率等稠密视觉预测存在困难，因为空间证据需在每个输出位置保持可用。论文提出DQ-CTM：窗口级思考动态为每个局部窗口生成紧凑摘要表示，再通过结构化低秩、参数高效的紧凑到稠密查询机制将其转换为窗口对齐的稠密查询，共享思考动态随思考tick逐步细化稠密表示。其超分辨率实例ThinkSR将编码特征图划分为局部视觉窗口（不做token池化），共享细化后恢复至原特征场并解码为高分辨率图像。固定四tick训练范围的初步实验显示渐进重建轨迹：PSNR-Y从T=0的28.1045
+    dB升至T=4的30.2817 dB，PSNR-RGB从26.6271 dB升至28.7781 dB，平均L1误差从0.034602降至0.023545，且全部100张评测图像从T=1到T=4均有改善。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 图像超分辨率属编码链路增强域，但本文是纯视觉架构的初步可行性工作，未与编码场景结合，仅需初筛摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-13'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 稀疏思考，稠密预测：面向图像超分辨率的连续思维机器
+relations:
+- type: same_topic
+  ref: paper:arxiv:2609.37328
+  note: 同为神经图像超分辨率方法，CASR面向VVC后滤波场景，本文为通用超分架构探索

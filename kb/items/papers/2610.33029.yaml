@@ -1,0 +1,88 @@
+id: paper:arxiv:2610.33029
+type: paper
+title: 'Lessons from Luck: Do LLM-Written Lessons Carry Chance into an Agent''s Next Decision?'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2610.33029v1
+  url: https://arxiv.org/abs/2610.33029
+  pdf_url: https://arxiv.org/pdf/2610.33029v1
+  venue: arXiv preprint
+time:
+  published: '2026-10-12'
+  collected: '2026-11-13'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: 好工具遭遇偶然失败后，读取教训的智能体会把运气带入下次决策：面板级 luck-carrying 交互效应 +0.112，读取教训组 11.6% 下次选更差工具，而无关记忆项与成功教训组仅各
+    0.4%
+  confidence: reported
+  metrics:
+  - name: luck-carrying交互效应
+    value: '+0.112'
+    scope: 11个LLM端点面板、注册解读，95%区间[+0.097,+0.126]
+  - name: 更差工具选择率（偶然失败教训组）
+    value: 11.6%
+    scope: 256个合成世界、面板均值
+  - name: 更差工具选择率（无关记忆项/成功教训组）
+    value: 0.4%
+    scope: 对照条件，面板均值
+  evidence: abstract（初筛，未读全文）
+- statement: 运气承载程度取决于日志是否声明失败相互独立：声明时交互效应 +0.042，未声明时 +0.181；更差工具侥幸成功后交互效应仅 +0.002（界低于 0.10，非'无损害'证据）
+  confidence: reported
+  metrics:
+  - name: 交互效应（日志声明失败独立）
+    value: '+0.042'
+    scope: 描述性读数
+  - name: 交互效应（日志未声明独立）
+    value: '+0.181'
+    scope: 描述性读数
+  - name: 交互效应（侥幸成功场景）
+    value: '+0.002'
+    scope: 注册界：低于0.10
+  evidence: abstract（初筛，未读全文）
+- statement: 探索性读数中 6 个端点显著承载运气（最高 +0.352），5 个界低于 0.10；写入指令加入三句决策质量注记可将偶然失败后错选率降至 7.5%，带'无变化'选项的双结局指令降至
+    3.1%，但均未在每个端点满足注册减害规则
+  confidence: reported
+  metrics:
+  - name: 探索性端点最大交互效应
+    value: '+0.352'
+    scope: 6个端点承载运气、5个界<0.10
+  - name: 错选率（三句决策质量注记干预）
+    value: 7.5%
+    scope: 偶然失败后，探索性对比
+  - name: 错选率（双结局+无变化选项干预）
+    value: 3.1%
+    scope: 偶然失败后，探索性对比
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 预注册实验发现：LLM 依噪声结果写的教训会把运气带入后续决策，好工具偶发失败后 11.6% 下次选更差工具。
+  abstract_zh: 论文以预注册、先行存证与时间戳固定的实验测量自我改进智能体'写教训'链条中的一环：当运行结果带噪声时，LLM 撰写的教训是否会将偶然性带入后续决策。在 256 个合成世界（重复任务、两个可靠性已知的可互换工具）中，脚本化的上一次运行使用更好或更差工具并指定成败，模型按
+    ReasoningBank 记忆写入指令撰写教训，同模型的新会话在持有权威日志与上次结果的前提下，依据单条记忆（该教训、另一结局的教训、无关记忆项或未经推理的指令）选择下次运行的首个工具。11 个
+    LLM 端点共给出 90,084 个回答：好工具遭遇偶然失败后，读取教训的会话有 11.6% 下次选了更差工具，而无关记忆项与成功教训组仅 0.4%，面板级交互效应 +0.112（95% 区间 [+0.097,
+    +0.126]）。效应受日志是否声明失败相互独立影响（+0.042 vs +0.181，描述性）；更差工具侥幸成功后交互效应仅 +0.002（界低于 0.10）。探索性干预中，写入指令加入三句决策质量注记可将偶然失败后的错选率降至
+    7.5%，加入带'无变化'选项的双结局指令可降至 3.1%，但均未在每个端点满足注册的减害规则。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 属自我改进域：预注册实验测量 LLM 依据噪声结果撰写的经验教训是否会将偶然性带入智能体后续决策，与音视频核心技术无关，按非核心域上限 summary_only 收录
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-13'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 运气的教训：LLM 撰写的经验教训会把偶然性带入智能体的下一次决策吗？
+relations:
+- type: same_topic
+  ref: paper:arxiv:2610.27406
+  note: 同研究 LLM 智能体经验记忆的负面效应：本文测教训承载运气，该文测错误记忆的复现与反持久化
+- type: same_topic
+  ref: paper:arxiv:2610.09239
+  note: 同关注自我改进环路中的选择噪声、运气与接受规则问题（Winner's Curse）
+- type: same_topic
+  ref: paper:arxiv:2611.11509
+  note: 同为智能体经验教训（lessons）记忆演化与改进机制的研究

@@ -1,0 +1,55 @@
+id: paper:arxiv:2610.06196
+status: reviewed
+score: 4
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+- ref: metric:LPIPS
+  count: 1
+  weight: 1
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+- ref: metric:SSIM
+  count: 1
+  weight: 1
+meta:
+  title: 'EORestore-Agent: Fidelity-Guided Agentic Restoration of Remote Sensing Images with Composite
+    Degradations'
+  authors:
+  - Heli Qi
+  - Zeqi Zhou
+  - Jingjun Yi
+  - Kunyi Liu
+  - Ziyang Lihe
+  - Junjue Wang
+  - Osamu Yoshie
+  - Naoto Yokoya
+  published: '2026-10-05'
+  updated: '2026-10-05'
+  categories:
+  - cs.CV
+  abstract: Remote sensing images often carry composite degradations, in which haze, cloud, noise, blur,
+    low light, and low resolution coexist. Restoring them requires deciding which tool to apply, in what
+    order, and when to stop, yet no clean reference is available at inference time to verify these decisions.
+    All-in-one models trained on single degradations converge to a narrow PSNR band as degradations accumulate.
+    To formulate real-world remote sensing restoration as a traceable trajectory, we present EORestore-Agent,
+    which replaces this unmeasurable objective with reference-free, verifiable per-step decisions. A fine-tuned
+    vision-language model reports all residual degradation types, whose tool pools are scored together,
+    so the restoration order emerges from step-wise selection. A relative quality scorer, trained with
+    full-reference supervision on synthetic degradation chains, predicts the changes in PSNR, SSIM, and
+    LPIPS from the current image to each candidate. A step is accepted only when no predicted change is
+    negative and the predicted PSNR gain is positive. Otherwise, the agent keeps the current image. On
+    a synthetic Landsat-8 benchmark with six degradation types, EORestore-Agent improves PSNR by 2.3 to
+    3.2 dB over the strongest retrained all-in-one baseline on composites of two to six degradations,
+    whereas zero-shot natural-image agents fall below the degraded input in PSNR in 17 of 18 settings.
+    Replacing the learned scorer with no-reference quality differences costs 1.1 to 4.6 dB. The remaining
+    harmful steps are small and cluster near the acceptance threshold. Sentinel-2 examples illustrate
+    transfer to real atmospheric degradation without retraining.
+  url: https://arxiv.org/abs/2610.06196
+  pdf_url: https://arxiv.org/pdf/2610.06196v1
+  version: v1
+fetched: '2026-11-13'
+llm_decision: summary_only

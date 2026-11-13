@@ -1,0 +1,36 @@
+id: paper:arxiv:2610.05691
+status: skipped
+score: 0
+track: audio_coding
+matched: []
+meta:
+  title: 'AudioGAR: Bridging Reconstruction and Generation in Latent Audio Generative Models'
+  authors:
+  - Xianghong Fang
+  - Geeyang Tay
+  - Wentao Ma
+  - Tim G. J. Rudner
+  - Dehan Kong
+  published: '2026-10-05'
+  updated: '2026-10-05'
+  categories:
+  - cs.SD
+  abstract: 'Latent audio generative models are typically trained in two stages: an audio codec is learned
+    first, followed by a latent generative model. This decomposition leads to a decoder train-generation
+    mismatch: the codec decoder is trained on encoder-induced latents but deployed on generator-produced
+    latents at inference time. Across diverse datasets and latent generative models, we observe clear
+    reconstruction-generation gaps under both FD and FAD, showing that strong reconstruction quality does
+    not necessarily translate into strong end-to-end generation quality. A natural remedy is to adapt
+    the decoder on generation-produced latents, but generated latents lack correspondence with source
+    audio and therefore cannot directly provide the paired supervision used for decoder fine-tuning. We
+    introduce \textbf{AudioGAR}, which constructs intermediate latents by perturbing encoder latents and
+    denoising them through the frozen latent diffusion model. These latents form a trajectory from reconstruction
+    toward generation, with lower-noise latents retaining source correspondence and supporting paired
+    decoder fine-tuning. We fine-tune only the codec decoder on these latents, while keeping the codec
+    encoder and latent generative model frozen. When applied to AudioX, AudioGAR substantially improves
+    generative performance. It requires only 1.5\% of the original training audio hours and 0.26\% of
+    the original training cost.'
+  url: https://arxiv.org/abs/2610.05691
+  pdf_url: https://arxiv.org/pdf/2610.05691v1
+  version: v1
+fetched: '2026-11-13'

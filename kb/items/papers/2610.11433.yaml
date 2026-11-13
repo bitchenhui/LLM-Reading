@@ -1,0 +1,54 @@
+id: paper:arxiv:2610.11433
+type: paper
+title: 'DLC: A Metric-Guided Dynamic Loss Controller for Multi-Objective Training'
+domain: processing_enhancement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2610.11433v1
+  url: https://arxiv.org/abs/2610.11433
+  pdf_url: https://arxiv.org/pdf/2610.11433v1
+  venue: arXiv preprint
+time:
+  published: '2026-10-08'
+  collected: '2026-11-13'
+entities:
+- ref: concept:SuperResolution
+  role: subject
+- ref: concept:LLM
+  role: uses
+- ref: concept:IQA
+  role: measured_by
+claims:
+- statement: DLC是架构与损失项无关的训练期控制器，仅动态重加权既有训练损失，不修改复原网络结构、不引入新的可微损失项。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: DLC在训练中周期性地于固定反馈子集上评估当前模型，用质量指标经基于LLM的控制器更新损失权重向量。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在低光照增强、去雨和真实世界超分辨率三个复原任务上，用全参考与无参考指标评估，DLC可将模型引向保真度与感知质量间更有利的工作点。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出指标引导的动态损失控制器DLC，训练中由LLM依据质量指标动态重加权既有损失，在图像复原任务中平衡保真与感知质量。
+  abstract_zh: 论文提出面向多目标图像复原训练的指标引导动态损失控制器DLC。DLC不修改复原网络结构、也不引入新的可微损失项，而是在训练过程中周期性地在固定反馈子集上评估当前模型，并通过基于LLM的控制器根据质量指标更新既有损失的权重向量。控制器与架构和损失项无关，可跨不同复原训练管线实例化。作者在低光照增强、去雨和真实世界超分辨率三个复原任务上验证，使用全参考与无参考质量指标评估。结果显示DLC能引导训练走向保真度与感知质量之间更均衡的工作点，可作为多目标复原训练的即插即用控制器。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 面向多目标图像复原训练的损失动态加权控制，涉及超分与质量指标引导，属编码链路增强域外围，非编码核心。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-13'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: DLC：一种面向多目标训练的指标引导动态损失控制器
+relations:
+- type: same_topic
+  ref: paper:arxiv:2603.25566
+  note: 同为面向学习式转码/复原的训练损失设计，关注感知质量与损失加权
+- type: same_topic
+  ref: paper:arxiv:2609.37328
+  note: 均涉及超分辨率增强及其训练优化
+- type: same_topic
+  ref: paper:arxiv:2608.08508
+  note: 均联合考虑超分辨率与质量评估指标的相互作用

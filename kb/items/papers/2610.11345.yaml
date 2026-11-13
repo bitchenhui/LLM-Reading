@@ -1,0 +1,60 @@
+id: paper:arxiv:2610.11345
+type: paper
+title: 'SynCo: Data Synthesis Co-Training for Self-Evolving LLMs via Multi-Agent Reinforcement Learning'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2610.11345v1
+  url: https://arxiv.org/abs/2610.11345
+  pdf_url: https://arxiv.org/pdf/2610.11345v1
+  venue: arXiv preprint
+time:
+  published: '2026-10-08'
+  collected: '2026-11-13'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: subject
+claims:
+- statement: SynCo通过多智能体强化学习联合优化Synthesizer与Reasoner两个独立参数化的智能体，使任务求解策略与训练数据分布随能力变化共同进化。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 合成任务诱导的Reasoner rollout结果为双方提供互补奖励：正确性反馈改进Reasoner，任务质量、答案可靠性与可教性信号引导Synthesizer。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在八个数学推理基准上，SynCo整体性能超越广泛的现有合成数据方法与受控基线，且大部分增益来自此前未解决的问题。
+  confidence: reported
+  metrics:
+  - name: 评测基准数量
+    value: '8'
+    scope: 数学推理基准
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出SynCo框架，以多智能体强化学习协同训练任务合成器与推理器，使训练数据随LLM能力共同进化。
+  abstract_zh: 针对现有自进化流水线依赖静态数据集或独立更新的合成模型、导致任务难度与智能体能力错配的问题，提出SynCo框架。该框架联合优化两个独立参数化的智能体：Synthesizer依据Reasoner不断演进的能力状态构造训练任务，Reasoner从合成任务中学习。每个合成任务诱导多次Reasoner
+    rollout，其结果为双方提供互补奖励：正确性反馈改进Reasoner，任务质量、答案可靠性与结果锚定的可教性引导Synthesizer，更新结果反馈到后续合成轮次，使任务求解策略与训练分布共同进化。在八个数学推理基准上，SynCo显著超越广泛的合成数据方法与受控基线，取得最强综合性能，且大部分增益来自此前未解决的问题。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 论文属自我改进AI核心议题（自进化LLM+数据合成协同训练），非视频编码核心域，按规则仅收录初筛摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-13'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: SynCo：基于多智能体强化学习的自进化LLM数据合成协同训练
+relations:
+- type: same_topic
+  ref: paper:arxiv:2609.35025
+  note: 同为智能体自动合成数据以喂养自我改进闭环的研究
+- type: same_topic
+  ref: paper:arxiv:2609.34975
+  note: 同为面向LLM推理自我改进的合成任务/提示数据方法
+- type: same_topic
+  ref: paper:arxiv:2611.12109
+  note: 同为通过响应反馈实现模型与另一组件协同进化（co-evolution）的多智能体框架
+- type: same_topic
+  ref: paper:arxiv:2610.16078
+  note: 同为多智能体协同进化（agentic coevolution）方向

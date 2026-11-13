@@ -1,0 +1,51 @@
+id: paper:arxiv:2608.11645
+status: reviewed
+score: 3
+track: immersive_media
+matched:
+- ref: concept:VolumetricVideo
+  count: 2
+  weight: 1
+- ref: metric:FPS
+  count: 1
+  weight: 1
+- ref: metric:SSIM
+  count: 1
+  weight: 1
+meta:
+  title: 'Cloak of Invisibility: Real-Time Privacy-Preserving Volumetric Video Streaming'
+  authors:
+  - Hossein Khalili
+  - Philip Do
+  - Alexander Vilesov
+  - Achuta Kadambi
+  - Kittipat Apicharttrisorn
+  - Nader Sehatbakhsh
+  published: '2026-08-12'
+  updated: '2026-08-21'
+  categories:
+  - cs.CV
+  abstract: 'Volumetric video streaming turns privacy into a 3D, multi-view problem. Unlike ordinary video,
+    where sensitive content can often be redacted frame by frame, RGB-D volumetric pipelines capture people,
+    rooms, and personal objects from multiple cameras and fuse them into a shared 3D representation. A
+    private object missed in one view, or only partially removed before fusion, can therefore reappear
+    in the reconstructed scene. This creates a privacy challenge for 3D telepresence, education, entertainment,
+    and immersive applications: private content should be removed before raw visual and geometric data
+    leave the camera side, while the public part of the scene should remain useful for real-time reconstruction.
+    Existing volumetric streaming systems mainly optimize reconstruction, data movement, and latency,
+    while privacy-preserving vision methods are designed for single-camera, single-frame images and do
+    not directly address calibrated multi-view RGB-D fusion. We present InViStream, a real-time "privacy-from-source"
+    system designed for this setting. InViStream addresses three challenges in volumetric capture: private
+    objects may appear differently across views, RGB masking alone can leave geometric privacy leakage
+    in depth, and public/private instances of the same class must be separated consistently before cloud-side
+    fusion. To address these challenges, InViStream combines object detection with depth-aware masking,
+    propagates public/private decisions across calibrated views, and fuses only sanitized point clouds.
+    We evaluate InViStream on synthetic and real RGB-D scenes, including offices, conference rooms, living
+    rooms, and settings with multiple public and private people and objects. InViStream achieves synthetic
+    Dice/Recall of 0.799/0.891 and real Dice/Recall of 0.792/0.908, with synthetic SSIM above 0.98 and
+    real-time streaming above 30 FPS.'
+  url: https://arxiv.org/abs/2608.11645
+  pdf_url: https://arxiv.org/pdf/2608.11645v2
+  version: v2
+fetched: '2026-11-13'
+llm_decision: summary_only

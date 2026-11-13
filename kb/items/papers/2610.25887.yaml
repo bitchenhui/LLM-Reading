@@ -1,0 +1,54 @@
+id: paper:arxiv:2610.25887
+type: paper
+title: 'Rethinking Sparse-View 3D Gaussian Splatting: A Few-Shot Learning Perspective on Overfitting Prevention'
+domain: immersive_media
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2610.25887v1
+  url: https://arxiv.org/abs/2610.25887
+  pdf_url: https://arxiv.org/pdf/2610.25887v1
+  venue: arXiv preprint
+time:
+  published: '2026-10-19'
+  collected: '2026-11-13'
+entities:
+- ref: concept:3DGS
+  role: subject
+- ref: concept:VolumetricVideo
+  role: evaluated_on
+claims:
+- statement: 在少样本学习统一框架下，数据侧的光流引导伪视角合成与相机-场景联合优化、训练侧的运动感知dropout与早停，可协同抑制稀疏视角3DGS的过拟合并保持动态场景稳定性。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 该方法在SIGGRAPH Asia 2025体积视频挑战赛稀疏视角数据集上显著优于SOTA优化式与前馈式基线，系统获稀疏视角赛道第一名。
+  confidence: reported
+  metrics:
+  - name: 挑战赛排名
+    value: 第1名
+    scope: SIGGRAPH Asia 2025体积视频挑战赛稀疏视角赛道
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 将稀疏视角3DGS重构重构为少样本学习问题，用监督增强与训练正则化双策略抑制过拟合，获SIGGRAPH Asia 2025挑战赛稀疏视角赛道第一。
+  abstract_zh: 论文提出从少样本学习的新视角统一看待稀疏视角3D高斯泼溅（3DGS）的过拟合与几何退化问题，将每个高斯基元视为神经元并借用深度学习正则化技术。方法包含两条策略：一是数据相关监督增强，通过光流引导的伪视角合成与相机-场景联合优化从稀缺观测中生成更有效监督；二是训练期正则化，采用运动感知dropout与早停在抑制过拟合的同时保持动态场景稳定性。在SIGGRAPH
+    Asia 2025体积视频挑战赛稀疏视角数据集上，该方法显著优于SOTA优化式与前馈式基线，系统获得该挑战赛稀疏视角赛道第一名。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 稀疏视角3DGS重构属于沉浸式媒体（3DGS）方向，非核心编码域，按基准只做初筛摘要，但工作获SIGGRAPH Asia 2025挑战赛冠军且与体积视频生态高度相关。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-13'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 重新思考稀疏视角3D高斯泼溅：从少样本学习视角防止过拟合
+relations:
+- type: same_topic
+  ref: paper:arxiv:2610.04606
+  note: 同为稀疏视角高斯泼溅重构，均借助先验/生成手段缓解稀疏输入问题
+- type: same_topic
+  ref: paper:arxiv:2609.33969
+  note: 均面向体积视频场景下的高斯泼溅表示与压缩/重构
+- type: same_topic
+  ref: paper:arxiv:2609.31509
+  note: 同关注从有限视频输入提升高斯泼溅重建的可靠性与质量

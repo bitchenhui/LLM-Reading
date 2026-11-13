@@ -1,0 +1,44 @@
+id: paper:arxiv:2611.02581
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'SMILE: A Structured Multi-Agent Clinical Reasoning for Liver Ultrasound Understanding'
+  authors:
+  - Haris Ghafoor
+  - Minjee Seo
+  - Seonaeng cho
+  - Keungmo Yang
+  - Jaejun Lee
+  - Kyungho Yoon
+  published: '2026-11-02'
+  updated: '2026-11-02'
+  categories:
+  - cs.CV
+  - cs.CL
+  - cs.LG
+  abstract: 'Automated liver ultrasound report generation improves the diagnosis of liver diseases by
+    producing clinically structured descriptions of anatomical and disease-related findings. However,
+    current generative vision-language models (VLMs) often rely on a single reasoning pathway that maps
+    ultrasound appearance directly to textual descriptions. In addition to the inherent vision-language
+    modality gap, this design is limited for liver ultrasound because disease interpretation is constrained
+    by subtle visual evidence, heterogeneous disease patterns, and limited paired supervision. To address
+    these limitations, we propose SMILE, a Structured Multi-agent clInicaL rEasoning framework that uses
+    multiple complementary specialist agents to interpret ultrasound images and consolidates their outputs
+    through a judge-guided consensus mechanism. Our approach employs three specialized agents: an image
+    interpretation agent for morphological descriptions, a clinical-stage reasoning agent, and a visual
+    question answering (VQA) agent for targeted queries. These agent responses are then aggregated and
+    scrutinized by a judge VLM using a consensus filtering prompt to produce a unified, clinically coherent
+    output. Across a public liver ultrasound dataset and an internal clinical dataset, SMILE consistently
+    outperforms state-of-the-art VLMs, achieving up to 19.0\% improvement in ROUGE-1 and 18.8\% improvement
+    in clinical F1-score, while reaching VQA F1-scores of 0.82 and 0.65 on public and internal datasets,
+    respectively. These results demonstrate the potential of SMILE for data-scarce and limited-supervision
+    clinical settings. Our models, datasets, and code are available \href{https://github.com/CMME-Lab/SMILE}{here}.'
+  url: https://arxiv.org/abs/2611.02581
+  pdf_url: https://arxiv.org/pdf/2611.02581v1
+  version: v1
+fetched: '2026-11-13'

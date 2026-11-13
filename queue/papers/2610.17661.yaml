@@ -1,0 +1,43 @@
+id: paper:arxiv:2610.17661
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'ScenePercept: Scenario-Conditioned Perceptual Assessment of Real-World User-Generated Content
+    Images'
+  authors:
+  - Shuhan Xia
+  - Yu Chen
+  - Xiang Wang
+  - Shuai Li
+  - Peipie Li
+  - Zekun Li
+  published: '2026-10-13'
+  updated: '2026-10-26'
+  categories:
+  - cs.CV
+  abstract: The rapid development of mobile imaging and social platforms has led to explosive growth in
+    user-generated content images, making their systematic and comprehensive perceptual assessment increasingly
+    important. Existing image perception benchmarks are typically task-oriented, curating specific scenarios
+    for quality or aesthetic assessment and applying a uniform perceptual criterion across diverse scenarios.
+    This limits their ability to capture the scene diversity and perceptual complexity of real-world UGC
+    images. To address these limitations, we introduce ScenePercept-Bench, a benchmark designed to reflect
+    the distribution of real-world UGC images, comprising 23,100 images across 21 categories and 105 fine-grained
+    scenes. To account for the influence of scene context on human perception, we design a hierarchical,
+    scene-aware annotation protocol, covering visual quality, aesthetic perception, and scene semantics,
+    with 15 attributes in total. Each image is annotated with an overall score, 15 attribute-level scores,
+    and structured explanatory reasoning. Building on this benchmark, we further introduce Scenario-Conditioned
+    Perceptual Alignment, a training framework that tackles the heterogeneity of perceptual criteria across
+    scenarios. SCPA jointly optimizes absolute score prediction, preference ranking, and cross-scenario
+    calibration, preserving the model general perceptual assessment ability while encouraging it to explore
+    and adapt perceptual criteria across different scenarios. Extensive experiments demonstrate that SCPA
+    achieves state-of-the-art performance in UGC image perception and generalizes effectively to established
+    IQA and IAA benchmarks.
+  url: https://arxiv.org/abs/2610.17661
+  pdf_url: https://arxiv.org/pdf/2610.17661v2
+  version: v2
+fetched: '2026-11-13'

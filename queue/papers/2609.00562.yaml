@@ -1,0 +1,36 @@
+id: paper:arxiv:2609.00562
+status: skipped
+score: 0
+track: audio_coding
+matched: []
+meta:
+  title: 'BiMTokenizer: Preserving Semantic-Acoustic Balance in Low-Bitrate Speech Tokenization via Bidirectional
+    State-Space Modeling'
+  authors:
+  - Xin Zhang
+  - Lin Li
+  - Chuanbo Liu
+  - Jianquan Liu
+  - Kong Aik Lee
+  published: '2026-09-01'
+  updated: '2026-09-01'
+  categories:
+  - cs.SD
+  abstract: Speech codecs serve as bridges between continuous speech signals and large language models,
+    yet face an inherent conflict between acoustic fidelity and semantic preservation. To mitigate this
+    conflict, recent works increasingly adopt dual-tower architectures to decouple semantic and acoustic
+    modeling with separate encoders. However, these dual-tower designs incur substantial architectural
+    overhead. To avoid such complexity, we revisit the single-tower paradigm and propose BiMTokenizer,
+    a low-bitrate speech codec (around 1.1 kbps) combining a bidirectional state-space backbone with Residual
+    Spherical Leech Quantization (RSLQ). The bidirectional backbone strengthens temporal modeling, while
+    RSLQ offers a fixed, well-separated lattice bottleneck for robust semantic and acoustic tokenization
+    without learned-codebook collapse. Experiments show that BiMTokenizer achieves superior acoustic reconstruction
+    and the lowest WER among low-bitrate codec baselines across both clean and noisy environments, while
+    using less than half the parameters of recent dual-tower baselines. Furthermore, its robust semantic
+    representations yield strong performance on downstream speech understanding tasks, confirming that
+    a well-designed single-tower codec can preserve the semantic-acoustic balance at low bitrates. The
+    code and model weights are available at https://github.com/ZhangXinWhut/BiMTokenizer.
+  url: https://arxiv.org/abs/2609.00562
+  pdf_url: https://arxiv.org/pdf/2609.00562v1
+  version: v1
+fetched: '2026-11-13'

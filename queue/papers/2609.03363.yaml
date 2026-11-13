@@ -1,0 +1,33 @@
+id: paper:arxiv:2609.03363
+status: skipped
+score: 0
+track: audio_coding
+matched: []
+meta:
+  title: 'PACodec: A Low-bitrate Neural Speech Codec with Parallel Additive Vector Quantization'
+  authors:
+  - Fei Liu
+  - Yang Ai
+  - Xiao-Hang Jiang
+  - Zhen-Hua Ling
+  published: '2026-09-03'
+  updated: '2026-09-03'
+  categories:
+  - cs.SD
+  abstract: 'This paper proposes PACodec, a novel low-bitrate neural speech codec based on parallel additive
+    vector quantization (PAVQ). Unlike the mainstream residual vector quantization (RVQ) used in most
+    neural speech codecs, where vector quantizers (VQs) are sequentially dependent, the PAVQ strategy
+    adopted in PACodec aggregates parallel quantization results to optimize bitrate usage. Specifically,
+    the PAVQ adopts a "global-local-global" (GLG) design: the global encoded features are quantized in
+    parallel by multiple independent VQs, each attending to a local component of the representation, and
+    their outputs are aggregated through addition to yield the final global quantization result for decoding.
+    Experimental results show that PACodec, as each VQ focuses only on local information, supports smaller
+    codebooks and reduces bitrate by 30% compared with baselines at the same decoding quality, with only
+    minor model complexity. Further analysis shows that, owing to the GLG framework of PAVQ, the proposed
+    PACodec is disentanglement-friendly, and each independent VQ captures different aspects of speech,
+    e.g., content, timbre, and acoustic details, suggesting potential for application to downstream tasks
+    such as voice conversion.'
+  url: https://arxiv.org/abs/2609.03363
+  pdf_url: https://arxiv.org/pdf/2609.03363v1
+  version: v1
+fetched: '2026-11-13'

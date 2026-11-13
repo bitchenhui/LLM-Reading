@@ -1,0 +1,42 @@
+id: paper:arxiv:2611.12144
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'DisasterVLG: Vision-Language Grounding and Evidence-Based Reasoning for Disaster Scene Understanding'
+  authors:
+  - Ali Diba
+  - Aisha Al-Mohannadi
+  - Yin Yang
+  - Muhammad Imran
+  - Ferda Ofli
+  published: '2026-11-09'
+  updated: '2026-11-11'
+  categories:
+  - cs.CV
+  abstract: 'General-purpose vision-language models struggle with crisis imagery due to its inherent noise,
+    ambiguity, and high variability across disaster events - yet timely, accurate scene understanding
+    is critical for humanitarian response. To address this, we introduce DisasterVLG, a large-scale multi-task
+    dataset containing 1.24 million disaster images from 142 countries paired with 33 million structured
+    annotations spanning dense captioning with localization, incident assessment, relational scene descriptions,
+    and crisis-grounded visual question answering (VQA) across diverse hazard types and scene contexts
+    worldwide. Unlike prior disaster benchmarks that focus narrowly on classification, DisasterVLG unifies
+    recognition, grounded reasoning, and uncertainty-aware interpretation. A distinguishing feature is
+    its evidence-grounded annotation design: each VQA instance includes supporting evidence text that
+    links visual observations to answers, alongside positive and negative question pairs, multiple answer
+    formats, and difficulty labels. Visual grounding layer links caption phrases to image regions and
+    relationship statements to subject-object boxes, with explicit labels for visual supports and clues.
+    To support rigorous evaluation, we construct a human-verified test set of 38K images (1.15M annotations)
+    spanning broad geographic regions and disaster types. Experiments with domain-adapted vision-language
+    models demonstrate strong performance across disaster captioning, incident recognition, and grounded
+    VQA, while also exposing the limitations of general-purpose models in crisis-specific reasoning. DisasterVLG
+    establishes a scalable, reproducible benchmark for vision-language models that must reason reliably
+    under real-world uncertainty. We will publicly release the dataset, trained models, and code.'
+  url: https://arxiv.org/abs/2611.12144
+  pdf_url: https://arxiv.org/pdf/2611.12144v2
+  version: v2
+fetched: '2026-11-13'

@@ -1,0 +1,62 @@
+id: paper:arxiv:2610.13098
+type: paper
+title: 'VETR: Execution-Grounded Self-Improving Agent for Symbolic Graphics Reasoning'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2610.13098v2
+  url: https://arxiv.org/abs/2610.13098
+  pdf_url: https://arxiv.org/pdf/2610.13098v2
+  venue: arXiv preprint
+time:
+  published: '2026-10-09'
+  collected: '2026-11-13'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:RSI
+  role: subject
+claims:
+- statement: VETR通过保留对齐程序/渲染记录与有界运行时观测，并用执行精炼器将观测到的写入和状态变化编译为受约束备选程序，实现符号图形推理上的递归自我改进。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在BlenderGym与BlenderBench上，VETR持续优于BlenderAlchemy和VIGA等现有精炼策略。
+  confidence: reported
+  metrics:
+  - name: 评估任务数
+    value: '280'
+    scope: BlenderGym基准
+  - name: 评估任务数
+    value: '27'
+    scope: BlenderBench已发布任务
+  evidence: abstract（初筛，未读全文）
+- statement: 修复构建过程无需额外语言模型调用，但可能需要额外的程序执行。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 受控消融实验表明执行精炼与角色非对称证据组织对性能均有贡献。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出VETR框架，以验证过的执行轨迹为基础，实现符号图形推理任务的递归自我改进。
+  abstract_zh: 面向符号图形推理的视觉智能体依赖可执行世界表示，但最终渲染提供的监督信号模糊，制约了持续改进。VETR在每个任务内保留对齐的程序/渲染记录与有界运行时观测，并引入执行精炼器，将观测到的写入操作与状态变化编译为受约束的备选程序。精炼器针对捕获的运行时状态验证端点与保留条件，再由普通视觉验证器评估目标相关性；修复构建不需要额外的语言模型调用，但可能需要额外的程序执行。在BlenderGym（280个任务）与BlenderBench（27个已发布任务）上使用GPT-5.6-luna和Qwen3.8-27B评估，VETR持续优于BlenderAlchemy和VIGA等现有精炼策略；受控消融实验进一步量化了执行精炼与角色非对称证据组织各自的贡献。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 属于递归自我改进智能体（RSI）工作，面向符号图形推理而非音视频核心技术，按非核心域收录为初筛摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-13'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: VETR：面向符号图形推理的执行锚定自我改进智能体
+relations:
+- type: same_topic
+  ref: paper:arxiv:2610.19424
+  note: 同属递归自我改进智能体方向，且均面向视觉类任务（符号图形推理/视频理解）
+- type: same_topic
+  ref: paper:arxiv:2609.33867
+  note: 同属递归自我改进（RSI）研究线，均通过迭代执行反馈实现自我改进
+- type: same_topic
+  ref: paper:arxiv:2609.37950
+  note: 同属视觉任务智能体的RSI/框架进化方向

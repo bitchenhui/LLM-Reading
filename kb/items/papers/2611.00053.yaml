@@ -1,0 +1,61 @@
+id: paper:arxiv:2611.00053
+type: paper
+title: 'SIMIT: Self-Improving Vision-Language Models via Imagination at Test-Time'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2611.00053v1
+  url: https://arxiv.org/abs/2611.00053
+  pdf_url: https://arxiv.org/pdf/2611.00053v1
+  venue: arXiv preprint
+time:
+  published: '2026-10-11'
+  collected: '2026-11-13'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:TrainingFree
+  role: uses
+claims:
+- statement: SIMIT 的最佳配置在 17 个多样化多模态基准上较 BAGEL-7B 取得平均相对提升 +7.20%。
+  confidence: reported
+  metrics:
+  - name: 平均相对提升
+    value: +7.20%
+    scope: SIMIT 最佳配置 vs BAGEL-7B，17 个基准平均
+  evidence: abstract（初筛，未读全文）
+- statement: 免训练的上下文内变体 SIMIT-ICL 在同样 17 个基准上取得平均相对提升 +6.98%，无需更新模型权重。
+  confidence: reported
+  metrics:
+  - name: 平均相对提升
+    value: +6.98%
+    scope: SIMIT-ICL（training-free），17 个基准平均
+  evidence: abstract（初筛，未读全文）
+- statement: SIMIT 通过先指定答案再生成图像来合成练习样本，因此无需正确解答目标测试题也能构造有效训练数据，规避了基于多数投票/自我评判奖励可能强化既有错误的问题。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: SIMIT 在测试时让 VLM 自造训练数据实现自我改进，17 个基准上平均相对提升约 7%。
+  abstract_zh: SIMIT 是一个测试时自我改进框架：视觉语言模型在回答无标注测试问题前，先自行生成与该问题相关的训练数据。其核心是'先指定答案、再生成图像'的合成方式，构造（问题、答案、图像）三元组，并结合原生图像生成与面向文档、图表、示意图等结构化视觉的可扩展技能库。流水线引入多阶段验证检查图像是否支持指定答案，用难度过滤保留有信息量的样本，并通过自适应预算对模型不自信的查询分配更多练习资源。生成的数据既可做上下文内改进（SIMIT-ICL），也可做权重内微调（SIMIT-FT）。在
+    17 个多样化基准上超越现有自我改进方法：最佳配置较 BAGEL-7B 平均相对提升 +7.20%，免训练的 SIMIT-ICL 提升 +6.98%。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 测试时自我改进的视觉语言模型框架，属自我改进 AI 领域，非音视频核心域，按基准仅初筛收录。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-13'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: SIMIT：测试时通过想象实现视觉语言模型自我改进
+relations:
+- type: same_topic
+  ref: paper:arxiv:2609.37328
+  note: 同为利用自生成训练信号进行 LLM/多模态推理自我改进的方法
+- type: same_topic
+  ref: paper:arxiv:2610.11345
+  note: 同属通过合成数据驱动 LLM 自我进化的自我改进范式
+- type: same_topic
+  ref: paper:arxiv:2610.33799
+  note: 同为面向多模态任务的自改进方法（SIMIT 覆盖文档/图表等结构化视觉任务）

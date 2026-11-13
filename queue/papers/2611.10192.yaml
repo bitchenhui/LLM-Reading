@@ -1,0 +1,36 @@
+id: paper:arxiv:2611.10192
+status: skipped
+score: 1
+track: audio_coding
+matched:
+- ref: org:MPEG
+  count: 1
+  weight: 1
+meta:
+  title: Lightweight Neural Prediction for MDCT-Based Perceptual Audio Coding
+  authors:
+  - Niccolo Abate
+  - Gabriel Soule
+  - Marina Bosi
+  published: '2026-11-06'
+  updated: '2026-11-06'
+  categories:
+  - eess.AS
+  - cs.SD
+  abstract: 'Perceptual audio codecs often use predictive coding to further reduce signal redundancy.
+    Rather than learning the entire codec pipeline end-to-end, we insert a small neural network as a drop-in,
+    deterministic predictor in an otherwise conventional codec: the network estimates the next Modified
+    Discrete Cosine Transform (MDCT) coefficient block from a short context of reconstructed blocks, and
+    the encoder transmits the quantized residual. We compare Multilayer Perceptron (MLP) and Convolutional
+    Neural Network (CNN) predictors against a non-predictive baseline and a per-line Normalized Least
+    Mean Squares (NLMS) linear predictor (similar to the MPEG-2 AAC Main Profile predictor). The CNN consistently
+    outperforms the MLP, the linear predictor, and the baseline in signal-to-noise ratio (SNR), noise-to-mask
+    ratio (NMR), and MUSHRA evaluation scores. Using a 512-sample analysis window (w = 512), our neural
+    predictors recover, and the CNN exceeds, the coded quality obtained by the non-predictive baseline
+    after quadrupling the analysis-window length to w = 2048, at substantially lower algorithmic delay.
+    The CNN uses only 0.13M parameters (roughly 20x fewer than the MLP) and has a decoder real-time factor
+    (RTF) of ~0.10 on a consumer CPU.'
+  url: https://arxiv.org/abs/2611.10192
+  pdf_url: https://arxiv.org/pdf/2611.10192v1
+  version: v1
+fetched: '2026-11-13'

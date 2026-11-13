@@ -1,0 +1,63 @@
+id: paper:arxiv:2611.05294
+type: paper
+title: 'Wonder 4: A Mixture-of-Experts Recipe for Image Quality Enhancement'
+domain: processing_enhancement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2611.05294v1
+  url: https://arxiv.org/abs/2611.05294
+  pdf_url: https://arxiv.org/pdf/2611.05294v1
+  venue: arXiv preprint
+time:
+  published: '2026-11-03'
+  collected: '2026-11-13'
+entities:
+- ref: concept:MoE
+  role: subject
+- ref: metric:LPIPS
+  role: measured_by
+- ref: metric:DISTS
+  role: measured_by
+claims:
+- statement: Wonder 4 每个 MoE 块含 13 个专家，路由器为每个图像 patch 激活其中 5 个，无需退化分类器、掩码、提示、检测器或任务标签即可按区域施加对应校正。
+  confidence: reported
+  metrics:
+  - name: 专家数 N
+    value: '13'
+    scope: 每个 MoE 块的专家总数
+  - name: 路由 top-k
+    value: '5'
+    scope: 每个图像 patch 被送入的专家数
+  evidence: abstract（初筛，未读全文）
+- statement: 作者以仅设最低使用份额的偏置替代语言模型式均衡负载规则：低于份额的专家获得更高路由分直至再次被选中，高于份额的专家不受干预，从而避免把所有校正施加到全图各处，且无需额外损失、模块或处理步骤。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在 DIV2K x4、DIV2K x8、Flickr2K x4 三种测试设置上，对比五个已发表方法与三个开源权重流程，Wonder 4 取得最优 LPIPS、DISTS 和 NIQE（摘要未给出具体数值）。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 用混合专家模型按区域并行修复真实照片的模糊、噪声、压缩伪影等多重退化，多种超分测试指标最优。
+  abstract_zh: 论文提出 Wonder 4，一种面向真实照片多退化修复的混合专家（MoE）模型，可在退化发生的区域分别施加去模糊、去噪、去压缩伪影、去划痕与超分等校正。每个模型块包含 13
+    个专家，路由器为每个图像块选择其中 5 个，全程无需退化分类器、掩码、提示、检测器或任务标签。针对从语言模型借鉴的标准均衡负载规则会把所有校正施加到全图的问题，作者改用只设最低使用份额的偏置机制，不引入额外损失、模块或处理步骤。在
+    DIV2K 与 Flickr2K 的三种超分测试设置上对比五个已发表方法和三个开源流程，Wonder 4 取得最优 LPIPS、DISTS 与 NIQE。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 面向真实照片多退化（含压缩伪影与低分辨率）的混合专家图像质量增强，属编码链路处理与增强域，按规则非核心域仅初筛。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-13'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: Wonder 4：一种用于图像质量增强的混合专家配方
+relations:
+- type: same_topic
+  ref: paper:arxiv:2606.21033
+  note: 同以混合专家（MoE）为核心机制，该文用于图像压缩，本文用于图像质量增强
+- type: same_topic
+  ref: paper:arxiv:2609.37328
+  note: 同属面向编码链路的神经超分/质量增强后处理方向
+- type: same_topic
+  ref: paper:arxiv:2608.21495
+  note: 同属压缩视频/图像质量增强（退化修复）方向

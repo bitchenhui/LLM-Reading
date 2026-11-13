@@ -1,0 +1,38 @@
+id: paper:arxiv:2609.24894
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'SLICEChat: Progressive In-Encoder Token Pruning for Whole-Slide Pathology Language Models'
+  authors:
+  - Ali Kerem Bozkurt
+  - Baris Cem Bakay
+  - Ibrahim Kulac
+  - Cigdem Gunduz-Demir
+  - Erkut Erdem
+  - Aykut Erdem
+  published: '2026-09-21'
+  updated: '2026-11-04'
+  categories:
+  - cs.CV
+  - cs.CL
+  abstract: Whole-slide pathology images (WSIs) contain gigapixel-scale visual content, creating a major
+    scalability challenge for slide-level multimodal large language models (MLLMs). Existing approaches
+    process thousands of patch tokens and typically apply compression only after slide encoding, leaving
+    multimodal attention computationally expensive. We introduce SLICEChat, a slide-level MLLM that integrates
+    progressive token pruning within a hybrid Mamba--Transformer slide encoder. Mamba layers enable efficient
+    long-range propagation, while Transformer layers preserve global interactions as the sequence is progressively
+    shortened. Between stages, language-supervised, region-aware pruning removes spatially coherent low-utility
+    regions under a controlled keep-rate schedule, producing compact slide representations before multimodal
+    fusion. On SlideBench VQA, SLICEChat achieves 79.84% accuracy on TCGA and 59.09% on BCNB cohorts,
+    outperforming prior slide-level pathology MLLMs, and achieves the highest overall WSI-Bench metrics.
+    It also provides competitive memory usage and the inference latency among the evaluated models. These
+    results demonstrate accurate and computationally efficient multimodal reasoning over gigapixel WSIs.
+  url: https://arxiv.org/abs/2609.24894
+  pdf_url: https://arxiv.org/pdf/2609.24894v2
+  version: v2
+fetched: '2026-11-13'

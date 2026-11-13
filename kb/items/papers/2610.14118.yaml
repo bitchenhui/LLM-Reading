@@ -1,0 +1,55 @@
+id: paper:arxiv:2610.14118
+type: paper
+title: 'ClawLoop: Self-Improving Agents via Harness-Native Training Loop'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2610.14118v1
+  url: https://arxiv.org/abs/2610.14118
+  pdf_url: https://arxiv.org/pdf/2610.14118v1
+  venue: arXiv preprint
+time:
+  published: '2026-10-09'
+  collected: '2026-11-13'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: ClawLoop无需任何外部教师模型、先验依赖极小，即可通过任务合成—训练—诊断反馈的闭环实现智能体自我改进。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 以Qwen3.6-27B为环路模型时，ClawLoop在SkillsBench、Claw-Eval-Live与ClawGym-Bench三个基准上均取得一致性提升。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 环路中迭代精炼的任务数据可迁移到更小规模的Qwen3.5-4B与9B模型，并在全部基准上带来增益，说明任务质量提升独立于环路模型本身。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: ClawLoop以任务合成、SFT/RL训练与诊断反馈构成自持续循环，无需外部教师模型即可实现智能体自我改进。
+  abstract_zh: 针对现有harness类智能体后训练流程一次性且依赖更强外部教师的局限，提出ClawLoop自改进框架。该框架由三阶段构成自持续循环：任务合成（两种互补构造方式、诊断条件驱动的难度增长、无智能体与基于智能体的双重任务验证）、训练（SFT与/或RL）、诊断与反馈（分析rollout行为生成能力分析报告并作为下一轮任务合成的输入）。以Qwen3.6-27B作为环路模型，ClawLoop在SkillsBench、Claw-Eval-Live与ClawGym-Bench上取得一致提升。迭代精炼出的任务可迁移至更小规模的Qwen3.5-4B与9B模型并在全部基准上带来增益，独立于环路模型验证了合成任务的数据质量。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 提出无外部教师的Harness原生智能体自我改进训练环路，属自我改进AI领域，非核心编码域，按规则仅收录初筛摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-13'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: ClawLoop：基于Harness原生训练环路的自我改进智能体
+relations:
+- type: same_topic
+  ref: paper:arxiv:2611.03698
+  note: 同为面向LLM智能体后训练的自改进训练环路框架，与本工作主题直接相关
+- type: same_topic
+  ref: paper:arxiv:2610.22791
+  note: 同为基于harness的智能体自进化/自优化方法
+- type: same_topic
+  ref: paper:arxiv:2610.28201
+  note: 同为针对agent harness的递归自我改进
+- type: same_topic
+  ref: paper:arxiv:2610.26770
+  note: 同为递归harness自我改进，关注性能-成本权衡

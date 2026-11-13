@@ -1,0 +1,58 @@
+id: paper:arxiv:2610.02038
+type: paper
+title: 'Mimir: Physics-Grounded LLM Agents for Long-Horizon Irrigation Control'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2610.02038v1
+  url: https://arxiv.org/abs/2610.02038
+  pdf_url: https://arxiv.org/pdf/2610.02038v1
+  venue: arXiv preprint
+time:
+  published: '2026-10-01'
+  collected: '2026-11-13'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: 在多站点、多作物、多年份的统一回溯评估器下，Mimir 在所评估参考方法中取得最低的总控制成本。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: Mimir 相比历史灌溉调度重放减少约 51% 的灌溉用水。
+  confidence: reported
+  metrics:
+  - name: 灌溉用水减少幅度
+    value: 约51%
+    scope: 相对历史调度重放
+  evidence: abstract（初筛，未读全文）
+- statement: 消融研究表明，移除前向仿真、经验证的修订或持久上下文均会抬高控制成本；增大 LLM 规模并未带来单调增益。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出围绕快慢双修复时间尺度组织的物理接地 LLM 智能体 Mimir，在有界经验驱动自改进下控制长时程灌溉，较历史调度节水约 51%。
+  abstract_zh: 针对长时程物理控制中动作改变未来状态、误差跨决策累积的挑战，提出 Mimir——围绕快慢两个修复时间尺度组织的物理接地 LLM 智能体。快时间尺度上，结构化物理接口与确定性仿真器将
+    LLM 输出转为可数值检查、修订的提案，并执行有界确定性动作选择；慢时间尺度上，将反复出现的失败模式固化为持久上下文原则以约束后续提案，同时物理模型、评估器与执行约束保持不可变。在覆盖多站点、作物与年份的统一回溯评估下，Mimir
+    取得所评估参考方法中最低的总控制成本，灌溉用水较历史调度重放减少约 51%。消融实验显示移除前向仿真、经验证的修订或持久上下文均会抬高控制成本，且增大 LLM 规模未带来单调收益。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 面向长时程物理控制的物理接地 LLM 智能体自改进实证工作（慢时间尺度经验固化、物理规则不可变），属 self_improvement 域但非音视频核心域，仅 summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-13'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: Mimir：面向长时程灌溉控制的物理接地 LLM 智能体
+relations:
+- type: same_topic
+  ref: paper:arxiv:2611.11509
+  note: 均将智能体经验（失败/回合复盘）固化为持久记忆或原则以改进后续行为
+- type: same_topic
+  ref: paper:arxiv:2611.10787
+  note: 均强调自改进需有界/可信约束，Mimir 保持物理模型与执行约束不可变
+- type: same_topic
+  ref: paper:arxiv:2610.21791
+  note: 均关注自改进过程中不允许改写的不可变规则/安全边界

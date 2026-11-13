@@ -1,0 +1,40 @@
+id: paper:arxiv:2610.17079
+status: skipped_by_llm
+score: 2
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: 'Rethinking LLM-Guided Visual Question Answering: Does Deeper Knowledge Integration Really Help?'
+  authors:
+  - Aneerban Saha
+  - Vijay Kumar
+  - Sameer Madhav D.
+  - Priyam Srivastava
+  - Dhruv Bansal
+  published: '2026-10-12'
+  updated: '2026-10-22'
+  categories:
+  - cs.CV
+  abstract: 'Some questions about an image need commonsense or factual knowledge that its pixels do not
+    contain. Large Language Models (LLMs) can supply this knowledge to Visual Question Answering (VQA)
+    systems, but the depth at which their guidance should enter a vision-language model remains unclear.
+    We prompt the 70-billion-parameter Llama~3.3 model to describe, for each question, the visual concepts
+    to focus on, the distractors to ignore and the external facts needed. We inject this guidance into
+    a frozen Vision Transformer (ViT) paired with an instruction-tuned Text-to-Text Transfer Transformer
+    (T5) in two ways: decision-level late fusion and attention-matrix injection. On the Outside Knowledge
+    VQA (OK-VQA) benchmark, and contrary to the common view that deeper is better, the shallow route wins:
+    late fusion reaches 39.4% exact match, +10.0 points above an unguided baseline, while attention injection
+    reaches only 31.8% under data-scarce fine-tuning. An LLM paraphrasing pipeline also enlarges the training
+    set more than tenfold. The results suggest that integration depth should be matched to the data regime.'
+  url: https://arxiv.org/abs/2610.17079
+  pdf_url: https://arxiv.org/pdf/2610.17079v2
+  version: v2
+fetched: '2026-11-13'
+llm_decision: skip
+llm_reason: 本文是通用多模态视觉问答（Visual QA）研究，与音视频编码/传输/质量评估等技术域无关，规则匹配到的 concept:IQA 属噪声实体

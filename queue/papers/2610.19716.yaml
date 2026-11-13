@@ -1,0 +1,39 @@
+id: paper:arxiv:2610.19716
+status: skipped
+score: 0
+track: audio_coding
+matched: []
+meta:
+  title: 'Soloist: A Generative Model for Blind Voice Separation in the Wild'
+  authors:
+  - Chen Yang
+  - ChuFan Yu
+  - Botian Jiang
+  - Jingqi Chen
+  - Wenxuan Wang
+  - Yitian Gong
+  - Zhaoye Fei
+  - Xipeng Qiu
+  published: '2026-10-14'
+  updated: '2026-10-14'
+  categories:
+  - cs.SD
+  abstract: Real-world voice separation must recover individual voices from overlapping speech, environmental
+    noise, and music, yet isolated source recordings are rarely available for supervision. We introduce
+    Soloist, a generative model for blind voice separation that autoregressively generates individual
+    voice streams as audio-codec sequences conditioned on the mixture, without requiring a target-speaker
+    query or a predefined voice count. We propose a two-stage training paradigm to learn from synthetic
+    mixtures and adapt to real recordings. The first stage combines supervised separation on synthetic
+    mixtures with isolated source targets and an auxiliary task that predicts speaker timelines from real
+    recordings, learning who speaks when from natural acoustics. The second stage applies reinforcement
+    learning to real recordings, with rewards supplied by a model judge that compares candidate separations
+    based on voice purity and content preservation without isolated source targets. Across diverse scenarios,
+    Soloist recovers clean speech from multi-speaker overlap and noisy recordings, and extracts singing
+    vocals from music accompaniment while maintaining relatively high pitch accuracy and intelligibility.
+    On real-world recordings with unknown voice counts, Soloist also separates voices well. Finally, we
+    integrate Soloist into a full-duplex conversation processing pipeline that assembles separated outputs
+    into continuous speaker tracks, demonstrating its practical utility in real conversations.
+  url: https://arxiv.org/abs/2610.19716
+  pdf_url: https://arxiv.org/pdf/2610.19716v1
+  version: v1
+fetched: '2026-11-13'

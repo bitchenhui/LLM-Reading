@@ -1,0 +1,37 @@
+id: paper:arxiv:2609.13986
+status: skipped
+score: 1
+track: streaming_delivery
+matched:
+- ref: concept:WebRTC
+  count: 1
+  weight: 1
+meta:
+  title: A Low-Latency Interactive System for Real-Time Video Understanding Based on VLMs
+  authors:
+  - Punan Dai
+  - Jun Xu
+  - Bingcong Lu
+  - Zhengxue Cheng
+  - Hongwei Hu
+  - Ronghua Wu
+  - Li Song
+  published: '2026-09-12'
+  updated: '2026-09-12'
+  categories:
+  - cs.MM
+  - cs.MA
+  abstract: Vision-language models are extending video understanding from offline clip analysis to continuous
+    interactive streaming, but most research still emphasizes model capability rather than deployable
+    low-latency interaction. This paper presents a unified edge-cloud system for real-time video VLM applications.
+    Lightweight phone, smart glasses, PC, and pseudo-replay clients publish video and speech to a server
+    runtime that provides shared ASR/TTS, session orchestration, backend adaptation, response delivery,
+    and archive-backed measurement. The system integrates six representative video VLM backends with streaming
+    or interaction-oriented capabilities and evaluates them across backend runtime, media transport, client-observed
+    latency, and interaction behavior. With suitable backend selection and the WebRTC path, the tested
+    system reaches approximately 0.9 to 1.0 s to first VLM text and 1.3 to 1.5 s to first non-silent TTS
+    audio, while exposing backend adaptation costs and differences in real-time interaction behavior.
+  url: https://arxiv.org/abs/2609.13986
+  pdf_url: https://arxiv.org/pdf/2609.13986v1
+  version: v1
+fetched: '2026-11-13'

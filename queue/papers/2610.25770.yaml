@@ -1,0 +1,41 @@
+id: paper:arxiv:2610.25770
+status: reviewed
+score: 2
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+- ref: concept:SuperResolution
+  count: 1
+  weight: 1
+meta:
+  title: 'VHA: VQA-based Hallucination Assessment for Generative Image Super-Resolution'
+  authors:
+  - Donghun Ryou
+  - Inju Ha
+  - Jaeyoo Park
+  - Bohyung Han
+  published: '2026-10-19'
+  updated: '2026-10-19'
+  categories:
+  - cs.CV
+  abstract: Generative image super-resolution produces visually realistic high-resolution images, but
+    may also introduce hallucinations by adding unsupported content or altering existing details. Because
+    existing super-resolution metrics fail to measure whether generated details remain grounded in the
+    reference image, we present a hallucination assessment technique based on bidirectional visual question
+    answering (VQA), which we term VQA-based Hallucination Assessment (VHA). The proposed approach uses
+    a vision-language model (VLM) to determine whether the semantic content and low-level visual evidence
+    in a super-resolved image are supported by its ground-truth counterpart. To this end, it constructs
+    question--answer pairs from each image and evaluates them on both images. Discrepancies between the
+    resulting scores in both directions reveal missing or altered ground-truth information and unsupported
+    additions. However, obtaining these scores requires computationally expensive VLM inference. We therefore
+    develop VHA+, a learned, lightweight model that directly predicts VHA scores from ground-truth and
+    super-resolved image pairs. We construct a hallucination benchmark, VHA-bench, through a human study
+    and show that both VHA and VHA+ correlate highly with human judgments of hallucination. The code,
+    benchmark, and model weights are available at https://github.com/dhryougit/Hallucination-Assessment
+  url: https://arxiv.org/abs/2610.25770
+  pdf_url: https://arxiv.org/pdf/2610.25770v1
+  version: v1
+fetched: '2026-11-13'
+llm_decision: summary_only

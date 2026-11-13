@@ -1,0 +1,40 @@
+id: paper:arxiv:2610.26805
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'What Language Adds, and at What Cost: Four Controlled Probes of Pathology Vision-Language Models'
+  authors:
+  - Wenhao Zhang
+  - Zhongliang Zhou
+  - Yi Ping
+  - Zirui Wang
+  - Sheng Li
+  published: '2026-10-19'
+  updated: '2026-10-19'
+  categories:
+  - cs.CV
+  - q-bio.QM
+  abstract: 'Vision--language models (VLMs) promise to make computational pathology queryable and able
+    to draft reports, but how much language adds beyond the vision backbone is unclear, because almost
+    every system is evaluated by its developers on test sets of their own choosing. We grade published
+    evidence by how it was produced and test four claims with controlled probes that reuse released checkpoints
+    and public data, varying one input at a time. Report text adds prognostic signal: adding a frozen
+    embedding of the stage-redacted report to a slide embedding raises the pooled C-index by 0.019 for
+    progression-free interval and by 0.016 for overall survival across 1{,}633 TCGA patients, and restoring
+    the stage statement adds nothing. Prompts add no measurable accuracy at inference: with features and
+    pooling fixed, zero-shot classification is statistically indistinguishable from a supervised linear
+    probe for lung and renal cancer subtyping. Slide-level question answering is barely grounded: SlideChat
+    answers 74.82\% of SlideBench-VQA(TCGA) items correctly with the slide and 74.41\% without it, whereas
+    its language backbone alone reaches 43.52\%. Paraphrasing leaves accuracy unchanged but flips 8--23\%
+    of answers. Self-reported gains from agentic navigation and few-shot language priors cannot yet be
+    attributed to language. Language thus adds real but narrow value, and we propose minimum controls
+    that would expose these failure modes in future evaluations.'
+  url: https://arxiv.org/abs/2610.26805
+  pdf_url: https://arxiv.org/pdf/2610.26805v1
+  version: v1
+fetched: '2026-11-13'

@@ -1,0 +1,40 @@
+id: paper:arxiv:2609.32737
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: Gradient-Guided Decoupled Adaptation for Geospatial Vision-Language Models
+  authors:
+  - Dongdong Wang
+  - Deepak Balakrishnan
+  - Ravi Srinivasan
+  - Shenhao Wang
+  published: '2026-09-26'
+  updated: '2026-09-26'
+  categories:
+  - cs.CV
+  - cs.AI
+  - cs.CL
+  - cs.LG
+  abstract: Existing geospatial vision-language models (Geo-VLMs) typically optimize diverse geospatial
+    tasks through a unified multi-task adaptation paradigm without explicitly accounting for the heterogeneous
+    optimization characteristics. Our empirical observations reveal heterogeneous gradient characteristics
+    across tasks, including vision-language differences, intra-branch gradient relationships, and task
+    interference, which hinder effective multi-task optimization. Motivated by these observations, we
+    propose Gradient-Guided Decoupled Adaptation (G2DA), a gradient-aware optimization framework for multi-task
+    Geo-VLM learning. G2DA first partitions tasks into vision- and language-centric groups through gradient-guided
+    cross-modal decoupling. It then constructs modality-specific curricula based on task gradient similarity
+    and employs bidirectional rehearsal to mitigate the recency effects introduced by sequential optimization.
+    We evaluate G2DA on three Geo-VLM benchmarks using six InternVL3 and Qwen3.5-VL variants, along with
+    GeoChat and GeoLLaVA. Across all 24 benchmark-model combinations, G2DA consistently outperforms representative
+    baselines, improving over the strongest competitor by 3.08, 4.30, and 2.81 percentage points on UrBench-MCQ,
+    XLRS-Bench-Lite, and VRS-Bench-VQA, respectively. These results demonstrate the effectiveness of gradient-guided
+    task organization for Geo-VLM adaptation.
+  url: https://arxiv.org/abs/2609.32737
+  pdf_url: https://arxiv.org/pdf/2609.32737v1
+  version: v1
+fetched: '2026-11-13'

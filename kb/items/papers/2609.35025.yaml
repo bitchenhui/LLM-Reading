@@ -1,0 +1,60 @@
+id: paper:arxiv:2609.35025
+type: paper
+title: 'AutoDataBench: Can Agents Write the Data That Feeds the Self-Improvement Loop?'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2609.35025v1
+  url: https://arxiv.org/abs/2609.35025
+  pdf_url: https://arxiv.org/pdf/2609.35025v1
+  venue: arXiv preprint
+time:
+  published: '2026-09-28'
+  collected: '2026-11-13'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:RSI
+  role: builds_on
+claims:
+- statement: 在三个可执行智能体任务基准上，默认45分钟时间预算内，所有被评估智能体撰写合格任务的能力得分均不超过20/100。
+  confidence: reported
+  metrics:
+  - name: 最高得分上限
+    value: 20/100
+    scope: 三个可执行智能体任务基准，45分钟默认时间预算，所有被评估智能体均未超过
+  evidence: abstract（初筛，未读全文）
+- statement: 给最强智能体四倍于默认的时间预算可显著提升得分，同时单个可用任务的成本几乎不变，说明瓶颈在效率而非质量。
+  confidence: reported
+  metrics:
+  - name: 时间预算扩展倍数
+    value: 4×
+    scope: 最强智能体，相比45分钟默认预算
+  evidence: abstract（初筛，未读全文）
+- statement: AutoDataBench无需训练运行即可按生产管线验收标准逐样本直接衡量智能体自主数据合成能力，区别于以往以训练后模型表现作间接评估的方式。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出按数据管线验收标准逐样本评估智能体撰写训练任务能力的基准，发现现有智能体质量可达标但效率不足。
+  abstract_zh: 语言模型能力进步更多源于数据而非架构，但可验证智能体任务的数据生产仍依赖人工与人在环协作，自动化任务生成被视为递归自我改进（RSI）的关键一步。作者提出 AutoDataBench：给定原始基准任务与目标模型的尝试记录，智能体需为同一任务套件撰写一个在有效性、新颖性、难度与行为覆盖上满足实际验收标准的新任务，逐样本评判且无需训练运行。在三个可执行智能体任务基准上，默认45分钟时间预算内没有任何被评估智能体得分超过20/100；给最强智能体四倍时间可显著提分，而单个可用任务的成本几乎不变。结论是当前智能体能写出所需质量的训练任务，但效率不足。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 论文直接针对RSI闭环中的自主数据合成环节提出逐样本验收基准，是自我改进AI领域的核心基准工作，与音视频编码技术无直接关联。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-13'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: AutoDataBench：智能体能写出驱动自我改进循环的数据吗？
+relations:
+- type: same_topic
+  ref: paper:arxiv:2611.03698
+  note: 同为智能体自动生成训练/后训练数据以支撑RSI闭环的工作
+- type: same_topic
+  ref: paper:arxiv:2611.14949
+  note: 同为评估自我改进智能体能力的基准（RSI-PDEbench）
+- type: same_topic
+  ref: paper:arxiv:2610.27610
+  note: 同关注对RSI产物做逐工件（artifact-level）评估而非依赖训练后表现

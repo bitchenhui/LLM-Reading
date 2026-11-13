@@ -1,0 +1,72 @@
+id: paper:arxiv:2610.06196
+type: paper
+title: 'EORestore-Agent: Fidelity-Guided Agentic Restoration of Remote Sensing Images with Composite Degradations'
+domain: processing_enhancement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2610.06196v1
+  url: https://arxiv.org/abs/2610.06196
+  pdf_url: https://arxiv.org/pdf/2610.06196v1
+  venue: arXiv preprint
+time:
+  published: '2026-10-05'
+  collected: '2026-11-13'
+entities:
+- ref: concept:IQA
+  role: subject
+- ref: metric:PSNR
+  role: measured_by
+- ref: metric:SSIM
+  role: measured_by
+- ref: metric:LPIPS
+  role: measured_by
+claims:
+- statement: 在含六种退化类型的合成Landsat-8基准上，EORestore-Agent在2至6种退化复合场景下较最强重训all-in-one基线PSNR提升2.3至3.2 dB。
+  confidence: reported
+  metrics:
+  - name: PSNR提升
+    value: 2.3–3.2 dB
+    scope: Landsat-8合成基准，2–6退化复合，对比最强重训all-in-one基线
+  evidence: abstract（初筛，未读全文）
+- statement: 零样本自然图像修复智能体在18个设置中的17个里PSNR低于退化输入本身。
+  confidence: reported
+  metrics:
+  - name: 失效设置占比
+    value: 17/18
+    scope: 零样本自然图像agent在六退化合成基准上与退化输入的PSNR对比
+  evidence: abstract（初筛，未读全文）
+- statement: 将学习型相对质量评分器替换为无参考质量差会使性能损失1.1至4.6 dB。
+  confidence: reported
+  metrics:
+  - name: PSNR损失
+    value: 1.1–4.6 dB
+    scope: 消融实验：学习型相对评分器 vs 无参考质量差
+  evidence: abstract（初筛，未读全文）
+- statement: 剩余有害步骤数量少且集中在接受阈值附近，Sentinel-2样例表明无需重训即可迁移到真实大气退化。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 微调VLM智能体逐步选择修复工具并以预测PSNR增益决定接受或停止，遥感复合退化修复较最强基线提升2.3–3.2 dB
+  abstract_zh: 论文针对遥感图像中雾、云、噪声、模糊、低光与低分辨率共存的复合退化问题，提出EORestore-Agent：用微调视觉语言模型逐步报告残余退化类型，对各类退化工具池联合打分，从逐步选择中涌现修复顺序。一个在合成退化链上以全参考监督训练的相对质量评分器，预测从当前图像到每个候选工具输出的PSNR/SSIM/LPIPS变化，仅当无负变化且预测PSNR增益为正时接受该步骤，否则保留当前图像。在含六种退化的合成Landsat-8基准上，该方法较最强重训all-in-one基线在2至6种退化复合场景中提升PSNR
+    2.3–3.2 dB，而零样本自然图像智能体在18个设置中17个PSNR低于退化输入；用无参考质量差替换学习型评分器损失1.1–4.6 dB。Sentinel-2样例显示无需重训即可迁移到真实大气退化。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 遥感图像复合退化修复属图像增强技术线（去雾/去噪/超分）并结合参考无关质量评分做逐步决策，非核心编码域，按规则仅收录摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-13'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: EORestore-Agent：保真度引导的遥感图像复合退化智能体修复
+relations:
+- type: same_topic
+  ref: paper:arxiv:2608.08508
+  note: 同属质量评估引导图像增强/超分的技术线，均以质量指标驱动增强决策
+- type: same_topic
+  ref: paper:arxiv:2602.00028
+  note: 均为LLM/智能体编排媒体处理工具的框架，按需选择与组合处理步骤
+- type: same_topic
+  ref: paper:arxiv:2609.37328
+  note: 同属图像恢复/增强（含超分）方法研究线

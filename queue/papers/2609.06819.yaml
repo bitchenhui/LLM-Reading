@@ -1,0 +1,40 @@
+id: paper:arxiv:2609.06819
+status: skipped
+score: 1
+track: immersive_media
+matched:
+- ref: concept:TrainingFree
+  count: 1
+  weight: 1
+meta:
+  title: 'Drones as Annotators: Amodal 3D Auto-Labeling for Ground LiDAR with Aerial Priors'
+  authors:
+  - Tianheng Zhu
+  - Zhenhao Wang
+  - Yiheng Feng
+  published: '2026-09-06'
+  updated: '2026-09-06'
+  categories:
+  - eess.IV
+  abstract: 'Scaling perception data in autonomous driving is hindered by manual 3D bounding box annotation,
+    a costly and labor intensive process requiring substantial domain expertise. Existing auto-labeling
+    methods reduce this burden, but most of them rely on onboard sensors, where a single ground-level
+    viewpoint yields occluded and sparse observations and inaccurate object geometry. We introduce DAA
+    (Drones as Annotators), a drone-assisted training-free framework for amodal 3D auto-labeling. DAA
+    augments ground LiDAR with an aerial agent that provides less occluded vehicle detections with continuous
+    tracks. Ground LiDAR, in turn, provides precise metric 3D geometry unavailable from aerial imagery
+    alone. DAA exploits the two complementary yet heterogeneous modalities through a two-stage framework:
+    (i) air-ground coordinate alignment unifies aerial detections and ground LiDAR scans into a shared
+    map frame and bootstraps coarse 3D bounding boxes from the aligned aerial detections; (ii) EM-like
+    amodal box refinement alternates between identifying the vehicle''s foreground points and updating
+    the coarse box from the identified foreground and aerial priors. We evaluate DAA on an air-ground
+    cooperative perception dataset, where it consistently outperforms existing auto-labeling baselines.
+    LiDAR detectors trained on DAA-generated labels remain competitive with those trained on manual annotations
+    at moderate IoU thresholds. Evaluation against a reference vehicle with known poses and dimensions
+    further confirms its accuracy. We also demonstrate that DAA transfers, without parameter retuning,
+    from onboard to stationary roadside LiDAR and to multi-agent fused point clouds. Code and dataset
+    will be released upon publication.'
+  url: https://arxiv.org/abs/2609.06819
+  pdf_url: https://arxiv.org/pdf/2609.06819v1
+  version: v1
+fetched: '2026-11-13'

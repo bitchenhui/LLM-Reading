@@ -1,0 +1,75 @@
+id: paper:arxiv:2610.16226
+type: paper
+title: 'NetRL: Powering Network Decisions via NetGRPO-Driven Reinforcement Learning'
+domain: streaming_delivery
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2610.16226v1
+  url: https://arxiv.org/abs/2610.16226
+  pdf_url: https://arxiv.org/pdf/2610.16226v1
+  venue: arXiv preprint
+time:
+  published: '2026-10-12'
+  collected: '2026-11-13'
+entities:
+- ref: concept:ABR
+  role: subject
+- ref: concept:LLM
+  role: builds_on
+- ref: concept:QoE
+  role: measured_by
+claims:
+- statement: NetRL 在 ABR 任务上的 QoE 较 NetLLM 提升 23.6%。
+  confidence: reported
+  metrics:
+  - name: QoE 提升
+    value: 23.6%
+    scope: ABR 任务，对比基线 NetLLM（摘要报告口径）
+  evidence: abstract（初筛，未读全文）
+- statement: 在负载均衡任务上，作业完成时间较 Genet 降低 12.2%。
+  confidence: reported
+  metrics:
+  - name: 作业完成时间降低
+    value: 12.2%
+    scope: 负载均衡任务，对比基线 Genet
+  evidence: abstract（初筛，未读全文）
+- statement: 在网络效用上较 Orca 提升 24.1%，达到评估方法中的最优水平。
+  confidence: reported
+  metrics:
+  - name: 网络效用提升
+    value: 24.1%
+    scope: 对比基线 Orca
+  evidence: abstract（初筛，未读全文）
+- statement: 置信度感知预算在不降低验证 QoE 的前提下将端到端训练时间缩短 27.1%。
+  confidence: reported
+  metrics:
+  - name: 端到端训练时间降低
+    value: 27.1%
+    scope: 引入置信度感知预算，验证 QoE 不变的条件下
+  evidence: abstract（初筛，未读全文）
+- statement: NetRL 收敛稳定，且无需重训练即可泛化到未见过的网络轨迹。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: NetRL 用示范轨迹 SFT 加 NetGRPO 在线强化的两阶段 LLM 框架，统一求解 ABR、负载均衡与拥塞控制等网络决策任务。
+  abstract_zh: NetRL 是面向网络决策任务的两阶段 LLM 强化学习框架，先在示范轨迹上监督微调，再进行在线策略优化。统一混合嵌入接口将文本任务描述与精确数值状态结合，网络动作头输出合法决策。核心算法
+    NetGRPO 在多条未来轨迹上评估候选动作，通过置信度感知预算对不确定选项投入更深搜索，并采用组相对、带裁剪与 KL 正则的更新。实验中 NetRL 较 NetLLM 提升 23.6% QoE，较
+    Genet 降低 12.2% 作业完成时间，较 Orca 提升 24.1% 网络效用；置信度感知预算在验证 QoE 不降的前提下将端到端训练时间减少 27.1%。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 以 LLM+GRPO 强化学习统一求解 ABR、负载均衡与拥塞控制，ABR 任务 QoE 显著超越 NetLLM，属流媒体传输相关但非编码核心域
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-13'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: NetRL：由 NetGRPO 驱动的强化学习赋能网络决策
+relations:
+- type: same_topic
+  ref: paper:arxiv:2603.13597
+  note: 同为强化学习驱动的自适应视频流码率决策
+- type: same_topic
+  ref: paper:arxiv:2609.09490
+  note: 同关注 QoE 导向的蜂窝网络码率自适应

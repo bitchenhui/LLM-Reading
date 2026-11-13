@@ -1,0 +1,74 @@
+id: paper:arxiv:2610.03675
+type: paper
+title: 'FrugalEvo: Towards Cost-Aware LLM-Guided Program Evolution'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2610.03675v1
+  url: https://arxiv.org/abs/2610.03675
+  pdf_url: https://arxiv.org/pdf/2610.03675v1
+  venue: arXiv preprint
+time:
+  published: '2026-10-02'
+  collected: '2026-11-13'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:AlphaEvolve
+  role: builds_on
+claims:
+- statement: FrugalEvo在10个数学与系统优化任务上匹配或超越OpenEvolve、ShinkaEvolve、AdaEvolve、EvoX等SOTA基线的最终解质量。
+  confidence: reported
+  metrics:
+  - name: BA-AUC更优任务数
+    value: '9'
+    scope: 10个数学与系统优化任务中，对比OpenEvolve/ShinkaEvolve/AdaEvolve/EvoX
+  evidence: abstract（初筛，未读全文）
+- statement: 在圆形装箱任务上，FrugalEvo以极低成本取得新SOTA，匹配或超越平均花费约50美元的CORAL、SwarmResearch等多智能体方法。
+  confidence: reported
+  metrics:
+  - name: 成本
+    value: 1.68 USD
+    scope: 圆形装箱新SOTA，使用GPT-5.6 Terra与Luna
+  - name: 成本
+    value: 0.55 USD
+    scope: 圆形装箱新SOTA，使用GLM-5.3及其Flash变体
+  - name: 基线成本
+    value: 约50 USD
+    scope: CORAL、SwarmResearch等多智能体方法平均成本
+  evidence: abstract（初筛，未读全文）
+- statement: FrugalEvo在ALE-Bench-Lite的10个算法优化任务上平均性能高于OpenEvolve、ShinkaEvolve、AdaEvolve、EvoX等基线。
+  confidence: reported
+  metrics:
+  - name: 任务数
+    value: '10'
+    scope: ALE-Bench-Lite算法优化任务
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出成本感知LLM进化框架FrugalEvo，强LLM出策略、廉价LLM写代码，以单位成本收益最大化为目标并低成本刷新圆形装箱SOTA。
+  abstract_zh: 针对AlphaEvolve等LLM引导进化方法只优化固定迭代次数下性能的局限，作者主张以单位成本收益最大化为目标，提出成本感知进化框架FrugalEvo：更强的昂贵LLM负责探索解题策略，更廉价的LLM负责实现并迭代精炼代码，并通过最大化提示前缀共享设计缓存友好的进化流程。同时提出预算感知曲线下面积BA-AUC指标，度量固定成本预算内最优评分曲线的面积。在10个数学与系统优化任务上，FrugalEvo匹配或超越OpenEvolve、ShinkaEvolve、AdaEvolve、EvoX等SOTA基线，并在其中9个任务上取得更高BA-AUC；在ALE-Bench-Lite的10个算法优化任务上平均性能亦更高。在圆形装箱任务上，使用GPT-5.6
+    Terra/Luna仅花1.68美元、GLM-5.3及Flash仅0.55美元即取得新SOTA，匹配或超越平均花费约50美元的CORAL、SwarmResearch等多智能体方法。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: LLM引导程序进化的成本感知框架，属自我改进AI域核心工作，按规则仅作初筛摘要不入深读。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-13'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: FrugalEvo：迈向成本感知的LLM引导程序进化
+relations:
+- type: same_topic
+  ref: paper:arxiv:2610.26770
+  note: 同属性能-成本权衡导向的递归自我改进/harness进化方向
+- type: same_topic
+  ref: paper:arxiv:2609.34712
+  note: 同属成本感知的LLM agent进化与路由优化
+- type: same_topic
+  ref: paper:arxiv:2610.32326
+  note: 同属LLM引导的多智能体代码进化框架
+- type: same_topic
+  ref: paper:arxiv:2610.07335
+  note: 同属长程决策中成本感知的LLM agent方法

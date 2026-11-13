@@ -1,0 +1,72 @@
+id: paper:arxiv:2611.14844
+type: paper
+title: 'AutoAssumption: Searching over Assumptions Discovers ML-Systems Algorithms'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2611.14844v1
+  url: https://arxiv.org/abs/2611.14844
+  pdf_url: https://arxiv.org/pdf/2611.14844v1
+  venue: arXiv preprint
+time:
+  published: '2026-11-10'
+  collected: '2026-11-13'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:AlphaEvolve
+  role: compared_against
+claims:
+- statement: 将 KV-cache 驱逐、权重剪枝与投机解码领域的 89 个已发表算法形式化为带显式假设的证明图，并在 Lean 中完成校验
+  confidence: reported
+  metrics:
+  - name: 形式化算法数
+    value: '89'
+    scope: 覆盖 KV-cache 驱逐、权重剪枝与投机解码，以 Lean 证明图校验
+  evidence: abstract（初筛，未读全文）
+- statement: 在 KV-cache 驱逐与权重剪枝任务上，假设搜索改进了所有参与运行的已发布算法并产出最优方法
+  confidence: reported
+  metrics:
+  - name: RULER-4K
+    value: 所运行已发表方法中最高
+    scope: KV-cache 驱逐算法与已发表方法对比
+  - name: 困惑度排名
+    value: 13 个方法中最低
+    scope: 4 个 LLaMA 模型上的权重剪枝评测
+  - name: 评测模型数
+    value: '4'
+    scope: LLaMA 系列模型
+  evidence: abstract（初筛，未读全文）
+- statement: 同等预算下，AutoAssumption 得分与 OpenEvolve（AlphaEvolve 开源实现）相差不到 1 分，且跨重复实验的标准差更低
+  confidence: reported
+  metrics:
+  - name: 与 OpenEvolve 分差
+    value: within a point
+    scope: 同等预算对比，多次重复实验中方差更低
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 将算法写成 Lean 证明图以显式化假设，用 LLM 搜索放宽假设并重推导，自动发现超越已发表方法的 KV 缓存驱逐与剪枝算法
+  abstract_zh: 该方法将 89 个来自 KV-cache 驱逐、权重剪枝与投机解码的已发表算法形式化为带显式假设的证明图，并在 Lean 中校验。其搜索框架 AutoAssumption 对已发表方法放宽其中一条假设，重新推导并重新证明，再生成代码。在
+    KV-cache 驱逐与权重剪枝任务上，该搜索跑赢了所有参与对比的已发表算法并产出最优方法：驱逐算法取得所运行已发表方法中最高的 RULER-4K 分数，剪枝算法在四个 LLaMA 模型上取得 13
+    个方法中最低的困惑度。同等预算下，该框架得分与 OpenEvolve（AlphaEvolve 的开源实现）相差不到 1 分，且多次重复的方差更低。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: LLM 驱动的假设级算法自动发现（Lean 形式化+证明校验），属自我改进 AI 域，非核心编码域故仅初筛收录
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-13'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: AutoAssumption：在假设空间上搜索以发现机器学习系统算法
+relations:
+- type: same_topic
+  ref: paper:arxiv:2610.35595
+  note: 同属 LLM 提出算法并在 Lean 中形式化证明的自动算法设计方向
+- type: same_topic
+  ref: paper:arxiv:2610.25012
+  note: 均涉及投机解码算法的自动化改进/发现
+- type: same_topic
+  ref: paper:arxiv:2611.06858
+  note: 均面向 LLM 权重压缩/剪枝的自动化方法研究

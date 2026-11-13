@@ -1,0 +1,69 @@
+id: paper:arxiv:2610.35316
+type: paper
+title: 'RSIV-Harness: A Recursive Self-Improvement Harness Framework for Open-Domain Conversational Text-to-Visualization'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2610.35316v1
+  url: https://arxiv.org/abs/2610.35316
+  pdf_url: https://arxiv.org/pdf/2610.35316v1
+  venue: arXiv preprint
+time:
+  published: '2026-10-26'
+  collected: '2026-11-13'
+entities:
+- ref: concept:RSI
+  role: subject
+- ref: concept:SelfImprovement
+  role: uses
+claims:
+- statement: 单轮RSIV-Harness即可相对种子支架在全部六项评估指标上取得提升，其中可执行性提升28.02分、图表结构提升34.01分。
+  confidence: reported
+  metrics:
+  - name: 可执行性提升
+    value: '+28.02'
+    scope: 单轮RSIV-Harness相对种子支架，ODAC-Vis基准
+  - name: 图表结构提升
+    value: '+34.01'
+    scope: 单轮RSIV-Harness相对种子支架，ODAC-Vis基准
+  - name: 改进指标覆盖数
+    value: 6项全部提升
+    scope: 单轮RSIV-Harness相对种子支架
+  evidence: abstract（初筛，未读全文）
+- statement: 提出ODAC-Vis基准，包含640个任务，联合评估开放域数据发现、歧义消解、多轮可视化精化与可执行图表生成。
+  confidence: reported
+  metrics:
+  - name: 基准任务数
+    value: '640'
+    scope: ODAC-Vis：开放域、含歧义、对话式文本到可视化
+  evidence: abstract（初筛，未读全文）
+- statement: 方法保持语言模型权重固定，仅通过递归自我改进修订外围支架，并以四层框架（锚点检查、记忆检查、精化、回滚至最佳已验证支架）平衡灵活自我改进与稳定性。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 固定LLM权重，用递归自我改进从失败轨迹迭代修订代理支架，解决开放域对话式文本到可视化任务。
+  abstract_zh: 用户请求图表时常不知相关数据在哪个库或表，请求可能含歧义，需澄清提问并跨轮跟踪意图、保留既有约束。现有text-to-visualization代理依赖预定义的静态支架，无法从跨任务重复失败中改进。RSIV-Harness保持语言模型权重固定，将递归自我改进应用于外围支架，从自身失败轨迹修订支架，并通过四层框架以锚点与记忆检查评估候选修订，通过则精化、否则回滚到最佳已验证支架。同时提出含640个任务的ODAC-Vis基准，联合评估开放域数据发现、歧义消解、多轮可视化精化与可执行图表生成。单轮RSIV-Harness即相对种子支架全面提升全部六项指标，可执行性+28.02分、图表结构+34.01分。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 递归自我改进（RSI）支架演进在开放域对话式文生图（可视化）代理上的应用，属自我改进AI域，非音视频核心域，按基准仅给summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-13'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: RSIV-Harness：面向开放域对话式文本到可视化的递归自我改进支架框架
+relations:
+- type: same_topic
+  ref: paper:arxiv:2610.14224
+  note: 同为递归代理支架（harness）自我改进框架，RSI修订外围支架路线
+- type: same_topic
+  ref: paper:arxiv:2610.28282
+  note: 同为图表/可视化任务的自我进化代理支架
+- type: same_topic
+  ref: paper:arxiv:2609.37950
+  note: 同为面向特定任务域（视频理解）的RSI支架演进，方法路线相同
+- type: same_topic
+  ref: paper:arxiv:2610.28201
+  note: 同为以代理支架为可变表面的递归自我改进

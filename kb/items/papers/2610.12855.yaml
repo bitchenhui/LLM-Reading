@@ -1,0 +1,55 @@
+id: paper:arxiv:2610.12855
+type: paper
+title: Mitigating Capability Degradation in LLM Self-Improvement via Representation Geometry Regularization
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2610.12855v1
+  url: https://arxiv.org/abs/2610.12855
+  pdf_url: https://arxiv.org/pdf/2610.12855v1
+  venue: arXiv preprint
+time:
+  published: '2026-10-09'
+  collected: '2026-11-13'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: subject
+claims:
+- statement: OPSD类自我改进方法在优化推进过程中会渐进式退化已获能力：早期训练阶段正确回答的查询在后续阶段可能答错，即使整体性能仍在持续提升。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 能力退化与隐表示几何劣化同步出现，特征为簇内紧致度降低与簇间分离度减弱。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 提出的表示几何正则化RGR通过鼓励簇内紧凑与簇间分离来在后训练中保持表示几何，可无缝嵌入现有OPSD方法且不改变其核心优化流程。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在多种OPSD方法与多个基准上的大量实验显示，RGR总体上缓解能力退化同时保留能力提升。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 发现LLM在线策略自蒸馏会随优化致旧能力退化并伴随隐表示几何劣化，提出RGR正则化缓解退化且保留增益。
+  abstract_zh: 在线策略自蒸馏（OPSD）让LLM以同一模型在不同条件下兼任教师与学生实现自我改进，但研究发现该范式会渐进式退化已有能力：早期阶段答对的查询随优化推进可能答错，而整体性能仍在上升。进一步分析表明，这种退化与隐表示几何劣化同步出现，表现为簇内紧致度下降与簇间分离度减弱。为此作者提出表示几何正则化RGR，通过鼓励簇内紧凑、簇间分离在后训练过程中保持表示几何。RGR可无缝集成进现有OPSD方法而不改变其核心优化流程。在多种OPSD方法与多个基准上的大量实验表明，RGR总体上缓解了能力退化并保留了能力提升。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 研究LLM自蒸馏自我改进中的能力退化并提出表示几何正则化RGR，属self_improvement域而非音视频核心域，按规则给summary_only
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-13'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 通过表示几何正则化缓解LLM自我改进中的能力退化
+relations:
+- type: same_topic
+  ref: paper:arxiv:2609.39306
+  note: 同为缓解迭代自蒸馏过程中能力退化/坍缩的工作（ReSAIL）
+- type: same_topic
+  ref: paper:arxiv:2610.09239
+  note: 同研究LLM自我改进回路中的性能退化问题（Winner's Curse）
+- type: same_topic
+  ref: paper:arxiv:2609.34975
+  note: 同为面向LLM推理的自我改进方法（Teach to Learn自蒸馏/提示退火）

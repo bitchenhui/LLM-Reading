@@ -1,0 +1,73 @@
+id: paper:arxiv:2610.35077
+type: paper
+title: Improving VLMs on Scientific Chart Analysis via Autonomous Evolution
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2610.35077v1
+  url: https://arxiv.org/abs/2610.35077
+  pdf_url: https://arxiv.org/pdf/2610.35077v1
+  venue: arXiv preprint
+time:
+  published: '2026-10-26'
+  collected: '2026-11-13'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:AlphaEvolve
+  role: builds_on
+claims:
+- statement: 在3个VLM与4个科学图表基准上，进化后的推理程序使描述性问题的精确匹配准确率平均从16.6%提升到41.3%，且所有实验设置均获提升。
+  confidence: reported
+  metrics:
+  - name: 精确匹配准确率（基线）
+    value: 16.6%
+    scope: 3个VLM×4个图表基准平均
+  - name: 精确匹配准确率（进化后）
+    value: 41.3%
+    scope: 3个VLM×4个图表基准平均
+  evidence: abstract（初筛，未读全文）
+- statement: 最大单点准确率提升达55.2个百分点。
+  confidence: reported
+  metrics:
+  - name: 最大单点准确率提升
+    value: 55.2 个百分点
+    scope: 全部实验设置中的最大增幅
+  evidence: abstract（初筛，未读全文）
+- statement: 进化后的推理程序比初始程序快3.8倍，因为短答案更易评分且生成更快。
+  confidence: reported
+  metrics:
+  - name: 推理速度提升
+    value: 3.8x
+    scope: 进化程序相对初始程序
+  evidence: abstract（初筛，未读全文）
+- statement: 相当一部分观测误差源于推理流水线而非模型本身，优化推理程序可在不重训冻结VLM的情况下提升准确率。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 不改冻结VLM，用AlphaEvolve式自主进化搜索推理程序，图表问答平均精确匹配率从16.6%升至41.3%，且快3.8倍。
+  abstract_zh: 针对开源视觉语言模型在科学图表问答中大量错误源于回答不精确的问题，本文在不改动冻结模型的前提下搜索优化推理程序。方法借鉴AlphaEvolve的自主进化思想：从基线推理程序出发，每轮由LLM判别器查看当前代码与若干训练失败样例并提出进化改写，候选程序按训练准确率存入小池，后续编辑作用于高分程序。在3个VLM和4个流行图表基准上，描述性问题的精确匹配准确率在所有设置中均获提升，平均从16.6%升至41.3%，最大单点提升55.2个百分点。附带收益是进化后的程序比初始程序快3.8倍，表明相当一部分误差来自推理流水线而非模型本身。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: AlphaEvolve式自主进化在冻结VLM外层搜索推理程序以提升图表问答精度，属自我改进AI域，非核心编码域故给summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-13'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 经由自主进化改进视觉语言模型的科学图表分析能力
+relations:
+- type: same_topic
+  ref: paper:arxiv:2610.28282
+  note: 同为面向图表推理的自进化agent harness方法
+- type: same_topic
+  ref: paper:arxiv:2609.37950
+  note: 同为对冻结多模态理解模型外层harness做递归自改进
+- type: same_topic
+  ref: paper:arxiv:2610.19424
+  note: 同为视频理解harness的结构化自进化，与本文冻结模型+进化推理程序的思路一致
+- type: same_topic
+  ref: paper:arxiv:2610.27889
+  note: 同属agent harness优化收益机理研究脉络

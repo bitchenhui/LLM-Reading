@@ -1,0 +1,39 @@
+id: paper:arxiv:2610.36978
+status: reviewed
+score: 2
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 3
+  weight: 1
+- ref: metric:DOVER
+  count: 1
+  weight: 1
+meta:
+  title: Explicit Regional Representations For Video Quality Assessment
+  authors:
+  - Fuyi Yang
+  - Lei Yang
+  - Andrew Liu
+  - Chenyu Wei
+  - Xiaoyi Guo
+  - Ming Kai Hsu
+  published: '2026-10-27'
+  updated: '2026-10-27'
+  categories:
+  - cs.CV
+  abstract: 'End-to-end video quality assessment (VQA) methods leave the regional evidence underlying
+    their predictions largely implicit. We introduce an explicit pixel-level regional representation for
+    VQA, instantiated as a Quality-Relevance Heatmap (QRH) that combines localized degradation evidence
+    with perceptual priors under vision-language model guidance, without requiring pixel-level annotations.
+    We apply QRH to existing VQA models through two deterministic fragment-sampling strategies: distribution-preserving
+    sampling approximates the original sampler''s QRH-score distribution without retraining, while quality-aware
+    sampling prioritizes regions with high QRH scores and is paired with fine-tuning. Experiments with
+    DOVER on multiple benchmarks show that the former closely approximates predictions averaged over random
+    samples, while the latter improves most evaluated metrics across popular VQA benchmarks. These results
+    support explicit regional representations as a useful interface for downstream VQA.'
+  url: https://arxiv.org/abs/2610.36978
+  pdf_url: https://arxiv.org/pdf/2610.36978v1
+  version: v1
+fetched: '2026-11-13'
+llm_decision: summary_only

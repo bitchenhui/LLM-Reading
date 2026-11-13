@@ -1,0 +1,35 @@
+id: paper:arxiv:2610.20246
+status: reviewed
+score: 3
+track: audio_coding
+matched:
+- ref: codec:Opus
+  count: 2
+  weight: 3
+meta:
+  title: Evaluating perceptual transparency of lossy music audio compression with Opus codec
+  authors:
+  - Benjamin Martin
+  - Romain Hennequin
+  published: '2026-10-14'
+  updated: '2026-10-14'
+  categories:
+  - cs.SD
+  abstract: Although the open-source Opus audio codec is widely used for digital audio streaming, its
+    perceptual transparency threshold for high-bitrate music compression remains insufficiently evaluated.
+    To establish this threshold, this study evaluates Opus across a two-phase ITU-R BS.1116-3 double-blind
+    framework, analyzing Difference Grades using a Linear Mixed-Effects Model (LMM) and Two One-Sided
+    Tests (TOST) for statistical equivalence. In a first phase with 21 qualified listeners and 23 music
+    excerpts, 128 kbps achieves statistical in-distinguishability ($p = 0.456$) but narrowly fails strict
+    equivalence to the uncompressed reference ($p = 0.064$). In Phase 2, Best Linear Unbiased Predictors
+    (BLUPs) isolate the 10 most critical listeners and 8 most challenging samples for a stress-test. Under
+    these worst-case conditions, 128 kbps is conclusively detected as degraded ($p = 0.030$), whereas
+    160 kbps successfully reaches perceptual transparency ($p = 0.747$) and strict statistical equivalence
+    ($p = 0.024$). The study concludes that 160 kbps demonstrates perceptual transparency to uncompressed
+    CD quality in critical listening environments. For reproducibility, we publicly release results for
+    both phases, anonymized subject background info and sample characteristics.
+  url: https://arxiv.org/abs/2610.20246
+  pdf_url: https://arxiv.org/pdf/2610.20246v1
+  version: v1
+fetched: '2026-11-13'
+llm_decision: summary_only

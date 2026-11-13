@@ -1,0 +1,40 @@
+id: paper:arxiv:2610.37186
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 3
+  weight: 1
+meta:
+  title: 'VGIQA: Fine-Grained Image Quality Assessment with Visual Grounding Rewards'
+  authors:
+  - Weichang Wang
+  - Liyu Chen
+  - Shuyue Guan
+  - Jie Hu
+  - Fei Gao
+  - Wei Li
+  - Nannan Wang
+  published: '2026-10-27'
+  updated: '2026-10-27'
+  categories:
+  - cs.CV
+  abstract: Image quality assessment (IQA) aims to evaluate the perceptual visual quality of images. Recently,
+    the rapid development of Multi-modal Large Language Models (MLLMs) has significantly advanced the
+    IQA field. By integrating chain-of-thought (CoT) reasoning and reinforcement learning (RL), these
+    models can generate more accurate and interpretable results while relying on less training data. However,
+    existing MLLM-based methods are predominantly constrained to holistic, image-level evaluations and
+    lack the capability to produce fine-grained, localized assessments, which substantially limits their
+    practical applicability. To address this limitation, we propose VGIQA, a novel IQA model endowed with
+    both local and global quality assessment capabilities. VGIQA is trained via a two-stage paradigm comprising
+    a cold-start phase followed by reinforcement learning. Driven by carefully designed local quality
+    assessment reward functions, our model exhibits exceptional image quality understanding on VGSR-2K,
+    a new dataset we propose specifically for local quality evaluation, significantly outperforming existing
+    open-source MLLMs such as Qwen2.5-VL-72B-Instruct and Qwen3-VL-32B-Instruct. Furthermore, the local
+    quality evaluation task can effectively enhance the model's performance on the degradation perception
+    task.
+  url: https://arxiv.org/abs/2610.37186
+  pdf_url: https://arxiv.org/pdf/2610.37186v1
+  version: v1
+fetched: '2026-11-13'

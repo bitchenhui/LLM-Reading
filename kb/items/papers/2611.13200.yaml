@@ -1,0 +1,78 @@
+id: paper:arxiv:2611.13200
+type: paper
+title: 'Image Quality and the Reliability of Fabric-Density Measurement: Counting Threads from Smartphone
+  Photos Through a Pick Glass'
+domain: quality_assessment
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2611.13200v1
+  url: https://arxiv.org/abs/2611.13200
+  pdf_url: https://arxiv.org/pdf/2611.13200v1
+  venue: arXiv preprint
+time:
+  published: '2026-11-09'
+  collected: '2026-11-13'
+entities:
+- ref: concept:IQA
+  role: subject
+- ref: concept:TrainingFree
+  role: uses
+claims:
+- statement: 在PickGlass-TPI上，所有被测方法（VLM、CNN、计数专家、免训练谱计数器）的纱线密度计数误差均超出±5%织物规格允差。
+  confidence: reported
+  metrics:
+  - name: 数据规模
+    value: 76个场景/44块布样
+    scope: PickGlass-TPI数据集，参考计数由纺织受训标注员给出
+  evidence: abstract（初筛，未读全文）
+- statement: 仅用合成图像微调的小型开源模型Molmo2-4B误差25%，与最优前沿模型GPT-6.1-sol持平，且是唯一在两项误差指标上均胜过均值猜测基线的模型。
+  confidence: reported
+  metrics:
+  - name: 计数误差
+    value: 25%
+    scope: Molmo2-4B（仅合成图微调）相对参考计数
+  - name: 计数误差
+    value: 27%
+    scope: GPT-6.1-sol 直接提问
+  - name: 计数误差
+    value: 25%
+    scope: GPT-6.1-sol 给定四张放大特写
+  - name: 计数误差
+    value: 37%
+    scope: 非专业标注员相对参考计数
+  evidence: abstract（初筛，未读全文）
+- statement: 参考计数本身在同一布样两次拍摄间的中位数差异达9%，故单张照片尚无法证明满足±5%允差，任务上真正关键的图像质量是跨复拍的可靠性。
+  confidence: reported
+  metrics:
+  - name: 复拍一致性中位数
+    value: 9%
+    scope: 参考标注在同一布样两次拍摄间的计数差异
+  evidence: abstract（初筛，未读全文）
+- statement: 标注前选定的通用免参考质量分无法排序PG-Lattice的计数误差；生成式增强提升感知分数但不可靠地改善计数，PG-Lattice与GPT-6.1-sol的失误常达两倍量级。
+  confidence: reported
+  metrics:
+  - name: 复拍重复精度
+    value: 5%
+    scope: PG-Lattice对同一布样两张照片的计数最常落在5%以内
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 构建PickGlass-TPI数据集，按±5%允差的任务型IQA评估纱线计数，最优方法仍偏差约25%，单张照片无法证明达标。
+  abstract_zh: 论文提出PickGlass-TPI数据集（76个工厂场景、44块布样），由受过纺织训练的标注员通过pick glass人工计数作为参考，并以织物规格常用的±5%允差作为任务型图像质量判定标准。在此基准上评测了前沿与开源视觉语言模型、CNN、专用计数模型及免训练谱方法PG-Lattice，结果无一方法达到允差内：仅用合成图微调的小型开源模型Molmo2-4B误差25%，与最优前沿模型GPT-6.1-sol（直接提问27%、给定四张放大特写25%）持平，二者均优于非专业标注员（37%）。PG-Lattice在同一布样两次拍摄的复拍一致性上最常落在5%以内，但其失误常为两倍量级；且参考计数本身跨复拍的中位数差异达9%，说明单张照片无法证明±5%达标，真正重要的图像质量是跨复拍的可靠性。通用免参考质量分无法排序PG-Lattice的计数误差，生成式增强虽提升感知分数但不可靠地改善计数。
+assessment:
+  relevance: low
+  decision: summary_only
+  reason: 以任务型图像质量（IQA）框架评估免参考指标与生成式增强的可靠性，但应用场景为纺织检测，与音视频链路无直接联系。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-13'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 图像质量与织物密度测量的可靠性：借助放大镜从智能手机照片计数纱线密度
+relations:
+- type: same_topic
+  ref: paper:arxiv:2607.23321
+  note: 同属免参考图像质量评估路线，均检验NR质量分与任务/用途的相关性
+- type: same_topic
+  ref: paper:arxiv:2611.08754
+  note: 同为将免参考图像质量评估方法应用于音视频以外垂直领域的IQA工作

@@ -1,0 +1,58 @@
+id: paper:arxiv:2610.27406
+type: paper
+title: 'More Memory, Worse Agents: Error Reproduction and Anti-Persistence in LLM Agents'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2610.27406v1
+  url: https://arxiv.org/abs/2610.27406
+  pdf_url: https://arxiv.org/pdf/2610.27406v1
+  venue: arXiv preprint
+time:
+  published: '2026-10-19'
+  collected: '2026-11-13'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: subject
+claims:
+- statement: 存储抽象中的错误会经由'抽象-执行-再抽象'循环被复现，使错误持续期超出对原始错误知识的直接复用。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: Anti-Persistence通过按需合成并在执行后丢弃任务指导、仅保留轨迹与结果，防止错误抽象被直接复用（经保留轨迹的间接反馈仍可能存在）。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在不同基准与骨干模型上，Anti-Persistence取得更高的held-out成功率，并在受评估的记忆设计中平均LLM调用成本最低。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 结果支持在基于记忆的自我改进中将经验积累与抽象持久化分离。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 揭示记忆式自我改进中'抽象-执行-再抽象'的错误复现循环，提出用后即弃的Anti-Persistence记忆设计，提升成功率并降低LLM调用成本。
+  abstract_zh: LLM智能体可将自身执行经验存入外部记忆并复用，在不更新参数的情况下跨任务改进，但存储的规则、总结与技能等抽象中一旦含有错误，便会经检索复用传播，并通过塑造执行轨迹、再抽象生成新错误，作者将这一反馈机制命名为'错误复现'。据此提出Anti-Persistence记忆设计：持续累积轨迹与结果，由自适应选择器依据先前结果决定是否及如何按需合成任务指导，执行后即丢弃，从而避免其作为存储对象被直接复用。在多个基准与骨干模型上，Anti-Persistence取得更高的held-out成功率，同时在受评估的记忆设计中平均LLM调用成本最低。结果支持在基于记忆的自我改进中将经验积累与抽象持久化分离。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 研究基于外部记忆的LLM智能体自我改进中的错误复现机制并提出Anti-Persistence记忆设计，属自我改进域而非编码核心域，按规则给summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-13'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 更多记忆反而更差的智能体：LLM智能体中的错误复现与反持久化
+relations:
+- type: same_topic
+  ref: paper:arxiv:2610.07645
+  note: 均研究经验/技能库中缺陷内容在自我改进循环中的传播危害
+- type: same_topic
+  ref: paper:arxiv:2611.11509
+  note: 同属基于记忆演化的智能体自我改进
+- type: same_topic
+  ref: paper:arxiv:2610.09239
+  note: 均关注LLM自我改进循环中的错误选择与累积问题
+- type: same_topic
+  ref: paper:arxiv:2609.35568
+  note: 均研究经验记忆学习在智能体自我改进中的作用

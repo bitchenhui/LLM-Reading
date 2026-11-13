@@ -1,0 +1,58 @@
+id: paper:arxiv:2609.33969
+status: reviewed
+score: 6
+track: immersive_media
+matched:
+- ref: concept:3DGS
+  count: 4
+  weight: 1
+- ref: concept:VolumetricVideo
+  count: 2
+  weight: 1
+- ref: concept:EntropyModel
+  count: 1
+  weight: 1
+- ref: concept:INR
+  count: 1
+  weight: 1
+- ref: metric:BD-Rate
+  count: 1
+  weight: 1
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+meta:
+  title: Gaussian Splatting-based Volumetric Video Compression with Sparse 4D Anchors
+  authors:
+  - Ge Gao
+  - Siyue Teng
+  - Chanqgi Wang
+  - Fan Zhang
+  - Nantheera Anantrasirichai
+  - Jui Chiu Chiang
+  - Wen-Hsiao Peng
+  - David Bull
+  published: '2026-09-27'
+  updated: '2026-10-30'
+  categories:
+  - cs.CV
+  abstract: Immersive video communication requires photorealistic, compact dynamic scene representations
+    that support efficient rendering. 3D Gaussian Splatting (3DGS) is a promising approach, but dynamic
+    3DGS remains difficult to compress due to its dense primitives and spatiotemporal redundancy. Anchor-based
+    formulations improve compactness through sparse scaffolds that share geometry and appearance across
+    primitives. However, existing designs typically deform a single canonical scaffold and condition each
+    primitive solely on its associated anchor, limiting their ability to model non-local dynamics and
+    disocclusions and exploit inter-anchor correlations. To address these limitations, we propose SAGA,
+    a volumetric video codec built on Sparse Anchor-assisted GAussian splatting representations. SAGA
+    represents a dynamic scene using hierarchical sparse anchors in 4D space-time. Coordinate-based INR
+    decoders generate fine anchors and Gaussian primitives from features obtained through kernel interpolation
+    among nearby anchors, enabling parameter sharing across spatiotemporal structures. A fixed-size memory
+    with a novel orthogonality-informed slot-update strategy further captures long-range dependencies
+    among unstructured anchors for entropy coding. Empirically, \name achieves PSNR-based BD-rate reductions
+    of 90.88%, 64.30% and 65.14% relative to GIFStream, TED-4DGS, and OMG4, respectively, on the Neu3D
+    testset.
+  url: https://arxiv.org/abs/2609.33969
+  pdf_url: https://arxiv.org/pdf/2609.33969v2
+  version: v2
+fetched: '2026-11-13'
+llm_decision: summary_only

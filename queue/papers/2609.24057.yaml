@@ -1,0 +1,50 @@
+id: paper:arxiv:2609.24057
+status: skipped_by_llm
+score: 2
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+- ref: concept:TrainingFree
+  count: 1
+  weight: 1
+meta:
+  title: Representation-guided in-context learning for medical image interpretation with multimodal large
+    language models
+  authors:
+  - Minda Zhao
+  - Fangyu Hu
+  - Yan Luo
+  - Yutong Yang
+  - Jiahui Cai
+  - Kaichen Zhou
+  - Manling Li
+  - Paul Liang
+  - Yilun Du
+  - Lucy Q. Shen
+  - Mengyu Wang
+  published: '2026-09-21'
+  updated: '2026-09-21'
+  categories:
+  - cs.AI
+  - cs.CL
+  - cs.CV
+  abstract: 'Medical image interpretation is central to diagnosis and care, yet adapting general-purpose
+    multimodal large language models (MLLMs) often requires resource-intensive domain-specific fine-tuning.
+    Here we introduce representation-guided in-context learning (RG-ICL), a training-free inference framework
+    that retrieves query-aligned demonstrations using frozen encoders, without task-specific parameter
+    updates. Across eight datasets spanning histopathology, radiology and retinal fundoscopy, RG-ICL improved
+    classification (mean gain 20 percentage points) and visual question answering (VQA) (mean gain 13
+    percentage points) over no-context and conventional ICL, approaching or exceeding training-based comparators.
+    Which cases were retrieved mattered more than how many: 6 query-aligned cases outperformed up to 32
+    randomly selected ones, whereas fixed or random cases often reduced accuracy below baseline. For VQA,
+    aligning reference cases with both image content and question intent produced further gains. These
+    findings indicate that for medical image interpretation, curating which reference cases an MLLM sees
+    is a practical alternative to retraining it.'
+  url: https://arxiv.org/abs/2609.24057
+  pdf_url: https://arxiv.org/pdf/2609.24057v1
+  version: v1
+fetched: '2026-11-13'
+llm_decision: skip
+llm_reason: 医学影像多模态大模型的免训练检索式上下文学习工作，与音视频编码/传输/质量评估技术无实质关联，IQA为噪声匹配。

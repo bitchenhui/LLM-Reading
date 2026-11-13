@@ -1,0 +1,84 @@
+id: paper:arxiv:2610.14460
+type: paper
+title: 'Re-executing Coding-Agent Evaluations: Unchanged Decisions and Unresolved Policy Risk'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2610.14460v1
+  url: https://arxiv.org/abs/2610.14460
+  pdf_url: https://arxiv.org/pdf/2610.14460v1
+  venue: arXiv preprint
+time:
+  published: '2026-10-10'
+  collected: '2026-11-13'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:SelfImprovement
+  role: subject
+claims:
+- statement: SWE-bench Pro v1 的离线评分对 59 个评分配置变更后被接受的 Go 补丁全部未拒绝，3% 的暴露补丁风险未被排除。
+  confidence: reported
+  metrics:
+  - name: 被拒绝的已接受补丁数
+    value: 0/59
+    scope: SWE-bench Pro v1 离线选项，评分配置变更的已接受 Go 补丁
+  evidence: abstract（初筛，未读全文）
+- statement: 在候选独立假设下，探索性无加权置信上限为 4.95%。
+  confidence: reported
+  metrics:
+  - name: 探索性置信上限
+    value: 4.95%
+    scope: candidate independence 假设、无加权估计
+  evidence: abstract（初筛，未读全文）
+- statement: 在选定分层中，用参考解依赖重建的模块缓存拒绝了四个模型在自带依赖下通过验收的替代方案。
+  confidence: reported
+  metrics:
+  - name: 受影响模型数
+    value: '4'
+    scope: 选定分层，重建模块缓存 vs 自带依赖
+  evidence: abstract（初筛，未读全文）
+- statement: 重执行 Darwin Gödel Machine 档案中 1,929 个选定的智能体版本/任务评估，在固定搜索历史与未重跑评分的前提下，最佳智能体选择与系统变体排名保持不变。
+  confidence: reported
+  metrics:
+  - name: 重执行评估数
+    value: 1,929
+    scope: DGM 档案选定的 agent-version/task 评估，固定搜索历史与未重跑评分
+  evidence: abstract（初筛，未读全文）
+- statement: 主机与镜像差异影响有限但存在：23 处与存档判定不一致中 7 处在第二台主机不复现；重建镜像在四 CPU 执行下改变 16 个三跑多数判定（0.83%）。
+  confidence: reported
+  metrics:
+  - name: 主机间不一致未复现数
+    value: 7/23
+    scope: 与存档判定不一致项在第二台主机复跑
+  - name: 镜像重建改变的三跑多数判定数
+    value: 16 (0.83%)
+    scope: 四 CPU 执行、重建镜像
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 两项预注册重执行研究显示编码智能体评估判定总体稳定，但评分器带来的策略风险仍未解决。
+  abstract_zh: 论文通过两项预注册的重执行研究检验可执行测试对 LLM 编码智能体补丁评分的可复现性，均得到阴性结果。SWE-bench Pro v1 的离线评分对 59 个评分配置变更后被接受的
+    Go 补丁无一拒绝，探索性无加权置信上限为 4.95%，3% 的暴露补丁风险仍未解决；而以参考解依赖重建的模块缓存拒绝了四个模型自带依赖时通过的替代方案。对 Darwin Gödel Machine
+    档案中 1,929 个选定的智能体版本/任务评估进行重执行，在固定搜索历史与未重跑评分的前提下，最佳智能体选择与系统变体排名保持不变。探索性的主机、镜像与适配评分器比较也保持上述结论；23 处与存档判定的不一致中有
+    7 处在第二台主机上不复现，重建镜像在四 CPU 执行下改变了 16 个（0.83%）三跑多数判定。作者提供证据-论断摘要、评分器审计经验与匿名复现包，并强调结论仅限已接受补丁与固定历史决策，一般策略安全与自适应学习稳健性仍需更广泛评估。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 审计支撑自改进与排行榜决策的编码智能体可执行评分可复现性与策略风险，属 self_improvement 域，按收录基准给 summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-13'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 重执行编码智能体评估：判定不变与策略风险未决
+relations:
+- type: same_topic
+  ref: paper:arxiv:2610.27610
+  note: 同属对自改进声明背后评估证据的审计与复现检验
+- type: same_topic
+  ref: paper:arxiv:2610.11464
+  note: 同关注自改进智能体中评分器/验证器可靠性问题
+- type: same_topic
+  ref: paper:arxiv:2611.10787
+  note: 同关注自改进可信性与统计风险量化（如暴露风险上界）

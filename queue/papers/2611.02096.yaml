@@ -1,0 +1,43 @@
+id: paper:arxiv:2611.02096
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'EarthJev: Calibrated, Non-Generative Answers to Natural-Language Questions about Sentinel-2
+    Land Cover'
+  authors:
+  - Domenico Benfenati
+  - Antonio Maria Rinaldi
+  - Cristian Tommasino
+  published: '2026-11-01'
+  updated: '2026-11-01'
+  categories:
+  - cs.CV
+  - cs.AI
+  abstract: 'Vision-language models for remote sensing answer questions about satellite images by generating
+    text: every answer costs a decoding loop, has to be parsed back to an option, and comes without a
+    usable probability. We present EarthJev, a 0.8B-parameter model that answers typed questions about
+    multispectral Sentinel-2 patches without generating any token. All 12 bands enter the vision encoder
+    of Qwen3.5-0.8B through a widened input layer initialised from the RGB kernels, and, following the
+    open OneJev recipe, the answer is read from the logits of the option letters at a single position
+    and trained with cross-entropy plus Brier score. Under a pre-specified analysis plan, we compare it
+    with the same backbone fine-tuned to generate the answer and with three multimodal language models
+    fine-tuned with LoRA, all trained on the same 70,890 questions from 5% of BigEarthNet v2.0 and timed
+    in one job on the same GPU; VQA models that classify over a fixed answer vocabulary are reported as
+    a reference for the cost of answering only the questions seen in training. EarthJev answers a question
+    in 19.9 ms, 4.3 to 8.7 times faster than the multimodal language models and 6.8 times faster than
+    its own backbone used generatively; when all the questions about an image are asked together, it answers
+    them in 42.8 ms, 3.7 to 10.1 times faster than the batched generative models. On 36,028 test questions
+    it reaches 86.0% accuracy (three seeds), 0.6 and 1.2 points below the two 2B multimodal models and
+    3.5 points below the remote-sensing EarthDial-4B, with answers that are valid by construction and
+    calibrated probabilities (ECE 0.006). Replacing the nine non-RGB bands with their mean costs 4.5 points,
+    so the model uses the multispectral input, and in an ablation training the whole vision encoder raises
+    accuracy to 88.4% at the same cost. Code and model: https://github.com/CosmoIknosLab/EarthJev'
+  url: https://arxiv.org/abs/2611.02096
+  pdf_url: https://arxiv.org/pdf/2611.02096v1
+  version: v1
+fetched: '2026-11-13'

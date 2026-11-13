@@ -1,0 +1,46 @@
+id: paper:arxiv:2610.18664
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'PlanPath: Exploration-Guided Orchestration for Patient-Level Pathology Reasoning'
+  authors:
+  - Jiusong Ge
+  - Mingzhao He
+  - Qidong Liu
+  - Chunbao Wang
+  - Chunze Yang
+  - Di Zhang
+  - Jiashuai Liu
+  - Mireia Crispin-Ortuzar
+  - Huazhu Fu
+  - Chen Li
+  - Zeyu Gao
+  published: '2026-10-13'
+  updated: '2026-10-13'
+  categories:
+  - cs.CV
+  - cs.MA
+  abstract: 'A patient''s pathology case spans tens of slides from distinct specimens and anatomical sites,
+    each carrying non-redundant, site-specific evidence. Forming a patient-level conclusion therefore
+    requires locating the slides relevant to a given question and integrating complementary findings across
+    them. However, existing pathology agents analyze one slide at a time and describe morphology rather
+    than measure it, leaving evidence acquisition across a patient''s specimens and patient-level quantification
+    underexplored. To address this gap, we propose PlanPath, an agentic framework for patient-level pathology
+    visual question answering (VQA). PlanPath turns the question into an exploration plan that specifies
+    the evidence required, routes to the slides likely to carry it, and drives coarse-to-fine acquisition
+    from tissue architecture down to individual cells. Tissue- and cell-level tools supply the counts,
+    proportions, and extents, which PlanPath aggregates across slides into a traceable answer. To enable
+    evaluation, we build two patient-level VQA datasets for renal and gastric cancer, averaging 15 WSIs
+    per patient, with pathologist-verified question-answer pairs derived from diagnostic reports. Experimental
+    results show that PlanPath outperforms the strongest baseline by 9.4% and 12.1% in overall accuracy
+    on the two datasets and further improves existing slide-level agents when plugged into our framework.
+    The dataset and code are available at: https://github.com/JSGe-AI/PlanPath_1.'
+  url: https://arxiv.org/abs/2610.18664
+  pdf_url: https://arxiv.org/pdf/2610.18664v1
+  version: v1
+fetched: '2026-11-13'

@@ -1,0 +1,60 @@
+id: paper:arxiv:2611.11831
+type: paper
+title: End-to-End Joint Training of Super-Resolution and Compression Artifact Removal for Industrial Machine
+  Vision
+domain: processing_enhancement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2611.11831v1
+  url: https://arxiv.org/abs/2611.11831
+  pdf_url: https://arxiv.org/pdf/2611.11831v1
+  venue: arXiv preprint
+time:
+  published: '2026-11-09'
+  collected: '2026-11-13'
+entities:
+- ref: concept:SuperResolution
+  role: subject
+- ref: metric:PSNR
+  role: measured_by
+claims:
+- statement: 在重度 JPEG 压缩下，联合训练方法在 PCB Defect 数据集上将缺陷检测 mAP@50 从 0.461 提升至 0.887，优于串联 SR-CAR 基线，且 PSNR
+    仅轻微下降。
+  confidence: reported
+  metrics:
+  - name: mAP@50
+    value: '0.887'
+    scope: PCB Defect 数据集、重度 JPEG 压缩、本方法
+  - name: mAP@50（基线）
+    value: '0.461'
+    scope: PCB Defect 数据集、重度 JPEG 压缩、串联 SR-CAR 基线
+  evidence: abstract（初筛，未读全文）
+- statement: 联合训练模型在 PCB Defect、DeepPCB、NEU-DET 三个数据集上总体优于独立或分别训练的 SR-CAR 流水线，验证了联合优化对压缩感知工业机器视觉系统的关键性。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出SR与压缩伪影去除的端到端联合训练框架，兼顾人眼与机器感知，显著提升压缩图像的缺陷检测精度。
+  abstract_zh: 工业机器视觉中，边缘设备图像经降采样与压缩后产生分辨率损失和压缩伪影，严重损害缺陷检测等下游任务性能。该文提出端到端质量增强框架，将超分辨率（SR）与压缩伪影去除（CAR）统一联合训练，同时优化人类感知与机器感知目标，并研究固定权重与基于不确定性的动态权重损失来平衡重建质量与任务性能。在
+    PCB Defect、DeepPCB 和 NEU-DET 数据集上的大量实验表明，联合训练模型总体优于独立或串联训练的 SR-CAR 流水线。在重度 JPEG 压缩下，相比串联 SR-CAR 基线，缺陷检测
+    mAP@50 从 0.461 提升至 0.887，PSNR 仅轻微下降。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 属编码链路质量增强（超分+压缩伪影去除）且面向机器视觉优化，非核心编解码设计，按非核心域给摘要级收录。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-13'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 面向工业机器视觉的超分辨率与压缩伪影去除端到端联合训练
+relations:
+- type: same_topic
+  ref: paper:arxiv:2609.37328
+  note: 同为编码链路中的神经超分后滤波（CASR 面向 VVC，本文面向工业机器视觉压缩图像）
+- type: same_topic
+  ref: paper:arxiv:2606.21033
+  note: 同为兼顾人类感知与机器感知的联合优化压缩/增强方向
+- type: same_topic
+  ref: paper:arxiv:2601.22070
+  note: 同属面向机器视觉任务的编码优化（Coding for Machines）主题

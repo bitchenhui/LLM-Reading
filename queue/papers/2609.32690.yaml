@@ -1,0 +1,48 @@
+id: paper:arxiv:2609.32690
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'MM-OPD: Towards One More Bottleneck Between Perception and Reasoning'
+  authors:
+  - Jintao Tong
+  - Yujing Lou
+  - Zhanming Shen
+  - Jiaqi Gu
+  - Lubin Fan
+  - Ruixuan Li
+  - Yue Wu
+  - Jieping Ye
+  - Yixiong Zou
+  published: '2026-09-26'
+  updated: '2026-09-26'
+  categories:
+  - cs.CV
+  - cs.AI
+  abstract: 'Recent multimodal large language models (MLLMs) advance visual reasoning by strengthening
+    both perception and reasoning, implicitly assuming a process that transitions seamlessly from perception
+    to reasoning. However, we observe a counterintuitive phenomenon that challenges this assumption: holding
+    the model, question, and decoding fixed, we replace images with their caption or code representations
+    (symbolic views), which seems to be redundant given the clear image structures, but the performance
+    surprisingly improves by 10.2% to 23.6% across model scales and datasets. We term this performance
+    gap as the Symbolic Visual Gap and then take a closer look at it. Through experiments, we find that
+    although the visual evidence can already appear in the reasoning trace for the image-input model,
+    the symbolic-view-input model shows much higher attention to the correct evidence than the image-input
+    model. This suggests that despite good capabilities from current works in perception and reasoning
+    themselves, another bottleneck exists between perception and reasoning in selecting perceived visual
+    information as appropriate evidence for subsequent reasoning. To handle this bottleneck, since the
+    symbolic view steers attention toward correct evidence and is readily obtained at scale, it provides
+    supervision for evidence selection without manually labeled evidence. Building on this, we introduce
+    MM-OPD, a multimodal on-policy self-distillation framework for symbolic-to-visual correction that
+    transfers guidance from symbolic-conditioned behavior to the image-conditioned policy through residual
+    token-level targets, steering the model toward correct visual evidence. Experiments across benchmarks
+    and model scales show that MM-OPD improves a broad range of multimodal abilities, with gains in visual
+    perception, chart and document understanding, mathematical reasoning, and general VQA.'
+  url: https://arxiv.org/abs/2609.32690
+  pdf_url: https://arxiv.org/pdf/2609.32690v1
+  version: v1
+fetched: '2026-11-13'

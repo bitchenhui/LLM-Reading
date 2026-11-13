@@ -1,0 +1,40 @@
+id: paper:arxiv:2610.15562
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'A Plausible Future Is Not a Causal Future: Can Video Models Generate How the World Unfolds?'
+  authors:
+  - Jialiang Li
+  - Zhengning Xu
+  - Zongyang Ma
+  - Shaobo Cui
+  published: '2026-10-11'
+  updated: '2026-10-11'
+  categories:
+  - cs.CV
+  abstract: Large-scale video generation models are increasingly viewed as a promising path toward world
+    models, yet their ability to capture causally coherent physical dynamics remains poorly understood.
+    Existing evaluations largely emphasize visual quality, prompt adherence, or broad physical plausibility,
+    leaving open whether a model can faithfully realize a complete causal cascade, in which an initiating
+    event propagates through causally dependent interactions to a terminal outcome. We introduce CausalCascade,
+    a simulator-grounded benchmark centered on 50 event-rich Blender scenes with structured event graphs,
+    graph-grounded diagnostic VQA, three levels of future-event specification, and 2,832 controlled counterfactual
+    variants, and use it to evaluate nine image-to-video models with complementary motion-, event-, and
+    counterfactual-level diagnostics. Across the evaluated models, generated motion is more reliably localized
+    spatially than realized with correct spatiotemporal evolution, while richer future-event specification
+    improves event recovery but leaves physical realization limited. Counterfactual evaluation further
+    reveals weak selective responsiveness to physical interventions, while most audited failures are foundational,
+    arising at scene consistency or event occurrence. Together, these results position causal cascade
+    generation as a process-level test of world modeling and highlight the need to jointly recover the
+    intended future, faithfully realize its physical evolution, selectively respond to physical interventions,
+    and maintain a coherent physical world over time. Code and dataset are available at https://github.com/SJTU-DeepDeltaLab/CausalCascade
+    .
+  url: https://arxiv.org/abs/2610.15562
+  pdf_url: https://arxiv.org/pdf/2610.15562v1
+  version: v1
+fetched: '2026-11-13'

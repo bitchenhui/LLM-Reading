@@ -1,0 +1,57 @@
+id: paper:arxiv:2610.21121
+status: reviewed
+score: 6
+track: immersive_media
+matched:
+- ref: concept:3DGS
+  count: 4
+  weight: 1
+- ref: concept:GOP
+  count: 2
+  weight: 1
+- ref: concept:VolumetricVideo
+  count: 2
+  weight: 1
+- ref: metric:FPS
+  count: 1
+  weight: 1
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+- ref: org:Qualcomm
+  count: 1
+  weight: 1
+meta:
+  title: 'ResStreamGS: Residual-Sensitive Dual-Stream Gaussian Splatting for Mobile Volumetric Video Streaming'
+  authors:
+  - Haoran Liu
+  - Di Wu
+  - Wang Luo
+  - Hengyuan Na
+  - Miao Hu
+  - Guocong Quan
+  published: '2026-10-15'
+  updated: '2026-10-15'
+  categories:
+  - cs.GR
+  - cs.CV
+  abstract: Real-time mobile volumetric video enables immersive free-viewpoint experiences, but delivering
+    high-quality 3D content under constrained bandwidth and computation remains challenging. Recent 3D
+    Gaussian Splatting (3DGS) systems, such as V$^3$, enable efficient mobile streaming by encoding time-varying
+    Gaussian attributes with commodity video codecs and hardware decoding. However, existing pipelines
+    treat all Gaussians as frame-varying signals, which is poorly suited to full-scene content where large
+    portions remain temporally stable. Our empirical study shows that frame-wise adaptation and video
+    coding of all Gaussians cause quality degradation in complex full-scene content, particularly in temporally
+    stable regions. To address this issue, we propose ResStreamGS, a residual-sensitive dual-stream framework
+    that processes Gaussians according to their temporal behavior. ResStreamGS identifies residual-sensitive
+    primitives through lightweight probe adaptation and reuses stable Gaussians within each Group of Pictures
+    (GOP). Stable Gaussians are transmitted once per GOP, while only residual-sensitive Gaussians remain
+    in the frame-wise hardware-decodable video stream. Experiments on complex full-scene volumetric videos
+    show that ResStreamGS improves post-codec PSNR by 7.51--8.35~dB over a controlled V$^3$-style all-Gaussians
+    baseline, reduces amortized payload by up to 56.5%, and achieves 30.883~FPS on a Qualcomm Snapdragon
+    778G platform.
+  url: https://arxiv.org/abs/2610.21121
+  pdf_url: https://arxiv.org/pdf/2610.21121v1
+  version: v1
+fetched: '2026-11-13'
+llm_decision: summary_only

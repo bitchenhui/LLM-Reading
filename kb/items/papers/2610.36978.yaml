@@ -1,0 +1,55 @@
+id: paper:arxiv:2610.36978
+type: paper
+title: Explicit Regional Representations For Video Quality Assessment
+domain: quality_assessment
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2610.36978v1
+  url: https://arxiv.org/abs/2610.36978
+  pdf_url: https://arxiv.org/pdf/2610.36978v1
+  venue: arXiv preprint
+time:
+  published: '2026-10-27'
+  collected: '2026-11-13'
+entities:
+- ref: concept:IQA
+  role: subject
+- ref: metric:DOVER
+  role: uses
+claims:
+- statement: 质量感知片段采样（优先高QRH分区域并配合微调）在多个主流VQA基准上改进了多数评估指标
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 分布保持采样无需重训练即可近似随机片段采样平均后的VQA预测结果
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: QRH在视觉语言模型引导下结合局部退化证据与感知先验构建像素级质量相关性图，无需像素级人工标注
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 实验以DOVER为承载模型验证QRH接口的有效性
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出质量相关性热图（QRH）作为VQA的显式像素级区域表示，配合确定性片段采样策略提升VQA性能
+  abstract_zh: 针对端到端视频质量评估（VQA）模型预测依据隐式、缺乏区域证据的问题，论文提出显式像素级区域表示——质量相关性热图（QRH），在视觉语言模型引导下融合局部退化证据与感知先验，且无需像素级标注。QRH通过两种确定性片段采样策略接入现有VQA模型：分布保持采样在不重训练的前提下逼近原随机采样器的QRH分数分布；质量感知采样优先选取高QRH分区域并配合微调。在DOVER上于多个基准的实验表明，前者可近似随机采样平均后的预测，后者在主流VQA基准上提升多数评估指标，验证了显式区域表示作为VQA下游接口的价值。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 视频质量评估（VQA）方法论文，属质量评估域而非核心编码域，按基准仅初筛摘要收录
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-13'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 面向视频质量评估的显式区域表示
+relations:
+- type: same_topic
+  ref: paper:arxiv:2609.25423
+  note: 同为客观视频质量评估（VQA）方向研究
+- type: same_topic
+  ref: paper:arxiv:2605.15800
+  note: 同为视频质量评估方法与评测工作
+- type: same_topic
+  ref: paper:arxiv:2608.08508
+  note: 均涉及质量评估任务的方法改进

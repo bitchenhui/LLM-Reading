@@ -1,0 +1,35 @@
+id: paper:arxiv:2608.09731
+status: skipped
+score: 1
+track: streaming_delivery
+matched:
+- ref: metric:SSIM
+  count: 3
+  weight: 1
+meta:
+  title: 'TAMS: Task-Aware Multi-View Adaptive Streaming for Wireless Telerobotic Manipulation'
+  authors:
+  - Zexin Deng
+  - Zhenhui Yuan
+  - Lu Tian
+  - Subhash Lakshminarayana
+  - Longhao Zou
+  published: '2026-08-10'
+  updated: '2026-08-10'
+  categories:
+  - cs.RO
+  - cs.MM
+  abstract: 'Wireless telerobotic manipulation relies on timely multi-view video feedback, but the available
+    uplink bandwidth is often limited and dynamic. This paper presents Task-Aware Multi-View Adaptive
+    Streaming (TAMS), a system that allocates video bitrate according to the current manipulation phase.
+    TAMS infers task phase from lightweight robot-side signals and prioritizes the camera view most relevant
+    to the operator while preserving baseline visibility for secondary views. Experiments on a six-degree-of-freedom
+    (6-DoF) teleoperation testbed under three constrained network conditions show that TAMS improves primary
+    view Structural Similarity Index (SSIM), reduces task completion time, and increases trial success
+    rate compared with equal and static allocation baselines. Under the most constrained bandwidth condition,
+    TAMS reduces mean completion time from 68.9 s to 43.9 s relative to equal allocation and increases
+    trial success rate from 48% to 71%. Code is available at: https://github.com/Dzxx623/TAMS.'
+  url: https://arxiv.org/abs/2608.09731
+  pdf_url: https://arxiv.org/pdf/2608.09731v1
+  version: v1
+fetched: '2026-11-13'

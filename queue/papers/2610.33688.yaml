@@ -1,0 +1,49 @@
+id: paper:arxiv:2610.33688
+status: skipped_by_llm
+score: 3
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+- ref: concept:TrainingFree
+  count: 1
+  weight: 1
+meta:
+  title: 'Rescuing Your Pruning: Rethinking Visual Token Pruning and Post-Training Recovery in MLLMs'
+  authors:
+  - Peiran Yin
+  - Hao Wu
+  - Zihao Yang
+  - Haozhe Hu
+  - Xudong Wang
+  - Xiaoyu Shen
+  published: '2026-10-24'
+  updated: '2026-10-24'
+  categories:
+  - cs.CV
+  abstract: 'Visual token pruning substantially reduces the inference cost of multimodal large language
+    models (MLLMs), yet existing methods are mostly training-free and plug-and-play. They treat the resulting
+    performance drop as an inevitable cost of compression and pursue increasingly complex pruning rules.
+    We rethink this view through two questions: how much of the loss can post-training rescue, and, building
+    on this recovery, how can joint compression push pruning to its limit? We curate a 282K-sample post-training
+    mixture covering general VQA, reasoning, OCR, and grounding, and post-train 36 configurations that
+    drop or merge tokens under a unified protocol. Post-training rescues most of the loss, even for OCR
+    and grounding, and its adaptation gain in closing the gap between the pruned and the dense model grows
+    as the budget tightens. For joint compression, we find that the vision encoder, not the LLM, dominates
+    prefill time in native-resolution MLLMs, so where tokens are removed matters more than how many: keeping
+    40% of tokens at the encoder runs faster than keeping 10% at the projector. Our best configuration
+    prunes the encoder lightly and the projector aggressively, leaves the LLM intact, and keeps general
+    understanding and reasoning at the dense level. It accelerates the LLM stage by 3.49x but the end-to-end
+    time-to-first-token by only 1.54x, showing that LLM-stage speedups overstate end-to-end gains. We
+    hope these findings offer insights for future research on joint visual token compression. Our data,
+    protocol, and code will be released.'
+  url: https://arxiv.org/abs/2610.33688
+  pdf_url: https://arxiv.org/pdf/2610.33688v1
+  version: v1
+fetched: '2026-11-13'
+llm_decision: skip
+llm_reason: 该文研究多模态大模型的视觉token剪枝与后训练恢复以加速推理，属模型效率优化而非音视频编码/传输/质量评估技术，超出收录范围。

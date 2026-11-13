@@ -1,0 +1,46 @@
+id: paper:arxiv:2609.28851
+status: skipped_by_llm
+score: 2
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+- ref: concept:TrainingFree
+  count: 1
+  weight: 1
+meta:
+  title: 'Looks the Same, Answers Differently: Flip-Direction Steering for Robust Vision-Language Reasoning'
+  authors:
+  - Yeonsung Jung
+  - Joonhyun Jeong
+  - Hoang Pham
+  - Joowon Kim
+  - Yoonsik Park
+  - Viet Dac Lai
+  - Eunho Yang
+  published: '2026-09-23'
+  updated: '2026-09-23'
+  categories:
+  - cs.CV
+  abstract: Vision-language models (VLMs) achieve strong visual reasoning performance, yet subtle changes
+    from routine image capture and processing can alter their reasoning trajectories even when images
+    appear nearly identical. In long-horizon generation, the resulting activation shifts may accumulate
+    across decoding steps, progressively altering reasoning tokens and ultimately changing the final answer,
+    a phenomenon referred to as answer flips. To address this instability, we propose FlipDir (Flip-Direction
+    Steering), a training-free inference-time method that estimates a low-rank flip-inducing activation
+    subspace from contrastive pairs of original and answer-flipping inputs and selectively steers hidden
+    states during decoding. A margin-based gate limits subspace attenuation to uncertain decoding steps,
+    recovering original predictions while preserving stable ones. To evaluate robustness beyond accuracy
+    or consistency on fixed test sets, we introduce VisFlip, a benchmark framework that constructs evaluation
+    groups for a target model and visual variation setting to separately assess recovery of original predictions
+    and preservation of stable ones. VisFlip spans nine dataset-variation combinations across scientific
+    reasoning, robot-scene understanding, and medical VQA, covering subtle visual variations common in
+    each domain. Experiments across 18 settings demonstrate that FlipDir consistently outperforms existing
+    methods on the combined recovery and preservation metric. We will make our code publicly available.
+  url: https://arxiv.org/abs/2609.28851
+  pdf_url: https://arxiv.org/pdf/2609.28851v1
+  version: v1
+fetched: '2026-11-13'
+llm_decision: skip
+llm_reason: 论文研究视觉语言模型对细微视觉扰动的推理鲁棒性（激活引导与答案翻转），与音视频编码/传输/质量评估技术无实质关联，属域外文献，规则匹配到的IQA为噪声实体，予以剔除

@@ -1,0 +1,36 @@
+id: paper:arxiv:2610.14834
+status: skipped
+score: 0
+track: audio_coding
+matched: []
+meta:
+  title: 'SemiCodec: Bridging Speech Tokenization and High-fidelity Reconstruction with Semi-discrete
+    Representations'
+  authors:
+  - Kecan Mao
+  - Nan Xu
+  - Zhaoyang Meng
+  - Zhengyao Ma
+  - Yingming Gao
+  - Yi Zhao
+  - Ya Li
+  published: '2026-10-10'
+  updated: '2026-10-10'
+  categories:
+  - eess.AS
+  - cs.SD
+  abstract: 'Speech representation learning requires a discrete modeling interface while preserving high
+    waveform fidelity. Existing approaches rarely achieve both: discrete tokens ease modeling but lose
+    fine-grained acoustic information, while continuous latents preserve fidelity but require specialized
+    generative objectives. We introduce SemiCodec, a novel Semi-discrete neural speech Codec with synchronized
+    discrete tokens and continuous latents. Direct joint optimization may create a reconstruction shortcut
+    through the continuous pathway, leaving the discrete tokens insufficiently grounded. To address this
+    issue, we propose a Preserve-then-Ground training paradigm that first establishes a high-fidelity
+    synthesis space and then grounds SSL-guided discrete tokens within it. Experiments show that SemiCodec
+    outperforms fully discrete codecs in reconstruction quality and intelligibility while remaining competitive
+    with continuous representations in acoustic fidelity and speaker preservation. Audio samples are available
+    at https://pennyw1-se.github.io/SemiCodec-Demo-Page/'
+  url: https://arxiv.org/abs/2610.14834
+  pdf_url: https://arxiv.org/pdf/2610.14834v1
+  version: v1
+fetched: '2026-11-13'

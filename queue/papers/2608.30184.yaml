@@ -1,0 +1,44 @@
+id: paper:arxiv:2608.30184
+status: reviewed
+score: 2
+track: immersive_media
+matched:
+- ref: concept:VolumetricVideo
+  count: 2
+  weight: 1
+- ref: concept:3DGS
+  count: 1
+  weight: 1
+meta:
+  title: 'ATGS: Anchored Temporal Gaussian Splatting for Long Volumetric Video Representation'
+  authors:
+  - Jiahao Wu
+  - Jie Liang
+  - Die Hu
+  - Jiayu Yang
+  - Kaiqiang Xiong
+  - Xiang Li
+  - Xiaoyun Zheng
+  - Chao Wang
+  - Ronggang Wang
+  published: '2026-08-31'
+  updated: '2026-08-31'
+  categories:
+  - cs.CV
+  abstract: 'Volumetric video enables immersive free viewpoint rendering of dynamic real world scenes,
+    yet existing methods struggle with long sequences and complex motions, often leading to temporal instability
+    and visual artifacts. To address these challenges, we propose \ourname, a Gaussian splatting based
+    framework for volumetric video reconstruction. Our key insight is that explicitly tracking long term
+    complex motion with individual Gaussian primitives is inherently unstable. Instead, we organize Gaussians
+    around time conditioned anchors that localize their spatial and temporal support, thereby reducing
+    long range motion complexity. We further introduce a temporal windowing strategy to activate only
+    anchors relevant to the queried time, which improves scalability and temporal coherence. In addition,
+    to ensure spatial and temporal stability, we design a compact set of multi level anchor features that
+    encode global features, local spatial features, and local temporal features, jointly constraining
+    Gaussian generation. Extensive experiments demonstrate that \ourname \ consistently outperforms prior
+    methods on long sequence volumetric videos with complex motions. Project page: https://github.com/WuJH2001/ATGS.'
+  url: https://arxiv.org/abs/2608.30184
+  pdf_url: https://arxiv.org/pdf/2608.30184v1
+  version: v1
+fetched: '2026-11-13'
+llm_decision: summary_only

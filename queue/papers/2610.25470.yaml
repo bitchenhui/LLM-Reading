@@ -1,0 +1,41 @@
+id: paper:arxiv:2610.25470
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'A failure of Imagination: VLMs fail to use visual representations for text, but self-distillation
+    can help'
+  authors:
+  - Shashwat Singh
+  - He He
+  - Tal Linzen
+  published: '2026-10-18'
+  updated: '2026-10-18'
+  categories:
+  - cs.AI
+  - cs.CL
+  - cs.CV
+  abstract: 'Vision-language (VL) models are typically built by fine-tuning a language model to attend
+    to visual features in service of a Visual Question-Answering objective. We ask whether this alignment
+    changes how language models represent text---especially on tasks where visualization would help, like
+    geometry questions posed in words. We distinguish weak multimodality (the model can answer questions
+    about an input image) from strong multimodality (the model''s text representations themselves become
+    vision-aligned, improving performance on text-only tasks with latent visual structure). To test for
+    strong multimodality, we construct a task of shape-counting problems with paired equivalent text and
+    image specifications. This task is trivial when the image is provided, but requires visualization
+    when specified in text as line coordinates. We compare instruction-tuned Qwen-2.5 and Mistral models
+    against their vision-aligned counterparts on the text variant of the task. We find that the multimodal
+    models do no better in this setting, despite strong performance on the image version of the task.
+    Probing experiments corroborate this: vision-aligned decoder embeddings carry no more visual structure
+    than their text-only counterparts. Finally, we provide an optimization objective that distills in-context
+    visual embeddings into text embeddings. This alignment induces gains on the text variant of the task
+    without explicit task supervision, even on samples more complex than seen during alignment. This suggests
+    that VQA-style alignment leaves available cross-modal transfer untapped.'
+  url: https://arxiv.org/abs/2610.25470
+  pdf_url: https://arxiv.org/pdf/2610.25470v1
+  version: v1
+fetched: '2026-11-13'

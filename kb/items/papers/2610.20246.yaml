@@ -1,0 +1,67 @@
+id: paper:arxiv:2610.20246
+type: paper
+title: Evaluating perceptual transparency of lossy music audio compression with Opus codec
+domain: audio_coding
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2610.20246v1
+  url: https://arxiv.org/abs/2610.20246
+  pdf_url: https://arxiv.org/pdf/2610.20246v1
+  venue: arXiv preprint
+time:
+  published: '2026-10-14'
+  collected: '2026-11-13'
+entities:
+- ref: codec:Opus
+  role: subject
+claims:
+- statement: 第一阶段 BS.1116-3 双盲听测中，128 kbps 的 Opus 音乐编码与未压缩参考在统计上不可区分，但未通过严格等效性检验
+  confidence: reported
+  metrics:
+  - name: LMM 差异评分检验 p 值
+    value: '0.456'
+    scope: 128 kbps vs 未压缩参考，21 名合格听音员、23 段音乐片段
+  - name: TOST 等效性检验 p 值
+    value: '0.064'
+    scope: 128 kbps vs 未压缩参考，未达严格等效判定
+  evidence: abstract（初筛，未读全文）
+- statement: 在 BLUP 筛选的最坏条件压力测试下，128 kbps 被明确检出退化，160 kbps 通过严格统计等效并达到感知透明
+  confidence: reported
+  metrics:
+  - name: LMM 差异评分检验 p 值
+    value: '0.030'
+    scope: 128 kbps，10 名最关键听音员 + 8 个最难样本
+  - name: LMM 差异评分检验 p 值
+    value: '0.747'
+    scope: 160 kbps，同上压力测试条件
+  - name: TOST 等效性检验 p 值
+    value: '0.024'
+    scope: 160 kbps，严格统计等效判定
+  evidence: abstract（初筛，未读全文）
+- statement: 结论：160 kbps 是 Opus 音乐压缩在苛刻听音环境下对未压缩 CD 音质的感知透明码率阈值
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 两阶段 ITU-R BS.1116-3 双盲听测+LMM/TOST 统计分析，确定 Opus 音乐压缩感知透明阈值为 160 kbps。
+  abstract_zh: 该研究针对开源音频编解码器 Opus 在高码率音乐压缩下感知透明阈值缺乏充分评估的问题，设计了两阶段 ITU-R BS.1116-3 双盲听测，用线性混合效应模型（LMM）分析差异评分，并用双重单侧检验（TOST）判定统计等效性。第一阶段（21
+    名合格听音员、23 段音乐片段）中 128 kbps 与未压缩参考统计上不可区分（p=0.456），但以微弱差距未通过严格等效性检验（p=0.064）。第二阶段用最佳线性无偏预测（BLUP）筛选出
+    10 名最关键听音员和 8 个最具挑战性样本做压力测试：128 kbps 被明确检出退化（p=0.030），160 kbps 则达到感知透明（p=0.747）并通过严格统计等效（p=0.024）。研究结论为
+    160 kbps 在苛刻听音环境下对未压缩 CD 音质达到感知透明，并公开两阶段结果、匿名听音员背景与样本特征以保证可复现性。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 音频编码域：Opus 高码率音乐压缩感知透明度双盲听测，非核心视频/图像编码域，按规则给 summary_only
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-13'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 评估有损音乐音频压缩的感知透明度：以 Opus 编解码器为例
+relations:
+- type: same_topic
+  ref: paper:arxiv:2609.34524
+  note: 同为音频编解码器码率-质量评估研究，本篇为传统编解码器 Opus 的主观听测版图
+- type: same_topic
+  ref: paper:arxiv:2609.09866
+  note: 同属音频编码领域，涉及高码率/流式音频编码质量基准对比

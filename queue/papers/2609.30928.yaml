@@ -1,0 +1,44 @@
+id: paper:arxiv:2609.30928
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'UltraG-Bench: A Multi-task Benchmark for assessing Large Vision-Language Models on Pixel-level
+    Evidence Grounding in Ultrasound'
+  authors:
+  - Quanhao Zhu
+  - Bo Xu
+  - Rui Lin
+  - Chenyuan Wang
+  - Yu Shao
+  - Boling Zhu
+  - Jiuyan Sun
+  - Liang Zhao
+  - Hongfei Lin
+  - Feng Xia
+  published: '2026-09-25'
+  updated: '2026-09-25'
+  categories:
+  - cs.CV
+  - cs.AI
+  abstract: 'Ultrasound is one of the most widely used medical imaging modalities, and recent large vision-language
+    models(VLMs) have shown increasing capabilities in ultrasound image understanding. However, these
+    models fail to provide pixel-level visual evidence aligned with their semantic predictions, and their
+    fine-grained grounding capability in ultrasound remains largely unclear. We introduce UltraG-Bench,
+    a large-scale multi-task benchmark for evaluating pixel-level evidence grounding in ultrasound. UltraG-Bench
+    is built by annotating 40 public ultrasound segmentation datasets spanning 13 anatomical categories,
+    and comprises three progressive tasks: instruction-guided segmentation, evidence-grounded VQA, and
+    evidence-grounded report generation, with 331125, 666779, and 138832 annotations, respectively. Comprehensive
+    evaluation of 14 state-of-the-art models reveals a substantial gap between semantic understanding
+    and fine-grained pixel-level localization. We further propose UltraG-Agent, which combines the semantic
+    reasoning capabilities of a VLM with the ultrasound-specific segmentation capability of UltraSAM3.
+    Experiments show that UltraG-Agent substantially improves both semantic prediction and pixel-level
+    visual grounding. Our dataset and code are available at https://github.com/zhuqh19/UltraG-Bench.'
+  url: https://arxiv.org/abs/2609.30928
+  pdf_url: https://arxiv.org/pdf/2609.30928v1
+  version: v1
+fetched: '2026-11-13'

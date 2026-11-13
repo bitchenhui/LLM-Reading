@@ -1,0 +1,40 @@
+id: paper:arxiv:2611.10528
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'PrivMark: Pixel-Space Steering against Privacy Leakage in Vision-Language Models'
+  authors:
+  - Ruofan Xing
+  - Arman Akbari
+  - Weikai Lin
+  - Yuhao Zhu
+  - Xuan Zhang
+  published: '2026-11-07'
+  updated: '2026-11-07'
+  categories:
+  - cs.CV
+  abstract: 'Vision-language models (VLMs) routinely disclose soft-biometric attributes such as age, gender,
+    and race in their text outputs, exposing demographic information from uploaded images to any downstream
+    API user. Existing privacy defenses do not fit this setting: face de-identification leaves distributed
+    soft-biometric cues intact, classifier-targeted adversarial perturbations do not transfer to open-ended
+    generation, and stronger VLM-specific methods require retraining or runtime activation access unavailable
+    to downstream APIs. We propose PrivMark, a framework that suppresses biometric leakage at the image
+    level. By analyzing VLM activations, we identify two weakly aligned steering vector directions in
+    hidden-state space, each tied to a distinct leakage behavior --- one corresponding to incidental attribute
+    disclosure under open-ended descriptions, the other to compliance with direct biometric probes instead
+    of refusal --- and encode both directions into a single bounded pixel perturbation, so the protected
+    image alone enforces privacy with no invasive access to model internals at deployment. To support
+    evaluation, we assemble BioleakBench, $1{,}600$ VQA pairs covering biometric privacy attributes under
+    both free-form description and direct-probe protocols. Across three white-box source models, PrivMark
+    achieves up to $85.9\%$ biometric suppression while retaining $75\%$ of clean OK-VQA utility, up to
+    $1.4\times$ the privacy-utility tradeoff of the strongest pixel-only baseline. The same one-shot perturbations
+    transfer consistently to seven unseen VLMs including closed-source APIs.'
+  url: https://arxiv.org/abs/2611.10528
+  pdf_url: https://arxiv.org/pdf/2611.10528v1
+  version: v1
+fetched: '2026-11-13'

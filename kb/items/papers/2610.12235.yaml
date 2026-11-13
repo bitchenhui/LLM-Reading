@@ -1,0 +1,81 @@
+id: paper:arxiv:2610.12235
+type: paper
+title: Language Models as AI Research World Models
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2610.12235v2
+  url: https://arxiv.org/abs/2610.12235
+  pdf_url: https://arxiv.org/pdf/2610.12235v2
+  venue: arXiv preprint
+time:
+  published: '2026-10-08'
+  collected: '2026-11-13'
+entities:
+- ref: concept:RSI
+  role: subject
+- ref: concept:SelfImprovement
+  role: subject
+claims:
+- statement: 真实实验经验获取的研究知识可提升RWM对同环境未见干预结果的预测，且该知识可跨环境复用。
+  confidence: reported
+  metrics:
+  - name: Spearman相关提升
+    value: '+0.27'
+    scope: 同环境未见干预预测，相比无研究经验设置
+  evidence: abstract（初筛，未读全文）
+- statement: 仅用OLMo3、Marin、Nanochat的预训练经验训练的RWM，可将Qwen3环境中的选择遗憾较零经验设置降低78%。
+  confidence: reported
+  metrics:
+  - name: 选择遗憾降低
+    value: 78%
+    scope: Qwen3环境，跨环境预训练经验 vs 零经验
+  evidence: abstract（初筛，未读全文）
+- statement: 在固定选择预算的多轮Autoresearch中，带同环境与跨环境研究知识的RWM分别将最佳增益提高15.8%与11.6%。
+  confidence: reported
+  metrics:
+  - name: 最佳增益提升
+    value: 15.8%
+    scope: 多轮Autoresearch，同环境（in-env）研究知识
+  - name: 最佳增益提升
+    value: 11.6%
+    scope: 多轮Autoresearch，跨环境（cross-env）研究知识
+  evidence: abstract（初筛，未读全文）
+- statement: 评估语料覆盖9个研究环境（预训练/后训练/推理）、2600余条实验记录、超过17.1万H100 GPU小时；跨13个语言模型的消融显示加入研究知识比更换模型或增大推理算力更能改善干预排序。
+  confidence: reported
+  metrics:
+  - name: 实验记录数
+    value: 2600+
+    scope: 9个研究环境的实验记录
+  - name: 实验算力
+    value: 171000 H100 GPU小时
+    scope: 全部评估实验总耗
+  - name: 消融模型数
+    value: '13'
+    scope: 用作RWM的语言模型数量
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出研究世界模型（RWM）让语言模型预测实验干预结果，在受限实验预算下支撑AI研究智能体的递归自我改进。
+  abstract_zh: 该文针对AI研究智能体提出实验快于执行、结果预测成为关键能力的观察，提出用语言模型充当研究世界模型（RWM），预测候选干预在不同研究环境中的结果。评估基于来自预训练、后训练与推理三类共9个研究环境的2600余条实验记录，折合超过17.1万H100
+    GPU小时。结果显示，从真实实验经验获取的研究知识可提升RWM对同环境未见干预的预测（Spearman +0.27），且知识可跨环境迁移：仅用OLMo3、Marin、Nanochat的预训练经验即可使Qwen3环境的选择遗憾较零经验降低78%。在固定选择预算的多轮Autoresearch中，带同环境与跨环境知识的RWM分别将最佳增益提高15.8%与11.6%；对13个语言模型的消融表明，加入研究知识比更换模型或增大推理算力更能改善干预排序。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 论文核心是AI研究智能体的实验结果预测与研究世界模型，直接服务递归自我改进，属self_improvement域而非核心编码域，按基准仅给初筛摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-13'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 语言模型作为AI研究世界模型
+relations:
+- type: same_topic
+  ref: paper:arxiv:2610.22599
+  note: 同属LLM预测机器学习实验结果的研究方向
+- type: same_topic
+  ref: paper:arxiv:2611.03698
+  note: 同属LLM智能体自动化LLM训练类实验并支撑RSI闭环
+- type: same_topic
+  ref: paper:arxiv:2610.12190
+  note: 同属面向AI科学家/自动化科研的评测与基础设施方向

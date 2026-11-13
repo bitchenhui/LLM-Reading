@@ -1,0 +1,61 @@
+id: paper:arxiv:2611.08483
+type: paper
+title: 'SwarmEvolve: Latent Agent Swarms for Evolutionary Discovery and Optimization'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2611.08483v1
+  url: https://arxiv.org/abs/2611.08483
+  pdf_url: https://arxiv.org/pdf/2611.08483v1
+  venue: arXiv preprint
+time:
+  published: '2026-11-05'
+  collected: '2026-11-13'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:AlphaEvolve
+  role: compared_against
+claims:
+- statement: SwarmEvolve在21个数学发现与科学计算问题上取得所有对比框架中的最高平均分。
+  confidence: reported
+  metrics:
+  - name: 基准问题数
+    value: '21'
+    scope: 数学发现与科学计算问题集
+  evidence: abstract（初筛，未读全文）
+- statement: SwarmEvolve达到其他SOTA框架60分钟所得最佳分数的耗时可大幅压缩，中位数仅需3至8分钟。
+  confidence: reported
+  metrics:
+  - name: 中位耗时
+    value: 3至8分钟
+    scope: 达到其他SOTA框架60分钟最佳分数所需时间
+  evidence: abstract（初筛，未读全文）
+- statement: 在若干问题上，使用Qwen3 8B的SwarmEvolve改进了AlphaEvolve用前沿LLM首先找到的解，表明小成本模型+潜在空间蜂群通信可超越前沿模型的程序搜索结果。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 数百个低成本智能体在潜在空间蜂群协作、以KV缓存共享信息的进化程序搜索框架，速度与得分均超AlphaEvolve等SOTA。
+  abstract_zh: LLM引导的进化搜索通过智能体迭代优化程序求解数学与计算问题，但通常较慢：LLM每轮需生成长文本思维链，且须重复多次生成以维持种群多样性。SwarmEvolve让每轮数百个低成本智能体以蜂群方式工作，在潜在空间推理而无需解码为文本，并通过传递KV缓存共享信息；每个蜂群从不同角度研究问题，新颖性过滤器直接测量隐状态向量间距离以保留最独特的想法，想法交叉在潜在空间由汇总智能体合并全体成员KV缓存自然完成。在21个数学发现与科学计算问题上，SwarmEvolve取得最高平均分，达到其他SOTA框架60分钟最佳分数的中位耗时仅3至8分钟。在若干问题上，使用Qwen3
+    8B的SwarmEvolve改进了AlphaEvolve用前沿LLM首先找到的解。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: LLM引导的潜在空间智能体蜂群进化搜索框架，属自我改进AI领域重要工作，非视频编码核心域，按基准给summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-13'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: SwarmEvolve：面向进化发现与优化的潜在空间智能体蜂群
+relations:
+- type: same_topic
+  ref: paper:arxiv:2610.03675
+  note: 同属LLM引导的进化程序搜索方向，FrugalEvo亦关注该类搜索的成本效率问题
+- type: same_topic
+  ref: paper:arxiv:2610.33046
+  note: 同属以进化搜索驱动科学发现并迈向自我改进智能体的研究方向
+- type: same_topic
+  ref: paper:arxiv:2610.24454
+  note: 同属多智能体分层协作的进化式科学发现范式

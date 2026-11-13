@@ -1,0 +1,48 @@
+id: paper:arxiv:2610.04281
+status: reviewed
+score: 2
+track: immersive_media
+matched:
+- ref: concept:EntropyModel
+  count: 1
+  weight: 1
+- ref: org:MPEG
+  count: 1
+  weight: 1
+meta:
+  title: 'OctMesh: A Unified Octree-Hierarchical Framework for Lossless Triangle Mesh Compression'
+  authors:
+  - Shiyu Feng
+  - Xihua Sheng
+  - Lingyu Zhu
+  - Chunyang Fu
+  - Shiqi Wang
+  published: '2026-10-03'
+  updated: '2026-10-03'
+  categories:
+  - cs.CV
+  - cs.GR
+  abstract: 'Lossless triangle mesh compression must preserve both vertex positions and connectivity.
+    Octrees support learned point cloud geometry coding and progressive refinement, but extending them
+    to meshes requires a compatible connectivity representation. Unlike the eight occupancy decisions
+    of a voxel, a parent edge can develop into varied child connections, making edge refinement difficult
+    to model with a compact prediction prior. We propose OctMesh, a learned framework that codes geometry
+    and connectivity on a shared octree hierarchy. Its key observation is that octree pooling produces
+    parents with either one child or two to eight children. Child edges are then grouped by their endpoint
+    parents'' types and whether the endpoints share a parent. Each candidate group contains children from
+    just one parent or two connected parents. The resulting four categories define small, fixed-shape
+    prediction tasks: connections uniquely determined by the parent graph are inherited without bits,
+    while three neural predictors estimate probabilities for the remaining candidates. These probabilities
+    guide arithmetic coding of the actual edge symbols. Binarized predictions of within-parent connections
+    provide context for predicting connections between different parents. A graph-aware parent feature
+    extractor combines local geometry, parent connectivity and global shape. The connectivity models use
+    dedicated weights at coarse levels and share weights at fine levels. Residual edges and a finest-level
+    face-selection payload complete the reconstruction. On 256 frames from eight MPEG V-DMC test sequences,
+    OctMesh losslessly recovers the finest-level vertex-coordinate, edge and unoriented face sets at an
+    average of 7.033 bits per face, 12.8% below V-Mesh. The same hierarchical representation supports
+    nine levels of progressive vertex-and-edge refinement.'
+  url: https://arxiv.org/abs/2610.04281
+  pdf_url: https://arxiv.org/pdf/2610.04281v1
+  version: v1
+fetched: '2026-11-13'
+llm_decision: summary_only

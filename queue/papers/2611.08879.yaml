@@ -1,0 +1,50 @@
+id: paper:arxiv:2611.08879
+status: skipped_by_llm
+score: 2
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+- ref: concept:TrainingFree
+  count: 1
+  weight: 1
+meta:
+  title: 'GeoJeV: Unified Spatial Probability for Training-Free Efficient Evidence Acquisition in Ultra-High-Resolution
+    Remote Sensing'
+  authors:
+  - Xinyi Niu
+  - Lingfeng Chen
+  - Jiehua Zhang
+  - Panhe Hu
+  - Li Liu
+  - Zhen Liu
+  - Yongxiang Liu
+  published: '2026-11-06'
+  updated: '2026-11-06'
+  categories:
+  - cs.CV
+  - eess.SP
+  abstract: Ultra-high-resolution (UHR) remote sensing imagery provides rich spatial details but poses
+    challenges for accurate and efficient multimodal understanding. Existing evidence acquisition methods
+    selectively explore relevant image regions, yet largely rely on generative multimodal large language
+    models (MLLMs) for intermediate search control. However, reinforcement learning from human feedback
+    (RLHF) primarily aligns these models with human-preferred responses rather than explicitly optimizing
+    region-level relevance judgments, while repeated autoregressive decoding introduces additional computational
+    overhead. To address these limitations, we propose GeoJeV, a training-free method that formulates
+    evidence acquisition as spatial probability-driven decision making. At each evaluated region, a frozen
+    JeV model produces a probability distribution over candidate regions. Specifically, Region Rank prioritizes
+    candidate regions, Sparse Branch adaptively determines branching width through sparse probability
+    support, and Depth Gate controls refinement depth based on branch sparsity and distribution concentration.
+    By coordinating search priority, branching width, and refinement depth through a shared distribution,
+    GeoJeV reduces reliance on RLHF-aligned generation and eliminates intermediate decoding. Experiments
+    on LRS-GRO, MME-RealWorld-RS, and LRS-VQA achieve accuracies of 60.59%, 52.79%, and 34.32%, respectively.
+    Across the three benchmarks, GeoJeV improves the average accuracy of Qwen3-VL-8B by +5.32pp with only
+    1.12 additional seconds per question, while achieving a 7.8-fold inference speedup over the recent
+    method.
+  url: https://arxiv.org/abs/2611.08879
+  pdf_url: https://arxiv.org/pdf/2611.08879v1
+  version: v1
+fetched: '2026-11-13'
+llm_decision: skip
+llm_reason: 该工作是遥感超高分辨率图像上MLLM证据获取与高效推理方法，不涉及编码、质量评估或流传输等音视频技术，超出收录范围。

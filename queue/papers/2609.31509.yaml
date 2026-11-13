@@ -1,0 +1,47 @@
+id: paper:arxiv:2609.31509
+status: reviewed
+score: 3
+track: quality_assessment
+matched:
+- ref: concept:3DGS
+  count: 4
+  weight: 1
+- ref: concept:IQA
+  count: 2
+  weight: 1
+- ref: metric:LPIPS
+  count: 1
+  weight: 1
+meta:
+  title: 'ClearGS: Reliability-Aware Gaussian Splatting from Handheld Videos'
+  authors:
+  - Xuanzhi Liu
+  - Xinyi Wu
+  - Hang Pan
+  - Wensi Huang
+  - Zhenyao Wu
+  - Ruize Han
+  - Song Wang
+  published: '2026-09-25'
+  updated: '2026-09-25'
+  categories:
+  - cs.CV
+  - cs.AI
+  abstract: We present ClearGS for 3D Gaussian Splatting (3DGS) from handheld videos with uneven viewpoint
+    coverage and mixed frame quality. Rather than selecting frames with binary decisions, ClearGS uses
+    Reliability-aware View Allocation (RVA) to assign graded raw-supervision weights based on appearance
+    reliability, degradation risk, and geometric utility, while weakly reactivating useful suppressed
+    frames to maintain trajectory coverage. Since weighting cannot restore details lost to blur or distortion,
+    ClearGS further introduces Render-Guided In-Video Restoration (RIVR). The current 3DGS render provides
+    a pose-aligned structural candidate, a frozen no-reference restoration expert restores the corresponding
+    raw video observation without any clean reference image, and no-reference perceptual scores select
+    among the render, restored observation, and high-frequency fused candidate. ClearGS then applies Full-Trajectory
+    Repair Consolidation to revisit accepted repairs and preserve details introduced early. On GS2E and
+    GSOTM, ClearGS achieves state-of-the-art overall performance, with consistent CLIP-IQA and MUSIQ gains
+    and LPIPS reductions in most degradation settings, without paired sharp supervision or matched clean
+    references.
+  url: https://arxiv.org/abs/2609.31509
+  pdf_url: https://arxiv.org/pdf/2609.31509v1
+  version: v1
+fetched: '2026-11-13'
+llm_decision: summary_only

@@ -1,0 +1,73 @@
+id: paper:arxiv:2610.35595
+type: paper
+title: 'Agentic Algorithm Design: LLMs that Propose, Formalise, and Prove Runtime Bounds for Evolutionary
+  Algorithms in Lean'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2610.35595v2
+  url: https://arxiv.org/abs/2610.35595
+  pdf_url: https://arxiv.org/pdf/2610.35595v2
+  venue: arXiv preprint
+time:
+  published: '2026-10-26'
+  collected: '2026-11-13'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:AlphaEvolve
+  role: compared_against
+claims:
+- statement: 智能体流水线为 CycleUncover 问题设计出期望运行时间 O(n²) 的黑盒优化算法，而经典 (1+1) EA 需要 e^{Ω(n)}。
+  confidence: reported
+  metrics:
+  - name: 期望运行时间（设计的算法）
+    value: O(n^2)
+    scope: CycleUncover 问题
+  - name: 经典 (1+1) EA 期望运行时间
+    value: e^{Ω(n)}
+    scope: CycleUncover 问题
+  evidence: abstract（初筛，未读全文）
+- statement: 流水线为整数值次模最小化设计并分析了期望运行时间 O(n^{2+2c}) 的黑盒优化算法，并在 LeadingOnes 上匹配经典 O(n²) 运行时间。
+  confidence: reported
+  metrics:
+  - name: 期望运行时间（次模最小化）
+    value: O(n^{2+2c})
+    scope: 整数次模最小化
+  - name: 期望运行时间（LeadingOnes）
+    value: O(n^2)
+    scope: LeadingOnes，匹配经典结果
+  evidence: abstract（初筛，未读全文）
+- statement: 在 8 个问题类上，前沿模型的 15 次运行中有 12 次完成流水线并得到机器检验的期望运行时间界。
+  confidence: reported
+  metrics:
+  - name: 流水线完成率
+    value: 12/15
+    scope: 8 个问题类、前沿模型
+  evidence: abstract（初筛，未读全文）
+- statement: 消融研究显示，移除分阶段、让智能体零样本直接给出带运行时间保证的算法设计，会退化为复制种子基线算法（随机搜索）或产生不完整证明。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: LLM 智能体分阶段流水线提出黑盒优化算法，在 Lean 中机器检验期望运行时间界，全程无需经验比较。
+  abstract_zh: 论文提出模仿进化算法研究方法论的分阶段智能体流水线：LLM 智能体提出黑盒优化算法，由 Lean 守卫过滤有缺陷的设计，再定义势函数并证明漂移界以获得相对基线的期望运行时间改进保证，全流程不做任何经验比较。流水线为
+    CycleUncover 问题设计出期望运行时间 O(n²) 的算法，而经典 (1+1) EA 需要 e^{Ω(n)}；还为整数次模最小化设计 O(n^{2+2c}) 算法，并在 LeadingOnes
+    上匹配经典 O(n²)。在 8 个问题类上，前沿模型的 15 次运行中有 12 次完成流水线并产出机器检验的期望运行时间界。消融研究表明，去掉分阶段让智能体零样本直接设计会退化为复制种子基线（随机搜索）或产生不完整证明。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 首个以 Lean 机器检验运行时间界取代经验评估的 LLM 智能体算法设计流水线，属自改进 AI 重要工作，非编码核心域故仅初筛摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-13'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 智能体化算法设计：能在 Lean 中提出、形式化并证明进化算法运行时间界的 LLM
+relations:
+- type: same_topic
+  ref: paper:arxiv:2609.01535
+  note: 同属 LLM 自动设计算法主题；该工作以经验方式让 LLM 设计视频编码工具，本工作以 Lean 机器检验取代经验评估
+- type: same_topic
+  ref: paper:arxiv:2610.33046
+  note: 同属进化算法搜索与自改进智能体结合的方向

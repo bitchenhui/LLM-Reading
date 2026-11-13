@@ -1,0 +1,88 @@
+id: paper:arxiv:2609.27110
+type: paper
+title: 'Undertone: Personalizing Frozen VLM Aesthetic Judges from Few Ratings'
+domain: quality_assessment
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2609.27110v2
+  url: https://arxiv.org/abs/2609.27110
+  pdf_url: https://arxiv.org/pdf/2609.27110v2
+  venue: arXiv preprint
+time:
+  published: '2026-09-22'
+  collected: '2026-11-13'
+entities:
+- ref: concept:IQA
+  role: subject
+- ref: metric:MOS
+  role: measured_by
+claims:
+- statement: 在 PARA 基准上，仅用先验（不加入新用户评分）即达 Spearman 相关 .640，超过已发表 10 评分最优 .581 与 100 评分最优 .620。
+  confidence: reported
+  metrics:
+  - name: Spearman 相关
+    value: '.640'
+    scope: PARA 基准，仅先验、无个人评分
+  - name: Spearman 相关（已发表对比）
+    value: '.581'
+    scope: 已发表最优 10 评分结果
+  - name: Spearman 相关（已发表对比）
+    value: '.620'
+    scope: 已发表最优 100 评分结果
+  evidence: abstract（初筛，未读全文）
+- statement: 加入个人评分进一步提升：10 条评分达 .648，100 条评分达 .676。
+  confidence: reported
+  metrics:
+  - name: Spearman 相关
+    value: '.648'
+    scope: PARA，加入 10 条个人评分
+  - name: Spearman 相关
+    value: '.676'
+    scope: PARA，加入 100 条个人评分
+  evidence: abstract（初筛，未读全文）
+- statement: 个人评分在偏离大众口味的场景收益最大：100 条评分时，与大众最不一致的评分者提升 +.067，LAPIS 艺术作品上提升 +.206，而整体仅 +.037。
+  confidence: reported
+  metrics:
+  - name: Spearman 提升
+    value: +.067
+    scope: 100 评分，与大众一致性最低的评分者
+  - name: Spearman 提升
+    value: +.206
+    scope: 100 评分，LAPIS 艺术作品
+  - name: Spearman 提升
+    value: +.037
+    scope: 100 评分，整体平均
+  evidence: abstract（初筛，未读全文）
+- statement: 无标签情况下，VLM 评判器的期望分数预测 PARA MOS 达 .835，高于作者复现的已发表最优模型 .694；但在 PARA 原始协议下端到端 MOS 训练网络仍占优。
+  confidence: reported
+  metrics:
+  - name: MOS 预测相关性
+    value: '.835'
+    scope: PARA，无标签、评判器期望分数
+  - name: MOS 预测相关性（对比）
+    value: '.694'
+    scope: 作者复现的已发表最优模型
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 用他人评分学习高斯先验，对新用户仅需少量评分即可闭式求解个性化回归权重，无需训练网络。
+  abstract_zh: 针对图像美学评估中平均分掩盖个体差异的问题，作者提出 Undertone-P：从其他评分者学习一个关于个性化回归权重的高斯先验，权重作用于冻结视觉语言模型（VLM）评判器的两个读出量（概率加权评分与分数
+    token 隐状态）。新用户只需一次闭式求解即可完成个性化，无需训练任何网络。在 PARA 基准上，仅用先验即达 Spearman 相关 .640，超过已发表的 10 评分与 100 评分最优结果（.581
+    与 .620）；加入 10/100 条个人评分后提升至 .648/.676。无标签时评判器期望分数预测 PARA 的 MOS 达 .835，优于作者复现的已发表最优模型 .694。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 属于图像美学/质量评估（IQA 分支）的个性化方法，非核心编码域，按规则仅作初筛摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-13'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: Undertone：从少量评分个性化冻结 VLM 美学评判器
+relations:
+- type: same_topic
+  ref: paper:arxiv:2608.21180
+  note: 同为基于 VLM 的图像质量评估方法研究
+- type: same_topic
+  ref: paper:arxiv:2609.03283
+  note: 同以 MOS 为核心度量探讨评分预测（语音域）

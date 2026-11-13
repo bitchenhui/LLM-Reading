@@ -1,0 +1,52 @@
+id: paper:arxiv:2610.25770
+type: paper
+title: 'VHA: VQA-based Hallucination Assessment for Generative Image Super-Resolution'
+domain: quality_assessment
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2610.25770v1
+  url: https://arxiv.org/abs/2610.25770
+  pdf_url: https://arxiv.org/pdf/2610.25770v1
+  venue: arXiv preprint
+time:
+  published: '2026-10-19'
+  collected: '2026-11-13'
+entities:
+- ref: concept:SuperResolution
+  role: subject
+- ref: concept:IQA
+  role: builds_on
+claims:
+- statement: VHA通过双向VQA比较真值图与超分图的语义内容与低层视觉证据，可揭示超分结果中缺失/改变的真值信息及无依据的新增内容（幻觉）。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: VHA+是学习得到的轻量模型，可直接从真值-超分图像对预测VHA分数，避免昂贵的VLM推理。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 基于人类研究构建的幻觉基准VHA-bench上，VHA与VHA+均与人类幻觉判断高度相关。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出基于双向VQA的生成式超分幻觉评估指标VHA及其轻量学习版VHA+，与人类幻觉判断高度相关。
+  abstract_zh: 生成式图像超分辨率虽能产生逼真的高分辨率图像，但可能引入幻觉（添加无依据内容或改变已有细节），而现有超分指标无法衡量生成细节是否有参考图像支撑。论文提出VHA，利用视觉语言模型（VLM）从每张图像构建问答对，并在真值图与超分图上双向作答，双向得分差异可揭示缺失/改变的真值信息与无依据的新增内容。由于VLM推理代价高，作者进一步训练轻量模型VHA+，直接从真值-超分图像对预测VHA分数。通过人类研究构建幻觉基准VHA-bench，实验表明VHA与VHA+均与人类幻觉判断高度相关，代码、基准与权重已开源。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 提出生成式图像超分辨率的幻觉评估指标VHA/VHA+，属质量评估（IQA类）工作而非编码核心域，按规则仅初筛摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-13'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: VHA：基于视觉问答的生成式图像超分辨率幻觉评估
+relations:
+- type: same_topic
+  ref: paper:arxiv:2608.08508
+  note: 同属超分辨率与质量评估交叉方向的指标/方法研究
+- type: same_topic
+  ref: paper:arxiv:2608.13989
+  note: 同为提出新图像质量类指标并以主观实验验证的工作
+- type: same_topic
+  ref: paper:arxiv:2607.18856
+  note: 同属图像超分辨率研究领域

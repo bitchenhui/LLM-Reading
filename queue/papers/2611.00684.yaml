@@ -1,0 +1,44 @@
+id: paper:arxiv:2611.00684
+status: skipped_by_llm
+score: 3
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+- ref: concept:TrainingFree
+  count: 1
+  weight: 1
+- ref: dataset:COCO
+  count: 1
+  weight: 1
+meta:
+  title: Density-Aware Calibration for Resource-Efficient Medical Vision-Language Models
+  authors:
+  - Tien-Dat Dam
+  - Huu-Thuan Huynh
+  - Minh-Triet Tran
+  - Trung-Nghia Le
+  published: '2026-10-31'
+  updated: '2026-10-31'
+  categories:
+  - cs.CV
+  abstract: 'Medical vision-language models (VLMs) show promise for clinical image understanding, but
+    their computational and memory requirements hinder deployment on resource-constrained clinical hardware.
+    Post-training quantization (PTQ) offers a practical compression strategy without retraining, yet its
+    effectiveness depends strongly on the calibration data. We propose CoreCalib, a training-free and
+    quantizer-agnostic framework for constructing compact calibration sets that preserve the target medical
+    VQA distribution. CoreCalib stratifies data by clinical question class, identifies representative
+    visual modes using frozen DINOv2 features with UMAP and HDBSCAN, and expands selected images into
+    class-balanced question-answer pairs. On Kvasir-VQA-x1, we evaluate CoreCalib with MASQuant, GPTQ,
+    and QIG using a fixed 128-pair budget. CoreCalib achieves the best METEOR with all three quantizers
+    and the best ROUGE-L with MASQuant and GPTQ. With W4A8 MASQuant, it improves METEOR from 0.5672 with
+    COCO calibration to 0.6234, recovering approximately 41% of the degradation relative to BF16. These
+    results support CoreCalib as a data-centric component for resource-efficient medical VLM deployment.
+    Project page: https://magnusdtd.github.io/CoreCalib/ .'
+  url: https://arxiv.org/abs/2611.00684
+  pdf_url: https://arxiv.org/pdf/2611.00684v1
+  version: v1
+fetched: '2026-11-13'
+llm_decision: skip
+llm_reason: 主题为医学视觉-语言模型的后训练量化校准集构建（医疗AI模型压缩），与音视频编解码、传输或质量评估无关，故剔除；规则匹配到的IQA系医学VQA（视觉问答）与IQA的噪声混淆。

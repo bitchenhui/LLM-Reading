@@ -1,0 +1,39 @@
+id: paper:arxiv:2610.35905
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 3
+  weight: 1
+meta:
+  title: 'Task-Utility IQA: Rethinking Image Quality Assessment in Embodied Tasks'
+  authors:
+  - Jirong Zha
+  - Yanwei Liao
+  - Yemin Wang
+  - Xiangmin Yi
+  - Siqi Peng
+  - Yingfeng Chen
+  - Chen Gao
+  - Xinlei Chen
+  published: '2026-09-30'
+  updated: '2026-09-30'
+  categories:
+  - cs.CV
+  - cs.AI
+  abstract: Image quality assessment (IQA) underpins embodied imaging pipelines by judging whether visual
+    quality satisfies downstream tasks, yet most existing methods learn task-agnostic scores aligned with
+    generic human ratings on static benchmarks. This objective mismatches embodied and interactive settings,
+    where image adequacy depends on task goals, context, and action requirements that shape an agent's
+    decisions. We argue that IQA should shift from score regression to goal-conditioned judgment defined
+    by embodied task utility. To this end, we propose an MLLM-based embodied IQA agent framework that
+    reasons about task requirements, grounds quality evidence, and produces decision-facing assessments.
+    A compact VisDrone evidence study shows that conventional perceptual metrics and generic MLLM-based
+    IQA scores are weak proxies for downstream VLM task success, while a task-conditioned utility score
+    better predicts whether visual input supports the target task. These findings support a task-utility-oriented
+    reframing of IQA for embodied, explainable, and decision-aware visual perception.
+  url: https://arxiv.org/abs/2610.35905
+  pdf_url: https://arxiv.org/pdf/2610.35905v1
+  version: v1
+fetched: '2026-11-13'

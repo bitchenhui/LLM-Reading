@@ -1,0 +1,55 @@
+id: paper:arxiv:2609.39149
+type: paper
+title: 'Rep2Skill: Representation-Guided Skill Self-Evolution for LLM Agents'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2609.39149v2
+  url: https://arxiv.org/abs/2609.39149
+  pdf_url: https://arxiv.org/pdf/2609.39149v2
+  venue: arXiv preprint
+time:
+  published: '2026-09-30'
+  collected: '2026-11-13'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:SelfImprovement
+  role: builds_on
+claims:
+- statement: Rep2Skill通过建模智能体rollout的内部表征轨迹，可定位偏离成功执行动态的回合，并将其解释为可操作的文本反馈用于针对性技能修订。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在两个智能体环境、两个开源LLM的自进化设置下（同一LLM兼任执行器与优化器，无更强外部模型），Rep2Skill一致优于纯文本技能进化方法。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 将智能体内部表征纳入技能优化回路，是把智能体自我改进从纯文本反思向外拓展的有前景方向。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 利用LLM内部表征轨迹定位执行偏差回合并转化为文本反馈，实现外部技能的自我进化修订。
+  abstract_zh: 文本技能使基于LLM的智能体无需更新模型参数即可积累可复用的程序性知识，但现有技能进化局限于文本空间，优化器只能依据长执行轨迹与稀疏任务结果诊断并修订技能。Rep2Skill提出表征引导的框架，对收集到的智能体rollout建模其内部模型表征轨迹，定位偏离成功执行动态的回合，并将这些信号与执行上下文一起解释为可操作的文本反馈，用于针对性技能修订。在两个智能体环境与两个开源LLM上的实验显示，在无更强外部模型的严格自进化设置（同一LLM兼任执行器与优化器）下，Rep2Skill一致优于纯文本方法。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: LLM智能体技能自我进化工作，将内部表征纳入技能优化回路，属自我改进AI核心方向，非视频编码核心域故仅初筛。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-13'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: Rep2Skill：面向LLM智能体的表征引导技能自我进化
+relations:
+- type: same_topic
+  ref: paper:arxiv:2609.33867
+  note: 同为通过技能进化实现递归自我改进的LLM智能体工作
+- type: same_topic
+  ref: paper:arxiv:2611.12109
+  note: 同为模型与技能协同进化的LLM智能体自我改进工作
+- type: same_topic
+  ref: paper:arxiv:2609.34712
+  note: 同为LLM智能体子任务级技能进化的自我改进方向
+- type: same_topic
+  ref: paper:arxiv:2610.24453
+  note: 同为免参数更新的智能体自我进化方法

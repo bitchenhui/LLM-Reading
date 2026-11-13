@@ -1,0 +1,38 @@
+id: paper:arxiv:2610.01180
+status: skipped_by_llm
+score: 2
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+- ref: concept:TrainingFree
+  count: 1
+  weight: 1
+meta:
+  title: 'Skeleton-and-Strategy Prompting: Training-Free Negation Understanding for Vision-Language Models'
+  authors:
+  - Yuliang Cai
+  - Mohammad Rostami
+  - Jesse Thomason
+  published: '2026-10-01'
+  updated: '2026-10-01'
+  categories:
+  - cs.CV
+  abstract: Despite the strong performance of Vision-Language Models (VLMs) on a wide range of visual
+    question answering (VQA) tasks, these models consistently struggle to understand negation and produce
+    incorrect answers when questions involve negated clauses. To address this limitation, we propose Skeleton-and-Strategy
+    Prompting (\textbf{SSP}), a training-free, in-context learning method that improves VLM negation understanding
+    capabilities without any parameter updates. Given a negation question, our method first abstracts
+    the underlying question structure into a skeleton, retrieves a small set of same-skeleton questions
+    from a lightweight question pool, then prompts the VLM to analyze their shared negation pattern and
+    synthesize a single-sentence answering strategy. The skeleton and strategy are prepended to the test
+    sample to guide the model correctly tackle the negation problems. Experiments on multiple negation
+    VQA benchmarks show that SSP achieves state-of-the-art performance on negation-focused VQA tasks while
+    remaining computationally efficient.
+  url: https://arxiv.org/abs/2610.01180
+  pdf_url: https://arxiv.org/pdf/2610.01180v1
+  version: v1
+fetched: '2026-11-13'
+llm_decision: skip
+llm_reason: 通用视觉-语言模型的否定理解提示方法（VQA任务），与音视频编码/传输/质量评估等技术无关，超出收录范围

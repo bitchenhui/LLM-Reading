@@ -1,10 +1,13 @@
 id: paper:arxiv:2611.05832
-status: skipped
-score: 1
+status: reviewed
+score: 2
 track: streaming_delivery
 matched:
 - ref: concept:ABR
   count: 3
+  weight: 1
+- ref: concept:QoE
+  count: 1
   weight: 1
 meta:
   title: 'StarWorld: A Cross-Layer World Model for Starlink Prediction and Streaming'
@@ -34,4 +37,5 @@ meta:
   url: https://arxiv.org/abs/2611.05832
   pdf_url: https://arxiv.org/pdf/2611.05832v1
   version: v1
-fetched: '2026-11-12'
+fetched: '2026-11-13'
+llm_decision: summary_only

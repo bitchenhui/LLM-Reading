@@ -1,0 +1,77 @@
+id: paper:arxiv:2609.37968
+type: paper
+title: 'SelfSearch: Reward-Free Search for Self-Improving Agents'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2609.37968v2
+  url: https://arxiv.org/abs/2609.37968
+  pdf_url: https://arxiv.org/pdf/2609.37968v2
+  venue: arXiv preprint
+time:
+  published: '2026-09-29'
+  collected: '2026-11-13'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: SelfSearch 在全部六个模型-基准设置中均提升群体平均成功率，无需搜索期间的下游奖励信号。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 单个智能体在 Terminal-Bench 2.1 上最高提升 11.2 个百分点。
+  confidence: reported
+  metrics:
+  - name: 成功率提升
+    value: '11.2'
+    scope: 个百分点，Terminal-Bench 2.1，个体智能体最大提升
+  evidence: abstract（初筛，未读全文）
+- statement: SWE-bench Multilingual 上智能体成功率提升 5.0 个百分点，同时在初始与进化智能体共同解决的任务上执行成本降低 38.5%。
+  confidence: reported
+  metrics:
+  - name: 成功率提升
+    value: '5.0'
+    scope: 个百分点，SWE-bench Multilingual
+  - name: 执行成本降低
+    value: 38.5%
+    scope: SWE-bench Multilingual，初始与进化智能体共同解决任务子集
+  evidence: abstract（初筛，未读全文）
+- statement: 以 4.03 美元搜索成本产出解决 82.0% Terminal-Bench 2.1 任务的 harness（DeepSeek V4 Flash），在公开九-harness对比中匹配最高分
+    harness Codex，任务成功率与评估引导搜索基线相当且搜索成本更低。
+  confidence: reported
+  metrics:
+  - name: 搜索成本
+    value: $4.03
+    scope: DeepSeek V4 Flash，Terminal-Bench 2.1 harness 搜索
+  - name: 任务成功率
+    value: 82.0%
+    scope: Terminal-Bench 2.1，DeepSeek V4 Flash，公开九-harness对比
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出无奖励搜索SelfSearch，智能体借历史自我改进记录改进自身，以更低搜索成本匹配评估引导搜索的任务成功率。
+  abstract_zh: 现有自我改进方法通过反复下游评估搜索更优智能体，成本高昂且将搜索绑定到被评估任务。SelfSearch 引入无奖励搜索流程：智能体依据先前自我改进回合的记录（含推理、工具动作与结果）来修改自身指令、工具与执行流程。在全部六个模型-基准设置中，群体平均成功率均优于初始智能体，单个智能体在
+    Terminal-Bench 2.1 上最高提升 11.2 个百分点；SWE-bench Multilingual 上提升 5.0 个百分点，且在共同解决的任务上执行成本降低 38.5%。仅 4.03
+    美元搜索成本即产出在 Terminal-Bench 2.1 上解决 82.0% 任务的 harness（DeepSeek V4 Flash），在公开九-harness对比中匹配最高分 harness
+    Codex，搜索成本低于评估引导基线。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 自我改进智能体核心论文：无奖励搜索式自我改进，属于 self_improvement 域重要工作，按基准只给 summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-13'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: SelfSearch：面向自我改进智能体的无奖励搜索
+relations:
+- type: same_topic
+  ref: paper:arxiv:2610.26770
+  note: 同为智能体 harness 递归自我改进并关注性能-成本权衡（HarnessPro）
+- type: same_topic
+  ref: paper:arxiv:2610.28201
+  note: 同为智能体 harness 的递归自我改进（MaD-RSI）
+- type: same_topic
+  ref: paper:arxiv:2610.22791
+  note: 同为编码智能体自我进化/自我改进搜索范式

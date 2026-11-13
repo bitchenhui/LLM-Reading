@@ -1,0 +1,73 @@
+id: paper:arxiv:2609.39045
+type: paper
+title: 'RSIGame: Autonomous Agentic Game Development with Recursive Self-improvement'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2609.39045v1
+  url: https://arxiv.org/abs/2609.39045
+  pdf_url: https://arxiv.org/pdf/2609.39045v1
+  venue: arXiv preprint
+time:
+  published: '2026-09-30'
+  collected: '2026-11-13'
+entities:
+- ref: concept:RSI
+  role: subject
+- ref: concept:SelfImprovement
+  role: uses
+claims:
+- statement: RSIGame在140个GameCraft-Bench任务、2个游戏引擎、5个生成器上，于匹配开发预算下持续提升游戏质量。
+  confidence: reported
+  metrics:
+  - name: 评测任务数
+    value: '140'
+    scope: GameCraft-Bench
+  - name: 游戏引擎数
+    value: '2'
+    scope: 实验设置（含Godot与Phaser）
+  - name: 生成器数
+    value: '5'
+    scope: 实验设置
+  evidence: abstract（初筛，未读全文）
+- statement: 经验内化使Qwen3.8-27B在Godot上达到61.38，超过GPT-5.5的一次性得分。
+  confidence: reported
+  metrics:
+  - name: 游戏质量得分
+    value: '61.38'
+    scope: Qwen3.8-27B + 经验内化，Godot引擎
+  - name: 生成token削减
+    value: 11倍
+    scope: 相对Qwen原始生成量
+  evidence: abstract（初筛，未读全文）
+- statement: 同一方法在Phaser引擎上达到58.53，同样超过GPT-5.5一次性得分。
+  confidence: reported
+  metrics:
+  - name: 游戏质量得分
+    value: '58.53'
+    scope: Qwen3.8-27B + 经验内化，Phaser引擎
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出RSIGame框架，用局部探索-诊断-改进循环加全局质量追踪实现游戏智能体递归自我改进，并将经验内化进生成器。
+  abstract_zh: 大模型使自动游戏生成可行，但朴素迭代精炼易过拟合少量测试用例，产生脆弱且有残留缺陷的游戏。RSIGame将开发组织为互补的局部与全局循环：局部explore-diagnose-improve循环广泛探索可执行游戏、诊断并优先排序问题、执行基于证据的修订，演化清单持续积累测试与改进指导；全局循环追踪整体质量、保留最佳检查点并检测长周期开发中的饱和与回退。除测试时改进外，RSIGame还通过训练将成功开发经验内化到生成器中。在140个GameCraft-Bench任务、两个游戏引擎、五个生成器上，RSIGame在匹配开发预算下持续提升游戏质量；经验内化使Qwen3.8-27B在Godot达61.38、Phaser达58.53，超过GPT-5.5一次性得分，同时生成token减少11倍。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 递归自我改进（RSI）在智能体游戏开发上的应用工作，属于自我改进AI域而非音视频核心域，按基准给 summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-13'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: RSIGame：具备递归自我改进能力的自主智能体游戏开发
+relations:
+- type: same_topic
+  ref: paper:arxiv:2609.37950
+  note: 同为RSI在特定领域智能体（视频理解/游戏开发）上的框架演化应用
+- type: same_topic
+  ref: paper:arxiv:2609.38662
+  note: 同属智能体递归自我改进方法研究
+- type: same_topic
+  ref: paper:arxiv:2610.18083
+  note: 同属RSI的自适应扩展与协调研究方向

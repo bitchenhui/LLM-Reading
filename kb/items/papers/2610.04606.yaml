@@ -1,0 +1,69 @@
+id: paper:arxiv:2610.04606
+type: paper
+title: Sparse-View 4D Gaussian Splatting via Spatiotemporal Priors and Generative Assistance
+domain: immersive_media
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2610.04606v2
+  url: https://arxiv.org/abs/2610.04606
+  pdf_url: https://arxiv.org/pdf/2610.04606v2
+  venue: arXiv preprint
+time:
+  published: '2026-10-03'
+  collected: '2026-11-13'
+entities:
+- ref: concept:3DGS
+  role: subject
+- ref: concept:VolumetricVideo
+  role: subject
+- ref: metric:PSNR
+  role: measured_by
+claims:
+- statement: 区域自适应空间先验、运动一致时间先验与扩散生成虚拟相机伪监督三者结合，可在六相机宽基线稀疏视角下稳定重建动态场景。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在验证集上，该方法将全帧PSNR从基线的25.60 dB提升到29.75 dB。
+  confidence: reported
+  metrics:
+  - name: PSNR
+    value: 25.60 dB
+    scope: 验证集，基线方法，全帧
+  - name: PSNR
+    value: 29.75 dB
+    scope: 验证集，本方法，全帧
+  evidence: abstract（初筛，未读全文）
+- statement: 在官方测试基准上取得30.04 dB全帧PSNR和27.88 dB前景PSNR，位列稀疏视角赛道总排名第一。
+  confidence: reported
+  metrics:
+  - name: PSNR
+    value: 30.04 dB
+    scope: 官方测试集，全帧
+  - name: PSNR
+    value: 27.88 dB
+    scope: 官方测试集，前景区域
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 融合区域自适应空间先验、运动一致时间先验与扩散生成辅助，实现六相机大基线稀疏视角4D高斯重建并夺冠。
+  abstract_zh: 该工作针对SIGGRAPH Asia 2026体视频挑战赛稀疏视角赛道，仅用六个宽基线相机进行动态场景重建。框架包含三部分：前景掩码引导的高斯初始化与动静态分区致密化、对齐度量尺度的单目深度背景正则；帧插值中间时刻监督与光流约束的投影运动；在最大角度间隙放置虚拟相机并用位姿条件扩散模型修复渲染图，迭代作为伪监督加入训练。验证集全帧PSNR从基线25.60
+    dB提升至29.75 dB；官方测试集取得30.04 dB全帧PSNR与27.88 dB前景PSNR，在稀疏视角赛道总排名第一。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 面向体视频挑战赛的稀疏视角4D高斯泼溅动态重建，属沉浸式媒体而非核心编码域，按规则仅初筛摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-13'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 基于时空先验与生成辅助的稀疏视角4D高斯泼溅
+relations:
+- type: same_topic
+  ref: paper:arxiv:2609.33969
+  note: 同为高斯泼溅路线的体视频处理（稀疏4D锚点压缩）
+- type: same_topic
+  ref: paper:arxiv:2610.21121
+  note: 同为基于高斯泼溅的体视频（移动端流式传输）
+- type: same_topic
+  ref: paper:arxiv:2607.03576
+  note: 同属体视频处理技术（属性压缩中的运动估计）

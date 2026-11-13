@@ -1,0 +1,49 @@
+id: paper:arxiv:2609.25716
+type: paper
+title: 'FoMo: Forking Moment in Generative Trajectory as a Perceptual Distance'
+domain: quality_assessment
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2609.25716v1
+  url: https://arxiv.org/abs/2609.25716
+  pdf_url: https://arxiv.org/pdf/2609.25716v1
+  venue: arXiv preprint
+time:
+  published: '2026-09-22'
+  collected: '2026-11-13'
+entities:
+- ref: concept:IQA
+  role: subject
+- ref: metric:MOS
+  role: compared_against
+claims:
+- statement: 扩散模型生成轨迹中的分叉时刻与人类视觉系统一致：分叉越早的图像对仅共享粗结构、感知距离越大，分叉越晚则仅细节不同，可作为有参考锚定的逐点感知距离标签。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 该全自动管线可在无任何人工标注情况下生成支持任意图像对通用比较的逐点感知距离标签，替代昂贵且带噪的MOS点式标注。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 以FoMo标签监督训练的参考型IQA度量在多个基准上优于基于人工标注数据集训练的度量，且结论在多种骨干架构下成立。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 利用扩散模型生成分叉时刻自动生成无人工标注的逐点感知距离标签，训练参考型IQA度量。
+  abstract_zh: 针对参考型图像质量评估（IQA）依赖昂贵且带噪的MOS人工标注、而2AFC成对标签仅有相对比较信息的问题，论文提出全自动数据生成管线。方法利用扩散模型生成动态：粗结构在早期时间步生成、细节在后期生成，故生成轨迹分叉越早的图像对感知距离越大。以该分叉时刻（FoMo）作为有参考锚定的逐点感知距离标签，监督训练参考型IQA度量，使任意图像对间可通用比较并支持信息更丰富的训练目标。多骨干架构的实验表明，所训度量在多个基准上优于基于人工标注数据训练的度量。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 属于参考型图像质量评估（IQA）研究，利用扩散模型生成轨迹自动构造感知距离标签，是音视频感知质量评估相关但不属核心编码域，按基准仅收录摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-13'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: FoMo：以生成轨迹中的分叉时刻作为感知距离
+relations:
+- type: same_topic
+  ref: paper:arxiv:2609.30077
+  note: 同属参考型（full-reference）图像质量度量研究，均围绕感知质量度量的训练与优化
+- type: same_topic
+  ref: paper:arxiv:2603.25566
+  note: 同属感知质量/感知损失度量方向，均涉及感知距离度量在编码链路中的应用

@@ -1,0 +1,62 @@
+id: paper:arxiv:2610.15708
+type: paper
+title: 'SpecForge: Recursive Self-Improvement for Coding Agents via Behavioral Specifications'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2610.15708v1
+  url: https://arxiv.org/abs/2610.15708
+  pdf_url: https://arxiv.org/pdf/2610.15708v1
+  venue: arXiv preprint
+time:
+  published: '2026-10-11'
+  collected: '2026-11-13'
+entities:
+- ref: concept:RSI
+  role: subject
+- ref: concept:SelfImprovement
+  role: subject
+claims:
+- statement: SpecForge 在 DevEval+ 上于五个骨干模型中均取得最佳性能，其中 Claude-4.5-Sonnet 骨干达到 94.9% 求解率
+  confidence: reported
+  metrics:
+  - name: solve_rate
+    value: 94.9%
+    scope: DevEval+ 基准，Claude-4.5-Sonnet 骨干模型
+  evidence: abstract（初筛，未读全文）
+- statement: SpecForge 相对最强基线平均提升 5.7 个百分点
+  confidence: reported
+  metrics:
+  - name: average_improvement
+    value: 5.7 percentage points
+    scope: DevEval+，跨五个骨干模型相对最强基线的平均提升
+  evidence: abstract（初筛，未读全文）
+- statement: 改进后的行为规范可迁移到循环外任务（跨语言翻译与新功能实现），并优于基准提供的需求文档
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 用行为规范加多前沿树搜索实现编码代理的递归自我改进，克服规范间'输出耦合'引发的回归问题
+  abstract_zh: 论文研究冻结语言模型编码代理在不更新权重下的递归自我改进：代理依据自然语言行为规范生成代码，用执行验证的测试评估，再依据失败修订规范形成自改进闭环。针对程序实体相互依赖导致的'输出耦合'（改进某实体规范会破坏其他实体的正确性、产生打地鼠效应），提出多前沿树搜索框架
+    SpecForge，含帕累托引导状态选择、先被调用者后被调用者的依赖约束实体选择、错误多样化扩展三项机制。在 DevEval+ 上，SpecForge 在五个骨干模型上均取得最佳性能：Claude-4.5-Sonnet
+    求解率达 94.9%，较最强基线平均提升 5.7 个百分点。改进后的规范还可迁移至跨语言翻译与新功能实现等循环外任务，优于基准提供的需求文档。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 属于自我改进AI（RSI/编码代理自进化）方向，非音视频核心域，按基准仅收初筛摘要
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-13'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: SpecForge：基于行为规范的编码代理递归自我改进
+relations:
+- type: same_topic
+  ref: paper:arxiv:2610.22791
+  note: 同为编码代理自进化/自我改进方向
+- type: same_topic
+  ref: paper:arxiv:2609.33867
+  note: 同为递归自我改进（RSI）方法研究
+- type: same_topic
+  ref: paper:arxiv:2610.18083
+  note: 同为递归自我改进的机制与扩展研究

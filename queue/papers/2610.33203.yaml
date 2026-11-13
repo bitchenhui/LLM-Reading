@@ -1,0 +1,43 @@
+id: paper:arxiv:2610.33203
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 3
+  weight: 1
+meta:
+  title: 'Of Chains and Gains: What Reinforcement Learning changes on Reasoning-based Image Quality Assessment'
+  authors:
+  - Yixuan Li
+  - Yuxuan Jiang
+  - Hanwei Zhu
+  - Hancheng Zhu
+  - Fan Zhang
+  - Shiqi Wang
+  - David Bull
+  published: '2026-10-23'
+  updated: '2026-10-23'
+  categories:
+  - cs.CV
+  - cs.CL
+  abstract: Reinforcement Learning with Verifiable Rewards (RLVR) has improved the performance of large
+    Vision-Language Models (VLMs) on image quality assessment (IQA). Existing approaches often attribute
+    these gains to improved reasoning before scoring, supported by increasingly plausible Chain-of-Thought
+    (CoT). However, whether these gains exceed sampling effects and how they depend on explicit reasoning
+    remain unclear. We rigorously investigate these questions through sampling-aware evaluation, controlled
+    reasoning interventions, and shortcut experiments. We find that RL-trained models outperform base
+    models under large-budget $\operatorname{max}_g@k$ evaluation, while improvements beyond averaging
+    are concentrated in-distribution. RLVR produces chains that raise base-model performance when transplanted
+    and improves scoring with the chain held fixed. Yet scoring becomes less dependent on the chain during
+    inference, more clearly at 7B than at 32B. Steering the probed quality direction in thinking tokens
+    also has little effect on scoring. Finally, RL can improve scoring accuracy by exploiting textual
+    cues correlated with mean opinion scores (MOSs), which could inflate benchmark performance. Together,
+    these findings show that RLVR raises quality scoring and produces more useful chains, but that better
+    scoring does not imply a stronger reliance on explicit reasoning, while score-based rewards can also
+    encourage reliance on quality-irrelevant shortcuts. We hope this preliminary study can enlighten more
+    and more concrete reasoning schemes in IQA.
+  url: https://arxiv.org/abs/2610.33203
+  pdf_url: https://arxiv.org/pdf/2610.33203v1
+  version: v1
+fetched: '2026-11-13'

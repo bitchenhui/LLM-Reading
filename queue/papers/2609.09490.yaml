@@ -1,0 +1,51 @@
+id: paper:arxiv:2609.09490
+status: reviewed
+score: 3
+track: streaming_delivery
+matched:
+- ref: concept:QUIC
+  count: 2
+  weight: 1
+- ref: concept:QoE
+  count: 1
+  weight: 1
+- ref: org:IETF
+  count: 1
+  weight: 1
+meta:
+  title: Prototyping QoE-Aware Rate Adaptation in Cellular Networks with Commercial Applications
+  authors:
+  - Szilveszter Nádas
+  - Lars Ernström
+  - Dan Druta
+  - Igor Pruzhansky
+  - David Lindero
+  - Jonathan Lynam
+  - Eric Petajan
+  published: '2026-09-08'
+  updated: '2026-09-08'
+  categories:
+  - cs.NI
+  - cs.MM
+  - eess.IV
+  abstract: 'Prior work has shown that QoE-aware resource sharing for real-time interactive video can
+    support up to three times more simultaneous sessions at acceptable quality compared to rate-fair allocation.
+    However, the required capabilities (QoE-targeted encoding, runtime spatial complexity estimation,
+    and rich application-network APIs) are not yet available in commercial deployments. In this paper,
+    we take an evolutionary approach: we design a system that delivers QoE-aware resource allocation using
+    only capabilities that can be assembled in a lab today. We extend the utility-based allocation framework
+    to the radio resource domain by introducing composite spatial complexity, which combines a session''s
+    video spatial complexity with its time-variant spectral efficiency into a single resource demand function.
+    To operate with commercial real-time video streaming applications that use rate-based congestion control
+    and lack capability to measure QoE, we use external tooling for QoE measurements. We develop an incremental
+    reallocation algorithm with per-interval limits that encode both the congestion control algorithm''s
+    speed constraint and that spatial complexity estimates are reliable only near the current rate. The
+    resulting prototype combines external QoE measurements with congestion-signal-based rate steering
+    and does not require modification to commercial applications. We chart an evolution path from this
+    prototype toward full QoE-aware resource sharing, mapping emerging standards (IETF SCONE, CAMARA,
+    Media over QUIC) to the progressive capabilities they enable.'
+  url: https://arxiv.org/abs/2609.09490
+  pdf_url: https://arxiv.org/pdf/2609.09490v1
+  version: v1
+fetched: '2026-11-13'
+llm_decision: summary_only

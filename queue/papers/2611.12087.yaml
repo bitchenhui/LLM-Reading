@@ -1,0 +1,59 @@
+id: paper:arxiv:2611.12087
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'Compass 1: Towards Open-World and Persistent Embodied Navigation from Monocular RGB Videos'
+  authors:
+  - Hai Zhang
+  - Siqi Liang
+  - Yanjun Guo
+  - Shoufeng Zhang
+  - Yunhao Wang
+  - Hangyu Du
+  - Haoguang Mai
+  - Hongchen Li
+  - Jiazhi Yang
+  - Jialong Zeng
+  - Yu Hu
+  - Chen Chen
+  - Gangcheng Jiang
+  - Zishun Zhuo
+  - Lirui Zhao
+  - Zhigang Li
+  - Yu Qiao
+  - Zhenjie Yang
+  - Fu Zhang
+  - Hongyang Li
+  published: '2026-11-09'
+  updated: '2026-11-09'
+  categories:
+  - cs.CV
+  - cs.RO
+  abstract: 'Embodied navigation requires agents to achieve persistent spatial awareness and long-horizon
+    execution stability in open-world environments. However, existing navigation architectures struggle
+    to sustain both capabilities, remaining effective only over a handful of recent frames. We present
+    Compass 1, the first embodied navigation foundation model to unify language understanding and video
+    generation while enabling memory backtracking through nearly 2mins of visual history. Without altering
+    the underlying architecture, we introduce History Representation, which integrates sparse visual keyframes
+    with an explicit History Representation Map to preserve long-term spatiotemporal context. To effectively
+    leverage this history, we further introduce History Utilization, a structured VQA supervision protocol
+    comprising three categories: task-stage grounding, exploration consistency, and spatiotemporal target
+    retrieval, enabling map-grounded reasoning and stable persistent long-horizon navigation. To fuel
+    this system, we establish a complete annotation pipeline for monocular RGB videos and open-source
+    a massive dataset featuring over 500 hours of high-quality real-world interactions and over 2,000
+    hours of annotated web videos. Trained mainly on the distribution of 1m height camera, Compass 1 generalizes
+    seamlessly across diverse embodiments and scenarios, ranging from indoor environments to pedestrian-dense
+    streets, spanning wheeled robot at 0.35m, quadruped dog at 0.5m, humanoid at 0.85m, and aerial drone
+    at 1.5m. Compass 1achieves a dominant overall success rate of 79.4% across open-world evaluations,
+    compared to 17.8% for the strongest baseline. It demonstrates exceptional zero-shot execution exceeding
+    90% on foundational tasks, a 250% boost in exploration, and an unparalleled leap from 0% to 58% in
+    challenging persistent history backtracking.'
+  url: https://arxiv.org/abs/2611.12087
+  pdf_url: https://arxiv.org/pdf/2611.12087v1
+  version: v1
+fetched: '2026-11-13'

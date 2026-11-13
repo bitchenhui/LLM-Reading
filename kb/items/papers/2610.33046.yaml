@@ -1,0 +1,75 @@
+id: paper:arxiv:2610.33046
+type: paper
+title: 'Organon : From Evolutionary Search to Recursive Self-Improving Agents for Scientific Discovery'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2610.33046v1
+  url: https://arxiv.org/abs/2610.33046
+  pdf_url: https://arxiv.org/pdf/2610.33046v1
+  venue: arXiv preprint
+time:
+  published: '2026-10-17'
+  collected: '2026-11-13'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: Organon 在 ALE-Bench Lite 全部10个任务上取得竞争搜索框架中的最优性能，平均留存性能较 EvoX 提升20.5%。
+  confidence: reported
+  metrics:
+  - name: mean held-out performance improvement
+    value: 20.5%
+    scope: ALE-Bench Lite，相对 EvoX 的平均提升
+  - name: 最优任务数
+    value: 10/10
+    scope: ALE-Bench Lite 全部10个任务位列第一
+  evidence: abstract（初筛，未读全文）
+- statement: 在 KernelBench 上，Organon 于四个工作负载中的三个取得最优结果，相对最强对比方法加速最高达1.67倍。
+  confidence: reported
+  metrics:
+  - name: speedup
+    value: 1.67x
+    scope: KernelBench，相对最强竞争方法的最大加速
+  - name: 最优工作负载数
+    value: 3/4
+    scope: KernelBench 四个工作负载中位列第一的数量
+  evidence: abstract（初筛，未读全文）
+- statement: Organon 在执行中可自主修订搜索策略、种群管理、诊断工具、记忆与协调机制，并能诊断修正自身自适应流程的缺陷，实现递归自改进。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 评测覆盖21项计算发现任务，横跨算法设计、GPU 核优化、数学构造与系统优化。
+  confidence: reported
+  metrics:
+  - name: 评测任务数
+    value: '21'
+    scope: 计算发现任务总数
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出可持续自改写的递归自改进智能体 Organon，在21项计算发现任务上超越现有 LLM 演化搜索框架。
+  abstract_zh: 论文指出 LLM 引导的演化搜索框架通常依赖固定搜索流程或仅允许调整预定义组件，难以适配多样的研究问题与运行时涌现的挑战。作者提出 Organon，一个面向科学发现的递归自改进智能体：单个持久智能体在执行中分析累积经验，自主修订自身的搜索策略、种群管理、诊断工具、记忆与工作者协调机制，且修订在运行时即时生效；它还能诊断并修正自身自适应流程中的缺陷，实现对自改进机制本身的递归改进。在覆盖算法设计、GPU
+    核优化、数学构造与系统优化的21项计算发现任务上评测：ALE-Bench Lite 全部10个任务取得最优，平均留存性能较 EvoX 提升20.5%；KernelBench 四个工作负载中三个最优，相对最强对比方法加速最高达1.67倍。轨迹分析显示智能体发展出任务专属搜索策略、构建新诊断能力，并能纠正或回退自身的早期修订。系统基于
+    DeepSeek Harness 与 Cordis 的时空可组合性实现，代码已开源。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 递归自改进智能体方向的核心代表作，但属非核心域，按基准仅收录摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-13'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: Organon：从演化搜索到面向科学发现的递归自改进智能体
+relations:
+- type: same_topic
+  ref: paper:arxiv:2610.24454
+  note: 同为面向科学发现的多智能体递归自改进系统（MELD）
+- type: same_topic
+  ref: paper:arxiv:2611.02833
+  note: 同属 AI 科学家/自动化科研发现方向
+- type: same_topic
+  ref: paper:arxiv:2610.03675
+  note: 同属 LLM 引导的程序演化搜索方法谱系

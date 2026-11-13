@@ -1,0 +1,58 @@
+id: paper:arxiv:2609.31509
+type: paper
+title: 'ClearGS: Reliability-Aware Gaussian Splatting from Handheld Videos'
+domain: immersive_media
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2609.31509v1
+  url: https://arxiv.org/abs/2609.31509
+  pdf_url: https://arxiv.org/pdf/2609.31509v1
+  venue: arXiv preprint
+time:
+  published: '2026-09-25'
+  collected: '2026-11-13'
+entities:
+- ref: concept:3DGS
+  role: subject
+- ref: concept:IQA
+  role: measured_by
+- ref: metric:LPIPS
+  role: measured_by
+claims:
+- statement: ClearGS在GS2E与GSOTM两个数据集上取得当前最优整体性能，CLIP-IQA与MUSIQ指标一致提升，并在大多数退化设置下降低LPIPS。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 该方法不依赖成对清晰帧监督或匹配的干净参考图像，仅用无参考修复专家与无参考感知评分完成候选选择。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 可靠性感知视图分配（RVA）以分级权重取代二值帧筛选，并结合弱化重激活机制维持轨迹覆盖。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出可靠性感知视图分配与渲染引导视频修复，从画质混杂、视角覆盖不均的手持视频重建高质量3DGS。
+  abstract_zh: ClearGS面向手持视频的3D高斯泼溅重建，针对视点覆盖不均与帧质量混杂问题，用可靠性感知视图分配（RVA）按外观可靠性、退化风险与几何效用分配分级的原始监督权重，并弱化重新激活被抑制但有用的帧以保持轨迹覆盖。由于加权无法恢复模糊/失真丢失的细节，进一步引入渲染引导的视频修复（RIVR）：以当前3DGS渲染作为位姿对齐的结构候选，冻结的无参考修复专家恢复原始视频观测，再用无参考感知评分在渲染、修复观测与高频融合候选之间选择。最后通过全轨迹修复巩固（Full-Trajectory
+    Repair Consolidation）回访已接受的修复以保留早期引入的细节。在GS2E与GSOTM上取得整体最优性能，CLIP-IQA与MUSIQ一致提升、多数退化设置下LPIPS降低，无需成对清晰监督或匹配的干净参考。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 手持视频的3DGS重建与无参考修复属于沉浸式媒体方向，与编码核心域间接相关（3DGS压缩/流式近邻工作较多）。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-13'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: ClearGS：从手持视频进行可靠性感知的高斯泼溅重建
+relations:
+- type: same_topic
+  ref: paper:arxiv:2609.14129
+  note: 同属基于高斯泼溅的视频表示/处理方向
+- type: same_topic
+  ref: paper:arxiv:2605.14629
+  note: 均利用视频信息增强高斯泼溅重建质量
+- type: same_topic
+  ref: paper:arxiv:2610.00195
+  note: 同属3DGS质量评估与感知度量应用方向
+- type: same_topic
+  ref: paper:arxiv:2608.21495
+  note: 同属退化/压缩视频的增强修复链路方向

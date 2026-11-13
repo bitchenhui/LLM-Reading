@@ -1,0 +1,72 @@
+id: paper:arxiv:2608.11645
+type: paper
+title: 'Cloak of Invisibility: Real-Time Privacy-Preserving Volumetric Video Streaming'
+domain: immersive_media
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2608.11645v2
+  url: https://arxiv.org/abs/2608.11645
+  pdf_url: https://arxiv.org/pdf/2608.11645v2
+  venue: arXiv preprint
+time:
+  published: '2026-08-12'
+  collected: '2026-11-13'
+entities:
+- ref: concept:VolumetricVideo
+  role: subject
+- ref: metric:FPS
+  role: measured_by
+- ref: metric:SSIM
+  role: measured_by
+claims:
+- statement: InViStream在相机端完成隐私净化后仅融合净化点云，可实现超过30 FPS的实时体视频流式传输，合成场景重建SSIM高于0.98。
+  confidence: reported
+  metrics:
+  - name: FPS
+    value: '>30'
+    scope: 实时流式传输，合成与真实RGB-D场景
+  - name: SSIM
+    value: '>0.98'
+    scope: 合成场景重建质量
+  evidence: abstract（初筛，未读全文）
+- statement: 隐私掩码分割精度：合成场景Dice/Recall为0.799/0.891，真实场景Dice/Recall为0.792/0.908。
+  confidence: reported
+  metrics:
+  - name: Dice
+    value: '0.799'
+    scope: 合成RGB-D场景隐私掩码
+  - name: Recall
+    value: '0.891'
+    scope: 合成RGB-D场景隐私掩码
+  - name: Dice
+    value: '0.792'
+    scope: 真实RGB-D场景隐私掩码
+  - name: Recall
+    value: '0.908'
+    scope: 真实RGB-D场景隐私掩码
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出InViStream系统，在相机端净化多视角RGB-D体视频隐私，仅融合安全点云，实现30FPS以上实时流。
+  abstract_zh: 体三维视频流中隐私是三维多视角问题：RGB-D多相机融合后，任一视角遗漏或仅部分移除的隐私内容会在重建场景中重现。为此提出源头隐私保护系统InViStream，结合目标检测与深度感知掩码，同时消除RGB与深度几何两路泄漏，并在标定多视角间一致传播公共/私有实例决策，仅融合净化后的点云。在办公室、会议室、客厅等含多公共/私有人物与物体的合成及真实RGB-D场景上评估，分割Dice/Recall达0.799/0.891（合成）与0.792/0.908（真实），合成SSIM高于0.98，实时流式传输超过30
+    FPS。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 体三维视频流的隐私保护属沉浸式媒体核心议题，但非视频/图像编码核心域，按基准只给初筛摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-13'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 隐身斗篷：实时隐私保护的体三维视频流
+relations:
+- type: same_topic
+  ref: paper:arxiv:2609.33969
+  note: 同为体三维视频（该文做GS压缩，本文做隐私流式）
+- type: same_topic
+  ref: paper:arxiv:2610.21121
+  note: 同为体三维视频实时流式传输系统
+- type: same_topic
+  ref: paper:arxiv:2607.03576
+  note: 同为体三维视频属性处理技术

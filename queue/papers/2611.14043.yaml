@@ -1,0 +1,36 @@
+id: paper:arxiv:2611.14043
+status: skipped
+score: 1
+track: audio_coding
+matched:
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: 'ESDCodec: Ultra-Low Bitrate Speech Codec with Enhanced Semantic Disentanglement and Subband
+    Decoding'
+  authors:
+  - Nan Xu
+  - Kecan Mao
+  - Xin Gu
+  - Yi Zhao
+  - Zhi Gong
+  published: '2026-11-10'
+  updated: '2026-11-10'
+  categories:
+  - eess.AS
+  abstract: Despite recent advances in neural speech codecs, achieving highfidelity speech reconstruction
+    at low bitrates remains a formidable challenge. To address this limitation, we propose ESDCodec, a
+    speech codec that integrates a thoroughly enhanced semantic quantizer and a conditioned decoder network.
+    Specifically, we employ a randomly initialized and frozen codebook, followed by a lightweight projector,
+    to encode semantic details entirely within a linear space while enhancing codebook utilization. To
+    further improve perceptual quality, we design a condition network that explicitly injects prior subband
+    knowledge into the upsampling decoder. Taking the de-quantized feature as input, this network predicts
+    subband signals, thereby providing fine-grained guidance for waveform reconstruction. Extensive experimental
+    results show that ESDCodec achieves superior reconstruction performance at an ultra-low bitrate of
+    0.85kbps. For LLM-based speech generation tasks, ESDCodec also consistently outperforms existing codec
+    models.
+  url: https://arxiv.org/abs/2611.14043
+  pdf_url: https://arxiv.org/pdf/2611.14043v1
+  version: v1
+fetched: '2026-11-13'

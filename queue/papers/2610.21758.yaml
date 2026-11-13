@@ -1,0 +1,38 @@
+id: paper:arxiv:2610.21758
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 2
+  weight: 1
+meta:
+  title: 'Beyond Source Prompts: Towards Visually Grounded AI-Generated Video Quality Assessment'
+  authors:
+  - Kehao Zhou
+  - Yixuan Li
+  - Yuxuan Jiang
+  - Fan Zhang
+  published: '2026-10-15'
+  updated: '2026-10-15'
+  categories:
+  - cs.CV
+  abstract: 'Recent advances in generative artificial intelligence have accelerated video generation technologies.
+    However, AI-generated videos (AIGVs) remain susceptible to various distortions, highlighting the need
+    for dedicated video quality assessment methods. Content semantics play an important role in AIGV quality
+    assessment, with source prompts typically used as textual references. However, these prompts may not
+    accurately reflect the generated video content, resulting in a discrepancy between the intended textual
+    description and the generated result. To address this limitation, this paper proposes VGCap, an AIGV
+    quality assessment framework guided by visually grounded captions that align better with generated
+    content. Specifically, we introduce two forms of captions: a global caption obtained by minimally
+    revising the source prompt based on multi-frame visual evidence, and prompt-independent segment captions
+    that describe localized temporal content. Together, these captions provide complementary textual evidence
+    for assessing spatial quality, temporal quality, and text-video alignment. Experimental results on
+    the LGVQ and FETV datasets show that VGCap outperforms representative baselines across all three dimensions.
+    Further ablation studies on caption sources and temporal components confirm the effectiveness of visually
+    grounded captions for each quality dimension, while highlighting the benefits of segment-level features
+    for temporal quality prediction. The source of VGCap will be available at https://github.com/lolo123-123/VGCap.'
+  url: https://arxiv.org/abs/2610.21758
+  pdf_url: https://arxiv.org/pdf/2610.21758v1
+  version: v1
+fetched: '2026-11-13'

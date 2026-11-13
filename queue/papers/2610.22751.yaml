@@ -1,0 +1,41 @@
+id: paper:arxiv:2610.22751
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'MedSTP: Preserving Subspace and Transition Evidence for Medical VQA Token Pruning'
+  authors:
+  - Mengchen Fan
+  - Qizhen Lan
+  - Xi Xiao
+  - Lin Zhao
+  - Liang He
+  - Tianyang Wang
+  - Xiaoqian Jiang
+  - Pulin Che
+  - Baocheng Geng
+  published: '2026-10-15'
+  updated: '2026-10-15'
+  categories:
+  - cs.CV
+  abstract: Medical vision-language models (VLMs) for visual question answering (VQA) often pass long
+    visual-token sequences to the language model, making visual-token pruning attractive but risky for
+    medical images, where answers may depend on localized boundary and texture evidence. We study training
+    free pre-decoding pruning and treat pruning as a subspace stable evidence preservation problem. The
+    retained tokens should remain close to the dominant visual evidence subspace induced by the full token
+    set. To this end, we propose \emph{Subspace-Transition Token Pruning} (\method{}), which estimates
+    each token's spectral support from principal component space and constructs a compact representation
+    subspace. To better reflect medical image structure, \method{} further uses a bounded token-grid transition
+    prior to promote boundary and texture sensitive tokens. We evaluate \method{} on the closed-ended
+    SLAKE and OmniMedVQA benchmarks and on RadImageNet-VQA, which provides both closed-ended and open-ended
+    evaluations, using Lingshu-7B and Qwen3-VL-8B backbones. \method{} delivers consistently strong performance
+    on both the closed-ended and open-ended RadImageNet-VQA evaluations. These results show that \method{}
+    is an effective training free pruning framework for medical domain VQA.
+  url: https://arxiv.org/abs/2610.22751
+  pdf_url: https://arxiv.org/pdf/2610.22751v1
+  version: v1
+fetched: '2026-11-13'

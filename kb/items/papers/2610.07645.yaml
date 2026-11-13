@@ -1,0 +1,56 @@
+id: paper:arxiv:2610.07645
+type: paper
+title: 'SkillPoison: Progressive Skill Poisoning via Successful Experiences'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2610.07645v1
+  url: https://arxiv.org/abs/2610.07645
+  pdf_url: https://arxiv.org/pdf/2610.07645v1
+  venue: arXiv preprint
+time:
+  published: '2026-10-06'
+  collected: '2026-11-13'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: SkillPoison在三个基准上实现95.71%的攻击成功率，且所有注入经验保持任务正确并通过验证与词法检查。
+  confidence: reported
+  metrics:
+  - name: 攻击成功率
+    value: 95.71%
+    scope: 三个技能学习基准上的平均攻击成功率
+  evidence: abstract（初筛，未读全文）
+- statement: 技能投毒可仅由通过验证的成功经验引发，无需将任何单条经验轨迹变为恶意：通过移除约束行为适用条件的上下文来塑造技能抽取器的泛化方式。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 现有技能攻击方法（注入恶意触发器、行为或虚假事实）易被检测，且注入的恶意行为往往无法积累为持久技能。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出SkillPoison框架，仅凭通过验证的成功经验即可渐进投毒自改进LLM智能体的技能库，攻击成功率达95.71%。
+  abstract_zh: 自我改进型LLM智能体常将成功经验蒸馏为可复用的持久技能，而现有技能攻击需注入恶意触发器、行为或虚假事实，易被检测且难以沉淀为持久技能。本文证明技能投毒可仅由通过验证的成功经验引发，无需任何单条轨迹变为恶意：SkillPoison先构建一组强化目标行为的成功经验，再移除约束该行为适用条件的上下文，从而塑造技能抽取器的泛化方式。注入内容本身保持任务正确并通过验证与词法检查，却在被错误套用时诱导有害行为。在三个基准上攻击成功率达95.71%。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 针对自我改进LLM智能体技能蒸馏管线的安全投毒攻击，属自我改进AI方向的安全研究，非音视频核心域，按规则仅摘要收录。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-13'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: SkillPoison：基于成功经验的渐进式技能投毒
+relations:
+- type: same_topic
+  ref: paper:arxiv:2609.39149
+  note: 同为LLM智能体技能（skill）自演化方向，本文研究其安全攻击面
+- type: same_topic
+  ref: paper:arxiv:2611.12109
+  note: 同为基于反馈的技能共演化与技能库方向
+- type: same_topic
+  ref: paper:arxiv:2610.27735
+  note: 同为自我改进过程中的安全/破坏行为研究，互补于RSI安全审计

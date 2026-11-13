@@ -1,0 +1,64 @@
+id: paper:arxiv:2610.33799
+type: paper
+title: 'MTA-Zero: Self-Improving Multimodal Deep Search via Online QA-Solver Co-training'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2610.33799v1
+  url: https://arxiv.org/abs/2610.33799
+  pdf_url: https://arxiv.org/pdf/2610.33799v1
+  venue: arXiv preprint
+time:
+  published: '2026-10-24'
+  collected: '2026-11-13'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+claims:
+- statement: MTA-Zero在六个多模态深度搜索基准上将Qwen3-VL-8B求解器的平均准确率从36.91%提升至51.58%
+  confidence: reported
+  metrics:
+  - name: 平均准确率
+    value: 51.58%
+    scope: MTA-Zero训练后的Qwen3-VL-8B求解器，六基准均值
+  - name: 平均准确率（基线）
+    value: 36.91%
+    scope: MTA-Zero训练前的Qwen3-VL-8B求解器，六基准均值
+  evidence: abstract（初筛，未读全文）
+- statement: 同一智能体工作流下，MTA-Zero训练的求解器性能与GPT-5相当
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 同一框架使Qwen3.6-27B求解器提升10.82分
+  confidence: reported
+  metrics:
+  - name: 准确率提升
+    value: '10.82'
+    scope: Qwen3.6-27B求解器经MTA-Zero训练后的提升点数
+  evidence: abstract（初筛，未读全文）
+- statement: QA生成器采用Goldilocks奖励：被全部rollout解出或全部失败的问题得零奖励，仅偏向求解器当前能力边界附近的问题；两策略用GRPO独立优化，不共享参数或梯度
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 在线QA生成器与深度搜索求解器共训练，用Goldilocks奖励实现多模态深度搜索智能体自改进
+  abstract_zh: 论文提出MTA-Zero，一个无需预计算多跳语料的在线多模态QA-求解器共训练框架，用于自改进的多模态深度搜索智能体。从图像锚定的VQA种子出发，可训练的QA生成器在线检索证据并构造经校验的多跳问题；独立的深度搜索求解器选择工具、收集证据并作答。生成器从求解器的分组rollout成功率导出Goldilocks奖励，偏向求解器当前学习边界附近的问题，两策略用GRPO独立优化、不共享参数或梯度。在六个多模态深度搜索基准上，MTA-Zero将Qwen3-VL-8B求解器的平均准确率从36.91%提升到51.58%，同一工作流下性能与GPT-5相当，并使更新的Qwen3.6-27B求解器再提升10.82分。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 自我改进AI方向论文（多模态深度搜索智能体在线QA-Solver共训练），与音视频编码无直接关联，非核心域仅摘要收录
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-13'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: MTA-Zero：通过在线QA-求解器共训练实现自改进的多模态深度搜索
+relations:
+- type: same_topic
+  ref: paper:arxiv:2610.11345
+  note: 同为数据合成/共训练驱动的LLM自进化，与本的多模态QA-Solver在线共训练同属自改进智能体共训练路线
+- type: same_topic
+  ref: paper:arxiv:2609.37968
+  note: 同为面向搜索型智能体的自改进方法，与本文深度搜索求解器自改进主题相近
+- type: same_topic
+  ref: paper:arxiv:2610.11464
+  note: 同为生成方与验证/求解方协同进化（co-evolution）的自改进智能体框架

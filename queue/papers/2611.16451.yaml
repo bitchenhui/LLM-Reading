@@ -1,0 +1,41 @@
+id: paper:arxiv:2611.16451
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 4
+  weight: 1
+meta:
+  title: 'HIFC-IQA: Train-Free Cross-Domain Image Quality Assessment via Dual-Process Cognition'
+  authors:
+  - Yu Li
+  - Zhengran Shen
+  - Puchao Zhou
+  - Yukang Ding
+  - Yachun Mi
+  - Boyuan Yang
+  - Xi Zhai
+  - Shaohui Liu
+  published: '2026-11-12'
+  updated: '2026-11-12'
+  categories:
+  - cs.CV
+  abstract: 'The gap between controlled synthetic distortions and complex real-world degradations introduces
+    a critical domain shift challenge for No-Reference Image Quality Assessment. Although Unsupervised
+    Domain Adaptation (UDA) approaches attempt to address this issue, they remain constrained by substantial
+    retraining overhead and cumulative error propagation inherent in iterative pseudo-labeling. Inspired
+    by the dual-process theory of human cognition for remarkable generalization ability, we propose Hierarchical
+    Intuitive and Fuzzy Consensus (HIFC), a completely train-free Cross-Domain IQA framework. HIFC employs
+    asymmetric perceptual decomposition to disentangle semantic content from distortion-sensitive representations.
+    The final quality score is fused through the synergy of two complementary branches: a memory consensus
+    branch that retrieves a stable Fuzzy Quality Centroid from a synthetic reference gallery, and an intuitive
+    branch that captures aesthetic polarization via zero-shot vision-language alignment. Extensive experiments
+    show that HIFC achieves state-of-the-art performance across multiple benchmarks, attaining the highest
+    average SRCC and PLCC among competing UDA methods. Most notably, in the challenging synthetic-to-authentic
+    cross-domain setting, HIFC achieves a substantial performance margin over competing methods, demonstrating
+    remarkable robustness and generalization.'
+  url: https://arxiv.org/abs/2611.16451
+  pdf_url: https://arxiv.org/pdf/2611.16451v1
+  version: v1
+fetched: '2026-11-13'

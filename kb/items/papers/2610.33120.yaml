@@ -1,0 +1,73 @@
+id: paper:arxiv:2610.33120
+type: paper
+title: 'IAR: An Interaction-Aware Approach to Post-Seek Recovery in Adaptive HLS Streaming'
+domain: streaming_delivery
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2610.33120v1
+  url: https://arxiv.org/abs/2610.33120
+  pdf_url: https://arxiv.org/pdf/2610.33120v1
+  venue: arXiv preprint
+time:
+  published: '2026-10-23'
+  collected: '2026-11-13'
+entities:
+- ref: concept:ABR
+  role: subject
+- ref: concept:HLS
+  role: builds_on
+claims:
+- statement: IAR在无缓冲跳转后对继承带宽估计打折扣以设置表示上限，保守首请求使恢复延迟相对标准hls.js降低，配对中位数达2.008秒
+  confidence: reported
+  metrics:
+  - name: 恢复延迟降低(配对中位数)
+    value: 2.008 s
+    scope: 200次配对实验（4网络×10跳转位置×5策略），相对标准hls.js
+  - name: 带宽估计折扣系数
+    value: '0.15'
+    scope: γ，跳转后对继承估计的折扣
+  evidence: abstract（初筛，未读全文）
+- statement: 恢复期维持低表示上限直至缓冲重建，可在更强网络退化下减少后续中断，但会降低早期呈现码率
+  confidence: reported
+  metrics:
+  - name: 前向缓冲重建阈值
+    value: 8 s
+    scope: 表示上限解除条件
+  evidence: abstract（初筛，未读全文）
+- statement: 将估计器重置为6个受控标量先验的实验中，IAR上限在预测阈值处由L0切换至L1、L2，恢复与恢复后时间随切换增加，呈现码率非单调且在L2最高，全程零卡顿
+  confidence: reported
+  metrics:
+  - name: 实验次数
+    value: '60'
+    scope: 固定Moderate网络配置下的标量先验重置实验
+  - name: 卡顿次数
+    value: '0'
+    scope: 上述60次重置实验全程
+  evidence: abstract（初筛，未读全文）
+- statement: 实验未显示基于继承带宽历史导出的上限相对固定低上限（Fixed-Low-Recovery）有额外优势，且重置式先验无法完整复现自然演化的EWMA历史
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 在hls.js上叠加临时层，跳转后按折扣带宽估计设置码率上限，加速恢复并减少播放中断。
+  abstract_zh: 无缓冲跳转后ABR播放器前向缓冲极少，控制器却可能保留旧带宽估计，导致首请求昂贵、后续请求易中断播放。论文提出IAR，作为hls.js ABR控制器之上的临时层：跳转后对继承估计打折扣（γ=0.15）设置表示上限，直至重建8秒前向缓冲，期间正常自适应在上限之下运行。200次配对实验（4种网络、10个跳转位置、5种策略）显示，保守首请求相对标准hls.js将恢复延迟的配对中位数降低2.008秒；恢复期维持低上限在更强退化下减少后续中断，但降低早期呈现码率。另60次固定Moderate配置实验将估计器重置为6个受控标量先验，IAR上限在预测阈值处由L0切换至L1、L2，全程零卡顿。结果未证明基于历史带宽导出的上限优于固定低上限。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: ABR/HLS无缓冲跳转后的恢复策略属流媒体传输域而非核心编码域，按基准只给summary_only
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-13'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: IAR：一种面向自适应HLS流媒体跳转后恢复的交互感知方法
+relations:
+- type: same_topic
+  ref: paper:arxiv:2610.13698
+  note: 同为ABR码率自适应方案研究（云游戏场景的兴趣感知ABR）
+- type: same_topic
+  ref: paper:arxiv:2603.13597
+  note: 同为自适应流媒体的码率阶梯/档位决策优化
+- type: same_topic
+  ref: paper:arxiv:2609.09490
+  note: 同为蜂窝网络下码率自适应与QoE的原型实验研究

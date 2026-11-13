@@ -1,0 +1,64 @@
+id: paper:arxiv:2611.16748
+type: paper
+title: 'PhysLoop: Harnessing LLMs'' Physics Awareness for Self-Improving Video Generation Models'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2611.16748v1
+  url: https://arxiv.org/abs/2611.16748
+  pdf_url: https://arxiv.org/pdf/2611.16748v1
+  venue: arXiv preprint
+time:
+  published: '2026-11-12'
+  collected: '2026-11-13'
+entities:
+- ref: concept:RSI
+  role: subject
+- ref: concept:SelfImprovement
+  role: subject
+claims:
+- statement: PhysLoop 通过在生成、选择与修正环节引导和约束 LLM，将 LLM 的物理知识蒸馏为物理一致的视频，用于视频生成模型的自我改进训练。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 框架发布 10 万条覆盖多样真实室内外场景的视频数据，并配套发布生成工具。
+  confidence: reported
+  metrics:
+  - name: 发布视频数量
+    value: 100K
+    scope: PhysLoop 发布的训练数据集，覆盖室内外多样场景
+  evidence: abstract（初筛，未读全文）
+- statement: 构建 PhysLoop-Gen 与 PhysLoop-Repair 两个评测集，分别评估可控生成与推理期局部修复能力。
+  confidence: reported
+  metrics:
+  - name: 自建评测集数量
+    value: '2'
+    scope: PhysLoop-Gen（可控生成）与 PhysLoop-Repair（局部修复）
+  evidence: abstract（初筛，未读全文）
+- statement: 物理行为在外部 Physics-IQ Verified 基准上评估；作者称该框架以有限人工干预成为视频生成模型递归自我改进的关键里程碑。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 构建统一框架在生成、筛选、修正全流程引导LLM，将物理知识蒸馏进视频数据，实现视频生成模型的自我改进与修复。
+  abstract_zh: 视频生成模型虽视觉逼真，但在物理动态与因果一致性上仍有不足，且细粒度物理监督难以获取。PhysLoop 提出统一框架，在视频生成、筛选与修正全过程中引导并约束大语言模型，将其物理知识蒸馏为物理一致的视频，支持可控训练数据构建与推理期视频修复。通过识别并修正失败案例，该框架以有限人工干预推动视频生成模型迈向递归自我改进（RSI）。作者发布了覆盖多样室内外场景的
+    10 万条视频、配套生成工具，以及 PhysLoop-Gen 与 PhysLoop-Repair 两个评测集，分别用于可控生成与局部修复评估，并在外部 Physics-IQ Verified 基准上评估物理行为。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 论文属视频生成模型的递归自我改进（RSI）研究，不涉及视频编码压缩核心技术，按规则仅做初筛摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-13'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: PhysLoop：利用大语言模型的物理感知能力实现视频生成模型的自我改进
+relations:
+- type: same_topic
+  ref: paper:arxiv:2609.37950
+  note: 同为视频领域的递归自我改进（RSI）研究，本文面向视频生成、对方面向视频理解代理
+- type: same_topic
+  ref: paper:arxiv:2610.19424
+  note: 同为视频领域结构化递归自我改进，本文针对生成模型、对方针对理解 Harness
+- type: same_topic
+  ref: paper:arxiv:2610.28201
+  note: 同属 RSI/Harness 自我改进方向，均以 Harness 约束驱动的自我改进为核心机制

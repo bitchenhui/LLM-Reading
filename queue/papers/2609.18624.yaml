@@ -1,0 +1,42 @@
+id: paper:arxiv:2609.18624
+status: reviewed
+score: 2
+track: streaming_delivery
+matched:
+- ref: concept:3DGS
+  count: 4
+  weight: 1
+- ref: concept:QUIC
+  count: 3
+  weight: 1
+meta:
+  title: 'MoQSplat: Adaptive Progressive Streaming of 3D Gaussian Splatting via MoQ'
+  authors:
+  - Emanuele Artioli
+  - Mohammadreza Ghafari
+  - Md Tariqul Islam
+  - Farzad Tashtarian
+  - Christian Rothenberg
+  - Christian Timmerer
+  published: '2026-09-16'
+  updated: '2026-09-16'
+  categories:
+  - cs.MM
+  - cs.GR
+  - cs.NI
+  abstract: 3D Gaussian Splatting (3DGS) enables photorealistic novel view synthesis, but transmitting
+    gigabyte-scale scene data remains challenging for immersive applications. Traditional HTTP Adaptive
+    Streaming over TCP introduces Head-of-Line (HOL) blocking and coarse segmenting ill-suited to fine-grained
+    3DGS delivery. We propose MoQSplat, which maps 3DGS content onto the Media over QUIC (MoQ) transport
+    hierarchy. MoQSplat partitions scenes into spatial Tracks, clusters splats into semantically coherent
+    Groups, and constructs progressive-quality Subgroups mapped to independent QUIC streams to eliminate
+    connection-level HOL blocking. Using a stateless, subscriber-driven adaptation loop, clients dynamically
+    request spatial regions and quality tiers based on six degrees of freedom (6-DoF) frustum visibility,
+    distance, and foveal alignment. We evaluate the core components on a prototype implementation, showing
+    that opacity-based pruning outperforms scale-based pruning for progressive delivery. The source code
+    is available at https://github.com/emanuele-artioli/MoQSplat.
+  url: https://arxiv.org/abs/2609.18624
+  pdf_url: https://arxiv.org/pdf/2609.18624v1
+  version: v1
+fetched: '2026-11-13'
+llm_decision: summary_only

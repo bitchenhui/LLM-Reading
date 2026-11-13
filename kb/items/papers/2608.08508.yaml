@@ -1,0 +1,52 @@
+id: paper:arxiv:2608.08508
+type: paper
+title: Towards Adaptive Super-Resolution and Quality Assessment via Test-Time Adaptation
+domain: processing_enhancement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2608.08508v1
+  url: https://arxiv.org/abs/2608.08508
+  pdf_url: https://arxiv.org/pdf/2608.08508v1
+  venue: arXiv preprint
+time:
+  published: '2026-08-09'
+  collected: '2026-11-13'
+entities:
+- ref: concept:SuperResolution
+  role: subject
+- ref: concept:IQA
+  role: uses
+claims:
+- statement: 提出基于TTA的免参考VQA框架，其自适应质量预测可在无需重训练与高质量监督的条件下为未见失真场景的VSR提供感知引导。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 构建面向屏幕内容的Transformer超分架构，能保持文字清晰度与结构保真度。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 区域感知TTA策略可选择性精修文字与非文字区域，且不依赖高分辨率真值，在多基准上提升感知质量与可读性。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 以测试时自适应统一免参考视频质量评估与视频超分，在未知失真下免重训提升感知质量与文字可读性。
+  abstract_zh: 该博士论文针对视频超分辨率（VSR）在异构设备、编解码器和网络环境导致的未知退化下泛化能力差的问题，提出以测试时自适应（TTA）为统一范式，无需重训练或高质量监督即可提升鲁棒性与感知质量。具体包括：1）提出基于TTA的免参考视频质量评估（VQA）框架，以自适应后的质量预测为未见失真下的VSR提供感知引导；2）开发面向屏幕内容超分的Transformer架构，保持文字清晰度与结构保真度；3）引入区域感知TTA策略，选择性精修文字与非文字区域且无需高分辨率真值。在多个基准上的实验表明感知质量与可读性均获一致提升，论文还展望了可跨未见域泛化的全自适应视频增强系统。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 测试时自适应驱动的视频超分与免参考VQA研究，属编码链路增强与质量评估交叉，非编码核心域，给 summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-13'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 基于测试时自适应的自适应超分辨率与质量评估研究
+relations:
+- type: same_topic
+  ref: paper:arxiv:2609.37328
+  note: 同为面向视频编码链路的内容自适应神经超分辨率后处理研究
+- type: same_topic
+  ref: paper:arxiv:2608.21495
+  note: 同为压缩视频质量增强方向，关注失真视频的感知质量恢复
+- type: same_topic
+  ref: paper:arxiv:2609.25423
+  note: 同属客观视频质量评估（VQA）方向

@@ -1,0 +1,44 @@
+id: paper:arxiv:2609.03283
+type: paper
+title: Is Semantics Enough for Speech Mean Opinion Score Prediction?
+domain: quality_assessment
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2609.03283v1
+  url: https://arxiv.org/abs/2609.03283
+  pdf_url: https://arxiv.org/pdf/2609.03283v1
+  venue: arXiv preprint
+time:
+  published: '2026-09-03'
+  collected: '2026-11-13'
+entities:
+- ref: metric:MOS
+  role: subject
+claims:
+- statement: 仅依赖偏向高层语义的SSL表征进行MOS预测不足以达到最优性能，需要同时建模细粒度声学细节。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在BVCC及多个域外数据集上，语义理解与细粒度声学建模协同的表征（如融合语义的统一神经音频编解码器）在MOS预测上具有更高的性能上限。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 系统比较SSL与神经音频编解码器表征用于语音MOS预测，发现语义与细粒度声学结合方能达到更优上限。
+  abstract_zh: 论文指出当前自动MOS预测器多依赖偏向高层语义的自监督学习（SSL）模型，可能损失对关键声学细节的捕捉能力。作者系统比较了三类表征范式：SSL模型、仅声学的神经音频编解码器（NAC）以及在重建架构中融合语义的统一NAC。在标准BVCC数据集及多个域外（OOD）数据集上的广泛基准测试表明，语义理解与细粒度声学建模协同的表征在语音质量评估上具有更高的性能上限。结论是仅有语义并不足够，稳健的MOS预测需同时关注语义内容与声学保真度。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 语音MOS预测属于音频质量评估，与核心的视频/图像编码无直接关系，按基准仅收录摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-13'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 仅凭语义对语音平均意见得分（MOS）预测是否足够？
+relations:
+- type: same_topic
+  ref: paper:arxiv:2610.04651
+  note: 同属神经音频编码表征研究，本论文以神经音频编解码器表征评估语音质量
+- type: same_topic
+  ref: paper:arxiv:2609.34524
+  note: 同属神经音频编解码器质量/性能评估方向

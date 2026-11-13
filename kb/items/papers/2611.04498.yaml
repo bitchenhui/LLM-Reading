@@ -1,0 +1,71 @@
+id: paper:arxiv:2611.04498
+type: paper
+title: '3DGS-VBench+ and 3DGSV-Assessor: A Multi-Dimensional Subjective Benchmark and a Reference-Flexible
+  Objective Model for 3D Gaussian Splatting Video Quality Assessment'
+domain: immersive_media
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2611.04498v1
+  url: https://arxiv.org/abs/2611.04498
+  pdf_url: https://arxiv.org/pdf/2611.04498v1
+  venue: arXiv preprint
+time:
+  published: '2026-11-03'
+  collected: '2026-11-13'
+entities:
+- ref: concept:3DGS
+  role: subject
+claims:
+- statement: 3DGS-VBench+ 是大规模多维 3DGS 视频质量主观基准，含 3036 个 3DGS 重建（每个配一段渲染视频），覆盖 11 个真实场景与 22 个合成场景，由 6 种代表性压缩算法在系统设计的失真等级下生成。
+  confidence: reported
+  metrics:
+  - name: 3DGS重建数量
+    value: 3,036
+    scope: 3DGS-VBench+ 基准，每个重建配一段渲染视频
+  - name: 场景数
+    value: 11+22
+    scope: 11个真实场景 + 22个合成场景
+  - name: 压缩算法数
+    value: '6'
+    scope: 代表性3DGS压缩算法
+  evidence: abstract（初筛，未读全文）
+- statement: 基准共标注 9108 个 MOS，同时覆盖整体、几何与颜色三个质量维度。
+  confidence: reported
+  metrics:
+  - name: MOS标注数量
+    value: 9,108
+    scope: 主观实验，涵盖整体/几何/颜色三维度
+  evidence: abstract（初筛，未读全文）
+- statement: 3DGSV-Assessor 单次生成即可同时输出整体/几何/颜色三维分数，通过有界门控将基于排序的参考线索融入冻结回归器，支持 RR 与 NR 两种评估模式。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 3DGSV-Assessor 在 3DGS-VBench+ 上与人类感知的相关性达到 SOTA，并对其他 NVS 基准表现出较强零样本泛化能力。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 构建含3036个3DGS视频、9108个MOS的整体/几何/颜色三维主观基准，并提出支持RR/NR的参考灵活多维质量评估模型。
+  abstract_zh: 3DGS 的训练与压缩会引入表征特有失真，且生成式压缩对几何与颜色属性采用不同参数，可能产生维度特有失真，因此需要多维度质量评估。作者构建 3DGS-VBench+ 大规模主观
+    VQA 基准：覆盖 11 个真实与 22 个合成场景的 3036 个 3DGS 重建（各配渲染视频），由 6 种代表性压缩算法在系统设计的失真等级下生成，共标注 9108 个 MOS，涵盖整体、几何与颜色质量。在此基础上提出
+    3DGSV-Assessor，一个参考灵活的大型多模态框架，单次生成即输出三个维度分数，并通过有界门控将基于排序的参考线索融入冻结回归器，同时支持降参考（RR）与无参考（NR）评估。实验显示其在
+    3DGS-VBench+ 上与人类感知相关性达到 SOTA，并对其他 NVS 基准具有较强零样本泛化能力。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 3DGS视频多维质量评估的大规模主观基准与参考灵活客观模型，属沉浸式媒体与质量评估交叉方向，非核心编码域，按规则给 summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-13'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 3DGS-VBench+ 与 3DGSV-Assessor：面向三维高斯泼溅视频质量评估的多维度主观基准与参考灵活客观模型
+relations:
+- type: same_topic
+  ref: paper:arxiv:2610.00195
+  note: 同为压缩高斯泼溅质量评估方向（GS-PQM 参数域质量指标）
+- type: same_topic
+  ref: paper:arxiv:2609.33969
+  note: 3DGS 体视频压缩研究，是本基准所评估失真的来源类方法
+- type: same_topic
+  ref: paper:arxiv:2610.36978
+  note: 同为视频质量评估（VQA）方法研究

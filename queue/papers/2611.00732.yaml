@@ -1,0 +1,32 @@
+id: paper:arxiv:2611.00732
+status: skipped
+score: 0
+track: audio_coding
+matched: []
+meta:
+  title: '8 Bits to End the Loudness War: Lossless Floating-Point Compression for Audio Streams'
+  authors:
+  - Ali Heydari
+  published: '2026-10-31'
+  updated: '2026-10-31'
+  categories:
+  - cs.SD
+  - eess.AS
+  abstract: We present a native extension to the Free Lossless Audio Codec (FLAC) providing lossless compression
+    for IEEE 754 single-precision (binary32) floating-point audio, alongside a survey and empirical benchmark
+    of existing floating-point compression methods. While professional recording hardware increasingly
+    adopts 32-bit float converters and digital audio workstations process sound exclusively in floating-point
+    math, consumer distribution remains constrained to fixed-point integer PCM. Through Dynamic Positional
+    Alignment (DPA), our implementation achieves approximately 44.1% compression ratios on natural multi-stage
+    ADC recordings--matching the storage footprint of standard 24-bit integer FLAC--and approximately
+    60.2% on complex digital workstation masters. By preserving dynamic peaks beyond 0 dBFS, the format
+    also allows listeners to undo clipping, providing a practical technical path away from the loudness
+    war with virtually no storage overhead. We do not claim to introduce a fundamentally new compression
+    paradigm; our approach is conceptually similar to the floating-point mechanism in WavPack (which remains
+    undocumented in published literature). Instead, this paper compares existing methods, provides theoretical
+    grounding for why they succeed or fail, benchmarks current codec implementations, and contributes
+    a reference implementation of a proven method within the FLAC ecosystem.
+  url: https://arxiv.org/abs/2611.00732
+  pdf_url: https://arxiv.org/pdf/2611.00732v1
+  version: v1
+fetched: '2026-11-13'

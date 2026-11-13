@@ -1,0 +1,55 @@
+id: paper:arxiv:2610.40751
+type: paper
+title: 'Safin-1.5: Safety-Native Architecture and Verifiable Reasoning for Recursive Safety Improvement'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2610.40751v1
+  url: https://arxiv.org/abs/2610.40751
+  pdf_url: https://arxiv.org/pdf/2610.40751v1
+  venue: arXiv preprint
+time:
+  published: '2026-10-29'
+  collected: '2026-11-13'
+entities:
+- ref: concept:RSI
+  role: subject
+- ref: concept:SelfImprovement
+  role: subject
+claims:
+- statement: Safin-1.5的安全架构结合持久安全状态与危险知识解耦，可将目标危险知识迁入可移除的专家模块，在几乎不影响通用能力的前提下实现危险知识移除。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 发现-评估-修复的递归安全改进闭环利用实验反馈制定修复策略，仅接受在提升安全性的同时保持通用能力并限制过度拒答的更新。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 形式化推理框架通过证明义务引导的语义桥接恢复形式表示中缺失的关系，使符号求解器能在形式化前提下构造可检验的证明。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 实验显示Safin-1.5在安全性与推理任务上超越前沿模型。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出Safin-1.5模型，以安全架构、递归安全改进闭环与形式化推理框架实现安全与能力协同递归提升。
+  abstract_zh: 递归自我改进（RSI）虽能通过 successive 更新持续提升大模型能力，但这些更新也可能引入新风险并削弱既有安全防护。作者提出'安全RSI'范式，遵循AI-45°定律，使安全能力与通用能力同步演进。Safin-1.5包含三部分：一是结合持久安全状态与危险知识解耦的安全架构，将目标危险知识迁入可移除的专家模块以最小化对通用能力的影响；二是'发现-评估-修复'递归安全改进闭环，仅接受在提升安全的同时保持通用能力并限制过度拒答的更新；三是形式化推理框架，通过证明义务引导的语义桥接，使符号求解器在形式化前提下构造可检验证明。实验结果表明Safin-1.5在安全性与推理性能上超越前沿模型。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 递归安全改进（Safety RSI）领域的核心工作，属自我改进AI大类，但与音视频技术无直接关联，按非核心域规则仅做摘要收录。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-13'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: Safin-1.5：面向递归安全改进的安全原生架构与可验证推理
+relations:
+- type: same_topic
+  ref: paper:arxiv:2611.10787
+  note: 均研究可信/安全的递归自我改进，关注改进循环中的安全保障
+- type: same_topic
+  ref: paper:arxiv:2610.38392
+  note: 均关注自我改进智能体中安全防护机制的保持与失效
+- type: same_topic
+  ref: paper:arxiv:2610.18083
+  note: 同属递归自我改进（RSI）的方法与调度研究

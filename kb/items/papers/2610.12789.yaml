@@ -1,0 +1,72 @@
+id: paper:arxiv:2610.12789
+type: paper
+title: 'EvoBelief: Falsifiable World Models for Self-Improving LLM Agents'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2610.12789v1
+  url: https://arxiv.org/abs/2610.12789
+  pdf_url: https://arxiv.org/pdf/2610.12789v1
+  venue: arXiv preprint
+time:
+  published: '2026-10-08'
+  collected: '2026-11-13'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: EvoBelief 在 ALFWorld 上（无 actor 侧转移记忆设置）优于匹配的 Frozen World Model 基线。
+  confidence: reported
+  metrics:
+  - name: 成功率提升
+    value: 23.9%
+    scope: ALFWorld，Claude Haiku 4.5，相对 Frozen World Model 基线
+  - name: 成功率提升
+    value: 31.3%
+    scope: ALFWorld，GPT-5.4，相对 Frozen World Model 基线
+  evidence: abstract（初筛，未读全文）
+- statement: 在 DiscoveryWorld 的 Reactor Lab 中，EvoBelief 能发现并验证定量规律，任务完成率远超所有被评估基线。
+  confidence: reported
+  metrics:
+  - name: 实例完成率
+    value: 83.3%
+    scope: DiscoveryWorld Reactor Lab，Normal-tier
+  - name: 实例完成率
+    value: 58.3%
+    scope: DiscoveryWorld Reactor Lab，Challenge-tier
+  - name: 基线实例完成率
+    value: 0%
+    scope: DiscoveryWorld Reactor Lab，所有被评估基线（两档均为 0%）
+  evidence: abstract（初筛，未读全文）
+- statement: EvoBelief 在 MiniGrid 上能修订过时规则，并在未预告的动力学变化后恢复性能；其自我改进通过可检验、可修正的环境知识而非模型参数更新实现（LLM 保持冻结）。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 将环境知识表示为可证伪假设的自进化世界模型，在 LLM 冻结下实现测试时的智能体自我改进。
+  abstract_zh: 论文提出 EvoBelief，一种将环境知识组织为可证伪假设的自进化世界模型：意外结果与决策相关的未知触发假设形成，后续观测和受控实验提供独立验证后方可在其支持范围内指导预测与规划，反例会使规则收窄或退役。语言模型全程保持冻结，每条规则与其证据及所影响的决策保持关联。在涵盖静态动力学、隐藏漂移和科学发现的四个基准上，EvoBelief
+    提升任务表现并跨任务复用所学规则。ALFWorld 上（无 actor 侧转移记忆）相比匹配的 Frozen World Model 基线，使用 Claude Haiku 4.5 和 GPT-5.4
+    分别提升成功率 23.9% 和 31.3%；DiscoveryWorld Reactor Lab 中完成 83.3% Normal-tier 与 58.3% Challenge-tier 实例，而所有被评估基线均为
+    0%。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 研究 LLM 智能体自我改进的可证伪世界模型/信念演化，属自我改进 AI 域，按基准只给 summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-13'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: EvoBelief：面向自改进 LLM 智能体的可证伪世界模型
+relations:
+- type: same_topic
+  ref: paper:arxiv:2610.17114
+  note: 同为世界模型与递归自我改进结合的 LLM 智能体研究（D-World）
+- type: same_topic
+  ref: paper:arxiv:2610.11794
+  note: 同为基于规则/规则本的模型化自我改进（Memento 3 反思规则本）
+- type: same_topic
+  ref: paper:arxiv:2611.10787
+  note: 同关注自我改进中知识的可检验性与可靠性保证（Trustworthy RSI）

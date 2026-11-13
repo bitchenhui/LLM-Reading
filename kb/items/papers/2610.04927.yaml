@@ -1,0 +1,57 @@
+id: paper:arxiv:2610.04927
+type: paper
+title: Assembling Insights for Agentic Machine Learning Engineering Systems
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2610.04927v1
+  url: https://arxiv.org/abs/2610.04927
+  pdf_url: https://arxiv.org/pdf/2610.04927v1
+  venue: arXiv preprint
+time:
+  published: '2026-10-04'
+  collected: '2026-11-13'
+entities:
+- ref: concept:RSI
+  role: subject
+- ref: concept:SelfImprovement
+  role: subject
+claims:
+- statement: 注入提取的洞见使智能体MLE系统的标准化私有测试分数较无洞见基线提升123.9%
+  confidence: reported
+  metrics:
+  - name: normalized private-test score 提升
+    value: 123.9%
+    scope: MLE-InsightBench 私有测试集，相对无洞见基线
+  evidence: abstract（初筛，未读全文）
+- statement: MLE-InsightBench涵盖12个领域的160个Kaggle竞赛，每域留出1个目标竞赛，148个源竞赛仅在不受目标任务影响（如非后续届次、未复用其方案）时可用，以防止数据泄漏
+  confidence: reported
+  metrics:
+  - name: 基准竞赛数
+    value: '160'
+    scope: 跨12个领域的Kaggle竞赛，每域留出1个目标竞赛
+  evidence: abstract（初筛，未读全文）
+- statement: 12条领域洞见、148条竞赛洞见与16条改进洞见三类洞见互补；最优注入方式（skill vs. playbook）因任务而异，skill整体更具成本效益；收益可跨后端LLM泛化
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 系统研究跨任务洞见注入对智能体MLE系统的影响，提出防泄漏基准MLE-InsightBench与洞见组装智能体MLE-InsightForge。
+  abstract_zh: 智能体机器学习工程（MLE）是面向复杂机器学习任务的AI4SE应用，被视为AI递归自我改进（RSI）的重要一步。针对现有系统洞见收集与注入零散、评估中洞见来源不受控而易数据泄漏的问题，作者系统研究相关MLE任务洞见对智能体MLE系统的影响。他们构建MLE-InsightBench基准，涵盖12个领域的160个Kaggle竞赛，每域留出1个目标竞赛，其余148个源竞赛仅在确认不受目标影响时才可用以防泄漏。同时开发MLE-InsightForge洞见组装智能体，从源竞赛、人类顶尖方案与writeup中构造12条领域洞见、148条竞赛洞见和16条改进洞见三类洞见，以按需技能（skill）或前置手册（playbook）两种方式注入。实验表明洞见使标准化私有测试分数较无洞见基线提升123.9%，三类洞见互补，skill整体比playbook更具成本效益，且收益可跨后端LLM泛化。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 论文明确将智能体MLE定位为递归自我改进（RSI）的一步，属自我改进AI方向而非音视频核心域，按规则仅收录摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-13'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 面向智能体机器学习工程系统的洞见组装
+relations:
+- type: same_topic
+  ref: paper:arxiv:2610.22344
+  note: 同为智能体机器学习工程（agentic MLE）系统研究，本工作聚焦跨任务洞见组装与防泄漏评测
+- type: same_topic
+  ref: paper:arxiv:2609.33867
+  note: 均涉及通过积累技能/经验实现自我改进循环（skill 注入 vs. 递归技能演化）

@@ -1,0 +1,65 @@
+id: paper:arxiv:2609.09490
+type: paper
+title: Prototyping QoE-Aware Rate Adaptation in Cellular Networks with Commercial Applications
+domain: streaming_delivery
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2609.09490v1
+  url: https://arxiv.org/abs/2609.09490
+  pdf_url: https://arxiv.org/pdf/2609.09490v1
+  venue: arXiv preprint
+time:
+  published: '2026-09-08'
+  collected: '2026-11-13'
+entities:
+- ref: concept:QoE
+  role: subject
+- ref: concept:QUIC
+  role: builds_on
+- ref: org:IETF
+  role: builds_on
+claims:
+- statement: 先前研究显示，QoE感知资源共享可在可接受质量下比速率公平分配支持更多实时交互视频并发会话（本文以此为动机）
+  confidence: reported
+  metrics:
+  - name: 并发会话容量提升
+    value: 3倍
+    scope: QoE感知资源共享 vs 速率公平分配，可接受质量下（先前研究结论）
+  evidence: abstract（初筛，未读全文）
+- statement: 本文原型仅使用现有商用能力即可实现QoE感知无线资源分配：以外部工具测量QoE，用拥塞信号做速率导向，无需修改商用实时视频应用
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 提出复合空间复杂度，将视频空间复杂度与时变频谱效率合并为单一资源需求函数，从而把基于效用的分配框架扩展到无线资源域
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 设计了带每区间限制的增量重分配算法，同时编码拥塞控制算法的速度约束与空间复杂度估计仅在当前码率附近可靠这一特性
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 给出从原型到完整QoE感知资源共享的演进路径，将IETF SCONE、CAMARA、Media over QUIC等新兴标准映射到其逐步实现的能力
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 仅用现成商用能力搭建QoE感知无线资源分配原型，经外部QoE测量与拥塞信号速率导向提升实时视频并发容量，无需改动商用应用。
+  abstract_zh: 先前研究表明，对实时交互视频采用QoE感知资源共享，相比速率公平分配可在可接受质量下支持多达三倍的并发会话。本文采取演进式路线，设计一个仅用当前实验室可组装能力实现的系统：引入复合空间复杂度，将视频空间复杂度与会话时变频谱效率融合为单一资源需求函数，把基于效用的分配框架扩展到无线资源域。针对使用速率型拥塞控制且无法测量QoE的商用实时视频流应用，采用外部工具进行QoE测量，并开发带每区间限制的增量重分配算法，以同时满足拥塞控制的速度约束和空间复杂度估计仅在当前码率附近可靠的事实。原型结合外部QoE测量与基于拥塞信号的速率导向，不要求修改商用应用，并给出向完整QoE感知资源共享的演进路径，将IETF
+    SCONE、CAMARA、Media over QUIC等新兴标准映射到其逐步解锁的能力。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 属流媒体传输域的蜂窝网络QoE感知速率自适应与资源分配研究，非核心编码域，按基准给初筛摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-13'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 在蜂窝网络中基于商业应用的QoE感知速率自适应原型
+relations:
+- type: same_topic
+  ref: paper:arxiv:2609.25423
+  note: 同属蜂窝/5G网络中视频传输质量（QoE）评估与优化主题
+- type: same_topic
+  ref: paper:arxiv:2603.13597
+  note: 同属视频流码率/速率自适应方向
+- type: same_topic
+  ref: paper:arxiv:2601.10607
+  note: 同属自适应流媒体传输的码率与资源优化主题

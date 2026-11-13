@@ -1,12 +1,15 @@
 id: paper:arxiv:2610.16226
-status: skipped
-score: 2
+status: reviewed
+score: 3
 track: streaming_delivery
 matched:
 - ref: concept:ABR
   count: 2
   weight: 1
 - ref: concept:LLM
+  count: 1
+  weight: 1
+- ref: concept:QoE
   count: 1
   weight: 1
 meta:
@@ -39,4 +42,5 @@ meta:
   url: https://arxiv.org/abs/2610.16226
   pdf_url: https://arxiv.org/pdf/2610.16226v1
   version: v1
-fetched: '2026-11-12'
+fetched: '2026-11-13'
+llm_decision: summary_only

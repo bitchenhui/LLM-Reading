@@ -1,0 +1,42 @@
+id: paper:arxiv:2610.25570
+status: skipped_by_llm
+score: 2
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+- ref: concept:TrainingFree
+  count: 1
+  weight: 1
+meta:
+  title: 'DiffGround: Semantic Difference-Guided Zero-Shot Video Question Grounding'
+  authors:
+  - Cheng-Han Lee
+  - Amir Salimi
+  - Hsiang-Wei Huang
+  - Che-Chun Su
+  - Min Sun
+  - Cheng-Hao Kuo
+  published: '2026-10-18'
+  updated: '2026-10-18'
+  categories:
+  - cs.CV
+  abstract: Video Question Grounding (VideoQG) requires both accurate question answering and precise temporal
+    localization. Existing supervised methods rely on costly temporal annotations, while existing zero-shot
+    approaches are primarily designed for Video Question Answering (VQA) and are not optimized for temporal
+    grounding. We propose DiffGround, an action-driven zero-shot framework built upon frozen Multimodal
+    Large Language Models (MLLMs). Our framework first predicts an answer-relevant action cue that transforms
+    the input question into an explicit semantic target for grounding. Action Cue converts a reasoningoriented
+    question into an action-centric retrieval query. Guided by the action cue, a Vision-Language Model
+    (VLM) efficiently selects informative keyframes for reasoning. Finally, we introduce Semantic Diff
+    Refinement, a training-free temporal refinement method that exploits semantic differences between
+    neighboring SigLIP2 embeddings to recover complete action segments from sparse predictions. Extensive
+    experiments on NExT-GQA and STAR show that DiffGround consistently outperforms existing zero-shot
+    and supervised methods, establishing a new state of the art for Video Question Grounding.
+  url: https://arxiv.org/abs/2610.25570
+  pdf_url: https://arxiv.org/pdf/2610.25570v1
+  version: v1
+fetched: '2026-11-13'
+llm_decision: skip
+llm_reason: 该文是基于冻结MLLM的视频问答时序定位（VideoQG）语义理解工作，不涉及编码、传输、质量评估或编码链路增强等音视频技术环节，不属于任何领域大类，予以剔除。

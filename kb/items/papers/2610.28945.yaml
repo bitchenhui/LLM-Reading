@@ -1,0 +1,52 @@
+id: paper:arxiv:2610.28945
+type: paper
+title: Self-Improving Agents with World Model Predictive Paths
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2610.28945v1
+  url: https://arxiv.org/abs/2610.28945
+  pdf_url: https://arxiv.org/pdf/2610.28945v1
+  venue: arXiv preprint
+time:
+  published: '2026-10-20'
+  collected: '2026-11-13'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: 提出的测试时框架在ALFWorld与ScienceWorld两个环境上、跨三个LLM骨干取得强整体性能，验证了经验引导预测控制的有效性。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 双分支经验记忆（规划器分支优化候选生成与动作选择、世界模型分支改进下一观测预测）可实现智能体的自我改进。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: MPPI式代价权重可在语言环境无显式动力学与代价函数的条件下，基于任务进展与风险评分引导候选动作比较与最终决策。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出受MPPI启发的测试时框架，用世界模型多分支预测与双分支经验记忆实现LLM智能体自我改进。
+  abstract_zh: 提出一种测试时框架，借鉴模型预测路径积分（MPPI）控制，将多分支预测分析与基于经验的适应相结合。智能体每步提出多个候选动作并用世界模型想象其结果，无需在环境中实际执行即可比较备选方案；针对语言环境缺乏显式动力学与代价的问题，按任务进展与风险对预测结果评估，并以MPPI式权重引导最终决策。双分支经验记忆支持自我改进：规划器分支细化候选生成与动作选择，世界模型分支改进下一观测预测。在ALFWorld和ScienceWorld上跨三个LLM骨干的实验验证了方法整体性能及经验引导预测控制的有效性，代码将开源。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 自我改进LLM智能体方向论文（世界模型预测+经验记忆），属自我改进AI域，非音视频核心域，按基准仅收录摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-13'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 基于世界模型预测路径的自我改进智能体
+relations:
+- type: same_topic
+  ref: paper:arxiv:2610.12789
+  note: 同属'世界模型支撑自我改进LLM智能体'方向，均用世界模型辅助决策与自我改进
+- type: same_topic
+  ref: paper:arxiv:2610.17114
+  note: 均结合世界模型与自我改进回路，探索显式世界建模对智能体改进的作用
+- type: same_topic
+  ref: paper:arxiv:2610.24453
+  note: 均依赖积累的交互经验/记忆实现测试时智能体自我进化，无需额外训练

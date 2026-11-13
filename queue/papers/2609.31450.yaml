@@ -1,0 +1,37 @@
+id: paper:arxiv:2609.31450
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'From Reward Signal to Visual Utility: A Controlled Audit of Medical VLM Post-Training'
+  authors:
+  - Wang Jingxin
+  published: '2026-09-25'
+  updated: '2026-09-25'
+  categories:
+  - cs.CV
+  - cs.AI
+  abstract: Medical vision-language model (VLM) post-training is commonly evaluated through answer accuracy.
+    We examine how changes in accuracy and training objectives relate to image-conditioned decisions in
+    a controlled Qwen2.5-VL-3B study on PMC-VQA. We compare supervised fine-tuning (SFT) with low-rank
+    adaptation (LoRA) restricted to the language model, expanded multimodal adaptation scopes, standard
+    answer-only Group Relative Policy Optimization (GRPO), and a counterfactual evidence objective. On
+    2,000 clean-test questions, language model LoRA SFT changes correct-image accuracy by +1.10 percentage
+    points (95% paired bootstrap CI:-0.85 to +3.05), while visual-benefit events decrease by 2.40 points
+    and image sensitivity decreases by 5.60 points. Paired records reveal 155 acquired and 203 lost visual-benefit
+    events. Broader adaptation yields lower correct-image accuracy than language-model LoRA SFT. Standard
+    GRPO produces mixed-reward groups and parameter updates, with an uncertain clean test accuracy change.
+    A generation audit reveals that canonical option scores can follow a different token path from generated
+    answers. With scores taken along the greedy generation path, the evidence target improves on the training
+    set; its gains over standard GRPO remain inconsistent on validation data at matched training doses.
+    Sample-level analyses trace how evidence scores, decision margins, and generated answers change during
+    post-training. This empirical and measurement audit identifies gaps between optimization activity,
+    target acquisition, and useful held-out visual behavior.
+  url: https://arxiv.org/abs/2609.31450
+  pdf_url: https://arxiv.org/pdf/2609.31450v1
+  version: v1
+fetched: '2026-11-13'

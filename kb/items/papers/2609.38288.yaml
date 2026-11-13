@@ -1,0 +1,73 @@
+id: paper:arxiv:2609.38288
+type: paper
+title: 'AREX-2: Advancing Self-Improving Agents through Long-Horizon Reflective Tasks'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2609.38288v1
+  url: https://arxiv.org/abs/2609.38288
+  pdf_url: https://arxiv.org/pdf/2609.38288v1
+  venue: arXiv preprint
+time:
+  published: '2026-09-29'
+  collected: '2026-11-13'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: builds_on
+claims:
+- statement: 基于Qwen3.8-27B构建的AREX-2智能体在机器学习工程与算法编程基准上取得强结果
+  confidence: reported
+  metrics:
+  - name: MLE-bench Lite
+    value: '81.8'
+    scope: 基于Qwen3.8-27B的AREX-2智能体
+  - name: Frontier-CS
+    value: '70.7'
+    scope: 基于Qwen3.8-27B的AREX-2智能体
+  evidence: abstract（初筛，未读全文）
+- statement: 在机器学习与编程任务上学到的反思与长程执行能力可迁移至深度研究类任务
+  confidence: reported
+  metrics:
+  - name: BrowseComp
+    value: '84.0'
+    scope: 深度研究迁移评测
+  - name: HLE
+    value: '52.6'
+    scope: 深度研究迁移评测
+  - name: GAIA
+    value: '92.2'
+    scope: 深度研究迁移评测
+  - name: DeepSearchQA
+    value: '93.8'
+    scope: 深度研究迁移评测
+  evidence: abstract（初筛，未读全文）
+- statement: 自我改进效果随测试时迭代轮数预算的增加而持续提升
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 用机器学习与算法编程任务合成可验证的长程反思轨迹，训练出可跨域测试时自我改进的LLM智能体。
+  abstract_zh: AREX-2将LLM智能体的自我改进定义为测试时迭代优化解的能力，该能力依赖反思（给出更优解）与长程执行（多轮迭代持续有效）两个互补维度。作者假设这两种能力与领域无关、可在监督信号充分的场景中习得，因此从具备可验证反馈的机器学习与算法编程任务中合成长程改进轨迹。基于Qwen3.8-27B训练的智能体在MLE-bench
+    Lite上达81.8、Frontier-CS上达70.7。所学能力可迁移至深度研究任务，在BrowseComp、HLE、GAIA、DeepSearchQA上分别取得84.0、52.6、92.2、93.8，且随迭代轮数预算增加持续提升。结果表明长程反思数据是通向自我改进智能体的有效路径。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: LLM智能体自我改进方向的代表作（反思+长程执行），非音视频核心域，按收录基准仅摘要级收录。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-13'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: AREX-2：以长程反思任务推进自我改进智能体
+relations:
+- type: same_topic
+  ref: paper:arxiv:2609.37968
+  note: 同属自我改进智能体方向，均研究智能体通过迭代反思提升自身能力
+- type: same_topic
+  ref: paper:arxiv:2610.11794
+  note: 同属基于反思机制（反思轨迹/规则）的自我改进研究
+- type: same_topic
+  ref: paper:arxiv:2610.18083
+  note: 同属自我改进（RSI）智能体的能力训练与扩展研究

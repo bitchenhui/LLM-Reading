@@ -1,0 +1,41 @@
+id: paper:arxiv:2610.07067
+status: reviewed
+score: 2
+track: quality_assessment
+matched:
+- ref: metric:SSIM
+  count: 3
+  weight: 1
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+meta:
+  title: Decomposition-Guided Curvelet Thresholding for Sharp-to-Soft CT Kernel Conversion
+  authors:
+  - Mahmoud Nasr
+  - Jan K. Argasinski
+  - Krzysztof Brzostowski
+  - Adam Piorkowski
+  published: '2026-10-05'
+  updated: '2026-10-05'
+  categories:
+  - cs.CV
+  abstract: 'Image denoising is a crucial task in image processing, focused on improving image quality
+    by minimizing noise while maintaining essential structural elements. This study presents a hybrid
+    denoising framework that combines several decomposition techniques, including empirical mode decomposition
+    (EMD), variational mode decomposition (VMD), multichannel EMD (MEMD), and bidimensional EMD (BEMD),
+    with curvelet transform thresholding. Each decomposition mode undergoes processing through both soft
+    and hard thresholding, and the denoised modes are combined to rebuild the final image. Comprehensive
+    evaluations of standard CT image datasets reconstructed with various kernels (B50, B46, B41, B36)
+    reveal substantial enhancements in denoising efficacy. VMD consistently achieves the highest peak
+    signal-to-noise ratio (PSNR) and structural similarity index (SSIM), signifying exceptional noise
+    reduction and feature preservation. The study analyses the trade-offs between soft and hard thresholding:
+    soft thresholding maintains intricate visual details, whilst harsh thresholding provides enhanced
+    noise reduction. The suggested method surpasses traditional techniques in both reference and non-reference
+    quality criteria, indicating its potential for broader application in medical imaging and future incorporation
+    with adaptive thresholding algorithms.'
+  url: https://arxiv.org/abs/2610.07067
+  pdf_url: https://arxiv.org/pdf/2610.07067v1
+  version: v1
+fetched: '2026-11-13'
+llm_decision: summary_only

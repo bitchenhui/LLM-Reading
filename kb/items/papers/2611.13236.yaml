@@ -1,0 +1,68 @@
+id: paper:arxiv:2611.13236
+type: paper
+title: 'NCP: Verifier-Guided Optimization of Weight-Space Control Policies'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2611.13236v1
+  url: https://arxiv.org/abs/2611.13236
+  pdf_url: https://arxiv.org/pdf/2611.13236v1
+  venue: arXiv preprint
+time:
+  published: '2026-11-09'
+  collected: '2026-11-13'
+entities:
+- ref: concept:RSI
+  role: subject
+- ref: concept:SelfImprovement
+  role: subject
+claims:
+- statement: NCP 某投影类候选干预将验证集 token 重复率从 0.4133 降至 0.2191，同时困惑度仅变化 -0.0574%，但未通过准入门槛。
+  confidence: reported
+  metrics:
+  - name: 验证token重复率
+    value: '0.2191'
+    scope: SmolLM-135M-Instruct，NCP投影干预后（基线为0.4133）
+  - name: 困惑度变化
+    value: -0.0574%
+    scope: 同一投影干预相对基线模型
+  evidence: abstract（初筛，未读全文）
+- statement: 三个候选权重空间干预规则均产生零新增正确精确答案，准入门槛将其全部归档并保留原始活跃策略。
+  confidence: reported
+  metrics:
+  - name: 新增正确精确答案数
+    value: '0'
+    scope: 三个候选规则在独立任务样例上评估
+  evidence: abstract（初筛，未读全文）
+- statement: NCP 将模型推理数据平面与控制策略解耦，评估状态仅由活跃规则与已评估候选档案构成，基础模型参数在每次请求后恢复。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 新进程重复运行与已保存策略表的恢复运行均可复现测量结果，表明框架具备可复现的状态转移能力。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出闭环神经控制平面NCP，验证引导地合成与准入权重空间干预规则，探索控制策略层面的递归自我改进。
+  abstract_zh: 提出神经控制平面（NCP），将预训练模型的推理数据平面与选择临时参数干预的控制策略分离，通过观测模型执行、合成候选干预规则、验证评估并维护版本化策略表；W-ISA 提供事务执行与参数恢复，每次请求后恢复基础模型参数。在本地
+    SmolLM-135M-Instruct 实验中，NCP 从开发遥测生成三个候选规则，并在独立任务样例及 4,095 目标的 WikiText-2 切片上评估。其中一个投影将验证 token 重复率从
+    0.4133 降至 0.2191，困惑度变化 -0.0574%；但因所有候选零新增正确精确答案，配置的准入门槛将三个候选全部归档并保留原始策略。该框架为控制策略层面的递归自我改进研究提供了可执行平台。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 论文研究LLM权重空间控制策略的验证引导自我改进，属自我改进AI域而非核心音视频编码域，按规则仅摘要收录。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-13'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: NCP：验证器引导的权重空间控制策略优化
+relations:
+- type: same_topic
+  ref: paper:arxiv:2611.07319
+  note: WeightLoop 同样研究带实验反馈的权重空间干预/编程，与 NCP 的权重空间控制策略闭环高度同题
+- type: same_topic
+  ref: paper:arxiv:2610.10629
+  note: 同样研究自我进化中带度量准入门槛（admission gate）的策略保留机制
+- type: same_topic
+  ref: paper:arxiv:2609.33867
+  note: 同属递归自我改进（RSI）方法研究，均探索模型/策略的自我改进回路

@@ -1,0 +1,41 @@
+id: paper:arxiv:2608.10020
+status: skipped
+score: 1
+track: streaming_delivery
+matched:
+- ref: concept:QUIC
+  count: 3
+  weight: 1
+meta:
+  title: 'MD2G-Cast: Relay-Coordinated Multicast for Scalable Volumetric Streaming over MoQ'
+  authors:
+  - Ruonan Chai
+  - Yisu Wang
+  - Zili Meng
+  - Dirk Kutscher
+  published: '2026-08-09'
+  updated: '2026-08-09'
+  categories:
+  - eess.IV
+  - cs.MM
+  abstract: Volumetric streaming remains difficult to scale because receivers with overlapping fields
+    of view are often served independently, causing repeated transmission of shared content. We present
+    MD2G-Cast, a relay-coordinated multicast framework over Media over QUIC with an application-aware
+    control layer for scalable multi-user volumetric delivery. MD2G-Cast jointly uses viewing overlap,
+    receiver capability, and bandwidth conditions to form reusable multicast groups, share common Base
+    content, and selectively admit Enhanced delivery. We formulate grouping and Enhanced admission as
+    a sequential control problem, realize it with Proximal Policy Optimization (PPO), and train a compact
+    relay model with teacher guidance for Enhanced admission. We implement MD2G-Cast with real MoQ processes
+    and evaluate it with real access and 6DoF viewing traces for up to 100 users. At 20 and 100 users,
+    MD2G-Cast keeps the receiver-side $P_{99}$ delivery interval below 40 ms across all seven access profiles,
+    while Rolling reaches the 500 ms reporting cap in most cases. Across the evaluated user scales, MD2G-Cast
+    achieves the highest or tied-highest mean system utility under homogeneous access and the highest
+    mean utility under heterogeneous access, while reducing aggregate link load by about 27% relative
+    to Clustering at 100 users. A matched relay-control ablation separates the control structure from
+    its optimizer, showing that random feasible actions reduce utility while deterministic control remains
+    competitive with PPO. Together, the results support relay coordination and selective Enhanced admission,
+    rather than a particular policy optimizer, as the central design contribution.
+  url: https://arxiv.org/abs/2608.10020
+  pdf_url: https://arxiv.org/pdf/2608.10020v1
+  version: v1
+fetched: '2026-11-13'

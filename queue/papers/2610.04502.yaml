@@ -1,0 +1,40 @@
+id: paper:arxiv:2610.04502
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: Localization Lens for Improving Medical Vision-Language Models
+  authors:
+  - Hasan Farooq
+  - Murtaza Taj
+  - Mehwish Nasim
+  - Arif Mahmood
+  published: '2026-10-03'
+  updated: '2026-10-03'
+  categories:
+  - cs.CV
+  - cs.AI
+  abstract: 'Medical Vision-Language Models (Med-VLMs) have demonstrated strong capabilities in clinical
+    tasks. However, they often struggle to understand anatomical structures and spatial positioning, which
+    are crucial for medical reasoning. To address this, we propose a localization-aware enhancement to
+    the Med-VLM pipeline, introducing improvements at three levels: data,architecture, and alignment.
+    First, we introduce localization lens, a set of expert-validated representations that provide richer
+    anatomical and positional context. However, as these representations increase input complexity, we
+    integrate pixel shuffle within the model architecture to filter and refine representations, enhancing
+    spatial information processing while preserving anatomical continuity. Lastly, to effectively align
+    the localization lens representations with textual features, we incorporate decoupled contrastive
+    loss (DCL) alongside the standard loss function. This ensures better feature discrimination and robustness,
+    particularly in data limited medical settings. Through extensive evaluations on medical visual question
+    answering (Med-VQA) datasets, we show that our methodology improves localization-driven performance
+    across different Med-VLM architectures. Our analysis of localization-based questions further reveals
+    that improvements in anatomy and spatial reasoning directly enhance the overall accuracy of Med-VQA
+    upto 6.2%. The proposed approach is model-agnostic and can be seamlessly integrated into existing
+    Med-VLM pipelines. The dataset, code, and trained models will be made publicly available at https://github.com/CVLABLUMS/localizationlens.'
+  url: https://arxiv.org/abs/2610.04502
+  pdf_url: https://arxiv.org/pdf/2610.04502v1
+  version: v1
+fetched: '2026-11-13'

@@ -1,0 +1,77 @@
+id: paper:arxiv:2609.39649
+type: paper
+title: 'FANVIDv2: Evaluating Video Super-Resolution by Face and Licence-Plate Recognition Under Compound
+  Degradation'
+domain: processing_enhancement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2609.39649v1
+  url: https://arxiv.org/abs/2609.39649
+  pdf_url: https://arxiv.org/pdf/2609.39649v1
+  venue: arXiv preprint
+time:
+  published: '2026-09-30'
+  collected: '2026-11-13'
+entities:
+- ref: concept:SuperResolution
+  role: subject
+- ref: metric:PSNR
+  role: compared_against
+claims:
+- statement: 复合退化数据上，2.3M 参数的 RCDM 超分基线使 FaceRecBox 从 0.6864 提升至 0.7222。
+  confidence: reported
+  metrics:
+  - name: FaceRecBox
+    value: '0.7222'
+    scope: RCDM 超分后，48 人基准
+  - name: FaceRecBox
+    value: '0.6864'
+    scope: 无超分基线，48 人基准
+  evidence: abstract（初筛，未读全文）
+- statement: RCDM 使匹配人脸的身份识别准确率从 84.35% 提升至 86.93%。
+  confidence: reported
+  metrics:
+  - name: identity accuracy
+    value: 86.93%
+    scope: RCDM 超分后匹配人脸
+  - name: identity accuracy
+    value: 84.35%
+    scope: 无超分基线匹配人脸
+  evidence: abstract（初筛，未读全文）
+- statement: RCDM 将 TextRecBox 从 0.3088 提升至 0.3667，残差图门控变体 RCDM-RMGF 进一步达到 0.3801。
+  confidence: reported
+  metrics:
+  - name: TextRecBox
+    value: '0.3667'
+    scope: RCDM 超分后，360 车牌号基准
+  - name: TextRecBox
+    value: '0.3088'
+    scope: 无超分基线
+  - name: TextRecBox
+    value: '0.3801'
+    scope: RCDM-RMGF 变体
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出以检测框内人脸/车牌识别得分评估视频超分辨率的基准 FANVIDv2，替代传统 PSNR/SSIM 评价。
+  abstract_zh: 该基准提供 320×180 低分辨率视频及对应高分辨率参考，覆盖 48 位公众人物（各一张 HR 画廊图）与 375 段车牌片段（360 个不同车牌号），低分辨率视频由随机化复合退化（模糊、缩放抖动、传感器噪声、JPEG
+    压缩、最终下采样）生成而非仅双三次下采样。提出两个识别型指标：FaceRecBox 仅当人脸被定位且正确识别时计分，TextRecBox 按定位质量加权的归一化编辑距离评车牌转写。以 2.3M 参数的
+    RCDM 超分基线验证，FaceRecBox 从 0.6864 升至 0.7222，匹配人脸身份准确率从 84.35% 升至 86.93%，TextRecBox 从 0.3088 升至 0.3667；残差图门控变体
+    RCDM-RMGF 在车牌上达 0.3801。作者发布标注、元数据、退化脚本与评估代码。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 视频超分辨率评估基准，属编码链路处理与增强（超分）域，但以监控识别为导向、未直接面向编解码器，按非核心域给 summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-13'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: FANVIDv2：复合退化下基于人脸与车牌识别的视频超分辨率评估
+relations:
+- type: same_topic
+  ref: paper:arxiv:2609.37328
+  note: 同为视频超分辨率，CASR 面向 VVC 后滤波超分，本文为超分的识别型评估基准
+- type: same_topic
+  ref: paper:arxiv:2608.08508
+  note: 同属超分辨率与质量评估交叉方向

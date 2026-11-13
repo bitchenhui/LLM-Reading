@@ -1,0 +1,41 @@
+id: paper:arxiv:2611.13687
+status: skipped
+score: 0
+track: audio_coding
+matched: []
+meta:
+  title: 'AURA: Auditory Spatial Intelligence via a Unified Representation from a General-Audio Encoder
+    through Complete Alignment'
+  authors:
+  - Boyan Han
+  - Xiaoyan Wang
+  - Zhe Sun
+  - Ziqi Wang
+  - Yujun Cai
+  - Hongli Cao
+  - Yiwei Wang
+  - Ming-Hsuan Yang
+  - Liang An
+  published: '2026-11-10'
+  updated: '2026-11-10'
+  categories:
+  - cs.SD
+  - cs.AI
+  abstract: 'Answering spatial questions about multi-source scenes requires a model both to identify each
+    sound and to locate it. Existing spatial audio-language models obtain spatial information from a dedicated
+    encoder, which separates spatial and semantic processing into distinct feature spaces. We study whether
+    a general-audio codec trained without spatial supervision can serve both purposes. A controlled layer-wise
+    analysis shows that the frozen codec retains spatial information, with lateral cues carried by the
+    difference between the two ear channels. This information, however, is not readily accessible: in
+    dual-source scenes, a model trained on these features predicts left/right at chance and, on the remaining
+    axes, assigns the detected direction to the queried and the non-queried source equally often. We attribute
+    this failure to an audio--text information asymmetry, in which the audio contains both sources while
+    the answer describes only the queried one. A controlled $2\times2$ experiment shows that either completing
+    the scene description or exposing the inter-channel difference lifts left/right accuracy above chance,
+    whereas binding directions to the queried source requires both. Building on these findings, AURA keeps
+    the codec and the language model frozen and exceeds the strongest dedicated system on SpatialSoundQA
+    by 10.31 points in dual-source direction accuracy, with about 40\% of its trainable parameters.'
+  url: https://arxiv.org/abs/2611.13687
+  pdf_url: https://arxiv.org/pdf/2611.13687v1
+  version: v1
+fetched: '2026-11-13'

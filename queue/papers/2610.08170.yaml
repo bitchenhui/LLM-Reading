@@ -1,0 +1,38 @@
+id: paper:arxiv:2610.08170
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'Visual Orchestration Tax in Agentic VLM Pipelines: Auditing and Certifying Visual Evidence Reuse'
+  authors:
+  - Lingteng Zeng
+  published: '2026-10-06'
+  updated: '2026-10-06'
+  categories:
+  - cs.MA
+  - cs.CV
+  abstract: 'Agentic VLM pipelines increasingly pass the same static visual evidence through multiple
+    specialist agents and tools. This design creates an orchestration-level redundancy mode: semantically
+    unchanged images are repeatedly reconstructed as image-conditioned requests at the VLM API boundary.
+    We call this phenomenon visual orchestration tax and develop a measurement-to-certification framework
+    for visual evidence reuse in agentic VLM pipelines. The audit side defines $\mathrm{M1}_{\mathrm{trace}}$
+    to count raw visual-evidence touches and M2 to measure structural touch redundancy, with query-level
+    distributions, bootstrap confidence intervals, and paired quality tests. Across SeeingEye and MAMMQA
+    on chart, document, general-VQA, and multi-modal-QA tasks, audits reveal 66.8-75.6% visual-evidence
+    touch redundancy, and every audited query exceeds the predefined gate. The certification side introduces
+    SharedVisCache, a contract-aware evidence reuse hook keyed by image content, preprocessing fingerprint,
+    and encoder assumptions. On SeeingEye, contract validation certifies 75.0-75.5% repeated touches as
+    reusable while preserving 350/350 output strings and $Δ\mathrm{M5}{=}0$. At the physical layer, certified
+    hits reduce $F_{\mathrm{vision}}$ from 800 to 200 in ChartQA-200 trace replay and from 200 to 50 inside
+    live SeeingEye translator-stage physical integration, preserving 800/800 replay strings and 200/200
+    integrated call outputs. The results position visual reuse as a measurable, behavior-preserving property
+    of agent orchestration and define an agent-layer contract that makes backend prefix or token reuse
+    semantically interpretable.'
+  url: https://arxiv.org/abs/2610.08170
+  pdf_url: https://arxiv.org/pdf/2610.08170v1
+  version: v1
+fetched: '2026-11-13'

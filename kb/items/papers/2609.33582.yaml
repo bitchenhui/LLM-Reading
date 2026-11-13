@@ -1,0 +1,73 @@
+id: paper:arxiv:2609.33582
+type: paper
+title: 'Fill2SR: Repurposing Inpainting Diffusion Transformers for Real-World Super-Resolution'
+domain: processing_enhancement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2609.33582v1
+  url: https://arxiv.org/abs/2609.33582
+  pdf_url: https://arxiv.org/pdf/2609.33582v1
+  venue: arXiv preprint
+time:
+  published: '2026-09-27'
+  collected: '2026-11-13'
+entities:
+- ref: concept:SuperResolution
+  role: subject
+- ref: metric:LPIPS
+  role: measured_by
+- ref: concept:IQA
+  role: uses
+claims:
+- statement: 将低质量观测写入修复模型原生掩码图像槽位（IIEA），即可在无ControlNet式分支或空间条件token的情况下将修复扩散Transformer用于超分，仅需LoRA微调。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 基础模型（含IIEA）在DIV2K与LSDIR合成基准上取得最佳LPIPS；加入RCDT后以小幅LPIPS下降换取RealLQ250与RealPhoto60上持续更强的无参考质量。
+  confidence: reported
+  metrics:
+  - name: LPIPS
+    value: 最佳
+    scope: DIV2K与LSDIR合成基准，基础模型（含IIEA）
+  evidence: abstract（初筛，未读全文）
+- statement: 支持512/1024/2048混合分辨率训练与输出（至QHD），跨分辨率性能稳定且内存可预测。
+  confidence: reported
+  metrics:
+  - name: 输出分辨率
+    value: 512/1024/2048
+    scope: 混合分辨率训练至QHD下的稳定输出
+  evidence: abstract（初筛，未读全文）
+- statement: 1536²推理可在单张32GB GPU上运行，并可通过分块修复扩展到多兆像素输出。
+  confidence: reported
+  metrics:
+  - name: 推理分辨率
+    value: 1536²
+    scope: 单张32GB GPU
+  - name: 显存
+    value: 32GB
+    scope: 1536²单卡推理所需
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 将掩码修复扩散Transformer复用为真实图像超分，无需额外空间分支，支持至QHD的混合分辨率与可预测显存。
+  abstract_zh: 论文提出Fill2SR，将掩码图像修复扩散Transformer重新用于真实世界图像超分辨率，省去ControlNet式分支与空间条件token。其IIEA适配器把低质量观测写入原生掩码图像槽位，在整图掩码下将修复任务转化为以退化为条件的逆向整流流，仅用LoRA微调。另提出RCDT离线流水线，从非配对真实图像蒸馏退化描述子，并用冻结开源模型迁移到干净目标图像。模型支持混合分辨率训练至QHD，在512/1024/2048输出上性能稳定：基础模型在DIV2K与LSDIR上取得最佳LPIPS，加入RCDT后以小幅LPIPS下降换取RealLQ250与RealPhoto60上更强的无参考质量。1536²推理可在单张32GB
+    GPU上运行，并可通过分块修复扩展到多兆像素输出。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 真实图像超分辨率属于编码链路处理与增强域，非核心编码域，按规则给摘要级收录。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-13'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: Fill2SR：将图像修复扩散Transformer改造用于真实世界超分辨率
+relations:
+- type: same_topic
+  ref: paper:arxiv:2607.18856
+  note: 同为图像超分辨率方法
+- type: same_topic
+  ref: paper:arxiv:2608.08508
+  note: 超分辨率与质量评估结合的研究线
+- type: same_topic
+  ref: paper:arxiv:2609.37328
+  note: 超分辨率作为视频编码后滤波的应用场景

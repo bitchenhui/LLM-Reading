@@ -1,0 +1,57 @@
+id: paper:arxiv:2610.30042
+type: paper
+title: 'HGM-Dual: Lineage-Aware Guided Agent Harness Optimization for Long-Horizon Planning'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2610.30042v1
+  url: https://arxiv.org/abs/2610.30042
+  pdf_url: https://arxiv.org/pdf/2610.30042v1
+  venue: arXiv preprint
+time:
+  published: '2026-10-21'
+  collected: '2026-11-13'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:RSI
+  role: builds_on
+claims:
+- statement: HGM-Dual在规划任务的案例准确率上相对最强基线取得最高14.45%的相对提升。
+  confidence: reported
+  metrics:
+  - name: 案例准确率相对提升
+    value: 14.45%
+    scope: 相对最强基线，规划任务case accuracy
+  evidence: abstract（初筛，未读全文）
+- statement: HGM-Dual以2-4倍更少的评估预算匹配HGM变体的最终性能。
+  confidence: reported
+  metrics:
+  - name: 评估预算缩减
+    value: 2x-4x
+    scope: 最终性能与HGM变体持平条件下所需评估次数
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出HGM-Dual，以谱系感知上下文与误差条件双路径子代生成，实现预算高效的规划智能体框架进化。
+  abstract_zh: 框架优化通过改进智能体的提示、工具与工作流来增强基于冻结或闭源LLM的智能体，代表性方法Darwin-Godel Machine与Huxley-Godel Machine依赖递归自我改进，且主要面向编码任务。规划任务中改进智能体所需能力与被改进能力不对齐，开放式自我修改会反复探索无效改动并消耗大量评估预算。HGM-Dual将智能体进化表示为谱系感知上下文，记录每个祖先的改动、行为改进/退化及无效修改，为编辑器提供显式的编辑-结果归因。同时引入误差条件双路径子代生成：对每个选中父代，生成保留开放式探索的通用子代，以及针对最可能引发最高优先级约束违例组件的专用子代。实验显示其案例准确率相对最强基线最高提升14.45%，并以2-4倍更少的评估预算匹配HGM变体的最终性能。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 属被追踪的递归自我改进（RSI）研究线，但面向规划智能体的框架优化，与音视频技术无直接关联。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-13'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: HGM-Dual：面向长时程规划的谱系感知引导式智能体框架优化
+relations:
+- type: same_topic
+  ref: paper:arxiv:2610.19424
+  note: 同为递归自我改进的智能体框架（harness）优化，该文面向视频理解，本文面向规划任务
+- type: same_topic
+  ref: paper:arxiv:2609.37328
+  note: 同属基于harness进化的递归自我改进（RSI）研究线
+- type: same_topic
+  ref: paper:arxiv:2610.28201
+  note: 均针对agent harness的递归自我改进方法，关注改进过程的效率与结构化引导

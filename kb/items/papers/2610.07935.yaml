@@ -1,0 +1,60 @@
+id: paper:arxiv:2610.07935
+type: paper
+title: 'SIGMA: Self-Improving Alignment Generalization from a Model Spec'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2610.07935v1
+  url: https://arxiv.org/abs/2610.07935
+  pdf_url: https://arxiv.org/pdf/2610.07935v1
+  venue: arXiv preprint
+time:
+  published: '2026-10-06'
+  collected: '2026-11-13'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: SIGMA虽仅在单轮对话数据上训练，却能将安全对齐泛化到多轮智能体环境，显著降低有害行为。
+  confidence: reported
+  metrics:
+  - name: AgentHarm harmfulness
+    value: 22.6→14.8
+    scope: 多轮智能体环境，SIGMA训练前后
+  - name: Agentic Misalignment
+    value: 79.1→3.8
+    scope: 多轮智能体环境，SIGMA训练前后
+  evidence: abstract（初筛，未读全文）
+- statement: SIGMA在安全对齐上优于Deliberative Alignment和Constitutional AI基线，同时不损失通用能力。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 有效性关键因素为：兼顾无害性与有用性的Model Spec、安全思辨用的测试时推理、以及任务设计智能体生成的高质量rubric。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出SIGMA流水线，让LLM仅凭Model Spec自生成对齐任务并自我训练，安全对齐泛化至多轮智能体场景。
+  abstract_zh: 针对能力自改进快于安全对齐带来的风险，论文提出SIGMA——一条实现安全对齐自改进的数据生成与训练流水线，仅需一份描述期望行为的Model Spec。SIGMA首先进行规范引导的任务合成，让候选模型作为任务设计智能体生成多样化的对齐两难场景并转化为压力测试任务；随后通过监督微调与基于rubric的强化学习进行自我评判的对齐训练，模型自身充当奖励模型。尽管仅在单轮对话数据上训练，SIGMA在多轮智能体环境中显著提升安全对齐（AgentHarm有害性从22.6降至14.8，Agentic
+    Misalignment从79.1降至3.8），优于Deliberative Alignment与Constitutional AI基线并保留通用能力。分析表明，兼顾无害性与有用性的Model Spec、面向安全思辨的测试时推理、以及任务智能体产出的高质量rubric是有效自改进的关键。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 属于自我改进AI域的安全对齐自改进工作（LLM以自身作为设计者与奖励模型），与音视频核心域无关，按规则仅摘要收录。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-13'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: SIGMA：基于模型规范的自改进对齐泛化
+relations:
+- type: same_topic
+  ref: paper:arxiv:2610.27735
+  note: 同属自我改进AI域的安全议题：SIGMA做对齐自改进，RSI Control审查自改进过程中的破坏风险
+- type: same_topic
+  ref: paper:arxiv:2611.10787
+  note: 同属自我改进AI域且关注可信/安全的自改进
+- type: same_topic
+  ref: paper:arxiv:2610.23344
+  note: 均为LLM自我改进（模型改进模型）方向，SIGMA侧重安全对齐而非能力

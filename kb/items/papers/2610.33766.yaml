@@ -1,0 +1,78 @@
+id: paper:arxiv:2610.33766
+type: paper
+title: 'StateWise: Teaching Language Models to Track and Obey Evolving Constraints in Multi-Turn Dialogue'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2610.33766v1
+  url: https://arxiv.org/abs/2610.33766
+  pdf_url: https://arxiv.org/pdf/2610.33766v1
+  venue: arXiv preprint
+time:
+  published: '2026-10-24'
+  collected: '2026-11-13'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:SelfImprovement
+  role: uses
+claims:
+- statement: StateWise在两个底座、held-out约束族与未见表述下，相对监督式自训练将复发率降低8-22点
+  confidence: reported
+  metrics:
+  - name: 复发率下降
+    value: 8-22点
+    scope: 相对监督式自训练基线，两个底座模型、held-out约束族
+  evidence: abstract（初筛，未读全文）
+- statement: StateWise较底座模型将对话成功率提升8-19点
+  confidence: reported
+  metrics:
+  - name: 对话成功率提升
+    value: 8-19点
+    scope: 相对底座模型（7-8B）
+  evidence: abstract（初筛，未读全文）
+- statement: 在Llama-3.1-8B上所有监督式变体大致使复发率翻倍，说明仅靠SFT自训练无法学会遵守状态
+  confidence: reported
+  metrics:
+  - name: 复发率变化
+    value: 约2倍
+    scope: Llama-3.1-8B监督式自训练变体
+  evidence: abstract（初筛，未读全文）
+- statement: StateWise在复发指标上超过oracle编译式账本基线，且无推理时脚手架
+  confidence: reported
+  metrics:
+  - name: 复发率对比
+    value: 优于oracle基线
+    scope: 无推理时脚手架条件下
+  evidence: abstract（初筛，未读全文）
+- statement: 经自训练后7-8B模型对约束状态的跟踪近乎完美，但跟踪好不等于遵守好
+  confidence: reported
+  metrics:
+  - name: 状态跟踪
+    value: 近乎完美
+    scope: 7-8B模型自训练后
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出StateWise自改进方法，让单个LLM自维护带墓碑的可修订约束状态，大幅降低多轮对话中已撤回约束的复发
+  abstract_zh: 对话用户会不断新增、修改、撤回约束，指令微调LLM存在两类失败：随轮次累积约束不再被遵守（持续性失败），以及已撤回约束继续生效（复发）。StateWise让单个LLM自维护带墓碑标记的类型化约束状态，用可执行检查器度量两类失败并免费编译真值状态。方法先微调两个互补技能（将对话摘要为约束状态、按状态生成回复），再以精确往返校验过滤自训练轨迹进行自训练；7-8B模型状态跟踪近乎完美，但监督式自训练在Llama-3.1-8B上反而使复发约翻倍。为此加入基于自生成复发对比的偏好阶段（被拒回复执行已撤销规则、被选回复通过往返校验），最终相对监督自训练降低复发8-22点、较底座提升对话成功率8-19点，并在复发指标上超过oracle编译式账本基线且无需推理时脚手架。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 属LLM自我改进方法研究（自训练+自生成偏好对比），在self_improvement收录范围内，但与音视频核心技术无直接关联，按非核心域仅给summary_only
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-13'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: StateWise：教会语言模型在多轮对话中跟踪并遵守演化中的约束
+relations:
+- type: same_topic
+  ref: paper:arxiv:2610.12855
+  note: 同属LLM自我改进中的能力退化/复发问题与缓解机制研究
+- type: same_topic
+  ref: paper:arxiv:2609.34725
+  note: 同为LLM自训练式自我改进方法（自生成数据+反馈优化）
+- type: same_topic
+  ref: paper:arxiv:2610.11345
+  note: 同属自生成数据驱动的自演进LLM训练范式

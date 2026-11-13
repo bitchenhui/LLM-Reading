@@ -1,0 +1,42 @@
+id: paper:arxiv:2609.31103
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'DepthEvidence: Unifying Metric Depth Prediction and Geometric Reasoning in Multimodal Language
+    Models'
+  authors:
+  - Jiangning Wei
+  - Yuan Yao
+  - Miaomiao Cui
+  - Mingsheng Li
+  - Humen Zhong
+  - Shuai Bai
+  - Zhibo Yang
+  published: '2026-09-25'
+  updated: '2026-09-25'
+  categories:
+  - cs.CV
+  - cs.AI
+  abstract: Spatial reasoning with metric constraints requires linking objects to geometric measurements
+    and preserving their numerical content during language reasoning. We present DepthEvidence, a 4B model
+    that uses its own dense metric predictions as object-grounded evidence for language generation. A
+    camera-conditioned decoder predicts full-resolution metric depth using multi-scale visual features
+    and high-resolution RGB refinement. A dense-to-language interface converts predicted depths and decoder
+    features into object-aligned continuous geometry tokens anchored to object identifiers. Geometric
+    supervision encourages metric information to remain recoverable before and after language-context
+    interaction, while instruction tuning supports object measurement and compositional reasoning. We
+    introduce a Depth-VQA benchmark evaluating object-depth queries, relative comparisons, and decisions
+    combining spatial and numerical constraints. Across nine datasets, DepthEvidence achieves the highest
+    average dense $δ_1$ among evaluated methods, competitive with specialized estimators. It also leads
+    the evaluated methods in instance-level metric depth estimation and overall accuracy on both relative
+    and metric reasoning tracks, while broadly preserving general VQA performance and improving spatial
+    understanding relative to the base model.
+  url: https://arxiv.org/abs/2609.31103
+  pdf_url: https://arxiv.org/pdf/2609.31103v1
+  version: v1
+fetched: '2026-11-13'

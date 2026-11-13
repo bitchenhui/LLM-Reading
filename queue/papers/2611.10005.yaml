@@ -1,0 +1,45 @@
+id: paper:arxiv:2611.10005
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'EarthJev: Efficient Visual Evidence Acquisition and Decision for UHR Remote Sensing Understanding'
+  authors:
+  - Pengyu Dai
+  - Yao Zhang
+  - Jian Song
+  - Junjue Wang
+  - Yafei Ou
+  - Yuzeng Chen
+  - Junshi Xia
+  - Hongruixuan Chen
+  - Naoto Yokoya
+  published: '2026-11-04'
+  updated: '2026-11-04'
+  categories:
+  - cs.CV
+  - cs.AI
+  abstract: 'Ultra-high-resolution (UHR) remote sensing visual question answering (VQA) requires locating
+    fine-grained evidence in large scenes under limited visual input budgets. Active observation addresses
+    this challenge through selective exploration, but repeated generative judgments can make region search
+    costly. Its decisions also concern distinct prediction targets: spatial pointer validity, evidence
+    presence, and reasoning correctness. We propose EarthJev, a framework that separates region scoring
+    from answer generation and uses target-specific decision signals while keeping the answering model
+    frozen. A spatial pointer verifier uses visual and geometric cues to guide exploration or bypass search.
+    An evidence-aware decision mechanism scores compact candidate views in batches using a lightweight
+    head on frozen representations, without generating textual region judgments. Format-specific confidence
+    calibration then guides selection between candidate answers generated from memory and overview presentations
+    of the acquired evidence. Across five benchmarks, EarthJev achieves a mean accuracy of 53.06% with
+    Qwen3.5-9B, outperforming ZoomSearch with the same answering model by 2.33 to 14.73 percentage points
+    per benchmark while reducing mean latency from 11.30 - 1.67 seconds per question. With four additional
+    frozen answering models, model-specific fitting of the decision modules and calibration mappings yields
+    mean accuracy gains of 3.41 - 6.53 percentage points over the corresponding single-pass baselines.
+    Code is available at https://github.com/Da1daidaidai/EarthJev'
+  url: https://arxiv.org/abs/2611.10005
+  pdf_url: https://arxiv.org/pdf/2611.10005v1
+  version: v1
+fetched: '2026-11-13'

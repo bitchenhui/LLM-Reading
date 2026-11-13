@@ -1,0 +1,70 @@
+id: paper:arxiv:2611.15521
+type: paper
+title: 'DecArena: Evaluating Large-Scale Decentralized Multi-Agent Collaboration'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2611.15521v1
+  url: https://arxiv.org/abs/2611.15521
+  pdf_url: https://arxiv.org/pdf/2611.15521v1
+  venue: arXiv preprint
+time:
+  published: '2026-11-11'
+  collected: '2026-11-13'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:SelfImprovement
+  role: builds_on
+claims:
+- statement: 在图约束通信的去中心化环境中，最新LLM智能体难以发现非本地相关资源并进行有效协作，且标准强化学习无法可靠克服这一局限。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: GraphHarness（拓扑感知预热+自改进LLM路由）相比基线显著提升任务成功率。
+  confidence: reported
+  metrics:
+  - name: 任务成功率提升
+    value: '+48.5'
+    scope: 相对基线方法
+  evidence: abstract（初筛，未读全文）
+- statement: GraphHarness在提升成功率的同时产生更高质量的协作并降低成本。
+  confidence: reported
+  metrics:
+  - name: 协作质量提升
+    value: '+30.6'
+    scope: 相对基线方法
+  - name: 成本降低
+    value: '+34.0'
+    scope: 相对基线方法
+  evidence: abstract（初筛，未读全文）
+- statement: 基准包含可扩展的合成分布式工具调用场景，工具规模超过10万个。
+  confidence: reported
+  metrics:
+  - name: 工具数量
+    value: 100K+
+    scope: DecArena基准
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出10万+工具规模的去中心化多智能体协作基准，并给出自改进路由基线GraphHarness，大幅提升成功率并降本。
+  abstract_zh: 针对集中式多智能体系统依赖全局编排器带来的可扩展性与隐私问题，论文研究图约束通信下的去中心化协作：每个智能体仅观测局部状态、只与邻居交互，需主动发现非本地工具与技能等资源。作者构建了含10万+工具的可扩展分布式工具调用基准，实验表明最新LLM智能体难以发现非本地相关资源并协作，标准强化学习也无法可靠克服该局限。随后提出基线GraphHarness，结合拓扑感知预热与自改进的LLM路由，任务成功率较基线提升48.5，协作质量提升30.6，同时成本降低34.0。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 去中心化多智能体协作基准与自改进LLM路由基线，属自我改进AI方向但与音视频技术无直接关联。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-13'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: DecArena：面向大规模去中心化多智能体协作的评测基准
+relations:
+- type: same_topic
+  ref: paper:arxiv:2609.34712
+  note: 同为LLM智能体自改进路由与成本效率研究，GraphHarness的自改进路由与此同线
+- type: same_topic
+  ref: paper:arxiv:2610.24454
+  note: 同为多智能体协作中的递归自改进研究
+- type: same_topic
+  ref: paper:arxiv:2609.38516
+  note: 同为LLM社会性/多智能体协作式自改进主题

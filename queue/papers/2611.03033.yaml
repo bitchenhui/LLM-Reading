@@ -1,0 +1,32 @@
+id: paper:arxiv:2611.03033
+status: skipped
+score: 0
+track: immersive_media
+matched: []
+meta:
+  title: GPU-Native Real-Time Textured Mesh Reconstruction with Seam-Aware Multi-View Radiometric Correction
+  authors:
+  - Hiroyuki Sato
+  published: '2026-11-02'
+  updated: '2026-11-02'
+  categories:
+  - cs.CV
+  - cs.GR
+  abstract: We present a GPU-native volumetric-video system for real-time reconstruction of graphics-compatible
+    textured triangle meshes from multiple RGB-D sensors. Existing TSDF systems accelerate fusion and
+    mesh extraction, but extending them to per-frame textured meshing adds CPU mesh processing, CPU-side
+    texturing work, or extra CPU-GPU transfers between stages. After input staging, our method keeps the
+    reconstruction and texturing stages (TSDF fusion, Marching Cubes, connected-component noise removal,
+    view-based texture mapping, inpainting, and radiometric seam correction) resident on the GPU; no intermediate
+    mesh or image data returns to the host between these stages. A fixed-size-array representation of
+    mesh topology gives constant-time neighbor access on the GPU and makes the downstream mesh-level operations
+    data-parallel. Because we texture each face from a single camera, exposure seams that vary smoothly
+    across each image remain; we estimate a per-camera low-frequency gain field and bake it into the atlas
+    on the GPU. On the CMU Panoptic dataset, our method is faster than the baselines at every tested voxel
+    resolution and number of sensors, achieves peak speedups of more than an order of magnitude over CUDA-accelerated
+    nvblox and CPU-based Open3D, and approaches an offline textured-meshing baseline in perceptual re-rendering
+    quality.
+  url: https://arxiv.org/abs/2611.03033
+  pdf_url: https://arxiv.org/pdf/2611.03033v1
+  version: v1
+fetched: '2026-11-13'

@@ -1,0 +1,41 @@
+id: paper:arxiv:2609.33582
+status: reviewed
+score: 3
+track: quality_assessment
+matched:
+- ref: concept:SuperResolution
+  count: 2
+  weight: 1
+- ref: concept:IQA
+  count: 1
+  weight: 1
+- ref: metric:LPIPS
+  count: 1
+  weight: 1
+meta:
+  title: 'Fill2SR: Repurposing Inpainting Diffusion Transformers for Real-World Super-Resolution'
+  authors:
+  - Xingfu Yi
+  - Xiaoxue Yu
+  published: '2026-09-27'
+  updated: '2026-09-27'
+  categories:
+  - cs.CV
+  abstract: Recent real-world image super-resolution (SR) methods often adapt text-to-image (T2I) backbones
+    with ControlNet-style branches or spatial conditioning tokens, which increases memory and computes
+    with resolution and often constrains training to a fixed scale. We propose Fill2SR, which repurposes
+    a masked-inpainting Diffusion Transformer for SR without extra spatial branches. Our Inpainting-Interface
+    Evidence Adapter (IIEA) writes the low-quality (LQ) observation into the native masked-image slot
+    under a full-image mask, turning inpainting into a reverse-degradation conditional rectified flow
+    trained with LoRA-only tuning. We further introduce RCDT, an offline pipeline that distills degradation
+    descriptors from unpaired real images and transfers them onto clean targets using frozen open-source
+    models. Fill2SR supports mixed-resolution training up to QHD and yields stable performance across
+    $512/1024/2048$ outputs. On synthetic benchmarks, our base model with IIEA achieves the best LPIPS
+    on DIV2K and LSDIR; adding RCDT trades a small LPIPS drop for consistently stronger no-reference quality
+    on RealLQ250 and RealPhoto60. Fill2SR remains memory-predictable, running $1536^2$ inference on a
+    single 32GB GPU and extending to multi-megapixel outputs via tiled restoration.
+  url: https://arxiv.org/abs/2609.33582
+  pdf_url: https://arxiv.org/pdf/2609.33582v1
+  version: v1
+fetched: '2026-11-13'
+llm_decision: summary_only

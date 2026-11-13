@@ -1,0 +1,63 @@
+id: paper:arxiv:2608.08432
+type: paper
+title: 'BAMU: Bitstream-Aware Marginal-Utility Allocation for Frozen Pretrained Neural Speech Codecs'
+domain: audio_coding
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2608.08432v1
+  url: https://arxiv.org/abs/2608.08432
+  pdf_url: https://arxiv.org/pdf/2608.08432v1
+  venue: arXiv preprint
+time:
+  published: '2026-08-09'
+  collected: '2026-11-13'
+entities:
+- ref: concept:NeuralAudioCodec
+  role: subject
+- ref: metric:MOS
+  role: measured_by
+claims:
+- statement: BAMU在精确序列化字节预算下选择前缀有效的RVQ深度，相比匹配的固定深度编码显著提升语音主观质量。
+  confidence: reported
+  metrics:
+  - name: MOS
+    value: 3.449→3.780
+    scope: 30名听者主观测试，BAMU相对匹配固定深度编码
+  evidence: abstract（初筛，未读全文）
+- statement: 在EnCodec上取得一致的率失真增益，DAC的改进主要集中在中高码率。
+  confidence: reported
+  metrics:
+  - name: 评测范围
+    value: EnCodec一致增益；DAC中高速率改进
+    scope: LibriSpeech实验，另含VCTK评估
+  evidence: abstract（初筛，未读全文）
+- statement: 所提预测器轻量且与码率无关，可在不改动冻结预训练模型的前提下估计帧级与层级的边际潜在失真减少量。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 为冻结预训练神经语音编解码器动态分配RVQ深度，在精确字节预算下提升语音质量。
+  abstract_zh: 预训练神经语音编解码器通常对所有帧使用固定的残差向量量化（RVQ）深度，忽略了量化难度的时变特性。BAMU提出码流感知的动态RVQ深度分配框架，作用于冻结的预训练编解码器：轻量级、与码率无关的预测器估计帧级与层级的边际潜在失真减少量，约束分配器在精确的序列化字节预算下选择前缀有效深度。在LibriSpeech上对EnCodec和DAC的实验（另含VCTK评估）显示EnCodec获得一致增益，DAC的改进主要出现在中高速率。30名听者的主观测试确认MOS从3.449提升至3.780（相对匹配固定深度编码）。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 神经语音编解码器的码流感知RVQ动态深度分配工作，属音频编码域，按规则不给deep_read。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-13'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: BAMU：面向冻结预训练神经语音编解码器的码流感知边际效用分配
+relations:
+- type: same_topic
+  ref: paper:arxiv:2609.09866
+  note: 同为神经音频编码中的RVQ量化机制研究（UniStream多专家RVQ流式音频编码）
+- type: same_topic
+  ref: paper:arxiv:2610.04651
+  note: 同属神经音频编码（GS-Codec的神经音频编码瓶颈）
+- type: same_topic
+  ref: paper:arxiv:2609.34524
+  note: 同为神经音频编解码器的速率/质量分析
+- type: same_topic
+  ref: paper:arxiv:2609.03283
+  note: 均使用语音MOS作为主观质量度量

@@ -1,0 +1,41 @@
+id: paper:arxiv:2611.00067
+status: skipped_by_llm
+score: 2
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+- ref: concept:TrainingFree
+  count: 1
+  weight: 1
+meta:
+  title: 'MedICL: Modality-Anatomy-Aware Visual In-Context Learning for Medical Visual Question Answering'
+  authors:
+  - Ji-jun Park
+  - Soo-joon Choi
+  - Seungmin Han
+  - Haeun Kwon
+  - Jiwon Jeong
+  - Taeyang Yoon
+  published: '2026-10-14'
+  updated: '2026-10-14'
+  categories:
+  - cs.CV
+  abstract: Training-free adaptation of medical vision-language models (LVLMs) is a deployment requirement,
+    yet visual in-context learning (ICL) injects modality- and style-mismatched demonstrations into medical
+    contexts, teaching a frozen model the wrong answering style. We present MedICL, which curates demonstrations
+    instead of retraining the model. MADS selects modality-anatomy aligned demonstrations that cover complementary
+    interpretation dimensions; W2C curates them with weak retrieval signals and a strong verification
+    vote that checks demonstrations rather than the model's own outputs; ECC answers with W anchored demonstration
+    sets, aggregates by abnormality-aware signatures, and re-answers once on conflict. On VQA-RAD, SLAKE,
+    and PathVQA under the LLaVA-Med zero-shot protocol, MedICL improves the strongest zero-shot baseline
+    by +11 - +14 points on open-ended and +7 - +14 on closed questions, recovers 71% of fine-tuned open-ended
+    performance on VQA-RAD at zero training cost, and stays robust to shifted or corrupted demonstration
+    banks.
+  url: https://arxiv.org/abs/2611.00067
+  pdf_url: https://arxiv.org/pdf/2611.00067v1
+  version: v1
+fetched: '2026-11-13'
+llm_decision: skip
+llm_reason: 论文为医学视觉问答（Visual QA）中免训练LVLM的演示选择方法，与音视频编码/质量评估技术体系无关，规则匹配到的IQA为噪声（此处VQA指视觉问答而非视频质量评估）。

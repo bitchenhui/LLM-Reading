@@ -1,0 +1,89 @@
+id: paper:arxiv:2610.33845
+type: paper
+title: 'Build, Don''t Play: Self-Improving LLM Research Agents Develop a Hearthstone Battlegrounds AI
+  That Rivals Top Players'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2610.33845v1
+  url: https://arxiv.org/abs/2610.33845
+  pdf_url: https://arxiv.org/pdf/2610.33845v1
+  venue: arXiv preprint
+time:
+  published: '2026-10-24'
+  collected: '2026-11-13'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: AutoTavern在20天内自主构建了首个忠实还原全内容的炉石战棋模拟器TavernGym，并迭代交付23版以PPO对抗校准对手训练的TavernAgent。
+  confidence: reported
+  metrics:
+  - name: 开发周期
+    value: 20 天
+    scope: 构建TavernGym并交付23版TavernAgent
+  - name: Agent版本数
+    value: '23'
+    scope: TavernAgent迭代版本
+  evidence: abstract（初筛，未读全文）
+- statement: TavernAgent可独立在天梯完成完整对局，评分从6,000升至约15,000，最后20场记录平均排名1.60、第一名比例80%，各项统计优于服务器十名最高分玩家。
+  confidence: reported
+  metrics:
+  - name: 天梯评分
+    value: 约15,000
+    scope: 由6,000提升
+  - name: 平均排名
+    value: '1.60'
+    scope: 最后20场记录
+  - name: 第一名比例
+    value: 80%
+    scope: 最后20场记录
+  - name: 对照玩家平均排名/第一名比例
+    value: 2.34 / 59%
+    scope: 服务器十名最高分玩家
+  evidence: abstract（初筛，未读全文）
+- statement: TavernBench（40场景960任务）显示代理所构建的系统是最强玩家：TavernAgent玩法任务正确率91%、前沿LLM至多63%；决策用时0.03秒而前沿LLM最长需26秒；在实时回合1秒预算内保持90%、LLM不超过26%。
+  confidence: reported
+  metrics:
+  - name: 玩法任务正确率
+    value: 91%
+    scope: TavernAgent在TavernBench 960任务上
+  - name: 前沿LLM最高正确率
+    value: 63%
+    scope: TavernBench对比
+  - name: 决策时间
+    value: 0.03 s
+    scope: TavernAgent
+  - name: LLM最长决策时间
+    value: 26 s
+    scope: 前沿LLM对比
+  - name: 1秒回合内正确率
+    value: 90%
+    scope: TavernAgent实时约束下，LLM至多26%
+  evidence: abstract（初筛，未读全文）
+- statement: 核心结论：LLM代理'构建'的能力远强于其'直接游玩'的能力，即由自改进代理搭建的系统优于前沿LLM直接操作。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 自我改进LLM代理系统AutoTavern在20天内自主构建炉石战棋模拟器与AI，天梯评分约15000，各项指标超越服务器前十玩家。
+  abstract_zh: 论文提出AutoTavern，一个由专门化LLM研究代理组成的自我改进研究系统：代理共享类型化研究记忆，所有论断经验证门把关，并接入实时对局形成闭环，从而同时改进模拟器、对手、策略以及自身的研究流程，人类仅在机制歧义处设定目标与规则。20天内系统构建了首个忠实还原全内容的实时游戏复现TavernGym，并迭代出23版以PPO对抗校准对手训练的TavernAgent。TavernAgent可独立在天梯完成完整对局，评分从6,000升至约15,000，最后20场记录平均排名1.60、第一名比例80%，各项统计均优于服务器十名最高分玩家（2.34、59%）。TavernBench基准（40场景960任务）表明代理构建出的系统是最强玩家：TavernAgent玩法任务正确率91%而前沿LLM至多63%，决策用时0.03秒而前沿LLM最长需26秒；在实时回合1秒预算内仍保持90%，LLM不超过26%。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 自我改进LLM研究代理在真实游戏环境中端到端自主研究的代表性工作，属自改进AI域而非音视频核心域，按收录基准仅作初筛摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-13'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 构建而非游玩：自我改进的LLM研究代理开发出媲美顶尖玩家的炉石传说酒馆战棋AI
+relations:
+- type: same_topic
+  ref: paper:arxiv:2609.39045
+  note: 同为LLM代理自主进行游戏开发并伴随递归自我改进的研究
+- type: same_topic
+  ref: paper:arxiv:2609.38372
+  note: 均涉及代理对自身研究流程/harness的自演化与多任务自我改进

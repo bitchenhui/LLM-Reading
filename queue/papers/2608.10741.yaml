@@ -1,0 +1,42 @@
+id: paper:arxiv:2608.10741
+status: skipped
+score: 1
+track: streaming_delivery
+matched:
+- ref: concept:QUIC
+  count: 2
+  weight: 1
+meta:
+  title: Media-over-Multipath-QUIC for Realtime Video Applications
+  authors:
+  - Tanya Shreedhar
+  - Zuji Zhou
+  - Nitinder Mohan
+  - Fernando Kuipers
+  published: '2026-08-11'
+  updated: '2026-08-11'
+  categories:
+  - cs.NI
+  - cs.ET
+  - cs.MM
+  - eess.IV
+  abstract: Multipath transports place a client's WiFi, cellular, and satellite networks under one connection,
+    yet real-time video gains little from them. The scheduler that assigns packets to paths sees only
+    bytes, so it cannot tell a keyframe that anchors a second of video from an enhancement frame whose
+    loss costs one image. We show that the limiting factor is not a shortage of path diversity but the
+    absence of a channel through which the application can name what the transport cannot see. Media over
+    QUIC Transport (MoQT), already deployed on production CDNs, carries media as named Objects, and relays
+    forward each Object's metadata without interpreting it. The knowledge the scheduler lacks therefore
+    already flows through the subscriber's relay. We present MoMQ, a MoQT extension that turns this metadata
+    into path decisions. Applications and relay operators install declarative rules at the edge relay
+    that match Object metadata and express delivery preferences against labeled paths. The relay evaluates
+    the rules mechanically, so it acts on video semantics while containing no video logic. On a live testbed
+    spanning Starlink and WiFi, four rules cut P99.9 frame completion time from 384.7 ms under the best
+    transport-only scheduler to 114.1 ms and reduce the required playback buffer by 61.5%. MoMQ is the
+    only configuration that meets the 150 ms interactive latency target. Across relays in two countries
+    and subscribers on two continents, the same rules apply unchanged and retain their advantage wherever
+    the paths remain disjoint.
+  url: https://arxiv.org/abs/2608.10741
+  pdf_url: https://arxiv.org/pdf/2608.10741v1
+  version: v1
+fetched: '2026-11-13'

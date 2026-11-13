@@ -1,0 +1,55 @@
+id: paper:arxiv:2611.03007
+type: paper
+title: 'Q-CamTuning: A Multimodal Large Language Model for Fine-Grained Quality Reasoning in Livestreaming
+  Camera Tuning'
+domain: quality_assessment
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2611.03007v1
+  url: https://arxiv.org/abs/2611.03007
+  pdf_url: https://arxiv.org/pdf/2611.03007v1
+  venue: arXiv preprint
+time:
+  published: '2026-11-02'
+  collected: '2026-11-13'
+entities:
+- ref: concept:IQA
+  role: subject
+- ref: concept:LLM
+  role: builds_on
+- ref: concept:QoE
+  role: uses
+claims:
+- statement: 构建了FGLive-Comments指令微调数据集，同时标注细粒度图像对偏好与基于全局/局部视觉证据的质量推理，并支持相机参数选择性调整建议。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: Q-CamTuning采用渐进式感知-证据-引导框架，能将质量问题映射到相机参数调整方向。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: Q-CamTuning在质量评分与细粒度图像对排序任务上优于现有IQA模型，用户研究验证其调参建议能力。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 构建FGLive-Comments指令微调数据集并训练多模态大模型Q-CamTuning，实现直播场景细粒度质量推理与相机参数调整建议。
+  abstract_zh: 直播普及使自动相机调优成为普通用户获得高QoE的关键，但现有IQA方法难以识别图像间细微质量差异，更缺乏细粒度差异解释与调参建议能力。作者构建指令微调数据集FGLive-Comments，含细粒度图像对偏好标注及基于全局/局部视觉证据的质量推理标注，支持相机参数选择性调整建议。据此开发多模态大语言模型Q-CamTuning，采用渐进式感知-证据-引导框架，学习质量感知视觉表征、以全局-局部证据增强细粒度推理，并将质量问题映射到相机参数调整方向。实验显示其在质量评分与细粒度图像对排序上优于现有IQA模型，用户研究亦验证调参建议能力。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: IQA/MLLM 质量推理类工作，面向直播相机调优，与核心编码域间接相关，按规则仅收录摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-13'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: Q-CamTuning：面向直播相机调优细粒度质量推理的多模态大语言模型
+relations:
+- type: same_topic
+  ref: paper:arxiv:2607.23321
+  note: 同属相机/ISP 采集端图像质量评估与调优方向
+- type: same_topic
+  ref: paper:arxiv:2611.08754
+  note: 同为基于多模态LLM的无参考质量评估模型
+- type: same_topic
+  ref: paper:arxiv:2608.21180
+  note: 同为视觉语言模型驱动的图像质量评估

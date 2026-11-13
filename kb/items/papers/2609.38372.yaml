@@ -1,0 +1,74 @@
+id: paper:arxiv:2609.38372
+type: paper
+title: Multi-Task Self-Evolving Harnesses with the Agent as Its Own Optimizer
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2609.38372v2
+  url: https://arxiv.org/abs/2609.38372
+  pdf_url: https://arxiv.org/pdf/2609.38372v2
+  venue: arXiv preprint
+time:
+  published: '2026-09-29'
+  collected: '2026-11-13'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:RSI
+  role: builds_on
+claims:
+- statement: 从49行种子harness出发，经GLM-5.3与GPT-5.6 Sol自进化的harness在分布内基准上提升约5分，达到或超过Claude Code与Codex。
+  confidence: reported
+  metrics:
+  - name: 分布内基准增益
+    value: 约5分
+    scope: 五个分布内基准，演化harness相对49行种子harness
+  - name: 种子harness规模
+    value: 49行
+    scope: 初始种子harness代码行数
+  evidence: abstract（初筛，未读全文）
+- statement: GPT-5.6 Sol自进化的harness在五个分布外基准上与Codex持平。
+  confidence: reported
+  metrics:
+  - name: OOD基准数量
+    value: 5个
+    scope: 演化期间从未使用的分布外基准
+  evidence: abstract（初筛，未读全文）
+- statement: 第二阶段在Claw-Eval上继续演化后，GPT-5.6 Sol与GLM-5.3-Flash的harness超越Codex和Claude Code。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 演化过程被框定为深度学习训练的两阶段（多任务预训练+持续训练），每批次任务取自五个不同领域基准，训练与held-out任务严格分离。
+  confidence: reported
+  metrics:
+  - name: 训练基准数量
+    value: 5个
+    scope: 每次演化批次抽取任务的不同领域基准数
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 同一冻结模型兼任求解器与提议者，多任务自进化harness，分布内约提升5分并在OOD基准与Codex持平。
+  abstract_zh: 提出接近递归自我改进的框架：同一冻结模型在同一版本harness上先作为solver求解任务，再作为proposer读取完整运行记录并直接编辑运行自身的harness。每次演化批次从五个不同领域基准抽取任务，训练与held-out任务严格分离，并在五个演化中从未使用的分布外基准上评估泛化。作者将演化框定为深度学习训练的两阶段流程：多任务预训练与持续训练。从49行种子harness出发，GLM-5.3与GPT-5.6
+    Sol演化的harness在分布内基准上约提升5分，达到或超过Claude Code与Codex；第二阶段在Claw-Eval上继续演化后进一步超越两者。文中还分析了演化涌现的机制，包括输出截断、历史压缩、完成检查、独立审查与视觉检查。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 属自我改进AI核心方向（agent自进化harness、近RSI），但与音视频技术无直接关联，按基准收录为summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-13'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 以Agent为自身优化器的多任务自进化Harness
+relations:
+- type: same_topic
+  ref: paper:arxiv:2610.28201
+  note: 同为agent harness的递归自改进（MaD-RSI）
+- type: same_topic
+  ref: paper:arxiv:2610.14224
+  note: 同为harness自进化框架（Harness^2）
+- type: same_topic
+  ref: paper:arxiv:2610.26770
+  note: 同为harness递归自改进，含帕累托性能-成本优化（HarnessPro）
+- type: same_topic
+  ref: paper:arxiv:2610.19424
+  note: 同为harness自进化路线，面向视频理解（VideoHarness-SRSI），与视频域交叉

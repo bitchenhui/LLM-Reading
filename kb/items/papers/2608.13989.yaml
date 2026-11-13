@@ -1,0 +1,56 @@
+id: paper:arxiv:2608.13989
+type: paper
+title: A Subjective Study on a New Sharpness Informed Class of Metrics
+domain: quality_assessment
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2608.13989v1
+  url: https://arxiv.org/abs/2608.13989
+  pdf_url: https://arxiv.org/pdf/2608.13989v1
+  venue: arXiv preprint
+time:
+  published: '2026-08-14'
+  collected: '2026-11-13'
+entities:
+- ref: concept:IQA
+  role: subject
+- ref: metric:PSNR
+  role: builds_on
+claims:
+- statement: 新提出的SI-PSNR在IQA基准数据集上的相关性统计优于所有其他PSNR变体
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 使用锐度感知复合损失恢复的图像平均在二值化主观比较中更受偏好
+  confidence: reported
+  metrics:
+  - name: 偏好比例
+    value: 67%
+    scope: 锐度感知复合损失 vs 无显式锐度目标损失的模型，二值化主观对比的平均胜率
+  evidence: abstract（初筛，未读全文）
+- statement: 提出的SI度量类能够恰当惩罚过锐化现象，并配套发布了带均匀锐度增量和DMOS标注的新数据集
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出惩罚过锐化的锐度感知IQA度量SI-PSNR，主观实验显示锐度感知损失恢复的图像更受偏好
+  abstract_zh: 针对DNN去模糊中感知损失很少显式优化锐度的问题，作者采用四种协议的主观实验，研究了带与不带显式锐度损失训练模型的偏好与质量差异。论文构建了具有均匀锐度增量并附带DMOS的新图像数据集。在此基础上提出一类能恰当惩罚过锐化的锐度感知（SI）IQA度量。结果表明SI-PSNR在IQA基准数据集上的相关性统计优于所有其他PSNR变体，且使用锐度感知复合损失恢复的图像平均在67%的二选一主观比较中胜出。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 提出惩罚过锐化的锐度感知IQA度量类（SI-PSNR）并配主观实验与DMOS数据集，属质量评估域重要工作，按规则给summary_only
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-13'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 关于一类新型锐度感知度量的主观研究
+relations:
+- type: same_topic
+  ref: paper:arxiv:2609.30077
+  note: 同属全参考图像质量度量的设计与优化研究
+- type: same_topic
+  ref: paper:arxiv:2605.15800
+  note: 同属编解码器质量评估中客观质量指标的应用与方法论
+- type: same_topic
+  ref: paper:arxiv:2603.25566
+  note: 均涉及感知损失对重建/转码主观质量的影响

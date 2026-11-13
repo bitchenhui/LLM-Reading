@@ -1,0 +1,48 @@
+id: paper:arxiv:2609.32185
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: Contamination, Prior, or Evidence? Decomposing and Training Evidence Use in Whole-Slide Vision-Language
+    Models
+  authors:
+  - Wenhao Zhang
+  - Zhongliang Zhou
+  - Shiyuan Zhang
+  - Yiqing Yang
+  - Pinqiao Wang
+  - Lehan Yang
+  - Hanyin Wang
+  - John Kang
+  - Sheng Li
+  published: '2026-09-26'
+  updated: '2026-09-26'
+  categories:
+  - cs.CV
+  - cs.LG
+  abstract: 'Pathology vision-language models (VLMs) are conventionally evaluated by accuracy, but accuracy
+    alone does not measure evidence use: it may conflate dataset contamination, prior knowledge, and image
+    evidence. In a motivating study of lymph-node metastasis prediction, we found that most public pathology
+    VLMs showed minimal differences when changing from feeding the models with whole-slide images, an
+    annotated lesion, or no image at all. To better understand the specific features leveraged by these
+    models, this paper presents two contributions aimed at disentangling these factors. First, we present
+    CleanSlide, a TCGA-based VQA benchmark designed to eliminate image- and question-side contamination.
+    It contains 149K audited multiple-choice questions over 9,985 slides, with patient- and tissue-source-disjoint
+    splits. Every question is audited for option shortcuts, stem leakage, cross-split duplication, and
+    blind solvability. Second, we propose Pair-DPO, a preference loss over counterfactual slide pairs
+    from the same question and source. By controlling for shared confounding factors, Pair-DPO cancels
+    out the question-attributable signal and leaves image evidence as the source of preference. Specifically,
+    each pair consists of two real slides with opposite, verified findings, introducing neither editing
+    artifacts nor unverified labels for diffuse or graded features such as invasion, necrosis, and tumor
+    grade. Experiments show that our method gains 15.29% from image evidence on the CleanSlide, compared
+    with 2.81% for the best published model. On the external CPTAC and BCNB cohorts, our method achieves
+    accuracies of 57.6% and 59.0%, outperforming all other evaluated models by 9.7% and 3.4%, respectively.
+    We will release the benchmark and code.'
+  url: https://arxiv.org/abs/2609.32185
+  pdf_url: https://arxiv.org/pdf/2609.32185v1
+  version: v1
+fetched: '2026-11-13'

@@ -1,0 +1,33 @@
+id: paper:arxiv:2610.09252
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: Adaptive Visual Token Reduction for Accelerated Image Understanding
+  authors:
+  - Seyoung Jeong
+  - Jong Pil Yun
+  - Sang Jun Lee
+  published: '2026-10-07'
+  updated: '2026-10-07'
+  categories:
+  - cs.CV
+  abstract: Large Vision-Language Models achieve strong VQA performance, but processing high-resolution,
+    information-rich images requires substantial computation, motivating visual token reduction. However,
+    existing methods often prune individual tokens or rely on fixed-size cropping, limiting their ability
+    to preserve spatially structured information such as horizontally or vertically elongated text. To
+    address this limitation, we propose ReFIT, an instruction-guided visual token reduction framework
+    for efficient LVLM inference. ReFIT consists of Relevance-Guided Window Reshaping (RWR) and Instruction-Guided
+    Token Refinement (ITR), where RWR captures instruction-relevant regions by adapting to their spatial
+    characteristics, while ITR further removes unnecessary visual tokens. Experiments on four VQA benchmarks
+    demonstrate that ReFIT improves answer accuracy while reducing computational cost, and qualitative
+    results demonstrate its effectiveness in localizing relevant regions and removing unnecessary visual
+    information.
+  url: https://arxiv.org/abs/2610.09252
+  pdf_url: https://arxiv.org/pdf/2610.09252v1
+  version: v1
+fetched: '2026-11-13'

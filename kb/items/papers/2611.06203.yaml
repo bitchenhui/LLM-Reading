@@ -1,0 +1,74 @@
+id: paper:arxiv:2611.06203
+type: paper
+title: 'BiCG-Net: Target-Specific Image Quality Assessment via Observation Modeling and In-Image Differencing'
+domain: quality_assessment
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2611.06203v1
+  url: https://arxiv.org/abs/2611.06203
+  pdf_url: https://arxiv.org/pdf/2611.06203v1
+  venue: arXiv preprint
+time:
+  published: '2026-11-04'
+  collected: '2026-11-13'
+entities:
+- ref: concept:IQA
+  role: subject
+- ref: metric:MOS
+  role: measured_by
+claims:
+- statement: BiCG-Net学生在CSIQ与LIVEC上对人类MOS的PLCC分别达0.9009与0.9133，超过最佳单教师与11教师共识。
+  confidence: reported
+  metrics:
+  - name: PLCC
+    value: '0.9009'
+    scope: CSIQ 数据集，预测值 vs 人类 MOS
+  - name: PLCC
+    value: '0.9133'
+    scope: LIVEC 数据集，预测值 vs 人类 MOS
+  evidence: abstract（初筛，未读全文）
+- statement: 在自建无MOS铁路数据集上，学生对弱标签的PLCC达0.9855。
+  confidence: reported
+  metrics:
+  - name: PLCC
+    value: '0.9855'
+    scope: 自建 MOS-free 铁路数据集，vs 弱标签
+  evidence: abstract（初筛，未读全文）
+- statement: CSIQ到LIVEC零样本迁移下，冻结学生PLCC为0.8416，超教师共识0.1947。
+  confidence: reported
+  metrics:
+  - name: PLCC
+    value: '0.8416'
+    scope: CSIQ训练 → LIVEC 零样本迁移，冻结学生
+  - name: 高于共识幅度
+    value: '0.1947'
+    scope: PLCC 相对 11 教师共识的提升
+  evidence: abstract（初筛，未读全文）
+- statement: 学生网络仅39,482参数，作为把异构教师读数映射到统一质量尺度的紧凑统一层。
+  confidence: reported
+  metrics:
+  - name: 参数量
+    value: '39482'
+    scope: 学生网络 BiCG-Net
+  evidence: abstract（初筛，未读全文）
+- statement: 残差分析显示预测残差与背景污染、教师分歧、标签极端性显著相关，学生学到了教师共识中不包含的信息。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 以嵌套采样与图内差分将11教师集成蒸馏为小参数学生网络，实现目标区域质量评估且超越教师共识。
+  abstract_zh: 论文指出整图NR-IQA在目标仅占画面很小比例时评分由背景主导，且现有公开基准均缺乏目标级人类MOS标签。方法上，从目标框向外逐层扩展补丁形成嵌套采样序列，用线性观测模型与图内差分机制从序列相对结构推断目标质量，该差分可证明地消去目标项与教师特异性偏置，从而将11教师集成蒸馏为仅39,482参数的学生网络BiCG-Net。结果上，学生在CSIQ与LIVEC上对人类MOS的PLCC分别达0.9009与0.9133，超过最佳单教师与教师共识；在自建无MOS铁路数据集上对弱标签PLCC达0.9855。CSIQ到LIVEC零样本迁移下冻结学生PLCC为0.8416、超共识0.1947，残差分析与背景污染、教师分歧、标签极端性显著相关，表明学生提取了共识之外的信息；作者将其定位为离线目标级质量审计与标签生成引擎。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 目标区域级无参考图像质量评估工作，属质量评估域，按收录基准仅给摘要级收录。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-13'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: BiCG-Net：基于观测建模与图内差分的特定目标图像质量评估
+relations:
+- type: same_topic
+  ref: paper:arxiv:2610.36978
+  note: 均研究区域级（region-level）图像/视频质量评估建模

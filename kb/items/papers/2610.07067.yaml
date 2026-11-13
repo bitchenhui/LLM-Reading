@@ -1,0 +1,49 @@
+id: paper:arxiv:2610.07067
+type: paper
+title: Decomposition-Guided Curvelet Thresholding for Sharp-to-Soft CT Kernel Conversion
+domain: processing_enhancement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2610.07067v1
+  url: https://arxiv.org/abs/2610.07067
+  pdf_url: https://arxiv.org/pdf/2610.07067v1
+  venue: arXiv preprint
+time:
+  published: '2026-10-05'
+  collected: '2026-11-13'
+entities:
+- ref: metric:PSNR
+  role: subject
+- ref: metric:SSIM
+  role: measured_by
+claims:
+- statement: 结合多种分解技术（EMD/VMD/MEMD/BEMD）与curvelet阈值化的混合框架在标准CT图像数据集上去噪效果显著提升，其中VMD在所有测试核（B50/B46/B41/B36）上一致取得最高PSNR和SSIM。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 软阈值与硬阈值存在权衡：软阈值能保持精细视觉细节，硬阈值提供更强的噪声抑制。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 所提方法在参考型与非参考型质量指标上均超越传统去噪技术，具备扩展到更广医学影像应用及与自适应阈值算法结合的潜力。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 将EMD/VMD/MEMD/BEMD分解与curvelet软硬阈值结合的混合去噪框架，实现CT锐核到软核转换，VMD表现最佳。
+  abstract_zh: 该研究提出一种混合去噪框架，将经验模态分解（EMD）、变分模态分解（VMD）、多通道EMD（MEMD）和二维EMD（BEMD）等分解技术与curvelet变换阈值化相结合。每个分解得到的模式分别经过软阈值和硬阈值处理，再将去噪后的模式重组为最终图像。在使用B50、B46、B41、B36等不同重建核的标准CT图像数据集上的综合评估显示去噪效果显著提升，其中VMD在PSNR和SSIM上一致取得最高值。研究还分析了软硬阈值的权衡：软阈值更好保留精细视觉细节，硬阈值提供更强去噪。该方法在参考型与非参考型质量指标上均优于传统技术，有望推广至更广的医学影像应用并与自适应阈值算法结合。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 属图像去噪/增强类工作（EMD/VMD分解+curvelet阈值化），但应用场景为医学CT核转换而非音视频编码链路，仅作初筛摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-13'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 分解引导的Curvelet阈值化实现CT图像锐核到软核转换
+relations:
+- type: same_topic
+  ref: paper:arxiv:2608.21495
+  note: 同属利用多域特征/分解进行图像增强类工作，本文用EMD/VMD等分解+curvelet阈值做CT去噪
+- type: same_topic
+  ref: paper:arxiv:2611.11831
+  note: 同属图像恢复/伪影去除与增强任务，均以恢复图像质量为目标并采用PSNR/SSIM评估

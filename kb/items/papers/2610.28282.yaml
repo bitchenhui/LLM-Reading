@@ -1,0 +1,62 @@
+id: paper:arxiv:2610.28282
+type: paper
+title: 'ChartEvo: Self-Evolving Agent Harnesses for Long-Tail Chart Reasoning'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2610.28282v1
+  url: https://arxiv.org/abs/2610.28282
+  pdf_url: https://arxiv.org/pdf/2610.28282v1
+  venue: arXiv preprint
+time:
+  published: '2026-10-20'
+  collected: '2026-11-13'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:RSI
+  role: uses
+claims:
+- statement: ChartEvo 通过经验驱动的 harness 级自我改进，联合进化可复用的图表特定 Skills 与可执行 Tools，并学习可复用的局部工具调用链以组合已进化能力、控制推理开销。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在 ChartBench 长尾图表上，ChartEvo 相对基座 MLLM Qwen3.7-Plus 提升准确率 45.6%。
+  confidence: reported
+  metrics:
+  - name: 准确率提升
+    value: 45.6%
+    scope: ChartBench 长尾图表，相对基座 Qwen3.7-Plus
+  evidence: abstract（初筛，未读全文）
+- statement: 在 ChartX 长尾图表上，ChartEvo 相对基座 MLLM Qwen3.7-Plus 提升准确率 32.5%。
+  confidence: reported
+  metrics:
+  - name: 准确率提升
+    value: 32.5%
+    scope: ChartX 长尾图表，相对基座 Qwen3.7-Plus
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出递归自我改进框架 ChartEvo，联合进化图表 Skills 与可执行 Tools 并学习局部工具调用链，大幅提升长尾图表推理准确率。
+  abstract_zh: 多模态大语言模型在常见图表上表现良好，但在视觉结构多样、推理需求各异的长尾图表上准确率急剧下降，而人工为异构长尾设计工具与策略难以规模化。为此作者提出递归自我改进框架 ChartEvo，通过经验驱动的
+    harness 级自我改进，联合进化可复用的图表特定 Skills 与可执行 Tools，并学习可复用的局部工具调用链，在组合已进化能力的同时控制工具增强推理的开销。在 ChartBench 与
+    ChartX 的长尾图表上，ChartEvo 相对基座模型 Qwen3.7-Plus 分别将准确率提升 45.6% 与 32.5%，验证了递归自我改进对长尾图表适配的有效性。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 属递归自我改进/agent harness 进化研究，与音视频编码链路无关，按规则以初筛摘要收录。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-13'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: ChartEvo：自进化智能体 Harness 应对长尾图表推理
+relations:
+- type: same_topic
+  ref: paper:arxiv:2610.19424
+  note: 同为面向多模态理解任务（视频/图表）的 harness 级结构化递归自我改进
+- type: same_topic
+  ref: paper:arxiv:2610.28201
+  note: 同为 agent harness 层面的递归自我改进框架
+- type: same_topic
+  ref: paper:arxiv:2610.13098
+  note: 同为针对图形类符号推理任务的自我改进 agent，与图表推理任务相邻

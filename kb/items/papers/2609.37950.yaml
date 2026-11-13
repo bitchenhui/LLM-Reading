@@ -1,0 +1,52 @@
+id: paper:arxiv:2609.37950
+type: paper
+title: 'Video-RSI: Recursive Self-Improvement of Video Understanding Agents via Harness Evolution'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2609.37950v1
+  url: https://arxiv.org/abs/2609.37950
+  pdf_url: https://arxiv.org/pdf/2609.37950v1
+  venue: arXiv preprint
+time:
+  published: '2026-09-29'
+  collected: '2026-11-13'
+entities:
+- ref: concept:RSI
+  role: subject
+- ref: concept:SelfImprovement
+  role: uses
+claims:
+- statement: Video-RSI框架中，视频理解智能体通过主动视频调查回看原始训练视频并做额外观测，以检验竞争性失败解释，使harness修改基于执行轨迹之外的证据。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 成本感知的harness进化依据答案准确率与视觉成本双重标准筛选并保留可复用的harness修订。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在视频理解基准的各评测设置上，进化后的智能体在处理更少帧数的前提下提升准确率，并与现有视频理解智能体取得有竞争力的准确率-效率权衡。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 让视频理解智能体用自身LLM经主动取证与成本感知harness进化实现RSI，准确率提升且处理帧数更少。
+  abstract_zh: 视频理解智能体通过可执行的harness决定观测内容与证据使用方式，但执行轨迹只含当前harness获得的证据，失败原因的竞争性解释无法被排除，限制了自我改进的依据。Video-RSI让智能体用自身语言模型修订harness：通过主动视频调查回到原始训练视频进行额外观测，以检验竞争性失败解释，使修改建立在既有轨迹之外的证据之上。成本感知的harness进化将诊断转化为可复用的修订，并依据答案准确率与视觉成本决定保留哪些修订。在多个视频理解基准评测设置上，进化后的智能体在处理更少帧数的情况下提升准确率，与现有视频理解智能体相比取得有竞争力的准确率-效率权衡。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 属递归自我改进核心议题（harness进化+视频理解智能体），非视频编码核心域，按规则给summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-13'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: Video-RSI：通过Harness进化实现视频理解智能体的递归自我改进
+relations:
+- type: same_topic
+  ref: paper:arxiv:2610.19424
+  note: 同为面向视频理解harness的递归自我改进工作，问题设定高度重合
+- type: same_topic
+  ref: paper:arxiv:2610.26770
+  note: 同为harness自进化且显式考虑性能-成本权衡
+- type: same_topic
+  ref: paper:arxiv:2610.14224
+  note: 同属递归harness改进（RSI via harness evolution）研究线

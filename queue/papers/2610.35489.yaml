@@ -1,0 +1,42 @@
+id: paper:arxiv:2610.35489
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'TP-JSCC: Efficient Token Pruning and Joint Source-Channel Coding for LVLMs-based 3D-VQA in Cloud-Edge
+    Collaboration'
+  authors:
+  - Zhengxin Li
+  - Chongzhen Tian
+  - Hui Yuan
+  - Hao Liu
+  - Sam Kwong
+  published: '2026-10-26'
+  updated: '2026-10-26'
+  categories:
+  - cs.CV
+  abstract: Deploying large vision-language models (LVLMs) on resource-constrained embodied agents for
+    3D visual question answering necessitates cloud-edge collaboration. However, offloading massive visual
+    data to the cloud over bandwidth-limited and noisy channels introduces severe latency and transmission
+    distortion. To address this, we propose TP-JSCC, an efficient token pruning and joint source-channel
+    coding method for LVLMs-based 3D-VQA in Cloud-Edge Collaboration. First, we develop a Local and Global
+    Semantics-based Hybrid Token Pruning (LGS-HTP) module to significantly reduce the visual token count.
+    By decoupling foreground-background tokens and jointly selecting local and global semantics, LGS-HTP
+    effectively reduces redundancy while preserving reasoning-critical tokens. Second, we introduce a
+    lightweight Token Joint Source-Channel Coding (T-JSCC) module to further compress the pruned tokens
+    and ensure their robust transmission over error-prone channels. By employing lightweight cascaded
+    linear layers and Signal-to-Noise Ratio (SNR)-adaptive mechanism, this module adapts to fluctuating
+    channel conditions while maintaining minimal computational overhead. Extensive experiments on ScanQA
+    and SQA3D datasets indicate the exceptional efficiency and robustness of our approach. Specifically,
+    on ScanQA validation set, the LGS-HTP module could achieve 90% pruning ratio while incurring less
+    than a 1% CIDEr loss. Building on this, the T-JSCC further compresses the tokens by 18 times, resulting
+    in an overall 180 times data volume reduction for robust transmission, while saving 90% in computational
+    complexity for LVLM deployment. Our code is available at https://github.com/yuanhui0325/TP-JSCC.
+  url: https://arxiv.org/abs/2610.35489
+  pdf_url: https://arxiv.org/pdf/2610.35489v1
+  version: v1
+fetched: '2026-11-13'

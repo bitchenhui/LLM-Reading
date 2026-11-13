@@ -1,0 +1,52 @@
+id: paper:arxiv:2608.30184
+type: paper
+title: 'ATGS: Anchored Temporal Gaussian Splatting for Long Volumetric Video Representation'
+domain: immersive_media
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2608.30184v1
+  url: https://arxiv.org/abs/2608.30184
+  pdf_url: https://arxiv.org/pdf/2608.30184v1
+  venue: arXiv preprint
+time:
+  published: '2026-08-31'
+  collected: '2026-11-13'
+entities:
+- ref: concept:VolumetricVideo
+  role: subject
+- ref: concept:3DGS
+  role: uses
+claims:
+- statement: 以个体高斯基元显式跟踪长程复杂运动本质上不稳定，将高斯组织在时间条件锚点周围可局部化空间与时间支撑、降低长程运动复杂度。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 时间窗口策略仅激活与查询时刻相关的锚点，提升长序列体视频表示的可扩展性与时序一致性。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 紧凑的多级锚点特征（全局特征+局部空间特征+局部时间特征）联合约束高斯生成，保证时空稳定性；ATGS 在长序列复杂运动体视频上持续优于已有方法。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 用时间条件锚点组织高斯基元并配合时间窗口与多级锚点特征，提升长序列复杂运动体视频的时序稳定性与重建质量。
+  abstract_zh: 针对现有体视频方法在长序列与复杂运动下时序不稳定、易出现伪影的问题，提出基于高斯泼溅的 ATGS 框架。核心思路是以时间条件锚点为中心组织高斯基元，局部化其空间与时间支撑范围，从而降低长程运动建模复杂度。引入时间窗口策略仅激活与查询时刻相关的锚点，提升可扩展性与时序一致性。并设计编码全局、局部空间与局部时间特征的多级紧凑锚点特征，共同约束高斯生成。实验表明其在长序列、复杂运动的体视频上持续优于已有方法。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 面向自由视点体视频的高斯泼溅表示方法，属沉浸式媒体而非核心编码域，按规则仅给 summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-13'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: ATGS：面向长体视频表示的锚点化时序高斯泼溅
+relations:
+- type: same_topic
+  ref: paper:arxiv:2609.33969
+  note: 同为基于高斯泼溅与稀疏锚点的体视频表示/压缩方法，锚点化时序建模思路相近
+- type: same_topic
+  ref: paper:arxiv:2610.21121
+  note: 同为体视频的高斯泼溅表示，面向移动端流式传输场景
+- type: same_topic
+  ref: paper:arxiv:2607.03576
+  note: 同属体视频处理链路，关注体视频属性压缩中的运动估计

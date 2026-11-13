@@ -1,0 +1,88 @@
+id: paper:arxiv:2610.10629
+type: paper
+title: 'The Harness as the Only Mutable Surface: Compliance-Bounded Self-Evolution of LLM Agents in Credit
+  Pipelines, with a Measured Admission Gate'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2610.10629v1
+  url: https://arxiv.org/abs/2610.10629
+  pdf_url: https://arxiv.org/pdf/2610.10629v1
+  venue: arXiv preprint
+time:
+  published: '2026-10-07'
+  collected: '2026-11-13'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: 在三类监督重释×三严重度×每格10种子的仿真中，哈希链准入门从7,449个候选变更中仅放行144个，且无一恶化留出历史误差。
+  confidence: reported
+  metrics:
+  - name: 放行变更数
+    value: '144'
+    scope: 7,449个候选变更中，3重释族×3严重度×10种子
+  - name: 候选变更总数
+    value: 7,449
+    scope: 全部实验格子累计
+  - name: 恶化留出历史误差的放行变更数
+    value: '0'
+    scope: 被放行的144个变更中
+  evidence: abstract（初筛，未读全文）
+- statement: 门控循环在所有低、中严重度格子中将误报率恢复到oracle水平且不提高漏报。
+  confidence: reported
+  metrics:
+  - name: 误报率恢复至oracle的格子
+    value: 全部低与中严重度格子
+    scope: 门控循环 vs oracle
+  evidence: abstract（初筛，未读全文）
+- statement: 以无界系统的松散检查替换准入门后，同样的双循环放行了309个有害变更，90次运行中有49次漏报率超过10%，误报下降源于筛查被放松。
+  confidence: reported
+  metrics:
+  - name: 有害变更放行数
+    value: '309'
+    scope: 门被替换为无界检查时
+  - name: 漏报率>10%的运行数
+    value: 49/90
+    scope: 门被替换后的全部运行
+  evidence: abstract（初筛，未读全文）
+- statement: 在shift前标签上评估时准入门拒绝全部候选，规则重释必须编码为重新标注历史的规则；最高结构严重度下门的固定容差在一半种子中阻止了正确的原语替换。
+  confidence: reported
+  metrics:
+  - name: 被阻止正确替换的种子比例
+    value: 1/2
+    scope: 最高结构严重度场景
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 将LLM智能体自进化限制在harness层面并以哈希链准入门审查，仿真中仅放行144/7449个候选变更。
+  abstract_zh: 论文主张自进化只有在限制于运行时harness（指令文本、工具调用逻辑与原语组合）且模型权重固定时才可审查，使每次适应都是附原因与测试的diff。作者构建了基于该边界的双循环引擎，配有一个在部署前写入哈希链记录的准入门，并用模拟智能体与种子搜索提议器（而非真实语言模型）在信贷流水线仿真中量化该门的效果。在三类监督规则重释、三个严重度、每格10种子的实验中，门控循环从7,449个候选变更中仅接受144个，无一恶化留出历史误差，并在所有低、中严重度场景中将误报率恢复到oracle水平且不增加漏报。若把门替换为无界系统所用的松散检查（近期轨迹错误更少即通过），同样的循环接受了309个有害变更，90次运行中有49次漏报率超过10%。门的固定容差在最高结构严重度下于一半种子中阻止了正确的原语替换；作者还将机制映射到欧盟AI法案高风险信贷条款，并指出2026年4月美国模型风险指南未将agentic
+    AI纳入范围。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 自我改进AI域论文：研究harness受限的LLM智能体自进化与合规准入门，非音视频核心域，按基准仅收录初筛摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-13'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: Harness作为唯一可变面：信贷流水线中LLM智能体的合规有界自进化与可测量的准入门
+relations:
+- type: same_topic
+  ref: paper:arxiv:2610.22791
+  note: 同以harness为自进化的唯一可变面
+- type: same_topic
+  ref: paper:arxiv:2610.28201
+  note: 同属harness层面的递归自进化
+- type: same_topic
+  ref: paper:arxiv:2611.10787
+  note: 同关注自进化放行的可信性保证与门控
+- type: same_topic
+  ref: paper:arxiv:2610.27610
+  note: 同关注递归自改进产物的可审查性
+- type: same_topic
+  ref: paper:arxiv:2610.09239
+  note: 同研究自改进循环中候选变更的接受规则

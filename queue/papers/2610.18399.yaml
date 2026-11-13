@@ -1,0 +1,53 @@
+id: paper:arxiv:2610.18399
+status: skipped_by_llm
+score: 3
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+- ref: concept:TrainingFree
+  count: 1
+  weight: 1
+meta:
+  title: 'Bifocal: Training-Free Mixed Granularity Visual Token Pruning for Multimodal LLMs'
+  authors:
+  - Peiran Yin
+  - Hao Wu
+  - Zihao Yang
+  - Fengyu Zhou
+  - Yijuan Liang
+  - Haozhe Hu
+  - Xudong Wang
+  - Wei Zhang
+  - Xiaoyu Shen
+  published: '2026-10-13'
+  updated: '2026-10-16'
+  categories:
+  - cs.CV
+  abstract: 'Visual token pruning for multimodal large language models (MLLMs) appears highly effective,
+    with existing methods retaining over 95% of unpruned performance on common VQA benchmarks using a
+    quarter of the visual tokens or fewer. However, our extensive evaluation of ten methods across three
+    MLLM families and five ability groups reveals a critical gap: strong general performance often comes
+    at the cost of severe degradation on fine-grained tasks such as OCR and visual grounding. We trace
+    these failures to two limitations of the prevailing paradigm of retaining the highest-ranked native
+    patches. A single importance ranking overlooks the complementary evidence required by different tasks,
+    while sparse patch selection disrupts both image content and spatial integrity. To address these limitations,
+    we propose Bifocal, a training-free, two-stage pruning method built on a mixed-granularity framework.
+    It allocates separate budgets to query-focused and image-intrinsic evidence, complemented by a pooled
+    coarse representation of the entire image. Before the LLM, Bifocal matches question words to visual
+    regions through a soft conjunction balanced against norm-debiased image saliency, while selecting
+    image-intrinsic evidence to maximize representational coverage. Inside the LLM, it further prunes
+    tokens using density-adjusted text-to-image attention. With roughly a quarter of the original visual
+    tokens, Bifocal is the only evaluated method to retain over 90% of unpruned performance in every ability
+    group across all three models, and ranks first on average in all nine model-budget settings. The code
+    is available at: https://github.com/EIT-NLP/Bifocal'
+  url: https://arxiv.org/abs/2610.18399
+  pdf_url: https://arxiv.org/pdf/2610.18399v2
+  version: v2
+fetched: '2026-11-13'
+llm_decision: skip
+llm_reason: 主题是多模态LLM的视觉token剪枝与推理效率（模型侧加速），不涉及音视频编码、传输、质量评估或编码链路处理，超出收录范围

@@ -1,0 +1,42 @@
+id: paper:arxiv:2610.07339
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: A doctrine-grounded visual question answering dataset for Tactical Combat Casualty Care
+  authors:
+  - Junseob Kim
+  - Jade Chng
+  - Ayman Ali
+  - Victor Moas
+  - Yichun Lee
+  - Po-Chun Chin
+  - Sunil Hwang
+  - Rishikesan Kamaleswaran
+  published: '2026-10-05'
+  updated: '2026-10-05'
+  categories:
+  - cs.CV
+  - cs.AI
+  - cs.CL
+  abstract: Tactical Combat Casualty Care (TC3) requires responders to connect visual observations of
+    injuries and interventions with established clinical guidance. Developing vision-language models to
+    support this process requires supervision that links visible evidence to traceable doctrine. We present
+    TC3-VQA, a dataset constructed from public instructional and field TC3 videos and authoritative TC3
+    documents. It contains 581 items spanning 11 concepts, with 1,860 questions covering intervention
+    recognition, doctrine, clinical reasoning, procedural guidance, and refusal when visual information
+    is insufficient. Doctrine-based answers preserve verbatim source passages and character offsets. Construction
+    combines visual annotation, passage retrieval, entailment checks, and verification across model families.
+    Equipment boxes, anatomical labels, temporal segments, and source metadata accompany the question-answer
+    pairs. Automated audits and ratings by two physicians and two medical students characterize annotation
+    quality, with human ratings available for 88 retained items. The dataset provides a resource for adapting
+    vision-language models to TC3, studying the connection between visual evidence and clinical knowledge,
+    and evaluating recognition, doctrine recall, and abstention.
+  url: https://arxiv.org/abs/2610.07339
+  pdf_url: https://arxiv.org/pdf/2610.07339v1
+  version: v1
+fetched: '2026-11-13'

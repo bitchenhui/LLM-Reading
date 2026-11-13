@@ -1,0 +1,59 @@
+id: paper:arxiv:2610.24454
+type: paper
+title: 'MELD: Recursive Self-Improvement via Hierarchical Coordination for Multi-Agent Scientific Discovery'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2610.24454v1
+  url: https://arxiv.org/abs/2610.24454
+  pdf_url: https://arxiv.org/pdf/2610.24454v1
+  venue: arXiv preprint
+time:
+  published: '2026-10-17'
+  collected: '2026-11-13'
+entities:
+- ref: concept:RSI
+  role: subject
+- ref: concept:SelfImprovement
+  role: subject
+claims:
+- statement: MELD在22个MLGym与MLE-bench任务中的20个上表现最佳，并在MLGym上取得最高聚合归一化分数，仅以4B骨干模型完成协调与研究。
+  confidence: reported
+  metrics:
+  - name: 最佳任务数
+    value: 20/22
+    scope: MLGym与MLE-bench共22个任务中MELD排名第一的任务数
+  - name: 骨干模型规模
+    value: 4B
+    scope: 用于协调与研究的LLM骨干参数量，多数基线使用专有Scientist模型
+  evidence: abstract（初筛，未读全文）
+- statement: MELD在共享平滑best-of-budget目标下对Coordinator与Scientist两级策略交替进行GRPO式参数更新，并从理论上证明该层级的目标对齐性。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 理论分析刻画了MELD相对独立并行发现的协调增益成立条件、个体私有适应带来的一阶收益，并给出自适应模型的有限预算遗憾界。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出MELD层级测试时训练框架，协调者与科学家策略交替GRPO更新，实现多智能体科学发现的递归自我改进。
+  abstract_zh: 论文提出MELD，一个统一的层级测试时训练框架，在单一科学发现过程中联合自适应团队级Coordinator策略与个体级Scientist策略。Coordinator在共享推导树上生成联合搜索分支组合与研究指令，Scientist负责假设与执行计划，由共享的冻结Executor执行。两级策略在共享的平滑best-of-budget目标下交替接受GRPO式参数更新，使团队组织与个体研究行为在递归自我改进回路中共演化。理论分析证明层级目标对齐，刻画了相对独立并行发现的协调增益条件、私有适应的一阶收益，并给出自适应模型的有限预算遗憾界。在22个MLGym与MLE-bench任务上，MELD在其中20个上表现最佳，并在MLGym上取得最高聚合归一化分数，仅使用4B骨干模型。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 非核心域：LLM多智能体科学发现的层级递归自我改进框架，属自我改进AI，默认仅初筛摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-13'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: MELD：基于层级协调的多智能体科学发现递归自我改进
+relations:
+- type: same_topic
+  ref: paper:arxiv:2609.38662
+  note: 同属多智能体协作的递归自我改进研究，MELD聚焦科学发现场景的层级协调
+- type: same_topic
+  ref: paper:arxiv:2610.18083
+  note: 同样研究递归自我改进中的自适应缩放与协调问题
+- type: same_topic
+  ref: paper:arxiv:2611.10787
+  note: 均对递归自我改进提供理论层面的保证与分析（遗憾界/统计保证）

@@ -1,0 +1,49 @@
+id: paper:arxiv:2611.06203
+status: reviewed
+score: 2
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 4
+  weight: 1
+- ref: metric:MOS
+  count: 2
+  weight: 1
+meta:
+  title: 'BiCG-Net: Target-Specific Image Quality Assessment via Observation Modeling and In-Image Differencing'
+  authors:
+  - Yibu Yang
+  - Tingqiong Cui
+  - Liming Lei
+  - Hao Xiong
+  - Jun Xu
+  - Siyuan Liu
+  - Guanghui Huang
+  published: '2026-11-04'
+  updated: '2026-11-04'
+  categories:
+  - cs.CV
+  abstract: 'We estimate the quality of a specific target region (e.g., a train body) in an image, rather
+    than the whole image. This differs fundamentally from whole-image No-Reference Image Quality Assessment
+    (NR-IQA): when the target occupies a small fraction of the frame, the whole-image score is dominated
+    by background, and no public benchmark provides target-level human Mean Opinion Score (MOS). We estimate
+    target quality via nested sampling - a sequence of patches expanding outward from the target box -
+    and infer quality from the relative structure of this sequence. This motivates BiCG-Net, a student
+    network that distills an 11-teacher ensemble through a linear observation model and an in-image differencing
+    mechanism, which provably cancels the target term and teacher-specific bias. We train and test the
+    student independently on each dataset, and evaluate zero-shot transfer across benchmarks. On CSIQ
+    and LIVEC, the student reaches PLCCs of 0.9009 and 0.9133 against human MOS, exceeding the best single
+    teacher and the teacher consensus. On a self-built MOS-free railway dataset, the student reaches a
+    PLCC of 0.9855 against a weak label. The student exceeds its teachers because it learns a new mapping
+    from the relative structure of teacher readings to the ground-truth label, rather than mimicking them.
+    Residual analysis on CSIQ and LIVEC shows the prediction residual is significantly correlated with
+    background contamination, teacher dispersion, and label extremity, demonstrating the student extracts
+    information the consensus does not contain. Under CSIQ-to-LIVEC transfer, the frozen student reaches
+    a PLCC of 0.8416, exceeding the consensus by 0.1947. We position BiCG-Net as an offline target-level
+    quality auditing and label-generation engine; its 39,482-parameter student is compact by design, acting
+    as a unifying layer mapping heterogeneous teacher readings onto a common quality scale.'
+  url: https://arxiv.org/abs/2611.06203
+  pdf_url: https://arxiv.org/pdf/2611.06203v1
+  version: v1
+fetched: '2026-11-13'
+llm_decision: summary_only

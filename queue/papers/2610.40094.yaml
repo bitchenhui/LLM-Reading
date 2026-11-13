@@ -1,0 +1,44 @@
+id: paper:arxiv:2610.40094
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'RepConTUR: A Report-Conditioned Volumetric Multimodal Model for Abdominal Tumor Segmentation'
+  authors:
+  - Seunghwan Lee
+  - Sangjoon Park
+  - Jongmin Lee
+  - Yoon Jo Kim
+  - Wonyoung Cho
+  - Jin Sung Kim
+  - Han Joo Chae
+  published: '2026-10-29'
+  updated: '2026-10-29'
+  categories:
+  - cs.CV
+  abstract: 'Tumor delineation is required for radiotherapy planning, yet automatic segmentation is limited
+    by errors, predominantly false positives, that distort dose and increase editing time. The radiology
+    report accompanies the scan and localizes disease at the suborgan level, but existing text-promptable
+    models condition on short referring phrases, and most operate in 2D. We present RepConTUR, a single
+    native-3D early-fusion multimodal model that conditions volumetric abdominal tumor segmentation on
+    the narrative report. We extend AbdomenAtlas 3.0 to a suborgan-level promptable segmentation dataset
+    and generate report-based VQA pairs, yielding four report-derived tasks on the same annotations: referring
+    segmentation (RES), report-grounded segmentation (GSEG), report generation (RRG), and visual question
+    answering (VQA). We train RepConTUR, comprising a 3D CT encoder, an early-fusion language model, and
+    a native-3D segmentation module, jointly on the four tasks. Across liver, kidney and pancreas, RepConTUR
+    attains the highest Dice similarity coefficient (DSC), instance-wise precision, and detection F1 among
+    the text-promptable baselines, and adding the report raises mean precision while leaving recall comparable.
+    Against two vision-only specialists, nnU-Net and the report-supervised R-Super, RepConTUR attains
+    the highest value on every in-domain metric for liver and pancreas and the highest mean DSC, recall,
+    precision, and detection F1 over the four out-of-distribution public cohorts. Ablations indicate that
+    conditioning on the narrative report raises detection F1 from 0.499 to 0.528 within the same model,
+    that joint GSEG training raises RES F1 from 0.450 to 0.482, and that the native-3D segmentation module
+    raises GSEG F1 from 0.139 to 0.528 over its 2D counterpart. Code is available at https://github.com/Oncosoft-Research/RepConTUR.'
+  url: https://arxiv.org/abs/2610.40094
+  pdf_url: https://arxiv.org/pdf/2610.40094v1
+  version: v1
+fetched: '2026-11-13'

@@ -1,0 +1,46 @@
+id: paper:arxiv:2611.05294
+status: reviewed
+score: 3
+track: processing_enhancement
+matched:
+- ref: concept:MoE
+  count: 2
+  weight: 1
+- ref: metric:DISTS
+  count: 1
+  weight: 1
+- ref: metric:LPIPS
+  count: 1
+  weight: 1
+meta:
+  title: 'Wonder 4: A Mixture-of-Experts Recipe for Image Quality Enhancement'
+  authors:
+  - Yunan Wu
+  - Bin Sun
+  - Partha Acharjee
+  - Xiaoyu Wang
+  published: '2026-11-03'
+  updated: '2026-11-03'
+  categories:
+  - cs.CV
+  abstract: A real photograph is often blurry, grainy, compressed, scratched, and low-resolution at the
+    same time. Each defect has its own severity and its own place in the image. The corrections for these
+    defects conflict with each other. Exist- ing models describe the whole image with one description,
+    so they cannot say where each correction belongs. To solve this problem, we present Wonder 4, a mixture-of-experts
+    (MoE) model for image quality enhancement. It corrects several defects of a real photograph at the
+    same time, each in the region where it occurs. Every block of the model holds a mixture of N = 13
+    experts. A router, trained with the model, sends every image patch to k = 5 of them. No degradation
+    classifier, mask, prompt, detector, or task label is used. Another issue is that standard MoE training,
+    taken from language models, pushes every expert toward equal use. Equal use applies every correction
+    everywhere, even where it is not needed. We replace this rule with a bias that only sets a minimum
+    share of use. Across all patches, an expert used less than this minimum gets higher router scores
+    until it is selected again. An expert above the minimum is not changed, so no expert is forced to
+    be used as often as the others. The bias needs no extra loss. The method adds no extra module and
+    no extra processing step. We evaluate Wonder 4 on DIV2K and Flickr2K, against five published methods
+    and three open-weight pipelines. It reaches the best LPIPS, DISTS, and NIQE on all three test settings
+    (DIV2K x4, DIV2K x8, and Flickr2K x4).
+  url: https://arxiv.org/abs/2611.05294
+  pdf_url: https://arxiv.org/pdf/2611.05294v1
+  version: v1
+fetched: '2026-11-13'
+llm_decision: summary_only

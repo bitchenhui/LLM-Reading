@@ -1,0 +1,35 @@
+id: paper:arxiv:2608.08286
+status: skipped
+score: 0
+track: audio_coding
+matched: []
+meta:
+  title: 'ReLMCodec: Designing Predictable Speech Tokens from Pre-Quantization Phoneme Structure'
+  authors:
+  - Zixiang Wan
+  - Xusheng Yang
+  - Zheng Wang
+  - Peiji Yang
+  published: '2026-08-08'
+  updated: '2026-08-08'
+  categories:
+  - eess.AS
+  - cs.SD
+  abstract: 'Neural speech codecs face a fundamental tension in the language-model era: tokens that support
+    high-fidelity reconstruction are not necessarily easy for autoregressive models to predict. Our controlled
+    analysis of diverse codec and self-supervised speech representations shows that clearer phoneme structure
+    before discrete code assignment is consistently associated with easier autoregressive token prediction.
+    Yet phoneme structure alone is insufficient for high-fidelity reconstruction, which also requires
+    reconstruction-relevant acoustic detail. Guided by this observation, we introduce ReLMCodec, a low-bitrate
+    single-codebook speech codec built upon a preserve--control--refine principle: it preserves the linguistic
+    organization of frozen self-supervised learning (SSL) features at the quantizer input, controls reconstruction-driven
+    drift through Pre-quantization Anchor-Preserving Adaptation (PAPA), and refines the quantized latent
+    space with a training-only WavLM-Large L24 teacher to reduce phoneme-level token fragmentation. Together,
+    these components allow acoustic detail to support waveform reconstruction while keeping the resulting
+    token sequence predictable for autoregressive models. At 650 and 800 bps, ReLMCodec moves the empirical
+    single-stream predictability--reconstruction frontier in our evaluations, with gains that carry over
+    to downstream text-to-speech (TTS) synthesis in both intelligibility and speaker similarity.'
+  url: https://arxiv.org/abs/2608.08286
+  pdf_url: https://arxiv.org/pdf/2608.08286v1
+  version: v1
+fetched: '2026-11-13'

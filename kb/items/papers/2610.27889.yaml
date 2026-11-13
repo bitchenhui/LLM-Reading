@@ -1,0 +1,55 @@
+id: paper:arxiv:2610.27889
+type: paper
+title: Elicitation or Expansion? Demystifying Gains from Agent Harness Optimization
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2610.27889v1
+  url: https://arxiv.org/abs/2610.27889
+  pdf_url: https://arxiv.org/pdf/2610.27889v1
+  venue: arXiv preprint
+time:
+  published: '2026-10-20'
+  collected: '2026-11-13'
+entities:
+- ref: concept:RSI
+  role: subject
+- ref: concept:SelfImprovement
+  role: subject
+claims:
+- statement: harness优化相对更强干预（模型扩容、增加推理时计算）的pass@1优势，在更大尝试预算（pass@k）下可能发生反转
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 聚合的整体性能收益可能掩盖harness优化在困难任务上的表现不足，因此需要细粒度的收益诊断而非仅看成功率
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 区分激发（elicitation，提高已可达任务的可靠性）与拓展（expansion，扩大可解任务范围）对递归自我改进和进化搜索至关重要，因为拓展型收益才能提供更广的成功经验以推动能力边界
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 借鉴RL的pass@k分析，区分框架优化收益源自激发既有能力还是拓展可解任务边界，发现pass@1优势在大尝试预算下可能反转。
+  abstract_zh: 该工作系统研究不改权重、仅优化智能体harness（上下文、工具使用与执行流程设计）所带来的性能收益的本质。作者借鉴强化学习文献中比较RL训练前后模型的pass@k分析方法，将优化后框架与其优化前版本进行对照。具体评估可达任务覆盖面的变化，将harness优化与模型扩容及增加推理时计算进行对比，并考察收益随任务难度的变化规律。在静态预测与动态任务上均发现：harness相对更强干预的pass@1优势在更大尝试预算下可能反转，且聚合收益会掩盖在困难任务上的不足，凸显细粒度诊断的必要性。作者指出激发（提升已可达任务的可靠性）与拓展（扩大可解任务范围）的区分对递归自我改进和进化搜索尤为关键，因为拓展才能为推动能力边界提供更广的成功经验。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 系统分析LLM智能体harness优化收益是激发既有能力还是拓展能力边界，直接关系递归自我改进与进化搜索的评估方法学，属self_improvement域而非核心编码域，按基准仅摘要收录。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-13'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 激发还是拓展？解密智能体框架（Harness）优化的收益本质
+relations:
+- type: same_topic
+  ref: paper:arxiv:2610.28201
+  note: 同为智能体harness层面的递归自我改进研究，本文为其收益本质提供诊断框架
+- type: same_topic
+  ref: paper:arxiv:2610.26770
+  note: 同为harness自我改进，本文分析的正是此类优化收益属于激发还是拓展
+- type: same_topic
+  ref: paper:arxiv:2610.27610
+  note: 同属对RSI收益声明的评估与审计方法学，均强调超越表层成功率的诊断
+- type: same_topic
+  ref: paper:arxiv:2610.09239
+  note: 同属自我改进循环中收益评估陷阱的分析性工作

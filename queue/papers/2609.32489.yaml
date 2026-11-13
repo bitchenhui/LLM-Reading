@@ -1,0 +1,45 @@
+id: paper:arxiv:2609.32489
+status: skipped_by_llm
+score: 2
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+- ref: concept:TrainingFree
+  count: 1
+  weight: 1
+meta:
+  title: 'When Helpful Text Hurts: Option-Redirecting Bias in Vision-Language Models'
+  authors:
+  - Tam Le Thi Thanh
+  - Hoang Tran Van
+  - Hong-Hanh Nguyen-Le
+  - Thanh Duc Ngo
+  published: '2026-09-26'
+  updated: '2026-09-26'
+  categories:
+  - cs.AI
+  - cs.CV
+  abstract: 'In tri-modal visual question answering (VQA), auxiliary text is commonly used to complement
+    visual and textual inputs, yet its reliability is often uncontrolled. While prior work studies modality
+    conflicts in general, it remains unclear how different types of unreliable auxiliary text affect answer
+    selection under fixed image-question-option contexts. In this work, we show that the most harmful
+    auxiliary text is not necessarily the most factually incorrect, but the one that aligns with the question
+    while contradicting the image and favoring a specific distractor, leading to systematic redirection
+    of model predictions. To isolate this effect, we introduce the Textual Reliability Ladder, a controlled
+    diagnostic protocol that decomposes auxiliary text along three axes: image consistency, question relevance,
+    and option support. Across multiple datasets (ScienceQA, VCR, A-OKVQA, Causal-VidQA) and recent VLMs,
+    we find that such distractor-supporting text induces the largest accuracy drops (up to 53.1%) and
+    concentrates errors on specific incorrect options. To mitigate this failure mode, we propose a training-free
+    inference-time intervention that explicitly counteracts this redirection effect via noise-stability
+    steering and dynamic grounding, reducing redirected errors while largely preserving performance under
+    faithful text. Our results highlight that auxiliary-text reliability must be understood at the decision
+    level, rather than solely through factual correctness, and provide a practical pathway toward more
+    robust tri-modal reasoning.'
+  url: https://arxiv.org/abs/2609.32489
+  pdf_url: https://arxiv.org/pdf/2609.32489v1
+  version: v1
+fetched: '2026-11-13'
+llm_decision: skip
+llm_reason: 三模态视觉问答中VLM对误导性辅助文本的鲁棒性研究，不属音视频技术各域，concept:IQA为噪声匹配（此VQA指视觉问答非视频质量评估）

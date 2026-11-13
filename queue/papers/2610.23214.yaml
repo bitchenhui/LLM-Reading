@@ -1,0 +1,47 @@
+id: paper:arxiv:2610.23214
+status: skipped_by_llm
+score: 2
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: MLLM Frame Subset Ensembling for Audio-Visual Video QA and MLLM-based Reranking for Ad-hoc Video
+    Search in TRECVID 2025
+  authors:
+  - Andreas Goulas
+  - Damianos Galanopoulos
+  - Ioannis Patras
+  - Vasileios Mezaris
+  published: '2026-10-16'
+  updated: '2026-10-16'
+  categories:
+  - cs.CV
+  abstract: This paper presents the overview of the runs related to the Ad-hoc Video Search (AVS) and
+    Video Question Answering (VQA) tracks of TRECVID 2025 on behalf of the CERTH-ITI team. For the AVS
+    track, we introduce a two-stage framework built on foundation models. In the first stage, multiple
+    vision-language models (VLMs) encode both the input query, augmented through LLM-generated rephrasings,
+    and the candidate video shots, producing weighted similarity scores for initial retrieval. In the
+    second stage, we utilize a Multimodal-LLM(MLLM)-based reranking module that evaluates the semantic
+    alignment between each shot among the top-N highest-ranked ones and the original query, generating
+    updated relevance scores for reordering these shots. This MLLM-driven reranking significantly improves
+    contextual matching and produces more accurate final rankings without requiring any model training.
+    Regarding the VQA track, we fine-tune an audio-visual MLLM model on the provided TRECVID training
+    dataset and we implement an inference-time scaling technique to enhance the multimodal understanding
+    capabilities of the MLLM. For the open-ended Answer Generation (AG) task, we aggregate multiple model
+    responses per question via a majority vote. The responses are generated with greedy sampling from
+    different random frame subsets of the video and they are ranked based on the number of votes. For
+    the Multiple-Choice (MC) task, instead of voting, we use mean pooling on the logits assigned by the
+    fine-tuned model to each candidate response. Through the combination of fine-tuning and frame subset
+    ensembling we achieve the highest score across 3 metrics in the VQA AG task and the second highest
+    in the VQA MC task.
+  url: https://arxiv.org/abs/2610.23214
+  pdf_url: https://arxiv.org/pdf/2610.23214v1
+  version: v1
+fetched: '2026-11-13'
+llm_decision: skip
+llm_reason: 即席视频搜索与视频问答的MLLM系统论文（VQA为Video Question Answering而非质量评估，IQA实体匹配属噪声），不属于编码/传输/质量等任一收录域

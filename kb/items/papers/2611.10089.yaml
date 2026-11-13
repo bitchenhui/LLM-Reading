@@ -1,0 +1,49 @@
+id: paper:arxiv:2611.10089
+type: paper
+title: 'META-IR: Meta-Introspective Reasoning for Adaptive Safety Alignment in LLM'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2611.10089v1
+  url: https://arxiv.org/abs/2611.10089
+  pdf_url: https://arxiv.org/pdf/2611.10089v1
+  venue: arXiv preprint
+time:
+  published: '2026-11-06'
+  collected: '2026-11-13'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:SelfImprovement
+  role: uses
+claims:
+- statement: META-IR采用双循环架构：内循环经SI-MCTS执行结构化风险分析、自我评估与反思纠错，外循环用元学习跨多类越狱任务族优化内省策略。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 动态越狱模拟模块使模型在渐进变难的对抗提示下实现无人工监督的持续自我改进。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在Llama-3.1-8B-Instruct与Qwen-2-7B-Instruct及安全/有用性/泛化/内省多类指标上，META-IR较全部基线显著提升适应速度、鲁棒性与推理稳定性。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出双循环元内省框架META-IR，以内省MCTS加元学习外循环实现LLM安全对齐对越狱攻击的持续自适应改进。
+  abstract_zh: 针对静态对齐流程在对抗分布偏移下失效的问题，论文提出元内省推理框架META-IR。其采用双循环架构：内循环通过SI-MCTS进行结构化风险分析、自我评估与反思纠错，外循环基于元学习在多类越狱任务族上优化内省策略，以快速泛化到未见攻击。动态越狱模拟模块使模型持续接触渐进变难的对抗提示，实现无人工监督的持续自我改进。在Llama-3.1-8B-Instruct与Qwen-2-7B-Instruct上的实验表明，META-IR在安全性、有用性、泛化与内省指标上较全部基线显著提升适应速度、鲁棒性与推理稳定性。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: LLM安全对齐的元内省自我改进研究，属self_improvement域而非音视频核心域，仅作初筛摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-13'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: META-IR：面向大语言模型自适应安全对齐的元内省推理框架
+relations:
+- type: same_topic
+  ref: paper:arxiv:2610.40751
+  note: 同为面向LLM安全的自我改进（递归安全改进）研究
+- type: same_topic
+  ref: paper:arxiv:2610.07935
+  note: 同为主题驱动的自我改进安全对齐与泛化研究

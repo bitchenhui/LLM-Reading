@@ -1,0 +1,65 @@
+id: paper:arxiv:2610.29784
+type: paper
+title: 'Evolving with Open Worlds: Towards Recursive Self-Improvement for Future Forecasting'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2610.29784v2
+  url: https://arxiv.org/abs/2610.29784
+  pdf_url: https://arxiv.org/pdf/2610.29784v2
+  venue: arXiv preprint
+time:
+  published: '2026-10-21'
+  collected: '2026-11-13'
+entities:
+- ref: concept:RSI
+  role: subject
+- ref: concept:SelfImprovement
+  role: subject
+claims:
+- statement: EvoForesight 自我改进的预测智能体在外部 FutureX 排行榜上连续三周在所有系统中排名第一。
+  confidence: reported
+  metrics:
+  - name: rating 提升
+    value: 195%
+    scope: FutureX 排行榜（按真实世界结果验证、每周更新）上的相对提升上限
+  evidence: abstract（初筛，未读全文）
+- statement: 在作者自建的合成评测上，系统在四个基础 LLM 上均进入前三，超过最强基线。
+  confidence: reported
+  metrics:
+  - name: Bradley–Terry 分数领先
+    value: '10.7'
+    scope: 相对最强基线的最大领先幅度（自建合成评测，四个基础 LLM）
+  evidence: abstract（初筛，未读全文）
+- statement: 方法上通过将搜索与预测解耦来适配易受污染的实时环境，并以可复用技能蒸馏让智能体在有限实时轨迹下持续进化。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出以未来事件预测为落地的自我改进智能体系统 EvoForesight，在周更的 FutureX 榜单连续三周夺冠。
+  abstract_zh: 论文指出当前 AI 系统参数冻结、依赖外部更新，并提出递归自我改进（RSI）需要持续变化、客观可验证且自然锚定的环境。作者构建 EvoForesight：一个以真实未来事件预测为任务落地的可持续进化智能体系统，活的环境合成可验证任务，递归进化引擎将每次预测背后的推理轨迹转化为能力，通过搜索与预测解耦来适配易受污染的实时环境，并蒸馏可复用技能以在有限轨迹下持续进化。在外部
+    FutureX 排行榜（按真实世界结果验证预测、每周更新）上，其自我改进的预测智能体连续三周在所有系统中排名第一，评分最高提升 195%；在自建合成评测上，四个基础 LLM 均进入前三，最多领先最强基线
+    10.7 个 Bradley–Terry 分。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 核心贡献是递归自我改进（RSI）智能体系统 EvoForesight，与音视频编码核心域无关，属 self_improvement 域，按基准给 summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-13'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 在开放世界中进化：迈向面向未来预测的递归自我改进
+relations:
+- type: same_topic
+  ref: paper:arxiv:2609.33867
+  note: 同为递归自我改进（RSI），均涉及递归技能进化/蒸馏
+- type: same_topic
+  ref: paper:arxiv:2610.18083
+  note: 同属 RSI 系统的扩展与协调研究方向
+- type: same_topic
+  ref: paper:arxiv:2610.20665
+  note: 均在实时时钟/动态开放环境下评估智能体能力
+- type: same_topic
+  ref: paper:arxiv:2610.14224
+  note: 同为面向开放世界的递归智能体自我改进/harness 进化

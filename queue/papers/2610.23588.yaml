@@ -1,0 +1,33 @@
+id: paper:arxiv:2610.23588
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: Enhancing RAG-based Medical VQA with Gated Multimodal Representations
+  authors:
+  - Daniela Jimenez-Pano
+  - Hugo Jair Escalante
+  - Delia Irazú Hernández-Farías
+  published: '2026-10-16'
+  updated: '2026-10-16'
+  categories:
+  - cs.CV
+  - cs.CL
+  abstract: Medical Vision-Language Models (Med-LVLMs) have shown strong performance in Medical Visual
+    Question Answering (MVQA), yet they may still produce factually inconsistent responses. Retrieval-Augmented
+    Generation (RAG) can mitigate this issue by incorporating external clinical evidence; however, retrieval
+    is often guided by a single modality, potentially overlooking the joint semantics of medical images
+    and clinical questions. We introduce a multimodal RAG framework that learns a joint query representation
+    through a Gated Multimodal Unit, enabling evidence retrieval to leverage information from both modalities
+    while keeping the underlying Med-LVLM frozen. We evaluate the proposed approach on benchmark datasets.
+    Results show that the multimodal query representation consistently outperforms a reference Med-LVLM
+    and remains competitive with state-of-the-art methods. Our findings demonstrate the potential of multimodal
+    query representations for more effective evidence retrieval in Medical VQA.
+  url: https://arxiv.org/abs/2610.23588
+  pdf_url: https://arxiv.org/pdf/2610.23588v1
+  version: v1
+fetched: '2026-11-13'

@@ -1,0 +1,70 @@
+id: paper:arxiv:2610.09239
+type: paper
+title: 'The Winner''s Curse in LLM Self-Improvement Loops: Selection Noise, Lock-in, and Acceptance Rules'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2610.09239v1
+  url: https://arxiv.org/abs/2610.09239
+  pdf_url: https://arxiv.org/pdf/2610.09239v1
+  venue: arXiv preprint
+time:
+  published: '2026-10-07'
+  collected: '2026-11-13'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: subject
+claims:
+- statement: 预注册研究中，贪心接受循环最终在选择集上的分数超过留出准确率：16个选择项时高13至20点，256个选择项时高1至5点。
+  confidence: reported
+  metrics:
+  - name: 选择集分数-留出准确率差
+    value: 13-20点
+    scope: 16个选择项，预注册研究
+  - name: 选择集分数-留出准确率差
+    value: 1-5点
+    scope: 256个选择项，预注册研究
+  evidence: abstract（初筛，未读全文）
+- statement: Qwen模型改写自身指令的实验中，首个提案之后的大多数改进提案实际上有害（每个候选同时在600条留出项上评估）。
+  confidence: reported
+  metrics:
+  - name: 留出评估规模
+    value: 600条
+    scope: 每个候选的留出打分集
+  evidence: abstract（初筛，未读全文）
+- statement: 测试的各接受规则在整个循环中均未能超越贪心接受；留出增益随选择集规模在TREC上增长但在GSM8K上未增长。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在64条从未用于选择的条目上对起始与当前指令打分，可消除循环报告增益的平均偏差，但单次校准估计仍偏差约6点。
+  confidence: reported
+  metrics:
+  - name: 单次校准估计残余偏差
+    value: 约6点
+    scope: 64条目校准集
+  evidence: abstract（初筛，未读全文）
+- statement: GEPA与MIPROv2的验证分数同样表现出选择集增益系统性超过留出增益，提示该偏差广泛存在于主流自我改进框架。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 将LLM自我改进的'更好即保留'建模为噪声下选择，量化评估集复用导致的赢家诅咒与增益虚高。
+  abstract_zh: 论文将自我改进LLM系统中'保留更好者'这一步建模为测量噪声下的选择问题，刻画同一决策中候选间的相关误差，并实证研究评估集复用的后果。在Qwen模型改写自身指令、每个候选同时在600条留出项上打分的实验中，首个提案之后的大多数提案有害；基于独立试点集先验的理论预测与原生循环中首批提交的平均夸大程度相符（但非逐项成立）。预注册研究显示，贪心循环在16个选择项下最终选择集分数超出留出准确率13至20点，256项时降至1至5点；所测接受规则在整个循环中均未超越贪心接受。在选择集上测得的增益也系统性超过留出增益，同样出现在GEPA与MIPROv2的验证分数中；在64条从未用于选择的条目上对起始与当前指令打分可消除报告增益的平均偏差，但单次估计仍偏差约6点。作者建议自我改进研究应报告带不确定度的留出增益。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 直接研究LLM自我改进循环中的选择噪声与评估偏差方法论，属self_improvement领域高相关工作，非音视频核心域故不给deep_read
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-13'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: LLM自我改进循环中的赢家诅咒：选择噪声、锁定效应与接受规则
+relations:
+- type: same_topic
+  ref: paper:arxiv:2611.10787
+  note: 同主题：均为递归自我改进中的统计可靠性与评估方法研究
+- type: same_topic
+  ref: paper:arxiv:2610.27610
+  note: 同主题：审视递归自我改进声明背后的评估证据质量

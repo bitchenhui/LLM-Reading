@@ -1,0 +1,58 @@
+id: paper:arxiv:2609.23606
+type: paper
+title: 'Beyond UV Mapping: Mesh Texture Compression via Surface-Aligned Texture Fields'
+domain: immersive_media
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2609.23606v2
+  url: https://arxiv.org/abs/2609.23606
+  pdf_url: https://arxiv.org/pdf/2609.23606v2
+  venue: arXiv preprint
+time:
+  published: '2026-09-20'
+  collected: '2026-11-13'
+entities:
+- ref: org:MPEG
+  role: subject
+- ref: org:AOMedia
+  role: evaluated_on
+claims:
+- statement: TexF 通过从网格表面导出的稀疏体素组织纹理属性，替代 2D UV 图集，保留局部三维相关性并支持高分辨率纹理与表面直接查询。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在 MPEG 与 AOM 网格压缩基准上，TexF 的码流压缩与 GPU 常驻压缩的平均率失真性能均优于代表性 UV 基方法。
+  confidence: reported
+  metrics:
+  - name: 平均率失真性能
+    value: 优于代表性UV方法（摘要未给出具体数值）
+    scope: MPEG 与 AOM 网格压缩基准、码流与 GPU 常驻两种压缩模式
+  evidence: abstract（初筛，未读全文）
+- statement: 3DNTC 结合量化哈希特征与轻量解码器，支持在表面位置随机访问重建，并可实现实时渲染。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: TexF 复用既有三维属性编解码器，体素位置由解码后的网格重建，无需单独传输；可微渲染用于图像空间细化。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出表面对齐纹理场 TexF 及 GPU 常驻神经压缩 3DNTC，在 MPEG/AOM 网格基准上率失真优于 UV 图集方法。
+  abstract_zh: 针对传统 UV 图集接缝不连续与映射开销限制编码效率的问题，该文提出 TexF：一种表面对齐的纹理场表示，将从网格表面导出的稀疏体素用于组织纹理属性，保留局部三维相关性并支持高分辨率纹理与表面直接查询。码流压缩路径复用既有三维属性编解码器，体素位置可由解码后的网格重建，无需单独传输。GPU
+    常驻压缩路径提出 3DNTC，结合量化哈希特征与轻量解码器实现表面位置的随机访问重建，并用可微渲染在图像空间细化体素属性与压缩神经场。在 MPEG 与 AOM 网格压缩基准上，码流与 GPU 常驻两种模式的平均率失真性能均优于代表性
+    UV 方法，3DNTC 还支持实时渲染。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 网格纹理压缩属三维/沉浸媒体编码，在 MPEG 与 AOM 网格压缩基准上验证，非核心视频编码域，按规则给 summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-13'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 超越 UV 映射：基于表面对齐纹理场的网格纹理压缩
+relations:
+- type: same_topic
+  ref: paper:arxiv:2607.03576
+  note: 同为三维/体积内容属性压缩，本文压缩网格表面纹理属性，对方研究体积视频属性压缩的运动估计
+- type: same_topic
+  ref: paper:arxiv:2606.29179
+  note: 均属 MPEG/AOM 生态下的三维媒体编码：V-PCC 点云流式与本文网格纹理压缩
