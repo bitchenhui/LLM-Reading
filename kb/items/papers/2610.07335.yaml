@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-10-05'
   collected: '2026-11-12'
+  updated: '2026-11-14'
 entities:
 - ref: concept:LLM
   role: subject
@@ -43,6 +44,7 @@ claims:
 summaries:
   one_liner_zh: SAG用免训练门控按需调用批评并结合在线自提升，大幅提升LLM智能体长程任务成功率与token效率。
   abstract_zh: 论文提出SAG（Self-improving Agent with Gated critique），将批评机制的调用建模为长程交互中的逐步决策问题。其核心是轻量免训练门控：基于可行动作集上的全局熵与局部top-2间距等动作级模糊性信号估计批评的效用，从决策论角度近似信息价值（VoI），仅在预期收益大于成本时才触发昂贵反馈。框架还引入在线自举式自我改进，使执行器内化批评辅助的行为并逐步降低对批评的依赖。在三个长程交互基准和多个骨干模型上，SAG显著优于无批评与始终开启批评的智能体：在ALFWorld上任务成功率从24.6%提升至78.4%，在与ReAct相当的token预算下取得3.1倍归一化token效率提升；7B执行器加3B轻量批评器可达到14B执行器无批评时的性能。
+  deep_dive: docs/auto/2610.07335.md
 assessment:
   relevance: high
   decision: summary_only

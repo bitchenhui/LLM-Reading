@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-10-03'
   collected: '2026-11-13'
+  updated: '2026-11-14'
 entities:
 - ref: concept:EntropyModel
   role: subject
@@ -42,6 +43,7 @@ summaries:
   one_liner_zh: 提出OctMesh，在共享八叉树层次上联合编码网格几何与连接性，无损压缩较V-Mesh节省12.8%码率。
   abstract_zh: 该文提出学习型无损三角网格压缩框架OctMesh，在共享的八叉树层次上同时编码顶点几何与连接性。其关键观察是八叉树池化产生的父节点要么只有一个子节点、要么有2至8个子节点，据此将子边按端点父节点类型及是否共享父节点划分为四类，形成小型固定形状的预测任务：由父图唯一确定的连接免比特继承，其余候选由三个神经预测器估计概率并驱动算术编码；父内连接的二值化预测还为跨父连接预测提供上下文。框架采用融合局部几何、父连接与全局形状的图感知父特征提取器，粗层使用专用权重、细层共享权重，最后以残余边与最细层面片选择载荷完成重建。在MPEG
     V-DMC八个测试序列共256帧上，OctMesh以平均7.033 bits/face无损恢复最细层顶点坐标、边与无向面集合，比V-Mesh低12.8%；同一层次表示还支持九级渐进式顶点与边细化。
+  deep_dive: docs/auto/2610.04281.md
 assessment:
   relevance: high
   decision: summary_only

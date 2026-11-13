@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-10-06'
   collected: '2026-11-13'
+  updated: '2026-11-14'
 entities:
 - ref: concept:SelfImprovement
   role: subject
@@ -34,6 +35,7 @@ claims:
 summaries:
   one_liner_zh: 提出SkillPoison框架，仅凭通过验证的成功经验即可渐进投毒自改进LLM智能体的技能库，攻击成功率达95.71%。
   abstract_zh: 自我改进型LLM智能体常将成功经验蒸馏为可复用的持久技能，而现有技能攻击需注入恶意触发器、行为或虚假事实，易被检测且难以沉淀为持久技能。本文证明技能投毒可仅由通过验证的成功经验引发，无需任何单条轨迹变为恶意：SkillPoison先构建一组强化目标行为的成功经验，再移除约束该行为适用条件的上下文，从而塑造技能抽取器的泛化方式。注入内容本身保持任务正确并通过验证与词法检查，却在被错误套用时诱导有害行为。在三个基准上攻击成功率达95.71%。
+  deep_dive: docs/auto/2610.07645.md
 assessment:
   relevance: high
   decision: summary_only

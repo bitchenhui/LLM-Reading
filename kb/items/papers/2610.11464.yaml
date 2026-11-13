@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-10-08'
   collected: '2026-11-13'
+  updated: '2026-11-14'
 entities:
 - ref: concept:SelfImprovement
   role: subject
@@ -43,6 +44,7 @@ summaries:
   abstract_zh: 论文把自我改进智能体回路中的验证器（grader）本身作为进化对象：由聚类失败样本合成的、基于小型多数确定性缺陷检测器的可检验表达式，从诞生起经门控筛选，选择依据是与十项锚定参考集的一致性及无标注输出上的共识，而非智能体分数。在
     MBPP+ 上，进化验证器相比手写种子组合获得 +0.21 的留出一致率提升，在每个种子上均成立，并最终超过其内嵌的裸 LLM 评判。关键发现：移除锚定守卫会使验证器塌缩为恒通过的空洞评分器，但该塌缩验证器训练技能的效果同样好，说明下游任务分数无法证明自进化验证器的有效性。配套的
     Double Ratchet 生命周期管理技能回路，在代码生成、企业 text-to-SQL 和无参考报告生成上保留了真值或 rubric 验证器 88-110% 的提升。
+  deep_dive: docs/auto/2610.11464.md
 assessment:
   relevance: high
   decision: summary_only
