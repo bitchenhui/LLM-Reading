@@ -1,0 +1,59 @@
+id: paper:arxiv:2611.15670
+status: reviewed
+score: 10
+track: video_image_coding
+matched:
+- ref: codec:VVC
+  count: 2
+  weight: 3
+- ref: impl:VTM
+  count: 1
+  weight: 3
+- ref: dataset:UVG
+  count: 1
+  weight: 1
+- ref: metric:BD-Rate
+  count: 1
+  weight: 1
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+- ref: org:JVET
+  count: 1
+  weight: 1
+meta:
+  title: 'HR-NVC++: Unified Ultra-High-Resolution Neural Video Coding with Confidence-Guided Spatial-Temporal
+    Cues'
+  authors:
+  - Feng Ye
+  - Lijiong Chen
+  - Kai Zhang
+  - Li Zhang
+  - Chuanmin Jia
+  published: '2026-11-11'
+  updated: '2026-11-11'
+  categories:
+  - eess.IV
+  abstract: 'Ultra-high-resolution neural video coding (NVC) remains challenging because temporal correspondence
+    becomes increasingly unreliable as spatial resolution increases. Although recent neural B-frame codecs
+    have improved bi-directional temporal prediction, complex motion and fine-grained structures still
+    lead to unreliable temporal references, while spatial information of the current frame remains underexploited.
+    In this work, we propose HR-NVC++, a unified ultra-high-resolution NVC approach that supports both
+    fidelity-oriented and perceptual-quality-oriented compression with a shared spatial-temporal context.
+    The context integrates bi-directional temporal cues with complementary spatial information: confidence-guided
+    fusion adaptively balances the forward and backward temporal cues according to their estimated correspondence
+    reliability, while a spatial complement branch enriches regions that temporal references fail to explain.
+    The resulting context serves as a common basis for two compression modes. Built upon this shared context,
+    the fidelity mode retains entropy-based latent coding for pixel-accurate compression, whereas the
+    perceptual mode removes additional latent coding and performs reconstruction directly from the context.
+    This design demonstrates that a sufficiently informative spatial-temporal context already carries
+    the dominant content required for perceptually favorable reconstruction, allowing different compression
+    objectives to share the same contextual representation. Extensive experiments on UVG-4K and JVET Class
+    A1/A2 show that HR-NVC++ achieves an average PSNR BD-rate saving of 13.01% over the H.266/VVC reference
+    model VTM-13.2 under the random access configuration, while delivering substantially better perceptual
+    quality and temporal consistency than existing neural video codecs.'
+  url: https://arxiv.org/abs/2611.15670
+  pdf_url: https://arxiv.org/pdf/2611.15670v1
+  version: v1
+fetched: '2026-11-13'
+llm_decision: deep_read

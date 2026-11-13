@@ -1,0 +1,69 @@
+id: paper:arxiv:2611.15670
+type: paper
+title: 'HR-NVC++: Unified Ultra-High-Resolution Neural Video Coding with Confidence-Guided Spatial-Temporal
+  Cues'
+domain: video_image_coding
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2611.15670v1
+  url: https://arxiv.org/abs/2611.15670
+  pdf_url: https://arxiv.org/pdf/2611.15670v1
+  venue: arXiv preprint
+time:
+  published: '2026-11-11'
+  collected: '2026-11-13'
+  updated: '2026-11-13'
+entities:
+- ref: codec:VVC
+  role: subject
+- ref: impl:VTM
+  role: compared_against
+- ref: dataset:UVG
+  role: evaluated_on
+- ref: org:JVET
+  role: evaluated_on
+- ref: metric:PSNR
+  role: measured_by
+- ref: metric:BD-Rate
+  role: measured_by
+claims:
+- statement: HR-NVC++ 在 UVG-4K 与 JVET Class A1/A2 上、随机访问配置下，平均 PSNR BD-rate 相对 H.266/VVC 参考模型 VTM-13.2
+    节省 13.01%。
+  confidence: reported
+  metrics:
+  - name: PSNR BD-rate saving
+    value: 13.01%
+    scope: UVG-4K 与 JVET Class A1/A2 平均，random access 配置，对比 VTM-13.2（H.266/VVC）
+  evidence: abstract（初筛，未读全文）
+- statement: HR-NVC++ 用单一共享时空上下文同时支持保真导向与感知质量导向两种压缩模式：保真模式保留熵编码隐变量，感知模式直接由上下文重建。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 感知模式下 HR-NVC++ 的感知质量与时间一致性显著优于现有神经视频编码器（摘要定性结论，未附具体数值）。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 置信度引导融合双向时间线索与空间补充分支，统一超高分辨率神经视频编码，RA 下较 VTM-13.2 节省 13.01% PSNR BD-rate。
+  abstract_zh: 针对空间分辨率提升后时间对应关系日益不可靠的问题，HR-NVC++ 构建共享时空上下文：以置信度引导的自适应融合平衡前向与后向时间线索的可靠性，并由空间补充分支丰富时间参考无法解释的区域。基于该共享上下文提供两种压缩模式：保真模式保留基于熵的隐变量编码实现像素级精确压缩；感知模式去除额外隐变量编码、直接从上下文重建，表明信息充分的时空上下文已携带感知友好重建所需的主要内容。在
+    UVG-4K 与 JVET Class A1/A2 上的实验显示，随机访问配置下相对 H.266/VVC 参考模型 VTM-13.2 平均节省 13.01% PSNR BD-rate，同时感知质量与时间一致性显著优于现有神经视频编码器。
+  deep_dive: docs/auto/2611.15670.md
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 核心域神经视频编码：统一超高分辨率框架，RA 下较 VTM-13.2 节省 13.01% PSNR BD-rate，结果显著。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-13'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: HR-NVC++：基于置信度引导时空线索的统一超高分辨率神经视频编码
+relations:
+- type: same_topic
+  ref: paper:arxiv:2603.05756
+  note: 同为学习型视频编码的统一模式框架（Uni-LVC 统一帧内/帧间，本文统一保真/感知模式）
+- type: same_topic
+  ref: paper:arxiv:2606.28163
+  note: 同属神经视频编码跨质量尺度统一设计（NVRC++ 覆盖极端复杂度与质量范围）
+- type: same_topic
+  ref: paper:arxiv:2609.34725
+  note: 同为感知/生成导向的视频压缩路线（Gen2-VC 利用生成先验，本文感知模式共享上下文直接重建）

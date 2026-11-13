@@ -1,0 +1,47 @@
+id: paper:arxiv:2611.14832
+type: paper
+title: 'Neural Compression for Scientific Particle Data: Perspectives on How Learning Can Help'
+domain: immersive_media
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2611.14832v1
+  url: https://arxiv.org/abs/2611.14832
+  pdf_url: https://arxiv.org/pdf/2611.14832v1
+  venue: arXiv preprint
+time:
+  published: '2026-11-10'
+  collected: '2026-11-13'
+entities:
+- ref: codec:G-PCC
+  role: subject
+claims:
+- statement: 科学粒子数据与CV点云在分形维数上存在本质差异：CV点云局部呈平面状，而科学粒子不具备该特性，这限制了支撑多数PCC方法的八叉树数据结构在科学数据上的有效性。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在宇宙学、分子动力学、等离子体物理等多个科学领域的评测中，神经编解码器相对传统G-PCC基线仅取得边际的码率缩减，暴露出显著性能差距。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 论文主张未来学习方法可结合科学数据的结构特点进行针对性设计，以突破当前CV基准驱动的PCC架构局限。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 指出科学粒子与CV点云在分形维数上的差异限制了八叉树方法，神经编码器较G-PCC基线仅带来边际码率收益
+  abstract_zh: 论文研究神经点云压缩（PCC）方法能否迁移到宇宙学、分子动力学和等离子体物理等领域的科学粒子数据。作者指出关键差异在于分形维数：CV点云局部呈平面状，而科学粒子并非如此，这削弱了大多数PCC方法所依赖的八叉树数据结构的有效性。跨多个科学领域的评测显示，神经编解码器仅比传统G-PCC基线取得边际的码率缩减，存在显著性能差距。论文据此勾勒了科学数据结构限制当前神经方法之处，以及未来学习方法的潜在助益方向。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 点云/粒子压缩属三维媒体技术范畴但面向科学数据而非音视频核心链路，仅作摘要收录
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-13'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 面向科学粒子数据的神经压缩：关于学习如何助益的视角
+relations:
+- type: same_topic
+  ref: paper:arxiv:2609.19750
+  note: 同为面向粒子/非结构化几何数据的高效压缩与流式传输主题
+- type: same_topic
+  ref: paper:arxiv:2606.29179
+  note: 同属点云编解码（PCC类编解码器）在传输场景下的性能分析主题
