@@ -13,6 +13,7 @@ source:
 time:
   published: '2026-11-03'
   collected: '2026-11-13'
+  updated: '2026-11-14'
 entities:
 - ref: concept:3DGS
   role: subject
@@ -49,6 +50,7 @@ summaries:
     VQA 基准：覆盖 11 个真实与 22 个合成场景的 3036 个 3DGS 重建（各配渲染视频），由 6 种代表性压缩算法在系统设计的失真等级下生成，共标注 9108 个 MOS，涵盖整体、几何与颜色质量。在此基础上提出
     3DGSV-Assessor，一个参考灵活的大型多模态框架，单次生成即输出三个维度分数，并通过有界门控将基于排序的参考线索融入冻结回归器，同时支持降参考（RR）与无参考（NR）评估。实验显示其在
     3DGS-VBench+ 上与人类感知相关性达到 SOTA，并对其他 NVS 基准具有较强零样本泛化能力。
+  deep_dive: docs/auto/2611.04498.md
 assessment:
   relevance: high
   decision: summary_only

@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-11-03'
   collected: '2026-11-13'
+  updated: '2026-11-14'
 entities:
 - ref: concept:MoE
   role: subject
@@ -41,6 +42,7 @@ summaries:
   abstract_zh: 论文提出 Wonder 4，一种面向真实照片多退化修复的混合专家（MoE）模型，可在退化发生的区域分别施加去模糊、去噪、去压缩伪影、去划痕与超分等校正。每个模型块包含 13
     个专家，路由器为每个图像块选择其中 5 个，全程无需退化分类器、掩码、提示、检测器或任务标签。针对从语言模型借鉴的标准均衡负载规则会把所有校正施加到全图的问题，作者改用只设最低使用份额的偏置机制，不引入额外损失、模块或处理步骤。在
     DIV2K 与 Flickr2K 的三种超分测试设置上对比五个已发表方法和三个开源流程，Wonder 4 取得最优 LPIPS、DISTS 与 NIQE。
+  deep_dive: docs/auto/2611.05294.md
 assessment:
   relevance: high
   decision: summary_only

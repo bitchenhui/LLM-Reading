@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-10-27'
   collected: '2026-11-13'
+  updated: '2026-11-14'
 entities:
 - ref: concept:IQA
   role: subject
@@ -33,6 +34,7 @@ claims:
 summaries:
   one_liner_zh: 提出质量相关性热图（QRH）作为VQA的显式像素级区域表示，配合确定性片段采样策略提升VQA性能
   abstract_zh: 针对端到端视频质量评估（VQA）模型预测依据隐式、缺乏区域证据的问题，论文提出显式像素级区域表示——质量相关性热图（QRH），在视觉语言模型引导下融合局部退化证据与感知先验，且无需像素级标注。QRH通过两种确定性片段采样策略接入现有VQA模型：分布保持采样在不重训练的前提下逼近原随机采样器的QRH分数分布；质量感知采样优先选取高QRH分区域并配合微调。在DOVER上于多个基准的实验表明，前者可近似随机采样平均后的预测，后者在主流VQA基准上提升多数评估指标，验证了显式区域表示作为VQA下游接口的价值。
+  deep_dive: docs/auto/2610.36978.md
 assessment:
   relevance: high
   decision: summary_only

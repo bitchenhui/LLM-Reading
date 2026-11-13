@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-11-05'
   collected: '2026-11-13'
+  updated: '2026-11-14'
 entities:
 - ref: concept:LLM
   role: subject
@@ -39,6 +40,7 @@ summaries:
   one_liner_zh: 数百个低成本智能体在潜在空间蜂群协作、以KV缓存共享信息的进化程序搜索框架，速度与得分均超AlphaEvolve等SOTA。
   abstract_zh: LLM引导的进化搜索通过智能体迭代优化程序求解数学与计算问题，但通常较慢：LLM每轮需生成长文本思维链，且须重复多次生成以维持种群多样性。SwarmEvolve让每轮数百个低成本智能体以蜂群方式工作，在潜在空间推理而无需解码为文本，并通过传递KV缓存共享信息；每个蜂群从不同角度研究问题，新颖性过滤器直接测量隐状态向量间距离以保留最独特的想法，想法交叉在潜在空间由汇总智能体合并全体成员KV缓存自然完成。在21个数学发现与科学计算问题上，SwarmEvolve取得最高平均分，达到其他SOTA框架60分钟最佳分数的中位耗时仅3至8分钟。在若干问题上，使用Qwen3
     8B的SwarmEvolve改进了AlphaEvolve用前沿LLM首先找到的解。
+  deep_dive: docs/auto/2611.08483.md
 assessment:
   relevance: high
   decision: summary_only

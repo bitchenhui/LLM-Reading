@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-11-05'
   collected: '2026-11-12'
+  updated: '2026-11-14'
 entities:
 - ref: concept:SelfImprovement
   role: subject
@@ -44,6 +45,7 @@ summaries:
   one_liner_zh: WeightLoop 让 LLM 生成有界参数编辑程序，用实验反馈持续改写已部署模型权重，无需重训练即可反复自改进。
   abstract_zh: 论文提出 WeightLoop 框架，将权重空间编程（WSP）与受递归自改进（RSI）启发的反馈闭环结合。GPT-6 Astra 检查任务规范与模型实现后，编写一个有界、可复用的参数编辑程序；随着新测量数据到达，该程序识别预测偏差、用观测结果验证候选编辑，并把选定修改写回原模型。编辑器固定而预测器持续演化，因此无需进一步
     LLM 调用或梯度重训练即可反复更新，且保留原始推理接口。离线回放实验中，针对性编辑在 8 个端点预算设置中的 7 个提升平均排序效用（对比随机编辑则 8 个全部提升），并在 3 个序列任务上提升平均最终发现数。
+  deep_dive: docs/auto/2611.07319.md
 assessment:
   relevance: high
   decision: summary_only

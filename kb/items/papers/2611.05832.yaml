@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-11-04'
   collected: '2026-11-13'
+  updated: '2026-11-14'
 entities:
 - ref: concept:ABR
   role: subject
@@ -36,6 +37,7 @@ summaries:
   abstract_zh: 针对 Starlink 等低轨卫星宽带接入呈现的随机动态及其从网络测量到吞吐预测、自适应码率（ABR）播放的跨层传导，作者提出跨层世界模型 StarWorld。该模型将学习到的随机网络动态与可执行的预测、控制与播放过程耦合，以想象多步跨层未来，并由校准的
     Trust Gate 判断这些未来是否足够可靠、可供使用。在真实 Starlink 测量上，StarWorld 在主要预测时域取得对比方法中最低的网络未来分布误差，并将成对控制器的 QoE 效应误差降低
     76%。结果表明 StarWorld 可作为跨层想象环境，用于研究不确定 Starlink 接入条件下的预测与流媒体播放结果。
+  deep_dive: docs/auto/2611.05832.md
 assessment:
   relevance: high
   decision: summary_only

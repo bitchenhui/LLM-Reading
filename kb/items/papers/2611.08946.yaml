@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-11-06'
   collected: '2026-11-13'
+  updated: '2026-11-14'
 entities:
 - ref: concept:RSI
   role: subject
@@ -33,6 +34,7 @@ claims:
 summaries:
   one_liner_zh: 提出Flex-RSI基准，在固定预算下评估智能体在视觉与机器人任务上通过递归修订harness实现自我改进的能力。
   abstract_zh: Flex-RSI是一个评估智能体递归自我改进（RSI）的基准：每轮由执行器改进任务解法，且仅当其在留出验证集上得分更高时才被保留，随后由改进器修订harness（含执行器与自身）。每次运行均从同一通用harness出发，最终解法在隐藏测试集上评分。基准在固定预算下评估闭源与开源权重模型，任务覆盖感知、推理、机器人动作、3D重建、视觉创作与基础设施。结果显示：自我改进在智能体自行构建解法时收益最大；仅记录成败的反馈会限制开源模型；在需通过物理稳定性或精确正确性严格校验的任务上开源模型落后最多。成对运行实验进一步证实编辑harness本身对性能提升有贡献。
+  deep_dive: docs/auto/2611.08946.md
 assessment:
   relevance: high
   decision: summary_only
