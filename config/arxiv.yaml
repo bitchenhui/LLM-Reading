@@ -7,16 +7,22 @@ tracks:
     core: true
     search_query: '(cat:eess.IV OR cat:cs.MM) AND (abs:"video compression" OR abs:"video coding" OR abs:"image compression" OR abs:"image coding" OR abs:"video codec" OR abs:"image codec" OR abs:"neural compression")'
   - name: audio_coding
-    search_query: '(cat:eess.AS OR cat:cs.SD) AND (abs:"neural audio codec" OR abs:"audio compression" OR abs:"speech coding" OR abs:"audio coding")'
+    threshold: 2
+    search_query: '(cat:eess.AS OR cat:cs.SD) AND (abs:"neural audio codec" OR abs:"audio codec" OR abs:"audio compression" OR abs:"speech coding" OR abs:"speech codec" OR abs:"audio coding")'
   - name: streaming_delivery
-    search_query: '(cat:cs.MM OR cat:cs.NI) AND (abs:"adaptive bitrate" OR abs:"MPEG-DASH" OR abs:"low latency streaming" OR abs:"low-latency video streaming" OR abs:"WebRTC video")'
+    threshold: 2
+    search_query: '(cat:cs.MM OR cat:cs.NI) AND (abs:"adaptive bitrate" OR abs:"adaptive streaming" OR abs:"MPEG-DASH" OR abs:"low latency streaming" OR abs:"low-latency video" OR abs:"WebRTC" OR abs:"Media over QUIC")'
   - name: quality_assessment
-    search_query: '(cat:eess.IV OR cat:cs.MM) AND (abs:"video quality assessment" OR abs:"image quality assessment" OR abs:"no-reference quality" OR abs:"compression quality evaluation")'
+    threshold: 2
+    search_query: '(cat:eess.IV OR cat:cs.MM OR cat:cs.CV) AND (abs:"video quality assessment" OR abs:"image quality assessment" OR abs:"VQA" OR abs:"IQA" OR abs:"no-reference quality" OR abs:"perceptual quality assessment" OR abs:"compression quality")'
   - name: processing_enhancement
-    search_query: '(cat:eess.IV OR cat:cs.CV) AND (abs:"super resolution" OR abs:"post-filter") AND (abs:"compression" OR abs:"coded video" OR abs:"codec")'
+    threshold: 2
+    search_query: '(cat:eess.IV OR cat:cs.CV) AND (abs:"super resolution" OR abs:"post-filter" OR abs:"artifact removal" OR abs:"quality enhancement") AND (abs:"compression" OR abs:"coded video" OR abs:"codec")'
   - name: immersive_media
-    search_query: '(cat:eess.IV OR cat:cs.CV OR cat:cs.GR) AND (abs:"point cloud compression" OR abs:"NeRF compression" OR abs:"Gaussian splatting compression" OR abs:"light field compression")'
+    threshold: 2
+    search_query: '(cat:eess.IV OR cat:cs.CV OR cat:cs.GR) AND (abs:"point cloud compression" OR abs:"point cloud coding" OR abs:"NeRF compression" OR abs:"Gaussian splatting compression" OR abs:"light field compression" OR abs:"volumetric video" OR abs:"mesh compression")'
   - name: self_improvement
+    threshold: 2
     search_query: '(cat:cs.AI OR cat:cs.LG OR cat:cs.CL OR cat:cs.NE) AND ((abs:"self-improvement" OR abs:"self-improving" OR abs:"evolution of heuristics" OR abs:"recursive self-improvement" OR abs:"AlphaEvolve" OR abs:"FunSearch") AND (abs:"large language model" OR abs:"LLM" OR abs:"language model"))'
 
 page_size: 100          # 每页条数（arXiv API 上限内）
@@ -33,4 +39,5 @@ weights:
   org: 1
 
 thresholds:
-  pending: 3            # 总分 >= 该值 → pending（待 LLM 精读过滤）；低于 → skipped
+  pending: 3            # 默认门槛（核心域）：总分 >= 该值 → pending
+  # 非核心域可在 track 上覆写 threshold: 2 —— 实体注册表尚薄的域先放行到 LLM 审阅层做精度过滤

@@ -182,6 +182,7 @@ def main() -> int:
     seen_in_run: set[str] = set()
     for tr in tracks:
         query = f'({tr["search_query"]}) AND submittedDate:[{since} TO {until}]'
+        tr_threshold = tr.get("threshold", cfg["thresholds"]["pending"])
         cap = min(per_track_max, args.max_results)
         tr_entries: list[dict] = []
         start = 0
@@ -196,6 +197,7 @@ def main() -> int:
         seen_in_run.update(e["arxiv_id"] for e in tr_entries)
         for e in tr_entries:
             e["track"] = tr["name"]
+            e["_threshold"] = tr_threshold
         entries.extend(tr_entries)
         print(f"  [{tr['name']}] 命中 {len(tr_entries)}")
 
@@ -206,7 +208,7 @@ def main() -> int:
     for e in new:
         text = e["title"] + "\n" + e["abstract"]
         score, matched = match_entities(text, pats, entities, cfg["weights"])
-        status = "pending" if score >= cfg["thresholds"]["pending"] else "skipped"
+        status = "pending" if score >= e.get("_threshold", cfg["thresholds"]["pending"]) else "skipped"
         rec = {
             "id": f"paper:arxiv:{e['arxiv_id']}",
             "status": status,          # pending=待 LLM 精读过滤 / skipped=规则拒绝
