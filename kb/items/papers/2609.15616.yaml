@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-09-14'
   collected: '2026-11-12'
+  updated: '2026-11-14'
 entities:
 - ref: codec:Opus
   role: subject
@@ -25,6 +26,7 @@ claims:
 summaries:
   one_liner_zh: 提出基于TDAC的无损音频编解码器OLAC，与Opus CELT重叠兼容，实现有损/无损无缝切换且压缩率达SOTA。
   abstract_zh: 无损音频编码已高度成熟，纯压缩性能提升空间有限，但新兴实时无线应用要求在有损与无损编码间动态切换以适应网络容量波动，现有独立无损编解码器无法无间断完成切换。论文提出基于时域混叠消除（TDAC）的无损编解码器OLAC，其重叠结构与Opus编解码器的CELT模式相匹配。由此，有损与无损编码之间的切换无需间断，也无需传输冗余信息。结果表明OLAC仍达到最先进的无损压缩性能，未因采用TDAC而受损失。
+  deep_dive: docs/auto/2609.15616.md
 assessment:
   relevance: high
   decision: summary_only

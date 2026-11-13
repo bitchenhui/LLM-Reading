@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-08-06'
   collected: '2026-11-13'
+  updated: '2026-11-14'
 entities:
 - ref: concept:QUIC
   role: subject
@@ -35,6 +36,7 @@ summaries:
   abstract_zh: 针对 360° 沉浸式视频在大规模并发用户下高码率传输困难、粗粒度分发响应不足、并发 tile 流协调欠缺等问题，作者提出构建在 Media over QUIC（MoQ）之上的多接入
     tile 流传输框架 MultiMoQ，重新设计其传输机制，支持跨多条接入路径的鲁棒高码率传输、灵活 tile 调度与无缝接入切换。团队实现了完整功能原型，并在网络仿真中于异构真实网络条件下与 DASH
     和标准 MoQ 进行对比评估。结果显示，MultiMoQ 提升了增强 tile 与基础视频的 goodput，降低了增强 tile 的尾端到端时延，同时保持音频连续性并避免标准 MoQ 的持续卡顿。传输层收益转化为更流畅的视口播放，消融实验进一步证实了多接入控制对播放连续性的贡献。
+  deep_dive: docs/auto/2608.06102.md
 assessment:
   relevance: high
   decision: summary_only

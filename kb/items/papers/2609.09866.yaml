@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-09-09'
   collected: '2026-11-12'
+  updated: '2026-11-14'
 entities:
 - ref: concept:NeuralAudioCodec
   role: subject
@@ -63,6 +64,7 @@ summaries:
     5.5M 参数。训练时引入最优传输条件流匹配（OT-CFM）辅助目标正则化量化潜空间，推理时完全移除该模块、无运行时开销。系统支持 12 kbps Top-1 与 22.5 kbps Top-2
     两种模式并实现 GPU 实时推理：12 kbps 下 PESQ/UTMOS 与 EnCodec 相当且语音 Mel-D 从 13.07 降至 8.21；22.5 kbps 下 ViSQOL 语音/环境声模式达
     4.67/3.96，语音上与 24 kbps Opus 的 ViSQOL 差距不超过 0.03 MOS-LQO。消融实验证实 ME-RVQ 是质量提升的主要来源。
+  deep_dive: docs/auto/2609.09866.md
 assessment:
   relevance: high
   decision: summary_only

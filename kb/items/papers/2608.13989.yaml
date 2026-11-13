@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-08-14'
   collected: '2026-11-13'
+  updated: '2026-11-14'
 entities:
 - ref: concept:IQA
   role: subject
@@ -34,6 +35,7 @@ claims:
 summaries:
   one_liner_zh: 提出惩罚过锐化的锐度感知IQA度量SI-PSNR，主观实验显示锐度感知损失恢复的图像更受偏好
   abstract_zh: 针对DNN去模糊中感知损失很少显式优化锐度的问题，作者采用四种协议的主观实验，研究了带与不带显式锐度损失训练模型的偏好与质量差异。论文构建了具有均匀锐度增量并附带DMOS的新图像数据集。在此基础上提出一类能恰当惩罚过锐化的锐度感知（SI）IQA度量。结果表明SI-PSNR在IQA基准数据集上的相关性统计优于所有其他PSNR变体，且使用锐度感知复合损失恢复的图像平均在67%的二选一主观比较中胜出。
+  deep_dive: docs/auto/2608.13989.md
 assessment:
   relevance: high
   decision: summary_only

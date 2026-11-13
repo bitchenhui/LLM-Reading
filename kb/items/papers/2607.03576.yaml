@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-07-03'
   collected: '2026-11-12'
+  updated: '2026-11-14'
 entities:
 - ref: codec:G-PCC
   role: subject
@@ -43,6 +44,7 @@ summaries:
   one_liner_zh: 提出基于图的帧间运动估计与免插值分数体素细化，动态点云属性压缩较 G-PCC 平均节省 55.3% 码率。
   abstract_zh: 点云压缩需同时处理几何与属性，基于运动的几何压缩已在 G-PCC 框架内显著降低几何码率，但属性压缩的运动补偿技术仍探索不足。本文提出面向动态实体点云属性的基于几何的帧间编码方案，并设计基于图的运动估计方法以去除属性的时间冗余。进一步提出免插值的分数体素运动估计方法，将运动精度细化到分数体素级。在
     MPEG 点云数据集上的实验表明，所提方案在无损与有损几何条件下均优于 G-PCC、GeS-TM 与 V-PCC，有损几何下平均码率较三者分别节省 55.3%、42.3% 和 16.5%。
+  deep_dive: docs/auto/2607.03576.md
 assessment:
   relevance: high
   decision: summary_only

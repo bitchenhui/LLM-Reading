@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-08-12'
   collected: '2026-11-13'
+  updated: '2026-11-14'
 entities:
 - ref: concept:VolumetricVideo
   role: subject
@@ -50,6 +51,7 @@ summaries:
   one_liner_zh: 提出InViStream系统，在相机端净化多视角RGB-D体视频隐私，仅融合安全点云，实现30FPS以上实时流。
   abstract_zh: 体三维视频流中隐私是三维多视角问题：RGB-D多相机融合后，任一视角遗漏或仅部分移除的隐私内容会在重建场景中重现。为此提出源头隐私保护系统InViStream，结合目标检测与深度感知掩码，同时消除RGB与深度几何两路泄漏，并在标定多视角间一致传播公共/私有实例决策，仅融合净化后的点云。在办公室、会议室、客厅等含多公共/私有人物与物体的合成及真实RGB-D场景上评估，分割Dice/Recall达0.799/0.891（合成）与0.792/0.908（真实），合成SSIM高于0.98，实时流式传输超过30
     FPS。
+  deep_dive: docs/auto/2608.11645.md
 assessment:
   relevance: high
   decision: summary_only
