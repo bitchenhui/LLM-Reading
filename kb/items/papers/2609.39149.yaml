@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-09-30'
   collected: '2026-11-13'
+  updated: '2026-11-14'
 entities:
 - ref: concept:LLM
   role: subject
@@ -30,6 +31,7 @@ claims:
 summaries:
   one_liner_zh: 利用LLM内部表征轨迹定位执行偏差回合并转化为文本反馈，实现外部技能的自我进化修订。
   abstract_zh: 文本技能使基于LLM的智能体无需更新模型参数即可积累可复用的程序性知识，但现有技能进化局限于文本空间，优化器只能依据长执行轨迹与稀疏任务结果诊断并修订技能。Rep2Skill提出表征引导的框架，对收集到的智能体rollout建模其内部模型表征轨迹，定位偏离成功执行动态的回合，并将这些信号与执行上下文一起解释为可操作的文本反馈，用于针对性技能修订。在两个智能体环境与两个开源LLM上的实验显示，在无更强外部模型的严格自进化设置（同一LLM兼任执行器与优化器）下，Rep2Skill一致优于纯文本方法。
+  deep_dive: docs/auto/2609.39149.md
 assessment:
   relevance: high
   decision: summary_only

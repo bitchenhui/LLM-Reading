@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-10-01'
   collected: '2026-11-12'
+  updated: '2026-11-14'
 entities:
 - ref: concept:LLM
   role: subject
@@ -46,6 +47,7 @@ summaries:
   one_liner_zh: 将LLM改造为带工作区与证据工具的智能体验证器，长时程基准上得分最优，验证技能可自改进。
   abstract_zh: 针对LLM智能体长时程任务输出难以验证的问题，VeriHarness在测试时不依赖参考答案与评分规则，通过发现'分歧常暴露正确替代、共识可能掩盖错误'的规律，将底层LLM转化为配备工作区、证据工具与可复用验证技能的智能体验证器。分歧解决器依据环境证据检验相互竞争的论断，共识挑战者测试被共同认可的论断并搜索被遗漏的要求，其结论共同指导最终产物的选择与修订。在五个长时程工作区基准与两个前沿模型上，VeriHarness在所评估基线中取得最高选择得分；基于证据的修订使相对单次rollout的平均增益达6.2分（Gemini
     3.5 Flash）与6.4分（Claude Opus 4.8）。验证技能还可从失败反馈中自我改进，作者发布了约2.6万条rollout的完整数据池（生产成本超10万美元）。
+  deep_dive: docs/auto/2610.00972.md
 assessment:
   relevance: high
   decision: summary_only

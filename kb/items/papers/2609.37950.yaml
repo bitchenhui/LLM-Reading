@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-09-29'
   collected: '2026-11-13'
+  updated: '2026-11-14'
 entities:
 - ref: concept:RSI
   role: subject
@@ -30,6 +31,7 @@ claims:
 summaries:
   one_liner_zh: 让视频理解智能体用自身LLM经主动取证与成本感知harness进化实现RSI，准确率提升且处理帧数更少。
   abstract_zh: 视频理解智能体通过可执行的harness决定观测内容与证据使用方式，但执行轨迹只含当前harness获得的证据，失败原因的竞争性解释无法被排除，限制了自我改进的依据。Video-RSI让智能体用自身语言模型修订harness：通过主动视频调查回到原始训练视频进行额外观测，以检验竞争性失败解释，使修改建立在既有轨迹之外的证据之上。成本感知的harness进化将诊断转化为可复用的修订，并依据答案准确率与视觉成本决定保留哪些修订。在多个视频理解基准评测设置上，进化后的智能体在处理更少帧数的情况下提升准确率，与现有视频理解智能体相比取得有竞争力的准确率-效率权衡。
+  deep_dive: docs/auto/2609.37950.md
 assessment:
   relevance: high
   decision: summary_only

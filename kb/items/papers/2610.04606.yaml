@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-10-03'
   collected: '2026-11-13'
+  updated: '2026-11-14'
 entities:
 - ref: concept:3DGS
   role: subject
@@ -47,6 +48,7 @@ summaries:
   one_liner_zh: 融合区域自适应空间先验、运动一致时间先验与扩散生成辅助，实现六相机大基线稀疏视角4D高斯重建并夺冠。
   abstract_zh: 该工作针对SIGGRAPH Asia 2026体视频挑战赛稀疏视角赛道，仅用六个宽基线相机进行动态场景重建。框架包含三部分：前景掩码引导的高斯初始化与动静态分区致密化、对齐度量尺度的单目深度背景正则；帧插值中间时刻监督与光流约束的投影运动；在最大角度间隙放置虚拟相机并用位姿条件扩散模型修复渲染图，迭代作为伪监督加入训练。验证集全帧PSNR从基线25.60
     dB提升至29.75 dB；官方测试集取得30.04 dB全帧PSNR与27.88 dB前景PSNR，在稀疏视角赛道总排名第一。
+  deep_dive: docs/auto/2610.04606.md
 assessment:
   relevance: high
   decision: summary_only

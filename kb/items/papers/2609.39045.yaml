@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-09-30'
   collected: '2026-11-13'
+  updated: '2026-11-14'
 entities:
 - ref: concept:RSI
   role: subject
@@ -51,6 +52,7 @@ claims:
 summaries:
   one_liner_zh: 提出RSIGame框架，用局部探索-诊断-改进循环加全局质量追踪实现游戏智能体递归自我改进，并将经验内化进生成器。
   abstract_zh: 大模型使自动游戏生成可行，但朴素迭代精炼易过拟合少量测试用例，产生脆弱且有残留缺陷的游戏。RSIGame将开发组织为互补的局部与全局循环：局部explore-diagnose-improve循环广泛探索可执行游戏、诊断并优先排序问题、执行基于证据的修订，演化清单持续积累测试与改进指导；全局循环追踪整体质量、保留最佳检查点并检测长周期开发中的饱和与回退。除测试时改进外，RSIGame还通过训练将成功开发经验内化到生成器中。在140个GameCraft-Bench任务、两个游戏引擎、五个生成器上，RSIGame在匹配开发预算下持续提升游戏质量；经验内化使Qwen3.8-27B在Godot达61.38、Phaser达58.53，超过GPT-5.5一次性得分，同时生成token减少11倍。
+  deep_dive: docs/auto/2609.39045.md
 assessment:
   relevance: high
   decision: summary_only

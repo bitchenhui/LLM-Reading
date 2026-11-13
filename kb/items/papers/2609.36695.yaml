@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-09-29'
   collected: '2026-11-13'
+  updated: '2026-11-14'
 entities:
 - ref: concept:SelfImprovement
   role: subject
@@ -32,6 +33,7 @@ summaries:
   abstract_zh: 自蒸馏将知识蒸馏变为闭环学习，无需外部教师即可实现递归自我改进。作者提出 InFlow 框架：先以确定性校准的隐藏状态轨迹检索潜在信息源，再用教师初始答案信念与检索条件化答案信念之间的
     Jensen-Shannon 散度度量检索的实际信息流，选择信念偏移更大的样本进行在策略自蒸馏。理论分析形式化了检索与选择所优化的信息量，并将答案级信念偏移与师生蒸馏差距联系起来。在四个开源语言模型、三个知识领域上，InFlow
     取得对比选择方法中最强的跨模型平均表现，消融实验支持检索与选择两阶段设计的有效性。
+  deep_dive: docs/auto/2609.36695.md
 assessment:
   relevance: high
   decision: summary_only
