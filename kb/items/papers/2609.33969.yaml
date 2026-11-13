@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-09-27'
   collected: '2026-11-13'
+  updated: '2026-11-14'
 entities:
 - ref: concept:VolumetricVideo
   role: subject
@@ -56,6 +57,7 @@ claims:
 summaries:
   one_liner_zh: 提出SAGA体积视频编解码器，以4D稀疏锚点加INR解码与记忆模块压缩动态3DGS，BD-rate大幅优于现有方案。
   abstract_zh: SAGA是一种构建在稀疏锚点辅助高斯泼溅表示之上的体积视频编解码器，用4D时空中的分层稀疏锚点刻画动态场景。坐标式INR解码器通过对邻近锚点特征做核插值，生成精细锚点与高斯基元，实现跨时空结构的参数共享，从而缓解单规范支架形变难以建模非局部动态与遮挡显露的问题。方法进一步引入固定大小记忆与正交性引导的槽更新策略，捕获非结构化锚点间的长程依赖以辅助熵编码。在Neu3D测试集上，SAGA以PSNR计算的BD-rate相比GIFStream、TED-4DGS和OMG4分别降低90.88%、64.30%和65.14%。
+  deep_dive: docs/auto/2609.33969.md
 assessment:
   relevance: high
   decision: summary_only

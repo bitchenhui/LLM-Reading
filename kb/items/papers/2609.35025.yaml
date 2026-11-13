@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-09-28'
   collected: '2026-11-13'
+  updated: '2026-11-14'
 entities:
 - ref: concept:SelfImprovement
   role: subject
@@ -38,6 +39,7 @@ claims:
 summaries:
   one_liner_zh: 提出按数据管线验收标准逐样本评估智能体撰写训练任务能力的基准，发现现有智能体质量可达标但效率不足。
   abstract_zh: 语言模型能力进步更多源于数据而非架构，但可验证智能体任务的数据生产仍依赖人工与人在环协作，自动化任务生成被视为递归自我改进（RSI）的关键一步。作者提出 AutoDataBench：给定原始基准任务与目标模型的尝试记录，智能体需为同一任务套件撰写一个在有效性、新颖性、难度与行为覆盖上满足实际验收标准的新任务，逐样本评判且无需训练运行。在三个可执行智能体任务基准上，默认45分钟时间预算内没有任何被评估智能体得分超过20/100；给最强智能体四倍时间可显著提分，而单个可用任务的成本几乎不变。结论是当前智能体能写出所需质量的训练任务，但效率不足。
+  deep_dive: docs/auto/2609.35025.md
 assessment:
   relevance: high
   decision: summary_only

@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-09-20'
   collected: '2026-11-13'
+  updated: '2026-11-14'
 entities:
 - ref: org:MPEG
   role: subject
@@ -39,6 +40,7 @@ summaries:
   abstract_zh: 针对传统 UV 图集接缝不连续与映射开销限制编码效率的问题，该文提出 TexF：一种表面对齐的纹理场表示，将从网格表面导出的稀疏体素用于组织纹理属性，保留局部三维相关性并支持高分辨率纹理与表面直接查询。码流压缩路径复用既有三维属性编解码器，体素位置可由解码后的网格重建，无需单独传输。GPU
     常驻压缩路径提出 3DNTC，结合量化哈希特征与轻量解码器实现表面位置的随机访问重建，并用可微渲染在图像空间细化体素属性与压缩神经场。在 MPEG 与 AOM 网格压缩基准上，码流与 GPU 常驻两种模式的平均率失真性能均优于代表性
     UV 方法，3DNTC 还支持实时渲染。
+  deep_dive: docs/auto/2609.23606.md
 assessment:
   relevance: high
   decision: summary_only

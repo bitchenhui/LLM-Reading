@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-09-28'
   collected: '2026-11-12'
+  updated: '2026-11-14'
 entities:
 - ref: concept:RSI
   role: subject
@@ -55,6 +56,7 @@ summaries:
   one_liner_zh: 通过递归自我改进构建子任务级大小模型路由与模型专属技能，在约一半推理成本下超越纯大模型基线。
   abstract_zh: 论文提出RSI-Router，一个通过对积累经验进行递归自我改进（RSI）来构建子任务级模型分配与模型专属技能的LLM路由框架。每次迭代包含四个阶段：子任务挖掘从训练轨迹中提炼子任务定义与识别规则；路由策略演化提出并评估多样的模型分配方案；模型专属技能演化对比路由轨迹与纯大模型轨迹以诊断失败并沉淀可复用执行技能；帕累托最优路由器选择利用历史与新生成的路由器更新帕累托种群。在DeepSeek-V4.1-Flash与Qwen3.5-9B之间路由的实验中，RSI-Router在五个智能体基准上以约一半推理成本（48.3%）持续超越仅用大模型的基线；在ALFWorld、ScienceWorld和WebShop上削减74.7-82.2%推理成本的同时提升性能；在Terminal-Bench
     2.0上以低18.0%的成本取得16.7%相对性能增益，并建立了优于9种路由方法的性能-成本帕累托前沿。
+  deep_dive: docs/auto/2609.34712.md
 assessment:
   relevance: high
   decision: summary_only

@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-09-16'
   collected: '2026-11-13'
+  updated: '2026-11-14'
 entities:
 - ref: concept:3DGS
   role: subject
@@ -32,6 +33,7 @@ summaries:
   abstract_zh: 3DGS 可实现逼真的新视角合成，但吉字节量级的场景数据传输对沉浸式应用构成挑战；传统基于 TCP 的 HTTP 自适应流媒体存在队头（HOL）阻塞，且粗粒度分段不适合 3DGS
     的细粒度分发。MoQSplat 将 3DGS 内容映射到 Media over QUIC 传输层次：场景划分为空间轨道（Tracks），高斯泼溅聚类为语义连贯的组（Groups），并构建渐进质量子组（Subgroups）映射到相互独立的
     QUIC 流以消除连接级队头阻塞。系统采用无状态、订阅者驱动的自适应闭环，客户端依据 6-DoF 视锥可见性、距离与注视点对齐动态请求空间区域与质量层级。原型实现的核心组件评估表明，面向渐进式传输，基于不透明度的剪枝优于基于尺度的剪枝；源代码已开源。
+  deep_dive: docs/auto/2609.18624.md
 assessment:
   relevance: high
   decision: summary_only

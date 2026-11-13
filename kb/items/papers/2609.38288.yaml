@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-09-29'
   collected: '2026-11-13'
+  updated: '2026-11-14'
 entities:
 - ref: concept:SelfImprovement
   role: subject
@@ -51,6 +52,7 @@ summaries:
   one_liner_zh: 用机器学习与算法编程任务合成可验证的长程反思轨迹，训练出可跨域测试时自我改进的LLM智能体。
   abstract_zh: AREX-2将LLM智能体的自我改进定义为测试时迭代优化解的能力，该能力依赖反思（给出更优解）与长程执行（多轮迭代持续有效）两个互补维度。作者假设这两种能力与领域无关、可在监督信号充分的场景中习得，因此从具备可验证反馈的机器学习与算法编程任务中合成长程改进轨迹。基于Qwen3.8-27B训练的智能体在MLE-bench
     Lite上达81.8、Frontier-CS上达70.7。所学能力可迁移至深度研究任务，在BrowseComp、HLE、GAIA、DeepSearchQA上分别取得84.0、52.6、92.2、93.8，且随迭代轮数预算增加持续提升。结果表明长程反思数据是通向自我改进智能体的有效路径。
+  deep_dive: docs/auto/2609.38288.md
 assessment:
   relevance: high
   decision: summary_only

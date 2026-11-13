@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-09-27'
   collected: '2026-11-12'
+  updated: '2026-11-14'
 entities:
 - ref: concept:RSI
   role: subject
@@ -38,6 +39,7 @@ summaries:
     R² Flow。方法在共享状态编排图上交替进行策略学习、独立验证与版本化技能库更新：编排图合并仅独立步骤顺序不同的历史，使 flow 训练可在等价执行间汇集证据；用对反向策略不变的 flow-share
     读出与独立的有符号效用排序决定修改哪些技能，由验证器证据决定是否编辑，残差方差进入平台期决定何时更新。已提交的技能库编辑会重塑后续策略学习的图结构，形成递归技能演化闭环。在问答、数学推理、交互决策与代码生成四类任务上，R²
     Flow 相比启发式编排、强化学习与技能演化基线提升了任务准确率和技能库编辑精度，且可跨执行器迁移，代码已开源。
+  deep_dive: docs/auto/2609.33867.md
 assessment:
   relevance: high
   decision: summary_only

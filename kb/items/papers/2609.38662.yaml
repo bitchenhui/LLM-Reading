@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-09-29'
   collected: '2026-11-12'
+  updated: '2026-11-14'
 entities:
 - ref: concept:RSI
   role: subject
@@ -39,6 +40,7 @@ claims:
 summaries:
   one_liner_zh: 提出可训练Collab-Director、证据条件通信与流平衡目标的LLM多智能体协作递归自改进系统，在12个数据集上超越全部基线并跨轮持续提升。
   abstract_zh: 针对现有多智能体协作闭环缺失的问题（协作预定义于算子层、仅学习拓扑导致错误逐字传播、奖励最大化使团队过度集中），提出CollabFlow。其可训练的Collab-Director构建由完整智能体组成的团队，由冻结执行器运行，每轮结果再训练Director。协作图的边上承载证据条件通信（ECC）协议：仅当发送方证据强度超出边际时接收方才采纳不同答案，使Director学会谁与谁通信及如何通信。跨轮提出协作轨迹平衡（CTB）流式目标，对每个团队在其构建顺序上只计一次信用并瞄准与奖励成比例的团队分布，使多个好团队保持活跃，同时给出自生成目标轮间移动随记录累积而收缩的界。在12个数据集上超越所有基线并跨轮持续改进。
+  deep_dive: docs/auto/2609.38662.md
 assessment:
   relevance: high
   decision: summary_only

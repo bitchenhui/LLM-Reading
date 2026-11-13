@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-09-28'
   collected: '2026-11-13'
+  updated: '2026-11-14'
 entities:
 - ref: concept:SelfImprovement
   role: subject
@@ -47,6 +48,7 @@ summaries:
   abstract_zh: GRPO在困难查询上因全部 rollout 错误而缺乏奖励对比信号；已有提示方法用解证据构造辅助提示重解失败查询以恢复信号，但辅助轨迹会引发'提示奖励偏移'，使策略更新过度依赖有提示条件。HATCH（Hint-Annealed
     Self-Teaching）让单一策略同时学习生成与使用自身提示，并用在线权重退火逐步削减提示轨迹的贡献以缓解偏移；同时用梯度投影移除提示生成更新与求解提升相冲突的分量。在数学推理基准上，该方法在
     Llama-3.2-1B-Instruct、Qwen3-1.7B、Qwen3-8B 上分别超过SOTA 1.02、2.84、4.32个百分点。
+  deep_dive: docs/auto/2609.34975.md
 assessment:
   relevance: high
   decision: summary_only
