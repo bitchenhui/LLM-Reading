@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-10-09'
   collected: '2026-11-13'
+  updated: '2026-11-14'
 entities:
 - ref: concept:ABR
   role: subject
@@ -31,6 +32,7 @@ claims:
 summaries:
   one_liner_zh: 提出DRL驱动的兴趣感知ABR方案DIA，为云游戏做对象级码率分配，5G下归一化QoE较SOTA至少提升20%。
   abstract_zh: 云游戏需在受限无线网络下高分辨率、低延迟地传输游戏画面。该文提出基于深度强化学习的兴趣感知ABR方案DIA：利用现成语义分割模型识别感知关键对象，在保障关键对象质量的同时为非关键对象分配较低分辨率以节省带宽，实现对象级码率调整。方案设计了基于Transformer的特征提取器与兴趣感知奖励函数，依据玩家游戏内移动速度、对象特征和网络状态动态调整码率，且无需眼动追踪器等额外硬件。大量实验表明DIA在动态无线环境中优于现有ABR方案，5G场景下归一化平均QoE比SOTA至少高20%。
+  deep_dive: docs/auto/2610.13698.md
 assessment:
   relevance: high
   decision: summary_only

@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-10-09'
   collected: '2026-11-13'
+  updated: '2026-11-14'
 entities:
 - ref: concept:SelfImprovement
   role: subject
@@ -30,6 +31,7 @@ claims:
 summaries:
   one_liner_zh: ClawLoop以任务合成、SFT/RL训练与诊断反馈构成自持续循环，无需外部教师模型即可实现智能体自我改进。
   abstract_zh: 针对现有harness类智能体后训练流程一次性且依赖更强外部教师的局限，提出ClawLoop自改进框架。该框架由三阶段构成自持续循环：任务合成（两种互补构造方式、诊断条件驱动的难度增长、无智能体与基于智能体的双重任务验证）、训练（SFT与/或RL）、诊断与反馈（分析rollout行为生成能力分析报告并作为下一轮任务合成的输入）。以Qwen3.6-27B作为环路模型，ClawLoop在SkillsBench、Claw-Eval-Live与ClawGym-Bench上取得一致提升。迭代精炼出的任务可迁移至更小规模的Qwen3.5-4B与9B模型并在全部基准上带来增益，独立于环路模型验证了合成任务的数据质量。
+  deep_dive: docs/auto/2610.14118.md
 assessment:
   relevance: high
   decision: summary_only

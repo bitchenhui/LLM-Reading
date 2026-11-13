@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-10-14'
   collected: '2026-11-12'
+  updated: '2026-11-14'
 entities:
 - ref: concept:LLM
   role: subject
@@ -56,6 +57,7 @@ claims:
 summaries:
   one_liner_zh: 提出实时基准RealtimeBench与双时间尺度离线递归自改进TORSI，使LLM智能体在持续变化环境中保持有效
   abstract_zh: 论文指出LLM智能体的推理与工具调用耗时，在持续变化的环境中正确但迟到的动作会失效。作者构建RealtimeBench，含六类游戏共180个任务，在推理期间游戏持续运行以考察实时能力；配对评估显示GPT-6.1-sol在游戏暂停时优于更快的Jev，但游戏持续运行时反而落后。为此提出TORSI（双时间尺度离线递归自改进）：慢速教师在暂停的游戏间研究失败并测试修正，撰写可复用指令给快速学生，学生行动时无需调用教师，验证分数决定更新是否采纳。两轮自改进将Jev的平均测试分从13.51提升到24.19（0-100进度量表），六类游戏全部改善，且产出的指令无需重新调优即可提升另外三个模型的平均分。
+  deep_dive: docs/auto/2610.20665.md
 assessment:
   relevance: high
   decision: summary_only

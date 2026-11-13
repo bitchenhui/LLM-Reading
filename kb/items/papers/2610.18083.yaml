@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-10-13'
   collected: '2026-11-12'
+  updated: '2026-11-14'
 entities:
 - ref: concept:RSI
   role: subject
@@ -52,6 +53,7 @@ summaries:
   one_liner_zh: 提出无需更新LLM权重的递归自我改进框架，以领导者—研究者团队组织与条件化记忆共享实现研究能力持续进化。
   abstract_zh: 论文提出AReaL-RSI，一个在不更新骨干LLM权重前提下组织持久智能体研究团队的递归自我改进框架。框架以评估产出与全系统资源开销形式化扩展问题：领导者智能体选择任务适配的研究方向并指导进行中的调查，条件化记忆共享区分未解问题与已验证结论并对接收者做适配。每轮战役结束后，基于证据的审查会修订后续战役所需的研究方向、知识与技能。实验在harness优化、GPU核优化和AI研究任务上对比Codex-Goal：两种骨干下Terminal
     Bench均提升2.2个百分点，KernelBench平均加速比提升32.2–36.8%；可扩展性比较显示经验共享加专业化研究者角色组合，在全部七个可比任务—骨干对上比独立探索降低1.9–27.5%核延迟，比仅共享降低1.3–33.9%。
+  deep_dive: docs/auto/2610.18083.md
 assessment:
   relevance: high
   decision: summary_only

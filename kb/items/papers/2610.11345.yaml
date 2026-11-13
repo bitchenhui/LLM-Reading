@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-10-08'
   collected: '2026-11-13'
+  updated: '2026-11-14'
 entities:
 - ref: concept:SelfImprovement
   role: subject
@@ -35,6 +36,7 @@ summaries:
   one_liner_zh: 提出SynCo框架，以多智能体强化学习协同训练任务合成器与推理器，使训练数据随LLM能力共同进化。
   abstract_zh: 针对现有自进化流水线依赖静态数据集或独立更新的合成模型、导致任务难度与智能体能力错配的问题，提出SynCo框架。该框架联合优化两个独立参数化的智能体：Synthesizer依据Reasoner不断演进的能力状态构造训练任务，Reasoner从合成任务中学习。每个合成任务诱导多次Reasoner
     rollout，其结果为双方提供互补奖励：正确性反馈改进Reasoner，任务质量、答案可靠性与结果锚定的可教性引导Synthesizer，更新结果反馈到后续合成轮次，使任务求解策略与训练分布共同进化。在八个数学推理基准上，SynCo显著超越广泛的合成数据方法与受控基线，取得最强综合性能，且大部分增益来自此前未解决的问题。
+  deep_dive: docs/auto/2610.11345.md
 assessment:
   relevance: high
   decision: summary_only

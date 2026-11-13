@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-10-09'
   collected: '2026-11-12'
+  updated: '2026-11-14'
 entities:
 - ref: concept:RSI
   role: subject
@@ -43,6 +44,7 @@ summaries:
   one_liner_zh: 提出即插即用的双层递归框架，无需真值验证器即可自动进化LLM智能体执行框架，三项专业基准最多提升11.5分。
   abstract_zh: 论文指出LLM智能体能力不仅取决于底层模型，还取决于其执行框架（harness），而开放世界场景下RSI面临任务测试时新颖、缺乏真值验证器、以及过程任务特异难以泛化两大挑战。Harness^2通过两层递归解决：任务级递归用对比式Propose-Probe-Compose步骤在没有真值验证器的情况下可靠引导框架编辑，并可通过并行或串行递归进一步扩展；框架化递归（harnessing-level
     recursion）从编辑经验中提取知识更新持续改进框架，使智能体更适应未来任务。在三项专业基准与四种模型-框架配置上，单步递归即可稳定改进GLM-5与Gemini 3.5 Flash：WorkBuddy-Bench最高提升11.5分、JobBench提升4.5分、LAB提升11.8个百分点，且随任务级递归预算增加收益进一步提升。
+  deep_dive: docs/auto/2610.14224.md
 assessment:
   relevance: high
   decision: summary_only

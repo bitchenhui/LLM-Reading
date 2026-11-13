@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-10-09'
   collected: '2026-11-13'
+  updated: '2026-11-14'
 entities:
 - ref: concept:SelfImprovement
   role: subject
@@ -33,6 +34,7 @@ claims:
 summaries:
   one_liner_zh: 发现LLM在线策略自蒸馏会随优化致旧能力退化并伴随隐表示几何劣化，提出RGR正则化缓解退化且保留增益。
   abstract_zh: 在线策略自蒸馏（OPSD）让LLM以同一模型在不同条件下兼任教师与学生实现自我改进，但研究发现该范式会渐进式退化已有能力：早期阶段答对的查询随优化推进可能答错，而整体性能仍在上升。进一步分析表明，这种退化与隐表示几何劣化同步出现，表现为簇内紧致度下降与簇间分离度减弱。为此作者提出表示几何正则化RGR，通过鼓励簇内紧凑、簇间分离在后训练过程中保持表示几何。RGR可无缝集成进现有OPSD方法而不改变其核心优化流程。在多种OPSD方法与多个基准上的大量实验表明，RGR总体上缓解了能力退化并保留了能力提升。
+  deep_dive: docs/auto/2610.12855.md
 assessment:
   relevance: high
   decision: summary_only
