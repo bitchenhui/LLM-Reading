@@ -59,8 +59,11 @@ def rank(question: str, items: list[dict], entities: dict, pats) -> tuple[list[d
     q_ents = {eid for pat, eid in pats if pat.search(question)}
     line_hit = next((l for k, l in LINE_KEYWORDS.items() if k in question), None)
     today = date.today()
+    # 意图感知：问版本/发布 → release 加权；问论文/方法 → paper 加权
+    rel_intent = any(k in question for k in ("版本", "发布", "更新", "release", "上线", "changelog"))
+    paper_intent = any(k in question for k in ("论文", "原理", "方法", "研究", "提出"))
 
-    def score(d: dict) -> float:
+    def score(d: dict) -> tuple:
         overlap = d["_ents"] & q_ents
         w = sum(3 if entities.get(e, {}).get("type") in STRONG_TYPES else 1 for e in overlap)
         s = w * 3
@@ -72,7 +75,11 @@ def rank(question: str, items: list[dict], entities: dict, pats) -> tuple[list[d
             s += 1
         if line_hit and line_hit in d.get("research_lines", []):
             s += 2
-        return s
+        if rel_intent and d["type"] == "repo_release":
+            s += 8
+        if paper_intent and d["type"] == "paper":
+            s += 3
+        return (s, pub)
 
     def subject(d: dict) -> str:
         for e in d.get("entities", []):
@@ -95,7 +102,7 @@ def rank(question: str, items: list[dict], entities: dict, pats) -> tuple[list[d
 
     if q_ents or line_hit:
         ranked = sorted(items, key=score, reverse=True)
-        picked = diverse([d for d in ranked if score(d) > 2], 8) or diverse(ranked, 5)
+        picked = diverse([d for d in ranked if score(d)[0] > 2], 8) or diverse(ranked, 5)
     else:  # 无信号：近期高相关兜底
         ranked = sorted(items, key=lambda d: (d["time"]["published"], d["assessment"]["relevance"]),
                         reverse=True)
@@ -124,6 +131,24 @@ def pack_context(picked: list[dict]) -> str:
     return "\n\n".join(blocks)
 
 
+def answer_question(question: str) -> dict:
+    """检索 + 作答。供 CLI 与 serve.py 复用。"""
+    entities = load_entities()
+    pats = entity_patterns(entities)
+    items = load_items()
+    picked, q_ents = rank(question, items, entities, pats)
+    context = pack_context(picked)
+    llm = LLM(yaml.safe_load(open(CONFIG, encoding="utf-8")))
+    prompt = f"问题：{question}\n\n基底资料：\n{context}"
+    answer = llm.chat(prompt, tier="deep", instructions=ASK_INSTRUCTIONS, max_tokens=8000)
+    return {
+        "answer": answer,
+        "q_ents": q_ents,
+        "used": [d["id"] for d in picked],
+        "tokens": dict(llm.usage),
+    }
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("question")
@@ -134,18 +159,13 @@ def main() -> int:
     pats = entity_patterns(entities)
     items = load_items()
     picked, q_ents = rank(args.question, items, entities, pats)
-
     print(f"命中实体: {q_ents or '（无，按时间/相关性回退）'}")
     print(f"检索打包 {len(picked)} 条: " + ", ".join(d["id"].split(":")[-1] for d in picked))
-    context = pack_context(picked)
     if args.show_context:
-        print("\n" + context + "\n---")
-
-    llm = LLM(yaml.safe_load(open(CONFIG, encoding="utf-8")))
-    prompt = f"问题：{args.question}\n\n基底资料：\n{context}"
-    answer = llm.chat(prompt, tier="deep", instructions=ASK_INSTRUCTIONS, max_tokens=8000)
-    print("\n" + answer)
-    print(f"\n— tokens in={llm.usage['in']} out={llm.usage['out']}")
+        print("\n" + pack_context(picked) + "\n---")
+    r = answer_question(args.question)
+    print("\n" + r["answer"])
+    print(f"\n— tokens in={r['tokens']['in']} out={r['tokens']['out']}")
     return 0
 
 
