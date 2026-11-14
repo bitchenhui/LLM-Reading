@@ -1,0 +1,52 @@
+id: paper:arxiv:2102.03113
+type: paper
+title: Real-World Super-Resolution of Face-Images from Surveillance Cameras
+domain: processing_enhancement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2102.03113v1
+  url: https://arxiv.org/abs/2102.03113
+  pdf_url: https://arxiv.org/pdf/2102.03113v1
+  venue: arXiv preprint
+time:
+  published: '2021-02-05'
+  collected: '2026-11-14'
+entities:
+- ref: concept:SuperResolution
+  role: subject
+- ref: metric:LPIPS
+  role: uses
+- ref: concept:IQA
+  role: measured_by
+claims:
+- statement: 提出通过估计真实模糊核、噪声分布与JPEG压缩伪影来生成真实LR/HR训练对的框架，使SR模型能够直接以高质量人脸图像作为Ground-Truth训练。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 将GAN超分模型中常用的VGG损失替换为LPIPS损失后，在真实与人工退化人脸图像上均取得细节更丰富、噪声更低的重建结果，优于现有SoTA方法。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 传统无参考IQA指标无法捕捉该方法相对SoTA的感知改进，而NIMA指标经Mean Opinion Rank验证与人类感知的相关性更好。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出估计真实模糊核、噪声与JPEG压缩退化的训练对生成框架，用LPIPS损失的GAN超分监控人脸并超越SoTA。
+  abstract_zh: 针对现有超分方法基于双三次插值人工退化训练、难以适配真实低清图像的问题，作者提出一个真实LR/HR训练对生成框架：估计真实模糊核、噪声分布及JPEG压缩伪影，使合成LR图像与源域图像特征一致，从而可直接用高质量人脸图作为Ground-Truth训练SR模型。为提升感知质量，采用GAN基超分模型并将常用VGG损失替换为LPIPS损失。在真实与人工退化人脸图像上的实验显示，该方法较现有SoTA重建细节更多、噪声更低；同时发现传统无参考IQA指标无法捕捉这一改进，而较新的NIMA指标经Mean
+    Opinion Rank验证与人类感知更一致。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 真实场景人脸超分辨率与感知损失/IQA评估，属编码链路增强类而非编码核心域，按基准给 summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 面向监控摄像头人脸图像的真实世界超分辨率
+relations:
+- type: same_topic
+  ref: paper:arxiv:2206.07038
+  note: 同属Real-World超分辨率（真实退化建模训练SR模型）方向
+- type: same_topic
+  ref: paper:arxiv:2609.33582
+  note: 同属真实场景图像超分辨率重建方向

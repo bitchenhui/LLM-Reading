@@ -1,0 +1,89 @@
+id: paper:arxiv:2606.29964
+type: paper
+title: Stratified Multi-View Aggregation for Score Distillation
+domain: immersive_media
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2606.29964v2
+  url: https://arxiv.org/abs/2606.29964
+  pdf_url: https://arxiv.org/pdf/2606.29964v2
+  venue: arXiv preprint
+time:
+  published: '2026-06-29'
+  collected: '2026-11-14'
+entities:
+- ref: concept:DiffusionPrior
+  role: subject
+- ref: concept:TrainingFree
+  role: uses
+- ref: concept:IQA
+  role: measured_by
+claims:
+- statement: 在43条提示的SDI基准、固定10,000次UNet调用预算下，MV-SDI（K=2）较单视角SDI基线使优化步数减半，CLIP R-Precision从74.8%升至83.8%，CLIP分数从0.297升至0.312，发散率为0.0%，并在HPSv2与ImageReward上有一致增益。
+  confidence: reported
+  metrics:
+  - name: CLIP R-Precision
+    value: 83.8%
+    scope: K=2，43提示SDI基准，10,000次UNet调用；单视角基线74.8%
+  - name: CLIP score
+    value: '0.312'
+    scope: K=2；单视角基线0.297
+  - name: 发散率
+    value: 0.0%
+    scope: K=2，SDI基准
+  - name: 优化步数
+    value: 减半（相对单视角基线）
+    scope: 固定10,000次UNet调用预算
+  evidence: abstract（初筛，未读全文）
+- statement: K=4时实现四倍优化步数缩减，R-Precision达86.9%，CLIP分数0.307。
+  confidence: reported
+  metrics:
+  - name: CLIP R-Precision
+    value: 86.9%
+    scope: K=4，SDI基准，固定调用预算
+  - name: CLIP score
+    value: '0.307'
+    scope: K=4
+  - name: 优化步数缩减
+    value: 4×
+    scope: 相对单视角基线
+  evidence: abstract（初筛，未读全文）
+- statement: 以K视角平均梯度可将每步梯度方差降至单视角的约1/K；对跖对采样（对跖相关ρ≈0）不额外降方差，但通过角度分层使每步覆盖两半球，消除独立采样的同半球聚集。
+  confidence: reported
+  metrics:
+  - name: 对跖相关系数ρ
+    value: ≈0
+    scope: 对跖视角对实测
+  - name: 梯度方差降幅
+    value: ≈1/K
+    scope: K视角平均 vs 单视角
+  evidence: abstract（初筛，未读全文）
+- statement: 增益集中于单视角蒸馏崩溃的困难提示，代价为CLIP-IQA下降；方法即插即用于SDI与朴素SDS等梯度式分数蒸馏管线，无需再训练或多视角数据。
+  confidence: reported
+  metrics:
+  - name: CLIP-IQA
+    value: 有所代价（原文定性）
+    scope: 多视角聚合引入的质量权衡
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出免训练采样器 MV-SDI，以K视角梯度平均降低单视角方差，冻结扩散先验提升3D分数蒸馏的质量与效率。
+  abstract_zh: 分数蒸馏将预训练2D扩散模型转化为3D生成器，但其单随机视角的每步梯度估计方差高且忽略全局形状一致性。作者将采样轴与先验质量解耦、冻结扩散先验，提出免训练采样器 MV-SDI：在固定UNet调用预算下用K个视角的平均梯度替代单视角梯度，方差降至约1/K。进一步以对跖视角对采样（实测对跖相关ρ≈0）不额外降方差，但实现每步覆盖两半球的角度分层，消除独立采样的同半球聚集。在43条提示的SDI基准、10,000次UNet调用预算下，K=2使优化步数减半，CLIP
+    R-Precision从74.8%升至83.8%，CLIP分数从0.297升至0.312，发散率0.0%；K=4实现四倍步数缩减，R-Precision达86.9%。增益集中在单视角蒸馏崩溃的困难提示上，代价为CLIP-IQA下降；方法可即插即用于SDI与朴素SDS，无需再训练或多视角数据。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 属3D生成中的分数蒸馏采样改进而非音视频编码核心域，但其技术与语料中扩散先验/分数蒸馏类生成压缩论文有方法层交集，按非核心域收录为概览。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 分层多视角聚合分数蒸馏
+relations:
+- type: same_topic
+  ref: paper:arxiv:2607.22772
+  note: 同以分数蒸馏（Score Distillation）为核心技术：本文面向3D生成的采样改进，后者面向生成式视频压缩
+- type: same_topic
+  ref: paper:arxiv:2606.22371
+  note: 同样利用预训练扩散先验的生成能力，方向为生成式视频压缩，与本文的扩散先验蒸馏技术路线相关

@@ -1,0 +1,57 @@
+id: paper:arxiv:2301.05688
+type: paper
+title: 'CANE: A Cascade-Control Approach for Network-Assisted Video QoE Management'
+domain: streaming_delivery
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2301.05688v1
+  url: https://arxiv.org/abs/2301.05688
+  pdf_url: https://arxiv.org/pdf/2301.05688v1
+  venue: arXiv preprint
+time:
+  published: '2023-01-13'
+  collected: '2026-11-14'
+entities:
+- ref: concept:QoE
+  role: subject
+- ref: concept:ABR
+  role: compared_against
+claims:
+- statement: CANE在现实仿真中相比纯客户端ABR算法将多播放器QoE公平性提升约50%。
+  confidence: reported
+  metrics:
+  - name: QoE公平性提升
+    value: ~50%
+    scope: 相较纯客户端ABR算法，现实仿真评估
+  evidence: abstract（初筛，未读全文）
+- statement: CANE相比均匀流量整形将多播放器QoE公平性提升约20%。
+  confidence: reported
+  metrics:
+  - name: QoE公平性提升
+    value: ~20%
+    scope: 相较均匀流量整形，现实仿真评估
+  evidence: abstract（初筛，未读全文）
+- statement: 通过级联控制抽象结合机器学习黑盒行为建模与模型预测控制，可在网络对客户端内部状态可见性受限的条件下实现网络辅助QoE优化的近优求解。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出级联控制框架CANE，用机器学习黑盒建模播放器行为并以MPC求解网络辅助多播放器QoE优化，公平性较纯客户端ABR提升约50%。
+  abstract_zh: 网络辅助方案虽能改善多播放器竞争带宽时的QoE与公平性，但面临网络对播放器内部状态可见性有限、播放器动作可能抵消网络动作、各播放器目标冲突等落地挑战。作者将网络辅助QoE优化形式化为级联控制抽象，据此设计实用框架CANE：用机器学习将每个播放器行为近似为黑盒模型，再以模型预测控制（MPC）求近优解。现实仿真评估显示，CANE相比纯客户端自适应码率（ABR）算法将多播放器QoE公平性提升约50%，相比均匀流量整形提升约20%。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 网络辅助多播放器视频QoE管理属流媒体与传输核心议题，但非视频/图像编码核心域，按规则仅summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: CANE：面向网络辅助视频QoE管理的级联控制方法
+relations:
+- type: same_topic
+  ref: paper:arxiv:2308.03643
+  note: 同属ABR自适应码率与视频流QoE管理主题
+- type: same_topic
+  ref: paper:arxiv:2609.09490
+  note: 同属QoE感知码率自适应优化主题

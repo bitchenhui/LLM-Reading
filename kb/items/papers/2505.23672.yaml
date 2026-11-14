@@ -1,0 +1,49 @@
+id: paper:arxiv:2505.23672
+type: paper
+title: Position Dependent Prediction Combination For Intra-Frame Video Coding
+domain: video_image_coding
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2505.23672v1
+  url: https://arxiv.org/abs/2505.23672
+  pdf_url: https://arxiv.org/pdf/2505.23672v1
+  venue: arXiv preprint
+time:
+  published: '2025-05-29'
+  collected: '2026-11-14'
+entities:
+- ref: codec:HEVC
+  role: subject
+claims:
+- statement: 在HEVC All Intra通用测试条件下，所提位置相关预测组合（依预测模式与块大小自适应组合非滤波与滤波参考样本的预测值）相对HEVC实现平均2.0%的码率降低。
+  confidence: reported
+  metrics:
+  - name: 码率降低
+    value: 2.0%
+    scope: 相对HEVC，All Intra（AI）配置，HEVC通用测试条件平均值
+  evidence: abstract（初筛，未读全文）
+- statement: 分析表明HEVC帧内预测中递归二维滤波的有效性可由非递归预测器等价获得，且非递归方案支持像素预测的并行计算，性能更优。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 分析HEVC帧内递归滤波机理，提出按预测模式与块大小组合非滤波/平滑参考样本的非递归预测，AI配置下较HEVC平均省2.0%码率。
+  abstract_zh: HEVC帧内预测可通过递归二维滤波改善预测值，但会显著阻碍像素预测的并行计算。本文分析递归滤波有效的内在机理，并据此推导出性能更优的非递归预测器集合。所提方法依据预测模式和块大小，自适应组合基于非滤波与滤波（平滑）参考样本的预测值。在HEVC通用测试条件下，All
+    Intra（AI）配置相对HEVC平均码率降低2.0%。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 核心域论文：针对HEVC帧内预测提出非递归的位置相关预测组合，出自高通JVET核心团队，All Intra配置下有2.0%码率增益，值得深读。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 面向帧内视频编码的位置相关预测组合
+relations:
+- type: same_topic
+  ref: paper:arxiv:2605.29063
+  note: 同属HEVC帧内编码工具改进研究（帧内划分加速 vs 帧内预测组合）
+- type: same_topic
+  ref: paper:arxiv:2306.16786
+  note: 均围绕All Intra配置下的编码工具优化（码率控制 vs 帧内预测改进）

@@ -1,0 +1,66 @@
+id: paper:arxiv:2202.06028
+type: paper
+title: 'OctAttention: Octree-Based Large-Scale Contexts Model for Point Cloud Compression'
+domain: immersive_media
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2202.06028v2
+  url: https://arxiv.org/abs/2202.06028
+  pdf_url: https://arxiv.org/pdf/2202.06028v2
+  venue: arXiv preprint
+time:
+  published: '2022-02-12'
+  collected: '2026-11-14'
+entities:
+- ref: concept:EntropyModel
+  role: subject
+- ref: metric:BD-Rate
+  role: measured_by
+- ref: org:MPEG
+  role: evaluated_on
+claims:
+- statement: 相比此前最优方法，在 LiDAR 基准与物体点云数据集上取得 10%-35% 的 BD-Rate 增益。
+  confidence: reported
+  metrics:
+  - name: BD-Rate 增益
+    value: 10%-35%
+    scope: 对比此前 SOTA，基准含 SemanticKITTI、MPEG 8i、MVUB
+  evidence: abstract（初筛，未读全文）
+- statement: 相比体素基线方法节省 95% 的编码时间。
+  confidence: reported
+  metrics:
+  - name: 编码时间节省
+    value: 95%
+    scope: 相对体素基线（voxel-based baseline）
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 基于八叉树与注意力机制的上下文熵模型，对点云无损编码，较 SOTA 提升 10%-35% BD-Rate 并省 95% 编码时间。
+  abstract_zh: 针对体素化方法在稀疏点云上可收集上下文不足的问题，论文采用八叉树结构表示点云以降低空间冗余，并对不同分辨率点云具有鲁棒性。方法以兄弟节点与祖先节点构成大规模上下文，设计大感受野的条件熵模型，并用注意力机制强化相邻节点间的相关性，对八叉树符号序列进行无损熵编码。训练与测试中引入掩码操作，在编码时间与压缩性能之间取得折中。在
+    LiDAR 基准（SemanticKITTI）与物体点云数据集（MPEG 8i、MVUB）上较此前最优方法取得 10%-35% BD-Rate 增益，并相对体素基线节省 95% 编码时间，代码已开源。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 学习式点云几何压缩的代表性工作（八叉树注意力熵模型），属沉浸式与三维域，按非核心域规则仅给 summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: OctAttention：基于八叉树的大规模上下文点云压缩模型
+relations:
+- type: same_topic
+  ref: paper:arxiv:2207.12554
+  note: 同为点云几何压缩（帧间动态点云编码）
+- type: same_topic
+  ref: paper:arxiv:2505.20059
+  note: 同为基于学习的 LiDAR 点云压缩
+- type: same_topic
+  ref: paper:arxiv:2507.15686
+  note: 同为点云几何的无损压缩（隐式神经表示路线）
+- type: same_topic
+  ref: paper:arxiv:2205.01135
+  note: 同为深度学习动态点云压缩
+- type: same_topic
+  ref: paper:arxiv:2610.04281
+  note: 同为八叉树层次结构的无损压缩（网格几何）

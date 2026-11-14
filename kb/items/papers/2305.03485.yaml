@@ -1,0 +1,52 @@
+id: paper:arxiv:2305.03485
+type: paper
+title: Steered Mixture-of-Experts Autoencoder Design for Real-Time Image Modelling and Denoising
+domain: video_image_coding
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2305.03485v1
+  url: https://arxiv.org/abs/2305.03485
+  pdf_url: https://arxiv.org/pdf/2305.03485v1
+  venue: arXiv preprint
+time:
+  published: '2023-05-05'
+  collected: '2026-11-14'
+entities:
+- ref: concept:MoE
+  role: subject
+- ref: concept:SuperResolution
+  role: uses
+claims:
+- statement: 将深度编码器网络与浅层无参数SMoE解码器耦合的自编码器设计，可大幅降低SMoE参数估计的运行时间，同时提升块级SMoE方法的重建质量。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 相较初期自编码器方案，改进后的设计扩展到更高复杂度模型与不同块尺寸，并增强了SMoE去噪应用的噪声鲁棒性。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 新自编码器在无噪声与严重噪声输入下均能对复杂SMoE模型实现超快速参数估计并获得优异重建质量，可支撑压缩、降噪与超分辨率等图像处理应用。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 摘要声称SMoE框架此前已可与最先进的压缩方法竞争。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 深度编码器耦合无参数SMoE解码器，超快速估计SMoE参数，实现实时图像建模、去噪并支撑压缩与超分。
+  abstract_zh: 导向混合专家（SMoE）此前被用于构建稀疏、边缘感知的像素数据模型，可服务于压缩与去噪并能与最先进压缩方法竞争，但其迭代优化式参数估计计算开销大。本文提出将深度编码器网络与浅层、无参数SMoE解码器耦合的自编码器设计，大幅缩短运行时间并提升块级SMoE方法的重建质量。相较其初期自编码器方案，新设计扩展到更高复杂度模型与不同块尺寸，并增强了去噪应用的噪声鲁棒性。结果显示，新自编码器可在无噪声与严重噪声输入下对复杂SMoE模型实现超快速参数估计并获得优异重建质量，从而支撑压缩、降噪与超分辨率等广泛的图像处理应用。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: SMoE自编码器图像建模属图像编码核心域，实时参数估计可支撑压缩、去噪与超分，但为前作增量式改进，给初筛摘要即可。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 面向实时图像建模与去噪的导向混合专家（SMoE）自编码器设计
+relations:
+- type: same_topic
+  ref: paper:arxiv:2207.12348
+  note: 本文为该前作（面向实时MoE图像压缩的边缘感知自编码器）的直接后续与扩展，提升模型复杂度、块尺寸多样性与噪声鲁棒性
+- type: same_topic
+  ref: paper:arxiv:2606.21033
+  note: 同属基于混合专家（MoE）的图像压缩/建模方向

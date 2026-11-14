@@ -1,0 +1,57 @@
+id: paper:arxiv:2309.03244
+type: paper
+title: 'EGIC: Enhanced Low-Bit-Rate Generative Image Compression Guided by Semantic Segmentation'
+domain: video_image_coding
+research_lines:
+- traditional_codec_opt
+source:
+  channel: arxiv
+  external_id: 2309.03244v3
+  url: https://arxiv.org/abs/2309.03244
+  pdf_url: https://arxiv.org/pdf/2309.03244v3
+  venue: arXiv preprint
+time:
+  published: '2023-09-06'
+  collected: '2026-11-14'
+entities:
+- ref: impl:VTM
+  role: subject
+claims:
+- statement: EGIC作为单一编解码器在低码率下超越HiFiC、MS-ILLM、DIRAC-100等最先进的扩散与GAN生成式压缩方法
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: EGIC在失真端性能几乎与VTM-20.0持平
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: OASIS-C条件化语义分割引导判别器在潜在图像分布条件下为生成器提供空间与语义感知的梯度反馈
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 输出残差预测（ORP）通过调节MSE优化解码输出与GAN优化解码输出之间残差的影响，实现单模型多真实感控制并具备优异的插值特性
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: EGIC实现简单、模型轻量，适合面向低码率范围的实际应用
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 以语义分割引导判别器和输出残差预测增强的轻量生成式图像压缩，低码率下超越HiFiC等并接近VTM-20.0。
+  abstract_zh: EGIC是一种面向低码率的生成式图像压缩方法，可在单个模型内高效遍历失真-感知曲线。其核心包含两个新组件：一是OASIS-C，一个条件化于潜在图像分布的预训练语义分割引导判别器，为生成器提供空间与语义双重感知的梯度反馈；二是输出残差预测（ORP），通过调节MSE优化解码输出与GAN优化解码输出之间残差的影响来控制重建合成过程，实现多真实感控制。两者组合使EGIC超越HiFiC、MS-ILLM、DIRAC-100等最先进的扩散与GAN生成式压缩方法，并在失真端几乎与VTM-20.0持平。该编解码器实现简单、非常轻量且插值特性优异，是面向低码率实际应用的有力候选。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 核心域生成式图像压缩工作，提出语义分割引导判别器与输出残差预测两项新机制，低码率下超越HiFiC/MS-ILLM/DIRAC-100且失真端接近VTM-20.0，值得深读。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: EGIC：语义分割引导的增强型低码率生成式图像压缩
+relations:
+- type: same_topic
+  ref: paper:arxiv:2505.16177
+  note: 同为面向超低码率的生成式图像/视频压缩研究
+- type: same_topic
+  ref: paper:arxiv:2606.13366
+  note: 同为生成式图像压缩的率-失真-感知（RDP）优化方向
+- type: same_topic
+  ref: paper:arxiv:2403.00628
+  note: 同为将分割/语义先验引入学习式图像压缩的工作

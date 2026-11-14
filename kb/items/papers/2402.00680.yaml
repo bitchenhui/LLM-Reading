@@ -1,0 +1,51 @@
+id: paper:arxiv:2402.00680
+type: paper
+title: 'LVC-LGMC: Joint Local and Global Motion Compensation for Learned Video Compression'
+domain: video_image_coding
+research_lines:
+- learned_codec
+source:
+  channel: arxiv
+  external_id: 2402.00680v3
+  url: https://arxiv.org/abs/2402.00680
+  pdf_url: https://arxiv.org/pdf/2402.00680v3
+  venue: arXiv preprint
+time:
+  published: '2024-02-01'
+  collected: '2026-11-14'
+entities:
+- ref: impl:TCM
+  role: subject
+claims:
+- statement: 以DCVC-TCM为基线集成LGMC得到的LVC-LGMC，在率失真性能上显著优于DCVC-TCM基线。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 将交叉注意力中的softmax拆分为两个独立softmax运算，可将全局运动补偿的复杂度从二次降为线性。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 光流网络与DCN感受野有限，是现有学习式视频压缩难以捕获大尺度运动与帧间全局相关性的瓶颈。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出联合局部光流与线性复杂度全局交叉注意力的运动补偿模块LGMC，集成DCVC-TCM后显著提升率失真性能。
+  abstract_zh: 现有学习式视频压缩依赖光流网络或可变形卷积（DCN）估计运动，感受野受限导致只关注局部上下文，忽略大尺度运动与帧间全局相关性。该文提出局部-全局联合运动补偿模块LGMC：用光流网络承担局部运动补偿，用特征域交叉注意力捕获全局上下文，并将注意力中的softmax拆分为两个独立softmax以将二次复杂度降为线性。作者将LGMC集成到DCVC-TCM基线，得到LVC-LGMC编解码器。大量实验表明其相对DCVC-TCM取得显著率失真性能提升。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 核心域学习式视频压缩的运动补偿架构创新（局部光流+线性复杂度全局交叉注意力），基于DCVC-TCM并有明确RD增益，值得深读。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: LVC-LGMC：面向学习式视频压缩的局部与全局联合运动补偿
+relations:
+- type: same_topic
+  ref: paper:arxiv:2410.09706
+  note: 同为学习式视频压缩中利用多帧非局部/全局相关性改进预测的工作
+- type: same_topic
+  ref: paper:arxiv:2504.02560
+  note: 同为学习式视频压缩中长程/全局运动估计与双向预测改进的工作
+- type: same_topic
+  ref: paper:arxiv:2510.12479
+  note: 同为基于条件残差框架的学习式视频编码时间预测改进工作

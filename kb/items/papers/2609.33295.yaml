@@ -1,0 +1,82 @@
+id: paper:arxiv:2609.33295
+type: paper
+title: 'TraceDance: An Automated System for Building Agent Behavior Benchmarks from Real-World Agent Deployment
+  Traces'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2609.33295v1
+  url: https://arxiv.org/abs/2609.33295
+  pdf_url: https://arxiv.org/pdf/2609.33295v1
+  venue: arXiv preprint
+time:
+  published: '2026-09-27'
+  collected: '2026-11-14'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:RSI
+  role: uses
+- ref: concept:SelfImprovement
+  role: builds_on
+claims:
+- statement: TraceDance 从 252,557 个真实部署会话中自动构建了 107 个行为基准、共 4,125 个实例，覆盖编码与通用工具使用领域，满足 95.3% 的用户构建目标请求。
+  confidence: reported
+  metrics:
+  - name: 会话数
+    value: 252,557
+    scope: 编码与通用工具使用领域所用的部署会话轨迹总量
+  - name: 基准数量
+    value: '107'
+    scope: 自动构建的行为专属基准数
+  - name: 实例数量
+    value: 4,125
+    scope: 107个基准的实例总数
+  - name: 构建目标满足率
+    value: 95.3%
+    scope: 用户指定不良行为的构建请求中成功构建的比例
+  evidence: abstract（初筛，未读全文）
+- statement: 九个前沿 LLM 在决策点续接基准上的平均通过率仅 26.7%，表明当前模型在被评估决策点仍难以做出恰当回应。
+  confidence: reported
+  metrics:
+  - name: 平均通过率
+    value: 26.7%
+    scope: 9个前沿LLM在全部行为基准上的均值
+  evidence: abstract（初筛，未读全文）
+- statement: 在抽样实例中，人工标注者在 84% 的实例中确认了所请求的行为，自动评分器与人工 pass/fail 判断的一致性与标注者之间的一致性相当。
+  confidence: reported
+  metrics:
+  - name: 行为确认率
+    value: 84%
+    scope: 抽样实例中人工标注确认所请求行为的占比
+  evidence: abstract（初筛，未读全文）
+- statement: 基准评估采用决策点续接机制，无需参考答案或环境重放即可评估 LLM 在记录决策点的下一回合行为。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 从真实部署轨迹自动构建针对指定不良行为的LLM智能体评测基准，可作为RSI循环的关键组件。
+  abstract_zh: 提出 TraceDance，一个从智能体部署轨迹出发、针对用户指定不良行为自动构建评测基准的系统。其 Anchor-and-Confirm 方法将可编程检索与 Flash LLM
+    的候选级确认结合，Anchor Synthesis Loop 负责生成并修订自定义行为规范。基准采用决策点续接式评估：在记录的决策点用行为专属评分规则评估 LLM 的下一回合输出，无需参考答案或环境重放。在编码与通用工具使用领域，系统基于
+    252,557 个会话构建了 107 个基准共 4,125 个实例，满足 95.3% 的构建目标请求；抽样实例中 84% 经人工标注确认所请求行为，自动评分器与人工 pass/fail 判断的一致性接近标注者之间的一致性。九个前沿
+    LLM 平均通过率仅 26.7%，显示其在被评估决策点上仍难以恰当回应。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 论文属于自我改进AI域（从部署轨迹构建LLM智能体行为基准并明确定位于RSI循环），非核心编码域，按收录规则给 summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: TraceDance：从真实智能体部署轨迹自动构建智能体行为基准的系统
+relations:
+- type: same_topic
+  ref: paper:arxiv:2609.35025
+  note: AutoDataBench 同样研究为自我改进循环自动产出数据/基准，与本工作的部署轨迹基准构建同属 RSI 数据供给侧
+- type: same_topic
+  ref: paper:arxiv:2611.08946
+  note: Flex-RSI 面向前沿智能体的 RSI 基准评估，与 TraceDance 的智能体行为基准评测主题相近
+- type: same_topic
+  ref: paper:arxiv:2608.30207
+  note: SIR 针对智能体不良行为的自我改进红队评估，与 TraceDance 的指定不良行为基准构建方向一致

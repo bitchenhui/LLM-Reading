@@ -1,0 +1,61 @@
+id: paper:arxiv:2607.05297
+type: paper
+title: 'MetaSkill-Evolve: Recursive Self-Improvement of LLM Agents via Two-Timescale Meta-Skill Evolution'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2607.05297v1
+  url: https://arxiv.org/abs/2607.05297
+  pdf_url: https://arxiv.org/pdf/2607.05297v1
+  venue: arXiv preprint
+time:
+  published: '2026-07-06'
+  collected: '2026-11-14'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:RSI
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: MetaSkill-Evolve 的双时间尺度递归框架在三个智能体基准上的 held-out 测试准确率均超过无技能、静态技能与单层进化基线。
+  confidence: reported
+  metrics:
+  - name: OfficeQA held-out 准确率提升
+    value: '+23.54'
+    scope: 百分点，相对原始冻结 LLM 骨干
+  - name: SealQA held-out 准确率提升
+    value: '+16.09'
+    scope: 百分点，相对原始冻结 LLM 骨干
+  - name: ALFWorld held-out 准确率提升
+    value: '+1.92'
+    scope: 百分点，相对原始冻结 LLM 骨干
+  evidence: abstract（初筛，未读全文）
+- statement: 元技能 m 的五个分量参数化改进流水线的五个智能体（Analyzer/Retriever/Allocator/Proposer/Evolver），全部共享单一冻结骨干、无需额外模型或目标函数即可实现递归自我改进。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出双时间尺度框架，使改进流程本身（元技能）也递归进化，三基准 held-out 准确率较原始骨干最高提升 23.54 分。
+  abstract_zh: 现有自改进智能体只从执行轨迹重写任务技能（做什么），而改进流程本身（如何改进）是手工固定一次的，故自我进化并不递归。MetaSkill-Evolve 引入双时间尺度框架：每个分支同时携带任务技能
+    s 与分支局部元技能 m=(ψ,σ,α,π,ε)，后者参数化改进流水线中的 Analyzer、Retriever、Allocator、Proposer、Evolver 五个智能体。任务技能在快循环上进化，元技能在慢循环上用同一流水线对自身进化，无需额外模型或目标函数，五个流水线智能体共享单一冻结骨干。在
+    OfficeQA、SealQA、ALFWorld 三个智能体基准上，方法优于无技能、静态技能与单层进化基线，held-out 测试准确率较原始骨干分别提升 +23.54、+16.09、+1.92
+    个百分点。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: LLM 智能体递归自我改进（元技能+任务技能双时间尺度进化），属 self_improvement 域，按规则不给 deep_read。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: MetaSkill-Evolve：基于双时间尺度元技能进化的 LLM 智能体递归自我改进
+relations:
+- type: same_topic
+  ref: paper:arxiv:2609.33867
+  note: 同为通过递归技能进化实现 LLM 智能体递归自我改进的工作
+- type: same_topic
+  ref: paper:arxiv:2609.39149
+  note: 同为面向 LLM 智能体的技能自我进化研究

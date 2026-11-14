@@ -1,0 +1,52 @@
+id: paper:arxiv:2605.18006
+type: paper
+title: 'Inter-LPCM: Learning-based Inter-Frame Predictive Coding for LiDAR Point Cloud Compression'
+domain: immersive_media
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2605.18006v1
+  url: https://arxiv.org/abs/2605.18006
+  pdf_url: https://arxiv.org/pdf/2605.18006v1
+  venue: arXiv preprint
+time:
+  published: '2026-05-18'
+  collected: '2026-11-14'
+entities:
+- ref: codec:G-PCC
+  role: subject
+- ref: concept:EntropyModel
+  role: uses
+claims:
+- statement: Inter-LPCM在球面坐标系下对LiDAR点云几何进行学习型帧间预测编码：方位角按预设角分辨率做增量编码，半径用Inter-RP模型结合当前帧与配准参考帧的邻点进行预测，仰角用轻量注意力模型LAEP捕获跨坐标长程几何相关性。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 提出球面坐标系下率失真优化的量化步长选择方法，并为方位角、半径、仰角三个分量分别设计适配各自统计先验的熵编码模型以提升概率估计精度。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: '该方法旨在弥补G-PCC PredGeom帧间模式线性预测能力有限、以及现有球面域学习方法未利用帧间相关性去除几何冗余的不足，源代码已开源（GitHub: SDUChangSun/Inter-LPCM）。'
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 在球面坐标系下提出学习型LiDAR点云帧间预测编码，利用帧间相关性去除几何冗余并对比G-PCC PredGeom。
+  abstract_zh: 针对G-PCC PredGeom帧间模式仅依赖简单线性模型、而现有球面域学习方法未利用帧间相关性的两点局限，作者提出Inter-LPCM。方位角采用基于预设角分辨率的增量（delta）编码，半径引入同时利用当前帧与配准参考帧邻点的帧间半径预测模型（Inter-RP），仰角则用轻量注意力预测模型（LAEP）捕获跨坐标的长程几何相关性。量化环节提出球面坐标系下率失真优化的量化步长选择方法；熵编码为三个球面坐标分量分别设计适配各自统计先验的模型，以提升概率估计精度。源代码已在GitHub公开。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: LiDAR点云几何压缩属沉浸式/三维（点云）域而非核心视频图像编码域，按收录规则最高仅给summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: Inter-LPCM：面向激光雷达点云压缩的学习型帧间预测编码
+relations:
+- type: same_topic
+  ref: paper:arxiv:2505.20059
+  note: LPCM为同一团队的LiDAR点云球面预测编码前作（帧内），Inter-LPCM为其帧间扩展
+- type: same_topic
+  ref: paper:arxiv:2207.12554
+  note: 同为动态点云几何帧间压缩方向
+- type: same_topic
+  ref: paper:arxiv:2205.01135
+  note: 同为基于3D运动预测的深度动态点云压缩

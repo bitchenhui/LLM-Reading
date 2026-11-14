@@ -1,0 +1,84 @@
+id: paper:arxiv:2606.15363
+type: paper
+title: 'APEX: Adaptive Principle EXtraction A Three-Layer Self-Evolution Framework for Production AI Agents'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2606.15363v1
+  url: https://arxiv.org/abs/2606.15363
+  pdf_url: https://arxiv.org/pdf/2606.15363v1
+  venue: arXiv preprint
+time:
+  published: '2026-06-13'
+  collected: '2026-11-14'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: uses
+- ref: org:NVIDIA
+  role: builds_on
+claims:
+- statement: APEX三层协同进化（harness修补+行为原则蒸馏+工作流拓扑选择）显著优于单轴harness优化，单次进化运行即健康分提升90%。
+  confidence: reported
+  metrics:
+  - name: APEX Health Score
+    value: '0.570'
+    scope: 114条真实任务轨迹/18天运行，对比基线0.300（+90%）
+  evidence: abstract（初筛，未读全文）
+- statement: 从成功轨迹中蒸馏出可复用的行为原则。
+  confidence: reported
+  metrics:
+  - name: 新蒸馏原则数
+    value: '6'
+    scope: 单次进化运行
+  evidence: abstract（初筛，未读全文）
+- statement: 结构适应度选择选出的研究优先工作流拓扑得分0.900，较先前提升20%。
+  confidence: reported
+  metrics:
+  - name: 工作流拓扑得分
+    value: '0.900'
+    scope: 结构适应度选择（+20%）
+  evidence: abstract（初筛，未读全文）
+- statement: 单次进化成本极低，仅4次LLM调用约270秒即可完成，在本地qwen2.5-coder:32b实例上运行。
+  confidence: reported
+  metrics:
+  - name: LLM调用次数
+    value: '4'
+    scope: 单次进化运行
+  - name: 耗时
+    value: 约270 s
+    scope: 本地qwen2.5-coder:32b实例
+  evidence: abstract（初筛，未读全文）
+- statement: 对比锚点Self-Harness仅优化prompt harness单维度，在Terminal-Bench-2.0上提升14–21%，APEX将其扩展为多层协同进化。
+  confidence: reported
+  metrics:
+  - name: Terminal-Bench-2.0提升
+    value: 14–21%
+    scope: Self-Harness框架（文中引用的对比锚点）
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出三层协同进化框架，同时演化harness、行为原则与工作流拓扑，生产级Agent健康分单次进化提升90%。
+  abstract_zh: 现有最优的Self-Harness框架仅优化prompt harness单一维度，通过挖掘失败簇修补agent，在Terminal-Bench-2.0上提升14–21%。论文提出APEX三层协同进化框架：L1经失败模式修补演化harness，L2经成功轨迹蒸馏演化行为原则，L3经结构适应度选择演化工作流拓扑。作者在基于NVIDIA
+    Nemotron构建的生产级超级Agent Joe上实现该方法，其管理15节点计算集群，使用18天收集的114条真实任务轨迹。单次进化运行使健康分从0.300升至0.570（+90%），蒸馏出6条可复用新原则，并选出得分0.900（+20%）的研究优先工作流拓扑，成本仅为本地qwen2.5-coder:32b上的4次LLM调用（约270秒）。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 自我改进AI领域核心工作：三层协同进化框架同时演化harness、行为原则与工作流拓扑，非音视频核心域，按基准仅给初筛摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: APEX：自适应原则提取——面向生产级AI Agent的三层自进化框架
+relations:
+- type: same_topic
+  ref: paper:arxiv:2610.28201
+  note: MaD-RSI同为Agent harness递归自我改进，与APEX的L1层harness演化主题相同
+- type: same_topic
+  ref: paper:arxiv:2610.21791
+  note: RSIFlow演化自适应自改进工作流/元agent，与APEX的L3层工作流拓扑演化相近
+- type: same_topic
+  ref: paper:arxiv:2609.38372
+  note: Multi-Task Self-Evolving Harnesses属harness自优化工作，APEX将其单轴优化扩展为多层协同进化（文中Self-Harness类基线）

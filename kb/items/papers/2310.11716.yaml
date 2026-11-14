@@ -1,0 +1,46 @@
+id: paper:arxiv:2310.11716
+type: paper
+title: 'Reflection-Tuning: Data Recycling Improves LLM Instruction-Tuning'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2310.11716v1
+  url: https://arxiv.org/abs/2310.11716
+  pdf_url: https://arxiv.org/pdf/2310.11716v1
+  venue: arXiv preprint
+time:
+  published: '2023-10-18'
+  collected: '2026-11-14'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:SelfImprovement
+  role: uses
+claims:
+- statement: 用反思微调回收后的数据训练的LLM，在多个广泛使用的评测基准上优于用现有指令微调数据集训练的模型
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 训练集中低质量数据通常对指令微调有害，会导致LLM输出不一致甚至误导性输出
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 利用LLM自我反思与评判能力回收重构指令-响应数据，训练出的模型在多基准上优于现有数据集训练的模型。
+  abstract_zh: 针对指令微调训练集中低质量数据会导致LLM输出不一致甚至误导的问题，论文提出'反思微调'（Reflection-Tuning）方法。该方法借助一个oracle大语言模型，利用其自我改进与评判能力，对原始训练数据中的指令和响应进行内省式重构与增强，实现'数据回收'。在广泛使用的评测基准上的大量实验表明，用回收数据训练的LLM在多种基准上优于用现有数据集训练的模型。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 属LLM自我改进（数据回收提升指令微调质量）方向，非音视频核心域，按其余域默认仅初筛收录。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 反思微调：数据回收改进大语言模型指令微调
+relations:
+- type: same_topic
+  ref: paper:arxiv:2210.11610
+  note: 同为LLM自我改进方向的基础工作，Reflection-Tuning以LLM自改进能力实现数据增强
+- type: same_topic
+  ref: paper:arxiv:2305.14483
+  note: 均研究语言模型自我改进（Self-improvement）机制

@@ -1,0 +1,59 @@
+id: paper:arxiv:2606.06473
+type: paper
+title: 'MLEvolve: A Self-Evolving Framework for Automated Machine Learning Algorithm Discovery'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2606.06473v2
+  url: https://arxiv.org/abs/2606.06473
+  pdf_url: https://arxiv.org/pdf/2606.06473v2
+  venue: arXiv preprint
+time:
+  published: '2026-06-04'
+  collected: '2026-11-14'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: uses
+- ref: concept:AlphaEvolve
+  role: compared_against
+claims:
+- statement: MLEvolve 在 MLE-Bench 评测中，于 12 小时预算（标准运行时长的一半）下，在平均奖牌率与有效提交率等多个维度取得 SOTA 性能。
+  confidence: reported
+  metrics:
+  - name: 评测时间预算
+    value: 12小时
+    scope: MLE-Bench，为标准运行时长的二分之一
+  evidence: abstract（初筛，未读全文）
+- statement: 在数学算法优化任务上，MLEvolve 优于包括 AlphaEvolve 在内的专用算法发现方法，表现出跨域泛化能力。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 基于 LLM 的自进化多智能体框架，用渐进 MCGS 与回顾记忆实现端到端机器学习算法自动发现。
+  abstract_zh: 提出 MLEvolve，一个基于 LLM 的自进化多智能体框架，用于端到端机器学习算法发现。方法上将树搜索扩展为渐进式 MCGS，借助图引用边实现跨分支信息流动，并以熵启发的渐进调度使搜索从广泛探索逐步转向聚焦开发。引入回顾记忆（冷启动领域知识库加动态全局记忆）实现任务经验的检索复用，并将策略规划与代码生成解耦以稳定长程迭代。在
+    MLE-Bench 上，MLEvolve 于 12 小时预算（标准时长一半）下在平均奖牌率、有效提交率等多个维度达到 SOTA。在数学算法优化任务上还优于 AlphaEvolve 等专用算法发现方法，显示较强跨域泛化能力。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: LLM 自进化多智能体框架用于 ML 算法自动发现，属自我改进 AI 域（非核心编码域），按基准只给初筛摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: MLEvolve：面向自动化机器学习算法发现的自进化框架
+relations:
+- type: same_topic
+  ref: paper:arxiv:2610.22344
+  note: 同为面向自主机器学习工程（MLE）的智能体系统
+- type: same_topic
+  ref: paper:arxiv:2609.38288
+  note: 同为面向长程任务的自改进智能体框架
+- type: same_topic
+  ref: paper:arxiv:2412.14995
+  note: 同为 LLM 驱动的算法/启发式自动设计
+- type: same_topic
+  ref: paper:arxiv:2401.02051
+  note: 同为 LLM 自动算法设计（进化式启发式发现）

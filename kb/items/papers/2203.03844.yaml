@@ -1,0 +1,53 @@
+id: paper:arxiv:2203.03844
+type: paper
+title: Dynamic Dual Trainable Bounds for Ultra-low Precision Super-Resolution Networks
+domain: processing_enhancement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2203.03844v3
+  url: https://arxiv.org/abs/2203.03844
+  pdf_url: https://arxiv.org/pdf/2203.03844v3
+  venue: arXiv preprint
+time:
+  published: '2022-03-08'
+  collected: '2026-11-14'
+entities:
+- ref: concept:SuperResolution
+  role: subject
+- ref: metric:PSNR
+  role: measured_by
+claims:
+- statement: 超低比特量化下超分模型性能退化的根源是层级对称量化器与高度不对称激活分布之间的矛盾，会造成量化层级浪费或重建细节丢失。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: DDTB在超低精度下显著优于既有量化方法，将EDSR量化到2比特并做4倍超分时，在Urban100基准上PSNR提升0.70dB。
+  confidence: reported
+  metrics:
+  - name: PSNR增益
+    value: 0.70dB
+    scope: Urban100基准、EDSR 2比特量化、x4放大输出
+  evidence: abstract（初筛，未读全文）
+- statement: 为降低动态门控带来的额外开销，DDTB将门控控制器量化为2比特，并依据引入的动态强度仅应用于超分网络的部分层。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出动态双可训练边界量化器DDTB，化解超分网络2/3比特量化中对称量化器与激活分布不对称的矛盾，显著提升超低精度性能。
+  abstract_zh: 轻量级超分辨率模型广泛服务于移动设备，但现有网络量化方法在2比特、3比特等超低精度下性能严重退化。作者指出退化根源在于层级对称量化器与超分模型高度不对称激活分布之间的矛盾，导致量化层级浪费或重建图像细节丢失。为此提出DDTB激活量化器：一是带可训练上下界的层级量化器以适应不对称激活，二是动态门控控制器在运行时自适应调整上下界以应对不同样本间激活范围的剧烈变化。为控制额外开销，门控控制器本身量化为2比特，并按动态强度仅部署在超分网络的部分层。实验显示DDTB在超低精度下提升显著，例如对EDSR做2比特量化并在Urban100上4倍放大输出时PSNR提升0.70dB。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 论文属于超分辨率网络超低比特量化压缩（处理增强类，面向移动端轻量部署），非视频/图像编码核心域，按基准给 summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 超低精度超分辨率网络的动态双可训练边界
+relations:
+- type: same_topic
+  ref: paper:arxiv:2212.09501
+  note: 同属移动端/设备侧低精度量化的高效超分辨率研究（NAWQ-SR混合精度NPU超分引擎）
+- type: same_topic
+  ref: paper:arxiv:2105.11683
+  note: 同属轻量化/紧凑型单图超分辨率模型压缩方向

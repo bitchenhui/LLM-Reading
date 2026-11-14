@@ -1,0 +1,65 @@
+id: paper:arxiv:2403.05192
+type: paper
+title: 'An End-to-End Pipeline Perspective on Video Streaming in Best-Effort Networks: A Survey and Tutorial'
+domain: streaming_delivery
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2403.05192v4
+  url: https://arxiv.org/abs/2403.05192
+  pdf_url: https://arxiv.org/pdf/2403.05192v4
+  venue: arXiv preprint
+time:
+  published: '2024-03-08'
+  collected: '2026-11-14'
+entities:
+- ref: concept:ABR
+  role: subject
+- ref: concept:QoE
+  role: measured_by
+- ref: concept:SuperResolution
+  role: uses
+claims:
+- statement: 该综述覆盖 200 余篇流媒体研究论文，并按求解方法论将其设计划分为简单启发式、形式化优化与机器学习三大类。
+  confidence: reported
+  metrics:
+  - name: 综述文献数
+    value: 200+
+    scope: 本综述评述的流媒体设计论文总量
+  evidence: abstract（初筛，未读全文）
+- statement: 不同于既有碎片化综述，该文提出覆盖摄入、处理与分发三阶段的端到端流水线整体视角，贯穿视频压缩、上传、转码、ABR、CDN 支持与 QoE。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 综述以兼容编解码器与是否使用超分辨率等附加特征刻画各流媒体设计，并将学术研究与商用流媒体平台实践相连接。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 从采集到播放的全链路视角，综述尽力而为网络下基于客户端 ABR 与 CDN 的长视频流传输研究。
+  abstract_zh: 该文以务实视角综述流媒体最新进展，聚焦在尽力而为互联网上经由客户端自适应码率（ABR）算法并借助 CDN 辅助分发长篇二维视频的主流范式，并附带教程性材料。与既有碎片化综述不同，它给出从设备采集到用户播放的完整端到端流水线视角，覆盖摄入、处理与分发三个阶段，讨论视频压缩、上传、转码、ABR
+    算法、CDN 支持与体验质量（QoE）等关键问题。作者系统评述了 200 余篇论文，按问题求解方法论将流媒体设计分为直觉启发式、形式化优化与机器学习三类，并按兼容编解码器、是否使用超分辨率等特征进一步刻画。综述还将研究与商用流媒体平台实践相联系，并总结当前趋势与未来方向。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 非核心编码域的流媒体全链路综述，按规则收录为 summary_only，但内容覆盖压缩、ABR、SR 与 QoE，与音视频体系高度相关。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 尽力而为网络中视频流传输的端到端流水线视角：综述与教程
+relations:
+- type: same_topic
+  ref: paper:arxiv:2202.12987
+  note: 同为自适应视频流传输/质量方向的综述
+- type: same_topic
+  ref: paper:arxiv:2308.03643
+  note: ABR 算法研究，属于本综述评述的客户端码率自适应设计
+- type: same_topic
+  ref: paper:arxiv:2104.02322
+  note: 内容自适应超分辨率辅助视频压缩，对应综述中 SR 特征与压缩环节
+- type: same_topic
+  ref: paper:arxiv:2603.13597
+  note: 强化学习码率梯（bitrate ladder）设计，属 ABR/分发流水线分支
+- type: same_topic
+  ref: paper:arxiv:2408.09044
+  note: 跨编解码器质量-码率凸包与自适应流传输，对应综述的 codec 兼容性与 ABR 主题

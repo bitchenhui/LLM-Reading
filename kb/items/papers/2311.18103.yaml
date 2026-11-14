@@ -1,0 +1,54 @@
+id: paper:arxiv:2311.18103
+type: paper
+title: Corner-to-Center Long-range Context Model for Efficient Learned Image Compression
+domain: video_image_coding
+research_lines:
+- learned_codec
+source:
+  channel: arxiv
+  external_id: 2311.18103v1
+  url: https://arxiv.org/abs/2311.18103
+  pdf_url: https://arxiv.org/pdf/2311.18103v1
+  venue: arXiv preprint
+time:
+  published: '2023-11-29'
+  collected: '2026-11-14'
+entities:
+- ref: impl:TIC
+  role: subject
+claims:
+- statement: C³M并行上下文模型在率失真性能上优于现有最先进的并行上下文方法
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 并行上下文模型解码阶段仅需两遍扫描，可降低串行自回归上下文模型的解码时延，利于真实场景部署
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在编解码变换中引入LCAM（不同通道采用不同窗口形状的交叉注意力）可扩大感受野并捕获长程语义信息
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 主观分析表明增强Transformer图像压缩的细节表达是值得探索的方向
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出基于Transformer的角到中心并行上下文模型C³M，以对数预测顺序与长程交叉注意力提升学习图像压缩率失真性能。
+  abstract_zh: 针对并行上下文模型因因果上下文不完整导致的性能退化问题，论文从上下文预测与解码所用信息的数量和质量两方面展开分析，提出基于Transformer的角到中心上下文模型C³M。该方法采用对数式预测顺序，从角落到中心渐进式预测更多上下文特征；同时在编解码端变换中引入长程交叉注意力模块LCAM，通过在不同通道分配不同窗口形状扩大感受野以捕获长程语义信息。大量实验表明所提方法在率失真性能上优于现有最先进的并行上下文方法；主观分析进一步表明增强Transformer图像压缩中的细节表达是值得探索的方向。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 核心域学习图像压缩的上下文建模工作，提出并行Transformer上下文模型C³M，属主线技术且与既有并行上下文方法直接可比。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 面向高效学习图像压缩的角到中心长程上下文模型
+relations:
+- type: same_topic
+  ref: paper:arxiv:2306.14287
+  note: 同为学习图像压缩的高效上下文建模，均以窗口注意力降低上下文模型复杂度
+- type: same_topic
+  ref: paper:arxiv:2309.02529
+  note: 同为改进并行（棋盘式）上下文模型以提升学习图像压缩性能的工作
+- type: same_topic
+  ref: paper:arxiv:2403.14471
+  note: 同为基于Transformer/注意力上下文的学习图像压缩方案

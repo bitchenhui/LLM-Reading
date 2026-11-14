@@ -1,0 +1,75 @@
+id: paper:arxiv:2603.16864
+type: paper
+title: 'SparkVSR: Interactive Video Super-Resolution via Sparse Keyframe Propagation'
+domain: processing_enhancement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2603.16864v1
+  url: https://arxiv.org/abs/2603.16864
+  pdf_url: https://arxiv.org/pdf/2603.16864v1
+  venue: arXiv preprint
+time:
+  published: '2026-03-17'
+  collected: '2026-11-14'
+entities:
+- ref: concept:SuperResolution
+  role: subject
+- ref: concept:IQA
+  role: measured_by
+- ref: metric:DOVER
+  role: measured_by
+claims:
+- statement: SparkVSR在多个VSR基准上的CLIP-IQA较基线最高提升24.6%
+  confidence: reported
+  metrics:
+  - name: CLIP-IQA
+    value: 24.6%
+    scope: 多个VSR基准上相对基线的最高提升幅度
+  evidence: abstract（初筛，未读全文）
+- statement: DOVER指标较基线最高提升21.8%
+  confidence: reported
+  metrics:
+  - name: DOVER
+    value: 21.8%
+    scope: 多个VSR基准上相对基线的最高提升幅度
+  evidence: abstract（初筛，未读全文）
+- statement: MUSIQ指标较基线最高提升5.6%
+  confidence: reported
+  metrics:
+  - name: MUSIQ
+    value: 5.6%
+    scope: 多个VSR基准上相对基线的最高提升幅度
+  evidence: abstract（初筛，未读全文）
+- statement: 框架支持手动指定、编解码器I帧提取或随机采样三种关键帧选择方式，并具备无参考引导机制，在关键帧缺失或不完美时仍能稳健工作
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: SparkVSR可作为通用的交互式关键帧条件化视频处理框架，开箱即用扩展至老电影修复与视频风格迁移等未见任务
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 以稀疏HR关键帧为先验、LR视频运动为锚的可控交互式视频超分框架，基准指标最高提升24.6%。
+  abstract_zh: 针对现有视频超分（VSR）模型推理时如黑盒、用户无法修正伪影的问题，提出交互式VSR框架SparkVSR：用户可先用任意现成图像超分模型处理少量关键帧，框架再将关键帧先验传播至整个视频序列，同时以原始低分辨率视频运动为约束。方法引入关键帧条件化的latent-pixel两阶段训练流程，融合LR视频潜变量与稀疏编码的HR关键帧潜变量，学习跨空间传播并精修感知细节。推理时支持灵活的关键帧选择（手动指定、编解码器I帧提取或随机采样）及无参考引导机制，在关键帧缺失或不完美时仍稳健。在多个VSR基准上时间一致性与恢复质量优于基线，CLIP-IQA、DOVER、MUSIQ分别最高提升24.6%、21.8%、5.6%，并可开箱即用扩展至老电影修复与视频风格迁移等未见任务。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 交互式视频超分辨率框架，属编码链路处理与增强域（非核心编码域），按规则仅收录摘要
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: SparkVSR：基于稀疏关键帧传播的交互式视频超分辨率
+relations:
+- type: same_topic
+  ref: paper:arxiv:2210.08229
+  note: 同为压缩视频超分辨率方向，SparkVSR亦支持以编解码器I帧作为关键帧来源
+- type: same_topic
+  ref: paper:arxiv:2303.00334
+  note: 同为流式视频超分辨率方法研究
+- type: same_topic
+  ref: paper:arxiv:2206.07038
+  note: 同为视频超分（AnimeSR），且SparkVSR扩展至老片修复类应用
+- type: same_topic
+  ref: paper:arxiv:2605.25940
+  note: SparkVSR以CLIP-IQA/DOVER/MUSIQ等无参考质量指标评估超分效果，与该VSR质量评估研究议题相通

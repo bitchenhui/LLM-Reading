@@ -1,0 +1,51 @@
+id: paper:arxiv:2505.21769
+type: paper
+title: 'Video Streaming Over QUIC: A Comprehensive Study'
+domain: streaming_delivery
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2505.21769v2
+  url: https://arxiv.org/abs/2505.21769
+  pdf_url: https://arxiv.org/pdf/2505.21769v2
+  venue: arXiv preprint
+time:
+  published: '2025-05-27'
+  collected: '2026-11-14'
+entities:
+- ref: concept:QUIC
+  role: subject
+- ref: concept:ABR
+  role: subject
+- ref: concept:QoE
+  role: measured_by
+claims:
+- statement: 不同QUIC实现中即使采用相同的拥塞控制算法，传输性能也会出现显著差异，并直接影响视频流会话的QoE。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: QUIC拥塞控制算法、排队策略以及QUIC流之间的协作/竞争动态，在多样网络条件下共同影响ABR决策与用户QoE。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 作者主张将QUIC拥塞控制与ABR方案进行智能跨层协同设计，以提升整体流媒体性能。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 系统评测多种QUIC实现的拥塞控制性能及其对VoD与低延迟直播ABR和QoE的影响。
+  abstract_zh: 本文对多种QUIC实现进行综合分析，聚焦其传输层拥塞控制（CC）在单服务器多客户端环境下的性能及其对HTTP自适应流（HAS）的影响。通过大规模轨迹驱动实验，研究覆盖视频点播（VoD）与低延迟直播（LLL）两种场景，考察不同QUIC拥塞控制对ABR算法的作用，并分析排队策略与QUIC流间协作/竞争动态对QoE的影响。结果表明：不同QUIC实现即使采用相同CC算法也会产生显著性能差异，直接影响流媒体会话的QoE。作者据此呼吁对QUIC拥塞控制与ABR方案进行智能跨层协同设计，以提升整体流媒体性能。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 系统性评测多种QUIC实现的拥塞控制对ABR自适应流与QoE的影响，属流媒体与传输域核心议题，非编码核心域故按规则仅给 summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 基于QUIC的视频流传输：一项综合性研究
+relations:
+- type: same_topic
+  ref: paper:arxiv:2608.06102
+  note: 同样研究QUIC传输上的媒体流传输（Media-Over-QUIC）
+- type: same_topic
+  ref: paper:arxiv:2308.03643
+  note: 同属实时传输协议上ABR自适应流媒体机制研究

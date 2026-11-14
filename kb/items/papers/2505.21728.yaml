@@ -1,0 +1,52 @@
+id: paper:arxiv:2505.21728
+type: paper
+title: Highly Efficient Non-Separable Transforms for Next Generation Video Coding
+domain: video_image_coding
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2505.21728v1
+  url: https://arxiv.org/abs/2505.21728
+  pdf_url: https://arxiv.org/pdf/2505.21728v1
+  venue: arXiv preprint
+time:
+  published: '2025-05-27'
+  collected: '2026-11-14'
+entities:
+- ref: codec:HEVC
+  role: subject
+claims:
+- statement: HyGT作为HEVC扩展实现时，相比基线取得平均6%的码率降低（编码增益）
+  confidence: reported
+  metrics:
+  - name: 码率降低
+    value: 6%
+    scope: HyGT扩展HEVC的综合实验平均编码增益
+  evidence: abstract（初筛，未读全文）
+- statement: HyGT的内存占用比KLT变换矩阵方案少6.8倍，同时保持压缩性能
+  confidence: reported
+  metrics:
+  - name: 内存节省倍数
+    value: 6.8倍
+    scope: 相对KLT矩阵方案的内存占用对比
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出参数化低复杂度不可分离变换HyGT，在HEVC上实现平均6%码率节省且内存占用比KLT少6.8倍。
+  abstract_zh: 信号自适应变换编码因矩阵方案计算复杂度过高，数十年来难以应用于视频压缩。本文提出参数化方法：不再直接搜索完整变换矩阵，而是搜索定义一类新变换HyGT（低复杂度、易并行实现）的最优参数。HyGT作为HEVC扩展实现，综合实验表明其取得平均6%的码率降低编码增益，同时内存占用比KLT矩阵少6.8倍。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 核心域论文：提出面向视频编码的低复杂度参数化不可分离变换HyGT，直击变换编码复杂度痛点并给出显著编码增益。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 面向下一代视频编码的高效不可分离变换
+relations:
+- type: same_topic
+  ref: paper:arxiv:2511.17867
+  note: 同为面向视频编码的低复杂度变换（数据相关变换）设计
+- type: same_topic
+  ref: paper:arxiv:2605.15086
+  note: 同为快速低复杂度次级变换，服务于视频/图像编码效率提升

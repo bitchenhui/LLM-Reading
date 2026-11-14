@@ -1,0 +1,65 @@
+id: paper:arxiv:2604.06996
+type: paper
+title: Self-Preference Bias in Rubric-Based Evaluation of Large Language Models
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2604.06996v3
+  url: https://arxiv.org/abs/2604.06996
+  pdf_url: https://arxiv.org/pdf/2604.06996v3
+  venue: arXiv preprint
+time:
+  published: '2026-04-08'
+  collected: '2026-11-14'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:RSI
+  role: subject
+claims:
+- statement: 即使 rubric 完全客观（可程序化验证），LLM 评审的自偏好偏差依然存在：在生成器未通过的 rubric 上，judge 评审自身输出时错判为达标的可能性高出 50% 以上。
+  confidence: reported
+  metrics:
+  - name: 错判概率相对增幅
+    value: '>50%'
+    scope: IFEval/LiveCodeBench 中生成器未通过的可验证 rubric，judge 评审自身输出时错标为满足的相对增幅
+  evidence: abstract（初筛，未读全文）
+- statement: 在含主观 rubric 的医疗对话基准上，自偏好偏差可使模型分数偏移最高 10 分，足以成为排名前沿模型的决定性差距。
+  confidence: reported
+  metrics:
+  - name: 模型分数偏移
+    value: up to 10 points
+    scope: HealthBench 医疗对话基准，主观 rubric 评分
+  evidence: abstract（初筛，未读全文）
+- statement: 集成多个 judge 可缓解但不能完全消除自偏好偏差。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 负向 rubric 以及沟通、紧急转诊等主观话题类别对自偏好偏差尤其敏感。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 首次量化 rubric 式 LLM 评审的自偏好偏差：即使准则客观可验证，judge 仍显著偏袒自身输出。
+  abstract_zh: 本文首次研究 rubric 式评估范式（judge 对单条评估准则给出二值判定）中的自偏好偏差（SPB）。基于 IFEval 与 LiveCodeBench 等可程序化验证的基准，作者发现即使评估准则完全客观，SPB
+    依然存在：在生成器未通过的 rubric 上，judge 评审自己的输出时错判为达标的概率可高出 50% 以上。与其它评估范式类似，多 judge 集成可缓解但不能完全消除 SPB。在含主观 rubric
+    的医疗对话基准 HealthBench 上，SPB 可使模型分数偏移最高 10 分，足以改变前沿模型排名；负向 rubric 与沟通、紧急转诊等主观话题尤其易受影响。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 研究 LLM 评审的自偏好偏差及其对递归自改进（RSI）评估可靠性的影响，属自我改进域分析性工作，非音视频核心域，仅摘要级收录。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 基于评分细则（Rubric）的大语言模型评估中的自偏好偏差
+relations:
+- type: same_topic
+  ref: paper:arxiv:2610.11464
+  note: 同属自改进环路中评审/验证器可靠性问题：SPB 揭示 judge 不可信，该文研究自改进智能体的可检验 grader 协进化
+- type: same_topic
+  ref: paper:arxiv:2610.27610
+  note: 均关注递归自改进声明背后的评估证据可信度：SPB 是评估失真的具体来源之一
+- type: same_topic
+  ref: paper:arxiv:2610.09239
+  note: 同关注自改进环路中的评审/选择偏差：本文的 judge 偏袒可视为该文选择噪声的一种具体机制

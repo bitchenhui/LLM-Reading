@@ -1,0 +1,47 @@
+id: paper:arxiv:2309.07589
+type: paper
+title: 'MPAI-EEV: Standardization Efforts of Artificial Intelligence based End-to-End Video Coding'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2309.07589v1
+  url: https://arxiv.org/abs/2309.07589
+  pdf_url: https://arxiv.org/pdf/2309.07589v1
+  venue: arXiv preprint
+time:
+  published: '2023-09-14'
+  collected: '2026-11-14'
+entities:
+- ref: codec:VVC
+  role: subject
+claims:
+- statement: MPAI-EEV探索实验显示，EEV模型在感知评价指标上优于最新视频编码标准H.266/VVC
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: EEV采用数据训练的神经编码技术压缩高保真视频比特数，设计不局限于传统混合编码框架
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: MPAI已规划、开发或探索学习型无人机（UAV）视频编码等新标准化活动，并给出开发时间线与主要技术细节
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: MPAI组织制定端到端神经视频编码标准EEV，感知指标优于H.266/VVC，并规划UAV视频编码等新活动。
+  abstract_zh: MPAI（基于人工智能的图像、音频与数据编码联盟）正在制定名为MPAI-EEV的"端到端优化神经视频编码"系列标准，利用数据训练的神经编码技术压缩高保真视频所需比特数，不受传统混合编码框架的约束。本文概述了该方向的近期与进行中的标准化工作，阐述EEV的关键技术与设计理念，并报告参考模型的编码效率对比。探索实验表明，EEV模型在感知评价指标上优于最新视频编码标准H.266/VVC。论文还介绍了规划、开发或探索阶段的新活动，如学习型无人机（UAV）视频编码，给出开发时间线、主要技术细节与参考文献指引。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 本文是MPAI组织对端到端神经视频编码标准EEV的标准化进程综述（含参考模型与H.266/VVC对比及UAV编码规划），属标准生态类，以标准跟踪为主而非新技术贡献，故summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: MPAI-EEV：基于人工智能的端到端视频编码标准化进展
+relations:
+- type: same_topic
+  ref: paper:arxiv:2510.13867
+  note: 同为AI/学习型编码标准的官方进程综述，JPEG AI图像编码标准概览可与MPAI-EEV视频编码标准进程对照
+- type: same_topic
+  ref: paper:arxiv:2309.05846
+  note: 神经网络视频编码的设计与实现，是EEV端到端神经视频编码的技术同域工作

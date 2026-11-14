@@ -1,0 +1,63 @@
+id: paper:arxiv:2303.09818
+type: paper
+title: A real-time blind quality-of-experience assessment metric for HTTP adaptive streaming
+domain: quality_assessment
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2303.09818v1
+  url: https://arxiv.org/abs/2303.09818
+  pdf_url: https://arxiv.org/pdf/2303.09818v1
+  venue: arXiv preprint
+time:
+  published: '2023-03-17'
+  collected: '2026-11-14'
+entities:
+- ref: concept:QoE
+  role: subject
+- ref: concept:ABR
+  role: uses
+claims:
+- statement: 所提盲QoE指标的准确率优于主流盲QoE指标，提升幅度为0.3。
+  confidence: reported
+  metrics:
+  - name: 准确率提升
+    value: '0.3'
+    scope: 与主流盲QoE指标对比
+  evidence: abstract（初筛，未读全文）
+- statement: 指标计算时间仅为视频播放时长的60%，具备对ABR算法实时反馈的能力。
+  confidence: reported
+  metrics:
+  - name: 计算时间占比
+    value: 60%
+    scope: 相对视频播放时长
+  evidence: abstract（初筛，未读全文）
+- statement: 通过非均匀采样机制降低了QoE评估的时间复杂度，以适配客户端实时计算约束。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 指标设计将分辨率与重缓冲时长作为QoS奖励/惩罚特征，并结合DNN时空特征与码率切换事件作为内容信息，经SVR回归输出质量分数。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出面向HAS的实时盲QoE指标，融合QoS与深度特征经SVR回归，精度较主流盲指标提升0.3，计算耗时仅为播放时长60%。
+  abstract_zh: HTTP自适应流媒体（HAS）通过ABR算法动态切换码率，有效的QoE指标可为ABR算法提供关键反馈，但客户端实时QoE预测需同时满足与人类视觉系统高一致、低延迟与盲评估，难以兼得。作者分析HAS系统特性，提出非均匀采样机制以降低时间复杂度。所设计的QoE指标将分辨率与重缓冲时长作为QoS特征，融合深度神经网络输出的时空特征与特定码率切换事件作为内容信息，这些奖励与惩罚特征经支持向量回归（SVR）模型回归为质量分数。实验显示该指标准确率较主流盲QoE指标提升0.3，计算时间仅为视频播放时长的60%，可为ABR算法提供实时指导并改善HAS整体性能。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 面向HAS的实时盲QoE评估指标，属质量评估域而非核心编码域，按收录基准仅作摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 面向HTTP自适应流媒体的实时盲体验质量（QoE）评估指标
+relations:
+- type: same_topic
+  ref: paper:arxiv:2202.12987
+  note: 同属自适应视频流媒体质量评估（HAS QoE）主题
+- type: same_topic
+  ref: paper:arxiv:2306.01194
+  note: 同为无参考/盲式视频QoE指标估计方法
+- type: same_topic
+  ref: paper:arxiv:2301.05688
+  note: 均利用QoE反馈支撑流媒体质量/码率管理

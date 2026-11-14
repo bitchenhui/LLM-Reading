@@ -1,0 +1,55 @@
+id: paper:arxiv:2412.14995
+type: paper
+title: 'HSEvo: Elevating Automatic Heuristic Design with Diversity-Driven Harmony Search and Genetic Algorithm
+  Using LLMs'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2412.14995v1
+  url: https://arxiv.org/abs/2412.14995
+  pdf_url: https://arxiv.org/pdf/2412.14995v1
+  venue: arXiv preprint
+time:
+  published: '2024-12-19'
+  collected: '2026-11-14'
+entities:
+- ref: concept:EoH
+  role: subject
+- ref: concept:FunSearch
+  role: compared_against
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: HSEvo在黑盒AHD问题上同时实现高多样性指数与良好目标分数，且计算成本可控
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 已有方法分析显示：EoH多样性高于FunSearch与ReEvo但目标分数不稳定；ReEvo的反思机制目标分数好但多样性优化不足
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出HSEvo框架，用LLM结合和声搜索与遗传算法平衡多样性与收敛，自动设计高性能启发式。
+  abstract_zh: 针对LLM驱动的进化程序搜索（LLM-EPS）中对启发式搜索空间特性认识不足、探索与开发难以平衡的问题，作者提出两个多样性度量指标，并对FunSearch、EoH、ReEvo等已有方法进行系统分析。在黑盒自动启发式设计（AHD）问题上发现：EoH多样性高于FunSearch与ReEvo，但目标分数不稳定；ReEvo的反思机制虽取得好的目标分数，却未能有效优化多样性。据此提出自适应LLM-EPS框架HSEvo，借助和声搜索算法在多样性与收敛之间维持平衡。实验表明HSEvo同时获得高多样性指数与良好目标分数，并保持较低的计算成本。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: LLM进化程序搜索（LLM-EPS）核心工作，分析并改进FunSearch/EoH/ReEvo，属自我改进AI域而非核心编码域，按基准仅初筛。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: HSEvo：用多样性驱动的和声搜索与遗传算法结合大语言模型提升自动启发式设计
+relations:
+- type: same_topic
+  ref: paper:arxiv:2401.02051
+  note: 该文即EoH，为本研究分析与对比的核心基线方法
+- type: same_topic
+  ref: paper:arxiv:2610.03675
+  note: 同为LLM引导的程序进化研究，且均强调成本效率
+- type: same_topic
+  ref: paper:arxiv:2606.20847
+  note: LLM生成启发式用于VVC帧级QP适配，是LLM-EPS技术在视频编码链路的落地方向
+- type: same_topic
+  ref: paper:arxiv:2609.01535
+  note: LLM设计视频编码工具的案例研究，同属LLM自动算法/启发式设计脉络

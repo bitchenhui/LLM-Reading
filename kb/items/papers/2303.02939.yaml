@@ -1,0 +1,69 @@
+id: paper:arxiv:2303.02939
+type: paper
+title: 'FoundationTTS: Text-to-Speech for ASR Customization with Generative Language Model'
+domain: audio_coding
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2303.02939v3
+  url: https://arxiv.org/abs/2303.02939
+  pdf_url: https://arxiv.org/pdf/2303.02939v3
+  venue: arXiv preprint
+time:
+  published: '2023-03-06'
+  collected: '2026-11-14'
+entities:
+- ref: concept:NeuralAudioCodec
+  role: subject
+- ref: concept:LLM
+  role: uses
+- ref: metric:MOS
+  role: measured_by
+claims:
+- statement: FoundationTTS合成语音的主观质量MOS较基线TTS系统提升0.14。
+  confidence: reported
+  metrics:
+  - name: MOS
+    value: '+0.14'
+    scope: 相较论文基线TTS系统的MOS增益
+  evidence: abstract（初筛，未读全文）
+- statement: 在ASR定制任务中，用FoundationTTS合成语音训练可较第一个强定制ASR基线取得7.09%的相对词错误率降低。
+  confidence: reported
+  metrics:
+  - name: WERR
+    value: 7.09%
+    scope: ASR定制任务，相较强定制ASR基线1
+  evidence: abstract（初筛，未读全文）
+- statement: 在ASR定制任务中，相较第二个强定制ASR基线取得10.35%的相对词错误率降低。
+  confidence: reported
+  metrics:
+  - name: WERR
+    value: 10.35%
+    scope: ASR定制任务，相较强定制ASR基线2
+  evidence: abstract（初筛，未读全文）
+- statement: 分层VQ-GAN编解码器将每帧连续语音表征量化为离散token，使LLM可仅凭音素等语言学token自回归预测语音，规避连续声学帧的一对多预测难题。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 用分层VQ-GAN神经音频编解码器提取离散语音token，并用LLM自回归生成token的TTS系统，服务ASR定制。
+  abstract_zh: 针对级联或端到端TTS中连续声学帧难以仅凭音素预测、多样化输出需复杂VAE/流模型的两大局限，提出FoundationTTS。其一是基于VQ-GAN对抗训练的分层编解码网络：先以细粒度编解码提取连续帧级语音表征，再以粗粒度编解码将每帧量化为离散语音token并支持波形重建；其二是用大语言模型联合建模语音token、音素token与说话人token，自回归预测离散语音token。实验显示合成质量MOS较基线系统提升0.14；在ASR定制任务上，相较两个强定制基线分别取得7.09%和10.35%的相对词错误率降低（WERR）。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 语音合成论文，核心依赖神经音频编解码器提取离散语音token，属音频域非核心，按基准仅收录摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: FoundationTTS：面向ASR定制、基于生成式语言模型的文本到语音合成
+relations:
+- type: same_topic
+  ref: paper:arxiv:2107.03312
+  note: 同属端到端神经音频编解码器方向，本工作的分层VQ-GAN编解码器与之技术路线相近
+- type: same_topic
+  ref: paper:arxiv:2207.03067
+  note: 同为基于向量量化的可扩展神经语音编码，均以离散/分层量化token表征语音
+- type: same_topic
+  ref: paper:arxiv:2604.19949
+  note: 该文研究神经音频编解码器合成语音的检测，与本系统的codec合成语音输出属上下游关联

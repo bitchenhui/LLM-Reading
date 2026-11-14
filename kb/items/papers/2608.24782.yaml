@@ -1,0 +1,58 @@
+id: paper:arxiv:2608.24782
+type: paper
+title: Image Difference Quantification Using Autoencoder-Based Latent Representations
+domain: quality_assessment
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2608.24782v1
+  url: https://arxiv.org/abs/2608.24782
+  pdf_url: https://arxiv.org/pdf/2608.24782v1
+  venue: arXiv preprint
+time:
+  published: '2026-08-25'
+  collected: '2026-11-14'
+entities:
+- ref: metric:PSNR
+  role: subject
+- ref: metric:SSIM
+  role: compared_against
+- ref: metric:MOS
+  role: measured_by
+- ref: concept:IQA
+  role: uses
+claims:
+- statement: 在猫狗图像对上，98.4% 的图像对潜空间余弦相似度低于 0.5，显示潜空间中类间可分性强、类内聚类清晰。
+  confidence: reported
+  metrics:
+  - name: 相似度<0.5 的图像对占比
+    value: 98.4%
+    scope: dog-cat 图像对，潜空间余弦相似度
+  evidence: abstract（初筛，未读全文）
+- statement: TID2013 数据集上潜空间距离与人类平均意见得分（MOS）正相关，表明该度量对感知相关的图像失真敏感。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 作者主张该潜空间方法相较 MSE/PSNR/SSIM 等像素级指标更能捕捉感知上有意义的差异，并在光照、姿态与背景变化下保持鲁棒，可服务于内容检索与感知质量评估。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出以卷积自编码器潜空间余弦相似度量化图像差异，替代 PSNR/SSIM 等像素级指标，并在 TID2013 上验证与 MOS 正相关。
+  abstract_zh: 论文提出一种基于卷积自编码器的图像差异量化框架，在潜空间中以余弦相似度度量图像相似性，以替代 MSE、PSNR、SSIM 等依赖像素级比较的传统指标。所学到的紧凑嵌入对光照、姿态和背景变化具有鲁棒性，在猫狗图像及跨域数据上呈现清晰的类内聚类与类间分离，98.4%
+    的猫狗图像对相似度得分低于 0.5。在 TID2013 数据集上的进一步验证表明，潜空间距离与人类主观平均意见得分（MOS）正相关，对感知相关的图像失真敏感。作者主张该方法计算高效且语义有据，可应用于内容检索、感知质量评估与语义相似度分析。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 属感知型图像相似度/质量度量研究（IQA），非视频图像编码核心域，按收录基准仅作摘要级收录。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 基于自编码器潜在表示的图像差异量化
+relations:
+- type: same_topic
+  ref: paper:arxiv:2609.30077
+  note: 同属全参考图像质量度量研究，均以 PSNR 类像素级度量的局限与改进为核心议题
+- type: same_topic
+  ref: paper:arxiv:2604.19512
+  note: 同属基于学习表示构建（鲁棒）质量/相似度度量的方向

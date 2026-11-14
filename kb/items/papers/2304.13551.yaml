@@ -1,0 +1,55 @@
+id: paper:arxiv:2304.13551
+type: paper
+title: Latency Target based Analysis of the DASH.js Player
+domain: streaming_delivery
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2304.13551v1
+  url: https://arxiv.org/abs/2304.13551
+  pdf_url: https://arxiv.org/pdf/2304.13551v1
+  venue: arXiv preprint
+time:
+  published: '2023-04-26'
+  collected: '2026-11-14'
+entities:
+- ref: concept:DASH
+  role: subject
+- ref: concept:ABR
+  role: uses
+- ref: concept:QoE
+  role: measured_by
+claims:
+- statement: 在延迟目标与配置扫描的测试床实验中，dash.js v4.5.0默认的Dynamic ABR算法取得最佳整体QoE。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 其余ABR算法可在更低延迟下获得更高视频质量，但代价是卡顿（stalling）增加。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: L2A-LL算法在测试中表现不佳，作者提出的修改方案带来显著性能改进。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 部分低延迟配置设置会对播放性能产生负面影响。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 在真实网络测试床上评估dash.js三种ABR算法于不同延迟目标下的QoE表现与目标贴合度。
+  abstract_zh: 论文在自建DASH测试床上，针对一系列延迟目标与配置选项，分析了dash.js播放器中三种自适应码率（ABR）算法的低延迟性能，测试采用源自真实世界的网络配置文件。实验结果表明，dash.js
+    v4.5.0默认的Dynamic算法在整体QoE上表现最佳；其他算法虽能在更低延迟下取得更高视频质量，但以卡顿增加为代价。作者剖析了L2A-LL算法在测试中表现不佳的原因，提出修改方案并展示了显著改进，同时指出部分低延迟配置设置反而会损害性能。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: DASH.js播放器ABR算法的低延迟QoE实证分析，属流媒体与传输域，非核心编码域故按规则仅给summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 基于延迟目标的 DASH.js 播放器分析
+relations:
+- type: same_topic
+  ref: paper:arxiv:2308.03643
+  note: 同为ABR自适应码率算法研究，本文针对DASH低延迟播放器，Mamba面向WebRTC多维ABR
+- type: same_topic
+  ref: paper:arxiv:2609.09490
+  note: 同属QoE感知的码率自适应（rate adaptation）研究

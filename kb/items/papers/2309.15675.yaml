@@ -1,0 +1,63 @@
+id: paper:arxiv:2309.15675
+type: paper
+title: 'SJTU-TMQA: A quality assessment database for static mesh with texture map'
+domain: quality_assessment
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2309.15675v1
+  url: https://arxiv.org/abs/2309.15675
+  pdf_url: https://arxiv.org/pdf/2309.15675v1
+  venue: arXiv preprint
+time:
+  published: '2023-09-27'
+  collected: '2026-11-14'
+entities:
+- ref: concept:IQA
+  role: subject
+- ref: metric:MOS
+  role: measured_by
+claims:
+- statement: SJTU-TMQA数据库包含21个参考网格和945个失真样本，是大规模带纹理静态网格质量评估数据库
+  confidence: reported
+  metrics:
+  - name: 参考网格数量
+    value: '21'
+    scope: SJTU-TMQA数据库参考网格
+  - name: 失真样本数量
+    value: '945'
+    scope: SJTU-TMQA数据库失真样本
+  evidence: abstract（初筛，未读全文）
+- statement: 在SJTU-TMQA上评测的13种最先进客观质量指标最高相关系数仅约0.6，现有客观指标性能不足，需开发更有效的网格质量指标
+  confidence: reported
+  metrics:
+  - name: 评测客观指标数量
+    value: '13'
+    scope: 在SJTU-TMQA上评测的SOTA客观指标
+  - name: 最高相关系数
+    value: 约0.6
+    scope: 13种客观指标在SJTU-TMQA上与MOS的最高相关性
+  evidence: abstract（初筛，未读全文）
+- statement: 网格经渲染为处理后视频序列并通过主观实验获取MOS，内容多样性与MOS精度验证表明数据库具有异构性与可靠性
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 构建含21个参考网格、945个失真样本的带纹理静态网格质量评估数据库SJTU-TMQA，通过主观实验获取MOS并评测13种客观指标
+  abstract_zh: 带纹理静态网格已成为动画、游戏、医学影像和文化遗产等领域的主流三维数字表示，但针对其质量评估的研究匮乏，制约了网格压缩与增强等面向质量的应用发展。本文构建了大规模带纹理网格质量评估数据库SJTU-TMQA，包含21个参考网格和945个失真样本。网格被渲染为处理后的视频序列并开展主观实验获得平均意见得分（MOS），通过内容多样性与MOS精度验证了数据库的异构性与可靠性。论文展示了各类失真对人眼感知的影响，并在该数据库上评测了13种最先进客观指标，最高相关系数仅约0.6，表明亟需更有效的客观质量指标。数据库已在项目页面开源。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 带纹理静态网格质量评估数据库构建工作，属质量评估领域而非核心视频/图像编码域，按规则仅收录摘要
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: SJTU-TMQA：面向带纹理贴图静态网格的质量评估数据库
+relations:
+- type: same_topic
+  ref: paper:arxiv:2308.01940
+  note: TSMD同为静态彩色网格质量评估数据库，与SJTU-TMQA主题直接相关
+- type: same_topic
+  ref: paper:arxiv:2407.08165
+  note: Explicit-NeRF-QA同为三维表示质量评估数据库构建工作，方法论相似

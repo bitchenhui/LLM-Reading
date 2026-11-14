@@ -1,0 +1,52 @@
+id: paper:arxiv:2509.07367
+type: paper
+title: Autonomous Code Evolution Meets NP-Completeness
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2509.07367v1
+  url: https://arxiv.org/abs/2509.07367
+  pdf_url: https://arxiv.org/pdf/2509.07367v1
+  venue: arXiv preprint
+time:
+  published: '2025-09-09'
+  collected: '2026-11-14'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:AlphaEvolve
+  role: builds_on
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: SATLUTION是首个将LLM代码进化扩展至完整仓库规模（数百文件、数万行C/C++）的框架，且在演化求解器代码的同时自演化进化策略与规则。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 从SAT Competition 2024代码库与基准出发，SATLUTION演化出的求解器在SAT Competition 2025上决定性超越人类设计的冠军，并在2024基准上同时超过2024与2025两届冠军求解器。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 受AlphaEvolve启发的SATLUTION将LLM代码进化扩展至仓库级，自动演化出的SAT求解器超越人类设计的竞赛冠军。
+  abstract_zh: 受AlphaEvolve启发，作者提出SATLUTION，首个将LLM驱动的代码进化从孤立内核扩展到完整仓库规模（数百个文件、数万行C/C++代码）的框架。该工作面向NP完全问题布尔可满足性（SAT），编排LLM智能体在严格正确性保障与分布式运行时反馈下直接演化求解器仓库，并同时自演化其自身的进化策略与规则。从SAT
+    Competition 2024的代码库与基准出发，演化出的求解器在SAT Competition 2025上决定性地超越了人类设计的冠军，并在2024年基准上同时超过2024与2025两届冠军。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: LLM代码自我进化领域的仓库级里程碑工作（AlphaEvolve路线扩展至SAT求解器），属self_improvement域、与音视频技术无关，按基准仅收录摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 自主代码进化遇上NP完全问题
+relations:
+- type: same_topic
+  ref: paper:arxiv:2401.02051
+  note: 同属LLM驱动的算法/启发式自动设计（EoH）研究线，SATLUTION将其从启发式设计扩展到仓库级求解器进化
+- type: same_topic
+  ref: paper:arxiv:2610.35595
+  note: 同属LLM智能体算法设计与自主进化方向，均涉及LLM提出并改进算法
+- type: same_topic
+  ref: paper:arxiv:2610.22791
+  note: 同为自我进化编码智能体（self-evolving coding agents）主题

@@ -1,0 +1,66 @@
+id: paper:arxiv:2510.14150
+type: paper
+title: 'CodeEvolve: an open source evolutionary coding agent for algorithmic discovery and optimization'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2510.14150v6
+  url: https://arxiv.org/abs/2510.14150
+  pdf_url: https://arxiv.org/pdf/2510.14150v6
+  venue: arXiv preprint
+time:
+  published: '2025-10-15'
+  collected: '2026-11-14'
+entities:
+- ref: concept:AlphaEvolve
+  role: subject
+- ref: concept:LLM
+  role: uses
+- ref: concept:EoH
+  role: compared_against
+claims:
+- statement: CodeEvolve在AlphaEvolve基准套件上匹配或超越AlphaEvolve报告结果
+  confidence: reported
+  metrics:
+  - name: 持平或超越问题数
+    value: 5/9
+    scope: AlphaEvolve基准套件共9个问题
+  evidence: abstract（初筛，未读全文）
+- statement: 在匹配条件下，CodeEvolve优于开源框架OpenEvolve与ShinkaEvolve
+  confidence: reported
+  metrics:
+  - name: 优于两开源基线的问题数
+    value: 6/9
+    scope: 匹配条件下的9问题对比
+  evidence: abstract（初筛，未读全文）
+- statement: 以开源权重Qwen3-Coder-30B为骨干，在两个CirclePackingSquare实例上超越AlphaEvolve报告分数，计算成本显著更低
+  confidence: reported
+  metrics:
+  - name: 成本差
+    value: 约低一个数量级
+    scope: 对比闭源前沿LLM集成，CirclePackingSquare两实例
+  evidence: abstract（初筛，未读全文）
+- statement: CodeEvolve在启发式设计任务上无需重新调参即与EoH保持竞争力；消融实验显示性能由各组件交互驱动而非单一算子
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 开源LLM+岛屿进化搜索框架CodeEvolve，在AlphaEvolve基准9题中5题持平或超越原版。
+  abstract_zh: CodeEvolve是一个开源框架，将大语言模型与基于岛屿的进化搜索耦合以实现端到端算法发现，集成启发式交叉、元提示与深度细化，并建立在CVT-MAP-Elites归档与加权LLM集成之上。在AlphaEvolve基准套件上，它在9个问题中的5个上匹配或超越AlphaEvolve的报告结果；在匹配条件下于9个问题中的6个上优于开源框架OpenEvolve与ShinkaEvolve。采用开源权重Qwen3-Coder-30B骨干时，它在两个CirclePackingSquare实例上超越AlphaEvolve报告分数，成本比闭源前沿LLM集成低约一个数量级，且在启发式设计任务上无需重调参即与EoH保持竞争力。消融实验表明，结果是各组件间交互而非任何单一算子所驱动。框架、实验数据与超参数指南均已开源。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: LLM+岛屿进化搜索的开源编码智能体，属AlphaEvolve谱系的自我改进AI工作，非音视频核心域，按规则仅做初筛摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: CodeEvolve：面向算法发现与优化的开源进化式编码智能体
+relations:
+- type: same_topic
+  ref: paper:arxiv:2610.33046
+  note: 同为LLM进化搜索驱动的算法发现与自我改进智能体路线
+- type: same_topic
+  ref: paper:arxiv:2609.01535
+  note: LLM自动设计算法：该文针对视频编码工具，本工作为通用算法发现的同源方法

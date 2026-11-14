@@ -1,0 +1,51 @@
+id: paper:arxiv:2311.07399
+type: paper
+title: Context-Aware Adaptive Prefetching for DASH Streaming over 5G Networks
+domain: streaming_delivery
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2311.07399v1
+  url: https://arxiv.org/abs/2311.07399
+  pdf_url: https://arxiv.org/pdf/2311.07399v1
+  venue: arXiv preprint
+time:
+  published: '2023-11-13'
+  collected: '2026-11-14'
+entities:
+- ref: concept:DASH
+  role: subject
+- ref: concept:QoE
+  role: measured_by
+claims:
+- statement: 提出在 MEC 主机处用机器学习分类模型选择 DASH 媒体段进行预取，模型以媒体会话指标（含应用层信息）训练，以改善预测。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 方案在移动网络运营商（MNO）的 5G MEC 与 RAN 真实环境中测试，并以缓存性能与播放器性能指标和其他预取策略对比，据称可减少网络流量并提升 QoS 与 QoE。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出部署在 5G MEC 边缘的 ML 分类模型，上下文感知地预取 DASH 媒体段，降低回源流量并提升 QoS/QoE。
+  abstract_zh: 随着视频消费与高清内容需求增长，多接入边缘计算（MEC）允许在靠近无线接入网（RAN）的网络边缘部署缓存实例，将内容预取并由 MEC 主机就近服务。该文提出一种在 MEC 处预取
+    DASH 流的新机制，利用机器学习分类模型选择待预取的媒体段。模型用媒体会话指标（含应用层信息）训练以提升预测准确性。方案在移动运营商的 5G MEC 与 RAN 环境中实测，通过缓存与播放器侧性能指标与其他策略对比，结果显示可减少网络流量并提升
+    QoS 与 QoE。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: DASH 流媒体经 5G MEC 边缘预取的传输优化工作，属流媒体与传输域，按规则只收 summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 面向 5G 网络中 DASH 流媒体的上下文感知自适应预取
+relations:
+- type: same_topic
+  ref: paper:arxiv:2304.13551
+  note: 同为 DASH 流媒体传输与播放器行为研究
+- type: same_topic
+  ref: paper:arxiv:2301.05688
+  note: 同为网络侧辅助的视频 QoE 管理
+- type: same_topic
+  ref: paper:arxiv:2609.09490
+  note: 同为蜂窝网络中的 QoE 感知视频传输优化

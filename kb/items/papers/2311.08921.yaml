@@ -1,0 +1,58 @@
+id: paper:arxiv:2311.08921
+type: paper
+title: Self-Improving for Zero-Shot Named Entity Recognition with Large Language Models
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2311.08921v3
+  url: https://arxiv.org/abs/2311.08921
+  pdf_url: https://arxiv.org/pdf/2311.08921v3
+  venue: arXiv preprint
+time:
+  published: '2023-11-15'
+  collected: '2026-11-14'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:TrainingFree
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: 提出免训练自改进框架：LLM 以自一致性在无标注语料上生成自标注数据，筛选可靠标注后，测试时检索示例进行上下文学习推理。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 该框架在四个零样本 NER 基准上取得显著性能提升。
+  confidence: reported
+  metrics:
+  - name: 评测基准数
+    value: '4'
+    scope: 零样本 NER 基准（摘要未列出具体名称与数值）
+  evidence: abstract（初筛，未读全文）
+- statement: 增大无标注语料规模或自改进迭代次数并不保证性能持续提升；进一步提升更依赖于更先进的可靠标注选择策略。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 免训练自改进框架：LLM 自一致性自标注、可靠标注筛选与上下文学习检索，提升零样本 NER 性能。
+  abstract_zh: 该工作提出一个免训练的自改进框架，利用无标注语料激发 LLM 的自学习能力，以推进零样本命名实体识别的性能边界。方法分三步：先用 LLM 通过自一致性在无标注语料上预测，得到自标注数据集；再探索多种策略从中筛选可靠标注，构建可靠自标注数据集；最后对每个测试输入从可靠数据集检索示例并通过上下文学习完成推理。在四个基准上取得显著性能提升。实验分析表明，增大无标注语料规模或增加自改进迭代次数并不保证进一步提升，性能提升更依赖于更先进的可靠标注选择策略。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 属于 LLM 自改进方法论文（自一致性自标注+可靠样本筛选+上下文学习检索），与本库自改进主线相关，但任务为 NER、非核心音视频域，仅初筛摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 基于大语言模型自我改进的零样本命名实体识别
+relations:
+- type: same_topic
+  ref: paper:arxiv:2609.34975
+  note: 同为无外部训练信号下的 LLM 自改进研究（提示退火自改进推理 vs 自标注+检索自改进）
+- type: same_topic
+  ref: paper:arxiv:2610.23344
+  note: 同属 LLM 自改进循环研究，均涉及迭代收益的边界与放大条件
+- type: same_topic
+  ref: paper:arxiv:2609.37968
+  note: 均为无奖励/无标注监督驱动的 LLM 自改进机制（免奖励搜索 vs 免训练自标注）

@@ -1,0 +1,66 @@
+id: paper:arxiv:2506.21977
+type: paper
+title: 'StableCodec: Taming One-Step Diffusion for Extreme Image Compression'
+domain: video_image_coding
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2506.21977v1
+  url: https://arxiv.org/abs/2506.21977
+  pdf_url: https://arxiv.org/pdf/2506.21977v1
+  venue: arXiv preprint
+time:
+  published: '2025-06-27'
+  collected: '2026-11-14'
+entities:
+- ref: dataset:Kodak
+  role: subject
+- ref: metric:FID
+  role: measured_by
+- ref: metric:DISTS
+  role: measured_by
+claims:
+- statement: StableCodec在CLIC 2020、DIV2K与Kodak数据集上的FID、KID与DISTS指标显著优于现有方法，最低评测码率可低至0.005 bpp，同时保持较强重建保真度。
+  confidence: reported
+  metrics:
+  - name: 码率
+    value: 0.005 bpp
+    scope: StableCodec在CLIC2020/DIV2K/Kodak上的最低评测码率，此码率下感知指标仍显著占优
+  evidence: abstract（初筛，未读全文）
+- statement: StableCodec实现一步扩散解码，推理速度与主流变换编码方案相当，克服了此前扩散式压缩解码需大量去噪步数的实时性瓶颈。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 通过深度压缩潜在编解码器与双分支辅助编码结构，StableCodec在超低码率（<0.05 bpp）下同时兼顾像素级保真与高真实感。
+  confidence: reported
+  metrics:
+  - name: 超低码率区间
+    value: <0.05 bpp
+    scope: 论文面向的极端压缩工作区间
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 单步扩散实现超低码率（低至0.005bpp）高保真高真实感图像压缩，解码速度接近主流变换编码。
+  abstract_zh: 扩散式图像压缩借助预训练文生图模型的生成先验，可在低于0.05 bpp的超低码率下实现高真实感重建，但现有方法解码端需要大量去噪步数且难以保证像素级保真。StableCodec提出深度压缩潜在编解码器，仅需传输带噪潜在表示即可供单步去噪使用；并设计双分支编码结构（辅助编码器-解码器对）增强重建保真度，采用码率与像素级约束的端到端联合优化。在CLIC
+    2020、DIV2K与Kodak数据集上，StableCodec在FID、KID、DISTS上以显著优势超越现有方法，最低评测码率可低至0.005 bpp，同时保持较强保真度，推理速度与主流变换编码方案相当。全部源代码已开源。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 核心域图像编码：以单步扩散实现超低码率高保真压缩且速度接近主流变换编码，代码开源，具备深读价值
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: StableCodec：驯服单步扩散实现极端图像压缩
+relations:
+- type: same_topic
+  ref: paper:arxiv:2505.16687
+  note: 同为一步扩散图像压缩方向，StableCodec在此基础上进一步强化保真度与码率下限
+- type: same_topic
+  ref: paper:arxiv:2601.10373
+  note: 同属基于扩散先验的低码率图像压缩
+- type: same_topic
+  ref: paper:arxiv:2402.08934
+  note: 同属预训练扩散模型驱动的极端压缩研究线（视频域）
+- type: same_topic
+  ref: paper:arxiv:2606.13366
+  note: 同为扩散图像压缩的率-失真-感知联合优化路线

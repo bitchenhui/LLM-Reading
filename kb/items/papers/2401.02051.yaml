@@ -1,0 +1,48 @@
+id: paper:arxiv:2401.02051
+type: paper
+title: 'Evolution of Heuristics: Towards Efficient Automatic Algorithm Design Using Large Language Model'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2401.02051v3
+  url: https://arxiv.org/abs/2401.02051
+  pdf_url: https://arxiv.org/pdf/2401.02051v3
+  venue: arXiv preprint
+time:
+  published: '2024-01-04'
+  collected: '2026-11-14'
+entities:
+- ref: concept:EoH
+  role: subject
+- ref: concept:LLM
+  role: uses
+- ref: concept:FunSearch
+  role: compared_against
+claims:
+- statement: EoH在三个广泛研究的组合优化基准问题上优于常用手工启发式及其他近期自动启发式设计方法（包括FunSearch）。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在在线装箱问题上，EoH以较低的LLM查询计算预算生成的启发式显著优于广泛使用的人工手工基线算法。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: EoH将启发式表示为自然语言'想法'并由LLM翻译为可执行代码，在进化搜索框架中共同演化想法与代码，从而高效生成高性能启发式。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出EoH演化范式，用LLM与进化计算自动设计启发式算法，性能超越FunSearch等AHD方法。
+  abstract_zh: 启发式的手工设计耗时费力且依赖丰富经验。本文提出EoH（Evolution of Heuristics），一种将大语言模型与进化计算结合的自动启发式设计（AHD）新范式：启发式思想先以自然语言'想法（thoughts）'表示，再由LLM翻译为可执行代码，在进化搜索框架中对想法与代码共同演化。在三个经典组合优化基准问题上的实验表明，EoH优于常用手工启发式及包括FunSearch在内的近期AHD方法。尤其在在线装箱问题上，EoH以较低LLM查询预算生成的启发式显著优于广泛使用的人工基线算法。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: EoH是LLM+进化计算自动启发式设计（AHD）的开创性工作，属self_improvement域（非核心编码域），按规则给summary_only，但作为EoH/FunSearch方法线的源头文献相关性高。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 启发式演化：基于大语言模型的高效自动算法设计
+relations:
+- type: same_topic
+  ref: paper:arxiv:2610.35595
+  note: 同属LLM驱动的自动算法/进化算法设计主题，Agentic Algorithm Design与EoH方法线直接相关

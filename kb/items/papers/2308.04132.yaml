@@ -1,0 +1,63 @@
+id: paper:arxiv:2308.04132
+type: paper
+title: Optimizing Adaptive Video Streaming with Human Feedback
+domain: streaming_delivery
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2308.04132v2
+  url: https://arxiv.org/abs/2308.04132
+  pdf_url: https://arxiv.org/pdf/2308.04132v2
+  venue: arXiv preprint
+time:
+  published: '2023-08-08'
+  collected: '2026-11-14'
+entities:
+- ref: concept:ABR
+  role: subject
+- ref: concept:QoE
+  role: uses
+- ref: metric:MOS
+  role: uses
+claims:
+- statement: Jade 通过 RLHF 与秩比较式 QoE 模型对齐用户主观评分，在不同网络条件下 QoE 较基线提升 8.09%–38.13%。
+  confidence: reported
+  metrics:
+  - name: QoE 提升
+    value: 8.09%-38.13%
+    scope: 不同网络条件下相对基线 ABR 算法的 QoE 改善
+  evidence: abstract（初筛，未读全文）
+- statement: 基于 MOS 的 QoE 模型未考虑用户评分尺度异质性，可能导致 ABR 策略出现意外行为；Jade 的秩比较式 QoE 模型利用用户评分的相对值解释主观感知。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: Jade 同时实现线性与 DNN 两种 QoE 模型架构并配合熵感知强化机制训练策略，兼顾精度与泛化能力，在画质与卡顿率等常规指标上表现良好。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出 Jade，用 RLHF 与秩比较式 QoE 模型对齐用户主观评分以优化 ABR，QoE 提升 8.09%–38.13%。
+  abstract_zh: 传统 QoE 驱动的 ABR 算法依赖基于 MOS 的 QoE 模型，但未考虑用户在评分尺度上的异质性，导致策略行为偏离预期。作者提出 Jade，引入带人类反馈的强化学习（RLHF），构建基于用户评分相对值（秩比较）的
+    QoE 模型以刻画主观感知，并提供线性与 DNN 两种架构以兼顾精度与泛化。训练策略时进一步提出熵感知强化机制与所提 QoE 模型集成。实验表明 Jade 在画质、卡顿率等常规指标上表现良好，在不同网络条件下
+    QoE 较基线提升 8.09%–38.13%，凸显用户异质性在 QoE 建模中的重要性。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: ABR 码率自适应 + QoE 建模 + RLHF 属流媒体传输核心议题，但非视频编码核心域，按收录规则仅给 summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 基于人类反馈的自适应视频流优化
+relations:
+- type: same_topic
+  ref: paper:arxiv:2308.03643
+  note: 同为 ABR（自适应码率）优化方向，Mamba 面向 WebRTC 的多维 ABR
+- type: same_topic
+  ref: paper:arxiv:2603.13597
+  note: 同为强化学习驱动的自适应流媒体码率决策（DRL-based bitrate ladder）
+- type: same_topic
+  ref: paper:arxiv:2610.13698
+  note: 同为 DRL-based ABR 方案，面向云游戏场景
+- type: same_topic
+  ref: paper:arxiv:2609.09490
+  note: 同为 QoE 感知的码率自适应研究

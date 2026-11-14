@@ -1,0 +1,66 @@
+id: paper:arxiv:2108.04051
+type: paper
+title: A Streamwise GAN Vocoder for Wideband Speech Coding at Very Low Bit Rate
+domain: audio_coding
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2108.04051v1
+  url: https://arxiv.org/abs/2108.04051
+  pdf_url: https://arxiv.org/pdf/2108.04051v1
+  venue: arXiv preprint
+time:
+  published: '2021-08-09'
+  collected: '2026-11-14'
+entities:
+- ref: codec:EVS
+  role: subject
+claims:
+- statement: 提出的流式GAN声码器（改进StyleMelGAN）可从1.6 kbit/s编码参数逐帧生成宽带语音波形，适合流式应用。
+  confidence: reported
+  metrics:
+  - name: 输入参数码率
+    value: 1.6 kbit/s
+    scope: 编码参数码率，宽带语音
+  evidence: abstract（初筛，未读全文）
+- statement: 该模型在极低码率语音编码上显著优于LPCNet等自回归声码器，为该领域提供新SOTA。
+  confidence: reported
+  metrics:
+  - name: 计算复杂度
+    value: 约5 GMACs
+    scope: 声码器推理计算量
+  evidence: abstract（初筛，未读全文）
+- statement: 在干净语音上，该声码器质量与工作在5.9 kbit/s的EVS语音编解码器相当。
+  confidence: reported
+  metrics:
+  - name: 对比锚点码率
+    value: 5.9 kbit/s
+    scope: EVS编解码器工作码率，干净语音条件
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 改造StyleMelGAN为流式GAN声码器，从1.6 kbit/s参数生成宽带语音，胜过LPCNet、媲美5.9 kbit/s的EVS。
+  abstract_zh: GAN声码器在语音合成中的感知质量与生成速度已超越自回归模型，但极低码率语音编码此前仍惯用自回归声码器。本文对StyleMelGAN进行改造，使其可逐帧运行，从1.6 kbit/s的编码参数流式生成宽带语音波形，适合流式应用。实验表明该模型在极低码率语音编码上显著优于LPCNet等自回归声码器，计算量约5
+    GMACs，为该领域建立了新的最优水平。在干净语音上其质量可与5.9 kbit/s的先进语音编解码器EVS相竞争，支持前馈全卷积模型进一步用于低码率语音编码。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 极低码率神经语音编码（非核心视频域），提出流式GAN声码器并给出与LPCNet、EVS的SOTA对比结果，按规则给summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 一种面向极低码率宽带语音编码的流式GAN声码器
+relations:
+- type: same_topic
+  ref: paper:arxiv:2107.03312
+  note: 同为端到端神经音频/语音编码（低码率音频编码）
+- type: same_topic
+  ref: paper:arxiv:2207.08363
+  note: 同为神经语音编码，研究低码率参数化语音编码
+- type: same_topic
+  ref: paper:arxiv:2103.14776
+  note: 同为可扩展高效神经语音编码设计
+- type: same_topic
+  ref: paper:arxiv:2609.09866
+  note: 同为因果流式神经音频编码

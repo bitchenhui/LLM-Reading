@@ -1,0 +1,59 @@
+id: paper:arxiv:2502.15174
+type: paper
+title: 'FD-LSCIC: Frequency Decomposition-based Learned Screen Content Image Compression'
+domain: video_image_coding
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2502.15174v1
+  url: https://arxiv.org/abs/2502.15174
+  pdf_url: https://arxiv.org/pdf/2502.15174v1
+  venue: arXiv preprint
+time:
+  published: '2025-02-21'
+  collected: '2026-11-14'
+entities:
+- ref: metric:PSNR
+  role: subject
+- ref: metric:MS-SSIM
+  role: measured_by
+claims:
+- statement: FD-LSCIC在屏幕内容图像压缩任务上的PSNR与MS-SSIM均优于传统编码标准及最先进的学习型压缩方法。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 构建了SDU-SCICD10K屏幕内容图像压缩数据集，覆盖基础屏幕内容图像、计算机渲染图像及PC与移动平台的自然/屏幕混合内容。
+  confidence: reported
+  metrics:
+  - name: 图像数量
+    value: '>10000张'
+    scope: SDU-SCICD10K数据集总量
+  evidence: abstract（初筛，未读全文）
+- statement: 自适应量化模块按频率分量学习缩放均匀噪声，可灵活控制各频率的量化粒度。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 频率分解的学习型屏幕内容图像压缩方法，附1万余张图像新数据集，PSNR与MS-SSIM超越传统标准与SOTA。
+  abstract_zh: 针对屏幕内容图像具有锐利边缘、重复纹理、嵌入文字图形等特性、直接套用自然图像压缩方法效果欠佳的问题，提出FD-LSCIC方法：采用多频率两级倍频残差块（MToRB）提取特征，级联三尺度特征融合残差块（CTSFRB）实现多尺度特征整合，并以多频率上下文交互模块（MFCIM）降低频率间相关性。同时引入自适应量化模块，为每个频率分量学习缩放均匀噪声，实现量化粒度的灵活控制。针对大规模SC数据集缺失问题，构建了涵盖基础屏幕内容图像、计算机渲染图像及PC与移动平台混合内容的SDU-SCICD10K数据集（逾1万张图像）。实验表明该方法在PSNR与MS-SSIM上显著优于传统编码标准及最先进学习型压缩方法。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 核心域学习型图像压缩，针对屏幕内容场景给出方法创新并构建超万张图像新数据集，双贡献值得深读。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: FD-LSCIC：基于频率分解的学习型屏幕内容图像压缩
+relations:
+- type: same_topic
+  ref: paper:arxiv:2605.27024
+  note: 同为屏幕内容编码，NeR-SC将神经视频表示适配屏幕内容
+- type: same_topic
+  ref: paper:arxiv:2310.16387
+  note: 同为频率感知的学习型图像压缩
+- type: same_topic
+  ref: paper:arxiv:2610.33616
+  note: 同为基于频率调制的LIC方法
+- type: same_topic
+  ref: paper:arxiv:2303.14978
+  note: 同属学习型图像压缩架构设计（混合Transformer-CNN）

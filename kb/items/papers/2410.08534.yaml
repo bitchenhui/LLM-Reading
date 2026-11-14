@@ -1,0 +1,57 @@
+id: paper:arxiv:2410.08534
+type: paper
+title: 'Quality Prediction of AI Generated Images and Videos: Emerging Trends and Opportunities'
+domain: quality_assessment
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2410.08534v2
+  url: https://arxiv.org/abs/2410.08534
+  pdf_url: https://arxiv.org/pdf/2410.08534v2
+  venue: arXiv preprint
+time:
+  published: '2024-10-11'
+  collected: '2026-11-14'
+entities:
+- ref: concept:IQA
+  role: subject
+- ref: concept:QoE
+  role: subject
+- ref: concept:SuperResolution
+  role: subject
+claims:
+- statement: 多数现有IQA/VQA模型以对原始参考内容的'重建'保真度来衡量视觉质量，并非为评估AI生成内容的'生成式'伪影而设计。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 针对GenAI新提出的质量指标，其性能评估受限于数据集规模过小或缺乏代表性内容与失真容量，且缺少能准确报告模型在GenAI任务上成败的性能测度。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: AI生成与增强内容须保持高视觉质量以避免损害终端用户体验（QoE），部署IQA/VQA模型是监控与控制其视觉质量的一条路径。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 论文提出面向GenAI质量评估的开放问题与未来工作建议。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 综述AI生成与增强内容的IQA/VQA质量评估现状、局限与未来方向
+  abstract_zh: 该综述聚焦文生图、图生图、图生视频等AI生成内容，以及超分辨率、插帧、去噪、压缩等AI增强内容的视觉质量评估问题。作者指出多数现有IQA/VQA模型以原始参考内容为基准衡量'重建'保真度，并非为评估'生成式'伪影而设计。新近提出的指标又受限于数据集规模过小、内容或失真代表性不足，且缺少能准确衡量GenAI质量评估模型有效性的性能测度。论文梳理了面向终端用户感知质量（QoE）的开放问题，并给出GenAI质量评估领域的未来研究建议。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 面向AI生成/增强内容质量评估（IQA/VQA/QoE）的综述，属质量评估域而非核心编码域，按收录规则给 summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: AI生成图像与视频的质量预测：新兴趋势与机遇
+relations:
+- type: same_topic
+  ref: paper:arxiv:2605.25940
+  note: 同属评估质量模型对生成式（扩散）视频超分内容的适用性
+- type: same_topic
+  ref: paper:arxiv:2610.25770
+  note: 同属生成式图像内容（超分幻觉）的VQA评估
+- type: same_topic
+  ref: paper:arxiv:2608.08508
+  note: 同属超分辨率与质量评估联合研究方向

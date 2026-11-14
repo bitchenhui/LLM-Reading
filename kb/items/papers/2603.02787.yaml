@@ -1,0 +1,57 @@
+id: paper:arxiv:2603.02787
+type: paper
+title: Rethinking Code Similarity for Automated Algorithm Design with LLMs
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2603.02787v1
+  url: https://arxiv.org/abs/2603.02787
+  pdf_url: https://arxiv.org/pdf/2603.02787v1
+  venue: arXiv preprint
+time:
+  published: '2026-03-03'
+  collected: '2026-11-14'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:FunSearch
+  role: uses
+- ref: concept:EoH
+  role: uses
+claims:
+- statement: 现有代码相似度指标只捕捉表层语法或输出等价，无法度量算法逻辑相似性；BehaveSim 通过问题求解轨迹（PSTrajs）的 DTW 对齐，可区分逻辑迥异但语法或输出相似的算法。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 将 BehaveSim 集成到 FunSearch、EoH 等现有 LLM-AAD 框架可促进行为多样性，并在三项 AAD 任务上显著提升性能。
+  confidence: reported
+  metrics:
+  - name: 评测任务数
+    value: '3'
+    scope: BehaveSim 集成后的 LLM-AAD 任务评测（摘要口径，未给具体提升幅度）
+  evidence: abstract（初筛，未读全文）
+- statement: BehaveSim 可按求解行为对 AI 生成算法进行聚类，支持对问题求解策略的系统性分析。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 用问题求解轨迹的 DTW 对齐度量算法行为相似性，增强 FunSearch/EoH 等 LLM 自动算法设计框架。
+  abstract_zh: LLM 自动算法设计（LLM-AAD）中算法思想隐式嵌入生成代码，现有代码相似度指标只关注表层语法或输出等价，无法刻画算法逻辑层面的相似性。论文提出 BehaveSim，以执行过程中产生的中间解序列（问题求解轨迹
+    PSTrajs）为视角，用动态时间规整（DTW）量化轨迹对齐来度量算法相似性，从而区分语法或输出相似但逻辑迥异的算法。应用一：将 BehaveSim 集成到 FunSearch、EoH 等现有 LLM-AAD
+    框架以促进行为多样性，在三项 AAD 任务上显著提升性能。应用二：按求解行为聚类 AI 生成算法，支持对问题求解策略的系统性分析，数据与代码已开源。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 属 LLM 自动算法设计（FunSearch/EoH 生态）中的相似性度量工具，非音视频核心技术，按规则仅摘要收录。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 重新思考面向大模型自动算法设计的代码相似度
+relations:
+- type: same_topic
+  ref: paper:arxiv:2401.02051
+  note: 该文为 EoH 框架原始论文，本文将 BehaveSim 集成于 EoH 验证行为多样性增益
+- type: same_topic
+  ref: paper:arxiv:2412.14995
+  note: 同为 LLM 驱动的启发式/算法自动设计工作，均强调种群多样性对搜索效果的提升

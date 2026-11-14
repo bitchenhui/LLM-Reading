@@ -1,0 +1,55 @@
+id: paper:arxiv:2412.17270
+type: paper
+title: 'AsymLLIC: Asymmetric Lightweight Learned Image Compression'
+domain: video_image_coding
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2412.17270v1
+  url: https://arxiv.org/abs/2412.17270
+  pdf_url: https://arxiv.org/pdf/2412.17270v1
+  venue: arXiv preprint
+time:
+  published: '2024-12-23'
+  collected: '2026-11-14'
+entities:
+- ref: codec:VVC
+  role: subject
+claims:
+- statement: AsymLLIC在达到与VVC相当压缩性能的同时，实现了轻量化的解码器
+  confidence: reported
+  metrics:
+  - name: 解码器计算量
+    value: 51.47 GMACs
+    scope: AsymLLIC解码端，论文报告值
+  - name: 解码器参数量
+    value: 19.65M
+    scope: AsymLLIC解码端，论文报告值
+  evidence: abstract（初筛，未读全文）
+- statement: 所提训练方案可在训练中将复杂解码模块逐步替换为更简单模块，该设计方法论可推广应用于任意LIC模型
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出非对称轻量级学习图像压缩AsymLLIC，解码器仅51.47 GMACs/19.65M参数且性能媲美VVC
+  abstract_zh: 学习图像压缩（LIC）通常采用对称的编解码网络架构，不可避免地推高了解码耗时，而实际场景要求解码端低复杂度、编码端可承担更高复杂度。为此，本文提出非对称轻量级学习图像压缩架构AsymLLIC，并设计新的训练方案，使复杂的解码模块在训练中被逐步替换为更简单的模块。作者还系统比较了不同解码器网络结构，以在复杂度与压缩性能间取得更优折中。实验表明该方法性能可与VVC媲美，同时解码器仅需51.47
+    GMACs计算量与19.65M参数；且该设计方法可便捷迁移到任意LIC模型，促进LIC技术落地部署。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 属视频/图像编码核心域，提出非对称轻量化学习图像压缩架构并实现与VVC相当的性能，对LIC实际部署具有直接参考价值，故给deep_read。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: AsymLLIC：非对称轻量级学习图像压缩
+relations:
+- type: same_topic
+  ref: paper:arxiv:2503.23052
+  note: 同为轻量级学习图像压缩（ShiftLIC）方向的并行工作
+- type: same_topic
+  ref: paper:arxiv:2607.13723
+  note: N-O Cool-chic同样关注神经图像压缩中编码与轻量解码的折中
+- type: same_topic
+  ref: paper:arxiv:2304.09571
+  note: LLIC为学习图像压缩低复杂度变换编码的相关工作

@@ -1,0 +1,60 @@
+id: paper:arxiv:2507.01204
+type: paper
+title: 'LotteryCodec: Searching the Implicit Representation in a Random Network for Low-Complexity Image
+  Compression'
+domain: video_image_coding
+research_lines:
+- traditional_codec_opt
+source:
+  channel: arxiv
+  external_id: 2507.01204v2
+  url: https://arxiv.org/abs/2507.01204
+  pdf_url: https://arxiv.org/pdf/2507.01204v2
+  venue: arXiv preprint
+time:
+  published: '2025-07-01'
+  collected: '2026-11-14'
+entities:
+- ref: impl:VTM
+  role: subject
+claims:
+- statement: LotteryCodec 的率失真性能超越 VTM（VVC 测试模型），成为单图像压缩新的最先进方法。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 提出并验证彩票编解码器假设：随机初始化网络中未训练的子网络可作为过拟合图像压缩的合成网络，RD 性能与训练过的网络相当。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 通过可调掩码比例实现自适应解码复杂度，可适配不同设备约束与应用需求；回退调制机制用于改善 RD 性能并简化子网搜索。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 验证彩票编解码器假设，在随机初始化网络中搜索掩码子网实现过拟合图像压缩，性能超越VTM且解码复杂度可调。
+  abstract_zh: 论文提出并验证'彩票编解码器假设'：随机初始化网络中未经训练的子网络可作为过拟合图像压缩的合成网络，率失真性能可与训练后的网络相当，从而形成将图像统计信息编码进网络子结构的新范式。在此基础上，LotteryCodec
+    针对单幅图像过拟合一个二值掩码，编解码两端共享同一超参数化随机初始化网络，无需传输或训练合成网络权重。为应对过参数化挑战并简化子网搜索，作者提出回退调制机制以提升率失真性能。实验显示 LotteryCodec
+    超越 VTM（VVC 测试模型），创下单图像压缩新SOTA；掩码比例可调，使解码复杂度能自适应不同设备约束与应用需求。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 核心域：提出过拟合INR图像压缩新范式（随机网络中搜索掩码子网），自称超越VTM创单图压缩SOTA，值得深读。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 彩票编解码器：在随机网络中搜索隐式表示实现低复杂度图像压缩
+relations:
+- type: same_topic
+  ref: paper:arxiv:2403.11651
+  note: 同属降低复杂度的过拟合图像编码研究方向
+- type: same_topic
+  ref: paper:arxiv:2307.12706
+  note: 同为低复杂度过拟合神经图像编解码器
+- type: same_topic
+  ref: paper:arxiv:2312.02753
+  note: 同属单图像/单模型驱动的低复杂度神经压缩
+- type: same_topic
+  ref: paper:arxiv:2412.00505
+  note: 同为过拟合图像压缩及其失真度量改进
+- type: same_topic
+  ref: paper:arxiv:2605.20672
+  note: 同属过拟合图像压缩的上下文建模改进方向

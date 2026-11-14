@@ -1,0 +1,66 @@
+id: paper:arxiv:2606.11631
+type: paper
+title: Benchmarking Neural Speech Compression from a Rate-Distortion Perspective
+domain: audio_coding
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2606.11631v1
+  url: https://arxiv.org/abs/2606.11631
+  pdf_url: https://arxiv.org/pdf/2606.11631v1
+  venue: arXiv preprint
+time:
+  published: '2026-06-10'
+  collected: '2026-11-14'
+entities:
+- ref: concept:EntropyModel
+  role: subject
+- ref: concept:Hyperprior
+  role: uses
+- ref: metric:BD-Rate
+  role: measured_by
+claims:
+- statement: ECC在两个常用测试集上相对传统与神经编解码基线平均降低BD-rate：ViSQOL降低39.9%、PESQ降低76.3%
+  confidence: reported
+  metrics:
+  - name: BD-rate降幅(ViSQOL)
+    value: 39.9%
+    scope: 两个常用测试集、对比传统与神经编解码器基线的平均值
+  - name: BD-rate降幅(PESQ)
+    value: 76.3%
+    scope: 两个常用测试集、对比传统与神经编解码器基线的平均值
+  evidence: abstract（初筛，未读全文）
+- statement: 基准分析显示：近期神经语音编解码器中显式概率建模仍研究不足，预设速率离散符号或后置熵编码使表示学习与概率建模解耦
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: ECC的entropy skip机制利用解码端可得尺度估计略去高可预测残差符号，无需传输额外跳过掩码即可提升低码率效率
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出熵约束编解码器ECC，在两个测试集上平均降低BD-rate 39.9%（ViSQOL）/76.3%（PESQ）
+  abstract_zh: 论文从率-失真视角对神经语音压缩进行基准式分析，指出许多神经语音编解码器以预设速率的离散符号表示量化隐变量、或在符号生成后才做熵编码，导致表示学习与概率建模解耦。作者形式化统一的基于学习的语音编码流程，并分析近期神经语音编解码器，发现显式概率建模在该领域仍研究不足。据此提出熵约束编解码器ECC，将标量量化与学习型熵模型结合，集成超先验边信息、通道级上下文建模、隐变量残差预测与轻量时序建模，训练时用于率估计、推理时用于算术编码。为进一步提升低码率效率，引入entropy
+    skip机制，利用解码端可得的尺度估计直接略去高可预测的残差符号而无需传输额外跳过掩码。实验表明ECC在两个常用测试集上相对传统与神经编解码基线平均降低BD-rate：ViSQOL 39.9%、PESQ
+    76.3%，消融与诊断研究验证了熵建模的有效性。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 神经语音编码领域工作：率-失真基准分析+熵约束编解码器ECC，结果显著，但音频编码为非核心域，按规则仅初筛收录
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 从率-失真视角对神经语音压缩进行基准评测
+relations:
+- type: same_topic
+  ref: paper:arxiv:2103.14776
+  note: 同为神经语音编码（可扩展混合式设计）
+- type: same_topic
+  ref: paper:arxiv:2207.08363
+  note: 同为神经语音编码（隐域预测编码）
+- type: same_topic
+  ref: paper:arxiv:2107.03312
+  note: 同为端到端神经音频编解码器（SoundStream），属同类基线范畴
+- type: same_topic
+  ref: paper:arxiv:2207.03067
+  note: 同为可扩展神经语音编码

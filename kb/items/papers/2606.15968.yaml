@@ -1,0 +1,53 @@
+id: paper:arxiv:2606.15968
+type: paper
+title: 'Bridging the SEA Gap: An Initial Benchmark for Neural Audio Codec-Synthesized Speech Deepfakes
+  in South-East Asian Languages'
+domain: audio_coding
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2606.15968v1
+  url: https://arxiv.org/abs/2606.15968
+  pdf_url: https://arxiv.org/pdf/2606.15968v1
+  venue: arXiv preprint
+time:
+  published: '2026-06-14'
+  collected: '2026-11-14'
+entities:
+- ref: concept:NeuralAudioCodec
+  role: subject
+claims:
+- statement: 在英语中心数据集上训练的SOTA编解码深伪检测器难以泛化到东南亚语言语音，原因是该类语言特有的音系结构、声调变化与丰富的韵律多样性。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 对SOTA音频语言模型进行微调可提升SEA-CF上的深伪检测性能，但模型规模过大，在低资源和时延受限场景中不实用。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 提出的轻量小型ALM GARUDA在CF检测上优于强端到端基线与ALM基线，为东南亚语言的鲁棒检测提供实用路线。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: SEA-CF是首个覆盖多东南亚语言、多样说话人与广泛NAC架构的大规模编解码深伪检测基准。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 发布首个覆盖东南亚语言的神经音频编解码器合成语音深伪检测基准SEA-CF，并提出轻量检测模型GARUDA。
+  abstract_zh: 该文针对编解码深伪（Codecfake, CF）检测资源长期局限于英语与中文的现状，构建了首个面向东南亚语言的大规模检测基准SEA-CF，覆盖多语言、多样说话人画像与多种神经音频编解码器（NAC）架构，并通过公开真实语料合成构建。实验表明，以英语为中心训练的SOTA
+    CF检测器因东南亚语言的音系结构、声调变化与丰富韵律多样性而难以泛化。作者进一步对近期SOTA音频语言模型（ALM）进行了零样本与微调评测，微调可提升性能，但模型规模过大，不适用于低资源与时延受限的真实场景。为此提出面向CF检测的轻量小型ALM
+    GARUDA，在保持轻量的同时优于强端到端与ALM基线，为东南亚语言及更广范围的鲁棒CF检测提供了实用方向。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 属音频域（神经音频编解码器合成语音深伪检测基准），非核心视频/图像编码域，按规则仅收录摘要级。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 弥合东南亚语言差距：神经音频编解码器合成语音深伪的初步基准
+relations:
+- type: same_topic
+  ref: paper:arxiv:2604.19949
+  note: 同为神经音频编解码器合成语音深伪检测基准研究，本文将CodecFake检测从印度语言扩展到东南亚语言
+- type: same_topic
+  ref: paper:arxiv:2107.03312
+  note: SoundStream为代表的神经音频编解码器是本文所研究的Codecfake生成核心机制

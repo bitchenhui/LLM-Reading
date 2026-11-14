@@ -1,0 +1,55 @@
+id: paper:arxiv:2503.22732
+type: paper
+title: 'Reasoning Beyond Limits: Advances and Open Problems for LLMs'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2503.22732v2
+  url: https://arxiv.org/abs/2503.22732
+  pdf_url: https://arxiv.org/pdf/2503.22732v2
+  venue: arXiv preprint
+time:
+  published: '2025-03-26'
+  collected: '2026-11-14'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:MoE
+  role: uses
+- ref: concept:SelfImprovement
+  role: uses
+claims:
+- statement: 论文对2023-2025年间发布的27个顶级LLM（如DeepSeek-R1、OpenAI o1/o3、GPT-4o、QwQ-32B、Phi-4等）的核心创新与性能提升进行了全面综述。
+  confidence: reported
+  metrics:
+  - name: 综述模型数量
+    value: '27'
+    scope: 2023-2025年发布的顶级LLM
+  evidence: abstract（初筛，未读全文）
+- statement: 推理时扩展、强化学习、监督微调与蒸馏等技术已有效应用于主流模型，显著提升其推理能力。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 基于状态空间模型（SSM）的架构（如Mamba）在长上下文处理上相较Transformer方法表现出更高效率。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 论文识别的未来开放问题包括：无人类监督的多步推理、链式任务执行鲁棒性、结构化提示与生成灵活性的平衡、长上下文检索与外部工具集成。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 综述2023-2025年27个顶级LLM的推理进展，涵盖推理时扩展、RL、蒸馏、MoE、RAG、CoT与自我改进等策略。
+  abstract_zh: 该综述系统梳理了2023至2025年间发布的27个顶级大语言模型（含DeepSeek-R1、OpenAI o1/o3、GPT-4o、QwQ-32B、Phi-4等）的核心创新与性能提升，指出推理时扩展、强化学习、监督微调与蒸馏已显著增强模型推理能力。论文回顾了多语言LLM在跨语言推理上的进展及以英语为中心训练的局限，并总结了Mamba等状态空间模型架构在长上下文处理上相对Transformer的效率优势。训练策略部分覆盖通用优化、混合专家（MoE）配置、检索增强生成（RAG）、思维链提示、自我改进方法以及测试时算力扩展与蒸馏框架。最后提出未来关键挑战：无人类监督的多步推理、链式任务执行鲁棒性、结构化提示与生成灵活性的平衡，以及长上下文检索与外部工具集成。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: LLM推理能力综述，将自我改进方法作为训练策略之一系统覆盖，属自我改进AI域，非音视频核心域，仅summary_only
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 超越极限的推理：大语言模型的进展与开放问题
+relations:
+- type: same_topic
+  ref: paper:arxiv:2609.34975
+  note: 该综述将自我改进方法列为LLM推理训练策略之一，与此自改进LLM推理工作主题相关

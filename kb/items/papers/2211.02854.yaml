@@ -1,0 +1,53 @@
+id: paper:arxiv:2211.02854
+type: paper
+title: Rate-Distortion Optimized Post-Training Quantization for Learned Image Compression
+domain: video_image_coding
+research_lines:
+- traditional_codec_opt
+source:
+  channel: arxiv
+  external_id: 2211.02854v3
+  url: https://arxiv.org/abs/2211.02854
+  pdf_url: https://arxiv.org/pdf/2211.02854v3
+  venue: arXiv preprint
+time:
+  published: '2022-11-05'
+  collected: '2026-11-14'
+entities:
+- ref: concept:RDO
+  role: subject
+- ref: concept:SuperResolution
+  role: uses
+claims:
+- statement: 作者理论上证明：以最小化模型参数（权重、偏置、激活）量化MSE为目标的PTQ对压缩任务是次优的，应以率失真损失为优化目标。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 提出RDO-PTQ：对给定LIC模型逐层确定量化参数，将FP32参数转为INT8定点表示，优化中以一个小规模校准图像集的压缩率失真损失为目标，无需重训练模型参数。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在多种LIC模型上的实验表明，RDO-PTQ量化后的编码性能与其浮点对应版本最为接近，且方法轻量、即插即用。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: RDO-PTQ作为任务导向PTQ被推广到超分辨率与图像分类模型，性能损失可忽略，证明了方法的泛化性。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出RDO-PTQ：以率失真损失为目标逐层确定量化参数，将LIC模型从FP32转INT8定点，免重训练、即插即用。
+  abstract_zh: 该工作针对学习型图像压缩（LIC）模型的定点化问题，指出用后训练量化（PTQ）处理现成预训练模型可避免耗时的重训练。作者从理论上证明，以最小化权重、偏置、激活等参数量化均方误差为目标的PTQ对压缩任务是次优的，据此提出率失真优化PTQ（RDO-PTQ）。该方法逐层确定量化参数，将FP32模型转换为INT8定点表示，优化时仅需压缩一个很小的校准图像集以最小化率失真损失。实验显示在多种LIC模型上，量化后的编码性能与其浮点版本最为接近；方法轻量、即插即用，只调整量化参数而不重训练模型参数。该任务导向PTQ进一步推广到流行的超分辨率与图像分类模型，性能损失可忽略，验证了方法论的可泛化性。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 核心域论文：针对学习型图像压缩模型的定点化部署提出率失真优化的后训练量化方法，直接关系LIC解码一致性与实现复杂度，方法新颖且具工程价值。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 面向学习型图像压缩的率失真优化后训练量化
+relations:
+- type: same_topic
+  ref: paper:arxiv:2606.13110
+  note: JOMP研究神经视频编码框架的量化（混合精度），与本文同属神经编码模型定点化/量化部署主题
+- type: same_topic
+  ref: paper:arxiv:2208.14839
+  note: QuantNAS针对超分辨率网络的量化友好架构搜索，与本文将PTQ应用于超分模型定点化的方向交叉

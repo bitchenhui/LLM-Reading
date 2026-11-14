@@ -1,0 +1,58 @@
+id: paper:arxiv:2408.14823
+type: paper
+title: 'LapisGS: Layered Progressive 3D Gaussian Splatting for Adaptive Streaming'
+domain: immersive_media
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2408.14823v2
+  url: https://arxiv.org/abs/2408.14823
+  pdf_url: https://arxiv.org/pdf/2408.14823v2
+  venue: arXiv preprint
+time:
+  published: '2024-08-27'
+  collected: '2026-11-14'
+entities:
+- ref: concept:3DGS
+  role: subject
+- ref: metric:SSIM
+  role: measured_by
+- ref: metric:LPIPS
+  role: measured_by
+claims:
+- statement: LapisGS通过层叠累积分层结构、动态不透明度优化与占用图管理，实现支持带宽感知自适应流媒体的渐进式3DGS渲染。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在带宽受限自适应传输条件下，LapisGS以约23%的原始模型体积实现视觉质量的显著提升。
+  confidence: reported
+  metrics:
+  - name: SSIM提升
+    value: 50.71%
+    scope: 相对原始3DGS模型，最高档带宽条件下
+  - name: LPIPS提升
+    value: 286.53%
+    scope: 相对原始3DGS模型，最高档带宽条件下
+  - name: 模型体积
+    value: 23%
+    scope: 占原始模型大小的比例
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出分层渐进式3DGS表示LapisGS，支持带宽感知的自适应流式传输与连续质量渐进渲染。
+  abstract_zh: 针对XR对三维在线世界高效流式传输的需求，论文提出LapisGS——一种支持自适应流媒体与渐进式渲染的分层3DGS表示。方法构建层叠累积式分层结构，引入动态不透明度优化以维持视觉保真度，并利用占用图高效管理高斯泼溅点。实验表明该方法在视觉质量与模型紧凑度之间取得良好平衡：仅用原始模型23%的体积，SSIM最高提升50.71%，LPIPS最高提升286.53%，适合带宽自适应的3D流式传输与渲染应用。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 面向XR带宽受限环境的分层渐进式3DGS表示与自适应流媒体渲染，属沉浸式媒体（3DGS）方向，非视频/图像编码核心域。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: LapisGS：面向自适应流媒体的分层渐进式3D高斯泼溅
+relations:
+- type: same_topic
+  ref: paper:arxiv:2609.18624
+  note: MoQSplat同样研究3DGS的自适应渐进流式传输（MoQ），与LapisGS主题高度一致
+- type: same_topic
+  ref: paper:arxiv:2610.21121
+  note: ResStreamGS为面向移动端体视频流的双流3DGS方案，同属3DGS流式传输方向

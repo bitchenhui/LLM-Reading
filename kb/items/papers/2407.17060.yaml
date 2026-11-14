@@ -1,0 +1,50 @@
+id: paper:arxiv:2407.17060
+type: paper
+title: High Efficiency Image Compression for Large Visual-Language Models
+domain: video_image_coding
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2407.17060v1
+  url: https://arxiv.org/abs/2407.17060
+  pdf_url: https://arxiv.org/pdf/2407.17060v1
+  venue: arXiv preprint
+time:
+  published: '2024-07-24'
+  collected: '2026-11-14'
+entities:
+- ref: codec:VVC
+  role: subject
+claims:
+- statement: 所提框架的率-准确率（rate-accuracy）性能显著优于最新编码标准VVC（Versatile Video Coding）。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 提出由预编辑模块与端到端可变码率编解码器组成的图像压缩框架，二者通过基于LVLM语义token的损失联合训练。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 预编辑网络采用基于token级失真与排序（rank）的LVLM定制优化策略，不针对特定任务训练，在多种多模态任务上表现出鲁棒性与泛化能力。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出预编辑+端到端可变码率图像压缩框架，按LVLM语义token损失联合训练，率-准确率显著优于VVC。
+  abstract_zh: 论文提出由预编辑模块与端到端可变码率编解码器构成的图像压缩框架，目标是在不同LVLM上取得优异的率-准确率（rate-accuracy）性能。预编辑网络不针对特定任务优化，而是基于token级失真与排序（rank）所刻画的表示与判别能力，设计了专为LVLM定制的新优化策略。预编辑模块与可变码率端到端编码器通过基于大模型语义token的损失联合训练，从而获得对多样化数据与任务的泛化能力。实验表明该框架的率-准确率性能显著优于最新编码标准VVC，并在多模态任务中展现出鲁棒性与泛化性。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 核心域工作：提出面向大型视觉语言模型的可变码率图像压缩框架，直接以VVC为对比锚点，属机器视觉编码前沿，值得深读。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 面向大型视觉语言模型的高效图像压缩
+relations:
+- type: same_topic
+  ref: paper:arxiv:2606.21033
+  note: 同为面向机器感知（人机联合/机器消费）的图像压缩工作，与本文LVLM导向压缩属同一研究线
+- type: same_topic
+  ref: paper:arxiv:2503.23772
+  note: TransVFC面向机器的视频特征压缩框架，与本文面向LVLM的图像压缩同属VCM/机器消费编码方向
+- type: same_topic
+  ref: paper:arxiv:2503.19278
+  note: 面向机器的端到端特征编码码率分配，与本文率-准确率优化的机器视觉编码目标相关

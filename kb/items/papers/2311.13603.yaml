@@ -1,0 +1,43 @@
+id: paper:arxiv:2311.13603
+type: paper
+title: Cross-layer scheme for low latency multiple description video streaming over Vehicular Ad-hoc NETworks
+  (VANETs)
+domain: streaming_delivery
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2311.13603v1
+  url: https://arxiv.org/abs/2311.13603
+  pdf_url: https://arxiv.org/pdf/2311.13603v1
+  venue: arXiv preprint
+time:
+  published: '2023-11-05'
+  collected: '2026-11-14'
+entities:
+- ref: codec:HEVC
+  role: subject
+claims:
+- statement: 提出一种低复杂度跨层系统：以HEVC全intra（AI）编码结构保证最小编码时延，结合多描述编码（MDC）方法，并在IEEE 802.11p MAC层实施自适应映射机制
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在真实车联网（VANET）环境仿真中，所提方法在低延迟视频通信场景下显著改善了接收端视频质量
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 结合HEVC全intra低延迟编码、多描述编码与802.11p MAC层自适应映射，提升车联网视频接收质量
+  abstract_zh: 针对车联网对实时视频辅助应用日益增长的需求，作者提出一种低复杂度的跨层系统以改善接收端视频质量。方案利用HEVC的全intra（AI）编码结构保证最小编码时延，并以多描述编码（MDC）提升传输鲁棒性，在IEEE
+    802.11p标准MAC层引入自适应映射机制。在真实车联网环境下的仿真结果表明，该方法是低复杂度的，并能在低延迟视频通信场景中显著改善接收端视频质量。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 面向车联网低延迟视频流传输的跨层方案（HEVC AI编码+MDC+802.11p MAC自适应映射），属流媒体传输而非核心编码域
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 面向车联网（VANET）低延迟多描述视频流传输的跨层方案
+relations:
+- type: same_topic
+  ref: paper:arxiv:2311.02664
+  note: 后续工作《Enhanced adaptive cross-layer scheme for low latency HEVC streaming over VANETs》是对本跨层HEVC车联网流传输方案的增强扩展

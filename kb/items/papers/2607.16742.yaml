@@ -1,0 +1,70 @@
+id: paper:arxiv:2607.16742
+type: paper
+title: 'Multi-Dimensional Quality Assessment for AI-Generated Human-Centric Videos: Dataset and Model'
+domain: quality_assessment
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2607.16742v1
+  url: https://arxiv.org/abs/2607.16742
+  pdf_url: https://arxiv.org/pdf/2607.16742v1
+  venue: arXiv preprint
+time:
+  published: '2026-07-18'
+  collected: '2026-11-14'
+entities:
+- ref: concept:IQA
+  role: subject
+- ref: concept:MoE
+  role: uses
+- ref: concept:LLM
+  role: builds_on
+claims:
+- statement: HVEval+是目前最大的AI生成人像视频整体质量评估数据集，涵盖1千条提示词、24个文生视频模型生成的2万个视频，并提供空间质量、时间质量、文生视频对应性3个维度的6万条MOS与6万对偏好标注及2万条类别问答对
+  confidence: reported
+  metrics:
+  - name: 提示词数量
+    value: 1k
+    scope: HVEval+，基于综合分类体系
+  - name: 生成模型数量
+    value: '24'
+    scope: text-to-video模型
+  - name: 视频数量
+    value: 20k
+    scope: 由24个T2V模型生成的AI生成人像视频
+  - name: MOS标注数量
+    value: 60k
+    scope: 跨3个质量维度
+  - name: 偏好对数量
+    value: 60k
+    scope: 跨3个质量维度的成对比较标注
+  - name: 类别问答对数量
+    value: 20k
+    scope: 类别特定Q&A对
+  evidence: abstract（初筛，未读全文）
+- statement: MoE-Rater通过MoPE与MoLE及三阶段训练策略，在单一模型内统一支持多维质量打分、多维成对比较与类别问答，在HVEval+与Human-AGVQA数据集上均取得优越性能
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 发布最大规模AI生成人像视频质量评估数据集HVEval+，并提出统一多维打分、成对比较与问答的MoE-Rater多模态大模型
+  abstract_zh: 该工作将此前HVEval扩展为HVEval+，基于综合分类体系构建1千条提示词，由24个文生视频模型生成2万个以人为中心的视频。数据集包含跨空间质量、时间质量、文生视频对应性3个维度的6万条MOS评分与6万对偏好标注，以及2万条类别相关问答对，构成目前最大的AI生成人像视频整体质量评估数据集。方法上提出受MoE启发、基于多模态大语言模型的MoE-Rater统一模型，引入投影专家混合（MoPE）与LoRA专家混合（MoLE）。采用任务感知预训练、任务特定适配与自适应路由优化三阶段训练策略，在单一模型内统一多维质量打分、成对比较与类别问答任务。实验显示其在HVEval+与Human-AGVQA数据集上均取得优越性能，可促进T2V模型的评估与优化。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 属AI生成视频质量评估（VQA）方向，非核心编码域，重要工作按基准仅给 summary_only
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 面向AI生成以人为中心视频的多维度质量评估：数据集与模型
+relations:
+- type: same_topic
+  ref: paper:arxiv:2410.08534
+  note: 同属AI生成图像/视频质量预测方向，后者为该方向综述
+- type: same_topic
+  ref: paper:arxiv:2605.03475
+  note: 同为生成式视频模型的多维质量评估基准工作
+- type: same_topic
+  ref: paper:arxiv:2605.25940
+  note: 同属生成式内容视频质量模型准确性评估方向

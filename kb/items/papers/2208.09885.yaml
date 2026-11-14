@@ -1,0 +1,59 @@
+id: paper:arxiv:2208.09885
+type: paper
+title: 'HST: Hierarchical Swin Transformer for Compressed Image Super-resolution'
+domain: processing_enhancement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2208.09885v2
+  url: https://arxiv.org/abs/2208.09885
+  pdf_url: https://arxiv.org/pdf/2208.09885v2
+  venue: arXiv preprint
+time:
+  published: '2022-08-21'
+  collected: '2026-11-14'
+entities:
+- ref: concept:SuperResolution
+  role: subject
+- ref: metric:PSNR
+  role: measured_by
+- ref: org:USTC
+  role: affiliation
+claims:
+- statement: 提出层级Swin Transformer（HST）网络：分层提取特征表示并在各尺度上用Swin Transformer增强，联合处理压缩伪影与低分辨率混合退化。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: SR任务预训练对压缩图像超分起不可替代的作用，bicubic与不同真实SR模拟等常用预训练任务的效果被系统比较验证。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: HST在AIM 2022挑战赛低质量压缩图像超分赛道获得第五名。
+  confidence: reported
+  metrics:
+  - name: PSNR
+    value: 23.51dB
+    scope: AIM 2022低质量压缩图像超分赛道提交结果
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出层级Swin Transformer网络恢复压缩+低分辨率混合退化图像，证实SR预训练关键，AIM 2022赛道第五。
+  abstract_zh: 针对压缩图像同时受压缩伪影与低分辨率退化的复杂混合失真问题，提出层级Swin Transformer（HST）网络，分层捕获特征表示并在各尺度上用Swin Transformer增强表示。研究发现以超分（SR）任务做预训练对压缩图像超分至关重要，并系统比较了bicubic及多种真实SR模拟预训练任务的作用。结合HST与预训练，该方法在AIM
+    2022低质量压缩图像超分赛道以23.51dB PSNR获得第五名。大量实验与消融研究验证了方法有效性，代码与模型已开源。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 压缩图像超分属于编码链路后处理增强任务，与编码强相关但非核心编码域，按规则仅给初筛摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: HST：用于压缩图像超分的层级Swin Transformer
+relations:
+- type: same_topic
+  ref: paper:arxiv:2407.13108
+  note: 同为压缩图像超分（CISR）任务框架
+- type: same_topic
+  ref: paper:arxiv:2204.09314
+  note: 压缩视频超分与质量增强挑战赛，同属编码链路超分评测方向
+- type: same_topic
+  ref: paper:arxiv:2106.08147
+  note: 压缩视频超分恢复，同类编码后处理增强任务

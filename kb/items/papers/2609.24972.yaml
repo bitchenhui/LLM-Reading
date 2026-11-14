@@ -1,0 +1,70 @@
+id: paper:arxiv:2609.24972
+type: paper
+title: 'RRSI: Regularized Recursive Self-Improvement of Agent Harnesses'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2609.24972v3
+  url: https://arxiv.org/abs/2609.24972
+  pdf_url: https://arxiv.org/pdf/2609.24972v3
+  venue: arXiv preprint
+time:
+  published: '2026-09-21'
+  collected: '2026-11-14'
+entities:
+- ref: concept:RSI
+  role: subject
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: 未加约束的harness递归自我改进会通过记忆训练任务而过拟合，分布内收益在分布外基准上缩小甚至消失
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: RRSI在涵盖编码、代理工作区与工程设计任务的八个基准上，于其进化的split上最多取得6.0分提升
+  confidence: reported
+  metrics:
+  - name: 进化split得分提升
+    value: '6.0'
+    scope: 八个基准中进化所用split上的最大提升（分数）
+  evidence: abstract（初筛，未读全文）
+- statement: RRSI在五个分布外基准上最多取得4.3分提升，正则化约束偏向可复用的agent机制而非基准特定修改
+  confidence: reported
+  metrics:
+  - name: 分布外得分提升
+    value: '4.3'
+    scope: 五个分布外基准上的最大提升（分数）
+  evidence: abstract（初筛，未读全文）
+- statement: RRSI生成的harness运行所需policy token比未正则化进化少30%
+  confidence: reported
+  metrics:
+  - name: policy token用量
+    value: 30%
+    scope: 相对未正则化进化harness的减少量
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 通过时间退火预算、批评者与剪枝器约束agent harness的递归自我改进，缓解对训练任务的过拟合
+  abstract_zh: LLM agent能力很大程度上由其harness（提示、控制流、工具、记忆与上下文管理）放大，近期方法通过迭代提出并选择组件级编辑实现agent系统层面的递归自我改进（RSI），但递归进化易通过记忆训练任务而过拟合，分布内收益在分布外基准上缩小甚至消失。RRSI将正则化原则引入harness自我改进：proposer采用时间退火预算限制单次候选可捆绑的编辑数量，并基于进化历史鼓励未探索的轨迹；selector配备critic与pruner，前者筛除基准特定提案，后者移除过小、代价过高或失效的修改。在涵盖编码、代理工作区与工程设计任务的八个基准上，RRSI在其进化的split上最多提升6.0分，在五个分布外基准上最多提升4.3分，且生成的harness比未正则化进化少用30%的policy
+    token。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: LLM agent harness递归自我改进的正则化框架，属自我改进AI域重要工作（Google Research），与音视频技术无直接关联，按规则收录为summary_only
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: RRSI：Agent Harness的正则化递归自我改进
+relations:
+- type: same_topic
+  ref: paper:arxiv:2610.28201
+  note: 同为agent harness的递归自我改进（RSI）方法研究
+- type: same_topic
+  ref: paper:arxiv:2609.38372
+  note: 同为agent harness自我进化/自我优化方向
+- type: same_topic
+  ref: paper:arxiv:2609.37950
+  note: 同为harness进化式递归自我改进（应用于视频理解agent）

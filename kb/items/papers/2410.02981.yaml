@@ -1,0 +1,53 @@
+id: paper:arxiv:2410.02981
+type: paper
+title: 'GABIC: Graph-based Attention Block for Image Compression'
+domain: video_image_coding
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2410.02981v1
+  url: https://arxiv.org/abs/2410.02981
+  pdf_url: https://arxiv.org/pdf/2410.02981v1
+  venue: arXiv preprint
+time:
+  published: '2024-10-03'
+  collected: '2026-11-14'
+entities:
+- ref: codec:HEVC
+  role: subject
+claims:
+- statement: GABIC通过k近邻增强的注意力机制减少学习式图像压缩中的特征冗余，提升压缩性能。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: GABIC相对同类方法的增益在高码率区间尤为明显。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 论文将JPEG、HEVC-intra等标准编解码器视为图像压缩行业基准，将神经LIC编解码器定位为有前景的替代方案。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出基于k近邻增强注意力的图注意力模块GABIC，减少特征冗余以提升学习式图像压缩性能。
+  abstract_zh: 论文指出，将视觉Transformer注意力机制引入学习式图像压缩（LIC）虽能提升压缩效率，但常以聚合冗余特征为代价。作者提出GABIC，一种基于k近邻增强注意力机制的图注意力模块，用以降低特征冗余。实验显示GABIC优于同类对比方法，尤其在高码率下压缩性能提升明显。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 核心域学习式图像压缩论文，提出新型图注意力模块以减少特征冗余，属编码架构创新，值得深读。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: GABIC：面向图像压缩的基于图的注意力模块
+relations:
+- type: same_topic
+  ref: paper:arxiv:2303.14978
+  note: 同为在LIC中引入Transformer/注意力机制提升压缩效率的工作
+- type: same_topic
+  ref: paper:arxiv:2306.14287
+  note: 注意力机制用于LIC上下文建模，同属注意力增强LIC路线
+- type: same_topic
+  ref: paper:arxiv:2403.14471
+  note: 基于SwinV2注意力上下文的学习式图像压缩，同类注意力架构LIC
+- type: same_topic
+  ref: paper:arxiv:2401.11615
+  note: 利用上下文聚类降低特征冗余的LIC，与GABIC降冗余目标相近

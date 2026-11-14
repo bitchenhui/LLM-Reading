@@ -1,0 +1,55 @@
+id: paper:arxiv:2312.11595
+type: paper
+title: 'SPIRE: Semantic Prompt-Driven Image Restoration'
+domain: processing_enhancement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2312.11595v2
+  url: https://arxiv.org/abs/2312.11595
+  pdf_url: https://arxiv.org/pdf/2312.11595v2
+  venue: arXiv preprint
+time:
+  published: '2023-12-18'
+  collected: '2026-11-14'
+entities:
+- ref: concept:SuperResolution
+  role: subject
+- ref: concept:DiffusionPrior
+  role: builds_on
+claims:
+- statement: SPIRE是首个支持通过语言定量指定复原强度的细粒度指令的图像复原框架，无需显式任务特定设计
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 内容相关提示可增强语义对齐，有效缓解复原结果中的身份歧义
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 新提出的融合机制通过学习重缩放生成先验来增强ControlNet架构，实现更好的复原保真度
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 大量实验显示SPIRE在去噪、超分、去模糊与压缩伪影去除任务上的复原性能优于现有SOTA方法
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出SPIRE框架，以自然语言提示控制扩散图像复原，支持语义对齐与定量复原强度调节，性能超越现有SOTA
+  abstract_zh: SPIRE将自然语言作为用户友好接口来控制图像复原过程，从两个维度利用提示信息：内容相关提示增强语义对齐，缓解复原结果中的身份歧义。该框架首次支持通过语言定量指定复原强度的细粒度指令，无需任务特定设计。方法引入新的融合机制，在现有ControlNet架构上学习重新缩放生成先验，从而提升复原保真度。在去噪、超分辨率、去模糊和压缩伪影去除等任务上的大量实验表明，SPIRE的复原性能优于现有SOTA，同时提供基于文本的复原效果控制灵活性。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 扩散提示驱动的图像复原框架，覆盖超分/去噪/去模糊/压缩伪影去除等编码链路增强任务，属非核心增强域，按规则给 summary_only
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: SPIRE：语义提示驱动的图像复原
+relations:
+- type: same_topic
+  ref: paper:arxiv:2407.13108
+  note: 同为提示驱动的压缩图像超分辨率/增强框架，UCIP用动态提示做压缩图像SR
+- type: same_topic
+  ref: paper:arxiv:2212.00490
+  note: 同为基于扩散模型的图像复原方法
+- type: same_topic
+  ref: paper:arxiv:2601.10373
+  note: 同为利用扩散先验服务于低码率图像压缩/增强链路的工作

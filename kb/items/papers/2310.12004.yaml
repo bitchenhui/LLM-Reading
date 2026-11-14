@@ -1,0 +1,65 @@
+id: paper:arxiv:2310.12004
+type: paper
+title: 'Image Super-resolution Via Latent Diffusion: A Sampling-space Mixture Of Experts And Frequency-augmented
+  Decoder Approach'
+domain: processing_enhancement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2310.12004v3
+  url: https://arxiv.org/abs/2310.12004
+  pdf_url: https://arxiv.org/pdf/2310.12004v3
+  venue: arXiv preprint
+time:
+  published: '2023-10-18'
+  collected: '2026-11-14'
+entities:
+- ref: concept:SuperResolution
+  role: subject
+- ref: concept:DiffusionPrior
+  role: uses
+- ref: concept:MoE
+  role: uses
+claims:
+- statement: 频率补偿模块通过增强从潜在空间到像素空间的频率分量，显著降低潜在扩散超分的重建失真，尤其是高频信息的失真。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 采样空间专家混合（SS-MoE）能够在不显著增加推理成本的前提下提升模型容量并稳定改善超分性能。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 所提方法在广泛探索的4×盲超分基准上取得性能提升，并扩展到8×大倍率图像超分基准。
+  confidence: reported
+  metrics:
+  - name: 放大倍数
+    value: 4x
+    scope: 盲超分基准
+  - name: 放大倍数
+    value: 8x
+    scope: 扩展的大倍率超分基准
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出频率补偿模块与采样空间MoE的潜在扩散图像超分框架，缓解重建失真并提升模型容量。
+  abstract_zh: 针对基于潜在空间的扩散超分存在的两大问题——潜在空间压缩导致重建失真、巨大计算成本限制扩散模型规模——本文提出频率补偿模块，增强从潜在空间到像素空间的频率分量，显著降低（尤其高频信息的）重建失真。进一步提出采样空间专家混合（SS-MoE），在不显著增加推理成本的情况下稳定提升模型容量。这些设计在广泛研究的4×盲超分基准上带来性能提升，并可扩展到8×大倍率图像超分基准。代码已开源。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 图像超分辨率属编码链路增强范畴，该工作将潜在扩散与采样空间MoE结合用于盲超分，与音视频增强技术高度相关。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 基于潜在扩散的图像超分辨率：采样空间专家混合与频率增强解码器方法
+relations:
+- type: same_topic
+  ref: paper:arxiv:2104.02322
+  note: 同为以超分辨率服务压缩视频/码率降低的方向
+- type: same_topic
+  ref: paper:arxiv:2208.09885
+  note: 同为压缩图像超分辨率（重建增强）方法研究
+- type: same_topic
+  ref: paper:arxiv:2305.04844
+  note: 同属超分与编解码结合的主题基准
+- type: same_topic
+  ref: paper:arxiv:2606.21033
+  note: 均采用混合专家（MoE）架构服务图像处理任务

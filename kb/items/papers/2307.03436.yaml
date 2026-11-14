@@ -1,0 +1,64 @@
+id: paper:arxiv:2307.03436
+type: paper
+title: 'Anableps: Adapting Bitrate for Real-Time Communication Using VBR-encoded Video'
+domain: streaming_delivery
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2307.03436v1
+  url: https://arxiv.org/abs/2307.03436
+  pdf_url: https://arxiv.org/pdf/2307.03436v1
+  venue: arXiv preprint
+time:
+  published: '2023-07-07'
+  collected: '2026-11-14'
+entities:
+- ref: concept:ABR
+  role: subject
+- ref: concept:QoE
+  role: measured_by
+claims:
+- statement: Anableps 在真实网络轨迹驱动的测试床上优于 GCC，体验质量显著提升：视频质量提高、码率消耗与卡顿减少、交互延迟缩短。
+  confidence: reported
+  metrics:
+  - name: 视频质量提升
+    value: 1.88x
+    scope: Anableps vs GCC，真实轨迹驱动测试床
+  - name: 码率消耗减少
+    value: 57%
+    scope: Anableps vs GCC，真实轨迹驱动测试床
+  - name: 卡顿减少
+    value: 85%
+    scope: Anableps vs GCC，真实轨迹驱动测试床
+  - name: 交互延迟缩短
+    value: 74%
+    scope: Anableps vs GCC，真实轨迹驱动测试床
+  evidence: abstract（初筛，未读全文）
+- statement: VBR 编码在实时通信中导致大幅且频繁的码率波动，从而降低现有 ABR 方法的效率。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: Anableps 用发送端历史信息预测后续帧的码率区间，并与接收端观测结合，由强化学习 ABR 模型设定编码码率目标。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 联合网络动态与 VBR 码率波动，用强化学习 ABR 为实时通信设定码率目标，较 GCC 显著提升 QoE。
+  abstract_zh: 内容提供商在实时视频通信中越来越多地用可变码率（VBR）编码替代恒定码率以提升画质，但 VBR 带来的大幅频繁码率波动削弱了现有自适应码率（ABR）方法的效率。Anableps
+    联合考虑网络动态与 VBR 编码诱发的码率波动来部署最优 ABR 策略：先用发送端历史信息预测即将到来的帧的码率区间，再结合接收端观测，由基于强化学习的 ABR 模型为编码器设定合适的码率目标。在真实网络轨迹驱动的测试床上开展的大量实验表明，相比
+    GCC，Anableps 视频质量提升 1.88 倍、码率消耗减少 57%、卡顿减少 85%、交互延迟缩短 74%。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: ABR/QoE 主题属流媒体与传输域而非核心编码域，按规则默认仅初筛摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: Anableps：基于 VBR 编码视频的实时通信码率自适应
+relations:
+- type: same_topic
+  ref: paper:arxiv:2308.03643
+  note: 同为面向实时通信/WebRTC 场景的 ABR 方法研究
+- type: same_topic
+  ref: paper:arxiv:2610.13698
+  note: 同为基于深度强化学习的 ABR 码率决策方案

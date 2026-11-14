@@ -1,0 +1,58 @@
+id: paper:arxiv:2609.07346
+type: paper
+title: 'From Explicit References to Scene Manifolds: Distributional Fidelity and Realism for Radiance
+  Field Quality Assessment'
+domain: quality_assessment
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2609.07346v1
+  url: https://arxiv.org/abs/2609.07346
+  pdf_url: https://arxiv.org/pdf/2609.07346v1
+  venue: arXiv preprint
+time:
+  published: '2026-09-07'
+  collected: '2026-11-14'
+entities:
+- ref: concept:IQA
+  role: subject
+- ref: concept:3DGS
+  role: subject
+- ref: concept:NeRF
+  role: subject
+claims:
+- statement: SCODA将辐射场质量评估从显式图像对图像比较转向场景流形建模，以深度特征空间中的多元高斯分布表征场景高质量观测，输出语义保真度分数。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 弱监督失真感知patch判别器提供互补的真实感信号，与语义保真度分数经无监督有界融合策略组合成最终质量分。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在多个基准上SCODA与人类主观判断高度一致，并对GS与NeRF生成视图及任意评估轨迹具有稳健泛化性。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: SCODA为轻量级方法，适用于宽基线设置下沿任意轨迹与位姿的渲染视图评估，缓解了对齐参考选取困难问题。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出SCODA，用场景流形分布建模替代显式参考对比，实现3DGS/NeRF渲染视图的轻量客观质量评估。
+  abstract_zh: 3DGS等辐射场表示可支持高质量新视角合成，但其重建、渲染与压缩会引入复杂的视角相关伪影，而现有全参考指标依赖对齐参考图像，跨参考指标在宽基线与任意轨迹下难以选取可靠参考。为此作者提出SCODA，一种轻量级场景条件客观QA方法，将质量评估从图像对图像比较转向场景流形建模：以深度特征空间中的多元高斯分布表征场景的高质量观测，得到衡量偏离程度的语义保真度分数。同时引入弱监督失真感知patch判别器提供互补的真实感信号，二者经无监督有界融合策略组合。多基准实验显示SCODA与人类主观判断高度一致，并在GS与NeRF生成视图及轨迹上具有稳健泛化性，代码已开源。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 面向3DGS/NeRF辐射场渲染视图的客观质量评估方法（SCODA），属质量评估域内重要工作，非核心编码域故仅收录摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 从显式参考到场景流形：面向辐射场质量评估的分布保真度与真实感
+relations:
+- type: same_topic
+  ref: paper:arxiv:2407.08165
+  note: 同为NeRF模型质量评估方向，本文方法可服务于显式NeRF压缩渲染视图的QA场景
+- type: same_topic
+  ref: paper:arxiv:2611.04498
+  note: 同为3DGS视频质量评估基准与客观模型方向
+- type: same_topic
+  ref: paper:arxiv:2610.00195
+  note: 同为高斯泼溅质量度量方向，GS-PQM从参数域评估、SCODA从渲染视图分布评估，互补

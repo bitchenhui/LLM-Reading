@@ -1,0 +1,58 @@
+id: paper:arxiv:2406.12034
+type: paper
+title: 'Self-MoE: Towards Compositional Large Language Models with Self-Specialized Experts'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2406.12034v2
+  url: https://arxiv.org/abs/2406.12034
+  pdf_url: https://arxiv.org/pdf/2406.12034v2
+  venue: arXiv preprint
+time:
+  published: '2024-06-17'
+  collected: '2026-11-14'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:SelfImprovement
+  role: uses
+- ref: concept:MoE
+  role: builds_on
+claims:
+- statement: Self-MoE在知识、推理、数学、编码等多类基准上平均较基座LLM提升6.5个百分点
+  confidence: reported
+  metrics:
+  - name: 平均性能提升
+    value: 6.5%p
+    scope: 相对基座LLM，跨知识/推理/数学/编码基准平均
+  evidence: abstract（初筛，未读全文）
+- statement: Self-MoE持续优于实例合并与权重合并等其他方法，并在语义专家与路由设计上提供更好的灵活性和可解释性
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 将LLM专化到单一领域可能在非专化任务上出现性能权衡
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: Self-MoE无需大量人工标注数据且不增加参数即可增强整体能力
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 将单体LLM转化为自专化专家模块系统MiXSE，借助自生成数据与自优化路由实现多领域能力提升。
+  abstract_zh: 提出Self-MoE方法，将单体大语言模型转化为由自专化专家构成的组合式模块化系统MiXSE。该方法基于自生成合成数据构建专家模块，为共享基座LLM注入不同领域专长，并通过自优化路由动态激活。实验显示对LLM做单一领域专化会在非专化任务上产生性能权衡，而Self-MoE在知识、推理、数学、编码等多类基准上平均较基座LLM提升6.5个百分点，并持续优于实例合并与权重合并等对比方法，同时在语义专家与路由设计上具备更好的灵活性与可解释性。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: LLM自专化/自改进的代表性方法工作，属自我改进AI域，与音视频编码链路无直接关联，按非核心域上限收录。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: Self-MoE：迈向由自专化专家构成的组合式大型语言模型
+relations:
+- type: same_topic
+  ref: paper:arxiv:2609.34975
+  note: 同属LLM自改进方向（自改进LLM推理的自专化/自生成数据路线）
+- type: same_topic
+  ref: paper:arxiv:2610.22344
+  note: 同为语言模型自我改进（LLM改进LLM）主题

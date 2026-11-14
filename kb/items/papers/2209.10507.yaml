@@ -1,0 +1,64 @@
+id: paper:arxiv:2209.10507
+type: paper
+title: 'Gemino: Practical and Robust Neural Compression for Video Conferencing'
+domain: video_image_coding
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2209.10507v4
+  url: https://arxiv.org/abs/2209.10507
+  pdf_url: https://arxiv.org/pdf/2209.10507v4
+  venue: arXiv preprint
+time:
+  published: '2022-09-21'
+  collected: '2026-11-14'
+entities:
+- ref: concept:SuperResolution
+  role: subject
+- ref: concept:WebRTC
+  role: platform
+claims:
+- statement: Gemino在相同感知质量下码率比传统视频编解码器低2.2-5倍。
+  confidence: reported
+  metrics:
+  - name: 码率节省
+    value: 2.2-5x lower bitrate
+    scope: 与传统视频编解码器在相同感知质量下对比
+  evidence: abstract（初筛，未读全文）
+- statement: Gemino基于aiortc（WebRTC开源实现）构建，可在Titan X GPU上实时处理1024x1024视频。
+  confidence: reported
+  metrics:
+  - name: 实时分辨率
+    value: 1024x1024 real-time
+    scope: Titan X GPU单卡
+  evidence: abstract（初筛，未读全文）
+- statement: 多尺度架构使模型可扩展至与720p相当的分辨率，解决既有稀疏表示方案无法支持高分辨率的问题。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 高频条件超分管线结合单张高分辨率参考图与个性化训练，在大运动与遮挡场景下显著优于基于人脸关键点稀疏表示的既有神经方案。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 基于高频条件超分的多尺度神经压缩系统，在极低码率下实现720p级实时视频会议。
+  abstract_zh: 视频会议在劣化网络下体验差，因传统编解码器无法在极低码率工作；已有基于人脸关键点等稀疏表示的神经方案在大运动、遮挡场景下重建质量差且难以扩展到高分辨率。Gemino提出新颖的高频条件超分管线，对每帧极低分辨率版本进行上采样，并利用单张高分辨率参考图提取的信息增强皮肤纹理、头发等高频细节。采用多尺度架构使模型各组件在不同分辨率上运行，可扩展至约720p分辨率，并通过个性化训练学习每个人的特定细节以提升低码率保真度。系统基于开源Python
+    WebRTC实现aiortc落地，在Titan X GPU上对1024x1024视频实时运行，同等感知质量下码率比传统编解码器低2.2-5倍。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 面向视频会议场景的实用化低码率神经视频压缩系统，属核心域强相关工作，兼具超分与WebRTC系统实现。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: Gemino：面向视频会议的实用且鲁棒的神经压缩
+relations:
+- type: same_topic
+  ref: paper:arxiv:2104.02322
+  note: 同为超分辅助的低码率视频压缩路线（内容自适应超分编码）
+- type: same_topic
+  ref: paper:arxiv:2309.07376
+  note: 同为面向视频会议场景的视频压缩研究（VCD数据集）
+- type: same_topic
+  ref: paper:arxiv:2305.12333
+  note: 同为实时神经视频编解码的实用化方向

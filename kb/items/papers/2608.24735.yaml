@@ -1,0 +1,69 @@
+id: paper:arxiv:2608.24735
+type: paper
+title: 'Meta$^n$: Recursive Self-Improvement through Emergent Depth'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2608.24735v1
+  url: https://arxiv.org/abs/2608.24735
+  pdf_url: https://arxiv.org/pdf/2608.24735v1
+  venue: arXiv preprint
+time:
+  published: '2026-08-25'
+  collected: '2026-11-14'
+entities:
+- ref: concept:RSI
+  role: subject
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: Meta^n在全部八个基准族上超越既有自我改进智能体，且该结论在两个LLM骨干上均成立。
+  confidence: reported
+  metrics:
+  - name: 基准族数量
+    value: '8'
+    scope: 两个LLM骨干、与既有自我改进智能体对比
+  evidence: abstract（初筛，未读全文）
+- statement: 在为抵抗技能记忆化而设计的ARC-AGI-2上，Meta^n是唯一得分高于零的系统。
+  confidence: reported
+  metrics:
+  - name: ARC-AGI-2得分
+    value: '>0（唯一非零）'
+    scope: 与既有自我改进智能体对比
+  evidence: abstract（初筛，未读全文）
+- statement: 增加元层或自我编辑的既有系统因必须保留部分编辑机制不动，实际可达元深度上限约为2。
+  confidence: reported
+  metrics:
+  - name: 元深度上限
+    value: 约2
+    scope: 对既有自我改进系统的理论分析
+  evidence: abstract（初筛，未读全文）
+- statement: 消融显示递归带来的大部分收益来自各层传递给下一层的条件信息，且层角色随深度涌现分化而无提示词规定。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 固定元操作Ω并对输入递归生成逐层升高的策略与工具库，在八个基准族上超越既有自我改进智能体。
+  abstract_zh: 现有自我改进LLM智能体只改进答案而非产生答案的过程：加元层的系统会固定该层级，编辑自身的系统必须保留部分编辑机制不动，实际元深度被限制在约2。Meta^n保持元操作Ω固定而对输入递归：Ω反复应用于自身产物，读取下方求解器栈的轨迹与生成代码，将下一层写为策略性预处理和可调用辅助函数库。由于Ω永不改变，系统不会失稳；输入严格增长使每层从更高视角推理，深度由收敛决定而非预设，并用进化档案搜索层链。在两个LLM骨干上，Meta^n在全部八个基准族上超越既有自我改进智能体；在专为抵抗技能记忆化设计的ARC-AGI-2上，唯有它得分高于零。消融表明递归收益主要来自层间传递的条件，且各层角色随深度涌现分化而无需提示词规定。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 核心贡献是LLM智能体的递归自我改进机制与元深度理论，属自我改进AI域，与音视频技术无直接关联。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: Meta^n：通过涌现深度实现递归自我改进
+relations:
+- type: same_topic
+  ref: paper:arxiv:2609.33867
+  note: 同为LLM递归自我改进（递归技能进化）方向的工作
+- type: same_topic
+  ref: paper:arxiv:2610.11794
+  note: 同为基于模型反思机制的递归自我改进研究
+- type: same_topic
+  ref: paper:arxiv:2610.14224
+  note: 同属递归自我改进智能体/harness演进主题

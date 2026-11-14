@@ -1,0 +1,57 @@
+id: paper:arxiv:2304.04637
+type: paper
+title: Improving ABR Performance for Short Video Streaming Using Multi-Agent Reinforcement Learning with
+  Expert Guidance
+domain: streaming_delivery
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2304.04637v1
+  url: https://arxiv.org/abs/2304.04637
+  pdf_url: https://arxiv.org/pdf/2304.04637v1
+  venue: arXiv preprint
+time:
+  published: '2023-04-10'
+  collected: '2026-11-14'
+entities:
+- ref: concept:ABR
+  role: subject
+- ref: concept:QoE
+  role: measured_by
+claims:
+- statement: Incendio 在效用分上较当前最先进的 SABR 算法提升 53.2%，同时保持低训练复杂度和低推理时延
+  confidence: reported
+  metrics:
+  - name: utility score 提升
+    value: 53.2%
+    scope: 相对当前 SOTA SABR 算法
+  evidence: abstract（初筛，未读全文）
+- statement: 通过 MARL 将视频 ID 选择与码率适配解耦为缓冲管理智能体与码率适配智能体，联合优化 QoE 与带宽浪费构成的系统级效用分
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 采用先模仿人工专家规则初始化、再用 MARL 微调的两阶段训练策略，以缓解现有 SABR 方法收敛慢、泛化差的问题
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出Incendio框架，以专家引导的多智能体强化学习解耦短视频预取选择与码率决策，效用分较SOTA提升53.2%
+  abstract_zh: 针对为长视频调优的传统ABR算法在短视频流媒体场景下会出现灾难性失效的问题，本文提出Incendio框架，采用带专家引导的多智能体强化学习（MARL），将视频ID选择与码率适配解耦为缓冲管理智能体和码率适配智能体两个决策单元，最大化由QoE与带宽浪费指标复合构成的系统级效用分。训练分两阶段：先通过模仿人工专家规则进行初始化，再用MARL微调。大量实验表明，Incendio在效用分上较现有最先进SABR算法提升53.2%，同时保持较低的训练复杂度与推理时延。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 论文聚焦短视频流媒体的ABR码率适配，属流媒体与传输域而非核心编码域，按基准收录为summary_only
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 利用专家引导的多智能体强化学习提升短视频流媒体ABR性能
+relations:
+- type: same_topic
+  ref: paper:arxiv:2308.03643
+  note: 同为ABR自适应码率方向（Mamba：WebRTC多维ABR）
+- type: same_topic
+  ref: paper:arxiv:2610.13698
+  note: 同为深度强化学习驱动的ABR方案（DIA：云游戏兴趣感知ABR）
+- type: same_topic
+  ref: paper:arxiv:2603.13597
+  note: 同为强化学习驱动的自适应视频流码率优化（DQ-Ladder）

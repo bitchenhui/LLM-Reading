@@ -1,0 +1,70 @@
+id: paper:arxiv:2307.12706
+type: paper
+title: Low-complexity Overfitted Neural Image Codec
+domain: video_image_coding
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2307.12706v1
+  url: https://arxiv.org/abs/2307.12706
+  pdf_url: https://arxiv.org/pdf/2307.12706v1
+  venue: arXiv preprint
+time:
+  published: '2023-07-24'
+  collected: '2026-11-14'
+entities:
+- ref: codec:HEVC
+  role: subject
+claims:
+- statement: 所提解码器每像素仅需2300次乘法，而典型自编码器解码可达每像素约100万次乘法，复杂度降低约三个数量级。
+  confidence: reported
+  metrics:
+  - name: 解码复杂度
+    value: '2300'
+    scope: 次乘法/像素，所提过拟合神经图像编解码器
+  - name: 对比复杂度
+    value: '1000000'
+    scope: 次乘法/像素上限，典型自编码器解码
+  evidence: abstract（初筛，未读全文）
+- statement: 在多种编码条件下，该方法性能超越HEVC。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 相对此前过拟合神经图像编解码器，码率降低14%，复杂度相近。
+  confidence: reported
+  metrics:
+  - name: BD-rate降低
+    value: 14%
+    scope: 相对此前过拟合神经图像编解码器
+  evidence: abstract（初筛，未读全文）
+- statement: 尽管复杂度极低，该方法性能可与自编码器方案相当。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 将解码器参数对每张图像过拟合，实现每像素仅2300次乘法的神经图像编码，媲美自编码器并超越HEVC。
+  abstract_zh: 该工作提出对每张输入图像单独过拟合解码器参数的神经图像编解码器（Cool-Chic），从而免去推理型自编码器的庞大解码网络。所提方法每像素仅需约2300次乘法，而典型自编码器解码高达每像素约一百万次乘法；在保持与自编码器相当性能的同时，在多种编码条件下超越HEVC。通过附加轻量模块和改进训练流程，相对此前过拟合编解码器码率降低14%，复杂度保持相近。代码已开源。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 核心域神经图像编码工作（Cool-Chic），在解码复杂度与RD性能上均有量化突破且开源，属深读级。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 低复杂度过拟合神经图像编解码器
+relations:
+- type: same_topic
+  ref: paper:arxiv:2403.11651
+  note: 同为Orange团队过拟合低复杂度图像编码工作，应为同一工作（Cool-Chic）的扩展/期刊版本
+- type: same_topic
+  ref: paper:arxiv:2312.02753
+  note: 同为单图过拟合式低复杂度神经压缩（C3）
+- type: same_topic
+  ref: paper:arxiv:2607.13723
+  note: N-O Cool-chic 为本文Cool-Chic的后续编码加速改进
+- type: same_topic
+  ref: paper:arxiv:2605.20672
+  note: LANCE 同属过拟合图像压缩方向，可作对比锚点
+- type: same_topic
+  ref: paper:arxiv:2412.00505
+  note: 同为过拟合图像压缩的失真度量改进工作

@@ -1,0 +1,66 @@
+id: paper:arxiv:2608.14621
+type: paper
+title: 'AutoMem: A Text-Gradient Recursive Self-Improvement Framework for Automated Memory Architectures
+  Search'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2608.14621v1
+  url: https://arxiv.org/abs/2608.14621
+  pdf_url: https://arxiv.org/pdf/2608.14621v1
+  venue: arXiv preprint
+time:
+  published: '2026-07-14'
+  collected: '2026-11-14'
+entities:
+- ref: concept:RSI
+  role: subject
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: 在5编码器×5存储×6检索器×4管理器的搜索空间中，没有单一记忆架构能在所有任务上一致占优，不同任务偏好不同模块组合且性能差距显著。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: AutoMem在GAIA、WebWalkerQA和xBench-DeepSearch上跨两个LLM骨干，发现的任务自适应记忆架构优于最强人工设计记忆基线。
+  confidence: reported
+  metrics:
+  - name: 准确率平均提升
+    value: 2.8 points
+    scope: 六个benchmark-骨干设置平均，相对最强人工设计记忆基线
+  evidence: abstract（初筛，未读全文）
+- statement: AutoMem在精度-效率权衡上表现有利，相比最强准确率基线降低token成本。
+  confidence: reported
+  metrics:
+  - name: token成本降低
+    value: 14.3%
+    scope: Qwen3.5-122B-A10B骨干上，相对最强准确率基线
+  evidence: abstract（初筛，未读全文）
+- statement: AutoMem仅需少量引导迭代即可发现优于规模大得多的随机搜索的更强架构。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出AutoMem，用文本梯度递归自我改进自动搜索LLM智能体的任务自适应记忆架构，平均提升准确率2.8点并降低14.3% token成本。
+  abstract_zh: 论文针对LLM智能体长期记忆设计高度耦合的问题，构建了由5种编码器、5种存储、6种检索器和4种管理器组成的离散搜索空间，并证明没有单一记忆架构在所有任务上一致占优。据此提出AutoMem框架，包含两个组件：经验引导架构搜索（EGAS），从历史搜索轨迹与积累反思中提出候选架构；失败引导模块诊断（FGMD），将记忆相关失败定位到具体模块并转化为针对性文本反馈。在GAIA、WebWalkerQA和xBench-DeepSearch三个基准、两个LLM骨干上，AutoMem发现的任务自适应记忆架构优于最强人工设计基线，六个benchmark-骨干设置平均准确率提升2.8点。分析显示其在Qwen3.5-122B-A10B上相对最强准确率基线降低14.3%的token成本，且仅用少量引导迭代即超越规模大得多的随机搜索。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 属LLM智能体记忆架构的递归自我改进（RSI）研究，为self_improvement域直接相关工作，非音视频核心域，按基准给summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: AutoMem：面向自动化记忆架构搜索的文本梯度递归自我改进框架
+relations:
+- type: same_topic
+  ref: paper:arxiv:2611.11509
+  note: 同属LLM智能体记忆机制的自我改进/演化研究（记忆经验复盘与演化 vs 记忆架构搜索）
+- type: same_topic
+  ref: paper:arxiv:2609.33867
+  note: 同为递归自我改进（RSI）框架，均以迭代反馈驱动能力提升
+- type: same_topic
+  ref: paper:arxiv:2609.35568
+  note: 同属智能体记忆学习主题，从经验中学习并优化记忆机制

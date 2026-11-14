@@ -1,0 +1,63 @@
+id: paper:arxiv:2312.06662
+type: paper
+title: Photorealistic Video Generation with Diffusion Models
+domain: video_image_coding
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2312.06662v1
+  url: https://arxiv.org/abs/2312.06662
+  pdf_url: https://arxiv.org/pdf/2312.06662v1
+  venue: arXiv preprint
+time:
+  published: '2023-12-11'
+  collected: '2026-11-14'
+entities:
+- ref: concept:SuperResolution
+  role: subject
+- ref: dataset:ImageNet
+  role: evaluated_on
+claims:
+- statement: W.A.L.T在UCF-101与Kinetics-600视频生成基准及ImageNet图像生成基准上取得SOTA，且未使用classifier-free guidance
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 级联三个模型（基础潜视频扩散模型+两个视频超分扩散模型）实现文生视频，可输出512×896分辨率、8帧每秒的视频
+  confidence: reported
+  metrics:
+  - name: 分辨率
+    value: 512×896
+    scope: 文生视频级联输出
+  - name: 帧率
+    value: 8 fps
+    scope: 生成视频帧率
+  evidence: abstract（初筛，未读全文）
+- statement: 因果编码器将图像与视频统一压缩至同一潜空间，支持跨模态联合训练与生成
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 面向空间与时空联合生成建模的窗口注意力架构显著降低显存与训练开销
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出W.A.L.T：因果编码器统一图像视频潜空间、窗口注意力扩散Transformer，级联超分实现SOTA视频生成
+  abstract_zh: W.A.L.T是一种基于Transformer的扩散模型视频生成方法，包含两个关键设计。其一，采用因果编码器将图像与视频联合压缩到统一潜空间，实现跨模态的联合训练与生成。其二，采用面向空间与时空联合生成建模的窗口注意力架构，降低显存占用与训练开销。在不使用classifier-free
+    guidance的条件下，该方法在UCF-101、Kinetics-600视频生成基准与ImageNet图像生成基准上取得SOTA。作者还级联训练三个模型（基础潜视频扩散模型加两个视频超分扩散模型）用于文生视频，可生成512×896分辨率、8帧每秒的视频。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 属扩散视频生成（W.A.L.T）而非编码压缩，与视频核心域强相关，作为生成式视频技术背景仅做初筛摘要
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 基于扩散模型的真实感视频生成（W.A.L.T）
+relations:
+- type: same_topic
+  ref: paper:arxiv:2304.08818
+  note: 同为基于潜空间扩散模型的高分辨率视频合成
+- type: same_topic
+  ref: paper:arxiv:2511.06055
+  note: 同为扩散Transformer架构的视频生成（Neodragon）
+- type: same_topic
+  ref: paper:arxiv:2402.08934
+  note: 扩散生成先验与视频压缩的交叉关联（预训练扩散模型极限视频压缩）

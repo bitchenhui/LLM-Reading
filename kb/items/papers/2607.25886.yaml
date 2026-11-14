@@ -1,0 +1,66 @@
+id: paper:arxiv:2607.25886
+type: paper
+title: 'RSIBench-Data: Benchmarking Data-Centric Research for Recursive Self-Improvement'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2607.25886v1
+  url: https://arxiv.org/abs/2607.25886
+  pdf_url: https://arxiv.org/pdf/2607.25886v1
+  venue: arXiv preprint
+time:
+  published: '2026-07-28'
+  collected: '2026-11-14'
+entities:
+- ref: concept:RSI
+  role: subject
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: subject
+claims:
+- statement: 前沿 LLM 智能体具备核心数据中心研究能力：过半设定中能利用反馈细化训练数据策略并超越首次有效尝试。
+  confidence: reported
+  metrics:
+  - name: 改进于首次有效尝试的比例
+    value: 58.33%
+    scope: 四智能体×六基准的全部评测设定
+  evidence: abstract（初筛，未读全文）
+- statement: 智能体的改进不一致：出现最佳分数后继续搜索的运行大多以更差的最终尝试收尾，强候选可能在运行早期或中期出现而后续修订失败。
+  confidence: reported
+  metrics:
+  - name: 最佳分数后继续搜索且最终低于峰值收尾的比例
+    value: 78.26%
+    scope: 观察到最佳分数后仍继续搜索的运行
+  evidence: abstract（初筛，未读全文）
+- statement: 轨迹分析识别出较强运行的四种模式：准确假设、经验证约束的监督、行为对齐数据、保留强检查点，说明当前智能体能做出有用的数据中心发现但尚不能稳定将反馈转化为改进。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 在固定后训练栈下评测 LLM 智能体作为数据中心研究者迭代改进模型的能力，发现可改进但不稳定。
+  abstract_zh: 该工作提出 RSIBench-Data，一个控制变量式的基准，将 LLM 智能体置于固定的后训练栈中（Tinker 训练与服务、Harbor 与 E2B 沙箱官方评测、统一预算），要求其迭代修订固定目标模型的训练数据策略，从而把研究决策能力与优化、部署、系统实现解耦。作者在软件工程、终端操作、科学问答与数学四个领域的六个基准上评测四个前沿智能体。结果显示，58.33%
+    的设定中智能体能依据反馈细化策略并超越首次有效尝试，但改进并不一致：在观察到最佳分数后继续搜索的运行中，78.26% 以更低分数的尝试收尾，其余仅持平峰值。轨迹分析归纳出更强运行的四种模式：准确假设、经实验验证约束的监督信号、与目标行为对齐的数据、以及对强检查点的保留。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 非核心域但直接聚焦递归自我改进（RSI）核心议题，构建 LLM 智能体数据中心研究能力的受控基准，属自我改进域重要工作，按规则最高给 summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: RSIBench-Data：面向递归自我改进的数据中心式研究基准
+relations:
+- type: same_topic
+  ref: paper:arxiv:2611.08946
+  note: 同为对前沿智能体递归自我改进能力的基准评测（Flex-RSI）
+- type: same_topic
+  ref: paper:arxiv:2611.03698
+  note: 同为训练 LLM 智能体自动化 LLM 后训练研究闭环（RSI-Dojo）
+- type: same_topic
+  ref: paper:arxiv:2609.35025
+  note: 同为评测自我改进回路中智能体的数据中心/数据生成能力（AutoDataBench）
+- type: same_topic
+  ref: paper:arxiv:2610.34386
+  note: 同为评测智能体跨多域改进语言模型的能力（ParetoRSI-Gym）

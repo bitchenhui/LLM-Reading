@@ -1,0 +1,73 @@
+id: paper:arxiv:2304.03505
+type: paper
+title: Improving Adaptive Real-Time Video Communication Via Cross-layer Optimization
+domain: streaming_delivery
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2304.03505v2
+  url: https://arxiv.org/abs/2304.03505
+  pdf_url: https://arxiv.org/pdf/2304.03505v2
+  venue: arXiv preprint
+time:
+  published: '2023-04-07'
+  collected: '2026-11-14'
+entities:
+- ref: concept:ABR
+  role: subject
+- ref: concept:QoE
+  role: uses
+claims:
+- statement: 现有ABR方法将带宽估计与编码器控制解耦，仅最大化带宽利用率不能保证RTVC的QoE，网络与编码层的解耦会加剧体验劣化。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: Palette通过强化学习统一处理网络层与视频应用层，直接最大化由视频质量、卡顿率与时延加权的QoE，并利用跨层观测推导后续帧的细粒度压缩因子。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 真实环境测试中，与最先进方案相比，Palette将卡顿率降低3.1%–46.3%。
+  confidence: reported
+  metrics:
+  - name: 卡顿率降低幅度
+    value: 3.1%-46.3%
+    scope: 真实环境测试，对比SOTA ABR方案
+  evidence: abstract（初筛，未读全文）
+- statement: 真实环境测试中，时延降低20.2%–50.8%。
+  confidence: reported
+  metrics:
+  - name: 时延降低幅度
+    value: 20.2%-50.8%
+    scope: 真实环境测试，对比SOTA ABR方案
+  evidence: abstract（初筛，未读全文）
+- statement: 在带宽消耗相当的情况下，视频质量提升0.2%–7.2%。
+  confidence: reported
+  metrics:
+  - name: 视频质量提升幅度
+    value: 0.2%-7.2%
+    scope: 真实环境测试，带宽消耗相当条件下对比SOTA方案
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出Palette：基于强化学习的跨层ABR方案，统一网络与编码层直接最大化实时视频通信QoE。
+  abstract_zh: 现有ABR方法将网络带宽估计与视频编码器控制解耦，仅追求带宽利用率最大化，难以保证实时视频通信（RTVC）的QoE。本文提出Palette，一种基于强化学习的ABR方案，将网络层与视频应用层统一处理，直接最大化由视频质量、卡顿率与时延加权构成的QoE目标。其跨层优化模块利用网络状态、视频编码参数与内容复杂度等跨层观测，为即将编码的帧推导细粒度压缩因子，缓解网络与编码器不协调问题。真实环境测试显示，相比最先进方案，Palette将卡顿率降低3.1%–46.3%，时延降低20.2%–50.8%，并在带宽消耗相当的前提下提升视频质量0.2%–7.2%。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 属流媒体传输域（实时视频通信ABR/QoE跨层优化），非核心编码域，按基准给summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 通过跨层优化改进自适应实时视频通信
+relations:
+- type: same_topic
+  ref: paper:arxiv:2308.03643
+  note: 同为面向实时通信/WebRTC的多维ABR方案研究
+- type: same_topic
+  ref: paper:arxiv:2307.03436
+  note: 同为实时通信场景下的码率自适应（ABR）研究
+- type: same_topic
+  ref: paper:arxiv:2301.05688
+  note: 同为网络辅助的跨层视频QoE管理方法
+- type: same_topic
+  ref: paper:arxiv:2603.13597
+  note: 同为强化学习驱动的自适应码率/码率梯决策方案

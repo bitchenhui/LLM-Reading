@@ -1,0 +1,84 @@
+id: paper:arxiv:2504.05888
+type: paper
+title: 'UVG-VPC: Voxelized Point Cloud Dataset for Visual Volumetric Video-based Coding'
+domain: immersive_media
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2504.05888v1
+  url: https://arxiv.org/abs/2504.05888
+  pdf_url: https://arxiv.org/pdf/2504.05888v1
+  venue: arXiv preprint
+time:
+  published: '2025-04-08'
+  collected: '2026-11-14'
+entities:
+- ref: concept:VolumetricVideo
+  role: subject
+- ref: org:MPEG
+  role: builds_on
+claims:
+- statement: UVG-VPC 包含 12 条在运动、RGB 纹理、3D 几何与表面遮挡方面多样化的点云测试视频序列
+  confidence: reported
+  metrics:
+  - name: 序列数量
+    value: '12'
+    scope: UVG-VPC 数据集点云测试序列总数
+  evidence: abstract（初筛，未读全文）
+- statement: 每条序列时长 10 秒、共 250 帧、采集帧率 25 fps
+  confidence: reported
+  metrics:
+  - name: 序列时长
+    value: 10 秒
+    scope: 每条序列
+  - name: 帧数
+    value: '250'
+    scope: 每条序列
+  - name: 帧率
+    value: 25 fps
+    scope: 采集帧率
+  evidence: abstract（初筛，未读全文）
+- statement: 序列体素化几何精度为 9–12 比特，颜色属性为 8 比特 RGB，并附带法线数据以支持点云压缩评估
+  confidence: reported
+  metrics:
+  - name: 几何精度
+    value: 9–12 bit
+    scope: 体素化几何精度范围
+  - name: 颜色位深
+    value: 8 bit
+    scope: RGB 颜色属性
+  evidence: abstract（初筛，未读全文）
+- statement: 数据集以独立的非商业许可开源发布，目标为促进 MPEG V3C 技术的开发、评估与验证
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 发布支撑 MPEG V3C 点云视频编码评测的开源数据集 UVG-VPC：12 条序列×250 帧，含法线信息。
+  abstract_zh: 本文发布开源点云数据集 UVG-VPC，用于 MPEG 视觉体视频编码（V3C）技术的开发、评估与验证。数据集包含 12 条特性各异的点云测试视频序列，在运动、RGB 纹理、3D
+    几何与表面遮挡方面具有多样性。每条序列时长 10 秒、共 250 帧（25 fps），体素化几何精度为 9 至 12 比特，颜色属性采用 8 比特 RGB 表示。数据集还附带法线信息，使其更适合点云压缩方案的评估，并以独立的非商业许可开放发布，目标是推动
+    V3C 技术发展。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 面向 MPEG V3C 点云视频编码的开源体素化点云数据集，属沉浸式点云/体视频方向，为重要评测资源故给 summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: UVG-VPC：面向视觉体视频编码（V3C）的体素化点云数据集
+relations:
+- type: same_topic
+  ref: paper:arxiv:2206.12186
+  note: 同为基于视频的点云压缩（V-PCC/V3C）主题，UVG-VPC 可作为此类方法的评测数据
+- type: same_topic
+  ref: paper:arxiv:2207.12554
+  note: 动态点云帧间几何编码，与该点云视频数据集属同一研究方向
+- type: same_topic
+  ref: paper:arxiv:2607.03576
+  note: 体视频属性压缩中的运动估计，同为体视频编码研究线
+- type: same_topic
+  ref: paper:arxiv:2310.08205
+  note: 体视频流媒体系统，可受益于该点云序列数据集的评测
+- type: same_topic
+  ref: paper:arxiv:2106.12236
+  note: 基于法线的点云属性压缩，与 UVG-VPC 附带法线信息的特性相契合

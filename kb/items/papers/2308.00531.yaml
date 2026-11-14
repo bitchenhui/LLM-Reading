@@ -1,0 +1,58 @@
+id: paper:arxiv:2308.00531
+type: paper
+title: Adaptive Bitrate Video Semantic Communication over Wireless Networks
+domain: streaming_delivery
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2308.00531v1
+  url: https://arxiv.org/abs/2308.00531
+  pdf_url: https://arxiv.org/pdf/2308.00531v1
+  venue: arXiv preprint
+time:
+  published: '2023-08-01'
+  collected: '2026-11-14'
+entities:
+- ref: concept:ABR
+  role: subject
+- ref: concept:QoE
+  role: uses
+claims:
+- statement: 在低码率下，ABRVSC方案的语义分割MIoU接近传统方案的两倍
+  confidence: reported
+  metrics:
+  - name: MIoU
+    value: 约2倍于传统方案
+    scope: 低码率区间，与传统方案仿真对比
+  evidence: abstract（初筛，未读全文）
+- statement: ABRVSC方案相比固定码率方案与传统ABR方案，视频语义通信QoE提升36.57%，且对网络波动更鲁棒
+  confidence: reported
+  metrics:
+  - name: QoE增益
+    value: 36.57%
+    scope: 相比固定码率方案与传统ABR方案的仿真对比
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出结合Swin Transformer语义编解码与Actor-Critic自适应码率算法的视频语义通信系统ABRVSC，兼顾低时延与高语义精度。
+  abstract_zh: 面向自动驾驶等边缘视频感知场景，论文提出自适应码率视频语义通信（ABRVSC）系统，让视频感知设备依据无线网络状况动态调整语义信息码率，避免固定码率导致的高时延或低语义精度。作者定义了视频语义通信的QoE，提出考虑QoE影响的Swin
+    Transformer语义编解码器，并设计基于Actor-Critic的ABR算法以增强网络波动下的鲁棒性。仿真显示，低码率下所提方案的MIoU约为传统方案的近两倍；相比固定码率方案与传统ABR方案，该方案QoE提升36.57%，且对网络变化更鲁棒。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 命中已跟踪概念ABR与QoE，研究无线网络下自适应码率的视频语义传输，属流媒体传输域而非核心编码域，按基准给summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 无线网络下的自适应码率视频语义通信
+relations:
+- type: same_topic
+  ref: paper:arxiv:2502.05695
+  note: 同为面向无线网络的语义感知自适应视频流传输
+- type: same_topic
+  ref: paper:arxiv:2605.19397
+  note: 同为视频语义通信方向
+- type: same_topic
+  ref: paper:arxiv:2308.03643
+  note: 同属ABR自适应码率算法研究

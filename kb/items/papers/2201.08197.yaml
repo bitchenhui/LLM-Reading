@@ -1,0 +1,66 @@
+id: paper:arxiv:2201.08197
+type: paper
+title: 'Enhancement or Super-Resolution: Learning-based Adaptive Video Streaming with Client-Side Video
+  Processing'
+domain: streaming_delivery
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2201.08197v1
+  url: https://arxiv.org/abs/2201.08197
+  pdf_url: https://arxiv.org/pdf/2201.08197v1
+  venue: arXiv preprint
+time:
+  published: '2022-01-20'
+  collected: '2026-11-14'
+entities:
+- ref: concept:ABR
+  role: subject
+- ref: concept:QoE
+  role: measured_by
+- ref: concept:SuperResolution
+  role: compared_against
+claims:
+- statement: ENAVS在相同带宽与算力条件下，相比传统ABR流可多交付5%-14%的QoE。
+  confidence: reported
+  metrics:
+  - name: QoE增益
+    value: 5%-14%
+    scope: 真实带宽轨迹与视频的测试床实验，相同带宽与算力条件下对比常规ABR流
+  evidence: abstract（初筛，未读全文）
+- statement: 视频增强算法在信噪比与帧率两方面均优于超分辨率算法，表明客户端处理中增强是更优方案。
+  confidence: reported
+  metrics:
+  - name: 对比指标
+    value: SNR与FPS
+    scope: 视频增强 vs 超分辨率算法的客户端处理对比
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出DRL框架ENAVS联合优化ABR码率决策与客户端视频增强，较传统ABR提升5%-14% QoE。
+  abstract_zh: 面向时变无线网络与受限客户端算力下的高质量视频流，论文将码率自适应与客户端视频增强（对下载分段做图像处理提升质量）的联合决策建模为马尔可夫决策过程，提出基于深度强化学习的ENAVS框架。作者论证了视频压缩是流媒体质量的主要影响因素，并表明视频增强算法在信噪比与帧率（FPS）两方面均优于超分辨率算法，是客户端处理更优的方案。在真实带宽轨迹与视频上的测试床实验显示，在相同带宽与算力条件下，ENAVS比传统ABR流多交付5%-14%的QoE。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: ABR自适应流媒体与客户端神经增强联合优化的系统类工作，属流媒体域而非核心编码域，按基准只给 summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 增强还是超分：基于学习的客户端视频处理自适应视频流
+relations:
+- type: same_topic
+  ref: paper:arxiv:2104.02322
+  note: 同为客户端超分辅助压缩视频传输的低码率流式方案
+- type: same_topic
+  ref: paper:arxiv:2305.04844
+  note: 同为面向视频压缩码率节省的超分（SR+Codec）主题
+- type: same_topic
+  ref: paper:arxiv:2603.13597
+  note: 同为基于深度强化学习的自适应码率流媒体优化
+- type: same_topic
+  ref: paper:arxiv:2308.03643
+  note: 同为ABR码率自适应决策在流媒体传输中的应用
+- type: same_topic
+  ref: paper:arxiv:2609.37328
+  note: 同为面向编码视频的神经超分/增强后处理，与本文增强-vs-超分对比相关

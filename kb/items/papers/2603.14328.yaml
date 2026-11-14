@@ -1,0 +1,81 @@
+id: paper:arxiv:2603.14328
+type: paper
+title: 'CodecMOS-Accent: A MOS Benchmark of Resynthesized and TTS Speech from Neural Codecs Across English
+  Accents'
+domain: audio_coding
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2603.14328v1
+  url: https://arxiv.org/abs/2603.14328
+  pdf_url: https://arxiv.org/pdf/2603.14328v1
+  venue: arXiv preprint
+time:
+  published: '2026-03-15'
+  collected: '2026-11-14'
+entities:
+- ref: concept:NeuralAudioCodec
+  role: subject
+- ref: concept:LLM
+  role: subject
+- ref: metric:MOS
+  role: measured_by
+claims:
+- statement: 构建CodecMOS-Accent数据集：4,000条编解码器重合成与TTS语音样本，来自24个系统、32位说话人、覆盖10种英语口音。
+  confidence: reported
+  metrics:
+  - name: 样本数
+    value: 4,000
+    scope: 24个系统的重合成+TTS语音样本总量
+  - name: 系统数
+    value: '24'
+    scope: 被评测的编解码器重合成与TTS系统
+  - name: 说话人数
+    value: '32'
+    scope: 数据集覆盖的说话人
+  - name: 口音数
+    value: '10'
+    scope: 英语口音种类
+  evidence: abstract（初筛，未读全文）
+- statement: 开展大规模主观测试，25名听测者共给出19,600条标注，覆盖自然度、说话人相似度与口音相似度三个维度。
+  confidence: reported
+  metrics:
+  - name: 标注数
+    value: 19,600
+    scope: 主观测试标注总量
+  - name: 听测者数
+    value: '25'
+    scope: 参与主观测试的听测者
+  - name: 评测维度
+    value: '3'
+    scope: 自然度、说话人相似度、口音相似度
+  evidence: abstract（初筛，未读全文）
+- statement: 分析揭示说话人相似度与口音相似度之间存在紧密关系，客观指标对主观MOS具有一定预测能力，且听测者与说话人共享口音时存在感知偏差。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 发布覆盖10种英语口音的神经音频编解码器重合成与LLM-TTS语音MOS基准数据集CodecMOS-Accent。
+  abstract_zh: 该工作提出CodecMOS-Accent数据集，用于评测神经音频编解码器（NAC）重合成语音及其上训练的基于LLM的TTS系统在非标准（带口音）语音上的表现。数据集包含来自24个系统的4,000条重合成与TTS样本，涉及32位说话人、10种英语口音。大规模主观测试由25名听测者给出19,600条标注，覆盖自然度、说话人相似度和口音相似度三个维度。分析发现说话人相似度与口音相似度紧密相关、客观指标具有一定预测能力，且听测者与说话人共享口音时存在感知偏差，旨在推动面向人的NAC与带口音TTS评测研究。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 神经音频编解码器重合成与LLM-TTS语音的MOS评测基准，属音频编码域非核心视频/图像编码，按规则仅收录摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: CodecMOS-Accent：跨英语口音的神经编解码器重合成与TTS语音MOS基准
+relations:
+- type: same_topic
+  ref: paper:arxiv:2609.03283
+  note: 同为语音MOS（Mean Opinion Score）预测与评测主题
+- type: same_topic
+  ref: paper:arxiv:2107.03312
+  note: SoundStream为神经音频编解码器代表作，本文评测对象即NAC重合成语音
+- type: same_topic
+  ref: paper:arxiv:2606.15968
+  note: 同为神经音频编解码器合成语音的跨语言/口音基准研究
+- type: same_topic
+  ref: paper:arxiv:2604.19949
+  note: 同针对神经音频编解码器合成语音的特性（检测）研究

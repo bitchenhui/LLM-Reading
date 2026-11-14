@@ -1,0 +1,58 @@
+id: paper:arxiv:2309.05658
+type: paper
+title: 'From Capture to Display: A Survey on Volumetric Video'
+domain: immersive_media
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2309.05658v2
+  url: https://arxiv.org/abs/2309.05658
+  pdf_url: https://arxiv.org/pdf/2309.05658v2
+  venue: arXiv preprint
+time:
+  published: '2023-09-11'
+  collected: '2026-11-14'
+entities:
+- ref: concept:VolumetricVideo
+  role: subject
+- ref: concept:IQA
+  role: uses
+claims:
+- statement: 体积视频凭借六自由度为观看者提供比传统视频更强的沉浸感与交互性
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 该综述给出体积视频服务的通用框架，覆盖采集、压缩、传输、渲染与显示全流程，并系统梳理表示形式、开放数据集与质量评估指标等前置要素
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 体积视频服务在端到端流水线各环节仍面临显著技术挑战，存在大量待研究方向
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 系统性综述体积视频服务全流程：表示、数据集、质量指标与采集、压缩、传输、渲染、显示各环节技术
+  abstract_zh: 该综述面向六自由度的体积视频，提出体积视频服务的总体框架。文章首先梳理前置要素，包括表示形式、开放数据集与质量评估指标；随后逐环节评述采集、压缩、传输、渲染与显示的现有方法。最后总结该技术支撑的各类应用，并指出体积视频服务领域的研究挑战与未来机遇，相较传统视频，六自由度带来更强的沉浸感与交互性。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 体积视频全流程综述，覆盖采集/压缩/传输/渲染/显示，属沉浸式媒体域（非核心编码域），与库内多篇体积视频论文高度相关
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 从采集到显示：体积视频综述
+relations:
+- type: same_topic
+  ref: paper:arxiv:2310.08205
+  note: LiveVV 为体积视频直播流系统，属综述覆盖的体积视频服务传输环节
+- type: same_topic
+  ref: paper:arxiv:2411.05322
+  note: NeRF 体积视频压缩，对应综述中的体积视频压缩环节
+- type: same_topic
+  ref: paper:arxiv:2608.30184
+  note: ATGS 体积视频时序高斯表示，对应综述中的表示与压缩主题
+- type: same_topic
+  ref: paper:arxiv:2504.05888
+  note: UVG-VPC 为体积视频编码点云数据集，对应综述梳理的开放数据集要素
+- type: same_topic
+  ref: paper:arxiv:2309.05026
+  note: 空间感知质量的自适应体积视频流，对应综述的质量评估与传输环节

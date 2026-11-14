@@ -1,0 +1,54 @@
+id: paper:arxiv:2303.11599
+type: paper
+title: Low-complexity Deep Video Compression with A Distributed Coding Architecture
+domain: video_image_coding
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2303.11599v2
+  url: https://arxiv.org/abs/2303.11599
+  pdf_url: https://arxiv.org/pdf/2303.11599v2
+  venue: arXiv preprint
+time:
+  published: '2023-03-21'
+  collected: '2026-11-14'
+entities:
+- ref: codec:AVC
+  role: subject
+claims:
+- statement: 提出首个端到端分布式深度视频压缩框架，通过解码端侧信息生成模块利用帧间相关性，避免编码端计算密集的运动估计与补偿。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在压缩性能与DVC相当的条件下，编码速度较DVC提升6-7倍。
+  confidence: reported
+  metrics:
+  - name: 编码加速比
+    value: 6-7x
+    scope: 相对DVC（学习型预测编码基线），压缩性能相当条件下
+  evidence: abstract（初筛，未读全文）
+- statement: 该方法率失真性能显著优于传统分布式视频编码与H.264（AVC）。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 首个端到端分布式深度视频压缩框架：解码端生成侧信息，编码提速6-7倍且优于H.264。
+  abstract_zh: 预测编码类视频压缩依赖重量级编码器消除时域冗余，难以部署在资源受限设备上。受分布式信源编码理论启发，论文提出首个端到端分布式深度视频压缩框架，核心是在解码端设计有效的侧信息（SI）生成模块，无需编码端计算密集的运动估计与补偿即可利用帧间相关性。实验表明该方法显著优于传统分布式视频编码与H.264（AVC），并在与DVC压缩性能相当的条件下获得6-7倍编码加速。代码已开源。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 核心域学习型视频编码：首个端到端分布式深度视频压缩框架，显著降低编码复杂度且性能优于H.264，方法论与工程价值均突出，值得深读。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 基于分布式编码架构的低复杂度深度视频压缩
+relations:
+- type: same_topic
+  ref: paper:arxiv:2309.05846
+  note: 同属神经网络视频编码的架构设计与实现主题
+- type: same_topic
+  ref: paper:arxiv:2312.02753
+  note: 同关注低复杂度神经视频压缩与编码复杂度优化
+- type: same_topic
+  ref: paper:arxiv:2502.20762
+  note: 同属面向实际部署的低复杂度神经视频编码方向

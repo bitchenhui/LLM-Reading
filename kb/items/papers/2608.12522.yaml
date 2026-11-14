@@ -1,0 +1,72 @@
+id: paper:arxiv:2608.12522
+type: paper
+title: '$\varepsilon$-MemEvo: Adaptive Cross-Task Memory Transfer for LLM Program Evolution'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2608.12522v1
+  url: https://arxiv.org/abs/2608.12522
+  pdf_url: https://arxiv.org/pdf/2608.12522v1
+  venue: arXiv preprint
+time:
+  published: '2026-08-12'
+  collected: '2026-11-14'
+entities:
+- ref: concept:AlphaEvolve
+  role: subject
+- ref: concept:FunSearch
+  role: builds_on
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: ε-MemEvo在GPT-5骨干下于全部8个优化基准上的AUCC指标超越AdaEvolve，平均相对增益+8.7%。
+  confidence: reported
+  metrics:
+  - name: AUCC平均相对增益
+    value: +8.7%
+    scope: GPT-5骨干，8个基准对比AdaEvolve，内容级留一协议
+  evidence: abstract（初筛，未读全文）
+- statement: ε-MemEvo将早期收敛平均提升9.4%。
+  confidence: reported
+  metrics:
+  - name: 早期收敛平均提升
+    value: +9.4%
+    scope: 8个基准平均
+  evidence: abstract（初筛，未读全文）
+- statement: ε-MemEvo带来的计算开销低于1%。
+  confidence: reported
+  metrics:
+  - name: 计算开销
+    value: <1%
+    scope: 相对基线进化流程
+  evidence: abstract（初筛，未读全文）
+- statement: 消融显示朴素记忆注入可能灾难性失败，自适应门控在全部5个消融任务上保持安全。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 数据更新的注入后验可解释：改进期倾向skip，早/晚期平台期由skip转向hint。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出ε-MemEvo，将成功算法策略存为任务无关记忆并经自适应注入门控实现LLM程序进化的跨任务迁移，8个基准平均提升8.7%。
+  abstract_zh: 针对FunSearch、AlphaEvolve等LLM程序进化系统逐任务孤立优化、搜索经验即弃的问题，提出ε-MemEvo跨任务知识迁移框架。该框架将历史经验存为任务无关的策略记忆——成功算法策略的紧凑自然语言摘要而非原始代码，从而可在不同API与评估器的任务间迁移；并用自适应注入门控决定检索记忆是否注入及注入强度，避免语义不匹配记忆导致的负迁移。在横跨数学优化与系统工程的8个基准上按内容级留一协议评估：GPT-5骨干下，ε-MemEvo在全部8个任务的AUCC指标上超越AdaEvolve，平均相对增益+8.7%，早期收敛平均提升+9.4%，开销<1%。消融显示朴素记忆注入可能灾难性失败，而自适应门控在5个消融任务上保持安全；数据更新的后验可解释，在改进期倾向skip，在早/晚期平台期由skip转向hint。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 面向LLM程序进化（FunSearch/AlphaEvolve路线）的跨任务记忆迁移与注入门控研究，属自我改进AI域，按基准只做初筛摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: ε-MemEvo：面向LLM程序进化的自适应跨任务记忆迁移
+relations:
+- type: same_topic
+  ref: paper:arxiv:2610.03675
+  note: 同属LLM引导程序进化（FunSearch/AlphaEvolve路线）框架的改进研究
+- type: same_topic
+  ref: paper:arxiv:2611.14326
+  note: 均研究经验/记忆在自进化循环中何时注入的门控机制
+- type: same_topic
+  ref: paper:arxiv:2609.35568
+  note: 均利用跨任务经验记忆迁移提升程序/算法合成效率

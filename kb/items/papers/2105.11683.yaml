@@ -1,0 +1,58 @@
+id: paper:arxiv:2105.11683
+type: paper
+title: Towards Compact Single Image Super-Resolution via Contrastive Self-distillation
+domain: processing_enhancement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2105.11683v1
+  url: https://arxiv.org/abs/2105.11683
+  pdf_url: https://arxiv.org/pdf/2105.11683v1
+  venue: arXiv preprint
+time:
+  published: '2021-05-25'
+  collected: '2026-11-14'
+entities:
+- ref: concept:SuperResolution
+  role: subject
+- ref: metric:PSNR
+  role: measured_by
+- ref: metric:SSIM
+  role: measured_by
+claims:
+- statement: 提出的对比自蒸馏（CSD）框架能够同时压缩和加速多种现成超分模型（EDSR、RCAN、CARN），适用于资源受限设备的部署场景
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 通过通道分裂从教师网络构建紧凑学生网络，并引入对比损失实现显式知识迁移，可提升SR图像质量与PSNR/SSIM
+  confidence: reported
+  metrics:
+  - name: PSNR
+    value: 提升
+    scope: 对比损失带来的SR重建质量指标改善，摘要未给具体数值
+  - name: SSIM
+    value: 提升
+    scope: 对比损失带来的SR重建质量指标改善，摘要未给具体数值
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出对比自蒸馏CSD框架，经通道分裂构建紧凑学生网络并用对比损失同步压缩加速EDSR/RCAN/CARN等超分模型
+  abstract_zh: 针对CNN超分模型架构复杂、内存与计算开销大、难以部署在资源受限设备的问题，提出一种新型对比自蒸馏（CSD）框架，可同时压缩与加速多种现成SR模型。该方法首先从目标教师网络出发，通过通道分裂构建紧凑的学生超分网络。随后引入新颖的对比损失，通过显式知识迁移提升SR图像质量以及PSNR/SSIM指标。大量实验表明，CSD方案能有效压缩并加速EDSR、RCAN、CARN等多个标准SR模型，代码已开源。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 单图像超分模型压缩与加速属于编码链路增强（超分）相关方向，但论文本身不涉及编解码流程，按非核心域收录
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 基于对比自蒸馏的紧凑单图像超分辨率
+relations:
+- type: same_topic
+  ref: paper:arxiv:2104.02322
+  note: 同属超分辨率方向；该文将SR用于视频压缩链路，本文聚焦SR模型本身的压缩与加速
+- type: same_topic
+  ref: paper:arxiv:2210.08229
+  note: 均涉及压缩视频超分辨率与高效SR网络设计
+- type: same_topic
+  ref: paper:arxiv:2305.04844
+  note: 均涉及SR模型与编解码结合的应用场景，轻量SR模型可支撑解码端超分

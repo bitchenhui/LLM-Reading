@@ -1,0 +1,58 @@
+id: paper:arxiv:2305.14483
+type: paper
+title: Language Model Self-improvement by Reinforcement Learning Contemplation
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2305.14483v1
+  url: https://arxiv.org/abs/2305.14483
+  pdf_url: https://arxiv.org/pdf/2305.14483v1
+  venue: arXiv preprint
+time:
+  published: '2023-05-23'
+  collected: '2026-11-14'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: subject
+claims:
+- statement: SIRLC 在不使用外部监督标签的条件下提升 LLM 推理任务的答题准确率，增幅为 5.6%。
+  confidence: reported
+  metrics:
+  - name: 答题准确率提升
+    value: 5.6%
+    scope: 推理任务，SIRLC 无监督自我改进相对基线
+  evidence: abstract（初筛，未读全文）
+- statement: 在机器翻译任务上，SIRLC 将 BERTScore 从 0.82 提升至 0.86。
+  confidence: reported
+  metrics:
+  - name: BERTScore
+    value: '0.86'
+    scope: 翻译任务，SIRLC 改进后（基线 0.82）
+  evidence: abstract（初筛，未读全文）
+- statement: SIRLC 让 LLM 同时扮演学生（生成答案）与教师（评估打分）双重角色，并以强化学习最大化自我评估分数来更新参数，适用于不同规模的模型。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出 SIRLC 无监督方法：LLM 兼任学生与教师，以自我评分作 RL 奖励，无需外部标签即可提升推理与翻译性能。
+  abstract_zh: 该文提出一种不依赖外部标签的无监督 LLM 自我改进方法 SIRLC。其出发点是语言模型评估文本质量比生成文本更容易，因此让 LLM 兼任两个角色：作为学生对无标注问题生成答案，作为教师对生成文本进行评估打分。模型参数通过强化学习更新，以最大化自我评估分数。实验表明
+    SIRLC 可应用于推理、文本生成与机器翻译等多种 NLP 任务：推理任务答题准确率提升 5.6%，翻译任务 BERTScore 从 0.82 升至 0.86，且方法适用于不同规模的模型，展现了广泛适用性。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 提出无监督的 LLM 自我改进方法 SIRLC，属自我改进 AI 核心主题，但非音视频核心域，按基准仅收录摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 基于强化学习沉思的语言模型自我改进
+relations:
+- type: same_topic
+  ref: paper:arxiv:2210.11610
+  note: 同属 LLM 无监督自我改进方向，本文是免外部标签的自我改进方法
+- type: same_topic
+  ref: paper:arxiv:2311.08921
+  note: 同为基于 LLM 的自我改进研究

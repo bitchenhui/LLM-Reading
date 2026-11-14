@@ -1,0 +1,68 @@
+id: paper:arxiv:2402.03179
+type: paper
+title: 'Cool-chic video: Learned video coding with 800 parameters'
+domain: video_image_coding
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2402.03179v2
+  url: https://arxiv.org/abs/2402.03179
+  pdf_url: https://arxiv.org/pdf/2402.03179v2
+  venue: arXiv preprint
+time:
+  published: '2024-02-05'
+  collected: '2026-11-14'
+entities:
+- ref: codec:AVC
+  role: subject
+claims:
+- statement: 提出的Cool-chic video编解码器整体仅含约800个参数，是参数量极小的学习型视频编解码器。
+  confidence: reported
+  metrics:
+  - name: 模型参数量
+    value: '800'
+    scope: 整个视频编解码模型（逐序列过拟合）
+  evidence: abstract（初筛，未读全文）
+- statement: 解码时每个像素仅需约900次乘法，作者称其为解码复杂度最低的神经视频编解码器之一。
+  confidence: reported
+  metrics:
+  - name: 解码乘法数
+    value: '900'
+    scope: 每解码像素
+  evidence: abstract（初筛，未读全文）
+- statement: 在Cool-chic过拟合图像编解码器基础上补充帧间编码模块以利用时间冗余，支持低延迟与随机访问两种编码配置。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 率失真性能接近AVC，并优于FFNeRV等其他过拟合编解码器。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 系统已开源，代码地址为orange-opensource.github.io/Cool-Chic。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 在过拟合图像编解码器Cool-chic上加入帧间编码，构建仅800参数、每像素900次乘法的超轻量神经视频编解码器。
+  abstract_zh: 本文在过拟合图像编解码器Cool-chic的基础上补充帧间编码模块以利用视频的时间冗余，提出超轻量学习型视频编解码器Cool-chic video。整个模型仅含约800个参数，解码时每个像素仅需约900次乘法，是解码复杂度最低的神经视频编解码器之一。系统支持低延迟（low-delay）与随机访问（random
+    access）两种配置，率失真性能接近AVC。与FFNeRV等其他过拟合编解码器相比性能更优，且系统已开源。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 核心域工作：在Cool-chic基础上构建解码复杂度极低（800参数、900乘法/像素）的开源学习视频编解码器，是轻量级神经视频编码代表性成果。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: Cool-chic video：仅含800参数的学习型视频编码
+relations:
+- type: same_topic
+  ref: paper:arxiv:2607.13723
+  note: 同为Cool-chic技术路线的低复杂度神经图像/视频编码后续工作
+- type: same_topic
+  ref: paper:arxiv:2403.11651
+  note: 过拟合图像编码降复杂度方向，与本文所基于的Cool-chic体系同源
+- type: same_topic
+  ref: paper:arxiv:2306.09818
+  note: HiNeRV属基于神经表示的过拟合视频编码，与FFNeRV同族，为本文对比方法所属方向
+- type: same_topic
+  ref: paper:arxiv:2512.04019
+  note: 超轻量神经视频表示压缩，同属低复杂度/轻量级学习视频编码方向

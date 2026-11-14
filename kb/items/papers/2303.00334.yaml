@@ -1,0 +1,58 @@
+id: paper:arxiv:2303.00334
+type: paper
+title: Online Streaming Video Super-Resolution with Convolutional Look-Up Table
+domain: processing_enhancement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2303.00334v4
+  url: https://arxiv.org/abs/2303.00334
+  pdf_url: https://arxiv.org/pdf/2303.00334v4
+  venue: arXiv preprint
+time:
+  published: '2023-03-01'
+  collected: '2026-11-14'
+entities:
+- ref: concept:SuperResolution
+  role: subject
+- ref: concept:WebRTC
+  role: platform
+- ref: metric:FPS
+  role: measured_by
+claims:
+- statement: 基于真实在线流媒体系统构建了在线流媒体视频超分的新基准数据集LDV-WebRTC
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 提出MoE-LUT模块，将针对不同退化的多组LUT自适应组合，以处理WebRTC动态调整带来的时空退化变化
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 所提卷积+LUT混合模型实现720P视频超分约100FPS，显著优于现有LUT方法，并与高效CNN方法性能相当
+  confidence: reported
+  metrics:
+  - name: FPS
+    value: 100 FPS
+    scope: 720P视频SR推理速度（约值）
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出卷积+查找表混合模型与MoE-LUT模块，应对流媒体动态退化，720P视频SR约100FPS
+  abstract_zh: 在线流媒体受带宽与算力限制，且WebRTC等协议会在时空维度动态调整视频质量，带来多样且动态的退化，加之严格的延迟要求，使现有视频超分方法难以直接适用。论文基于真实在线流媒体系统构建了新基准数据集LDV-WebRTC。方法上提出卷积与查找表（LUT）混合模型以改善性能-延迟权衡，并设计混合专家LUT（MoE-LUT）模块，构建针对不同退化的LUT集合并自适应组合以应对变化的退化。实验表明该方法实现720P视频超分约100FPS，显著优于现有LUT方法，并与高效CNN方法性能相当。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 视频超分增强方法（非核心编码域），针对WebRTC流媒体动态退化设计，与编码链路增强高度相关，按基准收录为 summary_only
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 基于卷积查找表的在线流媒体视频超分辨率
+relations:
+- type: same_topic
+  ref: paper:arxiv:2201.08197
+  note: 同为面向视频流的客户端超分/增强处理方案
+- type: same_topic
+  ref: paper:arxiv:2411.13362
+  note: 同为面向压缩/流媒体内容的实时超分辨率模型
+- type: same_topic
+  ref: paper:arxiv:2407.10926
+  note: 同为基于训练查找表（LUT）的编码链路处理加速技术

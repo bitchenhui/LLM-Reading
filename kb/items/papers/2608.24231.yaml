@@ -1,0 +1,63 @@
+id: paper:arxiv:2608.24231
+type: paper
+title: 'RecurSE: Bounded Recursive Self-Evaluation for LLM Rubric Judges'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2608.24231v1
+  url: https://arxiv.org/abs/2608.24231
+  pdf_url: https://arxiv.org/pdf/2608.24231v1
+  venue: arXiv preprint
+time:
+  published: '2026-08-25'
+  collected: '2026-11-14'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:RSI
+  role: uses
+claims:
+- statement: RecurSE 在 RL 训练奖励中消除外部金标监督，由模型自身评估能力生成学习信号，形成有界递归自改进（RSI）闭环。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 接口解耦将检查器标量分数与裁判判定 token 结构性隔离，消除了膨胀自分配奖励的退化性 token 复制捷径。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: Pairwise Advantage Validity（PAV）作为无偏验证监视器，联合跟踪裁判准确率与检查器保真度，可可靠识别最优早停窗口。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在 Qwen3.5-9B、Gemma-4-E4B-it、Qwen3.6-27B 上，RecurSE 在留出的医学、成对比较、摘要与专业基准上取得一致的泛化收益。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 消融显示同步的裁判-检查器协同进化优于冻结检查器、外部元裁判、自一致性与规模化教师蒸馏。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 由 RecurSE 裁判筛选的偏好对可有效增强下游策略对齐；有界 RSI 在自产奖励有效性被显式解耦并受监控时是可行的。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出 RecurSE，以裁判-检查器协同进化在 RL 奖励中消除外部金标监督，实现可早停的有界 LLM 裁判自改进。
+  abstract_zh: 针对改进 LLM-as-judge 通常依赖昂贵标注、奖励模型或强教师蒸馏的问题，该文在 RL 训练奖励中去除外部金标监督，由模型自身评估能力生成学习信号，构成'有界递归自改进（RSI）'闭环
+    RecurSE。方法上，Pass 1 让可训练裁判按逐条规则评估候选回答，Pass 2 由同步的策略副本检查器依元规则审计裁判推理并给出标量过程奖励；接口解耦将检查器标量分数与裁判判定 token
+    结构性隔离，消除膨胀自奖励的 token 复制捷径。针对无锚定递归学习天然有界的问题，提出 Pairwise Advantage Validity（PAV）作为无偏验证监视器，联合跟踪裁判准确率与检查器保真度以定位最优早停窗口。在
+    Qwen3.5-9B、Gemma-4-E4B-it、Qwen3.6-27B 上，RecurSE 在医学、成对比较、摘要与专业等留出基准上取得一致泛化收益；消融显示同步裁判-检查器协同进化优于冻结检查器、外部元裁判、自一致性与规模化教师蒸馏，其裁判筛选的偏好对还可增强下游策略对齐。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 属于 LLM-as-judge 的有界递归自改进（RSI）研究，非音视频核心技术域，按收录规则仅做初筛摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: RecurSE：面向 LLM 规则裁判的有界递归自评估
+relations:
+- type: same_topic
+  ref: paper:arxiv:2610.11464
+  note: 同为自改进代理中裁判/验证器协同进化主题，与本工作的 judge-checker 协同进化思路直接相关
+- type: same_topic
+  ref: paper:arxiv:2604.06996
+  note: 同属基于规则（rubric）的 LLM 裁评自偏好/自评可靠性问题域

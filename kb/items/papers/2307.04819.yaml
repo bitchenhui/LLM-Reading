@@ -1,0 +1,56 @@
+id: paper:arxiv:2307.04819
+type: paper
+title: A Kalman Filter based Low Complexity Throughput Prediction Algorithm for 5G Cellular Networks
+domain: streaming_delivery
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2307.04819v2
+  url: https://arxiv.org/abs/2307.04819
+  pdf_url: https://arxiv.org/pdf/2307.04819v2
+  venue: arXiv preprint
+time:
+  published: '2023-07-10'
+  collected: '2026-11-14'
+entities:
+- ref: concept:ABR
+  role: subject
+- ref: concept:QoE
+  role: measured_by
+claims:
+- statement: 在七个公开5G吞吐量数据集、不同预测窗口长度下，所提方法比基线ML/DL算法预测更准确，且推理与再训练耗时更短。
+  confidence: reported
+  metrics:
+  - name: 数据集数量
+    value: '7'
+    scope: 公开5G吞吐量数据集
+  evidence: abstract（初筛，未读全文）
+- statement: 与MPC类自适应码率算法结合使用时，所提吞吐量预测方法为点播与直播视频用户带来的QoE高于ML/DL基线预测。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 该方法将未来吞吐量建模为多元线性回归，并将现有工作未纳入的测量误差方差引入卡尔曼滤波预测-校正流程，以低计算复杂度获得最优估计。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 用多元线性回归加卡尔曼滤波校正实现5G吞吐量低复杂度预测，配合MPC类ABR提升流媒体QoE。
+  abstract_zh: 针对视频流媒体等网络感知应用对吞吐量预测的需求，论文将未来吞吐量建模为当前多个网络参数与当前吞吐量的多元线性回归，并把预测误差方差与现有工作未考虑的测量误差方差送入基于卡尔曼滤波的预测-校正框架，得到未来吞吐量的最优估计。在七个公开5G吞吐量数据集、不同预测窗口长度上的大量实验表明，该方法比基线ML/DL算法预测更准确，且推理与再训练耗时更短。与主流MPC类自适应码率（ABR）算法结合时，该方法为点播与直播视频用户带来比ML/DL基线预测更高的QoE。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 面向ABR流媒体的5G吞吐量低复杂度预测，属流媒体传输域而非核心编码域，按收录基准给summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 基于卡尔曼滤波的5G蜂窝网络低复杂度吞吐量预测算法
+relations:
+- type: same_topic
+  ref: paper:arxiv:2609.09490
+  note: 同属蜂窝网络中QoE感知的码率自适应与网络状态预测方向
+- type: same_topic
+  ref: paper:arxiv:2308.03643
+  note: 同属ABR吞吐量预测与自适应流媒体传输主题
+- type: same_topic
+  ref: paper:arxiv:2302.06004
+  note: 同属5G网络感知视频流媒体研究

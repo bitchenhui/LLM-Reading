@@ -1,0 +1,65 @@
+id: paper:arxiv:2505.08281
+type: paper
+title: Ultra Lowrate Image Compression with Semantic Residual Coding and Compression-aware Diffusion
+domain: video_image_coding
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2505.08281v1
+  url: https://arxiv.org/abs/2505.08281
+  pdf_url: https://arxiv.org/pdf/2505.08281v1
+  venue: arXiv preprint
+time:
+  published: '2025-05-13'
+  collected: '2026-11-14'
+entities:
+- ref: metric:BD-Rate
+  role: subject
+- ref: metric:LPIPS
+  role: measured_by
+- ref: metric:FID
+  role: measured_by
+claims:
+- statement: ResULIC相比最先进的扩散式图像压缩方法，在LPIPS感知指标上取得-80.7%的BD-rate节省。
+  confidence: reported
+  metrics:
+  - name: BD-Rate
+    value: -80.7%
+    scope: LPIPS口径，对比SOTA扩散式压缩方法
+  evidence: abstract（初筛，未读全文）
+- statement: 在生成质量指标FID上，ResULIC取得-66.3%的BD-rate节省，客观与主观重建质量均优于现有扩散式方法。
+  confidence: reported
+  metrics:
+  - name: BD-Rate
+    value: -66.3%
+    scope: FID口径，对比SOTA扩散式压缩方法
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出ResULIC框架，将残差信号融入语义检索与扩散生成过程，实现超低码率图像压缩。
+  abstract_zh: 针对现有多模态大模型图像压缩框架中语义检索、隐变量压缩与生成模型割裂集成导致的重建保真度与编码效率欠佳问题，提出残差引导的超低码率图像压缩方法ResULIC。引入语义残差编码（SRC）捕捉原始图像与其压缩隐表示之间的语义差异，并结合感知保真度优化器提升重建质量。进一步提出压缩感知扩散模型（CDM），在码率与扩散时间步之间建立最优对齐，增强压缩-重建协同。实验表明，相比最先进的扩散式压缩方法，ResULIC在LPIPS和FID上分别取得-80.7%与-66.3%的BD-rate节省，客观与主观质量均更优。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 核心域超低码率学习图像压缩论文，提出残差引导语义编码与压缩感知扩散模型，报告显著感知指标增益，属重要工作。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 基于语义残差编码与压缩感知扩散的超低速率图像压缩
+relations:
+- type: same_topic
+  ref: paper:arxiv:2601.10373
+  note: 同为扩散先验驱动的低码率图像压缩
+- type: same_topic
+  ref: paper:arxiv:2505.16177
+  note: 同为生成式超低码率图像/视频压缩
+- type: same_topic
+  ref: paper:arxiv:2505.16687
+  note: 同为扩散式语义图像压缩
+- type: same_topic
+  ref: paper:arxiv:2309.03244
+  note: 同为语义引导的低码率生成式图像压缩
+- type: same_topic
+  ref: paper:arxiv:2606.13366
+  note: 同为扩散图像压缩的率失真感知优化

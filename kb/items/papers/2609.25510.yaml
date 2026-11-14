@@ -1,0 +1,67 @@
+id: paper:arxiv:2609.25510
+type: paper
+title: 'Hill Sampling for Test-Time Scaling: A Simple and Better Alternative to Repeated Sampling, Evolution,
+  and Training'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2609.25510v2
+  url: https://arxiv.org/abs/2609.25510
+  pdf_url: https://arxiv.org/pdf/2609.25510v2
+  venue: arXiv preprint
+time:
+  published: '2026-09-22'
+  collected: '2026-11-14'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:AlphaEvolve
+  role: compared_against
+- ref: org:NVIDIA
+  role: platform
+claims:
+- statement: Hill Sampling 在已发表方法中创下圆盘填充（circle packing）问题的新最优记录
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: Hill Sampling 在 Erdős 最小重叠问题上超越 AlphaEvolve 参考结果，并在集合和差问题上取得强结果
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 以生成的最优程序评估方法时，测试时用 ES 学习模型权重劣于学习率为零的 ES（随机权重空间扰动搜索）；重复采样优于两种 ES 方法，Hill Sampling 表现最强
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 圆盘填充与 Erdős 最小重叠的结果仅需在 8 块 NVIDIA H100 GPU 上运行数小时墙钟时间即可获得
+  confidence: reported
+  metrics:
+  - name: 硬件配置
+    value: 8× NVIDIA H100
+    scope: 圆盘填充与 Erdős 问题的算力平台
+  - name: 运行时长
+    value: 数小时
+    scope: 墙钟时间（wall-clock）
+  evidence: abstract（初筛，未读全文）
+- statement: 作者建议的测试时算力分配策略：先反复采样对当前已验证最优解的编辑，再引入档案库、多样性机制、进化脚手架或测试时参数学习等额外复杂度
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出 Hill Sampling：冻结 LLM 反复采样并以当前最优程序为条件，测试时效果超越进化搜索与测试时训练。
+  abstract_zh: 论文提出 Hill Sampling，一种爬山式测试时优化：从冻结的 LLM 反复采样候选程序，保留迄今最优程序，并让后续所有采样以其为条件。方法在圆盘填充、集合和差与 Erdős
+    最小重叠三个可验证算法问题上用三个开源权重模型评估，在圆盘填充上刷新已发表方法的最优记录，在 Erdős 最小重叠问题上超越 AlphaEvolve 参考结果。与按参数量计规模最大之一的测试时进化策略（ES）权重学习对比发现：以生成最优程序评估时，ES
+    学习权重反而劣于学习率为零的 ES（即随机权重扰动搜索），重复采样又优于两种 ES，Hill Sampling 最强。圆盘填充与 Erdős 结果仅需 8 块 NVIDIA H100 GPU 上数小时墙钟时间。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 属 LLM 测试时计算扩展与程序搜索自改进主题（对比 AlphaEvolve/ES），非音视频核心域，按规则仅摘要收录
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: Hill Sampling：测试时扩展的简单且更优替代方案——优于重复采样、进化与训练
+relations:
+- type: same_topic
+  ref: paper:arxiv:2610.03675
+  note: 同为 LLM 引导的程序进化/搜索方法研究；本文用更简单的爬山式采样替代进化脚手架并给出对比结论
+- type: same_topic
+  ref: paper:arxiv:2610.12002
+  note: 均属测试时计算（test-time compute）主题；本文实证显示测试时参数学习（ES）劣于冻结模型的重复采样

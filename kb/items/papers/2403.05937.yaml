@@ -1,0 +1,53 @@
+id: paper:arxiv:2403.05937
+type: paper
+title: Wavelet-Like Transform-Based Technology in Response to the Call for Proposals on Neural Network-Based
+  Image Coding
+domain: video_image_coding
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2403.05937v1
+  url: https://arxiv.org/abs/2403.05937
+  pdf_url: https://arxiv.org/pdf/2403.05937v1
+  venue: arXiv preprint
+time:
+  published: '2024-03-09'
+  collected: '2026-11-14'
+entities:
+- ref: codec:VVC
+  role: subject
+claims:
+- statement: iWaveV3 在客观质量指标上达到当时最先进（SOTA）的压缩效率，感知质量也具有竞争力。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 截至 2022 年，神经网络图像编码的性能已超越性能最优的传统图像编码框架 H.266/VVC。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: iWaveV3 同时支持有损与无损压缩，并被 IEEE 1857.11 采纳为神经网络图像编码标准制定的候选方案。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 相较前代 iWave++，iWaveV3 引入仿射小波类变换、感知友好质量指标以及更先进的训练与在线优化策略。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出小波类变换端到端图像编码框架 iWaveV3，入选 IEEE 1857.11 神经图像编码标准候选方案。
+  abstract_zh: 面向 IEEE 1857.11 工作组发起的神经网络图像编码标准征集提案（CfP），本文提出基于小波类变换的端到端图像编码框架 iWaveV3。该框架在此前 iWave++
+    的基础上引入仿射小波类变换、感知友好质量指标以及更先进的训练与在线优化策略。iWaveV3 同时支持有损与无损压缩，在客观质量上达到当时最先进的压缩效率，感知质量亦具竞争力。该方案最终被采纳为 IEEE
+    神经网络图像编码标准制定的候选方案。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 核心域神经图像压缩工作，iWaveV3 被 IEEE 1857.11 采纳为神经网络图像编码标准候选方案，压缩性能达 SOTA，值得深读。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 响应神经网络图像编码征集提案的小波类变换技术
+relations:
+- type: same_topic
+  ref: paper:arxiv:2409.14090
+  note: 同为小波增强的神经图像压缩方向工作
+- type: same_topic
+  ref: paper:arxiv:2303.14978
+  note: 同为 learned image compression 端到端图像压缩

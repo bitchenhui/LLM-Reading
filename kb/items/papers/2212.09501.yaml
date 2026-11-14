@@ -1,0 +1,77 @@
+id: paper:arxiv:2212.09501
+type: paper
+title: 'NAWQ-SR: A Hybrid-Precision NPU Engine for Efficient On-Device Super-Resolution'
+domain: processing_enhancement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2212.09501v3
+  url: https://arxiv.org/abs/2212.09501
+  pdf_url: https://arxiv.org/pdf/2212.09501v3
+  venue: arXiv preprint
+time:
+  published: '2022-12-15'
+  collected: '2026-11-14'
+entities:
+- ref: concept:SuperResolution
+  role: subject
+- ref: concept:NPU
+  role: platform
+- ref: metric:PSNR
+  role: measured_by
+claims:
+- statement: NAWQ-SR相比使用异构处理器的端上SR系统MobiSR平均加速7.9倍
+  confidence: reported
+  metrics:
+  - name: speedup
+    value: 7.9x
+    scope: 对比MobiSR（异构处理器端上SR系统），平均
+  evidence: abstract（初筛，未读全文）
+- statement: NAWQ-SR相比CPU端上SR系统SplitSR平均加速3倍
+  confidence: reported
+  metrics:
+  - name: speedup
+    value: 3x
+    scope: 对比SplitSR（CPU端上SR系统），平均
+  evidence: abstract（初筛，未读全文）
+- statement: NAWQ-SR相比NPU端上SR系统XLSR平均加速1.91倍
+  confidence: reported
+  metrics:
+  - name: speedup
+    value: 1.91x
+    scope: 对比XLSR（NPU端上SR系统），平均
+  evidence: abstract（初筛，未读全文）
+- statement: NAWQ-SR相比INT8 NPU设计平均加速3.2倍且PSNR高0.39 dB，缓解量化对视觉质量的负面影响
+  confidence: reported
+  metrics:
+  - name: speedup
+    value: 3.2x
+    scope: 对比INT8 NPU基线设计，平均
+  - name: PSNR增益
+    value: 0.39 dB
+    scope: 对比INT8 NPU基线设计，平均
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 以混合精度量化与运行时神经图像编解码器，在移动NPU上高效执行超分，较现有端上SR系统最高加速7.9倍且提升PSNR。
+  abstract_zh: 图像与视频分发系统日益采用深度学习超分以提升视觉质量并降低对网络条件的依赖，但SR模型的高计算量与内存占用使移动端部署仍具挑战。NAWQ-SR提出新型混合精度量化技术与运行时神经图像编解码器，利用现代移动NPU的多精度能力，在满足用户指定质量约束下最小化推理延迟。该框架在运行时自适应选择各层算术精度，赋予SR网络更宽的表示能力，使NPU上可达到的视觉质量超越此前水平。实验显示，相比异构处理器方案MobiSR、CPU方案SplitSR与NPU方案XLSR分别平均加速7.9倍、3倍与1.91倍；相比INT8
+    NPU设计平均加速3.2倍、PSNR提升0.39 dB，并有效缓解量化对视觉质量的负面影响，刷新NPU超分质量纪录。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 面向图像/视频分发链路的端上超分部署框架，属超分/增强类非核心域，按规则最高给 summary_only
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: NAWQ-SR：一种面向高效端上超分的混合精度NPU引擎
+relations:
+- type: same_topic
+  ref: paper:arxiv:2104.02322
+  note: 同为超分服务视频压缩/分发链路的方向（内容自适应SR降低码率）
+- type: same_topic
+  ref: paper:arxiv:2411.13362
+  note: 同为面向实时/端上部署的超分模型（AV1压缩内容实时SR）
+- type: same_topic
+  ref: paper:arxiv:2606.13110
+  note: 同为神经编码模型部署中的混合精度量化优化技术

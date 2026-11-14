@@ -1,0 +1,60 @@
+id: paper:arxiv:2605.17734
+type: paper
+title: Harnessing LLM Agents with Skill Programs
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2605.17734v2
+  url: https://arxiv.org/abs/2605.17734
+  pdf_url: https://arxiv.org/pdf/2605.17734v2
+  venue: arXiv preprint
+time:
+  published: '2026-05-18'
+  collected: '2026-11-14'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:SelfImprovement
+  role: uses
+- ref: concept:TrainingFree
+  role: compared_against
+claims:
+- statement: 推理时程序函数（PFs）在网页搜索推理任务上较多循环ReAct Agent平均性能提升25%。
+  confidence: reported
+  metrics:
+  - name: 平均性能提升
+    value: 25%
+    scope: web-search reasoning，推理时PFs 对比 (multi-loop) ReAct Agent
+  evidence: abstract（初筛，未读全文）
+- statement: 后训练与受控技能演化在网页搜索推理任务上较Search-R1取得30.4%的提升。
+  confidence: reported
+  metrics:
+  - name: 性能提升
+    value: 30.4%
+    scope: web-search reasoning，post-training 与 controlled evolution 对比 Search-R1
+  evidence: abstract（初筛，未读全文）
+- statement: HASP在网页搜索、数学推理和编程任务上同时优于免训练与训练类基线方法，并通过机制分析验证了PFs触发干预与技能内化的有效性。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: HASP将经验技能升级为可执行程序函数，在易错状态主动干预LLM智能体，支持推理时干预、后训练与自我改进演化。
+  abstract_zh: 论文提出HASP框架，将智能体从过往经验提炼的技能从被动文本建议升级为可执行的程序函数（PFs）。PFs作为可执行护栏，在易失败状态被触发，直接修改下一步动作或注入纠正性上下文以干预智能体循环。该框架高度模块化，可用于推理时直接干预、后训练时的结构化监督，以及通过演化经教师审核的PFs实现自我改进。实验表明HASP在网页搜索、数学推理与编程任务上显著优于免训练和训练类方法：推理时PFs较多循环ReAct
+    Agent平均提升25%，后训练与受控演化较Search-R1提升30.4%。机制分析进一步揭示了PFs的触发与干预方式、技能内化过程及稳定技能库演化的必要条件。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 论文提出LLM智能体技能程序化框架HASP并含自我改进演化模式，属自我改进AI域而非音视频核心域，按基准仅作初筛摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: HASP：以技能程序驾驭LLM智能体
+relations:
+- type: same_topic
+  ref: paper:arxiv:2609.39149
+  note: 同为LLM智能体技能表征引导的技能自进化方向
+- type: same_topic
+  ref: paper:arxiv:2609.33867
+  note: 同属基于技能演化的递归自我改进研究线

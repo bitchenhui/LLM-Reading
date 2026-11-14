@@ -1,0 +1,67 @@
+id: paper:arxiv:2104.13371
+type: paper
+title: 'BasicVSR++: Improving Video Super-Resolution with Enhanced Propagation and Alignment'
+domain: processing_enhancement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2104.13371v1
+  url: https://arxiv.org/abs/2104.13371
+  pdf_url: https://arxiv.org/pdf/2104.13371v1
+  venue: arXiv preprint
+time:
+  published: '2021-04-27'
+  collected: '2026-11-14'
+entities:
+- ref: concept:SuperResolution
+  role: subject
+- ref: metric:PSNR
+  role: measured_by
+claims:
+- statement: 提出二阶网格传播与流引导可变形对齐，使循环框架能更有效利用错位帧间的时空信息。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: BasicVSR++在相近参数量下超越BasicVSR。
+  confidence: reported
+  metrics:
+  - name: PSNR提升
+    value: +0.82 dB
+    scope: 对比BasicVSR、参数量相近条件下
+  evidence: abstract（初筛，未读全文）
+- statement: BasicVSR++可泛化至压缩视频增强等视频恢复任务，并在NTIRE 2021相关挑战赛中取得佳绩。
+  confidence: reported
+  metrics:
+  - name: 冠军数
+    value: '3'
+    scope: NTIRE 2021视频超分辨率与压缩视频增强挑战赛
+  - name: 亚军数
+    value: '1'
+    scope: NTIRE 2021视频超分辨率与压缩视频增强挑战赛
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 以二阶网格传播和流引导可变形对齐重设计BasicVSR，相近参数量下PSNR提升0.82 dB。
+  abstract_zh: 该方法在BasicVSR双向传播框架基础上重新设计，提出二阶网格传播与流引导可变形对齐两个新组件，从而更有效地利用错位视频帧间的时空信息。在相近计算量与参数量约束下，BasicVSR++较BasicVSR的PSNR提升0.82
+    dB。该模型还泛化到压缩视频增强等其他视频恢复任务。在NTIRE 2021的视频超分辨率与压缩视频增强挑战赛中，BasicVSR++获得三项冠军和一项亚军。代码与模型将发布于MMEditing。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 视频超分辨率基础性工作，直接服务于压缩视频质量增强等编码链路增强任务，但非编码核心域，按规则仅收录摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: BasicVSR++：通过增强传播与对齐改进视频超分辨率
+relations:
+- type: same_topic
+  ref: paper:arxiv:2104.10781
+  note: 论文报告的NTIRE 2021压缩视频增强挑战赛即该挑战，BasicVSR++为其冠军方法
+- type: same_topic
+  ref: paper:arxiv:2106.08147
+  note: 同为压缩视频超分辨率/增强方向
+- type: same_topic
+  ref: paper:arxiv:2104.02322
+  note: 同为基于超分辨率的视频编码增强技术路线
+- type: same_topic
+  ref: paper:arxiv:2204.09314
+  note: NTIRE 2022压缩视频超分辨率与质量增强挑战，延续同一技术赛道

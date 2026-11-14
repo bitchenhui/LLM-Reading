@@ -1,0 +1,74 @@
+id: paper:arxiv:2608.19072
+type: paper
+title: 'What is Missing from AI Post-Training AI: An Empirical Analysis'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2608.19072v2
+  url: https://arxiv.org/abs/2608.19072
+  pdf_url: https://arxiv.org/pdf/2608.19072v2
+  venue: arXiv preprint
+time:
+  published: '2026-08-19'
+  collected: '2026-11-14'
+entities:
+- ref: concept:RSI
+  role: subject
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: subject
+claims:
+- statement: 前沿智能体能可靠执行LLM后训练，但锁入跟随智能体而非任务的默认策略，相邻训练运行之间仅2.1%的策略转换真正改变策略
+  confidence: reported
+  metrics:
+  - name: 策略改变转换占比
+    value: 2.1%
+    scope: 相邻训练运行转换中改变策略的比例，基于1338条后训练轨迹
+  - name: 分析轨迹数
+    value: '1338'
+    scope: 前沿智能体LLM后训练轨迹
+  evidence: abstract（初筛，未读全文）
+- statement: 同等预算下，单次中途指令比智能体自行继续后训练最多高出17.44分
+  confidence: reported
+  metrics:
+  - name: 性能优势
+    value: '17.44'
+    scope: points，同预算下单次中途指令相对智能体自主续训的最大提升
+  evidence: abstract（初筛，未读全文）
+- statement: 经验改善执行层能力但不改善策略层能力；额外推理算力主要在较易任务上带来前置收益，并细化而非修订已承诺策略
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 训练前人工审查只改变智能体锁入哪种策略，而不改变其是否会锁入；智能体真正缺失的是重开已承诺策略并尝试另一策略的决策
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 实现RSI需要设计使策略修订成为显式且被奖励决策的交互协议与训练信号
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 分析1338条后训练轨迹，发现智能体能可靠执行但锁死默认策略，缺的是重开策略的决策。
+  abstract_zh: 该文将LLM智能体后训练LLM的能力拆分为执行层（在既定策略内迭代）与策略层（随实验证据积累修订策略），并分析1338条前沿智能体的后训练轨迹。结果显示智能体能可靠执行后训练，却锁入与任务无关的默认策略，相邻训练运行之间仅2.1%的策略转换真正改变策略。归因实验发现：经验只改善执行层而不改善策略层；更多推理算力主要在较易任务上带来前置收益，且只是细化而非修订已承诺策略；训练前人工审查只改变锁入哪种策略，不改变是否锁入。在同等预算下，一次中途指令比智能体自行续训最多高出17.44分。作者结论是智能体缺少的是重开已承诺策略并尝试另一策略的决策，实现RSI需要使策略修订成为显式且有奖励决策的交互协议与训练信号。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: RSI能力的核心实证分析（非核心域，按收录基准仅给 summary_only），对理解智能体自改进瓶颈价值高。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: AI后训练AI缺失了什么：一项实证分析
+relations:
+- type: same_topic
+  ref: paper:arxiv:2611.03698
+  note: 同研究LLM智能体自动化LLM后训练（RSI-Dojo），本文为其提供能力缺口的实证依据
+- type: same_topic
+  ref: paper:arxiv:2611.08946
+  note: 同为对前沿智能体RSI能力的基准评估研究
+- type: same_topic
+  ref: paper:arxiv:2610.27610
+  note: 同关注RSI能力主张背后的评估证据问题
+- type: same_topic
+  ref: paper:arxiv:2610.32026
+  note: 同属智能体自改进模型训练/优化器方向

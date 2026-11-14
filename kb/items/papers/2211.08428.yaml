@@ -1,0 +1,64 @@
+id: paper:arxiv:2211.08428
+type: paper
+title: 'CaDM: Codec-aware Diffusion Modeling for Neural-enhanced Video Streaming'
+domain: video_image_coding
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2211.08428v2
+  url: https://arxiv.org/abs/2211.08428
+  pdf_url: https://arxiv.org/pdf/2211.08428v2
+  venue: arXiv preprint
+time:
+  published: '2022-11-15'
+  collected: '2026-11-14'
+entities:
+- ref: concept:SuperResolution
+  role: subject
+- ref: metric:FID
+  role: measured_by
+claims:
+- statement: CaDM 在编码端同时降低视频帧分辨率与色彩位深，实现编解码器协同压缩，可在常见视频标准基础上节省大量码率。
+  confidence: reported
+  metrics:
+  - name: 码率节省倍数
+    value: 5.12-21.44倍
+    scope: 基于常见视频标准、公有云服务+OpenMMLab基准评估
+  evidence: abstract（初筛，未读全文）
+- statement: CaDM 的解码端去噪扩散恢复感知编码器分辨率-色彩条件，恢复质量优于现有 SOTA 神经增强方法。
+  confidence: reported
+  metrics:
+  - name: FID
+    value: '0.61'
+    scope: 与 SOTA 神经增强方法对比的恢复质量评估
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 首次编码器-解码器协同的编解码器感知扩散建模：编码端联合降分辨率与色彩位深省码率，解码端条件扩散恢复高质量视频。
+  abstract_zh: 针对神经增强视频流（NVS）中现有超分增强方法码率节省与质量恢复失衡的问题，论文提出编解码器感知扩散建模 CaDM，首次实现编码器-解码器（编解码器）协同设计。编码端同时降低视频帧的分辨率与色彩位深以提升压缩效率；解码端则利用感知编码器分辨率-色彩条件的去噪扩散恢复实现高质量增强。在基于
+    OpenMMLab 基准的公有云服务评估中，CaDM 在常见视频标准基础上节省高达 5.12–21.44 倍码率，并以 FID 0.61 的恢复质量显著优于现有神经增强方法。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 提出编解码器感知的扩散建模，实现编码端分辨率+位深联合降质压缩与解码端条件扩散恢复的编解码协同，属核心视频编码增强方向且结果显著。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: CaDM：面向神经增强视频流的编解码器感知扩散建模
+relations:
+- type: same_topic
+  ref: paper:arxiv:2104.02322
+  note: 同为编码端降分辨率+解码端超分恢复的编解码协同视频压缩路线
+- type: same_topic
+  ref: paper:arxiv:2210.08229
+  note: 同为利用编解码器信息辅助压缩视频超分辨率增强
+- type: same_topic
+  ref: paper:arxiv:2111.14474
+  note: 同为深度压缩与质量增强联合的视频编码框架
+- type: same_topic
+  ref: paper:arxiv:2402.08934
+  note: 同为利用预训练扩散模型实现极限视频压缩
+- type: same_topic
+  ref: paper:arxiv:2305.04844
+  note: 同为超分与编解码器结合的码率节省基准研究

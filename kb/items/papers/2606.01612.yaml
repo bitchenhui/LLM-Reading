@@ -1,0 +1,62 @@
+id: paper:arxiv:2606.01612
+type: paper
+title: Self-Improving Small Object Grounding in LVLMs
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2606.01612v1
+  url: https://arxiv.org/abs/2606.01612
+  pdf_url: https://arxiv.org/pdf/2606.01612v1
+  venue: arXiv preprint
+time:
+  published: '2026-06-01'
+  collected: '2026-11-14'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:TrainingFree
+  role: uses
+- ref: dataset:COCO
+  role: evaluated_on
+claims:
+- statement: LVLM的注意力结构编码了目标定位质量信息，仅用注意力图训练的轻量IoU回归器即可实现较强的定位质量预测
+  confidence: reported
+  metrics:
+  - name: Pearson相关系数
+    value: '>0.67'
+    scope: 仅基于注意力图训练的IoU回归器对候选框定位质量的预测
+  evidence: abstract（初筛，未读全文）
+- statement: ACS候选选择框架在小目标定位上实现自改进，最高提升19%
+  confidence: reported
+  metrics:
+  - name: 小目标定位自改进幅度
+    value: 19%
+    scope: COCO与Objects365上的最高提升值
+  evidence: abstract（初筛，未读全文）
+- statement: ACS-Free作为完全无训练组件的选择器，在所有训练免费方法中排名最佳
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 分析IoU回归器可揭示哪些transformer层和注意力头对定位质量判别最关键
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 用LVLM内部注意力模式筛选候选框，无需微调即实现小目标定位自改进，最高提升19%。
+  abstract_zh: 论文发现LVLM的注意力结构中编码了定位质量信息：仅用注意力图训练的轻量IoU回归器即可对候选框质量做出较强预测（Pearson r>0.67）。该回归器驱动基于注意力的候选选择框架ACS-Learned，从多个采样候选框中挑选最优框以改进目标定位。通过分析回归器学到的规律，作者识别出最关键的transformer层与注意力头，并据此提出完全无需训练的ACS-Free选择器，按判别性头上的注意力熵对候选排序。在COCO和Objects365上，小目标定位取得最高19%的自改进，ACS-Free在所有无训练方法中表现最佳，表明有用的注意力结构同时提升了定位可靠性与可解释性。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 利用LVLM内部注意力实现无微调的小目标定位自改进，属自我改进AI范畴但非递归式，与音视频编码无直接关联，仅摘要收录
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: LVLM中小目标定位的自改进
+relations:
+- type: same_topic
+  ref: paper:arxiv:2611.00053
+  note: 均为视觉语言模型在测试时的自改进方法
+- type: same_topic
+  ref: paper:arxiv:2311.08921
+  note: 均为LLM/LVLM零样本任务中无需微调的自改进

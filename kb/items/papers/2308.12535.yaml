@@ -1,0 +1,59 @@
+id: paper:arxiv:2308.12535
+type: paper
+title: 'SCP: Spherical-Coordinate-based Learned Point Cloud Compression'
+domain: immersive_media
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2308.12535v3
+  url: https://arxiv.org/abs/2308.12535
+  pdf_url: https://arxiv.org/pdf/2308.12535v3
+  venue: arXiv preprint
+time:
+  published: '2023-08-24'
+  collected: '2026-11-14'
+entities:
+- ref: metric:BD-Rate
+  role: subject
+- ref: metric:PSNR
+  role: measured_by
+claims:
+- statement: SCP利用旋转LiDAR点云的环形结构与方位角不变性，以球面坐标变换实现模型无关的点云压缩预处理，可适配多种学习型点云压缩框架
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 多级八叉树设计缓解了球面坐标八叉树在远距离区域的重构误差
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: SCP在点对点PSNR口径下较先前SOTA最多节省29.14%的BD-Rate
+  confidence: reported
+  metrics:
+  - name: BD-Rate
+    value: 29.14%
+    scope: point-to-point PSNR口径，相对先前SOTA方法，最大收益（up to）
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出模型无关的球面坐标点云压缩SCP，利用LiDAR环形特征与多级八叉树，BD-Rate较SOTA最多省29.14%
+  abstract_zh: 该文针对车载旋转LiDAR生成的点云，指出其环形结构与方位角不变性特征此前被现有学习型点云压缩方法忽视。作者提出模型无关的球面坐标变换方法SCP，将点云转换至球面坐标系以充分利用上述特征，并可叠加于多种学习型点云压缩框架。进一步设计多级八叉树结构，缓解球面坐标八叉树在远距离区域的重构误差。实验表明SCP在点对点PSNR口径下较此前SOTA最多节省29.14%的BD-Rate。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 学习型点云压缩属沉浸式/三维非核心域，但与编码任务强相关且量化收益显著（BD-Rate最多省29.14%），按规则仅作初筛摘要收录
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: SCP：基于球面坐标的学习型点云压缩
+relations:
+- type: same_topic
+  ref: paper:arxiv:2202.06028
+  note: 同为八叉树类学习型点云几何压缩（上下文建模），SCP亦采用多级八叉树结构
+- type: same_topic
+  ref: paper:arxiv:2505.20059
+  note: 同属基于LiDAR点云的学习型预测压缩研究
+- type: same_topic
+  ref: paper:arxiv:2205.01135
+  note: 同为学习型点云压缩（动态点云3D运动预测）方向
+- type: same_topic
+  ref: paper:arxiv:2605.18006
+  note: 同为LiDAR点云学习型压缩（帧间预测编码）工作

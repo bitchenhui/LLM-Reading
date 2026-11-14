@@ -1,0 +1,54 @@
+id: paper:arxiv:2502.17085
+type: paper
+title: 'Pleno-Generation: A Scalable Generative Face Video Compression Framework with Bandwidth Intelligence'
+domain: video_image_coding
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2502.17085v1
+  url: https://arxiv.org/abs/2502.17085
+  pdf_url: https://arxiv.org/pdf/2502.17085v1
+  venue: arXiv preprint
+time:
+  published: '2025-02-24'
+  collected: '2026-11-14'
+entities:
+- ref: codec:VVC
+  role: subject
+claims:
+- statement: PGen通过可扩展表示与分层重建，使GFVC码流具备不同粒度的带宽智能，从而突破生成式编码的窄码率限制
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: PGen可增强现有GFVC算法交付高保真、忠法人脸视频的能力，并在更宽码率范围内展现更优RD性能
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 与VVC编码器相比，PGen在感知级质量评估上取得具有竞争力的Bjøntegaard-delta-rate节省
+  confidence: reported
+  metrics:
+  - name: 感知级BD-rate节省（对VVC）
+    value: competitive（有竞争力，摘要未给具体数值）
+    scope: 以最新VVC编码器为锚点的感知级质量评估
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出PGen框架，以可扩展表示与分层重建实现全码率覆盖的高保真生成式人脸视频压缩
+  abstract_zh: 论文针对生成式模型压缩通常仅适用于窄码率范围（偏超低码率）的问题，提出Pleno-Generation（PGen）框架，以人脸视频编码为切入点。PGen利用带宽智能，通过可扩展表示与分层重建为生成式人脸视频压缩（GFVC）码流注入不同粒度的智能，将设计重心从极致紧凑的码流转向高保真、忠实的重建。实验表明该框架可增强现有GFVC算法的保真与忠实交付能力，并在远宽于以往的码率范围内展现更优的RD性能。与最新VVC编码器相比，该方案在感知级质量评估上取得具有竞争力的Bjøntegaard-delta-rate节省。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 核心域视频编码：提出可扩展生成式人脸视频压缩框架实现全码率覆盖，并与VVC对标BD-rate，紧贴JVET GFVC标准化方向
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: Pleno-Generation：具有带宽智能的可扩展生成式人脸视频压缩框架
+relations:
+- type: same_topic
+  ref: paper:arxiv:2410.08485
+  note: 同为生成式人脸视频压缩（GFVC）方向的可扩展/渐进式框架
+- type: same_topic
+  ref: paper:arxiv:2410.10171
+  note: 同为生成式人脸/人体视频压缩，关注多粒度表示与码率灵活性
+- type: same_topic
+  ref: paper:arxiv:2609.34725
+  note: 同为解锁生成式先验的视频压缩工作，可对照生成式编码范式

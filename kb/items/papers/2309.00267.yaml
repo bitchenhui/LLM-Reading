@@ -1,0 +1,51 @@
+id: paper:arxiv:2309.00267
+type: paper
+title: 'RLAIF vs. RLHF: Scaling Reinforcement Learning from Human Feedback with AI Feedback'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2309.00267v3
+  url: https://arxiv.org/abs/2309.00267
+  pdf_url: https://arxiv.org/pdf/2309.00267v3
+  venue: arXiv preprint
+time:
+  published: '2023-09-01'
+  collected: '2026-11-14'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:SelfImprovement
+  role: builds_on
+claims:
+- statement: 在摘要、有帮助对话生成与无害对话生成任务上，RLAIF 与 RLHF 性能相当，可缓解人工偏好标注的规模化瓶颈。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 即使 AI 标注器与策略模型同规模、甚至就是同一初始检查点，RLAIF 仍优于监督微调基线，是向 LLM 自我改进迈出的一步。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: direct-RLAIF（d-RLAIF）在 RL 过程中直接从现成 LLM 获取奖励、无需单独训练奖励模型，性能优于经典 RLAIF。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 证明 RLAIF 在摘要与对话任务上性能可比 RLHF，并提出免训练奖励模型、效果更优的 direct-RLAIF。
+  abstract_zh: RLHF 依赖昂贵的人工偏好标注，本文系统研究以现成 LLM 生成偏好标签的 RLAIF 作为可扩展替代。在文本摘要、有帮助对话生成与无害对话生成三项任务上，RLAIF 取得与
+    RLHF 相当的性能。作者进一步证明，即使 AI 标注器与策略模型同规模、甚至就是同一初始检查点，RLAIF 仍能优于监督微调基线，向“自我改进”迈出一步。此外提出 direct-RLAIF（d-RLAIF），在
+    RL 训练中直接从现成 LLM 获取奖励、跳过奖励模型训练，性能优于经典 RLAIF。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: RLAIF 奠基性工作，明确以同规模甚至同一检查点的 AI 标注器向 LLM 自我改进迈步，属 self_improvement 域，按规则不给 deep_read。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: RLAIF 对比 RLHF：用 AI 反馈扩展基于人类反馈的强化学习
+relations:
+- type: same_topic
+  ref: paper:arxiv:2210.11610
+  note: 同属 LLM 自我改进方向：本文以 AI 反馈对齐证明自标注可替代人工标注并超越 SFT 基线
+- type: same_topic
+  ref: paper:arxiv:2305.14483
+  note: 同属强化学习驱动的语言模型自我改进研究

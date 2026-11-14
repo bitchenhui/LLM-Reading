@@ -1,0 +1,53 @@
+id: paper:arxiv:2305.05152
+type: paper
+title: Who is Speaking Actually? Robust and Versatile Speaker Traceability for Voice Conversion
+domain: audio_coding
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2305.05152v2
+  url: https://arxiv.org/abs/2305.05152
+  pdf_url: https://arxiv.org/pdf/2305.05152v2
+  venue: arXiv preprint
+time:
+  published: '2023-05-09'
+  collected: '2026-11-14'
+entities:
+- ref: codec:Opus
+  role: subject
+claims:
+- statement: VoxTracer在遭受AAC、MP3、Opus、SILK等多种有损音频压缩后仍能实现近乎100%的说话人溯源准确率
+  confidence: reported
+  metrics:
+  - name: tracing_accuracy
+    value: nearly 100%
+    scope: 16-128 kbps码率范围内，AAC/MP3/Opus/SILK有损压缩条件下
+  evidence: abstract（初筛，未读全文）
+- statement: 即使语音片段时长短至0.74秒，仍能保持高溯源准确率
+  confidence: reported
+  metrics:
+  - name: min_test_duration
+    value: 0.74s
+    scope: 最短测试语音时长
+  evidence: abstract（初筛，未读全文）
+- statement: VoxTracer可通用于任意语音转换方法与主流音频编码标准，隐藏端具有高不可感知性
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出VoxTracer框架，将源说话人身份不可感知地嵌入语音转换输出，抵御常见有损音频压缩仍可近乎100%溯源。
+  abstract_zh: 论文首次研究语音转换（VC）生成语音的说话人溯源问题，提出可溯源VC框架VoxTracer，其范式类似但超越音频水印。方法上以唯一说话人嵌入表示身份，设计VAE-Glow结构，在隐藏过程将源说话人身份不可感知地融入VC语音，追踪过程可在严重语音质量退化下准确恢复源说话人身份甚至源语音，并采用异步训练策略应对隐藏与追踪过程间的语音失配。框架可通用于任意VC方法和主流音频编码标准。实验表明VoxTracer在隐藏端具有高不可感知性，并在AAC、MP3、Opus、SILK等多种有损压缩下、16-128
+    kbps宽码率范围内实现近乎100%的溯源准确率，即使语音时长仅0.74秒。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 语音转换说话人溯源（音频水印类安全研究），以Opus/AAC/MP3/SILK等音频编码压缩作为鲁棒性评测条件，属音频域但非音频编码核心工作
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 究竟是谁在说话？面向语音转换的鲁棒且通用的说话人溯源
+relations:
+- type: same_topic
+  ref: paper:arxiv:2604.19949
+  note: 同属对抗合成/转换语音滥用的溯源与检测主题，且均涉及音频编解码（含神经编解码）对语音安全任务的影响

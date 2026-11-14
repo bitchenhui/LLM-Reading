@@ -1,0 +1,56 @@
+id: paper:arxiv:2405.11493
+type: paper
+title: 'Point Cloud Compression with Implicit Neural Representations: A Unified Framework'
+domain: immersive_media
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2405.11493v1
+  url: https://arxiv.org/abs/2405.11493
+  pdf_url: https://arxiv.org/pdf/2405.11493v1
+  venue: arXiv preprint
+time:
+  published: '2024-05-19'
+  collected: '2026-11-14'
+entities:
+- ref: codec:G-PCC
+  role: subject
+claims:
+- statement: 提出统一框架，用两个坐标神经网络分别隐式表示点云的几何（占据状态）与属性分量。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 通过将体空间划分为小块并仅处理非空立方体内的体素，解决了海量体素带来的计算负担。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 网络参数经量化与压缩后作为码流传输，解码端输入体素坐标即可重建点云。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 实验结果表明所提方法压缩性能优于最新G-PCC标准采用的八叉树方法。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 与现有基于学习的点云压缩方法相比，该框架表现出较高的通用性（同时覆盖几何与属性）。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 用两个坐标神经网络分别隐式表示点云几何与属性的统一压缩框架，性能优于最新G-PCC八叉树方法。
+  abstract_zh: 论文提出一个同时处理点云几何与属性分量的压缩框架，用两个基于坐标的神经网络隐式表示体素化点云：第一个网络预测体素的占据状态，第二个网络预测被占据体素的属性。为应对体空间中海量体素，作者将空间划分为更小的立方体并仅处理非空立方体内的体素，将体素坐标输入相应网络即可重建原始点云的几何与属性。网络参数进一步量化并压缩。实验表明该方法性能优于最新G-PCC标准采用的八叉树方法，且与现有学习方法相比具有较高通用性。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 点云（沉浸式三维媒体）隐式神经表示压缩论文，属非核心域按基准仅收录摘要，但与G-PCC标准对比、与编码生态高度相关。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 基于隐式神经表示的点云压缩：统一框架
+relations:
+- type: same_topic
+  ref: paper:arxiv:2507.15686
+  note: 同为基于隐式神经表示的点云几何压缩（LINR-PCGC）
+- type: same_topic
+  ref: paper:arxiv:2202.06028
+  note: 同为学习型点云压缩（OctAttention八叉树上下文建模）
+- type: same_topic
+  ref: paper:arxiv:2112.00560
+  note: 同样面向G-PCC点云压缩链路（几何基点云属性伪影去除）

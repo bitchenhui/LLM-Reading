@@ -1,0 +1,56 @@
+id: paper:arxiv:2312.10003
+type: paper
+title: 'ReST meets ReAct: Self-Improvement for Multi-Step Reasoning LLM Agent'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2312.10003v1
+  url: https://arxiv.org/abs/2312.10003
+  pdf_url: https://arxiv.org/pdf/2312.10003v1
+  venue: arXiv preprint
+time:
+  published: '2023-12-15'
+  collected: '2026-11-14'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:SelfImprovement
+  role: uses
+claims:
+- statement: 通过ReST式迭代训练历史轨迹、增长批量强化学习与AI反馈，ReAct式LLM智能体可实现持续自我改进与自蒸馏。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 从提示式大模型出发，仅两轮算法迭代即得微调小模型，在组合式问答基准上性能相当且参数量少约两个数量级。
+  confidence: reported
+  metrics:
+  - name: 迭代次数
+    value: '2'
+    scope: ReST式自我改进算法迭代轮数
+  - name: 参数量减少
+    value: 两个数量级（约100×）
+    scope: 微调小模型相对起点提示式大模型，在组合式问答基准上性能相当的条件下
+  evidence: abstract（初筛，未读全文）
+- statement: 检索+LLM系统与外部知识的交互不可微，故无法直接端到端训练来修复失败案例，需转向基于轨迹的迭代自我改进。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 用ReST式轨迹迭代训练与AI反馈强化学习实现ReAct式LLM智能体自我改进，两轮迭代即可蒸馏出参数少两个数量级的小模型。
+  abstract_zh: 针对检索+LLM问答系统存在失败案例且因外部知识交互不可微而无法端到端训练的问题，本文定义了一个具备推理与外部知识操作能力的ReAct式LLM智能体。该方法采用ReST式的迭代训练：在历史轨迹上反复微调，使用增长批量的强化学习并结合AI反馈，实现持续自我改进与自蒸馏。实验表明，从一个提示式大模型出发，仅经过两轮算法迭代即可得到微调后的小模型，在挑战性组合式问答基准上以少两个数量级的参数量达到与大模型相当的性能。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: LLM智能体自我改进方向的奠基性工作（ReST式迭代轨迹训练+AI反馈强化学习），属self_improvement域按规则仅给summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: ReST 遇见 ReAct：面向多步推理 LLM 智能体的自我改进
+relations:
+- type: same_topic
+  ref: paper:arxiv:2210.11610
+  note: 同为LLM自我改进方向的代表工作，本文延续自改进+自蒸馏路线并扩展到多步推理智能体
+- type: same_topic
+  ref: paper:arxiv:2309.00267
+  note: 均采用AI反馈（RLAIF）替代人工反馈驱动训练

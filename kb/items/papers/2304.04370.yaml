@@ -1,0 +1,49 @@
+id: paper:arxiv:2304.04370
+type: paper
+title: 'OpenAGI: When LLM Meets Domain Experts'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2304.04370v6
+  url: https://arxiv.org/abs/2304.04370
+  pdf_url: https://arxiv.org/pdf/2304.04370v6
+  venue: arXiv preprint
+time:
+  published: '2023-04-10'
+  collected: '2026-11-14'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:SelfImprovement
+  role: subject
+claims:
+- statement: LLM具备学习与推理能力，可有效调用外部模型、工具、插件或API来求解复杂的多步真实任务。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 提出RLTF机制：以任务执行结果作为反馈对LLM进行强化学习，形成自我改进的AI反馈闭环。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 将LLM通用智能与领域专家模型专用智能相结合，是通向AGI的有前景路径。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出OpenAGI开源平台，让LLM调度领域专家模型求解复杂任务，并以任务反馈强化学习（RLTF）形成自我改进闭环。
+  abstract_zh: 受人类组合基础技能解决复杂任务的能力启发，该文提出面向多步真实任务的开源AGI研发平台OpenAGI。平台采用双重策略：标准基准任务用于基准测试与评估，开放任务则支持可扩展的模型、工具、插件或API以进行创造性问题求解。任务以自然语言查询呈现给LLM，由其选择并执行合适的领域专家模型。作者进一步提出基于任务反馈的强化学习机制RLTF，利用任务执行结果改进LLM的任务求解能力，构建自我改进的AI反馈回路。项目开源了代码、数据集、基准、评测方法与UI演示。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: LLM智能体自我改进方向的早期平台性工作（RLTF任务反馈闭环），属自我改进AI域，与音视频核心域无关，收录为初筛摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: OpenAGI：当大语言模型遇见领域专家
+relations:
+- type: same_topic
+  ref: paper:arxiv:2210.11610
+  note: 同属LLM自我改进研究脉络，OpenAGI的RLTF机制即以LLM自我改进为核心
+- type: same_topic
+  ref: paper:arxiv:2506.06698
+  note: 同为LLM智能体自我改进（任务反馈驱动经验积累）方向工作

@@ -1,0 +1,64 @@
+id: paper:arxiv:2304.08818
+type: paper
+title: 'Align your Latents: High-Resolution Video Synthesis with Latent Diffusion Models'
+domain: processing_enhancement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2304.08818v2
+  url: https://arxiv.org/abs/2304.08818
+  pdf_url: https://arxiv.org/pdf/2304.08818v2
+  venue: arXiv preprint
+time:
+  published: '2023-04-18'
+  collected: '2026-11-14'
+entities:
+- ref: concept:SuperResolution
+  role: subject
+- ref: org:NVIDIA
+  role: affiliation
+claims:
+- statement: 将扩散模型上采样器进行时序对齐，可将其转化为时间一致的视频超分辨率模型
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: Video LDM 在真实驾驶视频上验证视频生成能力，达到当时最先进水平
+  confidence: reported
+  metrics:
+  - name: 验证分辨率
+    value: 512×1024
+    scope: 真实驾驶视频仿真任务
+  evidence: abstract（初筛，未读全文）
+- statement: 仅需训练时序对齐层，即可将公开的 Stable Diffusion 文生图 LDM 改造为文生视频模型
+  confidence: reported
+  metrics:
+  - name: 最大生成分辨率
+    value: 1280×2048
+    scope: 基于 Stable Diffusion 的文生视频
+  evidence: abstract（初筛，未读全文）
+- statement: 所训练的时序层可泛化到不同微调的文生图 LDM，实现首个个性化文生视频生成结果
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出Video LDM，在潜空间引入时间维，将图像扩散模型扩展为高分辨率视频生成与时序一致的视频超分模型。
+  abstract_zh: 该工作将潜扩散模型（LDM）范式扩展到高分辨率视频生成：先仅用图像预训练LDM，再在潜空间引入时间维并在编码图像序列（即视频）上微调，使图像生成器变为视频生成器。同样地，对扩散上采样器做时序对齐，将其改造为时间一致的视频超分辨率模型。工作聚焦驾驶数据仿真与文生视频两类应用，在512×1024的真实驾驶视频上取得SOTA；并利用时序层的可移植性，将公开的Stable
+    Diffusion文生图模型升级为分辨率最高1280×2048的高效文生视频模型。时序层可泛化到不同微调的文生图LDM，据此展示了首个个性化文生视频生成结果。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 生成式视频合成与扩散视频超分辨率工作，非编码核心域，但作为后续扩散先验类视频压缩/增强路线的技术基础，收录为初筛摘要
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 对齐你的潜变量：基于潜扩散模型的高分辨率视频合成
+relations:
+- type: same_topic
+  ref: paper:arxiv:2402.08934
+  note: 基于预训练扩散模型的极限视频压缩，属于 VideoLDM 所奠定的扩散视频先验路线下游
+- type: same_topic
+  ref: paper:arxiv:2510.09987
+  note: 生成式潜空间视频压缩，与本工作同属潜扩散视频表征方向
+- type: same_topic
+  ref: paper:arxiv:2310.12004
+  note: 基于潜扩散的图像超分辨率，与本工作的扩散上采样时序对齐视频超分同属扩散超分路线

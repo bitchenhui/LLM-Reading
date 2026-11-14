@@ -1,0 +1,56 @@
+id: paper:arxiv:2609.33398
+type: paper
+title: 'COEVO: Co-Evolving Context and Parameters for Recursive Self-Improvement'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2609.33398v1
+  url: https://arxiv.org/abs/2609.33398
+  pdf_url: https://arxiv.org/pdf/2609.33398v1
+  venue: arXiv preprint
+time:
+  published: '2026-09-27'
+  collected: '2026-11-14'
+entities:
+- ref: concept:RSI
+  role: subject
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: COEVO 在任务性能上一致优于固定上下文的强化学习基线
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: COEVO 产生的策略对系统提示变化更鲁棒
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 策略熵与提示条件化注意力可作为引导参数-上下文协同演化的互补信号
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 将递归自我改进形式化为参数-上下文协同演化，提出COEVO框架在共享反馈环中同步更新模型参数与上下文引导。
+  abstract_zh: 递归自我改进（RSI）现有路线或通过在线学习更新模型参数，或通过搜索、反思与提示优化改进外部上下文，二者通常被独立研究。COEVO 将 RSI 形式化为参数-上下文协同演化问题，在共享反馈环中基于
+    on-policy 经验更新模型参数，并根据演化中策略的状态自适应调整上下文引导，以策略熵与提示条件化注意力作为互补调节信号。实验表明 COEVO 的任务性能一致优于固定上下文的强化学习，且产生的策略对系统提示变化更鲁棒。作者据此主张外部上下文应被视为
+    RSI 的自适应组成部分而非固定接口。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 纯递归自我改进（RSI）论文，属自改进域但与音视频技术无关，按收录基准仅给 summary_only
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: COEVO：面向递归自我改进的上下文与参数协同演化
+relations:
+- type: same_topic
+  ref: paper:arxiv:2611.12109
+  note: SkillDuet 同属模型与外部件协同演化的 RSI 研究线
+- type: same_topic
+  ref: paper:arxiv:2609.33867
+  note: R² Flow 同主题递归自我改进方法
+- type: same_topic
+  ref: paper:arxiv:2610.18083
+  note: AReaL-RSI 同为 RSI 框架的自适应扩展与协调研究

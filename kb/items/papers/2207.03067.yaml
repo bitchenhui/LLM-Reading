@@ -1,0 +1,58 @@
+id: paper:arxiv:2207.03067
+type: paper
+title: Cross-Scale Vector Quantization for Scalable Neural Speech Coding
+domain: audio_coding
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2207.03067v1
+  url: https://arxiv.org/abs/2207.03067
+  pdf_url: https://arxiv.org/pdf/2207.03067v1
+  venue: arXiv preprint
+time:
+  published: '2022-07-07'
+  collected: '2026-11-14'
+entities:
+- ref: codec:Opus
+  role: subject
+claims:
+- statement: CSVQ 方案在具备可伸缩性的前提下主观质量优于经典残差 VQ（RVQ）
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 3 kbps 的 CSVQ 质量优于 9 kbps 的 Opus 与 3 kbps 的 Lyra，且随码率增加质量平滑提升
+  confidence: reported
+  metrics:
+  - name: 比特率
+    value: 3 kbps
+    scope: CSVQ 超过 Opus@9 kbps 与 Lyra@3 kbps 所用码率（主观评估）
+  - name: 对比码率
+    value: 9 kbps
+    scope: Opus 作为对比锚点的编码码率
+  evidence: abstract（初筛，未读全文）
+- statement: 单一 CSVQ 模型无需按码率分别训练即可支持多目标码率，部分码流即可解码出粗级信号，降低收发端内存占用并避免转码
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出跨尺度矢量量化 CSVQ，实现单模型多码率可伸缩语音编码，3 kbps 质量超过 9 kbps 的 Opus。
+  abstract_zh: 针对现有神经音频编解码器需按目标码率分别训练的问题，提出跨尺度可伸缩矢量量化方案 CSVQ，通过逐步特征融合与精化对多尺度特征进行渐进编码。仅接收部分码流即可重建粗级信号，随着比特增加质量渐进提升。该方案可灵活套用于任意具有镜像自编码器结构的神经音频编码网络，且单一模型即可覆盖多码率，降低收发端内存占用与转码需求。主观测试显示其优于带可伸缩性的经典残差
+    VQ（RVQ），且 3 kbps 的 CSVQ 超过 9 kbps 的 Opus 与 3 kbps 的 Lyra，随码率提升呈现平滑的质量增益。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 神经语音编码核心贡献：跨尺度矢量量化实现单模型比特率可伸缩，属音频编码域，按规则仅收录为摘要级。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 面向可伸缩神经语音编码的跨尺度矢量量化
+relations:
+- type: same_topic
+  ref: paper:arxiv:2103.14776
+  note: 同为可伸缩神经语音编码（混合式可伸缩设计），与本论文题直接同线
+- type: same_topic
+  ref: paper:arxiv:2107.03312
+  note: SoundStream 为 RVQ 端到端神经音频编解码，本文针对该路线的 RVQ 量化与码率不可伸缩问题提出改进
+- type: same_topic
+  ref: paper:arxiv:2207.08363
+  note: 同为神经语音编码方向的研究工作

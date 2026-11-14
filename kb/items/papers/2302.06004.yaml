@@ -1,0 +1,56 @@
+id: paper:arxiv:2302.06004
+type: paper
+title: Improving UE Energy Efficiency through Network-aware Video Streaming over 5G
+domain: streaming_delivery
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2302.06004v1
+  url: https://arxiv.org/abs/2302.06004
+  pdf_url: https://arxiv.org/pdf/2302.06004v1
+  venue: arXiv preprint
+time:
+  published: '2023-02-12'
+  collected: '2026-11-14'
+entities:
+- ref: concept:ABR
+  role: subject
+- ref: concept:DASH
+  role: uses
+- ref: concept:QoE
+  role: measured_by
+claims:
+- statement: EnDASH-5G在QoE几乎持平的前提下，相比最先进的Pensieve ABR算法将最大能耗降低近30.5%。
+  confidence: reported
+  metrics:
+  - name: 最大能耗降幅
+    value: 30.5%
+    scope: 相对Pensieve ABR基线，QoE基本持平条件下
+  evidence: abstract（初筛，未读全文）
+- statement: EnDASH-5G利用公开5G数据集通过迁移学习构建5G毫米波吞吐量预测，并用深度强化学习动态决策播放缓冲长度与码率，使下载时机与信道状况同步。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出EnDASH-5G，用5G吞吐量预测加深度强化学习同步下载与网络状况，在QoE基本持平下显著降低终端能耗。
+  abstract_zh: 现有ABR算法主要优化端用户QoE，忽视底层设备的资源消耗，主动预取视频数据若不同步于信道状况会损害电池续航。作者提出EnDASH-5G，作为DASH式ABR算法的外层封装，利用公开5G数据集以迁移学习升级吞吐量预测模型，针对5G毫米波网络预测带宽。随后用深度强化学习依据预测吞吐量动态决定播放缓冲长度与视频码率，使数据下载与网络状况同步以节省电量。评估显示其相对最先进的Pensieve
+    ABR最大能耗降低近30.5%，而QoE基本持平。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 属流媒体传输域的5G ABR能耗优化工作，非视频编码核心域，按基准仅做摘要收录。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 通过网络感知的5G视频流提升用户设备能效
+relations:
+- type: same_topic
+  ref: paper:arxiv:2308.03643
+  note: 同为ABR自适应码率流媒体传输优化
+- type: same_topic
+  ref: paper:arxiv:2310.09570
+  note: 同为自适应视频流传输的能耗效率研究
+- type: same_topic
+  ref: paper:arxiv:2609.09490
+  note: 同为蜂窝网络中的QoE感知码率自适应

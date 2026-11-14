@@ -1,0 +1,63 @@
+id: paper:arxiv:2210.11610
+type: paper
+title: Large Language Models Can Self-Improve
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2210.11610v2
+  url: https://arxiv.org/abs/2210.11610
+  pdf_url: https://arxiv.org/pdf/2210.11610v2
+  venue: arXiv preprint
+time:
+  published: '2022-10-20'
+  collected: '2026-11-14'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:SelfImprovement
+  role: subject
+claims:
+- statement: LLM可仅用无标注数据实现自我改进：用CoT提示+自一致性生成高置信度推理答案作为微调目标，即可提升通用推理能力并达到SOTA级性能，全程不使用任何真实标签。
+  confidence: reported
+  metrics:
+  - name: GSM8K准确率
+    value: 74.4%→82.1%
+    scope: 540B参数LLM自我改进前后对比
+  - name: DROP准确率
+    value: 78.2%→83.0%
+    scope: 540B参数LLM自我改进前后对比
+  - name: OpenBookQA准确率
+    value: 90.0%→94.4%
+    scope: 540B参数LLM自我改进前后对比
+  - name: ANLI-A3准确率
+    value: 63.4%→67.9%
+    scope: 540B参数LLM自我改进前后对比
+  evidence: abstract（初筛，未读全文）
+- statement: 消融实验表明，在（自生成的）推理数据上进行微调是LLM自我改进提升的关键。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: LLM仅用无标注数据，经CoT+自一致性生成高置信答案自我微调，无需标签即可提升推理能力。
+  abstract_zh: 该论文证明大语言模型（LLM）能够仅依靠无标注数据集实现自我改进，无需任何外部监督标签。方法上，用预训练LLM通过思维链（CoT）提示与自一致性（self-consistency）为无标注问题生成'高置信度'的带推理过程答案，再以这些自生成解作为目标输出对LLM进行微调。在540B参数LLM上，该方法将通用推理能力显著提升：GSM8K
+    74.4%→82.1%、DROP 78.2%→83.0%、OpenBookQA 90.0%→94.4%、ANLI-A3 63.4%→67.9%，达到SOTA水平且完全未使用真实标签。消融实验进一步表明，在推理数据上进行微调是自我改进的关键所在。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: LLM自我改进的开山之作，仅用无标注数据经CoT+自一致性自我微调即可提升推理能力，属自我改进AI领域核心文献。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 大语言模型能够自我改进
+relations:
+- type: same_topic
+  ref: paper:arxiv:2311.08921
+  note: 同为基于LLM的自我改进方法研究，本篇为该方向奠基工作
+- type: same_topic
+  ref: paper:arxiv:2506.06698
+  note: 同属语言模型/智能体自我改进方向
+- type: same_topic
+  ref: paper:arxiv:2609.34975
+  note: 同为LLM推理能力自我改进路线，本篇为其方法论源头之一

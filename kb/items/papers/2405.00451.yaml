@@ -1,0 +1,65 @@
+id: paper:arxiv:2405.00451
+type: paper
+title: Monte Carlo Tree Search Boosts Reasoning via Iterative Preference Learning
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2405.00451v2
+  url: https://arxiv.org/abs/2405.00451
+  pdf_url: https://arxiv.org/pdf/2405.00451v2
+  venue: arXiv preprint
+time:
+  published: '2024-05-01'
+  collected: '2026-11-14'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:SelfImprovement
+  role: uses
+claims:
+- statement: MCTS-DPO在GSM8K算术推理任务上准确率达81.8%，较Mistral-7B SFT基线提升5.9个百分点。
+  confidence: reported
+  metrics:
+  - name: 准确率
+    value: 81.8%
+    scope: GSM8K，Mistral-7B，相对SFT基线+5.9%
+  evidence: abstract（初筛，未读全文）
+- statement: 在MATH数学推理任务上准确率达34.7%，较SFT基线提升5.8个百分点。
+  confidence: reported
+  metrics:
+  - name: 准确率
+    value: 34.7%
+    scope: MATH，Mistral-7B，相对SFT基线+5.8%
+  evidence: abstract（初筛，未读全文）
+- statement: 在ARC-C常识推理任务上准确率达76.4%，较SFT基线提升15.8个百分点。
+  confidence: reported
+  metrics:
+  - name: 准确率
+    value: 76.4%
+    scope: ARC-C，Mistral-7B，相对SFT基线+15.8%
+  evidence: abstract（初筛，未读全文）
+- statement: 理论分析表明，使用on-policy采样的数据是LLM自我改进成功的关键条件。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 借鉴AlphaZero，用MCTS迭代收集步级偏好数据并以DPO更新策略，实现LLM推理的自我改进。
+  abstract_zh: 该方法受AlphaZero启发，利用蒙特卡洛树搜索（MCTS）的前瞻能力将实例级奖励分解为更细粒度的步级信号，迭代收集偏好数据；同时结合结果验证与步级自评估持续更新新生成数据的质量评估，并用直接偏好优化（DPO）更新LLM策略。理论分析表明使用在策略（on-policy）采样的数据是成功自我改进的关键。在算术与常识推理任务上，相对Mistral-7B
+    SFT基线，GSM8K准确率提升至81.8%（+5.9%）、MATH提升至34.7%（+5.8%）、ARC-C提升至76.4%（+15.8%）。研究还探讨了训练与推理计算之间的权衡。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: LLM推理自我改进的奠基性工作（MCTS-DPO），属自我改进AI域而非音视频核心域，按规则只做摘要收录。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 蒙特卡洛树搜索通过迭代偏好学习增强推理能力
+relations:
+- type: same_topic
+  ref: paper:arxiv:2609.34975
+  note: 两者同属LLM推理自我改进的迭代训练方法
+- type: same_topic
+  ref: paper:arxiv:2311.08921
+  note: 同为基于LLM的迭代自我改进循环工作

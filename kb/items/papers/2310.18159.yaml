@@ -1,0 +1,58 @@
+id: paper:arxiv:2310.18159
+type: paper
+title: 'DESiRED -- Dynamic, Enhanced, and Smart iRED: A P4-AQM with Deep Reinforcement Learning and In-band
+  Network Telemetry'
+domain: streaming_delivery
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2310.18159v1
+  url: https://arxiv.org/abs/2310.18159
+  pdf_url: https://arxiv.org/pdf/2310.18159v1
+  venue: arXiv preprint
+time:
+  published: '2023-10-27'
+  collected: '2026-11-14'
+entities:
+- ref: concept:DASH
+  role: subject
+- ref: org:MPEG
+  role: builds_on
+claims:
+- statement: DESiRED通过DRL依据INT遥测反馈动态调整AQM目标时延，在MPEG-DASH测试环境中将视频卡顿最多降低90倍
+  confidence: reported
+  metrics:
+  - name: 视频卡顿降低倍数
+    value: 90x
+    scope: P4测试环境运行MPEG-DASH服务，对比固定阈值AQM基线
+  evidence: abstract（初筛，未读全文）
+- statement: DESiRED动态目标时延使高分辨率视频播放质量最高提升42倍
+  confidence: reported
+  metrics:
+  - name: 高分辨率播放质量提升倍数
+    value: 42x
+    scope: 同一MPEG-DASH P4测试环境，对比固定阈值AQM基线
+  evidence: abstract（初筛，未读全文）
+- statement: 固定阈值AQM在动态流量下不适用：目标时延过小会加剧丢包并降低链路利用率，过大则增加排队时延
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 用深度强化学习与INT带内遥测在P4交换机动态调整AQM目标时延，DASH测试中卡顿降90倍、高清播放质量升42倍
+  abstract_zh: 传统主动队列管理（AQM）依赖固定阈值（目标时延或队列占用率）计算随机丢包概率，难以适应动态流量，阈值过小会增加丢包并降低链路利用率，过大则增加排队时延。作者提出DESiRED，一种基于P4可编程数据平面的AQM，利用带内网络遥测（INT）获取精确网络反馈，驱动深度强化学习模型以最大化应用QoS为奖励动态调整目标时延。系统在运行MPEG-DASH服务的真实P4测试环境中评估。结果显示，相比固定阈值方案，视频卡顿最多减少90倍，高分辨率视频播放质量最高提升42倍。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 网络侧AQM与P4/INT/DRL机制为核心贡献，仅以MPEG-DASH作为评估场景，属流媒体传输域而非核心编码域，按规则给summary_only
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: DESiRED——动态、增强且智能的iRED：一种融合深度强化学习与带内网络遥测的P4主动队列管理
+relations:
+- type: same_topic
+  ref: paper:arxiv:2301.05688
+  note: 同为网络侧机制（CANE级联控制）优化视频流QoE管理
+- type: same_topic
+  ref: paper:arxiv:2603.13597
+  note: 同为深度强化学习驱动的自适应视频流传输优化（DRL比特率阶梯）

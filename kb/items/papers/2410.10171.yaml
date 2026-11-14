@@ -1,0 +1,50 @@
+id: paper:arxiv:2410.10171
+type: paper
+title: Generative Human Video Compression with Multi-granularity Temporal Trajectory Factorization
+domain: video_image_coding
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2410.10171v1
+  url: https://arxiv.org/abs/2410.10171
+  pdf_url: https://arxiv.org/pdf/2410.10171v1
+  venue: arXiv preprint
+time:
+  published: '2024-10-14'
+  collected: '2026-11-14'
+entities:
+- ref: codec:VVC
+  role: subject
+claims:
+- statement: MTTF框架在说话人脸视频与人体运动视频上的客观与主观质量均优于最新生成模型和最先进的VVC编码标准。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 多粒度时序轨迹分解将高维视觉信号隐式表征为紧凑运动向量，并进一步转换为细粒度运动场，以最低表征成本保留视觉运动信息。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 分辨率可扩展生成模块增强了背景稳定性，使框架具备更高的重建鲁棒性与灵活的分辨率自适应能力。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出多粒度时序轨迹分解的生成式人体视频压缩框架，客观与主观质量均超越VVC及最新生成模型。
+  abstract_zh: 该文面向带宽受限的以人为中心的视频通信，提出多粒度时序轨迹分解（MTTF）生成式压缩框架。其运动分解策略先将高维视觉信号隐式表征为紧凑运动向量以保证表征紧凑性，再将这些向量转换为细粒度运动场以保证运动表达力，使码流以最低表征成本携带充分的视觉运动信息。框架还设计了具备背景稳定性增强的分辨率可扩展生成模块，使重建更鲁棒并支持灵活的分辨率自适应。实验表明，该方法在说话人脸视频与人体运动视频的客观和主观质量上均优于最新生成模型及最先进的视频编码标准VVC。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 核心域生成式视频压缩工作，提出MTTF运动分解与分辨率可扩展生成模块，实验显示在说话人脸与人体运动视频上客观与主观质量均超越VVC，具代表性且值得深度阅读。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 基于多粒度时序轨迹分解的生成式人体视频压缩
+relations:
+- type: same_topic
+  ref: paper:arxiv:2410.08485
+  note: 同为生成式人脸视频压缩（自适应视觉token的渐进式人脸视频压缩）
+- type: same_topic
+  ref: paper:arxiv:2609.34725
+  note: 同为利用生成先验的视频压缩
+- type: same_topic
+  ref: paper:arxiv:2607.22772
+  note: 同为生成式视频压缩方向

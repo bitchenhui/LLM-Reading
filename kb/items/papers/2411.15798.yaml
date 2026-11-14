@@ -1,0 +1,50 @@
+id: paper:arxiv:2411.15798
+type: paper
+title: 'M3-CVC: Controllable Video Compression with Multimodal Generative Models'
+domain: video_image_coding
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2411.15798v2
+  url: https://arxiv.org/abs/2411.15798
+  pdf_url: https://arxiv.org/pdf/2411.15798v2
+  venue: arXiv preprint
+time:
+  published: '2024-11-24'
+  collected: '2026-11-14'
+entities:
+- ref: codec:VVC
+  role: subject
+claims:
+- statement: M3-CVC在超低码率编码场景下的率失真表现显著优于VVC标准，尤其在语义与感知保真度方面
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 语义-运动复合关键帧选择策略可保留视频关键信息，对话式LMM提取的层级时空细节同时支持帧间与帧内表示并提升编码可解释性
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 文本引导的条件扩散关键帧压缩配合LMM文本描述引导的解码扩散过程，可实现高保真帧重建
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 用LMM提取层级时空语义描述并以文本引导条件扩散重建视频，在超低码率下显著优于VVC。
+  abstract_zh: 针对传统与神经编解码器在超低码率下可控性与通用性不足的问题，提出融合多模态生成模型的可控视频压缩框架M3-CVC。该框架采用语义-运动复合策略选取关键帧以保留关键信息，并通过对话式大模型（LMM）提取层级化时空细节，构建帧间与帧内表示，同时增强编码可解释性。关键帧压缩采用文本引导的条件扩散方法实现高保真重建，解码端由LMM生成的文本描述引导扩散过程恢复原视频内容。实验结果表明，M3-CVC在超低码率场景下显著优于最新VVC标准，尤其在语义与感知保真度方面表现突出。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 核心视频编码域中结合LMM与扩散模型的超低码率生成式压缩代表作，显著优于VVC，值得深读
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: M3-CVC：基于多模态生成模型的可控视频压缩
+relations:
+- type: same_topic
+  ref: paper:arxiv:2402.08934
+  note: 同为基于预训练扩散模型的极低码率视频压缩
+- type: same_topic
+  ref: paper:arxiv:2505.16177
+  note: 同属面向超低码率图像/视频的生成式编码
+- type: same_topic
+  ref: paper:arxiv:2609.34725
+  note: 同为利用生成先验实现超低码率视频压缩

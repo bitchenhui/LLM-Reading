@@ -1,0 +1,53 @@
+id: paper:arxiv:2406.10469
+type: paper
+title: Object-Attribute-Relation Representation Based Video Semantic Communication
+domain: video_image_coding
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2406.10469v2
+  url: https://arxiv.org/abs/2406.10469
+  pdf_url: https://arxiv.org/pdf/2406.10469v2
+  venue: arXiv preprint
+time:
+  published: '2024-06-15'
+  collected: '2026-11-14'
+entities:
+- ref: codec:HEVC
+  role: subject
+claims:
+- statement: 基于OAR序列的视频低码率编码方法在低码率区间优于H.265（HEVC）编码
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: OAR语义表示可同时支持低码率表示与生成式视频重建，且具备可解释性
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 将OAR融入图像JSCC模型可按下游任务重要性分配通信资源，与JSCC协同提升低带宽高噪声场景下的传输鲁棒性
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 方法在交通监控视频数据集上进行了有效性验证
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 用对象-属性-关系（OAR）语义序列表示视频实现低码率生成式重建，并与JSCC结合，低码率下优于H.265。
+  abstract_zh: 论文针对语义通信中JSCC端到端训练方法缺乏可解释语义表示、下游任务适配性差的问题，提出以对象-属性-关系（OAR）作为视频语义框架。OAR序列既用于视频的低码率表示，也用于生成式视频重建。作者还将OAR融入图像JSCC模型，使通信资源向对下游任务更关键的区域倾斜。在交通监控视频数据集上的实验表明，该OAR视频编码方法在低码率下优于H.265，并与JSCC协同实现鲁棒高效的视频传输。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 提出可解释的对象-属性-关系语义表示用于低码率视频编码与JSCC增强，属核心域且与H.265/HEVC直接对比。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 基于对象-属性-关系表示的视频语义通信
+relations:
+- type: same_topic
+  ref: paper:arxiv:2605.19397
+  note: 同属视频语义通信方向，均关注面向感知/任务的低带宽视频传输
+- type: same_topic
+  ref: paper:arxiv:2512.05395
+  note: 同为语义通信中的低码率编码思路，本文将其扩展至视频并引入OAR结构化表示
+- type: same_topic
+  ref: paper:arxiv:2609.16279
+  note: 同为语义感知的视频编码与传输，关注低码率/信道条件下的鲁棒性

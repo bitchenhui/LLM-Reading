@@ -1,0 +1,50 @@
+id: paper:arxiv:2507.21124
+type: paper
+title: 'VizGenie: Toward Self-Refining, Domain-Aware Workflows for Next-Generation Scientific Visualization'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2507.21124v1
+  url: https://arxiv.org/abs/2507.21124
+  pdf_url: https://arxiv.org/pdf/2507.21124v1
+  venue: arXiv preprint
+time:
+  published: '2025-07-18'
+  collected: '2026-11-14'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: VizGenie对超出预置工具基线的任务，由LLM自主生成新的可视化脚本（如VTK Python代码），每个脚本经自动后端验证并在测试通过后集成，实现系统能力的按需自扩展。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 系统利用微调视觉模型进行图像分析与视觉问答（VQA），将用户的高层自然语言特征查询（如"visualize the skull"）精确映射为技术实现，并支持对生成可视化的交互式VQA探索。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 借助检索增强生成（RAG）提供上下文驱动响应并维护完整溯源记录，在复杂体数据上的评估表明迭代可视化任务的认知开销显著降低。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: VizGenie：LLM驱动的自我改进代理框架，按需生成并自动验证VTK脚本，持续扩展科学可视化能力
+  abstract_zh: 论文提出VizGenie，一个自我改进的代理式框架，通过编排领域专用工具与动态生成模块来推进科学可视化。基线功能包含阈值过滤、切片提取与统计分析；超出基线的任务由LLM自主生成新的可视化脚本（如VTK
+    Python代码），经自动后端验证通过后无缝集成，持续增强系统适应性。系统提供自然语言接口，借助微调视觉模型的图像分析与视觉问答（VQA）解析高层特征查询（如“可视化颅骨”），并支持对生成可视化的交互式问答探索。检索增强生成（RAG）提供上下文相关响应并保留完整溯源记录以强化可靠性与可复现性；在复杂体数据上的评估显示迭代可视化任务的认知负担显著降低。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 面向科学可视化的LLM自我改进代理框架，属于自我改进AI域，但应用场景为体数据可视化而非音视频核心域，仅作初筛摘要收录。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: VizGenie：面向下一代科学可视化的自我改进、领域感知工作流
+relations:
+- type: same_topic
+  ref: paper:arxiv:2610.35316
+  note: 同为面向可视化任务的递归自我改进（RSI）代理框架，VizGenie侧重科学可视化脚本自生成，RSIV-Harness侧重开放域文本到可视化
+- type: same_topic
+  ref: paper:arxiv:2602.00028
+  note: 同为LLM代理驱动的媒体处理工具系统：ELLMPEG面向边缘端视频处理，VizGenie面向科学可视化，均采用代理式按需能力扩展

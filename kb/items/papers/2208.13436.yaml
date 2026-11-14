@@ -1,0 +1,61 @@
+id: paper:arxiv:2208.13436
+type: paper
+title: Joint Learning Content and Degradation Aware Feature for Blind Super-Resolution
+domain: processing_enhancement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2208.13436v1
+  url: https://arxiv.org/abs/2208.13436
+  pdf_url: https://arxiv.org/pdf/2208.13436v1
+  venue: arXiv preprint
+time:
+  published: '2022-08-29'
+  collected: '2026-11-14'
+entities:
+- ref: concept:SuperResolution
+  role: subject
+- ref: metric:PSNR
+  role: measured_by
+- ref: metric:SSIM
+  role: measured_by
+claims:
+- statement: CDSR在多个基准上优于现有无监督退化预测（UDP）盲SR模型
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: CDSR在PSNR与SSIM指标上与最先进的有监督核预测（SKP）方法性能相当
+  confidence: reported
+  metrics:
+  - name: PSNR
+    value: competitive
+    scope: 与SOTA SKP方法对比，多基准测试
+  - name: SSIM
+    value: competitive
+    scope: 与SOTA SKP方法对比，多基准测试
+  evidence: abstract（初筛，未读全文）
+- statement: LPE、DQA、CSC三个模块共同实现内容与退化特征的联合提取、一致性对齐与冗余抑制
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出CDSR网络联合学习内容与退化感知特征，缓解退化嵌入与SR特征不一致问题，提升盲图像超分辨率性能
+  abstract_zh: 针对盲图像超分辨率（SR）中退化嵌入与SR特征不一致的难题，作者观察到联合学习内容与退化感知特征是最优方案。据此提出CDSR网络，包含三个新模块：轻量块编码器（LPE）联合提取内容与退化特征，域查询注意力模块（DQA）自适应降低二者不一致性，码本空间压缩模块（CSC）抑制冗余信息。相比有监督核预测（SKP）依赖不可得的真实模糊核，CDSR绕开了该限制。在多个基准上的实验表明，CDSR优于现有无监督退化预测（UDP）模型，在PSNR和SSIM上与最先进的SKP方法相比也具有竞争力。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 面向自然图像的盲超分辨率研究，属于处理增强（超分）方向但未与编码链路直接结合，非核心域故仅收录摘要
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 联合学习内容与退化感知特征的盲超分辨率
+relations:
+- type: same_topic
+  ref: paper:arxiv:2206.07038
+  note: 同属真实世界/盲场景图像超分辨率研究方向
+- type: same_topic
+  ref: paper:arxiv:2208.09885
+  note: 同属压缩图像超分辨率/增强的深度网络研究
+- type: same_topic
+  ref: paper:arxiv:2105.11683
+  note: 同属单图像超分辨率网络设计与压缩主题

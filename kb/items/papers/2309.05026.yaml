@@ -1,0 +1,56 @@
+id: paper:arxiv:2309.05026
+type: paper
+title: Spatial Perceptual Quality Aware Adaptive Volumetric Video Streaming
+domain: immersive_media
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2309.05026v1
+  url: https://arxiv.org/abs/2309.05026
+  pdf_url: https://arxiv.org/pdf/2309.05026v1
+  venue: arXiv preprint
+time:
+  published: '2023-09-10'
+  collected: '2026-11-14'
+entities:
+- ref: concept:VolumetricVideo
+  role: subject
+- ref: concept:QoE
+  role: measured_by
+claims:
+- statement: 提出视觉敏锐度模型，刻画6DoF虚拟观看距离与可容忍点云密度边界的关系，满足空间探索中的视觉需求。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 所提方案可动态调整质量级别，在感知质量与带宽消耗之间取得平衡。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在真实网络与用户轨迹实验中，所提方案的整体平均QoE相比现有基线最高提升26%。
+  confidence: reported
+  metrics:
+  - name: 平均QoE提升
+    value: 26%
+    scope: 真实网络+真实用户轨迹，对比现有基线，最高（up to）口径
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 基于6DoF观看距离的视觉敏锐度模型自适应调节体积视频点云密度，QoE最高提升26%。
+  abstract_zh: 论文研究六自由度(6DoF)空间导航中观看距离对用户感知质量的影响，提出描述虚拟观看距离与可容忍点云密度边界关系的视觉敏锐度模型。该模型利用人眼视觉分辨率的限制，在6DoF探索过程中满足空间视觉需求，并动态调整质量级别以平衡感知质量与带宽消耗。此外提出QoE模型精确刻画不同观看距离下的用户感知质量。基于真实网络与用户轨迹的实验表明，相比现有基线，所提方案整体平均QoE最高提升26%。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 体积视频6DoF流传输属于沉浸式媒体域，非核心编码域，按基准仅给summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 空间感知质量驱动的自适应体积视频流传输
+relations:
+- type: same_topic
+  ref: paper:arxiv:2310.08205
+  note: 同为以人为中心的体积视频流传输系统
+- type: same_topic
+  ref: paper:arxiv:2608.11645
+  note: 同为实时体积视频流传输
+- type: same_topic
+  ref: paper:arxiv:2507.14454
+  note: 同为沉浸式内容自适应流传输与视觉感知驱动的码率适配

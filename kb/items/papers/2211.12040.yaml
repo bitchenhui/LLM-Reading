@@ -1,0 +1,51 @@
+id: paper:arxiv:2211.12040
+type: paper
+title: Rethinking Implicit Neural Representations for Vision Learners
+domain: video_image_coding
+research_lines:
+- inr_representation
+source:
+  channel: arxiv
+  external_id: 2211.12040v3
+  url: https://arxiv.org/abs/2211.12040
+  pdf_url: https://arxiv.org/pdf/2211.12040v3
+  venue: arXiv preprint
+time:
+  published: '2022-11-22'
+  collected: '2026-11-14'
+entities:
+- ref: concept:INR
+  role: subject
+claims:
+- statement: 作者称INRN是首个同时覆盖低层与高层视觉任务的INR研究，通过重新定义INR的概念边界使其可嵌入深层网络。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 现有INR方法存在两大问题：理论定义过窄而不适用于高层任务、对深层网络的表征能力不足。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: INRN在图像拟合（低层）与图像分类、目标检测、实例分割（高层）任务上的大量实验验证了有效性。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出隐式神经表示网络INRN，首次将INR从图像拟合等低层任务扩展到分类、检测、分割等高层视觉任务。
+  abstract_zh: 隐式神经表示（INR）虽能参数化连续信号，但现有方法局限于图像/视频压缩、超分辨率、图像生成等低层任务，且定义狭窄、对深层网络表征能力不足。作者从新视角重新形式化INR定义，提出隐式神经表示网络INRN，为其基础模块设计了三种关键结构，并给出两种堆叠方式及相应损失函数。在低层任务（图像拟合）和高层视觉任务（图像分类、目标检测、实例分割）上的大量实验与分析验证了该方法的普适性和有效性。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 重新形式化INR并提出INRN，将隐式神经表示从图像拟合/压缩、超分等低层任务扩展到分类检测分割等高层任务，与INR图像/视频编码路线同源，但核心贡献是通用视觉网络而非编码方法，给summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 重新审视面向视觉学习的隐式神经表示
+relations:
+- type: same_topic
+  ref: paper:arxiv:2306.09818
+  note: 均为基于隐式神经表示（INR/NeRV类）的图像/视频表示与压缩研究，INRN可视为该路线的表征基础工作
+- type: same_topic
+  ref: paper:arxiv:2506.15276
+  note: MSNeRV同样是神经视频表示方向的INR网络设计，与本论文的INR网络结构改进同主题
+- type: same_topic
+  ref: paper:arxiv:2607.15298
+  note: 该文与本文都围绕INR作为图像/视频编码的连续信号参数化工具展开

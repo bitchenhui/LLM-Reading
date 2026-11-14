@@ -1,0 +1,49 @@
+id: paper:arxiv:2312.01061
+type: paper
+title: Spectral-wise Implicit Neural Representation for Hyperspectral Image Reconstruction
+domain: processing_enhancement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2312.01061v2
+  url: https://arxiv.org/abs/2312.01061
+  pdf_url: https://arxiv.org/pdf/2312.01061v2
+  venue: arXiv preprint
+time:
+  published: '2023-12-02'
+  collected: '2026-11-14'
+entities:
+- ref: concept:INR
+  role: builds_on
+- ref: concept:SuperResolution
+  role: subject
+claims:
+- statement: SINR以连续光谱放大方式重建高光谱图像，可实现放大倍数可自定义的光谱超分辨率，并支持任意/无限数量的输出光谱波段。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 光谱维注意力机制将单个光谱通道作为token以捕获全局光谱依赖，傅里叶坐标编码器强化高频成分，光谱尺度因子模块引导模型适配可变光谱通道数。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在CASSI重建任务的大量实验中，SINR性能优于基线方法。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出SINR，将隐式神经表示引入CASSI高光谱重建，实现连续光谱超分与任意波段数输出。
+  abstract_zh: 针对编码孔径快照光谱成像（CASSI）从2D压缩测量重建3D空间-光谱信号的 任务，现有方法仅映射到预定离散光谱波段，忽略了光谱信息的连续性。本文提出光谱维隐式神经表示（SINR），实现连续光谱放大重建，支持可自定义放大倍数的光谱超分辨率。方法将各光谱通道视为独立token的光谱注意力机制捕获全局光谱依赖，并用傅里叶坐标编码器强化高频成分、用光谱尺度因子模块适配可变的光谱通道数，从而支持任意数量的输出光谱波段。大量实验表明SINR优于基线方法，是将INR引入CASSI重建领域的初步尝试。
+assessment:
+  relevance: low
+  decision: summary_only
+  reason: 用INR做CASSI高光谱重建与光谱超分，属计算成像增强而非音视频编解码核心链路，按非核心域仅初筛收录。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 面向高光谱图像重建的光谱维隐式神经表示
+relations:
+- type: same_topic
+  ref: paper:arxiv:2306.09818
+  note: 同属隐式神经表示（INR）技术路线，HiNeRV用于视频压缩而本文用于高光谱图像重建
+- type: same_topic
+  ref: paper:arxiv:2402.01596
+  note: 同为基于隐式神经表示的媒体压缩/重建工作

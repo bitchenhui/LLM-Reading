@@ -1,0 +1,65 @@
+id: paper:arxiv:2506.06698
+type: paper
+title: Contextual Experience Replay for Self-Improvement of Language Agents
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2506.06698v1
+  url: https://arxiv.org/abs/2506.06698
+  pdf_url: https://arxiv.org/pdf/2506.06698v1
+  venue: arXiv preprint
+time:
+  published: '2025-06-07'
+  collected: '2026-11-14'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: uses
+- ref: concept:TrainingFree
+  role: subject
+claims:
+- statement: CER在VisualWebArena基准上取得31.9%的成功率，达到竞争性水平。
+  confidence: reported
+  metrics:
+  - name: 成功率
+    value: 31.9%
+    scope: VisualWebArena基准
+  evidence: abstract（初筛，未读全文）
+- statement: CER在WebArena基准上平均成功率达36.7%，相较GPT-4o智能体基线相对提升51.0%。
+  confidence: reported
+  metrics:
+  - name: 平均成功率
+    value: 36.7%
+    scope: WebArena基准
+  - name: 相对提升
+    value: 51.0%
+    scope: WebArena基准，相对GPT-4o智能体基线
+  evidence: abstract（初筛，未读全文）
+- statement: CER免训练，通过累积并合成过往经验到动态记忆缓冲区，使智能体在推理期检索相关环境动态与决策模式知识以适应新任务。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出免训练CER框架，将历史经验合成动态记忆缓冲区，使LLM智能体在推理期自我改进。
+  abstract_zh: 论文提出Contextual Experience Replay（CER），一个免训练框架，使LLM语言智能体能够在上下文窗口内实现高效自我改进。CER将过去的经验累积并合成为动态记忆缓冲区，经验涵盖环境动态与常见决策模式，智能体在新任务中检索相关知识增强自身适应性。在VisualWebArena上CER取得31.9%的竞争性成功率；在WebArena上平均成功率为36.7%，相较GPT-4o智能体基线相对提升51.0%。作者还进行了全面分析以验证其效率与有效性。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 该文是免训练LLM智能体自我改进（上下文经验记忆）的代表性工作，属self_improvement域而非音视频核心域，按基准仅收录为summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 面向语言智能体自我改进的上下文经验重放
+relations:
+- type: same_topic
+  ref: paper:arxiv:2610.24453
+  note: Hippo同为免训练的agent经验重放式自进化，与CER同属推理期经验记忆自改进路线
+- type: same_topic
+  ref: paper:arxiv:2610.27406
+  note: More Memory, Worse Agents 直接考察LLM agent经验记忆缓冲机制的有效性与失效模式，与CER的记忆缓冲设计构成正反对照
+- type: same_topic
+  ref: paper:arxiv:2609.37968
+  note: SelfSearch同为无奖励/免训练范式下的自改进agent方法，与CER同主题

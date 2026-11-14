@@ -1,0 +1,52 @@
+id: paper:arxiv:2306.05085
+type: paper
+title: 'TransTIC: Transferring Transformer-based Image Compression from Human Perception to Machine Perception'
+domain: video_image_coding
+research_lines:
+- learned_codec
+source:
+  channel: arxiv
+  external_id: 2306.05085v2
+  url: https://arxiv.org/abs/2306.05085
+  pdf_url: https://arxiv.org/pdf/2306.05085v2
+  venue: arXiv preprint
+time:
+  published: '2023-06-08'
+  collected: '2026-11-14'
+entities:
+- ref: impl:TIC
+  role: subject
+claims:
+- statement: TransTIC能够在不微调编解码器的情况下，将基于Transformer的图像压缩编解码器从人类感知迁移到机器感知。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: TransTIC采用实例级提示生成器，向编码器注入实例特定提示、向解码器注入任务特定提示，灵感来自视觉提示调优。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在多种机器任务上，TransTIC显著优于竞争方法；作者称其为首个将提示机制用于低层图像压缩的工作。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 无需微调编解码器，借助实例级与任务级提示将Transformer图像压缩迁移至多种机器感知任务。
+  abstract_zh: 该工作提出TransTIC框架，旨在不微调编解码器的前提下，将基于Transformer的图像压缩编解码器从人类感知迁移到机器感知。受视觉提示调优（visual prompt
+    tuning）启发，框架采用实例级提示生成器，向编码器注入实例相关提示、向解码器注入任务相关提示。大量实验表明该方法能将基础编解码器迁移到多种机器任务，并显著优于竞争方法。作者声称这是首次将提示机制应用于低层图像压缩任务。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 核心域学习式图像压缩工作，首次将提示调优引入图像压缩以服务机器感知（VCM），方法新颖且直接相关。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: TransTIC：将基于Transformer的图像压缩从人类感知迁移至机器感知
+relations:
+- type: same_topic
+  ref: paper:arxiv:2306.16670
+  note: 同为面向机器（VCM）的端到端可学习压缩
+- type: same_topic
+  ref: paper:arxiv:2606.21033
+  note: 同为兼顾人类与机器感知的图像压缩
+- type: same_topic
+  ref: paper:arxiv:2303.14978
+  note: 同为基于Transformer的学习式图像压缩

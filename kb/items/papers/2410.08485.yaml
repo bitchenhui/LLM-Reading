@@ -1,0 +1,50 @@
+id: paper:arxiv:2410.08485
+type: paper
+title: 'Beyond GFVC: A Progressive Face Video Compression Framework with Adaptive Visual Tokens'
+domain: video_image_coding
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2410.08485v1
+  url: https://arxiv.org/abs/2410.08485
+  pdf_url: https://arxiv.org/pdf/2410.08485v1
+  venue: arXiv preprint
+time:
+  published: '2024-10-11'
+  collected: '2026-11-14'
+entities:
+- ref: codec:VVC
+  role: subject
+claims:
+- statement: PFVC在编码灵活性与率失真性能上优于最新VVC编码器及最先进的GFVC算法。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: PFVC编码端以渐进方式将高维人脸信号投影为自适应视觉token，解码端可按不同粒度重建token用于运动估计与信号合成。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 现有GFVC算法存在重建质量不稳定与码率范围受限的问题，PFVC通过自适应视觉token缓解这些问题，实现超低码率人脸视频通信。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出基于自适应视觉token的渐进式人脸视频压缩框架PFVC，率失真性能优于VVC与现有GFVC算法。
+  abstract_zh: 针对生成式人脸视频压缩（GFVC）存在的重建质量不稳定与码率范围受限问题，本文提出渐进式人脸视频压缩框架PFVC，利用自适应视觉token在重建鲁棒性与带宽智能之间实现优异权衡。编码端以渐进方式将高维人脸信号投影为自适应视觉token；解码端以不同粒度对这些token进行重建，用于运动估计与信号合成。实验结果表明，PFVC相比最新VVC编码器和最先进的GFVC算法具有更好的编码灵活性与更优的率失真性能，可支撑超低码率人脸视频通信。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 核心域生成式人脸视频压缩工作，提出超越GFVC的渐进式自适应视觉token框架PFVC，率失真性能优于VVC与SOTA GFVC，且与JVET GFVC标准化活动直接相关，值得深读。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 超越GFVC：基于自适应视觉Token的渐进式人脸视频压缩框架
+relations:
+- type: same_topic
+  ref: standard_proposal:jvet:m201-AK0068
+  note: JVET AHG16正在推进GFVC对VVC标准的扩展，本文为GFVC之上的新框架，属同一标准化议题
+- type: same_topic
+  ref: paper:arxiv:2505.16177
+  note: 同为面向超低码率的生成式图像/视频压缩路线
+- type: same_topic
+  ref: paper:arxiv:2312.15622
+  note: 同为基于生成先验的人脸视频/图像编码研究

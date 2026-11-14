@@ -1,0 +1,54 @@
+id: paper:arxiv:2307.05092
+type: paper
+title: Offline and Online Optical Flow Enhancement for Deep Video Compression
+domain: video_image_coding
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2307.05092v1
+  url: https://arxiv.org/abs/2307.05092
+  pdf_url: https://arxiv.org/pdf/2307.05092v1
+  venue: arXiv preprint
+time:
+  published: '2023-07-11'
+  collected: '2026-11-14'
+entities:
+- ref: codec:VVC
+  role: subject
+claims:
+- statement: 离线与在线两阶段光流增强在DCVC上合计平均节省12.8%码率
+  confidence: reported
+  metrics:
+  - name: 码率节省
+    value: 12.8%
+    scope: 测试视频上相对基线DCVC平均
+  evidence: abstract（初筛，未读全文）
+- statement: 两阶段光流增强不增加解码器侧的模型与计算复杂度
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 以H.266/VVC运动信息为监督的离线微调可使光流获得更好的率失真权衡；在线梯度优化光流潜在特征可提升对具体视频的适应性
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出离线微调与在线特征优化两阶段光流增强，在DCVC上平均节省12.8%码率且不增加解码复杂度。
+  abstract_zh: 论文指出深度视频压缩直接复用预训练光流估计网络存在两大缺陷：光流本身编码开销过大，且在合成数据上训练的网络对真实视频泛化不足。为此提出离线与在线两阶段光流增强：离线阶段以H.266/VVC提供的运动信息为监督微调光流估计网络，使其更符合率失真权衡；在线阶段用基于梯度下降的算法对待压缩视频的光流潜在特征逐视频优化，提升适应性。在DCVC上的实验表明，两阶段增强合计平均节省12.8%码率，且不增加解码器侧的模型与计算复杂度。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 核心域神经视频压缩重要工作：针对预训练光流不适合压缩的两大缺陷提出离线/在线两阶段增强，在DCVC上平均省12.8%码率且不增解码复杂度。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 面向深度视频压缩的离线与在线光流增强
+relations:
+- type: same_topic
+  ref: paper:arxiv:2309.05846
+  note: 同为神经网络视频编码的设计与实现研究（同团队USTC方向延续）
+- type: same_topic
+  ref: paper:arxiv:2510.07283
+  note: 同为学习型视频压缩的逐内容/逐实例自适应优化思路，与本文在线阶段优化光流特征相关
+- type: same_topic
+  ref: paper:arxiv:2405.08530
+  note: 同为实例自适应神经视频压缩，通过逐视频调整编码器参数提升性能

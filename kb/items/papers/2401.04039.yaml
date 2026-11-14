@@ -1,0 +1,54 @@
+id: paper:arxiv:2401.04039
+type: paper
+title: 'Bjøntegaard Delta (BD): A Tutorial Overview of the Metric, Evolution, Challenges, and Recommendations'
+domain: video_image_coding
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2401.04039v1
+  url: https://arxiv.org/abs/2401.04039
+  pdf_url: https://arxiv.org/pdf/2401.04039v1
+  venue: arXiv preprint
+time:
+  published: '2024-01-08'
+  collected: '2026-11-14'
+entities:
+- ref: metric:PSNR
+  role: subject
+- ref: metric:SSIM
+  role: uses
+- ref: metric:VMAF
+  role: uses
+claims:
+- statement: Bjøntegaard Delta（BD）自2001年提出以来已成为比较视频编解码器压缩效率的主流工具，最初以PSNR为失真指标计算两条率失真曲线间的码率与质量差异。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 后续大量工作将BD计算扩展至SSIM、VMAF乃至主观MOS评分，但缺乏整合性文献导致BD结果易被错误解读；论文据此给出方法教程、失效案例及20年改进演进的系统梳理。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 作者在不同率失真特性与多种客观/主观指标条件下评估了各类BD方法及其开源实现，并基于结果给出使用建议及开发更有效编解码器压缩效率评估工具的方向。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 系统梳理视频编解码器比较标准指标BD方法的原理、20年演变、失效场景与正确使用建议。
+  abstract_zh: BD方法自2001年提出，用于基于两条率失真（RD）曲线计算编解码器之间的码率与质量差异，最初以PSNR为失真指标。此后大量工作将BD扩展到SSIM、VMAF乃至主观MOS评分，但由于缺乏系统性文献，BD结果常被错误解读。本文提供BD方法的详细教程并给出指标可能失效的典型案例，同时梳理其20年来的演变与各类改进变体。作者在不同RD特性、多种客观与主观指标下系统评估了各类BD方法及开源实现，最终提出使用建议和面向更有效编解码器压缩效率评估工具的探索方向。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: BD是视频编解码器压缩效率比较的通用标准指标，本文是核心域内该指标方法学的权威教程与系统评估，极具参考价值。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: Bjøntegaard Delta（BD）：该指标的教程综述、演变、挑战与建议
+relations:
+- type: same_topic
+  ref: paper:arxiv:2304.12852
+  note: 两者均聚焦BD指标的误用问题与编解码器正确比较方法学
+- type: same_topic
+  ref: paper:arxiv:2605.15800
+  note: 均涉及编解码器压缩性能的视频质量评估方法学（BD类指标）
+- type: same_topic
+  ref: paper:arxiv:2511.00969
+  note: 均评估客观质量指标在传统与神经编解码器比较中的表现

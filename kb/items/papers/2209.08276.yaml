@@ -1,0 +1,53 @@
+id: paper:arxiv:2209.08276
+type: paper
+title: CARNet:Compression Artifact Reduction for Point Cloud Attribute
+domain: immersive_media
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2209.08276v1
+  url: https://arxiv.org/abs/2209.08276
+  pdf_url: https://arxiv.org/pdf/2209.08276v1
+  venue: arXiv preprint
+time:
+  published: '2022-09-17'
+  collected: '2026-11-14'
+entities:
+- ref: codec:G-PCC
+  role: subject
+claims:
+- statement: CARNet通过生成多个最可能样本偏移（MPSO）并线性加权组合来消除G-PCC属性压缩伪影，使滤波后重建尽可能接近未压缩点云属性。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: MPSO推导采用双流网络（直接空间嵌入+频率依赖嵌入）并以稀疏卷积聚合稀疏不规则分布点的信息；MPSO组合以最小二乘误差度量在线求解权重以适应内容动态。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: CARNet作为G-PCC环路内滤波工具实现，线性加权系数封装进码流且码率开销可忽略。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 相对最新G-PCC，该方法在主观与客观质量上均取得显著提升。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出双阶段稀疏卷积网络CARNet作为G-PCC环路滤波工具，消除属性压缩伪影，主客观质量显著提升。
+  abstract_zh: 针对G-PCC（基于几何的点云压缩）标准属性压缩产生的伪影，提出学习型自适应环路滤波器CARNet。方法分两阶段：先以双流网络（直接空间嵌入与频率依赖嵌入）结合稀疏卷积建模局部邻域变化，从稀疏不规则分布的点中聚合信息，生成多个最可能样本偏移（MPSO）作为压缩失真的近似；再以最小二乘误差为指导在线求解线性加权系数进行伪影消除。加权系数封装进码流，码率开销可忽略。实验表明相对最新G-PCC在主观与客观质量上均取得显著改进。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 点云属性压缩伪影消除工作，属沉浸式/三维媒体域且与G-PCC编码工具直接相关，按收录规则最高给summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: CARNet：面向点云属性的压缩伪影消除网络
+relations:
+- type: same_topic
+  ref: paper:arxiv:2112.00560
+  note: 同为G-PCC属性伪影消除（前序工作，作者团队重叠）
+- type: same_topic
+  ref: paper:arxiv:2303.13764
+  note: 同为点云颜色属性质量增强网络
+- type: same_topic
+  ref: paper:arxiv:2503.17467
+  note: 同为MPEG G-PCC点云质量增强滤波方法

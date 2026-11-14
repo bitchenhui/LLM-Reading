@@ -1,0 +1,62 @@
+id: paper:arxiv:2110.14638
+type: paper
+title: Improving Super-Resolution Performance using Meta-Attention Layers
+domain: processing_enhancement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2110.14638v1
+  url: https://arxiv.org/abs/2110.14638
+  pdf_url: https://arxiv.org/pdf/2110.14638v1
+  venue: arXiv preprint
+time:
+  published: '2021-10-27'
+  collected: '2026-11-14'
+entities:
+- ref: concept:SuperResolution
+  role: subject
+- ref: metric:PSNR
+  role: measured_by
+claims:
+- statement: meta-attention机制可将退化元数据转化为通道注意力向量并调制特征图，且不需特定架构即可嵌入任意SR CNN。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在提供相关退化元数据时，meta-attention能一致提升SOTA SR网络的像素级精度；在模糊/降采样X4图像上，通用SR模型PSNR平均提升0.2969 dB。
+  confidence: reported
+  metrics:
+  - name: PSNR
+    value: 0.2969 dB
+    scope: 模糊/降采样（X4）图像，SOTA通用SR模型，平均增益
+  evidence: abstract（初筛，未读全文）
+- statement: 在模糊/降采样X4图像上，meta-attention对SOTA人脸SR模型的PSNR平均增益为0.3320 dB。
+  confidence: reported
+  metrics:
+  - name: PSNR
+    value: 0.3320 dB
+    scope: 模糊/降采样（X4）图像，SOTA人脸SR模型，平均增益
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出元注意力机制，将退化元数据转为通道注意力向量，可即插即用于任意SR网络以提升像素级重建精度。
+  abstract_zh: 超分辨率是病态问题，引入描述退化过程的元数据（如模糊核、压缩级别等）可指导网络更忠实地重建，但现有元数据融合方法多需大幅改动架构或增加显著复杂度，难以移植到任意SR网络。本文提出meta-attention这一轻量机制，将元数据翻译为通道注意力向量以选择性调制网络特征图，不依赖特定架构，可方便嵌入任意SR
+    CNN。大量实验表明，在提供相关退化元数据时，meta-attention能持续提升SOTA网络的像素级精度：在模糊/降采样（X4）图像上，PSNR对SOTA通用SR模型平均提升0.2969 dB，对人脸SR模型平均提升0.3320
+    dB。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 元数据引导的超分辨率属于编码链路处理与增强域的通用图像SR工作，与压缩链路相关但非编码核心，按规则仅作初筛摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 使用元注意力层提升超分辨率性能
+relations:
+- type: same_topic
+  ref: paper:arxiv:2210.08229
+  note: 同为利用编码器/退化侧元数据信息辅助超分辨率重建的研究方向
+- type: same_topic
+  ref: paper:arxiv:2208.13436
+  note: 同属退化感知（盲）超分辨率研究线，关注退化信息对重建的引导
+- type: same_topic
+  ref: paper:arxiv:2104.02322
+  note: 同属解码端超分辨率与压缩码流结合的应用方向

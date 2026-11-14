@@ -1,0 +1,53 @@
+id: paper:arxiv:2606.30049
+type: paper
+title: 'Bridging the Gap Between Image Restoration and Navigational Safety in Hazy Conditions: A New Visibility
+  Estimation Metric for Maritime Surveillance'
+domain: quality_assessment
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2606.30049v1
+  url: https://arxiv.org/abs/2606.30049
+  pdf_url: https://arxiv.org/pdf/2606.30049v1
+  venue: arXiv preprint
+time:
+  published: '2026-06-29'
+  collected: '2026-11-14'
+entities:
+- ref: concept:IQA
+  role: subject
+- ref: metric:PSNR
+  role: compared_against
+- ref: metric:SSIM
+  role: compared_against
+claims:
+- statement: PSNR、SSIM、FSIM、FADE、NIQE等常规图像质量评估指标无法在去雾复原质量与实际能见度阈值之间建立物理可解释的关系
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 基于Unity3D构建的海事模拟能见度数据集MSVD提供分级能见度条件下成对雾化/清晰图像及精确能见度标注，可作为评估去雾性能的可靠基准
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 以目标检测精度为中间指标建立能见度距离与检测性能的映射，可将去雾复原改进转化为可测量的能见度增益，实现对可见距离的可解释、可靠估计
+  confidence: reported
+  metrics:
+  - name: 评估的去雾方法数
+    value: '6'
+    scope: 在MSVD基准上用常规质量指标与所提能见度指标评估的代表性去雾方法数量
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 构建Unity3D海事模拟数据集MSVD，提出以目标检测精度为桥梁的去雾能见度评估指标，实现可解释的可见距离估计。
+  abstract_zh: 针对PSNR、SSIM、FSIM、FADE、NIQE等常规图像质量指标无法在复原质量与实际能见度阈值之间建立物理可解释联系的问题，该工作提出面向能见度的去雾评估框架。作者用Unity3D构建海事模拟能见度数据集MSVD，提供分级能见度条件下成对的雾化/清晰图像及精确能见度标注。进一步以目标检测精度为中间指标，建立能见度距离与检测性能之间的映射，把图像复原的改进转化为可测量的能见度增益。在该基准与所提指标下评估了六种代表性去雾方法，结果显示MSVD可作为分级能见度下去雾性能的可靠基准，所提指标能给出可解释且可靠的可见距离估计，用于支撑航行安全与运营效率评估。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 属于图像复原（去雾）质量评估与能见度估计指标研究，非视频/图像编码核心域，按规则仅作摘要收录
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 弥合图像复原与雾天航行安全之间的差距：面向海事监控的新能见度估计指标
+relations:
+- type: same_topic
+  ref: paper:arxiv:2605.25940
+  note: 同属以客观质量指标评估图像复原（超分/去雾）效果的研究方向

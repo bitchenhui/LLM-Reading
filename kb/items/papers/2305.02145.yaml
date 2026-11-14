@@ -1,0 +1,56 @@
+id: paper:arxiv:2305.02145
+type: paper
+title: 'ProgDTD: Progressive Learned Image Compression with Double-Tail-Drop Training'
+domain: video_image_coding
+research_lines:
+- learned_codec
+source:
+  channel: arxiv
+  external_id: 2305.02145v2
+  url: https://arxiv.org/abs/2305.02145
+  pdf_url: https://arxiv.org/pdf/2305.02145v2
+  venue: arXiv preprint
+time:
+  published: '2023-05-03'
+  collected: '2026-11-14'
+entities:
+- ref: concept:Hyperprior
+  role: subject
+- ref: metric:MS-SSIM
+  role: measured_by
+claims:
+- statement: ProgDTD可将非渐进式学习图像压缩模型转化为渐进式模型，且不引入任何额外参数，渐进范围可定制。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 其核心机制是在训练中强制模型按重要性排序存储瓶颈内信息，并按排序索引顺序传输以实现渐进解码。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 应用于hyperprior模型时，ProgDTD在MS-SSIM与准确率上与非渐进对应模型及其他SOTA渐进压缩模型表现相当。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出ProgDTD训练法，将CNN基非渐进学习图像压缩模型改造为无需额外参数的渐进压缩模型。
+  abstract_zh: 渐进式压缩让图像先以低分辨率开始加载、随数据接收逐渐变清晰，可改善弱网环境下的用户体验。作者观察到压缩模型瓶颈中存储的信息重要性不一，提出ProgDTD训练方法：通过修改训练步骤强制模型按优先级在瓶颈中排序存储信息，再按排序索引顺序传输数据实现渐进压缩。该方法面向CNN结构的学习图像压缩模型，不引入额外参数，渐进范围可定制。在最具代表性的hyperprior结构上实验，ProgDTD在MS-SSIM与准确率上与非渐进对应模型及其他SOTA渐进模型表现相当。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 核心域贡献：提出将非渐进式学习图像压缩模型转化为渐进压缩的训练方法（双尾丢弃），属编码主线方法创新，值得深读。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: ProgDTD：基于双尾丢弃训练的渐进式学习图像压缩
+relations:
+- type: same_topic
+  ref: paper:arxiv:2412.00437
+  note: 同为学习图像压缩的可分级/渐进编码研究（DeepFGS细粒度可分级编码）
+- type: same_topic
+  ref: paper:arxiv:2610.30966
+  note: 同为渐进式学习图像压缩研究
+- type: same_topic
+  ref: paper:arxiv:2303.14978
+  note: 同属学习图像压缩模型结构研究，ProgDTD亦面向CNN类架构
+- type: same_topic
+  ref: paper:arxiv:2603.10188
+  note: 同基于hyperprior结构的学习图像压缩（ARCHE）

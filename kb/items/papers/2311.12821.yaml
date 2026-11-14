@@ -1,0 +1,59 @@
+id: paper:arxiv:2311.12821
+type: paper
+title: Advancing The Rate-Distortion-Computation Frontier For Neural Image Compression
+domain: video_image_coding
+research_lines:
+- traditional_codec_opt
+source:
+  channel: arxiv
+  external_id: 2311.12821v1
+  url: https://arxiv.org/abs/2311.12821
+  pdf_url: https://arxiv.org/pdf/2311.12821v1
+  venue: arXiv preprint
+time:
+  published: '2023-09-26'
+  collected: '2026-11-14'
+entities:
+- ref: impl:VTM
+  role: subject
+claims:
+- statement: 仅用FLOPs或仅用运行时均不足以准确排序神经压缩方法的优劣，需要联合考虑率-失真-计算三维指标。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 提出的新型神经图像压缩架构在不显著增加FLOPs的前提下达到SOTA率失真性能：相对BPG节省23.1%码率，相对VTM节省7.0%，相对ELIC节省3.0%。
+  confidence: reported
+  metrics:
+  - name: 码率节省
+    value: 23.1%
+    scope: 相对BPG，BD-rate口径（论文自报）
+  - name: 码率节省
+    value: 7.0%
+    scope: 相对VTM（VVC参考软件）
+  - name: 码率节省
+    value: 3.0%
+    scope: 相对ELIC
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 通过率-失真-计算(RDC)前沿研究提出新型神经图像压缩架构，以相近计算量取得SOTA率失真性能。
+  abstract_zh: 神经图像压缩的率失真性能已超越非学习类编码器，但因缺乏在多样消费硬件上高效可行的模型而难以广泛部署，且缺少标准基准平台导致方法比较困难。本文的率-失真-计算(RDC)研究表明，FLOPs和运行时任何单一指标都不足以准确排序神经压缩方法。作者探索RDC前沿，得到一族计算需求与RD性能最佳折中的模型架构。最终提出的新型架构在码率上较BPG节省23.1%（较VTM节省7.0%、较ELIC节省3.0%），达到SOTA
+    RD性能，且FLOPs未显著高于其他学习型编解码器。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 核心域神经图像压缩重要工作：提出率-失真-计算(RDC)前沿分析方法与新架构，RD性能达SOTA且计算量不增加，出自学习压缩领域代表性作者。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 推进神经图像压缩的率-失真-计算前沿
+relations:
+- type: same_topic
+  ref: paper:arxiv:2303.14978
+  note: ELIC为本文摘要中明确的对比基线，同属学习图像压缩架构研究
+- type: same_topic
+  ref: paper:arxiv:2605.13243
+  note: 同属低复杂度/率失真-计算权衡的学习图像压缩方向
+- type: same_topic
+  ref: paper:arxiv:2606.23545
+  note: 本文指出神经压缩缺乏标准评测基准，UI-LIC亦关注学习图像压缩模型的统一评测

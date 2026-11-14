@@ -1,0 +1,57 @@
+id: paper:arxiv:2412.11362
+type: paper
+title: 'VRVVC: Variable-Rate NeRF-Based Volumetric Video Compression'
+domain: immersive_media
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2412.11362v1
+  url: https://arxiv.org/abs/2412.11362
+  pdf_url: https://arxiv.org/pdf/2412.11362v1
+  venue: arXiv preprint
+time:
+  published: '2024-12-16'
+  collected: '2026-11-14'
+entities:
+- ref: concept:VolumetricVideo
+  role: subject
+- ref: concept:NeRF
+  role: builds_on
+- ref: concept:EntropyModel
+  role: uses
+claims:
+- statement: VRVVC可在单一模型内实现宽范围可变码率，无需为每个码率点单独训练模型。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 紧凑三平面隐式残差表示用于长时动态场景帧间建模，能有效降低时间冗余。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 可学习量化结合轻量MLP熵模型，通过预定义拉格朗日乘子控制潜在表示量化误差实现可变码率。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在多个数据集上，VRVVC的率失真性能超越现有NeRF体视频压缩方法。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出端到端联合优化的可变速率NeRF体视频压缩框架VRVVC，单模型覆盖多码率且RD性能超越现有方法。
+  abstract_zh: 针对NeRF体视频数据量巨大导致的存储与传输难题，提出端到端联合优化的可变速率压缩框架VRVVC，用单一模型实现多码率。框架引入紧凑的三平面隐式残差表示对长时动态场景做帧间建模，有效降低时间冗余。残差压缩采用可学习量化与轻量MLP熵模型，通过预定义拉格朗日乘子控制各潜在表示的量化误差，从而实现码率可变。配合端到端渐进式训练策略与多率失真损失优化整个框架。实验显示VRVVC在单模型内覆盖宽码率范围，并在多个数据集上的RD性能超越现有方法。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: NeRF体视频压缩属沉浸式媒体非核心域，但与体视频/自由视点编码主题高度相关，按规则给 summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: VRVVC：可变速率的基于NeRF体视频压缩
+relations:
+- type: same_topic
+  ref: paper:arxiv:2411.05322
+  note: 同为NeRF体视频压缩（Rate-aware Compression for NeRF-based Volumetric Video），主题直接重叠，可能为同组前序工作
+- type: same_topic
+  ref: paper:arxiv:2609.33969
+  note: 同为体视频压缩，基于高斯泼溅稀疏4D锚点，与NeRF路线构成技术对照
+- type: same_topic
+  ref: paper:arxiv:2608.30184
+  note: 同为长时体视频表示与压缩，关注时间维度建模

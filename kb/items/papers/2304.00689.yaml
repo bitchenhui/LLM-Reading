@@ -1,0 +1,47 @@
+id: paper:arxiv:2304.00689
+type: paper
+title: Accuracy Improvement of Object Detection in VVC Coded Video Using YOLO-v7 Features
+domain: video_image_coding
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2304.00689v1
+  url: https://arxiv.org/abs/2304.00689
+  pdf_url: https://arxiv.org/pdf/2304.00689v1
+  venue: arXiv preprint
+time:
+  published: '2023-04-03'
+  collected: '2026-11-14'
+entities:
+- ref: codec:VVC
+  role: subject
+claims:
+- statement: 利用YOLO-v7特征训练的神经网络后处理可提升VVC编码视频上的目标检测精度
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 所提方法与VVC结合后，在以目标检测精度衡量的编码性能上优于常规VVC，且在低码率下仍能保持较高检测精度
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 用YOLO-v7特征训练神经网络后处理，提升VVC压缩视频在低码率下的目标检测精度。
+  abstract_zh: 针对图像编码导致画质劣化、进而降低图像识别精度的问题，论文提出对VVC编码后的视频施加神经网络后处理以恢复目标检测精度。后处理网络利用最新目标检测模型YOLO-v7的特征进行训练，使增强过程直接面向机器分析任务。通过将该方法与最新视频编码标准VVC结合，在低码率下仍可获得较高的目标检测精度。实验结果表明，所提方法与VVC的组合在以目标检测精度衡量的编码性能上优于常规VVC。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 以目标检测精度为失真指标的VVC编码链路后处理工作，属核心域内的VCM方向，但方法为增量式的CNN后滤波增强
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 利用YOLO-v7特征提升VVC编码视频中的目标检测精度
+relations:
+- type: same_topic
+  ref: paper:arxiv:2105.05658
+  note: 同为针对VVC压缩视频的CNN后处理增强框架
+- type: same_topic
+  ref: paper:arxiv:2504.19935
+  note: 同为VVC压缩视频的质量增强模型
+- type: same_topic
+  ref: paper:arxiv:2411.09308
+  note: 同属以机器分析任务精度为目标的视频编码（VCM）方向

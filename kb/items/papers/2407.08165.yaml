@@ -1,0 +1,72 @@
+id: paper:arxiv:2407.08165
+type: paper
+title: 'Explicit-NeRF-QA: A Quality Assessment Database for Explicit NeRF Model Compression'
+domain: immersive_media
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2407.08165v3
+  url: https://arxiv.org/abs/2407.08165
+  pdf_url: https://arxiv.org/pdf/2407.08165v3
+  venue: arXiv preprint
+time:
+  published: '2024-07-11'
+  collected: '2026-11-14'
+entities:
+- ref: concept:NeRF
+  role: subject
+- ref: concept:IQA
+  role: uses
+- ref: metric:MOS
+  role: measured_by
+claims:
+- statement: 数据库包含22个3D物体、四种典型显式NeRF模型、五个压缩参数级别的有损压缩样本，经21名观众实验室主观实验收集MOS
+  confidence: reported
+  metrics:
+  - name: 3D物体数
+    value: '22'
+    scope: 数据集构建规模
+  - name: NeRF模型类型数
+    value: '4'
+    scope: 显式NeRF模型（含InstantNGP、Plenoxels等）
+  - name: 参数压缩级别数
+    value: '5'
+    scope: 哈希表大小/体素分辨率等关键参数
+  - name: 主观观众数
+    value: '21'
+    scope: 实验室环境主观实验
+  evidence: abstract（初筛，未读全文）
+- statement: 全参考客观质量指标在该数据集上最优Pearson相关约0.85
+  confidence: reported
+  metrics:
+  - name: Pearson相关系数
+    value: 约0.85
+    scope: 全参考客观指标 vs MOS
+  evidence: abstract（初筛，未读全文）
+- statement: 所有受测无参考指标表现很差，Pearson相关仅0.4至0.6，表明需要开发更鲁棒的无参考NeRF质量指标
+  confidence: reported
+  metrics:
+  - name: Pearson相关系数
+    value: 0.4-0.6
+    scope: 全部受测无参考指标 vs MOS
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 构建22物体×4模型×5参数级的显式NeRF压缩质量数据库，主客观评测揭示无参考指标性能不足
+  abstract_zh: 论文构建了Explicit-NeRF-QA数据库，用22个几何、纹理与材质多样的3D物体训练四种典型显式NeRF模型，并通过哈希表大小（InstantNGP）和体素分辨率（Plenoxels）等关键参数在五个级别引入有损压缩。将NeRF样本渲染为处理后视频序列（PVS）后，在实验室环境下开展21名观众的大规模主观实验收集MOS。结果展示数据库的内容多样性、MOS精度及NeRF失真特性；全参考客观指标最高Pearson相关约0.85，而所有无参考指标仅0.4-0.6，凸显开发更鲁棒无参考指标的必要性。数据集（NeRF样本、源3D物体、多视角图像、PVS、MOS）已开源。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 面向显式NeRF压缩构建大规模质量评估数据库，属沉浸式媒体编码与质量评测交叉，非核心编码域，按规则仅作初筛摘要
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: Explicit-NeRF-QA：面向显式NeRF模型压缩的质量评估数据库
+relations:
+- type: same_topic
+  ref: paper:arxiv:2411.05322
+  note: 同为NeRF体积视频压缩研究方向，本文提供其质量评估基础数据
+- type: same_topic
+  ref: paper:arxiv:2611.04498
+  note: 同为3D新表示（3DGS vs NeRF）的质量评估基准与主观数据库工作

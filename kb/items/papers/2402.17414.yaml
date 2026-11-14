@@ -1,0 +1,77 @@
+id: paper:arxiv:2402.17414
+type: paper
+title: Neural Video Compression with Feature Modulation
+domain: video_image_coding
+research_lines:
+- traditional_codec_opt
+source:
+  channel: arxiv
+  external_id: 2402.17414v2
+  url: https://arxiv.org/abs/2402.17414
+  pdf_url: https://arxiv.org/pdf/2402.17414v2
+  venue: arXiv preprint
+time:
+  published: '2024-02-27'
+  collected: '2026-11-14'
+entities:
+- ref: concept:QP
+  role: subject
+- ref: metric:PSNR
+  role: measured_by
+- ref: org:Microsoft
+  role: affiliation
+claims:
+- statement: 通过可学习量化缩放器调制当前帧潜特征，并配合训练时的均匀量化参数采样机制，单模型支持的 PSNR 质量范围从先前同类 NVC 的约 3.8 dB 扩大到约 11.4 dB。
+  confidence: reported
+  metrics:
+  - name: 质量范围
+    value: 11.4 dB
+    scope: 本文单模型支持的 PSNR 范围
+  - name: 质量范围
+    value: 3.8 dB
+    scope: 先前支持宽质量范围 NVC 的平均 PSNR 范围
+  evidence: abstract（初筛，未读全文）
+- statement: 提出周期性刷新的时序特征调制机制，缓解先前 SOTA NVC 在大帧内周期（长预测链）设置下明显的质量退化问题。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在单一帧内（single intra-frame）设置下，相比先前 SOTA 神经视频编解码器节省 29.7% 码率，同时 MACs 减少 16%。
+  confidence: reported
+  metrics:
+  - name: 码率节省
+    value: 29.7%
+    scope: 对比先前 SOTA NVC，单帧内设置
+  - name: 计算量削减
+    value: 16%
+    scope: 对比先前 SOTA NVC，MACs
+  evidence: abstract（初筛，未读全文）
+- statement: 单一模型可同时支持 RGB 与 YUV 两种色彩空间。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 作者声称最新的条件式 NVC 已超越最佳传统编解码器，并称本编解码器是 NVC 演进历程中的显著里程碑。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出 DCVC-FM：以可学习量化缩放的潜特征调制与时序特征周期刷新，解决宽质量范围与长预测链退化的条件式神经视频编解码器。
+  abstract_zh: 针对条件式神经视频编解码器（NVC）走向实用化面临的关键问题，本文提出基于特征调制的强力 NVC。其一，通过可学习量化缩放器调制当前帧潜特征，并设计均匀量化参数采样机制改善编码与量化的协调，使单模型支持的
+    PSNR 质量范围从先前约 3.8 dB 提升到约 11.4 dB。其二，提出周期性刷新的时序特征调制机制，缓解大帧内周期（长预测链）设置下明显的质量退化。此外设计了同时支持 RGB 与 YUV
+    色彩空间的单模型。在单一帧内设置下，相比先前 SOTA NVC 实现码率节省 29.7%、MACs 减少 16%，代码已在 github.com/microsoft/DCVC 开源。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 核心域神经视频编码标志性工作（微软 DCVC-FM），用特征调制解决宽质量范围与长预测链两大痛点，码率较先前 SOTA NVC 节省 29.7%，值得精读。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 基于特征调制的神经视频压缩
+relations:
+- type: same_topic
+  ref: paper:arxiv:2505.14541
+  note: 同属微软 DCVC 条件式神经视频编码系列，后续工作将调制从特征扩展到上下文（DCVC-DCM）
+- type: same_topic
+  ref: paper:arxiv:2502.20762
+  note: 同属 DCVC 系列的实时化后续工作（DCVC-RT），方向一致
+- type: same_topic
+  ref: standard_proposal:jvet:m205-AO0186
+  note: 本文即 DCVC-FM，被 JVET EE1 实验选作学习式端到端帧内编解码器进行评估

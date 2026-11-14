@@ -1,0 +1,55 @@
+id: paper:arxiv:2309.14521
+type: paper
+title: 'NoLACE: Improving Low-Complexity Speech Codec Enhancement Through Adaptive Temporal Shaping'
+domain: audio_coding
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2309.14521v2
+  url: https://arxiv.org/abs/2309.14521
+  pdf_url: https://arxiv.org/pdf/2309.14521v2
+  venue: arXiv preprint
+time:
+  published: '2023-09-25'
+  collected: '2026-11-14'
+entities:
+- ref: codec:Opus
+  role: subject
+claims:
+- statement: NoLACE适配Opus后，在6、9和12 kb/s三个码率点均显著优于Opus基线及参数放大后的LACE模型
+  confidence: reported
+  metrics:
+  - name: 测试码率
+    value: 6 kb/s
+    scope: NoLACE vs Opus基线/放大LACE 对比的码率点之一
+  - name: 测试码率
+    value: 9 kb/s
+    scope: NoLACE vs Opus基线/放大LACE 对比的码率点之一
+  - name: 测试码率
+    value: 12 kb/s
+    scope: NoLACE vs Opus基线/放大LACE 对比的码率点之一
+  evidence: abstract（初筛，未读全文）
+- statement: 自适应时间整形模块为LACE引入高时间分辨率，缓解了仅靠放大模型规模时质量快速饱和的问题
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: LACE与NoLACE作为编解码后处理与ASR系统级联使用时表现良好
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出带自适应时间整形模块的NoLACE，以因果低复杂度方式增强Opus解码语音，在6/9/12 kb/s下显著优于Opus与放大版LACE。
+  abstract_zh: 语音编解码器增强旨在去除编解码器引入的失真：经典方法零延迟、复杂度极低但效果有限，而DNN方法质量更高却复杂度高或需引入延迟。LACE（线性自适应编码增强器）通过将DNN与经典长时/短时后滤波结合，构成因果低复杂度模型，但其模型规模扩大时质量会快速饱和。本文提出新颖的自适应时间整形模块，为LACE提供高时间分辨率，得到非线性版本NoLACE。将NoLACE适配到Opus编解码器后，在6、9和12
+    kb/s三个码率点均显著优于Opus基线和放大的LACE模型；且LACE与NoLACE在与ASR系统级联时表现良好。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 语音编解码器后增强（面向Opus）属音频编码域，非核心视频图像编码域，按收录基准只做初筛摘要
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: NoLACE：通过自适应时间整形改进低复杂度语音编解码器增强
+relations:
+- type: same_topic
+  ref: paper:arxiv:2207.08363
+  note: 同为神经语音编码质量提升主题（低码率语音编码增强）

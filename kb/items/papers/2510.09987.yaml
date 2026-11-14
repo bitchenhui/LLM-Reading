@@ -1,0 +1,62 @@
+id: paper:arxiv:2510.09987
+type: paper
+title: Generative Latent Video Compression
+domain: video_image_coding
+research_lines:
+- traditional_codec_opt
+source:
+  channel: arxiv
+  external_id: 2510.09987v1
+  url: https://arxiv.org/abs/2510.09987
+  pdf_url: https://arxiv.org/pdf/2510.09987v1
+  venue: arXiv preprint
+time:
+  published: '2025-10-11'
+  collected: '2026-11-14'
+entities:
+- ref: concept:RDO
+  role: subject
+- ref: metric:DISTS
+  role: measured_by
+- ref: metric:LPIPS
+  role: measured_by
+claims:
+- statement: GLVC在多个基准的DISTS与LPIPS指标上达到当前最优（SOTA）性能
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 用户研究显示GLVC以约一半码率达到与最新神经视频编解码器相当的主观质量，并保持稳定的时间一致性
+  confidence: reported
+  metrics:
+  - name: 相对码率
+    value: ≈1/2
+    scope: 用户研究，相对最新神经视频编解码器
+  evidence: abstract（初筛，未读全文）
+- statement: 统一帧内/帧间编码与循环记忆机制是GLVC在潜域编解码器设计中的关键创新
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出GLVC框架，用预训练连续tokenizer将视频帧映射到感知对齐潜空间并在潜域重设计编解码器，实现感知视频压缩SOTA。
+  abstract_zh: 针对神经视频压缩中率-失真-感知权衡困难、逐帧质量波动引发闪烁伪影的问题，GLVC采用预训练连续tokenizer将视频帧投影到感知对齐的潜空间，把感知约束从率失真优化中剥离。作者借鉴先前神经视频编解码器的经验，为潜域重新设计编解码器架构，并引入统一帧内/帧间编码与循环记忆机制。多基准测试显示GLVC在DISTS与LPIPS指标上达到当前最优；用户研究证实其以约一半码率媲美最新神经视频编解码器且保持稳定时间一致性。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 核心域神经视频编码重量级工作：MSR Asia团队提出感知优化视频编解码器GLVC，在DISTS/LPIPS达SOTA且有用户研究支撑，值得深读。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 生成式潜在视频压缩
+relations:
+- type: same_topic
+  ref: paper:arxiv:2505.16177
+  note: 同为生成式潜空间编码用于图像/视频压缩
+- type: same_topic
+  ref: paper:arxiv:2603.05756
+  note: 同为统一帧内/帧间模式的神经视频压缩
+- type: same_topic
+  ref: paper:arxiv:2609.34725
+  note: 同为利用生成先验的视频压缩
+- type: same_topic
+  ref: paper:arxiv:2607.23366
+  note: 同为感知质量导向的潜域视频压缩研究

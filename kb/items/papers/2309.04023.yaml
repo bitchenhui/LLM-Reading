@@ -1,0 +1,62 @@
+id: paper:arxiv:2309.04023
+type: paper
+title: 'BOLA360: Near-optimal View and Bitrate Adaptation for 360-degree Video Streaming'
+domain: streaming_delivery
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2309.04023v2
+  url: https://arxiv.org/abs/2309.04023
+  pdf_url: https://arxiv.org/pdf/2309.04023v2
+  venue: arXiv preprint
+time:
+  published: '2023-09-07'
+  collected: '2026-11-14'
+entities:
+- ref: concept:ABR
+  role: subject
+- ref: concept:QoE
+  role: measured_by
+claims:
+- statement: BOLA360被证明相对最大化QoE的离线最优算法具有近最优性能。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: BOLA360在广泛网络与用户头部运动轨迹下的QoE较SOTA ABR算法提升13.6%至372.5%。
+  confidence: reported
+  metrics:
+  - name: QoE提升幅度
+    value: 13.6%至372.5%
+    scope: 较SOTA算法，跨多种网络与头部运动轨迹评估
+  evidence: abstract（初筛，未读全文）
+- statement: 360度视频流所需数据码率比传统2D视频高约一个数量级。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: BOLA360是首个同时具备理论保证与实证评估的360度视频ABR算法。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 客户端运行的360度视频ABR算法BOLA360，仅取FOV内片段并证明近最优，QoE较SOTA提升13.6%–372.5%。
+  abstract_zh: 针对360度视频码率需求比传统视频高一个数量级、卡顿易引发晕眩等挑战，提出运行于客户端播放器内的在线ABR算法BOLA360。算法仅下载可能落入用户视场（FOV）的视频片段以节省带宽，并持续自适应调整片段码率以避免卡顿、最大化QoE。理论上证明BOLA360相对最大化QoE的离线最优算法具有近最优性。在广泛的网络条件与用户头部运动轨迹评估中，QoE较SOTA算法提升13.6%至372.5%，是首个兼具理论与实证保证的360度视频ABR算法。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 360度视频流媒体的视角与码率自适应ABR算法及QoE优化，属流媒体与传输域而非核心编码域，按规则给摘要级收录。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: BOLA360：面向360度视频流媒体的近最优视角与码率自适应
+relations:
+- type: same_topic
+  ref: paper:arxiv:2308.03643
+  note: 同属自适应码率（ABR）算法研究，均以客户端码率决策与QoE为目标
+- type: same_topic
+  ref: paper:arxiv:2603.13597
+  note: 同属自适应视频流媒体的码率决策/码率梯度和ABR优化方向
+- type: same_topic
+  ref: paper:arxiv:2304.04637
+  note: 同属ABR算法改进与流媒体QoE提升研究
+- type: same_topic
+  ref: paper:arxiv:2311.00082
+  note: 同属360度/沉浸式视频流媒体的传输与自适应优化方向

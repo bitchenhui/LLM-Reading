@@ -1,0 +1,61 @@
+id: paper:arxiv:2208.14839
+type: paper
+title: 'QuantNAS for super resolution: searching for efficient quantization-friendly architectures against
+  quantization noise'
+domain: processing_enhancement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2208.14839v4
+  url: https://arxiv.org/abs/2208.14839
+  pdf_url: https://arxiv.org/pdf/2208.14839v4
+  venue: arXiv preprint
+time:
+  published: '2022-08-31'
+  collected: '2026-11-14'
+entities:
+- ref: concept:SuperResolution
+  role: subject
+- ref: metric:PSNR
+  role: measured_by
+claims:
+- statement: QuantNAS搜索到的架构在PSNR/BitOps权衡上优于对固定架构施加均匀量化或混合精度量化
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 所提量化近似优于搜索过程中的直接模型量化，提出的搜索流程比直接权重量化快30%且更稳定
+  confidence: reported
+  metrics:
+  - name: 搜索流程提速
+    value: 30%
+    scope: 相较直接权重量化流程
+  evidence: abstract（初筛，未读全文）
+- statement: 熵正则使每个搜索块内优先单一操作，参数/激活量化噪声可近似量化后退化，ADQ模块可缓解超分模型Batch Norm引发的量化问题
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 方法在受SOTA超分模型和RFDN启发的两个搜索空间上验证，用户可基于现有架构构造搜索空间并复用该方法
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出量化感知神经架构搜索QuantNAS，结合熵正则、量化噪声与ADQ模块，搜索出PSNR/BitOps权衡更优的量化友好超分架构
+  abstract_zh: 论文提出将模型量化压缩与神经架构搜索相结合的量化感知搜索流程QuantNAS，用于自动发现对量化友好的高效图像超分辨率模型。方法引入熵正则促使每个搜索块内收敛到单一操作，向参数和激活添加量化噪声以近似量化后的性能退化，并提出ADQ（Adaptive
+    Deviation for Quantization）模块缓解超分模型中Batch Norm带来的量化问题。实验表明这种近似比直接对模型量化更适合搜索过程，且搜索所得架构在PSNR/BitOps权衡上优于对固定架构做均匀或混合精度量化。方法在两个受SOTA超分模型与RFDN启发的搜索空间上验证，搜索流程比直接权重量化快30%且更稳定。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 量化感知架构搜索用于高效超分模型设计，属超分增强方向但未直接涉及编解码链路，按规则给 summary_only
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 面向超分辨率的QuantNAS：搜索对量化噪声友好的高效架构
+relations:
+- type: same_topic
+  ref: paper:arxiv:2203.03844
+  note: 同为面向超分辨率网络的超低精度/量化友好设计
+- type: same_topic
+  ref: paper:arxiv:2212.09501
+  note: 同为量化/混合精度高效端侧超分辨率引擎
+- type: same_topic
+  ref: paper:arxiv:2104.02322
+  note: 同以超分辨率模型为核心研究对象（该文面向视频压缩场景）

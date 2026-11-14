@@ -1,0 +1,57 @@
+id: paper:arxiv:2207.12348
+type: paper
+title: Edge-Aware Autoencoder Design for Real-Time Mixture-of-Experts Image Compression
+domain: video_image_coding
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2207.12348v1
+  url: https://arxiv.org/abs/2207.12348
+  pdf_url: https://arxiv.org/pdf/2207.12348v1
+  venue: arXiv preprint
+time:
+  published: '2022-07-25'
+  collected: '2026-11-14'
+entities:
+- ref: concept:MoE
+  role: subject
+claims:
+- statement: 提出的即插即用AE编码器相比迭代式SMoE建模可将编码端运行时间降低500至1000倍，且图像重建质量不降反升。
+  confidence: reported
+  metrics:
+  - name: 编码器运行时间降低倍数
+    value: 500 to 1000
+    scope: 即插即用AE编码器对比迭代式SMoE编码，作者报告
+  evidence: abstract（初筛，未读全文）
+- statement: 配备AE编码器的SMoE图像压缩具备实时特性，RD性能较作者先前工作有所提升。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: SMoE参数直接映射保持与既有SMoE框架完全兼容，可复用其解码与稀疏边缘感知表示。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 既有研究表明基于SMoE的图像压缩可与SOTA方法性能相当，但编码端迭代优化计算需求过高，是本文要解决的核心瓶颈。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 用边缘感知自编码器直接映射像素块到SMoE模型参数，编码器加速500-1000倍实现实时图像压缩且RD性能提升。
+  abstract_zh: Steered-Mixtures-of-Experts（SMoE）模型可提供稀疏的边缘感知表示，已用于图像压缩并能达到与SOTA相当的性能，但其编码端的迭代建模过程计算开销极大。本文提出一种新的边缘感知自编码器（AE）策略，借鉴算法"展开"（unfolding）思想，将像素块直接映射为SMoE模型参数，从而免去耗时的迭代优化，同时与既有SMoE框架完全兼容。即插即用的AE编码器使编码运行时间降低500至1000倍，图像重建质量反而有所提升，实现具备实时特性的图像压缩，RD性能较作者先前工作亦有改进。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 核心域学习式图像压缩工作：用自编码器替代SMoE迭代优化，编码器加速500-1000倍达到实时且RD性能提升，实用价值显著。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 面向实时混合专家图像压缩的边缘感知自编码器设计
+relations:
+- type: same_topic
+  ref: paper:arxiv:2606.21033
+  note: 同为基于Mixture-of-Experts的图像压缩工作
+- type: same_topic
+  ref: paper:arxiv:2311.12821
+  note: 同属神经图像压缩中率失真-计算开销权衡（编码复杂度）议题
+- type: same_topic
+  ref: paper:arxiv:2307.12706
+  note: 同属降低图像编码器复杂度的学习式压缩方向

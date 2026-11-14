@@ -1,0 +1,75 @@
+id: paper:arxiv:2308.01940
+type: paper
+title: 'TSMD: A Database for Static Color Mesh Quality Assessment Study'
+domain: quality_assessment
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2308.01940v2
+  url: https://arxiv.org/abs/2308.01940
+  pdf_url: https://arxiv.org/pdf/2308.01940v2
+  venue: arXiv preprint
+time:
+  published: '2023-08-03'
+  collected: '2026-11-14'
+entities:
+- ref: concept:IQA
+  role: subject
+- ref: metric:MOS
+  role: measured_by
+- ref: org:AOMedia
+  role: builds_on
+claims:
+- statement: TSMD包含42个带丰富视觉特征的参考网格，并用AOMedia多边形静态网格编码CfP配套的有损压缩方案生成210个失真样本。
+  confidence: reported
+  metrics:
+  - name: 参考网格数
+    value: '42'
+    scope: TSMD数据集
+  - name: 失真样本数
+    value: '210'
+    scope: TSMD数据集
+  evidence: abstract（初筛，未读全文）
+- statement: 基于处理后视频序列（PVS）的大规模众包主观实验收集了74位观看者的MOS评分，分析验证了数据集样本多样性与MOS精度。
+  confidence: reported
+  metrics:
+  - name: 观看者人数
+    value: '74'
+    scope: 众包主观实验
+  evidence: abstract（初筛，未读全文）
+- statement: 在TSMD上评估的最先进客观指标与MOS的Pearson、Spearman相关系数均约0.75，偏离异质性较弱数据集上的典型结果，表明需要更鲁棒的网格质量指标。
+  confidence: reported
+  metrics:
+  - name: Pearson相关系数
+    value: 约0.75
+    scope: TSMD上客观指标vs主观MOS
+  - name: Spearman相关系数
+    value: 约0.75
+    scope: TSMD上客观指标vs主观MOS
+  evidence: abstract（初筛，未读全文）
+- statement: TSMD数据集（含网格、PVS、码流与MOS）已通过腾讯多媒体平台公开发布。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 腾讯发布TSMD静态网格质量评估数据集：42个参考网格、210个压缩失真样本与74人MOS，客观指标相关性仅约0.75。
+  abstract_zh: 腾讯构建了包含42个具有丰富视觉特征参考网格的静态网格数据集TSMD，失真样本（210个）由AOMedia体积视觉媒体组发布的静态网格编码提案征集（CfP）配套的有损压缩方案生成。团队将失真网格渲染为处理后视频序列（PVS），开展大规模众包主观实验，收集74位观看者的MOS评分，并通过分析验证了样本多样性与MOS精度，确认数据集的异质性与可靠性。在新数据集上评估最先进客观指标，Pearson与Spearman相关系数约0.75，明显偏离在异质性较弱数据集上的典型结果，表明亟需更鲁棒的网格质量指标。数据集（含网格、PVS、码流与MOS）已公开发布。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 构建支撑AOMedia静态网格编码CfP评估的大规模网格质量评估数据库与指标基准，属质量评估域重要资源，非核心编码域故给summary_only
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: TSMD：面向静态彩色网格质量评估研究的数据库
+relations:
+- type: same_topic
+  ref: paper:arxiv:2610.04281
+  note: 同为静态三角网格压缩主题，TSMD可为其提供质量评估基准
+- type: same_topic
+  ref: paper:arxiv:2609.23606
+  note: 同为带纹理网格压缩/网格编码主题
+- type: same_topic
+  ref: paper:arxiv:2511.00969
+  note: 同为编码内容客观质量指标评估基准研究

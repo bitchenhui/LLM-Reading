@@ -1,0 +1,68 @@
+id: paper:arxiv:2408.03265
+type: paper
+title: 'BVI-AOM: A New Training Dataset for Deep Video Compression Optimization'
+domain: video_image_coding
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2408.03265v3
+  url: https://arxiv.org/abs/2408.03265
+  pdf_url: https://arxiv.org/pdf/2408.03265v3
+  venue: arXiv preprint
+time:
+  published: '2024-08-06'
+  collected: '2026-11-14'
+entities:
+- ref: org:AOMedia
+  role: subject
+- ref: metric:PSNR
+  role: measured_by
+- ref: metric:VMAF
+  role: measured_by
+claims:
+- statement: BVI-AOM 数据集包含 956 条未压缩视频序列，分辨率覆盖 270p 至 2160p，内容与纹理类型覆盖面广。
+  confidence: reported
+  metrics:
+  - name: 序列数量
+    value: '956'
+    scope: BVI-AOM 数据集总规模
+  - name: 分辨率范围
+    value: 270p-2160p
+    scope: BVI-AOM 数据集序列分辨率覆盖范围
+  evidence: abstract（初筛，未读全文）
+- statement: 以 BVI-AOM 作为两种流行网络架构、两种不同编码工具的训练集时，相比广泛使用的 BVI-DVC 训练集可带来额外码率节省，PSNR-Y 口径最高 0.29 个百分点，VMAF
+    口径最高 2.98 个百分点。
+  confidence: reported
+  metrics:
+  - name: PSNR-Y 码率节省
+    value: '0.29'
+    scope: 百分点；相对 BVI-DVC 训练集，两种网络架构×两种编码工具实验中的最优值
+  - name: VMAF 码率节省
+    value: '2.98'
+    scope: 百分点；相对 BVI-DVC 训练集，两种网络架构×两种编码工具实验中的最优值
+  evidence: abstract（初筛，未读全文）
+- statement: BVI-AOM 提供比现有数据集更灵活的许可条款，突破了已有数据集仅限科研使用的限制。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出含956条270p-2160p多分辨率序列、许可更灵活的BVI-AOM训练集，优化深度视频编码工具并以PSNR-Y/VMAF增益超越BVI-DVC。
+  abstract_zh: 深度学习方法广泛用于增强传统混合视频编解码器，其模型泛化与编码性能高度依赖多样且具代表性的训练数据，而现有数据集或内容变化有限，或许可条款仅限研究用途。为此，作者提出新训练集
+    BVI-AOM，包含 956 条未压缩序列，分辨率覆盖 270p 至 2160p，覆盖广泛的内容与纹理类型，并提供更灵活的许可条款。实验以两种流行网络架构、两种不同编码工具为载体，结果表明以 BVI-AOM
+    为训练集时，相比广泛使用的 BVI-DVC，可带来最高 0.29 个百分点（PSNR-Y）与 2.98 个百分点（VMAF）的额外码率节省。数据集已在 GitHub 开源。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 核心域：面向深度视频压缩优化的新型训练数据集，内容多样、许可灵活并给出相对既有训练集的量化增益，对编码社区基础资源价值高。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: BVI-AOM：面向深度视频压缩优化的新训练数据集
+relations:
+- type: same_topic
+  ref: paper:arxiv:2409.08481
+  note: 同为面向图像/视频编码的数据集构建与基准工作（USTC-TD 测试集）
+- type: same_topic
+  ref: paper:arxiv:2309.07376
+  note: 同为面向视频压缩的数据集工作（VCD 视频会议数据集）

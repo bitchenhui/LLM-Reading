@@ -1,0 +1,62 @@
+id: paper:arxiv:2202.06088
+type: paper
+title: 'NeuVV: Neural Volumetric Videos with Immersive Rendering and Editing'
+domain: immersive_media
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2202.06088v1
+  url: https://arxiv.org/abs/2202.06088
+  pdf_url: https://arxiv.org/pdf/2202.06088v1
+  venue: arXiv preprint
+time:
+  published: '2022-02-12'
+  collected: '2026-11-14'
+entities:
+- ref: concept:VolumetricVideo
+  role: subject
+- ref: concept:NeRF
+  role: builds_on
+claims:
+- statement: NeuVV将动态NeRF编码为可渲染、可编辑的体视频基元，实现照片级真实感的实时时空渲染。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 提出超球面谐波（HH）分解建模时空平滑颜色变化、可学习基表示建模运动导致的密度/颜色突变两种分解方案。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 将NeuVV分解集成到类PlenOctree的Video Octree可显著加速训练并降低内存开销。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 以VOctree为基元的体级深度排序与alpha混合实现时空内容合成编辑（表演复用、服装换色、聚光灯阴影、距离衰减光照等），均以交互速度运行。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 混合神经-光栅化渲染框架首次使体视频的观看与编辑能在消费级VR头显中以沉浸式方式完成。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 将动态NeRF高效编码为可实时渲染、可编辑的体视频基元，首次实现VR头显中的沉浸式体视频观看与时空编辑。
+  abstract_zh: 论文提出神经体视频技术NeuVV，将动态神经辐射场（NeRF）高效编码为可渲染、可编辑的基元，实现照片级真实感实时渲染。方法引入两种分解：超球面谐波（HH）分解建模时空平滑的颜色变化，可学习基表示建模运动引起的密度与颜色突变；并将分解集成到类PlenOctree的Video
+    Octree（VOctree）以显著加速训练、降低内存开销。基于将每个VOctree视为基元的体级深度排序与alpha混合，NeuVV支持时空内容合成编辑，如同一表演在不同位置/时序复用、服装换色、聚光灯阴影与距离衰减光照等，均以交互速度运行。作者进一步开发神经-光栅化混合渲染框架，首次在消费级VR头显中实现体视频的沉浸式观看与编辑。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 神经体视频（动态NeRF编码+实时渲染编辑+VR）属沉浸式媒体核心工作，非核心编码域故仅收录摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: NeuVV：支持沉浸式渲染与编辑的神经体视频
+relations:
+- type: same_topic
+  ref: paper:arxiv:2310.08205
+  note: LiveVV同为体视频（volumetric video）系统级工作，主题与NeuVV的体视频表示/呈现直接相关
+- type: same_topic
+  ref: paper:arxiv:2411.05322
+  note: 同样针对NeRF-based体视频，但侧重压缩，与NeuVV的NeRF体视频表示同主题
+- type: same_topic
+  ref: paper:arxiv:2608.30184
+  note: ATGS研究长时序体视频表示，与NeuVV的动态体视频表示同主题
+- type: same_topic
+  ref: paper:arxiv:2412.04469
+  note: QUEEN对动态高斯自由视点视频做高效编码，同属动态三维/体视频表示与处理主题

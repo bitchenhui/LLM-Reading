@@ -1,0 +1,64 @@
+id: paper:arxiv:2507.14454
+type: paper
+title: 'Adaptive 3D Gaussian Splatting Video Streaming: Visual Saliency-Aware Tiling and Meta-Learning-Based
+  Bitrate Adaptation'
+domain: immersive_media
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2507.14454v1
+  url: https://arxiv.org/abs/2507.14454
+  pdf_url: https://arxiv.org/pdf/2507.14454v1
+  venue: arXiv preprint
+time:
+  published: '2025-07-19'
+  collected: '2026-11-14'
+entities:
+- ref: concept:3DGS
+  role: subject
+- ref: concept:ABR
+  role: uses
+- ref: concept:IQA
+  role: uses
+claims:
+- statement: 提出融合空间与时间特征的显著性引导自适应3DGS分块技术，每个瓦片编码为具备专用形变场与多质量级别的版本供自适应选择
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 提出面向3DGS视频的新质量评估框架，联合评估3DGS表示在流传输中的空间域退化与渲染2D图像的质量
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 专为3DGS视频定制的元学习自适应码率算法在不同网络条件下取得最优性能
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 大量实验表明所提方法（分块、质量评估、ABR）整体显著优于SOTA方法
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出显著性感知3DGS分块、3DGS视频质量评估框架与元学习码率自适应的完整3DGS视频流传输方案。
+  abstract_zh: 3DGS视频流传输仍处早期，面临分块、质量评估与码率自适应等基础挑战，论文提出一套完整解决方案。其提出由空间与时间显著性特征引导的自适应3DGS分块技术，每个瓦片编码为具备专用形变场与多质量级别的版本以供自适应选择。同时引入联合评估3DGS表示在流传输中空间域退化与渲染2D图像质量的3DGS视频质量评估框架。还提出专为3DGS视频定制的元学习码率自适应算法，可在不同网络条件下取得最优性能。大量实验表明所提方法显著优于现有SOTA。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 研究对象为3DGS视频流传输，属沉浸式与三维域而非核心编码域，按基准给 summary_only；但覆盖分块/质量评估/ABR三条线，是新兴热点的重要系统性工作。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 自适应3D高斯泼溅视频流传输：视觉显著性感知分块与基于元学习的码率自适应
+relations:
+- type: same_topic
+  ref: paper:arxiv:2609.18624
+  note: 同属3DGS表示的自适应流式传输（MoQ渐进式质量选择与本文多质量级别瓦片选择同题）
+- type: same_topic
+  ref: paper:arxiv:2610.21121
+  note: 同为面向移动端体积视频的3DGS流传输系统
+- type: same_topic
+  ref: paper:arxiv:2408.14823
+  note: 同属3DGS自适应流传输（分层渐进式3DGS）
+- type: same_topic
+  ref: paper:arxiv:2611.04498
+  note: 同属3DGS视频质量评估（本文亦提出3DGS视频QA框架）
+- type: same_topic
+  ref: paper:arxiv:2412.04469
+  note: 同为动态高斯自由视点视频的流式编码与传输

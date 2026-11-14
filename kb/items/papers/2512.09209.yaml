@@ -1,0 +1,55 @@
+id: paper:arxiv:2512.09209
+type: paper
+title: 'Beyond Algorithm Evolution: An LLM-Driven Framework for the Co-Evolution of Swarm Intelligence
+  Optimization Algorithms and Prompts'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2512.09209v1
+  url: https://arxiv.org/abs/2512.09209
+  pdf_url: https://arxiv.org/pdf/2512.09209v1
+  venue: arXiv preprint
+time:
+  published: '2025-12-10'
+  collected: '2026-11-14'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:EoH
+  role: compared_against
+- ref: concept:FunSearch
+  role: compared_against
+claims:
+- statement: 提出的群智能算法与提示词协同进化框架在多类NP问题上性能优于EoH、FunSearch等最先进的自动算法设计方法。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在不同LLM（GPT-4o-mini、Qwen3-32B、GPT-5）上生成的提示词呈现显著分化的进化轨迹，说明需要结构化的协同进化框架。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 该框架跨不同LLM保持领先性能，降低对最强LLM的依赖，支持更低成本的部署。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 消融实验与进化提示词分析证明算法与提示词的协同进化对取得最优性能必不可少。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出用单一LLM对群智能优化算法与引导提示词协同进化的框架，在NP问题上超越EoH、FunSearch等自动设计方法。
+  abstract_zh: 本文指出EoH、FunSearch、Reevo等自动算法设计框架只进化算法本身而忽视引导它们的提示词，并以群智能优化作为更普适、更有原则的自动设计基础，提出基于单个LLM的算法与提示词协同进化新框架，同时给出高效可解释的提示词模板评估方法。在多类NP问题上的评估显示，该框架优于多种最先进的自动设计方法；在GPT-4o-mini、Qwen3-32B、GPT-5等不同LLM上，生成的提示词进化轨迹显著分化，凸显结构化协同进化框架的必要性。方法跨模型保持领先性能，降低对最强LLM的依赖，实现更低成本部署；消融实验与分析进一步证明算法与提示词协同进化对达到最优性能不可或缺。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: LLM驱动的群智能算法与提示词协同进化框架，属自动算法设计/自改进谱系（对标EoH、FunSearch），非音视频核心域，按基准仅收录摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 超越算法进化：LLM驱动的群智能优化算法与提示词协同进化框架
+relations:
+- type: same_topic
+  ref: paper:arxiv:2401.02051
+  note: EoH原论文，本文将其作为自动算法设计基线并扩展为算法-提示词协同进化
+- type: same_topic
+  ref: paper:arxiv:2509.07367
+  note: 同为LLM驱动代码/算法自动进化工作，且均在NP类问题上评估
