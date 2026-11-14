@@ -1,0 +1,88 @@
+id: paper:arxiv:2605.19633
+type: paper
+title: 'optimize_anything: A Universal API for Optimizing any Text Parameter'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2605.19633v1
+  url: https://arxiv.org/abs/2605.19633
+  pdf_url: https://arxiv.org/pdf/2605.19633v1
+  venue: arXiv preprint
+time:
+  published: '2026-05-19'
+  collected: '2026-11-15'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:AlphaEvolve
+  role: compared_against
+claims:
+- statement: 将优化统一为'由评分函数评估的文本工件'后，单一LLM优化系统可在六个不同任务上达到SOTA，首次证明文本优化+LLM搜索是通用问题求解范式
+  confidence: reported
+  metrics:
+  - name: 统一任务数
+    value: '6'
+    scope: 单系统覆盖的多样任务数量
+  evidence: abstract（初筛，未读全文）
+- statement: 发现的agent架构使Gemini Flash在ARC-AGI上的准确率接近提升至三倍
+  confidence: reported
+  metrics:
+  - name: ARC-AGI准确率
+    value: 32.5% → 89.5%
+    scope: Gemini Flash，采用系统发现的agent架构
+  evidence: abstract（初筛，未读全文）
+- statement: 系统找到的调度算法可大幅削减云成本
+  confidence: reported
+  metrics:
+  - name: 云成本削减
+    value: 40%
+    scope: 发现的调度算法相对基线
+  evidence: abstract（初筛，未读全文）
+- statement: 生成的CUDA内核多数达到或超过PyTorch基线水平
+  confidence: reported
+  metrics:
+  - name: CUDA内核达到或超越PyTorch比例
+    value: 87%
+    scope: 系统生成的CUDA内核 vs PyTorch
+  evidence: abstract（初筛，未读全文）
+- statement: 在圆填充问题上超越AlphaEvolve的公开结果
+  confidence: reported
+  metrics:
+  - name: 圆填充问题规模
+    value: n=26
+    scope: 对比AlphaEvolve公开解的算例
+  evidence: abstract（初筛，未读全文）
+- statement: 可执行的辅助信息（side information）比纯分数反馈带来更快收敛和显著更高的最终分数
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 同等单问题预算下，带跨任务迁移的多任务搜索优于独立优化，且收益随相关任务数量增加而扩大
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 基于LLM搜索的通用文本优化框架，单系统在六大任务达SOTA并超越AlphaEvolve圆填充结果
+  abstract_zh: 该工作（GEPA项目）将优化问题统一表述为'改进由评分函数评估的文本工件'，构建了支持单任务搜索、多任务跨问题迁移和未见输入泛化的LLM优化系统，并在六个差异巨大的任务上达到SOTA。具体包括：发现的agent架构将Gemini
+    Flash的ARC-AGI准确率从32.5%提升至89.5%（近三倍）、找到降低云成本40%的调度算法、87%生成的CUDA内核达到或超过PyTorch水平、在n=26圆填充问题上超越AlphaEvolve的公开结果。消融实验表明可执行的辅助信息比纯分数反馈收敛更快、终分显著更高；同等单问题预算下多任务搜索凭借跨任务迁移优于独立优化，收益随相关任务数增加而扩大。作者首次论证基于LLM搜索的文本优化是通用问题求解范式，并开源了支持多后端的optimize_anything。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: LLM驱动的通用文本优化框架（GEPA项目），属于自我改进AI核心工作但非视频编码核心域，按规则给summary_only
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: optimize_anything：优化任意文本参数的通用API
+relations:
+- type: same_topic
+  ref: paper:arxiv:2506.13131
+  note: 本文在n=26圆填充上直接对比并超越AlphaEvolve，同属LLM驱动的算法发现与优化范式
+- type: same_topic
+  ref: paper:arxiv:2511.17592
+  note: 同为LLM+进化算法驱动的通用开源优化框架
+- type: same_topic
+  ref: paper:arxiv:2511.12063
+  note: 同属语言空间文本参数优化以服务自改进AI的研究线
+- type: same_topic
+  ref: paper:arxiv:2510.18428
+  note: 同为基于LLM自我改进的优化程序/框架构建

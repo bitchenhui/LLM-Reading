@@ -1,0 +1,49 @@
+id: paper:arxiv:2605.30227
+type: paper
+title: Unifying Temporal and Structural Credit Assignment in LLM-Based Multi-Agent Prompt Optimization
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2605.30227v1
+  url: https://arxiv.org/abs/2605.30227
+  pdf_url: https://arxiv.org/pdf/2605.30227v1
+  venue: arXiv preprint
+time:
+  published: '2026-05-28'
+  collected: '2026-11-15'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:SelfImprovement
+  role: subject
+claims:
+- statement: 将MAS优化目标分解为两类信用信号：用状态空间瓶颈做时序信用（识别关键轮次），用稳定角色策略做结构信用（隔离智能体贡献），从而解缠误差信号、降低黑盒探索的高方差。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 提出离散化、言语化的块坐标下降算法，交替优化角色提示与聚合协议，借助LLM生成的"代理梯度"只针对识别出的薄弱环节更新；在多个推理基准上显著降低查询复杂度并提升性能。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出时序与结构双轴信用分配，以块坐标下降迭代优化多智能体LLM的角色提示与聚合协议，实现自改进。
+  abstract_zh: 针对LLM多智能体系统（MAS）计算图离散不可微、全局监督信号稀疏导致黑盒优化器难以定位局部故障的问题，作者提出沿两个轴分解优化目标：时序信用用状态空间瓶颈识别关键轮次，结构信用用稳定角色策略隔离各智能体的贡献。基于分解后的信号，引入离散化、言语化的块坐标下降算法，交替优化角色提示与聚合协议，利用LLM生成的"代理梯度"只更新被识别的薄弱环节。在多个推理基准上，该方法显著降低查询复杂度并提升性能，为自改进MAS提供了有原则、可解释的路径。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 面向LLM多智能体系统的提示优化与信用分配，通向自改进MAS，属自我改进AI域，非核心编码域故仅初筛摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 统一LLM多智能体提示优化中的时序与结构信用分配
+relations:
+- type: same_topic
+  ref: paper:arxiv:2604.04247
+  note: 同为LLM智能体提示学习的自改进方法（Combee）
+- type: same_topic
+  ref: paper:arxiv:2609.38662
+  note: 同为多智能体协作的递归自改进（CollabFlow）
+- type: same_topic
+  ref: paper:arxiv:2604.17658
+  note: 同为多智能体系统中的自改进与误差诊断主题

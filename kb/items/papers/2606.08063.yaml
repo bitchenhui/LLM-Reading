@@ -1,0 +1,49 @@
+id: paper:arxiv:2606.08063
+type: paper
+title: 'Robust-U1: Can MLLMs Self-Recover Corrupted Visual Content for Robust Understanding?'
+domain: processing_enhancement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2606.08063v1
+  url: https://arxiv.org/abs/2606.08063
+  pdf_url: https://arxiv.org/pdf/2606.08063v1
+  venue: arXiv preprint
+time:
+  published: '2026-06-06'
+  collected: '2026-11-15'
+entities:
+- ref: metric:SSIM
+  role: subject
+- ref: concept:IQA
+  role: uses
+claims:
+- statement: Robust-U1在真实世界视觉退化基准上取得了当前最优的鲁棒性表现
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在通用VQA基准的对抗性退化条件下，Robust-U1仍保持优于基线的性能
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 框架采用三阶段设计：SFT初步重建、像素级SSIM与语义级CLIP相似度双奖励强化学习、受损图与恢复图联合多模态推理
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 分析表明高质量的视觉恢复可直接提升MLLM推理性能，自恢复是鲁棒视觉理解的关键机制
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出Robust-U1：SFT+双奖励强化学习让MLLM自恢复受损图像，联合推理实现鲁棒视觉理解
+  abstract_zh: 针对多模态大语言模型在真实世界视觉退化下性能显著下降的问题，提出Robust-U1框架，赋予MLLM显式的视觉自恢复能力。方法分三阶段：先监督微调完成初步重建，再以像素级SSIM与语义级CLIP相似度构成双奖励的强化学习对齐高视觉质量，最后联合受损输入与恢复图像进行多模态推理。实验表明该方法在真实退化基准上达到SOTA鲁棒性，并在通用VQA基准的对抗退化下保持优越性能。分析证实高质量视觉恢复可直接提升推理性能，将自恢复确立为鲁棒视觉理解的关键机制。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 属MLLM受损视觉内容自恢复/复原增强方向，与编码链路无直接关联，非核心域仅作初筛摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: Robust-U1：多模态大模型能否自恢复受损视觉内容以实现鲁棒理解？
+relations:
+- type: same_topic
+  ref: paper:arxiv:2312.11595
+  note: 同属视觉内容复原/恢复研究：SPIRE面向退化图像的语义引导恢复，Robust-U1面向受损视觉内容的自恢复以支撑下游理解

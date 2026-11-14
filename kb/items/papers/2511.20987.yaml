@@ -1,0 +1,50 @@
+id: paper:arxiv:2511.20987
+type: paper
+title: 'Even with AI, Bijection Discovery is Still Hard: The Opportunities and Challenges of OpenEvolve
+  for Novel Bijection Construction'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2511.20987v1
+  url: https://arxiv.org/abs/2511.20987
+  pdf_url: https://arxiv.org/pdf/2511.20987v1
+  venue: arXiv preprint
+time:
+  published: '2025-11-26'
+  collected: '2026-11-15'
+entities:
+- ref: concept:AlphaEvolve
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: 将OpenEvolve应用于三个基于Dyck路径的双射构造问题（两个已知、一个开放），发现进化式程序合成系统有潜力成为组合数学家的有价值工具，但发现新颖研究级双射对当前前沿系统仍然困难，需要人类数学家在环
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 进化式程序合成方法（AlphaEvolve、OpenEvolve、ShinkaEvolve等）适用于解为显式构造形式的问题，其应用面不限于以往主要关注的界值估计类问题（如球堆积）
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 将AlphaEvolve类进化式程序合成系统OpenEvolve用于组合双射构造，发现前沿AI仍难以独立产出研究级新双射
+  abstract_zh: 论文考察以AlphaEvolve、OpenEvolve、ShinkaEvolve为代表的进化式程序合成系统：由多个LLM生成人类可读代码形式的候选解，再经进化迭代改进，以超越LLM单次生成的水平。以往数学应用多集中于界值估计类问题（如球堆积），而该方法适用于任何解为显式构造的问题。作者将OpenEvolve应用于三个基于Dyck路径的双射构造问题，其中两个已知解、一个为开放问题。结果表明此类系统对组合数学家有成为有价值工具的潜力，但发现新颖的研究级双射对当前前沿系统仍是难题，人类数学家仍需在环；文中还给出供同行参考的经验教训。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 属自我改进AI域的案例研究：用AlphaEvolve类进化式程序合成系统（OpenEvolve）做组合双射发现，评估前沿系统极限，与音视频编码核心无关，按基准收录为summary_only
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 即使有AI，双射发现依然困难：OpenEvolve用于新双射构造的机遇与挑战
+relations:
+- type: same_topic
+  ref: paper:arxiv:2506.13131
+  note: 同为AlphaEvolve进化式程序合成系统的数学/算法发现研究
+- type: same_topic
+  ref: paper:arxiv:2507.14172
+  note: 同为LLM进化式程序合成的案例研究（ARC-AGI），与本文OpenEvolve双射构造案例同属进化程序合成评估
+- type: same_topic
+  ref: paper:arxiv:2510.14150
+  note: 同为开源进化式编码代理（CodeEvolve），与OpenEvolve属同一类系统

@@ -1,0 +1,55 @@
+id: paper:arxiv:2601.21738
+type: paper
+title: 'From Global to Granular: Revealing IQA Model Performance via Correlation Surface'
+domain: quality_assessment
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2601.21738v2
+  url: https://arxiv.org/abs/2601.21738
+  pdf_url: https://arxiv.org/pdf/2601.21738v2
+  venue: arXiv preprint
+time:
+  published: '2026-01-29'
+  collected: '2026-11-15'
+entities:
+- ref: concept:IQA
+  role: subject
+- ref: metric:MOS
+  role: uses
+claims:
+- statement: PLCC、SRCC等全局相关指标将IQA性能压缩为单一标量，无法捕捉排序一致性在局部质量谱段上的差异：两个SRCC相同的模型可能分别在高质量段排序和细小质量差分辨上各有优势。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: SRCC与PLCC对测试样本质量分布敏感，导致跨测试集的模型比较结果不稳定。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: GMC由两部分构成：基于绝对MOS值与成对|ΔMOS|条件的高斯加权相关（粒度调制器），以及缓解非均匀质量分布偏置的相关正则化（分布调节器），输出以MOS和|ΔMOS|为联合自变量的三维相关曲面。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在标准基准上的实验表明，GMC能揭示标量指标不可见的IQA模型性能特征，为模型分析、比较与部署提供更有信息量且更可靠的评价范式。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出粒度调制相关GMC，以MOS与|ΔMOS|联合函数构成相关曲面，细粒度刻画IQA模型局部性能并校正分布偏置。
+  abstract_zh: 论文指出PLCC、SRCC等全局相关指标将IQA模型性能压缩为单一标量，无法反映排序一致性在局部质量谱段上的变化，且对测试样本质量分布敏感，导致跨测试集比较不稳定。为此提出粒度调制相关GMC：粒度调制器以绝对MOS值与成对MOS差|ΔMOS|为条件施加高斯加权相关，分布调节器则正则化相关值以缓解非均匀质量分布带来的偏置。由此将相关值表示为MOS与|ΔMOS|的联合函数，形成IQA性能的三维相关曲面。标准基准实验显示，GMC能揭示标量指标不可见的性能特征，为IQA模型的分析、比较与部署提供更有信息量且更可靠的范式。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 纯IQA评测方法论工作，属质量评估域而非核心编码域，按收录基准仅作初筛摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 从全局到细粒度：通过相关曲面揭示IQA模型性能
+relations:
+- type: same_topic
+  ref: paper:arxiv:2511.00969
+  note: 同为质量指标评价工作，均关注客观质量指标在编解码内容上的评测可靠性
+- type: same_topic
+  ref: paper:arxiv:2601.08311
+  note: 同为IQA模型相关研究，该文增强LMM的图像质量评估能力
+- type: same_topic
+  ref: paper:arxiv:2408.11982
+  note: 同属压缩视频质量评估主题，AIM 2024挑战赛亦依赖相关性指标评价

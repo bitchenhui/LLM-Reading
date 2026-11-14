@@ -1,0 +1,54 @@
+id: paper:arxiv:2604.15082
+type: paper
+title: 'Autonomous Evolution of EDA Tools: Multi-Agent Self-Evolved ABC'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2604.15082v1
+  url: https://arxiv.org/abs/2604.15082
+  pdf_url: https://arxiv.org/pdf/2604.15082v1
+  venue: arXiv preprint
+time:
+  published: '2026-04-16'
+  collected: '2026-11-15'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: 提出首个自进化逻辑综合框架，LLM智能体可对ABC整个集成代码库进行自主源码改进，输出仓库保持单一二进制执行模型与命令接口
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 初始演化周期以现有开源综合组件（流程调优、逻辑最小化、工艺映射）引导，不手动注入新启发式
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 智能体团队按编程指导提示，在统一的正确性与QoR驱动评估循环中迭代改写ABC子组件：提出修改→编译集成二进制→验证正确性→在ISCAS 85/89/99、VTR、EPFL、IWLS
+    2005多套基准上评估QoR
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 通过持续反馈，系统发现超越人类设计启发式的优化并学会新的综合策略以提升QoR，实现了百万行规模EDA工具的自主渐进改进
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 首个自进化逻辑综合框架：LLM智能体团队自主改写ABC源码，在百万行规模上持续提升综合QoR
+  abstract_zh: 该文提出首个自进化逻辑综合框架，利用LLM智能体团队自主改进广泛使用的逻辑综合系统ABC的源码，作用于整个集成代码库且保持单一二进制执行模型与命令接口。初始演化周期以现有开源综合组件（流程调优、逻辑最小化、工艺映射）引导启动，未手动注入新启发式。智能体团队按编程指导提示，在统一的正确性与QoR驱动评估循环中迭代改写ABC子组件：每轮提出代码修改、编译集成二进制、验证正确性，并在ISCAS
+    85/89/99、VTR、EPFL、IWLS 2005多套基准上评估QoR。经持续反馈，系统发现了超越人类设计启发式的优化，学会新的综合策略并提升QoR，展示了在百万行规模EDA工具上实现自主渐进改进的可行性。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: LLM多智能体在百万行EDA逻辑综合工具ABC整库上的自进化改进，属自我改进AI域的代表性工作，但非核心音视频域故仅初筛摘要
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 自主演化EDA工具：多智能体自进化ABC
+relations:
+- type: same_topic
+  ref: paper:arxiv:2506.13131
+  note: 同为LLM编码智能体对既有代码库/算法进行进化式自主优化（AlphaEvolve vs 自进化ABC）
+- type: same_topic
+  ref: paper:arxiv:2609.01535
+  note: 均研究LLM能否自主改进工程工具，本工作针对EDA逻辑综合ABC，后者针对视频编码工具

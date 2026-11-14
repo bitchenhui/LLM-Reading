@@ -1,0 +1,52 @@
+id: paper:arxiv:2601.18005
+type: paper
+title: Flow-based Extremal Mathematical Structure Discovery
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2601.18005v1
+  url: https://arxiv.org/abs/2601.18005
+  pdf_url: https://arxiv.org/pdf/2601.18005v1
+  venue: arXiv preprint
+time:
+  published: '2026-01-25'
+  collected: '2026-11-15'
+entities:
+- ref: concept:AlphaEvolve
+  role: subject
+- ref: concept:LLM
+  role: compared_against
+claims:
+- statement: FlowBoost在四个几何优化问题（超立方体球堆积、最大化半径和的圆堆积、Heilbronn三角形问题、星偏差最小化）上的解在多处匹配或超越已知最优结果。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在圆堆积问题上，FlowBoost改进了已知最优下界，并在显著更少计算资源下超越基于LLM的系统AlphaEvolve。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 相比PatternBoost等开环方法，FlowBoost将外层优化循环迭代次数减少数个数量级，所需训练集与训练时间更小，且不依赖LLM。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出FlowBoost闭环生成框架（流匹配+奖励引导+局部搜索），在圆堆积等问题上改进已知下界并超越AlphaEvolve。
+  abstract_zh: FlowBoost是一个闭环生成式框架，由几何感知条件流匹配模型、带动作探索的奖励引导策略优化、以及用于训练数据生成与最终精修的随机局部搜索三部分组成，用于发现稀有极值几何构型。与PatternBoost等开环方法不同，也不同于依赖冻结LLM的AlphaEvolve，FlowBoost在采样阶段强制几何可行性并将奖励信号直接传播进生成模型，从而闭合优化循环。该方法所需训练集更小、训练时间更短，外层迭代次数减少数个数量级，且摆脱了对LLM的依赖。在超立方体球堆积、最大化半径和的圆堆积、Heilbronn三角形与星偏差最小化四个几何优化问题上，多数结果匹配或超越已知最优。圆堆积问题上FlowBoost改进了已知最优下界，在显著更少算力下超过AlphaEvolve。
+assessment:
+  relevance: low
+  decision: summary_only
+  reason: 纯AI驱动的数学极值结构发现工作，与音视频技术无关；因直接对标并超越AlphaEvolve、属知识库自改进AI跟踪域而收录为初筛摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 基于流的极值数学结构发现
+relations:
+- type: same_topic
+  ref: paper:arxiv:2506.13131
+  note: FlowBoost直接对标AlphaEvolve：在圆堆积下界上以更少算力超越该LLM编码代理发现系统
+- type: same_topic
+  ref: paper:arxiv:2511.02864
+  note: 同属AI驱动的数学探索与结构发现研究线
+- type: same_topic
+  ref: paper:arxiv:2401.02051
+  note: 同属自动化算法/结构进化发现（EoH等LLM进化式设计）研究族，本文定位为无LLM闭环方案

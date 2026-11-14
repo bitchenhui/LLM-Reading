@@ -1,0 +1,56 @@
+id: paper:arxiv:2605.26195
+type: paper
+title: 'CyberEvolver: Structured Self-Evolution for Cybersecurity Agents On the Fly'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2605.26195v2
+  url: https://arxiv.org/abs/2605.26195
+  pdf_url: https://arxiv.org/pdf/2605.26195v2
+  venue: arXiv preprint
+time:
+  published: '2026-05-25'
+  collected: '2026-11-15'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: CyberEvolver在CTF挑战、漏洞利用与渗透测试任务上平均将种子代理成功率提升13.6%
+  confidence: reported
+  metrics:
+  - name: 平均成功率提升
+    value: 13.6%
+    scope: 三类安全任务×四个开源LLM，相对种子代理基线
+  evidence: abstract（初筛，未读全文）
+- statement: 在相同评测设置下优于六个人工设计的网络安全代理以及两种从其他领域改造而来的自我改进方法
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 框架由四层可进化架构、轨迹到诊断机制与基于种群的束搜索三个组件构成，分别应对脚手架变更空间非结构化、执行反馈稀疏且被环境遮蔽、低多样性更新导致误差累积三大挑战
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出结构化自我进化的网络安全LLM代理框架，从失败执行经验中迭代修订自身脚手架，平均提升成功率13.6%。
+  abstract_zh: 针对现有网络安全LLM代理依赖固定人工设计脚手架、难以适配多样目标与失败模式的问题，提出自我进化框架CyberEvolver，基于失败执行轨迹迭代修订代理脚手架。方法包含四层可进化架构，将脚手架优化分解为结构化组件；轨迹到诊断机制把噪声执行日志转化为可操作的修订信号；基于种群的束搜索策略在进化过程中保持代理变体多样性。在CTF挑战、漏洞利用与渗透测试任务上用四个开源LLM评估，平均将种子代理成功率提升13.6%，优于六个人工设计的网络安全代理及两种从其他领域改造的自我改进方法。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: LLM代理脚手架结构化自我进化研究，属自我改进AI域，但应用场景为网络安全而非音视频，仅作初筛收录。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: CyberEvolver：网络安全代理的即时结构化自我进化
+relations:
+- type: same_topic
+  ref: paper:arxiv:2608.30207
+  note: 同属面向安全用途代理的自我改进研究
+- type: same_topic
+  ref: paper:arxiv:2511.13646
+  note: 同为LLM代理的即时自我进化研究
+- type: same_topic
+  ref: paper:arxiv:2510.07841
+  note: 同属LLM代理自我改进方向

@@ -1,0 +1,65 @@
+id: paper:arxiv:2603.00483
+type: paper
+title: 'RAISE: Requirement-Adaptive Evolutionary Refinement for Training-Free Text-to-Image Alignment'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2603.00483v1
+  url: https://arxiv.org/abs/2603.00483
+  pdf_url: https://arxiv.org/pdf/2603.00483v1
+  venue: arXiv preprint
+time:
+  published: '2026-02-28'
+  collected: '2026-11-15'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:TrainingFree
+  role: uses
+claims:
+- statement: RAISE 在 GenEval 基准上取得总体 0.94 的对齐得分，达到当时最优的提示-图像对齐水平
+  confidence: reported
+  metrics:
+  - name: GenEval 总体得分
+    value: '0.94'
+    scope: GenEval 基准 overall，对比 prior scaling 与 reflection-tuned 基线
+  evidence: abstract（初筛，未读全文）
+- statement: 相比已有推理时扩展与反射微调基线，RAISE 以更少的生成样本与 VLM 调用实现同等或更优对齐，验证了按需求自适应分配算力的效率优势
+  confidence: reported
+  metrics:
+  - name: 生成样本数减少
+    value: 30-40%
+    scope: 相对 prior scaling 与 reflection-tuned 基线
+  - name: VLM 调用减少
+    value: 80%
+    scope: 相对 prior scaling 与 reflection-tuned 基线
+  evidence: abstract（初筛，未读全文）
+- statement: RAISE 无需训练与微调、模型无关，可在 GenEval 与 DrawBench 上以多轮自改进方式泛化迁移到不同 T2I 模型
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 免训练的需求自适应进化框架，推理时按需求清单分配算力，实现高效文本到图像对齐（GenEval 0.94）
+  abstract_zh: RAISE（Requirement-Adaptive Self-Improving Evolution）是一个免训练、需求驱动的进化式文本到图像对齐框架，将图像生成建模为需求驱动的自适应扩展过程。它在推理时演化候选图像种群，通过提示重写、噪声重采样、指令编辑等精炼动作迭代改进，并用结构化需求清单逐项校验，仅在未满足项处追加计算，使算力消耗与提示语义复杂度匹配，实现自适应测试时扩展。在
+    GenEval 与 DrawBench 上，RAISE 取得 0.94 的 GenEval 总体 SOTA 对齐分数，生成样本数较已有 scaling 与 reflection-tuned 基线减少
+    30-40%，VLM 调用减少 80%。该方法无需构建反射数据集或对扩散与视觉语言模型联合微调，具备可泛化、模型无关的多轮自改进能力。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: RAISE 是免训练、推理时的需求自适应多轮自改进进化框架，属自我改进 AI 域而非核心编码域，故仅初筛摘要
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: RAISE：面向免训练文本到图像对齐的需求自适应进化精炼
+relations:
+- type: same_topic
+  ref: paper:arxiv:2509.10704
+  note: 同属免训练/推理时的自改进文本到图像生成框架（Maestro），均以多轮代理式迭代提升 T2I 对齐
+- type: same_topic
+  ref: paper:arxiv:2412.14352
+  note: RAISE 是推理时自改进（inference-time self-improvement）在图像生成领域的实例，与该综述主题一致
+- type: same_topic
+  ref: paper:arxiv:2609.25510
+  note: 同为测试时计算扩展路线，Hill Sampling 讨论重复采样/进化/训练的替代方案，与 RAISE 的自适应扩展问题域相交

@@ -1,0 +1,70 @@
+id: paper:arxiv:2605.09764
+type: paper
+title: 'LEVI: Stronger Search Architectures Can Substitute for Larger LLMs in Evolutionary Search'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2605.09764v1
+  url: https://arxiv.org/abs/2605.09764
+  pdf_url: https://arxiv.org/pdf/2605.09764v1
+  venue: arXiv preprint
+time:
+  published: '2026-05-10'
+  collected: '2026-11-15'
+entities:
+- ref: concept:AlphaEvolve
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: LEVI在系统研究基准上以更小预算取得最高分，预算比ShinkaEvolve、GEPA、AdaEvolve等已发表前沿模型运行小3.3-6.7倍
+  confidence: reported
+  metrics:
+  - name: 预算缩减倍数
+    value: 3.3-6.7x
+    scope: 系统研究基准上相对已发表前沿模型运行（ShinkaEvolve/GEPA/AdaEvolve）
+  evidence: abstract（初筛，未读全文）
+- statement: 在一个问题上，LEVI以35倍更低的成本匹配既有最佳结果
+  confidence: reported
+  metrics:
+  - name: 成本降低倍数
+    value: 35x
+    scope: 单一系统研究问题上达到既有最佳结果所需成本
+  evidence: abstract（初筛，未读全文）
+- statement: 在提示词优化上，LEVI以不到一半的rollout预算在四个基准上持平或超过GEPA
+  confidence: reported
+  metrics:
+  - name: rollout预算比
+    value: <0.5x
+    scope: 四个提示词优化基准上相对GEPA的rollout预算
+  evidence: abstract（初筛，未读全文）
+- statement: LEVI通过三项组件改进进化搜索：建立并维护多样性的解数据库、按任务在大小LLM间路由变异、面向rollout密集场景的保序代理基准
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: LEVI以多样性解库、大小LLM变异路由与保序代理基准，用更小预算替代前沿大模型完成进化搜索
+  abstract_zh: LLM引导的进化搜索方法（如AlphaEvolve）在数学、系统研究和算法发现中有效，但依赖前沿大模型导致运行昂贵。作者认为这源于现有框架的搜索分配方式：解存档丢失多样性、把前沿模型浪费在小模型可完成的局部编辑、全量评估浪费rollout。LEVI提出三项改进：从起点建立并持续维护多样性的解数据库、发挥大小LLM各自优势的变异路由器、面向rollout密集场景的保序代理基准。在系统研究基准上，LEVI以比ShinkaEvolve、GEPA、AdaEvolve等已发表前沿模型运行小3.3-6.7倍的预算取得最高分，且在一个问题上以35倍更低成本达到既有最佳；在提示词优化上以不到一半的rollout预算在四个基准上持平或超过GEPA，框架已开源。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: LLM引导进化搜索框架（AlphaEvolve谱系）的harness优化工作，属自我改进AI域且与算法发现/成本效率高度相关，但非视频图像编码核心域，按规则给summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: LEVI：更强的搜索架构可以在进化搜索中替代更大的LLM
+relations:
+- type: same_topic
+  ref: paper:arxiv:2506.13131
+  note: AlphaEvolve原始论文，LEVI正是针对该类LLM引导进化搜索的成本问题提出改进
+- type: same_topic
+  ref: paper:arxiv:2510.14150
+  note: 同为开源的LLM进化式编码代理框架（算法发现与优化）
+- type: same_topic
+  ref: paper:arxiv:2610.03675
+  note: 同主题：面向成本/预算高效的LLM引导程序进化
+- type: same_topic
+  ref: paper:arxiv:2610.26770
+  note: 同主题：以性能-成本权衡为核心的递归harness自我改进

@@ -1,0 +1,67 @@
+id: paper:arxiv:2605.15224
+type: paper
+title: 'ICRL: Learning to Internalize Self-Critique with Reinforcement Learning'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2605.15224v1
+  url: https://arxiv.org/abs/2605.15224
+  pdf_url: https://arxiv.org/pdf/2605.15224v1
+  venue: arXiv preprint
+time:
+  published: '2026-05-13'
+  collected: '2026-11-15'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: subject
+claims:
+- statement: ICRL在智能体任务基准上平均超过GRPO基线6.4分。
+  confidence: reported
+  metrics:
+  - name: 平均提升
+    value: '6.4'
+    scope: 智能体任务基准，Qwen3-4B/8B骨干，相对GRPO
+  evidence: abstract（初筛，未读全文）
+- statement: ICRL在数学推理基准上平均超过GRPO基线7.0分。
+  confidence: reported
+  metrics:
+  - name: 平均提升
+    value: '7.0'
+    scope: 数学推理基准，Qwen3-4B/8B骨干，相对GRPO
+  evidence: abstract（初筛，未读全文）
+- statement: ICRL学到的8B批评者性能可与32B批评者相当，且token消耗显著更低。
+  confidence: reported
+  metrics:
+  - name: 批评者规模对比
+    value: 8B vs 32B
+    scope: critic能力对标，token用量大幅减少
+  evidence: abstract（初筛，未读全文）
+- statement: 通过分布校准重加权与角色分组优势估计，使求解器在无外部批评条件下实现自我改进而非依赖批评条件化行为。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出ICRL框架，联合训练求解器与批评者，将批评引导的成功内化为无外部辅助的求解器能力。
+  abstract_zh: 针对LLM智能体在去掉批评后无法保持正确行为、即未将批评内化为自身能力的问题，提出ICRL框架：从共享主干联合训练求解器与批评者，批评者以求解器后续性能增益作为奖励以激励可执行的反馈。为弥合批评条件行为与无批评行为间的分布偏移，引入分布校准重加权比例，并采用角色分组优势估计稳定双角色联合优化。在Qwen3-4B与Qwen3-8B骨干上、覆盖智能体与数学推理的多个基准评测中，平均较GRPO分别提升6.4与7.0分；学到的8B批评者性能可与32B批评者相当且token消耗大幅减少。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 属LLM自我改进方向（批评内化+RL联合训练求解器与批评者），非音视频核心技术，按规则仅收录摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: ICRL：用强化学习将自我批评内化
+relations:
+- type: same_topic
+  ref: paper:arxiv:2506.03106
+  note: 同为结合批评反馈与GRPO改进LLM推理的工作
+- type: same_topic
+  ref: paper:arxiv:2512.24103
+  note: 同样研究LLM内在自我批评（Intrinsic Self-Critique）能力的提升
+- type: same_topic
+  ref: paper:arxiv:2411.16579
+  note: 同属利用批评模型（critique model）增强LLM推理的研究线

@@ -1,0 +1,70 @@
+id: paper:arxiv:2605.13486
+type: paper
+title: 'R^2-Mem: Reflective Experience for Memory Search'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2605.13486v1
+  url: https://arxiv.org/abs/2605.13486
+  pdf_url: https://arxiv.org/pdf/2605.13486v1
+  venue: arXiv preprint
+time:
+  published: '2026-05-13'
+  collected: '2026-11-15'
+entities:
+- ref: concept:LLM
+  role: uses
+- ref: concept:SelfImprovement
+  role: subject
+claims:
+- statement: R²-Mem相较强基线可将记忆搜索的F1分数最高提升22.6%
+  confidence: reported
+  metrics:
+  - name: F1提升
+    value: 22.6%
+    scope: 相对强基线的最大提升（实验报告值）
+  evidence: abstract（初筛，未读全文）
+- statement: R²-Mem在提升效果的同时降低token消耗
+  confidence: reported
+  metrics:
+  - name: token消耗降低
+    value: 12.9%
+    scope: 相较强基线
+  evidence: abstract（初筛，未读全文）
+- statement: R²-Mem减少搜索迭代次数
+  confidence: reported
+  metrics:
+  - name: 搜索迭代减少
+    value: 20.2%
+    scope: 相较强基线
+  evidence: abstract（初筛，未读全文）
+- statement: R²-Mem提供免强化学习（RL-free）、低成本的LLM智能体自我改进路径，通过离线轨迹评估与经验蒸馏、在线经验引导实现
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出反思式经验框架R²-Mem，使记忆搜索智能体从历史轨迹蒸馏经验以实现免强化学习自我改进
+  abstract_zh: 论文针对深度搜索型记忆智能体反复犯历史错误、无法区分高低质量搜索轨迹的问题，提出反思式经验框架R²-Mem。离线阶段由基于评分准则的评估器对历史轨迹中的低质量与高质量步骤打分，再由自反思学习器蒸馏出抽象经验；在线推理阶段检索到的经验引导后续搜索动作，避免重复错误并保持高质量行为。实验显示相较强基线F1最高提升22.6%，token消耗降低12.9%，搜索迭代减少20.2%，验证其为免强化学习、低成本的LLM智能体自我改进方案。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 面向LLM智能体记忆搜索的反思式经验自我改进框架，属自我改进AI域而非音视频核心域
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: R²-Mem：面向记忆搜索的反思式经验框架
+relations:
+- type: same_topic
+  ref: paper:arxiv:2509.04439
+  note: 同属LLM终身记忆与经验抽象复用方向的自我改进研究
+- type: same_topic
+  ref: paper:arxiv:2603.24639
+  note: 同为面向自改进LLM智能体的反思式经验学习框架
+- type: same_topic
+  ref: paper:arxiv:2506.06698
+  note: 同为利用经验回放/经验引导实现语言智能体自改进的工作
+- type: same_topic
+  ref: paper:arxiv:2609.37968
+  note: 同为免奖励（reward-free）的自改进智能体搜索机制研究

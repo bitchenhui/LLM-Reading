@@ -1,0 +1,68 @@
+id: paper:arxiv:2511.13646
+type: paper
+title: 'Live-SWE-agent: Can Software Engineering Agents Self-Evolve on the Fly?'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2511.13646v3
+  url: https://arxiv.org/abs/2511.13646
+  pdf_url: https://arxiv.org/pdf/2511.13646v3
+  venue: arXiv preprint
+time:
+  published: '2025-11-17'
+  collected: '2026-11-15'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: Live-SWE-agent在SWE-bench Verified上无需测试时扩展即取得77.4%解决率，优于包括最佳商业方案在内的所有现有软件工程智能体。
+  confidence: reported
+  metrics:
+  - name: solve_rate
+    value: 77.4%
+    scope: SWE-bench Verified，无测试时扩展（test-time scaling）
+  evidence: abstract（初筛，未读全文）
+- statement: Live-SWE-agent在SWE-bench Pro上取得已知最佳解决率45.8%，超过最先进的人工设计软件工程智能体。
+  confidence: reported
+  metrics:
+  - name: solve_rate
+    value: 45.8%
+    scope: SWE-bench Pro，声称已知最佳
+  evidence: abstract（初筛，未读全文）
+- statement: 声称为首个live软件工程智能体：从仅有bash工具的最基础脚手架出发，在解决真实软件任务过程中在线自主进化自身scaffold实现；区别于DGM等需在特定基准上昂贵离线训练、且跨LLM/基准泛化性受限的自进化方法。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 首个运行时实时自我进化脚手架的软件工程智能体，SWE-bench Verified解决率达77.4%。
+  abstract_zh: 提出Live-SWE-agent，首个能在运行时（解决真实软件问题的过程中）自主且持续进化自身脚手架实现的live软件工程智能体。该方法从仅配备bash工具的最基础脚手架（如mini-SWE-agent）出发，在执行任务的同时自动改写自身scaffold。与Darwin-Gödel
+    Machine（DGM）等需要在特定基准上进行昂贵离线训练的自进化智能体不同，Live-SWE-agent在线进化、可跨LLM与基准泛化。在SWE-bench Verified上无需测试时扩展即取得77.4%解决率，超过包括最佳商业方案在内的所有现有软件工程智能体；在较新的SWE-bench
+    Pro上取得已知最佳解决率45.8%，超过最先进的人工设计智能体。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 核心RSI工作：首个运行时在线自我进化的软件工程智能体，是自改进智能体方向的代表性论文，按基准规则仅收录为summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: Live-SWE-agent：软件工程智能体能否实时自我进化？
+relations:
+- type: same_topic
+  ref: paper:arxiv:2410.04444
+  note: 同为自指涉递归自我改进的智能体框架；本文摘要明确以Gödel Machine系（DGM）为对比对象
+- type: same_topic
+  ref: paper:arxiv:2310.02304
+  note: 同属递归自改进代码生成路线：STOP通过改写自身代码实现自我改进，与本文在线改写scaffold思路同源
+- type: same_topic
+  ref: paper:arxiv:2506.13131
+  note: 同为LLM编码智能体驱动的自动进化/算法发现工作，与本文的agent自进化机制相关
+- type: same_topic
+  ref: paper:arxiv:2510.07841
+  note: 同为测试时/运行时自改进LLM智能体方向，与本文on-the-fly进化定位一致
+- type: same_topic
+  ref: paper:arxiv:2610.22791
+  note: 同为面向软件工程智能体的harness/scaffold自进化优化工作，与本文scaffold改写机制直接同题

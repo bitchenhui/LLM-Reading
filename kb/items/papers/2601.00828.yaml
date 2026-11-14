@@ -1,0 +1,81 @@
+id: paper:arxiv:2601.00828
+type: paper
+title: 'Decomposing LLM Self-Correction: The Accuracy-Correction Paradox and Error Depth Hypothesis'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2601.00828v1
+  url: https://arxiv.org/abs/2601.00828
+  pdf_url: https://arxiv.org/pdf/2601.00828v1
+  venue: arXiv preprint
+time:
+  published: '2025-12-24'
+  collected: '2026-11-15'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:SelfImprovement
+  role: subject
+claims:
+- statement: 发现准确率-纠错悖论：较弱模型的内在自我纠错率反而比较强模型高1.6倍
+  confidence: reported
+  metrics:
+  - name: 内在纠错率
+    value: 26.8%
+    scope: GPT-3.5，GSM8K-Complex内在纠错
+  - name: 内在纠错率
+    value: 16.7%
+    scope: DeepSeek，GSM8K-Complex内在纠错
+  - name: 纠错率倍数
+    value: 1.6x
+    scope: GPT-3.5相对DeepSeek
+  - name: 任务准确率
+    value: 66%
+    scope: GPT-3.5，GSM8K-Complex
+  - name: 任务准确率
+    value: 94%
+    scope: DeepSeek，GSM8K-Complex
+  evidence: abstract（初筛，未读全文）
+- statement: 提出错误深度假说：更强模型犯的错误更少但更深，因而不易自我纠正
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 错误检测率在不同架构间差异巨大，且检测能力不能预测纠错成功
+  confidence: reported
+  metrics:
+  - name: 错误检测率范围
+    value: 10%至82%
+    scope: 三个主流LLM跨模型实验
+  - name: 错误检测率
+    value: 10%
+    scope: Claude
+  - name: 内在纠错率
+    value: 29%
+    scope: Claude
+  evidence: abstract（初筛，未读全文）
+- statement: 提供错误位置提示会损害所有受测模型的纠错表现
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 将LLM内在自我纠错分解为检错、定位、纠错三能力，发现弱模型纠错率反而更高并提出错误深度假说。
+  abstract_zh: 该文将LLM内在自我纠错系统分解为错误检测、错误定位与错误修正三个子能力，在GSM8K-Complex（每模型500样本、共346处错误）上对三个主流大模型进行跨模型实验。研究发现显著的准确率-纠错悖论：较弱的GPT-3.5（准确率66%）内在纠错率达26.8%，比较强的DeepSeek（准确率94%、纠错率16.7%）高1.6倍。据此提出错误深度假说：更强模型犯的错误更少但更深，因而难以自我纠正。错误检测率在架构间差异巨大（10%至82%），且检测能力不能预测纠错成功——Claude仅检出10%错误却内在纠正29%；意外的是，提供错误位置提示反而损害所有模型表现。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 对LLM内在自我纠错能力的系统性实证分解，提出准确率-纠错悖论与错误深度假说，直接挑战自我改进流水线的线性假设，属自我改进AI领域但非核心编码域，按基准收录为summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 解构大语言模型自我纠错：准确率-纠错悖论与错误深度假说
+relations:
+- type: same_topic
+  ref: paper:arxiv:2210.08229
+  note: 同属LLM自我改进能力研究，本文为其内在纠错机制提供分解式实证检验
+- type: same_topic
+  ref: paper:arxiv:2412.02674
+  note: 同题考察LLM自我改进能力边界，均质疑内在自我改进的普遍有效性
+- type: same_topic
+  ref: paper:arxiv:2502.13441
+  note: 同以悖论形式刻画语言模型无外部脚手架下的自我改进/纠错局限

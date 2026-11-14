@@ -1,0 +1,53 @@
+id: paper:arxiv:2604.13598
+type: paper
+title: Enhancing Reinforcement Learning for Radiology Report Generation with Evidence-aware Rewards and
+  Self-correcting Preference Learning
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2604.13598v1
+  url: https://arxiv.org/abs/2604.13598
+  pdf_url: https://arxiv.org/pdf/2604.13598v1
+  venue: arXiv preprint
+time:
+  published: '2026-04-15'
+  collected: '2026-11-15'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: GEAR以分组证据感知奖励分别处理真阳性、假阴性、假阳性三类情形，提供证据级临床忠实性训练信号。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: SPL从多源噪声观测自动构建疾病感知偏好数据集并用LLM合成精炼报告，实现无人工监督的持续自改进。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: ESC-RL在两个公开胸部X光数据集上取得一致增益并达到SOTA性能。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出ESC-RL框架，以证据感知分组奖励GEAR和自纠正偏好学习SPL实现放射报告生成的临床忠实且无需人工监督的持续自改进。
+  abstract_zh: 针对现有RL放射报告生成方法报告级奖励缺乏证据支撑、缺少显式自改进机制两大局限，提出临床对齐的ESC-RL框架。GEAR组件以分组方式提供证据感知反馈：强化真阳性的一致性锚定、召回假阴性遗漏病灶、抑制假阳性的无依据内容。SPL策略从多源噪声观测中自动构建疾病感知偏好数据集，并利用LLM合成精炼报告，无需人工监督，支持训练过程中的持续自改进。在两个公开胸部X光数据集上取得一致提升并达到SOTA性能。
+assessment:
+  relevance: low
+  decision: summary_only
+  reason: 提出自纠正偏好学习与证据感知奖励以支持放射报告生成模型的持续自改进，属自改进AI方法在医学文本生成中的应用，与音视频核心技术无直接关联。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 基于证据感知奖励与自纠正偏好学习的强化学习放射报告生成增强
+relations:
+- type: same_topic
+  ref: paper:arxiv:2510.03687
+  note: 同为医学LLM自我改进（放射/医学报告的反思纠错与自提升）
+- type: same_topic
+  ref: paper:arxiv:2407.19594
+  note: 同为基于LLM自反馈/偏好数据自构建的模型自改进对齐方法
+- type: same_topic
+  ref: paper:arxiv:2505.08827
+  note: 同为强化学习中以自我奖励替代人工监督实现自改进的路线

@@ -1,0 +1,56 @@
+id: paper:arxiv:2605.02913
+type: paper
+title: 'Generate, Filter, Control, Replay: A Comprehensive Survey of Rollout Strategies for LLM Reinforcement
+  Learning'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2605.02913v1
+  url: https://arxiv.org/abs/2605.02913
+  pdf_url: https://arxiv.org/pdf/2605.02913v1
+  venue: arXiv preprint
+time:
+  published: '2026-04-08'
+  collected: '2026-11-15'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:SelfImprovement
+  role: subject
+claims:
+- statement: 论文提出Generate-Filter-Control-Replay（GFCR）生命周期分类法，将LLM RL后训练的rollout流水线统一分解为生成、过滤、控制、重放四个模块化阶段。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: Replay阶段涵盖跨rollout的产物重用与自我进化课程（self-evolving curricula），后者可自主生成新训练任务，服务于LLM自我改进。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 综述综合了可验证奖励RL、过程监督、judge门控、引导式与树/分段rollout、自适应算力分配、提前退出/部分rollout、吞吐量优化及面向自我改进的重放/重组等方法族。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 论文提供诊断索引，将常见rollout病理映射到GFCR模块与相应缓解手段，并给出可复现、算力高效、可信rollout流水线的开放挑战。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出GFCR生命周期分类法，系统综述LLM强化学习后训练中的rollout策略设计与权衡。
+  abstract_zh: 该综述以优化器无关的视角形式化推理型LLM强化学习后训练的rollout流水线，提出Generate-Filter-Control-Replay（GFCR）生命周期分类法，将流水线分解为生成候选轨迹与拓扑、经由验证器/评判器/评论家构建中间信号、预算约束下算力分配与分支/停止决策、以及跨rollout重用产物四个模块化阶段。配套的准则分类法从可靠性、覆盖度与成本敏感性刻画rollout权衡。作者综合了可验证奖励RL、过程监督、judge门控、引导式与树/分段rollout、自适应算力分配、提前退出与部分rollout、吞吐量优化及面向自我改进的重放/重组方法，并以数学、代码/SQL、多模态推理、工具使用agent与agentic技能基准进行案例研究。其中Replay阶段涵盖可自主生成新训练任务的自我进化课程，与LLM自我改进密切相关；文末提供将常见rollout病理映射到GFCR模块与缓解手段的诊断索引及开放挑战。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: LLM强化学习后训练rollout策略综述，其Replay阶段与自我进化课程涉及自我改进AI，属非核心域，按规则仅初筛收录。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 生成、过滤、控制、重放：大语言模型强化学习Rollout策略全面综述
+relations:
+- type: same_topic
+  ref: paper:arxiv:2509.02547
+  note: 同为面向LLM的强化学习综述，覆盖RL后训练方法版图
+- type: same_topic
+  ref: paper:arxiv:2412.14352
+  note: 同属LLM自我改进综述类工作，本篇的Replay/自我进化课程与推理时自我改进互补
+- type: same_topic
+  ref: paper:arxiv:2510.09988
+  note: 同聚焦LLM推理的树搜索与奖励/rollout设计，本篇GFCR控制与生成阶段相关

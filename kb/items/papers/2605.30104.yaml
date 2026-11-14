@@ -1,0 +1,55 @@
+id: paper:arxiv:2605.30104
+type: paper
+title: 'SEAL: Can Saturated Benchmarks Be Revived by LLM-as-a-Meta-Judge?'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2605.30104v1
+  url: https://arxiv.org/abs/2605.30104
+  pdf_url: https://arxiv.org/pdf/2605.30104v1
+  venue: arXiv preprint
+time:
+  published: '2026-05-28'
+  collected: '2026-11-15'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:SelfImprovement
+  role: subject
+claims:
+- statement: SEAL 在多个饱和基准上与全成对 LLM 评审保持高排序一致性，同时大幅减少评审调用次数。
+  confidence: reported
+  metrics:
+  - name: Spearman 一致性
+    value: 0.83–1.00
+    scope: 相对全成对 LLM 评审，覆盖代码生成/数学推理/知识问答/工具使用任务
+  - name: 每任务调用次数
+    value: '11.89'
+    scope: SEAL 协议平均调用数，对比全成对评审的 28.00 次
+  - name: top-1 一致率
+    value: 4/4
+    scope: 与全成对评审的首选模型一致任务数
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: SEAL 用种子淘汰赛加自改进清单的元裁判协议，从饱和基准中低成本提取模型排序信号。
+  abstract_zh: 针对主流语言模型基准日益饱和、前沿系统得分几乎并列而标准指标无法区分的问题，本文不构造更难的基准，而是改进对同一批候选输出的评测方式。提出的 SEAL（Seeded Elimination
+    with Adaptive LLM-as-a-Meta-Judge）将候选输出组织成单场淘汰赛，每场比赛用任务级原则加自改进的清单式标准进行评判。该方法在代码生成、数学推理、知识密集型问答和工具使用智能体等多个饱和基准上验证。结果显示
+    SEAL 与全成对评审的 Spearman 一致性达 0.83–1.00、top-1 一致率 4/4，且每任务仅需 11.89 次调用，远低于全成对评审的 28.00 次。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 面向 LLM 评测的自改进式元裁判协议，属自我改进 AI 范畴而非音视频技术，按规则仅收录摘要级。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: SEAL：饱和基准能否通过 LLM 元裁判起死回生？
+relations:
+- type: same_topic
+  ref: paper:arxiv:2407.19594
+  note: 同属 LLM-as-a-Meta-Judge 技术路线，用于自改进/自评测
+- type: same_topic
+  ref: paper:arxiv:2410.03608
+  note: 同为基于生成式清单（checklist）改进 LLM 评测质量的工作

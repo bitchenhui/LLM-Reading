@@ -1,0 +1,50 @@
+id: paper:arxiv:2602.03545
+type: paper
+title: 'Persona Generators: Generating Diverse Synthetic Personas for Arbitrary Contexts'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2602.03545v2
+  url: https://arxiv.org/abs/2602.03545
+  pdf_url: https://arxiv.org/pdf/2602.03545v2
+  venue: arXiv preprint
+time:
+  published: '2026-02-03'
+  collected: '2026-11-15'
+entities:
+- ref: concept:AlphaEvolve
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: 基于AlphaEvolve的迭代改进循环以LLM为变异算子，经数百次迭代自动进化人格生成器代码，产出轻量级生成器
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 进化后的人格生成器在六个多样性指标上于留出（held-out）上下文中显著优于现有基线
+  confidence: reported
+  metrics:
+  - name: 多样性指标数量
+    value: '6'
+    scope: 留出上下文上的评估指标个数
+  evidence: abstract（初筛，未读全文）
+- statement: 进化生成器能产生标准LLM输出难以覆盖的稀有特质组合，实现支撑覆盖而非密度匹配
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出基于AlphaEvolve的LLM进化循环，自动优化人格生成器代码，合成覆盖长尾多样性的合成人格群体。
+  abstract_zh: 评估与人类交互的AI系统需要覆盖多样化用户群体，但采集代表性真人数据成本高昂。作者提出人格生成器（Persona Generators），即可针对任意上下文产出多样化合成人格群体的函数，强调支撑覆盖（覆盖可能空间）而非仅做密度匹配。方法上应用基于AlphaEvolve的迭代改进循环，以LLM作为变异算子，在数百次迭代中自动进化人格生成器代码。进化所得的轻量级生成器可将简短描述自动扩展为沿相关多样性维度最大化观点与偏好覆盖的人格群体。在六个多样性指标上，进化后的生成器在留出上下文中显著优于现有基线，能生成标准LLM输出难以达到的稀有特质组合。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 属于自我改进AI领域：用AlphaEvolve式LLM变异进化循环自动优化人格生成器代码，与音视频技术无直接关联，仅作初筛摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 人格生成器：为任意上下文生成多样化合成人格
+relations:
+- type: same_topic
+  ref: paper:arxiv:2506.13131
+  note: 本文的迭代改进循环直接基于AlphaEvolve（LLM编码智能体用于自动发现与优化）

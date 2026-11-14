@@ -1,0 +1,66 @@
+id: paper:arxiv:2511.15915
+type: paper
+title: 'AccelOpt: A Self-Improving LLM Agentic System for AI Accelerator Kernel Optimization'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2511.15915v2
+  url: https://arxiv.org/abs/2511.15915
+  pdf_url: https://arxiv.org/pdf/2511.15915v2
+  venue: arXiv preprint
+time:
+  published: '2025-11-19'
+  collected: '2026-11-15'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: AccelOpt在NKIBench内核上将Trainium 1上的平均峰值吞吐百分比从49%提升至61%，表明其优化能力随时间自改进。
+  confidence: reported
+  metrics:
+  - name: 平均峰值吞吐百分比
+    value: 49% → 61%
+    scope: Trainium 1，NKIBench内核
+  evidence: abstract（初筛，未读全文）
+- statement: 在Trainium 2加速器上，AccelOpt将NKIBench内核的平均峰值吞吐百分比从45%提升至59%。
+  confidence: reported
+  metrics:
+  - name: 平均峰值吞吐百分比
+    value: 45% → 59%
+    scope: Trainium 2，NKIBench内核
+  evidence: abstract（初筛，未读全文）
+- statement: 使用开源模型时，AccelOpt能达到与Claude Sonnet 4相当的内核改进效果，同时成本低约26倍。
+  confidence: reported
+  metrics:
+  - name: 成本倍数
+    value: 26× cheaper
+    scope: 开源模型 vs Claude Sonnet 4，NKIBench内核改进效果对齐
+  evidence: abstract（初筛，未读全文）
+- statement: 作者构建了NKIBench基准套件，包含从真实LLM工作负载提取的复杂度各异的AWS Trainium加速器内核。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 自改进LLM智能体借优化记忆自动优化AI加速器内核，Trainium上峰值吞吐显著提升且开源模型更省成本。
+  abstract_zh: 论文提出AccelOpt，一个无需专家提供硬件专用优化知识的自改进LLM智能体系统，自主为新兴AI加速器优化内核。其通过迭代生成探索内核优化空间，并利用一个从既往慢-快内核对中提炼经验与洞见的优化记忆。作者还构建了NKIBench，一个从真实LLM工作负载中提取、复杂度各异的AWS
+    Trainium加速器内核基准套件。评估表明AccelOpt能力随时间增强，将NKIBench内核的平均峰值吞吐百分比在Trainium 1上从49%提升到61%，在Trainium 2上从45%提升到59%；使用开源模型时其内核改进效果匹敌Claude
+    Sonnet 4，且成本低26倍。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 自改进LLM智能体系统用于AI加速器内核优化，属RSI/LLM agent自改进方向的高相关工作，非核心编码域故summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: AccelOpt：面向AI加速器内核优化的自改进LLM智能体系统
+relations:
+- type: same_topic
+  ref: paper:arxiv:2510.18428
+  note: 同为自改进LLM+经验库驱动的优化系统（AlphaOPT），方法路线相近
+- type: same_topic
+  ref: paper:arxiv:2502.02534
+  note: 同为自改进LLM智能体系统用于开发任务（ML库开发）

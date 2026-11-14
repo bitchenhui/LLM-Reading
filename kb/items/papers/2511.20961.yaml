@@ -1,0 +1,60 @@
+id: paper:arxiv:2511.20961
+type: paper
+title: Performance Evaluation of Low-Latency Live Streaming of MPEG-DASH UHD video over Commercial 5G
+  NSA/SA Network
+domain: streaming_delivery
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2511.20961v1
+  url: https://arxiv.org/abs/2511.20961
+  pdf_url: https://arxiv.org/pdf/2511.20961v1
+  venue: arXiv preprint
+time:
+  published: '2025-11-26'
+  collected: '2026-11-15'
+entities:
+- ref: concept:DASH
+  role: subject
+- ref: org:MPEG
+  role: builds_on
+claims:
+- statement: 5G SA网络在所有测试场景（静止、城区移动、高速移动、最大SINR理想条件）下均能将超过95%的UHD视频片段在所需时间窗口内成功送达。
+  confidence: reported
+  metrics:
+  - name: 时限内成功送达片段比例
+    value: '>95%'
+    scope: 5G SA，全部实测场景
+  evidence: abstract（初筛，未读全文）
+- statement: LTE网络下超过20%的视频片段未能在时限内送达，无法胜任低延迟UHD直播。
+  confidence: reported
+  metrics:
+  - name: 超时未送达片段比例
+    value: '>20%'
+    scope: LTE网络，全部实测场景
+  evidence: abstract（初筛，未读全文）
+- statement: 5G NSA表现好坏参半，取决于底层LTE网络的状况，因其仍依赖旧控制信令，可能不足以支撑低延迟UHD直播。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 泰国商用5G实测：SA网络下UHD低延迟DASH直播按时送达率超95%，LTE超20%片段超时。
+  abstract_zh: 该论文在泰国最大运营商AIS的商用5G网络上，对基于MPEG-DASH的4K/8K超高清低延迟直播进行实测评估，采用最小缓冲策略以追求最低时延。实验对比5G SA、5G NSA与LTE三种移动网络技术，在静止、城区移动、高速移动及最大SINR理想条件下测量丢段数、MAC吞吐量与时延。结果显示5G
+    SA在所有场景下均能将超过95%的UHD视频片段在时限窗口内成功送达；5G NSA表现取决于底层LTE网络状况，结果好坏参半；而LTE网络超过20%的片段无法在时限内送达。结论是低延迟UHD直播必须依赖5G
+    SA，仅靠沿用旧控制信令的NSA可能不够。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 聚焦5G网络下低延迟DASH直播的实测评估，属流媒体与传输域而非核心编码域，按规则仅收录为初筛摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 商用5G NSA/SA网络上MPEG-DASH超高清视频低延迟直播的性能评估
+relations:
+- type: same_topic
+  ref: paper:arxiv:2311.07399
+  note: 同属5G网络上的DASH流媒体传输研究
+- type: same_topic
+  ref: paper:arxiv:2304.13551
+  note: 同属DASH低延迟传输的时延分析

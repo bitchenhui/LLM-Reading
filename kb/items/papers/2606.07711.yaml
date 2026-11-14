@@ -1,0 +1,55 @@
+id: paper:arxiv:2606.07711
+type: paper
+title: 'Rosetta Memory: Adaptive Memory for Cross-LLM Agents'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2606.07711v1
+  url: https://arxiv.org/abs/2606.07711
+  pdf_url: https://arxiv.org/pdf/2606.07711v1
+  venue: arXiv preprint
+time:
+  published: '2026-06-05'
+  collected: '2026-11-15'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:SelfImprovement
+  role: builds_on
+claims:
+- statement: 将上游-下游记忆适配问题从'以LLM为中心的记忆设计'重构为'以记忆为中心的LLM适配'，在写入与读取两侧设计两个档案条件化算子并联合训练。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 提出最小增益采样课程，训练中优先覆盖被服务最少的LLM，使学到的记忆算子能在广泛的LLM集合上泛化。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 设计性能差距奖励，通过与朴素记忆基线对比来衡量记忆算子的实际贡献而非LLM自身能力。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在HotpotQA、2WikiMultihopQA与MuSiQue三个多跳问答基准上持续优于基线，并在未见模型替换下保持稳健。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出以记忆为中心的跨LLM适配范式，联合训练写入/读取两侧算子，使一个模型写入的记忆可被其他模型高效复用。
+  abstract_zh: 记忆是把无状态LLM转变为具备经验积累、长程规划与持续自我改进能力的智能体的关键组件，但现有记忆系统多围绕特定主干模型设计，而用户实际常在不同LLM间切换或在单任务内混用多个模型，导致上游写入的记忆需被下游消费。该工作将视角从'以LLM为中心的记忆设计'转向'以记忆为中心的LLM适配'，从写入与读取两侧设计两个档案条件化算子并联合训练，优化记忆的存储与呈现方式以提升任务完成度。为保证算子在广泛LLM集合上泛化，提出最小增益采样课程，训练时优先覆盖被服务最少的LLM；并设计性能差距奖励，通过与朴素记忆基线对比来衡量算子本身贡献而非LLM自身能力。在HotpotQA、2WikiMultihopQA与MuSiQue上持续超越基线，并在未见模型替换场景下保持稳健。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 属自我改进AI域的LLM智能体记忆与跨模型适配工作，非音视频核心编码域，按规则仅做初筛摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: Rosetta Memory：面向跨LLM智能体的自适应记忆
+relations:
+- type: same_topic
+  ref: paper:arxiv:2603.07670
+  note: 同属LLM智能体记忆机制研究主题
+- type: same_topic
+  ref: paper:arxiv:2509.04439
+  note: 同属LLM终身记忆/跨任务记忆复用方向
+- type: same_topic
+  ref: paper:arxiv:2609.34712
+  note: 论文动机中的按步路由到不同LLM主干以权衡成本的场景，与该LLM路由与技能进化工作相关

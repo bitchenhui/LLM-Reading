@@ -1,0 +1,52 @@
+id: paper:arxiv:2512.24103
+type: paper
+title: Enhancing LLM Planning Capabilities through Intrinsic Self-Critique
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2512.24103v1
+  url: https://arxiv.org/abs/2512.24103
+  pdf_url: https://arxiv.org/pdf/2512.24103v1
+  venue: arXiv preprint
+time:
+  published: '2025-12-30'
+  collected: '2026-11-15'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: 在Blocksworld规划数据集上，LLM通过内在自我批判（无验证器等外部资源）取得相对已确立基线的显著性能提升。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在Logistics与Mini-grid数据集上同样实现改进，准确率超过强基线。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 以few-shot为基线方法并渐进扩展至many-shot，再叠加迭代修正与精炼过程可在该竞争性基线之上获得大幅额外提升。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在所考察的模型类别（2024年10月的LLM检查点）中创下新的SOTA，且该内在自我改进能力与具体模型版本无关。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: LLM无外部验证器地对自身答案迭代自我批判修正，在Blocksworld等规划基准上显著超越强基线并刷新同类模型SOTA。
+  abstract_zh: 论文提出让LLM对自身答案进行内在自我批判（intrinsic self-critique）以提升规划性能的方法，不依赖验证器等外部资源。基线采用few-shot学习并渐进扩展至many-shot，在其上通过迭代修正与精炼流程获得进一步大幅提升。在Blocksworld规划数据集上取得显著增益，并在Logistics与Mini-grid数据集上同样超越强基线准确率，针对2024年10月的LLM检查点类别创下新的SOTA。作者强调该内在自我改进能力与具体模型版本无关，并可推广至更复杂的搜索技术与更强模型。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 属LLM内在自我改进研究（无外部验证器的自我批判提升规划能力），与音视频技术无关，按自我改进域收录为摘要级。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 通过内在自我批判增强大语言模型规划能力
+relations:
+- type: same_topic
+  ref: paper:arxiv:2210.11610
+  note: 同属LLM自我改进主线，本文进一步以内在自我批判实现无外部验证器的自我提升
+- type: same_topic
+  ref: paper:arxiv:2404.12253
+  note: 均利用批判/批评机制驱动LLM自我改进，本文强调内在性（不依赖外部critic）

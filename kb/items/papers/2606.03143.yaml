@@ -1,0 +1,60 @@
+id: paper:arxiv:2606.03143
+type: paper
+title: 'FederatedSkill: Federated Learning for Agentic Skill Evolution'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2606.03143v1
+  url: https://arxiv.org/abs/2606.03143
+  pdf_url: https://arxiv.org/pdf/2606.03143v1
+  venue: arXiv preprint
+time:
+  published: '2026-06-02'
+  collected: '2026-11-15'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: FederatedSkill在20个不同智能体任务族上评估，成功率相对自我演化基线最高提升44.4%。
+  confidence: reported
+  metrics:
+  - name: 成功率提升
+    value: 44.4%
+    scope: 相对自我演化基线的最高提升，覆盖20个智能体任务族
+  evidence: abstract（初筛，未读全文）
+- statement: FederatedSkill在实现成功率提升的同时，计算成本最高降低37.5%。
+  confidence: reported
+  metrics:
+  - name: 计算成本降低
+    value: 37.5%
+    scope: 相对自我演化基线的最高降低，20个任务族评估
+  evidence: abstract（初筛，未读全文）
+- statement: 以语义技能差异（本地技能库上的结构化补丁）替代原始轨迹共享作为通信单元，可兼顾用户隐私保护与客户端异质性下的个性化技能演化。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出FederatedSkill，以语义技能差异补丁为通信单元实现隐私保护、个性化的跨用户智能体技能协同演化。
+  abstract_zh: 现代LLM智能体依赖技能库处理复杂任务，技能演化是自我改进的主要驱动力，但孤立的单用户任务流缺乏构建全面技能所需的数据多样性。跨用户协作虽可突破数据瓶颈，但现有轨迹共享方法损害用户隐私，且统一全局技能库无法适配客户端异质性。FederatedSkill以本地技能库上的结构化补丁（语义技能差异）作为通信基本单元，服务器端演化智能体聚合这些补丁，动态建模各客户端的能力边界，实现严格的个性化技能演化而非次优全局平均。在20个不同智能体任务族上的评估显示，该方法相对自我演化基线成功率最高提升44.4%，计算成本最高降低37.5%。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: LLM智能体技能演化的联邦学习框架，属自我改进AI领域但与音视频技术无直接关联，按非核心域默认初筛收录。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 联邦技能：面向智能体技能演化的联邦学习
+relations:
+- type: same_topic
+  ref: paper:arxiv:2604.16778
+  note: 同为面向LLM智能体的联邦式经验/洞察共享框架
+- type: same_topic
+  ref: paper:arxiv:2609.39149
+  note: 同为LLM智能体技能自演化（skill self-evolution）研究
+- type: same_topic
+  ref: paper:arxiv:2607.05297
+  note: 同为智能体元技能演化与自我改进方法

@@ -1,0 +1,53 @@
+id: paper:arxiv:2602.23413
+type: paper
+title: 'EvoX: Meta-Evolution for Automated Discovery'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2602.23413v2
+  url: https://arxiv.org/abs/2602.23413
+  pdf_url: https://arxiv.org/pdf/2602.23413v2
+  venue: arXiv preprint
+time:
+  published: '2026-02-26'
+  collected: '2026-11-15'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:AlphaEvolve
+  role: compared_against
+claims:
+- statement: EvoX联合进化候选解与搜索策略，可依据优化进展动态切换搜索策略，克服固定探索-利用等预设参数的局限。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在真实世界优化任务评测中，EvoX在多数任务上优于AlphaEvolve、OpenEvolve、GEPA与ShinkaEvolve。
+  confidence: reported
+  metrics:
+  - name: 评测任务数
+    value: 近200
+    scope: 真实世界优化任务基准
+  - name: 胜出范围
+    value: 多数任务
+    scope: 对比AlphaEvolve/OpenEvolve/GEPA/ShinkaEvolve
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出元进化方法EvoX，联合进化候选解与搜索策略，在近200个任务上多数胜过AlphaEvolve等。
+  abstract_zh: 受AlphaEvolve等LLM驱动进化优化范式启发，该文指出既有方法多依赖固定搜索策略与预设参数（如探索-利用比例），难以跨任务乃至在同一任务内随搜索空间变化而自适应。EvoX提出元进化机制，同时进化候选解与生成它们的搜索策略，根据优化进展持续更新先验解的选取与变异方式，使系统在优化过程中动态切换搜索策略。在近200个真实世界优化任务上，EvoX在多数任务上优于AlphaEvolve、OpenEvolve、GEPA和ShinkaEvolve等现有AI驱动进化方法。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 属LLM驱动的元进化与自改进搜索（AlphaEvolve路线延伸），为self_improvement域重要工作但非视频/图像编码核心域，按规则最多summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: EvoX：面向自动发现的元进化
+relations:
+- type: same_topic
+  ref: paper:arxiv:2506.13131
+  note: EvoX建立在AlphaEvolve的LLM+进化搜索范式之上，并以其为主要对比基线且在多数任务上超越
+- type: same_topic
+  ref: paper:arxiv:2401.02051
+  note: 同属LLM驱动的进化式自动算法/启发式设计研究线

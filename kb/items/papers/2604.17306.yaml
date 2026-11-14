@@ -1,0 +1,65 @@
+id: paper:arxiv:2604.17306
+type: paper
+title: 'The First Challenge on Mobile Real-World Image Super-Resolution at NTIRE 2026: Benchmark Results
+  and Method Overview'
+domain: processing_enhancement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2604.17306v1
+  url: https://arxiv.org/abs/2604.17306
+  pdf_url: https://arxiv.org/pdf/2604.17306v1
+  venue: arXiv preprint
+time:
+  published: '2026-04-19'
+  collected: '2026-11-15'
+entities:
+- ref: concept:SuperResolution
+  role: subject
+- ref: concept:IQA
+  role: measured_by
+claims:
+- statement: NTIRE 2026 首届移动端真实世界 SR 挑战要求从未知退化、x4 放大的低分辨率图像恢复高分辨率图像，且模型须能在移动设备上执行。
+  confidence: reported
+  metrics:
+  - name: 放大倍率
+    value: x4
+    scope: 赛题设定的超分尺度因子
+  evidence: abstract（初筛，未读全文）
+- statement: 该挑战赛最终排名采用 IQA 得分与加速比的加权组合进行评测，兼顾主观质量与移动端运行效率。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 挑战赛吸引 108 名注册者，最终有 16 支队伍在排名中取得有效成绩，反映了移动端真实世界 SR 方法的广泛参与和最新进展。
+  confidence: reported
+  metrics:
+  - name: 注册人数
+    value: '108'
+    scope: 挑战赛报名注册者总数
+  - name: 有效得分队伍数
+    value: '16'
+    scope: 最终排名中的有效成绩队伍
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: NTIRE 2026 首届移动端真实世界图像超分挑战综述，评测结合 IQA 与加速比，108 人报名 16 队有效。
+  abstract_zh: 该文回顾了 NTIRE 2026 首届移动端真实世界图像超分辨率（SR）挑战赛，总结各参赛方案与最终成绩。赛题要求从经历未知退化、放大倍率为 x4 的低分辨率图像中恢复高分辨率图像，且模型须可在移动设备上执行。评测采用图像质量评价（IQA）得分与加速比的加权组合。挑战赛共吸引
+    108 名注册者，最终 16 支队伍获得有效排名，展示了移动端高效真实世界 SR 的最新趋势。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 移动端真实世界图像超分挑战综述，属编码链路增强（超分）而非核心编码域，按基准收录为 summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: NTIRE 2026 首届移动端真实世界图像超分辨率挑战赛：基准结果与方法综述
+relations:
+- type: same_topic
+  ref: paper:arxiv:2404.16484
+  note: 同为实时/移动端图像超分辨率挑战赛的基准与方法综述
+- type: same_topic
+  ref: paper:arxiv:2104.10781
+  note: 同属 NTIRE 系列压缩视频增强/超分挑战赛报告
+- type: same_topic
+  ref: paper:arxiv:2102.03113
+  note: 同属真实世界（real-world）图像超分辨率研究主题

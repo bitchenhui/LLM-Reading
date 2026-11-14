@@ -1,0 +1,84 @@
+id: paper:arxiv:2511.20333
+type: paper
+title: 'NNGPT: Rethinking AutoML with Large Language Models'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2511.20333v1
+  url: https://arxiv.org/abs/2511.20333
+  pdf_url: https://arxiv.org/pdf/2511.20333v1
+  venue: arXiv preprint
+time:
+  published: '2025-11-25'
+  collected: '2026-11-15'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: NN-RAG检索增强模块合成在1,289个目标上实现73%的代码可执行率。
+  confidence: reported
+  metrics:
+  - name: 可执行率
+    value: 73%
+    scope: NN-RAG，1,289个合成目标
+  evidence: abstract（初筛，未读全文）
+- statement: HPO预测在LEMUR数据集上RMSE 0.60，优于Optuna的0.64。
+  confidence: reported
+  metrics:
+  - name: RMSE
+    value: '0.60'
+    scope: HPO，LEMUR数据集
+  - name: RMSE（对比锚点Optuna）
+    value: '0.64'
+    scope: Optuna基线
+  evidence: abstract（初筛，未读全文）
+- statement: 代码感知精度预测器达到RMSE 0.14、Pearson r=0.78。
+  confidence: reported
+  metrics:
+  - name: RMSE
+    value: '0.14'
+    scope: 代码感知精度预测
+  - name: Pearson r
+    value: '0.78'
+    scope: 代码感知精度预测
+  evidence: abstract（初筛，未读全文）
+- statement: 3-shot提示在常见数据集上提升精度；哈希去重节省数百次运行；一次预测性能与基于搜索的AutoML相当，大幅减少试验次数。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 系统已生成并验证超过5,000个神经网络模型。
+  confidence: reported
+  metrics:
+  - name: 已验证模型数
+    value: 5K+
+    scope: NNGPT累计生成
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 将LLM改造为自我改进的AutoML引擎，统一集成零样本架构合成、超参优化、精度预测、NN-RAG与强化学习五条流水线。
+  abstract_zh: NNGPT是一个开源框架，将大语言模型转变为面向神经网络开发（主要针对计算机视觉）的自我改进AutoML引擎。它通过生成、评估与自我改进的闭环系统扩展神经网络数据集并持续微调LLM，在统一工作流中集成零样本架构合成、超参优化（HPO）、代码感知精度/早停预测、NN-RAG检索增强PyTorch模块合成与强化学习五条协同流水线。系统基于经审计、指标可复现的LEMUR数据集，单次提示即可生成并端到端执行、验证网络架构、预处理代码与超参数，并从结果中学习。实验上，NN-RAG在1,289个目标上达到73%可执行率，HPO在LEMUR上RMSE
+    0.60优于Optuna的0.64，代码感知预测器RMSE 0.14且Pearson r=0.78，一次预测性能与基于搜索的AutoML相当。系统已生成超过5,000个验证模型，证明其作为自主AutoML引擎的能力。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: LLM自我改进AutoML引擎的代表性开源框架，属自我改进AI域，按规则仅做初筛摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: NNGPT：基于大语言模型重新思考AutoML
+relations:
+- type: same_topic
+  ref: paper:arxiv:2210.11610
+  note: 同为LLM自我改进方向的基础工作
+- type: same_topic
+  ref: paper:arxiv:2606.06473
+  note: 同为自进化AutoML/机器学习算法自动发现框架
+- type: same_topic
+  ref: paper:arxiv:2506.13131
+  note: 同为LLM闭环代码/算法演化发现系统（AlphaEvolve）
+- type: same_topic
+  ref: paper:arxiv:2502.02534
+  note: 同为面向ML开发的自改进LLM智能体系统

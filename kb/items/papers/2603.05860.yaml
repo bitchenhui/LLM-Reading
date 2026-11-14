@@ -1,0 +1,52 @@
+id: paper:arxiv:2603.05860
+type: paper
+title: Evolving Medical Imaging Agents via Experience-driven Self-skill Discovery
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2603.05860v1
+  url: https://arxiv.org/abs/2603.05860
+  pdf_url: https://arxiv.org/pdf/2603.05860v1
+  venue: arXiv preprint
+time:
+  published: '2026-03-06'
+  collected: '2026-11-15'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: 从已验证轨迹中自主发现复合工具并注册为新原语，可持续提升智能体多步工具编排精度
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 经验驱动技能发现在跨域泛化上优于强基线与最新agentic方法
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 类GRPO训练回路可强化智能体对自主发现复合工具的可靠调用，实现最小监督的闭环自我改进
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出MACRO：从已验证执行轨迹自主发现并合成可复用复合工具，配图像特征记忆与类GRPO训练，实现医学影像LLM智能体的闭环自我改进。
+  abstract_zh: 现有LLM医学智能体在部署后工具集与调用策略静态固定，在域偏移与任务演化下易失效。MACRO从经核验的执行轨迹中自主识别反复有效的高效多步工具序列，将其合成为可复用的复合工具并注册为新高层原语，持续扩展行为库。轻量图像特征记忆将工具选择锚定于视觉-临床上下文，类GRPO的训练回路强化对已发现复合工具的可靠调用，实现最少监督下的闭环自我改进。在多个医学影像数据集与任务上的实验表明，自主复合工具发现在多步编排精度与跨域泛化上持续优于强基线与最新智能体方法。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 属于自我改进AI域（LLM智能体经经验驱动技能自发现实现闭环自演化），应用于医学影像但与音视频编码无关，按基准给summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 通过经验驱动的自技能发现演化医学影像智能体
+relations:
+- type: same_topic
+  ref: paper:arxiv:2510.16079
+  note: 同为经验驱动生命周期下的LLM智能体自演化，MACRO为其在医学影像工具链上的实例化
+- type: same_topic
+  ref: paper:arxiv:2506.06698
+  note: 均利用执行经验（轨迹/经验回放）驱动语言智能体自我改进
+- type: same_topic
+  ref: paper:arxiv:2504.11301
+  note: 同属医学智能体自动化架构/技能设计研究方向

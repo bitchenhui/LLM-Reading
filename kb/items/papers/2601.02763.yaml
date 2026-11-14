@@ -1,0 +1,52 @@
+id: paper:arxiv:2601.02763
+type: paper
+title: 'ClearAIR: A Human-Visual-Perception-Inspired All-in-One Image Restoration'
+domain: processing_enhancement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2601.02763v2
+  url: https://arxiv.org/abs/2601.02763
+  pdf_url: https://arxiv.org/pdf/2601.02763v2
+  venue: arXiv preprint
+time:
+  published: '2026-01-06'
+  collected: '2026-11-15'
+entities:
+- ref: concept:IQA
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: 基于MLLM的IQA模型结合跨模态理解，可比常规IQA更准确地表征复杂复合退化
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 语义交叉注意力生成粗语义提示、退化感知模块隐式捕捉区域特定退化特征，实现更精确的局部修复
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 自监督内部线索复用机制挖掘图像内在信息，可显著增强细节恢复、缓解过平滑与伪影
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: ClearAIR在多种合成与真实世界数据集上均取得优于现有方法的修复性能
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 受人类视觉感知启发、以MLLM驱动IQA与粗到细分层策略的一体化图像修复框架，兼顾退化刻画与细节恢复。
+  abstract_zh: 针对现有AiOIR方法过度依赖退化特定表示、易产生过平滑与伪影的问题，提出受人类视觉感知（HVP）启发的ClearAIR框架，采用由粗到细的分层修复策略。首先利用早期HVP的全局优先性，采用基于多模态大语言模型（MLLM）的图像质量评估（IQA）模型进行整体评价，借助跨模态理解更准确刻画复杂复合退化。其次引入区域感知与任务识别流水线：语义交叉注意力生成粗粒度语义提示，退化感知模块据此隐式捕捉区域特定退化特征，实现更精确的局部修复。最后提出自监督的内部线索复用机制，挖掘并利用图像自身内在信息以增强细节恢复。实验表明ClearAIR在多种合成与真实世界数据集上取得优于现有方法的性能。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 一体化图像修复属编码链路处理增强域（非核心编码域），含MLLM驱动的IQA组件，按规则仅作初筛摘要收录。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: ClearAIR：一种受人类视觉感知启发的All-in-One图像修复方法
+relations:
+- type: same_topic
+  ref: paper:arxiv:2312.11595
+  note: 同为语义/提示驱动的图像修复框架，均利用语义先验引导退化修复
+- type: same_topic
+  ref: paper:arxiv:2407.13108
+  note: 同为面向多退化场景的统一图像增强框架（UCIP），均采用提示引导的通用修复思路

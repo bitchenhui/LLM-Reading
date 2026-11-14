@@ -1,0 +1,58 @@
+id: paper:arxiv:2606.00825
+type: paper
+title: 'SuperMemory-VQA: An Egocentric Visual Question-Answering Benchmark for Long-Horizon Memory'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2606.00825v1
+  url: https://arxiv.org/abs/2606.00825
+  pdf_url: https://arxiv.org/pdf/2606.00825v1
+  venue: arXiv preprint
+time:
+  published: '2026-05-30'
+  collected: '2026-11-15'
+entities:
+- ref: concept:LLM
+  role: subject
+claims:
+- statement: SuperMemory-VQA数据集包含52.9小时AI眼镜录制的日常活动，含同步RGB视频、音频转写、眼动注视、IMU与SLAM轨迹。
+  confidence: reported
+  metrics:
+  - name: 数据时长
+    value: 52.9小时
+    scope: AI眼镜第一视角日常活动数据集
+  evidence: abstract（初筛，未读全文）
+- statement: 经人工核验标注流程构建4,853个问答对，覆盖物体/位置记忆、意图回忆、视觉场景回忆、时间线重建、对话记忆与上下文检索六类任务。
+  confidence: reported
+  metrics:
+  - name: 问答对数量
+    value: 4,853
+    scope: SuperMemory-VQA人工校验标注
+  evidence: abstract（初筛，未读全文）
+- statement: 每题为选择题并设显式“不可回答”选项，用于测试系统幻觉鲁棒性。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 对领先智能体框架与LLM骨干的基准评测显示，现有系统在真实长时程记忆任务上仍远不可靠，需要能在证据充分时才作答的有据可依AI记忆架构。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 基于AI眼镜52.9小时第一视角数据构建长时程记忆VQA基准，显示现有智能体系统在真实记忆任务上远不可靠
+  abstract_zh: 该论文提出SuperMemory-VQA，一个用于评估AI助手在实用长时程记忆任务上的第一视角视觉问答数据集，面向AI眼镜式个性化记忆助手场景。数据来自AI眼镜录制的52.9小时日常活动，包含同步RGB视频、音频转写、眼动注视、IMU与SLAM轨迹等多模态信号。经人工核验的标注流程构建了4,853个有据可依的问答对，覆盖物体/位置记忆、意图回忆、视觉场景回忆、时间线重建、对话记忆与上下文检索六类任务。每题为选择题并含显式“不可回答”选项以测试幻觉鲁棒性；对主流智能体框架与LLM骨干的基准测试表明现有系统在真实记忆任务上远未可靠。参与者调查进一步支持这些问题贴近真实有用的日常记忆需求。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 属LLM智能体长时程记忆评测基准，归入自我改进AI域的智能体记忆研究方向，与音视频编码/传输/质量等核心AV技术无直接关联，按规则仅收摘要
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: SuperMemory-VQA：面向长时程记忆的第一视角视觉问答基准
+relations:
+- type: same_topic
+  ref: paper:arxiv:2603.07670
+  note: 同属LLM智能体记忆研究方向：该文为智能体记忆机制综述，本文提供长时程记忆评测基准
+- type: same_topic
+  ref: paper:arxiv:2610.27406
+  note: 同为LLM智能体记忆能力研究，本文为其评测问题提供第一视角长时程基准

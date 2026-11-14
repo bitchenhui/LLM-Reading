@@ -1,0 +1,56 @@
+id: paper:arxiv:2603.24579
+type: paper
+title: 'MARCH: Multi-Agent Reinforced Self-Check for LLM Hallucination'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2603.24579v1
+  url: https://arxiv.org/abs/2603.24579
+  pdf_url: https://arxiv.org/pdf/2603.24579v1
+  venue: arXiv preprint
+time:
+  published: '2026-03-25'
+  collected: '2026-11-15'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:SelfImprovement
+  role: uses
+claims:
+- statement: MARCH通过Checker与Solver输出隔离的信息不对称设计，打破LLM-as-a-judge的自我确认偏差循环。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 经多智能体强化学习训练后，三智能体共同进化并显著降低幻觉基准上的幻觉率。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 配备MARCH的8B参数LLM在幻觉基准上达到与强大闭源模型相当的性能。
+  confidence: reported
+  metrics:
+  - name: 模型参数量
+    value: 8B
+    scope: MARCH框架所配备的开源LLM规模
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 以Solver-Proposer-Checker三智能体信息不对称与多智能体强化学习抑制RAG幻觉，实现LLM事实性共同自进化。
+  abstract_zh: 针对LLM-as-a-judge幻觉检测中验证器与生成器同源导致的自我确认偏差，提出MARCH框架，设置信息不对称：Checker在不接触Solver原始输出的前提下，将Proposer分解出的原子级命题逐条对照检索证据校验。通过多智能体强化学习（MARL）联合训练三个智能体，使其共同进化以优化事实一致性。实验表明MARCH在多个幻觉基准上显著降低幻觉率，配备MARCH的8B参数模型可达到与强大闭源模型相当的水平，为LLM事实性自我改进提供可扩展路径。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 多智能体强化自校验降低LLM幻觉并实现事实性共同自进化，属自我改进AI域，与音视频核心技术无直接关联，仅初筛收录。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: MARCH：面向大语言模型幻觉的多智能体强化自校验框架
+relations:
+- type: same_topic
+  ref: paper:arxiv:2610.11345
+  note: 同为多智能体强化学习驱动的LLM自进化研究
+- type: same_topic
+  ref: paper:arxiv:2509.10704
+  note: 同为多智能体编排实现LLM相关能力自我改进
+- type: same_topic
+  ref: paper:arxiv:2604.06996
+  note: 均涉及LLM评估中验证器自我偏好/确认偏差问题

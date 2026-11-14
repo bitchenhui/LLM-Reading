@@ -1,0 +1,81 @@
+id: paper:arxiv:2602.03798
+type: paper
+title: 'FullStack-Agent: Enhancing Agentic Full-Stack Web Coding via Development-Oriented Testing and
+  Repository Back-Translation'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2602.03798v1
+  url: https://arxiv.org/abs/2602.03798
+  pdf_url: https://arxiv.org/pdf/2602.03798v1
+  venue: arXiv preprint
+time:
+  published: '2026-02-03'
+  collected: '2026-11-15'
+entities:
+- ref: concept:LLM
+  role: uses
+- ref: concept:SelfImprovement
+  role: subject
+claims:
+- statement: FullStack-Dev 多智能体框架在前端测试用例上超越此前最先进方法 8.7%。
+  confidence: reported
+  metrics:
+  - name: 性能提升
+    value: 8.7%
+    scope: frontend 测试用例，相对此前 SOTA 方法
+  evidence: abstract（初筛，未读全文）
+- statement: FullStack-Dev 在后端测试用例上超越此前最先进方法 38.2%。
+  confidence: reported
+  metrics:
+  - name: 性能提升
+    value: 38.2%
+    scope: backend 测试用例，相对此前 SOTA 方法
+  evidence: abstract（初筛，未读全文）
+- statement: FullStack-Dev 在数据库测试用例上超越此前最先进方法 15.9%。
+  confidence: reported
+  metrics:
+  - name: 性能提升
+    value: 15.9%
+    scope: database 测试用例，相对此前 SOTA 方法
+  evidence: abstract（初筛，未读全文）
+- statement: FullStack-Learn 的自我改进使 30B 模型在前端、后端、数据库三组测试用例上分别提升 9.7%、9.5%、2.8%。
+  confidence: reported
+  metrics:
+  - name: 自我改进提升
+    value: 9.7%
+    scope: 30B 模型，frontend 测试用例
+  - name: 自我改进提升
+    value: 9.5%
+    scope: 30B 模型，backend 测试用例
+  - name: 自我改进提升
+    value: 2.8%
+    scope: 30B 模型，database 测试用例
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出含多智能体开发框架、仓库回译自我改进与全栈测试基准的 FullStack-Agent 系统，显著提升 LLM 全栈网页开发能力。
+  abstract_zh: 针对现有代码智能体只善前端生成、难以构建含真实数据处理与存储的生产级全栈应用的问题，提出统一智能体系统 FullStack-Agent。其包含三部分：FullStack-Dev
+    多智能体框架（规划、代码编辑、代码库导航与缺陷定位）；FullStack-Learn，通过回译爬取与合成的网站仓库实现数据扩展与自我改进，提升主干 LLM；FullStack-Bench，系统性评测生成网站的前端、后端与数据库功能。结果显示
+    FullStack-Dev 在前端、后端、数据库测试用例上分别超越此前 SOTA 8.7%、38.2%、15.9%；FullStack-Learn 通过自我改进使 30B 模型在三组用例上分别提升
+    9.7%、9.5%、2.8%。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: LLM 全栈编码智能体，核心含仓库回译式自我改进（FullStack-Learn），属自我改进 AI 域，非核心编码域故仅摘要收录。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: FullStack-Agent：通过面向开发的测试与仓库回译增强智能体式全栈网页编码
+relations:
+- type: same_topic
+  ref: paper:arxiv:2502.02534
+  note: 同为自我改进型 LLM 智能体系统，用于软件/开发类任务
+- type: same_topic
+  ref: paper:arxiv:2412.14841
+  note: 同属利用测试反馈改进 LLM 代码生成的方向
+- type: same_topic
+  ref: paper:arxiv:2512.18552
+  note: 同属软件工程智能体的自我改进/自举训练

@@ -1,0 +1,53 @@
+id: paper:arxiv:2601.18195
+type: paper
+title: 'QualiRAG: Retrieval-Augmented Generation for Visual Quality Understanding'
+domain: quality_assessment
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2601.18195v1
+  url: https://arxiv.org/abs/2601.18195
+  pdf_url: https://arxiv.org/pdf/2601.18195v1
+  venue: arXiv preprint
+time:
+  published: '2026-01-26'
+  collected: '2026-11-15'
+entities:
+- ref: concept:IQA
+  role: subject
+- ref: concept:TrainingFree
+  role: uses
+claims:
+- statement: QualiRAG 作为免训练框架，在视觉质量理解任务上相对开源通用 LMM 与经 VQA 微调的 LMM 取得显著提升
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: QualiRAG 在视觉质量比较任务上具有竞争力，无需任务特定训练即可实现稳健的质量评估能力
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: QualiRAG 区别于静态语料检索，通过问题分解构建视觉元数据、主体定位、全局质量摘要、局部质量描述四类互补知识源并进行相关性感知检索
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 免训练 RAG 框架 QualiRAG 动态构建四类质量知识源，提升 LMM 的视觉质量理解与比较能力。
+  abstract_zh: 视觉质量评估正从标量分数预测转向可解释的质量理解，现有方法依赖监督微调或强化学习，存在标注成本高与数据集偏差问题。QualiRAG 提出一种免训练的检索增强生成框架，将问题分解为结构化请求，动态构建视觉元数据、主体定位、全局质量摘要与局部质量描述四类互补知识源，并通过相关性感知检索实现基于证据的推理。实验表明，QualiRAG
+    在视觉质量理解任务上显著超越开源通用 LMM 与经 VQA 微调的 LMM，在视觉质量比较任务上也具有竞争力，无需任何任务特定训练即展现稳健的质量评估能力。代码将开源发布。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 属于质量评估域的 LMM 质量理解工作，非核心编码域，按收录基准仅给 summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: QualiRAG：面向视觉质量理解的检索增强生成
+relations:
+- type: same_topic
+  ref: paper:arxiv:2601.08311
+  note: 同为利用检索增强生成提升 LMM 图像质量评估能力的工作
+- type: same_topic
+  ref: paper:arxiv:2410.08534
+  note: 同属 AI 生成图像/视频质量预测与视觉质量评估方向
+- type: same_topic
+  ref: paper:arxiv:2611.03007
+  note: 同为基于多模态大模型的细粒度视觉质量推理研究

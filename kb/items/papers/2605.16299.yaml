@@ -1,0 +1,59 @@
+id: paper:arxiv:2605.16299
+type: paper
+title: 'ACE: Self-Evolving LLM Coding Framework via Adversarial Unit Test Generation and Preference Optimization'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2605.16299v2
+  url: https://arxiv.org/abs/2605.16299
+  pdf_url: https://arxiv.org/pdf/2605.16299v2
+  venue: arXiv preprint
+time:
+  published: '2026-04-17'
+  collected: '2026-11-15'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: subject
+claims:
+- statement: ACE在CodeContests、MBPP和LiveCodeBench上持续超越强solver-verifier基线
+  confidence: reported
+  metrics:
+  - name: pass@1绝对提升
+    value: 3-7%
+    scope: 相对强solver-verifier基线，CodeContests/MBPP/LiveCodeBench三基准
+  evidence: abstract（初筛，未读全文）
+- statement: 整个训练循环无需真实参考代码或外部奖励模型，监督信号完全来自程序执行结果
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在分布外（OOD）基准上的改进幅度大于分布内基准
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: ACE在提升通过率的同时保持竞争性或更优的推理效率
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出solver-adversary自进化代码生成框架，以对抗性单元测试的执行结果作为监督信号实现LLM自改进
+  abstract_zh: ACE是一个基于solver-adversary架构的自进化代码生成框架，通过执行中心的监督优先主动发现剩余失败模式，而非仅确认语义正确性。单一LLM在生成候选程序与生成经优化的对抗性单元测试输入之间交替，测试输入旨在诱发运行时错误、异常或非终止等执行级失败。监督信号完全来自执行结果：鲁棒程序被选用于监督微调，对抗性测试通过Kahneman-Tversky优化利用执行衍生偏好进行训练。整个训练循环无需真实参考代码或外部奖励模型。在CodeContests、MBPP和LiveCodeBench上的实验显示，ACE持续超越强solver-verifier基线，pass@1获得3-7%绝对提升，且在分布外基准上改进更大，推理效率保持竞争性或有改进。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 自进化LLM代码生成框架，通过对抗性单元测试执行结果实现无外部监督的LLM自改进，属自我改进AI核心选题
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: ACE：通过对抗性单元测试生成与偏好优化实现自进化的LLM编码框架
+relations:
+- type: same_topic
+  ref: paper:arxiv:2508.05004
+  note: 同为无外部数据的自进化LLM框架，均以自生成监督信号驱动训练循环
+- type: same_topic
+  ref: paper:arxiv:2210.08229
+  note: 同属LLM自改进路线，ACE以执行反馈替代标注监督实现自提升
+- type: same_topic
+  ref: paper:arxiv:2412.14841
+  note: 同以测试/验证反馈改进LLM代码生成，ACE进一步引入对抗性测试生成

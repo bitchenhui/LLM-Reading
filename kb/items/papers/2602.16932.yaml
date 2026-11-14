@@ -1,0 +1,51 @@
+id: paper:arxiv:2602.16932
+type: paper
+title: 'RankEvolve: Automating the Discovery of Retrieval Algorithms via LLM-Driven Evolution'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2602.16932v1
+  url: https://arxiv.org/abs/2602.16932
+  pdf_url: https://arxiv.org/pdf/2602.16932v1
+  venue: arXiv preprint
+time:
+  published: '2026-02-18'
+  collected: '2026-11-15'
+entities:
+- ref: concept:AlphaEvolve
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: RankEvolve以BM25和带狄利克雷平滑的查询似然为种子程序，通过评估器引导的LLM进化搜索在BEIR与BRIGHT的12个IR数据集上发现新颖且有效的排序算法。
+  confidence: reported
+  metrics:
+  - name: 进化评估数据集数
+    value: '12'
+    scope: BEIR与BRIGHT中用于指导进化搜索的IR数据集
+  evidence: abstract（初筛，未读全文）
+- statement: 进化所得算法对完整BEIR与BRIGHT基准以及TREC DL 19/20展现出有前景的迁移能力。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 作者论断：评估器引导的LLM程序进化是自动发现新型排序算法的可行路径。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 基于AlphaEvolve的LLM程序进化框架，从BM25等种子自动进化出更强的词法检索排序算法。
+  abstract_zh: 论文提出RankEvolve，一种基于AlphaEvolve的程序进化设置：候选排序算法被表示为可执行代码，在大语言模型引导下通过变异、重组与基于检索性能的选择进行迭代进化。系统以BM25和带狄利克雷平滑的查询似然为两个种子程序，在BEIR与BRIGHT的12个IR数据集上评估适应度。进化得到的算法新颖且有效，并能较好迁移到完整的BEIR、BRIGHT基准以及TREC
+    DL 19/20。结果表明评估器引导的LLM程序进化是自动发现新型排序算法的可行路径。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 属LLM驱动程序/算法进化（明言基于AlphaEvolve）的自我改进方向，与音视频技术无直接关联，按非核心域初筛收录。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: RankEvolve：通过LLM驱动进化自动发现检索算法
+relations:
+- type: same_topic
+  ref: paper:arxiv:2506.13131
+  note: RankEvolve明言其程序进化设置基于AlphaEvolve框架

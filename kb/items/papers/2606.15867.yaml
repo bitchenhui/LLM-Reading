@@ -1,0 +1,73 @@
+id: paper:arxiv:2606.15867
+type: paper
+title: 'CogCanvas: A Benchmark for Evaluating Multi-Subject Reference-Based Image Generation'
+domain: quality_assessment
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2606.15867v3
+  url: https://arxiv.org/abs/2606.15867
+  pdf_url: https://arxiv.org/pdf/2606.15867v3
+  venue: arXiv preprint
+time:
+  published: '2026-06-14'
+  collected: '2026-11-15'
+entities:
+- ref: concept:IQA
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: CogCanvas基准包含1,952张精选参考图，覆盖100位名人身份、115种物品/服饰与29个真实背景场景，并构建了1,361条组合提示，覆盖2-5人的群体规模。
+  confidence: reported
+  metrics:
+  - name: 参考图像数量
+    value: 1,952
+    scope: 精选参考图总数
+  - name: 身份数量
+    value: '100'
+    scope: 名人身份
+  - name: 物品/服饰数量
+    value: '115'
+    scope: 独特物品与时尚单品
+  - name: 背景场景数量
+    value: '29'
+    scope: 含地标在内的真实世界背景场景
+  - name: 组合提示数量
+    value: 1,361
+    scope: 覆盖2-5人群体规模
+  evidence: abstract（初筛，未读全文）
+- statement: 在五个SOTA生成模型上的测试显示，随群体规模从2人增至5人，所有模型性能均显著退化；超过3个主体时物品/服饰绑定接近完全失败。
+  confidence: reported
+  metrics:
+  - name: 被测SOTA方法数量
+    value: '5'
+    scope: CogCanvas统一六轴评测协议下
+  - name: 群体规模范围
+    value: 2-5
+    scope: 人/提示，性能随规模递增而退化
+  evidence: abstract（初筛，未读全文）
+- statement: 提出两个面向多参考设置的评测指标：BG-Sim在SAM 3掩码区域上通过DINOv3特征相似度评分背景保真度；Attr-VQA利用多模态LLM对照结构化交互与位置图校验逐主体属性绑定及人际交互。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出CogCanvas基准，联合评测多身份保持、人物-物品绑定、背景与空间合理性，并给出BG-Sim与Attr-VQA两个新指标
+  abstract_zh: 该工作针对多主体参考图图像生成中身份保持、人物-物品绑定、背景接地与空间合理性难以同时评测的问题，构建了CogCanvas基准：1,952张精选参考图覆盖100位名人身份、115种物品/服饰与29个真实背景场景，并组合出1,361条覆盖2-5人规模的提示。数据构建管线结合DINOv2去重、两阶段美学过滤以及自动生成的结构化交互与位置图作为真值监督。基准支持参考图多人生成、文生图组合生成与参考检索三类任务，并提出BG-Sim（SAM
+    3掩码区域上DINOv3特征相似度评分背景保真度）与Attr-VQA（用多模态LLM对照结构图校验逐主体属性绑定与人际交互）两个新指标。对五个SOTA方法的评测显示：随群体规模从2人增至5人，所有模型性能显著退化，超过3个主体时物品/服饰绑定接近完全失败。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 该文是面向AI生成图像的多主体一致性评测基准，属AIGC质量评估范畴，与编码/传输等核心音视频技术关联较弱，按非核心域仅给summary_only
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: CogCanvas：面向多主体参考图图像生成的评测基准
+relations:
+- type: same_topic
+  ref: paper:arxiv:2410.08534
+  note: 均涉及AI生成图像/视频的质量评测主题
+- type: same_topic
+  ref: paper:arxiv:2607.16742
+  note: 均属面向AI生成人物内容的多维质量评估基准/模型

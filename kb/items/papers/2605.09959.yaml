@@ -1,0 +1,52 @@
+id: paper:arxiv:2605.09959
+type: paper
+title: 'G-Zero: Self-Play for Open-Ended Generation from Zero Data'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2605.09959v1
+  url: https://arxiv.org/abs/2605.09959
+  pdf_url: https://arxiv.org/pdf/2605.09959v1
+  venue: arXiv preprint
+time:
+  published: '2026-05-11'
+  collected: '2026-11-15'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: subject
+claims:
+- statement: G-Zero是无验证器、共进化的自主自我改进框架，通过Hint-δ内在奖励（量化Generator无辅助响应与自生成提示条件下响应之间的预测偏移）绕过外部评判器的能力天花板与奖励劫持问题。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: Proposer经GRPO训练以合成针对Generator盲区的挑战性查询与信息性提示，Generator经DPO并行优化以内化提示引导的改进，二者协同实现零数据自我进化。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 理论上证明了理想化标准DPO版本G-Zero的最优迭代次优性保证，成立条件为Proposer诱导充分探索覆盖、且数据过滤使伪标签分数噪声保持较低水平。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出无验证器的共进化自博弈框架G-Zero，以Hint-δ内在奖励在不可验证的开放式任务上实现LLM零数据自我改进。
+  abstract_zh: 针对自进化LLM在开放式任务中依赖代理评判器引发能力瓶颈与奖励劫持的问题，作者提出无验证器、共进化的自主自我改进框架G-Zero。核心创新Hint-δ是一种内在奖励，量化Generator在无辅助响应与基于自生成提示响应之间的预测偏移。Proposer模型经GRPO训练，通过合成挑战性查询和信息性提示持续瞄准Generator的盲区，Generator则经DPO并行优化以内化提示引导的改进。理论上为理想化标准DPO版本的G-Zero证明了最优迭代次优性保证，前提是Proposer诱导充分探索覆盖且数据过滤将伪标签分数噪声保持在低位。该方法完全从内部分布动态导出监督信号，绕开外部评判器的能力天花板，为不可验证域的LLM持续自我进化提供可扩展路径。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: LLM自我改进/自博弈共进化框架论文，属于self_improvement域而非音视频核心域，按规则仅收录为summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: G-Zero：基于自博弈的零数据开放式生成
+relations:
+- type: same_topic
+  ref: paper:arxiv:2508.05004
+  note: 同为零数据自进化LLM工作（R-Zero），G-Zero在命题-生成共进化框架上同名延续，面向开放式任务扩展。
+- type: same_topic
+  ref: paper:arxiv:2603.09206
+  note: 同为从零数据自进化模型（MM-Zero）的zero-data自我改进路线。
+- type: same_topic
+  ref: paper:arxiv:2509.23067
+  note: 同针对不可验证开放式任务上的LLM自我改进问题（Semantic Voting），均为免评判器路线。

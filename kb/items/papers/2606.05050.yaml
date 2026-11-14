@@ -1,0 +1,91 @@
+id: paper:arxiv:2606.05050
+type: paper
+title: Autonomous heterogeneous catalyst discovery with a self-evolving multi-agent digital twin
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2606.05050v2
+  url: https://arxiv.org/abs/2606.05050
+  pdf_url: https://arxiv.org/pdf/2606.05050v2
+  venue: arXiv preprint
+time:
+  published: '2026-06-03'
+  collected: '2026-11-15'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: 记忆增强强化回路将催化表面过渡态能垒计算的成功率从41%提升到84%。
+  confidence: reported
+  metrics:
+  - name: 能垒计算成功率
+    value: 84%
+    scope: 记忆增强强化回路启用后，600个催化表面
+  - name: 能垒计算成功率（基线）
+    value: 41%
+    scope: 回路启用前，同600表面基准
+  evidence: abstract（初筛，未读全文）
+- statement: CatDT从体相晶体和自然语言反应描述出发，可在单GPU上5–30分钟内完成从稳定晶面预测到反应动力学的全流程。
+  confidence: reported
+  metrics:
+  - name: 全流程耗时
+    value: 5-30 min
+    scope: 单GPU，从晶体+自然语言描述到动力学计算
+  - name: 智能体/工具规模
+    value: 8 agents / 27 tools
+    scope: CatDT系统构成
+  evidence: abstract（初筛，未读全文）
+- statement: UniMech以比穷举反应路径枚举低逾1000倍的计算成本找到新材料的主导反应路径。
+  confidence: reported
+  metrics:
+  - name: 相对穷举枚举成本降低
+    value: '>10^3x'
+    scope: UniMech（智能体引导提议+能量缓存图搜索）对比穷举枚举
+  evidence: abstract（初筛，未读全文）
+- statement: 在七个气-固基准上，CatDT的全部预测均位于实验值的0.5–2倍范围内，覆盖四个数量级。
+  confidence: reported
+  metrics:
+  - name: 预测/实验比值区间
+    value: 0.5-2x
+    scope: 七个气-固基准（阶梯金属、单原子、金属间化合物、富空位2D硫化物/碳化物、SMSI界面）
+  - name: 覆盖范围
+    value: 4个数量级
+    scope: 同上基准的动力学量级跨度
+  evidence: abstract（初筛，未读全文）
+- statement: 在丙烷脱氢任务中，CatDT独立发现可媲美Pt基工业基准的非贵金属候选，Ni@ZrO2 SMSI覆盖层模拟TOF达1.63 s⁻¹且选择性约100%。
+  confidence: reported
+  metrics:
+  - name: 模拟TOF
+    value: 1.63 s^-1
+    scope: Ni@ZrO2 SMSI覆盖层，丙烷脱氢
+  - name: 选择性
+    value: ~100%
+    scope: 同上
+  evidence: abstract（初筛，未读全文）
+- statement: 作者主张：可信科学模拟器的决定因素不是LLM原始能力，而是其周围的工程化harness——确定性工具、持久记忆与跨模型/工具/运行可复利的经验证自我改进。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 自进化多智能体数字孪生CatDT，在单GPU上5–30分钟内自主完成催化剂表面重构、反应路径搜索与动力学预测。
+  abstract_zh: 论文提出CatDT，一个由8个专用智能体和27个科学工具组成的自进化多智能体系统，仅从体相晶体和自然语言反应描述即可构建工作催化剂的自主数字孪生，统一气-固与液-固建模。两项关键创新：UniMech通过融合智能体引导提议与能量缓存图搜索，以比穷举枚举低逾1000倍的代价找到新材料的主导反应路径；记忆增强强化回路将600个催化表面上的过渡态能垒计算成功率从41%提升至84%。在阶梯金属、单原子催化剂、金属间化合物、富空位二维硫化物/碳化物及SMSI界面等七个气-固基准上，全部预测均落在实验值的0.5–2倍范围内（跨四个数量级）；在丙烷脱氢任务中自主发现非贵金属候选Ni@ZrO2
+    SMSI覆盖层，模拟TOF达1.63 s⁻¹且选择性约100%。作者结论：构建可信科学数字孪生的决定因素不是LLM原始能力，而是围绕它的确定性工具、持久记忆与经验证自我改进的工程化harness。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 核心是多相催化剂发现的化学/材料应用，但其自进化多智能体+记忆强化回路的harness工程结论与自我改进AI相关，按规则仅可收录为summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 基于自进化多智能体数字孪生的自主多相催化剂发现
+relations:
+- type: same_topic
+  ref: paper:arxiv:2506.13131
+  note: 同属自主AI科学家/科学发现方向，且二者共同强调确定性工具与工程化harness（而非LLM原始能力）是系统成败的关键
+- type: same_topic
+  ref: paper:arxiv:2503.22678
+  note: 同为自进化多智能体系统在不同科学应用域（临床交互模拟 vs 催化剂发现）的实例

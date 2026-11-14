@@ -1,0 +1,55 @@
+id: paper:arxiv:2606.08625
+type: paper
+title: 'From Holistic Evaluation to Structured Criteria: Rubrics Across the Evolving LLM Landscape'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2606.08625v2
+  url: https://arxiv.org/abs/2606.08625
+  pdf_url: https://arxiv.org/pdf/2606.08625v2
+  venue: arXiv preprint
+time:
+  published: '2026-06-07'
+  collected: '2026-11-15'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:SelfImprovement
+  role: subject
+claims:
+- statement: rubric可作为统一框架贯穿LLM评估、强化学习与安全对齐三条独立研究脉络，其跨领域的反复出现并非巧合。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: rubric在训练层面可作为密集反馈信号，在标量奖励不足之处提供过程级指导。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: rubric可在内在层面由模型行为动态涌现，从而驱动LLM的自我改进。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 该综述从生成质量、执行保真度、理论约束与安全威胁四个维度考察rubric的可靠性，并盘点跨领域基于rubric的基准。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 以rubric为统一框架，系统综述其在LLM评估、强化学习训练与自我改进中的构建、优化与可靠性。
+  abstract_zh: 该综述将评分细则（rubric）定义为把复杂质量判断转化为结构化、可执行标准的显式准则集合，并论证其在LLM评估、强化学习与安全对齐等独立研究脉络中的反复出现并非巧合。论文系统组织现有rubric设计，考察其构建与优化，并指出rubric在三个递进层面发挥作用：评估层面将整体判断分解为可验证维度，训练层面作为密集反馈信号提供标量奖励无法覆盖的过程级指导，内在层面则从模型行为中动态涌现并驱动自我改进。作者进一步从生成质量、执行保真度、理论约束与安全威胁四个方面评估rubric的可靠性，并盘点跨领域基于rubric的基准。总体上，rubric将人类价值期望转化为机器可学习信号，充当人类意图与机器行为之间的桥梁。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: LLM评估与自我改进的rubric统一框架综述，属自我改进AI域而非音视频核心域，按基准仅作初筛。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 从整体评估到结构化准则：跨越不断演进的LLM格局的评分细则
+relations:
+- type: same_topic
+  ref: paper:arxiv:2604.06996
+  note: 同属基于rubric的LLM评估研究，本综述为其提供框架性背景
+- type: same_topic
+  ref: paper:arxiv:2608.24231
+  note: 均涉及rubric裁判与LLM自我评估/自我改进机制
+- type: same_topic
+  ref: paper:arxiv:2410.03608
+  note: 生成的checklist与rubric同属结构化评估准则，用于改进LLM评估与生成

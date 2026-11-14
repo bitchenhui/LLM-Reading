@@ -1,0 +1,66 @@
+id: paper:arxiv:2606.21008
+type: paper
+title: 'The Metanym Game: An LLM Benchmark Without Ground Truth That Rises With the Models It Measures'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2606.21008v4
+  url: https://arxiv.org/abs/2606.21008
+  pdf_url: https://arxiv.org/pdf/2606.21008v4
+  venue: arXiv preprint
+time:
+  published: '2026-06-19'
+  collected: '2026-11-15'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:SelfImprovement
+  role: uses
+claims:
+- statement: Metanym 游戏评分与有标准答案的 GPQA Diamond 基准高度相关，且经审计确认无泄漏。
+  confidence: reported
+  metrics:
+  - name: 与GPQA Diamond相关系数
+    value: r = 0.98
+    scope: Metanym 游戏评分 vs GPQA Diamond 成绩，含泄漏审计
+  evidence: abstract（初筛，未读全文）
+- statement: 评分矩阵的 SVD 左右奇异向量同时给出裁判评分与生成者评分，以一次分解取代外部标准答案。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 推理能力几乎不改变 Metanym 游戏评分，但会显著提升需要推导的 GPQA 成绩。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 生成与评判是不同技能：在该模型名单上，最强生成者只是中等水平的裁判。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 官方评分由五名最佳裁判组成的评议会发布，席位可竞争以保持时效，可作为自我改进 AI 的候选引导信号。
+  confidence: reported
+  metrics:
+  - name: 评议会规模
+    value: '5'
+    scope: 按裁判评分一致性选出的最佳裁判数
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: LLM 相互构造类比并互评，用评分矩阵 SVD 同时导出裁判与生成者评分，无需外部标准答案，与 GPQA Diamond 相关性达 0.98。
+  abstract_zh: 论文提出完全自包含的 Metanym 游戏基准：语言模型比赛撰写跨领域类比模板并相互主观打分，用事实评分矩阵的 SVD 左右奇异向量分别给出裁判评分与生成者评分，首次在 LLM
+    同行评议中由一次分解得到两种评分。该基准与专家命题、有标准答案的 GPQA Diamond 相关性达 r=0.98，经审计确认无泄漏；作者假设两者测量同一能力——LLM 以跨领域原型语境持有知识，GPQA
+    在单一领域实例化知识而 Metanym 游戏将一个原型实例化到多个领域，仅靠类比、无需推理。实验显示推理能力几乎不改变游戏评分却会提升 GPQA 成绩，且生成与评判是不同技能：最强生成者只是中等裁判。由五名最佳裁判组成、席位可竞争的评议会发布官方评分，可作为自我改进
+    AI 的候选引导信号。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 提出无需标准答案、随被测模型水平一同上升的 LLM 互评基准，并定位为自我改进 AI 的候选引导信号，属自我改进域的评估方法工作，非核心音视频编码域。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: Metanym 游戏：一个无需标准答案且随被测模型一同上升的 LLM 基准
+relations:
+- type: same_topic
+  ref: paper:arxiv:2605.30104
+  note: 同属 LLM-as-judge 基准评估方向：SEAL 研究 LLM 元评审复兴饱和基准，本文用 LLM 同行互评替代标准答案
+- type: same_topic
+  ref: paper:arxiv:2210.11610
+  note: 均围绕 LLM 自我改进能力：本文基准被定位为自我改进 AI 的候选引导信号

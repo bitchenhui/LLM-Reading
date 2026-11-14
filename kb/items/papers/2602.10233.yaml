@@ -1,0 +1,73 @@
+id: paper:arxiv:2602.10233
+type: paper
+title: 'ImprovEvolve: Basin-Hopping Meets LLM-Guided Evolutionary Search'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2602.10233v2
+  url: https://arxiv.org/abs/2602.10233
+  pdf_url: https://arxiv.org/pdf/2602.10233v2
+  venue: arXiv preprint
+time:
+  published: '2026-02-10'
+  collected: '2026-11-15'
+entities:
+- ref: concept:AlphaEvolve
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: ImprovEvolve通过对LLM演化出的初始化、局部改进与扰动三算子进行盆地跳跃式迭代搜索，降低了对LLM端到端生成优化器的能力要求
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在六边形装箱问题上发现新的最优装填构造，并可在少量专家微调后扩展到更多规模
+  confidence: reported
+  metrics:
+  - name: 刷新SOTA的装箱规模
+    value: 11、12、15、16
+    scope: 六边形装箱问题，算法直接发现
+  - name: 微调后新增刷新规模
+    value: 14、17、23
+    scope: 对生成代码做最小专家调优后
+  evidence: abstract（初筛，未读全文）
+- statement: 在二阶自相关不等式问题上提升了已知下界
+  confidence: reported
+  metrics:
+  - name: 二阶自相关不等式下界
+    value: 0.96258（自0.96102提升）
+    scope: 演化并经人工规模调整后的程序所得
+  evidence: abstract（初筛，未读全文）
+- statement: 在球面码问题上对多数随机选取的SOTA实例改进了已知最优解
+  confidence: reported
+  metrics:
+  - name: 最大内积余弦相对改进
+    value: 最高2.4%
+    scope: 90个随机选取的多样化SOTA球面码中的多数实例
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 将LLM进化搜索拆解为初始化/局部改进/扰动三算子并驱动盆地跳跃，刷新装箱、自相关不等式与球面码纪录
+  abstract_zh: 针对AlphaEvolve等让LLM端到端演化单个完整程序的做法，本文提出ImprovEvolve：只让LLM演化三个专用算子——初始化、局部改进与强度调度的扰动，再以盆地跳跃方式迭代逼近最优，大幅降低LLM认知负担。在六边形装箱问题上，发现11、12、15、16个六边形的全新最优装填，经少量人工微调代码后进一步覆盖14、17、23个六边形。在二阶自相关不等式问题上，将下界从0.96102推至0.96258。在球面码问题上，对90个随机选取的SOTA球面码中的多数降低了已知最大内积余弦，相对改进最高达2.4%。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 属AlphaEvolve类LLM引导进化搜索/自我改进AI工作，与音视频技术无直接关联，按非核心域仅收summary_only
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: ImprovEvolve：盆地跳跃与LLM引导进化搜索的结合
+relations:
+- type: same_topic
+  ref: paper:arxiv:2506.13131
+  note: ImprovEvolve明确以AlphaEvolve为对照范式，提出降低LLM认知负担的算法替代方案
+- type: same_topic
+  ref: paper:arxiv:2511.23473
+  note: 同为面向开放数学/优化问题的LLM引导进化搜索改进工作
+- type: same_topic
+  ref: paper:arxiv:2510.14150
+  note: 同为进化式编码智能体用于算法发现与优化的方向
+- type: same_topic
+  ref: paper:arxiv:2401.02051
+  note: 同属LLM驱动自动算法/启发式设计（EoH）研究线

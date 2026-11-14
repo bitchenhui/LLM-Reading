@@ -1,0 +1,69 @@
+id: paper:arxiv:2605.08904
+type: paper
+title: 'OPT-BENCH: Evaluating the Iterative Self-Optimization of LLM Agents in Large-Scale Search Spaces'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2605.08904v1
+  url: https://arxiv.org/abs/2605.08904
+  pdf_url: https://arxiv.org/pdf/2605.08904v1
+  venue: arXiv preprint
+time:
+  published: '2026-05-09'
+  collected: '2026-11-15'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: subject
+claims:
+- statement: OPT-BENCH将20个机器学习任务与10个经典NP难问题组合，构成评估LLM智能体迭代自优化能力的大规模搜索空间基准。
+  confidence: reported
+  metrics:
+  - name: 机器学习任务数
+    value: '20'
+    scope: OPT-BENCH基准中包含的ML任务
+  - name: NP难问题数
+    value: '10'
+    scope: OPT-BENCH基准中包含的经典NP-hard组合优化问题
+  evidence: abstract（初筛，未读全文）
+- statement: 提出的OPT-Agent通过感知、记忆与推理循环，依据环境反馈迭代精化解，模拟类人认知式适应而非机械工具调用。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在19个LLM（7个模型家族，覆盖推理、通用与开源模型）上的实验显示：更强模型更能有效利用反馈信号自我改进，但上限受基础能力约束，最优模型仍不及人类专家。
+  confidence: reported
+  metrics:
+  - name: 被测模型数
+    value: '19'
+    scope: 来自7个模型家族的LLM
+  - name: 模型家族数
+    value: '7'
+    scope: 参与评测的LLM家族
+  - name: 参数规模范围
+    value: 3B至235B
+    scope: 覆盖的LLM参数量区间
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出含20个ML任务与10个NP难问题的OPT-BENCH基准及OPT-Agent认知循环框架，评测19个LLM的迭代自优化能力。
+  abstract_zh: 该工作针对LLM能否依据动态环境反馈持续改进解的内在自我改进能力提出评测基准OPT-BENCH，将20个机器学习任务与10个经典NP难问题组合成大规模搜索空间。同时提出OPT-Agent框架，通过感知—记忆—推理的类人认知循环，基于环境反馈迭代精化解决方案，强调依赖内在自我反思而非死记工具应用。作者在来自7个模型家族、参数量3B至235B的19个LLM（含推理模型、通用模型与开源模型）上开展实验。结果表明：越强的模型越能有效利用反馈信号实现自我改进，但这一适应上限受模型基础能力约束，即使最先进的LLM仍落后于人类专家水平。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 属于LLM智能体迭代自优化/自我改进的基准与框架研究，归入自我改进AI域，与音视频核心域无关，按规则仅作摘要收录。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: OPT-BENCH：评估LLM智能体在大规模搜索空间中的迭代自优化
+relations:
+- type: same_topic
+  ref: paper:arxiv:2210.11610
+  note: 同属LLM自我改进能力研究方向
+- type: same_topic
+  ref: paper:arxiv:2510.07841
+  note: 同为LLM智能体测试时自我改进的评测与机制研究
+- type: same_topic
+  ref: paper:arxiv:2310.02304
+  note: 同为迭代式自改进（代码生成/优化）的评测研究

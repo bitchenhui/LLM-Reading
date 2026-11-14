@@ -1,0 +1,56 @@
+id: paper:arxiv:2510.08755
+type: paper
+title: Robust Heuristic Algorithm Design with LLMs
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2510.08755v1
+  url: https://arxiv.org/abs/2510.08755
+  pdf_url: https://arxiv.org/pdf/2510.08755v1
+  venue: arXiv preprint
+time:
+  published: '2025-10-09'
+  collected: '2026-11-15'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:FunSearch
+  role: compared_against
+claims:
+- statement: 通过让LLM接触启发式表现不佳的实例、解释失败成因并将设计专门化到输入空间特定区域，可生成比现有技术更鲁棒的启发式算法。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 所生成启发式的最坏情况性能相比FunSearch提升约28倍，平均性能改善且运行时间不变。
+  confidence: reported
+  metrics:
+  - name: 最坏情况性能提升
+    value: ~28×
+    scope: 相对FunSearch，跨输入实例的最坏情况口径
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 通过暴露失败实例、解释失败原因并按输入区域专门化，引导LLM生成比FunSearch更鲁棒的启发式算法。
+  abstract_zh: 作者主张在LLM启发式设计中引入能解释启发式为何表现不佳并给出修复建议的工具，以生成更鲁棒、性能更优的算法。方法包含三个简单思路：让LLM接触启发式表现不佳的具体输入实例；解释这些失败发生的原因；将算法设计专门化到输入空间的特定区域。结果显示，所生成的启发式相比FunSearch等现有技术具有约28倍更好的最坏情况性能，同时平均性能有所提升且运行时间保持不变。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: LLM驱动的启发式自动算法设计（以FunSearch为对比基线）属自我改进AI追踪域，但与音视频编码链路无直接技术关联，按基准仅做摘要收录。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 基于大语言模型的鲁棒启发式算法设计
+relations:
+- type: same_topic
+  ref: paper:arxiv:2401.02051
+  note: 同为LLM自动启发式设计（EoH）工作
+- type: same_topic
+  ref: paper:arxiv:2412.14995
+  note: 同为基于LLM的自动启发式设计（HSEvo）
+- type: same_topic
+  ref: paper:arxiv:2412.20694
+  note: 同为LLM启发式设计的质量不确定性平衡进化方法（QUBE）
+- type: same_topic
+  ref: paper:arxiv:2505.12285
+  note: 同为算法与语言模型协同进化的启发式自动设计（CALM）

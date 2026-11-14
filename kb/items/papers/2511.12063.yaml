@@ -1,0 +1,59 @@
+id: paper:arxiv:2511.12063
+type: paper
+title: 'TextBO: Bayesian Optimization in Language Space for Eval-Efficient Self-Improving AI'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2511.12063v3
+  url: https://arxiv.org/abs/2511.12063
+  pdf_url: https://arxiv.org/pdf/2511.12063v3
+  venue: arXiv preprint
+time:
+  published: '2025-11-15'
+  collected: '2026-11-15'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: 理论上证明：将LLM提出的文本局部编辑（简单文本梯度）与Best-of-N选择策略结合，可在统计上模拟沿UCB采集函数梯度的上升，从而将贝叶斯优化合法地引入离散提示空间。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: TextBO在基于persona诱导偏好分布的自动化广告对齐任务上，每个评估的性能优于Best-of-N和GEPA等强基线。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 将TextBO的Best-of-N多步文本梯度机制增强到GEPA后，在agentic AI基准上显著优于标准GEPA。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: TextBO是纯语言空间运行的自我改进算法，不需要显式代理模型或校准的不确定性估计。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 将UCB-贝叶斯优化扩展到语言空间，提出纯语言空间、评估高效的LLM自我改进算法TextBO
+  abstract_zh: 针对自我改进AI系统中'获取可靠反馈比生成候选更昂贵'的评估效率瓶颈，作者将具有评估效率最优性保证的UCB-贝叶斯优化扩展到离散提示空间。理论上证明：将LLM提出的简单文本局部编辑（文本梯度）与Best-of-N选择结合，可统计上模拟沿UCB采集函数梯度的上升。据此提出TextBO，一种纯语言空间运行、无需显式代理模型或校准不确定性模型的评估高效自我改进算法。在基于persona诱导偏好分布的自动化广告对齐任务上，TextBO每次评估的性能优于Best-of-N与GEPA等强基线；将TextBO的Best-of-N多步文本梯度机制叠加到GEPA后，在agentic
+    AI基准上显著超越标准GEPA。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 属LLM提示优化与贝叶斯优化驱动的自我改进AI研究，非音视频核心域，按收录基准仅给summary_only
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: TextBO：语言空间中的贝叶斯优化，实现评估高效的自我改进AI
+relations:
+- type: same_topic
+  ref: paper:arxiv:2309.16797
+  note: 同属LLM提示进化/提示优化驱动的自我改进方向
+- type: same_topic
+  ref: paper:arxiv:2406.04824
+  note: 同属贝叶斯优化（采集函数）与LLM自我改进结合的研究线
+- type: same_topic
+  ref: paper:arxiv:2510.04618
+  note: 同属prompt/上下文演化驱动的LLM自我改进，与文中GEPA类基线方法相关
+- type: same_topic
+  ref: paper:arxiv:2608.14621
+  note: 同属基于文本梯度的递归自我改进框架

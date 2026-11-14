@@ -1,0 +1,56 @@
+id: paper:arxiv:2605.06822
+type: paper
+title: 'SHARP: A Self-Evolving Human-Auditable Rubric Policy for Financial Trading Agents'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2605.06822v1
+  url: https://arxiv.org/abs/2605.06822
+  pdf_url: https://arxiv.org/pdf/2605.06822v1
+  venue: arXiv preprint
+time:
+  published: '2026-05-07'
+  collected: '2026-11-15'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: SHARP以有界、人类可读的条件-动作规则集合约束代理推理，通过归因代理的跨样本推理定位规则失败并执行原子化策略编辑，缓解低信噪比延迟奖励下的信用分配难题与策略漂移。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在三个股票行业与四个LLM骨干上评估，SHARP持续将通用初始启发式转化为高稳健交易策略，紧凑模型经验性能平均提升10至20个百分点。
+  confidence: reported
+  metrics:
+  - name: 性能提升
+    value: 10 to 20 percentage points
+    scope: 紧凑LLM（如GPT-4o-mini），跨三个股票行业、四个LLM骨干的平均值
+  evidence: abstract（初筛，未读全文）
+- statement: 相比无界自由文本提示优化，SHARP以符号化策略优化加walk-forward验证正则化，显著提升策略的结构透明度与可审计性。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 用结构化符号规则策略替代自由文本提示变异，使LLM交易代理在噪声市场中可靠自进化并保持可审计。
+  abstract_zh: 针对LLM金融交易代理在低信噪比、延迟标量奖励（盈亏）环境下自由文本提示优化会加剧信用分配问题并导致策略漂移，提出神经符号框架SHARP，将代理推理约束在有界、人类可读的显式条件-动作规则集合内。当出现次优交易时，归因代理通过跨样本推理定位具体规则失败，进而执行原子化的定向策略编辑，并通过严格的walk-forward验证进行正则化。在三个股票行业、四个LLM骨干上的评估表明，SHARP能持续将通用初始启发式转化为高稳健性策略，紧凑模型（如GPT-4o-mini）的经验性能平均提升10至20个百分点。结果表明LLM可在动态高效适应的同时，显著满足机构金融对结构透明度与可审计性的要求。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 属LLM自进化代理方法研究（结构化规则策略自改进），与音视频技术无关，非核心域故仅初筛收录。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: SHARP：面向金融交易代理的自进化、人类可审计的准则策略
+relations:
+- type: same_topic
+  ref: paper:arxiv:2610.11794
+  note: 同属以规则手册（rulebook/rubric）为可变面的结构化自改进方法
+- type: same_topic
+  ref: paper:arxiv:2610.10629
+  note: 同属有界/合规约束下的LLM代理自进化，防止策略漂移
+- type: same_topic
+  ref: paper:arxiv:2510.04618
+  note: 同属通过演化持久化策略/上下文实现LLM自改进，并关注噪声环境下的更新可靠性

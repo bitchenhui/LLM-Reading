@@ -1,0 +1,43 @@
+id: paper:arxiv:2604.23688
+type: paper
+title: Do Protective Perturbations Really Protect Portrait Privacy under Real-world Image Transformations?
+domain: processing_enhancement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2604.23688v2
+  url: https://arxiv.org/abs/2604.23688
+  pdf_url: https://arxiv.org/pdf/2604.23688v2
+  venue: arXiv preprint
+time:
+  published: '2026-04-26'
+  collected: '2026-11-15'
+entities:
+- ref: concept:SuperResolution
+  role: subject
+- ref: concept:TrainingFree
+  role: uses
+claims:
+- statement: 像素级保护扰动难以承受缩放、色彩压缩等常见良性图像变换的串联作用，在真实传播场景中存在防护失效风险。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: TIP-RSR通过顺序图像变换结合现成区域级超分辨率恢复模型即可高效净化保护性扰动，同时保持图像保真度，计算开销显著低于基于扩散模型的净化方法。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 像素级肖像保护扰动难抵御缩放等串联良性图像变换，提出免训练区域级超分净化框架TIP-RSR低成本去扰动。
+  abstract_zh: 针对通过像素级保护扰动防止人像被未经授权编辑或生成说话人脸（TFG）的主动防御方法，论文指出现有鲁棒性研究多只考察单一变换，忽略了显示与传播中的串联良性操作。作者系统评估了面向GAN/扩散模型编辑及TFG的代表性通用与肖像专用防御在缩放、色彩压缩等顺序图像变换下的定性与定量表现，结果显示像素级扰动难以抵御串联变换，存在实际失效风险。为证明该漏洞可被低成本利用，提出免训练净化框架TIP-RSR，将顺序图像变换与现成区域级超分辨率恢复模型结合，在保持图像保真度的同时高效去除保护性扰动，计算量远低于基于扩散模型的净化方法。代码已开源。
+assessment:
+  relevance: low
+  decision: summary_only
+  reason: 核心为肖像隐私主动防御扰动的鲁棒性评估与净化攻击，属安全方向，仅超分与图像变换处理与增强域沾边，非编码链路核心。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 保护性扰动在真实世界图像变换下真能保护肖像隐私吗？
+relations:
+- type: same_topic
+  ref: paper:arxiv:2102.03113
+  note: 均涉及真实场景下人脸图像的超分辨率恢复，本文用现成超分模型去除保护性扰动

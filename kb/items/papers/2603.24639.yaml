@@ -1,0 +1,59 @@
+id: paper:arxiv:2603.24639
+type: paper
+title: Experiential Reflective Learning for Self-Improving LLM Agents
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2603.24639v2
+  url: https://arxiv.org/abs/2603.24639
+  pdf_url: https://arxiv.org/pdf/2603.24639v2
+  venue: arXiv preprint
+time:
+  published: '2026-03-25'
+  collected: '2026-11-15'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: ERL在Gaia2基准上较ReAct基线将成功率提升7.8%，并在任务完成可靠性上取得大幅增益
+  confidence: reported
+  metrics:
+  - name: 成功率提升
+    value: 7.8%
+    scope: Gaia2基准，对比ReAct基线
+  evidence: abstract（初筛，未读全文）
+- statement: 选择性检索是ERL生效的必要条件；启发式比少样本轨迹提示提供更可迁移的抽象，优于既有经验学习方法
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 仅反思单次尝试经验以提取可迁移启发式，即可实现有效的智能体自改进
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出ERL框架：反思任务轨迹生成可迁移启发式并在测试时检索注入上下文，Gaia2上较ReAct成功率提升7.8%。
+  abstract_zh: 论文提出经验反思学习（ERL），一种简洁的LLM智能体自改进框架，通过经验学习实现对新环境的快速适应。ERL对任务轨迹与结果进行反思，提炼出可跨任务迁移的启发式经验；测试时依据当前任务检索相关启发式并注入智能体上下文以引导执行。在Gaia2基准上，ERL较ReAct基线成功率提升7.8%，任务完成可靠性大幅提高，并优于既有经验学习方法。系统消融实验表明选择性检索不可或缺，且启发式比少样本轨迹提示提供更可迁移的抽象，证明从单次尝试经验中提取启发式即可实现有效的智能体自改进。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: LLM智能体经验反思自改进框架，属self_improvement域且直接命中核心议题，但非视频/图像编码核心域，按规则仅初筛收录
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 面向自改进LLM智能体的经验反思学习
+relations:
+- type: same_topic
+  ref: paper:arxiv:2312.10003
+  note: 同为多步推理LLM智能体的自改进方法，均以ReAct为基线
+- type: same_topic
+  ref: paper:arxiv:2506.06698
+  note: 同属基于经验回放/经验学习的语言智能体自改进
+- type: same_topic
+  ref: paper:arxiv:2510.07841
+  note: 同为LLM智能体在测试时的自改进，均依赖经验注入上下文
+- type: same_topic
+  ref: paper:arxiv:2510.04618
+  note: 同为面向自改进语言模型的上下文/经验演化机制

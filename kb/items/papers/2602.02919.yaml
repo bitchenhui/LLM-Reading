@@ -1,0 +1,57 @@
+id: paper:arxiv:2602.02919
+type: paper
+title: 'DeltaEvolve: Accelerating Scientific Discovery through Momentum-Driven Evolution'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2602.02919v1
+  url: https://arxiv.org/abs/2602.02919
+  pdf_url: https://arxiv.org/pdf/2602.02919v1
+  venue: arXiv preprint
+time:
+  published: '2026-02-02'
+  collected: '2026-11-15'
+entities:
+- ref: concept:AlphaEvolve
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: 将 LLM 驱动的进化智能体形式化为 EM 框架：语言模型采样候选程序对应 E 步，系统基于评估反馈更新控制上下文对应 M 步。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 以全代码快照构建上下文是次优 M 步：冗余实现细节稀释核心算法思想，削弱对进化的引导。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: DeltaEvolve 用结构化语义增量（记录修改方式、原因及其对性能的影响）替代全代码历史，并通过多级数据库与渐进披露机制压缩输入 token。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在跨多个科学领域的任务上，相较基于全代码的进化智能体，DeltaEvolve 能以更少 token 消耗发现更优解。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 用结构化语义增量替代全代码历史，改进 AlphaEvolve 类 LLM 进化智能体的效果与 token 效率。
+  abstract_zh: 该文将 LLM 驱动的进化智能体形式化为通用期望最大化（EM）框架：语言模型采样候选程序为 E 步，系统依据评估反馈更新控制上下文为 M 步。在此视角下，用全代码快照构建上下文是次优的
+    M 步，冗余实现细节稀释核心算法思想、难以提供清晰的进化启发。作者据此提出 DeltaEvolve，以记录相邻节点间'如何改、为何改'及其性能影响的结构化语义增量替代全代码历史，并利用多级数据库与渐进披露机制进一步降低输入
+    token。因程序可分解，语义增量中大量有效组件可迁移、信息量更高。跨多个科学领域任务的实验表明，相较基于全代码的进化智能体，该框架能以更少 token 消耗发现更优解。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: LLM 进化智能体自我改进核心工作（AlphaEvolve 的 EM 形式化与语义增量改进），非音视频核心域，按规则仅给初筛摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: DeltaEvolve：通过动量驱动进化加速科学发现
+relations:
+- type: same_topic
+  ref: paper:arxiv:2506.13131
+  note: DeltaEvolve 直接针对 AlphaEvolve 全代码历史上下文的低效问题提出改进，同属 LLM 进化式算法发现
+- type: same_topic
+  ref: paper:arxiv:2511.23473
+  note: 同为 AlphaEvolve 类进化编码智能体的改进工作
+- type: same_topic
+  ref: paper:arxiv:2510.14150
+  note: 同属面向算法发现与优化的进化式编码智能体研究线

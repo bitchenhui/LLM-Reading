@@ -1,0 +1,43 @@
+id: paper:arxiv:2602.10324
+type: paper
+title: Discovering Differences in Strategic Behavior Between Humans and LLMs
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2602.10324v2
+  url: https://arxiv.org/abs/2602.10324
+  pdf_url: https://arxiv.org/pdf/2602.10324v2
+  venue: arXiv preprint
+time:
+  published: '2026-02-10'
+  collected: '2026-11-15'
+entities:
+- ref: concept:AlphaEvolve
+  role: uses
+- ref: concept:LLM
+  role: subject
+claims:
+- statement: 使用AlphaEvolve可直接从行为数据中发现人类与LLM行为的可解释模型，实现行为结构性因素的开放式发现。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在迭代石头剪刀布任务上，前沿LLM可表现出比人类更深层的策略行为。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 用AlphaEvolve从对局数据中发现人类与LLM行为的可解释模型，揭示前沿LLM可展现比人类更深的策略行为。
+  abstract_zh: 随着LLM被部署到社交与策略场景，理解其行为与人类分歧的根源变得关键，但现有行为博弈论模型难以完整刻画人类或LLM等黑盒智能体的特异行为。作者采用程序发现工具AlphaEvolve，直接从行为数据中发现人类与LLM行为的可解释模型，实现结构性驱动因素的开放式挖掘。在迭代石头剪刀布上的分析表明，前沿LLM可具备比人类更深层的策略行为。该工作为理解策略交互中人类与LLM行为差异的结构性成因提供了基础。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 以AlphaEvolve程序发现工具分析人类与LLM策略行为差异，属自我改进AI研究线的应用侧，非音视频核心域。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 发现人类与LLM策略行为之间的差异
+relations:
+- type: same_topic
+  ref: paper:arxiv:2506.13131
+  note: 本文以AlphaEvolve为程序发现工具，与AlphaEvolve原始论文同属开放式程序发现研究线

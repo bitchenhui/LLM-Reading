@@ -1,0 +1,53 @@
+id: paper:arxiv:2605.29212
+type: paper
+title: 'MetaRanker: Human-in-the-loop Active Ranking for Metalens Image Quality'
+domain: quality_assessment
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2605.29212v2
+  url: https://arxiv.org/abs/2605.29212
+  pdf_url: https://arxiv.org/pdf/2605.29212v2
+  venue: arXiv preprint
+time:
+  published: '2026-05-28'
+  collected: '2026-11-15'
+entities:
+- ref: concept:IQA
+  role: subject
+- ref: metric:PSNR
+  role: measured_by
+claims:
+- statement: MetaRanker在真实与合成超透镜数据集上产生的质量排序与人类评估对齐度最高，且所需成对标注较穷举成对评估减少约80%。
+  confidence: reported
+  metrics:
+  - name: 成对标注量减少
+    value: 约80%
+    scope: 相对穷举成对评估，真实世界+合成超透镜数据集
+  evidence: abstract（初筛，未读全文）
+- statement: 标准图像质量评估指标（如PSNR）在超透镜域与人类语义可解读性的一致性有限，体现感知-失真权衡。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: MetaRanker将概率偏好模型与不确定性感知查询选择结合，VLM语义先验仅用于引导信息性比较采样，人类判断始终是主要监督信号。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出人在回路主动排序框架MetaRanker，以语义可解读性评估超透镜图像质量，成对标注省约80%。
+  abstract_zh: 超透镜可大幅小型化光学模块，但存在明显色差与场相关像差，需计算重建；现有重建模型多以PSNR等失真保真目标训练与选型，此类代理指标与人类偏好相关性弱（感知-失真权衡）。作者提出MetaRanker，将超透镜图像质量形式化为语义可解读性，即人在光学伪影下可靠识别物体与结构的程度。框架结合概率偏好模型与不确定性感知查询选择，并借助视觉-语言模型提供轻量语义先验，先验仅用于引导信息性比较采样，人类判断始终是主要监督信号。在真实与合成超透镜数据集上，MetaRanker的排序与人类评估最一致，所需成对标注较穷举成对评估减少约80%。研究还表明标准IQA指标在超透镜域与人类可解读性的一致性有限。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 属质量评估域（IQA指标与人类感知一致性、人在回路评估方法），但研究对象为超透镜计算成像而非音视频编码链路，按收录基准作初筛摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: MetaRanker：面向超透镜图像质量的人在回路主动排序框架
+relations:
+- type: same_topic
+  ref: paper:arxiv:2511.00969
+  note: 同属客观质量指标与人工评估一致性的检验主题，MetaRanker亦以IQA指标对齐人类判断为切入点
+- type: same_topic
+  ref: paper:arxiv:2601.08311
+  note: 均利用视觉-语言模型辅助图像质量评估：MetaRanker用VLM语义先验引导主动采样，该文用LMM增强IQA能力

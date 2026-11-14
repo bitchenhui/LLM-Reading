@@ -1,0 +1,49 @@
+id: paper:arxiv:2606.16464
+type: paper
+title: Towards Robust Generative Speech Enhancement Using Vector Quantisation-Based Neural Audio Codec
+domain: audio_coding
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2606.16464v1
+  url: https://arxiv.org/abs/2606.16464
+  pdf_url: https://arxiv.org/pdf/2606.16464v1
+  venue: arXiv preprint
+time:
+  published: '2026-06-15'
+  collected: '2026-11-15'
+entities:
+- ref: concept:NeuralAudioCodec
+  role: subject
+- ref: metric:MOS
+  role: measured_by
+claims:
+- statement: 全量微调的cNAC-SE模型在多种测试条件下持续优于所有dNAC-SE（离散token预测）变体
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: cNAC-SE在DNS-MOS指标上达到已有生成式语音增强方法中的领先水平
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: VQ通过干净先验约束正则化的内在效应增强鲁棒性，独立于离散token处理，其正则化价值可迁移至其他连续建模方法
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出cNAC-SE与dNAC-SE框架，揭示VQ正则化经干净先验约束提升语音增强鲁棒性并取得领先DNS-MOS
+  abstract_zh: 该工作研究基于向量量化(VQ)的神经音频编解码器(NAC)在语音增强中连续与离散潜空间的建模策略，以及VQ正则化的作用。作者提出cNAC-SE与dNAC-SE两个框架，分别预测连续表示与离散token，并通过理论分析与潜空间可视化揭示其内在建模机制。实验表明，全量微调的cNAC-SE在多种测试条件下持续优于所有dNAC-SE变体，并在DNS-MOS指标上处于已有生成式方法的领先水平。与判别式基线对比显示，VQ通过干净先验约束正则化的内在效应增强鲁棒性，与离散token处理无关，其价值可迁移到其他连续建模方法。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 语音编码/增强方向论文，系统研究神经音频编解码器潜空间建模与VQ正则化，属非核心域故仅初筛收录
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 基于向量量化神经音频编解码器的鲁棒生成式语音增强研究
+relations:
+- type: same_topic
+  ref: paper:arxiv:2107.03312
+  note: SoundStream为端到端神经音频编解码器代表作，与本文的VQ-NAC语音增强同属神经音频编码主题
+- type: same_topic
+  ref: paper:arxiv:2207.03067
+  note: 跨尺度向量量化神经语音编码，与本文研究VQ在语音潜空间中的建模机制主题相近

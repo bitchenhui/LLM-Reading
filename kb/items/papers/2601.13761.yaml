@@ -1,0 +1,53 @@
+id: paper:arxiv:2601.13761
+type: paper
+title: 'DARC: Decoupled Asymmetric Reasoning Curriculum for LLM Evolution'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2601.13761v2
+  url: https://arxiv.org/abs/2601.13761
+  pdf_url: https://arxiv.org/pdf/2601.13761v2
+  venue: arXiv preprint
+time:
+  published: '2026-01-20'
+  collected: '2026-11-15'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:SelfImprovement
+  role: builds_on
+claims:
+- statement: DARC在9个推理基准、3个骨干模型上平均提升10.9分，且不依赖人工标注。
+  confidence: reported
+  metrics:
+  - name: 平均性能提升
+    value: 10.9 points
+    scope: 9个推理基准×3个骨干模型平均
+  evidence: abstract（初筛，未读全文）
+- statement: DARC持续优于所有对比基线并接近全监督模型性能。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出两阶段自博弈框架DARC，以难度校准出题与非对称自蒸馏稳定LLM推理自进化。
+  abstract_zh: 针对现有LLM自博弈框架中提问者奖励反馈非平稳与求解者自生成伪标签自举错误导致的优化不稳定问题，提出DARC两阶段框架。第一阶段训练提问者基于显式难度条件与外部语料合成难度校准的问题；第二阶段采用非对称自蒸馏，由可访问文档的教师模型生成高质量伪标签，监督无文档权限的学生求解器。DARC与模型无关，在9个推理基准、3个骨干模型上平均提升10.9分，持续优于所有基线并接近全监督模型性能，且无需人工标注。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: LLM自博弈自我进化框架，属self_improvement域而非核心编码域，按收录基准仅给初筛摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: DARC：面向大语言模型演化的解耦非对称推理课程
+relations:
+- type: same_topic
+  ref: paper:arxiv:2508.05004
+  note: 同为通过自博弈问题生成驱动LLM推理自进化
+- type: same_topic
+  ref: paper:arxiv:2508.14029
+  note: 同为自博弈问题合成支撑RLVR训练
+- type: same_topic
+  ref: paper:arxiv:2210.11610
+  note: LLM自改进方向的代表性工作

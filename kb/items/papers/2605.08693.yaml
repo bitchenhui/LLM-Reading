@@ -1,0 +1,57 @@
+id: paper:arxiv:2605.08693
+type: paper
+title: 'SkillMaster: Toward Autonomous Skill Mastery in LLM Agents'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2605.08693v3
+  url: https://arxiv.org/abs/2605.08693
+  pdf_url: https://arxiv.org/pdf/2605.08693v3
+  venue: arXiv preprint
+time:
+  published: '2026-05-09'
+  collected: '2026-11-15'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:SelfImprovement
+  role: subject
+claims:
+- statement: SkillMaster在ALFWorld上将整体成功率较SOTA基线提升8.8%，为所有对比方法中最佳。
+  confidence: reported
+  metrics:
+  - name: 成功率提升
+    value: 8.8%
+    scope: ALFWorld，对比state-of-the-art基线
+  evidence: abstract（初筛，未读全文）
+- statement: SkillMaster在WebShop上将整体成功率较SOTA基线提升9.3%，为所有对比方法中最佳。
+  confidence: reported
+  metrics:
+  - name: 成功率提升
+    value: 9.3%
+    scope: WebShop，对比state-of-the-art基线
+  evidence: abstract（初筛，未读全文）
+- statement: 经SkillMaster训练的智能体可识别技能失败、从轨迹证据精炼程序性知识，并通过少量技能库编辑将改进迁移到未来任务。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 训练LLM智能体自主创建、精炼与选择技能，在ALFWorld/WebShop上较SOTA成功率提升8.8%/9.3%。
+  abstract_zh: 提出SkillMaster训练框架，使LLM智能体学会创建新技能、精炼已有技能并在任务求解中选择积累的技能。方法包含三项设计：基于轨迹的技能回顾（依据完成回合的证据提出、更新或保留技能）、以候选技能编辑在相关探测任务上的反事实效用作为直接学习信号、以及DualAdv-GRPO（对任务求解动作与技能编辑决策分别估计优势以稳定联合训练）。在ALFWorld与WebShop上，整体成功率较SOTA基线分别提升8.8%与9.3%，为所有对比方法中最优。分析表明训练后的智能体能识别技能失败、从轨迹证据精炼程序性知识，并以少量技能库编辑将改进迁移至未来任务。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 面向LLM智能体自主技能创建/精炼/选择的自改进训练框架，属自我改进AI领域，非音视频核心域。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: SkillMaster：迈向LLM智能体的自主技能掌握
+relations:
+- type: same_topic
+  ref: paper:arxiv:2512.17102
+  note: 同为面向自改进智能体的技能库（skill library）+强化学习方向
+- type: same_topic
+  ref: paper:arxiv:2609.39149
+  note: 同为LLM智能体技能自进化/技能掌握主题

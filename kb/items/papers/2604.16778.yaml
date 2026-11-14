@@ -1,0 +1,58 @@
+id: paper:arxiv:2604.16778
+type: paper
+title: 'Federation over Text: Insight Sharing for Multi-Agent Reasoning'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2604.16778v3
+  url: https://arxiv.org/abs/2604.16778
+  pdf_url: https://arxiv.org/pdf/2604.16778v3
+  venue: arXiv preprint
+time:
+  published: '2026-04-18'
+  collected: '2026-11-15'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:SelfImprovement
+  role: uses
+claims:
+- statement: FoT 使多客户端 LLM 智能体无需共享问题实例、不进行梯度优化，即可通过中央服务器聚合形成跨域共享的元认知洞见库。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: FoT 平均提升推理性能 11.9 个绝对百分点，覆盖日常任务、跨域协作与研究洞见发现场景。
+  confidence: reported
+  metrics:
+  - name: 平均性能增益
+    value: '11.9'
+    scope: 绝对百分点；跨真实日常任务/跨域协作/研究洞见发现等实验平均
+  evidence: abstract（初筛，未读全文）
+- statement: FoT 在提升性能的同时降低推理开销，客户端完成任务生成的 token 减少 5.5%。
+  confidence: reported
+  metrics:
+  - name: 任务完成 token 减少
+    value: 5.5%
+    scope: 客户端生成的任务完成 token 相对基线
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出类联邦学习框架FoT，多客户端LLM智能体在语义层共享元认知洞见库，协同提升推理效果与效率。
+  abstract_zh: 论文提出类联邦学习框架 Federation over Text（FoT），让各自解决不同任务的多客户端 LLM 智能体在语义层面迭代联邦本地推理过程，不共享真实问题实例，也不涉及梯度优化或监督信号。每轮中客户端智能体独立执行本地推理与自改进程序，并将推理轨迹上传至中央服务器。服务器对跨任务、跨域知识进行聚合、蒸馏与整合，构建可复用的共享洞见库，供现有及未来智能体复用以改进推理。实验显示
+    FoT 在真实日常任务、跨域协作与研究洞见发现等场景中平均提升 11.9 个绝对百分点的性能，同时客户端完成任务所需生成 token 减少 5.5%。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: LLM 多智能体在语义层联邦共享元认知洞见的自改进框架，属自我改进 AI 域而非核心编码域，按规则仅初筛收录。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 文本联邦（FoT）：面向多智能体推理的洞见共享
+relations:
+- type: same_topic
+  ref: paper:arxiv:2509.13237
+  note: 同属将 LLM 推理蒸馏为可复用元认知洞见/行为库的范式
+- type: same_topic
+  ref: paper:arxiv:2609.38516
+  note: 同属多智能体间通过共享经验实现协同自改进的研究线

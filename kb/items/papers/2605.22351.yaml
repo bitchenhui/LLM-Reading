@@ -1,0 +1,64 @@
+id: paper:arxiv:2605.22351
+type: paper
+title: 'QuantSR+: Pushing the Limit of Quantized Image Super-Resolution Networks'
+domain: processing_enhancement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2605.22351v1
+  url: https://arxiv.org/abs/2605.22351
+  pdf_url: https://arxiv.org/pdf/2605.22351v1
+  venue: arXiv preprint
+time:
+  published: '2026-05-21'
+  collected: '2026-11-15'
+entities:
+- ref: concept:SuperResolution
+  role: subject
+- ref: metric:PSNR
+  role: measured_by
+claims:
+- statement: QuantSR+在2比特量化下，SwinIR-S于Urban100（x4）上较2比特SOTA基线PSNR提升0.29 dB。
+  confidence: reported
+  metrics:
+  - name: PSNR提升
+    value: +0.29 dB
+    scope: SwinIR-S，Urban100，x4倍超分，2比特，相对2比特SOTA基线
+  evidence: abstract（初筛，未读全文）
+- statement: 在2比特设置下，QuantSR+最多可降低运算量与存储开销。
+  confidence: reported
+  metrics:
+  - name: 运算量降低
+    value: 87.9%
+    scope: 2比特设置下相对基线的最大降低幅度
+  - name: 存储降低
+    value: 89.4%
+    scope: 2比特设置下相对基线的最大降低幅度
+  evidence: abstract（初筛，未读全文）
+- statement: QuantSR+同时适用于卷积型与Transformer型超分模型，表明方法具有广泛适用性。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 统一框架QuantSR+融合比特重分配、量化可裁剪架构与局部蒸馏，实现2-4比特超分网络的精度-效率最优权衡。
+  abstract_zh: 论文提出QuantSR+，一个面向超低比特（2-4位）量化超分辨率网络的统一框架，同时改进量化算子、网络设计与训练优化。其三项核心技术包括：重分布驱动的比特确定（RBD）在前向与反向传播中重塑量化分布以保持表征保真度；量化可裁剪架构（QSA）从过参数化模型出发逐步剪除次要模块以满足效率预算；剪枝引导的函数局部蒸馏（SFD）通过块级特征对齐与渐进式局部训练更好地捕捉量化效应并加速收敛。实验显示QuantSR+在专用量化超分方法与通用量化方法中均达到SOTA：在SwinIR-S的Urban100（x4）上，2比特设置较SOTA基线提升PSNR
+    0.29 dB，同时运算量最多降低87.9%、存储降低89.4%，且对CNN与Transformer类SR模型均有效。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 面向超低比特量化超分网络的高效部署工作，属编码链路增强（超分）方向，非核心编码域，按规则给 summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: QuantSR+：将量化图像超分辨率网络推向极限
+relations:
+- type: same_topic
+  ref: paper:arxiv:2203.03844
+  note: 同为超低精度量化超分网络的高效量化方法
+- type: same_topic
+  ref: paper:arxiv:2406.06649
+  note: 同为面向图像超分的低比特量化方法（2DQuant）
+- type: same_topic
+  ref: paper:arxiv:2208.14839
+  note: 同为量化超分网络的架构-量化联合设计工作（QuantNAS）

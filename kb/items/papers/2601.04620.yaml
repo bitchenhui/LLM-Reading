@@ -1,0 +1,53 @@
+id: paper:arxiv:2601.04620
+type: paper
+title: 'AgentDevel: Reframing Self-Evolving LLM Agents as Release Engineering'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2601.04620v1
+  url: https://arxiv.org/abs/2601.04620
+  pdf_url: https://arxiv.org/pdf/2601.04620v1
+  venue: arXiv preprint
+time:
+  published: '2026-01-08'
+  collected: '2026-11-15'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: AgentDevel 将智能体改进重构为发布工程：维护单一规范版本线，并把'不回归'作为首要目标，而非种群搜索或智能体内自精炼。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在偏重执行的基准上，AgentDevel 产生稳定改进且回归显著更少，同时输出可复现、可审计的工程制品（如可执行诊断规格）。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 其实现盲LLM评审器仅凭执行轨迹刻画失败表象而不访问智能体内部，配合脚本化诊断与翻转中心门控（优先考虑通过→失败回归），保证改进轨迹可审计。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 把智能体当可交付制品，将自改进外化为感知回归的发布流水线，改进稳定、回归更少且全程可审计。
+  abstract_zh: 该文将LLM智能体的自我改进重构为发布工程：智能体被视为可交付制品，改进过程外化到一个感知回归的发布流水线中。AgentDevel 迭代运行当前智能体，从执行轨迹中产生实现盲的症状级质量信号，通过可执行诊断合成单一发布候选（RC），并以翻转为中心的门控决定晋升。三项核心设计包括不访问智能体内部实现的LLM评审器、基于脚本的可执行诊断，以及将'通过→失败'回归作为一等证据的门控机制。与基于种群的搜索或智能体内自精炼不同，AgentDevel
+    维护单一规范版本线并以不回归为首要目标。在偏重执行的基准上的实验表明，其改进稳定、回归显著减少，并产出可复现、可审计的制品。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 研究LLM智能体自进化方法的工程化重构，属自我改进AI核心议题但非视频编码核心域。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: AgentDevel：将自进化LLM智能体重构为发布工程
+relations:
+- type: same_topic
+  ref: paper:arxiv:2510.07841
+  note: 同为LLM智能体自改进/测试时自进化方法研究
+- type: same_topic
+  ref: paper:arxiv:2610.27610
+  note: 同样关注自改进成果的可审计评估与验证
+- type: same_topic
+  ref: paper:arxiv:2511.13646
+  note: 同为将软件工程方法应用于智能体自进化的工作

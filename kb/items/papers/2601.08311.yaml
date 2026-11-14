@@ -1,0 +1,47 @@
+id: paper:arxiv:2601.08311
+type: paper
+title: Enhancing Image Quality Assessment Ability of LMMs via Retrieval-Augmented Generation
+domain: quality_assessment
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2601.08311v1
+  url: https://arxiv.org/abs/2601.08311
+  pdf_url: https://arxiv.org/pdf/2601.08311v1
+  venue: arXiv preprint
+time:
+  published: '2026-01-13'
+  collected: '2026-11-15'
+entities:
+- ref: concept:IQA
+  role: subject
+- ref: concept:TrainingFree
+  role: builds_on
+claims:
+- statement: IQARAG是一种免训练框架，通过RAG检索语义相似但质量各异的参考图像及其MOS，为LMM提供视觉感知锚点，从而增强其零样本IQA能力。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在KADID、KonIQ、LIVE Challenge和SPAQ等多个IQA数据集上的实验表明，IQARAG能有效提升LMM的IQA性能，可作为微调的资源高效替代方案。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: IQARAG：免训练RAG框架，检索带MOS的相似参考图为LMM提供质量锚点，提升零样本IQA性能。
+  abstract_zh: 论文提出IQARAG，一个免训练框架，利用检索增强生成（RAG）提升大型多模态模型（LMM）的图像质量评估（IQA）能力。该方法为输入图像检索若干语义相似但质量各异的参考图像及其平均意见分数（MOS），并将这些图像与输入图像整合进特定提示中，为LMM的IQA任务提供视觉感知锚点。框架包含检索特征提取、图像检索、整合与质量分数生成三个关键阶段。在KADID、KonIQ、LIVE
+    Challenge和SPAQ等多个IQA数据集上的大量实验表明，IQARAG能有效提升LMM的IQA性能，为计算开销大的微调方法提供了资源高效的替代方案。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: LMM图像质量评估(IQA)的检索增强免训练方法，属质量评估域而非核心编码域，按基准收录为summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 通过检索增强生成提升大型多模态模型的图像质量评估能力
+relations:
+- type: same_topic
+  ref: paper:arxiv:2611.06203
+  note: 同为图像质量评估（IQA）主题，该文针对目标特定IQA建模
+- type: same_topic
+  ref: paper:arxiv:2611.03007
+  note: 同为基于多模态大模型的质量评估/质量推理研究

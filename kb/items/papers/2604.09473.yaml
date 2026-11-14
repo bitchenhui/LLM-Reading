@@ -1,0 +1,71 @@
+id: paper:arxiv:2604.09473
+type: paper
+title: 'Realizing Immersive Volumetric Video: A Multimodal Framework for 6-DoF VR Engagement'
+domain: immersive_media
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2604.09473v1
+  url: https://arxiv.org/abs/2604.09473
+  pdf_url: https://arxiv.org/pdf/2604.09473v1
+  venue: arXiv preprint
+time:
+  published: '2026-04-10'
+  collected: '2026-11-15'
+entities:
+- ref: concept:VolumetricVideo
+  role: subject
+- ref: metric:FPS
+  role: measured_by
+claims:
+- statement: 构建的多视点多模态数据集ImViD提供5K分辨率、60FPS、时长1-5分钟的音视频内容，覆盖室内外复杂前景-背景交互与挑战性动态场景。
+  confidence: reported
+  metrics:
+  - name: 分辨率
+    value: 5K
+    scope: ImViD数据集采集视频规格
+  - name: 帧率
+    value: 60 FPS
+    scope: ImViD数据集采集视频规格
+  - name: 时长
+    value: 1-5分钟
+    scope: ImViD数据集单条视频时长范围
+  evidence: abstract（初筛，未读全文）
+- statement: 提出基于高斯时空表征的动态光场重建框架，采用光流引导稀疏初始化、相机时间联合标定与多项目时空监督以稳健建模复杂运动。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 据作者所知，首次提出从多视点视听数据重建声场的方法，与光场重建组成统一的沉浸式体视频制作管线。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 基准测试与沉浸式VR实验显示，该管线生成高质量、时域稳定、具备大6-DoF交互空间的音视频体内容。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出沉浸式体视频新格式，构建多视点音视频数据集ImViD及高斯时空动态光场与声场重建管线，实现大空间6-DoF VR视听体验。
+  abstract_zh: 论文定义了沉浸式体视频（IVV）这一新媒体格式，目标是在真实拍摄视频基础上提供大6-DoF交互空间、视听反馈及高分辨率高帧率动态内容。为此构建了基于面向空间采集理念的多视点多模态数据集ImViD，自研采集平台可在运动中同步采集多视点音视频，数据集为5K分辨率60FPS、时长1-5分钟，覆盖室内外复杂前景-背景交互与动态场景。在重建方面，提出基于高斯时空表征的动态光场框架，融合光流引导稀疏初始化、相机时间联合标定与多项目时空监督以稳健建模复杂运动，并据称首次提出从多视点视听数据重建声场的方法。VR沉浸实验表明该管线可生成高质量、时域稳定的大空间音视频体内容。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 沉浸式体视频（动态光场+声场重建）属沉浸式与三维域，非核心编码域，按规则仅收录为 summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 实现沉浸式体视频：面向6自由度VR交互的多模态框架
+relations:
+- type: same_topic
+  ref: paper:arxiv:2202.06088
+  note: 同属体视频表示与沉浸式渲染/编辑研究
+- type: same_topic
+  ref: paper:arxiv:2409.07759
+  note: 同为基于高斯溅射的体视频表示
+- type: same_topic
+  ref: paper:arxiv:2409.08353
+  note: 同为面向沉浸式人体体视频的高斯溅射方法
+- type: same_topic
+  ref: paper:arxiv:2309.05658
+  note: 体视频采集到显示全链路综述，与本文捕获-重建管线主题一致
+- type: same_topic
+  ref: paper:arxiv:2409.13648
+  note: 体视频的动态高斯表示与观看系统，主题相关

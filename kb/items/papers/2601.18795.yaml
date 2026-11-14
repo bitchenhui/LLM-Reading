@@ -1,0 +1,60 @@
+id: paper:arxiv:2601.18795
+type: paper
+title: 'Reuse your FLOPs: Scaling RL on Hard Problems by Conditioning on Very Off-Policy Prefixes'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2601.18795v2
+  url: https://arxiv.org/abs/2601.18795
+  pdf_url: https://arxiv.org/pdf/2601.18795v2
+  venue: arXiv preprint
+time:
+  published: '2026-01-26'
+  collected: '2026-11-15'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:SelfImprovement
+  role: uses
+claims:
+- statement: PrefixRL在困难推理问题上达到相同训练奖励的速度比最强基线（离策略数据SFT后RL）快2倍，且该对比已计入初始拒绝采样所消耗的算力。
+  confidence: reported
+  metrics:
+  - name: 训练加速
+    value: 2x
+    scope: 困难推理问题达到相同训练奖励，对比SFT+RL最强基线，计入初始拒绝采样FLOPs
+  evidence: abstract（初筛，未读全文）
+- statement: PrefixRL在困难推理问题上将最终奖励提高3倍。
+  confidence: reported
+  metrics:
+  - name: 最终奖励提升
+    value: 3x
+    scope: 困难推理问题，对比最强基线（SFT+RL）
+  evidence: abstract（初筛，未读全文）
+- statement: 存在“反向泛化”现象：仅在带离策略前缀的问题上训练即可泛化到无前缀的分布外表现，且学到的策略常与前缀中的策略不同。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 理论上证明PrefixRL目标与标准RL目标一致且样本效率更高；离策略轨迹来自不同模型家族时方法仍有效，收益可迁移至held-out基准。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: PrefixRL以成功离策略轨迹前缀为条件做在策略RL补全，加速困难问题上LLM推理RL并构成自我改进闭环。
+  abstract_zh: 针对LLM推理RL在困难问题上正确在策略轨迹稀少、策略梯度消失的问题，作者提出PrefixRL：以成功离策略轨迹的前缀为条件，再运行在策略RL来完成剩余部分，规避标准离策略监督的不稳定性。理论证明该目标与标准RL目标一致且样本效率更高；通过前缀长度可调制问题难度以增强学习信号。实验发现“反向泛化”：仅在带前缀问题上训练即可泛化到无前缀的分布外表现，且学到的策略常与前缀不同。以基模型拒绝采样提供离策略轨迹形成自我改进闭环，在困难推理问题上达到相同训练奖励比最强基线（先SFT后RL）快2倍（已计入拒绝采样开销），最终奖励提升3倍，收益可迁移至held-out基准，且离策略轨迹来自不同模型家族时依然有效。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: LLM推理强化学习的前缀条件化离策略复用方法并构成自我改进闭环，属自我改进AI域，非音视频核心技术，按规则仅给summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 复用你的FLOPs：以极离策略前缀为条件扩展困难问题上的强化学习
+relations:
+- type: same_topic
+  ref: paper:arxiv:2305.14483
+  note: 同为基于RL的LLM自我改进训练范式
+- type: same_topic
+  ref: paper:arxiv:2508.14029
+  note: 同为维持困难问题RLVR学习信号并构造自我改进闭环

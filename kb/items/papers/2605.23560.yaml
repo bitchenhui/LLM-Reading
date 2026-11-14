@@ -1,0 +1,64 @@
+id: paper:arxiv:2605.23560
+type: paper
+title: 'SafeSABR: Risk-Calibrated Adaptive Bitrate Streaming over Starlink Networks'
+domain: streaming_delivery
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2605.23560v2
+  url: https://arxiv.org/abs/2605.23560
+  pdf_url: https://arxiv.org/pdf/2605.23560v2
+  venue: arXiv preprint
+time:
+  published: '2026-05-22'
+  collected: '2026-11-15'
+entities:
+- ref: concept:ABR
+  role: subject
+- ref: concept:QoE
+  role: measured_by
+claims:
+- statement: SafeSABR相比先进ABR方法可将严重卡顿会话占比从22.8%降至7.2%。
+  confidence: reported
+  metrics:
+  - name: 严重卡顿会话占比
+    value: 22.8% → 7.2%
+    scope: 真实Starlink轨迹，对比在线/预测辅助/学习型ABR基线
+  evidence: abstract（初筛，未读全文）
+- statement: SafeSABR将最差5%会话的重缓冲时长从54.30秒降至22.68秒，同时平均QoE仅损失1.8%。
+  confidence: reported
+  metrics:
+  - name: 最差5%会话重缓冲时长
+    value: 54.30 s → 22.68 s
+    scope: 会话级尾部指标，对比先进方法
+  - name: QoE代价
+    value: 1.8%
+    scope: 相对先进ABR基线的平均QoE下降
+  evidence: abstract（初筛，未读全文）
+- statement: 组件分析表明风险校准强化学习微调与安全容量审计可减少不安全码率决策及下游严重会话重缓冲。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出面向Starlink网络的QoE-严重风险折中ABR框架，显著降低会话级严重卡顿。
+  abstract_zh: Starlink低轨卫星宽带使地面宽带不可用地区的高码率视频流成为可能，但其接入链路因卫星移动与切换导致吞吐快速波动，学习型ABR虽平均QoE高却暴露出平均QoE无法刻画的会话级严重重缓冲。论文提出SafeSABR，将Starlink
+    ABR建模为QoE与严重风险的折中，采用三阶段设计：行为克隆预训练学习高QoE的ABR先验，风险校准的强化学习微调降低严重尾部动作倾向，运行时安全审计器用安全容量下界在执行前校验策略请求的码率。在真实Starlink轨迹上的实验显示，与在线、预测辅助及学习型ABR基线相比，严重卡顿会话占比从22.8%降至7.2%，最差5%会话重缓冲时长从54.30秒降至22.68秒，QoE仅付出1.8%的代价。组件分析表明风险校准微调与安全容量审计可减少不安全码率决策及下游严重会话重缓冲。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 面向Starlink卫星网络的学习型ABR与QoE优化，属流媒体传输域且实体匹配充分，但非核心编码域，按规则仅收录为摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: SafeSABR：Starlink 网络上风险校准的自适应码率流媒体
+relations:
+- type: same_topic
+  ref: paper:arxiv:2509.10486
+  note: SafeSABR沿用行为克隆预训练+强化学习微调的SABR框架并加入风险校准与安全审计，方法脉络同源
+- type: same_topic
+  ref: paper:arxiv:2409.09846
+  note: 同属Starlink低轨卫星网络视频流传输研究
+- type: same_topic
+  ref: paper:arxiv:2611.05832
+  note: 同为Starlink网络流媒体预测与传输方向工作

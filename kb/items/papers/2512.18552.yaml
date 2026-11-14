@@ -1,0 +1,61 @@
+id: paper:arxiv:2512.18552
+type: paper
+title: Toward Training Superintelligent Software Agents through Self-Play SWE-RL
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2512.18552v3
+  url: https://arxiv.org/abs/2512.18552
+  pdf_url: https://arxiv.org/pdf/2512.18552v3
+  venue: arXiv preprint
+time:
+  published: '2025-12-21'
+  collected: '2026-11-15'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: SSR在SWE-bench Verified上实现显著自我提升，较训练起点提高10.4分
+  confidence: reported
+  metrics:
+  - name: 提升分数
+    value: '+10.4'
+    scope: SWE-bench Verified，自博弈RL训练后 vs 训练前
+  evidence: abstract（初筛，未读全文）
+- statement: SSR在SWE-Bench Pro上实现显著自我提升，较训练起点提高7.8分
+  confidence: reported
+  metrics:
+  - name: 提升分数
+    value: '+7.8'
+    scope: SWE-Bench Pro，自博弈RL训练后 vs 训练前
+  evidence: abstract（初筛，未读全文）
+- statement: 尽管评测采用自博弈中未见的自然语言issue，SSR在整个训练轨迹中持续优于人类数据（人工标注issue与测试）基线
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: SSR训练仅依赖沙盒化代码仓库（源码与已装依赖），无需人工标注的issue或pass-to-pass/fail-to-pass测试等人工策展数据
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 仅凭沙盒代码仓库，经自博弈RL注入并修复bug训练单一LLM软件智能体，在SWE-bench上获显著自我提升。
+  abstract_zh: 论文提出Self-play SWE-RL（SSR），迈向超级智能软件智能体训练范式的第一步：仅需可访问装有依赖的沙盒化代码仓库，无需人工标注的issue或测试。单一LLM智能体通过强化学习在自博弈环境中迭代注入并修复复杂度递增的软件bug，每个bug由test
+    patch形式化定义而非自然语言issue描述。在SWE-bench Verified与SWE-Bench Pro上分别自我提升10.4和7.8点，且在整个训练轨迹中持续优于人类数据基线，尽管评测所用自然语言issue在自博弈中缺席。作者称该早期结果表明智能体可自主从真实软件仓库积累学习经验，是通向超越人类能力的超级智能系统的一条路径。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 自我改进AI域重要工作（自博弈RL训练软件智能体），与音视频技术无直接关联，按非核心域上限收录为summary_only
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 通过自博弈SWE-RL训练超级智能软件智能体
+relations:
+- type: same_topic
+  ref: paper:arxiv:2511.13646
+  note: 同为软件工程智能体的自我进化/自训练方向
+- type: same_topic
+  ref: paper:arxiv:2508.14029
+  note: 同为LLM自博弈RL自我提升范式（自合成问题维持RLVR训练信号）

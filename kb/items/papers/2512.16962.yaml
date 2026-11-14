@@ -1,0 +1,52 @@
+id: paper:arxiv:2512.16962
+type: paper
+title: 'MemoryGraft: Persistent Compromise of LLM Agents via Poisoned Experience Retrieval'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2512.16962v1
+  url: https://arxiv.org/abs/2512.16962
+  pdf_url: https://arxiv.org/pdf/2512.16962v1
+  venue: arXiv preprint
+time:
+  published: '2025-12-18'
+  collected: '2026-11-15'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:SelfImprovement
+  role: subject
+claims:
+- statement: MemoryGraft通过向智能体长期记忆植入恶意的成功经验模板实现持久攻陷，区别于瞬时的提示注入与针对事实知识的常规RAG投毒，攻击面是智能体推理核心与自身经验之间的信任边界。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 攻击者仅需提供智能体执行期间读取的良性摄入级工件即可诱导构建投毒RAG库；遇到语义相似任务时，词汇与嵌入相似度的联合检索会可靠召回植入记忆，导致跨会话持久行为漂移。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在MetaGPT的DataInterpreter智能体（GPT-4o）上验证：少量投毒记录即可在良性工作负载的检索结果中占据大量份额，把经验式自改进变成隐蔽持久的攻陷向量。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出MemoryGraft：向LLM智能体长期记忆植入恶意成功经验，经RAG联合检索导致跨会话持久行为攻陷。
+  abstract_zh: LLM智能体依赖长期记忆与RAG沉淀经验以改进后续表现，这暴露出智能体推理核心与其自身历史经验之间的信任边界这一未充分研究的攻击面。MemoryGraft不同于瞬时提示注入或针对事实知识的常规RAG投毒，而是利用智能体复用检索所得成功任务模式的语义模仿启发式，把少量恶意过程模板持久植入记忆库。攻击者只需在智能体执行时提供其读取的良性摄入级工件，即可诱导其构建含恶意模板的投毒RAG库；后续遇到语义相似任务时，词汇与嵌入相似度的联合检索可靠召回这些记忆，造成跨会话持久行为漂移。在MetaGPT的DataInterpreter智能体（GPT-4o）上验证：少量投毒记录即可在良性工作负载中占据检索经验的大部分，将基于经验的自改进机制转化为隐蔽持久的攻陷载体。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 论文针对LLM智能体经验式自改进机制提出记忆投毒攻击，属自我改进AI域的安全攻防方向，与音视频核心无关。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: MemoryGraft：经由投毒经验检索实现对LLM智能体的持久性攻陷
+relations:
+- type: same_topic
+  ref: paper:arxiv:2610.07645
+  note: 均研究利用智能体成功经验进行投毒攻击，MemoryGraft攻击记忆/RAG层，SkillPoison攻击技能层
+- type: same_topic
+  ref: paper:arxiv:2506.06698
+  note: MemoryGraft攻陷的正是Contextual Experience Replay一类基于经验回放/记忆沉淀的智能体自改进机制
+- type: same_topic
+  ref: paper:arxiv:2510.16079
+  note: EvolveR代表经验驱动生命周期的智能体自进化，MemoryGraft揭示其经验存储可被投毒利用

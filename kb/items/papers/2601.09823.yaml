@@ -1,0 +1,62 @@
+id: paper:arxiv:2601.09823
+type: paper
+title: 'NanoSD: Edge Efficient Foundation Model for Real Time Image Restoration'
+domain: processing_enhancement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2601.09823v2
+  url: https://arxiv.org/abs/2601.09823
+  pdf_url: https://arxiv.org/pdf/2601.09823v2
+  venue: arXiv preprint
+time:
+  published: '2026-01-14'
+  collected: '2026-11-15'
+entities:
+- ref: concept:SuperResolution
+  role: subject
+- ref: concept:DiffusionPrior
+  role: builds_on
+claims:
+- statement: NanoSD 通过网络手术、逐特征生成蒸馏与结构化架构缩放对 U-Net 和 VAE 编解码器进行全管线协同蒸馏，产出 130M–315M 参数的帕累托最优扩散模型家族。
+  confidence: reported
+  metrics:
+  - name: 参数量
+    value: 130M-315M
+    scope: NanoSD 模型家族整体规模范围
+  evidence: abstract（初筛，未读全文）
+- statement: NanoSD 在移动级 NPU 上实现低至 20ms 的实时推理，同时保留 Stable Diffusion 的生成先验。
+  confidence: reported
+  metrics:
+  - name: 推理延迟
+    value: 20ms
+    scope: 移动级 NPU 端上实时推理（家族中最快工作点）
+  evidence: abstract（初筛，未读全文）
+- statement: 作为即插即用骨干，NanoSD 在图像超分辨率、去模糊、人脸修复与单目深度估计任务上超越既有轻量扩散模型，在感知质量与可部署性两方面均达到先进水平。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 论文分析表明单纯参数量缩减与硬件效率并不相关，端上实际延迟由架构平衡、特征路由与潜空间保留共同决定。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 从 Stable Diffusion 1.5 全管线协同蒸馏出的帕累托最优小型扩散模型家族，可在移动 NPU 上以低至 20ms 实时完成超分等图像修复。
+  abstract_zh: 论文提出 NanoSD，一类从 Stable Diffusion 1.5 蒸馏而来的帕累托最优扩散基础模型家族，通过对 U-Net 与 VAE 编解码器同时进行网络手术、逐特征生成蒸馏和结构化缩放实现全管线协同设计。该方法在压缩模型的同时保留潜在流形与生成先验，产出
+    130M–315M 参数、占据精度-延迟-体积前沿不同工作点的模型。作者指出仅减少参数量并不等于硬件效率提升，并分析了架构平衡、特征路由与潜空间保留对端上实际延迟的影响。作为即插即用骨干，NanoSD
+    在图像超分辨率、去模糊、人脸修复与单目深度估计任务上取得先进水平，并在移动级 NPU 上实现低至 20ms 的实时推理。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 面向边缘设备的实时图像修复（超分/去模糊等）基础模型蒸馏，属编码链路处理增强域，非核心编码域故只收录摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: NanoSD：面向实时图像修复的边缘高效基础模型
+relations:
+- type: same_topic
+  ref: paper:arxiv:2310.12004
+  note: 同为基于潜在扩散模型的图像超分辨率研究
+- type: same_topic
+  ref: paper:arxiv:2212.09501
+  note: 同为面向端上 NPU 的高效超分辨率部署

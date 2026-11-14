@@ -1,0 +1,55 @@
+id: paper:arxiv:2606.07367
+type: paper
+title: Self-evolving LLM agents with in-distribution Optimization
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2606.07367v1
+  url: https://arxiv.org/abs/2606.07367
+  pdf_url: https://arxiv.org/pdf/2606.07367v1
+  venue: arXiv preprint
+time:
+  published: '2026-06-05'
+  collected: '2026-11-15'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:SelfImprovement
+  role: subject
+claims:
+- statement: Q-Evolve通过加权隐式Q学习从混合离线数据集（专家演示+智能体生成轨迹）学习分布内评论家，稳定稀疏奖励设定下的Bellman备份。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 学习到的价值函数经优势估计推导步级过程奖励，实现无需环境回溯或人工标注的密集可靠监督。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在AlfWorld、WebShop和ScienceWorld三个基准上，Q-Evolve在样本效率、鲁棒性和整体任务性能方面优于强基线。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 过程奖励标注与策略在共享分布内学习回路的共同演化可实现稳定的智能体自进化，且不加剧分布偏移。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: Q-Evolve将自动过程奖励标注与策略学习统一于分布内强化学习，实现LLM智能体的稳定自进化。
+  abstract_zh: 论文提出Q-Evolve，一个面向LLM智能体的自进化框架，将自动过程奖励标注与策略学习统一到分布内强化学习范式中，以解决稀疏延迟奖励下的信用分配难题。每次进化迭代中，方法从专家演示与智能体自生成轨迹组成的混合离线数据集学习分布内评论家，通过加权隐式Q学习目标稳定稀疏奖励下的Bellman备份。学习到的价值函数经优势估计推导步级过程奖励，提供密集可靠监督，无需环境回溯或人工标注。随后执行行为近端策略优化，在与过程奖励标注相同的数据上演化策略，避免加剧分布偏移。在AlfWorld、WebShop和ScienceWorld上的实验表明，Q-Evolve在样本效率、鲁棒性和整体任务性能上均优于强基线。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 提出LLM智能体自进化框架Q-Evolve，属自我改进AI核心主题，但非音视频核心域，按规则仅收录为summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 基于分布内优化的自进化LLM智能体
+relations:
+- type: same_topic
+  ref: paper:arxiv:2210.08229
+  note: 同属LLM自我改进研究线，Q-Evolve是面向智能体的自进化方法
+- type: same_topic
+  ref: paper:arxiv:2312.10003
+  note: 同为多步推理LLM智能体的自我改进方法
+- type: same_topic
+  ref: paper:arxiv:2510.16079
+  note: 同为自进化LLM智能体框架，均通过经验迭代提升智能体能力

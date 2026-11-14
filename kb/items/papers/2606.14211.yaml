@@ -1,0 +1,59 @@
+id: paper:arxiv:2606.14211
+type: paper
+title: 'Closing the Reflection Gap: A Free Calibration Bonus for Agentic RL'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2606.14211v1
+  url: https://arxiv.org/abs/2606.14211
+  pdf_url: https://arxiv.org/pdf/2606.14211v1
+  venue: arXiv preprint
+time:
+  published: '2026-06-12'
+  collected: '2026-11-15'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:SelfImprovement
+  role: subject
+claims:
+- statement: LLM智能体在观察到环境反馈后仍持续误评自身输出（即使答对的问题也会误判），标准RL因信用分配错位难以消除该反思差距。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: RefGRPO在标准RL算法上叠加'免费'校准奖励（对比智能体反思与实际结果）及其系数动态调度，无需额外奖励模型、LLM判官或外部标注。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在text-to-SQL任务上，RefGRPO相对标准RL基线同时改善反思校准与任务准确率。
+  confidence: reported
+  metrics:
+  - name: 欠自信率
+    value: 44.4% -> 7.7%
+    scope: text-to-SQL五基准，RefGRPO对比标准RL基线
+  - name: 任务准确率
+    value: 75.1% -> 76.5%
+    scope: text-to-SQL五基准，RefGRPO对比标准RL基线
+  evidence: abstract（初筛，未读全文）
+- statement: 校准后的反思可作为伪奖励驱动无结果监督的自改进，并支持只提交被判定正确rollout的测试时选择性预测。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出RefGRPO，以免费的反思-结果校准奖励增强标准RL，同时提升LLM智能体的反思校准与任务准确率。
+  abstract_zh: LLM智能体在获得环境反馈（执行结果、错误信息、工具输出）后仍会误判自身输出，即使对已答对的问题也是如此，形成持续的'反思差距'，而标准RL因信用分配错位难以修复。作者提出RefGRPO，通过对比智能体自身反思与实际结果计算一个无需奖励模型、LLM判官或外部标注的'免费'校准奖励，并对其系数施加动态调度。在五个text-to-SQL基准上，相比标准RL基线，该方法将欠自信率从44.4%降至7.7%，任务准确率从75.1%提升至76.5%。校准后的反思使智能体成为基于环境反馈的自我验证器，进而支持以反思为伪奖励的无结果监督自改进，以及仅在被标记为正确的rollout上提交的测试时选择性预测。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: LLM智能体反思校准与RL自改进工作，属自我改进AI域而非音视频核心编码域，按基准只给初筛摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 弥合反思差距：智能体强化学习中的免费校准奖励
+relations:
+- type: same_topic
+  ref: paper:arxiv:2505.08827
+  note: 同为利用模型自评/自奖励信号进行RL自改进的工作，与本方法的反思伪奖励机制同主题
+- type: same_topic
+  ref: paper:arxiv:2506.03106
+  note: 同为在GRPO式RL中引入反思/批判反馈信号增强LLM推理的工作

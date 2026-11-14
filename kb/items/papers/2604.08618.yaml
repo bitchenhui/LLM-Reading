@@ -1,0 +1,60 @@
+id: paper:arxiv:2604.08618
+type: paper
+title: 'SkillForge: Forging Domain-Specific, Self-Evolving Agent Skills in Cloud Technical Support'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2604.08618v2
+  url: https://arxiv.org/abs/2604.08618
+  pdf_url: https://arxiv.org/pdf/2604.08618v2
+  venue: arXiv preprint
+time:
+  published: '2026-04-09'
+  collected: '2026-11-15'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: 领域上下文化技能创建器生成的初始技能显著优于通用技能创建器，以与专家参考回答的一致性衡量。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 自进化循环可从专家编写、领域创建、通用等多种技能起点出发逐轮提升技能质量，自动化进化可超越人工整理的专家知识。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 评估在五个真实云技术支持场景上进行。
+  confidence: reported
+  metrics:
+  - name: 工单数
+    value: 1,883
+    scope: 五个真实云支持场景的评估数据集规模
+  - name: 任务数
+    value: 3,737
+    scope: 五个真实云支持场景的评估数据集规模
+  - name: 场景数
+    value: '5'
+    scope: 真实云技术支持场景数
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出 SkillForge 闭环框架，使 LLM 智能体技能在云支持场景中基于部署反馈持续自进化。
+  abstract_zh: 论文提出 SkillForge，一个面向云技术支持的自进化框架，闭合技能端到端的创建-评估-精炼循环。领域上下文化技能创建器以知识库和历史支持工单为依据合成初始技能，其产出显著优于通用技能创建器（以与专家参考回答的一致性衡量）。三阶段流水线（失败分析器、技能诊断器、技能优化器）批量诊断执行失败、定位技能缺陷并重写技能，迭代运行实现自优化。在覆盖
+    1,883 张工单、3,737 项任务的五个真实云支持场景上，自进化循环可从专家编写、领域创建、通用等多种起点逐轮提升技能质量，表明自动化进化可超越人工整理的专家知识。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: LLM 智能体技能的自进化框架（创建-失败诊断-重写闭环），属自我改进 AI 域，按规则仅收录 summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: SkillForge：在云技术支持中锻造领域特定的自进化智能体技能
+relations:
+- type: same_topic
+  ref: paper:arxiv:2607.05297
+  note: 同属 LLM 智能体技能递归自进化方向（MetaSkill-Evolve 双时间尺度元技能进化）
+- type: same_topic
+  ref: paper:arxiv:2609.39149
+  note: 同属 LLM 智能体技能自进化方向（Rep2Skill 表征引导的技能自进化）

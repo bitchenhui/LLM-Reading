@@ -1,0 +1,64 @@
+id: paper:arxiv:2604.16625
+type: paper
+title: 'AdaExplore: Failure-Driven Adaptation and Diversity-Preserving Search for Efficient Kernel Generation'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2604.16625v2
+  url: https://arxiv.org/abs/2604.16625
+  pdf_url: https://arxiv.org/pdf/2604.16625v2
+  venue: arXiv preprint
+time:
+  published: '2026-04-17'
+  collected: '2026-11-15'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: AdaExplore在100步内于KernelBench Level-2基准取得3.11倍内核运行加速
+  confidence: reported
+  metrics:
+  - name: 加速比
+    value: 3.11x
+    scope: KernelBench Level-2，100步预算内
+  evidence: abstract（初筛，未读全文）
+- statement: AdaExplore在100步内于KernelBench Level-3基准取得1.62倍内核运行加速
+  confidence: reported
+  metrics:
+  - name: 加速比
+    value: 1.62x
+    scope: KernelBench Level-3，100步预算内
+  evidence: abstract（初筛，未读全文）
+- statement: 该方法通过失败驱动自适应与保多样性搜索联合提升正确性与优化性能，且不依赖额外微调或外部知识
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 性能随额外计算步数持续提升，表明框架具备测试时可扩展性
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出AdaExplore代理框架，以失败驱动自适应与保多样性树搜索实现Triton内核生成自我改进，KernelBench上最高加速3.11倍。
+  abstract_zh: 针对LLM代理自我改进中各问题独立处理、缺乏可复用知识积累，且Triton等领域语言在预训练中稀缺、约束严格导致朴素生成与局部精化不可靠的问题，提出AdaExplore框架。自适应阶段通过任务合成将反复出现的失败转化为可复用的有效性规则记忆，使后续生成保持在可行集内；搜索阶段将候选内核组织为树，在小幅局部精化与结构性重新生成之间交替，以探索超出局部最优的优化地形。全程无需额外微调或外部知识。在内核运行时优化基准上，100步内在KernelBench
+    Level-2和Level-3分别取得3.11倍和1.62倍加速，且随计算量增加持续改进。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: LLM代理通过积累执行反馈自我改进Triton内核生成，属自我改进AI域（类似AlphaEvolve路线），非音视频核心域，按基准仅summary_only
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: AdaExplore：面向高效内核生成的失败驱动自适应与保多样性搜索
+relations:
+- type: same_topic
+  ref: paper:arxiv:2511.15915
+  note: 同为自改进LLM代理系统，面向AI加速器内核优化，与AdaExplore的内核生成优化目标直接同题
+- type: same_topic
+  ref: paper:arxiv:2506.13131
+  note: 同为利用执行反馈做代码进化优化的编码代理（AlphaEvolve），AdaExplore属该路线的失败记忆+树搜索变体
+- type: same_topic
+  ref: paper:arxiv:2510.18428
+  note: 同为自改进LLM经验库用于优化任务求解，与AdaExplore的可复用失败规则记忆机制同向

@@ -1,0 +1,44 @@
+id: paper:arxiv:2605.00719
+type: paper
+title: Unpaired Image Deraining Using Reward-Guided Self-Reinforcement Strategy
+domain: processing_enhancement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2605.00719v1
+  url: https://arxiv.org/abs/2605.00719
+  pdf_url: https://arxiv.org/pdf/2605.00719v1
+  venue: arXiv preprint
+time:
+  published: '2026-05-01'
+  collected: '2026-11-15'
+entities:
+- ref: concept:IQA
+  role: subject
+claims:
+- statement: RGSUD 在配对合成、配对真实与非配对真实图像数据集上均达到 SOTA 去雨性能，主观与客观 IQA 指标均优于现有无监督去雨方法
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 所提出的自强化策略可适配到其他无监督去雨方法，去雨框架在现有有监督去雨网络上具有较强泛化能力
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出RGSUD框架，以IQA动态奖励回收与自强化损失实现无配对监督图像去雨，多数据集达SOTA
+  abstract_zh: 论文提出无监督图像去雨方法RGSUD，包含奖励回收与自强化（SR）训练两个阶段。奖励回收阶段采用基于IQA的动态奖励回收机制，在训练过程中筛选并持续收集高质量去雨图像。自强化阶段将这些奖励样本并入模型优化过程，通过IQA自强化损失与动态更新的奖励提升合成伪配对数据质量并稳定优化。实验表明该方法在配对合成、配对真实与非配对真实图像多个数据集上均取得SOTA，主客观IQA指标优于现有无监督去雨方法，且自强化策略可迁移至其他无监督去雨方法、框架可泛化到现有有监督去雨网络。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 图像去雨属编码链路增强类图像修复任务而非核心编码域，IQA 仅作为奖励机制与评测工具
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 基于奖励引导自强化策略的非配对图像去雨
+relations:
+- type: same_topic
+  ref: paper:arxiv:2602.09531
+  note: 同属图像质量评估（IQA）应用于图像退化/修复场景的研究
+- type: same_topic
+  ref: paper:arxiv:2601.02763
+  note: 同属无监督/一体化图像修复（含雨、噪等退化）增强方法

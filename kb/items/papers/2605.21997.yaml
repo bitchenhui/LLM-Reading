@@ -1,0 +1,54 @@
+id: paper:arxiv:2605.21997
+type: paper
+title: 'The Log is the Agent: Event-Sourced Reactive Graphs for Auditable, Forkable Agentic Systems'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2605.21997v1
+  url: https://arxiv.org/abs/2605.21997
+  pdf_url: https://arxiv.org/pdf/2605.21997v1
+  venue: arXiv preprint
+time:
+  published: '2026-05-21'
+  collected: '2026-11-15'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: ActiveGraph 以 append-only 事件日志为唯一事实来源，工作图是其确定性投影，行为经共享图协调而非组件间互相指令，为可审计、可分叉的智能体系统提供事件溯源式运行时。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 该单一设计决策带来三项检索-摘要式记忆系统不具备的性质：任意运行可从日志确定性重放、可在任意事件处廉价分叉而无需重执行共享前缀、以及从高层目标到产生每个产物的单次模型调用的端到端谱系。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 作者提出确定性契约以保证重放的可靠性，并以一个尽职调查示例佐证：其完整因果结构可仅凭日志独立重构。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 作者推测（明确声明未做实证演示）该事件溯源基底特别适合自改进智能体，并称其扩展了 BabyAGI 谱系与先前图记忆研究。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出ActiveGraph运行时，以事件日志为唯一事实来源，实现确定性重放、廉价分叉与全链路因果谱系。
+  abstract_zh: 论文指出主流智能体框架以语言模型对话回路为中心，日志与记忆只是事后附加层。ActiveGraph 反转这一结构：append-only 事件日志是唯一事实来源，工作图是该日志的确定性投影，行为（普通函数、类、LLM
+    例程或挂在类型化边上的逻辑）响应图变化并发出新事件，组件间协调完全经由共享图完成。该设计带来三个检索-摘要式记忆系统不具备的性质：任意运行的确定性重放、在任意事件处廉价分叉（无需重执行共享前缀）、以及从高层目标到每次模型调用的端到端谱系。文中给出使重放成立的确定性契约，并以一个尽职调查示例展示完整因果结构可仅凭日志重构。作者讨论（明确声明未演示）该基底为何特别适合自改进智能体，并说明其与
+    BabyAGI 谱系及图记忆研究的延续关系。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 智能体运行时架构论文（事件溯源+响应图），自改进仅为作者讨论且未演示，非音视频核心域，按非核心域收录为摘要级。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 日志即智能体：面向可审计、可分叉智能体系统的事件溯源响应式图
+relations:
+- type: same_topic
+  ref: paper:arxiv:2410.04444
+  note: 均以支持递归自改进的智能体框架/基底为主题，本文提供事件溯源架构作为自改进的底座
+- type: same_topic
+  ref: paper:arxiv:2610.28201
+  note: 同属面向智能体 harness/基础设施自改进的研究线，本文主张可审计日志基座可服务于递归自改进

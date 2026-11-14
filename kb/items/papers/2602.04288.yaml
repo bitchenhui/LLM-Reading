@@ -1,0 +1,62 @@
+id: paper:arxiv:2602.04288
+type: paper
+title: 'Contextual Drag: How Errors in the Context Affect LLM Reasoning'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2602.04288v2
+  url: https://arxiv.org/abs/2602.04288
+  pdf_url: https://arxiv.org/pdf/2602.04288v2
+  venue: arXiv preprint
+time:
+  published: '2026-02-04'
+  collected: '2026-11-15'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:SelfImprovement
+  role: subject
+claims:
+- statement: 上下文中的失败尝试会使 LLM 后续生成偏向结构相似错误（上下文拖累），造成明显性能下降
+  confidence: reported
+  metrics:
+  - name: 性能下降幅度
+    value: 10-20%
+    scope: 11 个闭源与开源权重模型 × 8 个推理任务评测
+  evidence: abstract（初筛，未读全文）
+- statement: 具有严重上下文拖累的模型，其迭代自我精修可崩溃为自我恶化
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 基于树编辑距离的结构分析显示，后续推理轨迹从上下文继承结构相似错误模式
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 外部反馈与成功的自我验证均不足以消除上下文拖累效应
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 回退行为微调与上下文去噪可部分缓解该效应，但无法完全恢复基线性能
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出'上下文拖累'现象：上下文中的失败尝试使 LLM 后续生成偏向结构相似错误，致 10-20% 性能下降且难以消除。
+  abstract_zh: 论文研究了'上下文拖累'现象：上下文中存在的失败尝试会使 LLM 后续生成偏向结构相似错误。在 11 个闭源与开源权重模型、8 个推理任务上，该效应造成 10-20% 的性能下降，严重时迭代自我精修会崩溃为自我恶化。基于树编辑距离的结构分析表明，后续推理轨迹会从上下文继承结构相似错误模式。外部反馈与成功的自我验证均无法消除该效应；回退行为微调与上下文去噪等缓解策略仅带来部分改善，无法恢复基线性能，表明这是当前推理架构的持久性失效模式。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 研究 LLM 自我改进管线中上下文失败尝试引发的'上下文拖累'失效模式，属自我改进 AI 域核心议题，但与音视频技术无关，按规则仅 summary_only
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 上下文拖累：上下文中的错误如何影响 LLM 推理
+relations:
+- type: same_topic
+  ref: paper:arxiv:2610.27406
+  note: 同属研究上下文中既有错误对 LLM Agent 后续行为复制/恶化影响的失效模式分析
+- type: same_topic
+  ref: paper:arxiv:2412.02674
+  note: 同属审视 LLM 自我改进能力边界与限制的实证研究
+- type: same_topic
+  ref: paper:arxiv:2210.11610
+  note: 本文所质疑的'通过反思过往错误实现自我改进'假设的代表性来源工作

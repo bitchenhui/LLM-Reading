@@ -1,0 +1,49 @@
+id: paper:arxiv:2602.09531
+type: paper
+title: 'DR.Experts: Differential Refinement of Distortion-Aware Experts for Blind Image Quality Assessment'
+domain: quality_assessment
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2602.09531v1
+  url: https://arxiv.org/abs/2602.09531
+  pdf_url: https://arxiv.org/pdf/2602.09531v1
+  venue: arXiv preprint
+time:
+  published: '2026-02-10'
+  collected: '2026-11-15'
+entities:
+- ref: concept:IQA
+  role: subject
+- ref: concept:MoE
+  role: uses
+claims:
+- statement: DR.Experts通过退化感知视觉-语言模型获取失真特异性先验，并用失真显著性差分模块将其与语义注意力区分精炼，使评估对细微失真更敏感
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: MoE风格的动态失真加权模块按感知影响加权融合失真先验、语义与桥接表征，使质量预测与人类感知对齐
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在五个有挑战性的BIQA基准上，DR.Experts的性能优于现有方法，并在泛化性与数据效率方面表现优异
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出DR.Experts，用退化感知VLM提取失真先验并经MoE式动态加权融合，在五个BIQA基准上超越现有方法
+  abstract_zh: 该论文指出无参考图像质量评估（BIQA）模型性能受限的根源是缺乏可靠的失真先验，导致对细微失真不敏感并与人类主观判断错位。DR.Experts首先借助退化感知视觉-语言模型获取失真特异性先验，再通过失真显著性差分模块将其与语义注意力区分并精炼，确保先验真实反映失真。随后采用MoE风格的动态失真加权模块，按感知影响对失真特征、语义与桥接表征加权融合以预测质量。在五个具有挑战性的BIQA基准上的实验表明其优于现有方法，且在泛化性和数据效率方面表现突出。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 无参考图像质量评估（BIQA）方法论文，属质量评估域而非核心编码域，按规则摘要级收录
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: DR.Experts：面向盲图像质量评估的失真感知专家差分精炼
+relations:
+- type: same_topic
+  ref: paper:arxiv:2601.08311
+  note: 同属图像质量评估（IQA）方法研究，均探索提升无参考质量估计与人类感知一致性
+- type: same_topic
+  ref: paper:arxiv:2608.08508
+  note: 同属图像质量评估主题，均关注图像退化/失真下的质量自适应评估

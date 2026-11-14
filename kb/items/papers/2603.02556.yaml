@@ -1,0 +1,50 @@
+id: paper:arxiv:2603.02556
+type: paper
+title: 'Through the Lens of Contrast: Self-Improving Visual Reasoning in VLMs'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2603.02556v1
+  url: https://arxiv.org/abs/2603.02556
+  pdf_url: https://arxiv.org/pdf/2603.02556v1
+  venue: arXiv preprint
+time:
+  published: '2026-03-03'
+  collected: '2026-11-15'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+claims:
+- statement: 对比 VQA 对（视觉相似图像+同义问题）可促使 VLM 更精确地识别相关视觉线索，这是 VC-STaR 方法的关键观察。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: VC-STaR 通过对比对筛选与自举推理路径生成，构建出 VisCoR-55K 视觉推理数据集，用于对多种 VLM 做监督微调。
+  confidence: reported
+  metrics:
+  - name: 数据集规模
+    value: 55K
+    scope: VisCoR-55K 自举生成的视觉推理样本数
+  evidence: abstract（初筛，未读全文）
+- statement: 微调后 VC-STaR 在多种 VLM 上不仅优于现有自我改进方法，还超过了在 SoTA 视觉推理数据集上微调的模型，表明 VLM 的固有对比能力可自举其视觉推理。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出 VC-STaR，用对比 VQA 对自举抑制幻觉的推理路径，构建 VisCoR-55K 微调数据集提升 VLM 视觉推理。
+  abstract_zh: 语言任务中的推理能力可通过自我改进精炼推理路径再微调来提升，但扩展到 VLM 时，推理路径中的视觉幻觉难以验证与纠正。作者观察到：向 VLM 呈现对比 VQA 对（两张视觉相似图像配同义问题）时，模型能更精确地识别相关视觉线索。据此提出
+    VC-STaR 框架，利用视觉对比抑制自举生成推理路径中的幻觉，从多样化 VQA 数据集中筛选对比对并生成推理路径，得到 VisCoR-55K 视觉推理数据集。该数据集经监督微调提升多种 VLM
+    的推理能力，实验显示 VC-STaR 不仅优于现有自我改进方法，也超过在 SoTA 视觉推理数据集上微调的模型。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 属于 VLM 视觉推理自我改进研究，契合 self_improvement 域但非核心编码域，按基准收录为 summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 透过对比之镜：VLM 中的自我改进视觉推理
+relations:
+- type: same_topic
+  ref: paper:arxiv:2210.08229
+  note: 同属 LLM 自我改进研究脉络；本文将语言侧自举微调范式扩展到 VLM，并针对视觉幻觉不可验证问题提出视觉对比方案

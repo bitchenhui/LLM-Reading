@@ -1,0 +1,70 @@
+id: paper:arxiv:2605.22536
+type: paper
+title: 'SpaceDG: Benchmarking Spatial Intelligence under Visual Degradation'
+domain: quality_assessment
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2605.22536v2
+  url: https://arxiv.org/abs/2605.22536
+  pdf_url: https://arxiv.org/pdf/2605.22536v2
+  venue: arXiv preprint
+time:
+  published: '2026-05-21'
+  collected: '2026-11-15'
+entities:
+- ref: concept:3DGS
+  role: subject
+claims:
+- statement: 视觉退化（含压缩伪影）会持续且显著削弱主流多模态大模型的空间推理能力，暴露关键鲁棒性缺口。
+  confidence: reported
+  metrics:
+  - name: 受测模型数
+    value: '25'
+    scope: 在SpaceDG-Bench上评测的开源与闭源MLLM总数
+  - name: 退化类型数
+    value: '9'
+    scope: SpaceDG-Bench覆盖的视觉退化类型
+  - name: 推理类别数
+    value: '11'
+    scope: SpaceDG-Bench覆盖的空间推理类别
+  - name: 基准题量
+    value: '1102'
+    scope: 人工校验问题数，产出超10K VQA实例
+  evidence: abstract（初筛，未读全文）
+- statement: 基于3DGS渲染的物理化退化合成引擎构建了首个退化感知空间理解数据集SpaceDG，逼真模拟9类真实部署中常见退化。
+  confidence: reported
+  metrics:
+  - name: QA对规模
+    value: 约1M
+    scope: SpaceDG数据集问答对总数
+  - name: 场景数量
+    value: 近1,000
+    scope: 数据集覆盖的室内场景
+  evidence: abstract（初筛，未读全文）
+- statement: 在SpaceDG上微调可显著提升MLLM在退化条件下的空间推理鲁棒性，甚至超越人类表现，且在清晰图像上无性能下降。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 首个退化感知空间理解大规模数据集，将退化形成过程嵌入3DGS渲染，揭示MLLM空间推理在9类视觉退化下的鲁棒性缺口。
+  abstract_zh: 提出SpaceDG，首个面向退化感知空间理解的大规模数据集：通过将退化形成过程物理化嵌入3DGS渲染的合成引擎，逼真模拟运动模糊、低光、恶劣天气、镜头畸变、压缩伪影等9类退化。数据集约含近1,000个室内场景的100万条QA对，并配有人工校验的SpaceDG-Bench（1,102题、11类推理、9类退化、超1万VQA实例）。对25个开源与闭源多模态大模型的评测表明，视觉退化持续且显著削弱空间推理能力，暴露关键鲁棒性缺口。在SpaceDG上微调可大幅提升退化条件下的鲁棒性，甚至超过人类水平，且不损失清晰图像上的性能。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 论文是视觉退化（含压缩伪影）下MLLM空间推理鲁棒性的评测基准，涉及退化质量评估与3DGS渲染但非核心编码工作，按非核心域规则仅作初筛摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: SpaceDG：视觉退化下的空间智能基准测试
+relations:
+- type: same_topic
+  ref: paper:arxiv:2605.15906
+  note: 同为图像退化鲁棒性评测研究，SpaceDG将退化影响评测扩展到MLLM空间推理任务
+- type: same_topic
+  ref: paper:arxiv:2411.06810
+  note: 均将压缩伪影视为关键视觉退化类型并构建相应评测数据集
+- type: same_topic
+  ref: paper:arxiv:2611.04498
+  note: 均依托3DGS内容开展质量/退化相关评测基准构建

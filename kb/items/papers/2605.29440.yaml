@@ -1,0 +1,55 @@
+id: paper:arxiv:2605.29440
+type: paper
+title: 'SkillBrew: Multi-Objective Curation of Skill Banks for LLM Agents'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2605.29440v1
+  url: https://arxiv.org/abs/2605.29440
+  pdf_url: https://arxiv.org/pdf/2605.29440v1
+  venue: arXiv preprint
+time:
+  published: '2026-05-28'
+  collected: '2026-11-15'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:SelfImprovement
+  role: builds_on
+claims:
+- statement: 现有技能库方法多为append-only只增不删，会累积冗余、过时或有害技能，导致库低效且整理不善。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: SkillBrew将技能库整理形式化为效用约束下的多目标Pareto优化问题，目标为有用性、多样性与查询分布覆盖。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: SkillBrew以双层"提议-验证"循环求解该约束多目标问题，在两个公开基准上验证了方法有效性。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 将LLM智能体技能库整理形式化为效用约束下的多目标Pareto优化，经双层提议-验证循环精选技能。
+  abstract_zh: 检索增强型LLM智能体依赖精选的技能库，即指导复杂任务决策的可复用文本原则集合。现有方法通常以append-only方式只增不删，使冗余、过时甚至有害技能不断累积，导致库低效且整理不善。论文将技能库整理形式化为效用约束下的多目标问题，要求技能库对智能体有用、内容多样且覆盖查询分布，并提出SkillBrew框架，通过Pareto感知优化与双层"提议-验证"循环求解。在两个公开基准上的评估表明，将技能库作为需原则化整理的对象而非无限追加的日志，是构建自改进LLM智能体的重要一步。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 属自我改进AI域：LLM智能体技能库的多目标精选与整理，非音视频核心域，按规则仅给summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: SkillBrew：面向LLM智能体的技能库多目标整理
+relations:
+- type: same_topic
+  ref: paper:arxiv:2510.04618
+  note: 同为通过演化/整理上下文与知识条目（含剔除有害冗余项）实现LLM智能体自改进
+- type: same_topic
+  ref: paper:arxiv:2607.05297
+  note: 同为LLM智能体技能库的演化与自改进方法
+- type: same_topic
+  ref: paper:arxiv:2512.17102
+  note: 同研究基于技能库/技能库整理的自改进智能体
+- type: same_topic
+  ref: paper:arxiv:2509.13237
+  note: 同涉及将LLM推理浓缩为可复用技能/行为库供智能体检索使用

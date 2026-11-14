@@ -1,0 +1,60 @@
+id: paper:arxiv:2602.12430
+type: paper
+title: 'Agent Skills for Large Language Models: Architecture, Acquisition, Security, and the Path Forward'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2602.12430v4
+  url: https://arxiv.org/abs/2602.12430
+  pdf_url: https://arxiv.org/pdf/2602.12430v4
+  venue: arXiv preprint
+time:
+  published: '2026-02-12'
+  collected: '2026-11-15'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:SelfImprovement
+  role: builds_on
+claims:
+- statement: 实证分析显示，社区贡献的智能体技能中26.1%存在安全漏洞，凸显技能供应链安全风险。
+  confidence: reported
+  metrics:
+  - name: 含漏洞技能占比
+    value: 26.1%
+    scope: 近期社区贡献技能实证分析
+  evidence: abstract（初筛，未读全文）
+- statement: 提出Skill Trust and Lifecycle Governance Framework：四级门控权限模型，将技能来源映射到分级部署能力。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 归纳七个开放挑战（含跨平台技能可移植性、基于能力的权限模型），并提出可信自我改进技能生态研究议程。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 综述覆盖技能获取路径：基于技能库的强化学习、自主技能发现（SEAgent）与组合式技能合成。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 聚焦LLM智能体技能抽象层的综述：架构、获取、部署与安全，提出四级技能信任治理框架与自改进生态议程
+  abstract_zh: 该综述系统梳理LLM智能体的技能抽象层——即按需加载、无需重训练的可组合指令/代码/资源包，形式化为渐进式披露范式、可移植技能定义及与MCP协议的集成。文章沿四轴组织领域：架构基础（SKILL.md规范、渐进上下文加载、技能与MCP互补角色）、技能获取（技能库强化学习、自主技能发现SEAgent、组合式技能合成）、规模化部署（CUA栈、GUI
+    grounding、OSWorld与SWE-bench基准）与安全（实证分析显示26.1%的社区贡献技能存在漏洞）。据此提出技能信任与生命周期治理框架，采用四级门控权限模型将技能来源映射到分级部署能力。最后归纳七个开放挑战，并提出实现可信、自我改进技能生态的研究议程。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: LLM智能体技能层综述，覆盖技能库强化学习、自主技能发现与自我改进技能生态研究议程，属非核心域按基准只给summary_only
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 大语言模型的智能体技能：架构、获取、安全与未来路径
+relations:
+- type: same_topic
+  ref: paper:arxiv:2512.17102
+  note: 综述明确覆盖基于技能库的强化学习获取路径，与该文主题一致
+- type: same_topic
+  ref: paper:arxiv:2610.07645
+  note: 综述聚焦技能安全漏洞与治理，与技能投毒攻击研究同属技能安全议题
+- type: same_topic
+  ref: paper:arxiv:2609.39149
+  note: 综述提出自我改进技能生态议程，与技能自进化方向相关

@@ -1,0 +1,46 @@
+id: paper:arxiv:2512.14061
+type: paper
+title: Bridging Fidelity-Reality with Controllable One-Step Diffusion for Image Super-Resolution
+domain: processing_enhancement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2512.14061v1
+  url: https://arxiv.org/abs/2512.14061
+  pdf_url: https://arxiv.org/pdf/2512.14061v1
+  venue: arXiv preprint
+time:
+  published: '2025-12-16'
+  collected: '2026-11-15'
+entities:
+- ref: concept:SuperResolution
+  role: subject
+- ref: concept:DiffusionPrior
+  role: uses
+claims:
+- statement: 现有一步扩散超分方法受制于低质输入压缩信息损失、生成先验缺乏区域判别激活、文本提示与语义区域错位三大局限
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: CODSR通过LQ引导特征调制、区域自适应生成先验激活与文本匹配引导，实现感知质量优于SOTA且保真度具竞争力的高效一步推理超分
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出可控单步扩散网络CODSR，兼顾图像超分的保真度、区域自适应生成先验与文本对齐
+  abstract_zh: 论文针对现有一步扩散超分方法的三点不足展开：低质量输入经压缩编码导致的信息损失、生成先验缺乏区域判别性激活、文本提示与语义区域错位。CODSR设计了LQ引导的特征调制模块，利用低质输入中的未压缩信息为扩散过程提供高保真条件；提出区域自适应生成先验激活方法，在提升感知丰富度的同时保持局部结构保真；并引入文本匹配引导策略充分利用文本条件。实验表明其感知质量优于现有方法且保真度具竞争力，同时保持一步推理的高效性。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 基于单步扩散先验的通用图像超分辨率（超分属增强域非核心编码域），仅初筛收录
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 以可控单步扩散桥接保真度与真实感的图像超分辨率
+relations:
+- type: same_topic
+  ref: paper:arxiv:2310.12004
+  note: 同为基于扩散先验的图像超分辨率研究
+- type: same_topic
+  ref: paper:arxiv:2405.14822
+  note: 同属单步扩散生成器用于图像复原的方向

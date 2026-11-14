@@ -1,0 +1,57 @@
+id: paper:arxiv:2605.24553
+type: paper
+title: 'IQA-Spider: Unifying Multi-Granularity Image Quality Assessment with Reasoning, Grounding and
+  Referring'
+domain: quality_assessment
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2605.24553v1
+  url: https://arxiv.org/abs/2605.24553
+  pdf_url: https://arxiv.org/pdf/2605.24553v1
+  venue: arXiv preprint
+time:
+  published: '2026-05-23'
+  collected: '2026-11-15'
+entities:
+- ref: concept:IQA
+  role: subject
+- ref: concept:TrainingFree
+  role: uses
+claims:
+- statement: IQA-Spider 是首个将推理、定位与指涉统一到单一 LMM 框架的多粒度图像质量评估方法
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 提出覆盖全局与局部质量描述、像素级定位、区域级指涉的四任务范式，并构建可扩展自动标注流水线生成的 IQA 数据集
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 采用无冲突两阶段设计，第二阶段为免训练 text-to-point 定位，通过将 token logits 映射为空间坐标实现文本到像素感知的桥接
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在多个 IQA 基准上的大量实验验证了所提任务形式化与框架的有效性和通用性
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 首个将推理、像素级定位与区域指涉统一到单一 LMM 框架的多粒度可解释图像质量评估方法。
+  abstract_zh: 该文提出 IQA-Spider，是首个将推理、定位与指涉统一到单一 LMM 框架的图像质量评估方法，实现多粒度质量理解。针对现有多任务支持不全的问题，作者制定了涵盖全局与局部质量描述、像素级定位、区域级指涉的严格四任务范式，并配套构建了可扩展自动标注的
+    IQA 数据集。方法采用无冲突两阶段设计：第一阶段为模型注入多 IQA 任务的细粒度文本级推理能力，第二阶段引入免训练的 text-to-point 定位范式，将 token logits 映射为空间坐标以衔接文本语义与像素感知。多基准实验表明该框架在统一多粒度质量感知上性能强劲且通用。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 基于 LMM 的多粒度可解释图像质量评估工作，统一推理/定位/指涉，属质量评估域重要进展但非核心编码域，按规则给 summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: IQA-Spider：统一推理、定位与指涉的多粒度图像质量评估
+relations:
+- type: same_topic
+  ref: paper:arxiv:2605.21244
+  note: 同为图像质量评估中的质量定位方向
+- type: same_topic
+  ref: paper:arxiv:2601.08311
+  note: 同为基于 LMM 的图像质量评估增强研究
+- type: same_topic
+  ref: paper:arxiv:2601.21738
+  note: 同属 IQA 粒度化分析与评估方向

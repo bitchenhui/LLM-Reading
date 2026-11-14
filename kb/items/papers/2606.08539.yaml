@@ -1,0 +1,80 @@
+id: paper:arxiv:2606.08539
+type: paper
+title: 'AgentTrust: A Self-Improving Trust Layer for AI-Agent Actions'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2606.08539v1
+  url: https://arxiv.org/abs/2606.08539
+  pdf_url: https://arxiv.org/pdf/2606.08539v1
+  venue: arXiv preprint
+time:
+  published: '2026-06-07'
+  collected: '2026-11-15'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: 手写确定性云规则包对语义类威胁无效，仅能提升词法类总体准确率，验证'固定签名可规则判定、意图相关威胁超出规则能力'的二分论断。
+  confidence: reported
+  metrics:
+  - name: 规则包后总体准确率
+    value: 48→56%
+    scope: 手写云规则包在held-out测试集上
+  - name: 语义类别提升
+    value: 0pp
+    scope: data_db 29→29、observability 59→59、supply_chain 50→50
+  evidence: abstract（初筛，未读全文）
+- statement: LLM裁决器的自学习在以语义攻击为主的语料上将规则准确率几乎翻倍且近零误拦，结论跨两个模型提供商成立。
+  confidence: reported
+  metrics:
+  - name: 自学习后规则准确率
+    value: 48%→83.6-85.2%
+    scope: 语义攻击为主语料，双模型提供商验证
+  evidence: abstract（初筛，未读全文）
+- statement: 按表面形式缓存的verdict-cache在语义威胁上失效（表层孪生样本塌缩至约58%），佐证护栏（corroboration guard）可将语义准确率提升13个百分点。
+  confidence: reported
+  metrics:
+  - name: verdict-cache语义准确率
+    value: ~58%
+    scope: surface-twins（表层孪生）样本下
+  - name: 佐证护栏提升
+    value: +13pp（70→84）
+    scope: 语义类别准确率
+  evidence: abstract（初筛，未读全文）
+- statement: 端到端在线回放显示自改进双存储系统逐步降低LLM裁决成本并提升judge域准确率，且全程无良性动作被硬拦截。
+  confidence: reported
+  metrics:
+  - name: judge调用率
+    value: 50%→44%
+    scope: 45,000动作端到端在线回放
+  - name: judge域准确率
+    value: 71%→80%
+    scope: 同一在线回放
+  - name: 良性硬拦截数
+    value: '0'
+    scope: 45,000动作全程
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 按威胁类型分层的自改进信任层：LLM裁决器蒸馏词法规则、以带护栏RAG记忆处理语义威胁，45,000动作零良性硬拦截。
+  abstract_zh: 论文提出AgentTrust，对智能体的shell命令、云操作与工具调用按动作逐条判定放行/警告/拦截/升级，并将威胁分为词法（固定签名、可规则判定）与语义（意图相关、规则先天不可判定）两类。负面对照实验显示，手写云规则包仅将held-out总体准确率从48%提到56%，语义类别提升为0，而强LLM裁决器恰好覆盖这些语义类别。系统让裁决器具备自学习能力：在以语义攻击为主的语料上将规则准确率几乎翻倍（48%到83.6-85.2%）且近零误拦，并在两个模型提供商上均成立。最终形成自改进双存储系统：裁决器在词法威胁上蒸馏不断增长的确定性规则底座以降成本，在语义威胁上写入带佐证护栏的RAG记忆（纯verdict-cache因表层孪生样本塌缩至约58%而失败，佐证护栏使语义准确率提升13个百分点，70到84）。端到端在线回放显示judge调用率由50%降至44%、judge域准确率由71%升至80%，45,000个动作中零良性硬拦截。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 面向AI智能体动作的自改进信任层（规则蒸馏+带护栏RAG记忆），属自我改进AI域而非核心编码域，按基准仅收录摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: AgentTrust：面向AI智能体动作的自改进信任层
+relations:
+- type: same_topic
+  ref: paper:arxiv:2510.07841
+  note: 同属LLM智能体自改进方向：均为agent在运行决策流中自我演化能力/策略
+- type: same_topic
+  ref: paper:arxiv:2608.24231
+  note: 均以LLM作为judge并研究其有界自改进/自我评估机制

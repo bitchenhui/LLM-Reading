@@ -1,0 +1,53 @@
+id: paper:arxiv:2605.14892
+type: paper
+title: 'Beyond Individual Intelligence: Surveying Collaboration, Failure Attribution, and Self-Evolution
+  in LLM-based Multi-Agent Systems'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2605.14892v2
+  url: https://arxiv.org/abs/2605.14892
+  pdf_url: https://arxiv.org/pdf/2605.14892v2
+  venue: arXiv preprint
+time:
+  published: '2026-05-14'
+  collected: '2026-11-15'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: subject
+claims:
+- statement: 该综述提出LIFE四阶段统一框架（能力奠基、协作集成、故障归因、自主自我改进），并形式化刻画相邻阶段之间既依赖又约束的因果依赖关系。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 更紧密的多智能体协作会放大错误跨智能体、跨交互轮次的传播，产生难以诊断且很少转化为结构性自我改进的失败。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 现有综述分别覆盖单智能体能力、多智能体协作或智能体自我进化之一，三者间的因果依赖此前未被系统考察。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出LIFE四阶段框架，统一综述LLM多智能体系统的协作、故障归因与自主自我改进及其因果依赖。
+  abstract_zh: 基于LLM的自主智能体在推理、规划与工具使用上能力强，但在需要跨角色、工具与环境持续协同的任务中受限；多智能体系统以结构化协作应对，但更紧密的协作会放大错误在智能体与交互轮次间的传播，产生难以诊断且很少转化为结构性自我改进的失败。该综述指出已有工作分别覆盖单智能体能力、多智能体协作与智能体自我进化，三者间的因果依赖未被考察。作者提出LIFE四阶段统一框架：能力奠基、协作集成、故障归因、自主自我改进，为各阶段给出系统分类并形式化刻画相邻阶段间的依赖与约束关系。最后识别阶段边界处的开放挑战，提出面向闭环多智能体系统的跨阶段研究议程，使其能持续诊断失败、重组结构并改进行为。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 非核心编码域，属LLM多智能体协作、故障归因与自我进化的综述，与自我改进AI主题高度相关，按收录基准给summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 超越个体智能：LLM多智能体系统中的协作、故障归因与自我进化综述
+relations:
+- type: same_topic
+  ref: paper:arxiv:2604.17658
+  note: 同属多智能体故障诊断与自我改进主题，对应综述中故障归因到自我进化的阶段衔接
+- type: same_topic
+  ref: paper:arxiv:2609.38662
+  note: 同属多智能体协作的递归自我改进方向，对应综述的协作集成与进化阶段
+- type: same_topic
+  ref: paper:arxiv:2609.38516
+  note: 同属LLM多智能体（社会性）自我改进主题

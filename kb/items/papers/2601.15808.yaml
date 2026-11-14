@@ -1,0 +1,74 @@
+id: paper:arxiv:2601.15808
+type: paper
+title: 'Inference-Time Scaling of Verification: Self-Evolving Deep Research Agents via Test-Time Rubric-Guided
+  Verification'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2601.15808v2
+  url: https://arxiv.org/abs/2601.15808
+  pdf_url: https://arxiv.org/pdf/2601.15808v2
+  venue: arXiv preprint
+time:
+  published: '2026-01-22'
+  collected: '2026-11-15'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: DeepVerifier 在元评估 F1 分数上超越 vanilla agent-as-judge 与 LLM judge 基线 12%-48%。
+  confidence: reported
+  metrics:
+  - name: meta-evaluation F1 提升
+    value: 12%-48%
+    scope: 对比 vanilla agent-as-judge 与 LLM judge 基线
+  evidence: abstract（初筛，未读全文）
+- statement: 测试时验证扩展在 GAIA 与 XBench-DeepSearch 困难子集上带来 8%-11% 准确率提升（闭源强 LLM 驱动，无需额外训练）。
+  confidence: reported
+  metrics:
+  - name: 准确率提升
+    value: 8%-11%
+    scope: GAIA / XBench-DeepSearch 困难子集，闭源 LLM 驱动
+  evidence: abstract（初筛，未读全文）
+- statement: 构建的 DRA 失败分类学将智能体失败系统划分为 5 大类与 13 子类，并据此导出验证量规。
+  confidence: reported
+  metrics:
+  - name: 失败类别
+    value: 5 类/13 子类
+    scope: 自动构建的 DRA Failure Taxonomy
+  evidence: abstract（初筛，未读全文）
+- statement: 发布 DeepVerifier-4K 数据集，包含 4,646 条聚焦 DRA 验证的高质量智能体步骤，供开源模型微调。
+  confidence: reported
+  metrics:
+  - name: SFT 样本数
+    value: 4,646
+    scope: DeepVerifier-4K 监督微调数据集
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出 DeepVerifier 量规引导验证器，测试时迭代验证-反馈使深度研究智能体免训练自我提升。
+  abstract_zh: 作者提出与后训练不同的范式：依据自动构建的 DRA 失败分类学（5 大类、13 子类）生成量规，通过迭代验证策略模型输出实现智能体自我演化。DeepVerifier 是基于量规的结果奖励验证器，利用验证的不对称性，在元评估
+    F1 上超越 vanilla agent-as-judge 与 LLM judge 基线 12%-48%。该验证器作为即插即用模块在测试时产生详细量规反馈，驱动智能体迭代 bootstrapping、无需额外训练即可精炼回答，在
+    GAIA 与 XBench-DeepSearch 困难子集上（由闭源强 LLM 驱动）带来 8%-11% 准确率提升。同时发布 DeepVerifier-4K 监督微调数据集（4,646 条高质量智能体验证步骤），帮助开源模型建立反思与自我批判能力。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 属于自我改进 AI 核心议题：通过测试时基于量规的验证反馈实现深度研究智能体无训练自我演化。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 验证的推理时扩展：通过测试时基于量规引导的验证实现深度研究智能体的自我演化
+relations:
+- type: same_topic
+  ref: paper:arxiv:2510.07841
+  note: 同为测试时 LLM 智能体自我改进
+- type: same_topic
+  ref: paper:arxiv:2412.14352
+  note: LLM 推理时自我改进综述覆盖该方向
+- type: same_topic
+  ref: paper:arxiv:2410.10934
+  note: Agent-as-a-Judge 为本文验证基线方法

@@ -1,0 +1,50 @@
+id: paper:arxiv:2601.05445
+type: paper
+title: Knowledge-Driven Multi-Turn Jailbreaking on Large Language Models
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2601.05445v1
+  url: https://arxiv.org/abs/2601.05445
+  pdf_url: https://arxiv.org/pdf/2601.05445v1
+  venue: arXiv preprint
+time:
+  published: '2026-01-09'
+  collected: '2026-11-15'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:SelfImprovement
+  role: uses
+claims:
+- statement: Mastermind在GPT-5、Claude 3.7 Sonnet等前沿模型上的攻击成功率与有害性评分显著优于现有多轮越狱攻击基线。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 基于反思交互经验自主构建并精炼的知识库，使框架能动态重组攻击向量并保持长对话中的攻击连贯性。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 该框架对多种先进防御机制表现出显著韧性。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出Mastermind框架，以规划-执行-反思闭环自主积累漏洞知识，实现自改进的多轮LLM越狱攻击。
+  abstract_zh: 论文针对现有多轮越狱攻击在长对话中易丢失进度、依赖固定模板、无法适应目标模型动态对话状态等问题，提出Mastermind框架。该框架采用规划、执行、反思的闭环流程，通过交互自主构建并完善关于模型漏洞的知识库；同时采用分层规划架构，将高层攻击目标与低层战术执行解耦以保证长期连贯性。知识库通过反思交互经验自动发现和精炼有效攻击模式，动态重组与适配攻击向量。在GPT-5、Claude
+    3.7 Sonnet等前沿模型上的实验表明，其攻击成功率与有害性评分显著优于现有基线，并对多种先进防御机制表现出较强鲁棒性。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 提出自改进式LLM智能体（规划-执行-反思闭环+知识库积累）用于多轮越狱攻击，属自我改进AI域但主题为安全红队而非音视频，仅初筛收录。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 知识驱动的大语言模型多轮越狱攻击
+relations:
+- type: same_topic
+  ref: paper:arxiv:2608.30207
+  note: 同为面向LLM/智能体的自改进红队攻击框架，主题高度相似
+- type: same_topic
+  ref: paper:arxiv:2506.07468
+  note: 同属LLM安全对抗（越狱/安全强化）方向，均涉及对抗目标模型安全机制的动态自适应策略

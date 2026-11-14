@@ -1,0 +1,69 @@
+id: paper:arxiv:2605.21244
+type: paper
+title: 'SR-Ground: Image Quality Grounding for Super-Resolved Content'
+domain: quality_assessment
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2605.21244v2
+  url: https://arxiv.org/abs/2605.21244
+  pdf_url: https://arxiv.org/pdf/2605.21244v2
+  venue: arXiv preprint
+time:
+  published: '2026-05-20'
+  collected: '2026-11-15'
+entities:
+- ref: concept:SuperResolution
+  role: subject
+- ref: concept:IQA
+  role: subject
+claims:
+- statement: SR-Ground数据集包含63,000张图像，覆盖6类伪影类型，并通过1,062名参与者的大规模众包研究验证和修正了自动生成的像素级分割标注。
+  confidence: reported
+  metrics:
+  - name: 图像数量
+    value: 63,000
+    scope: SR-Ground数据集总量
+  - name: 伪影类型数
+    value: '6'
+    scope: 数据集标注类别数
+  - name: 众包参与者
+    value: 1,062
+    scope: 标注验证与修正的众包研究规模
+  evidence: abstract（初筛，未读全文）
+- statement: 在由5种未见超分方法的1,000个输出构成的独立基准上，低分辨率参考（LR-referenced）grounding模型在显著度（prominence）对齐上显著优于其无参考版本，并在无HR真值的真实低分辨率图像数据集上表现最佳。
+  confidence: reported
+  metrics:
+  - name: 基准输出数量
+    value: 1,000
+    scope: 来自5种未见SR方法的输出
+  - name: 未见SR方法数
+    value: '5'
+    scope: 跨方法泛化评测
+  evidence: abstract（初筛，未读全文）
+- statement: 在SR-Ground上训练具备grounding能力的IQA模型可显著提升下游任务性能，且以grounding模型驱动的微调流程能减少SR输出中可感知的伪影。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出6.3万张超分图像、6类伪影像素级标注的SR-Ground数据集，训练可定位伪影的IQA模型用于可解释质量评估与SR伪影抑制。
+  abstract_zh: 针对扩散式超分（SR）模型引入的新型视觉伪影，现有IQA方法只给整体分数、缺乏可解释性且无法区分伪影类型，作者构建了SR-Ground大规模数据集，对多种SOTA超分模型的输出进行多类伪影的像素级分割标注。研究通过1,062名参与者的大规模众包验证并修正自动生成的分割，最终形成覆盖6类伪影的63,000张图像数据集。实验表明在该数据集上训练具备grounding能力的IQA模型可显著提升下游任务表现，并提出利用该grounding模型微调SR模型以减少可感知伪影的流程。在包含5种未见超分方法1,000个输出的独立基准上，低分辨率参考（LR-referenced）grounding模型在显著度对齐上显著优于无参考版本，并在无HR真值的真实低分辨率图像数据集上取得最佳表现。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 面向超分输出的细粒度伪影定位与IQA grounding数据集工作，属质量评估域重要成果而非视频/图像编码核心域，按基准收录为summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: SR-Ground：面向超分辨内容的图像质量定位（Grounding）
+relations:
+- type: same_topic
+  ref: paper:arxiv:2605.14847
+  note: 同为面向超分伪影感知评估的众包数据集/协议工作，SR-Ground摘要中的prominence对齐评测与SR-Prominence协议直接对应，疑似同一团队延续工作
+- type: same_topic
+  ref: paper:arxiv:2605.25940
+  note: 均针对扩散式超分输出的质量评估，评估对象为SR模型生成内容
+- type: same_topic
+  ref: paper:arxiv:2411.06810
+  note: 同为视觉伪影检测方法与数据集构建（JPEG AI压缩伪影 vs 超分伪影），均为像素级伪影标注数据集

@@ -1,0 +1,63 @@
+id: paper:arxiv:2603.07670
+type: paper
+title: Memory for Autonomous LLM Agents:Mechanisms, Evaluation, and Emerging Frontiers
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2603.07670v1
+  url: https://arxiv.org/abs/2603.07670
+  pdf_url: https://arxiv.org/pdf/2603.07670v1
+  venue: arXiv preprint
+time:
+  published: '2026-03-08'
+  collected: '2026-11-15'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:SelfImprovement
+  role: subject
+claims:
+- statement: LLM智能体记忆可形式化为与感知和行动紧密耦合的'写入-管理-读取'闭环，并沿时间范围、表征基底、控制策略三维分类。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 综述将记忆机制归为五大族：上下文内压缩、检索增强存储、反思式自我改进、分层虚拟上下文、策略学习管理。
+  confidence: reported
+  metrics:
+  - name: 机制族数量
+    value: '5'
+    scope: 本文分类法下的记忆机制族
+  evidence: abstract（初筛，未读全文）
+- statement: 评估范式正从静态回忆基准转向记忆与决策交织的多会话智能体测试，四个近期基准揭示现有系统的顽固差距。
+  confidence: reported
+  metrics:
+  - name: 分析基准数量
+    value: '4'
+    scope: 评估章节分析的近期记忆基准
+  evidence: abstract（初筛，未读全文）
+- statement: 综述覆盖2022年至2026年初的智能体记忆相关工作，并指出持续巩固、因果化检索、可信反思、学习遗忘与多模态具身记忆为开放挑战。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出写-管-读记忆闭环与三维分类法，系统综述LLM智能体记忆的设计、实现与评估。
+  abstract_zh: 该综述将LLM智能体记忆形式化为与感知、行动紧密耦合的'写入-管理-读取'闭环，并沿时间范围、表征基底、控制策略三个维度建立分类法。文章深入考察五大机制族：上下文内压缩、检索增强存储、反思式自我改进、分层虚拟上下文与策略学习管理。评估部分追踪了从静态回忆基准到记忆与决策交织的多会话智能体测试的转变，并分析四个近期基准暴露的顽固差距。最后讨论持续巩固、因果化检索、可信反思、学习遗忘与多模态具身记忆等开放挑战。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: LLM智能体记忆机制综述，五大机制族含反思式自我改进，属自我改进AI生态但非核心编码域。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 自主LLM智能体的记忆：机制、评估与新兴前沿
+relations:
+- type: same_topic
+  ref: paper:arxiv:2610.27406
+  note: 同属LLM智能体记忆持久性与有效性研究
+- type: same_topic
+  ref: paper:arxiv:2608.14621
+  note: 同属智能体记忆架构与记忆机制自我改进
+- type: same_topic
+  ref: paper:arxiv:2509.04439
+  note: 同属LLM智能体终身记忆与经验复用

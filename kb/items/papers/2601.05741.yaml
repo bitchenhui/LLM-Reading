@@ -1,0 +1,57 @@
+id: paper:arxiv:2601.05741
+type: paper
+title: 'ViTNT-FIQA: Training-Free Face Image Quality Assessment with Vision Transformers'
+domain: quality_assessment
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2601.05741v1
+  url: https://arxiv.org/abs/2601.05741
+  pdf_url: https://arxiv.org/pdf/2601.05741v1
+  venue: arXiv preprint
+time:
+  published: '2026-01-09'
+  collected: '2026-11-15'
+entities:
+- ref: concept:IQA
+  role: subject
+- ref: concept:TrainingFree
+  role: uses
+claims:
+- statement: 高质量人脸图像在ViT各块间呈现稳定的patch嵌入精炼轨迹，退化图像的变换轨迹不稳定，该稳定性可作为质量信号
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: ViTNT-FIQA仅需单次前向传播，无需反向传播或架构修改，即可用于任意预训练ViT人脸识别模型
+  confidence: reported
+  metrics:
+  - name: 前向传播次数
+    value: '1'
+    scope: 整个质量估计过程，无需backpropagation
+  evidence: abstract（初筛，未读全文）
+- statement: 在八个基准上达到与SOTA方法相当的竞争性能且计算高效
+  confidence: reported
+  metrics:
+  - name: 评估基准数
+    value: '8'
+    scope: LFW、AgeDB-30、CFP-FP、CALFW、Adience、CPLFW、XQLFW、IJB-C
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出仅需单次前向传播的无训练FIQA方法，利用ViT中间块间patch嵌入演化稳定性估计人脸图像质量。
+  abstract_zh: 针对人脸图像质量评估（FIQA）现有方法仅利用最后层表示、无训练方法又需多次前向或反向传播的问题，提出ViTNT-FIQA。该方法测量ViT各中间块间patch嵌入的演化稳定性：高质量人脸图像呈现稳定的特征精炼轨迹，退化图像则变换混乱；通过计算相邻transformer块L2归一化patch嵌入间的欧氏距离并聚合得到图像级质量分数。在带可控退化等级的质量标注合成数据上验证了该相关性。方法仅需单次前向传播，无需反向传播或架构修改，可直接应用于任意预训练ViT人脸识别模型；在LFW、AgeDB-30、CFP-FP、CALFW、Adience、CPLFW、XQLFW、IJB-C八个基准上取得与SOTA相当的竞争性能，同时保持计算效率。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 属于质量评估域的人脸图像质量评估（FIQA），与核心编码域关联较弱，按非核心域默认仅收录摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: ViTNT-FIQA：基于Vision Transformer的无训练人脸图像质量评估
+relations:
+- type: same_topic
+  ref: paper:arxiv:2611.06203
+  note: 同为图像质量评估（IQA）方向的客观质量评估方法研究
+- type: same_topic
+  ref: paper:arxiv:2605.15906
+  note: 均涉及图像退化（degradation）条件下的质量/鲁棒性评估

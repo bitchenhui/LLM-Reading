@@ -1,0 +1,52 @@
+id: paper:arxiv:2603.09206
+type: paper
+title: 'MM-Zero: Self-Evolving Multi-Model Vision Language Models From Zero Data'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2603.09206v1
+  url: https://arxiv.org/abs/2603.09206
+  pdf_url: https://arxiv.org/pdf/2603.09206v1
+  venue: arXiv preprint
+time:
+  published: '2026-03-10'
+  collected: '2026-11-15'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: builds_on
+claims:
+- statement: MM-Zero是首个实现VLM推理零数据自进化的基于强化学习的框架
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 提出Proposer-Coder-Solver三角色自进化训练框架，突破以往双角色（Proposer与Solver）设定，Coder通过生成Python/SVG等代码渲染视觉图像从而无需种子数据
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 三个角色均从同一基础模型初始化，采用GRPO训练，奖励机制整合执行反馈、视觉验证和难度平衡
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 实验显示MM-Zero在广泛的多模态基准上提升了VLM推理性能
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 首个RL驱动的VLM零数据自进化框架，以Proposer-Coder-Solver三角色协同提升多模态推理能力。
+  abstract_zh: 提出MM-Zero，首个基于强化学习实现视觉语言模型（VLM）推理零数据自进化的框架。超越以往Proposer-Solver双角色范式，引入三个专门角色：Proposer生成抽象视觉概念并构造问题，Coder将概念翻译为可执行代码（如Python、SVG）以渲染视觉图像，Solver对生成的视觉内容执行多模态推理。三个角色均从同一基础模型初始化，并使用组相对策略优化（GRPO）训练，奖励机制整合了执行反馈、视觉验证与难度平衡。实验表明MM-Zero在广泛的多模态基准上提升了VLM推理性能，为多模态模型的自进化多模型系统建立了可扩展路径。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 首个基于RL的VLM零数据自进化框架，将LLM自我改进范式扩展到多模态三角色设定，属自我改进AI领域重要工作，非核心编码域故仅收录摘要
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: MM-Zero：从零数据自进化的多模型视觉语言模型
+relations:
+- type: same_topic
+  ref: paper:arxiv:2508.05004
+  note: 同为零数据自进化方向，MM-Zero将R-Zero的LLM零数据自进化（双角色自我博弈）扩展至VLM多模态并增加Coder角色
+- type: same_topic
+  ref: paper:arxiv:2210.11610
+  note: 同属LLM自我改进（Self-Improve）研究线，本文将该范式延伸到多模态与零数据设定

@@ -1,0 +1,58 @@
+id: paper:arxiv:2512.18202
+type: paper
+title: 'Sophia: A Persistent Agent Framework of Artificial Life'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2512.18202v1
+  url: https://arxiv.org/abs/2512.18202
+  pdf_url: https://arxiv.org/pdf/2512.18202v1
+  venue: arXiv preprint
+time:
+  published: '2025-12-20'
+  collected: '2026-11-15'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: Sophia在工程原型中对重复性操作将推理步数减少80%
+  confidence: reported
+  metrics:
+  - name: 推理步数减少
+    value: 80%
+    scope: 工程原型中重复性操作
+  evidence: abstract（初筛，未读全文）
+- statement: 元认知持久化使高复杂度任务成功率提升40%，弥合了简单与复杂目标之间的性能差距
+  confidence: reported
+  metrics:
+  - name: 任务成功率提升
+    value: 40%
+    scope: 高复杂度任务
+  evidence: abstract（初筛，未读全文）
+- statement: System 3在定性评估中展现出连贯的叙事身份与自发的任务组织能力
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出System 3元层与持久智能体框架Sophia，以叙事记忆、混合奖励等机制为LLM智能体实现持续自我改进。
+  abstract_zh: 论文提出在LLM智能体的感知（System 1）与深思（System 2）之上引入System 3元层，负责维护叙事身份、校验推理并使短期行动与长期适应对齐。框架将心理学构念映射为具体计算模块，核心机制包括过程监督思维搜索、叙事记忆、用户与自我建模及混合奖励系统。Sophia作为"持久智能体"封装，可将持续自我改进闭环嫁接到任意LLM中心的System
+    1/2架构之上。工程原型显示，重复操作的推理步数减少80%，元认知持久化使高复杂度任务成功率提升40%；定性上System 3表现出连贯的叙事身份与自发任务组织能力。论文以概念框架为主，结合轻量强化学习内核，为人工生命提出可实践的技术路径。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 提出LLM智能体的持续自我改进闭环与持久智能体框架，属自我改进AI域而非核心编码域，按基准仅作初筛摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: Sophia：一种人工生命的持久化智能体框架
+relations:
+- type: same_topic
+  ref: paper:arxiv:2312.10003
+  note: 同属LLM智能体自我改进方向，均通过迭代闭环提升多步推理智能体能力
+- type: same_topic
+  ref: paper:arxiv:2410.04444
+  note: 同为在LLM智能体上构建递归/持续自我改进框架的研究，主题高度相关

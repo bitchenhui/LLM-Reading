@@ -1,0 +1,49 @@
+id: paper:arxiv:2605.11803
+type: paper
+title: 'OTT-Vid: Optimal Transport Temporal Token Compression for Video Large Language Models'
+domain: video_image_coding
+research_lines:
+- generative_compression
+source:
+  channel: arxiv
+  external_id: 2605.11803v1
+  url: https://arxiv.org/abs/2605.11803
+  pdf_url: https://arxiv.org/pdf/2605.11803v1
+  venue: arXiv preprint
+time:
+  published: '2026-05-12'
+  collected: '2026-11-15'
+entities:
+- ref: concept:TrainingFree
+  role: subject
+claims:
+- statement: OTT-Vid在仅保留10%视觉token的情况下，可在六个基准上保留95.8%的视频问答（VQA）性能。
+  confidence: reported
+  metrics:
+  - name: VQA性能保留率
+    value: 95.8%
+    scope: 六个视频问答基准，保留10%token，对比全量token推理
+  evidence: abstract（初筛，未读全文）
+- statement: OTT-Vid在仅保留10%视觉token的情况下，保留73.9%的视频时序定位（VTG）性能。
+  confidence: reported
+  metrics:
+  - name: VTG性能保留率
+    value: 73.9%
+    scope: 视频时序定位基准，保留10%token
+  evidence: abstract（初筛，未读全文）
+- statement: OTT-Vid在同等token保留率下持续优于现有最先进的无训练token压缩方法。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出基于最优传输的无训练时序token压缩框架，仅保留10%视觉token即可保留95.8%视频问答性能。
+  abstract_zh: 随着视频更长更复杂，Video-LLM因跨帧累积大量视觉token导致推理开销快速增长，无训练token压缩成为实用方案，但现有方法依赖跨帧相似度或分割启发式，忽略token语义角色且无法按帧对可压缩性自适应分配强度。OTT-Vid采用两阶段设计：先做空间剪枝选出每帧代表性内容，再在相邻帧间求解带非均匀token质量与局部性感知代价的最优传输问题，以传输总代价度量帧对压缩难度并动态分配压缩预算。该方法在保护语义重要token的同时平衡token重要性与匹配代价。在覆盖视频问答与时序定位的六个基准上，仅保留10%token即可保留95.8%的VQA与73.9%的VTG性能，稳定优于现有SOTA无训练压缩方法。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 面向Video-LLM的时序视觉token压缩属视频技术相关但非编解码器核心议题，故仅做摘要级收录。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: OTT-Vid：面向视频大语言模型的最优传输时序Token压缩

@@ -1,0 +1,49 @@
+id: paper:arxiv:2601.02907
+type: paper
+title: 'Beyond the Black Box: A Survey on the Theory and Mechanism of Large Language Models'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2601.02907v2
+  url: https://arxiv.org/abs/2601.02907
+  pdf_url: https://arxiv.org/pdf/2601.02907v2
+  venue: arXiv preprint
+time:
+  published: '2026-01-06'
+  collected: '2026-11-15'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:SelfImprovement
+  role: subject
+claims:
+- statement: 提出统一的基于生命周期的LLM研究分类体系，将研究图景组织为数据准备、模型准备、训练、对齐、推理与评估六个阶段
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 将合成数据自改进的理论极限列为LLM研究的关键前沿挑战之一，认为自改进需要数学层面的理论支撑
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 指出现有LLM实证有效性与其理论理解严重不匹配，系统仍被当作黑箱对待，需从工程启发转向原理化科学
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 以生命周期六阶段框架梳理LLM基础理论与机制，指出合成数据自改进理论极限等前沿挑战
+  abstract_zh: 该综述针对LLM实证有效但理论滞后、被当作黑箱的矛盾，提出统一的基于生命周期的分类体系，将研究图景组织为数据准备、模型准备、训练、对齐、推理与评估六个阶段。作者系统回顾了驱动LLM性能的基础理论与内部机制，包括数据配比的数学依据、不同架构的表征能力边界以及对齐算法的优化动力学。在此基础上，论文识别出关键前沿挑战：合成数据自改进的理论极限、安全保证的数学边界以及涌现智能的机理起源。该工作旨在推动LLM发展从工程启发转向有原则的科学学科。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: LLM理论与机制综述，仅在前沿挑战部分触及合成数据自改进的理论极限，与自我改进AI域中度相关，非音视频核心域
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 超越黑箱：大语言模型理论与机制综述
+relations:
+- type: same_topic
+  ref: paper:arxiv:2412.14352
+  note: 同为LLM自我改进主题综述，本综述从理论极限角度补充其推理时自改进的实证视角
+- type: same_topic
+  ref: paper:arxiv:2502.13441
+  note: 本综述提出的合成数据自改进理论极限问题与该文关于语言模型自举推理能力的理论质疑直接相关

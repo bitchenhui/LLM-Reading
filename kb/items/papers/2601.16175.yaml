@@ -1,0 +1,70 @@
+id: paper:arxiv:2601.16175
+type: paper
+title: Learning to Discover at Test Time
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2601.16175v2
+  url: https://arxiv.org/abs/2601.16175
+  pdf_url: https://arxiv.org/pdf/2601.16175v2
+  venue: arXiv preprint
+time:
+  published: '2026-01-22'
+  collected: '2026-11-15'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:AlphaEvolve
+  role: builds_on
+claims:
+- statement: TTT-Discover在所尝试的几乎全部问题上刷新SOTA，覆盖数学、GPU内核工程、算法设计和生物学四大领域，结果经专家或主办方评审。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在GPUMode GPU内核竞赛中，TTT-Discover产出的内核最高比先前最优内核快2倍。
+  confidence: reported
+  metrics:
+  - name: 内核加速比
+    value: 2×
+    scope: GPUMode内核竞赛，相对先前最优内核（up to，最高值）
+  evidence: abstract（初筛，未读全文）
+- statement: 全部结果基于开源模型gpt-oss-120b并配公开代码即可复现，不同于以往需闭源前沿模型才能达到的最优结果。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 测试时训练通过Tinker API（Thinking Machines）运行，每个问题的训练成本仅数百美元。
+  confidence: reported
+  metrics:
+  - name: 单问题训练成本
+    value: 数百美元
+    scope: 经Tinker API的测试时训练运行，按问题计
+  evidence: abstract（初筛，未读全文）
+- statement: 与冻结LLM的测试时搜索不同，TTT-Discover在测试时对模型进行持续学习，其优化目标与搜索子程序专门为产出单一卓越解而设计。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出TTT-Discover，在测试时对LLM进行强化学习以求解科学问题，在数学、GPU内核、算法与生物学多个任务刷新SOTA。
+  abstract_zh: 不同于AlphaEvolve等先前测试时扩展工作仅对冻结LLM做提示搜索，该方法在测试时对大语言模型执行强化学习（持续学习），使模型针对当前测试问题积累专属经验。由于目标是产出一个卓越解而非平均意义上的多个好解，其学习目标与搜索子程序均被设计为优先聚焦最有希望的方案。在连续奖励问题上验证，覆盖数学（Erdős最小重叠问题、自相关不等式）、GPU内核工程（GPUMode内核竞赛，最高比先前最优快2倍）、算法设计（历届AtCoder竞赛）和生物学（单细胞分析去噪），结果几乎全部刷新SOTA，且经专家或赛事主办方评审。全部结果仅用开源模型gpt-oss-120b并配公开代码即可复现（不同于以往依赖闭源前沿模型的最优结果），测试时训练通过Thinking
+    Machines的Tinker API完成，每问题成本仅数百美元。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: LLM测试时强化学习实现科学发现的自改进工作（AlphaEvolve路线的重要进展），属自我改进AI域，非音视频核心域，按规则收summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 在测试时学习发现
+relations:
+- type: same_topic
+  ref: paper:arxiv:2506.13131
+  note: 论文明确以AlphaEvolve（冻结LLM提示搜索）为先前测试时扩展工作的代表并加以改进
+- type: same_topic
+  ref: paper:arxiv:2505.19475
+  note: 同属基于测试时训练（test-time training）的LLM自改进范式
+- type: same_topic
+  ref: paper:arxiv:2511.23473
+  note: 同为在开放问题上进行测试时学习/发现的测试时自改进方法
+- type: same_topic
+  ref: paper:arxiv:2408.03314
+  note: 同属LLM测试时计算扩展（test-time scaling）研究方向

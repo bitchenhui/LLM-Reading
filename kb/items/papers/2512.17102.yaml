@@ -1,0 +1,64 @@
+id: paper:arxiv:2512.17102
+type: paper
+title: Reinforcement Learning for Self-Improving Agent with Skill Library
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2512.17102v2
+  url: https://arxiv.org/abs/2512.17102
+  pdf_url: https://arxiv.org/pdf/2512.17102v2
+  venue: arXiv preprint
+time:
+  published: '2025-12-18'
+  collected: '2026-11-15'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: builds_on
+claims:
+- statement: SAGE应用于经专家经验监督微调的模型时，在AppWorld上场景目标完成率比现有方法高8.9%
+  confidence: reported
+  metrics:
+  - name: Scenario Goal Completion提升
+    value: 8.9%
+    scope: AppWorld基准，基于监督微调（专家经验）模型，对比现有方法
+  evidence: abstract（初筛，未读全文）
+- statement: SAGE在提升完成任务准确性的同时显著降低交互与生成长销：交互步骤减少26%，生成token减少59%
+  confidence: reported
+  metrics:
+  - name: 交互步骤减少
+    value: 26%
+    scope: AppWorld基准，相对现有方法
+  - name: 生成token减少
+    value: 59%
+    scope: AppWorld基准，相对现有方法
+  evidence: abstract（初筛，未读全文）
+- statement: SAGE通过Sequential Rollout在相似任务链上迭代部署，使技能库随任务累积并被后续任务复用，弥补纯LLM提示式技能库执行不稳定的问题
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出SAGE强化学习框架，以技能库与序列Rollout提升LLM智能体自改进的准确性与效率
+  abstract_zh: 针对LLM智能体在新环境中难以持续改进、现有技能库方法依赖LLM提示而难以稳定执行的问题，提出基于强化学习的SAGE（Skill Augmented GRPO for self-Evolution）框架。其核心组件Sequential
+    Rollout让智能体在每次rollout中依次执行相似任务链，前一任务生成的技能累积进技能库供后续任务使用；同时设计Skill-integrated Reward补充原有结果导向奖励，强化技能生成与利用。在AppWorld基准上，SAGE应用于经专家经验监督微调的模型时，场景目标完成率提升8.9%，同时交互步骤减少26%、生成token减少59%，在准确性与效率上均显著优于现有方法。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 提出SAGE强化学习框架使LLM智能体通过技能库实现自改进，属自我改进AI域而非核心编码域，按基准给摘要级收录
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 基于强化学习的技能库自改进智能体
+relations:
+- type: same_topic
+  ref: paper:arxiv:2609.39149
+  note: 均研究LLM智能体的技能自进化/技能库驱动的自改进
+- type: same_topic
+  ref: paper:arxiv:2312.10003
+  note: 均为多步推理LLM智能体的自改进方法研究
+- type: same_topic
+  ref: paper:arxiv:2506.06698
+  note: 均通过跨任务经验/技能积累实现语言智能体自改进

@@ -1,0 +1,73 @@
+id: paper:arxiv:2604.05458
+type: paper
+title: 'MA-IDS: Multi-Agent RAG Framework for IoT Network Intrusion Detection with an Experience Library'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2604.05458v1
+  url: https://arxiv.org/abs/2604.05458
+  pdf_url: https://arxiv.org/pdf/2604.05458v1
+  venue: arXiv preprint
+time:
+  published: '2026-04-07'
+  collected: '2026-11-15'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: MA-IDS在NF-BoT-IoT数据集上取得89.75%的Macro F1，较零样本基线提升超过72个百分点，性能与SVM相当且提供规则级解释。
+  confidence: reported
+  metrics:
+  - name: Macro F1
+    value: 89.75%
+    scope: NF-BoT-IoT基准数据集
+  - name: 零样本基线Macro F1
+    value: 17%
+    scope: NF-BoT-IoT零样本对比
+  - name: 提升幅度
+    value: '>72 个百分点'
+    scope: 相对零样本基线
+  evidence: abstract（初筛，未读全文）
+- statement: MA-IDS在NF-ToN-IoT数据集上取得85.22%的Macro F1，较零样本基线提升超过80个百分点。
+  confidence: reported
+  metrics:
+  - name: Macro F1
+    value: 85.22%
+    scope: NF-ToN-IoT基准数据集
+  - name: 零样本基线Macro F1
+    value: 4.96%
+    scope: NF-ToN-IoT零样本对比
+  - name: 提升幅度
+    value: '>80 个百分点'
+    scope: 相对零样本基线
+  evidence: abstract（初筛，未读全文）
+- statement: 通过错误分析Agent将误分类转化为人类可读检测规则并存入FAISS经验库，在不修改底层语言模型参数的前提下实现外部知识积累式持续学习。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 用LLM双智能体+自建经验库的RAG推理实现可解释的物联网入侵检测，Macro F1达89.75%/85.22%。
+  abstract_zh: 针对签名式方法难以检测零日攻击、机器学习方法可解释性差、IoT环境资源受限等问题，提出MA-IDS多智能体入侵检测框架，结合LLM与检索增强生成（RAG）进行推理式检测。框架维护一个持久化、自构建的经验库：流量分类Agent在每次推理前通过FAISS向量库检索历史错误规则，错误分析Agent将误分类转化为人类可读的检测规则存入经验库，在不修改底层语言模型的情况下通过外部知识积累实现持续学习。在NF-BoT-IoT与NF-ToN-IoT基准上分别取得89.75%与85.22%的Macro
+    F1，较零样本基线（17%与4.96%）提升超过72和80个百分点，与SVM性能相当，并为每次分类决策提供规则级解释。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 核心是物联网入侵检测应用，但其'自建经验库+误分类转规则'的LLM智能体外部知识持续自改进机制与自我改进AI域相关，非音视频核心域。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: MA-IDS：基于经验库的多智能体RAG物联网网络入侵检测框架
+relations:
+- type: same_topic
+  ref: paper:arxiv:2510.18428
+  note: 同属以经验库（Experience Library）为自改进载体的LLM框架
+- type: same_topic
+  ref: paper:arxiv:2506.06698
+  note: 同为通过经验积累而非模型参数更新实现语言智能体自我改进
+- type: same_topic
+  ref: paper:arxiv:2510.16079
+  note: 同为经验驱动的LLM智能体自我演化机制

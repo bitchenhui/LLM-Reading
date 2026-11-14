@@ -1,0 +1,53 @@
+id: paper:arxiv:2601.15772
+type: paper
+title: 'LL-GaussianImage: Efficient Image Representation for Zero-shot Low-Light Enhancement with 2D Gaussian
+  Splatting'
+domain: video_image_coding
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2601.15772v1
+  url: https://arxiv.org/abs/2601.15772
+  pdf_url: https://arxiv.org/pdf/2601.15772v1
+  venue: arXiv preprint
+time:
+  published: '2026-01-22'
+  collected: '2026-11-15'
+entities:
+- ref: concept:3DGS
+  role: subject
+- ref: concept:MoE
+  role: uses
+claims:
+- statement: LL-GaussianImage是首个直接在2DGS压缩表示域内进行零样本无监督低照度增强的框架，避免了'解压-增强-再压缩'流程及其带来的二次劣化。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 语义引导的MoE增强框架以渲染图像为引导，对2DGS稀疏属性空间施加动态自适应变换，实现'压缩即增强'而无需完全解压到像素网格。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 通过多目标协同损失（约束平滑性与保真度、抑制伪影）与两阶段优化（先单尺度重建保证基础表示精度、再增强网络鲁棒性），该框架在保持高压缩比的同时实现高质量低照度增强。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 首个在2DGS压缩表示域内直接进行零样本无监督低照度增强的框架，免解压即增强并保持高压缩比
+  abstract_zh: 现有低照度增强算法大多在像素域运行，处理2DGS压缩图像需经历'解压-增强-再压缩'流程，效率低下且引入二次劣化。该文提出LL-GaussianImage，首个直接在2DGS压缩表示域内进行零样本无监督低照度增强的框架。方法上设计语义引导的混合专家（MoE）增强框架，以渲染图像为引导对2DGS稀疏属性空间施加动态自适应变换，实现'压缩即增强'而无需完全解压到像素网格；并建立多目标协同损失约束增强过程中的平滑性与保真度以抑制伪影。通过两阶段优化实现'重建即增强'：先单尺度重建保证基础表示精度，再提升增强网络鲁棒性。实验验证该范式可在保持高压缩比的同时获得高质量增强结果，证明压缩表示域内直接处理的可行性与优越性。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 首个在2DGS压缩表示域内直接完成低照度增强的框架，属核心域的图像表示/压缩与压缩域增强交叉工作，对编码链路技术路线有直接参考价值
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: LL-GaussianImage：基于二维高斯泼溅的高效图像表示与零样本低照度增强
+relations:
+- type: same_topic
+  ref: paper:arxiv:2501.12060
+  note: 同以2D高斯泼溅作为高效图像/视频表示与压缩载体，本文将其从视频编码扩展到压缩域低照度增强场景
+- type: same_topic
+  ref: paper:arxiv:2606.21033
+  note: 同样在图像压缩中采用混合专家（MoE）结构，本文为语义引导MoE作用于2DGS稀疏属性空间
+- type: same_topic
+  ref: paper:arxiv:2609.14129
+  note: 同属基于2D高斯泼溅的图像/视频压缩表示研究线

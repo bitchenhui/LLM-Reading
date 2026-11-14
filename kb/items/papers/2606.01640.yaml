@@ -1,0 +1,54 @@
+id: paper:arxiv:2606.01640
+type: paper
+title: 'MobEvolve: An Agentic Self-Evolving Heuristic System for Interpretable Human Mobility Generation'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2606.01640v1
+  url: https://arxiv.org/abs/2606.01640
+  pdf_url: https://arxiv.org/pdf/2606.01640v1
+  venue: arXiv preprint
+time:
+  published: '2026-06-01'
+  collected: '2026-11-15'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: MobEvolve 是首个面向人类出行生成的智能体自进化启发式框架：LLM 智能体诊断验证集上的经验性错位与失败案例，提出针对性更新并积累演化记忆以实现累积式自我改进。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在新加坡与蒙特利尔基准上，MobEvolve 在个体轨迹保真度、群体级分布对齐与行为合理性方面显著优于最先进的深度生成与基于 LLM 的方法。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 与深度生成及 LLM 方法相比，MobEvolve 在保持可解释性的同时具备高推理效率。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 首个智能体自进化启发式框架：LLM智能体迭代演化启发式逻辑生成可解释出行链，优于深度生成与LLM方法。
+  abstract_zh: 人类出行生成旨在为特定人群合成真实的出行链，现有深度生成模型、基于LLM的方法与传统启发式难以同时满足可解释性、行为合理性、群体级分布对齐与推理效率的要求。MobEvolve
+    首先初始化一个行为启发的启发式系统，随后由 LLM 智能体在验证集上诊断经验性错位与失败案例，提出针对性更新并积累演化记忆，实现累积式自我改进。在新加坡与蒙特利尔两个基准上，MobEvolve 在个体轨迹保真度、群体级分布对齐与行为合理性方面显著优于最先进的深度生成与基于
+    LLM 的方法，同时保持可解释性与高推理效率。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 属自改进AI域的智能体自进化启发式框架（EoH/AlphaEvolve家族），但应用场景为人类出行生成，与音视频技术无直接关联。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: MobEvolve：面向可解释人类出行生成的智能体自进化启发式系统
+relations:
+- type: same_topic
+  ref: paper:arxiv:2401.02051
+  note: 同为LLM驱动的启发式自动设计/演化（EoH），MobEvolve将该范式迁移至出行生成并引入演化记忆机制
+- type: same_topic
+  ref: paper:arxiv:2506.13131
+  note: 同属智能体自进化启发式/算法发现系统家族（AlphaEvolve式agentic self-evolving heuristics）
+- type: same_topic
+  ref: paper:arxiv:2505.12285
+  note: 同为LLM与启发式系统协同进化/自动启发式设计的自改进工作线

@@ -1,0 +1,52 @@
+id: paper:arxiv:2511.17592
+type: paper
+title: 'GigaEvo: An Open Source Optimization Framework Powered By LLMs And Evolution Algorithms'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2511.17592v1
+  url: https://arxiv.org/abs/2511.17592
+  pdf_url: https://arxiv.org/pdf/2511.17592v1
+  venue: arXiv preprint
+time:
+  published: '2025-11-17'
+  collected: '2026-11-15'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:AlphaEvolve
+  role: builds_on
+claims:
+- statement: GigaEvo 模块化实现了 MAP-Elites 质量多样性算法、异步 DAG 式评估流水线、带洞察生成与双向谱系追踪的 LLM 变异算子以及多岛进化策略，以弥补 AlphaEvolve
+    原论文实现细节缺失导致的可复现性障碍。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在 AlphaEvolve 论文的三个基准问题（Heilbronn 三角形放置、正方形内圆填充、高维 kissing number）上评估 GigaEvo 的可复现性并验证实现正确性。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 框架与全部实验代码以开源形式发布（github.com/AIRI-Institute/gigaevo-core），支持声明式配置的快速原型实验。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 开源的AlphaEvolve式LLM-进化混合优化框架，模块化实现MAP-Elites、异步DAG评估与多岛策略
+  abstract_zh: GigaEvo 是一个可扩展的开源框架，用于研究和实验受 AlphaEvolve 启发的 LLM-进化混合计算方法，针对已发表工作高层描述缺乏实现细节、可复现性不足的问题。系统模块化实现了
+    MAP-Elites 质量多样性算法、异步 DAG 式评估流水线、带洞察生成与双向谱系追踪的 LLM 驱动变异算子，以及灵活的多岛进化策略。框架强调模块化、并发性与声明式配置下的快速原型开发。作者在
+    AlphaEvolve 论文的三个挑战性问题上评估框架的可复现性并验证实现：Heilbronn 三角形放置、正方形内圆填充与高维 kissing number。框架与全部实验代码均已开源。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 属LLM驱动进化计算/自改进AI域的开源框架复现工作，与音视频技术无直接关联，按规则不进deep_read。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: GigaEvo：由大语言模型与进化算法驱动的开源优化框架
+relations:
+- type: same_topic
+  ref: paper:arxiv:2506.13131
+  note: GigaEvo 直接基于 AlphaEvolve 思路构建，并在其论文基准问题上做可复现性评估
+- type: same_topic
+  ref: paper:arxiv:2510.14150
+  note: 同为 AlphaEvolve 系的开源进化式编码智能体框架

@@ -1,0 +1,54 @@
+id: paper:arxiv:2602.16928
+type: paper
+title: Discovering Multiagent Learning Algorithms with Large Language Models
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2602.16928v3
+  url: https://arxiv.org/abs/2602.16928
+  pdf_url: https://arxiv.org/pdf/2602.16928v3
+  venue: arXiv preprint
+time:
+  published: '2026-02-18'
+  collected: '2026-11-15'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:AlphaEvolve
+  role: uses
+claims:
+- statement: 部署AlphaEvolve在CFR与PSRO两个博弈论范式的设计空间中自动搜索，发现VAD-CFR与SHOR-PSRO两个新算法，与最先进的人类设计基线持续具有竞争力
+  confidence: reported
+  metrics:
+  - name: 评测游戏数
+    value: '18'
+    scope: 覆盖Poker、Goofspiel、Liar's Dice、Blotto、Battleship变体的评测套件
+  evidence: abstract（初筛，未读全文）
+- statement: LLM因针对特定训练集适应度优化，倾向构造高度协同耦合的复杂机制；消融研究表明这些机制并非泛化关键，最小算法核心才是泛化的真正驱动
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 将LLM发现蒸馏为最小求解器WOP-CFR与PM-PSRO后，跨游戏泛化性能更优且结构复杂度大幅降低
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 用AlphaEvolve自动搜索CFR与PSRO设计空间，发现并蒸馏出两个极简博弈求解算法，泛化性能更优。
+  abstract_zh: 该工作部署LLM进化编码智能体框架AlphaEvolve，在反事实遗憾最小化（CFR）与策略空间响应预言机（PSRO）两大博弈论算法设计空间中自动搜索，得到VAD-CFR与SHOR-PSRO两个新算法，在覆盖扑克、Goofspiel、Liar's
+    Dice、Blotto与Battleship变体的18局游戏评测套件上持续与人类设计的SOTA基线竞争。由于LLM针对训练集适应度进行优化，常构造出高度协同耦合的复杂机制；系统消融实验表明泛化的真正驱动因素是最小算法核心。据此将LLM的发现蒸馏为最小求解器WOP-CFR与PM-PSRO，二者在泛化上表现更优且结构复杂度大幅降低，为LLM用于算法发现提供了清晰方法论。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: DeepMind团队用AlphaEvolve进化编码智能体在CFR/PSRO两大博弈算法设计空间自动发现并蒸馏新算法，属LLM驱动算法自发现/自改进域的代表性工作，但与音视频技术无关，按非核心域仅给summary_only
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 用大语言模型发现多智能体学习算法
+relations:
+- type: same_topic
+  ref: paper:arxiv:2506.13131
+  note: 本文为部署AlphaEvolve编码智能体做算法发现的应用工作，与AlphaEvolve原论文同属LLM进化式算法发现主题
+- type: same_topic
+  ref: paper:arxiv:2406.04824
+  note: 同属LLM驱动（FunSearch系列）的进化式算法/函数自动发现研究线

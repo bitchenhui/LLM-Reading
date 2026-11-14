@@ -1,0 +1,73 @@
+id: paper:arxiv:2604.21276
+type: paper
+title: Do LLM Decoders Listen Fairly? Benchmarking How Language Model Priors Shape Bias in Speech Recognition
+domain: audio_coding
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2604.21276v1
+  url: https://arxiv.org/abs/2604.21276
+  pdf_url: https://arxiv.org/pdf/2604.21276v1
+  venue: arXiv preprint
+time:
+  published: '2026-04-23'
+  collected: '2026-11-15'
+entities:
+- ref: concept:LLM
+  role: subject
+claims:
+- statement: 在干净音频上，LLM解码器不会放大种族偏差，Granite-8B取得最优的种族公平性
+  confidence: reported
+  metrics:
+  - name: 最大/最小WER比
+    value: '2.28'
+    scope: Granite-8B，种族维度，干净音频
+  evidence: abstract（初筛，未读全文）
+- statement: Whisper对印度口音语音出现病理性幻觉，插入率随模型规模非单调上升
+  confidence: reported
+  metrics:
+  - name: 插入率
+    value: 9.62%
+    scope: Whisper large-v3，印度口音语音，干净音频
+  evidence: abstract（初筛，未读全文）
+- statement: 静音注入会触发人群选择性幻觉，使Whisper的口音偏差最多放大4.64倍
+  confidence: reported
+  metrics:
+  - name: 口音偏差放大倍数
+    value: 4.64倍
+    scope: 静音注入退化条件下，Whisper
+  evidence: abstract（初筛，未读全文）
+- statement: 掩码退化下Whisper陷入灾难性重复循环，显式LLM解码器插入错误少38倍且近乎零重复；高压缩音频编码（Q-former）会让LLM解码器重现重复病理
+  confidence: reported
+  metrics:
+  - name: 重复插入占比
+    value: 86%
+    scope: 掩码条件下Whisper的51797次插入
+  - name: 插入数减少倍数
+    value: 38倍
+    scope: 显式LLM解码器对比Whisper，掩码条件
+  evidence: abstract（初筛，未读全文）
+- statement: 评测覆盖三代架构9个模型、约4.3万条语音、5个人口统计轴与12种退化条件；结论认为音频编码器设计而非LLM规模是公平鲁棒ASR的主要杠杆
+  confidence: reported
+  metrics:
+  - name: 推理运行次数
+    value: '216'
+    scope: 12种声学退化条件×两个数据集
+  - name: 评测语音条数
+    value: 约43000条
+    scope: Common Voice 24与Fair-Speech
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 大规模基准显示LLM解码器并不放大种族偏差，音频编码器设计而非LLM规模才是公平鲁棒语音识别的关键杠杆。
+  abstract_zh: 论文评测9个覆盖三代架构的语音识别模型（无语言模型的CTC、隐式LM的编码器-解码器、显式预训练LLM解码器），在约4.3万条语音、5个人口统计维度（种族、口音、性别、年龄、母语）上衡量公平性，数据来自Common
+    Voice 24与Meta的Fair-Speech受控提示数据集。干净音频上发现LLM解码器并未放大种族偏差（Granite-8B最优，最大/最小WER比为2.28），而Whisper对印度口音语音出现病理性幻觉，插入率在large-v3处非单调升至9.62%，且音频压缩比LLM规模更能预测口音公平性。随后在12种声学退化条件（噪声、混响、静音注入、片段掩码）下开展共216次推理压测：严重退化反而使各群体收敛到高WER从而压缩公平性差距，但静音注入通过人群选择性幻觉将Whisper口音偏差放大至4.64倍。掩码条件下Whisper陷入灾难性重复循环（51797次插入中86%为重复），显式LLM解码器插入错误少38倍且几乎无重复，而高压缩音频编码（Q-former）会让LLM解码器重现重复病理。结论指出音频编码器设计而非LLM规模是公平且鲁棒的语音识别的主要杠杆。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 语音识别公平性基准研究，属语音技术但非核心视频/图像编码域，与音视频生态相关，按规则仅给初筛摘要（规则匹配的dataset:JVET-CTC为噪声，予以剔除）。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: LLM解码器听得公平吗？语言模型先验如何塑造语音识别中的偏差

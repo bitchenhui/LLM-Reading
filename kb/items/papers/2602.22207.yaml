@@ -1,0 +1,56 @@
+id: paper:arxiv:2602.22207
+type: paper
+title: 'Recovered in Translation: Efficient Pipeline for Automated Translation of Benchmarks and Datasets'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2602.22207v1
+  url: https://arxiv.org/abs/2602.22207
+  pdf_url: https://arxiv.org/pdf/2602.22207v1
+  venue: arXiv preprint
+time:
+  published: '2026-02-25'
+  collected: '2026-11-15'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: 提出全自动化翻译框架，通过测试时计算扩展策略（USI自改进与自研T-RANK多轮排序）显著提升基准与数据集的翻译质量。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在基于参考的指标和LLM-as-a-judge评估下，其翻译超越现有资源，提升下游多语言模型评估的准确性。
+  confidence: reported
+  metrics:
+  - name: 覆盖语言数
+    value: '8'
+    scope: 乌克兰语、保加利亚语、斯洛伐克语、罗马尼亚语、立陶宛语、爱沙尼亚语、土耳其语、希腊语
+  evidence: abstract（初筛，未读全文）
+- statement: 框架在本地化时保留原始任务结构与语言细微差异，并发布框架与改进后的基准以支持可复现的多语言AI开发。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 用USI自改进与T-RANK多轮排序实现基准数据集高质量自动翻译，覆盖8种东欧/南欧语言。
+  abstract_zh: 论文提出一个全自动化框架，通过扩展测试时计算策略——Universal Self-Improvement（USI）和自研的多轮排序方法T-RANK——实现可扩展的高质量数据集与基准翻译。该框架在本地化过程中保留原始基准的任务结构与语言细微差异，避免语义漂移与上下文丢失。作者将流行基准与数据集翻译成乌克兰语、保加利亚语、斯洛伐克语、罗马尼亚语、立陶宛语、爱沙尼亚语、土耳其语、希腊语共8种语言。基于参考指标与LLM-as-a-judge的评估显示，其翻译质量超越现有资源，使下游多语言模型评估更准确，并开源了框架与改进后的基准。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 论文核心是应用LLM测试时自改进（USI）与多轮排序（T-RANK）做多语言基准翻译，属自我改进AI的应用型工作，与音视频核心技术无关。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 翻译中的找回：面向基准与数据集自动翻译的高效流水线
+relations:
+- type: same_topic
+  ref: paper:arxiv:2505.16637
+  note: 同为面向机器翻译的自改进/自我奖励方法
+- type: same_topic
+  ref: paper:arxiv:2410.08964
+  note: 多语言场景下的LLM自改进与翻译质量提升主题一致
+- type: same_topic
+  ref: paper:arxiv:2412.14352
+  note: USI属LLM推理时自改进技术，与该综述主题相关

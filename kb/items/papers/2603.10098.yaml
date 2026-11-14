@@ -1,0 +1,54 @@
+id: paper:arxiv:2603.10098
+type: paper
+title: 'Code-Space Response Oracles: Generating Interpretable Multi-Agent Policies with Large Language
+  Models'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2603.10098v1
+  url: https://arxiv.org/abs/2603.10098
+  pdf_url: https://arxiv.org/pdf/2603.10098v1
+  venue: arXiv preprint
+time:
+  published: '2026-03-10'
+  collected: '2026-11-15'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:AlphaEvolve
+  role: uses
+claims:
+- statement: CSRO 将 PSRO 中的最优响应计算重构为 LLM 代码生成任务，生成的策略天然是人类可读、可解释的代码，区别于深度 RL 预言机的黑盒神经网络策略
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 论文探索了三种构建与增强 LLM oracle 的方式：零样本提示、迭代细化，以及 AlphaEvolve 分布式 LLM 进化系统
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: CSRO 在性能上与基线方法相当，同时产出多样化的可解释策略
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 该工作将多智能体学习的研究焦点从优化不透明的策略参数转向合成可解释的算法行为，并利用 LLM 预训练知识发现类人的复杂策略
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出 CSRO 框架，用 LLM 直接生成代码形式的最优响应策略，替代 PSRO 中的黑盒 RL 预言机，产出可解释且性能相当的多智能体策略
+  abstract_zh: 针对 PSRO 等多智能体强化学习方法依赖黑盒深度 RL 预言机、策略难以解释信任与调试的问题，论文提出 CSRO 框架，将最优响应计算重构为代码生成任务，让 LLM 直接生成人类可读的策略代码。作者探索了三种构建与增强
+    LLM oracle 的途径：零样本提示、迭代细化以及 AlphaEvolve 分布式 LLM 进化系统。实验显示 CSRO 在性能上与基线相当，同时产出多样化、可解释的策略，将多智能体学习的焦点从优化不透明策略参数转向合成可解释的算法行为。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: LLM 代码生成替代 RL oracle 的多智能体策略合成，属自我改进 AI 方向，与音视频技术无直接关联，按非核心域给初筛摘要
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 代码空间响应预言机：用大语言模型生成可解释的多智能体策略
+relations:
+- type: same_topic
+  ref: paper:arxiv:2506.13131
+  note: 本文将 AlphaEvolve 作为构建 LLM 进化式 oracle 的核心方法之一，与 AlphaEvolve 原始论文同属 LLM 驱动的代码进化发现方向
+- type: same_topic
+  ref: paper:arxiv:2602.16928
+  note: 同属用大语言模型发现/合成多智能体学习算法的研究线

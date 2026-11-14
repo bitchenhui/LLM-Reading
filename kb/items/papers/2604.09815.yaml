@@ -1,0 +1,66 @@
+id: paper:arxiv:2604.09815
+type: paper
+title: 'EE-MCP: Self-Evolving MCP-GUI Agents via Automated Environment Generation and Experience Learning'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2604.09815v1
+  url: https://arxiv.org/abs/2604.09815
+  pdf_url: https://arxiv.org/pdf/2604.09815v1
+  venue: arXiv preprint
+time:
+  published: '2026-04-10'
+  collected: '2026-11-15'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: 在MCP主导的桌面任务上，蒸馏策略达到77.8%通过率，较对比提升17.8个百分点。
+  confidence: reported
+  metrics:
+  - name: 通过率
+    value: 77.8%
+    scope: 三个桌面应用的MCP主导任务
+  - name: 提升幅度
+    value: +17.8pp
+    scope: MCP主导任务相对对比锚点
+  evidence: abstract（初筛，未读全文）
+- statement: 经验库在GUI密集任务上表现更优，提升10.0个百分点。
+  confidence: reported
+  metrics:
+  - name: 提升幅度
+    value: +10.0pp
+    scope: GUI密集任务
+  evidence: abstract（初筛，未读全文）
+- statement: 蒸馏与经验增强针对本质不同的失败模式，最优机制选择取决于任务的MCP-GUI构成，需应用感知的机制选择。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 经验库从轨迹对比中积累LLM习得规则，可在不微调的情况下实现推理时改进；整套环境生成-轨迹采集-任务合成-质量过滤训练管线无需人工干预。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出MCP与GUI混合策略学习框架及全自动自进化管线，经验库支持免微调的推理时提升。
+  abstract_zh: 论文将结合GUI操作与MCP结构化API调用的计算机使用智能体建模为统一的混合策略学习问题，并证明蒸馏与经验增强针对本质不同的失败模式，需要按应用选择机制。基于该建模提出完全自动化的自进化管线：自动生成并验证环境、采集轨迹、按能力差距合成任务、质量过滤后训练，全程无需人工干预。核心创新是经验库，从轨迹对比中积累LLM习得的规则，可在不做微调的情况下于推理时改进。跨三个桌面应用的系统分析显示最优策略取决于MCP-GUI构成：蒸馏在MCP主导任务上取得77.8%通过率（+17.8pp），经验库在GUI密集任务上提升+10.0pp。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 典型的LLM智能体自进化工作（自动环境生成+轨迹经验学习+推理时经验库），属自我改进AI域，按基准仅收录为summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: EE-MCP：通过自动化环境生成与经验学习实现自进化的MCP-GUI智能体
+relations:
+- type: same_topic
+  ref: paper:arxiv:2510.16079
+  note: 同为经验驱动生命周期的自进化LLM智能体
+- type: same_topic
+  ref: paper:arxiv:2510.07841
+  note: 同为测试时/推理时的智能体自我改进
+- type: same_topic
+  ref: paper:arxiv:2504.21024
+  note: 同为Web/GUI智能体自我改进，含协同进化机制

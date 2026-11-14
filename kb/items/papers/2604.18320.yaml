@@ -1,0 +1,55 @@
+id: paper:arxiv:2604.18320
+type: paper
+title: 'EVE: Verifiable Self-Evolution of MLLMs via Executable Visual Transformations'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2604.18320v1
+  url: https://arxiv.org/abs/2604.18320
+  pdf_url: https://arxiv.org/pdf/2604.18320v1
+  venue: arXiv preprint
+time:
+  published: '2026-04-20'
+  collected: '2026-11-15'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+claims:
+- statement: EVE 通过执行视觉变换脚本获得绝对且经执行验证的真值答案，完全摆脱对模型伪标签的依赖，避免了伪标签自进化随预测漂移导致的渐进式质量退化。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: Challenger-Solver 双策略架构配合语义多样性与动态难度校准的多维奖励，可持续扩展变换代码队列并递增任务难度，防止模式坍塌并实现两策略相互共同进化。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 大量实验表明 EVE 在性能上一致超越现有自进化方法，论文声称其为可验证的 MLLM 自进化建立了稳健且可扩展的范式。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 用可执行视觉变换脚本生成执行验证真值的VQA训练题，实现MLLM无伪标签的可验证自进化。
+  abstract_zh: 针对多模态大模型自进化中伪标签方法随预测漂移而质量递减、模板方法变换静态受限两大痛点，提出 EVE 框架，完全绕开伪标签，以持续丰富多样性与复杂度的可执行视觉变换构造训练分布。框架采用
+    Challenger-Solver 双策略架构：Challenger 维护并逐步扩展视觉变换代码示例队列，合成 Python 脚本执行动态视觉变换，从而产出具有执行验证绝对真值答案的 VQA 问题，无需模型生成监督。融合语义多样性与动态难度校准的多维奖励引导
+    Challenger 丰富代码队列、逐步加大任务难度，防止模式坍塌并促成双策略共同进化。大量实验表明 EVE 一致超越现有自进化方法，为可验证的 MLLM 自进化提供了稳健可扩展的范式。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 多模态大模型可验证自进化（RSI）方法论工作，属自我改进AI域而非音视频编码核心域，按规则仅 summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: EVE：通过可执行视觉变换实现多模态大语言模型的可验证自进化
+relations:
+- type: same_topic
+  ref: paper:arxiv:2508.05004
+  note: 同为自进化推理LLM范式：R-Zero 从零数据自进化，EVE 用可执行变换生成零监督训练题
+- type: same_topic
+  ref: paper:arxiv:2508.14029
+  note: 同属自博弈+变体问题合成维持RLVR的路线，EVE 的 Challenger 持续生成难度递增的可验证变体问题
+- type: same_topic
+  ref: paper:arxiv:2609.37950
+  note: 同属视觉/视频理解领域的递归自改进研究，均以视觉任务为自进化载体
+- type: same_topic
+  ref: paper:arxiv:2610.13098
+  note: 同属执行接地（execution-grounded）验证驱动的自改进：VETR 用符号图形执行反馈，EVE 用视觉变换脚本执行反馈

@@ -1,0 +1,51 @@
+id: paper:arxiv:2512.18337
+type: paper
+title: 'Towards Efficient Agents: A Co-Design of Inference Architecture and System'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2512.18337v2
+  url: https://arxiv.org/abs/2512.18337
+  pdf_url: https://arxiv.org/pdf/2512.18337v2
+  venue: arXiv preprint
+time:
+  published: '2025-12-20'
+  collected: '2026-11-15'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:SelfImprovement
+  role: uses
+claims:
+- statement: AgentInfer通过AgentCollab、AgentSched、AgentSAM、AgentCompress四模块协同，将无效token消耗降低超过50%
+  confidence: reported
+  metrics:
+  - name: 无效token消耗降低
+    value: '>50%'
+    scope: BrowseComp-zh与DeepDiver基准
+  evidence: abstract（初筛，未读全文）
+- statement: 在保持精度前提下实现整体1.8-2.5倍加速，表明以智能体任务完成为导向的优化优于单纯按token吞吐优化
+  confidence: reported
+  metrics:
+  - name: 端到端加速比
+    value: 1.8-2.5倍
+    scope: BrowseComp-zh与DeepDiver基准，精度保持
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出AgentInfer框架，以双模型协作、缓存感知调度、后缀自动机投机解码与语义压缩协同加速LLM智能体，减少50%以上无效token并提速1.8-2.5倍
+  abstract_zh: 论文指出LLM智能体的部署瓶颈不在单次推理，而在多轮推理循环、上下文增长与异构工具交互累积的系统性延迟，提出端到端加速框架AgentInfer。框架由四个协同模块组成：AgentCollab通过大/小模型动态角色分配实现分层双模型推理；AgentSched是面向异构请求模式的缓存感知混合调度器；AgentSAM基于后缀自动机的投机解码复用多会话语义记忆实现低开销加速；AgentCompress在不打断推理的情况下异步蒸馏与重组智能体记忆。这些模块共同构成自我进化引擎，在长程推理任务中维持效率与认知稳定性。在BrowseComp-zh和DeepDiver基准上，无效token消耗降低超过50%，整体提速1.8-2.5倍且精度保持。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 面向LLM智能体的端到端推理加速与自我进化引擎，属自我改进AI范畴但核心贡献为系统效率而非能力自提升，与音视频无直接关联
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 面向高效智能体：推理架构与系统的协同设计
+relations:
+- type: same_topic
+  ref: paper:arxiv:2610.25012
+  note: 同为面向智能体的投机解码加速方向

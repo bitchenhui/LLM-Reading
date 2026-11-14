@@ -1,0 +1,69 @@
+id: paper:arxiv:2605.29668
+type: paper
+title: 'GRASP: Gated Regression-Aware Skill Proposer for Self-Improving LLM Agents'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2605.29668v3
+  url: https://arxiv.org/abs/2605.29668
+  pdf_url: https://arxiv.org/pdf/2605.29668v3
+  venue: arXiv preprint
+time:
+  published: '2026-05-28'
+  collected: '2026-11-15'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: subject
+claims:
+- statement: GRASP在MedAgentBench上把gpt-oss-120b的任务成功率从40.6%提升到88.8%。
+  confidence: reported
+  metrics:
+  - name: 任务成功率
+    value: 40.6%→88.8%
+    scope: MedAgentBench，gpt-oss-120b，GRASP前后对比
+  evidence: abstract（初筛，未读全文）
+- statement: GRASP超过五个自我改进基线中最强者21.0个百分点，并使其他基础模型提升17.2至40.3个百分点。
+  confidence: reported
+  metrics:
+  - name: 超过最强基线幅度
+    value: +21.0 pts
+    scope: MedAgentBench，对比五个自我改进基线中的最强者
+  - name: 其他基础模型提升幅度
+    value: +17.2~40.3 pts
+    scope: MedAgentBench，除gpt-oss-120b外的四个基础模型
+  evidence: abstract（初筛，未读全文）
+- statement: 消融归因表明增益主要来自对比式提议生成、接受门与硬回归预算，而非技能写作本身——无验证的技能写作与不使用技能并无差异。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 为五个基线提供相同接受门可提升其域内表现但在分布外均无提升，说明增益源于施加在有界可编辑库上的门而非保留集验证本身。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 该机制适用于任务重复出现且结构可验证的环境，在开放式动作空间中效果平平；冻结技能库可跨模型及共享工具调用约定的基准迁移，接口不匹配时性能退化。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 将LLM代理自我改进建模为有界技能库的门控编辑序列，仅在保留探针净改进且不超硬回归预算时接受新技能。
+  abstract_zh: 先前自我改进方法累积自然语言指导时不校验每条新经验是否保持既有正确行为，修复一条轨迹的建议可能悄悄损害另一条。GRASP把代理改进视为对有界技能库的一系列编辑，仅当候选技能在平衡保留探针上带来净改进并满足硬回归预算时才接纳。在两个基于FHIR的临床基准上对五个基础模型评估，MedAgentBench上gpt-oss-120b从40.6%升至88.8%，超过五个自我改进基线中最强者21.0个百分点，其余基础模型提升17.2至40.3个百分点。消融显示增益来自对比式提议生成、接受门与硬回归预算而非技能写作本身，且该机制仅在任务重复、结构可验证的环境有效，冻结技能库可跨模型与共享工具调用约定的基准迁移，接口不匹配时退化。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: LLM代理自我改进方向的核心方法工作（门控技能库编辑防回归），属非音视频核心域，按收录规则仅作初筛摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: GRASP：面向自我改进LLM代理的门控回归感知技能提议器
+relations:
+- type: same_topic
+  ref: paper:arxiv:2512.17102
+  note: 同为技能库驱动的LLM代理自我改进方法
+- type: same_topic
+  ref: paper:arxiv:2506.06698
+  note: 同属语言代理自我改进（经验/技能累积）方向
+- type: same_topic
+  ref: paper:arxiv:2210.11610
+  note: LLM自我改进研究的早期基础工作，属同一研究方向

@@ -1,0 +1,59 @@
+id: paper:arxiv:2602.16066
+type: paper
+title: Improving Interactive In-Context Learning from Natural Language Feedback
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2602.16066v1
+  url: https://arxiv.org/abs/2602.16066
+  pdf_url: https://arxiv.org/pdf/2602.16066v1
+  venue: arXiv preprint
+time:
+  published: '2026-02-17'
+  collected: '2026-11-15'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:SelfImprovement
+  role: builds_on
+claims:
+- statement: 当前旗舰 LLM 在困难推理任务上难以有效整合纠错性自然语言反馈。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 经该框架训练的较小模型，其多轮任务表现几乎达到数量级更大的模型的水平。
+  confidence: reported
+  metrics:
+  - name: 多轮表现对应的模型规模差距
+    value: 10×
+    scope: 交互式训练后的小模型 vs 未训练的大模型（约一个数量级）
+  evidence: abstract（初筛，未读全文）
+- statement: 交互式训练具备分布外泛化能力：在数学问题上训练可迁移到编程、谜题和迷宫导航等不同领域。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 训练模型预测教师批评（建模反馈环境）可将外部反馈信号内化，使模型在无教师情况下自我纠正，为自我改进提供统一路径。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 将'依据语言反馈交互式学习'训练为可习得技能：小模型多轮表现逼近十倍大模型，并可内化为无教师自我纠错。
+  abstract_zh: 论文提出一个框架，将'从纠错反馈中调整思路'的交互式上下文学习能力从涌现属性变为可显式训练的技能，通过信息不对称将单轮可验证任务转化为多轮教学式交互。实验表明当前旗舰模型在困难推理任务上难以整合纠错反馈，而经该方法训练的模型多轮表现大幅提升，较小模型的多轮成绩几乎追平数量级更大的模型。交互训练还表现出鲁棒的分布外泛化：在数学问题上训练可迁移至编程、谜题与迷宫导航等域，定性分析归因于更强的上下文可塑性。最后，通过训练模型预测教师批评来建模反馈环境，将外部信号转化为内部能力，使模型在无教师时也能自我纠正，为自我改进提供了统一路径。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: LLM 从自然语言反馈中交互学习并内化为无教师自我纠错，属自我改进 AI 核心工作，非音视频编码域故仅初筛收录。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 改进从自然语言反馈中进行的交互式上下文学习
+relations:
+- type: same_topic
+  ref: paper:arxiv:2210.08229
+  note: 同属 LLM 自我改进研究方向，本文将其与交互式上下文学习统一
+- type: same_topic
+  ref: paper:arxiv:2506.03106
+  note: 均研究利用自然语言反馈提升 LLM 推理
+- type: same_topic
+  ref: paper:arxiv:2402.14809
+  note: 均涉及 LLM 依据批评反馈进行纠错推理的能力

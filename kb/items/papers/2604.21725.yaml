@@ -1,0 +1,64 @@
+id: paper:arxiv:2604.21725
+type: paper
+title: 'AEL: Evolving Agent Harness in Open-Ended Environments'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2604.21725v2
+  url: https://arxiv.org/abs/2604.21725
+  pdf_url: https://arxiv.org/pdf/2604.21725v2
+  venue: arXiv preprint
+time:
+  published: '2026-04-23'
+  collected: '2026-11-15'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: AEL在序列投资组合基准上超越十个自改进与非LLM基线，Sharpe比率较最强纯记忆变体提升27%，且在所有随机方法中方差最低。
+  confidence: reported
+  metrics:
+  - name: Sharpe比率提升
+    value: 27%
+    scope: 序列投资组合基准，对比最强memory-only变体
+  evidence: abstract（初筛，未读全文）
+- statement: AEL泛化到工单路由流任务并显著提升准确率，优于无反思的Thompson Sampling与此前最佳基线。
+  confidence: reported
+  metrics:
+  - name: 准确率提升
+    value: 18%
+    scope: 工单路由流任务，对比无反思Thompson Sampling
+  - name: 准确率提升
+    value: 51%
+    scope: 工单路由流任务，对比此前最佳基线
+  evidence: abstract（初筛，未读全文）
+- statement: 机制研究表明增益具有因果性：LLM反思恰在环境需要不同检索行为的场景下带来提升；当最优策略稳定时，反思可证明既无损害也无增益。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出AEL双时间尺度框架，用Thompson采样与LLM反思协同演化智能体的记忆检索策略骨架。
+  abstract_zh: 论文指出LLM智能体的harness通常手工设计且固定不变，导致智能体虽积累经验却不学习如何使用经验。AEL将记忆使用重铸为在线策略选择：快尺度用Thompson Sampling多臂赌博机逐回合在各记忆检索策略间选择，慢尺度用LLM反思遵循"先诊断后处方"原则，在策略池趋稳时注入新的检索策略作为新臂。在序列投资组合基准上，AEL超越十个自改进与非LLM基线，Sharpe比率较最强纯记忆变体提升27%，且为所有随机方法中方差最低；并泛化到工单路由流任务，准确率较无反思Thompson
+    Sampling提升18%、较此前最佳基线提升51%。机制分析表明增益是因果的：反思恰在环境需要不同检索行为时起作用，最优策略稳定时可证明无损害亦无增益。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 属LLM智能体骨架自演化/自我改进AI研究，为引擎覆盖的非核心域，按默认仅summary_only收录，与音视频编码链路无直接关联。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: AEL：开放环境中智能体骨架（Harness）的演化学习
+relations:
+- type: same_topic
+  ref: paper:arxiv:2607.05297
+  note: 同为LLM智能体骨架/技能的双时间尺度自演化方法
+- type: same_topic
+  ref: paper:arxiv:2610.14224
+  note: 同属开放世界中智能体harness递归自演化研究
+- type: same_topic
+  ref: paper:arxiv:2610.27889
+  note: 同属智能体harness优化增益机理的解构性研究

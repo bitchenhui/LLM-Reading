@@ -1,0 +1,57 @@
+id: paper:arxiv:2603.04900
+type: paper
+title: 'EvoTool: Self-Evolving Tool-Use Policy Optimization in LLM Agents via Blame-Aware Mutation and
+  Diversity-Aware Selection'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2603.04900v1
+  url: https://arxiv.org/abs/2603.04900
+  pdf_url: https://arxiv.org/pdf/2603.04900v1
+  venue: arXiv preprint
+time:
+  published: '2026-03-05'
+  collected: '2026-11-15'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: EvoTool将LLM智能体工具使用策略分解为Planner、Selector、Caller、Synthesizer四个模块，并以无梯度进化范式在自改进循环中迭代优化。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 框架通过轨迹故障归因定位失败模块、反馈引导定向变异只编辑该模块、多样性感知种群选择保持解多样性三项机制实现自进化。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在四个基准上，EvoTool相对强基线取得超过5分的性能提升，且该结论在GPT-4.1与Qwen3-8B两个模型上均成立。
+  confidence: reported
+  metrics:
+  - name: 相对基线性能提升
+    value: over 5 points
+    scope: 四个基准上，GPT-4.1与Qwen3-8B两种模型下的相对强基线提升
+  evidence: abstract（初筛，未读全文）
+- statement: EvoTool在效率与可迁移性方面优于强基线方法。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出EvoTool无梯度自进化框架，将工具使用策略分解为四模块，经故障归因变异与多样性选择迭代优化LLM智能体。
+  abstract_zh: 该文提出EvoTool，一种基于无梯度进化范式的自进化框架，用于优化LLM智能体的模块化工具使用策略。框架将策略分解为Planner、Selector、Caller与Synthesizer四个模块，并在自改进循环中迭代提升。三项核心机制包括：基于轨迹诊断的故障归因将失败定位到具体模块、基于自然语言批评的反馈引导定向变异仅编辑该模块、以及多样性感知的种群选择保留互补候选解。在四个基准上，EvoTool在GPT-4.1与Qwen3-8B上均超过强基线5分以上，同时具备更优的效率与可迁移性。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: LLM智能体工具使用策略的自进化优化，属自我改进AI领域且主题契合，但非音视频核心域，按基准给summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: EvoTool：基于责任感知变异与多样性选择的LLM智能体工具使用策略自进化优化
+relations:
+- type: same_topic
+  ref: paper:arxiv:2312.10003
+  note: 同属LLM多步智能体的自改进研究，均围绕迭代优化智能体策略展开
+- type: same_topic
+  ref: paper:arxiv:2606.15363
+  note: 同属面向生产型AI智能体的自进化优化框架研究

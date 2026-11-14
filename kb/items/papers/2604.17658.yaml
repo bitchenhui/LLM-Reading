@@ -1,0 +1,55 @@
+id: paper:arxiv:2604.17658
+type: paper
+title: Towards Self-Improving Error Diagnosis in Multi-Agent Systems
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2604.17658v1
+  url: https://arxiv.org/abs/2604.17658
+  pdf_url: https://arxiv.org/pdf/2604.17658v1
+  venue: arXiv preprint
+time:
+  published: '2026-04-19'
+  collected: '2026-11-15'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:SelfImprovement
+  role: uses
+claims:
+- statement: ErrorProbe在TracerTraj与Who&When基准上显著优于基线方法，在步级错误定位上提升尤为明显。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 经验证的情景记忆仅在错误模式被可执行证据确认时更新，从而在无需人工标注的情况下实现稳健的跨域迁移，无需重训。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 三阶段流程（失败分类操作化检测局部异常、症状驱动反向追踪剪除无关上下文、Strategist/Investigator/Arbiter多智能体团队以工具接地执行验证假设）可有效定位长交互轨迹中的决定性错误步骤。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: ErrorProbe：面向LLM多智能体系统的自改进错误归因框架，经证据验证的记忆定位责任智能体与起源错误步骤。
+  abstract_zh: 基于LLM的多智能体系统因交互轨迹长、智能体间依赖与错误延迟显现而调试困难，现有诊断依赖昂贵专家标注或难以在长上下文中定位决定性错误步骤的LLM-as-a-judge范式。论文提出ErrorProbe，一个自改进的语义失败归因框架，可识别责任智能体与起源错误步骤。框架采用三阶段流程：操作化MAS失败分类以检测局部异常、症状驱动的反向追踪剪除无关上下文、由Strategist/Investigator/Arbiter组成的专门多智能体团队通过工具接地执行验证错误假设。其经验证情景记忆仅在错误模式被可执行证据确认时更新，无需标注。在TracerTraj和Who&When基准上显著优于基线，尤其在步级定位上，且已验证记忆支持无需重训的跨域迁移。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 面向LLM多智能体系统的自改进错误诊断框架，属自我改进AI域，与音视频核心技术无直接关联。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 迈向多智能体系统中的自我改进错误诊断
+relations:
+- type: same_topic
+  ref: paper:arxiv:2603.29848
+  note: 同为LLM智能体系统的失败检测与修复方向
+- type: same_topic
+  ref: paper:arxiv:2510.07841
+  note: 同属LLM智能体自改进研究
+- type: same_topic
+  ref: paper:arxiv:2611.14326
+  note: 同样采用证据门控的经验记忆机制进行智能体自进化
+- type: same_topic
+  ref: paper:arxiv:2410.10934
+  note: 同属以智能体评估智能体的范式，与文中批评的LLM-as-a-judge诊断路线相关

@@ -1,0 +1,64 @@
+id: paper:arxiv:2603.29848
+type: paper
+title: 'AgentFixer: From Failure Detection to Fix Recommendations in LLM Agentic Systems'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2603.29848v1
+  url: https://arxiv.org/abs/2603.29848
+  pdf_url: https://arxiv.org/pdf/2603.29848v1
+  venue: arXiv preprint
+time:
+  published: '2026-02-18'
+  collected: '2026-11-15'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:SelfImprovement
+  role: subject
+claims:
+- statement: 提出的验证框架由15个故障检测工具与2个根因分析模块组成，结合规则检查与LLM-as-a-judge，对LLM智能体系统的输入处理、提示设计与输出生成进行结构化诊断与修复。
+  confidence: reported
+  metrics:
+  - name: 故障检测工具数
+    value: '15'
+    scope: 框架内置故障检测工具数量
+  - name: 根因分析模块数
+    value: '2'
+    scope: 框架内置根因分析模块数量
+  evidence: abstract（初筛，未读全文）
+- statement: 在AppWorld与WebArena基准上对IBM CUGA的评估发现规划器反复错位、schema违规、脆弱提示依赖等复发性故障模式。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 基于诊断结论改进提示与编码策略后，CUGA基准成绩保持不变，而Llama 4、Mistral Medium等中型模型取得显著精度提升，明显缩小与前沿模型的差距。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 探索性实验将诊断输出与智能体描述输入LLM进行自反思与优先级排序，产出可执行的故障模式与改进重点，验证过程可演进为对话驱动的智能体化流程。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出含15个故障检测工具与2个根因分析模块的LLM智能体验证框架，系统性诊断并修复IBM CUGA的可靠性故障。
+  abstract_zh: 该文提出面向LLM智能体系统的综合验证框架，包含15个故障检测工具和2个根因分析模块，覆盖输入处理、提示设计与输出生成环节，将轻量规则检查与LLM-as-a-judge评估结合，支持结构化的事件检测、分类与修复。框架应用于IBM
+    CUGA并在AppWorld与WebArena基准上评估，发现规划器反复错位、schema违规、脆弱的提示依赖等故障模式。基于诊断结论改进提示与编码策略后，在保持CUGA基准成绩的同时，使Llama
+    4和Mistral Medium等中型模型取得显著精度提升，大幅缩小与前沿模型的差距。另有探索性研究将诊断输出与智能体描述交给LLM进行自反思与优先级排序，表明验证过程可演进为对话驱动的智能体化流程。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 面向LLM智能体系统的故障诊断与修复框架，属智能体自改进/自反思方向，与音视频技术无直接关联，仅作初筛收录。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: AgentFixer：LLM智能体系统的故障检测与修复建议
+relations:
+- type: same_topic
+  ref: paper:arxiv:2507.11277
+  note: 同为对智能体AI系统进行观测、分析与优化的可靠性工程工作
+- type: same_topic
+  ref: paper:arxiv:2601.04620
+  note: 同将自进化LLM智能体的质量保障/验证作为核心问题
+- type: same_topic
+  ref: paper:arxiv:2410.10934
+  note: 同样采用LLM作为评审者（LLM-as-a-judge）评估智能体系统

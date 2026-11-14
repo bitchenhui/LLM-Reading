@@ -1,0 +1,52 @@
+id: paper:arxiv:2604.02211
+type: paper
+title: 'Multi-Agent Video Recommenders: Evolution, Patterns, and Open Challenges'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2604.02211v1
+  url: https://arxiv.org/abs/2604.02211
+  pdf_url: https://arxiv.org/pdf/2604.02211v1
+  venue: arXiv preprint
+time:
+  published: '2026-04-02'
+  collected: '2026-11-15'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: builds_on
+claims:
+- statement: 传统单模型推荐系统优化静态参与度指标，难以满足现代视频平台的动态需求。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 多智能体架构通过协调负责视频理解、推理、记忆与反馈的专用智能体，可提供更精确、可解释的推荐。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: MAVRS的演进汇聚多智能体推荐、基础模型与对话式AI，形成LLM驱动的MAVRS，代表框架包括MMRF、MACRec与Agent4Rec。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 开放挑战包括可扩展性、多模态理解与激励对齐，研究方向包括混合强化学习-LLM系统、终身个性化与自我改进推荐系统。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 综述LLM驱动的多智能体视频推荐系统（MAVRS）演进、协作模式分类与自改进推荐等开放方向。
+  abstract_zh: 本综述系统梳理了多智能体视频推荐系统（MAVRS）的演进：从早期多智能体强化学习系统（如MMRF）到近期LLM驱动的架构（如MACRec、Agent4Rec）。作者融合多智能体推荐、基础模型与对话式AI思想，提出协作模式分类法，并分析视频理解、推理、记忆与反馈等专用智能体在从短视频到教育平台等多类视频场景中的协调机制。综述指出可扩展性、多模态理解与激励对齐是主要开放挑战，并提出混合强化学习-LLM系统、终身个性化与自我改进推荐系统等未来研究方向。
+assessment:
+  relevance: low
+  decision: summary_only
+  reason: 视频推荐系统综述，不属于编码/传输/质量等音视频核心技术链，仅因LLM多智能体与自改进推荐方向按非核心域收录。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 多智能体视频推荐系统：演进、模式与开放挑战
+relations:
+- type: same_topic
+  ref: paper:arxiv:2412.14352
+  note: 本综述将自我改进推荐系统列为研究方向，与LLM自改进综述同属LLM自改进主题
+- type: same_topic
+  ref: paper:arxiv:2510.07841
+  note: LLM智能体测试时自改进与本综述展望的自改进推荐智能体方向相关
