@@ -40,17 +40,17 @@ def main() -> int:
         h = resp.read().decode("utf-8", errors="replace")
 
     items = []
-    for block in re.findall(r'<div class="news_slider_item">(.*?)</div>\s*</div>\s*</div>', h, re.S):
-        link = re.search(r'class="news_slider_item_link" href="([^"]+)"', block)
+    for link, block in re.findall(r'<a href="([^"]+)"\s+class="news_slider_item_link"[^>]*>(.*?)</a>', h, re.S):
         d = re.search(r'news_slider_item_date">([^<]+)<', block)
         t = re.search(r"<h3>(.*?)</h3>", block, re.S)
-        if link and d and t:
-            try:
-                date = datetime.strptime(d.group(1).strip(), "%B %d, %Y").isoformat()
-            except ValueError:
-                continue
-            items.append({"url": link.group(1), "date": date,
-                          "title": re.sub(r"<[^>]+>|&#\d+;", " ", t.group(1)).strip()})
+        if not (d and t):
+            continue
+        try:
+            date = datetime.strptime(d.group(1).strip(), "%B %d, %Y").isoformat()
+        except ValueError:
+            continue
+        title = re.sub(r"&#\d+;", " ", re.sub(r"<[^>]+>", " ", t.group(1)))
+        items.append({"url": link, "date": date, "title": re.sub(r"\s+", " ", title).strip()})
 
     entities = load_entities()
     pats = entity_patterns(entities)
