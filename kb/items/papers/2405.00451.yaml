@@ -12,6 +12,7 @@ source:
 time:
   published: '2024-05-01'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: concept:LLM
   role: subject
@@ -46,6 +47,7 @@ summaries:
   one_liner_zh: 借鉴AlphaZero，用MCTS迭代收集步级偏好数据并以DPO更新策略，实现LLM推理的自我改进。
   abstract_zh: 该方法受AlphaZero启发，利用蒙特卡洛树搜索（MCTS）的前瞻能力将实例级奖励分解为更细粒度的步级信号，迭代收集偏好数据；同时结合结果验证与步级自评估持续更新新生成数据的质量评估，并用直接偏好优化（DPO）更新LLM策略。理论分析表明使用在策略（on-policy）采样的数据是成功自我改进的关键。在算术与常识推理任务上，相对Mistral-7B
     SFT基线，GSM8K准确率提升至81.8%（+5.9%）、MATH提升至34.7%（+5.8%）、ARC-C提升至76.4%（+15.8%）。研究还探讨了训练与推理计算之间的权衡。
+  deep_dive: docs/auto/2405.00451.md
 assessment:
   relevance: high
   decision: summary_only

@@ -12,6 +12,7 @@ source:
 time:
   published: '2024-07-28'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: concept:SelfImprovement
   role: subject
@@ -42,6 +43,7 @@ summaries:
   one_liner_zh: 提出Meta-Rewarding：模型对自身评判再作评判，无监督下同时提升评判与指令遵循能力。
   abstract_zh: 现有self-rewarding方法让LLM评判自身回复并以此作为奖励训练，但只关注回复生成能力，导致迭代训练快速饱和。本文在自我改进流程中引入Meta-Rewarding环节，模型对自己生成的评判再进行评判，并利用该反馈改进评判技能。这一无监督方法同时提升了模型的评判能力和指令遵循能力：Llama-3-8B-Instruct在AlpacaEval
     2上的胜率从22.9%提升至39.4%，在Arena-Hard上从20.6%提升至29.1%。结果强烈表明无需人工监督的自我改进具有可行性。
+  deep_dive: docs/auto/2407.19594.md
 assessment:
   relevance: high
   decision: summary_only

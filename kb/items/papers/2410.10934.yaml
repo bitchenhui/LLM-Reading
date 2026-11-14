@@ -12,6 +12,7 @@ source:
 time:
   published: '2024-10-14'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: concept:SelfImprovement
   role: subject
@@ -34,6 +35,7 @@ claims:
 summaries:
   one_liner_zh: 提出Agent-as-a-Judge框架，用智能体评估智能体并给过程级反馈，在代码生成任务上可靠性接近人工评估。
   abstract_zh: 现有评估技术要么只看最终结果、忽略智能体逐步求解的过程，要么需要大量人工劳动，难以适配智能体系统。作者提出Agent-as-a-Judge框架，将LLM-as-a-Judge自然扩展为具备智能体能力的评估者，可对整个任务求解过程提供中间反馈。为提供概念验证试验台，作者构建DevAI基准，含55个真实自动化AI开发任务及365条分层用户需求的人工标注。在三个流行智能体系统上的实验表明，Agent-as-a-Judge大幅优于LLM-as-a-Judge，可靠性达到人工评估基线水平。作者认为该框架可为智能体系统的动态、可扩展自我改进提供丰富可靠的奖励信号。
+  deep_dive: docs/auto/2410.10934.md
 assessment:
   relevance: high
   decision: summary_only

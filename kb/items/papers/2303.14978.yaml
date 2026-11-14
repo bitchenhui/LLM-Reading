@@ -13,6 +13,7 @@ source:
 time:
   published: '2023-03-27'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: impl:TCM
   role: subject
@@ -35,6 +36,7 @@ summaries:
   abstract_zh: 该文提出一种高效并行的Transformer-CNN混合（TCM）块，复杂度可控，将CNN的局部建模能力与Transformer的非局部建模能力结合，用于改进图像压缩模型的整体架构。同时受近期熵估计模型与注意力模块进展的启发，提出通过通道
     squeezing 实现参数高效的、带Swin Transformer注意力（SWAtten）模块的通道级熵模型。实验表明，该方法在Kodak、Tecnick与CLIC Professional
     Validation三个不同分辨率数据集上取得优于现有学习图像压缩（LIC）方法的SOTA率失真性能。代码已在GitHub开源。
+  deep_dive: docs/auto/2303.14978.md
 assessment:
   relevance: high
   decision: deep_read

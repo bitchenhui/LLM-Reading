@@ -12,6 +12,7 @@ source:
 time:
   published: '2023-10-03'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: concept:SelfImprovement
   role: subject
@@ -33,6 +34,7 @@ claims:
 summaries:
   one_liner_zh: 用注入LLM的脚手架程序改进自身，生成比种子改进器显著更优的下游任务程序。
   abstract_zh: 论文提出STOP（Self-Taught Optimizer）：以一个种子'改进器'程序为起点，该程序通过多次查询语言模型（GPT-4）按给定效用函数改进输入程序并返回最优解。随后运行该种子改进器去改进它自身，在多个下游任务上，改进后的改进器生成的程序性能显著优于种子改进器。语言模型自发提出了多种自改进策略，包括束搜索、遗传算法和模拟退火。由于语言模型权重本身未被修改，作者强调这并非完全的递归自我改进，但证明了GPT-4能编写调用自身以改进自身的代码；论文同时讨论了自我改进技术的风险，并评估了生成代码绕过沙箱的频率。
+  deep_dive: docs/auto/2310.02304.md
 assessment:
   relevance: high
   decision: summary_only

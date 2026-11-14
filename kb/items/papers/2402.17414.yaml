@@ -13,6 +13,7 @@ source:
 time:
   published: '2024-02-27'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: concept:QP
   role: subject
@@ -55,6 +56,7 @@ summaries:
   abstract_zh: 针对条件式神经视频编解码器（NVC）走向实用化面临的关键问题，本文提出基于特征调制的强力 NVC。其一，通过可学习量化缩放器调制当前帧潜特征，并设计均匀量化参数采样机制改善编码与量化的协调，使单模型支持的
     PSNR 质量范围从先前约 3.8 dB 提升到约 11.4 dB。其二，提出周期性刷新的时序特征调制机制，缓解大帧内周期（长预测链）设置下明显的质量退化。此外设计了同时支持 RGB 与 YUV
     色彩空间的单模型。在单一帧内设置下，相比先前 SOTA NVC 实现码率节省 29.7%、MACs 减少 16%，代码已在 github.com/microsoft/DCVC 开源。
+  deep_dive: docs/auto/2402.17414.md
 assessment:
   relevance: high
   decision: deep_read

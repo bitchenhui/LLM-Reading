@@ -12,6 +12,7 @@ source:
 time:
   published: '2025-08-07'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: concept:SelfImprovement
   role: subject
@@ -34,6 +35,7 @@ claims:
 summaries:
   one_liner_zh: 提出Challenger-Solver双模型协同进化框架，无需任何人工任务与标签即可自生成课程数据并提升LLM推理能力
   abstract_zh: 现有自进化LLM训练方法仍依赖大量人工策划的任务与标签，构成迈向超越人类智能的根本瓶颈。R-Zero提出完全自主框架，从单一基础LLM出发初始化两个角色独立的模型：Challenger与Solver，两者分别优化并通过交互共同进化——Challenger因提出贴近Solver能力边缘的任务而获得奖励，Solver因解决日益困难的新任务而获得奖励，从而在无既有任务与标签的条件下产生针对性的自改进课程。实验表明R-Zero在多个骨干LLM上显著提升推理能力，例如Qwen3-4B-Base在数学推理基准上提升+6.49，在通用领域推理基准上提升+7.54。
+  deep_dive: docs/auto/2508.05004.md
 assessment:
   relevance: high
   decision: summary_only
