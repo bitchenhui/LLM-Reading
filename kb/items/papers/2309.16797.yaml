@@ -12,6 +12,7 @@ source:
 time:
   published: '2023-09-28'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: concept:SelfImprovement
   role: subject
@@ -30,6 +31,7 @@ claims:
 summaries:
   one_liner_zh: 由LLM驱动的自提示进化系统，同时进化任务提示词与变异提示词，推理能力超越CoT与Plan-and-Solve。
   abstract_zh: Promptbreeder是一种通用的自指自我改进机制，利用LLM对任务提示词种群进行变异并在训练集上按适应度评估筛选。其核心创新在于任务提示词的变异由变异提示词控制，而变异提示词本身也在进化中被LLM生成和改进，形成双层次自指进化。实验表明，Promptbreeder在常用算术与常识推理基准上超越了链式思维（Chain-of-Thought）和Plan-and-Solve等先进提示策略，并能演化出用于仇恨言论分类这一挑战性任务的复杂任务提示词。
+  deep_dive: docs/auto/2309.16797.md
 assessment:
   relevance: high
   decision: summary_only

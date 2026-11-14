@@ -12,6 +12,7 @@ source:
 time:
   published: '2025-06-16'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: concept:AlphaEvolve
   role: subject
@@ -37,6 +38,7 @@ claims:
 summaries:
   one_liner_zh: 谷歌的进化式LLM编码智能体，迭代改写代码自动发现新算法，首次突破Strassen矩阵乘法纪录。
   abstract_zh: AlphaEvolve是一个进化式编码智能体，编排由LLM组成的自主流水线，通过直接修改代码并持续接收评估器反馈来迭代改进算法，从而产生新的科学与实践发现。应用于Google大规模计算栈时，它给出了更高效的数据中心调度算法、找到硬件加速器电路设计中功能等效的简化，并加速了支撑自身的底层LLM的训练。在数学与计算机科学的一系列问题上，它发现了可证明正确、超越现有最优解的新算法，显著扩展了先前自动化发现方法（Romera-Paredes等，2023）的适用范围。其中它找到的搜索过程能以48次标量乘法完成4×4复数矩阵相乘，是56年来Strassen算法在该设定下的首次改进。
+  deep_dive: docs/auto/2506.13131.md
 assessment:
   relevance: high
   decision: summary_only

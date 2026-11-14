@@ -12,6 +12,7 @@ source:
 time:
   published: '2024-08-06'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: concept:LLM
   role: subject
@@ -38,6 +39,7 @@ claims:
 summaries:
   one_liner_zh: 提出compute-optimal测试时计算扩展策略，效率较best-of-N提升逾4倍，小模型加推理计算可胜过14倍大的模型。
   abstract_zh: 该论文系统研究LLM推理时（测试时）计算的扩展规律，回答在固定但非平凡的推理计算预算下模型在困难提示上能提升多少。作者分析了两类主要扩展机制：针对密集过程奖励验证器的搜索，以及测试时根据提示自适应更新模型响应分布。研究发现两类方法的有效性随提示难度显著变化，据此提出按提示难度自适应分配推理计算的compute-optimal扩展策略。该策略相比best-of-N基线将测试时计算效率提升超过4倍；在FLOPs匹配评测中，当较小基座模型成功率非平凡时，测试时计算可使其超越14倍大的模型。这一工作对预训练与推理计算的权衡具有指导意义，也是构建通用自改进智能体的关键一步。
+  deep_dive: docs/auto/2408.03314.md
 assessment:
   relevance: high
   decision: summary_only

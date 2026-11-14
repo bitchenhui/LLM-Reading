@@ -12,6 +12,7 @@ source:
 time:
   published: '2021-07-07'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: concept:NeuralAudioCodec
   role: subject
@@ -54,6 +55,7 @@ summaries:
   one_liner_zh: 端到端神经音频编解码器：单模型3–18kbps可变码率，3kbps质量胜Opus 12kbps、接近EVS 9.6kbps。
   abstract_zh: SoundStream由全卷积编解码网络与残差向量量化器构成，端到端联合训练，结合对抗与重建损失实现高质量音频重建。通过量化器层的结构化dropout，单一模型可在3kbps至18kbps范围内运行可变码率，且与固定码率模型相比质量损失可忽略。模型支持流式推理与低延迟实现，可在智能手机CPU上实时运行。在24kHz采样率音频的主观评测中，SoundStream
     3kbps质量优于Opus 12kbps，接近EVS 9.6kbps。此外无需额外时延即可在编码端或解码端联合执行压缩与增强，文中以语音背景噪声抑制进行演示。
+  deep_dive: docs/auto/2107.03312.md
 assessment:
   relevance: high
   decision: summary_only

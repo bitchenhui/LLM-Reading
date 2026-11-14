@@ -12,6 +12,7 @@ source:
 time:
   published: '2021-04-27'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: concept:SuperResolution
   role: subject
@@ -42,6 +43,7 @@ summaries:
   one_liner_zh: 以二阶网格传播和流引导可变形对齐重设计BasicVSR，相近参数量下PSNR提升0.82 dB。
   abstract_zh: 该方法在BasicVSR双向传播框架基础上重新设计，提出二阶网格传播与流引导可变形对齐两个新组件，从而更有效地利用错位视频帧间的时空信息。在相近计算量与参数量约束下，BasicVSR++较BasicVSR的PSNR提升0.82
     dB。该模型还泛化到压缩视频增强等其他视频恢复任务。在NTIRE 2021的视频超分辨率与压缩视频增强挑战赛中，BasicVSR++获得三项冠军和一项亚军。代码与模型将发布于MMEditing。
+  deep_dive: docs/auto/2104.13371.md
 assessment:
   relevance: high
   decision: summary_only

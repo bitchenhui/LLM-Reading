@@ -12,6 +12,7 @@ source:
 time:
   published: '2024-09-17'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: concept:LLM
   role: subject
@@ -39,6 +40,7 @@ summaries:
   abstract_zh: Moshi 将口语对话重新建模为语音到语音的生成任务，取代 VAD、语音识别、文本对话与 TTS 的级联流水线，消除多秒级交互延迟。模型以文本语言模型为骨干，从神经音频编解码器的残差量化器直接生成语音
     token，并用并行流分别建模自身与用户语音，从而无需显式说话人轮次分割，可处理重叠语音、打断与插话等任意对话动态。作者进一步提出 Inner Monologue 方法，先预测时间对齐的文本 token
     作为音频 token 前缀，显著提升生成语音的语言质量，并可同时提供流式语音识别与文本到语音合成。最终模型是首个实时全双工语音大语言模型，理论延迟 160ms、实测约 200ms，并已开源发布。
+  deep_dive: docs/auto/2410.00037.md
 assessment:
   relevance: high
   decision: summary_only

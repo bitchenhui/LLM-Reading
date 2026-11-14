@@ -12,6 +12,7 @@ source:
 time:
   published: '2025-10-06'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: concept:LLM
   role: subject
@@ -40,6 +41,7 @@ claims:
 summaries:
   one_liner_zh: 提出ACE框架，将上下文视为可增量演化的策略手册，通过生成-反思-策展实现LLM自改进并避免上下文坍缩。
   abstract_zh: LLM应用（智能体、领域推理）日益依赖以指令/策略/证据改写输入的上下文适配，而非权重更新；既有方法存在简洁性偏差（丢失领域洞察）与上下文坍缩（迭代改写侵蚀细节）两大缺陷。ACE将上下文视为不断演化的策略手册，通过生成、反思、策展的模块化流程做结构化增量更新，保留细粒度领域知识并可随长上下文模型扩展。该框架支持离线（系统提示词）与在线（智能体记忆）两类适配，在智能体基准上相对强基线提升+10.6%，在金融领域提升+8.6%，同时显著降低适配时延与rollout成本，且可仅凭自然执行反馈在无标注监督下完成适配。在AppWorld排行榜上，ACE使用更小的开源模型即追平排名第一的生产级智能体的总体均值，并在更难的test-challenge划分上实现超越。
+  deep_dive: docs/auto/2510.04618.md
 assessment:
   relevance: high
   decision: summary_only

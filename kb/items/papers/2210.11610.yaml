@@ -12,6 +12,7 @@ source:
 time:
   published: '2022-10-20'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: concept:LLM
   role: subject
@@ -41,6 +42,7 @@ summaries:
   one_liner_zh: LLM仅用无标注数据，经CoT+自一致性生成高置信答案自我微调，无需标签即可提升推理能力。
   abstract_zh: 该论文证明大语言模型（LLM）能够仅依靠无标注数据集实现自我改进，无需任何外部监督标签。方法上，用预训练LLM通过思维链（CoT）提示与自一致性（self-consistency）为无标注问题生成'高置信度'的带推理过程答案，再以这些自生成解作为目标输出对LLM进行微调。在540B参数LLM上，该方法将通用推理能力显著提升：GSM8K
     74.4%→82.1%、DROP 78.2%→83.0%、OpenBookQA 90.0%→94.4%、ANLI-A3 63.4%→67.9%，达到SOTA水平且完全未使用真实标签。消融实验进一步表明，在推理数据上进行微调是自我改进的关键所在。
+  deep_dive: docs/auto/2210.11610.md
 assessment:
   relevance: high
   decision: summary_only

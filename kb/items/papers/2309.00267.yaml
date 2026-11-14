@@ -12,6 +12,7 @@ source:
 time:
   published: '2023-09-01'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: concept:LLM
   role: subject
@@ -32,6 +33,7 @@ summaries:
   abstract_zh: RLHF 依赖昂贵的人工偏好标注，本文系统研究以现成 LLM 生成偏好标签的 RLAIF 作为可扩展替代。在文本摘要、有帮助对话生成与无害对话生成三项任务上，RLAIF 取得与
     RLHF 相当的性能。作者进一步证明，即使 AI 标注器与策略模型同规模、甚至就是同一初始检查点，RLAIF 仍能优于监督微调基线，向“自我改进”迈出一步。此外提出 direct-RLAIF（d-RLAIF），在
     RL 训练中直接从现成 LLM 获取奖励、跳过奖励模型训练，性能优于经典 RLAIF。
+  deep_dive: docs/auto/2309.00267.md
 assessment:
   relevance: high
   decision: summary_only
