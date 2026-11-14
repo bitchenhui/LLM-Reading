@@ -12,6 +12,7 @@ source:
 time:
   published: '2025-02-25'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: concept:LLM
   role: subject
@@ -34,6 +35,7 @@ summaries:
   one_liner_zh: 发现过长思维链会损害LLM推理，提出思考最优扩展策略，自改进32B模型媲美教师QwQ-32B。
   abstract_zh: 该论文质疑测试时计算扩展中一味延长思维链（CoT）的做法，在数学推理任务上发现过长的CoT反而会损害LLM在部分领域的推理表现，且不同领域存在各自最优的响应长度分布。据此提出思考最优扩展策略：先用少量具有不同响应长度分布的种子数据教模型学会以不同推理努力进行深度思考，再让模型在不同推理努力下为更多问题挑选最短的正确响应进行自我改进。基于Qwen2.5-32B-Instruct构建的自改进模型在多个数学基准上超越其他蒸馏式32B
     o1类模型，性能与产出种子数据的教师模型QwQ-32B-Preview持平。
+  deep_dive: docs/auto/2502.18080.md
 assessment:
   relevance: high
   decision: summary_only

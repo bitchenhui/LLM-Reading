@@ -13,6 +13,7 @@ source:
 time:
   published: '2025-02-28'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: impl:DCVC-RT
   role: subject
@@ -52,6 +53,7 @@ summaries:
   one_liner_zh: 提出实时神经视频编解码器DCVC-RT，1080p编/解码达125.2/112.8 fps且较VTM节省21%码率。
   abstract_zh: 论文指出，神经视频编码器（NVC）的编码速度瓶颈主要不在计算量，而在内存I/O、函数调用次数等非计算性操作开销。据此提出一系列效率导向设计：以隐式时域建模取代复杂的显式运动模块，用单一低分辨率潜在表示取代渐进式下采样，在不牺牲压缩质量的前提下大幅加速。同时实现模型整数化以保证跨设备编解码一致性，并采用模块库式码率控制提升实用性。实验表明，DCVC-RT在1080p视频上平均编/解码速度达125.2/112.8
     fps，同时相比H.266/VTM平均节省21%码率。
+  deep_dive: docs/auto/2502.20762.md
 assessment:
   relevance: high
   decision: deep_read

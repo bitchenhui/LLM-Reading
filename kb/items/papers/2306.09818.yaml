@@ -13,6 +13,7 @@ source:
 time:
   published: '2023-06-16'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: impl:HiNeRV
   role: subject
@@ -45,6 +46,7 @@ claims:
 summaries:
   one_liner_zh: 提出带分层位置编码的高容量INR视频表示HiNeRV，在UVG上较HNeRV节省72.3%比特率。
   abstract_zh: 论文提出HiNeRV，一种结合轻量层与新型分层位置编码的隐式神经表示（INR）用于视频压缩，利用深度卷积、MLP与插值层构建高容量的深层宽网络，并统一以帧和patch两种粒度编码视频，提供更高的性能与灵活性。作者进一步构建了基于HiNeRV的视频编解码器，设计了精化的训练、剪枝与量化流程，在模型有损压缩中更好保留性能。在UVG与MCL-JCV数据集上的评估表明，该方法显著优于所有现有INR基线，且与学习型编解码器具有竞争力。以UVG数据集PSNR衡量，总体比特率较HNeRV节省72.3%，较DCVC节省43.4%。
+  deep_dive: docs/auto/2306.09818.md
 assessment:
   relevance: high
   decision: deep_read

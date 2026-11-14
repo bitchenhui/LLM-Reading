@@ -12,6 +12,7 @@ source:
 time:
   published: '2024-04-18'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: concept:SelfImprovement
   role: subject
@@ -30,6 +31,7 @@ claims:
 summaries:
   one_liner_zh: 提出AlphaLLM，将MCTS与LLM结合形成自我改进闭环，无需额外标注即可提升数学推理能力。
   abstract_zh: 该论文提出AlphaLLM，借鉴AlphaGo的成功经验，将蒙特卡洛树搜索（MCTS）与大语言模型结合，构建一个自我改进循环，在无需额外标注的情况下增强LLM的复杂推理与规划能力。系统针对语言任务的独特挑战（数据稀缺、搜索空间庞大、反馈主观性）设计了提示词合成组件、面向语言任务的高效MCTS方法，以及三个用于精确反馈的评论家（critic）模型。在数学推理任务上的实验表明，AlphaLLM在无额外标注的条件下显著提升了LLM性能，展示了LLM自我改进的潜力。
+  deep_dive: docs/auto/2404.12253.md
 assessment:
   relevance: high
   decision: summary_only

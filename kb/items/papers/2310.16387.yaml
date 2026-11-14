@@ -12,6 +12,7 @@ source:
 time:
   published: '2023-10-25'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: dataset:Kodak
   role: subject
@@ -50,6 +51,7 @@ claims:
 summaries:
   one_liner_zh: 提出频率感知Transformer块（FDWA+FMFFN）与通道自回归熵模型，图像压缩率失真性能在Kodak/Tecnick/CLIC上超越VTM-12.1达13.0%~15.1%。
   abstract_zh: 针对现有学习型图像压缩（LIC）方法隐表征冗余、难以捕捉各向异性频率成分与保持方向细节的问题，提出频率感知Transformer块（FAT），首次在LIC中实现多尺度方向分析。FAT包含频率分解窗口注意力（FDWA）模块，用于捕捉自然图像的多尺度与方向性频率成分；并引入频率调制前馈网络（FMFFN）自适应调制不同频率分量以改善率失真性能。此外提出基于Transformer的通道自回归（T-CA）模型以有效利用通道间依赖。实验表明该方法取得SOTA率失真性能，在Kodak、Tecnick和CLIC数据集上BD-rate分别以14.5%、15.1%、13.0%明显优于最新标准编码器VTM-12.1。
+  deep_dive: docs/auto/2310.16387.md
 assessment:
   relevance: high
   decision: deep_read

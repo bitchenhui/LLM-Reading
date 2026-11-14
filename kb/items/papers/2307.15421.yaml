@@ -13,6 +13,7 @@ source:
 time:
   published: '2023-07-28'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: concept:EntropyModel
   role: subject
@@ -41,6 +42,7 @@ claims:
 summaries:
   one_liner_zh: 提出线性复杂度多参考熵模型MEM++的MLIC++，Kodak上PSNR较VTM-17.0 BD-rate降13.39%
   abstract_zh: 学习型图像压缩中的潜在表示包含通道间、局部空间与全局空间三类相关性，而现有全局上下文模块计算复杂度高，难以在单一熵模型中高效捕获。论文提出线性复杂度多参考熵模型MEM++：将潜在表示划分为多个切片，以先前已压缩切片作为通道上下文，并引入基于移位窗口的棋盘注意力模块捕获局部上下文；全局上下文则通过分解softmax运算实现线性复杂度注意力，从先前解码切片隐式计算注意力图。基于MEM++构建的MLIC++在Kodak数据集上达到当前最优，PSNR口径下相对VTM-17.0将BD-rate降低13.39%。其计算与内存消耗随分辨率线性增长，非常适合高分辨率图像编码，代码与预训练模型已开源。
+  deep_dive: docs/auto/2307.15421.md
 assessment:
   relevance: high
   decision: deep_read

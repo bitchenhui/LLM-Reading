@@ -12,6 +12,7 @@ source:
 time:
   published: '2025-10-17'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: concept:LLM
   role: subject
@@ -31,6 +32,7 @@ summaries:
   one_liner_zh: 提出离线自蒸馏加在线交互的闭环框架EvolveR，让LLM智能体从自身轨迹提炼可复用策略原则实现自我改进。
   abstract_zh: 论文提出EvolveR框架，使LLM智能体通过完整的闭环经验生命周期实现自我提升。生命周期含两个关键阶段：(1) 离线自蒸馏，将智能体的交互轨迹合成为抽象、可复用的策略原则库；(2)
     在线交互，智能体执行任务时主动检索蒸馏出的原则指导决策，并累积多样化行为轨迹。该循环采用策略强化机制，依据智能体表现迭代更新其策略。在复杂多跳问答基准上，EvolveR取得优于强智能体基线的性能，展示了智能体既能从外部数据也能从自身行为后果中学习的蓝图。
+  deep_dive: docs/auto/2510.16079.md
 assessment:
   relevance: high
   decision: summary_only
