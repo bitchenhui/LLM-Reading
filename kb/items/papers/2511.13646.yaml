@@ -12,6 +12,7 @@ source:
 time:
   published: '2025-11-17'
   collected: '2026-11-15'
+  updated: '2026-11-15'
 entities:
 - ref: concept:SelfImprovement
   role: subject
@@ -40,6 +41,7 @@ summaries:
   abstract_zh: 提出Live-SWE-agent，首个能在运行时（解决真实软件问题的过程中）自主且持续进化自身脚手架实现的live软件工程智能体。该方法从仅配备bash工具的最基础脚手架（如mini-SWE-agent）出发，在执行任务的同时自动改写自身scaffold。与Darwin-Gödel
     Machine（DGM）等需要在特定基准上进行昂贵离线训练的自进化智能体不同，Live-SWE-agent在线进化、可跨LLM与基准泛化。在SWE-bench Verified上无需测试时扩展即取得77.4%解决率，超过包括最佳商业方案在内的所有现有软件工程智能体；在较新的SWE-bench
     Pro上取得已知最佳解决率45.8%，超过最先进的人工设计智能体。
+  deep_dive: docs/auto/2511.13646.md
 assessment:
   relevance: high
   decision: summary_only

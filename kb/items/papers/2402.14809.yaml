@@ -12,6 +12,7 @@ source:
 time:
   published: '2024-02-22'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: concept:LLM
   role: subject
@@ -50,6 +51,7 @@ summaries:
   one_liner_zh: 提出 CriticBench 基准，系统评估 17 个 LLM 在五大推理域的生成-批评-纠正（GQC）能力及相互批评规律。
   abstract_zh: 论文提出 CriticBench，一个评估 LLM 批评并修正自身推理能力的综合基准，涵盖数学、常识、符号、代码与算法五个推理域，汇编 15 个数据集并纳入三个 LLM 家族的回答。作者用该基准评测
     17 个 LLM 的生成、批评、纠正（GQC）三类推理。研究发现 GQC 能力之间存在线性关系，批评导向训练能显著提升表现；纠正有效性因任务而异，逻辑导向任务更易被纠正。此外，GQC 知识不一致性随模型规模增大而降低；强模型更善于批评弱模型，而弱模型在自批评上有时反而胜过更强的模型。
+  deep_dive: docs/auto/2402.14809.md
 assessment:
   relevance: high
   decision: summary_only

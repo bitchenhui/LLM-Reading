@@ -13,6 +13,7 @@ source:
 time:
   published: '2023-12-05'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: impl:C3
   role: subject
@@ -49,6 +50,7 @@ summaries:
     C3 以 COOL-CHIC 为基础，针对图像压缩做出多项简单而有效的改进，并提出新的方法学将该思路扩展到视频。在 CLIC2020 图像基准上，C3 以低于 3k MACs/pixel 的解码计算量达到与
     H.266 参考实现 VTM 相当的 RD 性能；在 UVG 视频基准上，以低于 5k MACs/pixel 的解码计算量匹配成熟神经视频编解码器 Video Compression Transformer
     的 RD 性能。
+  deep_dive: docs/auto/2312.02753.md
 assessment:
   relevance: high
   decision: deep_read

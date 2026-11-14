@@ -12,6 +12,7 @@ source:
 time:
   published: '2025-11-03'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: concept:AlphaEvolve
   role: subject
@@ -39,6 +40,7 @@ summaries:
   abstract_zh: 本文展示 AlphaEvolve——结合 LLM 生成能力与自动评估的通用进化编码智能体——作为自主发现数学构造、推进长期未决问题的工具。系统在涵盖数学分析、组合、几何与数论的
     67 个问题上运行，在多数情形复现了已知最优解，并在若干问题上发现更优解；部分情形还能将有限输入值的结果泛化为对所有输入值成立的公式。作者进一步将该方法与 Deep Think 和 AlphaProof
     结合为更广框架，由证明助手与推理系统提供自动证明生成与数学洞见。结果表明 LLM 引导的进化搜索能自主发现补充人类直觉的数学构造，且对准备与计算时间的要求显著降低。
+  deep_dive: docs/auto/2511.02864.md
 assessment:
   relevance: high
   decision: summary_only

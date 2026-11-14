@@ -12,6 +12,7 @@ source:
 time:
   published: '2025-12-18'
   collected: '2026-11-15'
+  updated: '2026-11-15'
 entities:
 - ref: concept:SelfImprovement
   role: subject
@@ -42,6 +43,7 @@ summaries:
   one_liner_zh: 提出SAGE强化学习框架，以技能库与序列Rollout提升LLM智能体自改进的准确性与效率
   abstract_zh: 针对LLM智能体在新环境中难以持续改进、现有技能库方法依赖LLM提示而难以稳定执行的问题，提出基于强化学习的SAGE（Skill Augmented GRPO for self-Evolution）框架。其核心组件Sequential
     Rollout让智能体在每次rollout中依次执行相似任务链，前一任务生成的技能累积进技能库供后续任务使用；同时设计Skill-integrated Reward补充原有结果导向奖励，强化技能生成与利用。在AppWorld基准上，SAGE应用于经专家经验监督微调的模型时，场景目标完成率提升8.9%，同时交互步骤减少26%、生成token减少59%，在准确性与效率上均显著优于现有方法。
+  deep_dive: docs/auto/2512.17102.md
 assessment:
   relevance: high
   decision: summary_only

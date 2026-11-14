@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-01-22'
   collected: '2026-11-15'
+  updated: '2026-11-15'
 entities:
 - ref: concept:LLM
   role: subject
@@ -45,6 +46,7 @@ summaries:
   one_liner_zh: 提出TTT-Discover，在测试时对LLM进行强化学习以求解科学问题，在数学、GPU内核、算法与生物学多个任务刷新SOTA。
   abstract_zh: 不同于AlphaEvolve等先前测试时扩展工作仅对冻结LLM做提示搜索，该方法在测试时对大语言模型执行强化学习（持续学习），使模型针对当前测试问题积累专属经验。由于目标是产出一个卓越解而非平均意义上的多个好解，其学习目标与搜索子程序均被设计为优先聚焦最有希望的方案。在连续奖励问题上验证，覆盖数学（Erdős最小重叠问题、自相关不等式）、GPU内核工程（GPUMode内核竞赛，最高比先前最优快2倍）、算法设计（历届AtCoder竞赛）和生物学（单细胞分析去噪），结果几乎全部刷新SOTA，且经专家或赛事主办方评审。全部结果仅用开源模型gpt-oss-120b并配公开代码即可复现（不同于以往依赖闭源前沿模型的最优结果），测试时训练通过Thinking
     Machines的Tinker API完成，每问题成本仅数百美元。
+  deep_dive: docs/auto/2601.16175.md
 assessment:
   relevance: high
   decision: summary_only
