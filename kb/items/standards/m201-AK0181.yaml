@@ -1,0 +1,34 @@
+id: standard_proposal:jvet:m201-AK0181
+type: standard_proposal
+title: 'JVET-AK0181: AHG10: Suggested upgrade of CTC for random access for VTM'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2025-01-Geneva@JVET-AK0181
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=15152
+time:
+  published: '2025-01-14'
+  collected: '2026-11-14'
+entities:
+- ref: dataset:JVET-CTC
+  role: subject
+- ref: impl:VTM
+  role: subject
+claims:
+- statement: 该文档建议对VTM随机访问配置下的JVET通用测试条件（CTC）进行升级，属于标准评测基线的维护性提案，其结果可能影响后续工具评估所用的锚点设置。
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 爱立信团队向AHG10提交对VTM随机访问配置CTC测试条件的升级建议。
+  abstract_zh: 该文档是2025年1月日内瓦JVET会议上提交至AHG10的测试条件修订建议，聚焦VTM参考软件随机访问（RA）配置的CTC调整。其属于标准评测基线维护的过程性记录，反映VVC/VTM锚点设置在标准生态中的持续演进。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: AHG10关于VTM随机访问CTC测试条件升级建议的专题组过程文档，属标准线维护性记录而非重大节点
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-AK0181: AHG10：建议升级VTM随机访问配置的通用测试条件（CTC）'

@@ -1,0 +1,35 @@
+id: standard_proposal:jvet:m195-AE0092
+type: standard_proposal
+title: 'JVET-AE0092: [AHG4] Occupancy-only PSNR calculations for V3C V-PCC coding evaluation'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2023-07-Geneva@JVET-AE0092
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=13040
+time:
+  published: '2023-07-11'
+  collected: '2026-11-14'
+entities:
+- ref: codec:V-PCC
+  role: subject
+- ref: metric:PSNR
+  role: uses
+claims:
+- statement: 该提案建议在 V3C V-PCC 编码评估中采用仅占用 PSNR 作为质量度量，反映 JVET 点云压缩评估条件与指标方法学的演进讨论
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出在 V3C V-PCC 编码评估中仅基于占用图计算 PSNR 的质量度量方法
+  abstract_zh: 该文档为 2023 年 7 月日内瓦会议提交至 JVET AHG4（点云压缩专题组）的技术提案，方向是针对 V3C 测试内容下 V-PCC 编码评估提出仅按占用（occupancy）计算
+    PSNR 的度量方式，属于点云编码评估方法学的标准化讨论内容。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 标题含明确评估方法提案（V3C V-PCC 评估中仅按占用计算 PSNR），属具体技术贡献而非 AHG 进展报告或重大节点
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-AE0092: [AHG4] 面向 V3C V-PCC 编码评估的仅占用（occupancy）PSNR 计算'

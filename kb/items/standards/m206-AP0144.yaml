@@ -1,0 +1,34 @@
+id: standard_proposal:jvet:m206-AP0144
+type: standard_proposal
+title: 'JVET-AP0144: EE1-related: Statistics on multilayer frame level RDO using DCVC-RT'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2026-04-SantaEularia@JVET-AP0144
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=16808
+time:
+  published: '2026-04-24'
+  collected: '2026-11-14'
+entities:
+- ref: concept:RDO
+  role: subject
+- ref: impl:DCVC-RT
+  role: uses
+claims:
+- statement: 该提案隶属JVET EE1探索实验框架，以DCVC-RT为分析工具，统计多层帧级RDO的行为特征，为后续多层编码工具的设计决策提供数据支撑。
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 基于DCVC-RT锚点报告多层帧级RDO的统计分析，为EE1多层编码探索提供实验依据。
+  abstract_zh: 该文档为2026年4月JVET会议上华为与InterDigital联合提交的EE1探索实验相关提案，报告利用DCVC-RT开展多层帧级RDO的统计数据，服务于新一代编码标准探索中多层结构设计方向的评估。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: EE1探索实验相关的统计结果提案，属于标准探索阶段的实验产出，超出普通工具提案的价值。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-AP0144: EE1相关：使用DCVC-RT进行多层帧级率失真优化（RDO）的统计'

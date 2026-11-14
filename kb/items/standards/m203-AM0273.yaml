@@ -1,0 +1,34 @@
+id: standard_proposal:jvet:m203-AM0273
+type: standard_proposal
+title: 'JVET-AM0273: Crosscheck of JVET-AM0216 (AHG12: Fixes for 12-bit internal bit depth in ECM)'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2025-06-Daejeon@JVET-AM0273
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=15940
+time:
+  published: '2025-06-26'
+  collected: '2026-11-14'
+entities:
+- ref: codec:ECM
+  role: subject
+- ref: org:JVET
+  role: subject
+claims:
+- statement: 该文档为对JVET-AM0216所提ECM 12比特内部位深修复的第三方交叉验证，服务于AHG12扩展位深探索的技术评估流程。
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 对AHG12提出的ECM 12比特内部位深相关修复进行交叉验证。
+  abstract_zh: 该文档为字节跳动对JVET-AM0216（AHG12关于ECM 12比特内部位深修复）的交叉检验贡献，属于ECM扩展内部位深探索进程中的验证性环节，用于支撑相关修复能否进入ECM基线的评估。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 对ECM 12比特内部位深修复方案的交叉验证贡献，属具体技术验证而非重大节点。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-AM0273: JVET-AM0216的交叉检验（AHG12：ECM 12比特内部位深修复）'

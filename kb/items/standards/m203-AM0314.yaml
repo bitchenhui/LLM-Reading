@@ -1,0 +1,38 @@
+id: standard_proposal:jvet:m203-AM0314
+type: standard_proposal
+title: 'JVET-AM0314: Cross-check of JVET-AM0045 (AHG17: Generated VTM anchor bitstreams using LambdaScaleTowardsNextQP)'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2025-06-Daejeon@JVET-AM0314
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=15982
+time:
+  published: '2025-06-26'
+  collected: '2026-11-14'
+entities:
+- ref: impl:VTM
+  role: subject
+- ref: org:JVET
+  role: subject
+claims:
+- statement: 该文档对 JVET-AM0045 生成的 VTM 锚点比特流进行交叉核查验证，属锚点采纳流程中的验证环节。
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+- statement: LambdaScaleTowardsNextQP 拉姆达缩放方法被 AHG17 用于新一代标准化探索的锚点比特流生成。
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 交叉核查 AHG17 采用 LambdaScaleTowardsNextQP 生成 VTM 锚点比特流的结果。
+  abstract_zh: 本文档是 JVET 大田会议上对 JVET-AM0045 的交叉核查，涉及 AHG17（锚点与测试条件相关专题组）使用 LambdaScaleTowardsNextQP 拉姆达缩放方法生成的
+    VTM 锚点比特流。交叉核查是采纳前的常规验证环节，其结果支撑后续工具实验所用锚点数据的可靠性，属于标准化测试基础设施建设的一部分。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 对另一份AHG17文档产出（VTM锚点比特流生成）的交叉核查，属具体验证性提案而非重大标准节点。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-AM0314: 对 JVET-AM0045 的交叉核查（AHG17：使用 LambdaScaleTowardsNextQP 生成的 VTM 锚点比特流）'

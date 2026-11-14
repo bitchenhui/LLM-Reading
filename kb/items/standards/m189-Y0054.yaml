@@ -1,0 +1,33 @@
+id: standard_proposal:jvet:m189-Y0054
+type: standard_proposal
+title: 'JVET-Y0054: Update on a VVC software decoder, BVC, for heterogeneous CPU plus GPU systems'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2022-01-Teleconference@JVET-Y0054
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=11248
+time:
+  published: '2022-01-12'
+  collected: '2026-11-14'
+entities:
+- ref: codec:VVC
+  role: subject
+claims:
+- statement: 该文档向 JVET 报告字节跳动 VVC 软件解码器 BVC 面向异构 CPU+GPU 系统的实现进展，反映 VVC 在实际部署场景中的解码优化方向，属工具实现类信息更新而非标准技术贡献。
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 字节跳动介绍其面向异构 CPU+GPU 系统的 VVC 软件解码器 BVC 的最新进展。
+  abstract_zh: 该文档为 2022 年 1 月 JVET 电话会议上字节跳动提交的工具进展报告，主题是自研 VVC 软件解码器 BVC 在 CPU+GPU 异构平台上的实现更新。其属于 VVC
+    生态中的解码器实现与部署方向，而非核心标准文本或参考软件（VTM）的演进。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 具体工具类提案（字节跳动 VVC 软件解码器 BVC 的进展更新），非重大标准节点，按具体技术提案收录为 summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-Y0054: 面向异构 CPU+GPU 系统的 VVC 软件解码器 BVC 更新'

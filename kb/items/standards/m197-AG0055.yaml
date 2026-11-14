@@ -1,0 +1,34 @@
+id: standard_proposal:jvet:m197-AG0055
+type: standard_proposal
+title: 'JVET-AG0055: AhG10: CTU-Level Lagrange Multiplier and QP Adaptation for VVC Low-Delay Configuration'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2024-01-Teleconference@JVET-AG0055
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=13611
+time:
+  published: '2024-01-17'
+  collected: '2026-11-14'
+entities:
+- ref: codec:VVC
+  role: subject
+- ref: concept:QP
+  role: subject
+claims:
+- statement: 该提案针对 VVC 低时延配置提出 CTU 粒度的拉格朗日乘子与 QP 联合自适应工具，属于基于标题方向对码控类技术贡献的克制推断。
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出在 VVC 低时延配置下按 CTU 粒度联合自适应调整拉格朗日乘子与 QP 的率失真优化方案。
+  abstract_zh: 该文档为 2024 年 1 月 JVET 电话会议期间提交 AhG10 的具体技术提案，方向为改进 VVC 低时延配置下的码率控制与量化决策粒度，属于 VVC 工具精修类贡献。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 标题指向面向 VVC 低时延配置的 CTU 级拉格朗日乘子与 QP 自适应这一具体码控工具提案，属常规技术贡献而非重大标准节点。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-AG0055: AhG10：面向 VVC 低时延配置的 CTU 级拉格朗日乘子与 QP 自适应'

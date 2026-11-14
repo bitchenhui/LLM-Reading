@@ -1,0 +1,34 @@
+id: standard_proposal:jvet:m195-AE0274
+type: standard_proposal
+title: 'JVET-AE0274: Crosscheck of JVET-AE0257 (Non-EE2: Peak Memory Reduction for ECM)'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2023-07-Geneva@JVET-AE0274
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=13237
+time:
+  published: '2023-07-11'
+  collected: '2026-11-14'
+entities:
+- ref: codec:ECM
+  role: subject
+- ref: org:JVET
+  role: subject
+claims:
+- statement: 该文档对JVET-AE0257提出的ECM峰值内存削减方案执行交叉验证，为该提案在ECM参考软件优化方向的采纳讨论提供独立核验结果
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: Sharp对JVET-AE0257提出的ECM峰值内存削减方案进行独立交叉核验。
+  abstract_zh: 该文档为2023年7月日内瓦JVET会议上的Non-EE交叉核验（crosscheck）文档，针对JVET-AE0257提出的ECM参考软件峰值内存削减提案进行独立复现与验证，属于ECM优化技术提案流程中的核验环节。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 针对具体技术提案（ECM峰值内存削减）的交叉验证文档，属于具体技术提案类，非重大节点。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-AE0274: JVET-AE0257的交叉核验（非探索实验：ECM峰值内存削减）'

@@ -1,0 +1,34 @@
+id: standard_proposal:jvet:m194-AD0229
+type: standard_proposal
+title: 'JVET-AD0229: AHG4/AHG12/AHG7: Mixed-Content Sequences for ECM CTC or Tool Assessment'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2023-04-Antalya@JVET-AD0229
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=12793
+time:
+  published: '2023-04-21'
+  collected: '2026-11-14'
+entities:
+- ref: codec:ECM
+  role: subject
+- ref: dataset:JVET-CTC
+  role: subject
+claims:
+- statement: 该文档提议面向ECM的通用测试条件或工具评估引入混合内容测试序列，若被AHG采纳可能影响ECM后续测试基准的构成
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提议引入混合内容测试序列，用于ECM通用测试条件及工具评估。
+  abstract_zh: 该文档由Google与字节跳动联合提交至JVET的AHG4、AHG12、AHG7，提议补充混合内容（mixed-content）测试序列，以支撑ECM通用测试条件（CTC）或编码工具评估，属于ECM测试基准建设方向的具体技术输入。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 面向多个AHG的具体技术输入，提议用于ECM CTC/工具评估的混合内容测试序列，属具体提案而非重大标准节点
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-AD0229: AHG4/AHG12/AHG7：用于ECM CTC或工具评估的混合内容测试序列'

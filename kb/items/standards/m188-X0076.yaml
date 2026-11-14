@@ -1,0 +1,33 @@
+id: standard_proposal:jvet:m188-X0076
+type: standard_proposal
+title: 'JVET-X0076: AHG8: GCI flags for VVC operation range extension profiles'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2021-10-Teleconference@JVET-X0076
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=11069
+time:
+  published: '2021-10-06'
+  collected: '2026-11-14'
+entities:
+- ref: codec:VVC
+  role: subject
+claims:
+- statement: 该文档为 Sharp 向 AHG8 提交的输入，建议为 VVC 工作范围扩展类档位增设 GCI（general_constraints_info）标志，属于 VVC 档位语法完善过程中的常规技术贡献
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: Sharp 就 VVC 范围扩展档位提出通用约束信息（GCI）标志的定义建议，供 AHG8 讨论。
+  abstract_zh: 该文档是 2021 年 10 月线上会议中向 AHG8（档位、级别与接口方向专题组）提交的提案/报告，聚焦在 VVC 各操作范围扩展（Range Extension）档位的
+    profile_tier_level 语法中设置 GCI 标志，用于声明与限制解码器需支持的工作参数范围（如位深、色度格式等）。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: AHG8 专题组内的具体技术输入，提出 VVC 范围扩展档位的 GCI 标志定义，属常规过程性贡献而非重大节点
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-X0076: AHG8：面向 VVC 工作范围扩展档位的通用约束信息（GCI）标志'

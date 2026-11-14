@@ -1,0 +1,35 @@
+id: standard_proposal:jvet:m196-AF0303
+type: standard_proposal
+title: 'JVET-AF0303: Crosscheck of JVET-AF0177 (AHG6: Memory reduction for ECM encoder)'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2023-10-Hannover@JVET-AF0303
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=13567
+time:
+  published: '2023-10-13'
+  collected: '2026-11-14'
+entities:
+- ref: codec:ECM
+  role: subject
+- ref: org:JVET
+  role: subject
+claims:
+- statement: 该文档为 AHG6 框架下对 ECM 编码器内存降低提案 JVET-AF0177 的成员间交叉验证，其结果可影响该贡献是否被采纳进 ECM 参考软件。
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 快手对 AHG6 内存降低提案 JVET-AF0177 的交叉复核，涉及 ECM 编码器实现开销评估。
+  abstract_zh: 该文档是 2023 年 10 月汉诺威会议上提交至 AHG6（ECM 软件）的交叉验证报告，针对另一成员提案 JVET-AF0177 所述的 ECM 编码器内存降低效果进行独立复核，属
+    ECM 开发过程中成员贡献互验环节。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 对成员提交的 ECM 编码器内存降低提案（JVET-AF0177）的交叉验证文档，属具体技术贡献的复核而非 AHG 报告或重大标准节点。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-AF0303: 对 JVET-AF0177 的交叉验证（AHG6：ECM 编码器内存降低）'

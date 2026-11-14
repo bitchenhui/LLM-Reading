@@ -1,0 +1,36 @@
+id: standard_proposal:jvet:m202-AL0298
+type: standard_proposal
+title: 'JVET-AL0298: Crosscheck of JVET-AL0105 (EE1-2.2: RA/LDB Unified Reference Frame Synthesis for
+  VVC Inter Coding)'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2025-03-Teleconference@JVET-AL0298
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=15625
+time:
+  published: '2025-03-26'
+  collected: '2026-11-14'
+entities:
+- ref: codec:VVC
+  role: subject
+- ref: org:JVET
+  role: subject
+claims:
+- statement: 该文档对EE1-2.2（RA/LDB统一参考帧合成用于VVC帧间编码）的提案结果进行交叉校验，是JVET下一代标准探索阶段中对候选帧间编码工具性能可靠性的独立验证环节
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 对EE1-2.2探索实验中RA/LDB统一参考帧合成工具结果的第三方独立交叉校验。
+  abstract_zh: 该文档为2025年3月电信会议上的探索实验（EE）交叉校验报告，由Nokia对JVET-AL0105提出的RA/LDB统一参考帧合成方案在Random Access与Low-Delay
+    B配置下的实验结果进行独立验证，属于下一代标准探索阶段中帧间编码工具评估流程的组成部分。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 对探索实验EE1-2.2结果的交叉校验文档，属于具体技术验证提案而非CfP或验证测试等重大节点文本
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-AL0298: 对JVET-AL0105的交叉校验（EE1-2.2：面向VVC帧间编码的RA/LDB统一参考帧合成）'

@@ -1,0 +1,34 @@
+id: standard_proposal:jvet:m193-AC0123
+type: standard_proposal
+title: 'JVET-AC0123: MTT maximum depth correction for class B sequences at QP 22 in ECM'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2023-01-Teleconference@JVET-AC0123
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=12325
+time:
+  published: '2023-01-11'
+  collected: '2026-11-14'
+entities:
+- ref: codec:ECM
+  role: subject
+- ref: concept:QP
+  role: evaluated_on
+claims:
+- statement: Canon团队针对ECM参考软件中的MTT最大深度设置提出校正方案，实验范围限定于B类序列与QP22条件，反映ECM迭代探索中按内容类别和码率区间细化工具参数的努力。
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: Canon提出在ECM中针对B类序列QP22条件校正MTT最大深度的具体编码工具提案。
+  abstract_zh: 该文档为2023年1月电信会议上的ECM技术提案，方向是对多类型树（MTT）最大深度参数按序列类别与QP区间进行适应性校正，属ECM探索阶段的编码工具调优类贡献。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 针对具体编码工具参数（MTT最大深度）在特定测试条件下的校正提案，属常规技术贡献而非标准节点。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-AC0123: ECM中B类序列在QP22下MTT最大深度的校正'

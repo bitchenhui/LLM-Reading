@@ -1,0 +1,34 @@
+id: standard_proposal:jvet:m196-AF0293
+type: standard_proposal
+title: 'JVET-AF0293: Crosscheck of JVET-AF0237 (AHG6: ECM encoder memory reduction)'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2023-10-Hannover@JVET-AF0293
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=13557
+time:
+  published: '2023-10-13'
+  collected: '2026-11-14'
+entities:
+- ref: codec:ECM
+  role: subject
+- ref: org:JVET
+  role: subject
+claims:
+- statement: 该文档是对JVET-AF0237（ECM编码器内存降低）提案的交叉验证实验，反映ECM参考软件演进过程中对实现效率类提案的核实环节
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: Qualcomm对ECM编码器内存降低提案JVET-AF0237的独立交叉验证报告。
+  abstract_zh: 该文档为2023年10月汉诺威会议提交的交叉验证（crosscheck），针对JVET-AF0237提出的ECM编码器内存降低方案进行独立核实，挂接于AHG6（熵编码）专题组讨论，属ECM探索演进中对具体实现优化提案的核实性技术工作。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 针对具体技术提案（ECM编码器内存降低）的第三方交叉验证实验，属标准线技术过程记录，非验证测试等重大节点
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-AF0293: 对JVET-AF0237的交叉验证（AHG6：ECM编码器内存降低）'

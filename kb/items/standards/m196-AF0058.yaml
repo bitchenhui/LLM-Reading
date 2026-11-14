@@ -1,0 +1,34 @@
+id: standard_proposal:jvet:m196-AF0058
+type: standard_proposal
+title: 'JVET-AF0058: AHG12: GOP-based RPR encoder control for ECM'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2023-10-Hannover@JVET-AF0058
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=13306
+time:
+  published: '2023-10-13'
+  collected: '2026-11-14'
+entities:
+- ref: codec:ECM
+  role: subject
+- ref: concept:GOP
+  role: uses
+claims:
+- statement: 该文档提议在 ECM 框架内引入按 GOP 结构驱动的 RPR 编码器控制方法，属于 ECM 探索阶段面向 AHG12 的具体技术贡献
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出在 ECM 中按 GOP 结构控制参考画面重采样（RPR）使用的编码器控制方案。
+  abstract_zh: 该文档是爱立信在 2023 年 10 月汉诺威会议上提交给 AHG12 的技术贡献，属于 ECM 探索开发阶段的具体工具提案，方向为按 GOP 结构组织 RPR（参考画面重采样）的编码器控制逻辑。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 标题指向面向 ECM 的具体编码工具提案（基于 GOP 的 RPR 编码器控制），非重大节点亦非行政事务。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-AF0058: AHG12：面向 ECM 的基于 GOP 的参考画面重采样（RPR）编码器控制'

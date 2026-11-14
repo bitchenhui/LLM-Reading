@@ -1,0 +1,38 @@
+id: standard_proposal:jvet:m205-AO0264
+type: standard_proposal
+title: 'JVET-AO0264: Crosscheck of JVET-AO0145 (AHG6: Larger CTU size for Class B in ECM Common Test Conditions)'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2026-01-Teleconference@JVET-AO0264
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=16650
+time:
+  published: '2026-01-14'
+  collected: '2026-11-14'
+entities:
+- ref: codec:ECM
+  role: subject
+- ref: org:JVET
+  role: subject
+claims:
+- statement: 该文档是对提案 JVET-AO0145（建议 ECM 通用测试条件中 B 类内容采用更大 CTU 尺寸）报告结果的第三方独立交叉核验
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+- statement: 核验结果将影响 ECM 测试条件是否采纳更大 CTU 配置的进程判断
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: OPPO 对提案 AO0145 所报 ECM B 类更大 CTU 测试条件实验结果的独立交叉核验。
+  abstract_zh: 该文档为 2026 年 1 月 JVET 远程会议上的交叉核验（crosscheck）文档，针对提案 JVET-AO0145 关于在 ECM 通用测试条件（CTC）中对 B
+    类内容采用更大 CTU 尺寸的报告结果进行独立复现验证。若核验通过，将支撑 ECM 测试条件的潜在调整，处于测试条件探索流程的验证环节。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 对 ECM 通用测试条件调整方向（B 类更大 CTU）提案的交叉核验，属验证测试环节，关系评估基线设定，具权威过程价值。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-AO0264: 对 JVET-AO0145 的交叉核验（AHG6：ECM 通用测试条件下 B 类内容采用更大 CTU 尺寸）'

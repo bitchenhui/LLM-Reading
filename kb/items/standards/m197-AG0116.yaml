@@ -1,0 +1,37 @@
+id: standard_proposal:jvet:m197-AG0116
+type: standard_proposal
+title: 'JVET-AG0116: AHG12: GOP-based RPR encoder control for ECM'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2024-01-Teleconference@JVET-AG0116
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=13672
+time:
+  published: '2024-01-17'
+  collected: '2026-11-14'
+entities:
+- ref: codec:ECM
+  role: subject
+- ref: concept:GOP
+  role: uses
+claims:
+- statement: 该文档是JVET AHG12的进展报告，主题方向为在ECM中探索基于GOP结构的RPR（参考图像重采样）编码器控制。
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+- statement: 作为专题组报告，它记录ECM探索阶段编码器侧工具的研究进展，是ECM演进线的权威过程材料而非正式验证测试或新版本节点。
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 爱立信向AHG12报告基于GOP结构的RPR编码器控制方案在ECM中的探索进展。
+  abstract_zh: 该文档为2024年1月JVET电视会议上AHG12的进展报告，主题是在ECM参考软件中按GOP结构控制参考图像重采样（RPR）的编码器侧方案。属于VVC之后ECM探索阶段中编码工具优化的过程性记录。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: AHG12专题组进展报告，主题为ECM中基于GOP的RPR编码器控制，属标准探索线的过程性记录，按基准判为summary_only
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-AG0116: AHG12：面向ECM的基于GOP的参考图像重采样（RPR）编码器控制'

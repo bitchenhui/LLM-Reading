@@ -1,0 +1,35 @@
+id: standard_proposal:jvet:m193-AC0238
+type: standard_proposal
+title: 'JVET-AC0238: Crosscheck of JVET-AC0116 (EE1-3.2: neural network-based intra prediction with learned
+  mapping to VVC intra prediction modes)'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2023-01-Teleconference@JVET-AC0238
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=12442
+time:
+  published: '2023-01-11'
+  collected: '2026-11-14'
+entities:
+- ref: codec:VVC
+  role: subject
+- ref: org:JVET
+  role: subject
+claims:
+- statement: 该文档是对探索实验EE1-3.2（神经网络帧内预测，学习映射至VVC帧内模式）结果的第三方交叉验证，属于JVET下一代编码工具探索中的验证性技术贡献，其结论可影响该工具在后续标准化中的取舍。
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: ByteDance对AC0116号神经网络帧内预测提案的交叉验证，检验其向VVC帧内模式学习映射的增益与可行性。
+  abstract_zh: 该文档为JVET 2023年1月远程会议上的交叉验证（crosscheck）提案，针对AC0116探索实验EE1-3.2（基于神经网络的帧内预测并将学习结果映射到VVC帧内预测模式）进行独立复核。其处于下一代标准AI/神经网络编码工具探索进程的验证环节。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 对他人神经网络帧内预测探索实验（EE1-3.2）的交叉验证，属具体技术验证提案而非核心实验结果原文，按惯例收录为摘要级。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-AC0238: 对JVET-AC0116的交叉验证（EE1-3.2：学习到VVC帧内预测模式映射的神经网络帧内预测）'

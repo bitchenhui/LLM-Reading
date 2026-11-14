@@ -1,0 +1,35 @@
+id: standard_proposal:jvet:m201-AK0316
+type: standard_proposal
+title: 'JVET-AK0316: Crosscheck of JVET-AK0078 (EE1-2.2: Transformer-Based Reference Frame Synthesis for
+  VVC Inter Coding)'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2025-01-Geneva@JVET-AK0316
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=15305
+time:
+  published: '2025-01-14'
+  collected: '2026-11-14'
+entities:
+- ref: codec:VVC
+  role: subject
+- ref: org:JVET
+  role: subject
+claims:
+- statement: 该文档是对JVET-AK0078（EE1-2.2）探索实验结果的第三方交叉验证，主题为基于Transformer的参考帧合成在VVC帧间编码中的性能复核，反映了神经网络类帧间工具在标准化探索中的推进。
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 对EE1-2.2探索实验（Transformer参考帧合成用于VVC帧间编码）结果的独立交叉复核。
+  abstract_zh: 该文档为JVET探索实验EE1-2.2的交叉验证报告，由Nokia对另一提案中基于Transformer的参考帧合成工具在VVC帧间编码下的性能进行独立复核。交叉验证属于新一代编码工具探索与验证流程中的关键确认环节。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 对探索实验EE1-2.2结果的交叉验证，属于标准探索阶段的验证测试节点，涉及Transformer类工具进入VVC帧间编码的候选评估。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-AK0316: JVET-AK0078的交叉验证（EE1-2.2：基于Transformer的VVC帧间编码参考帧合成）'

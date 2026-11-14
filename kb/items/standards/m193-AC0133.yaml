@@ -1,0 +1,35 @@
+id: standard_proposal:jvet:m193-AC0133
+type: standard_proposal
+title: 'JVET-AC0133: Cross-check of JVET-AC0080 EE2-3.7 on Chroma IBC method as in VTM-5.0'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2023-01-Teleconference@JVET-AC0133
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=12335
+time:
+  published: '2023-01-11'
+  collected: '2026-11-14'
+entities:
+- ref: impl:VTM
+  role: evaluated_on
+- ref: org:JVET
+  role: subject
+claims:
+- statement: 该文档对 JVET-AC0080 中色度 IBC 工具的 EE2-3.7 探索实验结果在 VTM-5.0 上进行独立交叉复核，是新一代编码工具探索阶段验证候选工具有效性的过程性技术贡献
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 在 VTM-5.0 中交叉验证他方提出的色度帧内块复制（IBC）工具的 EE2-3.7 实验结果
+  abstract_zh: 该文档是 2023 年 1 月 JVET 远程会议上的交叉验证类技术提案，对另一提案（JVET-AC0080）在探索实验 EE2-3.7 中测试的色度 IBC 工具，按 VTM-5.0
+    软件实现进行独立复核。此类交叉验证属于新一代编码工具探索阶段的常规确认流程，用于核实提案方报告的性能与实现一致性。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 针对具体工具提案的第三方交叉验证实验，属常规技术贡献而非重大标准节点
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-AC0133: 在 VTM-5.0 平台上对 JVET-AC0080 EE2-3.7 色度 IBC 方法的交叉验证'

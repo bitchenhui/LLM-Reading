@@ -1,0 +1,35 @@
+id: standard_proposal:jvet:m193-AC0138
+type: standard_proposal
+title: 'JVET-AC0138: Adjusting luma/chroma BD-rate balance in ECM'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2023-01-Teleconference@JVET-AC0138
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=12340
+time:
+  published: '2023-01-11'
+  collected: '2026-11-14'
+entities:
+- ref: codec:ECM
+  role: subject
+- ref: metric:BD-Rate
+  role: uses
+claims:
+- statement: 该文档主题为在 ECM 框架下调整亮度与色度 BD-rate 之间的平衡，反映 JVET 对参考软件中 luma/chroma 收益分配权衡的持续调优，属 ECM 探索阶段的常规技术提案
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 面向 ECM 参考模型提出调整亮度与色度 BD-rate 的权衡，以平衡两者编码性能
+  abstract_zh: 该文档为 InterDigital 在 2023 年 1 月 JVET 会议上提交的技术提案，针对 ECM 探索参考模型中的亮度/色度编码性能权衡问题。其主题方向是通过调整设计使
+    luma 与 chroma 的 BD-rate 收益更均衡，属 ECM 工具优化类贡献。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 标题指向 ECM 中亮度/色度 BD-rate 平衡的具体技术调整提案，属常规工具类贡献而非重大节点
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-AC0138: 调整 ECM 中亮度/色度 BD-rate 平衡'

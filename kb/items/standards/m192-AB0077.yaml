@@ -1,0 +1,36 @@
+id: standard_proposal:jvet:m192-AB0077
+type: standard_proposal
+title: 'JVET-AB0077: EE1-2.2: CNN Filter for Super-Resolution with RPR functionality in VVC'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2022-10-Mainz@JVET-AB0077
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=11992
+time:
+  published: '2022-10-20'
+  collected: '2026-11-14'
+entities:
+- ref: codec:VVC
+  role: subject
+- ref: concept:SuperResolution
+  role: subject
+claims:
+- statement: 该文档报告在 VVC 平台上结合参考图重采样（RPR）功能的 CNN 超分辨率滤波器在 EE1-2.2 探索实验项下的测试结果，属 JVET 神经网络工具探索方向的实验证据，可能影响下一代标准对
+    NN 类工具的取舍。
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 在 VVC 上探索结合参考图重采样（RPR）的 CNN 超分辨率滤波，并报告 EE1-2.2 测试结果。
+  abstract_zh: 该文档是 2022 年 10 月美因茨 JVET 会议对探索实验 EE1-2.2 的技术贡献，由西安电子科技大学与 OPPO 提出，方向是在 VVC 参考图重采样（RPR）基础上引入
+    CNN 超分辨率滤波。作为神经网络工具探索实验的结果，它为下一代标准是否纳入神经网络类编码工具提供实验依据。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 该文档为探索实验（EE1-2.2）结果贡献，属标准推进中的重大节点类，报告结合 RPR 的 CNN 超分辨率滤波在 VVC 上的实验证据。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-AB0077: EE1-2.2：VVC 中结合 RPR 功能的用于超分辨率的 CNN 滤波器'

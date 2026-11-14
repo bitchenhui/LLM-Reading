@@ -1,0 +1,32 @@
+id: standard_proposal:jvet:m188-X0143
+type: standard_proposal
+title: 'JVET-X0143: AHG10: VTM Encoder Changes for ALF Usage with Subpicture'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2021-10-Teleconference@JVET-X0143
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=11136
+time:
+  published: '2021-10-06'
+  collected: '2026-11-14'
+entities:
+- ref: impl:VTM
+  role: subject
+claims:
+- statement: 该文档主题为 VTM 编码器侧改动以支持子图片场景下使用 ALF，属于具体工具级提案而非标准重大节点；其具体技术结论因无正文而未知。
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 报告 VTM 参考软件编码器侧为支持子图片场景启用自适应环路滤波（ALF）所做的改动。
+  abstract_zh: Nokia 团队向 JVET 2021 年 10 月线上会议 AHG10 专题组提交的技术提案，方向为参考软件 VTM 中编码器对 ALF 与子图片（subpicture）组合使用的适配，属标准化过程中工具/实现层面的具体贡献。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 面向 AHG10 的工具级具体技术提案（VTM 编码器对 ALF 与子图片组合的适配），非重大节点，仅需摘要收录。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-X0143: AHG10：支持子图片使用 ALF 的 VTM 编码器改动'

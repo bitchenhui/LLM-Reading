@@ -1,0 +1,35 @@
+id: standard_proposal:jvet:m195-AE0201
+type: standard_proposal
+title: 'JVET-AE0201: Crosscheck of JVET-AE0056 (Non-EE2: Changes on TIMD and SGPM for reducing ECM decoder
+  complexity)'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2023-07-Geneva@JVET-AE0201
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=13164
+time:
+  published: '2023-07-11'
+  collected: '2026-11-14'
+entities:
+- ref: codec:ECM
+  role: subject
+- ref: org:JVET
+  role: subject
+claims:
+- statement: 该文档针对另一提案（JVET-AE0056）中TIMD与SGPM相关修改的ECM解码器复杂度降低效果进行交叉验证，属于ECM探索进程中的解码复杂度优化工作
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 交叉验证AE0056提案，复核TIMD与SGPM修改对ECM解码复杂度的削减效果
+  abstract_zh: 该文档是2023年7月日内瓦ECM会议上的交叉验证（crosscheck）贡献，针对JVET-AE0056提出的对ECM中TIMD与SGPM等工具的解码器复杂度削减修改进行独立复核。它属于JVET在ECM探索阶段推进下一代标准解码复杂度优化的常规技术流程记录。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 具体技术提案（对ECM解码复杂度优化修改的交叉验证），非CfP/验证测试等重大节点
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-AE0201: 对JVET-AE0056的交叉验证（非EE2实验：面向降低ECM解码器复杂度的TIMD与SGPM修改）'

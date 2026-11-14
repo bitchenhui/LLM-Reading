@@ -1,0 +1,34 @@
+id: standard_proposal:jvet:m197-AG0173
+type: standard_proposal
+title: 'JVET-AG0173: AHG7: ECM-11 results of non-CTC sequences'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2024-01-Teleconference@JVET-AG0173
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=13729
+time:
+  published: '2024-01-17'
+  collected: '2026-11-14'
+entities:
+- ref: codec:ECM
+  role: subject
+- ref: dataset:JVET-CTC
+  role: compared_against
+claims:
+- statement: 该文档报告 ECM-11 探索测试模型在非 CTC 序列上的压缩性能结果，是 JVET ECM 探索进程中 CTC 之外的补充性实验评估记录
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 向 AHG7 报告 ECM-11 探索模型在标准测试条件（CTC）之外序列上的性能结果。
+  abstract_zh: 该文档是提交给 JVET AHG7 的 ECM-11 版本在非 CTC 序列上的实验结果报告，用于评估探索测试模型在标准测试条件之外素材上的泛化性能，为 ECM 持续演进及下一代编码标准化决策提供数据依据。
+assessment:
+  relevance: medium
+  decision: deep_read
+  reason: 标题表明为 ECM-11 探索测试模型在非 CTC 序列上的实验结果报告，属标准探索线的实验数据记录而非一般性 AHG 进展
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-AG0173: AHG7：ECM-11 在非 CTC 测试序列上的结果'

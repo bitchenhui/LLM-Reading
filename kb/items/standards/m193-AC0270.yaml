@@ -1,0 +1,35 @@
+id: standard_proposal:jvet:m193-AC0270
+type: standard_proposal
+title: 'JVET-AC0270: Crosscheck of EE1-3.2 (JVET-AC0116 : neural network-based intra prediction with learned
+  mapping to VVC intra prediction modes)'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2023-01-Teleconference@JVET-AC0270
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=12475
+time:
+  published: '2023-01-11'
+  collected: '2026-11-14'
+entities:
+- ref: codec:VVC
+  role: subject
+- ref: org:JVET
+  role: subject
+claims:
+- statement: 该文档为EE1-3.2探索实验的交叉验证报告，验证JVET-AC0116提出的基于神经网络、将学习结果映射至VVC帧内预测模式的帧内预测工具，属于下一代标准探索实验中的验证测试环节。
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 爱立信交叉验证EE1-3.2：核验基于神经网络、学习映射至VVC帧内模式的帧内预测工具的实验结果。
+  abstract_zh: 该文档处于VVC之后的JVET探索阶段，EE1聚焦神经网络类工具，本报告由爱立信对JVET-AC0116所提NN帧内预测工具（学习映射到VVC帧内预测模式）进行交叉验证。交叉验证是探索实验的可复现性核验环节，为后续工具取舍提供独立实验依据。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 爱立信对EE1-3.2神经网络帧内预测实验的交叉验证报告，属于探索实验结果的验证测试环节，是下一代标准工具筛选的关键过程记录。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-AC0270: EE1-3.2交叉验证（JVET-AC0116：基于神经网络并学习映射至VVC帧内预测模式的帧内预测）'

@@ -1,0 +1,33 @@
+id: standard_proposal:jvet:m189-Y0048
+type: standard_proposal
+title: 'JVET-Y0048: AHG10: study of layer bitrate allocation for spatial scalability in VTM'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2022-01-Teleconference@JVET-Y0048
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=11240
+time:
+  published: '2022-01-12'
+  collected: '2026-11-14'
+entities:
+- ref: impl:VTM
+  role: subject
+claims:
+- statement: 该文档在 VTM 参考软件中研究空间可分级层的比特率分配，反映 AHG10 框架下 VVC 可分级扩展的早期探索方向；具体实验结论需正文核实。
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 在 VTM 参考软件上研究空间可分级各层的比特率分配策略，供 AHG10 讨论
+  abstract_zh: 该文档是 2022 年 1 月 JVET 电话会议上 InterDigital 提交给 AHG10（可分级性专题组）的技术研报，围绕 VTM 中空间可分级编码的层间比特率分配开展研究，属于
+    VVC 可分级扩展方向的探索性贡献。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 提交给 AHG10 的具体技术研报（标题含明确实验方向：VTM 上空间可分级层比特率分配），非 AHG 报告或重大节点，按具体技术提案收录。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-Y0048: AHG10：VTM 中空间可分级性的层比特率分配研究'

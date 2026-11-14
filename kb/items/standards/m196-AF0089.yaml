@@ -1,0 +1,34 @@
+id: standard_proposal:jvet:m196-AF0089
+type: standard_proposal
+title: 'JVET-AF0089: AhG10: Lagrange multiplier and QP adaptation at CTU-level for VVC'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2023-10-Hannover@JVET-AF0089
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=13293
+time:
+  published: '2023-10-13'
+  collected: '2026-11-14'
+entities:
+- ref: codec:VVC
+  role: subject
+- ref: concept:QP
+  role: subject
+claims:
+- statement: 该文档围绕VVC编码端CTU级的拉格朗日乘子与QP自适应展开，属于AhG10框架下的编码优化技术探索
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 面向VVC提出CTU粒度的拉格朗日乘子与QP自适应，属编码端率失真优化方向的改进探索。
+  abstract_zh: 该文档为2023年10月汉诺威JVET会议上提交至AhG10的技术贡献，主题是VVC编码端在CTU粒度上的拉格朗日乘子设定与QP自适应。基于标题推断，其方向属于非官方编码工具/编码优化探索，而非标准语法工具的纳入。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 标题含明确技术工具（CTU级拉格朗日乘子与QP自适应），属具体技术提案而非重大节点或行政事务，按基准归为summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-AF0089: AhG10：面向VVC的CTU级拉格朗日乘子与QP自适应'

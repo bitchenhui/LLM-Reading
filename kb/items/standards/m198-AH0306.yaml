@@ -1,0 +1,35 @@
+id: standard_proposal:jvet:m198-AH0306
+type: standard_proposal
+title: 'JVET-AH0306: Crosscheck of JVET0064 AHG14: Port VTM Temporal Filter Fixes to NNVC software and
+  Enable Temporal Filter in NNVC LD CTC'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2024-04-Rennes@JVET-AH0306
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=14205
+time:
+  published: '2024-04-17'
+  collected: '2026-11-14'
+entities:
+- ref: impl:VTM
+  role: subject
+- ref: dataset:JVET-CTC
+  role: evaluated_on
+claims:
+- statement: 该提案为NNVC探索软件的交叉核验工作，将VTM中时间滤波的修复移植到NNVC软件，并在LD CTC测试条件下启用，属于JVET探索实验中的具体工具集成与验证。
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 将VTM时间滤波修复同步至NNVC探索软件，并在低时延CTC下启用该工具。
+  abstract_zh: 该文档是JVET AHG14（神经网络视频编码NNVC方向）下的交叉核验类技术提案，主题为将VTM时间滤波的修复移植到NNVC参考软件，并在低时延通用测试条件（LD CTC）中启用时间滤波。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 具体技术提案：将VTM时间滤波修复移植至NNVC软件并在LD CTC下启用，属探索软件的具体工具改进而非重大节点。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-AH0306: JVET0064 AHG14交叉核验：将VTM时间滤波修复移植至NNVC软件并在NNVC LD CTC中启用时间滤波'

@@ -1,0 +1,35 @@
+id: standard_proposal:jvet:m201-AK0315
+type: standard_proposal
+title: 'JVET-AK0315: Crosscheck of JVET-AK0077 (EE1-2.1: RA/LDB Unified Reference Frame Synthesis for
+  VVC Inter Coding)'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2025-01-Geneva@JVET-AK0315
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=15304
+time:
+  published: '2025-01-14'
+  collected: '2026-11-14'
+entities:
+- ref: codec:VVC
+  role: subject
+- ref: org:JVET
+  role: subject
+claims:
+- statement: 该文档为 EE1-2.1 探索实验中 RA/LDB 统一参考帧合成工具提案的交叉核验结果，其独立复测结论将影响该帧间编码候选工具能否进入后续标准化流程
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 对随机接入/低时延B配置下统一参考帧合成提案的独立交叉核验报告
+  abstract_zh: 该文档是 Nokia 对 EE1-2.1 探索实验提案 JVET-AK0077 的交叉核验报告，属于 VVC 后续演进中帧间编码参考帧合成候选工具进入标准化评估前的独立验证环节。交叉核验结论通常作为该工具是否进入后续核心实验或测试模型集成的依据之一。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 这是对 EE1-2.1 探索实验提案的交叉核验（独立验证测试）结果，属标准线上决定候选帧间编码工具能否推进的验证节点
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-AK0315: 对 JVET-AK0077（EE1-2.1：面向 VVC 帧间编码的 RA/LDB 统一参考帧合成）的交叉核验'

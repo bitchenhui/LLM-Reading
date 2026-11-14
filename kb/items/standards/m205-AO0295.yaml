@@ -1,0 +1,35 @@
+id: standard_proposal:jvet:m205-AO0295
+type: standard_proposal
+title: 'JVET-AO0295: Crosscheck of JVET-AO0186 (EE1-6.1.1 and EE1-6.2.1: DCVC-FM as a Learned End-to-End
+  Intra Frame Codec)'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2026-01-Teleconference@JVET-AO0295
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=16681
+time:
+  published: '2026-01-14'
+  collected: '2026-11-14'
+entities:
+- ref: impl:DCVC-FM
+  role: subject
+- ref: org:JVET
+  role: subject
+claims:
+- statement: 该文档对EE1-6.1.1/6.2.1中DCVC-FM作为学习型端到端帧内编解码锚点的测试结果进行交叉验证，用于核验探索实验锚点的可复现性与可信度
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 对EE1中以DCVC-FM为学习型端到端帧内编码锚点的测试结果作第三方交叉验证
+  abstract_zh: 该文档为2026年1月JVET远程会议上的交叉验证贡献，针对JVET-AO0186在EE1-6.1.1/6.2.1测试条件下以DCVC-FM充当学习型端到端帧内编解码锚点的结果进行复核。此类锚点核验关系新一代编码探索实验（EE1）结果的可信度，是后续探索与征求意见进程的基础环节。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 对EE1学习型帧内编码锚点（DCVC-FM）结果的交叉验证，属探索实验结果核验这一关键标准节点
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-AO0295: 对JVET-AO0186的交叉验证（EE1-6.1.1与EE1-6.2.1：DCVC-FM作为学习型端到端帧内编解码器）'
