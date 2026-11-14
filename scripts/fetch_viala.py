@@ -46,7 +46,7 @@ def main() -> int:
         if not (d and t):
             continue
         try:
-            date = datetime.strptime(d.group(1).strip(), "%B %d, %Y").isoformat()
+            date = datetime.strptime(d.group(1).strip(), "%B %d, %Y").date().isoformat()
         except ValueError:
             continue
         title = re.sub(r"&#\d+;", " ", re.sub(r"<[^>]+>", " ", t.group(1)))

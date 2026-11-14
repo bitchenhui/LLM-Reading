@@ -80,6 +80,11 @@ JVET_INSTRUCTIONS = """你是视频编码标准化（JVET/VVC/AV2 生态）的�
 - 具体技术提案（标题含明确工具/实验）→ summary_only
 - 行政事务（议程/会议安排/名单/后勤）→ skip"""
 
+NEWS_INSTRUCTIONS = """你是音视频标准与专利生态的信息审阅器。
+对专利池/标准组织的公开新闻判定收录级别并写中文摘要。只有标题可用，作克制推断，不编造。
+只输出 JSON。收录基准：与编解码标准/专利池/许可政策相关 → summary_only（新闻不设 deep_read）；
+与音视频技术无关 → skip。domain 固定为 standards_ecosystem。"""
+
 
 def build_prompt(rec: dict, entities: dict, known_items: list[tuple[str, str]]) -> str:
     meta = rec["meta"]
@@ -501,6 +506,62 @@ def build_jvet_item(rec: dict, s: dict, today: str, model: str) -> dict:
     return item
 
 
+def build_news_prompt(rec: dict, entities: dict) -> str:
+    meta = rec["meta"]
+    ent_list = "\n".join(f"  {eid}  [{entities[eid]['type']}]" for eid in
+                         sorted({m["ref"] for m in rec.get("matched", [])} & entities.keys()))
+    return f"""标准生态新闻：
+来源: {meta.get('outlet', '')}
+日期: {meta['published']}
+标题: {meta['title']}
+
+标题命中的实体（只能从中选择挂接）:
+{ent_list}
+
+输出 JSON：
+{{
+ "domain": "standards_ecosystem",
+ "decision": "summary_only|skip",
+ "relevance": "high|medium|low",
+ "reason": "一句话中文理由",
+ "title_zh": "中文标题",
+ "one_liner_zh": "一句话总结（≤50字）",
+ "abstract_zh": "1-2 句基于标题的克制概括",
+ "research_lines": [],
+ "entities": [{{"ref": "…", "role": "subject"}}],
+ "claims": [{{"statement": "新闻事实要点（仅标题可证的内容）", "confidence": "inferred"}}],
+ "relations": []
+}}"""
+
+
+def build_news_item(rec: dict, s: dict, today: str, model: str) -> dict:
+    meta = rec["meta"]
+    item = {
+        "id": rec["id"],
+        "type": "industry_news",
+        "title": meta["title"],
+        "domain": "standards_ecosystem",
+        "research_lines": [],
+        "source": {
+            "channel": rec["id"].split(":")[1],
+            "external_id": meta["url"].rstrip("/").split("/")[-1][:80],
+            "url": meta["url"],
+        },
+        "time": {"published": (meta.get("published") or today)[:10], "collected": today},
+        "entities": s["entities"],
+        "claims": s["claims"],
+        "summaries": {"one_liner_zh": s["one_liner"], "abstract_zh": s["abstract_zh"]},
+        "assessment": {
+            "relevance": s["relevance"], "decision": s["decision"],
+            "reason": s["reason"], "reviewer": f"{model}(llm_review)",
+        },
+        "provenance": {"created": today, "actor": "pipeline-v0", "pipeline": "llm_review"},
+    }
+    if s["title_zh"]:
+        item["title_zh"] = s["title_zh"]
+    return item
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--limit", type=int, default=0, help="本次最多处理条数（0=全部）")
@@ -573,6 +634,9 @@ def main() -> int:
             elif kind == "jvet":
                 raw = llm.chat(build_jvet_prompt(rec, entities),
                                instructions=JVET_INSTRUCTIONS)
+            elif kind == "news":
+                raw = llm.chat(build_news_prompt(rec, entities),
+                               instructions=NEWS_INSTRUCTIONS)
             else:
                 raw = llm.chat(build_prompt(rec, entities, known_items))
             out = parse_llm_json(raw)
@@ -582,9 +646,10 @@ def main() -> int:
             continue
         s = sanitize(out, rec, entities, known_ids, today)
         stem = f"{rec['id'].split(':')[-1]}.yaml"
-        kind_dir = {"release": "repos", "jvet": "jvet"}.get(kind)
+        kind_dir = {"release": "repos", "jvet": "jvet", "news": "viala"}.get(kind)
         qpath = (ROOT / "queue" / kind_dir / stem) if kind_dir else (QUEUE / stem)
-        out_dir = KB / "items" / {"release": "releases", "jvet": "standards"}.get(kind, "papers")
+        out_dir = KB / "items" / {"release": "releases", "jvet": "standards",
+                                  "news": "news"}.get(kind, "papers")
         out_dir.mkdir(parents=True, exist_ok=True)
         if s is None:
             n_skip += 1
@@ -602,6 +667,8 @@ def main() -> int:
             item = build_release_item(rec, s, today, llm.models["review"])
         elif kind == "jvet":
             item = build_jvet_item(rec, s, today, llm.models["review"])
+        elif kind == "news":
+            item = build_news_item(rec, s, today, llm.models["review"])
         else:
             item = build_item(rec, s, today, llm.models["review"])
         print(f"    → {s['decision']} / {s['relevance']}｜{s['one_liner'][:50]}")
