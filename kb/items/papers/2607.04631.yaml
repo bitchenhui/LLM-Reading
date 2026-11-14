@@ -1,0 +1,57 @@
+id: paper:arxiv:2607.04631
+type: paper
+title: 'Formal Disco: Scalable Open-Ended Generation of Formally Verified Programs'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2607.04631v1
+  url: https://arxiv.org/abs/2607.04631
+  pdf_url: https://arxiv.org/pdf/2607.04631v1
+  venue: arXiv preprint
+time:
+  published: '2026-07-06'
+  collected: '2026-11-14'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: Formal Disco通过initiators、fixers、extenders三类LLM工人的分布式协调，实现形式验证程序的开放式规模化合成生成，并以编译器/验证器反馈闭环修复程序问题。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 提出合成程序生成的最大熵原则，借助迭代监督微调最大化熵，使模型随时间生成愈发多样的程序，缓解合成数据同质化。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 发布覆盖三种形式验证语言的大规模合成验证程序数据集，并微调开源模型用于验证相关任务。
+  confidence: reported
+  metrics:
+  - name: 覆盖验证语言数
+    value: '3'
+    scope: Dafny、Verus、Frama-C
+  evidence: abstract（初筛，未读全文）
+- statement: 微调后的开源模型在验证相关任务上的表现常达到或超过Claude Opus 4.5（摘要未给出具体数值）。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出分布式LLM工人系统Formal Disco，规模化生成形式验证程序合成数据并实现自我改进。
+  abstract_zh: 针对形式验证语言人工编写样本稀缺的问题，提出Formal Disco：一个协调LLM工人的分布式系统，可大规模开展开放式合成数据生成。系统将任务分给三类工人：initiators读取开源仓库README与文档片段起草相关验证程序，fixers根据编译器与验证器反馈修复问题，extenders对可运行程序提出扩展补丁。系统记录全部智能体轨迹，既用于从更强模型蒸馏，也用于自我改进；并提出合成程序生成的最大熵原则，通过迭代监督微调使模型随时间生成日益多样的程序。团队发布覆盖Dafny、Verus与Frama-C三种语言的大规模合成验证程序数据集，微调后的开源模型在验证相关任务上常达到甚至超过Claude
+    Opus 4.5的表现。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 论文属LLM自我改进与合成数据生成领域（跟踪域但非音视频核心域），按基准收录为摘要级。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: Formal Disco：形式验证程序的可扩展开放式生成
+relations:
+- type: same_topic
+  ref: paper:arxiv:2609.35025
+  note: 同为智能体生成数据以驱动自我改进循环的工作
+- type: same_topic
+  ref: paper:arxiv:2610.11345
+  note: 同为面向自进化LLM的合成数据生成（多智能体协作）主题

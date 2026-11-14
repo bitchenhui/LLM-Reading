@@ -1,0 +1,72 @@
+id: paper:arxiv:2310.16387
+type: paper
+title: Frequency-Aware Transformer for Learned Image Compression
+domain: video_image_coding
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2310.16387v4
+  url: https://arxiv.org/abs/2310.16387
+  pdf_url: https://arxiv.org/pdf/2310.16387v4
+  venue: arXiv preprint
+time:
+  published: '2023-10-25'
+  collected: '2026-11-14'
+entities:
+- ref: dataset:Kodak
+  role: subject
+- ref: impl:VTM
+  role: compared_against
+- ref: metric:BD-Rate
+  role: measured_by
+claims:
+- statement: 提出的FAT块通过频率分解窗口注意力（FDWA）与频率调制前馈网络（FMFFN），首次在LIC中实现多尺度方向频率分析，缓解隐表征冗余问题。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 所提方法率失真性能在Kodak数据集上以14.5%的BD-rate节省超越VTM-12.1。
+  confidence: reported
+  metrics:
+  - name: BD-Rate
+    value: 14.5%
+    scope: 相对VTM-12.1的BD-rate节省，Kodak数据集
+  evidence: abstract（初筛，未读全文）
+- statement: 所提方法率失真性能在Tecnick数据集上以15.1%的BD-rate节省超越VTM-12.1。
+  confidence: reported
+  metrics:
+  - name: BD-Rate
+    value: 15.1%
+    scope: 相对VTM-12.1的BD-rate节省，Tecnick数据集
+  evidence: abstract（初筛，未读全文）
+- statement: 所提方法率失真性能在CLIC数据集上以13.0%的BD-rate节省超越VTM-12.1。
+  confidence: reported
+  metrics:
+  - name: BD-Rate
+    value: 13.0%
+    scope: 相对VTM-12.1的BD-rate节省，CLIC数据集
+  evidence: abstract（初筛，未读全文）
+- statement: 基于Transformer的通道自回归模型（T-CA）能有效利用通道间依赖，提升熵建模效率。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出频率感知Transformer块（FDWA+FMFFN）与通道自回归熵模型，图像压缩率失真性能在Kodak/Tecnick/CLIC上超越VTM-12.1达13.0%~15.1%。
+  abstract_zh: 针对现有学习型图像压缩（LIC）方法隐表征冗余、难以捕捉各向异性频率成分与保持方向细节的问题，提出频率感知Transformer块（FAT），首次在LIC中实现多尺度方向分析。FAT包含频率分解窗口注意力（FDWA）模块，用于捕捉自然图像的多尺度与方向性频率成分；并引入频率调制前馈网络（FMFFN）自适应调制不同频率分量以改善率失真性能。此外提出基于Transformer的通道自回归（T-CA）模型以有效利用通道间依赖。实验表明该方法取得SOTA率失真性能，在Kodak、Tecnick和CLIC数据集上BD-rate分别以14.5%、15.1%、13.0%明显优于最新标准编码器VTM-12.1。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 核心域学习图像编码方法论文，提出频率感知Transformer架构并在三大标准测试集上以BD-rate显著超越VTM-12.1，属高质量值得深度阅读。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 面向学习型图像压缩的频率感知Transformer
+relations:
+- type: same_topic
+  ref: paper:arxiv:2610.33616
+  note: 同属学习型图像压缩且均利用频率调制机制改善率失真
+- type: same_topic
+  ref: paper:arxiv:2606.00111
+  note: 同为基于小波/频域分解的Transformer注意力图像压缩方法
+- type: same_topic
+  ref: paper:arxiv:2601.10373
+  note: 同为频率感知的图像压缩研究，方向一致

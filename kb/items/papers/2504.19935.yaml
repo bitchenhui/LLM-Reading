@@ -1,0 +1,62 @@
+id: paper:arxiv:2504.19935
+type: paper
+title: Enhancing Quality for VVC Compressed Videos with Omniscient Quality Enhancement Model
+domain: processing_enhancement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2504.19935v1
+  url: https://arxiv.org/abs/2504.19935
+  pdf_url: https://arxiv.org/pdf/2504.19935v1
+  venue: arXiv preprint
+time:
+  published: '2025-04-28'
+  collected: '2026-11-14'
+entities:
+- ref: codec:VVC
+  role: subject
+- ref: codec:HEVC
+  role: builds_on
+- ref: metric:PSNR
+  role: measured_by
+claims:
+- statement: OVQE-VVC 相对原始 STD-VVC 编解码器取得显著 PSNR 提升，平均约0.74dB、最高达1.2dB。
+  confidence: reported
+  metrics:
+  - name: PSNR增益
+    value: 0.74 dB
+    scope: 相对STD-VVC、多测试条件平均
+  - name: PSNR增益上限
+    value: 1.2 dB
+    scope: 相对STD-VVC、最佳测试条件
+  evidence: abstract（初筛，未读全文）
+- statement: 在保持相似视觉质量的前提下，OVQE-VVC 相当于节省约19.6%的码率。
+  confidence: reported
+  metrics:
+  - name: 码率节省
+    value: 19.6%
+    scope: 与上述PSNR增益对应的等效码率节省（相对STD-VVC）
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 将HEVC版OVQE模型改造并集成进VVC解码器，PSNR提升约0.74dB（最高1.2dB），等效节省约19.6%码率。
+  abstract_zh: 针对最新视频编码标准H.266/VVC，本文提出OVQE-VVC方案，通过深度学习视频质量增强提升解码端感知质量并兼顾压缩性能。OVQE模型最初为HEVC压缩视频设计，利用时空特征与跨频率信息增强视觉质量；作者对其修改后集成进STD-VVC解码器架构。在丰富的测试条件下，OVQE-VVC相对原始STD-VVC编解码器取得约0.74dB、最高1.2dB的PSNR提升，对应约19.6%的码率节省，同时保持相似的视觉质量。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: VVC解码端神经网络质量增强/后滤波工作，属于编码链路增强而非核心编码域，按规则仅收录为摘要级。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 基于全知质量增强模型提升VVC压缩视频质量
+relations:
+- type: same_topic
+  ref: paper:arxiv:2609.37328
+  note: 同为VVC压缩视频的神经网络后滤波/质量增强
+- type: same_topic
+  ref: paper:arxiv:2608.21495
+  note: 同为压缩视频质量增强（多域特征融合方法）
+- type: same_topic
+  ref: paper:arxiv:2105.05658
+  note: 同为CNN式VVC质量增强框架

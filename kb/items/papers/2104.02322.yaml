@@ -1,0 +1,75 @@
+id: paper:arxiv:2104.02322
+type: paper
+title: Efficient Video Compression via Content-Adaptive Super-Resolution
+domain: video_image_coding
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2104.02322v1
+  url: https://arxiv.org/abs/2104.02322
+  pdf_url: https://arxiv.org/pdf/2104.02322v1
+  venue: arXiv preprint
+time:
+  published: '2021-04-06'
+  collected: '2026-11-14'
+entities:
+- ref: concept:SuperResolution
+  role: subject
+- ref: codec:HEVC
+  role: compared_against
+- ref: metric:PSNR
+  role: measured_by
+- ref: org:NVIDIA
+  role: platform
+claims:
+- statement: 达到相同PSNR时，SRVC每像素比特数仅为H.265（HEVC）慢速模式的16%。
+  confidence: reported
+  metrics:
+  - name: bpp比率
+    value: 16%
+    scope: 同等PSNR下，相对H.265 slow mode基准
+  evidence: abstract（初筛，未读全文）
+- statement: 达到相同PSNR时，SRVC每像素比特数仅为深度学习视频压缩方案DVC的2%。
+  confidence: reported
+  metrics:
+  - name: bpp比率
+    value: 2%
+    scope: 同等PSNR下，相对DVC基准
+  evidence: abstract（初筛，未读全文）
+- statement: SRVC解码在NVIDIA V100 GPU上达到90帧/秒。
+  confidence: reported
+  metrics:
+  - name: 解码速度
+    value: 90 fps
+    scope: NVIDIA V100 GPU
+  evidence: abstract（初筛，未读全文）
+- statement: SRVC采用双码流架构：内容流为现有编解码器压缩的低分辨率视频，模型流周期性更新针对短片段定制的轻量超分网络，解码端用时变超分模型重建高分辨率视频。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: SRVC以低分辨率码流加轻量内容自适应超分模型流实现压缩，同等PSNR下码率仅为H.265慢速模式的16%。
+  abstract_zh: SRVC将视频编码为两条码流：内容流用现有编解码器压缩下采样的低分辨率视频，模型流周期性传输针对短片段定制的轻量超分网络更新。解码端将解压后的低分辨率帧依次通过时变超分模型重建高分辨率视频。相比纯深度学习压缩方案，该方法大幅降低了计算与功耗开销。达到相同PSNR时，SRVC每像素比特数仅为H.265慢速模式的16%、深度视频压缩DVC的2%，并在NVIDIA
+    V100 GPU上以90fps运行。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 核心域视频压缩论文，提出内容流+模型流的双码流内容自适应超分压缩框架SRVC，同等PSNR下码率远低于H.265与DVC，属奠基性工作，值得深读。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 基于内容自适应超分辨率的高效视频压缩
+relations:
+- type: same_topic
+  ref: paper:arxiv:2609.37328
+  note: CASR同为面向编解码器的内容自适应神经超分后滤波，与SRVC的codec+内容自适应SR路线同题
+- type: same_topic
+  ref: paper:arxiv:2305.04844
+  note: SR+Codec基准同样研究超分辨率用于压缩码率节省，与SRVC同属SR辅助编码方向
+- type: same_topic
+  ref: paper:arxiv:2411.13362
+  note: RTSR面向AV1压缩内容的实时超分，与SRVC的编解码器增强超分思路相关
+- type: same_topic
+  ref: paper:arxiv:2106.08147
+  note: 感知导向的压缩视频超分辨率，与SRVC同属压缩视频超分重建方向

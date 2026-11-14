@@ -1,0 +1,63 @@
+id: paper:arxiv:2205.01135
+type: paper
+title: 'D-DPCC: Deep Dynamic Point Cloud Compression via 3D Motion Prediction'
+domain: immersive_media
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2205.01135v1
+  url: https://arxiv.org/abs/2205.01135
+  pdf_url: https://arxiv.org/pdf/2205.01135v1
+  venue: arXiv preprint
+time:
+  published: '2022-05-02'
+  collected: '2026-11-14'
+entities:
+- ref: codec:V-PCC
+  role: subject
+- ref: metric:BD-Rate
+  role: measured_by
+claims:
+- statement: D-DPCC框架在inter模式下相比最先进的V-PCC v13平均取得76%的BD-Rate增益。
+  confidence: reported
+  metrics:
+  - name: BD-Rate
+    value: 76%
+    scope: inter模式下相对V-PCC v13的平均增益（码率节省）
+  evidence: abstract（初筛，未读全文）
+- statement: 据作者所知，这是首个提出端到端深度动态点云压缩框架的工作。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 提出的多尺度运动融合（MMF）模块可在特征空间估计相邻点云帧特征表示之间的3D光流，实现3D运动估计与补偿。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 提出的3D自适应加权插值（3DAWI）算法引入惩罚系数，自适应降低远距离邻点对运动补偿的影响。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 首个端到端深度动态点云压缩框架，通过特征空间3D运动估计与补偿，inter模式下较V-PCC v13平均节省76% BD-Rate。
+  abstract_zh: 针对三维动态点云非均匀分布导致的帧间压缩难题，提出基于3D稀疏卷积的D-DPCC网络，在特征空间进行3D运动估计与运动补偿以压缩动态点云几何。设计多尺度运动融合（MMF）模块估计相邻帧特征表示间的3D光流，并提出带惩罚系数的3D自适应加权插值（3DAWI）算法自适应降低远邻点影响。采用基于自编码器的有损网络压缩运动嵌入与残差。据作者所知这是首个端到端深度动态点云压缩框架，实验显示inter模式下较V-PCC
+    v13平均取得76% BD-Rate增益。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 动态点云压缩属沉浸式与三维媒体范畴（非核心视频编码域），为首个端到端深度动态点云压缩框架，重要工作按规则最高给summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: D-DPCC：基于3D运动预测的深度动态点云压缩
+relations:
+- type: same_topic
+  ref: paper:arxiv:2207.12554
+  note: 同为动态点云几何帧间压缩，本文为其端到端深度学习版本
+- type: same_topic
+  ref: paper:arxiv:2206.12186
+  note: 均涉及V-PCC点云压缩及其优化
+- type: same_topic
+  ref: paper:arxiv:2402.11250
+  note: 同为点云几何压缩的深度学习方法
+- type: same_topic
+  ref: paper:arxiv:2602.08613
+  note: 均关注点云压缩编码方案（AVS PCC与深度方案对比语境）

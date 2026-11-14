@@ -1,0 +1,79 @@
+id: paper:arxiv:2107.03312
+type: paper
+title: 'SoundStream: An End-to-End Neural Audio Codec'
+domain: audio_coding
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2107.03312v1
+  url: https://arxiv.org/abs/2107.03312
+  pdf_url: https://arxiv.org/pdf/2107.03312v1
+  venue: arXiv preprint
+time:
+  published: '2021-07-07'
+  collected: '2026-11-14'
+entities:
+- ref: concept:NeuralAudioCodec
+  role: subject
+- ref: codec:Opus
+  role: compared_against
+- ref: codec:EVS
+  role: compared_against
+claims:
+- statement: SoundStream在3kbps下的主观质量优于Opus 12kbps
+  confidence: reported
+  metrics:
+  - name: 码率
+    value: 3kbps
+    scope: SoundStream，24kHz采样率音频主观评测
+  - name: 对比锚点码率
+    value: 12kbps
+    scope: Opus
+  evidence: abstract（初筛，未读全文）
+- statement: SoundStream 3kbps质量接近EVS 9.6kbps
+  confidence: reported
+  metrics:
+  - name: 对比锚点码率
+    value: 9.6kbps
+    scope: EVS
+  evidence: abstract（初筛，未读全文）
+- statement: 通过量化器层结构化dropout，单一模型支持3kbps至18kbps可变码率，与固定码率训练模型相比质量损失可忽略
+  confidence: reported
+  metrics:
+  - name: 可变码率范围
+    value: 3kbps-18kbps
+    scope: 单模型（结构化dropout训练）
+  evidence: abstract（初筛，未读全文）
+- statement: 模型可低延迟流式推理，并在智能手机CPU上实时运行
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在编码端或解码端联合执行压缩与增强（语音背景噪声抑制）不引入额外时延
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 端到端神经音频编解码器：单模型3–18kbps可变码率，3kbps质量胜Opus 12kbps、接近EVS 9.6kbps。
+  abstract_zh: SoundStream由全卷积编解码网络与残差向量量化器构成，端到端联合训练，结合对抗与重建损失实现高质量音频重建。通过量化器层的结构化dropout，单一模型可在3kbps至18kbps范围内运行可变码率，且与固定码率模型相比质量损失可忽略。模型支持流式推理与低延迟实现，可在智能手机CPU上实时运行。在24kHz采样率音频的主观评测中，SoundStream
+    3kbps质量优于Opus 12kbps，接近EVS 9.6kbps。此外无需额外时延即可在编码端或解码端联合执行压缩与增强，文中以语音背景噪声抑制进行演示。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 神经音频编解码里程碑工作（3kbps胜Opus 12kbps），属音频编码域，按规则最高给summary_only
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: SoundStream：端到端神经音频编解码器
+relations:
+- type: same_topic
+  ref: paper:arxiv:2609.09866
+  note: UniStream为48kHz因果流式音频编码，采用残差向量量化，与SoundStream同属神经音频编码方向
+- type: same_topic
+  ref: paper:arxiv:2610.04651
+  note: GS-Codec为神经音频编码新瓶颈结构，延续SoundStream开启的神经音频编解码路线
+- type: same_topic
+  ref: paper:arxiv:2609.34524
+  note: 对神经音频编解码器解码端在笔记本/手机平台的码率-能耗-质量测量，研究对象与SoundStream同类
+- type: same_topic
+  ref: paper:arxiv:2608.08432
+  note: BAMU针对冻结预训练神经语音编解码器的码率分配，属同一技术栈

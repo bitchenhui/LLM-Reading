@@ -1,0 +1,62 @@
+id: paper:arxiv:2411.13362
+type: paper
+title: 'RTSR: A Real-Time Super-Resolution Model for AV1 Compressed Content'
+domain: processing_enhancement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2411.13362v1
+  url: https://arxiv.org/abs/2411.13362
+  pdf_url: https://arxiv.org/pdf/2411.13362v1
+  venue: arXiv preprint
+time:
+  published: '2024-11-20'
+  collected: '2026-11-14'
+entities:
+- ref: concept:SuperResolution
+  role: subject
+- ref: codec:AV1
+  role: uses
+- ref: metric:PSNR
+  role: measured_by
+- ref: metric:SSIM
+  role: measured_by
+- ref: metric:VMAF
+  role: measured_by
+claims:
+- statement: RTSR针对AV1（SVT）编码内容在多个量化等级下，通过双教师知识蒸馏优化CNN超分模型，支持360p→1080p与540p→4K两种升分辨率设定。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在AIM 2024高效/移动端实时视频超分赛道的六支参赛提交中，RTSR在模型复杂度与重建质量之间取得最佳折中。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: RTSR以PSNR、SSIM和VMAF三项指标评价重建质量，兼顾实时播放所需的低复杂度约束。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出低复杂度CNN实时超分模型RTSR，经双教师蒸馏针对AV1编码内容优化，在AIM 2024实时视频超分赛中取得复杂度-质量最佳折中。
+  abstract_zh: 论文提出低复杂度超分辨率方法RTSR，用于增强压缩视频的视觉质量，支持360p→1080p和540p→4K两组升分辨率任务。该方法采用CNN网络架构，并通过双教师知识蒸馏在不同量化等级下针对AV1（SVT）编码内容进行优化。模型提交至AIM
+    2024视频超分辨率挑战赛的Efficient/Mobile Real-Time Video Super-Resolution赛道。在全部六支参赛提交中，RTSR在模型复杂度与编码质量（以PSNR、SSIM、VMAF衡量）之间取得最佳折中。代码即将开源。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 属于编码链路超分增强域，针对AV1压缩内容的实时SR与流媒体解码端增强生态高度相关，但非编解码本体故不进核心深读。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: RTSR：面向AV1压缩内容的实时超分辨率模型
+relations:
+- type: same_topic
+  ref: paper:arxiv:2305.04844
+  note: 同为面向压缩视频的超分辨率（SR+Codec码率节省基准）
+- type: same_topic
+  ref: paper:arxiv:2106.08147
+  note: 同为压缩视频超分辨率重建方向
+- type: same_topic
+  ref: paper:arxiv:2609.37328
+  note: 同为编码内容超分后滤波增强，对象codec不同（VVC vs AV1）
+- type: same_topic
+  ref: paper:arxiv:2408.11982
+  note: 同属AIM 2024挑战赛系列（本文为实时视频超分赛道）

@@ -1,0 +1,70 @@
+id: paper:arxiv:2501.12060
+type: paper
+title: 'GSVC: Efficient Video Representation and Compression Through 2D Gaussian Splatting'
+domain: video_image_coding
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2501.12060v3
+  url: https://arxiv.org/abs/2501.12060
+  pdf_url: https://arxiv.org/pdf/2501.12060v3
+  venue: arXiv preprint
+time:
+  published: '2025-01-21'
+  collected: '2026-11-14'
+entities:
+- ref: concept:3DGS
+  role: subject
+- ref: codec:AV1
+  role: compared_against
+- ref: codec:VVC
+  role: compared_against
+- ref: metric:FPS
+  role: measured_by
+claims:
+- statement: GSVC将锚帧-传播帧结构与残差式高斯参数量化结合，率失真性能与最先进的AV1和VVC编解码器实现相当
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: GSVC继承高斯泼溅的渲染优势，对1920×1080视频达到1500 fps的渲染速度
+  confidence: reported
+  metrics:
+  - name: FPS
+    value: 1500 fps
+    scope: 1920×1080视频渲染速度
+  evidence: abstract（初筛，未读全文）
+- statement: 通过控制每帧高斯泼溅数量实现码率-失真权衡旋钮，训练中可剔除对帧质量贡献低的高斯
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 支持两遍编码：将未来传播帧的高斯泼溅回传至锚帧，可进一步改善困难视频场景的质量
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 锚帧从零学习高斯、传播帧由前帧初始化并微调，场景切换通过训练过程中的损失差异自动检测
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出以2D高斯泼溅为基元的视频编解码器GSVC，RD性能媲美AV1/VVC，1080p渲染达1500fps。
+  abstract_zh: 该工作探索以二维高斯泼溅作为视频表示与压缩的新基元，提出编解码器GSVC，将经典编码器利用帧间时间冗余的思想引入高斯泼溅框架。每帧由一组重叠高斯泼溅渲染近似：场景变化后的锚帧从零学习，其余传播帧以前帧高斯初始化后微调，通过训练中的损失差异检测场景切换，并随机新增高斯以应对大运动和新出现物体。系统通过控制每帧高斯数量提供码率-失真调节旋钮，训练中剔除低贡献高斯，支持从未来传播帧回传高斯的两遍编码以提升困难场景质量，并采用基于残差的量化框架仅编码帧间高斯参数变化。实验显示其RD性能与AV1、VVC的最先进实现相当，且1920×1080视频渲染速度达1500
+    fps。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 核心域视频编码：以2D高斯泼溅为新基元的完整视频编解码器，RD性能媲美AV1/VVC且渲染速度突出，具有深入研究价值。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: GSVC：基于二维高斯泼溅的高效视频表示与压缩
+relations:
+- type: same_topic
+  ref: paper:arxiv:2609.14129
+  note: 同为基于2D可变形高斯泼溅的视频压缩工作
+- type: same_topic
+  ref: paper:arxiv:2609.33969
+  note: 同为基于高斯泼溅的视频压缩（稀疏4D锚点、体视频方向）
+- type: same_topic
+  ref: paper:arxiv:2608.30184
+  note: 同为基于时间锚定高斯泼溅的长时序视频表示
+- type: same_topic
+  ref: paper:arxiv:2409.07414
+  note: 同为表示式神经视频压缩路线，可与GS基元方案对照

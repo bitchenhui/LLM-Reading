@@ -1,0 +1,60 @@
+id: paper:arxiv:2504.18398
+type: paper
+title: Partition Map-Based Fast Block Partitioning for VVC Inter Coding
+domain: video_image_coding
+research_lines:
+- traditional_codec_opt
+source:
+  channel: arxiv
+  external_id: 2504.18398v2
+  url: https://arxiv.org/abs/2504.18398
+  pdf_url: https://arxiv.org/pdf/2504.18398v2
+  venue: arXiv preprint
+time:
+  published: '2025-04-25'
+  collected: '2026-11-14'
+entities:
+- ref: codec:VVC
+  role: subject
+- ref: concept:QP
+  role: uses
+claims:
+- statement: 所提方法在随机访问配置下平均节省51.30%编码时间，BDBR仅2.12%
+  confidence: reported
+  metrics:
+  - name: 编码时间节省
+    value: 51.30%
+    scope: 随机访问（RA）配置，相对基线VVC编码器平均
+  - name: BDBR
+    value: 2.12%
+    scope: 随机访问（RA）配置，相对基线VVC编码器平均
+  evidence: abstract（初筛，未读全文）
+- statement: 在帧内划分图方法基础上引入MTT掩码实现划分搜索提前终止，并设计融合空间与时域特征的神经网络预测划分图
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 网络包含堆叠自顶向下/自底向上处理、QP调制层、划分自适应对齐三项专门设计，并通过双阈值方案实现复杂度与RD损失的细粒度权衡
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出基于划分图的神经网络方法加速VVC帧间编码划分决策，随机访问配置下节省51.30%编码时间，BDBR仅增2.12%。
+  abstract_zh: VVC的QT+MTT嵌套块结构带来显著编码增益，但其递归划分搜索大幅增加编码器复杂度。该工作在作者此前帧内编码划分图方法基础上，针对帧间编码特性引入MTT掩码以实现提前终止，并开发融合空间与时域特征的神经网络预测划分图，网络包含堆叠的自顶向下与自底向上处理、量化参数（QP）调制层以及划分自适应对齐等专门设计。此外提出双阈值决策方案，实现复杂度缩减与率失真（RD）性能损失之间的细粒度权衡。实验表明，在随机访问配置下方法平均节省51.30%编码时间，BDBR仅2.12%。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 核心域论文：针对VVC帧间编码递归划分搜索的复杂度问题，提出神经网络划分图预测方法，是编码器加速的关键工作。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 基于划分图的VVC帧间编码快速块划分
+relations:
+- type: same_topic
+  ref: paper:arxiv:2605.21526
+  note: 同属VVC划分树搜索加速主题，该综述/评测可对照本文的神经网络划分预测方法
+- type: same_topic
+  ref: paper:arxiv:2312.10567
+  note: 同为基于CNN的VVC帧间划分加速工作，方法路线相近可对比
+- type: same_topic
+  ref: paper:arxiv:2312.10406
+  note: 对VTM帧间编码的统计分析，为本文帧间划分特性分析提供背景支撑

@@ -1,0 +1,73 @@
+id: paper:arxiv:2103.14776
+type: paper
+title: 'Scalable and Efficient Neural Speech Coding: A Hybrid Design'
+domain: audio_coding
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2103.14776v2
+  url: https://arxiv.org/abs/2103.14776
+  pdf_url: https://arxiv.org/pdf/2103.14776v2
+  venue: arXiv preprint
+time:
+  published: '2021-03-27'
+  collected: '2026-11-14'
+entities:
+- ref: codec:Opus
+  role: subject
+- ref: concept:EntropyModel
+  role: uses
+claims:
+- statement: 提出的混合神经语音编码器在TIMIT测试语音的低中码率下取得与AMR-WB和Opus相当或更优的宽频语音质量
+  confidence: reported
+  metrics:
+  - name: 码率范围
+    value: 12 to 20 kbps
+    scope: 低中码率（单NWC解码器），TIMIT测试语音
+  evidence: abstract（初筛，未读全文）
+- statement: 解码器在低中码率仅需一个约0.12M参数的NWC模块，高码率32 kbps使用两个NWC模块
+  confidence: reported
+  metrics:
+  - name: 解码器参数量
+    value: 0.12 million
+    scope: 单个NWC解码模块
+  - name: 高码率工作点
+    value: 32 kbps
+    scope: 双NWC解码器配置
+  evidence: abstract（初筛，未读全文）
+- statement: 解码复杂度虽尚未低至传统语音编解码器水平，但较WaveNet声码器类神经编解码器显著降低
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: CMRL通过残差级联多个NWC自编码模块实现码率可扩展，低码率端以LPC作为首个自编码器，并将LPC量化重定义为可微过程以支持端到端训练
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 系统可扩展至更高码率以实现近透明（near transparent）质量
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出LPC与神经波形编解码混合的语音编码器，跨模块残差学习覆盖12–32kbps，低中码率质量媲美AMR-WB与Opus。
+  abstract_zh: 该工作将语音压缩建模为自编码任务，用CNN前馈实现神经波形编解码（NWC），并把量化与熵编码定义为可训练模块，使编码失真与码率控制在优化过程中统一处理。为提升效率，模型引入门控残差网络和深度可分离卷积等紧凑组件。作者提出跨模块残差学习（CMRL）可扩展架构，将多个NWC自编码模块残差级联以覆盖宽码率范围，并在低码率端以线性预测编码（LPC）作为首个自编码器，通过将LPC量化可微化实现端到端训练。解码器在12–20
+    kbps仅用一个0.12M参数的NWC、32 kbps用两个NWC；解码复杂度虽仍高于传统编解码器，但较WaveNet声码器类方案显著降低。在TIMIT测试语音上，系统于低中码率达到与AMR-WB和Opus相当或更优的宽频语音质量，并可扩展至更高码率实现近透明性能。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 神经语音波形编码的核心研究（混合LPC+CNN、可扩展码率），属音频编码域，按收录基准仅做初筛摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 可扩展且高效的神经语音编码：一种混合设计
+relations:
+- type: same_topic
+  ref: paper:arxiv:2207.08363
+  note: 同属神经语音编码（learned speech coding）方向，均探讨预测式神经语音压缩
+- type: same_topic
+  ref: paper:arxiv:2107.03312
+  note: 同属端到端神经音频/语音波形编解码研究线
+- type: same_topic
+  ref: paper:arxiv:2608.08432
+  note: 同属神经语音编解码器的码率与比特流优化方向
+- type: same_topic
+  ref: paper:arxiv:2610.20246
+  note: 共享Opus编解码器这一对比/评估锚点

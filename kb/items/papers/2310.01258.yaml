@@ -1,0 +1,71 @@
+id: paper:arxiv:2310.01258
+type: paper
+title: 'MobileNVC: Real-time 1080p Neural Video Compression on a Mobile Device'
+domain: video_image_coding
+research_lines:
+- learned_codec
+source:
+  channel: arxiv
+  external_id: 2310.01258v3
+  url: https://arxiv.org/abs/2310.01258
+  pdf_url: https://arxiv.org/pdf/2310.01258v3
+  venue: arXiv preprint
+time:
+  published: '2023-10-02'
+  collected: '2026-11-14'
+entities:
+- ref: codec:HEVC
+  role: subject
+- ref: concept:EntropyModel
+  role: uses
+- ref: metric:BD-Rate
+  role: measured_by
+claims:
+- statement: MobileNVC是首个能在移动设备上实时解码1080p YUV420视频的神经视频编解码器，此前工作仅实现720p RGB实时解码。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 相较此前的端侧神经编解码器，MobileNVC最多可节省48% BD-rate。
+  confidence: reported
+  metrics:
+  - name: BD-Rate
+    value: 48%
+    scope: 相对此前移动端神经编解码器的BD-rate节省（up to，低时延设定）
+  evidence: abstract（初筛，未读全文）
+- statement: MobileNVC将解码端（接收端）MAC计算量较此前方案降低10倍。
+  confidence: reported
+  metrics:
+  - name: MAC数
+    value: 10×
+    scope: 接收端/解码端相对此前端侧编解码器的削减倍数
+  evidence: abstract（初筛，未读全文）
+- statement: 实时性来自两项设计：基于块的运动补偿运行在移动加速器warping核心上并对模型做整数量化；解码时NN组件、熵编码、warping分别并行于神经信号处理器、移动GPU与warping核心。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 摘要背景指出神经视频编解码器在低时延设定下已可与HEVC等标准编解码器竞争。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 首个在移动设备上实时解码1080p YUV420的神经视频编解码器，较此前端侧方案最多节省48% BD-rate。
+  abstract_zh: 神经视频编解码器在低时延场景已可与HEVC等标准编解码器竞争，但多为大浮点网络且依赖像素级密集warping，难以部署到移动端，此前仅实现720p RGB实时解码。该工作提出MobileNVC，是首个能在移动设备上实时解码1080p
+    YUV420视频的神经视频编解码器。方法上采用基于块的运动补偿算法以利用移动加速器warping核心，并将模型量化到整数精度；解码管线将神经网络组件、熵编码和warping分别并行调度到神经信号处理器、移动GPU和warping核心上。结果上，相较此前的端侧编解码器最多节省48%
+    BD-rate，同时接收端MAC计算量降低10倍，并通过消融实验验证了所提运动补偿方案与模型量化的有效性。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 核心域神经视频编码的端侧实时部署里程碑工作：首个移动端1080p实时解码的NVC，性能与复杂度收益明确，值得深读。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: MobileNVC：移动设备上的实时1080p神经视频压缩
+relations:
+- type: same_topic
+  ref: paper:arxiv:2606.28027
+  note: MLVC同样面向学习型视频编解码器在真实多平台（含移动端）的实时部署
+- type: same_topic
+  ref: paper:arxiv:2606.13110
+  note: JOMP同样研究神经视频编码的量化/精度优化以降低部署开销
+- type: same_topic
+  ref: paper:arxiv:2606.04595
+  note: KD-NVC同样以降低神经视频编码计算复杂度为目标（搜索+蒸馏加速）

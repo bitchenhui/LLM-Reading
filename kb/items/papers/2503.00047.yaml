@@ -1,0 +1,64 @@
+id: paper:arxiv:2503.00047
+type: paper
+title: 'PCE-GAN: A Generative Adversarial Network for Point Cloud Attribute Quality Enhancement based
+  on Optimal Transport'
+domain: immersive_media
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2503.00047v1
+  url: https://arxiv.org/abs/2503.00047
+  pdf_url: https://arxiv.org/pdf/2503.00047v1
+  venue: arXiv preprint
+time:
+  published: '2025-02-26'
+  collected: '2026-11-14'
+entities:
+- ref: codec:G-PCC
+  role: subject
+- ref: metric:BD-Rate
+  role: measured_by
+claims:
+- statement: PCE-GAN应用于G-PCC测试模型后，相对PredLift编码配置取得平均19.2%的BD-rate增益。
+  confidence: reported
+  metrics:
+  - name: BD-Rate
+    value: -19.2%
+    scope: G-PCC测试模型，对比PredLift编码配置，平均值
+  evidence: abstract（初筛，未读全文）
+- statement: PCE-GAN应用于G-PCC测试模型后，相对RAHT编码配置取得平均18.3%的BD-rate增益。
+  confidence: reported
+  metrics:
+  - name: BD-Rate
+    value: -18.3%
+    scope: G-PCC测试模型，对比RAHT编码配置，平均值
+  evidence: abstract（初筛，未读全文）
+- statement: 主观评估显示PCE-GAN在纹理清晰度和色彩过渡上显著优于对比方法，细节更丰富、色彩渐变更自然。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 判别器通过计算增强点云与原始点云概率分布偏差（基于最优传输理论）引导生成器，兼顾数据保真度与感知质量。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 基于最优传输理论的GAN增强G-PCC压缩点云属性质量，BD-rate较PredLift与RAHT配置平均降低19.2%与18.3%。
+  abstract_zh: 针对点云压缩牺牲重建质量的问题，提出基于最优传输理论的生成对抗网络PCE-GAN，同时优化数据保真度与人眼感知质量。生成器由局部特征提取单元（动态图构建+图注意力，侧重失真严重的点）、全局空间关联单元（利用邻域patch几何信息并以Transformer结构捕获长程关联）和特征压缩单元组成；判别器计算增强点云与原始点云概率分布偏差以指导生成器。将PCE-GAN应用于最新G-PCC测试模型后，相对PredLift编码配置平均BD-rate降低19.2%，相对RAHT配置降低18.3%。主观对比显示纹理清晰度和色彩过渡显著改善，细节更丰富、色彩渐变更自然。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 点云属性压缩质量增强属于沉浸式媒体（点云）领域，按收录基准非核心域，仅做摘要级收录，但与G-PCC编码链路直接相关且增益显著。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: PCE-GAN：基于最优传输的点云属性质量增强生成对抗网络
+relations:
+- type: same_topic
+  ref: paper:arxiv:2303.13764
+  note: 同为点云颜色属性质量增强网络（GQE-Net）
+- type: same_topic
+  ref: paper:arxiv:2112.00560
+  note: 同为G-PCC压缩点云属性伪影去除/质量增强
+- type: same_topic
+  ref: paper:arxiv:2412.05574
+  note: 同属G-PCC编码优化与增强方向

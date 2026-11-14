@@ -1,0 +1,64 @@
+id: paper:arxiv:2608.30207
+type: paper
+title: 'SIR: Self-improving Red-teaming for Compute Use Agents'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2608.30207v2
+  url: https://arxiv.org/abs/2608.30207
+  pdf_url: https://arxiv.org/pdf/2608.30207v2
+  venue: arXiv preprint
+time:
+  published: '2026-08-31'
+  collected: '2026-11-14'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: SIR 对 Claude Opus 4.8 与 Gemini 3.5 Flash 分别取得 24% 和 28% 的联合攻击成功率，显著高于基准固定手写注入的 4% 与 0%。
+  confidence: reported
+  metrics:
+  - name: 联合攻击成功率（对抗目标+良性任务同时完成）
+    value: 24%
+    scope: Claude Opus 4.8，每案例最多10次攻击尝试
+  - name: 联合攻击成功率（对抗目标+良性任务同时完成）
+    value: 28%
+    scope: Gemini 3.5 Flash，每案例最多10次攻击尝试
+  - name: 固定手写注入基线成功率
+    value: 4%
+    scope: Claude Opus 4.8
+  - name: 固定手写注入基线成功率
+    value: 0%
+    scope: Gemini 3.5 Flash
+  evidence: abstract（初筛，未读全文）
+- statement: 对某一受害模型发现的红队原则可迁移至其他受害模型（含不同模型家族），无需额外反馈即可提升攻击成功率。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: SIR 将攻击成功判定锚定于文件系统、服务与权限状态的确定性检查而非 LLM 评审，避免评测主观性。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 黑盒自改进红队框架，迭代蒸馏注入原则攻破计算机使用代理，联合ASR达24–28%
+  abstract_zh: 计算机使用代理（CUA）由视觉语言模型驱动，面临间接提示注入（IPI）风险，固定手写注入会低估自适应攻击者的威胁。论文提出 SIR，一个黑盒自改进红队框架：从可复用的自然语言红队原则库组合任务特定注入，并通过迭代反馈环分析失败攻击轨迹、蒸馏新的命名原则存入共享库跨任务复用。攻击以操作系统级破坏为目标，成功判定采用文件系统、服务和权限状态的确定性检查而非
+    LLM 评审，且要求对抗目标与良性用户任务在同一执行中同时完成。在三个前沿 CUA、每个案例最多 10 次尝试下，SIR 在 Claude Opus 4.8 与 Gemini 3.5 Flash
+    上分别取得 24% 与 28% 的联合攻击成功率，远超基准固定手写注入的 4% 与 0%；针对某一受害模型发现的原则无需额外反馈即可迁移至包括不同模型家族的其他受害模型。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 属于自改进 AI 域：SIR 用迭代反馈环蒸馏可复用攻击原则实现黑盒自改进红队攻击 LLM 代理；与音视频技术无关，按非核心域仅初筛摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: SIR：面向计算机使用代理的自改进红队攻击框架
+relations:
+- type: same_topic
+  ref: paper:arxiv:2610.40751
+  note: 同处自改进 AI 与安全的交叉：Safin-1.5 面向递归安全改进（防御侧），SIR 为自改进红队攻击（对抗侧）
+- type: same_topic
+  ref: paper:arxiv:2610.07645
+  note: 均涉及代理自改进循环中的对抗性经验积累：SkillPoison 利用成功经验投毒技能库，SIR 从攻击轨迹蒸馏可复用原则

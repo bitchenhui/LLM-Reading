@@ -1,0 +1,72 @@
+id: paper:arxiv:2104.10781
+type: paper
+title: 'NTIRE 2021 Challenge on Quality Enhancement of Compressed Video: Methods and Results'
+domain: processing_enhancement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2104.10781v6
+  url: https://arxiv.org/abs/2104.10781
+  pdf_url: https://arxiv.org/pdf/2104.10781v6
+  venue: arXiv preprint
+time:
+  published: '2021-04-21'
+  collected: '2026-11-14'
+entities:
+- ref: codec:HEVC
+  role: subject
+- ref: concept:QP
+  role: uses
+- ref: impl:x265
+  role: uses
+- ref: metric:PSNR
+  role: measured_by
+claims:
+- statement: NTIRE 2021 压缩视频质量增强挑战赛设三个赛道，共吸引 482 支队伍注册，测试阶段 Track 1、Track 2、Track 3 分别有 12、8、11 支队伍提交最终结果
+  confidence: reported
+  metrics:
+  - name: 注册队伍数
+    value: '482'
+    scope: 三赛道总注册数
+  - name: 提交队伍数
+    value: '12'
+    scope: Track 1 测试阶段
+  - name: 提交队伍数
+    value: '8'
+    scope: Track 2 测试阶段
+  - name: 提交队伍数
+    value: '11'
+    scope: Track 3 测试阶段
+  evidence: abstract（初筛，未读全文）
+- statement: Track 1 与 Track 2 针对 HEVC 固定 QP 压缩视频，Track 3 针对 x265 固定码率压缩视频；Track 1 与 Track 3 以 PSNR 提升保真度，Track
+    2 以感知质量为目标
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 挑战赛采用新构建的大规模多样化视频数据集 LDV，参赛方法与方案刻画了压缩视频质量增强的当前最先进水平
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 首届NTIRE压缩视频质量增强挑战赛综述：基于LDV数据集设三赛道，482队注册、31队提交最终结果
+  abstract_zh: 该文总结首届 NTIRE 压缩视频质量增强挑战赛的赛制、方法与结果。比赛采用新的大规模多样化视频数据集 LDV，设三个赛道：Track 1 与 Track 2 面向固定 QP
+    的 HEVC 压缩视频，Track 3 面向固定码率的 x265 压缩视频。Track 1 与 Track 3 以 PSNR 衡量保真度提升，Track 2 以感知质量为目标。三个赛道共吸引 482
+    支队伍注册，测试阶段分别有 12、8、11 支队伍提交最终结果，参赛方法代表了压缩视频质量增强的最先进水平。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 压缩视频质量增强（HEVC/x265 后处理增强）挑战赛报告，属编码链路增强类，非核心编码域故仅初筛摘要
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: NTIRE 2021 压缩视频质量增强挑战赛：方法与结果
+relations:
+- type: same_topic
+  ref: paper:arxiv:2608.21495
+  note: 同为压缩视频质量增强（后处理网络）方向
+- type: same_topic
+  ref: paper:arxiv:2408.11982
+  note: 同为针对压缩视频质量的竞赛方法与结果报告（评估 vs 增强）
+- type: same_topic
+  ref: paper:arxiv:2305.04844
+  note: 同为压缩码流超分/增强以降低码率-提升质量的研究

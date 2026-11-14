@@ -1,0 +1,73 @@
+id: paper:arxiv:2309.02529
+type: paper
+title: Fast and High-Performance Learned Image Compression With Improved Checkerboard Context Model, Deformable
+  Residual Module, and Knowledge Distillation
+domain: video_image_coding
+research_lines:
+- learned_codec
+source:
+  channel: arxiv
+  external_id: 2309.02529v1
+  url: https://arxiv.org/abs/2309.02529
+  pdf_url: https://arxiv.org/pdf/2309.02529v1
+  venue: arXiv preprint
+time:
+  published: '2023-09-05'
+  collected: '2026-11-14'
+entities:
+- ref: concept:EntropyModel
+  role: subject
+- ref: codec:VVC
+  role: compared_against
+- ref: dataset:Kodak
+  role: evaluated_on
+- ref: metric:PSNR
+  role: measured_by
+- ref: metric:MS-SSIM
+  role: measured_by
+claims:
+- statement: 相较SOTA学习图像编码方案，编码速度约快20倍、解码速度快70-90倍，同时R-D性能提升2.3%
+  confidence: reported
+  metrics:
+  - name: 编码加速倍数
+    value: 约20倍
+    scope: 对比SOTA学习图像编码方案
+  - name: 解码加速倍数
+    value: 70-90倍
+    scope: 对比SOTA学习图像编码方案
+  - name: R-D性能提升
+    value: 2.3%
+    scope: 对比SOTA学习图像编码方案
+  evidence: abstract（初筛，未读全文）
+- statement: 在Kodak与Tecnick-40数据集上，PSNR与MS-SSIM两项指标超越H.266/VVC-intra(4:4:4)及部分领先学习编码方案
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 带双分布参数估计网络的棋盘上下文模型可实现并行解码，性能不劣于串行上下文自适应模型
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 首次将可变形卷积模块引入压缩框架，以去除输入图像更多冗余；三步知识蒸馏+L1稀疏正则进一步降低解码复杂度与编解码时间
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 棋盘并行上下文+可变形卷积+三步知识蒸馏+稀疏隐编码，解码提速70-90倍且R-D超越VVC-intra
+  abstract_zh: 针对串行上下文自适应熵模型解码慢、编解码网络复杂度高的问题，论文提出四项技术：首次在压缩框架中引入可变形卷积模块以去除输入图像冗余；设计带两个独立分布参数估计网络的棋盘上下文模型，在不损失性能的前提下实现并行解码；提出三步知识蒸馏训练方案，在教师网络最终与中间结果监督下获得不同复杂度-性能权衡的解码器；并用L1正则化稀疏隐表示，仅编码非零通道以大幅缩短编解码时间。实验显示，相较SOTA学习图像编码方案，编码快约20倍、解码快70-90倍，R-D性能高2.3%，在Kodak与Tecnick-40上的PSNR与MS-SSIM超越H.266/VVC-intra(4:4:4)及部分领先学习方案。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 核心域学习图像压缩重要工作：并行棋盘上下文熵模型+可变形卷积+知识蒸馏，编解码大幅提速且R-D性能超越VVC-intra
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 基于改进棋盘上下文模型、可变形残差模块与知识蒸馏的快速高性能学习图像压缩
+relations:
+- type: same_topic
+  ref: paper:arxiv:2306.14287
+  note: 同为加速学习图像压缩上下文建模（快速熵模型/并行解码）
+- type: same_topic
+  ref: paper:arxiv:2603.06766
+  note: 同为学习图像压缩熵模型改进工作
+- type: same_topic
+  ref: paper:arxiv:2606.04595
+  note: 同以知识蒸馏加速神经编码复杂度-性能权衡

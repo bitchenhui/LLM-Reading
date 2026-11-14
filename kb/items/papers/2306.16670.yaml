@@ -1,0 +1,61 @@
+id: paper:arxiv:2306.16670
+type: paper
+title: End-to-End Learnable Multi-Scale Feature Compression for VCM
+domain: video_image_coding
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2306.16670v3
+  url: https://arxiv.org/abs/2306.16670
+  pdf_url: https://arxiv.org/pdf/2306.16670v3
+  venue: arXiv preprint
+time:
+  published: '2023-06-29'
+  collected: '2026-11-14'
+entities:
+- ref: org:MPEG
+  role: subject
+- ref: codec:VVC
+  role: compared_against
+- ref: metric:BD-Rate
+  role: measured_by
+claims:
+- statement: 所提端到端多尺度特征压缩模型在目标检测任务上较先前特征压缩方法至少取得52%的BD-rate降低
+  confidence: reported
+  metrics:
+  - name: BD-Rate降幅
+    value: ≥52%
+    scope: 相对先前特征压缩方法，目标检测任务
+  evidence: abstract（初筛，未读全文）
+- statement: 该模型编码时间较基于VVC的方案减少5至27倍
+  confidence: reported
+  metrics:
+  - name: 编码时间降低倍数
+    value: ×5–×27
+    scope: 相对VVC基特征压缩方案，目标检测任务
+  evidence: abstract（初筛，未读全文）
+- statement: 先前基于VVC的特征压缩方案相对MPEG-VCM特征锚点最高可达96% BD-rate降低，但VVC并非为特征数据设计且编码复杂度高
+  confidence: reported
+  metrics:
+  - name: BD-Rate降幅
+    value: up to 96%
+    scope: 先前VVC方案相对MPEG-VCM特征锚点
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出融合与编码交织的端到端多尺度特征压缩模型，BD-rate较先前方法至少降52%，编码时间减少5–27倍
+  abstract_zh: 论文针对MPEG-VCM特征压缩轨道，指出基于VVC的方案虽相对MPEG-VCM特征锚点最高可降96% BD-rate，但VVC并非为提取特征设计且编码复杂度高、难以轻量化。作者将可学习压缩器与多尺度特征融合网络结合，以交织方式交替执行编码与融合：先编码较大尺度特征得到潜在表示，再与更小尺度特征融合，逐级处理直至最小尺度后对最终潜在表示进行熵编码传输。该设计可在提取特征上端到端优化并支持轻量编码器，在目标检测任务上较先前方法至少取得52%
+    BD-rate降低，编码时间减少5至27倍。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 面向MPEG-VCM特征压缩轨道的端到端可学习压缩，属核心编码域且与标准化直接相关，BD-rate与编码复杂度收益显著
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 面向机器视觉编码（VCM）的端到端可学习多尺度特征压缩
+relations:
+- type: same_topic
+  ref: paper:arxiv:2503.23772
+  note: 同为机器视觉视频特征压缩框架，均针对VCM特征传输优化

@@ -1,0 +1,62 @@
+id: paper:arxiv:2407.11541
+type: paper
+title: Uniformly Accelerated Motion Model for Inter Prediction
+domain: video_image_coding
+research_lines:
+- traditional_codec_opt
+source:
+  channel: arxiv
+  external_id: 2407.11541v2
+  url: https://arxiv.org/abs/2407.11541
+  pdf_url: https://arxiv.org/pdf/2407.11541v2
+  venue: arXiv preprint
+time:
+  published: '2024-07-16'
+  collected: '2026-11-14'
+entities:
+- ref: codec:VVC
+  role: subject
+- ref: concept:MMVD
+  role: uses
+- ref: impl:VTM
+  role: uses
+- ref: metric:BD-Rate
+  role: measured_by
+claims:
+- statement: UAMM集成进Merge、MMVD、CIIP等帧间预测模式后，在VVC参考软件VTM 12.0的Low-delay P配置下相比VTM锚点最高取得0.38%、平均0.13%的BD-rate节省
+  confidence: reported
+  metrics:
+  - name: BD-rate节省（最大）
+    value: 0.38%
+    scope: VTM 12.0锚点，Low-delay P配置
+  - name: BD-rate节省（平均）
+    value: 0.13%
+    scope: VTM 12.0锚点，Low-delay P配置
+  evidence: abstract（初筛，未读全文）
+- statement: UAMM利用帧间运动物体的速度与加速度信息，突破VVC现有帧间预测匀速线性模型的假设，可更好处理变速运动场景，编解码时间复杂度仅轻微增加
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出匀加速运动模型UAMM并集成进VVC的Merge/MMVD/CIIP模式，VTM 12.0上低延迟P配置平均节省0.13% BD-rate
+  abstract_zh: 帧间预测是消除视频时间冗余的关键技术，但VVC现有方法假设帧间匀速运动并采用线性运动估计/补偿模型，难以刻画真实视频中多目标变速运动形成的复杂运动场。本文提出匀加速运动模型（UAMM），利用运动物体间的速度与加速度信息辅助帧间预测：首先给出UAMM的理论基础，随后提出编码过程中基于UAMM的参数推导与外推方案，最后将其集成到Merge、MMVD、CIIP等现有帧间预测模式以提升预测精度。方法实现于VVC参考软件VTM
+    12.0，在Low-delay P配置下相比VTM锚点最高取得0.38%、平均0.13%的BD-rate节省，编解码两端时间复杂度仅轻微增加。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 核心域VVC帧间预测的原创运动建模工作，将匀速线性模型扩展为匀加速模型并集成进多种帧间模式，具备深读价值
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 面向帧间预测的匀加速运动模型
+relations:
+- type: same_topic
+  ref: paper:arxiv:2403.11694
+  note: 同为VVC帧间预测改进工作（基于目标分割辅助帧间预测）
+- type: same_topic
+  ref: paper:arxiv:2312.10406
+  note: 同为VTM帧间编码的分析与建模方向
+- type: same_topic
+  ref: paper:arxiv:2606.31084
+  note: 同涉及VVC/MMVD（带运动矢量差的合并模式）工具改进

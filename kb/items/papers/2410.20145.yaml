@@ -1,0 +1,62 @@
+id: paper:arxiv:2410.20145
+type: paper
+title: 'Cross-Platform Neural Video Coding: A Case Study'
+domain: video_image_coding
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2410.20145v1
+  url: https://arxiv.org/abs/2410.20145
+  pdf_url: https://arxiv.org/pdf/2410.20145v1
+  venue: arXiv preprint
+time:
+  published: '2024-10-26'
+  collected: '2026-11-14'
+entities:
+- ref: codec:HEVC
+  role: subject
+- ref: dataset:UVG
+  role: evaluated_on
+- ref: metric:BD-Rate
+  role: measured_by
+claims:
+- statement: 现有学习型视频编解码器（如SSF）因浮点舍入误差在编码端与解码端不同机器上产生编解码失配，会造成严重画质退化，不适合真实应用。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 对超先验解码路径进行静态量化（量化参数由PyTorch观测器与量化方案的穷举搜索确定），可在跨机器编解码时有效缓解失配、避免严重画质退化并改善压缩效率。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 同机编解码时，所提静态量化方案的平均BD-rate增加约为UVG 9.93%、HEVC-B序列 9.02%。
+  confidence: reported
+  metrics:
+  - name: BD-Rate
+    value: 9.93%
+    scope: 同机编解码，SSF+静态量化相对基线的平均增量，UVG序列
+  - name: BD-Rate
+    value: 9.02%
+    scope: 同机编解码，SSF+静态量化相对基线的平均增量，HEVC-B序列
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 以SSF编解码器为例，提出超先验解码路径静态量化，解决神经视频编解码器跨平台浮点失配问题。
+  abstract_zh: 论文指出，学习型视频编解码器（如SSF）在编码端与解码端运行于不同机器时，因浮点舍入误差产生编解码失配，严重时导致画质大幅退化，不适合真实应用。为此，作者提出对超先验（hyper
+    prior）解码路径进行静态量化，量化参数通过对PyTorch观测器与量化方案的所有可能组合穷举搜索确定。在跨机器编解码场景下，该方案有效缓解失配问题，避免严重画质退化并改善压缩效率。在同机编解码场景下，其代价为平均BD-rate增加9.93%（UVG序列）和9.02%（HEVC-B序列）。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 核心域学习型视频编码研究，直击编解码端跨平台浮点失配这一实际部署障碍并给出量化方案与代价。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 跨平台神经视频编码：案例研究
+relations:
+- type: same_topic
+  ref: paper:arxiv:2309.11276
+  note: 同属神经视频编解码器跨平台部署问题，利用校准信息解决跨平台一致性，研究主线相同
+- type: same_topic
+  ref: paper:arxiv:2606.28027
+  note: 面向真实世界部署的多平台学习型视频编解码器，与本案例研究的部署一致性问题同主题
+- type: same_topic
+  ref: paper:arxiv:2606.13110
+  note: 跨神经视频编码框架的混合精度量化优化，与本文静态量化缓解框架/平台差异的主题相关

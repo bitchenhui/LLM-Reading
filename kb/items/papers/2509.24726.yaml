@@ -1,0 +1,63 @@
+id: paper:arxiv:2509.24726
+type: paper
+title: 'Socratic-Zero : Bootstrapping Reasoning via Data-Free Agent Co-evolution'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2509.24726v1
+  url: https://arxiv.org/abs/2509.24726
+  pdf_url: https://arxiv.org/pdf/2509.24726v1
+  venue: arXiv preprint
+time:
+  published: '2025-09-29'
+  collected: '2026-11-14'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:SelfImprovement
+  role: uses
+claims:
+- statement: 仅从100道种子问题出发，Socratic-Solver-8B在七个数学推理基准（AMC23、AIME24-25、Olympiad、MATH-500、Minerva、GSM8K）上较既有数据合成方法平均提升20.2个百分点，并在Qwen3与GLM4系列上保持一致增益
+  confidence: reported
+  metrics:
+  - name: 平均准确率增益
+    value: +20.2 percentage points
+    scope: Socratic-Solver-8B，7个数学推理基准，相对既有数据合成方法
+  - name: 种子样例数量
+    value: 100 seed questions
+    scope: 训练数据起点，无需标注
+  evidence: abstract（初筛，未读全文）
+- statement: Socratic-Generator-32B合成的数据训练出的学生LLM在上述数学基准上优于Qwen3-235B-A22B、DeepSeek-V3.1-671B、GPT-5、Gemini-2.5-Pro、Grok-4、Claude-4.1-Opus等SOTA商用模型
+  confidence: reported
+  metrics:
+  - name: 对比对象数量
+    value: '6'
+    scope: 被超越的SOTA商用LLM数量
+  evidence: abstract（初筛，未读全文）
+- statement: 该框架为完全自主闭环系统，不依赖任何既有任务或标签，即可生成自改进的课程数据
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: Teacher/Generator/Solver三智能体闭环协同进化，从100道种子题自动生成课程训练数据，8B模型在7个数学推理基准上较既有数据合成方法平均提升20.2个百分点
+  abstract_zh: 论文提出Socratic-Zero，一个完全自主的框架，通过Teacher、Solver、Generator三个智能体的协同进化，从极少量种子样例生成高质量训练数据：Solver从成功与失败轨迹的偏好反馈中持续优化推理，Teacher依据Solver的弱点自适应构造更有挑战性的题目，Generator蒸馏Teacher的出题策略以实现可扩展的高保真课程生成。该闭环系统无需任何既有任务或标签即可产生自改进的课程。仅用100道种子问题，Socratic-Solver-8B在AMC23、AIME24-25、Olympiad、MATH-500、Minerva、GSM8K等七个数学推理基准上，较既有数据合成方法平均提升20.2个百分点，并在Qwen3与GLM4系列模型上保持一致增益。Socratic-Generator-32B合成的数据训练出的学生模型在这些基准上超越了Qwen3-235B-A22B、DeepSeek-V3.1-671B、GPT-5、Gemini-2.5-Pro、Grok-4、Claude-4.1-Opus等SOTA商用LLM。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: LLM自我改进与无标注数据合成的非核心域论文，与音视频技术无关，仅作summary_only收录
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 苏格拉底-零：通过无数据智能体协同进化引导推理能力
+relations:
+- type: same_topic
+  ref: paper:arxiv:2609.34975
+  note: 同为LLM推理的自我改进与训练信号设计
+- type: same_topic
+  ref: paper:arxiv:2610.11345
+  note: 同为通过多智能体协同进行数据合成以驱动LLM自进化
+- type: same_topic
+  ref: paper:arxiv:2611.12109
+  note: 同为基于响应反馈的模型与能力协同进化

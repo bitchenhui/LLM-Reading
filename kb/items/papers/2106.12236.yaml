@@ -1,0 +1,53 @@
+id: paper:arxiv:2106.12236
+type: paper
+title: Lossless Point Cloud Attribute Compression with Normal-based Intra Prediction
+domain: immersive_media
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2106.12236v1
+  url: https://arxiv.org/abs/2106.12236
+  pdf_url: https://arxiv.org/pdf/2106.12236v1
+  venue: arXiv preprint
+time:
+  published: '2021-06-23'
+  collected: '2026-11-14'
+entities:
+- ref: codec:G-PCC
+  role: subject
+- ref: org:MPEG
+  role: uses
+claims:
+- statement: G-PCC现有属性压缩帧内预测仅考虑基于距离的相似性，引入法向量夹角可更精确地挖掘局部相似性并优化预测子选择
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 将基于法向量的帧内预测实现进G-PCC参考软件后，在LiDAR采集数据集上无损属性编码相较G-PCC锚点平均获得2.1%压缩增益
+  confidence: reported
+  metrics:
+  - name: 无损属性编码平均压缩增益
+    value: 2.1%
+    scope: LiDAR数据集，相对G-PCC锚点，无损属性编码
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出基于法向量夹角的帧内预测优化G-PCC预测子选择，LiDAR点云无损属性编码平均增益2.1%
+  abstract_zh: 针对MPEG G-PCC中属性压缩帧内预测仅依赖距离相似性的不足，论文提出引入点云法向量的帧内预测方案。方法利用法向量之间的夹角进一步挖掘精确的局部相似性，从而优化预测子的选择。作者将该方法实现进G-PCC参考软件中。在LiDAR采集的数据集上的实验表明，相较G-PCC锚点，无损属性编码平均可获得2.1%的压缩增益。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 点云属性压缩属沉浸式媒体域（非核心视频编码域），但直接改进MPEG G-PCC标准工具，技术相关度较高
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 基于法向量的无损点云属性压缩帧内预测
+relations:
+- type: same_topic
+  ref: paper:arxiv:2505.20059
+  note: 同为LiDAR点云压缩研究，本文为G-PCC帧内预测改进，该文为学习式预测编码
+- type: same_topic
+  ref: paper:arxiv:2207.12554
+  note: 同属点云压缩（该文针对动态点云几何编码，本文针对属性编码）
+- type: same_topic
+  ref: paper:arxiv:2602.08613
+  note: 均围绕点云压缩标准框架（本文针对MPEG G-PCC，该文针对AVS点云压缩标准）

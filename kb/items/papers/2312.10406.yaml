@@ -1,0 +1,53 @@
+id: paper:arxiv:2312.10406
+type: paper
+title: Statistical Analysis of Inter Coding in VVC Test Model (VTM)
+domain: video_image_coding
+research_lines:
+- traditional_codec_opt
+source:
+  channel: arxiv
+  external_id: 2312.10406v1
+  url: https://arxiv.org/abs/2312.10406
+  pdf_url: https://arxiv.org/pdf/2312.10406v1
+  venue: arXiv preprint
+time:
+  published: '2023-12-16'
+  collected: '2026-11-14'
+entities:
+- ref: codec:VVC
+  role: subject
+- ref: impl:VTM
+  role: uses
+- ref: codec:HEVC
+  role: compared_against
+claims:
+- statement: VVC 相比 HEVC 压缩效率显著提升，但带来不可忽视的编码端复杂度开销，可能成为产业化实现的障碍。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 作者在 VTM 上针对 CU 尺寸与帧间编码模式开展统计分析，目的是帮助设计更优的 VVC 加速方法。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 对 VTM 的编码单元尺寸与帧间编码模式进行统计分析，为 VVC 编码器加速方法设计提供依据。
+  abstract_zh: VVC 相比 HEVC 在压缩效率上有显著提升，但代价是明显增加的编码端复杂度，可能阻碍其产业化落地。尽管已有大量 VVC 加速工作，但要设计更好的加速方法，仍需深入理解 VVC
+    的复杂度来源，尤其是新增划分结构与编码工具的贡献。为此，作者在 VVC 测试模型 VTM 上开展了统计分析，重点聚焦编码单元（CU）尺寸分布与帧间编码模式的使用情况。该分析旨在揭示复杂度开销与新工具/新划分的关联，为后续加速算法设计提供实证依据。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 核心域论文：对 VVC 测试模型 VTM 的帧间编码与 CU 划分进行统计分析，直接服务编码器复杂度理解与加速设计。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: VVC 测试模型（VTM）帧间编码的统计分析
+relations:
+- type: same_topic
+  ref: paper:arxiv:2605.21526
+  note: 同为基于 VTM 的 VVC 划分树搜索加速与评估研究
+- type: same_topic
+  ref: paper:arxiv:2312.10567
+  note: 同为 VVC 帧间划分加速方向，可利用本统计结果设计加速策略
+- type: same_topic
+  ref: paper:arxiv:2606.31084
+  note: 同为 VVC 帧间编码（Merge/MVD）加速研究

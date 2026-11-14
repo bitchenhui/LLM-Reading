@@ -1,0 +1,72 @@
+id: paper:arxiv:2409.07414
+type: paper
+title: 'NVRC: Neural Video Representation Compression'
+domain: video_image_coding
+research_lines:
+- inr_representation
+- learned_codec
+source:
+  channel: arxiv
+  external_id: 2409.07414v2
+  url: https://arxiv.org/abs/2409.07414
+  pdf_url: https://arxiv.org/pdf/2409.07414v2
+  venue: arXiv preprint
+time:
+  published: '2024-09-11'
+  collected: '2026-11-14'
+entities:
+- ref: impl:NVRC
+  role: subject
+- ref: concept:INR
+  role: uses
+- ref: concept:EntropyModel
+  role: uses
+- ref: codec:VVC
+  role: compared_against
+- ref: impl:VTM
+  role: compared_against
+- ref: dataset:UVG
+  role: evaluated_on
+- ref: metric:PSNR
+  role: measured_by
+claims:
+- statement: NVRC在UVG数据集上以PSNR衡量，相对VVC VTM（Random Access）平均取得24%编码增益，据作者所知是首个达到该性能的INR视频编解码器
+  confidence: reported
+  metrics:
+  - name: 平均编码增益
+    value: 24%
+    scope: UVG数据集，PSNR口径，对比VVC VTM Random Access
+  evidence: abstract（初筛，未读全文）
+- statement: 基于新型熵编码与量化模型，NVRC首次实现INR视频编解码器的完全端到端优化
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 提出分层模型压缩框架，统一编码网络参数、量化参数与熵模型参数，以最小化熵模型带来的码率开销
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: NVRC在实验中优于多种传统编解码器与学习型基准编解码器
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 首个端到端优化的INR视频压缩框架NVRC，UVG上PSNR较VVC VTM RA平均增益24%
+  abstract_zh: 本文提出NVRC（Neural Video Representation Compression）框架，与多数改进INR表示架构的工作不同，其目标是压缩表示本身。基于新提出的熵编码与量化模型，NVRC首次实现了INR视频编解码器的完全端到端优化。为进一步降低熵模型引入的码率开销，论文还提出分层模型压缩框架，对网络、量化及熵模型参数统一进行分层编码。实验表明NVRC优于多种传统与学习型基准编解码器，在UVG数据集上以PSNR衡量，较VVC
+    VTM（Random Access）平均取得24%编码增益，作者称这是INR视频编解码器首次达到该性能水平，实现将开源。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 核心域视频编码：首个实现端到端优化并超越VVC VTM的INR视频压缩框架，里程碑意义明确
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: NVRC：神经视频表示压缩
+relations:
+- type: same_topic
+  ref: paper:arxiv:2606.28163
+  note: NVRC++为NVRC框架的直接后续增强工作，覆盖更极端复杂度与质量范围
+- type: same_topic
+  ref: paper:arxiv:2609.04273
+  note: 同为神经视频表示压缩（Scalable NVRC）方向的系列研究
+- type: same_topic
+  ref: paper:arxiv:2604.08329
+  note: DiV-INR同样基于INR条件化的低码率视频压缩路线

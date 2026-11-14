@@ -1,0 +1,60 @@
+id: paper:arxiv:2303.14978
+type: paper
+title: Learned Image Compression with Mixed Transformer-CNN Architectures
+domain: video_image_coding
+research_lines:
+- learned_codec
+source:
+  channel: arxiv
+  external_id: 2303.14978v1
+  url: https://arxiv.org/abs/2303.14978
+  pdf_url: https://arxiv.org/pdf/2303.14978v1
+  venue: arXiv preprint
+time:
+  published: '2023-03-27'
+  collected: '2026-11-14'
+entities:
+- ref: impl:TCM
+  role: subject
+- ref: concept:EntropyModel
+  role: builds_on
+- ref: dataset:Kodak
+  role: evaluated_on
+claims:
+- statement: 提出并行Transformer-CNN混合（TCM）块，复杂度可控，融合CNN局部建模与Transformer非局部建模能力，改进图像压缩模型整体架构。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 提出基于通道压缩（channel squeezing）的参数高效SWAtten（Swin Transformer注意力）模块构成通道级熵模型。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在Kodak、Tecnick、CLIC Professional Validation三个不同分辨率数据集上，相比现有LIC方法取得SOTA率失真性能。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出并行Transformer-CNN混合块TCM与基于SWAtten的通道级熵模型，在多分辨率数据集上达到LIC的SOTA率失真性能。
+  abstract_zh: 该文提出一种高效并行的Transformer-CNN混合（TCM）块，复杂度可控，将CNN的局部建模能力与Transformer的非局部建模能力结合，用于改进图像压缩模型的整体架构。同时受近期熵估计模型与注意力模块进展的启发，提出通过通道
+    squeezing 实现参数高效的、带Swin Transformer注意力（SWAtten）模块的通道级熵模型。实验表明，该方法在Kodak、Tecnick与CLIC Professional
+    Validation三个不同分辨率数据集上取得优于现有学习图像压缩（LIC）方法的SOTA率失真性能。代码已在GitHub开源。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 核心域学习图像压缩代表性架构工作，提出TCM混合块与通道级熵模型并开源代码，在多个标准数据集上达到SOTA，值得深度阅读。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 混合Transformer-CNN架构的学习图像压缩
+relations:
+- type: same_topic
+  ref: paper:arxiv:2307.15421
+  note: 同为学习图像压缩的熵模型改进工作（MLIC++多参考熵建模）
+- type: same_topic
+  ref: paper:arxiv:2603.06766
+  note: 同为LIC熵建模方向（HiDE层次化字典熵模型）
+- type: same_topic
+  ref: paper:arxiv:2606.00111
+  note: 同为Transformer注意力与熵建模结合的LIC工作（ChWDTA）
+- type: same_topic
+  ref: paper:arxiv:2403.14471
+  note: 同为基于Swin Transformer块的LIC架构（S2LIC）

@@ -1,0 +1,64 @@
+id: paper:arxiv:2505.14541
+type: paper
+title: Neural Video Compression with Context Modulation
+domain: video_image_coding
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2505.14541v1
+  url: https://arxiv.org/abs/2505.14541
+  pdf_url: https://arxiv.org/pdf/2505.14541v1
+  venue: arXiv preprint
+time:
+  published: '2025-05-20'
+  collected: '2026-11-14'
+entities:
+- ref: codec:VVC
+  role: subject
+- ref: impl:DCVC-FM
+  role: compared_against
+claims:
+- statement: 所提出的上下文调制神经视频编解码器相对先进传统编码器H.266/VVC平均码率降低22.7%
+  confidence: reported
+  metrics:
+  - name: BD-rate
+    value: -22.7%
+    scope: 相对H.266/VVC传统编码基准的平均码率变化
+  evidence: abstract（初筛，未读全文）
+- statement: 所提方法相对此前最先进的神经视频编解码器DCVC-FM平均节省10.1%码率
+  confidence: reported
+  metrics:
+  - name: BD-rate
+    value: -10.1%
+    scope: 相对DCVC-FM（先前SOTA NVC）的平均码率变化
+  evidence: abstract（初筛，未读全文）
+- statement: 通过流导向挖掘参考帧与预测帧间相关性生成附加导向时域上下文，并以上下文补偿调制传播的时域上下文，结合协同机制与解耦损失监督消除无关传播信息，从而改善时域上下文建模
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出流导向与上下文补偿的上下文调制NVC，较H.266/VVC省22.7%、较DCVC-FM省10.1%码率
+  abstract_zh: 高效视频编码高度依赖时域冗余利用，条件编码式神经视频编解码器（NVC）的时域上下文传播机制难以充分利用参考信息，限制了性能提升。本文分两步用参考帧调制时域上下文：先提出流导向（flow
+    orientation）挖掘参考帧与预测帧间的相互关联，生成附加的导向时域上下文；再引入上下文补偿，用导向上下文调制由传播参考特征生成的时域上下文。通过协同机制与解耦损失监督，有效消除无关传播信息，实现更好的上下文建模。实验表明该编解码器较H.266/VVC平均降低22.7%码率，较此前最先进的DCVC-FM平均节省10.1%码率，代码已开源（DCMVC）。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 核心域神经视频压缩SOTA工作，以流导向+上下文补偿改进时域上下文建模，显著超越VVC与DCVC-FM，代码开源，值得深读。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 基于上下文调制的神经视频压缩
+relations:
+- type: same_topic
+  ref: paper:arxiv:2410.09706
+  note: ECVC同为条件编码式神经视频压缩，亦致力于更充分挖掘多帧时域相关性
+- type: same_topic
+  ref: paper:arxiv:2510.12479
+  note: MH-LVC同属学习式视频编码的时域上下文/条件残差建模方向
+- type: same_topic
+  ref: paper:arxiv:2603.05756
+  note: Uni-LVC同为学习式视频编解码器新工作，面向帧内/帧间统一编码
+- type: same_topic
+  ref: standard_proposal:jvet:m205-AO0186
+  note: 本文对比基线DCVC-FM已被JVET EE1纳入学习式编解码器评估，表明该技术线与标准化活动直接相关

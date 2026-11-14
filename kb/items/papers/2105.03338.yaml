@@ -1,0 +1,63 @@
+id: paper:arxiv:2105.03338
+type: paper
+title: Model Selection CNN-based VVC QualityEnhancement
+domain: processing_enhancement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2105.03338v1
+  url: https://arxiv.org/abs/2105.03338
+  pdf_url: https://arxiv.org/pdf/2105.03338v1
+  venue: arXiv preprint
+time:
+  published: '2021-05-07'
+  collected: '2026-11-14'
+entities:
+- ref: codec:VVC
+  role: subject
+- ref: concept:QP
+  role: uses
+- ref: impl:VTM
+  role: evaluated_on
+claims:
+- statement: 以规范预测信号、重建信号与QP图为输入的预测感知CNN后处理，相比不含预测信息的版本额外取得-1.3%的BD-BR增益。
+  confidence: reported
+  metrics:
+  - name: BD-BR
+    value: -1.3%
+    scope: VTM-10.0 Random Access配置，相对无预测信息的CNN方法
+  evidence: abstract（初筛，未读全文）
+- statement: 帧级/块级模型选择（MS）策略在预测感知方法基础上再叠加-0.5%的BD-BR增益。
+  confidence: reported
+  metrics:
+  - name: BD-BR
+    value: -0.5%
+    scope: VTM-10.0 Random Access配置，在预测感知方法之上
+  evidence: abstract（初筛，未读全文）
+- statement: MS策略由编码端在多个已训练模型中选取最佳模型并向解码端信号告知，可在帧级或块级实施。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 面向VVC提出预测感知CNN后滤波与帧/块级模型选择策略，在VTM-10.0 RA下合计约-1.8% BD-BR增益。
+  abstract_zh: 该文针对VVC编码码流提出一种CNN后处理算法，同时适用于帧内与帧间帧，用于去除压缩伪影。方法按帧类型利用规范预测信号，将其与重建信号和量化参数（QP）图一并作为CNN的附加输入。进一步引入可选的模型选择（MS）策略，由编码端从若干已训练模型中挑选最佳模型并向解码端发送信号，支持帧级与块级两种粒度。在VTM-10.0随机访问（RA）配置下的实验表明，预测感知设计相对不含预测信息的版本额外取得-1.3%
+    BD-BR增益，MS策略在其上再叠加-0.5% BD-BR增益。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: VVC码流的CNN后滤波与模型选择增强，属编码链路后处理增强域而非核心编码域，按基准仅初筛收录。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 基于模型选择的CNN VVC质量增强
+relations:
+- type: same_topic
+  ref: paper:arxiv:2105.05658
+  note: 同团队前期VVC预测感知CNN质量增强框架，本文的'-1.3%相对无预测信息方法'基线很可能对应该工作
+- type: same_topic
+  ref: paper:arxiv:2609.37328
+  note: 同为面向VVC的神经后滤波/质量增强研究线
+- type: same_topic
+  ref: paper:arxiv:2608.21495
+  note: 同为压缩视频质量增强（伪影去除）主题

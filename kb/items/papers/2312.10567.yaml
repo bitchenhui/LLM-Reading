@@ -1,0 +1,74 @@
+id: paper:arxiv:2312.10567
+type: paper
+title: Light-weight CNN-based VVC Inter Partitioning Acceleration
+domain: video_image_coding
+research_lines:
+- traditional_codec_opt
+source:
+  channel: arxiv
+  external_id: 2312.10567v1
+  url: https://arxiv.org/abs/2312.10567
+  pdf_url: https://arxiv.org/pdf/2312.10567v1
+  venue: arXiv preprint
+time:
+  published: '2023-12-17'
+  collected: '2026-11-14'
+entities:
+- ref: codec:VVC
+  role: subject
+- ref: codec:HEVC
+  role: compared_against
+- ref: impl:VTM
+  role: evaluated_on
+- ref: concept:RDO
+  role: uses
+- ref: metric:BD-Rate
+  role: measured_by
+claims:
+- statement: 方法在CTU级将编码单元划分为固定8×8网格，用轻量CNN为每个网格单元预测划分深度，并在率失真优化中限制QT分割搜索、剪除不太可能被选中的划分
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在VTM10的RandomAccess GOP32配置下，该方法实现17%–30%的编码加速，代价是BD-rate上升0.37%–1.18%
+  confidence: reported
+  metrics:
+  - name: 编码时间降低
+    value: 17%-30%
+    scope: VTM10 RAGOP32 配置，相对未加速基线
+  - name: BD-rate增幅
+    value: 0.37%-1.18%
+    scope: VTM10 RAGOP32 配置，相对未加速基线
+  evidence: abstract（初筛，未读全文）
+- statement: VVC标准相较HEVC在BD-rate上获得约50%的压缩效率增益，但编码器复杂度约为HEVC的10倍，是本文加速工作的动机背景
+  confidence: reported
+  metrics:
+  - name: BD-rate增益
+    value: 约50%
+    scope: VVC 相对 HEVC（JVET 2020 定稿时口径）
+  - name: 编码器复杂度
+    value: 约10x
+    scope: VVC 相对 HEVC 编码复杂度
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出轻量CNN在CTU级预测8×8网格划分深度以剪枝VVC帧间QT搜索，VTM10 RA下提速17–30%，BD-rate仅增0.37–1.18%
+  abstract_zh: 针对VVC较HEVC带来约50% BD-rate增益但编码复杂度约10倍的问题，作者提出一种轻量级CNN方法加速VVC帧间划分决策。方法将每个CTU划分为固定的8×8网格，用小型网络为每个单元预测其划分深度信息，并在率失真优化过程中据此限制QT分割搜索、剪除
+    unlikely 的划分候选。在VTM10的RandomAccess GOP32配置下，该方法取得17%–30%的编码加速，BD-rate仅上升0.37%–1.18%，实现了速度与压缩效率的良好权衡。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 核心域论文：用轻量CNN加速VVC帧间划分决策，方法与实验结果完整，属编码器复杂度优化的代表性工作
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 基于轻量级CNN的VVC帧间划分加速
+relations:
+- type: same_topic
+  ref: paper:arxiv:2605.21526
+  note: 同属VVC划分树搜索加速研究，该文为VTM演进下的综述与评测，可直接对照本文CNN方法的定位
+- type: same_topic
+  ref: paper:arxiv:2605.29063
+  note: 同为CNN类网络预测划分决策以加速编码，但针对HEVC帧内划分，与本文VVC帧间划分构成方法族内对照
+- type: same_topic
+  ref: paper:arxiv:2606.31084
+  note: 同为VVC编码器复杂度削减工作（VVenC上加速Merge+MVD决策），与本文同属快速模式决策方向

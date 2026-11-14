@@ -1,0 +1,77 @@
+id: paper:arxiv:2502.20762
+type: paper
+title: Towards Practical Real-Time Neural Video Compression
+domain: video_image_coding
+research_lines:
+- learned_codec
+source:
+  channel: arxiv
+  external_id: 2502.20762v2
+  url: https://arxiv.org/abs/2502.20762
+  pdf_url: https://arxiv.org/pdf/2502.20762v2
+  venue: arXiv preprint
+time:
+  published: '2025-02-28'
+  collected: '2026-11-14'
+entities:
+- ref: impl:DCVC-RT
+  role: subject
+- ref: codec:VVC
+  role: compared_against
+- ref: impl:VTM
+  role: compared_against
+- ref: metric:FPS
+  role: measured_by
+- ref: org:Microsoft
+  role: affiliation
+claims:
+- statement: DCVC-RT在1080p视频上实现平均125.2 fps编码与112.8 fps解码的实时性能，且不牺牲压缩质量。
+  confidence: reported
+  metrics:
+  - name: 编码速度
+    value: 125.2 fps
+    scope: 1080p视频平均
+  - name: 解码速度
+    value: 112.8 fps
+    scope: 1080p视频平均
+  evidence: abstract（初筛，未读全文）
+- statement: DCVC-RT相比H.266/VTM平均节省21%码率。
+  confidence: reported
+  metrics:
+  - name: 码率节省
+    value: 21%
+    scope: 相对H.266/VTM平均
+  evidence: abstract（初筛，未读全文）
+- statement: 研究发现NVC编码速度的首要瓶颈是非计算性操作开销（内存I/O与函数调用次数），而非多数工作关注的计算量。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 通过隐式时域建模消除显式运动模块、以单一低分辨率潜在表示取代渐进下采样实现加速；模型整数化保证跨设备编解码一致，模块库式码率控制增强实用适应性。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出实时神经视频编解码器DCVC-RT，1080p编/解码达125.2/112.8 fps且较VTM节省21%码率。
+  abstract_zh: 论文指出，神经视频编码器（NVC）的编码速度瓶颈主要不在计算量，而在内存I/O、函数调用次数等非计算性操作开销。据此提出一系列效率导向设计：以隐式时域建模取代复杂的显式运动模块，用单一低分辨率潜在表示取代渐进式下采样，在不牺牲压缩质量的前提下大幅加速。同时实现模型整数化以保证跨设备编解码一致性，并采用模块库式码率控制提升实用性。实验表明，DCVC-RT在1080p视频上平均编/解码速度达125.2/112.8
+    fps，同时相比H.266/VTM平均节省21%码率。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 核心域神经视频编码的标杆工作，首次实现1080p实时编解码且码率显著优于VTM，兼具方法洞见与工程落地价值，值得深读。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 迈向实用的实时神经视频压缩
+relations:
+- type: same_topic
+  ref: paper:arxiv:2606.04595
+  note: 同属神经视频编码加速/低复杂度化研究线（KD-NVC蒸馏加速NVC）
+- type: same_topic
+  ref: paper:arxiv:2606.28027
+  note: 同属面向实际部署的多平台学习型视频编解码器研究线（MLVC）
+- type: same_topic
+  ref: standard_proposal:jvet:m205-AO0191
+  note: JVET AHG11将DCVC-RT作为端到端学习型帧内编解码器进行评估，直接引用本工作
+- type: same_topic
+  ref: standard_proposal:jvet:m206-AP0080
+  note: JVET EE1-4再次以DCVC-RT作为学习型端到端帧内编解码器开展评估

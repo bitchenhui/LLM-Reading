@@ -1,0 +1,70 @@
+id: paper:arxiv:2306.09818
+type: paper
+title: 'HiNeRV: Video Compression with Hierarchical Encoding-based Neural Representation'
+domain: video_image_coding
+research_lines:
+- inr_representation
+source:
+  channel: arxiv
+  external_id: 2306.09818v3
+  url: https://arxiv.org/abs/2306.09818
+  pdf_url: https://arxiv.org/pdf/2306.09818v3
+  venue: arXiv preprint
+time:
+  published: '2023-06-16'
+  collected: '2026-11-14'
+entities:
+- ref: impl:HiNeRV
+  role: subject
+- ref: concept:INR
+  role: builds_on
+- ref: dataset:UVG
+  role: evaluated_on
+- ref: dataset:MCL-JCV
+  role: evaluated_on
+- ref: metric:PSNR
+  role: measured_by
+claims:
+- statement: HiNeRV在UVG数据集上以PSNR衡量，总体比特率较HNeRV节省72.3%。
+  confidence: reported
+  metrics:
+  - name: bit_rate_saving
+    value: 72.3%
+    scope: UVG数据集、PSNR口径、对比HNeRV
+  evidence: abstract（初筛，未读全文）
+- statement: HiNeRV在UVG数据集上以PSNR衡量，总体比特率较DCVC节省43.4%。
+  confidence: reported
+  metrics:
+  - name: bit_rate_saving
+    value: 43.4%
+    scope: UVG数据集、PSNR口径、对比DCVC
+  evidence: abstract（初筛，未读全文）
+- statement: HiNeRV统一以帧和patch两种粒度同时编码视频，相较现有INR方法提供更高性能与灵活性。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出带分层位置编码的高容量INR视频表示HiNeRV，在UVG上较HNeRV节省72.3%比特率。
+  abstract_zh: 论文提出HiNeRV，一种结合轻量层与新型分层位置编码的隐式神经表示（INR）用于视频压缩，利用深度卷积、MLP与插值层构建高容量的深层宽网络，并统一以帧和patch两种粒度编码视频，提供更高的性能与灵活性。作者进一步构建了基于HiNeRV的视频编解码器，设计了精化的训练、剪枝与量化流程，在模型有损压缩中更好保留性能。在UVG与MCL-JCV数据集上的评估表明，该方法显著优于所有现有INR基线，且与学习型编解码器具有竞争力。以UVG数据集PSNR衡量，总体比特率较HNeRV节省72.3%，较DCVC节省43.4%。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: INR神经视频压缩核心域代表作，显著刷新INR基线并与学习型编解码器竞争。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: HiNeRV：基于分层编码神经表示的视频压缩
+relations:
+- type: same_topic
+  ref: paper:arxiv:2409.07414
+  note: NVRC同为神经视频表示压缩（Bristol团队系列工作），与HiNeRV同属INR视频压缩主线
+- type: same_topic
+  ref: paper:arxiv:2506.15276
+  note: MSNeRV为NeRV系列多尺度特征融合改进，与HiNeRV同属NeRV类INR视频压缩
+- type: same_topic
+  ref: paper:arxiv:2606.28163
+  note: NVRC++针对神经视频表示压缩的复杂度-质量权衡，与HiNeRV同主题
+- type: same_topic
+  ref: paper:arxiv:2604.08329
+  note: DiV-INR以INR为条件的极低码率扩散视频压缩，同属INR视频压缩线

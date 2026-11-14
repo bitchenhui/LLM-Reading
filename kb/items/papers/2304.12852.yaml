@@ -1,0 +1,68 @@
+id: paper:arxiv:2304.12852
+type: paper
+title: The Bjøntegaard Bible -- Why your Way of Comparing Video Codecs May Be Wrong
+domain: video_image_coding
+research_lines:
+- traditional_codec_opt
+source:
+  channel: arxiv
+  external_id: 2304.12852v2
+  url: https://arxiv.org/abs/2304.12852
+  pdf_url: https://arxiv.org/pdf/2304.12852v2
+  venue: arXiv preprint
+time:
+  published: '2023-04-25'
+  collected: '2026-11-14'
+entities:
+- ref: metric:PSNR
+  role: subject
+- ref: metric:VMAF
+  role: measured_by
+- ref: metric:SSIM
+  role: measured_by
+- ref: concept:QP
+  role: uses
+claims:
+- statement: BD计算在PSNR率失真比较的标准应用中最为准确，平均误差低于0.5个百分点
+  confidence: reported
+  metrics:
+  - name: BD平均插值误差
+    value: <0.5
+    scope: 单位为百分点(pp)；PSNR率失真比较的标准应用场景
+  evidence: abstract（初筛，未读全文）
+- statement: 在VMAF质量、能耗和跨编解码器比较等非标准应用中BD误差更高，增加支撑点数量可使误差减半
+  confidence: reported
+  metrics:
+  - name: BD最大插值误差
+    value: '5'
+    scope: 单位为百分点(pp)；VMAF、能耗、跨codec比较等特殊场景
+  - name: 误差下降
+    value: 约减半
+    scope: 增加QP支撑点数量后的误差改善幅度
+  evidence: abstract（初筛，未读全文）
+- statement: 使用建议：应绘制并分析相对曲线差异；对SSIM和VMAF等饱和指标应在对数域计算BD；低于子集误差阈值指示的BD值不应用于下结论；两个支撑点已足够获得粗略性能估计
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 大规模实验量化Bjøntegaard Delta插值误差：标准RD比较误差<0.5pp，特殊场景可达5pp，并给出使用建议
+  abstract_zh: 本文对Bjøntegaard Delta（BD）计算进行深入评估，构建了覆盖PSNR、VMAF、比特率及处理能耗等多种指标的大规模视频压缩性能对比数据集，涉及普通视频、360°视频、点云和屏幕内容，并涵盖传统混合编码器与最先进的神经压缩方法。通过在QP等参数定义的标准点之间加入额外支撑点，作者量化了BD计算的插值误差及其对最终BD值的影响。结果表明，BD计算在PSNR率失真比较的标准应用中最准确，平均误差低于0.5个百分点；而在VMAF质量、能耗和跨编解码器比较等场景误差最高可达5个百分点，增加支撑点数量可使误差减半。作者最终给出建议：应绘制并分析相对曲线差异、对SSIM和VMAF等饱和指标使用对数域、低于子集误差阈值的BD值不应用于下结论、两个支撑点即可获得粗略性能估计。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 核心域方法学论文，系统量化编码器对比标准工具BD计算的插值误差并给出使用规范，对几乎所有编码性能比较工作具有基础性参考价值
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: Bjøntegaard 圣经——你比较视频编解码器的方式为何可能是错的
+relations:
+- type: same_topic
+  ref: paper:arxiv:2605.15800
+  note: 同为编解码器压缩性能评估方法学（AV2视频质量评估与结果）
+- type: same_topic
+  ref: paper:arxiv:2408.05042
+  note: 同为传统与神经视频编解码器的基准测试对比研究
+- type: same_topic
+  ref: paper:arxiv:2511.00969
+  note: 同为主题：用客观质量指标评估神经与传统编解码器

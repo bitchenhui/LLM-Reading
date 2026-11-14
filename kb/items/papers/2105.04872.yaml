@@ -1,0 +1,63 @@
+id: paper:arxiv:2105.04872
+type: paper
+title: 'EDPN: Enhanced Deep Pyramid Network for Blurry Image Restoration'
+domain: processing_enhancement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2105.04872v1
+  url: https://arxiv.org/abs/2105.04872
+  pdf_url: https://arxiv.org/pdf/2105.04872v1
+  venue: arXiv preprint
+time:
+  published: '2021-05-11'
+  collected: '2026-11-14'
+entities:
+- ref: concept:SuperResolution
+  role: subject
+- ref: metric:PSNR
+  role: measured_by
+- ref: metric:SSIM
+  role: measured_by
+- ref: metric:LPIPS
+  role: measured_by
+claims:
+- statement: EDPN在NTIRE 2021图像去模糊挑战赛赛道1（低分辨率）取得最佳PSNR/SSIM/LPIPS成绩。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: EDPN在NTIRE 2021赛道2（JPEG伪影）取得最佳SSIM/LPIPS成绩。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 实验结果表明EDPN在模糊图像超分辨率与模糊图像去块效应任务上显著优于现有解决方案。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: PPT模块通过多份退化图像副本渐进传递自尺度与跨尺度相似性信息，PSA模块以自注意力和空间注意力完成特征融合与恢复。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出金字塔结构网络EDPN，联合处理模糊、降尺度与压缩退化，NTIRE 2021去模糊双赛道成绩领先。
+  abstract_zh: 针对实际场景中模糊图像常伴随降尺度、压缩等额外退化的问题，提出增强深度金字塔网络EDPN进行多退化模糊图像恢复。设计金字塔渐进传递（PPT）模块，以同一退化图像的多个副本为输入，渐进式传递自尺度与跨尺度相似性信息；再由金字塔自注意力（PSA）模块用自注意力与空间注意力机制融合上述特征完成恢复。实验表明该方法在模糊图像超分辨率与模糊图像去块效应任务上显著优于现有方案。在NTIRE
+    2021图像去模糊挑战赛中，EDPN在赛道1（低分辨率）取得最佳PSNR/SSIM/LPIPS，在赛道2（JPEG伪影）取得最佳SSIM/LPIPS。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 属于模糊图像多退化恢复（去模糊/超分/去块）的增强类工作，非核心编码域，按基准给 summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: EDPN：用于模糊图像恢复的增强深度金字塔网络
+relations:
+- type: same_topic
+  ref: paper:arxiv:2106.08147
+  note: 同属压缩/退化视频图像超分辨率恢复方向
+- type: same_topic
+  ref: paper:arxiv:2407.13108
+  note: 同属压缩图像超分辨率增强方向
+- type: same_topic
+  ref: paper:arxiv:2609.37328
+  note: 同属面向编码输出的神经超分后处理/增强网络
+- type: same_topic
+  ref: paper:arxiv:2104.10781
+  note: 同属NTIRE 2021压缩视频质量增强挑战赛系列工作

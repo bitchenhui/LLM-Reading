@@ -1,0 +1,59 @@
+id: paper:arxiv:2411.09308
+type: paper
+title: 'DT-JRD: Deep Transformer based Just Recognizable Difference Prediction Model for Video Coding
+  for Machines'
+domain: video_image_coding
+research_lines:
+- coding_for_machines
+source:
+  channel: arxiv
+  external_id: 2411.09308v1
+  url: https://arxiv.org/abs/2411.09308
+  pdf_url: https://arxiv.org/pdf/2411.09308v1
+  venue: arXiv preprint
+time:
+  published: '2024-11-14'
+  collected: '2026-11-14'
+entities:
+- ref: concept:ICM
+  role: subject
+- ref: codec:VVC
+  role: compared_against
+claims:
+- statement: DT-JRD预测JRD的平均绝对误差为5.574，较当时最优JRD预测模型提升13.1%。
+  confidence: reported
+  metrics:
+  - name: JRD预测平均绝对误差(MAE)
+    value: '5.574'
+    scope: DT-JRD模型，JRD预测任务
+  - name: 相对SOTA JRD预测模型提升
+    value: 13.1%
+    scope: 对比当时最优JRD预测模型
+  evidence: abstract（初筛，未读全文）
+- statement: 基于DT-JRD的VCM编码方案相比VVC平均节省29.58%码率，同时保持目标检测精度。
+  confidence: reported
+  metrics:
+  - name: 平均码率节省
+    value: 29.58%
+    scope: 相对VVC基线，目标检测精度保持不变
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出深度Transformer的JRD预测模型DT-JRD用于机器视觉编码，较VVC平均节省29.58%码率且保持目标检测精度。
+  abstract_zh: 论文将机器视觉可识别的最小视觉差异（JRD）预测建模为多分类问题，提出集成改进嵌入、内容与失真特征提取、多分类头及新型学习策略的DT-JRD模型。基于机器视觉在JRD附近对失真响应相似的感知特性，提出以高斯分布软标签（GDSL）实现的渐进式JRD损失，显著扩展训练标签数量并放宽分类边界。进而构建基于DT-JRD预测的VCM编码框架，在保持目标检测精度的同时降低编码码率。实验显示DT-JRD预测JRD的平均绝对误差为5.574，较当时最优JRD预测模型提升13.1%；编码实验中相比VVC平均节省29.58%码率且目标检测精度不变。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 核心域面向机器视觉的视频编码（VCM）工作，提出JRD预测新模型并相对VVC取得显著码率节省，具深读价值。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: DT-JRD：基于深度Transformer的面向机器视频编码的最小可识别差异预测模型
+relations:
+- type: same_topic
+  ref: paper:arxiv:2604.09421
+  note: 同属面向机器视频编码的JRD数据库、模型与编码应用主题，本文对比的SOTA JRD预测模型大概率即为此类工作
+- type: same_topic
+  ref: paper:arxiv:2503.23772
+  note: 同属面向机器的视频压缩框架主题

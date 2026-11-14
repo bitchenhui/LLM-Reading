@@ -1,0 +1,62 @@
+id: paper:arxiv:2308.06570
+type: paper
+title: On Versatile Video Coding at UHD with Machine-Learning-Based Super-Resolution
+domain: video_image_coding
+research_lines:
+- traditional_codec_opt
+source:
+  channel: arxiv
+  external_id: 2308.06570v1
+  url: https://arxiv.org/abs/2308.06570
+  pdf_url: https://arxiv.org/pdf/2308.06570v1
+  venue: arXiv preprint
+time:
+  published: '2023-08-12'
+  collected: '2026-11-14'
+entities:
+- ref: codec:VVC
+  role: subject
+- ref: concept:SuperResolution
+  role: uses
+- ref: concept:QP
+  role: uses
+- ref: metric:BD-Rate
+  role: measured_by
+claims:
+- statement: 在4K序列上，先空间下采样再VVC编码、解码后用ML超分辨率重建的编码链，在低码率场景下质量优于常规VVC参考软件。
+  confidence: reported
+  metrics:
+  - name: BD-Rate增益
+    value: 12%
+    scope: QP>34，编码4K序列，VVC+ML超分辨率编码链 vs VVC参考软件，平均值
+  - name: BD-Rate增益
+    value: 18%
+    scope: QP>42，编码4K序列，VVC+ML超分辨率编码链 vs VVC参考软件，平均值
+  evidence: abstract（初筛，未读全文）
+- statement: 下采样+超分辨率编码链有助于减少细节损失和压缩伪影（视觉示例展示）。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出4K下采样编码+ML超分辨率重建的编码链，低码率下较VVC参考软件最高取得18% BD-rate增益。
+  abstract_zh: 针对4K超高清视频数据量激增的问题，论文提出将新一代VVC编码器与基于机器学习的单图像超分辨率算法相结合的空间下采样-编码-上采样编码链：4K内容先下采样再进行VVC编码，解码端用ML超分辨率恢复至原始分辨率。实验表明，该编码链在低码率场景下质量优于常规VVC参考软件。多组测试显示，当QP大于34和42时，编码4K序列平均可分别获得最高12%和18%的Bjontegaard
+    delta率增益。视觉示例还说明下采样+超分辨率方案有助于减少细节损失和压缩伪影。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 核心域论文：将VVC编码与ML超分辨率结合的4K编码链，给出QP>34/42下最高12%/18%的BD-rate增益等可靠量化结果，与主流编码优化方向高度相关。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 面向超高清的VVC编码结合机器学习超分辨率研究
+relations:
+- type: same_topic
+  ref: paper:arxiv:2609.37328
+  note: 同为VVC编码结合神经超分辨率后滤波提升压缩视频质量的编码链研究
+- type: same_topic
+  ref: paper:arxiv:2305.04844
+  note: 同为超分辨率辅助视频编码降低码率的基准研究
+- type: same_topic
+  ref: paper:arxiv:2104.02322
+  note: 同为内容自适应超分辨率辅助视频压缩方向

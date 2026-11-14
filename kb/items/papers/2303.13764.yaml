@@ -1,0 +1,79 @@
+id: paper:arxiv:2303.13764
+type: paper
+title: 'GQE-Net: A Graph-based Quality Enhancement Network for Point Cloud Color Attribute'
+domain: immersive_media
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2303.13764v3
+  url: https://arxiv.org/abs/2303.13764
+  pdf_url: https://arxiv.org/pdf/2303.13764v3
+  venue: arXiv preprint
+time:
+  published: '2023-03-24'
+  collected: '2026-11-14'
+entities:
+- ref: codec:G-PCC
+  role: subject
+- ref: metric:BD-Rate
+  role: measured_by
+- ref: metric:PSNR
+  role: measured_by
+claims:
+- statement: 将GQE-Net应用于G-PCC最新测试模型后，稠密点云Y分量可获得0.43 dB的BD-PSNR增益，对应14.0%的BD-rate节省。
+  confidence: reported
+  metrics:
+  - name: BD-PSNR
+    value: 0.43 dB
+    scope: G-PCC测试模型，稠密点云，Y分量
+  - name: BD-Rate
+    value: 14.0%
+    scope: G-PCC测试模型，稠密点云，Y分量，码率节省
+  evidence: abstract（初筛，未读全文）
+- statement: 在稠密点云Cb分量上，GQE-Net可获得0.25 dB的BD-PSNR增益，对应9.3%的BD-rate节省。
+  confidence: reported
+  metrics:
+  - name: BD-PSNR
+    value: 0.25 dB
+    scope: G-PCC测试模型，稠密点云，Cb分量
+  - name: BD-Rate
+    value: 9.3%
+    scope: G-PCC测试模型，稠密点云，Cb分量，码率节省
+  evidence: abstract（初筛，未读全文）
+- statement: 在稠密点云Cr分量上，GQE-Net可获得0.36 dB的BD-PSNR增益，对应14.5%的BD-rate节省。
+  confidence: reported
+  metrics:
+  - name: BD-PSNR
+    value: 0.36 dB
+    scope: G-PCC测试模型，稠密点云，Cr分量
+  - name: BD-Rate
+    value: 14.5%
+    scope: G-PCC测试模型，稠密点云，Cr分量，码率节省
+  evidence: abstract（初筛，未读全文）
+- statement: 作者声称GQE-Net在点云颜色质量增强任务上达到当时最先进（SOTA）性能。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出图注意力网络GQE-Net，利用几何信息增强G-PCC压缩点云的颜色属性，稠密点云最高可省14.0%码率。
+  abstract_zh: 针对点云压缩造成的颜色失真，论文提出基于图卷积的质量增强网络GQE-Net，以几何信息作为辅助输入，用图卷积模块高效提取局部特征。网络设计了并行-串行多头图注意力模块以聚焦并融合重要点与特征，并引入考虑法线与点间几何距离的特征精化模块。为适应GPU显存限制，将失真点云划分为允许重叠的3D块送入网络处理，并针对Y/Cb/Cr三个颜色分量的数据分布差异分别训练三个模型。在G-PCC最新测试模型上，稠密点云Y、Cb、Cr分量分别取得0.43
+    dB、0.25 dB、0.36 dB的BD-PSNR增益，对应14.0%、9.3%、14.5%的BD-rate节省，达到当时最优水平，源代码已开源。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 点云颜色属性压缩后增强属沉浸式媒体（点云）域，非核心视频/图像编码域，按规则最高给 summary_only；但其基于G-PCC标准测试模型且结果显著，与音视频技术生态高度相关。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: GQE-Net：一种基于图的点云颜色属性质量增强网络
+relations:
+- type: same_topic
+  ref: paper:arxiv:2207.12554
+  note: 同为点云压缩方向（动态点云几何帧间编码），与本文的G-PCC压缩增强属同一研究主题
+- type: same_topic
+  ref: paper:arxiv:2607.03576
+  note: 体素/点云体视频属性压缩的运动估计技术，与本文点云颜色属性压缩增强同主题
+- type: same_topic
+  ref: paper:arxiv:2602.08613
+  note: AVS点云压缩标准综述，与本文所基于的G-PCC点云压缩标准生态相关

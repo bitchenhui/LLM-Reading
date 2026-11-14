@@ -1,0 +1,66 @@
+id: paper:arxiv:2305.04844
+type: paper
+title: 'SR+Codec: a Benchmark of Super-Resolution for Video Compression Bitrate Reduction'
+domain: processing_enhancement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2305.04844v3
+  url: https://arxiv.org/abs/2305.04844
+  pdf_url: https://arxiv.org/pdf/2305.04844v3
+  venue: arXiv preprint
+time:
+  published: '2023-05-08'
+  collected: '2026-11-14'
+entities:
+- ref: concept:SuperResolution
+  role: subject
+- ref: codec:AVC
+  role: evaluated_on
+- ref: codec:HEVC
+  role: evaluated_on
+- ref: codec:VVC
+  role: evaluated_on
+- ref: codec:AV1
+  role: evaluated_on
+claims:
+- statement: 基准数据集采用基于五种广泛使用的压缩标准（H.264、H.265、H.266、AV1、AVS3）的编码器生成测试码流。
+  confidence: reported
+  metrics:
+  - name: 覆盖压缩标准数
+    value: '5'
+    scope: H.264/H.265/H.266/AV1/AVS3
+  evidence: abstract（初筛，未读全文）
+- statement: 在自建压缩视频基准上评估了19个流行SR模型，分析其细节恢复能力与对压缩伪影的敏感性。
+  confidence: reported
+  metrics:
+  - name: 评估SR模型数量
+    value: '19'
+    scope: 五种编码标准压缩视频基准
+  evidence: abstract（初筛，未读全文）
+- statement: 发现部分SR模型与压缩结合可在不明显损失主观质量的前提下降低视频码率。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 将多种图像/视频质量指标与主观分数对比，评估这些指标在超分压缩视频上的准确性。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 构建覆盖五种压缩标准的压缩视频超分基准，评测19个SR模型降码率能力与压缩伪影敏感性。
+  abstract_zh: 作者搭建了一个针对压缩视频的超分辨率基准数据集，其码流来自基于 H.264、H.265、H.266、AV1、AVS3 五种广泛使用压缩标准的编码器。在该基准上评估了19个流行SR模型，考察其细节恢复能力以及对压缩伪影的敏感性。为获得可靠的感知排序，还开展了众包并排主观对比实验。结果显示，部分SR模型与压缩结合可在不明显损失质量的前提下降低视频码率；此外将多种图像/视频质量指标与主观分数对比，检验其在超分压缩视频上的准确性。基准数据与结果已公开。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 核心是超分辨率增强作用于五种主流编码器压缩码流的基准评测，属编码链路增强而非编码器本身，按非核心域收录为 summary_only，但对编码生态参考价值高。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: SR+Codec：面向视频压缩码率降低的超分辨率基准
+relations:
+- type: same_topic
+  ref: paper:arxiv:2609.37328
+  note: 同属超分辨率作用于编码码流的码率/质量优化（CASR 为 VVC 内容自适应超分后滤波）
+- type: same_topic
+  ref: paper:arxiv:2611.11831
+  note: 同样研究超分辨率与压缩伪影去除的联合处理

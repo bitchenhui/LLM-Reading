@@ -1,0 +1,62 @@
+id: paper:arxiv:2106.08147
+type: paper
+title: Perceptually-inspired super-resolution of compressed videos
+domain: video_image_coding
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2106.08147v1
+  url: https://arxiv.org/abs/2106.08147
+  pdf_url: https://arxiv.org/pdf/2106.08147v1
+  venue: arXiv preprint
+time:
+  published: '2021-06-15'
+  collected: '2026-11-14'
+entities:
+- ref: concept:SuperResolution
+  role: subject
+- ref: codec:HEVC
+  role: uses
+- ref: impl:HM
+  role: compared_against
+- ref: metric:VMAF
+  role: measured_by
+- ref: org:JVET
+  role: uses
+claims:
+- statement: M-SRGAN 以 GAN 在压缩内容上用感知损失训练，作为解码端空间上采样集成到 HEVC HM 16.20，在 JVET CTC（UHD、Random Access）下相对原始
+    HM 16.20 感知质量明显提升，平均码率节省 35.6%（BD 度量、以 VMAF 计算）
+  confidence: reported
+  metrics:
+  - name: Bjøntegaard Delta 码率节省
+    value: 35.6%
+    scope: 基于 VMAF；JVET 通用测试条件 UHD 测试序列、Random Access 配置；对比锚点为原始 HEVC HM 16.20
+  evidence: abstract（初筛，未读全文）
+- statement: 论文认为 MSE 等像素域损失与主观评价相关性差，因此改用感知损失函数在压缩内容上训练超分模型，以提升重建的主观质量
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出感知驱动超分 M-SRGAN（GAN+感知损失），集成 HEVC HM 后按 VMAF 测得平均 35.6% BD 码率节省
+  abstract_zh: 论文针对视频编码中的空间分辨率自适应（低分辨率编码、解码端上采样重建）路线，提出感知驱动的超分辨率方法 M-SRGAN。该方法采用改进的 CNN 模型，通过生成对抗网络（GAN）在压缩内容上以感知损失函数训练，替代传统上采样滤波器，以克服
+    MSE 类像素损失与主观质量相关性差的问题。方法集成到 HEVC HM 16.20，并在 JVET 通用测试条件（UHD 测试序列）的 Random Access 配置下评估。结果显示相对原始 HM
+    16.20 感知质量明显提升，以 VMAF 衡量的 Bjøntegaard Delta 平均码率节省达 35.6%。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 核心域论文：将感知驱动超分作为编码工具集成进 HEVC，在 JVET CTC 下取得 35.6% VMAF-BD 码率节省，具备深读价值
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 面向感知的压缩视频超分辨率
+relations:
+- type: same_topic
+  ref: paper:arxiv:2305.04844
+  note: SR+Codec 同样研究超分辨率用于视频编码码率节省的基准
+- type: same_topic
+  ref: paper:arxiv:2609.37328
+  note: CASR 同为面向视频编码（VVC）的内容自适应神经超分后滤波
+- type: same_topic
+  ref: standard_proposal:jvet:m188-X0117
+  note: JVET EE1-2.1 探索基于 VVC 现有功能的超分辨率，与本文低分辨率编码+解码端超分路线同属标准化探索

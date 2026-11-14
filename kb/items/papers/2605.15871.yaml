@@ -1,0 +1,112 @@
+id: paper:arxiv:2605.15871
+type: paper
+title: 'Agentic Discovery of Neural Architectures: AIRA-Compose and AIRA-Design'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2605.15871v2
+  url: https://arxiv.org/abs/2605.15871
+  pdf_url: https://arxiv.org/pdf/2605.15871v2
+  venue: arXiv preprint
+time:
+  published: '2026-05-15'
+  collected: '2026-11-14'
+entities:
+- ref: concept:RSI
+  role: subject
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: AIRA-Compose 用 11 个智能体在 24 小时预算内探索计算原语，外推到 350M/1B/3B 规模，产出 14 个架构（AIRAformers 与 AIRAhybrids
+    两家族）。
+  confidence: reported
+  metrics:
+  - name: 智能体数量
+    value: '11'
+    scope: AIRA-Compose 架构搜索
+  - name: 搜索预算
+    value: 24小时
+    scope: AIRA-Compose 架构搜索
+  - name: 架构数量
+    value: '14'
+    scope: 两个架构家族合计
+  - name: 外推规模
+    value: 350M/1B/3B
+    scope: 候选架构外推目标规模
+  evidence: abstract（初筛，未读全文）
+- statement: 1B 规模预训练后，AIRAformer-D 与 AIRAhybrid-D 在下游任务上分别比 Llama 3.2 提升准确率 2.4% 和 3.8%。
+  confidence: reported
+  metrics:
+  - name: 下游任务准确率提升
+    value: 2.4%
+    scope: AIRAformer-D vs Llama 3.2
+  - name: 下游任务准确率提升
+    value: 3.8%
+    scope: AIRAhybrid-D vs Llama 3.2
+  evidence: abstract（初筛，未读全文）
+- statement: AIRA-Compose 找到扩展前沿高效的模型：AIRAformer-C 扩展速度比 Llama 3.2 和 Composer 最佳 Transformer 分别快 54% 和
+    71%，AIRAhybrid-C 扩展性超出 Nemotron-2 和 Composer 最佳混合架构 23% 和 37%。
+  confidence: reported
+  metrics:
+  - name: 扩展速度优势
+    value: 54%
+    scope: AIRAformer-C vs Llama 3.2
+  - name: 扩展速度优势
+    value: 71%
+    scope: AIRAformer-C vs Composer 最佳 Transformer
+  - name: 扩展性优势
+    value: 23%
+    scope: AIRAhybrid-C vs Nemotron-2
+  - name: 扩展性优势
+    value: 37%
+    scope: AIRAhybrid-C vs Composer 最佳 hybrid
+  evidence: abstract（初筛，未读全文）
+- statement: AIRA-Design 让 20 个智能体撰写新颖长程注意力机制与训练脚本，其架构在 Long Range Arena 的文档匹配和文本分类上距人类 SOTA 仅差 2.3% 与
+    2.6%。
+  confidence: reported
+  metrics:
+  - name: 智能体数量
+    value: '20'
+    scope: AIRA-Design 机制设计
+  - name: 与人类SOTA差距
+    value: 2.3%
+    scope: Long Range Arena 文档匹配
+  - name: 与人类SOTA差距
+    value: 2.6%
+    scope: Long Range Arena 文本分类
+  evidence: abstract（初筛，未读全文）
+- statement: 在 Autoresearch 基准的固定时间预算下，Greedy Opus 4.5 达到 0.968 验证 bits-per-byte，超过已发表最低值。
+  confidence: reported
+  metrics:
+  - name: 验证 bits-per-byte
+    value: '0.968'
+    scope: Autoresearch 基准，固定时间预算，Greedy Opus 4.5
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 双框架 LLM 智能体自主搜索并设计基础模型架构，发现的 AIRAformer/AIRAhybrid 在 1B 规模超越 Llama 3.2。
+  abstract_zh: 论文提出双框架方法：AIRA-Compose 以 11 个智能体在 24 小时预算内进行高层架构搜索，将百万参数级候选外推到 350M、1B、3B 规模，产出 14 个架构（AIRAformers
+    与 Transformer-Mamba 混合的 AIRAhybrids 两个家族）。1B 规模预训练后，这些架构在下游任务上持续超越 Llama 3.2 与 Composer 基线，AIRAformer-D
+    和 AIRAhybrid-D 分别提升准确率 2.4% 和 3.8%。扩展效率上，AIRAformer-C 扩展速度比 Llama 3.2 和 Composer 最佳 Transformer 快
+    54% 与 71%，AIRAhybrid-C 扩展性超出 Nemotron-2 与 Composer 最佳混合架构 23% 和 37%。AIRA-Design 则让 20 个智能体撰写新颖的长程注意力机制与训练脚本，在
+    Long Range Arena 上距人类 SOTA 仅差 2.3% 与 2.6%，并在 Autoresearch 基准上以 0.968 验证 bits-per-byte 超过已发表最低值。结果表明
+    LLM 智能体可自主发现匹配或超越人工设计的架构与算法优化，是迈向递归自我改进的清晰一步。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: LLM 智能体自主发现基础模型架构并明确以递归自我改进为目标，属自改进AI重要工作，非核心编码域，按基准只给 summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 智能体自主发现神经架构：AIRA-Compose 与 AIRA-Design
+relations:
+- type: same_topic
+  ref: paper:arxiv:2609.33867
+  note: 同属递归自我改进（RSI）研究线
+- type: same_topic
+  ref: paper:arxiv:2610.35595
+  note: 同为 LLM 智能体自主提出与设计算法的工作

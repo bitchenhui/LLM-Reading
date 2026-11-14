@@ -1,0 +1,86 @@
+id: paper:arxiv:2511.06055
+type: paper
+title: 'Neodragon: Mobile Video Generation using Diffusion Transformer'
+domain: video_image_coding
+research_lines:
+- systems_deployment
+source:
+  channel: arxiv
+  external_id: 2511.06055v1
+  url: https://arxiv.org/abs/2511.06055
+  pdf_url: https://arxiv.org/pdf/2511.06055v1
+  venue: arXiv preprint
+time:
+  published: '2025-11-08'
+  collected: '2026-11-14'
+entities:
+- ref: concept:NPU
+  role: subject
+- ref: org:Qualcomm
+  role: affiliation
+- ref: concept:SuperResolution
+  role: uses
+- ref: metric:FPS
+  role: measured_by
+claims:
+- statement: Neodragon 是首个针对移动硬件优化的文生视频扩散 Transformer 系统，可在 Qualcomm Hexagon NPU 上以 7 FPS（端到端 6.7 秒）生成
+    2 秒 640×1024 分辨率视频。
+  confidence: reported
+  metrics:
+  - name: E2E生成延迟
+    value: 6.7s
+    scope: Qualcomm Hexagon NPU 上端到端生成 49 帧 640x1024 视频
+  - name: 生成帧率
+    value: 7 FPS
+    scope: 端到端视频生成吞吐（同上口径）
+  - name: 单次输出规格
+    value: 2s（49帧@24fps）
+    scope: 640x1024 分辨率文生视频
+  evidence: abstract（初筛，未读全文）
+- statement: 通过文本编码器蒸馏将 4.762B 的 T5xxl 替换为仅 0.2B 的 DT5，质量损失极小。
+  confidence: reported
+  metrics:
+  - name: 文本编码器参数量
+    value: 0.2B（原始 4.762B）
+    scope: DT5 蒸馏后 vs T5xxl 原始
+  evidence: abstract（初筛，未读全文）
+- statement: 以非对称解码器蒸馏替换 codec-latent VAE 解码器、按相对重要性剪枝 MMDiT 块并以两阶段蒸馏恢复性能、用适配金字塔 flow-matching 的 DMD 步数蒸馏减少
+    NFE，共同实现移动端高效推理。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 端到端系统（含 SSD1B 首帧生成器与 QuickSRNet 2 倍超分）全模型 4.945B 参数、峰值内存 3.5GB、E2E 延迟 6.7 秒，VBench 总分 81.61。
+  confidence: reported
+  metrics:
+  - name: 模型参数量
+    value: 4.945B
+    scope: 含首帧生成器与超分的全系统
+  - name: 峰值内存
+    value: 3.5GB
+    scope: 移动端推理峰值 RAM
+  - name: VBench总分
+    value: '81.61'
+    scope: VBench 基准总评分
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 首个面向移动 NPU 优化的文生视频扩散 Transformer，6.7 秒端到端生成 640×1024 高保真视频，VBench 81.61。
+  abstract_zh: Neodragon 是首个针对移动硬件优化的文生视频系统，可在 Qualcomm Hexagon NPU 上以 6.7 秒端到端生成 49 帧@24fps、640×1024
+    分辨率的 2 秒视频（约 7 FPS）。方法上提出四项关键技术：通过文本编码器蒸馏将 4.762B 的 T5xxl 替换为 0.2B 的 DT5 且质量损失极小；提出非对称解码器蒸馏，用更高效的解码器替换原生
+    codec-latent VAE 解码器而不扰动生成潜空间；基于相对重要性剪枝去噪骨干中的 MMDiT 块，并用两阶段蒸馏恢复原有性能；采用适配金字塔 flow-matching 的 DMD 步数蒸馏大幅减少采样评估次数（NFE）。配合优化的
+    SSD1B 首帧图像生成器与 QuickSRNet 2 倍超分，端到端系统共 4.945B 参数、峰值内存 3.5GB、延迟 6.7 秒，VBench 总分 81.61，实现低成本、私密、离线的端侧视频创作。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 移动端文生视频扩散系统，经 codec-latent 潜空间、NPU 部署与超分组件与视频技术生态相关，但核心是生成而非编码压缩，初筛摘要级收录。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: Neodragon：基于扩散 Transformer 的移动端视频生成
+relations:
+- type: same_topic
+  ref: paper:arxiv:2601.01141
+  note: 同为基于扩散模型的视频处理工作，均采用 DMD 类步数蒸馏实现少步视频扩散推理（本文用于生成，YODA 用于压缩）
+- type: same_topic
+  ref: paper:arxiv:2411.13362
+  note: Neodragon 管线内置 QuickSRNet 2 倍超分，与 RTSR 同属面向资源受限场景的实时神经超分辨率部署

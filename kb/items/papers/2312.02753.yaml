@@ -1,0 +1,71 @@
+id: paper:arxiv:2312.02753
+type: paper
+title: 'C3: High-performance and low-complexity neural compression from a single image or video'
+domain: video_image_coding
+research_lines:
+- inr_representation
+source:
+  channel: arxiv
+  external_id: 2312.02753v1
+  url: https://arxiv.org/abs/2312.02753
+  pdf_url: https://arxiv.org/pdf/2312.02753v1
+  venue: arXiv preprint
+time:
+  published: '2023-12-05'
+  collected: '2026-11-14'
+entities:
+- ref: impl:C3
+  role: subject
+- ref: impl:VTM
+  role: compared_against
+- ref: codec:VVC
+  role: compared_against
+- ref: dataset:UVG
+  role: evaluated_on
+claims:
+- statement: C3 在 CLIC2020 图像基准上以低于 3k MACs/pixel 的解码计算量，达到与 H.266（VVC）参考实现 VTM 相当的率失真性能
+  confidence: reported
+  metrics:
+  - name: 解码计算量
+    value: <3k MACs/pixel
+    scope: CLIC2020 图像基准，达到 VTM 同等 RD 性能条件下的解码复杂度
+  evidence: abstract（初筛，未读全文）
+- statement: C3 在 UVG 视频基准上以低于 5k MACs/pixel 的解码计算量，匹配神经视频编解码器 Video Compression Transformer 的率失真性能
+  confidence: reported
+  metrics:
+  - name: 解码计算量
+    value: <5k MACs/pixel
+    scope: UVG 视频基准，达到 VCT 同等 RD 性能条件下的解码复杂度
+  evidence: abstract（初筛，未读全文）
+- statement: 与 RD 性能相近的神经基线相比，C3 的解码复杂度可低约一个数量级
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: C3 基于 COOL-CHIC 构建，对图像压缩做出多项简单有效改进，并提出将逐实例过拟合方法扩展到视频的新方法学
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 对每张图像/视频单独过拟合小型神经模型，以低一个数量级的解码复杂度匹配 VTM 与神经基线的率失真性能。
+  abstract_zh: 主流神经压缩模型依赖大规模数据训练以泛化到未见内容，通常需要庞大网络结构且解码复杂度高。C3 反其道而行，为每张图像或每个视频单独过拟合一个小模型，在保持强率失真（RD）性能的同时显著降低解码复杂度。方法上
+    C3 以 COOL-CHIC 为基础，针对图像压缩做出多项简单而有效的改进，并提出新的方法学将该思路扩展到视频。在 CLIC2020 图像基准上，C3 以低于 3k MACs/pixel 的解码计算量达到与
+    H.266 参考实现 VTM 相当的 RD 性能；在 UVG 视频基准上，以低于 5k MACs/pixel 的解码计算量匹配成熟神经视频编解码器 Video Compression Transformer
+    的 RD 性能。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 核心域神经图像/视频压缩代表作：过拟合式小模型实现低解码复杂度，并在 CLIC2020/UVG 上匹配 VTM 与神经视频编解码器的 RD 性能，价值高。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: C3：基于单图像或视频的高性能低复杂度神经压缩
+relations:
+- type: same_topic
+  ref: paper:arxiv:2607.13723
+  note: 同属 COOL-CHIC 谱系的轻量过拟合式神经图像压缩（C3 明确以 COOL-CHIC 为基础）
+- type: same_topic
+  ref: paper:arxiv:2605.20672
+  note: 同为过拟合式（overfitted）低复杂度神经图像压缩研究线
+- type: same_topic
+  ref: paper:arxiv:2609.04274
+  note: 同为图像表示（INR）压缩方向，关注多尺度表示与编解码效率

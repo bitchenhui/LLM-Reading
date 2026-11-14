@@ -1,0 +1,63 @@
+id: paper:arxiv:2503.17467
+type: paper
+title: High Efficiency Wiener Filter-based Point Cloud Quality Enhancement for MPEG G-PCC
+domain: immersive_media
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2503.17467v1
+  url: https://arxiv.org/abs/2503.17467
+  pdf_url: https://arxiv.org/pdf/2503.17467v1
+  venue: arXiv preprint
+time:
+  published: '2025-03-21'
+  collected: '2026-11-14'
+entities:
+- ref: codec:G-PCC
+  role: subject
+- ref: org:MPEG
+  role: uses
+claims:
+- statement: 提出带系数继承与基于方差点分类的高效维纳滤波器，集成进G-PCC编解码管线以改善动态点云属性重建的率失真性能。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在无损几何-有损属性配置下，相对最新G-PCC编码平台（GSO测试模型v7.0 rc2），所提方法取得显著BD-rate增益且复杂度可承受。
+  confidence: reported
+  metrics:
+  - name: BD-rate
+    value: -6.1%
+    scope: Luma分量，lossless-geometry-lossy-attributes配置，对比G-PCC v7.0 rc2
+  - name: BD-rate
+    value: -7.3%
+    scope: Chroma Cb分量，lossless-geometry-lossy-attributes配置，对比G-PCC v7.0 rc2
+  - name: BD-rate
+    value: -8.0%
+    scope: Chroma Cr分量，lossless-geometry-lossy-attributes配置，对比G-PCC v7.0 rc2
+  evidence: abstract（初筛，未读全文）
+- statement: 提出基于Morton码的快速最近邻搜索算法，降低应用维纳滤波时滤波系数计算的复杂度。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出集成于G-PCC编解码管线的高效维纳滤波器，显著提升动态点云属性的率失真性能。
+  abstract_zh: 针对G-PCC有损压缩在低码率下重建质量较低的问题，提出一种可集成于其编解码器管线的高效维纳滤波器。该方法先构建基础维纳滤波器，再通过系数继承与基于方差的点分类（针对亮度分量）加以改进。同时提出基于Morton码的快速最近邻搜索算法，降低滤波系数计算中最近邻搜索的复杂度。在无损几何-有损属性配置下，相比最新G-PCC测试平台（v7.0
+    rc2），Luma、Cb、Cr的平均BD-rate分别为-6.1%、-7.3%、-8.0%，且计算复杂度可承受。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 点云压缩属沉浸式媒体非核心编码域，但直接针对 MPEG G-PCC 标准编解码器改进，与音视频技术高度相关。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 面向 MPEG G-PCC 的高效维纳滤波点云质量增强
+relations:
+- type: same_topic
+  ref: paper:arxiv:2412.05574
+  note: 同为针对MPEG G-PCC属性编码的率失真优化工作
+- type: same_topic
+  ref: paper:arxiv:2112.00560
+  note: 同为G-PCC属性重建质量增强（伪影去除）方向
+- type: same_topic
+  ref: paper:arxiv:2303.13764
+  note: 同为点云颜色属性质量增强方法

@@ -1,0 +1,53 @@
+id: paper:arxiv:2310.04679
+type: paper
+title: High Visual-Fidelity Learned Video Compression
+domain: video_image_coding
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2310.04679v1
+  url: https://arxiv.org/abs/2310.04679
+  pdf_url: https://arxiv.org/pdf/2310.04679v1
+  venue: arXiv preprint
+time:
+  published: '2023-10-07'
+  collected: '2026-11-14'
+entities:
+- ref: codec:VVC
+  role: subject
+- ref: metric:PSNR
+  role: measured_by
+claims:
+- statement: HVFVC提出基于置信度的特征重建方法，解决了视频压缩中新增出现区域重建质量差的问题，显著提升重建视觉质量。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 论文提出周期性补偿损失，缓解由反卷积操作及优化导致的棋盘伪影。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在感知质量维度上，HVFVC仅需约50%的码率即可超越最新VVC编码标准。
+  confidence: reported
+  metrics:
+  - name: 所需码率
+    value: 50%
+    scope: 达到/超越VVC感知质量所需码率（相对VVC）
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出HVFVC框架，用置信度特征重建与周期补偿损失改善感知质量，仅需约50%码率即可超越VVC。
+  abstract_zh: 现有学习式视频压缩方法在PSNR等客观指标上已超越传统方法，但对感知质量的关注不足，直接引入感知损失会引发若干感知质量问题。论文提出高视觉保真度学习视频压缩框架HVFVC，设计基于置信度的特征重建方法，解决新增出现区域重建质量差的问题，显著提升重建视觉质量。同时提出周期性补偿损失，缓解反卷积操作与优化带来的棋盘伪影。大量实验表明，HVFVC取得了优异的感知质量，仅需约50%的码率即可超越最新的VVC标准。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 核心域学习式视频压缩工作，聚焦感知质量并提出新框架，且给出与VVC的50%码率对比结果，具精读价值。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 高视觉保真度的学习式视频压缩
+relations:
+- type: same_topic
+  ref: paper:arxiv:2609.34725
+  note: 同为面向感知/生成质量的学习式视频压缩工作
+- type: same_topic
+  ref: paper:arxiv:2603.05756
+  note: 同为学习式视频压缩框架研究

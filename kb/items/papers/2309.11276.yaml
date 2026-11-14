@@ -1,0 +1,70 @@
+id: paper:arxiv:2309.11276
+type: paper
+title: Towards Real-Time Neural Video Codec for Cross-Platform Application Using Calibration Information
+domain: video_image_coding
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2309.11276v1
+  url: https://arxiv.org/abs/2309.11276
+  pdf_url: https://arxiv.org/pdf/2309.11276v1
+  venue: arXiv preprint
+time:
+  published: '2023-09-20'
+  collected: '2026-11-14'
+entities:
+- ref: codec:HEVC
+  role: subject
+- ref: metric:BD-Rate
+  role: measured_by
+- ref: metric:FPS
+  role: measured_by
+- ref: metric:PSNR
+  role: measured_by
+- ref: org:NVIDIA
+  role: platform
+claims:
+- statement: 设计校准传输系统：编码端识别可能跨量化边界的熵参数并经辅助码流传输其坐标，解码端据此处理，解决跨平台浮点误差导致的编解码量化不一致。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 采用分段高斯约束规整熵参数分布以降低辅助码流码率开销。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 轻量化模型配合效率优化技术，可在消费级GPU上实时解码其他平台编码的720P码流。
+  confidence: reported
+  metrics:
+  - name: 解码速度
+    value: 25 FPS
+    scope: 720P视频，NVIDIA RTX 2080 GPU
+  evidence: abstract（初筛，未读全文）
+- statement: 相对H.265锚点取得明显码率节省。
+  confidence: reported
+  metrics:
+  - name: BD-rate增益
+    value: 24.2%
+    scope: PSNR口径，锚点H.265，实时模型最大值
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出校准传输机制与轻量模型的跨平台实时神经视频编解码器，720P解码25FPS，PSNR较H.265最多省24.2%码率。
+  abstract_zh: 针对神经视频编解码器实用化的两大障碍——跨平台浮点运算误差导致的码流解码不一致，以及编解码计算复杂度过高难以实时，本文提出实时跨平台神经视频编解码器。编码端识别可能在编解码两侧跨越量化边界的熵参数，将其坐标经辅助码流传输，解码端据此正确处理；并用分段高斯约束规整熵参数分布以降低辅助码流开销。同时设计轻量化模型及一系列效率优化技术。最终模型可在消费级NVIDIA
+    RTX 2080 GPU上以25 FPS实时解码其他平台编码的720P码流，PSNR口径相对H.265锚点最多取得24.2%的BD-rate增益。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 核心域神经视频编码的实用化关键突破（跨平台解码一致性与实时轻量解码），高度相关，值得深读。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 基于校准信息的面向跨平台应用的实时神经视频编解码器
+relations:
+- type: same_topic
+  ref: paper:arxiv:2606.28027
+  note: MLVC同为面向真实部署的多平台学习视频编解码器，与本论文跨平台实时NVC主题一致
+- type: same_topic
+  ref: paper:arxiv:2502.20762
+  note: 同为神经视频压缩实用化/实时化方向
+- type: same_topic
+  ref: paper:arxiv:2606.13110
+  note: JOMP处理神经视频编码跨框架量化一致性问题，与本论文跨平台量化校准主题相关

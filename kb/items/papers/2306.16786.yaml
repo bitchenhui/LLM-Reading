@@ -1,0 +1,65 @@
+id: paper:arxiv:2306.16786
+type: paper
+title: All-intra rate control using low complexity video features for Versatile Video Coding
+domain: video_image_coding
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2306.16786v1
+  url: https://arxiv.org/abs/2306.16786
+  pdf_url: https://arxiv.org/pdf/2306.16786v1
+  venue: arXiv preprint
+time:
+  published: '2023-06-29'
+  collected: '2026-11-14'
+entities:
+- ref: codec:VVC
+  role: subject
+- ref: impl:VVenC
+  role: evaluated_on
+- ref: metric:BD-Rate
+  role: measured_by
+claims:
+- statement: 所提低复杂度第一遍方法在VVenC faster预设下，相比VVenC默认两遍码控算法将全帧内编码时间降低约32%
+  confidence: reported
+  metrics:
+  - name: 编码时间降幅
+    value: 32%
+    scope: VVenC preset faster，all-intra配置，对比VVenC默认两遍码控
+  evidence: abstract（初筛，未读全文）
+- statement: 在取得编码加速的同时，压缩效率损失很小，平均BD-rate仅增加约2%
+  confidence: reported
+  metrics:
+  - name: BD-rate增幅
+    value: 2%
+    scope: 平均值，对比VVenC默认两遍码控，all-intra配置
+  evidence: abstract（初筛，未读全文）
+- statement: 所提方法的码控精度与VVenC默认两遍码控算法相当
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 用低复杂度视频分析加随机森林模型替代VVC全帧内两遍码控的第一遍，VVenC faster档编码时间降约32%，BD-rate仅升约2%。
+  abstract_zh: VVC相对其前代HEVC带来可观的压缩效率提升，但编码运行时复杂度显著增加，因此探索所有可用的耗时缩减手段十分重要。本文提出一种面向全帧内（all-intra）配置两遍码率控制的全新第一遍方法：通过低复杂度视频分析提取特征，并用随机森林（RF）机器学习模型推导驱动第二遍码控所需的数据。该方法在开源优化的VVC编码器VVenC上进行验证。与VVenC默认的两遍码控算法相比，所提方法在faster预设下编码时间约降低32%，平均BD-rate仅增加约2%，且码控精度相当。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 核心域VVC编码器码率控制与复杂度优化工作，由VVC标准核心作者团队提出并在VVenC上验证，指标明确。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 面向多功能视频编码（VVC）的基于低复杂度视频特征的全帧内码率控制
+relations:
+- type: same_topic
+  ref: paper:arxiv:2602.06242
+  note: 同为VVC码率控制研究（基于内容的帧级比特预测）
+- type: same_topic
+  ref: paper:arxiv:2606.20847
+  note: 同为VVenC编码器上的帧级QP/码控优化
+- type: same_topic
+  ref: paper:arxiv:2606.31084
+  note: 同为VVenC编码复杂度加速工作
+- type: same_topic
+  ref: standard_proposal:jvet:m189-Y0105
+  note: JVET AHG10关于改进VVC码率控制方案的标准化讨论

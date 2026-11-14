@@ -1,0 +1,64 @@
+id: paper:arxiv:2408.09044
+type: paper
+title: Explore Cross-Codec Quality-Rate Convex Hulls Relation for Adaptive Streaming
+domain: video_image_coding
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2408.09044v1
+  url: https://arxiv.org/abs/2408.09044
+  pdf_url: https://arxiv.org/pdf/2408.09044v1
+  venue: arXiv preprint
+time:
+  published: '2024-08-16'
+  collected: '2026-11-14'
+entities:
+- ref: codec:AVC
+  role: subject
+- ref: codec:HEVC
+  role: subject
+- ref: impl:FFmpeg
+  role: uses
+- ref: metric:PSNR
+  role: measured_by
+- ref: metric:VMAF
+  role: measured_by
+claims:
+- statement: 在三种编码器与三种分辨率下，提高 CRF 值会同时降低码率、PSNR 与 VMAF
+  confidence: reported
+  metrics:
+  - name: PSNR
+    value: 20-40 dB
+    scope: H.264/H.265/VP9 在 960×544/1920×1080/3840×2160 各 CRF 档位的实测 PSNR 范围
+  evidence: abstract（初筛，未读全文）
+- statement: 对各分辨率的质量-码率凸包采用对数多项式建模，表现出低 RMSE 与高 R² 的高拟合精度
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 一种编码器的凸包曲线可预测其他编码器的性能，可支撑未来内容驱动的预测方法与自适应流媒体优化
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 对 H.264/H.265/VP9 在三种分辨率下构建质量-码率凸包并数学建模，验证跨编码器性能可相互预测。
+  abstract_zh: 该研究在 960×544、1920×1080、3840×2160 三种分辨率上，用 FFmpeg 对原始视频以不同 CRF 量化档位进行 H.264、H.265 和 VP9
+    的编解码与重缩放，生成基于 PSNR 和 VMAF 的质量-码率（QR）曲线，并逐编码器推导凸包曲线。结果显示提高 CRF 会同时降低码率、PSNR 和 VMAF，实测 PSNR 落在 20–40
+    dB 区间。对凸包采用对数多项式建模，RMSE 低、R² 高，拟合精度良好。作者据此提出一种编码器的凸包可用于预测其他编码器的性能，为内容驱动的预测方法与自适应流媒体效率提升提供支撑。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 对 H.264/H.265/VP9 三种成熟编码器做率-质量凸包实证建模，方法常规、无新技术贡献，属核心域外围实证工作。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 面向自适应流媒体的跨编码器质量-码率凸包关系探索
+relations:
+- type: same_topic
+  ref: paper:arxiv:2310.09570
+  note: 同为面向自适应流媒体的多编码器质量-码率分析与码率梯子估计
+- type: same_topic
+  ref: paper:arxiv:2601.10607
+  note: 同为利用率-质量前沿（Pareto/凸包）优化自适应视频流媒体
+- type: same_topic
+  ref: paper:arxiv:2603.13597
+  note: 同为面向自适应流媒体的码率梯子（bitrate ladder）构建方法

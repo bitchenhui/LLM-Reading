@@ -1,0 +1,63 @@
+id: paper:arxiv:2401.11615
+type: paper
+title: 'Another Way to the Top: Exploit Contextual Clustering in Learned Image Coding'
+domain: video_image_coding
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2401.11615v1
+  url: https://arxiv.org/abs/2401.11615
+  pdf_url: https://arxiv.org/pdf/2401.11615v1
+  venue: arXiv preprint
+time:
+  published: '2024-01-21'
+  collected: '2026-11-14'
+entities:
+- ref: codec:VVC
+  role: subject
+- ref: metric:BD-Rate
+  role: measured_by
+- ref: metric:MS-SSIM
+  role: measured_by
+claims:
+- statement: MSE优化下，CLIC在三个广泛使用的基准数据集上压缩性能超越VVC约10% BD-Rate。
+  confidence: reported
+  metrics:
+  - name: BD-Rate
+    value: -10%（约，节省）
+    scope: MSE优化，三个常用基准数据集，对比锚点VVC
+  evidence: abstract（初筛，未读全文）
+- statement: MS-SSIM优化下，CLIC较VVC节省超过50% BD-Rate。
+  confidence: reported
+  metrics:
+  - name: BD-Rate
+    value: '>50%（节省）'
+    scope: MS-SSIM优化，对比锚点VVC
+  evidence: abstract（初筛，未读全文）
+- statement: 引入的GuidedPQF能有效缓解量化误差在初始解码阶段的传播与累积。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出基于上下文聚类的学习图像编码CLIC，MSE优化下较VVC节省约10% BD-Rate，MS-SSIM下超50%。
+  abstract_zh: 论文提出CLIC（Contextual Clustering based LIC），以聚类操作与局部注意力替代LIC中广泛使用的卷积与自注意力进行相关性刻画与紧凑表示。聚类使簇内特征聚合的感受野扩展至全图，随后特征重排回原始空间位置并经局部注意力单元完成簇间嵌入。作者还引入引导式反量化滤波（GuidedPQF），在解码初期有效抑制量化误差的传播与累积。MSE优化时CLIC在三个常用基准数据集上较VVC节省约10%
+    BD-Rate；MS-SSIM优化时较VVC节省超过50% BD-Rate，为LIC发展提供了新方向。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 核心域学习图像编码工作，提出以聚类替代卷积/自注意力的新变换范式并大幅超越VVC，属重要方法创新。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 另一条登顶之路：在神经图像编码中利用上下文聚类
+relations:
+- type: same_topic
+  ref: paper:arxiv:2307.15421
+  note: 同为学习图像编码（LIC）变换/熵建模方向，且与本文同属Zhan Ma团队工作脉络
+- type: same_topic
+  ref: paper:arxiv:2603.06766
+  note: 同为学习图像压缩的熵建模/变换结构创新工作，可与CLIC对照比较
+- type: same_topic
+  ref: paper:arxiv:2610.22421
+  note: 同为端到端学习图像编码主题，涉及RD优化与实际部署视角

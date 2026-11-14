@@ -1,0 +1,62 @@
+id: paper:arxiv:2511.17867
+type: paper
+title: 'INT-DTT+: Low-Complexity Data-Dependent Transforms for Video Coding'
+domain: video_image_coding
+research_lines:
+- traditional_codec_opt
+source:
+  channel: arxiv
+  external_id: 2511.17867v1
+  url: https://arxiv.org/abs/2511.17867
+  pdf_url: https://arxiv.org/pdf/2511.17867v1
+  venue: arXiv preprint
+time:
+  published: '2025-11-22'
+  collected: '2026-11-14'
+entities:
+- ref: codec:VVC
+  role: subject
+- ref: concept:RDO
+  role: uses
+- ref: metric:BD-Rate
+  role: measured_by
+claims:
+- statement: INT-DTT+ 集成于 VVC 显式多变换选择（MTS）框架并在率失真优化设置下，相对 VVC MTS 基线取得超过 3% 的 BD-rate 节省。
+  confidence: reported
+  metrics:
+  - name: BD-Rate
+    value: '>3% 节省'
+    scope: 相对 VVC MTS 基线，VVC 显式 MTS + RDO 设置
+  evidence: abstract（初筛，未读全文）
+- statement: 一旦基准 DTT 系数可用，INT-DTT+ 的计算复杂度与整数 DCT-2 相当。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 相比可分离 KLT，INT-DTT+ 显著降低计算与内存复杂度且性能损失极小。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出整数化低复杂度数据相关变换 INT-DTT+，在 VVC MTS 框架经 RDOT 设计取得超 3% BD-rate 节省，复杂度接近整数 DCT-2。
+  abstract_zh: 论文针对 KLT、GBST 等数据相关变换能量压缩好但缺乏可加速的结构对称性的问题，提出通用的低复杂度数据相关变换设计框架。方法上，基于 DTT+（由 DTT 图秩一更新导出的
+    GBST 家族），提出联合估计行列图的图学习算法；并利用 DTT+ 的渐进结构将变换核分解为基准 DTT 与结构化 Cauchy 矩阵，经低复杂度整数 DTT 与 Cauchy 矩阵稀疏化构建整数近似
+    INT-DTT+。相比可分离 KLT，INT-DTT+ 在性能损失极小的前提下显著降低计算与内存复杂度。在 VVC 显式多变换选择（MTS）框架下按率失真优化变换（RDOT）思路集成，相对 VVC
+    MTS 基线取得超过 3% 的 BD-rate 节省，且基准 DTT 系数就绪后复杂度与整数 DCT-2 相当。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 核心编码域变换设计论文（USC+Qualcomm），将数据相关变换整数化低复杂度化，在 VVC MTS 框架下取得超 3% BD-rate 增益，值得深读。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: INT-DTT+：面向视频编码的低复杂度数据相关变换
+relations:
+- type: same_topic
+  ref: paper:arxiv:2605.15086
+  note: 同属视频编码变换设计与稀疏化加速（FaSST 稀疏化二级变换）
+- type: same_topic
+  ref: paper:arxiv:2601.02712
+  note: 同属现代编解码器（AV2/VVC）变换编码工具研究
+- type: same_topic
+  ref: paper:arxiv:2607.04985
+  note: 同属图信号处理方法在视频编码工具中的应用

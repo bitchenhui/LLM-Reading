@@ -1,0 +1,82 @@
+id: paper:arxiv:2403.11694
+type: paper
+title: Object Segmentation-Assisted Inter Prediction for Versatile Video Coding
+domain: video_image_coding
+research_lines:
+- traditional_codec_opt
+source:
+  channel: arxiv
+  external_id: 2403.11694v2
+  url: https://arxiv.org/abs/2403.11694
+  pdf_url: https://arxiv.org/pdf/2403.11694v2
+  venue: arXiv preprint
+time:
+  published: '2024-03-18'
+  collected: '2026-11-14'
+entities:
+- ref: codec:VVC
+  role: subject
+- ref: impl:VTM
+  role: uses
+- ref: concept:RDO
+  role: uses
+- ref: metric:BD-Rate
+  role: measured_by
+claims:
+- statement: SAIP实现于VVC参考软件VTM 12.0，在通用测试序列的Low-delay P配置下平均BD-rate降低0.82%，最高达1.98%
+  confidence: reported
+  metrics:
+  - name: BD-Rate
+    value: 0.82%
+    scope: VTM 12.0，Low-delay P，通用测试序列平均
+  - name: BD-Rate
+    value: 1.98%
+    scope: VTM 12.0，Low-delay P，通用测试序列最佳
+  evidence: abstract（初筛，未读全文）
+- statement: Low-delay B配置下平均BD-rate降低0.49%，最高达1.14%
+  confidence: reported
+  metrics:
+  - name: BD-Rate
+    value: 0.49%
+    scope: VTM 12.0，Low-delay B，通用测试序列平均
+  - name: BD-Rate
+    value: 1.14%
+    scope: VTM 12.0，Low-delay B，通用测试序列最佳
+  evidence: abstract（初筛，未读全文）
+- statement: Random Access配置下平均BD-rate降低0.37%，最高达0.79%
+  confidence: reported
+  metrics:
+  - name: BD-Rate
+    value: 0.37%
+    scope: VTM 12.0，Random Access，通用测试序列平均
+  - name: BD-Rate
+    value: 0.79%
+    scope: VTM 12.0，Random Access，通用测试序列最佳
+  evidence: abstract（初筛，未读全文）
+- statement: 分割掩码经适当指示从参考帧传递到当前帧，作为任意形状区域划分且不引入额外信令比特，并用于分区域运动补偿、运动矢量编码及联合RDO
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出SAIP方法，以目标分割掩码实现免信令的任意形状帧间预测划分，在VTM 12.0上最高取得1.98% BD-rate增益
+  abstract_zh: 针对VVC块划分无法紧凑表达自然视频中任意形状运动目标的问题，提出目标分割辅助帧间预测（SAIP）。该方法对参考帧中的目标进行分割，并在适当指示下将分割掩码传递到当前帧，作为各区域的任意形状划分，且无需额外信令比特。基于掩码对不同区域分别执行运动补偿以提升预测精度，并利用掩码更高效地编码各区域运动矢量；同时将掩码纳入运动估计与划分估计的联合率失真优化，以更准确地推导各区域运动矢量与划分。方法实现于VVC参考软件VTM
+    12.0，在通用测试序列上，Low-delay P、Low-delay B、Random Access配置下平均BD-rate分别降低0.82%、0.49%、0.37%，最高分别达1.98%、1.14%、0.79%。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: VVC帧间预测核心改进：利用目标分割掩码实现免信令的任意形状划分，并在VTM 12.0上验证出一致的BD-rate增益
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 面向多功能视频编码的目标分割辅助帧间预测
+relations:
+- type: same_topic
+  ref: paper:arxiv:2312.10406
+  note: 同属VVC测试模型VTM帧间编码方向的研究
+- type: same_topic
+  ref: paper:arxiv:2605.21526
+  note: 均围绕VVC划分与帧间预测在VTM上的改进
+- type: same_topic
+  ref: paper:arxiv:2312.10567
+  note: 同属VVC帧间划分方向的研究

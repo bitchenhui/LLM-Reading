@@ -1,0 +1,61 @@
+id: paper:arxiv:2605.15906
+type: paper
+title: A Causally Grounded Taxonomy for Image Degradation Robustness Evaluation
+domain: quality_assessment
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2605.15906v2
+  url: https://arxiv.org/abs/2605.15906
+  pdf_url: https://arxiv.org/pdf/2605.15906v2
+  venue: arXiv preprint
+time:
+  published: '2026-05-15'
+  collected: '2026-11-14'
+entities:
+- ref: concept:IQA
+  role: subject
+- ref: metric:PSNR
+  role: measured_by
+- ref: metric:SSIM
+  role: measured_by
+- ref: metric:LPIPS
+  role: measured_by
+- ref: dataset:COCO
+  role: evaluated_on
+claims:
+- statement: 各研究社区（合成破坏基准、感知IQA、低层视觉、物理成像系统分析）依赖不兼容的分组方案与后端特定的严重度定义，导致跨数据集、退化模型与任务的结果难以比较。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 提出的双轴框架以成像管线中的主导因果来源与主导感知效应刻画每类退化，形成覆盖算法破坏、感知失真、低层成像伪影与物理性相机/系统故障的分类体系。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 用全参考IQA指标PSNR、SSIM、LPIPS量化各退化的原生严重度等级，在不修改现有实现的情况下使严重度语义可观测，并保留原生参数化。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 构建了COCO-Degradation基准，与该分类体系对齐，用于评估目标检测器在多样低层成像条件下的鲁棒性。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出因果来源×感知效应双轴的图像退化分类框架，用PSNR/SSIM/LPIPS量化严重度，并构建COCO-Degradation检测鲁棒性基准。
+  abstract_zh: 论文提出一个以因果为核心的图像退化组织与解释框架：每类退化由其在成像管线中的主导因果来源与主导感知效应两个正交轴刻画，形成覆盖算法破坏、感知失真、低层成像伪影与物理性相机/系统故障的紧凑分类体系。作者不引入新退化也不重定义现有基准，而是提供解释性表征与测量层，用全参考指标PSNR、SSIM、LPIPS量化各原生严重度等级，使严重度语义可观测且保留原生参数化，从而将因果来源、感知外观、测得失真强度与下游任务影响分离。框架通过COCO-Degradation基准演示，用于评估目标检测器在多样低层成像条件下的鲁棒性，支撑更可解释、可复现的机器感知退化影响评估。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 论文属图像退化组织框架与IQA度量应用研究，非编码核心域，与质量评估方法论有交叉，按规则仅初筛摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 面向图像退化鲁棒性评估的因果锚定分类体系
+relations:
+- type: same_topic
+  ref: paper:arxiv:2609.30077
+  note: 同属全参考图像质量度量（PSNR等）研究脉络，一者用于RDO、一者用于退化严重度量化
+- type: same_topic
+  ref: paper:arxiv:2605.18378
+  note: 均借助客观质量度量刻画退化/压缩对视觉内容的影响，方法学同源
+- type: same_topic
+  ref: paper:arxiv:2604.09421
+  note: 均关注低层退化对机器感知（检测/编码任务）性能影响的评估

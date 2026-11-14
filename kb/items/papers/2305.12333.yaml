@@ -1,0 +1,71 @@
+id: paper:arxiv:2305.12333
+type: paper
+title: 'GRACE: Loss-Resilient Real-Time Video through Neural Codecs'
+domain: video_image_coding
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2305.12333v4
+  url: https://arxiv.org/abs/2305.12333
+  pdf_url: https://arxiv.org/pdf/2305.12333v4
+  venue: arXiv preprint
+time:
+  published: '2023-05-21'
+  collected: '2026-11-14'
+entities:
+- ref: concept:QoE
+  role: subject
+- ref: codec:HEVC
+  role: compared_against
+- ref: metric:MOS
+  role: measured_by
+claims:
+- statement: GRACE在无损场景下的视频质量与传统编解码器（如H.265/HEVC）相当。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 随丢包率升高，GRACE质量下降比其他抗丢包方案更平缓且持续占优。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 相比FEC方案，GRACE显著减少不可解码帧与卡顿时长。
+  confidence: reported
+  metrics:
+  - name: 不可解码帧减少
+    value: 95%
+    scope: 相对FEC基线，多种视频与真实网络轨迹评测
+  - name: 卡顿时长减少
+    value: 90%
+    scope: 相对FEC基线，多种视频与真实网络轨迹评测
+  evidence: abstract（初筛，未读全文）
+- statement: 大规模众包用户研究中GRACE的主观质量优于错误掩盖等基线。
+  confidence: reported
+  metrics:
+  - name: MOS提升
+    value: 38%
+    scope: 240名众包参与者、960个主观评分，相对其他基线
+  - name: 参与者数量
+    value: '240'
+    scope: 众包用户研究
+  - name: 主观评分数
+    value: '960'
+    scope: 众包用户研究
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出抗丢包神经视频编解码器GRACE，编解码器联合训练应对丢包，大幅降低不可解码帧与卡顿时长。
+  abstract_zh: 实时视频通信中高延迟网络下无法重传丢失数据包，现有手段分为编码端FEC与解码端错误掩盖，前者冗余度难以预先确定，后者分区独立编码损害压缩效率且解码端难以恢复。GRACE通过一种新型神经视频编解码器解决该问题，核心是在多种模拟丢包场景下对神经编码器与解码器进行联合训练。无损场景下GRACE质量与传统编解码器（如H.265）相当；丢包率升高时质量下降更平缓，持续优于其他抗丢包方案。在多种视频与真实网络轨迹上的评测显示，相比FEC不可解码帧减少95%、卡顿时长减少90%；240名众包参与者、960个主观评分的用户研究中，MOS比基线高38%。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 核心域神经视频编解码系统工作：面向实时视频通信的抗丢包新编解码器，效果数字显著（不可解码帧降95%、MOS提升38%），值得深读。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: GRACE：基于神经编解码器的抗丢包实时视频
+relations:
+- type: same_topic
+  ref: paper:arxiv:2608.30202
+  note: 同为抗丢包学习式视频编码（ReLViC：分散打包与可控包依赖）
+- type: same_topic
+  ref: paper:arxiv:2609.16279
+  note: 同为面向错误鲁棒低延迟传输的神经视频编解码器

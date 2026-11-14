@@ -1,0 +1,69 @@
+id: paper:arxiv:2605.25940
+type: paper
+title: How Accurate are Video Quality Models for Diffusion-Based Video Super-Resolution?
+domain: quality_assessment
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2605.25940v1
+  url: https://arxiv.org/abs/2605.25940
+  pdf_url: https://arxiv.org/pdf/2605.25940v1
+  venue: arXiv preprint
+time:
+  published: '2026-05-25'
+  collected: '2026-11-14'
+entities:
+- ref: concept:IQA
+  role: subject
+- ref: concept:SuperResolution
+  role: evaluated_on
+- ref: codec:AV1
+  role: evaluated_on
+- ref: impl:DCVC-RT
+  role: evaluated_on
+- ref: metric:LPIPS
+  role: measured_by
+- ref: metric:DISTS
+  role: measured_by
+- ref: metric:VMAF
+  role: measured_by
+claims:
+- statement: LPIPS、DISTS、CVQA-FR等基于CNN的全参考质量模型在扩散式VSR质量预测上与主观分数的相关系数显著高于传统全参考模型及所测无参考模型。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 多数被测质量模型会高估SCST产生的过锐结果。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: VMAF的失效主要源于Starlight Mini引入的空间不一致性。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 没有任何被测视频质量模型达到足以替代补充性主观测试的精度。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 研究在AV1与DCVC-RT压缩及未压缩低分辨率视频上对比了Lanczos、Rhea、SCST、DOVE、SeedVR2、Starlight Mini六种上采样方法，面向UHD-1/4K屏幕播放场景。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 以主观测试为基准检验质量模型评估扩散式VSR的能力，CNN全参考模型最佳但仍不足以替代主观测试。
+  abstract_zh: 研究将六种上采样方法（Lanczos、Rhea、SCST、DOVE、SeedVR2、Starlight Mini）应用于经AV1与DCVC-RT压缩以及未压缩的低分辨率视频，针对UHD-1/4K屏幕播放开展主观测试。随后将多种全参考与无参考质量模型的预测与主观分数对比，聚焦序列内性能。结果显示LPIPS、DISTS、CVQA-FR等基于CNN的全参考模型相关性显著高于传统全参考模型和所测无参考模型。多数模型高估SCST的过锐结果，VMAF主要因Starlight
+    Mini引入的空间不一致而失效。没有任何被测模型达到足以替代主观测试的精度，视频、评分与模型分数均已开源。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 核心是检验现有视频质量模型对扩散式VSR这一新型退化的准确性，属质量评估域而非编码核心域，按基准只给 summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 视频质量模型对基于扩散的视频超分辨率评估有多准确？
+relations:
+- type: same_topic
+  ref: paper:arxiv:2511.00969
+  note: 同属UHD-1/4K场景下视频质量指标对新型编码/处理内容的准确性评测
+- type: same_topic
+  ref: paper:arxiv:2610.25770
+  note: 均为面向生成式超分辨率输出的质量评估研究
+- type: same_topic
+  ref: paper:arxiv:2608.08508
+  note: 同属超分辨率与质量评估交叉方向

@@ -1,0 +1,78 @@
+id: paper:arxiv:2204.09314
+type: paper
+title: 'NTIRE 2022 Challenge on Super-Resolution and Quality Enhancement of Compressed Video: Dataset,
+  Methods and Results'
+domain: processing_enhancement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2204.09314v2
+  url: https://arxiv.org/abs/2204.09314
+  pdf_url: https://arxiv.org/pdf/2204.09314v2
+  venue: arXiv preprint
+time:
+  published: '2022-04-20'
+  collected: '2026-11-14'
+entities:
+- ref: concept:SuperResolution
+  role: subject
+- ref: codec:HEVC
+  role: uses
+- ref: concept:QP
+  role: uses
+claims:
+- statement: 挑战赛提出并公开 LDV 2.0 数据集，由原 LDV 数据集 240 段视频和新增 95 段视频组成，共 335 段视频
+  confidence: reported
+  metrics:
+  - name: 数据集视频总数
+    value: '335'
+    scope: LDV 2.0 数据集（LDV 240 + 新增 95）
+  - name: 新增视频数
+    value: '95'
+    scope: 在 LDV 数据集基础上扩充
+  evidence: abstract（初筛，未读全文）
+- statement: 赛道 1 针对固定 QP 条件下 HEVC 压缩视频的质量增强，赛道 2 与赛道 3 在质量增强基础上分别要求 x2 与 x4 倍超分辨率
+  confidence: reported
+  metrics:
+  - name: 超分倍率
+    value: x2/x4
+    scope: 赛道 2/赛道 3 的超分辨率要求
+  evidence: abstract（初筛，未读全文）
+- statement: 三个赛道共吸引超过 600 次注册，测试阶段分别有 8、8、12 支队伍向赛道 1、2、3 提交最终结果，参赛方案刻画了压缩视频超分与质量增强的当时最优水平
+  confidence: reported
+  metrics:
+  - name: 总注册数
+    value: 600+
+    scope: 三赛道合计
+  - name: 测试阶段提交队伍数
+    value: 8/8/12
+    scope: Track 1/Track 2/Track 3 最终结果提交
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: NTIRE 2022 挑战赛综述：发布 LDV 2.0 数据集（335 段视频），设 HEVC 压缩视频质量增强与 x2/x4 超分增强三赛道，测试阶段共 28 支队伍提交结果
+  abstract_zh: 本文回顾 NTIRE 2022 压缩视频超分辨率与质量增强挑战赛，并发布 LDV 2.0 数据集，包含原有 LDV 数据集的 240 段视频及新增的 95 段视频。挑战赛设三个赛道：赛道
+    1 针对固定 QP 下 HEVC 压缩视频的质量增强；赛道 2 和赛道 3 同时面向 HEVC 压缩视频的超分辨率与质量增强，分别要求 x2 和 x4 倍超分。三个赛道共吸引超过 600 次注册，测试阶段分别有
+    8、8、12 支队伍向赛道 1、2、3 提交了最终结果。参赛方法与方案刻画了压缩视频超分与质量增强的技术前沿，LDV 2.0 数据集与开源代码均已公开。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 压缩视频超分与质量增强的挑战赛综述，属编码链路后处理增强域而非核心编码域，按规则仅初筛收录
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: NTIRE 2022 压缩视频超分辨率与质量增强挑战赛：数据集、方法与结果
+relations:
+- type: same_topic
+  ref: paper:arxiv:2104.10781
+  note: NTIRE 2021 压缩视频质量增强挑战赛报告，同系列挑战赛上一届
+- type: same_topic
+  ref: paper:arxiv:2608.21495
+  note: 同为压缩视频质量增强方法研究
+- type: same_topic
+  ref: paper:arxiv:2609.37328
+  note: 面向压缩编码视频的超分辨率后滤波，与挑战赛赛道主题一致
+- type: same_topic
+  ref: paper:arxiv:2104.02322
+  note: 内容自适应超分辨率辅助视频压缩，与挑战赛的超分增强主题相关

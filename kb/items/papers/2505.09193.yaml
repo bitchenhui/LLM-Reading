@@ -1,0 +1,68 @@
+id: paper:arxiv:2505.09193
+type: paper
+title: 'BiECVC: Gated Diversification of Bidirectional Contexts for Learned Video Compression'
+domain: video_image_coding
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2505.09193v4
+  url: https://arxiv.org/abs/2505.09193
+  pdf_url: https://arxiv.org/pdf/2505.09193v4
+  venue: arXiv preprint
+time:
+  published: '2025-05-14'
+  collected: '2026-11-14'
+entities:
+- ref: codec:VVC
+  role: subject
+- ref: impl:VTM
+  role: compared_against
+claims:
+- statement: BiECVC 在 RA 配置、intra period 32 下相较 VTM 13.2 降低码率 13.4%
+  confidence: reported
+  metrics:
+  - name: BD-rate节省
+    value: 13.4%
+    scope: RA 配置，intra period 32，对比 VTM 13.2
+  evidence: abstract（初筛，未读全文）
+- statement: BiECVC 在 RA 配置、intra period 64 下相较 VTM 13.2 降低码率 15.7%
+  confidence: reported
+  metrics:
+  - name: BD-rate节省
+    value: 15.7%
+    scope: RA 配置，intra period 64，对比 VTM 13.2
+  evidence: abstract（初筛，未读全文）
+- statement: BiECVC 是首个在所有标准测试数据集上全面超越 VTM 13.2 RA 配置的学习型视频编解码器
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 双向上下文门控（借鉴自回归语言模型数据依赖衰减）可动态抑制快运动或遮挡引起的不准确上下文
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出融合多样化局部/非局部上下文建模与自适应双向上下文门控的学习型双向视频编码 BiECVC，在 RA 配置下全面超越 VTM 13.2。
+  abstract_zh: 针对学习型双向视频压缩（B帧编码）落后于前向预测方法、上下文提取单一且缺乏自适应抑制机制的问题，提出 BiECVC 框架。局部上下文增强通过复用低层高质量特征并用已解码运动矢量对齐，不引入额外运动开销；非局部依赖采用线性注意力机制以平衡性能与复杂度。借鉴自回归语言模型中的数据依赖衰减，引入双向上下文门控，根据条件编码结果动态过滤快运动或遮挡引起的有害上下文。实验表明，在
+    Random Access 配置（intra period 32/64）下相较 VTM 13.2 分别节省 13.4% 和 15.7% 码率，作者称其为首个在所有标准测试数据集上超越 VTM 13.2
+    RA 的学习型视频编解码器。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 学习型双向视频压缩核心工作，声称首个在全部标准测试集上超越 VTM 13.2 RA 的神经视频编解码器，属核心域高价值成果。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: BiECVC：面向学习型视频压缩的门控双向上下文多样化
+relations:
+- type: same_topic
+  ref: paper:arxiv:2410.09706
+  note: ECVC 同样利用多帧非局部相关性做上下文建模，属同一学习型视频压缩技术路线的前驱工作
+- type: same_topic
+  ref: paper:arxiv:2504.02560
+  note: L-LBVC 同为学习型双向视频压缩，研究问题与 BiECVC 直接重叠
+- type: same_topic
+  ref: paper:arxiv:2309.13835
+  note: IBVC 同属学习型 B 帧双向视频压缩方向
+- type: same_topic
+  ref: paper:arxiv:2510.12479
+  note: MH-LVC 同为学习型条件残差视频编码的多假设时序预测方向

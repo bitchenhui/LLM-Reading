@@ -1,0 +1,67 @@
+id: paper:arxiv:2412.00505
+type: paper
+title: 'Good, Cheap, and Fast: Overfitted Image Compression with Wasserstein Distortion'
+domain: video_image_coding
+research_lines:
+- inr_representation
+source:
+  channel: arxiv
+  external_id: 2412.00505v2
+  url: https://arxiv.org/abs/2412.00505
+  pdf_url: https://arxiv.org/pdf/2412.00505v2
+  venue: arXiv preprint
+time:
+  published: '2024-11-30'
+  collected: '2026-11-14'
+entities:
+- ref: impl:C3
+  role: subject
+- ref: metric:LPIPS
+  role: compared_against
+- ref: metric:DISTS
+  role: compared_against
+- ref: metric:MS-SSIM
+  role: compared_against
+claims:
+- statement: 面向视觉感知建模、以 Wasserstein 失真优化的 C3，在与生成式压缩（如 HiFiC）相当的感知质量-码率权衡下，解码计算量仅需其 1% 以内。
+  confidence: reported
+  metrics:
+  - name: 解码 MACs
+    value: <1%
+    scope: 相对 HiFiC 等生成式压缩模型的解码乘加运算量
+  evidence: abstract（初筛，未读全文）
+- statement: 人类评分研究显示，Wasserstein 失真作为优化目标明显优于 LPIPS。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: Wasserstein 失真对人类评分的预测能力优于 LPIPS、DISTS 与 MS-SSIM。
+  confidence: reported
+  metrics:
+  - name: Pearson 相关系数
+    value: 94%以上
+    scope: WD 预测值与人类评分 Elo 分数的相关性
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 以 Wasserstein 失真优化过拟合编解码器 C3，在解码计算量不足生成式压缩 1% 的情况下达到相近感知质量。
+  abstract_zh: 受生成式图像压缩启发，近期学习型压缩聚焦于更好地建模自然图像分布，但解码计算量比商用编解码器高出数个数量级，难以实用。本文转向建模视觉感知本身，将过拟合图像编解码器 C3 以
+    Wasserstein 失真（WD）为优化目标进行训练。人类评分研究表明，作为优化目标 WD 明显优于 LPIPS。该方法在与 HiFiC 等生成式压缩相当的感知质量-码率权衡下，解码所需乘加运算（MACs）不足其
+    1%。此外，WD 作为人类评分预测指标优于 LPIPS、DISTS、MS-SSIM，与 Elo 分数的 Pearson 相关系数超过 94%。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: Google DeepMind 团队提出以 Wasserstein 失真优化轻量过拟合图像编解码器 C3，在感知质量-解码复杂度权衡上取得核心编码方向的重要进展。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 好、省、快：基于 Wasserstein 失真的过拟合图像压缩
+relations:
+- type: same_topic
+  ref: paper:arxiv:2312.02753
+  note: 本文优化的 C3 即该文提出的单图像/视频低复杂度神经压缩编解码器
+- type: same_topic
+  ref: paper:arxiv:2605.20672
+  note: 同属基于 C3 的过拟合图像压缩研究方向（上下文建模改进）
+- type: same_topic
+  ref: paper:arxiv:2607.13723
+  note: 同属轻量解码神经图像压缩（Cool-chic 系）的低复杂度方向

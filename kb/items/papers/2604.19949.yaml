@@ -1,0 +1,52 @@
+id: paper:arxiv:2604.19949
+type: paper
+title: 'Indic-CodecFake meets SATYAM: Towards Detecting Neural Audio Codec Synthesized Speech Deepfakes
+  in Indic Languages'
+domain: audio_coding
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2604.19949v1
+  url: https://arxiv.org/abs/2604.19949
+  pdf_url: https://arxiv.org/pdf/2604.19949v1
+  venue: arXiv preprint
+time:
+  published: '2026-04-21'
+  collected: '2026-11-14'
+entities:
+- ref: concept:NeuralAudioCodec
+  role: subject
+claims:
+- statement: 在英语中心数据集上训练的 SOTA CodecFake 检测器无法泛化到印度语系 ICF 数据集，印度语的音系多样性与韵律变异性是主要挑战
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 现有音频大语言模型在 ICF 上零样本深伪检测表现持续不佳
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: SATYAM 通过双曲空间 Bhattacharya 距离融合 Whisper 语义与 TRILLsson 韵律表示并与条件提示对齐，在 ICF 基准上持续优于端到端和 ALM
+    基线
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出首个印度语系神经音频编解码器深伪语音基准 ICF，并给出双曲多模态融合检测模型 SATYAM
+  abstract_zh: 神经音频编解码器（NAC）驱动的音频大语言模型催生了高度逼真的语音深伪（CodecFake），但现有检测研究集中于英语和中文。作者基于 IndicSUPERB 真实语料构建首个大规模印度语系基准
+    ICF，覆盖多语言、多说话人画像和多种 NAC 合成语音。实验表明在英语中心数据集上训练的 SOTA 检测器无法泛化到 ICF，现有 ALM 零样本检测表现也持续不佳。为此提出 SATYAM 双曲
+    ALM：将 Whisper 语义表示与 TRILLsson 韵律表示在双曲空间经 Bhattacharya 距离融合，再与输入条件提示做同构对齐，实现语音内（语义-韵律）与跨模态（语音-文本）双层建模，在
+    ICF 上持续优于端到端与 ALM 基线。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 研究神经音频编解码器（NAC）合成语音的深伪检测，属音频域相关工作但非编解码核心，按非核心域规则给 summary_only
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: Indic-CodecFake 与 SATYAM：面向印度语系语言的神经音频编解码器合成语音深伪检测
+relations:
+- type: same_topic
+  ref: paper:arxiv:2107.03312
+  note: 均以神经音频编解码器为核心对象：SoundStream 为代表性端到端神经音频编解码器，本文研究其一类 NAC 合成语音的深伪检测
+- type: same_topic
+  ref: paper:arxiv:2605.20519
+  note: 均处于音频编解码器与音频 LLM 交叉的安全/鲁棒性议题，本文检测 ALM 经 NAC 生成的深伪语音

@@ -1,0 +1,61 @@
+id: paper:arxiv:2412.05574
+type: paper
+title: Rate-Distortion Optimized Skip Coding of Region Adaptive Hierarchical Transform Coefficients for
+  MPEG G-PCC
+domain: immersive_media
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2412.05574v1
+  url: https://arxiv.org/abs/2412.05574
+  pdf_url: https://arxiv.org/pdf/2412.05574v1
+  venue: arXiv preprint
+time:
+  published: '2024-12-07'
+  collected: '2026-11-14'
+entities:
+- ref: codec:G-PCC
+  role: subject
+- ref: org:MPEG
+  role: builds_on
+claims:
+- statement: RAHT最后几层残差中零值占比高导致不必要的码率消耗，对此提出自适应跳过编码方法，逐层决定是否编码末尾若干层残差以提升编码效率
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在MPEG通用测试条件下，相比最先进的G-PCC参考软件，该方法在动态点云上取得显著的率失真性能改善
+  confidence: reported
+  metrics:
+  - name: BD-rate (Bjøntegaard rate)
+    value: -3.50%
+    scope: 动态点云 Luma 分量，vs G-PCC参考软件，MPEG CTC
+  - name: BD-rate (Bjøntegaard rate)
+    value: -5.56%
+    scope: 动态点云 Cb 分量，vs G-PCC参考软件，MPEG CTC
+  - name: BD-rate (Bjøntegaard rate)
+    value: -4.18%
+    scope: 动态点云 Cr 分量，vs G-PCC参考软件，MPEG CTC
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出RAHT末层残差自适应跳过编码与自适应拉格朗日RDO，G-PCC动态点云属性BD-rate平均改善3.5%~5.6%。
+  abstract_zh: 针对MPEG G-PCC中RAHT变换最后几层残差零值比例高、造成不必要码率消耗的问题，提出一种自适应跳过编码方法，逐层自适应决定是否编码末尾若干层的RAHT残差。同时设计了配套的率失真代价计算方法，引入自适应拉格朗日乘子以平衡失真与码率。在MPEG通用测试条件（CTC）下，与最先进的G-PCC参考软件相比，该方法在动态点云上使Luma、Cb、Cr分量的平均Bjøntegaard
+    rate分别改善3.50%、5.56%和4.18%。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 点云属性编码方向的MPEG G-PCC标准工具优化（RAHT跳过编码），属沉浸式媒体域而非核心视频编码域，成果扎实仅作初筛摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 面向MPEG G-PCC的率失真优化区域自适应层次变换系数跳过编码
+relations:
+- type: same_topic
+  ref: paper:arxiv:2206.12186
+  note: 同为点云压缩中变换系数的率失真优化（V-PCC未占用区域变换系数选择）
+- type: same_topic
+  ref: paper:arxiv:2207.12554
+  note: 同为动态点云压缩编码研究
+- type: same_topic
+  ref: paper:arxiv:2602.08613
+  note: 同为点云压缩标准（AVS PCC 与 MPEG G-PCC）相关工作

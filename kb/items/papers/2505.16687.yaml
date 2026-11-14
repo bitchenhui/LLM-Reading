@@ -1,0 +1,68 @@
+id: paper:arxiv:2505.16687
+type: paper
+title: One-Step Diffusion-Based Image Compression with Semantic Distillation
+domain: video_image_coding
+research_lines:
+- generative_compression
+- learned_codec
+source:
+  channel: arxiv
+  external_id: 2505.16687v2
+  url: https://arxiv.org/abs/2505.16687
+  pdf_url: https://arxiv.org/pdf/2505.16687v2
+  venue: arXiv preprint
+time:
+  published: '2025-05-22'
+  collected: '2026-11-14'
+entities:
+- ref: impl:OneDC
+  role: subject
+- ref: concept:Hyperprior
+  role: uses
+claims:
+- statement: OneDC以单步扩散生成即可达到SOTA感知质量，证明多步采样对生成式压缩并非必需
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 相较先前多步扩散式编解码器，OneDC实现超过39%的码率节省
+  confidence: reported
+  metrics:
+  - name: 码率节省
+    value: 39%
+    scope: 与先前多步扩散式编解码器对比
+  evidence: abstract（初筛，未读全文）
+- statement: 相较先前多步扩散式编解码器，OneDC解码速度提升约20倍，消除迭代采样延迟
+  confidence: reported
+  metrics:
+  - name: 解码加速
+    value: 20x
+    scope: 与先前多步扩散式编解码器对比
+  evidence: abstract（初筛，未读全文）
+- statement: 以超先验作为语义信号引导单步扩散，并通过语义蒸馏将预训练生成式tokenizer的知识迁移至超先验编解码模块，采用像素域-潜在域混合优化兼顾保真与感知真实感
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出单步扩散生成图像编解码器OneDC：超先验语义引导+语义蒸馏，达到SOTA感知质量、省39%码率且解码快20倍
+  abstract_zh: 针对扩散式生成图像编解码器多步迭代采样带来的解码延迟，作者论证多步采样对生成式压缩并非必需。所提OneDC将潜在压缩模块与单步扩散生成器结合，并以超先验替代文本提示作为语义信号引导单步扩散。为增强超先验的语义能力，引入语义蒸馏机制，将预训练生成式tokenizer的知识迁移至超先验编解码模块。训练采用像素域与潜在域混合优化，兼顾重建保真度与感知真实感；实验显示OneDC以单步生成即达SOTA感知质量，相较先前多步扩散编解码器码率降低超39%、解码加速约20倍。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 核心域生成式图像压缩重要工作：单步扩散编解码器OneDC以超先验语义引导与语义蒸馏同时解决延迟与码率问题，指标显著
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 基于语义蒸馏的单步扩散图像压缩
+relations:
+- type: same_topic
+  ref: paper:arxiv:2601.01141
+  note: 同为单步扩散生成式压缩，YODA面向视频，本文面向图像
+- type: same_topic
+  ref: paper:arxiv:2606.13366
+  note: 同为扩散式图像压缩，关注率失真-感知联合优化
+- type: same_topic
+  ref: paper:arxiv:2606.21030
+  note: 同为生成式模型与图像编解码器结合（生成先验用于压缩）
+- type: same_topic
+  ref: paper:arxiv:2603.10188
+  note: 共享超先验（hyperprior）上下文建模概念的神经网络图像压缩

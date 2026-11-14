@@ -1,0 +1,61 @@
+id: paper:arxiv:2503.23052
+type: paper
+title: 'ShiftLIC: Lightweight Learned Image Compression with Spatial-Channel Shift Operations'
+domain: video_image_coding
+research_lines:
+- learned_codec
+source:
+  channel: arxiv
+  external_id: 2503.23052v1
+  url: https://arxiv.org/abs/2503.23052
+  pdf_url: https://arxiv.org/pdf/2503.23052v1
+  venue: arXiv preprint
+time:
+  published: '2025-03-29'
+  collected: '2026-11-14'
+entities:
+- ref: codec:VVC
+  role: subject
+- ref: concept:EntropyModel
+  role: builds_on
+- ref: metric:BD-Rate
+  role: measured_by
+claims:
+- statement: ShiftLIC 采用无参数移位操作结合小核卷积的 SSB 模块替代大核卷积，在保持特征提取效率的同时显著降低计算复杂度与模型参数量。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: ShiftLIC 在计算成本、参数量与解码延迟方面优于 VVC Intra 与 GMM 等主流压缩方法，适用于资源受限环境部署。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: ShiftLIC 在按每像素 MACs 归一化的率失真性能上创下新的 SOTA 基准。
+  confidence: reported
+  metrics:
+  - name: BD-Rate gain per MACs/pixel
+    value: -102.6%
+    scope: 相对对比方法（如 VVC Intra、GMM）按每像素乘加运算数归一化的 BD-rate 增益
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 以无参数移位操作替代大核卷积并配合轻量通道注意力与轻量熵模型，构建高性价比的学习图像压缩框架。
+  abstract_zh: 针对学习图像压缩（LIC）计算开销大、骨干网络特征冗余的问题，本文提出轻量级框架 ShiftLIC。其核心是空间移位块（SSB），用移位操作结合小核卷积替代大核卷积，在保持特征提取能力的同时显著降低计算复杂度与参数量；并引入基于递归特征融合的通道注意力模块以低成本增强通道间特征交互。此外，将
+    SSB 集成进熵模型，使熵估计过程更加轻量。实验显示 ShiftLIC 在计算成本、参数量与解码延迟上优于 VVC Intra、GMM 等主流方法，并在每像素 MACs 归一化的 BD-rate
+    上取得 -102.6% 的 SOTA 增益，适合资源受限环境部署，代码已开源。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 核心域学习图像压缩的轻量化工作，用无参数移位操作替代大核卷积，报告对 VVC Intra 与 GMM 的全面优势及 -102.6% BD-rate/MACs-pixel SOTA 结果并开源代码，值得深读。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: ShiftLIC：基于空间-通道移位操作的轻量级学习图像压缩
+relations:
+- type: same_topic
+  ref: paper:arxiv:2605.13243
+  note: 同属低复杂度学习图像压缩方向，均以降低 LIC 计算开销为目标
+- type: same_topic
+  ref: paper:arxiv:2603.06766
+  note: 同属学习图像压缩的熵建模改进研究
+- type: same_topic
+  ref: paper:arxiv:2606.00111
+  note: 同属学习图像压缩的轻量特征建模与熵模型设计

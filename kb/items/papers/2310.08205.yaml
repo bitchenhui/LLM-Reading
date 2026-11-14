@@ -1,0 +1,75 @@
+id: paper:arxiv:2310.08205
+type: paper
+title: 'LiveVV: Human-Centered Live Volumetric Video Streaming System'
+domain: immersive_media
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2310.08205v2
+  url: https://arxiv.org/abs/2310.08205
+  pdf_url: https://arxiv.org/pdf/2310.08205v2
+  venue: arXiv preprint
+time:
+  published: '2023-10-12'
+  collected: '2026-11-14'
+entities:
+- ref: concept:VolumetricVideo
+  role: subject
+- ref: concept:ABR
+  role: uses
+- ref: concept:QoE
+  role: uses
+- ref: metric:FPS
+  role: measured_by
+claims:
+- statement: LiveVV据称是首个整体性的实时体视频直播系统，整合多视角采集、场景分割与复用、自适应传输与渲染。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: LiveVV将静态与动态体积内容分离处理，通过复用低视差静态数据并削减低视觉显著性数据来降低带宽消耗。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: LiveVV集成体积视频自适应码率算法（VABR），在网络波动下以最大化QoE保证流畅播放。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 真实环境实验中，LiveVV实现24fps帧率、低于350ms延迟的实时体视频直播。
+  confidence: reported
+  metrics:
+  - name: FPS
+    value: 24 fps
+    scope: 真实环境实时直播系统端到端帧率
+  - name: 延迟
+    value: <350ms
+    scope: 真实环境直播端到端延迟
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 首个端到端实时体视频直播系统，集成轻量采集、场景复用与VABR，实现24fps、<350ms延迟。
+  abstract_zh: 论文提出LiveVV，据称是首个面向实时场景的整体性体视频（volumetric video）直播系统，覆盖多视角采集、场景分割与复用、自适应传输与渲染全链路。系统采用无需预先准备即可部署的轻量级体积采集模块；将静态与动态体积内容分离处理，复用低视差的静态数据并削减低视觉显著性数据以降低带宽消耗。针对网络波动，系统集成体积视频自适应码率算法（VABR），以最大化体验质量（QoE）实现流畅播放。真实环境实验显示，LiveVV可在24fps帧率与低于350ms的延迟下完成实时体视频直播。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 实时体视频（点云/网格/体素）直播系统，属沉浸式媒体与流传输交叉域，非核心编码域，按基准仅给摘要级收录。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: LiveVV：以人为中心的实时体视频流媒体系统
+relations:
+- type: same_topic
+  ref: paper:arxiv:2608.11645
+  note: 同为实时体视频流传输系统（隐私保护方向）
+- type: same_topic
+  ref: paper:arxiv:2610.21121
+  note: 同为移动端体视频流传输系统（GS双流残差）
+- type: same_topic
+  ref: paper:arxiv:2609.18624
+  note: 3DGS渐进式自适应流传输，同属沉浸式内容流化
+- type: same_topic
+  ref: paper:arxiv:2609.33969
+  note: 体视频（稀疏4D锚点GS）压缩，同属体视频表示与压缩
+- type: same_topic
+  ref: paper:arxiv:2606.29179
+  note: V-PCC体内容实时流传输硬件加速，同属体积内容流化
+- type: same_topic
+  ref: paper:arxiv:2603.13597
+  note: 自适应视频流码率梯（ABR）方向相关

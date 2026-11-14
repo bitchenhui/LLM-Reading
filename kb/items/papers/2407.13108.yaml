@@ -1,0 +1,72 @@
+id: paper:arxiv:2407.13108
+type: paper
+title: 'UCIP: A Universal Framework for Compressed Image Super-Resolution using Dynamic Prompt'
+domain: processing_enhancement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2407.13108v1
+  url: https://arxiv.org/abs/2407.13108
+  pdf_url: https://arxiv.org/pdf/2407.13108v1
+  venue: arXiv preprint
+time:
+  published: '2024-07-18'
+  collected: '2026-11-14'
+entities:
+- ref: concept:SuperResolution
+  role: subject
+- ref: codec:HEVC
+  role: evaluated_on
+- ref: codec:VVC
+  role: evaluated_on
+claims:
+- statement: UCIP是首个通用压缩图像超分框架，通过动态提示学习联合支持任意压缩编解码器/模式造成的混合失真。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 动态提示策略仅需空间尺寸1×1的少量提示即可挖掘内容/空间感知的任务自适应上下文信息。
+  confidence: reported
+  metrics:
+  - name: 提示空间尺寸
+    value: 1x1
+    scope: UCIP动态提示的空间分辨率
+  evidence: abstract（初筛，未读全文）
+- statement: 构建了覆盖6种传统与学习型编解码器（JPEG、HEVC、VVC、HIFIC等）、共23种常见退化的CSR all-in-one基准数据集。
+  confidence: reported
+  metrics:
+  - name: 编解码器数量
+    value: '6'
+    scope: 自建基准数据集涵盖的编解码器种类
+  - name: 退化种类数
+    value: '23'
+    scope: 自建基准数据集涵盖的常见退化类型
+  evidence: abstract（初筛，未读全文）
+- statement: 首次将Active Token Mixer（ATM）适配到CSR任务，仅以水平/垂直方向加偏移预测的方式建模全局信息以简化上下文挖掘。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 首个通用压缩图像超分框架UCIP，用动态提示统一应对JPEG/HEVC/VVC/HIFIC等任意编解码器的混合压缩失真。
+  abstract_zh: 论文提出首个通用压缩图像超分辨率（CSR）框架UCIP，通过动态提示学习联合支持任意压缩编解码器/模式产生的混合失真。设计仅需空间尺寸1×1提示的高效动态提示策略，挖掘内容与空间感知的任务自适应上下文信息。骨干采用类MLP结构，首次将Active
+    Token Mixer（ATM）适配到CSR任务，仅在水平与垂直方向结合偏移预测建模全局信息。作者还构建了覆盖JPEG、HEVC、VVC、HIFIC等6种传统与学习型编解码器、23种常见退化的all-in-one基准数据集。实验表明UCIP在通用CSR任务上取得一致且优异的性能。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 压缩图像超分辨率属于编码链路后处理增强而非核心编码域，按收录基准给 summary_only，但其对多编解码器失真的统一处理与音视频技术高度相关。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: UCIP：基于动态提示的通用压缩图像超分辨率框架
+relations:
+- type: same_topic
+  ref: paper:arxiv:2609.37328
+  note: 同为面向编解码器（VVC）压缩内容的神经超分辨率后滤波增强
+- type: same_topic
+  ref: paper:arxiv:2305.04844
+  note: 同为压缩码流超分辨率与码率节省的基准研究
+- type: same_topic
+  ref: paper:arxiv:2106.08147
+  note: 同为感知驱动的压缩视频超分辨率
+- type: same_topic
+  ref: paper:arxiv:2611.11831
+  note: 同为超分辨率与压缩伪影去除的联合处理

@@ -1,0 +1,58 @@
+id: paper:arxiv:2112.00560
+type: paper
+title: Attribute Artifacts Removal for Geometry-based Point Cloud Compression
+domain: immersive_media
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2112.00560v2
+  url: https://arxiv.org/abs/2112.00560
+  pdf_url: https://arxiv.org/pdf/2112.00560v2
+  venue: arXiv preprint
+time:
+  published: '2021-12-01'
+  collected: '2026-11-14'
+entities:
+- ref: codec:G-PCC
+  role: subject
+- ref: metric:BD-Rate
+  role: measured_by
+claims:
+- statement: MS-GAT 作为首个针对 G-PCC 的属性伪影去除方法，相比 Predlift 属性编码平均降低 9.74% BD-rate。
+  confidence: reported
+  metrics:
+  - name: BD-Rate 降幅
+    value: 9.74%
+    scope: 相对 G-PCC Predlift 属性编码，多种点云测试平均
+  evidence: abstract（初筛，未读全文）
+- statement: MS-GAT 相比 RAHT 属性编码平均降低 10.13% BD-rate。
+  confidence: reported
+  metrics:
+  - name: BD-Rate 降幅
+    value: 10.13%
+    scope: 相对 G-PCC RAHT 属性编码，多种点云测试平均
+  evidence: abstract（初筛，未读全文）
+- statement: 引入每点量化步长作为额外输入并以加权图注意力层聚焦高伪影点，可自适应处理不同点的伪影程度差异，主观上减少色偏、模糊与量化噪声。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出多尺度图注意力网络 MS-GAT 去除 G-PCC 属性压缩伪影，较 Predlift/RAHT 平均降约 10% BD-rate。
+  abstract_zh: G-PCC 在低码率下会对点云属性引入严重压缩伪影，该文提出首个针对 G-PCC 的属性伪影去除方法——多尺度图注意力网络 MS-GAT。方法基于点云几何坐标构建图并用切比雪夫图卷积提取属性特征，通过多尺度方案同时捕获当前点与近邻点及远距点之间的短/长程相关性。针对自适应量化导致各点伪影程度不同的问题，将每点量化步长作为网络额外输入，并引入加权图注意力层重点关注伪影更严重的点。客观结果显示相比
+    Predlift 平均降低 9.74% BD-rate、相比 RAHT 降低 10.13% BD-rate；主观上色偏、模糊与量化噪声等视觉伪影明显减少。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 属于点云压缩属性伪影去除（沉浸式/点云域），非核心视频图像编码域，按规则只能给 summary_only，但主题与 G-PCC 标准高度相关。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 面向基于几何点云压缩（G-PCC）的属性伪影去除
+relations:
+- type: same_topic
+  ref: paper:arxiv:2303.13764
+  note: 同为基于图的点云颜色属性质量增强网络，方法路线高度相关
+- type: same_topic
+  ref: paper:arxiv:2207.12554
+  note: 同属点云压缩（动态点云几何编码）研究方向

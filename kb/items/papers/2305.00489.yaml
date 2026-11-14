@@ -1,0 +1,68 @@
+id: paper:arxiv:2305.00489
+type: paper
+title: Learned Focused Plenoptic Image Compression with Microimage Preprocessing and Global Attention
+domain: immersive_media
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2305.00489v1
+  url: https://arxiv.org/abs/2305.00489
+  pdf_url: https://arxiv.org/pdf/2305.00489v1
+  venue: arXiv preprint
+time:
+  published: '2023-04-30'
+  collected: '2026-11-14'
+entities:
+- ref: codec:HEVC
+  role: subject
+- ref: codec:VVC
+  role: compared_against
+claims:
+- statement: 该方法在20张预处理后的聚焦光场图像上相比HEVC帧内编码平均降低62.57%码率
+  confidence: reported
+  metrics:
+  - name: BD-rate降幅
+    value: 62.57%
+    scope: vs HEVC帧内编码，20张预处理后聚焦光场图像平均
+  evidence: abstract（初筛，未读全文）
+- statement: 该方法相比VVC帧内编码平均降低51.67%码率
+  confidence: reported
+  metrics:
+  - name: BD-rate降幅
+    value: 51.67%
+    scope: vs VVC帧内编码，20张预处理后聚焦光场图像平均
+  evidence: abstract（初筛，未读全文）
+- statement: 相比最先进的端到端图像压缩方法，该方法节省18.73%码率且重建结果感知质量更好
+  confidence: reported
+  metrics:
+  - name: 码率节省
+    value: 18.73%
+    scope: vs SOTA端到端图像压缩方法
+  evidence: abstract（初筛，未读全文）
+- statement: 构建了具有内容与深度多样性的聚焦光场图像新数据集，用于训练与测试并已开源
+  confidence: reported
+  metrics:
+  - name: 数据集规模
+    value: '1910'
+    scope: 聚焦光场图像张数
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出含微图像预处理与全局注意力的端到端聚焦光场（光场）图像压缩，码率表现优于HEVC/VVC帧内编码。
+  abstract_zh: 针对聚焦光场相机图像中微透镜中继成像产生的复杂微纹理及微图像间长距离相关性使现有压缩方法失效的问题，提出有损端到端学习压缩架构。首先依据成像原理设计预处理方案，去除子孔径图像无效像素并将微图像对齐到矩形网格；随后提出大感受野的全局注意力模块，通过重采样过程中的逐像素向量注意力捕捉特征图间全局相关性。同时构建了包含1910张内容与深度多样性聚焦光场图像的新数据集用于训练与测试。实验表明，在20张预处理后图像上，该方法相比HEVC与VVC帧内编码分别平均降低62.57%与51.67%码率，相比最先进端到端图像压缩方法节省18.73%码率且重建感知质量更佳，数据集与代码已开源。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 聚焦光场图像压缩属于光场/沉浸式媒体域（非核心编码域），但与HEVC/VVC帧内编码有对比锚点，具中等关联度
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 基于微图像预处理与全局注意力的学习型聚焦光场图像压缩
+relations:
+- type: same_topic
+  ref: paper:arxiv:2103.04201
+  note: 同为光场图像编码/压缩研究，均涉及与传统编码标准的对比
+- type: same_topic
+  ref: paper:arxiv:2307.15421
+  note: 同属学习型（端到端）图像压缩方向，本文以SOTA端到端压缩方法为对比基线

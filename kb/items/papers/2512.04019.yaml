@@ -1,0 +1,91 @@
+id: paper:arxiv:2512.04019
+type: paper
+title: Ultra-lightweight Neural Video Representation Compression
+domain: video_image_coding
+research_lines:
+- inr_representation
+- learned_codec
+source:
+  channel: arxiv
+  external_id: 2512.04019v1
+  url: https://arxiv.org/abs/2512.04019
+  pdf_url: https://arxiv.org/pdf/2512.04019v1
+  venue: arXiv preprint
+time:
+  published: '2025-12-03'
+  collected: '2026-11-14'
+entities:
+- ref: concept:INR
+  role: subject
+- ref: impl:NVRC
+  role: builds_on
+- ref: impl:C3
+  role: compared_against
+- ref: concept:EntropyModel
+  role: uses
+- ref: metric:BD-Rate
+  role: measured_by
+- ref: metric:PSNR
+  role: measured_by
+- ref: metric:MS-SSIM
+  role: measured_by
+claims:
+- statement: NVRC-Lite在PSNR口径下相比轻量INR视频编码器C3最多节省21.03%的BD-rate。
+  confidence: reported
+  metrics:
+  - name: BD-Rate
+    value: 21.03%
+    scope: 相对C3的BD-rate节省，PSNR口径，最大值
+  evidence: abstract（初筛，未读全文）
+- statement: NVRC-Lite在MS-SSIM口径下相比C3最多节省23.06%的BD-rate。
+  confidence: reported
+  metrics:
+  - name: BD-Rate(MS-SSIM)
+    value: 23.06%
+    scope: 相对C3的BD-rate节省，MS-SSIM口径，最大值
+  evidence: abstract（初筛，未读全文）
+- statement: NVRC-Lite取得8.4倍编码加速与2.5倍解码加速（相对其自回归熵编码基线框架）。
+  confidence: reported
+  metrics:
+  - name: 编码加速比
+    value: 8.4x
+    scope: 相对基线编码速度
+  - name: 解码加速比
+    value: 2.5x
+    scope: 相对基线解码速度
+  evidence: abstract（初筛，未读全文）
+- statement: 八叉树上下文模型替代自回归熵编码，可显著加速高维特征网格的熵编码模块。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在轻量神经表示中引入更高分辨率的多尺度特征网格，可显著提升INR在低复杂度（<10kMACs/pixel量级）下的率失真性能。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 将NVRC扩展为轻量版，用高分辨率多尺度特征网格与八叉树上下文熵编码，在低复杂度下超越C3并大幅加速编解码。
+  abstract_zh: 该工作将端到端压缩INR的视频编码框架NVRC推向轻量化，提出NVRC-Lite。其一，在轻量神经表示中引入多尺度特征网格，高分辨率网格显著提升低复杂度下的INR性能；其二，针对现有INR常用自回归熵编码速度过慢的问题，提出面向高维特征网格的八叉树上下文模型以加速熵编码。实验显示，NVRC-Lite以PSNR和MS-SSIM衡量，相比最优轻量INR视频编码器之一C3最多节省21.03%和23.06%的BD-rate，同时获得8.4倍编码与2.5倍解码加速。实现将开源。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 核心域：Bristol团队NVRC系列的轻量化延伸（NVRC-Lite），多尺度特征网格+八叉树熵编码上下文模型，性能与速度收益显著。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 超轻量神经视频表示压缩（NVRC-Lite）
+relations:
+- type: same_topic
+  ref: paper:arxiv:2409.07414
+  note: NVRC：本文直接前驱，NVRC-Lite为其轻量化扩展
+- type: same_topic
+  ref: paper:arxiv:2606.28163
+  note: NVRC++：同一NVRC系列的不同复杂度/质量尺度扩展
+- type: same_topic
+  ref: paper:arxiv:2609.04273
+  note: Scalable Neural Video Representation Compression：同属INR视频表示压缩（NVRC系列）工作
+- type: same_topic
+  ref: paper:arxiv:2506.15276
+  note: MSNeRV：同为多尺度特征融合的轻量INR视频编码
+- type: same_topic
+  ref: paper:arxiv:2505.00335
+  note: 高效神经视频表示：同属低复杂度INR视频编码方向

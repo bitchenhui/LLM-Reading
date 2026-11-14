@@ -1,0 +1,64 @@
+id: paper:arxiv:2105.05658
+type: paper
+title: A CNN-based Prediction-Aware Quality Enhancement Framework for VVC
+domain: processing_enhancement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2105.05658v1
+  url: https://arxiv.org/abs/2105.05658
+  pdf_url: https://arxiv.org/pdf/2105.05658v1
+  venue: arXiv preprint
+time:
+  published: '2021-05-12'
+  collected: '2026-11-14'
+entities:
+- ref: codec:VVC
+  role: subject
+- ref: impl:VTM
+  role: uses
+- ref: concept:QP
+  role: uses
+- ref: concept:GOP
+  role: uses
+claims:
+- statement: 在VTM-10上，预测感知设计在同等网络复杂度下较默认CNN QE滤波器额外带来1.52%的BD-BR编码效率增益。
+  confidence: reported
+  metrics:
+  - name: BD-BR
+    value: 1.52%
+    scope: 相对默认CNN-based QE滤波器的额外增益，VTM-10，相同网络复杂度
+  evidence: abstract（初筛，未读全文）
+- statement: 预测信号相关信息同时用于训练阶段与推理输入，使网络学习帧内/帧间各编码类型特有失真。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 全部QP共用单一模型并以QP-map适配，亮度与色度共享模型，降低内存需求。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 框架支持后处理（PP）与环路滤波（ILF）两种集成方式，ILF集成利用GoP特性进一步提升性能。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 以帧内/帧间预测信息作训练先验与输入的CNN质量增强框架，在VTM-10上较默认CNN QE滤波器再降1.52% BD-BR。
+  abstract_zh: 该文提出利用编码端规范决策信息（重点是帧内与帧间预测信号）的CNN质量增强框架：预测相关信息既参与训练阶段也作为网络输入，使模型能学习各编码类型特有的失真。为降低内存需求，所有QP共用单一模型并通过QP-map适配，且亮度与色度共享该模型。除后处理（PP）外还考虑了环路滤波（ILF）的编码器集成方式，并利用GoP特性提升性能。框架实现于VTM-10之上，实验表明在同等网络复杂度下，预测感知设计较默认CNN
+    QE滤波器额外带来1.52%的BD-BR编码效率增益。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 面向VVC的CNN质量增强（后滤波/环路滤波），属编码链路增强类而非核心编码工具设计，按基准收录为summary_only，但与VVC编码效率直接相关。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 面向VVC的基于CNN的预测感知质量增强框架
+relations:
+- type: same_topic
+  ref: paper:arxiv:2608.21495
+  note: 同为压缩视频质量增强方法（多域特征融合方向）
+- type: same_topic
+  ref: paper:arxiv:2609.37328
+  note: 同为面向VVC的神经后滤波/质量增强
+- type: same_topic
+  ref: paper:arxiv:2104.10781
+  note: 压缩视频质量增强任务线（NTIRE QE挑战，默认CNN QE滤波器所属研究方向）

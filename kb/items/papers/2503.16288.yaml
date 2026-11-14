@@ -1,0 +1,69 @@
+id: paper:arxiv:2503.16288
+type: paper
+title: Overview of Variable Rate Coding in JPEG AI
+domain: video_image_coding
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2503.16288v1
+  url: https://arxiv.org/abs/2503.16288
+  pdf_url: https://arxiv.org/pdf/2503.16288v1
+  venue: arXiv preprint
+time:
+  published: '2025-03-20'
+  collected: '2026-11-14'
+entities:
+- ref: codec:VVC
+  role: subject
+- ref: metric:BD-Rate
+  role: measured_by
+claims:
+- statement: JPEG AI 主档（低复杂度）相对 VVC intra 取得 13.1% BD-rate 增益
+  confidence: reported
+  metrics:
+  - name: BD-rate
+    value: 13.1%
+    scope: JPEG AI 主档低复杂度配置 vs VVC intra，增益取 JPEG AI 通用测试条件中七个感知指标的 BD-rate 均值
+  evidence: abstract（初筛，未读全文）
+- statement: JPEG AI 高档（高复杂度）相对 VVC intra 取得 19.2% BD-rate 增益
+  confidence: reported
+  metrics:
+  - name: BD-rate
+    value: 19.2%
+    scope: JPEG AI 高档高复杂度配置 vs VVC intra，七感知指标 BD-rate 均值口径
+  evidence: abstract（初筛，未读全文）
+- statement: 变码率机制提供最高至 2.0 bpp 的连续码率函数
+  confidence: reported
+  metrics:
+  - name: bit rate
+    value: 2.0 bpp
+    scope: 变码率自适应的连续码率上限
+  evidence: abstract（初筛，未读全文）
+- statement: JPEG AI 被定位为首个可在移动设备上实现的学习式图像编码标准
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 变码率支持色度分量间灵活比特分配及指定用例的 ROI 功能
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 综述 JPEG AI 标准变码率机制：三维质量图、快速码率匹配与训练策略，性能超越 VVC intra
+  abstract_zh: 本文系统综述正在标准化的学习式图像编码器 JPEG AI 中的变码率功能，包含三个自适应机制：三维质量图、快速码率匹配算法及配套训练策略。该机制可提供最高至 2.0 bpp
+    的连续码率函数，支持色度分量间的灵活比特分配以及感兴趣区域（ROI）质量控制。客观评测以 JPEG AI 通用测试条件中七个感知指标的 BD-rate 均值计算，主档低复杂度配置相对 VVC intra
+    获 13.1% 码率增益，高档高复杂度配置获 19.2% 增益。作者认为 JPEG AI 是首个可在移动设备上落地实现的学习式图像编码标准，文中还展示了主观评测下 ROI 质量提升的实例。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: JPEG AI 学习式图像编码标准变码率机制的官方性综述，属核心编码域且有明确对比 VVC intra 的量化结果
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: JPEG AI 变码率编码综述
+relations:
+- type: same_topic
+  ref: paper:arxiv:2510.13867
+  note: 同属 JPEG AI 学习式图像编码标准体系的综述工作，可互为补充
+- type: same_topic
+  ref: paper:arxiv:2411.06810
+  note: 均研究 JPEG AI 编码特性（后者聚焦压缩伪影检测）

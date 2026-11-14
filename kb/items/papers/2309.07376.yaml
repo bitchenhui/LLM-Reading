@@ -1,0 +1,63 @@
+id: paper:arxiv:2309.07376
+type: paper
+title: 'VCD: A Video Conferencing Dataset for Video Compression'
+domain: video_image_coding
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2309.07376v2
+  url: https://arxiv.org/abs/2309.07376
+  pdf_url: https://arxiv.org/pdf/2309.07376v2
+  venue: arXiv preprint
+time:
+  published: '2023-09-14'
+  collected: '2026-11-14'
+entities:
+- ref: dataset:VCD
+  role: subject
+- ref: codec:AVC
+  role: evaluated_on
+- ref: codec:HEVC
+  role: evaluated_on
+- ref: codec:VVC
+  role: evaluated_on
+- ref: codec:AV1
+  role: evaluated_on
+- ref: org:Microsoft
+  role: affiliation
+claims:
+- statement: 常用视频编码评测数据集源质量都很高，不能代表视频会议场景中实际使用的视频。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: VCD是首个聚焦视频会议场景的视频编码评测数据集，涵盖多种摄像头质量、时空信息多样性、桌面与移动场景及两类视频背景处理。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在VCD低延迟设置下评测了H.264、H.265、H.266与AV1的压缩效率，并与非会议数据集UVC、MLC-JVC、HEVC对比。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 源质量与场景对H.264、H.265、H.266、AV1所有编解码器的压缩效率均有显著影响，需针对会议场景专门评测与调优。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 微软发布首个面向视频会议场景的编码评测数据集VCD，评测H.264/H.265/H.266/AV1低延迟压缩效率并开源。
+  abstract_zh: 论文指出常用视频编码评测数据集源质量普遍很高，不能代表视频会议场景的真实视频，据此提出首个面向视频会议的编码评测数据集VCD。VCD覆盖多种摄像头质量与空间、时间信息多样性，包含桌面与移动两类场景以及两种视频背景处理。作者在低延迟设置下报告了H.264、H.265、H.266与AV1在VCD上的压缩效率，并与UVC、MLC-JVC、HEVC等非会议数据集对比。结果显示源质量与场景对所有编解码器的压缩效率均有显著影响，VCD可用于针对该场景的编码评测与调优。数据集已在GitHub开源。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 核心域首个面向视频会议/RTC场景的视频编码评测数据集，微软开源发布，直接支撑编解码器在该重要场景的评测与调优。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: VCD：面向视频压缩的视频会议数据集
+relations:
+- type: same_topic
+  ref: paper:arxiv:2408.05042
+  note: 同为低延迟配置下对传统编码器的基准评测，方法学相关
+- type: same_topic
+  ref: paper:arxiv:2605.15800
+  note: 同为编解码器压缩性能与视频质量的评测工作
+- type: same_topic
+  ref: paper:arxiv:2511.00969
+  note: 同为在编码内容上评估质量指标/压缩性能，受数据集特性影响

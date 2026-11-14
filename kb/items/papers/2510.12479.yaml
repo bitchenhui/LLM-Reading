@@ -1,0 +1,59 @@
+id: paper:arxiv:2510.12479
+type: paper
+title: 'MH-LVC: Multi-Hypothesis Temporal Prediction for Learned Conditional Residual Video Coding'
+domain: video_image_coding
+research_lines:
+- traditional_codec_opt
+source:
+  channel: arxiv
+  external_id: 2510.12479v1
+  url: https://arxiv.org/abs/2510.12479
+  pdf_url: https://arxiv.org/pdf/2510.12479v1
+  venue: arXiv preprint
+time:
+  published: '2025-10-14'
+  collected: '2026-11-14'
+entities:
+- ref: impl:VTM
+  role: subject
+- ref: impl:DCVC-FM
+  role: compared_against
+- ref: metric:PSNR
+  role: measured_by
+claims:
+- statement: MH-LVC在常用测试数据集上以PSNR-RGB衡量优于低延迟B（Low-Delay B）配置下的VTM-17.0。
+  confidence: reported
+  metrics:
+  - name: PSNR-RGB
+    value: 优于VTM-17.0（未给出具体BD-rate数值）
+    scope: 常用测试数据集，VTM-17.0低延迟B配置
+  evidence: abstract（初筛，未读全文）
+- statement: MH-LVC与DCVC-FM等最先进学习型编码器性能相当，同时所需解码帧缓冲更少、解码时间相近。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: MH-LVC存储多个长期与短期参考帧，但每次时域预测最多使用两个参考帧，以缓解条件编码中隐式上下文信息过多导致的解码内存访问开销。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 解码帧缓冲管理使编码器可灵活利用长期关键帧抑制时域级联误差、利用短期参考帧最小化预测误差，并支持按输入视频自适应调整时域预测结构。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 多假设时域预测的条件残差视频编码，每次预测限用两个参考帧降低内存访问，性能超VTM-17.0、比肩DCVC-FM。
+  abstract_zh: 论文提出MH-LVC，一种在条件残差视频编码框架下利用长期与短期参考帧进行多假设时域预测的方案。针对近期时域上下文挖掘方法需存储大量隐式上下文信息、导致解码时内存访问过大的问题，MH-LVC虽存储多个长期/短期参考帧，但每次时域预测最多仅使用两个参考帧。其解码帧缓冲管理允许编码器灵活利用长期关键帧抑制时域级联误差、用短期参考帧最小化预测误差，且缓冲方案使时域预测结构可针对具体视频内容自适应调整，这一灵活性在传统编码器中常见但在学习型编码器中尚未充分探索。实验显示，该方法在常用测试数据集上以PSNR-RGB衡量优于低延迟B配置下的VTM-17.0，与DCVC-FM等最先进学习型编码器性能相当，同时所需解码帧缓冲更小、解码时间相近。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 核心域学习型视频编码论文，PSNR-RGB超越VTM-17.0并比肩DCVC-FM且解码缓冲更小，属高价值方法创新。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: MH-LVC：面向学习型条件残差视频编码的多假设时域预测
+relations:
+- type: same_topic
+  ref: paper:arxiv:2603.05756
+  note: 同为学习型视频编码（LVC系列），均研究帧间/统一编解码框架设计
+- type: same_topic
+  ref: paper:arxiv:2606.13110
+  note: 同关注神经视频编码中的缓冲策略与解码端内存开销优化

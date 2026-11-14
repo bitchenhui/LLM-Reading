@@ -1,0 +1,58 @@
+id: paper:arxiv:2407.10632
+type: paper
+title: Bidirectional Stereo Image Compression with Cross-Dimensional Entropy Model
+domain: video_image_coding
+research_lines:
+- learned_codec
+source:
+  channel: arxiv
+  external_id: 2407.10632v2
+  url: https://arxiv.org/abs/2407.10632
+  pdf_url: https://arxiv.org/pdf/2407.10632v2
+  venue: arXiv preprint
+time:
+  published: '2024-07-15'
+  collected: '2026-11-14'
+entities:
+- ref: concept:EntropyModel
+  role: subject
+- ref: metric:PSNR
+  role: measured_by
+- ref: metric:MS-SSIM
+  role: measured_by
+claims:
+- statement: BiSIC采用对称双向架构，两视点互为条件进行压缩，缓解单视点依赖另一视点造成的压缩质量不均衡
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 提出跨维熵模型，联合空间上下文、通道上下文与立体依赖来估计潜在表示分布，用于熵编码
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 编解码骨干采用基于3D卷积的架构捕捉局部特征，并通过双向注意力块建模全局特征
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在PSNR与MS-SSIM两项指标上优于传统图像/视频压缩标准及最先进的学习式压缩方法
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出对称双向立体图像压缩BiSIC，以跨维熵模型融合空间/通道上下文与立体依赖，PSNR与MS-SSIM超越传统及学习式方法。
+  abstract_zh: 针对以往单视点压缩依赖另一视点导致压缩不均衡的问题，论文提出对称的双向立体图像压缩架构BiSIC。编解码骨干基于3D卷积捕捉局部特征，并引入双向注意力块利用全局特征。核心创新是跨维熵模型，将空间上下文、通道上下文与立体依赖等多种条件因素融合，用于估计潜在表示分布以支撑熵编码。实验显示BiSIC在PSNR与MS-SSIM上优于传统图像/视频压缩标准以及最先进的学习式方法。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 学习式立体图像压缩属核心域，提出对称双向架构与跨维熵模型，性能优于传统标准与SOTA学习式方法，值得深读。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 基于跨维熵模型的双向立体图像压缩
+relations:
+- type: same_topic
+  ref: paper:arxiv:2603.06766
+  note: 同为学习式图像压缩中的熵模型/熵建模研究
+- type: same_topic
+  ref: paper:arxiv:2504.19119
+  note: 同为学习式图像压缩的多参考熵建模方向
+- type: same_topic
+  ref: paper:arxiv:2505.09193
+  note: 同为双向上下文利用的学习式压缩（BiECVC，视频域）

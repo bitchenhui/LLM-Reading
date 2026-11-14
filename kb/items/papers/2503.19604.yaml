@@ -1,0 +1,83 @@
+id: paper:arxiv:2503.19604
+type: paper
+title: 'GIViC: Generative Implicit Video Compression'
+domain: video_image_coding
+research_lines:
+- inr_representation
+source:
+  channel: arxiv
+  external_id: 2503.19604v1
+  url: https://arxiv.org/abs/2503.19604
+  pdf_url: https://arxiv.org/pdf/2503.19604v1
+  venue: arXiv preprint
+time:
+  published: '2025-03-25'
+  collected: '2026-11-14'
+entities:
+- ref: concept:INR
+  role: subject
+- ref: codec:VVC
+  role: compared_against
+- ref: impl:VTM
+  role: compared_against
+- ref: impl:DCVC-FM
+  role: compared_against
+- ref: impl:NVRC
+  role: compared_against
+- ref: metric:BD-Rate
+  role: measured_by
+claims:
+- statement: 在RA配置（YUV 4:2:0，GOPSize=32）下，GIViC相对VVC参考软件VTM取得15.94%的BD-rate节省。
+  confidence: reported
+  metrics:
+  - name: BD-rate savings
+    value: 15.94%
+    scope: RA配置（YUV 4:2:0, GOPSize=32），对比锚点为VVC VTM
+  evidence: abstract（初筛，未读全文）
+- statement: 同等条件下GIViC相对学习型编解码器DCVC-FM取得22.46%的BD-rate节省。
+  confidence: reported
+  metrics:
+  - name: BD-rate savings
+    value: 22.46%
+    scope: RA配置（YUV 4:2:0, GOPSize=32），对比锚点为DCVC-FM
+  evidence: abstract（初筛，未读全文）
+- statement: 同等条件下GIViC相对NVRC取得8.52%的BD-rate节省。
+  confidence: reported
+  metrics:
+  - name: BD-rate savings
+    value: 8.52%
+    scope: RA配置（YUV 4:2:0, GOPSize=32），对比锚点为NVRC
+  evidence: abstract（初筛，未读全文）
+- statement: GIViC是首个在RA编码配置下性能超越VTM的INR视频编解码器。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出生成式隐式视频压缩框架GIViC，是首个在RA配置下BD-rate超越VVC VTM的INR视频编码器。
+  abstract_zh: 针对现有基于隐式神经表示（INR）的视频编解码器性能不及传统或自编码器类编解码器的问题，提出生成式隐式视频压缩框架GIViC。该框架借鉴INR与大型语言模型、扩散模型在长程依赖建模上的共性，设计隐式扩散过程，沿由粗到细的时空分解进行扩散采样，从全序列级扩散逐步过渡到逐token级扩散。同时引入分层门控线性注意力transformer（HGLA），沿尺度与序列两条轴对全局依赖建模进行双重分解。在随机访问（RA）配置（YUV
+    4:2:0，GOPSize=32）下，GIViC相对VVC VTM、DCVC-FM和NVRC分别取得15.94%、22.46%和8.52%的BD-rate节省；据作者所知，这是首个在RA配置下超越VTM的INR视频编解码器，源代码将开源。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 核心域视频编码：首个在RA配置下BD-rate超越VVC VTM的INR视频编解码器，结合隐式扩散与门控线性注意力，属关键进展。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: GIViC：生成式隐式视频压缩
+relations:
+- type: same_topic
+  ref: paper:arxiv:2604.08329
+  note: 同为INR条件化的扩散式视频压缩（DiV-INR）
+- type: same_topic
+  ref: paper:arxiv:2606.22371
+  note: 同为自回归扩散先验的生成式视频压缩（ZeroGVC）
+- type: same_topic
+  ref: paper:arxiv:2609.34725
+  note: 同为生成式先验解锁视频压缩（Gen2-VC）
+- type: same_topic
+  ref: paper:arxiv:2609.04273
+  note: 同为神经视频表示（INR类）压缩方向（Scalable Neural Video Representation Compression）
+- type: same_topic
+  ref: paper:arxiv:2601.01141
+  note: 同为扩散式视频压缩器（YODA）

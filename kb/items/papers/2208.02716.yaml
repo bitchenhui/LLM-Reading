@@ -1,0 +1,52 @@
+id: paper:arxiv:2208.02716
+type: paper
+title: IT/IST/IPLeiria Response to the Call for Proposals on JPEG Pleno Point Cloud Coding
+domain: immersive_media
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2208.02716v1
+  url: https://arxiv.org/abs/2208.02716
+  pdf_url: https://arxiv.org/pdf/2208.02716v1
+  venue: arXiv preprint
+time:
+  published: '2022-08-04'
+  collected: '2026-11-14'
+entities:
+- ref: codec:G-PCC
+  role: subject
+- ref: codec:V-PCC
+  role: compared_against
+- ref: org:MPEG
+  role: compared_against
+claims:
+- statement: 所提深度学习点云几何编解码器在 JPEG Pleno CfP 测试集上的压缩效率优于 MPEG G-PCC 标准
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 所提几何编解码器在 JPEG CfP 测试集上优于或与 V-PCC Intra 标准相当
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 几何与颜色联合编解码器因质量饱和效应未能达到几何编解码器的压缩性能水平，该效应有待解决
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: IT/IST/IPLeiria 向 JPEG Pleno 点云编码 CfP 提交深度学习点云编解码器，几何编码性能超 G-PCC、可比 V-PCC。
+  abstract_zh: 本文是 IT/IST/IPLeiria 团队对 2022 年 1 月发布的 JPEG Pleno 点云编码提案征集（CfP）的应案，提出两款基于深度学习的点云编解码器：一款纯几何编解码器和一款几何与颜色联合编解码器。所提编解码器基于近期深度学习点云几何编码进展构建，并支持
+    CfP 要求的部分关键功能。在 JPEG CfP 测试集上，几何编解码器的压缩效率优于 MPEG G-PCC 标准，并优于或与 V-PCC Intra 标准相当。几何与颜色联合编解码器受质量饱和效应影响未能取得同等压缩性能，该问题尚待克服。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 点云编码属沉浸式媒体非核心域，为 JPEG Pleno CfP 应案且性能对比 G-PCC/V-PCC，按基准仅收录摘要
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: IT/IST/IPLeiria 对 JPEG Pleno 点云编码提案征集的响应
+relations:
+- type: same_topic
+  ref: paper:arxiv:2207.12554
+  note: 均研究点云几何压缩，本文为其深度学习几何编码进展在 JPEG Pleno CfP 上的应用
+- type: same_topic
+  ref: paper:arxiv:2606.29179
+  note: 均涉及 V-PCC 点云编码技术生态

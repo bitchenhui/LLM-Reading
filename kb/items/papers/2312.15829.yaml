@@ -1,0 +1,63 @@
+id: paper:arxiv:2312.15829
+type: paper
+title: 'MaskCRT: Masked Conditional Residual Transformer for Learned Video Compression'
+domain: video_image_coding
+research_lines:
+- learned_codec
+source:
+  channel: arxiv
+  external_id: 2312.15829v2
+  url: https://arxiv.org/abs/2312.15829
+  pdf_url: https://arxiv.org/pdf/2312.15829v2
+  venue: arXiv preprint
+time:
+  published: '2023-12-25'
+  collected: '2026-11-14'
+entities:
+- ref: concept:Hyperprior
+  role: subject
+- ref: impl:VTM
+  role: compared_against
+- ref: metric:BD-Rate
+  role: measured_by
+- ref: metric:PSNR
+  role: measured_by
+- ref: metric:MS-SSIM
+  role: measured_by
+claims:
+- statement: 掩码条件残差编码通过学习的软掩码逐像素自适应混合条件编码与条件残差编码，可应对遮挡显现或不可靠运动估计导致残差熵率假设失效的场景，MaskCRT同时优于两种单一范式。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在常用数据集上，MaskCRT的PSNR-RGB BD-rate与VTM-17.0低时延P（low delay P）配置相当，MS-SSIM-RGB上优于VTM-17.0。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 提出的通道变换模块（CTM）沿通道维解耦图像隐变量，使简单hyperprior熵模型达到接近通道自回归模型的压缩性能。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 论文系统研究了对Transformer自编码器进行条件化以用于帧间编码的多种策略，该方向此前研究不足。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出逐像素软掩码融合条件编码与条件残差编码的Transformer视频压缩方法，性能媲美甚至超越VTM-17.0低时延P配置。
+  abstract_zh: 条件编码已成为学习型视频压缩的主流路线，但在出现信息瓶颈时可能劣于残差编码；而条件残差编码依赖『残差帧熵率低于帧内帧』的假设，该假设在遮挡显现（dis-occlusion）或运动估计不可靠时并不总成立。为此，论文提出掩码条件残差编码方案，通过学习的软掩码逐像素自适应地混合条件编码与条件残差编码。方法上引入基于Transformer的条件自编码器，系统探索了多种对Transformer自编码器进行条件化的帧间编码策略，并提出通道变换模块（CTM）沿通道维解耦图像隐变量，使简单hyperprior熵模型逼近通道自回归模型的压缩性能。实验表明MaskCRT同时优于条件编码与条件残差编码；在常用数据集上，其PSNR-RGB
+    BD-rate与VTM-17.0低时延P配置相当，MS-SSIM-RGB上则优于VTM-17.0。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 核心域学习视频压缩：提出掩码条件残差编码新范式与Transformer条件自编码器，BD-rate比肩VTM-17.0低时延P配置，值得深读。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: MaskCRT：面向学习型视频压缩的掩码条件残差Transformer
+relations:
+- type: same_topic
+  ref: paper:arxiv:2603.05756
+  note: 同为学习型视频压缩的帧间/帧内统一编码方法研究
+- type: same_topic
+  ref: paper:arxiv:2603.10188
+  note: 同属神经压缩且均涉及hyperprior熵建模
+- type: same_topic
+  ref: paper:arxiv:2604.20104
+  note: 同属学习型视频压缩（码控方向）研究线

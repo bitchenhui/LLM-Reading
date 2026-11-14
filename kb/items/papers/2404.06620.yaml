@@ -1,0 +1,61 @@
+id: paper:arxiv:2404.06620
+type: paper
+title: Encoder-Quantization-Motion-based Video Quality Metrics
+domain: quality_assessment
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2404.06620v1
+  url: https://arxiv.org/abs/2404.06620
+  pdf_url: https://arxiv.org/pdf/2404.06620v1
+  venue: arXiv preprint
+time:
+  published: '2024-04-09'
+  collected: '2026-11-14'
+entities:
+- ref: codec:HEVC
+  role: subject
+- ref: concept:ABR
+  role: uses
+- ref: metric:VMAF
+  role: compared_against
+claims:
+- statement: 提出的编码器-量化-运动特征质量指标在与主观分数的相关性上优于VMAF和ITU-T P.1204.3，并通过分布内与跨数据集测试验证。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 该指标可与HEVC编码过程紧耦合计算，额外开销很低；也可从解码端实时计算，适合码流内实时质量传输。
+  confidence: reported
+  metrics:
+  - name: 计算开销
+    value: 4%
+    scope: 与编码过程紧耦合计算时的相对开销（摘要报告）
+  evidence: abstract（初筛，未读全文）
+- statement: 该指标可外推到不同动态范围的内容（SDR/HDR），不局限于单一数据集分布。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 该指标可支撑自适应客户端启发式、实时分段优化、动态码率封顶及按质量切换后处理神经网络等应用。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出利用HEVC编码器/量化/运动轻量特征的压缩视频质量指标，相关性优于VMAF与P.1204.3，可实时计算并随码流传输。
+  abstract_zh: 针对自适应码率流媒体中编码优化对质量指标的依赖，作者将多个主观质量数据集合并，构建面向视频压缩与缩放场景的指标训练与评测数据。提出一组轻量级HEVC特征（编码器、量化、运动信息）用于增强质量指标性能。该指标可在与编码过程紧耦合的条件下以约4%的额外计算量获得，也可在解码端实时计算，并支持随码流进行实时质量传输。分布内与跨数据集测试显示其相关性优于VMAF和P.1204.3，且可外推到不同动态范围（SDR/HDR）。该工作可支撑客户端自适应启发式、实时分段优化、动态码率封顶以及按质量切换后处理神经网络等应用。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 面向编码优化与ABR流媒体的压缩视频质量指标研究，属质量评估域，按规则最高给 summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 基于编码器-量化-运动特征的视频质量指标
+relations:
+- type: same_topic
+  ref: paper:arxiv:2602.15779
+  note: 同为用（无参考）质量指标驱动编码码率-失真优化的工作
+- type: same_topic
+  ref: paper:arxiv:2605.15800
+  note: 同属编解码器压缩性能的视频质量评估方法学
+- type: same_topic
+  ref: paper:arxiv:2511.00969
+  note: 同为面向传统/神经编解码器压缩内容的视频质量指标评测

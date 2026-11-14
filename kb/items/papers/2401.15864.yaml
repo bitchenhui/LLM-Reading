@@ -1,0 +1,54 @@
+id: paper:arxiv:2401.15864
+type: paper
+title: Spatial Decomposition and Temporal Fusion based Inter Prediction for Learned Video Compression
+domain: video_image_coding
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2401.15864v1
+  url: https://arxiv.org/abs/2401.15864
+  pdf_url: https://arxiv.org/pdf/2401.15864v1
+  venue: arXiv preprint
+time:
+  published: '2024-01-29'
+  collected: '2026-11-14'
+entities:
+- ref: codec:VVC
+  role: subject
+- ref: metric:PSNR
+  role: measured_by
+- ref: metric:MS-SSIM
+  role: measured_by
+claims:
+- statement: 将视频分解为结构与细节（SDD）分量并分别进行运动估计与时域上下文挖掘，可缓解局部运动不一致导致的预测误差。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 通过循环积累历史参考特征的时域信息构建长期时域上下文并与短期上下文融合，可提升遮挡区域的帧间预测精度。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 作者报告该学习型视频编解码器在全部常用测试数据集上，PSNR与MS-SSIM均优于H.266/VVC参考软件。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出结构-细节分解与长短期时域上下文融合的帧间预测，使学习型编解码器全面超越H.266/VVC。
+  abstract_zh: 针对局部运动不一致与遮挡区域帧间预测不准的问题，论文借鉴传统编码中递归划分、几何划分和长期参考的思路，提出空间分解与时域融合的帧间预测方法。为处理运动不一致，先将视频分解为结构与细节（SDD）分量，再分别进行SDD运动估计与SDD时域上下文挖掘，生成短期时域上下文。为处理遮挡，通过循环积累各历史参考特征的时域信息来传播长期时域上下文，并与短期上下文融合，从而获得更准确的帧间预测。综合实验表明，该学习型视频编解码器在所有常用测试数据集上，PSNR与MS-SSIM两项指标均优于H.266/VVC参考软件。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 核心域学习型视频压缩，针对运动不一致与遮挡改进帧间预测，并声称在PSNR与MS-SSIM上全面超越H.266/VVC参考软件，属重要工作。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 基于空间分解与时域融合的学习型视频压缩帧间预测
+relations:
+- type: same_topic
+  ref: paper:arxiv:2603.05756
+  note: 同为学习型视频压缩中帧间/帧内模式建模的方法研究
+- type: same_topic
+  ref: paper:arxiv:2510.12479
+  note: 同为学习型条件残差视频编码中的时域预测改进
+- type: same_topic
+  ref: paper:arxiv:2312.15829
+  note: 同为学习型视频压缩帧间编码（条件残差+上下文建模）方向

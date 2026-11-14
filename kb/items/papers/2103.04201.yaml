@@ -1,0 +1,61 @@
+id: paper:arxiv:2103.04201
+type: paper
+title: Light Field Image Coding Using VVC standard and View Synthesis based on Dual Discriminator GAN
+domain: immersive_media
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2103.04201v1
+  url: https://arxiv.org/abs/2103.04201
+  pdf_url: https://arxiv.org/pdf/2103.04201v1
+  venue: arXiv preprint
+time:
+  published: '2021-03-06'
+  collected: '2026-11-14'
+entities:
+- ref: codec:VVC
+  role: subject
+- ref: concept:RDO
+  role: uses
+- ref: metric:BD-PSNR
+  role: measured_by
+- ref: metric:PSNR
+  role: measured_by
+claims:
+- statement: 所提方法仅编码并传输稀疏参考视图（用VVC标准编码），其余视图在解码端由LF-D2GAN模型合成，并经质量增强保证视图间一致性与平滑导航。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 被丢弃（非参考）视图的选取采用基于VVC时域可分级性的率失真优化完成。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 所提方法编码性能优于SOTA光场图像压缩方法。
+  confidence: reported
+  metrics:
+  - name: BD-BR
+    value: -36.22%
+    scope: 相对SOTA光场图像压缩方法，摘要自报
+  - name: BD-PSNR
+    value: 1.35 dB
+    scope: 相对SOTA光场图像压缩方法，摘要自报
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 仅用VVC编码稀疏参考视图，解码端以LF-D2GAN合成并增强其余视图，BD-BR较SOTA降36.22%。
+  abstract_zh: 论文提出一种光场图像编码方法：不再传输全部视图，而是仅选取稀疏的参考视图并用VVC标准编码，其余被丢弃视图在解码端合成。被丢弃视图的选取基于VVC时域可分级性的率失真优化完成。解码端采用LF-D2GAN（双判别器GAN）模型重建被丢弃视图，并施加质量增强流程以保证视图间质量一致、支持平滑导航。实验结果显示，该方法在BD-BR上较SOTA光场图像压缩方法降低36.22%，BD-PSNR提升1.35
+    dB。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 光场（VR沉浸式内容）图像编码研究，虽以VVC为核心工具并报告显著BD增益，但属非核心沉浸式媒体域，按基准仅初筛摘要收录。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 基于VVC标准与双判别器GAN视图合成的光场图像编码
+relations:
+- type: same_topic
+  ref: paper:arxiv:2402.01596
+  note: 同属沉浸式媒体（VR/光场类）内容压缩与视图重建研究方向
+- type: same_topic
+  ref: paper:arxiv:2605.14629
+  note: 同样将标准编解码工具与视图/内容合成技术结合用于沉浸式媒体编码

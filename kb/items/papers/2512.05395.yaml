@@ -1,0 +1,53 @@
+id: paper:arxiv:2512.05395
+type: paper
+title: Image Semantic Communication with Quadtree Partition-based Coding
+domain: video_image_coding
+research_lines:
+- traditional_codec_opt
+source:
+  channel: arxiv
+  external_id: 2512.05395v1
+  url: https://arxiv.org/abs/2512.05395
+  pdf_url: https://arxiv.org/pdf/2512.05395v1
+  venue: arXiv preprint
+time:
+  published: '2025-12-05'
+  collected: '2026-11-14'
+entities:
+- ref: impl:VTM
+  role: subject
+- ref: org:3GPP
+  role: compared_against
+claims:
+- statement: Quad-DeepSC被作者称为首个在多种分辨率数据集上超越传统方案的图像DeepSC系统，传统方案采用VTM进行源编码、并采用3GPP标准下最优MCS索引进行信道编码与数字调制。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: Quad-DeepSC与Quad-LIC均表现出极低时延，适合部署于实时无线通信系统。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 方法上，除特征编码模块外的所有组件先作为紧凑学习式图像编解码器Quad-LIC联合预训练（源压缩任务），随后嵌入Quad-DeepSC在无线信道上端到端微调，形成统一设计与训练管线。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出四叉树划分联合语义-信道编码系统Quad-DeepSC，成为首个超越VTM+3GPP最优MCS传统方案的DeepSC。
+  abstract_zh: 针对图像深度学习语义通信（DeepSC）难以兼顾率失真性能与计算复杂度、在高分辨率数据上逊于传统方案的问题，作者提出Quad-DeepSC：基于成熟的学习式图像压缩技术建立统一的DeepSC系统设计与训练流程。系统将四叉树划分的熵估计与特征编码模块和轻量特征提取/重建网络整合为端到端架构；训练时先联合优化为紧凑学习式图像编解码器Quad-LIC完成源压缩任务，再将预训练的Quad-LIC嵌入Quad-DeepSC并在无线信道上端到端微调。实验显示，Quad-DeepSC是首个在多种分辨率数据集上超越采用VTM源编码、3GPP标准下最优MCS信道编码与数字调制的传统通信系统的DeepSC系统，且Quad-DeepSC与Quad-LIC均时延极低，适合实时无线通信部署。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 基于学习式图像压缩的图像语义通信系统（Quad-DeepSC/Quad-LIC），属视频/图像编码核心域，并首次在多分辨率上超越VTM+3GPP传统基线。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 基于四叉树划分编码的图像语义通信
+relations:
+- type: same_topic
+  ref: paper:arxiv:2605.19397
+  note: 同属图像/视频语义通信方向，均研究面向无线传输的语义编码
+- type: same_topic
+  ref: paper:arxiv:2609.16279
+  note: 同为神经编码+语义感知的低时延传输系统设计
+- type: same_topic
+  ref: paper:arxiv:2605.13243
+  note: Quad-LIC与该文同属低复杂度学习式图像压缩路线

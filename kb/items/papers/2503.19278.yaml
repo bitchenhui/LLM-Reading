@@ -1,0 +1,72 @@
+id: paper:arxiv:2503.19278
+type: paper
+title: Multiscale Feature Importance-based Bit Allocation for End-to-End Feature Coding for Machines
+domain: video_image_coding
+research_lines:
+- coding_for_machines
+- learned_codec
+source:
+  channel: arxiv
+  external_id: 2503.19278v1
+  url: https://arxiv.org/abs/2503.19278
+  pdf_url: https://arxiv.org/pdf/2503.19278v1
+  venue: arXiv preprint
+time:
+  published: '2025-03-25'
+  collected: '2026-11-14'
+entities:
+- ref: concept:ICM
+  role: subject
+- ref: impl:TCM
+  role: uses
+claims:
+- statement: MFIBA结合保留的ELIC编码器，在目标检测任务上相比ELIC锚点平均节省38.202%码率。
+  confidence: reported
+  metrics:
+  - name: 码率节省
+    value: 38.202%
+    scope: 目标检测任务，相对ELIC锚点，ELIC保留使用
+  evidence: abstract（初筛，未读全文）
+- statement: 在实例分割与关键点检测任务上分别平均节省17.212%与36.492%的特征码率。
+  confidence: reported
+  metrics:
+  - name: 特征码率节省
+    value: 17.212%
+    scope: 实例分割任务，相对ELIC
+  - name: 特征码率节省
+    value: 36.492%
+    scope: 关键点检测任务，相对ELIC
+  evidence: abstract（初筛，未读全文）
+- statement: MFIBA应用于LIC-TCM基编码器后，在三个机器视觉任务上分别平均节省18.103%、19.866%、19.597%码率，验证了方法对不同任务与基编码器的泛化性与适应性。
+  confidence: reported
+  metrics:
+  - name: 码率节省
+    value: 18.103%
+    scope: LIC-TCM基编码器，机器视觉任务1
+  - name: 码率节省
+    value: 19.866%
+    scope: LIC-TCM基编码器，机器视觉任务2
+  - name: 码率节省
+    value: 19.597%
+    scope: LIC-TCM基编码器，机器视觉任务3
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出多尺度特征重要性驱动的端到端FCM码率分配，目标检测较ELIC锚点节省38.2%码率。
+  abstract_zh: 论文发现特征对机器视觉任务的重要性随尺度、目标尺寸与图像实例变化，据此提出多尺度特征重要性预测模块（MFIP）为各尺度特征预测重要性权重。进一步建立任务损失-码率模型，刻画压缩特征导致的任务精度损失与编码码率间的关系。基于二者构建MFIBA端到端码率分配框架，按重要性更合理地为多尺度特征分配编码比特。实验表明，结合ELIC时目标检测平均节省38.202%码率，实例分割与关键点检测分别节省17.212%与36.492%；迁移到LIC-TCM基编码器在三个任务上仍节省约18%–20%码率，验证了泛化性。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 面向机器视觉的特征编码（FCM）端到端码率分配属视频/图像编码核心域，方法完整且码率节省显著、跨基编码器泛化。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 基于多尺度特征重要性的端到端机器视觉特征编码码率分配
+relations:
+- type: same_topic
+  ref: paper:arxiv:2306.16670
+  note: 同为VCM多尺度特征压缩的端到端学习编码，本文在其方向上引入特征重要性驱动的比特分配
+- type: same_topic
+  ref: paper:arxiv:2503.23772
+  note: 同属面向机器的特征/视频压缩框架研究，均以任务精度损失与码率的权衡为目标

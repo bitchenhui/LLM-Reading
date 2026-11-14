@@ -1,0 +1,64 @@
+id: paper:arxiv:2411.05322
+type: paper
+title: Rate-aware Compression for NeRF-based Volumetric Video
+domain: immersive_media
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2411.05322v1
+  url: https://arxiv.org/abs/2411.05322
+  pdf_url: https://arxiv.org/pdf/2411.05322v1
+  venue: arXiv preprint
+time:
+  published: '2024-11-08'
+  collected: '2026-11-14'
+entities:
+- ref: concept:VolumetricVideo
+  role: subject
+- ref: concept:NeRF
+  role: uses
+- ref: concept:EntropyModel
+  role: uses
+- ref: metric:BD-Rate
+  role: measured_by
+claims:
+- statement: 相比此前SOTA方法TeTriRF，在HumanRF数据集上BD-rate约降低80%
+  confidence: reported
+  metrics:
+  - name: BD-Rate
+    value: -80%
+    scope: HumanRF数据集，对比TeTriRF
+  evidence: abstract（初筛，未读全文）
+- statement: 相比TeTriRF，在ReRF数据集上BD-rate约降低60%
+  confidence: reported
+  metrics:
+  - name: BD-Rate
+    value: -60%
+    scope: ReRF数据集，对比TeTriRF
+  evidence: abstract（初筛，未读全文）
+- statement: 该压缩框架可适配不同NeRF表示，在HumanRF与ReRF数据集上以极小失真显著缩减存储，取得体积视频SOTA率失真性能
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 在训练阶段直接学习紧凑NeRF表示的码率感知压缩框架，大幅降低体积视频存储与码率。
+  abstract_zh: 针对NeRF体积视频数据量大、现有方案将表示训练与压缩割裂的问题，本文提出码率感知压缩框架，在训练阶段直接学习紧凑的NeRF表示。方法上先用简单建模策略降低时间冗余，训练时引入隐式熵模型估计表示的码率并将熵模型编入码流辅助解码，实现精确码率估计；同时提出自适应量化策略学习最优量化步长，最终以率失真权衡优化表示。该框架可适配不同的NeRF表示，在HumanRF和ReRF数据集上以极小失真显著缩减存储并取得SOTA率失真性能：相比此前最优方法TeTriRF，HumanRF上BD-rate约-80%，ReRF上约-60%。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: NeRF体积视频压缩属沉浸式媒体域，按基准最高只能给summary_only；但其码率感知压缩方法学与BD-rate结果与编码生态高度相关。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 面向NeRF体积视频的码率感知压缩
+relations:
+- type: same_topic
+  ref: paper:arxiv:2609.33969
+  note: 同为体积视频压缩，对方基于稀疏4D高斯锚点，本文基于NeRF表示
+- type: same_topic
+  ref: paper:arxiv:2609.04273
+  note: 同属神经视频表示压缩路线
+- type: same_topic
+  ref: paper:arxiv:2409.07414
+  note: 同属神经表示（NeRF类）压缩，研究训练阶段紧凑表示的码率优化

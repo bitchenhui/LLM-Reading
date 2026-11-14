@@ -1,0 +1,56 @@
+id: paper:arxiv:2304.02273
+type: paper
+title: 'MMVC: Learned Multi-Mode Video Compression with Block-based Prediction Mode Selection and Density-Adaptive
+  Entropy Coding'
+domain: video_image_coding
+research_lines:
+- learned_codec
+source:
+  channel: arxiv
+  external_id: 2304.02273v1
+  url: https://arxiv.org/abs/2304.02273
+  pdf_url: https://arxiv.org/pdf/2304.02273v1
+  venue: arXiv preprint
+time:
+  published: '2023-04-05'
+  collected: '2026-11-14'
+entities:
+- ref: concept:EntropyModel
+  role: subject
+- ref: metric:PSNR
+  role: measured_by
+- ref: metric:MS-SSIM
+  role: measured_by
+claims:
+- statement: MMVC在特征域按空间块从三种预测模式（ConvLSTM特征域预测、光流条件化特征域预测、特征传播）中选择最优模式，覆盖从静态场景到运动相机的多样运动情况。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 提出由二值密度图引导的双模式熵编码：对稠密与稀疏量化残差分别编码，稀疏残差可选游程编码，其码率节省超过传输二值选择图带来的额外开销。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在主流基准数据集上，与SOTA学习式视频压缩方案及标准编码器相比，MMVC以PSNR和MS-SSIM衡量取得更好或具竞争力的压缩性能。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出按块选择多模式预测与密度自适应熵编码的学习视频压缩框架，PSNR/MS-SSIM优于或接近SOTA与标准编码器。
+  abstract_zh: 论文提出多模式视频压缩框架MMVC，将特征空间划分为空间块，在特征域按块从ConvLSTM特征域预测、光流条件化特征域预测与特征传播三种模式中择优，以适配从无明显运动的静态场景到相机运动的动态场景。熵编码采用由二值密度图引导的双模式方案：对稠密与稀疏的量化残差分别处理，稀疏残差可进一步施加游程编码，码率节省超过传输二值选择图的额外开销。在主流基准数据集上与SOTA学习式视频压缩方案及标准编码器对比，以PSNR和MS-SSIM衡量取得更好或具竞争力的结果。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 核心域学习式视频编码方法论文，提出块级多模式预测选择与密度自适应熵编码的完整框架，属核心收录范围。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: MMVC：基于块级预测模式选择与密度自适应熵编码的多模式学习视频压缩
+relations:
+- type: same_topic
+  ref: paper:arxiv:2603.05756
+  note: 同为学习式视频压缩，围绕帧内/帧间预测模式的设计与选择展开
+- type: same_topic
+  ref: paper:arxiv:2611.00181
+  note: 同为神经视频压缩中的模式决策（跳过模式/预测模式选择）研究
+- type: same_topic
+  ref: paper:arxiv:2410.09706
+  note: 同为学习式视频压缩的时域上下文预测与残差编码方向

@@ -1,0 +1,60 @@
+id: paper:arxiv:2410.09706
+type: paper
+title: 'ECVC: Exploiting Non-Local Correlations in Multiple Frames for Contextual Video Compression'
+domain: video_image_coding
+research_lines:
+- learned_codec
+source:
+  channel: arxiv
+  external_id: 2410.09706v4
+  url: https://arxiv.org/abs/2410.09706
+  pdf_url: https://arxiv.org/pdf/2410.09706v4
+  venue: arXiv preprint
+time:
+  published: '2024-10-13'
+  collected: '2026-11-14'
+entities:
+- ref: impl:DCVC-FM
+  role: subject
+- ref: impl:VTM
+  role: compared_against
+claims:
+- statement: ECVC在VTM-13.2低延迟B（LDB）配置下较此前SOTA方法DCVC-FM进一步降低码率，在IP=32和IP=-1时分别再省10.5%和11.5%，达到新的SOTA。
+  confidence: reported
+  metrics:
+  - name: BD-rate节省
+    value: 10.5%
+    scope: ECVC相对DCVC-FM，VTM-13.2 LDB锚点，帧内周期IP=32
+  - name: BD-rate节省
+    value: 11.5%
+    scope: ECVC相对DCVC-FM，VTM-13.2 LDB锚点，帧内周期IP=-1
+  evidence: abstract（初筛，未读全文）
+- statement: 利用多帧间非局部相关性增强时序先验可显著提升学习视频压缩的率失真性能，弥补现有方法只关注时序运动、单一参考帧的不足。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 部分级联微调策略在受限算力下支持全长序列训练，降低训练-测试序列长度失配并显著减少误差累积。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出ECVC，利用多帧非局部相关性增强时序先验并以级联微调抑制误差累积，较DCVC-FM再省码率10.5%/11.5%。
+  abstract_zh: 针对现有学习视频压缩（LVC）主要挖掘时序运动而忽视帧间非局部相关、且上下文模型仅使用单一参考帧难以应对复杂运动的问题，ECVC利用多帧间的非局部相关性来增强时序先验，显著提升率失真性能。为缓解误差累积，提出部分级联微调策略，在受限计算资源下支持全长序列微调，降低训练与测试序列长度失配并明显减少累积误差。基于上述技术构建的视频压缩方案ECVC达到SOTA：在VTM-13.2低延迟B（LDB）配置下，帧内周期IP=32与IP=-1时较此前SOTA方法DCVC-FM分别再降低10.5%和11.5%码率。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 核心域学习视频压缩工作：以多帧非局部相关性增强帧间上下文并用级联微调抑制误差累积，BD-rate超越DCVC-FM且大幅优于VTM-13.2锚点，达SOTA，值得深读。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: ECVC：利用多帧间非局部相关性的上下文视频压缩
+relations:
+- type: same_topic
+  ref: paper:arxiv:2510.12479
+  note: 同为学习视频压缩中利用多参考/多假设时序预测增强帧间建模的方向（MH-LVC）
+- type: same_topic
+  ref: paper:arxiv:2603.05756
+  note: 同为学习视频压缩（LVC）帧间/帧内编码建模工作（Uni-LVC）
+- type: same_topic
+  ref: paper:arxiv:2604.20104
+  note: 同属学习视频压缩（LVC）改进研究线

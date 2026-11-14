@@ -1,0 +1,63 @@
+id: paper:arxiv:2508.02072
+type: paper
+title: 'HyTIP: Hybrid Temporal Information Propagation for Masked Conditional Residual Video Coding'
+domain: video_image_coding
+research_lines:
+- traditional_codec_opt
+source:
+  channel: arxiv
+  external_id: 2508.02072v2
+  url: https://arxiv.org/abs/2508.02072
+  pdf_url: https://arxiv.org/pdf/2508.02072v2
+  venue: arXiv preprint
+time:
+  published: '2025-08-04'
+  collected: '2026-11-14'
+entities:
+- ref: impl:VTM
+  role: subject
+- ref: metric:PSNR
+  role: measured_by
+- ref: metric:MS-SSIM
+  role: measured_by
+claims:
+- statement: 混合缓冲策略（显式解码帧+少量隐特征）的编码性能优于单独使用output-recurrence或hidden-to-hidden任一传播机制
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: HyTIP在PSNR-RGB和MS-SSIM-RGB指标上优于VTM 17.0（Low-delay B配置）
+  confidence: reported
+  metrics:
+  - name: PSNR-RGB
+    value: 优于VTM 17.0 LDB
+    scope: 作者报告的低时延B对比结果
+  - name: MS-SSIM-RGB
+    value: 优于VTM 17.0 LDB
+    scope: 作者报告的低时延B对比结果
+  evidence: abstract（初筛，未读全文）
+- statement: HyTIP在取得与当前SOTA学习方法相当性能的同时，所需缓冲区大小远小于纯hidden-to-hidden类方法
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 混合显式解码帧与隐特征的递归传播学习视频编码框架，缓冲更小且PSNR/MS-SSIM超越VTM 17.0低时延B
+  abstract_zh: 该工作从RNN视角重新审视基于帧的学习视频编码：output-recurrence方式传播解码帧虽直观但给输出帧施加双重约束，导致率失真次优；hidden-to-hidden方式传播隐特征更灵活却需要大缓冲区。HyTIP结合两种机制，采用显式解码帧加少量隐式潜特征的混合缓冲策略。实验表明混合方案优于任一单独机制，达到与SOTA相当的性能但缓冲区大小显著更小，并在PSNR-RGB与MS-SSIM-RGB上超越VTM
+    17.0（Low-delay B）。源代码已在GitHub开源。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 核心域学习视频编码：混合缓冲机制创新、性能超越VTM 17.0低时延B配置且代码开源，值得深读
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: HyTIP：面向掩码条件残差视频编码的混合时序信息传播
+relations:
+- type: same_topic
+  ref: paper:arxiv:2312.15829
+  note: 同属掩码条件残差视频编码系列（MaskCRT），HyTIP为其时序传播机制的延伸
+- type: same_topic
+  ref: paper:arxiv:2510.12479
+  note: 同属学习型条件残差视频编码（MH-LVC），均研究时序预测信息在编解码器间的传递
+- type: same_topic
+  ref: paper:arxiv:2307.12864
+  note: 同属条件残差编码研究线，关注条件帧间编码的瓶颈问题

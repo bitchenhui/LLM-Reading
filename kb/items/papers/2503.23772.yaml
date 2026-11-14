@@ -1,0 +1,52 @@
+id: paper:arxiv:2503.23772
+type: paper
+title: 'TransVFC: A Transformable Video Feature Compression Framework for Machines'
+domain: video_image_coding
+research_lines:
+- coding_for_machines
+source:
+  channel: arxiv
+  external_id: 2503.23772v2
+  url: https://arxiv.org/abs/2503.23772
+  pdf_url: https://arxiv.org/pdf/2503.23772v2
+  venue: arXiv preprint
+time:
+  published: '2025-03-31'
+  collected: '2026-11-14'
+entities:
+- ref: codec:HEVC
+  role: compared_against
+- ref: codec:AVC
+  role: compared_against
+- ref: concept:ICM
+  role: subject
+claims:
+- statement: TransVFC采用压缩后转移方案：视频特征编解码器经基于方案的帧间预测与感知引导条件编码分别压缩时域与空间冗余，并使重建特征对齐下游机器感知
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 适配新下游任务仅需训练一个轻量FST模块，无需重训或重部署上游编解码器与下游任务网络
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: TransVFC在不同粒度的多样化下游任务上均取得较高的率-任务性能
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: H.265/HEVC与H.264/AVC等面向人眼视觉系统的编码标准在VCM场景下并非最优，导致不必要的码率开销
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出'压缩后转移'式视频特征压缩框架TransVFC，经特征编解码器去冗余后用轻量FST模块适配多下游机器视觉任务。
+  abstract_zh: 针对以机器视觉任务为最终目标的视频传输场景，作者指出H.264/AVC、H.265/HEVC等面向人眼的编码标准在VCM场景下码率开销非最优。提出的TransVFC框架包含视频特征编解码器与特征空间变换（FST）模块：编解码器通过基于方案的帧间预测压缩特征时域冗余，并以感知引导的条件编码压缩空间冗余、使重建特征对齐下游机器感知；随后FST模块将重建特征变换到不同特征空间以服务多样化下游任务。适配新任务仅需训练一个轻量FST模块，无需重训或重部署上游编解码器与下游任务网络。实验表明TransVFC在多种不同粒度任务上均取得较高的率-任务性能。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 核心域VCM视频特征压缩框架，压缩后转移+特征空间变换实现多任务适配，设计完整且开源代码
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: TransVFC：面向机器的可变换视频特征压缩框架
+relations:
+- type: same_topic
+  ref: paper:arxiv:2604.09421
+  note: 同属VCM（面向机器的视频编码）多任务场景研究

@@ -1,0 +1,76 @@
+id: paper:arxiv:2412.04469
+type: paper
+title: 'QUEEN: QUantized Efficient ENcoding of Dynamic Gaussians for Streaming Free-viewpoint Videos'
+domain: immersive_media
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2412.04469v1
+  url: https://arxiv.org/abs/2412.04469
+  pdf_url: https://arxiv.org/pdf/2412.04469v1
+  venue: arXiv preprint
+time:
+  published: '2024-12-05'
+  collected: '2026-11-14'
+entities:
+- ref: concept:VolumetricVideo
+  role: subject
+- ref: concept:3DGS
+  role: uses
+- ref: metric:FPS
+  role: measured_by
+- ref: org:NVIDIA
+  role: affiliation
+claims:
+- statement: QUEEN在多个FVV基准的所有指标上均优于现有在线自由视点视频方法。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 对若干高动态场景，QUEEN将模型压缩至每帧约0.7 MB，同时训练用时不到5秒、渲染速度达350 FPS。
+  confidence: reported
+  metrics:
+  - name: 模型大小
+    value: 0.7 MB
+    scope: 每帧，高动态FVV场景
+  - name: 训练时间
+    value: under 5 sec
+    scope: 每帧在线更新
+  - name: 渲染速度
+    value: 350 FPS
+    scope: QUEEN框架
+  evidence: abstract（初筛，未读全文）
+- statement: 以高斯视空间梯度差分向量作为信号区分场景静态与动态内容，可引导稀疏性学习并加速训练。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 用动态3D高斯泼溅逐帧学习属性残差并结合量化-稀疏化框架，实现在线自由视点视频的高质量、小体积、实时编码。
+  abstract_zh: 该工作面向在线自由视点视频（FVV）流式传输，提出基于3D高斯泼溅（3D-GS）的QUEEN框架，在每个时间步直接学习相邻帧间的高斯属性残差，不对结构施加约束，从而保证重建质量与泛化性。为高效存储残差，作者设计了量化-稀疏框架：用一个可学习的隐变量解码器量化除位置外的属性残差，并用可学习的门控模块稀疏化位置残差。进一步提出以高斯视空间梯度差分向量作为信号分离场景静态与动态内容，用于引导稀疏性学习并加速训练。在多个FVV基准上QUEEN在所有指标上均超越现有在线FVV方法；对若干高动态场景，每帧模型仅约0.7
+    MB，训练用时不到5秒，渲染速度达350 FPS。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 基于动态3DGS的流式自由视点视频压缩与传输，属沉浸式媒体核心工作，非视频/图像编码核心域故仅初筛。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: QUEEN：面向流式自由视点视频的量化高效动态高斯编码
+relations:
+- type: same_topic
+  ref: paper:arxiv:2608.30184
+  note: 同为基于高斯泼溅的长时间体素视频表示与压缩
+- type: same_topic
+  ref: paper:arxiv:2610.21121
+  note: 同为面向移动端体素视频流式传输的残差双流高斯表示
+- type: same_topic
+  ref: paper:arxiv:2609.33969
+  note: 同为基于高斯泼溅与稀疏锚点的体素视频压缩
+- type: same_topic
+  ref: paper:arxiv:2609.18624
+  note: 同为3DGS自适应渐进式流式传输
+- type: same_topic
+  ref: paper:arxiv:2310.08205
+  note: 同为实时/直播体素视频流式系统
+- type: same_topic
+  ref: paper:arxiv:2411.05322
+  note: 同为体素视频（NeRF类表示）的码率感知压缩

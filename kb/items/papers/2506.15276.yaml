@@ -1,0 +1,73 @@
+id: paper:arxiv:2506.15276
+type: paper
+title: 'MSNeRV: Neural Video Representation with Multi-Scale Feature Fusion'
+domain: video_image_coding
+research_lines:
+- inr_representation
+source:
+  channel: arxiv
+  external_id: 2506.15276v1
+  url: https://arxiv.org/abs/2506.15276
+  pdf_url: https://arxiv.org/pdf/2506.15276v1
+  venue: arXiv preprint
+time:
+  published: '2025-06-18'
+  collected: '2026-11-14'
+entities:
+- ref: concept:INR
+  role: subject
+- ref: concept:GOP
+  role: uses
+- ref: codec:HEVC
+  role: evaluated_on
+- ref: dataset:UVG
+  role: evaluated_on
+- ref: impl:VTM
+  role: compared_against
+- ref: codec:VVC
+  role: compared_against
+claims:
+- statement: MSNeRV 在 INR 类神经视频表示方法中具有更优的视频表示能力（在 HEVC ClassB 与 UVG 上验证）。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在动态（快速变化）场景下，MSNeRV 的压缩效率超越 VTM-23.7（Random Access 配置）。
+  confidence: reported
+  metrics:
+  - name: 对比锚点
+    value: VTM-23.7 (Random Access)
+    scope: 动态场景压缩效率对比
+  evidence: abstract（初筛，未读全文）
+- statement: INR 类方法已可达到与 H.266/VVC 相当的压缩性能，但细节密集与快变内容仍是短板，MSNeRV 通过 GoP 划分、GoP 级背景网格与多尺度特征块缓解该问题。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出多尺度特征融合的 INR 神经视频表示 MSNeRV，在动态场景下压缩效率超越 VTM-23.7 随机接入。
+  abstract_zh: 针对现有 INR 视频压缩方法难以表达细节密集与快速变化内容的问题，提出多尺度特征融合框架 MSNeRV。编码阶段利用时间窗增强时序一致性，将视频划分为多个 GoP 并以 GoP
+    级网格进行背景表示；设计带尺度自适应损失的多尺度空间解码器以融合多分辨率、多频率信息，并引入多尺度特征块充分利用网络隐藏特征。在 HEVC ClassB 和 UVG 数据集上的实验表明，其表示能力在
+    INR 类方法中最优，且在动态场景下的压缩效率超越 VTM-23.7（Random Access）。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 核心域 INR 神经视频压缩工作，直接对标 VTM-23.7（Random Access）并给出 HEVC ClassB/UVG 评测，方法与实验价值高，值得深读。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: MSNeRV：基于多尺度特征融合的神经视频表示
+relations:
+- type: same_topic
+  ref: paper:arxiv:2409.07414
+  note: 同属 INR 神经视频表示压缩路线（NVRC）
+- type: same_topic
+  ref: paper:arxiv:2606.28163
+  note: NVRC++ 为神经视频表示压缩的后续增强工作
+- type: same_topic
+  ref: paper:arxiv:2609.04273
+  note: 可扩展神经视频表示压缩，同属 INR 视频表示压缩线
+- type: same_topic
+  ref: paper:arxiv:2605.27024
+  note: NeR-SC 将神经视频表示适配屏幕内容，同属神经视频表示方向
+- type: same_topic
+  ref: paper:arxiv:2505.00335
+  note: 时序相干调制的高效神经视频表示，同为 INR 视频表示改进

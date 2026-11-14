@@ -1,0 +1,58 @@
+id: paper:arxiv:2403.00628
+type: paper
+title: Region-Adaptive Transform with Segmentation Prior for Image Compression
+domain: video_image_coding
+research_lines:
+- traditional_codec_opt
+source:
+  channel: arxiv
+  external_id: 2403.00628v4
+  url: https://arxiv.org/abs/2403.00628
+  pdf_url: https://arxiv.org/pdf/2403.00628v4
+  venue: arXiv preprint
+time:
+  published: '2024-03-01'
+  collected: '2026-11-14'
+entities:
+- ref: impl:VTM
+  role: subject
+- ref: metric:PSNR
+  role: measured_by
+claims:
+- statement: 所提方法在PSNR口径下较VTM-17.0节省约8.2%码率
+  confidence: reported
+  metrics:
+  - name: 码率节省
+    value: 8.2%
+    scope: 相对VTM-17.0基准，PSNR像素保真指标
+  evidence: abstract（初筛，未读全文）
+- statement: 首次将类无关分割掩码作为特权信息引入图像压缩：训练阶段可访问、推理阶段无需，因而不产生额外码率开销
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: Region-Adaptive Transform结合Scale Affine Layer在PSNR等像素保真度指标上优于既有表现良好的学习方法
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出以类无关分割掩码为特权信息的区域自适应变换，推理零开销，较VTM-17.0省约8.2%码率
+  abstract_zh: 针对现有学习型图像压缩的CNN/自注意力变换不区分图像区域的问题，本文引入无类别标签的类无关分割掩码来提取区域自适应上下文信息。所提出的Region-Adaptive Transform模块在掩码引导下对不同区域施加自适应卷积，并配合即插即用的Scale
+    Affine Layer融合多区域上下文。关键设计是将掩码作为特权信息：训练阶段可用而推理阶段无需，避免额外码率开销，作者称系首次以类无关掩码作特权信息用于图像压缩。实验表明该方法在PSNR等像素保真度指标上优于既有表现良好的方法，较VTM-17.0节省约8.2%码率，源码已开源。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 核心域学习型图像压缩论文：以类无关分割掩码作特权信息的区域自适应变换属方法创新，并给出对VTM-17.0的量化增益且代码开源，值得深读。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 基于分割先验的区域自适应变换图像压缩
+relations:
+- type: same_topic
+  ref: paper:arxiv:2610.33616
+  note: 同属利用语义先验增强学习型图像压缩
+- type: same_topic
+  ref: paper:arxiv:2610.27037
+  note: 同属掩码引导的图像压缩变换设计
+- type: same_topic
+  ref: paper:arxiv:2605.20672
+  note: 同属学习型图像压缩中的区域/局部自适应建模方向

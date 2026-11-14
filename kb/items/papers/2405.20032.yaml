@@ -1,0 +1,85 @@
+id: paper:arxiv:2405.20032
+type: paper
+title: 'Promptus: Can Prompts Streaming Replace Video Streaming with Stable Diffusion'
+domain: video_image_coding
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2405.20032v2
+  url: https://arxiv.org/abs/2405.20032
+  pdf_url: https://arxiv.org/pdf/2405.20032v2
+  venue: arXiv preprint
+time:
+  published: '2024-05-30'
+  collected: '2026-11-14'
+entities:
+- ref: codec:HEVC
+  role: subject
+- ref: concept:ABR
+  role: uses
+- ref: metric:LPIPS
+  role: measured_by
+claims:
+- statement: Promptus在保持同等感知质量下，相比H.265可实现超过4倍的带宽降低。
+  confidence: reported
+  metrics:
+  - name: 带宽降低倍数
+    value: '>4x'
+    scope: 对比H.265，同等感知质量，多类视频体裁评估
+  evidence: abstract（初筛，未读全文）
+- statement: 在极低码率下，Promptus感知质量（LPIPS）相比VAE提升0.139。
+  confidence: reported
+  metrics:
+  - name: LPIPS改善
+    value: '0.139'
+    scope: 极低码率场景，对比VAE
+  evidence: abstract（初筛，未读全文）
+- statement: 在极低码率下，Promptus感知质量（LPIPS）相比H.265提升0.118。
+  confidence: reported
+  metrics:
+  - name: LPIPS改善
+    value: '0.118'
+    scope: 极低码率场景，对比H.265
+  evidence: abstract（初筛，未读全文）
+- statement: 极低码率下Promptus严重失真帧比例相比VAE与H.265分别下降89.3%和91.7%。
+  confidence: reported
+  metrics:
+  - name: 严重失真帧比例下降
+    value: 89.3%
+    scope: 对比VAE，极低码率
+  - name: 严重失真帧比例下降
+    value: 91.7%
+    scope: 对比H.265，极低码率
+  evidence: abstract（初筛，未读全文）
+- statement: 通过梯度下降提示词拟合保证接收端生成视频与原始视频像素对齐，并以低秩分解实现自适应码率控制。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 用提示词流替代视频流传输，接收端以Stable Diffusion生成视频，较H.265节省4倍以上带宽。
+  abstract_zh: 论文提出Promptus，一种颠覆性的语义通信系统：将真实视频帧表示为一系列"提示词"进行传输，接收端用Stable Diffusion生成视频。为保证生成视频与原始视频像素对齐，提出基于梯度下降的提示词拟合框架；并引入基于低秩分解的码率控制算法实现自适应码率，针对帧间压缩提出插值感知拟合算法。实验显示，与H.265相比，Promptus在保持同等感知质量下可实现4倍以上带宽降低；在极低码率下，其LPIPS相比VAE与H.265分别改善0.139和0.118，严重失真帧比例分别下降89.3%与91.7%。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 提出以提示词流替代视频码流、接收端用Stable Diffusion重建视频的生成式视频压缩新范式，对比HEVC有4倍以上带宽收益，属核心编码域的重要工作。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: Promptus：提示词流能否借助Stable Diffusion取代视频流
+relations:
+- type: same_topic
+  ref: paper:arxiv:2604.08329
+  note: 同为基于扩散模型的极低码率视频压缩，均以生成模型重建替代传统帧编码
+- type: same_topic
+  ref: paper:arxiv:2606.22371
+  note: 同属生成式先验视频压缩，利用扩散/生成模型在接收端恢复视频
+- type: same_topic
+  ref: paper:arxiv:2609.34725
+  note: 同为解锁生成先验用于视频压缩的路线，与Promptus的提示词流范式互补
+- type: same_topic
+  ref: paper:arxiv:2605.19397
+  note: 同属视频语义通信方向，以语义/感知目标驱动的传输替代传统码流
+- type: same_topic
+  ref: paper:arxiv:2601.01141
+  note: 同为扩散模型视频压缩器，可作Promptus生成式压缩范式的对照工作

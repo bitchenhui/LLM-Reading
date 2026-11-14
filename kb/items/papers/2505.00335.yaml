@@ -1,0 +1,98 @@
+id: paper:arxiv:2505.00335
+type: paper
+title: Efficient Neural Video Representation with Temporally Coherent Modulation
+domain: video_image_coding
+research_lines:
+- inr_representation
+source:
+  channel: arxiv
+  external_id: 2505.00335v1
+  url: https://arxiv.org/abs/2505.00335
+  pdf_url: https://arxiv.org/pdf/2505.00335v1
+  venue: arXiv preprint
+time:
+  published: '2025-05-01'
+  collected: '2026-11-14'
+entities:
+- ref: concept:INR
+  role: subject
+- ref: codec:AVC
+  role: compared_against
+- ref: codec:HEVC
+  role: compared_against
+- ref: concept:SuperResolution
+  role: uses
+- ref: dataset:UVG
+  role: evaluated_on
+- ref: dataset:MCL-JCV
+  role: evaluated_on
+- ref: metric:PSNR
+  role: measured_by
+- ref: metric:LPIPS
+  role: measured_by
+claims:
+- statement: NVTM通过时序一致调制将时空视频分解为带流信息的2D网格集合，可一次性处理时间对应像素，相较NeRV类方法取得合理质量下最快编码速度
+  confidence: reported
+  metrics:
+  - name: 编码速度提升
+    value: '>3×'
+    scope: 相较NeRV类（非参数编码）方法
+  evidence: abstract（初筛，未读全文）
+- statement: 相比以往网格型INR方法，NVTM在UVG(Dynamic)上以更少参数取得更高重建质量
+  confidence: reported
+  metrics:
+  - name: PSNR提升
+    value: 1.54dB
+    scope: UVG(Dynamic)平均，对比以往网格类方法
+  - name: LPIPS改善
+    value: '0.019'
+    scope: UVG(Dynamic)平均，对比以往网格类方法
+  - name: 参数量减少
+    value: 10%
+    scope: 相较以往网格类方法
+  evidence: abstract（初筛，未读全文）
+- statement: 相比以往网格型INR方法，NVTM在MCL-JCV(Dynamic)上平均提升1.84dB/0.013（PSNR/LPIPS）
+  confidence: reported
+  metrics:
+  - name: PSNR提升
+    value: 1.84dB
+    scope: MCL-JCV(Dynamic)平均，对比以往网格类方法
+  - name: LPIPS改善
+    value: '0.013'
+    scope: MCL-JCV(Dynamic)平均，对比以往网格类方法
+  evidence: abstract（初筛，未读全文）
+- statement: 扩展至压缩任务时，NVTM性能与H.264、HEVC标准及近期INR视频压缩方法相当
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: NVTM表示可迁移至超分辨率、帧插值与视频修复等下游任务并表现优越
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出NVTM，将视频分解为带流信息的2D网格集合，实现比NeRV系快3倍以上的INR视频编码并显著提升质量与参数效率。
+  abstract_zh: 针对现有网格型参数编码忽略视频动态特性、参数冗余且码率偏高的问题，提出时序一致调制的神经视频表示框架NVTM。NVTM将时空3D视频分解为一组携带流信息的2D网格，可一次性处理时间上对应的像素，从而快速学习视频表示并高效利用参数。相比NeRV类方法，编码速度提升3倍以上；相比以往网格类方法，在UVG(Dynamic)上PSNR/LPIPS平均提升1.54dB/0.019（参数还少10%），在MCL-JCV(Dynamic)上提升1.84dB/0.013。扩展到压缩任务时性能与H.264、HEVC及近期INR视频压缩方法相当，并在超分辨率、帧插值与视频修复任务上展现优越性。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: INR神经视频表示核心工作：提出时序一致调制框架，编码速度与参数效率同时突破，并验证压缩、超分、插值等任务，属于核心域重点论文。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 具有时序一致调制的高效神经视频表示
+relations:
+- type: same_topic
+  ref: paper:arxiv:2409.07414
+  note: 同属INR神经视频表示压缩路线（NVRC）
+- type: same_topic
+  ref: paper:arxiv:2606.28163
+  note: 同属神经视频表示压缩（NVRC++）
+- type: same_topic
+  ref: paper:arxiv:2609.04273
+  note: 同属可扩展神经视频表示压缩
+- type: same_topic
+  ref: paper:arxiv:2605.27024
+  note: 同属NeRV系神经视频表示的适配与改进（NeR-SC屏幕内容）
+- type: same_topic
+  ref: paper:arxiv:2604.08329
+  note: 均以INR为核心的视频压缩技术（DiV-INR）

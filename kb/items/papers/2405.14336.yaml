@@ -1,0 +1,59 @@
+id: paper:arxiv:2405.14336
+type: paper
+title: 'I$^2$VC: A Unified Framework for Intra- & Inter-frame Video Compression'
+domain: video_image_coding
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2405.14336v3
+  url: https://arxiv.org/abs/2405.14336
+  pdf_url: https://arxiv.org/pdf/2405.14336v3
+  venue: arXiv preprint
+time:
+  published: '2024-05-23'
+  collected: '2026-11-14'
+entities:
+- ref: codec:VVC
+  role: subject
+- ref: impl:VTM
+  role: compared_against
+claims:
+- statement: I²VC以单一时空编解码器统一处理I/P/B帧，将帧间依赖转化为条件编码，无需独立的三类帧编解码器。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 利用预训练扩散过程的反演参考特征作为初始压缩状态，实现不依赖显式MEMC的隐式帧间对齐。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在AI、LD、RA配置及各类帧型下，I²VC感知重建性能较H.266/VVC（VTM）提升58.4%。
+  confidence: reported
+  metrics:
+  - name: 感知重建性能提升
+    value: 58.4%
+    scope: 对比H.266/VVC标准参考软件VTM，跨AI/LD/RA配置
+  evidence: abstract（初筛，未读全文）
+- statement: I²VC在多种压缩配置下优于当前最先进的感知型学习视频编码器。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 统一帧内/帧间神经视频压缩框架，用扩散反演参考特征实现隐式帧间对齐，感知性能较VTM提升58.4%。
+  abstract_zh: 该论文提出I²VC框架，用单一时空编解码器同时处理I/P/B帧，将跨帧依赖转化为条件编码方案，从而统一帧内与帧间压缩。针对缺乏显式运动数据的难题，引入隐式帧间对齐机制：以预训练扩散去噪过程中的扩散反演参考特征（而非随机噪声）作为压缩初始状态，依据解码特征对运动丰富区域进行选择性去噪，无需显式运动估计与补偿即可完成精确对齐。编解码器按内容重要性引导特征压缩速率。在AI、LD、RA多种配置与各类帧型上的实验表明，I²VC优于当前最先进的感知型学习编码器，感知重建性能较H.266/VVC标准参考软件VTM提升58.4%。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 核心域神经视频压缩工作，提出统一帧内/帧间编解码框架并以扩散反演参考替代MEMC，感知性能显著超越VTM，属重要进展。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: I²VC：帧内与帧间视频压缩统一框架
+relations:
+- type: same_topic
+  ref: paper:arxiv:2603.05756
+  note: 同为统一帧内/帧间模式的学习视频压缩方法
+- type: same_topic
+  ref: paper:arxiv:2601.01141
+  note: 同为基于扩散模型的神经视频压缩器
+- type: same_topic
+  ref: paper:arxiv:2609.34725
+  note: 同为利用生成先验的视频压缩工作

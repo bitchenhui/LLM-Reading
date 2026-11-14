@@ -1,0 +1,69 @@
+id: paper:arxiv:2511.18686
+type: paper
+title: Evaluation of Hardware-based Video Encoders on Modern GPUs for UHD Live-Streaming
+domain: video_image_coding
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2511.18686v1
+  url: https://arxiv.org/abs/2511.18686
+  pdf_url: https://arxiv.org/pdf/2511.18686v1
+  venue: arXiv preprint
+time:
+  published: '2025-11-24'
+  collected: '2026-11-14'
+entities:
+- ref: codec:HEVC
+  role: subject
+- ref: codec:AV1
+  role: subject
+- ref: codec:VVC
+  role: compared_against
+- ref: metric:PSNR
+  role: measured_by
+- ref: metric:SSIM
+  role: measured_by
+- ref: metric:VMAF
+  role: measured_by
+- ref: org:NVIDIA
+  role: platform
+- ref: org:Intel
+  role: platform
+- ref: org:Qualcomm
+  role: platform
+claims:
+- statement: 在实时编码场景下，现代GPU硬件编码器的RD性能可匹敌包括VVC在内的软件编码器。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 新一代硬件编码器的编码速度较旧代有所提升，但硬件代际之间的RD性能改进基本可忽略。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 论文量化了各硬件编码器达到YouTube转码质量所需的码率，可作为直播部署的码率配置参考。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: GPU硬件编码可从CPU卸载编码任务并提供更高能效，评测同时覆盖NVIDIA、Intel GPU与高通骁龙移动SoC平台。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 多代NVIDIA/Intel GPU与高通SoC硬件编码器实测：实时场景RD性能可匹敌软件编码器，代际间RD提升甚微。
+  abstract_zh: 本文系统评测了多代NVIDIA、Intel GPU以及高通骁龙移动SoC内置的硬件视频编码器，聚焦4K/8K超高清直播的实时编码需求，考察RD性能、编码速度与功耗三个维度。评测对象覆盖HEVC、VP9、AV1及最新H.266/VVC的硬件与软件编码器，并采用PSNR、SSIM和基于机器学习的VMAF等指标进行量化对比。结果显示，在实时编码场景下现代GPU硬件编码器的RD性能已可达到软件编码器水平；新一代硬件编码速度有所提升，但硬件代际之间的RD性能改进基本可忽略。论文还计算了各硬件编码器达到YouTube转码质量所需的码率，为实际部署提供参考。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 属核心域的GPU硬件编码器实证评测，对直播部署选型有较高参考价值，但为测量对比研究、无新算法，给summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 面向超高清直播的现代GPU硬件视频编码器评估
+relations:
+- type: same_topic
+  ref: paper:arxiv:2606.29179
+  note: 均针对硬件加速视频编码的性能分析（该文为V-PCC硬件10bit编码，本文为GPU通用硬件编码器评测）
+- type: same_topic
+  ref: paper:arxiv:2408.05042
+  note: 均为常规视频编码器的RD性能基准测试，评估编码器压缩性能
+- type: same_topic
+  ref: paper:arxiv:2511.00969
+  note: 均在4K/UHD视频上评估编码器并采用PSNR/SSIM/VMAF等客观质量指标

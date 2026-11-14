@@ -1,0 +1,56 @@
+id: paper:arxiv:2105.09999
+type: paper
+title: Convolutional Block Design for Learned Fractional Downsampling
+domain: video_image_coding
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2105.09999v1
+  url: https://arxiv.org/abs/2105.09999
+  pdf_url: https://arxiv.org/pdf/2105.09999v1
+  venue: arXiv preprint
+time:
+  published: '2021-05-20'
+  collected: '2026-11-14'
+entities:
+- ref: concept:ABR
+  role: subject
+- ref: metric:PSNR
+  role: measured_by
+- ref: metric:SSIM
+  role: measured_by
+- ref: metric:VMAF
+  role: measured_by
+claims:
+- statement: 提出由保持分辨率的常规卷积层与可微重采样器组成的新构建块，使任意CNN架构都能支持非整数（分数）倍缩放。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 将该构建块替换现代深度下采样模型中的缩放卷积层，并应用于自适应码率（ABR）视频流媒体场景。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在测试视频上，所提方法的编码效率在PSNR、SSIM和VMAF三项指标上均优于传统Lanczos下采样算法。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出卷积层+可微重采样器的构建块，使CNN支持非整数倍下采样，应用于ABR流媒体，编码效率优于Lanczos。
+  abstract_zh: 传统CNN卷积层只能实现整数倍的分辨率改变，而视频压缩应用中常需在1080p与720p等标准化分辨率之间进行非整数转换。该文提出一种新构建块：由保持输入分辨率的常规卷积层加一个可微重采样器（resizer）组成，缩放操作完全交给重采样器处理，从而使任意CNN架构都能适配非整数缩放。作者将该块替换一个现代深度下采样模型中的缩放卷积层，并应用于自适应码率（ABR）视频流媒体场景。实验结果表明，在测试视频上其编码效率以PSNR、SSIM和VMAF衡量均优于传统Lanczos算法。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 核心域编码链路的学习型分数下采样构建块，直接面向视频压缩分辨率转换与ABR场景，由领域权威团队提出，值得精读。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 面向学习型分数下采样的卷积块设计
+relations:
+- type: same_topic
+  ref: paper:arxiv:2104.02322
+  note: 同为内容自适应降采样+学习型上采样以提升视频压缩效率的编码链路方案
+- type: same_topic
+  ref: paper:arxiv:2312.08330
+  note: 同为面向流媒体多分辨率（多码率）编码的分辨率转换技术
+- type: same_topic
+  ref: paper:arxiv:2601.10607
+  note: 同为ABR自适应流媒体场景下的高效编码优化

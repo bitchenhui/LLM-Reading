@@ -1,0 +1,56 @@
+id: paper:arxiv:2402.11250
+type: paper
+title: Hierarchical Prior-based Super Resolution for Point Cloud Geometry Compression
+domain: immersive_media
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2402.11250v1
+  url: https://arxiv.org/abs/2402.11250
+  pdf_url: https://arxiv.org/pdf/2402.11250v1
+  venue: arXiv preprint
+time:
+  published: '2024-02-17'
+  collected: '2026-11-14'
+entities:
+- ref: concept:SuperResolution
+  role: subject
+- ref: codec:G-PCC
+  role: builds_on
+claims:
+- statement: 在MPEG Cat1A数据集上，所提层级先验超分方法相对基于八叉树与trisoup的G-PCC v14取得显著Bjontegaard-delta码率节省
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 方法在编码端构建内容相关的层级先验作为边信息，解码端据此对量化后的点云几何进行由粗到细的超分辨率重建
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 更精确的先验可改善重建质量但需更多比特编码边信息，所提方法通过权衡先验精度与比特消耗获得率失真增益
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出编码端构建层级先验、解码端由粗到细超分的点云几何压缩方法，在MPEG Cat1A上超越G-PCC v14。
+  abstract_zh: MPEG开发的G-PCC在有损模式下因朴素的几何量化（网格下采样）导致重建点云出现明显失真。本文提出一种基于层级先验的超分辨率方法：编码端构建内容相关的层级先验并作为边信息传输，解码端据此对点云几何进行由粗到细的超分辨率重建。更精确的先验可改善重建性能，但需消耗更多比特编码该边信息，方法在先验精度与码率开销之间取得平衡。在MPEG
+    Cat1A数据集上，该方法取得显著Bjontegaard-delta码率节省，超越基于八叉树和trisoup的G-PCC v14。作者开源了实现以支持可复现研究。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 点云几何压缩属沉浸式媒体域，直接增强MPEG G-PCC标准且增益显著，按收录规则给summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 基于层级先验的点云几何压缩超分辨率方法
+relations:
+- type: same_topic
+  ref: paper:arxiv:2207.12554
+  note: 同为点云几何压缩编码研究
+- type: same_topic
+  ref: paper:arxiv:2602.08613
+  note: AVS点云压缩标准综述，与G-PCC增强同属点云编码领域
+- type: same_topic
+  ref: paper:arxiv:2206.12186
+  note: 点云压缩中的率失真优化，主题相近
+- type: same_topic
+  ref: paper:arxiv:2303.13764
+  note: 同组作者面向点云属性的质量增强网络，与本文几何超分互补

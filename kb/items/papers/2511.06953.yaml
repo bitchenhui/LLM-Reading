@@ -1,0 +1,65 @@
+id: paper:arxiv:2511.06953
+type: paper
+title: 'GFix: Perceptually Enhanced Gaussian Splatting Video Compression'
+domain: immersive_media
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2511.06953v1
+  url: https://arxiv.org/abs/2511.06953
+  pdf_url: https://arxiv.org/pdf/2511.06953v1
+  venue: arXiv preprint
+time:
+  published: '2025-11-10'
+  collected: '2026-11-14'
+entities:
+- ref: concept:3DGS
+  role: subject
+- ref: metric:LPIPS
+  role: measured_by
+- ref: metric:FID
+  role: measured_by
+- ref: metric:BD-Rate
+  role: measured_by
+claims:
+- statement: GFix 在感知质量上显著优于 GSVC，LPIPS 口径 BD-rate 最多节省 72.1%，FID 口径最多节省 21.4%
+  confidence: reported
+  metrics:
+  - name: BD-Rate
+    value: -72.1%
+    scope: 相对 GSVC，LPIPS 指标口径，报告的最大节省
+  - name: BD-Rate
+    value: -21.4%
+    scope: 相对 GSVC，FID 指标口径，报告的最大节省
+  evidence: abstract（初筛，未读全文）
+- statement: GFix 假设 3DGS 渲染与量化伪影类似扩散训练中的含噪隐变量，据此用单个单步扩散模型作为即插即用的神经增强器
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 提出调制式 LoRA 方案：冻结低秩分解、调制中间隐状态，以高度可压缩的更新实现扩散骨干的高效适配
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 用单步扩散模型增强 3DGS 视频压缩的感知质量，较 GSVC 最多节省 72.1% LPIPS BD-rate
+  abstract_zh: 针对现有 3DGS 视频编解码器伪影明显、压缩率偏低的问题，论文提出内容自适应的感知增强框架 GFix。其核心假设是 3DGS 渲染与量化产生的伪影类似于扩散训练中采样的含噪隐变量，因此用一个精简的单步扩散模型作为即插即用的神经增强器。为提高压缩效率，提出调制式
+    LoRA 方案：冻结低秩分解、仅调制中间隐状态，实现对扩散骨干的高效适配且更新量高度可压缩。实验显示 GFix 感知质量提升显著，在 LPIPS 上相对 GSVC 最多节省 72.1% BD-rate，在
+    FID 上节省 21.4%。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 3DGS 视频压缩的感知增强工作，主体属沉浸式/三维域（3DGS），与核心视频编码强相关，按规则不给 deep_read
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: GFix：感知增强的高斯泼溅视频压缩
+relations:
+- type: same_topic
+  ref: paper:arxiv:2501.12060
+  note: 同为高斯泼溅视频压缩路线，且 GFix 直接以 GSVC 为对比锚点（72.1% LPIPS BD-rate 节省）
+- type: same_topic
+  ref: paper:arxiv:2601.01141
+  note: 均采用单步扩散模型服务视频压缩，属扩散增强/生成式视频编码同主题
+- type: same_topic
+  ref: paper:arxiv:2609.33969
+  note: 同为高斯泼溅表示的视频压缩工作，3DGS 编码同主题

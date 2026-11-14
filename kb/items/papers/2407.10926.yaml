@@ -1,0 +1,77 @@
+id: paper:arxiv:2407.10926
+type: paper
+title: In-Loop Filtering via Trained Look-Up Tables
+domain: video_image_coding
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2407.10926v2
+  url: https://arxiv.org/abs/2407.10926
+  pdf_url: https://arxiv.org/pdf/2407.10926v2
+  venue: arXiv preprint
+time:
+  published: '2024-07-15'
+  collected: '2026-11-14'
+entities:
+- ref: codec:VVC
+  role: subject
+- ref: impl:VTM
+  role: evaluated_on
+- ref: metric:BD-Rate
+  role: measured_by
+claims:
+- statement: 提出LUT化神经网络环路滤波：固定参考范围训练DNN并离线缓存全部输出，编码时查表+插值替代在线推理，配合增强索引与训练期裁剪/微调扩展滤波范围并控制存储。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在VTM-11.0上，三档复杂度模式在AI配置下平均降低BD-rate 0.13%/0.34%/0.51%（ultrafast/very fast/fast）。
+  confidence: reported
+  metrics:
+  - name: BD-rate降幅
+    value: 0.13%/0.34%/0.51%
+    scope: AI(all intra)配置，ultrafast/very fast/fast三档，锚点VTM-11.0
+  evidence: abstract（初筛，未读全文）
+- statement: RA配置下三档模式平均降低BD-rate 0.10%/0.27%/0.39%。
+  confidence: reported
+  metrics:
+  - name: BD-rate降幅
+    value: 0.10%/0.27%/0.39%
+    scope: RA(random access)配置，ultrafast/very fast/fast三档，锚点VTM-11.0
+  evidence: abstract（初筛，未读全文）
+- statement: 复杂度友好：时间开销约翻倍或更低，计算量与存储均适合通用编码场景部署。
+  confidence: reported
+  metrics:
+  - name: 时间增加
+    value: 101%/102%-104%/108%
+    scope: AI/RA配置下三档模式
+  - name: 计算量
+    value: 0.13-0.93 kMACs/pixel
+    scope: 单模型
+  - name: LUT存储开销
+    value: 164-1148 KB
+    scope: 单模型
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 用离线训练的查找表替代DNN在线推理实现VVC环路滤波，低复杂度下取得0.1-0.5% BD-rate增益。
+  abstract_zh: 该文提出以查找表（LUT）替代深度神经网络在线推理的环路滤波方案：在固定滤波参考范围内训练DNN，离线遍历全部可能输入并将其滤波输出缓存为LUT；编码时通过定位待滤波像素及其参考像素、插值缓存值生成滤波像素。为在有限存储下支持较大参考范围，引入增强索引机制，并在训练中采用裁剪/微调机制。方法实现于VVC参考软件VTM-11.0：ultrafast/very
+    fast/fast三档在AI配置下平均降低BD-rate 0.13%/0.34%/0.51%，RA配置下降低0.10%/0.27%/0.39%。时间仅增加101%/102%-104%/108%，计算量0.13-0.93
+    kMACs/pixel，单模型存储164-1148 KB，展示了实用化NN编码工具的可行路径。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 核心域视频编码工具：面向VVC的实用化神经网络环路滤波，用LUT替代在线推理解决复杂度瓶颈，是ECM NN滤波标准化方向的代表性工作。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 基于训练查找表的环路滤波
+relations:
+- type: same_topic
+  ref: standard_proposal:jvet:m203-AM0183
+  note: JVET提案《Look-up table based loop filtering for ECM》与本工作同属LUT环路滤波技术线，是该方案向ECM标准化的推进
+- type: same_topic
+  ref: standard_proposal:jvet:m201-AK0117
+  note: ECM中NN环路滤波提案，同属神经网络环路滤波编码工具方向
+- type: same_topic
+  ref: paper:arxiv:2607.04985
+  note: 同为降低环路滤波复杂度的自适应滤波研究，主题相近

@@ -1,0 +1,69 @@
+id: paper:arxiv:2409.08481
+type: paper
+title: 'USTC-TD: A Test Dataset and Benchmark for Image and Video Coding in 2020s'
+domain: video_image_coding
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2409.08481v3
+  url: https://arxiv.org/abs/2409.08481
+  pdf_url: https://arxiv.org/pdf/2409.08481v3
+  venue: arXiv preprint
+time:
+  published: '2024-09-13'
+  collected: '2026-11-14'
+entities:
+- ref: org:USTC
+  role: subject
+- ref: metric:PSNR
+  role: measured_by
+- ref: metric:MS-SSIM
+  role: measured_by
+- ref: metric:VMAF
+  role: measured_by
+- ref: metric:MOS
+  role: measured_by
+claims:
+- statement: USTC-TD包含40张4K空间分辨率图像和10个1080p空间分辨率视频序列，内容覆盖场景类型、纹理、运动、视角等环境因素与光照、镜头、阴影等成像因素。
+  confidence: reported
+  metrics:
+  - name: 图像数量
+    value: '40'
+    scope: 4K空间分辨率图像
+  - name: 视频序列数量
+    value: '10'
+    scope: 1080p空间分辨率视频序列
+  evidence: abstract（初筛，未读全文）
+- statement: USTC-TD已被IEEE VCIP 2022和2023端到端图像/视频编码挑战赛实际采用作为评测数据。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 与既有图像/视频测试数据集相比，USTC-TD在空间、时间、色彩、亮度特征维度上补足了现有数据集的不足。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 论文用客观指标（PSNR、MS-SSIM、VMAF）与主观指标（MOS）在USTC-TD上对经典标准化编码和近期学习型编码方案进行了广泛基准评测。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出含40张4K图像与10个1080p视频的USTC-TD编码测试数据集，并用PSNR/MS-SSIM/VMAF/MOS为标准化与学习型编码方案建立基准。
+  abstract_zh: 论文提出图像/视频编码测试数据集USTC-TD，包含40张4K空间分辨率图像和10个1080p分辨率视频序列，内容覆盖场景类型、纹理、运动、视角等环境因素以及光照、镜头、阴影等专门设计的成像因素。该数据集已被IEEE
+    VCIP 2022与2023端到端图像/视频编码挑战赛实际采用。作者定量评估了数据集在空间、时间、色彩、亮度等特征维度上的表现，并与既有测试数据集对比，验证其对现有数据集短板的补足作用。论文进一步在USTC-TD上使用客观指标（PSNR、MS-SSIM、VMAF）与主观指标（MOS）对经典标准化编码和近期学习型图像/视频编码方案进行广泛基准评测，据此分析各方案性能并展望编码研发方向，全部数据已在线公开。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 面向核心域的高质量图像/视频编码测试数据集与基准，已被VCIP 2022/2023编码挑战赛实际采用，是编码评测的基础性资源。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: USTC-TD：面向2020年代图像与视频编码的测试数据集与基准
+relations:
+- type: same_topic
+  ref: paper:arxiv:2309.07376
+  note: 同为面向视频压缩评测的数据集构建工作
+- type: same_topic
+  ref: paper:arxiv:2408.05042
+  note: 同为传统与学习型编码器的基准评测
+- type: same_topic
+  ref: paper:arxiv:2511.00969
+  note: 同为在4K/UHD内容上评估编码器与质量指标

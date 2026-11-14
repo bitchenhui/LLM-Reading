@@ -1,0 +1,52 @@
+id: paper:arxiv:2307.12864
+type: paper
+title: 'Conditional Residual Coding: A Remedy for Bottleneck Problems in Conditional Inter Frame Coding'
+domain: video_image_coding
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2307.12864v2
+  url: https://arxiv.org/abs/2307.12864
+  pdf_url: https://arxiv.org/pdf/2307.12864v2
+  venue: arXiv preprint
+time:
+  published: '2023-07-24'
+  collected: '2026-11-14'
+entities:
+- ref: codec:HEVC
+  role: subject
+- ref: codec:VVC
+  role: compared_against
+claims:
+- statement: 条件编码在理论上优于 HEVC/VVC 等视频压缩标准广泛使用的传统残差编码
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 条件编码器的预测路径存在信息瓶颈：由数据处理不等式可知预测信号的信息无法全部传递到重建信号，从而损害编码性能
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 提出的条件残差编码在不损失条件编码理论性能的前提下，显著降低了瓶颈的影响
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 条件残差编码器在残差编码与条件编码谱系中兼取两者优势，被称为'两全其美'的方案
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出条件残差编码，从信息论出发缓解条件式视频编码预测路径的信息瓶颈，兼顾残差编码与条件编码双方优势。
+  abstract_zh: 条件编码是神经网络压缩 enabling 的新视频编码范式，理论上优于 HEVC/VVC 等传统标准广泛采用的残差编码。但作者指出条件编码器的预测路径存在信息瓶颈：由于数据处理不等式，预测信号中的信息无法完全传递到重建信号，损害编码性能。论文从信息论性质推导出条件残差编码概念，显著减弱瓶颈影响，同时保持条件编码的理论性能上限。理论分析与实际实验表明，条件残差编码器既消除条件编码的缺陷，又保留其相对残差编码的优势，是两种范式之间的'两全其美'方案。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 核心域内的编码范式理论研究：提出条件残差编码解决条件式帧间编码的信息瓶颈问题，与HEVC/VVC所用残差编码直接相关
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 条件残差编码：条件式帧间编码瓶颈问题的补救方案
+relations:
+- type: same_topic
+  ref: paper:arxiv:2510.12479
+  note: 同为条件式残差视频编码（Learned Conditional Residual Video Coding）方向的后续工作
+- type: same_topic
+  ref: paper:arxiv:2304.02690
+  note: 同属条件编码（CANF）帧间视频编码研究线

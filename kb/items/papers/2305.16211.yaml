@@ -1,0 +1,60 @@
+id: paper:arxiv:2305.16211
+type: paper
+title: Learned Wavelet Video Coding using Motion Compensated Temporal Filtering
+domain: video_image_coding
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2305.16211v2
+  url: https://arxiv.org/abs/2305.16211
+  pdf_url: https://arxiv.org/pdf/2305.16211v2
+  venue: arXiv preprint
+time:
+  published: '2023-05-25'
+  collected: '2026-11-14'
+entities:
+- ref: codec:HEVC
+  role: subject
+- ref: dataset:UVG
+  role: evaluated_on
+claims:
+- statement: 提出基于提升方案实现的可训练MCTF模块，可在训练中考虑多级时域分解，并处理MCTF编码顺序导致的较大时域位移
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 提出推理阶段依据运动强度自适应调整的内容自适应MCTF扩展
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 时/空三维离散小波变换框架具备可解释性，并支持空间与时域可分级
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在UVG数据集上相对HEVC取得最高21%的平均Bjøntegaard Delta率节省，并超越现有最先进学习型视频编码器
+  confidence: reported
+  metrics:
+  - name: Bjøntegaard Delta率节省
+    value: 21%
+    scope: UVG数据集上相对HEVC（摘要表述为 up to 21%，即最佳情形）
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出基于提升方案MCTF的端到端可训练小波视频编码器，UVG上BD率较HEVC最高节省21%并超越SOTA学习型编码器。
+  abstract_zh: 本文提出一种基于运动补偿时域滤波（MCTF）的端到端可训练小波视频编码器，为目前由残差编码与条件编码主导的学习型视频压缩提供了新的编码方案。通过在时间、水平和垂直三个维度执行离散小波变换，框架具备可解释性并支持空间与时域可分级。作者采用提升方案（lifting
+    scheme）实现可训练MCTF模块，解决了训练中考虑多级时域分解以及MCTF编码顺序带来的较大时域位移问题，并提出推理阶段按运动强度自适应的内容自适应MCTF扩展。实验与学习型条件编码器及传统混合编码框架对比，尤其在高码率下率失真表现突出，UVG数据集上对HEVC的平均BD率节省最高达21%，超越现有最先进学习型视频编码器。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 核心域学习型视频编码，提出区别于主流残差/条件编码的小波MCTF新范式，UVG上BD率较HEVC最高节省21%并超越SOTA，值得深读。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 基于运动补偿时域滤波的学习型小波视频编码
+relations:
+- type: same_topic
+  ref: paper:arxiv:2304.02690
+  note: 同为学习型视频编码中的时域分层/多级分解编码方向
+- type: same_topic
+  ref: paper:arxiv:2510.12479
+  note: 同属学习型视频编码，本文小波MCTF路线与其条件残差编码路线互为对照
+- type: same_topic
+  ref: paper:arxiv:2606.00111
+  note: 均在小波域开展学习型压缩，可对照小波工具在图像/视频编码中的应用

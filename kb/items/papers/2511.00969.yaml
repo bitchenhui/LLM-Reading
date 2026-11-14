@@ -1,0 +1,86 @@
+id: paper:arxiv:2511.00969
+type: paper
+title: Evaluating Video Quality Metrics for Neural and Traditional Codecs using 4K/UHD-1 Videos
+domain: quality_assessment
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2511.00969v1
+  url: https://arxiv.org/abs/2511.00969
+  pdf_url: https://arxiv.org/pdf/2511.00969v1
+  venue: arXiv preprint
+time:
+  published: '2025-11-02'
+  collected: '2026-11-14'
+entities:
+- ref: concept:IQA
+  role: subject
+- ref: codec:AV1
+  role: compared_against
+- ref: codec:VVC
+  role: compared_against
+- ref: impl:DCVC-FM
+  role: compared_against
+- ref: impl:DCVC-RT
+  role: compared_against
+- ref: metric:VMAF
+  role: measured_by
+- ref: metric:PSNR
+  role: measured_by
+- ref: concept:QP
+  role: uses
+claims:
+- statement: 构建了涵盖传统与神经编解码器的大规模4K主观质量数据集：6个源视频在4个分辨率、9个QP下编码，共216条序列由30名受试者受控评分。
+  confidence: reported
+  metrics:
+  - name: 主观评测序列数
+    value: '216'
+    scope: 6源视频×4分辨率(360p–2160p)×9个QP
+  - name: 受试者人数
+    value: '30'
+    scope: 受控环境主观实验
+  - name: 源视频规格
+    value: 8-10秒, 4K/UHD-1, 60fps
+    scope: 源素材
+  evidence: abstract（初筛，未读全文）
+- statement: 客观指标中VMAF与AVQBits|H0|f对主观分数呈较强Pearson相关，FasterVQA在受测无参考指标中表现最佳。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: PSNR在跨编解码器的序列内（within-sequence）比较中Spearman秩相关最高。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在所测全参考、混合与无参考指标上，传统编解码器（AV1/VVC）与神经编解码器（DCVC-FM/DCVC-RT）之间未观察到指标可靠性的显著性能差异。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 216条4K序列主观实验表明VMAF、PSNR等主流指标对神经编解码器仍有效，传统与神经编解码器间无显著差异。
+  abstract_zh: 该论文通过受控主观质量实验，检验现有质量指标在神经视频编解码器（NVC）上的有效性。研究使用AV1、VVC两种传统编解码器与DCVC-FM、DCVC-RT两种神经编解码器，对6个4K/UHD-1源视频（8-10秒，60fps）在360p至2160p共4个分辨率、9个QP下编码，生成216条序列，由30名受试者评分。基于主观分数评估了全参考、混合与无参考三类质量指标。结果显示VMAF与AVQBits|H0|f具有较强Pearson相关，FasterVQA在无参考指标中表现最佳；PSNR在跨编解码器的序列内比较中Spearman秩相关最高；且传统与神经编解码器之间未观察到指标可靠性的显著差异。数据集（源视频、编码序列、主客观分数）将开源发布。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 属质量评估域：以主观实验系统检验现有视频质量指标对神经与传统编解码器退化类型的适用性，与核心编码域高度相关但按规则不给deep_read。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 基于4K/UHD-1视频评估神经与传统编解码器的视频质量指标
+relations:
+- type: same_topic
+  ref: paper:arxiv:2605.15800
+  note: 同为编解码器压缩性能的视频质量评估方法论研究（AV2 vs 本文AV1/VVC/NVC）
+- type: same_topic
+  ref: paper:arxiv:2605.18378
+  note: 同用客观质量指标评估视频压缩造成的影响
+- type: same_topic
+  ref: paper:arxiv:2608.13989
+  note: 同为主观驱动的质量指标评测研究
+- type: same_topic
+  ref: standard_proposal:jvet:m205-AO0186
+  note: 本文评测对象DCVC-FM亦被JVET作为学习型编解码器开展评估
+- type: same_topic
+  ref: standard_proposal:jvet:m206-AP0080
+  note: 本文评测对象DCVC-RT亦被JVET作为学习型编解码器开展评估
+- type: same_topic
+  ref: paper:arxiv:2601.10448
+  note: 同为UHD/4K分辨率下编码视频的主观质量评估研究

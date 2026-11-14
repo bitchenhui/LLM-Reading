@@ -1,0 +1,57 @@
+id: paper:arxiv:2510.07283
+type: paper
+title: Content-Adaptive Inference for State-of-the-art Learned Video Compression
+domain: video_image_coding
+research_lines:
+- learned_codec
+source:
+  channel: arxiv
+  external_id: 2510.07283v2
+  url: https://arxiv.org/abs/2510.07283
+  pdf_url: https://arxiv.org/pdf/2510.07283v2
+  venue: arXiv preprint
+time:
+  published: '2025-10-08'
+  collected: '2026-11-14'
+entities:
+- ref: impl:DCVC-FM
+  role: subject
+- ref: metric:BD-Rate
+  role: measured_by
+claims:
+- statement: 所提内容自适应推理框架（推理期自适应下采样控制运动向量尺度）无需模型微调，即可提升低延迟学习型编码器DCVC-FM的压缩性能。
+  confidence: reported
+  metrics:
+  - name: BD-Rate增益
+    value: up to 41%
+    scope: DCVC-FM低延迟模式，在个别（复杂/大运动）视频上，无模型微调
+  evidence: abstract（初筛，未读全文）
+- statement: 学习型编码器无法泛化到训练集未见的运动向量范围，是复杂/大运动场景编码增益受限的原因，缩小运动向量可同时改善光流估计（帧预测）与光流压缩效率。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 消融研究表明运动量与场景复杂度度量可用于预测该内容自适应推理框架的有效性。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出模型无关的内容自适应推理框架，通过自适应下采样控制运动向量尺度，使DCVC-FM在单视频上BD-rate最高提升41%。
+  abstract_zh: 近期学习型视频编码器在常见基准上平均性能已超越传统编码器，但对含复杂/大运动视频的提升远小于简单运动场景，原因是编码器模型无法泛化到训练集中未见的运动向量范围，导致光流编码与帧预测性能下降。作者提出一个通用（模型无关）的推理期框架，通过自适应下采样帧来缩放场景中的运动向量，使其范围近似匹配训练分布，从而同时改善光流估计与光流压缩效率。该框架无需任何模型微调，即可使最先进低延迟编码器DCVC-FM在个别视频上BD-rate提升最高41%。消融研究进一步表明，运动量与场景复杂度度量可用于预测该框架的适用效果。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 核心域学习视频编码工作：提出模型无关的内容自适应推理框架，无需微调即可显著提升SOTA编码器DCVC-FM在复杂运动视频上的压缩性能。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 面向最先进学习视频压缩的内容自适应推理
+relations:
+- type: same_topic
+  ref: paper:arxiv:2405.08530
+  note: 同属面向单内容/自适应推理的神经视频压缩改进方向
+- type: same_topic
+  ref: paper:arxiv:2604.20104
+  note: 同为在不重训模型前提下改进学习视频压缩编码性能的方法
+- type: same_topic
+  ref: standard_proposal:jvet:m205-AO0186
+  note: 均以DCVC-FM为考察对象的标准评估相关文档

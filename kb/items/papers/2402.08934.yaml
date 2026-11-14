@@ -1,0 +1,66 @@
+id: paper:arxiv:2402.08934
+type: paper
+title: Extreme Video Compression with Pre-trained Diffusion Models
+domain: video_image_coding
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2402.08934v1
+  url: https://arxiv.org/abs/2402.08934
+  pdf_url: https://arxiv.org/pdf/2402.08934v1
+  venue: arXiv preprint
+time:
+  published: '2024-02-14'
+  collected: '2026-11-14'
+entities:
+- ref: codec:AVC
+  role: subject
+- ref: codec:HEVC
+  role: compared_against
+- ref: metric:LPIPS
+  role: measured_by
+claims:
+- statement: 提出以解码端条件扩散模型为核心的极限视频压缩框架：以神经压缩帧为条件自回归生成后续帧，质量低于阈值时编码新帧重启预测，整段视频顺序编码。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 所提方案的码率可低至0.02 bpp，属于极低码率工作区间。
+  confidence: reported
+  metrics:
+  - name: 码率
+    value: 0.02 bpp
+    scope: 所提方案在实验中达到的最低码率（每像素比特数）
+  evidence: abstract（初筛，未读全文）
+- statement: 在低bpp区间，所提方案以LPIPS、FVD等感知指标衡量的重建质量优于H.264和H.265标准编解码器。
+  confidence: reported
+  metrics:
+  - name: 感知质量对比
+    value: 优于H.264/H.265（低bpp区间）
+    scope: 以LPIPS与FVD衡量的低码率区间对比
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 解码端用预训练条件扩散模型自回归预测后续帧，实现低至0.02 bpp、感知质量优于H.264/H.265的极限视频压缩。
+  abstract_zh: 该文提出一种利用预训练扩散生成模型预测能力的极限视频压缩方法：解码端的条件扩散模型以若干神经压缩帧为条件，自回归地生成后续帧，当重建质量低于设定阈值时编码新帧以重启预测。整段视频按此方式顺序编码，以LPIPS、FVD等感知质量指标驱动码率与感知质量的权衡。实验表明，所提方案在极低码率区间（最低约0.02
+    bpp）的重建感知质量优于H.264和H.265等标准编解码器，展示了用生成模型挖掘视频时间相关性的潜力。代码已开源。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 核心域内生成式视频压缩代表工作：预训练条件扩散模型解码端预测实现超低码率编码并对比H.264/H.265，方法与实验均直接面向视频编码主线。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 基于预训练扩散模型的极限视频压缩
+relations:
+- type: same_topic
+  ref: paper:arxiv:2601.01141
+  note: 同为扩散模型视频压缩（一步扩散视频压缩器），同属生成式视频编码方向
+- type: same_topic
+  ref: paper:arxiv:2604.08329
+  note: 同为极限低码率扩散视频压缩，均面向极低bpp区间
+- type: same_topic
+  ref: paper:arxiv:2606.22371
+  note: 同为基于自回归扩散先验的零样本生成式视频压缩
+- type: same_topic
+  ref: paper:arxiv:2609.34725
+  note: 同为利用生成先验的视频压缩工作

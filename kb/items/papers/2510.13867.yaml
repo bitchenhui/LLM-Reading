@@ -1,0 +1,59 @@
+id: paper:arxiv:2510.13867
+type: paper
+title: An Overview of the JPEG AI Learning-Based Image Coding Standard
+domain: video_image_coding
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2510.13867v1
+  url: https://arxiv.org/abs/2510.13867
+  pdf_url: https://arxiv.org/pdf/2510.13867v1
+  venue: arXiv preprint
+time:
+  published: '2025-10-13'
+  collected: '2026-11-14'
+entities:
+- ref: metric:BD-Rate
+  role: subject
+- ref: metric:MS-SSIM
+  role: measured_by
+- ref: metric:PSNR
+  role: measured_by
+- ref: metric:VMAF
+  role: measured_by
+claims:
+- statement: JPEG AI 的定位是提供单流、紧凑压缩域表示的学习型图像编码标准，同时服务人眼可视化与机器消费。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: JPEG AI 第一版计划于 2025 年初完成，聚焦人类视觉任务，相较现有标准在 MS-SSIM、FSIM、VIF、VMAF、PSNR-HVS、IW-SSIM、NLPD 等质量指标上取得显著
+    BD-rate 降低。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: JPEG AI 通过多项设计特性保证跨设备、跨应用部署的互操作性。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: JPEG AI 学习型图像编码标准首版技术综述：单流压缩域表示，兼顾人眼与机器消费。
+  abstract_zh: JPEG AI 是 JPEG 专家组制定的基于学习的图像编码标准，旨在提供单流、紧凑的压缩域表示，同时面向人眼可视化与机器消费两类任务。其第一版计划于 2025 年初完成，聚焦人类视觉任务，在
+    MS-SSIM、FSIM、VIF、VMAF、PSNR-HVS、IW-SSIM 与 NLPD 等质量指标上相较现有标准取得显著 BD-rate 降低。标准设计中纳入多种特性以保证跨设备、跨应用部署的广泛互操作性。本文系统综述了
+    JPEG AI 标准的技术特性与设计要点。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: JPEG AI 首个学习型图像编码标准的官方技术综述，出自标准核心贡献者，属视频/图像编码核心域的关键标准文献。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: JPEG AI 基于学习的图像编码标准综述
+relations:
+- type: same_topic
+  ref: paper:arxiv:2411.06810
+  note: 同属 JPEG AI 标准生态：该文研究 JPEG AI 压缩伪影检测与数据集
+- type: same_topic
+  ref: paper:arxiv:2610.22421
+  note: 同属端到端学习型图像编码及其实用部署主题
+- type: same_topic
+  ref: paper:arxiv:2606.23545
+  note: 同属学习型图像编码评测体系主题

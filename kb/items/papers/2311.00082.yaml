@@ -1,0 +1,59 @@
+id: paper:arxiv:2311.00082
+type: paper
+title: 'UAV Immersive Video Streaming: A Comprehensive Survey, Benchmarking, and Open Challenges'
+domain: immersive_media
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2311.00082v1
+  url: https://arxiv.org/abs/2311.00082
+  pdf_url: https://arxiv.org/pdf/2311.00082v1
+  venue: arXiv preprint
+time:
+  published: '2023-10-31'
+  collected: '2026-11-14'
+entities:
+- ref: codec:HEVC
+  role: subject
+- ref: codec:AV1
+  role: subject
+- ref: codec:VVC
+  role: subject
+- ref: codec:AVC
+  role: subject
+claims:
+- statement: HEVC凭借其硬件实现在无人机360度视频编码基准评测中取得编码效率与复杂度之间的最佳折中
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: AV1通过libsvt-av1软件编码器在该360度视频数据集上实现最佳编码效率
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 论文发布了一个由无人机在不同飞行条件下采集的高分辨率360度视频数据集，用于评测主流编码标准软硬件编码器的复杂度与编码效率
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 论文给出基于5G蜂窝网络、支持远程控制无人机的360度视频实时流传输真实测试床
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 综述无人机360度沉浸视频流媒体全链路，基准评测AVC/HEVC/VVC/VP9/AV1软硬件编码器并发布无人机360视频数据集
+  abstract_zh: 该文系统综述了基于无人机的360度全景视频采集、编码、封装与实时流传输研究，梳理了保障沉浸式视频设备与服务互操作性的标准化进展，并评述了面向时变无人机无线信道的流媒体优化方法。作者构建并发布了不同飞行条件下无人机采集的高分辨率360度视频数据集，据此对AVC/H.264、HEVC/H.265、VVC/H.266、VP9与AV1等主流编码标准的软硬件编码器进行复杂度与编码效率基准评测。结果显示HEVC凭借硬件实现在编码效率与复杂度之间取得最佳折中，而AV1通过libsvt-av1软件实现在编码效率上表现最佳。论文还展示了经5G蜂窝网络远程控制无人机的360度视频实时流传输真实测试床，并总结开放研究挑战。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 无人机360度沉浸视频流媒体综述+主流编码标准软硬件基准评测，跨沉浸媒体/流媒体/编码三域，按非核心域规则收为summary_only
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 无人机沉浸式视频流传输：综述、基准测试与开放挑战
+relations:
+- type: same_topic
+  ref: paper:arxiv:2608.06102
+  note: 同属沉浸式视频流媒体传输研究
+- type: same_topic
+  ref: paper:arxiv:2511.18686
+  note: 同为硬件视频编码器在实时流场景下的评测工作
+- type: same_topic
+  ref: paper:arxiv:2408.05042
+  note: 同为常规视频编解码器基准评测研究

@@ -1,0 +1,59 @@
+id: paper:arxiv:2210.08229
+type: paper
+title: A Codec Information Assisted Framework for Efficient Compressed Video Super-Resolution
+domain: processing_enhancement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2210.08229v1
+  url: https://arxiv.org/abs/2210.08229
+  pdf_url: https://arxiv.org/pdf/2210.08229v1
+  venue: arXiv preprint
+time:
+  published: '2022-10-15'
+  collected: '2026-11-14'
+entities:
+- ref: concept:SuperResolution
+  role: subject
+- ref: codec:AVC
+  role: uses
+claims:
+- statement: 基于码流运动矢量的帧/特征对齐可显著提升循环VSR性能，额外计算可忽略，性能可与基于光流的复杂对齐相当。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 结合码流残差信息跳过冗余像素计算，可在不损失性能的前提下大幅降低VSR计算量。
+  confidence: reported
+  metrics:
+  - name: 计算量节省
+    value: 70%
+    scope: 上限；REDS4测试视频经H.264编码CRF=23
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 复用码流运动矢量与残差辅助循环VSR对齐并跳过冗余计算，H.264 CRF23下最高省70%算力且性能不掉。
+  abstract_zh: 针对压缩视频在线超分辨率任务，作者提出编解码信息辅助框架CIAF，用于提升并加速循环神经网络结构的VSR模型。框架首先复用码流中的运动矢量（MV）进行相邻帧的时序对齐，以可忽略的额外计算量取得与基于光流的复杂对齐相当的性能。其次进一步利用码流残差（Residuals）信息识别冗余像素并跳过其计算。在H.264编码（CRF=23）的REDS4测试视频上，框架最高可节省70%计算量且性能不下降。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 利用AVC码流运动矢量与残差加速压缩视频超分，属编码链路增强（超分）方向，非编码本体，按规则给summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 面向高效压缩视频超分辨率的编解码信息辅助框架
+relations:
+- type: same_topic
+  ref: paper:arxiv:2609.37328
+  note: CASR同为面向编码视频（VVC）的神经超分后滤波，与本文压缩视频超分主题一致
+- type: same_topic
+  ref: paper:arxiv:2411.13362
+  note: RTSR针对AV1压缩内容的实时超分，同属码流辅助视频超分
+- type: same_topic
+  ref: paper:arxiv:2104.02322
+  note: 内容自适应超分与编码协同降低码率，编解码信息+超分同方向
+- type: same_topic
+  ref: paper:arxiv:2308.06570
+  note: VVC UHD下基于机器学习超分的方案，同主题
+- type: same_topic
+  ref: paper:arxiv:2605.14629
+  note: 同样复用编解码器运动矢量（AV1 MV）辅助下游密集匹配，思路相通

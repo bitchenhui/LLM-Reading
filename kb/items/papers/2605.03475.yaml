@@ -1,0 +1,82 @@
+id: paper:arxiv:2605.03475
+type: paper
+title: 'WorldJen: An End-to-End Multi-Dimensional Benchmark for Generative Video Models'
+domain: quality_assessment
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2605.03475v2
+  url: https://arxiv.org/abs/2605.03475
+  pdf_url: https://arxiv.org/pdf/2605.03475v2
+  venue: arXiv preprint
+time:
+  published: '2026-05-05'
+  collected: '2026-11-14'
+entities:
+- ref: concept:IQA
+  role: subject
+- ref: metric:SSIM
+  role: compared_against
+- ref: metric:PSNR
+  role: compared_against
+- ref: org:BT
+  role: uses
+claims:
+- statement: WorldJen用VLM在视频原生分辨率下按维度Likert问卷替代二值VQA来评估生成视频，缓解肯定偏置与低分辨率评审漏检时序失败的问题
+  confidence: reported
+  metrics:
+  - name: 评分响应总数
+    value: 47,160
+    scope: VLM评估引擎维度化Likert问卷（每维度10题）
+  evidence: abstract（初筛，未读全文）
+- statement: 盲测人类偏好研究覆盖50条提示词×6个SOTA视频模型，建立具有三层级结构的人类BT评级基准
+  confidence: reported
+  metrics:
+  - name: 成对标注数
+    value: 2,696
+    scope: 7名标注者、100%对覆盖（50提示词×6模型）
+  - name: 平均标注者间一致率
+    value: 66.9%
+    scope: 7名标注者全体平均
+  evidence: abstract（初筛，未读全文）
+- statement: VLM评估引擎独立复现人类建立的三层级BT评级结构
+  confidence: reported
+  metrics:
+  - name: Spearman ρ̂
+    value: '1.000'
+    scope: 与人类三层级BT评级结构的层级一致性（p=0.0014）
+  evidence: abstract（初筛，未读全文）
+- statement: 对抗性策划的提示词可同时考察多达16个质量维度，降低生成评测视频的成本
+  confidence: reported
+  metrics:
+  - name: 同时考察维度数
+    value: '16'
+    scope: 单条对抗性提示词最多可同时覆盖的质量维度
+  evidence: abstract（初筛，未读全文）
+- statement: 六项消融研究验证了VLM评估框架的鲁棒性
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 以VLM原生分辨率Likert问卷替代二值VQA，构建与人类BT偏好对齐的生成视频多维质量基准
+  abstract_zh: 论文针对生成式视频模型评估难题，指出SSIM/PSNR偏像素保真、FVD偏分布纹理、VBench 2.0等二值VQA基准存在肯定偏置且依赖低分辨率评审。WorldJen改用VLM在视频原生分辨率下按维度Likert问卷打分，并以对抗性策划的提示词同时考察多达16个质量维度以降低生成成本。作者开展盲测人类偏好研究：50条提示词×6个SOTA视频模型，7名标注者共2,696对标注、100%对覆盖，平均标注者间一致率66.9%，据此建立人类三层级Bradley-Terry(BT)评级。其VLM评估引擎（每维度10题、共47,160个评分响应）独立复现人类三层级BT评级结构，Spearman
+    ρ̂=1.000（p=0.0014），并通过六项消融研究验证框架鲁棒性。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 生成式视频模型质量评估基准（VQA/VLM-as-a-judge），属质量评估域而非核心编码域，按基准规则仅作初筛收录
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: WorldJen：面向生成式视频模型的端到端多维基准
+relations:
+- type: same_topic
+  ref: paper:arxiv:2611.04498
+  note: 同为多维度视频质量主观基准（3DGS视频VQA），与本工作多维度生成视频质量评估主题相近
+- type: same_topic
+  ref: paper:arxiv:2609.27110
+  note: 同为基于VLM评审的质量/美学评估（Undertone个性化VLM评审），与本工作VLM-as-a-judge路线相关
+- type: same_topic
+  ref: paper:arxiv:2609.25716
+  note: 面向生成式视频的感知质量度量（FoMo感知距离），同属生成视频质量评估话题

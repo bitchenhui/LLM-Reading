@@ -1,0 +1,87 @@
+id: paper:arxiv:2607.15298
+type: paper
+title: Data-driven Video Codec with Implicit Neural Representations
+domain: video_image_coding
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2607.15298v1
+  url: https://arxiv.org/abs/2607.15298
+  pdf_url: https://arxiv.org/pdf/2607.15298v1
+  venue: arXiv preprint
+time:
+  published: '2026-07-02'
+  collected: '2026-11-14'
+entities:
+- ref: codec:AVC
+  role: subject
+- ref: codec:HEVC
+  role: compared_against
+- ref: metric:PSNR
+  role: measured_by
+- ref: metric:SSIM
+  role: measured_by
+- ref: concept:WebRTC
+  role: platform
+claims:
+- statement: 量化学生网络在6.08 MiB测试视频上达到视频PSNR 28.72 dB、SSIM 0.75。
+  confidence: reported
+  metrics:
+  - name: PSNR
+    value: 28.72 dB
+    scope: 量化学生网络，6.08 MiB测试视频，视频重建
+  - name: SSIM
+    value: '0.75'
+    scope: 量化学生网络，6.08 MiB测试视频，视频重建
+  evidence: abstract（初筛，未读全文）
+- statement: 整条压缩流水线将表示从9.05 MiB缩至2.33 MiB，整体压缩比2.61。
+  confidence: reported
+  metrics:
+  - name: 压缩比
+    value: '2.61'
+    scope: 6.08 MiB测试视频，9.05 MiB→2.33 MiB（蒸馏+16位量化+LZMA2）
+  evidence: abstract（初筛，未读全文）
+- statement: 音频分支达到PSNR 24.18 dB、对数谱距离10.69 dB。
+  confidence: reported
+  metrics:
+  - name: 音频PSNR
+    value: 24.18 dB
+    scope: 量化学生网络音频重建
+  - name: 对数谱距离(LSD)
+    value: 10.69 dB
+    scope: 量化学生网络音频重建
+  evidence: abstract（初筛，未读全文）
+- statement: 1位到32位量化位宽扫描显示重建质量在16位处饱和。
+  confidence: reported
+  metrics:
+  - name: 饱和位宽
+    value: 16 bit
+    scope: 1–32位对称量化位宽扫描
+  evidence: abstract（初筛，未读全文）
+- statement: 该方法在与H.264、HEVC、MP3的对比中仍处于劣势，作者明确报告了不足之处。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 用SIREN网络将视频与音频联合存储为网络权重，经蒸馏、16位量化与无损编码实现2.61倍压缩，但质量仍落后传统编解码器。
+  abstract_zh: 该工作提出用单个SIREN网络将时空坐标映射为RGB值与音频幅度，把视频连同音轨一并编码为网络权重；网络含独立的音/视频初始化层、共享全连接隐层与三个输出分支，两个孪生音频分支的分歧用于估计并扣除残余噪声。过拟合的教师网络经响应式知识蒸馏压缩为更小的学生网络，随后做16位对称量化并用LZMA2无损编码。在6.08
+    MiB测试视频上，量化学生网络达到视频PSNR 28.72 dB、SSIM 0.75，音频PSNR 24.18 dB、对数谱距离10.69 dB；表示体积从9.05 MiB降至2.33 MiB，整体压缩比2.61。1至32位量化扫描显示重建质量在16位处饱和；作者与H.264、HEVC及MP3对比并坦承性能不及，另提供基于WebRTC的浏览器端训练-传输-解码原型。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 属核心域INR视频编码方向，但整体压缩比仅2.61且质量显著落后H.264/HEVC，贡献有限，初筛摘要即可。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 基于隐式神经表示的数据驱动视频编解码器
+relations:
+- type: same_topic
+  ref: paper:arxiv:2409.07414
+  note: 同为过拟合式神经视频表示（NeRV类）的压缩工作，均做蒸馏/量化缩减网络体积
+- type: same_topic
+  ref: paper:arxiv:2609.04273
+  note: 同属神经视频表示压缩（可扩展化）研究方向
+- type: same_topic
+  ref: paper:arxiv:2604.08329
+  note: 同为INR条件化视频压缩，面向低码率场景

@@ -1,0 +1,81 @@
+id: paper:arxiv:2107.13385
+type: paper
+title: A Complete End-To-End Open Source Toolchain for the Versatile Video Coding (VVC) Standard
+domain: video_image_coding
+research_lines:
+- traditional_codec_opt
+source:
+  channel: arxiv
+  external_id: 2107.13385v1
+  url: https://arxiv.org/abs/2107.13385
+  pdf_url: https://arxiv.org/pdf/2107.13385v1
+  venue: arXiv preprint
+time:
+  published: '2021-07-28'
+  collected: '2026-11-14'
+entities:
+- ref: codec:VVC
+  role: subject
+- ref: impl:VVenC
+  role: subject
+- ref: impl:VVdec
+  role: subject
+- ref: codec:HEVC
+  role: compared_against
+- ref: impl:FFmpeg
+  role: platform
+- ref: concept:DASH
+  role: uses
+- ref: org:Fraunhofer-HHI
+  role: affiliation
+claims:
+- statement: VVC（2020年7月定稿）在相同主观视频质量下相比其前代 HEVC 可实现约 50% 的码率降低。
+  confidence: reported
+  metrics:
+  - name: 码率降低
+    value: 50%
+    scope: VVC 对比 HEVC，相同主观质量
+  evidence: abstract（初筛，未读全文）
+- statement: 论文给出的开源软件组合（VVenC 编码 + VVdeC 解码 + GPAC/FFmpeg 封装 + DASH 传输）可在标准定稿一年后搭建完整的 VVC 端到端工具链，覆盖编码、封装、自适应流传输与播放全流程。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 针对两个应用场景提供了分步教程：VVC 文件编码加本地播放，以及基于 DASH 的自适应流媒体传输。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出 VVenC 快速编码库与 VVdeC 实时解码库，并结合 FFmpeg/GPAC 与 DASH 构成完整开源 VVC 端到端工具链。
+  abstract_zh: VVC 是 ITU-T 与 ISO/IEC 联合制定的最新国际视频编码标准，2020 年 7 月定稿，在相同主观质量下相比 HEVC 可降低约 50% 码率。论文介绍了一套开源软件包，在标准定稿仅一年后即可搭建完整的
+    VVC 端到端工具链，包括 Fraunhofer HHI 的快速高效编码库 VVenC 和实时解码库 VVdeC。通过实验性集成 GPAC 工具与 FFmpeg 媒体框架，支持将 VVenC 等编码的
+    VVC 码流封装为 MP4 并用 DASH 进行内容创建与流媒体传输。VVdeC 的集成使接收端可完成播放，论文还提供了“文件编码+播放”与“基于 DASH 的自适应流媒体”两个应用场景的逐步教程。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: VVC 核心开源编码器/解码器（VVenC/VVdeC）及端到端工具链的奠基性论文，属核心域且为生态枢纽。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 面向通用视频编码（VVC）标准的完整端到端开源工具链
+relations:
+- type: same_topic
+  ref: standard_proposal:jvet:m188-X0044
+  note: 同一团队在 JVET 上关于 VVenC/VVdeC 开源优化实现的更新报告
+- type: same_topic
+  ref: paper:arxiv:2606.20847
+  note: 基于本论文介绍的 VVenC 编码器做帧级 QP 自适应优化
+- type: same_topic
+  ref: paper:arxiv:2606.31084
+  note: 基于 VVenC 的 Merge/MVD 加速工作
+- type: same_topic
+  ref: paper:arxiv:2601.10607
+  note: 面向 VVC 自适应流传输（DASH/ABR）的优化，与本论文的流媒体场景衔接
+- type: same_topic
+  ref: paper:arxiv:2605.21526
+  note: VVC 编码器划分树搜索加速综述，与本论文的编码实现生态同域
+- type: same_topic
+  ref: repo_release:github:vvenc-v1.14.0
+  note: 本论文所述 VVenC 编码库的版本发布
+- type: same_topic
+  ref: repo_release:github:vvdec-v3.2.1
+  note: 本论文所述 VVdeC 解码库的版本发布

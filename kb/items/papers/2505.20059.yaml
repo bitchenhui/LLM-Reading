@@ -1,0 +1,53 @@
+id: paper:arxiv:2505.20059
+type: paper
+title: 'LPCM: Learning-based Predictive Coding for LiDAR Point Cloud Compression'
+domain: immersive_media
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2505.20059v1
+  url: https://arxiv.org/abs/2505.20059
+  pdf_url: https://arxiv.org/pdf/2505.20059v1
+  venue: arXiv preprint
+time:
+  published: '2025-05-26'
+  collected: '2026-11-14'
+entities:
+- ref: codec:G-PCC
+  role: subject
+- ref: concept:QP
+  role: uses
+- ref: org:MPEG
+  role: evaluated_on
+claims:
+- statement: LPCM 在高码率模式下采用轻量 LSTM 预测模块（LSTM-P）捕获不同坐标间的长期几何相关性以预测并压缩仰角；在几何相关性退化的低码率模式下引入变分半径压缩（VRC）模块直接压缩点半径。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 作者分析球坐标量化区别于笛卡尔坐标量化之后，提出基于差分进化（DE）的量化参数选择方法，声称可在不增加编码时间的情况下改善率失真性能。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在 SemanticKITTI 与 MPEG 指定的 Ford 数据集上，LPCM 的率失真性能优于 G-PCC 及其他基于学习的点云压缩方法。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出球坐标预测树+LSTM预测/变分半径压缩双模式的LPCM，在SemanticKITTI与Ford上率失真优于G-PCC。
+  abstract_zh: 针对激光雷达点云数据量巨大、现有学习方法未利用激光雷达固有角分辨率且忽略不同码率下几何相关性差异的问题，作者提出学习型预测编码方法 LPCM。LPCM 将点云转换到球面坐标系构建预测树：高码率模式下用轻量
+    LSTM 预测模块（LSTM-P）捕获不同坐标间的长期几何相关性以预测并压缩仰角；低码率模式下几何相关性退化，引入变分半径压缩（VRC）模块直接压缩点半径。作者分析了球坐标量化与笛卡尔坐标量化的差异，提出基于差分进化（DE）的量化参数选择方法，在不增加编码时间的前提下提升率失真性能。在
+    SemanticKITTI 与 MPEG 指定的 Ford 数据集上的实验表明，LPCM 优于 G-PCC 及其他基于学习的方法。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 面向激光雷达点云几何压缩的学习型预测编码方法，对标 MPEG G-PCC 标准并在 Ford/SemanticKITTI 上验证，属点云编码（沉浸式域），按收录基准仅给 summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: LPCM：面向激光雷达点云压缩的学习型预测编码
+relations:
+- type: same_topic
+  ref: paper:arxiv:2207.12554
+  note: 同为点云几何压缩研究（动态点云帧间几何编码），主题高度一致
+- type: same_topic
+  ref: paper:arxiv:2602.08613
+  note: 点云压缩标准（AVS PCC）综述对比，与本文对标 G-PCC 的点云压缩话题相关

@@ -1,0 +1,73 @@
+id: paper:arxiv:2307.06342
+type: paper
+title: 'ConvNeXt-ChARM: ConvNeXt-based Transform for Efficient Neural Image Compression'
+domain: video_image_coding
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2307.06342v1
+  url: https://arxiv.org/abs/2307.06342
+  pdf_url: https://arxiv.org/pdf/2307.06342v1
+  venue: arXiv preprint
+time:
+  published: '2023-07-12'
+  collected: '2026-11-14'
+entities:
+- ref: codec:VVC
+  role: subject
+- ref: impl:VTM
+  role: compared_against
+- ref: metric:BD-Rate
+  role: measured_by
+- ref: metric:PSNR
+  role: measured_by
+claims:
+- statement: ConvNeXt-ChARM 在四个常用数据集上相对 VVC 参考编码器 VTM-18.0 取得平均 BD-rate（PSNR）降低
+  confidence: reported
+  metrics:
+  - name: BD-Rate(PSNR)
+    value: -5.24%
+    scope: 四数据集平均，锚点 VTM-18.0
+  evidence: abstract（初筛，未读全文）
+- statement: ConvNeXt-ChARM 相对 SOTA 学习图像压缩方法 SwinT-ChARM 取得平均 BD-rate（PSNR）降低
+  confidence: reported
+  metrics:
+  - name: BD-Rate(PSNR)
+    value: -1.22%
+    scope: 四数据集平均，锚点 SwinT-ChARM
+  evidence: abstract（初筛，未读全文）
+- statement: 模型缩放实验验证了该方法的计算效率，ConvNeXt 相对 Swin Transformer 在参数量与解码耗时方面更具优势
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出 ConvNeXt 变换+通道自回归先验的神经图像压缩框架，PSNR 口径 BD-rate 较 VTM-18.0 平均降 5.24%
+  abstract_zh: 针对现有神经图像压缩（含注意力式变换编码）在非均匀纹理区域码率-保真度权衡不足、参数量与解码耗时偏高的问题，提出 ConvNeXt-ChARM 变换编码框架。该方法以新一代卷积网络
+    ConvNeXt 构建变换网络，并搭配计算高效的通道自回归先验（ChARM），从超先验与量化隐表示中同时捕获全局与局部上下文。框架可端到端优化，提取紧凑隐表示并重建更高质量图像。在四个常用数据集上，平均
+    BD-rate（PSNR）较 VVC 参考编码器 VTM-18.0 降低 5.24%，较 SOTA 学习图像压缩方法 SwinT-ChARM 降低 1.22%。此外通过模型缩放实验验证计算效率，并以客观与主观分析揭示
+    ConvNeXt 相对 Swin Transformer 的性能优势。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 核心域神经图像压缩：提出 ConvNeXt 变换编码框架，BD-rate 显著优于 VTM-18.0 与 SOTA 学习压缩方法，属值得深读的旗舰型工作
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: ConvNeXt-ChARM：基于 ConvNeXt 变换的高效神经图像压缩
+relations:
+- type: same_topic
+  ref: paper:arxiv:2603.10188
+  note: 同为学习图像压缩，均采用超先验+自回归熵模型路线
+- type: same_topic
+  ref: paper:arxiv:2603.06766
+  note: 同为学习图像压缩的熵建模/上下文建模改进工作
+- type: same_topic
+  ref: paper:arxiv:2606.00111
+  note: 同为学习图像压缩中的通道级注意力与熵建模设计
+- type: same_topic
+  ref: paper:arxiv:2610.22421
+  note: 同属端到端学习图像编码研究线
+- type: same_topic
+  ref: paper:arxiv:2605.13243
+  note: 同为面向复杂度效率的学习图像压缩架构研究

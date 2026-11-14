@@ -1,0 +1,85 @@
+id: paper:arxiv:2504.19119
+type: paper
+title: 'MLICv2: Enhanced Multi-Reference Entropy Modeling for Learned Image Compression'
+domain: video_image_coding
+research_lines:
+- learned_codec
+source:
+  channel: arxiv
+  external_id: 2504.19119v4
+  url: https://arxiv.org/abs/2504.19119
+  pdf_url: https://arxiv.org/pdf/2504.19119v4
+  venue: arXiv preprint
+time:
+  published: '2025-04-27'
+  collected: '2026-11-14'
+entities:
+- ref: codec:VVC
+  role: subject
+- ref: impl:VTM
+  role: compared_against
+- ref: concept:Hyperprior
+  role: uses
+- ref: dataset:Kodak
+  role: evaluated_on
+claims:
+- statement: MLICv2 相比 VTM-17.0 Intra 在 Kodak、Tecnick、CLIC Pro Val 上分别取得 16.54%、21.61%、16.05% 的 BD-rate
+    节省
+  confidence: reported
+  metrics:
+  - name: BD-rate 节省
+    value: 16.54%
+    scope: MLICv2 vs VTM-17.0 Intra，Kodak
+  - name: BD-rate 节省
+    value: 21.61%
+    scope: MLICv2 vs VTM-17.0 Intra，Tecnick
+  - name: BD-rate 节省
+    value: 16.05%
+    scope: MLICv2 vs VTM-17.0 Intra，CLIC Pro Val
+  evidence: abstract（初筛，未读全文）
+- statement: MLICv2+ 相比 VTM-17.0 Intra 在 Kodak、Tecnick、CLIC Pro Val 上分别取得 20.46%、24.35%、19.14% 的 BD-rate
+    节省
+  confidence: reported
+  metrics:
+  - name: BD-rate 节省
+    value: 20.46%
+    scope: MLICv2+ vs VTM-17.0 Intra，Kodak
+  - name: BD-rate 节省
+    value: 24.35%
+    scope: MLICv2+ vs VTM-17.0 Intra，Tecnick
+  - name: BD-rate 节省
+    value: 19.14%
+    scope: MLICv2+ vs VTM-17.0 Intra，CLIC Pro Val
+  evidence: abstract（初筛，未读全文）
+- statement: 受 MetaFormer 启发的轻量 token mixing 变换模块在不增加显著计算量的前提下缓解了高码率下的性能退化
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 超先验引导的全局相关预测使潜表示初始切片也能获得全局上下文，结合通道重加权模块动态强调信息量大的通道
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: MLIC 系列升级版通过 MetaFormer 式轻量变换、超先验引导全局相关预测与通道重加权，BD-rate 较 VTM-17.0 Intra 降低 16%-24%。
+  abstract_zh: 针对现有 MLIC 系列高码率性能退化、初始切片熵建模缺乏全局相关、缺少自适应通道重要性建模等局限，提出 MLICv2 与 MLICv2+。方法上引入受 MetaFormer
+    启发的轻量 token mixing 模块增强变换容量，提出超先验引导的全局相关预测以在潜表示初始切片中提取全局上下文，并辅以通道重加权模块动态突出信息量大的通道；进一步探索增强位置嵌入、引导选择性压缩以及随机
+    Gumbel 退火（SGA）的实例级优化。实验表明 MLICv2 与 MLICv2+ 相比 VTM-17.0 Intra 分别在 Kodak、Tecnick、CLIC Pro Val 上取得 16.54%/21.61%/16.05%
+    与 20.46%/24.35%/19.14% 的 BD-rate 节省，达到 SOTA。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 学习式图像压缩核心域工作，MLIC 系列升级版在多数据集上大幅超越 VTM-17.0 Intra，属重点追踪对象
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: MLICv2：面向学习式图像压缩的增强多参考熵建模
+relations:
+- type: same_topic
+  ref: paper:arxiv:2603.06766
+  note: 同为学习式图像压缩的熵建模改进（HiDE 分层字典熵模型）
+- type: same_topic
+  ref: paper:arxiv:2603.10188
+  note: 同为 LIC 且同样使用超先验的自回归残差压缩（ARCHE）
+- type: same_topic
+  ref: paper:arxiv:2606.00111
+  note: 同为 LIC 的熵建模与注意力增强工作（ChWDTA）

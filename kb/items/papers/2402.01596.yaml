@@ -1,0 +1,67 @@
+id: paper:arxiv:2402.01596
+type: paper
+title: Immersive Video Compression using Implicit Neural Representations
+domain: video_image_coding
+research_lines:
+- inr_representation
+source:
+  channel: arxiv
+  external_id: 2402.01596v2
+  url: https://arxiv.org/abs/2402.01596
+  pdf_url: https://arxiv.org/pdf/2402.01596v2
+  venue: arXiv preprint
+time:
+  published: '2024-02-02'
+  collected: '2026-11-14'
+entities:
+- ref: concept:INR
+  role: subject
+- ref: impl:HiNeRV
+  role: builds_on
+- ref: impl:VVenC
+  role: compared_against
+- ref: org:MPEG
+  role: evaluated_on
+claims:
+- statement: MV-HiNeRV是首个面向沉浸式（多视点）视频的INR编码器，通过为每个视点学习独立特征网格并跨视点共享网络参数，联合利用时空冗余与视点间冗余
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在MPEG MIV通用测试条件下压缩多视点纹理与深度序列时，MV-HiNeRV显著优于使用VVenC的MIV测试模型TMIV，最高编码增益达72.33%
+  confidence: reported
+  metrics:
+  - name: 编码增益（BD-rate节省）
+    value: 72.33%
+    scope: MPEG MIV通用测试条件，对比TMIV（内置VVenC）的最大增益，论文自报
+  evidence: abstract（初筛，未读全文）
+- statement: MV-HiNeRV的实现代码已公开发布，供后续开发与评估
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 将INR视频编码器HiNeRV扩展至多视点沉浸式视频，在MPEG MIV CTC下相对TMIV最高节省72.33%码率
+  abstract_zh: 该文提出MV-HiNeRV，首次将隐式神经表示（INR）视频编码器扩展到沉浸式（多视点）视频，是对单视点SOTA INR编码器HiNeRV的增强。方法上为每个视点学习一组独立特征网格，同时在所有视点间共享已学习的网络参数，从而同时利用多视点视频的时空冗余与视点间冗余。编解码器在MPEG沉浸式视频（MIV）通用测试条件下压缩多视点纹理与深度视频序列，并与使用VVenC的MIV测试模型TMIV对比。结果显示MV-HiNeRV相对TMIV取得高达72.33%的显著编码增益，实现已开源供进一步开发与评估。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 将SOTA INR视频编码器HiNeRV首次扩展至多视点沉浸式视频，并在MPEG MIV通用测试条件下相对TMIV取得高达72.33%的编码增益，属核心视频编码域的重要贡献
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 基于隐式神经表示的沉浸式视频压缩
+relations:
+- type: same_topic
+  ref: paper:arxiv:2604.08329
+  note: 同为INR条件化的视频压缩研究线（DiV-INR）
+- type: same_topic
+  ref: paper:arxiv:2605.27024
+  note: 同属NeRV/INR神经视频表示编码研究线（NeR-SC）
+- type: same_topic
+  ref: paper:arxiv:2606.28163
+  note: 同为神经视频表示压缩（NVRC++）
+- type: same_topic
+  ref: paper:arxiv:2607.15298
+  note: 同为基于隐式神经表示的数据驱动视频编解码器
+- type: same_topic
+  ref: paper:arxiv:2609.33969
+  note: 同为沉浸式/体积视频压缩，采用3DGS路线，可作对比参考

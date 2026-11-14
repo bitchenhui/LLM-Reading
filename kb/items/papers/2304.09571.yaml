@@ -1,0 +1,78 @@
+id: paper:arxiv:2304.09571
+type: paper
+title: 'LLIC: Large Receptive Field Transform Coding with Adaptive Weights for Learned Image Compression'
+domain: video_image_coding
+research_lines:
+- learned_codec
+source:
+  channel: arxiv
+  external_id: 2304.09571v9
+  url: https://arxiv.org/abs/2304.09571
+  pdf_url: https://arxiv.org/pdf/2304.09571v9
+  venue: arXiv preprint
+time:
+  published: '2023-04-19'
+  collected: '2026-11-14'
+entities:
+- ref: impl:TCM
+  role: subject
+- ref: impl:VTM
+  role: compared_against
+- ref: concept:EntropyModel
+  role: uses
+- ref: dataset:Kodak
+  role: evaluated_on
+- ref: metric:BD-Rate
+  role: measured_by
+claims:
+- statement: 对齐熵模型后，LLIC-STF在Kodak上相对VTM-17.0 Intra降低BD-Rate 9.49%。
+  confidence: reported
+  metrics:
+  - name: BD-Rate
+    value: -9.49%
+    scope: LLIC-STF，Kodak数据集，锚点VTM-17.0 Intra（熵模型对齐）
+  evidence: abstract（初筛，未读全文）
+- statement: LLIC-ELIC在Kodak上相对VTM-17.0 Intra降低BD-Rate 9.47%。
+  confidence: reported
+  metrics:
+  - name: BD-Rate
+    value: -9.47%
+    scope: LLIC-ELIC，Kodak数据集，锚点VTM-17.0 Intra（熵模型对齐）
+  evidence: abstract（初筛，未读全文）
+- statement: LLIC-TCM在Kodak上相对VTM-17.0 Intra降低BD-Rate 10.94%。
+  confidence: reported
+  metrics:
+  - name: BD-Rate
+    value: -10.94%
+    scope: LLIC-TCM，Kodak数据集，锚点VTM-17.0 Intra（熵模型对齐）
+  evidence: abstract（初筛，未读全文）
+- statement: LLIC在不依赖重型非局部注意力的情况下实现大感受野，取得SOTA压缩性能并保持适中复杂度，性能-复杂度权衡优于现有变换方法。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出大核深度卷积加自适应权重生成的变换编码LLIC，在Kodak上较VTM-17.0 Intra节省约9.5-10.9%码率。
+  abstract_zh: 针对现有变换编码有效感受野不足的问题，论文首次在学习图像压缩中引入少量大核深度卷积，在不显著增加复杂度的前提下扩大感受野以去除更多冗余、辅助纹理合成。为适应图像多样性，提出自条件生成权重的自适应机制，并配合非线性嵌入与门控实现轻量逐点交互；同时引入自条件的通道级自适应比特分配策略增强通道间动态交互。研究还探索了释放大核潜力的精化训练方法，并通过统一对齐熵模型构建LLIC-STF、LLIC-ELIC、LLIC-TCM三个模型与既有变换方法公平对比。实验显示三个模型在Kodak上相对VTM-17.0
+    Intra分别降低BD-Rate 9.49%、9.47%、10.94%，取得SOTA性能与更优的性能-复杂度权衡。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 学习图像压缩核心域论文，首次在图像压缩中引入大核深度卷积变换并给出对齐熵模型后的VTM对比结果，属高价值工作。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: LLIC：面向学习图像压缩的大感受野自适应权重变换编码
+relations:
+- type: same_topic
+  ref: paper:arxiv:2603.06766
+  note: 同为学习图像压缩变换/熵建模工作（HiDE）
+- type: same_topic
+  ref: paper:arxiv:2603.10188
+  note: 同为学习图像压缩变换与超先验残差建模（ARCHE）
+- type: same_topic
+  ref: paper:arxiv:2606.00111
+  note: 同为学习图像压缩变换编码与熵模型研究（ChWDTA）
+- type: same_topic
+  ref: paper:arxiv:2605.13243
+  note: 同为低复杂度学习图像压缩方向（Spatial Competition）

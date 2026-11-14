@@ -1,0 +1,63 @@
+id: paper:arxiv:2307.15421
+type: paper
+title: 'MLIC++: Linear Complexity Multi-Reference Entropy Modeling for Learned Image Compression'
+domain: video_image_coding
+research_lines:
+- learned_codec
+source:
+  channel: arxiv
+  external_id: 2307.15421v11
+  url: https://arxiv.org/abs/2307.15421
+  pdf_url: https://arxiv.org/pdf/2307.15421v11
+  venue: arXiv preprint
+time:
+  published: '2023-07-28'
+  collected: '2026-11-14'
+entities:
+- ref: concept:EntropyModel
+  role: subject
+- ref: dataset:Kodak
+  role: evaluated_on
+- ref: impl:VTM
+  role: compared_against
+- ref: metric:BD-Rate
+  role: measured_by
+- ref: metric:PSNR
+  role: measured_by
+claims:
+- statement: 以MEM++为熵模型的MLIC++在Kodak数据集上达到SOTA性能，PSNR口径下相对VTM-17.0将BD-rate降低13.39%。
+  confidence: reported
+  metrics:
+  - name: BD-Rate
+    value: 13.39%
+    scope: Kodak数据集、PSNR口径、相对VTM-17.0的降幅
+  evidence: abstract（初筛，未读全文）
+- statement: MEM++通过切片间参考、移位窗口棋盘注意力与softmax分解的线性复杂度注意力，在不牺牲性能的前提下以线性复杂度统一捕获通道、局部与全局上下文。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: MLIC++的计算复杂度与内存消耗随分辨率线性增长，适合高分辨率图像编码。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出线性复杂度多参考熵模型MEM++的MLIC++，Kodak上PSNR较VTM-17.0 BD-rate降13.39%
+  abstract_zh: 学习型图像压缩中的潜在表示包含通道间、局部空间与全局空间三类相关性，而现有全局上下文模块计算复杂度高，难以在单一熵模型中高效捕获。论文提出线性复杂度多参考熵模型MEM++：将潜在表示划分为多个切片，以先前已压缩切片作为通道上下文，并引入基于移位窗口的棋盘注意力模块捕获局部上下文；全局上下文则通过分解softmax运算实现线性复杂度注意力，从先前解码切片隐式计算注意力图。基于MEM++构建的MLIC++在Kodak数据集上达到当前最优，PSNR口径下相对VTM-17.0将BD-rate降低13.39%。其计算与内存消耗随分辨率线性增长，非常适合高分辨率图像编码，代码与预训练模型已开源。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 核心域学习型图像压缩的熵模型重要工作，Kodak上PSNR口径较VTM-17.0 BD-rate降低13.39%达SOTA且代码开源，给予深度阅读。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: MLIC++：面向学习型图像压缩的线性复杂度多参考熵模型
+relations:
+- type: same_topic
+  ref: paper:arxiv:2504.19119
+  note: MLICv2是该多参考熵建模（MEM）系列方法的增强后续版本，同属MLIC方法族
+- type: same_topic
+  ref: paper:arxiv:2603.06766
+  note: 同为学习型图像压缩中的熵建模改进工作（HiDE层次化字典熵模型）
+- type: same_topic
+  ref: paper:arxiv:2306.14287
+  note: 同为面向学习图像压缩的高效/线性复杂度注意力上下文建模（Efficient Contextformer）

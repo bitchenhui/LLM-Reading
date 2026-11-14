@@ -1,0 +1,69 @@
+id: paper:arxiv:2309.05846
+type: paper
+title: Designs and Implementations in Neural Network-based Video Coding
+domain: video_image_coding
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2309.05846v2
+  url: https://arxiv.org/abs/2309.05846
+  pdf_url: https://arxiv.org/pdf/2309.05846v2
+  venue: arXiv preprint
+time:
+  published: '2023-09-11'
+  collected: '2026-11-14'
+entities:
+- ref: org:JVET
+  role: subject
+- ref: impl:VTM
+  role: compared_against
+- ref: metric:BD-Rate
+  role: measured_by
+claims:
+- statement: JVET NNVC探索中的神经网络帧内预测与神经网络环路滤波两项技术经多轮会议评估后被采纳进NNVC参考软件（NNVC-4.0）。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: NNVC-4.0的NN编码工具相对VTM-11.0_nnvc在随机接入配置下取得Y/Cb/Cr平均BD-rate降低11.94%/21.86%/22.59%。
+  confidence: reported
+  metrics:
+  - name: BD-rate降低
+    value: 11.94%/21.86%/22.59%
+    scope: Y/Cb/Cr，随机接入配置，锚点VTM-11.0_nnvc
+  evidence: abstract（初筛，未读全文）
+- statement: 低延迟配置下NNVC-4.0取得Y/Cb/Cr平均BD-rate降低9.18%/19.76%/20.92%。
+  confidence: reported
+  metrics:
+  - name: BD-rate降低
+    value: 9.18%/19.76%/20.92%
+    scope: Y/Cb/Cr，低延迟配置，锚点VTM-11.0_nnvc
+  evidence: abstract（初筛，未读全文）
+- statement: 全帧内配置下NNVC-4.0取得Y/Cb/Cr平均BD-rate降低10.63%/21.56%/23.02%。
+  confidence: reported
+  metrics:
+  - name: BD-rate降低
+    value: 10.63%/21.56%/23.02%
+    scope: Y/Cb/Cr，全帧内配置，锚点VTM-11.0_nnvc
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 总结JVET NNVC中NN帧内预测与NN环路滤波的设计实现，NNVC-4.0较VTM-11.0_nnvc平均BD-rate节省约9%–23%。
+  abstract_zh: 本文系统阐述JVET在'基于神经网络的视频编码'（NNVC）框架下的探索工作，采用将神经网络编码工具嵌入经典视频压缩框架的技术路线。论文重点讨论两大技术：神经网络帧内预测与神经网络环路滤波，二者经多轮JVET会议评估最终被采纳进NNVC参考软件。在NNVC上的大量实验表明，相比VTM-11.0_nnvc，NNVC-4.0中提出的NN编码工具在随机接入、低延迟与全帧内三种配置下均取得显著的Y/Cb/Cr平均BD-rate降低。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: JVET NNVC官方探索的系统总结，NN帧内预测与NN环路滤波两项工具已采纳进NNVC参考软件，属视频编码核心域关键文献。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 基于神经网络的视频编码：设计与实现
+relations:
+- type: same_topic
+  ref: standard_proposal:jvet:m188-X0011
+  note: 该文总结的正是JVET AHG11（Neural network-based video coding）框架下的NNVC工作
+- type: same_topic
+  ref: paper:arxiv:2407.10926
+  note: 同属神经网络环路滤波（NN-based in-loop filtering）研究方向
+- type: same_topic
+  ref: paper:arxiv:2609.37328
+  note: 同为面向VVC的神经网络后处理/增强滤波工具

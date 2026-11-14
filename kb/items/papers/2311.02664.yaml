@@ -1,0 +1,53 @@
+id: paper:arxiv:2311.02664
+type: paper
+title: Enhanced adaptive cross-layer scheme for low latency HEVC streaming over Vehicular Ad-hoc Networks
+  (VANETs)
+domain: streaming_delivery
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2311.02664v1
+  url: https://arxiv.org/abs/2311.02664
+  pdf_url: https://arxiv.org/pdf/2311.02664v1
+  venue: arXiv preprint
+time:
+  published: '2023-11-05'
+  collected: '2026-11-14'
+entities:
+- ref: codec:HEVC
+  role: subject
+- ref: concept:QoE
+  role: measured_by
+claims:
+- statement: 提出的跨层机制依据HEVC编码时域预测结构、帧重要性及网络流量负载，为每个视频包在MAC层动态选择最合适的接入类别（AC）队列。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在多种低时延视频通信场景的仿真中，相比802.11p采用的EDCA，该机制在接收端视频质量和端到端时延两方面均显著优于基线。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 论文通过QoS与QoE双重评估验证了所提跨层机制的有效性。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 为HEVC视频包按预测结构、帧重要性与负载分配MAC队列，提升VANET低时延传输质量。
+  abstract_zh: 针对VANET信道多变、带宽受限条件下的HEVC视频低时延传输难题，论文提出一种低复杂度跨层机制：结合视频编码的时域预测结构、帧重要性及网络流量负载状态，为每个视频包在MAC层选择最合适的接入类别（AC）队列。仿真结果表明，在多种低时延视频通信场景下，相比802.11p标准采用的EDCA，该机制在接收端视频质量与端到端时延上均取得显著改善。作者还通过QoS与QoE双重评估进一步验证了方法的有效性。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 核心贡献是VANET上HEVC低时延视频传输的跨层MAC调度机制，属流媒体传输而非编码技术本身，按非核心域默认summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 面向车载自组网（VANET）低时延HEVC流媒体的增强自适应跨层机制
+relations:
+- type: same_topic
+  ref: paper:arxiv:2609.16279
+  note: 同属面向低时延/易错链路的视频传输质量保障主题
+- type: same_topic
+  ref: paper:arxiv:2306.01194
+  note: 均涉及视频传输的QoE评估
+- type: same_topic
+  ref: paper:arxiv:2609.09490
+  note: 同为移动网络中QoE感知的视频传输优化方案

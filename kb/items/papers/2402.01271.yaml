@@ -1,0 +1,66 @@
+id: paper:arxiv:2402.01271
+type: paper
+title: An Intra-BRNN and GB-RVQ Based END-TO-END Neural Audio Codec
+domain: audio_coding
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2402.01271v1
+  url: https://arxiv.org/abs/2402.01271
+  pdf_url: https://arxiv.org/pdf/2402.01271v1
+  venue: arXiv preprint
+time:
+  published: '2024-02-02'
+  collected: '2026-11-14'
+entities:
+- ref: concept:NeuralAudioCodec
+  role: subject
+- ref: codec:Opus
+  role: compared_against
+claims:
+- statement: CBRC在3kbps码率下的重建质量优于12kbps的Opus
+  confidence: reported
+  metrics:
+  - name: CBRC码率
+    value: 3kbps
+    scope: CBRC工作码率
+  - name: Opus对比码率
+    value: 12kbps
+    scope: 对比锚点Opus工作码率
+  evidence: abstract（初筛，未读全文）
+- statement: CBRC每20ms编码一次音频且无额外算法时延，适合实时通信部署
+  confidence: reported
+  metrics:
+  - name: 编码帧间隔
+    value: 20ms
+    scope: 每帧编码周期，声称无附加延迟
+  evidence: abstract（初筛，未读全文）
+- statement: 1D-CNN与Intra-BRNN交错结构可更高效利用帧内相关性，GB-RVQ分组束搜索残差矢量量化可降低量化噪声
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出端到端神经语音编解码器CBRC，用Intra-BRNN与GB-RVQ提升低码率质量，3kbps优于12kbps的Opus。
+  abstract_zh: 神经网络虽已被证明能在低比特率下有效完成语音编码，但帧内相关性利用不足与量化器误差会明显降低重建音频质量。为此，作者提出端到端神经语音编解码器CBRC，采用1D-CNN与Intra-BRNN交错结构以更高效地挖掘帧内相关性，并引入分组束搜索残差矢量量化器GB-RVQ来降低量化噪声。CBRC每20ms编码一次音频且不引入额外时延，适用于实时通信场景。实验结果显示，CBRC在3kbps码率下的表现优于12kbps的Opus。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 面向实时通信的低码率神经语音编解码器，属于音频编码域，按规则不给deep_read仅做摘要收录。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 基于帧内双向循环神经网络与分组束搜索残差矢量量化的端到端神经音频编解码器
+relations:
+- type: same_topic
+  ref: paper:arxiv:2107.03312
+  note: 同为端到端神经音频编解码器，SoundStream是该方向的代表性工作
+- type: same_topic
+  ref: paper:arxiv:2207.08363
+  note: 同属神经语音编码研究线
+- type: same_topic
+  ref: paper:arxiv:2609.09866
+  note: 均采用残差矢量量化（RVQ）进行低码率音频编码
+- type: same_topic
+  ref: paper:arxiv:2608.08432
+  note: 同属神经语音编解码器生态，涉及码率分配与部署

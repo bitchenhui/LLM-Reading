@@ -1,0 +1,64 @@
+id: paper:arxiv:2411.06810
+type: paper
+title: 'JPEG AI Image Compression Visual Artifacts: Detection Methods and Dataset'
+domain: video_image_coding
+research_lines:
+- traditional_codec_opt
+source:
+  channel: arxiv
+  external_id: 2411.06810v1
+  url: https://arxiv.org/abs/2411.06810
+  pdf_url: https://arxiv.org/pdf/2411.06810v1
+  venue: arXiv preprint
+time:
+  published: '2024-11-11'
+  collected: '2026-11-14'
+entities:
+- ref: codec:HEVC
+  role: subject
+- ref: impl:HM
+  role: uses
+claims:
+- statement: 提出可分别检测纹理/边界退化、颜色变化、文字损坏三类神经压缩伪影的方法，并支持受影响区域定位与伪影强度量化
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 以 HM-18.0（H.265 参考软件）为传统编码基准，仅采集神经网络压缩失真而传统编码器在相近码率下可正常恢复的区域作为伪影样本
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 处理 Open Images 数据集约 35 万张图像，构建包含 46,440 条伪影的公开数据集，经众包主观评估验证
+  confidence: reported
+  metrics:
+  - name: 处理图像数
+    value: 350,000
+    scope: Open Images 独特图像，多种压缩质量参数
+  - name: 伪影样本数
+    value: 46,440
+    scope: JPEG AI 验证模型 vs HM-18.0 伪影数据集条目
+  evidence: abstract（初筛，未读全文）
+- statement: 方法源代码与数据集公开发布，可用于神经图像编解码器测试、缺陷定位与性能改进
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出三类神经图像压缩伪影的检测、定位与量化方法，基于HM-18.0构建46,440条经主观验证的JPEG AI伪影数据集。
+  abstract_zh: 论文针对学习型图像压缩可能引入的视觉伪影，提出分别检测纹理与边界退化、颜色变化、文字损坏三类失真的方法，可定位受影响区域并量化伪影强度。判定口径为：仅统计神经网络压缩造成失真、而传统编解码器在相近码率下能正常恢复的区域。作者将方法应用于
+    JPEG AI 验证模型，以 H.265 参考软件 HM-18.0 为对比基准，处理 Open Images 数据集约 35 万张图像的多种压缩质量版本，构建了 46,440 条伪影样本的数据集，并经众包主观评估验证。方法源代码与数据集均已开源，可用于测试神经图像编解码器、定位缺陷并提升其性能。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 核心编码域：针对 JPEG AI 神经图像压缩提出伪影检测方法，以 HEVC 参考软件 HM-18.0 为对比锚点构建大规模经主观验证的公开数据集，方法与数据可直接复用于神经编解码器评测。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: JPEG AI 图像压缩视觉伪影：检测方法与数据集
+relations:
+- type: same_topic
+  ref: paper:arxiv:2606.23545
+  note: 同属学习型图像压缩模型评测框架方向
+- type: same_topic
+  ref: paper:arxiv:2611.10000
+  note: 同属神经图像压缩基准测试与伪影诊断方向
+- type: same_topic
+  ref: paper:arxiv:2409.08481
+  note: 同属图像/视频编码测试数据集与基准构建方向

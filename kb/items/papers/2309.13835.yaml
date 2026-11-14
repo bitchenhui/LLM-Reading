@@ -1,0 +1,52 @@
+id: paper:arxiv:2309.13835
+type: paper
+title: 'IBVC: Interpolation-driven B-frame Video Compression'
+domain: video_image_coding
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2309.13835v2
+  url: https://arxiv.org/abs/2309.13835
+  pdf_url: https://arxiv.org/pdf/2309.13835v2
+  venue: arXiv preprint
+time:
+  published: '2023-09-25'
+  collected: '2026-11-14'
+entities:
+- ref: codec:VVC
+  role: subject
+- ref: impl:VTM
+  role: compared_against
+claims:
+- statement: IBVC仅由视频帧插值与伪影削减压缩两类操作构成，采用基于插值的免码率MEMC，避免光流量化及附加压缩失真。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 残差引导掩码编码器利用插值多尺度依赖自适应选择有意义的上下文，以降低重复码率消耗；条件时空解码器替代MEMC编码以消除位置误差与伪影。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在B帧编码任务上，IBVC相比相关最先进学习方法取得显著提升，且相比H.266（VTM）随机接入（RA）配置可节省码率。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出插值驱动的学习型B帧压缩IBVC，以免码率插值式MEMC替代光流编码，码率优于H.266/VTM随机接入。
+  abstract_zh: 针对现有学习型B帧压缩直接沿用P帧编解码器导致量化运动不准、运动补偿低效的问题，提出仅含视频帧插值与伪影削减压缩两大操作的IBVC。该方法基于插值实现免码率的运动估计与补偿（MEMC），规避光流量化及附加压缩失真；并部署残差引导掩码编码器，借助插值多尺度依赖自适应筛选有效上下文，降低重复码率消耗。同时提出条件时空解码器替代MEMC编码以消除位置误差与伪影。B帧编码实验表明IBVC显著优于相关SOTA方法，且相比H.266（VTM）随机接入（RA）配置可节省码率，代码将开源。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 核心域学习型B帧视频压缩论文，宣称B帧编码超越相关SOTA且码率节省优于H.266/VTM随机接入配置，值得深读。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: IBVC：插值驱动的B帧视频压缩
+relations:
+- type: same_topic
+  ref: paper:arxiv:2304.02690
+  note: 同为学习型B帧视频压缩，探索免显式运动编码/插值驱动的层次化B帧编码路线
+- type: same_topic
+  ref: paper:arxiv:2510.12479
+  note: 同为条件残差式学习视频编码，以时序预测机制替代显式运动编码
+- type: same_topic
+  ref: paper:arxiv:2307.12864
+  note: 条件帧间残差编码的瓶颈问题研究，与IBVC条件时空解码器思路相关

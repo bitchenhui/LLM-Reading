@@ -1,0 +1,85 @@
+id: paper:arxiv:2505.16177
+type: paper
+title: Generative Latent Coding for Ultra-Low Bitrate Image and Video Compression
+domain: video_image_coding
+research_lines:
+- generative_compression
+source:
+  channel: arxiv
+  external_id: 2505.16177v1
+  url: https://arxiv.org/abs/2505.16177
+  pdf_url: https://arxiv.org/pdf/2505.16177v1
+  venue: arXiv preprint
+time:
+  published: '2025-05-22'
+  collected: '2026-11-14'
+entities:
+- ref: impl:GLC-Video
+  role: subject
+- ref: metric:DISTS
+  role: measured_by
+- ref: metric:FID
+  role: measured_by
+claims:
+- statement: GLC-image在CLIC 2020测试集上实现低于0.04 bpp的码率，在与MS-ILLM达到相同FID的情况下码率减少45%。
+  confidence: reported
+  metrics:
+  - name: bpp
+    value: <0.04
+    scope: GLC-image，CLIC 2020测试集
+  - name: 码率节省
+    value: 45%
+    scope: 同等FID下相对此前SOTA模型MS-ILLM，CLIC 2020测试集
+  - name: FID
+    value: 与MS-ILLM持平
+    scope: CLIC 2020测试集，超低码率（<0.04 bpp）区间
+  evidence: abstract（初筛，未读全文）
+- statement: GLC-Video在DISTS感知指标上相对PLVC实现65.3%的码率节省，在超低码率下保持高视觉质量。
+  confidence: reported
+  metrics:
+  - name: 码率节省(DISTS)
+    value: 65.3%
+    scope: GLC-Video相对PLVC，以DISTS为准的视频压缩对比
+  evidence: abstract（初筛，未读全文）
+- statement: 相比像素空间编码，生成式VQ-VAE潜空间更稀疏、语义更丰富、与人眼感知更对齐，并通过引入空间/时空类别超先验模块和码预测损失进一步提升超低码率下的真实感与保真度。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出在VQ-VAE潜空间做变换编码的GLC模型，超低码率下兼顾高真实感与高保真度的图像视频压缩。
+  abstract_zh: 现有图像/视频压缩多在像素空间进行变换编码，像素失真与人眼感知不对齐，超低码率下难以兼顾高真实感与高保真度。本文提出生成式潜空间编码（GLC），在生成式VQ-VAE的潜空间中执行变换编码，该潜空间更稀疏、语义更丰富且与人眼感知更对齐。GLC-image引入空间类别超先验模块，GLC-Video引入时空类别超先验模块，并提出基于码预测的损失函数以增强语义一致性。实验表明，GLC-image在CLIC
+    2020测试集上以低于0.04 bpp的码率达到与此前SOTA模型MS-ILLM相同的FID且码率减少45%；GLC-Video在DISTS指标上相对PLVC节省65.3%码率。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 核心域重要工作：提出在生成式VQ-VAE潜空间做变换编码的GLC模型，实现超低码率图像与视频压缩，方法创新与实验结果均具代表性。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 面向超低码率图像与视频压缩的生成式潜空间编码
+relations:
+- type: same_topic
+  ref: paper:arxiv:2607.28144
+  note: 同为生成式超低码率视频编码（ReGenVC实时生成式视频编码）
+- type: same_topic
+  ref: paper:arxiv:2609.34725
+  note: 同为利用生成先验的视频压缩（Gen2-VC）
+- type: same_topic
+  ref: paper:arxiv:2607.23366
+  note: 同为层级离散VQ潜空间视频压缩的感知质量建模
+- type: same_topic
+  ref: paper:arxiv:2604.08329
+  note: 同为超低码率视频压缩方向（DiV-INR扩散+INR条件）
+- type: same_topic
+  ref: paper:arxiv:2607.22772
+  note: 同为生成式视频压缩（自适应得分蒸馏）
+- type: same_topic
+  ref: paper:arxiv:2503.19604
+  note: 同为生成式隐式视频压缩（GIViC）
+- type: same_topic
+  ref: paper:arxiv:2601.10373
+  note: 同为低码率图像压缩的生成先验方向
+- type: same_topic
+  ref: paper:arxiv:2606.21030
+  note: 同为生成模型与图像编解码潜空间结合（Gen2-IC）

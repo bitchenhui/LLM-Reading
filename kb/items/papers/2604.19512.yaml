@@ -1,0 +1,66 @@
+id: paper:arxiv:2604.19512
+type: paper
+title: Defining Robust Ultrasound Quality Metrics via an Ultrasound Foundation Model
+domain: quality_assessment
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2604.19512v2
+  url: https://arxiv.org/abs/2604.19512
+  pdf_url: https://arxiv.org/pdf/2604.19512v2
+  venue: arXiv preprint
+time:
+  published: '2026-04-21'
+  collected: '2026-11-14'
+entities:
+- ref: concept:IQA
+  role: subject
+- ref: metric:PSNR
+  role: compared_against
+- ref: metric:LPIPS
+  role: compared_against
+- ref: concept:SuperResolution
+  role: evaluated_on
+claims:
+- statement: TinyUSFM-uLPIPS与分割任务语义损伤（Dice分数下降）的校准优于VGG-LPIPS等基线指标。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 基于所提指标体系，专家（超声医师）偏好预测准确率从47.2%提升至72.8%。
+  confidence: reported
+  metrics:
+  - name: 专家偏好预测准确率
+    value: 72.8%
+    scope: 提出指标体系 vs 基线47.2%
+  evidence: abstract（初筛，未读全文）
+- statement: TinyUSFM-NRQ在无真值图像条件下提供可靠质量分数，且敏感性与PSNR保持一致。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 所提指标在跨解剖部位与域偏移数据上保持稳定评分尺度和一致的严重度排序。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 所提指标指导生成的超分辨率重建更受超声医师偏好。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 基于超声基础模型TinyUSFM提出全参考uLPIPS与无参考NRQ两项质量指标，使评分对齐诊断效用与专家偏好。
+  abstract_zh: 论文针对超声重建中PSNR与VGG-LPIPS等通用指标无法反映声学成像物理特性与诊断效用的问题，基于TinyUSFM基础模型构建评估框架，提出两个指标：基于多层token关系的全参考感知距离TinyUSFM-uLPIPS，以及利用干净流形建模与最差区域聚合的可部署无参考质量分数TinyUSFM-NRQ。实验显示TinyUSFM-uLPIPS与分割任务Dice分数下降的校准优于VGG类指标，并在跨器官与域偏移数据上保持稳定评分尺度与严重度排序。TinyUSFM-NRQ无需真值图像即与PSNR保持一致的敏感性。综合评估中，专家偏好预测准确率从47.2%提升至72.8%，且由此指导的超分重建更受超声医师青睐。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 属质量评估域的医学超声IQA/无参考质量研究，方法学与PSNR/LPIPS/超分评估相通，但非核心编码域，仅初筛收录。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 基于超声基础模型定义鲁棒的超声图像质量指标
+relations:
+- type: same_topic
+  ref: paper:arxiv:2611.08754
+  note: 同为无参考医学图像（低剂量CT）质量评估研究
+- type: same_topic
+  ref: paper:arxiv:2608.21180
+  note: 同为面向临床可用性的医学图像质量评估
+- type: same_topic
+  ref: paper:arxiv:2608.08508
+  note: 同涉及超分辨率与质量评估的联合研究

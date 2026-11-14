@@ -1,0 +1,55 @@
+id: paper:arxiv:2507.00623
+type: paper
+title: 'Remote Rendering for Virtual Reality: performance comparison of multimedia frameworks and protocols'
+domain: streaming_delivery
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2507.00623v1
+  url: https://arxiv.org/abs/2507.00623
+  pdf_url: https://arxiv.org/pdf/2507.00623v1
+  venue: arXiv preprint
+time:
+  published: '2025-07-01'
+  collected: '2026-11-14'
+entities:
+- ref: impl:FFmpeg
+  role: subject
+- ref: concept:DASH
+  role: uses
+- ref: concept:WebRTC
+  role: uses
+- ref: concept:QUIC
+  role: uses
+claims:
+- statement: 将 GStreamer 与 FFmpeg 两大主流多媒体框架与渲染引擎集成，构建了可复用的 XR 远程渲染测试床
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 系统在 WiFi 与 5G 两种接入网络下，分别以 WebRTC、DASH 及基于 QUIC 的协议交付渲染画面并对比性能
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 基于 QUIC 的新兴流媒体协议相对 WebRTC 与 DASH 具备连接迁移、流复用与多路径传输等潜在优势
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 集成 GStreamer/FFmpeg 与渲染引擎构建 XR 远程渲染测试床，在 WiFi/5G 下对比 WebRTC、DASH 与 QUIC 类协议性能。
+  abstract_zh: XR 应用日益复杂，轻量终端缺乏足够算力与带宽，远程渲染通过将渲染任务卸载到配备强大 GPU 的远程节点、再把画面流送回终端来缓解该问题。该工作将两大主流多媒体框架 GStreamer
+    与 FFmpeg 与渲染引擎集成为远程渲染器（Remote Renderer）。系统经 WiFi 或 5G 网络分别以 WebRTC（附带交互数据通道）、DASH（更利于扩展）以及新兴的基于 QUIC
+    的协议向终端交付渲染内容，并对比各框架-协议组合的性能。作者称该方案构成一个超越现有水平的测试床，可用于 XR 领域的前沿研究。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: XR 远程渲染的流媒体框架与协议（WebRTC/DASH/QUIC）性能对比测试床，属流媒体与传输域而非核心编码域，按基准给 summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 面向虚拟现实的远程渲染：多媒体框架与协议的性能对比
+relations:
+- type: same_topic
+  ref: paper:arxiv:2608.06102
+  note: 同属基于 QUIC 的沉浸式媒体流送研究，可对照 QUIC 多路径/复用方案在沉浸场景下的表现
+- type: same_topic
+  ref: paper:arxiv:2610.13698
+  note: 云端游戏/远程渲染画面经自适应码率流送至终端，与本远程渲染串流场景高度相关

@@ -1,0 +1,66 @@
+id: paper:arxiv:2306.01194
+type: paper
+title: Estimating WebRTC Video QoE Metrics Without Using Application Headers
+domain: streaming_delivery
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2306.01194v5
+  url: https://arxiv.org/abs/2306.01194
+  pdf_url: https://arxiv.org/pdf/2306.01194v5
+  venue: arXiv preprint
+time:
+  published: '2023-06-01'
+  collected: '2026-11-14'
+entities:
+- ref: concept:WebRTC
+  role: subject
+- ref: concept:QoE
+  role: subject
+- ref: metric:FPS
+  role: measured_by
+- ref: org:Microsoft
+  role: evaluated_on
+claims:
+- statement: 仅使用IP/UDP头（不依赖应用层RTP头）的机器学习方法，可对WebRTC视频会议的帧率、分辨率等关键QoE指标实现逐秒估计，精度与基于RTP头的方法相当。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在真实网络数据中，FPS估计误差在2 FPS以内的秒级区间占比达83.05%，仅比使用应用层RTP头的基线低1.76个百分点。
+  confidence: reported
+  metrics:
+  - name: FPS估计误差≤2 FPS的秒区间占比
+    value: 83.05%
+    scope: 15个家庭真实网络数据
+  - name: 相对RTP头方法的精度差距
+    value: 1.76%
+    scope: 真实网络数据
+  evidence: abstract（初筛，未读全文）
+- statement: 评估覆盖Google Meet、Microsoft Teams、Cisco Webex三个WebRTC应用，使用实验室受控条件与真实家庭网络共54,696秒VCA数据。
+  confidence: reported
+  metrics:
+  - name: 评估数据时长
+    value: 54,696秒
+    scope: 受控实验室+15个家庭真实网络
+  - name: 真实网络采集家庭数
+    value: '15'
+    scope: 真实世界网络数据
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 仅凭IP/UDP头与流量统计，用机器学习逐秒估计WebRTC视频会议的帧率与分辨率等QoE指标，精度接近基于RTP头的方法。
+  abstract_zh: 视频会议应用（VCA）的端用户QoE对网络运营商至关重要，但运营商通常无法访问客户端，而传统被动测量依赖应用层RTP头；Zoom等自定义RTP或遗留测量系统又使RTP头常常不可得。该文提出一种仅利用IP/UDP头的方法，将流统计特征（如吞吐量）与基于VCA视频帧分片机制推导的特征相结合，用机器学习逐秒估计帧率、分辨率等关键QoE指标。在Google
+    Meet、Microsoft Teams、Cisco Webex三个WebRTC应用上，使用实验室受控条件与15个家庭真实网络共54,696秒数据评估。结果显示仅用IP/UDP数据即可达到与RTP头方法相当的精度：真实网络数据中83.05%的秒级区间FPS估计误差在2
+    FPS内，仅比使用应用层RTP头低1.76%。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: WebRTC视频会议QoE的网络侧被动估计，属流媒体传输与QoE监测范畴，非核心编码域，按基准给summary_only
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 不使用应用层报头估计 WebRTC 视频 QoE 指标
+relations:
+- type: same_topic
+  ref: paper:arxiv:2609.09490
+  note: 均围绕商用视频应用的QoE测量/估计：一篇面向蜂窝网络的QoE感知码率自适应，本篇面向WebRTC视频会议的网络侧被动QoE估计

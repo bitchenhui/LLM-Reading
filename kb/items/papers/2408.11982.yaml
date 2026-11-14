@@ -1,0 +1,82 @@
+id: paper:arxiv:2408.11982
+type: paper
+title: 'AIM 2024 Challenge on Compressed Video Quality Assessment: Methods and Results'
+domain: quality_assessment
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2408.11982v3
+  url: https://arxiv.org/abs/2408.11982
+  pdf_url: https://arxiv.org/pdf/2408.11982v3
+  venue: arXiv preprint
+time:
+  published: '2024-08-21'
+  collected: '2026-11-14'
+entities:
+- ref: concept:IQA
+  role: subject
+- ref: codec:AVC
+  role: evaluated_on
+- ref: codec:HEVC
+  role: evaluated_on
+- ref: codec:AV1
+  role: evaluated_on
+- ref: codec:VVC
+  role: evaluated_on
+claims:
+- statement: 挑战赛测试集包含459条视频，由覆盖AVC/H.264、HEVC/H.265、AV1与VVC/H.266标准的14种编解码器编码，压缩伪影覆盖全面。
+  confidence: reported
+  metrics:
+  - name: 测试视频数
+    value: '459'
+    scope: 挑战赛评测集
+  - name: 编解码器数
+    value: '14'
+    scope: 覆盖四种压缩标准
+  evidence: abstract（初筛，未读全文）
+- statement: 主观分通过大规模众包成对人类比较收集，方法性能以预测值与主观分的传统相关系数衡量。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 训练数据为CVQAD数据集，共1022条压缩视频。
+  confidence: reported
+  metrics:
+  - name: 训练集视频数
+    value: '1022'
+    scope: CVQAD压缩视频质量评估数据集
+  evidence: abstract（初筛，未读全文）
+- statement: 共30支队伍注册参赛，最终6支队伍提交有效最终方案及可复现代码。
+  confidence: reported
+  metrics:
+  - name: 注册队伍数
+    value: '30'
+    scope: 挑战赛注册统计
+  - name: 有效提交队伍数
+    value: '6'
+    scope: 提交有效最终解与复现代码
+  evidence: abstract（初筛，未读全文）
+- statement: 论文提供了先进VQA方法在该压缩视频数据集上的基准结果，并公开数据集、结果与在线排行榜，为后续研究提供参照。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: ECCV 2024 AIM研讨会压缩视频VQA挑战赛总结：459条14种编解码器压缩视频上评测方法并公开基准。
+  abstract_zh: 该文报告了与ECCV 2024 AIM研讨会联合举办的压缩视频质量评估挑战赛。挑战赛在459条视频的测试集上评测VQA方法，视频由覆盖AVC/H.264、HEVC/H.265、AV1与VVC/H.266标准的14种编解码器压缩，包含丰富的压缩伪影。方法性能通过其预测与传统相关系数（与主观分的相关性）衡量，主观分来自大规模众包成对比较。训练采用此前构建的CVQAD数据集（1022条视频）；30支队伍注册，最终6支队伍提交了有效方案及可复现代码。论文还给出了当前先进VQA方法在该数据集上的基准表现，数据集、结果与在线排行榜均已公开。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 压缩视频质量评估挑战赛报告，直接服务于AVC/HEVC/AV1/VVC编解码器质量评测基准，但属质量评估域而非核心编码域。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: AIM 2024压缩视频质量评估挑战赛：方法与结果
+relations:
+- type: same_topic
+  ref: paper:arxiv:2605.15800
+  note: 同为编解码器压缩性能的视频质量评估方法与结果
+- type: same_topic
+  ref: paper:arxiv:2601.10448
+  note: 同为对压缩编码视频的主观质量评估研究
+- type: same_topic
+  ref: paper:arxiv:2511.00969
+  note: 同为对传统与神经编解码器视频质量指标的评测基准

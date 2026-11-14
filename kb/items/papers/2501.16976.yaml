@@ -1,0 +1,63 @@
+id: paper:arxiv:2501.16976
+type: paper
+title: Improved Encoding for Overfitted Video Codecs
+domain: video_image_coding
+research_lines:
+- traditional_codec_opt
+source:
+  channel: arxiv
+  external_id: 2501.16976v2
+  url: https://arxiv.org/abs/2501.16976
+  pdf_url: https://arxiv.org/pdf/2501.16976v2
+  venue: arXiv preprint
+time:
+  published: '2025-01-28'
+  collected: '2026-11-14'
+entities:
+- ref: codec:HEVC
+  role: subject
+- ref: concept:RDO
+  role: uses
+claims:
+- statement: 用光流估计器引导运动信息学习，缓解过拟合编解码器难以精确捕捉运动信息的问题。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 引入联合率失真优化，改善不同帧之间的码率分配。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 改进后的过拟合编解码器解码复杂度保持在每像素1300次乘法的量级。
+  confidence: reported
+  metrics:
+  - name: 解码复杂度
+    value: 1300 multiplications per pixel
+    scope: 所提过拟合神经视频编解码器解码端
+  evidence: abstract（初筛，未读全文）
+- statement: 压缩性能接近传统编码器HEVC，并优于其他过拟合编解码器。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 相较自编码器类神经编解码器，过拟合方案的解码复杂度低数个量级。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 以光流引导运动学习与联合率失真优化改进过拟合神经视频编码，解码仅约1300乘法/像素且性能逼近HEVC。
+  abstract_zh: 过拟合神经视频编解码器的解码复杂度比自编码器方案低数个量级，但压缩效率受限，主要原因是难以精确捕捉运动信息。本文提出用光流估计器引导运动信息的学习，并引入联合率失真优化以改善各帧间的码率分配。所提方法保持每像素约1300次乘法的低解码复杂度，压缩性能接近传统编码器HEVC，且优于其他过拟合编解码器。相关工作已基于Cool-Chic项目开源。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 核心域过拟合神经视频编码的编码端改进，在低解码复杂度下逼近HEVC并超越同类过拟合编解码器，属Cool-Chic主线重要进展，值得深读。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 过拟合视频编解码器的改进编码
+relations:
+- type: same_topic
+  ref: paper:arxiv:2607.13723
+  note: 同属Orange开源Cool-Chic过拟合/轻量解码神经编码系列（N-O Cool-chic）
+- type: same_topic
+  ref: paper:arxiv:2403.11651
+  note: 同属过拟合图像编码降复杂度路线，为该团队的系列前作
+- type: same_topic
+  ref: paper:arxiv:2405.08530
+  note: 同为实例自适应/过拟合神经视频压缩方向，均关注解码端复杂度约束

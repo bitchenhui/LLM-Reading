@@ -1,0 +1,76 @@
+id: paper:arxiv:2605.20519
+type: paper
+title: Codec-Robust Attacks on Audio LLMs
+domain: audio_coding
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2605.20519v2
+  url: https://arxiv.org/abs/2605.20519
+  pdf_url: https://arxiv.org/pdf/2605.20519v2
+  venue: arXiv preprint
+time:
+  published: '2026-05-19'
+  collected: '2026-11-14'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:NeuralAudioCodec
+  role: uses
+- ref: codec:Opus
+  role: evaluated_on
+claims:
+- statement: CodecAttack 在 Opus 中等码率下于三个真实音频LLM部署场景与三个目标模型上取得平均目标子串攻击成功率 85.5%，而同等 EoT 硬化的波形域基线在任何码率下不超过
+    26%
+  confidence: reported
+  metrics:
+  - name: 目标子串攻击成功率(ASR)
+    value: 85.5%
+    scope: Opus 中等码率，3 部署场景 × 3 目标模型平均
+  - name: 波形基线 ASR 上限
+    value: ≤26%
+    scope: 相同 EoT 硬化的波形扰动，任意码率
+  evidence: abstract（初筛，未读全文）
+- statement: 攻击无需重训即可迁移到未参与训练的保留编解码器，在 MP3 上最高达 100%、AAC-LC 上达 84%
+  confidence: reported
+  metrics:
+  - name: ASR
+    value: 100%
+    scope: MP3，held-out 编解码器最高值
+  - name: ASR
+    value: 84%
+    scope: AAC-LC，held-out 迁移
+  evidence: abstract（初筛，未读全文）
+- statement: 潜空间对抗扰动的分带能量集中在 4kHz 以下（编解码器比特分配最多的频段），而波形域基线扰动扩散至编码器丢弃的高频段
+  confidence: reported
+  metrics:
+  - name: 扰动能量集中频段
+    value: <4kHz
+    scope: CodecAttack 潜空间扰动的分带能量分析
+  evidence: abstract（初筛，未读全文）
+- statement: 以编解码器压缩预处理作为针对对抗音频的检测/消除防御并不可靠
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出CodecAttack：在神经音频编解码器潜空间而非波形域优化对抗扰动，攻击可穿透Opus/MP3/AAC压缩，证明有损压缩非可靠防御。
+  abstract_zh: 先前针对音频大语言模型（Audio LLM）的对抗攻击可被部署中的编解码器压缩预处理检测或消除，本文提出的 CodecAttack 将扰动优化从波形域转移到神经音频编解码器的连续潜空间。方法采用多码率
+    straight-through 期望变换（EoT）跨多种压缩信道硬化攻击，且完全无需修改目标模型。在三个真实音频LLM部署场景与三个目标模型上，CodecAttack 在 Opus 中等码率下取得平均
+    85.5% 的目标子串攻击成功率，而同等 EoT 硬化的波形基线在任意码率下不超过 26%。攻击无需重训即可迁移到保留编解码器，在 MP3 上最高达 100%、AAC-LC 上达 84%。分带能量分析显示潜空间扰动集中在编解码器分配比特最多的
+    4kHz 以下频段，而波形基线扩散至被丢弃的高频，证明有损压缩并非对抗音频的可靠防御。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 论文以神经音频编解码器（Opus/MP3/AAC）潜空间为攻击载体、以压缩防御有效性为核心结论，属音频编码生态但主体是安全研究而非编码技术本身，非核心域。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 针对音频大语言模型的编解码器鲁棒攻击
+relations:
+- type: same_topic
+  ref: paper:arxiv:2609.34524
+  note: 同属神经音频编解码器研究：本文在神经音频编解码器潜空间构造攻击并分析其码率/频带比特分配特性
+- type: same_topic
+  ref: paper:arxiv:2610.20246
+  note: 均以 Opus 有损音频压缩为研究对象：本文评估对抗攻击对 Opus 压缩信道的鲁棒性

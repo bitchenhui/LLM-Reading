@@ -1,0 +1,52 @@
+id: paper:arxiv:2206.07038
+type: paper
+title: 'AnimeSR: Learning Real-World Super-Resolution Models for Animation Videos'
+domain: processing_enhancement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2206.07038v3
+  url: https://arxiv.org/abs/2206.07038
+  pdf_url: https://arxiv.org/pdf/2206.07038v3
+  venue: arXiv preprint
+time:
+  published: '2022-06-14'
+  collected: '2026-11-14'
+entities:
+- ref: concept:SuperResolution
+  role: subject
+claims:
+- statement: 从真实低质量动画视频中学习基于神经网络的基础退化算子（模糊、噪声、压缩）并纳入退化生成管线，比传统无学习算子更好地刻画真实退化分布
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 构建了大规模高质量动画视频数据集 AVC（Animation Video Collection），用于动画视频超分的训练与评估
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 设计的高效多尺度网络结构结合单向循环网络的效率与滑窗方法的有效性，AnimeSR 在真实低质量动画视频恢复上优于此前最先进方法
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 代码与模型已在 GitHub（TencentARC/AnimeSR）开源
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出可学习退化算子与高效多尺度网络，从真实低质量动画视频中学退化分布并高效超分恢复。
+  abstract_zh: 论文研究动画视频的真实世界视频超分辨率（VSR）问题，提出三项关键改进。其一，以往真实世界超分多依赖模糊、噪声、压缩等无学习能力的基本算子模拟退化，本文改为从真实低质量动画视频中学习神经网络化的基础退化算子并纳入退化生成管线，以更好拟合真实退化分布。其二，构建大规模高质量动画视频数据集
+    AVC，支撑动画超分的全面训练与评估。其三，设计高效多尺度网络结构，兼顾单向循环网络的效率与滑窗方法的有效性。由此得到的 AnimeSR 能高效有效地恢复真实低质量动画视频，性能优于既有最先进方法，代码与模型已开源。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 属处理增强域的真实世界动画视频超分工作（超分为在册主题），非编码核心域，按规则仅做摘要收录；规则阶段的 codec:AVC 系噪声匹配，论文中的 AVC 指其自建动画视频数据集而非 H.264
+    标准，已剔除。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: AnimeSR：面向动画视频的真实世界超分辨率模型学习
+relations:
+- type: same_topic
+  ref: paper:arxiv:2609.33582
+  note: 同属真实世界超分方向，均针对真实退化条件下的图像/视频恢复
+- type: same_topic
+  ref: paper:arxiv:2609.37328
+  note: 同属神经网络视频超分链路（CASR 为 VVC 后处理超分滤波），AnimeSR 的退化建模亦含压缩退化

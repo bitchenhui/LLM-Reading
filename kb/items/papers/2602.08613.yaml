@@ -1,0 +1,55 @@
+id: paper:arxiv:2602.08613
+type: paper
+title: Overview and Comparison of AVS Point Cloud Compression Standard
+domain: immersive_media
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2602.08613v1
+  url: https://arxiv.org/abs/2602.08613
+  pdf_url: https://arxiv.org/pdf/2602.08613v1
+  venue: arXiv preprint
+time:
+  published: '2026-02-09'
+  collected: '2026-11-14'
+entities:
+- ref: codec:G-PCC
+  role: subject
+- ref: codec:V-PCC
+  role: compared_against
+- ref: org:MPEG
+  role: compared_against
+claims:
+- statement: 中国AVS工作组已完成其第一代点云压缩标准AVS PCC的开发制定
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: MPEG针对点云压缩建立了G-PCC与V-PCC两项标准，分别代表基于几何与基于视频的技术路线
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: AVS PCC采用了多项区别于G-PCC/V-PCC等对标标准的新编码工具与技术，本文从技术原理与压缩性能两方面进行综述与对比评估
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 综述中国AVS工作组首代点云压缩标准AVS PCC的关键编码工具，并与MPEG G-PCC/V-PCC进行技术与性能对比。
+  abstract_zh: 点云是广泛应用于沉浸式媒体、自动驾驶与数字文化遗产保护等领域的3D数据表示格式，但其庞大数据量给传输与存储带来挑战，点云压缩对实际部署至关重要。MPEG已建立基于几何的G-PCC与基于视频的V-PCC两项点云压缩标准。与此同时，中国AVS工作组也完成其第一代点云压缩标准AVS
+    PCC的开发，该标准采用了多项区别于对标标准的新编码工具与技术。本文从相关技术与性能对比两个视角系统综述AVS PCC标准。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 点云压缩属沉浸式媒体域（非核心编码域），但作为AVS首代点云压缩标准的官方综述与MPEG标准对比，参考价值高，按规则仅summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: AVS点云压缩标准综述与对比
+relations:
+- type: same_topic
+  ref: paper:arxiv:2207.12554
+  note: 同为点云几何压缩编码研究，均关注点云数据压缩技术
+- type: same_topic
+  ref: paper:arxiv:2208.02716
+  note: 同为点云压缩标准化工作（JPEG Pleno点云编码提案），与AVS PCC标准化平行
+- type: same_topic
+  ref: paper:arxiv:2606.29179
+  note: 涉及V-PCC编码与流式传输性能，与本文V-PCC对比锚点相关

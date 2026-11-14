@@ -1,0 +1,56 @@
+id: paper:arxiv:2308.03643
+type: paper
+title: 'Mamba: Bringing Multi-Dimensional ABR to WebRTC'
+domain: streaming_delivery
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2308.03643v1
+  url: https://arxiv.org/abs/2308.03643
+  pdf_url: https://arxiv.org/pdf/2308.03643v1
+  venue: arXiv preprint
+time:
+  published: '2023-08-07'
+  collected: '2026-11-14'
+entities:
+- ref: concept:ABR
+  role: subject
+- ref: concept:WebRTC
+  role: platform
+- ref: concept:QP
+  role: uses
+- ref: concept:QoE
+  role: measured_by
+claims:
+- statement: Mamba利用多智能体强化学习，根据网络状况与视频复杂度等观测状态，协同调整编码端QP、分辨率与帧率，以最大化WebRTC视频会议的QoE，解决网络码率决策与编码器码控不协调的问题。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 引入课程学习（curriculum learning）来提升MARL的训练效率。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 实验室与真实网络环境的评估结果均证明该多维ABR方法具有显著效果。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出基于多智能体强化学习的端到端多维ABR，联合调控QP/分辨率/帧率以提升WebRTC视频会议QoE。
+  abstract_zh: 针对WebRTC实时视频通信中网络侧目标码率决策与编码器码率控制互不协调、且忽略不当分辨率与帧率设置影响的问题，提出端到端多维ABR算法Mamba。该算法基于多智能体强化学习（MARL），依据网络状况与视频复杂度等观测状态，自适应且协同地调整量化参数（QP）、分辨率和帧率，以最大化用户QoE。同时引入课程学习提升MARL的训练效率。实验室与真实网络环境评估均验证了Mamba的显著效果。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 面向WebRTC实时通信的多维ABR与码率-QoE协同控制，属流媒体与传输域而非核心编码域，按收录基准给summary_only
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: Mamba：将多维自适应码率（ABR）引入WebRTC
+relations:
+- type: same_topic
+  ref: paper:arxiv:2610.13698
+  note: 同为基于深度强化学习的ABR决策方案（云游戏场景），与Mamba的RL驱动码率决策主题一致
+- type: same_topic
+  ref: paper:arxiv:2603.13597
+  note: 同为强化学习驱动的自适应码率/码率阶梯研究，与多维ABR主题相关
+- type: same_topic
+  ref: paper:arxiv:2306.01194
+  note: 均围绕WebRTC视频QoE展开，一个估计QoE指标、一个以QoE为优化目标

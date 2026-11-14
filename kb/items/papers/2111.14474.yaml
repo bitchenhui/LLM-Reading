@@ -1,0 +1,66 @@
+id: paper:arxiv:2111.14474
+type: paper
+title: Learning-Based Video Coding with Joint Deep Compression and Enhancement
+domain: video_image_coding
+research_lines:
+- traditional_codec_opt
+source:
+  channel: arxiv
+  external_id: 2111.14474v2
+  url: https://arxiv.org/abs/2111.14474
+  pdf_url: https://arxiv.org/pdf/2111.14474v2
+  venue: arXiv preprint
+time:
+  published: '2021-11-29'
+  collected: '2026-11-14'
+entities:
+- ref: impl:x265
+  role: subject
+- ref: metric:PSNR
+  role: measured_by
+- ref: metric:MS-SSIM
+  role: measured_by
+claims:
+- statement: 在相同PSNR与MS-SSIM下，JCEVC相比x265 LDP very fast模式分别平均降低bpp 39.39%和54.92%，并以可观幅度超越现有最先进深度视频编码器。
+  confidence: reported
+  metrics:
+  - name: bpp降幅
+    value: 39.39%
+    scope: 相同PSNR下，对比x265 LDP very fast模式
+  - name: bpp降幅
+    value: 54.92%
+    scope: 相同MS-SSIM下，对比x265 LDP very fast模式
+  evidence: abstract（初筛，未读全文）
+- statement: 提出双路径生成对抗网络DPEG进行压缩后重建：α路径以大感受野与多帧参考恢复结构信息，β路径专注局部纹理，两路径在对抗训练中融合。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: DPEG网络被复用于运动补偿与质量增强两个模块，且压缩与增强的联合训练进一步提升了压缩的率失真性能。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出压缩-增强联合优化的端到端深度视频编码器JCEVC，双路径GAN重建细节，bpp较x265最多降低54.92%。
+  abstract_zh: 该文提出联合优化压缩与增强模块的端到端深度视频编码框架JCEVC。首先设计双路径生成对抗网络DPEG用于压缩后细节重建：α路径以大感受野和多帧参考恢复结构信息，β路径重建局部纹理，两路径融合并在对抗过程中协同训练。其次将DPEG网络复用于运动补偿与质量增强模块，并结合其他必要模块构成完整编解码框架。通过压缩与增强的联合训练进一步提升率失真性能。在相同PSNR/MS-SSIM下，JCEVC较x265
+    LDP very fast模式平均降低bpp 39.39%/54.92%，明显优于现有深度视频编码器。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 核心域端到端学习式视频编码工作，提出压缩与增强联合优化的完整编解码器且率失真收益显著，具备深读价值。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 联合深度压缩与增强的学习式视频编码
+relations:
+- type: same_topic
+  ref: paper:arxiv:2603.05756
+  note: 同为端到端学习式视频压缩，均研究帧内/帧间统一建模下的编解码框架
+- type: same_topic
+  ref: paper:arxiv:2606.28027
+  note: 同为学习式视频编解码器的设计与实用化方向
+- type: same_topic
+  ref: paper:arxiv:2601.01141
+  note: 同为基于深度生成模型重建的视频压缩
+- type: same_topic
+  ref: paper:arxiv:2608.21495
+  note: 均涉及压缩视频的质量增强网络设计，可对照增强模块思路

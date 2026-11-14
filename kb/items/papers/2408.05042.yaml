@@ -1,0 +1,79 @@
+id: paper:arxiv:2408.05042
+type: paper
+title: Benchmarking Conventional and Learned Video Codecs with a Low-Delay Configuration
+domain: video_image_coding
+research_lines:
+- traditional_codec_opt
+source:
+  channel: arxiv
+  external_id: 2408.05042v1
+  url: https://arxiv.org/abs/2408.05042
+  pdf_url: https://arxiv.org/pdf/2408.05042v1
+  venue: arXiv preprint
+time:
+  published: '2024-08-09'
+  collected: '2026-11-14'
+entities:
+- ref: codec:VVC
+  role: subject
+- ref: codec:ECM
+  role: subject
+- ref: codec:AV1
+  role: subject
+- ref: impl:VTM
+  role: subject
+- ref: impl:DCVC-FM
+  role: compared_against
+- ref: metric:BD-Rate
+  role: measured_by
+- ref: metric:PSNR
+  role: measured_by
+- ref: org:JVET
+  role: subject
+- ref: org:MPEG
+  role: subject
+- ref: org:AOMedia
+  role: affiliation
+claims:
+- statement: 在低时延配置下，JVET ECM 在全部被测编码器（VTM、ECM、libaom、AVM、DCVC-DC、DCVC-FM）中综合编码性能最佳。
+  confidence: reported
+  metrics:
+  - name: BD-rate 节省
+    value: 16.1%
+    scope: PSNR 口径，ECM 相对 AOM AVM，低时延配置，AOM/MPEG CTC 测试序列，YCbCr 4:2:0
+  - name: BD-rate 节省
+    value: 11.0%
+    scope: PSNR 口径，ECM 相对神经编码器 DCVC-FM，低时延配置
+  evidence: abstract（初筛，未读全文）
+- statement: 神经视频编码器 DCVC-DC 与 DCVC-FM 在大背景运动测试内容上表现出不一致的编码性能，稳定性劣于传统标准编码器。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 评测采用 MPEG 与 AOM 通用测试条件下的测试序列并在 YCbCr 4:2:0 空间进行，以保证跨阵营对比的公平性；既往多数工作基于随机访问模式，低时延场景下的系统对比此前缺失。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 低时延配置下公平对比 VTM/ECM、AV1/AVM 与 DCVC 神经编码器，ECM 综合编码性能最优。
+  abstract_zh: 该论文针对直播等不允许随机访问式大延时的应用场景，在低时延配置下对最先进的传统与神经视频编码器进行系统对比，涵盖 MPEG 的 VVC VTM 与 JVET ECM、AOM
+    的 libaom(AV1) 与 AVM，以及神经编码器 DCVC-DC 与 DCVC-FM。评测基于 AOM 与 MPEG 通用测试条件（CTC）定义的测试序列，统一在 YCbCr 4:2:0 色彩空间下进行以保证公平。结果显示
+    JVET ECM 在所有被测编码器中综合表现最佳：按 PSNR 计算，BD-rate 相对 AOM AVM 平均节省 16.1%，相对 DCVC-FM 节省 11.0%。研究还观察到 DCVC-DC
+    与 DCVC-FM 在具有大背景运动的测试内容上表现不一致，暴露出学习型编码器对内容特性的敏感性问题。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 核心域编解码基准对比：在低时延配置下横向评测 MPEG（VTM/ECM）、AOM（libaom/AVM）与神经编码器（DCVC-DC/DCVC-FM），覆盖当前最新标准与学习型编解码。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 低时延配置下传统与学习型视频编码器基准评测
+relations:
+- type: same_topic
+  ref: paper:arxiv:2605.15800
+  note: 同为 AOM 编码器压缩性能的客观评测基准（AV2 画质评估），与本研究的编解码器对比方法论同主题
+- type: same_topic
+  ref: standard_proposal:jvet:m205-AO0186
+  note: JVET EE1 中将 DCVC-FM 作为端到端学习型帧内编码器纳入评测，对应本文被测的 DCVC-FM 标准化评估线索
+- type: same_topic
+  ref: paper:arxiv:2606.28163
+  note: 同为面向实际部署的视频编码研究（多平台学习型编码器 MLVC），与本文低时延/实用场景下传统 vs 神经编码对比互补

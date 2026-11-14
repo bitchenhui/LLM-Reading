@@ -1,0 +1,56 @@
+id: paper:arxiv:2312.15622
+type: paper
+title: 'Scalable Face Image Coding via StyleGAN Prior: Towards Compression for Human-Machine Collaborative
+  Vision'
+domain: video_image_coding
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2312.15622v1
+  url: https://arxiv.org/abs/2312.15622
+  pdf_url: https://arxiv.org/pdf/2312.15622v1
+  venue: arXiv preprint
+time:
+  published: '2023-12-25'
+  collected: '2026-11-14'
+entities:
+- ref: codec:VVC
+  role: subject
+claims:
+- statement: 利用StyleGAN先验学习基本层、中间层、增强层三层分级语义表示，以渐进方式同时支持机器分析与人类视觉感知。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 提出逐层可伸缩熵Transformer以降低编码层间冗余，并通过多任务可伸缩率失真目标联合优化机器分析性能、人眼感知体验与压缩率。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在人脸图像压缩的极低码率区间，该方法在机器分析与人类感知两方面均优于VVC。
+  confidence: reported
+  metrics:
+  - name: 工作码率区间
+    value: <0.01 bpp
+    scope: 人脸图像压缩、与VVC对比的极低码率条件
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 用StyleGAN先验构建三层可伸缩表示，在<0.01bpp极低码率下同时超越VVC的机器分析与人类感知性能。
+  abstract_zh: 该工作面向人机协同视觉，利用StyleGAN生成先验学习三层分级语义表示，设计为基本层、中间层与增强层，以渐进方式同时服务机器智能与人类视觉感知。为提升压缩效率，提出逐层可伸缩熵Transformer以降低层间冗余，并基于多任务可伸缩率失真目标对整个方案进行联合优化。在人脸图像压缩上验证了该范式的可行性。定性与定量实验表明，在极低码率（<0.01
+    bpp）下，该方法在机器分析与人类感知两方面均优于最新压缩标准VVC，为人机协同压缩提供了新思路。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 生成式先验驱动的可伸缩人脸图像编码，属核心编码域，提出人机协同压缩新范式并与VVC直接对比，代表性较强。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 基于StyleGAN先验的可伸缩人脸图像编码：面向人机协同视觉的压缩
+relations:
+- type: same_topic
+  ref: paper:arxiv:2606.21033
+  note: 同为面向人机联合感知（人类+机器）的图像压缩方案
+- type: same_topic
+  ref: paper:arxiv:2606.21030
+  note: 同为生成式模型与图像编解码结合的低码率压缩路线
+- type: same_topic
+  ref: paper:arxiv:2601.10373
+  note: 同为生成先验（扩散先验）驱动的低码率图像压缩

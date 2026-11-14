@@ -1,0 +1,56 @@
+id: paper:arxiv:2405.08530
+type: paper
+title: Parameter-Efficient Instance-Adaptive Neural Video Compression
+domain: video_image_coding
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2405.08530v3
+  url: https://arxiv.org/abs/2405.08530
+  pdf_url: https://arxiv.org/pdf/2405.08530v3
+  venue: arXiv preprint
+time:
+  published: '2024-05-14'
+  collected: '2026-11-14'
+entities:
+- ref: codec:HEVC
+  role: subject
+- ref: dataset:UVG
+  role: evaluated_on
+- ref: metric:PSNR
+  role: measured_by
+claims:
+- statement: 所提参数高效实例自适应框架相较现有实例自适应视频压缩方法，显著提升压缩性能并降低编码时间，且微调训练更稳定、更易实用。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在UVG、MCL-JVC和HEVC标准测试序列上，方法相较基线NVC显著改善RD曲线与BD-rate，RD曲线最高提升约5 dB PSNR。
+  confidence: reported
+  metrics:
+  - name: PSNR增益
+    value: up to 5 dB
+    scope: 相较基线NVC的RD曲线提升，UVG/MCL-JVC/HEVC标准测试序列上的最高值
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 借鉴参数高效微调思想，用轻量适配器对预训练神经视频编解码器做实例自适应微调，显著提升RD性能并降低编码时间。
+  abstract_zh: 学习式神经视频编解码器（NVC）性能与泛化仍不足，而现有实例自适应方法需对整个编解码网络做测试序列微调，计算代价高、增加码率且训练不稳定。作者借鉴大模型的参数高效微调（PEFT）思路，提出在预训练NVC上挂接轻量适配器模块，仅对测试视频微调适配器参数。该框架显著提升压缩性能、降低编码时间，且微调过程更稳定、更易实用。在UVG、MCL-JVC及HEVC标准测试序列上的实验显示，相较基线NVC的RD曲线最高提升约5
+    dB PSNR，BD-rate亦显著改善，代码已开源（PEVC）。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 神经视频编码核心域工作：借鉴PEFT用轻量适配器做实例自适应NVC微调，RD性能与编码时延均有实证改进，与主题高度相关。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 参数高效的实例自适应神经视频压缩
+relations:
+- type: same_topic
+  ref: paper:arxiv:2605.20672
+  note: LANCE同为预训练压缩模型的实例自适应（overfitted）微调路线，本文是该思想在视频压缩上的参数高效实现
+- type: same_topic
+  ref: paper:arxiv:2603.05756
+  note: Uni-LVC同属学习式视频编解码器（NVC）编解码结构改进方向
+- type: same_topic
+  ref: paper:arxiv:2609.04273
+  note: 同为逐实例自适应的视频表示压缩，可用作实例自适应NVC路线的横向参照

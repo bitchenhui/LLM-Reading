@@ -1,0 +1,54 @@
+id: paper:arxiv:2502.05695
+type: paper
+title: Semantic-Aware Adaptive Video Streaming Using Latent Diffusion Models for Wireless Networks
+domain: streaming_delivery
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2502.05695v3
+  url: https://arxiv.org/abs/2502.05695
+  pdf_url: https://arxiv.org/pdf/2502.05695v3
+  venue: arXiv preprint
+time:
+  published: '2025-02-08'
+  collected: '2026-11-14'
+entities:
+- ref: concept:ABR
+  role: subject
+- ref: concept:QoE
+  role: measured_by
+- ref: impl:FFmpeg
+  role: uses
+claims:
+- statement: 提出将潜在扩散模型集成于FFmpeg的语义通信框架，将I帧压缩至潜在空间，在不牺牲高视觉质量的前提下显著节省存储与语义传输开销，B/P帧保留为用户端重建精化的调整元数据。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 结合最先进的去噪与视频帧插值（VFI）技术，可在有噪无线通信环境中缓解语义模糊并恢复帧间时间一致性。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 实验显示该方法在带宽占用优化的同时保持高质量流传输，在QoE与资源效率方面优于最先进方案，适用于5G及后5G网络。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出嵌入FFmpeg的语义通信框架，用潜在扩散模型压缩I帧，低带宽高QoE实现实时自适应码率视频流。
+  abstract_zh: 该论文提出将潜在扩散模型（LDM）集成到FFmpeg流程中的语义通信（SemCom）框架，面向无线网络中的实时自适应码率视频流传输，以解决传统CBR/ABS的带宽占用高、存储低效与QoE劣化问题。方法将I帧压缩至潜在空间以获得显著的存储与语义传输节省，同时保留B帧与P帧作为调整元数据，支持用户端对视频重建进行高效精化。框架进一步集成最先进的去噪与视频帧插值（VFI）技术，在有噪无线通信环境中缓解语义模糊并恢复帧间时间一致性。实验结果表明该方法在优化带宽占用的同时保持高视觉质量，在QoE与资源效率上优于现有最先进方案，为5G及后5G网络的可扩展实时视频流开辟了新方向。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 面向无线网络的语义通信式ABR流传输，属流媒体传输域而非核心编解码，按基准仅作初筛摘要
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 面向无线网络的基于潜在扩散模型的语义感知自适应视频流
+relations:
+- type: same_topic
+  ref: paper:arxiv:2605.19397
+  note: 同为面向视频传输的语义通信研究，均以感知/QoE为核心目标
+- type: same_topic
+  ref: paper:arxiv:2609.16279
+  note: 同为语义感知的视频编码传输，面向低时延/无线链路场景
+- type: same_topic
+  ref: paper:arxiv:2405.20032
+  note: 同样探索用生成模型（扩散类）替代/改造传统视频流传输

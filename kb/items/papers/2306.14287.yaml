@@ -1,0 +1,76 @@
+id: paper:arxiv:2306.14287
+type: paper
+title: 'Efficient Contextformer: Spatio-Channel Window Attention for Fast Context Modeling in Learned
+  Image Compression'
+domain: video_image_coding
+research_lines:
+- learned_codec
+source:
+  channel: arxiv
+  external_id: 2306.14287v2
+  url: https://arxiv.org/abs/2306.14287
+  pdf_url: https://arxiv.org/pdf/2306.14287v2
+  venue: arXiv preprint
+time:
+  published: '2023-06-25'
+  collected: '2026-11-14'
+entities:
+- ref: concept:EntropyModel
+  role: subject
+- ref: dataset:Kodak
+  role: evaluated_on
+- ref: codec:VVC
+  role: compared_against
+- ref: impl:VTM
+  role: compared_against
+claims:
+- statement: eContextformer相对非并行自回归上下文模型，模型复杂度降低约145倍，解码速度提升约210倍。
+  confidence: reported
+  metrics:
+  - name: 模型复杂度降低
+    value: ~145x
+    scope: 相对非并行方法
+  - name: 解码加速
+    value: ~210x
+    scope: 相对非并行方法
+  evidence: abstract（初筛，未读全文）
+- statement: 在Kodak、CLIC2020、Tecnick三个数据集上取得高于非并行方法的平均码率节省。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 相对VVC测试模型VTM 16.2的帧内编码最多节省17%码率，并超越多种学习式压缩模型。
+  confidence: reported
+  metrics:
+  - name: 最大码率节省
+    value: 17%
+    scope: 对比VTM 16.2 intra coding，上限值
+  evidence: abstract（初筛，未读全文）
+- statement: 低复杂度上下文模型支持在线率失真算法，进一步改善压缩性能。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出eContextformer高效自回归上下文模型，解码提速约210倍、模型复杂度降约145倍，较VTM 16.2帧内编码最多省17%码率。
+  abstract_zh: 学习式图像压缩中，基于Transformer的熵模型压缩性能好但计算开销大。论文提出eContextformer，融合patch级、棋盘格与通道级分组技术实现并行上下文建模，并引入移位窗口空域-通道注意力机制，同时探索更优的训练策略与架构设计。解码阶段通过动态缩放注意力跨度并缓存先前注意力计算，大幅降低模型与运行时复杂度。相比非并行方法，模型复杂度降低约145倍、解码速度提升约210倍，且在Kodak、CLIC2020、Tecnick上取得更高的平均码率节省。低复杂度使其可启用在线率失真算法进一步提升性能，相对VVC测试模型VTM
+    16.2帧内编码最多节省17%码率，并超越多种学习式压缩模型。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 核心域学习式图像压缩的熵建模高效化工作，复杂度大幅下降且相对VTM 16.2取得显著码率节省，方法与结果俱佳，值得深读。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 高效Contextformer：面向学习式图像压缩快速上下文建模的空域-通道窗口注意力
+relations:
+- type: same_topic
+  ref: paper:arxiv:2606.00111
+  note: 同为学习式图像压缩中的Transformer注意力与熵建模
+- type: same_topic
+  ref: paper:arxiv:2603.06766
+  note: 同为学习式图像压缩熵建模（分层字典熵模型）
+- type: same_topic
+  ref: paper:arxiv:2605.20672
+  note: 同为学习式图像压缩的上下文/熵估计设计
+- type: same_topic
+  ref: paper:arxiv:2605.13243
+  note: 同为低复杂度学习式图像压缩方向

@@ -1,0 +1,76 @@
+id: paper:arxiv:2402.09001
+type: paper
+title: A Comprehensive Review of Software and Hardware Energy Efficiency of Video Decoders
+domain: video_image_coding
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2402.09001v1
+  url: https://arxiv.org/abs/2402.09001
+  pdf_url: https://arxiv.org/pdf/2402.09001v1
+  venue: arXiv preprint
+time:
+  published: '2024-02-14'
+  collected: '2026-11-14'
+entities:
+- ref: codec:AV1
+  role: subject
+- ref: codec:AVC
+  role: subject
+- ref: codec:HEVC
+  role: subject
+- ref: codec:VVC
+  role: subject
+claims:
+- statement: 在优化软件解码器实现中，AV1 是能耗-压缩甜点：相比 VP9 能耗仅增加 16.55%，同时实现 43.95% 的码率节省
+  confidence: reported
+  metrics:
+  - name: 能耗增幅
+    value: 16.55%
+    scope: AV1 vs VP9，优化软件解码器
+  - name: 码率节省
+    value: -43.95%
+    scope: AV1 vs VP9（原值照录）
+  evidence: abstract（初筛，未读全文）
+- statement: 硬件解码方面 AV1 相比 VP9 能耗大幅增加，HEVC 反而是硬件解码的能耗甜点
+  confidence: reported
+  metrics:
+  - name: 硬件解码能耗增幅
+    value: 117.50%
+    scope: AV1 vs VP9，硬件解码器
+  - name: 硬件解码能耗增幅
+    value: 6.06%
+    scope: HEVC vs VP9，硬件解码器
+  evidence: abstract（初筛，未读全文）
+- statement: 硬件视频解码器的能耗不足其优化软件解码对应实现的 9%
+  confidence: reported
+  metrics:
+  - name: 能耗占比
+    value: 小于 9%
+    scope: 硬件解码器 vs 优化软件解码器
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 系统评测六种视频编码格式的软硬件解码能耗与压缩效率，指出软件解码甜点为 AV1、硬件解码甜点为 HEVC。
+  abstract_zh: 该综述对 AVC、VP9、HEVC、AV1、VVC、AVM 六种视频编码格式的压缩效率与解码能耗进行系统评测，评估参考与优化软件解码器实现，并分析 SIMD 指令对能耗的影响。软件解码方面，AV1
+    是优化实现的甜点：相比 VP9 能耗增加 16.55%，同时码率节省 43.95%。硬件解码评测显示 AV1 相比 VP9 能耗增加 117.50%，而 HEVC 仅增加 6.06%，是硬件解码的能耗甜点。总体而言，硬件解码器的能耗不足优化软件解码器的
+    9%。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 核心域：对 AVC/VP9/HEVC/AV1/VVC/AVM 六种格式的软件与硬件解码能耗和压缩效率进行系统量化对比，给出软硬件各自的能耗甜点结论
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 视频解码器软件与硬件能效的全面综述
+relations:
+- type: same_topic
+  ref: paper:arxiv:2408.05042
+  note: 同为常规（传统）视频编解码器的基准评测，覆盖 HEVC/AV1 等格式对比
+- type: same_topic
+  ref: paper:arxiv:2511.18686
+  note: 同为硬件编解码器能效评估主题（GPU 硬件编码器效率评测）
+- type: same_topic
+  ref: paper:arxiv:2609.34524
+  note: 同为解码器能耗实测分析（音频神经编解码器解码端的码率-能耗-质量测量）

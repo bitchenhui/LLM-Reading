@@ -1,0 +1,84 @@
+id: paper:arxiv:2207.12554
+type: paper
+title: Inter-Frame Compression for Dynamic Point Cloud Geometry Coding
+domain: immersive_media
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2207.12554v2
+  url: https://arxiv.org/abs/2207.12554
+  pdf_url: https://arxiv.org/pdf/2207.12554v2
+  venue: arXiv preprint
+time:
+  published: '2022-07-25'
+  collected: '2026-11-14'
+entities:
+- ref: codec:G-PCC
+  role: subject
+- ref: codec:V-PCC
+  role: compared_against
+- ref: codec:HEVC
+  role: uses
+- ref: concept:EntropyModel
+  role: uses
+- ref: metric:BD-Rate
+  role: measured_by
+- ref: org:MPEG
+  role: builds_on
+claims:
+- statement: 所提深度学习帧间点云几何压缩相对 G-PCCv20 Octree 取得超过88%的 BD-Rate 降低。
+  confidence: reported
+  metrics:
+  - name: BD-Rate
+    value: '>88%'
+    scope: 相对 G-PCCv20 Octree，动态点云几何有损压缩
+  evidence: abstract（初筛，未读全文）
+- statement: 相对 G-PCCv20 Trisoup 取得超过56%的 BD-Rate 节省。
+  confidence: reported
+  metrics:
+  - name: BD-Rate
+    value: '>56%'
+    scope: 相对 G-PCCv20 Trisoup，动态点云几何有损压缩
+  evidence: abstract（初筛，未读全文）
+- statement: 相对 V-PCC 帧内编码模式取得超过62%的 BD-Rate 降低。
+  confidence: reported
+  metrics:
+  - name: BD-Rate
+    value: '>62%'
+    scope: 相对 V-PCC intra 编码模式
+  evidence: abstract（初筛，未读全文）
+- statement: 相对基于 HEVC 的 V-PCC P帧帧间编码模式取得超过52%的 BD-Rate 节省。
+  confidence: reported
+  metrics:
+  - name: BD-Rate
+    value: '>52%'
+    scope: 相对 V-PCC P帧（HEVC）帧间编码模式
+  evidence: abstract（初筛，未读全文）
+- statement: 所提方法的性能增益已在 MPEG 工作组完成交叉核验。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出基于稀疏卷积特征域帧间预测与运动补偿的深度学习动态点云几何压缩，大幅优于 MPEG 标准方案。
+  abstract_zh: 该文提出一种面向动态点云几何的有损帧间压缩框架，利用前一帧通过特征空间帧间预测网络预测当前帧的潜在表示。编码端采用稀疏卷积与层次化多尺度3D特征学习，并设计特征域运动补偿预测器，将前一帧潜在表示映射为对当前帧特征嵌入的预测。预测特征与实际特征的残差经学习的因子化熵模型压缩后传输，解码端分层渐进重建当前帧。实验表明相对
+    MPEG 标准：对 G-PCCv20 Octree 降低超过88% BD-Rate，对 G-PCCv20 Trisoup 超过56%，对 V-PCC 帧内模式超过62%，对基于 HEVC 的 V-PCC
+    P帧帧间模式超过52%，且结果已在 MPEG 工作组交叉核验。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 动态点云几何压缩属沉浸式媒体（点云）而非核心视频编码域，按规则最高只能 summary_only，但该工作经 MPEG 验证且增益显著，值得收录摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 动态点云几何编码的帧间压缩
+relations:
+- type: same_topic
+  ref: paper:arxiv:2606.29179
+  note: 同为 V-PCC 点云视频压缩/流式相关研究
+- type: same_topic
+  ref: paper:arxiv:2609.33969
+  note: 同为体积视频（三维动态媒体）压缩主题
+- type: same_topic
+  ref: paper:arxiv:2607.03576
+  note: 同为体积视频压缩中的运动估计/帧间预测主题

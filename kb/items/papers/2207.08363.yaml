@@ -1,0 +1,79 @@
+id: paper:arxiv:2207.08363
+type: paper
+title: Latent-Domain Predictive Neural Speech Coding
+domain: audio_coding
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2207.08363v3
+  url: https://arxiv.org/abs/2207.08363
+  pdf_url: https://arxiv.org/pdf/2207.08363v3
+  venue: arXiv preprint
+time:
+  published: '2022-07-18'
+  collected: '2026-11-14'
+entities:
+- ref: codec:EVS
+  role: subject
+- ref: codec:Opus
+  role: compared_against
+- ref: org:Microsoft
+  role: affiliation
+claims:
+- statement: 低延迟条件下，TF-Codec 在 1 kbps 码率的主观语音质量显著优于 9 kbps 的 Opus
+  confidence: reported
+  metrics:
+  - name: 本方法码率
+    value: 1 kbps
+    scope: TF-Codec（低延迟神经语音编码）
+  - name: 对比锚点码率
+    value: 9 kbps
+    scope: Opus，多语种语音数据集主观评测
+  evidence: abstract（初筛，未读全文）
+- statement: TF-Codec 在 3 kbps 码率下主观质量优于 9.6 kbps 的 EVS 和 12 kbps 的 Opus
+  confidence: reported
+  metrics:
+  - name: 本方法码率
+    value: 3 kbps
+    scope: TF-Codec
+  - name: 对比锚点码率（EVS）
+    value: 9.6 kbps
+    scope: EVS，多语种语音数据集主观评测
+  - name: 对比锚点码率（Opus）
+    value: 12 kbps
+    scope: Opus，多语种语音数据集主观评测
+  evidence: abstract（初筛，未读全文）
+- statement: 在 VQ-VAE 框架中引入潜域预测编码，基于过去量化潜帧的预测对当前帧条件编码，可进一步消除编码特征中的时间相关性
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 提出基于 distance-to-soft 映射与 Gumbel-Softmax 的可微分向量量化方案，在码率约束下更好建模潜变量分布
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 引入对时频输入的可学习压缩，在不同码率下自适应调整对主频率与细节的关注
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出TF-Codec：在VQ-VAE框架内用潜域预测编码去除时域冗余，低延迟下1 kbps质量优于9 kbps Opus。
+  abstract_zh: 针对现有神经语音编解码器编码特征中仍存在时域冗余的问题，论文在 VQ-VAE 框架中引入潜域预测编码，以过去量化潜帧的预测作为条件对当前帧编码，端到端实现低延迟语音编解码器
+    TF-Codec。方法上引入对时频输入的可学习压缩，在不同码率下自适应调整对主频与细节的关注，并提出基于 distance-to-soft 映射与 Gumbel-Softmax 的可微分向量量化，在码率约束下更好建模潜变量分布。多语种语音数据集上的主观评测显示：低延迟条件下
+    TF-Codec 在 1 kbps 的质量显著优于 9 kbps 的 Opus，3 kbps 优于 9.6 kbps 的 EVS 与 12 kbps 的 Opus。代码与模型已在 GitHub 开源（microsoft/TF-Codec）。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 微软提出的低延迟神经语音编码器 TF-Codec，在极低码率下大幅超越 EVS/Opus，属音频编码域重要工作，但非核心视频/图像编码域，按规则仅给 summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 潜域预测式神经语音编码（TF-Codec）
+relations:
+- type: same_topic
+  ref: paper:arxiv:2107.03312
+  note: 同为端到端神经音频编解码器（SoundStream），TF-Codec 属该技术脉络下的低码率低延迟语音编码
+- type: same_topic
+  ref: paper:arxiv:2609.09866
+  note: 同为流式/因果神经音频编码，UniStream 采用残差向量量化，与 TF-Codec 的 VQ 路线同主题
+- type: same_topic
+  ref: paper:arxiv:2608.08432
+  note: BAMU 面向冻结预训练神经语音编解码器做码率分配，与神经语音编码主题直接相关

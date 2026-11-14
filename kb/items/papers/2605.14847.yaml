@@ -1,0 +1,67 @@
+id: paper:arxiv:2605.14847
+type: paper
+title: 'SR-Prominence: A Crowdsourced Protocol and Dataset Suite for Perceptually-Weighted Super-Resolution
+  Artifact Evaluation'
+domain: quality_assessment
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2605.14847v2
+  url: https://arxiv.org/abs/2605.14847
+  pdf_url: https://arxiv.org/pdf/2605.14847v2
+  venue: arXiv preprint
+time:
+  published: '2026-05-14'
+  collected: '2026-11-14'
+entities:
+- ref: concept:SuperResolution
+  role: subject
+- ref: concept:IQA
+  role: uses
+- ref: metric:SSIM
+  role: measured_by
+- ref: metric:DISTS
+  role: measured_by
+claims:
+- statement: 重新众包标注DeSRA后发现，其实验室二值伪影中有48.2%未被多数观看者察觉，说明现有二值伪影标注高估了实际感知影响。
+  confidence: reported
+  metrics:
+  - name: 未察觉伪影占比
+    value: 48.2%
+    scope: DeSRA in-lab binary artifacts 经众包重标注
+  evidence: abstract（初筛，未读全文）
+- statement: 构建的SR-Prominence数据集套件含3935个带显著度标注的伪影掩码，覆盖DeSRA、Open Images、Urban100及无真值的Urban100-HR设定。
+  confidence: reported
+  metrics:
+  - name: 伪影掩码数量
+    value: '3935'
+    scope: SR-Prominence全数据集套件
+  evidence: abstract（初筛，未读全文）
+- statement: 经典全参考指标（尤其SSIM和DISTS）对局部伪影显著度有出人意料的强预测信号，而无参考IQA方法与专用伪影检测器常无法跨数据集和参考设置泛化。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出以'伪影显著度'为目标的众包标注协议，构建3935掩码数据集并审计SR伪影检测器与IQA指标。
+  abstract_zh: 论文提出'伪影显著度'（artifact prominence）作为超分辨率伪影的评估目标，定义为判定某高亮区域含可察觉伪影的观看者比例，并设计了众包标注协议。基于该协议构建SR-Prominence数据集套件，含3935个来自DeSRA、Open
+    Images、Urban100及无真值的Urban100-HR设置的伪影掩码。重新标注DeSRA发现其48.2%的实验室二值伪影并未被多数观看者察觉。跨数据集审计显示，经典全参考指标（尤其SSIM与DISTS）提供了
+    surprisingly 强的局部显著度信号，而无参考IQA方法与专用伪影检测器常难以跨数据集与参考设置泛化。数据集附带客观评分协议，可在无需再次众包的情况下对新指标进行基准测试。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 超分辨率伪影的感知加权评估与IQA指标审计，属质量评估域，按规则不进核心域深读。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: SR-Prominence：面向感知加权超分辨率伪影评估的众包协议与数据集套件
+relations:
+- type: same_topic
+  ref: paper:arxiv:2605.25940
+  note: 同属SR输出的质量模型准确性评估研究
+- type: same_topic
+  ref: paper:arxiv:2610.25770
+  note: 同为生成式超分辨率的感知/伪影质量评估
+- type: same_topic
+  ref: paper:arxiv:2411.06810
+  note: 同为压缩/生成伪影的检测方法与数据集构建

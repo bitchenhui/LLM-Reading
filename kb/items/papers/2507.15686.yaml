@@ -1,0 +1,71 @@
+id: paper:arxiv:2507.15686
+type: paper
+title: 'LINR-PCGC: Lossless Implicit Neural Representations for Point Cloud Geometry Compression'
+domain: immersive_media
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2507.15686v1
+  url: https://arxiv.org/abs/2507.15686
+  pdf_url: https://arxiv.org/pdf/2507.15686v1
+  venue: arXiv preprint
+time:
+  published: '2025-07-21'
+  collected: '2026-11-14'
+entities:
+- ref: concept:INR
+  role: subject
+- ref: codec:G-PCC
+  role: compared_against
+claims:
+- statement: LINR-PCGC是首个基于隐式神经表示（INR）的无损点云几何压缩方法，通过过拟合网络参数编码实现分布无关压缩。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 点云组级编码框架与网络初始化策略可将编码时间减少约60%。
+  confidence: reported
+  metrics:
+  - name: 编码时间降低
+    value: ~60%
+    scope: 相对基线INR编码流程，论文自报
+  evidence: abstract（初筛，未读全文）
+- statement: 在MVUB数据集收敛时间条件下，码流相比G-PCC TMC13v23降低约21.21%。
+  confidence: reported
+  metrics:
+  - name: 码流降低
+    value: 21.21%
+    scope: MVUB数据集，对比G-PCC TMC13v23
+  evidence: abstract（初筛，未读全文）
+- statement: 在MVUB数据集收敛时间条件下，码流相比SparsePCGC降低约21.95%。
+  confidence: reported
+  metrics:
+  - name: 码流降低
+    value: 21.95%
+    scope: MVUB数据集，对比SparsePCGC
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出首个基于隐式神经表示的无损点云几何压缩方法，MVUB上码率较G-PCC降低约21%。
+  abstract_zh: 现有AI点云压缩方法依赖特定训练数据分布，INR方法通过将过拟合网络参数写入码流实现了分布无关压缩，但受编码时间和解码器规模限制，此前仅支持有损几何压缩。本文提出LINR-PCGC，首个基于INR的无损点云几何压缩方法，采用点云组级编码框架与有效的网络初始化策略，编码时间减少约60%。其轻量化网络基于多尺度SparseConv，包含尺度上下文提取、子节点预测与模型压缩模块，实现快速推理与紧凑解码器。实验表明该方法持续超越传统与AI方法：在MVUB数据集收敛时间下，码流较G-PCC
+    TMC13v23降低约21.21%，较SparsePCGC降低约21.95%。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 点云几何压缩属沉浸式媒体域，按规则不给deep_read，但为首个INR无损点云几何压缩方法，与音视频技术高度相关。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: LINR-PCGC：面向点云几何压缩的无损隐式神经表示
+relations:
+- type: same_topic
+  ref: paper:arxiv:2207.12554
+  note: 同为点云几何压缩（动态点云几何编码）
+- type: same_topic
+  ref: paper:arxiv:2402.11250
+  note: 同为点云几何压缩（层次先验超分辅助）
+- type: same_topic
+  ref: paper:arxiv:2505.20059
+  note: 同为学习式点云压缩（LiDAR预测编码）
+- type: same_topic
+  ref: paper:arxiv:2605.20672
+  note: 同为过拟合/INR式压缩方法族（图像过拟合压缩）

@@ -1,0 +1,68 @@
+id: paper:arxiv:2206.12186
+type: paper
+title: Rate-Distortion Optimal Transform Coefficient Selection for Unoccupied Regions in Video-Based Point
+  Cloud Compression
+domain: immersive_media
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2206.12186v1
+  url: https://arxiv.org/abs/2206.12186
+  pdf_url: https://arxiv.org/pdf/2206.12186v1
+  venue: arXiv preprint
+time:
+  published: '2022-06-24'
+  collected: '2026-11-14'
+entities:
+- ref: codec:V-PCC
+  role: subject
+- ref: codec:HEVC
+  role: uses
+claims:
+- statement: 在全intra配置下，所提方法相对标准V-PCC编码在几何误差度量上取得超过4%的码率节省
+  confidence: reported
+  metrics:
+  - name: 码率节省
+    value: '>4%'
+    scope: 全intra配置，几何误差度量，相对标准V-PCC编码
+  evidence: abstract（初筛，未读全文）
+- statement: 在全intra配置下，纹理误差度量的码率节省超过6%，为文献对比方法的两倍以上
+  confidence: reported
+  metrics:
+  - name: 码率节省
+    value: '>6%'
+    scope: 全intra配置，纹理误差度量，相对标准V-PCC编码
+  evidence: abstract（初筛，未读全文）
+- statement: 随机访问配置下，所提方法相比竞争V-PCC方法性能提升超过0.5%
+  confidence: reported
+  metrics:
+  - name: 码率节省
+    value: '>0.5%'
+    scope: 随机访问配置，相对竞争V-PCC方法
+  evidence: abstract（初筛，未读全文）
+- statement: 方法仅改变变换系数取值，生成的码流与V-PCC标准完全兼容（无需修改解码端）
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出率失真最优的变换系数选择方法填充V-PCC未占用像素区域，全intra下几何/纹理码率节省超4%/6%。
+  abstract_zh: 该文针对基于视频的点云压缩（V-PCC）中同时包含占用与未占用像素的编码块，提出一种率失真最优的变换系数确定方法。方法利用广义频率选择性外推（FSE）框架，对二维DCT与DST的全部基函数迭代求解率失真最优系数值，以填充未占用像素区域。算法仅修改变换系数取值，所得码流完全符合V-PCC标准，并在HEVC编码框架下实现。实验显示，全intra编码下几何误差度量码率节省超过4%、纹理误差度量节省超过6%，均为文献对比方法的两倍以上；随机访问配置下相比竞争V-PCC方法再获得超过0.5%的增益。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 研究对象为V-PCC点云压缩中未占用区域的率失真优化变换系数选择，属沉浸式媒体域（点云），按规则仅给summary_only，但底层为HEVC/RDO视频编码技术，相关度高。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 面向基于视频的点云压缩中未占用区域的率失真最优变换系数选择
+relations:
+- type: same_topic
+  ref: paper:arxiv:2606.29179
+  note: 同属V-PCC（基于视频的点云压缩）编码优化方向
+- type: same_topic
+  ref: paper:arxiv:2207.12554
+  note: 同属点云几何压缩研究
+- type: same_topic
+  ref: paper:arxiv:2602.08613
+  note: 同属点云压缩编码标准与技术领域

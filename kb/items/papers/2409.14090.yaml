@@ -1,0 +1,67 @@
+id: paper:arxiv:2409.14090
+type: paper
+title: Window-based Channel Attention for Wavelet-enhanced Learned Image Compression
+domain: video_image_coding
+research_lines:
+- traditional_codec_opt
+source:
+  channel: arxiv
+  external_id: 2409.14090v6
+  url: https://arxiv.org/abs/2409.14090
+  pdf_url: https://arxiv.org/pdf/2409.14090v6
+  venue: arXiv preprint
+time:
+  published: '2024-09-21'
+  collected: '2026-11-14'
+entities:
+- ref: impl:VTM
+  role: subject
+- ref: metric:BD-Rate
+  role: measured_by
+claims:
+- statement: 首次将窗口划分融入通道注意力，使LIC编码器获得大感受野并捕获更全局的信息，突破Swin移位窗口注意力的感受野增长限制。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 提出空间-通道混合（SCH）注意力框架，建立多个感受野，在捕获大感受野全局相关性的同时保留小感受野的局部细节表征，并引入离散小波变换实现频率自适应下采样。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 该方法达到SOTA性能，在四个标准数据集上相对VTM-23.1均取得显著BD-rate降低（数据集未在摘要中具名）。
+  confidence: reported
+  metrics:
+  - name: BD-Rate
+    value: -18.54%
+    scope: 相对VTM-23.1，四个标准数据集中的第1个（摘要未具名）
+  - name: BD-Rate
+    value: -23.98%
+    scope: 相对VTM-23.1，四个标准数据集中的第2个（摘要未具名）
+  - name: BD-Rate
+    value: -22.33%
+    scope: 相对VTM-23.1，四个标准数据集中的第3个（摘要未具名）
+  - name: BD-Rate
+    value: -24.71%
+    scope: 相对VTM-23.1，四个标准数据集中的第4个（摘要未具名）
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出窗口划分通道注意力与离散小波下采样结合的SCH框架，突破Swin感受野限制，实现SOTA学习图像压缩。
+  abstract_zh: 针对Swin-Transformer基学习图像压缩（LIC）中移位窗口注意力导致感受野受限、难以建模大对象的问题，本文首次将窗口划分融入通道注意力，以获得大感受野并捕获全局信息。鉴于通道注意力会削弱局部信息学习，作者进一步将注意力机制扩展为空间-通道联合注意力（SCH框架），建立多个感受野，在捕获全局相关性的同时保持局部细节表征。框架中还引入离散小波变换进行频率自适应下采样，进一步扩大感受野。实验显示，该方法在四个标准数据集上相对VTM-23.1分别降低BD-rate
+    18.54%、23.98%、22.33%和24.71%，达到当前最优性能。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 核心域学习图像压缩：首次将窗口划分引入通道注意力并结合离散小波下采样，相对VTM-23.1取得大幅BD-rate增益，属强结果新架构，值得深读。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 面向小波增强学习图像压缩的窗口化通道注意力
+relations:
+- type: same_topic
+  ref: paper:arxiv:2606.00111
+  note: 同为通道-小波域Transformer注意力建模用于学习图像压缩，主题高度相近
+- type: same_topic
+  ref: paper:arxiv:2306.14287
+  note: 同为LIC中的空间-通道窗口注意力建模（Contextformer），本文是其注意力机制的扩展方向
+- type: same_topic
+  ref: paper:arxiv:2403.14471
+  note: 同为基于Swin变换的学习图像压缩，本文针对其移位窗口注意力感受野受限的问题进行改进

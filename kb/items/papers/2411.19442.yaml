@@ -1,0 +1,76 @@
+id: paper:arxiv:2411.19442
+type: paper
+title: 'MCUCoder: Adaptive Bitrate Learned Video Compression for IoT Devices'
+domain: video_image_coding
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2411.19442v1
+  url: https://arxiv.org/abs/2411.19442
+  pdf_url: https://arxiv.org/pdf/2411.19442v1
+  venue: arXiv preprint
+time:
+  published: '2024-11-29'
+  collected: '2026-11-14'
+entities:
+- ref: concept:ABR
+  role: subject
+- ref: dataset:MCL-JCV
+  role: evaluated_on
+- ref: dataset:UVG
+  role: evaluated_on
+- ref: metric:MS-SSIM
+  role: measured_by
+claims:
+- statement: MCUCoder编码器极度轻量，仅含10.5K参数、内存占用350KB，可适配仅有1-2MB RAM的IoT/MCU边缘设备。
+  confidence: reported
+  metrics:
+  - name: 参数量
+    value: 10.5K
+    scope: 编码器
+  - name: 内存占用
+    value: 350KB
+    scope: 编码器运行时
+  evidence: abstract（初筛，未读全文）
+- statement: 在与M-JPEG能耗相近的条件下，MCUCoder以MS-SSIM为质量口径显著降低码率。
+  confidence: reported
+  metrics:
+  - name: 码率降低
+    value: 55.65%
+    scope: MCL-JCV数据集，MS-SSIM口径，对比M-JPEG
+  - name: 码率降低
+    value: 55.59%
+    scope: UVG数据集，MS-SSIM口径，对比M-JPEG
+  evidence: abstract（初筛，未读全文）
+- statement: MCUCoder生成按重要性排序的潜在表示，支持按可用带宽截断传输，实现低资源设备在波动网络下的自适应码率实时视频传输。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 面向IoT/MCU的超轻量学习型视频编码器：仅10.5K参数，码率较M-JPEG降约55%且支持自适应码率传输
+  abstract_zh: 摄像头类IoT设备通常仅有1-2MB内存且网络不稳定，传统与深度视频压缩方法均超出其硬件能力，实际部署往往退化为M-JPEG。该文提出开源的自适应码率学习型视频压缩模型MCUCoder，编码器仅含10.5K参数、内存占用350KB，可在MCU等资源受限边缘设备上运行。在与M-JPEG能耗相近的前提下，以MS-SSIM为质量口径，MCUCoder在MCL-JCV与UVG数据集上分别将码率降低55.65%与55.59%。其生成按重要性排序的潜在表示，可依据可用带宽截断传输，从而在低资源设备上实现带宽波动下的平滑实时视频传输。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 核心域视频编码：面向RAM仅1-2MB的IoT/MCU设备的超轻量学习型视频编码器，兼顾ABR能力与约55%的码率增益，属代表性工作，值得深读。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: MCUCoder：面向物联网设备的自适应码率学习型视频压缩
+relations:
+- type: same_topic
+  ref: paper:arxiv:2310.01258
+  note: 同为面向移动/资源受限设备的轻量神经视频压缩
+- type: same_topic
+  ref: paper:arxiv:2606.28027
+  note: 同为面向真实部署平台的学习型视频编解码器
+- type: same_topic
+  ref: paper:arxiv:2512.04019
+  note: 同为超轻量神经视频表示压缩方向
+- type: same_topic
+  ref: paper:arxiv:2305.12333
+  note: 同为面向实时低传输场景的神经编解码链路
+- type: same_topic
+  ref: paper:arxiv:2603.13597
+  note: 同涉自适应码率（ABR）码率供给方向
