@@ -1,0 +1,37 @@
+id: standard_proposal:jvet:m193-AC0223
+type: standard_proposal
+title: 'JVET-AC0223: Crosscheck of JVET-AC0052 (EE1-2.4: CNN filter Based on RPR-based SR Combined with
+  GOP Level Adaptive Resolution)'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2023-01-Teleconference@JVET-AC0223
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=12427
+time:
+  published: '2023-01-11'
+  collected: '2026-11-14'
+entities:
+- ref: concept:SuperResolution
+  role: uses
+- ref: concept:GOP
+  role: uses
+- ref: org:JVET
+  role: subject
+claims:
+- statement: 该文档是对EE1-2.4探索实验方案（RPR超分CNN滤波+GOP级自适应分辨率）的第三方交叉核查，属于ECM探索阶段工具验证过程的一部分
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 由Ericsson对基于RPR超分CNN滤波结合GOP级自适应分辨率方案的交叉核查验证报告。
+  abstract_zh: 该文档为2023年1月JVET电视电话会议上对探索实验EE1-2.4提案JVET-AC0052的交叉核查（crosscheck）报告，验证方向为基于参考图像重采样（RPR）超分辨率的CNN滤波与GOP级自适应分辨率相结合的编码工具，属于标准探索阶段的结果复核记录。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 属于对具体探索实验（EE1-2.4）技术方案的交叉核查报告，标题含明确工具与实验，非原始重大节点文档。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-AC0223: 对JVET-AC0052的交叉核查（EE1-2.4：基于RPR超分辨率的CNN滤波结合GOP级自适应分辨率）'

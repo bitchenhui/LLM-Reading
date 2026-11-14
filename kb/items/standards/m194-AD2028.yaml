@@ -1,0 +1,32 @@
+id: standard_proposal:jvet:m194-AD2028
+type: standard_proposal
+title: 'JVET-AD2028: Additional conformance bitstreams for VVC multilayer configurations'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2023-04-Antalya@JVET-AD2028
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=12985
+time:
+  published: '2023-04-21'
+  collected: '2026-11-14'
+entities:
+- ref: codec:VVC
+  role: subject
+claims:
+- statement: 该文档为VVC多层配置追加一致性比特流，推断其用于支持解码器一致性核查与多层扩展的互操作验证，属于VVC生态一致性规范进程的配套贡献。
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 为VVC多层配置新增一致性测试比特流，支撑一致性规范与解码器验证。
+  abstract_zh: 该文档为2023年4月安塔利亚JVET会议的具体技术贡献，提出为VVC多层配置补充一致性比特流，属一致性规范建设与标准验证配套工作的一部分。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 具体技术贡献：为VVC多层配置补充一致性比特流，非CfP/验证测试等重大节点
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-AD2028: 面向VVC多层配置的附加一致性比特流'

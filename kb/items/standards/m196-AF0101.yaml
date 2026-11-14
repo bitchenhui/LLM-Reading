@@ -1,0 +1,32 @@
+id: standard_proposal:jvet:m196-AF0101
+type: standard_proposal
+title: 'JVET-AF0101: AHG12: ECM software cleanup for decoder side intra predictions acceleration'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2023-10-Hannover@JVET-AF0101
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=13348
+time:
+  published: '2023-10-13'
+  collected: '2026-11-14'
+entities:
+- ref: codec:ECM
+  role: subject
+claims:
+- statement: 该文档针对 ECM 参考软件进行代码清理，目标是加速解码端帧内预测的软件实现路径，属于超出 VVC 的 ECM 探索进程中的实现维护类贡献
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 夏普提交对 ECM 参考软件中解码端帧内预测相关代码的清理，以加速解码实现。
+  abstract_zh: 该文档是 2023 年 10 月汉诺威 JVET 会议上挂接于 AHG12 的软件清理类贡献，属于 VVC 之后 ECM 探索线的软件维护与实现加速工作，不涉及新编码工具的提案或采纳。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 属于 AHG12 框架下的 ECM 参考软件清理类技术贡献，非新编码工具提案，也不是 CfP、验证测试等重大节点。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-AF0101: AHG12：面向解码端帧内预测加速的 ECM 软件清理'

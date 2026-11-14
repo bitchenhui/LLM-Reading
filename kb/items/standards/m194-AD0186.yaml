@@ -1,0 +1,33 @@
+id: standard_proposal:jvet:m194-AD0186
+type: standard_proposal
+title: 'JVET-AD0186: AHG8: VVC tool analysis for Machines Vision Tasks'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2023-04-Antalya@JVET-AD0186
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=12748
+time:
+  published: '2023-04-21'
+  collected: '2026-11-14'
+entities:
+- ref: codec:VVC
+  role: subject
+claims:
+- statement: 该文档以 VVC 工具在机器视觉任务中的表现为分析对象，是 JVET 机器视觉编码 AHG 工作线下的过程性评估输入，反映标准组织对'编码用于机器'应用需求的关注
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 分析 VVC 现有编码工具在机器视觉任务场景下的适用性与表现。
+  abstract_zh: 该文档为腾讯团队提交给 JVET 机器视觉相关编码 AHG（AHG8）的分析类贡献，评估 VVC 工具对机器视觉任务（编码服务机器分析而非人眼观看）的支撑能力，属于编码用于机器（VCM
+    方向）探索线的输入材料。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 面向机器视觉方向的 VVC 编码工具分析类 AHG 贡献，属具体研究方向的过程性文档而非重大标准节点
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-AD0186: AHG8：面向机器视觉任务的 VVC 工具分析'

@@ -1,0 +1,32 @@
+id: standard_proposal:jvet:m195-AE0056
+type: standard_proposal
+title: 'JVET-AE0056: Non-EE2: Changes on TIMD and SGPM for reducing ECM decoder complexity'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2023-07-Geneva@JVET-AE0056
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=13004
+time:
+  published: '2023-07-11'
+  collected: '2026-11-14'
+entities:
+- ref: codec:ECM
+  role: subject
+claims:
+- statement: 该提案针对ECM中TIMD与SGPM工具进行复杂度导向的修改，属于下一代标准开发中的解码复杂度优化技术输入
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 夏普提出修改ECM中TIMD与SGPM两项工具，以降低解码端复杂度
+  abstract_zh: 该文档是2023年7月日内瓦会议上ECM标准开发阶段的非核心实验输入提案，方向为通过调整模板导出（TIMD）与几何划分类工具（SGPM）来削减解码器复杂度，体现ECM研制中压缩效率与解码成本的权衡考量。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 具体工具级技术提案（修改ECM中TIMD与SGPM以降解码复杂度），非重大节点或行政事务
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-AE0056: 非EE2：针对降低ECM解码器复杂度的TIMD与SGPM修改'

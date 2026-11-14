@@ -1,0 +1,32 @@
+id: standard_proposal:jvet:m189-Y0152
+type: standard_proposal
+title: 'JVET-Y0152: AHG10: Fast skip of TT split partitioning on top of ECM reference software'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2022-01-Teleconference@JVET-Y0152
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=11346
+time:
+  published: '2022-01-12'
+  collected: '2026-11-14'
+entities:
+- ref: codec:ECM
+  role: subject
+claims:
+- statement: 该提案针对ECM参考软件提出TT分割划分的快速跳过技术，属于JVET在VVC之后下一代编码探索（ECM迭代）期间向AHG10提交的工具优化类贡献
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 腾讯提出在ECM参考软件中快速跳过TT（三叉树）分割判定，以降低编码复杂度
+  abstract_zh: 该文档是2022年1月JVET远程会议提交至AHG10的具体技术提案，属于ECM下一代编码探索迭代中的编码复杂度优化方向，针对CU划分中TT分割判定的高耗时问题提出快速跳过方法。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 标题含明确工具与实验（在ECM参考软件上跳过TT分割的快速编码决策），属具体技术提案而非AHG进展报告或重大节点
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-Y0152: AHG10：在ECM参考软件上快速跳过TT分割划分'

@@ -1,0 +1,33 @@
+id: standard_proposal:jvet:m192-AB2027
+type: standard_proposal
+title: 'JVET-AB2027: SEI processing order SEI message in VVC (draft 2)'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2022-10-Mainz@JVET-AB2027
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=12223
+time:
+  published: '2022-10-20'
+  collected: '2026-11-14'
+entities:
+- ref: codec:VVC
+  role: subject
+claims:
+- statement: 该文档围绕 VVC 的 SEI 机制提出新的处理顺序 SEI 消息草案文本，属于标准制定过程中的具体工具级技术贡献，其影响有待后续版本采纳情况确认。
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出在 VVC 中定义 SEI 消息处理顺序的新 SEI 消息，并给出第二版草案文本。
+  abstract_zh: 该文档为 2022 年 10 月 Mainz 会议上提交的 VVC 技术提案，属 SEI 补充增强信息机制细化工作，'draft 2' 表明这是对前次提案的修订迭代，方向为通过新增
+    SEI 消息显式规定 SEI 消息的处理顺序。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 属于针对 VVC 的具体技术提案（SEI 处理顺序消息草案第二版），非重大节点亦非行政事务。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-AB2027: VVC 中的 SEI 处理顺序 SEI 消息（第 2 版草案）'

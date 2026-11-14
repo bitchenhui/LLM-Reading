@@ -1,0 +1,38 @@
+id: standard_proposal:jvet:m195-AE0162
+type: standard_proposal
+title: 'JVET-AE0162: AHG11/AHG14: Fix MS-SSIM calculation for SR'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2023-07-Geneva@JVET-AE0162
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=13125
+time:
+  published: '2023-07-11'
+  collected: '2026-11-14'
+entities:
+- ref: metric:MS-SSIM
+  role: subject
+- ref: concept:SuperResolution
+  role: subject
+claims:
+- statement: 该文档针对超分辨率任务中 MS-SSIM 指标的计算错误或偏差提出修正，供 JVET AHG11/AHG14 讨论采纳
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+- statement: 该修正有助于规范 JVET 超分辨率相关探索实验的客观质量评价方式
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 针对超分辨率评测中 MS-SSIM 质量指标计算存在的问题提出修正方案。
+  abstract_zh: 该文档是提交至 JVET 2023 年 7 月日内瓦会议 AHG11/AHG14 的具体技术提案，方向为修正超分辨率（SR）任务中 MS-SSIM 质量指标的计算流程，服务于
+    JVET 内 AI 相关编码探索的评测规范性。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 面向 AHG 的具体技术修正提案，主题为修复超分辨率评测中 MS-SSIM 指标的计算，属常规工具性贡献而非重大标准节点。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-AE0162: AHG11/AHG14：修复超分辨率（SR）的 MS-SSIM 计算'

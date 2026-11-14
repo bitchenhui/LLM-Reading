@@ -1,0 +1,33 @@
+id: standard_proposal:jvet:m190-Z0063
+type: standard_proposal
+title: 'JVET-Z0063: AHG12: Fix for parsing of MHP information in ECM'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2022-04-Teleconference@JVET-Z0063
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=11498
+time:
+  published: '2022-04-20'
+  collected: '2026-11-14'
+entities:
+- ref: codec:ECM
+  role: subject
+claims:
+- statement: 该文档针对 ECM 参考软件中 MHP 信息解析的实现问题提出修正，作为 AHG12 的技术输入供后续 ECM 版本采纳，属于下一代编码探索中的具体工具修复过程记录。
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 向 AHG12 提交 ECM 参考软件中 MHP 信息解析环节的修正方案。
+  abstract_zh: 该文档为 2022 年 4 月 JVET 电信会议向 AHG12（ECM 相关专题组）提交的技术输入，由 Ericsson 提出，针对 ECM 参考软件中 MHP 信息的解析问题给出修复。属
+    ECM 演进过程中的具体软件修正类贡献，而非标准重大节点。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 面向 AHG12 的具体技术修复提案（ECM 中 MHP 信息解析修正），非 CfP/验证测试等重大节点，按摘要级别收录。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-Z0063: AHG12：ECM 中 MHP 信息解析的修正'

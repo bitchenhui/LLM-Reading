@@ -1,0 +1,32 @@
+id: standard_proposal:jvet:m190-Z0111
+type: standard_proposal
+title: 'JVET-Z0111: Adaptively bypass affine ME in VTM'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2022-04-Teleconference@JVET-Z0111
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=11558
+time:
+  published: '2022-04-20'
+  collected: '2026-11-14'
+entities:
+- ref: impl:VTM
+  role: subject
+claims:
+- statement: 提案主题为在VTM中引入自适应机制旁路仿射运动估计，属降低编码器复杂度的快速算法类技术贡献，基于标题克制推断，未验证其实验效果与收录结果。
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出在VTM参考软件中按条件自适应跳过仿射运动估计，以降低帧间编码复杂度。
+  abstract_zh: 该文档是腾讯于2022年4月JVET远程全会提交的具体编码工具提案，方向为VTM中仿射运动估计的自适应旁路/快速化。属帧间编码优化类常规 input，供后续核心实验（CE）或采纳讨论参考。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 标题指向具体的帧间编码快速工具提案（自适应旁路仿射ME），属常规技术贡献而非重大节点文档。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-Z0111: 在VTM中自适应旁路仿射运动估计'

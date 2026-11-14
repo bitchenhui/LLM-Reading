@@ -1,0 +1,32 @@
+id: standard_proposal:jvet:m189-Y0098
+type: standard_proposal
+title: 'JVET-Y0098: EE1-related: Combination of VVC deblocking and NN loop filtering'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2022-01-Teleconference@JVET-Y0098
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=11292
+time:
+  published: '2022-01-12'
+  collected: '2026-11-14'
+entities:
+- ref: codec:VVC
+  role: subject
+claims:
+- statement: 该提案围绕EE1探索实验，研究将NN环路滤波与VVC既有去块滤波相结合的性能表现，是VVC后探索期环路滤波工具演进方向的贡献之一。
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 探索将神经网络环路滤波器与VVC去块滤波组合使用的编码增益。
+  abstract_zh: 该文档是VVC定稿后探索阶段（EE1相关）的技术提案，由爱立信提出，研究方向为NN环路滤波与VVC去块滤波的组合方式，属潜在下一代标准环路滤波工具的探索实验。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 具体技术提案：EE1相关的NN环路滤波与VVC去块滤波组合实验，标题含明确工具与实验方向，按基准列为summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-Y0098: EE1相关：VVC去块滤波与神经网络环路滤波的结合'

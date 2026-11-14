@@ -1,0 +1,32 @@
+id: standard_proposal:jvet:m196-AF0045
+type: standard_proposal
+title: 'JVET-AF0045: AHG2/AHG9: On the use of NNPF SEI messages in AVC'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2023-10-Hannover@JVET-AF0045
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=13289
+time:
+  published: '2023-10-13'
+  collected: '2026-11-14'
+entities:
+- ref: codec:AVC
+  role: subject
+claims:
+- statement: 该文档为提交给 AHG2/AHG9 的技术提案，主题是 NNPF SEI 消息在 AVC 中的使用方式，反映神经网络类 SEI 工具从 VVC/VSEI 生态向既有编码标准扩展的标准线动向
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 探讨将神经网络后滤波（NNPF）SEI 消息用于 AVC 码流的可行方式。
+  abstract_zh: 该文档由 Nokia 提交给 JVET 的 VSEI 与神经网络编码专题组，讨论将神经网络后滤波 SEI 消息机制应用于 AVC 标准，属于 SEI 工具向既有编码标准扩展的具体技术提案，处于标准生态跨版本延伸的讨论阶段。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 面向 AHG2/AHG9 的具体技术提案，标题含明确工具方向（NNPF SEI 在 AVC 中的应用），不属重大节点
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-AF0045: AHG2/AHG9：关于在 AVC 中使用 NNPF SEI 消息'

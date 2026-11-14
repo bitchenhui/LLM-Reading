@@ -1,0 +1,38 @@
+id: standard_proposal:jvet:m192-AB0097
+type: standard_proposal
+title: 'JVET-AB0097: Crosscheck of JVET-AB0084 (EE1-2.3：A CNN-based Super Resolution Method with GOP Level
+  Adaptive Resolution)'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2022-10-Mainz@JVET-AB0097
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=12024
+time:
+  published: '2022-10-20'
+  collected: '2026-11-14'
+entities:
+- ref: concept:SuperResolution
+  role: subject
+- ref: concept:GOP
+  role: uses
+- ref: org:JVET
+  role: subject
+claims:
+- statement: 该文档是对探索实验 EE1-2.3（CNN 超分辨率 + GOP 级自适应分辨率）结果进行独立交叉验证的报告，属于 JVET 下一代标准工具探索流程中的验证环节
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 对 EE1-2.3 提案中 CNN 超分辨率结合 GOP 级自适应分辨率方案的第三方交叉验证结果。
+  abstract_zh: 本文档为 2022 年 10 月美因茨 JVET-AB 会议上对探索实验提案 JVET-AB0084（EE1-2.3）的交叉验证报告，主题方向为基于 CNN 的超分辨率与 GOP
+    级自适应分辨率相结合的编码工具。交叉验证是 JVET 探索实验结果进入后续工具评估前的标准核验环节，其结论直接影响该技术候选的推进。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 对探索实验（EE1-2.3）结果的交叉验证属于验证测试类文档，是下一代编码工具候选进入后续评估的关键核验节点
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-AB0097: JVET-AB0084 交叉验证（EE1-2.3：基于 CNN 的结合 GOP 级自适应分辨率的超分辨率方法）'

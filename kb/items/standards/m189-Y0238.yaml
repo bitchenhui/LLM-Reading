@@ -1,0 +1,33 @@
+id: standard_proposal:jvet:m189-Y0238
+type: standard_proposal
+title: 'JVET-Y0238: Crosscheck of Y0152 (AHG10: Fast skip of TT split partitioning on top of ECM reference
+  software)'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2022-01-Teleconference@JVET-Y0238
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=11447
+time:
+  published: '2022-01-12'
+  collected: '2026-11-14'
+entities:
+- ref: codec:ECM
+  role: subject
+claims:
+- statement: 该文档对ECM快速编码工具提案Y0152的结果进行交叉核查，用于验证其报告的收益是否可复现，为ECM参考软件的工具采纳决策提供依据。
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 对在ECM参考软件上快速跳过三叉树（TT）划分的工具提案Y0152进行第三方交叉核查。
+  abstract_zh: 该文档是JVET-Y次会议（2022年1月）中对提案JVET-Y0152的交叉核查报告，主题方向为在ECM参考软件上通过快速跳过TT划分降低编码复杂度，处于ECM快速编码工具采纳验证环节。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 针对具体快速编码工具提案的交叉核查报告，属ECM采纳流程中的常规验证性文档，非重大节点。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-Y0238: 对Y0152的交叉核查（AHG10：在ECM参考软件上实现TT划分的快速跳过）'

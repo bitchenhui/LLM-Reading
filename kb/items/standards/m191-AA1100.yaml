@@ -1,0 +1,35 @@
+id: standard_proposal:jvet:m191-AA1100
+type: standard_proposal
+title: 'JVET-AA1100: Common Test Conditions for HM Video Coding Experiments'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2022-07-Teleconference@JVET-AA1100
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=11945
+time:
+  published: '2022-07-13'
+  collected: '2026-11-14'
+entities:
+- ref: impl:HM
+  role: subject
+claims:
+- statement: 该文档是HM视频编码实验线的公共测试条件文件，为基于HM的编码工具提案提供统一测试配置与锚点评估框架
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+- statement: 其持续更新表明JVET在VVC定稿后仍围绕HM开展后续编码改进的探索实验
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 规定基于HM参考软件开展视频编码工具改进实验的统一测试条件与评估流程。
+  abstract_zh: VVC定稿后的探索阶段，JVET基于HM（HEVC测试模型）开展编码工具改进实验；本文档为该系列的更新版，规定统一的测试序列、编码配置与评估条件。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 该文档为基于HM的编码改进探索实验线规定统一公共测试条件，是该探索线的权威评估框架，属标准进程关键节点
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-AA1100: HM视频编码实验的公共测试条件'
