@@ -1,0 +1,35 @@
+id: paper:arxiv:2502.20379
+status: skipped
+score: 1
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+meta:
+  title: 'Multi-Agent Verification: Scaling Test-Time Compute with Multiple Verifiers'
+  authors:
+  - Shalev Lifshitz
+  - Sheila A. McIlraith
+  - Yilun Du
+  published: '2025-02-27'
+  updated: '2025-02-27'
+  categories:
+  - cs.AI
+  abstract: 'By utilizing more computational resources at test-time, large language models (LLMs) can
+    improve without additional training. One common strategy uses verifiers to evaluate candidate outputs.
+    In this work, we propose a novel scaling dimension for test-time compute: scaling the number of verifiers.
+    We introduce Multi-Agent Verification (MAV) as a test-time compute paradigm that combines multiple
+    verifiers to improve performance. We propose using Aspect Verifiers (AVs), off-the-shelf LLMs prompted
+    to verify different aspects of outputs, as one possible choice for the verifiers in a MAV system.
+    AVs are a convenient building block for MAV since they can be easily combined without additional training.
+    Moreover, we introduce BoN-MAV, a simple multi-agent verification algorithm that combines best-of-n
+    sampling with multiple verifiers. BoN-MAV demonstrates stronger scaling patterns than self-consistency
+    and reward model verification, and we demonstrate both weak-to-strong generalization, where combining
+    weak verifiers improves even stronger LLMs, and self-improvement, where the same base model is used
+    to both generate and verify outputs. Our results establish scaling the number of verifiers as a promising
+    new dimension for improving language model performance at test-time.'
+  url: https://arxiv.org/abs/2502.20379
+  pdf_url: https://arxiv.org/pdf/2502.20379v1
+  version: v1
+fetched: '2026-11-14'

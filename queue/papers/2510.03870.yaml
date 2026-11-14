@@ -1,0 +1,33 @@
+id: paper:arxiv:2510.03870
+status: skipped
+score: 1
+track: processing_enhancement
+matched:
+- ref: concept:SuperResolution
+  count: 1
+  weight: 1
+meta:
+  title: 'SDAKD: Student Discriminator Assisted Knowledge Distillation for Super-Resolution Generative
+    Adversarial Networks'
+  authors:
+  - Nikolaos Kaparinos
+  - Vasileios Mezaris
+  published: '2025-10-04'
+  updated: '2025-10-04'
+  categories:
+  - cs.CV
+  abstract: Generative Adversarial Networks (GANs) achieve excellent performance in generative tasks,
+    such as image super-resolution, but their computational requirements make difficult their deployment
+    on resource-constrained devices. While knowledge distillation is a promising research direction for
+    GAN compression, effectively training a smaller student generator is challenging due to the capacity
+    mismatch between the student generator and the teacher discriminator. In this work, we propose Student
+    Discriminator Assisted Knowledge Distillation (SDAKD), a novel GAN distillation methodology that introduces
+    a student discriminator to mitigate this capacity mismatch. SDAKD follows a three-stage training strategy,
+    and integrates an adapted feature map distillation approach in its last two training stages. We evaluated
+    SDAKD on two well-performing super-resolution GANs, GCFSR and Real-ESRGAN. Our experiments demonstrate
+    consistent improvements over the baselines and SOTA GAN knowledge distillation methods. The SDAKD
+    source code will be made openly available upon acceptance of the paper.
+  url: https://arxiv.org/abs/2510.03870
+  pdf_url: https://arxiv.org/pdf/2510.03870v1
+  version: v1
+fetched: '2026-11-14'

@@ -1,0 +1,39 @@
+id: paper:arxiv:2608.09594
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 3
+  weight: 1
+meta:
+  title: Illusion or Integrity? Geometrical Consistency Metric for AIGC Video Quality Evaluation
+  authors:
+  - Yifei Xue
+  - Yuanchen Fei
+  - Hao Zhang
+  - Chenzhi Nie
+  - Tie ji
+  - Yizhen Lao
+  published: '2026-08-10'
+  updated: '2026-08-10'
+  categories:
+  - cs.CV
+  - cs.AI
+  abstract: Recently, AI-driven video generation has attracted considerable attention. This surge increases
+    the demand for reliable video quality assessment (VQA) metrics to evaluate AI-generated content (AIGC)
+    videos and guide model optimization. Existing studies assess video quality through visual harmony,
+    video-text consistency, and domain-specific alignment, yet lack quantitative metrics for measuring
+    fidelity to physical laws. To address this limitation, we present a novel benchmark that evaluates
+    the quality of AIGC videos based on their compliance with physical principles by quantitatively measuring
+    geometric consistency across frames extracted from generated sequences. This serves as a proxy for
+    estimating the extent to which generated videos conform to real-world physical rules. Specifically,
+    GeoCon-Bench captures global motion through translation estimation, fits homography or fundamental
+    matrix models using background correspondences, and reports complementary metrics, including inlier
+    ratio and geometric error. We also release a dataset containing 20 scenes across six motion categories.
+    Experiments on state-of-the-art AIGC models demonstrate the reliability of GeoCon-Bench as a video
+    quality assessment metric.
+  url: https://arxiv.org/abs/2608.09594
+  pdf_url: https://arxiv.org/pdf/2608.09594v1
+  version: v1
+fetched: '2026-11-14'

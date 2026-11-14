@@ -1,0 +1,48 @@
+id: paper:arxiv:2506.21977
+status: pending
+score: 3
+track: video_image_coding
+matched:
+- ref: dataset:Kodak
+  count: 1
+  weight: 1
+- ref: metric:DISTS
+  count: 1
+  weight: 1
+- ref: metric:FID
+  count: 1
+  weight: 1
+meta:
+  title: 'StableCodec: Taming One-Step Diffusion for Extreme Image Compression'
+  authors:
+  - Tianyu Zhang
+  - Xin Luo
+  - Li Li
+  - Dong Liu
+  published: '2025-06-27'
+  updated: '2025-06-27'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: Diffusion-based image compression has shown remarkable potential for achieving ultra-low bitrate
+    coding (less than 0.05 bits per pixel) with high realism, by leveraging the generative priors of large
+    pre-trained text-to-image diffusion models. However, current approaches require a large number of
+    denoising steps at the decoder to generate realistic results under extreme bitrate constraints, limiting
+    their application in real-time compression scenarios. Additionally, these methods often sacrifice
+    reconstruction fidelity, as diffusion models typically fail to guarantee pixel-level consistency.
+    To address these challenges, we introduce StableCodec, which enables one-step diffusion for high-fidelity
+    and high-realism extreme image compression with improved coding efficiency. To achieve ultra-low bitrates,
+    we first develop an efficient Deep Compression Latent Codec to transmit a noisy latent representation
+    for a single-step denoising process. We then propose a Dual-Branch Coding Structure, consisting of
+    a pair of auxiliary encoder and decoder, to enhance reconstruction fidelity. Furthermore, we adopt
+    end-to-end optimization with joint bitrate and pixel-level constraints. Extensive experiments on the
+    CLIC 2020, DIV2K, and Kodak dataset demonstrate that StableCodec outperforms existing methods in terms
+    of FID, KID and DISTS by a significant margin, even at bitrates as low as 0.005 bits per pixel, while
+    maintaining strong fidelity. Additionally, StableCodec achieves inference speeds comparable to mainstream
+    transform coding schemes. All source code are available at https://github.com/LuizScarlet/StableCodec.
+  url: https://arxiv.org/abs/2506.21977
+  pdf_url: https://arxiv.org/pdf/2506.21977v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 47
+citation_year: 2025

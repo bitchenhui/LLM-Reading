@@ -1,0 +1,45 @@
+id: paper:arxiv:2601.05741
+status: pending
+score: 2
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 2
+  weight: 1
+- ref: concept:TrainingFree
+  count: 1
+  weight: 1
+meta:
+  title: 'ViTNT-FIQA: Training-Free Face Image Quality Assessment with Vision Transformers'
+  authors:
+  - Guray Ozgur
+  - Eduarda Caldeira
+  - Tahar Chettaoui
+  - Jan Niklas Kolf
+  - Marco Huber
+  - Naser Damer
+  - Fadi Boutros
+  published: '2026-01-09'
+  updated: '2026-01-09'
+  categories:
+  - cs.CV
+  - cs.LG
+  abstract: Face Image Quality Assessment (FIQA) is essential for reliable face recognition systems. Current
+    approaches primarily exploit only final-layer representations, while training-free methods require
+    multiple forward passes or backpropagation. We propose ViTNT-FIQA, a training-free approach that measures
+    the stability of patch embedding evolution across intermediate Vision Transformer (ViT) blocks. We
+    demonstrate that high-quality face images exhibit stable feature refinement trajectories across blocks,
+    while degraded images show erratic transformations. Our method computes Euclidean distances between
+    L2-normalized patch embeddings from consecutive transformer blocks and aggregates them into image-level
+    quality scores. We empirically validate this correlation on a quality-labeled synthetic dataset with
+    controlled degradation levels. Unlike existing training-free approaches, ViTNT-FIQA requires only
+    a single forward pass without backpropagation or architectural modifications. Through extensive evaluation
+    on eight benchmarks (LFW, AgeDB-30, CFP-FP, CALFW, Adience, CPLFW, XQLFW, IJB-C), we show that ViTNT-FIQA
+    achieves competitive performance with state-of-the-art methods while maintaining computational efficiency
+    and immediate applicability to any pre-trained ViT-based face recognition model.
+  url: https://arxiv.org/abs/2601.05741
+  pdf_url: https://arxiv.org/pdf/2601.05741v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 5
+citation_year: 2026

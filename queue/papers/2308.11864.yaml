@@ -1,0 +1,43 @@
+id: paper:arxiv:2308.11864
+status: skipped_low_citation
+score: 4
+track: video_image_coding
+matched:
+- ref: codec:VVC
+  count: 1
+  weight: 3
+- ref: dataset:Kodak
+  count: 1
+  weight: 1
+meta:
+  title: Enhanced Residual SwinV2 Transformer for Learned Image Compression
+  authors:
+  - Yongqiang Wang
+  - Feng Liang
+  - Haisheng Fu
+  - Jie Liang
+  - Haipeng Qin
+  - Junzhe Liang
+  published: '2023-08-23'
+  updated: '2023-08-23'
+  categories:
+  - eess.IV
+  abstract: Recently, the deep learning technology has been successfully applied in the field of image
+    compression, leading to superior rate-distortion performance. However, a challenge of many learning-based
+    approaches is that they often achieve better performance via sacrificing complexity, which making
+    practical deployment difficult. To alleviate this issue, in this paper, we propose an effective and
+    efficient learned image compression framework based on an enhanced residual Swinv2 transformer. To
+    enhance the nonlinear representation of images in our framework, we use a feature enhancement module
+    that consists of three consecutive convolutional layers. In the subsequent coding and hyper coding
+    steps, we utilize a SwinV2 transformer-based attention mechanism to process the input image. The SwinV2
+    model can help to reduce model complexity while maintaining high performance. Experimental results
+    show that the proposed method achieves comparable performance compared to some recent learned image
+    compression methods on Kodak and Tecnick datasets, and outperforms some traditional codecs including
+    VVC. In particular, our method achieves comparable results while reducing model complexity by 56%
+    compared to these recent methods.
+  url: https://arxiv.org/abs/2308.11864
+  pdf_url: https://arxiv.org/pdf/2308.11864v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 3
+citation_year: 2023

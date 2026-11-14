@@ -1,0 +1,51 @@
+id: paper:arxiv:2505.20059
+status: pending
+score: 5
+track: immersive_media
+matched:
+- ref: codec:G-PCC
+  count: 2
+  weight: 3
+- ref: concept:QP
+  count: 2
+  weight: 1
+- ref: org:MPEG
+  count: 1
+  weight: 1
+meta:
+  title: 'LPCM: Learning-based Predictive Coding for LiDAR Point Cloud Compression'
+  authors:
+  - Chang Sun
+  - Hui Yuan
+  - Shiqi Jiang
+  - Da Ai
+  - Wei Zhang
+  - Raouf Hamzaoui
+  published: '2025-05-26'
+  updated: '2025-05-26'
+  categories:
+  - eess.IV
+  abstract: Since the data volume of LiDAR point clouds is very huge, efficient compression is necessary
+    to reduce their storage and transmission costs. However, existing learning-based compression methods
+    do not exploit the inherent angular resolution of LiDAR and ignore the significant differences in
+    the correlation of geometry information at different bitrates. The predictive geometry coding method
+    in the geometry-based point cloud compression (G-PCC) standard uses the inherent angular resolution
+    to predict the azimuth angles. However, it only models a simple linear relationship between the azimuth
+    angles of neighboring points. Moreover, it does not optimize the quantization parameters for residuals
+    on each coordinate axis in the spherical coordinate system. We propose a learning-based predictive
+    coding method (LPCM) with both high-bitrate and low-bitrate coding modes. LPCM converts point clouds
+    into predictive trees using the spherical coordinate system. In high-bitrate coding mode, we use a
+    lightweight Long-Short-Term Memory-based predictive (LSTM-P) module that captures long-term geometry
+    correlations between different coordinates to efficiently predict and compress the elevation angles.
+    In low-bitrate coding mode, where geometry correlation degrades, we introduce a variational radius
+    compression (VRC) module to directly compress the point radii. Then, we analyze why the quantization
+    of spherical coordinates differs from that of Cartesian coordinates and propose a differential evolution
+    (DE)-based quantization parameter selection method, which improves rate-distortion performance without
+    increasing coding time. Experimental results on the LiDAR benchmark \textit{SemanticKITTI} and the
+    MPEG-specified \textit{Ford} datasets show that LPCM outperforms G-PCC and other learning-based methods.
+  url: https://arxiv.org/abs/2505.20059
+  pdf_url: https://arxiv.org/pdf/2505.20059v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 7
+citation_year: 2025

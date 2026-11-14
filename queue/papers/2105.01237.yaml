@@ -1,0 +1,39 @@
+id: paper:arxiv:2105.01237
+status: skipped
+score: 1
+track: processing_enhancement
+matched:
+- ref: concept:SuperResolution
+  count: 1
+  weight: 1
+meta:
+  title: 'COMISR: Compression-Informed Video Super-Resolution'
+  authors:
+  - Yinxiao Li
+  - Pengchong Jin
+  - Feng Yang
+  - Ce Liu
+  - Ming-Hsuan Yang
+  - Peyman Milanfar
+  published: '2021-05-04'
+  updated: '2021-10-12'
+  categories:
+  - cs.CV
+  abstract: 'Most video super-resolution methods focus on restoring high-resolution video frames from
+    low-resolution videos without taking into account compression. However, most videos on the web or
+    mobile devices are compressed, and the compression can be severe when the bandwidth is limited. In
+    this paper, we propose a new compression-informed video super-resolution model to restore high-resolution
+    content without introducing artifacts caused by compression. The proposed model consists of three
+    modules for video super-resolution: bi-directional recurrent warping, detail-preserving flow estimation,
+    and Laplacian enhancement. All these three modules are used to deal with compression properties such
+    as the location of the intra-frames in the input and smoothness in the output frames. For thorough
+    performance evaluation, we conducted extensive experiments on standard datasets with a wide range
+    of compression rates, covering many real video use cases. We showed that our method not only recovers
+    high-resolution content on uncompressed frames from the widely-used benchmark datasets, but also achieves
+    state-of-the-art performance in super-resolving compressed videos based on numerous quantitative metrics.
+    We also evaluated the proposed method by simulating streaming from YouTube to demonstrate its effectiveness
+    and robustness. The source codes and trained models are available at https://github.com/google-research/google-research/tree/master/comisr.'
+  url: https://arxiv.org/abs/2105.01237
+  pdf_url: https://arxiv.org/pdf/2105.01237v2
+  version: v2
+fetched: '2026-11-14'

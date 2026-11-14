@@ -1,0 +1,38 @@
+id: paper:arxiv:2603.29292
+status: skipped
+score: 1
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 1
+  weight: 1
+meta:
+  title: Self-Improving Code Generation via Semantic Entropy and Behavioral Consensus
+  authors:
+  - Huan Zhang
+  - Wei Cheng
+  - Wei Hu
+  published: '2026-03-31'
+  updated: '2026-03-31'
+  categories:
+  - cs.SE
+  - cs.AI
+  - cs.PL
+  abstract: 'Improving the code generation capabilities of large language models (LLMs) typically relies
+    on supervised fine-tuning or preference optimization, both of which require costly external resources
+    such as powerful teacher models or reliable test units. However, in real-world scenarios, it is much
+    harder to obtain reference solutions and test oracles than problem descriptions and test inputs. In
+    this paper, we tackle a challenging yet realistic question: Can a code language model improve itself
+    without access to a superior teacher and a test oracle? To answer this, we propose ConSelf, a self-improving
+    approach built upon two key ideas. First, we introduce code semantic entropy, a novel metric that
+    measures problem-level uncertainty by assessing the functional diversity of program behaviors, enabling
+    a curriculum construction with the most learnable problems. Second, we present consensus-driven direct
+    preference optimization (Con-DPO), a preference-based fine-tuning method that weights each preference
+    pair by its behavioral consensus, thereby mitigating the impact of noisy self-generated supervision.
+    Experiments on various benchmarks and backbone LLMs demonstrate that ConSelf significantly outperforms
+    baselines, validating the effectiveness of semantic entropy-based curriculum construction and consensus-driven
+    optimization in improving code generation without external supervision.'
+  url: https://arxiv.org/abs/2603.29292
+  pdf_url: https://arxiv.org/pdf/2603.29292v1
+  version: v1
+fetched: '2026-11-14'

@@ -1,0 +1,39 @@
+id: paper:arxiv:2505.12348
+status: pending
+score: 2
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: 'Reasoning-CV: Fine-tuning Powerful Reasoning LLMs for Knowledge-Assisted Claim Verification'
+  authors:
+  - Zhi Zheng
+  - Wee Sun Lee
+  published: '2025-05-18'
+  updated: '2025-05-18'
+  categories:
+  - cs.AI
+  abstract: Claim verification is essential in combating misinformation, and large language models (LLMs)
+    have recently emerged in this area as powerful tools for assessing the veracity of claims using external
+    knowledge. Existing LLM-based methods for claim verification typically adopt a Decompose-Then-Verify
+    paradigm, which involves decomposing complex claims into several independent sub-claims and verifying
+    each sub-claim separately. However, this paradigm often introduces errors during the claim decomposition
+    process. To mitigate these errors, we propose to develop the Chain-of-Thought (CoT)-Verify paradigm,
+    which leverages LLM reasoning methods to generate CoT-verification paths for the original complex
+    claim without requiring decompositions into sub-claims and separate verification stages. The CoT-Verify
+    paradigm allows us to propose a natural fine-tuning method called Reasoning-CV to enhance the verification
+    capabilities in LLMs. Reasoning-CV includes a supervised fine-tuning (SFT) stage and a self-improvement
+    direct preference optimization (DPO) stage. Utilizing only an 8B pre-trained LLM, Reasoning-CV demonstrates
+    superior knowledge-assisted claim verification performances compared to existing Decompose-Then-Verify
+    methods, as well as powerful black-box LLMs such as GPT-4o+CoT and o1-preview. Our code is available.
+  url: https://arxiv.org/abs/2505.12348
+  pdf_url: https://arxiv.org/pdf/2505.12348v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 5
+citation_year: 2025

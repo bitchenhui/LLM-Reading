@@ -1,0 +1,41 @@
+id: paper:arxiv:2102.03011
+status: skipped
+score: 1
+track: processing_enhancement
+matched:
+- ref: concept:SuperResolution
+  count: 1
+  weight: 1
+meta:
+  title: Sampling Based Scene-Space Video Processing
+  authors:
+  - Felix Klose
+  - Oliver Wang
+  - Jean-Charles Bazin
+  - Marcus Magnor
+  - Alexander Sorkine-Hornung
+  published: '2021-02-05'
+  updated: '2021-02-05'
+  categories:
+  - cs.CV
+  - cs.GR
+  abstract: Many compelling video processing effects can be achieved if per-pixel depth information and
+    3D camera calibrations are known. However, the success of such methods is highly dependent on the
+    accuracy of this "scene-space" information. We present a novel, sampling-based framework for processing
+    video that enables high-quality scene-space video effects in the presence of inevitable errors in
+    depth and camera pose estimation. Instead of trying to improve the explicit 3D scene representation,
+    the key idea of our method is to exploit the high redundancy of approximate scene information that
+    arises due to most scene points being visible multiple times across many frames of video. Based on
+    this observation, we propose a novel pixel gathering and filtering approach. The gathering step is
+    general and collects pixel samples in scene-space, while the filtering step is application-specific
+    and computes a desired output video from the gathered sample sets. Our approach is easily parallelizable
+    and has been implemented on GPU, allowing us to take full advantage of large volumes of video data
+    and facilitating practical runtimes on HD video using a standard desktop computer. Our generic scene-space
+    formulation is able to comprehensively describe a multitude of video processing applications such
+    as denoising, deblurring, super resolution, object removal, computational shutter functions, and other
+    scene-space camera effects. We present results for various casually captured, hand-held, moving, compressed,
+    monocular videos depicting challenging scenes recorded in uncontrolled environments.
+  url: https://arxiv.org/abs/2102.03011
+  pdf_url: https://arxiv.org/pdf/2102.03011v1
+  version: v1
+fetched: '2026-11-14'

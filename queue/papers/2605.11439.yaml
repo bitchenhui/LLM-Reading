@@ -1,0 +1,40 @@
+id: paper:arxiv:2605.11439
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'Instruct-ICL: Instruction-Guided In-Context Learning for Post-Disaster Damage Assessment'
+  authors:
+  - Armin Zarbaft
+  - Ehsan Karimi
+  - Nhut Le
+  - Maryam Rahnemoonfar
+  published: '2026-05-12'
+  updated: '2026-05-12'
+  categories:
+  - cs.CV
+  - cs.LG
+  abstract: Rapid and accurate situational awareness is essential for effective response during natural
+    disasters, where delays in analysis can significantly hinder decision-making. Training task-specific
+    models for post-disaster assessment is often time-consuming and computationally expensive, making
+    such approaches impractical in time-critical scenarios. Consequently, pretrained multimodal large
+    language models (MLLMs) have emerged as a promising alternative for post-disaster visual question
+    answering (VQA), a task that aims to answer structured questions about visual scenes by jointly reasoning
+    over images and text. While these models demonstrate strong multimodal reasoning capabilities, their
+    responses can be sensitive to prompt formulation, which can limit their reliability in real-world
+    disaster assessment scenarios. In this paper, we investigate whether structured reasoning strategies
+    can improve the reliability of pretrained MLLMs for post-disaster VQA. Specifically, we explore multiple
+    prompting paradigms in which one MLLM is used to generate task-specific instructions that serve as
+    Chain-of-Thought (CoT) guidance for a second MLLM. These instructions are incorporated during answer
+    generation with varying degrees of in-context learning (ICL), enabling the model to leverage both
+    explicit reasoning guidance and contextual examples. We conduct our evaluation on the FloodNet dataset
+    and compare these approaches against a zero-shot baseline. Our results demonstrate that integrating
+    instruction-driven CoT reasoning consistently improves answer accuracy.
+  url: https://arxiv.org/abs/2605.11439
+  pdf_url: https://arxiv.org/pdf/2605.11439v1
+  version: v1
+fetched: '2026-11-14'

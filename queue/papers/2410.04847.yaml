@@ -1,0 +1,43 @@
+id: paper:arxiv:2410.04847
+status: skipped
+score: 1
+track: video_image_coding
+matched:
+- ref: concept:EntropyModel
+  count: 1
+  weight: 1
+meta:
+  title: Causal Context Adjustment Loss for Learned Image Compression
+  authors:
+  - Minghao Han
+  - Shiyin Jiang
+  - Shengxi Li
+  - Xin Deng
+  - Mai Xu
+  - Ce Zhu
+  - Shuhang Gu
+  published: '2024-10-07'
+  updated: '2024-10-07'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: In recent years, learned image compression (LIC) technologies have surpassed conventional
+    methods notably in terms of rate-distortion (RD) performance. Most present learned techniques are
+    VAE-based with an autoregressive entropy model, which obviously promotes the RD performance by utilizing
+    the decoded causal context. However, extant methods are highly dependent on the fixed hand-crafted
+    causal context. The question of how to guide the auto-encoder to generate a more effective causal
+    context benefit for the autoregressive entropy models is worth exploring. In this paper, we make the
+    first attempt in investigating the way to explicitly adjust the causal context with our proposed Causal
+    Context Adjustment loss (CCA-loss). By imposing the CCA-loss, we enable the neural network to spontaneously
+    adjust important information into the early stage of the autoregressive entropy model. Furthermore,
+    as transformer technology develops remarkably, variants of which have been adopted by many state-of-the-art
+    (SOTA) LIC techniques. The existing computing devices have not adapted the calculation of the attention
+    mechanism well, which leads to a burden on computation quantity and inference latency. To overcome
+    it, we establish a convolutional neural network (CNN) image compression model and adopt the unevenly
+    channel-wise grouped strategy for high efficiency. Ultimately, the proposed CNN-based LIC network
+    trained with our Causal Context Adjustment loss attains a great trade-off between inference latency
+    and rate-distortion performance.
+  url: https://arxiv.org/abs/2410.04847
+  pdf_url: https://arxiv.org/pdf/2410.04847v1
+  version: v1
+fetched: '2026-11-14'

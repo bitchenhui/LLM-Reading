@@ -1,0 +1,43 @@
+id: paper:arxiv:2605.24792
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'Parameter-Efficient VLMs for Gastrointestinal Endoscopy: Medical Image Generation and Clinical
+    Visual Question Answering'
+  authors:
+  - Ojonugwa Oluwafemi Ejiga Peter
+  - Frederick Akor Ejiga
+  - Fahmi Khalifa
+  - Md Mahmudur Rahman
+  published: '2026-05-24'
+  updated: '2026-05-24'
+  categories:
+  - cs.CV
+  - cs.AI
+  abstract: 'The major limitations of gastrointestinal (GI) endoscopy AI systems arise from a shortage
+    of annotated data, strict privacy policies, and significant bottlenecks in conventional model fine-tuning.
+    Such limitations impede the successful application of sophisticated AI models in clinical practice,
+    particularly affecting the reliability and scalability of diagnosis. In this paper, we present a dual-pipeline
+    PEFT model that addresses two fundamental problems: medical Visual Question Answering (VQA) and the
+    generation of privacy-preserving synthetic data. For clinical VQA, we adopt the Florence-2 vision-language
+    model. Leveraging PEFT enhances model interpretability while substantially reducing the computational
+    cost of training. Simultaneously, we employ Low-Rank Adaptation (LoRA) with Stable Diffusion 2.1 to
+    generate high-quality GI images that enhance training databases without violating patient privacy.
+    This research utilized the Kvasir-VQA dataset. Our Florence-2 VQA model achieved ROUGE-1 of 0.92,
+    ROUGE-L of 0.91, and BLEU score improvements from 0.08 to 0.24. Fine-tuning on private datasets consistently
+    showed better results than fine-tuning on public datasets. The rank-4 LoRA synthesis achieved optimal
+    performance with a fidelity score of 0.290, an agreement score of 0.730, and a Frechet BiomedCLIP
+    Distance (FBD) of 1450, reducing computational costs by almost 90 percent. This framework improves
+    the clinical potential of AI in GI endoscopy. Compared to FLUX, MSDM, and Kandinsky 2.2, our model
+    demonstrates superior FBD and strong semantic alignment. While other models lead in Fidelity or Agreement,
+    our lower FBD indicates better image-text coherence. These results establish our approach as a robust
+    solution for enhancing VQA and synthetic data generation in clinical AI.'
+  url: https://arxiv.org/abs/2605.24792
+  pdf_url: https://arxiv.org/pdf/2605.24792v1
+  version: v1
+fetched: '2026-11-14'

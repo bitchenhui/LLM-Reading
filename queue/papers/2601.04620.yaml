@@ -1,0 +1,43 @@
+id: paper:arxiv:2601.04620
+status: pending
+score: 2
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 3
+  weight: 1
+- ref: concept:LLM
+  count: 2
+  weight: 1
+meta:
+  title: 'AgentDevel: Reframing Self-Evolving LLM Agents as Release Engineering'
+  authors:
+  - Di Zhang
+  published: '2026-01-08'
+  updated: '2026-01-08'
+  categories:
+  - cs.AI
+  abstract: 'Recent progress in large language model (LLM) agents has largely focused on embedding self-improvement
+    mechanisms inside the agent or searching over many concurrent variants. While these approaches can
+    raise aggregate scores, they often yield unstable and hard-to-audit improvement trajectories, making
+    it difficult to guarantee non-regression or to reason about failures across versions. We reframe agent
+    improvement as \textbf{release engineering}: agents are treated as shippable artifacts, and improvement
+    is externalized into a regression-aware release pipeline. We introduce \textbf{AgentDevel}, a release
+    engineering pipeline that iteratively runs the current agent, produces implementation-blind, symptom-level
+    quality signals from execution traces, synthesizes a single release candidate (RC) via executable
+    diagnosis, and promotes it under flip-centered gating. AgentDevel features three core designs: (i)
+    an implementation-blind LLM critic that characterizes failure appearances without accessing agent
+    internals, (ii) script-based executable diagnosis that aggregates dominant symptom patterns and produces
+    auditable engineering specifications, and (iii) flip-centered gating that prioritizes pass to fail
+    regressions and fail to pass fixes as first-class evidence. Unlike population-based search or in-agent
+    self-refinement, AgentDevel maintains a single canonical version line and emphasizes non-regression
+    as a primary objective. Experiments on execution-heavy benchmarks demonstrate that AgentDevel yields
+    stable improvements with significantly fewer regressions while producing reproducible, auditable artifacts.
+    Overall, AgentDevel provides a practical development discipline for building, debugging, and releasing
+    LLM agents as software development.'
+  url: https://arxiv.org/abs/2601.04620
+  pdf_url: https://arxiv.org/pdf/2601.04620v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 6
+citation_year: 2026

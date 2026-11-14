@@ -1,0 +1,31 @@
+id: paper:arxiv:2307.06610
+status: skipped_low_citation
+score: 3
+track: audio_coding
+matched:
+- ref: codec:Opus
+  count: 2
+  weight: 3
+meta:
+  title: 'LACE: A light-weight, causal model for enhancing coded speech through adaptive convolutions'
+  authors:
+  - Jan Büthe
+  - Jean-Marc Valin
+  - Ahmed Mustafa
+  published: '2023-07-13'
+  updated: '2023-07-13'
+  categories:
+  - eess.AS
+  abstract: Classical speech coding uses low-complexity postfilters with zero lookahead to enhance the
+    quality of coded speech, but their effectiveness is limited by their simplicity. Deep Neural Networks
+    (DNNs) can be much more effective, but require high complexity and model size, or added delay. We
+    propose a DNN model that generates classical filter kernels on a per-frame basis with a model of just
+    300~K parameters and 100~MFLOPS complexity, which is a practical complexity for desktop or mobile
+    device CPUs. The lack of added delay allows it to be integrated into the Opus codec, and we demonstrate
+    that it enables effective wideband encoding for bitrates down to 6 kb/s.
+  url: https://arxiv.org/abs/2307.06610
+  pdf_url: https://arxiv.org/pdf/2307.06610v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 6
+citation_year: 2023

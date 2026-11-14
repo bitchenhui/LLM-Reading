@@ -1,0 +1,44 @@
+id: paper:arxiv:2403.00604
+status: pending
+score: 4
+track: video_image_coding
+matched:
+- ref: codec:HEVC
+  count: 2
+  weight: 3
+- ref: concept:SuperResolution
+  count: 2
+  weight: 1
+meta:
+  title: 'ODVista: An Omnidirectional Video Dataset for super-resolution and Quality Enhancement Tasks'
+  authors:
+  - Ahmed Telili
+  - Ibrahim Farhat
+  - Wassim Hamidouche
+  - Hadi Amirpour
+  published: '2024-03-01'
+  updated: '2024-03-07'
+  categories:
+  - eess.IV
+  abstract: Omnidirectional or 360-degree video is being increasingly deployed, largely due to the latest
+    advancements in immersive virtual reality (VR) and extended reality (XR) technology. However, the
+    adoption of these videos in streaming encounters challenges related to bandwidth and latency, particularly
+    in mobility conditions such as with unmanned aerial vehicles (UAVs). Adaptive resolution and compression
+    aim to preserve quality while maintaining low latency under these constraints, yet downscaling and
+    encoding can still degrade quality and introduce artifacts. Machine learning (ML)-based super-resolution
+    (SR) and quality enhancement techniques offer a promising solution by enhancing detail recovery and
+    reducing compression artifacts. However, current publicly available 360-degree video SR datasets lack
+    compression artifacts, which limit research in this field. To bridge this gap, this paper introduces
+    omnidirectional video streaming dataset (ODVista), which comprises 200 high-resolution and high quality
+    videos downscaled and encoded at four bitrate ranges using the high-efficiency video coding (HEVC)/H.265
+    standard. Evaluations show that the dataset not only features a wide variety of scenes but also spans
+    different levels of content complexity, which is crucial for robust solutions that perform well in
+    real-world scenarios and generalize across diverse visual environments. Additionally, we evaluate
+    the performance, considering both quality enhancement and runtime, of two handcrafted and two ML-based
+    SR models on the validation and testing sets of ODVista.
+  url: https://arxiv.org/abs/2403.00604
+  pdf_url: https://arxiv.org/pdf/2403.00604v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 8
+citation_year: 2024

@@ -1,0 +1,35 @@
+id: paper:arxiv:2407.20530
+status: skipped
+score: 1
+track: audio_coding
+matched:
+- ref: concept:NeuralAudioCodec
+  count: 1
+  weight: 1
+meta:
+  title: 'SuperCodec: A Neural Speech Codec with Selective Back-Projection Network'
+  authors:
+  - Youqiang Zheng
+  - Weiping Tu
+  - Li Xiao
+  - Xinmeng Xu
+  published: '2024-07-30'
+  updated: '2024-07-30'
+  categories:
+  - cs.SD
+  - eess.AS
+  abstract: Neural speech coding is a rapidly developing topic, where state-of-the-art approaches now
+    exhibit superior compression performance than conventional methods. Despite significant progress,
+    existing methods still have limitations in preserving and reconstructing fine details for optimal
+    reconstruction, especially at low bitrates. In this study, we introduce SuperCodec, a neural speech
+    codec that achieves state-of-the-art performance at low bitrates. It employs a novel back projection
+    method with selective feature fusion for augmented representation. Specifically, we propose to use
+    Selective Up-sampling Back Projection (SUBP) and Selective Down-sampling Back Projection (SDBP) modules
+    to replace the standard up- and down-sampling layers at the encoder and decoder, respectively. Experimental
+    results show that our method outperforms the existing neural speech codecs operating at various bitrates.
+    Specifically, our proposed method can achieve higher quality reconstructed speech at 1 kbps than Lyra
+    V2 at 3.2 kbps and Encodec at 6 kbps.
+  url: https://arxiv.org/abs/2407.20530
+  pdf_url: https://arxiv.org/pdf/2407.20530v1
+  version: v1
+fetched: '2026-11-14'

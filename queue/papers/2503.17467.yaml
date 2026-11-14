@@ -1,0 +1,49 @@
+id: paper:arxiv:2503.17467
+status: pending
+score: 4
+track: immersive_media
+matched:
+- ref: codec:G-PCC
+  count: 3
+  weight: 3
+- ref: org:MPEG
+  count: 1
+  weight: 1
+meta:
+  title: High Efficiency Wiener Filter-based Point Cloud Quality Enhancement for MPEG G-PCC
+  authors:
+  - Yuxuan Wei
+  - Zehan Wang
+  - Tian Guo
+  - Hao Liu
+  - Liquan Shen
+  - Hui Yuan
+  published: '2025-03-21'
+  updated: '2025-03-21'
+  categories:
+  - cs.CV
+  - eess.IV
+  abstract: Point clouds, which directly record the geometry and attributes of scenes or objects by a
+    large number of points, are widely used in various applications such as virtual reality and immersive
+    communication. However, due to the huge data volume and unstructured geometry, efficient compression
+    of point clouds is very crucial. The Moving Picture Expert Group is establishing a geometry-based
+    point cloud compression (G-PCC) standard for both static and dynamic point clouds in recent years.
+    Although lossy compression of G-PCC can achieve a very high compression ratio, the reconstruction
+    quality is relatively low, especially at low bitrates. To mitigate this problem, we propose a high
+    efficiency Wiener filter that can be integrated into the encoder and decoder pipeline of G-PCC to
+    improve the reconstruction quality as well as the rate-distortion performance for dynamic point clouds.
+    Specifically, we first propose a basic Wiener filter, and then improve it by introducing coefficients
+    inheritance and variance-based point classification for the Luma component. Besides, to reduce the
+    complexity of the nearest neighbor search during the application of the Wiener filter, we also propose
+    a Morton code-based fast nearest neighbor search algorithm for efficient calculation of filter coefficients.
+    Experimental results demonstrate that the proposed method can achieve average Bjøntegaard delta rates
+    of -6.1%, -7.3%, and -8.0% for Luma, Chroma Cb, and Chroma Cr components, respectively, under the
+    condition of lossless-geometry-lossy-attributes configuration compared to the latest G-PCC encoding
+    platform (i.e., geometry-based solid content test model version 7.0 release candidate 2) by consuming
+    affordable computational complexity.
+  url: https://arxiv.org/abs/2503.17467
+  pdf_url: https://arxiv.org/pdf/2503.17467v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 46
+citation_year: 2025

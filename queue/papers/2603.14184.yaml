@@ -1,0 +1,45 @@
+id: paper:arxiv:2603.14184
+status: pending
+score: 2
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+- ref: concept:TrainingFree
+  count: 1
+  weight: 1
+meta:
+  title: 'Deeper Thought, Weaker Aim: Understanding and Mitigating Perceptual Impairment during Reasoning
+    in Multimodal Large Language Models'
+  authors:
+  - Ruiying Peng
+  - Xueyu Wu
+  - Jing Lei
+  - Lu Hou
+  - Yuanzheng Ma
+  - Xiaohui Li
+  published: '2026-03-15'
+  updated: '2026-05-20'
+  categories:
+  - cs.CV
+  - cs.AI
+  abstract: 'Multimodal large language models (MLLMs) often suffer from perceptual impairments under extended
+    reasoning modes, particularly in visual question answering (VQA) tasks. We identify attention dispersion
+    as the underlying cause: during multi-step reasoning, the model''s visual attention becomes scattered
+    and drifts away from question-relevant regions, effectively "losing focus" on the visual input. To
+    better understand this phenomenon, we analyze the attention maps of MLLMs and observe that reasoning
+    prompts significantly reduce attention to regions critical for answering the question. We further
+    find a strong correlation between the model''s overall attention on image tokens and the spatial dispersiveness
+    of its attention within the image. Leveraging this insight, we propose a training-free Visual Region-Guided
+    Attention (VRGA) framework that selects visual heads based on an entropy-focus criterion and reweights
+    their attention, effectively guiding the model to focus on question-relevant regions during reasoning.
+    Extensive experiments on vision-language benchmarks demonstrate that our method effectively alleviates
+    perceptual degradation, leading to improvements in visual grounding and reasoning accuracy while providing
+    interpretable insights into how MLLMs process visual information.'
+  url: https://arxiv.org/abs/2603.14184
+  pdf_url: https://arxiv.org/pdf/2603.14184v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 7
+citation_year: 2026

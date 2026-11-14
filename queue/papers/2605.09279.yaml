@@ -1,0 +1,60 @@
+id: paper:arxiv:2605.09279
+status: skipped_low_citation
+score: 3
+track: streaming_delivery
+matched:
+- ref: concept:3DGS
+  count: 4
+  weight: 1
+- ref: concept:VolumetricVideo
+  count: 2
+  weight: 1
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+meta:
+  title: 'CAGS: Color-Adaptive Volumetric Video Streaming with Dynamic 3D Gaussian Splatting'
+  authors:
+  - Daheng Yin
+  - Yili Jin
+  - Jianxin Shi
+  - Isaac Ding
+  - Miao Zhang
+  - Fangxin Wang
+  - Zhaowu Huang
+  - Cong Zhang
+  - Jiangchuan Liu
+  - Fang Dong
+  published: '2026-05-10'
+  updated: '2026-05-10'
+  categories:
+  - cs.GR
+  - cs.CV
+  - cs.MM
+  - cs.NI
+  - eess.IV
+  abstract: Volumetric video (VV) streaming enables real-time, immersive access to remote 3D environments,
+    powering telepresence, ecological monitoring, and robotic teleoperation. These applications turn VV
+    streaming into a real-time interface to remote physical environments, imposing new system-level demands
+    for photorealistic scene representation, low-latency interaction, and robust performance under heterogeneous
+    networks. 3D Gaussian Splatting (3DGS) has been widely used for real-time photorealistic rendering,
+    offering superior visual quality and rendering performance, but it faces challenges due to bandwidth
+    consumption. Furthermore, as the foundation of adaptive VV streaming, existing Levels of Detail (LoD)
+    methods based on density are not well-suited to Gaussian representations, leading to visible gaps
+    and severe quality degradation. Recent studies have also explored attribute compression techniques
+    to reduce bandwidth consumption. Our preliminary studies reveal that aggressive attribute compression
+    primarily causes color distortion, which can be effectively corrected in the rendered image using
+    a reference image. Motivated by these findings, we propose a novel Color-Adaptive scheme for adaptive
+    VV streaming that uses vector quantization (VQ) to establish LoDs and correct color distortions with
+    low-resolution reference images. We further present CAGS, an adaptive VV streaming system compatible
+    with diverse Gaussian representations, which integrates the Color-Adaptive scheme by rendering reference
+    images on the streaming server and performing color restoration on the client. Extensive experiments
+    on our prototype system demonstrate that CAGS outperforms the existing adaptive streaming systems
+    in PSNR by 5$\sim$20 dB under fluctuating bandwidth, operates significantly faster than existing scalable
+    Gaussian compression methods, and generalizes across different Gaussian representations.
+  url: https://arxiv.org/abs/2605.09279
+  pdf_url: https://arxiv.org/pdf/2605.09279v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 1
+citation_year: 2026

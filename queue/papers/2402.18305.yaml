@@ -1,0 +1,41 @@
+id: paper:arxiv:2402.18305
+status: skipped
+score: 2
+track: video_image_coding
+matched:
+- ref: concept:INR
+  count: 1
+  weight: 1
+- ref: dataset:UVG
+  count: 1
+  weight: 1
+meta:
+  title: 'NERV++: An Enhanced Implicit Neural Video Representation'
+  authors:
+  - Ahmed Ghorbel
+  - Wassim Hamidouche
+  - Luce Morin
+  published: '2024-02-28'
+  updated: '2024-02-28'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: Neural fields, also known as implicit neural representations (INRs), have shown a remarkable
+    capability of representing, generating, and manipulating various data types, allowing for continuous
+    data reconstruction at a low memory footprint. Though promising, INRs applied to video compression
+    still need to improve their rate-distortion performance by a large margin, and require a huge number
+    of parameters and long training iterations to capture high-frequency details, limiting their wider
+    applicability. Resolving this problem remains a quite challenging task, which would make INRs more
+    accessible in compression tasks. We take a step towards resolving these shortcomings by introducing
+    neural representations for videos NeRV++, an enhanced implicit neural video representation, as more
+    straightforward yet effective enhancement over the original NeRV decoder architecture, featuring separable
+    conv2d residual blocks (SCRBs) that sandwiches the upsampling block (UB), and a bilinear interpolation
+    skip layer for improved feature representation. NeRV++ allows videos to be directly represented as
+    a function approximated by a neural network, and significantly enhance the representation capacity
+    beyond current INR-based video codecs. We evaluate our method on UVG, MCL JVC, and Bunny datasets,
+    achieving competitive results for video compression with INRs. This achievement narrows the gap to
+    autoencoder-based video coding, marking a significant stride in INR-based video compression research.
+  url: https://arxiv.org/abs/2402.18305
+  pdf_url: https://arxiv.org/pdf/2402.18305v1
+  version: v1
+fetched: '2026-11-14'

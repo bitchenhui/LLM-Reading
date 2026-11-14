@@ -1,0 +1,51 @@
+id: paper:arxiv:2603.15271
+status: pending
+score: 2
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+- ref: concept:TrainingFree
+  count: 1
+  weight: 1
+meta:
+  title: 'Flash-Unified: A Training-Free and Task-Aware Acceleration Framework for Native Unified Models'
+  authors:
+  - Junlong Ke
+  - Zichen Wen
+  - Boxue Yang
+  - Yantai Yang
+  - Xuyang Liu
+  - Chenfei Liao
+  - Zhaorun Chen
+  - Shaobo Wang
+  - Linfeng Zhang
+  published: '2026-03-16'
+  updated: '2026-03-16'
+  categories:
+  - cs.CV
+  abstract: Native unified multimodal models, which integrate both generative and understanding capabilities,
+    face substantial computational overhead that hinders their real-world deployment. Existing acceleration
+    techniques typically employ a static, monolithic strategy, ignoring the fundamental divergence in
+    computational profiles between iterative generation tasks (e.g., image generation) and single-pass
+    understanding tasks (e.g., VQA). In this work, we present the first systematic analysis of unified
+    models, revealing pronounced parameter specialization, where distinct neuron sets are critical for
+    each task. This implies that, at the parameter level, unified models have implicitly internalized
+    separate inference pathways for generation and understanding within a single architecture. Based on
+    these insights, we introduce a training-free and task-aware acceleration framework, FlashU, that tailors
+    optimization to each task's demands. Across both tasks, we introduce Task-Specific Network Pruning
+    and Dynamic Layer Skipping, aiming to eliminate inter-layer and task-specific redundancy. For visual
+    generation, we implement a time-varying control signal for the guidance scale and a temporal approximation
+    for the diffusion head via Diffusion Head Cache. For multimodal understanding, building upon the pruned
+    model, we introduce Dynamic Token Pruning via a V-Norm Proxy to exploit the spatial redundancy of
+    visual inputs. Extensive experiments on Show-o2 demonstrate that FlashU achieves 1.78$\times$ to 2.01$\times$
+    inference acceleration across both understanding and generation tasks while maintaining SOTA performance,
+    outperforming competing unified models and validating our task-aware acceleration paradigm. Our code
+    is publicly available at https://github.com/Rirayh/FlashU.
+  url: https://arxiv.org/abs/2603.15271
+  pdf_url: https://arxiv.org/pdf/2603.15271v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 6
+citation_year: 2026

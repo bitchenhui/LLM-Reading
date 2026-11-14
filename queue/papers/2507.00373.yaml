@@ -1,0 +1,46 @@
+id: paper:arxiv:2507.00373
+status: skipped
+score: 1
+track: video_image_coding
+matched:
+- ref: concept:RDO
+  count: 2
+  weight: 1
+meta:
+  title: Customizable ROI-Based Deep Image Compression
+  authors:
+  - Jian Jin
+  - Fanxin Xia
+  - Feng Ding
+  - Xinfeng Zhang
+  - Meiqin Liu
+  - Yao Zhao
+  - Weisi Lin
+  - Lili Meng
+  published: '2025-07-01'
+  updated: '2025-07-03'
+  categories:
+  - cs.CV
+  - eess.IV
+  abstract: Region of Interest (ROI)-based image compression optimizes bit allocation by prioritizing
+    ROI for higher-quality reconstruction. However, as the users (including human clients and downstream
+    machine tasks) become more diverse, ROI-based image compression needs to be customizable to support
+    various preferences. For example, different users may define distinct ROI or require different quality
+    trade-offs between ROI and non-ROI. Existing ROI-based image compression schemes predefine the ROI,
+    making it unchangeable, and lack effective mechanisms to balance reconstruction quality between ROI
+    and non-ROI. This work proposes a paradigm for customizable ROI-based deep image compression. First,
+    we develop a Text-controlled Mask Acquisition (TMA) module, which allows users to easily customize
+    their ROI for compression by just inputting the corresponding semantic \emph{text}. It makes the encoder
+    controlled by text. Second, we design a Customizable Value Assign (CVA) mechanism, which masks the
+    non-ROI with a changeable extent decided by users instead of a constant one to manage the reconstruction
+    quality trade-off between ROI and non-ROI. Finally, we present a Latent Mask Attention (LMA) module,
+    where the latent spatial prior of the mask and the latent Rate-Distortion Optimization (RDO) prior
+    of the image are extracted and fused in the latent space, and further used to optimize the latent
+    representation of the source image. Experimental results demonstrate that our proposed customizable
+    ROI-based deep image compression paradigm effectively addresses the needs of customization for ROI
+    definition and mask acquisition as well as the reconstruction quality trade-off management between
+    the ROI and non-ROI.
+  url: https://arxiv.org/abs/2507.00373
+  pdf_url: https://arxiv.org/pdf/2507.00373v3
+  version: v3
+fetched: '2026-11-14'

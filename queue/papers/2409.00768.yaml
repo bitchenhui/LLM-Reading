@@ -1,0 +1,44 @@
+id: paper:arxiv:2409.00768
+status: pending
+score: 2
+track: processing_enhancement
+matched:
+- ref: concept:SuperResolution
+  count: 2
+  weight: 1
+- ref: dataset:ImageNet
+  count: 1
+  weight: 1
+meta:
+  title: Rethinking Image Super-Resolution from Training Data Perspectives
+  authors:
+  - Go Ohtani
+  - Ryu Tadokoro
+  - Ryosuke Yamada
+  - Yuki M. Asano
+  - Iro Laina
+  - Christian Rupprecht
+  - Nakamasa Inoue
+  - Rio Yokota
+  - Hirokatsu Kataoka
+  - Yoshimitsu Aoki
+  published: '2024-09-01'
+  updated: '2024-09-01'
+  categories:
+  - cs.CV
+  abstract: In this work, we investigate the understudied effect of the training data used for image super-resolution
+    (SR). Most commonly, novel SR methods are developed and benchmarked on common training datasets such
+    as DIV2K and DF2K. However, we investigate and rethink the training data from the perspectives of
+    diversity and quality, {thereby addressing the question of ``How important is SR training for SR models?''}.
+    To this end, we propose an automated image evaluation pipeline. With this, we stratify existing high-resolution
+    image datasets and larger-scale image datasets such as ImageNet and PASS to compare their performances.
+    We find that datasets with (i) low compression artifacts, (ii) high within-image diversity as judged
+    by the number of different objects, and (iii) a large number of images from ImageNet or PASS all positively
+    affect SR performance. We hope that the proposed simple-yet-effective dataset curation pipeline will
+    inform the construction of SR datasets in the future and yield overall better models.
+  url: https://arxiv.org/abs/2409.00768
+  pdf_url: https://arxiv.org/pdf/2409.00768v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 9
+citation_year: 2024

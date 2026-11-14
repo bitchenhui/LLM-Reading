@@ -1,0 +1,38 @@
+id: paper:arxiv:2307.04298
+status: skipped
+score: 1
+track: audio_coding
+matched:
+- ref: concept:SuperResolution
+  count: 1
+  weight: 1
+meta:
+  title: Edge Storage Management Recipe with Zero-Shot Data Compression for Road Anomaly Detection
+  authors:
+  - YeongHyeon Park
+  - Uju Gim
+  - Myung Jin Kim
+  published: '2023-07-10'
+  updated: '2023-08-26'
+  categories:
+  - cs.SD
+  - cs.LG
+  - eess.AS
+  abstract: Recent studies show edge computing-based road anomaly detection systems which may also conduct
+    data collection simultaneously. However, the edge computers will have small data storage but we need
+    to store the collected audio samples for a long time in order to update existing models or develop
+    a novel method. Therefore, we should consider an approach for efficient storage management methods
+    while preserving high-fidelity audio. A hardware-perspective approach, such as using a low-resolution
+    microphone, is an intuitive way to reduce file size but is not recommended because it fundamentally
+    cuts off high-frequency components. On the other hand, a computational file compression approach that
+    encodes collected high-resolution audio into a compact code should be recommended because it also
+    provides a corresponding decoding method. Motivated by this, we propose a way of simple yet effective
+    pre-trained autoencoder-based data compression method. The pre-trained autoencoder is trained for
+    the purpose of audio super-resolution so it can be utilized to encode or decode any arbitrary sampling
+    rate. Moreover, it will reduce the communication cost for data transmission from the edge to the central
+    server. Via the comparative experiments, we confirm that the zero-shot audio compression and decompression
+    highly preserve anomaly detection performance while enhancing storage and transmission efficiency.
+  url: https://arxiv.org/abs/2307.04298
+  pdf_url: https://arxiv.org/pdf/2307.04298v2
+  version: v2
+fetched: '2026-11-14'

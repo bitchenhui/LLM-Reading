@@ -1,0 +1,42 @@
+id: paper:arxiv:2308.13287
+status: skipped
+score: 2
+track: video_image_coding
+matched:
+- ref: metric:FPS
+  count: 1
+  weight: 1
+- ref: org:NVIDIA
+  count: 1
+  weight: 1
+meta:
+  title: Efficient Learned Lossless JPEG Recompression
+  authors:
+  - Lina Guo
+  - Yuanyuan Wang
+  - Tongda Xu
+  - Jixiang Luo
+  - Dailan He
+  - Zhenjun Ji
+  - Shanshan Wang
+  - Yang Wang
+  - Hongwei Qin
+  published: '2023-08-25'
+  updated: '2023-08-25'
+  categories:
+  - eess.IV
+  abstract: JPEG is one of the most popular image compression methods. It is beneficial to compress those
+    existing JPEG files without introducing additional distortion. In this paper, we propose a deep learning
+    based method to further compress JPEG images losslessly. Specifically, we propose a Multi-Level Parallel
+    Conditional Modeling (ML-PCM) architecture, which enables parallel decoding in different granularities.
+    First, luma and chroma are processed independently to allow parallel coding. Second, we propose pipeline
+    parallel context model (PPCM) and compressed checkerboard context model (CCCM) for the effective conditional
+    modeling and efficient decoding within luma and chroma components. Our method has much lower latency
+    while achieves better compression ratio compared with previous SOTA. After proper software optimization,
+    we can obtain a good throughput of 57 FPS for 1080P images on NVIDIA T4 GPU. Furthermore, combined
+    with quantization, our approach can also act as a lossy JPEG codec which has obvious advantage over
+    SOTA lossy compression methods in high bit rate (bpp$>0.9$).
+  url: https://arxiv.org/abs/2308.13287
+  pdf_url: https://arxiv.org/pdf/2308.13287v1
+  version: v1
+fetched: '2026-11-14'

@@ -1,0 +1,33 @@
+id: paper:arxiv:2307.10284
+status: skipped
+score: 0
+track: video_image_coding
+matched: []
+meta:
+  title: 'ECSIC: Epipolar Cross Attention for Stereo Image Compression'
+  authors:
+  - Matthias Wödlinger
+  - Jan Kotera
+  - Manuel Keglevic
+  - Jan Xu
+  - Robert Sablatnig
+  published: '2023-07-18'
+  updated: '2023-12-08'
+  categories:
+  - eess.IV
+  - cs.CV
+  - cs.LG
+  abstract: In this paper, we present ECSIC, a novel learned method for stereo image compression. Our
+    proposed method compresses the left and right images in a joint manner by exploiting the mutual information
+    between the images of the stereo image pair using a novel stereo cross attention (SCA) module and
+    two stereo context modules. The SCA module performs cross-attention restricted to the corresponding
+    epipolar lines of the two images and processes them in parallel. The stereo context modules improve
+    the entropy estimation of the second encoded image by using the first image as a context. We conduct
+    an extensive ablation study demonstrating the effectiveness of the proposed modules and a comprehensive
+    quantitative and qualitative comparison with existing methods. ECSIC achieves state-of-the-art performance
+    in stereo image compression on the two popular stereo image datasets Cityscapes and InStereo2k while
+    allowing for fast encoding and decoding.
+  url: https://arxiv.org/abs/2307.10284
+  pdf_url: https://arxiv.org/pdf/2307.10284v2
+  version: v2
+fetched: '2026-11-14'

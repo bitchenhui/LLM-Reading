@@ -1,0 +1,41 @@
+id: paper:arxiv:2507.14172
+status: pending
+score: 2
+track: self_improvement
+matched:
+- ref: concept:LLM
+  count: 1
+  weight: 1
+- ref: concept:SelfImprovement
+  count: 1
+  weight: 1
+meta:
+  title: 'Self-Improving Language Models for Evolutionary Program Synthesis: A Case Study on ARC-AGI'
+  authors:
+  - Julien Pourcel
+  - Cédric Colas
+  - Pierre-Yves Oudeyer
+  published: '2025-07-10'
+  updated: '2026-03-16'
+  categories:
+  - cs.LG
+  - cs.AI
+  - cs.NE
+  abstract: 'Many program synthesis tasks prove too challenging for even state-of-the-art language models
+    to solve in single attempts. Search-based evolutionary methods offer a promising alternative by exploring
+    solution spaces iteratively, but their effectiveness remain limited by the fixed capabilities of the
+    underlying generative model. We propose SOAR, a method that learns program synthesis by integrating
+    language models into a self-improving evolutionary loop. SOAR alternates between (1) an evolutionary
+    search that uses an LLM to sample and refine candidate solutions, and (2) a hindsight learning phase
+    that converts search attempts into valid problem-solution pairs used to fine-tune the LLM''s sampling
+    and refinement capabilities\, -- \,enabling increasingly effective search in subsequent iterations.
+    On the challenging ARC-AGI benchmark, SOAR achieves significant performance gains across model scales
+    and iterations, leveraging positive transfer between the sampling and refinement finetuning tasks.
+    These improvements carry over to test-time adaptation, enabling SOAR to solve 52\% of the public test
+    set. Our code is open-sourced at: https://github.com/flowersteam/SOAR'
+  url: https://arxiv.org/abs/2507.14172
+  pdf_url: https://arxiv.org/pdf/2507.14172v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 44
+citation_year: 2025

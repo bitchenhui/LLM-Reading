@@ -1,0 +1,31 @@
+id: paper:arxiv:2210.12782
+status: skipped
+score: 1
+track: immersive_media
+matched:
+- ref: concept:NeRF
+  count: 1
+  weight: 1
+meta:
+  title: 'Compressing Explicit Voxel Grid Representations: fast NeRFs become also small'
+  authors:
+  - Chenxi Lola Deng
+  - Enzo Tartaglione
+  published: '2022-10-23'
+  updated: '2022-10-23'
+  categories:
+  - cs.CV
+  - cs.AI
+  abstract: NeRFs have revolutionized the world of per-scene radiance field reconstruction because of
+    their intrinsic compactness. One of the main limitations of NeRFs is their slow rendering speed, both
+    at training and inference time. Recent research focuses on the optimization of an explicit voxel grid
+    (EVG) that represents the scene, which can be paired with neural networks to learn radiance fields.
+    This approach significantly enhances the speed both at train and inference time, but at the cost of
+    large memory occupation. In this work we propose Re:NeRF, an approach that specifically targets EVG-NeRFs
+    compressibility, aiming to reduce memory storage of NeRF models while maintaining comparable performance.
+    We benchmark our approach with three different EVG-NeRF architectures on four popular benchmarks,
+    showing Re:NeRF's broad usability and effectiveness.
+  url: https://arxiv.org/abs/2210.12782
+  pdf_url: https://arxiv.org/pdf/2210.12782v1
+  version: v1
+fetched: '2026-11-14'

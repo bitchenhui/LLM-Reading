@@ -1,0 +1,35 @@
+id: paper:arxiv:2603.00148
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: Mechanistically Guided LoRA Improves Paraphrase Consistency in Medical Vision-Language Models
+  authors:
+  - Binesh Sadanandan
+  - Vahid Behzadan
+  published: '2026-02-24'
+  updated: '2026-02-24'
+  categories:
+  - cs.CV
+  abstract: Medical Vision-Language Models can give different yes or no answers to rephrasings of the
+    same clinical question. We study this in MedGemma-4B using PSF-Med Sadanandan and Behzadan (2025),
+    which provides paraphrase pairs for systematic consistency evaluation on medical VQA. On MIMIC-CXR
+    binary questions (n = 158), the baseline flip rate is 14.6% and mean margin difference is 1.63 logits.
+    We validate that Gemma Scope 2 Sparse Autoencoders (SAEs) transfer to MedGemma activations, achieving
+    R2 ~= 0.997 on both medical and general text (n = 100 prompts each, p < 0.001 for exceeding a 0.95
+    threshold). We then fine-tune Low-Rank Adaptation (LoRA) adapters with a combined loss that balances
+    paraphrase consistency with answer accuracy. This combined approach prevents mode collapse that occurs
+    with pure consistency training while reducing flip rate from 14.6% to 4.4% (p = 0.002, two-proportion
+    z-test) and margin difference from 1.63 to 0.33 (79.5% reduction). Accuracy remains stable at 84.2%
+    baseline versus 82.3% after training (-1.9pp, not significant). On PadChest Balanced (n = 250), flip
+    rate drops from 13.6% to 7.8%, mean margin difference drops from 1.08 to 0.35 (67.9% reduction), and
+    accuracy increases from 66.4% to 69.4%. A layer-range ablation shows that early layers reduce margin
+    differences more than mechanistically selected middle layers.
+  url: https://arxiv.org/abs/2603.00148
+  pdf_url: https://arxiv.org/pdf/2603.00148v1
+  version: v1
+fetched: '2026-11-14'

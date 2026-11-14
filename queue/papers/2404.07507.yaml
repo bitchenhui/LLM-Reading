@@ -1,0 +1,42 @@
+id: paper:arxiv:2404.07507
+status: skipped
+score: 1
+track: video_image_coding
+matched:
+- ref: dataset:ImageNet
+  count: 1
+  weight: 1
+meta:
+  title: Learning to Classify New Foods Incrementally Via Compressed Exemplars
+  authors:
+  - Justin Yang
+  - Zhihao Duan
+  - Jiangpeng He
+  - Fengqing Zhu
+  published: '2024-04-11'
+  updated: '2024-04-11'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: Food image classification systems play a crucial role in health monitoring and diet tracking
+    through image-based dietary assessment techniques. However, existing food recognition systems rely
+    on static datasets characterized by a pre-defined fixed number of food classes. This contrasts drastically
+    with the reality of food consumption, which features constantly changing data. Therefore, food image
+    classification systems should adapt to and manage data that continuously evolves. This is where continual
+    learning plays an important role. A challenge in continual learning is catastrophic forgetting, where
+    ML models tend to discard old knowledge upon learning new information. While memory-replay algorithms
+    have shown promise in mitigating this problem by storing old data as exemplars, they are hampered
+    by the limited capacity of memory buffers, leading to an imbalance between new and previously learned
+    data. To address this, our work explores the use of neural image compression to extend buffer size
+    and enhance data diversity. We introduced the concept of continuously learning a neural compression
+    model to adaptively improve the quality of compressed data and optimize the bitrates per pixel (bpp)
+    to store more exemplars. Our extensive experiments, including evaluations on food-specific datasets
+    including Food-101 and VFN-74, as well as the general dataset ImageNet-100, demonstrate improvements
+    in classification accuracy. This progress is pivotal in advancing more realistic food recognition
+    systems that are capable of adapting to continually evolving data. Moreover, the principles and methodologies
+    we've developed hold promise for broader applications, extending their benefits to other domains of
+    continual machine learning systems.
+  url: https://arxiv.org/abs/2404.07507
+  pdf_url: https://arxiv.org/pdf/2404.07507v1
+  version: v1
+fetched: '2026-11-14'

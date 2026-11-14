@@ -1,0 +1,38 @@
+id: paper:arxiv:2310.14300
+status: skipped_low_citation
+score: 4
+track: audio_coding
+matched:
+- ref: codec:Opus
+  count: 1
+  weight: 3
+- ref: metric:MOS
+  count: 1
+  weight: 1
+meta:
+  title: 'MFCC-GAN Codec: A New AI-based Audio Coding'
+  authors:
+  - Mohammad Reza Hasanabadi
+  published: '2023-10-22'
+  updated: '2023-10-22'
+  categories:
+  - eess.AS
+  - cs.SD
+  abstract: In this paper, we proposed AI-based audio coding using MFCC features in an adversarial setting.
+    We combined a conventional encoder with an adversarial learning decoder to better reconstruct the
+    original waveform. Since GAN gives implicit density estimation, therefore, such models are less prone
+    to overfitting. We compared our work with five well-known codecs namely AAC, AC3, Opus, Vorbis, and
+    Speex, performing on bitrates from 2kbps to 128kbps. MFCCGAN_36k achieved the state-of-the-art result
+    in terms of SNR despite a lower bitrate in comparison to AC3_128k, AAC_112k, Vorbis_48k, Opus_48k,
+    and Speex_48K. On the other hand, MFCCGAN_13k also achieved high SNR=27 which is equal to that of
+    AC3_128k, and AAC_112k while having a significantly lower bitrate (13 kbps). MFCCGAN_36k achieved
+    higher NISQA-MOS results compared to AAC_48k while having a 20% lower bitrate. Furthermore, MFCCGAN_13k
+    obtained NISQAMOS= 3.9 which is much higher than AAC_24k, AAC_32k, AC3_32k, and AAC_48k. For future
+    work, we finally suggest adopting loss functions optimizing intelligibility and perceptual metrics
+    in the MFCCGAN structure to improve quality and intelligibility simultaneously.
+  url: https://arxiv.org/abs/2310.14300
+  pdf_url: https://arxiv.org/pdf/2310.14300v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 0
+citation_year: 2023

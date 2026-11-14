@@ -1,0 +1,41 @@
+id: paper:arxiv:2604.25122
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'M$^3$-VQA: A Benchmark for Multimodal, Multi-Entity, Multi-Hop Visual Question Answering'
+  authors:
+  - Jiatong Ma
+  - Longteng Guo
+  - Yuchen Liu
+  - Zijia Zhao
+  - Dongze Hao
+  - Xuanxu Lin
+  - Jing Liu
+  published: '2026-04-28'
+  updated: '2026-04-28'
+  categories:
+  - cs.CV
+  - cs.AI
+  abstract: 'We present M$^3$-VQA, a novel knowledge-based Visual Question Answering (VQA) benchmark,
+    to enhance the evaluation of multimodal large language models (MLLMs) in fine-grained multimodal entity
+    understanding and complex multi-hop reasoning. Unlike existing VQA datasets that focus on coarse-grained
+    categories and simple reasoning over single entities, M$^3$-VQA introduces diverse multi-entity questions
+    involving multiple distinct entities from both visual and textual sources. It requires models to perform
+    both sequential and parallel multi-hop reasoning across multiple documents, supported by traceable,
+    detailed evidence and a curated multimodal knowledge base. We evaluate 16 leading MLLMs under three
+    settings: without external knowledge, with gold evidence, and with retrieval-augmented input. The
+    poor results reveal significant challenges for MLLMs in knowledge acquisition and reasoning. Models
+    perform poorly without external information but improve markedly when provided with precise evidence.
+    Furthermore, reasoning-aware agentic retrieval surpasses heuristic methods, highlighting the importance
+    of structured reasoning for complex multimodal understanding. M$^3$-VQA presents a more challenging
+    evaluation for advancing the multimodal reasoning capabilities of MLLMs. Our code and dataset are
+    available at https://github.com/CASIA-IVA-Lab/M3VQA.'
+  url: https://arxiv.org/abs/2604.25122
+  pdf_url: https://arxiv.org/pdf/2604.25122v1
+  version: v1
+fetched: '2026-11-14'

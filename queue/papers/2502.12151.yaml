@@ -1,0 +1,56 @@
+id: paper:arxiv:2502.12151
+status: skipped_low_citation
+score: 4
+track: immersive_media
+matched:
+- ref: concept:SuperResolution
+  count: 2
+  weight: 1
+- ref: concept:VolumetricVideo
+  count: 2
+  weight: 1
+- ref: concept:ABR
+  count: 1
+  weight: 1
+- ref: concept:QoE
+  count: 1
+  weight: 1
+meta:
+  title: 'VoLUT: Efficient Volumetric streaming enhanced by LUT-based super-resolution'
+  authors:
+  - Chendong Wang
+  - Anlan Zhang
+  - Yifan Yang
+  - Lili Qiu
+  - Yuqing Yang
+  - Xinyang Jiang
+  - Feng Qian
+  - Suman Banerjee
+  published: '2025-02-17'
+  updated: '2025-12-04'
+  categories:
+  - cs.CV
+  - eess.SY
+  abstract: 3D volumetric video provides immersive experience and is gaining traction in digital media.
+    Despite its rising popularity, the streaming of volumetric video content poses significant challenges
+    due to the high data bandwidth requirement. A natural approach to mitigate the bandwidth issue is
+    to reduce the volumetric video's data rate by downsampling the content prior to transmission. The
+    video can then be upsampled at the receiver's end using a super-resolution (SR) algorithm to reconstruct
+    the high-resolution details. While super-resolution techniques have been extensively explored and
+    advanced for 2D video content, there is limited work on SR algorithms tailored for volumetric videos.
+    To address this gap and the growing need for efficient volumetric video streaming, we have developed
+    VoLUT with a new SR algorithm specifically designed for volumetric content. Our algorithm uniquely
+    harnesses the power of lookup tables (LUTs) to facilitate the efficient and accurate upscaling of
+    low-resolution volumetric data. The use of LUTs enables our algorithm to quickly reference precomputed
+    high-resolution values, thereby significantly reducing the computational complexity and time required
+    for upscaling. We further apply adaptive video bit rate algorithm (ABR) to dynamically determine the
+    downsampling rate according to the network condition and stream the selected video rate to the receiver.
+    Compared to related work, VoLUT is the first to enable high-quality 3D SR on commodity mobile devices
+    at line-rate. Our evaluation shows VoLUT can reduce bandwidth usage by 70% , boost QoE by 36.7% for
+    volumetric video streaming and achieve 3D SR speed-up with no quality compromise.
+  url: https://arxiv.org/abs/2502.12151
+  pdf_url: https://arxiv.org/pdf/2502.12151v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 3
+citation_year: 2025

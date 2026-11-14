@@ -1,0 +1,57 @@
+id: paper:arxiv:2608.15071
+status: pending
+score: 2
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 4
+  weight: 1
+- ref: concept:LLM
+  count: 2
+  weight: 1
+meta:
+  title: 'Evo-Harness: Context-to-Harness Skill Compilation for Self-Evolving Agents'
+  authors:
+  - Tianxin Wei
+  - Zhan Shi
+  - Minhua Lin
+  - Bing He
+  - Zewen Liu
+  - Yisi Sang
+  - Yuanchen Bei
+  - Xuying Ning
+  - Jiaru Zou
+  - Ting-Wei Li
+  - Xiao Lin
+  - Yanjun Zhao
+  - Chi Wang
+  - Benoit Dumoulin
+  - Dakuo Wang
+  - Jingrui He
+  - Hanqing Lu
+  published: '2026-08-15'
+  updated: '2026-08-30'
+  categories:
+  - cs.AI
+  - cs.CL
+  abstract: Learning from experience is critical for developing capable, self-improving large language
+    model (LLM) agents. Existing methods typically extract knowledge from accumulated trajectories via
+    reflection, memory, rules, or skills. However, agents in realistic environments continuously encounter
+    novel tasks, often offering only a one-shot opportunity to improve. These executions yield rich but
+    highly noisy contexts, entangling broadly useful lessons with task-specific artifacts. Critically,
+    prior works rarely validate their effectiveness on complex real-world tasks or isolate the underlying
+    drivers of improvement. To address these gaps, we formulate online harness learning, where a frozen
+    agent improves by continually updating a structured harness across sequential tasks. This formulation
+    enables a systematic study of key self-improvement factors through our proposed Evo-Harness. At its
+    core, context-to-harness skill compilation distills noisy, single-shot executions into reusable skill
+    harnesses for cross-domain and topic-level adaptation. To demonstrate the efficacy of one-shot skill
+    compilation, we evaluate across five realistic benchmarks (TerminalBench2, SWE-bench, CL-Bench, -bench,
+    WebArena-Infinity). Our extensive analysis demonstrates the effectiveness of Evo-Harness and provides
+    a principled understanding of how LLM agents can effectively learn on the fly. Our code is available
+    at https://github.com/A-EVO-Lab/a-evolve/tree/release/evo-harness.
+  url: https://arxiv.org/abs/2608.15071
+  pdf_url: https://arxiv.org/pdf/2608.15071v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 30
+citation_year: 2026

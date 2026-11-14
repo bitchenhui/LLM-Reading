@@ -1,0 +1,50 @@
+id: paper:arxiv:2605.17588
+status: skipped_low_citation
+score: 4
+track: processing_enhancement
+matched:
+- ref: concept:SuperResolution
+  count: 2
+  weight: 1
+- ref: metric:LPIPS
+  count: 1
+  weight: 1
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+- ref: metric:SSIM
+  count: 1
+  weight: 1
+meta:
+  title: 'MSIQ: Moment-based Scale-Invariant Quality Measure for Single Image Super-Resolution'
+  authors:
+  - Leonid Bedratyuk
+  published: '2026-05-17'
+  updated: '2026-05-17'
+  categories:
+  - cs.CV
+  abstract: 'Assessing the quality of single image super-resolution (SISR) results remains an open methodological
+    problem. Common full-reference metrics (PSNR, SSIM, LPIPS) do not explicitly evaluate the preservation
+    of the geometric structure of images, which is critical for the correctness of scale-based reconstruction.
+    In addition, they require the forced alignment of images to the same size (\textit{forced resizing}),
+    which introduces an external interpolation error into the evaluation process. This paper proposes
+    a diagnostic scale-invariant quality measure, MSIQ (\textit{Moment-based Scale-Invariant Quality}),
+    based on the comparison of normalized central geometric moments of two images. MSIQ enables direct
+    comparison of images with different spatial resolutions without resizing, is mathematically deterministic
+    (\textit{model-free}), and has an analytical form. To provide a theoretical basis for the approach,
+    we introduce a conceptual distinction between the ability of metrics to monotonically track degradation
+    (\textit{tracking ability}) and their geometric selectivity (\textit{geometric specificity}). The
+    experimental validation confirmed the stability of MSIQ under uniform scaling and, at the same time,
+    revealed the high sensitivity of traditional metrics to the choice of interpolation method. The results
+    show that MSIQ has pronounced geometric selectivity: the proposed measure effectively separates geometric
+    deformations from non-geometric artifacts, in particular JPEG compression, unlike pixel-based and
+    perceptual metrics. It is also shown that the response of MSIQ to structural perturbations remains
+    stable across different classes of SR algorithms, including DNN models with different architectures.
+    The proposed measure is a complementary diagnostic tool for domains where geometric fidelity has priority,
+    in particular medical imaging and remote sensing.'
+  url: https://arxiv.org/abs/2605.17588
+  pdf_url: https://arxiv.org/pdf/2605.17588v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 0
+citation_year: 2026

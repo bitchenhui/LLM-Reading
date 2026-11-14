@@ -1,0 +1,48 @@
+id: paper:arxiv:2509.07653
+status: skipped
+score: 1
+track: immersive_media
+matched:
+- ref: concept:VolumetricVideo
+  count: 2
+  weight: 1
+meta:
+  title: Topology-Aware Optimization of Gaussian Primitives for Human-Centric Volumetric Videos
+  authors:
+  - Yuheng Jiang
+  - Chengcheng Guo
+  - Yize Wu
+  - Yu Hong
+  - Shengkun Zhu
+  - Zhehao Shen
+  - Yingliang Zhang
+  - Shaohui Jiao
+  - Zhuo Su
+  - Lan Xu
+  - Marc Habermann
+  - Christian Theobalt
+  published: '2025-09-09'
+  updated: '2025-09-09'
+  categories:
+  - cs.GR
+  abstract: Volumetric video is emerging as a key medium for digitizing the dynamic physical world, creating
+    the virtual environments with six degrees of freedom to deliver immersive user experiences. However,
+    robustly modeling general dynamic scenes, especially those involving topological changes while maintaining
+    long-term tracking remains a fundamental challenge. In this paper, we present TaoGS, a novel topology-aware
+    dynamic Gaussian representation that disentangles motion and appearance to support, both, long-range
+    tracking and topological adaptation. We represent scene motion with a sparse set of motion Gaussians,
+    which are continuously updated by a spatio-temporal tracker and photometric cues that detect structural
+    variations across frames. To capture fine-grained texture, each motion Gaussian anchors and dynamically
+    activates a set of local appearance Gaussians, which are non-rigidly warped to the current frame to
+    provide strong initialization and significantly reduce training time. This activation mechanism enables
+    efficient modeling of detailed textures and maintains temporal coherence, allowing high-fidelity rendering
+    even under challenging scenarios such as changing clothes. To enable seamless integration into codec-based
+    volumetric formats, we introduce a global Gaussian Lookup Table that records the lifespan of each
+    Gaussian and organizes attributes into a lifespan-aware 2D layout. This structure aligns naturally
+    with standard video codecs and supports up to 40 compression. TaoGS provides a unified, adaptive solution
+    for scalable volumetric video under topological variation, capturing moments where "elegance in motion"
+    and "Power in Stillness", delivering immersive experiences that harmonize with the physical world.
+  url: https://arxiv.org/abs/2509.07653
+  pdf_url: https://arxiv.org/pdf/2509.07653v1
+  version: v1
+fetched: '2026-11-14'

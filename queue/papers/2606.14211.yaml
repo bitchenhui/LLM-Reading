@@ -1,0 +1,41 @@
+id: paper:arxiv:2606.14211
+status: pending
+score: 2
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: 'Closing the Reflection Gap: A Free Calibration Bonus for Agentic RL'
+  authors:
+  - Yinglun Zhu
+  published: '2026-06-12'
+  updated: '2026-06-12'
+  categories:
+  - cs.AI
+  - cs.LG
+  abstract: 'LLMs are increasingly deployed as agents that interact with external environments and observe
+    feedback such as execution results, error messages, and tool outputs. A well-functioning agent should
+    be able to leverage this feedback to accurately assess its own performance. Yet we find a persistent
+    reflection gap: LLM agents tend to mis-assess their own outputs after observing concrete environment
+    feedback -- even for questions they correctly answered -- and standard RL barely helps due to a credit-assignment
+    mismatch. To close this gap, we propose RefGRPO, a simple yet effective fix that augments standard
+    RL algorithms with two key ingredients: a free calibration bonus computed by contrasting the agent''s
+    own reflection with the actual outcome (requiring no additional reward model, LLM judge, or external
+    annotation), and a dynamic schedule on its coefficient. Compared to standard RL baselines, our method
+    simultaneously improves reflection calibration (e.g., reduces underconfidence rate $44.4\% \to 7.7\%$)
+    and task accuracy (e.g., $75.1\% \to 76.5\%$) on text-to-SQL across five benchmarks. The resulting
+    calibrated reflection turns the agent into its own verifier grounded in environment feedback, which
+    further enables (i) better self-improvement that uses reflections as pseudo-rewards without outcome
+    supervision, and (ii) more effective test-time selective prediction by committing only to rollouts
+    flagged as correct.'
+  url: https://arxiv.org/abs/2606.14211
+  pdf_url: https://arxiv.org/pdf/2606.14211v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 2
+citation_year: 2026

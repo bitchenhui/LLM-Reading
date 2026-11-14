@@ -1,0 +1,57 @@
+id: paper:arxiv:2403.14471
+status: pending
+score: 7
+track: video_image_coding
+matched:
+- ref: impl:VTM
+  count: 1
+  weight: 3
+- ref: concept:EntropyModel
+  count: 1
+  weight: 1
+- ref: metric:MS-SSIM
+  count: 1
+  weight: 1
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+- ref: metric:SSIM
+  count: 1
+  weight: 1
+meta:
+  title: 'S2LIC: Learned Image Compression with the SwinV2 Block, Adaptive Channel-wise and Global-inter
+    Attention Context'
+  authors:
+  - Yongqiang Wang
+  - Haisheng Fu
+  - Qi Cao
+  - Shang Wang
+  - Zhenjiao Chen
+  - Feng Liang
+  published: '2024-03-21'
+  updated: '2024-07-02'
+  categories:
+  - eess.IV
+  abstract: Recently, deep learning technology has been successfully applied in the field of image compression,
+    leading to superior rate-distortion performance. It is crucial to design an effective and efficient
+    entropy model to estimate the probability distribution of the latent representation. However, the
+    majority of entropy models primarily focus on one-dimensional correlation processing between channel
+    and spatial information. In this paper, we propose an Adaptive Channel-wise and Global-inter attention
+    Context (ACGC) entropy model, which can efficiently achieve dual feature aggregation in both inter-slice
+    and intraslice contexts. Specifically, we divide the latent representation into different slices and
+    then apply the ACGC model in a parallel checkerboard context to achieve faster decoding speed and
+    higher rate-distortion performance. In order to capture redundant global features across different
+    slices, we utilize deformable attention in adaptive global-inter attention to dynamically refine the
+    attention weights based on the actual spatial relationships and context. Furthermore, in the main
+    transformation structure, we propose a high-performance S2LIC model. We introduce the residual SwinV2
+    Transformer model to capture global feature information and utilize a dense block network as the feature
+    enhancement module to improve the nonlinear representation of the image within the transformation
+    structure. Experimental results demonstrate that our method achieves faster encoding and decoding
+    speeds and outperforms VTM-17.1 and some recent learned image compression methods in both PSNR and
+    MS-SSIM metrics.
+  url: https://arxiv.org/abs/2403.14471
+  pdf_url: https://arxiv.org/pdf/2403.14471v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 10
+citation_year: 2024

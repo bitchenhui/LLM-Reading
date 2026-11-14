@@ -1,0 +1,57 @@
+id: paper:arxiv:2503.19604
+status: pending
+score: 14
+track: video_image_coding
+matched:
+- ref: codec:VVC
+  count: 1
+  weight: 3
+- ref: impl:DCVC-FM
+  count: 1
+  weight: 3
+- ref: impl:NVRC
+  count: 1
+  weight: 3
+- ref: impl:VTM
+  count: 1
+  weight: 3
+- ref: concept:INR
+  count: 1
+  weight: 1
+- ref: metric:BD-Rate
+  count: 1
+  weight: 1
+meta:
+  title: 'GIViC: Generative Implicit Video Compression'
+  authors:
+  - Ge Gao
+  - Siyue Teng
+  - Tianhao Peng
+  - Fan Zhang
+  - David Bull
+  published: '2025-03-25'
+  updated: '2025-03-25'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: While video compression based on implicit neural representations (INRs) has recently demonstrated
+    great potential, existing INR-based video codecs still cannot achieve state-of-the-art (SOTA) performance
+    compared to their conventional or autoencoder-based counterparts given the same coding configuration.
+    In this context, we propose a Generative Implicit Video Compression framework, GIViC, aiming at advancing
+    the performance limits of this type of coding methods. GIViC is inspired by the characteristics that
+    INRs share with large language and diffusion models in exploiting long-term dependencies. Through
+    the newly designed implicit diffusion process, GIViC performs diffusive sampling across coarse-to-fine
+    spatiotemporal decompositions, gradually progressing from coarser-grained full-sequence diffusion
+    to finer-grained per-token diffusion. A novel Hierarchical Gated Linear Attention-based transformer
+    (HGLA), is also integrated into the framework, which dual-factorizes global dependency modeling along
+    scale and sequential axes. The proposed GIViC model has been benchmarked against SOTA conventional
+    and neural codecs using a Random Access (RA) configuration (YUV 4:2:0, GOPSize=32), and yields BD-rate
+    savings of 15.94%, 22.46% and 8.52% over VVC VTM, DCVC-FM and NVRC, respectively. As far as we are
+    aware, GIViC is the first INR-based video codec that outperforms VTM based on the RA coding configuration.
+    The source code will be made available.
+  url: https://arxiv.org/abs/2503.19604
+  pdf_url: https://arxiv.org/pdf/2503.19604v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 15
+citation_year: 2025

@@ -1,0 +1,38 @@
+id: paper:arxiv:2502.14947
+status: skipped
+score: 1
+track: streaming_delivery
+matched:
+- ref: concept:ABR
+  count: 3
+  weight: 1
+meta:
+  title: 'NeSt-VR: An Adaptive Bitrate Algorithm for Wireless Virtual Reality Streaming'
+  authors:
+  - Miguel Casasnovas
+  - Ferran Maura
+  - Isjtar Vandebroeck
+  - Haryo Sukmawanto
+  - Eric Joris
+  - Boris Bellalta
+  published: '2025-02-20'
+  updated: '2026-08-23'
+  categories:
+  - cs.NI
+  abstract: Interactive Virtual Reality (VR) streaming over wireless links requires both high frame rates
+    and low motion-to-photon latency, requirements that are difficult to sustain under changing channel
+    conditions such as fluctuating bandwidth and multi-user contention. Adaptive BitRate (ABR) control
+    is therefore essential, as it dynamically adjusts the encoded bitrate in response to network conditions
+    to maintain smooth interactive video delivery. In this paper, we present NeSt-VR, the Network-aware
+    Step-wise ABR algorithm for VR streaming, a configurable controller that uses application-level frame-delivery
+    and frame-delay feedback to adjust the encoder target bitrate in discrete steps, reducing abrupt bitrate
+    oscillations while supporting a satisfactory interactive VR user experience. We evaluate NeSt-VR through
+    Wi-Fi experiments against state-of-the-art ABR baselines, including GCC, NADA, and EVeREst-Intra.
+    The evaluation covers single-user and multi-user scenarios and common Wi-Fi challenges such as co-channel
+    interference and capacity fluctuations. The results show that NeSt-VR effectively manages bandwidth
+    variation, maintains frame delivery and low latency, and compares favorably with the baseline controllers
+    in the evaluated scenarios.
+  url: https://arxiv.org/abs/2502.14947
+  pdf_url: https://arxiv.org/pdf/2502.14947v2
+  version: v2
+fetched: '2026-11-14'

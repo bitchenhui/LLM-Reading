@@ -1,0 +1,35 @@
+id: paper:arxiv:2603.22623
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: To Agree or To Be Right? The Grounding-Sycophancy Tradeoff in Medical Vision-Language Models
+  authors:
+  - OFM Riaz Rahman Aranya
+  - Kevin Desai
+  published: '2026-03-23'
+  updated: '2026-03-23'
+  categories:
+  - cs.CV
+  - cs.AI
+  abstract: 'Vision-language models (VLMs) adapted to the medical domain have shown strong performance
+    on visual question answering benchmarks, yet their robustness against two critical failure modes,
+    hallucination and sycophancy, remains poorly understood, particularly in combination. We evaluate
+    six VLMs (three general-purpose, three medical-specialist) on three medical VQA datasets and uncover
+    a grounding-sycophancy tradeoff: models with the lowest hallucination propensity are the most sycophantic,
+    while the most pressure-resistant model hallucinates more than all medical-specialist models. To characterize
+    this tradeoff, we propose three metrics: L-VASE, a logit-space reformulation of VASE that avoids its
+    double-normalization; CCS, a confidence-calibrated sycophancy score that penalizes high-confidence
+    capitulation; and Clinical Safety Index (CSI), a unified safety index that combines grounding, autonomy,
+    and calibration via a geometric mean. Across 1,151 test cases, no model achieves a CSI above 0.35,
+    indicating that none of the evaluated 7-8B parameter VLMs is simultaneously well-grounded and robust
+    to social pressure. Our findings suggest that joint evaluation of both properties is necessary before
+    these models can be considered for clinical use. Code is available at https://github.com/UTSA-VIRLab/AgreeOrRight'
+  url: https://arxiv.org/abs/2603.22623
+  pdf_url: https://arxiv.org/pdf/2603.22623v1
+  version: v1
+fetched: '2026-11-14'

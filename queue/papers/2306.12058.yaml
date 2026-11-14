@@ -1,0 +1,43 @@
+id: paper:arxiv:2306.12058
+status: skipped
+score: 0
+track: video_image_coding
+matched: []
+meta:
+  title: Beyond Learned Metadata-based Raw Image Reconstruction
+  authors:
+  - Yufei Wang
+  - Yi Yu
+  - Wenhan Yang
+  - Lanqing Guo
+  - Lap-Pui Chau
+  - Alex C. Kot
+  - Bihan Wen
+  published: '2023-06-21'
+  updated: '2023-06-21'
+  categories:
+  - cs.CV
+  - eess.IV
+  abstract: While raw images have distinct advantages over sRGB images, e.g., linearity and fine-grained
+    quantization levels, they are not widely adopted by general users due to their substantial storage
+    requirements. Very recent studies propose to compress raw images by designing sampling masks within
+    the pixel space of the raw image. However, these approaches often leave space for pursuing more effective
+    image representations and compact metadata. In this work, we propose a novel framework that learns
+    a compact representation in the latent space, serving as metadata, in an end-to-end manner. Compared
+    with lossy image compression, we analyze the intrinsic difference of the raw image reconstruction
+    task caused by rich information from the sRGB image. Based on the analysis, a novel backbone design
+    with asymmetric and hybrid spatial feature resolutions is proposed, which significantly improves the
+    rate-distortion performance. Besides, we propose a novel design of the context model, which can better
+    predict the order masks of encoding/decoding based on both the sRGB image and the masks of already
+    processed features. Benefited from the better modeling of the correlation between order masks, the
+    already processed information can be better utilized. Moreover, a novel sRGB-guided adaptive quantization
+    precision strategy, which dynamically assigns varying levels of quantization precision to different
+    regions, further enhances the representation ability of the model. Finally, based on the iterative
+    properties of the proposed context model, we propose a novel strategy to achieve variable bit rates
+    using a single model. This strategy allows for the continuous convergence of a wide range of bit rates.
+    Extensive experimental results demonstrate that the proposed method can achieve better reconstruction
+    quality with a smaller metadata size.
+  url: https://arxiv.org/abs/2306.12058
+  pdf_url: https://arxiv.org/pdf/2306.12058v1
+  version: v1
+fetched: '2026-11-14'

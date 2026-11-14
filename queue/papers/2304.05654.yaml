@@ -1,0 +1,40 @@
+id: paper:arxiv:2304.05654
+status: skipped
+score: 2
+track: video_image_coding
+matched:
+- ref: concept:GOP
+  count: 2
+  weight: 1
+- ref: org:MPEG
+  count: 1
+  weight: 1
+meta:
+  title: An Optimal SVC Bitstream Schema for Viewport-dependent 360-degree Video Streaming
+  authors:
+  - Gang Shen
+  - Mingyang Ma
+  - Guangxin Xu
+  published: '2023-04-12'
+  updated: '2023-04-12'
+  categories:
+  - cs.MM
+  abstract: To deliver ultra-high resolution 360-degree video (such as 8K, 12K, or even higher) across
+    the internet, viewport-dependent streaming becomes necessary to save bandwidth. During viewport switches,
+    clients and servers will instantly exchange coordination info and contents for the given viewports.
+    However, those viewport switches pose a serious challenge for video encoding because the temporal
+    dependency between contents within changing viewports is unpredictable. In existing practices, it
+    is commonly noted that GOP (Group of Pictures) size in a bitstream intrinsically prohibits the reduction
+    of the viewport switch latency, such as Motion-to-photon (MTP) latency, or motion-to-high-quality
+    (MTHQ) latency. In this paper, we presented a Scalable Video Coding (SVC) based bitstream schema,
+    which can structurally remove the impacts of GOP in viewport-dependent streaming and provide instant
+    viewport switches within one-frame time (the best possible). In addition, combined with tiling, this
+    new coding schema allows an efficient packing of the non-adjacent regions within a viewport of 360-degree
+    video. Our experiments also show that the overall encoding with this SVC-based approach is faster
+    than with multi-stream approaches. Compared with current 360-degree video streaming solutions based
+    on MPEG-I OMAF, our approach is superior in terms of viewport switch latency, simplicity of viewport
+    packing, and encoding performance.
+  url: https://arxiv.org/abs/2304.05654
+  pdf_url: https://arxiv.org/pdf/2304.05654v1
+  version: v1
+fetched: '2026-11-14'

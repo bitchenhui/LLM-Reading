@@ -1,0 +1,36 @@
+id: paper:arxiv:2410.21144
+status: skipped
+score: 1
+track: video_image_coding
+matched:
+- ref: dataset:Kodak
+  count: 1
+  weight: 1
+meta:
+  title: Enhancing Learned Image Compression via Cross Window-based Attention
+  authors:
+  - Priyanka Mudgal
+  - Feng Liu
+  published: '2024-10-28'
+  updated: '2025-02-12'
+  categories:
+  - cs.CV
+  - cs.MM
+  - eess.IV
+  abstract: In recent years, learned image compression methods have demonstrated superior rate-distortion
+    performance compared to traditional image compression methods. Recent methods utilize convolutional
+    neural networks (CNN), variational autoencoders (VAE), invertible neural networks (INN), and transformers.
+    Despite their significant contributions, a main drawback of these models is their poor performance
+    in capturing local redundancy. Therefore, to leverage global features along with local redundancy,
+    we propose a CNN-based solution integrated with a feature encoding module. The feature encoding module
+    encodes important features before feeding them to the CNN and then utilizes cross-scale window-based
+    attention, which further captures local redundancy. Cross-scale window-based attention is inspired
+    by the attention mechanism in transformers and effectively enlarges the receptive field. Both the
+    feature encoding module and the cross-scale window-based attention module in our architecture are
+    flexible and can be incorporated into any other network architecture. We evaluate our method on the
+    Kodak and CLIC datasets and demonstrate that our approach is effective and on par with state-of-the-art
+    methods. Our code is publicly available at https://github.com/prmudgal/CWAM_IC_ISVC. .
+  url: https://arxiv.org/abs/2410.21144
+  pdf_url: https://arxiv.org/pdf/2410.21144v4
+  version: v4
+fetched: '2026-11-14'

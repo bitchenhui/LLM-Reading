@@ -1,0 +1,42 @@
+id: paper:arxiv:2607.13792
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'EgoProceVQA: A Novel Egocentric Procedural Understanding Task with Self-Skill-Exploration Agent'
+  authors:
+  - Junlong Li
+  - Junxi Li
+  - Yuxiang Yang
+  - Wenbin Zou
+  - Lap-Pui Chau
+  - Yi Wang
+  published: '2026-07-15'
+  updated: '2026-07-15'
+  categories:
+  - cs.CV
+  abstract: 'Most daily activities are inherently procedural. However, existing evaluations for egocentric
+    video understanding seldom address procedural understanding and largely overlook complex key-step-level
+    reasoning under the widely used video question answering (VQA) paradigm for MLLMs. Such capabilities
+    are crucial for building procedural AI assistants deployable on wearable devices. To bridge this gap,
+    we introduce the Egocentric Procedural Understanding VQA task (EgoProceVQA), which systematically
+    evaluates egocentric procedural reasoning abilities of current MLLMs and agents through six types
+    of key-step-centric questions. Furthermore, we develop EgoProceGen, a data generation platform that
+    efficiently constructs QA data tailored to different question types. Based on this platform, we build
+    a benchmark with 3,600 questions, four common procedural scenarios, and 31 everyday procedural tasks.
+    Evaluations on EgoProceVQA show that existing MLLMs and agents still have substantial room for improvement
+    in procedural understanding. Therefore, we further propose EgoProceAgent, a self-skill-exploration
+    agentic framework. We design a generic tool library for procedural understanding and a standardized
+    sub-skill library shared across tools and models, enabling self-exploration without ground-truth supervision.
+    By exploring how to compose and select sub-skills, the agent discovers effective skill strategies
+    for diverse problems, and attains state-of-the-art performance among open-source models on multiple
+    tasks. Together, our benchmark, generation platform, and agentic framework establish a unified foundation
+    for EgoProceVQA. Project page: https://z1oong.github.io/EgoProceVQA/.'
+  url: https://arxiv.org/abs/2607.13792
+  pdf_url: https://arxiv.org/pdf/2607.13792v1
+  version: v1
+fetched: '2026-11-14'

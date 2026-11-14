@@ -1,0 +1,42 @@
+id: paper:arxiv:2607.07288
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'InfraQR: Edge-Placed QR-Inspired Structured Patch Attacks on Infrared Vision-Language Models'
+  authors:
+  - Xin Li
+  - Jiaju Han
+  - Ma Yaqi
+  - Chengyin Hu
+  - Yingying Zhao
+  - Jiahuan Long
+  - Fengyu Zhang
+  - Yahui Chai
+  published: '2026-07-08'
+  updated: '2026-07-08'
+  categories:
+  - cs.CV
+  abstract: Infrared vision-language models are increasingly used for perception under low-light and adverse
+    visual conditions, yet their robustness to localized structured perturbations remains underexplored.
+    Existing infrared adversarial studies mainly focus on object detectors, leaving the security of infrared
+    vision-language models less systematically examined. We present InfraQR, a QR-inspired structured
+    patch attack for infrared vision-language models. Unlike localized attacks that attach perturbations
+    to the target object, InfraQR places a compact structured patch along image boundaries and optimizes
+    learnable grid cells through surrogate CLIP-style encoders. The resulting patch has a near-binary
+    structured appearance, but is not required to be a valid or machine-readable QR code. We evaluate
+    InfraQR on infrared classification, caption transfer, and question-answer-aware visual question answering
+    (VQA) tasks. On a 300-image infrared benchmark, InfraQR sharply reduces the accuracy of multiple CLIP-style
+    classifiers, including reducing OpenAI CLIP accuracy from 98.67% to 0.70%. The generated adversarial
+    images also transfer to black-box captioning and VQA models, causing semantic degradation in captions
+    and more error-prone answers under GPT-5.4-based evaluation. These results show that infrared vision-language
+    models remain vulnerable to structured edge-placed perturbations, motivating further study of cross-task
+    robustness beyond direct object occlusion.
+  url: https://arxiv.org/abs/2607.07288
+  pdf_url: https://arxiv.org/pdf/2607.07288v1
+  version: v1
+fetched: '2026-11-14'

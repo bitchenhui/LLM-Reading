@@ -1,0 +1,41 @@
+id: paper:arxiv:2606.29760
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 3
+  weight: 1
+meta:
+  title: 'MR-IQA: A Unified Margin View of Regression and Ranking for Blind Image Quality Assessment'
+  authors:
+  - Yuan Li
+  - Youyuan Lin
+  - Zitang Sun
+  - Yung-Hao Yang
+  - Kiyofumi Miyoshi
+  - Chenhui Chu
+  - Shin'ya Nishida
+  published: '2026-06-29'
+  updated: '2026-06-30'
+  categories:
+  - cs.CV
+  abstract: 'Blind image quality assessment (BIQA) is commonly built on two basic learning paradigms:
+    regression and ranking. Regression calibrates absolute scores, whereas ranking recovers quality structure
+    from ordinal relations. Although joint regression-ranking supervision often improves BIQA, the relation
+    between the two paradigms remains largely empirical and underexplored. In this work, we revisit what
+    underlies regression and ranking and identify pairwise relational distance, termed quality margin,
+    as their common bridge. Our derivation shows that, at the objective-optimization level, both paradigms
+    fit quality margins: regression fits margins induced by score endpoints, while ranking fits transformed
+    or sign-level margins through preference probabilities. Motivated by this insight, we propose MR-IQA,
+    a direct quality-margin optimization framework for reinforcement learning (RL)-based BIQA. MR-IQA
+    samples quality scores and optimizes pairwise margin errors as policy rewards, thereby modeling quality
+    structure more explicitly. Experiments on six BIQA benchmarks show competitive general performance,
+    and controlled comparisons demonstrate that MR-IQA achieves the strongest average PLCC/SRCC over regression-
+    or ranking-based RL methods. Our findings provide a new insight into unifying regression and ranking,
+    offering a theoretical basis for understanding quality-structure modeling in BIQA and beyond. Code
+    is available at https://github.com/RobinY99/MR-IQA.'
+  url: https://arxiv.org/abs/2606.29760
+  pdf_url: https://arxiv.org/pdf/2606.29760v2
+  version: v2
+fetched: '2026-11-14'

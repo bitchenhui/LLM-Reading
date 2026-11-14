@@ -1,0 +1,42 @@
+id: paper:arxiv:2311.14208
+status: skipped
+score: 2
+track: video_image_coding
+matched:
+- ref: concept:NeRF
+  count: 2
+  weight: 1
+- ref: concept:EntropyModel
+  count: 1
+  weight: 1
+meta:
+  title: 'ECRF: Entropy-Constrained Neural Radiance Fields Compression with Frequency Domain Optimization'
+  authors:
+  - Soonbin Lee
+  - Fangwen Shu
+  - Yago Sanchez
+  - Thomas Schierl
+  - Cornelius Hellge
+  published: '2023-11-23'
+  updated: '2023-11-23'
+  categories:
+  - cs.CV
+  - eess.IV
+  abstract: Explicit feature-grid based NeRF models have shown promising results in terms of rendering
+    quality and significant speed-up in training. However, these methods often require a significant amount
+    of data to represent a single scene or object. In this work, we present a compression model that aims
+    to minimize the entropy in the frequency domain in order to effectively reduce the data size. First,
+    we propose using the discrete cosine transform (DCT) on the tensorial radiance fields to compress
+    the feature-grid. This feature-grid is transformed into coefficients, which are then quantized and
+    entropy encoded, following a similar approach to the traditional video coding pipeline. Furthermore,
+    to achieve a higher level of sparsity, we propose using an entropy parameterization technique for
+    the frequency domain, specifically for DCT coefficients of the feature-grid. Since the transformed
+    coefficients are optimized during the training phase, the proposed model does not require any fine-tuning
+    or additional information. Our model only requires a lightweight compression pipeline for encoding
+    and decoding, making it easier to apply volumetric radiance field methods for real-world applications.
+    Experimental results demonstrate that our proposed frequency domain entropy model can achieve superior
+    compression performance across various datasets. The source code will be made publicly available.
+  url: https://arxiv.org/abs/2311.14208
+  pdf_url: https://arxiv.org/pdf/2311.14208v1
+  version: v1
+fetched: '2026-11-14'

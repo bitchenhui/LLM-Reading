@@ -1,0 +1,50 @@
+id: paper:arxiv:2408.08682
+status: skipped_low_citation
+score: 5
+track: immersive_media
+matched:
+- ref: codec:G-PCC
+  count: 2
+  weight: 3
+- ref: concept:LLM
+  count: 2
+  weight: 1
+- ref: org:MPEG
+  count: 1
+  weight: 1
+meta:
+  title: 'LLM-PCGC: Large Language Model-based Point Cloud Geometry Compression'
+  authors:
+  - Yuqi Ye
+  - Wei Gao
+  published: '2024-08-16'
+  updated: '2024-08-16'
+  categories:
+  - cs.AI
+  - cs.CL
+  - cs.CV
+  abstract: The key to effective point cloud compression is to obtain a robust context model consistent
+    with complex 3D data structures. Recently, the advancement of large language models (LLMs) has highlighted
+    their capabilities not only as powerful generators for in-context learning and generation but also
+    as effective compressors. These dual attributes of LLMs make them particularly well-suited to meet
+    the demands of data compression. Therefore, this paper explores the potential of using LLM for compression
+    tasks, focusing on lossless point cloud geometry compression (PCGC) experiments. However, applying
+    LLM directly to PCGC tasks presents some significant challenges, i.e., LLM does not understand the
+    structure of the point cloud well, and it is a difficult task to fill the gap between text and point
+    cloud through text description, especially for large complicated and small shapeless point clouds.
+    To address these problems, we introduce a novel architecture, namely the Large Language Model-based
+    Point Cloud Geometry Compression (LLM-PCGC) method, using LLM to compress point cloud geometry information
+    without any text description or aligning operation. By utilizing different adaptation techniques for
+    cross-modality representation alignment and semantic consistency, including clustering, K-tree, token
+    mapping invariance, and Low Rank Adaptation (LoRA), the proposed method can translate LLM to a compressor/generator
+    for point cloud. To the best of our knowledge, this is the first structure to employ LLM as a compressor
+    for point cloud data. Experiments demonstrate that the LLM-PCGC outperforms the other existing methods
+    significantly, by achieving -40.213% bit rate reduction compared to the reference software of MPEG
+    Geometry-based Point Cloud Compression (G-PCC) standard, and by achieving -2.267% bit rate reduction
+    compared to the state-of-the-art learning-based method.
+  url: https://arxiv.org/abs/2408.08682
+  pdf_url: https://arxiv.org/pdf/2408.08682v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 4
+citation_year: 2024

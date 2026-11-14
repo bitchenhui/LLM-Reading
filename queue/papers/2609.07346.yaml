@@ -1,0 +1,47 @@
+id: paper:arxiv:2609.07346
+status: pending
+score: 3
+track: quality_assessment
+matched:
+- ref: concept:3DGS
+  count: 4
+  weight: 1
+- ref: concept:IQA
+  count: 1
+  weight: 1
+- ref: concept:NeRF
+  count: 1
+  weight: 1
+meta:
+  title: 'From Explicit References to Scene Manifolds: Distributional Fidelity and Realism for Radiance
+    Field Quality Assessment'
+  authors:
+  - Saeed Mahmoudpour
+  - Gi-Mun Um
+  - Hyon-Gon Choo
+  - Peter Schelkens
+  published: '2026-09-07'
+  updated: '2026-09-07'
+  categories:
+  - cs.CV
+  abstract: Radiance field representations such as 3D Gaussian Splatting (3DGS) enable high-quality novel
+    view synthesis but can introduce complex, view-dependent artifacts from reconstruction, rendering,
+    and compression. Reliable perceptual quality assessment (QA) is thus essential for evaluating rendered
+    views and guiding the design of perceptually faithful scene representations. Existing full-reference
+    QA metrics require an aligned reference image, while recent cross-reference metrics relax this requirement
+    by comparing a test view with non-aligned references. However, under wide-baseline radiance field
+    settings, selecting a reliable nearby reference can be difficult, particularly when evaluating views
+    along arbitrary trajectories and poses. We propose SCODA, a lightweight scene-conditioned objective
+    QA method that shifts QA from explicit image-to-image comparison to scene-manifold modeling. High-quality
+    observations of each scene are represented as a multivariate Gaussian distribution in deep feature
+    space, producing a semantic fidelity score that measures deviation from the scene distribution. A
+    weakly-supervised distortion-aware patch discriminator provides a complementary realism signal, and
+    both cues are combined through an unsupervised bounded fusion strategy. Experiments on multiple benchmarks
+    show strong agreement with human judgments and robust generalization across GS- and NeRF-generated
+    views and trajectories. Code is publicly available at https://gitlab.com/saeedmp/scoda.
+  url: https://arxiv.org/abs/2609.07346
+  pdf_url: https://arxiv.org/pdf/2609.07346v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 0
+citation_year: 2026

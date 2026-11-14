@@ -1,0 +1,43 @@
+id: paper:arxiv:2509.00676
+status: skipped
+score: 1
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 1
+  weight: 1
+meta:
+  title: 'LLaVA-Critic-R1: Your Critic Model is Secretly a Strong Policy Model'
+  authors:
+  - Xiyao Wang
+  - Chunyuan Li
+  - Jianwei Yang
+  - Kai Zhang
+  - Bo Liu
+  - Tianyi Xiong
+  - Furong Huang
+  published: '2025-08-31'
+  updated: '2025-08-31'
+  categories:
+  - cs.CV
+  - cs.LG
+  abstract: 'In vision-language modeling, critic models are typically trained to evaluate outputs -- assigning
+    scalar scores or pairwise preferences -- rather than to generate responses. This separation from policy
+    models, which produce the responses, is so entrenched that critics are rarely considered for direct
+    policy use. In this work, we challenge this convention. We propose to reorganize preference-labeled
+    critic datasets into verifiable training signals and perform reinforcement learning directly on a
+    base generative model, producing LLaVA-Critic-R1, a multimodal critic trained to optimize preference
+    judgments while retaining full generation ability. Surprisingly, LLaVA-Critic-R1 emerges not only
+    as a top-performing critic but also as a competitive policy model -- matching or surpassing specialized
+    reasoning VLMs trained with in-domain data across 26 visual reasoning and understanding benchmarks,
+    with an average gain of +5.7% over its base model (Qwen-2.5-VL-7B). Extending this approach to existing
+    strong reasoning VLMs yields LLaVA-Critic-R1+, which further advances policy performance without sacrificing
+    critic quality, achieving a SoTA performance of 71.9 on MMMU at the 7B scale. Finally, we show that
+    the enhanced critic ability benefits inference: applying self-critique at test time yields an average
+    +13.8% improvement on five representative reasoning tasks without additional training. Our results
+    reveal that RL training on critic data can produce a unified model excelling at both evaluation and
+    generation, offering a simple path toward scalable, self-improving multimodal systems.'
+  url: https://arxiv.org/abs/2509.00676
+  pdf_url: https://arxiv.org/pdf/2509.00676v1
+  version: v1
+fetched: '2026-11-14'

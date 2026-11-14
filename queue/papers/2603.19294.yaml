@@ -1,0 +1,45 @@
+id: paper:arxiv:2603.19294
+status: skipped_low_citation
+score: 2
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: Maximizing Mutual Information Between Prompt and Response Improves LLM Performance With No Additional
+    Data
+  authors:
+  - Hyunji Nam
+  - Haoran Li
+  - Natasha Jaques
+  published: '2026-03-10'
+  updated: '2026-08-26'
+  categories:
+  - cs.LG
+  - cs.AI
+  - cs.CL
+  abstract: While post-training has successfully improved large language models (LLMs) across a variety
+    of domains, these gains heavily rely on human-labeled data or external verifiers. Existing data has
+    already been exploited, and new data is expensive to collect. Moreover, true intelligence goes far
+    beyond verifiable tasks. Therefore, we need self-improvement frameworks that are less dependent on
+    external signals and more broadly applicable to both verifiable and non-verifiable domains. We propose
+    **Mutual Information Preference Optimization (MIPO)**, a contrastive data augmentation method that
+    constructs preference pairs by generating a positive response conditioning on the correct prompt,
+    and a negative response by conditioning on a random, unrelated prompt. We show that using Direct Preference
+    Optimization to learn from this paired data maximizes pointwise mutual information *under the base
+    LLM* between prompts and model responses. Experiments with with 1-7B parameter Llama and Qwen instruct
+    models show that MIPO achieves 3-16% gains (and 51% increase for Qwen2.5-1.5B-Instruct) on personalization
+    compared to prompting baselines. Surprisingly, MIPO can also be useful in verifiable domains, such
+    as math and multiple-choice question answering, yielding 1-20% gains *without any additional data
+    or external supervision*. These results suggest a promising direction for self-improvement using intrinsic
+    signals derived from contrastive data pairs.
+  url: https://arxiv.org/abs/2603.19294
+  pdf_url: https://arxiv.org/pdf/2603.19294v6
+  version: v6
+fetched: '2026-11-14'
+citation_count: 0
+citation_year: 2026

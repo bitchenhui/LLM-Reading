@@ -1,0 +1,47 @@
+id: paper:arxiv:2208.08061
+status: skipped_low_citation
+score: 7
+track: immersive_media
+matched:
+- ref: codec:V-PCC
+  count: 2
+  weight: 3
+- ref: codec:HEVC
+  count: 1
+  weight: 3
+- ref: org:MPEG
+  count: 1
+  weight: 1
+meta:
+  title: Efficient dynamic point cloud coding using Slice-Wise Segmentation
+  authors:
+  - Faranak Tohidi
+  - Manoranjan Paul
+  - Anwaar Ulhaq
+  published: '2022-08-17'
+  updated: '2022-08-17'
+  categories:
+  - cs.CV
+  - cs.MM
+  - eess.IV
+  abstract: With the fast growth of immersive video sequences, achieving seamless and high-quality compressed
+    3D content is even more critical. MPEG recently developed a video-based point cloud compression (V-PCC)
+    standard for dynamic point cloud coding. However, reconstructed point clouds using V-PCC suffer from
+    different artifacts, including losing data during pre-processing before applying existing video coding
+    techniques, e.g., High-Efficiency Video Coding (HEVC). Patch generations and self-occluded points
+    in the 3D to the 2D projection are the main reasons for missing data using V-PCC. This paper proposes
+    a new method that introduces overlapping slicing as an alternative to patch generation to decrease
+    the number of patches generated and the amount of data lost. In the proposed method, the entire point
+    cloud has been cross-sectioned into variable-sized slices based on the number of self-occluded points
+    so that data loss can be minimized in the patch generation process and projection. For this, a variable
+    number of layers are considered, partially overlapped to retain the self-occluded points. The proposed
+    method's added advantage is to reduce the bits requirement and to encode geometric data using the
+    slicing base position. The experimental results show that the proposed method is much more flexible
+    than the standard V-PCC method, improves the rate-distortion performance, and decreases the data loss
+    significantly compared to the standard V-PCC method.
+  url: https://arxiv.org/abs/2208.08061
+  pdf_url: https://arxiv.org/pdf/2208.08061v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 1
+citation_year: 2022

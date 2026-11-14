@@ -1,0 +1,41 @@
+id: paper:arxiv:2502.00700
+status: skipped
+score: 1
+track: video_image_coding
+matched:
+- ref: dataset:Kodak
+  count: 1
+  weight: 1
+meta:
+  title: 'S2CFormer: Revisiting the RD-Latency Trade-off in Transformer-based Learned Image Compression'
+  authors:
+  - Yunuo Chen
+  - Qian Li
+  - Bing He
+  - Donghui Feng
+  - Ronghua Wu
+  - Qi Wang
+  - Li Song
+  - Guo Lu
+  - Wenjun Zhang
+  published: '2025-02-02'
+  updated: '2025-03-24'
+  categories:
+  - cs.CV
+  - eess.IV
+  abstract: 'Transformer-based Learned Image Compression (LIC) suffers from a suboptimal trade-off between
+    decoding latency and rate-distortion (R-D) performance. Moreover, the critical role of the FeedForward
+    Network (FFN)-based channel aggregation module has been largely overlooked. Our research reveals that
+    efficient channel aggregation-rather than complex and time-consuming spatial operations-is the key
+    to achieving competitive LIC models. Based on this insight, we initiate the ``S2CFormer'''' paradigm,
+    a general architecture that simplifies spatial operations and enhances channel operations to overcome
+    the previous trade-off. We present two instances of the S2CFormer: S2C-Conv, and S2C-Attention. Both
+    models demonstrate state-of-the-art (SOTA) R-D performance and significantly faster decoding speed.
+    Furthermore, we introduce S2C-Hybrid, an enhanced variant that maximizes the strengths of different
+    S2CFormer instances to achieve a better performance-latency trade-off. This model outperforms all
+    the existing methods on the Kodak, Tecnick, and CLIC Professional Validation datasets, setting a new
+    benchmark for efficient and high-performance LIC. The code is at \href{https://github.com/YunuoChen/S2CFormer}{https://github.com/YunuoChen/S2CFormer}.'
+  url: https://arxiv.org/abs/2502.00700
+  pdf_url: https://arxiv.org/pdf/2502.00700v3
+  version: v3
+fetched: '2026-11-14'

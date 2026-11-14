@@ -1,0 +1,38 @@
+id: paper:arxiv:2504.02902
+status: skipped
+score: 1
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 3
+  weight: 1
+meta:
+  title: 'Beyond Accuracy: The Role of Calibration in Self-Improving Large Language Models'
+  authors:
+  - Liangjie Huang
+  - Dawei Li
+  - Huan Liu
+  - Lu Cheng
+  published: '2025-04-03'
+  updated: '2025-04-03'
+  categories:
+  - cs.CL
+  - cs.AI
+  abstract: 'Large Language Models (LLMs) have demonstrated remarkable self-improvement capabilities,
+    whereby models iteratively revise their outputs through self-generated feedback. While this reflective
+    mechanism has shown promise in enhancing task performance, recent studies suggest that it may also
+    introduce undesirable biases-most notably, self-bias, or the tendency of LLMs to favor their own prior
+    outputs. In this work, we extend this line of inquiry by investigating the impact on confidence estimation.
+    We evaluate three representative self-improvement paradigms-basic prompting, Chain-of-Thought (CoT)
+    prompting, and tuning-based methods and find that iterative self-improvement can lead to systematic
+    overconfidence, as evidenced by a steadily increasing Expected Calibration Error (ECE) and lower accuracy
+    with high confidence. We then further explore the integration of confidence calibration techniques
+    with self-improvement. Specifically, we compare three strategies: (1) applying calibration after multiple
+    rounds of self-improvement, (2) calibrating before self-improvement, and (3) applying calibration
+    iteratively at each self-improvement step. Our results show that iterative calibration is most effective
+    in reducing ECE, yielding improved calibration. Our work pioneers the study of self-improving LLMs
+    from a calibration perspective, offering valuable insights into balancing model performance and reliability.'
+  url: https://arxiv.org/abs/2504.02902
+  pdf_url: https://arxiv.org/pdf/2504.02902v1
+  version: v1
+fetched: '2026-11-14'

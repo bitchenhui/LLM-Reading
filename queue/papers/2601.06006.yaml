@@ -1,0 +1,40 @@
+id: paper:arxiv:2601.06006
+status: skipped
+score: 1
+track: audio_coding
+matched:
+- ref: concept:NeuralAudioCodec
+  count: 1
+  weight: 1
+meta:
+  title: Discriminative-Generative Target Speaker Extraction with Decoder-Only Language Models
+  authors:
+  - Bang Zeng
+  - Beilong Tang
+  - Wang Xiang
+  - Ming Li
+  published: '2026-01-09'
+  updated: '2026-05-20'
+  categories:
+  - eess.AS
+  - cs.SD
+  abstract: Target speaker extraction (TSE) aims to recover the speech of a desired speaker from a mixture
+    given a short enrollment utterance, while speech enhancement (SE) focuses on improving speech quality
+    under noisy conditions. Most existing TSE and SE systems are based on discriminative modeling and
+    have shown strong interference suppression ability, but they often remain limited in perceptual quality
+    and naturalness. To address this issue, we first introduce LauraTSE, a generative TSE model built
+    on an autoregressive decoder-only language model. Although generative modeling is promising for quality
+    enhancement, purely generative TSE may suffer from hallucination, content drift, and limited controllability
+    in complex acoustic conditions. We therefore propose a discriminative-generative two-stage framework,
+    where a discriminative front-end first produces target-related representations with strong interference
+    suppression, and a generative back-end then reconstructs high-quality speech in the neural audio codec
+    representation space. This design combines the controllability of discriminative extraction with the
+    reconstruction capability of generative modeling. We further investigate several collaboration strategies
+    for the two-stage framework, including front-end freezing, joint fine-tuning, SI-SDR regularization,
+    and autoregressive/non-autoregressive inference. Experimental results on both TSE and SE benchmarks
+    show that the proposed framework achieves a better balance among perceptual quality, intelligibility,
+    and speaker consistency than purely discriminative or purely generative baselines.
+  url: https://arxiv.org/abs/2601.06006
+  pdf_url: https://arxiv.org/pdf/2601.06006v2
+  version: v2
+fetched: '2026-11-14'

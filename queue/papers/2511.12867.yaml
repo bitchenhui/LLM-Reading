@@ -1,0 +1,32 @@
+id: paper:arxiv:2511.12867
+status: skipped
+score: 1
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+meta:
+  title: Bootstrapping LLMs via Preference-Based Policy Optimization
+  authors:
+  - Chen Jia
+  published: '2025-11-17'
+  updated: '2025-12-24'
+  categories:
+  - cs.AI
+  - cs.LG
+  abstract: Bootstrapping large language models (LLMs) through preference-based policy optimization offers
+    a promising direction for aligning model behavior with human preferences without relying on extensive
+    manual annotations. In this work, we propose a novel preference-based policy optimization (PbPO) framework
+    that formulates the learning process as a min-max game between the main policy and a reward model
+    (RM). The RM is constrained within a confidence set derived from preference data to ensure reliable
+    exploitation. Our iterative online algorithm actively collects preference data through guided exploration
+    of the evolving policy, enabling continual self-improvement of both the policy and the RM. We provide
+    theoretical guarantees for our method, establishing high-probability regret bounds for both settings
+    with sequence-level RM and token-level RM, demonstrating its effectiveness in bootstrapping LLMs.
+    Extensive experiments on five benchmarks show that our approach consistently outperforms existing
+    state-of-the-art preference optimization techniques.
+  url: https://arxiv.org/abs/2511.12867
+  pdf_url: https://arxiv.org/pdf/2511.12867v2
+  version: v2
+fetched: '2026-11-14'

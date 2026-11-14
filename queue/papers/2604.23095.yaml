@@ -1,0 +1,38 @@
+id: paper:arxiv:2604.23095
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'INSIGHT: Indoor Scene Intelligence from Geometric-Semantic Hierarchy Transfer for Public~Safety'
+  authors:
+  - Alexander Nikitas Dimopoulos
+  - Joseph Grasso
+  - John Beltz
+  published: '2026-04-25'
+  updated: '2026-10-27'
+  categories:
+  - cs.CV
+  - cs.ET
+  abstract: 'Indoor environments lack the spatial intelligence infrastructure that GPS provides outdoors;
+    first responders arriving at unfamiliar buildings typically have no machine-readable map of safety
+    equipment. Prior work on 3D semantic segmentation for public safety identified two barriers: scarcity
+    of labeled indoor training data and poor recognition of small safety-critical features by native point-cloud
+    methods. This paper presents INSIGHT, a zero-target-domain-annotation pipeline that projects 2D image
+    understanding into 3D metric space via registered RGB-D data. Two interchangeable vision stacks share
+    a common 3D back end: a SAM3 foundation-model stack for text-prompted segmentation, and a traditional
+    CV stack (open-set detection, VQA, OCR) whose intermediate outputs are independently inspectable.
+    Evaluated on all seven subareas of Stanford 2D-3D-S (70{,}496 images), the pipeline produces Pointcept-schema-compatible
+    labeled point clouds and ISO~19164-compliant scene graphs with ${\sim}10^{4}{\times}$ compression;
+    role-filtered payloads transmit in ${<}15$\,s at 1\,Mbps over FirstNet Band~14. We report per-point
+    labeling accuracy on 7 shared classes, detection sensitivity for 15 safety-critical classes absent
+    from public 3D benchmarks alongside code-capped deployable estimates, and inter-pipeline complementarity,
+    demonstrating that 2D-to-3D semantic transfer addresses the labeled-data bottleneck while scene graphs
+    provide building intelligence compact enough for field deployment.'
+  url: https://arxiv.org/abs/2604.23095
+  pdf_url: https://arxiv.org/pdf/2604.23095v2
+  version: v2
+fetched: '2026-11-14'

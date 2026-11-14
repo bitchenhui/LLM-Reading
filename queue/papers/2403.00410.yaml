@@ -1,0 +1,55 @@
+id: paper:arxiv:2403.00410
+status: skipped_low_citation
+score: 9
+track: immersive_media
+matched:
+- ref: codec:G-PCC
+  count: 1
+  weight: 3
+- ref: codec:V-PCC
+  count: 1
+  weight: 3
+- ref: concept:QoE
+  count: 2
+  weight: 1
+- ref: concept:IQA
+  count: 1
+  weight: 1
+- ref: org:MPEG
+  count: 1
+  weight: 1
+meta:
+  title: Assessing objective quality metrics for JPEG and MPEG point cloud coding
+  authors:
+  - Davi Lazzarotto
+  - Michela Testolina
+  - Touradj Ebrahimi
+  published: '2024-03-01'
+  updated: '2024-10-31'
+  categories:
+  - eess.IV
+  abstract: As applications using immersive media gained increased attention from both academia and industry,
+    research in the field of point cloud compression has greatly intensified in recent years, leading
+    to the development of the MPEG compression standards V-PCC and G-PCC, as well as the more recent JPEG
+    Pleno learning-based point cloud coding. Each of the standards mentioned above is based on a different
+    algorithm, introducing distinct types of degradation that may impair the quality of experience when
+    lossy compression is applied. Although the impact on perceptual quality can be accurately evaluated
+    during subjective quality assessment experiments, objective quality metrics also predict the visually
+    perceived quality and provide similarity scores without human intervention. Nevertheless, their accuracy
+    can be susceptible to the characteristics of the evaluated media as well as to the type and intensity
+    of the added distortion. While the performance of multiple state-of-the-art objective quality metrics
+    has already been evaluated through their correlation with subjective scores obtained in the presence
+    of artifacts produced by the MPEG standards, no study has evaluated how metrics perform with the more
+    recent JPEG Pleno point cloud coding. In this paper, a study is conducted to benchmark the performance
+    of a large set of objective quality metrics in a subjective dataset including distortions produced
+    by JPEG and MPEG codecs. The dataset also contains three different trade-offs between color and geometry
+    compression for each codec, adding another dimension to the analysis. Performance indexes are computed
+    over the entire dataset but also after splitting according to the codec and to the original model,
+    resulting in detailed insights about the overall performance of each visual quality predictor as well
+    as their cross-content and cross-codec generalization ability.
+  url: https://arxiv.org/abs/2403.00410
+  pdf_url: https://arxiv.org/pdf/2403.00410v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 3
+citation_year: 2024

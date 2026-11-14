@@ -1,0 +1,47 @@
+id: paper:arxiv:2603.19779
+status: skipped_low_citation
+score: 2
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 3
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: 'One Model, Two Minds: Task-Conditioned Reasoning for Unified Image Quality and Aesthetic Assessment'
+  authors:
+  - Wen Yin
+  - Cencen Liu
+  - Dingrui Liu
+  - Bing Su
+  - Yuan-Fang Li
+  - Tao He
+  published: '2026-03-20'
+  updated: '2026-03-20'
+  categories:
+  - cs.CV
+  abstract: 'Unifying Image Quality Assessment (IQA) and Image Aesthetic Assessment (IAA) in a single
+    multimodal large language model is appealing, yet existing methods adopt a task-agnostic recipe that
+    applies the same reasoning strategy and reward to both tasks. We show this is fundamentally misaligned:
+    IQA relies on low-level, objective perceptual cues and benefits from concise distortion-focused reasoning,
+    whereas IAA requires deliberative semantic judgment and is poorly served by point-wise score regression.
+    We identify these as a reasoning mismatch and an optimization mismatch, and provide empirical evidence
+    for both through controlled probes. Motivated by these findings, we propose TATAR (Task-Aware Thinking
+    with Asymmetric Rewards), a unified framework that shares the visual-language backbone while conditioning
+    post-training on each task''s nature. TATAR combines three components: fast--slow task-specific reasoning
+    construction that pairs IQA with concise perceptual rationales and IAA with deliberative aesthetic
+    narratives; two-stage SFT+GRPO learning that establishes task-aware behavioral priors before reward-driven
+    refinement; and asymmetric rewards that apply Gaussian score shaping for IQA and Thurstone-style completion
+    ranking for IAA. Extensive experiments across eight benchmarks demonstrate that TATAR consistently
+    outperforms prior unified baselines on both tasks under in-domain and cross-domain settings, remains
+    competitive with task-specific specialized models, and yields more stable training dynamics for aesthetic
+    assessment. Our results establish task-conditioned post-training as a principled paradigm for unified
+    perceptual scoring. Our code is publicly available at https://github.com/yinwen2019/TATAR.'
+  url: https://arxiv.org/abs/2603.19779
+  pdf_url: https://arxiv.org/pdf/2603.19779v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 1
+citation_year: 2026

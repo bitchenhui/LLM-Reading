@@ -1,0 +1,45 @@
+id: paper:arxiv:2607.27084
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 2
+  weight: 1
+meta:
+  title: 'SciFigQual-Bench: A Benchmark for Scientific Figure Quality Assessment with Full-Manuscript
+    Context'
+  authors:
+  - Zihan Deng
+  - Chuanzhi Xu
+  - Huiqi Liang
+  - Haoyang Li
+  - Xiaozhen Zhong
+  - Weidong Cai
+  - Lequan Yu
+  published: '2026-07-29'
+  updated: '2026-09-26'
+  categories:
+  - cs.CV
+  - cs.AI
+  abstract: 'Scientific figure quality is bound to the manuscript: a crop can be visually clear and still
+    contradict its caption or the paragraph that cites it. Most image quality assessment and chart-understanding
+    methods target a detached visual surface or a question-answering score, rather than alignment among
+    the figure, its caption, and the citing text. A single end-to-end prompt that sees the image and the
+    text together still mixes what is visible with what the caption and the citing paragraph claim, so
+    fluent wording can raise a visual score and missing text can be treated as low quality. To address
+    this gap, we introduce SciFigQual-Bench, a manuscript-linked benchmark for published CS-conference
+    figures that binds each figure to its caption and to index-resolved citing paragraphs, and scores
+    visual clarity, layout, caption consistency, context consistency, and misleading risk, leaving a dimension
+    unevaluated when its evidence is absent. SFQ-Agent reads the image and the text in separate calls
+    and records modality-specific evidence. A cross-modal judge scores caption and citing-text alignment
+    from those reports, and a deterministic runner keeps the visual scores, sets misleading risk by a
+    fixed rule, and applies the written caps, so each dimension follows the rubric instead of a single
+    end-to-end prompt. Experiments comparing this staged judge with single-pass and OCR-sidecar protocols
+    find the closest point-estimate fit to mean human ratings under staged judging, while the gap between
+    protocols remains small. Caption consistency remains the main gap, and agreement with the rater mean
+    answers a different question from agreement among human raters.'
+  url: https://arxiv.org/abs/2607.27084
+  pdf_url: https://arxiv.org/pdf/2607.27084v3
+  version: v3
+fetched: '2026-11-14'

@@ -1,0 +1,51 @@
+id: paper:arxiv:2605.30698
+status: pending
+score: 2
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+- ref: concept:TrainingFree
+  count: 1
+  weight: 1
+meta:
+  title: 'Seeing Before Agreeing: Aligning Multi-Agent Consensus with Visual Evidence'
+  authors:
+  - Yuhan Wang
+  - Shuochen Chang
+  - Yalin Feng
+  - Dongsheng Ma
+  - Yuanzi Li
+  - Zhengren Wang
+  - Yinglong Yang
+  - Yufei Chen
+  - Yikang Wang
+  - Shaoxu Sun
+  - Wentao Zhang
+  published: '2026-05-29'
+  updated: '2026-05-29'
+  categories:
+  - cs.CV
+  - cs.AI
+  - cs.MA
+  abstract: 'Vision-language models (VLMs) have achieved strong performance on visual question answering
+    (VQA). To mitigate individual hallucinations and blind spots, aggregating diverse perspectives via
+    multi-agent collaboration has emerged as a promising paradigm. While this approach has shown great
+    success in textual QA, its potential in the multimodal domain remains under-explored. Existing multi-agent
+    VQA methods predominantly adapt text-centric protocols, focusing on textual discussions while ignoring
+    the alignment of visual information. In this work, we reveal a key insight: answer-level agreement
+    is insufficient for reliable multi-agent VQA; \textit{aligned visual evidence} -- shared support from
+    the image regions agents rely on -- is essential for trustworthy consensus. To leverage this insight,
+    we propose EAGLE (\textbf{E}vidence-\textbf{A}ligned \textbf{G}rounded mu\textbf{L}ti-agent r\textbf{E}asoning),
+    a training-free evidence-centered framework for coordinating multiple VLM agents. EAGLE explicitly
+    exposes each agent''s grounding regions as visual evidence, enables mutual verification over the evidence,
+    and uses evidence consistency to guide final decision-making. Experiments on six VQA benchmarks show
+    that EAGLE achieves best average performance across domains while remaining lightweight, interpretable,
+    and practical for deployment.'
+  url: https://arxiv.org/abs/2605.30698
+  pdf_url: https://arxiv.org/pdf/2605.30698v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 2
+citation_year: 2026

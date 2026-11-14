@@ -1,0 +1,41 @@
+id: paper:arxiv:2606.02576
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'ProtoAda: Prototype-Guided Adaptive Adapter Expansion and Geometric Consolidation for Multimodal
+    Continual Instruction Tuning'
+  authors:
+  - Yu-Cheng Shi
+  - Zhen-Hao Xie
+  - Jun-Tao Tang
+  - Da-Wei Zhou
+  published: '2026-06-01'
+  updated: '2026-06-03'
+  categories:
+  - cs.CV
+  - cs.LG
+  abstract: Multimodal Large Language Models (MLLMs) achieve strong performance through instruction tuning,
+    but real-world deployment requires them to continually acquire new vision-language capabilities, making
+    Multimodal Continual Instruction Tuning (MCIT) essential. To reduce inter-task interference and promote
+    collaboration, recent methods often employ sparse architectures like Mixture of LoRA Experts with
+    image-text similarity routing. However, tasks with distinct response structures could share highly
+    similar visual-linguistic semantics and thus be wrongly routed to the same expert; image-text similarity
+    alone is insufficient for reliable task assignment. For example, an expert in a grounding task requiring
+    coordinate prediction may be biased toward producing short textual answers after learning semantically
+    similar VQA tasks. This format-blind task assignment integrates heterogeneous response types into
+    shared parameters, inducing gradient interference and ineffective expert collaboration. To address
+    this problem, we propose ProtoAda, a prototype-guided adaptive tuning framework. ProtoAda introduces
+    format-aware task prototypes to align task assignment and routing with both task semantics and output
+    structure, and further consolidates format-compatible updates in a geometry-aware manner to effectively
+    reuse and progressively refine existing parameters. Extensive experiments on multiple benchmarks demonstrate
+    that ProtoAda achieves superior performance, especially on tasks whose answer structures are easily
+    corrupted by sequential tuning.
+  url: https://arxiv.org/abs/2606.02576
+  pdf_url: https://arxiv.org/pdf/2606.02576v2
+  version: v2
+fetched: '2026-11-14'

@@ -1,0 +1,50 @@
+id: paper:arxiv:2411.19442
+status: pending
+score: 5
+track: video_image_coding
+matched:
+- ref: concept:ABR
+  count: 2
+  weight: 1
+- ref: dataset:MCL-JCV
+  count: 1
+  weight: 1
+- ref: dataset:UVG
+  count: 1
+  weight: 1
+- ref: metric:MS-SSIM
+  count: 1
+  weight: 1
+- ref: metric:SSIM
+  count: 1
+  weight: 1
+meta:
+  title: 'MCUCoder: Adaptive Bitrate Learned Video Compression for IoT Devices'
+  authors:
+  - Ali Hojjat
+  - Janek Haberer
+  - Olaf Landsiedel
+  published: '2024-11-29'
+  updated: '2024-11-29'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: The rapid growth of camera-based IoT devices demands the need for efficient video compression,
+    particularly for edge applications where devices face hardware constraints, often with only 1 or 2
+    MB of RAM and unstable internet connections. Traditional and deep video compression methods are designed
+    for high-end hardware, exceeding the capabilities of these constrained devices. Consequently, video
+    compression in these scenarios is often limited to M-JPEG due to its high hardware efficiency and
+    low complexity. This paper introduces , an open-source adaptive bitrate video compression model tailored
+    for resource-limited IoT settings. MCUCoder features an ultra-lightweight encoder with only 10.5K
+    parameters and a minimal 350KB memory footprint, making it well-suited for edge devices and MCUs.
+    While MCUCoder uses a similar amount of energy as M-JPEG, it reduces bitrate by 55.65% on the MCL-JCV
+    dataset and 55.59% on the UVG dataset, measured in MS-SSIM. Moreover, MCUCoder supports adaptive bitrate
+    streaming by generating a latent representation that is sorted by importance, allowing transmission
+    based on available bandwidth. This ensures smooth real-time video transmission even under fluctuating
+    network conditions on low-resource devices. Source code available at https://github.com/ds-kiel/MCUCoder.
+  url: https://arxiv.org/abs/2411.19442
+  pdf_url: https://arxiv.org/pdf/2411.19442v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 10
+citation_year: 2024

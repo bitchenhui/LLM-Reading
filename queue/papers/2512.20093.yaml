@@ -1,0 +1,49 @@
+id: paper:arxiv:2512.20093
+status: skipped_low_citation
+score: 7
+track: video_image_coding
+matched:
+- ref: impl:DCVC-RT
+  count: 1
+  weight: 3
+- ref: concept:QP
+  count: 2
+  weight: 1
+- ref: concept:RDO
+  count: 1
+  weight: 1
+- ref: metric:BD-Rate
+  count: 1
+  weight: 1
+- ref: org:JVET
+  count: 1
+  weight: 1
+meta:
+  title: Neural Compression of 360-Degree Equirectangular Videos using Quality Parameter Adaptation
+  authors:
+  - Daichi Arai
+  - Yuichi Kondo
+  - Kyohei Unno
+  - Yasuko Sugito
+  - Yuichi Kusakabe
+  published: '2025-12-23'
+  updated: '2025-12-23'
+  categories:
+  - eess.IV
+  - cs.MM
+  abstract: This study proposes a practical approach for compressing 360-degree equirectangular videos
+    using pretrained neural video compression (NVC) models. Without requiring additional training or changes
+    in the model architectures, the proposed method extends quantization parameter adaptation techniques
+    from traditional video codecs to NVC, utilizing the spatially varying sampling density in equirectangular
+    projections. We introduce latitude-based adaptive quality parameters through rate-distortion optimization
+    for NVC. The proposed method utilizes vector bank interpolation for latent modulation, enabling flexible
+    adaptation with arbitrary quality parameters and mitigating the limitations caused by rounding errors
+    in the adaptive quantization parameters. Experimental results demonstrate that applying this method
+    to the DCVC-RT framework yields BD-Rate savings of 5.2% in terms of the weighted spherical peak signal-to-noise
+    ratio for JVET class S1 test sequences, with only a 0.3% increase in processing time.
+  url: https://arxiv.org/abs/2512.20093
+  pdf_url: https://arxiv.org/pdf/2512.20093v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 2
+citation_year: 2025

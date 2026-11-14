@@ -1,0 +1,36 @@
+id: paper:arxiv:2407.00467
+status: skipped
+score: 0
+track: video_image_coding
+matched: []
+meta:
+  title: 'VcLLM: Video Codecs are Secretly Tensor Codecs'
+  authors:
+  - Ceyu Xu
+  - Yongji Wu
+  - Xinyu Yang
+  - Beidi Chen
+  - Matthew Lentz
+  - Danyang Zhuo
+  - Lisa Wu Wills
+  published: '2024-06-29'
+  updated: '2024-06-29'
+  categories:
+  - cs.LG
+  - cs.DC
+  - eess.IV
+  abstract: As the parameter size of large language models (LLMs) continues to expand, the need for a
+    large memory footprint and high communication bandwidth have become significant bottlenecks for the
+    training and inference of LLMs. To mitigate these bottlenecks, various tensor compression techniques
+    have been proposed to reduce the data size, thereby alleviating memory requirements and communication
+    pressure. Our research found that video codecs, despite being originally designed for compressing
+    videos, show excellent efficiency when compressing various types of tensors. We demonstrate that video
+    codecs can be versatile and general-purpose tensor codecs while achieving the state-of-the-art compression
+    efficiency in various tasks. We further make use of the hardware video encoding and decoding module
+    available on GPUs to create a framework capable of both inference and training with video codecs repurposed
+    as tensor codecs. This greatly reduces the requirement for memory capacity and communication bandwidth,
+    enabling training and inference of large models on consumer-grade GPUs.
+  url: https://arxiv.org/abs/2407.00467
+  pdf_url: https://arxiv.org/pdf/2407.00467v1
+  version: v1
+fetched: '2026-11-14'

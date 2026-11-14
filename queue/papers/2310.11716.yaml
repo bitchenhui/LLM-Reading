@@ -1,0 +1,40 @@
+id: paper:arxiv:2310.11716
+status: pending
+score: 2
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: 'Reflection-Tuning: Data Recycling Improves LLM Instruction-Tuning'
+  authors:
+  - Ming Li
+  - Lichang Chen
+  - Jiuhai Chen
+  - Shwai He
+  - Heng Huang
+  - Jiuxiang Gu
+  - Tianyi Zhou
+  published: '2023-10-18'
+  updated: '2023-10-18'
+  categories:
+  - cs.CL
+  abstract: Recent advancements in Large Language Models (LLMs) have expanded the horizons of natural
+    language understanding and generation. Notably, the output control and alignment with the input of
+    LLMs can be refined through instruction tuning. However, as highlighted in several studies, low-quality
+    data in the training set are usually detrimental to instruction tuning, resulting in inconsistent
+    or even misleading LLM outputs. We propose a novel method, termed "reflection-tuning," which addresses
+    the problem by self-improvement and judging capabilities of LLMs. This approach utilizes an oracle
+    LLM to recycle the original training data by introspecting and enhancing the quality of instructions
+    and responses in the data. Extensive experiments on widely used evaluation benchmarks show that LLMs
+    trained with our recycled data outperform those trained with existing datasets in various benchmarks.
+  url: https://arxiv.org/abs/2310.11716
+  pdf_url: https://arxiv.org/pdf/2310.11716v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 36
+citation_year: 2023

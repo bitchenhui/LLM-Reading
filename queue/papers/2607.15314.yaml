@@ -1,0 +1,45 @@
+id: paper:arxiv:2607.15314
+status: pending
+score: 2
+track: self_improvement
+matched:
+- ref: concept:RSI
+  count: 3
+  weight: 1
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+meta:
+  title: 'Cura 1T: Healthcare Foundation Model via Recursive Self-Improvement'
+  authors:
+  - Haolin Chen
+  - Leon Qi
+  - Steve Brown
+  - Deon Metelski
+  - Tao Xia
+  - Joonyul Lee
+  - Qixuan Wang
+  - Kevin Riley
+  - Frank Wang
+  - Weiran Yao
+  published: '2026-07-15'
+  updated: '2026-10-05'
+  categories:
+  - cs.AI
+  abstract: Healthcare spans high-stakes communication, expert reasoning, and workflow execution, yet
+    specialized language models that cover these use cases together remain limited. A healthcare model
+    must handle patient consultation, clinical reasoning over text and images, interactive diagnosis,
+    and electronic health record (EHR) tool use. These capabilities fail in different ways, and a narrow
+    update for one task can degrade another. We present Cura 1T, a healthcare foundation model trained
+    through recursive self-improvement (RSI). In each RSI round, the RSI harness runs the current model
+    on healthcare benchmarks, evaluates the trajectories to locate capability gaps, and refines the training
+    mixture by synthesizing training data. On 6 healthcare benchmarks, Cura 1T scores highest on MedAgentBench,
+    HealthBench Professional, HealthBench Hard, MedXpertQA text, and AgentClinic, and second on MedXpertQA
+    multimodal. It preserves performances on out-of-domain reasoning and agentic benchmarks including
+    AIME, GPQA-Diamond, and $τ^2$-Bench.
+  url: https://arxiv.org/abs/2607.15314
+  pdf_url: https://arxiv.org/pdf/2607.15314v3
+  version: v3
+fetched: '2026-11-14'
+citation_count: 0
+citation_year: 2026

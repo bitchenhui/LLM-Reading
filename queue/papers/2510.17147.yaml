@@ -1,0 +1,48 @@
+id: paper:arxiv:2510.17147
+status: pending
+score: 2
+track: streaming_delivery
+matched:
+- ref: concept:ABR
+  count: 2
+  weight: 1
+- ref: concept:LLM
+  count: 2
+  weight: 1
+meta:
+  title: 'Mamba4Net: Distilled Hybrid Mamba Large Language Models For Networking'
+  authors:
+  - Linhan Xia
+  - Mingzhan Yang
+  - Jingjing Wang
+  - Ziwei Yan
+  - Yakun Ren
+  - Guo Yu
+  - Kai Lei
+  published: '2025-10-20'
+  updated: '2025-10-20'
+  categories:
+  - cs.NI
+  abstract: 'Transformer-based large language models (LLMs) are increasingly being adopted in networking
+    research to address domain-specific challenges. However, their quadratic time complexity and substantial
+    model sizes often result in significant computational overhead and memory constraints, particularly
+    in resource-constrained environments. Drawing inspiration from the efficiency and performance of the
+    Deepseek-R1 model within the knowledge distillation paradigm, this paper introduces Mamba4Net, a novel
+    cross-architecture distillation framework. Mamba4Net transfers networking-specific knowledge from
+    transformer-based LLMs to student models built on the Mamba architecture, which features linear time
+    complexity. This design substantially enhances computational efficiency compared to the quadratic
+    complexity of transformer-based models, while the reduced model size further minimizes computational
+    demands, improving overall performance and resource utilization. To evaluate its effectiveness, Mamba4Net
+    was tested across three diverse networking tasks: viewport prediction, adaptive bitrate streaming,
+    and cluster job scheduling. Compared to existing methods that do not leverage LLMs, Mamba4Net demonstrates
+    superior task performance. Furthermore, relative to direct applications of transformer-based LLMs,
+    it achieves significant efficiency gains, including a throughput 3.96 times higher and a storage footprint
+    of only 5.48% of that required by previous LLM-based approaches. These results highlight Mamba4Net''s
+    potential to enable the cost-effective application of LLM-derived knowledge in networking contexts.
+    The source code is openly available to support further research and development.'
+  url: https://arxiv.org/abs/2510.17147
+  pdf_url: https://arxiv.org/pdf/2510.17147v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 6
+citation_year: 2025

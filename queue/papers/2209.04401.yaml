@@ -1,0 +1,35 @@
+id: paper:arxiv:2209.04401
+status: skipped
+score: 0
+track: immersive_media
+matched: []
+meta:
+  title: 'GRASP-Net: Geometric Residual Analysis and Synthesis for Point Cloud Compression'
+  authors:
+  - Jiahao Pang
+  - Muhammad Asad Lodhi
+  - Dong Tian
+  published: '2022-09-09'
+  updated: '2022-09-09'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: Point cloud compression (PCC) is a key enabler for various 3-D applications, owing to the
+    universality of the point cloud format. Ideally, 3D point clouds endeavor to depict object/scene surfaces
+    that are continuous. Practically, as a set of discrete samples, point clouds are locally disconnected
+    and sparsely distributed. This sparse nature is hindering the discovery of local correlation among
+    points for compression. Motivated by an analysis with fractal dimension, we propose a heterogeneous
+    approach with deep learning for lossy point cloud geometry compression. On top of a base layer compressing
+    a coarse representation of the input, an enhancement layer is designed to cope with the challenging
+    geometric residual/details. Specifically, a point-based network is applied to convert the erratic
+    local details to latent features residing on the coarse point cloud. Then a sparse convolutional neural
+    network operating on the coarse point cloud is launched. It utilizes the continuity/smoothness of
+    the coarse geometry to compress the latent features as an enhancement bit-stream that greatly benefits
+    the reconstruction quality. When this bit-stream is unavailable, e.g., due to packet loss, we support
+    a skip mode with the same architecture which generates geometric details from the coarse point cloud
+    directly. Experimentation on both dense and sparse point clouds demonstrate the state-of-the-art compression
+    performance achieved by our proposal. Our code is available at https://github.com/InterDigitalInc/GRASP-Net.
+  url: https://arxiv.org/abs/2209.04401
+  pdf_url: https://arxiv.org/pdf/2209.04401v1
+  version: v1
+fetched: '2026-11-14'

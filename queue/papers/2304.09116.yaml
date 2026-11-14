@@ -1,0 +1,45 @@
+id: paper:arxiv:2304.09116
+status: skipped
+score: 1
+track: audio_coding
+matched:
+- ref: concept:NeuralAudioCodec
+  count: 1
+  weight: 1
+meta:
+  title: 'NaturalSpeech 2: Latent Diffusion Models are Natural and Zero-Shot Speech and Singing Synthesizers'
+  authors:
+  - Kai Shen
+  - Zeqian Ju
+  - Xu Tan
+  - Yanqing Liu
+  - Yichong Leng
+  - Lei He
+  - Tao Qin
+  - Sheng Zhao
+  - Jiang Bian
+  published: '2023-04-18'
+  updated: '2023-05-30'
+  categories:
+  - eess.AS
+  - cs.AI
+  - cs.CL
+  - cs.LG
+  - cs.SD
+  abstract: Scaling text-to-speech (TTS) to large-scale, multi-speaker, and in-the-wild datasets is important
+    to capture the diversity in human speech such as speaker identities, prosodies, and styles (e.g.,
+    singing). Current large TTS systems usually quantize speech into discrete tokens and use language
+    models to generate these tokens one by one, which suffer from unstable prosody, word skipping/repeating
+    issue, and poor voice quality. In this paper, we develop NaturalSpeech 2, a TTS system that leverages
+    a neural audio codec with residual vector quantizers to get the quantized latent vectors and uses
+    a diffusion model to generate these latent vectors conditioned on text input. To enhance the zero-shot
+    capability that is important to achieve diverse speech synthesis, we design a speech prompting mechanism
+    to facilitate in-context learning in the diffusion model and the duration/pitch predictor. We scale
+    NaturalSpeech 2 to large-scale datasets with 44K hours of speech and singing data and evaluate its
+    voice quality on unseen speakers. NaturalSpeech 2 outperforms previous TTS systems by a large margin
+    in terms of prosody/timbre similarity, robustness, and voice quality in a zero-shot setting, and performs
+    novel zero-shot singing synthesis with only a speech prompt. Audio samples are available at https://speechresearch.github.io/naturalspeech2.
+  url: https://arxiv.org/abs/2304.09116
+  pdf_url: https://arxiv.org/pdf/2304.09116v3
+  version: v3
+fetched: '2026-11-14'

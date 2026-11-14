@@ -1,0 +1,38 @@
+id: paper:arxiv:2112.01579
+status: skipped
+score: 1
+track: processing_enhancement
+matched:
+- ref: concept:SuperResolution
+  count: 1
+  weight: 1
+meta:
+  title: Fast Neural Representations for Direct Volume Rendering
+  authors:
+  - Sebastian Weiss
+  - Philipp Hermüller
+  - Rüdiger Westermann
+  published: '2021-12-02'
+  updated: '2022-03-14'
+  categories:
+  - cs.GR
+  - cs.CV
+  abstract: Despite the potential of neural scene representations to effectively compress 3D scalar fields
+    at high reconstruction quality, the computational complexity of the training and data reconstruction
+    step using scene representation networks limits their use in practical applications. In this paper,
+    we analyze whether scene representation networks can be modified to reduce these limitations and whether
+    such architectures can also be used for temporal reconstruction tasks. We propose a novel design of
+    scene representation networks using GPU tensor cores to integrate the reconstruction seamlessly into
+    on-chip raytracing kernels, and compare the quality and performance of this network to alternative
+    network- and non-network-based compression schemes. The results indicate competitive quality of our
+    design at high compression rates, and significantly faster decoding times and lower memory consumption
+    during data reconstruction. We investigate how density gradients can be computed using the network
+    and show an extension where density, gradient and curvature are predicted jointly. As an alternative
+    to spatial super-resolution approaches for time-varying fields, we propose a solution that builds
+    upon latent-space interpolation to enable random access reconstruction at arbitrary granularity. We
+    summarize our findings in the form of an assessment of the strengths and limitations of scene representation
+    networks \changed{for compression domain volume rendering, and outline future research directions.
+  url: https://arxiv.org/abs/2112.01579
+  pdf_url: https://arxiv.org/pdf/2112.01579v2
+  version: v2
+fetched: '2026-11-14'

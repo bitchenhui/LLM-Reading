@@ -1,0 +1,45 @@
+id: paper:arxiv:2601.20689
+status: skipped_low_citation
+score: 2
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 3
+  weight: 1
+- ref: metric:MOS
+  count: 2
+  weight: 1
+meta:
+  title: 'Decoupling Perception and Calibration: Label-Efficient Image Quality Assessment Framework'
+  authors:
+  - Xinyue Li
+  - Zhichao Zhang
+  - Zhiming Xu
+  - Shubo Xu
+  - Xiongkuo Min
+  - Yitong Chen
+  - Guangtao Zhai
+  published: '2026-01-28'
+  updated: '2026-01-28'
+  categories:
+  - cs.CV
+  - cs.AI
+  abstract: Recent multimodal large language models (MLLMs) have demonstrated strong capabilities in image
+    quality assessment (IQA) tasks. However, adapting such large-scale models is computationally expensive
+    and still relies on substantial Mean Opinion Score (MOS) annotations. We argue that for MLLM-based
+    IQA, the core bottleneck lies not in the quality perception capacity of MLLMs, but in MOS scale calibration.
+    Therefore, we propose LEAF, a Label-Efficient Image Quality Assessment Framework that distills perceptual
+    quality priors from an MLLM teacher into a lightweight student regressor, enabling MOS calibration
+    with minimal human supervision. Specifically, the teacher conducts dense supervision through point-wise
+    judgments and pair-wise preferences, with an estimate of decision reliability. Guided by these signals,
+    the student learns the teacher's quality perception patterns through joint distillation and is calibrated
+    on a small MOS subset to align with human annotations. Experiments on both user-generated and AI-generated
+    IQA benchmarks demonstrate that our method significantly reduces the need for human annotations while
+    maintaining strong MOS-aligned correlations, making lightweight IQA practical under limited annotation
+    budgets.
+  url: https://arxiv.org/abs/2601.20689
+  pdf_url: https://arxiv.org/pdf/2601.20689v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 1
+citation_year: 2026

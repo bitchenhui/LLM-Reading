@@ -1,0 +1,36 @@
+id: paper:arxiv:2502.03656
+status: skipped
+score: 1
+track: processing_enhancement
+matched:
+- ref: concept:SuperResolution
+  count: 2
+  weight: 1
+meta:
+  title: A Study in Dataset Distillation for Image Super-Resolution
+  authors:
+  - Tobias Dietz
+  - Brian B. Moser
+  - Tobias Nauen
+  - Federico Raue
+  - Stanislav Frolov
+  - Andreas Dengel
+  published: '2025-02-05'
+  updated: '2025-11-01'
+  categories:
+  - cs.CV
+  - cs.AI
+  - cs.LG
+  abstract: Dataset distillation aims to compress large datasets into compact yet highly informative subsets
+    that preserve the training behavior of the original data. While this concept has gained traction in
+    classification, its potential for image Super-Resolution (SR) remains largely untapped. In this work,
+    we conduct the first systematic study of dataset distillation for SR, evaluating both pixel- and latent-space
+    formulations. We show that a distilled dataset, occupying only 8.88% of the original size, can train
+    SR models that retain nearly the same reconstruction fidelity as those trained on full datasets. Furthermore,
+    we analyze how initialization strategies and distillation objectives affect efficiency, convergence,
+    and visual quality. Our findings highlight the feasibility of SR dataset distillation and establish
+    foundational insights for memory- and compute-efficient generative restoration models.
+  url: https://arxiv.org/abs/2502.03656
+  pdf_url: https://arxiv.org/pdf/2502.03656v2
+  version: v2
+fetched: '2026-11-14'

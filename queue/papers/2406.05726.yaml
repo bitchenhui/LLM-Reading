@@ -1,0 +1,38 @@
+id: paper:arxiv:2406.05726
+status: skipped
+score: 0
+track: video_image_coding
+matched: []
+meta:
+  title: Region of Interest Loss for Anonymizing Learned Image Compression
+  authors:
+  - Christoph Liebender
+  - Ranulfo Bezerra
+  - Kazunori Ohno
+  - Satoshi Tadokoro
+  published: '2024-06-09'
+  updated: '2024-06-09'
+  categories:
+  - cs.CV
+  - cs.CR
+  - cs.LG
+  - eess.IV
+  abstract: The use of AI in public spaces continually raises concerns about privacy and the protection
+    of sensitive data. An example is the deployment of detection and recognition methods on humans, where
+    images are provided by surveillance cameras. This results in the acquisition of great amounts of sensitive
+    data, since the capture and transmission of images taken by such cameras happens unaltered, for them
+    to be received by a server on the network. However, many applications do not explicitly require the
+    identity of a given person in a scene; An anonymized representation containing information of the
+    person's position while preserving the context of them in the scene suffices. We show how using a
+    customized loss function on region of interests (ROI) can achieve sufficient anonymization such that
+    human faces become unrecognizable while persons are kept detectable, by training an end-to-end optimized
+    autoencoder for learned image compression that utilizes the flexibility of the learned analysis and
+    reconstruction transforms for the task of mutating parts of the compression result. This approach
+    enables compression and anonymization in one step on the capture device, instead of transmitting sensitive,
+    nonanonymized data over the network. Additionally, we evaluate how this anonymization impacts the
+    average precision of pre-trained foundation models on detecting faces (MTCNN) and humans (YOLOv8)
+    in comparison to non-ANN based methods, while considering compression rate and latency.
+  url: https://arxiv.org/abs/2406.05726
+  pdf_url: https://arxiv.org/pdf/2406.05726v1
+  version: v1
+fetched: '2026-11-14'

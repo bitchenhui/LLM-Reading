@@ -1,0 +1,49 @@
+id: paper:arxiv:2603.17408
+status: skipped_low_citation
+score: 2
+track: processing_enhancement
+matched:
+- ref: concept:DiffusionPrior
+  count: 1
+  weight: 1
+- ref: concept:SuperResolution
+  count: 1
+  weight: 1
+meta:
+  title: Joint Degradation-Aware Arbitrary-Scale Super-Resolution for Variable-Rate Extreme Image Compression
+  authors:
+  - Xinning Chai
+  - Zhengxue Cheng
+  - Xin Li
+  - Rong Xie
+  - Li Song
+  published: '2026-03-18'
+  updated: '2026-03-18'
+  categories:
+  - cs.CV
+  - cs.AI
+  abstract: Recent diffusion-based extreme image compression methods have demonstrated remarkable performance
+    at ultra-low bitrates. However, most approaches require training separate diffusion models for each
+    target bitrate, resulting in substantial computational overhead and hindering practical deployment.
+    Meanwhile, recent studies have shown that joint super-resolution can serve as an effective approach
+    for enhancing low-bitrate reconstruction. However, when moving toward ultra-low bitrate regimes, these
+    methods struggle due to severe information loss, and their reliance on fixed super-resolution scales
+    prevents flexible adaptation across diverse bitrates. To address these limitations, we propose ASSR-EIC,
+    a novel image compression framework that leverages arbitrary-scale super-resolution (ASSR) to support
+    variable-rate extreme image compression (EIC). An arbitrary-scale downsampling module is introduced
+    at the encoder side to provide controllable rate reduction, while a diffusion-based, joint degradation-aware
+    ASSR decoder enables rate-adaptive reconstruction within a single model. We exploit the compression-
+    and rescaling-aware diffusion prior to guide the reconstruction, yielding high fidelity and high realism
+    restoration across diverse compression and rescaling settings. Specifically, we design a global compression-rescaling
+    adaptor that offers holistic guidance for rate adaptation, and a local compression-rescaling modulator
+    that dynamically balances generative and fidelity-oriented behaviors to achieve fine-grained, bitrate-adaptive
+    detail restoration. To further enhance reconstruction quality, we introduce a dual semantic-enhanced
+    design. Extensive experiments demonstrate that ASSR-EIC delivers state-of-the-art performance in extreme
+    image compression while simultaneously supporting flexible bitrate control and adaptive rate-dependent
+    reconstruction.
+  url: https://arxiv.org/abs/2603.17408
+  pdf_url: https://arxiv.org/pdf/2603.17408v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 0
+citation_year: 2026

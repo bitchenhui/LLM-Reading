@@ -1,0 +1,64 @@
+id: paper:arxiv:2310.12733
+status: skipped_low_citation
+score: 16
+track: video_image_coding
+matched:
+- ref: codec:HEVC
+  count: 2
+  weight: 3
+- ref: codec:VVC
+  count: 2
+  weight: 3
+- ref: impl:HM
+  count: 1
+  weight: 3
+- ref: impl:VTM
+  count: 1
+  weight: 3
+- ref: metric:BD-Rate
+  count: 1
+  weight: 1
+- ref: metric:MS-SSIM
+  count: 1
+  weight: 1
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+- ref: metric:SSIM
+  count: 1
+  weight: 1
+meta:
+  title: Multiscale Motion-Aware and Spatial-Temporal-Channel Contextual Coding Network for Learned Video
+    Compression
+  authors:
+  - Yiming Wang
+  - Qian Huang
+  - Bin Tang
+  - Huashan Sun
+  - Xing Li
+  published: '2023-10-19'
+  updated: '2023-10-19'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: Recently, learned video compression has achieved exciting performance. Following the traditional
+    hybrid prediction coding framework, most learned methods generally adopt the motion estimation motion
+    compensation (MEMC) method to remove inter-frame redundancy. However, inaccurate motion vector (MV)
+    usually lead to the distortion of reconstructed frame. In addition, most approaches ignore the spatial
+    and channel redundancy. To solve above problems, we propose a motion-aware and spatial-temporal-channel
+    contextual coding based video compression network (MASTC-VC), which learns the latent representation
+    and uses variational autoencoders (VAEs) to capture the characteristics of intra-frame pixels and
+    inter-frame motion. Specifically, we design a multiscale motion-aware module (MS-MAM) to estimate
+    spatial-temporal-channel consistent motion vector by utilizing the multiscale motion prediction information
+    in a coarse-to-fine way. On the top of it, we further propose a spatial-temporal-channel contextual
+    module (STCCM), which explores the correlation of latent representation to reduce the bit consumption
+    from spatial, temporal and channel aspects respectively. Comprehensive experiments show that our proposed
+    MASTC-VC is surprior to previous state-of-the-art (SOTA) methods on three public benchmark datasets.
+    More specifically, our method brings average 10.15\% BD-rate savings against H.265/HEVC (HM-16.20)
+    in PSNR metric and average 23.93\% BD-rate savings against H.266/VVC (VTM-13.2) in MS-SSIM metric.
+  url: https://arxiv.org/abs/2310.12733
+  pdf_url: https://arxiv.org/pdf/2310.12733v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 2
+citation_year: 2023

@@ -1,0 +1,35 @@
+id: paper:arxiv:2309.02855
+status: skipped
+score: 1
+track: video_image_coding
+matched:
+- ref: concept:EntropyModel
+  count: 3
+  weight: 1
+meta:
+  title: Bandwidth-efficient Inference for Neural Image Compression
+  authors:
+  - Shanzhi Yin
+  - Tongda Xu
+  - Yongsheng Liang
+  - Yuanyuan Wang
+  - Yanghao Li
+  - Yan Wang
+  - Jingjing Liu
+  published: '2023-09-06'
+  updated: '2023-09-07'
+  categories:
+  - cs.CV
+  - eess.IV
+  abstract: With neural networks growing deeper and feature maps growing larger, limited communication
+    bandwidth with external memory (or DRAM) and power constraints become a bottleneck in implementing
+    network inference on mobile and edge devices. In this paper, we propose an end-to-end differentiable
+    bandwidth efficient neural inference method with the activation compressed by neural data compression
+    method. Specifically, we propose a transform-quantization-entropy coding pipeline for activation compression
+    with symmetric exponential Golomb coding and a data-dependent Gaussian entropy model for arithmetic
+    coding. Optimized with existing model quantization methods, low-level task of image compression can
+    achieve up to 19x bandwidth reduction with 6.21x energy saving.
+  url: https://arxiv.org/abs/2309.02855
+  pdf_url: https://arxiv.org/pdf/2309.02855v2
+  version: v2
+fetched: '2026-11-14'

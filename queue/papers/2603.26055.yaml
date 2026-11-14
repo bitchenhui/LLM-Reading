@@ -1,0 +1,38 @@
+id: paper:arxiv:2603.26055
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 3
+  weight: 1
+meta:
+  title: 'Pioneering Perceptual Video Fluency Assessment: A Novel Task with Benchmark Dataset and Baseline'
+  authors:
+  - Qizhi Xie
+  - Kun Yuan
+  - Yunpeng Qu
+  - Ming Sun
+  - Chao Zhou
+  - Jihong Zhu
+  published: '2026-03-27'
+  updated: '2026-03-27'
+  categories:
+  - cs.CV
+  abstract: Accurately estimating humans' subjective feedback on video fluency, e.g., motion consistency
+    and frame continuity, is crucial for various applications like streaming and gaming. Yet, it has long
+    been overlooked, as prior arts have focused on solving it in the video quality assessment (VQA) task,
+    merely as a sub-dimension of overall quality. In this work, we conduct pilot experiments and reveal
+    that current VQA predictions largely underrepresent fluency, thereby limiting their applicability.
+    To this end, we pioneer Video Fluency Assessment (VFA) as a standalone perceptual task focused on
+    the temporal dimension. To advance VFA research, 1) we construct a fluency-oriented dataset, FluVid,
+    comprising 4,606 in-the-wild videos with balanced fluency distribution, featuring the first-ever scoring
+    criteria and human study for VFA. 2) We develop a large-scale benchmark of 23 methods, the most comprehensive
+    one thus far on FluVid, gathering insights for VFA-tailored model designs. 3) We propose a baseline
+    model called FluNet, which deploys temporal permuted self-attention (T-PSA) to enrich input fluency
+    information and enhance long-range inter-frame interactions. Our work not only achieves state-of-the-art
+    performance but, more importantly, offers the community a roadmap to explore solutions for VFA.
+  url: https://arxiv.org/abs/2603.26055
+  pdf_url: https://arxiv.org/pdf/2603.26055v1
+  version: v1
+fetched: '2026-11-14'

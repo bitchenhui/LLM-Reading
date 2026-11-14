@@ -1,0 +1,33 @@
+id: paper:arxiv:2402.18862
+status: skipped
+score: 0
+track: video_image_coding
+matched: []
+meta:
+  title: Towards Backward-Compatible Continual Learning of Image Compression
+  authors:
+  - Zhihao Duan
+  - Ming Lu
+  - Justin Yang
+  - Jiangpeng He
+  - Zhan Ma
+  - Fengqing Zhu
+  published: '2024-02-29'
+  updated: '2024-02-29'
+  categories:
+  - eess.IV
+  abstract: 'This paper explores the possibility of extending the capability of pre-trained neural image
+    compressors (e.g., adapting to new data or target bitrates) without breaking backward compatibility,
+    the ability to decode bitstreams encoded by the original model. We refer to this problem as continual
+    learning of image compression. Our initial findings show that baseline solutions, such as end-to-end
+    fine-tuning, do not preserve the desired backward compatibility. To tackle this, we propose a knowledge
+    replay training strategy that effectively addresses this issue. We also design a new model architecture
+    that enables more effective continual learning than existing baselines. Experiments are conducted
+    for two scenarios: data-incremental learning and rate-incremental learning. The main conclusion of
+    this paper is that neural image compressors can be fine-tuned to achieve better performance (compared
+    to their pre-trained version) on new data and rates without compromising backward compatibility. Our
+    code is available at https://gitlab.com/viper-purdue/continual-compression'
+  url: https://arxiv.org/abs/2402.18862
+  pdf_url: https://arxiv.org/pdf/2402.18862v1
+  version: v1
+fetched: '2026-11-14'

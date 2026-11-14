@@ -1,0 +1,47 @@
+id: paper:arxiv:2603.29848
+status: pending
+score: 2
+track: self_improvement
+matched:
+- ref: concept:LLM
+  count: 1
+  weight: 1
+- ref: concept:SelfImprovement
+  count: 1
+  weight: 1
+meta:
+  title: 'AgentFixer: From Failure Detection to Fix Recommendations in LLM Agentic Systems'
+  authors:
+  - Hadar Mulian
+  - Sergey Zeltyn
+  - Ido Levy
+  - Liane Galanti
+  - Avi Yaeli
+  - Segev Shlomov
+  published: '2026-02-18'
+  updated: '2026-02-18'
+  categories:
+  - cs.AI
+  - cs.MA
+  abstract: We introduce a comprehensive validation framework for LLM-based agentic systems that provides
+    systematic diagnosis and improvement of reliability failures. The framework includes fifteen failure-detection
+    tools and two root-cause analysis modules that jointly uncover weaknesses across input handling, prompt
+    design, and output generation. It integrates lightweight rule-based checks with LLM-as-a-judge assessments
+    to support structured incident detection, classification, and repair. We applied the framework to
+    IBM CUGA, evaluating its performance on the AppWorld and WebArena benchmarks. The analysis revealed
+    recurrent planner misalignments, schema violations, brittle prompt dependencies, and more. Based on
+    these insights, we refined both prompting and coding strategies, maintaining CUGA's benchmark results
+    while enabling mid-sized models such as Llama 4 and Mistral Medium to achieve notable accuracy gains,
+    substantially narrowing the gap with frontier models. Beyond quantitative validation, we conducted
+    an exploratory study that fed the framework's diagnostic outputs and agent description into an LLM
+    for self-reflection and prioritization. This interactive analysis produced actionable insights on
+    recurring failure patterns and focus areas for improvement, demonstrating how validation itself can
+    evolve into an agentic, dialogue-driven process. These results show a path toward scalable, quality
+    assurance, and adaptive validation in production agentic systems, offering a foundation for more robust,
+    interpretable, and self-improving agentic architectures.
+  url: https://arxiv.org/abs/2603.29848
+  pdf_url: https://arxiv.org/pdf/2603.29848v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 10
+citation_year: 2026

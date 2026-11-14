@@ -1,0 +1,62 @@
+id: paper:arxiv:2511.18686
+status: pending
+score: 15
+track: video_image_coding
+matched:
+- ref: codec:HEVC
+  count: 2
+  weight: 3
+- ref: codec:VVC
+  count: 2
+  weight: 3
+- ref: codec:AV1
+  count: 1
+  weight: 3
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+- ref: metric:SSIM
+  count: 1
+  weight: 1
+- ref: metric:VMAF
+  count: 1
+  weight: 1
+- ref: org:Intel
+  count: 1
+  weight: 1
+- ref: org:NVIDIA
+  count: 1
+  weight: 1
+- ref: org:Qualcomm
+  count: 1
+  weight: 1
+meta:
+  title: Evaluation of Hardware-based Video Encoders on Modern GPUs for UHD Live-Streaming
+  authors:
+  - Kasidis Arunruangsirilert
+  - Jiro Katto
+  published: '2025-11-24'
+  updated: '2025-11-24'
+  categories:
+  - eess.IV
+  - cs.AR
+  - cs.MM
+  abstract: Many GPUs have incorporated hardware-accelerated video encoders, which allow video encoding
+    tasks to be offloaded from the main CPU and provide higher power efficiency. Over the years, many
+    new video codecs such as H.265/HEVC, VP9, and AV1 were added to the latest GPU boards. Recently, the
+    rise of live video content such as VTuber, game live-streaming, and live event broadcasts, drives
+    the demand for high-efficiency hardware encoders in the GPUs to tackle these real-time video encoding
+    tasks, especially at higher resolutions such as 4K/8K UHD. In this paper, RD performance, encoding
+    speed, as well as power consumption of hardware encoders in several generations of NVIDIA, Intel GPUs
+    as well as Qualcomm Snapdragon Mobile SoCs were evaluated and compared to the software counterparts,
+    including the latest H.266/VVC codec, using several metrics including PSNR, SSIM, and machine-learning
+    based VMAF. The results show that modern GPU hardware encoders can match the RD performance of software
+    encoders in real-time encoding scenarios, and while encoding speed increased in newer hardware, there
+    is mostly negligible RD performance improvement between hardware generations. Finally, the bitrate
+    required for each hardware encoder to match YouTube transcoding quality was also calculated.
+  url: https://arxiv.org/abs/2511.18686
+  pdf_url: https://arxiv.org/pdf/2511.18686v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 19
+citation_year: 2024

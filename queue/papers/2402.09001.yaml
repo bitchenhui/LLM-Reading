@@ -1,0 +1,44 @@
+id: paper:arxiv:2402.09001
+status: pending
+score: 12
+track: video_image_coding
+matched:
+- ref: codec:AV1
+  count: 1
+  weight: 3
+- ref: codec:AVC
+  count: 1
+  weight: 3
+- ref: codec:HEVC
+  count: 1
+  weight: 3
+- ref: codec:VVC
+  count: 1
+  weight: 3
+meta:
+  title: A Comprehensive Review of Software and Hardware Energy Efficiency of Video Decoders
+  authors:
+  - Matthias Kränzler
+  - Christian Herglotz
+  - André Kaup
+  published: '2024-02-14'
+  updated: '2024-02-14'
+  categories:
+  - eess.IV
+  abstract: 'Energy and compression efficiency are two essential parts of modern video decoder implementations
+    that have to be considered. This work comprehensively studies the following six video coding formats
+    regarding compression and decoding energy efficiency: AVC, VP9, HEVC, AV1, VVC, and AVM. We first
+    evaluate the energy demand of reference and optimized software decoder implementations. Furthermore,
+    we consider the influence of the usage of SIMD instructions on those decoder implementations. We find
+    that AV1 is a sweet spot for optimized software decoder implementations with an additional energy
+    demand of 16.55% and bitrate savings of -43.95% compared to VP9. We furthermore evaluate the hardware
+    decoding energy demand of four video coding formats. Thereby, we show that AV1 has energy demand increases
+    by 117.50% compared to VP9. For HEVC, we found a sweet spot in terms of energy demand with an increase
+    of 6.06% with respect to VP9. Relative to their optimized software counterparts, hardware video decoders
+    reduce the energy consumption to less than 9% compared to software decoders.'
+  url: https://arxiv.org/abs/2402.09001
+  pdf_url: https://arxiv.org/pdf/2402.09001v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 11
+citation_year: 2024

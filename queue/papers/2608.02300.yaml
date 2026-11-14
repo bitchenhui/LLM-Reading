@@ -1,0 +1,45 @@
+id: paper:arxiv:2608.02300
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: A General-Purpose VLM Can Teach an Astronomy Foundation Model to Better Recognize Galaxy Morphology
+  authors:
+  - Dichang Zhang
+  - Jiaqi Deng
+  - Yixuan Shao
+  - Yuanpeng Liu
+  - Jiali Cui
+  - Zhiqiang Lao
+  - Heather Yu
+  - Liang Peng
+  - Simon Birrer
+  - Dimitris Samaras
+  published: '2026-08-03'
+  updated: '2026-08-03'
+  categories:
+  - cs.CV
+  abstract: Existing astronomy foundation models provide strong galaxy representations, but adapting them
+    to new survey conditions and survey-specific morphology recognition tasks still requires substantial
+    human supervision. We show that VLM-based VQA systems contain meaningful visual-semantic priors that
+    can serve as weak supervision for downstream morphology classifiers and improve morphology classification
+    under limited human-label budgets. We first introduce a survey-oriented VQA benchmark spanning two
+    representative imaging regimes and evaluate state-of-the-art VLMs on galaxy morphology questions.
+    The results show that these models capture useful morphology signals and informative uncertainty,
+    but are not sufficiently reliable to replace human annotators. Motivated by this finding, we use a
+    general-purpose VLM as a morphology teacher for Zoobot, an astronomy foundation model pretrained on
+    large-scale Galaxy Zoo annotations. Across two survey domains and multiple annotation budgets, the
+    VLM teacher consistently improves Zoobot's downstream morphology classification. These results demonstrate
+    that a general-purpose VLM provides knowledge complementary to an astronomy foundation model and can
+    teach it to better recognize galaxy morphology under limited human supervision. The resulting pipeline
+    is designed for label-efficient adaptation to forthcoming large-scale surveys, including the Vera
+    C. Rubin Observatory's Legacy Survey of Space and Time (LSST) and the Nancy Grace Roman Space Telescope.
+    The benchmark and code are publicly available at https://github.com/fw-ic/VLM-morphology-teacher.
+  url: https://arxiv.org/abs/2608.02300
+  pdf_url: https://arxiv.org/pdf/2608.02300v1
+  version: v1
+fetched: '2026-11-14'

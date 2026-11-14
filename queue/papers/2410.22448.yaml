@@ -1,0 +1,33 @@
+id: paper:arxiv:2410.22448
+status: skipped
+score: 0
+track: audio_coding
+matched: []
+meta:
+  title: 'A Closer Look at Neural Codec Resynthesis: Bridging the Gap between Codec and Waveform Generation'
+  authors:
+  - Alexander H. Liu
+  - Qirui Wang
+  - Yuan Gong
+  - James Glass
+  published: '2024-10-29'
+  updated: '2024-10-29'
+  categories:
+  - eess.AS
+  - cs.CL
+  - cs.LG
+  - cs.SD
+  abstract: 'Neural Audio Codecs, initially designed as a compression technique, have gained more attention
+    recently for speech generation. Codec models represent each audio frame as a sequence of tokens, i.e.,
+    discrete embeddings. The discrete and low-frequency nature of neural codecs introduced a new way to
+    generate speech with token-based models. As these tokens encode information at various levels of granularity,
+    from coarse to fine, most existing works focus on how to better generate the coarse tokens. In this
+    paper, we focus on an equally important but often overlooked question: How can we better resynthesize
+    the waveform from coarse tokens? We point out that both the choice of learning target and resynthesis
+    approach have a dramatic impact on the generated audio quality. Specifically, we study two different
+    strategies based on token prediction and regression, and introduce a new method based on Schrödinger
+    Bridge. We examine how different design choices affect machine and human perception.'
+  url: https://arxiv.org/abs/2410.22448
+  pdf_url: https://arxiv.org/pdf/2410.22448v1
+  version: v1
+fetched: '2026-11-14'

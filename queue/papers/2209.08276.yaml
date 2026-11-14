@@ -1,0 +1,40 @@
+id: paper:arxiv:2209.08276
+status: pending
+score: 3
+track: immersive_media
+matched:
+- ref: codec:G-PCC
+  count: 2
+  weight: 3
+meta:
+  title: CARNet:Compression Artifact Reduction for Point Cloud Attribute
+  authors:
+  - Dandan Ding
+  - Junzhe Zhang
+  - Jianqiang Wang
+  - Zhan Ma
+  published: '2022-09-17'
+  updated: '2022-09-17'
+  categories:
+  - cs.CV
+  - eess.IV
+  abstract: 'A learning-based adaptive loop filter is developed for the Geometry-based Point Cloud Compression
+    (G-PCC) standard to reduce attribute compression artifacts. The proposed method first generates multiple
+    Most-Probable Sample Offsets (MPSOs) as potential compression distortion approximations, and then
+    linearly weights them for artifact mitigation. As such, we drive the filtered reconstruction as close
+    to the uncompressed PCA as possible. To this end, we devise a Compression Artifact Reduction Network
+    (CARNet) which consists of two consecutive processing phases: MPSOs derivation and MPSOs combination.
+    The MPSOs derivation uses a two-stream network to model local neighborhood variations from direct
+    spatial embedding and frequency-dependent embedding, where sparse convolutions are utilized to best
+    aggregate information from sparsely and irregularly distributed points. The MPSOs combination is guided
+    by the least square error metric to derive weighting coefficients on the fly to further capture content
+    dynamics of input PCAs. The CARNet is implemented as an in-loop filtering tool of the GPCC, where
+    those linear weighting coefficients are encapsulated into the bitstream with negligible bit rate overhead.
+    Experimental results demonstrate significant improvement over the latest GPCC both subjectively and
+    objectively.'
+  url: https://arxiv.org/abs/2209.08276
+  pdf_url: https://arxiv.org/pdf/2209.08276v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 12
+citation_year: 2022

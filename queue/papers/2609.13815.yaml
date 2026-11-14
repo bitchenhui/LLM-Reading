@@ -1,0 +1,39 @@
+id: paper:arxiv:2609.13815
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'Beyond OCR Accuracy: Text-Centric VQA Under Image Degradation with Modular and End-to-End'
+  authors:
+  - Ritali Vatsi
+  - Rachapudi Jagadeesh
+  - Shruti Singh Baghel
+  - Himani Sharma
+  - Amit Shukla
+  - Pawan Goyal
+  published: '2026-09-12'
+  updated: '2026-09-12'
+  categories:
+  - cs.CV
+  abstract: Text-centric Visual Question Answering (VQA) requires reading and reasoning over text embedded
+    in images, a task made substantially harder when images suffer from real-world degradation such as
+    motion blur, low resolution, or compression artifacts. While modular OCR-based pipelines and end-to-end
+    vision-language models are both widely used for this task, their comparative robustness under degraded
+    conditions remains underexplored. We present an empirical study comparing two modular pipelines with
+    SA-DBNet, a custom detector architecture combining ResNet-18 with self-attention spatial modeling
+    and deformable convolutions against an end-to-end vision-language baseline, evaluated on 4013 degraded
+    images with 7000 question-answer pairs. Fine-tuned modular pipelines achieve up to 57.50% exact-match
+    accuracy versus 38.00% for the end-to-end baseline, with domain-specific fine-tuning yielding a gain
+    of up to 29.50 percentage points. Critically, we find that conventional OCR error metrics like Character
+    Error Rate and Word Error Rate are unreliable predictors of downstream VQA performance, as semantic
+    reasoning can compensate for recognition failures when contextual cues are present. These findings
+    highlight the importance of task-aware evaluation for text-centric VQA systems under realistic visual
+    conditions. Codes are available here
+  url: https://arxiv.org/abs/2609.13815
+  pdf_url: https://arxiv.org/pdf/2609.13815v1
+  version: v1
+fetched: '2026-11-14'

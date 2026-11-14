@@ -1,0 +1,34 @@
+id: paper:arxiv:2607.27122
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: Towards Grounded GI Endoscopy VQA via Multi-Task Learning on Small VLMs
+  authors:
+  - Itbaan Safwan
+  - Ramail Khan
+  - Muhammad Annas Shaikh
+  - Muhammad Atif Tahir
+  published: '2026-07-29'
+  updated: '2026-07-29'
+  categories:
+  - cs.CV
+  abstract: 'Gastrointestinal (GI) endoscopic image analysis has shifted from single-label classification
+    toward visual question answering (VQA), where a model must answer free-form clinical questions about
+    an image. While recent vision-language models (VLMs) achieve promising answer accuracy on this task,
+    clinical adoption also requires the model''s internal representations to reflect the visual evidence
+    behind its answers. We propose a simple multi-task fine-tuning recipe that constructs auxiliary grounding
+    and description tasks from an existing VQA dataset with minimal additional annotation: expert-annotated
+    polyp masks are reused directly, while a GI-domain pretrained classifier with Grad-CAM localization
+    provides weak supervision for finding categories that lack ground-truth masks. Three small VLM backbones
+    are fine-tuned with low-rank adaptation under matched VQA-only and multi-task recipes on Kvasir-VQA-x1,
+    and we show consistent accuracy gains together with improved implicit alignment between answer tokens
+    and the relevant image region, evaluated on both in-distribution and out-of-distribution data.'
+  url: https://arxiv.org/abs/2607.27122
+  pdf_url: https://arxiv.org/pdf/2607.27122v1
+  version: v1
+fetched: '2026-11-14'

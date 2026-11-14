@@ -1,0 +1,41 @@
+id: paper:arxiv:2605.28742
+status: skipped
+score: 1
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+meta:
+  title: 'CORE: Contrastive Reflection Enables Rapid Improvements in Reasoning'
+  authors:
+  - Linas Nasvytis
+  - Simon Jerome Han
+  - Ben Prystawski
+  - Satchel Grant
+  - Noah D. Goodman
+  - Judith E. Fan
+  published: '2026-05-27'
+  updated: '2026-06-05'
+  categories:
+  - cs.AI
+  abstract: 'Language models can use verifiable rewards to improve at a wide variety of reasoning tasks.
+    However, both parametric (e.g. RLVR) and non-parametric (e.g. prompt optimization) approaches to doing
+    so typically require hundreds of training samples and thousands of model rollouts, making them expensive
+    in the best case and intractable in the worst. To address this challenge, we introduce Contrastive
+    Reflection (CORE), a non-parametric learning algorithm that compares past reasoning traces to generate
+    insights: short natural-language descriptions of reasoning strategies and constraints that capture
+    differences between successful and unsuccessful problem attempts. Across four reasoning tasks, we
+    demonstrate that CORE enables more rapid improvement than both parametric (GRPO) and non-parametric
+    (GEPA, episodic RAG, and MemRL) methods, while using fewer rollouts. Under fixed rollout budgets with
+    as few as five training samples, CORE achieves the strongest performance in most task-data regimes.
+    Finally, we highlight how CORE is substantially more context-efficient than non-parametric baselines,
+    requiring fewer prompt tokens while storing learned knowledge as compact, interpretable natural-language
+    insights. Our results therefore suggest that distilling contrasts between successful and unsuccessful
+    reasoning traces into abstract and useful insights can provide a more efficient and interpretable
+    route to model self-improvement than weight updates, prompt optimization, or direct reuse of stored
+    reasoning traces.'
+  url: https://arxiv.org/abs/2605.28742
+  pdf_url: https://arxiv.org/pdf/2605.28742v2
+  version: v2
+fetched: '2026-11-14'

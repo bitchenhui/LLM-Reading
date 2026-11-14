@@ -1,0 +1,49 @@
+id: paper:arxiv:2105.05658
+status: pending
+score: 8
+track: processing_enhancement
+matched:
+- ref: impl:VTM
+  count: 2
+  weight: 3
+- ref: codec:VVC
+  count: 1
+  weight: 3
+- ref: concept:GOP
+  count: 2
+  weight: 1
+- ref: concept:QP
+  count: 1
+  weight: 1
+meta:
+  title: A CNN-based Prediction-Aware Quality Enhancement Framework for VVC
+  authors:
+  - Fatemeh Nasiri
+  - Wassim Hamidouche
+  - Luce Morin
+  - Nicolas Dhollande
+  - Gildas Cocherel
+  published: '2021-05-12'
+  updated: '2021-05-12'
+  categories:
+  - eess.IV
+  abstract: This paper presents a framework for Convolutional Neural Network (CNN)-based quality enhancement
+    task, by taking advantage of coding information in the compressed video signal. The motivation is
+    that normative decisions made by the encoder can significantly impact the type and strength of artifacts
+    in the decoded images. In this paper, the main focus has been put on decisions defining the prediction
+    signal in intra and inter frames. This information has been used in the training phase as well as
+    input to help the process of learning artifacts that are specific to each coding type. Furthermore,
+    to retain a low memory requirement for the proposed method, one model is used for all Quantization
+    Parameters (QPs) with a QP-map, which is also shared between luma and chroma components. In addition
+    to the Post Processing (PP) approach, the In-Loop Filtering (ILF) codec integration has also been
+    considered, where the characteristics of the Group of Pictures (GoP) are taken into account to boost
+    the performance. The proposed CNN-based Quality Enhancement(QE) framework has been implemented on
+    top of the VVC Test Model (VTM-10). Experiments show that the prediction-aware aspect of the proposed
+    method improves the coding efficiency gain of the default CNN-based QE method by 1.52%, in terms of
+    BD-BR, at the same network complexity compared to the default CNN-based QE filter.
+  url: https://arxiv.org/abs/2105.05658
+  pdf_url: https://arxiv.org/pdf/2105.05658v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 19
+citation_year: 2021

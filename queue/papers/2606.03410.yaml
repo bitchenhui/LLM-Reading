@@ -1,0 +1,49 @@
+id: paper:arxiv:2606.03410
+status: pending
+score: 5
+track: quality_assessment
+matched:
+- ref: codec:Opus
+  count: 1
+  weight: 3
+- ref: concept:IQA
+  count: 1
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: 'Enginuity: A Dataset and Benchmark for Vision-Language Understanding of Engineering Diagrams'
+  authors:
+  - Abhishek Kumar
+  - Isha Motiyani
+  - Tilak Kasturi
+  - Ethan Seefried
+  - Prahitha Movva
+  - Tirthankar Ghosal
+  published: '2026-06-02'
+  updated: '2026-06-02'
+  categories:
+  - cs.CV
+  abstract: 'Engineering diagrams pose a distinct challenge for vision-language models: unlike natural
+    images or general documents, they encode information through dense spatial layouts, domain-specific
+    symbols, and cross-references between visual callouts and structured parts tables. Despite their centrality
+    to service, repair, and design workflows, there is no public benchmark for measuring VLM capabilities
+    in this domain; existing datasets primarily focus on flowcharts, scientific figures, or business documents.
+    To address this gap, we introduce Enginuity, the first open dataset and benchmark for evaluating VLMs
+    on complex engineering diagrams. We define two tasks over a corpus of U.S. military service and repair
+    manuals: structured parts-table extraction (Task 1) and free-form visual diagram question answering
+    (VQA)(Task 2) for benchmarking. We evaluate four frontier VLMs (GPT-5.2 Chat, Claude Opus 4.7, Gemma
+    4, Qwen3-VL-32B-Instruct) under zero-shot and chain-of-thought prompting. On Task 1, models reach
+    Recall@all of 0.61-0.87 but Token F1pen of only 0.03-0.18, exposing a systematic gap between part
+    identification and description fidelity. Task 2 reveals a consistent factual-reasoning gap across
+    all models. A supporting analysis shows that token-overlap metrics under-report model capability on
+    technical descriptions by 2-6x relative to semantic similarity, motivating LLM-as-judge calibration
+    for domain-specific evaluation. We release the dataset, annotations, evaluation harness, and per-sample
+    model outputs to support a reproducible study of VLM capability on engineering content.'
+  url: https://arxiv.org/abs/2606.03410
+  pdf_url: https://arxiv.org/pdf/2606.03410v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 1
+citation_year: 2026

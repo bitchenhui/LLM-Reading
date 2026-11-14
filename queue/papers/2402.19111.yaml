@@ -1,0 +1,38 @@
+id: paper:arxiv:2402.19111
+status: skipped
+score: 0
+track: video_image_coding
+matched: []
+meta:
+  title: Deep Network for Image Compressed Sensing Coding Using Local Structural Sampling
+  authors:
+  - Wenxue Cui
+  - Xingtao Wang
+  - Xiaopeng Fan
+  - Shaohui Liu
+  - Xinwei Gao
+  - Debin Zhao
+  published: '2024-02-29'
+  updated: '2024-02-29'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: 'Existing image compressed sensing (CS) coding frameworks usually solve an inverse problem
+    based on measurement coding and optimization-based image reconstruction, which still exist the following
+    two challenges: 1) The widely used random sampling matrix, such as the Gaussian Random Matrix (GRM),
+    usually leads to low measurement coding efficiency. 2) The optimization-based reconstruction methods
+    generally maintain a much higher computational complexity. In this paper, we propose a new CNN based
+    image CS coding framework using local structural sampling (dubbed CSCNet) that includes three functional
+    modules: local structural sampling, measurement coding and Laplacian pyramid reconstruction. In the
+    proposed framework, instead of GRM, a new local structural sampling matrix is first developed, which
+    is able to enhance the correlation between the measurements through a local perceptual sampling strategy.
+    Besides, the designed local structural sampling matrix can be jointly optimized with the other functional
+    modules during training process. After sampling, the measurements with high correlations are produced,
+    which are then coded into final bitstreams by the third-party image codec. At last, a Laplacian pyramid
+    reconstruction network is proposed to efficiently recover the target image from the measurement domain
+    to the image domain. Extensive experimental results demonstrate that the proposed scheme outperforms
+    the existing state-of-the-art CS coding methods, while maintaining fast computational speed.'
+  url: https://arxiv.org/abs/2402.19111
+  pdf_url: https://arxiv.org/pdf/2402.19111v1
+  version: v1
+fetched: '2026-11-14'

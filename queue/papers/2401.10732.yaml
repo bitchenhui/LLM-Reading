@@ -1,0 +1,40 @@
+id: paper:arxiv:2401.10732
+status: skipped
+score: 1
+track: video_image_coding
+matched:
+- ref: concept:ICM
+  count: 3
+  weight: 1
+meta:
+  title: Bridging the gap between image coding for machines and humans
+  authors:
+  - Nam Le
+  - Honglei Zhang
+  - Francesco Cricri
+  - Ramin G. Youvalari
+  - Hamed Rezazadegan Tavakoli
+  - Emre Aksu
+  - Miska M. Hannuksela
+  - Esa Rahtu
+  published: '2024-01-19'
+  updated: '2024-01-19'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: Image coding for machines (ICM) aims at reducing the bitrate required to represent an image
+    while minimizing the drop in machine vision analysis accuracy. In many use cases, such as surveillance,
+    it is also important that the visual quality is not drastically deteriorated by the compression process.
+    Recent works on using neural network (NN) based ICM codecs have shown significant coding gains against
+    traditional methods; however, the decompressed images, especially at low bitrates, often contain checkerboard
+    artifacts. We propose an effective decoder finetuning scheme based on adversarial training to significantly
+    enhance the visual quality of ICM codecs, while preserving the machine analysis accuracy, without
+    adding extra bitcost or parameters at the inference phase. The results show complete removal of the
+    checkerboard artifacts at the negligible cost of -1.6% relative change in task performance score.
+    In the cases where some amount of artifacts is tolerable, such as when machine consumption is the
+    primary target, this technique can enhance both pixel-fidelity and feature-fidelity scores without
+    losing task performance.
+  url: https://arxiv.org/abs/2401.10732
+  pdf_url: https://arxiv.org/pdf/2401.10732v1
+  version: v1
+fetched: '2026-11-14'

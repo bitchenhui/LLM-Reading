@@ -1,0 +1,34 @@
+id: paper:arxiv:2308.12566
+status: skipped
+score: 0
+track: audio_coding
+matched: []
+meta:
+  title: Hybrid noise shaping for audio coding using perfectly overlapped window
+  authors:
+  - Byeongho Jo
+  - Seungkwon Beack
+  published: '2023-08-24'
+  updated: '2023-08-24'
+  categories:
+  - eess.AS
+  - cs.SD
+  - eess.SP
+  abstract: In recent years, audio coding technology has been standardized based on several frameworks
+    that incorporate linear predictive coding (LPC). However, coding the transient signal using frequency-domain
+    LP residual signals remains a challenge. To address this, temporal noise shaping (TNS) can be adapted,
+    although it cannot be effectively operated since the estimated temporal envelope in the modified discrete
+    cosine transform (MDCT) domain is accompanied by the time-domain aliasing (TDA) terms. In this study,
+    we propose the modulated complex lapped transform-based coding framework integrated with transform
+    coded excitation (TCX) and complex LPC-based TNS (CTNS). Our approach uses a 50\% overlap window and
+    switching scheme for the CTNS to improve the coding efficiency. Additionally, an adaptive calculation
+    of the target bits for the sub-bands using the frequency envelope information based on the quantized
+    LPC coefficients is proposed. To minimize the quantization mismatch between both modes, an integrated
+    quantization for real and complex values and a TDA augmentation method that compensates for the artificially
+    generated TDA components during switching operations are proposed. The proposed coding framework shows
+    a superior performance in both objective metrics and subjective listening tests, thereby demonstrating
+    its low bit-rate audio coding.
+  url: https://arxiv.org/abs/2308.12566
+  pdf_url: https://arxiv.org/pdf/2308.12566v1
+  version: v1
+fetched: '2026-11-14'

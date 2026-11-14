@@ -1,0 +1,50 @@
+id: paper:arxiv:2605.18006
+status: pending
+score: 4
+track: immersive_media
+matched:
+- ref: codec:G-PCC
+  count: 2
+  weight: 3
+- ref: concept:EntropyModel
+  count: 1
+  weight: 1
+meta:
+  title: 'Inter-LPCM: Learning-based Inter-Frame Predictive Coding for LiDAR Point Cloud Compression'
+  authors:
+  - Chang Sun
+  - Hui Yuan
+  - Shiqi Jiang
+  - Chongzhen Tian
+  - Guanghui Zhang
+  - Raouf Hamzaoui
+  published: '2026-05-18'
+  updated: '2026-05-18'
+  categories:
+  - eess.IV
+  - cs.CV
+  - cs.MM
+  abstract: Because LiDAR sensors acquire point clouds with a fixed angular resolution, the resulting
+    data can be systematically parameterized and efficiently compressed in the spherical coordinate system.
+    Traditional spherical coordinate-based point cloud compression methods have demonstrated strong rate-distortion
+    (RD) performance, with the predictive geometry coding (PredGeom) method in the geometry-based point
+    cloud compression (G-PCC) standard being a prominent example. Although PredGeom includes an inter-frame
+    prediction mode, it relies on a simple linear model, which limits its ability to capture complex motion
+    patterns and structural dependencies. Meanwhile, existing learning-based compression methods in the
+    spherical domain do not exploit inter-frame correlations to reduce geometry redundancy. To address
+    these limitations, we propose a learning-based inter-frame predictive coding method, termed Inter-LPCM.
+    For azimuth prediction, we employ a delta coding strategy based on the predefined angular resolution.
+    To improve radius compression, we introduce an inter-frame radius predictive (Inter-RP) model that
+    estimates the current point's radius using neighboring points from both the current frame and the
+    registered reference frame. In addition, we design a lightweight attention-based prediction (LAEP)
+    model to predict elevation angles by capturing long-range geometric correlations across different
+    coordinates. For quantization, we propose an RD-optimized method to select quantization steps in the
+    spherical coordinate system. For entropy coding, we design distinct models for each spherical coordinate
+    component. These models are adapted to the statistical priors of each coordinate, enabling more accurate
+    probability estimation. Our source code is publicly available at https://github.com/SDUChangSun/Inter-LPCM
+  url: https://arxiv.org/abs/2605.18006
+  pdf_url: https://arxiv.org/pdf/2605.18006v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 2
+citation_year: 2026

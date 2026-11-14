@@ -1,0 +1,33 @@
+id: paper:arxiv:2401.13401
+status: skipped
+score: 0
+track: audio_coding
+matched: []
+meta:
+  title: Perceptually-motivated Spatial Audio Codec for Higher-Order Ambisonics Compression
+  authors:
+  - Christoph Hold
+  - Leo McCormack
+  - Archontis Politis
+  - Ville Pulkki
+  published: '2024-01-24'
+  updated: '2024-01-24'
+  categories:
+  - eess.AS
+  - eess.SP
+  abstract: Scene-based spatial audio formats, such as Ambisonics, are playback system agnostic and may
+    therefore be favoured for delivering immersive audio experiences to a wide range of (potentially unknown)
+    devices. The number of channels required to deliver high spatial resolution Ambisonic audio, however,
+    can be prohibitive for low-bandwidth applications. Therefore, this paper proposes a compression codec,
+    which is based upon the parametric higher-order Directional Audio Coding (HO-DirAC) model. The encoder
+    downmixes the higher-order Ambisonic (HOA) input audio into a reduced number of signals, which are
+    accompanied by perceptually-motivated scene parameters. The downmixed audio is coded using a perceptual
+    audio coder, whereas the parameters are grouped into perceptual bands, quantized, and downsampled.
+    On the decoder side, low Ambisonic orders are fully recovered. Not fully recoverable HOA components
+    are synthesized according to the parameters. The results of a listening test indicate that the proposed
+    parametric spatial audio codec can improve the adopted perceptual audio coder, especially at low to
+    medium-high bitrates, when applied to fifth-order HOA signals.
+  url: https://arxiv.org/abs/2401.13401
+  pdf_url: https://arxiv.org/pdf/2401.13401v1
+  version: v1
+fetched: '2026-11-14'

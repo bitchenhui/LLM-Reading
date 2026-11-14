@@ -1,0 +1,34 @@
+id: paper:arxiv:2601.12757
+status: skipped
+score: 0
+track: audio_coding
+matched: []
+meta:
+  title: 'CodeSep: Low-Bitrate Codec-Driven Speech Separation with Base-Token Disentanglement and Auxiliary-Token
+    Serial Prediction'
+  authors:
+  - Hui-Peng Du
+  - Yang Ai
+  - Xiao-Hang Jiang
+  - Rui-Chen Zheng
+  - Zhen-Hua Ling
+  published: '2026-01-19'
+  updated: '2026-01-19'
+  categories:
+  - eess.AS
+  abstract: This paper targets a new scenario that integrates speech separation with speech compression,
+    aiming to disentangle multiple speakers while producing discrete representations for efficient transmission
+    or storage, with applications in online meetings and dialogue archiving. To address this scenario,
+    we propose CodeSep, a codec-driven model that jointly performs speech separation and low-bitrate compression.
+    CodeSep comprises a residual vector quantizer (RVQ)-based plain neural speech codec, a base-token
+    disentanglement (BTD) module, and parallel auxiliary-token serial prediction (ATSP) modules. The BTD
+    module disentangles mixed-speech mel-spectrograms into base tokens for each speaker, which are then
+    refined by ATSP modules to serially predict auxiliary tokens, and finally, all tokens are decoded
+    to reconstruct separated waveforms through the codec decoder. During training, the codec's RVQ provides
+    supervision with permutation-invariant and teacher-forcing-based cross-entropy losses. As only base
+    tokens are transmitted or stored, CodeSep achieves low-bitrate compression. Experimental results show
+    that CodeSep attains satisfactory separation performance at only 1 kbps compared with baseline methods.
+  url: https://arxiv.org/abs/2601.12757
+  pdf_url: https://arxiv.org/pdf/2601.12757v1
+  version: v1
+fetched: '2026-11-14'

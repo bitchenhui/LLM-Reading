@@ -1,0 +1,41 @@
+id: paper:arxiv:2411.17760
+status: skipped
+score: 1
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+meta:
+  title: 'Efficient Self-Improvement in Multimodal Large Language Models: A Model-Level Judge-Free Approach'
+  authors:
+  - Shijian Deng
+  - Wentian Zhao
+  - Yu-Jhe Li
+  - Kun Wan
+  - Daniel Miranda
+  - Ajinkya Kale
+  - Yapeng Tian
+  published: '2024-11-26'
+  updated: '2024-11-26'
+  categories:
+  - cs.CL
+  - cs.AI
+  - cs.CV
+  - cs.LG
+  abstract: Self-improvement in multimodal large language models (MLLMs) is crucial for enhancing their
+    reliability and robustness. However, current methods often rely heavily on MLLMs themselves as judges,
+    leading to high computational costs and potential pitfalls like reward hacking and model collapse.
+    This paper introduces a novel, model-level judge-free self-improvement framework. Our approach employs
+    a controlled feedback mechanism while eliminating the need for MLLMs in the verification loop. We
+    generate preference learning pairs using a controllable hallucination mechanism and optimize data
+    quality by leveraging lightweight, contrastive language-image encoders to evaluate and reverse pairs
+    when necessary. Evaluations across public benchmarks and our newly introduced IC dataset designed
+    to challenge hallucination control demonstrate that our model outperforms conventional techniques.
+    We achieve superior precision and recall with significantly lower computational demands. This method
+    offers an efficient pathway to scalable self-improvement in MLLMs, balancing performance gains with
+    reduced resource requirements.
+  url: https://arxiv.org/abs/2411.17760
+  pdf_url: https://arxiv.org/pdf/2411.17760v1
+  version: v1
+fetched: '2026-11-14'

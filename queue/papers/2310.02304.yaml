@@ -1,0 +1,44 @@
+id: paper:arxiv:2310.02304
+status: pending
+score: 2
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 3
+  weight: 1
+- ref: concept:RSI
+  count: 2
+  weight: 1
+meta:
+  title: 'Self-Taught Optimizer (STOP): Recursively Self-Improving Code Generation'
+  authors:
+  - Eric Zelikman
+  - Eliana Lorch
+  - Lester Mackey
+  - Adam Tauman Kalai
+  published: '2023-10-03'
+  updated: '2024-08-16'
+  categories:
+  - cs.CL
+  - cs.AI
+  - cs.LG
+  - stat.ML
+  abstract: Several recent advances in AI systems solve problems by providing a "scaffolding" program
+    that structures multiple calls to language models (LMs) to generate better outputs. A scaffolding
+    program is written in a programming language such as Python. In this work, we use a language-model-infused
+    scaffolding program to improve itself. We start with a seed "improver" that improves an input program
+    according to a given utility function by querying an LM several times and returning the best solution.
+    We then run this seed improver to improve itself. Across a small set of downstream tasks, the resulting
+    improved improver generates programs with significantly better performance than its seed improver.
+    A variety of self-improvement strategies are proposed by the language model, including beam search,
+    genetic algorithms, and simulated annealing. Since the language models themselves are not altered,
+    this is not full recursive self-improvement. Nonetheless, it demonstrates that a modern language model,
+    GPT-4 in our experiments, is capable of writing code that can call itself to improve itself. We consider
+    concerns around the development of self-improving technologies and evaluate the frequency with which
+    the generated code bypasses a sandbox.
+  url: https://arxiv.org/abs/2310.02304
+  pdf_url: https://arxiv.org/pdf/2310.02304v3
+  version: v3
+fetched: '2026-11-14'
+citation_count: 241
+citation_year: 2023

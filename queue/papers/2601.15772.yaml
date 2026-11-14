@@ -1,0 +1,51 @@
+id: paper:arxiv:2601.15772
+status: pending
+score: 2
+track: processing_enhancement
+matched:
+- ref: concept:3DGS
+  count: 1
+  weight: 1
+- ref: concept:MoE
+  count: 1
+  weight: 1
+meta:
+  title: 'LL-GaussianImage: Efficient Image Representation for Zero-shot Low-Light Enhancement with 2D
+    Gaussian Splatting'
+  authors:
+  - Yuhan Chen
+  - Wenxuan Yu
+  - Guofa Li
+  - Yijun Xu
+  - Ying Fang
+  - Yicui Shi
+  - Long Cao
+  - Wenbo Chu
+  - Keqiang Li
+  published: '2026-01-22'
+  updated: '2026-01-22'
+  categories:
+  - cs.CV
+  abstract: 2D Gaussian Splatting (2DGS) is an emerging explicit scene representation method with significant
+    potential for image compression due to high fidelity and high compression ratios. However, existing
+    low-light enhancement algorithms operate predominantly within the pixel domain. Processing 2DGS-compressed
+    images necessitates a cumbersome decompression-enhancement-recompression pipeline, which compromises
+    efficiency and introduces secondary degradation. To address these limitations, we propose LL-GaussianImage,
+    the first zero-shot unsupervised framework designed for low-light enhancement directly within the
+    2DGS compressed representation domain. Three primary advantages are offered by this framework. First,
+    a semantic-guided Mixture-of-Experts enhancement framework is designed. Dynamic adaptive transformations
+    are applied to the sparse attribute space of 2DGS using rendered images as guidance to enable compression-as-enhancement
+    without full decompression to a pixel grid. Second, a multi-objective collaborative loss function
+    system is established to strictly constrain smoothness and fidelity during enhancement, suppressing
+    artifacts while improving visual quality. Third, a two-stage optimization process is utilized to achieve
+    reconstruction-as-enhancement. The accuracy of the base representation is ensured through single-scale
+    reconstruction and network robustness is enhanced. High-quality enhancement of low-light images is
+    achieved while high compression ratios are maintained. The feasibility and superiority of the paradigm
+    for direct processing within the compressed representation domain are validated through experimental
+    results.
+  url: https://arxiv.org/abs/2601.15772
+  pdf_url: https://arxiv.org/pdf/2601.15772v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 8
+citation_year: 2026

@@ -1,0 +1,36 @@
+id: paper:arxiv:2602.04683
+status: skipped
+score: 0
+track: audio_coding
+matched: []
+meta:
+  title: 'UniAudio 2.0: A Unified Audio Language Model with Text-Aligned Factorized Audio Tokenization'
+  authors:
+  - Dongchao Yang
+  - Yuanyuan Wang
+  - Dading Chong
+  - Songxiang Liu
+  - Xixin Wu
+  - Helen Meng
+  published: '2026-02-04'
+  updated: '2026-02-11'
+  categories:
+  - cs.SD
+  abstract: 'We study two foundational problems in audio language models: (1) how to design an audio tokenizer
+    that can serve as an intermediate representation for both understanding and generation; and (2) how
+    to build an audio foundation model that generalizes in few-shot and zero-shot settings, analogous
+    to large language models. To this end, we make the following two contributions. First, we propose
+    ReasoningCodec, a discrete audio codec that factorizes audio into (i) reasoning tokens, which encode
+    text-aligned, high-level analysis and planning representations for audio understanding and hierarchical
+    generation, and (ii) reconstruction tokens, which encode semantic-rich acoustic cues for high-fidelity
+    waveform reconstruction. This design achieves understanding performance comparable to strong continuous
+    representations while improving generation quality and reconstruction fidelity over prior discrete
+    tokenizers. Second, we introduce a unified autoregressive architecture for text and audio, together
+    with multi-stage training and multi-task data construction. Using this framework, we train UniAudio
+    2.0 on 100B text tokens and 60B audio tokens. Across a wide range of speech, sound, and music tasks,
+    UniAudio 2.0 performs competitively on in-domain evaluations and demonstrates strong few-shot and
+    zero-shot generalization to unseen tasks. Demo, code, and checkpoints will be available at \href{https://dongchaoyang.top/UniAudio2Demo/}{https://dongchaoyang.top/UniAudio2Demo/}.'
+  url: https://arxiv.org/abs/2602.04683
+  pdf_url: https://arxiv.org/pdf/2602.04683v3
+  version: v3
+fetched: '2026-11-14'

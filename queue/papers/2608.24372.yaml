@@ -1,0 +1,36 @@
+id: paper:arxiv:2608.24372
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 3
+  weight: 1
+meta:
+  title: Bridging Adversarial and Collaborative Learning for AI-Generated Image Quality Assessment
+  authors:
+  - Baoliang Chen
+  - Qing Lin
+  - Sijie Mai
+  published: '2026-08-25'
+  updated: '2026-08-25'
+  categories:
+  - cs.CV
+  abstract: 'AI-generated image quality assessment (AIGIQA) requires jointly reasoning about perceptual
+    fidelity and prompt alignment, two quality dimensions that are often treated as independent in existing
+    AIGIQA models. However, by re-examining human ratings, we uncover a previously overlooked phenomenon:
+    the two dimensions are interdependent and exhibit both competitive and cooperative interactions during
+    human rating. This observation suggests that a unified model should neither collapse the two dimensions
+    nor rigidly separate them, but rather adaptively negotiate their interplay. Motivated by this insight,
+    we introduce an interaction-aware learning framework that models perception-alignment relations through
+    adversarial and collaborative inference pathways. Instead of designing a rigid dual-branch architecture,
+    our method employs a gated interaction module that dynamically routes features according to the inferred
+    relationship between the two dimensions. Task-aware prompts further modulate the gating behaviour,
+    enabling the model to switch between competition and cooperation when necessary. Experiments across
+    multiple AIGIQA benchmarks demonstrate that our approach not only achieves state-of-the-art accuracy
+    but also yields interpretable interaction patterns, offering a more faithful approximation of human
+    judgment. The codes are available at https://github.com/LQAMEI/ACL-IQA.'
+  url: https://arxiv.org/abs/2608.24372
+  pdf_url: https://arxiv.org/pdf/2608.24372v1
+  version: v1
+fetched: '2026-11-14'

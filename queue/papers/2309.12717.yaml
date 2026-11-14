@@ -1,0 +1,38 @@
+id: paper:arxiv:2309.12717
+status: skipped_low_citation
+score: 3
+track: video_image_coding
+matched:
+- ref: impl:TIC
+  count: 1
+  weight: 3
+meta:
+  title: Transformer-based Image Compression with Variable Image Quality Objectives
+  authors:
+  - Chia-Hao Kao
+  - Yi-Hsin Chen
+  - Cheng Chien
+  - Wei-Chen Chiu
+  - Wen-Hsiao Peng
+  published: '2023-09-22'
+  updated: '2023-09-22'
+  categories:
+  - cs.CV
+  - cs.MM
+  abstract: This paper presents a Transformer-based image compression system that allows for a variable
+    image quality objective according to the user's preference. Optimizing a learned codec for different
+    quality objectives leads to reconstructed images with varying visual characteristics. Our method provides
+    the user with the flexibility to choose a trade-off between two image quality objectives using a single,
+    shared model. Motivated by the success of prompt-tuning techniques, we introduce prompt tokens to
+    condition our Transformer-based autoencoder. These prompt tokens are generated adaptively based on
+    the user's preference and input image through learning a prompt generation network. Extensive experiments
+    on commonly used quality metrics demonstrate the effectiveness of our method in adapting the encoding
+    and/or decoding processes to a variable quality objective. While offering the additional flexibility,
+    our proposed method performs comparably to the single-objective methods in terms of rate-distortion
+    performance.
+  url: https://arxiv.org/abs/2309.12717
+  pdf_url: https://arxiv.org/pdf/2309.12717v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 5
+citation_year: 2023

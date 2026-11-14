@@ -1,0 +1,45 @@
+id: paper:arxiv:2601.18240
+status: pending
+score: 2
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+- ref: concept:TrainingFree
+  count: 1
+  weight: 1
+meta:
+  title: 'V-Loop: Visual Logical Loop Verification for Hallucination Detection in Medical Visual Question
+    Answering'
+  authors:
+  - Mengyuan Jin
+  - Zehui Liao
+  - Yong Xia
+  published: '2026-01-26'
+  updated: '2026-01-26'
+  categories:
+  - cs.CV
+  abstract: Multimodal Large Language Models (MLLMs) have shown remarkable capability in assisting disease
+    diagnosis in medical visual question answering (VQA). However, their outputs remain vulnerable to
+    hallucinations (i.e., responses that contradict visual facts), posing significant risks in high-stakes
+    medical scenarios. Recent introspective detection methods, particularly uncertainty-based approaches,
+    offer computational efficiency but are fundamentally indirect, as they estimate predictive uncertainty
+    for an image-question pair rather than verifying the factual correctness of a specific answer. To
+    address this limitation, we propose Visual Logical Loop Verification (V-Loop), a training-free and
+    plug-and-play framework for hallucination detection in medical VQA. V-Loop introduces a bidirectional
+    reasoning process that forms a visually grounded logical loop to verify factual correctness. Given
+    an input, the MLLM produces an answer for the primary input pair. V-Loop extracts semantic units from
+    the primary QA pair, generates a verification question by conditioning on the answer unit to re-query
+    the question unit, and enforces visual attention consistency to ensure answering both primary question
+    and verification question rely on the same image evidence. If the verification answer matches the
+    expected semantic content, the logical loop closes, indicating factual grounding; otherwise, the primary
+    answer is flagged as hallucinated. Extensive experiments on multiple medical VQA benchmarks and MLLMs
+    show that V-Loop consistently outperforms existing introspective methods, remains highly efficient,
+    and further boosts uncertainty-based approaches when used in combination.
+  url: https://arxiv.org/abs/2601.18240
+  pdf_url: https://arxiv.org/pdf/2601.18240v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 3
+citation_year: 2026

@@ -1,0 +1,36 @@
+id: paper:arxiv:2407.12538
+status: skipped
+score: 0
+track: video_image_coding
+matched: []
+meta:
+  title: 'High Frequency Matters: Uncertainty Guided Image Compression with Wavelet Diffusion'
+  authors:
+  - Juan Song
+  - Jiaxiang He
+  - Lijie Yang
+  - Mingtao Feng
+  - Keyan Wang
+  published: '2024-07-17'
+  updated: '2025-12-22'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: 'Diffusion probabilistic models have recently achieved remarkable success in generating high-quality
+    images. However, balancing high perceptual quality and low distortion remains challenging in application
+    of diffusion models in image compression. To address this issue, we propose a novel Uncertainty-Guided
+    image compression approach with wavelet Diffusion (UGDiff). Our approach focuses on high frequency
+    compression via the wavelet transform, since high frequency components are crucial for reconstructing
+    image details. We introduce a wavelet conditional diffusion model for high frequency prediction, followed
+    by a residual codec that compresses and transmits prediction residuals to the decoder. This diffusion
+    prediction-then-residual compression paradigm effectively addresses the low fidelity issue common
+    in direct reconstructions by existing diffusion models. Considering the uncertainty from the random
+    sampling of the diffusion model, we further design an uncertainty-weighted rate-distortion (R-D) loss
+    tailored for residual compression, providing a more rational trade-off between rate and distortion.
+    Comprehensive experiments on two benchmark datasets validate the effectiveness of UGDiff, surpassing
+    state-of-the-art image compression methods in R-D performance, perceptual quality, subjective quality,
+    and inference time. Our code is available at: https://github.com/hejiaxiang1/Wavelet-Diffusion/tree/main.'
+  url: https://arxiv.org/abs/2407.12538
+  pdf_url: https://arxiv.org/pdf/2407.12538v3
+  version: v3
+fetched: '2026-11-14'

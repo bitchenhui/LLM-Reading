@@ -1,0 +1,33 @@
+id: paper:arxiv:2603.03000
+status: skipped
+score: 1
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+meta:
+  title: Why Does RLAIF Work At All?
+  authors:
+  - Robin Young
+  published: '2026-03-03'
+  updated: '2026-03-03'
+  categories:
+  - cs.LG
+  - cs.AI
+  abstract: Reinforcement Learning from AI Feedback (RLAIF) enables language models to improve by training
+    on their own preference judgments, yet no theoretical account explains why this self-improvement seemingly
+    works for value learning. We propose the latent value hypothesis, that pretraining on internet-scale
+    data encodes human values as directions in representation space, and constitutional prompts elicit
+    these latent values into preference judgments. We formalize this intuition under a linear model where
+    the constitution acts as a projection operator selecting value-relevant directions. Our analysis yields
+    several results. RLAIF improves alignment when the constitution-activated direction correlates with
+    true values better than the model's default generation direction thus explaining the generation-judgment
+    gap; the ceiling on RLAIF quality is determined by how well representations encode values, which scales
+    with model capacity; and adversarial constitutions exist that can activate anti-social value directions
+    encoded from harmful pretraining data. Our account unifies scattered empirical findings including
+    the refusal direction, low-rank safety subspaces, and RLAIF scaling behavior.
+  url: https://arxiv.org/abs/2603.03000
+  pdf_url: https://arxiv.org/pdf/2603.03000v1
+  version: v1
+fetched: '2026-11-14'

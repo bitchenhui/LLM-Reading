@@ -1,0 +1,36 @@
+id: paper:arxiv:2412.06176
+status: skipped
+score: 1
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 1
+  weight: 1
+meta:
+  title: 'AlphaVerus: Bootstrapping Formally Verified Code Generation through Self-Improving Translation
+    and Treefinement'
+  authors:
+  - Pranjal Aggarwal
+  - Bryan Parno
+  - Sean Welleck
+  published: '2024-12-09'
+  updated: '2024-12-09'
+  categories:
+  - cs.LG
+  - cs.AI
+  abstract: 'Automated code generation with large language models has gained significant traction, but
+    there remains no guarantee on the correctness of generated code. We aim to use formal verification
+    to provide mathematical guarantees that the generated code is correct. However, generating formally
+    verified code with LLMs is hindered by the scarcity of training data and the complexity of formal
+    proofs. To tackle this challenge, we introduce AlphaVerus, a self-improving framework that bootstraps
+    formally verified code generation by iteratively translating programs from a higher-resource language
+    and leveraging feedback from a verifier. AlphaVerus operates in three phases: exploration of candidate
+    translations, Treefinement -- a novel tree search algorithm for program refinement using verifier
+    feedback, and filtering misaligned specifications and programs to prevent reward hacking. Through
+    this iterative process, AlphaVerus enables a LLaMA-3.1-70B model to generate verified code without
+    human intervention or model finetuning. AlphaVerus shows an ability to generate formally verified
+    solutions for HumanEval and MBPP, laying the groundwork for truly trustworthy code-generation agents.'
+  url: https://arxiv.org/abs/2412.06176
+  pdf_url: https://arxiv.org/pdf/2412.06176v1
+  version: v1
+fetched: '2026-11-14'

@@ -1,0 +1,43 @@
+id: paper:arxiv:2604.24123
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 3
+  weight: 1
+meta:
+  title: 'FDIM: A Feature-distance-based Generic Video Quality Metric for Versatile Codecs'
+  authors:
+  - Jiayi Wang
+  - Lichun Zhang
+  - Xiaoqi Zhuang
+  - Jiaqi Zhang
+  - Lu Yu
+  - Yin Zhao
+  published: '2026-04-27'
+  updated: '2026-04-27'
+  categories:
+  - cs.CV
+  abstract: Video technology is advancing toward Ultra High Definition (UHD) and High Dynamic Range (HDR),
+    which intensifies the need for higher compression efficiency for these high-specification videos.
+    Beyond advances in traditional codecs, neural video codecs (NVCs) have attracted significant research
+    attention and have evolved rapidly over the past few years. The coding artifacts of NVCs often exhibit
+    content-varying and generative characteristics, which differ from those of conventional codecs and
+    are challenging for traditional video quality assessment (VQA) methods to capture. Therefore, VQA
+    metrics are required to generalize across different codecs, content types, and dynamic ranges to better
+    support video codec research and evaluation. In this paper, we propose FDIM, a feature-distance-based
+    generic video quality metric for both traditional and neural video codecs across SDR and HDR formats.
+    FDIM employs a hybrid architecture that integrates deep and hand-crafted features. The deep feature
+    component learns multi-scale representations to capture distortions ranging from structural and textural
+    fidelity degradation to high-level semantic deviations, while the hand-crafted feature component provides
+    stable complementary cues to improve overall generalization. We trained FDIM on a large-scale subjective
+    quality assessment dataset (DCVQA) consisting of over 16k video sequences encoded by traditional block-based
+    hybrid video codecs and end-to-end perceptually optimized neural video codecs. Extensive experiments
+    on ten SDR/HDR VQA datasets containing diverse, previously unseen codecs demonstrate that FDIM achieves
+    strong generalization and high correlation with subjective assessment. The source code for FDIM and
+    the DCVQA validation set will be released at https://github.com/MCL-ZJU/FDIM.
+  url: https://arxiv.org/abs/2604.24123
+  pdf_url: https://arxiv.org/pdf/2604.24123v1
+  version: v1
+fetched: '2026-11-14'

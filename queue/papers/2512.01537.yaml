@@ -1,0 +1,36 @@
+id: paper:arxiv:2512.01537
+status: skipped
+score: 0
+track: audio_coding
+matched: []
+meta:
+  title: Two-Dimensional Quantization for Geometry-Aware Audio Coding
+  authors:
+  - Tal Shuster
+  - Eliya Nachmani
+  published: '2025-12-01'
+  updated: '2026-05-18'
+  categories:
+  - cs.SD
+  - cs.AI
+  - cs.IT
+  - cs.LG
+  - eess.SP
+  abstract: Recent neural audio codecs have achieved impressive reconstruction quality, typically relying
+    on quantization methods such as Residual Vector Quantization (RVQ), Vector Quantization (VQ) and Finite
+    Scalar Quantization (FSQ). However, these quantization techniques limit the geometric structure of
+    the latent space, make it harder to capture correlations between features leading to inefficiency
+    in representation learning, codebook utilization and token rate. In this paper we introduce Two-Dimensional
+    Quantization (Q2D2), a quantization scheme in which feature pairs are projected onto structured 2D
+    grids, such as hexagonal, rhombic, or rectangular tiling and quantized to the nearest grid values,
+    yielding an implicit codebook defined by the product of grid levels, with codebook sizes comparable
+    to conventional methods. Despite its simple geometric formulation, Q2D2 improves audio compression
+    efficiency, with low token rates and high codebook utilization while maintaining state of the art
+    reconstruction quality. Specifically, Q2D2 achieves competitive to superior performance in various
+    objective and subjective reconstruction metrics, across extensive experiments in speech, audio and
+    music domains compared to state of the art models. Comprehensive ablation studies further confirm
+    the effectiveness of our design choices.
+  url: https://arxiv.org/abs/2512.01537
+  pdf_url: https://arxiv.org/pdf/2512.01537v3
+  version: v3
+fetched: '2026-11-14'

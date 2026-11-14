@@ -1,0 +1,35 @@
+id: paper:arxiv:2506.21171
+status: skipped
+score: 1
+track: processing_enhancement
+matched:
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+meta:
+  title: 'Uncover Treasures in DCT: Advancing JPEG Quality Enhancement by Exploiting Latent Correlations'
+  authors:
+  - Jing Yang
+  - Qunliang Xing
+  - Mai Xu
+  - Minglang Qiao
+  published: '2025-06-26'
+  updated: '2025-06-26'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: Joint Photographic Experts Group (JPEG) achieves data compression by quantizing Discrete Cosine
+    Transform (DCT) coefficients, which inevitably introduces compression artifacts. Most existing JPEG
+    quality enhancement methods operate in the pixel domain, suffering from the high computational costs
+    of decoding. Consequently, direct enhancement of JPEG images in the DCT domain has gained increasing
+    attention. However, current DCT-domain methods often exhibit limited performance. To address this
+    challenge, we identify two critical types of correlations within the DCT coefficients of JPEG images.
+    Building on this insight, we propose an Advanced DCT-domain JPEG Quality Enhancement (AJQE) method
+    that fully exploits these correlations. The AJQE method enables the adaptation of numerous well-established
+    pixel-domain models to the DCT domain, achieving superior performance with reduced computational complexity.
+    Compared to the pixel-domain counterparts, the DCT-domain models derived by our method demonstrate
+    a 0.35 dB improvement in PSNR and a 60.5% increase in enhancement throughput on average.
+  url: https://arxiv.org/abs/2506.21171
+  pdf_url: https://arxiv.org/pdf/2506.21171v1
+  version: v1
+fetched: '2026-11-14'

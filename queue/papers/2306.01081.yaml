@@ -1,0 +1,37 @@
+id: paper:arxiv:2306.01081
+status: skipped
+score: 0
+track: processing_enhancement
+matched: []
+meta:
+  title: '4DSR-GCN: 4D Video Point Cloud Upsampling using Graph Convolutional Networks'
+  authors:
+  - Lorenzo Berlincioni
+  - Stefano Berretti
+  - Marco Bertini
+  - Alberto Del Bimbo
+  published: '2023-06-01'
+  updated: '2023-06-01'
+  categories:
+  - cs.CV
+  - cs.AI
+  - cs.MM
+  abstract: Time varying sequences of 3D point clouds, or 4D point clouds, are now being acquired at an
+    increasing pace in several applications (e.g., LiDAR in autonomous or assisted driving). In many cases,
+    such volume of data is transmitted, thus requiring that proper compression tools are applied to either
+    reduce the resolution or the bandwidth. In this paper, we propose a new solution for upscaling and
+    restoration of time-varying 3D video point clouds after they have been heavily compressed. In consideration
+    of recent growing relevance of 3D applications, %We focused on a model allowing user-side upscaling
+    and artifact removal for 3D video point clouds, a real-time stream of which would require . Our model
+    consists of a specifically designed Graph Convolutional Network (GCN) that combines Dynamic Edge Convolution
+    and Graph Attention Networks for feature aggregation in a Generative Adversarial setting. By taking
+    inspiration PointNet++, We present a different way to sample dense point clouds with the intent to
+    make these modules work in synergy to provide each node enough features about its neighbourhood in
+    order to later on generate new vertices. Compared to other solutions in the literature that address
+    the same task, our proposed model is capable of obtaining comparable results in terms of quality of
+    the reconstruction, while using a substantially lower number of parameters (about 300KB), making our
+    solution deployable in edge computing devices such as LiDAR.
+  url: https://arxiv.org/abs/2306.01081
+  pdf_url: https://arxiv.org/pdf/2306.01081v1
+  version: v1
+fetched: '2026-11-14'

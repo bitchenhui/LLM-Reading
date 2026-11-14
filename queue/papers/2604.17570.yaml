@@ -1,0 +1,44 @@
+id: paper:arxiv:2604.17570
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'PBSBench: A Multi-Level Vision-Language Framework and Benchmark for Hematopathology Whole Slide
+    Image Interpretation'
+  authors:
+  - Yuanlong Wang
+  - Weichi Chen
+  - Adrian Rajab
+  - Wenfang Liu
+  - Yulan Jin
+  - Andrew Srisuwananukorn
+  - Ping Zhang
+  published: '2026-04-19'
+  updated: '2026-04-19'
+  categories:
+  - cs.CV
+  - cs.AI
+  abstract: Peripheral Blood Smear (PBS) is a critical microscopic examination in hematopathology that
+    yields whole-slide imaging (WSI). Unlike solid tissue pathology, PBS interpretation focuses on individual
+    cell morphologies rather than tissue architecture, making it distinct in both visual characteristics
+    and diagnostic reasoning. However, current multimodal large language models (MLLMs) for pathology
+    are primarily developed on solid-tissue WSIs and struggle to generalize to PBS. To bridge this gap,
+    we construct PBSInstr, the first vision-language dataset for PBS interpretation, comprising 353 PBS
+    WSIs paired with microscopic impression paragraphs and 29k cell-level image crops annotated with cell
+    type labels and morphological descriptions. To facilitate instruction tuning, PBSInstr further includes
+    27k question-answer (QA) pairs for cell crops and 1,286 QA pairs for PBS slides. Building upon PBSInstr,
+    we develop PBS-VL, a hematopathology-tailored vision-language model for multi-level PBS interpretation
+    at both cell and slide levels. To comprehensively evaluate PBS understanding, we construct PBSBench,
+    a visual question answering (VQA) benchmark featuring four question categories and six PBS interpretation
+    tasks. Experiments show that PBS-VL outperforms existing general-purpose and pathology MLLMs, underscoring
+    the value of PBS-specific data. We release our code, datasets, and model weights to facilitate future
+    research. Our proposed framework lays the foundation for developing practical AI assistants supporting
+    decision-making in hematopathology.
+  url: https://arxiv.org/abs/2604.17570
+  pdf_url: https://arxiv.org/pdf/2604.17570v1
+  version: v1
+fetched: '2026-11-14'

@@ -1,0 +1,38 @@
+id: paper:arxiv:2408.00599
+status: skipped
+score: 0
+track: immersive_media
+matched: []
+meta:
+  title: Learned Compression of Point Cloud Geometry and Attributes in a Single Model through Multimodal
+    Rate-Control
+  authors:
+  - Michael Rudolph
+  - Aron Riemenschneider
+  - Amr Rizk
+  published: '2024-08-01'
+  updated: '2024-08-01'
+  categories:
+  - cs.CV
+  - cs.MM
+  - eess.IV
+  abstract: Point cloud compression is essential to experience volumetric multimedia as it drastically
+    reduces the required streaming data rates. Point attributes, specifically colors, extend the challenge
+    of lossy compression beyond geometric representation to achieving joint reconstruction of texture
+    and geometry. State-of-the-art methods separate geometry and attributes to compress them individually.
+    This comes at a computational cost, requiring an encoder and a decoder for each modality. Additionally,
+    as attribute compression methods require the same geometry for encoding and decoding, the encoder
+    emulates the decoder-side geometry reconstruction as an input step to project and compress the attributes.
+    In this work, we propose to learn joint compression of geometry and attributes using a single, adaptive
+    autoencoder model, embedding both modalities into a unified latent space which is then entropy encoded.
+    Key to the technique is to replace the search for trade-offs between rate, attribute quality and geometry
+    quality, through conditioning the model on the desired qualities of both modalities, bypassing the
+    need for training model ensembles. To differentiate important point cloud regions during encoding
+    or to allow view-dependent compression for user-centered streaming, conditioning is pointwise, which
+    allows for local quality and rate variation. Our evaluation shows comparable performance to state-of-the-art
+    compression methods for geometry and attributes, while reducing complexity compared to related compression
+    methods.
+  url: https://arxiv.org/abs/2408.00599
+  pdf_url: https://arxiv.org/pdf/2408.00599v1
+  version: v1
+fetched: '2026-11-14'

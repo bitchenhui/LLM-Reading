@@ -1,0 +1,32 @@
+id: paper:arxiv:2604.12246
+status: skipped
+score: 1
+track: audio_coding
+matched:
+- ref: concept:NeuralAudioCodec
+  count: 1
+  weight: 1
+meta:
+  title: 'TokenSE: a Mamba-based discrete token speech enhancement framework for cochlear implants'
+  authors:
+  - Hsin-Tien Chiang
+  - John H. L. Hansen
+  published: '2026-04-14'
+  updated: '2026-04-14'
+  categories:
+  - eess.AS
+  abstract: Speech enhancement (SE) is critical for improving speech intelligibility and quality in real-world
+    environments, particularly for cochlear implant (CI) users who experience severe degradations in speech
+    understanding under noisy and reverberant conditions. In this study, we propose TokenSE, a discrete
+    token-based SE framework operating in the neural audio codec space, which predicts clean codec token
+    indices from degraded speech using a Mamba-based model. Unlike the earlier Transformer architecture,
+    whose self-attention mechanism has a computational complexity that grows quadratically with sequence
+    length, the input-dependent selection mechanism of Mamba achieves linear complexity, making it a compelling
+    alternative to Transformers, especially for CI and hearing-aid (HA) applications. Objective evaluations
+    show that TokenSE consistently outperforms baseline methods on both in-domain and out-of-domain datasets.
+    Moreover, subjective listening experiments with CI users indicate clear benefit in speech intelligibility
+    under adverse noisy and reverberant environments.
+  url: https://arxiv.org/abs/2604.12246
+  pdf_url: https://arxiv.org/pdf/2604.12246v1
+  version: v1
+fetched: '2026-11-14'

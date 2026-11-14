@@ -1,0 +1,46 @@
+id: paper:arxiv:2302.06062
+status: skipped_low_citation
+score: 11
+track: immersive_media
+matched:
+- ref: codec:G-PCC
+  count: 1
+  weight: 3
+- ref: codec:HEVC
+  count: 1
+  weight: 3
+- ref: codec:V-PCC
+  count: 1
+  weight: 3
+- ref: concept:RDO
+  count: 2
+  weight: 1
+- ref: org:MPEG
+  count: 1
+  weight: 1
+meta:
+  title: 'gpcgc: a green point cloud geometry coding method'
+  authors:
+  - Qingyang Zhou
+  - Shan Liu
+  - C. -C. Jay Kuo
+  published: '2023-02-13'
+  updated: '2023-02-13'
+  categories:
+  - eess.IV
+  abstract: A low-complexity point cloud compression method called the Green Point Cloud Geometry Codec
+    (GPCGC), is proposed to encode the 3D spatial coordinates of static point clouds efficiently. GPCGC
+    consists of two modules. In the first module, point coordinates of input point clouds are hierarchically
+    organized into an octree structure. Points at each leaf node are projected along one of three axes
+    to yield image maps. In the second module, the occupancy map is clustered into 9 modes while the depth
+    map is coded by a low-complexity high-efficiency image codec, called the green image codec (GIC).
+    GIC is a multi-resolution codec based on vector quantization (VQ). Its complexity is significantly
+    lower than HEVC-Intra. Furthermore, the rate-distortion optimization (RDO) technique is used to select
+    the optimal coding parameters. GPCGC is a progressive codec, and it offers a coding performance competitive
+    with MPEG's V-PCC and G-PCC standards at significantly lower complexity.
+  url: https://arxiv.org/abs/2302.06062
+  pdf_url: https://arxiv.org/pdf/2302.06062v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 1
+citation_year: 2023

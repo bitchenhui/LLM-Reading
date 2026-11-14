@@ -1,0 +1,39 @@
+id: paper:arxiv:2605.10084
+status: skipped
+score: 0
+track: audio_coding
+matched: []
+meta:
+  title: 'PoDAR: Power-Decoupled Audio Representation for Generative Modeling'
+  authors:
+  - Alejandro Luebs
+  - Mithilesh Vaidya
+  - Ishaan Kumar
+  - Sumukh Badam
+  - Stephen W. Bailey
+  - Matthew Bendel
+  - Jose Sotelo
+  - Xingzhe He
+  published: '2026-05-11'
+  updated: '2026-09-26'
+  categories:
+  - eess.AS
+  - cs.AI
+  - cs.LG
+  - cs.SD
+  abstract: The performance of audio latent diffusion models is primarily governed by generator expressivity
+    and the modelability of the underlying latent space. While recent research has focused primarily on
+    the former, as well as improving the reconstruction fidelity of audio codecs, we demonstrate that
+    latent modelability can be significantly improved through explicit factor decoupling. We present PoDAR
+    (Power-Decoupled Audio Representation), a framework that utilizes a randomized power augmentation
+    and latent consistency objective to decouple signal power from invariant semantic content. This factorization
+    makes the latent space easier to model, which both accelerates the convergence of downstream generative
+    models and improves final overall performance. When applied to a Stable Audio 1.0 VAE with an F5-TTS
+    generator, PoDAR achieves about a 2x acceleration in convergence to match baseline performance, while
+    increasing final speaker similarity by 0.055 and UTMOS by 0.22 on the LibriSpeech-PC dataset. Furthermore,
+    isolating power into dedicated channels enables the application of CFG exclusively to power-invariant
+    content, effectively extending the stable guidance regime to higher scales.
+  url: https://arxiv.org/abs/2605.10084
+  pdf_url: https://arxiv.org/pdf/2605.10084v2
+  version: v2
+fetched: '2026-11-14'

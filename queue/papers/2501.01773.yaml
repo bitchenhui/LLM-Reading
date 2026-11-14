@@ -1,0 +1,40 @@
+id: paper:arxiv:2501.01773
+status: skipped
+score: 1
+track: video_image_coding
+matched:
+- ref: concept:SuperResolution
+  count: 2
+  weight: 1
+meta:
+  title: Compressed Domain Prior-Guided Video Super-Resolution for Cloud Gaming Content
+  authors:
+  - Qizhe Wang
+  - Qian Yin
+  - Zhimeng Huang
+  - Weijia Jiang
+  - Yi Su
+  - Siwei Ma
+  - Jiaqi Zhang
+  published: '2025-01-03'
+  updated: '2025-01-03'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: Cloud gaming is an advanced form of Internet service that necessitates local terminals to
+    decode within limited resources and time latency. Super-Resolution (SR) techniques are often employed
+    on these terminals as an efficient way to reduce the required bit-rate bandwidth for cloud gaming.
+    However, insufficient attention has been paid to SR of compressed game video content. Most SR networks
+    amplify block artifacts and ringing effects in decoded frames while ignoring edge details of game
+    content, leading to unsatisfactory reconstruction results. In this paper, we propose a novel lightweight
+    network called Coding Prior-Guided Super-Resolution (CPGSR) to address the SR challenges in compressed
+    game video content. First, we design a Compressed Domain Guided Block (CDGB) to extract features of
+    different depths from coding priors, which are subsequently integrated with features from the U-net
+    backbone. Then, a series of re-parameterization blocks are utilized for reconstruction. Ultimately,
+    inspired by the quantization in video coding, we propose a partitioned focal frequency loss to effectively
+    guide the model's focus on preserving high-frequency information. Extensive experiments demonstrate
+    the advancement of our approach.
+  url: https://arxiv.org/abs/2501.01773
+  pdf_url: https://arxiv.org/pdf/2501.01773v1
+  version: v1
+fetched: '2026-11-14'

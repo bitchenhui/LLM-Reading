@@ -1,0 +1,41 @@
+id: paper:arxiv:2608.23330
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'IntentQA: Intent Question Answering in Videos by Cognitive Context Reasoning'
+  authors:
+  - Jiapeng Li
+  - Ping Wei
+  - Wenjuan Han
+  - Song-Chun Zhu
+  - Lifeng Fan
+  published: '2026-08-24'
+  updated: '2026-08-24'
+  categories:
+  - cs.CV
+  abstract: 'Video understanding requires intelligent agents to transcend mere recognition of visual facts
+    and comprehend the underlying intents behind human actions (often termed the "dark matter" of social
+    intelligence). To bridge the gap between visual observation and intent reasoning, we introduce a novel
+    task, IntentQA, and contribute a large-scale VideoQA dataset specifically tailored for this purpose.
+    However, recognizing that standard metrics may overestimate capabilities due to dataset biases, we
+    go beyond simple accuracy to rigorously evaluate model robustness. We augment the benchmark by generating
+    five distinct contrast sets via Large Language Models (LLMs) and introducing a "Contrast Performance
+    Decline" metric. We propose the X-CaVIR (eXplainable Context-aware Video Intent Reasoning) framework,
+    which leverages three types of "Cognitive Context" to enhance video analysis: i) Situational Context
+    via a cross-modal Video Query Language (VQL) module, ii) Contrastive Context via a Contrastive Learning
+    module, and iii) Commonsense Context via a Commonsense Reasoning module. Crucially, to overcome the
+    opacity of traditional black-box models, we refine the integration of LLMs within X-CaVIR by employing
+    a transparent pipeline that synergizes video captions with VQA model outputs. This approach not only
+    improves performance by effectively utilizing rich commonsense knowledge but also renders the reasoning
+    process explicitly interpretable. Extensive experiments demonstrate the effectiveness of our components,
+    the superiority of X-CaVIR over state-of-the-art baselines, and its stability against perturbations
+    on the contrast sets.'
+  url: https://arxiv.org/abs/2608.23330
+  pdf_url: https://arxiv.org/pdf/2608.23330v1
+  version: v1
+fetched: '2026-11-14'

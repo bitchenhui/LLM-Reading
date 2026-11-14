@@ -1,0 +1,39 @@
+id: paper:arxiv:2603.22689
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'Think 360°: Evaluating the Width-centric Reasoning Capability of MLLMs Beyond Depth'
+  authors:
+  - Mingrui Chen
+  - Hexiong Yang
+  - Haogeng Liu
+  - Huaibo Huang
+  - Ran He
+  published: '2026-03-24'
+  updated: '2026-03-24'
+  categories:
+  - cs.CV
+  abstract: 'In this paper, we present a holistic multimodal benchmark that evaluates the reasoning capabilities
+    of MLLMs with an explicit focus on reasoning width, a complementary dimension to the more commonly
+    studied reasoning depth. Specifically, reasoning depth measures the model''s ability to carry out
+    long-chain, sequential reasoning in which each step is tightly and rigorously linked to the next.
+    Reasoning width tends to focus more on the model''s capacity for broad trial-and-error search or multi-constrained
+    optimization: it must systematically traverse many possible and parallelized reasoning paths, apply
+    diverse constraints to prune unpromising branches, and identify valid solution routes for efficient
+    iteration or backtracking. To achieve it, we carefully curate 1200+ high-quality multimodal cases
+    spanning heterogeneous domains, and propose a fine-grained tree-of-thought evaluation protocol that
+    jointly quantifies reasoning width and depth. We evaluate 12 major model families (over 30 advanced
+    MLLMs) across difficulty tiers, question types, and required skills. Results show that while current
+    models exhibit strong performance on general or common-sense VQA tasks, they still struggle to combine
+    deep sequential thought chains with wide exploratory search to perform genuine insight-based reasoning.
+    Finally, we analyze characteristic failure modes to provide possible directions for building MLLMs
+    that reason not only deeper but also wider.'
+  url: https://arxiv.org/abs/2603.22689
+  pdf_url: https://arxiv.org/pdf/2603.22689v1
+  version: v1
+fetched: '2026-11-14'

@@ -1,0 +1,49 @@
+id: paper:arxiv:2606.08063
+status: pending
+score: 2
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+- ref: metric:SSIM
+  count: 1
+  weight: 1
+meta:
+  title: 'Robust-U1: Can MLLMs Self-Recover Corrupted Visual Content for Robust Understanding?'
+  authors:
+  - Jiaqi Tang
+  - Jianmin Chen
+  - Youyang Zhai
+  - Wei Wei
+  - Runtao Liu
+  - Mengjie Zhao
+  - Xiangyu Wu
+  - Qingfa Xiao
+  - Qifeng Chen
+  published: '2026-06-06'
+  updated: '2026-06-06'
+  categories:
+  - cs.CV
+  - cs.AI
+  - cs.CL
+  abstract: 'Multimodal Large Language Models (MLLMs) have demonstrated remarkable success in visual understanding,
+    yet their performance degrades significantly under real-world visual corruptions. While existing robustness
+    enhancement approaches exist, they are limited: black-box feature alignment lacks interpretability,
+    and white-box text-based reasoning cannot restore lost pixel-level details. This work investigates
+    a fundamental research question: Can MLLMs recover corrupted visual content by themselves? To address
+    this, we propose Robust-U1, a novel framework that equips MLLMs with explicit visual self-recovery
+    capability for robust understanding. The approach comprises three core stages: supervised fine-tuning
+    for initial reconstruction, reinforcement learning with dual rewards (pixel-level SSIM and semantic-level
+    CLIP similarity) for aligning high visual quality, and multimodal reasoning that jointly considers
+    both the corrupted input and the recovered image. Extensive experiments demonstrate that Robust-U1
+    achieves state-of-the-art robustness on the real-world corruption benchmark and maintains superior
+    performance under adversarial corruptions on general VQA benchmarks. Analysis confirms that high-quality
+    visual recovery directly enhances reasoning performance, establishing self-recovery as a critical
+    mechanism for robust visual understanding. The source code is available at https://github.com/jqtangust/Robust-U1.'
+  url: https://arxiv.org/abs/2606.08063
+  pdf_url: https://arxiv.org/pdf/2606.08063v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 1
+citation_year: 2026

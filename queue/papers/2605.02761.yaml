@@ -1,0 +1,54 @@
+id: paper:arxiv:2605.02761
+status: skipped_low_citation
+score: 3
+track: streaming_delivery
+matched:
+- ref: concept:ABR
+  count: 2
+  weight: 1
+- ref: concept:DASH
+  count: 1
+  weight: 1
+- ref: concept:HLS
+  count: 1
+  weight: 1
+meta:
+  title: 'The Streaming Reservoir Convergence Theorem: A Prospect-Theoretic Framework for Multi-Provider
+    Adaptive Streaming'
+  authors:
+  - Justice Owusu Agyemang
+  - Jerry John Kponyo
+  - Kwame Opuni-Boachie Obour Agyekum
+  - Obed Kwasi Somuah
+  - Sarafina Serwaa Boakye
+  - Elliot Amponsah
+  - Godfred Manu Addo Boakye
+  published: '2026-05-04'
+  updated: '2026-05-04'
+  categories:
+  - cs.MM
+  - cs.NI
+  abstract: 'We present the Streaming Reservoir Convergence Theorem (SRCT), a novel mathematical framework
+    for multi-provider adaptive bitrate streaming that addresses three fundamental structural weaknesses
+    in current systems: linear provider probing, reactive failover, and cold standby transitions. SRCT
+    models stream acquisition as a concurrent reservoir filling problem$-$probing all $N$ providers simultaneously
+    rather than in batches$-$and maintains $k$ pre-verified, pre-fetched standby streams alongside the
+    active stream to enable sub-second failover with zero user-visible disruption. We prove four principal
+    results: (1) a harmonic lower bound on reservoir safety showing that $k$ independent streams provide
+    $H_k / \barλ$ expected uptime where $H_k$ is the $k$-th harmonic number; (2) a concurrent acquisition
+    speedup $S(N,b) = (N/b) \cdot (1-F^b)/(1-F^N)$ over batched probing, yielding $3$-$5\times$ practical
+    improvement; (3) monotonic non-decreasing quality under lazy-refill with convergence to the Pareto-optimal
+    frontier; and (4) a prospect-weighted switching rule$-$using Kahneman-Tversky value functions with
+    $α=β=0.88$, $λ=2.25$ $-$ that provably eliminates thrashing between similar-quality streams via a
+    no-thrash bound on the expected switch count. We implement SRCT across two production streaming pipelines:
+    a primary movie/TV system serving 12+ HLS providers with $k=3$ reservoir slots, and a live sports
+    system with multi-format DASH/HLS failover. Empirical verification via Monte Carlo simulation (5000
+    trials) confirms all four theorems across 22 independent checks. The reservoir of $k=3$ streams achieves
+    $9.15\times$ mean time to depletion versus a single stream, and concurrent probing of 12 providers
+    at 40% failure rate yields a $4.27\times$ speedup over the current batched-by-3 default.'
+  url: https://arxiv.org/abs/2605.02761
+  pdf_url: https://arxiv.org/pdf/2605.02761v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 0
+citation_year: 2026

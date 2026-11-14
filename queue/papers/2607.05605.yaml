@@ -1,0 +1,36 @@
+id: paper:arxiv:2607.05605
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 2
+  weight: 1
+meta:
+  title: Patch Knowledge Transfer for Efficient AI-Generated Image Quality Assessment
+  authors:
+  - Jiquan Yuan
+  published: '2026-07-06'
+  updated: '2026-07-06'
+  categories:
+  - cs.CV
+  abstract: 'With the rapid advancement of image generation technologies, perceptual quality assessment
+    of AI-generated images has emerged as a crucial research direction in computer vision. The core challenge
+    of this task lies in achieving efficient quality assessment for massive generated images. Current
+    mainstream approaches exhibit two key limitations: 1) Methods employing complex feature extraction
+    strategies, while improving performance, incur prohibitive computational costs that hinder real-time
+    inference; 2) Simple image scaling-based solutions, despite their computational efficiency, demonstrate
+    significantly inferior assessment accuracy. To address this critical issue, we propose Patch Knowledge
+    Transfer (PKT), a knowledge distillation-based optimization framework that achieves synergistic optimization
+    of visual representation capability and inference efficiency through an innovative multi-level knowledge
+    transfer mechanism. Specifically, we design a dual-model architecture: a teacher model with local-global
+    hybrid processing provides high-quality supervision signals, while a student model relying solely
+    on global processing efficiently inherits the teacher''s representation capacity through multi-level
+    supervision. Extensive experiments conducted on 4 AIGIQA databases demonstrate that the PKT framework
+    enables the student model to maintain performance comparable to the teacher while reducing computational
+    costs by 67.7\%. Furthermore, compared to existing methods, our approach achieves a superior balance
+    between model efficiency and assessment accuracy.'
+  url: https://arxiv.org/abs/2607.05605
+  pdf_url: https://arxiv.org/pdf/2607.05605v1
+  version: v1
+fetched: '2026-11-14'

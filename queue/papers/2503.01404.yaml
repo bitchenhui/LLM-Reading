@@ -1,0 +1,42 @@
+id: paper:arxiv:2503.01404
+status: skipped_low_citation
+score: 6
+track: video_image_coding
+matched:
+- ref: codec:VVC
+  count: 2
+  weight: 3
+- ref: impl:VVenC
+  count: 1
+  weight: 3
+meta:
+  title: Multi-resolution Encoding for HTTP Adaptive Streaming using VVenC
+  authors:
+  - Kamran Qureshi
+  - Hadi Amirpour
+  - Christian Timmerer
+  published: '2025-03-03'
+  updated: '2025-03-03'
+  categories:
+  - cs.MM
+  abstract: HTTP Adaptive Streaming (HAS) is a widely adopted method for delivering video content over
+    the Internet, requiring each video to be encoded at multiple bitrates and resolution pairs, known
+    as representations, to adapt to various network conditions and device capabilities. This multi-bitrate
+    encoding introduces significant challenges due to the computational and time-intensive nature of encoding
+    multiple representations. Conventional approaches often encode these videos independently without
+    leveraging similarities between different representations of the same input video. This paper proposes
+    an accelerated multi-resolution encoding strategy that utilizes representations of lower resolutions
+    as references to speed up the encoding of higher resolutions when using Versatile Video Coding (VVC);
+    specifically in VVenC, an optimized open-source software implementation. For multi-resolution encoding,
+    a mid-bitrate representation serves as the reference, allowing interpolated encoded partition data
+    to efficiently guide the partitioning process in higher resolutions. The proposed approach uses shared
+    encoding information to reduce redundant calculations, optimizing partitioning decisions. Experimental
+    results demonstrate that the proposed technique achieves a reduction of up to 17% compared to medium
+    preset in encoding time across videos of varying complexities with minimal BDBR/BDT of 0.12 compared
+    to the fast preset.
+  url: https://arxiv.org/abs/2503.01404
+  pdf_url: https://arxiv.org/pdf/2503.01404v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 2
+citation_year: 2025

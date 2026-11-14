@@ -1,0 +1,54 @@
+id: paper:arxiv:2509.24726
+status: pending
+score: 5
+track: self_improvement
+matched:
+- ref: codec:Opus
+  count: 1
+  weight: 3
+- ref: concept:LLM
+  count: 1
+  weight: 1
+- ref: concept:SelfImprovement
+  count: 1
+  weight: 1
+meta:
+  title: 'Socratic-Zero : Bootstrapping Reasoning via Data-Free Agent Co-evolution'
+  authors:
+  - Shaobo Wang
+  - Zhengbo Jiao
+  - Zifan Zhang
+  - Yilang Peng
+  - Xu Ze
+  - Boyu Yang
+  - Wei Wang
+  - Hu Wei
+  - Linfeng Zhang
+  published: '2025-09-29'
+  updated: '2025-09-29'
+  categories:
+  - cs.CL
+  abstract: 'Recent breakthroughs in large language models (LLMs) on reasoning tasks rely heavily on massive,
+    high-quality datasets-typically human-annotated and thus difficult to scale. While data synthesis
+    or distillation offers a promising alternative, existing methods struggle with inconsistent data quality
+    and an inability to dynamically adapt to the evolving capabilities of the model, leading to suboptimal
+    training signals. To address these limitations, we introduce Socratic-Zero, a fully autonomous framework
+    that generates high-quality training data from minimal seed examples through the co-evolution of three
+    agents: the Teacher, the Solver, and the Generator. The Solver continuously refines its reasoning
+    by learning from preference feedback on both successful and failed trajectories; the Teacher adaptively
+    crafts increasingly challenging questions based on the Solver''s weaknesses; and the Generator distills
+    the Teacher''s question-design strategy to enable scalable, high-fidelity curriculum generation. This
+    closed-loop system produces a self-improving curriculum-requiring no pre-existing tasks or labels.
+    Remarkably, starting from only 100 seed questions, our Socratic-Solver-8B achieves an average gain
+    of +20.2 percentage points over prior data synthesis methods across seven mathematical reasoning benchmarks
+    (AMC23, AIME24-25, Olympiad, MATH-500, Minerva, and GSM8K), with consistent gains on both Qwen3 and
+    GLM4 series models. Even more surprisingly, synthetic data from Socratic-Generator-32B enables student
+    LLMs to achieve superior performance compared to other state-of-the-art (SOTA) commercial LLMs on
+    these benchmarks, including Qwen3-235B-A22B, DeepSeek-V3.1-671B, GPT-5, Gemini-2.5-Pro, Grok-4, and
+    Claude-4.1-Opus.'
+  url: https://arxiv.org/abs/2509.24726
+  pdf_url: https://arxiv.org/pdf/2509.24726v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 31
+citation_year: 2025

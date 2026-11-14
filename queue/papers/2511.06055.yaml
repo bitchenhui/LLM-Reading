@@ -1,0 +1,62 @@
+id: paper:arxiv:2511.06055
+status: pending
+score: 4
+track: processing_enhancement
+matched:
+- ref: concept:NPU
+  count: 2
+  weight: 1
+- ref: concept:SuperResolution
+  count: 1
+  weight: 1
+- ref: metric:FPS
+  count: 1
+  weight: 1
+- ref: org:Qualcomm
+  count: 1
+  weight: 1
+meta:
+  title: 'Neodragon: Mobile Video Generation using Diffusion Transformer'
+  authors:
+  - Animesh Karnewar
+  - Denis Korzhenkov
+  - Ioannis Lelekas
+  - Adil Karjauv
+  - Noor Fathima
+  - Hanwen Xiong
+  - Vancheeswaran Vaidyanathan
+  - Will Zeng
+  - Rafael Esteves
+  - Tushar Singhal
+  - Fatih Porikli
+  - Mohsen Ghafoorian
+  - Amirhossein Habibian
+  published: '2025-11-08'
+  updated: '2025-11-08'
+  categories:
+  - cs.CV
+  abstract: 'We introduce Neodragon, a text-to-video system capable of generating 2s (49 frames @24 fps)
+    videos at the 640x1024 resolution directly on a Qualcomm Hexagon NPU in a record 6.7s (7 FPS). Differing
+    from existing transformer-based offline text-to-video generation models, Neodragon is the first to
+    have been specifically optimised for mobile hardware to achieve efficient and high-fidelity video
+    synthesis. We achieve this through four key technical contributions: (1) Replacing the original large
+    4.762B T5xxl Text-Encoder with a much smaller 0.2B DT5 (DistilT5) with minimal quality loss, enabled
+    through a novel Text-Encoder Distillation procedure. (2) Proposing an Asymmetric Decoder Distillation
+    approach allowing us to replace the native codec-latent-VAE decoder with a more efficient one, without
+    disturbing the generative latent-space of the generation pipeline. (3) Pruning of MMDiT blocks within
+    the denoiser backbone based on their relative importance, with recovery of original performance through
+    a two-stage distillation process. (4) Reducing the NFE (Neural Functional Evaluation) requirement
+    of the denoiser by performing step distillation using DMD adapted for pyramidal flow-matching, thereby
+    substantially accelerating video generation. When paired with an optimised SSD1B first-frame image
+    generator and QuickSRNet for 2x super-resolution, our end-to-end Neodragon system becomes a highly
+    parameter (4.945B full model), memory (3.5GB peak RAM usage), and runtime (6.7s E2E latency) efficient
+    mobile-friendly model, while achieving a VBench total score of 81.61. By enabling low-cost, private,
+    and on-device text-to-video synthesis, Neodragon democratizes AI-based video content creation, empowering
+    creators to generate high-quality videos without reliance on cloud services. Code and model will be
+    made publicly available at our website: https://qualcomm-ai-research.github.io/neodragon'
+  url: https://arxiv.org/abs/2511.06055
+  pdf_url: https://arxiv.org/pdf/2511.06055v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 13
+citation_year: 2025

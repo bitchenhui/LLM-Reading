@@ -1,0 +1,43 @@
+id: paper:arxiv:2601.05143
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: A Two-Stage Multitask Vision-Language Framework for Explainable Crop Disease Visual Question
+    Answering
+  authors:
+  - Md. Zahid Hossain
+  - Most. Sharmin Sultana Samu
+  - Md. Rakibul Islam
+  - Md. Siam Ansary
+  published: '2026-01-08'
+  updated: '2026-03-07'
+  categories:
+  - cs.CV
+  - cs.CL
+  abstract: Visual question answering (VQA) for crop disease analysis requires accurate visual understanding
+    and reliable language generation. In this work, we present a lightweight and explainable vision-language
+    framework for crop and disease identification from leaf images. The proposed approach integrates a
+    Swin Transformer vision encoder with sequence-to-sequence language decoders. The vision encoder is
+    first trained in a multitask setup for both plant and disease classification, and then frozen while
+    the text decoders are trained, forming a two-stage training strategy that enhances visual representation
+    learning and cross-modal alignment. We evaluate the model on the large-scale Crop Disease Domain Multimodal
+    (CDDM) dataset using both classification and natural language generation metrics. Experimental results
+    demonstrate near-perfect recognition performance, achieving 99.94% plant classification accuracy and
+    99.06% disease classification accuracy, along with strong BLEU, ROUGE and BERTScore results. Without
+    fine-tuning, the model further generalizes well to the external PlantVillageVQA benchmark, achieving
+    83.18% micro accuracy in the VQA task. Our lightweight design outperforms larger vision-language baselines
+    while using significantly fewer parameters. Explainability is assessed through Grad-CAM and token-level
+    attribution, providing interpretable visual and textual evidence for predictions. Qualitative results
+    demonstrate robust performance under diverse user-driven queries, highlighting the effectiveness of
+    task-specific visual pretraining and the two-stage training methodology for crop disease visual question
+    answering. An interactive demo of the proposed Swin-T5 model is publicly available as a Gradio-based
+    application at https://huggingface.co/spaces/Zahid16/PlantDiseaseVQAwithSwinT5 for community use.
+  url: https://arxiv.org/abs/2601.05143
+  pdf_url: https://arxiv.org/pdf/2601.05143v2
+  version: v2
+fetched: '2026-11-14'

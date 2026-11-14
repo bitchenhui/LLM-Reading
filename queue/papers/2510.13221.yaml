@@ -1,0 +1,33 @@
+id: paper:arxiv:2510.13221
+status: skipped
+score: 1
+track: audio_coding
+matched:
+- ref: concept:NeuralAudioCodec
+  count: 2
+  weight: 1
+meta:
+  title: Acoustic Teleportation via Disentangled Neural Audio Codec Representations
+  authors:
+  - Philipp Grundhuber
+  - Mhd Modar Halimeh
+  - Emanuël A. P. Habets
+  published: '2025-10-15'
+  updated: '2025-10-15'
+  categories:
+  - eess.AS
+  abstract: 'This paper presents an approach for acoustic teleportation by disentangling speech content
+    from acoustic environment characteristics in neural audio codec representations. Acoustic teleportation
+    transfers room characteristics between speech recordings while preserving content and speaker identity.
+    We build upon previous work using the EnCodec architecture, achieving substantial objective quality
+    improvements with non-intrusive ScoreQ scores of 3.03, compared to 2.44 for prior methods. Our training
+    strategy incorporates five tasks: clean reconstruction, reverberated reconstruction, dereverberation,
+    and two variants of acoustic teleportation. We demonstrate that temporal downsampling of the acoustic
+    embedding significantly degrades performance, with even 2x downsampling resulting in a statistically
+    significant reduction in quality. The learned acoustic embeddings exhibit strong correlations with
+    RT60. Effective disentanglement is demonstrated using t-SNE clustering analysis, where acoustic embeddings
+    cluster by room while speech embeddings cluster by speaker.'
+  url: https://arxiv.org/abs/2510.13221
+  pdf_url: https://arxiv.org/pdf/2510.13221v1
+  version: v1
+fetched: '2026-11-14'

@@ -1,0 +1,37 @@
+id: paper:arxiv:2606.07494
+status: skipped
+score: 1
+track: audio_coding
+matched:
+- ref: concept:NeuralAudioCodec
+  count: 1
+  weight: 1
+meta:
+  title: Mitigating Proxy-to-Wild Domain Gap in Deepfake Speech
+  authors:
+  - Xuanjun Chen
+  - Yun-Shing Wu
+  - Wei-Chung Lu
+  - Claire Lin
+  - Haibin Wu
+  - Hung-yi Lee
+  - Jyh-Shing Roger Jang
+  published: '2026-06-05'
+  updated: '2026-06-05'
+  categories:
+  - cs.SD
+  - eess.AS
+  abstract: Recent neural audio codec-based speech generation (CodecFake) produces highly realistic audio,
+    posing a challenge to existing deepfake countermeasure models. While using codec resynthesized speech
+    (CoRS) as proxy data improves performance, it often suffers from limited generalization. We propose
+    Domain-Shift Feature Augmentation (DSFA), which simulates "in-the-wild" variations by transforming
+    deterministic feature statistics into stochastic distributions during fine-tuning. To evaluate generalization,
+    we further introduce Codec-based Speech Generation Extension Evaluation (CoSG ExtEval) dataset, a
+    more challenging extension of the CoSG Eval (from CodecFake+) dataset, featuring 40 unseen generative
+    models and long-form audio. Experimental results demonstrate that combining a post-trained SSL backbone
+    with DSFA effectively narrows the proxy-to-wild domain gap. This approach achieves state-of-the-art
+    performance across diverse CodecFake attacks in both CoSG Eval and CoSG ExtEval.
+  url: https://arxiv.org/abs/2606.07494
+  pdf_url: https://arxiv.org/pdf/2606.07494v1
+  version: v1
+fetched: '2026-11-14'

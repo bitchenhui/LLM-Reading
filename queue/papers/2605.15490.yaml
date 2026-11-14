@@ -1,0 +1,52 @@
+id: paper:arxiv:2605.15490
+status: skipped_low_citation
+score: 3
+track: streaming_delivery
+matched:
+- ref: concept:ABR
+  count: 3
+  weight: 1
+- ref: concept:QoE
+  count: 3
+  weight: 1
+- ref: metric:BD-Rate
+  count: 1
+  weight: 1
+meta:
+  title: Dynamic resolution switching for live streaming
+  authors:
+  - Xin Xiong
+  - Yixu Chen
+  - Hai Wei
+  - Yongjun Wu
+  - Sriram Sethuraman
+  published: '2026-05-15'
+  updated: '2026-05-15'
+  categories:
+  - eess.IV
+  - cs.MM
+  abstract: Conventional adaptive bitrate (ABR) streaming systems typically rely on static bitrate ladders
+    to optimize Quality of Experience (QoE). While operationally simple, this "one-size-fits-all" approach
+    neglects content-specific characteristics, often compromising streaming efficiency. Per-title optimization
+    methods address this by predicting the rate-distortion convex hull directly from the source content,
+    but their reliance on pre-encoding source analysis can limit their applicability to live streaming.
+    Moreover, the objective video quality metrics (VQMs) they rely on are optimized for overall correlation
+    with subjective scores rather than cross-over accuracy, often yielding inaccurate cross-over predictions
+    and suboptimal ladder construction. To overcome both limitations, we introduce a Dynamic Resolution
+    Switching (DRS) framework for live streaming that remains fully compatible with existing streaming
+    protocols. Our approach augments static ladders with strategically selected representations guided
+    by user bandwidth distributions and cross-over regions. The quality of these representations is then
+    analyzed in real time to construct dynamic ladders. Central to this framework is a lightweight, bitstream-based
+    VQM that ensures computational efficiency while maximizing the accuracy of subjective resolution cross-over
+    prediction through training on Pairwise Comparison (PC) datasets. At each bitrate, the VQM evaluates
+    all candidate representations to identify the resolution maximizing the quality score. This decision
+    process, operating at a configurable granularity (e.g., per segment), drives the dynamic resolution
+    switching mechanism specifically optimized for the metric. Experimental results validate the approach,
+    demonstrating a significant performance gain (approximately 9% BD-rate reduction under the proposed
+    VQM) while maintaining practical feasibility for live streaming.
+  url: https://arxiv.org/abs/2605.15490
+  pdf_url: https://arxiv.org/pdf/2605.15490v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 0
+citation_year: 2026

@@ -1,0 +1,35 @@
+id: paper:arxiv:2403.10936
+status: skipped
+score: 1
+track: video_image_coding
+matched:
+- ref: metric:BD-Rate
+  count: 1
+  weight: 1
+meta:
+  title: Channel-wise Feature Decorrelation for Enhanced Learned Image Compression
+  authors:
+  - Farhad Pakdaman
+  - Moncef Gabbouj
+  published: '2024-03-16'
+  updated: '2024-03-16'
+  categories:
+  - eess.IV
+  - cs.CV
+  - cs.MM
+  abstract: The emerging Learned Compression (LC) replaces the traditional codec modules with Deep Neural
+    Networks (DNN), which are trained end-to-end for rate-distortion performance. This approach is considered
+    as the future of image/video compression, and major efforts have been dedicated to improving its compression
+    efficiency. However, most proposed works target compression efficiency by employing more complex DNNS,
+    which contributes to higher computational complexity. Alternatively, this paper proposes to improve
+    compression by fully exploiting the existing DNN capacity. To do so, the latent features are guided
+    to learn a richer and more diverse set of features, which corresponds to better reconstruction. A
+    channel-wise feature decorrelation loss is designed and is integrated into the LC optimization. Three
+    strategies are proposed and evaluated, which optimize (1) the transformation network, (2) the context
+    model, and (3) both networks. Experimental results on two established LC methods show that the proposed
+    method improves the compression with a BD-Rate of up to 8.06%, with no added complexity. The proposed
+    solution can be applied as a plug-and-play solution to optimize any similar LC method.
+  url: https://arxiv.org/abs/2403.10936
+  pdf_url: https://arxiv.org/pdf/2403.10936v1
+  version: v1
+fetched: '2026-11-14'

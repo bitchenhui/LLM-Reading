@@ -1,0 +1,40 @@
+id: paper:arxiv:2605.17489
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 2
+  weight: 1
+meta:
+  title: Employing Vision-Language Models for Face Image Quality Assessment
+  authors:
+  - Erdi Sarıtaş
+  - Eren Onaran
+  - Vitomir Štruc
+  - Hazım Kemal Ekenel
+  published: '2026-05-17'
+  updated: '2026-05-17'
+  categories:
+  - cs.CV
+  abstract: Face Image Quality Assessment (FIQA) is a crucial control step in biometric pipelines. It
+    ensures only reliable samples are processed to maintain system accuracy. State-of-the-art FIQA methods
+    achieve high utility but typically operate as "black boxes." They produce scalar scores without human-interpretable
+    justifications. This lack of transparency limits their effectiveness in human-in-the-loop scenarios,
+    such as automated border control, where actionable feedback is essential. In this paper, we investigate
+    the potential of off-the-shelf Vision-Language Models (VLMs) to bridge this gap by performing FIQA
+    in a zero-shot setting. We present a comprehensive evaluation framework for assessing VLM performance.
+    This involves benchmarking traditional FIQA methods through error-versus-reject curves. Additionally,
+    using a diverse set of datasets, ranging from surveillance-oriented to synthetically generated, we
+    analyzed their interpretability, consistency, and robustness to prompt changes. Our results show biometric
+    utility performance depends significantly on architecture, not merely on parameter count. Most VLMs'
+    outputs align with those of traditional methods. We also find that VLM ranking performance and the
+    generated scores may vary across prompts. Our synthetic ablation study shows that while increasing
+    the parameter count can improve internal consistency, it yields worse degradation-detection performance
+    than smaller models. These findings suggest that zero-shot FIQA score estimation using VLMs is promising
+    and could effectively complement conventional FIQA pipelines as an interpretability module. The codes
+    are available at https://github.com/ThEnded32/VLM4FIQA.git.
+  url: https://arxiv.org/abs/2605.17489
+  pdf_url: https://arxiv.org/pdf/2605.17489v1
+  version: v1
+fetched: '2026-11-14'

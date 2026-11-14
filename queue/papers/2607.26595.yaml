@@ -1,0 +1,43 @@
+id: paper:arxiv:2607.26595
+status: pending
+score: 2
+track: quality_assessment
+matched:
+- ref: concept:3DGS
+  count: 4
+  weight: 1
+- ref: concept:IQA
+  count: 3
+  weight: 1
+meta:
+  title: 'SpatialQ: Understanding 3D Gaussian Splatting Scene Quality via Visual-based MLLM'
+  authors:
+  - Jingxuan Su
+  - Shenglin Wang
+  - Tiesong Zhao
+  - Ge Li
+  - Wei Gao
+  published: '2026-07-29'
+  updated: '2026-07-29'
+  categories:
+  - cs.CV
+  abstract: 3D Gaussian Splatting (3DGS) has emerged as an effective representation for novel view synthesis
+    and 3D scene reconstruction, creating an increasing demand for reliable quality assessment. Unlike
+    conventional image quality assessment (IQA), the quality of a 3DGS scene depends not only on the perceptual
+    fidelity of rendered views, but also on scene-level factors such as spatial structure and cross-view
+    consistency. Existing IQA methods are limited by their reliance on 2D perceptual cues, whereas general
+    multimodal large language models (MLLMs) are not designed for stable quality regression and may produce
+    unreliable judgments. To address these limitations, a multimodal quality assessment framework is developed
+    for 3DGS scene understanding. First, a 3D-aware quality representation learning framework is introduced
+    by augmenting a VGGT-based encoder with a dedicated quality head. Multi-view images are encoded into
+    view-specific features and aggregated to capture cross-view consistency, while geometric cues are
+    incorporated through joint modeling of depth and point-cloud-related structural information, enabling
+    the learning of structure-aware quality representations beyond appearance-driven features. Second,
+    a grounded multimodal reasoning mechanism is constructed by jointly feeding original images, depth
+    maps, point cloud renderings, and camera parameters into a Qwen-based MLLM.
+  url: https://arxiv.org/abs/2607.26595
+  pdf_url: https://arxiv.org/pdf/2607.26595v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 0
+citation_year: 2026

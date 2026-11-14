@@ -1,0 +1,38 @@
+id: paper:arxiv:2408.00052
+status: skipped_low_citation
+score: 3
+track: video_image_coding
+matched:
+- ref: codec:HEVC
+  count: 1
+  weight: 3
+meta:
+  title: 'Exploiting Change Blindness for Video Coding: Perspectives from a Less Promising User Study'
+  authors:
+  - Mitra Amiri
+  - Steven Le Moan
+  - Christian Herglotz
+  published: '2024-07-31'
+  updated: '2024-07-31'
+  categories:
+  - eess.IV
+  abstract: What the human visual system can perceive is strongly limited by the capacity of our working
+    memory and attention. Such limitations result in the human observer's inability to perceive large-scale
+    changes in a stimulus, a phenomenon known as change blindness. In this paper, we started with the
+    premise that this phenomenon can be exploited in video coding, especially HDR-video compression where
+    the bitrate is high. We designed an HDR-video encoding approach that relies on spatially and temporally
+    varying quantization parameters within the framework of HEVC video encoding. In the absence of a reliable
+    change blindness prediction model, to extract compression candidate regions (CCR) we used an existing
+    saliency prediction algorithm. We explored different configurations and carried out a subjective study
+    to test our hypothesis. While our methodology did not lead to significantly superior performance in
+    terms of the ratio between perceived quality and bitrate, we were able to determine potential flaws
+    in our methodology, such as the employed saliency model for CCR prediction (chosen for computational
+    efficiency, but eventually not sufficiently accurate), as well as a very strong subjective bias due
+    to observers priming themselves early on in the experiment about the type of artifacts they should
+    look for, thus creating a scenario with little ecological validity.
+  url: https://arxiv.org/abs/2408.00052
+  pdf_url: https://arxiv.org/pdf/2408.00052v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 0
+citation_year: 2024

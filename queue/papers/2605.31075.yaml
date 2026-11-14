@@ -1,0 +1,42 @@
+id: paper:arxiv:2605.31075
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: Task-Focused Memorization for Multimodal Agents
+  authors:
+  - Tao Zou
+  - Yichen He
+  - Tian Qiu
+  - Yuan Lin
+  - Hang Li
+  published: '2026-05-29'
+  updated: '2026-05-29'
+  categories:
+  - cs.CV
+  abstract: 'Long-term memory is essential for multimodal agents to build coherent experience, accumulate
+    world knowledge, and achieve continual learning. However, constructing effective memory goes beyond
+    memory module design and basic requirements such as accuracy and fidelity; the key challenge lies
+    in determining what to memorize. Multimodal agents, such as embodied agents, continuously perceive,
+    reason, and act in real or virtual environments, receiving an unbounded stream of multimodal observations.
+    From this combinatorial explosion of information, an agent must selectively retain content that is
+    relevant to its role in the environment and valuable for future tasks. To bridge this gap, we frame
+    memory generation as a learnable memorization policy and introduce TaskMem (Task-focused Memorization
+    Policy Learning), a reinforcement-learning-based framework that enables the policy to dynamically
+    adjust its focus to the demands of real tasks encountered in the environment. TaskMem adopts a two-phase
+    training paradigm: Phase One learns how to memorize by optimizing memory quality under fundamental
+    fidelity requirements; Phase Two occurs after deployment, where the agent learns what to memorize
+    by tuning an adapter on its base MLLM, using recent environment tasks to define a reward model that
+    guides the memorization policy toward task-relevant content. To evaluate our approach, we reformulate
+    VideoMME, EgoLife, and EgoTempo into streaming benchmarks that simulate a realistic setting in which
+    an agent processes streaming observations and handles tasks arriving online. To isolate memory assessment,
+    the questions must be answered using only the agent''s memory, without access to raw video. Built
+    on Qwen3-VL-30B-A3B, TaskMem improves VQA accuracy by 6.3%, 7.0%, and 5.3% on these benchmarks, respectively.'
+  url: https://arxiv.org/abs/2605.31075
+  pdf_url: https://arxiv.org/pdf/2605.31075v1
+  version: v1
+fetched: '2026-11-14'

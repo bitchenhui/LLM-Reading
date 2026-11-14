@@ -1,0 +1,37 @@
+id: paper:arxiv:2511.00793
+status: skipped
+score: 0
+track: streaming_delivery
+matched: []
+meta:
+  title: 'Gesture2Music: A Low-Latency Real-Time Framework for Continuous Gesture-Driven Music Generation'
+  authors:
+  - Rathinaraja Jeyaraj
+  - Barathi Subramanian
+  - Kapilya Gangadharan
+  - Anand Paul
+  published: '2025-11-02'
+  updated: '2026-04-27'
+  categories:
+  - cs.MM
+  - cs.SD
+  abstract: Gesture-driven music generation is an emerging human-computer interaction paradigm for touch-free
+    and expressive musical interaction. However, many existing approaches treat the task as isolated gesture
+    classification or map gestures to symbolic outputs such as MIDI followed by a separate rendering stage,
+    which limits temporal continuity and real-time responsiveness. This work presents Gesture2Music, a
+    low-latency streaming framework for continuous gesture-driven music generation from live webcam feed.
+    The system processes sequences of body and hand landmarks and uses a causal temporal convolutional
+    network (TCN) to predict note-level musical control events, including pitch, octave, onset, sustain,
+    amplitude, and activity state. Because available gesture-note datasets typically contain only isolated
+    single-note recordings rather than continuous performance sequences, a synthetic stream generation
+    strategy is introduced to construct continuous gesture streams by concatenating single-note clips
+    and deriving heuristic temporal event labels. Temporal consistency and spectral proxy losses are further
+    used to reduce prediction jitter and encourage audio-consistent outputs. During inference, predicted
+    musical events are rendered into continuous music using predefined note samples with rhythmic quantization
+    and scale-constrained filtering for improved musical stability. Experiments on a custom gesture-to-music
+    dataset with 21 gesture-note classes spanning seven tones across three pitch levels demonstrate stable
+    real-time performance, low inference latency of 30\,ms, and improved temporal continuity.
+  url: https://arxiv.org/abs/2511.00793
+  pdf_url: https://arxiv.org/pdf/2511.00793v2
+  version: v2
+fetched: '2026-11-14'

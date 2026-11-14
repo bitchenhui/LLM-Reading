@@ -1,0 +1,40 @@
+id: paper:arxiv:2502.13389
+status: skipped
+score: 1
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+meta:
+  title: Reasoning with Reinforced Functional Token Tuning
+  authors:
+  - Kongcheng Zhang
+  - Qi Yao
+  - Baisheng Lai
+  - Jiaxing Huang
+  - Wenkai Fang
+  - Dacheng Tao
+  - Mingli Song
+  - Shunyu Liu
+  published: '2025-02-19'
+  updated: '2025-02-19'
+  categories:
+  - cs.AI
+  abstract: 'In this work, we propose Reinforced Functional Token Tuning (RFTT), a novel reinforced fine-tuning
+    framework that empowers Large Language Models (LLMs) with self-play learn-to-reason capabilities.
+    Unlike prior prompt-driven reasoning efforts, RFTT embeds a rich set of learnable functional tokens
+    (e.g., <analyze>, <verify>, <refine>) directly into the model vocabulary, enabling chain-of-thought
+    construction with diverse human-like reasoning behaviors. Specifically, RFTT comprises two phases:
+    (1) supervised fine-tuning performs prompt-driven tree search to obtain self-generated training data
+    annotated with functional tokens, which warms up the model to learn these tokens for reasoning; and
+    (2) online reinforcement learning further allows the model to explore different reasoning pathways
+    through functional token sampling without relying on prompts, thereby facilitating effective self-improvement
+    for functional reasoning. Extensive experiments demonstrate the superiority of the proposed RFTT on
+    mathematical benchmarks, significantly boosting Qwen-2.5-7B-Instruct (70.6% to 79.8%) and LLaMA-3.1-8B-Instruct
+    (32.2% to 60.2%) on the MATH dataset. Moreover, the performance of RFTT consistently improves with
+    more search rollouts at inference time. Our code is available at https://github.com/sastpg/RFTT.'
+  url: https://arxiv.org/abs/2502.13389
+  pdf_url: https://arxiv.org/pdf/2502.13389v1
+  version: v1
+fetched: '2026-11-14'

@@ -1,0 +1,40 @@
+id: paper:arxiv:2506.01822
+status: skipped
+score: 1
+track: immersive_media
+matched:
+- ref: concept:3DGS
+  count: 3
+  weight: 1
+meta:
+  title: 'GSCodec Studio: A Modular Framework for Gaussian Splat Compression'
+  authors:
+  - Sicheng Li
+  - Chengzhen Wu
+  - Hao Li
+  - Xiang Gao
+  - Yiyi Liao
+  - Lu Yu
+  published: '2025-06-02'
+  updated: '2025-06-02'
+  categories:
+  - cs.CV
+  - cs.MM
+  abstract: 3D Gaussian Splatting and its extension to 4D dynamic scenes enable photorealistic, real-time
+    rendering from real-world captures, positioning Gaussian Splats (GS) as a promising format for next-generation
+    immersive media. However, their high storage requirements pose significant challenges for practical
+    use in sharing, transmission, and storage. Despite various studies exploring GS compression from different
+    perspectives, these efforts remain scattered across separate repositories, complicating benchmarking
+    and the integration of best practices. To address this gap, we present GSCodec Studio, a unified and
+    modular framework for GS reconstruction, compression, and rendering. The framework incorporates a
+    diverse set of 3D/4D GS reconstruction methods and GS compression techniques as modular components,
+    facilitating flexible combinations and comprehensive comparisons. By integrating best practices from
+    community research and our own explorations, GSCodec Studio supports the development of compact representation
+    and compression solutions for static and dynamic Gaussian Splats, namely our Static and Dynamic GSCodec,
+    achieving competitive rate-distortion performance in static and dynamic GS compression. The code for
+    our framework is publicly available at https://github.com/JasonLSC/GSCodec_Studio , to advance the
+    research on Gaussian Splats compression.
+  url: https://arxiv.org/abs/2506.01822
+  pdf_url: https://arxiv.org/pdf/2506.01822v1
+  version: v1
+fetched: '2026-11-14'

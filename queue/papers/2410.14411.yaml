@@ -1,0 +1,33 @@
+id: paper:arxiv:2410.14411
+status: skipped
+score: 1
+track: audio_coding
+matched:
+- ref: concept:NeuralAudioCodec
+  count: 1
+  weight: 1
+meta:
+  title: 'SNAC: Multi-Scale Neural Audio Codec'
+  authors:
+  - Hubert Siuzdak
+  - Florian Grötschla
+  - Luca A. Lanzendörfer
+  published: '2024-10-18'
+  updated: '2024-10-18'
+  categories:
+  - cs.SD
+  - cs.LG
+  - eess.AS
+  abstract: Neural audio codecs have recently gained popularity because they can represent audio signals
+    with high fidelity at very low bitrates, making it feasible to use language modeling approaches for
+    audio generation and understanding. Residual Vector Quantization (RVQ) has become the standard technique
+    for neural audio compression using a cascade of VQ codebooks. This paper proposes the Multi-Scale
+    Neural Audio Codec, a simple extension of RVQ where the quantizers can operate at different temporal
+    resolutions. By applying a hierarchy of quantizers at variable frame rates, the codec adapts to the
+    audio structure across multiple timescales. This leads to more efficient compression, as demonstrated
+    by extensive objective and subjective evaluations. The code and model weights are open-sourced at
+    https://github.com/hubertsiuzdak/snac.
+  url: https://arxiv.org/abs/2410.14411
+  pdf_url: https://arxiv.org/pdf/2410.14411v1
+  version: v1
+fetched: '2026-11-14'

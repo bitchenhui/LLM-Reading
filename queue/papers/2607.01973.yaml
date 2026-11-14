@@ -1,0 +1,42 @@
+id: paper:arxiv:2607.01973
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 2
+  weight: 1
+meta:
+  title: Assessing VLM Reliability for Medical Image Quality Evaluation Under Corruption and Bias
+  authors:
+  - Sofiane Ouaari
+  - Kevin Vorwalder
+  - Nico Pfeifer
+  published: '2026-07-02'
+  updated: '2026-07-02'
+  categories:
+  - cs.CV
+  - cs.AI
+  - cs.LG
+  abstract: 'Vision-Language Models (VLMs) are increasingly applied in medical tasks such as pathology
+    description, report generation, and visual question answering. Medical Image Quality Assessment (MIQA)
+    supports diagnostic accuracy and patient safety by determining whether images meet the standards required
+    for clinical decision-making. Automating MIQA with VLMs may reduce workload, but their behavior under
+    real-world conditions, where images may be degraded or textual context may affect judgments, should
+    be further explored before deployment. We benchmark VLMs on medical image quality using the MediMeta-C
+    dataset zero-shot across seven corruption types and five severity levels. We evaluate sensitivity
+    to degradation patterns, the effect of corruptions on embedding geometry, and whether textual attributes
+    (demographics, expertise, infrastructure, institution) alter scores. Across 16 VLMs and seven modalities,
+    pixelation produced the largest score reductions (mean -20.58%, up to -34.4% for OCT), whereas brightness
+    had limited effect (-0.81%). Embedding displacement was associated with score changes. Same-family
+    models showed correlations of 0.67-0.83; some produced increases up to +31% for corrupted mammography.
+    Textual attributes affected scores: institutional prestige raised them +17.15%, and equipment age
+    lowered them -14.7%. The largest changes were +95.62% (InternVL-8B) and -37.7% (MedGemma). Current
+    VLMs show limitations for medical image quality assessment. Pixelation, a privacy-preserving transformation,
+    reduces performance, indicating a trade-off between patient privacy and reliability. Sensitivity to
+    contextual metadata indicates limited objectivity and marks metadata as a privacy and bias source.
+    Privacy protection and objective quality assessment are related requirements for use.'
+  url: https://arxiv.org/abs/2607.01973
+  pdf_url: https://arxiv.org/pdf/2607.01973v1
+  version: v1
+fetched: '2026-11-14'

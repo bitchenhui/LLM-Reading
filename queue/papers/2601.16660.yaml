@@ -1,0 +1,46 @@
+id: paper:arxiv:2601.16660
+status: skipped
+score: 1
+track: processing_enhancement
+matched:
+- ref: concept:SuperResolution
+  count: 2
+  weight: 1
+meta:
+  title: Fast, faithful and photorealistic diffusion-based image super-resolution with enhanced Flow Map
+    models
+  authors:
+  - Maxence Noble
+  - Gonzalo Iñaki Quintana
+  - Benjamin Aubin
+  - Clément Chadebec
+  published: '2026-01-23'
+  updated: '2026-01-23'
+  categories:
+  - eess.IV
+  - cs.CV
+  - cs.LG
+  abstract: 'Diffusion-based image super-resolution (SR) has recently attracted significant attention
+    by leveraging the expressive power of large pre-trained text-to-image diffusion models (DMs). A central
+    practical challenge is resolving the trade-off between reconstruction faithfulness and photorealism.
+    To address inference efficiency, many recent works have explored knowledge distillation strategies
+    specifically tailored to SR, enabling one-step diffusion-based approaches. However, these teacher-student
+    formulations are inherently constrained by information compression, which can degrade perceptual cues
+    such as lifelike textures and depth of field, even with high overall perceptual quality. In parallel,
+    self-distillation DMs, known as Flow Map models, have emerged as a promising alternative for image
+    generation tasks, enabling fast inference while preserving the expressivity and training stability
+    of standard DMs. Building on these developments, we propose FlowMapSR, a novel diffusion-based framework
+    for image super-resolution explicitly designed for efficient inference. Beyond adapting Flow Map models
+    to SR, we introduce two complementary enhancements: (i) positive-negative prompting guidance, based
+    on a generalization of classifier free-guidance paradigm to Flow Map models, and (ii) adversarial
+    fine-tuning using Low-Rank Adaptation (LoRA). Among the considered Flow Map formulations (Eulerian,
+    Lagrangian, and Shortcut), we find that the Shortcut variant consistently achieves the best performance
+    when combined with these enhancements. Extensive experiments show that FlowMapSR achieves a better
+    balance between reconstruction faithfulness and photorealism than recent state-of-the-art methods
+    for both x4 and x8 upscaling, while maintaining competitive inference time. Notably, a single model
+    is used for both upscaling factors, without any scale-specific conditioning or degradation-guided
+    mechanisms.'
+  url: https://arxiv.org/abs/2601.16660
+  pdf_url: https://arxiv.org/pdf/2601.16660v1
+  version: v1
+fetched: '2026-11-14'

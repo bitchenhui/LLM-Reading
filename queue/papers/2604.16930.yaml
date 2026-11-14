@@ -1,0 +1,39 @@
+id: paper:arxiv:2604.16930
+status: skipped_low_citation
+score: 2
+track: quality_assessment
+matched:
+- ref: concept:MoE
+  count: 2
+  weight: 1
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'CoGR-MoE: Concept-Guided Expert Routing with Consistent Selection and Flexible Reasoning for
+    Visual Question Answering'
+  authors:
+  - Xiyin Zeng
+  - Yi Lu
+  - Hao Wang
+  published: '2026-04-18'
+  updated: '2026-04-18'
+  categories:
+  - cs.CV
+  - cs.AI
+  abstract: Visual Question Answering (VQA) requires models to identify the correct answer options based
+    on both visual and textual evidence. Recent Mixture-of-Experts (MoE) methods improve option reasoning
+    by grouping similar concepts or routing based on examples. However, unstable routing can lead to inconsistent
+    expert selection in the same question type, while overly stable routing may reduce flexibility. To
+    address this, we propose Concept-Guided Routing framework (CoGR-MoE), which incorporates semantics
+    of the answer options to guide expert selection in the training phase. Next, option features are used
+    to reweight the selected experts, producing discriminative representations for each candidate option.
+    These option-level representations are further used for option comparison and optimized via contrastive
+    learning. The experimental results indicate that CoGR-MoE delivers strong performance across multiple
+    VQA tasks, demonstrating the effectiveness of our approach.
+  url: https://arxiv.org/abs/2604.16930
+  pdf_url: https://arxiv.org/pdf/2604.16930v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 0
+citation_year: 2026

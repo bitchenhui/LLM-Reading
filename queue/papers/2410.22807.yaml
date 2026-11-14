@@ -1,0 +1,36 @@
+id: paper:arxiv:2410.22807
+status: skipped
+score: 1
+track: audio_coding
+matched:
+- ref: concept:NeuralAudioCodec
+  count: 1
+  weight: 1
+meta:
+  title: 'APCodec+: A Spectrum-Coding-Based High-Fidelity and High-Compression-Rate Neural Audio Codec
+    with Staged Training Paradigm'
+  authors:
+  - Hui-Peng Du
+  - Yang Ai
+  - Rui-Chen Zheng
+  - Zhen-Hua Ling
+  published: '2024-10-30'
+  updated: '2024-10-30'
+  categories:
+  - eess.AS
+  - cs.SD
+  abstract: This paper proposes a novel neural audio codec, named APCodec+, which is an improved version
+    of APCodec. The APCodec+ takes the audio amplitude and phase spectra as the coding object, and employs
+    an adversarial training strategy. Innovatively, we propose a two-stage joint-individual training paradigm
+    for APCodec+. In the joint training stage, the encoder, quantizer, decoder and discriminator are jointly
+    trained with complete spectral loss, quantization loss, and adversarial loss. In the individual training
+    stage, the encoder and quantizer fix their parameters and provide high-quality training data for the
+    decoder and discriminator. The decoder and discriminator are individually trained from scratch without
+    the quantization loss. The purpose of introducing individual training is to reduce the learning difficulty
+    of the decoder, thereby further improving the fidelity of the decoded audio. Experimental results
+    confirm that our proposed APCodec+ at low bitrates achieves comparable performance with baseline codecs
+    at higher bitrates, thanks to the proposed staged training paradigm.
+  url: https://arxiv.org/abs/2410.22807
+  pdf_url: https://arxiv.org/pdf/2410.22807v1
+  version: v1
+fetched: '2026-11-14'

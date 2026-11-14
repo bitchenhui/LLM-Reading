@@ -1,0 +1,38 @@
+id: paper:arxiv:2505.16404
+status: skipped
+score: 0
+track: audio_coding
+matched: []
+meta:
+  title: 'UBGAN: Enhancing Coded Speech with Blind and Guided Bandwidth Extension'
+  authors:
+  - Kishan Gupta
+  - Srikanth Korse
+  - Andreas Brendel
+  - Nicola Pia
+  - Guillaume Fuchs
+  published: '2025-05-22'
+  updated: '2026-02-24'
+  categories:
+  - eess.AS
+  - cs.SD
+  abstract: In practical application of speech codecs, a multitude of factors such as the quality of the
+    radio connection, limiting hardware or required user experience necessitate trade-offs between achievable
+    perceptual quality, engendered bitrate and computational complexity. Most conventional and neural
+    speech codecs operate on wideband (WB) speech signals to achieve this compromise. To further enhance
+    the perceptual quality of coded speech, bandwidth extension (BWE) of the transmitted speech is an
+    attractive and popular technique in conventional speech coding. In contrast, neural speech codecs
+    are typically trained end-to-end to a specific set of requirements and are often not easily adaptable.
+    In particular, they are typically trained to operate at a single fixed sampling rate. With the Universal
+    Bandwidth Extension Generative Adversarial Network (UBGAN), we propose a modular and lightweight GAN-based
+    solution that increases the operational flexibility of a wide range of conventional and neural codecs.
+    Our model operates in the subband domain and extends the bandwidth of WB signals from 8 kHz to 16
+    kHz, resulting in super-wideband (SWB) signals. We further introduce two variants, guided-UBGAN and
+    blind-UBGAN, where the guided version transmits quantized learned representation as a side information
+    at a very low bitrate additional to the bitrate of the codec, while blind-BWE operates without such
+    side-information. Our subjective assessments demonstrate the advantage of UBGAN applied to WB codecs
+    and highlight the generalization capacity of our proposed method across multiple codecs and bitrates.
+  url: https://arxiv.org/abs/2505.16404
+  pdf_url: https://arxiv.org/pdf/2505.16404v2
+  version: v2
+fetched: '2026-11-14'

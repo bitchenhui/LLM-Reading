@@ -1,0 +1,36 @@
+id: paper:arxiv:2505.24437
+status: skipped
+score: 0
+track: audio_coding
+matched: []
+meta:
+  title: 'SwitchCodec: A High-Fidelity Nerual Audio Codec With Sparse Quantization'
+  authors:
+  - Jin Wang
+  - Wenbin Jiang
+  - Xiangbo Wang
+  - Yubo You
+  - Sheng Fang
+  published: '2025-05-30'
+  updated: '2026-05-07'
+  categories:
+  - cs.SD
+  - eess.AS
+  abstract: Neural audio compression has emerged as a promising technology for efficiently representing
+    speech, music, and general audio. However, existing methods suffer from significant performance degradation
+    at limited bitrates, where the available embedding space is sharply constrained. To address this,
+    we propose a universal high-fidelity neural audio compression algorithm featuring Residual Experts
+    Vector Quantization (REVQ), which substantially expands the embedding space with minimal impact on
+    bandwidth. A gentle load-balancing strategy is introduced to ensure the full utilization of this expanded
+    space. Furthermore, we develop a novel multi-tiered discriminator that periodically stratifies STFT
+    spectra, guiding the generator to focus on critical spectral regions. To support multiple bitrates
+    without quality loss at the lower end, we adopt an efficient post-training strategy. Our proposed
+    model achieves impressive performance, with PESQ and ViSQOL scores of 2.87 and 4.27, respectively,
+    at 2.67 kbps bandwidth. The approach effectively reduces spectral blur, decreasing the distance to
+    the original mel-spectrogram by 13%. Notably, our post-training strategy achieves performance comparable
+    to dedicated fixed-bitrate models while reducing the required training time by half. Extensive ablation
+    studies confirm the superiority of our method over baselines.
+  url: https://arxiv.org/abs/2505.24437
+  pdf_url: https://arxiv.org/pdf/2505.24437v4
+  version: v4
+fetched: '2026-11-14'

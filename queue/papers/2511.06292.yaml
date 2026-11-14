@@ -1,0 +1,41 @@
+id: paper:arxiv:2511.06292
+status: skipped
+score: 1
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 1
+  weight: 1
+meta:
+  title: Synthetic Data-Driven Prompt Tuning for Financial QA over Tables and Documents
+  authors:
+  - Yaoning Yu
+  - Kai-Min Chang
+  - Ye Yu
+  - Kai Wei
+  - Haojing Luo
+  - Haohan Wang
+  published: '2025-11-09'
+  updated: '2025-11-14'
+  categories:
+  - cs.AI
+  abstract: Financial documents like earning reports or balance sheets often involve long tables and multi-page
+    reports. Large language models have become a new tool to help numerical reasoning and understanding
+    these documents. However, prompt quality can have a major effect on how well LLMs perform these financial
+    reasoning tasks. Most current methods tune prompts on fixed datasets of financial text or tabular
+    data, which limits their ability to adapt to new question types or document structures, or they involve
+    costly and manually labeled/curated dataset to help build the prompts. We introduce a self-improving
+    prompt framework driven by data-augmented optimization. In this closed-loop process, we generate synthetic
+    financial tables and document excerpts, verify their correctness and robustness, and then update the
+    prompt based on the results. Specifically, our framework combines a synthetic data generator with
+    verifiers and a prompt optimizer, where the generator produces new examples that exposes weaknesses
+    in the current prompt, the verifiers check the validity and robustness of the produced examples, and
+    the optimizer incrementally refines the prompt in response. By iterating these steps in a feedback
+    cycle, our method steadily improves prompt accuracy on financial reasoning tasks without needing external
+    labels. Evaluation on DocMath-Eval benchmark demonstrates that our system achieves higher performance
+    in both accuracy and robustness than standard prompt methods, underscoring the value of incorporating
+    synthetic data generation into prompt learning for financial applications.
+  url: https://arxiv.org/abs/2511.06292
+  pdf_url: https://arxiv.org/pdf/2511.06292v2
+  version: v2
+fetched: '2026-11-14'

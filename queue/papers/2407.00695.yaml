@@ -1,0 +1,37 @@
+id: paper:arxiv:2407.00695
+status: skipped
+score: 1
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 1
+  weight: 1
+meta:
+  title: Learning Formal Mathematics From Intrinsic Motivation
+  authors:
+  - Gabriel Poesia
+  - David Broman
+  - Nick Haber
+  - Noah D. Goodman
+  published: '2024-06-30'
+  updated: '2024-11-05'
+  categories:
+  - cs.AI
+  - cs.LO
+  abstract: 'How did humanity coax mathematics from the aether? We explore the Platonic view that mathematics
+    can be discovered from its axioms - a game of conjecture and proof. We describe Minimo (Mathematics
+    from Intrinsic Motivation): an agent that jointly learns to pose challenging problems for itself (conjecturing)
+    and solve them (theorem proving). Given a mathematical domain axiomatized in dependent type theory,
+    we first combine methods for constrained decoding and type-directed synthesis to sample valid conjectures
+    from a language model. Our method guarantees well-formed conjectures by construction, even as we start
+    with a randomly initialized model. We use the same model to represent a policy and value function
+    for guiding proof search. Our agent targets generating hard but provable conjectures - a moving target,
+    since its own theorem proving ability also improves as it trains. We propose novel methods for hindsight
+    relabeling on proof search trees to significantly improve the agent''s sample efficiency in both tasks.
+    Experiments on 3 axiomatic domains (propositional logic, arithmetic and group theory) demonstrate
+    that our agent can bootstrap from only the axioms, self-improving in generating true and challenging
+    conjectures and in finding proofs.'
+  url: https://arxiv.org/abs/2407.00695
+  pdf_url: https://arxiv.org/pdf/2407.00695v2
+  version: v2
+fetched: '2026-11-14'

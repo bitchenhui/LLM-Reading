@@ -1,0 +1,33 @@
+id: paper:arxiv:2402.18930
+status: skipped
+score: 0
+track: video_image_coding
+matched: []
+meta:
+  title: Variable-Rate Learned Image Compression with Multi-Objective Optimization and Quantization-Reconstruction
+    Offsets
+  authors:
+  - Fatih Kamisli
+  - Fabien Racape
+  - Hyomin Choi
+  published: '2024-02-29'
+  updated: '2024-02-29'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: Achieving successful variable bitrate compression with computationally simple algorithms from
+    a single end-to-end learned image or video compression model remains a challenge. Many approaches
+    have been proposed, including conditional auto-encoders, channel-adaptive gains for the latent tensor
+    or uniformly quantizing all elements of the latent tensor. This paper follows the traditional approach
+    to vary a single quantization step size to perform uniform quantization of all latent tensor elements.
+    However, three modifications are proposed to improve the variable rate compression performance. First,
+    multi objective optimization is used for (post) training. Second, a quantization-reconstruction offset
+    is introduced into the quantization operation. Third, variable rate quantization is used also for
+    the hyper latent. All these modifications can be made on a pre-trained single-rate compression model
+    by performing post training. The algorithms are implemented into three well-known image compression
+    models and the achieved variable rate compression results indicate negligible or minimal compression
+    performance loss compared to training multiple models. (Codes will be shared at https://github.com/InterDigitalInc/CompressAI)
+  url: https://arxiv.org/abs/2402.18930
+  pdf_url: https://arxiv.org/pdf/2402.18930v1
+  version: v1
+fetched: '2026-11-14'

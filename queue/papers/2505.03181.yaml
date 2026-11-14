@@ -1,0 +1,36 @@
+id: paper:arxiv:2505.03181
+status: skipped
+score: 1
+track: self_improvement
+matched:
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: 'VLM Q-Learning: Aligning Vision-Language Models for Interactive Decision-Making'
+  authors:
+  - Jake Grigsby
+  - Yuke Zhu
+  - Michael Ryoo
+  - Juan Carlos Niebles
+  published: '2025-05-06'
+  updated: '2025-05-06'
+  categories:
+  - cs.LG
+  abstract: Recent research looks to harness the general knowledge and reasoning of large language models
+    (LLMs) into agents that accomplish user-specified goals in interactive environments. Vision-language
+    models (VLMs) extend LLMs to multi-modal data and provide agents with the visual reasoning necessary
+    for new applications in areas such as computer automation. However, agent tasks emphasize skills where
+    accessible open-weight VLMs lag behind their LLM equivalents. For example, VLMs are less capable of
+    following an environment's strict output syntax requirements and are more focused on open-ended question
+    answering. Overcoming these limitations requires supervised fine-tuning (SFT) on task-specific expert
+    demonstrations. Our work approaches these challenges from an offline-to-online reinforcement learning
+    (RL) perspective. RL lets us fine-tune VLMs to agent tasks while learning from the unsuccessful decisions
+    of our own model or more capable (larger) models. We explore an off-policy RL solution that retains
+    the stability and simplicity of the widely used SFT workflow while allowing our agent to self-improve
+    and learn from low-quality datasets. We demonstrate this technique with two open-weight VLMs across
+    three multi-modal agent domains.
+  url: https://arxiv.org/abs/2505.03181
+  pdf_url: https://arxiv.org/pdf/2505.03181v1
+  version: v1
+fetched: '2026-11-14'

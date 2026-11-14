@@ -1,0 +1,48 @@
+id: paper:arxiv:2609.33398
+status: pending
+score: 3
+track: self_improvement
+matched:
+- ref: concept:RSI
+  count: 3
+  weight: 1
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: 'COEVO: Co-Evolving Context and Parameters for Recursive Self-Improvement'
+  authors:
+  - Siwei Chen
+  - Xinping Bao
+  - Xinyu Cai
+  - Yuan Cao
+  - Wan Jiang
+  - Shaohong Chen
+  published: '2026-09-27'
+  updated: '2026-09-27'
+  categories:
+  - cs.AI
+  abstract: 'Recursive self-improvement (RSI) seeks to move large language models beyond static training
+    pipelines toward systems that can participate in improving their own future behavior. Existing approaches
+    largely follow two directions: updating model parameters through online learning, or improving the
+    external context through search, reflection, and prompt optimization. Although both mechanisms can
+    support continued improvement, they are typically studied independently. This separation overlooks
+    an important interaction: the context shapes the experience from which a model learns, while an evolving
+    model may interpret and utilize the same context differently over time. We therefore formulate RSI
+    as a problem of parameter--context co-evolution, where model parameters and the learning context adapt
+    within a shared feedback loop. We introduce COEVO, a framework that updates model parameters from
+    on-policy experience while adapting contextual guidance according to the state of the evolving policy.
+    Policy entropy and prompt-conditioned attention are used as complementary signals to guide this adaptation.
+    Experiments show that COEVO consistently improves task performance over fixed-context reinforcement
+    learning and produces policies that are more robust to changes in system prompts. More broadly, our
+    results suggest that external context should be viewed not merely as a fixed interface to a large
+    language model, but as an adaptive component of recursive self-improvement.'
+  url: https://arxiv.org/abs/2609.33398
+  pdf_url: https://arxiv.org/pdf/2609.33398v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 1
+citation_year: 2026

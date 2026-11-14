@@ -1,0 +1,39 @@
+id: paper:arxiv:2606.21893
+status: skipped
+score: 0
+track: audio_coding
+matched: []
+meta:
+  title: 'AugCodec: A Low-Bitrate Disentangled Neural Speech Codec via Data Augmentation'
+  authors:
+  - Dongmei Wang
+  - Xiaohang Sun
+  - Yang Liu
+  - Fanjie Kong
+  - Abhishek Yanamandra
+  - Abhinav Jain
+  - Daniel Tompkins
+  - Woohyun Kang
+  - Najmeh Sadoughi
+  - Sunil Hadap
+  - Xiang Hao
+  - Zhu Liu
+  - Caren Chen
+  published: '2026-06-20'
+  updated: '2026-06-20'
+  categories:
+  - cs.SD
+  - eess.AS
+  abstract: 'We propose AugCodec, a low-bitrate disentangled neural speech codec that leverages data augmentation
+    to decompose speech into three distinct components: semantic, speaker, and prosody tokens. Specifically,
+    we employ tailored augmenta tion strategies to transform speech into distinct variants, each serving
+    as input for extracting tokens that preserve the target attribute while suppressing others. This disentanglement
+    strategy enables substantial reduction in token rate. Further more, we introduce an augmentation loss
+    that aligns semantic encoder outputs between source and voice-converted speech, encouraging speaker-agnostic
+    embeddings while mitigating the acoustic mismatch induced by voice conversion. Experiments on LibriSpeech
+    test-clean demonstrate that AugCodec significantly outperforms state-of-the-art methods in both reconstruction
+    quality and disentanglement, while operating at only 12.5Hz with three token streams.'
+  url: https://arxiv.org/abs/2606.21893
+  pdf_url: https://arxiv.org/pdf/2606.21893v1
+  version: v1
+fetched: '2026-11-14'

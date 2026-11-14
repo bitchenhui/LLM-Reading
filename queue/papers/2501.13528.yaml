@@ -1,0 +1,37 @@
+id: paper:arxiv:2501.13528
+status: skipped
+score: 1
+track: video_image_coding
+matched:
+- ref: concept:QP
+  count: 2
+  weight: 1
+meta:
+  title: Diffusion-based Perceptual Neural Video Compression with Temporal Diffusion Information Reuse
+  authors:
+  - Wenzhuo Ma
+  - Zhenzhong Chen
+  published: '2025-01-23'
+  updated: '2025-01-23'
+  categories:
+  - cs.CV
+  - cs.LG
+  - eess.IV
+  abstract: Recently, foundational diffusion models have attracted considerable attention in image compression
+    tasks, whereas their application to video compression remains largely unexplored. In this article,
+    we introduce DiffVC, a diffusion-based perceptual neural video compression framework that effectively
+    integrates foundational diffusion model with the video conditional coding paradigm. This framework
+    uses temporal context from previously decoded frame and the reconstructed latent representation of
+    the current frame to guide the diffusion model in generating high-quality results. To accelerate the
+    iterative inference process of diffusion model, we propose the Temporal Diffusion Information Reuse
+    (TDIR) strategy, which significantly enhances inference efficiency with minimal performance loss by
+    reusing the diffusion information from previous frames. Additionally, to address the challenges posed
+    by distortion differences across various bitrates, we propose the Quantization Parameter-based Prompting
+    (QPP) mechanism, which utilizes quantization parameters as prompts fed into the foundational diffusion
+    model to explicitly modulate intermediate features, thereby enabling a robust variable bitrate diffusion-based
+    neural compression framework. Experimental results demonstrate that our proposed solution delivers
+    excellent performance in both perception metrics and visual quality.
+  url: https://arxiv.org/abs/2501.13528
+  pdf_url: https://arxiv.org/pdf/2501.13528v1
+  version: v1
+fetched: '2026-11-14'

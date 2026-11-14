@@ -1,0 +1,35 @@
+id: paper:arxiv:2505.02888
+status: skipped_low_citation
+score: 2
+track: self_improvement
+matched:
+- ref: concept:RSI
+  count: 3
+  weight: 1
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+meta:
+  title: 'When Your Own Output Becomes Your Training Data: Noise-to-Meaning Loops and a Formal RSI Trigger'
+  authors:
+  - Rintaro Ando
+  published: '2025-05-05'
+  updated: '2026-03-04'
+  categories:
+  - cs.LG
+  - cs.AI
+  - cs.CL
+  abstract: We present Noise-to-Meaning Recursive Self-Improvement (N2M-RSI), a minimal formal model showing
+    that once an AI agent feeds its own outputs back as inputs and crosses an explicit information-integration
+    threshold, its internal complexity will grow without bound under our assumptions. The framework unifies
+    earlier ideas on self-prompting large language models, Gödelian self-reference, and AutoML, yet remains
+    implementation-agnostic. The model furthermore scales naturally to interacting swarms of agents, hinting
+    at super-linear effects once communication among instances is permitted. For safety reasons, we omit
+    system-specific implementation details and release only a brief, model-agnostic toy prototype in Appendix
+    C.
+  url: https://arxiv.org/abs/2505.02888
+  pdf_url: https://arxiv.org/pdf/2505.02888v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 1
+citation_year: 2025

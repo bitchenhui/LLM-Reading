@@ -1,0 +1,37 @@
+id: paper:arxiv:2203.03619
+status: skipped
+score: 1
+track: processing_enhancement
+matched:
+- ref: concept:SuperResolution
+  count: 1
+  weight: 1
+meta:
+  title: Adaptive Cross-Layer Attention for Image Restoration
+  authors:
+  - Yancheng Wang
+  - Ning Xu
+  - Yingzhen Yang
+  published: '2022-03-04'
+  updated: '2023-04-18'
+  categories:
+  - eess.IV
+  - cs.CV
+  - cs.LG
+  abstract: 'Non-local attention module has been proven to be crucial for image restoration. Conventional
+    non-local attention processes features of each layer separately, so it risks missing correlation between
+    features among different layers. To address this problem, we aim to design attention modules that
+    aggregate information from different layers. Instead of finding correlated key pixels within the same
+    layer, each query pixel is encouraged to attend to key pixels at multiple previous layers of the network.
+    In order to efficiently embed such attention design into neural network backbones, we propose a novel
+    Adaptive Cross-Layer Attention (ACLA) module. Two adaptive designs are proposed for ACLA: (1) adaptively
+    selecting the keys for non-local attention at each layer; (2) automatically searching for the insertion
+    locations for ACLA modules. By these two adaptive designs, ACLA dynamically selects a flexible number
+    of keys to be aggregated for non-local attention at previous layer while maintaining a compact neural
+    network with compelling performance. Extensive experiments on image restoration tasks, including single
+    image super-resolution, image denoising, image demosaicing, and image compression artifacts reduction,
+    validate the effectiveness and efficiency of ACLA. The code of ACLA is available at \url{https://github.com/SDL-ASU/ACLA}.'
+  url: https://arxiv.org/abs/2203.03619
+  pdf_url: https://arxiv.org/pdf/2203.03619v3
+  version: v3
+fetched: '2026-11-14'

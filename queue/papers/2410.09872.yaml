@@ -1,0 +1,35 @@
+id: paper:arxiv:2410.09872
+status: skipped
+score: 0
+track: video_image_coding
+matched: []
+meta:
+  title: Towards Reproducible Learning-based Compression
+  authors:
+  - Jiahao Pang
+  - Muhammad Asad Lodhi
+  - Junghyun Ahn
+  - Yuning Huang
+  - Dong Tian
+  published: '2024-10-13'
+  updated: '2024-10-13'
+  categories:
+  - cs.CV
+  - cs.MM
+  abstract: A deep learning system typically suffers from a lack of reproducibility that is partially
+    rooted in hardware or software implementation details. The irreproducibility leads to skepticism in
+    deep learning technologies and it can hinder them from being deployed in many applications. In this
+    work, the irreproducibility issue is analyzed where deep learning is employed in compression systems
+    while the encoding and decoding may be run on devices from different manufacturers. The decoding process
+    can even crash due to a single bit difference, e.g., in a learning-based entropy coder. For a given
+    deep learning-based module with limited resources for protection, we first suggest that reproducibility
+    can only be assured when the mismatches are bounded. Then a safeguarding mechanism is proposed to
+    tackle the challenges. The proposed method may be applied for different levels of protection either
+    at the reconstruction level or at a selected decoding level. Furthermore, the overhead introduced
+    for the protection can be scaled down accordingly when the error bound is being suppressed. Experiments
+    demonstrate the effectiveness of the proposed approach for learning-based compression systems, e.g.,
+    in image compression and point cloud compression.
+  url: https://arxiv.org/abs/2410.09872
+  pdf_url: https://arxiv.org/pdf/2410.09872v1
+  version: v1
+fetched: '2026-11-14'

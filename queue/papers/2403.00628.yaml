@@ -1,0 +1,45 @@
+id: paper:arxiv:2403.00628
+status: pending
+score: 4
+track: video_image_coding
+matched:
+- ref: impl:VTM
+  count: 1
+  weight: 3
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+meta:
+  title: Region-Adaptive Transform with Segmentation Prior for Image Compression
+  authors:
+  - Yuxi Liu
+  - Wenhan Yang
+  - Huihui Bai
+  - Yunchao Wei
+  - Yao Zhao
+  published: '2024-03-01'
+  updated: '2024-09-24'
+  categories:
+  - cs.CV
+  - eess.IV
+  abstract: Learned Image Compression (LIC) has shown remarkable progress in recent years. Existing works
+    commonly employ CNN-based or self-attention-based modules as transform methods for compression. However,
+    there is no prior research on neural transform that focuses on specific regions. In response, we introduce
+    the class-agnostic segmentation masks (i.e. semantic masks without category labels) for extracting
+    region-adaptive contextual information. Our proposed module, Region-Adaptive Transform, applies adaptive
+    convolutions on different regions guided by the masks. Additionally, we introduce a plug-and-play
+    module named Scale Affine Layer to incorporate rich contexts from various regions. While there have
+    been prior image compression efforts that involve segmentation masks as additional intermediate inputs,
+    our approach differs significantly from them. Our advantages lie in that, to avoid extra bitrate overhead,
+    we treat these masks as privilege information, which is accessible during the model training stage
+    but not required during the inference phase. To the best of our knowledge, we are the first to employ
+    class-agnostic masks as privilege information and achieve superior performance in pixel-fidelity metrics,
+    such as Peak Signal to Noise Ratio (PSNR). The experimental results demonstrate our improvement compared
+    to previously well-performing methods, with about 8.2% bitrate saving compared to VTM-17.0. The source
+    code is available at https://github.com/GityuxiLiu/SegPIC-for-Image-Compression.
+  url: https://arxiv.org/abs/2403.00628
+  pdf_url: https://arxiv.org/pdf/2403.00628v4
+  version: v4
+fetched: '2026-11-14'
+citation_count: 36
+citation_year: 2024

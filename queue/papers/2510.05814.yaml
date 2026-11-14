@@ -1,0 +1,36 @@
+id: paper:arxiv:2510.05814
+status: skipped
+score: 1
+track: processing_enhancement
+matched:
+- ref: concept:SuperResolution
+  count: 1
+  weight: 1
+meta:
+  title: Rasterized Steered Mixture of Experts for Efficient 2D Image Regression
+  authors:
+  - Yi-Hsin Li
+  - Mårten Sjöström
+  - Sebastian Knorr
+  - Thomas Sikora
+  published: '2025-10-07'
+  updated: '2025-11-18'
+  categories:
+  - cs.CV
+  abstract: The Steered Mixture of Experts regression framework has demonstrated strong performance in
+    image reconstruction, compression, denoising, and super-resolution. However, its high computational
+    cost limits practical applications. This work introduces a rasterization-based optimization strategy
+    that combines the efficiency of rasterized Gaussian kernel rendering with the edge-aware gating mechanism
+    of the Steered Mixture of Experts. The proposed method is designed to accelerate two-dimensional image
+    regression while maintaining the model's inherent sparsity and reconstruction quality. By replacing
+    global iterative optimization with a rasterized formulation, the method achieves significantly faster
+    parameter updates and more memory-efficient model representations. In addition, the proposed framework
+    supports applications such as native super-resolution and image denoising, which are not directly
+    achievable with standard rasterized Gaussian kernel approaches. The combination of fast rasterized
+    optimization with the edge-aware structure of the Steered Mixture of Experts provides a new balance
+    between computational efficiency and reconstruction fidelity for two-dimensional image processing
+    tasks.
+  url: https://arxiv.org/abs/2510.05814
+  pdf_url: https://arxiv.org/pdf/2510.05814v2
+  version: v2
+fetched: '2026-11-14'

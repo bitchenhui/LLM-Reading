@@ -1,0 +1,48 @@
+id: paper:arxiv:2508.01633
+status: skipped_low_citation
+score: 5
+track: immersive_media
+matched:
+- ref: codec:G-PCC
+  count: 2
+  weight: 3
+- ref: metric:BD-Rate
+  count: 1
+  weight: 1
+- ref: org:MPEG
+  count: 1
+  weight: 1
+meta:
+  title: Rate-distortion Optimized Point Cloud Preprocessing for Geometry-based Point Cloud Compression
+  authors:
+  - Wanhao Ma
+  - Wei Zhang
+  - Shuai Wan
+  - Fuzheng Yang
+  published: '2025-08-03'
+  updated: '2025-08-03'
+  categories:
+  - cs.CV
+  - eess.IV
+  abstract: Geometry-based point cloud compression (G-PCC), an international standard designed by MPEG,
+    provides a generic framework for compressing diverse types of point clouds while ensuring interoperability
+    across applications and devices. However, G-PCC underperforms compared to recent deep learning-based
+    PCC methods despite its lower computational power consumption. To enhance the efficiency of G-PCC
+    without sacrificing its interoperability or computational flexibility, we propose a novel preprocessing
+    framework that integrates a compression-oriented voxelization network with a differentiable G-PCC
+    surrogate model, jointly optimized in the training phase. The surrogate model mimics the rate-distortion
+    behaviour of the non-differentiable G-PCC codec, enabling end-to-end gradient propagation. The versatile
+    voxelization network adaptively transforms input point clouds using learning-based voxelization and
+    effectively manipulates point clouds via global scaling, fine-grained pruning, and point-level editing
+    for rate-distortion trade-offs. During inference, only the lightweight voxelization network is appended
+    to the G-PCC encoder, requiring no modifications to the decoder, thus introducing no computational
+    overhead for end users. Extensive experiments demonstrate a 38.84% average BD-rate reduction over
+    G-PCC. By bridging classical codecs with deep learning, this work offers a practical pathway to enhance
+    legacy compression standards while preserving their backward compatibility, making it ideal for real-world
+    deployment.
+  url: https://arxiv.org/abs/2508.01633
+  pdf_url: https://arxiv.org/pdf/2508.01633v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 1
+citation_year: 2025

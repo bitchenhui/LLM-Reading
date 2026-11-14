@@ -1,0 +1,41 @@
+id: paper:arxiv:2406.00791
+status: skipped_low_citation
+score: 3
+track: immersive_media
+matched:
+- ref: codec:G-PCC
+  count: 1
+  weight: 3
+meta:
+  title: 'Towards Point Cloud Compression for Machine Perception: A Simple and Strong Baseline by Learning
+    the Octree Depth Level Predictor'
+  authors:
+  - Lei Liu
+  - Zhihao Hu
+  - Zhenghao Chen
+  published: '2024-06-02'
+  updated: '2024-06-02'
+  categories:
+  - cs.CV
+  - cs.MM
+  - eess.IV
+  abstract: Point cloud compression has garnered significant interest in computer vision. However, existing
+    algorithms primarily cater to human vision, while most point cloud data is utilized for machine vision
+    tasks. To address this, we propose a point cloud compression framework that simultaneously handles
+    both human and machine vision tasks. Our framework learns a scalable bit-stream, using only subsets
+    for different machine vision tasks to save bit-rate, while employing the entire bit-stream for human
+    vision tasks. Building on mainstream octree-based frameworks like VoxelContext-Net, OctAttention,
+    and G-PCC, we introduce a new octree depth-level predictor. This predictor adaptively determines the
+    optimal depth level for each octree constructed from a point cloud, controlling the bit-rate for machine
+    vision tasks. For simpler tasks (\textit{e.g.}, classification) or objects/scenarios, we use fewer
+    depth levels with fewer bits, saving bit-rate. Conversely, for more complex tasks (\textit{e.g}.,
+    segmentation) or objects/scenarios, we use deeper depth levels with more bits to enhance performance.
+    Experimental results on various datasets (\textit{e.g}., ModelNet10, ModelNet40, ShapeNet, ScanNet,
+    and KITTI) show that our point cloud compression approach improves performance for machine vision
+    tasks without compromising human vision quality.
+  url: https://arxiv.org/abs/2406.00791
+  pdf_url: https://arxiv.org/pdf/2406.00791v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 7
+citation_year: 2024

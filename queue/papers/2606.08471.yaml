@@ -1,0 +1,37 @@
+id: paper:arxiv:2606.08471
+status: skipped
+score: 1
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+meta:
+  title: 'More Yap Less Meaning: Uncovering Self-Improvement Behavior in SLMs'
+  authors:
+  - Marina Igitkhanian
+  - Erik Arakelyan
+  published: '2026-06-07'
+  updated: '2026-06-07'
+  categories:
+  - cs.CL
+  - cs.AI
+  abstract: Recently, language models have made rapid progress across various domains and applications.
+    However, their capability for self-improvement, i.e., whether they are adept at recognising and correcting
+    flaws in their own reasoning, remains dubious. In this study, we address this question by constructing
+    a sufficiency test to rigorously examine the self-correction capabilities of small language models
+    (SLMs). We propose a minimal three-step self-correction pipeline that collects initial SLM answers,
+    prompts the same model to generate hints for its incorrect responses given the ground truth, and feeds
+    the model the same question with its own feedback to refine the initial answer. We evaluate a variety
+    of instruction-tuned and reasoning SLMs in this experimental setup on arithmetic and logical reasoning
+    benchmarks. Our findings show that SLMs with injected hint sentences yield only a 4.4 percent gain
+    over initial question-answering accuracy. Even though the correct answer was provided alongside the
+    model's incorrect reasoning, the evaluated SLMs fail to understand what was missing in their reasoning
+    and show minimal semantic difference between hints that lead to corrections and ones that do not.
+    Furthermore, our experiments show that longer hints are positively correlated with incorrect final
+    answers, suggesting that longer deliberation on problems can hinder the reasoning process, meaning
+    that SLMs do not necessarily scale in performance with a larger compute budget.
+  url: https://arxiv.org/abs/2606.08471
+  pdf_url: https://arxiv.org/pdf/2606.08471v1
+  version: v1
+fetched: '2026-11-14'

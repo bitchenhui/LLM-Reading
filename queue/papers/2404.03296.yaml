@@ -1,0 +1,37 @@
+id: paper:arxiv:2404.03296
+status: skipped
+score: 1
+track: processing_enhancement
+matched:
+- ref: concept:SuperResolution
+  count: 2
+  weight: 1
+meta:
+  title: 'AdaBM: On-the-Fly Adaptive Bit Mapping for Image Super-Resolution'
+  authors:
+  - Cheeun Hong
+  - Kyoung Mu Lee
+  published: '2024-04-04'
+  updated: '2024-04-04'
+  categories:
+  - cs.CV
+  - eess.IV
+  abstract: 'Although image super-resolution (SR) problem has experienced unprecedented restoration accuracy
+    with deep neural networks, it has yet limited versatile applications due to the substantial computational
+    costs. Since different input images for SR face different restoration difficulties, adapting computational
+    costs based on the input image, referred to as adaptive inference, has emerged as a promising solution
+    to compress SR networks. Specifically, adapting the quantization bit-widths has successfully reduced
+    the inference and memory cost without sacrificing the accuracy. However, despite the benefits of the
+    resultant adaptive network, existing works rely on time-intensive quantization-aware training with
+    full access to the original training pairs to learn the appropriate bit allocation policies, which
+    limits its ubiquitous usage. To this end, we introduce the first on-the-fly adaptive quantization
+    framework that accelerates the processing time from hours to seconds. We formulate the bit allocation
+    problem with only two bit mapping modules: one to map the input image to the image-wise bit adaptation
+    factor and one to obtain the layer-wise adaptation factors. These bit mappings are calibrated and
+    fine-tuned using only a small number of calibration images. We achieve competitive performance with
+    the previous adaptive quantization methods, while the processing time is accelerated by x2000. Codes
+    are available at https://github.com/Cheeun/AdaBM.'
+  url: https://arxiv.org/abs/2404.03296
+  pdf_url: https://arxiv.org/pdf/2404.03296v1
+  version: v1
+fetched: '2026-11-14'

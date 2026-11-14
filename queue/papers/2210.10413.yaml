@@ -1,0 +1,32 @@
+id: paper:arxiv:2210.10413
+status: skipped
+score: 1
+track: processing_enhancement
+matched:
+- ref: concept:SuperResolution
+  count: 2
+  weight: 1
+meta:
+  title: Real Image Super-Resolution using GAN through modeling of LR and HR process
+  authors:
+  - Rao Muhammad Umer
+  - Christian Micheloni
+  published: '2022-10-19'
+  updated: '2022-10-19'
+  categories:
+  - cs.CV
+  - eess.IV
+  abstract: The current existing deep image super-resolution methods usually assume that a Low Resolution
+    (LR) image is bicubicly downscaled of a High Resolution (HR) image. However, such an ideal bicubic
+    downsampling process is different from the real LR degradations, which usually come from complicated
+    combinations of different degradation processes, such as camera blur, sensor noise, sharpening artifacts,
+    JPEG compression, and further image editing, and several times image transmission over the internet
+    and unpredictable noises. It leads to the highly ill-posed nature of the inverse upscaling problem.
+    To address these issues, we propose a GAN-based SR approach with learnable adaptive sinusoidal nonlinearities
+    incorporated in LR and SR models by directly learn degradation distributions and then synthesize paired
+    LR/HR training data to train the generalized SR model to real image degradations. We demonstrate the
+    effectiveness of our proposed approach in quantitative and qualitative experiments.
+  url: https://arxiv.org/abs/2210.10413
+  pdf_url: https://arxiv.org/pdf/2210.10413v1
+  version: v1
+fetched: '2026-11-14'

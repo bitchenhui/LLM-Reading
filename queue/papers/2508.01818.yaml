@@ -1,0 +1,32 @@
+id: paper:arxiv:2508.01818
+status: skipped
+score: 0
+track: video_image_coding
+matched: []
+meta:
+  title: Conditional Residual Coding with Explicit-Implicit Temporal Buffering for Learned Video Compression
+  authors:
+  - Yi-Hsin Chen
+  - Kuan-Wei Ho
+  - Martin Benjak
+  - Jörn Ostermann
+  - Wen-Hsiao Peng
+  published: '2025-08-03'
+  updated: '2025-08-03'
+  categories:
+  - eess.IV
+  abstract: This work proposes a hybrid, explicit-implicit temporal buffering scheme for conditional residual
+    video coding. Recent conditional coding methods propagate implicit temporal information for inter-frame
+    coding, demonstrating superior coding performance to those relying exclusively on previously decoded
+    frames (i.e. the explicit temporal information). However, these methods require substantial memory
+    to store a large number of implicit features. This work presents a hybrid buffering strategy. For
+    inter-frame coding, it buffers one previously decoded frame as the explicit temporal reference and
+    a small number of learned features as implicit temporal reference. Our hybrid buffering scheme for
+    conditional residual coding outperforms the single use of explicit or implicit information. Moreover,
+    it allows the total buffer size to be reduced to the equivalent of two video frames with a negligible
+    performance drop on 2K video sequences. The ablation experiment further sheds light on how these two
+    types of temporal references impact the coding performance.
+  url: https://arxiv.org/abs/2508.01818
+  pdf_url: https://arxiv.org/pdf/2508.01818v1
+  version: v1
+fetched: '2026-11-14'

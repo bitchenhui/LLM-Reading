@@ -1,0 +1,36 @@
+id: paper:arxiv:2604.09686
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: Belief-Aware VLM Model for Human-like Reasoning
+  authors:
+  - Anshul Nayak
+  - Shahil Shaik
+  - Yue Wang
+  published: '2026-04-05'
+  updated: '2026-06-03'
+  categories:
+  - cs.AI
+  - cs.CV
+  - eess.SY
+  abstract: Traditional neural network models for intent inference rely heavily on observable states and
+    struggle to generalize across diverse tasks and dynamic environments. Recent advances in Vision Language
+    Models (VLMs) and Vision Language Action (VLA) models introduce common-sense reasoning through large-scale
+    multimodal pretraining, enabling zero-shot performance across tasks. However, these models still lack
+    explicit mechanisms to represent and update belief, limiting their ability to reason like humans or
+    capture the evolving human intent over long-horizon. To address this, we propose a belief-aware VLM
+    framework that integrates retrieval-based memory and reinforcement learning. Instead of learning an
+    explicit belief model, we approximate belief using a vector-based memory that retrieves relevant multimodal
+    context, which is incorporated into the VLM for reasoning. We further refine decision-making using
+    a reinforcement learning policy over the VLM latent space. We evaluate our approach on publicly available
+    VQA datasets such as HD-EPIC and demonstrate consistent improvements over zero-shot baselines, highlighting
+    the importance of belief-aware reasoning.
+  url: https://arxiv.org/abs/2604.09686
+  pdf_url: https://arxiv.org/pdf/2604.09686v2
+  version: v2
+fetched: '2026-11-14'

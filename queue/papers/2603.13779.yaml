@@ -1,0 +1,50 @@
+id: paper:arxiv:2603.13779
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'AD-Copilot: A Vision-Language Assistant for Industrial Anomaly Detection via Visual In-context
+    Comparison'
+  authors:
+  - Xi Jiang
+  - Yue Guo
+  - Jian Li
+  - Yong Liu
+  - Bin-Bin Gao
+  - Hanqiu Deng
+  - Jun Liu
+  - Heng Zhao
+  - Chengjie Wang
+  - Feng Zheng
+  published: '2026-03-14'
+  updated: '2026-04-21'
+  categories:
+  - cs.CV
+  - cs.AI
+  abstract: Multimodal Large Language Models (MLLMs) have achieved impressive success in natural visual
+    understanding, yet they consistently underperform in industrial anomaly detection (IAD). This is because
+    MLLMs trained mostly on general web data differ significantly from industrial images. Moreover, they
+    encode each image independently and can only compare images in the language space, making them insensitive
+    to subtle visual differences that are key to IAD. To tackle these issues, we present AD-Copilot, an
+    interactive MLLM specialized for IAD via visual in-context comparison. We first design a novel data
+    curation pipeline to mine inspection knowledge from sparsely labeled industrial images and generate
+    precise samples for captioning, VQA, and defect localization, yielding a large-scale multimodal dataset
+    Chat-AD rich in semantic signals for IAD. On this foundation, AD-Copilot incorporates a novel Comparison
+    Encoder that employs cross-attention between paired image features to enhance multi-image fine-grained
+    perception, and is trained with a multi-stage strategy that incorporates domain knowledge and gradually
+    enhances IAD skills. In addition, we introduce MMAD-BBox, an extended benchmark for anomaly localization
+    with bounding-box-based evaluation. The experiments show that AD-Copilot achieves 82.3% accuracy on
+    the MMAD benchmark, outperforming all other models without any data leakage. In the MMAD-BBox test,
+    it achieves a maximum improvement of $3.35\times$ over the baseline. AD-Copilot also exhibits excellent
+    generalization of its performance gains across other specialized and general-purpose benchmarks. Remarkably,
+    AD-Copilot surpasses human expert-level performance on several IAD tasks, demonstrating its potential
+    as a reliable assistant for real-world industrial inspection. All datasets and models will be released
+    for the broader benefit of the community.
+  url: https://arxiv.org/abs/2603.13779
+  pdf_url: https://arxiv.org/pdf/2603.13779v2
+  version: v2
+fetched: '2026-11-14'

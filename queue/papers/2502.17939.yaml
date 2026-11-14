@@ -1,0 +1,52 @@
+id: paper:arxiv:2502.17939
+status: skipped_low_citation
+score: 7
+track: immersive_media
+matched:
+- ref: codec:G-PCC
+  count: 1
+  weight: 3
+- ref: codec:V-PCC
+  count: 1
+  weight: 3
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+meta:
+  title: 'Deep-JGAC: End-to-End Deep Joint Geometry and Attribute Compression for Dense Colored Point
+    Clouds'
+  authors:
+  - Yun Zhang
+  - Zixi Guo
+  - Linwei Zhu
+  - C. -C. Jay Kuo
+  published: '2025-02-25'
+  updated: '2025-02-25'
+  categories:
+  - cs.MM
+  - cs.CV
+  abstract: Colored point cloud becomes a fundamental representation in the realm of 3D vision. Effective
+    Point Cloud Compression (PCC) is urgently needed due to huge amount of data. In this paper, we propose
+    an end-to-end Deep Joint Geometry and Attribute point cloud Compression (Deep-JGAC) framework for
+    dense colored point clouds, which exploits the correlation between the geometry and attribute for
+    high compression efficiency. Firstly, we propose a flexible Deep-JGAC framework, where the geometry
+    and attribute sub-encoders are compatible to either learning or non-learning based geometry and attribute
+    encoders. Secondly, we propose an attribute-assisted deep geometry encoder that enhances the geometry
+    latent representation with the help of attribute, where the geometry decoding remains unchanged. Moreover,
+    Attribute Information Fusion Module (AIFM) is proposed to fuse attribute information in geometry coding.
+    Thirdly, to solve the mismatch between the point cloud geometry and attribute caused by the geometry
+    compression distortion, we present an optimized re-colorization module to attach the attribute to
+    the geometrically distorted point cloud for attribute coding. It enhances the colorization and lowers
+    the computational complexity. Extensive experimental results demonstrate that in terms of the geometry
+    quality metric D1-PSNR, the proposed Deep-JGAC achieves an average of 82.96%, 36.46%, 41.72%, and
+    31.16% bit-rate reductions as compared to the state-of-the-art G-PCC, V-PCC, GRASP, and PCGCv2, respectively.
+    In terms of perceptual joint quality metric MS-GraphSIM, the proposed Deep-JGAC achieves an average
+    of 48.72%, 14.67%, and 57.14% bit-rate reductions compared to the G-PCC, V-PCC, and IT-DL-PCC, respectively.
+    The encoding/decoding time costs are also reduced by 94.29%/24.70%, and 96.75%/91.02% on average as
+    compared with the V-PCC and IT-DL-PCC.
+  url: https://arxiv.org/abs/2502.17939
+  pdf_url: https://arxiv.org/pdf/2502.17939v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 4
+citation_year: 2025

@@ -1,0 +1,46 @@
+id: paper:arxiv:2508.06178
+status: skipped_low_citation
+score: 2
+track: self_improvement
+matched:
+- ref: concept:LLM
+  count: 1
+  weight: 1
+- ref: concept:SelfImprovement
+  count: 1
+  weight: 1
+meta:
+  title: Comparing Knowledge Injection Methods for LLMs in a Low-Resource Regime
+  authors:
+  - Hugo Abonizio
+  - Thales Almeida
+  - Roberto Lotufo
+  - Rodrigo Nogueira
+  published: '2025-08-08'
+  updated: '2025-08-08'
+  categories:
+  - cs.CL
+  abstract: Large language models (LLMs) often require vast amounts of text to effectively acquire new
+    knowledge. While continuing pre-training on large corpora or employing retrieval-augmented generation
+    (RAG) has proven successful, updating an LLM with only a few thousand or million tokens remains challenging.
+    In this work, we investigate the task of injecting small, unstructured information into LLMs and its
+    relation to the catastrophic forgetting phenomenon. We use a dataset of recent news -- ensuring no
+    overlap with the model's pre-training data -- to evaluate the knowledge acquisition by probing the
+    model with question-answer pairs related the learned information. Starting from a continued pre-training
+    baseline, we explored different augmentation algorithms to generate synthetic data to improve the
+    knowledge acquisition capabilities. Our experiments show that simply continuing pre-training on limited
+    data yields modest improvements, whereas exposing the model to diverse textual variations significantly
+    improves the learning of new facts -- particularly with methods that induce greater variability through
+    diverse prompting. Furthermore, we shed light on the forgetting phenomenon in small-data regimes,
+    illustrating the delicate balance between learning new content and retaining existing capabilities.
+    We also confirm the sensitivity of RAG-based approaches for knowledge injection, which often lead
+    to greater degradation on control datasets compared to parametric methods. Finally, we demonstrate
+    that models can generate effective synthetic training data themselves, suggesting a pathway toward
+    self-improving model updates. All code and generated data used in our experiments are publicly available,
+    providing a resource for studying efficient knowledge injection in LLMs with limited data at https://github.com/hugoabonizio/knowledge-injection-methods.
+  url: https://arxiv.org/abs/2508.06178
+  pdf_url: https://arxiv.org/pdf/2508.06178v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 3
+citation_year: 2025

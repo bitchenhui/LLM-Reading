@@ -1,0 +1,53 @@
+id: paper:arxiv:2510.22812
+status: skipped_low_citation
+score: 6
+track: video_image_coding
+matched:
+- ref: impl:C3
+  count: 1
+  weight: 3
+- ref: concept:3DGS
+  count: 4
+  weight: 1
+- ref: concept:EntropyModel
+  count: 1
+  weight: 1
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+meta:
+  title: Region-Adaptive Learned Hierarchical Encoding for 3D Gaussian Splatting Data
+  authors:
+  - Shashank N. Sridhara
+  - Birendra Kathariya
+  - Fangjun Pu
+  - Peng Yin
+  - Eduardo Pavez
+  - Antonio Ortega
+  published: '2025-10-26'
+  updated: '2025-10-26'
+  categories:
+  - eess.IV
+  - cs.MM
+  abstract: We introduce Region-Adaptive Learned Hierarchical Encoding (RALHE) for 3D Gaussian Splatting
+    (3DGS) data. While 3DGS has recently become popular for novel view synthesis, the size of trained
+    models limits its deployment in bandwidth-constrained applications such as volumetric media streaming.
+    To address this, we propose a learned hierarchical latent representation that builds upon the principles
+    of "overfitted" learned image compression (e.g., Cool-Chic and C3) to efficiently encode 3DGS attributes.
+    Unlike images, 3DGS data have irregular spatial distributions of Gaussians (geometry) and consist
+    of multiple attributes (signals) defined on the irregular geometry. Our codec is designed to account
+    for these differences between images and 3DGS. Specifically, we leverage the octree structure of the
+    voxelized 3DGS geometry to obtain a hierarchical multi-resolution representation. Our approach overfits
+    latents to each Gaussian attribute under a global rate constraint. These latents are decoded independently
+    through a lightweight decoder network. To estimate the bitrate during training, we employ an autoregressive
+    probability model that leverages octree-derived contexts from the 3D point structure. The multi-resolution
+    latents, decoder, and autoregressive entropy coding networks are jointly optimized for each Gaussian
+    attribute. Experiments demonstrate that the proposed RALHE compression framework achieves a rendering
+    PSNR gain of up to 2dB at low bitrates (less than 1 MB) compared to the baseline 3DGS compression
+    methods.
+  url: https://arxiv.org/abs/2510.22812
+  pdf_url: https://arxiv.org/pdf/2510.22812v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 3
+citation_year: 2025

@@ -1,0 +1,41 @@
+id: paper:arxiv:2404.05600
+status: skipped
+score: 1
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+meta:
+  title: 'SpeechAlign: Aligning Speech Generation to Human Preferences'
+  authors:
+  - Dong Zhang
+  - Zhaowei Li
+  - Shimin Li
+  - Xin Zhang
+  - Pengyu Wang
+  - Yaqian Zhou
+  - Xipeng Qiu
+  published: '2024-04-08'
+  updated: '2024-04-08'
+  categories:
+  - cs.CL
+  - cs.SD
+  - eess.AS
+  abstract: Speech language models have significantly advanced in generating realistic speech, with neural
+    codec language models standing out. However, the integration of human feedback to align speech outputs
+    to human preferences is often neglected. This paper addresses this gap by first analyzing the distribution
+    gap in codec language models, highlighting how it leads to discrepancies between the training and
+    inference phases, which negatively affects performance. Then we explore leveraging learning from human
+    feedback to bridge the distribution gap. We introduce SpeechAlign, an iterative self-improvement strategy
+    that aligns speech language models to human preferences. SpeechAlign involves constructing a preference
+    codec dataset contrasting golden codec tokens against synthetic tokens, followed by preference optimization
+    to improve the codec language model. This cycle of improvement is carried out iteratively to steadily
+    convert weak models to strong ones. Through both subjective and objective evaluations, we show that
+    SpeechAlign can bridge the distribution gap and facilitating continuous self-improvement of the speech
+    language model. Moreover, SpeechAlign exhibits robust generalization capabilities and works for smaller
+    models. Code and models will be available at https://github.com/0nutation/SpeechGPT.
+  url: https://arxiv.org/abs/2404.05600
+  pdf_url: https://arxiv.org/pdf/2404.05600v1
+  version: v1
+fetched: '2026-11-14'

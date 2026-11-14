@@ -1,0 +1,43 @@
+id: paper:arxiv:2405.19716
+status: skipped
+score: 0
+track: self_improvement
+matched: []
+meta:
+  title: Enhancing Large Vision Language Models with Self-Training on Image Comprehension
+  authors:
+  - Yihe Deng
+  - Pan Lu
+  - Fan Yin
+  - Ziniu Hu
+  - Sheng Shen
+  - Quanquan Gu
+  - James Zou
+  - Kai-Wei Chang
+  - Wei Wang
+  published: '2024-05-30'
+  updated: '2024-11-24'
+  categories:
+  - cs.CV
+  - cs.CL
+  abstract: Large vision language models (LVLMs) integrate large language models (LLMs) with pre-trained
+    vision encoders, thereby activating the perception capability of the model to understand image inputs
+    for different queries and conduct subsequent reasoning. Improving this capability requires high-quality
+    vision-language data, which is costly and labor-intensive to acquire. Self-training approaches have
+    been effective in single-modal settings to alleviate the need for labeled data by leveraging model's
+    own generation. However, effective self-training remains a challenge regarding the unique visual perception
+    and reasoning capability of LVLMs. To address this, we introduce Self-Training on Image Comprehension
+    (STIC), which emphasizes a self-training approach specifically for image comprehension. First, the
+    model self-constructs a preference dataset for image descriptions using unlabeled images. Preferred
+    responses are generated through a step-by-step prompt, while dis-preferred responses are generated
+    from either corrupted images or misleading prompts. To further self-improve reasoning on the extracted
+    visual information, we let the model reuse a small portion of existing instruction-tuning data and
+    append its self-generated image descriptions to the prompts. We validate the effectiveness of STIC
+    across seven different benchmarks, demonstrating substantial performance gains of 4.0% on average
+    while using 70% less supervised fine-tuning data than the current method. Further studies investigate
+    various components of STIC and highlight its potential to leverage vast quantities of unlabeled images
+    for self-training. Code and data are made publicly available.
+  url: https://arxiv.org/abs/2405.19716
+  pdf_url: https://arxiv.org/pdf/2405.19716v2
+  version: v2
+fetched: '2026-11-14'

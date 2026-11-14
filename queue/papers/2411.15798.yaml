@@ -1,0 +1,37 @@
+id: paper:arxiv:2411.15798
+status: pending
+score: 3
+track: video_image_coding
+matched:
+- ref: codec:VVC
+  count: 1
+  weight: 3
+meta:
+  title: 'M3-CVC: Controllable Video Compression with Multimodal Generative Models'
+  authors:
+  - Rui Wan
+  - Qi Zheng
+  - Yibo Fan
+  published: '2024-11-24'
+  updated: '2024-12-25'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: Traditional and neural video codecs commonly encounter limitations in controllability and
+    generality under ultra-low-bitrate coding scenarios. To overcome these challenges, we propose M3-CVC,
+    a controllable video compression framework incorporating multimodal generative models. The framework
+    utilizes a semantic-motion composite strategy for keyframe selection to retain critical information.
+    For each keyframe and its corresponding video clip, a dialogue-based large multimodal model (LMM)
+    approach extracts hierarchical spatiotemporal details, enabling both inter-frame and intra-frame representations
+    for improved video fidelity while enhancing encoding interpretability. M3-CVC further employs a conditional
+    diffusion-based, text-guided keyframe compression method, achieving high fidelity in frame reconstruction.
+    During decoding, textual descriptions derived from LMMs guide the diffusion process to restore the
+    original video's content accurately. Experimental results demonstrate that M3-CVC significantly outperforms
+    the state-of-the-art VVC standard in ultra-low bitrate scenarios, particularly in preserving semantic
+    and perceptual fidelity.
+  url: https://arxiv.org/abs/2411.15798
+  pdf_url: https://arxiv.org/pdf/2411.15798v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 12
+citation_year: 2024

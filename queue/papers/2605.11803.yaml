@@ -1,0 +1,50 @@
+id: paper:arxiv:2605.11803
+status: pending
+score: 2
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+- ref: concept:TrainingFree
+  count: 1
+  weight: 1
+meta:
+  title: 'OTT-Vid: Optimal Transport Temporal Token Compression for Video Large Language Models'
+  authors:
+  - Minseok Kang
+  - Minhyeok Lee
+  - Jungho Lee
+  - Minjung Kim
+  - Donghyeong Kim
+  - Dayeon Lee
+  - Heeseung Choi
+  - Ig-jae Kim
+  - Sangyoun Lee
+  published: '2026-05-12'
+  updated: '2026-05-12'
+  categories:
+  - cs.CV
+  - cs.AI
+  abstract: 'As Video Large Language Models (Video-LLMs) scale to longer and more complex videos, their
+    inference cost grows rapidly due to the large volume of visual tokens accumulated across frames. Training-free
+    token compression has emerged as a practical solution to this bottleneck. However, existing temporal
+    compression methods rely primarily on cross-frame token similarity or segmentation heuristics, overlooking
+    each token''s semantic role within its frame and failing to adapt compression strength to the compressibility
+    of each frame pair. In this work, we propose OTT-Vid, a transport-derived allocation framework for
+    temporal token compression. Our approach consists of two stages: spatial pruning identifies representative
+    content within each frame, and optimal transport (OT) is then solved between neighboring frames to
+    estimate temporal compressibility. We formulate this OT with non-uniform token mass, which protects
+    semantically important tokens from aggressive compression, and a locality-aware cost that captures
+    both feature and spatial disparities. The resulting transport plan jointly balances token importance
+    and matching cost, while its total cost defines the transport difficulty of each frame pair, which
+    we use to allocate compression budgets dynamically. Experiments on six benchmarks spanning video question
+    answering and temporal grounding show that OTT-Vid preserves 95.8% of VQA and 73.9% of VTG performance
+    while retaining only 10% of tokens, consistently outperforming existing state-of-the-art training-free
+    compression methods.'
+  url: https://arxiv.org/abs/2605.11803
+  pdf_url: https://arxiv.org/pdf/2605.11803v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 2
+citation_year: 2026

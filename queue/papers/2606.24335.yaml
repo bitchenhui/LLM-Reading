@@ -1,0 +1,43 @@
+id: paper:arxiv:2606.24335
+status: pending
+score: 2
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: 'Ill-Posed by Design: Probing Evidence Use in VLMs'
+  authors:
+  - Boaz Meivar
+  - Shaked Perek
+  - Shani Shvartzman
+  - Eli Schwartz
+  - Shai Avidan
+  published: '2026-06-23'
+  updated: '2026-06-23'
+  categories:
+  - cs.CV
+  abstract: 'Counterfactual analysis is widely used to study evidence use in vision-language models, but
+    its diagnostic value is limited on well-posed tasks: when several cues independently support the same
+    answer, removing one may not change the prediction. We propose monocular metric object-size estimation
+    as an ill-posed diagnostic setting for evidence selection: because physical size cannot be determined
+    from a single uncalibrated image, models must rely on imperfect cues category priors, target appearance,
+    local context, apparent image size, and scene geometry. We assemble Metric VQA ($10{,}813$ dimension
+    queries from Objectron and $331$ tape-measured in-the-wild scenes) and evaluate $12$ open-weight VLMs
+    ($3$--$397$\,B parameters) with counterfactual analysis decomposing six visual and language evidence
+    channels. Even the largest VLMs tested (Qwen3-VL-235B, Qwen3.5-397B, InternVL3.5-241B) trail a text-only
+    frontier LLM on the in-the-wild split. The diagnostic analysis shows: target identity is the most
+    load-bearing cue, target pixels and local context help only some models, apparent size shifts predictions
+    without a directional readout, and global scene geometry is largely unused. We analyze LoRA fine-tuning
+    as an actionable intervention specific to metric estimation: while the task is learnable, the models
+    do not learn to leverage scene geometry.'
+  url: https://arxiv.org/abs/2606.24335
+  pdf_url: https://arxiv.org/pdf/2606.24335v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 2
+citation_year: 2026

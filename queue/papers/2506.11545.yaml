@@ -1,0 +1,40 @@
+id: paper:arxiv:2506.11545
+status: skipped
+score: 1
+track: processing_enhancement
+matched:
+- ref: concept:SuperResolution
+  count: 1
+  weight: 1
+meta:
+  title: 'FCA2: Frame Compression-Aware Autoencoder for Modular and Fast Compressed Video Super-Resolution'
+  authors:
+  - Zhaoyang Wang
+  - Jie Li
+  - Wen Lu
+  - Lihuo He
+  - Maoguo Gong
+  - Xinbo Gao
+  published: '2025-06-13'
+  updated: '2025-06-13'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: State-of-the-art (SOTA) compressed video super-resolution (CVSR) models face persistent challenges,
+    including prolonged inference time, complex training pipelines, and reliance on auxiliary information.
+    As video frame rates continue to increase, the diminishing inter-frame differences further expose
+    the limitations of traditional frame-to-frame information exploitation methods, which are inadequate
+    for addressing current video super-resolution (VSR) demands. To overcome these challenges, we propose
+    an efficient and scalable solution inspired by the structural and statistical similarities between
+    hyperspectral images (HSI) and video data. Our approach introduces a compression-driven dimensionality
+    reduction strategy that reduces computational complexity, accelerates inference, and enhances the
+    extraction of temporal information across frames. The proposed modular architecture is designed for
+    seamless integration with existing VSR frameworks, ensuring strong adaptability and transferability
+    across diverse applications. Experimental results demonstrate that our method achieves performance
+    on par with, or surpassing, the current SOTA models, while significantly reducing inference time.
+    By addressing key bottlenecks in CVSR, our work offers a practical and efficient pathway for advancing
+    VSR technology. Our code will be publicly available at https://github.com/handsomewzy/FCA2.
+  url: https://arxiv.org/abs/2506.11545
+  pdf_url: https://arxiv.org/pdf/2506.11545v1
+  version: v1
+fetched: '2026-11-14'

@@ -1,0 +1,45 @@
+id: paper:arxiv:2510.16841
+status: skipped
+score: 1
+track: audio_coding
+matched:
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: 'SAC: Neural Speech Codec with Semantic-Acoustic Dual-Stream Quantization'
+  authors:
+  - Wenxi Chen
+  - Xinsheng Wang
+  - Ruiqi Yan
+  - Yushen Chen
+  - Zhikang Niu
+  - Ziyang Ma
+  - Xiquan Li
+  - Yuzhe Liang
+  - Hanlin Wen
+  - Shunshun Yin
+  - Ming Tao
+  - Xie Chen
+  published: '2025-10-19'
+  updated: '2025-12-14'
+  categories:
+  - eess.AS
+  - cs.SD
+  abstract: Speech codecs that convert continuous speech signals into discrete tokens have become essential
+    for speech language models. However, existing codecs struggle to balance high-quality reconstruction
+    with semantically rich representations, limiting their effectiveness in both generative and understanding
+    tasks. In this work, we propose SAC, a neural speech codec with semantic-acoustic dual-stream quantization.
+    By disentangling semantic and acoustic modeling into two dedicated streams, SAC enables each to be
+    optimized for its respective role. Comprehensive evaluations show that SAC achieves strong reconstruction
+    performance across diverse bitrates under both clean and noisy conditions, with particularly high
+    scores on UTMOS and WER, indicating superior naturalness and intelligibility. Moreover, SAC substantially
+    surpasses prior codecs in semantic representation, approaching the level of continuous self-supervised
+    embeddings. When used as a tokenizer for LLM-based text-to-speech, SAC enables a single-stage autoregressive
+    (AR) TTS model that clearly outperforms state-of-the-art AR systems. Our disentanglement analysis
+    further validates the effectiveness of the dual-stream design, offering new potential for controllable
+    speech generation.
+  url: https://arxiv.org/abs/2510.16841
+  pdf_url: https://arxiv.org/pdf/2510.16841v2
+  version: v2
+fetched: '2026-11-14'

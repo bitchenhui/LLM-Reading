@@ -1,0 +1,39 @@
+id: paper:arxiv:2605.29402
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'Semantic and Visual Evidence for Efficient Long-Video Reasoning: A Solution for the HD-EPIC
+    VQA Challenge'
+  authors:
+  - Yinsong Xu
+  - Wei Jing
+  - Liuxin Zhang
+  - Wanjun Lv
+  - Hui Li
+  published: '2026-05-28'
+  updated: '2026-05-28'
+  categories:
+  - cs.CV
+  - cs.AI
+  abstract: 'Understanding long-form egocentric videos remains challenging for multimodal large language
+    models (MLLMs) due to limited context length and insufficient grounding of fine-grained visual details.
+    The recently proposed HD-EPIC benchmark highlights these limitations: even strong long-context models
+    achieve relatively low performance across diverse video question answering tasks. In this paper, we
+    propose a unified framework that decouples long-video reasoning into two complementary forms of evidence:
+    semantic evidence and visual evidence. Semantic evidence captures global procedural structure through
+    a coarse-to-fine extraction pipeline, while object-centric visual evidence preserves fine-grained
+    grounding through bounding boxes and visual embeddings. During inference, we formulate reasoning as
+    a query-conditioned evidence retrieval and integration process, dynamically selecting relevant information
+    from both sources. Our approach achieves competitive performance in the HD-EPIC-VQA Challenge across
+    multiple task categories. More broadly, our results demonstrate that explicitly structuring, retrieving,
+    and integrating semantic and visual evidence is critical for effective long-video understanding with
+    MLLMs.'
+  url: https://arxiv.org/abs/2605.29402
+  pdf_url: https://arxiv.org/pdf/2605.29402v1
+  version: v1
+fetched: '2026-11-14'

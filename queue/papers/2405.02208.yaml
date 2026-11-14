@@ -1,0 +1,44 @@
+id: paper:arxiv:2405.02208
+status: skipped_low_citation
+score: 2
+track: processing_enhancement
+matched:
+- ref: concept:IQA
+  count: 3
+  weight: 1
+- ref: concept:SuperResolution
+  count: 1
+  weight: 1
+meta:
+  title: Reference-Free Image Quality Metric for Degradation and Reconstruction Artifacts
+  authors:
+  - Han Cui
+  - Alfredo De Goyeneche
+  - Efrat Shimron
+  - Boyuan Ma
+  - Michael Lustig
+  published: '2024-05-01'
+  updated: '2024-05-01'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: 'Image Quality Assessment (IQA) is essential in various Computer Vision tasks such as image
+    deblurring and super-resolution. However, most IQA methods require reference images, which are not
+    always available. While there are some reference-free IQA metrics, they have limitations in simulating
+    human perception and discerning subtle image quality variations. We hypothesize that the JPEG quality
+    factor is representatives of image quality measurement, and a well-trained neural network can learn
+    to accurately evaluate image quality without requiring a clean reference, as it can recognize image
+    degradation artifacts based on prior knowledge. Thus, we developed a reference-free quality evaluation
+    network, dubbed "Quality Factor (QF) Predictor", which does not require any reference. Our QF Predictor
+    is a lightweight, fully convolutional network comprising seven layers. The model is trained in a self-supervised
+    manner: it receives JPEG compressed image patch with a random QF as input, is trained to accurately
+    predict the corresponding QF. We demonstrate the versatility of the model by applying it to various
+    tasks. First, our QF Predictor can generalize to measure the severity of various image artifacts,
+    such as Gaussian Blur and Gaussian noise. Second, we show that the QF Predictor can be trained to
+    predict the undersampling rate of images reconstructed from Magnetic Resonance Imaging (MRI) data.'
+  url: https://arxiv.org/abs/2405.02208
+  pdf_url: https://arxiv.org/pdf/2405.02208v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 0
+citation_year: 2024

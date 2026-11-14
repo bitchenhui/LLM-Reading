@@ -1,0 +1,49 @@
+id: paper:arxiv:2110.14638
+status: pending
+score: 2
+track: processing_enhancement
+matched:
+- ref: concept:SuperResolution
+  count: 2
+  weight: 1
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+meta:
+  title: Improving Super-Resolution Performance using Meta-Attention Layers
+  authors:
+  - Matthew Aquilina
+  - Christian Galea
+  - John Abela
+  - Kenneth P. Camilleri
+  - Reuben A. Farrugia
+  published: '2021-10-27'
+  updated: '2021-10-27'
+  categories:
+  - eess.IV
+  - cs.CV
+  - cs.LG
+  abstract: Convolutional Neural Networks (CNNs) have achieved impressive results across many super-resolution
+    (SR) and image restoration tasks. While many such networks can upscale low-resolution (LR) images
+    using just the raw pixel-level information, the ill-posed nature of SR can make it difficult to accurately
+    super-resolve an image which has undergone multiple different degradations. Additional information
+    (metadata) describing the degradation process (such as the blur kernel applied, compression level,
+    etc.) can guide networks to super-resolve LR images with higher fidelity to the original source. Previous
+    attempts at informing SR networks with degradation parameters have indeed been able to improve performance
+    in a number of scenarios. However, due to the fully-convolutional nature of many SR networks, most
+    of these metadata fusion methods either require a complete architectural change, or necessitate the
+    addition of significant extra complexity. Thus, these approaches are difficult to introduce into arbitrary
+    SR networks without considerable design alterations. In this paper, we introduce meta-attention, a
+    simple mechanism which allows any SR CNN to exploit the information available in relevant degradation
+    parameters. The mechanism functions by translating the metadata into a channel attention vector, which
+    in turn selectively modulates the network's feature maps. Incorporating meta-attention into SR networks
+    is straightforward, as it requires no specific type of architecture to function correctly. Extensive
+    testing has shown that meta-attention can consistently improve the pixel-level accuracy of state-of-the-art
+    (SOTA) networks when provided with relevant degradation metadata. For PSNR, the gain on blurred/downsampled
+    (X4) images is of 0.2969 dB (on average) and 0.3320 dB for SOTA general and face SR models, respectively.
+  url: https://arxiv.org/abs/2110.14638
+  pdf_url: https://arxiv.org/pdf/2110.14638v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 8
+citation_year: 2021

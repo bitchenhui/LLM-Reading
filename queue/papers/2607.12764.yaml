@@ -1,0 +1,56 @@
+id: paper:arxiv:2607.12764
+status: pending
+score: 2
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+- ref: concept:SelfImprovement
+  count: 1
+  weight: 1
+meta:
+  title: 'EvoGraph-R1: Self-Evolving Multimodal Knowledge Hypergraphs for Agentic Retrieval'
+  authors:
+  - Jiashi Lin
+  - Changhong Jiang
+  - Xiangru Lin
+  - Ruifei Zhang
+  - Xinyi Zhu
+  - Jiyao Liu
+  - Cheng Tang
+  - Ye Du
+  - Shujian Gao
+  - Junzhi Ning
+  - Lihao Liu
+  - Ziyan Huang
+  - Tianbin Li
+  - Jin Ye
+  - Junjun He
+  published: '2026-07-14'
+  updated: '2026-07-14'
+  categories:
+  - cs.CV
+  abstract: 'Retrieval-augmented generation (RAG) has emerged as a critical paradigm for grounding Multimodal
+    Large Language Models (MLLMs) in external knowledge. Recent GraphRAG methods introduce structured
+    entity-relation graphs to improve retrieval and reasoning. However, they remain limited by treating
+    knowledge graphs as static data structures built offline and queried in a single pass. This static
+    paradigm misaligns with the interactive, iterative nature of knowledge-intensive reasoning, creating
+    three bottlenecks: (i) text-centric fragmentation that impedes cross-modal reasoning, (ii) frozen
+    structures unable to incorporate new evidence or correct errors, and (iii) rigid single-pass retrieval
+    without adaptive refinement. To overcome these limitations, we introduce EvoGraph-R1, a self-evolving
+    GraphRAG framework that reconceptualizes knowledge graphs as dynamic environments shaped through agent
+    interactions. We formulate retrieval as a Markov Decision Process (MDP) where the agent observes the
+    graph state and executes actions to query (GraphRetrieve), expand (WebSearch), refine (GraphEdit),
+    or terminate (Answer) the reasoning. These actions reshape the hypergraph structure and generate feedback
+    signals that guide subsequent evolution. Through this closed loop, the hypergraph evolves by integrating
+    new evidence, correcting errors, and refining structure to support multi-hop reasoning. Experiments
+    on multimodal VQA and text QA benchmarks demonstrate substantial improvements over existing RAG baselines
+    in accuracy, coverage, and traceability, establishing self-evolving knowledge graphs as a fundamental
+    paradigm across modalities.'
+  url: https://arxiv.org/abs/2607.12764
+  pdf_url: https://arxiv.org/pdf/2607.12764v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 3
+citation_year: 2026

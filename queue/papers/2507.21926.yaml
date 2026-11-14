@@ -1,0 +1,39 @@
+id: paper:arxiv:2507.21926
+status: skipped_low_citation
+score: 6
+track: video_image_coding
+matched:
+- ref: codec:HEVC
+  count: 1
+  weight: 3
+- ref: codec:VVC
+  count: 1
+  weight: 3
+meta:
+  title: Efficient Sub-pixel Motion Compensation in Learned Video Codecs
+  authors:
+  - Théo Ladune
+  - Thomas Leguay
+  - Pierrick Philippe
+  - Gordon Clare
+  - Félix Henry
+  published: '2025-07-29'
+  updated: '2025-09-23'
+  categories:
+  - cs.MM
+  - eess.IV
+  abstract: Motion compensation is a key component of video codecs. Conventional codecs (HEVC and VVC)
+    have carefully refined this coding step, with an important focus on sub-pixel motion compensation.
+    On the other hand, learned codecs achieve sub-pixel motion compensation through simple bilinear filtering.
+    This paper offers to improve learned codec motion compensation by drawing inspiration from conventional
+    codecs. It is shown that the usage of more advanced interpolation filters, block-based motion information
+    and finite motion accuracy lead to better compression performance and lower decoding complexity. Experimental
+    results are provided on the Cool-chic video codec, where we demonstrate a rate decrease of more than
+    10% and a lowering of motion-related decoding complexity from 391 MAC per pixel to 214 MAC per pixel.
+    All contributions are made open-source at https://github.com/Orange-OpenSource/Cool-Chic
+  url: https://arxiv.org/abs/2507.21926
+  pdf_url: https://arxiv.org/pdf/2507.21926v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 2
+citation_year: 2025

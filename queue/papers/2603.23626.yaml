@@ -1,0 +1,43 @@
+id: paper:arxiv:2603.23626
+status: skipped_low_citation
+score: 2
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: A Theory of LLM Information Susceptibility
+  authors:
+  - Zhuo-Yang Song
+  - Hua Xing Zhu
+  published: '2026-03-24'
+  updated: '2026-03-24'
+  categories:
+  - cs.LG
+  - cond-mat.stat-mech
+  - cs.AI
+  - cs.CL
+  - nlin.AO
+  abstract: Large language models (LLMs) are increasingly deployed as optimization modules in agentic
+    systems, yet the fundamental limits of such LLM-mediated improvement remain poorly understood. Here
+    we propose a theory of LLM information susceptibility, centred on the hypothesis that when computational
+    resources are sufficiently large, the intervention of a fixed LLM does not increase the performance
+    susceptibility of a strategy set with respect to budget. We develop a multi-variable utility-function
+    framework that generalizes this hypothesis to architectures with multiple co-varying budget channels,
+    and discuss the conditions under which co-scaling can exceed the susceptibility bound. We validate
+    the theory empirically across structurally diverse domains and model scales spanning an order of magnitude,
+    and show that nested, co-scaling architectures open response channels unavailable to fixed configurations.
+    These results clarify when LLM intervention helps and when it does not, demonstrating that tools from
+    statistical physics can provide predictive constraints for the design of AI systems. If the susceptibility
+    hypothesis holds generally, the theory suggests that nested architectures may be a necessary structural
+    condition for open-ended agentic self-improvement.
+  url: https://arxiv.org/abs/2603.23626
+  pdf_url: https://arxiv.org/pdf/2603.23626v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 1
+citation_year: 2026

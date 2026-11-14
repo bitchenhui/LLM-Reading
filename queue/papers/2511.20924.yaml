@@ -1,0 +1,46 @@
+id: paper:arxiv:2511.20924
+status: skipped_low_citation
+score: 2
+track: processing_enhancement
+matched:
+- ref: concept:INR
+  count: 2
+  weight: 1
+- ref: concept:SuperResolution
+  count: 1
+  weight: 1
+meta:
+  title: 'GaINeR: Geometry-Aware Implicit Network Representation'
+  authors:
+  - Weronika Jakubowska
+  - Mikołaj Zieliński
+  - Rafał Tobiasz
+  - Krzysztof Byrski
+  - Maciej Zięba
+  - Dominik Belter
+  - Przemysław Spurek
+  published: '2025-11-25'
+  updated: '2026-03-24'
+  categories:
+  - cs.CV
+  abstract: Implicit Neural Representations (INRs) are widely used for modeling continuous 2D images,
+    enabling high-fidelity reconstruction, super-resolution, and compression. Architectures such as SIREN,
+    WIRE, and FINER demonstrate their ability to capture fine image details. However, conventional INRs
+    lack explicit geometric structure, limiting local editing, and integration with physical simulation.
+    To address these limitations, we propose GaINeR (Geometry-Aware Implicit Neural Representation for
+    Image Editing), a novel framework for 2D images that combines trainable Gaussian distributions with
+    a neural network-based INR. For a given image coordinate, the model retrieves the K nearest Gaussians,
+    aggregates distance-weighted embeddings, and predicts the RGB value via a neural network. This design
+    enables continuous image representation, interpretable geometric structure, and flexible local editing,
+    providing a foundation for physically aware and interactive image manipulation. Our method supports
+    geometry-consistent transformations, seamless super-resolution, and integration with physics-based
+    simulations. Moreover, the Gaussian representation allows lifting a single 2D image into a geometry-aware
+    3D representation, enabling depth-guided editing. Experiments demonstrate that GaINeR achieves state-of-the-art
+    reconstruction quality while maintaining flexible and physically consistent image editing. The official
+    implementation of our method is publicly available at https://github.com/WJakubowska/GaINeR.
+  url: https://arxiv.org/abs/2511.20924
+  pdf_url: https://arxiv.org/pdf/2511.20924v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 1
+citation_year: 2025

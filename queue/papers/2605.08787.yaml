@@ -1,0 +1,44 @@
+id: paper:arxiv:2605.08787
+status: pending
+score: 2
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: 'Lost in Volume: The CT-SpatialVQA Benchmark for Evaluating Semantic-Spatial Understanding of
+    3D Medical Vision-Language Models'
+  authors:
+  - Mashrafi Monon
+  - Umaima Rahman
+  - Asif Hanif
+  - Numan Saeed
+  - Mohammad Yaqub
+  published: '2026-05-09'
+  updated: '2026-06-19'
+  categories:
+  - cs.CV
+  abstract: Recent advances in 3D medical vision-language models have enabled joint reasoning over volumetric
+    images and text, showing strong performance in medical visual question-answering (VQA) and report
+    generation. Despite this progress, it remains unclear whether these models learn spatially grounded
+    anatomy from 3D volumes or rely primarily on learned priors and language correlations. This uncertainty
+    stems from the lack of systematic evaluation of semantic-spatial reasoning in volumetric medical VLMs
+    for clinically reliable decision support. To address this gap, we introduce CT-SpatialVQA, a benchmark
+    designed to evaluate semantic-spatial reasoning in 3D CT data. The benchmark comprises 9077 clinically
+    grounded question-answer (QA) pairs derived directly from 1601 radiology reports and CT volumes, which
+    are validated via a robust LLM-assisted pipeline with a 95% human consensus agreement rate. Our dataset
+    requires explicit anatomical localization, laterality awareness, structural comparison, and 3D inter-structure
+    relational reasoning. We also introduce a standardized evaluation protocol and benchmark eight 3D
+    medical VLMs, finding severe degradation on semantic-spatial reasoning tasks, averaging 34% accuracy
+    and often below random, highlighting the need for deeper integration of volumetric evidence for trustworthy
+    clinical use.
+  url: https://arxiv.org/abs/2605.08787
+  pdf_url: https://arxiv.org/pdf/2605.08787v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 5
+citation_year: 2026

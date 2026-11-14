@@ -1,0 +1,35 @@
+id: paper:arxiv:2512.20944
+status: skipped
+score: 0
+track: audio_coding
+matched: []
+meta:
+  title: 'SACodec: Asymmetric Quantization with Semantic Anchoring for Low-Bitrate High-Fidelity Neural
+    Speech Codecs'
+  authors:
+  - Zhongren Dong
+  - Bin Wang
+  - Jing Han
+  - Haotian Guo
+  - Xiaojun Mo
+  - Yimin Cao
+  - Zixing Zhang
+  published: '2025-12-24'
+  updated: '2025-12-24'
+  categories:
+  - cs.SD
+  abstract: 'Neural Speech Codecs face a fundamental trade-off at low bitrates: preserving acoustic fidelity
+    often compromises semantic richness. To address this, we introduce SACodec, a novel codec built upon
+    an asymmetric dual-quantizer that employs our proposed Semantic Anchoring mechanism. This design strategically
+    decouples the quantization of Semantic and Acoustic details. The semantic anchoring is achieved via
+    a lightweight projector that aligns acoustic features with a frozen, large-scale mHuBERT codebook,
+    injecting linguistic priors while guaranteeing full codebook utilization. Sequentially, for acoustic
+    details, a residual activation module with SimVQ enables a single-layer quantizer (acoustic path)
+    to faithfully recover fine-grained information. At just 1.5 kbps, SACodec establishes a new state
+    of the art by excelling in both fidelity and semantics: subjective listening tests confirm that its
+    reconstruction quality is perceptually highly comparable to ground-truth audio, while its tokens demonstrate
+    substantially improved semantic richness in downstream tasks.'
+  url: https://arxiv.org/abs/2512.20944
+  pdf_url: https://arxiv.org/pdf/2512.20944v1
+  version: v1
+fetched: '2026-11-14'

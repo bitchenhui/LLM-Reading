@@ -1,0 +1,46 @@
+id: paper:arxiv:2308.03643
+status: pending
+score: 4
+track: streaming_delivery
+matched:
+- ref: concept:ABR
+  count: 3
+  weight: 1
+- ref: concept:QoE
+  count: 3
+  weight: 1
+- ref: concept:QP
+  count: 1
+  weight: 1
+- ref: concept:WebRTC
+  count: 1
+  weight: 1
+meta:
+  title: 'Mamba: Bringing Multi-Dimensional ABR to WebRTC'
+  authors:
+  - Yueheng Li
+  - Zicheng Zhang
+  - Hao Chen
+  - Zhan Ma
+  published: '2023-08-07'
+  updated: '2023-08-07'
+  categories:
+  - cs.MM
+  abstract: Contemporary real-time video communication systems, such as WebRTC, use an adaptive bitrate
+    (ABR) algorithm to assure high-quality and low-delay services, e.g., promptly adjusting video bitrate
+    according to the instantaneous network bandwidth. However, target bitrate decisions in the network
+    and bitrate control in the codec are typically incoordinated and simply ignoring the effect of inappropriate
+    resolution and frame rate settings also leads to compromised results in bitrate control, thus devastatingly
+    deteriorating the quality of experience (QoE). To tackle these challenges, Mamba, an end-to-end multi-dimensional
+    ABR algorithm is proposed, which utilizes multi-agent reinforcement learning (MARL) to maximize the
+    user's QoE by adaptively and collaboratively adjusting encoding factors including the quantization
+    parameters (QP), resolution, and frame rate based on observed states such as network conditions and
+    video complexity information in a video conferencing system. We also introduce curriculum learning
+    to improve the training efficiency of MARL. Both the in-lab and real-world evaluation results demonstrate
+    the remarkable efficacy of Mamba.
+  url: https://arxiv.org/abs/2308.03643
+  pdf_url: https://arxiv.org/pdf/2308.03643v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 21
+citation_year: 2023

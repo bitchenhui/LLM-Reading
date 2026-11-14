@@ -1,0 +1,41 @@
+id: paper:arxiv:2606.25246
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: Multilingual Hematology Visual Question Answering Dataset
+  authors:
+  - Hajra Malik
+  - Hafiza Tooba Aftab
+  - Abdul Rehman
+  - Mohsen Ali
+  - Waqas Sultani
+  published: '2026-06-24'
+  updated: '2026-06-24'
+  categories:
+  - cs.CV
+  - cs.CL
+  abstract: Vision Language Models (VLMs) have shown promising capabilities in medical image analysis
+    by jointly understanding visual and textual information for tasks such as Visual Question Answering.
+    However, existing hematology vision-language resources remain predominantly English centric, limiting
+    their applicability in multilingual healthcare environments. This challenge is releveant generally
+    to South Asia and specifically to Pakistan, where Urdu is widely used despite healthcare information
+    and digital medical systems being largely dependent on English. To investigate this gap, we conducted
+    a survey among healthcare professionals, which revealed substantial language mismatches between clinical
+    documentation and patient communication, emphasizing the need for multilingual healthcare technologies.
+    To address this limitation, we introduce WBCMor VQA, a clinically validated bilingual English, Urdu
+    morphology aware VQA benchmark for leukemia and normal white blood cell analysis. The benchmark is
+    constructed using morphology-aware annotations from LeukemiaAttri and WBCAtt datasets and supported
+    by a domain specific Urdu hematology dictionary to ensure linguistic consistency and clinical correctness.
+    The final benchmark contains 110K bilingual question answer pairs serving as VQA annotations for 20K
+    leukemic and normal single-cell images. Furthermore, we establish baseline performance by evaluating
+    multiple open-source VLMs on the proposed benchmark. The proposed resource aims to facilitate the
+    development of accessible and clinically relevant AI systems for multilingual healthcare environments.
+  url: https://arxiv.org/abs/2606.25246
+  pdf_url: https://arxiv.org/pdf/2606.25246v1
+  version: v1
+fetched: '2026-11-14'

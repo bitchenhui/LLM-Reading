@@ -1,0 +1,35 @@
+id: paper:arxiv:2512.18200
+status: skipped
+score: 0
+track: video_image_coding
+matched: []
+meta:
+  title: 'SLIM: Semantic-based Low-bitrate Image compression for Machines'
+  authors:
+  - Hyeonjin Lee
+  - Jun-Hyuk Kim
+  - Jong-Seok Lee
+  published: '2025-12-20'
+  updated: '2026-10-17'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: 'In recent years, the demand of image compression models for machine vision has increased
+    dramatically. However, the training frameworks of image compression still focus on the vision of human,
+    preserving unnecessary details and limiting bitrate efficiency for machine vision tasks. In this paper,
+    we propose Semantic-based Low-bitrate Image compression for Machines, termed SLIM. This proposed framework
+    consists of two key components: RoI-focused latent compression and semantic latent enhancement with
+    dual cues. First, the latent compressor is trained to focus on Region-of-Interest (RoI) areas that
+    are semantically and functionally important for machine vision tasks in the latent space, while requiring
+    no explicit masks during inference. Second, to compensate for severe information loss at extremely
+    low bitrates, a diffusion-based semantic decoder enhances the compressed latent with a pretrained
+    diffusion model guided by two complementary cues provided by an RoI-focused latent and text-based
+    semantic guidance. This design preserves RoI details that are critical for machine perception while
+    maintaining semantically coherent and artifact-suppressed non-RoI regions under extremely low bitrates.
+    Experimental results show that SLIM consistently achieves strong performance across diverse machine
+    vision tasks under the same bits per pixel condition, compared to conventional image compression models
+    for machines. Our code is available at https://github.com/mcml-official/SLIM'
+  url: https://arxiv.org/abs/2512.18200
+  pdf_url: https://arxiv.org/pdf/2512.18200v3
+  version: v3
+fetched: '2026-11-14'

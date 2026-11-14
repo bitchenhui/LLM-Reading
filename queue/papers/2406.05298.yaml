@@ -1,0 +1,33 @@
+id: paper:arxiv:2406.05298
+status: skipped
+score: 0
+track: audio_coding
+matched: []
+meta:
+  title: 'Spectral Codecs: Improving Non-Autoregressive Speech Synthesis with Spectrogram-Based Audio
+    Codecs'
+  authors:
+  - Ryan Langman
+  - Ante Jukić
+  - Kunal Dhawan
+  - Nithin Rao Koluguri
+  - Jason Li
+  published: '2024-06-07'
+  updated: '2025-06-04'
+  categories:
+  - eess.AS
+  abstract: Historically, most speech models in machine-learning have used the mel-spectrogram as a speech
+    representation. Recently, discrete audio tokens produced by neural audio codecs have become a popular
+    alternate speech representation for speech synthesis tasks such as text-to-speech (TTS). However,
+    the data distribution produced by such codecs is too complex for some TTS models to predict, typically
+    requiring large autoregressive models to get good quality. Most existing audio codecs use Residual
+    Vector Quantization (RVQ) to compress and reconstruct the time-domain audio signal. We propose a spectral
+    codec which uses Finite Scalar Quantization (FSQ) to compress the mel-spectrogram and reconstruct
+    the time-domain audio signal. A study of objective audio quality metrics and subjective listening
+    tests suggests that our spectral codec has comparable perceptual quality to equivalent audio codecs.
+    We show that FSQ, and the use of spectral speech representations, can both improve the performance
+    of parallel TTS models.
+  url: https://arxiv.org/abs/2406.05298
+  pdf_url: https://arxiv.org/pdf/2406.05298v2
+  version: v2
+fetched: '2026-11-14'

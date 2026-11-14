@@ -1,0 +1,66 @@
+id: paper:arxiv:2512.04019
+status: pending
+score: 12
+track: video_image_coding
+matched:
+- ref: impl:NVRC
+  count: 2
+  weight: 3
+- ref: impl:C3
+  count: 1
+  weight: 3
+- ref: concept:EntropyModel
+  count: 1
+  weight: 1
+- ref: concept:INR
+  count: 1
+  weight: 1
+- ref: metric:BD-Rate
+  count: 1
+  weight: 1
+- ref: metric:MS-SSIM
+  count: 1
+  weight: 1
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+- ref: metric:SSIM
+  count: 1
+  weight: 1
+meta:
+  title: Ultra-lightweight Neural Video Representation Compression
+  authors:
+  - Ho Man Kwan
+  - Tianhao Peng
+  - Ge Gao
+  - Fan Zhang
+  - Mike Nilsson
+  - Andrew Gower
+  - David Bull
+  published: '2025-12-03'
+  updated: '2025-12-03'
+  categories:
+  - cs.CV
+  - eess.IV
+  abstract: 'Recent works have demonstrated the viability of utilizing over-fitted implicit neural representations
+    (INRs) as alternatives to autoencoder-based models for neural video compression. Among these INR-based
+    video codecs, Neural Video Representation Compression (NVRC) was the first to adopt a fully end-to-end
+    compression framework that compresses INRs, achieving state-of-the-art performance. Moreover, some
+    recently proposed lightweight INRs have shown comparable performance to their baseline codecs with
+    computational complexity lower than 10kMACs/pixel. In this work, we extend NVRC toward lightweight
+    representations, and propose NVRC-Lite, which incorporates two key changes. Firstly, we integrated
+    multi-scale feature grids into our lightweight neural representation, and the use of higher resolution
+    grids significantly improves the performance of INRs at low complexity. Secondly, we address the issue
+    that existing INRs typically leverage autoregressive models for entropy coding: these are effective
+    but impractical due to their slow coding speed. In this work, we propose an octree-based context model
+    for entropy coding high-dimensional feature grids, which accelerates the entropy coding module of
+    the model. Our experimental results demonstrate that NVRC-Lite outperforms C3, one of the best lightweight
+    INR-based video codecs, with up to 21.03% and 23.06% BD-rate savings when measured in PSNR and MS-SSIM,
+    respectively, while achieving 8.4x encoding and 2.5x decoding speedup. The implementation of NVRC-Lite
+    will be made available.'
+  url: https://arxiv.org/abs/2512.04019
+  pdf_url: https://arxiv.org/pdf/2512.04019v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 6
+citation_year: 2025

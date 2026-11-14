@@ -1,0 +1,38 @@
+id: paper:arxiv:2407.11590
+status: skipped_low_citation
+score: 5
+track: video_image_coding
+matched:
+- ref: codec:VVC
+  count: 1
+  weight: 3
+- ref: metric:BD-Rate
+  count: 1
+  weight: 1
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+meta:
+  title: 'Rethinking Learned Image Compression: Context is All You Need'
+  authors:
+  - Jixiang Luo
+  published: '2024-07-16'
+  updated: '2024-08-02'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: Since LIC has made rapid progress recently compared to traditional methods, this paper attempts
+    to discuss the question about 'Where is the boundary of Learned Image Compression(LIC)?'. Thus this
+    paper splits the above problem into two sub-problems:1)Where is the boundary of rate-distortion performance
+    of PSNR? 2)How to further improve the compression gain and achieve the boundary? Therefore this paper
+    analyzes the effectiveness of scaling parameters for encoder, decoder and context model, which are
+    the three components of LIC. Then we conclude that scaling for LIC is to scale for context model and
+    decoder within LIC. Extensive experiments demonstrate that overfitting can actually serve as an effective
+    context. By optimizing the context, this paper further improves PSNR and achieves state-of-the-art
+    performance, showing a performance gain of 14.39% with BD-RATE over VVC.
+  url: https://arxiv.org/abs/2407.11590
+  pdf_url: https://arxiv.org/pdf/2407.11590v3
+  version: v3
+fetched: '2026-11-14'
+citation_count: 3
+citation_year: 2024

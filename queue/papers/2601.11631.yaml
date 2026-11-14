@@ -1,0 +1,34 @@
+id: paper:arxiv:2601.11631
+status: skipped
+score: 0
+track: quality_assessment
+matched: []
+meta:
+  title: 'Compress to Focus: Efficient Coordinate Compression for Policy Optimization in Multi-Turn GUI
+    Agents'
+  authors:
+  - Yurun Song
+  - Jiong Yin
+  - Rongjunchen Zhang
+  - Ian G. Harris
+  published: '2026-01-14'
+  updated: '2026-01-14'
+  categories:
+  - cs.CV
+  abstract: Multi-turn GUI agents enable complex task completion through sequential decision-making, but
+    suffer from severe context inflation as interaction history accumulates. Existing strategies either
+    sacrifice long-term context via truncation or compromise spatial structure through token pruning.
+    In this paper, we propose Coordinate Compression Policy Optimization (CCPO), an efficient policy optimization
+    framework that couples visual compression with policy optimization for multi-turn GUI agents. CCPO
+    introduces Coordinate-Aware Spatial Compression (CASC), which aggregates coordinates from multiple
+    rollouts to capture target-relevant regions and progressively narrow historical attention around key
+    visual areas. From interactions across rollouts, CASC adaptively constructs attention boundaries that
+    concentrate computation on the most informative regions of the scene. We further design a Distance-Based
+    Advantage that provides fine-grained learning signals based on distance rather than binary correctness,
+    improving both grounding accuracy and compression quality. Extensive experiments demonstrate that
+    CCPO achieves SOTA performance across four benchmarks with up to 55% token compression and 3.8$\times$
+    training speedup.
+  url: https://arxiv.org/abs/2601.11631
+  pdf_url: https://arxiv.org/pdf/2601.11631v1
+  version: v1
+fetched: '2026-11-14'

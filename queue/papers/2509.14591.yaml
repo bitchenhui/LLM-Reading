@@ -1,0 +1,42 @@
+id: paper:arxiv:2509.14591
+status: skipped
+score: 1
+track: immersive_media
+matched:
+- ref: metric:BD-Rate
+  count: 1
+  weight: 1
+meta:
+  title: Bidirectional Feature-aligned Motion Transformation for Efficient Dynamic Point Cloud Compression
+  authors:
+  - Xuan Deng
+  - Xingtao Wang
+  - Xiandong Meng
+  - Longguang Wang
+  - Tiange Zhang
+  - Xiaopeng Fan
+  - Debin Zhao
+  published: '2025-09-18'
+  updated: '2025-11-02'
+  categories:
+  - cs.CV
+  abstract: Efficient dynamic point cloud compression (DPCC) critically depends on accurate motion estimation
+    and compensation. However, the inherently irregular structure and substantial local variations of
+    point clouds make this task highly challenging. Existing approaches typically rely on explicit motion
+    estimation, whose encoded motion vectors often fail to capture complex dynamics and inadequately exploit
+    temporal correlations. To address these limitations, we propose a Bidirectional Feature-aligned Motion
+    Transformation (Bi-FMT) framework that implicitly models motion in the feature space. Bi-FMT aligns
+    features across both past and future frames to produce temporally consistent latent representations,
+    which serve as predictive context in a conditional coding pipeline, forming a unified ``Motion + Conditional''
+    representation. Built upon this bidirectional feature alignment, we introduce a Cross-Transformer
+    Refinement module (CTR) at the decoder side to adaptively refine locally aligned features. By modeling
+    cross-frame dependencies with vector attention, CRT enhances local consistency and restores fine-grained
+    spatial details that are often lost during motion alignment. Moreover, we design a Random Access (RA)
+    reference strategy that treats the bidirectionally aligned features as conditional context, enabling
+    frame-level parallel compression and eliminating the sequential encoding. Extensive experiments demonstrate
+    that Bi-FMT surpasses D-DPCC and AdaDPCC in both compression efficiency and runtime, achieving BD-Rate
+    reductions of 20% (D1) and 9.4% (D1), respectively.
+  url: https://arxiv.org/abs/2509.14591
+  pdf_url: https://arxiv.org/pdf/2509.14591v2
+  version: v2
+fetched: '2026-11-14'

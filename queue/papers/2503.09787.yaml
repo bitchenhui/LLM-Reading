@@ -1,0 +1,44 @@
+id: paper:arxiv:2503.09787
+status: skipped_low_citation
+score: 3
+track: video_image_coding
+matched:
+- ref: codec:VVC
+  count: 2
+  weight: 3
+meta:
+  title: Bidirectional Learned Facial Animation Codec for Low Bitrate Talking Head Videos
+  authors:
+  - Riku Takahashi
+  - Ryugo Morita
+  - Fuma Kimishima
+  - Kosuke Iwama
+  - Jinjia Zhou
+  published: '2025-03-12'
+  updated: '2025-03-12'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: Existing deep facial animation coding techniques efficiently compress talking head videos
+    by applying deep generative models. Instead of compressing the entire video sequence, these methods
+    focus on compressing only the keyframe and the keypoints of non-keyframes (target frames). The target
+    frames are then reconstructed by utilizing a single keyframe, and the keypoints of the target frame.
+    Although these unidirectional methods can reduce the bitrate, they rely on a single keyframe and often
+    struggle to capture large head movements accurately, resulting in distortions in the facial region.
+    In this paper, we propose a novel bidirectional learned animation codec that generates natural facial
+    videos using past and future keyframes. First, in the Bidirectional Reference-Guided Auxiliary Stream
+    Enhancement (BRG-ASE) process, we introduce a compact auxiliary stream for non-keyframes, which is
+    enhanced by adaptively selecting one of two keyframes (past and future). This stream improves video
+    quality with a slight increase in bitrate. Then, in the Bidirectional Reference-Guided Video Reconstruction
+    (BRG-VRec) process, we animate the adaptively selected keyframe and reconstruct the target frame using
+    both the animated keyframe and the auxiliary frame. Extensive experiments demonstrate a 55% bitrate
+    reduction compared to the latest animation based video codec, and a 35% bitrate reduction compared
+    to the latest video coding standard, Versatile Video Coding (VVC) on a talking head video dataset.
+    It showcases the efficiency of our approach in improving video quality while simultaneously decreasing
+    bitrate.
+  url: https://arxiv.org/abs/2503.09787
+  pdf_url: https://arxiv.org/pdf/2503.09787v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 3
+citation_year: 2025

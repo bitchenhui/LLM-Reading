@@ -1,0 +1,42 @@
+id: paper:arxiv:2101.06658
+status: skipped
+score: 1
+track: processing_enhancement
+matched:
+- ref: concept:SuperResolution
+  count: 1
+  weight: 1
+meta:
+  title: Trilevel Neural Architecture Search for Efficient Single Image Super-Resolution
+  authors:
+  - Yan Wu
+  - Zhiwu Huang
+  - Suryansh Kumar
+  - Rhea Sanjay Sukthanker
+  - Radu Timofte
+  - Luc Van Gool
+  published: '2021-01-17'
+  updated: '2021-04-23'
+  categories:
+  - cs.CV
+  - cs.LG
+  - eess.IV
+  abstract: Modern solutions to the single image super-resolution (SISR) problem using deep neural networks
+    aim not only at better performance accuracy but also at a lighter and computationally efficient model.
+    To that end, recently, neural architecture search (NAS) approaches have shown some tremendous potential.
+    Following the same underlying, in this paper, we suggest a novel trilevel NAS method that provides
+    a better balance between different efficiency metrics and performance to solve SISR. Unlike available
+    NAS, our search is more complete, and therefore it leads to an efficient, optimized, and compressed
+    architecture. We innovatively introduce a trilevel search space modeling, i.e., hierarchical modeling
+    on network-, cell-, and kernel-level structures. To make the search on trilevel spaces differentiable
+    and efficient, we exploit a new sparsestmax technique that is excellent at generating sparse distributions
+    of individual neural architecture candidates so that they can be better disentangled for the final
+    selection from the enlarged search space. We further introduce the sorting technique to the sparsestmax
+    relaxation for better network-level compression. The proposed NAS optimization additionally facilitates
+    simultaneous search and training in a single phase, reducing search time and train time. Comprehensive
+    evaluations on the benchmark datasets show our method's clear superiority over the state-of-the-art
+    NAS in terms of a good trade-off between model size, performance, and efficiency.
+  url: https://arxiv.org/abs/2101.06658
+  pdf_url: https://arxiv.org/pdf/2101.06658v2
+  version: v2
+fetched: '2026-11-14'

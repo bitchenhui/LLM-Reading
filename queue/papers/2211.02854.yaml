@@ -1,0 +1,44 @@
+id: paper:arxiv:2211.02854
+status: pending
+score: 2
+track: processing_enhancement
+matched:
+- ref: concept:RDO
+  count: 1
+  weight: 1
+- ref: concept:SuperResolution
+  count: 1
+  weight: 1
+meta:
+  title: Rate-Distortion Optimized Post-Training Quantization for Learned Image Compression
+  authors:
+  - Junqi Shi
+  - Ming Lu
+  - Zhan Ma
+  published: '2022-11-05'
+  updated: '2023-10-09'
+  categories:
+  - eess.IV
+  abstract: Quantizing a floating-point neural network to its fixed-point representation is crucial for
+    Learned Image Compression (LIC) because it improves decoding consistency for interoperability and
+    reduces space-time complexity for implementation. Existing solutions often have to retrain the network
+    for model quantization, which is time-consuming and impractical to some extent. This work suggests
+    using Post-Training Quantization (PTQ) to process pretrained, off-the-shelf LIC models. We theoretically
+    prove that minimizing quantization-induced mean square error (MSE) of model parameters (e.g., weight,
+    bias, and activation) in PTQ is sub-optimal for compression tasks and thus develop a novel Rate-Distortion
+    (R-D) Optimized PTQ (RDO-PTQ) to best retain the compression performance. Given a LIC model, RDO-PTQ
+    layer-wisely determines the quantization parameters to transform the original floating-point parameters
+    in 32-bit precision (FP32) to fixed-point ones at 8-bit precision (INT8), for which a tiny calibration
+    image set is compressed in optimization to minimize R-D loss. Experiments reveal the outstanding efficiency
+    of the proposed method on different LICs, showing the closest coding performance to their floating-point
+    counterparts. Our method is a lightweight and plug-and-play approach without retraining model parameters
+    but just adjusting quantization parameters, which is attractive to practitioners. Such an RDO-PTQ
+    is a task-oriented PTQ scheme, which is then extended to quantize popular super-resolution and image
+    classification models with negligible performance loss, further evidencing the generalization of our
+    methodology. Related materials will be released at https://njuvision.github.io/RDO-PTQ.
+  url: https://arxiv.org/abs/2211.02854
+  pdf_url: https://arxiv.org/pdf/2211.02854v3
+  version: v3
+fetched: '2026-11-14'
+citation_count: 35
+citation_year: 2022

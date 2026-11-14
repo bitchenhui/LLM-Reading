@@ -1,0 +1,46 @@
+id: paper:arxiv:2603.16372
+status: skipped_low_citation
+score: 2
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: 'InViC: Intent-aware Visual Cues for Medical Visual Question Answering'
+  authors:
+  - Zhisong Wang
+  - Ziyang Chen
+  - Zanting Ye
+  - Hongze Zhu
+  - Yefeng Zheng
+  - Yong Xia
+  published: '2026-03-17'
+  updated: '2026-03-17'
+  categories:
+  - cs.CV
+  abstract: Medical visual question answering (Med-VQA) aims to answer clinically relevant questions grounded
+    in medical images. However, existing multimodal large language models (MLLMs) often exhibit shortcut
+    answering, producing plausible responses by exploiting language priors or dataset biases while insufficiently
+    attending to visual evidence. This behavior undermines clinical reliability, especially when subtle
+    imaging findings are decisive. We propose a lightweight plug-in framework, termed Intent-aware Visual
+    Cues (InViC), to explicitly enhance image-based answer generation in medical VQA. InViC introduces
+    a Cue Tokens Extraction (CTE) module that distills dense visual tokens into a compact set of K question-conditioned
+    cue tokens, which serve as structured visual intermediaries injected into the LLM decoder to promote
+    intent-aligned visual evidence. To discourage bypassing of visual information, we further design a
+    two-stage fine-tuning strategy with a cue-bottleneck attention mask. In Stage I, we employ an attention
+    mask to block the LLM's direct view of raw visual features, thereby funneling all visual evidence
+    through the cue pathway. In Stage II, standard causal attention is restored to train the LLM to jointly
+    exploit the visual and cue tokens. We evaluate InViC on three public Med-VQA benchmarks (VQA-RAD,
+    SLAKE, and ImageCLEF VQA-Med 2019) across multiple representative MLLMs. InViC consistently improves
+    over zero-shot inference and standard LoRA fine-tuning, demonstrating that intent-aware visual cues
+    with bottlenecked training is a practical and effective strategy for improving trustworthy Med-VQA.
+  url: https://arxiv.org/abs/2603.16372
+  pdf_url: https://arxiv.org/pdf/2603.16372v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 1
+citation_year: 2026

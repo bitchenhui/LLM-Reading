@@ -1,0 +1,40 @@
+id: paper:arxiv:2401.14641
+status: skipped_low_citation
+score: 2
+track: processing_enhancement
+matched:
+- ref: metric:VMAF
+  count: 2
+  weight: 1
+- ref: concept:SuperResolution
+  count: 1
+  weight: 1
+meta:
+  title: Super Efficient Neural Network for Compression Artifacts Reduction and Super Resolution
+  authors:
+  - Wen Ma
+  - Qiuwen Lou
+  - Arman Kazemi
+  - Julian Faraone
+  - Tariq Afzal
+  published: '2024-01-26'
+  updated: '2024-01-26'
+  categories:
+  - cs.CV
+  - eess.IV
+  abstract: Video quality can suffer from limited internet speed while being streamed by users. Compression
+    artifacts start to appear when the bitrate decreases to match the available bandwidth. Existing algorithms
+    either focus on removing the compression artifacts at the same video resolution, or on upscaling the
+    video resolution but not removing the artifacts. Super resolution-only approaches will amplify the
+    artifacts along with the details by default. We propose a lightweight convolutional neural network
+    (CNN)-based algorithm which simultaneously performs artifacts reduction and super resolution (ARSR)
+    by enhancing the feature extraction layers and designing a custom training dataset. The output of
+    this neural network is evaluated for test streams compressed at low bitrates using variable bitrate
+    (VBR) encoding. The output video quality shows a 4-6 increase in video multi-method assessment fusion
+    (VMAF) score compared to traditional interpolation upscaling approaches such as Lanczos or Bicubic.
+  url: https://arxiv.org/abs/2401.14641
+  pdf_url: https://arxiv.org/pdf/2401.14641v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 1
+citation_year: 2024

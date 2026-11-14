@@ -1,0 +1,39 @@
+id: paper:arxiv:2507.15675
+status: pending
+score: 2
+track: self_improvement
+matched:
+- ref: concept:LLM
+  count: 2
+  weight: 1
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+meta:
+  title: 'P3: Prompts Promote Prompting'
+  authors:
+  - Xinyu Zhang
+  - Yuanquan Hu
+  - Fangchao Liu
+  - Zhicheng Dou
+  published: '2025-07-21'
+  updated: '2025-07-21'
+  categories:
+  - cs.CL
+  abstract: Current large language model (LLM) applications often employ multi-component prompts, comprising
+    both system and user prompts, to guide model behaviors. While recent advancements have demonstrated
+    the efficacy of automatically optimizing either the system or user prompt to boost performance, such
+    unilateral approaches often yield suboptimal outcomes due to the interdependent nature of these components.
+    In this work, we introduce P3, a novel self-improvement framework that concurrently optimizes both
+    system and user prompts through an iterative process. The offline optimized prompts are further leveraged
+    to promote online prompting by performing query-dependent prompt optimization. Extensive experiments
+    on general tasks (e.g., Arena-hard and Alpaca-eval) and reasoning tasks (e.g., GSM8K and GPQA) demonstrate
+    that P3 achieves superior performance in the realm of automatic prompt optimization. Our results highlight
+    the effectiveness of a holistic optimization strategy in enhancing LLM performance across diverse
+    domains.
+  url: https://arxiv.org/abs/2507.15675
+  pdf_url: https://arxiv.org/pdf/2507.15675v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 4
+citation_year: 2025

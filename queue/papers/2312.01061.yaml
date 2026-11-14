@@ -1,0 +1,48 @@
+id: paper:arxiv:2312.01061
+status: pending
+score: 2
+track: processing_enhancement
+matched:
+- ref: concept:INR
+  count: 1
+  weight: 1
+- ref: concept:SuperResolution
+  count: 1
+  weight: 1
+meta:
+  title: Spectral-wise Implicit Neural Representation for Hyperspectral Image Reconstruction
+  authors:
+  - Huan Chen
+  - Wangcai Zhao
+  - Tingfa Xu
+  - Shiyun Zhou
+  - Peifu Liu
+  - Jianan Li
+  published: '2023-12-02'
+  updated: '2025-03-18'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: Coded Aperture Snapshot Spectral Imaging (CASSI) reconstruction aims to recover the 3D spatial-spectral
+    signal from 2D measurement. Existing methods for reconstructing Hyperspectral Image (HSI) typically
+    involve learning mappings from a 2D compressed image to a predetermined set of discrete spectral bands.
+    However, this approach overlooks the inherent continuity of the spectral information. In this study,
+    we propose an innovative method called Spectral-wise Implicit Neural Representation (SINR) as a pioneering
+    step toward addressing this limitation. SINR introduces a continuous spectral amplification process
+    for HSI reconstruction, enabling spectral super-resolution with customizable magnification factors.
+    To achieve this, we leverage the concept of implicit neural representation. Specifically, our approach
+    introduces a spectral-wise attention mechanism that treats individual channels as distinct tokens,
+    thereby capturing global spectral dependencies. Additionally, our approach incorporates two components,
+    namely a Fourier coordinate encoder and a spectral scale factor module. The Fourier coordinate encoder
+    enhances the SINR's ability to emphasize high-frequency components, while the spectral scale factor
+    module guides the SINR to adapt to the variable number of spectral channels. Notably, the SINR framework
+    enhances the flexibility of CASSI reconstruction by accommodating an unlimited number of spectral
+    bands in the desired output. Extensive experiments demonstrate that our SINR outperforms baseline
+    methods. By enabling continuous reconstruction within the CASSI framework, we take the initial stride
+    toward integrating implicit neural representation into the field.
+  url: https://arxiv.org/abs/2312.01061
+  pdf_url: https://arxiv.org/pdf/2312.01061v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 49
+citation_year: 2023

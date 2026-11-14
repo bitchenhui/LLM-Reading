@@ -1,0 +1,41 @@
+id: paper:arxiv:2603.01476
+status: skipped
+score: 1
+track: audio_coding
+matched:
+- ref: concept:NeuralAudioCodec
+  count: 1
+  weight: 1
+meta:
+  title: Entropy-Guided GRVQ for Ultra-Low Bitrate Neural Speech Codec
+  authors:
+  - Yanzhou Ren
+  - Noboru Harada
+  - Daiki Takeuchi
+  - Siyu Chen
+  - Wei Liu
+  - Xiao Zhang
+  - Liyuan Zhang
+  - Takehiro Moriya
+  - Shoji Makino
+  published: '2026-03-02'
+  updated: '2026-03-02'
+  categories:
+  - eess.AS
+  - eess.SP
+  abstract: Neural audio codec (NAC) is essential for reconstructing high-quality speech signals and generating
+    discrete representations for downstream speech language models. However, ensuring accurate semantic
+    modeling while maintaining high-fidelity reconstruction under ultra-low bitrate constraints remains
+    challenging. We propose an entropy-guided group residual vector quantization (EG-GRVQ) for an ultra-low
+    bitrate neural speech codec, which retains a semantic branch for linguistic information and incorporates
+    an entropy-guided grouping strategy in the acoustic branch. Assuming that channel activations follow
+    approximately Gaussian statistics, the variance of each channel can serve as a principled proxy for
+    its information content. Based on this assumption, we partition the encoder output such that each
+    group carries an equal share of the total information. This balanced allocation improves codebook
+    efficiency and reduces redundancy. Trained on LibriTTS and VCTK, our model shows improvements in perceptual
+    quality and intelligibility metrics under ultra-low bitrate conditions, with a focus on codec-level
+    fidelity for communication-oriented scenarios.
+  url: https://arxiv.org/abs/2603.01476
+  pdf_url: https://arxiv.org/pdf/2603.01476v1
+  version: v1
+fetched: '2026-11-14'

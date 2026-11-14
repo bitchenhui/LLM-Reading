@@ -1,0 +1,48 @@
+id: paper:arxiv:2603.24026
+status: skipped_low_citation
+score: 4
+track: processing_enhancement
+matched:
+- ref: codec:G-PCC
+  count: 2
+  weight: 3
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+meta:
+  title: Blind Quality Enhancement for G-PCC Compressed Dynamic Point Clouds
+  authors:
+  - Tian Guo
+  - Hui Yuan
+  - Chang Sun
+  - Wei Zhang
+  - Raouf Hamzaoui
+  - Sam Kwong
+  published: '2026-03-25'
+  updated: '2026-03-25'
+  categories:
+  - eess.IV
+  abstract: Point cloud compression often introduces noticeable reconstruction artifacts, which makes
+    quality enhancement necessary. Existing approaches typically assume prior knowledge of the distortion
+    level and train multiple models with identical architectures, each designed for a specific distortion
+    setting. This significantly limits their practical applicability in scenarios where the distortion
+    level is unknown and computational resources are limited. To overcome these limitations, we propose
+    the first blind quality enhancement (BQE) model for compressed dynamic point clouds. BQE enhances
+    compressed point clouds under unknown distortion levels by exploiting temporal dependencies and jointly
+    modeling feature similarity and differences across multiple distortion levels. It consists of a joint
+    progressive feature extraction branch and an adaptive feature fusion branch. In the joint progressive
+    feature extraction branch, consecutive reconstructed frames are first fed into a recoloring-based
+    motion compensation module to generate temporally aligned virtual reference frames. These frames are
+    then fused by a temporal correlation-guided cross-attention module and processed by a progressive
+    feature extraction module to obtain hierarchical features at different distortion levels. In the adaptive
+    feature fusion branch, the current reconstructed frame is input to a quality estimation module to
+    predict a weighting distribution that guides the adaptive weighted fusion of these hierarchical features.
+    When applied to the latest geometry-based point cloud compression (G-PCC) reference software, i.e.,
+    test model category13 version 28, BQE achieved average PSNR improvements of 0.535 dB, 0.403 dB, and
+    0.453 dB, with BD-rates of -17.4%, -20.5%, and -20.1% for the Luma, Cb, and Cr components, respectively.
+  url: https://arxiv.org/abs/2603.24026
+  pdf_url: https://arxiv.org/pdf/2603.24026v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 0
+citation_year: 2026

@@ -1,0 +1,36 @@
+id: paper:arxiv:2207.01074
+status: skipped
+score: 1
+track: processing_enhancement
+matched:
+- ref: concept:SuperResolution
+  count: 1
+  weight: 1
+meta:
+  title: Variational Deep Image Restoration
+  authors:
+  - Jae Woong Soh
+  - Nam Ik Cho
+  published: '2022-07-03'
+  updated: '2022-07-03'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: This paper presents a new variational inference framework for image restoration and a convolutional
+    neural network (CNN) structure that can solve the restoration problems described by the proposed framework.
+    Earlier CNN-based image restoration methods primarily focused on network architecture design or training
+    strategy with non-blind scenarios where the degradation models are known or assumed. For a step closer
+    to real-world applications, CNNs are also blindly trained with the whole dataset, including diverse
+    degradations. However, the conditional distribution of a high-quality image given a diversely degraded
+    one is too complicated to be learned by a single CNN. Therefore, there have also been some methods
+    that provide additional prior information to train a CNN. Unlike previous approaches, we focus more
+    on the objective of restoration based on the Bayesian perspective and how to reformulate the objective.
+    Specifically, our method relaxes the original posterior inference problem to better manageable sub-problems
+    and thus behaves like a divide-and-conquer scheme. As a result, the proposed framework boosts the
+    performance of several restoration problems compared to the previous ones. Specifically, our method
+    delivers state-of-the-art performance on Gaussian denoising, real-world noise reduction, blind image
+    super-resolution, and JPEG compression artifacts reduction.
+  url: https://arxiv.org/abs/2207.01074
+  pdf_url: https://arxiv.org/pdf/2207.01074v1
+  version: v1
+fetched: '2026-11-14'

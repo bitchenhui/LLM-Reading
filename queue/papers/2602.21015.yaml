@@ -1,0 +1,43 @@
+id: paper:arxiv:2602.21015
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'From Perception to Action: An Interactive Benchmark for Vision Reasoning'
+  authors:
+  - Yuhao Wu
+  - Maojia Song
+  - Yihuai Lan
+  - Lei Wang
+  - Zhiqiang Hu
+  - Yao Xiao
+  - Heng Zhou
+  - Weihua Zheng
+  - Dylan Raharja
+  - Soujanya Poria
+  - Roy Ka-Wei Lee
+  published: '2026-02-24'
+  updated: '2026-02-24'
+  categories:
+  - cs.CV
+  abstract: Understanding the physical structure is essential for real-world applications such as embodied
+    agents, interactive design, and long-horizon manipulation. Yet, prevailing Vision-Language Model (VLM)
+    evaluations still center on structure-agnostic, single-turn setups (e.g., VQA), which fail to assess
+    agents' ability to reason about how geometry, contact, and support relations jointly constrain what
+    actions are possible in a dynamic environment. To address this gap, we introduce the Causal Hierarchy
+    of Actions and Interactions (CHAIN) benchmark, an interactive 3D, physics-driven testbed designed
+    to evaluate whether models can understand, plan, and execute structured action sequences grounded
+    in physical constraints. CHAIN shifts evaluation from passive perception to active problem solving,
+    spanning tasks such as interlocking mechanical puzzles and 3D stacking and packing. We conduct a comprehensive
+    study of state-of-the-art VLMs and diffusion-based models under unified interactive settings. Our
+    results show that top-performing models still struggle to internalize physical structure and causal
+    constraints, often failing to produce reliable long-horizon plans and cannot robustly translate perceived
+    structure into effective actions. The project is available at https://social-ai-studio.github.io/CHAIN/.
+  url: https://arxiv.org/abs/2602.21015
+  pdf_url: https://arxiv.org/pdf/2602.21015v1
+  version: v1
+fetched: '2026-11-14'

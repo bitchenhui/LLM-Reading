@@ -1,0 +1,38 @@
+id: paper:arxiv:2203.03107
+status: skipped
+score: 1
+track: streaming_delivery
+matched:
+- ref: concept:QoE
+  count: 3
+  weight: 1
+meta:
+  title: 'Privacy Leakage in Proactive VR Streaming: Modeling and Tradeoff'
+  authors:
+  - Xing Wei
+  - Chenyang Yang
+  - Chengjian Sun
+  published: '2022-03-07'
+  updated: '2022-04-10'
+  categories:
+  - cs.MM
+  - cs.NI
+  - eess.SY
+  abstract: Proactive tile-based virtual reality (VR) video streaming employs the viewpoint of a user
+    to predict the tiles to be requested, renders and delivers the predicted tiles before playback. Recently,
+    it has been found that the identity and preference of the user can be inferred from the trace of viewpoint
+    uploaded for proactive streaming, which indicates that viewpoint leakage incurs privacy leakage. In
+    this paper, we strive to answer the following questions regarding viewpoint leakage during proactive
+    VR video streaming. When is the viewpoint leaked? Can privacy-preserving approaches (e.g., federated
+    or individual training, using predictors with no need for training, or predicting locally) avoid viewpoint
+    leakage? We find that if the prediction error or the quality of experience (QoE) metric is uploaded
+    for adaptive streaming, the real viewpoint can be inferred even with the privacy-preserving approaches.
+    Then, we define viewpoint leakage probability to characterize the accuracy of the inferred viewpoint,
+    and respectively derive the probability when uploading prediction error and QoE metric. We find that
+    the viewpoint leakage probability can be reduced by sacrificing QoE or increasing resources. Simulation
+    with the state-of-the-art predictor over a real dataset shows that such a tradeoff does not exist
+    only in rare cases.
+  url: https://arxiv.org/abs/2203.03107
+  pdf_url: https://arxiv.org/pdf/2203.03107v2
+  version: v2
+fetched: '2026-11-14'

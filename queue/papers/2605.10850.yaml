@@ -1,0 +1,41 @@
+id: paper:arxiv:2605.10850
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'Verification Mirage: Mapping the Reliability Boundary of Self-Verification in Medical VQA'
+  authors:
+  - Ruinan Jin
+  - Beidi Zhao
+  - Myeongkyun Kang
+  - Qiong Zhang
+  - Xiaoxiao Li
+  published: '2026-05-11'
+  updated: '2026-05-11'
+  categories:
+  - cs.CV
+  abstract: 'Self-verification, re-invoking the same vision language model (VLM) in a fresh context to
+    check its own generated answer, is increasingly used as a default safety layer for medical visual
+    question answering (VQA). We argue that this practice is fundamentally unreliable. We introduce [METHOD
+    NAME], a diagnostic framework for mapping the reliability boundary of medical VLM self-verification
+    by decomposing verifier behavior into discrimination capability and agreement bias. Because the verifier
+    and answer generator are capacity-coupled, the verifier can overly agree with the generator, creating
+    a verification mirage: a regime with both high verifier error and high agreement bias, driven by false
+    acceptance of incorrect answers. Evaluating six open-weight VLMs across five medical VQA datasets
+    and seven medical tasks, we find that this boundary is strongly task-conditioned. Knowledge-intensive
+    clinical tasks fall deepest into the mirage, simpler tasks are more resistant, and perceptual tasks
+    lie in between. Verification also fails to provide an independent safety signal: logistic mixed-effects
+    analysis shows that verifier error and agreement bias become more likely when the generator is wrong,
+    while saliency analyses show that verifiers under-attend to image evidence relative to generators,
+    a phenomenon we call the lazy verifier. Cross-verification reduces but does not eliminate the mirage.
+    Moreover, when verification is reused in multi-turn actor-verifier loops, most initially wrong answers
+    become locked in by false verification. Since our experiments use clean benchmarks, the observed reliability
+    boundary likely underestimates failures in real clinical deployment.'
+  url: https://arxiv.org/abs/2605.10850
+  pdf_url: https://arxiv.org/pdf/2605.10850v1
+  version: v1
+fetched: '2026-11-14'

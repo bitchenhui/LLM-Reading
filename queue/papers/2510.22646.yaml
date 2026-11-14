@@ -1,0 +1,49 @@
+id: paper:arxiv:2510.22646
+status: skipped_low_citation
+score: 2
+track: immersive_media
+matched:
+- ref: metric:BD-Rate
+  count: 1
+  weight: 1
+- ref: org:MPEG
+  count: 1
+  weight: 1
+meta:
+  title: 'TVMC: Time-Varying Mesh Compression via Multi-Stage Anchor Mesh Generation'
+  authors:
+  - He Huang
+  - Qi Yang
+  - Yiling Xu
+  - Zhu Li
+  - Jenq-Neng Hwang
+  published: '2025-10-26'
+  updated: '2026-01-20'
+  categories:
+  - eess.IV
+  - cs.MM
+  abstract: 'Time-varying meshes, characterized by dynamic connectivity and varying vertex counts, hold
+    significant promise for applications such as augmented reality. However, their practical utilization
+    remains challenging due to the substantial data volume required for high-fidelity representation.
+    While various compression methods attempt to leverage temporal redundancy between consecutive mesh
+    frames, most struggle with topological inconsistency and motion-induced artifacts. To address these
+    issues, we propose Time-Varying Mesh Compression (TVMC), a novel framework built on multi-stage coarse-to-fine
+    anchor mesh generation for inter-frame prediction. Specifically, the anchor mesh is progressively
+    constructed in three stages: initial, coarse, and fine. The initial anchor mesh is obtained through
+    fast topology alignment to exploit temporal coherence. A Kalman filter-based motion estimation module
+    then generates a coarse anchor mesh by accurately compensating inter-frame motions. Subsequently,
+    a Quadric Error Metric-based refinement step optimizes vertex positions to form a fine anchor mesh
+    with improved geometric fidelity. Based on the refined anchor mesh, the inter-frame motions relative
+    to the reference base mesh are encoded, while the residual displacements between the subdivided fine
+    anchor mesh and the input mesh are adaptively quantized and compressed. This hierarchical strategy
+    preserves consistent connectivity and high-quality surface approximation, while achieving an efficient
+    and compact representation of dynamic geometry. Extensive experiments on standard MPEG dynamic mesh
+    sequences demonstrate that TVMC achieves state-of-the-art compression performance. Compared to the
+    latest V-DMC standard, it delivers a significant BD-rate gain of 10.2% ~ 16.9%, while preserving high
+    reconstruction quality. The code is available at https://github.com/H-Huang774/TVMC.'
+  url: https://arxiv.org/abs/2510.22646
+  pdf_url: https://arxiv.org/pdf/2510.22646v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 0
+citation_year: 2025

@@ -1,0 +1,41 @@
+id: paper:arxiv:2510.07632
+status: skipped
+score: 1
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 1
+  weight: 1
+meta:
+  title: 'Test-Time Matching: Unlocking Compositional Reasoning in Multimodal Models'
+  authors:
+  - Yinglun Zhu
+  - Jiancheng Zhang
+  - Fuzhi Tang
+  published: '2025-10-09'
+  updated: '2026-04-24'
+  categories:
+  - cs.AI
+  - cs.CL
+  - cs.CV
+  - cs.LG
+  abstract: 'Frontier AI models have achieved remarkable progress, yet recent studies suggest they struggle
+    with compositional reasoning, often performing at or below random chance on established benchmarks.
+    We revisit this problem and show that widely used evaluation metrics systematically underestimate
+    model capability. To correct this artifact, we introduce a group matching score that more faithfully
+    evaluates model capability. Moreover, correctness under the new metric can be translated into correctness
+    under existing metrics via a simple overfitting step. This adjustment enables SigLIP-B16 to surpass
+    all previous results and GPT-4.1 to yield the first result surpassing estimated human performance
+    on Winoground. Building on this insight, we propose Test-Time Matching (TTM), an iterative, self-improving
+    algorithm that further bootstraps model performance without any external supervision. TTM delivers
+    additional, non-trivial improvements: for example, TTM enables SigLIP-B16 to surpass GPT-4.1 on MMVP-VLM,
+    establishing a new state of the art. TTM also extends beyond contrastive vision-language models, yielding
+    clear gains on a generative multimodal model across benchmarks. Importantly, TTM remains broadly effective
+    even on benchmarks without metric-induced effects or group structures, achieving relative gains up
+    to 85.7% on challenging datasets such as WhatsUp. Across 16 dataset variants spanning diverse setups,
+    our experiments demonstrate that TTM consistently improves model performance and advances the frontier
+    of compositional reasoning.'
+  url: https://arxiv.org/abs/2510.07632
+  pdf_url: https://arxiv.org/pdf/2510.07632v2
+  version: v2
+fetched: '2026-11-14'

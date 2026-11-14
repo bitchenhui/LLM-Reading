@@ -1,0 +1,40 @@
+id: paper:arxiv:2605.21130
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 3
+  weight: 1
+meta:
+  title: 'VersusQ: Pairwise Margin Reasoning for Generalizable Video Quality Assessment'
+  authors:
+  - Shibei Meng
+  - Binxin Yang
+  - Yuan Liu
+  - Jiexuan Zhang
+  - Zhengyao Lv
+  - Hubery Yin
+  - Qiang Xu
+  published: '2026-05-20'
+  updated: '2026-05-20'
+  categories:
+  - cs.CV
+  abstract: Large Multimodal Models (LMMs) have shown promise for video quality assessment, but most methods
+    still predict an absolute score for each video. Such pointwise supervision often mixes perceptual
+    quality with dataset-specific calibration, including annotation protocols, rating habits, and score
+    distributions. As a result, the learned scoring rule may work well within a benchmark but transfer
+    poorly across unseen domains. We argue that relative comparisons alleviate the absolute-scale calibration
+    bias by focusing purely on perceptual differences rather than dataset-specific rating habits. Consequently,
+    we propose \textbf{VersusQ}, a pairwise margin reasoning framework driven entirely by direct comparisons.
+    Specifically, VersusQ performs LMM-based comparison between two videos, reasons about their visual
+    and temporal quality differences, and predicts a signed continuous margin that captures both the preferred
+    choice and the degree of difference. Furthermore, to align interpretable comparison rationales with
+    fine-grained numerical differences, we introduce Margin-Coupled GRPO, which jointly optimizes rollout-based
+    relational reasoning and continuous margin regression. Extensive experiments on multiple public VQA
+    benchmarks demonstrate that VersusQ achieves state-of-the-art performance, strong cross-domain generalization,
+    and reliable fine-grained ranking under heterogeneous evaluation scenarios.
+  url: https://arxiv.org/abs/2605.21130
+  pdf_url: https://arxiv.org/pdf/2605.21130v1
+  version: v1
+fetched: '2026-11-14'

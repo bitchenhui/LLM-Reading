@@ -1,0 +1,50 @@
+id: paper:arxiv:2309.05382
+status: skipped_low_citation
+score: 12
+track: video_image_coding
+matched:
+- ref: codec:HEVC
+  count: 1
+  weight: 3
+- ref: codec:VVC
+  count: 1
+  weight: 3
+- ref: impl:VTM
+  count: 1
+  weight: 3
+- ref: concept:EntropyModel
+  count: 1
+  weight: 1
+- ref: dataset:MCL-JCV
+  count: 1
+  weight: 1
+- ref: dataset:UVG
+  count: 1
+  weight: 1
+meta:
+  title: 'CANF-VC++: Enhancing Conditional Augmented Normalizing Flows for Video Compression with Advanced
+    Techniques'
+  authors:
+  - Peng-Yu Chen
+  - Wen-Hsiao Peng
+  published: '2023-09-11'
+  updated: '2023-09-11'
+  categories:
+  - cs.MM
+  abstract: Video has become the predominant medium for information dissemination, driving the need for
+    efficient video codecs. Recent advancements in learned video compression have shown promising results,
+    surpassing traditional codecs in terms of coding efficiency. However, challenges remain in integrating
+    fragmented techniques and incorporating new tools into existing codecs. In this paper, we comprehensively
+    review the state-of-the-art CANF-VC codec and propose CANF-VC++, an enhanced version that addresses
+    these challenges. We systematically explore architecture design, reference frame type, training procedure,
+    and entropy coding efficiency, leading to substantial coding improvements. CANF-VC++ achieves significant
+    Bjøntegaard-Delta rate savings on conventional datasets UVG, HEVC Class B and MCL-JCV, outperforming
+    the baseline CANF-VC and even the H.266 reference software VTM. Our work demonstrates the potential
+    of integrating advancements in video compression and serves as inspiration for future research in
+    the field.
+  url: https://arxiv.org/abs/2309.05382
+  pdf_url: https://arxiv.org/pdf/2309.05382v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 6
+citation_year: 2023

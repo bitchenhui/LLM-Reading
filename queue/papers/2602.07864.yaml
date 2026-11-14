@@ -1,0 +1,45 @@
+id: paper:arxiv:2602.07864
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'Thinking in Structures: Evaluating Spatial Intelligence in Constraint-Governed Spaces'
+  authors:
+  - Chen Yang
+  - Guanxin Lin
+  - Youquan He
+  - Peiyao Chen
+  - Guanghe Liu
+  - Yufan Mo
+  - Zhouyuan Xu
+  - Linhao Wang
+  - Guohui Zhang
+  - Zihang Zhang
+  - Shenxiang Zeng
+  - Chen Wang
+  - Jiansheng Fan
+  published: '2026-02-08'
+  updated: '2026-05-29'
+  categories:
+  - cs.CV
+  abstract: 'Spatial intelligence is crucial for vision--language models (VLMs), yet many scene-centric
+    benchmarks evaluate unconstrained environments where a single image may admit multiple plausible 3D
+    interpretations. We introduce SSI-Bench, a VQA benchmark for Structure-Centric Spatial Reasoning (SCSR)
+    in constraint-governed spaces. Built from complex real-world 3D structures, it uses structural constraints
+    from geometry, topology, and physical feasibility to make component relations more determinate from
+    visual evidence. The benchmark contains 1,000 ranking questions spanning geometric and topological
+    reasoning, where correct ordering requires resolving all candidate-wise 3D relations, imposing stronger
+    demands on spatial understanding. It is created through a fully human-centered pipeline with over
+    400 researcher-hours of image curation, component annotation, and question design. Evaluating 31 VLMs
+    reveals a large gap to humans: the best open-source model achieves 22.2% accuracy and the strongest
+    closed-source model reaches 33.6%, while humans score 91.6%. Further results show that chain-of-thought
+    reasoning brings only marginal gains, and error analysis reveals fundamental limitations in current
+    models'' spatial understanding within constraint-governed spaces. Project page: https://ssi-bench.github.io.'
+  url: https://arxiv.org/abs/2602.07864
+  pdf_url: https://arxiv.org/pdf/2602.07864v2
+  version: v2
+fetched: '2026-11-14'

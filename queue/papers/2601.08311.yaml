@@ -1,0 +1,46 @@
+id: paper:arxiv:2601.08311
+status: pending
+score: 2
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 3
+  weight: 1
+- ref: concept:TrainingFree
+  count: 1
+  weight: 1
+meta:
+  title: Enhancing Image Quality Assessment Ability of LMMs via Retrieval-Augmented Generation
+  authors:
+  - Kang Fu
+  - Huiyu Duan
+  - Zicheng Zhang
+  - Yucheng Zhu
+  - Jun Zhao
+  - Xiongkuo Min
+  - Jia Wang
+  - Guangtao Zhai
+  published: '2026-01-13'
+  updated: '2026-01-13'
+  categories:
+  - cs.CV
+  - cs.AI
+  abstract: 'Large Multimodal Models (LMMs) have recently shown remarkable promise in low-level visual
+    perception tasks, particularly in Image Quality Assessment (IQA), demonstrating strong zero-shot capability.
+    However, achieving state-of-the-art performance often requires computationally expensive fine-tuning
+    methods, which aim to align the distribution of quality-related token in output with image quality
+    levels. Inspired by recent training-free works for LMM, we introduce IQARAG, a novel, training-free
+    framework that enhances LMMs'' IQA ability. IQARAG leverages Retrieval-Augmented Generation (RAG)
+    to retrieve some semantically similar but quality-variant reference images with corresponding Mean
+    Opinion Scores (MOSs) for input image. These retrieved images and input image are integrated into
+    a specific prompt. Retrieved images provide the LMM with a visual perception anchor for IQA task.
+    IQARAG contains three key phases: Retrieval Feature Extraction, Image Retrieval, and Integration &
+    Quality Score Generation. Extensive experiments across multiple diverse IQA datasets, including KADID,
+    KonIQ, LIVE Challenge, and SPAQ, demonstrate that the proposed IQARAG effectively boosts the IQA performance
+    of LMMs, offering a resource-efficient alternative to fine-tuning for quality assessment.'
+  url: https://arxiv.org/abs/2601.08311
+  pdf_url: https://arxiv.org/pdf/2601.08311v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 3
+citation_year: 2026

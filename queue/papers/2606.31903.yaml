@@ -1,0 +1,44 @@
+id: paper:arxiv:2606.31903
+status: pending
+score: 2
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: 'Attend, Transform, or Silence: Operator-Level Visual Skipping for Efficient Multimodal LLM Inference'
+  authors:
+  - Zhaoyang Luo
+  - Runmin Dong
+  - Miao Yang
+  - Fan Wei
+  - Yushan Lai
+  - Bin Luo
+  - Haohuan Fu
+  published: '2026-06-30'
+  updated: '2026-06-30'
+  categories:
+  - cs.CV
+  - cs.AI
+  abstract: Multimodal large language models (MLLMs) increasingly process long visual-token sequences,
+    increasing the overall inference computation. Existing acceleration methods usually remove visual
+    tokens or skip visual-token updates in entire layers, but these coarse strategies may discard fine-grained
+    evidence or suppress useful operators together with redundant ones. In this paper, we study visual-token
+    computation from an answer-observable perspective and find that late visual-token updates can remain
+    large while having little effect on answer-token representations. Motivated by this answer-silent
+    redundancy, we decompose each Transformer layer into attention and FFN operators and show that useful
+    visual computation is often operator-dominant and layer-dependent. We propose an operator-level visual-token
+    skipping framework that preserves the full visual-token sequence while selectively bypassing redundant
+    attention, FFN, or both. Experiments across three MLLM architectures and 10 VQA benchmarks show that
+    our method achieves strong efficiency-accuracy trade-offs, reducing \textbf{33.7\%} TFLOPs on Qwen3-VL
+    while retaining \textbf{99.5\%} of the vanilla model performance.
+  url: https://arxiv.org/abs/2606.31903
+  pdf_url: https://arxiv.org/pdf/2606.31903v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 2
+citation_year: 2026

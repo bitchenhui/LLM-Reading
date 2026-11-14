@@ -1,0 +1,47 @@
+id: paper:arxiv:2604.22260
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'Towards Safe Mobility: A Unified Transportation Foundation Model enabled by Open-Ended Vision-Language
+    Dataset'
+  authors:
+  - Wenhui Huang
+  - Songyan Zhang
+  - Collister Chua
+  - Yang Liang
+  - Zhiqi Mao
+  - Heng Yang
+  - Chen Lv
+  published: '2026-04-24'
+  updated: '2026-04-24'
+  categories:
+  - cs.CV
+  - cs.AI
+  abstract: 'Urban transportation systems face growing safety challenges that require scalable intelligence
+    for emerging smart mobility infrastructures. While recent advances in foundation models and large-scale
+    multimodal datasets have strengthened perception and reasoning in intelligent transportation systems
+    (ITS), existing research remains largely centered on microscopic autonomous driving (AD), with limited
+    attention to city-scale traffic analysis. In particular, open-ended safety-oriented visual question
+    answering (VQA) and corresponding foundation models for reasoning over heterogeneous roadside camera
+    observations remain underexplored. To address this gap, we introduce the Land Transportation Dataset
+    (LTD), a large-scale open-source vision-language dataset for open-ended reasoning in urban traffic
+    environments. LTD contains 11.6K high-quality VQA pairs collected from heterogeneous roadside cameras,
+    spanning diverse road geometries, traffic participants, illumination conditions, and adverse weather.
+    The dataset integrates three complementary tasks: fine-grained multi-object grounding, multi-image
+    camera selection, and multi-image risk analysis, requiring joint reasoning over minimally correlated
+    views to infer hazardous objects, contributing factors, and risky road directions. To ensure annotation
+    fidelity, we combine multi-model vision-language generation with cross-validation and human-in-the-loop
+    refinement. Building upon LTD, we further propose UniVLT, a transportation foundation model trained
+    via curriculum-based knowledge transfer to unify microscopic AD reasoning and macroscopic traffic
+    analysis within a single architecture. Extensive experiments on LTD and multiple AD benchmarks demonstrate
+    that UniVLT achieves SOTA performance on open-ended reasoning tasks across diverse domains, while
+    exposing limitations of existing foundation models in complex multi-view traffic scenarios.'
+  url: https://arxiv.org/abs/2604.22260
+  pdf_url: https://arxiv.org/pdf/2604.22260v1
+  version: v1
+fetched: '2026-11-14'

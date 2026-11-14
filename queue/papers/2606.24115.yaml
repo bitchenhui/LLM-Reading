@@ -1,0 +1,44 @@
+id: paper:arxiv:2606.24115
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: A Benchmark for Hallucination Detection in VLMs for Gastrointestinal Endoscopy
+  authors:
+  - Aminu Lawal
+  - Niyoj Oli
+  - Sachin Acharya
+  - Prashnna Gyawali
+  - Maria Carmen Romano
+  - Binod Bhattarai
+  published: '2026-06-23'
+  updated: '2026-06-23'
+  categories:
+  - cs.CV
+  - cs.AI
+  abstract: 'Vision-language models (VLMs) are prone to hallucination, which remains a major barrier to
+    their safe deployment in clinical practice. To date, most hallucination detection methods have been
+    evaluated on radiology benchmarks such as MIMIC-CXR and VQA-RAD, while gastrointestinal (GI) endoscopy
+    remains largely underexplored. In this paper, we benchmark nine hallucination detection methods on
+    the Gut-VLM dataset, a GI diagnostic Visual Question Answering (VQA) dataset with 4,392 test VQA pairs,
+    across five VLMs (MedGemma-4B, MedGemma-27B, LLaVA-Med-7B, LLaVA-v1.6-7B, and Lingshu-32B). The methods
+    span three categories: black-box methods (RadFlag, SelfCheckGPT-NLI), gray-box methods (AvgProb, AvgEnt,
+    MaxProb, MaxEnt, Semantic Entropy, and VASE), and a white-box method (ReXTrust). Our results show
+    that ReXTrust, a white-box method, achieves the highest AUC across all five models, outperforming
+    the strongest alternative method on each VLM by a statistically significant margin (paired permutation
+    test, p < 0.001 in all cases), reaching a peak AUC of 93.0 on MedGemma-4B. White-box hidden-state
+    access provides a consistent advantage of 19.5 AUC points on average (range: 9.5--33.5), with ReXTrust
+    maintaining strong performance even on LLaVA-v1.6-7B (AUC 79.9), where black-box methods and clustering-based
+    gray-box methods collapse to near-chance performance. Among non-white-box methods, token-level gray-box
+    statistics (MaxEnt, MaxProb) are the strongest alternatives, outperforming both clustering-based gray-box
+    methods (Semantic Entropy, VASE) and black-box approaches on average. We further identify confident
+    confabulation, a failure mode in which models hallucinate with high inter-sample consistency or high
+    token-level probability, as a systemic failure for both consistency and uncertainty-based methods.'
+  url: https://arxiv.org/abs/2606.24115
+  pdf_url: https://arxiv.org/pdf/2606.24115v1
+  version: v1
+fetched: '2026-11-14'

@@ -1,0 +1,36 @@
+id: paper:arxiv:2605.05439
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: Safety-Critical Camera Reliability Monitoring for ADAS via Degradation-Aware Uncertainty Pattern
+    Analysis
+  authors:
+  - Shiva Aher
+  published: '2026-05-06'
+  updated: '2026-05-06'
+  categories:
+  - cs.CV
+  abstract: Reliable camera input is essential for safety-critical ADAS perception, but most monitoring
+    approaches detect sensor failures only after downstream performance has degraded. We propose a proactive
+    camera reliability monitoring framework that estimates perception risk from degradation-induced uncertainty
+    patterns before downstream failure becomes observable. The method introduces a Global Sensor Health
+    Index (GSHI), a continuous reliability score that aggregates per-degradation severities using a risk-aware
+    multiplicative formulation, allowing severe single-mode failures such as lens occlusion or motion
+    blur to dominate the health estimate. A lightweight multi-task network predicts degradation type,
+    severity, GSHI, and spatial uncertainty maps from a single RGB image without downstream task feedback.
+    Training uses physics- and geometry-aware synthetic supervision over twelve camera degradation modes.
+    Experiments on KITTI-derived degradations show that GSHI decreases monotonically with severity, achieves
+    a health-estimation MAE of 0.064, and provides positive early-warning lead time of 0.47 $\pm$ 0.25
+    severity units before YOLOv8 detection failure. GSHI also outperforms IQA, detector-confidence, and
+    clean-feature OOD baselines, and transfers zero-shot to real adverse-weather driving data. These results
+    support degradation-aware uncertainty analysis as a practical direction for proactive camera reliability
+    monitoring in intelligent vehicles.
+  url: https://arxiv.org/abs/2605.05439
+  pdf_url: https://arxiv.org/pdf/2605.05439v1
+  version: v1
+fetched: '2026-11-14'

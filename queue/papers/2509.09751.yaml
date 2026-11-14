@@ -1,0 +1,45 @@
+id: paper:arxiv:2509.09751
+status: skipped_low_citation
+score: 2
+track: self_improvement
+matched:
+- ref: concept:LLM
+  count: 1
+  weight: 1
+- ref: concept:SelfImprovement
+  count: 1
+  weight: 1
+meta:
+  title: Meta-Learning Reinforcement Learning for Crypto-Return Prediction
+  authors:
+  - Junqiao Wang
+  - Zhaoyang Guan
+  - Guanyu Liu
+  - Tianze Xia
+  - Xianzhi Li
+  - Shuo Yin
+  - Xinyuan Song
+  - Chuhan Cheng
+  - Tianyu Shi
+  - Alex Lee
+  published: '2025-09-11'
+  updated: '2026-02-01'
+  categories:
+  - cs.LG
+  - cs.AI
+  abstract: 'Predicting cryptocurrency returns is notoriously difficult: price movements are driven by
+    a fast-shifting blend of on-chain activity, news flow, and social sentiment, while labeled training
+    data are scarce and expensive. In this paper, we present Meta-RL-Crypto, a unified transformer-based
+    architecture that unifies meta-learning and reinforcement learning (RL) to create a fully self-improving
+    trading agent. Starting from a vanilla instruction-tuned LLM, the agent iteratively alternates between
+    three roles-actor, judge, and meta-judge-in a closed-loop architecture. This learning process requires
+    no additional human supervision. It can leverage multimodal market inputs and internal preference
+    feedback. The agent in the system continuously refines both the trading policy and evaluation criteria.
+    Experiments across diverse market regimes demonstrate that Meta-RL-Crypto shows good performance on
+    the technical indicators of the real market and outperforming other LLM-based baselines.'
+  url: https://arxiv.org/abs/2509.09751
+  pdf_url: https://arxiv.org/pdf/2509.09751v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 3
+citation_year: 2025

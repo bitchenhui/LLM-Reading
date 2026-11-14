@@ -1,0 +1,44 @@
+id: paper:arxiv:2605.30104
+status: pending
+score: 2
+track: self_improvement
+matched:
+- ref: concept:LLM
+  count: 1
+  weight: 1
+- ref: concept:SelfImprovement
+  count: 1
+  weight: 1
+meta:
+  title: 'SEAL: Can Saturated Benchmarks Be Revived by LLM-as-a-Meta-Judge?'
+  authors:
+  - Jiamin Chen
+  - Yidi Wu
+  - Qiexiang Wang
+  - Qianben Chen
+  - Yuchen Li
+  - Yansen Zhang
+  - Xiaokun Zhang
+  - Wangchunshu Zhou
+  - Chen Ma
+  published: '2026-05-28'
+  updated: '2026-05-28'
+  categories:
+  - cs.CL
+  abstract: Widely used language-model benchmarks are increasingly saturated, with frontier systems often
+    receiving near-tied scores that standard metrics cannot resolve. Rather than constructing harder alternatives,
+    we ask whether existing tasks can be made informative again through improved evaluation over the same
+    candidate outputs. Therefore, we present Seeded Elimination with Adaptive LLM-as-a-Meta-Judge, a self-improving
+    evaluation protocol for extracting latent ranking signal from saturated benchmarks. SEAL seeds candidate
+    outputs into a single elimination and evaluates each match with task-level principles plus self-improving
+    checklist criteria. We evaluate SEAL on multiple saturated benchmarks covering code generation, mathematical
+    reasoning, knowledge-intensive question answering, and tool-use agent task completion. Across these
+    settings, SEAL improves the ranking-accuracy--latency trade-off over competing protocols, attaining
+    0.83--1.00 Spearman agreement with full pairwise judging and 4/4 top-1 agreement, while requiring
+    only 11.89 calls per task compared with 28.00 for full pairwise evaluation.
+  url: https://arxiv.org/abs/2605.30104
+  pdf_url: https://arxiv.org/pdf/2605.30104v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 0
+citation_year: 2026

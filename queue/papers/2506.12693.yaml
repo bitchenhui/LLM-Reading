@@ -1,0 +1,35 @@
+id: paper:arxiv:2506.12693
+status: skipped
+score: 0
+track: video_image_coding
+matched: []
+meta:
+  title: 'Zero-shot Denoising via Neural Compression: Theoretical and algorithmic framework'
+  authors:
+  - Ali Zafari
+  - Xi Chen
+  - Shirin Jalali
+  published: '2025-06-15'
+  updated: '2025-11-28'
+  categories:
+  - eess.IV
+  - cs.CV
+  - cs.IT
+  abstract: 'Zero-shot denoising aims to denoise observations without access to training samples or clean
+    reference images. This setting is particularly relevant in practical imaging scenarios involving specialized
+    domains such as medical imaging or biology. In this work, we propose the Zero-Shot Neural Compression
+    Denoiser (ZS-NCD), a novel denoising framework based on neural compression. ZS-NCD treats a neural
+    compression network as an untrained model, optimized directly on patches extracted from a single noisy
+    image. The final reconstruction is then obtained by aggregating the outputs of the trained model over
+    overlapping patches. Thanks to the built-in entropy constraints of compression architectures, our
+    method naturally avoids overfitting and does not require manual regularization or early stopping.
+    Through extensive experiments, we show that ZS-NCD achieves state-of-the-art performance among zero-shot
+    denoisers for both Gaussian and Poisson noise, and generalizes well to both natural and non-natural
+    images. Additionally, we provide new finite-sample theoretical results that characterize upper bounds
+    on the achievable reconstruction error of general maximum-likelihood compression-based denoisers.
+    These results further establish the theoretical foundations of compression-based denoising. Our code
+    is available at: https://github.com/Computational-Imaging-RU/ZS-NCDenoiser.'
+  url: https://arxiv.org/abs/2506.12693
+  pdf_url: https://arxiv.org/pdf/2506.12693v2
+  version: v2
+fetched: '2026-11-14'

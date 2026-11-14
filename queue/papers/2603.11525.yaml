@@ -1,0 +1,36 @@
+id: paper:arxiv:2603.11525
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 3
+  weight: 1
+meta:
+  title: 'MDS-VQA: Model-Informed Data Selection for Video Quality Assessment'
+  authors:
+  - Jian Zou
+  - Xiaoyu Xu
+  - Zhihua Wang
+  - Yilin Wang
+  - Balu Adsumilli
+  - Kede Ma
+  published: '2026-03-12'
+  updated: '2026-03-12'
+  categories:
+  - cs.CV
+  abstract: Learning-based video quality assessment (VQA) has advanced rapidly, yet progress is increasingly
+    constrained by a disconnect between model design and dataset curation. Model-centric approaches often
+    iterate on fixed benchmarks, while data-centric efforts collect new human labels without systematically
+    targeting the weaknesses of existing VQA models. Here, we describe MDS-VQA, a model-informed data
+    selection mechanism for curating unlabeled videos that are both difficult for the base VQA model and
+    diverse in content. Difficulty is estimated by a failure predictor trained with a ranking objective,
+    and diversity is measured using deep semantic video features, with a greedy procedure balancing the
+    two under a constrained labeling budget. Experiments across multiple VQA datasets and models demonstrate
+    that MDS-VQA identifies diverse, challenging samples that are particularly informative for active
+    fine-tuning. With only a 5% selected subset per target domain, the fine-tuned model improves mean
+    SRCC from 0.651 to 0.722 and achieves the top gMAD rank, indicating strong adaptation and generalization.
+  url: https://arxiv.org/abs/2603.11525
+  pdf_url: https://arxiv.org/pdf/2603.11525v1
+  version: v1
+fetched: '2026-11-14'

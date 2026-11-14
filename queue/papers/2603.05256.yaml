@@ -1,0 +1,37 @@
+id: paper:arxiv:2603.05256
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'Wiki-R1: Incentivizing Multimodal Reasoning for Knowledge-based VQA via Data and Sampling Curriculum'
+  authors:
+  - Shan Ning
+  - Longtian Qiu
+  - Xuming He
+  published: '2026-03-05'
+  updated: '2026-07-02'
+  categories:
+  - cs.CV
+  abstract: Knowledge-Based Visual Question Answering (KB-VQA) requires models to answer questions about
+    an image by integrating external knowledge, posing significant challenges due to noisy retrieval and
+    the structured, encyclopedic nature of the knowledge base. These characteristics create a distributional
+    gap from pretrained multimodal large language models (MLLMs), making effective reasoning and domain
+    adaptation difficult in the post-training stage. In this work, we propose \textit{Wiki-R1}, a data-generation-based
+    curriculum reinforcement learning framework that systematically incentivizes reasoning in MLLMs for
+    KB-VQA. Wiki-R1 constructs a sequence of training distributions aligned with the model's evolving
+    capability, bridging the gap from pretraining to the KB-VQA target distribution. We introduce \textit{controllable
+    curriculum data generation}, which manipulates the retriever to produce samples at desired difficulty
+    levels, and a \textit{curriculum sampling strategy} that selects informative samples likely to yield
+    non-zero advantages during RL updates. Sample difficulty is estimated using observed rewards and propagated
+    to unobserved samples to guide learning. Experiments on two KB-VQA benchmarks, Encyclopedic VQA and
+    InfoSeek, demonstrate that Wiki-R1 achieves new state-of-the-art results, improving accuracy from
+    35.5\% to 37.1\% on Encyclopedic VQA and from 40.1\% to 44.1\% on InfoSeek. The project page is available
+    at https://artanic30.github.io/project_pages/WikiR1/.
+  url: https://arxiv.org/abs/2603.05256
+  pdf_url: https://arxiv.org/pdf/2603.05256v2
+  version: v2
+fetched: '2026-11-14'

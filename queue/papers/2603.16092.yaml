@@ -1,0 +1,39 @@
+id: paper:arxiv:2603.16092
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: Parallel In-context Learning for Large Vision Language Models
+  authors:
+  - Shin'ya Yamaguchi
+  - Daiki Chijiwa
+  - Tamao Sakao
+  - Taku Hasegawa
+  published: '2026-03-17'
+  updated: '2026-03-17'
+  categories:
+  - cs.CV
+  - cs.AI
+  - cs.LG
+  abstract: 'Large vision-language models (LVLMs) employ multi-modal in-context learning (MM-ICL) to adapt
+    to new tasks by leveraging demonstration examples. While increasing the number of demonstrations boosts
+    performance, they incur significant inference latency due to the quadratic computational cost of Transformer
+    attention with respect to the context length. To address this trade-off, we propose Parallel In-Context
+    Learning (Parallel-ICL), a plug-and-play inference algorithm. Parallel-ICL partitions the long demonstration
+    context into multiple shorter, manageable chunks. It processes these chunks in parallel and integrates
+    their predictions at the logit level, using a weighted Product-of-Experts (PoE) ensemble to approximate
+    the full-context output. Guided by ensemble learning theory, we introduce principled strategies for
+    Parallel-ICL: (i) clustering-based context chunking to maximize inter-chunk diversity and (ii) similarity-based
+    context compilation to weight predictions by query relevance. Extensive experiments on VQA, image
+    captioning, and classification benchmarks demonstrate that Parallel-ICL achieves performance comparable
+    to full-context MM-ICL, while significantly improving inference speed. Our work offers an effective
+    solution to the accuracy-efficiency trade-off in MM-ICL, enabling dynamic task adaptation with substantially
+    reduced inference overhead.'
+  url: https://arxiv.org/abs/2603.16092
+  pdf_url: https://arxiv.org/pdf/2603.16092v1
+  version: v1
+fetched: '2026-11-14'

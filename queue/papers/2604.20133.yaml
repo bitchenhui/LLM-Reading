@@ -1,0 +1,47 @@
+id: paper:arxiv:2604.20133
+status: skipped_low_citation
+score: 2
+track: self_improvement
+matched:
+- ref: concept:LLM
+  count: 2
+  weight: 1
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+meta:
+  title: 'EvoAgent: An Evolvable Agent Framework with Skill Learning and Multi-Agent Delegation'
+  authors:
+  - Aimin Zhang
+  - Jiajing Guo
+  - Fuwei Jia
+  - Chen Lv
+  - Boyu Wang
+  - Fangzheng Li
+  published: '2026-04-22'
+  updated: '2026-11-09'
+  categories:
+  - cs.AI
+  abstract: 'Large language model (LLM) agents increasingly rely on reusable skills, but skills are usually
+    written by hand, and letting an agent change them on its own calls for explicit user control. We report
+    on EvoAgent, an evolvable agent framework built for a foreign trade assistant, and share the engineering
+    choices behind it. We organize the agent as a harness of four components (reasoning, context engineering,
+    tools and state) and confine self-improvement to the user''s persistent state: profile, memory and
+    skills. Skills are multi-file packages with lazily loaded references, matched in three stages (keyword,
+    embedding, LLM). The main agent can delegate to sub-agents with their own context, and long histories
+    are compressed while an index of recoverable resources is kept. An offline loop reviews completed
+    sessions to update the profile and memory and to propose skills; in the open-source release a skill
+    changes only after the user confirms the proposal. On 172 foreign trade test cases scored by an LLM
+    judge on five dimensions, GPT-5.2 with EvoAgent scored about 28% higher than GPT-5.2 called directly
+    with only the final query. This is a single run judged by the model under test, so it measures the
+    harness as a whole rather than any one mechanism, and swapping in GPT-4.1 or Qwen3.5-35B-A3B lowered
+    the scores relative to calling those models directly. Several mechanisms described here were added
+    after the version we evaluated and are not evaluated. The evaluation data is proprietary, so the results
+    are for reference only. An open-source release of the code, which is not the evaluated business version,
+    is available at https://github.com/Focus-AI-Center/Mentarc-EvoAgent'
+  url: https://arxiv.org/abs/2604.20133
+  pdf_url: https://arxiv.org/pdf/2604.20133v5
+  version: v5
+fetched: '2026-11-14'
+citation_count: 1
+citation_year: 2026

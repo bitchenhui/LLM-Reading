@@ -1,0 +1,46 @@
+id: paper:arxiv:2605.24553
+status: pending
+score: 2
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 3
+  weight: 1
+- ref: concept:TrainingFree
+  count: 1
+  weight: 1
+meta:
+  title: 'IQA-Spider: Unifying Multi-Granularity Image Quality Assessment with Reasoning, Grounding and
+    Referring'
+  authors:
+  - Xinge Peng
+  - Yiting Lu
+  - Xin Li
+  - Zhibo Chen
+  published: '2026-05-23'
+  updated: '2026-05-23'
+  categories:
+  - cs.CV
+  abstract: 'We present IQA-Spider, the first image quality assessment (IQA) framework that unifies reasoning,
+    grounding, and referring into a single LMM-based framework for multi-granularity quality understanding.
+    Existing LMM-based IQA methods typically support only partial perception dimensions, such as quality
+    description and question answering~(\textit{i.e.}, reasoning) or pixel-level grounding. This limitation
+    largely stems from the absence of (i) a unified task and data formulation and (ii) effective optimization
+    paradigms for multi-granularity learning. To address these limitations, we formulate a rigorous four-task
+    paradigm covering global and local quality description, pixel-level grounding, and region-level referring.
+    Based on this formulation, we construct a corresponding IQA dataset with a scalable and automatic
+    annotation pipeline, thereby providing a solid foundation for unified multi-granularity learning.
+    To further enable unified perception, we adopt a conflict-free two-stage design that progressively
+    extends text-level multi-granularity understanding to pixel-level grounding: (i) the first stage equips
+    the model with fine-grained text-level reasoning across multiple IQA tasks, and (ii) the second stage
+    introduces a training-free text-to-point grounding paradigm, which bridges textual semantics and pixel-level
+    perception by mapping token logits to spatial coordinates. Based on these efforts, we achieve IQA-Spider
+    with unified multi-granularity explainable image quality assessment. Extensive experiments across
+    multiple benchmarks demonstrate strong performance, validating the effectiveness and versatility of
+    the proposed formulation and framework.'
+  url: https://arxiv.org/abs/2605.24553
+  pdf_url: https://arxiv.org/pdf/2605.24553v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 2
+citation_year: 2026

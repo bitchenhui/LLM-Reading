@@ -1,0 +1,51 @@
+id: paper:arxiv:2606.18872
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 3
+  weight: 1
+meta:
+  title: 'Bridging Single Distortion Artifacts and Multifactorial Clinical Quality: Few-shot Biparametric
+    MRI Quality Assessment via Distortion-trained Prototypical Networks'
+  authors:
+  - Yucheng Tang
+  - Alexander Ng
+  - Wen Yan
+  - Natasha Thorley
+  - Pawel Rajwa
+  - Yipei Wang
+  - Aqua Asif
+  - Clare Allen
+  - Louise Dickinson
+  - Francesco Giganti
+  - Shonit Punwani
+  - Daniel Alexander
+  - Veeru Kasivisvanathan
+  - Yipeng Hu
+  published: '2026-06-17'
+  updated: '2026-06-23'
+  categories:
+  - cs.CV
+  abstract: Clinical prostate multi-parametric MRI relies heavily on high-quality diffusion-weighted imaging
+    (DWI), yet reading DWI is frequently compromised by geometric distortion, often caused by rectal air.
+    Assessing quality via the PI-QUAL scoring system is an emerging clinical standard, but it is subjective,
+    time-consuming and suffers from a class imbalance where low-quality cases are diverse and relatively
+    scarce. Using the PRIME clinical trial as an example, there are $6\%$ images with PI-QUAL scores lower
+    than 4, $87\%$ of DWI issues are due to distortion. Many of the other clinical quality issues are
+    under-represented. To address this common dual-scarcity of annotated clinical data, we propose a few-shot
+    biparametric prototypical network for automated image quality assessment (IQA). Our framework utilizes
+    a dual-branch 3D ResNet to fuse T2-weighted and DWI features, providing anatomical context to distinguish
+    true morphology from distortion. To handle real-world heterogeneity, we introduce feature-wise linear
+    modulation (FiLM) and a gradient reversal layer (GRL) to align feature distributions conditioned on
+    varying b-values while suppressing acquisition-related biases. We demonstrate that a model meta-trained
+    solely on comparatively objective, readily obtainable distortion labels can effectively adapt to predicting
+    complex, multi-factorial clinical quality scores such as PI-QUAL using only five representative samples.
+    Experimental results on two datasets show that our method significantly outperforms few-shot learning
+    baselines for this challenging IQA task, offering a practically feasible and data-efficient solution
+    for standardizing prostate MRI quality control in clinical workflows.
+  url: https://arxiv.org/abs/2606.18872
+  pdf_url: https://arxiv.org/pdf/2606.18872v3
+  version: v3
+fetched: '2026-11-14'

@@ -1,0 +1,31 @@
+id: paper:arxiv:2505.06671
+status: skipped
+score: 0
+track: audio_coding
+matched: []
+meta:
+  title: 'RADE: A Neural Codec for Transmitting Speech over HF Radio Channels'
+  authors:
+  - David Rowe
+  - Jean-Marc Valin
+  published: '2025-05-10'
+  updated: '2025-07-26'
+  categories:
+  - eess.AS
+  - cs.SD
+  abstract: Speech compression is commonly used to send voice over radio channels in applications such
+    as mobile telephony and two-way push-to-talk (PTT) radio. In classical systems, the speech codec is
+    combined with forward error correction, modulation and radio hardware. In this paper we describe an
+    autoencoder that replaces many of the traditional signal processing elements with a neural network.
+    The encoder takes a vocoder feature set (short term spectrum, pitch, voicing), and produces discrete
+    time, but continuously valued quadrature amplitude modulation (QAM) symbols. We use orthogonal frequency
+    domain multiplexing (OFDM) to send and receive these symbols over high frequency (HF) radio channels.
+    The decoder converts received QAM symbols to vocoder features suitable for synthesis. The autoencoder
+    has been trained to be robust to additive Gaussian noise and multipath channel impairments while simultaneously
+    maintaining a Peak To Average Power Ratio (PAPR) of less than 1 dB. Over simulated and real world
+    HF radio channels we have achieved output speech intelligibility that clearly surpasses existing analog
+    and digital radio systems over a range of SNRs.
+  url: https://arxiv.org/abs/2505.06671
+  pdf_url: https://arxiv.org/pdf/2505.06671v2
+  version: v2
+fetched: '2026-11-14'

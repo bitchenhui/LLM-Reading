@@ -1,0 +1,53 @@
+id: paper:arxiv:2306.14287
+status: pending
+score: 8
+track: video_image_coding
+matched:
+- ref: codec:VVC
+  count: 2
+  weight: 3
+- ref: impl:VTM
+  count: 1
+  weight: 3
+- ref: concept:EntropyModel
+  count: 1
+  weight: 1
+- ref: dataset:Kodak
+  count: 1
+  weight: 1
+meta:
+  title: 'Efficient Contextformer: Spatio-Channel Window Attention for Fast Context Modeling in Learned
+    Image Compression'
+  authors:
+  - A. Burakhan Koyuncu
+  - Panqi Jia
+  - Atanas Boev
+  - Elena Alshina
+  - Eckehard Steinbach
+  published: '2023-06-25'
+  updated: '2024-02-27'
+  categories:
+  - eess.IV
+  - cs.CV
+  - cs.LG
+  abstract: Entropy estimation is essential for the performance of learned image compression. It has been
+    demonstrated that a transformer-based entropy model is of critical importance for achieving a high
+    compression ratio, however, at the expense of a significant computational effort. In this work, we
+    introduce the Efficient Contextformer (eContextformer) - a computationally efficient transformer-based
+    autoregressive context model for learned image compression. The eContextformer efficiently fuses the
+    patch-wise, checkered, and channel-wise grouping techniques for parallel context modeling, and introduces
+    a shifted window spatio-channel attention mechanism. We explore better training strategies and architectural
+    designs and introduce additional complexity optimizations. During decoding, the proposed optimization
+    techniques dynamically scale the attention span and cache the previous attention computations, drastically
+    reducing the model and runtime complexity. Compared to the non-parallel approach, our proposal has
+    ~145x lower model complexity and ~210x faster decoding speed, and achieves higher average bit savings
+    on Kodak, CLIC2020, and Tecnick datasets. Additionally, the low complexity of our context model enables
+    online rate-distortion algorithms, which further improve the compression performance. We achieve up
+    to 17% bitrate savings over the intra coding of Versatile Video Coding (VVC) Test Model (VTM) 16.2
+    and surpass various learning-based compression models.
+  url: https://arxiv.org/abs/2306.14287
+  pdf_url: https://arxiv.org/pdf/2306.14287v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 30
+citation_year: 2023

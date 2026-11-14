@@ -1,0 +1,47 @@
+id: paper:arxiv:2309.10784
+status: skipped_low_citation
+score: 6
+track: video_image_coding
+matched:
+- ref: codec:AVC
+  count: 1
+  weight: 3
+- ref: codec:HEVC
+  count: 1
+  weight: 3
+meta:
+  title: Context-Aware Neural Video Compression on Solar Dynamics Observatory
+  authors:
+  - Atefeh Khoshkhahtinat
+  - Ali Zafari
+  - Piyush M. Mehta
+  - Nasser M. Nasrabadi
+  - Barbara J. Thompson
+  - Michael S. F. Kirk
+  - Daniel da Silva
+  published: '2023-09-19'
+  updated: '2023-09-19'
+  categories:
+  - eess.IV
+  - astro-ph.SR
+  - cs.CV
+  - cs.IT
+  - cs.LG
+  abstract: NASA's Solar Dynamics Observatory (SDO) mission collects large data volumes of the Sun's daily
+    activity. Data compression is crucial for space missions to reduce data storage and video bandwidth
+    requirements by eliminating redundancies in the data. In this paper, we present a novel neural Transformer-based
+    video compression approach specifically designed for the SDO images. Our primary objective is to efficiently
+    exploit the temporal and spatial redundancies inherent in solar images to obtain a high compression
+    ratio. Our proposed architecture benefits from a novel Transformer block called Fused Local-aware
+    Window (FLaWin), which incorporates window-based self-attention modules and an efficient fused local-aware
+    feed-forward (FLaFF) network. This architectural design allows us to simultaneously capture short-range
+    and long-range information while facilitating the extraction of rich and diverse contextual representations.
+    Moreover, this design choice results in reduced computational complexity. Experimental results demonstrate
+    the significant contribution of the FLaWin Transformer block to the compression performance, outperforming
+    conventional hand-engineered video codecs such as H.264 and H.265 in terms of rate-distortion trade-off.
+  url: https://arxiv.org/abs/2309.10784
+  pdf_url: https://arxiv.org/pdf/2309.10784v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 3
+citation_year: 2023

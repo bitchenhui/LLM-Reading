@@ -1,0 +1,44 @@
+id: paper:arxiv:2510.01527
+status: pending
+score: 2
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: 'Round-trip Reinforcement Learning: Self-Consistent Training for Better Chemical LLMs'
+  authors:
+  - Lecheng Kong
+  - Xiyuan Wang
+  - Yixin Chen
+  - Muhan Zhang
+  published: '2025-10-01'
+  updated: '2026-08-24'
+  categories:
+  - cs.LG
+  abstract: Large Language Models (LLMs) are emerging as versatile foundation models for computational
+    chemistry, handling bidirectional tasks like reaction prediction and retrosynthesis. However, these
+    models often lack round-trip consistency. For instance, a state-of-the-art chemical LLM may successfully
+    caption a molecule, yet be unable to accurately reconstruct the original structure from its own generated
+    text. This inconsistency suggests that models are learning unidirectional memorization rather than
+    flexible mastery. Indeed, recent work has demonstrated a strong correlation between a model's round-trip
+    consistency and its performance on the primary tasks. This strong correlation reframes consistency
+    into a direct target for model improvement. We therefore introduce Round-Trip Reinforcement Learning
+    (RTRL), a novel framework that trains a model to improve its consistency by using the success of a
+    round-trip transformation as a reward signal. We further propose an iterative variant where forward
+    and reverse mappings alternately train each other in a self-improvement loop, a process that is highly
+    data-efficient and notably effective with the massive amount of unlabelled data common in chemistry.
+    Experiments demonstrate that RTRL significantly \textbf{boosts performance and consistency} over strong
+    baselines across supervised, self-supervised, and synthetic data regimes. This work shows that round-trip
+    consistency is not just a desirable property but a trainable objective, offering a new path toward
+    more robust and reliable foundation models.
+  url: https://arxiv.org/abs/2510.01527
+  pdf_url: https://arxiv.org/pdf/2510.01527v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 4
+citation_year: 2025

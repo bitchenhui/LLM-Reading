@@ -1,0 +1,37 @@
+id: paper:arxiv:2606.23557
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: Dense Reward for Multi-View 3D Reasoning with Global Maps and Local Views
+  authors:
+  - Jiho Choi
+  - Seonho Lee
+  - Seojeong Park
+  - Hyunjung Shim
+  published: '2026-06-22'
+  updated: '2026-06-22'
+  categories:
+  - cs.CV
+  abstract: 'Multi-view 3D Visual Question Answering (MV3D-VQA) requires integrating partial observations
+    into a coherent 3D scene representation and selecting informative viewpoints for multi-step spatial
+    reasoning. However, current multimodal LLMs are typically trained with sparse, answer-level supervision,
+    which often yields inconsistent cross-view reasoning and brittle view selection. We present DR-MV3D
+    (Dense Reward for MV3D-VQA), a map-grounded learning framework that provides dense, verifiable rewards
+    to supervise the reasoning process. Our approach decomposes MV3D-VQA into (i) allocentric global map
+    construction, (ii) question-conditioned view-trajectory planning, and (iii) egocentric grounding for
+    answer prediction. To make intermediate steps learnable without manual annotations, we introduce two
+    rewards: a global consistency reward that aligns the predicted map with geometry-consistent pseudo
+    targets from frozen 3D vision foundation models (e.g., VGGT + SAM3), and a local trajectory reward
+    that supervises ordered viewpoint selection. We optimize the full pipeline with trajectory-level policy
+    optimization (GRPO). Experiments on MindCube, VSI-Bench, and BLINK (MV) show that DR-MV3D consistently
+    improves over strong multi-image baselines, supporting the effectiveness of process-level dense supervision
+    for multi-view 3D reasoning.'
+  url: https://arxiv.org/abs/2606.23557
+  pdf_url: https://arxiv.org/pdf/2606.23557v1
+  version: v1
+fetched: '2026-11-14'

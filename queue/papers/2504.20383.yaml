@@ -1,0 +1,36 @@
+id: paper:arxiv:2504.20383
+status: skipped
+score: 0
+track: video_image_coding
+matched: []
+meta:
+  title: Neural Stereo Video Compression with Hybrid Disparity Compensation
+  authors:
+  - Shiyin Jiang
+  - Zhenghao Chen
+  - Minghao Han
+  - Shuhang Gu
+  published: '2025-04-29'
+  updated: '2026-06-29'
+  categories:
+  - cs.CV
+  - eess.IV
+  abstract: 'Disparity compensation represents the primary strategy in stereo video compression (SVC)
+    for exploiting cross-view redundancy. These mechanisms can be broadly categorized into two types:
+    one that employs explicit horizontal shifting, and another that utilizes an implicit cross-attention
+    mechanism to reduce cross-view disparity redundancy. In this work, we propose a hybrid disparity compensation
+    (HDC) strategy that leverages explicit pixel displacement as a robust prior feature to simplify optimization
+    and perform implicit cross-attention mechanisms for subsequent warping operations, thereby capturing
+    a broader range of disparity information. Specifically, HDC first computes a similarity map by fusing
+    the horizontally shifted cross-view features to capture pixel displacement information. This similarity
+    map is then normalized into an "explicit pixel-wise attention score" to perform the cross-attention
+    mechanism, implicitly aligning features from one view to another. Building upon HDC, we introduce
+    a novel end-to-end optimized neural stereo video compression framework, which integrates HDC-based
+    modules into key coding operations, including cross-view feature extraction and reconstruction (HDC-FER)
+    and cross-view entropy modeling (HDC-EM). Extensive experiments on SVC benchmarks, including KITTI
+    2012, KITTI 2015, and Nagoya, which cover both autonomous driving and general scenes, demonstrate
+    that our framework outperforms both neural and traditional SVC methodologies.'
+  url: https://arxiv.org/abs/2504.20383
+  pdf_url: https://arxiv.org/pdf/2504.20383v3
+  version: v3
+fetched: '2026-11-14'

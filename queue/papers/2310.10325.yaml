@@ -1,0 +1,39 @@
+id: paper:arxiv:2310.10325
+status: skipped
+score: 2
+track: video_image_coding
+matched:
+- ref: dataset:Kodak
+  count: 1
+  weight: 1
+- ref: metric:FID
+  count: 1
+  weight: 1
+meta:
+  title: Towards image compression with perfect realism at ultra-low bitrates
+  authors:
+  - Marlène Careil
+  - Matthew J. Muckley
+  - Jakob Verbeek
+  - Stéphane Lathuilière
+  published: '2023-10-16'
+  updated: '2024-03-19'
+  categories:
+  - cs.CV
+  - eess.IV
+  abstract: Image codecs are typically optimized to trade-off bitrate \vs distortion metrics. At low bitrates,
+    this leads to compression artefacts which are easily perceptible, even when training with perceptual
+    or adversarial losses. To improve image quality and remove dependency on the bitrate, we propose to
+    decode with iterative diffusion models. We condition the decoding process on a vector-quantized image
+    representation, as well as a global image description to provide additional context. We dub our model
+    PerCo for 'perceptual compression', and compare it to state-of-the-art codecs at rates from 0.1 down
+    to 0.003 bits per pixel. The latter rate is more than an order of magnitude smaller than those considered
+    in most prior work, compressing a 512x768 Kodak image with less than 153 bytes. Despite this ultra-low
+    bitrate, our approach maintains the ability to reconstruct realistic images. We find that our model
+    leads to reconstructions with state-of-the-art visual quality as measured by FID and KID. As predicted
+    by rate-distortion-perception theory, visual quality is less dependent on the bitrate than previous
+    methods.
+  url: https://arxiv.org/abs/2310.10325
+  pdf_url: https://arxiv.org/pdf/2310.10325v2
+  version: v2
+fetched: '2026-11-14'

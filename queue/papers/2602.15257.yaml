@@ -1,0 +1,36 @@
+id: paper:arxiv:2602.15257
+status: skipped
+score: 1
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+meta:
+  title: How to Train Your Long-Context Visual Document Model
+  authors:
+  - Austin Veselka
+  published: '2026-02-16'
+  updated: '2026-06-29'
+  categories:
+  - cs.CV
+  - cs.AI
+  - cs.CL
+  abstract: 'We present the first comprehensive, large-scale study of training long-context vision language
+    models up to 344K context, targeting long-document visual question answering with measured transfer
+    to long-context text. While several such strong are open-weight, namely Qwen3 VL and GLM 4.5/6V, their
+    training recipes and data pipelines are not reproducible. We systematically study continued pretraining,
+    supervised finetuning, and preference optimization for 24B and 32B parameter models, backed by extensive
+    LC evaluations and ablations to bridge this gap, and achieve state-of-the-art performance on MMLongBenchDoc
+    for both parameter scales. In addition to this, our key findings include: (i) training on context
+    lengths that match evaluation context lengths outperforms training on longer contexts, (ii) training
+    and evaluating with page indices provides a simple, high-impact boost to long-document performance,
+    (iii) our synthetic data pipelines enable self-improvement via continued pretraining and supervised
+    finetuning, and (iv) we extend the known text-to-visual long context transfer to the reverse, showing
+    that visual long context training transfers to long-context text performance. We also release MMLBD-C,
+    a manually corrected version of MMLongBenchDoc to reduce erroneous and low quality examples in the
+    benchmark.'
+  url: https://arxiv.org/abs/2602.15257
+  pdf_url: https://arxiv.org/pdf/2602.15257v3
+  version: v3
+fetched: '2026-11-14'

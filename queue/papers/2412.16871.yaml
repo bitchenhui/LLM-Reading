@@ -1,0 +1,36 @@
+id: paper:arxiv:2412.16871
+status: skipped
+score: 1
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+meta:
+  title: Teaching LLMs to Refine with Tools
+  authors:
+  - Dian Yu
+  - Yuheng Zhang
+  - Jiahao Xu
+  - Tian Liang
+  - Linfeng Song
+  - Zhaopeng Tu
+  - Haitao Mi
+  - Dong Yu
+  published: '2024-12-22'
+  updated: '2024-12-22'
+  categories:
+  - cs.CL
+  abstract: 'Large language models (LLMs) can refine their responses based on feedback, enabling self-improvement
+    through iterative training or test-time refinement. However, existing methods predominantly focus
+    on refinement within the same reasoning format, which may lead to non-correcting behaviors. We propose
+    CaP, a novel approach that uses external tools to refine chain-of-thought (CoT) responses generated
+    by the same or other LLMs. CaP employs a two-stage training process: supervised fine-tuning followed
+    by preference optimization with DPO variants. Our observations highlight the critical role of preference
+    optimization in enabling effective refinement. Additionally, we compare several sampling strategies
+    to leverage CoT and tools at inference time. Experimental results demonstrate CaP''s potential for
+    effective cross-reasoning refinement and efficient inference.'
+  url: https://arxiv.org/abs/2412.16871
+  pdf_url: https://arxiv.org/pdf/2412.16871v1
+  version: v1
+fetched: '2026-11-14'

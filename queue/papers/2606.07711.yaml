@@ -1,0 +1,47 @@
+id: paper:arxiv:2606.07711
+status: pending
+score: 2
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: 'Rosetta Memory: Adaptive Memory for Cross-LLM Agents'
+  authors:
+  - Hao Yang
+  - Shiqi Shen
+  - Haoxuan Li
+  - Zhipeng Wang
+  - Zhi Gong
+  - Xu Chen
+  published: '2026-06-05'
+  updated: '2026-06-05'
+  categories:
+  - cs.LG
+  - cs.AI
+  abstract: Memory is the key component for transforming a stateless LLM into a persistent, evolving agent
+    through experience accumulation, long-horizon planning, and continual self-improvement. Existing memory
+    systems typically take the LLM as the center and design memory operations tailored to a specific backbone.
+    In practice, however, users frequently switch between LLMs, for example using Claude for coding and
+    GPT for writing across tasks, or routing different steps to different backbones within a single task
+    for cost-effective trade-offs. As a result, memory written by one model often needs to be consumed
+    by another. Making upstream memory effectively adapt to and activate downstream LLMs remains a critical
+    yet underexplored problem. To bridge this gap, we shift the perspective from LLM-centric memory design
+    to \emph{memory-centric LLM adaptation}. Specifically, we approach the above upstream-downstream memory
+    adaptation problem from both the write and read sides, and design two profile-conditioned operators
+    that are jointly trained to optimize how memory is stored and presented for better task completion.
+    To ensure the learned operators generalize across a broad set of LLMs, we propose a minimum-gain sampling
+    curriculum that prioritizes the least-served LLMs during training. To better measure the operators'
+    actual contribution rather than the LLM's own capability, we design a performance-gap reward that
+    compares against a naive memory baseline. Experiments on HotpotQA, 2WikiMultihopQA, and MuSiQue demonstrate
+    that our model consistently outperforms baselines and remains robust under unseen-model replacement.
+  url: https://arxiv.org/abs/2606.07711
+  pdf_url: https://arxiv.org/pdf/2606.07711v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 1
+citation_year: 2026

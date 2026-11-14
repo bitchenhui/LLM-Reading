@@ -1,0 +1,38 @@
+id: paper:arxiv:2509.18748
+status: skipped_low_citation
+score: 3
+track: video_image_coding
+matched:
+- ref: codec:HEVC
+  count: 1
+  weight: 3
+meta:
+  title: 'HyperCool: Reducing Encoding Cost in Overfitted Codecs with Hypernetworks'
+  authors:
+  - Pep Borrell-Tatché
+  - Till Aczel
+  - Théo Ladune
+  - Roger Wattenhofer
+  published: '2025-09-23'
+  updated: '2025-09-23'
+  categories:
+  - eess.IV
+  abstract: Overfitted image codecs like Cool-chic achieve strong compression by tailoring lightweight
+    models to individual images, but their encoding is slow and computationally expensive. To accelerate
+    encoding, Non-Overfitted (N-O) Cool-chic replaces the per-image optimization with a learned inference
+    model, trading compression performance for encoding speed. We introduce HyperCool, a hypernetwork
+    architecture that mitigates this trade-off. Building upon the N-O Cool-chic framework, HyperCool generates
+    content-adaptive parameters for a Cool-chic decoder in a single forward pass, tailoring the decoder
+    to the input image without requiring per-image fine-tuning. Our method achieves a 4.9% rate reduction
+    over N-O Cool-chic with minimal computational overhead. Furthermore, the output of our hypernetwork
+    provides a strong initialization for further optimization, reducing the number of steps needed to
+    approach fully overfitted model performance. With fine-tuning, HEVC-level compression is achieved
+    with 60.4% of the encoding cost of the fully overfitted Cool-chic. This work proposes a practical
+    method to accelerate encoding in overfitted image codecs, improving their viability in scenarios with
+    tight compute budgets.
+  url: https://arxiv.org/abs/2509.18748
+  pdf_url: https://arxiv.org/pdf/2509.18748v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 3
+citation_year: 2025

@@ -1,0 +1,46 @@
+id: paper:arxiv:2609.27389
+status: pending
+score: 2
+track: self_improvement
+matched:
+- ref: concept:RSI
+  count: 2
+  weight: 1
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+meta:
+  title: 'EvoAudio: Recursive Self-Improvement for Audio Understanding'
+  authors:
+  - Yuxiang Wang
+  - Shengbo Cai
+  - Yingda Shen
+  - Ming-Hao Hsu
+  - Qinke Ni
+  - Liqiang Zhang
+  - Teddy Sun
+  - Steve Yevs
+  - Zhizheng Wu
+  published: '2026-09-23'
+  updated: '2026-09-23'
+  categories:
+  - cs.SD
+  - cs.LG
+  abstract: Audio language models understand what is said far better than how it sounds. Closing this
+    gap takes more than data. Detailed acoustic annotation is costly, labels from stronger models inherit
+    their errors and limits, and fixed data cannot adapt as the learner improves. We therefore propose
+    EvoAudio, a recursive self-improvement system for audio understanding. To our knowledge, it is the
+    first to evolve the model, waveforms, questions, and difficulty in one closed loop. EvoAudio uses
+    the current model's performance to set the focus and difficulty of the next training data. A library
+    of audio tools then constructs questions whose answers follow from how the audio was made, providing
+    verifiable supervision without new human annotation. Reinforcement learning updates the model, and
+    validation decides whether it enters the next evolution round. Across 13 rounds, EvoAudio improves
+    five models with different audio encoders and language backbones on MMSU, MMAU-Pro, and MMAR. It achieves
+    the highest average for every backbone, raising overall performance by up to 6.3 points. The improvement
+    unfolds over successive rounds, with each stronger model starting the next round.
+  url: https://arxiv.org/abs/2609.27389
+  pdf_url: https://arxiv.org/pdf/2609.27389v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 5
+citation_year: 2026

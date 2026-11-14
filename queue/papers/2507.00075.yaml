@@ -1,0 +1,43 @@
+id: paper:arxiv:2507.00075
+status: skipped_low_citation
+score: 2
+track: self_improvement
+matched:
+- ref: concept:LLM
+  count: 2
+  weight: 1
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+meta:
+  title: Theoretical Modeling of Large Language Model Self-Improvement Training Dynamics Through Solver-Verifier
+    Gap
+  authors:
+  - Yifan Sun
+  - Yushan Liang
+  - Zhen Zhang
+  - Xin Liu
+  - Jiaye Teng
+  published: '2025-06-29'
+  updated: '2026-02-09'
+  categories:
+  - cs.LG
+  - cs.AI
+  abstract: Self-improvement is a significant techniques within the realm of large language model (LLM),
+    aiming to enhance the LLM performance without relying on external data. Despite its significance,
+    generally how LLM performances evolve during the self-improvement process remains underexplored. In
+    this paper, we theoretically model the training dynamics of self-improvement via the concept of solver-verifier
+    gap. This is inspired by the conjecture that the performance enhancement of self-improvement stems
+    from the gap between LLM's solver capability and verifier capability. Based on the theoretical framework,
+    we further show how to model the entire training trajectory. This framework allows quantifying the
+    capability limit of self-improvement by fitting the theoretical model to the experiment results. We
+    validate the effectiveness of the theoretical framework on various LLMs and datasets. Beyond self-improvement,
+    we extend our analysis to investigate how external data influences these dynamics within the framework.
+    Notably, we find that under limited external data regimes, such external data can be utilized at any
+    stage without significantly affecting final performances, which accords with the empirical observations.
+  url: https://arxiv.org/abs/2507.00075
+  pdf_url: https://arxiv.org/pdf/2507.00075v4
+  version: v4
+fetched: '2026-11-14'
+citation_count: 2
+citation_year: 2025

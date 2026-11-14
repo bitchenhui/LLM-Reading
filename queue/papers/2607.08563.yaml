@@ -1,0 +1,36 @@
+id: paper:arxiv:2607.08563
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 4
+  weight: 1
+meta:
+  title: Partial-Reference IQA Based on Hermite-Gauss Structural Prediction and Texture Deviation
+  authors:
+  - Paolo Giannitrapani
+  - Elio D. Di Claudio
+  - Giovanni Jacovitti
+  published: '2026-07-09'
+  updated: '2026-07-10'
+  categories:
+  - eess.IV
+  abstract: We propose PreSPA (Partial-Reference Structural Prediction Approach), a Partial-Reference
+    Image Quality Assessment framework that decomposes perceptual quality into two complementary indices.
+    A structure-aware index, operating in a No-Reference manner, captures structural degradation through
+    Hermite-Gauss prediction of the distorted gradient field and the angular variance of its curvature.
+    A texture-sensitive index estimates local noise through a scalar prior $μ$, obtained from energy differences
+    between reference and distorted complex gradient maps on strong-edge regions and accumulated over
+    weakly-structured ones, reflecting the perceptual leakage of degraded edges into surrounding textures.
+    Crucially, $μ$ is the only information extracted from the reference and is computed once per image
+    pair, reducing the reference footprint to a single scalar value. The final score is produced by an
+    affine fusion with only three interpretable parameters, making the method compact, transparent, and
+    computationally efficient, with the viewing distance embedded into the operator scale and no dataset-specific
+    calibration. Extensive evaluations on six standard benchmarks show that PreSPA consistently rivals
+    or exceeds leading No-Reference approaches, while in several cases matching the accuracy of Full-Reference
+    models.
+  url: https://arxiv.org/abs/2607.08563
+  pdf_url: https://arxiv.org/pdf/2607.08563v2
+  version: v2
+fetched: '2026-11-14'

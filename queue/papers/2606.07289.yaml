@@ -1,0 +1,46 @@
+id: paper:arxiv:2606.07289
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: Closed-Form Spectral Regularization for Multi-Task Model Merging
+  authors:
+  - Yongxian Wei
+  - Runxi Cheng
+  - Xingxuan Zhang
+  - Li Shen
+  - Chun Yuan
+  - Peng Cui
+  - Dacheng Tao
+  published: '2026-06-05'
+  updated: '2026-06-05'
+  categories:
+  - cs.LG
+  - cs.CV
+  abstract: Model merging combines several independently fine-tuned experts into a single multi-task model
+    without any training data, reducing the storage, serving, and decentralized-development costs of large
+    foundation models. State-of-the-art merging methods formulate merging as a layer-wise quadratic interference
+    minimization problem. Although this problem admits an exact closed-form pseudoinverse solution, that
+    solution underperforms hundreds of iterations of gradient descent in practice. The iterative loop
+    dominates the cost of the pipeline, yet its effectiveness has remained unexplained. We revisit this
+    regime and show that the iterative solver does not primarily act as an optimizer; rather, it serves
+    as an implicit spectral regularizer for an ill-posed normal equation, where small-eigenvalue directions
+    of the per-layer interference operator amplify proxy noise. Building on this finding, we formalize
+    multi-task model merging as a noisy linear inverse problem and propose a spectral filtering estimator
+    parameterized by a per-direction filter. We instantiate this estimator with SWUDI, a closed-form method
+    that combines a soft exponential filter, which matches the gradient-flow trajectory of iterative descent,
+    with a hard top-K truncation that suppresses noise-amplifying small-eigenvalue directions. Furthermore,
+    we propose SWUDI-A, an adaptive variant that replaces the global rank hyperparameter with per-layer
+    rank rules, further improving robustness across architectures. Both variants share a single symmetric
+    eigendecomposition per linear layer and require no training data or optimizer state. Across four general
+    benchmarks and a multimodal merging benchmark spanning VQA, Geometry, Chart, OCR, Grounding, and modality
+    merging, our proposed spectral solvers match or outperform state-of-the-art merging methods. Crucially,
+    they reduce wall-clock time by 28-72x and peak GPU memory by up to 50%.
+  url: https://arxiv.org/abs/2606.07289
+  pdf_url: https://arxiv.org/pdf/2606.07289v1
+  version: v1
+fetched: '2026-11-14'

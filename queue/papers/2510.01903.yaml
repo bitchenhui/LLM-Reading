@@ -1,0 +1,38 @@
+id: paper:arxiv:2510.01903
+status: skipped
+score: 0
+track: audio_coding
+matched: []
+meta:
+  title: 'MelTok: 2D Tokenization for Single-Codebook Audio Compression'
+  authors:
+  - Jingyi Li
+  - Zhiyuan Zhao
+  - Zhisheng Zhang
+  - Yunfei Liu
+  - Lijian Lin
+  - Ye Zhu
+  - Jiahao Wu
+  - Qiuqiang Kong
+  - Yu Li
+  published: '2025-10-02'
+  updated: '2025-12-04'
+  categories:
+  - cs.SD
+  - eess.AS
+  abstract: Large Audio Language Models (LALMs) have emerged with strong performance across diverse audio
+    understanding tasks and can be further enhanced by neural audio codecs. Transitioning from multi-layer
+    residual vector quantizers to a single-layer quantizer has been shown to facilitate more efficient
+    downstream language models decoding. However, the ability of a single codebook to capture fine-grained
+    acoustic details remains limited, as the frequency-variant nature of 1D tokenizers leads to redundancy.
+    To address this issue, we propose MelTok, a two-dimensional (2D) tokenizer that effectively compresses
+    acoustic details of 44.1 KHz audio into a single codebook. The tokenizer encodes audio into a more
+    compact representation than one-dimensional tokenizers. Furthermore, to recover audio from mel-spectrogram
+    tokens, we propose a token-based vocoder. Both objective and subjective evaluations demonstrate that
+    MelTok achieves quality comparable to multi-codebook codecs and outperforms existing state-of-the-art
+    neural codecs with a single codebook on high-fidelity audio reconstruction. By preserving acoustic
+    details, MelTok offers a strong representation for downstream understanding tasks.
+  url: https://arxiv.org/abs/2510.01903
+  pdf_url: https://arxiv.org/pdf/2510.01903v3
+  version: v3
+fetched: '2026-11-14'

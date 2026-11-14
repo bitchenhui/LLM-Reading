@@ -1,0 +1,39 @@
+id: paper:arxiv:2206.12186
+status: pending
+score: 6
+track: immersive_media
+matched:
+- ref: codec:V-PCC
+  count: 2
+  weight: 3
+- ref: codec:HEVC
+  count: 1
+  weight: 3
+meta:
+  title: Rate-Distortion Optimal Transform Coefficient Selection for Unoccupied Regions in Video-Based
+    Point Cloud Compression
+  authors:
+  - Christian Herglotz
+  - Nils Genser
+  - André Kaup
+  published: '2022-06-24'
+  updated: '2022-06-24'
+  categories:
+  - eess.IV
+  abstract: This paper presents a novel method to determine rate-distortion optimized transform coefficients
+    for efficient compression of videos generated from point clouds. The method exploits a generalized
+    frequency selective extrapolation approach that iteratively determines rate-distortion-optimized coefficients
+    for all basis functions of two-dimensional discrete cosine and sine transforms. The method is applied
+    to blocks containing both occupied and unoccupied pixels in video based point cloud compression for
+    HEVC encoding. In the proposed algorithm, only the values of the transform coefficients are changed
+    such that resulting bit streams are compliant to the V-PCC standard. For all-intra coded point clouds,
+    bitrate savings of more than 4% for geometry and more than 6% for texture error metrics with respect
+    to standard encoding can be observed. These savings are more than twice as high as savings obtained
+    using competing methods from literature. In the randomaccess case, our proposed method outperforms
+    competing V-PCC methods by more than 0.5%.
+  url: https://arxiv.org/abs/2206.12186
+  pdf_url: https://arxiv.org/pdf/2206.12186v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 11
+citation_year: 2022

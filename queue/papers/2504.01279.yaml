@@ -1,0 +1,49 @@
+id: paper:arxiv:2504.01279
+status: skipped_low_citation
+score: 6
+track: video_image_coding
+matched:
+- ref: codec:VVC
+  count: 1
+  weight: 3
+- ref: dataset:Kodak
+  count: 1
+  weight: 1
+- ref: metric:BD-Rate
+  count: 1
+  weight: 1
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+meta:
+  title: 'SELIC: Semantic-Enhanced Learned Image Compression via High-Level Textual Guidance'
+  authors:
+  - Haisheng Fu
+  - Jie Liang
+  - Zhenman Fang
+  - Jingning Han
+  published: '2025-04-02'
+  updated: '2025-04-02'
+  categories:
+  - stat.AP
+  - eess.IV
+  abstract: Learned image compression (LIC) techniques have achieved remarkable progress; however, effectively
+    integrating high-level semantic information remains challenging. In this work, we present a \underline{S}emantic-\underline{E}nhanced
+    \underline{L}earned \underline{I}mage \underline{C}ompression framework, termed \textbf{SELIC}, which
+    leverages high-level textual guidance to improve rate-distortion performance. Specifically, \textbf{SELIC}
+    employs a text encoder to extract rich semantic descriptions from the input image. These textual features
+    are transformed into fixed-dimension tensors and seamlessly fused with the image-derived latent representation.
+    By embedding the \textbf{SELIC} tensor directly into the compression pipeline, our approach enriches
+    the bitstream without requiring additional inputs at the decoder, thereby maintaining fast and efficient
+    decoding. Extensive experiments on benchmark datasets (e.g., Kodak) demonstrate that integrating semantic
+    information substantially enhances compression quality. Our \textbf{SELIC}-guided method outperforms
+    a baseline LIC model without semantic integration by approximately 0.1-0.15 dB across a wide range
+    of bit rates in PSNR and achieves a 4.9\% BD-rate improvement over VVC. Moreover, this improvement
+    comes with minimal computational overhead, making the proposed \textbf{SELIC} framework a practical
+    solution for advanced image compression applications.
+  url: https://arxiv.org/abs/2504.01279
+  pdf_url: https://arxiv.org/pdf/2504.01279v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 3
+citation_year: 2025

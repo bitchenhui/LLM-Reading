@@ -1,0 +1,53 @@
+id: paper:arxiv:2511.17867
+status: pending
+score: 5
+track: video_image_coding
+matched:
+- ref: codec:VVC
+  count: 1
+  weight: 3
+- ref: concept:RDO
+  count: 1
+  weight: 1
+- ref: metric:BD-Rate
+  count: 1
+  weight: 1
+meta:
+  title: 'INT-DTT+: Low-Complexity Data-Dependent Transforms for Video Coding'
+  authors:
+  - Samuel Fernández-Menduiña
+  - Eduardo Pavez
+  - Antonio Ortega
+  - Tsung-Wei Huang
+  - Thuong Nguyen Canh
+  - Guan-Ming Su
+  - Peng Yin
+  published: '2025-11-22'
+  updated: '2025-11-22'
+  categories:
+  - eess.IV
+  - cs.IT
+  abstract: Discrete trigonometric transforms (DTTs), such as the DCT-2 and the DST-7, are widely used
+    in video codecs for their balance between coding performance and computational efficiency. In contrast,
+    data-dependent transforms, such as the Karhunen-Loève transform (KLT) and graph-based separable transforms
+    (GBSTs), offer better energy compaction but lack symmetries that can be exploited to reduce computational
+    complexity. This paper bridges this gap by introducing a general framework to design low-complexity
+    data-dependent transforms. Our approach builds on DTT+, a family of GBSTs derived from rank-one updates
+    of the DTT graphs, which can adapt to signal statistics while retaining a structure amenable to fast
+    computation. We first propose a graph learning algorithm for DTT+ that estimates the rank-one updates
+    for rows and column graphs jointly, capturing the statistical properties of the overall block. Then,
+    we exploit the progressive structure of DTT+ to decompose the kernel into a base DTT and a structured
+    Cauchy matrix. By leveraging low-complexity integer DTTs and sparsifying the Cauchy matrix, we construct
+    an integer approximation to DTT+, termed INT-DTT+. This approximation significantly reduces both computational
+    and memory complexities with respect to the separable KLT with minimal performance loss. We validate
+    our approach in the context of mode-dependent transforms for the VVC standard, following a rate-distortion
+    optimized transform (RDOT) design approach. Integrated into the explicit multiple transform selection
+    (MTS) framework of VVC in a rate-distortion optimization setup, INT-DTT+ achieves more than 3% BD-rate
+    savings over the VVC MTS baseline, with complexity comparable to the integer DCT-2 once the base DTT
+    coefficients are available.
+  url: https://arxiv.org/abs/2511.17867
+  pdf_url: https://arxiv.org/pdf/2511.17867v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 3
+citation_year: 2025

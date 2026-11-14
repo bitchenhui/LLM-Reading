@@ -1,0 +1,46 @@
+id: paper:arxiv:2603.21701
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: Rethinking Token Reduction for Large Vision-Language Models
+  authors:
+  - Yi Wang
+  - Haofei Zhang
+  - Qihan Huang
+  - Anda Cao
+  - Gongfan Fang
+  - Wei Wang
+  - Xuan Jin
+  - Jie Song
+  - Mingli Song
+  - Xinchao Wang
+  published: '2026-03-23'
+  updated: '2026-03-23'
+  categories:
+  - cs.CV
+  - cs.AI
+  abstract: 'Large Vision-Language Models (LVLMs) excel in visual understanding and reasoning, but the
+    excessive visual tokens lead to high inference costs. Although recent token reduction methods mitigate
+    this issue, they mainly target single-turn Visual Question Answering (VQA), leaving the more practical
+    multi-turn VQA (MT-VQA) scenario largely unexplored. MT-VQA introduces additional challenges, as subsequent
+    questions are unknown beforehand and may refer to arbitrary image regions, making existing reduction
+    strategies ineffective. Specifically, current approaches fall into two categories: prompt-dependent
+    methods, which bias toward the initial text prompt and discard information useful for subsequent turns;
+    prompt-agnostic ones, which, though technically applicable to multi-turn settings, rely on heuristic
+    reduction metrics such as attention scores, leading to suboptimal performance. In this paper, we propose
+    a learning-based prompt-agnostic method, termed MetaCompress, overcoming the limitations of heuristic
+    designs. We begin by formulating token reduction as a learnable compression mapping, unifying existing
+    formats such as pruning and merging into a single learning objective. Upon this formulation, we introduce
+    a data-efficient training paradigm capable of learning optimal compression mappings with limited computational
+    costs. Extensive experiments on MT-VQA benchmarks and across multiple LVLM architectures demonstrate
+    that MetaCompress achieves superior efficiency-accuracy trade-offs while maintaining strong generalization
+    across dialogue turns. Our code is available at https://github.com/MArSha1147/MetaCompress.'
+  url: https://arxiv.org/abs/2603.21701
+  pdf_url: https://arxiv.org/pdf/2603.21701v1
+  version: v1
+fetched: '2026-11-14'

@@ -1,0 +1,39 @@
+id: paper:arxiv:2211.10646
+status: skipped
+score: 1
+track: immersive_media
+matched:
+- ref: concept:QP
+  count: 2
+  weight: 1
+meta:
+  title: Rate-Distortion Modeling for Bit Rate Constrained Point Cloud Compression
+  authors:
+  - Pan Gao
+  - Shengzhou Luo
+  - Manoranjan Paul
+  published: '2022-11-19'
+  updated: '2022-11-19'
+  categories:
+  - cs.MM
+  - cs.IT
+  - eess.IV
+  abstract: As being one of the main representation formats of 3D real world and well-suited for virtual
+    reality and augmented reality applications, point clouds have gained a lot of popularity. In order
+    to reduce the huge amount of data, a considerable amount of research on point cloud compression has
+    been done. However, given a target bit rate, how to properly choose the color and geometry quantization
+    parameters for compressing point clouds is still an open issue. In this paper, we propose a rate-distortion
+    model based quantization parameter selection scheme for bit rate constrained point cloud compression.
+    Firstly, to overcome the measurement uncertainty in evaluating the distortion of the point clouds,
+    we propose a unified model to combine the geometry distortion and color distortion. In this model,
+    we take into account the correlation between geometry and color variables of point clouds and derive
+    a dimensionless quantity to represent the overall quality degradation. Then, we derive the relationships
+    of overall distortion and bit rate with the quantization parameters. Finally, we formulate the bit
+    rate constrained point cloud compression as a constrained minimization problem using the derived polynomial
+    models and deduce the solution via an iterative numerical method. Experimental results show that the
+    proposed algorithm can achieve optimal decoded point cloud quality at various target bit rates, and
+    substantially outperform the video-rate-distortion model based point cloud compression scheme.
+  url: https://arxiv.org/abs/2211.10646
+  pdf_url: https://arxiv.org/pdf/2211.10646v1
+  version: v1
+fetched: '2026-11-14'

@@ -1,0 +1,44 @@
+id: paper:arxiv:2311.00970
+status: skipped_low_citation
+score: 5
+track: processing_enhancement
+matched:
+- ref: codec:G-PCC
+  count: 1
+  weight: 3
+- ref: concept:SuperResolution
+  count: 2
+  weight: 1
+- ref: org:MPEG
+  count: 1
+  weight: 1
+meta:
+  title: Lightweight super resolution network for point cloud geometry compression
+  authors:
+  - Wei Zhang
+  - Dingquan Li
+  - Ge Li
+  - Wen Gao
+  published: '2023-11-02'
+  updated: '2023-11-02'
+  categories:
+  - eess.IV
+  - cs.CV
+  - cs.MM
+  abstract: This paper presents an approach for compressing point cloud geometry by leveraging a lightweight
+    super-resolution network. The proposed method involves decomposing a point cloud into a base point
+    cloud and the interpolation patterns for reconstructing the original point cloud. While the base point
+    cloud can be efficiently compressed using any lossless codec, such as Geometry-based Point Cloud Compression,
+    a distinct strategy is employed for handling the interpolation patterns. Rather than directly compressing
+    the interpolation patterns, a lightweight super-resolution network is utilized to learn this information
+    through overfitting. Subsequently, the network parameter is transmitted to assist in point cloud reconstruction
+    at the decoder side. Notably, our approach differentiates itself from lookup table-based methods,
+    allowing us to obtain more accurate interpolation patterns by accessing a broader range of neighboring
+    voxels at an acceptable computational cost. Experiments on MPEG Cat1 (Solid) and Cat2 datasets demonstrate
+    the remarkable compression performance achieved by our method.
+  url: https://arxiv.org/abs/2311.00970
+  pdf_url: https://arxiv.org/pdf/2311.00970v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 3
+citation_year: 2023

@@ -1,0 +1,37 @@
+id: paper:arxiv:2603.15997
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: Visual Set Program Synthesizer
+  authors:
+  - Zehua Cheng
+  - Wei Dai
+  - Wenhu Zhang
+  - Thomas Lukasiewicz
+  - Jiahao Sun
+  published: '2026-03-16'
+  updated: '2026-03-16'
+  categories:
+  - cs.MM
+  - cs.CL
+  - cs.SC
+  abstract: A user pointing their phone at a supermarket shelf and asking "Which soda has the least sugar?"
+    poses a difficult challenge for current visual Al assistants. Such queries require not only object
+    recognition, but explicit set-based reasoning such as filtering, comparison, and aggregation. Standard
+    endto-end MLLMs often fail at these tasks because they lack an explicit mechanism for compositional
+    logic. We propose treating visual reasoning as Visual Program Synthesis, where the model first generates
+    a symbolic program that is executed by a separate engine grounded in visual scenes. We also introduce
+    Set-VQA, a new benchmark designed specifically for evaluating set-based visual reasoning. Experiments
+    show that our approach significantly outperforms state-of-the-art baselines on complex reasoning tasks,
+    producing more systematic and transparent behavior while substantially improving answer accuracy.
+    These results demonstrate that program-driven reasoning provides a principled alternative to black-box
+    visual-language inference.
+  url: https://arxiv.org/abs/2603.15997
+  pdf_url: https://arxiv.org/pdf/2603.15997v1
+  version: v1
+fetched: '2026-11-14'

@@ -1,0 +1,38 @@
+id: paper:arxiv:2504.18116
+status: pending
+score: 2
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: 'Think, Prune, Train, Improve: Scaling Reasoning without Scaling Models'
+  authors:
+  - Caia Costello
+  - Simon Guo
+  - Anna Goldie
+  - Azalia Mirhoseini
+  published: '2025-04-25'
+  updated: '2025-04-25'
+  categories:
+  - cs.LG
+  abstract: 'Large language models (LLMs) have demonstrated strong capabilities in programming and mathematical
+    reasoning tasks, but are constrained by limited high-quality training data. Synthetic data can be
+    leveraged to enhance fine-tuning outcomes, but several factors influence this process, including model
+    size, synthetic data volume, pruning strategy, and number of fine-tuning rounds. We explore these
+    axes and investigate which conditions enable model self-improvement. We introduce the Think, Prune,
+    Train process, a scalable framework that iteratively fine-tunes models on their own reasoning traces,
+    using ground-truth pruning to ensure high-quality training data. This approach yields improved performance:
+    on GSM8K, Gemma2-2B achieves a Pass@1 of 57.6% (from 41.9%), Gemma2-9B reaches 82%, matching LLaMA-3.1-70B,
+    and LLaMA-3.1-70B attains 91%, even surpassing GPT-4o, demonstrating the effectiveness of self-generated
+    reasoning and systematic data selection for improving LLM capabilities.'
+  url: https://arxiv.org/abs/2504.18116
+  pdf_url: https://arxiv.org/pdf/2504.18116v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 10
+citation_year: 2025

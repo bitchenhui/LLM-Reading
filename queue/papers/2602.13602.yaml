@@ -1,0 +1,42 @@
+id: paper:arxiv:2602.13602
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: Towards Sparse Video Understanding and Reasoning
+  authors:
+  - Chenwei Xu
+  - Zhen Ye
+  - Shang Wu
+  - Weijian Li
+  - Zihan Wang
+  - Zhuofan Xia
+  - Lie Lu
+  - Pranav Maneriker
+  - Fan Du
+  - Manling Li
+  - Han Liu
+  published: '2026-02-14'
+  updated: '2026-05-30'
+  categories:
+  - cs.CV
+  - cs.LG
+  abstract: 'We present \revise (\underline{Re}asoning with \underline{Vi}deo \underline{S}parsity), a
+    multi-round agent for video question answering (VQA). Instead of uniformly sampling frames, \revise
+    selects a small set of informative frames, maintains a summary-as-state across rounds, and stops early
+    when confident. It supports proprietary vision-language models (VLMs) in a ``plug-and-play'''' setting
+    and enables reinforcement fine-tuning for open-source models. For fine-tuning, we introduce EAGER
+    (Evidence-Adjusted Gain for Efficient Reasoning), an annotation-free reward with three terms: (1)
+    Confidence gain: after new frames are added, we reward the increase in the log-odds gap between the
+    correct option and the strongest alternative; (2) Summary sufficiency: at answer time we re-ask using
+    only the last committed summary and reward success; (3) Correct-and-early stop: answering correctly
+    within a small turn budget is rewarded. Across multiple VQA benchmarks, \revise improves accuracy
+    while reducing frames, rounds, and prompt tokens, demonstrating practical sparse video reasoning.'
+  url: https://arxiv.org/abs/2602.13602
+  pdf_url: https://arxiv.org/pdf/2602.13602v2
+  version: v2
+fetched: '2026-11-14'

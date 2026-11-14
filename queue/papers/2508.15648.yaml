@@ -1,0 +1,40 @@
+id: paper:arxiv:2508.15648
+status: skipped
+score: 1
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+meta:
+  title: 'SDGO: Self-Discrimination-Guided Optimization for Consistent Safety in Large Language Models'
+  authors:
+  - Peng Ding
+  - Wen Sun
+  - Dailin Li
+  - Wei Zou
+  - Jiaming Wang
+  - Jiajun Chen
+  - Shujian Huang
+  published: '2025-08-21'
+  updated: '2025-08-26'
+  categories:
+  - cs.CL
+  abstract: 'Large Language Models (LLMs) excel at various natural language processing tasks but remain
+    vulnerable to jailbreaking attacks that induce harmful content generation. In this paper, we reveal
+    a critical safety inconsistency: LLMs can more effectively identify harmful requests as discriminators
+    than defend against them as generators. This insight inspires us to explore aligning the model''s
+    inherent discrimination and generation capabilities. To this end, we propose SDGO (Self-Discrimination-Guided
+    Optimization), a reinforcement learning framework that leverages the model''s own discrimination capabilities
+    as a reward signal to enhance generation safety through iterative self-improvement. Our method does
+    not require any additional annotated data or external models during the training phase. Extensive
+    experiments demonstrate that SDGO significantly improves model safety compared to both prompt-based
+    and training-based baselines while maintaining helpfulness on general benchmarks. By aligning LLMs''
+    discrimination and generation capabilities, SDGO brings robust performance against out-of-distribution
+    (OOD) jailbreaking attacks. This alignment achieves tighter coupling between these two capabilities,
+    enabling the model''s generation capability to be further enhanced with only a small amount of discriminative
+    samples. Our code and datasets are available at https://github.com/NJUNLP/SDGO.'
+  url: https://arxiv.org/abs/2508.15648
+  pdf_url: https://arxiv.org/pdf/2508.15648v2
+  version: v2
+fetched: '2026-11-14'

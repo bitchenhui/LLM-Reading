@@ -1,0 +1,35 @@
+id: paper:arxiv:2408.12150
+status: skipped
+score: 0
+track: video_image_coding
+matched: []
+meta:
+  title: 'DeepHQ: Learned Hierarchical Quantizer for Progressive Deep Image Coding'
+  authors:
+  - Jooyoung Lee
+  - Se Yoon Jeong
+  - Munchurl Kim
+  published: '2024-08-22'
+  updated: '2025-11-03'
+  categories:
+  - eess.IV
+  - cs.AI
+  - cs.LG
+  abstract: Unlike fixed- or variable-rate image coding, progressive image coding (PIC) aims to compress
+    various qualities of images into a single bitstream, increasing the versatility of bitstream utilization
+    and providing high compression efficiency compared to simulcast compression. Research on neural network
+    (NN)-based PIC is in its early stages, mainly focusing on applying varying quantization step sizes
+    to the transformed latent representations in a hierarchical manner. These approaches are designed
+    to compress only the progressively added information as the quality improves, considering that a wider
+    quantization interval for lower-quality compression includes multiple narrower sub-intervals for higher-quality
+    compression. However, the existing methods are based on handcrafted quantization hierarchies, resulting
+    in sub-optimal compression efficiency. In this paper, we propose an NN-based progressive coding method
+    that firstly utilizes learned quantization step sizes via learning for each quantization layer. We
+    also incorporate selective compression with which only the essential representation components are
+    compressed for each quantization layer. We demonstrate that our method achieves significantly higher
+    coding efficiency than the existing approaches with decreased decoding time and reduced model size.
+    The source code is publicly available at https://github.com/JooyoungLeeETRI/DeepHQ
+  url: https://arxiv.org/abs/2408.12150
+  pdf_url: https://arxiv.org/pdf/2408.12150v2
+  version: v2
+fetched: '2026-11-14'

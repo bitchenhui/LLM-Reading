@@ -1,0 +1,51 @@
+id: paper:arxiv:2406.12034
+status: pending
+score: 3
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+- ref: concept:MoE
+  count: 1
+  weight: 1
+meta:
+  title: 'Self-MoE: Towards Compositional Large Language Models with Self-Specialized Experts'
+  authors:
+  - Junmo Kang
+  - Leonid Karlinsky
+  - Hongyin Luo
+  - Zhen Wang
+  - Jacob Hansen
+  - James Glass
+  - David Cox
+  - Rameswar Panda
+  - Rogerio Feris
+  - Alan Ritter
+  published: '2024-06-17'
+  updated: '2024-10-07'
+  categories:
+  - cs.CL
+  - cs.LG
+  abstract: We present Self-MoE, an approach that transforms a monolithic LLM into a compositional, modular
+    system of self-specialized experts, named MiXSE (MiXture of Self-specialized Experts). Our approach
+    leverages self-specialization, which constructs expert modules using self-generated synthetic data,
+    each equipping a shared base LLM with distinct domain-specific capabilities, activated via self-optimized
+    routing. This allows for dynamic and capability-specific handling of various target tasks, enhancing
+    overall capabilities, without extensive human-labeled data and added parameters. Our empirical results
+    reveal that specializing LLMs may exhibit potential trade-offs in performances on non-specialized
+    tasks. On the other hand, our Self-MoE demonstrates substantial improvements (6.5%p on average) over
+    the base LLM across diverse benchmarks such as knowledge, reasoning, math, and coding. It also consistently
+    outperforms other methods, including instance merging and weight merging, while offering better flexibility
+    and interpretability by design with semantic experts and routing. Our findings highlight the critical
+    role of modularity, the applicability of Self-MoE to multiple base LLMs, and the potential of self-improvement
+    in achieving efficient, scalable, and adaptable systems.
+  url: https://arxiv.org/abs/2406.12034
+  pdf_url: https://arxiv.org/pdf/2406.12034v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 29
+citation_year: 2024

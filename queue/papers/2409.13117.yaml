@@ -1,0 +1,52 @@
+id: paper:arxiv:2409.13117
+status: skipped_low_citation
+score: 4
+track: video_image_coding
+matched:
+- ref: concept:INR
+  count: 2
+  weight: 1
+- ref: dataset:ImageNet
+  count: 1
+  weight: 1
+- ref: dataset:Kodak
+  count: 1
+  weight: 1
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+meta:
+  title: 'Breaking the Barriers of One-to-One Usage of Implicit Neural Representation in Image Compression:
+    A Linear Combination Approach with Performance Guarantees'
+  authors:
+  - Sai Sanjeet
+  - Seyyedali Hosseinalipour
+  - Jinjun Xiong
+  - Masahiro Fujita
+  - Bibhu Datta Sahoo
+  published: '2024-09-19'
+  updated: '2024-09-19'
+  categories:
+  - eess.IV
+  abstract: 'In an era where the exponential growth of image data driven by the Internet of Things (IoT)
+    is outpacing traditional storage solutions, this work explores and advances the potential of Implicit
+    Neural Representation (INR) as a transformative approach to image compression. INR leverages the function
+    approximation capabilities of neural networks to represent various types of data. While previous research
+    has employed INR to achieve compression by training small networks to reconstruct large images, this
+    work proposes a novel advancement: representing multiple images with a single network. By modifying
+    the loss function during training, the proposed approach allows a small number of weights to represent
+    a large number of images, even those significantly different from each other. A thorough analytical
+    study of the convergence of this new training method is also carried out, establishing upper bounds
+    that not only confirm the validity of the method but also offer insights into optimal hyperparameter
+    design. The proposed method is evaluated on the Kodak, ImageNet, and CIFAR-10 datasets. Experimental
+    results demonstrate that all 24 images in the Kodak dataset can be represented by linear combinations
+    of two sets of weights, achieving a peak signal-to-noise ratio (PSNR) of 26.5 dB with as low as 0.2
+    bits per pixel (BPP). The proposed method matches the rate-distortion performance of state-of-the-art
+    image codecs, such as BPG, on the CIFAR-10 dataset. Additionally, the proposed method maintains the
+    fundamental properties of INR, such as arbitrary resolution reconstruction of images.'
+  url: https://arxiv.org/abs/2409.13117
+  pdf_url: https://arxiv.org/pdf/2409.13117v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 1
+citation_year: 2024

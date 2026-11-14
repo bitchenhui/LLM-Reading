@@ -1,0 +1,41 @@
+id: paper:arxiv:2605.04064
+status: skipped_low_citation
+score: 2
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: Improving Medical VQA through Trajectory-Aware Process Supervision
+  authors:
+  - Halil Ibrahim Gulluk
+  - Olivier Gevaert
+  published: '2026-04-10'
+  updated: '2026-04-10'
+  categories:
+  - cs.LG
+  - cs.CV
+  abstract: 'Reasoning capabilities are crucial for reliable medical visual question answering (VQA);
+    however, existing datasets rarely include reasoning explanations. We address this by generating reasoning
+    trajectories for six medical VQA benchmarks using the COMCTS algorithm with open-source vision-language
+    models, with an LLM serving as the verification judge. Building on these generated datasets, we propose
+    a two-stage training framework: supervised fine-tuning followed by Group Relative Policy Optimization
+    (GRPO) with a novel process-based reward. While standard approaches rely solely on exact-match rewards
+    for final answers, we introduce a trajectory-aware reward that measures the similarity between generated
+    and ground-truth reasoning processes. Specifically, we embed reasoning steps using sentence transformers
+    and compute the Dynamic Time Warping (DTW) distance between the resulting vector sequences. Experiments
+    across six benchmarks demonstrate that combining the DTW-based process reward with exact-match reward
+    consistently outperforms SFT-only training, raising mean accuracy from 0.598 to 0.689, mean BERTScore
+    from 0.845 to 0.881, and mean ROUGE-L from 0.665 to 0.748. Our results highlight the importance of
+    process supervision in training reasoning-capable medical VLMs. We make our code and generated reasoning
+    datasets publicly available at https://anonymous.4open.science/r/MICCAI-R1-MED-VQA-code-B14B/'
+  url: https://arxiv.org/abs/2605.04064
+  pdf_url: https://arxiv.org/pdf/2605.04064v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 1
+citation_year: 2026

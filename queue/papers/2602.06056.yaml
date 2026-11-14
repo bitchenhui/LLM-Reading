@@ -1,0 +1,45 @@
+id: paper:arxiv:2602.06056
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: Analyzing Diffusion and Autoregressive Vision Language Models in Multimodal Embedding Space
+  authors:
+  - Zihang Wang
+  - Siyue Zhang
+  - Yilun Zhao
+  - Jingyi Yang
+  - Tingyu Song
+  - Anh Tuan Luu
+  - Chen Zhao
+  published: '2026-01-19'
+  updated: '2026-01-19'
+  categories:
+  - cs.MM
+  - cs.AI
+  - cs.CL
+  - cs.CV
+  abstract: 'Embedding models are a fundamental component of modern AI systems such as semantic search
+    and retrieval-augmented generation. Recent advances in large foundation models have substantially
+    accelerated the development of embedding models, including those based on Large Language Models (LLMs),
+    Vision Language Models (VLMs), and Multimodal LLMs. More recently, Large Diffusion Language Models
+    (dLLMs) and Multimodal dLLMs have emerged as competitive alternatives to autoregressive models, offering
+    advantages such as bidirectional attention and parallel generation. This progress naturally raises
+    a critical yet unexplored question: can Multimodal dLLMs serve as effective multimodal embedding models?
+    To answer this, we present the first systematic study of converting Multimodal dLLMs into embedding
+    models. We evaluate state-of-the-art Multimodal dLLMs and Autoregressive VLMs across three categories
+    of embedding tasks: classification, visual question answering, and information retrieval. Our results
+    show that Multimodal dLLM embeddings generally underperform their autoregressive VLM counterparts.
+    The stronger diffusion-based model, LaViDa, lags by only 3.5 points on classification, 2.5 points
+    on VQA, and 4.4 points on retrieval tasks, whereas the other diffusion-based model, MMaDA, exhibits
+    substantially larger performance gaps, exceeding 20 points across all tasks. Further analysis reveals
+    insufficient image-text alignment in diffusion-based models, accounting for the observed limitations
+    in their embedding performance.'
+  url: https://arxiv.org/abs/2602.06056
+  pdf_url: https://arxiv.org/pdf/2602.06056v1
+  version: v1
+fetched: '2026-11-14'

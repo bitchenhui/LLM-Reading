@@ -1,0 +1,38 @@
+id: paper:arxiv:2604.04838
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'Less Detail, Better Answers: Degradation-Driven Prompting for VQA'
+  authors:
+  - Haoxuan Han
+  - Weijie Wang
+  - Zeyu Zhang
+  - Yefei He
+  - Bohan Zhuang
+  published: '2026-04-06'
+  updated: '2026-04-07'
+  categories:
+  - cs.CV
+  abstract: 'Recent advancements in Vision-Language Models (VLMs) have significantly pushed the boundaries
+    of Visual Question Answering (VQA).However,high-resolution details can sometimes become noise that
+    leads to hallucinations or reasoning errors. In this paper,we propose Degradation-Driven Prompting
+    (DDP), a novel framework that improves VQA performance by strategically reducing image fidelity to
+    force models to focus on essential structural information. We evaluate DDP across two distinct tasks.
+    Physical attributes targets images prone to human misjudgment, where DDP employs a combination of
+    80p downsampling, structural visual aids (white background masks and orthometric lines), and In-Context
+    Learning (ICL) to calibrate the model''s focus. Perceptual phenomena addresses various machine-susceptible
+    visual anomalies and illusions, including Visual Anomaly (VA), Color (CI), Motion(MI),Gestalt (GI),
+    Geometric (GSI), and Visual Illusions (VI).For this task, DDP integrates a task-classification stage
+    with specialized tools such as blur masks and contrast enhancement alongside downsampling. Our experimental
+    results demonstrate that less is more: by intentionally degrading visual inputs and providing targeted
+    structural prompts, DDP enables VLMs to bypass distracting textures and achieve superior reasoning
+    accuracy on challenging visual benchmarks.'
+  url: https://arxiv.org/abs/2604.04838
+  pdf_url: https://arxiv.org/pdf/2604.04838v2
+  version: v2
+fetched: '2026-11-14'

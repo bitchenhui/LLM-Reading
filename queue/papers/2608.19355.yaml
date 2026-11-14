@@ -1,0 +1,52 @@
+id: paper:arxiv:2608.19355
+status: pending
+score: 2
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: 'GRACE: Grounded Reasoning via Adapter Composition and Evidence-Aware Calibration for Educational
+    Visual Question Answering'
+  authors:
+  - Xinjin Li
+  - Yudi Xia
+  - Xi Zhao
+  - Yiliu Xu
+  - Yining Liu
+  - Cheng Lu
+  - Yujian Long
+  - Yu Ma
+  - Jinghan Cao
+  - Liang Fan
+  - Yeyun Xu
+  published: '2026-08-19'
+  updated: '2026-08-19'
+  categories:
+  - cs.MM
+  - cs.CV
+  abstract: Educational visual question answering, or VQA, requires models to solve curriculum-oriented
+    multiple-choice questions using both language and visual evidence. Compared with conventional open-ended
+    VQA, educational examples often include structured assessment metadata, diagrams or image contexts,
+    and semantically close answer options, creating strong opportunities for question-option shortcuts.
+    We develop and evaluate a parameter-efficient adaptation framework for a frozen multimodal large language
+    model in this setting. We introduce GRACE, Grounded Reasoning via Adapter Composition and Evidence-Aware
+    Calibration, a framework that uses the pedagogical state of each question to specialize lightweight
+    language and vision adaptation. The state combines inference-visible subject, grouped skill, grade,
+    visual-context, question-intent, and option-structure cues. GRACE uses factor-specific prompts and
+    lightweight visual adapters, then applies evidence-aware option calibration to score all candidates
+    under a shared multimodal context. On ScienceQA, GRACE improves a shared-adapter baseline from 90.5
+    percent to 93.1 percent overall accuracy and from 88.7 percent to 91.2 percent on image-context questions.
+    Removing pedagogical composition, option calibration, or the visual adapter reduces overall accuracy
+    by 1.4, 1.0, and 1.5 points, respectively. These controlled results show that structured educational
+    state is an effective routing signal for parameter-efficient multimodal adaptation.
+  url: https://arxiv.org/abs/2608.19355
+  pdf_url: https://arxiv.org/pdf/2608.19355v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 4
+citation_year: 2026

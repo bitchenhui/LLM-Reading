@@ -1,0 +1,48 @@
+id: paper:arxiv:2601.00150
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'FCMBench: The First Large-scale Financial Credit Multimodal Benchmark for Real-world Applications'
+  authors:
+  - Yehui Yang
+  - Dalu Yang
+  - Fangxin Shang
+  - Wenshuo Zhou
+  - Jie Ren
+  - Yifan Liu
+  - Haojun Fei
+  - Qing Yang
+  - Yanwu Xu
+  - Tao Chen
+  published: '2026-01-01'
+  updated: '2026-03-13'
+  categories:
+  - cs.CV
+  - cs.AI
+  - cs.CE
+  - cs.MM
+  abstract: FCMBench is the first large-scale and privacy-compliant multimodal benchmark for real-world
+    financial credit applications, covering tasks and robustness challenges from domain specific workflows
+    and constraints. The current version of FCMBench covers 26 certificate types, with 5198 privacy-compliant
+    images and 13806 paired VQA samples. It evaluates models on Perception and Reasoning tasks under real-world
+    Robustness interferences, including 3 foundational perception tasks, 4 credit-specific reasoning tasks
+    demanding decision-oriented visual evidence interpretation, and 10 real-world challenges for rigorous
+    robustness stress testing. Moreover, FCMBench offers privacy-compliant realism with minimal leakage
+    risk through in-house scenario-aware captures of manually synthesized templates, without any publicly
+    released images. We conduct extensive evaluations of 28 state-of-the-art vision-language models spanning
+    14 AI companies and research institutes. Among them, Gemini 3 Pro achieves the best F1 score as a
+    commercial model (65.16), Kimi-K2.5 achieves the best score as an open-source baseline (60.58). The
+    mean and the std. of all tested models is 44.8 and 10.3 respectively, indicating that FCMBench is
+    non-trivial and provides strong resolution for separating modern vision-language model capabilities.
+    Robustness evaluations reveal that even top-performing models experience notable performance degradation
+    under the designed challenges. We have open-sourced this benchmark to advance AI research in the credit
+    domain and provide a domain-specific task for real-world AI applications.
+  url: https://arxiv.org/abs/2601.00150
+  pdf_url: https://arxiv.org/pdf/2601.00150v3
+  version: v3
+fetched: '2026-11-14'

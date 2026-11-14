@@ -1,0 +1,42 @@
+id: paper:arxiv:2605.24159
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'EchoVQA: Enabling Conversational Assistance for Point-of-Care Cardiac Ultrasound'
+  authors:
+  - Filippos Bellos
+  - Yutong Li
+  - Jessie N Dong
+  - Zaiyang Guo
+  - Emily Mackay
+  - Yayuan Li
+  - Yannis Avrithis
+  - Alison Pouch
+  - Jason J. Corso
+  published: '2026-05-22'
+  updated: '2026-05-22'
+  categories:
+  - cs.CV
+  abstract: Point-of-care transthoracic echocardiography (TTE) enables cardiac assessment in virtually
+    any clinical setting, yet its diagnostic utility remains constrained by the expertise required for
+    image acquisition and interpretation. Visual question answering (VQA) offers a promising paradigm
+    for bridging this expertise gap through interactive clinical assistance, but existing echocardiography
+    VQA datasets are limited in scale, restricted to high-quality images, and only cover a few views.
+    We introduce EchoVQA, the first large-scale VQA dataset for echocardiography, comprising 14,299 images
+    and 74,819 question-answer pairs. The dataset integrates public sources (EchoNet-Dynamic, CAMUS) with
+    our own point-of-care acquisitions from two handheld probes (Lumify, Clarius), spanning diverse views
+    and including both high-quality and suboptimal images. Uniquely, EchoVQA includes acquisition guidance
+    questions to help users optimize transducer positioning toward a diagnostic apical 4-chamber view
+    for left ventricular ejection fraction estimation -- a challenging task for novice operators in point-of-care
+    settings. We further develop a parameter-efficient method based on multimodal learnable prompts achieving
+    state-of-the-art performance on most benchmarks, including EchoVQA, with significantly less trainable
+    parameters than existing state-of-the-art approaches.
+  url: https://arxiv.org/abs/2605.24159
+  pdf_url: https://arxiv.org/pdf/2605.24159v1
+  version: v1
+fetched: '2026-11-14'

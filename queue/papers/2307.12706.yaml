@@ -1,0 +1,34 @@
+id: paper:arxiv:2307.12706
+status: pending
+score: 3
+track: video_image_coding
+matched:
+- ref: codec:HEVC
+  count: 1
+  weight: 3
+meta:
+  title: Low-complexity Overfitted Neural Image Codec
+  authors:
+  - Thomas Leguay
+  - Théo Ladune
+  - Pierrick Philippe
+  - Gordon Clare
+  - Félix Henry
+  published: '2023-07-24'
+  updated: '2023-07-24'
+  categories:
+  - eess.IV
+  - eess.SP
+  abstract: We propose a neural image codec at reduced complexity which overfits the decoder parameters
+    to each input image. While autoencoders perform up to a million multiplications per decoded pixel,
+    the proposed approach only requires 2300 multiplications per pixel. Albeit low-complexity, the method
+    rivals autoencoder performance and surpasses HEVC performance under various coding conditions. Additional
+    lightweight modules and an improved training process provide a 14% rate reduction with respect to
+    previous overfitted codecs, while offering a similar complexity. This work is made open-source at
+    https://orange-opensource.github.io/Cool-Chic/
+  url: https://arxiv.org/abs/2307.12706
+  pdf_url: https://arxiv.org/pdf/2307.12706v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 35
+citation_year: 2023

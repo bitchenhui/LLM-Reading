@@ -1,0 +1,40 @@
+id: paper:arxiv:2507.08967
+status: skipped_low_citation
+score: 2
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 3
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: Self-Improving Model Steering
+  authors:
+  - Rongyi Zhu
+  - Yuhui Wang
+  - Tanqiu Jiang
+  - Jiacheng Liang
+  - Ting Wang
+  published: '2025-07-11'
+  updated: '2025-07-11'
+  categories:
+  - cs.CL
+  abstract: Model steering represents a powerful technique that dynamically aligns large language models
+    (LLMs) with human preferences during inference. However, conventional model-steering methods rely
+    heavily on externally annotated data, not only limiting their adaptability to varying contexts but
+    also tethering their effectiveness to annotation quality. In this paper, we present SIMS, the first
+    self-improving model-steering framework that operates without relying on external supervision. At
+    its core, SIMS autonomously generates and refines contrastive samples through iterative self-improvement
+    cycles, enabling adaptive, context-specific steering. Additionally, SIMS employs novel strategies,
+    including prompt ranking and contrast sampling, to further enhance steering efficacy. Extensive evaluation
+    across diverse LLMs and benchmarks demonstrates that SIMS substantially outperforms existing methods
+    in steering effectiveness and adaptability, highlighting self-improving model steering as a promising
+    direction for future research on inference-time LLM alignment.
+  url: https://arxiv.org/abs/2507.08967
+  pdf_url: https://arxiv.org/pdf/2507.08967v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 4
+citation_year: 2025

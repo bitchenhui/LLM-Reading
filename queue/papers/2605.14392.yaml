@@ -1,0 +1,44 @@
+id: paper:arxiv:2605.14392
+status: skipped
+score: 1
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 4
+  weight: 1
+meta:
+  title: 'Learning to Build the Environment: Self-Evolving Reasoning RL via Verifiable Environment Synthesis'
+  authors:
+  - Yucheng Shi
+  - Zhenwen Liang
+  - Kishan Panaganti
+  - Dian Yu
+  - Wenhao Yu
+  - Haitao Mi
+  published: '2026-05-14'
+  updated: '2026-05-14'
+  categories:
+  - cs.AI
+  abstract: 'We pursue a vision for self-improving language models in which the model does not merely
+    generate problems or traces to imitate, but constructs the environments that train it. In zero-data
+    reasoning RL, this reframes self-improvement from a data-generation loop into an environment-construction
+    loop, where each artifact is a reusable executable object that samples instances, computes references,
+    and scores responses. Whether this vision sustains improvement hinges on a single property: the environments
+    must exhibit stable solve--verify asymmetry, the model must be able to write an oracle once that it
+    cannot reliably execute in natural language on fresh instances. This asymmetry takes two complementary
+    forms. Some tasks are algorithmically hard to reason through but trivial as code: a dynamic program
+    or graph traversal, compiled once, yields unboundedly many calibrated instances. Others are intrinsically
+    hard to solve but easy to verify, like planted subset-sum or constraint satisfaction. Both create
+    a durable gap between proposing and solving that the policy cannot close by gaming the verifier, and
+    it is this gap that keeps reward informative as the learner improves. We instantiate this view in
+    EvoEnv, a single-policy generator, solver method that synthesizes Python environments from ten seeds
+    and admits them only after staged validation, semantic self-review, solver-relative difficulty calibration,
+    and novelty checks. The strongest evidence comes from the already-strong regime: on Qwen3-4B-Thinking,
+    fixed public-data RLVR and fixed hand-crafted environment RLVR reduce the average, while EvoEnv improves
+    it from 72.4 to 74.8, a relative gain of 3.3%. Stable self-improvement, we suggest, depends not on
+    producing more synthetic data, but on models learning to construct worlds whose difficulty stays structurally
+    beyond their own reach.'
+  url: https://arxiv.org/abs/2605.14392
+  pdf_url: https://arxiv.org/pdf/2605.14392v1
+  version: v1
+fetched: '2026-11-14'

@@ -1,0 +1,38 @@
+id: paper:arxiv:2605.26812
+status: skipped
+score: 0
+track: audio_coding
+matched: []
+meta:
+  title: 'CFMDCTCodec: A Low-Bitrate Neural Speech Codec with Noise-Prior-aware Conditional Flow Matching
+    for MDCT-Spectral Enhancement'
+  authors:
+  - Xiao-Hang Jiang
+  - Yang Ai
+  - Hui-Peng Du
+  - Zhen-Hua Ling
+  - Ji Wu
+  published: '2026-05-26'
+  updated: '2026-05-26'
+  categories:
+  - eess.AS
+  abstract: High-quality speech coding at low bitrates is crucial for bandwidth-constrained applications,
+    yet remains challenging due to the severe loss of quality-critical information in highly compressed
+    representations. To overcome this challenge, we propose CFMDCTCodec, a low-bitrate neural speech codec
+    that operates entirely in the modified discrete cosine transform (MDCT) domain. CFMDCTCodec integrates
+    a lightweight encoder-quantizer-decoder-style MDCT-spectral codec with a noise-prior-aware, conditional-flow-matching
+    (CFM)-based MDCT-spectral enhancer. Within this framework, the codec serves as a base module that
+    compactly discretizes the MDCT spectrum extracted from speech and produces an initial coarse reconstruction,
+    while the enhancer further restores fine-grained spectral details. The enhancer improves the decoded
+    MDCT spectrum by integrating a conditional MDCT velocity-field filter with an ordinary differential
+    equation (ODE) solver, under the guidance of an MDCT-derived magnitude-adaptive noise prior, aiming
+    to emphasize perceptually significant high-energy regions while stabilizing low-energy and silent
+    regions. Finally, the enhanced MDCT spectrum is reconstructed into the decoded speech using the inverse
+    MDCT. When optimizing CFMDCTCodec, we adopt a unified non-adversarial training strategy that jointly
+    combines reconstruction, quantization and CFM objectives. Both objective and subjective evaluations
+    show that CFMDCTCodec outperforms competitive baselines in low-bitrate regimes, e.g., 0.65 kbps, while
+    approaching the perceptual quality of large-scale codecs with significantly fewer parameters and computations.
+  url: https://arxiv.org/abs/2605.26812
+  pdf_url: https://arxiv.org/pdf/2605.26812v1
+  version: v1
+fetched: '2026-11-14'

@@ -1,0 +1,49 @@
+id: paper:arxiv:2509.09494
+status: skipped_low_citation
+score: 3
+track: video_image_coding
+matched:
+- ref: codec:VVC
+  count: 1
+  weight: 3
+meta:
+  title: In-Loop Filtering Using Learned Look-Up Tables for Video Coding
+  authors:
+  - Zhuoyuan Li
+  - Jiacheng Li
+  - Yao Li
+  - Jialin Li
+  - Li Li
+  - Dong Liu
+  - Feng Wu
+  published: '2025-09-11'
+  updated: '2025-09-11'
+  categories:
+  - eess.IV
+  - cs.CV
+  - cs.MM
+  abstract: In-loop filtering (ILF) is a key technology in video coding standards to reduce artifacts
+    and enhance visual quality. Recently, neural network-based ILF schemes have achieved remarkable coding
+    gains, emerging as a powerful candidate for next-generation video coding standards. However, the use
+    of deep neural networks (DNN) brings significant computational and time complexity or high demands
+    for dedicated hardware, making it challenging for general use. To address this limitation, we study
+    a practical ILF solution by adopting look-up tables (LUTs). After training a DNN with a restricted
+    reference range for ILF, all possible inputs are traversed, and the output values of the DNN are cached
+    into LUTs. During the coding process, the filtering process is performed by simply retrieving the
+    filtered pixel through locating the input pixels and interpolating between the cached values, instead
+    of relying on heavy inference computations. In this paper, we propose a universal LUT-based ILF framework,
+    termed LUT-ILF++. First, we introduce the cooperation of multiple kinds of filtering LUTs and propose
+    a series of customized indexing mechanisms to enable better filtering reference perception with limited
+    storage consumption. Second, we propose the cross-component indexing mechanism to enable the filtering
+    of different color components jointly. Third, in order to make our solution practical for coding uses,
+    we propose the LUT compaction scheme to enable the LUT pruning, achieving a lower storage cost of
+    the entire solution. The proposed framework is implemented in the VVC reference software. Experimental
+    results show that the proposed framework achieves on average 0.82%/2.97%/1.63% and 0.85%/4.11%/2.06%
+    bitrate reduction for common test sequences, under the AI and RA configurations, respectively. Compared
+    to DNN-based solutions, our proposed solution has much lower time complexity and storage cost.
+  url: https://arxiv.org/abs/2509.09494
+  pdf_url: https://arxiv.org/pdf/2509.09494v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 3
+citation_year: 2025

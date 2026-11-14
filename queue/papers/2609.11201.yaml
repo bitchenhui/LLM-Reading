@@ -1,0 +1,46 @@
+id: paper:arxiv:2609.11201
+status: pending
+score: 2
+track: quality_assessment
+matched:
+- ref: concept:SuperResolution
+  count: 2
+  weight: 1
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'CEM-TUDASR: Computationally efficient multi-modality transformer based unsupervised domain adaptive
+    super-resolution approach'
+  authors:
+  - Anjali Sarvaiya
+  - Jay Kadel
+  - Kishor Upla
+  - Kiran Raja
+  published: '2026-09-10'
+  updated: '2026-09-10'
+  categories:
+  - cs.CV
+  abstract: Wireless Capsule Endoscopy (WCE) enables non-invasive visualization of the gastrointestinal
+    tract, but its miniaturized optics, sensor limitations, and wireless transmission constraints result
+    in low-resolution images with reduced visibility of diagnostically important structures. This paper
+    proposes CEM-TUDASR, a computationally efficient unsupervised Transformer-based super-resolution framework
+    for WCE image enhancement without paired low-resolution (LR) and high-resolution (HR) training data.
+    A domain-adaptive degradation network synthesizes realistic WCE-like LR images from HR conventional
+    endoscopy images, reducing the domain gap and enabling effective unpaired learning. The SR generator
+    integrates Deep Attention Blocks (DABs) and a Fusion Attention Block (FAB) to capture long-range contextual
+    dependencies and fine local structures while preserving perceptual and structural fidelity. The model
+    is trained on a curated dataset derived from Kvasir Capsule and evaluated on KID and GIANA for cross-dataset
+    generalization. No-reference quality metrics, including BRISQUE, PIQE, NIQE, and the domain-specific
+    EndoQM, show that CEM-TUDASR consistently outperforms existing unsupervised SR methods. Qualitative
+    results further demonstrate improved restoration of mucosal textures, vascular patterns, and clinically
+    relevant anatomical details. Cross-domain experiments on retinal images additionally demonstrate the
+    adaptability of the framework. With only 2.67 million parameters and 169.94 GFLOPs, CEM-TUDASR achieves
+    high-quality reconstruction while maintaining computational efficiency, making it suitable for resource-constrained
+    clinical and embedded endoscopic applications.
+  url: https://arxiv.org/abs/2609.11201
+  pdf_url: https://arxiv.org/pdf/2609.11201v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 0
+citation_year: 2026

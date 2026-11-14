@@ -1,0 +1,33 @@
+id: paper:arxiv:2510.20504
+status: skipped
+score: 0
+track: audio_coding
+matched: []
+meta:
+  title: 'Speaking Clearly: A Simplified Whisper-Based Codec for Low-Bitrate Speech Coding'
+  authors:
+  - Xin Zhang
+  - Lin Li
+  - Xiangni Lu
+  - Jianquan Liu
+  - Kong Aik Lee
+  published: '2025-10-23'
+  updated: '2026-01-27'
+  categories:
+  - cs.SD
+  abstract: 'Speech codecs serve as bridges between continuous speech signals and large language models,
+    yet face an inherent conflict between acoustic fidelity and semantic preservation. To mitigate this
+    conflict, prevailing methods augment acoustic codecs with complex semantic supervision. We explore
+    the opposite direction: a semantic-first approach that starts from a semantically-capable model and
+    adapts it for high-fidelity acoustic reconstruction. Through empirical analysis, we discover that
+    targeted architectural simplification can unlock the acoustic modeling potential of Whisper, a text-aligned
+    Automatic Speech Recognition (ASR) model. Based on this finding, we propose SimWhisper-Codec, a novel
+    codec that balances the semantic and acoustic preservation by leveraging a frozen, simplified Whisper
+    encoder without requiring external supervision. Experimental results demonstrate that SimWhisper-Codec
+    achieves superior performance in both semantic preservation and acoustic quality compared to semantically-supervised
+    codecs such as Mimi Codec and SpeechTokenizer at similar bitrates, validating the effectiveness of
+    our semantic-first approach. Code is available at https://github.com/ZhangXinWhut/SimWhisper-Codec.'
+  url: https://arxiv.org/abs/2510.20504
+  pdf_url: https://arxiv.org/pdf/2510.20504v2
+  version: v2
+fetched: '2026-11-14'

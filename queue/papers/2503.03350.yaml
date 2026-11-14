@@ -1,0 +1,38 @@
+id: paper:arxiv:2503.03350
+status: skipped
+score: 1
+track: self_improvement
+matched:
+- ref: concept:EoH
+  count: 2
+  weight: 1
+meta:
+  title: Leveraging Large Language Models to Develop Heuristics for Emerging Optimization Problems
+  authors:
+  - Thomas Bömer
+  - Nico Koltermann
+  - Max Disselnmeyer
+  - Laura Dörr
+  - Anne Meyer
+  published: '2025-03-05'
+  updated: '2025-03-05'
+  categories:
+  - cs.AI
+  abstract: Combinatorial optimization problems often rely on heuristic algorithms to generate efficient
+    solutions. However, the manual design of heuristics is resource-intensive and constrained by the designer's
+    expertise. Recent advances in artificial intelligence, particularly large language models (LLMs),
+    have demonstrated the potential to automate heuristic generation through evolutionary frameworks.
+    Recent works focus only on well-known combinatorial optimization problems like the traveling salesman
+    problem and online bin packing problem when designing constructive heuristics. This study investigates
+    whether LLMs can effectively generate heuristics for niche, not yet broadly researched optimization
+    problems, using the unit-load pre-marshalling problem as an example case. We propose the Contextual
+    Evolution of Heuristics (CEoH) framework, an extension of the Evolution of Heuristics (EoH) framework,
+    which incorporates problem-specific descriptions to enhance in-context learning during heuristic generation.
+    Through computational experiments, we evaluate CEoH and EoH and compare the results. Results indicate
+    that CEoH enables smaller LLMs to generate high-quality heuristics more consistently and even outperform
+    larger models. Larger models demonstrate robust performance with or without contextualized prompts.
+    The generated heuristics exhibit scalability to diverse instance configurations.
+  url: https://arxiv.org/abs/2503.03350
+  pdf_url: https://arxiv.org/pdf/2503.03350v1
+  version: v1
+fetched: '2026-11-14'

@@ -1,0 +1,42 @@
+id: paper:arxiv:2607.10127
+status: pending
+score: 2
+track: self_improvement
+matched:
+- ref: concept:LLM
+  count: 1
+  weight: 1
+- ref: concept:SelfImprovement
+  count: 1
+  weight: 1
+meta:
+  title: 'GAE: Graph-Augmented Evolution for Scientific Discovery via Reinforcement Optimization'
+  authors:
+  - Xuanzhou Chen
+  - Taoli Cheng
+  published: '2026-07-11'
+  updated: '2026-07-11'
+  categories:
+  - cs.LG
+  - cs.AI
+  abstract: 'Evolutionary program search guided by Large Language Models (LLMs) has emerged as a powerful
+    paradigm for automated scientific discovery. However, current approaches are fundamentally constrained
+    by three bottlenecks: structurally blind parent selection, sparse whole-program evaluation rewards,
+    and static mutation operators that fail to adapt during search. We present GAE (Graph-Augmented Evolution),
+    a framework that resolves these limitations through a tightly coupled, three-pillar architecture.
+    First, a relational graph neural network (GNN) parses programs into typed computation graphs, producing
+    structure-aware embeddings. Second, an RL-optimized meta-controller leverages these embeddings to
+    replace blind evolutionary sampling with a directed policy, dynamically selecting optimal parents
+    and mutation directions based on reward history. Third, an online GRPO fine-tuning loop continuously
+    updates the LLM mutation operator at test-time using group-normalized evaluation rewards, directly
+    aligning the model''s generation distribution with high-fitness structural edits. We evaluate GAE
+    on a challenging scientific discovery task: symbolic regression for complex nonlinear oscillator systems.
+    By transforming stochastic search into a directed, self-improving trajectory, GAE efficiently discovers
+    closed-form physical equations, consistently matching or outperforming static LLM-driven baselines
+    and achieving state-of-the-art out-of-distribution performance.'
+  url: https://arxiv.org/abs/2607.10127
+  pdf_url: https://arxiv.org/pdf/2607.10127v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 0
+citation_year: 2026

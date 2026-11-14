@@ -1,0 +1,40 @@
+id: paper:arxiv:2604.17773
+status: skipped
+score: 1
+track: processing_enhancement
+matched:
+- ref: concept:SuperResolution
+  count: 1
+  weight: 1
+meta:
+  title: Structure-Adaptive Sparse Diffusion in Voxel Space for 3D Medical Image Enhancement
+  authors:
+  - Hongxu Jiang
+  - Fei Li
+  - Boxiao Yu
+  - Ying Zhang
+  - Kaleb Smith
+  - Kuang Gong
+  - Wei Shao
+  published: '2026-04-20'
+  updated: '2026-04-20'
+  categories:
+  - cs.CV
+  abstract: 'Three-dimensional (3D) medical image enhancement, including denoising and super-resolution,
+    is critical for clinical diagnosis in CT, PET, and MRI. Although diffusion models have shown remarkable
+    success in 2D medical imaging, scaling them to high-resolution 3D volumes remains computationally
+    prohibitive due to lengthy diffusion trajectories over high-dimensional volumetric data. We observe
+    that in conditional enhancement, strong anatomical priors in the degraded input render dense noise
+    schedules largely redundant. Leveraging this insight, we propose a sparse voxel-space diffusion framework
+    that trains and samples on a compact set of uniformly subsampled timesteps. The network predicts clean
+    data directly on the data manifold, supervised in velocity space for stable gradient scaling. A lightweight
+    Structure-aware Trajectory Modulation (STM) module recalibrates time embeddings at each network block
+    based on local anatomical content, enabling structure-adaptive denoising over the shared sparse schedule.
+    Operating directly in voxel space, our framework preserves fine anatomical detail without lossy compression
+    while achieving up to $10\times$ training acceleration. Experiments on four datasets spanning CT,
+    PET, and MRI demonstrate state-of-the-art performance on both denoising and super-resolution tasks.
+    Our code is publicly available at: https://github.com/mirthAI/sparse-3d-diffusion.'
+  url: https://arxiv.org/abs/2604.17773
+  pdf_url: https://arxiv.org/pdf/2604.17773v1
+  version: v1
+fetched: '2026-11-14'

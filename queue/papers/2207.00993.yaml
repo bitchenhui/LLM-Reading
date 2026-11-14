@@ -1,0 +1,35 @@
+id: paper:arxiv:2207.00993
+status: skipped
+score: 0
+track: audio_coding
+matched: []
+meta:
+  title: Towards Error-Resilient Neural Speech Coding
+  authors:
+  - Huaying Xue
+  - Xiulian Peng
+  - Xue Jiang
+  - Yan Lu
+  published: '2022-07-03'
+  updated: '2022-07-03'
+  categories:
+  - cs.SD
+  - cs.MM
+  - eess.AS
+  abstract: Neural audio coding has shown very promising results recently in the literature to largely
+    outperform traditional codecs but limited attention has been paid on its error resilience. Neural
+    codecs trained considering only source coding tend to be extremely sensitive to channel noises, especially
+    in wireless channels with high error rate. In this paper, we investigate how to elevate the error
+    resilience of neural audio codecs for packet losses that often occur during real-time communications.
+    We propose a feature-domain packet loss concealment algorithm (FD-PLC) for real-time neural speech
+    coding. Specifically, we introduce a self-attention-based module on the received latent features to
+    recover lost frames in the feature domain before the decoder. A hybrid segment-level and frame-level
+    frequency-domain discriminator is employed to guide the network to focus on both the generative quality
+    of lost frames and the continuity with neighbouring frames. Experimental results on several error
+    patterns show that the proposed scheme can achieve better robustness compared with the corresponding
+    error-free and error-resilient baselines. We also show that feature-domain concealment is superior
+    to waveform-domain counterpart as post-processing.
+  url: https://arxiv.org/abs/2207.00993
+  pdf_url: https://arxiv.org/pdf/2207.00993v1
+  version: v1
+fetched: '2026-11-14'

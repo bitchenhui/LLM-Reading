@@ -1,0 +1,31 @@
+id: paper:arxiv:2512.20871
+status: skipped
+score: 0
+track: video_image_coding
+matched: []
+meta:
+  title: 'NeRV360: Neural Representation for 360-Degree Videos with a Viewport Decoder'
+  authors:
+  - Daichi Arai
+  - Kyohei Unno
+  - Yasuko Sugito
+  - Yuichi Kusakabe
+  published: '2025-12-24'
+  updated: '2026-02-16'
+  categories:
+  - cs.CV
+  - cs.MM
+  - eess.IV
+  abstract: Implicit neural representations for videos (NeRV) have shown strong potential for video compression.
+    However, applying NeRV to high-resolution 360-degree videos causes high memory usage and slow decoding,
+    making real-time applications impractical. We propose NeRV360, an end-to-end framework that decodes
+    only the user-selected viewport instead of reconstructing the entire panoramic frame. Unlike conventional
+    pipelines, NeRV360 integrates viewport extraction into decoding and introduces a spatial-temporal
+    affine transform module for conditional decoding based on viewpoint and time. Experiments on 6K-resolution
+    videos show that NeRV360 achieves a 7-fold reduction in memory consumption and a 2.5-fold increase
+    in decoding speed compared to HNeRV, a representative prior work, while delivering better image quality
+    in terms of objective metrics.
+  url: https://arxiv.org/abs/2512.20871
+  pdf_url: https://arxiv.org/pdf/2512.20871v2
+  version: v2
+fetched: '2026-11-14'

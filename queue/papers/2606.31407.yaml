@@ -1,0 +1,42 @@
+id: paper:arxiv:2606.31407
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'Visual Semantic Entropy: Do Vision Language Models Recognize Visual Ambiguity?'
+  authors:
+  - Ta Duc Huy
+  - Trang Nguyen
+  - Townim Chowdhury
+  - Ankit Yadav
+  - Minh-Son To
+  - Zhibin Liao
+  - Johan W. Verjans
+  - Vu Minh Hieu Phan
+  published: '2026-06-30'
+  updated: '2026-06-30'
+  categories:
+  - cs.CV
+  - cs.AI
+  - cs.CL
+  abstract: Vision-language models can produce confident answers on visually ambiguous inputs, resulting
+    in biased predictions. Common entropy-based methods, such as Semantic Entropy (SE), rely on output
+    diversity. Yet our analysis shows that overconfident visual embeddings suppress output diversity under
+    stochastic decoding, causing SE to underestimate uncertainty in such cases. Recent methods instead
+    probe output diversity through input perturbations, including textual paraphrasing or joint text-image
+    perturbations, and show improved performance. We study these approaches and reveals that the resulting
+    variability is often dominated by textual changes rather than visual evidence, causing uncertainty
+    estimates to reflect prompt sensitivity rather than visual ambiguity. We therefore propose Visual
+    Semantic Entropy (VSE), which perturbs only the image to probe nearby visual variations while keeping
+    the text query fixed. VSE measures uncertainty by clustering generated answers into semantic prototypes
+    and computing the mass-weighted dispersion among them. Extensive evaluation across five modern vision-language
+    models and five diverse VQA benchmarks demonstrates that VSE effectively captures visual ambiguity,
+    establishing a new state-of-the-art for VLM uncertainty estimation.
+  url: https://arxiv.org/abs/2606.31407
+  pdf_url: https://arxiv.org/pdf/2606.31407v1
+  version: v1
+fetched: '2026-11-14'

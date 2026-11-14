@@ -1,0 +1,32 @@
+id: paper:arxiv:2507.09798
+status: skipped
+score: 1
+track: streaming_delivery
+matched:
+- ref: concept:WebRTC
+  count: 1
+  weight: 1
+meta:
+  title: Dynamic Pacing for Real-time Satellite Traffic
+  authors:
+  - Aashish Gottipati
+  - Lili Qiu
+  published: '2025-07-13'
+  updated: '2025-10-01'
+  categories:
+  - cs.NI
+  abstract: Google's congestion control (GCC) has become a cornerstone for real-time video and audio communication,
+    yet its performance remains fragile in emerging Low Earth Orbit (LEO) networks. In this paper, we
+    study the behavior of videoconferencing systems in LEO constellations. We observe that video quality
+    degrades due to inherent delays and network instability introduced by the high altitude and rapid
+    movement of LEO satellites, with these effects exacerbated by WebRTC's conventional "one-size-fits-all"
+    sender-side pacing queue management. To address these challenges, we introduce a data-driven queue
+    management mechanism that tunes the maximum pacing queue capacity based on predicted handover activity,
+    minimizing latency during no-handover periods and prioritizing stability when entering periods of
+    increased handover activity. Our method yields up to 3x improvements in video bitrate and reduces
+    freeze rate by 62% in emulation, while delivering up to a 41% reduction in freeze rate and 40% decrease
+    in mean packet loss on real Starlink constellations compared to WebRTC's default pacing queue policy.
+  url: https://arxiv.org/abs/2507.09798
+  pdf_url: https://arxiv.org/pdf/2507.09798v2
+  version: v2
+fetched: '2026-11-14'

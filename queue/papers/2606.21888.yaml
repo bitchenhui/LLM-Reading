@@ -1,0 +1,31 @@
+id: paper:arxiv:2606.21888
+status: skipped
+score: 0
+track: audio_coding
+matched: []
+meta:
+  title: 'ProsoCodec: Prosody-Oriented Speech Codec for Voice Conversion'
+  authors:
+  - Jeongsoo Choi
+  - Ji-Hoon Kim
+  - Shujie Hu
+  - Joon Son Chung
+  published: '2026-06-20'
+  updated: '2026-06-20'
+  categories:
+  - eess.AS
+  - cs.SD
+  abstract: Neural speech codecs efficiently compress speech and have become a foundation for speech generation,
+    but they are typically learned as holistic representations that intertwine linguistic content, speaker
+    identity, and prosody. While this design is effective for zero-shot voice cloning, it hinders downstream
+    tasks that require prosody preservation or transfer, such as voice conversion. To address this, we
+    introduce ProsoCodec, a prosody-oriented speech codec that models prosody as a conditional residual
+    rather than as a disentangled stream. Specifically, by conditioning both the encoder and decoder on
+    text and speaker embeddings as prefix tokens, the discrete bottleneck is encouraged to capture prosodic
+    variation not explained by content and speaker. To further preserve prosody, we use the low-frequency
+    mel band and train the model on paired same-speaker utterances. Experiments on voice conversion show
+    improved prosody preservation and reduced source-timbre leakage.
+  url: https://arxiv.org/abs/2606.21888
+  pdf_url: https://arxiv.org/pdf/2606.21888v1
+  version: v1
+fetched: '2026-11-14'

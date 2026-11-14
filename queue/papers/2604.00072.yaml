@@ -1,0 +1,43 @@
+id: paper:arxiv:2604.00072
+status: skipped_low_citation
+score: 2
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 3
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: Empirical Validation of the Classification-Verification Dichotomy for AI Safety Gates
+  authors:
+  - Arsenios Scrivens
+  published: '2026-03-31'
+  updated: '2026-03-31'
+  categories:
+  - cs.LG
+  - cs.AI
+  - stat.ML
+  abstract: 'Can classifier-based safety gates maintain reliable oversight as AI systems improve over
+    hundreds of iterations? We provide comprehensive empirical evidence that they cannot. On a self-improving
+    neural controller (d=240), eighteen classifier configurations -- spanning MLPs, SVMs, random forests,
+    k-NN, Bayesian classifiers, and deep networks -- all fail the dual conditions for safe self-improvement.
+    Three safe RL baselines (CPO, Lyapunov, safety shielding) also fail. Results extend to MuJoCo benchmarks
+    (Reacher-v4 d=496, Swimmer-v4 d=1408, HalfCheetah-v4 d=1824). At controlled distribution separations
+    up to delta_s=2.0, all classifiers still fail -- including the NP-optimal test and MLPs with 100%
+    training accuracy -- demonstrating structural impossibility. We then show the impossibility is specific
+    to classification, not to safe self-improvement itself. A Lipschitz ball verifier achieves zero false
+    accepts across dimensions d in {84, 240, 768, 2688, 5760, 9984, 17408} using provable analytical bounds
+    (unconditional delta=0). Ball chaining enables unbounded parameter-space traversal: on MuJoCo Reacher-v4,
+    10 chains yield +4.31 reward improvement with delta=0; on Qwen2.5-7B-Instruct during LoRA fine-tuning,
+    42 chain transitions traverse 234x the single-ball radius with zero safety violations across 200 steps.
+    A 50-prompt oracle confirms oracle-agnosticity. Compositional per-group verification enables radii
+    up to 37x larger than full-network balls. At d<=17408, delta=0 is unconditional; at LLM scale, conditional
+    on estimated Lipschitz constants.'
+  url: https://arxiv.org/abs/2604.00072
+  pdf_url: https://arxiv.org/pdf/2604.00072v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 1
+citation_year: 2026

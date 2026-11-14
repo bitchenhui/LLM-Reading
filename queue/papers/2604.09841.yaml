@@ -1,0 +1,40 @@
+id: paper:arxiv:2604.09841
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: Is There Knowledge Left to Extract? Evidence of Fragility in Medically Fine-Tuned Vision-Language
+    Models
+  authors:
+  - Oliver McLaughlin
+  - Daniel Shubin
+  - Carsten Eickhoff
+  - Ritambhara Singh
+  - William Rudman
+  - Michal Golovanevsky
+  published: '2026-04-10'
+  updated: '2026-04-10'
+  categories:
+  - cs.CV
+  - cs.AI
+  abstract: 'Vision-language models (VLMs) are increasingly adapted through domain-specific fine-tuning,
+    yet it remains unclear whether this improves reasoning beyond superficial visual cues, particularly
+    in high-stakes domains like medicine. We evaluate four paired open-source VLMs (LLaVA vs. LLaVA-Med;
+    Gemma vs. MedGemma) across four medical imaging tasks of increasing difficulty: brain tumor, pneumonia,
+    skin cancer, and histopathology classification. We find that performance degrades toward near-random
+    levels as task difficulty increases, indicating limited clinical reasoning. Medical fine-tuning provides
+    no consistent advantage, and models are highly sensitive to prompt formulation, with minor changes
+    causing large swings in accuracy and refusal rates. To test whether closed-form VQA suppresses latent
+    knowledge, we introduce a description-based pipeline where models generate image descriptions that
+    a text-only model (GPT-5.1) uses for diagnosis. This recovers a limited additional signal but remains
+    bounded by task difficulty. Analysis of vision encoder embeddings further shows that failures stem
+    from both weak visual representations and downstream reasoning. Overall, medical VLM performance is
+    fragile, prompt-dependent, and not reliably improved by domain-specific fine-tuning.'
+  url: https://arxiv.org/abs/2604.09841
+  pdf_url: https://arxiv.org/pdf/2604.09841v1
+  version: v1
+fetched: '2026-11-14'

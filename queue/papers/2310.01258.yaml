@@ -1,0 +1,56 @@
+id: paper:arxiv:2310.01258
+status: pending
+score: 5
+track: video_image_coding
+matched:
+- ref: codec:HEVC
+  count: 1
+  weight: 3
+- ref: concept:EntropyModel
+  count: 1
+  weight: 1
+- ref: metric:BD-Rate
+  count: 1
+  weight: 1
+meta:
+  title: 'MobileNVC: Real-time 1080p Neural Video Compression on a Mobile Device'
+  authors:
+  - Ties van Rozendaal
+  - Tushar Singhal
+  - Hoang Le
+  - Guillaume Sautiere
+  - Amir Said
+  - Krishna Buska
+  - Anjuman Raha
+  - Dimitris Kalatzis
+  - Hitarth Mehta
+  - Frank Mayer
+  - Liang Zhang
+  - Markus Nagel
+  - Auke Wiggers
+  published: '2023-10-02'
+  updated: '2023-11-15'
+  categories:
+  - eess.IV
+  - cs.CV
+  - cs.LG
+  abstract: Neural video codecs have recently become competitive with standard codecs such as HEVC in
+    the low-delay setting. However, most neural codecs are large floating-point networks that use pixel-dense
+    warping operations for temporal modeling, making them too computationally expensive for deployment
+    on mobile devices. Recent work has demonstrated that running a neural decoder in real time on mobile
+    is feasible, but shows this only for 720p RGB video. This work presents the first neural video codec
+    that decodes 1080p YUV420 video in real time on a mobile device. Our codec relies on two major contributions.
+    First, we design an efficient codec that uses a block-based motion compensation algorithm available
+    on the warping core of the mobile accelerator, and we show how to quantize this model to integer precision.
+    Second, we implement a fast decoder pipeline that concurrently runs neural network components on the
+    neural signal processor, parallel entropy coding on the mobile GPU, and warping on the warping core.
+    Our codec outperforms the previous on-device codec by a large margin with up to 48% BD-rate savings,
+    while reducing the MAC count on the receiver side by $10 \times$. We perform a careful ablation to
+    demonstrate the effect of the introduced motion compensation scheme, and ablate the effect of model
+    quantization.
+  url: https://arxiv.org/abs/2310.01258
+  pdf_url: https://arxiv.org/pdf/2310.01258v3
+  version: v3
+fetched: '2026-11-14'
+citation_count: 29
+citation_year: 2023

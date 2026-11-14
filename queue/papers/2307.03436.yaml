@@ -1,0 +1,42 @@
+id: paper:arxiv:2307.03436
+status: pending
+score: 3
+track: streaming_delivery
+matched:
+- ref: concept:ABR
+  count: 3
+  weight: 1
+- ref: concept:QoE
+  count: 2
+  weight: 1
+- ref: concept:WebRTC
+  count: 1
+  weight: 1
+meta:
+  title: 'Anableps: Adapting Bitrate for Real-Time Communication Using VBR-encoded Video'
+  authors:
+  - Zicheng Zhang
+  - Hao Chen
+  - Xun Cao
+  - Zhan Ma
+  published: '2023-07-07'
+  updated: '2023-07-07'
+  categories:
+  - cs.MM
+  abstract: Content providers increasingly replace traditional constant bitrate with variable bitrate
+    (VBR) encoding in real-time video communication systems for better video quality. However, VBR encoding
+    often leads to large and frequent bitrate fluctuation, inevitably deteriorating the efficiency of
+    existing adaptive bitrate (ABR) methods. To tackle it, we propose the Anableps to consider the network
+    dynamics and VBR-encoding-induced video bitrate fluctuations jointly for deploying the best ABR policy.
+    With this aim, Anableps uses sender-side information from the past to predict the video bitrate range
+    of upcoming frames. Such bitrate range is then combined with the receiver-side observations to set
+    the proper bitrate target for video encoding using a reinforcement-learning-based ABR model. As revealed
+    by extensive experiments on a real-world trace-driven testbed, our Anableps outperforms the GCC with
+    significant improvement of quality of experience, e.g., 1.88x video quality, 57% less bitrate consumption,
+    85% less stalling, and 74% shorter interaction delay.
+  url: https://arxiv.org/abs/2307.03436
+  pdf_url: https://arxiv.org/pdf/2307.03436v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 13
+citation_year: 2023

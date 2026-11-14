@@ -1,0 +1,38 @@
+id: paper:arxiv:2608.26582
+status: skipped
+score: 1
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 3
+  weight: 1
+meta:
+  title: 'J-Zero: Unified Challenger--Solver--Judge Self-Evolution from Zero Data'
+  authors:
+  - Gyouk Chu
+  - Myeongho Jeon
+  - Teresa Yeo
+  - Eunho Yang
+  published: '2026-08-27'
+  updated: '2026-09-24'
+  categories:
+  - cs.LG
+  - cs.AI
+  - cs.CL
+  abstract: 'Self-evolving language models have recently emerged as a promising path toward superintelligence,
+    with the advantage of reducing the cost of human supervision. While considerable progress has been
+    made in verifiable domains, self-evolution in unverifiable domains remains less explored. We propose
+    Judge co-adaptation from Zero data (J-Zero), a unified Challenger--Solver--Judge self-evolution framework
+    that supports self-improvement across both domains. The Challenger and Solver co-evolve through an
+    adversarial interaction: the Challenger generates increasingly difficult tasks, while the Solver learns
+    to produce higher-quality responses to them. In parallel, the Judge co-adapts using preference pairs
+    whose ordering is known in advance from how each response was produced, i.e., the Solver''s answer
+    over the Challenger''s, and the Solver''s decomposed-and-recombined answer over its one-shot answer,
+    rather than from the Judge''s own scores. J-Zero outperforms the baselines by an average of 4.2 points
+    on verifiable and 8.0 points on unverifiable domains, and continues to improve through at least ten
+    iterations, whereas the baselines degrade after two. Further analysis identifies Judge co-adaptation
+    as the key driver of this sustained improvement.'
+  url: https://arxiv.org/abs/2608.26582
+  pdf_url: https://arxiv.org/pdf/2608.26582v2
+  version: v2
+fetched: '2026-11-14'

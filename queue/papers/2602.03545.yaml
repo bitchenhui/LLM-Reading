@@ -1,0 +1,44 @@
+id: paper:arxiv:2602.03545
+status: pending
+score: 2
+track: self_improvement
+matched:
+- ref: concept:AlphaEvolve
+  count: 1
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: 'Persona Generators: Generating Diverse Synthetic Personas for Arbitrary Contexts'
+  authors:
+  - Davide Paglieri
+  - Logan Cross
+  - William A. Cunningham
+  - Joel Z. Leibo
+  - Alexander Sasha Vezhnevets
+  published: '2026-02-03'
+  updated: '2026-05-25'
+  categories:
+  - cs.AI
+  abstract: Evaluating AI systems that interact with humans requires understanding their behavior across
+    diverse user populations, but collecting representative human data is often expensive or infeasible,
+    particularly for novel technologies or hypothetical future scenarios. Recent work in Generative Agent-Based
+    Modeling has shown that large language models can simulate human-like synthetic personas with high
+    fidelity, accurately reproducing the beliefs and behaviors of specific individuals. However, most
+    approaches require detailed data about target populations and often prioritize density matching (replicating
+    what is most probable) rather than support coverage (spanning what is possible), leaving long-tail
+    behaviors underexplored. We introduce Persona Generators, functions that can produce diverse synthetic
+    populations tailored to arbitrary contexts. We apply an iterative improvement loop based on AlphaEvolve,
+    using large language models as mutation operators to refine our Persona Generator code over hundreds
+    of iterations. The optimization process produces lightweight Persona Generators that can automatically
+    expand small descriptions into populations of diverse synthetic personas that maximize coverage of
+    opinions and preferences along relevant diversity axes. We demonstrate that evolved generators substantially
+    outperform existing baselines across six diversity metrics on held-out contexts, producing populations
+    that span rare trait combinations difficult to achieve in standard LLM outputs.
+  url: https://arxiv.org/abs/2602.03545
+  pdf_url: https://arxiv.org/pdf/2602.03545v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 9
+citation_year: 2026

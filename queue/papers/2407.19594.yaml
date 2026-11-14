@@ -1,0 +1,44 @@
+id: paper:arxiv:2407.19594
+status: pending
+score: 2
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 3
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: 'Meta-Rewarding Language Models: Self-Improving Alignment with LLM-as-a-Meta-Judge'
+  authors:
+  - Tianhao Wu
+  - Weizhe Yuan
+  - Olga Golovneva
+  - Jing Xu
+  - Yuandong Tian
+  - Jiantao Jiao
+  - Jason Weston
+  - Sainbayar Sukhbaatar
+  published: '2024-07-28'
+  updated: '2024-07-30'
+  categories:
+  - cs.CL
+  - cs.AI
+  abstract: Large Language Models (LLMs) are rapidly surpassing human knowledge in many domains. While
+    improving these models traditionally relies on costly human data, recent self-rewarding mechanisms
+    (Yuan et al., 2024) have shown that LLMs can improve by judging their own responses instead of relying
+    on human labelers. However, existing methods have primarily focused on improving model responses rather
+    than judgment capabilities, resulting in rapid saturation during iterative training. To address this
+    issue, we introduce a novel Meta-Rewarding step to the self-improvement process, where the model judges
+    its own judgements and uses that feedback to refine its judgment skills. Surprisingly, this unsupervised
+    approach improves the model's ability to judge {\em and} follow instructions, as demonstrated by a
+    win rate improvement of Llama-3-8B-Instruct from 22.9% to 39.4% on AlpacaEval 2, and 20.6% to 29.1%
+    on Arena-Hard. These results strongly suggest the potential for self-improving models without human
+    supervision.
+  url: https://arxiv.org/abs/2407.19594
+  pdf_url: https://arxiv.org/pdf/2407.19594v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 237
+citation_year: 2024

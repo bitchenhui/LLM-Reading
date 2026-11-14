@@ -1,0 +1,41 @@
+id: paper:arxiv:2510.23494
+status: skipped
+score: 1
+track: immersive_media
+matched:
+- ref: concept:VolumetricVideo
+  count: 2
+  weight: 1
+meta:
+  title: 'Yesnt: Are Diffusion Relighting Models Ready for Capture Stage Compositing? A Hybrid Alternative
+    to Bridge the Gap'
+  authors:
+  - Elisabeth Jüttner
+  - Janelle Pfeifer
+  - Leona Krath
+  - Stefan Korfhage
+  - Hannah Dröge
+  - Matthias B. Hullin
+  - Markus Plack
+  published: '2025-10-27'
+  updated: '2026-01-22'
+  categories:
+  - cs.CV
+  - cs.GR
+  abstract: Volumetric video relighting is essential for bringing captured performances into virtual worlds,
+    but current approaches struggle to deliver temporally stable, production-ready results. Diffusion-based
+    intrinsic decomposition methods show promise for single frames, yet suffer from stochastic noise and
+    instability when extended to sequences, while video diffusion models remain constrained by memory
+    and scale. We propose a hybrid relighting framework that combines diffusion-derived material priors
+    with temporal regularization and physically motivated rendering. Our method aggregates multiple stochastic
+    estimates of per-frame material properties into temporally consistent shading components, using optical-flow-guided
+    regularization. For indirect effects such as shadows and reflections, we extract a mesh proxy from
+    Gaussian Opacity Fields and render it within a standard graphics pipeline. Experiments on real and
+    synthetic captures show that this hybrid strategy achieves substantially more stable relighting across
+    sequences than diffusion-only baselines, while scaling beyond the clip lengths feasible for video
+    diffusion. These results indicate that hybrid approaches, which balance learned priors with physically
+    grounded constraints, are a practical step toward production-ready volumetric video relighting.
+  url: https://arxiv.org/abs/2510.23494
+  pdf_url: https://arxiv.org/pdf/2510.23494v2
+  version: v2
+fetched: '2026-11-14'

@@ -1,0 +1,54 @@
+id: paper:arxiv:2104.04926
+status: skipped_low_citation
+score: 5
+track: processing_enhancement
+matched:
+- ref: concept:SuperResolution
+  count: 1
+  weight: 1
+- ref: dataset:Kodak
+  count: 1
+  weight: 1
+- ref: metric:MS-SSIM
+  count: 1
+  weight: 1
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+- ref: metric:SSIM
+  count: 1
+  weight: 1
+meta:
+  title: Deep learning-based Edge-aware pre and post-processing methods for JPEG compressed images
+  authors:
+  - Dipti Mishra
+  - Satish Kumar Singh
+  - Rajat Kumar Singh
+  published: '2021-04-11'
+  updated: '2023-11-02'
+  categories:
+  - eess.IV
+  - cs.CV
+  - cs.LG
+  abstract: 'We propose a learning-based compression scheme that envelopes a standard codec between pre
+    and post-processing deep CNNs. Specifically, we demonstrate improvements over prior approaches utilizing
+    a compression-decompression network by introducing: (a) an edge-aware loss function to prevent blurring
+    that is commonly occurred in prior works & (b) a super-resolution convolutional neural network (CNN)
+    for post-processing along with a corresponding pre-processing network for improved rate-distortion
+    performance in the low rate regime. The algorithm is assessed on a variety of datasets varying from
+    low to high resolution namely Set 5, Set 7, Classic 5, Set 14, Live 1, Kodak, General 100, CLIC 2019.
+    When compared to JPEG, JPEG2000, BPG, and recent CNN approach, the proposed algorithm contributes
+    significant improvement in PSNR with an approximate gain of 20.75%, 8.47%, 3.22%, 3.23% and 24.59%,
+    14.46%, 10.14%, 8.57% at low and high bit-rates respectively. Similarly, this improvement in MS-SSIM
+    is approximately 71.43%, 50%, 36.36%, 23.08%, 64.70% and 64.47%, 61.29%, 47.06%, 51.52%, 16.28% at
+    low and high bit-rates respectively. With CLIC 2019 dataset, PSNR is found to be superior with approximately
+    16.67%, 10.53%, 6.78%, and 24.62%, 17.39%, 14.08% at low and high bit-rates respectively, over JPEG2000,
+    BPG, and recent CNN approach. Similarly, the MS-SSIM is found to be superior with approximately 72%,
+    45.45%, 39.13%, 18.52%, and 71.43%, 50%, 41.18%, 17.07% at low and high bit-rates respectively, compared
+    to the same approaches. A similar type of improvement is achieved with other datasets also.'
+  url: https://arxiv.org/abs/2104.04926
+  pdf_url: https://arxiv.org/pdf/2104.04926v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 1
+citation_year: 2021

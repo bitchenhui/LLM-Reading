@@ -1,0 +1,44 @@
+id: paper:arxiv:2505.21769
+status: pending
+score: 3
+track: streaming_delivery
+matched:
+- ref: concept:ABR
+  count: 3
+  weight: 1
+- ref: concept:QUIC
+  count: 1
+  weight: 1
+- ref: concept:QoE
+  count: 1
+  weight: 1
+meta:
+  title: 'Video Streaming Over QUIC: A Comprehensive Study'
+  authors:
+  - Jashanjot Singh Sidhu
+  - Abdelhak Bentaleb
+  published: '2025-05-27'
+  updated: '2025-11-03'
+  categories:
+  - cs.NI
+  abstract: 'The QUIC transport protocol represents a significant evolution in web transport technologies,
+    offering improved performance and reduced latency compared to traditional protocols like TCP. Given
+    the growing number of QUIC implementations, understanding their performance, particularly in video
+    streaming contexts, is essential. This paper presents a comprehensive analysis of various QUIC implementations,
+    focusing on their transport-layer congestion control (CC) performance and its impact on HTTP Adaptive
+    Streaming (HAS) in single-server, multi-client environments. Through extensive trace-driven experiments,
+    we explore how different QUIC CCs impact adaptive bitrate (ABR) algorithms in two video streaming
+    scenarios: video-on-demand (VoD) and low-latency live streaming (LLL). Our study aims to shed light
+    on the impact of QUIC CC implementations, queuing strategies, and cooperative versus competitive dynamics
+    of QUIC streams on user QoE under diverse network conditions. Our results demonstrate that identical
+    CC algorithms across different QUIC implementations can lead to significant performance variations,
+    directly impacting the QoE of video streaming sessions. These findings offer valuable insights into
+    the effectiveness of various QUIC implementations and their implications for optimizing QoE, underscoring
+    the need for intelligent cross-layer designs that integrate QUIC CC and ABR schemes to enhance overall
+    streaming performance.'
+  url: https://arxiv.org/abs/2505.21769
+  pdf_url: https://arxiv.org/pdf/2505.21769v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 12
+citation_year: 2025

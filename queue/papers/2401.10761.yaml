@@ -1,0 +1,50 @@
+id: paper:arxiv:2401.10761
+status: skipped_low_citation
+score: 4
+track: video_image_coding
+matched:
+- ref: codec:VVC
+  count: 2
+  weight: 3
+- ref: concept:ICM
+  count: 2
+  weight: 1
+meta:
+  title: 'NN-VVC: Versatile Video Coding boosted by self-supervisedly learned image coding for machines'
+  authors:
+  - Jukka I. Ahonen
+  - Nam Le
+  - Honglei Zhang
+  - Antti Hallapuro
+  - Francesco Cricri
+  - Hamed Rezazadegan Tavakoli
+  - Miska M. Hannuksela
+  - Esa Rahtu
+  published: '2024-01-19'
+  updated: '2024-01-19'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: The recent progress in artificial intelligence has led to an ever-increasing usage of images
+    and videos by machine analysis algorithms, mainly neural networks. Nonetheless, compression, storage
+    and transmission of media have traditionally been designed considering human beings as the viewers
+    of the content. Recent research on image and video coding for machine analysis has progressed mainly
+    in two almost orthogonal directions. The first is represented by end-to-end (E2E) learned codecs which,
+    while offering high performance on image coding, are not yet on par with state-of-the-art conventional
+    video codecs and lack interoperability. The second direction considers using the Versatile Video Coding
+    (VVC) standard or any other conventional video codec (CVC) together with pre- and post-processing
+    operations targeting machine analysis. While the CVC-based methods benefit from interoperability and
+    broad hardware and software support, the machine task performance is often lower than the desired
+    level, particularly in low bitrates. This paper proposes a hybrid codec for machines called NN-VVC,
+    which combines the advantages of an E2E-learned image codec and a CVC to achieve high performance
+    in both image and video coding for machines. Our experiments show that the proposed system achieved
+    up to -43.20% and -26.8% Bjøntegaard Delta rate reduction over VVC for image and video data, respectively,
+    when evaluated on multiple different datasets and machine vision tasks. To the best of our knowledge,
+    this is the first research paper showing a hybrid video codec that outperforms VVC on multiple datasets
+    and multiple machine vision tasks.
+  url: https://arxiv.org/abs/2401.10761
+  pdf_url: https://arxiv.org/pdf/2401.10761v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 4
+citation_year: 2023

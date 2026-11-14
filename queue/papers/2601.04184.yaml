@@ -1,0 +1,38 @@
+id: paper:arxiv:2601.04184
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 2
+  weight: 1
+meta:
+  title: Transforming Video Subjective Testing with Training, Engagement, and Real-Time Feedback
+  authors:
+  - Kumar Rahul
+  - Sriram Sethuraman
+  - Andrew Segall
+  - Yixu Chen
+  published: '2026-01-07'
+  updated: '2026-01-08'
+  categories:
+  - cs.MM
+  abstract: Subjective video quality assessment is crucial for optimizing streaming and compression, yet
+    traditional protocols face limitations in capturing nuanced perceptual differences and ensuring reliable
+    user input. We propose an integrated framework that enhances rater training, enforces attention through
+    real-time scoring, and streamlines pairwise comparisons to recover quality scores with fewer comparisons.
+    Participants first undergo an automated training quiz to learn key video quality indicators (e.g.,
+    compression artifacts) and verify their readiness. During the test, a real-time attention scoring
+    mechanism, using "golden" video pairs, monitors and reinforces rater focus by applying penalties for
+    lapses. An efficient chain-based pairwise comparison procedure is then employed, yielding quality
+    scores in Just-Objectionable-Differences (JOD) units. Experiments comparing three groups (no training,
+    training without feedback, and training with feedback) with 80 participants demonstrate that training-quiz
+    significantly improves data quality in terms of golden unit accuracy and reduces tie rate, while real-time
+    feedback further improves data quality and yields the most monotonic quality ratings. The new training,
+    quiz, testing with feedback, 3-phase approach can significantly reduce the non-monotonic cases on
+    the high quality part of the R-Q curve where normal viewer typically prefer the slightly compressed
+    less-grainy content and help train a better objective video quality metric.
+  url: https://arxiv.org/abs/2601.04184
+  pdf_url: https://arxiv.org/pdf/2601.04184v2
+  version: v2
+fetched: '2026-11-14'

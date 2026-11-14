@@ -1,0 +1,44 @@
+id: paper:arxiv:2605.00884
+status: skipped_low_citation
+score: 2
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+- ref: org:NVIDIA
+  count: 1
+  weight: 1
+meta:
+  title: 'LiteVLA-H: Dual-Rate Vision-Language-Action Inference for Onboard Aerial Guidance and Semantic
+    Perception'
+  authors:
+  - Justin williams
+  - Kishor Datta Gupta
+  - Roy George
+  - Mrinmoy Sarkar
+  published: '2026-04-27'
+  updated: '2026-05-09'
+  categories:
+  - cs.CV
+  abstract: 'Vision-language-action (VLA) models have shown strong semantic grounding and task generalization
+    in manipulation, but aerial deployment remains difficult because drones require low-latency closed-loop
+    guidance under strict onboard compute and communication constraints. We present LiteVLA-H, a compact
+    256M-parameter VLA system designed for dual-rate operation on an NVIDIA Jetson AGX Orin: a fast outer-loop
+    guidance mode for short action-token outputs and a slower semantic mode for scene understanding, hazard
+    description, and operator-facing narration. The central empirical observation is that, in this compact
+    edge regime, end-to-end latency is dominated by multimodal pre-fill rather than by the marginal cost
+    of decoding a few extra tokens. This motivates a scheduler that issues reactive action tokens at 50.65,ms
+    (19.74,Hz) while still supporting sentence-level semantic outputs at 149.90--164.57\ms (6.08--6.67,Hz)
+    on the same embedded platform. To specialize the model without collapsing its descriptive competence,
+    we use a knowledge-preserving fine-tuning recipe that mixes reactive flight data, aerial semantic
+    data, and generic caption/VQA supervision. Beyond reporting current latency measurements, we position
+    the system against recent state-of-the-art architectures, including AnywhereVLA, FutureVLA, and ReMem-VLA,
+    showing that the measured action branch reaches a higher edge inference rate under our deployment
+    conditions while retaining periodic semantic awareness.'
+  url: https://arxiv.org/abs/2605.00884
+  pdf_url: https://arxiv.org/pdf/2605.00884v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 0
+citation_year: 2026

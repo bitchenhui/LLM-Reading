@@ -1,0 +1,34 @@
+id: paper:arxiv:2605.11192
+status: skipped
+score: 0
+track: audio_coding
+matched: []
+meta:
+  title: Exploring Token-Space Manipulation in Latent Audio Tokenizers
+  authors:
+  - Francesco Paissan
+  - Luca Della Libera
+  - Mirco Ravanelli
+  - Cem Subakan
+  published: '2026-05-11'
+  updated: '2026-05-11'
+  categories:
+  - cs.SD
+  - cs.AI
+  - cs.LG
+  abstract: Neural audio codecs provide compact discrete representations for speech generation and manipulation.
+    However, most codecs organize tokens as frame-level sequences, making it difficult to study or intervene
+    on global factors of variation. In this work, we propose the Latent Audio Tokenizer for Token-space
+    Editing (LATTE) that appends a fixed set of learnable latent tokens to the audio feature sequence
+    and retains only these tokens for quantization and decoding. This design produces a compact, non-temporally
+    aligned bottleneck in which each token can aggregate global information across the full utterance.
+    We show that the resulting tokenizer preserves competitive reconstruction quality in low-bitrate speech
+    coding settings while enabling simple token-space interventions. In particular, we find that swapping
+    selected latent token positions between utterances can modify global attributes, such as speaker identity
+    and background noise, and we evaluate these interventions on voice conversion and denoising tasks.
+    Our results suggest that compact latent audio tokenizers can support controllable audio manipulation
+    without supervision in task-specific editing models.
+  url: https://arxiv.org/abs/2605.11192
+  pdf_url: https://arxiv.org/pdf/2605.11192v1
+  version: v1
+fetched: '2026-11-14'

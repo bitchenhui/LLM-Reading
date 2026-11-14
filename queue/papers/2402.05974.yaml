@@ -1,0 +1,34 @@
+id: paper:arxiv:2402.05974
+status: skipped
+score: 0
+track: video_image_coding
+matched: []
+meta:
+  title: 'RAGE for the Machine: Image Compression with Low-Cost Random Access for Embedded Applications'
+  authors:
+  - Christian D. Rask
+  - Daniel E. Lucani
+  published: '2024-02-07'
+  updated: '2024-02-07'
+  categories:
+  - eess.IV
+  - cs.CV
+  - cs.GR
+  - cs.IT
+  abstract: 'We introduce RAGE, an image compression framework that achieves four generally conflicting
+    objectives: 1) good compression for a wide variety of color images, 2) computationally efficient,
+    fast decompression, 3) fast random access of images with pixel-level granularity without the need
+    to decompress the entire image, 4) support for both lossless and lossy compression. To achieve these,
+    we rely on the recent concept of generalized deduplication (GD), which is known to provide efficient
+    lossless (de)compression and fast random access in time-series data, and deliver key expansions suitable
+    for image compression, both lossless and lossy. Using nine different datasets, incl. graphics, logos,
+    natural images, we show that RAGE has similar or better compression ratios to state-of-the-art lossless
+    image compressors, while delivering pixel-level random access capabilities. Tests in an ARM Cortex-M33
+    platform show seek times between 9.9 and 40.6~ns and average decoding time per pixel between 274 and
+    1226~ns. Our measurements also show that RAGE''s lossy variant, RAGE-Q, outperforms JPEG by several
+    fold in terms of distortion in embedded graphics and has reasonable compression and distortion for
+    natural images.'
+  url: https://arxiv.org/abs/2402.05974
+  pdf_url: https://arxiv.org/pdf/2402.05974v1
+  version: v1
+fetched: '2026-11-14'

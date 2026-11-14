@@ -1,0 +1,39 @@
+id: paper:arxiv:2604.15808
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'Beyond a Single Frame: Multi-Frame Spatially Grounded Reasoning Across Volumetric MRI'
+  authors:
+  - Lama Moukheiber
+  - Caleb M. Yeung
+  - Haotian Xue
+  - Alec Helbling
+  - Zelin Zhao
+  - Yongxin Chen
+  published: '2026-04-17'
+  updated: '2026-04-17'
+  categories:
+  - cs.CV
+  - cs.AI
+  abstract: Spatial reasoning and visual grounding are core capabilities for vision-language models (VLMs),
+    yet most medical VLMs produce predictions without transparent reasoning or spatial evidence. Existing
+    benchmarks also evaluate VLMs on isolated 2D images, overlooking the volumetric nature of clinical
+    imaging, where findings can span multiple frames or appear on only a few slices. We introduce Spatially
+    Grounded MRI Visual Question Answering (SGMRI-VQA), a 41,307-pair benchmark for multi-frame, spatially
+    grounded reasoning on volumetric MRI. Built from expert radiologist annotations in the fastMRI+ dataset
+    across brain and knee studies, each QA pair includes a clinician-aligned chain-of-thought trace with
+    frame-indexed bounding box coordinates. Tasks are organized hierarchically across detection, localization,
+    counting/classification, and captioning, requiring models to jointly reason about what is present,
+    where it is, and across which frames it extends. We benchmark 10 VLMs and show that supervised fine-tuning
+    of Qwen3-VL-8B with bounding box supervision consistently improves grounding performance over strong
+    zero-shot baselines, indicating that targeted spatial supervision is an effective path toward grounded
+    clinical reasoning.
+  url: https://arxiv.org/abs/2604.15808
+  pdf_url: https://arxiv.org/pdf/2604.15808v1
+  version: v1
+fetched: '2026-11-14'

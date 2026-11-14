@@ -1,0 +1,57 @@
+id: paper:arxiv:2309.07376
+status: pending
+score: 15
+track: video_image_coding
+matched:
+- ref: codec:HEVC
+  count: 2
+  weight: 3
+- ref: codec:AV1
+  count: 1
+  weight: 3
+- ref: codec:AVC
+  count: 1
+  weight: 3
+- ref: codec:VVC
+  count: 1
+  weight: 3
+- ref: dataset:VCD
+  count: 2
+  weight: 1
+- ref: concept:WebRTC
+  count: 1
+  weight: 1
+- ref: org:Microsoft
+  count: 1
+  weight: 1
+meta:
+  title: 'VCD: A Video Conferencing Dataset for Video Compression'
+  authors:
+  - Babak Naderi
+  - Ross Cutler
+  - Nabakumar Singh Khongbantabam
+  - Yasaman Hosseinkashi
+  - Henrik Turbell
+  - Albert Sadovnikov
+  - Quan Zhou
+  published: '2023-09-14'
+  updated: '2023-11-13'
+  categories:
+  - eess.IV
+  - cs.MM
+  abstract: Commonly used datasets for evaluating video codecs are all very high quality and not representative
+    of video typically used in video conferencing scenarios. We present the Video Conferencing Dataset
+    (VCD) for evaluating video codecs for real-time communication, the first such dataset focused on video
+    conferencing. VCD includes a wide variety of camera qualities and spatial and temporal information.
+    It includes both desktop and mobile scenarios and two types of video background processing. We report
+    the compression efficiency of H.264, H.265, H.266, and AV1 in low-delay settings on VCD and compare
+    it with the non-video conferencing datasets UVC, MLC-JVC, and HEVC. The results show the source quality
+    and the scenarios have a significant effect on the compression efficiency of all the codecs. VCD enables
+    the evaluation and tuning of codecs for this important scenario. The VCD is publicly available as
+    an open-source dataset at https://github.com/microsoft/VCD.
+  url: https://arxiv.org/abs/2309.07376
+  pdf_url: https://arxiv.org/pdf/2309.07376v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 26
+citation_year: 2023

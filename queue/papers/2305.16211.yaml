@@ -1,0 +1,39 @@
+id: paper:arxiv:2305.16211
+status: pending
+score: 4
+track: video_image_coding
+matched:
+- ref: codec:HEVC
+  count: 1
+  weight: 3
+- ref: dataset:UVG
+  count: 1
+  weight: 1
+meta:
+  title: Learned Wavelet Video Coding using Motion Compensated Temporal Filtering
+  authors:
+  - Anna Meyer
+  - Fabian Brand
+  - André Kaup
+  published: '2023-05-25'
+  updated: '2023-10-12'
+  categories:
+  - eess.IV
+  abstract: We present an end-to-end trainable wavelet video coder based on motion-compensated temporal
+    filtering (MCTF). Thereby, we introduce a different coding scheme for learned video compression, which
+    is currently dominated by residual and conditional coding approaches. By performing discrete wavelet
+    transforms in temporal, horizontal, and vertical dimension, we obtain an explainable framework with
+    spatial and temporal scalability. We focus on investigating a novel trainable MCTF module that is
+    implemented using the lifting scheme. We show how multiple temporal decomposition levels in MCTF can
+    be considered during training and how larger temporal displacements due to the MCTF coding order can
+    be handled. Further, we present a content adaptive extension to MCTF which adapts to different motion
+    strengths during inference. In our experiments, we compare our MCTF-based approach to learning-based
+    conditional coders and traditional hybrid video coding. Especially at high rates, our approach has
+    promising rate-distortion performance. Our method achieves average Bjøntegaard Delta savings of up
+    to 21% over HEVC on the UVG data set and thereby outperforms state-of-the-art learned video coders.
+  url: https://arxiv.org/abs/2305.16211
+  pdf_url: https://arxiv.org/pdf/2305.16211v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 11
+citation_year: 2023

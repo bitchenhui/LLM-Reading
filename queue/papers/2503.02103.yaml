@@ -1,0 +1,38 @@
+id: paper:arxiv:2503.02103
+status: skipped
+score: 1
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 3
+  weight: 1
+meta:
+  title: Superficial Self-Improved Reasoners Benefit from Model Merging
+  authors:
+  - Xiangchi Yuan
+  - Chunhui Zhang
+  - Zheyuan Liu
+  - Dachuan Shi
+  - Leyan Pan
+  - Soroush Vosoughi
+  - Wenke Lee
+  published: '2025-03-03'
+  updated: '2025-10-27'
+  categories:
+  - cs.CL
+  abstract: 'As scaled language models (LMs) approach human-level reasoning capabilities, self-improvement
+    emerges as a solution to synthesizing high-quality data corpus. While previous research has identified
+    model collapse as a risk in self-improvement, where model outputs become increasingly deterministic,
+    we discover a more fundamental challenge: the superficial self-improved reasoners phenomenon. In particular,
+    our analysis reveals that even when LMs show improved in-domain (ID) reasoning accuracy, they actually
+    compromise their generalized reasoning capabilities on out-of-domain (OOD) tasks due to memorization
+    rather than genuine. Through a systematic investigation of LM architecture, we discover that during
+    self-improvement, LM weight updates are concentrated in less reasoning-critical layers, leading to
+    superficial learning. To address this, we propose Iterative Model Merging (IMM), a method that strategically
+    combines weights from original and self-improved models to preserve generalization while incorporating
+    genuine reasoning improvements. Our approach effectively mitigates both LM collapse and superficial
+    learning, moving towards more stable self-improving systems.'
+  url: https://arxiv.org/abs/2503.02103
+  pdf_url: https://arxiv.org/pdf/2503.02103v2
+  version: v2
+fetched: '2026-11-14'

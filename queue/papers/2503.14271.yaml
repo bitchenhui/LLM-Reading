@@ -1,0 +1,45 @@
+id: paper:arxiv:2503.14271
+status: skipped_low_citation
+score: 2
+track: streaming_delivery
+matched:
+- ref: concept:ABR
+  count: 3
+  weight: 1
+- ref: concept:QoE
+  count: 1
+  weight: 1
+meta:
+  title: 'Video Streaming with Kairos: An MPC-Based ABR with Streaming-Aware Throughput Prediction'
+  authors:
+  - Ziyu Zhong
+  - Mufan Liu
+  - Le Yang
+  - Yifan Wang
+  - Yiling Xu
+  - Jenq-Neng Hwang
+  published: '2025-03-18'
+  updated: '2025-03-18'
+  categories:
+  - cs.NI
+  - cs.MM
+  abstract: In this paper, we present Kairos, a model predictive control (MPC)-based adaptive bitrate
+    (ABR) scheme that integrates streaming-aware throughput predictions to enhance video streaming quality.
+    Kairos features an attention-based throughput predictor with buffer-aware uncertainty control, improving
+    prediction accuracy and adaptability to network conditions. Specifically, we introduce a multi-time
+    attention network to handle the irregularly sampled sequences in streaming data, creating uniformly
+    spaced latent representations. Additionally, we design a separate prediction network that estimates
+    future throughput at multiple percentiles and incorporates a buffer-aware uncertainty adjustment module.
+    This module dynamically selects the appropriate throughput percentile based on the buffer size, enhancing
+    robustness to varying network conditions. Lastly, to mitigate QoE smoothness penalties caused by predictors
+    focused solely on accuracy, we introduce a smoothness regularizer. By embedding streaming-aware characteristics,
+    such as sampling irregularity, buffer occupancy, and smoothness, into the throughput predictor design,
+    Kairos significantly improves bitrate decision-making within the MPC framework. Extensive trace-driven
+    and real-world experiments demonstrate that Kairos outperforms state-of-the-art ABR schemes, achieving
+    an average QoE improvement of 1.52% to 7.28% under various network conditions.
+  url: https://arxiv.org/abs/2503.14271
+  pdf_url: https://arxiv.org/pdf/2503.14271v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 4
+citation_year: 2025

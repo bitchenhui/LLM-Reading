@@ -1,0 +1,43 @@
+id: paper:arxiv:2405.01750
+status: skipped_low_citation
+score: 2
+track: immersive_media
+matched:
+- ref: metric:FPS
+  count: 1
+  weight: 1
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+meta:
+  title: 'PointCompress3D: A Point Cloud Compression Framework for Roadside LiDARs in Intelligent Transportation
+    Systems'
+  authors:
+  - Walter Zimmer
+  - Ramandika Pranamulia
+  - Xingcheng Zhou
+  - Mingyu Liu
+  - Alois C. Knoll
+  published: '2024-05-02'
+  updated: '2024-10-29'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: 'In the context of Intelligent Transportation Systems (ITS), efficient data compression is
+    crucial for managing large-scale point cloud data acquired by roadside LiDAR sensors. The demand for
+    efficient storage, streaming, and real-time object detection capabilities for point cloud data is
+    substantial. This work introduces PointCompress3D, a novel point cloud compression framework tailored
+    specifically for roadside LiDARs. Our framework addresses the challenges of compressing high-resolution
+    point clouds while maintaining accuracy and compatibility with roadside LiDAR sensors. We adapt, extend,
+    integrate, and evaluate three cutting-edge compression methods using our real-world-based TUMTraf
+    dataset family. We achieve a frame rate of 10 FPS while keeping compression sizes below 105 Kb, a
+    reduction of 50 times, and maintaining object detection performance on par with the original data.
+    In extensive experiments and ablation studies, we finally achieved a PSNR d2 of 94.46 and a BPP of
+    6.54 on our dataset. Future work includes the deployment on the live system. The code is available
+    on our project website: https://pointcompress3d.github.io.'
+  url: https://arxiv.org/abs/2405.01750
+  pdf_url: https://arxiv.org/pdf/2405.01750v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 2
+citation_year: 2024

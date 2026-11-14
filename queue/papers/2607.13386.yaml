@@ -1,0 +1,43 @@
+id: paper:arxiv:2607.13386
+status: pending
+score: 2
+track: quality_assessment
+matched:
+- ref: concept:MoE
+  count: 2
+  weight: 1
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'FM$^2$: Unified Federated Foundation Models for Heterogeneous Multimodal Medical Imaging'
+  authors:
+  - Shengchao Chen
+  - Ting Shu
+  published: '2026-07-15'
+  updated: '2026-07-15'
+  categories:
+  - cs.CV
+  abstract: 'Building foundation models for medical imaging requires pooling data across institutions,
+    yet privacy regulations prohibit centralized aggregation. Existing Federated Foundation Models either
+    fine-tune natural-image models with poor medical-domain transfer, or train from scratch within a single
+    modality, lacking the flexibility to unify tasks. We identify an under-explored challenge, Imaging
+    Modality Heterogeneity, where clients operate under two structural regimes: Overlapped (shared modalities
+    with heterogeneous label distributions) and Non-overlapped (fully disjoint modalities per client).
+    We propose FM$^2$, a unified framework that trains the core backbone from scratch to preserve medical
+    domain fidelity while optionally incorporating biomedical pretrained encoders for vision-language
+    alignment. FM$^2$ equips each client with dual Mixture-of-Experts modules (a Class-wise MoE for personalized
+    category knowledge and a Domain-wise MoE for shared cross-modality representations), coupled with
+    a Heterogeneous Modality Alignment (HMA) regularizer that explicitly aligns modality-specific expert
+    parameters, admitting provable $O(1/\sqrt{T})$ convergence and generalization guarantees. FM$^2$ further
+    incorporates Caption-Enhanced Learning (CEL), where locally retained GPT-4o-generated captions serve
+    as a textual semantic bridge enabling representation transfer across clients with disjoint modalities,
+    and demonstrates extensibility to Federated Medical VQA. Experiments on our MIMH benchmark (classification
+    and CEL) and real-world medical VQA datasets confirm consistent superiority over state-of-the-art
+    federated baselines and strong out-of-modality generalization across all three tasks.'
+  url: https://arxiv.org/abs/2607.13386
+  pdf_url: https://arxiv.org/pdf/2607.13386v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 0
+citation_year: 2026

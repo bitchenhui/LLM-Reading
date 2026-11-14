@@ -1,0 +1,49 @@
+id: paper:arxiv:2509.23067
+status: pending
+score: 2
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: 'Semantic Voting: A Self-Evaluation-Free Approach for Efficient LLM Self-Improvement on Unverifiable
+    Open-ended Tasks'
+  authors:
+  - Chunyang Jiang
+  - Yonggang Zhang
+  - Yiyang Cai
+  - Chi-Min Chan
+  - Yulong Liu
+  - Mingming Chen
+  - Wei Xue
+  - Yike Guo
+  published: '2025-09-27'
+  updated: '2026-03-31'
+  categories:
+  - cs.CL
+  - cs.AI
+  abstract: The rising cost of acquiring supervised data has driven significant interest in self-improvement
+    for large language models (LLMs). Straightforward unsupervised signals like majority voting have proven
+    effective in generating pseudo-labels for verifiable tasks, while their applicability to unverifiable
+    tasks (e.g., translation) is limited by the open-ended character of responses. As a result, self-evaluation
+    mechanisms (e.g., self-judging and entropy minimization) are predominantly used to derive pseudo-labels.
+    However, self-evaluation relying on LLMs typically incurs high computational overhead and introduces
+    overconfidence issues due to intrinsic biases. To address these challenges, we propose a novel self-evaluation-free
+    approach for unverifiable tasks, designed for lightweight yet effective self-improvement. Inspired
+    by majority voting commonly employed in verifiable tasks, we propose semantic voting as a novel mechanism
+    that relaxes the principle of hard matching (i.e., exact matching) toward soft matching (i.e., semantic
+    similarity). Soft matching is achieved by leveraging a lightweight sentence embedding model to quantify
+    semantic similarity, thereby mitigating excessive computational burden and intrinsic bias-associated
+    limitations of self-evaluation. Comprehensive experiments demonstrate that our method achieves substantial
+    gains in computational efficiency and overall better performance than self-evaluation methods across
+    diverse model architectures and tasks.
+  url: https://arxiv.org/abs/2509.23067
+  pdf_url: https://arxiv.org/pdf/2509.23067v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 10
+citation_year: 2025

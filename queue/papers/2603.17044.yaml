@@ -1,0 +1,37 @@
+id: paper:arxiv:2603.17044
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: Do Understanding and Generation Fight? A Diagnostic Study of DPO for Unified Multimodal Models
+  authors:
+  - Abinav Rao
+  - Sujan Rachuri
+  published: '2026-03-17'
+  updated: '2026-05-22'
+  categories:
+  - cs.LG
+  - cs.AI
+  - cs.CV
+  abstract: 'Unified multimodal models share a language model backbone for both understanding and generating
+    images. Can DPO align both capabilities simultaneously? We present the first systematic study of this
+    question, applying DPO to Janus-Pro at 1B and 7B parameters under seven training strategies and two
+    post-hoc methods. The central finding is negative: generation quality resists DPO alignment across
+    all tested conditions on this architecture. No method improves generation CLIPScore at 7B (|Delta|
+    < 0.2, p > 0.5 at n=200 per seed, 3 seeds); at 1B, all methods degrade generation, and the result
+    holds across preference data types (real-vs-generated and model-vs-model) and the data volumes tested
+    (150-288 pairs). Gradient analysis reveals why: understanding and generation gradients are near-orthogonal
+    (cos ~ 0) with ~11-14x magnitude imbalance driven by VQ token count asymmetry (576 generation tokens
+    vs. ~30-100 text tokens). This imbalance is the dominant interference mechanism in multi-task DPO;
+    magnitude-balancing yields directionally positive understanding deltas (+0.01-0.04 VQA, though individually
+    not significant), but the generation gap persists regardless. We identify discrete VQ tokenization
+    as a likely structural bottleneck -- supported by the generation DPO loss converging to ln(2) -- and
+    provide practical guidance for practitioners working with VQ-based unified models.'
+  url: https://arxiv.org/abs/2603.17044
+  pdf_url: https://arxiv.org/pdf/2603.17044v2
+  version: v2
+fetched: '2026-11-14'

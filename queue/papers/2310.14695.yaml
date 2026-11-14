@@ -1,0 +1,41 @@
+id: paper:arxiv:2310.14695
+status: skipped_low_citation
+score: 2
+track: immersive_media
+matched:
+- ref: concept:NeRF
+  count: 2
+  weight: 1
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+meta:
+  title: 'CAwa-NeRF: Instant Learning of Compression-Aware NeRF Features'
+  authors:
+  - Omnia Mahmoud
+  - Théo Ladune
+  - Matthieu Gendrin
+  published: '2023-10-23'
+  updated: '2023-10-23'
+  categories:
+  - cs.CV
+  abstract: Modeling 3D scenes by volumetric feature grids is one of the promising directions of neural
+    approximations to improve Neural Radiance Fields (NeRF). Instant-NGP (INGP) introduced multi-resolution
+    hash encoding from a lookup table of trainable feature grids which enabled learning high-quality neural
+    graphics primitives in a matter of seconds. However, this improvement came at the cost of higher storage
+    size. In this paper, we address this challenge by introducing instant learning of compression-aware
+    NeRF features (CAwa-NeRF), that allows exporting the zip compressed feature grids at the end of the
+    model training with a negligible extra time overhead without changing neither the storage architecture
+    nor the parameters used in the original INGP paper. Nonetheless, the proposed method is not limited
+    to INGP but could also be adapted to any model. By means of extensive simulations, our proposed instant
+    learning pipeline can achieve impressive results on different kinds of static scenes such as single
+    object masked background scenes and real-life scenes captured in our studio. In particular, for single
+    object masked background scenes CAwa-NeRF compresses the feature grids down to 6% (1.2 MB) of the
+    original size without any loss in the PSNR (33 dB) or down to 2.4% (0.53 MB) with a slight virtual
+    loss (32.31 dB).
+  url: https://arxiv.org/abs/2310.14695
+  pdf_url: https://arxiv.org/pdf/2310.14695v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 7
+citation_year: 2023

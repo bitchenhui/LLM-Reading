@@ -1,0 +1,35 @@
+id: paper:arxiv:2201.12039
+status: skipped
+score: 0
+track: audio_coding
+matched: []
+meta:
+  title: A DNN Based Post-Filter to Enhance the Quality of Coded Speech in MDCT Domain
+  authors:
+  - Kishan Gupta
+  - Srikanth Korse
+  - Bernd Edler
+  - Guillaume Fuchs
+  published: '2022-01-28'
+  updated: '2022-01-28'
+  categories:
+  - eess.AS
+  - cs.LG
+  - cs.SD
+  - eess.SP
+  abstract: Frequency domain processing, and in particular the use of Modified Discrete Cosine Transform
+    (MDCT), is the most widespread approach to audio coding. However, at low bitrates, audio quality,
+    especially for speech, degrades drastically due to the lack of available bits to directly code the
+    transform coefficients. Traditionally, post-filtering has been used to mitigate artefacts in the coded
+    speech by exploiting a-priori information of the source and extra transmitted parameters. Recently,
+    data-driven post-filters have shown better results, but at the cost of significant additional complexity
+    and delay. In this work, we propose a mask-based post-filter operating directly in MDCT domain of
+    the codec, inducing no extra delay. The real-valued mask is applied to the quantized MDCT coefficients
+    and is estimated from a relatively lightweight convolutional encoder-decoder network. Our solution
+    is tested on the recently standardized low-delay, low-complexity codec (LC3) at lowest possible bitrate
+    of 16 kbps. Objective and subjective assessments clearly show the advantage of this approach over
+    the conventional post-filter, with an average improvement of 10 MUSHRA points over the LC3 coded speech.
+  url: https://arxiv.org/abs/2201.12039
+  pdf_url: https://arxiv.org/pdf/2201.12039v1
+  version: v1
+fetched: '2026-11-14'

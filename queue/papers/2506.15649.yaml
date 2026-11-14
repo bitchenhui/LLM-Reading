@@ -1,0 +1,48 @@
+id: paper:arxiv:2506.15649
+status: skipped
+score: 1
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 1
+  weight: 1
+meta:
+  title: Dual-Stage Value-Guided Inference with Margin-Based Reward Adjustment for Fast and Faithful VLM
+    Captioning
+  authors:
+  - Ankan Deria
+  - Adinath Madhavrao Dukre
+  - Feilong Tang
+  - Sara Atito
+  - Sudipta Roy
+  - Muhammad Awais
+  - Muhammad Haris Khan
+  - Imran Razzak
+  published: '2025-06-18'
+  updated: '2025-06-18'
+  categories:
+  - cs.CV
+  - cs.LG
+  abstract: Despite significant advances in inference-time search for vision-language models (VLMs), existing
+    approaches remain both computationally expensive and prone to unpenalized, low-confidence generations
+    which often lead to persistent hallucinations. We introduce \textbf{Value-guided Inference with Margin-based
+    Reward (ViMaR)}, a two-stage inference framework that improves both efficiency and output fidelity
+    by combining a temporal-difference value model with a margin-aware reward adjustment. In the first
+    stage, we perform a single pass to identify the highest-value caption among diverse candidates. In
+    the second stage, we selectively refine only those segments that were overlooked or exhibit weak visual
+    grounding, thereby eliminating frequently rewarded evaluations. A calibrated margin-based penalty
+    discourages low-confidence continuations while preserving descriptive richness. Extensive experiments
+    across multiple VLM architectures demonstrate that ViMaR generates captions that are significantly
+    more reliable, factually accurate, detailed, and explanatory, while achieving over 4$\times$ speedup
+    compared to existing value-guided methods. Specifically, we show that ViMaR trained solely on LLaVA
+    Mistral-7B, \textit{generalizes effectively to guide decoding in a stronger unseen model}. To further
+    validate this, we adapt the ViMaR to steer generation in LLaVA-OneVision-Qwen2-7B, leading to consistent
+    improvements in caption quality and demonstrating robust cross-model guidance. This cross-model generalization
+    highlights ViMaR's flexibility and modularity, positioning it as a scalable and transferable inference-time
+    decoding strategy. Furthermore, when ViMaR-generated captions are used for self-training, the underlying
+    models achieve substantial gains across a broad suite of visual comprehension benchmarks, underscoring
+    the potential of fast, accurate, and self-improving VLM pipelines.
+  url: https://arxiv.org/abs/2506.15649
+  pdf_url: https://arxiv.org/pdf/2506.15649v1
+  version: v1
+fetched: '2026-11-14'

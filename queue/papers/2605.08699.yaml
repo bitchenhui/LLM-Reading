@@ -1,0 +1,58 @@
+id: paper:arxiv:2605.08699
+status: skipped_low_citation
+score: 5
+track: streaming_delivery
+matched:
+- ref: concept:3DGS
+  count: 4
+  weight: 1
+- ref: concept:ABR
+  count: 1
+  weight: 1
+- ref: concept:QUIC
+  count: 1
+  weight: 1
+- ref: concept:SuperResolution
+  count: 1
+  weight: 1
+- ref: metric:SSIM
+  count: 1
+  weight: 1
+meta:
+  title: Thin-Client Interactive Gaussian Adaptive Streaming over HTTP/3
+  authors:
+  - Emanuele Artioli
+  - Philipp Fößl
+  - Daniele Lorenzi
+  - Farzad Tashtarian
+  - Mahdi Dolati
+  - Cheng-Hsin Hsu
+  - Christian Timmerer
+  published: '2026-05-09'
+  updated: '2026-05-09'
+  categories:
+  - eess.IV
+  - cs.ET
+  - cs.MM
+  abstract: 'Recent advancements in 3D Gaussian Splatting (3DGS) have enabled photorealistic rendering
+    of complex scenes, yet widespread adoption on mobile and Extended Reality (XR) devices is hindered
+    by substantial computational and bandwidth requirements. While existing solutions often focus on model
+    compression for client-side rendering, they still demand significant GPU power, limiting applicability
+    on resource-constrained hardware. We propose TIGAS (Thin-client Interactive Gaussian Adaptive Streaming),
+    a remote rendering framework offloading rasterization to a backend. To bypass the prohibitive latencies
+    connected to fluctuating network conditions, TIGAS streams view-dependent 2D projections to a lightweight
+    web client over QUIC, minimizing head-of-line (HoL) blocking. A dedicated ABR algorithm adapts rendering
+    quality to fluctuating network conditions, maintaining motion-to-photon latency within strict 6DoF
+    interactive constraints. Furthermore, we discuss the integration of an experimental WebGPU super-resolution
+    pipeline to analyze the trade-offs between perceptual quality enhancements and thin-client processing
+    bottlenecks. We extensively evaluate TIGAS across multi-continental environments using 14 3DGS models
+    and real 6DoF EyeNavGS movement traces. Powered by a backend rendering frames in under 10 milliseconds,
+    TIGAS maintains latency within interactive thresholds while achieving an average SSIM of 0.88, serving
+    both as a robust testbed for 3DGS streaming research and a capable delivery system. The source code
+    is available at: https://github.com/Rekenar/GaussianAdaptiveStreamer.'
+  url: https://arxiv.org/abs/2605.08699
+  pdf_url: https://arxiv.org/pdf/2605.08699v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 0
+citation_year: 2026

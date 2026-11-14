@@ -1,0 +1,44 @@
+id: paper:arxiv:2405.07761
+status: skipped
+score: 1
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+meta:
+  title: 'LLM4ED: Large Language Models for Automatic Equation Discovery'
+  authors:
+  - Mengge Du
+  - Yuntian Chen
+  - Zhongzheng Wang
+  - Longfeng Nie
+  - Dongxiao Zhang
+  published: '2024-05-13'
+  updated: '2024-07-22'
+  categories:
+  - cs.LG
+  - cs.AI
+  - cs.SC
+  - math-ph
+  - stat.AP
+  abstract: Equation discovery is aimed at directly extracting physical laws from data and has emerged
+    as a pivotal research domain. Previous methods based on symbolic mathematics have achieved substantial
+    advancements, but often require the design of implementation of complex algorithms. In this paper,
+    we introduce a new framework that utilizes natural language-based prompts to guide large language
+    models (LLMs) in automatically mining governing equations from data. Specifically, we first utilize
+    the generation capability of LLMs to generate diverse equations in string form, and then evaluate
+    the generated equations based on observations. In the optimization phase, we propose two alternately
+    iterated strategies to optimize generated equations collaboratively. The first strategy is to take
+    LLMs as a black-box optimizer and achieve equation self-improvement based on historical samples and
+    their performance. The second strategy is to instruct LLMs to perform evolutionary operators for global
+    search. Experiments are extensively conducted on both partial differential equations and ordinary
+    differential equations. Results demonstrate that our framework can discover effective equations to
+    reveal the underlying physical laws under various nonlinear dynamic systems. Further comparisons are
+    made with state-of-the-art models, demonstrating good stability and usability. Our framework substantially
+    lowers the barriers to learning and applying equation discovery techniques, demonstrating the application
+    potential of LLMs in the field of knowledge discovery.
+  url: https://arxiv.org/abs/2405.07761
+  pdf_url: https://arxiv.org/pdf/2405.07761v2
+  version: v2
+fetched: '2026-11-14'

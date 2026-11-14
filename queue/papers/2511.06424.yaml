@@ -1,0 +1,44 @@
+id: paper:arxiv:2511.06424
+status: skipped
+score: 2
+track: video_image_coding
+matched:
+- ref: concept:DiffusionPrior
+  count: 1
+  weight: 1
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+meta:
+  title: 'Turbo-DDCM: Fast and Flexible Zero-Shot Diffusion-Based Image Compression'
+  authors:
+  - Amit Vaisman
+  - Guy Ohayon
+  - Hila Manor
+  - Michael Elad
+  - Tomer Michaeli
+  published: '2025-11-09'
+  updated: '2026-04-14'
+  categories:
+  - eess.IV
+  - cs.AI
+  - cs.CV
+  - eess.SP
+  - stat.ML
+  abstract: While zero-shot diffusion-based compression methods have seen significant progress in recent
+    years, they remain notoriously slow and computationally demanding. This paper presents an efficient
+    zero-shot diffusion-based compression method that runs substantially faster than existing methods,
+    while maintaining performance that is on par with the state-of-the-art techniques. Our method builds
+    upon the recently proposed Denoising Diffusion Codebook Models (DDCMs) compression scheme. Specifically,
+    DDCM compresses an image by sequentially choosing the diffusion noise vectors from reproducible random
+    codebooks, guiding the denoiser's output to reconstruct the target image. We modify this framework
+    with Turbo-DDCM, which efficiently combines a large number of noise vectors at each denoising step,
+    thereby significantly reducing the number of required denoising operations. This modification is also
+    coupled with an improved encoding protocol. Furthermore, we introduce two flexible variants of Turbo-DDCM,
+    a priority-aware variant that prioritizes user-specified regions and a distortion-controlled variant
+    that compresses an image based on a target PSNR rather than a target BPP. Comprehensive experiments
+    position Turbo-DDCM as a compelling, practical, and flexible image compression scheme.
+  url: https://arxiv.org/abs/2511.06424
+  pdf_url: https://arxiv.org/pdf/2511.06424v2
+  version: v2
+fetched: '2026-11-14'

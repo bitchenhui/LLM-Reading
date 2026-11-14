@@ -1,0 +1,47 @@
+id: paper:arxiv:2611.14525
+status: pending
+score: 2
+track: self_improvement
+matched:
+- ref: concept:LLM
+  count: 2
+  weight: 1
+- ref: concept:SelfImprovement
+  count: 1
+  weight: 1
+meta:
+  title: 'EasyFoam: Skill-Oriented OpenFOAM Agents with Evidence-Driven Evolution'
+  authors:
+  - Peng Yin
+  - Zhiwei Chen
+  - Tianyi Liu
+  - Chen Li
+  - Kai Li
+  - Jian Cheng
+  published: '2026-09-27'
+  updated: '2026-09-27'
+  categories:
+  - cs.CE
+  - cs.AI
+  abstract: 'Large language model (LLM) agents are increasingly capable of automating end-to-end OpenFOAM
+    workflows for computational fluid dynamics (CFD). However, current progress is bottlenecked by two
+    critical limitations. First, existing evaluations are dominated by tutorial-level cases and execution-oriented
+    metrics, masking a substantial executability--acceptability gap: successfully executed simulations
+    often fail to satisfy prescribed numerical or quantity-of-interest (QoI) criteria. Second, domain
+    expertise in existing systems is tightly coupled with bespoke agent architectures, limiting its reuse
+    and continual refinement across agent implementations. To address these challenges, we introduce ExtFoamBench,
+    a challenging benchmark for OpenFOAM agents that spans five axes of workflow variation, and separately
+    assesses execution completion, numerical soundness, and QoI satisfaction. Complementing this, we propose
+    EasyFoam, an agent framework that decouples CFD expertise into modular, externalized skills driven
+    by a dual-loop mechanism. An execution loop constructs workflows from explicit task requirements and
+    uses structured simulation evidence to diagnose failures and guide targeted repairs. Meanwhile, an
+    evolution loop distills task experience into reusable skill updates selected through paired evaluation.
+    Empirical evaluations demonstrate that EasyFoam achieves substantially higher task acceptance rates
+    than baseline agents, establishing this work as a starting point for future research toward self-improving
+    CFD agents.'
+  url: https://arxiv.org/abs/2611.14525
+  pdf_url: https://arxiv.org/pdf/2611.14525v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 0
+citation_year: 2026

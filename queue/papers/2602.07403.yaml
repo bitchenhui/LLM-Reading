@@ -1,0 +1,51 @@
+id: paper:arxiv:2602.07403
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 3
+  weight: 1
+meta:
+  title: 'Surveillance Facial Image Quality Assessment: A Multi-dimensional Dataset and Lightweight Model'
+  authors:
+  - Yanwei Jiang
+  - Wei Sun
+  - Yingjie Zhou
+  - Xiangyang Zhu
+  - Yuqin Cao
+  - Jun Jia
+  - Yunhao Li
+  - Sijing Wu
+  - Dandan Zhu
+  - Xingkuo Min
+  - Guangtao Zhai
+  published: '2026-02-07'
+  updated: '2026-02-07'
+  categories:
+  - eess.IV
+  - cs.CV
+  - cs.MM
+  abstract: Surveillance facial images are often captured under unconstrained conditions, resulting in
+    severe quality degradation due to factors such as low resolution, motion blur, occlusion, and poor
+    lighting. Although recent face restoration techniques applied to surveillance cameras can significantly
+    enhance visual quality, they often compromise fidelity (i.e., identity-preserving features), which
+    directly conflicts with the primary objective of surveillance images -- reliable identity verification.
+    Existing facial image quality assessment (FIQA) predominantly focus on either visual quality or recognition-oriented
+    evaluation, thereby failing to jointly address visual quality and fidelity, which are critical for
+    surveillance applications. To bridge this gap, we propose the first comprehensive study on surveillance
+    facial image quality assessment (SFIQA), targeting the unique challenges inherent to surveillance
+    scenarios. Specifically, we first construct SFIQA-Bench, a multi-dimensional quality assessment benchmark
+    for surveillance facial images, which consists of 5,004 surveillance facial images captured by three
+    widely deployed surveillance cameras in real-world scenarios. A subjective experiment is conducted
+    to collect six dimensional quality ratings, including noise, sharpness, colorfulness, contrast, fidelity
+    and overall quality, covering the key aspects of SFIQA. Furthermore, we propose SFIQA-Assessor, a
+    lightweight multi-task FIQA model that jointly exploits complementary facial views through cross-view
+    feature interaction, and employs learnable task tokens to guide the unified regression of multiple
+    quality dimensions. The experiment results on the proposed dataset show that our method achieves the
+    best performance compared with the state-of-the-art general image quality assessment (IQA) and FIQA
+    methods, validating its effectiveness for real-world surveillance applications.
+  url: https://arxiv.org/abs/2602.07403
+  pdf_url: https://arxiv.org/pdf/2602.07403v1
+  version: v1
+fetched: '2026-11-14'

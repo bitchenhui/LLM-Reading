@@ -1,0 +1,52 @@
+id: paper:arxiv:2206.09427
+status: skipped_low_citation
+score: 3
+track: streaming_delivery
+matched:
+- ref: concept:ABR
+  count: 3
+  weight: 1
+- ref: concept:QoE
+  count: 3
+  weight: 1
+- ref: concept:DASH
+  count: 1
+  weight: 1
+meta:
+  title: 'QuDASH: Quantum-inspired rate adaptation approach for DASH video streaming'
+  authors:
+  - Bo Wei
+  - Hang Song
+  - Makoto Nakamura
+  - Koichi Kimura
+  - Nozomu Togawa
+  - Jiro Katto
+  published: '2022-06-19'
+  updated: '2023-10-22'
+  categories:
+  - cs.NI
+  - cs.MM
+  - eess.IV
+  abstract: Internet traffic is dramatically increasing with the development of network technologies and
+    video streaming traffic accounts for large amount within the total traffic, which reveals the importance
+    to guarantee the quality of content delivery service. Based on the network conditions, adaptive bitrate
+    (ABR) control is utilized as a common technique which can choose the proper bitrate to ensure the
+    video streaming quality. In this paper, new bitrate control method, QuDASH is proposed by taking advantage
+    of the emerging quantum technology. In QuDASH, the adaptive control model is developed using the quadratic
+    unconstrained binary optimization (QUBO), which aims at increasing the average bitrate and decreasing
+    the video rebuffering events to maximize the user quality of experience (QoE). In order to formulate
+    the video control model, first the QUBO terms of different factors are defined regarding video quality,
+    bitrate change, and buffer condition. Then, all the individual QUBO terms are merged to generate an
+    objective function. By minimizing the QUBO objective function, the bitrate choice is determined from
+    the solution. The control model is solved by Digital Annealer, which is a quantum-inspired computing
+    technology. The evaluation of the proposed method is carried out by simulation with the throughput
+    traces obtained in real world under different scenarios and the comparison with other methods is conducted.
+    Experiment results demonstrated that the proposed QuDASH method has better performance in terms of
+    QoE compared with other advanced ABR methods. In 68.2% of the examined cases, QuDASH achieves the
+    highest QoE results, which shows the superiority of the QuDASH over conventional methods.
+  url: https://arxiv.org/abs/2206.09427
+  pdf_url: https://arxiv.org/pdf/2206.09427v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 5
+citation_year: 2022

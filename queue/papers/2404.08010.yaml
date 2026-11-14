@@ -1,0 +1,41 @@
+id: paper:arxiv:2404.08010
+status: skipped
+score: 1
+track: processing_enhancement
+matched:
+- ref: concept:SuperResolution
+  count: 1
+  weight: 1
+meta:
+  title: Differentiable Search for Finding Optimal Quantization Strategy
+  authors:
+  - Lianqiang Li
+  - Chenqian Yan
+  - Yefei Chen
+  published: '2024-04-10'
+  updated: '2024-04-15'
+  categories:
+  - cs.LG
+  - eess.IV
+  abstract: To accelerate and compress deep neural networks (DNNs), many network quantization algorithms
+    have been proposed. Although the quantization strategy of any algorithm from the state-of-the-arts
+    may outperform others in some network architectures, it is hard to prove the strategy is always better
+    than others, and even cannot judge that the strategy is always the best choice for all layers in a
+    network. In other words, existing quantization algorithms are suboptimal as they ignore the different
+    characteristics of different layers and quantize all layers by a uniform quantization strategy. To
+    solve the issue, in this paper, we propose a differentiable quantization strategy search (DQSS) to
+    assign optimal quantization strategy for individual layer by taking advantages of the benefits of
+    different quantization algorithms. Specifically, we formulate DQSS as a differentiable neural architecture
+    search problem and adopt an efficient convolution to efficiently explore the mixed quantization strategies
+    from a global perspective by gradient-based optimization. We conduct DQSS for post-training quantization
+    to enable their performance to be comparable with that in full precision models. We also employ DQSS
+    in quantization-aware training for further validating the effectiveness of DQSS. To circumvent the
+    expensive optimization cost when employing DQSS in quantization-aware training, we update the hyper-parameters
+    and the network parameters in a single forward-backward pass. Besides, we adjust the optimization
+    process to avoid the potential under-fitting problem. Comprehensive experiments on high level computer
+    vision task, i.e., image classification, and low level computer vision task, i.e., image super-resolution,
+    with various network architectures show that DQSS could outperform the state-of-the-arts.
+  url: https://arxiv.org/abs/2404.08010
+  pdf_url: https://arxiv.org/pdf/2404.08010v2
+  version: v2
+fetched: '2026-11-14'

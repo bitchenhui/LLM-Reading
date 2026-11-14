@@ -1,0 +1,39 @@
+id: paper:arxiv:2601.15356
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 3
+  weight: 1
+meta:
+  title: 'Q-Probe: Scaling Image Quality Assessment to High Resolution via Context-Aware Agentic Probing'
+  authors:
+  - Xiang Li
+  - Xueheng Li
+  - Yu Wang
+  - Xuanhua He
+  - Zhangchi Hu
+  - Chengjun Xie
+  published: '2026-01-21'
+  updated: '2026-09-25'
+  categories:
+  - eess.IV
+  - cs.AI
+  abstract: Reinforcement Learning (RL) has empowered Multimodal Large Language Models (MLLMs) to achieve
+    superior human preference alignment in Image Quality Assessment (IQA). However, existing RL-based
+    IQA models typically rely on coarse-grained global views, failing to capture subtle local degradations
+    in high-resolution scenarios. While emerging "Thinking with Images" paradigms enable multi-scale visual
+    perception via zoom-in mechanisms, their direct adaptation to IQA induces spurious "cropping-implies-degradation"
+    biases and misinterprets natural depth-of-field as artifacts. To address these challenges, we propose
+    Q-Probe, the first agentic IQA framework designed to scale IQA to high resolution via context-aware
+    probing. First, we construct Vista-Bench, a pioneering benchmark tailored for fine-grained local degradation
+    analysis in high-resolution IQA settings. Furthermore, we propose a three-stage training paradigm
+    that progressively aligns the model with human preferences, while simultaneously eliminating causal
+    bias through a novel context-aware cropping strategy. Extensive experiments demonstrate that Q-Probe
+    achieves state-of-the-art performance in high-resolution settings while maintaining superior efficacy
+    across resolution scales.
+  url: https://arxiv.org/abs/2601.15356
+  pdf_url: https://arxiv.org/pdf/2601.15356v6
+  version: v6
+fetched: '2026-11-14'

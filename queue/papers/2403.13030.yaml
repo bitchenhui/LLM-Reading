@@ -1,0 +1,35 @@
+id: paper:arxiv:2403.13030
+status: skipped
+score: 1
+track: video_image_coding
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: Super-High-Fidelity Image Compression via Hierarchical-ROI and Adaptive Quantization
+  authors:
+  - Jixiang Luo
+  - Yan Wang
+  - Hongwei Qin
+  published: '2024-03-19'
+  updated: '2024-05-21'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: Learned Image Compression (LIC) has achieved dramatic progress regarding objective and subjective
+    metrics. MSE-based models aim to improve objective metrics while generative models are leveraged to
+    improve visual quality measured by subjective metrics. However, they all suffer from blurring or deformation
+    at low bit rates, especially at below $0.2bpp$. Besides, deformation on human faces and text is unacceptable
+    for visual quality assessment, and the problem becomes more prominent on small faces and text. To
+    solve this problem, we combine the advantage of MSE-based models and generative models by utilizing
+    region of interest (ROI). We propose Hierarchical-ROI (H-ROI), to split images into several foreground
+    regions and one background region to improve the reconstruction of regions containing faces, text,
+    and complex textures. Further, we propose adaptive quantization by non-linear mapping within the channel
+    dimension to constrain the bit rate while maintaining the visual quality. Exhaustive experiments demonstrate
+    that our methods achieve better visual quality on small faces and text with lower bit rates, e.g.,
+    $0.7X$ bits of HiFiC and $0.5X$ bits of BPG.
+  url: https://arxiv.org/abs/2403.13030
+  pdf_url: https://arxiv.org/pdf/2403.13030v3
+  version: v3
+fetched: '2026-11-14'

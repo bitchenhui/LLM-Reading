@@ -1,0 +1,36 @@
+id: paper:arxiv:2507.12701
+status: skipped
+score: 1
+track: audio_coding
+matched:
+- ref: concept:ICM
+  count: 1
+  weight: 1
+meta:
+  title: 'Task-Specific Audio Coding for Machines: Machine-Learned Latent Features Are Codes for That
+    Machine'
+  authors:
+  - Anastasia Kuznetsova
+  - Inseon Jang
+  - Wootaek Lim
+  - Minje Kim
+  published: '2025-07-17'
+  updated: '2025-07-17'
+  categories:
+  - cs.SD
+  - cs.AI
+  - eess.AS
+  abstract: Neural audio codecs, leveraging quantization algorithms, have significantly impacted various
+    speech/audio tasks. While high-fidelity reconstruction is paramount for human perception, audio coding
+    for machines (ACoM) prioritizes efficient compression and downstream task performance, disregarding
+    perceptual nuances. This work introduces an efficient ACoM method that can compress and quantize any
+    chosen intermediate feature representation of an already trained speech/audio downstream model. Our
+    approach employs task-specific loss guidance alongside residual vector quantization (RVQ) losses,
+    providing ultra-low bitrates (i.e., less than 200 bps) with a minimal loss of the downstream model
+    performance. The resulting tokenizer is adaptable to various bitrates and model sizes for flexible
+    deployment. Evaluated on automatic speech recognition and audio classification, our method demonstrates
+    its efficacy and potential for broader task and architectural applicability through appropriate regularization.
+  url: https://arxiv.org/abs/2507.12701
+  pdf_url: https://arxiv.org/pdf/2507.12701v1
+  version: v1
+fetched: '2026-11-14'

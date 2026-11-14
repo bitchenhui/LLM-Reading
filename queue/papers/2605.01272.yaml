@@ -1,0 +1,51 @@
+id: paper:arxiv:2605.01272
+status: skipped_low_citation
+score: 11
+track: quality_assessment
+matched:
+- ref: codec:AV1
+  count: 1
+  weight: 3
+- ref: codec:AVC
+  count: 1
+  weight: 3
+- ref: codec:HEVC
+  count: 1
+  weight: 3
+- ref: concept:IQA
+  count: 2
+  weight: 1
+- ref: metric:MOS
+  count: 2
+  weight: 1
+meta:
+  title: 'GameScope: A Multi-Attribute, Multi-Codec Benchmark Dataset for Gaming Video Quality Assessment'
+  authors:
+  - Rajesh Sureddi
+  - Shreshth Saini
+  - Avinab Saha
+  - Alan C. Bovik
+  published: '2026-05-02'
+  updated: '2026-05-02'
+  categories:
+  - cs.CV
+  - eess.IV
+  abstract: The development of video game streaming has grown rapidly, with major platforms such as YouTube
+    and Twitch using different codecs. To support quality assessment models that work consistently across
+    any codec, it is necessary to have access to large, diverse subjective gaming quality datasets. Currently,
+    there are only a few available, each having limitations. To address this gap, we present the largest
+    gaming video quality dataset to date, incorporating both user-generated content (UGC) and professional-generated
+    content (PGC) with extensive visual diversity. Our dataset covers the most widely used codecs - H.264,
+    H.265, and AV1 - and consists of 4,048 video samples, each annotated by an average of 37 mean opinion
+    score (MOS) ratings. In addition to overall quality scores, we collect coarse-grained quality attributes,
+    enabling a better understanding of perceptual factors. We study the performance of leading video quality
+    assessment methods on this dataset, including a vision language model that outperforms all the benchmarks.
+    To the best of our knowledge, this is the first dataset that comprehensively addresses gaming video
+    quality assessment across multiple codecs and content types with quality attributes. Our dataset is
+    publicly available at https://rajeshsureddi.github.io/GameScope/.
+  url: https://arxiv.org/abs/2605.01272
+  pdf_url: https://arxiv.org/pdf/2605.01272v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 0
+citation_year: 2026

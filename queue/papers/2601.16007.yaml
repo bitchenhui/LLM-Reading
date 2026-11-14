@@ -1,0 +1,55 @@
+id: paper:arxiv:2601.16007
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'PhysicsMind: Sim and Real Mechanics Benchmarking for Physical Reasoning and Prediction in Foundational
+    VLMs and World Models'
+  authors:
+  - Chak-Wing Mak
+  - Guanyu Zhu
+  - Boyi Zhang
+  - Hongji Li
+  - Xiaowei Chi
+  - Kevin Zhang
+  - Yichen Wu
+  - Yangfan He
+  - Chun-Kai Fan
+  - Wentao Lu
+  - Kuangzhi Ge
+  - Xinyu Fang
+  - Hongyang He
+  - Kuan Lu
+  - Tianxiang Xu
+  - Li Zhang
+  - Yongxin Ni
+  - Youhua Li
+  - Shanghang Zhang
+  published: '2026-01-22'
+  updated: '2026-01-22'
+  categories:
+  - cs.CV
+  - cs.AI
+  abstract: 'Modern foundational Multimodal Large Language Models (MLLMs) and video world models have
+    advanced significantly in mathematical, common-sense, and visual reasoning, but their grasp of the
+    underlying physics remains underexplored. Existing benchmarks attempting to measure this matter rely
+    on synthetic, Visual Question Answer templates or focus on perceptual video quality that is tangential
+    to measuring how well the video abides by physical laws. To address this fragmentation, we introduce
+    PhysicsMind, a unified benchmark with both real and simulation environments that evaluates law-consistent
+    reasoning and generation over three canonical principles: Center of Mass, Lever Equilibrium, and Newton''s
+    First Law. PhysicsMind comprises two main tasks: i) VQA tasks, testing whether models can reason and
+    determine physical quantities and values from images or short videos, and ii) Video Generation(VG)
+    tasks, evaluating if predicted motion trajectories obey the same center-of-mass, torque, and inertial
+    constraints as the ground truth. A broad range of recent models and video generation models is evaluated
+    on PhysicsMind and found to rely on appearance heuristics while often violating basic mechanics. These
+    gaps indicate that current scaling and training are still insufficient for robust physical understanding,
+    underscoring PhysicsMind as a focused testbed for physics-aware multimodal models. Our data will be
+    released upon acceptance.'
+  url: https://arxiv.org/abs/2601.16007
+  pdf_url: https://arxiv.org/pdf/2601.16007v1
+  version: v1
+fetched: '2026-11-14'

@@ -1,0 +1,42 @@
+id: paper:arxiv:2410.09227
+status: skipped
+score: 0
+track: video_image_coding
+matched: []
+meta:
+  title: Fast Data-independent KLT Approximations Based on Integer Functions
+  authors:
+  - A. P. Radünz
+  - D. F. G. Coelho
+  - F. M. Bayer
+  - R. J. Cintra
+  - A. Madanayake
+  published: '2024-10-11'
+  updated: '2024-10-11'
+  categories:
+  - eess.SP
+  - cs.CV
+  - eess.IV
+  - math.NA
+  - stat.ME
+  abstract: The Karhunen-Loève transform (KLT) stands as a well-established discrete transform, demonstrating
+    optimal characteristics in data decorrelation and dimensionality reduction. Its ability to condense
+    energy compression into a select few main components has rendered it instrumental in various applications
+    within image compression frameworks. However, computing the KLT depends on the covariance matrix of
+    the input data, which makes it difficult to develop fast algorithms for its implementation. Approximations
+    for the KLT, utilizing specific rounding functions, have been introduced to reduce its computational
+    complexity. Therefore, our paper introduces a category of low-complexity, data-independent KLT approximations,
+    employing a range of round-off functions. The design methodology of the approximate transform is defined
+    for any block-length $N$, but emphasis is given to transforms of $N = 8$ due to its wide use in image
+    and video compression. The proposed transforms perform well when compared to the exact KLT and approximations
+    considering classical performance measures. For particular scenarios, our proposed transforms demonstrated
+    superior performance when compared to KLT approximations documented in the literature. We also developed
+    fast algorithms for the proposed transforms, further reducing the arithmetic cost associated with
+    their implementation. Evaluation of field programmable gate array (FPGA) hardware implementation metrics
+    was conducted. Practical applications in image encoding showed the relevance of the proposed transforms.
+    In fact, we showed that one of the proposed transforms outperformed the exact KLT given certain compression
+    ratios.
+  url: https://arxiv.org/abs/2410.09227
+  pdf_url: https://arxiv.org/pdf/2410.09227v1
+  version: v1
+fetched: '2026-11-14'

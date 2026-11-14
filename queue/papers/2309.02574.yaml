@@ -1,0 +1,35 @@
+id: paper:arxiv:2309.02574
+status: skipped_low_citation
+score: 4
+track: video_image_coding
+matched:
+- ref: codec:VVC
+  count: 1
+  weight: 3
+- ref: metric:BD-Rate
+  count: 1
+  weight: 1
+meta:
+  title: An Improved Upper Bound on the Rate-Distortion Function of Images
+  authors:
+  - Zhihao Duan
+  - Jack Ma
+  - Jiangpeng He
+  - Fengqing Zhu
+  published: '2023-09-05'
+  updated: '2023-09-05'
+  categories:
+  - eess.IV
+  abstract: Recent work has shown that Variational Autoencoders (VAEs) can be used to upper-bound the
+    information rate-distortion (R-D) function of images, i.e., the fundamental limit of lossy image compression.
+    In this paper, we report an improved upper bound on the R-D function of images implemented by (1)
+    introducing a new VAE model architecture, (2) applying variable-rate compression techniques, and (3)
+    proposing a novel \ourfunction{} to stabilize training. We demonstrate that at least 30\% BD-rate
+    reduction w.r.t. the intra prediction mode in VVC codec is achievable, suggesting that there is still
+    great potential for improving lossy image compression. Code is made publicly available at https://github.com/duanzhiihao/lossy-vae.
+  url: https://arxiv.org/abs/2309.02574
+  pdf_url: https://arxiv.org/pdf/2309.02574v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 2
+citation_year: 2023

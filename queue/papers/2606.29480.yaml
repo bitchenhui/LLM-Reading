@@ -1,0 +1,29 @@
+id: paper:arxiv:2606.29480
+status: skipped
+score: 0
+track: audio_coding
+matched: []
+meta:
+  title: 'DTM-Codec: Dynamic Token Masking for VFR Speech Coding with Efficient Boundary Selection'
+  authors:
+  - Hoyeol Sohn
+  - Juhan Nam
+  published: '2026-06-28'
+  updated: '2026-06-28'
+  categories:
+  - eess.AS
+  - cs.SD
+  abstract: Variable frame rate (VFR) coding has recently emerged in neural speech codecs, allocating
+    fewer frames to redundant regions and more frames to rapidly changing speech. VFR must transmit side
+    information about retained time steps, but prior gains are either not rigorously addressed or often
+    minor once these overhead bits are included in total bitrate. We present Dynamic Token Masking (DTM)-Codec,
+    a neural speech codec that demonstrates clear gains over fixed-frame-rate baselines under a strict
+    matched-total-bitrate protocol. DTM keeps selected encoder tokens, fills masked positions with a learned
+    <MASK> embedding, and transmits a binary keep-mask for position-aware decoding. We further introduce
+    Path Length Equalization (PLE), a linear-time boundary selector for VFR coding that yields well-spread
+    adaptive segments with negligible overhead. Across operating points, DTM-Codec broadly improves reconstruction
+    quality and intelligibility over fixed-frame-rate baselines.
+  url: https://arxiv.org/abs/2606.29480
+  pdf_url: https://arxiv.org/pdf/2606.29480v1
+  version: v1
+fetched: '2026-11-14'

@@ -1,0 +1,51 @@
+id: paper:arxiv:2606.11631
+status: pending
+score: 3
+track: audio_coding
+matched:
+- ref: concept:EntropyModel
+  count: 3
+  weight: 1
+- ref: concept:Hyperprior
+  count: 1
+  weight: 1
+- ref: metric:BD-Rate
+  count: 1
+  weight: 1
+meta:
+  title: Benchmarking Neural Speech Compression from a Rate-Distortion Perspective
+  authors:
+  - Jun Xu
+  - Zhengxue Cheng
+  - Fengxi Zhang
+  - Yuhan Liu
+  - Li Song
+  - Wenjun Zhang
+  published: '2026-06-10'
+  updated: '2026-06-10'
+  categories:
+  - eess.AS
+  - cs.SD
+  abstract: 'Learning-based speech compression has achieved promising low-bitrate performance, but many
+    neural speech codecs still describe quantized latents with preset-rate discrete symbols or apply entropy
+    coding only after symbol generation. Such designs decouple representation learning from probability
+    modeling, limiting their ability to exploit the non-uniform usage and temporal dependencies of learned
+    speech latents. In this paper, we benchmark neural speech compression from a rate--distortion perspective
+    and further investigate entropy-constrained coding for low-bitrate speech compression. We first formulate
+    a unified learning-based speech coding pipeline and provide a benchmark-style analysis of recent neural
+    speech codecs, showing that explicit probability modeling remains underexplored in learned speech
+    compression. We then propose ECC, an Entropy-Constrained Codec that combines scalar quantization with
+    a learned entropy model. ECC integrates hyperprior-based side information, channel-wise context modeling,
+    latent residual prediction, and lightweight temporal modeling to estimate latent likelihoods for rate
+    estimation during training and arithmetic coding during inference. To further improve low-bitrate
+    efficiency, ECC introduces entropy skip, which omits highly predictable residual symbols using decoder-available
+    scale estimates without transmitting additional skip masks. Extensive experiments show that ECC achieves
+    a favorable low-bitrate rate--distortion trade-off over conventional and neural codec baselines, reducing
+    BD-rate by 39.9% on ViSQOL and 76.3% on PESQ on average over two widely-used test sets. Ablation and
+    diagnostic studies further validate the effectiveness of entropy modeling. Project Page: https://avery-xu.github.io/ECC-demo/'
+  url: https://arxiv.org/abs/2606.11631
+  pdf_url: https://arxiv.org/pdf/2606.11631v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 1
+citation_year: 2026

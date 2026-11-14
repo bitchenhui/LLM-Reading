@@ -1,0 +1,35 @@
+id: paper:arxiv:2608.28762
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'Inter-3D VQA: A Roadside Multimodal Benchmark for 3D Spatiotemporally Grounded Visual Question
+    Answering'
+  authors:
+  - Shaozu Ding
+  - Linan Song
+  - Dajiang Suo
+  published: '2026-08-28'
+  updated: '2026-08-28'
+  categories:
+  - cs.CV
+  abstract: Recent advances in visual question answering (VQA) and multimodal large language models (MLLMs)
+    have enabled natural-language reasoning over traffic scenes. However, existing benchmarks are largely
+    built from ego-vehicle views or 2D roadside videos, limiting their ability to evaluate 3D-grounded
+    reasoning over real-world distances, trajectories, infrastructure topology, and safety-critical interactions.
+    We introduce Inter-3D VQA, a large-scale roadside multimodal benchmark for 3D spatiotemporally grounded
+    VQA at intersections. Built from synchronized point clouds and multi-view images, Inter-3D VQA contains
+    407K QA pairs covering lane-level positions, object relationships, motion patterns, and near-miss-oriented
+    interaction reasoning. We further propose Inter-Geo, an MLLM baseline that integrates object- and
+    scene-level aligned LiDAR representations, and Inter-Metrics, a unified evaluation framework for textual
+    consistency, numerical accuracy, and semantic correctness. Experiments show that Inter-Geo outperforms
+    image-based VLMs, especially on grounded spatial and temporal reasoning tasks. Our benchmark and codes
+    are available at https://github.com/ASU-Suo-Lab/Inter-3D-VQA .
+  url: https://arxiv.org/abs/2608.28762
+  pdf_url: https://arxiv.org/pdf/2608.28762v1
+  version: v1
+fetched: '2026-11-14'

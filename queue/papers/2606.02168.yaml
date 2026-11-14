@@ -1,0 +1,38 @@
+id: paper:arxiv:2606.02168
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: Disentanglement-Based Equivariant Learning for Compositional VQA
+  authors:
+  - Zhou Du
+  - Zhaoquan Yuan
+  - Xiao Wu
+  - Changsheng Xu
+  published: '2026-06-01'
+  updated: '2026-06-01'
+  categories:
+  - cs.CV
+  - cs.LG
+  abstract: Compositional visual question answering (VQA) represents a challenging yet fundamental task
+    that requires models to comprehend novel combinations of previously learned concepts. The current
+    methods often overlook the disentanglement of underlying concepts and are restricted in terms of their
+    ability to effectively capture the compositional variation mechanism. Moreover, the state-of-the-art
+    techniques depend on additional clues for training, which is not feasible in real-world VQA scenarios.
+    To address these issues, in this paper, we introduce a novel Disentanglement-based EquivAriant Learning
+    (DEAL) framework for compositional VQA, which is guided exclusively by ground-truth answers. In DEAL,
+    we employ causality-inspired interventions to disentangle concepts derived from visual and textual
+    inputs within a re-encoding framework. Based on the principle of equivariance, we subsequently perform
+    a compositional transformation on the inference input and impose the equivariant constraint on the
+    output to augment the compositional reasoning capacity of the model. Comprehensive experiments conducted
+    on the benchmark CLEVR-CoGenT and GQA-SGL datasets validate the superiority of our proposed DEAL approach
+    over the existing state-of-the-art methods for compositional VQA tasks in both visual and linguistic
+    generalization settings.
+  url: https://arxiv.org/abs/2606.02168
+  pdf_url: https://arxiv.org/pdf/2606.02168v1
+  version: v1
+fetched: '2026-11-14'

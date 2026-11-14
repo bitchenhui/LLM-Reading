@@ -1,0 +1,42 @@
+id: paper:arxiv:2501.04038
+status: skipped
+score: 1
+track: video_image_coding
+matched:
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: 'Listening and Seeing Again: Generative Error Correction for Audio-Visual Speech Recognition'
+  authors:
+  - Rui Liu
+  - Hongyu Yuan
+  - Haizhou Li
+  published: '2025-01-03'
+  updated: '2025-01-03'
+  categories:
+  - cs.MM
+  - cs.AI
+  - cs.SD
+  - eess.AS
+  abstract: 'Unlike traditional Automatic Speech Recognition (ASR), Audio-Visual Speech Recognition (AVSR)
+    takes audio and visual signals simultaneously to infer the transcription. Recent studies have shown
+    that Large Language Models (LLMs) can be effectively used for Generative Error Correction (GER) in
+    ASR by predicting the best transcription from ASR-generated N-best hypotheses. However, these LLMs
+    lack the ability to simultaneously understand audio and visual, making the GER approach challenging
+    to apply in AVSR. In this work, we propose a novel GER paradigm for AVSR, termed AVGER, that follows
+    the concept of ``listening and seeing again''''. Specifically, we first use the powerful AVSR system
+    to read the audio and visual signals to get the N-Best hypotheses, and then use the Q-former-based
+    Multimodal Synchronous Encoder to read the audio and visual information again and convert them into
+    an audio and video compression representation respectively that can be understood by LLM. Afterward,
+    the audio-visual compression representation and the N-Best hypothesis together constitute a Cross-modal
+    Prompt to guide the LLM in producing the best transcription. In addition, we also proposed a Multi-Level
+    Consistency Constraint training criterion, including logits-level, utterance-level and representations-level,
+    to improve the correction accuracy while enhancing the interpretability of audio and visual compression
+    representations. The experimental results on the LRS3 dataset show that our method outperforms current
+    mainstream AVSR systems. The proposed AVGER can reduce the Word Error Rate (WER) by 24% compared to
+    them. Code and models can be found at: https://github.com/CircleRedRain/AVGER.'
+  url: https://arxiv.org/abs/2501.04038
+  pdf_url: https://arxiv.org/pdf/2501.04038v1
+  version: v1
+fetched: '2026-11-14'

@@ -1,0 +1,54 @@
+id: paper:arxiv:2403.11694
+status: pending
+score: 8
+track: video_image_coding
+matched:
+- ref: codec:VVC
+  count: 2
+  weight: 3
+- ref: impl:VTM
+  count: 1
+  weight: 3
+- ref: concept:RDO
+  count: 1
+  weight: 1
+- ref: metric:BD-Rate
+  count: 1
+  weight: 1
+meta:
+  title: Object Segmentation-Assisted Inter Prediction for Versatile Video Coding
+  authors:
+  - Zhuoyuan Li
+  - Zikun Yuan
+  - Li Li
+  - Dong Liu
+  - Xiaohu Tang
+  - Feng Wu
+  published: '2024-03-18'
+  updated: '2024-09-12'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: In modern video coding standards, block-based inter prediction is widely adopted, which brings
+    high compression efficiency. However, in natural videos, there are usually multiple moving objects
+    of arbitrary shapes, resulting in complex motion fields that are difficult to represent compactly.
+    This problem has been tackled by more flexible block partitioning methods in the Versatile Video Coding
+    (VVC) standard, but the more flexible partitions require more overhead bits to signal and still cannot
+    be made arbitrarily shaped. To address this limitation, we propose an object segmentation-assisted
+    inter prediction method (SAIP), where objects in the reference frames are segmented by some advanced
+    technologies. With a proper indication, the object segmentation mask is translated from the reference
+    frame to the current frame as the arbitrary-shaped partition of different regions without any extra
+    signal. Using the segmentation mask, motion compensation is separately performed for different regions,
+    achieving higher prediction accuracy. The segmentation mask is further used to code the motion vectors
+    of different regions more efficiently. Moreover, the segmentation mask is considered in the joint
+    rate-distortion optimization for motion estimation and partition estimation to derive the motion vector
+    of different regions and partition more accurately. The proposed method is implemented into the VVC
+    reference software, VTM version 12.0. Experimental results show that the proposed method achieves
+    up to 1.98%, 1.14%, 0.79%, and on average 0.82%, 0.49%, 0.37% BD-rate reduction for common test sequences,
+    under the Low-delay P, Low-delay B, and Random Access configurations, respectively.
+  url: https://arxiv.org/abs/2403.11694
+  pdf_url: https://arxiv.org/pdf/2403.11694v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 42
+citation_year: 2024

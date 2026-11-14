@@ -1,0 +1,41 @@
+id: paper:arxiv:2509.25604
+status: pending
+score: 2
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 3
+  weight: 1
+- ref: concept:TrainingFree
+  count: 1
+  weight: 1
+meta:
+  title: 'RFG: Self-Improving Diffusion Large Language Models with Reward-Free Guidance'
+  authors:
+  - Tianlang Chen
+  - Minkai Xu
+  - Jure Leskovec
+  - Stefano Ermon
+  published: '2025-09-29'
+  updated: '2026-10-04'
+  categories:
+  - cs.CL
+  - cs.LG
+  abstract: Diffusion Large Language Models (dLLMs) have shown strong reasoning capabilities, yet further
+    improving them typically requires costly post-training with additional data and supervision. We ask
+    whether a post-trained dLLM can improve itself at inference time without additional training, data,
+    or reward models. This requires a guidance signal from the checkpoints alone that is well-defined
+    on the partially masked intermediate states of dLLMs, which existing methods fail to provide. Here
+    we propose Reward-Free Guidance (RFG), a training-free framework for inference-time self-improvement
+    of dLLMs that derives such a signal from the checkpoints themselves. We theoretically demonstrate
+    that a reward signal for a partially masked state can be parameterized by the log-likelihood ratio
+    between a post-trained policy dLLM and its reference model. In practice, this signal can be obtained
+    using off-the-shelf checkpoints alone. Extensive experiments show that RFG consistently improves state-of-the-art
+    post-trained dLLMs by up to 16.1%. Furthermore, despite being entirely training-free, RFG delivers
+    gains that rival or even surpass resource-intensive reinforcement learning techniques.
+  url: https://arxiv.org/abs/2509.25604
+  pdf_url: https://arxiv.org/pdf/2509.25604v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 9
+citation_year: 2025

@@ -1,0 +1,38 @@
+id: paper:arxiv:2601.00828
+status: pending
+score: 2
+track: self_improvement
+matched:
+- ref: concept:LLM
+  count: 2
+  weight: 1
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+meta:
+  title: 'Decomposing LLM Self-Correction: The Accuracy-Correction Paradox and Error Depth Hypothesis'
+  authors:
+  - Yin Li
+  published: '2025-12-24'
+  updated: '2025-12-24'
+  categories:
+  - cs.AI
+  abstract: 'Large Language Models (LLMs) are widely believed to possess self-correction capabilities,
+    yet recent studies suggest that intrinsic self-correction--where models correct their own outputs
+    without external feedback--remains largely ineffective. In this work, we systematically decompose
+    self-correction into three distinct sub-capabilities: error detection, error localization, and error
+    correction. Through cross-model experiments on GSM8K-Complex (n=500 per model, 346 total errors) with
+    three major LLMs, we uncover a striking Accuracy-Correction Paradox: weaker models (GPT-3.5, 66% accuracy)
+    achieve 1.6x higher intrinsic correction rates than stronger models (DeepSeek, 94% accuracy)--26.8%
+    vs 16.7%. We propose the Error Depth Hypothesis: stronger models make fewer but deeper errors that
+    resist self-correction. Error detection rates vary dramatically across architectures (10% to 82%),
+    yet detection capability does not predict correction success--Claude detects only 10% of errors but
+    corrects 29% intrinsically. Surprisingly, providing error location hints hurts all models. Our findings
+    challenge linear assumptions about model capability and self-improvement, with important implications
+    for the design of self-refinement pipelines.'
+  url: https://arxiv.org/abs/2601.00828
+  pdf_url: https://arxiv.org/pdf/2601.00828v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 10
+citation_year: 2025

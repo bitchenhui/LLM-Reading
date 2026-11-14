@@ -1,0 +1,34 @@
+id: paper:arxiv:2604.05268
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'Region-R1: Reinforcing Query-Side Region Cropping for Multi-Modal Re-Ranking'
+  authors:
+  - Chan-Wei Hu
+  - Zhengzhong Tu
+  published: '2026-04-07'
+  updated: '2026-04-08'
+  categories:
+  - cs.CV
+  - cs.AI
+  - cs.CL
+  abstract: Multi-modal retrieval-augmented generation (MM-RAG) relies heavily on re-rankers to surface
+    the most relevant evidence for image-question queries. However, standard re-rankers typically process
+    the full query image as a global embedding, making them susceptible to visual distractors (e.g., background
+    clutter) that skew similarity scores. We propose Region-R1, a query-side region cropping framework
+    that formulates region selection as a decision-making problem during re-ranking, allowing the system
+    to learn to retain the full image or focus only on a question-relevant region before scoring the retrieved
+    candidates. Region-R1 learns a policy with a novel region-aware group relative policy optimization
+    (r-GRPO) to dynamically crop a discriminative region. Across two challenging benchmarks, E-VQA and
+    InfoSeek, Region-R1 delivers consistent gains, achieving state-of-the-art performances by increasing
+    conditional Recall@1 by up to 20%. These results show the great promise of query-side adaptation as
+    a simple but effective way to strengthen MM-RAG re-ranking.
+  url: https://arxiv.org/abs/2604.05268
+  pdf_url: https://arxiv.org/pdf/2604.05268v2
+  version: v2
+fetched: '2026-11-14'

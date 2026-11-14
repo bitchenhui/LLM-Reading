@@ -1,0 +1,48 @@
+id: paper:arxiv:2605.01911
+status: pending
+score: 2
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: 'SurgCheck: Do Vision-Language Models Really Look at Images in Surgical VQA?'
+  authors:
+  - Jongmin Shin
+  - Ka Young Kim
+  - Eunki Cho
+  - Seong Tae Kim
+  - Namkee Oh
+  published: '2026-05-03'
+  updated: '2026-05-05'
+  categories:
+  - cs.CV
+  abstract: 'Purpose: Vision-language models (VLMs) have shown promising performance in surgical visual
+    question answering (VQA). However, existing surgical VQA datasets often contain linguistic shortcuts,
+    where question phrasing implicitly constrains the answer space. It remains unclear whether reported
+    performance reflects visual understanding or reliance on such linguistic shortcuts. Methods: We introduce
+    SurgCheck, a diagnostic benchmark for quantifying linguistic shortcut reliance in surgical VQA. SurgCheck
+    employs a paired-question design in which each surgical frame is associated with an original question
+    containing entity names and a less-biased counterpart that removes these names while preserving identical
+    visual content and ground-truth answers. The resulting performance gap provides a diagnostic signal
+    of shortcut reliance. To ensure that the less-biased question remains well-defined even without entity
+    names, four grounding cues are incorporated: bounding box, arrow, spatial position, and periphrasis.
+    We evaluate both general-purpose and surgical-specific VLMs under zero-shot and fine-tuned settings
+    on SurgCheck. To evaluate open-ended zero-shot responses, we introduce an LLM-as-a-judge evaluation
+    protocol. Results: Using SurgCheck, we observe consistent performance degradation on less-biased questions
+    across five VLMs, despite identical visual inputs. Text-only ablation reveals minimal performance
+    drops for action and target prediction, indicating that action and target prediction is largely driven
+    by linguistic shortcuts rather than visual reasoning. Conclusion: SurgCheck provides a controlled
+    diagnostic framework that exposes failure modes masked by linguistic bias in existing surgical VQA
+    benchmarks. Our findings demonstrate that strong benchmark performance does not necessarily imply
+    faithful visual understanding, underscoring the need for bias-aware evaluation in surgical VQA.'
+  url: https://arxiv.org/abs/2605.01911
+  pdf_url: https://arxiv.org/pdf/2605.01911v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 5
+citation_year: 2026

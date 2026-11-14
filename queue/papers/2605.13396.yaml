@@ -1,0 +1,45 @@
+id: paper:arxiv:2605.13396
+status: skipped_low_citation
+score: 2
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 2
+  weight: 1
+- ref: concept:TrainingFree
+  count: 1
+  weight: 1
+meta:
+  title: 'PreFIQs: Face Image Quality Is What Survives Pruning'
+  authors:
+  - Jan Niklas Kolf
+  - Guray Ozgur
+  - Andrea Atzori
+  - Žiga Babnik
+  - Vitomir Štruc
+  - Naser Damer
+  - Fadi Boutros
+  published: '2026-05-13'
+  updated: '2026-05-13'
+  categories:
+  - cs.CV
+  abstract: Face Image Quality Assessment (FIQA) evaluates the utility of a face image for automated face
+    recognition (FR) systems. In this work, we propose PreFIQs, an unsupervised and training-free FIQA
+    framework grounded in the Pruning Identified Exemplar (PIE) hypothesis. We hypothesize that low-utility
+    face images rely disproportionately on fragile network parameters, resulting in larger geometric displacement
+    of their embeddings under model sparsification. Accordingly, PreFIQs quantifies image utility as the
+    Euclidean distance between L2-normalized embeddings extracted from a pre-trained FR model and its
+    pruned counterpart. We provide a first-order theoretical justification via a Jacobian-vector product
+    analysis, demonstrating that this empirical drift serves as a computationally efficient approximation
+    of the exact geometric sensitivity of the latent embedding manifold. Extensive experiments across
+    eight benchmarks and four FR models demonstrate that PreFIQs achieves competitive or superior performance
+    compared to state-of-the-art FIQA methods, including establishing new state-of-the-art results on
+    several benchmarks, without any training or supervision. These results validate parameter sparsification
+    as a principled and practically efficient signal for face image utility, and demonstrate that quality
+    is, in essence, what survives pruning.
+  url: https://arxiv.org/abs/2605.13396
+  pdf_url: https://arxiv.org/pdf/2605.13396v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 1
+citation_year: 2026

@@ -1,0 +1,60 @@
+id: paper:arxiv:2306.10461
+status: skipped_low_citation
+score: 10
+track: video_image_coding
+matched:
+- ref: codec:VVC
+  count: 1
+  weight: 3
+- ref: concept:RDO
+  count: 2
+  weight: 1
+- ref: metric:MOS
+  count: 2
+  weight: 1
+- ref: concept:EntropyModel
+  count: 1
+  weight: 1
+- ref: concept:IQA
+  count: 1
+  weight: 1
+- ref: metric:DISTS
+  count: 1
+  weight: 1
+- ref: metric:MS-SSIM
+  count: 1
+  weight: 1
+- ref: metric:SSIM
+  count: 1
+  weight: 1
+meta:
+  title: GAN-based Image Compression with Improved RDO Process
+  authors:
+  - Fanxin Xia
+  - Jian Jin
+  - Lili Meng
+  - Feng Ding
+  - Huaxiang Zhang
+  published: '2023-06-18'
+  updated: '2023-06-18'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: GAN-based image compression schemes have shown remarkable progress lately due to their high
+    perceptual quality at low bit rates. However, there are two main issues, including 1) the reconstructed
+    image perceptual degeneration in color, texture, and structure as well as 2) the inaccurate entropy
+    model. In this paper, we present a novel GAN-based image compression approach with improved rate-distortion
+    optimization (RDO) process. To achieve this, we utilize the DISTS and MS-SSIM metrics to measure perceptual
+    degeneration in color, texture, and structure. Besides, we absorb the discretized gaussian-laplacian-logistic
+    mixture model (GLLMM) for entropy modeling to improve the accuracy in estimating the probability distributions
+    of the latent representation. During the evaluation process, instead of evaluating the perceptual
+    quality of the reconstructed image via IQA metrics, we directly conduct the Mean Opinion Score (MOS)
+    experiment among different codecs, which fully reflects the actual perceptual results of humans. Experimental
+    results demonstrate that the proposed method outperforms the existing GAN-based methods and the state-of-the-art
+    hybrid codec (i.e., VVC).
+  url: https://arxiv.org/abs/2306.10461
+  pdf_url: https://arxiv.org/pdf/2306.10461v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 4
+citation_year: 2023

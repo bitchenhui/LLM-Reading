@@ -1,0 +1,42 @@
+id: paper:arxiv:2608.26716
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'Beyond Atomic Layouts: Compositional Design Understanding with Vision-Language Models'
+  authors:
+  - Yiyang Huang
+  - Zhaowen Wang
+  - Simon Jenni
+  - Jing Shi
+  - Yitian Zhang
+  - Yizhou Wang
+  - Yun Fu
+  published: '2026-08-27'
+  updated: '2026-08-27'
+  categories:
+  - cs.CV
+  abstract: 'Layout understanding, or the interpretation of element organization, is essential for document
+    analysis, user interface (UI) creation, and graphic design. While recent vision-language models (VLMs)
+    excel at interpreting atomic layouts composed of independent elements, they struggle with compositional
+    layouts that require reasoning over visually entangled elements within hierarchical multi-layer structures.
+    In this paper, we introduce a new task, compositional layout understanding, and present CoDeLayout,
+    a VQA dataset of ~20K real-world multi-layer layouts annotated with compositional element pairs and
+    design intent. Through empirical analysis on CoDeLayout, we identify two key challenges for existing
+    VLMs: semantic drift between textual metadata and visual content, and structural ambiguity in hierarchical
+    inter-element relationships. To address these challenges, we propose MASON, a post-training paradigm
+    that integrates multimodal alignment (MA) and structural perception (SP). MA enhances element interpretation
+    by grounding metadata-defined elements to their visual counterparts, mitigating semantic drift, while
+    SP models layer-aware inter-element spatial relationships to improve hierarchical understanding and
+    reduce structural ambiguity. Experiments reveal substantial gaps in existing VLMs: even the strongest
+    baseline, GPT-o3, achieves only 79.68% accuracy, whereas Qwen2.5-VL 7B with MASON reaches 91.66%.
+    Notably, MASON surpasses full-data Direct Finetune using only 30% of the training data and scales
+    better with additional data.'
+  url: https://arxiv.org/abs/2608.26716
+  pdf_url: https://arxiv.org/pdf/2608.26716v1
+  version: v1
+fetched: '2026-11-14'

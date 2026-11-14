@@ -1,0 +1,38 @@
+id: paper:arxiv:2507.17336
+status: skipped
+score: 1
+track: immersive_media
+matched:
+- ref: concept:3DGS
+  count: 4
+  weight: 1
+meta:
+  title: Temporal Smoothness-Aware Rate-Distortion Optimized 4D Gaussian Splatting
+  authors:
+  - Hyeongmin Lee
+  - Kyungjune Baek
+  published: '2025-07-23'
+  updated: '2026-01-13'
+  categories:
+  - cs.GR
+  abstract: Dynamic 4D Gaussian Splatting (4DGS) effectively extends the high-speed rendering capabilities
+    of 3D Gaussian Splatting (3DGS) to represent volumetric videos. However, the large number of Gaussians,
+    substantial temporal redundancies, and especially the absence of an entropy-aware compression framework
+    result in large storage requirements. Consequently, this poses significant challenges for practical
+    deployment, efficient edge-device processing, and data transmission. In this paper, we introduce a
+    novel end-to-end RD-optimized compression framework tailored for 4DGS, aiming to enable flexible,
+    high-fidelity rendering across varied computational platforms. Leveraging Fully Explicit Dynamic Gaussian
+    Splatting (Ex4DGS), one of the state-of-the-art 4DGS methods, as our baseline, we start from the existing
+    3DGS compression methods for compatibility while effectively addressing additional challenges introduced
+    by the temporal axis. In particular, instead of storing motion trajectories independently per point,
+    we employ a wavelet transform to reflect the real-world smoothness prior, significantly enhancing
+    storage efficiency. This approach yields significantly improved compression ratios and provides a
+    user-controlled balance between compression efficiency and rendering quality. Extensive experiments
+    demonstrate the effectiveness of our method, achieving up to 91$\times$ compression compared to the
+    original Ex4DGS model while maintaining high visual fidelity. These results highlight the applicability
+    of our framework for real-time dynamic scene rendering in diverse scenarios, from resource-constrained
+    edge devices to high-performance environments. The source code is available at https://github.com/HyeongminLEE/RD4DGS.
+  url: https://arxiv.org/abs/2507.17336
+  pdf_url: https://arxiv.org/pdf/2507.17336v3
+  version: v3
+fetched: '2026-11-14'

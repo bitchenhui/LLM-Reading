@@ -1,0 +1,51 @@
+id: paper:arxiv:2607.27066
+status: pending
+score: 2
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 2
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: 'SciFigAlign: Scoring Scientific Figures by Fine-tuned Alignment of Visuals with Manuscript Evidence'
+  authors:
+  - Chuanzhi Xu
+  - Zihan Deng
+  - Huiqi Liang
+  - Chengkun Yue
+  - Zhanlin Cui
+  - Pengfei Ye
+  - Weidong Cai
+  published: '2026-07-29'
+  updated: '2026-07-29'
+  categories:
+  - cs.CV
+  - cs.AI
+  abstract: 'Scientific figure assessment in peer review differs fundamentally from general image quality
+    evaluation: a figure must be visually legible, faithfully support the manuscript''s claims, and communicate
+    evidence with a clear visual hierarchy. However, if we apply traditional image assessment methods
+    to scientific figure quality assessment, limitations emerge: classic IQA models capture perceptual
+    quality or aesthetics but cannot judge whether a figure serves the paper''s scientific argument; CLIP-based
+    methods assess generic image-text correspondence, yet lack understanding of manuscript context; and
+    zero-shot LLM/VLM judges, when repurposed for figure scoring, often yield overly concentrated scores
+    with limited fusion of visual and textual evidence. We introduce an annotated dataset of 3,857 scientific
+    figures from peer-reviewed conference papers, each rated along four peer-review-oriented dimensions:
+    Clarity, Relevance, Informativeness, and Structure. We propose SciFigAlign, a fine-tuned multimodal
+    scorer that grounds figure quality assessment in manuscript evidence. Given a figure crop, caption,
+    citing paragraphs, and light paper context, SciFigAlign fine-tunes CLIP and SciBERT end-to-end with
+    per-modality cross-attention and CubeMLP fusion, jointly optimizing SmoothL1 regression with a within-paper
+    ranking hinge loss. Under paper-level splits, SciFigAlign achieves a macro MAE of 0.3524 and a within-paper
+    pairwise accuracy of 81.64% on the test set with n = 396, a 59% relative error reduction over the
+    best LLM-as-judge baseline with MAE 0.864. Ablations confirm that manuscript-grounded inputs, citing-context
+    denoising, and ranking supervision are all critical, showing that scientific figure assessment requires
+    learned alignment between visual content and manuscript evidence rather than prompting alone, even
+    with state-of-the-art VLMs.'
+  url: https://arxiv.org/abs/2607.27066
+  pdf_url: https://arxiv.org/pdf/2607.27066v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 0
+citation_year: 2026

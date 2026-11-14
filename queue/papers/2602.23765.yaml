@@ -1,0 +1,41 @@
+id: paper:arxiv:2602.23765
+status: skipped
+score: 0
+track: audio_coding
+matched: []
+meta:
+  title: 'DashengTokenizer: One layer is enough for unified audio understanding and generation'
+  authors:
+  - Heinrich Dinkel
+  - Xingwei Sun
+  - Gang Li
+  - Jiahao Mei
+  - Yadong Niu
+  - Jizhong Liu
+  - Xiyang Li
+  - Yifan Liao
+  - Jiahao Zhou
+  - Junbo Zhang
+  - Jian Luan
+  published: '2026-02-27'
+  updated: '2026-03-26'
+  categories:
+  - cs.SD
+  - eess.AS
+  abstract: 'This paper introduces DashengTokenizer, a continuous audio tokenizer engineered for joint
+    use in both understanding and generation tasks. Unlike conventional approaches, which train acoustic
+    tokenizers and subsequently integrate frozen semantic knowledge, our method inverts this paradigm:
+    we leverage frozen semantic features and inject acoustic information. In linear evaluation across
+    22 diverse tasks, our method outperforms previous audio codec and audio encoder baselines by a significant
+    margin while maintaining competitive audio reconstruction quality. Notably, we demonstrate that this
+    acoustic injection improves performance for tasks such as speech emotion recognition, music understanding,
+    and acoustic scene classification. We further evaluate the tokenizer''s generative performance on
+    text-to-audio (TTA), text-to-music (TTM), and speech enhancement (SE). Our approach surpasses standard
+    variational autoencoder (VAE)-based methods on TTA and TTM tasks, while its effectiveness on SE underscores
+    its capabilities as a general-purpose audio encoder. Finally, our results challenge the prevailing
+    assumption that VAE-based architectures are a prerequisite for audio synthesis. Checkpoints are available
+    at https://huggingface.co/mispeech/dashengtokenizer.'
+  url: https://arxiv.org/abs/2602.23765
+  pdf_url: https://arxiv.org/pdf/2602.23765v2
+  version: v2
+fetched: '2026-11-14'

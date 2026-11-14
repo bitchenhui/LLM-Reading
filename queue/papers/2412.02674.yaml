@@ -1,0 +1,43 @@
+id: paper:arxiv:2412.02674
+status: pending
+score: 2
+track: self_improvement
+matched:
+- ref: concept:LLM
+  count: 2
+  weight: 1
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+meta:
+  title: 'Mind the Gap: Examining the Self-Improvement Capabilities of Large Language Models'
+  authors:
+  - Yuda Song
+  - Hanlin Zhang
+  - Carson Eisenach
+  - Sham Kakade
+  - Dean Foster
+  - Udaya Ghai
+  published: '2024-12-03'
+  updated: '2025-02-25'
+  categories:
+  - cs.CL
+  - cs.LG
+  abstract: Self-improvement is a mechanism in Large Language Model (LLM) pre-training, post-training
+    and test-time inference. We explore a framework where the model verifies its own outputs, filters
+    or reweights data based on this verification, and distills the filtered data. Despite several empirical
+    successes, a fundamental understanding is still lacking. In this work, we initiate a comprehensive,
+    modular and controlled study on LLM self-improvement. We provide a mathematical formulation for self-improvement,
+    which is largely governed by a quantity which we formalize as the generation-verification gap. Through
+    experiments with various model families and tasks, we discover a scaling phenomenon of self-improvement
+    -- a variant of the generation-verification gap scales monotonically with the model pre-training flops.
+    We also examine when self-improvement is possible, an iterative self-improvement procedure, and ways
+    to improve its performance. Our findings not only advance understanding of LLM self-improvement with
+    practical implications, but also open numerous avenues for future research into its capabilities and
+    boundaries.
+  url: https://arxiv.org/abs/2412.02674
+  pdf_url: https://arxiv.org/pdf/2412.02674v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 103
+citation_year: 2024

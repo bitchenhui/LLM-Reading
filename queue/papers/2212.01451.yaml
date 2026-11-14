@@ -1,0 +1,37 @@
+id: paper:arxiv:2212.01451
+status: skipped
+score: 1
+track: audio_coding
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: Objective Assessment of Spatial Audio Quality using Directional Loudness Maps
+  authors:
+  - Pablo M. Delgado
+  - Jürgen Herre
+  published: '2022-12-02'
+  updated: '2022-12-02'
+  categories:
+  - eess.AS
+  - cs.MM
+  - cs.SD
+  abstract: This work introduces a feature extracted from stereophonic/binaural audio signals aiming to
+    represent a measure of perceived quality degradation in processed spatial auditory scenes. The feature
+    extraction technique is based on a simplified stereo signal model considering auditory events positioned
+    towards a given direction in the stereo field using amplitude panning (AP) techniques. We decompose
+    the stereo signal into a set of directional signals for given AP values in the Short-Time Fourier
+    Transform domain and calculate their overall loudness to form a directional loudness representation
+    or maps. Then, we compare directional loudness maps of a reference signal and a deteriorated version
+    to derive a distortion measure aiming to describe the associated perceived degradation scores reported
+    in listening tests. The measure is then tested on an extensive listening test database with stereo
+    signals processed by state-of-the-art perceptual audio codecs using non waveform-preserving techniques
+    such as bandwidth extension and joint stereo coding, known for presenting a challenge to existing
+    quality predictors. Results suggest that the derived distortion measure can be incorporated as an
+    extension to existing automated perceptual quality assessment algorithms for improving prediction
+    on spatially coded audio signals.
+  url: https://arxiv.org/abs/2212.01451
+  pdf_url: https://arxiv.org/pdf/2212.01451v1
+  version: v1
+fetched: '2026-11-14'

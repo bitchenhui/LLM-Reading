@@ -1,0 +1,40 @@
+id: paper:arxiv:2605.19522
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 3
+  weight: 1
+meta:
+  title: 'iDiff: Interpretable Difference-aware Framework for Pairwise Image Quality Assessment'
+  authors:
+  - Xinli Yue
+  - JianHui Sun
+  - Tao Shao
+  - Liangchao Yao
+  - Fan Xia
+  - Yuetang Deng
+  published: '2026-05-19'
+  updated: '2026-05-19'
+  categories:
+  - cs.CV
+  abstract: Pairwise image quality assessment (IQA) in professional photography requires a model not only
+    to identify the preferred image between two candidates, but also to provide convincing and image-grounded
+    reasoning. In the NTIRE 2026 RAIM challenge, this requirement is further emphasized by jointly evaluating
+    preference prediction and rationale generation. To address this task, we propose iDiff, an Interpretable
+    Difference-aware framework for pairwise image quality assessment. Our method adopts a dual-branch
+    design consisting of an Answer Model and a Thinking Model. The Answer Model performs robust preference
+    prediction by explicitly decomposing each sample into left/right global and local views, followed
+    by content-aware specialization for person and scene images and ensemble-based aggregation across
+    backbones. The Thinking Model focuses on rationale generation and is progressively enhanced with expert-style
+    templates, multi-source quality features, and answer-aware supervision conditioned on the Answer Model
+    prediction. In this way, iDiff jointly models discriminative decision making and structured explanation,
+    improving both robustness and interpretability. Extensive experiments demonstrate the effectiveness
+    of the proposed framework on both accuracy and reasoning-quality metrics. Our method achieved first
+    place in the NTIRE 2026 RAIM challenge, showing the effectiveness of integrating explicit difference
+    modeling with structured multimodal reasoning for pairwise IQA.
+  url: https://arxiv.org/abs/2605.19522
+  pdf_url: https://arxiv.org/pdf/2605.19522v1
+  version: v1
+fetched: '2026-11-14'

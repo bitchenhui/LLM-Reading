@@ -1,0 +1,36 @@
+id: paper:arxiv:2607.01865
+status: skipped
+score: 1
+track: audio_coding
+matched:
+- ref: concept:NeuralAudioCodec
+  count: 1
+  weight: 1
+meta:
+  title: Neural Audio Codec with Adjustable Token Temporal Resolution Using Sampling-Frequency-Independent
+    Convolutional Layers
+  authors:
+  - Tomohiko Nakamura
+  - Wataru Nakata
+  - Kanami Imamura
+  - Yuki Saito
+  published: '2026-07-02'
+  updated: '2026-07-02'
+  categories:
+  - eess.AS
+  - cs.SD
+  abstract: Discrete tokens obtained from neural audio codecs (NACs) have been used as compact representations
+    in audio generation and understanding models. In such token-based systems, token temporal resolution
+    (TTR), defined as the time interval between adjacent token frames, is important because it controls
+    the trade-off between representing rapid acoustic events and reducing token-sequence length. However,
+    most NACs are trained at a single TTR and require separate training for each TTR. This paper proposes
+    a mechanism that enables a single NAC to operate at multiple TTRs using sampling-frequency-independent
+    convolutional layers. The mechanism regards TTR as the sampling period of the token sequence and generates
+    TTR-dependent convolutional kernels from a shared parameter set, while adjusting the kernel size and
+    stride for each TTR. We incorporate the mechanism into Descript Audio Codec, leaving the quantizer
+    unchanged. Experiments on environmental sound reconstruction show that the proposed model outperforms
+    a single-model baseline that switches TTR-specific layers for each TTR.
+  url: https://arxiv.org/abs/2607.01865
+  pdf_url: https://arxiv.org/pdf/2607.01865v1
+  version: v1
+fetched: '2026-11-14'

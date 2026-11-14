@@ -1,0 +1,42 @@
+id: paper:arxiv:2508.03082
+status: pending
+score: 2
+track: self_improvement
+matched:
+- ref: concept:EoH
+  count: 1
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: 'EoH-S: Evolution of Heuristic Set using LLMs for Automated Heuristic Design'
+  authors:
+  - Fei Liu
+  - Yilu Liu
+  - Qingfu Zhang
+  - Xialiang Tong
+  - Mingxuan Yuan
+  published: '2025-08-05'
+  updated: '2025-08-20'
+  categories:
+  - cs.AI
+  abstract: Automated Heuristic Design (AHD) using Large Language Models (LLMs) has achieved notable success
+    in recent years. Despite the effectiveness of existing approaches, they only design a single heuristic
+    to serve all problem instances, often inducing poor generalization across different distributions
+    or settings. To address this issue, we propose Automated Heuristic Set Design (AHSD), a new formulation
+    for LLM-driven AHD. The aim of AHSD is to automatically generate a small-sized complementary heuristic
+    set to serve diverse problem instances, such that each problem instance could be optimized by at least
+    one heuristic in this set. We show that the objective function of AHSD is monotone and supermodular.
+    Then, we propose Evolution of Heuristic Set (EoH-S) to apply the AHSD formulation for LLM-driven AHD.
+    With two novel mechanisms of complementary population management and complementary-aware memetic search,
+    EoH-S could effectively generate a set of high-quality and complementary heuristics. Comprehensive
+    experimental results on three AHD tasks with diverse instances spanning various sizes and distributions
+    demonstrate that EoH-S consistently outperforms existing state-of-the-art AHD methods and achieves
+    up to 60\% performance improvements.
+  url: https://arxiv.org/abs/2508.03082
+  pdf_url: https://arxiv.org/pdf/2508.03082v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 60
+citation_year: 2025

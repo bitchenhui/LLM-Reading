@@ -1,0 +1,31 @@
+id: paper:arxiv:2502.14937
+status: skipped
+score: 0
+track: video_image_coding
+matched: []
+meta:
+  title: Compact Latent Representation for Image Compression (CLRIC)
+  authors:
+  - Ayman A. Ameen
+  - Thomas Richter
+  - André Kaup
+  published: '2025-02-20'
+  updated: '2025-02-20'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: Current image compression models often require separate models for each quality level, making
+    them resource-intensive in terms of both training and storage. To address these limitations, we propose
+    an innovative approach that utilizes latent variables from pre-existing trained models (such as the
+    Stable Diffusion Variational Autoencoder) for perceptual image compression. Our method eliminates
+    the need for distinct models dedicated to different quality levels. We employ overfitted learnable
+    functions to compress the latent representation from the target model at any desired quality level.
+    These overfitted functions operate in the latent space, ensuring low computational complexity, around
+    $25.5$ MAC/pixel for a forward pass on images with dimensions $(1363 \times 2048)$ pixels. This approach
+    efficiently utilizes resources during both training and decoding. Our method achieves comparable perceptual
+    quality to state-of-the-art learned image compression models while being both model-agnostic and resolution-agnostic.
+    This opens up new possibilities for the development of innovative image compression methods.
+  url: https://arxiv.org/abs/2502.14937
+  pdf_url: https://arxiv.org/pdf/2502.14937v1
+  version: v1
+fetched: '2026-11-14'

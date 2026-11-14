@@ -1,0 +1,39 @@
+id: paper:arxiv:2510.26372
+status: skipped
+score: 0
+track: audio_coding
+matched: []
+meta:
+  title: 'UniTok-Audio: A Unified Audio Generation Framework via Generative Modeling on Discrete Codec
+    Tokens'
+  authors:
+  - Chengwei Liu
+  - Haoyin Yan
+  - Shaofei Xue
+  - Xiaotao Liang
+  - Yinghao Liu
+  - Zheng Xue
+  - Gang Song
+  - Boyang Zhou
+  published: '2025-10-30'
+  updated: '2025-10-30'
+  categories:
+  - cs.SD
+  abstract: 'Generative modeling has recently achieved remarkable success across text, image, and audio
+    domains, demonstrating powerful capabilities for unified representation learning. However, audio generation
+    models still face challenges in terms of audio quality and generalization ability across tasks. This
+    fragmentation results in redundant development efforts, inconsistent performance, and limited extensibility.
+    To address these issues, we propose \textbf{UniTok-Audio}, a scalable and extensible framework for
+    unified audio generation tasks. Specifically, 1) UniTok-Audio extracts continuous feature of conditions
+    to generates discrete tokens of target audio in an autoregressive manner; 2) a special task identifier
+    token unifies different learning patterns of multiple tasks in a single framework; 3) a dual-stream
+    audio codec involving acoustic and semantic branch is developed for high-fidelity waveform reconstruction.
+    Experimental results demonstrate that UniTok-Audio achieves competitive performance in comparation
+    with state-of-the-art task-specific or multi-task systems across five time-aligned tasks: speech restoration,
+    target speaker extraction, speech separation, voice conversion, and language-queried audio source
+    separation. To foster future research, we will open-source our codebase. The demo page of our work
+    can be found here: https://alibaba.github.io/unified-audio.'
+  url: https://arxiv.org/abs/2510.26372
+  pdf_url: https://arxiv.org/pdf/2510.26372v1
+  version: v1
+fetched: '2026-11-14'

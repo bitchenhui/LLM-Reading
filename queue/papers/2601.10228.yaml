@@ -1,0 +1,35 @@
+id: paper:arxiv:2601.10228
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'Optimizing Multimodal LLMs for Egocentric Video Understanding: A Solution for the HD-EPIC VQA
+    Challenge'
+  authors:
+  - Sicheng Yang
+  - Yukai Huang
+  - Shitong Sun
+  - Weitong Cai
+  - Jiankang Deng
+  - Jifei Song
+  - Zhensong Zhang
+  published: '2026-01-15'
+  updated: '2026-01-15'
+  categories:
+  - cs.CV
+  - cs.MM
+  - eess.IV
+  abstract: Multimodal Large Language Models (MLLMs) struggle with complex video QA benchmarks like HD-EPIC
+    VQA due to ambiguous queries/options, poor long-range temporal reasoning, and non-standardized outputs.
+    We propose a framework integrating query/choice pre-processing, domain-specific Qwen2.5-VL fine-tuning,
+    a novel Temporal Chain-of-Thought (T-CoT) prompting for multi-step reasoning, and robust post-processing.
+    This system achieves 41.6% accuracy on HD-EPIC VQA, highlighting the need for holistic pipeline optimization
+    in demanding video understanding. Our code, fine-tuned models are available at https://github.com/YoungSeng/Egocentric-Co-Pilot.
+  url: https://arxiv.org/abs/2601.10228
+  pdf_url: https://arxiv.org/pdf/2601.10228v1
+  version: v1
+fetched: '2026-11-14'

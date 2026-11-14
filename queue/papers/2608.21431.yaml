@@ -1,0 +1,44 @@
+id: paper:arxiv:2608.21431
+status: pending
+score: 2
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: Boosting Knowledge-based Visual Question Answering with Structured Context Reasoning
+  authors:
+  - Qiyou Liu
+  - Yong Zhang
+  - Jianjie Luo
+  - Zhenguo Yang
+  - Yi Yu
+  published: '2026-08-17'
+  updated: '2026-08-17'
+  categories:
+  - cs.CV
+  - cs.MM
+  abstract: 'Knowledge-based Visual Question Answering aims to answer questions about an image by integrating
+    external knowledge with visual and textual information. Recent approaches often rely on in-context
+    learning to prompt Large Language Models (LLMs) with multimodal context in a zero-shot or few-shot
+    manner. However, we observe that directly concatenating heterogeneous visual descriptions and retrieved
+    knowledge into long, unstructured prompts often degrades reasoning performance, due to both excessive
+    irrelevant context and the lack of explicit relational structure. In this paper, we propose an LLM-based
+    Structured Context Reasoning (SCoRe) framework that infers both explicit and implicit relationships
+    for prediction. SCoRe consists of three stages: Context Acquisition, which generates diverse visual
+    notes and retrieves explicit knowledge via an efficient two-stage multimodal retrieval strategy; Context
+    Selection, which filters relevant visual, explicit, and implicit knowledge using LLM-guided selection;
+    and Context Compression, which performs Relational Logic Distillation (RLD) to transform raw text
+    into explicit entity-relation triplets. These relational triplets serve as a concise and structured
+    prompt for final answer prediction. Extensive experiments on the OK-VQA and A-OKVQA benchmarks demonstrate
+    that SCoRe consistently outperforms state-of-the-art methods.'
+  url: https://arxiv.org/abs/2608.21431
+  pdf_url: https://arxiv.org/pdf/2608.21431v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 1
+citation_year: 2026

@@ -1,0 +1,40 @@
+id: paper:arxiv:2607.10240
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: What Does Your Short-Answer VQA Score Actually Measure? Evaluator-Dependent Instability in Multimodal
+    Short-Answer Benchmarks
+  authors:
+  - Guanhua Ye
+  - Niu Jingbin
+  - Yan Li
+  - Meiyu Liang
+  - Zhe Xue
+  - Yingxia Shao
+  - Yawen Li
+  published: '2026-07-11'
+  updated: '2026-07-11'
+  categories:
+  - cs.CV
+  - cs.MM
+  abstract: 'Short-answer VQA benchmarks conflate two distinct quantities: whether a model''s answer is
+    semantically correct, and whether that answer matches the surface form expected by the automatic evaluator.
+    We study this conflation across six vision--language models and six benchmarks, using a human-validated
+    semantic judge (97.6% precision) to audit over 37k official errors. A second text-only judge reproduces
+    the same benchmark-level false-negative pattern, showing that the effect is not an artifact of a single
+    audit model. On text-rich benchmarks, up to half of these errors are semantically acceptable answers
+    penalized purely for surface-form mismatch. This instability is structured by answer type: extractive
+    and multi-span answers are far more evaluator-sensitive than scalar answers. Benign prompt and context
+    rewrites further destabilize official outcomes, flipping item-level correctness at substantial rates
+    without changing the underlying task. A deterministic CPU-only contract repair confirms that the undercount
+    is partially recoverable. These findings imply that official short-answer VQA scores should be accompanied
+    by semantic audits and answer-type diagnostics to remain interpretable.'
+  url: https://arxiv.org/abs/2607.10240
+  pdf_url: https://arxiv.org/pdf/2607.10240v1
+  version: v1
+fetched: '2026-11-14'

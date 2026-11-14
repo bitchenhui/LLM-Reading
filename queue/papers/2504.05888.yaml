@@ -1,0 +1,43 @@
+id: paper:arxiv:2504.05888
+status: pending
+score: 3
+track: immersive_media
+matched:
+- ref: concept:VolumetricVideo
+  count: 2
+  weight: 1
+- ref: dataset:UVG
+  count: 1
+  weight: 1
+- ref: org:MPEG
+  count: 1
+  weight: 1
+meta:
+  title: 'UVG-VPC: Voxelized Point Cloud Dataset for Visual Volumetric Video-based Coding'
+  authors:
+  - Guillaume Gautier
+  - Alexandre Mercat
+  - Louis Fréneau
+  - Mikko Pitkänen
+  - Jarno Vanne
+  published: '2025-04-08'
+  updated: '2025-04-08'
+  categories:
+  - cs.MM
+  - cs.CV
+  abstract: Point cloud compression has become a crucial factor in immersive visual media processing and
+    streaming. This paper presents a new open dataset called UVG-VPC for the development, evaluation,
+    and validation of MPEG Visual Volumetric Video-based Coding (V3C) technology. The dataset is distributed
+    under its own non-commercial license. It consists of 12 point cloud test video sequences of diverse
+    characteristics with respect to the motion, RGB texture, 3D geometry, and surface occlusion of the
+    points. Each sequence is 10 seconds long and comprises 250 frames captured at 25 frames per second.
+    The sequences are voxelized with a geometry precision of 9 to 12 bits, and the voxel color attributes
+    are represented as 8-bit RGB values. The dataset also includes associated normals that make it more
+    suitable for evaluating point cloud compression solutions. The main objective of releasing the UVG-VPC
+    dataset is to foster the development of V3C technologies and thereby shape the future in this field.
+  url: https://arxiv.org/abs/2504.05888
+  pdf_url: https://arxiv.org/pdf/2504.05888v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 36
+citation_year: 2023

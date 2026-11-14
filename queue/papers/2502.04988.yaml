@@ -1,0 +1,43 @@
+id: paper:arxiv:2502.04988
+status: skipped
+score: 0
+track: video_image_coding
+matched: []
+meta:
+  title: 'CMamba: Learned Image Compression with State Space Models'
+  authors:
+  - Zhuojie Wu
+  - Heming Du
+  - Shuyun Wang
+  - Ming Lu
+  - Haiyang Sun
+  - Yandong Guo
+  - Xin Yu
+  published: '2025-02-07'
+  updated: '2025-02-07'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: 'Learned Image Compression (LIC) has explored various architectures, such as Convolutional
+    Neural Networks (CNNs) and transformers, in modeling image content distributions in order to achieve
+    compression effectiveness. However, achieving high rate-distortion performance while maintaining low
+    computational complexity (\ie, parameters, FLOPs, and latency) remains challenging. In this paper,
+    we propose a hybrid Convolution and State Space Models (SSMs) based image compression framework, termed
+    \textit{CMamba}, to achieve superior rate-distortion performance with low computational complexity.
+    Specifically, CMamba introduces two key components: a Content-Adaptive SSM (CA-SSM) module and a Context-Aware
+    Entropy (CAE) module. First, we observed that SSMs excel in modeling overall content but tend to lose
+    high-frequency details. In contrast, CNNs are proficient at capturing local details. Motivated by
+    this, we propose the CA-SSM module that can dynamically fuse global content extracted by SSM blocks
+    and local details captured by CNN blocks in both encoding and decoding stages. As a result, important
+    image content is well preserved during compression. Second, our proposed CAE module is designed to
+    reduce spatial and channel redundancies in latent representations after encoding. Specifically, our
+    CAE leverages SSMs to parameterize the spatial content in latent representations. Benefiting from
+    SSMs, CAE significantly improves spatial compression efficiency while reducing spatial content redundancies.
+    Moreover, along the channel dimension, CAE reduces inter-channel redundancies of latent representations
+    via an autoregressive manner, which can fully exploit prior knowledge from previous channels without
+    sacrificing efficiency. Experimental results demonstrate that CMamba achieves superior rate-distortion
+    performance.'
+  url: https://arxiv.org/abs/2502.04988
+  pdf_url: https://arxiv.org/pdf/2502.04988v1
+  version: v1
+fetched: '2026-11-14'

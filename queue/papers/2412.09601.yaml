@@ -1,0 +1,44 @@
+id: paper:arxiv:2412.09601
+status: skipped
+score: 1
+track: self_improvement
+matched:
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: 'TimeRefine: Temporal Grounding with Time Refining Video LLM'
+  authors:
+  - Xizi Wang
+  - Feng Cheng
+  - Ziyang Wang
+  - Huiyu Wang
+  - Md Mohaiminul Islam
+  - Lorenzo Torresani
+  - Mohit Bansal
+  - Gedas Bertasius
+  - David Crandall
+  published: '2024-12-12'
+  updated: '2025-03-05'
+  categories:
+  - cs.CV
+  - cs.AI
+  - cs.CL
+  abstract: 'Video temporal grounding aims to localize relevant temporal boundaries in a video given a
+    textual prompt. Recent work has focused on enabling Video LLMs to perform video temporal grounding
+    via next-token prediction of temporal timestamps. However, accurately localizing timestamps in videos
+    remains challenging for Video LLMs when relying solely on temporal token prediction. Our proposed
+    TimeRefine addresses this challenge in two ways. First, instead of directly predicting the start and
+    end timestamps, we reformulate the temporal grounding task as a temporal refining task: the model
+    first makes rough predictions and then refines them by predicting offsets to the target segment. This
+    refining process is repeated multiple times, through which the model progressively self-improves its
+    temporal localization accuracy. Second, to enhance the model''s temporal perception capabilities,
+    we incorporate an auxiliary prediction head that penalizes the model more if a predicted segment deviates
+    further from the ground truth, thus encouraging the model to make closer and more accurate predictions.
+    Our plug-and-play method can be integrated into most LLM-based temporal grounding approaches. The
+    experimental results demonstrate that TimeRefine achieves 3.6% and 5.0% mIoU improvements on the ActivityNet
+    and Charades-STA datasets, respectively. Code and pretrained models will be released.'
+  url: https://arxiv.org/abs/2412.09601
+  pdf_url: https://arxiv.org/pdf/2412.09601v2
+  version: v2
+fetched: '2026-11-14'

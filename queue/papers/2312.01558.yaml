@@ -1,0 +1,40 @@
+id: paper:arxiv:2312.01558
+status: skipped
+score: 2
+track: video_image_coding
+matched:
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+- ref: metric:SSIM
+  count: 1
+  weight: 1
+meta:
+  title: Hyperspectral Image Compression Using Sampling and Implicit Neural Representations
+  authors:
+  - Shima Rezasoltani
+  - Faisal Z. Qureshi
+  published: '2023-12-04'
+  updated: '2023-12-04'
+  categories:
+  - cs.CV
+  - eess.IV
+  abstract: 'Hyperspectral images, which record the electromagnetic spectrum for a pixel in the image
+    of a scene, often store hundreds of channels per pixel and contain an order of magnitude more information
+    than a similarly-sized RBG color image. Consequently, concomitant with the decreasing cost of capturing
+    these images, there is a need to develop efficient techniques for storing, transmitting, and analyzing
+    hyperspectral images. This paper develops a method for hyperspectral image compression using implicit
+    neural representations where a multilayer perceptron network F with sinusoidal activation functions
+    "learns" to map pixel locations to pixel intensities for a given hyperspectral image I. F thus acts
+    as a compressed encoding of this image, and the original image is reconstructed by evaluating F at
+    each pixel location. We use a sampling method with two factors: window size and sampling rate to reduce
+    the compression time. We have evaluated our method on four benchmarks -- Indian Pines, Jasper Ridge,
+    Pavia University, and Cuprite using PSNR and SSIM -- and we show that the proposed method achieves
+    better compression than JPEG, JPEG2000, and PCA-DCT at low bitrates. Besides, we compare our results
+    with the learning-based methods like PCA+JPEG2000, FPCA+JPEG2000, 3D DCT, 3D DWT+SVR, and WSRC and
+    show the corresponding results in the "Compression Results" section. We also show that our methods
+    with sampling achieve better speed and performance than our method without sampling.'
+  url: https://arxiv.org/abs/2312.01558
+  pdf_url: https://arxiv.org/pdf/2312.01558v1
+  version: v1
+fetched: '2026-11-14'

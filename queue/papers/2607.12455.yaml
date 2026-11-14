@@ -1,0 +1,44 @@
+id: paper:arxiv:2607.12455
+status: skipped
+score: 1
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 3
+  weight: 1
+meta:
+  title: 'EVOQUANT: Self-Evolving Verifier-Guided Strategy Optimization for Robust Quantitative Trading'
+  authors:
+  - Jie Mao
+  - Changlun Li
+  - Xiang Li
+  - Qiqi Duan
+  - Jinhui Yuan
+  - Xiang Liu
+  - Yuyu Luo
+  - Jing Tang
+  - Nan Tang
+  published: '2026-07-14'
+  updated: '2026-11-06'
+  categories:
+  - cs.AI
+  - cs.CE
+  abstract: 'Quantitative strategy optimization remains largely manual, requiring domain experts to identify
+    weak signals, tune risk-control rules, and repeatedly validate iterative revisions. Large language
+    models can accelerate this process, but directly relying on them to rewrite trading strategies often
+    introduces hallucinated edits, strategy drift, and backtest overfitting. We propose EVOQUANT, a self-Evolving
+    Verifier-guided framework for strategy Optimization in Quantitative trading. Our method utilizes LLMs
+    to deeply diagnose performance bottlenecks, generates semantically controlled candidate edits, selects
+    the best strategy through a multi-stage verification pipeline, and distills optimization experience
+    into reusable knowledge for continual self-improvement. We evaluate our method using seven representative
+    strategies: four from the A-share market and three from the Crypto market. Experimental results show
+    that our method significantly improves the Sharpe ratio across all tested strategies: the average
+    test Sharpe increases from -0.298 to 0.538, and the best-performing strategy achieves a 199% relative
+    improvement. Ablation studies and stress tests under stricter conditions further validate the effectiveness
+    and robustness of the framework. Overall, this work transforms quantitative strategy optimization
+    from costly manual trial and error into an automated and verifiable iterative paradigm, offering a
+    new path for applying large language models to financial strategy research.'
+  url: https://arxiv.org/abs/2607.12455
+  pdf_url: https://arxiv.org/pdf/2607.12455v4
+  version: v4
+fetched: '2026-11-14'

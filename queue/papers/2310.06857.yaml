@@ -1,0 +1,47 @@
+id: paper:arxiv:2310.06857
+status: skipped_low_citation
+score: 5
+track: streaming_delivery
+matched:
+- ref: codec:AVC
+  count: 1
+  weight: 3
+- ref: concept:ABR
+  count: 2
+  weight: 1
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+meta:
+  title: Deep Learning-Based Real-Time Rate Control for Live Streaming on Wireless Networks
+  authors:
+  - Matin Mortaheb
+  - Mohammad A. Amir Khojastepour
+  - Srimat T. Chakradhar
+  - Sennur Ulukus
+  published: '2023-09-27'
+  updated: '2023-09-27'
+  categories:
+  - cs.NI
+  - cs.IT
+  - cs.LG
+  - eess.SP
+  - eess.SY
+  abstract: Providing wireless users with high-quality video content has become increasingly important.
+    However, ensuring consistent video quality poses challenges due to variable encoded bitrate caused
+    by dynamic video content and fluctuating channel bitrate caused by wireless fading effects. Suboptimal
+    selection of encoder parameters can lead to video quality loss due to underutilized bandwidth or the
+    introduction of video artifacts due to packet loss. To address this, a real-time deep learning based
+    H.264 controller is proposed. This controller leverages instantaneous channel quality data driven
+    from the physical layer, along with the video chunk, to dynamically estimate the optimal encoder parameters
+    with a negligible delay in real-time. The objective is to maintain an encoded video bitrate slightly
+    below the available channel bitrate. Experimental results, conducted on both QCIF dataset and a diverse
+    selection of random videos from public datasets, validate the effectiveness of the approach. Remarkably,
+    improvements of 10-20 dB in PSNR with repect to the state-of-the-art adaptive bitrate video streaming
+    is achieved, with an average packet drop rate as low as 0.002.
+  url: https://arxiv.org/abs/2310.06857
+  pdf_url: https://arxiv.org/pdf/2310.06857v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 0
+citation_year: 2023

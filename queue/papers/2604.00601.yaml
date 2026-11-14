@@ -1,0 +1,45 @@
+id: paper:arxiv:2604.00601
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'KG-CMI: Knowledge graph enhanced cross-Mamba interaction for medical visual question answering'
+  authors:
+  - Xianyao Zheng
+  - Hong Yu
+  - Hui Cui
+  - Changming Sun
+  - Xiangyu Li
+  - Ran Su
+  - Leyi Wei
+  - Jia Zhou
+  - Junbo Wang
+  - Qiangguo Jin
+  published: '2026-04-01'
+  updated: '2026-04-01'
+  categories:
+  - cs.CV
+  abstract: Medical visual question answering (Med-VQA) is a crucial multimodal task in clinical decision
+    support and telemedicine. Recent methods fail to fully leverage domain-specific medical knowledge,
+    making it difficult to accurately associate lesion features in medical images with key diagnostic
+    criteria. Additionally, classification-based approaches typically rely on predefined answer sets.
+    Treating Med-VQA as a simple classification problem limits its ability to adapt to the diversity of
+    free-form answers and may overlook detailed semantic information in those answers. To address these
+    challenges, we propose a knowledge graph enhanced cross-Mamba interaction (KG-CMI) framework, which
+    consists of a fine-grained cross-modal feature alignment (FCFA) module, a knowledge graph embedding
+    (KGE) module, a cross-modal interaction representation (CMIR) module, and a free-form answer enhanced
+    multi-task learning (FAMT) module. The KG-CMI learns cross-modal feature representations for images
+    and texts by effectively integrating professional medical knowledge through a graph, establishing
+    associations between lesion features and disease knowledge. Moreover, FAMT leverages auxiliary knowledge
+    from open-ended questions, improving the model's capability for open-ended Med-VQA. Experimental results
+    demonstrate that KG-CMI outperforms existing state-of-the-art methods on three Med-VQA datasets, i.e.,
+    VQA-RAD, SLAKE, and OVQA. Additionally, we conduct interpretability experiments to further validate
+    the framework's effectiveness.
+  url: https://arxiv.org/abs/2604.00601
+  pdf_url: https://arxiv.org/pdf/2604.00601v1
+  version: v1
+fetched: '2026-11-14'

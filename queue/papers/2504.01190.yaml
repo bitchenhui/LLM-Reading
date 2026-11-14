@@ -1,0 +1,45 @@
+id: paper:arxiv:2504.01190
+status: skipped_low_citation
+score: 3
+track: streaming_delivery
+matched:
+- ref: concept:ABR
+  count: 2
+  weight: 1
+- ref: concept:IQA
+  count: 2
+  weight: 1
+- ref: metric:VMAF
+  count: 1
+  weight: 1
+meta:
+  title: Video Quality Assessment for Resolution Cross-Over in Live Sports
+  authors:
+  - Jingwen Zhu
+  - Yixu Chen
+  - Hai Wei
+  - Sriram Sethuraman
+  - Yongjun Wu
+  published: '2025-04-01'
+  updated: '2025-04-01'
+  categories:
+  - cs.MM
+  abstract: In adaptive bitrate streaming, resolution cross-over refers to the point on the convex hull
+    where the encoding resolution should switch to achieve better quality. Accurate cross-over prediction
+    is crucial for streaming providers to optimize resolution at given bandwidths. Most existing works
+    rely on objective Video Quality Metrics (VQM), particularly VMAF, to determine the resolution cross-over.
+    However, these metrics have limitations in accurately predicting resolution cross-overs. Furthermore,
+    widely used VQMs are often trained on subjective datasets collected using the Absolute Category Rating
+    (ACR) methodologies, which we demonstrate introduces significant uncertainty and errors in resolution
+    cross-over predictions. To address these problems, we first investigate different subjective methodologies
+    and demonstrate that Pairwise Comparison (PC) achieves better cross-over accuracy than ACR. We then
+    propose a novel metric, Resolution Cross-over Quality Loss (RCQL), to measure the quality loss caused
+    by resolution cross-over errors. Furthermore, we collected a new subjective dataset (LSCO) focusing
+    on live streaming scenarios and evaluated widely used VQMs, by benchmarking their resolution cross-over
+    accuracy.
+  url: https://arxiv.org/abs/2504.01190
+  pdf_url: https://arxiv.org/pdf/2504.01190v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 4
+citation_year: 2025

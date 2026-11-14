@@ -1,0 +1,54 @@
+id: paper:arxiv:2303.00334
+status: pending
+score: 3
+track: processing_enhancement
+matched:
+- ref: concept:SuperResolution
+  count: 3
+  weight: 1
+- ref: concept:WebRTC
+  count: 1
+  weight: 1
+- ref: metric:FPS
+  count: 1
+  weight: 1
+meta:
+  title: Online Streaming Video Super-Resolution with Convolutional Look-Up Table
+  authors:
+  - Guanghao Yin
+  - Zefan Qu
+  - Xinyang Jiang
+  - Shan Jiang
+  - Zhenhua Han
+  - Ningxin Zheng
+  - Xiaohong Liu
+  - Huan Yang
+  - Yuqing Yang
+  - Dongsheng Li
+  - Lili Qiu
+  published: '2023-03-01'
+  updated: '2023-07-25'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: Online video streaming has fundamental limitations on the transmission bandwidth and computational
+    capacity and super-resolution is a promising potential solution. However, applying existing video
+    super-resolution methods to online streaming is non-trivial. Existing video codecs and streaming protocols
+    (\eg, WebRTC) dynamically change the video quality both spatially and temporally, which leads to diverse
+    and dynamic degradations. Furthermore, online streaming has a strict requirement for latency that
+    most existing methods are less applicable. As a result, this paper focuses on the rarely exploited
+    problem setting of online streaming video super resolution. To facilitate the research on this problem,
+    a new benchmark dataset named LDV-WebRTC is constructed based on a real-world online streaming system.
+    Leveraging the new benchmark dataset, we proposed a novel method specifically for online video streaming,
+    which contains a convolution and Look-Up Table (LUT) hybrid model to achieve better performance-latency
+    trade-off. To tackle the changing degradations, we propose a mixture-of-expert-LUT module, where a
+    set of LUT specialized in different degradations are built and adaptively combined to handle different
+    degradations. Experiments show our method achieves 720P video SR around 100 FPS, while significantly
+    outperforms existing LUT-based methods and offers competitive performance compared to efficient CNN-based
+    methods.
+  url: https://arxiv.org/abs/2303.00334
+  pdf_url: https://arxiv.org/pdf/2303.00334v4
+  version: v4
+fetched: '2026-11-14'
+citation_count: 15
+citation_year: 2023

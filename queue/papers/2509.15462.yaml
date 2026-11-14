@@ -1,0 +1,32 @@
+id: paper:arxiv:2509.15462
+status: skipped
+score: 1
+track: audio_coding
+matched:
+- ref: concept:NeuralAudioCodec
+  count: 1
+  weight: 1
+meta:
+  title: A Novel Semantic Compression Approach for Ultra-low Bandwidth Voice Communication
+  authors:
+  - Ryan Collette
+  - Ross Greenwood
+  - Serena Nicoll
+  published: '2025-09-18'
+  updated: '2025-09-18'
+  categories:
+  - cs.SD
+  - eess.AS
+  abstract: While existing speech audio codecs designed for compression exploit limited forms of temporal
+    redundancy and allow for multi-scale representations, they tend to represent all features of audio
+    in the same way. In contrast, generative voice models designed for text-to-speech and voice transfer
+    tasks have recently proved effective at factorizing audio signals into high-level semantic representations
+    of fundamentally distinct features. In this paper, we leverage such representations in a novel semantic
+    communications approach to achieve lower bitrates without sacrificing perceptual quality or suitability
+    for specific downstream tasks. Our technique matches or outperforms existing audio codecs on transcription,
+    sentiment analysis, and speaker verification when encoding at 2-4x lower bitrate -- notably surpassing
+    Encodec in perceptual quality and speaker verification while using up to 4x less bitrate.
+  url: https://arxiv.org/abs/2509.15462
+  pdf_url: https://arxiv.org/pdf/2509.15462v1
+  version: v1
+fetched: '2026-11-14'

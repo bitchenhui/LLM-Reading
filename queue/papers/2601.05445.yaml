@@ -1,0 +1,47 @@
+id: paper:arxiv:2601.05445
+status: pending
+score: 2
+track: self_improvement
+matched:
+- ref: concept:LLM
+  count: 1
+  weight: 1
+- ref: concept:SelfImprovement
+  count: 1
+  weight: 1
+meta:
+  title: Knowledge-Driven Multi-Turn Jailbreaking on Large Language Models
+  authors:
+  - Songze Li
+  - Ruishi He
+  - Xiaojun Jia
+  - Jun Wang
+  - Zhihui Fu
+  published: '2026-01-09'
+  updated: '2026-01-09'
+  categories:
+  - cs.CR
+  - cs.LG
+  abstract: 'Large Language Models (LLMs) face a significant threat from multi-turn jailbreak attacks,
+    where adversaries progressively steer conversations to elicit harmful outputs. However, the practical
+    effectiveness of existing attacks is undermined by several critical limitations: they struggle to
+    maintain a coherent progression over long interactions, often losing track of what has been accomplished
+    and what remains to be done; they rely on rigid or pre-defined patterns, and fail to adapt to the
+    LLM''s dynamic and unpredictable conversational state. To address these shortcomings, we introduce
+    Mastermind, a multi-turn jailbreak framework that adopts a dynamic and self-improving approach. Mastermind
+    operates in a closed loop of planning, execution, and reflection, enabling it to autonomously build
+    and refine its knowledge of model vulnerabilities through interaction. It employs a hierarchical planning
+    architecture that decouples high-level attack objectives from low-level tactical execution, ensuring
+    long-term focus and coherence. This planning is guided by a knowledge repository that autonomously
+    discovers and refines effective attack patterns by reflecting on interactive experiences. Mastermind
+    leverages this accumulated knowledge to dynamically recombine and adapt attack vectors, dramatically
+    improving both effectiveness and resilience. We conduct comprehensive experiments against state-of-the-art
+    models, including GPT-5 and Claude 3.7 Sonnet. The results demonstrate that Mastermind significantly
+    outperforms existing baselines, achieving substantially higher attack success rates and harmfulness
+    ratings. Moreover, our framework exhibits notable resilience against multiple advanced defense mechanisms.'
+  url: https://arxiv.org/abs/2601.05445
+  pdf_url: https://arxiv.org/pdf/2601.05445v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 7
+citation_year: 2026

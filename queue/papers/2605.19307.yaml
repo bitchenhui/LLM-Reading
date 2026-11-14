@@ -1,0 +1,45 @@
+id: paper:arxiv:2605.19307
+status: pending
+score: 2
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: 'MetaRA: Metamorphic Robustness Assessment for Multimodal Large Language Model-based Visual Question
+    Answering Systems'
+  authors:
+  - Quanxing Xu
+  - Yuhao Tian
+  - Ling Zhou
+  - Xian Zhong
+  - Xiaohua Huang
+  - Rubing Huang
+  - Chia-Wen Lin
+  published: '2026-05-19'
+  updated: '2026-05-19'
+  categories:
+  - cs.CV
+  abstract: Visual Question Answering (VQA), as the representative multimodal task, serves as a key benchmark
+    for evaluating the reasoning capabilities of Multimodal Large Language Models (MLLMs). However, existing
+    evaluations largely rely on static datasets and accuracy-based metrics, which fail to capture robustness,
+    consistency, and generalization. Inspired by Metamorphic Testing (MT), we propose Metamorphic Robustness
+    Assessment (MetaRA), a testing framework that employs Metamorphic Relations (MRs) to systematically
+    probe vulnerabilities in MLLM-based VQA systems. MetaRA generates controlled variations of image-question
+    inputs based on specific MRs and evaluates models across diverse conditions. Applying MetaRA to multiple
+    MLLM-based VQA models across different tasks reveals nuanced failure patterns, including sensitivity
+    to linguistic perturbations, over-reliance on superficial visual cues, and deeper weaknesses in multimodal
+    reasoning. Experimental results demonstrate that MetaRA provides richer diagnostic insights than conventional
+    accuracy metrics, exposing failure modes that remain hidden under standard benchmarks. Overall, this
+    work highlights the need for systematic robustness evaluation in VQA and positions metamorphic assessment
+    as a scalable, model-agnostic approach toward trustworthy multimodal AI.
+  url: https://arxiv.org/abs/2605.19307
+  pdf_url: https://arxiv.org/pdf/2605.19307v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 1
+citation_year: 2026

@@ -1,0 +1,66 @@
+id: paper:arxiv:2409.08481
+status: pending
+score: 6
+track: video_image_coding
+matched:
+- ref: metric:MOS
+  count: 1
+  weight: 1
+- ref: metric:MS-SSIM
+  count: 1
+  weight: 1
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+- ref: metric:SSIM
+  count: 1
+  weight: 1
+- ref: metric:VMAF
+  count: 1
+  weight: 1
+- ref: org:USTC
+  count: 1
+  weight: 1
+meta:
+  title: 'USTC-TD: A Test Dataset and Benchmark for Image and Video Coding in 2020s'
+  authors:
+  - Zhuoyuan Li
+  - Junqi Liao
+  - Chuanbo Tang
+  - Haotian Zhang
+  - Yuqi Li
+  - Yifan Bian
+  - Xihua Sheng
+  - Xinmin Feng
+  - Yao Li
+  - Changsheng Gao
+  - Li Li
+  - Dong Liu
+  - Feng Wu
+  published: '2024-09-13'
+  updated: '2025-03-16'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: 'Image/video coding has been a remarkable research area for both academia and industry for
+    many years. Testing datasets, especially high-quality image/video datasets are desirable for the justified
+    evaluation of coding-related research, practical applications, and standardization activities. We
+    put forward a test dataset namely USTC-TD, which has been successfully adopted in the practical end-to-end
+    image/video coding challenge of the IEEE International Conference on Visual Communications and Image
+    Processing (VCIP) in 2022 and 2023. USTC-TD contains 40 images at 4K spatial resolution and 10 video
+    sequences at 1080p spatial resolution, featuring various content due to the diverse environmental
+    factors (e.g. scene type, texture, motion, view) and the designed imaging factors (e.g. illumination,
+    lens, shadow). We quantitatively evaluate USTC-TD on different image/video features (spatial, temporal,
+    color, lightness), and compare it with the previous image/video test datasets, which verifies its
+    excellent compensation for the shortcomings of existing datasets. We also evaluate both classic standardized
+    and recently learned image/video coding schemes on USTC-TD using objective quality metrics (PSNR,
+    MS-SSIM, VMAF) and subjective quality metric (MOS), providing an extensive benchmark for these evaluated
+    schemes. Based on the characteristics and specific design of the proposed test dataset, we analyze
+    the benchmark performance and shed light on the future research and development of image/video coding.
+    All the data are released online: https://esakak.github.io/USTC-TD.'
+  url: https://arxiv.org/abs/2409.08481
+  pdf_url: https://arxiv.org/pdf/2409.08481v3
+  version: v3
+fetched: '2026-11-14'
+citation_count: 90
+citation_year: 2024

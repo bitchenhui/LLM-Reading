@@ -1,0 +1,50 @@
+id: paper:arxiv:2402.16181
+status: pending
+score: 2
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: How Can LLM Guide RL? A Value-Based Approach
+  authors:
+  - Shenao Zhang
+  - Sirui Zheng
+  - Shuqi Ke
+  - Zhihan Liu
+  - Wanxin Jin
+  - Jianbo Yuan
+  - Yingxiang Yang
+  - Hongxia Yang
+  - Zhaoran Wang
+  published: '2024-02-25'
+  updated: '2024-02-25'
+  categories:
+  - cs.LG
+  - cs.AI
+  abstract: Reinforcement learning (RL) has become the de facto standard practice for sequential decision-making
+    problems by improving future acting policies with feedback. However, RL algorithms may require extensive
+    trial-and-error interactions to collect useful feedback for improvement. On the other hand, recent
+    developments in large language models (LLMs) have showcased impressive capabilities in language understanding
+    and generation, yet they fall short in exploration and self-improvement capabilities for planning
+    tasks, lacking the ability to autonomously refine their responses based on feedback. Therefore, in
+    this paper, we study how the policy prior provided by the LLM can enhance the sample efficiency of
+    RL algorithms. Specifically, we develop an algorithm named LINVIT that incorporates LLM guidance as
+    a regularization factor in value-based RL, leading to significant reductions in the amount of data
+    needed for learning, particularly when the difference between the ideal policy and the LLM-informed
+    policy is small, which suggests that the initial policy is close to optimal, reducing the need for
+    further exploration. Additionally, we present a practical algorithm SLINVIT that simplifies the construction
+    of the value function and employs subgoals to reduce the search complexity. Our experiments across
+    three interactive environments ALFWorld, InterCode, and BlocksWorld demonstrate that our method achieves
+    state-of-the-art success rates and also surpasses previous RL and LLM approaches in terms of sample
+    efficiency. Our code is available at https://github.com/agentification/Language-Integrated-VI.
+  url: https://arxiv.org/abs/2402.16181
+  pdf_url: https://arxiv.org/pdf/2402.16181v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 18
+citation_year: 2024

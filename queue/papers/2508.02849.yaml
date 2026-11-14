@@ -1,0 +1,48 @@
+id: paper:arxiv:2508.02849
+status: skipped
+score: 0
+track: audio_coding
+matched: []
+meta:
+  title: 'SecoustiCodec: Cross-Modal Aligned Streaming Single-Codecbook Speech Codec'
+  authors:
+  - Chunyu Qiang
+  - Haoyu Wang
+  - Cheng Gong
+  - Tianrui Wang
+  - Ruibo Fu
+  - Tao Wang
+  - Ruilong Chen
+  - Jiangyan Yi
+  - Zhengqi Wen
+  - Chen Zhang
+  - Longbiao Wang
+  - Jianwu Dang
+  - Jianhua Tao
+  published: '2025-08-04'
+  updated: '2025-08-04'
+  categories:
+  - eess.AS
+  - cs.AI
+  - cs.CL
+  - cs.SD
+  abstract: Speech codecs serve as a crucial bridge in unifying speech and text language models. Existing
+    codec methods face several challenges in semantic encoding, such as residual paralinguistic information
+    (e.g., timbre, emotion), insufficient semantic completeness, limited reconstruction capability, and
+    lack of support for streaming. To address these challenges, we propose SecoustiCodec, a cross-modal
+    aligned low-bitrate streaming speech codec that disentangles semantic and paralinguistic information
+    in a single-codebook space. To ensure semantic completeness and reconstruction fidelity, paralinguistic
+    encoding is introduced to bridge the information gap between semantic and acoustic encoding. A semantic-only
+    efficient quantization method based on VAE (Variational Autoencoder) and FSQ (Finite Scalar Quantization)
+    is proposed. This approach alleviates the long-tail distribution problem of tokens while maintaining
+    high codebook utilization. A semantic disentanglement method based on contrastive learning is proposed,
+    which aligns text and speech in a joint multimodal frame-level space, effectively removing paralinguistic
+    information from semantic encoding. An acoustic-constrained multi-stage optimization strategy is proposed
+    to ensure robust and stable convergence. Figure~\ref{fig:pesq_kbps_below_2kbps} shows SecoustiCodec
+    achieves SOTA (state-of-the-art) reconstruction quality (PESQ) of 1.77/2.58 at 0.27/1 kbps. The code
+    and model weights for SecoustiCodec will be open-sourced upon the completion of the peer-review process.
+    We've open-sourced SecoustiCodec's demo, code, and model weights.
+  url: https://arxiv.org/abs/2508.02849
+  pdf_url: https://arxiv.org/pdf/2508.02849v1
+  version: v1
+fetched: '2026-11-14'

@@ -1,0 +1,81 @@
+id: paper:arxiv:2408.11982
+status: pending
+score: 13
+track: video_image_coding
+matched:
+- ref: codec:AVC
+  count: 2
+  weight: 3
+- ref: codec:HEVC
+  count: 2
+  weight: 3
+- ref: codec:VVC
+  count: 2
+  weight: 3
+- ref: codec:AV1
+  count: 1
+  weight: 3
+- ref: concept:IQA
+  count: 3
+  weight: 1
+meta:
+  title: 'AIM 2024 Challenge on Compressed Video Quality Assessment: Methods and Results'
+  authors:
+  - Maksim Smirnov
+  - Aleksandr Gushchin
+  - Anastasia Antsiferova
+  - Dmitry Vatolin
+  - Radu Timofte
+  - Ziheng Jia
+  - Zicheng Zhang
+  - Wei Sun
+  - Jiaying Qian
+  - Yuqin Cao
+  - Yinan Sun
+  - Yuxin Zhu
+  - Xiongkuo Min
+  - Guangtao Zhai
+  - Kanjar De
+  - Qing Luo
+  - Ao-Xiang Zhang
+  - Peng Zhang
+  - Haibo Lei
+  - Linyan Jiang
+  - Yaqing Li
+  - Wenhui Meng
+  - Zhenzhong Chen
+  - Zhengxue Cheng
+  - Jiahao Xiao
+  - Jun Xu
+  - Chenlong He
+  - Qi Zheng
+  - Ruoxi Zhu
+  - Min Li
+  - Yibo Fan
+  - Zhengzhong Tu
+  published: '2024-08-21'
+  updated: '2024-10-22'
+  categories:
+  - eess.IV
+  - cs.CV
+  - cs.MM
+  abstract: Video quality assessment (VQA) is a crucial task in the development of video compression standards,
+    as it directly impacts the viewer experience. This paper presents the results of the Compressed Video
+    Quality Assessment challenge, held in conjunction with the Advances in Image Manipulation (AIM) workshop
+    at ECCV 2024. The challenge aimed to evaluate the performance of VQA methods on a diverse dataset
+    of 459 videos, encoded with 14 codecs of various compression standards (AVC/H.264, HEVC/H.265, AV1,
+    and VVC/H.266) and containing a comprehensive collection of compression artifacts. To measure the
+    methods performance, we employed traditional correlation coefficients between their predictions and
+    subjective scores, which were collected via large-scale crowdsourced pairwise human comparisons. For
+    training purposes, participants were provided with the Compressed Video Quality Assessment Dataset
+    (CVQAD), a previously developed dataset of 1022 videos. Up to 30 participating teams registered for
+    the challenge, while we report the results of 6 teams, which submitted valid final solutions and code
+    for reproducing the results. Moreover, we calculated and present the performance of state-of-the-art
+    VQA methods on the developed dataset, providing a comprehensive benchmark for future research. The
+    dataset, results, and online leaderboard are publicly available at https://challenges.videoprocessing.ai/challenges/compressedvideo-quality-assessment.html.
+  url: https://arxiv.org/abs/2408.11982
+  pdf_url: https://arxiv.org/pdf/2408.11982v3
+  version: v3
+fetched: '2026-11-14'
+citation_count: 8
+citation_year: 2024

@@ -1,0 +1,43 @@
+id: paper:arxiv:2604.17658
+status: pending
+score: 2
+track: self_improvement
+matched:
+- ref: concept:LLM
+  count: 2
+  weight: 1
+- ref: concept:SelfImprovement
+  count: 1
+  weight: 1
+meta:
+  title: Towards Self-Improving Error Diagnosis in Multi-Agent Systems
+  authors:
+  - Jiazheng Li
+  - Emine Yilmaz
+  - Bei Chen
+  - Dieu-Thu Le
+  published: '2026-04-19'
+  updated: '2026-04-19'
+  categories:
+  - cs.MA
+  - cs.CL
+  abstract: 'Large Language Model (LLM)-based Multi-Agent Systems (MAS) enable complex problem-solving
+    but introduce significant debugging challenges, characterized by long interaction traces, inter-agent
+    dependencies, and delayed error manifestation. Existing diagnostic approaches often rely on expensive
+    expert annotation or ''''LLM-as-a-judge'''' paradigms, which struggle to pinpoint decisive error steps
+    within extended contexts. In this paper, we introduce ErrorProbe, a self-improving framework for semantic
+    failure attribution that identifies responsible agents and the originating error step. The framework
+    operates via a three-stage pipeline: (1) operationalizing the MAS failure taxonomy to detect local
+    anomalies, (2) performing symptom-driven backward tracing to prune irrelevant context, and (3) employing
+    a specialized multi-agent team (Strategist, Investigator, Arbiter) to validate error hypotheses through
+    tool-grounded execution. Crucially, ErrorProbe maintains a verified episodic memory that updates only
+    when error patterns are confirmed by executable evidence, without the need for annotation. Experiments
+    across the TracerTraj and Who&When benchmarks demonstrate that ErrorProbe significantly outperforms
+    baselines, particularly in step-level localization, while the verified memory enables robust cross-domain
+    transfer without retraining.'
+  url: https://arxiv.org/abs/2604.17658
+  pdf_url: https://arxiv.org/pdf/2604.17658v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 6
+citation_year: 2026

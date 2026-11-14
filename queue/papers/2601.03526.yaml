@@ -1,0 +1,44 @@
+id: paper:arxiv:2601.03526
+status: skipped
+score: 1
+track: processing_enhancement
+matched:
+- ref: concept:SuperResolution
+  count: 1
+  weight: 1
+meta:
+  title: Physics-Constrained Cross-Resolution Enhancement Network for Optics-Guided Thermal UAV Image
+    Super-Resolution
+  authors:
+  - Zhicheng Zhao
+  - Fengjiao Peng
+  - Jinquan Yan
+  - Wei Lu
+  - Chenglong Li
+  - Jin Tang
+  published: '2026-01-07'
+  updated: '2026-01-07'
+  categories:
+  - cs.CV
+  abstract: Optics-guided thermal UAV image super-resolution has attracted significant research interest
+    due to its potential in all-weather monitoring applications. However, existing methods typically compress
+    optical features to match thermal feature dimensions for cross-modal alignment and fusion, which not
+    only causes the loss of high-frequency information that is beneficial for thermal super-resolution,
+    but also introduces physically inconsistent artifacts such as texture distortions and edge blurring
+    by overlooking differences in the imaging physics between modalities. To address these challenges,
+    we propose PCNet to achieve cross-resolution mutual enhancement between optical and thermal modalities,
+    while physically constraining the optical guidance process via thermal conduction to enable robust
+    thermal UAV image super-resolution. In particular, we design a Cross-Resolution Mutual Enhancement
+    Module (CRME) to jointly optimize thermal image super-resolution and optical-to-thermal modality conversion,
+    facilitating effective bidirectional feature interaction across resolutions while preserving high-frequency
+    optical priors. Moreover, we propose a Physics-Driven Thermal Conduction Module (PDTM) that incorporates
+    two-dimensional heat conduction into optical guidance, modeling spatially-varying heat conduction
+    properties to prevent inconsistent artifacts. In addition, we introduce a temperature consistency
+    loss that enforces regional distribution consistency and boundary gradient smoothness to ensure generated
+    thermal images align with real-world thermal radiation principles. Extensive experiments on VGTSR2.0
+    and DroneVehicle datasets demonstrate that PCNet significantly outperforms state-of-the-art methods
+    on both reconstruction quality and downstream tasks including semantic segmentation and object detection.
+  url: https://arxiv.org/abs/2601.03526
+  pdf_url: https://arxiv.org/pdf/2601.03526v1
+  version: v1
+fetched: '2026-11-14'

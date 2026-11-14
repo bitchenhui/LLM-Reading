@@ -1,0 +1,47 @@
+id: paper:arxiv:2605.00369
+status: skipped_low_citation
+score: 2
+track: self_improvement
+matched:
+- ref: concept:LLM
+  count: 2
+  weight: 1
+- ref: concept:AlphaEvolve
+  count: 1
+  weight: 1
+meta:
+  title: 'InvEvolve: Evolving White-Box Inventory Policies via Large Language Models with Performance
+    Guarantees'
+  authors:
+  - Chenyu Huang
+  - Jianghao Lin
+  - Zhengyang Tang
+  - Bo Jiang
+  - Ruoqing Jiang
+  - Benyou Wang
+  - Lai Wei
+  published: '2026-05-01'
+  updated: '2026-06-05'
+  categories:
+  - cs.LG
+  - cs.AI
+  abstract: We study how large language models can be used to generate inventory policies in online settings
+    with non-stationary demand. Our work is motivated by recent advances in LLM-based evolutionary search,
+    such as AlphaEvolve, which demonstrates strong performance on static and highly structured problems
+    such as mathematical discovery, but is not directly suited to dynamic inventory settings with online
+    updates. We propose InvEvolve, an end-to-end inventory policy evolution and inference framework grounded
+    in confidence-interval-based certification. Built on a large language model trained via reinforcement
+    learning, InvEvolve can process demand data together with additional numerical and textual features,
+    and generates white-box inventory policies with statistical safety guarantees for future deployment.
+    We further introduce a unified framework with theoretical guarantees that connects training, inference,
+    and deployment. This allows us to derive a lower bound on the probability that InvEvolve evolves a
+    statistically safe and improved policy, and to characterize the multi-period performance gap relative
+    to the oracle-safe benchmark. Tested on both synthetic data and real-world retail data, InvEvolve
+    outperforms classical inventory policies and deep-learning-based methods. In canonical inventory settings,
+    it generates new policies that outperform existing benchmarks.
+  url: https://arxiv.org/abs/2605.00369
+  pdf_url: https://arxiv.org/pdf/2605.00369v4
+  version: v4
+fetched: '2026-11-14'
+citation_count: 1
+citation_year: 2026

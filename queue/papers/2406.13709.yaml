@@ -1,0 +1,47 @@
+id: paper:arxiv:2406.13709
+status: skipped_low_citation
+score: 5
+track: video_image_coding
+matched:
+- ref: impl:VTM
+  count: 1
+  weight: 3
+- ref: metric:MS-SSIM
+  count: 1
+  weight: 1
+- ref: metric:SSIM
+  count: 1
+  weight: 1
+meta:
+  title: A Study on the Effect of Color Spaces in Learned Image Compression
+  authors:
+  - Srivatsa Prativadibhayankaram
+  - Mahadev Prasad Panda
+  - Jürgen Seiler
+  - Thomas Richter
+  - Heiko Sparenberg
+  - Siegfried Fößel
+  - André Kaup
+  published: '2024-06-19'
+  updated: '2024-06-19'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: In this work, we present a comparison between color spaces namely YUV, LAB, RGB and their
+    effect on learned image compression. For this we use the structure and color based learned image codec
+    (SLIC) from our prior work, which consists of two branches - one for the luminance component (Y or
+    L) and another for chrominance components (UV or AB). However, for the RGB variant we input all 3
+    channels in a single branch, similar to most learned image codecs operating in RGB. The models are
+    trained for multiple bitrate configurations in each color space. We report the findings from our experiments
+    by evaluating them on various datasets and compare the results to state-of-the-art image codecs. The
+    YUV model performs better than the LAB variant in terms of MS-SSIM with a Bjøntegaard delta bitrate
+    (BD-BR) gain of 7.5\% using VTM intra-coding mode as the baseline. Whereas the LAB variant has a better
+    performance than YUV model in terms of CIEDE2000 having a BD-BR gain of 8\%. Overall, the RGB variant
+    of SLIC achieves the best performance with a BD-BR gain of 13.14\% in terms of MS-SSIM and a gain
+    of 17.96\% in CIEDE2000 at the cost of a higher model complexity.
+  url: https://arxiv.org/abs/2406.13709
+  pdf_url: https://arxiv.org/pdf/2406.13709v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 4
+citation_year: 2024

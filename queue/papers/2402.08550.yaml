@@ -1,0 +1,32 @@
+id: paper:arxiv:2402.08550
+status: skipped
+score: 0
+track: video_image_coding
+matched: []
+meta:
+  title: Motion-Adaptive Inference for Flexible Learned B-Frame Compression
+  authors:
+  - M. Akin Yilmaz
+  - O. Ugur Ulas
+  - Ahmet Bilican
+  - A. Murat Tekalp
+  published: '2024-02-13'
+  updated: '2024-02-13'
+  categories:
+  - eess.IV
+  abstract: While the performance of recent learned intra and sequential video compression models exceed
+    that of respective traditional codecs, the performance of learned B-frame compression models generally
+    lag behind traditional B-frame coding. The performance gap is bigger for complex scenes with large
+    motions. This is related to the fact that the distance between the past and future references vary
+    in hierarchical B-frame compression depending on the level of hierarchy, which causes motion range
+    to vary. The inability of a single B-frame compression model to adapt to various motion ranges causes
+    loss of performance. As a remedy, we propose controlling the motion range for flow prediction during
+    inference (to approximately match the range of motions in the training data) by downsampling video
+    frames adaptively according to amount of motion and level of hierarchy in order to compress all B-frames
+    using a single flexible-rate model. We present state-of-the-art BD rate results to demonstrate the
+    superiority of our proposed single-model motion-adaptive inference approach to all existing learned
+    B-frame compression models.
+  url: https://arxiv.org/abs/2402.08550
+  pdf_url: https://arxiv.org/pdf/2402.08550v1
+  version: v1
+fetched: '2026-11-14'

@@ -1,0 +1,38 @@
+id: paper:arxiv:2506.07081
+status: pending
+score: 2
+track: audio_coding
+matched:
+- ref: concept:LLM
+  count: 1
+  weight: 1
+- ref: concept:NeuralAudioCodec
+  count: 1
+  weight: 1
+meta:
+  title: Streaming Endpointer for Spoken Dialogue using Neural Audio Codecs and Label-Delayed Training
+  authors:
+  - Sathvik Udupa
+  - Shinji Watanabe
+  - Petr Schwarz
+  - Jan Cernocky
+  published: '2025-06-08'
+  updated: '2025-06-19'
+  categories:
+  - cs.SD
+  - eess.AS
+  abstract: 'Accurate, low-latency endpointing is crucial for effective spoken dialogue systems. While
+    traditional endpointers often rely on spectrum-based audio features, this work proposes real-time
+    speech endpointing for multi-turn dialogues using streaming, low-bitrate Neural Audio Codec (NAC)
+    features, building upon recent advancements in neural audio codecs. To further reduce cutoff errors,
+    we introduce a novel label delay training scheme. At a fixed median latency of 160 ms, our combined
+    NAC and label delay approach achieves significant relative cutoff error reductions: 42.7% for a single-stream
+    endpointer and 37.5% for a two-stream configuration, compared to baseline methods. Finally, we demonstrate
+    efficient integration with a codec-based pretrained speech large language model, improving its median
+    response time by 1200 ms and reducing its cutoff error by 35%.'
+  url: https://arxiv.org/abs/2506.07081
+  pdf_url: https://arxiv.org/pdf/2506.07081v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 5
+citation_year: 2025

@@ -1,0 +1,33 @@
+id: paper:arxiv:2303.13714
+status: skipped
+score: 2
+track: video_image_coding
+matched:
+- ref: dataset:ImageNet
+  count: 1
+  weight: 1
+- ref: metric:FID
+  count: 1
+  weight: 1
+meta:
+  title: High Fidelity Image Synthesis With Deep VAEs In Latent Space
+  authors:
+  - Troy Luhman
+  - Eric Luhman
+  published: '2023-03-23'
+  updated: '2023-03-23'
+  categories:
+  - cs.CV
+  - cs.LG
+  - eess.IV
+  abstract: We present fast, realistic image generation on high-resolution, multimodal datasets using
+    hierarchical variational autoencoders (VAEs) trained on a deterministic autoencoder's latent space.
+    In this two-stage setup, the autoencoder compresses the image into its semantic features, which are
+    then modeled with a deep VAE. With this method, the VAE avoids modeling the fine-grained details that
+    constitute the majority of the image's code length, allowing it to focus on learning its structural
+    components. We demonstrate the effectiveness of our two-stage approach, achieving a FID of 9.34 on
+    the ImageNet-256 dataset which is comparable to BigGAN. We make our implementation available online.
+  url: https://arxiv.org/abs/2303.13714
+  pdf_url: https://arxiv.org/pdf/2303.13714v1
+  version: v1
+fetched: '2026-11-14'

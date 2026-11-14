@@ -1,0 +1,37 @@
+id: paper:arxiv:2601.04153
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'Diffusion-DRF: Free, Rich, and Differentiable Reward for Video Diffusion Fine-Tuning'
+  authors:
+  - Yifan Wang
+  - Yanyu Li
+  - Gordon Guocheng Qian
+  - Sergey Tulyakov
+  - Yun Fu
+  - Anil Kag
+  published: '2026-01-07'
+  updated: '2026-11-03'
+  categories:
+  - cs.CV
+  abstract: Video diffusion alignment has been heavily relied on scalar rewards. These rewards are typically
+    derived from learned reward models in human preference datasets, requiring additional training and
+    extensive collection. Moreover, scalar rewards provide coarse, global supervision, offering limited
+    prompt-generation mismatch credit assignment and making models prone to reward exploitation and unstable
+    optimization. We propose Diffusion-DRF, a free, rich, and differentiable reward framework for video
+    diffusion fine-tuning. Diffusion-DRF employs a frozen, off-the-shelf Vision-Language Model (VLM) as
+    the critic, eliminating the need for reward model training. Instead of relying on a single scalar
+    reward, it decomposes each user prompt into multi-dimensional questions with freeform dense VQA explanation
+    queries, yielding information-rich feedback. By direct differentiable optimization over this rich
+    feedback, Diffusion-DRF achieves stable reward-based tuning without preference datasets collection.
+    Diffusion-DRF achieves significant gains both quantitatively and qualitatively, outperforming state-of-the-art
+    Flow-GRPO by 4.74% in overall performance on unseen VBench-2.0.
+  url: https://arxiv.org/abs/2601.04153
+  pdf_url: https://arxiv.org/pdf/2601.04153v3
+  version: v3
+fetched: '2026-11-14'

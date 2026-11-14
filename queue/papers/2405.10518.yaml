@@ -1,0 +1,32 @@
+id: paper:arxiv:2405.10518
+status: skipped
+score: 0
+track: video_image_coding
+matched: []
+meta:
+  title: Enhancing Perception Quality in Remote Sensing Image Compression via Invertible Neural Network
+  authors:
+  - Junhui Li
+  - Xingsong Hou
+  published: '2024-05-17'
+  updated: '2024-08-25'
+  categories:
+  - cs.CV
+  - eess.IV
+  abstract: Decoding remote sensing images to achieve high perceptual quality, particularly at low bitrates,
+    remains a significant challenge. To address this problem, we propose the invertible neural network-based
+    remote sensing image compression (INN-RSIC) method. Specifically, we capture compression distortion
+    from an existing image compression algorithm and encode it as a set of Gaussian-distributed latent
+    variables via INN. This ensures that the compression distortion in the decoded image becomes independent
+    of the ground truth. Therefore, by leveraging the inverse mapping of INN, we can input the decoded
+    image along with a set of randomly resampled Gaussian distributed variables into the inverse network,
+    effectively generating enhanced images with better perception quality. To effectively learn compression
+    distortion, channel expansion, Haar transformation, and invertible blocks are employed to construct
+    the INN. Additionally, we introduce a quantization module (QM) to mitigate the impact of format conversion,
+    thus enhancing the framework's generalization and improving the perceptual quality of enhanced images.
+    Extensive experiments demonstrate that our INN-RSIC significantly outperforms the existing state-of-the-art
+    traditional and deep learning-based image compression methods in terms of perception quality.
+  url: https://arxiv.org/abs/2405.10518
+  pdf_url: https://arxiv.org/pdf/2405.10518v2
+  version: v2
+fetched: '2026-11-14'

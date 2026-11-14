@@ -1,0 +1,44 @@
+id: paper:arxiv:2405.14822
+status: pending
+score: 2
+track: processing_enhancement
+matched:
+- ref: concept:SuperResolution
+  count: 1
+  weight: 1
+- ref: dataset:ImageNet
+  count: 1
+  weight: 1
+meta:
+  title: 'PaGoDA: Progressive Growing of a One-Step Generator from a Low-Resolution Diffusion Teacher'
+  authors:
+  - Dongjun Kim
+  - Chieh-Hsin Lai
+  - Wei-Hsiang Liao
+  - Yuhta Takida
+  - Naoki Murata
+  - Toshimitsu Uesaka
+  - Yuki Mitsufuji
+  - Stefano Ermon
+  published: '2024-05-23'
+  updated: '2024-10-29'
+  categories:
+  - cs.CV
+  - cs.AI
+  - cs.LG
+  - stat.ML
+  abstract: 'The diffusion model performs remarkable in generating high-dimensional content but is computationally
+    intensive, especially during training. We propose Progressive Growing of Diffusion Autoencoder (PaGoDA),
+    a novel pipeline that reduces the training costs through three stages: training diffusion on downsampled
+    data, distilling the pretrained diffusion, and progressive super-resolution. With the proposed pipeline,
+    PaGoDA achieves a $64\times$ reduced cost in training its diffusion model on 8x downsampled data;
+    while at the inference, with the single-step, it performs state-of-the-art on ImageNet across all
+    resolutions from 64x64 to 512x512, and text-to-image. PaGoDA''s pipeline can be applied directly in
+    the latent space, adding compression alongside the pre-trained autoencoder in Latent Diffusion Models
+    (e.g., Stable Diffusion). The code is available at https://github.com/sony/pagoda.'
+  url: https://arxiv.org/abs/2405.14822
+  pdf_url: https://arxiv.org/pdf/2405.14822v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 33
+citation_year: 2024

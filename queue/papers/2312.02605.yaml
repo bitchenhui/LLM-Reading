@@ -1,0 +1,40 @@
+id: paper:arxiv:2312.02605
+status: skipped
+score: 2
+track: video_image_coding
+matched:
+- ref: metric:BD-PSNR
+  count: 1
+  weight: 1
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+meta:
+  title: Accelerating Learnt Video Codecs with Gradient Decay and Layer-wise Distillation
+  authors:
+  - Tianhao Peng
+  - Ge Gao
+  - Heming Sun
+  - Fan Zhang
+  - David Bull
+  published: '2023-12-05'
+  updated: '2023-12-05'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: 'In recent years, end-to-end learnt video codecs have demonstrated their potential to compete
+    with conventional coding algorithms in term of compression efficiency. However, most learning-based
+    video compression models are associated with high computational complexity and latency, in particular
+    at the decoder side, which limits their deployment in practical applications. In this paper, we present
+    a novel model-agnostic pruning scheme based on gradient decay and adaptive layer-wise distillation.
+    Gradient decay enhances parameter exploration during sparsification whilst preventing runaway sparsity
+    and is superior to the standard Straight-Through Estimation. The adaptive layer-wise distillation
+    regulates the sparse training in various stages based on the distortion of intermediate features.
+    This stage-wise design efficiently updates parameters with minimal computational overhead. The proposed
+    approach has been applied to three popular end-to-end learnt video codecs, FVC, DCVC, and DCVC-HEM.
+    Results confirm that our method yields up to 65% reduction in MACs and 2x speed-up with less than
+    0.3dB drop in BD-PSNR. Supporting code and supplementary material can be downloaded from: https://jasminepp.github.io/lightweightdvc/'
+  url: https://arxiv.org/abs/2312.02605
+  pdf_url: https://arxiv.org/pdf/2312.02605v1
+  version: v1
+fetched: '2026-11-14'

@@ -1,0 +1,29 @@
+id: paper:arxiv:2603.03524
+status: skipped
+score: 0
+track: self_improvement
+matched: []
+meta:
+  title: Test-Time Meta-Adaptation with Self-Synthesis
+  authors:
+  - Zeyneb N. Kaya
+  - Nick Rui
+  published: '2026-03-03'
+  updated: '2026-03-08'
+  categories:
+  - cs.LG
+  - cs.AI
+  abstract: 'As strong general reasoners, large language models (LLMs) encounter diverse domains and tasks,
+    where the ability to adapt and self-improve at test time is valuable. We introduce MASS, a meta-learning
+    framework that enables LLMs to self-adapt by generating problem-specific synthetic training data and
+    performing targeted self-updates optimized for downstream performance at inference time. We train
+    this behavior end-to-end via bilevel optimization: an inner loop adapts on self-generated examples
+    while an outer loop meta-learns data-attribution signals and rewards post-update task performance.
+    The synthetic data is optimized with scalable meta-gradients, backpropagating the downstream loss
+    through the inner updates to reward useful generations. Experiments on mathematical reasoning show
+    that MASS learns to synthesize per-instance curricula that yield effective, data-efficient test-time
+    adaptation.'
+  url: https://arxiv.org/abs/2603.03524
+  pdf_url: https://arxiv.org/pdf/2603.03524v2
+  version: v2
+fetched: '2026-11-14'

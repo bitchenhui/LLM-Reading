@@ -1,0 +1,43 @@
+id: paper:arxiv:2401.17246
+status: skipped_low_citation
+score: 3
+track: video_image_coding
+matched:
+- ref: concept:Hyperprior
+  count: 1
+  weight: 1
+- ref: metric:MS-SSIM
+  count: 1
+  weight: 1
+- ref: metric:SSIM
+  count: 1
+  weight: 1
+meta:
+  title: 'SLIC: A Learned Image Codec Using Structure and Color'
+  authors:
+  - Srivatsa Prativadibhayankaram
+  - Mahadev Prasad Panda
+  - Thomas Richter
+  - Heiko Sparenberg
+  - Siegfried Fößel
+  - André Kaup
+  published: '2024-01-30'
+  updated: '2024-01-30'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: We propose the structure and color based learned image codec (SLIC) in which the task of compression
+    is split into that of luminance and chrominance. The deep learning model is built with a novel multi-scale
+    architecture for Y and UV channels in the encoder, where the features from various stages are combined
+    to obtain the latent representation. An autoregressive context model is employed for backward adaptation
+    and a hyperprior block for forward adaptation. Various experiments are carried out to study and analyze
+    the performance of the proposed model, and to compare it with other image codecs. We also illustrate
+    the advantages of our method through the visualization of channel impulse responses, latent channels
+    and various ablation studies. The model achieves Bjøntegaard delta bitrate gains of 7.5% and 4.66%
+    in terms of MS-SSIM and CIEDE2000 metrics with respect to other state-of-the-art reference codecs.
+  url: https://arxiv.org/abs/2401.17246
+  pdf_url: https://arxiv.org/pdf/2401.17246v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 5
+citation_year: 2024

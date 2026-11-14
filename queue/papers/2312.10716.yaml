@@ -1,0 +1,39 @@
+id: paper:arxiv:2312.10716
+status: skipped
+score: 0
+track: video_image_coding
+matched: []
+meta:
+  title: A Computationally Efficient Neural Video Compression Accelerator Based on a Sparse CNN-Transformer
+    Hybrid Network
+  authors:
+  - Siyu Zhang
+  - Wendong Mao
+  - Huihong Shi
+  - Zhongfeng Wang
+  published: '2023-12-17'
+  updated: '2023-12-19'
+  categories:
+  - eess.IV
+  - cs.AR
+  abstract: Video compression is widely used in digital television, surveillance systems, and virtual
+    reality. Real-time video decoding is crucial in practical scenarios. Recently, neural video compression
+    (NVC) combines traditional coding with deep learning, achieving impressive compression efficiency.
+    Nevertheless, the NVC models involve high computational costs and complex memory access patterns,
+    challenging real-time hardware implementations. To relieve this burden, we propose an algorithm and
+    hardware co-design framework named NVCA for video decoding on resource-limited devices. Firstly, a
+    CNN-Transformer hybrid network is developed to improve compression performance by capturing multi-scale
+    non-local features. In addition, we propose a fast algorithm-based sparse strategy that leverages
+    the dual advantages of pruning and fast algorithms, sufficiently reducing computational complexity
+    while maintaining video compression efficiency. Secondly, a reconfigurable sparse computing core is
+    designed to flexibly support sparse convolutions and deconvolutions based on the fast algorithm-based
+    sparse strategy. Furthermore, a novel heterogeneous layer chaining dataflow is incorporated to reduce
+    off-chip memory traffic stemming from extensive inter-frame motion and residual information. Thirdly,
+    the overall architecture of NVCA is designed and synthesized in TSMC 28nm CMOS technology. Extensive
+    experiments demonstrate that our design provides superior coding quality and up to 22.7x decoding
+    speed improvements over other video compression designs. Meanwhile, our design achieves up to 2.2x
+    improvements in energy efficiency compared to prior accelerators.
+  url: https://arxiv.org/abs/2312.10716
+  pdf_url: https://arxiv.org/pdf/2312.10716v2
+  version: v2
+fetched: '2026-11-14'

@@ -1,0 +1,38 @@
+id: paper:arxiv:2606.09142
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: Decoding Pedestrian Crossing Intention from Egocentric Vision via Vision Language Models
+  authors:
+  - Danya Li
+  - Xiang Su
+  - Yan Feng
+  - Rico Krueger
+  published: '2026-06-08'
+  updated: '2026-06-08'
+  categories:
+  - cs.CV
+  - cs.AI
+  abstract: Egocentric vision offers a first-person view of human perception and decision making, yet
+    its potential for traffic-safety prediction remains underexplored. In this work, we study the decoding
+    of pedestrian crossing intentions from short egocentric video clips. We approach this by formulating
+    the task as a closed-ended visual question answering (VQA) problem and leveraging vision language
+    models (VLMs) to predict the pedestrians' intent. We first benchmark three families of state-of-the-art
+    VLMs in a zero-shot setting, finding that they achieve moderate gains over random guessing but exhibit
+    limited higher-level traffic reasoning. Motivated by these findings, we further adapt VLMs to the
+    target task using parameter-efficient fine-tuning. Our results show that the fine-tuned models substantially
+    outperform their zero-shot counterparts and achieve a 9\% accuracy improvement over a specialized
+    transformer-based baseline. Finally, we demonstrate that incorporating additional contextual cues,
+    including ego motion, vehicle motion, and eye gaze, further improves predictive performance. In particular,
+    the fine-tuned Qwen3-VL-2B model guided by eye gaze and ego motion achieves a 14.5% accuracy improvement
+    over the transformer baseline, establishing a new state of the art for egocentric pedestrian intent
+    decoding.
+  url: https://arxiv.org/abs/2606.09142
+  pdf_url: https://arxiv.org/pdf/2606.09142v1
+  version: v1
+fetched: '2026-11-14'

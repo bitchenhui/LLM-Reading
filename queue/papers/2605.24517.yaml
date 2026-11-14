@@ -1,0 +1,43 @@
+id: paper:arxiv:2605.24517
+status: skipped
+score: 1
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+meta:
+  title: 'ECHO: Terminal Agents Learn World Models for Free'
+  authors:
+  - Vaishnavi Shrivastava
+  - Piero Kauffmann
+  - Ahmed Awadallah
+  - Dimitris Papailiopoulos
+  published: '2026-05-23'
+  updated: '2026-05-23'
+  categories:
+  - cs.LG
+  - cs.CL
+  abstract: 'CLI agents are the closest thing language models have to an embodied setting: the model emits
+    commands, the terminal executes them, and the returned stream -- stdout, errors, files, logs, and
+    traces -- records the consequences. We argue that this stream is a supervision signal, but standard
+    agent RL discards it: GRPO-style training updates action tokens with sparse outcome-level rewards
+    while ignoring environment responses already in the rollout. Failed rollouts provide little policy-gradient
+    signal despite containing rich evidence about how the environment responds. We introduce ECHO (Environment
+    Cross-entropy Hybrid Objective), a hybrid objective that combines the standard policy-gradient loss
+    on action tokens with an auxiliary loss that trains the policy to predict environment observation
+    tokens resulting from its own actions. ECHO reuses the same forward pass as GRPO, requires no additional
+    rollouts, and turns terminal feedback into dense supervision for all rollouts. ECHO doubles GRPO pass@1
+    on TerminalBench-2.0: Qwen3-8B improves from 2.70% to 5.17%, and Qwen3-14B from 5.17% to 10.79%. ECHO
+    also produces policies that better predict terminal dynamics, even on trajectories they did not generate:
+    across held-out rollouts, it sharply reduces environment-token cross-entropy while GRPO alone barely
+    changes it. From base Qwen3-8B, ECHO matches expert-SFT-then-GRPO performance on held-out terminal
+    tasks without expert demonstrations, and recovers roughly half of the expert-SFT initialization benefit
+    on TerminalBench-2.0. In some settings, the environment prediction loss alone enables verifier-free
+    self-improvement, allowing policies to improve on unseen OOD tasks by learning only from environment
+    interactions. Together, these results suggest that environment observations are not merely context
+    for future actions, but a dense, on-policy supervision signal already present in every rollout.'
+  url: https://arxiv.org/abs/2605.24517
+  pdf_url: https://arxiv.org/pdf/2605.24517v1
+  version: v1
+fetched: '2026-11-14'

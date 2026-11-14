@@ -1,0 +1,37 @@
+id: paper:arxiv:2506.12199
+status: skipped
+score: 1
+track: audio_coding
+matched:
+- ref: concept:NeuralAudioCodec
+  count: 1
+  weight: 1
+meta:
+  title: 'ViSAGe: Video-to-Spatial Audio Generation'
+  authors:
+  - Jaeyeon Kim
+  - Heeseung Yun
+  - Gunhee Kim
+  published: '2025-06-13'
+  updated: '2025-06-13'
+  categories:
+  - cs.SD
+  - cs.AI
+  - eess.AS
+  abstract: Spatial audio is essential for enhancing the immersiveness of audio-visual experiences, yet
+    its production typically demands complex recording systems and specialized expertise. In this work,
+    we address a novel problem of generating first-order ambisonics, a widely used spatial audio format,
+    directly from silent videos. To support this task, we introduce YT-Ambigen, a dataset comprising 102K
+    5-second YouTube video clips paired with corresponding first-order ambisonics. We also propose new
+    evaluation metrics to assess the spatial aspect of generated audio based on audio energy maps and
+    saliency metrics. Furthermore, we present Video-to-Spatial Audio Generation (ViSAGe), an end-to-end
+    framework that generates first-order ambisonics from silent video frames by leveraging CLIP visual
+    features, autoregressive neural audio codec modeling with both directional and visual guidance. Experimental
+    results demonstrate that ViSAGe produces plausible and coherent first-order ambisonics, outperforming
+    two-stage approaches consisting of video-to-audio generation and audio spatialization. Qualitative
+    examples further illustrate that ViSAGe generates temporally aligned high-quality spatial audio that
+    adapts to viewpoint changes.
+  url: https://arxiv.org/abs/2506.12199
+  pdf_url: https://arxiv.org/pdf/2506.12199v1
+  version: v1
+fetched: '2026-11-14'

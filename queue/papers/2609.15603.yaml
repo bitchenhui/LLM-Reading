@@ -1,0 +1,52 @@
+id: paper:arxiv:2609.15603
+status: pending
+score: 2
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: A Unified Vision-Language Model for PSMA PET/CT Report Generation, Visual Question Answering,
+    and Lesion Segmentation
+  authors:
+  - Yang Xing
+  - Jiong Wu
+  - Savas Ozdemir
+  - Yang Zhou
+  - Boxiao Yu
+  - Ying Zhang
+  - Zheren Zhu
+  - Chenyu You
+  - Wei Shao
+  - Yang Lu
+  - Kang Wang
+  - Tinsu Pan
+  - Yang Yang
+  - Kuang Gong
+  published: '2026-09-14'
+  updated: '2026-09-14'
+  categories:
+  - cs.CV
+  - cs.AI
+  abstract: 'Accurate PSMA PET/CT interpretation is central to prostate cancer management, yet existing
+    PET/CT AI models typically address isolated tasks. We propose a unified PSMA PET/CT vision-language
+    model for report generation, visual question answering, and lesion segmentation. The framework adopts
+    an LLaVA-style architecture, comprising a PET/CT vision encoder, an MLP-Mixer projection module, a
+    LoRA-tuned large language model, and a 3D segmentation branch. Training followed a four-stage strategy:
+    vision encoder pretraining, projection-layer alignment, VLM fine-tuning, and final multitask tuning.
+    Language tasks used 5,747 PSMA PET/CT datasets with paired reports, while segmentation used the PSMA
+    subset of AutoPET. The model outperformed PET2REP and a CT-based baseline across standard report-generation
+    metrics, improved performance across VQA question types, and achieved higher Dice and lesion-level
+    overlap F1 than SegAnyPET and nnUNet. These results support the feasibility of a unified framework
+    for structured, interactive, interpretable PSMA PET/CT analysis with voxel-level grounding within
+    a single multitask model architecture.'
+  url: https://arxiv.org/abs/2609.15603
+  pdf_url: https://arxiv.org/pdf/2609.15603v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 0
+citation_year: 2026

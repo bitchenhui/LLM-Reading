@@ -1,0 +1,42 @@
+id: paper:arxiv:2511.11071
+status: skipped
+score: 1
+track: video_image_coding
+matched:
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+meta:
+  title: Boosting Neural Video Representation via Online Structural Reparameterization
+  authors:
+  - Ziyi Li
+  - Qingyu Mao
+  - Shuai Liu
+  - Qilei Li
+  - Fanyang Meng
+  - Yongsheng Liang
+  published: '2025-11-14'
+  updated: '2025-11-14'
+  categories:
+  - eess.IV
+  - cs.CV
+  - cs.MM
+  abstract: Neural Video Representation~(NVR) is a promising paradigm for video compression, showing great
+    potential in improving video storage and transmission efficiency. While recent advances have made
+    efforts in architectural refinements to improve representational capability, these methods typically
+    involve complex designs, which may incur increased computational overhead and lack the flexibility
+    to integrate into other frameworks. Moreover, the inherent limitation in model capacity restricts
+    the expressiveness of NVR networks, resulting in a performance bottleneck. To overcome these limitations,
+    we propose Online-RepNeRV, a NVR framework based on online structural reparameterization. Specifically,
+    we propose a universal reparameterization block named ERB, which incorporates multiple parallel convolutional
+    paths to enhance the model capacity. To mitigate the overhead, an online reparameterization strategy
+    is adopted to dynamically fuse the parameters during training, and the multi-branch structure is equivalently
+    converted into a single-branch structure after training. As a result, the additional computational
+    and parameter complexity is confined to the encoding stage, without affecting the decoding efficiency.
+    Extensive experiments on mainstream video datasets demonstrate that our method achieves an average
+    PSNR gain of 0.37-2.7 dB over baseline methods, while maintaining comparable training time and decoding
+    speed.
+  url: https://arxiv.org/abs/2511.11071
+  pdf_url: https://arxiv.org/pdf/2511.11071v1
+  version: v1
+fetched: '2026-11-14'

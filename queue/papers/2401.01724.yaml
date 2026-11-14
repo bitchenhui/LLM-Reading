@@ -1,0 +1,39 @@
+id: paper:arxiv:2401.01724
+status: skipped
+score: 0
+track: processing_enhancement
+matched: []
+meta:
+  title: Lightweight Adaptive Feature De-drifting for Compressed Image Classification
+  authors:
+  - Long Peng
+  - Yang Cao
+  - Yuejin Sun
+  - Yang Wang
+  published: '2024-01-03'
+  updated: '2024-01-03'
+  categories:
+  - cs.CV
+  abstract: 'JPEG is a widely used compression scheme to efficiently reduce the volume of transmitted
+    images. The artifacts appear among blocks due to the information loss, which not only affects the
+    quality of images but also harms the subsequent high-level tasks in terms of feature drifting. High-level
+    vision models trained on high-quality images will suffer performance degradation when dealing with
+    compressed images, especially on mobile devices. Numerous learning-based JPEG artifact removal methods
+    have been proposed to handle visual artifacts. However, it is not an ideal choice to use these JPEG
+    artifact removal methods as a pre-processing for compressed image classification for the following
+    reasons: 1. These methods are designed for human vision rather than high-level vision models; 2. These
+    methods are not efficient enough to serve as pre-processing on resource-constrained devices. To address
+    these issues, this paper proposes a novel lightweight AFD module to boost the performance of pre-trained
+    image classification models when facing compressed images. First, a FDE-Net is devised to generate
+    the spatial-wise FDM in the DCT domain. Next, the estimated FDM is transmitted to the FE-Net to generate
+    the mapping relationship between degraded features and corresponding high-quality features. A simple
+    but effective RepConv block equipped with structural re-parameterization is utilized in FE-Net, which
+    enriches feature representation in the training phase while maintaining efficiency in the deployment
+    phase. After training on limited compressed images, the AFD-Module can serve as a "plug-and-play"
+    model for pre-trained classification models to improve their performance on compressed images. Experiments
+    demonstrate that our proposed AFD module can comprehensively improve the accuracy of the pre-trained
+    classification models and significantly outperform the existing methods.'
+  url: https://arxiv.org/abs/2401.01724
+  pdf_url: https://arxiv.org/pdf/2401.01724v1
+  version: v1
+fetched: '2026-11-14'

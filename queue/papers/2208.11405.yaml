@@ -1,0 +1,43 @@
+id: paper:arxiv:2208.11405
+status: skipped
+score: 1
+track: streaming_delivery
+matched:
+- ref: concept:WebRTC
+  count: 2
+  weight: 1
+meta:
+  title: Adaptive QoS of WebRTC for Vehicular Media Communications
+  authors:
+  - Ángel Martín
+  - Daniel Mejías
+  - Zaloa Fernández
+  - Roberto Viola
+  - Josu Pérez
+  - Mikel García
+  - Gorka Velez
+  - Jon Montalbán
+  - Pablo Angueira
+  published: '2022-08-24'
+  updated: '2022-08-24'
+  categories:
+  - cs.NI
+  - cs.CV
+  abstract: Vehicles shipping sensors for onboard systems are gaining connectivity. This enables information
+    sharing to realize a more comprehensive understanding of the environment. However, peer communication
+    through public cellular networks brings multiple networking hurdles to address, needing in-network
+    systems to relay communications and connect parties that cannot connect directly. Web Real-Time Communication
+    (WebRTC) is a good candidate for media streaming across vehicles as it enables low latency communications,
+    while bringing standard protocols to security handshake, discovering public IPs and transverse Network
+    Address Translation (NAT) systems. However, the end-to-end Quality of Service (QoS) adaptation in
+    an infrastructure where transmission and reception are decoupled by a relay, needs a mechanism to
+    adapt the video stream to the network capacity efficiently. To this end, this paper investigates a
+    mechanism to apply changes on resolution, framerate and bitrate by exploiting the Real Time Transport
+    Control Protocol (RTCP) metrics, such as bandwidth and round-trip time. The solution aims to ensure
+    that the receiving onboard system gets relevant information in time. The impact on end-to-end throughput
+    efficiency and reaction time when applying different approaches to QoS adaptation are analyzed in
+    a real 5G testbed.
+  url: https://arxiv.org/abs/2208.11405
+  pdf_url: https://arxiv.org/pdf/2208.11405v1
+  version: v1
+fetched: '2026-11-14'

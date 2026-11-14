@@ -1,0 +1,35 @@
+id: paper:arxiv:2404.06076
+status: skipped
+score: 0
+track: video_image_coding
+matched: []
+meta:
+  title: Image and Video Compression using Generative Sparse Representation with Fidelity Controls
+  authors:
+  - Wei Jiang
+  - Wei Wang
+  published: '2024-04-09'
+  updated: '2024-04-09'
+  categories:
+  - eess.IV
+  abstract: We propose a framework for learned image and video compression using the generative sparse
+    visual representation (SVR) guided by fidelity-preserving controls. By embedding inputs into a discrete
+    latent space spanned by learned visual codebooks, SVR-based compression transmits integer codeword
+    indices, which is efficient and cross-platform robust. However, high-quality (HQ) reconstruction in
+    the decoder relies on intermediate feature inputs from the encoder via direct connections. Due to
+    the prohibitively high transmission costs, previous SVR-based compression methods remove such feature
+    links, resulting in largely degraded reconstruction quality. In this work, we treat the intermediate
+    features as fidelity-preserving control signals that guide the conditioned generative reconstruction
+    in the decoder. Instead of discarding or directly transferring such signals, we draw them from a low-quality
+    (LQ) fidelity-preserving alternative input that is sent to the decoder with very low bitrate. These
+    control signals provide complementary fidelity cues to improve reconstruction, and their quality is
+    determined by the compression rate of the LQ alternative, which can be tuned to trade off bitrate,
+    fidelity and perceptual quality. Our framework can be conveniently used for both learned image compression
+    (LIC) and learned video compression (LVC). Since SVR is robust against input perturbations, a large
+    portion of codeword indices between adjacent frames can be the same. By only transferring different
+    indices, SVR-based LIC and LVC can share a similar processing pipeline. Experiments over standard
+    image and video compression benchmarks demonstrate the effectiveness of our approach.
+  url: https://arxiv.org/abs/2404.06076
+  pdf_url: https://arxiv.org/pdf/2404.06076v1
+  version: v1
+fetched: '2026-11-14'

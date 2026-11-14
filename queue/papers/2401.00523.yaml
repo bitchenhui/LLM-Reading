@@ -1,0 +1,37 @@
+id: paper:arxiv:2401.00523
+status: skipped
+score: 1
+track: processing_enhancement
+matched:
+- ref: concept:SuperResolution
+  count: 2
+  weight: 1
+meta:
+  title: Compressing Deep Image Super-resolution Models
+  authors:
+  - Yuxuan Jiang
+  - Jakub Nawala
+  - Fan Zhang
+  - David Bull
+  published: '2023-12-31'
+  updated: '2024-02-21'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: Deep learning techniques have been applied in the context of image super-resolution (SR),
+    achieving remarkable advances in terms of reconstruction performance. Existing techniques typically
+    employ highly complex model structures which result in large model sizes and slow inference speeds.
+    This often leads to high energy consumption and restricts their adoption for practical applications.
+    To address this issue, this work employs a three-stage workflow for compressing deep SR models which
+    significantly reduces their memory requirement. Restoration performance has been maintained through
+    teacher-student knowledge distillation using a newly designed distillation loss. We have applied this
+    approach to two popular image super-resolution networks, SwinIR and EDSR, to demonstrate its effectiveness.
+    The resulting compact models, SwinIRmini and EDSRmini, attain an 89% and 96% reduction in both model
+    size and floating-point operations (FLOPs) respectively, compared to their original versions. They
+    also retain competitive super-resolution performance compared to their original models and other commonly
+    used SR approaches. The source code and pre-trained models for these two lightweight SR approaches
+    are released at https://pikapi22.github.io/CDISM/.
+  url: https://arxiv.org/abs/2401.00523
+  pdf_url: https://arxiv.org/pdf/2401.00523v2
+  version: v2
+fetched: '2026-11-14'

@@ -1,0 +1,41 @@
+id: paper:arxiv:2505.12285
+status: pending
+score: 2
+track: self_improvement
+matched:
+- ref: concept:EoH
+  count: 1
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: 'CALM: Co-evolution of Algorithms and Language Model for Automatic Heuristic Design'
+  authors:
+  - Ziyao Huang
+  - Weiwei Wu
+  - Kui Wu
+  - Jianping Wang
+  - Wei-Bin Lee
+  published: '2025-05-18'
+  updated: '2025-05-18'
+  categories:
+  - cs.NE
+  abstract: Tackling complex optimization problems often relies on expert-designed heuristics, typically
+    crafted through extensive trial and error. Recent advances demonstrate that large language models
+    (LLMs), when integrated into well-designed evolutionary search frameworks, can autonomously discover
+    high-performing heuristics at a fraction of the traditional cost. However, existing approaches predominantly
+    rely on verbal guidance, i.e., manipulating the prompt generation process, to steer the evolution
+    of heuristics, without adapting the underlying LLM. We propose a hybrid framework that combines verbal
+    and numerical guidance, the latter achieved by fine-tuning the LLM via reinforcement learning based
+    on the quality of generated heuristics. This joint optimization allows the LLM to co-evolve with the
+    search process. Our method outperforms state-of-the-art (SOTA) baselines across various optimization
+    tasks, running locally on a single 24GB GPU using a 7B model with INT4 quantization. It surpasses
+    methods that rely solely on verbal guidance, even when those use significantly more powerful API-based
+    models.
+  url: https://arxiv.org/abs/2505.12285
+  pdf_url: https://arxiv.org/pdf/2505.12285v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 45
+citation_year: 2025

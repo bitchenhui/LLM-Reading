@@ -1,0 +1,38 @@
+id: paper:arxiv:2506.22362
+status: skipped
+score: 1
+track: audio_coding
+matched:
+- ref: concept:NeuralAudioCodec
+  count: 1
+  weight: 1
+meta:
+  title: 'DiffSoundStream: Efficient Speech Tokenization via Diffusion Decoding'
+  authors:
+  - Yang Yang
+  - Yunpeng Li
+  - George Sung
+  - Shao-Fu Shih
+  - Craig Dooley
+  - Alessio Centazzo
+  - Ramanan Rajeswaran
+  published: '2025-06-27'
+  updated: '2025-06-27'
+  categories:
+  - eess.AS
+  - cs.LG
+  abstract: 'Token-based language modeling is a prominent approach for speech generation, where tokens
+    are obtained by quantizing features from self-supervised learning (SSL) models and extracting codes
+    from neural speech codecs, generally referred to as semantic tokens and acoustic tokens. These tokens
+    are often modeled autoregressively, with the inference speed being constrained by the token rate.
+    In this work, we propose DiffSoundStream, a solution that improves the efficiency of speech tokenization
+    in non-streaming scenarios through two techniques: (1) conditioning the neural codec on semantic tokens
+    to minimize redundancy between semantic and acoustic tokens, and (2) leveraging latent diffusion models
+    to synthesize high-quality waveforms from semantic and coarse-level acoustic tokens. Experiments show
+    that at 50 tokens per second, DiffSoundStream achieves speech quality on par with a standard SoundStream
+    model operating at twice the token rate. Additionally, we achieve step-size distillation using just
+    four diffusion sampling steps with only a minor quality loss.'
+  url: https://arxiv.org/abs/2506.22362
+  pdf_url: https://arxiv.org/pdf/2506.22362v1
+  version: v1
+fetched: '2026-11-14'

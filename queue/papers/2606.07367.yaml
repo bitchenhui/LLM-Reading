@@ -1,0 +1,44 @@
+id: paper:arxiv:2606.07367
+status: pending
+score: 2
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 3
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: Self-evolving LLM agents with in-distribution Optimization
+  authors:
+  - Yudi Zhang
+  - Meng Fang
+  - Zhenfang Chen
+  - Mykola Pechenizkiy
+  published: '2026-06-05'
+  updated: '2026-06-05'
+  categories:
+  - cs.LG
+  abstract: 'Large Language Models (LLMs) have recently emerged as powerful controllers for interactive
+    agents in complex environments, yet training them to perform reliable long-horizon decision making
+    remains a fundamental challenge. A key difficulty lies in credit assignment: agents often receive
+    delayed rewards only at the end of episodes. In this paper, we propose Q-Evolve, a self-evolving framework
+    for LLM agents that unifies automatic process-reward labeling and policy learning within a principled
+    in-distribution reinforcement learning paradigm. In each evolving iteration, our method learns an
+    in-distribution critic from a hybrid off-policy dataset that combines expert demonstrations with agent-generated
+    trajectories, stabilizing Bellman backups in sparse-reward settings via a weighted Implicit Q-Learning
+    objective. The learned value function is then used to derive step-wise process rewards through advantage
+    estimation, enabling dense and reliable supervision without environment backtracking or human annotation.
+    Leveraging these signals, we perform behavior-proximal policy optimization that evolves the agent
+    over the data used for process reward labeling, allowing iterative self-improvement without exacerbating
+    distribution shift. We evaluate our method on AlfWorld, WebShop, and ScienceWorld, showing Q-Evolve
+    outperforms strong baselines in sample efficiency, robustness, and overall task performance. Our results
+    demonstrate that stable agent self-evolution is achievable through the co-evolution of process-level
+    supervision and policy, both grounded within a shared in-distribution learning loop.'
+  url: https://arxiv.org/abs/2606.07367
+  pdf_url: https://arxiv.org/pdf/2606.07367v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 5
+citation_year: 2026

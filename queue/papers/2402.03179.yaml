@@ -1,0 +1,33 @@
+id: paper:arxiv:2402.03179
+status: pending
+score: 3
+track: video_image_coding
+matched:
+- ref: codec:AVC
+  count: 1
+  weight: 3
+meta:
+  title: 'Cool-chic video: Learned video coding with 800 parameters'
+  authors:
+  - Thomas Leguay
+  - Théo Ladune
+  - Pierrick Philippe
+  - Olivier Déforges
+  published: '2024-02-05'
+  updated: '2024-02-06'
+  categories:
+  - eess.IV
+  - cs.LG
+  abstract: 'We propose a lightweight learned video codec with 900 multiplications per decoded pixel and
+    800 parameters overall. To the best of our knowledge, this is one of the neural video codecs with
+    the lowest decoding complexity. It is built upon the overfitted image codec Cool-chic and supplements
+    it with an inter coding module to leverage the video''s temporal redundancies. The proposed model
+    is able to compress videos using both low-delay and random access configurations and achieves rate-distortion
+    close to AVC while out-performing other overfitted codecs such as FFNeRV. The system is made open-source:
+    orange-opensource.github.io/Cool-Chic.'
+  url: https://arxiv.org/abs/2402.03179
+  pdf_url: https://arxiv.org/pdf/2402.03179v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 24
+citation_year: 2024

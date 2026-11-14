@@ -1,0 +1,35 @@
+id: paper:arxiv:2301.13358
+status: skipped
+score: 0
+track: processing_enhancement
+matched: []
+meta:
+  title: Hierarchical Disentangled Representation for Invertible Image Denoising and Beyond
+  authors:
+  - Wenchao Du
+  - Hu Chen
+  - Yi Zhang
+  - H. Yang
+  published: '2023-01-31'
+  updated: '2023-01-31'
+  categories:
+  - cs.CV
+  - eess.IV
+  abstract: Image denoising is a typical ill-posed problem due to complex degradation. Leading methods
+    based on normalizing flows have tried to solve this problem with an invertible transformation instead
+    of a deterministic mapping. However, the implicit bijective mapping is not explored well. Inspired
+    by a latent observation that noise tends to appear in the high-frequency part of the image, we propose
+    a fully invertible denoising method that injects the idea of disentangled learning into a general
+    invertible neural network to split noise from the high-frequency part. More specifically, we decompose
+    the noisy image into clean low-frequency and hybrid high-frequency parts with an invertible transformation
+    and then disentangle case-specific noise and high-frequency components in the latent space. In this
+    way, denoising is made tractable by inversely merging noiseless low and high-frequency parts. Furthermore,
+    we construct a flexible hierarchical disentangling framework, which aims to decompose most of the
+    low-frequency image information while disentangling noise from the high-frequency part in a coarse-to-fine
+    manner. Extensive experiments on real image denoising, JPEG compressed artifact removal, and medical
+    low-dose CT image restoration have demonstrated that the proposed method achieves competing performance
+    on both quantitative metrics and visual quality, with significantly less computational cost.
+  url: https://arxiv.org/abs/2301.13358
+  pdf_url: https://arxiv.org/pdf/2301.13358v1
+  version: v1
+fetched: '2026-11-14'

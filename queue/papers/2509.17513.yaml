@@ -1,0 +1,43 @@
+id: paper:arxiv:2509.17513
+status: skipped
+score: 1
+track: immersive_media
+matched:
+- ref: concept:VolumetricVideo
+  count: 2
+  weight: 1
+meta:
+  title: '4DGCPro: Efficient Hierarchical 4D Gaussian Compression for Progressive Volumetric Video Streaming'
+  authors:
+  - Zihan Zheng
+  - Zhenlong Wu
+  - Houqiang Zhong
+  - Yuan Tian
+  - Ning Cao
+  - Lan Xu
+  - Jiangchao Yao
+  - Xiaoyun Zhang
+  - Qiang Hu
+  - Wenjun Zhang
+  published: '2025-09-22'
+  updated: '2025-09-26'
+  categories:
+  - cs.CV
+  abstract: 'Achieving seamless viewing of high-fidelity volumetric video, comparable to 2D video experiences,
+    remains an open challenge. Existing volumetric video compression methods either lack the flexibility
+    to adjust quality and bitrate within a single model for efficient streaming across diverse networks
+    and devices, or struggle with real-time decoding and rendering on lightweight mobile platforms. To
+    address these challenges, we introduce 4DGCPro, a novel hierarchical 4D Gaussian compression framework
+    that facilitates real-time mobile decoding and high-quality rendering via progressive volumetric video
+    streaming in a single bitstream. Specifically, we propose a perceptually-weighted and compression-friendly
+    hierarchical 4D Gaussian representation with motion-aware adaptive grouping to reduce temporal redundancy,
+    preserve coherence, and enable scalable multi-level detail streaming. Furthermore, we present an end-to-end
+    entropy-optimized training scheme, which incorporates layer-wise rate-distortion (RD) supervision
+    and attribute-specific entropy modeling for efficient bitstream generation. Extensive experiments
+    show that 4DGCPro enables flexible quality and multiple bitrate within a single model, achieving real-time
+    decoding and rendering on mobile devices while outperforming existing methods in RD performance across
+    multiple datasets. Project Page: https://mediax-sjtu.github.io/4DGCPro'
+  url: https://arxiv.org/abs/2509.17513
+  pdf_url: https://arxiv.org/pdf/2509.17513v2
+  version: v2
+fetched: '2026-11-14'

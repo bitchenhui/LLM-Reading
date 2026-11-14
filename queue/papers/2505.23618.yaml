@@ -1,0 +1,33 @@
+id: paper:arxiv:2505.23618
+status: skipped_low_citation
+score: 3
+track: video_image_coding
+matched:
+- ref: codec:VVC
+  count: 2
+  weight: 3
+meta:
+  title: Low-Complexity Transform Adjustments For Video Coding
+  authors:
+  - Amir Said
+  - Hilmi E. Egilmez
+  - Yung-Hsuan Chao
+  published: '2025-05-29'
+  updated: '2025-05-29'
+  categories:
+  - eess.IV
+  abstract: Recent video codecs with multiple separable transforms can achieve significant coding gains
+    using asymmetric trigonometric transforms (DCTs and DSTs), because they can exploit diverse statistics
+    of residual block signals. However, they add excessive computational and memory complexity on large
+    transforms (32-point and larger), since their practical software and hardware implementations are
+    not as efficient as of the DCT-2. This article introduces a novel technique to design low-complexity
+    approximations of trigonometric transforms. The proposed method uses DCT-2 computations, and applies
+    orthogonal adjustments to approximate the most important basis vectors of the desired transform. Experimental
+    results on the Versatile Video Coding (VVC) reference software show that the proposed approach significantly
+    reduces the computational complexity, while providing practically identical coding efficiency.
+  url: https://arxiv.org/abs/2505.23618
+  pdf_url: https://arxiv.org/pdf/2505.23618v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 3
+citation_year: 2019

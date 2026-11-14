@@ -1,0 +1,40 @@
+id: paper:arxiv:2512.14061
+status: pending
+score: 2
+track: processing_enhancement
+matched:
+- ref: concept:DiffusionPrior
+  count: 1
+  weight: 1
+- ref: concept:SuperResolution
+  count: 1
+  weight: 1
+meta:
+  title: Bridging Fidelity-Reality with Controllable One-Step Diffusion for Image Super-Resolution
+  authors:
+  - Hao Chen
+  - Junyang Chen
+  - Jinshan Pan
+  - Jiangxin Dong
+  published: '2025-12-16'
+  updated: '2025-12-16'
+  categories:
+  - cs.CV
+  abstract: 'Recent diffusion-based one-step methods have shown remarkable progress in the field of image
+    super-resolution, yet they remain constrained by three critical limitations: (1) inferior fidelity
+    performance caused by the information loss from compression encoding of low-quality (LQ) inputs; (2)
+    insufficient region-discriminative activation of generative priors; (3) misalignment between text
+    prompts and their corresponding semantic regions. To address these limitations, we propose CODSR,
+    a controllable one-step diffusion network for image super-resolution. First, we propose an LQ-guided
+    feature modulation module that leverages original uncompressed information from LQ inputs to provide
+    high-fidelity conditioning for the diffusion process. We then develop a region-adaptive generative
+    prior activation method to effectively enhance perceptual richness without sacrificing local structural
+    fidelity. Finally, we employ a text-matching guidance strategy to fully harness the conditioning potential
+    of text prompts. Extensive experiments demonstrate that CODSR achieves superior perceptual quality
+    and competitive fidelity compared with state-of-the-art methods with efficient one-step inference.'
+  url: https://arxiv.org/abs/2512.14061
+  pdf_url: https://arxiv.org/pdf/2512.14061v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 6
+citation_year: 2025

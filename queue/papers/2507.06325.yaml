@@ -1,0 +1,31 @@
+id: paper:arxiv:2507.06325
+status: skipped
+score: 1
+track: video_image_coding
+matched:
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+meta:
+  title: Accelerating Fractal Image Compression Using Search Pruning and Fractal Dimension Gating
+  authors:
+  - Nastaran Pourshab
+  - Mohsen Bagheritabar
+  published: '2025-07-08'
+  updated: '2026-10-23'
+  categories:
+  - eess.IV
+  abstract: 'Fractal image compression (FIC) can achieve high compression ratios and fast decoding, but
+    its encoding stage requires an expensive search for matching image blocks. This paper evaluates two
+    implementation strategies for reducing this cost: isometry pruning, and fractal-dimension-based search
+    gating. The gating method uses a box-counting estimate of range-block complexity to determine whether
+    the domain-pool search should be performed. Experiments on the Monkey, Einstein, and Cameraman grayscale
+    images examine two domain/range block-size configurations. The results show that isometry pruning
+    substantially reduces total execution time. Combining isometry pruning with box-counting gating further
+    reduces the number of searched blocks and the bitrate, although the resulting reduction in PSNR depends
+    on the selected thresholds. These findings characterize the trade-off among execution time, bitrate,
+    and reconstruction quality.'
+  url: https://arxiv.org/abs/2507.06325
+  pdf_url: https://arxiv.org/pdf/2507.06325v3
+  version: v3
+fetched: '2026-11-14'

@@ -1,0 +1,43 @@
+id: paper:arxiv:2604.19159
+status: skipped_low_citation
+score: 2
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 3
+  weight: 1
+- ref: metric:SSIM
+  count: 2
+  weight: 1
+meta:
+  title: 'MSDS: Deep Structural Similarity with Multiscale Representation'
+  authors:
+  - Danling Kang
+  - Xue-Hua Chen
+  - Bin Liu
+  - Keke Zhang
+  - Weiling Chen
+  - Tiesong Zhao
+  published: '2026-04-21'
+  updated: '2026-04-21'
+  categories:
+  - cs.CV
+  - cs.LG
+  abstract: Deep-feature-based perceptual similarity models have demonstrated strong alignment with human
+    visual perception in Image Quality Assessment (IQA). However, most existing approaches operate at
+    a single spatial scale, implicitly assuming that structural similarity at a fixed resolution is sufficient.
+    The role of spatial scale in deep-feature similarity modeling thus remains insufficiently understood.
+    In this letter, we isolate spatial scale as an independent factor using a minimal multiscale extension
+    of DeepSSIM, referred to as Deep Structural Similarity with Multiscale Representation (MSDS). The
+    proposed framework decouples deep feature representation from cross-scale integration by computing
+    DeepSSIM independently across pyramid levels and fusing the resulting scores with a lightweight set
+    of learnable global weights. Experiments on multiple benchmark datasets demonstrate consistent and
+    statistically significant improvements over the single-scale baseline, while introducing negligible
+    additional complexity. The results empirically confirm spatial scale as a non-negligible factor in
+    deep perceptual similarity, isolated here via a minimal testbed.
+  url: https://arxiv.org/abs/2604.19159
+  pdf_url: https://arxiv.org/pdf/2604.19159v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 0
+citation_year: 2026

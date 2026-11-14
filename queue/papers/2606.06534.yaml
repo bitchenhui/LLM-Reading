@@ -1,0 +1,42 @@
+id: paper:arxiv:2606.06534
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: Attention Consistent Longitudinal Medical Visual Question Answering Guided by Vision Foundation
+    Models
+  authors:
+  - Jialin Wu
+  - Qianru Zhang
+  - Georges El Fakhri
+  - Xiaofeng Liu
+  published: '2026-06-03'
+  updated: '2026-06-03'
+  categories:
+  - eess.IV
+  - cs.AI
+  abstract: 'Longitudinal medical visual question answering (VQA) requires reasoning about anatomical
+    differences between an image of a current time point and an image of a referred time point. We propose
+    an attention-guided encoder-decoder for this task with chest X-rays. Instead of conventional direct
+    contrast, we propose to include a lightweight affine registration module to reduce nuisance motion
+    by co-registering the current image to the reference image with a small registration regularizer.
+    The registered image pair is fed into the image encoder, followed by a frozen DINO-based mask generator
+    and a trainable adaptive mask generator to produce masks applied to the original image pairs. The
+    masked image pairs are again fed into the image encoder and concatenated with text features as the
+    input to a multimodal transformer-based decoder to generate final answers. To facilitate learning
+    stabilization and clarify the change signal, inspired by DINO-v3, we include additional auxiliary
+    objectives, including a mask rebuilding loss, a pairwise Gram-style consistency loss, and a KoLeo
+    uniformity loss, which enhances the geometry of the representation. On the Medical-Diff-VQA benchmark,
+    the model delivers strong BLEU, ROUGE-L, CIDEr, and METEOR scores while offering intrinsic interpretability
+    through the shared saliency mask. These results support saliency-conditioned generation with mild
+    pre-alignment as a principled framework for longitudinal reasoning in medical VQA. Our training strategy
+    also illustrates the potential of a paradigm in utilizing image foundation models in biomedicine:
+    optimizing both supervised and unsupervised learning objectives simultaneously.'
+  url: https://arxiv.org/abs/2606.06534
+  pdf_url: https://arxiv.org/pdf/2606.06534v1
+  version: v1
+fetched: '2026-11-14'

@@ -1,0 +1,37 @@
+id: paper:arxiv:2605.23373
+status: skipped
+score: 0
+track: audio_coding
+matched: []
+meta:
+  title: 'AffectCodec: Emotion-Preserving Neural Speech Codec with Block-Diagonal Residual FSQ'
+  authors:
+  - Zhaoyang Meng
+  - Zhengyao Ma
+  - Kecan Mao
+  - Yingming Gao
+  - Ya Li
+  published: '2026-05-22'
+  updated: '2026-05-22'
+  categories:
+  - cs.SD
+  abstract: 'Neural speech codecs have become the discrete interface between raw audio and speech language
+    models, yet they remain optimized primarily for acoustic reconstruction fidelity, which leaves emotion-relevant
+    cues vulnerable to being discarded during quantization, limiting the affective capacity of downstream
+    models. We trace this degradation to two mechanisms: reconstruction-driven bit allocation under limited
+    bitrate and cross-stream leakage in concatenation-based codecs, where acoustic gradients can overwrite
+    nominally emotion-reserved dimensions. We propose AffectCodec, an emotion-preserving neural speech
+    codec built on Block-Diagonal Residual Finite Scalar Quantization (BD-RFSQ). By imposing block-diagonal
+    input and output projections over emotion and acoustic subspaces, BD-RFSQ transforms bit allocation
+    from implicit and loss-driven to explicit and structurally guaranteed, while still preserving a flat
+    token interface for downstream speech language models. AffectCodec further combines this structurally
+    constrained quantizer with multi-granularity emotion conditioning and multi-rate training, enabling
+    robust affect preservation at low bitrates. Experiments across multiple emotional speech benchmarks
+    show that AffectCodec substantially improves emotion preservation, especially in the low-bitrate regime,
+    while maintaining competitive acoustic quality and intelligibility. These results suggest that structurally
+    protected quantization is an effective principle for preserving emotion-relevant information and may
+    provide a general route toward attribute-aware neural speech compression.'
+  url: https://arxiv.org/abs/2605.23373
+  pdf_url: https://arxiv.org/pdf/2605.23373v1
+  version: v1
+fetched: '2026-11-14'

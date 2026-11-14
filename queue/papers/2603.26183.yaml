@@ -1,0 +1,54 @@
+id: paper:arxiv:2603.26183
+status: skipped_low_citation
+score: 8
+track: processing_enhancement
+matched:
+- ref: codec:G-PCC
+  count: 1
+  weight: 3
+- ref: codec:V-PCC
+  count: 1
+  weight: 3
+- ref: metric:BD-PSNR
+  count: 1
+  weight: 1
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+meta:
+  title: 'DUGAE: Unified Geometry and Attribute Enhancement via Spatiotemporal Correlations for G-PCC
+    Compressed Dynamic Point Clouds'
+  authors:
+  - Pan Zhao
+  - Hui Yuan
+  - Chang Sun
+  - Chongzhen Tian
+  - Raouf Hamzaoui
+  - Sam Kwong
+  published: '2026-03-27'
+  updated: '2026-03-27'
+  categories:
+  - cs.CV
+  abstract: 'Existing post-decoding quality enhancement methods for point clouds are designed for static
+    data and typically process each frame independently. As a result, they cannot effectively exploit
+    the spatiotemporal correlations present in point cloud sequences.We propose a unified geometry and
+    attribute enhancement framework (DUGAE) for G-PCC compressed dynamic point clouds that explicitly
+    exploits inter-frame spatiotemporal correlations in both geometry and attributes. First, a dynamic
+    geometry enhancement network (DGE-Net) based on sparse convolution (SPConv) and feature-domain geometry
+    motion compensation (GMC) aligns and aggregates spatiotemporal information. Then, a detail-aware k-nearest
+    neighbors (DA-KNN) recoloring module maps the original attributes onto the enhanced geometry at the
+    encoder side, improving mapping completeness and preserving attribute details. Finally, a dynamic
+    attribute enhancement network (DAE-Net) with dedicated temporal feature extraction and feature-domain
+    attribute motion compensation (AMC) refines attributes by modeling complex spatiotemporal correlations.
+    On seven dynamic point clouds from the 8iVFB v2, Owlii, and MVUB datasets, DUGAE significantly enhanced
+    the performance of the latest G-PCC geometry-based solid content test model (GeS-TM v10). For geometry
+    (D1), it achieved an average BD-PSNR gain of 11.03 dB and a 93.95% BD-bitrate reduction. For the luma
+    component, it achieved a 4.23 dB BD-PSNR gain with a 66.61% BD-bitrate reduction. DUGAE also improved
+    perceptual quality (as measured by PCQM) and outperformed V-PCC. Our source code will be released
+    on GitHub at: https://github.com/yuanhui0325/DUGAE'
+  url: https://arxiv.org/abs/2603.26183
+  pdf_url: https://arxiv.org/pdf/2603.26183v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 0
+citation_year: 2026

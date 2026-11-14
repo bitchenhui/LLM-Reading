@@ -1,0 +1,34 @@
+id: paper:arxiv:2507.07867
+status: skipped
+score: 0
+track: audio_coding
+matched: []
+meta:
+  title: 'Re-Bottleneck: Latent Re-Structuring for Neural Audio Autoencoders'
+  authors:
+  - Dimitrios Bralios
+  - Jonah Casebeer
+  - Paris Smaragdis
+  published: '2025-07-10'
+  updated: '2025-09-08'
+  categories:
+  - cs.SD
+  - cs.LG
+  - eess.AS
+  abstract: Neural audio codecs and autoencoders have emerged as versatile models for audio compression,
+    transmission, feature-extraction, and latent-space generation. However, a key limitation is that most
+    are trained to maximize reconstruction fidelity, often neglecting the specific latent structure necessary
+    for optimal performance in diverse downstream applications. We propose a simple, post-hoc framework
+    to address this by modifying the bottleneck of a pre-trained autoencoder. Our method introduces a
+    "Re-Bottleneck", an inner bottleneck trained exclusively through latent space losses to instill user-defined
+    structure. We demonstrate the framework's effectiveness in three experiments. First, we enforce an
+    ordering on latent channels without sacrificing reconstruction quality. Second, we align latents with
+    semantic embeddings, analyzing the impact on downstream diffusion modeling. Third, we introduce equivariance,
+    ensuring that a filtering operation on the input waveform directly corresponds to a specific transformation
+    in the latent space. Ultimately, our Re-Bottleneck framework offers a flexible and efficient way to
+    tailor representations of neural audio models, enabling them to seamlessly meet the varied demands
+    of different applications with minimal additional training.
+  url: https://arxiv.org/abs/2507.07867
+  pdf_url: https://arxiv.org/pdf/2507.07867v2
+  version: v2
+fetched: '2026-11-14'

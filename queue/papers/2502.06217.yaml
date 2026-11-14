@@ -1,0 +1,40 @@
+id: paper:arxiv:2502.06217
+status: skipped
+score: 1
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+meta:
+  title: Examining False Positives under Inference Scaling for Mathematical Reasoning
+  authors:
+  - Yu Wang
+  - Nan Yang
+  - Liang Wang
+  - Furu Wei
+  - Fuli Feng
+  published: '2025-02-10'
+  updated: '2025-09-18'
+  categories:
+  - cs.CL
+  - cs.AI
+  abstract: 'Recent advancements in language models have led to significant improvements in mathematical
+    reasoning across various benchmarks. However, most of these benchmarks rely on automatic evaluation
+    methods that only compare final answers using heuristics, without verifying the underlying reasoning
+    steps. This limitation results in false positive solutions, where models may produce correct final
+    answers but with flawed deduction paths. In this paper, we systematically examine the prevalence of
+    false positive solutions in mathematical problem solving for language models. We analyze the characteristics
+    and extent of this issue across different open-source models, datasets of varying difficulty levels,
+    and decoding strategies. Specifically, we explore how false positives influence the inference time
+    scaling behavior of language models. Our experimental results reveal that: (1) false positive solutions
+    persist across different models, datasets, and decoding methods, (2) sampling-based inference time
+    scaling methods do not alleviate the problem, and (3) the pass@N evaluation metric is more susceptible
+    to false positives, suggesting a significantly lower scaling ceiling than what automatic evaluations
+    indicate. Additionally, we analyze specific instances of false positives and discuss potential limitations
+    in self-improvement techniques and synthetic data generation under such conditions. Our data and code
+    are publicly available at https://github.com/Wloner0809/False-Positives-in-Math.'
+  url: https://arxiv.org/abs/2502.06217
+  pdf_url: https://arxiv.org/pdf/2502.06217v2
+  version: v2
+fetched: '2026-11-14'

@@ -1,0 +1,44 @@
+id: paper:arxiv:2410.07669
+status: skipped
+score: 2
+track: video_image_coding
+matched:
+- ref: concept:ICM
+  count: 3
+  weight: 1
+- ref: concept:EntropyModel
+  count: 1
+  weight: 1
+meta:
+  title: 'Delta-ICM: Entropy Modeling with Delta Function for Learned Image Compression'
+  authors:
+  - Takahiro Shindo
+  - Taiju Watanabe
+  - Yui Tatsumi
+  - Hiroshi Watanabe
+  published: '2024-10-10'
+  updated: '2024-10-16'
+  categories:
+  - cs.CV
+  - eess.IV
+  abstract: Image Coding for Machines (ICM) is becoming more important as research in computer vision
+    progresses. ICM is a vital research field that pursues the use of images for image recognition models,
+    facilitating efficient image transmission and storage. The demand for recognition models is growing
+    rapidly among the general public, and their performance continues to improve. To meet these needs,
+    exchanging image data between consumer devices and cloud AI using ICM technology could be one possible
+    solution. In ICM, various image compression methods have adopted Learned Image Compression (LIC).
+    LIC includes an entropy model for estimating the bitrate of latent features, and the design of this
+    model significantly affects its performance. Typically, LIC methods assume that the distribution of
+    latent features follows a normal distribution. This assumption is effective for compressing images
+    intended for human vision. However, employing an entropy model based on normal distribution is inefficient
+    in ICM due to the limitation of image parts that require precise decoding. To address this, we propose
+    Delta-ICM, which uses a probability distribution based on a delta function. Assuming the delta distribution
+    as a distribution of latent features reduces the entropy of image portions unnecessary for machines.
+    We compress the remaining portions using an entropy model based on normal distribution, similar to
+    existing methods. Delta-ICM selects between the entropy model based on the delta distribution and
+    the one based on the normal distribution for each latent feature. Our method outperforms existing
+    ICM methods in image compression performance aimed at machines.
+  url: https://arxiv.org/abs/2410.07669
+  pdf_url: https://arxiv.org/pdf/2410.07669v2
+  version: v2
+fetched: '2026-11-14'

@@ -1,0 +1,66 @@
+id: paper:arxiv:2605.02913
+status: pending
+score: 2
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 3
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: 'Generate, Filter, Control, Replay: A Comprehensive Survey of Rollout Strategies for LLM Reinforcement
+    Learning'
+  authors:
+  - Rohan Surana
+  - Gagan Mundada
+  - Xunyi Jiang
+  - Chuhan Wang
+  - Zhenwei Tang
+  - Difan Jiao
+  - Zihan Huang
+  - Yuxin Xiong
+  - Junda Wu
+  - Sheldon Yu
+  - Xintong Li
+  - Raghav Jain
+  - Nikki Kuang
+  - Sizhe Zhou
+  - Bowen Jin
+  - Zhendong Chu
+  - Tong Yu
+  - Ryan Rossi
+  - Kuan-Hao Huang
+  - Jingbo Shang
+  - Jiawei Han
+  - Julian McAuley
+  published: '2026-04-08'
+  updated: '2026-04-08'
+  categories:
+  - cs.LG
+  abstract: 'Reinforcement learning (RL) has become a central post-training tool for improving the reasoning
+    abilities of large language models (LLMs). In these systems, the rollout, the trajectory sampled from
+    a prompt to termination, including intermediate reasoning steps and optional tool or environment interactions,
+    determines the data the optimizer learns from, yet rollout design is often underreported. This survey
+    provides an optimizer-agnostic view of rollout strategies for RL-based post-training of reasoning
+    LLMs. We formalize rollout pipelines with unified notation and introduce Generate-Filter-Control-Replay
+    (GFCR), a lifecycle taxonomy that decomposes rollout pipelines into four modular stages: Generate
+    proposes candidate trajectories and topologies; Filter constructs intermediate signals via verifiers,
+    judges, critics; Control allocates compute and makes continuation/branching/stopping decisions under
+    budgets; and Replay retains and reuses artifacts across rollouts without weight updates, including
+    self-evolving curricula that autonomously generate new training tasks. We complement GFCR with a criterion
+    taxonomy of reliability, coverage, and cost sensitivity that characterizes rollout trade-offs. Using
+    this framework, we synthesize methods spanning RL with verifiable rewards, process supervision, judge-based
+    gating, guided and tree/segment rollouts, adaptive compute allocation, early-exit and partial rollouts,
+    throughput optimization, and replay/recomposition for self-improvement. We ground the framework with
+    case studies in math, code/SQL, multimodal reasoning, tool-using agents, and agentic skill benchmarks
+    that evaluate skill induction, reuse, and cross-task transfer. Finally, we provide a diagnostic index
+    that maps common rollout pathologies to GFCR modules and mitigation levers, alongside open challenges
+    for building reproducible, compute-efficient, and trustworthy rollout pipelines.'
+  url: https://arxiv.org/abs/2605.02913
+  pdf_url: https://arxiv.org/pdf/2605.02913v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 12
+citation_year: 2026

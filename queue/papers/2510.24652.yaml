@@ -1,0 +1,35 @@
+id: paper:arxiv:2510.24652
+status: skipped
+score: 1
+track: self_improvement
+matched:
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: Optimizing Retrieval for RAG via Reinforcement Learning
+  authors:
+  - Jiawei Zhou
+  - Lei Chen
+  published: '2025-10-28'
+  updated: '2026-01-01'
+  categories:
+  - cs.CL
+  - cs.IR
+  abstract: As retrieval-augmented generation (RAG) becomes more widespread, the role of retrieval is
+    shifting from retrieving information for human browsing to retrieving context for AI reasoning. This
+    shift creates more complex search environments, where relevance is difficult to pre-define. Existing
+    retrievers rely on supervised fine-tuning (SFT) with human labels or synthetic data, resulting in
+    static relevance that struggles to adapt to diverse RAG environments. To address this challenge, we
+    propose R3, a Retrieval framework optimized for RAG through Reinforcement learning (RL). Specifically,
+    we adopt an RL training paradigm that enables the retriever to explore and self-improve within given
+    RAG environments, automating the learning process with minimal manual experimentation or tuning effort.
+    Extensive experiments across diverse tasks demonstrate that R3 improves RAG performance by 5.2% over
+    the original retriever and surpasses state-of-the-art retrievers by 4.9%, while achieving comparable
+    results to LLM-augmented retrieval and RAG systems built on post-trained or instruction-tuned LLMs.
+    It is both efficient and practical, requiring only 4 GPUs and completing training within a single
+    day.
+  url: https://arxiv.org/abs/2510.24652
+  pdf_url: https://arxiv.org/pdf/2510.24652v2
+  version: v2
+fetched: '2026-11-14'

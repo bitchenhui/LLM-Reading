@@ -1,0 +1,35 @@
+id: paper:arxiv:2602.15082
+status: skipped
+score: 0
+track: audio_coding
+matched: []
+meta:
+  title: 'S-PRESSO: Ultra Low Bitrate Sound Effect Compression With Diffusion Autoencoders And Offline
+    Quantization'
+  authors:
+  - Zineb Lahrichi
+  - Gaëtan Hadjeres
+  - Gaël Richard
+  - Geoffroy Peeters
+  published: '2026-02-16'
+  updated: '2026-02-23'
+  categories:
+  - cs.SD
+  - cs.AI
+  - cs.MM
+  abstract: Neural audio compression models have recently achieved extreme compression rates, enabling
+    efficient latent generative modeling. Conversely, latent generative models have been applied to compression,
+    pushing the limits of continuous and discrete approaches. However, existing methods remain constrained
+    to low-resolution audio and degrade substantially at very low bitrates, where audible artifacts are
+    prominent. In this paper, we present S-PRESSO, a 48kHz sound effect compression model that produces
+    both continuous and discrete embeddings at ultra-low bitrates, down to 0.096 kbps, via offline quantization.
+    Our model relies on a pretrained latent diffusion model to decode compressed audio embeddings learned
+    by a latent encoder. Leveraging the generative priors of the diffusion decoder, we achieve extremely
+    low frame rates, down to 1Hz (750x compression rate), producing convincing and realistic reconstructions
+    at the cost of exact fidelity. Despite operating at high compression rates, we demonstrate that S-PRESSO
+    outperforms both continuous and discrete baselines in audio quality, acoustic similarity and reconstruction
+    metrics.
+  url: https://arxiv.org/abs/2602.15082
+  pdf_url: https://arxiv.org/pdf/2602.15082v2
+  version: v2
+fetched: '2026-11-14'

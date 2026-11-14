@@ -1,0 +1,41 @@
+id: paper:arxiv:2409.08130
+status: skipped
+score: 1
+track: immersive_media
+matched:
+- ref: org:MPEG
+  count: 1
+  weight: 1
+meta:
+  title: 'The JPEG Pleno Learning-based Point Cloud Coding Standard: Serving Man and Machine'
+  authors:
+  - André F. R. Guarda
+  - Nuno M. M. Rodrigues
+  - Fernando Pereira
+  published: '2024-09-12'
+  updated: '2025-03-11'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: Efficient point cloud coding has become increasingly critical for multiple applications such
+    as virtual reality, autonomous driving, and digital twin systems, where rich and interactive 3D data
+    representations may functionally make the difference. Deep learning has emerged as a powerful tool
+    in this domain, offering advanced techniques for compressing point clouds more efficiently than conventional
+    coding methods while also allowing effective computer vision tasks performed in the compressed domain
+    thus, for the first time, making available a common compressed visual representation effective for
+    both man and machine. Taking advantage of this potential, JPEG has recently finalized the JPEG Pleno
+    Learning-based Point Cloud Coding (PCC) standard offering efficient lossy coding of static point clouds,
+    targeting both human visualization and machine processing by leveraging deep learning models for geometry
+    and color coding. The geometry is processed directly in its original 3D form using sparse convolutional
+    neural networks, while the color data is projected onto 2D images and encoded using the also learning-based
+    JPEG AI standard. The goal of this paper is to provide a complete technical description of the JPEG
+    PCC standard, along with a thorough benchmarking of its performance against the state-of-the-art,
+    while highlighting its main strengths and weaknesses. In terms of compression performance, JPEG PCC
+    outperforms the conventional MPEG PCC standards, especially in geometry coding, achieving significant
+    rate reductions. Color compression performance is less competitive but this is overcome by the power
+    of a full learning-based coding framework for both geometry and color and the associated effective
+    compressed domain processing.
+  url: https://arxiv.org/abs/2409.08130
+  pdf_url: https://arxiv.org/pdf/2409.08130v2
+  version: v2
+fetched: '2026-11-14'

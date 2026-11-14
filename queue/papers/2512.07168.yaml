@@ -1,0 +1,36 @@
+id: paper:arxiv:2512.07168
+status: skipped
+score: 0
+track: audio_coding
+matched: []
+meta:
+  title: 'JEPA as a Neural Tokenizer: Learning Robust Speech Representations with Density Adaptive Attention'
+  authors:
+  - Georgios Ioannides
+  - Christos Constantinou
+  - Aman Chadha
+  - Aaron Elkins
+  - Linsey Pang
+  - Ravid Shwartz-Ziv
+  - Yann LeCun
+  published: '2025-12-08'
+  updated: '2025-12-08'
+  categories:
+  - cs.SD
+  - cs.AI
+  - cs.LG
+  - eess.AS
+  abstract: We introduce a two-stage self-supervised framework that combines the Joint-Embedding Predictive
+    Architecture (JEPA) with a Density Adaptive Attention Mechanism (DAAM) for learning robust speech
+    representations. Stage~1 uses JEPA with DAAM to learn semantic audio features via masked prediction
+    in latent space, fully decoupled from waveform reconstruction. Stage~2 leverages these representations
+    for efficient tokenization using Finite Scalar Quantization (FSQ) and a mixed-radix packing scheme,
+    followed by high-fidelity waveform reconstruction with a HiFi-GAN decoder. By integrating Gaussian
+    mixture-based density-adaptive gating into the JEPA encoder, the model performs adaptive temporal
+    feature selection and discovers hierarchical speech structure at a low frame rate of 2.5~Hz. The resulting
+    tokens (47.5 tokens/sec) provide a reversible, highly compressed, and language-model-friendly representation
+    that is competitive with, and often more efficient than, existing neural audio codecs.
+  url: https://arxiv.org/abs/2512.07168
+  pdf_url: https://arxiv.org/pdf/2512.07168v1
+  version: v1
+fetched: '2026-11-14'

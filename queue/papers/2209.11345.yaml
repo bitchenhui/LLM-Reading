@@ -1,0 +1,38 @@
+id: paper:arxiv:2209.11345
+status: skipped
+score: 1
+track: processing_enhancement
+matched:
+- ref: concept:SuperResolution
+  count: 1
+  weight: 1
+meta:
+  title: 'Swin2SR: SwinV2 Transformer for Compressed Image Super-Resolution and Restoration'
+  authors:
+  - Marcos V. Conde
+  - Ui-Jin Choi
+  - Maxime Burchi
+  - Radu Timofte
+  published: '2022-09-22'
+  updated: '2022-09-22'
+  categories:
+  - cs.CV
+  - eess.IV
+  abstract: 'Compression plays an important role on the efficient transmission and storage of images and
+    videos through band-limited systems such as streaming services, virtual reality or videogames. However,
+    compression unavoidably leads to artifacts and the loss of the original information, which may severely
+    degrade the visual quality. For these reasons, quality enhancement of compressed images has become
+    a popular research topic. While most state-of-the-art image restoration methods are based on convolutional
+    neural networks, other transformers-based methods such as SwinIR, show impressive performance on these
+    tasks. In this paper, we explore the novel Swin Transformer V2, to improve SwinIR for image super-resolution,
+    and in particular, the compressed input scenario. Using this method we can tackle the major issues
+    in training transformer vision models, such as training instability, resolution gaps between pre-training
+    and fine-tuning, and hunger on data. We conduct experiments on three representative tasks: JPEG compression
+    artifacts removal, image super-resolution (classical and lightweight), and compressed image super-resolution.
+    Experimental results demonstrate that our method, Swin2SR, can improve the training convergence and
+    performance of SwinIR, and is a top-5 solution at the "AIM 2022 Challenge on Super-Resolution of Compressed
+    Image and Video".'
+  url: https://arxiv.org/abs/2209.11345
+  pdf_url: https://arxiv.org/pdf/2209.11345v1
+  version: v1
+fetched: '2026-11-14'

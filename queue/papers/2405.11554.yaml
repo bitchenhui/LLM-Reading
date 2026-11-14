@@ -1,0 +1,29 @@
+id: paper:arxiv:2405.11554
+status: skipped
+score: 0
+track: audio_coding
+matched: []
+meta:
+  title: 'DAC-JAX: A JAX Implementation of the Descript Audio Codec'
+  authors:
+  - David Braun
+  published: '2024-05-19'
+  updated: '2024-05-19'
+  categories:
+  - cs.SD
+  - eess.AS
+  abstract: We present an open-source implementation of the Descript Audio Codec (DAC) using Google's
+    JAX ecosystem of Flax, Optax, Orbax, AUX, and CLU. Our codebase enables the reuse of model weights
+    from the original PyTorch DAC, and we confirm that the two implementations produce equivalent token
+    sequences and decoded audio if given the same input. We provide a training and fine-tuning script
+    which supports device parallelism, although we have only verified it using brief training runs with
+    a small dataset. Even with limited GPU memory, the original DAC can compress or decompress a long
+    audio file by processing it as a sequence of overlapping "chunks." We implement this feature in JAX
+    and benchmark the performance on two types of GPUs. On a consumer-grade GPU, DAC-JAX outperforms the
+    original DAC for compression and decompression at all chunk sizes. However, on a high-performance,
+    cluster-based GPU, DAC-JAX outperforms the original DAC for small chunk sizes but performs worse for
+    large chunks.
+  url: https://arxiv.org/abs/2405.11554
+  pdf_url: https://arxiv.org/pdf/2405.11554v1
+  version: v1
+fetched: '2026-11-14'

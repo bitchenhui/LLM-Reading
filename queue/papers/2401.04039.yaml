@@ -1,0 +1,47 @@
+id: paper:arxiv:2401.04039
+status: pending
+score: 3
+track: video_image_coding
+matched:
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+- ref: metric:SSIM
+  count: 1
+  weight: 1
+- ref: metric:VMAF
+  count: 1
+  weight: 1
+meta:
+  title: 'Bjøntegaard Delta (BD): A Tutorial Overview of the Metric, Evolution, Challenges, and Recommendations'
+  authors:
+  - Nabajeet Barman
+  - Maria G. Martini
+  - Yuriy Reznik
+  published: '2024-01-08'
+  updated: '2024-01-08'
+  categories:
+  - cs.MM
+  - cs.IT
+  - eess.IV
+  abstract: The Bjøntegaard Delta (BD) method proposed in 2001 has become a popular tool for comparing
+    video codec compression efficiency. It was initially proposed to compute bitrate and quality differences
+    between two Rate-Distortion curves using PSNR as a distortion metric. Over the years, many works have
+    calculated and reported BD results using other objective quality metrics such as SSIM, VMAF and, in
+    some cases, even subjective ratings (mean opinion scores). However, the lack of consolidated literature
+    explaining the metric, its evolution over the years, and a systematic evaluation of the same under
+    different test conditions can result in a wrong interpretation of the BD results thus obtained. Towards
+    this end, this paper presents a detailed tutorial describing the BD method and example cases where
+    the metric might fail. We also provide a detailed history of its evolution, including a discussion
+    of various proposed improvements and variations over the last 20 years. In addition, we evaluate the
+    various BD methods and their open-source implementations, considering different objective quality
+    metrics and subjective ratings taking into account different RD characteristics. Based on our results,
+    we present a set of recommendations on using existing BD metrics and various insights for possible
+    exploration towards developing more effective tools for codec compression efficiency evaluation and
+    comparison.
+  url: https://arxiv.org/abs/2401.04039
+  pdf_url: https://arxiv.org/pdf/2401.04039v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 23
+citation_year: 2024

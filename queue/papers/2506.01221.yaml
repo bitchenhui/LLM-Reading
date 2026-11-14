@@ -1,0 +1,34 @@
+id: paper:arxiv:2506.01221
+status: skipped
+score: 1
+track: video_image_coding
+matched:
+- ref: metric:BD-Rate
+  count: 1
+  weight: 1
+meta:
+  title: Flexible Mixed Precision Quantization for Learned Image Compression
+  authors:
+  - Md Adnan Faisal Hossain
+  - Zhihao Duan
+  - Fengqing Zhu
+  published: '2025-06-02'
+  updated: '2025-06-02'
+  categories:
+  - eess.IV
+  - cs.LG
+  abstract: Despite its improvements in coding performance compared to traditional codecs, Learned Image
+    Compression (LIC) suffers from large computational costs for storage and deployment. Model quantization
+    offers an effective solution to reduce the computational complexity of LIC models. However, most existing
+    works perform fixed-precision quantization which suffers from sub-optimal utilization of resources
+    due to the varying sensitivity to quantization of different layers of a neural network. In this paper,
+    we propose a Flexible Mixed Precision Quantization (FMPQ) method that assigns different bit-widths
+    to different layers of the quantized network using the fractional change in rate-distortion loss as
+    the bit-assignment criterion. We also introduce an adaptive search algorithm which reduces the time-complexity
+    of searching for the desired distribution of quantization bit-widths given a fixed model size. Evaluation
+    of our method shows improved BD-Rate performance under similar model size constraints compared to
+    other works on quantization of LIC models. We have made the source code available at gitlab.com/viper-purdue/fmpq.
+  url: https://arxiv.org/abs/2506.01221
+  pdf_url: https://arxiv.org/pdf/2506.01221v1
+  version: v1
+fetched: '2026-11-14'

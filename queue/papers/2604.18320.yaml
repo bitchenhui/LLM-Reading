@@ -1,0 +1,47 @@
+id: paper:arxiv:2604.18320
+status: pending
+score: 2
+track: quality_assessment
+matched:
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'EVE: Verifiable Self-Evolution of MLLMs via Executable Visual Transformations'
+  authors:
+  - Yongrui Heng
+  - Chaoya Jiang
+  - Han Yang
+  - Shikun Zhang
+  - Wei Ye
+  published: '2026-04-20'
+  updated: '2026-04-20'
+  categories:
+  - cs.CV
+  - cs.AI
+  abstract: 'Self-evolution of multimodal large language models (MLLMs) remains a critical challenge:
+    pseudo-label-based methods suffer from progressive quality degradation as model predictions drift,
+    while template-based methods are confined to a static set of transformations that cannot adapt in
+    difficulty or diversity. We contend that robust, continuous self-improvement requires not only deterministic
+    external feedback independent of the model''s internal certainty, but also a mechanism to perpetually
+    diversify the training distribution. To this end, we introduce EVE (Executable Visual transformation-based
+    self-Evolution), a novel framework that entirely bypasses pseudo-labels by harnessing executable visual
+    transformations continuously enriched in both variety and complexity. EVE adopts a Challenger-Solver
+    dual-policy architecture. The Challenger maintains and progressively expands a queue of visual transformation
+    code examples, from which it synthesizes novel Python scripts to perform dynamic visual transformations.
+    Executing these scripts yields VQA problems with absolute, execution-verified ground-truth answers,
+    eliminating any reliance on model-generated supervision. A multi-dimensional reward system integrating
+    semantic diversity and dynamic difficulty calibration steers the Challenger to enrich its code example
+    queue while posing progressively more challenging tasks, preventing mode collapse and fostering reciprocal
+    co-evolution between the two policies. Extensive experiments demonstrate that EVE consistently surpasses
+    existing self-evolution methods, establishing a robust and scalable paradigm for verifiable MLLM self-evolution.
+    The code is available at https://github.com/0001Henry/EVE .'
+  url: https://arxiv.org/abs/2604.18320
+  pdf_url: https://arxiv.org/pdf/2604.18320v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 5
+citation_year: 2026

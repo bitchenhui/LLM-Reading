@@ -1,0 +1,44 @@
+id: paper:arxiv:2509.18713
+status: pending
+score: 2
+track: self_improvement
+matched:
+- ref: concept:LLM
+  count: 2
+  weight: 1
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+meta:
+  title: 'MemOrb: A Plug-and-Play Verbal-Reinforcement Memory Layer for E-Commerce Customer Service'
+  authors:
+  - Yizhe Huang
+  - Yang Liu
+  - Ruiyu Zhao
+  - Xiaolong Zhong
+  - Xingming Yue
+  - Ling Jiang
+  published: '2025-09-23'
+  updated: '2025-09-23'
+  categories:
+  - cs.CL
+  - cs.AI
+  abstract: 'Large Language Model-based agents(LLM-based agents) are increasingly deployed in customer
+    service, yet they often forget across sessions, repeat errors, and lack mechanisms for continual self-improvement.
+    This makes them unreliable in dynamic settings where stability and consistency are critical. To better
+    evaluate these properties, we emphasize two indicators: task success rate as a measure of overall
+    effectiveness, and consistency metrics such as Pass$^k$ to capture reliability across multiple trials.
+    To address the limitations of existing approaches, we propose MemOrb, a lightweight and plug-and-play
+    verbal reinforcement memory layer that distills multi-turn interactions into compact strategy reflections.
+    These reflections are stored in a shared memory bank and retrieved to guide decision-making, without
+    requiring any fine-tuning. Experiments show that MemOrb significantly improves both success rate and
+    stability, achieving up to a 63 percentage-point gain in multi-turn success rate and delivering more
+    consistent performance across repeated trials. Our results demonstrate that structured reflection
+    is a powerful mechanism for enhancing long-term reliability of frozen LLM agents in customer service
+    scenarios.'
+  url: https://arxiv.org/abs/2509.18713
+  pdf_url: https://arxiv.org/pdf/2509.18713v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 6
+citation_year: 2025

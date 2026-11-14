@@ -1,0 +1,37 @@
+id: paper:arxiv:2209.08240
+status: skipped
+score: 1
+track: processing_enhancement
+matched:
+- ref: concept:SuperResolution
+  count: 1
+  weight: 1
+meta:
+  title: Deep Plug-and-Play Prior for Hyperspectral Image Restoration
+  authors:
+  - Zeqiang Lai
+  - Kaixuan Wei
+  - Ying Fu
+  published: '2022-09-17'
+  updated: '2022-09-17'
+  categories:
+  - eess.IV
+  - cs.CV
+  - cs.LG
+  abstract: Deep-learning-based hyperspectral image (HSI) restoration methods have gained great popularity
+    for their remarkable performance but often demand expensive network retraining whenever the specifics
+    of task changes. In this paper, we propose to restore HSIs in a unified approach with an effective
+    plug-and-play method, which can jointly retain the flexibility of optimization-based methods and utilize
+    the powerful representation capability of deep neural networks. Specifically, we first develop a new
+    deep HSI denoiser leveraging gated recurrent convolution units, short- and long-term skip connections,
+    and an augmented noise level map to better exploit the abundant spatio-spectral information within
+    HSIs. It, therefore, leads to the state-of-the-art performance on HSI denoising under both Gaussian
+    and complex noise settings. Then, the proposed denoiser is inserted into the plug-and-play framework
+    as a powerful implicit HSI prior to tackle various HSI restoration tasks. Through extensive experiments
+    on HSI super-resolution, compressed sensing, and inpainting, we demonstrate that our approach often
+    achieves superior performance, which is competitive with or even better than the state-of-the-art
+    on each task, via a single model without any task-specific training.
+  url: https://arxiv.org/abs/2209.08240
+  pdf_url: https://arxiv.org/pdf/2209.08240v1
+  version: v1
+fetched: '2026-11-14'

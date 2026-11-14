@@ -1,0 +1,40 @@
+id: paper:arxiv:2207.03067
+status: pending
+score: 3
+track: audio_coding
+matched:
+- ref: codec:Opus
+  count: 1
+  weight: 3
+meta:
+  title: Cross-Scale Vector Quantization for Scalable Neural Speech Coding
+  authors:
+  - Xue Jiang
+  - Xiulian Peng
+  - Huaying Xue
+  - Yuan Zhang
+  - Yan Lu
+  published: '2022-07-07'
+  updated: '2022-07-07'
+  categories:
+  - cs.SD
+  - cs.LG
+  - eess.AS
+  abstract: Bitrate scalability is a desirable feature for audio coding in real-time communications. Existing
+    neural audio codecs usually enforce a specific bitrate during training, so different models need to
+    be trained for each target bitrate, which increases the memory footprint at the sender and the receiver
+    side and transcoding is often needed to support multiple receivers. In this paper, we introduce a
+    cross-scale scalable vector quantization scheme (CSVQ), in which multi-scale features are encoded
+    progressively with stepwise feature fusion and refinement. In this way, a coarse-level signal is reconstructed
+    if only a portion of the bitstream is received, and progressively improves the quality as more bits
+    are available. The proposed CSVQ scheme can be flexibly applied to any neural audio coding network
+    with a mirrored auto-encoder structure to achieve bitrate scalability. Subjective results show that
+    the proposed scheme outperforms the classical residual VQ (RVQ) with scalability. Moreover, the proposed
+    CSVQ at 3 kbps outperforms Opus at 9 kbps and Lyra at 3kbps and it could provide a graceful quality
+    boost with bitrate increase.
+  url: https://arxiv.org/abs/2207.03067
+  pdf_url: https://arxiv.org/pdf/2207.03067v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 12
+citation_year: 2022

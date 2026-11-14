@@ -1,0 +1,28 @@
+id: paper:arxiv:2410.08325
+status: skipped
+score: 0
+track: audio_coding
+matched: []
+meta:
+  title: Low Bitrate High-Quality RVQGAN-based Discrete Speech Tokenizer
+  authors:
+  - Slava Shechtman
+  - Avihu Dekel
+  published: '2024-10-10'
+  updated: '2024-10-10'
+  categories:
+  - eess.AS
+  abstract: Discrete Audio codecs (or audio tokenizers) have recently regained interest due to the ability
+    of Large Language Models (LLMs) to learn their compressed acoustic representations. Various publicly
+    available trainable discrete tokenizers recently demonstrated impressive results for audio tokenization,
+    yet they mostly require high token rates to gain high-quality reconstruction. In this study, we fine-tuned
+    an open-source general audio RVQGAN model using diverse open-source speech data, considering various
+    recording conditions and quality levels. The resulting wideband (24kHz) speech-only model achieves
+    speech reconstruction, which is nearly indistinguishable from PCM (pulse-code modulation) with a rate
+    of 150-300 tokens per second (1500-3000 bps). The evaluation used comprehensive English speech data
+    encompassing different recording conditions, including studio settings. Speech samples are made publicly
+    available in http://ibm.biz/IS24SpeechRVQ . The model is officially released in https://huggingface.co/ibm/DAC.speech.v1.0
+  url: https://arxiv.org/abs/2410.08325
+  pdf_url: https://arxiv.org/pdf/2410.08325v1
+  version: v1
+fetched: '2026-11-14'

@@ -1,0 +1,32 @@
+id: paper:arxiv:2312.11209
+status: skipped
+score: 1
+track: video_image_coding
+matched:
+- ref: metric:BD-Rate
+  count: 1
+  weight: 1
+meta:
+  title: Quantized Decoder in Learned Image Compression for Deterministic Reconstruction
+  authors:
+  - Esin Koyuncu
+  - Timofey Solovyev
+  - Johannes Sauer
+  - Elena Alshina
+  - André Kaup
+  published: '2023-12-18'
+  updated: '2024-01-11'
+  categories:
+  - eess.IV
+  abstract: Learned image compression has a problem of non-bit-exact reconstruction due to different calculations
+    of floating point arithmetic on different devices. This paper shows a method to achieve a deterministic
+    reconstructed image by quantizing only the decoder of the learned image compression model. From the
+    implementation perspective of an image codec, it is beneficial to have the results reproducible when
+    decoded on different devices. In this paper, we study quantization of weights and activations without
+    overflow of accumulator in all decoder subnetworks. We show that the results are bit-exact at the
+    output, and the resulting BD-rate loss of quantization of decoder is 0.5 % in the case of 16-bit weights
+    and 16-bit activations, and 7.9 % in the case of 8-bit weights and 16-bit activations.
+  url: https://arxiv.org/abs/2312.11209
+  pdf_url: https://arxiv.org/pdf/2312.11209v2
+  version: v2
+fetched: '2026-11-14'

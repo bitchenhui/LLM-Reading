@@ -1,0 +1,41 @@
+id: paper:arxiv:2502.06431
+status: pending
+score: 2
+track: processing_enhancement
+matched:
+- ref: concept:SuperResolution
+  count: 2
+  weight: 1
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+meta:
+  title: 'FCVSR: A Frequency-aware Method for Compressed Video Super-Resolution'
+  authors:
+  - Qiang Zhu
+  - Fan Zhang
+  - Feiyu Chen
+  - Shuyuan Zhu
+  - David Bull
+  - Bing Zeng
+  published: '2025-02-10'
+  updated: '2025-10-11'
+  categories:
+  - cs.CV
+  abstract: Compressed video super-resolution (SR) aims to generate high-resolution (HR) videos from the
+    corresponding low-resolution (LR) compressed videos. Recently, some compressed video SR methods attempt
+    to exploit the spatio-temporal information in the frequency domain, showing great promise in super-resolution
+    performance. However, these methods do not differentiate various frequency subbands spatially or capture
+    the temporal frequency dynamics, potentially leading to suboptimal results. In this paper, we propose
+    a deep frequency-based compressed video SR model (FCVSR) consisting of a motion-guided adaptive alignment
+    (MGAA) network and a multi-frequency feature refinement (MFFR) module. Additionally, a frequency-aware
+    contrastive loss is proposed for training FCVSR, in order to reconstruct finer spatial details. The
+    proposed model has been evaluated on three public compressed video super-resolution datasets, with
+    results demonstrating its effectiveness when compared to existing works in terms of super-resolution
+    performance (up to a 0.14dB gain in PSNR over the second-best model) and complexity.
+  url: https://arxiv.org/abs/2502.06431
+  pdf_url: https://arxiv.org/pdf/2502.06431v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 7
+citation_year: 2025

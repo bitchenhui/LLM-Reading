@@ -1,0 +1,47 @@
+id: paper:arxiv:2509.19616
+status: skipped_low_citation
+score: 3
+track: streaming_delivery
+matched:
+- ref: concept:ABR
+  count: 3
+  weight: 1
+- ref: concept:QoE
+  count: 3
+  weight: 1
+- ref: metric:VMAF
+  count: 1
+  weight: 1
+meta:
+  title: 'BALANCE: Bitrate-Adaptive Limit-Aware Netcast Content Enhancement Utilizing QUBO and Quantum
+    Annealing'
+  authors:
+  - Animesh Rajpurohit
+  - Michael Kelley
+  - Wei Wang
+  - Krishna Murthy Kattiyan Ramamoorthy
+  published: '2025-09-23'
+  updated: '2025-09-23'
+  categories:
+  - eess.IV
+  - cs.MM
+  - cs.NI
+  - quant-ph
+  abstract: In an era of increasing data cap constraints, optimizing video streaming quality while adhering
+    to user-defined data caps remains a significant challenge. This paper introduces Bitrate-Adaptive
+    Limit-Aware Netcast Content Enhancement (BALANCE), a novel Quantum framework aimed at addressing this
+    issue. BALANCE intelligently pre-selects video segments based on visual complexity and anticipated
+    data consumption, utilizing the Video Multimethod Assessment Fusion (VMAF) metric to enhance Quality
+    of Experience (QoE). We compare our method against traditional bitrate ladders used in Adaptive Bitrate
+    (ABR) streaming, demonstrating a notable improvement in QoE under equivalent data constraints. We
+    compare the Slack variable approach with the Dynamic Penalization Approach (DPA) by framing the bitrate
+    allocation problem through Quadratic Unconstrained Binary Optimization (QUBO) to effectively enforce
+    data limits. Our results indicate that the DPA consistently outperforms the Slack Variable Method,
+    delivering more valid and optimal solutions as data limits increase. This new quantum approach significantly
+    enhances streaming satisfaction for users with limited data plans.
+  url: https://arxiv.org/abs/2509.19616
+  pdf_url: https://arxiv.org/pdf/2509.19616v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 0
+citation_year: 2025

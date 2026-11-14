@@ -1,0 +1,51 @@
+id: paper:arxiv:2608.21796
+status: pending
+score: 2
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+- ref: org:USTC
+  count: 1
+  weight: 1
+meta:
+  title: 'SAFE-G: Structure-aware Faithful Evidence-guided Generation for Knowledge-based Visual Question
+    Answering'
+  authors:
+  - Long Shu
+  - Shuochen Liu
+  - Wei Chen
+  - Junda Lin
+  - Zhi Zheng
+  - Huijun Hou
+  - Tong Xu
+  published: '2026-08-22'
+  updated: '2026-08-22'
+  categories:
+  - cs.CV
+  - cs.AI
+  abstract: 'Knowledge-based Visual Question Answering (KB-VQA) aims to answer queries that necessitate
+    reasoning over external knowledge sources beyond the visual content. Typically, current methods fuse
+    multimodal features to retrieve external information, subsequently leveraging Multimodal Large Language
+    Models (MLLMs) to derive answers from the retrieved evidence. However, these methods often struggle
+    to capture structural associations within complex contexts to effectively filter noise. Furthermore,
+    they frequently fail to ensure that the reasoning process remains strictly faithful to the retrieved
+    evidence. To address these challenges, we propose SAFE-G, a Structure-Aware Faithful Evidence-guided
+    Generation framework, which enables precise evidence localization and trustworthy reasoning. Specifically,
+    we first employ a coarse-grained hybrid search fusing visual and textual modalities to recall candidate
+    documents, and subsequently implement a structure-aware fine-grained graph retrieval that captures
+    structural dependencies to filter noise and pinpoint precise evidence. Moreover, we introduce a reinforcement
+    learning (RL) strategy with an evidence-grounded reward that assigns credit to correct answers only
+    when the selected evidence is correct. This strict alignment constraint compels the model to anchor
+    its response in the retrieved context, effectively enhancing its capability to locate evidence via
+    multimodal features and perform faithful reasoning. Extensive experiments on the Encyclopedic-VQA
+    and InfoSeek benchmarks demonstrate that SAFE-G outperforms prior methods by a margin of 8.9% and
+    3.5%, substantially enhancing the overall reasoning accuracy. Our source code is publicly available
+    at: https://github.com/MINE-USTC/SAFE-G.'
+  url: https://arxiv.org/abs/2608.21796
+  pdf_url: https://arxiv.org/pdf/2608.21796v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 0
+citation_year: 2026

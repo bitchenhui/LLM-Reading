@@ -1,0 +1,42 @@
+id: paper:arxiv:2306.08941
+status: skipped
+score: 0
+track: video_image_coding
+matched: []
+meta:
+  title: Exploring Resolution Fields for Scalable Image Compression with Uncertainty Guidance
+  authors:
+  - Dongyi Zhang
+  - Feng Li
+  - Man Liu
+  - Runmin Cong
+  - Huihui Bai
+  - Meng Wang
+  - Yao Zhao
+  published: '2023-06-15'
+  updated: '2023-06-15'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: Recently, there are significant advancements in learning-based image compression methods surpassing
+    traditional coding standards. Most of them prioritize achieving the best rate-distortion performance
+    for a particular compression rate, which limits their flexibility and adaptability in various applications
+    with complex and varying constraints. In this work, we explore the potential of resolution fields
+    in scalable image compression and propose the reciprocal pyramid network (RPN) that fulfills the need
+    for more adaptable and versatile compression. Specifically, RPN first builds a compression pyramid
+    and generates the resolution fields at different levels in a top-down manner. The key design lies
+    in the cross-resolution context mining module between adjacent levels, which performs feature enriching
+    and distillation to mine meaningful contextualized information and remove unnecessary redundancy,
+    producing informative resolution fields as residual priors. The scalability is achieved by progressive
+    bitstream reusing and resolution field incorporation varying at different levels. Furthermore, between
+    adjacent compression levels, we explicitly quantify the aleatoric uncertainty from the bottom decoded
+    representations and develop an uncertainty-guided loss to update the upper-level compression parameters,
+    forming a reverse pyramid process that enforces the network to focus on the textured pixels with high
+    variance for more reliable and accurate reconstruction. Combining resolution field exploration and
+    uncertainty guidance in a pyramid manner, RPN can effectively achieve spatial and quality scalable
+    image compression. Experiments show the superiority of RPN against existing classical and deep learning-based
+    scalable codecs. Code will be available at https://github.com/JGIroro/RPNSIC.
+  url: https://arxiv.org/abs/2306.08941
+  pdf_url: https://arxiv.org/pdf/2306.08941v1
+  version: v1
+fetched: '2026-11-14'

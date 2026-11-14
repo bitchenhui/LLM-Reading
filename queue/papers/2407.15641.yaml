@@ -1,0 +1,37 @@
+id: paper:arxiv:2407.15641
+status: skipped
+score: 1
+track: audio_coding
+matched:
+- ref: concept:NeuralAudioCodec
+  count: 1
+  weight: 1
+meta:
+  title: Generating Sample-Based Musical Instruments Using Neural Audio Codec Language Models
+  authors:
+  - Shahan Nercessian
+  - Johannes Imort
+  - Ninon Devis
+  - Frederik Blang
+  published: '2024-07-22'
+  updated: '2024-07-22'
+  categories:
+  - eess.AS
+  - cs.LG
+  - cs.SD
+  abstract: In this paper, we propose and investigate the use of neural audio codec language models for
+    the automatic generation of sample-based musical instruments based on text or reference audio prompts.
+    Our approach extends a generative audio framework to condition on pitch across an 88-key spectrum,
+    velocity, and a combined text/audio embedding. We identify maintaining timbral consistency within
+    the generated instruments as a major challenge. To tackle this issue, we introduce three distinct
+    conditioning schemes. We analyze our methods through objective metrics and human listening tests,
+    demonstrating that our approach can produce compelling musical instruments. Specifically, we introduce
+    a new objective metric to evaluate the timbral consistency of the generated instruments and adapt
+    the average Contrastive Language-Audio Pretraining (CLAP) score for the text-to-instrument case, noting
+    that its naive application is unsuitable for assessing this task. Our findings reveal a complex interplay
+    between timbral consistency, the quality of generated samples, and their correspondence to the input
+    prompt.
+  url: https://arxiv.org/abs/2407.15641
+  pdf_url: https://arxiv.org/pdf/2407.15641v1
+  version: v1
+fetched: '2026-11-14'

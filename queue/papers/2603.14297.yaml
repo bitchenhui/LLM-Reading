@@ -1,0 +1,39 @@
+id: paper:arxiv:2603.14297
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 3
+  weight: 1
+meta:
+  title: 'RL-ScanIQA: Reinforcement-Learned Scanpaths for Blind 360°Image Quality Assessment'
+  authors:
+  - Yujia Wang
+  - Yuyan Li
+  - Jiuming Liu
+  - Fang-Lue Zhang
+  - Xinhu Zheng
+  - Neil. A Dodgson
+  published: '2026-03-15'
+  updated: '2026-03-15'
+  categories:
+  - cs.CV
+  abstract: Blind 360°image quality assessment (IQA) aims to predict perceptual quality for panoramic
+    images without a pristine reference. Unlike conventional planar images, 360°content in immersive environments
+    restricts viewers to a limited viewport at any moment, making viewing behaviors critical to quality
+    perception. Although existing scanpath-based approaches have attempted to model viewing behaviors
+    by approximating the human view-then-rate paradigm, they treat scanpath generation and quality assessment
+    as separate steps, preventing end-to-end optimization and task-aligned exploration. To address this
+    limitation, we propose RL-ScanIQA, a reinforcement-learned framework for blind 360°IQA. RL-ScanIQA
+    optimize a PPO-trained scanpath policy and a quality assessor, where the policy receives quality-driven
+    feedback to learn task-relevant viewing strategies. To improve training stability and prevent mode
+    collapse, we design multi-level rewards, including scanpath diversity and equator-biased priors. We
+    further boost cross-dataset robustness using distortion-space augmentation together with rank-consistent
+    losses that preserve intra-image and inter-image quality orderings. Extensive experiments on three
+    benchmarks show that RL-ScanIQA achieves superior in-dataset performance and cross-dataset generalization.
+    Codes are available at https://github.com/wangyuji1/RLScanIQA.git.
+  url: https://arxiv.org/abs/2603.14297
+  pdf_url: https://arxiv.org/pdf/2603.14297v1
+  version: v1
+fetched: '2026-11-14'

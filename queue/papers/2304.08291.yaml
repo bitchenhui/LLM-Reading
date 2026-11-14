@@ -1,0 +1,39 @@
+id: paper:arxiv:2304.08291
+status: skipped
+score: 1
+track: processing_enhancement
+matched:
+- ref: concept:SuperResolution
+  count: 1
+  weight: 1
+meta:
+  title: 'Refusion: Enabling Large-Size Realistic Image Restoration with Latent-Space Diffusion Models'
+  authors:
+  - Ziwei Luo
+  - Fredrik K. Gustafsson
+  - Zheng Zhao
+  - Jens Sjölund
+  - Thomas B. Schön
+  published: '2023-04-17'
+  updated: '2023-04-17'
+  categories:
+  - cs.CV
+  abstract: This work aims to improve the applicability of diffusion models in realistic image restoration.
+    Specifically, we enhance the diffusion model in several aspects such as network architecture, noise
+    level, denoising steps, training image size, and optimizer/scheduler. We show that tuning these hyperparameters
+    allows us to achieve better performance on both distortion and perceptual scores. We also propose
+    a U-Net based latent diffusion model which performs diffusion in a low-resolution latent space while
+    preserving high-resolution information from the original input for the decoding process. Compared
+    to the previous latent-diffusion model which trains a VAE-GAN to compress the image, our proposed
+    U-Net compression strategy is significantly more stable and can recover highly accurate images without
+    relying on adversarial optimization. Importantly, these modifications allow us to apply diffusion
+    models to various image restoration tasks, including real-world shadow removal, HR non-homogeneous
+    dehazing, stereo super-resolution, and bokeh effect transformation. By simply replacing the datasets
+    and slightly changing the noise network, our model, named Refusion, is able to deal with large-size
+    images (e.g., 6000 x 4000 x 3 in HR dehazing) and produces good results on all the above restoration
+    problems. Our Refusion achieves the best perceptual performance in the NTIRE 2023 Image Shadow Removal
+    Challenge and wins 2nd place overall.
+  url: https://arxiv.org/abs/2304.08291
+  pdf_url: https://arxiv.org/pdf/2304.08291v1
+  version: v1
+fetched: '2026-11-14'

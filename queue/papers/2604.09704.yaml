@@ -1,0 +1,41 @@
+id: paper:arxiv:2604.09704
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 3
+  weight: 1
+meta:
+  title: Multi-Granularity Reasoning for Image Quality Assessment via Attribute-Aware Reinforcement Learning
+    to Rank
+  authors:
+  - Xiangyong Chen
+  - Xiaochuan Lin
+  - Haoran Liu
+  - Xuan Li
+  - Yichen Su
+  - Xiangwei Guo
+  published: '2026-04-07'
+  updated: '2026-04-07'
+  categories:
+  - cs.CV
+  abstract: 'Recent advances in reasoning-induced image quality assessment (IQA) have demonstrated the
+    power of reinforcement learning to rank (RL2R) for training vision-language models (VLMs) to assess
+    perceptual quality. However, existing approaches operate at a single granularity, predicting only
+    an overall quality score, while overlooking the multi-dimensional nature of human quality perception,
+    which encompasses attributes such as sharpness, color fidelity, noise level, and compositional aesthetics.
+    In this paper, we propose MG-IQA (Multi-Granularity IQA), a multi-granularity reasoning framework
+    that extends RL2R to jointly assess overall image quality and fine-grained quality attributes within
+    a single inference pass. Our approach introduces three key innovations: (1) an attribute-aware prompting
+    strategy that elicits structured multi-attribute reasoning from VLMs; (2) a multi-dimensional Thurstone
+    reward model that computes attribute-specific fidelity rewards for group relative policy optimization;
+    and (3) a cross-domain alignment mechanism that enables stable joint training across synthetic distortion,
+    authentic distortion, and AI-generated image datasets without perceptual scale re-alignment. Extensive
+    experiments on eight IQA benchmarks demonstrate that MG-IQA consistently outperforms state-of-the-art
+    methods in both overall quality prediction (average SRCC improvement of 2.1\%) and attribute-level
+    assessment, while generating interpretable, human-aligned quality descriptions.'
+  url: https://arxiv.org/abs/2604.09704
+  pdf_url: https://arxiv.org/pdf/2604.09704v1
+  version: v1
+fetched: '2026-11-14'

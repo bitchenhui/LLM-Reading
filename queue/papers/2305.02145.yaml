@@ -1,0 +1,44 @@
+id: paper:arxiv:2305.02145
+status: pending
+score: 3
+track: video_image_coding
+matched:
+- ref: concept:Hyperprior
+  count: 1
+  weight: 1
+- ref: metric:MS-SSIM
+  count: 1
+  weight: 1
+- ref: metric:SSIM
+  count: 1
+  weight: 1
+meta:
+  title: 'ProgDTD: Progressive Learned Image Compression with Double-Tail-Drop Training'
+  authors:
+  - Ali Hojjat
+  - Janek Haberer
+  - Olaf Landsiedel
+  published: '2023-05-03'
+  updated: '2024-04-30'
+  categories:
+  - cs.CV
+  - eess.IV
+  abstract: Progressive compression allows images to start loading as low-resolution versions, becoming
+    clearer as more data is received. This increases user experience when, for example, network connections
+    are slow. Today, most approaches for image compression, both classical and learned ones, are designed
+    to be non-progressive. This paper introduces ProgDTD, a training method that transforms learned, non-progressive
+    image compression approaches into progressive ones. The design of ProgDTD is based on the observation
+    that the information stored within the bottleneck of a compression model commonly varies in importance.
+    To create a progressive compression model, ProgDTD modifies the training steps to enforce the model
+    to store the data in the bottleneck sorted by priority. We achieve progressive compression by transmitting
+    the data in order of its sorted index. ProgDTD is designed for CNN-based learned image compression
+    models, does not need additional parameters, and has a customizable range of progressiveness. For
+    evaluation, we apply ProgDTDto the hyperprior model, one of the most common structures in learned
+    image compression. Our experimental results show that ProgDTD performs comparably to its non-progressive
+    counterparts and other state-of-the-art progressive models in terms of MS-SSIM and accuracy.
+  url: https://arxiv.org/abs/2305.02145
+  pdf_url: https://arxiv.org/pdf/2305.02145v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 18
+citation_year: 2023

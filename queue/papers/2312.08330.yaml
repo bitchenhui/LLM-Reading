@@ -1,0 +1,47 @@
+id: paper:arxiv:2312.08330
+status: pending
+score: 7
+track: video_image_coding
+matched:
+- ref: codec:VVC
+  count: 2
+  weight: 3
+- ref: impl:VVenC
+  count: 1
+  weight: 3
+- ref: metric:VMAF
+  count: 2
+  weight: 1
+meta:
+  title: 'Preparing VVC for Streaming: A Fast Multi-Rate Encoding Approach'
+  authors:
+  - Yiqun Liu
+  - Hadi Amirpour
+  - Mohsen Abdoli
+  - Christian Timmerer
+  - Thomas Guionnet
+  published: '2023-12-13'
+  updated: '2023-12-13'
+  categories:
+  - cs.MM
+  - cs.CC
+  abstract: The integration of advanced video codecs into the streaming pipeline is growing in response
+    to the increasing demand for high quality video content. However, the significant computational demand
+    for advanced codecs like Versatile Video Coding (VVC) poses challenges for service providers, including
+    longer encoding time and higher encoding cost. This challenge becomes even more pronounced in streaming,
+    as the same content needs to be encoded at multiple bitrates (also known as representations) to accommodate
+    different network conditions. To accelerate the encoding process of multiple representations of the
+    same content in VVC, we employ the encoding map of a single representation, known as the reference
+    representation, and utilize its partitioning structure to accelerate the encoding of the remaining
+    representations, referred to as dependent representations. To ensure compatibility with parallel processing,
+    we designate the lowest bitrate representation as the reference representation. The experimental results
+    indicate a substantial improvement in the encoding time for the dependent representations, achieving
+    an average reduction of 40%, while maintaining a minimal average quality drop of only 0.43 in Video
+    Multi-method Assessment Fusion (VMAF). This improvement is observed when utilizing Versatile Video
+    Encoder (VVenC), an open and optimized VVC encoder implementation.
+  url: https://arxiv.org/abs/2312.08330
+  pdf_url: https://arxiv.org/pdf/2312.08330v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 8
+citation_year: 2023

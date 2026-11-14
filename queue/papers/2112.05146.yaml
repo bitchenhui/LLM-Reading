@@ -1,0 +1,40 @@
+id: paper:arxiv:2112.05146
+status: skipped
+score: 1
+track: processing_enhancement
+matched:
+- ref: concept:SuperResolution
+  count: 1
+  weight: 1
+meta:
+  title: 'Come-Closer-Diffuse-Faster: Accelerating Conditional Diffusion Models for Inverse Problems through
+    Stochastic Contraction'
+  authors:
+  - Hyungjin Chung
+  - Byeongsu Sim
+  - Jong Chul Ye
+  published: '2021-12-09'
+  updated: '2022-03-19'
+  categories:
+  - eess.IV
+  - cs.CV
+  - cs.LG
+  - stat.ML
+  abstract: Diffusion models have recently attained significant interest within the community owing to
+    their strong performance as generative models. Furthermore, its application to inverse problems have
+    demonstrated state-of-the-art performance. Unfortunately, diffusion models have a critical downside
+    - they are inherently slow to sample from, needing few thousand steps of iteration to generate images
+    from pure Gaussian noise. In this work, we show that starting from Gaussian noise is unnecessary.
+    Instead, starting from a single forward diffusion with better initialization significantly reduces
+    the number of sampling steps in the reverse conditional diffusion. This phenomenon is formally explained
+    by the contraction theory of the stochastic difference equations like our conditional diffusion strategy
+    - the alternating applications of reverse diffusion followed by a non-expansive data consistency step.
+    The new sampling strategy, dubbed Come-Closer-Diffuse-Faster (CCDF), also reveals a new insight on
+    how the existing feed-forward neural network approaches for inverse problems can be synergistically
+    combined with the diffusion models. Experimental results with super-resolution, image inpainting,
+    and compressed sensing MRI demonstrate that our method can achieve state-of-the-art reconstruction
+    performance at significantly reduced sampling steps.
+  url: https://arxiv.org/abs/2112.05146
+  pdf_url: https://arxiv.org/pdf/2112.05146v2
+  version: v2
+fetched: '2026-11-14'

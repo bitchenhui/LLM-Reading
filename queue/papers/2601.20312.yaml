@@ -1,0 +1,35 @@
+id: paper:arxiv:2601.20312
+status: skipped
+score: 1
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+meta:
+  title: 'SAPO: Self-Adaptive Process Optimization Makes Small Reasoners Stronger'
+  authors:
+  - Kaiyuan Chen
+  - Guangmin Zheng
+  - Jin Wang
+  - Xiaobing Zhou
+  - Xuejie Zhang
+  published: '2026-01-28'
+  updated: '2026-02-02'
+  categories:
+  - cs.CL
+  abstract: 'Existing self-evolution methods overlook the influence of fine-grained reasoning steps, which
+    leads to the reasoner-verifier gap. The computational inefficiency of Monte Carlo (MC) process supervision
+    further exacerbates the difficulty in mitigating the gap. Motivated by the Error-Related Negativity
+    (ERN), which the reasoner can localize error following incorrect decisions, guiding rapid adjustments,
+    we propose a Self-Adaptive Process Optimization (SAPO) method for self-improvement in Small Language
+    Models (SLMs). SAPO adaptively and efficiently introduces process supervision signals by actively
+    minimizing the reasoner-verifier gap rather than relying on inefficient MC estimations. Extensive
+    experiments demonstrate that the proposed method outperforms most existing self-evolution methods
+    on two challenging task types: mathematics and code. Additionally, to further investigate SAPO''s
+    impact on verifier performance, this work introduces two new benchmarks for process reward models
+    in both mathematical and coding tasks.'
+  url: https://arxiv.org/abs/2601.20312
+  pdf_url: https://arxiv.org/pdf/2601.20312v2
+  version: v2
+fetched: '2026-11-14'

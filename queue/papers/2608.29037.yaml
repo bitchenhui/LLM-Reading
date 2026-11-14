@@ -1,0 +1,48 @@
+id: paper:arxiv:2608.29037
+status: pending
+score: 2
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 3
+  weight: 1
+- ref: concept:TrainingFree
+  count: 1
+  weight: 1
+meta:
+  title: 'DocIntent: Answerability-Guided Agentic Restoration for Real-World Document Visual Question
+    Answering'
+  authors:
+  - Zihan Huang
+  - Shihang Wu
+  - Junle Liu
+  - Peirong Zhang
+  - Yongxin Shi
+  - Xuhan Zheng
+  - Lianwen Jin
+  published: '2026-08-29'
+  updated: '2026-08-29'
+  categories:
+  - cs.CV
+  - cs.AI
+  abstract: Real-world degradations such as blur, shadow, distortion, and moire patterns severely impair
+    the document question-answering capabilities of Multimodal Large Language Models (MLLMs). Applying
+    restoration tools before Visual Question Answering (VQA) is an intuitive solution. However, existing
+    restoration approaches remain limited, as manually designing and executing restoration strategies
+    is labor-intensive and requires domain expertise. Agentic restoration offers new possibilities for
+    automation, yet existing frameworks primarily target natural images and pursue perceptual quality,
+    overlooking that restoration should serve downstream tasks rather than optimize generic image quality
+    metrics. To this end, we explore the value of agentic restoration for real-world degraded document
+    VQA and propose DocIntent, a training-free Answerability-Guided Agentic Restoration framework. DocIntent
+    first assesses question answerability, then identifies task-relevant degradations and selectively
+    invokes restoration tools. A Comparison-Based Rollback mechanism validates each restoration step and
+    reverts it when question-relevant evidence becomes less decipherable. The entire process requires
+    no additional pretrained degradation classifier or image quality assessment model. Extensive experiments
+    on the WildDoc benchmark show that DocIntent consistently improves the average score and consistency
+    of different open- and closed-source MLLMs. The code and experimental data will be publicly available.
+  url: https://arxiv.org/abs/2608.29037
+  pdf_url: https://arxiv.org/pdf/2608.29037v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 0
+citation_year: 2026

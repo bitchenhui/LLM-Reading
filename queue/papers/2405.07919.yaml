@@ -1,0 +1,39 @@
+id: paper:arxiv:2405.07919
+status: skipped
+score: 1
+track: processing_enhancement
+matched:
+- ref: concept:SuperResolution
+  count: 1
+  weight: 1
+meta:
+  title: Exploring the Low-Pass Filtering Behavior in Image Super-Resolution
+  authors:
+  - Haoyu Deng
+  - Zijing Xu
+  - Yule Duan
+  - Xiao Wu
+  - Wenjie Shu
+  - Liang-Jian Deng
+  published: '2024-05-13'
+  updated: '2024-11-20'
+  categories:
+  - cs.CV
+  abstract: 'Deep neural networks for image super-resolution (ISR) have shown significant advantages over
+    traditional approaches like the interpolation. However, they are often criticized as ''black boxes''
+    compared to traditional approaches with solid mathematical foundations. In this paper, we attempt
+    to interpret the behavior of deep neural networks in ISR using theories from the field of signal processing.
+    First, we report an intriguing phenomenon, referred to as `the sinc phenomenon.'' It occurs when an
+    impulse input is fed to a neural network. Then, building on this observation, we propose a method
+    named Hybrid Response Analysis (HyRA) to analyze the behavior of neural networks in ISR tasks. Specifically,
+    HyRA decomposes a neural network into a parallel connection of a linear system and a non-linear system
+    and demonstrates that the linear system functions as a low-pass filter while the non-linear system
+    injects high-frequency information. Finally, to quantify the injected high-frequency information,
+    we introduce a metric for image-to-image tasks called Frequency Spectrum Distribution Similarity (FSDS).
+    FSDS reflects the distribution similarity of different frequency components and can capture nuances
+    that traditional metrics may overlook. Code, videos and raw experimental results for this paper can
+    be found in: https://github.com/RisingEntropy/LPFInISR.'
+  url: https://arxiv.org/abs/2405.07919
+  pdf_url: https://arxiv.org/pdf/2405.07919v4
+  version: v4
+fetched: '2026-11-14'

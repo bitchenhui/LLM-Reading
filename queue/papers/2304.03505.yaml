@@ -1,0 +1,48 @@
+id: paper:arxiv:2304.03505
+status: pending
+score: 2
+track: streaming_delivery
+matched:
+- ref: concept:ABR
+  count: 3
+  weight: 1
+- ref: concept:QoE
+  count: 3
+  weight: 1
+meta:
+  title: Improving Adaptive Real-Time Video Communication Via Cross-layer Optimization
+  authors:
+  - Yueheng Li
+  - Hao Chen
+  - Bowei Xu
+  - Zicheng Zhang
+  - Zhan Ma
+  published: '2023-04-07'
+  updated: '2023-08-09'
+  categories:
+  - cs.MM
+  - cs.NI
+  abstract: Effective Adaptive BitRate (ABR) algorithm or policy is of paramount importance for Real-Time
+    Video Communication (RTVC) amid this pandemic to pursue uncompromised quality of experience (QoE).
+    Existing ABR methods mainly separate the network bandwidth estimation and video encoder control, and
+    fine-tune video bitrate towards estimated bandwidth, assuming the maximization of bandwidth utilization
+    yields the optimal QoE. However, the QoE of a RTVC system is jointly determined by the quality of
+    compressed video, fluency of video playback, and interaction delay. Solely maximizing the bandwidth
+    utilization without comprehensively considering compound impacts incurred by both network and video
+    application layers, does not assure the satisfactory QoE. And the decoupling of network and video
+    layer further exacerbates the user experience due to network-codec incoordination. This work therefore
+    proposes the Palette, a reinforcement learning based ABR scheme that unifies the processing of network
+    and video application layers to directly maximize the QoE formulated as the weighted function of video
+    quality, stalling rate and delay. To this aim, a cross-layer optimization is proposed to derive fine-grained
+    compression factor of upcoming frame(s) using cross-layer observations like network conditions, video
+    encoding parameters, and video content complexity. As a result, Palette manages to resolve the network-codec
+    incoordination and to best catch up with the network fluctuation. Compared with state-of-the-art schemes
+    in real-world tests, Palette not only reduces 3.1%-46.3% of the stalling rate, 20.2%-50.8% of the
+    delay, but also improves 0.2%-7.2% of the video quality with comparable bandwidth consumption, under
+    a variety of application scenarios.
+  url: https://arxiv.org/abs/2304.03505
+  pdf_url: https://arxiv.org/pdf/2304.03505v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 14
+citation_year: 2023

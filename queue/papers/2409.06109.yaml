@@ -1,0 +1,30 @@
+id: paper:arxiv:2409.06109
+status: skipped
+score: 0
+track: audio_coding
+matched: []
+meta:
+  title: Estimating the Completeness of Discrete Speech Units
+  authors:
+  - Sung-Lin Yeh
+  - Hao Tang
+  published: '2024-09-09'
+  updated: '2024-09-22'
+  categories:
+  - eess.AS
+  - cs.CL
+  abstract: Representing speech with discrete units has been widely used in speech codec and speech generation.
+    However, there are several unverified claims about self-supervised discrete units, such as disentangling
+    phonetic and speaker information with k-means, or assuming information loss after k-means. In this
+    work, we take an information-theoretic perspective to answer how much information is present (information
+    completeness) and how much information is accessible (information accessibility), before and after
+    residual vector quantization. We show a lower bound for information completeness and estimate completeness
+    on discretized HuBERT representations after residual vector quantization. We find that speaker information
+    is sufficiently present in HuBERT discrete units, and that phonetic information is sufficiently present
+    in the residual, showing that vector quantization does not achieve disentanglement. Our results offer
+    a comprehensive assessment on the choice of discrete units, and suggest that a lot more information
+    in the residual should be mined rather than discarded.
+  url: https://arxiv.org/abs/2409.06109
+  pdf_url: https://arxiv.org/pdf/2409.06109v2
+  version: v2
+fetched: '2026-11-14'

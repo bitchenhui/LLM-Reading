@@ -1,0 +1,45 @@
+id: paper:arxiv:2303.11592
+status: skipped_low_citation
+score: 9
+track: video_image_coding
+matched:
+- ref: codec:AVC
+  count: 1
+  weight: 3
+- ref: codec:HEVC
+  count: 1
+  weight: 3
+- ref: codec:VVC
+  count: 1
+  weight: 3
+meta:
+  title: Lightweight Hybrid Video Compression Framework Using Reference-Guided Restoration Network
+  authors:
+  - Hochang Rhee
+  - Seyun Kim
+  - Nam Ik Cho
+  published: '2023-03-21'
+  updated: '2023-03-21'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: Recent deep-learning-based video compression methods brought coding gains over conventional
+    codecs such as AVC and HEVC. However, learning-based codecs generally require considerable computation
+    time and model complexity. In this paper, we propose a new lightweight hybrid video codec consisting
+    of a conventional video codec(HEVC / VVC), a lossless image codec, and our new restoration network.
+    Precisely, our encoder consists of the conventional video encoder and a lossless image encoder, transmitting
+    a lossy-compressed video bitstream along with a losslessly-compressed reference frame. The decoder
+    is constructed with corresponding video/image decoders and a new restoration network, which enhances
+    the compressed video in two-step processes. In the first step, a network trained with a large video
+    dataset restores the details lost by the conventional encoder. Then, we further boost the video quality
+    with the guidance of a reference image, which is a losslessly compressed video frame. The reference
+    image provides video-specific information, which can be utilized to better restore the details of
+    a compressed video. Experimental results show that the proposed method achieves comparable performance
+    to top-tier methods, even when applied to HEVC. Nevertheless, our method has lower complexity, a faster
+    run time, and can be easily integrated into existing conventional codecs.
+  url: https://arxiv.org/abs/2303.11592
+  pdf_url: https://arxiv.org/pdf/2303.11592v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 2
+citation_year: 2023

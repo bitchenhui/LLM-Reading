@@ -1,0 +1,39 @@
+id: paper:arxiv:2601.02776
+status: skipped
+score: 0
+track: audio_coding
+matched: []
+meta:
+  title: 'UniSRCodec: Unified and Low-Bitrate Single Codebook Codec with Sub-Band Reconstruction'
+  authors:
+  - Zhisheng Zhang
+  - Xiang Li
+  - Yixuan Zhou
+  - Jing Peng
+  - Shengbo Cai
+  - Guoyang Zeng
+  - Zhiyong Wu
+  published: '2026-01-06'
+  updated: '2026-01-06'
+  categories:
+  - cs.SD
+  - cs.AI
+  - cs.MM
+  abstract: 'Neural Audio Codecs (NACs) can reduce transmission overhead by performing compact compression
+    and reconstruction, which also aim to bridge the gap between continuous and discrete signals. Existing
+    NACs can be divided into two categories: multi-codebook and single-codebook codecs. Multi-codebook
+    codecs face challenges such as structural complexity and difficulty in adapting to downstream tasks,
+    while single-codebook codecs, though structurally simpler, suffer from low-fidelity, ineffective modeling
+    of unified audio, and an inability to support modeling of high-frequency audio. We propose the UniSRCodec,
+    a single-codebook codec capable of supporting high sampling rate, low-bandwidth, high fidelity, and
+    unified. We analyze the inefficiency of waveform-based compression and introduce the time and frequency
+    compression method using the Mel-spectrogram, and cooperate with a Vocoder to recover the phase information
+    of the original audio. Moreover, we propose a sub-band reconstruction technique to achieve high-quality
+    compression across both low and high frequency bands. Subjective and objective experimental results
+    demonstrate that UniSRCodec achieves state-of-the-art (SOTA) performance among cross-domain single-codebook
+    codecs with only a token rate of 40, and its reconstruction quality is comparable to that of certain
+    multi-codebook methods. Our demo page is available at https://wxzyd123.github.io/unisrcodec.'
+  url: https://arxiv.org/abs/2601.02776
+  pdf_url: https://arxiv.org/pdf/2601.02776v1
+  version: v1
+fetched: '2026-11-14'

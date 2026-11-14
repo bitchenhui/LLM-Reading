@@ -1,0 +1,49 @@
+id: paper:arxiv:2502.15174
+status: pending
+score: 3
+track: video_image_coding
+matched:
+- ref: metric:SSIM
+  count: 3
+  weight: 1
+- ref: metric:MS-SSIM
+  count: 1
+  weight: 1
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+meta:
+  title: 'FD-LSCIC: Frequency Decomposition-based Learned Screen Content Image Compression'
+  authors:
+  - Shiqi Jiang
+  - Hui Yuan
+  - Shuai Li
+  - Huanqiang Zeng
+  - Sam Kwong
+  published: '2025-02-21'
+  updated: '2025-02-21'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: 'The learned image compression (LIC) methods have already surpassed traditional techniques
+    in compressing natural scene (NS) images. However, directly applying these methods to screen content
+    (SC) images, which possess distinct characteristics such as sharp edges, repetitive patterns, embedded
+    text and graphics, yields suboptimal results. This paper addresses three key challenges in SC image
+    compression: learning compact latent features, adapting quantization step sizes, and the lack of large
+    SC datasets. To overcome these challenges, we propose a novel compression method that employs a multi-frequency
+    two-stage octave residual block (MToRB) for feature extraction, a cascaded triple-scale feature fusion
+    residual block (CTSFRB) for multi-scale feature integration and a multi-frequency context interaction
+    module (MFCIM) to reduce inter-frequency correlations. Additionally, we introduce an adaptive quantization
+    module that learns scaled uniform noise for each frequency component, enabling flexible control over
+    quantization granularity. Furthermore, we construct a large SC image compression dataset (SDU-SCICD10K),
+    which includes over 10,000 images spanning basic SC images, computer-rendered images, and mixed NS
+    and SC images from both PC and mobile platforms. Experimental results demonstrate that our approach
+    significantly improves SC image compression performance, outperforming traditional standards and state-of-the-art
+    learning-based methods in terms of peak signal-to-noise ratio (PSNR) and multi-scale structural similarity
+    (MS-SSIM).'
+  url: https://arxiv.org/abs/2502.15174
+  pdf_url: https://arxiv.org/pdf/2502.15174v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 9
+citation_year: 2025

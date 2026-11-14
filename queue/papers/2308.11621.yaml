@@ -1,0 +1,44 @@
+id: paper:arxiv:2308.11621
+status: skipped_low_citation
+score: 2
+track: streaming_delivery
+matched:
+- ref: concept:DASH
+  count: 3
+  weight: 1
+- ref: concept:QoE
+  count: 1
+  weight: 1
+meta:
+  title: Reinforcement Learning -based Adaptation and Scheduling Methods for Multi-source DASH
+  authors:
+  - Nghia T. Nguyen
+  - Long Luu
+  - Phuong L. Vo
+  - Thi Thanh Sang Nguyen
+  - Cuong T. Do
+  - Ngoc-thanh Nguyen
+  published: '2023-07-25'
+  updated: '2023-07-25'
+  categories:
+  - cs.NI
+  - cs.AI
+  abstract: 'Dynamic adaptive streaming over HTTP (DASH) has been widely used in video streaming recently.
+    In DASH, the client downloads video chunks in order from a server. The rate adaptation function at
+    the video client enhances the user''s quality-of-experience (QoE) by choosing a suitable quality level
+    for each video chunk to download based on the network condition. Today networks such as content delivery
+    networks, edge caching networks, content-centric networks,... usually replicate video contents on
+    multiple cache nodes. We study video streaming from multiple sources in this work. In multi-source
+    streaming, video chunks may arrive out of order due to different conditions of the network paths.
+    Hence, to guarantee a high QoE, the video client needs not only rate adaptation but also chunk scheduling.
+    Reinforcement learning (RL) has emerged as the state-of-the-art control method in various fields in
+    recent years. This paper proposes two algorithms for streaming from multiple sources: RL-based adaptation
+    with greedy scheduling (RLAGS) and RL-based adaptation and scheduling (RLAS). We also build a simulation
+    environment for training and evaluating. The efficiency of the proposed algorithms is proved via extensive
+    simulations with real-trace data.'
+  url: https://arxiv.org/abs/2308.11621
+  pdf_url: https://arxiv.org/pdf/2308.11621v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 2
+citation_year: 2023

@@ -1,0 +1,38 @@
+id: paper:arxiv:2605.19027
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'MedFM-Robust: Benchmarking Robustness of Medical Foundation Models'
+  authors:
+  - Xiangxiang Cui
+  - Tianjin Huang
+  - Yifang Wang
+  - Lijie Hu
+  - Lu Yin
+  published: '2026-05-18'
+  updated: '2026-05-22'
+  categories:
+  - cs.CV
+  abstract: 'Medical foundation models have achieved remarkable clinical performance, yet their robustness
+    under real-world perturbations remains underexplored. We present a robustness benchmark comprising
+    40 perturbation types (12 base, 28 medical-specific) across eight imaging modalities, evaluating five
+    VLMs (LLaVA-Med, MedGemma, MedGemma-1.5, Gemini-2.5-flash and GPT-4o-mini) on VQA, visual grounding,
+    and captioning, alongside two segmentation models (MedSAM, SAM-Med2D) with five fine-tuning strategies.
+    Our findings reveal: (1) Fine-tuning strategy dominates robustness, with LoRA exhibiting nearly double
+    the degradation of full fine-tuning, while SAM-Med2D''s Adapter offers favorable efficiency-robustness
+    trade-off. (2) Medical-specific perturbations disproportionately damage segmentation, with 9 of 15
+    top corruptions being domain-specific. (3) LoRA-tuned visual grounding drops over 40 points, whereas
+    zero-shot captioning remains stable (<7% drop). Zero-shot VQA shows model-dependent robustness--medical
+    models drop under 20% while Gemini-2.5-flash drops 54%. General-purpose VLMs achieve higher VQA accuracy
+    but fail on grounding; among medical VLMs, MedGemma demonstrates the best overall stability. These
+    results provide deployment guidelines and underscore the necessity of domain-specific robustness evaluation
+    for medical AI. Our code is available at: https://abnerai.github.io/MedFM-Robust.'
+  url: https://arxiv.org/abs/2605.19027
+  pdf_url: https://arxiv.org/pdf/2605.19027v3
+  version: v3
+fetched: '2026-11-14'

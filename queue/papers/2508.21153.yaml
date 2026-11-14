@@ -1,0 +1,41 @@
+id: paper:arxiv:2508.21153
+status: skipped
+score: 1
+track: audio_coding
+matched:
+- ref: concept:NeuralAudioCodec
+  count: 1
+  weight: 1
+meta:
+  title: 'WaveLLDM: Design and Development of a Lightweight Latent Diffusion Model for Speech Enhancement
+    and Restoration'
+  authors:
+  - Kevin Putra Santoso
+  - Rizka Wakhidatus Sholikah
+  - Raden Venantius Hari Ginardi
+  published: '2025-08-28'
+  updated: '2025-08-28'
+  categories:
+  - cs.SD
+  - cs.AI
+  - eess.AS
+  abstract: High-quality audio is essential in a wide range of applications, including online communication,
+    virtual assistants, and the multimedia industry. However, degradation caused by noise, compression,
+    and transmission artifacts remains a major challenge. While diffusion models have proven effective
+    for audio restoration, they typically require significant computational resources and struggle to
+    handle longer missing segments. This study introduces WaveLLDM (Wave Lightweight Latent Diffusion
+    Model), an architecture that integrates an efficient neural audio codec with latent diffusion for
+    audio restoration and denoising. Unlike conventional approaches that operate in the time or spectral
+    domain, WaveLLDM processes audio in a compressed latent space, reducing computational complexity while
+    preserving reconstruction quality. Empirical evaluations on the Voicebank+DEMAND test set demonstrate
+    that WaveLLDM achieves accurate spectral reconstruction with low Log-Spectral Distance (LSD) scores
+    (0.48 to 0.60) and good adaptability to unseen data. However, it still underperforms compared to state-of-the-art
+    methods in terms of perceptual quality and speech clarity, with WB-PESQ scores ranging from 1.62 to
+    1.71 and STOI scores between 0.76 and 0.78. These limitations are attributed to suboptimal architectural
+    tuning, the absence of fine-tuning, and insufficient training duration. Nevertheless, the flexible
+    architecture that combines a neural audio codec and latent diffusion model provides a strong foundation
+    for future development.
+  url: https://arxiv.org/abs/2508.21153
+  pdf_url: https://arxiv.org/pdf/2508.21153v1
+  version: v1
+fetched: '2026-11-14'

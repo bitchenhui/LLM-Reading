@@ -1,0 +1,41 @@
+id: paper:arxiv:2506.23325
+status: skipped
+score: 0
+track: audio_coding
+matched: []
+meta:
+  title: 'XY-Tokenizer: Mitigating the Semantic-Acoustic Conflict in Low-Bitrate Speech Codecs'
+  authors:
+  - Yitian Gong
+  - Luozhijie Jin
+  - Ruifan Deng
+  - Dong Zhang
+  - Xin Zhang
+  - Qinyuan Cheng
+  - Zhaoye Fei
+  - Shimin Li
+  - Xipeng Qiu
+  published: '2025-06-29'
+  updated: '2025-07-09'
+  categories:
+  - cs.SD
+  - cs.AI
+  - eess.AS
+  abstract: Speech codecs serve as bridges between speech signals and large language models. An ideal
+    codec for speech language models should not only preserve acoustic information but also capture rich
+    semantic information. However, existing speech codecs struggle to balance high-quality audio reconstruction
+    with ease of modeling by language models. In this study, we analyze the limitations of previous codecs
+    in balancing semantic richness and acoustic fidelity. We propose XY-Tokenizer, a novel codec that
+    mitigates the conflict between semantic and acoustic capabilities through multi-stage, multi-task
+    learning. Experimental results demonstrate that XY-Tokenizer achieves performance in both semantic
+    and acoustic tasks comparable to that of state-of-the-art codecs operating at similar bitrates, even
+    though those existing codecs typically excel in only one aspect. Specifically, XY-Tokenizer achieves
+    strong text alignment, surpassing distillation-based semantic modeling methods such as SpeechTokenizer
+    and Mimi, while maintaining a speaker similarity score of 0.83 between reconstructed and original
+    audio. The reconstruction performance of XY-Tokenizer is comparable to that of BigCodec, the current
+    state-of-the-art among acoustic-only codecs, which achieves a speaker similarity score of 0.84 at
+    a similar bitrate. Code and models are available at https://github.com/gyt1145028706/XY-Tokenizer.
+  url: https://arxiv.org/abs/2506.23325
+  pdf_url: https://arxiv.org/pdf/2506.23325v2
+  version: v2
+fetched: '2026-11-14'

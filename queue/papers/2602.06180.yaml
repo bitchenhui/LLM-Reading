@@ -1,0 +1,35 @@
+id: paper:arxiv:2602.06180
+status: skipped
+score: 0
+track: audio_coding
+matched: []
+meta:
+  title: 'STACodec: Semantic Token Assignment for Balancing Acoustic Fidelity and Semantic Information
+    in Audio Codecs'
+  authors:
+  - Kaiyuan Zhang
+  - Mohan Shi
+  - Eray Eren
+  - Natarajan Balaji Shankar
+  - Zilai Wang
+  - Abeer Alwan
+  published: '2026-02-05'
+  updated: '2026-02-05'
+  categories:
+  - eess.AS
+  - cs.CL
+  abstract: Neural audio codecs are widely used for audio compression and can be integrated into token-based
+    language models. Traditional codecs preserve acoustic details well but lack semantic information.
+    Recent hybrid codecs attempt to incorporate semantic information through distillation, but this often
+    degrades reconstruction performance, making it difficult to achieve both. To address this limitation,
+    we introduce STACodec, a unified codec that integrates semantic information from self-supervised learning
+    (SSL) models into the first layer of residual vector quantization (RVQ-1) via semantic token assignment
+    (STA). To further eliminate reliance on SSL-based semantic tokenizers and improve efficiency during
+    inference, we propose a semantic pre-distillation (SPD) module, which predicts semantic tokens directly
+    for assignment to the first RVQ layer during inference. Experimental results show that STACodec outperforms
+    existing hybrid codecs in both audio reconstruction and downstream semantic tasks, demonstrating a
+    better balance between acoustic fidelity and semantic capability.
+  url: https://arxiv.org/abs/2602.06180
+  pdf_url: https://arxiv.org/pdf/2602.06180v1
+  version: v1
+fetched: '2026-11-14'

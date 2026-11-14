@@ -1,0 +1,34 @@
+id: paper:arxiv:2503.13119
+status: skipped
+score: 1
+track: video_image_coding
+matched:
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+meta:
+  title: 'OSLO-IC: On-the-Sphere Learned Omnidirectional Image Compression with Attention Modules and
+    Spatial Context'
+  authors:
+  - Paul Wawerek-López
+  - Navid Mahmoudian Bidgoli
+  - Pascal Frossard
+  - André Kaup
+  - Thomas Maugey
+  published: '2025-03-17'
+  updated: '2025-03-17'
+  categories:
+  - eess.IV
+  abstract: Developing effective 360-degree (spherical) image compression techniques is crucial for technologies
+    like virtual reality and automated driving. This paper advances the state-of-the-art in on-the-sphere
+    learning (OSLO) for omnidirectional image compression framework by proposing spherical attention modules,
+    residual blocks, and a spatial autoregressive context model. These improvements achieve a 23.1% bit
+    rate reduction in terms of WS-PSNR BD rate. Additionally, we introduce a spherical transposed convolution
+    operator for upsampling, which reduces trainable parameters by a factor of four compared to the pixel
+    shuffling used in the OSLO framework, while maintaining similar compression performance. Therefore,
+    in total, our proposed method offers significant rate savings with a smaller architecture and can
+    be applied to any spherical convolutional application.
+  url: https://arxiv.org/abs/2503.13119
+  pdf_url: https://arxiv.org/pdf/2503.13119v1
+  version: v1
+fetched: '2026-11-14'

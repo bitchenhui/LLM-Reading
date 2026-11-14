@@ -1,0 +1,37 @@
+id: paper:arxiv:2605.03937
+status: skipped
+score: 1
+track: audio_coding
+matched:
+- ref: concept:MoE
+  count: 1
+  weight: 1
+meta:
+  title: 'MiniMind-O Technical Report: An Open Small-Scale Speech-Native Omni Model'
+  authors:
+  - Jingyao Gong
+  published: '2026-05-05'
+  updated: '2026-05-05'
+  categories:
+  - cs.SD
+  - cs.MM
+  - eess.AS
+  abstract: 'MiniMind-O is an open 0.1B-scale omni model built on the MiniMind language model. It accepts
+    text, speech, and image inputs, and returns both text and streaming speech. The release includes model
+    code, checkpoints, and the main Parquet training datasets for text-to-audio, image-to-text, and audio-to-audio
+    training, making the complete interaction loop directly inspectable. The model uses a full MiniMind
+    backbone as the Thinker and an independent four-layer Talker made from MiniMind blocks. Frozen SenseVoice-Small
+    and SigLIP2 encoders provide speech and image features, which are mapped by lightweight MLP projectors
+    and injected at modality-placeholder positions. The Talker reads a middle-layer Thinker state together
+    with an autoregressive eight-layer Mimi-code buffer. Speaker control is handled by a dedicated speaker
+    token, right-aligned reference codec prompts, and precomputed CAM++ speaker embeddings, so voice conditioning
+    remains part of the audio-code context rather than a separate TTS module. With a 768-dimensional Talker,
+    the dense and MoE variants reach average CERs of 0.0897 and 0.0900 in Thinker--Talker consistency
+    evaluation, with overall voice-cloning similarities of 0.5995 and 0.5937. Beyond reporting a working
+    system, the paper identifies three scale-critical design choices for small omni models: middle-layer
+    semantic bridging, a released multimodal sequence format, and a parameter-efficient eight-codebook
+    interface.'
+  url: https://arxiv.org/abs/2605.03937
+  pdf_url: https://arxiv.org/pdf/2605.03937v1
+  version: v1
+fetched: '2026-11-14'

@@ -1,0 +1,49 @@
+id: paper:arxiv:2512.24103
+status: pending
+score: 2
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: Enhancing LLM Planning Capabilities through Intrinsic Self-Critique
+  authors:
+  - Bernd Bohnet
+  - Pierre-Alexandre Kamienny
+  - Hanie Sedghi
+  - Dilan Gorur
+  - Pranjal Awasthi
+  - Aaron Parisi
+  - Kevin Swersky
+  - Rosanne Liu
+  - Azade Nova
+  - Noah Fiedel
+  published: '2025-12-30'
+  updated: '2025-12-30'
+  categories:
+  - cs.LG
+  - cs.AI
+  abstract: We demonstrate an approach for LLMs to critique their \emph{own} answers with the goal of
+    enhancing their performance that leads to significant improvements over established planning benchmarks.
+    Despite the findings of earlier research that has cast doubt on the effectiveness of LLMs leveraging
+    self critique methods, we show significant performance gains on planning datasets in the Blocksworld
+    domain through intrinsic self-critique, without external source such as a verifier. We also demonstrate
+    similar improvements on Logistics and Mini-grid datasets, exceeding strong baseline accuracies. We
+    employ a few-shot learning technique and progressively extend it to a many-shot approach as our base
+    method and demonstrate that it is possible to gain substantial improvement on top of this already
+    competitive approach by employing an iterative process for correction and refinement. We illustrate
+    how self-critique can significantly boost planning performance. Our empirical results present new
+    state-of-the-art on the class of models considered, namely LLM model checkpoints from October 2024.
+    Our primary focus lies on the method itself, demonstrating intrinsic self-improvement capabilities
+    that are applicable regardless of the specific model version, and we believe that applying our method
+    to more complex search techniques and more capable models will lead to even better performance.
+  url: https://arxiv.org/abs/2512.24103
+  pdf_url: https://arxiv.org/pdf/2512.24103v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 8
+citation_year: 2025

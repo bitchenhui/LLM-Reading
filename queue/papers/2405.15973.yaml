@@ -1,0 +1,46 @@
+id: paper:arxiv:2405.15973
+status: skipped
+score: 1
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+meta:
+  title: Enhancing Visual-Language Modality Alignment in Large Vision Language Models via Self-Improvement
+  authors:
+  - Xiyao Wang
+  - Jiuhai Chen
+  - Zhaoyang Wang
+  - Yuhang Zhou
+  - Yiyang Zhou
+  - Huaxiu Yao
+  - Tianyi Zhou
+  - Tom Goldstein
+  - Parminder Bhatia
+  - Furong Huang
+  - Cao Xiao
+  published: '2024-05-24'
+  updated: '2025-02-08'
+  categories:
+  - cs.CV
+  - cs.AI
+  - cs.CL
+  - cs.LG
+  abstract: Large vision-language models (LVLMs) have achieved impressive results in visual question-answering
+    and reasoning tasks through vision instruction tuning on specific datasets. However, there remains
+    significant room for improvement in aligning visual and language modalities. Existing methods often
+    depend on external models or data, leading to uncontrollable and unstable alignment results. In this
+    paper, we propose SIMA, a self-improvement framework that enhances visual and language modality alignment
+    without external dependencies. SIMA leverages existing vision instruction tuning datasets to self-generate
+    responses, incorporating an in-context self-critic mechanism that constructs preference pairs for
+    tuning. Crucially, our approach allows LVLMs to act as critics by designing effective critic prompts,
+    eliminating the need for additional fine-tuning with external instruction data. We introduce three
+    novel visual metrics within the self-critic process to guide judgment, significantly improving the
+    accuracy of self-critic. Through extensive experiments across 14 hallucination and comprehensive benchmarks,
+    we demonstrate that SIMA significantly improves LVLM's performance and outperforms previous approaches,
+    achieving superior modality alignment.
+  url: https://arxiv.org/abs/2405.15973
+  pdf_url: https://arxiv.org/pdf/2405.15973v4
+  version: v4
+fetched: '2026-11-14'

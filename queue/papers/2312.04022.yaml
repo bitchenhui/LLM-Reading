@@ -1,0 +1,43 @@
+id: paper:arxiv:2312.04022
+status: skipped_low_citation
+score: 7
+track: video_image_coding
+matched:
+- ref: codec:HEVC
+  count: 2
+  weight: 3
+- ref: codec:VVC
+  count: 2
+  weight: 3
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+meta:
+  title: Analysis of Coding Gain Due to In-Loop Reshaping
+  authors:
+  - Chau-Wai Wong
+  - Chang-Hong Fu
+  - Mengting Xu
+  - Guan-Ming Su
+  published: '2023-12-07'
+  updated: '2024-06-19'
+  categories:
+  - eess.IV
+  - cs.IT
+  abstract: Reshaping, a point operation that alters the characteristics of signals, has been shown capable
+    of improving the compression ratio in video coding practices. Out-of-loop reshaping that directly
+    modifies the input video signal was first adopted as the supplemental enhancement information (SEI)
+    for the HEVC/H.265 without the need to alter the core design of the video codec. VVC/H.266 further
+    improves the coding efficiency by adopting in-loop reshaping that modifies the residual signal being
+    processed in the hybrid coding loop. In this paper, we theoretically analyze the rate-distortion performance
+    of the in-loop reshaping and use experiments to verify the theoretical result. We prove that the in-loop
+    reshaping can improve coding efficiency when the entropy coder adopted in the coding pipeline is suboptimal,
+    which is in line with the practical scenarios that video codecs operate in. We derive the PSNR gain
+    in a closed form and show that the theoretically predicted gain is consistent with that measured from
+    experiments using standard testing video sequences.
+  url: https://arxiv.org/abs/2312.04022
+  pdf_url: https://arxiv.org/pdf/2312.04022v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 0
+citation_year: 2023

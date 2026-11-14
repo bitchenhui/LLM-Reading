@@ -1,0 +1,41 @@
+id: paper:arxiv:2601.14757
+status: skipped_low_citation
+score: 2
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: 'ReinPath: A Multimodal Reinforcement Learning Approach for Pathology'
+  authors:
+  - Kangcheng Zhou
+  - Jun Jiang
+  - Qing Zhang
+  - Shuang Zheng
+  - Qingli Li
+  - Shugong Xu
+  published: '2026-01-21'
+  updated: '2026-01-21'
+  categories:
+  - cs.CV
+  abstract: Interpretability is significant in computational pathology, leading to the development of
+    multimodal information integration from histopathological image and corresponding text data.However,
+    existing multimodal methods have limited interpretability due to the lack of high-quality dataset
+    that support explicit reasoning and inference and simple reasoning process.To address the above problems,
+    we introduce a novel multimodal pathology large language model with strong reasoning capabilities.To
+    improve the generation of accurate and contextually relevant textual descriptions, we design a semantic
+    reward strategy integrated with group relative policy optimization.We construct a high-quality pathology
+    visual question answering (VQA) dataset, specifically designed to support complex reasoning tasks.Comprehensive
+    experiments conducted on this dataset demonstrate that our method outperforms state-of-the-art methods,
+    even when trained with only 20% of the data.Our method also achieves comparable performance on downstream
+    zero-shot image classification task compared with CLIP.
+  url: https://arxiv.org/abs/2601.14757
+  pdf_url: https://arxiv.org/pdf/2601.14757v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 1
+citation_year: 2026

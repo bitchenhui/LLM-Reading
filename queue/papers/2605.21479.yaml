@@ -1,0 +1,36 @@
+id: paper:arxiv:2605.21479
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'WikiVQABench: A Knowledge-Grounded Visual Question Answering Benchmark from Wikipedia and Wikidata'
+  authors:
+  - Basel Shbita
+  - Pengyuan Li
+  - Anna Lisa Gentile
+  published: '2026-05-20'
+  updated: '2026-05-20'
+  categories:
+  - cs.CV
+  - cs.AI
+  abstract: Visual Question Answering (VQA) benchmarks have largely emphasized perception-based tasks
+    that can be solved from visual content alone. In contrast, many real-world scenarios require external
+    knowledge that is not directly observable in the image to answer correctly. We introduce WikiVQABench,
+    a human-curated knowledge-grounded VQA benchmark constructed by systematically combining Wikipedia
+    images, their associated article captions, and structured knowledge from Wikidata. Our pipeline uses
+    large language models (LLMs) to generate candidate multiple-choice image-question-answer sets. All
+    generated instances are subsequently reviewed and curated by human annotators to ensure factual correctness,
+    visual-text consistency, and that each question requires external knowledge in addition to visual
+    evidence for correct resolution. WikiVQABench comprises a substantial collection of Wikipedia images
+    with curated multiple-choice questions designed to benchmark knowledge-aware vision-language models
+    (VLMs). Evaluation of fifteen VLMs (256M-90B parameters) reveals a wide performance range (24.7%-75.6%
+    accuracy), demonstrating that the benchmark effectively discriminates model capabilities on knowledge-intensive
+    reasoning. The dataset and benchmarking code are publicly available.
+  url: https://arxiv.org/abs/2605.21479
+  pdf_url: https://arxiv.org/pdf/2605.21479v1
+  version: v1
+fetched: '2026-11-14'

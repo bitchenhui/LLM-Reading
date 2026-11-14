@@ -1,0 +1,41 @@
+id: paper:arxiv:2603.07443
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'Med-Evo: Test-time Self-evolution for Medical Multimodal Large Language Models'
+  authors:
+  - Dunyuan Xu
+  - Xikai Yang
+  - Juzheng Miao
+  - Yaoqian Li
+  - Jinpeng Li
+  - Pheng-Ann Heng
+  published: '2026-03-08'
+  updated: '2026-03-08'
+  categories:
+  - cs.CV
+  abstract: 'Medical Multimodal Large Language Models (MLLMs) have demonstrated remarkable capabilities
+    across diverse healthcare tasks. However, current post-training strategies, such as supervised fine-tuning
+    and reinforcement learning, heavily depend on substantial annotated data while overlooking the potential
+    of unlabeled test data for model enhancement. This limitation becomes particularly pronounced in medical
+    domains, where acquiring extensive labeled medical data is difficult due to the strict data sensitivity
+    and annotation complexity. Moreover, leveraging test data poses challenges in generating reliable
+    supervision signals from unlabeled samples and maintaining stable self-evolution. To address these
+    limitations, we propose Med-Evo, the first self-evolution framework for medical MLLMs that utilizes
+    label-free reinforcement learning to promote model performance without requiring additional labeled
+    data. Our framework introduces two key innovations: $1)$ Feature-driven Pseudo Labeling (FPL) that
+    identifies semantic centroids from all heterogeneous candidate responses to select pseudo labels in
+    each rollout, and $2)$ Hard-Soft Reward (HSR) that combines exact match with token-level assessment
+    and semantic similarity to provide hierarchical reward. Experiments on three medical VQA benchmarks
+    and two base MLLMs show clear advantages of our approach over SOTA methods, with significant improvements
+    of 10.43\% accuracy and 4.68\% recall on the SLAKE dataset using Qwen2.5-VL, showing the effectiveness
+    of our method.'
+  url: https://arxiv.org/abs/2603.07443
+  pdf_url: https://arxiv.org/pdf/2603.07443v1
+  version: v1
+fetched: '2026-11-14'

@@ -1,0 +1,41 @@
+id: paper:arxiv:2509.09201
+status: skipped
+score: 0
+track: audio_coding
+matched: []
+meta:
+  title: 'DeCodec: Rethinking Audio Codecs as Universal Disentangled Representation Learners'
+  authors:
+  - Xiaoxue Luo
+  - Jinwei Huang
+  - Runyan Yang
+  - Yingying Gao
+  - Junlan Feng
+  - Chao Deng
+  - Shilei Zhang
+  published: '2025-09-11'
+  updated: '2025-09-11'
+  categories:
+  - cs.SD
+  abstract: 'Universal audio codecs learn entangled representations across audio types, whereas some specific
+    codecs offer decoupled representations but are limited to speech. Real-world audio, however, often
+    contains mixed speech and background sounds, and downstream tasks require selective access to these
+    components. Therefore, we rethink the audio codec as a universal disentangled representation learner
+    to enable controllable feature selection across different audio tasks. To this end, we introduce DeCodec,
+    a novel neural codec that learns to decouple audio representations into orthogonal subspaces dedicated
+    to speech and background sound, and within speech, representations are further decomposed into semantic
+    and paralinguistic components. This hierarchical disentanglement allows flexible feature selection,
+    making DeCodec a universal front-end for multiple audio applications. Technically, built upon a codec
+    framework, DeCodec incorporates two key innovations: a subspace orthogonal projection module that
+    factorizes the input into two decoupled orthogonal subspaces, and a representation swap training procedure
+    that ensures these two subspaces are correlate to the speech and background sound, respectively. These
+    allows parallel RVQs to quantize speech and background sound components independently. Furthermore,
+    we employ semantic guidance to the speech RVQ to achieve semantic and paralinguistic decomposition.
+    Experimental results show that DeCodec maintains advanced signal reconstruction while enabling new
+    capabilities: superior speech enhancement and effective one-shot voice conversion on noisy speech
+    via representation recombination, improved ASR robustness through clean semantic features, and controllable
+    background sound preservation/suppression in TTS. Demo Page: https://luo404.github.io/DeCodecV2/'
+  url: https://arxiv.org/abs/2509.09201
+  pdf_url: https://arxiv.org/pdf/2509.09201v1
+  version: v1
+fetched: '2026-11-14'

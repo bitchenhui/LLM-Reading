@@ -1,0 +1,46 @@
+id: paper:arxiv:2202.06028
+status: pending
+score: 3
+track: immersive_media
+matched:
+- ref: concept:EntropyModel
+  count: 1
+  weight: 1
+- ref: metric:BD-Rate
+  count: 1
+  weight: 1
+- ref: org:MPEG
+  count: 1
+  weight: 1
+meta:
+  title: 'OctAttention: Octree-Based Large-Scale Contexts Model for Point Cloud Compression'
+  authors:
+  - Chunyang Fu
+  - Ge Li
+  - Rui Song
+  - Wei Gao
+  - Shan Liu
+  published: '2022-02-12'
+  updated: '2022-05-08'
+  categories:
+  - cs.CV
+  abstract: In point cloud compression, sufficient contexts are significant for modeling the point cloud
+    distribution. However, the contexts gathered by the previous voxel-based methods decrease when handling
+    sparse point clouds. To address this problem, we propose a multiple-contexts deep learning framework
+    called OctAttention employing the octree structure, a memory-efficient representation for point clouds.
+    Our approach encodes octree symbol sequences in a lossless way by gathering the information of sibling
+    and ancestor nodes. Expressly, we first represent point clouds with octree to reduce spatial redundancy,
+    which is robust for point clouds with different resolutions. We then design a conditional entropy
+    model with a large receptive field that models the sibling and ancestor contexts to exploit the strong
+    dependency among the neighboring nodes and employ an attention mechanism to emphasize the correlated
+    nodes in the context. Furthermore, we introduce a mask operation during training and testing to make
+    a trade-off between encoding time and performance. Compared to the previous state-of-the-art works,
+    our approach obtains a 10%-35% BD-Rate gain on the LiDAR benchmark (e.g. SemanticKITTI) and object
+    point cloud dataset (e.g. MPEG 8i, MVUB), and saves 95% coding time compared to the voxel-based baseline.
+    The code is available at https://github.com/zb12138/OctAttention.
+  url: https://arxiv.org/abs/2202.06028
+  pdf_url: https://arxiv.org/pdf/2202.06028v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 225
+citation_year: 2022

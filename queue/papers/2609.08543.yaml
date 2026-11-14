@@ -1,0 +1,37 @@
+id: paper:arxiv:2609.08543
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'STSG-VQA: Evidence-Grounded Temporal Question Answering from Surgical Spatio-Temporal Scene
+    Graphs'
+  authors:
+  - Jing Li
+  - Duygu Sarikaya
+  published: '2026-09-08'
+  updated: '2026-09-08'
+  categories:
+  - cs.CV
+  abstract: Despite recent advances in surgical vision-language models (VLMs), temporal reasoning remains
+    limited because existing supervision is largely frame-centric. Frame-level scene graphs (SGs) have
+    proven effective in providing structured representations of surgical environments but do not explicitly
+    model the dynamics of surgical workflows. To explicitly model how surgical states evolve across time,
+    we introduce a multi-level structured temporal supervision methodology that augments frame-level surgical
+    SGs with object-level continuity, event-level interaction continuity, and procedure-level connectivity.
+    We then execute temporal queries over the resulting spatio-temporal scene graphs (STSGs) to generate
+    evidence-grounded question-answer pairs, which together form the STSG-VQA benchmark. Each question
+    is linked to the temporal interval and STSG evidence used to derive its reference answer, enabling
+    traceable verification. The benchmark contains 18,458 question-answer pairs across seven temporal
+    categories. Fine-tuning Qwen3-VL-4B and Hulu-Med-4B with STSG-derived supervision improves question-level
+    micro accuracy by 24.39 and 19.56 percentage points over their zero-shot baselines and by 16.50 and
+    14.25 points over static scene-graph supervision, respectively. These gains span all temporal categories,
+    indicating that STSG-derived supervision helps surgical VLMs reason over temporally grounded interactions
+    rather than isolated frames. The code and dataset will be made publicly available upon acceptance.
+  url: https://arxiv.org/abs/2609.08543
+  pdf_url: https://arxiv.org/pdf/2609.08543v1
+  version: v1
+fetched: '2026-11-14'

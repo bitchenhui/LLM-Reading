@@ -1,0 +1,33 @@
+id: paper:arxiv:2506.01229
+status: skipped
+score: 1
+track: video_image_coding
+matched:
+- ref: metric:BD-Rate
+  count: 1
+  weight: 1
+meta:
+  title: Structured Pruning and Quantization for Learned Image Compression
+  authors:
+  - Md Adnan Faisal Hossain
+  - Fengqing Zhu
+  published: '2025-06-02'
+  updated: '2025-06-02'
+  categories:
+  - eess.IV
+  abstract: The high computational costs associated with large deep learning models significantly hinder
+    their practical deployment. Model pruning has been widely explored in deep learning literature to
+    reduce their computational burden, but its application has been largely limited to computer vision
+    tasks such as image classification and object detection. In this work, we propose a structured pruning
+    method targeted for Learned Image Compression (LIC) models that aims to reduce the computational costs
+    associated with image compression while maintaining the rate-distortion performance. We employ a Neural
+    Architecture Search (NAS) method based on the rate-distortion loss for computing the pruning ratio
+    for each layer of the network. We compare our pruned model with the uncompressed LIC Model with same
+    network architecture and show that it can achieve model size reduction without any BD-Rate performance
+    drop. We further show that our pruning method can be integrated with model quantization to achieve
+    further model compression while maintaining similar BD-Rate performance. We have made the source code
+    available at gitlab.com/viper-purdue/lic-pruning.
+  url: https://arxiv.org/abs/2506.01229
+  pdf_url: https://arxiv.org/pdf/2506.01229v1
+  version: v1
+fetched: '2026-11-14'

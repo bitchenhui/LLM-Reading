@@ -1,0 +1,42 @@
+id: paper:arxiv:2603.13669
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 4
+  weight: 1
+meta:
+  title: 'SHAMISA: SHAped Modeling of Implicit Structural Associations for Self-supervised No-Reference
+    Image Quality Assessment'
+  authors:
+  - Mahdi Naseri
+  - Zhou Wang
+  published: '2026-03-14'
+  updated: '2026-03-17'
+  categories:
+  - cs.CV
+  - cs.AI
+  - cs.LG
+  abstract: 'No-Reference Image Quality Assessment (NR-IQA) aims to estimate perceptual quality without
+    access to a reference image of pristine quality. Learning an NR-IQA model faces a fundamental bottleneck:
+    its need for a large number of costly human perceptual labels. We propose SHAMISA, a non-contrastive
+    self-supervised framework that learns from unlabeled distorted images by leveraging explicitly structured
+    relational supervision. Unlike prior methods that impose rigid, binary similarity constraints, SHAMISA
+    introduces implicit structural associations, defined as soft, controllable relations that are both
+    distortion-aware and content-sensitive, inferred from synthetic metadata and intrinsic feature structure.
+    A key innovation is our compositional distortion engine, which generates an uncountable family of
+    degradations from continuous parameter spaces, grouped so that only one distortion factor varies at
+    a time. This enables fine-grained control over representational similarity during training: images
+    with shared distortion patterns are pulled together in the embedding space, while severity variations
+    produce structured, predictable shifts. We integrate these insights via dual-source relation graphs
+    that encode both known degradation profiles and emergent structural affinities to guide the learning
+    process throughout training. A convolutional encoder is trained under this supervision and then frozen
+    for inference, with quality prediction performed by a linear regressor on its features. Extensive
+    experiments on synthetic, authentic, and cross-dataset NR-IQA benchmarks demonstrate that SHAMISA
+    achieves strong overall performance with improved cross-dataset generalization and robustness, all
+    without human quality annotations or contrastive losses.'
+  url: https://arxiv.org/abs/2603.13669
+  pdf_url: https://arxiv.org/pdf/2603.13669v2
+  version: v2
+fetched: '2026-11-14'

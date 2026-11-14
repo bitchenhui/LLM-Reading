@@ -1,0 +1,46 @@
+id: paper:arxiv:2402.00540
+status: pending
+score: 2
+track: streaming_delivery
+matched:
+- ref: concept:WebRTC
+  count: 2
+  weight: 1
+- ref: metric:FPS
+  count: 1
+  weight: 1
+meta:
+  title: Experimental Evaluation of Interactive Edge/Cloud Virtual Reality Gaming over Wi-Fi using Unity
+    Render Streaming
+  authors:
+  - Miguel Casasnovas
+  - Costas Michaelides
+  - Marc Carrascosa-Zamacois
+  - Boris Bellalta
+  published: '2024-02-01'
+  updated: '2024-08-06'
+  categories:
+  - cs.NI
+  abstract: 'Virtual Reality (VR) streaming enables end-users to seamlessly immerse themselves in interactive
+    virtual environments using even low-end devices. However, the quality of the VR experience heavily
+    relies on Wireless Fidelity (Wi-Fi) performance, since it serves as the last hop in the network chain.
+    Our study delves into the intricate interplay between Wi-Fi and VR traffic, drawing upon empirical
+    data and leveraging a Wi-Fi simulator. In this work, we further evaluate Wi-Fi''s suitability for
+    VR streaming in terms of the Quality of Service (QoS) it provides. In particular, we employ Unity
+    Render Streaming to remotely stream real-time VR gaming content over Wi-Fi 6 using Web Real-Time Communication
+    (WebRTC), considering a server physically located at the network''s edge, near the end user. Our findings
+    demonstrate the system''s sustained network performance, showcasing minimal round-trip time (RTT)
+    and jitter at 60 and 90 frames per second (fps). In addition, we uncover the characteristics and patterns
+    of the generated traffic streams, unveiling a distinctive video transmission approach inherent to
+    WebRTC-based services: the systematic packetization of video frames (VFs) and their transmission in
+    discrete batches at regular intervals, regardless of the targeted frame rate. This interval-based
+    transmission strategy maintains consistent video packet delays across video frame rates but leads
+    to increased Wi-Fi airtime consumption. Our results demonstrate that shortening the interval between
+    batches is advantageous, as it enhances Wi-Fi efficiency and reduces delays in delivering complete
+    frames.'
+  url: https://arxiv.org/abs/2402.00540
+  pdf_url: https://arxiv.org/pdf/2402.00540v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 27
+citation_year: 2024

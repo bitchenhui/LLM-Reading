@@ -1,0 +1,35 @@
+id: paper:arxiv:2506.00681
+status: skipped
+score: 0
+track: audio_coding
+matched: []
+meta:
+  title: Learning to Upsample and Upmix Audio in the Latent Domain
+  authors:
+  - Dimitrios Bralios
+  - Paris Smaragdis
+  - Jonah Casebeer
+  published: '2025-05-31'
+  updated: '2025-09-08'
+  categories:
+  - cs.SD
+  - cs.LG
+  - eess.AS
+  abstract: Neural audio autoencoders create compact latent representations that preserve perceptually
+    important information, serving as the foundation for both modern audio compression systems and generation
+    approaches like next-token prediction and latent diffusion. Despite their prevalence, most audio processing
+    operations, such as spatial and spectral up-sampling, still inefficiently operate on raw waveforms
+    or spectral representations rather than directly on these compressed representations. We propose a
+    framework that performs audio processing operations entirely within an autoencoder's latent space,
+    eliminating the need to decode to raw audio formats. Our approach dramatically simplifies training
+    by operating solely in the latent domain, with a latent L1 reconstruction term, augmented by a single
+    latent adversarial discriminator. This contrasts sharply with raw-audio methods that typically require
+    complex combinations of multi-scale losses and discriminators. Through experiments in bandwidth extension
+    and mono-to-stereo up-mixing, we demonstrate computational efficiency gains of up to 100x while maintaining
+    quality comparable to post-processing on raw audio. This work establishes a more efficient paradigm
+    for audio processing pipelines that already incorporate autoencoders, enabling significantly faster
+    and more resource-efficient workflows across various audio tasks.
+  url: https://arxiv.org/abs/2506.00681
+  pdf_url: https://arxiv.org/pdf/2506.00681v2
+  version: v2
+fetched: '2026-11-14'

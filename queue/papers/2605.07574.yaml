@@ -1,0 +1,37 @@
+id: paper:arxiv:2605.07574
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'PolarVLM: Bridging the Semantic-Physical Gap in Vision-Language Models'
+  authors:
+  - Yuliang Li
+  - Chu Zhou
+  - Heng Guo
+  - Boxin Shi
+  - Imari Sato
+  - Zhanyu Ma
+  published: '2026-05-08'
+  updated: '2026-05-11'
+  categories:
+  - cs.CV
+  abstract: Mainstream vision-language models (VLMs) fundamentally struggle with severe optical ambiguities,
+    such as reflections and transparent objects, due to the inherent limitations of standard RGB inputs.
+    While polarization imaging captures polarimetric physical parameters that resolve these ambiguities,
+    existing methods are constrained by fixed-format outputs and remain isolated from open-ended reasoning.
+    To bridge this semantic-physical gap, we introduce PolarVLM, the first multimodal framework integrating
+    polarimetric physical parameters into VLMs. By employing a dual-stream architecture and a progressive
+    two-stage training strategy, PolarVLM effectively prevents physical misinterpretations while preserving
+    general visual abilities. Complementing our architecture, we construct PolarVQA, the first benchmark
+    for polarization-aware VQA, featuring 75K physics-grounded instruction-tuning pairs targeting reflective
+    and transparent scenes. Experiments show that PolarVLM surpasses the RGB baseline by 25.4% overall
+    across five evaluation tasks, with remarkable gains of 26.6% in reflection recognition and 34.0% in
+    glass counting, successfully unlocking physics-aware semantic understanding.
+  url: https://arxiv.org/abs/2605.07574
+  pdf_url: https://arxiv.org/pdf/2605.07574v2
+  version: v2
+fetched: '2026-11-14'

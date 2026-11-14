@@ -1,0 +1,38 @@
+id: paper:arxiv:2208.00164
+status: skipped
+score: 1
+track: immersive_media
+matched:
+- ref: concept:NeRF
+  count: 2
+  weight: 1
+meta:
+  title: Distilled Low Rank Neural Radiance Field with Quantization for Light Field Compression
+  authors:
+  - Jinglei Shi
+  - Christine Guillemot
+  published: '2022-07-30'
+  updated: '2023-09-21'
+  categories:
+  - cs.CV
+  - cs.MM
+  abstract: We propose in this paper a Quantized Distilled Low-Rank Neural Radiance Field (QDLR-NeRF)
+    representation for the task of light field compression. While existing compression methods encode
+    the set of light field sub-aperture images, our proposed method learns an implicit scene representation
+    in the form of a Neural Radiance Field (NeRF), which also enables view synthesis. To reduce its size,
+    the model is first learned under a Low-Rank (LR) constraint using a Tensor Train (TT) decomposition
+    within an Alternating Direction Method of Multipliers (ADMM) optimization framework. To further reduce
+    the model's size, the components of the tensor train decomposition need to be quantized. However,
+    simultaneously considering the optimization of the NeRF model with both the low-rank constraint and
+    rate-constrained weight quantization is challenging. To address this difficulty, we introduce a network
+    distillation operation that separates the low-rank approximation and the weight quantization during
+    network training. The information from the initial LR-constrained NeRF (LR-NeRF) is distilled into
+    a model of much smaller dimension (DLR-NeRF) based on the TT decomposition of the LR-NeRF. We then
+    learn an optimized global codebook to quantize all TT components, producing the final QDLR-NeRF. Experimental
+    results show that our proposed method yields better compression efficiency compared to state-of-the-art
+    methods, and it additionally has the advantage of allowing the synthesis of any light field view with
+    high quality.
+  url: https://arxiv.org/abs/2208.00164
+  pdf_url: https://arxiv.org/pdf/2208.00164v3
+  version: v3
+fetched: '2026-11-14'

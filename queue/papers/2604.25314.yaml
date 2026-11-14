@@ -1,0 +1,38 @@
+id: paper:arxiv:2604.25314
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'Golden RPG: Confidence-Adaptive Region-Aware Noise for Compositional Text-to-Image Generation'
+  authors:
+  - Hao Li
+  published: '2026-04-28'
+  updated: '2026-04-28'
+  categories:
+  - cs.CV
+  abstract: 'Compositional text-to-image (T2I) generation requires a model to honour multiple sub-prompts
+    that describe distinct image regions. Recent work shows that the \emph{starting noise} of a diffusion
+    model carries significant semantic information: ``golden'''' noise predicted from text can substantially
+    raise prompt fidelity. We observe that this noise prediction is, however, fundamentally global: the
+    same network is asked to summarise a long, multi-region prompt with a single text embedding, which
+    becomes the bottleneck whenever the prompt describes scenes with spatially-separated entities. We
+    introduce \textbf{Golden RPG}, a region-aware noise predictor that extends a frozen NPNet with two
+    trainable additions: (i) a per-region \textbf{FiLM adapter} that reshapes the predicted noise according
+    to each sub-prompt; and (ii) a \textbf{Region Cross-Attention} layer injected between two stages of
+    the Swin backbone, allowing different spatial locations to attend to different sub-prompt tokens.
+    To prevent the regional conditioning from degrading samples whose prompts are already easy, we further
+    propose a \textbf{Confidence-Adaptive Blending} head that dynamically predicts, per sample, how strongly
+    the regional signal should override the global signal. We evaluate on the original RPG benchmark (20
+    prompts, 100 samples) and on four multi-region categories of T2I-CompBench (1{,}200 images, six competing
+    methods). Golden RPG achieves the highest Cross-Region-Coherence score on every category, while matching
+    the strongest baselines on absolute CLIP-Score and CLIP-IQA. A paired user study further shows a $\boldsymbol{\sim}$67\%
+    preference over the strongest baseline. The adapter contains $\sim$2M trainable parameters and adds
+    only $0.6$\,s of inference overhead on top of SDXL.'
+  url: https://arxiv.org/abs/2604.25314
+  pdf_url: https://arxiv.org/pdf/2604.25314v1
+  version: v1
+fetched: '2026-11-14'

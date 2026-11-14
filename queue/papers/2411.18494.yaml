@@ -1,0 +1,41 @@
+id: paper:arxiv:2411.18494
+status: skipped_low_citation
+score: 3
+track: video_image_coding
+matched:
+- ref: codec:VVC
+  count: 1
+  weight: 3
+meta:
+  title: Learning Optimal Linear Block Transform by Rate Distortion Minimization
+  authors:
+  - Alessandro Gnutti
+  - Chia-Hao Kao
+  - Wen-Hsiao Peng
+  - Riccardo Leonardi
+  published: '2024-11-27'
+  updated: '2024-11-27'
+  categories:
+  - eess.IV
+  abstract: Linear block transform coding remains a fundamental component of image and video compression.
+    Although the Discrete Cosine Transform (DCT) is widely employed in all current compression standards,
+    its sub-optimality has sparked ongoing research into discovering more efficient alternative transforms
+    even for fields where it represents a consolidated tool. In this paper, we introduce a novel linear
+    block transform called the Rate Distortion Learned Transform (RDLT), a data-driven transform specifically
+    designed to minimize the rate-distortion (RD) cost when approximating residual blocks. Our approach
+    builds on the latest end-to-end learned compression frameworks, adopting back-propagation and stochastic
+    gradient descent for optimization. However, unlike the nonlinear transforms used in variational autoencoder
+    (VAE)-based methods, the goal is to create a simpler yet optimal linear block transform, ensuring
+    practical integration into existing image and video compression standards. Differently from existing
+    data-driven methods that design transforms based on sample covariance matrices, such as the Karhunen-Loève
+    Transform (KLT), the proposed RDLT is directly optimized from an RD perspective. Experimental results
+    show that this transform significantly outperforms the DCT or other existing data-driven transforms.
+    Additionally, it is shown that when simulating the integration of our RDLT into a VVC-like image compression
+    framework, the proposed transform brings substantial improvements. All the code used in our experiments
+    has been made publicly available at [1].
+  url: https://arxiv.org/abs/2411.18494
+  pdf_url: https://arxiv.org/pdf/2411.18494v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 3
+citation_year: 2024

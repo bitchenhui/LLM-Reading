@@ -1,0 +1,50 @@
+id: paper:arxiv:2511.16137
+status: skipped_low_citation
+score: 2
+track: processing_enhancement
+matched:
+- ref: concept:QP
+  count: 1
+  weight: 1
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+meta:
+  title: Blind Quality Enhancement of Compressed Video via Fine-Grained Degradation-Guided Sequential
+    Inference
+  authors:
+  - Li Yu
+  - Yingbo Zhao
+  - Shiyu Wu
+  - Siyue Yu
+  - Moncef Gabbouj
+  - Qingshan Liu
+  published: '2025-11-20'
+  updated: '2026-07-07'
+  categories:
+  - cs.CV
+  abstract: Existing studies on quality enhancement for compressed video (QECV) predominantly rely on
+    known quantization parameters (QPs), training separate enhancement models for each QP setting, which
+    are referred to as non-blind methods. However, in practical scenarios such as transcoding and transmission,
+    QPs may be partially or entirely unavailable, which limits the applicability of these methods and
+    motivates the development of blind QECV techniques. Existing blind methods typically generate degradation
+    vectors using classification models trained with cross-entropy loss, and employ them as channel attention
+    to guide artifact reduction. Nevertheless, such degradation representations mainly capture global
+    compression information and lack fine-grained spatial cues, making them less effective in handling
+    spatially varying artifact patterns. To address this issue, we propose a pre-trained degradation representation
+    learning module that decouples and extracts high-dimensional, multi-scale degradation representations
+    from compressed video content, providing fine-grained guidance for artifact reduction. Furthermore,
+    most existing blind and nonblind methods adopt a uniform inference architecture for all compression
+    levels, ignoring the distinct computational demands of different QPs. To overcome this limitation,
+    we introduce a sequential inference strategy that adaptively adjusts the number of artifact reduction
+    stages according to the estimated compression level. Extensive experiments show that the proposed
+    method significantly improves enhancement performance. In particular, at QP = 22, it raises PSNR improvement
+    from 0.31 dB to 0.65 dB over the previous state-of-the-art blind method. Meanwhile, with the proposed
+    sequential inference strategy, the average inference time at QP = 22 is reduced by 50% compared with
+    that at QP = 42.
+  url: https://arxiv.org/abs/2511.16137
+  pdf_url: https://arxiv.org/pdf/2511.16137v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 0
+citation_year: 2025

@@ -1,0 +1,46 @@
+id: paper:arxiv:2409.04016
+status: skipped
+score: 1
+track: audio_coding
+matched:
+- ref: concept:NeuralAudioCodec
+  count: 1
+  weight: 1
+meta:
+  title: Investigating Neural Audio Codecs for Speech Language Model-Based Speech Generation
+  authors:
+  - Jiaqi Li
+  - Dongmei Wang
+  - Xiaofei Wang
+  - Yao Qian
+  - Long Zhou
+  - Shujie Liu
+  - Midia Yousefi
+  - Canrun Li
+  - Chung-Hsien Tsai
+  - Zhen Xiao
+  - Yanqing Liu
+  - Junkun Chen
+  - Sheng Zhao
+  - Jinyu Li
+  - Zhizheng Wu
+  - Michael Zeng
+  published: '2024-09-06'
+  updated: '2024-09-06'
+  categories:
+  - cs.SD
+  - eess.AS
+  abstract: 'Neural audio codec tokens serve as the fundamental building blocks for speech language model
+    (SLM)-based speech generation. However, there is no systematic understanding on how the codec system
+    affects the speech generation performance of the SLM. In this work, we examine codec tokens within
+    SLM framework for speech generation to provide insights for effective codec design. We retrain existing
+    high-performing neural codec models on the same data set and loss functions to compare their performance
+    in a uniform setting. We integrate codec tokens into two SLM systems: masked-based parallel speech
+    generation system and an auto-regressive (AR) plus non-auto-regressive (NAR) model-based system. Our
+    findings indicate that better speech reconstruction in codec systems does not guarantee improved speech
+    generation in SLM. A high-quality codec decoder is crucial for natural speech production in SLM, while
+    speech intelligibility depends more on quantization mechanism.'
+  url: https://arxiv.org/abs/2409.04016
+  pdf_url: https://arxiv.org/pdf/2409.04016v1
+  version: v1
+fetched: '2026-11-14'

@@ -1,0 +1,46 @@
+id: paper:arxiv:2602.20328
+status: skipped_low_citation
+score: 2
+track: processing_enhancement
+matched:
+- ref: concept:SuperResolution
+  count: 1
+  weight: 1
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+meta:
+  title: 'GSNR: Graph Smooth Null-Space Representation for Inverse Problems'
+  authors:
+  - Romario Gualdrón-Hurtado
+  - Roman Jacome
+  - Rafael S. Suarez
+  - Henry Arguello
+  published: '2026-02-23'
+  updated: '2026-04-15'
+  categories:
+  - cs.CV
+  - eess.IV
+  - math.OC
+  abstract: 'Inverse problems in imaging are ill-posed, leading to infinitely many solutions consistent
+    with the measurements due to the non-trivial null-space of the sensing matrix. Common image priors
+    promote solutions on the general image manifold, such as sparsity, smoothness, or score function.
+    However, as these priors do not constrain the null-space component, they can bias the reconstruction.
+    Thus, we aim to incorporate meaningful null-space information in the reconstruction framework. Inspired
+    by smooth image representation on graphs, we propose Graph-Smooth Null-Space Representation (GSNR),
+    a mechanism that imposes structure only into the invisible component. Particularly, given a graph
+    Laplacian, we construct a null-restricted Laplacian that encodes similarity between neighboring pixels
+    in the null-space signal, and we design a low-dimensional projection matrix from the $p$-smoothest
+    spectral graph modes (lowest graph frequencies). This approach has strong theoretical and practical
+    implications: i) improved convergence via a null-only graph regularizer, ii) better coverage, how
+    much null-space variance is captured by $p$ modes, and iii) high predictability, how well these modes
+    can be inferred from the measurements. GSNR is incorporated into well-known inverse problem solvers,
+    e.g., PnP, DIP, and diffusion solvers, in four scenarios: image deblurring, compressed sensing, demosaicing,
+    and image super-resolution, providing consistent improvement of up to 4.3 dB over baseline formulations
+    and up to 1 dB compared with end-to-end learned models in terms of PSNR.'
+  url: https://arxiv.org/abs/2602.20328
+  pdf_url: https://arxiv.org/pdf/2602.20328v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 2
+citation_year: 2026

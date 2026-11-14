@@ -1,0 +1,47 @@
+id: paper:arxiv:2306.16786
+status: pending
+score: 10
+track: video_image_coding
+matched:
+- ref: codec:HEVC
+  count: 2
+  weight: 3
+- ref: codec:VVC
+  count: 2
+  weight: 3
+- ref: impl:VVenC
+  count: 1
+  weight: 3
+- ref: metric:BD-Rate
+  count: 1
+  weight: 1
+meta:
+  title: All-intra rate control using low complexity video features for Versatile Video Coding
+  authors:
+  - Vignesh V Menon
+  - Anastasia Henkel
+  - Prajit T Rajendran
+  - Christian R. Helmrich
+  - Adam Wieckowski
+  - Benjamin Bross
+  - Christian Timmerer
+  - Detlev Marpe
+  published: '2023-06-29'
+  updated: '2023-06-29'
+  categories:
+  - cs.MM
+  abstract: Versatile Video Coding (VVC) allows for large compression efficiency gains over its predecessor,
+    High Efficiency Video Coding (HEVC). The added efficiency comes at the cost of increased runtime complexity,
+    especially for encoding. It is thus highly relevant to explore all available runtime reduction options.
+    This paper proposes a novel first pass for two-pass rate control in all-intra configuration, using
+    low-complexity video analysis and a Random Forest (RF)-based machine learning model to derive the
+    data required for driving the second pass. The proposed method is validated using VVenC, an open and
+    optimized VVC encoder. Compared to the default two-pass rate control algorithm in VVenC, the proposed
+    method achieves around 32% reduction in encoding time for the preset faster, while on average only
+    causing 2% BD-rate increase and achieving similar rate control accuracy.
+  url: https://arxiv.org/abs/2306.16786
+  pdf_url: https://arxiv.org/pdf/2306.16786v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 11
+citation_year: 2023

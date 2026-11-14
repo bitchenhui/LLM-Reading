@@ -1,0 +1,41 @@
+id: paper:arxiv:2302.02034
+status: skipped
+score: 1
+track: streaming_delivery
+matched:
+- ref: concept:WebRTC
+  count: 1
+  weight: 1
+meta:
+  title: '5GLoR: 5G LAN Orchestration for enterprise IoT applications'
+  authors:
+  - Sandesh Dhawaskar Sathyanarayana
+  - Murugan Sankaradas
+  - Srimat Chakradhar
+  published: '2023-02-03'
+  updated: '2023-02-08'
+  categories:
+  - cs.NI
+  abstract: '5G-LAN is an enterprise local area network (LAN) that leverages 5G technology for wireless
+    connectivity instead of WiFi. 5G technology is unique: it uses network slicing to distinguish customers
+    in the same traffic class using new QoS technologies in the RF domain. This unique ability is not
+    supported by most enterprise LANs, which rely primarily on DiffServ-like technologies that distinguish
+    among traffic classes rather than customers. We first show that this mismatch in QoS between the 5G
+    network and the LAN affects the accuracy of insights from the LAN-resident analytics applications.
+    We systematically analyze the root causes of the QoS mismatch and propose a first-of-a-kind 5G-LAN
+    orchestrator (5GLoR). 5GLoR is a middleware that applications can use to preserve the QoS of their
+    5G data streams through the enterprise LAN. 5GLoR periodically analyzes the status of the queues,
+    provides suitable DSCP identifiers to the application, and installs relevant switch re-write rules
+    (to change DSCP identifiers between switches) to continuously preserve the QoS of the 5G data through
+    the LAN. 5GLoR improves the RTP frame level delay and inter-frame delay by 212\% and 122\%, respectively,
+    for the WebRTC application. Additionally, with 5GLoR, the accuracy of two example applications (face
+    detection and recognition) improved by 33\%, while the latency was reduced by about 25\%. Our experiments
+    show that the performance (accuracy and latency) of applications on a 5G-LAN performs well with the
+    proposed 5GLoR compared to the same applications on MEC. This is significant because 5G-LAN offers
+    an order of magnitude more computing, networking, and storage resources to the applications than the
+    resource-constrained MEC, and mature enterprise technologies can be used to deploy, manage, and update
+    IoT applications.'
+  url: https://arxiv.org/abs/2302.02034
+  pdf_url: https://arxiv.org/pdf/2302.02034v2
+  version: v2
+fetched: '2026-11-14'

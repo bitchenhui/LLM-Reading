@@ -1,0 +1,50 @@
+id: paper:arxiv:2508.02072
+status: pending
+score: 6
+track: video_image_coding
+matched:
+- ref: impl:VTM
+  count: 1
+  weight: 3
+- ref: metric:MS-SSIM
+  count: 1
+  weight: 1
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+- ref: metric:SSIM
+  count: 1
+  weight: 1
+meta:
+  title: 'HyTIP: Hybrid Temporal Information Propagation for Masked Conditional Residual Video Coding'
+  authors:
+  - Yi-Hsin Chen
+  - Yi-Chen Yao
+  - Kuan-Wei Ho
+  - Chun-Hung Wu
+  - Huu-Tai Phung
+  - Martin Benjak
+  - Jörn Ostermann
+  - Wen-Hsiao Peng
+  published: '2025-08-04'
+  updated: '2025-08-25'
+  categories:
+  - eess.IV
+  abstract: Most frame-based learned video codecs can be interpreted as recurrent neural networks (RNNs)
+    propagating reference information along the temporal dimension. This work revisits the limitations
+    of the current approaches from an RNN perspective. The output-recurrence methods, which propagate
+    decoded frames, are intuitive but impose dual constraints on the output decoded frames, leading to
+    suboptimal rate-distortion performance. In contrast, the hidden-to-hidden connection approaches, which
+    propagate latent features within the RNN, offer greater flexibility but require large buffer sizes.
+    To address these issues, we propose HyTIP, a learned video coding framework that combines both mechanisms.
+    Our hybrid buffering strategy uses explicit decoded frames and a small number of implicit latent features
+    to achieve competitive coding performance. Experimental results show that our HyTIP outperforms the
+    sole use of either output-recurrence or hidden-to-hidden approaches. Furthermore, it achieves comparable
+    performance to state-of-the-art methods but with a much smaller buffer size, and outperforms VTM 17.0
+    (Low-delay B) in terms of PSNR-RGB and MS-SSIM-RGB. The source code of HyTIP is available at https://github.com/NYCU-MAPL/HyTIP.
+  url: https://arxiv.org/abs/2508.02072
+  pdf_url: https://arxiv.org/pdf/2508.02072v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 11
+citation_year: 2025

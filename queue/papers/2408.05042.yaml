@@ -1,0 +1,70 @@
+id: paper:arxiv:2408.05042
+status: pending
+score: 20
+track: video_image_coding
+matched:
+- ref: codec:VVC
+  count: 2
+  weight: 3
+- ref: codec:AV1
+  count: 1
+  weight: 3
+- ref: codec:ECM
+  count: 1
+  weight: 3
+- ref: impl:DCVC-FM
+  count: 1
+  weight: 3
+- ref: impl:VTM
+  count: 1
+  weight: 3
+- ref: metric:BD-Rate
+  count: 1
+  weight: 1
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+- ref: org:AOMedia
+  count: 1
+  weight: 1
+- ref: org:JVET
+  count: 1
+  weight: 1
+- ref: org:MPEG
+  count: 1
+  weight: 1
+meta:
+  title: Benchmarking Conventional and Learned Video Codecs with a Low-Delay Configuration
+  authors:
+  - Siyue Teng
+  - Yuxuan Jiang
+  - Ge Gao
+  - Fan Zhang
+  - Thomas Davis
+  - Zoe Liu
+  - David Bull
+  published: '2024-08-09'
+  updated: '2024-08-09'
+  categories:
+  - cs.MM
+  - cs.CV
+  - eess.IV
+  abstract: Recent advances in video compression have seen significant coding performance improvements
+    with the development of new standards and learning-based video codecs. However, most of these works
+    focus on application scenarios that allow a certain amount of system delay (e.g., Random Access mode
+    in MPEG codecs), which is not always acceptable for live delivery. This paper conducts a comparative
+    study of state-of-the-art conventional and learned video coding methods based on a low delay configuration.
+    Specifically, this study includes two MPEG standard codecs (H.266/VVC VTM and JVET ECM), two AOM codecs
+    (AV1 libaom and AVM), and two recent neural video coding models (DCVC-DC and DCVC-FM). To allow a
+    fair and meaningful comparison, the evaluation was performed on test sequences defined in the AOM
+    and MPEG common test conditions in the YCbCr 4:2:0 color space. The evaluation results show that the
+    JVET ECM codecs offer the best overall coding performance among all codecs tested, with a 16.1% (based
+    on PSNR) average BD-rate saving over AOM AVM, and 11.0% over DCVC-FM. We also observed inconsistent
+    performance with the learned video codecs, DCVC-DC and DCVC-FM, for test content with large background
+    motions.
+  url: https://arxiv.org/abs/2408.05042
+  pdf_url: https://arxiv.org/pdf/2408.05042v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 7
+citation_year: 2024

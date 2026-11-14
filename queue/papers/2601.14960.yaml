@@ -1,0 +1,33 @@
+id: paper:arxiv:2601.14960
+status: skipped
+score: 1
+track: audio_coding
+matched:
+- ref: concept:NeuralAudioCodec
+  count: 1
+  weight: 1
+meta:
+  title: 'VCNAC: A Variable-Channel Neural Audio Codec for Mono, Stereo, and Surround Sound'
+  authors:
+  - Florian Grötschla
+  - Arunasish Sen
+  - Alessandro Lombardi
+  - Guillermo Cámbara
+  - Andreas Schwarz
+  published: '2026-01-21'
+  updated: '2026-01-21'
+  categories:
+  - cs.SD
+  - eess.AS
+  abstract: We present VCNAC, a variable channel neural audio codec. Our approach features a single encoder
+    and decoder parametrization that enables native inference for different channel setups, from mono
+    speech to cinematic 5.1 channel surround audio. Channel compatibility objectives ensure that multi-channel
+    content maintains perceptual quality when decoded to fewer channels. The shared representation enables
+    training of generative language models on a single set of codebooks while supporting inference-time
+    scalability across modalities and channel configurations. Evaluation using objective spatial audio
+    metrics and subjective listening tests demonstrates that our unified approach maintains high reconstruction
+    quality across mono, stereo, and surround audio configurations.
+  url: https://arxiv.org/abs/2601.14960
+  pdf_url: https://arxiv.org/pdf/2601.14960v1
+  version: v1
+fetched: '2026-11-14'

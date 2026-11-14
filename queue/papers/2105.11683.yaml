@@ -1,0 +1,43 @@
+id: paper:arxiv:2105.11683
+status: pending
+score: 3
+track: processing_enhancement
+matched:
+- ref: concept:SuperResolution
+  count: 2
+  weight: 1
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+- ref: metric:SSIM
+  count: 1
+  weight: 1
+meta:
+  title: Towards Compact Single Image Super-Resolution via Contrastive Self-distillation
+  authors:
+  - Yanbo Wang
+  - Shaohui Lin
+  - Yanyun Qu
+  - Haiyan Wu
+  - Zhizhong Zhang
+  - Yuan Xie
+  - Angela Yao
+  published: '2021-05-25'
+  updated: '2021-05-25'
+  categories:
+  - cs.CV
+  abstract: Convolutional neural networks (CNNs) are highly successful for super-resolution (SR) but often
+    require sophisticated architectures with heavy memory cost and computational overhead, significantly
+    restricts their practical deployments on resource-limited devices. In this paper, we proposed a novel
+    contrastive self-distillation (CSD) framework to simultaneously compress and accelerate various off-the-shelf
+    SR models. In particular, a channel-splitting super-resolution network can first be constructed from
+    a target teacher network as a compact student network. Then, we propose a novel contrastive loss to
+    improve the quality of SR images and PSNR/SSIM via explicit knowledge transfer. Extensive experiments
+    demonstrate that the proposed CSD scheme effectively compresses and accelerates several standard SR
+    models such as EDSR, RCAN and CARN. Code is available at https://github.com/Booooooooooo/CSD.
+  url: https://arxiv.org/abs/2105.11683
+  pdf_url: https://arxiv.org/pdf/2105.11683v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 62
+citation_year: 2021

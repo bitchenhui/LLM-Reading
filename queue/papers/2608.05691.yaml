@@ -1,0 +1,36 @@
+id: paper:arxiv:2608.05691
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 2
+  weight: 1
+meta:
+  title: 'SciQNet: Two-Stage Multimodal Adaptation for Scientific Image Quality Assessment'
+  authors:
+  - Yin-Loon Khor
+  - Yi-Jie Wong
+  - Jing Jie Tan
+  - Ming Jie Lee
+  published: '2026-08-06'
+  updated: '2026-08-06'
+  categories:
+  - cs.CV
+  abstract: Scientific images are essential for communicating experimental observations, quantitative
+    evidence and conceptual knowledge. Unlike natural images, their quality depends on both visual clarity
+    and scientific informativeness, making assessment challenging. In this work, we present SciQNet, a
+    two-stage multimodal adaptation framework for scientific image quality assessment. The first stage
+    performs domain-adaptive pretraining on scientific document images and the second stage conducts task-specific
+    fine-tuning with joint scoring and understanding supervision. For scoring-oriented supervision, we
+    combine instruction tuning with a Huber loss derived from rating-word logits, while understanding-oriented
+    supervision is formulated as multiple-choice visual question answering. Experiments show that using
+    a 40% stratified subset of the domain-adaptive data gives the best performance among the evaluated
+    pretraining fractions, suggesting that pretraining-data relevance may be as important as pretraining-data
+    scale. The final model achieves an SIQA-S score of 92.21, an SIQA-U score of 47.38 and a combined
+    score of 69.80. This work presents our solution to the ICME 2026 Scientific Image Quality Assessment
+    Challenge, which ranked 2nd in the scoring track.
+  url: https://arxiv.org/abs/2608.05691
+  pdf_url: https://arxiv.org/pdf/2608.05691v1
+  version: v1
+fetched: '2026-11-14'

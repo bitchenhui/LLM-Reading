@@ -1,0 +1,49 @@
+id: paper:arxiv:2510.12479
+status: pending
+score: 7
+track: video_image_coding
+matched:
+- ref: impl:DCVC-FM
+  count: 1
+  weight: 3
+- ref: impl:VTM
+  count: 1
+  weight: 3
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+meta:
+  title: 'MH-LVC: Multi-Hypothesis Temporal Prediction for Learned Conditional Residual Video Coding'
+  authors:
+  - Huu-Tai Phung
+  - Zong-Lin Gao
+  - Yi-Chen Yao
+  - Kuan-Wei Ho
+  - Yi-Hsin Chen
+  - Yu-Hsiang Lin
+  - Alessandro Gnutti
+  - Wen-Hsiao Peng
+  published: '2025-10-14'
+  updated: '2025-10-14'
+  categories:
+  - eess.IV
+  abstract: This work, termed MH-LVC, presents a multi-hypothesis temporal prediction scheme that employs
+    long- and short-term reference frames in a conditional residual video coding framework. Recent temporal
+    context mining approaches to conditional video coding offer superior coding performance. However,
+    the need to store and access a large amount of implicit contextual information extracted from past
+    decoded frames in decoding a video frame poses a challenge due to excessive memory access. Our MH-LVC
+    overcomes this issue by storing multiple long- and short-term reference frames but limiting the number
+    of reference frames used at a time for temporal prediction to two. Our decoded frame buffer management
+    allows the encoder to flexibly utilize the long-term key frames to mitigate temporal cascading errors
+    and the short-term reference frames to minimize prediction errors. Moreover, our buffering scheme
+    enables the temporal prediction structure to be adapted to individual input videos. While this flexibility
+    is common in traditional video codecs, it has not been fully explored for learned video codecs. Extensive
+    experiments show that the proposed method outperforms VTM-17.0 under the low-delay B configuration
+    in terms of PSNR-RGB across commonly used test datasets, and performs comparably to the state-of-the-art
+    learned codecs (e.g.~DCVC-FM) while requiring less decoded frame buffer and similar decoding time.
+  url: https://arxiv.org/abs/2510.12479
+  pdf_url: https://arxiv.org/pdf/2510.12479v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 6
+citation_year: 2025

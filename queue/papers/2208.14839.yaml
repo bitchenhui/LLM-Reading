@@ -1,0 +1,50 @@
+id: paper:arxiv:2208.14839
+status: pending
+score: 2
+track: processing_enhancement
+matched:
+- ref: concept:SuperResolution
+  count: 3
+  weight: 1
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+meta:
+  title: 'QuantNAS for super resolution: searching for efficient quantization-friendly architectures against
+    quantization noise'
+  authors:
+  - Egor Shvetsov
+  - Dmitry Osin
+  - Alexey Zaytsev
+  - Ivan Koryakovskiy
+  - Valentin Buchnev
+  - Ilya Trofimov
+  - Evgeny Burnaev
+  published: '2022-08-31'
+  updated: '2024-01-10'
+  categories:
+  - cs.CV
+  abstract: 'There is a constant need for high-performing and computationally efficient neural network
+    models for image super-resolution: computationally efficient models can be used via low-capacity devices
+    and reduce carbon footprints. One way to obtain such models is to compress models, e.g. quantization.
+    Another way is a neural architecture search that automatically discovers new, more efficient solutions.
+    We propose a novel quantization-aware procedure, the QuantNAS that combines pros of these two approaches.
+    To make QuantNAS work, the procedure looks for quantization-friendly super-resolution models. The
+    approach utilizes entropy regularization, quantization noise, and Adaptive Deviation for Quantization
+    (ADQ) module to enhance the search procedure. The entropy regularization technique prioritizes a single
+    operation within each block of the search space. Adding quantization noise to parameters and activations
+    approximates model degradation after quantization, resulting in a more quantization-friendly architectures.
+    ADQ helps to alleviate problems caused by Batch Norm blocks in super-resolution models. Our experimental
+    results show that the proposed approximations are better for search procedure than direct model quantization.
+    QuantNAS discovers architectures with better PSNR/BitOps trade-off than uniform or mixed precision
+    quantization of fixed architectures. We showcase the effectiveness of our method through its application
+    to two search spaces inspired by the state-of-the-art SR models and RFDN. Thus, anyone can design
+    a proper search space based on an existing architecture and apply our method to obtain better quality
+    and efficiency. The proposed procedure is 30\% faster than direct weight quantization and is more
+    stable.'
+  url: https://arxiv.org/abs/2208.14839
+  pdf_url: https://arxiv.org/pdf/2208.14839v4
+  version: v4
+fetched: '2026-11-14'
+citation_count: 8
+citation_year: 2022

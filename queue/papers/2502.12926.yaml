@@ -1,0 +1,44 @@
+id: paper:arxiv:2502.12926
+status: skipped_low_citation
+score: 2
+track: self_improvement
+matched:
+- ref: concept:LLM
+  count: 2
+  weight: 1
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+meta:
+  title: 'Towards more Contextual Agents: An extractor-Generator Optimization Framework'
+  authors:
+  - Mourad Aouini
+  - Jinan Loubani
+  published: '2025-02-18'
+  updated: '2025-02-18'
+  categories:
+  - cs.AI
+  abstract: 'Large Language Model (LLM)-based agents have demonstrated remarkable success in solving complex
+    tasks across a wide range of general-purpose applications. However, their performance often degrades
+    in context-specific scenarios, such as specialized industries or research domains, where the absence
+    of domain-relevant knowledge leads to imprecise or suboptimal outcomes. To address this challenge,
+    our work introduces a systematic approach to enhance the contextual adaptability of LLM-based agents
+    by optimizing their underlying prompts-critical components that govern agent behavior, roles, and
+    interactions. Manually crafting optimized prompts for context-specific tasks is labor-intensive, error-prone,
+    and lacks scalability. In this work, we introduce an Extractor-Generator framework designed to automate
+    the optimization of contextual LLM-based agents. Our method operates through two key stages: (i) feature
+    extraction from a dataset of gold-standard input-output examples, and (ii) prompt generation via a
+    high-level optimization strategy that iteratively identifies underperforming cases and applies self-improvement
+    techniques. This framework substantially improves prompt adaptability by enabling more precise generalization
+    across diverse inputs, particularly in context-specific tasks where maintaining semantic consistency
+    and minimizing error propagation are critical for reliable performance. Although developed with single-stage
+    workflows in mind, the approach naturally extends to multi-stage workflows, offering broad applicability
+    across various agent-based systems. Empirical evaluations demonstrate that our framework significantly
+    enhances the performance of prompt-optimized agents, providing a structured and efficient approach
+    to contextual LLM-based agents.'
+  url: https://arxiv.org/abs/2502.12926
+  pdf_url: https://arxiv.org/pdf/2502.12926v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 2
+citation_year: 2025

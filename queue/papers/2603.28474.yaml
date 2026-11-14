@@ -1,0 +1,49 @@
+id: paper:arxiv:2603.28474
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'CiQi-Agent: Aligning Vision, Tools and Aesthetics in Multimodal Agent for Cultural Reasoning
+    on Chinese Porcelains'
+  authors:
+  - Wenhan Wang
+  - Zhixiang Zhou
+  - Zhongtian Ma
+  - Yanzhu Chen
+  - Ziyu Lin
+  - Hao Sheng
+  - Pengfei Liu
+  - Honglin Ma
+  - Wenqi Shao
+  - Qiaosheng Zhang
+  - Yu Qiao
+  published: '2026-03-30'
+  updated: '2026-03-30'
+  categories:
+  - cs.CV
+  - cs.AI
+  abstract: 'The connoisseurship of antique Chinese porcelain demands extensive historical expertise,
+    material understanding, and aesthetic sensitivity, making it difficult for non-specialists to engage.
+    To democratize cultural-heritage understanding and assist expert connoisseurship, we introduce CiQi-Agent
+    -- a domain-specific Porcelain Connoisseurship Agent for intelligent analysis of antique Chinese porcelain.
+    CiQi-Agent supports multi-image porcelain inputs and enables vision tool invocation and multimodal
+    retrieval-augmented generation, performing fine-grained connoisseurship analysis across six attributes:
+    dynasty, reign period, kiln site, glaze color, decorative motif, and vessel shape. Beyond attribute
+    classification, it captures subtle visual details, retrieves relevant domain knowledge, and integrates
+    visual and textual evidence to produce coherent, explainable connoisseurship descriptions. To achieve
+    this capability, we construct a large-scale, expert-annotated dataset CiQi-VQA, comprising 29,596
+    porcelain specimens, 51,553 images, and 557,940 visual question--answering pairs, and further establish
+    a comprehensive benchmark CiQi-Bench aligned with the previously mentioned six attributes. CiQi-Agent
+    is trained through supervised fine-tuning, reinforcement learning, and a tool-augmented reasoning
+    framework that integrates two categories of tools: a vision tool and multimodal retrieval tools. Experimental
+    results show that CiQi-Agent (7B) outperforms all competitive open- and closed-source models across
+    all six attributes on CiQi-Bench, achieving on average 12.2\% higher accuracy than GPT-5. The model
+    and dataset have been released and are publicly available at https://huggingface.co/datasets/SII-Monument-Valley/CiQi-VQA.'
+  url: https://arxiv.org/abs/2603.28474
+  pdf_url: https://arxiv.org/pdf/2603.28474v1
+  version: v1
+fetched: '2026-11-14'

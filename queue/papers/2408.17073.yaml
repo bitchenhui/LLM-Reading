@@ -1,0 +1,50 @@
+id: paper:arxiv:2408.17073
+status: skipped
+score: 2
+track: video_image_coding
+matched:
+- ref: concept:EntropyModel
+  count: 1
+  weight: 1
+- ref: concept:RDO
+  count: 1
+  weight: 1
+meta:
+  title: Approximately Invertible Neural Network for Learned Image Compression
+  authors:
+  - Yanbo Gao
+  - Meng Fu
+  - Shuai Li
+  - Chong Lv
+  - Xun Cai
+  - Hui Yuan
+  - Mao Ye
+  published: '2024-08-30'
+  updated: '2024-08-30'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: Learned image compression have attracted considerable interests in recent years. It typically
+    comprises an analysis transform, a synthesis transform, quantization and an entropy coding model.
+    The analysis transform and synthesis transform are used to encode an image to latent feature and decode
+    the quantized feature to reconstruct the image, and can be regarded as coupled transforms. However,
+    the analysis transform and synthesis transform are designed independently in the existing methods,
+    making them unreliable in high-quality image compression. Inspired by the invertible neural networks
+    in generative modeling, invertible modules are used to construct the coupled analysis and synthesis
+    transforms. Considering the noise introduced in the feature quantization invalidates the invertible
+    process, this paper proposes an Approximately Invertible Neural Network (A-INN) framework for learned
+    image compression. It formulates the rate-distortion optimization in lossy image compression when
+    using INN with quantization, which differentiates from using INN for generative modelling. Generally
+    speaking, A-INN can be used as the theoretical foundation for any INN based lossy compression method.
+    Based on this formulation, A-INN with a progressive denoising module (PDM) is developed to effectively
+    reduce the quantization noise in the decoding. Moreover, a Cascaded Feature Recovery Module (CFRM)
+    is designed to learn high-dimensional feature recovery from low-dimensional ones to further reduce
+    the noise in feature channel compression. In addition, a Frequency-enhanced Decomposition and Synthesis
+    Module (FDSM) is developed by explicitly enhancing the high-frequency components in an image to address
+    the loss of high-frequency information inherent in neural network based image compression. Extensive
+    experiments demonstrate that the proposed A-INN outperforms the existing learned image compression
+    methods.
+  url: https://arxiv.org/abs/2408.17073
+  pdf_url: https://arxiv.org/pdf/2408.17073v1
+  version: v1
+fetched: '2026-11-14'

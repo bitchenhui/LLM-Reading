@@ -1,0 +1,39 @@
+id: paper:arxiv:2306.05390
+status: skipped
+score: 1
+track: processing_enhancement
+matched:
+- ref: concept:SuperResolution
+  count: 1
+  weight: 1
+meta:
+  title: 'HQ-50K: A Large-scale, High-quality Dataset for Image Restoration'
+  authors:
+  - Qinhong Yang
+  - Dongdong Chen
+  - Zhentao Tan
+  - Qiankun Liu
+  - Qi Chu
+  - Jianmin Bao
+  - Lu Yuan
+  - Gang Hua
+  - Nenghai Yu
+  published: '2023-06-08'
+  updated: '2023-06-08'
+  categories:
+  - cs.CV
+  abstract: This paper introduces a new large-scale image restoration dataset, called HQ-50K, which contains
+    50,000 high-quality images with rich texture details and semantic diversity. We analyze existing image
+    restoration datasets from five different perspectives, including data scale, resolution, compression
+    rates, texture details, and semantic coverage. However, we find that all of these datasets are deficient
+    in some aspects. In contrast, HQ-50K considers all of these five aspects during the data curation
+    process and meets all requirements. We also present a new Degradation-Aware Mixture of Expert (DAMoE)
+    model, which enables a single model to handle multiple corruption types and unknown levels. Our extensive
+    experiments demonstrate that HQ-50K consistently improves the performance on various image restoration
+    tasks, such as super-resolution, denoising, dejpeg, and deraining. Furthermore, our proposed DAMoE,
+    trained on our \dataset, outperforms existing state-of-the-art unified models designed for multiple
+    restoration tasks and levels. The dataset and code are available at \url{https://github.com/littleYaang/HQ-50K}.
+  url: https://arxiv.org/abs/2306.05390
+  pdf_url: https://arxiv.org/pdf/2306.05390v1
+  version: v1
+fetched: '2026-11-14'

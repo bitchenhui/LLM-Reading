@@ -1,0 +1,43 @@
+id: paper:arxiv:2608.18166
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'TractoGraphVLM: A Unified Vision-Language Framework for White Matter Tractography'
+  authors:
+  - Gurucharan Marthi Krishna Kumar
+  - Janine Dale Mendola
+  - Amir Shmuel
+  published: '2026-08-16'
+  updated: '2026-08-16'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: Vision language models have transformed 2D medical imaging, yet extending them to 3D white
+    matter tractography remains challenging due to the complex topology of fiber bundles. We introduce
+    TractoGraphVLM, a unified framework for four tasks, bundle classification, text-to-tract retrieval,
+    anatomical captioning, and visual question answering, built on a shared GPS architecture, training
+    procedure, and read-out design. Fiber bundles are represented as streamline graphs whose nodes encode
+    3D position and tangent orientation. A General, Powerful, Scalable (GPS) graph transformer produces
+    bundle embeddings aligned with a frozen BiomedBERT text encoder via contrastive learning, while a
+    BioGPT decoder with visual prefix tokens generates captions and answers. A single shared encoder and
+    decoder is trained jointly across all four tasks and evaluated from one checkpoint. Trained on HCP
+    Young Adult subjects, TractoGraphVLM achieves 91.8% bundle classification accuracy, 84.7% retrieval
+    R@1, BLEU-4=20.1, ROUGE-L=66.8, and 66.4% VQA accuracy on a held-out test set. The same checkpoints
+    transfer zero-shot to HCP Aging subjects, with a modest drop on discriminative tasks and a larger
+    drop on generative tasks, showing robustness to age and acquisition shift. Language supervision yields
+    richer representations than label-only training, recovering structure like hemisphere and fiber family,
+    carried by captions but never given as a label. Swapping only the visual encoder, graphs preserving
+    fiber orientation outperform volumetric baselines, with GPS giving the best balance. Generative metrics
+    measure consistency with a structured knowledge base rather than independent clinical text; even so,
+    TractoGraphVLM shows that classifying, retrieving, describing, and answering questions about a white
+    matter bundle can be served by one jointly trained model that learns transferable neuroanatomy from
+    language alone.
+  url: https://arxiv.org/abs/2608.18166
+  pdf_url: https://arxiv.org/pdf/2608.18166v1
+  version: v1
+fetched: '2026-11-14'

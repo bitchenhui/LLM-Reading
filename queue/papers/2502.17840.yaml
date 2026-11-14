@@ -1,0 +1,43 @@
+id: paper:arxiv:2502.17840
+status: skipped_low_citation
+score: 2
+track: self_improvement
+matched:
+- ref: concept:LLM
+  count: 1
+  weight: 1
+- ref: concept:SelfImprovement
+  count: 1
+  weight: 1
+meta:
+  title: A Combinatorial Identities Benchmark for Theorem Proving via Automated Theorem Generation
+  authors:
+  - Beibei Xiong
+  - Hangyu Lv
+  - Haojia Shan
+  - Jianlin Wang
+  - Zhengfeng Yang
+  - Lihong Zhi
+  published: '2025-02-25'
+  updated: '2025-02-25'
+  categories:
+  - cs.AI
+  abstract: Large language models (LLMs) have significantly advanced formal theorem proving, yet the scarcity
+    of high-quality training data constrains their capabilities in complex mathematical domains. Combinatorics,
+    a cornerstone of mathematics, provides essential tools for analyzing discrete structures and solving
+    optimization problems. However, its inherent complexity makes it particularly challenging for automated
+    theorem proving (ATP) for combinatorial identities. To address this, we manually construct LeanComb,
+    combinatorial identities benchmark in Lean, which is, to our knowledge, the first formalized theorem
+    proving benchmark built for combinatorial identities. We develop an Automated Theorem Generator for
+    Combinatorial Identities, ATG4CI, which combines candidate tactics suggested by a self-improving large
+    language model with a Reinforcement Learning Tree Search approach for tactic prediction. By utilizing
+    ATG4CI, we generate a LeanComb-Enhanced dataset comprising 260K combinatorial identities theorems,
+    each with a complete formal proof in Lean, and experimental evaluations demonstrate that models trained
+    on this dataset can generate more effective tactics, thereby improving success rates in automated
+    theorem proving for combinatorial identities.
+  url: https://arxiv.org/abs/2502.17840
+  pdf_url: https://arxiv.org/pdf/2502.17840v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 5
+citation_year: 2025

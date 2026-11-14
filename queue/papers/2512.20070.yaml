@@ -1,0 +1,32 @@
+id: paper:arxiv:2512.20070
+status: skipped
+score: 0
+track: video_image_coding
+matched: []
+meta:
+  title: Progressive Learned Image Compression for Machine Perception
+  authors:
+  - Jungwoo Kim
+  - Jun-Hyuk Kim
+  - Jong-Seok Lee
+  published: '2025-12-23'
+  updated: '2026-08-10'
+  categories:
+  - cs.CV
+  - eess.IV
+  abstract: Recent advances in learned image codecs have extended from human perception toward machine
+    perception However, progressive image compression with fine granular scalability (FGS)-which enables
+    decoding a single bitstream at multiple quality levels-remains unexplored for machine-oriented codecs.
+    In this work, we propose PICM-Net, a progressive learned image compression codec for machine perception
+    built on trit-plane coding. Starting from a human-oriented codec, we adapt it for machine perception
+    via a spatial-frequency modulation adapter (SFMA), a hyper-synthesis low-rank adapter (HSLoRA), and
+    progressive decoding-aware training, and analyze how task-driven adaptation alters symbol prioritization
+    for progressive transmission. To further support real-world deployment, we introduce an adaptive decoding
+    controller that dynamically determines the necessary decoding level at inference time, requesting
+    additional bits only when the current suitability is insufficient for the desired confidence level.
+    Extensive experiments demonstrate that PICM-Net achieves efficient and adaptive progressive transmission
+    while maintaining strong downstream classification performance. Our code is available at https://github.com/kjungwoo03/PICM-Net.
+  url: https://arxiv.org/abs/2512.20070
+  pdf_url: https://arxiv.org/pdf/2512.20070v2
+  version: v2
+fetched: '2026-11-14'

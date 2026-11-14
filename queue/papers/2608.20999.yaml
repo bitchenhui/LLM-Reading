@@ -1,0 +1,41 @@
+id: paper:arxiv:2608.20999
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 2
+  weight: 1
+meta:
+  title: 'Latent Ordinal Evidence, Misaligned Outputs: Inference-Time Ordinal Lens Alignment for Multimodal
+    LLMs'
+  authors:
+  - Haiming Li
+  - Yingsheng Liu
+  - Jingmin Zhu
+  - Siyuan Yan
+  - Xieji Li
+  - Jiajun Sun
+  - Zhen Yu
+  - Zongyuan Ge
+  published: '2026-08-21'
+  updated: '2026-08-21'
+  categories:
+  - cs.CV
+  abstract: 'Multimodal LLMs apply the language model interface to visual inputs, where ordinal regression
+    tasks such as age estimation, image quality assessment, and disease grading require autoregressive
+    decisions over ordered class labels. We ask whether MLLMs reliably convert internal ordinal evidence
+    into ordered digit-token outputs. Across four ordinal benchmarks and four MLLM backbones, ordinal
+    labels are linearly recoverable from hidden states with Spearman correlation up to 0.938, and a task-designed
+    prompt further sharpens this structure. Yet native digit-token outputs weakly expose it: the unembedding
+    matrix filters the ordinal direction, and the digit-token row space retains below 1.15% across all
+    16 model-dataset combinations, with a 16 to 77 absolute-point accuracy gap between linear-probe and
+    native outputs. We introduce Ordinal Lens Alignment (OLA), a frozen-backbone inference-time method
+    that trains lightweight W_S-anchored lenses on mid-to-deep decoder layers, fuses them into an ordinal
+    distribution, and corrects only digit-token logits at generation. OLA outperforms the SOTA LoRA-tuned
+    OrderChain baseline in most settings while keeping the MLLM frozen, surpasses discriminative ordinal
+    baselines in most cells, and improves over an offline lens in every setting.'
+  url: https://arxiv.org/abs/2608.20999
+  pdf_url: https://arxiv.org/pdf/2608.20999v1
+  version: v1
+fetched: '2026-11-14'

@@ -1,0 +1,38 @@
+id: paper:arxiv:2605.26831
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'OSMa-Bench++: Toward Open-Ended Benchmarking of Semantic Mapping for Manipulation with Prompt-Generated
+    Synthetic Scenes'
+  authors:
+  - Regina Kurkova
+  - Maxim Popov
+  - Sergey Kolyubin
+  published: '2026-05-26'
+  updated: '2026-05-26'
+  categories:
+  - cs.CV
+  - cs.RO
+  abstract: Semantic mapping methods are increasingly used as intermediate scene representations for downstream
+    robotic reasoning and manipulation, yet their evaluation is still largely tied to fixed benchmark
+    datasets with limited coverage of manipulation-relevant corner cases. In this work, we extend OSMa-Bench
+    toward controllable benchmarking with prompt-generated synthetic indoor scenes. Our pipeline automatically
+    generates scene descriptions, synthesizes corresponding environments with SceneSmith, and adapts the
+    resulting assets into an OSMa-Bench-compatible simulation format. This adaptation requires a nontrivial
+    intermediate layer, including semantic normalization, material and texture repair, shader fallback
+    policies, floor handling, navigation setup, and controlled lighting configuration. A key advantage
+    of the proposed setup is that the original scene-generation prompt is known in advance and can therefore
+    serve as an auxiliary semantic specification of the intended scene. We use this property to extend
+    the VQA component of OSMa-Bench with a prompt-grounded question category. The resulting framework
+    supports targeted stress-testing of semantic scene representations under conditions such as clutter,
+    small objects, partial occlusions, and lighting variation, and makes benchmarking more extensible
+    and better aligned with downstream manipulation requirements. Our code is available at https://github.com/be2rlab/OSMa-Bench-v2.
+  url: https://arxiv.org/abs/2605.26831
+  pdf_url: https://arxiv.org/pdf/2605.26831v1
+  version: v1
+fetched: '2026-11-14'

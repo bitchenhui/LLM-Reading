@@ -1,0 +1,33 @@
+id: paper:arxiv:2605.17085
+status: skipped
+score: 1
+track: audio_coding
+matched:
+- ref: concept:NeuralAudioCodec
+  count: 1
+  weight: 1
+meta:
+  title: Taming Audio VAEs via Target-KL Regularization
+  authors:
+  - Prem Seetharaman
+  - Rithesh Kumar
+  published: '2026-05-16'
+  updated: '2026-05-16'
+  categories:
+  - cs.SD
+  - cs.LG
+  - eess.AS
+  abstract: Latent diffusion models have emerged as the dominant paradigm for many generation tasks including
+    audio generation such as text-to-audio, text-to-music and text-to-speech. A key component of latent
+    diffusion is an autoencoder (VAE) that compresses high-dimensional signals into a low frame rate continuous
+    representation that is conducive for downstream prediction. Regularizing these VAEs is challenging,
+    as there is a trade-off between over-regularized (poor output quality) and under-regularized (difficult
+    to predict) latent representations. We propose a framework for studying this trade-off through compression
+    and train Audio VAEs at specific bitrates via target-KL regularization. This allows direct comparison
+    to well-studied discrete neural audio codec models, and the construction of rate-distortion curves
+    for audio VAEs. We evaluate the impact of target-KL regularization on text-to-sound generation and
+    find that sweeping compression rates is helpful in identifying the optimal generation setting.
+  url: https://arxiv.org/abs/2605.17085
+  pdf_url: https://arxiv.org/pdf/2605.17085v1
+  version: v1
+fetched: '2026-11-14'

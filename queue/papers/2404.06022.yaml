@@ -1,0 +1,38 @@
+id: paper:arxiv:2404.06022
+status: skipped
+score: 0
+track: video_image_coding
+matched: []
+meta:
+  title: Band-Attention Modulation Network for Robust Face Forgery Detection
+  authors:
+  - Zhida Zhang
+  - Wenkui Yang
+  - Xinlei Ma
+  - Qihang Fan
+  - Jie Cao
+  published: '2024-04-09'
+  updated: '2026-09-24'
+  categories:
+  - cs.CV
+  - cs.AI
+  - cs.MM
+  abstract: Face forgery detection faces critical challenges in generalizing to unseen manipulation techniques
+    and remaining robust under image compression, which often obscures subtle artifacts. Existing methods
+    typically rely on fixed filters or coarse band separation, lacking the adaptability to learn task-specific
+    spectral cues. To address this, we propose the Band-Attention Modulation Network (BAM-Net), a novel
+    framework that pioneers learnable, fine-grained modulation of frequency components for forgery detection.
+    At its core is the Band-Attention Modulation (BAM) mechanism, which transforms an image into its Discrete
+    Cosine Transform (DCT) spectrogram and learns to dynamically reweight frequency bands along anti-diagonals.
+    This process effectively enhances forgery-related spectral signatures while suppressing less informative
+    ones, simulating an adaptive "inverse compression" that counters information loss. The modulated frequency
+    information is then fused with the spatial domain to guide a lightweight yet effective spatial backbone
+    equipped with distance-decayed attention for comprehensive feature extraction. Extensive experiments
+    on FaceForensics++, Celeb-DF, and DFDC datasets demonstrate that BAM-Net achieves state-of-the-art
+    performance. More importantly, it exhibits exceptional generalization in cross-dataset, cross-compression,
+    and cross-manipulation scenarios, underscoring the vital role of adaptive frequency band modulation
+    in building robust forgery detectors.
+  url: https://arxiv.org/abs/2404.06022
+  pdf_url: https://arxiv.org/pdf/2404.06022v3
+  version: v3
+fetched: '2026-11-14'

@@ -1,0 +1,44 @@
+id: paper:arxiv:2606.02535
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 2
+  weight: 1
+meta:
+  title: 'LL-Bench: Rethinking Low-Level Vision Evaluation in the Era of Large-Scale Generative Models'
+  authors:
+  - Lu Liu
+  - Huiyu Duan
+  - Chenxin Zhu
+  - Jintong Lu
+  - Haoyun Jiang
+  - Liu Yang
+  - Qiang Hu
+  - Guangtao Zhai
+  - Xiaoyun Zhang
+  published: '2026-06-01'
+  updated: '2026-06-01'
+  categories:
+  - cs.CV
+  abstract: Large-scale generative models have demonstrated remarkable capabilities across image generation
+    and editing tasks. However, their performance in low-level vision tasks, which require pixel-wise
+    control, remains insufficiently studied. To address this gap, we introduce \textbf{LL-Bench}, a comprehensive
+    \textbf{Benchmark} for evaluating the capabilities of large-scale generative models on \textbf{L}ow-\textbf{L}evel
+    vision tasks. The benchmark comprises 2,469 real-world degraded images covering 16 low-level degradation
+    tasks, and 28,919 restored images produced by 10 state-of-the-art large-scale generative models and
+    21 conventional restoration models, which are annotated with 152,020 expert-level pairwise human preferences
+    and 28,334 quality scores. Built upon LL-Bench, we present a systematic diagnosis that reveals the
+    performance boundaries and unique failure modes of large-scale generative models across diverse low-level
+    vision tasks, compared with conventional representative restoration approaches. Moreover, we investigate
+    the effectiveness of current quality evaluation metrics on LL-Bench, which exhibit significant discrepancy
+    with human ratings. To better align restored-image quality assessment with human preferences, we further
+    propose \textbf{LL-Score}, an MLLM-based evaluator that captures both restoration quality and hallucination
+    existence. Extensive experiments demonstrate that LL-score not only outperforms existing image quality
+    assessment metrics, but also serves as a promising reward model for training generative models on
+    low-level vision tasks.
+  url: https://arxiv.org/abs/2606.02535
+  pdf_url: https://arxiv.org/pdf/2606.02535v1
+  version: v1
+fetched: '2026-11-14'

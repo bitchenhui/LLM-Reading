@@ -1,0 +1,37 @@
+id: paper:arxiv:2507.06419
+status: skipped
+score: 1
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 1
+  weight: 1
+meta:
+  title: 'Teach a Reward Model to Correct Itself: Reward Guided Adversarial Failure Discovery for Robust
+    Reward Modeling'
+  authors:
+  - Pankayaraj Pathmanathan
+  - Furong Huang
+  published: '2025-07-08'
+  updated: '2026-06-04'
+  categories:
+  - cs.CL
+  abstract: Reward modeling (RM), which captures human preferences to align large language models (LLMs),
+    is increasingly employed in tasks such as model finetuning, response filtering, and ranking. However,
+    due to the inherent complexity of human preferences and the limited coverage of available datasets,
+    reward models often fail under distributional shifts or adversarial perturbations. Existing approaches
+    for identifying such failure modes typically rely on prior knowledge about preference distributions
+    or failure attributes, limiting their practicality in real-world settings where such information is
+    unavailable. In this work, we propose a tractable, preference-distribution agnostic method for discovering
+    reward model failure modes via reward guided controlled decoding. Building on this, we introduce REFORM,
+    a self-improving reward modeling framework that enhances robustness by using the reward model itself
+    to guide the generation of falsely scored responses. These adversarial examples are then used to augment
+    the training data and patch the reward model's misaligned behavior. We evaluate REFORM on two widely
+    used preference datasets Anthropic Helpful Harmless (HH) and PKU Beavertails and demonstrate that
+    it significantly improves robustness without sacrificing reward quality. Notably, REFORM preserves
+    performance both in direct evaluation and in downstream policy training, and further improves alignment
+    quality by removing spurious correlations.
+  url: https://arxiv.org/abs/2507.06419
+  pdf_url: https://arxiv.org/pdf/2507.06419v3
+  version: v3
+fetched: '2026-11-14'

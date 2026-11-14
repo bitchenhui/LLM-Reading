@@ -1,0 +1,45 @@
+id: paper:arxiv:2506.00385
+status: skipped
+score: 0
+track: audio_coding
+matched: []
+meta:
+  title: 'MagiCodec: Simple Masked Gaussian-Injected Codec for High-Fidelity Reconstruction and Generation'
+  authors:
+  - Yakun Song
+  - Jiawei Chen
+  - Xiaobin Zhuang
+  - Chenpeng Du
+  - Ziyang Ma
+  - Jian Wu
+  - Jian Cong
+  - Dongya Jia
+  - Zhuo Chen
+  - Yuping Wang
+  - Yuxuan Wang
+  - Xie Chen
+  published: '2025-05-31'
+  updated: '2025-05-31'
+  categories:
+  - cs.SD
+  - cs.AI
+  - cs.LG
+  - eess.AS
+  abstract: Neural audio codecs have made significant strides in efficiently mapping raw audio waveforms
+    into discrete token representations, which are foundational for contemporary audio generative models.
+    However, most existing codecs are optimized primarily for reconstruction quality, often at the expense
+    of the downstream modelability of the encoded tokens. Motivated by the need to overcome this bottleneck,
+    we introduce $\textbf{MagiCodec}$, a novel single-layer, streaming Transformer-based audio codec.
+    MagiCodec is designed with a multistage training pipeline that incorporates Gaussian noise injection
+    and latent regularization, explicitly targeting the enhancement of semantic expressiveness in the
+    generated codes while preserving high reconstruction fidelity. We analytically derive the effect of
+    noise injection in the frequency domain, demonstrating its efficacy in attenuating high-frequency
+    components and fostering robust tokenization. Extensive experimental evaluations show that MagiCodec
+    surpasses state-of-the-art codecs in both reconstruction quality and downstream tasks. Notably, the
+    tokens produced by MagiCodec exhibit Zipf-like distributions, as observed in natural languages, thereby
+    improving compatibility with language-model-based generative architectures. The code and pre-trained
+    models are available at https://github.com/Ereboas/MagiCodec.
+  url: https://arxiv.org/abs/2506.00385
+  pdf_url: https://arxiv.org/pdf/2506.00385v1
+  version: v1
+fetched: '2026-11-14'

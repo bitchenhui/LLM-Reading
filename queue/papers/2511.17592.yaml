@@ -1,0 +1,49 @@
+id: paper:arxiv:2511.17592
+status: pending
+score: 2
+track: self_improvement
+matched:
+- ref: concept:AlphaEvolve
+  count: 1
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: 'GigaEvo: An Open Source Optimization Framework Powered By LLMs And Evolution Algorithms'
+  authors:
+  - Valentin Khrulkov
+  - Andrey Galichin
+  - Denis Bashkirov
+  - Dmitry Vinichenko
+  - Oleg Travkin
+  - Roman Alferov
+  - Andrey Kuznetsov
+  - Ivan Oseledets
+  published: '2025-11-17'
+  updated: '2025-11-17'
+  categories:
+  - cs.NE
+  - cs.AI
+  - cs.LG
+  abstract: 'Recent advances in LLM-guided evolutionary computation, particularly AlphaEvolve (Novikov
+    et al., 2025; Georgiev et al., 2025), have demonstrated remarkable success in discovering novel mathematical
+    constructions and solving challenging optimization problems. However, the high-level descriptions
+    in published work leave many implementation details unspecified, hindering reproducibility and further
+    research. In this report we present GigaEvo, an extensible open-source framework that enables researchers
+    to study and experiment with hybrid LLM-evolution approaches inspired by AlphaEvolve. Our system provides
+    modular implementations of key components: MAP-Elites quality-diversity algorithms, asynchronous DAG-based
+    evaluation pipelines, LLM-driven mutation operators with insight generation and bidirectional lineage
+    tracking, and flexible multi-island evolutionary strategies. In order to assess reproducibility and
+    validate our implementation we evaluate GigaEvo on challenging problems from the AlphaEvolve paper:
+    Heilbronn triangle placement, circle packing in squares, and high-dimensional kissing numbers. The
+    framework emphasizes modularity, concurrency, and ease of experimentation, enabling rapid prototyping
+    through declarative configuration. We provide detailed descriptions of system architecture, implementation
+    decisions, and experimental methodology to support further research in LLM driven evolutionary methods.
+    The GigaEvo framework and all experimental code are available at https://github.com/AIRI-Institute/gigaevo-core.'
+  url: https://arxiv.org/abs/2511.17592
+  pdf_url: https://arxiv.org/pdf/2511.17592v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 17
+citation_year: 2025

@@ -1,0 +1,40 @@
+id: paper:arxiv:2605.24500
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'EgoAdapt: A Multi-Scene Egocentric Adaptation Method for CVPR 2026 HD-EPIC VQA Challenge'
+  authors:
+  - Zhiwei Chen
+  - Yupeng Hu
+  - Zixu Li
+  - Zhiheng Fu
+  - Guozhi Qiu
+  - Weili Guan
+  - Liqiang Nie
+  published: '2026-05-23'
+  updated: '2026-06-04'
+  categories:
+  - cs.CV
+  abstract: 'This technical report presents our solution, EgoAdapt (Egocentric Adaptation via Category,
+    Calibration, and Consistency), to the CVPR 2026 HD-EPIC VQA challenge. HD-EPIC evaluates whether a
+    vision-language model can reason over realistic first-person kitchen videos, where the evidence for
+    an answer may be a short hand-object interaction, a long recipe trajectory, a spatial relation to
+    a fixture, or a subtle gaze cue. The benchmark contains 26K multiple-choice questions across seven
+    macro-categories: recipe, ingredient, nutrition, fine-grained action, 3D perception, object motion,
+    and gaze. We observe that the main difficulty is not only model capacity, but also the mismatch between
+    a single generic inference recipe and the heterogeneous temporal, spatial, and semantic structure
+    of the benchmark. Our method, EgoAdapt, introduces three inference-time components: (1) category-conditioned
+    routing with per-category prompts, frame budgets, and sampling rates; (2) calibrated option scoring
+    that evaluates all candidate answers with letter-token likelihoods and generation agreement instead
+    of relying only on direct generation; and (3) test-time consistency adaptation that aggregates predictions
+    across option permutations and verification-style prompts for ambiguous cases. This design substantially
+    improves over the available HD-EPIC baselines.'
+  url: https://arxiv.org/abs/2605.24500
+  pdf_url: https://arxiv.org/pdf/2605.24500v2
+  version: v2
+fetched: '2026-11-14'

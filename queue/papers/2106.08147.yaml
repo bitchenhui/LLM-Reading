@@ -1,0 +1,52 @@
+id: paper:arxiv:2106.08147
+status: pending
+score: 9
+track: processing_enhancement
+matched:
+- ref: codec:HEVC
+  count: 1
+  weight: 3
+- ref: impl:HM
+  count: 1
+  weight: 3
+- ref: concept:SuperResolution
+  count: 1
+  weight: 1
+- ref: metric:VMAF
+  count: 1
+  weight: 1
+- ref: org:JVET
+  count: 1
+  weight: 1
+meta:
+  title: Perceptually-inspired super-resolution of compressed videos
+  authors:
+  - Di Ma
+  - Mariana Afonso
+  - Fan Zhang
+  - David R. Bull
+  published: '2021-06-15'
+  updated: '2021-06-15'
+  categories:
+  - eess.IV
+  - cs.CV
+  - cs.LG
+  abstract: Spatial resolution adaptation is a technique which has often been employed in video compression
+    to enhance coding efficiency. This approach encodes a lower resolution version of the input video
+    and reconstructs the original resolution during decoding. Instead of using conventional up-sampling
+    filters, recent work has employed advanced super-resolution methods based on convolutional neural
+    networks (CNNs) to further improve reconstruction quality. These approaches are usually trained to
+    minimise pixel-based losses such as Mean-Squared Error (MSE), despite the fact that this type of loss
+    metric does not correlate well with subjective opinions. In this paper, a perceptually-inspired super-resolution
+    approach (M-SRGAN) is proposed for spatial up-sampling of compressed video using a modified CNN model,
+    which has been trained using a generative adversarial network (GAN) on compressed content with perceptual
+    loss functions. The proposed method was integrated with HEVC HM 16.20, and has been evaluated on the
+    JVET Common Test Conditions (UHD test sequences) using the Random Access configuration. The results
+    show evident perceptual quality improvement over the original HM 16.20, with an average bitrate saving
+    of 35.6% (Bjøntegaard Delta measurement) based on a perceptual quality metric, VMAF.
+  url: https://arxiv.org/abs/2106.08147
+  pdf_url: https://arxiv.org/pdf/2106.08147v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 19
+citation_year: 2019

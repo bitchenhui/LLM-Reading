@@ -1,0 +1,46 @@
+id: paper:arxiv:2310.13250
+status: skipped_low_citation
+score: 4
+track: video_image_coding
+matched:
+- ref: codec:HEVC
+  count: 1
+  weight: 3
+- ref: metric:BD-Rate
+  count: 1
+  weight: 1
+meta:
+  title: Diagnosis-oriented Medical Image Compression with Efficient Transfer Learning
+  authors:
+  - Guangqi Xie
+  - Xin Li
+  - Xiaohan Pan
+  - Zhibo Chen
+  published: '2023-10-20'
+  updated: '2023-10-20'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: Remote medical diagnosis has emerged as a critical and indispensable technique in practical
+    medical systems, where medical data are required to be efficiently compressed and transmitted for
+    diagnosis by either professional doctors or intelligent diagnosis devices. In this process, a large
+    amount of redundant content irrelevant to the diagnosis is subjected to high-fidelity coding, leading
+    to unnecessary transmission costs. To mitigate this, we propose diagnosis-oriented medical image compression,
+    a special semantic compression task designed for medical scenarios, targeting to reduce the compression
+    cost without compromising the diagnosis accuracy. However, collecting sufficient medical data to optimize
+    such a compression system is significantly expensive and challenging due to privacy issues and the
+    lack of professional annotation. In this study, we propose DMIC, the first efficient transfer learning-based
+    codec, for diagnosis-oriented medical image compression, which can be effectively optimized with only
+    few-shot annotated medical examples, by reusing the knowledge in the existing reinforcement learning-based
+    task-driven semantic coding framework, i.e., HRLVSC [1]. Concretely, we focus on tuning only the partial
+    parameters of the policy network for bit allocation within HRLVSC, which enables it to adapt to the
+    medical images. In this work, we validate our DMIC with the typical medical task, Coronary Artery
+    Segmentation. Extensive experiments have demonstrated that our DMIC can achieve 47.594%BD-Rate savings
+    compared to the HEVC anchor, by tuning only the A2C module (2.7% parameters) of the policy network
+    with only 1 medical sample.
+  url: https://arxiv.org/abs/2310.13250
+  pdf_url: https://arxiv.org/pdf/2310.13250v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 3
+citation_year: 2023

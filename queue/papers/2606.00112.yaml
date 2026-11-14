@@ -1,0 +1,34 @@
+id: paper:arxiv:2606.00112
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: Evolving to the Aesthetics of a Vision-Language Model
+  authors:
+  - Stephen James Krol
+  - Jon McCormack
+  published: '2026-05-27'
+  updated: '2026-05-27'
+  categories:
+  - cs.NE
+  - cs.CV
+  abstract: Evolutionary systems have demonstrated remarkable results in creative domains, with recent
+    applications in generative typography, design, and music. However, an open problem remains in designing
+    fitness functions that effectively capture the desired aesthetics of abstract outputs. In this work,
+    we explore two methods for evaluating the aesthetics of a population using Vision-Language Models
+    (VLMs). The first method uses CLIP-IQA to predict an aesthetic score for each design. The second method
+    instead pits candidates against each other, with winners determined by a VLM using a custom prompt
+    specified by the user. The outcomes of these pairwise comparisons are then used to estimate a population
+    ranking via the Glicko rating system. We present these methods in the context of a case study using
+    a custom generative system and compare the resulting rankings with an artist's aesthetic ranking and
+    those produced by other aesthetic evaluation techniques. Additionally, we document the artist's experience
+    using these approaches to evolve designs, critically analysing the strengths and weaknesses of both
+    methods.
+  url: https://arxiv.org/abs/2606.00112
+  pdf_url: https://arxiv.org/pdf/2606.00112v1
+  version: v1
+fetched: '2026-11-14'

@@ -1,0 +1,40 @@
+id: paper:arxiv:2603.25645
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'Colon-Bench: An Agentic Workflow for Scalable Dense Lesion Annotation in Full-Procedure Colonoscopy
+    Videos'
+  authors:
+  - Abdullah Hamdi
+  - Changchun Yang
+  - Xin Gao
+  published: '2026-03-26'
+  updated: '2026-06-28'
+  categories:
+  - eess.IV
+  - cs.CV
+  - cs.HC
+  abstract: Early screening via colonoscopy is critical for colon cancer prevention, yet developing robust
+    AI systems for this domain is hindered by the lack of densely annotated, long-sequence video datasets.
+    Existing datasets predominantly focus on single-class polyp detection and lack the rich spatial, temporal,
+    and linguistic annotations required to evaluate modern Multimodal Large Language Models (MLLMs). To
+    address this critical gap, we introduce Colon-Bench, generated via a novel multi-stage agentic workflow.
+    Our pipeline seamlessly integrates temporal proposals, bounding-box tracking, AI-driven visual confirmation,
+    and human-in-the-loop review to scalably annotate full-procedure videos. The resulting verified benchmark
+    is unprecedented in scope, encompassing 528 videos, 14 distinct lesion categories (including polyps,
+    ulcers, and bleeding), over 300,000 bounding boxes, 213,000 segmentation masks, and 133,000 words
+    of clinical descriptions. We utilize Colon-Bench to rigorously evaluate state-of-the-art MLLMs across
+    lesion classification, Open-Vocabulary Video Object Segmentation (OV-VOS), and video Visual Question
+    Answering (VQA). The MLLM results demonstrate surprisingly high localization performance in medical
+    domains compared to SAM-3. Finally, we analyze common VQA errors from MLLMs to introduce a novel "colon-skill"
+    prompting strategy, improving zero-shot MLLM performance by up to 9.7% across most MLLMs. The dataset
+    and the code are available at https://abdullahamdi.com/colon-bench .
+  url: https://arxiv.org/abs/2603.25645
+  pdf_url: https://arxiv.org/pdf/2603.25645v3
+  version: v3
+fetched: '2026-11-14'

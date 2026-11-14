@@ -1,0 +1,34 @@
+id: paper:arxiv:2106.06482
+status: skipped
+score: 1
+track: immersive_media
+matched:
+- ref: concept:EntropyModel
+  count: 1
+  weight: 1
+meta:
+  title: Neural Network Modeling of Probabilities for Coding the Octree Representation of Point Clouds
+  authors:
+  - Emre Can Kaya
+  - Ioan Tabus
+  published: '2021-06-11'
+  updated: '2021-10-11'
+  categories:
+  - cs.CV
+  - eess.IV
+  abstract: This paper describes a novel lossless point cloud compression algorithm that uses a neural
+    network for estimating the coding probabilities for the occupancy status of voxels, depending on wide
+    three dimensional contexts around the voxel to be encoded. The point cloud is represented as an octree,
+    with each resolution layer being sequentially encoded and decoded using arithmetic coding, starting
+    from the lowest resolution, until the final resolution is reached. The occupancy probability of each
+    voxel of the splitting pattern at each node of the octree is modeled by a neural network, having at
+    its input the already encoded occupancy status of several octree nodes (belonging to the past and
+    current resolutions), corresponding to a 3D context surrounding the node to be encoded. The algorithm
+    has a fast and a slow version, the fast version selecting differently several voxels of the context,
+    which allows an increased parallelization by sending larger batches of templates to be estimated by
+    the neural network, at both encoder and decoder. The proposed algorithms yield state-of-the-art results
+    on benchmark datasets. The implementation will be made available at https://github.com/marmus12/nnctx
+  url: https://arxiv.org/abs/2106.06482
+  pdf_url: https://arxiv.org/pdf/2106.06482v4
+  version: v4
+fetched: '2026-11-14'

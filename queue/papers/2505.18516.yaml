@@ -1,0 +1,41 @@
+id: paper:arxiv:2505.18516
+status: skipped
+score: 1
+track: audio_coding
+matched:
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: 'Distinctive Feature Codec: An Adaptive Efficient Speech Representation for Depression Detection'
+  authors:
+  - Xiangyu Zhang
+  - Fuming Fang
+  - Peng Gao
+  - Bin Qin
+  - Beena Ahmed
+  - Julien Epps
+  published: '2025-05-24'
+  updated: '2025-12-29'
+  categories:
+  - eess.AS
+  abstract: Large Language Models (LLMs) have demonstrated remarkable success across diverse fields, establishing
+    a powerful paradigm for complex information processing. This has inspired the integration of speech
+    into LLM frameworks, often by tokenizing continuous audio via neural speech codecs, enabling powerful
+    speech language models. However, this dominant tokenization strategy relies on uniform frame-based
+    processing at fixed time intervals. This fixed-rate approach, while effective for linguistic content,
+    destroys the temporal dynamics. These dynamics are not noise but are established as primary biomarkers
+    in clinical applications such as depression detection. To address this gap, we introduce the Distinctive
+    Feature Codec (DFC), an adaptive framework engineered to preserve this vital timing information. Drawing
+    from linguistic theory, DFC abandons fixed-interval processing and instead learns to dynamically segment
+    the signal at perceptually significant acoustic transitions. This generates variable-length tokens
+    that efficiently encode the temporal structure. As a key contribution, this work is the first to integrate
+    traditional distinctive features into a modern deep learning codec for a temporally sensitive task
+    such as depression detection. We also introduce the Group-wise Scalar Quantization (GSQ) approach
+    to stably quantize these variable-length segments. Our distinctive feature-based approach offers a
+    promising alternative to conventional frame-based processing and advances interpretable representation
+    learning in the modern deep learning speech depression detection framework.
+  url: https://arxiv.org/abs/2505.18516
+  pdf_url: https://arxiv.org/pdf/2505.18516v2
+  version: v2
+fetched: '2026-11-14'

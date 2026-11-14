@@ -1,0 +1,31 @@
+id: paper:arxiv:2603.09034
+status: skipped
+score: 0
+track: audio_coding
+matched: []
+meta:
+  title: Attack-Dependent Robustness of Neural Audio Codecs for Adversarial ASR
+  authors:
+  - Jordan Prescott
+  - Thanathai Lertpetchpun
+  - Shrikanth Narayanan
+  published: '2026-03-10'
+  updated: '2026-09-22'
+  categories:
+  - eess.AS
+  - cs.SD
+  abstract: Neural audio codecs impose a discrete bottleneck through residual vector quantization (RVQ),
+    making them a useful class of inference-time transformations for reducing adversarial perturbations
+    before ASR inference. We study how codec quantization depth affects defended ASR under non-adaptive,
+    standard adaptive, and quantization-aware adaptive untargeted $\ell_\infty$ attacks. Under non-adaptive
+    attacks, intermediate RVQ depths yield the lowest word error rates and outperform traditional compression
+    at comparable bitrates. However, this apparent optimum is not stable under adaptive evaluation. The
+    standard identity-gradient adaptive baseline (BPDA+EOT) can overestimate robustness, while an implementation
+    of an RVQ-relaxed adaptive attack (SoftVQ-PGD) substantially changes the observed depth trend and
+    largely removes the intermediate-depth advantage. Overall, neural codecs can improve defended ASR
+    under specific threat models. However, the relationship between robustness and RVQ depth depends on
+    the attack used for evaluation, rather than on the codec architecture alone.
+  url: https://arxiv.org/abs/2603.09034
+  pdf_url: https://arxiv.org/pdf/2603.09034v2
+  version: v2
+fetched: '2026-11-14'

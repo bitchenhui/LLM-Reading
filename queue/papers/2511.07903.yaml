@@ -1,0 +1,38 @@
+id: paper:arxiv:2511.07903
+status: skipped
+score: 0
+track: video_image_coding
+matched: []
+meta:
+  title: 'DynaQuant: Dynamic Mixed-Precision Quantization for Learned Image Compression'
+  authors:
+  - Youneng Bao
+  - Yulong Cheng
+  - Yiping Liu
+  - Yichen Yang
+  - Peng Qin
+  - Mu Li
+  - Yongsheng Liang
+  published: '2025-11-11'
+  updated: '2025-11-11'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: Prevailing quantization techniques in Learned Image Compression (LIC) typically employ a static,
+    uniform bit-width across all layers, failing to adapt to the highly diverse data distributions and
+    sensitivity characteristics inherent in LIC models. This leads to a suboptimal trade-off between performance
+    and efficiency. In this paper, we introduce DynaQuant, a novel framework for dynamic mixed-precision
+    quantization that operates on two complementary levels. First, we propose content-aware quantization,
+    where learnable scaling and offset parameters dynamically adapt to the statistical variations of latent
+    features. This fine-grained adaptation is trained end-to-end using a novel Distance-aware Gradient
+    Modulator (DGM), which provides a more informative learning signal than the standard Straight-Through
+    Estimator. Second, we introduce a data-driven, dynamic bit-width selector that learns to assign an
+    optimal bit precision to each layer, dynamically reconfiguring the network's precision profile based
+    on the input data. Our fully dynamic approach offers substantial flexibility in balancing rate-distortion
+    (R-D) performance and computational cost. Experiments demonstrate that DynaQuant achieves rd performance
+    comparable to full-precision models while significantly reducing computational and storage requirements,
+    thereby enabling the practical deployment of advanced LIC on diverse hardware platforms.
+  url: https://arxiv.org/abs/2511.07903
+  pdf_url: https://arxiv.org/pdf/2511.07903v1
+  version: v1
+fetched: '2026-11-14'

@@ -1,0 +1,41 @@
+id: paper:arxiv:2510.14900
+status: skipped_low_citation
+score: 2
+track: self_improvement
+matched:
+- ref: concept:LLM
+  count: 1
+  weight: 1
+- ref: org:Microsoft
+  count: 1
+  weight: 1
+meta:
+  title: 'Mapping Smarter, Not Harder: A Test-Time Reinforcement Learning Agent That Improves Without
+    Labels or Model Updates'
+  authors:
+  - Wen-Kwang Tsao
+  - Yao-Ching Yu
+  - Chien-Ming Huang
+  published: '2025-10-16'
+  updated: '2025-10-16'
+  categories:
+  - cs.AI
+  - cs.CR
+  abstract: 'The Enterprise Intelligence Platform must integrate logs from numerous third-party vendors
+    in order to perform various downstream tasks. However, vendor documentation is often unavailable at
+    test time. It is either misplaced, mismatched, poorly formatted, or incomplete, which makes schema
+    mapping challenging. We introduce a reinforcement learning agent that can self-improve without labeled
+    examples or model weight updates. During inference, the agent: 1) Identifies ambiguous field-mapping
+    attempts. 2) Generates targeted web-search queries to gather external evidence. 3) Applies a confidence-based
+    reward to iteratively refine its mappings. To demonstrate this concept, we converted Microsoft Defender
+    for Endpoint logs into a common schema. Our method increased mapping accuracy from 56.4\%(LLM-only)
+    to 72.73\%(RAG) to 93.94\% over 100 iterations using GPT-4o. At the same time, it reduced the number
+    of low-confidence mappings requiring expert review by 85\%. This new approach provides an evidence-driven,
+    transparent method for solving future industry problems, paving the way for more robust, accountable,
+    scalable, efficient, flexible, adaptable, and collaborative solutions.'
+  url: https://arxiv.org/abs/2510.14900
+  pdf_url: https://arxiv.org/pdf/2510.14900v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 0
+citation_year: 2025

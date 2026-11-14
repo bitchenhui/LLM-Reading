@@ -1,0 +1,44 @@
+id: paper:arxiv:2608.08466
+status: pending
+score: 2
+track: self_improvement
+matched:
+- ref: concept:LLM
+  count: 2
+  weight: 1
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+meta:
+  title: 'Hierarchical Self-Improvement: A Framework for Task-Specific Evolvable Agent Harnesses'
+  authors:
+  - Tailin Zhou
+  published: '2026-08-09'
+  updated: '2026-08-09'
+  categories:
+  - cs.AI
+  abstract: 'Modern LLM agents are often improved by modifying prompts, tools, or workflows manually,
+    while the executable scaffold surrounding the model---the \emph{harness}---is typically treated as
+    a fixed artifact after deployment. This work studies an alternative where the harness is \emph{task-specific
+    and continuously evolvable}: each task family maintains its own harness, which is hot-swapped across
+    iterations through a fixed task-injection seam and rewritten using environment feedback. We introduce
+    \textbf{Hierarchical Self-Improvement (HSI)}, a framework in which a single frozen LLM $M$ operates
+    across three hierarchical scopes: a task harness $H$ that executes tasks, an evolver that rewrites
+    $H$, and a meta-evolver that rewrites the evolver''s strategy code under a frozen outer anchor. A
+    thinking-on/off design isolates the contribution of harness evolution by disabling reasoning during
+    task execution while enabling it during self-modification. HSI is bounded by two factors: a \emph{feedback-fidelity
+    bound}, since evolution requires informative reward signals to guide selection, and a \emph{backbone
+    capability bound}, since harness redesign cannot overcome limitations of the frozen model. On BALROG
+    with DeepSeek-V4-Flash-Preview as the frozen backbone, HSI achieves consistent gains over the initial
+    harness on moderate-difficulty tasks ($+39.3$ on BabyAI, $+33.0$ on Crafter, $+25.0$ on TextWorld,
+    and $+15.0$ on MiniHack, all in raw \% Progress), while obtaining strong held-out generalization on
+    BabaIsAI sub-suites ($0.98$ best-test on BreakStop and $1.00$ on GoTo from a $20\%$ unseen split).
+    On tasks beyond the backbone''s capability (NLE), harness evolution provides no improvement. These
+    results demonstrate task-specific harness evolution as a viable axis for improving frozen LLM agents
+    under clear empirical limits. Code is available at https://github.com/TailinZhou/hsi.'
+  url: https://arxiv.org/abs/2608.08466
+  pdf_url: https://arxiv.org/pdf/2608.08466v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 11
+citation_year: 2026

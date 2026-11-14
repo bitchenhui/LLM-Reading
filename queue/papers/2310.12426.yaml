@@ -1,0 +1,35 @@
+id: paper:arxiv:2310.12426
+status: skipped
+score: 1
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+meta:
+  title: 'MAF: Multi-Aspect Feedback for Improving Reasoning in Large Language Models'
+  authors:
+  - Deepak Nathani
+  - David Wang
+  - Liangming Pan
+  - William Yang Wang
+  published: '2023-10-19'
+  updated: '2023-10-19'
+  categories:
+  - cs.CL
+  - cs.AI
+  abstract: Language Models (LMs) have shown impressive performance in various natural language tasks.
+    However, when it comes to natural language reasoning, LMs still face challenges such as hallucination,
+    generating incorrect intermediate reasoning steps, and making mathematical errors. Recent research
+    has focused on enhancing LMs through self-improvement using feedback. Nevertheless, existing approaches
+    relying on a single generic feedback source fail to address the diverse error types found in LM-generated
+    reasoning chains. In this work, we propose Multi-Aspect Feedback, an iterative refinement framework
+    that integrates multiple feedback modules, including frozen LMs and external tools, each focusing
+    on a specific error category. Our experimental results demonstrate the efficacy of our approach to
+    addressing several errors in the LM-generated reasoning chain and thus improving the overall performance
+    of an LM in several reasoning tasks. We see a relative improvement of up to 20% in Mathematical Reasoning
+    and up to 18% in Logical Entailment.
+  url: https://arxiv.org/abs/2310.12426
+  pdf_url: https://arxiv.org/pdf/2310.12426v1
+  version: v1
+fetched: '2026-11-14'

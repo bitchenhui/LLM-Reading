@@ -1,0 +1,41 @@
+id: paper:arxiv:2207.12348
+status: pending
+score: 2
+track: processing_enhancement
+matched:
+- ref: concept:MoE
+  count: 1
+  weight: 1
+- ref: concept:SuperResolution
+  count: 1
+  weight: 1
+meta:
+  title: Edge-Aware Autoencoder Design for Real-Time Mixture-of-Experts Image Compression
+  authors:
+  - Elvira Fleig
+  - Jonas Geistert
+  - Erik Bochinski
+  - Rolf Jongebloed
+  - Thomas Sikora
+  published: '2022-07-25'
+  updated: '2022-07-25'
+  categories:
+  - eess.IV
+  abstract: Steered-Mixtures-of-Experts (SMoE) models provide sparse, edge-aware representations, applicable
+    to many use-cases in image processing. This includes denoising, super-resolution and compression of
+    2D- and higher dimensional pixel data. Recent works for image compression indicate that compression
+    of images based on SMoE models can provide competitive performance to the state-of-the-art. Unfortunately,
+    the iterative model-building process at the encoder comes with excessive computational demands. In
+    this paper we introduce a novel edge-aware Autoencoder (AE) strategy designed to avoid the time-consuming
+    iterative optimization of SMoE models. This is done by directly mapping pixel blocks to model parameters
+    for compression, in spirit similar to recent works on "unfolding" of algorithms, while maintaining
+    full compatibility to the established SMoE framework. With our plug-in AE encoder, we achieve a quantum-leap
+    in performance with encoder run-time savings by a factor of 500 to 1000 with even improved image reconstruction
+    quality. For image compression the plug-in AE encoder has real-time properties and improves RD-performance
+    compared to our previous works.
+  url: https://arxiv.org/abs/2207.12348
+  pdf_url: https://arxiv.org/pdf/2207.12348v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 15
+citation_year: 2022

@@ -1,0 +1,33 @@
+id: paper:arxiv:2601.21940
+status: skipped
+score: 0
+track: audio_coding
+matched: []
+meta:
+  title: 'DisContSE: Single-Step Diffusion Speech Enhancement Based on Joint Discrete and Continuous Embeddings'
+  authors:
+  - Yihui Fu
+  - Tim Fingscheidt
+  published: '2026-01-29'
+  updated: '2026-01-29'
+  categories:
+  - eess.AS
+  abstract: Diffusion speech enhancement on discrete audio codec features gain immense attention due to
+    their improved speech component reconstruction capability. However, they usually suffer from high
+    inference computational complexity due to multiple reverse process iterations. Furthermore, they generally
+    achieve promising results on non-intrusive metrics but show poor performance on intrusive metrics,
+    as they may struggle in reconstructing the correct phones. In this paper, we propose DisContSE, an
+    efficient diffusion-based speech enhancement model on joint discrete codec tokens and continuous embeddings.
+    Our contributions are three-fold. First, we formulate both a discrete and a continuous enhancement
+    module operating on discrete audio codec tokens and continuous embeddings, respectively, to achieve
+    improved fidelity and intelligibility simultaneously. Second, a semantic enhancement module is further
+    adopted to achieve optimal phonetic accuracy. Third, we achieve a single-step efficient reverse process
+    in inference with a novel quantization error mask initialization strategy, which, according to our
+    knowledge, is the first successful single-step diffusion speech enhancement based on an audio codec.
+    Trained and evaluated on URGENT 2024 Speech Enhancement Challenge data splits, the proposed DisContSE
+    excels top-reported time- and frequency-domain diffusion baseline methods in PESQ, POLQA, UTMOS, and
+    in a subjective ITU-T P.808 listening test, clearly achieving an overall top rank.
+  url: https://arxiv.org/abs/2601.21940
+  pdf_url: https://arxiv.org/pdf/2601.21940v1
+  version: v1
+fetched: '2026-11-14'

@@ -1,0 +1,33 @@
+id: paper:arxiv:2411.13033
+status: skipped
+score: 2
+track: video_image_coding
+matched:
+- ref: metric:BD-Rate
+  count: 1
+  weight: 1
+- ref: metric:LPIPS
+  count: 1
+  weight: 1
+meta:
+  title: LMM-driven Semantic Image-Text Coding for Ultra Low-bitrate Learned Image Compression
+  authors:
+  - Shimon Murai
+  - Heming Sun
+  - Jiro Katto
+  published: '2024-11-20'
+  updated: '2024-11-20'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: Supported by powerful generative models, low-bitrate learned image compression (LIC) models
+    utilizing perceptual metrics have become feasible. Some of the most advanced models achieve high compression
+    rates and superior perceptual quality by using image captions as sub-information. This paper demonstrates
+    that using a large multi-modal model (LMM), it is possible to generate captions and compress them
+    within a single model. We also propose a novel semantic-perceptual-oriented fine-tuning method applicable
+    to any LIC network, resulting in a 41.58\% improvement in LPIPS BD-rate compared to existing methods.
+    Our implementation and pre-trained weights are available at https://github.com/tokkiwa/ImageTextCoding.
+  url: https://arxiv.org/abs/2411.13033
+  pdf_url: https://arxiv.org/pdf/2411.13033v1
+  version: v1
+fetched: '2026-11-14'

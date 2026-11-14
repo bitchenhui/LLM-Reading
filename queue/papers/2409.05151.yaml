@@ -1,0 +1,38 @@
+id: paper:arxiv:2409.05151
+status: skipped
+score: 1
+track: immersive_media
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'Ultron: Enabling Temporal Geometry Compression of 3D Mesh Sequences using Temporal Correspondence
+    and Mesh Deformation'
+  authors:
+  - Haichao Zhu
+  published: '2024-09-08'
+  updated: '2024-09-08'
+  categories:
+  - cs.CV
+  - cs.GR
+  abstract: With the advancement of computer vision, dynamic 3D reconstruction techniques have seen significant
+    progress and found applications in various fields. However, these techniques generate large amounts
+    of 3D data sequences, necessitating efficient storage and transmission methods. Existing 3D model
+    compression methods primarily focus on static models and do not consider inter-frame information,
+    limiting their ability to reduce data size. Temporal mesh compression, which has received less attention,
+    often requires all input meshes to have the same topology, a condition rarely met in real-world applications.
+    This research proposes a method to compress mesh sequences with arbitrary topology using temporal
+    correspondence and mesh deformation. The method establishes temporal correspondence between consecutive
+    frames, applies a deformation model to transform the mesh from one frame to subsequent frames, and
+    replaces the original meshes with deformed ones if the quality meets a tolerance threshold. Extensive
+    experiments demonstrate that this method can achieve state-of-the-art performance in terms of compression
+    performance. The contributions of this paper include a geometry and motion-based model for establishing
+    temporal correspondence between meshes, a mesh quality assessment for temporal mesh sequences, an
+    entropy-based encoding and corner table-based method for compressing mesh sequences, and extensive
+    experiments showing the effectiveness of the proposed method. All the code will be open-sourced at
+    https://github.com/lszhuhaichao/ultron.
+  url: https://arxiv.org/abs/2409.05151
+  pdf_url: https://arxiv.org/pdf/2409.05151v1
+  version: v1
+fetched: '2026-11-14'

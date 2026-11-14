@@ -1,0 +1,50 @@
+id: paper:arxiv:2103.06549
+status: skipped_low_citation
+score: 5
+track: immersive_media
+matched:
+- ref: codec:V-PCC
+  count: 1
+  weight: 3
+- ref: concept:RDO
+  count: 2
+  weight: 1
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: Advanced Geometry Surface Coding for Dynamic Point Cloud Compression
+  authors:
+  - Jian Xiong
+  - Hao Gao
+  - Miaohui Wang
+  - Hongliang Li
+  - King Ngi Ngan
+  - Weisi Lin
+  published: '2021-03-11'
+  updated: '2021-03-11'
+  categories:
+  - eess.IV
+  abstract: In video-based dynamic point cloud compression (V-PCC), 3D point clouds are projected onto
+    2D images for compressing with the existing video codecs. However, the existing video codecs are originally
+    designed for natural visual signals, and it fails to account for the characteristics of point clouds.
+    Thus, there are still problems in the compression of geometry information generated from the point
+    clouds. Firstly, the distortion model in the existing rate-distortion optimization (RDO) is not consistent
+    with the geometry quality assessment metrics. Secondly, the prediction methods in video codecs fail
+    to account for the fact that the highest depth values of a far layer is greater than or equal to the
+    corresponding lowest depth values of a near layer. This paper proposes an advanced geometry surface
+    coding (AGSC) method for dynamic point clouds (DPC) compression. The proposed method consists of two
+    modules, including an error projection model-based (EPM-based) RDO and an occupancy map-based (OM-based)
+    merge prediction. Firstly, the EPM model is proposed to describe the relationship between the distortion
+    model in the existing video codec and the geometry quality metric. Secondly, the EPM-based RDO method
+    is presented to project the existing distortion model on the plane normal and is simplified to estimate
+    the average normal vectors of coding units (CUs). Finally, we propose the OM-based merge prediction
+    approach, in which the prediction pixels of merge modes are refined based on the occupancy map. Experiments
+    tested on the standard point clouds show that the proposed method achieves an average 9.84\% bitrate
+    saving for geometry compression.
+  url: https://arxiv.org/abs/2103.06549
+  pdf_url: https://arxiv.org/pdf/2103.06549v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 2
+citation_year: 2021

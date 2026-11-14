@@ -1,0 +1,65 @@
+id: paper:arxiv:2310.13093
+status: skipped_low_citation
+score: 16
+track: video_image_coding
+matched:
+- ref: codec:HEVC
+  count: 2
+  weight: 3
+- ref: codec:VVC
+  count: 2
+  weight: 3
+- ref: impl:HM
+  count: 1
+  weight: 3
+- ref: impl:VTM
+  count: 1
+  weight: 3
+- ref: concept:IQA
+  count: 2
+  weight: 1
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+- ref: metric:SSIM
+  count: 1
+  weight: 1
+- ref: metric:VMAF
+  count: 1
+  weight: 1
+meta:
+  title: Video Quality Assessment and Coding Complexity of the Versatile Video Coding Standard
+  authors:
+  - Thomas Amestoy
+  - Naty Sidaty
+  - Wassim Hamidouche
+  - Pierrick Philippe
+  - Daniel Menard
+  published: '2023-10-19'
+  updated: '2023-10-19'
+  categories:
+  - eess.IV
+  abstract: In recent years, the proliferation of multimedia applications and formats, such as IPTV, Virtual
+    Reality (VR, 360-degree), and point cloud videos, has presented new challenges to the video compression
+    research community. Simultaneously, there has been a growing demand from users for higher resolutions
+    and improved visual quality. To further enhance coding efficiency, a new video coding standard, Versatile
+    Video Coding (VVC), was introduced in July 2020. This paper conducts a comprehensive analysis of coding
+    performance and complexity for the latest VVC standard in comparison to its predecessor, High Efficiency
+    Video Coding (HEVC). The study employs a diverse set of test sequences, covering both High Definition
+    (HD) and Ultra High Definition (UHD) resolutions, and spans a wide range of bit-rates. These sequences
+    are encoded using the reference software encoders of HEVC (HM) and VVC (VTM). The results consistently
+    demonstrate that VVC outperforms HEVC, achieving bit-rate savings of up to 40% on the subjective quality
+    scale, particularly at realistic bit-rates and quality levels. Objective quality metrics, including
+    PSNR, SSIM, and VMAF, support these findings, revealing bit-rate savings ranging from 31% to 40%,
+    depending on the video content, spatial resolution, and the selected quality metric. However, these
+    improvements in coding efficiency come at the cost of significantly increased computational complexity.
+    On average, our results indicate that the VVC decoding process is 1.5 times more complex, while the
+    encoding process becomes at least eight times more complex than that of the HEVC reference encoder.
+    Our simultaneous profiling of the two standards sheds light on the primary evolutionary differences
+    between them and highlights the specific stages responsible for the observed increase in complexity.
+  url: https://arxiv.org/abs/2310.13093
+  pdf_url: https://arxiv.org/pdf/2310.13093v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 3
+citation_year: 2023

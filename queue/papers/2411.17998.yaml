@@ -1,0 +1,34 @@
+id: paper:arxiv:2411.17998
+status: skipped
+score: 1
+track: audio_coding
+matched:
+- ref: concept:NeuralAudioCodec
+  count: 1
+  weight: 1
+meta:
+  title: Speech Separation using Neural Audio Codecs with Embedding Loss
+  authors:
+  - Jia Qi Yip
+  - Chin Yuen Kwok
+  - Bin Ma
+  - Eng Siong Chng
+  published: '2024-11-27'
+  updated: '2024-11-27'
+  categories:
+  - eess.AS
+  abstract: Neural audio codecs have revolutionized audio processing by enabling speech tasks to be performed
+    on highly compressed representations. Recent work has shown that speech separation can be achieved
+    within these compressed domains, offering faster training and reduced inference costs. However, current
+    approaches still rely on waveform-based loss functions, necessitating unnecessary decoding steps during
+    training. We propose a novel embedding loss for neural audio codec-based speech separation that operates
+    directly on compressed audio representations, eliminating the need for decoding during training. To
+    validate our approach, we conduct comprehensive evaluations using both objective metrics and perceptual
+    assessment techniques, including intrusive and non-intrusive methods. Our results demonstrate that
+    embedding loss can be used to train codec-based speech separation models with a 2x improvement in
+    training speed and computational cost while achieving better DNSMOS and STOI performance on the WSJ0-2mix
+    dataset across 3 different pre-trained codecs.
+  url: https://arxiv.org/abs/2411.17998
+  pdf_url: https://arxiv.org/pdf/2411.17998v1
+  version: v1
+fetched: '2026-11-14'

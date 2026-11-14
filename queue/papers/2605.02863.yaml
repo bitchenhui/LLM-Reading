@@ -1,0 +1,40 @@
+id: paper:arxiv:2605.02863
+status: skipped_low_citation
+score: 2
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 3
+  weight: 1
+- ref: metric:MOS
+  count: 1
+  weight: 1
+meta:
+  title: 'Pixel Perfect: Relational Image Quality Assessment with Spatially-Aware Distortions'
+  authors:
+  - Fadeel Sher Khan
+  - Long N. Le
+  - Abhinau K. Venkataramanan
+  - Seok-Jun Lee
+  - Hamid R. Sheikh
+  published: '2026-05-04'
+  updated: '2026-05-04'
+  categories:
+  - cs.CV
+  abstract: Traditional image quality assessment (IQA) methods rely on mean opinion scores (MOS), which
+    are resource-intensive to collect and fail to provide interpretable, localized feedback on specific
+    image distortions. We overcome these limitations by shifting from absolute quality prediction to a
+    relational and directional assessment. Our approach utilizes a self-supervised synthetic distortion
+    engine to generate training data, eliminating the need for manual annotation. A distortion prediction
+    network is trained with an anti-symmetric objective to produce spatially-aware, disentangled maps
+    that identify the type, intensity, and direction of distortions relative to a reference image. Subsequently,
+    a scoring network is trained via contrastive learning on ordinally ranked image sets to predict a
+    relational quality score. Our method provides a more granular and interpretable approach to IQA for
+    the targeted optimization of image processing algorithms without requiring any human-labeled quality
+    scores.
+  url: https://arxiv.org/abs/2605.02863
+  pdf_url: https://arxiv.org/pdf/2605.02863v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 0
+citation_year: 2026

@@ -1,0 +1,43 @@
+id: paper:arxiv:2411.06810
+status: pending
+score: 6
+track: video_image_coding
+matched:
+- ref: codec:HEVC
+  count: 1
+  weight: 3
+- ref: impl:HM
+  count: 1
+  weight: 3
+meta:
+  title: 'JPEG AI Image Compression Visual Artifacts: Detection Methods and Dataset'
+  authors:
+  - Daria Tsereh
+  - Mark Mirgaleev
+  - Ivan Molodetskikh
+  - Roman Kazantsev
+  - Dmitriy Vatolin
+  published: '2024-11-11'
+  updated: '2024-11-11'
+  categories:
+  - cs.AI
+  - cs.CV
+  - cs.MM
+  abstract: Learning-based image compression methods have improved in recent years and started to outperform
+    traditional codecs. However, neural-network approaches can unexpectedly introduce visual artifacts
+    in some images. We therefore propose methods to separately detect three types of artifacts (texture
+    and boundary degradation, color change, and text corruption), to localize the affected regions, and
+    to quantify the artifact strength. We consider only those regions that exhibit distortion due solely
+    to the neural compression but that a traditional codec recovers successfully at a comparable bitrate.
+    We employed our methods to collect artifacts for the JPEG AI verification model with respect to HM-18.0,
+    the H.265 reference software. We processed about 350,000 unique images from the Open Images dataset
+    using different compression-quality parameters; the result is a dataset of 46,440 artifacts validated
+    through crowd-sourced subjective assessment. Our proposed dataset and methods are valuable for testing
+    neural-network-based image codecs, identifying bugs in these codecs, and enhancing their performance.
+    We make source code of the methods and the dataset publicly available.
+  url: https://arxiv.org/abs/2411.06810
+  pdf_url: https://arxiv.org/pdf/2411.06810v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 10
+citation_year: 2024

@@ -1,0 +1,38 @@
+id: paper:arxiv:2404.18820
+status: skipped
+score: 1
+track: video_image_coding
+matched:
+- ref: concept:DiffusionPrior
+  count: 1
+  weight: 1
+meta:
+  title: Towards Extreme Image Compression with Latent Feature Guidance and Diffusion Prior
+  authors:
+  - Zhiyuan Li
+  - Yanhui Zhou
+  - Hao Wei
+  - Chenyang Ge
+  - Jingwen Jiang
+  published: '2024-04-29'
+  updated: '2024-09-04'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: Image compression at extremely low bitrates (below 0.1 bits per pixel (bpp)) is a significant
+    challenge due to substantial information loss. In this work, we propose a novel two-stage extreme
+    image compression framework that exploits the powerful generative capability of pre-trained diffusion
+    models to achieve realistic image reconstruction at extremely low bitrates. In the first stage, we
+    treat the latent representation of images in the diffusion space as guidance, employing a VAE-based
+    compression approach to compress images and initially decode the compressed information into content
+    variables. The second stage leverages pre-trained stable diffusion to reconstruct images under the
+    guidance of content variables. Specifically, we introduce a small control module to inject content
+    information while keeping the stable diffusion model fixed to maintain its generative capability.
+    Furthermore, we design a space alignment loss to force the content variables to align with the diffusion
+    space and provide the necessary constraints for optimization. Extensive experiments demonstrate that
+    our method significantly outperforms state-of-the-art approaches in terms of visual performance at
+    extremely low bitrates. The source code and trained models are available at https://github.com/huai-chang/DiffEIC.
+  url: https://arxiv.org/abs/2404.18820
+  pdf_url: https://arxiv.org/pdf/2404.18820v4
+  version: v4
+fetched: '2026-11-14'

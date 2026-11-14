@@ -1,0 +1,40 @@
+id: paper:arxiv:2410.20145
+status: pending
+score: 5
+track: video_image_coding
+matched:
+- ref: codec:HEVC
+  count: 1
+  weight: 3
+- ref: dataset:UVG
+  count: 1
+  weight: 1
+- ref: metric:BD-Rate
+  count: 1
+  weight: 1
+meta:
+  title: 'Cross-Platform Neural Video Coding: A Case Study'
+  authors:
+  - Ruhan Conceição
+  - Marcelo Porto
+  - Wen-Hsiao Peng
+  - Luciano Agostini
+  published: '2024-10-26'
+  updated: '2024-10-26'
+  categories:
+  - cs.MM
+  abstract: In this paper, we first show that current learning-based video codecs, specifically the SSF
+    codec, are not suitable for real-world applications due to the mismatch between the encoder and decoder
+    caused by floating-point round-off errors. To address this issue, we propose the static quantization
+    of the hyper prior decoding path. The quantization parameters are determined through an exhaustive
+    search of all possible combinations of observers and quantization schemes from PyTorch. For the SSF
+    codec, when encoding and decoding on different machines, the proposed solution effectively mitigates
+    the mismatch issue and enhances compression efficiency results by preventing severe image quality
+    degradation. When encoding and decoding are performed on the same machine, it constrains the average
+    BD-rate increase to 9.93% and 9.02% for UVG and HEVC-B sequences, respectively.
+  url: https://arxiv.org/abs/2410.20145
+  pdf_url: https://arxiv.org/pdf/2410.20145v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 7
+citation_year: 2024

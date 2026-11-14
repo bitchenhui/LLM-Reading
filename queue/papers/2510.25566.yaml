@@ -1,0 +1,33 @@
+id: paper:arxiv:2510.25566
+status: skipped
+score: 1
+track: audio_coding
+matched:
+- ref: concept:NeuralAudioCodec
+  count: 1
+  weight: 1
+meta:
+  title: 'PitchFlower: A flow-based neural audio codec with pitch controllability'
+  authors:
+  - Diego Torres
+  - Axel Roebel
+  - Nicolas Obin
+  published: '2025-10-29'
+  updated: '2026-09-16'
+  categories:
+  - eess.AS
+  - cs.LG
+  abstract: 'We present PitchFlower, a flow-based neural audio codec with explicit pitch controllability.
+    Our approach promotes pitch disentanglement through a simple perturbation: during training, F0 contours
+    are flattened and randomly shifted at the input, while the true F0 is provided as conditioning to
+    regenerate the original audio. A vector-quantization bottleneck prevents pitch recovery, and a flow-based
+    decoder generates high quality audio. Experiments show that PitchFlower achieves accurate pitch control
+    at the level of DSP baselines but at much higher audio quality, and performs on par with state-of-the-art
+    neural approaches. Notably, despite using WORLD-transformed audio for training, our method filters
+    out the vocoder''s inherent artifacts, revealing a strong resilience of deep generative modeling to
+    input degradation. This finding suggests that our framework provides a simple and extensible path
+    that could be extended to other speech attributes.'
+  url: https://arxiv.org/abs/2510.25566
+  pdf_url: https://arxiv.org/pdf/2510.25566v3
+  version: v3
+fetched: '2026-11-14'

@@ -1,0 +1,42 @@
+id: paper:arxiv:2606.06100
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'HyperVis: Continuous Latent Visual Relational Graphs on the Lorentz Hyperboloid for Compositional
+    Reasoning'
+  authors:
+  - Moshiur Farazi
+  - Sameera Ramasinghe
+  - Mahbub Ahmed Turza
+  - Shafin Rahman
+  published: '2026-06-04'
+  updated: '2026-06-04'
+  categories:
+  - cs.CV
+  abstract: 'Vision-Language Models (VLMs) struggle with compositional reasoning that requires understanding
+    inter-object relationships. A natural remedy is to inject explicit scene graph triplets $\langle s,
+    p, o \rangle$ from an off-the-shelf scene graph generator (SGG), but we show this backfires: discrete
+    text labels collide with the continuous visual modality, degrading GQA accuracy from 60.38\% to 58.86\%.
+    We propose \textbf{HyperVis}, which bypasses the SGG semantic bottleneck entirely. From $N$ class-agnostic
+    region proposals, we compute a dense $O(N^2)$ visual relation tensor via spatially-biased cross-attention,
+    project it onto a Lorentz hyperboloid, and enforce hierarchy through spatial physics, namely IoA-driven
+    entailment cones and exterior-angle repulsion. We discover that HyperVis contributes in two complementary
+    ways: (1) as a \emph{training-time regularizer}, the hyperbolic relational losses shape LoRA representations
+    that improve generative VQA (GQA 61.03\% vs.\ 57.21\% for LoRA fine-tuning without relational losses,
+    recovering and surpassing the baseline); and (2) as an \emph{inference-time relational encoder}, hyperbolic
+    prefix tokens boost discriminative compositional scoring (SugarCrepe 79.94\%, $+$6.25pp over baseline).
+    The learned curvature stabilises at $κ{=}4.0$, an order of magnitude above prior hyperbolic VLMs where
+    $κ$ typically collapses toward zero, indicating that continuous visual features genuinely require
+    the exponential volume of strongly curved space. A controlled Euclidean ablation confirms this decomposition:
+    the relational pipeline regularises LoRA comparably in flat space (GQA 60.81\%), but the compositionality
+    gain is specifically hyperbolic (SugarCrepe $+$4.58pp over Euclidean), with entailment loss ${\sim}6{\times}$
+    higher in Euclidean training. Codes are available at TBA.'
+  url: https://arxiv.org/abs/2606.06100
+  pdf_url: https://arxiv.org/pdf/2606.06100v1
+  version: v1
+fetched: '2026-11-14'

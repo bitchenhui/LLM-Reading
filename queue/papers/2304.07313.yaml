@@ -1,0 +1,27 @@
+id: paper:arxiv:2304.07313
+status: skipped
+score: 0
+track: video_image_coding
+matched: []
+meta:
+  title: 'M2T: Masking Transformers Twice for Faster Decoding'
+  authors:
+  - Fabian Mentzer
+  - Eirikur Agustsson
+  - Michael Tschannen
+  published: '2023-04-14'
+  updated: '2023-04-14'
+  categories:
+  - eess.IV
+  - cs.LG
+  abstract: We show how bidirectional transformers trained for masked token prediction can be applied
+    to neural image compression to achieve state-of-the-art results. Such models were previously used
+    for image generation by progressivly sampling groups of masked tokens according to uncertainty-adaptive
+    schedules. Unlike these works, we demonstrate that predefined, deterministic schedules perform as
+    well or better for image compression. This insight allows us to use masked attention during training
+    in addition to masked inputs, and activation caching during inference, to significantly speed up our
+    models (~4 higher inference speed) at a small increase in bitrate.
+  url: https://arxiv.org/abs/2304.07313
+  pdf_url: https://arxiv.org/pdf/2304.07313v1
+  version: v1
+fetched: '2026-11-14'

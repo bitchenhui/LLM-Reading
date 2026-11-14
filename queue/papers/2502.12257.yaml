@@ -1,0 +1,36 @@
+id: paper:arxiv:2502.12257
+status: skipped
+score: 1
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+meta:
+  title: 'InfoQuest: Evaluating Multi-Turn Dialogue Agents for Open-Ended Conversations with Hidden Context'
+  authors:
+  - Bryan L. M. de Oliveira
+  - Luana G. B. Martins
+  - Bruno Brandão
+  - Luckeciano C. Melo
+  published: '2025-02-17'
+  updated: '2025-04-25'
+  categories:
+  - cs.CL
+  - cs.LG
+  abstract: Large language models excel at following explicit instructions, but they often struggle with
+    ambiguous or incomplete user requests, defaulting to verbose, generic responses instead of seeking
+    clarification. We introduce InfoQuest, a multi-turn chat benchmark designed to evaluate how dialogue
+    agents handle hidden context in open-ended user requests. This benchmark presents intentionally ambiguous
+    scenarios that require models to engage in information-seeking dialogue by asking clarifying questions
+    before providing appropriate responses. Our evaluation of both open and closed models reveals that,
+    while proprietary models generally perform better, all current assistants struggle to gather critical
+    information effectively. They often require multiple turns to infer user intent and frequently default
+    to generic responses without proper clarification. We provide a systematic methodology for generating
+    diverse scenarios and evaluating models' information-seeking capabilities, which can be leveraged
+    to automatically generate data for self-improvement. We also offer insights into the current limitations
+    of language models in handling ambiguous requests through multi-turn interactions.
+  url: https://arxiv.org/abs/2502.12257
+  pdf_url: https://arxiv.org/pdf/2502.12257v2
+  version: v2
+fetched: '2026-11-14'

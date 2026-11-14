@@ -1,0 +1,39 @@
+id: paper:arxiv:2602.03007
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'VOILA: Value-of-Information Guided Fidelity Selection for Cost-Aware Multimodal Question Answering'
+  authors:
+  - Rahul Atul Bhope
+  - K. R. Jayaram
+  - Vinod Muthusamy
+  - Ritesh Kumar
+  - Vatche Isahagian
+  - Nalini Venkatasubramanian
+  published: '2026-02-03'
+  updated: '2026-02-03'
+  categories:
+  - cs.CV
+  - cs.AI
+  - cs.LG
+  abstract: 'Despite significant costs from retrieving and processing high-fidelity visual inputs, most
+    multimodal vision-language systems operate at fixed fidelity levels. We introduce VOILA, a framework
+    for Value-Of-Information-driven adaptive fidelity selection in Visual Question Answering (VQA) that
+    optimizes what information to retrieve before model execution. Given a query, VOILA uses a two-stage
+    pipeline: a gradient-boosted regressor estimates correctness likelihood at each fidelity from question
+    features alone, then an isotonic calibrator refines these probabilities for reliable decision-making.
+    The system selects the minimum-cost fidelity maximizing expected utility given predicted accuracy
+    and retrieval costs. We evaluate VOILA across three deployment scenarios using five datasets (VQA-v2,
+    GQA, TextVQA, LoCoMo, FloodNet) and six Vision-Language Models (VLMs) with 7B-235B parameters. VOILA
+    consistently achieves 50-60% cost reductions while retaining 90-95% of full-resolution accuracy across
+    diverse query types and model architectures, demonstrating that pre-retrieval fidelity selection is
+    vital to optimize multimodal inference under resource constraints.'
+  url: https://arxiv.org/abs/2602.03007
+  pdf_url: https://arxiv.org/pdf/2602.03007v1
+  version: v1
+fetched: '2026-11-14'

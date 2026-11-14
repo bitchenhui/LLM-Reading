@@ -1,0 +1,37 @@
+id: paper:arxiv:2508.14222
+status: skipped
+score: 0
+track: streaming_delivery
+matched: []
+meta:
+  title: 'StarStream: Live Video Analytics over Space Networking'
+  authors:
+  - Miao Zhang
+  - Jiaxing Li
+  - Haoyuan Zhao
+  - Linfeng Shen
+  - Jiangchuan Liu
+  published: '2025-08-19'
+  updated: '2025-08-19'
+  categories:
+  - cs.NI
+  - cs.MM
+  abstract: Streaming videos from resource-constrained front-end devices over networks to resource-rich
+    cloud servers has long been a common practice for surveillance and analytics. Most existing live video
+    analytics (LVA) systems, however, have been built over terrestrial networks, limiting their applications
+    during natural disasters and in remote areas that desperately call for real-time visual data delivery
+    and scene analysis. With the recent advent of space networking, in particular, Low Earth Orbit (LEO)
+    satellite constellations such as Starlink, high-speed truly global Internet access is becoming available
+    and affordable. This paper examines the challenges and potentials of LVA over modern LEO satellite
+    networking (LSN). Using Starlink as the testbed, we have carried out extensive in-the-wild measurements
+    to gain insights into its achievable performance for LVA. The results reveal that the uplink bottleneck
+    in today's LSN, together with the volatile network conditions, can significantly affect the service
+    quality of LVA and necessitate prompt adaptation. We accordingly develop StarStream, a novel LSN-adaptive
+    streaming framework for LVA. At its core, StarStream is empowered by a Transformer-based network performance
+    predictor tailored for LSN and a content-aware configuration optimizer. We discuss a series of key
+    design and implementation issues of StarStream and demonstrate its effectiveness and superiority through
+    trace-driven experiments with real-world network and video processing data.
+  url: https://arxiv.org/abs/2508.14222
+  pdf_url: https://arxiv.org/pdf/2508.14222v1
+  version: v1
+fetched: '2026-11-14'

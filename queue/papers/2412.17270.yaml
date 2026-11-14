@@ -1,0 +1,38 @@
+id: paper:arxiv:2412.17270
+status: pending
+score: 3
+track: video_image_coding
+matched:
+- ref: codec:VVC
+  count: 1
+  weight: 3
+meta:
+  title: 'AsymLLIC: Asymmetric Lightweight Learned Image Compression'
+  authors:
+  - Shen Wang
+  - Zhengxue Cheng
+  - Donghui Feng
+  - Guo Lu
+  - Li Song
+  - Wenjun Zhang
+  published: '2024-12-23'
+  updated: '2024-12-23'
+  categories:
+  - eess.IV
+  abstract: Learned image compression (LIC) methods often employ symmetrical encoder and decoder architectures,
+    evitably increasing decoding time. However, practical scenarios demand an asymmetric design, where
+    the decoder requires low complexity to cater to diverse low-end devices, while the encoder can accommodate
+    higher complexity to improve coding performance. In this paper, we propose an asymmetric lightweight
+    learned image compression (AsymLLIC) architecture with a novel training scheme, enabling the gradual
+    substitution of complex decoding modules with simpler ones. Building upon this approach, we conduct
+    a comprehensive comparison of different decoder network structures to strike a better trade-off between
+    complexity and compression performance. Experiment results validate the efficiency of our proposed
+    method, which not only achieves comparable performance to VVC but also offers a lightweight decoder
+    with only 51.47 GMACs computation and 19.65M parameters. Furthermore, this design methodology can
+    be easily applied to any LIC models, enabling the practical deployment of LIC techniques.
+  url: https://arxiv.org/abs/2412.17270
+  pdf_url: https://arxiv.org/pdf/2412.17270v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 9
+citation_year: 2024

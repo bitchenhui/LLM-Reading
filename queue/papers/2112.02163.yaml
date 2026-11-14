@@ -1,0 +1,36 @@
+id: paper:arxiv:2112.02163
+status: skipped
+score: 1
+track: streaming_delivery
+matched:
+- ref: concept:WebRTC
+  count: 2
+  weight: 1
+meta:
+  title: WebRTC-based measurement tool for peer-to-peer applications and preliminary findings with real
+    users
+  authors:
+  - Kosuke Nakagawa
+  - Manabu Tsukada
+  - Keiichi Shima
+  - Hiroshi Esaki
+  published: '2021-12-03'
+  updated: '2021-12-03'
+  categories:
+  - cs.NI
+  abstract: Direct peer-to-peer (P2P) communication is often used to minimize the end-to-end latency for
+    real-time applications that require accurate synchronization, such as remote musical ensembles. However,
+    there are few studies on the performance of P2P communication between home network environments, thus
+    hindering the deployment of services that require synchronization. In this study, we developed a P2P
+    performance measurement tool using the Web Real-Time Communication (WebRTC) statistics application
+    programming interface. Using this tool, we can easily measure P2P performance between home network
+    environments on a web browser without downloading client applications. We also verified the reliability
+    of round-trip time (RTT) measurements using WebRTC and confirmed that our system could provide the
+    necessary measurement accuracy for RTT and jitter measurements for real-time applications. In addition,
+    we measured the performance of a full mesh topology connection with 10 users in an actual environment
+    in Japan. Consequently, we found that only 66% of the peer connections had a latency of 30 ms or less,
+    which is the minimum requirement for high synchronization applications, such as musical ensembles.
+  url: https://arxiv.org/abs/2112.02163
+  pdf_url: https://arxiv.org/pdf/2112.02163v1
+  version: v1
+fetched: '2026-11-14'

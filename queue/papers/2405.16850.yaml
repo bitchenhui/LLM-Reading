@@ -1,0 +1,49 @@
+id: paper:arxiv:2405.16850
+status: skipped_low_citation
+score: 4
+track: video_image_coding
+matched:
+- ref: codec:HEVC
+  count: 1
+  weight: 3
+- ref: concept:INR
+  count: 2
+  weight: 1
+meta:
+  title: 'UniCompress: Enhancing Multi-Data Medical Image Compression with Knowledge Distillation'
+  authors:
+  - Runzhao Yang
+  - Yinda Chen
+  - Zhihong Zhang
+  - Xiaoyu Liu
+  - Zongren Li
+  - Kunlun He
+  - Zhiwei Xiong
+  - Jinli Suo
+  - Qionghai Dai
+  published: '2024-05-27'
+  updated: '2024-05-27'
+  categories:
+  - eess.IV
+  - cs.CV
+  - cs.LG
+  abstract: In the field of medical image compression, Implicit Neural Representation (INR) networks have
+    shown remarkable versatility due to their flexible compression ratios, yet they are constrained by
+    a one-to-one fitting approach that results in lengthy encoding times. Our novel method, ``\textbf{UniCompress}'',
+    innovatively extends the compression capabilities of INR by being the first to compress multiple medical
+    data blocks using a single INR network. By employing wavelet transforms and quantization, we introduce
+    a codebook containing frequency domain information as a prior input to the INR network. This enhances
+    the representational power of INR and provides distinctive conditioning for different image blocks.
+    Furthermore, our research introduces a new technique for the knowledge distillation of implicit representations,
+    simplifying complex model knowledge into more manageable formats to improve compression ratios. Extensive
+    testing on CT and electron microscopy (EM) datasets has demonstrated that UniCompress outperforms
+    traditional INR methods and commercial compression solutions like HEVC, especially in complex and
+    high compression scenarios. Notably, compared to existing INR techniques, UniCompress achieves a 4$\sim$5
+    times increase in compression speed, marking a significant advancement in the field of medical image
+    compression. Codes will be publicly available.
+  url: https://arxiv.org/abs/2405.16850
+  pdf_url: https://arxiv.org/pdf/2405.16850v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 6
+citation_year: 2024

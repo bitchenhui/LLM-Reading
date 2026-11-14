@@ -1,0 +1,36 @@
+id: paper:arxiv:2510.23561
+status: skipped
+score: 2
+track: video_image_coding
+matched:
+- ref: metric:DISTS
+  count: 1
+  weight: 1
+- ref: metric:LPIPS
+  count: 1
+  weight: 1
+meta:
+  title: Revising Second Order Terms in Deep Animation Video Coding
+  authors:
+  - Konstantin Schmidt
+  - Thomas Richter
+  published: '2025-10-27'
+  updated: '2025-10-27'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: First Order Motion Model is a generative model that animates human heads based on very little
+    motion information derived from keypoints. It is a promising solution for video communication because
+    first it operates at very low bitrate and second its computational complexity is moderate compared
+    to other learning based video codecs. However, it has strong limitations by design. Since it generates
+    facial animations by warping source-images, it fails to recreate videos with strong head movements.
+    This works concentrates on one specific kind of head movements, namely head rotations. We show that
+    replacing the Jacobian transformations in FOMM by a global rotation helps the system to perform better
+    on items with head-rotations while saving 40% to 80% of bitrate on P-frames. Moreover, we apply state-of-the-art
+    normalization techniques to the discriminator to stabilize the adversarial training which is essential
+    for generating visually appealing videos. We evaluate the performance by the learned metics LPIPS
+    and DISTS to show the success our optimizations.
+  url: https://arxiv.org/abs/2510.23561
+  pdf_url: https://arxiv.org/pdf/2510.23561v1
+  version: v1
+fetched: '2026-11-14'

@@ -1,0 +1,32 @@
+id: paper:arxiv:2509.18815
+status: skipped
+score: 1
+track: video_image_coding
+matched:
+- ref: concept:EntropyModel
+  count: 2
+  weight: 1
+meta:
+  title: 'FlashGMM: Fast Gaussian Mixture Entropy Model for Learned Image Compression'
+  authors:
+  - Shimon Murai
+  - Fangzheng Lin
+  - Jiro Katto
+  published: '2025-09-23'
+  updated: '2025-09-23'
+  categories:
+  - eess.IV
+  abstract: High-performance learned image compression codecs require flexible probability models to fit
+    latent representations. Gaussian Mixture Models (GMMs) were proposed to satisfy this demand, but suffer
+    from a significant runtime performance bottleneck due to the large Cumulative Distribution Function
+    (CDF) tables that must be built for rANS coding. This paper introduces a fast coding algorithm that
+    entirely eliminates this bottleneck. By leveraging the CDF's monotonic property, our decoder performs
+    a dynamic binary search to find the correct symbol, eliminating the need for costly table construction
+    and lookup. Aided by SIMD optimizations and numerical approximations, our approach accelerates the
+    GMM entropy coding process by up to approximately 90x without compromising rate-distortion performance,
+    significantly improving the practicality of GMM-based codecs. The implementation will be made publicly
+    available at https://github.com/tokkiwa/FlashGMM.
+  url: https://arxiv.org/abs/2509.18815
+  pdf_url: https://arxiv.org/pdf/2509.18815v1
+  version: v1
+fetched: '2026-11-14'

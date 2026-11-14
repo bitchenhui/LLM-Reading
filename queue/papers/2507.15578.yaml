@@ -1,0 +1,36 @@
+id: paper:arxiv:2507.15578
+status: skipped
+score: 0
+track: video_image_coding
+matched: []
+meta:
+  title: 'Compress-Align-Detect: onboard change detection from unregistered images'
+  authors:
+  - Gabriele Inzerillo
+  - Diego Valsesia
+  - Aniello Fiengo
+  - Enrico Magli
+  published: '2025-07-21'
+  updated: '2025-07-21'
+  categories:
+  - cs.CV
+  - eess.IV
+  abstract: 'Change detection from satellite images typically incurs a delay ranging from several hours
+    up to days because of latency in downlinking the acquired images and generating orthorectified image
+    products at the ground stations; this may preclude real- or near real-time applications. To overcome
+    this limitation, we propose shifting the entire change detection workflow onboard satellites. This
+    requires to simultaneously solve challenges in data storage, image registration and change detection
+    with a strict complexity constraint. In this paper, we present a novel and efficient framework for
+    onboard change detection that addresses the aforementioned challenges in an end-to-end fashion with
+    a deep neural network composed of three interlinked submodules: (1) image compression, tailored to
+    minimize onboard data storage resources; (2) lightweight co-registration of non-orthorectified multi-temporal
+    image pairs; and (3) a novel temporally-invariant and computationally efficient change detection model.
+    This is the first approach in the literature combining all these tasks in a single end-to-end framework
+    with the constraints dictated by onboard processing. Experimental results compare each submodule with
+    the current state-of-the-art, and evaluate the performance of the overall integrated system in realistic
+    setting on low-power hardware. Compelling change detection results are obtained in terms of F1 score
+    as a function of compression rate, sustaining a throughput of 0.7 Mpixel/s on a 15W accelerator.'
+  url: https://arxiv.org/abs/2507.15578
+  pdf_url: https://arxiv.org/pdf/2507.15578v1
+  version: v1
+fetched: '2026-11-14'

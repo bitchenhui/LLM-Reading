@@ -1,0 +1,35 @@
+id: paper:arxiv:2304.06244
+status: skipped
+score: 1
+track: video_image_coding
+matched:
+- ref: concept:Hyperprior
+  count: 1
+  weight: 1
+meta:
+  title: Computationally-Efficient Neural Image Compression with Shallow Decoders
+  authors:
+  - Yibo Yang
+  - Stephan Mandt
+  published: '2023-04-13'
+  updated: '2023-11-10'
+  categories:
+  - eess.IV
+  - cs.CV
+  - cs.LG
+  abstract: Neural image compression methods have seen increasingly strong performance in recent years.
+    However, they suffer orders of magnitude higher computational complexity compared to traditional codecs,
+    which hinders their real-world deployment. This paper takes a step forward towards closing this gap
+    in decoding complexity by using a shallow or even linear decoding transform resembling that of JPEG.
+    To compensate for the resulting drop in compression performance, we exploit the often asymmetrical
+    computation budget between encoding and decoding, by adopting more powerful encoder networks and iterative
+    encoding. We theoretically formalize the intuition behind, and our experimental results establish
+    a new frontier in the trade-off between rate-distortion and decoding complexity for neural image compression.
+    Specifically, we achieve rate-distortion performance competitive with the established mean-scale hyperprior
+    architecture of Minnen et al. (2018) at less than 50K decoding FLOPs/pixel, reducing the baseline's
+    overall decoding complexity by 80%, or over 90% for the synthesis transform alone. Our code can be
+    found at https://github.com/mandt-lab/shallow-ntc.
+  url: https://arxiv.org/abs/2304.06244
+  pdf_url: https://arxiv.org/pdf/2304.06244v2
+  version: v2
+fetched: '2026-11-14'

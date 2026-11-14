@@ -1,0 +1,50 @@
+id: paper:arxiv:2408.09044
+status: pending
+score: 11
+track: video_image_coding
+matched:
+- ref: codec:AVC
+  count: 1
+  weight: 3
+- ref: codec:HEVC
+  count: 1
+  weight: 3
+- ref: impl:FFmpeg
+  count: 1
+  weight: 3
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+- ref: metric:VMAF
+  count: 1
+  weight: 1
+meta:
+  title: Explore Cross-Codec Quality-Rate Convex Hulls Relation for Adaptive Streaming
+  authors:
+  - Masoumeh Farhadi Nia
+  published: '2024-08-16'
+  updated: '2024-08-16'
+  categories:
+  - eess.IV
+  abstract: 'With the ongoing advancement of video technology and the emergence of new video platforms,
+    suppliers of video contents are striving to ensure that the video quality meets the desire of consumers.
+    Accessing a limited amount of channel bandwidth, they are often looking for a novel approach to decrease
+    the use of data and thus the required energy and cost. This study evaluates the Quality Rate performance
+    of H.264, H.265, and VP9 codecs across resolutions (960*544, 1920*1080, 3840*2160) to optimize video
+    quality while minimizing bitrate, crucial for energy and cost efficiency. At this approach, original
+    videos at native resolutions were encoded, decoded, and rescaled using FFmpeg. For each resolution,
+    encoding and decoding were performed at various quantization levels. Quality Rate (QR) curves were
+    generated using PSNR and VMAF metric against bitrate. Convex Hull curves were then derived and mathematically
+    modelled for each resolution. The procedure was systematically applied to H.264, H.265, and VP9 codecs.
+    Results indicate that increasing CRF values reduce bitrate, PSNR, and VMAF, with PSNR ranging between
+    20-40 dB. Logarithmic polynomial modelling of convex hulls demonstrated high accuracy, with low RMSE
+    and high R-Squared values. These findings suggest that the convex hull of one codec can predict the
+    performance of others, aiding future content-driven prediction methodologies and enhancing adaptive
+    streaming efficiency. Keywords: Video Codecs, Adaptive Streaming, Compression, Bitrate, PSNR, VMAF,
+    H.264, H.265, VP9'
+  url: https://arxiv.org/abs/2408.09044
+  pdf_url: https://arxiv.org/pdf/2408.09044v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 8
+citation_year: 2024

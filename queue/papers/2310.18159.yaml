@@ -1,0 +1,45 @@
+id: paper:arxiv:2310.18159
+status: pending
+score: 2
+track: streaming_delivery
+matched:
+- ref: concept:DASH
+  count: 2
+  weight: 1
+- ref: org:MPEG
+  count: 1
+  weight: 1
+meta:
+  title: 'DESiRED -- Dynamic, Enhanced, and Smart iRED: A P4-AQM with Deep Reinforcement Learning and
+    In-band Network Telemetry'
+  authors:
+  - Leandro C. de Almeida
+  - Washington Rodrigo Dias da Silva
+  - Thiago C. Tavares
+  - Rafael Pasquini
+  - Chrysa Papagianni
+  - Fábio L. Verdi
+  published: '2023-10-27'
+  updated: '2023-10-27'
+  categories:
+  - cs.NI
+  abstract: 'Active Queue Management (AQM) is a mechanism employed to alleviate transient congestion in
+    network device buffers, such as routers and switches. Traditional AQM algorithms use fixed thresholds,
+    like target delay or queue occupancy, to compute random packet drop probabilities. A very small target
+    delay can increase packet losses and reduce link utilization, while a large target delay may increase
+    queueing delays while lowering drop probability. Due to dynamic network traffic characteristics, where
+    traffic fluctuations can lead to significant queue variations, maintaining a fixed threshold AQM may
+    not suit all applications. Consequently, we explore the question: \textit{What is the ideal threshold
+    (target delay) for AQMs?} In this work, we introduce DESiRED (Dynamic, Enhanced, and Smart iRED),
+    a P4-based AQM that leverages precise network feedback from In-band Network Telemetry (INT) to feed
+    a Deep Reinforcement Learning (DRL) model. This model dynamically adjusts the target delay based on
+    rewards that maximize application Quality of Service (QoS). We evaluate DESiRED in a realistic P4-based
+    test environment running an MPEG-DASH service. Our findings demonstrate up to a 90x reduction in video
+    stall and a 42x increase in high-resolution video playback quality when the target delay is adjusted
+    dynamically by DESiRED.'
+  url: https://arxiv.org/abs/2310.18159
+  pdf_url: https://arxiv.org/pdf/2310.18159v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 20
+citation_year: 2023

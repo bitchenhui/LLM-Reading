@@ -1,0 +1,39 @@
+id: paper:arxiv:2510.11407
+status: skipped
+score: 1
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+meta:
+  title: 'KnowRL: Teaching Language Models to Know What They Know'
+  authors:
+  - Sahil Kale
+  - Devendra Singh Dhami
+  published: '2025-10-13'
+  updated: '2025-10-13'
+  categories:
+  - cs.CL
+  - cs.AI
+  abstract: 'Truly reliable AI requires more than simply scaling up knowledge; it demands the ability
+    to know what it knows and when it does not. Yet recent research shows that even the best LLMs misjudge
+    their own competence in more than one in five cases, making any response born of such internal uncertainty
+    impossible to fully trust. Inspired by self-improvement reinforcement learning techniques that require
+    minimal data, we present a simple but powerful framework KnowRL that strengthens a model''s internal
+    understanding of its own feasibility boundaries, enabling safer and more responsible behaviour. Our
+    framework combines two components: (i) introspection, where the model generates and classifies tasks
+    it judges feasible or infeasible, and (ii) consensus-based rewarding, where stability of self-knowledge
+    assessment is reinforced through internal agreement. By using internally generated data, this design
+    strengthens consistency in self-knowledge and entirely avoids costly external supervision. In experiments
+    on LLaMA-3.1-8B and Qwen-2.5-7B, KnowRL steadily improved self-knowledge, validated by both intrinsic
+    self-consistency and extrinsic benchmarking. With nothing more than a small seed set and no external
+    supervision, our method drove gains as high as 28% in accuracy and 12% in F1, outperforming baselines
+    in just a few iterations. Our framework essentially unlocks the untapped capacity of LLMs to self-improve
+    their knowledge awareness, opening the door to reliable, more accountable AI and safer deployment
+    in critical applications. Owing to its simplicity and independence from external effort, we encourage
+    applying this reliability-enhancing process to all future models.'
+  url: https://arxiv.org/abs/2510.11407
+  pdf_url: https://arxiv.org/pdf/2510.11407v1
+  version: v1
+fetched: '2026-11-14'

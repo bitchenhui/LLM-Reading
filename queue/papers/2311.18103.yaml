@@ -1,0 +1,46 @@
+id: paper:arxiv:2311.18103
+status: pending
+score: 3
+track: video_image_coding
+matched:
+- ref: impl:TIC
+  count: 1
+  weight: 3
+meta:
+  title: Corner-to-Center Long-range Context Model for Efficient Learned Image Compression
+  authors:
+  - Yang Sui
+  - Ding Ding
+  - Xiang Pan
+  - Xiaozhong Xu
+  - Shan Liu
+  - Bo Yuan
+  - Zhenzhong Chen
+  published: '2023-11-29'
+  updated: '2023-11-29'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: 'In the framework of learned image compression, the context model plays a pivotal role in
+    capturing the dependencies among latent representations. To reduce the decoding time resulting from
+    the serial autoregressive context model, the parallel context model has been proposed as an alternative
+    that necessitates only two passes during the decoding phase, thus facilitating efficient image compression
+    in real-world scenarios. However, performance degradation occurs due to its incomplete casual context.
+    To tackle this issue, we conduct an in-depth analysis of the performance degradation observed in existing
+    parallel context models, focusing on two aspects: the Quantity and Quality of information utilized
+    for context prediction and decoding. Based on such analysis, we propose the \textbf{Corner-to-Center
+    transformer-based Context Model (C$^3$M)} designed to enhance context and latent predictions and improve
+    rate-distortion performance. Specifically, we leverage the logarithmic-based prediction order to predict
+    more context features from corner to center progressively. In addition, to enlarge the receptive field
+    in the analysis and synthesis transformation, we use the Long-range Crossing Attention Module (LCAM)
+    in the encoder/decoder to capture the long-range semantic information by assigning the different window
+    shapes in different channels. Extensive experimental evaluations show that the proposed method is
+    effective and outperforms the state-of-the-art parallel methods. Finally, according to the subjective
+    analysis, we suggest that improving the detailed representation in transformer-based image compression
+    is a promising direction to be explored.'
+  url: https://arxiv.org/abs/2311.18103
+  pdf_url: https://arxiv.org/pdf/2311.18103v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 8
+citation_year: 2023

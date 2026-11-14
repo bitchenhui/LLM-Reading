@@ -1,0 +1,53 @@
+id: paper:arxiv:2406.13712
+status: skipped_low_citation
+score: 11
+track: video_image_coding
+matched:
+- ref: codec:VVC
+  count: 2
+  weight: 3
+- ref: impl:VVenC
+  count: 2
+  weight: 3
+- ref: codec:AVC
+  count: 1
+  weight: 3
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+- ref: metric:VMAF
+  count: 1
+  weight: 1
+meta:
+  title: Convex-hull Estimation using XPSNR for Versatile Video Coding
+  authors:
+  - Vignesh V Menon
+  - Christian R. Helmrich
+  - Adam Wieckowski
+  - Benjamin Bross
+  - Detlev Marpe
+  published: '2024-06-19'
+  updated: '2024-06-19'
+  categories:
+  - cs.MM
+  - eess.IV
+  abstract: As adaptive streaming becomes crucial for delivering high-quality video content across diverse
+    network conditions, accurate metrics to assess perceptual quality are essential. This paper explores
+    using the eXtended Peak Signal-to-Noise Ratio (XPSNR) metric as an alternative to the popular Video
+    Multimethod Assessment Fusion (VMAF) metric for determining optimized bitrate-resolution pairs in
+    the context of Versatile Video Coding (VVC). Our study is rooted in the observation that XPSNR shows
+    a superior correlation with subjective quality scores for VVC-coded Ultra-High Definition (UHD) content
+    compared to VMAF. We predict the average XPSNR of VVC-coded bitstreams using spatiotemporal complexity
+    features of the video and the target encoding configuration and then determine the convex-hull online.
+    On average, the proposed convex-hull using XPSNR (VEXUS) achieves an overall quality improvement of
+    5.84 dB PSNR and 0.62 dB XPSNR while maintaining the same bitrate, compared to the default UHD encoding
+    using the VVenC encoder, accompanied by an encoding time reduction of 44.43% and a decoding time reduction
+    of 65.46%. This shift towards XPSNR as a guiding metric shall enhance the effectiveness of adaptive
+    streaming algorithms, ensuring an optimal balance between bitrate efficiency and perceptual fidelity
+    with advanced video coding standards.
+  url: https://arxiv.org/abs/2406.13712
+  pdf_url: https://arxiv.org/pdf/2406.13712v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 4
+citation_year: 2024

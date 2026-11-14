@@ -1,0 +1,43 @@
+id: paper:arxiv:2606.24797
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'EG-VQA: Benchmarking Verifiable Video Question Answering with Grounded Temporal Evidence'
+  authors:
+  - Linpeng Huang
+  - Weixing Chen
+  - Zexin Chen
+  - Yang Liu
+  - Liang Lin
+  published: '2026-06-23'
+  updated: '2026-10-04'
+  categories:
+  - cs.CV
+  - cs.AI
+  abstract: 'Recent advances in Video Large Language Models (Video-LLMs) have yielded promising performance
+    on Video Question Answering (VideoQA). Nevertheless, existing benchmarks are predominantly evaluated
+    through answer correctness, while the faithfulness of predicted evidence supporting those answers
+    remains insufficiently evaluated. This disconnect between answer generation and evidence verification
+    motivates the construction of the Evidence-Grounded Video Question Answering Benchmark (EG-VQA), a
+    large-scale open-ended benchmark in which each QA pair is annotated with temporally localized textual
+    evidence, requiring models to jointly produce answers and verifiable evidence. EG-VQA comprises 2,067
+    videos and 11,838 QA pairs with fine-grained evidence annotations. To evaluate predicted evidence,
+    Evidence-Grounded F1 (EG-F1) is introduced as a metric that jointly measures temporal alignment and
+    semantic consistency between predicted and ground-truth evidence. Experiments reveal a substantial
+    discrepancy between answer correctness and evidence faithfulness: even strong proprietary models can
+    achieve high answer accuracy while exhibiting gaps in temporal-semantic grounding. To investigate
+    evidence-aware learning under EG-VQA, we develop EG-Reasoner, an evidence-aware model trained with
+    explicit evidence supervision. EG-Reasoner achieves strong evidence grounding performance among open-source
+    models while maintaining competitive answer generation results compared with proprietary systems.
+    These findings highlight the importance of explicitly modeling evidence grounding and suggest that
+    evidence-aware supervision provides an effective direction toward more reliable and interpretable
+    VideoQA systems.'
+  url: https://arxiv.org/abs/2606.24797
+  pdf_url: https://arxiv.org/pdf/2606.24797v2
+  version: v2
+fetched: '2026-11-14'

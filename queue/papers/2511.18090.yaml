@@ -1,0 +1,48 @@
+id: paper:arxiv:2511.18090
+status: skipped_low_citation
+score: 10
+track: processing_enhancement
+matched:
+- ref: codec:AVC
+  count: 1
+  weight: 3
+- ref: codec:HEVC
+  count: 1
+  weight: 3
+- ref: codec:VVC
+  count: 1
+  weight: 3
+- ref: concept:SuperResolution
+  count: 2
+  weight: 1
+meta:
+  title: Versatile Recompression-Aware Perceptual Image Super-Resolution
+  authors:
+  - Mingwei He
+  - Tongda Xu
+  - Xingtong Ge
+  - Ming Sun
+  - Chao Zhou
+  - Yan Wang
+  published: '2025-11-22'
+  updated: '2026-03-27'
+  categories:
+  - cs.CV
+  abstract: Perceptual image super-resolution (SR) methods restore degraded images and produce sharp outputs.
+    In practice, those outputs are usually recompressed for storage and transmission. Ignoring recompression
+    is suboptimal as the downstream codec might add additional artifacts to restored images. However,
+    jointly optimizing SR and recompression is challenging, as the codecs are not differentiable and vary
+    in configuration. In this paper, we present \textbf{Versatile Recompression-Aware Perceptual Super-Resolution
+    (VRPSR)}, which makes existing perceptual SR aware of versatile compression. First, we formulate compression
+    as conditional text-to-image generation and utilize a pre-trained diffusion model to build a generalizable
+    codec simulator. Next, we propose a set of training techniques tailored for perceptual SR, including
+    optimizing the simulator using perceptual targets and adopting slightly compressed images as the training
+    target. Empirically, our VRPSR achieves 10% - 40% bitrate savings based on Real-ESRGAN and S3Diff
+    under H.264/H.265/H.266 single-picture (intra) compression. Besides, our VRPSR facilitates joint optimization
+    of SR and the post-processing model after recompression.
+  url: https://arxiv.org/abs/2511.18090
+  pdf_url: https://arxiv.org/pdf/2511.18090v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 0
+citation_year: 2025

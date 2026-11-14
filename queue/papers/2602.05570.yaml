@@ -1,0 +1,42 @@
+id: paper:arxiv:2602.05570
+status: skipped_low_citation
+score: 2
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+- ref: concept:TrainingFree
+  count: 1
+  weight: 1
+meta:
+  title: 'TangramSR: Can Vision-Language Models Reason in Continuous Geometric Space?'
+  authors:
+  - Yikun Zong
+  - Cheston Tan
+  published: '2026-02-05'
+  updated: '2026-02-05'
+  categories:
+  - cs.AI
+  abstract: 'Humans excel at spatial reasoning tasks like Tangram puzzle assembly through cognitive processes
+    involving mental rotation, iterative refinement, and visual feedback. Inspired by how humans solve
+    Tangram puzzles through trial-and-error, observation, and correction, we design a framework that models
+    these human cognitive mechanisms. However, comprehensive experiments across five representative Vision-Language
+    Models (VLMs) reveal systematic failures in continuous geometric reasoning: average IoU of only 0.41
+    on single-piece tasks, dropping to 0.23 on two-piece composition, far below human performance where
+    children can complete Tangram tasks successfully. This paper addresses a fundamental challenge in
+    self-improving AI: can models iteratively refine their predictions at test time without parameter
+    updates? We introduce a test-time self-refinement framework that combines in-context learning (ICL)
+    with reward-guided feedback loops, inspired by human cognitive processes. Our training-free verifier-refiner
+    agent applies recursive refinement loops that iteratively self-refine predictions based on geometric
+    consistency feedback, achieving IoU improvements from 0.63 to 0.932 on medium-triangle cases without
+    any model retraining. This demonstrates that incorporating human-inspired iterative refinement mechanisms
+    through ICL and reward loops can substantially enhance geometric reasoning in VLMs, moving self-improving
+    AI from promise to practice in continuous spatial domains. Our work is available at this anonymous
+    link https://anonymous.4open.science/r/TangramVLM-F582/.'
+  url: https://arxiv.org/abs/2602.05570
+  pdf_url: https://arxiv.org/pdf/2602.05570v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 2
+citation_year: 2026

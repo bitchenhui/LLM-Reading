@@ -1,0 +1,40 @@
+id: paper:arxiv:2609.06922
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'BEFORE THE FLIP: Measuring Hidden Score Shifts In Quantized Vision Language Models Before The
+    Answer Changes for Visual Question Answering'
+  authors:
+  - Sourajit Saha
+  - Shubhashis Roy Dipta
+  - Shaswati Saha
+  - Nobin Sarwar
+  - Yuxuan Jiang
+  published: '2026-09-07'
+  updated: '2026-09-07'
+  categories:
+  - cs.CV
+  abstract: Quantization makes vision language models (VLMs) cheaper to store and run by using fewer bits
+    to represent their weights. While unchanged answers on visual question answering (VQA) after compression
+    are an expected behavior, they can still hide changes in the underlying scores (log probabilities).
+    For example, a model may still answer yes after compression, even as the score gap between yes and
+    no shrinks. We introduce BEFORE THE FLIP to measure these hidden changes. Our method compares the
+    score change caused by compression with the change caused by replacing the image's internal representations,
+    or image tokens, with one fixed average token. We then increase the precision of one weight group
+    at a time to identify where extra bits help, and test whether choosing different groups for each question
+    offers benefits beyond shuffled controls. Among 8,277 LLaVA questions where image token replacement
+    measurably affects the scores, 4-bit compression shifts the yes or no score gap farther toward the
+    replacement output than 8-bit compression. Qwen shows the same pattern, but with a smaller difference.
+    Yet only 265 of 9,000 LLaVA answers change at 4 bits. In a separate study of 1,024 calibration questions,
+    choosing weight groups separately for each question does not outperform both shuffled controls at
+    any tested storage budget. These findings show that compression can alter the scores behind unchanged
+    answers, but do not establish a reliable benefit from adjusting precision for each question.
+  url: https://arxiv.org/abs/2609.06922
+  pdf_url: https://arxiv.org/pdf/2609.06922v1
+  version: v1
+fetched: '2026-11-14'

@@ -1,0 +1,40 @@
+id: paper:arxiv:2506.15228
+status: skipped
+score: 0
+track: video_image_coding
+matched: []
+meta:
+  title: 'ABC: Adaptive BayesNet Structure Learning for Computational Scalable Multi-task Image Compression'
+  authors:
+  - Yufeng Zhang
+  - Wenrui Dai
+  - Hang Yu
+  - Shizhan Liu
+  - Junhui Hou
+  - Jianguo Li
+  - Weiyao Lin
+  published: '2025-06-18'
+  updated: '2025-06-18'
+  categories:
+  - eess.IV
+  - cs.MM
+  abstract: 'Neural Image Compression (NIC) has revolutionized image compression with its superior rate-distortion
+    performance and multi-task capabilities, supporting both human visual perception and machine vision
+    tasks. However, its widespread adoption is hindered by substantial computational demands. While existing
+    approaches attempt to address this challenge through module-specific optimizations or pre-defined
+    complexity levels, they lack comprehensive control over computational complexity. We present ABC (Adaptive
+    BayesNet structure learning for computational scalable multi-task image Compression), a novel, comprehensive
+    framework that achieves computational scalability across all NIC components through Bayesian network
+    (BayesNet) structure learning. ABC introduces three key innovations: (i) a heterogeneous bipartite
+    BayesNet (inter-node structure) for managing neural backbone computations; (ii) a homogeneous multipartite
+    BayesNet (intra-node structure) for optimizing autoregressive unit processing; and (iii) an adaptive
+    control module that dynamically adjusts the BayesNet structure based on device capabilities, input
+    data complexity, and downstream task requirements. Experiments demonstrate that ABC enables full computational
+    scalability with better complexity adaptivity and broader complexity control span, while maintaining
+    competitive compression performance. Furthermore, the framework''s versatility allows integration
+    with various NIC architectures that employ BayesNet representations, making it a robust solution for
+    ensuring computational scalability in NIC applications. Code is available in https://github.com/worldlife123/cbench_BaSIC.'
+  url: https://arxiv.org/abs/2506.15228
+  pdf_url: https://arxiv.org/pdf/2506.15228v1
+  version: v1
+fetched: '2026-11-14'

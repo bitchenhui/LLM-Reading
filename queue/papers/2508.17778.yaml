@@ -1,0 +1,46 @@
+id: paper:arxiv:2508.17778
+status: pending
+score: 2
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: 'AgentRAN: An Agentic AI Architecture for Autonomous Control of Open 6G Networks'
+  authors:
+  - Maxime Elkael
+  - Salvatore D'Oro
+  - Leonardo Bonati
+  - Michele Polese
+  - Yunseong Lee
+  - Koichiro Furueda
+  - Tommaso Melodia
+  published: '2025-08-25'
+  updated: '2026-02-02'
+  categories:
+  - cs.AI
+  - cs.NI
+  abstract: Despite the programmable architecture of Open RAN, today's deployments still rely heavily
+    on static control and manual operations. To move beyond this limitation, we introduce AgentRAN, an
+    AI-native, Open RAN-aligned agentic framework that generates and orchestrates a fabric of distributed
+    AI agents based on natural language intents. Unlike traditional approaches that require explicit programming,
+    AgentRAN's LLM-powered agents interpret natural language intents, negotiate strategies through structured
+    conversations, and orchestrate control loops across the network. AgentRAN instantiates a self-organizing
+    hierarchy of agents that decompose complex intents across time scales (from sub-millisecond to minutes),
+    spatial domains (cell to network-wide), and protocol layers (PHY/MAC to RRC). A central innovation
+    is the AI-RAN Factory, which continuously generates improved agents and algorithms from operational
+    data, transforming the network into a system that evolves its own intelligence. We validate AgentRAN
+    through live 5G experiments, demonstrating dynamic adaptation to changing operator intents across
+    power control and scheduling. Key benefits include transparent decision-making (all agent reasoning
+    is auditable), bootstrapped intelligence (no initial training data required), and continuous self-improvement
+    via the AI-RAN Factory.
+  url: https://arxiv.org/abs/2508.17778
+  pdf_url: https://arxiv.org/pdf/2508.17778v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 45
+citation_year: 2025

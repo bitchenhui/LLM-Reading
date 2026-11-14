@@ -1,0 +1,41 @@
+id: paper:arxiv:2201.12348
+status: skipped
+score: 1
+track: processing_enhancement
+matched:
+- ref: concept:SuperResolution
+  count: 1
+  weight: 1
+meta:
+  title: End-to-End Optimization of Metasurfaces for Imaging with Compressed Sensing
+  authors:
+  - Gaurav Arya
+  - William F. Li
+  - Charles Roques-Carmes
+  - Marin Soljačić
+  - Steven G. Johnson
+  - Zin Lin
+  published: '2022-01-28'
+  updated: '2024-06-26'
+  categories:
+  - eess.IV
+  - math.OC
+  - physics.optics
+  abstract: We present a framework for the end-to-end optimization of metasurface imaging systems that
+    reconstruct targets using compressed sensing, a technique for solving underdetermined imaging problems
+    when the target object exhibits sparsity (i.e. the object can be described by a small number of non-zero
+    values, but the positions of these values are unknown). We nest an iterative, unapproximated compressed
+    sensing reconstruction algorithm into our end-to-end optimization pipeline, resulting in an interpretable,
+    data-efficient method for maximally leveraging metaoptics to exploit object sparsity. We apply our
+    framework to super-resolution imaging and high-resolution depth imaging with a phase-change material.
+    In both situations, our end-to-end framework computationally discovers optimal metasurface structures
+    for compressed sensing recovery, automatically balancing a number of complicated design considerations
+    to select an imaging measurement matrix from a complex, physically constrained manifold with millions
+    ofdimensions. The optimized metasurface imaging systems are robust to noise, significantly improving
+    over random scattering surfaces and approaching the ideal compressed sensing performance of a Gaussian
+    matrix, showing how a physical metasurface system can demonstrably approach the mathematical limits
+    of compressed sensing.
+  url: https://arxiv.org/abs/2201.12348
+  pdf_url: https://arxiv.org/pdf/2201.12348v4
+  version: v4
+fetched: '2026-11-14'

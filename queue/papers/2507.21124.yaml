@@ -1,0 +1,59 @@
+id: paper:arxiv:2507.21124
+status: pending
+score: 3
+track: self_improvement
+matched:
+- ref: concept:LLM
+  count: 2
+  weight: 1
+- ref: concept:IQA
+  count: 1
+  weight: 1
+- ref: concept:SelfImprovement
+  count: 1
+  weight: 1
+meta:
+  title: 'VizGenie: Toward Self-Refining, Domain-Aware Workflows for Next-Generation Scientific Visualization'
+  authors:
+  - Ayan Biswas
+  - Terece L. Turton
+  - Nishath Rajiv Ranasinghe
+  - Shawn Jones
+  - Bradley Love
+  - William Jones
+  - Aric Hagberg
+  - Han-Wei Shen
+  - Nathan DeBardeleben
+  - Earl Lawrence
+  published: '2025-07-18'
+  updated: '2025-07-18'
+  categories:
+  - cs.HC
+  - cs.AI
+  - cs.GR
+  - cs.LG
+  abstract: We present VizGenie, a self-improving, agentic framework that advances scientific visualization
+    through large language model (LLM) by orchestrating of a collection of domain-specific and dynamically
+    generated modules. Users initially access core functionalities--such as threshold-based filtering,
+    slice extraction, and statistical analysis--through pre-existing tools. For tasks beyond this baseline,
+    VizGenie autonomously employs LLMs to generate new visualization scripts (e.g., VTK Python code),
+    expanding its capabilities on-demand. Each generated script undergoes automated backend validation
+    and is seamlessly integrated upon successful testing, continuously enhancing the system's adaptability
+    and robustness. A distinctive feature of VizGenie is its intuitive natural language interface, allowing
+    users to issue high-level feature-based queries (e.g., ``visualize the skull"). The system leverages
+    image-based analysis and visual question answering (VQA) via fine-tuned vision models to interpret
+    these queries precisely, bridging domain expertise and technical implementation. Additionally, users
+    can interactively query generated visualizations through VQA, facilitating deeper exploration. Reliability
+    and reproducibility are further strengthened by Retrieval-Augmented Generation (RAG), providing context-driven
+    responses while maintaining comprehensive provenance records. Evaluations on complex volumetric datasets
+    demonstrate significant reductions in cognitive overhead for iterative visualization tasks. By integrating
+    curated domain-specific tools with LLM-driven flexibility, VizGenie not only accelerates insight generation
+    but also establishes a sustainable, continuously evolving visualization practice. The resulting platform
+    dynamically learns from user interactions, consistently enhancing support for feature-centric exploration
+    and reproducible research in scientific visualization.
+  url: https://arxiv.org/abs/2507.21124
+  pdf_url: https://arxiv.org/pdf/2507.21124v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 12
+citation_year: 2025

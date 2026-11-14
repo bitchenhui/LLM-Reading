@@ -1,0 +1,47 @@
+id: paper:arxiv:2405.07759
+status: pending
+score: 2
+track: streaming_delivery
+matched:
+- ref: concept:ABR
+  count: 3
+  weight: 1
+- ref: concept:QoE
+  count: 3
+  weight: 1
+meta:
+  title: MADRL-Based Rate Adaptation for 360° Video Streaming with Multi-Viewpoint Prediction
+  authors:
+  - Haopeng Wang
+  - Zijian Long
+  - Haiwei Dong
+  - Abdulmotaleb El Saddik
+  published: '2024-05-13'
+  updated: '2024-05-17'
+  categories:
+  - cs.MM
+  - cs.AI
+  - cs.NI
+  - eess.IV
+  abstract: Over the last few years, 360° video traffic on the network has grown significantly. A key
+    challenge of 360° video playback is ensuring a high quality of experience (QoE) with limited network
+    bandwidth. Currently, most studies focus on tile-based adaptive bitrate (ABR) streaming based on single
+    viewport prediction to reduce bandwidth consumption. However, the performance of models for single-viewpoint
+    prediction is severely limited by the inherent uncertainty in head movement, which can not cope with
+    the sudden movement of users very well. This paper first presents a multimodal spatial-temporal attention
+    transformer to generate multiple viewpoint trajectories with their probabilities given a historical
+    trajectory. The proposed method models viewpoint prediction as a classification problem and uses attention
+    mechanisms to capture the spatial and temporal characteristics of input video frames and viewpoint
+    trajectories for multi-viewpoint prediction. After that, a multi-agent deep reinforcement learning
+    (MADRL)-based ABR algorithm utilizing multi-viewpoint prediction for 360° video streaming is proposed
+    for maximizing different QoE objectives under various network conditions. We formulate the ABR problem
+    as a decentralized partially observable Markov decision process (Dec-POMDP) problem and present a
+    MAPPO algorithm based on centralized training and decentralized execution (CTDE) framework to solve
+    the problem. The experimental results show that our proposed method improves the defined QoE metric
+    by up to 85.5% compared to existing ABR methods.
+  url: https://arxiv.org/abs/2405.07759
+  pdf_url: https://arxiv.org/pdf/2405.07759v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 26
+citation_year: 2024

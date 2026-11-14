@@ -1,0 +1,38 @@
+id: paper:arxiv:2603.01592
+status: skipped
+score: 1
+track: audio_coding
+matched:
+- ref: concept:NeuralAudioCodec
+  count: 1
+  weight: 1
+meta:
+  title: 'TQCodec: Towards neural audio codec for high-fidelity music streaming'
+  authors:
+  - Lixing He
+  - Zhouxuan Chen
+  - Mingshuai Liu
+  - Xinran Sun
+  - Wucheng Wang
+  - Minfu Li
+  - Lingcheng Kong
+  - Weifeng Zhao
+  - Wenjiang Zhou
+  published: '2026-03-02'
+  updated: '2026-03-02'
+  categories:
+  - cs.SD
+  abstract: 'We propose TQCodec, a neural audio codec designed for high-bitrate, high-fidelity music streaming.
+    Unlike existing neural codecs that primarily target ultra-low bitrates (<= 16kbps), TQCodec operates
+    at 44.1 kHz and supports bitrates from 32 kbps to 128 kbps, aligning with the standard quality of
+    modern music streaming platforms. The model adopts an encoder-decoder architecture based on SEANet
+    for efficient on-device computation and introduces several enhancements: an imbalanced network design
+    for improved quality with low overhead, SimVQ for mid-frequency detail preservation, and a phase-aware
+    waveform loss. Additionally, we introduce a perception-driven band-wise bit allocation strategy to
+    prioritize perceptually critical lower frequencies. Evaluations on diverse music datasets demonstrate
+    that TQCodec achieves superior audio quality at target bitrates, making it well-suited for high-quality
+    audio applications.'
+  url: https://arxiv.org/abs/2603.01592
+  pdf_url: https://arxiv.org/pdf/2603.01592v1
+  version: v1
+fetched: '2026-11-14'

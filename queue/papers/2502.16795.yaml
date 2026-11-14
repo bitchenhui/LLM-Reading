@@ -1,0 +1,36 @@
+id: paper:arxiv:2502.16795
+status: skipped
+score: 0
+track: video_image_coding
+matched: []
+meta:
+  title: Continuous Patch Stitching for Block-wise Image Compression
+  authors:
+  - Zifu Zhang
+  - Shengxi Li
+  - Henan Liu
+  - Mai Xu
+  - Ce Zhu
+  published: '2025-02-24'
+  updated: '2025-02-24'
+  categories:
+  - cs.CV
+  - cs.MM
+  abstract: Most recently, learned image compression methods have outpaced traditional hand-crafted standard
+    codecs. However, their inference typically requires to input the whole image at the cost of heavy
+    computing resources, especially for high-resolution image compression; otherwise, the block artefact
+    can exist when compressed by blocks within existing learned image compression methods. To address
+    this issue, we propose a novel continuous patch stitching (CPS) framework for block-wise image compression
+    that is able to achieve seamlessly patch stitching and mathematically eliminate block artefact, thus
+    capable of significantly reducing the required computing resources when compressing images. More specifically,
+    the proposed CPS framework is achieved by padding-free operations throughout, with a newly established
+    parallel overlapping stitching strategy to provide a general upper bound for ensuring the continuity.
+    Upon this, we further propose functional residual blocks with even-sized kernels to achieve down-sampling
+    and up-sampling, together with bottleneck residual blocks retaining feature size to increase network
+    depth. Experimental results demonstrate that our CPS framework achieves the state-of-the-art performance
+    against existing baselines, whilst requiring less than half of computing resources of existing models.
+    Our code shall be released upon acceptance.
+  url: https://arxiv.org/abs/2502.16795
+  pdf_url: https://arxiv.org/pdf/2502.16795v1
+  version: v1
+fetched: '2026-11-14'

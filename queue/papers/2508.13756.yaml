@@ -1,0 +1,48 @@
+id: paper:arxiv:2508.13756
+status: skipped_low_citation
+score: 2
+track: streaming_delivery
+matched:
+- ref: concept:QUIC
+  count: 2
+  weight: 1
+- ref: concept:DASH
+  count: 1
+  weight: 1
+meta:
+  title: 'INDS: Incremental Named Data Streaming for Real-Time Point Cloud Video'
+  authors:
+  - Ruonan Chai
+  - Yixiang Zhu
+  - Xinjiao Li
+  - Jiawei Li
+  - Zili Meng
+  - Dirk Kutscher
+  published: '2025-08-19'
+  updated: '2025-08-19'
+  categories:
+  - cs.MM
+  abstract: Real-time streaming of point cloud video, characterized by massive data volumes and high sensitivity
+    to packet loss, remains a key challenge for immersive applications under dynamic network conditions.
+    While connection-oriented protocols such as TCP and more modern alternatives like QUIC alleviate some
+    transport-layer inefficiencies, including head-of-line blocking, they still retain a coarse-grained,
+    segment-based delivery model and a centralized control loop that limit fine-grained adaptation and
+    effective caching. We introduce INDS (Incremental Named Data Streaming), an adaptive streaming framework
+    based on Information-Centric Networking (ICN) that rethinks delivery for hierarchical, layered media.
+    INDS leverages the Octree structure of point cloud video and expressive content naming to support
+    progressive, partial retrieval of enhancement layers based on consumer bandwidth and decoding capability.
+    By combining time-windows with Group-of-Frames (GoF), INDS's naming scheme supports fine-grained in-network
+    caching and facilitates efficient multi-user data reuse. INDS can be deployed as an overlay, remaining
+    compatible with QUIC-based transport infrastructure as well as future Media-over-QUIC (MoQ) architectures,
+    without requiring changes to underlying IP networks. Our prototype implementation shows up to 80%
+    lower delay, 15-50% higher throughput, and 20-30% increased cache hit rates compared to state-of-the-art
+    DASH-style systems. Together, these results establish INDS as a scalable, cache-friendly solution
+    for real-time point cloud streaming under variable and lossy conditions, while its compatibility with
+    MoQ overlays further positions it as a practical, forward-compatible architecture for emerging immersive
+    media systems.
+  url: https://arxiv.org/abs/2508.13756
+  pdf_url: https://arxiv.org/pdf/2508.13756v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 3
+citation_year: 2025

@@ -1,0 +1,44 @@
+id: paper:arxiv:2606.05535
+status: pending
+score: 2
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: Noise-Aware Visual Representation Learning for Medical Visual Question Answering
+  authors:
+  - I Putu Adi Pratama
+  - Bahadorreza Ofoghi
+  - Atul Sajjanhar
+  - Shang Gao
+  published: '2026-06-04'
+  updated: '2026-06-04'
+  categories:
+  - cs.CV
+  - cs.AI
+  abstract: Medical visual question answering (Med-VQA) has strong potential for clinical decision support
+    by enabling AI models to interpret medical images and answer clinically relevant queries. Recent approaches
+    typically connect off-the-shelf vision encoders with large language models (LLMs) through lightweight
+    mapping networks to reduce computational cost. However, these methods often overlook the importance
+    of handling noise and small irrelevant changes in visual representations. To address these challenges,
+    we propose a noise-aware Med-VQA framework that incorporates a denoising autoencoder before visual
+    embeddings are mapped into the input space of an LLM. The denoising autoencoder is pretrained to reconstruct
+    clean visual embeddings from corrupted inputs, encouraging the model to learn robust visual representations
+    that are less sensitive to noise. The resulting embeddings are then projected into the language model
+    embedding space using a multi-layer perceptron (MLP), forming visual prefix tokens that provide image
+    information to the LLM. To enable efficient adaptation without full retraining, we employ parameter-efficient
+    fine-tuning using low-rank adaptation (LoRA). The proposed method is evaluated on the SLAKE and PathVQA
+    benchmarks. Experimental results show improved robustness to noisy input embeddings while maintaining
+    competitive clean performance across multiple evaluation criteria. These findings suggest that learning
+    more robust visual representations can enhance Med-VQA performance and robustness.
+  url: https://arxiv.org/abs/2606.05535
+  pdf_url: https://arxiv.org/pdf/2606.05535v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 1
+citation_year: 2026

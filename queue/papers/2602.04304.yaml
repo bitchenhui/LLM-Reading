@@ -1,0 +1,50 @@
+id: paper:arxiv:2602.04304
+status: skipped_low_citation
+score: 2
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+- ref: concept:TrainingFree
+  count: 1
+  weight: 1
+meta:
+  title: 'Beyond Static Cropping: Layer-Adaptive Visual Localization and Decoding Enhancement'
+  authors:
+  - Zipeng Zhu
+  - Zhanghao Hu
+  - Qinglin Zhu
+  - Yuxi Hong
+  - Yijun Liu
+  - Jingyong Su
+  - Yulan He
+  - Lin Gui
+  published: '2026-02-04'
+  updated: '2026-02-04'
+  categories:
+  - cs.CV
+  - cs.AI
+  - cs.CL
+  abstract: 'Large Vision-Language Models (LVLMs) have advanced rapidly by aligning visual patches with
+    the text embedding space, but a fixed visual-token budget forces images to be resized to a uniform
+    pretraining resolution, often erasing fine-grained details and causing hallucinations via over-reliance
+    on language priors. Recent attention-guided enhancement (e.g., cropping or region-focused attention
+    allocation) alleviates this, yet it commonly hinges on a static "magic layer" empirically chosen on
+    simple recognition benchmarks and thus may not transfer to complex reasoning tasks. In contrast to
+    this static assumption, we propose a dynamic perspective on visual grounding. Through a layer-wise
+    sensitivity analysis, we demonstrate that visual grounding is a dynamic process: while simple object
+    recognition tasks rely on middle layers, complex visual search and reasoning tasks require visual
+    information to be reactivated at deeper layers. Based on this observation, we introduce Visual Activation
+    by Query (VAQ), a metric that identifies the layer whose attention map is most relevant to query-specific
+    visual grounding by measuring attention sensitivity to the input query. Building on VAQ, we further
+    propose LASER (Layer-adaptive Attention-guided Selective visual and decoding Enhancement for Reasoning),
+    a training-free inference procedure that adaptively selects task-appropriate layers for visual localization
+    and question answering. Experiments across diverse VQA benchmarks show that LASER significantly improves
+    VQA accuracy across tasks with varying levels of complexity.'
+  url: https://arxiv.org/abs/2602.04304
+  pdf_url: https://arxiv.org/pdf/2602.04304v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 1
+citation_year: 2026

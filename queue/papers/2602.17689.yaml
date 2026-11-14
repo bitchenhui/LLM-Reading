@@ -1,0 +1,43 @@
+id: paper:arxiv:2602.17689
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: Robust Pre-Training of Medical Vision-and-Language Models with Domain-Invariant Multi-Modal Masked
+    Reconstruction
+  authors:
+  - Melika Filvantorkaman
+  - Mohsen Piri
+  published: '2026-02-06'
+  updated: '2026-02-06'
+  categories:
+  - cs.LG
+  - cs.AI
+  - cs.CL
+  - cs.CV
+  abstract: Medical vision-language models show strong potential for joint reasoning over medical images
+    and clinical text, but their performance often degrades under domain shift caused by variations in
+    imaging devices, acquisition protocols, and reporting styles. Existing multi-modal pre-training methods
+    largely overlook robustness, treating it as a downstream adaptation problem. In this work, we propose
+    Robust Multi-Modal Masked Reconstruction (Robust-MMR), a self-supervised pre-training framework that
+    explicitly incorporates robustness objectives into masked vision-language learning. Robust-MMR integrates
+    asymmetric perturbation-aware masking, domain-consistency regularization, and modality-resilience
+    constraints to encourage domain-invariant representations. We evaluate Robust-MMR on multiple medical
+    vision-language benchmarks, including medical visual question answering (VQA-RAD, SLAKE, VQA-2019),
+    cross-domain image-text classification (MELINDA), and robust image-caption retrieval (ROCO). Robust-MMR
+    achieves 78.9% cross-domain accuracy on VQA-RAD, outperforming the strongest baseline by 3.8 percentage
+    points, and reaches 74.6% and 77.0% accuracy on SLAKE and VQA-2019, respectively. Under perturbed
+    evaluation, Robust-MMR improves VQA-RAD accuracy from 69.1% to 75.6%. For image-text classification,
+    cross-domain MELINDA accuracy increases from 70.3% to 75.2%, while retrieval experiments show a reduction
+    in mean rank degradation from over 16 to 4.1 under perturbation. Qualitative results further demonstrate
+    improved clinical reasoning for disease detection and structural abnormality assessment. These findings
+    show that explicitly modeling robustness during pre-training leads to more reliable and transferable
+    medical vision-language representations for real-world deployment.
+  url: https://arxiv.org/abs/2602.17689
+  pdf_url: https://arxiv.org/pdf/2602.17689v1
+  version: v1
+fetched: '2026-11-14'

@@ -1,0 +1,38 @@
+id: paper:arxiv:2601.09851
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'ViSIL: Unified Evaluation of Information Loss in Multimodal Video Captioning'
+  authors:
+  - Po-han Li
+  - Shenghui Chen
+  - Ufuk Topcu
+  - Sandeep Chinchali
+  published: '2026-01-14'
+  updated: '2026-01-26'
+  categories:
+  - cs.CV
+  - cs.AI
+  - cs.HC
+  abstract: Multimodal video captioning condenses dense footage into a structured format of keyframes
+    and natural language. By creating a cohesive multimodal summary, this approach anchors generative
+    AI in rich semantic evidence and serves as a lightweight proxy for high-efficiency retrieval. However,
+    traditional metrics like BLEU or ROUGE fail to quantify information coverage across disparate modalities,
+    such as comparing a paragraph of text to a sequence of keyframes. To address this, we propose the
+    Video Summary Information Loss (ViSIL) score, an information-theoretic framework that quantifies the
+    video information not captured by a summary via vision-language model (VLM) inference. By measuring
+    the information loss, ViSIL is a unified metric that enables direct comparison across multimodal summary
+    formats despite their structural discrepancies. Our results demonstrate that ViSIL scores show a statistically
+    significant correlation with both human and VLM performance on Video Question Answering (VQA) tasks.
+    ViSIL also enables summary selection to optimize the trade-off between information loss and processing
+    speed, establishing a Pareto-optimal frontier that outperforms text summaries by $7\%$ in VQA accuracy
+    without increasing processing load.
+  url: https://arxiv.org/abs/2601.09851
+  pdf_url: https://arxiv.org/pdf/2601.09851v2
+  version: v2
+fetched: '2026-11-14'

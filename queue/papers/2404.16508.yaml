@@ -1,0 +1,49 @@
+id: paper:arxiv:2404.16508
+status: skipped_low_citation
+score: 5
+track: streaming_delivery
+matched:
+- ref: codec:AVC
+  count: 1
+  weight: 3
+- ref: concept:QoE
+  count: 2
+  weight: 1
+- ref: concept:WebRTC
+  count: 2
+  weight: 1
+meta:
+  title: 'Exploring the Dynamics of Data Transmission in 5G Networks: A Conceptual Analysis'
+  authors:
+  - Nikita Smirnov
+  - Sven Tomforde
+  published: '2024-04-25'
+  updated: '2024-04-25'
+  categories:
+  - cs.NI
+  - cs.AI
+  abstract: 'This conceptual analysis examines the dynamics of data transmission in 5G networks. It addresses
+    various aspects of sending data from cameras and LiDARs installed on a remote-controlled ferry to
+    a land-based control center. The range of topics includes all stages of video and LiDAR data processing
+    from acquisition and encoding to final decoding, all aspects of their transmission and reception via
+    the WebRTC protocol, and all possible types of network problems such as handovers or congestion that
+    could affect the quality of experience for end-users. A series of experiments were conducted to evaluate
+    the key aspects of the data transmission. These include simulation-based reproducible runs and real-world
+    experiments conducted using open-source solutions we developed: "Gymir5G" - an OMNeT++-based 5G simulation
+    and "GstWebRTCApp" - a GStreamer-based application for adaptive control of media streams over the
+    WebRTC protocol. One of the goals of this study is to formulate the bandwidth and latency requirements
+    for reliable real-time communication and to estimate their approximate values. This goal was achieved
+    through simulation-based experiments involving docking maneuvers in the Bay of Kiel, Germany. The
+    final latency for the entire data processing pipeline was also estimated during the real tests. In
+    addition, a series of simulation-based experiments showed the impact of key WebRTC features and demonstrated
+    the effectiveness of the WebRTC protocol, while the conducted video codec comparison showed that the
+    hardware-accelerated H.264 codec is the best. Finally, the research addresses the topic of adaptive
+    communication, where the traditional congestion avoidance and deep reinforcement learning approaches
+    were analyzed. The comparison in a sandbox scenario shows that the AI-based solution outperforms the
+    WebRTC baseline GCC algorithm in terms of data rates, latency, and packet loss.'
+  url: https://arxiv.org/abs/2404.16508
+  pdf_url: https://arxiv.org/pdf/2404.16508v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 1
+citation_year: 2024

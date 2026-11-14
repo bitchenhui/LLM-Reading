@@ -1,0 +1,51 @@
+id: paper:arxiv:2604.02048
+status: skipped_low_citation
+score: 2
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: 'Jagle: Building a Large-Scale Japanese Multimodal Post-Training Dataset for Vision-Language
+    Models'
+  authors:
+  - Issa Sugiura
+  - Keito Sasagawa
+  - Keisuke Nakao
+  - Koki Maeda
+  - Ziqi Yin
+  - Zhishen Yang
+  - Shuhei Kurita
+  - Yusuke Oda
+  - Ryoko Tokuhisa
+  - Daisuke Kawahara
+  - Naoaki Okazaki
+  published: '2026-04-02'
+  updated: '2026-08-08'
+  categories:
+  - cs.CV
+  abstract: 'Developing vision-language models (VLMs) that generalize across diverse tasks requires large-scale
+    training datasets with diverse content. In English, such datasets are typically constructed by aggregating
+    and curating numerous existing visual question answering (VQA) resources. However, this strategy does
+    not readily extend to other languages, where VQA datasets remain limited in both scale and domain
+    coverage. In this work, we introduce Jagle, the largest Japanese multimodal post-training dataset
+    to date, comprising approximately 9.2 million instances across diverse tasks. Rather than relying
+    on existing VQA datasets, we collect heterogeneous source data, including images, image-text pairs,
+    and PDF documents, and generate VQA pairs through multiple strategies such as VLM-based QA generation,
+    translation, and text rendering. Experiments demonstrate that a 2.2B model trained with Jagle surpasses
+    InternVL3.5-2B in average score across ten Japanese evaluation tasks and comes within five points
+    of Qwen3-VL-2B-Instruct. Moreover, combining Jagle with FineVision improves English performance over
+    training with FineVision alone. These benefits generalize across model backbones and scales: LLM-jp-4-VL
+    9B beta, a 9B-scale model built on the Japanese-centric LLM-jp-4-8B-instruct, achieves Japanese performance
+    comparable to Qwen3-VL-8B-Instruct. To facilitate reproducibility and future research, we release
+    the dataset, models, and code.'
+  url: https://arxiv.org/abs/2604.02048
+  pdf_url: https://arxiv.org/pdf/2604.02048v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 0
+citation_year: 2026

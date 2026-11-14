@@ -1,0 +1,46 @@
+id: paper:arxiv:2404.09905
+status: pending
+score: 2
+track: streaming_delivery
+matched:
+- ref: concept:QoE
+  count: 3
+  weight: 1
+- ref: concept:ABR
+  count: 2
+  weight: 1
+meta:
+  title: Quality of Experience Oriented Cross-layer Optimization for Real-time XR Video Transmission
+  authors:
+  - Guangjin Pan
+  - Shugong Xu
+  - Shunqing Zhang
+  - Xiaojing Chen
+  - Yanzan Sun
+  published: '2024-04-15'
+  updated: '2024-04-15'
+  categories:
+  - cs.NI
+  - cs.MM
+  - eess.IV
+  - eess.SY
+  abstract: Extended reality (XR) is one of the most important applications of beyond 5G and 6G networks.
+    Real-time XR video transmission presents challenges in terms of data rate and delay. In particular,
+    the frame-by-frame transmission mode of XR video makes real-time XR video very sensitive to dynamic
+    network environments. To improve the users' quality of experience (QoE), we design a cross-layer transmission
+    framework for real-time XR video. The proposed framework allows the simple information exchange between
+    the base station (BS) and the XR server, which assists in adaptive bitrate and wireless resource scheduling.
+    We utilize the cross-layer information to formulate the problem of maximizing user QoE by finding
+    the optimal scheduling and bitrate adjustment strategies. To address the issue of mismatched time
+    scales between two strategies, we decouple the original problem and solve them individually using
+    a multi-agent-based approach. Specifically, we propose the multi-step Deep Q-network (MS-DQN) algorithm
+    to obtain a frame-priority-based wireless resource scheduling strategy and then propose the Transformer-based
+    Proximal Policy Optimization (TPPO) algorithm for video bitrate adaptation. The experimental results
+    show that the TPPO+MS-DQN algorithm proposed in this study can improve the QoE by 3.6% to 37.8%. More
+    specifically, the proposed MS-DQN algorithm enhances the transmission quality by 49.9%-80.2%.
+  url: https://arxiv.org/abs/2404.09905
+  pdf_url: https://arxiv.org/pdf/2404.09905v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 30
+citation_year: 2024

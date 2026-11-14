@@ -1,0 +1,38 @@
+id: paper:arxiv:2606.18961
+status: skipped
+score: 1
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+meta:
+  title: 'Be Your Own Teacher: Steering Protein Language Models via Unsupervised Reward Optimization'
+  authors:
+  - Lanqing Li
+  - Shentong Mo
+  - Yang Yu
+  - Pheng-Ann Heng
+  published: '2026-06-17'
+  updated: '2026-06-17'
+  categories:
+  - cs.LG
+  abstract: 'Protein language models (PLMs) have emerged as powerful tools for controllable biomolecular
+    design, yet their post-training adaptation typically relies on costly wet-lab validation or curated
+    preference datasets. To overcome this supervision bottleneck, we introduce unsupervised reward optimization
+    of PLMs, a comprehensive framework for steerable protein generation without ground-truth labels. Our
+    key insight is that task-agnostic rewards, which combine intrinsic model uncertainty with extrinsic
+    semantic consistency informed by protein representation models, exhibit strong correlation with controllability
+    measures across base models and temperature regimes. Building upon this discovery, we propose two
+    offline algorithms: Soft Reward Optimization (SRO) and Binarized Reward Optimization (BRO), which
+    effectively maximize the classical RLHF objective induced by these proxy rewards. Extensive experiments
+    on compositional out-of-distribution prompts demonstrate that both methods significantly outperform
+    competitive baselines (DPO, KTO), while approaching oracle performance across multiple sampling temperatures,
+    model scales and protein families. Moreover, PLMs fine-tuned with unsupervised rewards can achieve
+    consistently higher coverage compared to their base model in pass@k evaluations. By enabling self-improvement
+    of PLMs through their own generated experience, our framework provides a scalable pathway toward controllable
+    biomolecular design in settings where labeled preferences or experimental feedback are scarce or unavailable.'
+  url: https://arxiv.org/abs/2606.18961
+  pdf_url: https://arxiv.org/pdf/2606.18961v1
+  version: v1
+fetched: '2026-11-14'

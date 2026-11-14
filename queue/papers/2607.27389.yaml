@@ -1,0 +1,44 @@
+id: paper:arxiv:2607.27389
+status: pending
+score: 2
+track: self_improvement
+matched:
+- ref: concept:FunSearch
+  count: 1
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: 'FunL2O: LLM-Guided Feature Function Design for Learning to Optimize'
+  authors:
+  - Bingheng Li
+  - Junyang Cai
+  - Yupeng Zhang
+  - Bistra Dilkina
+  - Jayant Kalagnanam
+  - Dzung T. Phan
+  published: '2026-07-29'
+  updated: '2026-07-29'
+  categories:
+  - cs.LG
+  - cs.AI
+  abstract: Learning-to-optimize (L2O) methods accelerate repeated optimization by training models to
+    predict solutions, warm starts, branching decisions, or other forms of solver guidance. A critical
+    yet largely overlooked component of these pipelines is the feature function that maps problem instances
+    to inputs for machine learning models. Existing L2O methods typically rely on hand-crafted features,
+    making representation design manual and largely fixed across domains. We introduce FunL2O, the first
+    unified framework for automating feature design through LLM-driven program evolution for L2O. In a
+    FunSearch-style loop, an LLM proposes executable feature functions, while a fixed evaluation process
+    retrains the original L2O model and measures downstream optimization performance. We evaluate FunL2O
+    on linear and quadratic programming tasks involving solution prediction and warm-starting, as well
+    as on mixed-integer optimization tasks using GNN-guided backdoor branching and Predict-and-Search.
+    Across continuous and discrete optimization tasks and four LLMs, the evolved features consistently
+    outperform hand-crafted representations. These results establish LLM-driven feature evolution as a
+    general and effective approach to automating representation design in L2O.
+  url: https://arxiv.org/abs/2607.27389
+  pdf_url: https://arxiv.org/pdf/2607.27389v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 0
+citation_year: 2026

@@ -1,0 +1,34 @@
+id: paper:arxiv:2102.02640
+status: skipped
+score: 0
+track: audio_coding
+matched: []
+meta:
+  title: 'Low Bit-Rate Wideband Speech Coding: A Deep Generative Model based Approach'
+  authors:
+  - Gang Min
+  - Xiongwei Zhang
+  - Xia Zou
+  - Xiangyang Liu
+  published: '2021-02-04'
+  updated: '2021-02-04'
+  categories:
+  - cs.SD
+  - cs.LG
+  - cs.MM
+  - eess.AS
+  abstract: Traditional low bit-rate speech coding approach only handles narrowband speech at 8kHz, which
+    limits further improvements in speech quality. Motivated by recent successful exploration of deep
+    learning methods for image and speech compression, this paper presents a new approach through vector
+    quantization (VQ) of mel-frequency cepstral coefficients (MFCCs) and using a deep generative model
+    called WaveGlow to provide efficient and high-quality speech coding. The coding feature is sorely
+    an 80-dimension MFCCs vector for 16kHz wideband speech, then speech coding at the bit-rate throughout
+    1000-2000 bit/s could be scalably implemented by applying different VQ schemes for MFCCs vector. This
+    new deep generative network based codec works fast as the WaveGlow model abandons the sample-by-sample
+    autoregressive mechanism. We evaluated this new approach over the multi-speaker TIMIT corpus, and
+    experimental results demonstrate that it provides better speech quality compared with the state-of-the-art
+    classic MELPe codec at lower bit-rate.
+  url: https://arxiv.org/abs/2102.02640
+  pdf_url: https://arxiv.org/pdf/2102.02640v1
+  version: v1
+fetched: '2026-11-14'

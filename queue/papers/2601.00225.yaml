@@ -1,0 +1,39 @@
+id: paper:arxiv:2601.00225
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 3
+  weight: 1
+meta:
+  title: 'Towards Syn-to-Real IQA: A Novel Perspective on Reshaping Synthetic Data Distributions'
+  authors:
+  - Aobo Li
+  - Jinjian Wu
+  - Yongxu Liu
+  - Leida Li
+  - Weisheng Dong
+  published: '2026-01-01'
+  updated: '2026-01-01'
+  categories:
+  - cs.CV
+  abstract: 'Blind Image Quality Assessment (BIQA) has advanced significantly through deep learning, but
+    the scarcity of large-scale labeled datasets remains a challenge. While synthetic data offers a promising
+    solution, models trained on existing synthetic datasets often show limited generalization ability.
+    In this work, we make a key observation that representations learned from synthetic datasets often
+    exhibit a discrete and clustered pattern that hinders regression performance: features of high-quality
+    images cluster around reference images, while those of low-quality images cluster based on distortion
+    types. Our analysis reveals that this issue stems from the distribution of synthetic data rather than
+    model architecture. Consequently, we introduce a novel framework SynDR-IQA, which reshapes synthetic
+    data distribution to enhance BIQA generalization. Based on theoretical derivations of sample diversity
+    and redundancy''s impact on generalization error, SynDR-IQA employs two strategies: distribution-aware
+    diverse content upsampling, which enhances visual diversity while preserving content distribution,
+    and density-aware redundant cluster downsampling, which balances samples by reducing the density of
+    densely clustered areas. Extensive experiments across three cross-dataset settings (synthetic-to-authentic,
+    synthetic-to-algorithmic, and synthetic-to-synthetic) demonstrate the effectiveness of our method.
+    The code is available at https://github.com/Li-aobo/SynDR-IQA.'
+  url: https://arxiv.org/abs/2601.00225
+  pdf_url: https://arxiv.org/pdf/2601.00225v1
+  version: v1
+fetched: '2026-11-14'

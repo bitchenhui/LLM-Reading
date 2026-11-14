@@ -1,0 +1,53 @@
+id: paper:arxiv:2407.15730
+status: skipped_low_citation
+score: 7
+track: video_image_coding
+matched:
+- ref: codec:AVC
+  count: 1
+  weight: 3
+- ref: codec:HEVC
+  count: 1
+  weight: 3
+- ref: concept:EntropyModel
+  count: 1
+  weight: 1
+meta:
+  title: Neural-based Video Compression on Solar Dynamics Observatory Images
+  authors:
+  - Atefeh Khoshkhahtinat
+  - Ali Zafari
+  - Piyush M. Mehta
+  - Nasser M. Nasrabadi
+  - Barbara J. Thompson
+  - Michael S. F. Kirk
+  - Daniel da Silva
+  published: '2024-07-12'
+  updated: '2024-07-12'
+  categories:
+  - eess.IV
+  - astro-ph.IM
+  - cs.CV
+  - cs.IT
+  abstract: NASA's Solar Dynamics Observatory (SDO) mission collects extensive data to monitor the Sun's
+    daily activity. In the realm of space mission design, data compression plays a crucial role in addressing
+    the challenges posed by limited telemetry rates. The primary objective of data compression is to facilitate
+    efficient data management and transmission to work within the constrained bandwidth, thereby ensuring
+    that essential information is captured while optimizing the utilization of available resources. This
+    paper introduces a neural video compression technique that achieves a high compression ratio for the
+    SDO's image data collection. The proposed approach focuses on leveraging both temporal and spatial
+    redundancies in the data, leading to a more efficient compression. In this work, we introduce an architecture
+    based on the Transformer model, which is specifically designed to capture both local and global information
+    from input images in an effective and efficient manner. Additionally, our network is equipped with
+    an entropy model that can accurately model the probability distribution of the latent representations
+    and improves the speed of the entropy decoding step. The entropy model leverages a channel-dependent
+    approach and utilizes checkerboard-shaped local and global spatial contexts. By combining the Transformer-based
+    video compression network with our entropy model, the proposed compression algorithm demonstrates
+    superior performance over traditional video codecs like H.264 and H.265, as confirmed by our experimental
+    results.
+  url: https://arxiv.org/abs/2407.15730
+  pdf_url: https://arxiv.org/pdf/2407.15730v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 1
+citation_year: 2024

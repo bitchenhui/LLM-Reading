@@ -1,0 +1,47 @@
+id: paper:arxiv:2604.22842
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 2
+  weight: 1
+meta:
+  title: 'EX-FIQA: Leveraging Intermediate Early eXit Representations from Vision Transformers for Face
+    Image Quality Assessment'
+  authors:
+  - Guray Ozgur
+  - Tahar Chettaoui
+  - Eduarda Caldeira
+  - Jan Niklas Kolf
+  - Andrea Atzori
+  - Fadi Boutros
+  - Naser Damer
+  published: '2026-04-21'
+  updated: '2026-04-21'
+  categories:
+  - cs.CV
+  - eess.IV
+  abstract: Face Image Quality Assessment is crucial for reliable face recognition systems, yet existing
+    Vision Transformer-based approaches rely exclusively on final-layer representations, ignoring quality-relevant
+    information captured at intermediate network depths. This paper presents the first comprehensive investigation
+    of how intermediate representations within ViTs contribute to face quality assessment through early
+    exit mechanisms and score fusion strategies. We systematically analyze all twelve transformer blocks
+    of ViT-FIQA architectures, demonstrating that different depths capture distinct and complementary
+    quality-relevant information, as evidenced by varying attention patterns and performance characteristics
+    across network layers. We propose a score fusion framework that combines quality predictions from
+    multiple transformer blocks without architectural modifications or additional training. Our early
+    exit analysis reveals optimal performance-efficiency trade-offs, enabling significant computational
+    savings while maintaining competitive performance. Through extensive evaluation across eight benchmark
+    datasets using four FR models, we demonstrate that our fusion strategy improves upon single-exit approaches.
+    Our proposed quality fusion approach employs depth-weighted averaging that assigns progressively higher
+    importance to deeper transformer blocks, achieving the best quality assessment performance by effectively
+    leveraging the hierarchical nature of feature learning in ViTs. Our work challenges the conventional
+    wisdom that only deep features matter for face analysis, revealing that intermediate representations
+    contain valuable information for quality assessment. The proposed framework offers practical benefits
+    for real-world biometric systems by enabling adaptive computation based on resource constraints while
+    maintaining competitive quality assessment capabilities.
+  url: https://arxiv.org/abs/2604.22842
+  pdf_url: https://arxiv.org/pdf/2604.22842v1
+  version: v1
+fetched: '2026-11-14'

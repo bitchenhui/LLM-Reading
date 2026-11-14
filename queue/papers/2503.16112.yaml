@@ -1,0 +1,42 @@
+id: paper:arxiv:2503.16112
+status: skipped_low_citation
+score: 4
+track: video_image_coding
+matched:
+- ref: codec:HEVC
+  count: 1
+  weight: 3
+- ref: metric:LPIPS
+  count: 1
+  weight: 1
+meta:
+  title: 'PromptMobile: Efficient Promptus for Low Bandwidth Mobile Video Streaming'
+  authors:
+  - Liming Liu
+  - Jiangkai Wu
+  - Haoyang Wang
+  - Peiheng Wang
+  - Zongming Guo
+  - Xinggong Zhang
+  published: '2025-03-20'
+  updated: '2025-05-15'
+  categories:
+  - cs.NI
+  - cs.AI
+  - cs.MM
+  abstract: Traditional video compression algorithms exhibit significant quality degradation at extremely
+    low bitrates. Promptus emerges as a new paradigm for video streaming, substantially cutting down the
+    bandwidth essential for video streaming. However, Promptus is computationally intensive and can not
+    run in real-time on mobile devices. This paper presents PromptMobile, an efficient acceleration framework
+    tailored for on-device Promptus. Specifically, we propose (1) a two-stage efficient generation framework
+    to reduce computational cost by 8.1x, (2) a fine-grained inter-frame caching to reduce redundant computations
+    by 16.6%, (3) system-level optimizations to further enhance efficiency. The evaluations demonstrate
+    that compared with the original Promptus, PromptMobile achieves a 13.6x increase in image generation
+    speed. Compared with other streaming methods, PromptMobile achives an average LPIPS improvement of
+    0.016 (compared with H.265), reducing 60% of severely distorted frames (compared to VQGAN).
+  url: https://arxiv.org/abs/2503.16112
+  pdf_url: https://arxiv.org/pdf/2503.16112v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 2
+citation_year: 2025

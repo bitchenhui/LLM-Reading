@@ -1,0 +1,42 @@
+id: paper:arxiv:2601.04897
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'V-FAT: Benchmarking Visual Fidelity Against Text-bias'
+  authors:
+  - Ziteng Wang
+  - Yujie He
+  - Guanliang Li
+  - Siqi Yang
+  - Jiaqi Xiong
+  - Songxiang Liu
+  published: '2026-01-08'
+  updated: '2026-01-08'
+  categories:
+  - cs.CL
+  - cs.CV
+  - cs.LG
+  - cs.MM
+  abstract: 'Recent advancements in Multimodal Large Language Models (MLLMs) have demonstrated impressive
+    performance on standard visual reasoning benchmarks. However, there is growing concern that these
+    models rely excessively on linguistic shortcuts rather than genuine visual grounding, a phenomenon
+    we term Text Bias. In this paper, we investigate the fundamental tension between visual perception
+    and linguistic priors. We decouple the sources of this bias into two dimensions: Internal Corpus Bias,
+    stemming from statistical correlations in pretraining, and External Instruction Bias, arising from
+    the alignment-induced tendency toward sycophancy. To quantify this effect, we introduce V-FAT (Visual
+    Fidelity Against Text-bias), a diagnostic benchmark comprising 4,026 VQA instances across six semantic
+    domains. V-FAT employs a Three-Level Evaluation Framework that systematically increases the conflict
+    between visual evidence and textual information: (L1) internal bias from atypical images, (L2) external
+    bias from misleading instructions, and (L3) synergistic bias where both coincide. We introduce the
+    Visual Robustness Score (VRS), a metric designed to penalize "lucky" linguistic guesses and reward
+    true visual fidelity. Our evaluation of 12 frontier MLLMs reveals that while models excel in existing
+    benchmarks, they experience significant visual collapse under high linguistic dominance.'
+  url: https://arxiv.org/abs/2601.04897
+  pdf_url: https://arxiv.org/pdf/2601.04897v1
+  version: v1
+fetched: '2026-11-14'

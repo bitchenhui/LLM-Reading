@@ -1,0 +1,53 @@
+id: paper:arxiv:2406.12367
+status: skipped_low_citation
+score: 8
+track: video_image_coding
+matched:
+- ref: codec:VVC
+  count: 2
+  weight: 3
+- ref: impl:VTM
+  count: 1
+  weight: 3
+- ref: concept:ICM
+  count: 1
+  weight: 1
+- ref: metric:BD-Rate
+  count: 1
+  weight: 1
+meta:
+  title: Competitive Learning for Achieving Content-specific Filters in Video Coding for Machines
+  authors:
+  - Honglei Zhang
+  - Jukka I. Ahonen
+  - Nam Le
+  - Ruiying Yang
+  - Francesco Cricri
+  published: '2024-06-18'
+  updated: '2024-06-18'
+  categories:
+  - cs.CV
+  - cs.LG
+  - cs.MM
+  abstract: This paper investigates the efficacy of jointly optimizing content-specific post-processing
+    filters to adapt a human oriented video/image codec into a codec suitable for machine vision tasks.
+    By observing that artifacts produced by video/image codecs are content-dependent, we propose a novel
+    training strategy based on competitive learning principles. This strategy assigns training samples
+    to filters dynamically, in a fuzzy manner, which further optimizes the winning filter on the given
+    sample. Inspired by simulated annealing optimization techniques, we employ a softmax function with
+    a temperature variable as the weight allocation function to mitigate the effects of random initialization.
+    Our evaluation, conducted on a system utilizing multiple post-processing filters within a Versatile
+    Video Coding (VVC) codec framework, demonstrates the superiority of content-specific filters trained
+    with our proposed strategies, specifically, when images are processed in blocks. Using VVC reference
+    software VTM 12.0 as the anchor, experiments on the OpenImages dataset show an improvement in the
+    BD-rate reduction from -41.3% and -44.6% to -42.3% and -44.7% for object detection and instance segmentation
+    tasks, respectively, compared to independently trained filters. The statistics of the filter usage
+    align with our hypothesis and underscore the importance of jointly optimizing filters for both content
+    and reconstruction quality. Our findings pave the way for further improving the performance of video/image
+    codecs.
+  url: https://arxiv.org/abs/2406.12367
+  pdf_url: https://arxiv.org/pdf/2406.12367v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 4
+citation_year: 2024

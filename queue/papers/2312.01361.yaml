@@ -1,0 +1,43 @@
+id: paper:arxiv:2312.01361
+status: skipped
+score: 2
+track: video_image_coding
+matched:
+- ref: concept:INR
+  count: 2
+  weight: 1
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+meta:
+  title: 'MoEC: Mixture of Experts Implicit Neural Compression'
+  authors:
+  - Jianchen Zhao
+  - Cheng-Ching Tseng
+  - Ming Lu
+  - Ruichuan An
+  - Xiaobao Wei
+  - He Sun
+  - Shanghang Zhang
+  published: '2023-12-03'
+  updated: '2023-12-03'
+  categories:
+  - cs.CV
+  - cs.LG
+  - eess.IV
+  abstract: Emerging Implicit Neural Representation (INR) is a promising data compression technique, which
+    represents the data using the parameters of a Deep Neural Network (DNN). Existing methods manually
+    partition a complex scene into local regions and overfit the INRs into those regions. However, manually
+    designing the partition scheme for a complex scene is very challenging and fails to jointly learn
+    the partition and INRs. To solve the problem, we propose MoEC, a novel implicit neural compression
+    method based on the theory of mixture of experts. Specifically, we use a gating network to automatically
+    assign a specific INR to a 3D point in the scene. The gating network is trained jointly with the INRs
+    of different local regions. Compared with block-wise and tree-structured partitions, our learnable
+    partition can adaptively find the optimal partition in an end-to-end manner. We conduct detailed experiments
+    on massive and diverse biomedical data to demonstrate the advantages of MoEC against existing approaches.
+    In most of experiment settings, we have achieved state-of-the-art results. Especially in cases of
+    extreme compression ratios, such as 6000x, we are able to uphold the PSNR of 48.16.
+  url: https://arxiv.org/abs/2312.01361
+  pdf_url: https://arxiv.org/pdf/2312.01361v1
+  version: v1
+fetched: '2026-11-14'

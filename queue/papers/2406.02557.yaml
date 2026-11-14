@@ -1,0 +1,40 @@
+id: paper:arxiv:2406.02557
+status: skipped
+score: 1
+track: streaming_delivery
+matched:
+- ref: concept:ABR
+  count: 3
+  weight: 1
+meta:
+  title: 'EVAN: Evolutional Video Streaming Adaptation via Neural Representation'
+  authors:
+  - Mufan Liu
+  - Le Yang
+  - Yiling Xu
+  - Ye-kui Wang
+  - Jenq-Neng Hwang
+  published: '2024-04-15'
+  updated: '2024-04-15'
+  categories:
+  - eess.IV
+  - cs.AI
+  - cs.CV
+  - cs.MM
+  abstract: Adaptive bitrate (ABR) using conventional codecs cannot further modify the bitrate once a
+    decision has been made, exhibiting limited adaptation capability. This may result in either overly
+    conservative or overly aggressive bitrate selection, which could cause either inefficient utilization
+    of the network bandwidth or frequent re-buffering, respectively. Neural representation for video (NeRV),
+    which embeds the video content into neural network weights, allows video reconstruction with incomplete
+    models. Specifically, the recovery of one frame can be achieved without relying on the decoding of
+    adjacent frames. NeRV has the potential to provide high video reconstruction quality and, more importantly,
+    pave the way for developing more flexible ABR strategies for video transmission. In this work, a new
+    framework, named Evolutional Video streaming Adaptation via Neural representation (EVAN), which can
+    adaptively transmit NeRV models based on soft actor-critic (SAC) reinforcement learning, is proposed.
+    EVAN is trained with a more exploitative strategy and utilizes progressive playback to avoid re-buffering.
+    Experiments showed that EVAN can outperform existing ABRs with 50% reduction in re-buffering and achieve
+    nearly 20% .
+  url: https://arxiv.org/abs/2406.02557
+  pdf_url: https://arxiv.org/pdf/2406.02557v1
+  version: v1
+fetched: '2026-11-14'

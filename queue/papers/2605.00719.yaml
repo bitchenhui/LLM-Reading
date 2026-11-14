@@ -1,0 +1,47 @@
+id: paper:arxiv:2605.00719
+status: pending
+score: 2
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 3
+  weight: 1
+- ref: concept:SuperResolution
+  count: 1
+  weight: 1
+meta:
+  title: Unpaired Image Deraining Using Reward-Guided Self-Reinforcement Strategy
+  authors:
+  - Yinghao Chen
+  - Yeying Jin
+  - Xiang Chen
+  - Yanyan Wei
+  - Ziyang Yan
+  - Yaowen Fu
+  published: '2026-05-01'
+  updated: '2026-05-01'
+  categories:
+  - cs.CV
+  abstract: 'Unsupervised deraining has attracted attention for its ability to learn the real-world distribution
+    of rain without paired supervision. However, the lack of strong constraints makes it difficult for
+    the network to converge, especially with the complex diversity of rain degradation. A key motivation
+    is that high-quality deraining results occasionally emerge during training, which can be leveraged
+    to guide the optimization process. To overcome these challenges, we introduce RGSUD (Reward-Guided
+    Self-Reinforcement Unsupervised Image Deraining), comprising two key stages: reward recycling and
+    self-reinforcement (SR) training. For the former stage, we propose an Image Quality Assessment (IQA)-based
+    dynamic reward recycling mechanism that selects optimal derained outputs during training and continuously
+    collects high-quality deraining images. In latter stage, we incorporate these rewards into the model''s
+    optimization process, constraining the optimization space and improving alignment between derained
+    outputs and clean images. By leveraging IQA-based self-reinforced loss and dynamically updated rewards,
+    we enhance the quality of synthesized pseudo-paired data and stabilize the optimization. Extensive
+    experiments demonstrate that our method achieves SOTA performance across multiple datasets, including
+    paired synthetic, paired real, and unpaired real images, outperforming existing unsupervised deraining
+    approaches in both subjective and objective IQA metrics. Additionally, we show that the self-reinforcement
+    strategy is adaptable to other unsupervised deraining methods and our deraining framework demonstrates
+    strong generalization across existing supervised deraining networks.'
+  url: https://arxiv.org/abs/2605.00719
+  pdf_url: https://arxiv.org/pdf/2605.00719v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 3
+citation_year: 2026

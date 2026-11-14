@@ -1,0 +1,54 @@
+id: paper:arxiv:2604.16625
+status: pending
+score: 2
+track: self_improvement
+matched:
+- ref: concept:LLM
+  count: 2
+  weight: 1
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+meta:
+  title: 'AdaExplore: Failure-Driven Adaptation and Diversity-Preserving Search for Efficient Kernel Generation'
+  authors:
+  - Weihua Du
+  - Jingming Zhuo
+  - Yixin Dong
+  - Andre Wang He
+  - Weiwei Sun
+  - Zeyu Zheng
+  - Manupa Karunaratne
+  - Ivan Fox
+  - Tim Dettmers
+  - Tianqi Chen
+  - Yiming Yang
+  - Sean Welleck
+  published: '2026-04-17'
+  updated: '2026-09-05'
+  categories:
+  - cs.CL
+  - cs.AI
+  - cs.LG
+  abstract: 'Recent large language model (LLM) agents have shown promise in using execution feedback for
+    test-time adaptation. However, robust self-improvement remains far from solved: most approaches still
+    treat each problem instance independently, without accumulating reusable knowledge. This limitation
+    is particularly pronounced in domain-specific languages such as Triton, which are underrepresented
+    in LLM pretraining data. Their strict constraints and non-linear optimization landscape further make
+    naive generation and local refinement unreliable. We propose AdaExplore, an agent framework that enables
+    self-improvement via accumulated execution feedback for performance-critical kernel code generation
+    through two complementary stages: failure-driven adaptation and diversity-preserving search, jointly
+    improving correctness and optimization performance without additional fine-tuning or external knowledge.
+    In the adaptation stage, the agent synthesizes tasks and converts recurring failures into a reusable
+    memory of validity rules, helping subsequent generations remain within the feasible set. In the search
+    stage, the agent organizes candidate kernels as a tree and alternates between small local refinements
+    and larger structural regeneration, allowing it to explore the optimization landscape beyond local
+    optima. Experiments on kernel runtime optimization benchmarks validate these gains: AdaExplore achieves
+    3.11x and 1.62x speedups on KernelBench Level-2 and Level-3, respectively, within 100 steps, and continues
+    to improve with additional computation.'
+  url: https://arxiv.org/abs/2604.16625
+  pdf_url: https://arxiv.org/pdf/2604.16625v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 6
+citation_year: 2026

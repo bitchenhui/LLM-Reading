@@ -1,0 +1,42 @@
+id: paper:arxiv:2503.01695
+status: skipped
+score: 1
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 3
+  weight: 1
+meta:
+  title: 'Generate, Discriminate, Evolve: Enhancing Context Faithfulness via Fine-Grained Sentence-Level
+    Self-Evolution'
+  authors:
+  - Kun Li
+  - Tianhua Zhang
+  - Yunxiang Li
+  - Hongyin Luo
+  - Abdalla Moustafa
+  - Xixin Wu
+  - James Glass
+  - Helen Meng
+  published: '2025-03-03'
+  updated: '2025-03-03'
+  categories:
+  - cs.CL
+  abstract: Improving context faithfulness in large language models is essential for developing trustworthy
+    retrieval augmented generation systems and mitigating hallucinations, especially in long-form question
+    answering (LFQA) tasks or scenarios involving knowledge conflicts. Existing methods either intervene
+    LLMs only at inference without addressing their inherent limitations or overlook the potential for
+    self-improvement. In this paper, we introduce GenDiE (Generate, Discriminate, Evolve), a novel self-evolving
+    framework that enhances context faithfulness through fine-grained sentence-level optimization. GenDiE
+    combines both generative and discriminative training, equipping LLMs with self-generation and self-scoring
+    capabilities to facilitate iterative self-evolution. This supports both data construction for model
+    alignment and score-guided search during inference. Furthermore, by treating each sentence in a response
+    as an independent optimization unit, GenDiE effectively addresses the limitations of previous approaches
+    that optimize at the holistic answer level, which may miss unfaithful details. Experiments on ASQA
+    (in-domain LFQA) and ConFiQA (out-of-domain counterfactual QA) datasets demonstrate that GenDiE surpasses
+    various baselines in both faithfulness and correctness, and exhibits robust performance for domain
+    adaptation.
+  url: https://arxiv.org/abs/2503.01695
+  pdf_url: https://arxiv.org/pdf/2503.01695v1
+  version: v1
+fetched: '2026-11-14'

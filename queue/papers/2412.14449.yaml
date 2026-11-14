@@ -1,0 +1,38 @@
+id: paper:arxiv:2412.14449
+status: skipped_low_citation
+score: 3
+track: video_image_coding
+matched:
+- ref: codec:V-PCC
+  count: 2
+  weight: 3
+meta:
+  title: Color Enhancement for V-PCC Compressed Point Cloud via 2D Attribute Map Optimization
+  authors:
+  - Jingwei Bao
+  - Yu Liu
+  - Zeliang Li
+  - Shuyuan Zhu
+  - Siu-Kei Au Yeung
+  published: '2024-12-19'
+  updated: '2024-12-19'
+  categories:
+  - cs.CV
+  - eess.IV
+  abstract: Video-based point cloud compression (V-PCC) converts the dynamic point cloud data into video
+    sequences using traditional video codecs for efficient encoding. However, this lossy compression scheme
+    introduces artifacts that degrade the color attributes of the data. This paper introduces a framework
+    designed to enhance the color quality in the V-PCC compressed point clouds. We propose the lightweight
+    de-compression Unet (LDC-Unet), a 2D neural network, to optimize the projection maps generated during
+    V-PCC encoding. The optimized 2D maps will then be back-projected to the 3D space to enhance the corresponding
+    point cloud attributes. Additionally, we introduce a transfer learning strategy and develop a customized
+    natural image dataset for the initial training. The model was then fine-tuned using the projection
+    maps of the compressed point clouds. The whole strategy effectively addresses the scarcity of point
+    cloud training data. Our experiments, conducted on the public 8i voxelized full bodies long sequences
+    (8iVSLF) dataset, demonstrate the effectiveness of our proposed method in improving the color quality.
+  url: https://arxiv.org/abs/2412.14449
+  pdf_url: https://arxiv.org/pdf/2412.14449v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 4
+citation_year: 2024

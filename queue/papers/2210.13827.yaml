@@ -1,0 +1,36 @@
+id: paper:arxiv:2210.13827
+status: skipped
+score: 0
+track: processing_enhancement
+matched: []
+meta:
+  title: End-to-end Transformer for Compressed Video Quality Enhancement
+  authors:
+  - Li Yu
+  - Wenshuai Chang
+  - Shiyu Wu
+  - Moncef Gabbouj
+  published: '2022-10-25'
+  updated: '2022-10-25'
+  categories:
+  - cs.MM
+  - cs.CV
+  abstract: Convolutional neural networks have achieved excellent results in compressed video quality
+    enhancement task in recent years. State-of-the-art methods explore the spatiotemporal information
+    of adjacent frames mainly by deformable convolution. However, offset fields in deformable convolution
+    are difficult to train, and its instability in training often leads to offset overflow, which reduce
+    the efficiency of correlation modeling. In this work, we propose a transformer-based compressed video
+    quality enhancement (TVQE) method, consisting of Swin-AutoEncoder based Spatio-Temporal feature Fusion
+    (SSTF) module and Channel-wise Attention based Quality Enhancement (CAQE) module. The proposed SSTF
+    module learns both local and global features with the help of Swin-AutoEncoder, which improves the
+    ability of correlation modeling. Meanwhile, the window mechanism-based Swin Transformer and the encoderdecoder
+    structure greatly improve the execution efficiency. On the other hand, the proposed CAQE module calculates
+    the channel attention, which aggregates the temporal information between channels in the feature map,
+    and finally achieves the efficient fusion of inter-frame information. Extensive experimental results
+    on the JCT-VT test sequences show that the proposed method achieves better performance in average
+    for both subjective and objective quality. Meanwhile, our proposed method outperforms existing ones
+    in terms of both inference speed and GPU consumption.
+  url: https://arxiv.org/abs/2210.13827
+  pdf_url: https://arxiv.org/pdf/2210.13827v1
+  version: v1
+fetched: '2026-11-14'

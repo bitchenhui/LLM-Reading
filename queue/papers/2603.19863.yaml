@@ -1,0 +1,44 @@
+id: paper:arxiv:2603.19863
+status: skipped_low_citation
+score: 2
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 3
+  weight: 1
+- ref: concept:SelfImprovement
+  count: 1
+  weight: 1
+meta:
+  title: 'MedQ-Engine: A Closed-Loop Data Engine for Evolving MLLMs in Medical Image Quality Assessment'
+  authors:
+  - Jiyao Liu
+  - Junzhi Ning
+  - Wanying Qu
+  - Lihao Liu
+  - Chenglong Ma
+  - Junjun He
+  - Ningsheng Xu
+  published: '2026-03-20'
+  updated: '2026-03-20'
+  categories:
+  - cs.CV
+  abstract: Medical image quality assessment (Med-IQA) is a prerequisite for clinical AI deployment, yet
+    multimodal large language models (MLLMs) still fall substantially short of human experts, particularly
+    when required to provide descriptive assessments with clinical reasoning beyond simple quality scores.
+    However, improving them is hindered by the high cost of acquiring descriptive annotations and by the
+    inability of one-time data collection to adapt to the model's evolving weaknesses. To address these
+    challenges, we propose MedQ-Engine, a closed-loop data engine that iteratively evaluates the model
+    to discover failure prototypes via data-driven clustering, explores a million-scale image pool using
+    these prototypes as retrieval anchors with progressive human-in-the-loop annotation, and evolves through
+    quality-assured fine-tuning, forming a self-improving cycle. Models are evaluated on complementary
+    perception and description tasks. An entropy-guided routing mechanism triages annotations to minimize
+    labeling cost. Experiments across five medical imaging modalities show that MedQ-Engine elevates an
+    8B-parameter model to surpass GPT-4o by over 13% and narrow the gap with human experts to only 4.34%,
+    using only 10K annotations with more than 4x sample efficiency over random sampling.
+  url: https://arxiv.org/abs/2603.19863
+  pdf_url: https://arxiv.org/pdf/2603.19863v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 0
+citation_year: 2026

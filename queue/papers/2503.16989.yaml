@@ -1,0 +1,36 @@
+id: paper:arxiv:2503.16989
+status: skipped
+score: 1
+track: audio_coding
+matched:
+- ref: concept:NeuralAudioCodec
+  count: 1
+  weight: 1
+meta:
+  title: 'STFTCodec: High-Fidelity Audio Compression through Time-Frequency Domain Representation'
+  authors:
+  - Tao Feng
+  - Zhiyuan Zhao
+  - Yifan Xie
+  - Yuqi Ye
+  - Xiangyang Luo
+  - Xun Guan
+  - Yu Li
+  published: '2025-03-21'
+  updated: '2025-03-21'
+  categories:
+  - cs.SD
+  - eess.AS
+  abstract: We present STFTCodec, a novel spectral-based neural audio codec that efficiently compresses
+    audio using Short-Time Fourier Transform (STFT). Unlike waveform-based approaches that require large
+    model capacity and substantial memory consumption, this method leverages STFT for compact spectral
+    representation and introduces unwrapped phase derivatives as auxiliary features. Our architecture
+    employs parallel magnitude and phase processing branches enhanced by advanced feature extraction mechanisms.
+    By relaxing strict phase reconstruction constraints while maintaining phase-aware processing, we achieve
+    superior perceptual quality. Experimental results demonstrate that STFTCodec outperforms both waveform-based
+    and spectral-based approaches across multiple bitrates, while offering unique flexibility in compression
+    ratio adjustment through STFT parameter modification without architectural changes.
+  url: https://arxiv.org/abs/2503.16989
+  pdf_url: https://arxiv.org/pdf/2503.16989v1
+  version: v1
+fetched: '2026-11-14'

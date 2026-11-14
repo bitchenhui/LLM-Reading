@@ -1,0 +1,40 @@
+id: paper:arxiv:2510.13267
+status: skipped
+score: 1
+track: streaming_delivery
+matched:
+- ref: concept:ABR
+  count: 3
+  weight: 1
+meta:
+  title: 'DIGITWISE: Digital Twin-based Modeling of Adaptive Video Streaming Engagement'
+  authors:
+  - Emanuele Artioli
+  - Farzad Tashtarian
+  - Christian Timmerer
+  published: '2025-10-15'
+  updated: '2025-10-15'
+  categories:
+  - eess.IV
+  - cs.HC
+  - cs.MM
+  abstract: As the popularity of video streaming entertainment continues to grow, understanding how users
+    engage with the content and react to its changes becomes a critical success factor for every stakeholder.
+    User engagement, i.e., the percentage of video the user watches before quitting, is central to customer
+    loyalty, content personalization, ad relevance, and A/B testing. This paper presents DIGITWISE, a
+    digital twin-based approach for modeling adaptive video streaming engagement. Traditional adaptive
+    bitrate (ABR) algorithms assume that all users react similarly to video streaming artifacts and network
+    issues, neglecting individual user sensitivities. DIGITWISE leverages the concept of a digital twin,
+    a digital replica of a physical entity, to model user engagement based on past viewing sessions. The
+    digital twin receives input about streaming events and utilizes supervised machine learning to predict
+    user engagement for a given session. The system model consists of a data processing pipeline, machine
+    learning models acting as digital twins, and a unified model to predict engagement. DIGITWISE employs
+    the XGBoost model in both digital twins and unified models. The proposed architecture demonstrates
+    the importance of personal user sensitivities, reducing user engagement prediction error by up to
+    5.8% compared to non-user-aware models. Furthermore, DIGITWISE can optimize content provisioning and
+    delivery by identifying the features that maximize engagement, providing an average engagement increase
+    of up to 8.6%.
+  url: https://arxiv.org/abs/2510.13267
+  pdf_url: https://arxiv.org/pdf/2510.13267v1
+  version: v1
+fetched: '2026-11-14'

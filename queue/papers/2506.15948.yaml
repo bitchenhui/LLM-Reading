@@ -1,0 +1,44 @@
+id: paper:arxiv:2506.15948
+status: skipped
+score: 2
+track: video_image_coding
+matched:
+- ref: concept:3DGS
+  count: 1
+  weight: 1
+- ref: concept:INR
+  count: 1
+  weight: 1
+meta:
+  title: Information-computation trade-offs in non-linear transforms
+  authors:
+  - Connor Ding
+  - Abhiram Rao Gorle
+  - Jiwon Jeong
+  - Naomi Sagan
+  - Tsachy Weissman
+  published: '2025-06-19'
+  updated: '2025-06-19'
+  categories:
+  - cs.IT
+  - eess.IV
+  abstract: 'In this work, we explore the interplay between information and computation in non-linear
+    transform-based compression for broad classes of modern information-processing tasks. We first investigate
+    two emerging nonlinear data transformation frameworks for image compression: Implicit Neural Representations
+    (INRs) and 2D Gaussian Splatting (GS). We analyze their representational properties, behavior under
+    lossy compression, and convergence dynamics. Our results highlight key trade-offs between INR''s compact,
+    resolution-flexible neural field representations and GS''s highly parallelizable, spatially interpretable
+    fitting, providing insights for future hybrid and compression-aware frameworks. Next, we introduce
+    the textual transform that enables efficient compression at ultra-low bitrate regimes and simultaneously
+    enhances human perceptual satisfaction. When combined with the concept of denoising via lossy compression,
+    the textual transform becomes a powerful tool for denoising tasks. Finally, we present a Lempel-Ziv
+    (LZ78) "transform", a universal method that, when applied to any member of a broad compressor family,
+    produces new compressors that retain the asymptotic universality guarantees of the LZ78 algorithm.
+    Collectively, these three transforms illuminate the fundamental trade-offs between coding efficiency
+    and computational cost. We discuss how these insights extend beyond compression to tasks such as classification,
+    denoising, and generative AI, suggesting new pathways for using non-linear transformations to balance
+    resource constraints and performance.'
+  url: https://arxiv.org/abs/2506.15948
+  pdf_url: https://arxiv.org/pdf/2506.15948v1
+  version: v1
+fetched: '2026-11-14'

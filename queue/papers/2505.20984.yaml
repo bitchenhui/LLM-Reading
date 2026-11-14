@@ -1,0 +1,37 @@
+id: paper:arxiv:2505.20984
+status: skipped
+score: 1
+track: video_image_coding
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: Generative Image Compression by Estimating Gradients of the Rate-variable Feature Distribution
+  authors:
+  - Minghao Han
+  - Weiyi You
+  - Jinhua Zhang
+  - Leheng Zhang
+  - Ce Zhu
+  - Shuhang Gu
+  published: '2025-05-27'
+  updated: '2025-05-27'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: While learned image compression (LIC) focuses on efficient data transmission, generative image
+    compression (GIC) extends this framework by integrating generative modeling to produce photo-realistic
+    reconstructed images. In this paper, we propose a novel diffusion-based generative modeling framework
+    tailored for generative image compression. Unlike prior diffusion-based approaches that indirectly
+    exploit diffusion modeling, we reinterpret the compression process itself as a forward diffusion path
+    governed by stochastic differential equations (SDEs). A reverse neural network is trained to reconstruct
+    images by reversing the compression process directly, without requiring Gaussian noise initialization.
+    This approach achieves smooth rate adjustment and photo-realistic reconstructions with only a minimal
+    number of sampling steps. Extensive experiments on benchmark datasets demonstrate that our method
+    outperforms existing generative image compression approaches across a range of metrics, including
+    perceptual distortion, statistical fidelity, and no-reference quality assessments.
+  url: https://arxiv.org/abs/2505.20984
+  pdf_url: https://arxiv.org/pdf/2505.20984v1
+  version: v1
+fetched: '2026-11-14'

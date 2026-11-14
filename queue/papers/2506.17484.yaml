@@ -1,0 +1,43 @@
+id: paper:arxiv:2506.17484
+status: skipped
+score: 1
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 1
+  weight: 1
+meta:
+  title: 'From Unstructured Communication to Intelligent RAG: Multi-Agent Automation for Supply Chain
+    Knowledge Bases'
+  authors:
+  - Yao Zhang
+  - Zaixi Shang
+  - Silpan Patel
+  - Mikel Zuniga
+  published: '2025-06-20'
+  updated: '2025-06-20'
+  categories:
+  - cs.AI
+  abstract: 'Supply chain operations generate vast amounts of operational data; however, critical knowledge
+    such as system usage practices, troubleshooting workflows, and resolution techniques often remains
+    buried within unstructured communications like support tickets, emails, and chat logs. While RAG systems
+    aim to leverage such communications as a knowledge base, their effectiveness is limited by raw data
+    challenges: support tickets are typically noisy, inconsistent, and incomplete, making direct retrieval
+    suboptimal. Unlike existing RAG approaches that focus on runtime optimization, we introduce a novel
+    offline-first methodology that transforms these communications into a structured knowledge base. Our
+    key innovation is a LLMs-based multi-agent system orchestrating three specialized agents: Category
+    Discovery for taxonomy creation, Categorization for ticket grouping, and Knowledge Synthesis for article
+    generation. Applying our methodology to real-world support tickets with resolution notes and comments,
+    our system creates a compact knowledge base - reducing total volume to just 3.4% of original ticket
+    data while improving quality. Experiments demonstrate that our prebuilt knowledge base in RAG systems
+    significantly outperforms traditional RAG implementations (48.74% vs. 38.60% helpful answers) and
+    achieves a 77.4% reduction in unhelpful responses. By automating institutional knowledge capture that
+    typically remains siloed in experts'' heads, our solution translates to substantial operational efficiency:
+    reducing support workload, accelerating resolution times, and creating self-improving systems that
+    automatically resolve approximately 50% of future supply chain tickets. Our approach addresses a key
+    gap in knowledge management by transforming transient communications into structured, reusable knowledge
+    through intelligent offline processing rather than latency-inducing runtime architectures.'
+  url: https://arxiv.org/abs/2506.17484
+  pdf_url: https://arxiv.org/pdf/2506.17484v1
+  version: v1
+fetched: '2026-11-14'

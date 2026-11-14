@@ -1,0 +1,47 @@
+id: paper:arxiv:2605.26195
+status: pending
+score: 2
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 3
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: 'CyberEvolver: Structured Self-Evolution for Cybersecurity Agents On the Fly'
+  authors:
+  - Yihe Fan
+  - Changyi Li
+  - Lichen Xu
+  - Xudong Pan
+  - Jiarun Dai
+  - Hong Geng
+  - Min Yang
+  published: '2026-05-25'
+  updated: '2026-06-16'
+  categories:
+  - cs.CR
+  - cs.AI
+  abstract: LLM-based agents are increasingly used for cybersecurity tasks, but most existing systems
+    rely on fixed, human-designed scaffolds that struggle to adapt across diverse targets and failure
+    modes. We introduce \textsc{CyberEvolver}, a self-evolving cybersecurity agent framework that iteratively
+    revises its own scaffold based on experience from failed execution attempts. Self-evolution in cybersecurity
+    is challenging because the space of possible scaffold changes is largely unstructured, execution feedback
+    is sparse and often obscured by the environment, and low-diversity updates can cause errors to compound
+    over repeated iterations. \textsc{CyberEvolver} addresses these challenges with a four-layer evolvable
+    agent architecture that decomposes scaffold optimization into structured components, a trace-to-diagnosis
+    mechanism that converts noisy execution logs into actionable revision signals, and a population-based
+    beam search strategy that preserves diverse agent variants during evolution. We evaluate \textsc{CyberEvolver}
+    on CTF challenges, vulnerability exploitation, and penetration-testing tasks using four open-source
+    LLMs. Across these settings, \textsc{CyberEvolver} improves the seed agent's success rate by $13.6$\,\%
+    on average, and outperforms six human-designed cybersecurity agents as well as two self-improvement
+    methods adapted from other domains. These results suggest that scaffold self-evolution is a promising
+    direction for building adaptive LLM agents for security testing.
+  url: https://arxiv.org/abs/2605.26195
+  pdf_url: https://arxiv.org/pdf/2605.26195v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 0
+citation_year: 2026

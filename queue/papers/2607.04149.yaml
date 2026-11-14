@@ -1,0 +1,43 @@
+id: paper:arxiv:2607.04149
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'Beyond Scene Priors: Fine-Grained Traffic Scene Reasoning with Benchmarking and Query-Guided
+    Small-Object Focus'
+  authors:
+  - Waikit Xiu
+  - Qiang Lu
+  - Zian Wang
+  - Xinjie Yang
+  - Zhiwei Chen
+  - Chen Sun
+  - Xiying Li
+  published: '2026-07-05'
+  updated: '2026-07-05'
+  categories:
+  - cs.CV
+  abstract: In safety-critical traffic scenarios, answering complex questions relies on minute, localized
+    visual cues. However, standard Multimodal Large Language Models (MLLMs) tend to over-attend to backgrounds,
+    overwhelming crucial small objects during visual-language alignment, a failure mode we term 'critical
+    evidence dilution.' Furthermore, existing visual question answering (VQA) datasets rarely expose this
+    flaw, as they lack large-scale, distractor-heavy evaluations that require pinpointing local evidence.
+    To bridge this evaluation and architecture gap, we introduce the Fine-Grained Traffic Reasoning Benchmark
+    (FGTR-Bench) and the Text-Guided Small-Object Reasoning MLLM (TSR-MLLM). FGTR-Bench comprises 40,236
+    single-image Multiple-Choice Questions (MCQs) created via multi-agent generation, consistency checks,
+    and expert audits, alongside a disjoint 4,947-sample blind test split. To resolve evidence dilution,
+    TSR-MLLM, built on Qwen3-VL-4B, uses a query-conditioned Text-Guided Small-Object Focus (TG-SOF) map.
+    Applied once at the decoder boundary, the map adds sparse Top-K gated residuals to the most question-relevant
+    vision slots while leaving text tokens unchanged. Together with lightweight decoder adaptation, TSR-MLLM
+    preserves single-pass inference without external detectors or image re-encoding. Under matched settings,
+    TSR-MLLM outperforms the strongest 4B baseline by 2.1 points on FGTR-Bench (74.1% overall), with larger
+    gains on evidence-local tracks. Furthermore, it remains competitive on DriveQA-V (CARLA Signs) under
+    greedy decoding without task-specific fine-tuning.
+  url: https://arxiv.org/abs/2607.04149
+  pdf_url: https://arxiv.org/pdf/2607.04149v1
+  version: v1
+fetched: '2026-11-14'

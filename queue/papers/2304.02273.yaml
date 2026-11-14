@@ -1,0 +1,51 @@
+id: paper:arxiv:2304.02273
+status: pending
+score: 4
+track: video_image_coding
+matched:
+- ref: concept:EntropyModel
+  count: 1
+  weight: 1
+- ref: metric:MS-SSIM
+  count: 1
+  weight: 1
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+- ref: metric:SSIM
+  count: 1
+  weight: 1
+meta:
+  title: 'MMVC: Learned Multi-Mode Video Compression with Block-based Prediction Mode Selection and Density-Adaptive
+    Entropy Coding'
+  authors:
+  - Bowen Liu
+  - Yu Chen
+  - Rakesh Chowdary Machineni
+  - Shiyu Liu
+  - Hun-Seok Kim
+  published: '2023-04-05'
+  updated: '2023-04-05'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: Learning-based video compression has been extensively studied over the past years, but it
+    still has limitations in adapting to various motion patterns and entropy models. In this paper, we
+    propose multi-mode video compression (MMVC), a block wise mode ensemble deep video compression framework
+    that selects the optimal mode for feature domain prediction adapting to different motion patterns.
+    Proposed multi-modes include ConvLSTM-based feature domain prediction, optical flow conditioned feature
+    domain prediction, and feature propagation to address a wide range of cases from static scenes without
+    apparent motions to dynamic scenes with a moving camera. We partition the feature space into blocks
+    for temporal prediction in spatial block-based representations. For entropy coding, we consider both
+    dense and sparse post-quantization residual blocks, and apply optional run-length coding to sparse
+    residuals to improve the compression rate. In this sense, our method uses a dual-mode entropy coding
+    scheme guided by a binary density map, which offers significant rate reduction surpassing the extra
+    cost of transmitting the binary selection map. We validate our scheme with some of the most popular
+    benchmarking datasets. Compared with state-of-the-art video compression schemes and standard codecs,
+    our method yields better or competitive results measured with PSNR and MS-SSIM.
+  url: https://arxiv.org/abs/2304.02273
+  pdf_url: https://arxiv.org/pdf/2304.02273v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 33
+citation_year: 2023

@@ -1,0 +1,45 @@
+id: paper:arxiv:2410.20749
+status: pending
+score: 2
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: 'Matryoshka Pilot: Learning to Drive Black-Box LLMs with LLMs'
+  authors:
+  - Changhao Li
+  - Yuchen Zhuang
+  - Rushi Qiang
+  - Haotian Sun
+  - Hanjun Dai
+  - Chao Zhang
+  - Bo Dai
+  published: '2024-10-28'
+  updated: '2025-11-13'
+  categories:
+  - cs.LG
+  - cs.AI
+  - cs.CL
+  abstract: 'Despite the impressive generative abilities of black-box large language models (LLMs), their
+    inherent opacity hinders further advancements in capabilities such as reasoning, planning, and personalization.
+    Existing works aim to enhance LLM capabilities via domain-specific adaptation, which require additional
+    training on accessible model parameters, an infeasible option for black-box LLMs. To address this
+    challenge, we introduce Matryoshka Pilot (M-Pilot), a lightweight white-box LLM controller that guides
+    a large-scale black-box LLM generator by decomposing complex tasks into a series of intermediate outputs.
+    Specifically, we consider the black-box LLM as an environment, with M-Pilot serving as a policy to
+    provide intermediate guidance through prompts for driving the black-box LLM. M-Pilot is trained to
+    pivot the outputs of the black-box LLM aligning with preferences during iterative interaction, which
+    enables controllable multi-turn generation and self-improvement in optimizing intermediate guidance.
+    Empirical evaluations on diverse tasks demonstrate that our method effectively enhances the capabilities
+    of black-box LLMs in complex, long-horizon tasks. Our code is publicly available at: https://github.com/lichangh20/Matryoshka.'
+  url: https://arxiv.org/abs/2410.20749
+  pdf_url: https://arxiv.org/pdf/2410.20749v4
+  version: v4
+fetched: '2026-11-14'
+citation_count: 12
+citation_year: 2024

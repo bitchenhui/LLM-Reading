@@ -1,0 +1,39 @@
+id: paper:arxiv:2601.22483
+status: skipped_low_citation
+score: 2
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+- ref: concept:TrainingFree
+  count: 1
+  weight: 1
+meta:
+  title: 'Head-Aware Visual Cropping: Enhancing Fine-Grained VQA with Attention-Guided Subimage'
+  authors:
+  - Junfei Xie
+  - Peng Pan
+  - Xulong Zhang
+  published: '2026-01-30'
+  updated: '2026-01-30'
+  categories:
+  - cs.CV
+  abstract: Multimodal Large Language Models (MLLMs) show strong performance in Visual Question Answering
+    (VQA) but remain limited in fine-grained reasoning due to low-resolution inputs and noisy attention
+    aggregation. We propose \textbf{Head Aware Visual Cropping (HAVC)}, a training-free method that improves
+    visual grounding by leveraging a selectively refined subset of attention heads. HAVC first filters
+    heads through an OCR-based diagnostic task, ensuring that only those with genuine grounding ability
+    are retained. At inference, these heads are further refined using spatial entropy for stronger spatial
+    concentration and gradient sensitivity for predictive contribution. The fused signals produce a reliable
+    Visual Cropping Guidance Map, which highlights the most task-relevant region and guides the cropping
+    of a subimage subsequently provided to the MLLM together with the image-question pair. Extensive experiments
+    on multiple fine-grained VQA benchmarks demonstrate that HAVC consistently outperforms state-of-the-art
+    cropping strategies, achieving more precise localization, stronger visual grounding, providing a simple
+    yet effective strategy for enhancing precision in MLLMs.
+  url: https://arxiv.org/abs/2601.22483
+  pdf_url: https://arxiv.org/pdf/2601.22483v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 2
+citation_year: 2026

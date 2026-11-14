@@ -1,0 +1,44 @@
+id: paper:arxiv:2603.07694
+status: skipped_low_citation
+score: 2
+track: processing_enhancement
+matched:
+- ref: concept:SuperResolution
+  count: 1
+  weight: 1
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+meta:
+  title: Compressed-Domain-Aware Online Video Super-Resolution
+  authors:
+  - Yuhang Wang
+  - Hai Li
+  - Shujuan Hou
+  - Zhetao Dong
+  - Xiaoyao Yang
+  published: '2026-03-08'
+  updated: '2026-03-08'
+  categories:
+  - cs.CV
+  - cs.AI
+  abstract: In bandwidth-limited online video streaming, videos are usually downsampled and compressed.
+    Although recent online video super-resolution (online VSR) approaches achieve promising results, they
+    are still compute-intensive and fall short of real-time processing at higher resolutions, due to complex
+    motion estimation for alignment and redundant processing of consecutive frames. To address these issues,
+    we propose a compressed-domain-aware network (CDA-VSR) for online VSR, which utilizes compressed-domain
+    information, including motion vectors, residual maps, and frame types to balance quality and efficiency.
+    Specifically, we propose a motion-vector-guided deformable alignment module that uses motion vectors
+    for coarse warping and learns only local residual offsets for fine-tuned adjustments, thereby maintaining
+    accuracy while reducing computation. Then, we utilize a residual map gated fusion module to derive
+    spatial weights from residual maps, suppressing mismatched regions and emphasizing reliable details.
+    Further, we design a frame-type-aware reconstruction module for adaptive compute allocation across
+    frame types, balancing accuracy and efficiency. On the REDS4 dataset, our CDA-VSR surpasses the state-of-the-art
+    method TMP, with a maximum PSNR improvement of 0.13 dB while delivering more than double the inference
+    speed. The code will be released at https://github.com/sspBIT/CDA-VSR.
+  url: https://arxiv.org/abs/2603.07694
+  pdf_url: https://arxiv.org/pdf/2603.07694v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 1
+citation_year: 2026

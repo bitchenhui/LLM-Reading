@@ -1,0 +1,48 @@
+id: paper:arxiv:2502.12275
+status: skipped_low_citation
+score: 2
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: Integrating Expert Knowledge into Logical Programs via LLMs
+  authors:
+  - Franciszek Górski
+  - Oskar Wysocki
+  - Marco Valentino
+  - Andre Freitas
+  published: '2025-02-17'
+  updated: '2025-05-12'
+  categories:
+  - cs.AI
+  - cs.CL
+  - cs.MA
+  abstract: This paper introduces ExKLoP, a novel framework designed to evaluate how effectively Large
+    Language Models (LLMs) integrate expert knowledge into logical reasoning systems. This capability
+    is especially valuable in engineering, where expert knowledge-such as manufacturer-recommended operational
+    ranges-can be directly embedded into automated monitoring systems. By mirroring expert verification
+    steps, tasks like range checking and constraint validation help ensure system safety and reliability.
+    Our approach systematically evaluates LLM-generated logical rules, assessing both syntactic fluency
+    and logical correctness in these critical validation tasks. We also explore the models' capacity for
+    self-correction via an iterative feedback loop based on code execution outcomes. ExKLoP presents an
+    extensible dataset comprising 130 engineering premises, 950 prompts, and corresponding validation
+    points. It enables comprehensive benchmarking while allowing control over task complexity and scalability
+    of experiments. We leverage the synthetic data creation methodology to conduct extensive empirical
+    evaluation on a diverse set of LLMs including Llama3, Gemma3, Codestral and QwenCoder. The results
+    reveal that most models generate nearly perfect syntactically correct code and exhibit strong performance
+    in translating expert knowledge into correct code. At the same time, while most LLMs produce nearly
+    flawless syntactic output, their ability to correctly implement logical rules varies, as does their
+    capacity for self-improvement. Overall, ExKLoP serves as a robust evaluation platform that streamlines
+    the selection of effective models for self-correcting systems while clearly delineating the types
+    of errors encountered.
+  url: https://arxiv.org/abs/2502.12275
+  pdf_url: https://arxiv.org/pdf/2502.12275v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 3
+citation_year: 2025

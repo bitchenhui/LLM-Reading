@@ -1,0 +1,50 @@
+id: paper:arxiv:2601.16093
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'SAMTok: Representing Any Mask with Two Words'
+  authors:
+  - Yikang Zhou
+  - Tao Zhang
+  - Dengxian Gong
+  - Yuanzheng Wu
+  - Ye Tian
+  - Haochen Wang
+  - Haobo Yuan
+  - Jiacong Wang
+  - Lu Qi
+  - Hao Fei
+  - Anran Wang
+  - Zhuochen Wang
+  - Yujing Wang
+  - Cheng Chen
+  - Shunping Ji
+  - Xiangtai Li
+  published: '2026-01-22'
+  updated: '2026-06-14'
+  categories:
+  - cs.CV
+  abstract: Pixel-wise capabilities are essential for building interactive intelligent systems. However,
+    pixel-wise multi-modal LLMs (MLLMs) remain difficult to scale due to complex region-level encoders,
+    specialized segmentation decoders, and incompatible training objectives. To address these challenges,
+    we present SAMTok, a discrete mask tokenizer that converts any region mask into two special tokens
+    and reconstructs the mask using these tokens with high fidelity. By treating masks as new language
+    tokens, SAMTok enables base MLLMs (such as the QwenVL series) to learn pixel-wise capabilities through
+    standard next-token prediction and simple reinforcement learning, without architectural modifications
+    and specialized loss design. SAMTok builds on SAM2 and is trained on 209M diverse masks using a mask
+    encoder and residual vector quantizer to produce discrete, compact, and information-rich tokens. With
+    5M SAMTok-formatted mask understanding and generation data samples, QwenVL-SAMTok attains state-of-the-art
+    or comparable results on region captioning, region VQA, grounded conversation, referring segmentation,
+    scene graph parsing, and multi-round interactive segmentation. We further introduce a textual answer-matching
+    reward that enables efficient reinforcement learning for mask generation, delivering substantial improvements
+    on GRES and GCG benchmarks. Our results demonstrate a scalable and straightforward paradigm for equipping
+    MLLMs with strong pixel-wise capabilities. Our code and models are available.
+  url: https://arxiv.org/abs/2601.16093
+  pdf_url: https://arxiv.org/pdf/2601.16093v2
+  version: v2
+fetched: '2026-11-14'

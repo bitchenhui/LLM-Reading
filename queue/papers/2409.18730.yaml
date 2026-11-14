@@ -1,0 +1,40 @@
+id: paper:arxiv:2409.18730
+status: skipped
+score: 1
+track: video_image_coding
+matched:
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+meta:
+  title: Effectiveness of learning-based image codecs on fingerprint storage
+  authors:
+  - Daniele Mari
+  - Saverio Cavasin
+  - Simone Milani
+  - Mauro Conti
+  published: '2024-09-27'
+  updated: '2024-09-27'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: The success of learning-based coding techniques and the development of learning-based image
+    coding standards, such as JPEG-AI, point towards the adoption of such solutions in different fields,
+    including the storage of biometric data, like fingerprints. However, the peculiar nature of learning-based
+    compression artifacts poses several issues concerning their impact and effectiveness on extracting
+    biometric features and landmarks, e.g., minutiae. This problem is utterly stressed by the fact that
+    most models are trained on natural color images, whose characteristics are very different from usual
+    biometric images, e.g, fingerprint or iris pictures. As a matter of fact, these issues are deemed
+    to be accurately questioned and investigated, being such analysis still largely unexplored. This study
+    represents the first investigation about the adaptability of learning-based image codecs in the storage
+    of fingerprint images by measuring its impact on the extraction and characterization of minutiae.
+    Experimental results show that at a fixed rate point, learned solutions considerably outperform previous
+    fingerprint coding standards, like JPEG2000, both in terms of distortion and minutiae preservation.
+    Indeed, experimental results prove that the peculiarities of learned compression artifacts do not
+    prevent automatic fingerprint identification (since minutiae types and locations are not significantly
+    altered), nor do compromise image quality for human visual inspection (as they gain in terms of BD
+    rate and PSNR of 47.8% and +3.97dB respectively).
+  url: https://arxiv.org/abs/2409.18730
+  pdf_url: https://arxiv.org/pdf/2409.18730v1
+  version: v1
+fetched: '2026-11-14'

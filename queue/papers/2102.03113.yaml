@@ -1,0 +1,44 @@
+id: paper:arxiv:2102.03113
+status: pending
+score: 3
+track: processing_enhancement
+matched:
+- ref: concept:IQA
+  count: 3
+  weight: 1
+- ref: concept:SuperResolution
+  count: 2
+  weight: 1
+- ref: metric:LPIPS
+  count: 1
+  weight: 1
+meta:
+  title: Real-World Super-Resolution of Face-Images from Surveillance Cameras
+  authors:
+  - Andreas Aakerberg
+  - Kamal Nasrollahi
+  - Thomas B. Moeslund
+  published: '2021-02-05'
+  updated: '2021-02-05'
+  categories:
+  - cs.CV
+  abstract: Most existing face image Super-Resolution (SR) methods assume that the Low-Resolution (LR)
+    images were artificially downsampled from High-Resolution (HR) images with bicubic interpolation.
+    This operation changes the natural image characteristics and reduces noise. Hence, SR methods trained
+    on such data most often fail to produce good results when applied to real LR images. To solve this
+    problem, we propose a novel framework for generation of realistic LR/HR training pairs. Our framework
+    estimates realistic blur kernels, noise distributions, and JPEG compression artifacts to generate
+    LR images with similar image characteristics as the ones in the source domain. This allows us to train
+    a SR model using high quality face images as Ground-Truth (GT). For better perceptual quality we use
+    a Generative Adversarial Network (GAN) based SR model where we have exchanged the commonly used VGG-loss
+    [24] with LPIPS-loss [52]. Experimental results on both real and artificially corrupted face images
+    show that our method results in more detailed reconstructions with less noise compared to existing
+    State-of-the-Art (SoTA) methods. In addition, we show that the traditional non-reference Image Quality
+    Assessment (IQA) methods fail to capture this improvement and demonstrate that the more recent NIMA
+    metric [16] correlates better with human perception via Mean Opinion Rank (MOR).
+  url: https://arxiv.org/abs/2102.03113
+  pdf_url: https://arxiv.org/pdf/2102.03113v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 51
+citation_year: 2021

@@ -1,0 +1,39 @@
+id: paper:arxiv:2604.02492
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: Token-Efficient Multimodal Reasoning via Image Prompt Packaging
+  authors:
+  - Joong Ho Choi
+  - Jiayang Zhao
+  - Avani Appalla
+  - Himansh Mukesh
+  - Dhwanil Vasani
+  - Boyi Qian
+  published: '2026-04-02'
+  updated: '2026-04-02'
+  categories:
+  - cs.CV
+  - cs.AI
+  abstract: 'Deploying large multimodal language models at scale is constrained by token-based inference
+    costs, yet the cost-performance behavior of visual prompting strategies remains poorly characterized.
+    We introduce Image Prompt Packaging (IPPg), a prompting paradigm that embeds structured text directly
+    into images to reduce text token overhead, and benchmark it across five datasets, three frontier models
+    (GPT-4.1, GPT-4o, Claude 3.5 Sonnet), and two task families (VQA and code generation). We derive a
+    cost formulation decomposing savings by token type and show IPPg achieves 35.8--91.0\% inference cost
+    reductions. Despite token compression of up to 96\%, accuracy remains competitive in many settings,
+    though outcomes are highly model- and task-dependent: GPT-4.1 achieves simultaneous accuracy and cost
+    gains on CoSQL, while Claude 3.5 incurs cost increases on several VQA benchmarks. Systematic error
+    analysis yields a failure-mode taxonomy: spatial reasoning, non-English inputs, and character-sensitive
+    operations are most vulnerable, while schema-structured tasks benefit most. A 125-configuration rendering
+    ablation reveals accuracy shifts of 10--30 percentage points, establishing visual encoding choices
+    as a first-class variable in multimodal system design.'
+  url: https://arxiv.org/abs/2604.02492
+  pdf_url: https://arxiv.org/pdf/2604.02492v1
+  version: v1
+fetched: '2026-11-14'

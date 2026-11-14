@@ -1,0 +1,39 @@
+id: paper:arxiv:2306.04554
+status: skipped
+score: 1
+track: video_image_coding
+matched:
+- ref: metric:SSIM
+  count: 2
+  weight: 1
+meta:
+  title: Integrated Photonic Encoder for Terapixel Image Processing
+  authors:
+  - Xiao Wang
+  - Brandon Redding
+  - Nicholas Karl
+  - Christopher Long
+  - Zheyuan Zhu
+  - Shuo Pang
+  - David Brady
+  - Raktim Sarma
+  published: '2023-06-07'
+  updated: '2023-06-07'
+  categories:
+  - physics.optics
+  - eess.IV
+  abstract: Modern lens designs are capable of resolving >10 gigapixels, while advances in camera frame-rate
+    and hyperspectral imaging have made Terapixel/s data acquisition a real possibility. The main bottlenecks
+    preventing such high data-rate systems are power consumption and data storage. In this work, we show
+    that analog photonic encoders could address this challenge, enabling high-speed image compression
+    using orders-of-magnitude lower power than digital electronics. Our approach relies on a silicon-photonics
+    front-end to compress raw image data, foregoing energy-intensive image conditioning and reducing data
+    storage requirements. The compression scheme uses a passive disordered photonic structure to perform
+    kernel-type random projections of the raw image data with minimal power consumption and low latency.
+    A back-end neural network can then reconstruct the original images with structural similarity exceeding
+    90%. This scheme has the potential to process Terapixel/s data streams using less than 100 fJ/pixel,
+    providing a path to ultra-high-resolution data and image acquisition systems.
+  url: https://arxiv.org/abs/2306.04554
+  pdf_url: https://arxiv.org/pdf/2306.04554v1
+  version: v1
+fetched: '2026-11-14'

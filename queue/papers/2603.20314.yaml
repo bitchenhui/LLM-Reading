@@ -1,0 +1,43 @@
+id: paper:arxiv:2603.20314
+status: skipped_low_citation
+score: 2
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+- ref: concept:TrainingFree
+  count: 1
+  weight: 1
+meta:
+  title: 'VGS-Decoding: Visual Grounding Score Guided Decoding for Hallucination Mitigation in Medical
+    VLMs'
+  authors:
+  - Govinda Kolli
+  - Adinath Madhavrao Dukre
+  - Behzad Bozorgtabar
+  - Dwarikanath Mahapatra
+  - Imran Razzak
+  published: '2026-03-19'
+  updated: '2026-03-19'
+  categories:
+  - cs.CV
+  - cs.LG
+  abstract: Medical Vision-Language Models (VLMs) often hallucinate by generating responses based on language
+    priors rather than visual evidence, posing risks in clinical applications. We propose Visual Grounding
+    Score Guided Decoding (VGS-Decoding), a training-free method to mitigate hallucinations during inference.
+    Our key insight is that hallucinated tokens maintain or increase their probability when visual information
+    is degraded, while visually grounded tokens decrease in probability. We introduce the Visual Grounding
+    Score (VGS), which measures each token's visual dependency by comparing distributions from original
+    and distorted images. During decoding, we reweight probabilities by amplifying visually grounded tokens
+    while suppressing hallucinations. Unlike fixed-weight contrastive methods, VGS-Decoding provides per-token
+    adaptive control. Experiments on MIMIC-Diff-VQA and VQA-RAD across LLaVA-Med, CheXagent, and MedGemma
+    demonstrate consistent improvements, with up to +9.12% overall gain and $+8.98\%$ in open-ended recall,
+    while introducing only $2\times$ inference overhead and no additional training, making it practical
+    for clinical deployment. Upon acceptance, code will be released publicly to facilitate reproducibility.
+  url: https://arxiv.org/abs/2603.20314
+  pdf_url: https://arxiv.org/pdf/2603.20314v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 1
+citation_year: 2026

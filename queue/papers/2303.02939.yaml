@@ -1,0 +1,52 @@
+id: paper:arxiv:2303.02939
+status: pending
+score: 3
+track: audio_coding
+matched:
+- ref: concept:LLM
+  count: 1
+  weight: 1
+- ref: concept:NeuralAudioCodec
+  count: 1
+  weight: 1
+- ref: metric:MOS
+  count: 1
+  weight: 1
+meta:
+  title: 'FoundationTTS: Text-to-Speech for ASR Customization with Generative Language Model'
+  authors:
+  - Ruiqing Xue
+  - Yanqing Liu
+  - Lei He
+  - Xu Tan
+  - Linquan Liu
+  - Edward Lin
+  - Sheng Zhao
+  published: '2023-03-06'
+  updated: '2023-03-08'
+  categories:
+  - eess.AS
+  - cs.SD
+  abstract: 'Neural text-to-speech (TTS) generally consists of cascaded architecture with separately optimized
+    acoustic model and vocoder, or end-to-end architecture with continuous mel-spectrograms or self-extracted
+    speech frames as the intermediate representations to bridge acoustic model and vocoder, which suffers
+    from two limitations: 1) the continuous acoustic frames are hard to predict with phoneme only, and
+    acoustic information like duration or pitch is also needed to solve the one-to-many problem, which
+    is not easy to scale on large scale and noise datasets; 2) to achieve diverse speech output based
+    on continuous speech features, complex VAE or flow-based models are usually required. In this paper,
+    we propose FoundationTTS, a new speech synthesis system with a neural audio codec for discrete speech
+    token extraction and waveform reconstruction and a large language model for discrete token generation
+    from linguistic (phoneme) tokens. Specifically, 1) we propose a hierarchical codec network based on
+    vector-quantized auto-encoders with adversarial training (VQ-GAN), which first extracts continuous
+    frame-level speech representations with fine-grained codec, and extracts a discrete token from each
+    continuous speech frame with coarse-grained codec; 2) we jointly optimize speech token, linguistic
+    tokens, speaker token together with a large language model and predict the discrete speech tokens
+    autoregressively. Experiments show that FoundationTTS achieves a MOS gain of +0.14 compared to the
+    baseline system. In ASR customization tasks, our method achieves 7.09\% and 10.35\% WERR respectively
+    over two strong customized ASR baselines.'
+  url: https://arxiv.org/abs/2303.02939
+  pdf_url: https://arxiv.org/pdf/2303.02939v3
+  version: v3
+fetched: '2026-11-14'
+citation_count: 9
+citation_year: 2023

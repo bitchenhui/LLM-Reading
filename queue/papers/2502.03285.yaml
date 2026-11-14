@@ -1,0 +1,47 @@
+id: paper:arxiv:2502.03285
+status: skipped_low_citation
+score: 4
+track: immersive_media
+matched:
+- ref: codec:G-PCC
+  count: 2
+  weight: 3
+- ref: org:MPEG
+  count: 1
+  weight: 1
+meta:
+  title: 'Deep Learning-based Event Data Coding: A Joint Spatiotemporal and Polarity Solution'
+  authors:
+  - Abdelrahman Seleem
+  - André F. R. Guarda
+  - Nuno M. M. Rodrigues
+  - Fernando Pereira
+  published: '2025-02-05'
+  updated: '2026-03-16'
+  categories:
+  - cs.CV
+  - eess.IV
+  abstract: Neuromorphic vision sensors, commonly referred to as event cameras, generate a massive number
+    of pixel-level events, composed by spatiotemporal and polarity information, thus demanding highly
+    efficient coding solutions. Existing solutions focus on lossless coding of event data, assuming that
+    no distortion is acceptable for the target use cases, mostly including computer vision tasks such
+    as classification and recognition. One promising coding approach exploits the similarity between event
+    data and point clouds, both being sets of 3D points, thus allowing to use current point cloud coding
+    solutions to code event data, typically adopting a two-point clouds representation, one for each event
+    polarity. This paper proposes a novel lossy Deep Learning-based Joint Event data Coding (DL-JEC) solution,
+    which adopts for the first time a single-point cloud representation, where the event polarity plays
+    the role of a point cloud attribute, thus enabling to exploit the correlation between the geometry/spatiotemporal
+    and polarity event information. Moreover, this paper also proposes novel adaptive voxel binarization
+    strategies which may be used in DL-JEC, optimized for either quality-oriented or computer vision task-oriented
+    purposes which allow to maximize the performance for the task at hand. DL-JEC can achieve significant
+    compression performance gains when compared with relevant conventional and DL-based state-of-the-art
+    event data coding solutions, notably the MPEG G-PCC and JPEG Pleno PCC standards. Furthermore, it
+    is shown that it is possible to use lossy event data coding, with significantly reduced rate regarding
+    lossless coding, without compromising the target computer vision task performance, notably event classification,
+    thus changing the current event data coding paradigm.
+  url: https://arxiv.org/abs/2502.03285
+  pdf_url: https://arxiv.org/pdf/2502.03285v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 2
+citation_year: 2025

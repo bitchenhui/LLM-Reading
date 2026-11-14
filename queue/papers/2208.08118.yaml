@@ -1,0 +1,42 @@
+id: paper:arxiv:2208.08118
+status: skipped_low_citation
+score: 2
+track: processing_enhancement
+matched:
+- ref: concept:SuperResolution
+  count: 1
+  weight: 1
+- ref: metric:FID
+  count: 1
+  weight: 1
+meta:
+  title: Extreme-scale Talking-Face Video Upsampling with Audio-Visual Priors
+  authors:
+  - Sindhu B Hegde
+  - Rudrabha Mukhopadhyay
+  - Vinay P Namboodiri
+  - C. V. Jawahar
+  published: '2022-08-17'
+  updated: '2022-08-17'
+  categories:
+  - cs.CV
+  abstract: 'In this paper, we explore an interesting question of what can be obtained from an $8\times8$
+    pixel video sequence. Surprisingly, it turns out to be quite a lot. We show that when we process this
+    $8\times8$ video with the right set of audio and image priors, we can obtain a full-length, $256\times256$
+    video. We achieve this $32\times$ scaling of an extremely low-resolution input using our novel audio-visual
+    upsampling network. The audio prior helps to recover the elemental facial details and precise lip
+    shapes and a single high-resolution target identity image prior provides us with rich appearance details.
+    Our approach is an end-to-end multi-stage framework. The first stage produces a coarse intermediate
+    output video that can be then used to animate single target identity image and generate realistic,
+    accurate and high-quality outputs. Our approach is simple and performs exceedingly well (an $8\times$
+    improvement in FID score) compared to previous super-resolution methods. We also extend our model
+    to talking-face video compression, and show that we obtain a $3.5\times$ improvement in terms of bits/pixel
+    over the previous state-of-the-art. The results from our network are thoroughly analyzed through extensive
+    ablation experiments (in the paper and supplementary material). We also provide the demo video along
+    with code and models on our website: \url{http://cvit.iiit.ac.in/research/projects/cvit-projects/talking-face-video-upsampling}.'
+  url: https://arxiv.org/abs/2208.08118
+  pdf_url: https://arxiv.org/pdf/2208.08118v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 3
+citation_year: 2022

@@ -1,0 +1,46 @@
+id: paper:arxiv:2405.03692
+status: skipped_low_citation
+score: 2
+track: streaming_delivery
+matched:
+- ref: concept:ABR
+  count: 3
+  weight: 1
+- ref: concept:QoE
+  count: 3
+  weight: 1
+meta:
+  title: Imitation Learning for Adaptive Video Streaming with Future Adversarial Information Bottleneck
+    Principle
+  authors:
+  - Shuoyao Wang
+  - Jiawei Lin
+  - Fangwei Ye
+  published: '2024-03-12'
+  updated: '2024-03-12'
+  categories:
+  - eess.IV
+  - cs.NI
+  - eess.SY
+  abstract: Adaptive video streaming plays a crucial role in ensuring high-quality video streaming services.
+    Despite extensive research efforts devoted to Adaptive BitRate (ABR) techniques, the current reinforcement
+    learning (RL)-based ABR algorithms may benefit the average Quality of Experience (QoE) but suffers
+    from fluctuating performance in individual video sessions. In this paper, we present a novel approach
+    that combines imitation learning with the information bottleneck technique, to learn from the complex
+    offline optimal scenario rather than inefficient exploration. In particular, we leverage the deterministic
+    offline bitrate optimization problem with the future throughput realization as the expert and formulate
+    it as a mixed-integer non-linear programming (MINLP) problem. To enable large-scale training for improved
+    performance, we propose an alternative optimization algorithm that efficiently solves the MINLP problem.
+    To address the issues of overfitting due to the future information leakage in MINLP, we incorporate
+    an adversarial information bottleneck framework. By compressing the video streaming state into a latent
+    space, we retain only action-relevant information. Additionally, we introduce a future adversarial
+    term to mitigate the influence of future information leakage, where Model Prediction Control (MPC)
+    policy without any future information is employed as the adverse expert. Experimental results demonstrate
+    the effectiveness of our proposed approach in significantly enhancing the quality of adaptive video
+    streaming, providing a 7.30\% average QoE improvement and a 30.01\% average ranking reduction.
+  url: https://arxiv.org/abs/2405.03692
+  pdf_url: https://arxiv.org/pdf/2405.03692v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 6
+citation_year: 2024

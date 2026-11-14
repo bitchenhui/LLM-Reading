@@ -1,0 +1,31 @@
+id: paper:arxiv:2510.00058
+status: skipped
+score: 1
+track: video_image_coding
+matched:
+- ref: metric:BD-Rate
+  count: 1
+  weight: 1
+meta:
+  title: Variable Rate Image Compression via N-Gram Context based Swin-transformer
+  authors:
+  - Priyanka Mudgal
+  published: '2025-09-28'
+  updated: '2025-10-22'
+  categories:
+  - eess.IV
+  - cs.CV
+  - cs.MM
+  abstract: This paper presents an N-gram context-based Swin Transformer for learned image compression.
+    Our method achieves variable-rate compression with a single model. By incorporating N-gram context
+    into the Swin Transformer, we overcome its limitation of neglecting larger regions during high-resolution
+    image reconstruction due to its restricted receptive field. This enhancement expands the regions considered
+    for pixel restoration, thereby improving the quality of high-resolution reconstructions. Our method
+    increases context awareness across neighboring windows, leading to a -5.86\% improvement in BD-Rate
+    over existing variable-rate learned image compression techniques. Additionally, our model improves
+    the quality of regions of interest (ROI) in images, making it particularly beneficial for object-focused
+    applications in fields such as manufacturing and industrial vision systems.
+  url: https://arxiv.org/abs/2510.00058
+  pdf_url: https://arxiv.org/pdf/2510.00058v2
+  version: v2
+fetched: '2026-11-14'

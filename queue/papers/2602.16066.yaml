@@ -1,0 +1,49 @@
+id: paper:arxiv:2602.16066
+status: pending
+score: 2
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: Improving Interactive In-Context Learning from Natural Language Feedback
+  authors:
+  - Martin Klissarov
+  - Jonathan Cook
+  - Diego Antognini
+  - Hao Sun
+  - Jingling Li
+  - Natasha Jaques
+  - Claudiu Musat
+  - Edward Grefenstette
+  published: '2026-02-17'
+  updated: '2026-02-17'
+  categories:
+  - cs.AI
+  abstract: 'Adapting one''s thought process based on corrective feedback is an essential ability in human
+    learning, particularly in collaborative settings. In contrast, the current large language model training
+    paradigm relies heavily on modeling vast, static corpora. While effective for knowledge acquisition,
+    it overlooks the interactive feedback loops essential for models to adapt dynamically to their context.
+    In this work, we propose a framework that treats this interactive in-context learning ability not
+    as an emergent property, but as a distinct, trainable skill. We introduce a scalable method that transforms
+    single-turn verifiable tasks into multi-turn didactic interactions driven by information asymmetry.
+    We first show that current flagship models struggle to integrate corrective feedback on hard reasoning
+    tasks. We then demonstrate that models trained with our approach dramatically improve the ability
+    to interactively learn from language feedback. More specifically, the multi-turn performance of a
+    smaller model nearly reaches that of a model an order of magnitude larger. We also observe robust
+    out-of-distribution generalization: interactive training on math problems transfers to diverse domains
+    like coding, puzzles and maze navigation. Our qualitative analysis suggests that this improvement
+    is due to an enhanced in-context plasticity. Finally, we show that this paradigm offers a unified
+    path to self-improvement. By training the model to predict the teacher''s critiques, effectively modeling
+    the feedback environment, we convert this external signal into an internal capability, allowing the
+    model to self-correct even without a teacher.'
+  url: https://arxiv.org/abs/2602.16066
+  pdf_url: https://arxiv.org/pdf/2602.16066v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 8
+citation_year: 2026

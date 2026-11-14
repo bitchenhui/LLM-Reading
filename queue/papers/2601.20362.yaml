@@ -1,0 +1,36 @@
+id: paper:arxiv:2601.20362
+status: skipped
+score: 1
+track: audio_coding
+matched:
+- ref: concept:NeuralAudioCodec
+  count: 1
+  weight: 1
+meta:
+  title: 'Switchcodec: Adaptive residual-expert sparse quantization for high-fidelity neural audio coding'
+  authors:
+  - Xiangbo Wang
+  - Wenbin Jiang
+  - Jin Wang
+  - Yubo You
+  - Sheng Fang
+  - Fei Wen
+  published: '2026-01-28'
+  updated: '2026-05-07'
+  categories:
+  - cs.SD
+  - cs.AI
+  abstract: Recent neural audio compression models often rely on residual vector quantization for high-fidelity
+    coding, but using a fixed number of per-frame codebooks is suboptimal for the wide variability of
+    audio content-especially for signals that are either very simple or highly complex. To address this
+    limitation, we propose SwitchCodec, a neural audio codec based on Residual Experts Vector Quantization
+    (REVQ). REVQ combines a shared quantizer with dynamically routed expert quantizers that are activated
+    according to the input audio, decoupling bitrate from codebook capacity and improving compression
+    efficiency. This design ensures full training and utilization of each quantizer. In addition, a variable-bitrate
+    mechanism adjusts the number of active expert quantizers at inference, enabling multi-bitrate operation
+    without retraining. Experiments demonstrate that SwitchCodec surpasses existing baselines on both
+    objective metrics and subjective listening tests.
+  url: https://arxiv.org/abs/2601.20362
+  pdf_url: https://arxiv.org/pdf/2601.20362v2
+  version: v2
+fetched: '2026-11-14'

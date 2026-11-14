@@ -1,0 +1,41 @@
+id: paper:arxiv:2207.09204
+status: skipped_low_citation
+score: 2
+track: immersive_media
+matched:
+- ref: concept:VolumetricVideo
+  count: 2
+  weight: 1
+- ref: metric:SSIM
+  count: 2
+  weight: 1
+meta:
+  title: 'VoloGAN: Adversarial Domain Adaptation for Synthetic Depth Data'
+  authors:
+  - Sascha Kirch
+  - Rafael Pagés
+  - Sergio Arnaldo
+  - Sergio Martín
+  published: '2022-07-19'
+  updated: '2022-07-19'
+  categories:
+  - cs.CV
+  - cs.LG
+  - eess.IV
+  abstract: We present VoloGAN, an adversarial domain adaptation network that translates synthetic RGB-D
+    images of a high-quality 3D model of a person, into RGB-D images that could be generated with a consumer
+    depth sensor. This system is especially useful to generate high amount training data for single-view
+    3D reconstruction algorithms replicating the real-world capture conditions, being able to imitate
+    the style of different sensor types, for the same high-end 3D model database. The network uses a CycleGAN
+    framework with a U-Net architecture for the generator and a discriminator inspired by SIV-GAN. We
+    use different optimizers and learning rate schedules to train the generator and the discriminator.
+    We further construct a loss function that considers image channels individually and, among other metrics,
+    evaluates the structural similarity. We demonstrate that CycleGANs can be used to apply adversarial
+    domain adaptation of synthetic 3D data to train a volumetric video generator model having only few
+    training samples.
+  url: https://arxiv.org/abs/2207.09204
+  pdf_url: https://arxiv.org/pdf/2207.09204v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 2
+citation_year: 2022

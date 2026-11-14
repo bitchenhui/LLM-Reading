@@ -1,0 +1,54 @@
+id: paper:arxiv:2311.12918
+status: skipped_low_citation
+score: 6
+track: video_image_coding
+matched:
+- ref: codec:AVC
+  count: 1
+  weight: 3
+- ref: concept:QP
+  count: 3
+  weight: 1
+- ref: concept:ABR
+  count: 2
+  weight: 1
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+meta:
+  title: Deep Learning-Based Real-Time Quality Control of Standard Video Compression for Live Streaming
+  authors:
+  - Matin Mortaheb
+  - Mohammad A. Amir Khojastepour
+  - Srimat T. Chakradhar
+  - Sennur Ulukus
+  published: '2023-11-21'
+  updated: '2023-11-21'
+  categories:
+  - eess.IV
+  - cs.IT
+  - cs.LG
+  - cs.NI
+  - eess.SY
+  abstract: Ensuring high-quality video content for wireless users has become increasingly vital. Nevertheless,
+    maintaining a consistent level of video quality faces challenges due to the fluctuating encoded bitrate,
+    primarily caused by dynamic video content, especially in live streaming scenarios. Video compression
+    is typically employed to eliminate unnecessary redundancies within and between video frames, thereby
+    reducing the required bandwidth for video transmission. The encoded bitrate and the quality of the
+    compressed video depend on encoder parameters, specifically, the quantization parameter (QP). Poor
+    choices of encoder parameters can result in reduced bandwidth efficiency and high likelihood of non-conformance.
+    Non-conformance refers to the violation of the peak signal-to-noise ratio (PSNR) constraint for an
+    encoded video segment. To address these issues, a real-time deep learning-based H.264 controller is
+    proposed. This controller dynamically estimates the optimal encoder parameters based on the content
+    of a video chunk with minimal delay. The objective is to maintain video quality in terms of PSNR above
+    a specified threshold while minimizing the average bitrate of the compressed video. Experimental results,
+    conducted on both QCIF dataset and a diverse range of random videos from public datasets, validate
+    the effectiveness of this approach. Notably, it achieves improvements of up to 2.5 times in average
+    bandwidth usage compared to the state-of-the-art adaptive bitrate video streaming, with a negligible
+    non-conformance probability below $10^{-2}$.
+  url: https://arxiv.org/abs/2311.12918
+  pdf_url: https://arxiv.org/pdf/2311.12918v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 3
+citation_year: 2023

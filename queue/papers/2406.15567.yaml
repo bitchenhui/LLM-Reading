@@ -1,0 +1,47 @@
+id: paper:arxiv:2406.15567
+status: pending
+score: 2
+track: self_improvement
+matched:
+- ref: concept:LLM
+  count: 1
+  weight: 1
+- ref: concept:SelfImprovement
+  count: 1
+  weight: 1
+meta:
+  title: 'SAIL: Self-Improving Efficient Online Alignment of Large Language Models'
+  authors:
+  - Mucong Ding
+  - Souradip Chakraborty
+  - Vibhu Agrawal
+  - Zora Che
+  - Alec Koppel
+  - Mengdi Wang
+  - Amrit Bedi
+  - Furong Huang
+  published: '2024-06-21'
+  updated: '2024-06-21'
+  categories:
+  - cs.LG
+  - cs.AI
+  - cs.CL
+  - stat.ML
+  abstract: Reinforcement Learning from Human Feedback (RLHF) is a key method for aligning large language
+    models (LLMs) with human preferences. However, current offline alignment approaches like DPO, IPO,
+    and SLiC rely heavily on fixed preference datasets, which can lead to sub-optimal performance. On
+    the other hand, recent literature has focused on designing online RLHF methods but still lacks a unified
+    conceptual formulation and suffers from distribution shift issues. To address this, we establish that
+    online LLM alignment is underpinned by bilevel optimization. By reducing this formulation to an efficient
+    single-level first-order method (using the reward-policy equivalence), our approach generates new
+    samples and iteratively refines model alignment by exploring responses and regulating preference labels.
+    In doing so, we permit alignment methods to operate in an online and self-improving manner, as well
+    as generalize prior online RLHF methods as special cases. Compared to state-of-the-art iterative RLHF
+    methods, our approach significantly improves alignment performance on open-sourced datasets with minimal
+    computational overhead.
+  url: https://arxiv.org/abs/2406.15567
+  pdf_url: https://arxiv.org/pdf/2406.15567v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 26
+citation_year: 2024

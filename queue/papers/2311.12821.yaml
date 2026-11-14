@@ -1,0 +1,36 @@
+id: paper:arxiv:2311.12821
+status: pending
+score: 3
+track: video_image_coding
+matched:
+- ref: impl:VTM
+  count: 1
+  weight: 3
+meta:
+  title: Advancing The Rate-Distortion-Computation Frontier For Neural Image Compression
+  authors:
+  - David Minnen
+  - Nick Johnston
+  published: '2023-09-26'
+  updated: '2023-09-26'
+  categories:
+  - cs.CV
+  - cs.LG
+  - eess.IV
+  abstract: The rate-distortion performance of neural image compression models has exceeded the state-of-the-art
+    for non-learned codecs, but neural codecs are still far from widespread deployment and adoption. The
+    largest obstacle is having efficient models that are feasible on a wide variety of consumer hardware.
+    Comparative research and evaluation is difficult due to the lack of standard benchmarking platforms
+    and due to variations in hardware architectures and test environments. Through our rate-distortion-computation
+    (RDC) study we demonstrate that neither floating-point operations (FLOPs) nor runtime are sufficient
+    on their own to accurately rank neural compression methods. We also explore the RDC frontier, which
+    leads to a family of model architectures with the best empirical trade-off between computational requirements
+    and RD performance. Finally, we identify a novel neural compression architecture that yields state-of-the-art
+    RD performance with rate savings of 23.1% over BPG (7.0% over VTM and 3.0% over ELIC) without requiring
+    significantly more FLOPs than other learning-based codecs.
+  url: https://arxiv.org/abs/2311.12821
+  pdf_url: https://arxiv.org/pdf/2311.12821v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 15
+citation_year: 2023

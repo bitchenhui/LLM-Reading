@@ -1,0 +1,40 @@
+id: paper:arxiv:2606.22476
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'CVSBench: A Comprehensive Benchmark for Cross-view Spatial Reasoning and Dreaming'
+  authors:
+  - Ruixun Liu
+  - Lingyu Zhang
+  - Lanxuan Xue
+  - Kaiyu Li
+  - Bowen Fu
+  - Xiangyong Cao
+  published: '2026-06-21'
+  updated: '2026-06-21'
+  categories:
+  - cs.CV
+  abstract: 'Humans can effortlessly reason about scenes across different viewpoints, yet it remains unclear
+    whether Vision-Language Models (VLMs) possess similar cross-view spatial abilities. Satellite-street
+    scene pairs, with their complex contexts and extreme viewpoint variations, provide an ideal testbed.
+    Motivated by this, we introduce CVSBench, a large-scale benchmark for evaluating cross-view spatial
+    reasoning through satellite-street pairs. This benchmark supports multiple tasks, including cross-view
+    VQA, cross-view grounding, and viewpoint identification. CVSBench comprises 3,297 cross-view image
+    groups with 9,468 object-level annotations and 40,679 question-answer (QA) pairs, enabling systematic
+    and controlled evaluation of cross-view spatial reasoning. Extensive evaluations reveal that advanced
+    VLMs struggle to maintain object-level and layout consistency under drastic viewpoint changes. To
+    bridge this gap towards human-like spatial cognition, we investigate two categories of approaches:
+    spatially grounded reasoning and the incorporation of cognitive map inputs. Our findings demonstrate
+    that language-only reasoning yields marginal improvements, while incorporating visual spatial imagination
+    via a 3D scene imagination pipeline substantially improves cross-view reasoning. These results highlight
+    the necessity of explicit visual-spatial representations for robust spatial cognition in VLMs. Our
+    data and code are released at https://huggingface.co/datasets/zlyzlyzly/CVSBench.'
+  url: https://arxiv.org/abs/2606.22476
+  pdf_url: https://arxiv.org/pdf/2606.22476v1
+  version: v1
+fetched: '2026-11-14'

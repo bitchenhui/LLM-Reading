@@ -1,0 +1,40 @@
+id: paper:arxiv:2307.08265
+status: skipped
+score: 0
+track: video_image_coding
+matched: []
+meta:
+  title: Extreme Image Compression using Fine-tuned VQGANs
+  authors:
+  - Qi Mao
+  - Tinghan Yang
+  - Yinuo Zhang
+  - Zijian Wang
+  - Meng Wang
+  - Shiqi Wang
+  - Siwei Ma
+  published: '2023-07-17'
+  updated: '2023-12-15'
+  categories:
+  - cs.CV
+  - eess.IV
+  abstract: Recent advances in generative compression methods have demonstrated remarkable progress in
+    enhancing the perceptual quality of compressed data, especially in scenarios with low bitrates. However,
+    their efficacy and applicability to achieve extreme compression ratios ($<0.05$ bpp) remain constrained.
+    In this work, we propose a simple yet effective coding framework by introducing vector quantization
+    (VQ)--based generative models into the image compression domain. The main insight is that the codebook
+    learned by the VQGAN model yields a strong expressive capacity, facilitating efficient compression
+    of continuous information in the latent space while maintaining reconstruction quality. Specifically,
+    an image can be represented as VQ-indices by finding the nearest codeword, which can be encoded using
+    lossless compression methods into bitstreams. We propose clustering a pre-trained large-scale codebook
+    into smaller codebooks through the K-means algorithm, yielding variable bitrates and different levels
+    of reconstruction quality within the coding framework. Furthermore, we introduce a transformer to
+    predict lost indices and restore images in unstable environments. Extensive qualitative and quantitative
+    experiments on various benchmark datasets demonstrate that the proposed framework outperforms state-of-the-art
+    codecs in terms of perceptual quality-oriented metrics and human perception at extremely low bitrates
+    ($\le 0.04$ bpp). Remarkably, even with the loss of up to $20\%$ of indices, the images can be effectively
+    restored with minimal perceptual loss.
+  url: https://arxiv.org/abs/2307.08265
+  pdf_url: https://arxiv.org/pdf/2307.08265v3
+  version: v3
+fetched: '2026-11-14'

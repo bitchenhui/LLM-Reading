@@ -1,0 +1,41 @@
+id: paper:arxiv:2508.16790
+status: skipped
+score: 0
+track: audio_coding
+matched: []
+meta:
+  title: 'TaDiCodec: Text-aware Diffusion Speech Tokenizer for Speech Language Modeling'
+  authors:
+  - Yuancheng Wang
+  - Dekun Chen
+  - Xueyao Zhang
+  - Junan Zhang
+  - Jiaqi Li
+  - Zhizheng Wu
+  published: '2025-08-22'
+  updated: '2025-08-22'
+  categories:
+  - cs.SD
+  - cs.LG
+  - eess.AS
+  abstract: 'Speech tokenizers serve as foundational components for speech language models, yet current
+    designs exhibit several limitations, including: 1) dependence on multi-layer residual vector quantization
+    structures or high frame rates, 2) reliance on auxiliary pre-trained models for semantic distillation,
+    and 3) requirements for complex two-stage training processes. In this work, we introduce the Text-aware
+    Diffusion Transformer Speech Codec (TaDiCodec), a novel approach designed to overcome these challenges.
+    TaDiCodec employs end-to-end optimization for quantization and reconstruction through a diffusion
+    autoencoder, while integrating text guidance into the diffusion decoder to enhance reconstruction
+    quality and achieve optimal compression. TaDiCodec achieves an extremely low frame rate of 6.25 Hz
+    and a corresponding bitrate of 0.0875 kbps with a single-layer codebook for 24 kHz speech, while maintaining
+    superior performance on critical speech generation evaluation metrics such as Word Error Rate (WER),
+    speaker similarity (SIM), and speech quality (UTMOS). Notably, TaDiCodec employs a single-stage, end-to-end
+    training paradigm, and obviating the need for auxiliary pre-trained models. We also validate the compatibility
+    of TaDiCodec in language model based zero-shot text-to-speech with both autoregressive modeling and
+    masked generative modeling, demonstrating its effectiveness and efficiency for speech language modeling,
+    as well as a significantly small reconstruction-generation gap. We will open source our code and model
+    checkpoints. Audio samples are are available at https:/tadicodec.github.io/. We release code and model
+    checkpoints at https:/github.com/HeCheng0625/Diffusion-Speech-Tokenizer.'
+  url: https://arxiv.org/abs/2508.16790
+  pdf_url: https://arxiv.org/pdf/2508.16790v1
+  version: v1
+fetched: '2026-11-14'

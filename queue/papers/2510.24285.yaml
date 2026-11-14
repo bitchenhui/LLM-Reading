@@ -1,0 +1,48 @@
+id: paper:arxiv:2510.24285
+status: skipped
+score: 1
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+meta:
+  title: 'ViPER: Empowering the Self-Evolution of Visual Perception Abilities in Vision-Language Model'
+  authors:
+  - Juntian Zhang
+  - Song Jin
+  - Chuanqi Cheng
+  - Yuhan Liu
+  - Yankai Lin
+  - Xun Zhang
+  - Yufei Zhang
+  - Fei Jiang
+  - Guojun Yin
+  - Wei Lin
+  - Rui Yan
+  published: '2025-10-28'
+  updated: '2025-10-28'
+  categories:
+  - cs.CV
+  - cs.AI
+  - cs.CL
+  abstract: 'The limited capacity for fine-grained visual perception presents a critical bottleneck for
+    Vision-Language Models (VLMs) in real-world applications. Addressing this is challenging due to the
+    scarcity of high-quality data and the limitations of existing methods: supervised fine-tuning (SFT)
+    often compromises general capabilities, while reinforcement fine-tuning (RFT) prioritizes textual
+    reasoning over visual perception. To bridge this gap, we propose a novel two-stage task that structures
+    visual perception learning as a coarse-to-fine progressive process. Based on this task formulation,
+    we develop ViPER, a self-bootstrapping framework specifically designed to enable iterative evolution
+    through self-critiquing and self-prediction. By synergistically integrating image-level and instance-level
+    reconstruction with a two-stage reinforcement learning strategy, ViPER establishes a closed-loop training
+    paradigm, where internally synthesized data directly fuel the enhancement of perceptual ability. Applied
+    to the Qwen2.5-VL family, ViPER produces the Qwen-Viper series. With an average gain of 1.7% on seven
+    comprehensive benchmarks spanning various tasks and up to 6.0% on fine-grained perception, Qwen-Viper
+    consistently demonstrates superior performance across different vision-language scenarios while maintaining
+    generalizability. Beyond enabling self-improvement in perceptual capabilities, ViPER provides concrete
+    evidence for the reciprocal relationship between generation and understanding, a breakthrough to developing
+    more autonomous and capable VLMs.'
+  url: https://arxiv.org/abs/2510.24285
+  pdf_url: https://arxiv.org/pdf/2510.24285v1
+  version: v1
+fetched: '2026-11-14'

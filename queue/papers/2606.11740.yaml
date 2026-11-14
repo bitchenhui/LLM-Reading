@@ -1,0 +1,41 @@
+id: paper:arxiv:2606.11740
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'UniReason-Med: A Shared Grounded Reasoning Interface for 2D-to-3D Transfer in Medical VQA'
+  authors:
+  - Mengzhuo Chen
+  - Yan Shu
+  - Chi Liu
+  - Hongming Piao
+  - Xidong Wang
+  - Derek Li
+  - Bryan Dai
+  published: '2026-06-10'
+  updated: '2026-06-10'
+  categories:
+  - cs.CV
+  - cs.CL
+  abstract: We study whether grounded reasoning supervision from abundant 2D medical images can improve
+    3D medical VQA when both input types are aligned through a common reasoning interface. We introduce
+    UniReason-Med, a single-checkpoint framework that processes either a 2D image or a slice-serialized
+    3D volume at inference time, generating interleaved textual reasoning and localized visual evidence
+    through shared box syntax, region-token injection, and a common grounded reasoning policy. To train
+    this interface, we construct UniMed-CoT, a 220K instruction-tuning dataset with interleaved textual
+    reasoning and grounded visual evidence, including 170K 2D and 50K 3D samples. Through supervised fine-tuning
+    followed by outcome-level reinforcement learning, UniReason-Med learns to generate grounded reasoning
+    traces without IoU/Dice-based localization rewards during RL. Data-mixture and component ablations
+    show that joint 2D+3D grounded supervision substantially improves 3D reasoning over 3D-only training,
+    while grounding and region-token injection consistently benefit both 2D and 3D tasks. These results
+    suggest that a shared grounded reasoning interface can transfer reasoning structure from 2D images
+    to slice-serialized volumetric medical understanding. The code and data are publicly available at
+    https://github.com/IQuestLab/unireason-med.
+  url: https://arxiv.org/abs/2606.11740
+  pdf_url: https://arxiv.org/pdf/2606.11740v1
+  version: v1
+fetched: '2026-11-14'

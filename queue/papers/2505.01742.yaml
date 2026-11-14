@@ -1,0 +1,43 @@
+id: paper:arxiv:2505.01742
+status: skipped_low_citation
+score: 3
+track: video_image_coding
+matched:
+- ref: impl:TIC
+  count: 1
+  weight: 3
+meta:
+  title: 'Easz: An Agile Transformer-based Image Compression Framework for Resource-constrained IoTs'
+  authors:
+  - Yu Mao
+  - Jingzong Li
+  - Jun Wang
+  - Hong Xu
+  - Tei-Wei Kuo
+  - Nan Guan
+  - Chun Jason Xue
+  published: '2025-05-03'
+  updated: '2025-05-14'
+  categories:
+  - eess.IV
+  - cs.LG
+  abstract: Neural image compression, necessary in various machine-to-machine communication scenarios,
+    suffers from its heavy encode-decode structures and inflexibility in switching between different compression
+    levels. Consequently, it raises significant challenges in applying the neural image compression to
+    edge devices that are developed for powerful servers with high computational and storage capacities.
+    We take a step to solve the challenges by proposing a new transformer-based edge-compute-free image
+    coding framework called Easz. Easz shifts the computational overhead to the server, and hence avoids
+    the heavy encoding and model switching overhead on the edge. Easz utilizes a patch-erase algorithm
+    to selectively remove image contents using a conditional uniform-based sampler. The erased pixels
+    are reconstructed on the receiver side through a transformer-based framework. To further reduce the
+    computational overhead on the receiver, we then introduce a lightweight transformer-based reconstruction
+    structure to reduce the reconstruction load on the receiver side. Extensive evaluations conducted
+    on a real-world testbed demonstrate multiple advantages of Easz over existing compression approaches,
+    in terms of adaptability to different compression levels, computational efficiency, and image reconstruction
+    quality.
+  url: https://arxiv.org/abs/2505.01742
+  pdf_url: https://arxiv.org/pdf/2505.01742v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 2
+citation_year: 2025

@@ -1,0 +1,42 @@
+id: paper:arxiv:2604.25408
+status: skipped_low_citation
+score: 2
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 3
+  weight: 1
+- ref: dataset:COCO
+  count: 1
+  weight: 1
+meta:
+  title: 'Beyond Fidelity: Semantic Similarity Assessment in Low-Level Image Processing'
+  authors:
+  - Runjie Wang
+  - Weiling Chen
+  - Tiesong Zhao
+  - Chang Wen Chen
+  published: '2026-04-28'
+  updated: '2026-04-28'
+  categories:
+  - cs.CV
+  abstract: Low-level image processing has long been evaluated mainly from the perspective of visual fidelity.
+    However, with the rise of deep learning and generative models, processed images may preserve perceptual
+    quality while altering semantic content, making conventional Image Quality Assessment (IQA) insufficient
+    for semantic-level assessment. In this paper, we formalize \textit{Semantic Similarity} as a new evaluation
+    task for low-level image processing, aimed at measuring whether semantic content is preserved after
+    processing. We further present a structured formulation of image semantics based on semantic entities
+    and their relations, and discuss the desired properties and constraints of a valid semantic similarity
+    index. Based on this formulation, we propose Triplet-based Semantic Similarity Score (T3S), which
+    models image semantics through foreground entities, background entities, and relations. T3S combines
+    semantic entity extraction, foreground-background disentanglement, and open-world class/relation modeling.
+    Experiments on COCO and SPA-Data show that T3S consistently outperforms existing fidelity-oriented
+    metrics and representative semantic-level baselines, while better reflecting progressive semantic
+    changes under diverse degradations. These results highlight the importance of semantic assessment
+    in modern low-level vision.
+  url: https://arxiv.org/abs/2604.25408
+  pdf_url: https://arxiv.org/pdf/2604.25408v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 0
+citation_year: 2026

@@ -1,0 +1,48 @@
+id: paper:arxiv:2604.21276
+status: pending
+score: 2
+track: audio_coding
+matched:
+- ref: concept:LLM
+  count: 1
+  weight: 1
+- ref: dataset:JVET-CTC
+  count: 1
+  weight: 1
+meta:
+  title: Do LLM Decoders Listen Fairly? Benchmarking How Language Model Priors Shape Bias in Speech Recognition
+  authors:
+  - Srishti Ginjala
+  - Eric Fosler-Lussier
+  - Christopher W. Myers
+  - Srinivasan Parthasarathy
+  published: '2026-04-23'
+  updated: '2026-04-23'
+  categories:
+  - cs.CL
+  - cs.AI
+  - cs.SD
+  abstract: 'As pretrained large language models replace task-specific decoders in speech recognition,
+    a critical question arises: do their text-derived priors make recognition fairer or more biased across
+    demographic groups? We evaluate nine models spanning three architectural generations (CTC with no
+    language model, encoder-decoder with an implicit LM, and LLM-based with an explicit pretrained decoder)
+    on about 43,000 utterances across five demographic axes (ethnicity, accent, gender, age, first language)
+    using Common Voice 24 and Meta''s Fair-Speech, a controlled-prompt dataset that eliminates vocabulary
+    confounds. On clean audio, three findings challenge assumptions: LLM decoders do not amplify racial
+    bias (Granite-8B has the best ethnicity fairness, max/min WER = 2.28); Whisper exhibits pathological
+    hallucination on Indian-accented speech with a non-monotonic insertion-rate spike to 9.62% at large-v3;
+    and audio compression predicts accent fairness more than LLM scale. We then stress-test these findings
+    under 12 acoustic degradation conditions (noise, reverberation, silence injection, chunk masking)
+    across both datasets, totaling 216 inference runs. Severe degradation paradoxically compresses fairness
+    gaps as all groups converge to high WER, but silence injection amplifies Whisper''s accent bias up
+    to 4.64x by triggering demographic-selective hallucination. Under masking, Whisper enters catastrophic
+    repetition loops (86% of 51,797 insertions) while explicit-LLM decoders produce 38x fewer insertions
+    with near-zero repetition; high-compression audio encoding (Q-former) reintroduces repetition pathology
+    even in LLM decoders. These results suggest that audio encoder design, not LLM scaling, is the primary
+    lever for equitable and robust speech recognition.'
+  url: https://arxiv.org/abs/2604.21276
+  pdf_url: https://arxiv.org/pdf/2604.21276v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 4
+citation_year: 2026

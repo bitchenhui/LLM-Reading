@@ -1,0 +1,39 @@
+id: paper:arxiv:2609.18642
+status: pending
+score: 2
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: 'STRETCH the Boundaries: A Unified Self-Taught Framework for Progressive LLM Evolution'
+  authors:
+  - Yajie Yu
+  - Mark Lee
+  - Yue Feng
+  published: '2026-09-16'
+  updated: '2026-09-16'
+  categories:
+  - cs.CL
+  abstract: Large language models (LLMs) often suffer from capability stagnation in self-improvement training
+    because fixed difficulty levels fail to adapt to their evolving proficiency. To address this issue,
+    we propose STRETCH (Self-Taught Reasoning Evolution via Targeted CHallenge), a unified framework inspired
+    by cognitive scaffolding theory. STRETCH introduces a dynamic Stretch Zone mechanism that continuously
+    aligns question difficulty with the model's solving capability. Within a single parameter space, the
+    model alternates between a Scaffolder that generates adaptive, boundary-pushing challenges and a Learner
+    that that optimizes its solving trajectories through reinforcement learning. This dual-loop co-evolution
+    effectively stabilizes training, mitigates reward hacking and promote progressive reasoning growth.
+    Experiments on both negotiation and operation research benchmarks demonstrate that STRETCH consistently
+    outperforms strong prompting and domain-specific baselines. Further scaffolder configuration analysis
+    shows that dynamic difficulty alignment is critical for sustained capability improvement and synchronized
+    reasoning evolution.
+  url: https://arxiv.org/abs/2609.18642
+  pdf_url: https://arxiv.org/pdf/2609.18642v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 0
+citation_year: 2026

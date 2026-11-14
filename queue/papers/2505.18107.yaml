@@ -1,0 +1,35 @@
+id: paper:arxiv:2505.18107
+status: skipped
+score: 0
+track: video_image_coding
+matched: []
+meta:
+  title: Accelerating Learned Image Compression Through Modeling Neural Training Dynamics
+  authors:
+  - Yichi Zhang
+  - Zhihao Duan
+  - Yuning Huang
+  - Fengqing Zhu
+  published: '2025-05-23'
+  updated: '2025-05-23'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: As learned image compression (LIC) methods become increasingly computationally demanding,
+    enhancing their training efficiency is crucial. This paper takes a step forward in accelerating the
+    training of LIC methods by modeling the neural training dynamics. We first propose a Sensitivity-aware
+    True and Dummy Embedding Training mechanism (STDET) that clusters LIC model parameters into few separate
+    modes where parameters are expressed as affine transformations of reference parameters within the
+    same mode. By further utilizing the stable intra-mode correlations throughout training and parameter
+    sensitivities, we gradually embed non-reference parameters, reducing the number of trainable parameters.
+    Additionally, we incorporate a Sampling-then-Moving Average (SMA) technique, interpolating sampled
+    weights from stochastic gradient descent (SGD) training to obtain the moving average weights, ensuring
+    smooth temporal behavior and minimizing training state variances. Overall, our method significantly
+    reduces training space dimensions and the number of trainable parameters without sacrificing model
+    performance, thus accelerating model convergence. We also provide a theoretical analysis on the Noisy
+    quadratic model, showing that the proposed method achieves a lower training variance than standard
+    SGD. Our approach offers valuable insights for further developing efficient training methods for LICs.
+  url: https://arxiv.org/abs/2505.18107
+  pdf_url: https://arxiv.org/pdf/2505.18107v1
+  version: v1
+fetched: '2026-11-14'

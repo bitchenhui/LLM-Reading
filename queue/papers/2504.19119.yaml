@@ -1,0 +1,54 @@
+id: paper:arxiv:2504.19119
+status: pending
+score: 8
+track: video_image_coding
+matched:
+- ref: codec:VVC
+  count: 2
+  weight: 3
+- ref: impl:VTM
+  count: 1
+  weight: 3
+- ref: concept:Hyperprior
+  count: 1
+  weight: 1
+- ref: dataset:Kodak
+  count: 1
+  weight: 1
+meta:
+  title: 'MLICv2: Enhanced Multi-Reference Entropy Modeling for Learned Image Compression'
+  authors:
+  - Wei Jiang
+  - Yongqi Zhai
+  - Jiayu Yang
+  - Feng Gao
+  - Ronggang Wang
+  published: '2025-04-27'
+  updated: '2026-02-25'
+  categories:
+  - eess.IV
+  abstract: 'Recent advances in learned image compression (LIC) have achieved remarkable performance improvements
+    over traditional codecs. Notably, the MLIC series-LICs equipped with multi-reference entropy models-have
+    substantially surpassed conventional image codecs such as Versatile Video Coding (VVC) Intra. However,
+    existing MLIC variants suffer from several limitations: performance degradation at high bitrates due
+    to insufficient transform capacity, suboptimal entropy modeling that fails to capture global correlations
+    in initial slices, and lack of adaptive channel importance modeling. In this paper, we propose MLICv2
+    and MLICv2+, enhanced successors that systematically address these limitations through improved transform
+    design, dvanced entropy modeling, and exploration of the potential of instance-specific optimization.
+    For transform enhancement, we introduce a lightweight token mixing block inspired by the MetaFormer
+    architecture, which effectively mitigates high-bitrate performance degradation while maintaining computational
+    efficiency. For entropy modeling improvements, we propose hyperprior-guided global correlation prediction
+    to extract global context even in the initial slice of latent representation, complemented by a channel
+    reweighting module that dynamically emphasizes informative channels. We further explore enhanced positional
+    embedding and guided selective compression strategies for superior context modeling. Additionally,
+    we apply the Stochastic Gumbel Annealing (SGA) to demonstrate the potential for further performance
+    improvements through input-specific optimization. Extensive experiments demonstrate that MLICv2 and
+    MLICv2+ achieve state-of-the-art results, reducing Bjøntegaard-Delta Rate by 16.54%, 21.61%, 16.05%
+    and 20.46%, 24.35%, 19.14% on Kodak, Tecnick, and CLIC Pro Val datasets, respectively, compared to
+    VTM-17.0 Intra.'
+  url: https://arxiv.org/abs/2504.19119
+  pdf_url: https://arxiv.org/pdf/2504.19119v4
+  version: v4
+fetched: '2026-11-14'
+citation_count: 9
+citation_year: 2025

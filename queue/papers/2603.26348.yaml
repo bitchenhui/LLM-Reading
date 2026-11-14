@@ -1,0 +1,45 @@
+id: paper:arxiv:2603.26348
+status: skipped_low_citation
+score: 2
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 3
+  weight: 1
+- ref: org:USTC
+  count: 1
+  weight: 1
+meta:
+  title: 'Reflect to Inform: Boosting Multimodal Reasoning via Information-Gain-Driven Verification'
+  authors:
+  - Shuai Lv
+  - Chang Liu
+  - Feng Tang
+  - Yujie Yuan
+  - Aojun Zhou
+  - Kui Zhang
+  - Xi Yang
+  - Yangqiu Song
+  published: '2026-03-27'
+  updated: '2026-03-27'
+  categories:
+  - cs.CV
+  - cs.AI
+  abstract: 'Multimodal Large Language Models (MLLMs) achieve strong multimodal reasoning performance,
+    yet we identify a recurring failure mode in long-form generation: as outputs grow longer, models progressively
+    drift away from image evidence and fall back on textual priors, resulting in ungrounded reasoning
+    and hallucinations. Interestingly, Based on attention analysis, we find that MLLMs have a latent capability
+    for late-stage visual verification that is present but not consistently activated. Motivated by this
+    observation, we propose Visual Re-Examination (VRE), a self-evolving training framework that enables
+    MLLMs to autonomously perform visual introspection during reasoning without additional visual inputs.
+    Rather than distilling visual capabilities from a stronger teacher, VRE promotes iterative self-improvement
+    by leveraging the model itself to generate reflection traces, making visual information actionable
+    through information gain. Extensive experiments across diverse multimodal benchmarks demonstrate that
+    VRE consistently improves reasoning accuracy and perceptual reliability, while substantially reducing
+    hallucinations, especially in long-chain settings. Code is available at https://github.com/Xiaobu-USTC/VRE.'
+  url: https://arxiv.org/abs/2603.26348
+  pdf_url: https://arxiv.org/pdf/2603.26348v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 0
+citation_year: 2026

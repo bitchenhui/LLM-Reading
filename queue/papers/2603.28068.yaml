@@ -1,0 +1,48 @@
+id: paper:arxiv:2603.28068
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'AIBench: Evaluating Visual-Logical Consistency in Academic Illustration Generation'
+  authors:
+  - Zhaohe Liao
+  - Kaixun Jiang
+  - Zhihang Liu
+  - Yujie Wei
+  - Junqiu Yu
+  - Quanhao Li
+  - Hong-Tao Yu
+  - Pandeng Li
+  - Yuzheng Wang
+  - Zhen Xing
+  - Shiwei Zhang
+  - Chen-Wei Xie
+  - Yun Zheng
+  - Xihui Liu
+  published: '2026-03-30'
+  updated: '2026-03-31'
+  categories:
+  - cs.CV
+  abstract: Although image generation has boosted various applications via its rapid evolution, whether
+    the state-of-the-art models are able to produce ready-to-use academic illustrations for papers is
+    still largely unexplored. Directly comparing or evaluating the illustration with VLM is native but
+    requires oracle multi-modal understanding ability, which is unreliable for long and complex texts
+    and illustrations. To address this, we propose AIBench, the first benchmark using VQA for evaluating
+    logic correctness of the academic illustrations and VLMs for assessing aesthetics. In detail, we designed
+    four levels of questions proposed from a logic diagram summarized from the method part of the paper,
+    which query whether the generated illustration aligns with the paper on different scales. Our VQA-based
+    approach raises more accurate and detailed evaluations on visual-logical consistency while relying
+    less on the ability of the judger VLM. With our high-quality AIBench, we conduct extensive experiments
+    and conclude that the performance gap between models on this task is significantly larger than general
+    ones, reflecting their various complex reasoning and high-density generation ability. Further, the
+    logic and aesthetics are hard to optimize simultaneously as in handcrafted illustrations. Additional
+    experiments further state that test-time scaling on both abilities significantly boosts the performance
+    on this task.
+  url: https://arxiv.org/abs/2603.28068
+  pdf_url: https://arxiv.org/pdf/2603.28068v2
+  version: v2
+fetched: '2026-11-14'

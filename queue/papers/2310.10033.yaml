@@ -1,0 +1,38 @@
+id: paper:arxiv:2310.10033
+status: skipped
+score: 0
+track: video_image_coding
+matched: []
+meta:
+  title: Deep Unfolding Network for Image Compressed Sensing by Content-adaptive Gradient Updating and
+    Deformation-invariant Non-local Modeling
+  authors:
+  - Wenxue Cui
+  - Xiaopeng Fan
+  - Jian Zhang
+  - Debin Zhao
+  published: '2023-10-16'
+  updated: '2023-10-16'
+  categories:
+  - cs.CV
+  - cs.MM
+  abstract: 'Inspired by certain optimization solvers, the deep unfolding network (DUN) has attracted
+    much attention in recent years for image compressed sensing (CS). However, there still exist the following
+    two issues: 1) In existing DUNs, most hyperparameters are usually content independent, which greatly
+    limits their adaptability for different input contents. 2) In each iteration, a plain convolutional
+    neural network is usually adopted, which weakens the perception of wider context prior and therefore
+    depresses the expressive ability. In this paper, inspired by the traditional Proximal Gradient Descent
+    (PGD) algorithm, a novel DUN for image compressed sensing (dubbed DUN-CSNet) is proposed to solve
+    the above two issues. Specifically, for the first issue, a novel content adaptive gradient descent
+    network is proposed, in which a well-designed step size generation sub-network is developed to dynamically
+    allocate the corresponding step sizes for different textures of input image by generating a content-aware
+    step size map, realizing a content-adaptive gradient updating. For the second issue, considering the
+    fact that many similar patches exist in an image but have undergone a deformation, a novel deformation-invariant
+    non-local proximal mapping network is developed, which can adaptively build the long-range dependencies
+    between the nonlocal patches by deformation-invariant non-local modeling, leading to a wider perception
+    on context priors. Extensive experiments manifest that the proposed DUN-CSNet outperforms existing
+    state-of-the-art CS methods by large margins.'
+  url: https://arxiv.org/abs/2310.10033
+  pdf_url: https://arxiv.org/pdf/2310.10033v1
+  version: v1
+fetched: '2026-11-14'

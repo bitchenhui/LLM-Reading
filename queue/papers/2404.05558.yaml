@@ -1,0 +1,34 @@
+id: paper:arxiv:2404.05558
+status: skipped
+score: 1
+track: processing_enhancement
+matched:
+- ref: concept:INR
+  count: 1
+  weight: 1
+meta:
+  title: 'JDEC: JPEG Decoding via Enhanced Continuous Cosine Coefficients'
+  authors:
+  - Woo Kyoung Han
+  - Sunghoon Im
+  - Jaedeok Kim
+  - Kyong Hwan Jin
+  published: '2024-04-03'
+  updated: '2024-04-03'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: We propose a practical approach to JPEG image decoding, utilizing a local implicit neural
+    representation with continuous cosine formulation. The JPEG algorithm significantly quantizes discrete
+    cosine transform (DCT) spectra to achieve a high compression rate, inevitably resulting in quality
+    degradation while encoding an image. We have designed a continuous cosine spectrum estimator to address
+    the quality degradation issue that restores the distorted spectrum. By leveraging local DCT formulations,
+    our network has the privilege to exploit dequantization and upsampling simultaneously. Our proposed
+    model enables decoding compressed images directly across different quality factors using a single
+    pre-trained model without relying on a conventional JPEG decoder. As a result, our proposed network
+    achieves state-of-the-art performance in flexible color image JPEG artifact removal tasks. Our source
+    code is available at https://github.com/WooKyoungHan/JDEC.
+  url: https://arxiv.org/abs/2404.05558
+  pdf_url: https://arxiv.org/pdf/2404.05558v1
+  version: v1
+fetched: '2026-11-14'

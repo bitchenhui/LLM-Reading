@@ -1,0 +1,44 @@
+id: paper:arxiv:2503.03040
+status: skipped_low_citation
+score: 3
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+- ref: org:Apple
+  count: 1
+  weight: 1
+meta:
+  title: 'SAGE: Steering Dialog Generation with Future-Aware State-Action Augmentation'
+  authors:
+  - Yizhe Zhang
+  - Navdeep Jaitly
+  published: '2025-03-04'
+  updated: '2025-07-01'
+  categories:
+  - cs.CL
+  - cs.AI
+  abstract: Recent advances in large language models have demonstrated impressive capabilities in task-oriented
+    applications, yet building emotionally intelligent chatbots that can engage in natural, strategic
+    conversations remains a challenge. We present a novel approach called SAGE that uses latent variables
+    to control long-horizon behavior in dialogue generation. At the core of our method is the State-Action
+    Chain (SAC), which augments standard language model fine-tuning by introducing latent variables that
+    encapsulate emotional states and conversational strategies between dialogue turns. During inference,
+    these variables are generated before each response, enabling coarse-grained control over dialogue
+    progression while maintaining natural interaction patterns. We also introduce a self-improvement pipeline
+    that leverages dialogue tree search, LLM-based reward modeling, and targeted fine-tuning to optimize
+    conversational trajectories. Our experimental results show that models trained with this approach
+    demonstrate improved performance in emotional intelligence metrics while maintaining strong capabilities
+    on LLM benchmarks. The discrete nature of our latent variables facilitates search-based strategies
+    and provides a foundation for future applications of reinforcement learning to dialogue systems, where
+    learning can occur at the state level rather than the token level. https://github.com/apple/ml-sage-dialog-gen
+  url: https://arxiv.org/abs/2503.03040
+  pdf_url: https://arxiv.org/pdf/2503.03040v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 1
+citation_year: 2025

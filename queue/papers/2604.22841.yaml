@@ -1,0 +1,50 @@
+id: paper:arxiv:2604.22841
+status: skipped_low_citation
+score: 2
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 2
+  weight: 1
+- ref: concept:TrainingFree
+  count: 1
+  weight: 1
+meta:
+  title: 'ATTN-FIQA: Interpretable Attention-based Face Image Quality Assessment with Vision Transformers'
+  authors:
+  - Guray Ozgur
+  - Tahar Chettaoui
+  - Eduarda Caldeira
+  - Jan Niklas Kolf
+  - Marco Huber
+  - Andrea Atzori
+  - Naser Damer
+  - Fadi Boutros
+  published: '2026-04-21'
+  updated: '2026-04-21'
+  categories:
+  - cs.CV
+  - eess.IV
+  abstract: 'Face Image Quality Assessment (FIQA) aims to assess the recognition utility of face samples
+    and is essential for reliable face recognition (FR) systems. Existing approaches require computationally
+    expensive procedures such as multiple forward passes, backpropagation, or additional training, and
+    only recent work has focused on the use of Vision Transformers. Recent studies highlighted that these
+    architectures inherently function as saliency learners with attention patterns naturally encoding
+    spatial importance. This work proposes ATTN-FIQA, a novel training-free approach that investigates
+    whether pre-softmax attention scores from pre-trained Vision Transformer-based face recognition models
+    can serve as quality indicators. We hypothesize that attention magnitudes intrinsically encode quality:
+    high-quality images with discriminative facial features enable strong query-key alignments producing
+    focused, high-magnitude attention patterns, while degraded images generate diffuse, low-magnitude
+    patterns. ATTN-FIQA extracts pre-softmax attention matrices from the final transformer block, aggregate
+    multi-head attention information across all patches, and compute image-level quality scores through
+    simple averaging, requiring only a single forward pass through pre-trained models without architectural
+    modifications, backpropagation, or additional training. Through comprehensive evaluation across eight
+    benchmark datasets and four FR models, this work demonstrates that attention-based quality scores
+    effectively correlate with face image quality and provide spatial interpretability, revealing which
+    facial regions contribute most to quality determination.'
+  url: https://arxiv.org/abs/2604.22841
+  pdf_url: https://arxiv.org/pdf/2604.22841v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 1
+citation_year: 2026

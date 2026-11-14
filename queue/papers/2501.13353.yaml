@@ -1,0 +1,36 @@
+id: paper:arxiv:2501.13353
+status: skipped
+score: 1
+track: processing_enhancement
+matched:
+- ref: concept:SuperResolution
+  count: 2
+  weight: 1
+meta:
+  title: 'Contrast: A Hybrid Architecture of Transformers and State Space Models for Low-Level Vision'
+  authors:
+  - Aman Urumbekov
+  - Zheng Chen
+  published: '2025-01-23'
+  updated: '2025-03-09'
+  categories:
+  - cs.CV
+  abstract: Transformers have become increasingly popular for image super-resolution (SR) tasks due to
+    their strong global context modeling capabilities. However, their quadratic computational complexity
+    necessitates the use of window-based attention mechanisms, which restricts the receptive field and
+    limits effective context expansion. Recently, the Mamba architecture has emerged as a promising alternative
+    with linear computational complexity, allowing it to avoid window mechanisms and maintain a large
+    receptive field. Nevertheless, Mamba faces challenges in handling long-context dependencies when high
+    pixel-level precision is required, as in SR tasks. This is due to its hidden state mechanism, which
+    can compress and store a substantial amount of context but only in an approximate manner, leading
+    to inaccuracies that transformers do not suffer from. In this paper, we propose \textbf{Contrast},
+    a hybrid SR model that combines \textbf{Con}volutional, \textbf{Tra}nsformer, and \textbf{St}ate Space
+    components, effectively blending the strengths of transformers and Mamba to address their individual
+    limitations. By integrating transformer and state space mechanisms, \textbf{Contrast} compensates
+    for the shortcomings of each approach, enhancing both global context modeling and pixel-level accuracy.
+    We demonstrate that combining these two architectures allows us to mitigate the problems inherent
+    in each, resulting in improved performance on image super-resolution tasks.
+  url: https://arxiv.org/abs/2501.13353
+  pdf_url: https://arxiv.org/pdf/2501.13353v2
+  version: v2
+fetched: '2026-11-14'

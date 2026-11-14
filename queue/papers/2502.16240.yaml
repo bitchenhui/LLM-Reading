@@ -1,0 +1,41 @@
+id: paper:arxiv:2502.16240
+status: skipped
+score: 1
+track: audio_coding
+matched:
+- ref: concept:NeuralAudioCodec
+  count: 1
+  weight: 1
+meta:
+  title: Speech Enhancement Using Continuous Embeddings of Neural Audio Codec
+  authors:
+  - Haoyang Li
+  - Jia Qi Yip
+  - Tianyu Fan
+  - Eng Siong Chng
+  published: '2025-02-22'
+  updated: '2025-02-22'
+  categories:
+  - eess.AS
+  - cs.AI
+  - cs.LG
+  - cs.SD
+  abstract: Recent advancements in Neural Audio Codec (NAC) models have inspired their use in various
+    speech processing tasks, including speech enhancement (SE). In this work, we propose a novel, efficient
+    SE approach by leveraging the pre-quantization output of a pretrained NAC encoder. Unlike prior NAC-based
+    SE methods, which process discrete speech tokens using Language Models (LMs), we perform SE within
+    the continuous embedding space of the pretrained NAC, which is highly compressed along the time dimension
+    for efficient representation. Our lightweight SE model, optimized through an embedding-level loss,
+    delivers results comparable to SE baselines trained on larger datasets, with a significantly lower
+    real-time factor of 0.005. Additionally, our method achieves a low GMAC of 3.94, reducing complexity
+    18-fold compared to Sepformer in a simulated cloud-based audio transmission environment. This work
+    highlights a new, efficient NAC-based SE solution, particularly suitable for cloud applications where
+    NAC is used to compress audio before transmission. Copyright 20XX IEEE. Personal use of this material
+    is permitted. Permission from IEEE must be obtained for all other uses, in any current or future media,
+    including reprinting/republishing this material for advertising or promotional purposes, creating
+    new collective works, for resale or redistribution to servers or lists, or reuse of any copyrighted
+    component of this work in other works.
+  url: https://arxiv.org/abs/2502.16240
+  pdf_url: https://arxiv.org/pdf/2502.16240v1
+  version: v1
+fetched: '2026-11-14'

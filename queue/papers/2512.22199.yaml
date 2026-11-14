@@ -1,0 +1,31 @@
+id: paper:arxiv:2512.22199
+status: skipped
+score: 1
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 1
+  weight: 1
+meta:
+  title: 'Bidirectional RAG: Safe Self-Improving Retrieval-Augmented Generation Through Multi-Stage Validation'
+  authors:
+  - Teja Chinthala
+  published: '2025-12-20'
+  updated: '2025-12-20'
+  categories:
+  - cs.AI
+  abstract: Retrieval-Augmented Generation RAG systems enhance large language models by grounding responses
+    in external knowledge bases, but conventional RAG architectures operate with static corpora that cannot
+    evolve from user interactions. We introduce Bidirectional RAG, a novel RAG architecture that enables
+    safe corpus expansion through validated write back of high quality generated responses. Our system
+    employs a multi stage acceptance layer combining grounding verification (NLI based entailment, attribution
+    checking, and novelty detection to prevent hallucination pollution while enabling knowledge accumulation.
+    Across four datasets Natural Questions, TriviaQA, HotpotQA, Stack Overflow with three random seeds
+    12 experiments per system, Bidirectional RAG achieves 40.58% average coverage nearly doubling Standard
+    RAG 20.33% while adding 72% fewer documents than naive write back 140 vs 500. Our work demonstrates
+    that self improving RAG is feasible and safe when governed by rigorous validation, offering a practical
+    path toward RAG systems that learn from deployment.
+  url: https://arxiv.org/abs/2512.22199
+  pdf_url: https://arxiv.org/pdf/2512.22199v1
+  version: v1
+fetched: '2026-11-14'

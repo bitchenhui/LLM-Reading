@@ -1,0 +1,47 @@
+id: paper:arxiv:2412.00437
+status: pending
+score: 4
+track: video_image_coding
+matched:
+- ref: concept:EntropyModel
+  count: 2
+  weight: 1
+- ref: metric:MS-SSIM
+  count: 1
+  weight: 1
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+- ref: metric:SSIM
+  count: 1
+  weight: 1
+meta:
+  title: 'DeepFGS: Fine-Grained Scalable Coding for Learned Image Compression'
+  authors:
+  - Yongqi Zhai
+  - Yi Ma
+  - Luyang Tang
+  - Wei Jiang
+  - Ronggang Wang
+  published: '2024-11-30'
+  updated: '2024-11-30'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: 'Scalable coding, which can adapt to channel bandwidth variation, performs well in today''s
+    complex network environment. However, most existing scalable compression methods face two challenges:
+    reduced compression performance and insufficient scalability. To overcome the above problems, this
+    paper proposes a learned fine-grained scalable image compression framework, namely DeepFGS. Specifically,
+    we introduce a feature separation backbone to divide the image information into basic and scalable
+    features, then redistribute the features channel by channel through an information rearrangement strategy.
+    In this way, we can generate a continuously scalable bitstream via one-pass encoding. For entropy
+    coding, we design a mutual entropy model to fully explore the correlation between the basic and scalable
+    features. In addition, we reuse the decoder to reduce the parameters and computational complexity.
+    Experiments demonstrate that our proposed DeepFGS outperforms previous learning-based scalable image
+    compression models and traditional scalable image codecs in both PSNR and MS-SSIM metrics.'
+  url: https://arxiv.org/abs/2412.00437
+  pdf_url: https://arxiv.org/pdf/2412.00437v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 20
+citation_year: 2022

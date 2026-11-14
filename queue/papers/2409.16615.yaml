@@ -1,0 +1,45 @@
+id: paper:arxiv:2409.16615
+status: skipped_low_citation
+score: 2
+track: immersive_media
+matched:
+- ref: concept:VolumetricVideo
+  count: 2
+  weight: 1
+- ref: concept:QoE
+  count: 1
+  weight: 1
+meta:
+  title: 'DeformStream: Deformation-based Adaptive Volumetric Video Streaming'
+  authors:
+  - Boyan Li
+  - Yongting Chen
+  - Dayou Zhang
+  - Fangxin Wang
+  published: '2024-09-25'
+  updated: '2024-09-25'
+  categories:
+  - cs.CV
+  abstract: Volumetric video streaming offers immersive 3D experiences but faces significant challenges
+    due to high bandwidth requirements and latency issues in transmitting detailed content in real time.
+    Traditional methods like point cloud streaming compromise visual quality when zoomed in, and neural
+    rendering techniques are too computationally intensive for real-time use. Though mesh-based streaming
+    stands out by preserving surface detail and connectivity, offering a more refined representation for
+    3D content, traditional mesh streaming methods typically transmit data on a per-frame basis, failing
+    to take full advantage of temporal redundancies across frames. This results in inefficient bandwidth
+    usage and poor adaptability to fluctuating network conditions. We introduce Deformation-based Adaptive
+    Volumetric Video Streaming, a novel framework that enhances volumetric video streaming performance
+    by leveraging the inherent deformability of mesh-based representations. DeformStream uses embedded
+    deformation to reconstruct subsequent frames from inter-frame motion, significantly reducing bandwidth
+    usage while ensuring visual coherence between frames. To address frame reconstruction overhead and
+    network adaptability, we formulate a new QoE model that accounts for client-side deformation latency
+    and design a dynamic programming algorithm to optimize the trade-off between visual quality and bandwidth
+    consumption under varying network conditions. Our evaluation demonstrates that Deformation-based Adaptive
+    Volumetric Video Streaming outperforms existing mesh-based streaming systems in both bandwidth efficiency
+    and visual quality, offering a robust solution for real-time volumetric video applications.
+  url: https://arxiv.org/abs/2409.16615
+  pdf_url: https://arxiv.org/pdf/2409.16615v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 2
+citation_year: 2024

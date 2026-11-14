@@ -1,0 +1,48 @@
+id: paper:arxiv:2401.14007
+status: skipped_low_citation
+score: 4
+track: video_image_coding
+matched:
+- ref: metric:FID
+  count: 1
+  weight: 1
+- ref: metric:MS-SSIM
+  count: 1
+  weight: 1
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+- ref: metric:SSIM
+  count: 1
+  weight: 1
+meta:
+  title: Semantic Ensemble Loss and Latent Refinement for High-Fidelity Neural Image Compression
+  authors:
+  - Daxin Li
+  - Yuanchao Bai
+  - Kai Wang
+  - Junjun Jiang
+  - Xianming Liu
+  published: '2024-01-25'
+  updated: '2024-10-25'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: Recent advancements in neural compression have surpassed traditional codecs in PSNR and MS-SSIM
+    measurements. However, at low bit-rates, these methods can introduce visually displeasing artifacts,
+    such as blurring, color shifting, and texture loss, thereby compromising perceptual quality of images.
+    To address these issues, this study presents an enhanced neural compression method designed for optimal
+    visual fidelity. We have trained our model with a sophisticated semantic ensemble loss, integrating
+    Charbonnier loss, perceptual loss, style loss, and a non-binary adversarial loss, to enhance the perceptual
+    quality of image reconstructions. Additionally, we have implemented a latent refinement process to
+    generate content-aware latent codes. These codes adhere to bit-rate constraints, balance the trade-off
+    between distortion and fidelity, and prioritize bit allocation to regions of greater importance. Our
+    empirical findings demonstrate that this approach significantly improves the statistical fidelity
+    of neural image compression. On CLIC2024 validation set, our approach achieves a 62% bitrate saving
+    compared to MS-ILLM under FID metric.
+  url: https://arxiv.org/abs/2401.14007
+  pdf_url: https://arxiv.org/pdf/2401.14007v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 2
+citation_year: 2024

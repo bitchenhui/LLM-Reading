@@ -1,0 +1,40 @@
+id: paper:arxiv:2510.07283
+status: pending
+score: 4
+track: video_image_coding
+matched:
+- ref: impl:DCVC-FM
+  count: 1
+  weight: 3
+- ref: metric:BD-Rate
+  count: 1
+  weight: 1
+meta:
+  title: Content-Adaptive Inference for State-of-the-art Learned Video Compression
+  authors:
+  - Ahmet Bilican
+  - M. Akın Yılmaz
+  - A. Murat Tekalp
+  published: '2025-10-08'
+  updated: '2025-10-10'
+  categories:
+  - eess.IV
+  abstract: 'While the BD-rate performance of recent learned video codec models in both low-delay and
+    random-access modes exceed that of respective modes of traditional codecs on average over common benchmarks,
+    the performance improvements for individual videos with complex/large motions is much smaller compared
+    to scenes with simple motion. This is related to the inability of a learned encoder model to generalize
+    to motion vector ranges that have not been seen in the training set, which causes loss of performance
+    in both coding of flow fields as well as frame prediction and coding. As a remedy, we propose a generic
+    (model-agnostic) framework to control the scale of motion vectors in a scene during inference (encoding)
+    to approximately match the range of motion vectors in the test and training videos by adaptively downsampling
+    frames. This results in down-scaled motion vectors enabling: i) better flow estimation; hence, frame
+    prediction and ii) more efficient flow compression. We show that the proposed framework for content-adaptive
+    inference improves the BD-rate performance of already state-of-the-art low-delay video codec DCVC-FM
+    by up to 41\% on individual videos without any model fine tuning. We present ablation studies to show
+    measures of motion and scene complexity can be used to predict the effectiveness of the proposed framework.'
+  url: https://arxiv.org/abs/2510.07283
+  pdf_url: https://arxiv.org/pdf/2510.07283v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 6
+citation_year: 2025

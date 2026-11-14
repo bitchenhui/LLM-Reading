@@ -1,0 +1,46 @@
+id: paper:arxiv:2509.10704
+status: pending
+score: 2
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: 'Maestro: Self-Improving Text-to-Image Generation via Agent Orchestration'
+  authors:
+  - Xingchen Wan
+  - Han Zhou
+  - Ruoxi Sun
+  - Hootan Nakhost
+  - Ke Jiang
+  - Rajarishi Sinha
+  - Sercan Ö. Arık
+  published: '2025-09-12'
+  updated: '2025-09-12'
+  categories:
+  - cs.AI
+  - cs.CV
+  abstract: 'Text-to-image (T2I) models, while offering immense creative potential, are highly reliant
+    on human intervention, posing significant usability challenges that often necessitate manual, iterative
+    prompt engineering over often underspecified prompts. This paper introduces Maestro, a novel self-evolving
+    image generation system that enables T2I models to autonomously self-improve generated images through
+    iterative evolution of prompts, using only an initial prompt. Maestro incorporates two key innovations:
+    1) self-critique, where specialized multimodal LLM (MLLM) agents act as ''critics'' to identify weaknesses
+    in generated images, correct for under-specification, and provide interpretable edit signals, which
+    are then integrated by a ''verifier'' agent while preserving user intent; and 2) self-evolution, utilizing
+    MLLM-as-a-judge for head-to-head comparisons between iteratively generated images, eschewing problematic
+    images, and evolving creative prompt candidates that align with user intents. Extensive experiments
+    on complex T2I tasks using black-box models demonstrate that Maestro significantly improves image
+    quality over initial prompts and state-of-the-art automated methods, with effectiveness scaling with
+    more advanced MLLM components. This work presents a robust, interpretable, and effective pathway towards
+    self-improving T2I generation.'
+  url: https://arxiv.org/abs/2509.10704
+  pdf_url: https://arxiv.org/pdf/2509.10704v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 20
+citation_year: 2025

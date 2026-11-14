@@ -1,0 +1,32 @@
+id: paper:arxiv:2310.11265
+status: skipped
+score: 1
+track: video_image_coding
+matched:
+- ref: dataset:Kodak
+  count: 1
+  weight: 1
+meta:
+  title: Image Compression using only Attention based Neural Networks
+  authors:
+  - Natacha Luka
+  - Romain Negrel
+  - David Picard
+  published: '2023-10-17'
+  updated: '2023-10-17'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: In recent research, Learned Image Compression has gained prominence for its capacity to outperform
+    traditional handcrafted pipelines, especially at low bit-rates. While existing methods incorporate
+    convolutional priors with occasional attention blocks to address long-range dependencies, recent advances
+    in computer vision advocate for a transformative shift towards fully transformer-based architectures
+    grounded in the attention mechanism. This paper investigates the feasibility of image compression
+    exclusively using attention layers within our novel model, QPressFormer. We introduce the concept
+    of learned image queries to aggregate patch information via cross-attention, followed by quantization
+    and coding techniques. Through extensive evaluations, our work demonstrates competitive performance
+    achieved by convolution-free architectures across the popular Kodak, DIV2K, and CLIC datasets.
+  url: https://arxiv.org/abs/2310.11265
+  pdf_url: https://arxiv.org/pdf/2310.11265v1
+  version: v1
+fetched: '2026-11-14'

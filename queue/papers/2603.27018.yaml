@@ -1,0 +1,35 @@
+id: paper:arxiv:2603.27018
+status: skipped
+score: 1
+track: processing_enhancement
+matched:
+- ref: concept:SuperResolution
+  count: 3
+  weight: 1
+meta:
+  title: On-Device Super Resolution Imaging Using Low-Cost SPAD Array and Embedded Lightweight Deep Learning
+  authors:
+  - Zhenya Zang
+  - Xingda Li
+  - David Day Uei Li
+  published: '2026-03-27'
+  updated: '2026-03-27'
+  categories:
+  - eess.IV
+  - cs.LG
+  abstract: This work presents a lightweight super-resolution (LiteSR) neural network for depth and intensity
+    images acquired from a consumer-grade single-photon avalanche diode (SPAD) array with a 48x32 spatial
+    resolution. The proposed framework reconstructs high-resolution (HR) images of size 256x256. Both
+    synthetic and real datasets are used for performance evaluation. Extensive quantitative metrics demonstrate
+    high reconstruction fidelity on synthetic datasets, while experiments on real indoor and outdoor measurements
+    further confirm the robustness of the proposed approach. Moreover, the SPAD sensor is interfaced with
+    an Arduino UNO Q microcontroller, which receives low-resolution (LR) depth and intensity images and
+    feeds them into a compressed, pre-trained deep learning (DL) model, enabling real-time SR video streaming.
+    In addition to the 256x256 setting, a range of target HR resolutions is evaluated to determine the
+    maximum achievable upscaling resolution (512x512) with LiteSR, including scenarios with noise-corrupted
+    LR inputs. The proposed LiteSR-embedded system co-design provides a scalable, cost-effective solution
+    to enhance the spatial resolution of current consumer-grade SPAD arrays to meet HR imaging requirements.
+  url: https://arxiv.org/abs/2603.27018
+  pdf_url: https://arxiv.org/pdf/2603.27018v1
+  version: v1
+fetched: '2026-11-14'

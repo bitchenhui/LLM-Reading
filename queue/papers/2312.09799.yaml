@@ -1,0 +1,43 @@
+id: paper:arxiv:2312.09799
+status: skipped_low_citation
+score: 4
+track: video_image_coding
+matched:
+- ref: codec:VVC
+  count: 1
+  weight: 3
+- ref: concept:IQA
+  count: 2
+  weight: 1
+meta:
+  title: 'IQNet: Image Quality Assessment Guided Just Noticeable Difference Prefiltering For Versatile
+    Video Coding'
+  authors:
+  - Yu-Han Sun
+  - Chiang Lo-Hsuan Lee
+  - Tian-Sheuan Chang
+  published: '2023-12-15'
+  updated: '2023-12-15'
+  categories:
+  - eess.IV
+  - cs.AI
+  - cs.CV
+  abstract: Image prefiltering with just noticeable distortion (JND) improves coding efficiency in a visual
+    lossless way by filtering the perceptually redundant information prior to compression. However, real
+    JND cannot be well modeled with inaccurate masking equations in traditional approaches or image-level
+    subject tests in deep learning approaches. Thus, this paper proposes a fine-grained JND prefiltering
+    dataset guided by image quality assessment for accurate block-level JND modeling. The dataset is constructed
+    from decoded images to include coding effects and is also perceptually enhanced with block overlap
+    and edge preservation. Furthermore, based on this dataset, we propose a lightweight JND prefiltering
+    network, IQNet, which can be applied directly to different quantization cases with the same model
+    and only needs 3K parameters. The experimental results show that the proposed approach to Versatile
+    Video Coding could yield maximum/average bitrate savings of 41\%/15\% and 53\%/19\% for all-intra
+    and low-delay P configurations, respectively, with negligible subjective quality loss. Our method
+    demonstrates higher perceptual quality and a model size that is an order of magnitude smaller than
+    previous deep learning methods.
+  url: https://arxiv.org/abs/2312.09799
+  pdf_url: https://arxiv.org/pdf/2312.09799v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 3
+citation_year: 2023

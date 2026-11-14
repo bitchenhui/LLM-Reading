@@ -1,0 +1,33 @@
+id: paper:arxiv:2601.13055
+status: skipped
+score: 1
+track: audio_coding
+matched:
+- ref: concept:WebRTC
+  count: 1
+  weight: 1
+meta:
+  title: 'VoCodec: An Efficient Lightweight Low-Bitrate Speech Codec'
+  authors:
+  - Leyan Yang
+  - Ronghui Hu
+  - Yang Xu
+  - Jing Lu
+  published: '2026-01-19'
+  updated: '2026-01-19'
+  categories:
+  - eess.AS
+  abstract: Recent advancements in end-to-end neural speech codecs enable compressing audio at extremely
+    low bitrates while maintaining high-fidelity reconstruction. Meanwhile, low computational complexity
+    and low latency are crucial for real-time communication. In this paper, we propose VoCodec, a speech
+    codec model featuring a computational complexity of only 349.29M multiply-accumulate operations per
+    second (MACs/s) and a latency of 30 ms. With the competitive vocoder Vocos as its backbone, the proposed
+    model ranked fourth on Track 1 in the 2025 LRAC Challenge and achieved the highest subjective evaluation
+    score (MUSHRA) on the clean speech test set. Additionally, we cascade a lightweight neural network
+    at the front end to extend its capability of speech enhancement. Experimental results demonstrate
+    that the two systems achieve competitive performance across multiple evaluation metrics. Speech samples
+    can be found at https://acceleration123.github.io/.
+  url: https://arxiv.org/abs/2601.13055
+  pdf_url: https://arxiv.org/pdf/2601.13055v1
+  version: v1
+fetched: '2026-11-14'

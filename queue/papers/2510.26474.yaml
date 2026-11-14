@@ -1,0 +1,44 @@
+id: paper:arxiv:2510.26474
+status: skipped
+score: 1
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+meta:
+  title: Counteracting Matthew Effect in Self-Improvement of LVLMs through Head-Tail Re-balancing
+  authors:
+  - Xin Guo
+  - Zhiheng Xi
+  - Yiwen Ding
+  - Yitao Zhai
+  - Xiaowei Shi
+  - Xunliang Cai
+  - Tao Gui
+  - Qi Zhang
+  - Xuanjing Huang
+  published: '2025-10-30'
+  updated: '2025-10-30'
+  categories:
+  - cs.CV
+  - cs.AI
+  - cs.CL
+  - cs.LG
+  abstract: 'Self-improvement has emerged as a mainstream paradigm for advancing the reasoning capabilities
+    of large vision-language models (LVLMs), where models explore and learn from successful trajectories
+    iteratively. However, we identify a critical issue during this process: the model excels at generating
+    high-quality trajectories for simple queries (i.e., head data) but struggles with more complex ones
+    (i.e., tail data). This leads to an imbalanced optimization that drives the model to prioritize simple
+    reasoning skills, while hindering its ability to tackle more complex reasoning tasks. Over iterations,
+    this imbalance becomes increasingly pronounced--a dynamic we term the "Matthew effect"--which ultimately
+    hinders further model improvement and leads to performance bottlenecks. To counteract this challenge,
+    we introduce four efficient strategies from two perspectives: distribution-reshaping and trajectory-resampling,
+    to achieve head-tail re-balancing during the exploration-and-learning self-improvement process. Extensive
+    experiments on Qwen2-VL-7B-Instruct and InternVL2.5-4B models across visual reasoning tasks demonstrate
+    that our methods consistently improve visual reasoning capabilities, outperforming vanilla self-improvement
+    by 3.86 points on average.'
+  url: https://arxiv.org/abs/2510.26474
+  pdf_url: https://arxiv.org/pdf/2510.26474v1
+  version: v1
+fetched: '2026-11-14'

@@ -1,0 +1,35 @@
+id: paper:arxiv:2504.16953
+status: skipped
+score: 0
+track: video_image_coding
+matched: []
+meta:
+  title: 'TVC: Tokenized Video Compression with Ultra-Low Bit Rate'
+  authors:
+  - Lebin Zhou
+  - Cihan Ruan
+  - Nam Ling
+  - Zhenghao Chen
+  - Wei Wang
+  - Wei Jiang
+  published: '2025-04-22'
+  updated: '2025-11-19'
+  categories:
+  - eess.IV
+  abstract: Tokenized visual representations have shown promise in image compression, yet their extension
+    to video remains underexplored due to the challenges posed by complex temporal dynamics and stringent
+    bit rate constraints. In this paper, we present tokenized video compression (TVC), a token-based dual-stream
+    framework designed to operate effectively at ultra-low bit rates. TVC leverages the Cosmos video tokenizer
+    to extract both discrete and continuous token streams. The discrete tokens are partially masked using
+    a strategic masking scheme and then compressed losslessly with a discrete checkerboard context model
+    to reduce transmission overhead. The masked tokens are reconstructed by a decoder-only Transformer
+    with spatiotemporal token prediction. In parallel, the continuous tokens are quantized and compressed
+    using a continuous checkerboard context model, providing complementary continuous information at ultra-low
+    bit rates. At the decoder side, the two streams are fused with a ControlNet-based multi-scale integration
+    module, ensuring high perceptual quality alongside stable fidelity in reconstruction. Overall, this
+    work illustrates the practicality of tokenized video compression and points to new directions for
+    semantics-aware, token-native approaches.
+  url: https://arxiv.org/abs/2504.16953
+  pdf_url: https://arxiv.org/pdf/2504.16953v4
+  version: v4
+fetched: '2026-11-14'

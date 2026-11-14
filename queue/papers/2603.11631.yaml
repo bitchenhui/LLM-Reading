@@ -1,0 +1,39 @@
+id: paper:arxiv:2603.11631
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'VisDoT : Enhancing Visual Reasoning through Human-Like Interpretation Grounding and Decomposition
+    of Thought'
+  authors:
+  - Eunsoo Lee
+  - Jeongwoo Lee
+  - Minki Hong
+  - Jangho Choi
+  - Jihie Kim
+  published: '2026-03-12'
+  updated: '2026-03-12'
+  categories:
+  - cs.AI
+  - cs.CV
+  abstract: Large vision-language models (LVLMs) struggle to reliably detect visual primitives in charts
+    and align them with semantic representations, which severely limits their performance on complex visual
+    reasoning. This lack of perceptual grounding constitutes a major bottleneck for chart-based reasoning.
+    We propose VisDoT, a framework that enhances visual reasoning through human-like interpretation grounding.
+    We formalize four perceptual tasks based on the theory of graphical perception, including position
+    and length. Building on this foundation, we introduce Decomposition-of-Thought (DoT) prompting, which
+    sequentially separates questions into visual perception sub-questions and logic sub-questions. Fine-tuning
+    InternVL with VisDoT achieves a +11.2% improvement on ChartQA and surpasses GPT-4o on the more challenging
+    ChartQAPro benchmark. On the newly introduced VisDoTQA benchmark, the model improves by +33.2%. Furthermore,
+    consistent zero-shot gains on diverse open-domain VQA benchmarks confirm the generalizability of the
+    perception-logic separation strategy for visual question answering. VisDoT leverages human-like perception
+    to enhance visual grounding, achieving state-of-the-art chart understanding and interpretable visual
+    reasoning.
+  url: https://arxiv.org/abs/2603.11631
+  pdf_url: https://arxiv.org/pdf/2603.11631v1
+  version: v1
+fetched: '2026-11-14'

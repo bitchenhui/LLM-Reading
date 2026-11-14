@@ -1,0 +1,47 @@
+id: paper:arxiv:2402.01271
+status: pending
+score: 5
+track: audio_coding
+matched:
+- ref: codec:Opus
+  count: 1
+  weight: 3
+- ref: concept:NeuralAudioCodec
+  count: 1
+  weight: 1
+- ref: concept:WebRTC
+  count: 1
+  weight: 1
+meta:
+  title: An Intra-BRNN and GB-RVQ Based END-TO-END Neural Audio Codec
+  authors:
+  - Linping Xu
+  - Jiawei Jiang
+  - Dejun Zhang
+  - Xianjun Xia
+  - Li Chen
+  - Yijian Xiao
+  - Piao Ding
+  - Shenyi Song
+  - Sixing Yin
+  - Ferdous Sohel
+  published: '2024-02-02'
+  updated: '2024-02-02'
+  categories:
+  - eess.AS
+  - cs.SD
+  abstract: Recently, neural networks have proven to be effective in performing speech coding task at
+    low bitrates. However, under-utilization of intra-frame correlations and the error of quantizer specifically
+    degrade the reconstructed audio quality. To improve the coding quality, we present an end-to-end neural
+    speech codec, namely CBRC (Convolutional and Bidirectional Recurrent neural Codec). An interleaved
+    structure using 1D-CNN and Intra-BRNN is designed to exploit the intra-frame correlations more efficiently.
+    Furthermore, Group-wise and Beam-search Residual Vector Quantizer (GB-RVQ) is used to reduce the quantization
+    noise. CBRC encodes audio every 20ms with no additional latency, which is suitable for real-time communication.
+    Experimental results demonstrate the superiority of the proposed codec when comparing CBRC at 3kbps
+    with Opus at 12kbps.
+  url: https://arxiv.org/abs/2402.01271
+  pdf_url: https://arxiv.org/pdf/2402.01271v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 14
+citation_year: 2023

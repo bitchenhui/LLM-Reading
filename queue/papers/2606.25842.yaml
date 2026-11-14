@@ -1,0 +1,39 @@
+id: paper:arxiv:2606.25842
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: Graph it first! Enabling Reasoning on Long-form Egocentric Videos through Scene Graphs
+  authors:
+  - Agnese Taluzzi
+  - Riccardo Santambrogio
+  - Simone Mentasti
+  - Chiara Plizzari
+  - Matteo Matteucci
+  published: '2026-06-24'
+  updated: '2026-07-02'
+  categories:
+  - cs.CV
+  abstract: Existing multi-modal large language models (MLLMs) face significant challenges in processing
+    long video sequences due to strict input token limitations. As a result, current video understanding
+    approaches, especially in egocentric settings characterized by complex dynamics, frequent state changes,
+    and moving cameras, are forced to massively subsample frames. This leads to severe loss of temporal
+    and contextual information, constraining their ability to perform fine-grained video reasoning. In
+    this work, we introduce a framework for egocentric video question answering (VQA) that overcomes these
+    input constraints through Egocentric Scene Graphs (EgoSGs), i.e., temporally grounded, structured
+    representations that capture objects, attributes, spatial relations, and interactions over time. By
+    representing videos as compact, text-based scene graphs, our method preserves the essential visual
+    and temporal information of the original video in a symbolic form that drastically reduces input length
+    while maintaining semantic richness. Crucially, this enables MLLMs to reason efficiently over entire
+    video sequences within their token budget. On HD-EPIC VQA, our method achieves state-of-the-art results,
+    outperforming strong video-based baselines on multiple models and suggesting that structured, temporally
+    grounded representations like EgoSGs can bridge long-form egocentric video understanding and the context
+    limitations of today's MLLMs.
+  url: https://arxiv.org/abs/2606.25842
+  pdf_url: https://arxiv.org/pdf/2606.25842v2
+  version: v2
+fetched: '2026-11-14'

@@ -1,0 +1,43 @@
+id: paper:arxiv:2405.16265
+status: skipped
+score: 1
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+meta:
+  title: 'MindStar: Enhancing Math Reasoning in Pre-trained LLMs at Inference Time'
+  authors:
+  - Jikun Kang
+  - Xin Zhe Li
+  - Xi Chen
+  - Amirreza Kazemi
+  - Qianyi Sun
+  - Boxing Chen
+  - Dong Li
+  - Xu He
+  - Quan He
+  - Feng Wen
+  - Jianye Hao
+  - Jun Yao
+  published: '2024-05-25'
+  updated: '2024-06-26'
+  categories:
+  - cs.LG
+  abstract: Although Large Language Models (LLMs) achieve remarkable performance across various tasks,
+    they often struggle with complex reasoning tasks, such as answering mathematical questions. Recent
+    efforts to address this issue have primarily focused on leveraging mathematical datasets through supervised
+    fine-tuning or self-improvement techniques. However, these methods often depend on high-quality datasets
+    that are difficult to prepare, or they require substantial computational resources for fine-tuning.
+    Inspired by findings that LLMs know how to produce the right answer but struggle to select the correct
+    reasoning path, we propose a purely inference-based searching method -- MindStar (M*). This method
+    formulates reasoning tasks as searching problems and proposes two search ideas to identify the optimal
+    reasoning paths. We evaluate the M* framework on both the GSM8K and MATH datasets, comparing its performance
+    with existing open and closed-source LLMs. Our results demonstrate that M* significantly enhances
+    the reasoning abilities of open-source models, such as Llama-2-13B and Mistral-7B, and achieves comparable
+    performance to GPT-3.5 and Grok-1, but with substantially reduced model size and computational costs.
+  url: https://arxiv.org/abs/2405.16265
+  pdf_url: https://arxiv.org/pdf/2405.16265v4
+  version: v4
+fetched: '2026-11-14'

@@ -1,0 +1,45 @@
+id: paper:arxiv:2608.05757
+status: pending
+score: 2
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+- ref: concept:TrainingFree
+  count: 1
+  weight: 1
+meta:
+  title: 'Beyond Relevance: Bayesian Evidence Acquisition for Agentic Whole-Slide Image Reasoning'
+  authors:
+  - Bryan Wong
+  - Xun Xu
+  - Huazhu Fu
+  - Nancy F. Chen
+  - Mun Yong Yi
+  published: '2026-08-06'
+  updated: '2026-08-06'
+  categories:
+  - cs.CV
+  abstract: Whole-slide image (WSI) reasoning requires an agent to sequentially acquire visual evidence
+    before answering a diagnostic question. Existing training-free agentic frameworks formulate this process
+    as iterative patch retrieval based on semantic relevance to the question. However, semantic relevance
+    does not necessarily imply diagnostic informativeness in computational pathology, where competing
+    diagnoses often exhibit similar and overlapping morphological patterns, making many patches semantically
+    relevant yet diagnostically non-discriminative. Consequently, relevance-based retrieval may acquire
+    redundant observations and leave diagnostic uncertainty unresolved. We propose BEACON, a plug-and-play
+    agentic framework that reformulates WSI reasoning as a Bayesian evidence acquisition problem. BEACON
+    maintains a probabilistic belief over competing diagnostic hypotheses and sequentially acquires patches
+    by maximizing expected information gain (EIG) to reduce diagnostic uncertainty. An evidence controller
+    then determines whether to answer, acquire additional evidence, or perform higher-resolution inspection.
+    Built entirely from off-the-shelf foundation models, BEACON requires no additional training or fine-tuning.
+    Extensive zero-shot experiments across five WSI-VQA benchmarks demonstrate that BEACON achieves the
+    strongest overall performance among training-free agentic frameworks while substantially improving
+    evidence acquisition efficiency, establishing Bayesian evidence acquisition as a principled paradigm
+    for uncertainty-aware agentic WSI reasoning. The code is available at https://github.com/bryanwong17/BEACON
+  url: https://arxiv.org/abs/2608.05757
+  pdf_url: https://arxiv.org/pdf/2608.05757v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 2
+citation_year: 2026

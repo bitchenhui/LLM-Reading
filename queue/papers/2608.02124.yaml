@@ -1,0 +1,47 @@
+id: paper:arxiv:2608.02124
+status: pending
+score: 2
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: 'HAFI-VLM: A Frequency Perspective for Diagnosing and Enhancing Visual Perception in Vision-Language
+    Models'
+  authors:
+  - Jin Cui
+  - Chuanchang Su
+  - Jiayi Lu
+  - Xinyue Long
+  - Boran Zhao
+  - Pengju Ren
+  published: '2026-08-03'
+  updated: '2026-08-03'
+  categories:
+  - cs.CV
+  - cs.CL
+  abstract: 'Vision-language models (VLMs) remain unreliable when predictions require fine-grained visual
+    evidence. We identify a previously overlooked cause: spectral response rigidity. Despite substantial
+    frequency variation across images and tasks, pretrained vision encoders exhibit persistent, encoder-specific
+    layerwise spectral profiles that change only marginally under downstream fine-tuning. Since pretrained
+    vision encoders only receive images, they cannot adapt spectral extraction to the evidence required
+    by the current query. We therefore propose HAFI-VLM, which introduces a task-conditioned frequency
+    pathway while preserving the pretrained semantic representation. Hierarchical Adaptive Frequency Injection
+    (HAFI) retrieves complementary low-, mid-, and high-frequency evidence at multiple encoder depths
+    using text-modulated, spatially aligned cross-attention. A Visual Enrichment Layer Adapter further
+    recalibrates shallow LLM attention to effectively utilize the enriched visual tokens. Experiments
+    on LLaVA-1.5 and Qwen2.5-VL demonstrate consistent improvements in general VQA, text-rich understanding,
+    and hallucination robustness, outperforming representation-level enhancement methods and most resolution-
+    or cropping-based approaches without additional high-resolution encoding. Mechanistic analyses show
+    that HAFI restores task-dependent spectral allocation while retaining semantic attention, establishing
+    frequency enrichment as a distinct and effective route for improving VLM perception.'
+  url: https://arxiv.org/abs/2608.02124
+  pdf_url: https://arxiv.org/pdf/2608.02124v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 0
+citation_year: 2026

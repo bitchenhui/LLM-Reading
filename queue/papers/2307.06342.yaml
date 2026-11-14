@@ -1,0 +1,50 @@
+id: paper:arxiv:2307.06342
+status: pending
+score: 8
+track: video_image_coding
+matched:
+- ref: codec:VVC
+  count: 2
+  weight: 3
+- ref: impl:VTM
+  count: 1
+  weight: 3
+- ref: metric:BD-Rate
+  count: 1
+  weight: 1
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+meta:
+  title: 'ConvNeXt-ChARM: ConvNeXt-based Transform for Efficient Neural Image Compression'
+  authors:
+  - Ahmed Ghorbel
+  - Wassim Hamidouche
+  - Luce Morin
+  published: '2023-07-12'
+  updated: '2023-07-12'
+  categories:
+  - cs.CV
+  - eess.IV
+  abstract: Over the last few years, neural image compression has gained wide attention from research
+    and industry, yielding promising end-to-end deep neural codecs outperforming their conventional counterparts
+    in rate-distortion performance. Despite significant advancement, current methods, including attention-based
+    transform coding, still need to be improved in reducing the coding rate while preserving the reconstruction
+    fidelity, especially in non-homogeneous textured image areas. Those models also require more parameters
+    and a higher decoding time. To tackle the above challenges, we propose ConvNeXt-ChARM, an efficient
+    ConvNeXt-based transform coding framework, paired with a compute-efficient channel-wise auto-regressive
+    prior to capturing both global and local contexts from the hyper and quantized latent representations.
+    The proposed architecture can be optimized end-to-end to fully exploit the context information and
+    extract compact latent representation while reconstructing higher-quality images. Experimental results
+    on four widely-used datasets showed that ConvNeXt-ChARM brings consistent and significant BD-rate
+    (PSNR) reductions estimated on average to 5.24% and 1.22% over the versatile video coding (VVC) reference
+    encoder (VTM-18.0) and the state-of-the-art learned image compression method SwinT-ChARM, respectively.
+    Moreover, we provide model scaling studies to verify the computational efficiency of our approach
+    and conduct several objective and subjective analyses to bring to the fore the performance gap between
+    the next generation ConvNet, namely ConvNeXt, and Swin Transformer.
+  url: https://arxiv.org/abs/2307.06342
+  pdf_url: https://arxiv.org/pdf/2307.06342v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 8
+citation_year: 2023

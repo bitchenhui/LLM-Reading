@@ -1,0 +1,39 @@
+id: paper:arxiv:2508.01467
+status: skipped
+score: 0
+track: audio_coding
+matched: []
+meta:
+  title: Multi-Granularity Adaptive Time-Frequency Attention Framework for Audio Deepfake Detection under
+    Real-World Communication Degradations
+  authors:
+  - Haohan Shi
+  - Xiyu Shi
+  - Safak Dogan
+  - Tianjin Huang
+  - Yunxiao Zhang
+  published: '2025-08-02'
+  updated: '2025-08-02'
+  categories:
+  - eess.AS
+  abstract: The rise of highly convincing synthetic speech poses a growing threat to audio communications.
+    Although existing Audio Deepfake Detection (ADD) methods have demonstrated good performance under
+    clean conditions, their effectiveness drops significantly under degradations such as packet losses
+    and speech codec compression in real-world communication environments. In this work, we propose the
+    first unified framework for robust ADD under such degradations, which is designed to effectively accommodate
+    multiple types of Time-Frequency (TF) representations. The core of our framework is a novel Multi-Granularity
+    Adaptive Attention (MGAA) architecture, which employs a set of customizable multi-scale attention
+    heads to capture both global and local receptive fields across varying TF granularities. A novel adaptive
+    fusion mechanism subsequently adjusts and fuses these attention branches based on the saliency of
+    TF regions, allowing the model to dynamically reallocate its focus according to the characteristics
+    of the degradation. This enables the effective localization and amplification of subtle forgery traces.
+    Extensive experiments demonstrate that the proposed framework consistently outperforms state-of-the-art
+    baselines across various real-world communication degradation scenarios, including six speech codecs
+    and five levels of packet losses. In addition, comparative analysis reveals that the MGAA-enhanced
+    features significantly improve separability between real and fake audio classes and sharpen decision
+    boundaries. These results highlight the robustness and practical deployment potential of our framework
+    in real-world communication environments.
+  url: https://arxiv.org/abs/2508.01467
+  pdf_url: https://arxiv.org/pdf/2508.01467v1
+  version: v1
+fetched: '2026-11-14'

@@ -1,0 +1,35 @@
+id: paper:arxiv:2507.07677
+status: skipped
+score: 1
+track: streaming_delivery
+matched:
+- ref: concept:ABR
+  count: 2
+  weight: 1
+meta:
+  title: Can cloud-based VR streaming handle Wi-Fi OBSS contention?
+  authors:
+  - Miguel Casasnovas
+  - Marc Carrascosa-Zamacois
+  - Boris Bellalta
+  published: '2025-07-10'
+  updated: '2026-01-23'
+  categories:
+  - cs.NI
+  abstract: This paper experimentally analyzes the negative impact of contention caused by neighboring
+    Wi-Fi networks operating on overlapping channels on Virtual Reality (VR) streaming over Wi-Fi, focusing
+    on scenarios of partial and full channel overlap within an 80 MHz channel. Our results show that (i)
+    increasing the number of 80 MHz Overlapping Basic Service Sets (OBSSs) intensifies contention and
+    degrades VR streaming performance; (ii) OBSS activity on the secondary-sided 40 MHz portion degrades
+    performance more than activity on the primary-sided 40 MHz portion; (iii) for the same aggregate load,
+    full channel overlap with two 40 MHz OBSS contenders is less detrimental than partial overlap with
+    a single high-load 40 MHz contender, but more disruptive than full overlap with two 80 MHz contenders;
+    and (iv) full channel overlap with two 40 MHz OBSS contenders has a smaller impact on VR streaming
+    under symmetric traffic loads than under asymmetric loads. Moreover, our results demonstrate that
+    our previously proposed Network-aware Step-wise adaptive bitrate algorithm for VR streaming (NeSt-VR)
+    effectively mitigates performance degradation in OBSS environments, enabling VR streaming under heavier
+    OBSS traffic conditions.
+  url: https://arxiv.org/abs/2507.07677
+  pdf_url: https://arxiv.org/pdf/2507.07677v2
+  version: v2
+fetched: '2026-11-14'

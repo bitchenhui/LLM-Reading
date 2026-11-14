@@ -1,0 +1,59 @@
+id: paper:arxiv:2605.25357
+status: pending
+score: 2
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: Towards Reliable Fetal Ultrasound Interpretation with Multi-Agent Collaboration
+  authors:
+  - Xiaotian Hu
+  - Mingxuan Liu
+  - Junwei Huang
+  - Kasidit Anmahapong
+  - Yifei Chen
+  - Yiming Huang
+  - Xuguang Bai
+  - Zihan Li
+  - Hongjia Yang
+  - Yingqi Hao
+  - Hong Xu
+  - Yu Jiang
+  - Tian Tian
+  - Yi Liao
+  - Haibo Qu
+  - Qiyuan Tian
+  published: '2026-05-25'
+  updated: '2026-05-25'
+  categories:
+  - cs.CV
+  - cs.MA
+  abstract: Automated fetal ultrasound interpretation requires a workflow from visual perception, including
+    plane recognition and anatomical segmentation, to clinical understanding, including biometric measurement
+    and diagnostic reporting. However, the prevailing "one-task, one-model" paradigm limits systematic
+    integration of evidence across this multi-step process. Although multimodal large language models
+    (MLLMs) show promising visual understanding, their limited domain-specific grounding and hallucination
+    risks restrict reliability in fetal ultrasound analysis. To address these limitations, we propose
+    FetUSAgents, a tool-augmented multi-agent system for comprehensive fetal ultrasound interpretation,
+    supporting visual question answering (VQA), report generation, image captioning, and video summarization.
+    FetUSAgents coordinates task-specific visual tools through collaborative LLM agents and decomposes
+    clinical queries into subtasks that progress from anatomical recognition to quantitative measurement.
+    We further introduce Dual-Path Evidence Arbitration (DPEA), which integrates LLM-based deliberative
+    reasoning with structured computational evidence from specialized visual tools. A retrieval-enhanced
+    evidence bank consolidates intermediate findings to support traceable and clinically grounded conclusions.
+    In addition, we construct FetUS-VQA, a dedicated VQA benchmark for fetal ultrasound, comprising 1,892
+    images and 3,205 question-answer pairs across 10 clinical tasks. Extensive out-of-distribution experiments
+    show that FetUSAgents outperforms general and medical MLLMs, exceeding the strongest baseline by more
+    than 25 percent in VQA accuracy. These results suggest a scalable route toward evidence-driven clinical
+    assistants for prenatal imaging. Code is available.
+  url: https://arxiv.org/abs/2605.25357
+  pdf_url: https://arxiv.org/pdf/2605.25357v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 0
+citation_year: 2026

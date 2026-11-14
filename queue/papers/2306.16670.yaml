@@ -1,0 +1,54 @@
+id: paper:arxiv:2306.16670
+status: pending
+score: 5
+track: video_image_coding
+matched:
+- ref: codec:VVC
+  count: 2
+  weight: 3
+- ref: metric:BD-Rate
+  count: 1
+  weight: 1
+- ref: org:MPEG
+  count: 1
+  weight: 1
+meta:
+  title: End-to-End Learnable Multi-Scale Feature Compression for VCM
+  authors:
+  - Yeongwoong Kim
+  - Hyewon Jeong
+  - Janghyun Yu
+  - Younhee Kim
+  - Jooyoung Lee
+  - Se Yoon Jeong
+  - Hui Yong Kim
+  published: '2023-06-29'
+  updated: '2023-08-08'
+  categories:
+  - cs.CV
+  - eess.IV
+  abstract: The proliferation of deep learning-based machine vision applications has given rise to a new
+    type of compression, so called video coding for machine (VCM). VCM differs from traditional video
+    coding in that it is optimized for machine vision performance instead of human visual quality. In
+    the feature compression track of MPEG-VCM, multi-scale features extracted from images are subject
+    to compression. Recent feature compression works have demonstrated that the versatile video coding
+    (VVC) standard-based approach can achieve a BD-rate reduction of up to 96% against MPEG-VCM feature
+    anchor. However, it is still sub-optimal as VVC was not designed for extracted features but for natural
+    images. Moreover, the high encoding complexity of VVC makes it difficult to design a lightweight encoder
+    without sacrificing performance. To address these challenges, we propose a novel multi-scale feature
+    compression method that enables both the end-to-end optimization on the extracted features and the
+    design of lightweight encoders. The proposed model combines a learnable compressor with a multi-scale
+    feature fusion network so that the redundancy in the multi-scale features is effectively removed.
+    Instead of simply cascading the fusion network and the compression network, we integrate the fusion
+    and encoding processes in an interleaved way. Our model first encodes a larger-scale feature to obtain
+    a latent representation and then fuses the latent with a smaller-scale feature. This process is successively
+    performed until the smallest-scale feature is fused and then the encoded latent at the final stage
+    is entropy-coded for transmission. The results show that our model outperforms previous approaches
+    by at least 52% BD-rate reduction and has $\times5$ to $\times27$ times less encoding time for object
+    detection...
+  url: https://arxiv.org/abs/2306.16670
+  pdf_url: https://arxiv.org/pdf/2306.16670v3
+  version: v3
+fetched: '2026-11-14'
+citation_count: 45
+citation_year: 2023

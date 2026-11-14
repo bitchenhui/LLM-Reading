@@ -1,0 +1,40 @@
+id: paper:arxiv:2601.03100
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'TGIF: Text-Guided Layer Fusion Mitigates Hallucination in Multimodal LLMs'
+  authors:
+  - Chenchen Lin
+  - Sanbao Su
+  - Rachel Luo
+  - Yuxiao Chen
+  - Yan Wang
+  - Marco Pavone
+  - Fei Miao
+  published: '2026-01-06'
+  updated: '2026-08-09'
+  categories:
+  - cs.CV
+  - cs.AI
+  abstract: 'Multimodal large language models (MLLMs) typically rely on a single late-layer feature from
+    a frozen vision encoder, leaving the encoder''s rich hierarchy of visual cues under-utilized. MLLMs
+    still suffer from visually ungrounded hallucinations, often relying on language priors rather than
+    image evidence. While many prior mitigation strategies operate on the text side, they leave the visual
+    representation unchanged and do not exploit the rich hierarchy of features encoded across vision layers.
+    Existing multi-layer fusion methods partially address this limitation but remain static, applying
+    the same layer mixture regardless of the query. In this work, we introduce TGIF (Text-Guided Inter-layer
+    Fusion), a lightweight module that treats encoder layers as depth-wise "experts" and predicts a prompt-dependent
+    fusion of visual features. TGIF follows the principle of direct external fusion, requires no vision-encoder
+    updates, and adds minimal overhead. Integrated into LLaVA-1.5-7B, TGIF provides consistent improvements
+    across hallucination, OCR, and VQA benchmarks, while preserving or improving performance on ScienceQA,
+    GQA, and MMBench. These results suggest that query-conditioned, hierarchy-aware fusion is an effective
+    way to strengthen visual grounding and reduce hallucination in modern MLLMs. Code: https://github.com/Linchenchen/TGIF.'
+  url: https://arxiv.org/abs/2601.03100
+  pdf_url: https://arxiv.org/pdf/2601.03100v3
+  version: v3
+fetched: '2026-11-14'

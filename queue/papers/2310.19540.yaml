@@ -1,0 +1,41 @@
+id: paper:arxiv:2310.19540
+status: skipped
+score: 1
+track: processing_enhancement
+matched:
+- ref: concept:SuperResolution
+  count: 1
+  weight: 1
+meta:
+  title: 'IterInv: Iterative Inversion for Pixel-Level T2I Models'
+  authors:
+  - Chuanming Tang
+  - Kai Wang
+  - Joost van de Weijer
+  published: '2023-10-30'
+  updated: '2024-04-22'
+  categories:
+  - cs.CV
+  - cs.GR
+  abstract: Large-scale text-to-image diffusion models have been a ground-breaking development in generating
+    convincing images following an input text prompt. The goal of image editing research is to give users
+    control over the generated images by modifying the text prompt. Current image editing techniques predominantly
+    hinge on DDIM inversion as a prevalent practice rooted in Latent Diffusion Models (LDM). However,
+    the large pretrained T2I models working on the latent space suffer from losing details due to the
+    first compression stage with an autoencoder mechanism. Instead, other mainstream T2I pipeline working
+    on the pixel level, such as Imagen and DeepFloyd-IF, circumvents the above problem. They are commonly
+    composed of multiple stages, typically starting with a text-to-image stage and followed by several
+    super-resolution stages. In this pipeline, the DDIM inversion fails to find the initial noise and
+    generate the original image given that the super-resolution diffusion models are not compatible with
+    the DDIM technique. According to our experimental findings, iteratively concatenating the noisy image
+    as the condition is the root of this problem. Based on this observation, we develop an iterative inversion
+    (IterInv) technique for this category of T2I models and verify IterInv with the open-source DeepFloyd-IF
+    model.Specifically, IterInv employ NTI as the inversion and reconstruction of low-resolution image
+    generation. In stages 2 and 3, we update the latent variance at each timestep to find the deterministic
+    inversion trace and promote the reconstruction process. By combining our method with a popular image
+    editing method, we prove the application prospects of IterInv. The code will be released upon acceptance.
+    The code is available at \url{https://github.com/Tchuanm/IterInv.git}.
+  url: https://arxiv.org/abs/2310.19540
+  pdf_url: https://arxiv.org/pdf/2310.19540v2
+  version: v2
+fetched: '2026-11-14'

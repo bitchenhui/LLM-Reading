@@ -1,0 +1,43 @@
+id: paper:arxiv:2511.22351
+status: skipped_low_citation
+score: 2
+track: processing_enhancement
+matched:
+- ref: concept:LLM
+  count: 1
+  weight: 1
+- ref: concept:SuperResolution
+  count: 1
+  weight: 1
+meta:
+  title: 'INSIGHT: An Interpretable Neural Vision-Language Framework for Reasoning of Generative Artifacts'
+  authors:
+  - Anshul Bagaria
+  published: '2025-11-27'
+  updated: '2025-11-27'
+  categories:
+  - cs.CV
+  abstract: The growing realism of AI-generated images produced by recent GAN and diffusion models has
+    intensified concerns over the reliability of visual media. Yet, despite notable progress in deepfake
+    detection, current forensic systems degrade sharply under real-world conditions such as severe downsampling,
+    compression, and cross-domain distribution shifts. Moreover, most detectors operate as opaque classifiers,
+    offering little insight into why an image is flagged as synthetic, undermining trust and hindering
+    adoption in high-stakes settings. We introduce INSIGHT (Interpretable Neural Semantic and Image-based
+    Generative-forensic Hallucination Tracing), a unified multimodal framework for robust detection and
+    transparent explanation of AI-generated images, even at extremely low resolutions (16x16 - 64x64).
+    INSIGHT combines hierarchical super-resolution for amplifying subtle forensic cues without inducing
+    misleading artifacts, Grad-CAM driven multi-scale localization to reveal spatial regions indicative
+    of generative patterns, and CLIP-guided semantic alignment to map visual anomalies to human-interpretable
+    descriptors. A vision-language model is then prompted using a structured ReAct + Chain-of-Thought
+    protocol to produce consistent, fine-grained explanations, verified through a dual-stage G-Eval +
+    LLM-as-a-judge pipeline to minimize hallucinations and ensure factuality. Across diverse domains,
+    including animals, vehicles, and abstract synthetic scenes, INSIGHT substantially improves both detection
+    robustness and explanation quality under extreme degradation, outperforming prior detectors and black-box
+    VLM baselines. Our results highlight a practical path toward transparent, reliable AI-generated image
+    forensics and establish INSIGHT as a step forward in trustworthy multimodal content verification.
+  url: https://arxiv.org/abs/2511.22351
+  pdf_url: https://arxiv.org/pdf/2511.22351v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 0
+citation_year: 2025

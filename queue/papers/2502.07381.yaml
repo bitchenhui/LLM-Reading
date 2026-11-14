@@ -1,0 +1,43 @@
+id: paper:arxiv:2502.07381
+status: skipped
+score: 1
+track: processing_enhancement
+matched:
+- ref: concept:SuperResolution
+  count: 1
+  weight: 1
+meta:
+  title: Spatial Degradation-Aware and Temporal Consistent Diffusion Model for Compressed Video Super-Resolution
+  authors:
+  - Hongyu An
+  - Xinfeng Zhang
+  - Shijie Zhao
+  - Li Zhang
+  - Ruiqin Xiong
+  published: '2025-02-11'
+  updated: '2025-06-27'
+  categories:
+  - cs.CV
+  abstract: Due to storage and bandwidth limitations, videos transmitted over the Internet often exhibit
+    low quality, characterized by low-resolution and compression artifacts. Although video super-resolution
+    (VSR) is an efficient video enhancing technique, existing VSR methods focus less on compressed videos.
+    Consequently, directly applying general VSR approaches fails to improve practical videos with compression
+    artifacts, especially when frames are highly compressed at a low bit rate. The inevitable quantization
+    information loss complicates the reconstruction of texture details. Recently, diffusion models have
+    shown superior performance in low-level visual tasks. Leveraging the high-realism generation capability
+    of diffusion models, we propose a novel method that exploits the priors of pre-trained diffusion models
+    for compressed VSR. To mitigate spatial distortions and refine temporal consistency, we introduce
+    a Spatial Degradation-Aware and Temporal Consistent (SDATC) diffusion model. Specifically, we incorporate
+    a distortion control module (DCM) to modulate diffusion model inputs, thereby minimizing the impact
+    of noise from low-quality frames on the generation stage. Subsequently, the diffusion model performs
+    a denoising process to generate details, guided by a fine-tuned compression-aware prompt module (CAPM)
+    and a spatio-temporal attention module (STAM). CAPM dynamically encodes compression-related information
+    into prompts, enabling the sampling process to adapt to different degradation levels. Meanwhile, STAM
+    extends the spatial attention mechanism into the spatio-temporal dimension, effectively capturing
+    temporal correlations. Additionally, we utilize optical flow-based alignment during each denoising
+    step to enhance the smoothness of output videos. Extensive experimental results on benchmark datasets
+    demonstrate the effectiveness of our proposed modules in restoring compressed videos.
+  url: https://arxiv.org/abs/2502.07381
+  pdf_url: https://arxiv.org/pdf/2502.07381v3
+  version: v3
+fetched: '2026-11-14'

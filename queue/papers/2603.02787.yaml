@@ -1,0 +1,45 @@
+id: paper:arxiv:2603.02787
+status: pending
+score: 3
+track: self_improvement
+matched:
+- ref: concept:LLM
+  count: 2
+  weight: 1
+- ref: concept:EoH
+  count: 1
+  weight: 1
+- ref: concept:FunSearch
+  count: 1
+  weight: 1
+meta:
+  title: Rethinking Code Similarity for Automated Algorithm Design with LLMs
+  authors:
+  - Rui Zhang
+  - Zhichao Lu
+  published: '2026-03-03'
+  updated: '2026-03-03'
+  categories:
+  - cs.AI
+  abstract: 'The rise of Large Language Model-based Automated Algorithm Design (LLM-AAD) has transformed
+    algorithm development by autonomously generating code implementations of expert-level algorithms.
+    Unlike traditional expert-driven algorithm development, in the LLM-AAD paradigm, the main design principle
+    behind an algorithm is often implicitly embedded in the generated code. Therefore, assessing algorithmic
+    similarity directly from code, distinguishing genuine algorithmic innovation from mere syntactic variation,
+    becomes essential. While various code similarity metrics exist, they fail to capture algorithmic similarity,
+    as they focus on surface-level syntax or output equivalence rather than the underlying algorithmic
+    logic. We propose BehaveSim, a novel method to measure algorithmic similarity through the lens of
+    problem-solving behavior as a sequence of intermediate solutions produced during execution, dubbed
+    as problem-solving trajectories (PSTrajs). By quantifying the alignment between PSTrajs using dynamic
+    time warping (DTW), BehaveSim distinguishes algorithms with divergent logic despite syntactic or output-level
+    similarities. We demonstrate its utility in two key applications: (i) Enhancing LLM-AAD: Integrating
+    BehaveSim into existing LLM-AAD frameworks (e.g., FunSearch, EoH) promotes behavioral diversity, significantly
+    improving performance on three AAD tasks. (ii) Algorithm analysis: BehaveSim clusters generated algorithms
+    by behavior, enabling systematic analysis of problem-solving strategies--a crucial tool for the growing
+    ecosystem of AI-generated algorithms. Data and code of this work are open-sourced at https://github.com/RayZhhh/behavesim.'
+  url: https://arxiv.org/abs/2603.02787
+  pdf_url: https://arxiv.org/pdf/2603.02787v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 6
+citation_year: 2026

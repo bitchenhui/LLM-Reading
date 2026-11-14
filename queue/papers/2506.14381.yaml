@@ -1,0 +1,47 @@
+id: paper:arxiv:2506.14381
+status: skipped_low_citation
+score: 5
+track: processing_enhancement
+matched:
+- ref: codec:HEVC
+  count: 2
+  weight: 3
+- ref: concept:QP
+  count: 3
+  weight: 1
+- ref: concept:SuperResolution
+  count: 1
+  weight: 1
+meta:
+  title: Compressed Video Super-Resolution based on Hierarchical Encoding
+  authors:
+  - Yuxuan Jiang
+  - Siyue Teng
+  - Qiang Zhu
+  - Chen Feng
+  - Chengxi Zeng
+  - Fan Zhang
+  - Shuyuan Zhu
+  - Bing Zeng
+  - David Bull
+  published: '2025-06-17'
+  updated: '2025-06-17'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: This paper presents a general-purpose video super-resolution (VSR) method, dubbed VSR-HE,
+    specifically designed to enhance the perceptual quality of compressed content. Targeting scenarios
+    characterized by heavy compression, the method upscales low-resolution videos by a ratio of four,
+    from 180p to 720p or from 270p to 1080p. VSR-HE adopts hierarchical encoding transformer blocks and
+    has been sophisticatedly optimized to eliminate a wide range of compression artifacts commonly introduced
+    by H.265/HEVC encoding across various quantization parameter (QP) levels. To ensure robustness and
+    generalization, the model is trained and evaluated under diverse compression settings, allowing it
+    to effectively restore fine-grained details and preserve visual fidelity. The proposed VSR-HE has
+    been officially submitted to the ICME 2025 Grand Challenge on VSR for Video Conferencing (Team BVI-VSR),
+    under both the Track 1 (General-Purpose Real-World Video Content) and Track 2 (Talking Head Videos).
+  url: https://arxiv.org/abs/2506.14381
+  pdf_url: https://arxiv.org/pdf/2506.14381v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 3
+citation_year: 2025

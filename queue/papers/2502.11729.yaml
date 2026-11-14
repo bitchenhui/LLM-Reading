@@ -1,0 +1,44 @@
+id: paper:arxiv:2502.11729
+status: skipped
+score: 2
+track: video_image_coding
+matched:
+- ref: concept:INR
+  count: 1
+  weight: 1
+- ref: concept:RDO
+  count: 1
+  weight: 1
+meta:
+  title: On Quantizing Neural Representation for Variable-Rate Video Coding
+  authors:
+  - Junqi Shi
+  - Zhujia Chen
+  - Hanfei Li
+  - Qi Zhao
+  - Ming Lu
+  - Tong Chen
+  - Zhan Ma
+  published: '2025-02-17'
+  updated: '2025-02-17'
+  categories:
+  - eess.IV
+  abstract: This work introduces NeuroQuant, a novel post-training quantization (PTQ) approach tailored
+    to non-generalized Implicit Neural Representations for variable-rate Video Coding (INR-VC). Unlike
+    existing methods that require extensive weight retraining for each target bitrate, we hypothesize
+    that variable-rate coding can be achieved by adjusting quantization parameters (QPs) of pre-trained
+    weights. Our study reveals that traditional quantization methods, which assume inter-layer independence,
+    are ineffective for non-generalized INR-VC models due to significant dependencies across layers. To
+    address this, we redefine variable-rate INR-VC as a mixed-precision quantization problem and establish
+    a theoretical framework for sensitivity criteria aimed at simplified, fine-grained rate control. Additionally,
+    we propose network-wise calibration and channel-wise quantization strategies to minimize quantization-induced
+    errors, arriving at a unified formula for representation-oriented PTQ calibration. Our experimental
+    evaluations demonstrate that NeuroQuant significantly outperforms existing techniques in varying bitwidth
+    quantization and compression efficiency, accelerating encoding by up to eight times and enabling quantization
+    down to INT2 with minimal reconstruction loss. This work introduces variable-rate INR-VC for the first
+    time and lays a theoretical foundation for future research in rate-distortion optimization, advancing
+    the field of video coding technology. The materials will be available at https://github.com/Eric-qi/NeuroQuant.
+  url: https://arxiv.org/abs/2502.11729
+  pdf_url: https://arxiv.org/pdf/2502.11729v1
+  version: v1
+fetched: '2026-11-14'

@@ -1,0 +1,60 @@
+id: paper:arxiv:2107.13385
+status: pending
+score: 17
+track: streaming_delivery
+matched:
+- ref: codec:HEVC
+  count: 2
+  weight: 3
+- ref: codec:VVC
+  count: 2
+  weight: 3
+- ref: impl:FFmpeg
+  count: 1
+  weight: 3
+- ref: impl:VVdec
+  count: 1
+  weight: 3
+- ref: impl:VVenC
+  count: 1
+  weight: 3
+- ref: concept:DASH
+  count: 1
+  weight: 1
+- ref: org:Fraunhofer-HHI
+  count: 1
+  weight: 1
+meta:
+  title: A Complete End-To-End Open Source Toolchain for the Versatile Video Coding (VVC) Standard
+  authors:
+  - Adam Wieckowski
+  - Christian Lehmann
+  - Benjamin Bross
+  - Detlev Marpe
+  - Thibaud Biatek
+  - Mickael Raulet
+  - Jean Le Feuvre
+  published: '2021-07-28'
+  updated: '2021-07-28'
+  categories:
+  - eess.IV
+  - cs.MM
+  abstract: 'Versatile Video Coding (VVC) is the most recent international video coding standard jointly
+    developed by ITU-T and ISO/IEC, which has been finalized in July 2020. VVC allows for significant
+    bit-rate reductions around 50% for the same subjective video quality compared to its predecessor,
+    High Efficiency Video Coding (HEVC). One year after finalization, VVC support in devices and chipsets
+    is still under development, which is aligned with the typical development cycles of new video coding
+    standards. This paper presents open-source software packages that allow building a complete VVC end-to-end
+    toolchain already one year after its finalization. This includes the Fraunhofer HHI VVenC library
+    for fast and efficient VVC encoding as well as HHI''s VVdeC library for live decoding. An experimental
+    integration of VVC in the GPAC software tools and FFmpeg media framework allows packaging VVC bitstreams,
+    e.g. encoded with VVenC, in MP4 file format and using DASH for content creation and streaming. The
+    integration of VVdeC allows playback on the receiver. Given these packages, step-by-step tutorials
+    are provided for two possible application scenarios: VVC file encoding plus playback and adaptive
+    streaming with DASH.'
+  url: https://arxiv.org/abs/2107.13385
+  pdf_url: https://arxiv.org/pdf/2107.13385v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 19
+citation_year: 2021

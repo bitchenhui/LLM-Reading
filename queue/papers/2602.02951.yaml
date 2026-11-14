@@ -1,0 +1,46 @@
+id: paper:arxiv:2602.02951
+status: pending
+score: 2
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: 'Nüwa: Mending the Spatial Integrity Torn by VLM Token Pruning'
+  authors:
+  - Yihong Huang
+  - Fei Ma
+  - Yihua Shao
+  - Jingcai Guo
+  - Zitong Yu
+  - Laizhong Cui
+  - Qi Tian
+  published: '2026-02-03'
+  updated: '2026-02-03'
+  categories:
+  - cs.CV
+  - cs.AI
+  - cs.CL
+  abstract: Vision token pruning has proven to be an effective acceleration technique for the efficient
+    Vision Language Model (VLM). However, existing pruning methods demonstrate excellent performance preservation
+    in visual question answering (VQA) and suffer substantial degradation on visual grounding (VG) tasks.
+    Our analysis of the VLM's processing pipeline reveals that strategies utilizing global semantic similarity
+    and attention scores lose the global spatial reference frame, which is derived from the interactions
+    of tokens' positional information. Motivated by these findings, we propose $\text{Nüwa}$, a two-stage
+    token pruning framework that enables efficient feature aggregation while maintaining spatial integrity.
+    In the first stage, after the vision encoder, we apply three operations, namely separation, alignment,
+    and aggregation, which are inspired by swarm intelligence algorithms to retain information-rich global
+    spatial anchors. In the second stage, within the LLM, we perform text-guided pruning to retain task-relevant
+    visual tokens. Extensive experiments demonstrate that $\text{Nüwa}$ achieves SOTA performance on multiple
+    VQA benchmarks (from 94% to 95%) and yields substantial improvements on visual grounding tasks (from
+    7% to 47%).
+  url: https://arxiv.org/abs/2602.02951
+  pdf_url: https://arxiv.org/pdf/2602.02951v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 20
+citation_year: 2026

@@ -1,0 +1,42 @@
+id: paper:arxiv:2604.04576
+status: skipped_low_citation
+score: 2
+track: quality_assessment
+matched:
+- ref: concept:3DGS
+  count: 4
+  weight: 1
+- ref: concept:IQA
+  count: 3
+  weight: 1
+meta:
+  title: 'PR-IQA: Partial-Reference Image Quality Assessment for Diffusion-Based Novel View Synthesis'
+  authors:
+  - Inseong Choi
+  - Siwoo Lee
+  - Seung-Hun Nam
+  - Soohwan Song
+  published: '2026-04-06'
+  updated: '2026-04-07'
+  categories:
+  - cs.CV
+  abstract: Diffusion models are promising for sparse-view novel view synthesis (NVS), as they can generate
+    pseudo-ground-truth views to aid 3D reconstruction pipelines like 3D Gaussian Splatting (3DGS). However,
+    these synthesized images often contain photometric and geometric inconsistencies, and their direct
+    use for supervision can impair reconstruction. To address this, we propose Partial-Reference Image
+    Quality Assessment (PR-IQA), a framework that evaluates diffusion-generated views using reference
+    images from different poses, eliminating the need for ground truth. PR-IQA first computes a geometrically
+    consistent partial quality map in overlapping regions. It then performs quality completion to inpaint
+    this partial map into a dense, full-image map. This completion is achieved via a cross-attention mechanism
+    that incorporates reference-view context, ensuring cross-view consistency and enabling thorough quality
+    assessment. When integrated into a diffusion-augmented 3DGS pipeline, PR-IQA restricts supervision
+    to high-confidence regions identified by its quality maps. Experiments demonstrate that PR-IQA outperforms
+    existing IQA methods, achieving full-reference-level accuracy without ground-truth supervision. Thus,
+    our quality-aware 3DGS approach more effectively filters inconsistencies, producing superior 3D reconstructions
+    and NVS results. The project page is available at https://kakaomacao.github.io/pr-iqa-project-page/.
+  url: https://arxiv.org/abs/2604.04576
+  pdf_url: https://arxiv.org/pdf/2604.04576v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 1
+citation_year: 2026

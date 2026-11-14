@@ -1,0 +1,42 @@
+id: paper:arxiv:2603.22352
+status: skipped
+score: 1
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+meta:
+  title: 'WIST: Web-Grounded Iterative Self-Play Tree for Domain-Targeted Reasoning Improvement'
+  authors:
+  - Fangyuan Li
+  - Pengfei Li
+  - Shijie Wang
+  - Junqi Gao
+  - Jianxing Liu
+  - Biqing Qi
+  - Yuqiang Li
+  published: '2026-03-22'
+  updated: '2026-03-22'
+  categories:
+  - cs.LG
+  - cs.AI
+  abstract: 'Recent progress in reinforcement learning with verifiable rewards (RLVR) offers a practical
+    path to self-improvement of language models, but existing methods face a key trade-off: endogenous
+    self-play can drift over iterations, while corpus-grounded approaches rely on curated data environments.
+    We present \textbf{WIST}, a \textbf{W}eb-grounded \textbf{I}terative \textbf{S}elf-play \textbf{T}ree
+    framework for domain-targeted reasoning improvement that learns directly from the open web without
+    requiring any pre-arranged domain corpus. WIST incrementally expands a domain tree for exploration,
+    and retrieves and cleans path-consistent web corpus to construct a controllable training environment.
+    It then performs Challenger--Solver self-play with verifiable rewards, and feeds learnability signals
+    back to update node posteriors and guide subsequent exploration through an adaptive curriculum. Across
+    four backbones, WIST consistently improves over the base models and typically outperforms both purely
+    endogenous self-evolution and corpus-grounded self-play baselines, with the Overall gains reaching
+    \textbf{+9.8} (\textit{Qwen3-4B-Base}) and \textbf{+9.7} (\textit{OctoThinker-8B}). WIST is also domain-steerable,
+    improving \textit{Qwen3-8B-Base} by \textbf{+14.79} in medicine and \textit{Qwen3-4B-Base} by \textbf{+5.28}
+    on PhyBench. Ablations further confirm the importance of WIST''s key components for stable open-web
+    learning. Our Code is available at https://github.com/lfy-123/WIST.'
+  url: https://arxiv.org/abs/2603.22352
+  pdf_url: https://arxiv.org/pdf/2603.22352v1
+  version: v1
+fetched: '2026-11-14'

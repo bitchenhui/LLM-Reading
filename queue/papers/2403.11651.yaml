@@ -1,0 +1,37 @@
+id: paper:arxiv:2403.11651
+status: pending
+score: 6
+track: video_image_coding
+matched:
+- ref: codec:HEVC
+  count: 1
+  weight: 3
+- ref: codec:VVC
+  count: 1
+  weight: 3
+meta:
+  title: Overfitted image coding at reduced complexity
+  authors:
+  - Théophile Blard
+  - Théo Ladune
+  - Pierrick Philippe
+  - Gordon Clare
+  - Xiaoran Jiang
+  - Olivier Déforges
+  published: '2024-03-18'
+  updated: '2024-03-18'
+  categories:
+  - eess.IV
+  abstract: Overfitted image codecs offer compelling compression performance and low decoder complexity,
+    through the overfitting of a lightweight decoder for each image. Such codecs include Cool-chic, which
+    presents image coding performance on par with VVC while requiring around 2000 multiplications per
+    decoded pixel. This paper proposes to decrease Cool-chic encoding and decoding complexity. The encoding
+    complexity is reduced by shortening Cool-chic training, up to the point where no overfitting is performed
+    at all. It is also shown that a tiny neural decoder with 300 multiplications per pixel still outperforms
+    HEVC. A near real-time CPU implementation of this decoder is made available at https://orange-opensource.github.io/Cool-Chic/.
+  url: https://arxiv.org/abs/2403.11651
+  pdf_url: https://arxiv.org/pdf/2403.11651v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 19
+citation_year: 2024

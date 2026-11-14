@@ -1,0 +1,39 @@
+id: paper:arxiv:2609.07823
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'SAFIRE: Safety-Critical Benchmark for Fine-grained Fire and Smoke Understanding in Multimodal
+    LLMs'
+  authors:
+  - Pengfei Li
+  - Naufal Suryanto
+  - Sicheng Zhang
+  - Mohammad Alsharid
+  - Muzammal Naseer
+  published: '2026-09-07'
+  updated: '2026-09-07'
+  categories:
+  - cs.CV
+  - cs.AI
+  - cs.CL
+  abstract: Multimodal Large Language Models (MLLMs) show strong progress on vision-language tasks, yet
+    their reliability in safety-critical settings remains underexplored. Fire-smoke understanding is central
+    to public safety and disaster response, but most existing benchmarks lack diverse real-world scenarios
+    and context-aware evaluation. We introduce SAFIRE, a large-scale benchmark for fire-smoke understanding
+    in MLLMs, comprising 83K captioned images from 20 scenarios and 193K multiple-choice VQA (MCVQA) generated
+    from a 9.7K-image subset, spanning 10 evaluation dimensions from basic perception to higher-order
+    reasoning. A GPT-5.4-assisted multi-stage verification pipeline with MLLM majority voting ensures
+    annotation quality. Evaluating ten open-source MLLMs (8B-38B) yields an average accuracy of 61.9%,
+    exposing major gaps in safety-critical reasoning. We further show that adapting vision encoders with
+    only 7% of our domain-specific data boosts fire-scene classification accuracy from 20.1% to 64.5%,
+    indicating that carefully curated data can yield substantial gains even when data volume is limited.
+    All datasets, models, and code are available at https://risys-lab.github.io/SAFIRE/.
+  url: https://arxiv.org/abs/2609.07823
+  pdf_url: https://arxiv.org/pdf/2609.07823v1
+  version: v1
+fetched: '2026-11-14'

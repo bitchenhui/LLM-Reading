@@ -1,0 +1,42 @@
+id: paper:arxiv:2404.04848
+status: skipped
+score: 1
+track: video_image_coding
+matched:
+- ref: concept:GOP
+  count: 2
+  weight: 1
+meta:
+  title: Task-Aware Encoder Control for Deep Video Compression
+  authors:
+  - Xingtong Ge
+  - Jixiang Luo
+  - Xinjie Zhang
+  - Tongda Xu
+  - Guo Lu
+  - Dailan He
+  - Jing Geng
+  - Yan Wang
+  - Jun Zhang
+  - Hongwei Qin
+  published: '2024-04-07'
+  updated: '2024-04-20'
+  categories:
+  - eess.IV
+  - cs.AI
+  - cs.CV
+  abstract: Prior research on deep video compression (DVC) for machine tasks typically necessitates training
+    a unique codec for each specific task, mandating a dedicated decoder per task. In contrast, traditional
+    video codecs employ a flexible encoder controller, enabling the adaptation of a single codec to different
+    tasks through mechanisms like mode prediction. Drawing inspiration from this, we introduce an innovative
+    encoder controller for deep video compression for machines. This controller features a mode prediction
+    and a Group of Pictures (GoP) selection module. Our approach centralizes control at the encoding stage,
+    allowing for adaptable encoder adjustments across different tasks, such as detection and tracking,
+    while maintaining compatibility with a standard pre-trained DVC decoder. Empirical evidence demonstrates
+    that our method is applicable across multiple tasks with various existing pre-trained DVCs. Moreover,
+    extensive experiments demonstrate that our method outperforms previous DVC by about 25% bitrate for
+    different tasks, with only one pre-trained decoder.
+  url: https://arxiv.org/abs/2404.04848
+  pdf_url: https://arxiv.org/pdf/2404.04848v2
+  version: v2
+fetched: '2026-11-14'

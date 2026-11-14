@@ -1,0 +1,41 @@
+id: paper:arxiv:2311.13847
+status: skipped
+score: 1
+track: video_image_coding
+matched:
+- ref: concept:IQA
+  count: 2
+  weight: 1
+meta:
+  title: Perceptual Image Compression with Cooperative Cross-Modal Side Information
+  authors:
+  - Shiyu Qin
+  - Bin Chen
+  - Yujun Huang
+  - Baoyi An
+  - Tao Dai
+  - Shu-Tao Xia
+  published: '2023-11-23'
+  updated: '2023-11-28'
+  categories:
+  - cs.CV
+  - cs.IT
+  - eess.IV
+  abstract: 'The explosion of data has resulted in more and more associated text being transmitted along
+    with images. Inspired by from distributed source coding, many works utilize image side information
+    to enhance image compression. However, existing methods generally do not consider using text as side
+    information to enhance perceptual compression of images, even though the benefits of multimodal synergy
+    have been widely demonstrated in research. This begs the following question: How can we effectively
+    transfer text-level semantic dependencies to help image compression, which is only available to the
+    decoder? In this work, we propose a novel deep image compression method with text-guided side information
+    to achieve a better rate-perception-distortion tradeoff. Specifically, we employ the CLIP text encoder
+    and an effective Semantic-Spatial Aware block to fuse the text and image features. This is done by
+    predicting a semantic mask to guide the learned text-adaptive affine transformation at the pixel level.
+    Furthermore, we design a text-conditional generative adversarial networks to improve the perceptual
+    quality of reconstructed images. Extensive experiments involving four datasets and ten image quality
+    assessment metrics demonstrate that the proposed approach achieves superior results in terms of rate-perception
+    trade-off and semantic distortion.'
+  url: https://arxiv.org/abs/2311.13847
+  pdf_url: https://arxiv.org/pdf/2311.13847v2
+  version: v2
+fetched: '2026-11-14'

@@ -1,0 +1,32 @@
+id: paper:arxiv:2509.16195
+status: skipped
+score: 0
+track: audio_coding
+matched: []
+meta:
+  title: 'FocalCodec-Stream: Streaming Low-Bitrate Speech Coding via Causal Distillation'
+  authors:
+  - Luca Della Libera
+  - Cem Subakan
+  - Mirco Ravanelli
+  published: '2025-09-19'
+  updated: '2025-09-19'
+  categories:
+  - cs.SD
+  - cs.AI
+  - cs.LG
+  - eess.AS
+  abstract: Neural audio codecs are a fundamental component of modern generative audio pipelines. Although
+    recent codecs achieve strong low-bitrate reconstruction and provide powerful representations for downstream
+    tasks, most are non-streamable, limiting their use in real-time applications. We present FocalCodec-Stream,
+    a hybrid codec based on focal modulation that compresses speech into a single binary codebook at 0.55
+    - 0.80 kbps with a theoretical latency of 80 ms. Our approach combines multi-stage causal distillation
+    of WavLM with targeted architectural improvements, including a lightweight refiner module that enhances
+    quality under latency constraints. Experiments show that FocalCodec-Stream outperforms existing streamable
+    codecs at comparable bitrates, while preserving both semantic and acoustic information. The result
+    is a favorable trade-off between reconstruction quality, downstream task performance, latency, and
+    efficiency. Code and checkpoints will be released at https://github.com/lucadellalib/focalcodec.
+  url: https://arxiv.org/abs/2509.16195
+  pdf_url: https://arxiv.org/pdf/2509.16195v1
+  version: v1
+fetched: '2026-11-14'

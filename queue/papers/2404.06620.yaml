@@ -1,0 +1,43 @@
+id: paper:arxiv:2404.06620
+status: pending
+score: 5
+track: video_image_coding
+matched:
+- ref: codec:HEVC
+  count: 1
+  weight: 3
+- ref: concept:ABR
+  count: 2
+  weight: 1
+- ref: metric:VMAF
+  count: 1
+  weight: 1
+meta:
+  title: Encoder-Quantization-Motion-based Video Quality Metrics
+  authors:
+  - Yixu Chen
+  - Zaixi Shang
+  - Hai Wei
+  - Yongjun Wu
+  - Sriram Sethuraman
+  published: '2024-04-09'
+  updated: '2024-04-09'
+  categories:
+  - eess.IV
+  abstract: In an adaptive bitrate streaming application, the efficiency of video compression and the
+    encoded video quality depend on both the video codec and the quality metric used to perform encoding
+    optimization. The development of such a quality metric need large scale subjective datasets. In this
+    work we merge several datasets into one to support the creation of a metric tailored for video compression
+    and scaling. We proposed a set of HEVC lightweight features to boost performance of the metrics. Our
+    metrics can be computed from tightly coupled encoding process with 4% compute overhead or from the
+    decoding process in real-time. The proposed method can achieve better correlation than VMAF and P.1204.3.
+    It can extrapolate to different dynamic ranges, and is suitable for real-time video quality metrics
+    delivery in the bitstream. The performance is verified by in-distribution and cross-dataset tests.
+    This work paves the way for adaptive client-side heuristics, real-time segment optimization, dynamic
+    bitrate capping, and quality-dependent post-processing neural network switching, etc.
+  url: https://arxiv.org/abs/2404.06620
+  pdf_url: https://arxiv.org/pdf/2404.06620v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 11
+citation_year: 2024

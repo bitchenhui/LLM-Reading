@@ -1,0 +1,41 @@
+id: paper:arxiv:2503.22678
+status: pending
+score: 2
+track: self_improvement
+matched:
+- ref: concept:LLM
+  count: 1
+  weight: 1
+- ref: concept:SelfImprovement
+  count: 1
+  weight: 1
+meta:
+  title: Self-Evolving Multi-Agent Simulations for Realistic Clinical Interactions
+  authors:
+  - Mohammad Almansoori
+  - Komal Kumar
+  - Hisham Cholakkal
+  published: '2025-03-28'
+  updated: '2025-10-01'
+  categories:
+  - cs.CL
+  abstract: In this work, we introduce MedAgentSim, an open-source simulated clinical environment with
+    doctor, patient, and measurement agents designed to evaluate and enhance LLM performance in dynamic
+    diagnostic settings. Unlike prior approaches, our framework requires doctor agents to actively engage
+    with patients through multi-turn conversations, requesting relevant medical examinations (e.g., temperature,
+    blood pressure, ECG) and imaging results (e.g., MRI, X-ray) from a measurement agent to mimic the
+    real-world diagnostic process. Additionally, we incorporate self improvement mechanisms that allow
+    models to iteratively refine their diagnostic strategies. We enhance LLM performance in our simulated
+    setting by integrating multi-agent discussions, chain-of-thought reasoning, and experience-based knowledge
+    retrieval, facilitating progressive learning as doctor agents interact with more patients. We also
+    introduce an evaluation benchmark for assessing the LLM's ability to engage in dynamic, context-aware
+    diagnostic interactions. While MedAgentSim is fully automated, it also supports a user-controlled
+    mode, enabling human interaction with either the doctor or patient agent. Comprehensive evaluations
+    in various simulated diagnostic scenarios demonstrate the effectiveness of our approach. Our code,
+    simulation tool, and benchmark are available at \href{https://medagentsim.netlify.app/}.
+  url: https://arxiv.org/abs/2503.22678
+  pdf_url: https://arxiv.org/pdf/2503.22678v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 55
+citation_year: 2025

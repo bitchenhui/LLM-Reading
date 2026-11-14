@@ -1,0 +1,41 @@
+id: paper:arxiv:2604.18003
+status: skipped
+score: 1
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+meta:
+  title: 'SELF-EMO: Emotional Self-Evolution from Recognition to Consistent Expression'
+  authors:
+  - Shaowei Zhang
+  - Faqiang Qian
+  - Yan Chen
+  - Ziliang Wang
+  - Kang An
+  - Yong Dai
+  - Mengya Gao
+  - Yichao Wu
+  published: '2026-04-20'
+  updated: '2026-04-20'
+  categories:
+  - cs.AI
+  abstract: Emotion Recognition in Conversation (ERC) has become a fundamental capability for large language
+    models (LLMs) in human-centric interaction. Beyond accurate recognition, coherent emotional expression
+    is also crucial, yet both are limited by the scarcity and static nature of high-quality annotated
+    data. In this work, we propose SELF-EMO, a self-evolution framework grounded in the hypothesis that
+    better emotion prediction leads to more consistent emotional responses. We introduce two auxiliary
+    tasks, emotional understanding and emotional expression, and design a role-based self-play paradigm
+    where the model acts as both an emotion recognizer and a dialogue responder. Through iterative interactions,
+    the model generates diverse conversational trajectories, enabling scalable data generation. To ensure
+    quality, we adopt a data flywheel mechanism that filters candidate predictions and responses using
+    a smoothed IoU-based reward and feeds selected samples back for continuous self-improvement without
+    external supervision. We further develop SELF-GRPO, a reinforcement learning algorithm that stabilizes
+    optimization with multi-label alignment rewards and group-level consistency signals. Experiments on
+    IEMOCAP, MELD, and EmoryNLP show that SELF-EMO achieves state-of-the-art performance, improving accuracy
+    by +6.33% on Qwen3-4B and +8.54% on Qwen3-8B, demonstrating strong effectiveness and generalization.
+  url: https://arxiv.org/abs/2604.18003
+  pdf_url: https://arxiv.org/pdf/2604.18003v1
+  version: v1
+fetched: '2026-11-14'

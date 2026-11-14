@@ -1,0 +1,51 @@
+id: paper:arxiv:2510.14253
+status: pending
+score: 2
+track: self_improvement
+matched:
+- ref: concept:LLM
+  count: 1
+  weight: 1
+- ref: concept:SelfImprovement
+  count: 1
+  weight: 1
+meta:
+  title: Towards Agentic Self-Learning LLMs in Search Environment
+  authors:
+  - Wangtao Sun
+  - Xiang Cheng
+  - Jialin Fan
+  - Yao Xu
+  - Xing Yu
+  - Shizhu He
+  - Jun Zhao
+  - Kang Liu
+  published: '2025-10-16'
+  updated: '2025-10-21'
+  categories:
+  - cs.AI
+  abstract: 'We study whether self-learning can scale LLM-based agents without relying on human-curated
+    datasets or predefined rule-based rewards. Through controlled experiments in a search-agent setting,
+    we identify two key determinants of scalable agent training: the source of reward signals and the
+    scale of agent task data. We find that rewards from a Generative Reward Model (GRM) outperform rigid
+    rule-based signals for open-domain learning, and that co-evolving the GRM with the policy further
+    boosts performance. Increasing the volume of agent task data-even when synthetically generated-substantially
+    enhances agentic capabilities. Building on these insights, we propose \textbf{Agentic Self-Learning}
+    (ASL), a fully closed-loop, multi-role reinforcement learning framework that unifies task generation,
+    policy execution, and evaluation within a shared tool environment and LLM backbone. ASL coordinates
+    a Prompt Generator, a Policy Model, and a Generative Reward Model to form a virtuous cycle of harder
+    task setting, sharper verification, and stronger solving. Empirically, ASL delivers steady, round-over-round
+    gains, surpasses strong RLVR baselines (e.g., Search-R1) that plateau or degrade, and continues improving
+    under zero-labeled-data conditions, indicating superior sample efficiency and robustness. We further
+    show that GRM verification capacity is the main bottleneck: if frozen, it induces reward hacking and
+    stalls progress; continual GRM training on the evolving data distribution mitigates this, and a small
+    late-stage injection of real verification data raises the performance ceiling. This work establishes
+    reward source and data scale as critical levers for open-domain agent learning and demonstrates the
+    efficacy of multi-role co-evolution for scalable, self-improving agents. The data and code of this
+    paper are released at https://github.com/forangel2014/Towards-Agentic-Self-Learning'
+  url: https://arxiv.org/abs/2510.14253
+  pdf_url: https://arxiv.org/pdf/2510.14253v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 7
+citation_year: 2025

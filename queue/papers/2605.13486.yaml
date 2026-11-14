@@ -1,0 +1,41 @@
+id: paper:arxiv:2605.13486
+status: pending
+score: 2
+track: self_improvement
+matched:
+- ref: concept:LLM
+  count: 1
+  weight: 1
+- ref: concept:SelfImprovement
+  count: 1
+  weight: 1
+meta:
+  title: 'R^2-Mem: Reflective Experience for Memory Search'
+  authors:
+  - Xinyuan Wang
+  - Wenyu Mao
+  - Junkang Wu
+  - Xiang Wang
+  - Xiangnan He
+  published: '2026-05-13'
+  updated: '2026-05-13'
+  categories:
+  - cs.CL
+  abstract: Deep search has recently emerged as a promising paradigm for enabling agents to retrieve fine-grained
+    historical information without heavy memory pre-managed. However, existing deep search agents for
+    memory system repeat past error behaviors because they fail to learn from the prior high- and low-quality
+    search trajectories. To address this limitation, we propose R^2-Mem, a reflective experience framework
+    for memory search systems. In the offline stage, a Rubric-guided Evaluator scores low- and high-quality
+    steps in historical trajectories, and a self-Reflection Learner distills the corresponding abstract
+    experience. During the online inference, the retrieved experience will guide future search actions
+    to avoid repeated mistakes and maintain high-quality behaviors. Extensive experiments demonstrate
+    that R^2-Mem consistently improves both effectiveness and efficiency over strong baselines, improving
+    F1 scores by up to 22.6%, while reducing token consumption by 12.9% and search iterations by 20.2%.
+    These results verify that R^2-Mem provides a RL-free and low-cost solution for self-improving LLM
+    agents.
+  url: https://arxiv.org/abs/2605.13486
+  pdf_url: https://arxiv.org/pdf/2605.13486v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 2
+citation_year: 2026

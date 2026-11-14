@@ -1,0 +1,44 @@
+id: paper:arxiv:2508.01782
+status: skipped
+score: 1
+track: video_image_coding
+matched:
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: Joint Lossless Compression and Steganography for Medical Images via Large Language Models
+  authors:
+  - Pengcheng Zheng
+  - Xiaorong Pu
+  - Kecheng Chen
+  - Jiaxin Huang
+  - Meng Yang
+  - Bai Feng
+  - Yazhou Ren
+  - Jianan Jiang
+  - Chaoning Zhang
+  - Yang Yang
+  - Heng Tao Shen
+  published: '2025-08-03'
+  updated: '2026-07-24'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: Recently, large language models (LLMs) have driven promising progress in lossless image compression.
+    However, directly adopting existing paradigms for medical images suffers from an unsatisfactory trade-off
+    between compression performance and efficiency. Moreover, existing LLM-based compressors often overlook
+    the security of the compression process, which is critical in modern medical scenarios. To this end,
+    we propose a novel joint lossless compression and steganography framework. Inspired by bit plane slicing
+    (BPS), we find it feasible to securely embed privacy messages into medical images in an invisible
+    manner. Based on this insight, an adaptive modalities decomposition strategy is first devised to partition
+    the entire image into two segments, providing global and local modalities for subsequent dual-path
+    lossless compression. During this dual-path stage, we innovatively propose a segmented message steganography
+    algorithm within the local modality path to ensure the security of the compression process. Coupled
+    with the proposed anatomical priors-based low-rank adaptation (A-LoRA) fine-tuning strategy, extensive
+    experimental results demonstrate the superiority of our proposed method in terms of compression ratios,
+    efficiency, and security. The source code will be made publicly available.
+  url: https://arxiv.org/abs/2508.01782
+  pdf_url: https://arxiv.org/pdf/2508.01782v4
+  version: v4
+fetched: '2026-11-14'

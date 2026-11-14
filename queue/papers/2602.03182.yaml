@@ -1,0 +1,39 @@
+id: paper:arxiv:2602.03182
+status: skipped
+score: 1
+track: processing_enhancement
+matched:
+- ref: concept:SuperResolution
+  count: 1
+  weight: 1
+meta:
+  title: 'LSGQuant: Layer-Sensitivity Guided Quantization for One-Step Diffusion Real-World Video Super-Resolution'
+  authors:
+  - Tianxing Wu
+  - Zheng Chen
+  - Cirou Xu
+  - Bowen Chai
+  - Yong Guo
+  - Yutong Liu
+  - Linghe Kong
+  - Yulun Zhang
+  published: '2026-02-03'
+  updated: '2026-10-20'
+  categories:
+  - cs.CV
+  abstract: 'One-Step Diffusion Models have demonstrated promising capability and fast inference in video
+    super-resolution (VSR) for real-world. Nevertheless, the substantial model size and high computational
+    cost of Diffusion Transformers (DiTs) limit downstream applications. While low-bit quantization is
+    a common approach for model compression, the effectiveness of quantized models is challenged by the
+    high dynamic range of input latent and diverse layer behaviors. To deal with these challenges, we
+    introduce LSGQuant, a layer-sensitivity guided quantizing approach for one-step diffusion-based real-world
+    VSR. Our method incorporates a Dynamic Range Adaptive Quantizer (DRAQ) to fit video token activations.
+    Furthermore, we estimate layer sensitivity and implement a Variance-Oriented Layer Training Strategy
+    (VOLTS) by analyzing layer-wise statistics in calibration. We also introduce Quantization-Aware Optimization
+    (QAO) to jointly refine the quantized branch and a retained high-precision branch. Extensive experiments
+    demonstrate that our method has nearly performance to origin model with full-precision and significantly
+    exceeds existing quantization techniques. Code is available at: https://github.com/zhengchen1999/LSGQuant.'
+  url: https://arxiv.org/abs/2602.03182
+  pdf_url: https://arxiv.org/pdf/2602.03182v2
+  version: v2
+fetched: '2026-11-14'

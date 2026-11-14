@@ -1,0 +1,44 @@
+id: paper:arxiv:2409.18713
+status: skipped_low_citation
+score: 4
+track: video_image_coding
+matched:
+- ref: codec:VVC
+  count: 2
+  weight: 3
+- ref: metric:BD-Rate
+  count: 1
+  weight: 1
+meta:
+  title: Decoding Complexity-Rate-Quality Pareto-Front for Adaptive VVC Streaming
+  authors:
+  - Angeliki Katsenou
+  - Vignesh V Menon
+  - Adam Wieckowski
+  - Benjamin Bross
+  - Detlev Marpe
+  published: '2024-09-27'
+  updated: '2024-09-27'
+  categories:
+  - eess.IV
+  - cs.MM
+  abstract: Pareto-front optimization is crucial for addressing the multi-objective challenges in video
+    streaming, enabling the identification of optimal trade-offs between conflicting goals such as bitrate,
+    video quality, and decoding complexity. This paper explores the construction of efficient bitrate
+    ladders for adaptive Versatile Video Coding (VVC) streaming, focusing on optimizing these trade-offs.
+    We investigate various ladder construction methods based on Pareto-front optimization, including exhaustive
+    Rate-Quality and fixed ladder approaches. We propose a joint decoding time-rate-quality Pareto-front,
+    providing a comprehensive framework to balance bitrate, decoding time, and video quality in video
+    streaming. This allows streaming services to tailor their encoding strategies to meet specific requirements,
+    prioritizing low decoding latency, bandwidth efficiency, or a balanced approach, thus enhancing the
+    overall user experience. The experimental results confirm and demonstrate these opportunities for
+    navigating the decoding time-rate-quality space to support various use cases. For example, when prioritizing
+    low decoding latency, the proposed method achieves decoding time reduction of 14.86% while providing
+    Bjontegaard delta rate savings of 4.65% and 0.32dB improvement in the eXtended Peak Signal-to-Noise
+    Ratio (XPSNR)-Rate domain over the traditional fixed ladder solution.
+  url: https://arxiv.org/abs/2409.18713
+  pdf_url: https://arxiv.org/pdf/2409.18713v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 4
+citation_year: 2024

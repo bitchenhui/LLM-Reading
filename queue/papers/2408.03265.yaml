@@ -1,0 +1,46 @@
+id: paper:arxiv:2408.03265
+status: pending
+score: 3
+track: video_image_coding
+matched:
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+- ref: metric:VMAF
+  count: 1
+  weight: 1
+- ref: org:AOMedia
+  count: 1
+  weight: 1
+meta:
+  title: 'BVI-AOM: A New Training Dataset for Deep Video Compression Optimization'
+  authors:
+  - Jakub Nawała
+  - Yuxuan Jiang
+  - Fan Zhang
+  - Xiaoqing Zhu
+  - Joel Sole
+  - David Bull
+  published: '2024-08-06'
+  updated: '2024-10-23'
+  categories:
+  - eess.IV
+  abstract: Deep learning is now playing an important role in enhancing the performance of conventional
+    hybrid video codecs. These learning-based methods typically require diverse and representative training
+    material for optimization in order to achieve model generalization and optimal coding performance.
+    However, existing datasets either offer limited content variability or come with restricted licensing
+    terms constraining their use to research purposes only. To address these issues, we propose a new
+    training dataset, named BVI-AOM, which contains 956 uncompressed sequences at various resolutions
+    from 270p to 2160p, covering a wide range of content and texture types. The dataset comes with more
+    flexible licensing terms and offers competitive performance when used as a training set for optimizing
+    deep video coding tools. The experimental results demonstrate that when used as a training set to
+    optimize two popular network architectures for two different coding tools, the proposed dataset leads
+    to additional bitrate savings of up to 0.29 and 2.98 percentage points in terms of PSNR-Y and VMAF,
+    respectively, compared to an existing training dataset, BVI-DVC, which has been widely used for deep
+    video coding. The BVI-AOM dataset is available at https://github.com/fan-aaron-zhang/bvi-aom
+  url: https://arxiv.org/abs/2408.03265
+  pdf_url: https://arxiv.org/pdf/2408.03265v3
+  version: v3
+fetched: '2026-11-14'
+citation_count: 16
+citation_year: 2024

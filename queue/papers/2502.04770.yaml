@@ -1,0 +1,36 @@
+id: paper:arxiv:2502.04770
+status: skipped
+score: 1
+track: audio_coding
+matched:
+- ref: concept:NeuralAudioCodec
+  count: 1
+  weight: 1
+meta:
+  title: Efficient Evaluation of Quantization-Effects in Neural Codecs
+  authors:
+  - Wolfgang Mack
+  - Ahmed Mustafa
+  - Rafał Łaganowski
+  - Samer Hijazy
+  published: '2025-02-07'
+  updated: '2025-02-07'
+  categories:
+  - eess.AS
+  - cs.LG
+  abstract: Neural codecs, comprising an encoder, quantizer, and decoder, enable signal transmission at
+    exceptionally low bitrates. Training these systems requires techniques like the straight-through estimator,
+    soft-to-hard annealing, or statistical quantizer emulation to allow a non-zero gradient across the
+    quantizer. Evaluating the effect of quantization in neural codecs, like the influence of gradient
+    passing techniques on the whole system, is often costly and time-consuming due to training demands
+    and the lack of affordable and reliable metrics. This paper proposes an efficient evaluation framework
+    for neural codecs using simulated data with a defined number of bits and low-complexity neural encoders/decoders
+    to emulate the non-linear behavior in larger networks. Our system is highly efficient in terms of
+    training time and computational and hardware requirements, allowing us to uncover distinct behaviors
+    in neural codecs. We propose a modification to stabilize training with the straight-through estimator
+    based on our findings. We validate our findings against an internal neural audio codec and against
+    the state-of-the-art descript-audio-codec.
+  url: https://arxiv.org/abs/2502.04770
+  pdf_url: https://arxiv.org/pdf/2502.04770v1
+  version: v1
+fetched: '2026-11-14'

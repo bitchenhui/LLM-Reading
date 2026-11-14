@@ -1,0 +1,47 @@
+id: paper:arxiv:2505.09193
+status: pending
+score: 6
+track: video_image_coding
+matched:
+- ref: codec:VVC
+  count: 1
+  weight: 3
+- ref: impl:VTM
+  count: 1
+  weight: 3
+meta:
+  title: 'BiECVC: Gated Diversification of Bidirectional Contexts for Learned Video Compression'
+  authors:
+  - Wei Jiang
+  - Junru Li
+  - Kai Zhang
+  - Li Zhang
+  published: '2025-05-14'
+  updated: '2025-07-24'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: 'Recent forward prediction-based learned video compression (LVC) methods have achieved impressive
+    results, even surpassing VVC reference software VTM under the Low Delay B (LDB) configuration. In
+    contrast, learned bidirectional video compression (BVC) remains underexplored and still lags behind
+    its forward-only counterparts. This performance gap is mainly due to the limited ability to extract
+    diverse and accurate contexts: most existing BVCs primarily exploit temporal motion while neglecting
+    non-local correlations across frames. Moreover, they lack the adaptability to dynamically suppress
+    harmful contexts arising from fast motion or occlusion. To tackle these challenges, we propose BiECVC,
+    a BVC framework that incorporates diversified local and non-local context modeling along with adaptive
+    context gating. For local context enhancement, BiECVC reuses high-quality features from lower layers
+    and aligns them using decoded motion vectors without introducing extra motion overhead. To model non-local
+    dependencies efficiently, we adopt a linear attention mechanism that balances performance and complexity.
+    To further mitigate the impact of inaccurate context prediction, we introduce Bidirectional Context
+    Gating, inspired by data-dependent decay in recent autoregressive language models, to dynamically
+    filter contextual information based on conditional coding results. Extensive experiments demonstrate
+    that BiECVC achieves state-of-the-art performance, reducing the bit-rate by 13.4% and 15.7% compared
+    to VTM 13.2 under the Random Access (RA) configuration with intra periods of 32 and 64, respectively.
+    To our knowledge, BiECVC is the first learned video codec to surpass VTM 13.2 RA across all standard
+    test datasets.'
+  url: https://arxiv.org/abs/2505.09193
+  pdf_url: https://arxiv.org/pdf/2505.09193v4
+  version: v4
+fetched: '2026-11-14'
+citation_count: 13
+citation_year: 2025

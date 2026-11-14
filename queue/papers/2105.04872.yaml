@@ -1,0 +1,48 @@
+id: paper:arxiv:2105.04872
+status: pending
+score: 4
+track: processing_enhancement
+matched:
+- ref: concept:SuperResolution
+  count: 1
+  weight: 1
+- ref: metric:LPIPS
+  count: 1
+  weight: 1
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+- ref: metric:SSIM
+  count: 1
+  weight: 1
+meta:
+  title: 'EDPN: Enhanced Deep Pyramid Network for Blurry Image Restoration'
+  authors:
+  - Ruikang Xu
+  - Zeyu Xiao
+  - Jie Huang
+  - Yueyi Zhang
+  - Zhiwei Xiong
+  published: '2021-05-11'
+  updated: '2021-05-11'
+  categories:
+  - cs.CV
+  abstract: Image deblurring has seen a great improvement with the development of deep neural networks.
+    In practice, however, blurry images often suffer from additional degradations such as downscaling
+    and compression. To address these challenges, we propose an Enhanced Deep Pyramid Network (EDPN) for
+    blurry image restoration from multiple degradations, by fully exploiting the self- and cross-scale
+    similarities in the degraded image.Specifically, we design two pyramid-based modules, i.e., the pyramid
+    progressive transfer (PPT) module and the pyramid self-attention (PSA) module, as the main components
+    of the proposed network. By taking several replicated blurry images as inputs, the PPT module transfers
+    both self- and cross-scale similarity information from the same degraded image in a progressive manner.
+    Then, the PSA module fuses the above transferred features for subsequent restoration using self- and
+    spatial-attention mechanisms. Experimental results demonstrate that our method significantly outperforms
+    existing solutions for blurry image super-resolution and blurry image deblocking. In the NTIRE 2021
+    Image Deblurring Challenge, EDPN achieves the best PSNR/SSIM/LPIPS scores in Track 1 (Low Resolution)
+    and the best SSIM/LPIPS scores in Track 2 (JPEG Artifacts).
+  url: https://arxiv.org/abs/2105.04872
+  pdf_url: https://arxiv.org/pdf/2105.04872v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 33
+citation_year: 2021

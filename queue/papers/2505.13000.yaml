@@ -1,0 +1,39 @@
+id: paper:arxiv:2505.13000
+status: skipped
+score: 1
+track: audio_coding
+matched:
+- ref: concept:NeuralAudioCodec
+  count: 2
+  weight: 1
+meta:
+  title: 'DualCodec: A Low-Frame-Rate, Semantically-Enhanced Neural Audio Codec for Speech Generation'
+  authors:
+  - Jiaqi Li
+  - Xiaolong Lin
+  - Zhekai Li
+  - Shixi Huang
+  - Yuancheng Wang
+  - Chaoren Wang
+  - Zhenpeng Zhan
+  - Zhizheng Wu
+  published: '2025-05-19'
+  updated: '2025-10-01'
+  categories:
+  - cs.SD
+  - eess.AS
+  abstract: 'Neural audio codecs form the foundational building blocks for language model (LM)-based speech
+    generation. Typically, there is a trade-off between frame rate and audio quality. This study introduces
+    a low-frame-rate, semantically enhanced codec model. Existing approaches distill semantically rich
+    self-supervised (SSL) representations into the first-layer codec tokens. This work proposes DualCodec,
+    a dual-stream encoding approach that integrates SSL and waveform representations within an end-to-end
+    codec framework. In this setting, DualCodec enhances the semantic information in the first-layer codec
+    and enables the codec system to maintain high audio quality while operating at a low frame rate. Note
+    that a low-frame-rate codec improves the efficiency of speech generation. Experimental results on
+    audio codec and speech generation tasks confirm the effectiveness of the proposed DualCodec compared
+    to state-of-the-art codec systems, such as Mimi Codec, SpeechTokenizer, DAC, and Encodec. Demos are
+    available at: https://dualcodec.github.io, code is available at: https://github.com/jiaqili3/DualCodec'
+  url: https://arxiv.org/abs/2505.13000
+  pdf_url: https://arxiv.org/pdf/2505.13000v2
+  version: v2
+fetched: '2026-11-14'

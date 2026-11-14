@@ -1,0 +1,31 @@
+id: paper:arxiv:2601.20185
+status: skipped
+score: 1
+track: audio_coding
+matched:
+- ref: metric:MOS
+  count: 1
+  weight: 1
+meta:
+  title: 'Improving X-Codec-2.0 for Multi-Lingual Speech: 25 Hz Latent Rate and 24 kHz Sampling'
+  authors:
+  - Husein Zolkepli
+  published: '2026-01-28'
+  updated: '2026-03-08'
+  categories:
+  - cs.CL
+  - cs.SD
+  abstract: X-Codec-2.0 has shown strong performance in neural audio compression and multilingual speech
+    modeling, operating at a 50 Hz latent rate and a 16 kHz sampling rate using frozen HuBERT features.
+    While effective, this configuration limits temporal efficiency and audio fidelity. In this work, we
+    explore a simple and effective modification by introducing additional pooling and increasing the decoder
+    hop size. This reduces the latent rate from 50 Hz to 25 Hz and simultaneously raises the output sampling
+    rate from 16 kHz to 24 kHz, improving efficiency and perceptual quality without altering the core
+    architecture. Evaluated on the multilingual Common Voice 17 test set, the proposed configuration achieves
+    a 0.29 MOS improvement over the original X-Codec-2.0 baseline based on UTMOSv2, and attains the best
+    reported performance among all codecs operating at 25 Hz. The source code, checkpoints, and generation
+    comparisons are released at \href{https://huggingface.co/Scicom-intl/xcodec2-25TPS-24k}{https://huggingface.co/Scicom-intl/xcodec2-25TPS-24k}.
+  url: https://arxiv.org/abs/2601.20185
+  pdf_url: https://arxiv.org/pdf/2601.20185v2
+  version: v2
+fetched: '2026-11-14'

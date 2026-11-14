@@ -1,0 +1,43 @@
+id: paper:arxiv:2606.08641
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: Learnable Token Sparsification for Efficient Gigapixel Whole Slide Image Reasoning
+  authors:
+  - Jingzhi Chen
+  - Landi He
+  - Zhuo Chen
+  - Shawn Young
+  - Lijian Xu
+  published: '2026-06-07'
+  updated: '2026-06-07'
+  categories:
+  - cs.CV
+  abstract: The processing of gigapixel whole slide images within vision language models faces a major
+    difficulty due to an excessive number of visual tokens. Existing solutions typically rely on spatial
+    downsampling or heuristic pruning strategies that operate without training, and these methods often
+    discard subtle but clinically meaningful patterns because pathological evidence is scattered irregularly
+    across the tissue. To overcome this limitation, we reformulate token reduction in whole slide images
+    as a trainable sparsification problem, allowing the model to learn an optimal selection strategy instead
+    of following fixed heuristics. We propose a decoupled routing architecture. To enable gradient propagation
+    through the nondifferentiable pruning operation during training, we introduce a component called SparseLearn.
+    This component uses a variance-preserving noise gate that regulates the information flow of each patch
+    via a differentiable Soft Top-K operator, together with a diagonal attention denoiser that recovers
+    perturbed representations without leaking spatial information. At inference time, the SparseLearn
+    module is entirely discarded, and the trained scorer applies a deterministic Hard Top-K operator to
+    keep only the highest scoring 32 tokens, incurring no extra computation. By compressing the visual
+    sequence down to a sparse set of just 32 tokens, which represents as little as 0.78% of the original
+    length, our framework achieves 73.32% overall accuracy on SlideBench (TCGA), consistently surpassing
+    sampling-based baselines and general-purpose vision language models. It also demonstrates strong zero
+    shot generalization on SlideBench (BCNB) and WSI VQA*. By resolving the visual context bottleneck
+    and preventing the dilution of sparse diagnostic evidence, this work provides a highly efficient paradigm
+    for end to end gigapixel whole slide image reasoning.
+  url: https://arxiv.org/abs/2606.08641
+  pdf_url: https://arxiv.org/pdf/2606.08641v1
+  version: v1
+fetched: '2026-11-14'

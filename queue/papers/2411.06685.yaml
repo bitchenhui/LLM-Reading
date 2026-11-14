@@ -1,0 +1,38 @@
+id: paper:arxiv:2411.06685
+status: skipped
+score: 1
+track: video_image_coding
+matched:
+- ref: dataset:UVG
+  count: 1
+  weight: 1
+meta:
+  title: High-Frequency Enhanced Hybrid Neural Representation for Video Compression
+  authors:
+  - Li Yu
+  - Zhihui Li
+  - Jimin Xiao
+  - Moncef Gabbouj
+  published: '2024-11-11'
+  updated: '2025-04-30'
+  categories:
+  - cs.CV
+  - cs.AI
+  - eess.IV
+  abstract: Neural Representations for Videos (NeRV) have simplified the video codec process and achieved
+    swift decoding speeds by encoding video content into a neural network, presenting a promising solution
+    for video compression. However, existing work overlooks the crucial issue that videos reconstructed
+    by these methods lack high-frequency details. To address this problem, this paper introduces a High-Frequency
+    Enhanced Hybrid Neural Representation Network. Our method focuses on leveraging high-frequency information
+    to improve the synthesis of fine details by the network. Specifically, we design a wavelet high-frequency
+    encoder that incorporates Wavelet Frequency Decomposer (WFD) blocks to generate high-frequency feature
+    embeddings. Next, we design the High-Frequency Feature Modulation (HFM) block, which leverages the
+    extracted high-frequency embeddings to enhance the fitting process of the decoder. Finally, with the
+    refined Harmonic decoder block and a Dynamic Weighted Frequency Loss, we further reduce the potential
+    loss of high-frequency information. Experiments on the Bunny and UVG datasets demonstrate that our
+    method outperforms other methods, showing notable improvements in detail preservation and compression
+    performance.
+  url: https://arxiv.org/abs/2411.06685
+  pdf_url: https://arxiv.org/pdf/2411.06685v2
+  version: v2
+fetched: '2026-11-14'

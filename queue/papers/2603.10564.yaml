@@ -1,0 +1,40 @@
+id: paper:arxiv:2603.10564
+status: skipped
+score: 1
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 3
+  weight: 1
+meta:
+  title: Reflection-Driven Self-Improving Language Model Agents for Adaptive RAN Slicing
+  authors:
+  - Yuanhao Li
+  - Haozhe Wang
+  - Geyong Min
+  - Nektarios Georgalas
+  - Wang Miao
+  published: '2026-03-11'
+  updated: '2026-10-18'
+  categories:
+  - cs.AI
+  - cs.NI
+  abstract: Adaptive control in AI-native networks remains challenging because tasks such as dynamic Radio
+    Access Network (RAN) slicing require persistent trade-off decisions among spectrum efficiency, service
+    quality, and reconfiguration stability. Conventional Reinforcement Learning (RL) compresses these
+    competing objectives into handcrafted scalar rewards, requiring exhaustive tuning for a balanced trade-off.
+    Language model (LM) agents provide a new path toward adaptive control because they can semantically
+    represent complex preference relations, but prompt-based adaptation struggles to retain long-horizon
+    interaction history due to finite context limits. We propose a Reflection-Driven Self-Improvement
+    (ReDSI) framework that replaces scalar rewards with semantic feedback for continuous policy adaptation.
+    This framework is built upon a Small Language Model (SLM) agent for fast decision-making, coupled
+    with a bi-perspective reflection to transform interaction history into preference data, subsequently
+    distilling long-horizon decision experience into the SLM parameters through preference-based fine-tuning.
+    Evaluated on a dynamic RAN slicing task, our method achieves an optimal trade-off across multiple
+    competing objectives, outperforming standard RL baselines and existing LM-based agents by demonstrating
+    substantially greater sample efficiency. These results highlight a viable paradigm of self-improving
+    LM agents for reward-free multi-objective continuous control in AI-native networks.
+  url: https://arxiv.org/abs/2603.10564
+  pdf_url: https://arxiv.org/pdf/2603.10564v2
+  version: v2
+fetched: '2026-11-14'

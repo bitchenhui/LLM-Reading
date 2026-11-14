@@ -1,0 +1,38 @@
+id: paper:arxiv:2310.05623
+status: skipped_low_citation
+score: 3
+track: video_image_coding
+matched:
+- ref: codec:HEVC
+  count: 2
+  weight: 3
+meta:
+  title: Efficient Predictive Coding of Intra Prediction Modes
+  authors:
+  - Kevin Reuzé
+  - Wassim Hamidouche
+  - Pierrick Philippe
+  - Olivier Déforges
+  published: '2023-10-09'
+  updated: '2023-10-09'
+  categories:
+  - eess.IV
+  abstract: 'The high efficiency video coding (HEVC) standard and the joint exploration model (JEM) codec
+    incorporate 35 and 67 intra prediction modes (IPMs) respectively, which are essential for efficient
+    compression of Intra coded blocks. These IPMs are transmitted to the decoder through a coding scheme.
+    In our paper, we present an innovative approach to construct a dedicated coding scheme for IPM based
+    on contextual information. This approach comprises three key steps: prediction, clustering, and coding,
+    each of which has been enhanced by introducing new elements, namely, labels for prediction, tests
+    for clustering, and codes for coding. In this context, we have proposed a method that utilizes a genetic
+    algorithm to minimize the rate cost, aiming to derive the most efficient coding scheme while leveraging
+    the available labels, tests, and codes. The resulting coding scheme, expressed as a binary tree, achieves
+    the highest coding efficiency for a given level of complexity. In our experimental evaluation under
+    the HEVC standard, we observed significant bitrate gains while maintaining coding efficiency under
+    the JEM codec. These results demonstrate the potential of our approach to improve compression efficiency,
+    particularly under the HEVC standard, while preserving the coding efficiency of the JEM codec.'
+  url: https://arxiv.org/abs/2310.05623
+  pdf_url: https://arxiv.org/pdf/2310.05623v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 0
+citation_year: 2023

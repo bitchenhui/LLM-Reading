@@ -1,0 +1,39 @@
+id: paper:arxiv:2602.20457
+status: skipped_low_citation
+score: 2
+track: self_improvement
+matched:
+- ref: concept:LLM
+  count: 1
+  weight: 1
+- ref: concept:SelfImprovement
+  count: 1
+  weight: 1
+meta:
+  title: Oracle-Robust Online Alignment for Large Language Models
+  authors:
+  - Zimeng Li
+  - Mudit Gaur
+  - Vaneet Aggarwal
+  published: '2026-02-24'
+  updated: '2026-11-04'
+  categories:
+  - cs.LG
+  - stat.ML
+  abstract: We study online alignment of large language models under misspecified preference feedback,
+    where the observed preference oracle deviates from an ideal but unknown ground-truth oracle. The online
+    LLM alignment problem is a bi-level reinforcement problem due to the coupling between data collection
+    and policy updates. Recently, the problem has been reduced to a tractable single-level objective in
+    the SAIL (Self-Improving Efficient Online Alignment) framework. In this paper, we introduce a pointwise
+    oracle uncertainty set in this problem and formulate an oracle-robust online alignment objective as
+    a worst-case optimization problem. For log-linear policies, we show that this robust objective admits
+    an exact closed-form decomposition into the original loss function plus an explicit sensitivity penalty.
+    In the finite-response log-linear setting, we develop projected stochastic composite updates for the
+    resulting weakly convex objective and prove $\widetilde{O}(\varepsilon^{-2})$ oracle complexity for
+    reaching approximate stationarity.
+  url: https://arxiv.org/abs/2602.20457
+  pdf_url: https://arxiv.org/pdf/2602.20457v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 1
+citation_year: 2026

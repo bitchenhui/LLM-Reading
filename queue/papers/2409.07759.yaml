@@ -1,0 +1,44 @@
+id: paper:arxiv:2409.07759
+status: pending
+score: 2
+track: immersive_media
+matched:
+- ref: concept:3DGS
+  count: 4
+  weight: 1
+- ref: concept:VolumetricVideo
+  count: 2
+  weight: 1
+meta:
+  title: 'SwinGS: Sliding Window Gaussian Splatting for Volumetric Video Streaming with Arbitrary Length'
+  authors:
+  - Bangya Liu
+  - Suman Banerjee
+  published: '2024-09-12'
+  updated: '2025-04-19'
+  categories:
+  - cs.MM
+  - cs.CV
+  abstract: Recent advances in 3D Gaussian Splatting (3DGS) have garnered significant attention in computer
+    vision and computer graphics due to its high rendering speed and remarkable quality. While extant
+    research has endeavored to extend the application of 3DGS from static to dynamic scenes, such efforts
+    have been consistently impeded by excessive model sizes, constraints on video duration, and content
+    deviation. These limitations significantly compromise the streamability of dynamic 3D Gaussian models,
+    thereby restricting their utility in downstream applications, including volumetric video, autonomous
+    vehicle, and immersive technologies such as virtual, augmented, and mixed reality. This paper introduces
+    SwinGS, a novel framework for training, delivering, and rendering volumetric video in a real-time
+    streaming fashion. To address the aforementioned challenges and enhance streamability, SwinGS integrates
+    spacetime Gaussian with Markov Chain Monte Carlo (MCMC) to adapt the model to fit various 3D scenes
+    across frames, in the meantime employing a sliding window captures Gaussian snapshots for each frame
+    in an accumulative way. We implement a prototype of SwinGS and demonstrate its streamability across
+    various datasets and scenes. Additionally, we develop an interactive WebGL viewer enabling real-time
+    volumetric video playback on most devices with modern browsers, including smartphones and tablets.
+    Experimental results show that SwinGS reduces transmission costs by 83.6% compared to previous work
+    and could be easily scaled to volumetric videos with arbitrary length with no increasing of required
+    GPU resources.
+  url: https://arxiv.org/abs/2409.07759
+  pdf_url: https://arxiv.org/pdf/2409.07759v3
+  version: v3
+fetched: '2026-11-14'
+citation_count: 16
+citation_year: 2024

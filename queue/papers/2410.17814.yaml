@@ -1,0 +1,42 @@
+id: paper:arxiv:2410.17814
+status: skipped
+score: 0
+track: video_image_coding
+matched: []
+meta:
+  title: Learning Lossless Compression for High Bit-Depth Volumetric Medical Image
+  authors:
+  - Kai Wang
+  - Yuanchao Bai
+  - Daxin Li
+  - Deming Zhai
+  - Junjun Jiang
+  - Xianming Liu
+  published: '2024-10-23'
+  updated: '2024-10-23'
+  categories:
+  - eess.IV
+  - cs.CV
+  - cs.LG
+  abstract: 'Recent advances in learning-based methods have markedly enhanced the capabilities of image
+    compression. However, these methods struggle with high bit-depth volumetric medical images, facing
+    issues such as degraded performance, increased memory demand, and reduced processing speed. To address
+    these challenges, this paper presents the Bit-Division based Lossless Volumetric Image Compression
+    (BD-LVIC) framework, which is tailored for high bit-depth medical volume compression. The BD-LVIC
+    framework skillfully divides the high bit-depth volume into two lower bit-depth segments: the Most
+    Significant Bit-Volume (MSBV) and the Least Significant Bit-Volume (LSBV). The MSBV concentrates on
+    the most significant bits of the volumetric medical image, capturing vital structural details in a
+    compact manner. This reduction in complexity greatly improves compression efficiency using traditional
+    codecs. Conversely, the LSBV deals with the least significant bits, which encapsulate intricate texture
+    details. To compress this detailed information effectively, we introduce an effective learning-based
+    compression model equipped with a Transformer-Based Feature Alignment Module, which exploits both
+    intra-slice and inter-slice redundancies to accurately align features. Subsequently, a Parallel Autoregressive
+    Coding Module merges these features to precisely estimate the probability distribution of the least
+    significant bit-planes. Our extensive testing demonstrates that the BD-LVIC framework not only sets
+    new performance benchmarks across various datasets but also maintains a competitive coding speed,
+    highlighting its significant potential and practical utility in the realm of volumetric medical image
+    compression.'
+  url: https://arxiv.org/abs/2410.17814
+  pdf_url: https://arxiv.org/pdf/2410.17814v1
+  version: v1
+fetched: '2026-11-14'

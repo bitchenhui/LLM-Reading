@@ -1,0 +1,33 @@
+id: paper:arxiv:2412.13070
+status: skipped
+score: 1
+track: processing_enhancement
+matched:
+- ref: concept:SuperResolution
+  count: 1
+  weight: 1
+meta:
+  title: Learning of Patch-Based Smooth-Plus-Sparse Models for Image Reconstruction
+  authors:
+  - Stanislas Ducotterd
+  - Sebastian Neumayer
+  - Michael Unser
+  published: '2024-12-17'
+  updated: '2025-03-17'
+  categories:
+  - eess.IV
+  - cs.CV
+  - cs.LG
+  - eess.SP
+  abstract: We aim at the solution of inverse problems in imaging, by combining a penalized sparse representation
+    of image patches with an unconstrained smooth one. This allows for a straightforward interpretation
+    of the reconstruction. We formulate the optimization as a bilevel problem. The inner problem deploys
+    classical algorithms while the outer problem optimizes the dictionary and the regularizer parameters
+    through supervised learning. The process is carried out via implicit differentiation and gradient-based
+    optimization. We evaluate our method for denoising, super-resolution, and compressed-sensing magnetic-resonance
+    imaging. We compare it to other classical models as well as deep-learning-based methods and show that
+    it always outperforms the former and also the latter in some instances.
+  url: https://arxiv.org/abs/2412.13070
+  pdf_url: https://arxiv.org/pdf/2412.13070v2
+  version: v2
+fetched: '2026-11-14'

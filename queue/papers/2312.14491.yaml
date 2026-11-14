@@ -1,0 +1,41 @@
+id: paper:arxiv:2312.14491
+status: skipped_low_citation
+score: 7
+track: video_image_coding
+matched:
+- ref: codec:HEVC
+  count: 1
+  weight: 3
+- ref: codec:VVC
+  count: 1
+  weight: 3
+- ref: concept:EntropyModel
+  count: 1
+  weight: 1
+meta:
+  title: Enhanced Color Palette Modeling for Lossless Screen Content Compression
+  authors:
+  - Hannah Och
+  - Shabhrish Reddy Uddehal
+  - Tilo Strutz
+  - André Kaup
+  published: '2023-12-22'
+  updated: '2024-10-07'
+  categories:
+  - eess.IV
+  abstract: 'Soft context formation is a lossless image coding method for screen content. It encodes images
+    pixel by pixel via arithmetic coding by collecting statistics for probability distribution estimation.
+    Its main pipeline includes three stages, namely a context model based stage, a color palette stage
+    and a residual coding stage. Each subsequent stage is only employed if the previous stage can not
+    be applied since necessary statistics, e.g. colors or contexts, have not been learned yet. We propose
+    the following enhancements: First, information from previous stages is used to remove redundant color
+    palette entries and prediction errors in subsequent stages. Additionally, implicitly known stage decision
+    signals are no longer explicitly transmitted. These enhancements lead to an average bit rate decrease
+    of 1.07% on the evaluated data. Compared to VVC and HEVC, the proposed method needs roughly 0.44 and
+    0.17 bits per pixel less on average for 24-bit screen content images, respectively.'
+  url: https://arxiv.org/abs/2312.14491
+  pdf_url: https://arxiv.org/pdf/2312.14491v3
+  version: v3
+fetched: '2026-11-14'
+citation_count: 4
+citation_year: 2023

@@ -1,0 +1,40 @@
+id: paper:arxiv:2210.08812
+status: skipped
+score: 1
+track: processing_enhancement
+matched:
+- ref: concept:SuperResolution
+  count: 2
+  weight: 1
+meta:
+  title: 'ITSRN++: Stronger and Better Implicit Transformer Network for Continuous Screen Content Image
+    Super-Resolution'
+  authors:
+  - Sheng Shen
+  - Huanjing Yue
+  - Jingyu Yang
+  - Kun Li
+  published: '2022-10-17'
+  updated: '2022-10-17'
+  categories:
+  - cs.CV
+  - cs.MM
+  abstract: Nowadays, online screen sharing and remote cooperation are becoming ubiquitous. However, the
+    screen content may be downsampled and compressed during transmission, while it may be displayed on
+    large screens or the users would zoom in for detail observation at the receiver side. Therefore, developing
+    a strong and effective screen content image (SCI) super-resolution (SR) method is demanded. We observe
+    that the weight-sharing upsampler (such as deconvolution or pixel shuffle) could be harmful to sharp
+    and thin edges in SCIs, and the fixed scale upsampler makes it inflexible to fit screens with various
+    sizes. To solve this problem, we propose an implicit transformer network for continuous SCI SR (termed
+    as ITSRN++). Specifically, we propose a modulation based transformer as the upsampler, which modulates
+    the pixel features in discrete space via a periodic nonlinear function to generate features for continuous
+    pixels. To enhance the extracted features, we further propose an enhanced transformer as the feature
+    extraction backbone, where convolution and attention branches are utilized parallelly. Besides, we
+    construct a large scale SCI2K dataset to facilitate the research on SCI SR. Experimental results on
+    nine datasets demonstrate that the proposed method achieves state-of-the-art performance for SCI SR
+    (outperforming SwinIR by 0.74 dB for x3 SR) and also works well for natural image SR. Our codes and
+    dataset will be released upon the acceptance of this work.
+  url: https://arxiv.org/abs/2210.08812
+  pdf_url: https://arxiv.org/pdf/2210.08812v1
+  version: v1
+fetched: '2026-11-14'

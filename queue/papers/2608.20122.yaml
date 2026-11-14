@@ -1,0 +1,44 @@
+id: paper:arxiv:2608.20122
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'ArmorOCR: Grounded Adversarial Visual Perception via Observation-Transferred Self-Distillation'
+  authors:
+  - Linhan Cao
+  - Siyuan Li
+  - Jun Lan
+  - Liangbo He
+  - Guannan Li
+  - Xiaolei Huang
+  - Jun Jia
+  - Shuheng Zhou
+  - Huijia Zhu
+  - Weiqiang Wang
+  - Wei Sun
+  published: '2026-08-20'
+  updated: '2026-08-20'
+  categories:
+  - cs.CV
+  abstract: Large multimodal models (LMMs) have demonstrated strong OCR recognition capabilities, yet
+    remain vulnerable to adversarial visual text that is readable to humans but challenging for models
+    to localize and recognize. Existing OCR benchmarks mainly focus on natural or document-style text,
+    while adversarial OCR evaluations remain limited in scale, task coverage, or region-aware evaluation.
+    In this paper, we formulate adversarial OCR as a \textbf{grounded OCR perception} task and introduce
+    \textbf{AdvSpot}, the first benchmark for grounded adversarial OCR evaluation. AdvSpot comprises 390
+    images with region-level annotations, spanning 5 primary categories and 13 fine-grained adversarial
+    OCR types. To address this challenge, we propose \textbf{ArmorOCR}, a two-stage training framework
+    for robust adversarial OCR perception. ArmorOCR first acquires missing adversarial OCR perception
+    from privileged transformed observations through On-Policy Self-Distillation (OPSD), and then refines
+    grounded OCR perception through Group Relative Policy Optimization (GRPO) with task-conditioned rewards
+    for localization, recognition, full spotting, and visual question answering (VQA). Experiments on
+    our AdvSpot, other adversarial OCR benchmarks, and general OCR benchmarks demonstrate that ArmorOCR
+    consistently improves adversarial OCR perception while preserving competitive general OCR capability.
+  url: https://arxiv.org/abs/2608.20122
+  pdf_url: https://arxiv.org/pdf/2608.20122v1
+  version: v1
+fetched: '2026-11-14'

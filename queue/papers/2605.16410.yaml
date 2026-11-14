@@ -1,0 +1,38 @@
+id: paper:arxiv:2605.16410
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: Test-Time Hinting for Black-Box Vision-Language Models
+  authors:
+  - Kaihua Hou
+  - Abhijith Varma Mudunuri
+  - Jiaxing Qiu
+  - Roxana Daneshjou
+  - Thomas Hartvigsen
+  - Ahmed Alaa
+  published: '2026-05-13'
+  updated: '2026-10-18'
+  categories:
+  - cs.CV
+  abstract: Test-time scaling (TTS) methods have proven highly effective for LLMs, yet their application
+    to vision-language models (VLMs) remains relatively underexplored. Existing VLM TTS methods largely
+    require open-weight model access or expensive repeated sampling, and are evaluated primarily on multimodal
+    mathematical and scientific reasoning benchmarks rather than natural-image understanding. In this
+    paper, we propose Test-Time Hinting, a method that improves VLM performance with a single call to
+    the target VLM and requires only black-box API access, which makes it broadly applicable to frontier
+    closed-weight models. Our method is motivated by the observation that VLM errors tend to cluster around
+    recurring failure patterns that are shared across models and predictable from the input alone. We
+    therefore train a lightweight hint generator model to predict, for a given test input, which "hint"
+    should be prepended to the prompt, providing targeted contextual or procedural guidance that steers
+    the VLM away from its characteristic failure modes without revealing the answer. We show that Test-Time
+    Hinting significantly improves the accuracy of multiple closed-weight VLMs on natural-image VQA benchmarks
+    and that these gains generalize to unseen benchmarks and VLMs without retraining the hint generator.
+  url: https://arxiv.org/abs/2605.16410
+  pdf_url: https://arxiv.org/pdf/2605.16410v2
+  version: v2
+fetched: '2026-11-14'

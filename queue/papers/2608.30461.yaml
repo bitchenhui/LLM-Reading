@@ -1,0 +1,38 @@
+id: paper:arxiv:2608.30461
+status: skipped
+score: 1
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 1
+  weight: 1
+meta:
+  title: 'From Final Artifacts to Trajectories: Retrospective Process Supervision for Evidence-Grounded
+    Long-Form Generation'
+  authors:
+  - Junjie Huang
+  - Jiarui Qin
+  - Di Yin
+  - Weiwen Liu
+  - Yong Yu
+  - Xing Sun
+  - Weinan Zhang
+  published: '2026-08-31'
+  updated: '2026-08-31'
+  categories:
+  - cs.CL
+  abstract: Trajectory data is getting more vital for training large language models for boosting the
+    agentic abilities. Unlike the verifiable domains such as coding or mathematics, scaling trajectory
+    data for open-ended tasks is much more difficult because these tasks lack singular ground truth and
+    are costly to annotate or verify. In this paper, we propose RetroGen, a self-improving framework of
+    retrospective process supervision. Our key observation is that although expert trajectories are scarce,
+    high-quality final artifacts such as literature reviews, analyst reports and legal judgments, are
+    abundant in pre-training data and can be viewed as compressed traces of the evidence-seeking processes
+    that produced them. RetroGen reconstructs candidate latent trajectories from expert artifacts, verifies
+    them against both the artifact and supporting evidence, and trains models on their own successful
+    reconstruction data, without requiring trajectory data from stronger models. Experiments show that
+    RetroGen improves grounding, faithful synthesis, and long-form evidence-seeking agent tasks.
+  url: https://arxiv.org/abs/2608.30461
+  pdf_url: https://arxiv.org/pdf/2608.30461v1
+  version: v1
+fetched: '2026-11-14'

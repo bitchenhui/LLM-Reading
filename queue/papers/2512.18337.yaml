@@ -1,0 +1,59 @@
+id: paper:arxiv:2512.18337
+status: pending
+score: 2
+track: self_improvement
+matched:
+- ref: concept:LLM
+  count: 2
+  weight: 1
+- ref: concept:SelfImprovement
+  count: 1
+  weight: 1
+meta:
+  title: 'Towards Efficient Agents: A Co-Design of Inference Architecture and System'
+  authors:
+  - Weizhe Lin
+  - Hui-Ling Zhen
+  - Shuai Yang
+  - Xian Wang
+  - Renxi Liu
+  - Hanting Chen
+  - Wangze Zhang
+  - Chuansai Zhou
+  - Yiming Li
+  - Chen Chen
+  - Xing Li
+  - Zhiyuan Yang
+  - Xiaosong Li
+  - Xianzhi Yu
+  - Zhenhua Dong
+  - Mingxuan Yuan
+  - Yunhe Wang
+  published: '2025-12-20'
+  updated: '2026-02-24'
+  categories:
+  - cs.CL
+  abstract: 'The rapid development of large language model (LLM)-based agents has unlocked new possibilities
+    for autonomous multi-turn reasoning and tool-augmented decision-making. However, their real-world
+    deployment is hindered by severe inefficiencies that arise not from isolated model inference, but
+    from the systemic latency accumulated across reasoning loops, context growth, and heterogeneous tool
+    interactions. This paper presents AgentInfer, a unified framework for end-to-end agent acceleration
+    that bridges inference optimization and architectural design. We decompose the problem into four synergistic
+    components: AgentCollab, a hierarchical dual-model reasoning framework that balances large- and small-model
+    usage through dynamic role assignment; AgentSched, a cache-aware hybrid scheduler that minimizes latency
+    under heterogeneous request patterns; AgentSAM, a suffix-automaton-based speculative decoding method
+    that reuses multi-session semantic memory to achieve low-overhead inference acceleration; and AgentCompress,
+    a semantic compression mechanism that asynchronously distills and reorganizes agent memory without
+    disrupting ongoing reasoning. Together, these modules form a Self-Evolution Engine capable of sustaining
+    efficiency and cognitive stability throughout long-horizon reasoning tasks. Experiments on the BrowseComp-zh
+    and DeepDiver benchmarks demonstrate that through the synergistic collaboration of these methods,
+    AgentInfer reduces ineffective token consumption by over 50%, achieving an overall 1.8-2.5 times speedup
+    with preserved accuracy. These results underscore that optimizing for agentic task completion-rather
+    than merely per-token throughput-is the key to building scalable, efficient, and self-improving intelligent
+    systems.'
+  url: https://arxiv.org/abs/2512.18337
+  pdf_url: https://arxiv.org/pdf/2512.18337v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 9
+citation_year: 2025

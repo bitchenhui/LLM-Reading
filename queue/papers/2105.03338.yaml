@@ -1,0 +1,45 @@
+id: paper:arxiv:2105.03338
+status: pending
+score: 7
+track: processing_enhancement
+matched:
+- ref: codec:VVC
+  count: 2
+  weight: 3
+- ref: impl:VTM
+  count: 2
+  weight: 3
+- ref: concept:QP
+  count: 3
+  weight: 1
+meta:
+  title: Model Selection CNN-based VVC QualityEnhancement
+  authors:
+  - Fatemeh Nasiri
+  - Wassim Hamidouche
+  - Luce Morin
+  - Nicolas Dhollande
+  - Gildas Cocherel
+  published: '2021-05-07'
+  updated: '2021-05-07'
+  categories:
+  - eess.IV
+  abstract: Artifact removal and filtering methods are inevitable parts of video coding. On one hand,
+    new codecs and compression standards come with advanced in-loop filters and on the other hand, displays
+    are equipped with high capacity processing units for post-treatment of decoded videos. This paper
+    proposes a Convolutional Neural Network (CNN)-based post-processing algorithm for intra and inter
+    frames of Versatile Video Coding (VVC) coded streams. Depending on the frame type, this method benefits
+    from normative prediction signal by feeding it as an additional input along with reconstructed signal
+    and a Quantization Parameter (QP)-map to the CNN. Moreover, an optional Model Selection (MS) strategy
+    is adopted to pick the best trained model among available ones at the encoder side and signal it to
+    the decoder side. This MS strategy is applicable at both frame level and block level. The experiments
+    under the Random Access (RA) configuration of the VVC Test Model (VTM-10.0) show that the proposed
+    prediction-aware algorithm can bring an additional BD-BR gain of -1.3% compared to the method without
+    the prediction information. Furthermore, the proposed MS scheme brings -0.5% more BD-BR gain on top
+    of the prediction-aware method.
+  url: https://arxiv.org/abs/2105.03338
+  pdf_url: https://arxiv.org/pdf/2105.03338v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 11
+citation_year: 2021

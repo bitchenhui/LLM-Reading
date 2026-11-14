@@ -1,0 +1,40 @@
+id: paper:arxiv:2602.12758
+status: skipped
+score: 1
+track: streaming_delivery
+matched:
+- ref: concept:WebRTC
+  count: 1
+  weight: 1
+meta:
+  title: 'VineetVC: Adaptive Video Conferencing Under Severe Bandwidth Constraints Using Audio-Driven
+    Talking-Head Reconstruction'
+  authors:
+  - Vineet Kumar Rakesh
+  - Soumya Mazumdar
+  - Tapas Samanta
+  - Hemendra Kumar Pandey
+  - Amitabha Das
+  - Sarbajit Pal
+  published: '2026-02-13'
+  updated: '2026-02-13'
+  categories:
+  - eess.IV
+  - cs.AI
+  - cs.CV
+  - cs.MM
+  abstract: 'Intense bandwidth depletion within consumer and constrained networks has the potential to
+    undermine the stability of real-time video conferencing: encoder rate management becomes saturated,
+    packet loss escalates, frame rates deteriorate, and end-to-end latency significantly increases. This
+    work delineates an adaptive conferencing system that integrates WebRTC media delivery with a supplementary
+    audio-driven talking-head reconstruction pathway and telemetry-driven mode regulation. The system
+    consists of a WebSocket signaling service, an optional SFU for multi-party transmission, a browser
+    client capable of real-time WebRTC statistics extraction and CSV telemetry export, and an AI REST
+    service that processes a reference face image and recorded audio to produce a synthesized MP4; the
+    browser can substitute its outbound camera track with the synthesized stream with a median bandwidth
+    of 32.80 kbps. The solution incorporates a bandwidth-mode switching strategy and a client-side mode-state
+    logger.'
+  url: https://arxiv.org/abs/2602.12758
+  pdf_url: https://arxiv.org/pdf/2602.12758v1
+  version: v1
+fetched: '2026-11-14'

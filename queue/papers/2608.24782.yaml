@@ -1,0 +1,48 @@
+id: paper:arxiv:2608.24782
+status: pending
+score: 4
+track: quality_assessment
+matched:
+- ref: metric:SSIM
+  count: 3
+  weight: 1
+- ref: concept:IQA
+  count: 1
+  weight: 1
+- ref: metric:MOS
+  count: 1
+  weight: 1
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+meta:
+  title: Image Difference Quantification Using Autoencoder-Based Latent Representations
+  authors:
+  - Manish Sharma
+  - Timothy Yim
+  - Clifton Forlines
+  published: '2026-08-25'
+  updated: '2026-08-25'
+  categories:
+  - cs.CV
+  abstract: Traditional image similarity metrics such as Mean Squared Error (MSE), Peak Signal-to-Noise
+    Ratio (PSNR), and the Structural Similarity Index Measure (SSIM) rely on pixel-level comparisons and
+    often fail to capture perceptually meaningful differences between images. In contrast, latent representations
+    learned by deep neural networks encode high-level semantic information that is more closely aligned
+    with human visual perception. This paper proposes a convolutional autoencoder-based framework for
+    quantifying image differences using cosine similarity in latent space. The learned compact embeddings
+    enable robust differentiation between visually distinct images under variations in illumination, pose,
+    and background. Extensive evaluation on dog-cat images and additional cross-domain datasets demonstrates
+    clear class-wise clustering and strong inter-class separability in the latent space, with 98.4% of
+    dog-cat image pairs exhibiting similarity scores below 0.5. Further validation using the TID2013 dataset
+    shows that latent-space distance correlates positively with human Mean Opinion Scores (MOS), demonstrating
+    sensitivity to perceptually relevant image distortions. The proposed approach provides a computationally
+    efficient and semantically grounded alternative to conventional pixel-based similarity metrics, with
+    potential applications in content-based retrieval, perceptual quality assessment, and semantic similarity
+    analysis.
+  url: https://arxiv.org/abs/2608.24782
+  pdf_url: https://arxiv.org/pdf/2608.24782v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 0
+citation_year: 2026

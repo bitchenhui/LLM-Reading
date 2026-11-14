@@ -1,0 +1,54 @@
+id: paper:arxiv:2510.15775
+status: skipped_low_citation
+score: 6
+track: video_image_coding
+matched:
+- ref: codec:HEVC
+  count: 1
+  weight: 3
+- ref: concept:INR
+  count: 2
+  weight: 1
+- ref: concept:RDO
+  count: 1
+  weight: 1
+- ref: metric:BD-Rate
+  count: 1
+  weight: 1
+meta:
+  title: 'SANR: Scene-Aware Neural Representation for Light Field Image Compression with Rate-Distortion
+    Optimization'
+  authors:
+  - Gai Zhang
+  - Xinfeng Zhang
+  - Lv Tang
+  - Hongyu An
+  - Li Zhang
+  - Qingming Huang
+  published: '2025-10-17'
+  updated: '2025-10-17'
+  categories:
+  - eess.IV
+  - cs.CV
+  - cs.MM
+  abstract: Light field images capture multi-view scene information and play a crucial role in 3D scene
+    reconstruction. However, their high-dimensional nature results in enormous data volumes, posing a
+    significant challenge for efficient compression in practical storage and transmission scenarios. Although
+    neural representation-based methods have shown promise in light field image compression, most approaches
+    rely on direct coordinate-to-pixel mapping through implicit neural representation (INR), often neglecting
+    the explicit modeling of scene structure. Moreover, they typically lack end-to-end rate-distortion
+    optimization, limiting their compression efficiency. To address these limitations, we propose SANR,
+    a Scene-Aware Neural Representation framework for light field image compression with end-to-end rate-distortion
+    optimization. For scene awareness, SANR introduces a hierarchical scene modeling block that leverages
+    multi-scale latent codes to capture intrinsic scene structures, thereby reducing the information gap
+    between INR input coordinates and the target light field image. From a compression perspective, SANR
+    is the first to incorporate entropy-constrained quantization-aware training (QAT) into neural representation-based
+    light field image compression, enabling end-to-end rate-distortion optimization. Extensive experiment
+    results demonstrate that SANR significantly outperforms state-of-the-art techniques regarding rate-distortion
+    performance with a 65.62\% BD-rate saving against HEVC.
+  url: https://arxiv.org/abs/2510.15775
+  pdf_url: https://arxiv.org/pdf/2510.15775v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 0
+citation_year: 2025

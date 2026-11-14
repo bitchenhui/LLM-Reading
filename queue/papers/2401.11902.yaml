@@ -1,0 +1,33 @@
+id: paper:arxiv:2401.11902
+status: skipped
+score: 1
+track: video_image_coding
+matched:
+- ref: concept:TrainingFree
+  count: 1
+  weight: 1
+meta:
+  title: A Training-Free Defense Framework for Robust Learned Image Compression
+  authors:
+  - Myungseo Song
+  - Jinyoung Choi
+  - Bohyung Han
+  published: '2024-01-22'
+  updated: '2024-01-22'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: We study the robustness of learned image compression models against adversarial attacks and
+    present a training-free defense technique based on simple image transform functions. Recent learned
+    image compression models are vulnerable to adversarial attacks that result in poor compression rate,
+    low reconstruction quality, or weird artifacts. To address the limitations, we propose a simple but
+    effective two-way compression algorithm with random input transforms, which is conveniently applicable
+    to existing image compression models. Unlike the naïve approaches, our approach preserves the original
+    rate-distortion performance of the models on clean images. Moreover, the proposed algorithm requires
+    no additional training or modification of existing models, making it more practical. We demonstrate
+    the effectiveness of the proposed techniques through extensive experiments under multiple compression
+    models, evaluation metrics, and attack scenarios.
+  url: https://arxiv.org/abs/2401.11902
+  pdf_url: https://arxiv.org/pdf/2401.11902v1
+  version: v1
+fetched: '2026-11-14'

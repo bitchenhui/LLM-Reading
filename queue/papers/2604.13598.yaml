@@ -1,0 +1,45 @@
+id: paper:arxiv:2604.13598
+status: pending
+score: 2
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 3
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: Enhancing Reinforcement Learning for Radiology Report Generation with Evidence-aware Rewards
+    and Self-correcting Preference Learning
+  authors:
+  - Qin Zhou
+  - Guoyan Liang
+  - Qianyi Yang
+  - Jingyuan Chen
+  - Sai Wu
+  - Chang Yao
+  - Zhe Wang
+  published: '2026-04-15'
+  updated: '2026-04-15'
+  categories:
+  - cs.LG
+  - stat.ME
+  abstract: 'Recent reinforcement learning (RL) approaches have advanced radiology report generation (RRG),
+    yet two core limitations persist: (1) report-level rewards offer limited evidence-grounded guidance
+    for clinical faithfulness; and (2) current methods lack an explicit self-improving mechanism to align
+    with clinical preference. We introduce clinically aligned Evidence-aware Self-Correcting Reinforcement
+    Learning (ESC-RL), comprising two key components. First, a Group-wise Evidence-aware Alignment Reward
+    (GEAR) delivers group-wise, evidence-aware feedback. GEAR reinforces consistent grounding for true
+    positives, recovers missed findings for false negatives, and suppresses unsupported content for false
+    positives. Second, a Self-correcting Preference Learning (SPL) strategy automatically constructs a
+    reliable, disease-aware preference dataset from multiple noisy observations and leverages an LLM to
+    synthesize refined reports without human supervision. ESC-RL promotes clinically faithful, disease-aligned
+    reward and supports continual self-improvement during training. Extensive experiments on two public
+    chest X-ray datasets demonstrate consistent gains and state-of-the-art performance.'
+  url: https://arxiv.org/abs/2604.13598
+  pdf_url: https://arxiv.org/pdf/2604.13598v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 5
+citation_year: 2026

@@ -1,0 +1,40 @@
+id: paper:arxiv:2402.01380
+status: skipped
+score: 2
+track: video_image_coding
+matched:
+- ref: concept:VolumetricVideo
+  count: 2
+  weight: 1
+- ref: concept:NeRF
+  count: 1
+  weight: 1
+meta:
+  title: Efficient Dynamic-NeRF Based Volumetric Video Coding with Rate Distortion Optimization
+  authors:
+  - Zhiyu Zhang
+  - Guo Lu
+  - Huanxiong Liang
+  - Anni Tang
+  - Qiang Hu
+  - Li Song
+  published: '2024-02-02'
+  updated: '2024-11-08'
+  categories:
+  - cs.CV
+  - eess.IV
+  abstract: Volumetric videos, benefiting from immersive 3D realism and interactivity, hold vast potential
+    for various applications, while the tremendous data volume poses significant challenges for compression.
+    Recently, NeRF has demonstrated remarkable potential in volumetric video compression thanks to its
+    simple representation and powerful 3D modeling capabilities, where a notable work is ReRF. However,
+    ReRF separates the modeling from compression process, resulting in suboptimal compression efficiency.
+    In contrast, in this paper, we propose a volumetric video compression method based on dynamic NeRF
+    in a more compact manner. Specifically, we decompose the NeRF representation into the coefficient
+    fields and the basis fields, incrementally updating the basis fields in the temporal domain to achieve
+    dynamic modeling. Additionally, we perform end-to-end joint optimization on the modeling and compression
+    process to further improve the compression efficiency. Extensive experiments demonstrate that our
+    method achieves higher compression efficiency compared to ReRF on various datasets.
+  url: https://arxiv.org/abs/2402.01380
+  pdf_url: https://arxiv.org/pdf/2402.01380v2
+  version: v2
+fetched: '2026-11-14'

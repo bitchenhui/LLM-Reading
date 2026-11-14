@@ -1,0 +1,31 @@
+id: paper:arxiv:2307.03246
+status: skipped
+score: 0
+track: video_image_coding
+matched: []
+meta:
+  title: Semantic-Aware Image Compressed Sensing
+  authors:
+  - Bowen Zhang
+  - Zhijin Qin
+  - Geoffrey Ye Li
+  published: '2023-07-06'
+  updated: '2023-07-11'
+  categories:
+  - eess.IV
+  abstract: Deep learning based image compressed sensing (CS) has achieved great success. However, existing
+    CS systems mainly adopt a fixed measurement matrix to images, ignoring the fact the optimal measurement
+    numbers and bases are different for different images. To further improve the sensing efficiency, we
+    propose a novel semantic-aware image CS system. In our system, the encoder first uses a fixed number
+    of base CS measurements to sense different images. According to the base CS results, the encoder then
+    employs a policy network to analyze the semantic information in images and determines the measurement
+    matrix for different image areas. At the decoder side, a semantic-aware initial reconstruction network
+    is developed to deal with the changes of measurement matrices used at the encoder. A rate-distortion
+    training loss is further introduced to dynamically adjust the average compression ratio for the semantic-aware
+    CS system and the policy network is trained jointly with the encoder and the decoder in an en-to-end
+    manner by using some proxy functions. Numerical results show that the proposed semantic-aware image
+    CS system is superior to the traditional ones with fixed measurement matrices.
+  url: https://arxiv.org/abs/2307.03246
+  pdf_url: https://arxiv.org/pdf/2307.03246v2
+  version: v2
+fetched: '2026-11-14'

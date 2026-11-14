@@ -1,0 +1,41 @@
+id: paper:arxiv:2601.17568
+status: skipped_low_citation
+score: 3
+track: streaming_delivery
+matched:
+- ref: codec:HEVC
+  count: 1
+  weight: 3
+meta:
+  title: Fast Multirate Encoding for 360° Video in OMAF Streaming Workflows
+  authors:
+  - Amritha Premkumar
+  - Christian Herglotz
+  published: '2026-01-24'
+  updated: '2026-01-24'
+  categories:
+  - eess.IV
+  - cs.MM
+  abstract: 'Preparing high-quality 360-degree video for HTTP Adaptive Streaming requires encoding each
+    sequence into multiple representations spanning different resolutions and quantization parameters
+    (QPs). For ultra-high-resolution immersive content such as 8K 360-degree video, this process is computationally
+    intensive due to the large number of representations and the high complexity of modern codecs. This
+    paper investigates fast multirate encoding strategies that reduce encoding time by reusing encoder
+    analysis information across QPs and resolutions. We evaluate two cross-resolution information-reuse
+    pipelines that differ in how reference encodes propagate across resolutions: (i) a strict HD -> 4K
+    -> 8K cascade with scaled analysis reuse, and (ii) a resolution-anchored scheme that initializes each
+    resolution with its own highest-bitrate reference before guiding dependent encodes. In addition to
+    evaluating these pipelines on standard equirectangular projection content, we also apply the same
+    two pipelines to cubemap-projection (CMP) tiling, where each 360-degree frame is partitioned into
+    independently encoded tiles. CMP introduces substantial parallelism, while still benefiting from the
+    proposed multirate analysis-reuse strategies. Experimental results using the SJTU 8K 360-degree dataset
+    show that hierarchical analysis reuse significantly accelerates HEVC encoding with minimal rate-distortion
+    impact across both equirectangular and CMP-tiled content, yielding encoding-time reductions of roughly
+    33%-59% for ERP and about 51% on average for CMP, with Bjontegaard Delta Encoding Time (BDET) gains
+    approaching -50% and wall-clock speedups of up to 4.2x.'
+  url: https://arxiv.org/abs/2601.17568
+  pdf_url: https://arxiv.org/pdf/2601.17568v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 0
+citation_year: 2026

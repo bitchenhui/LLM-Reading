@@ -1,0 +1,40 @@
+id: paper:arxiv:2511.17525
+status: skipped_low_citation
+score: 2
+track: streaming_delivery
+matched:
+- ref: concept:DASH
+  count: 3
+  weight: 1
+- ref: concept:QoE
+  count: 3
+  weight: 1
+meta:
+  title: 'Quantifying Multimedia Streaming Quality: A Practical Analysis using PIE and Flow Queue PIE'
+  authors:
+  - Hemendra M. Naik
+  published: '2025-10-22'
+  updated: '2025-10-22'
+  categories:
+  - cs.NI
+  abstract: The exponential growth of multimedia streaming services over the Internet emphasizes the increasing
+    significance of ensuring a seamless and high-quality streaming experience for users. Dynamic Adaptive
+    Streaming over HTTP (DASH) has emerged as a popular solution for delivering multimedia content over
+    variable network conditions. However, challenges such as network congestion, intermittent packet losses,
+    and varying network load continue to impact the Quality of Experience (QoE) perceived by the users.
+    In this work, the main goal is to evaluate the effectiveness of using queue management and flow isolation
+    techniques in terms of improving the overall QoE for DASH based multimedia streaming applications.
+    Proportional Integral controller Enhanced (PIE) and Flow Queue PIE (FQ-PIE) are used as queue management
+    and flow isolation mechanisms, respectively. The most distinctive aspect of this work is our assessment
+    of QoE for multimedia streaming applications when multipath transport protocols, like Multipath TCP
+    (MPTCP), are employed. Network Stack Tester (NeST), a Python based network emulator built on top of
+    Linux network namespaces, has been used to perform the experiments. The parameters used for evaluating
+    the QoE include bitrate, bitrate switches, throughput, Round Trip Time (RTT), and application buffer
+    level. We observe that flow isolation techniques, combined with queue management and multipath transport,
+    significantly improve the QoE for multimedia applications.
+  url: https://arxiv.org/abs/2511.17525
+  pdf_url: https://arxiv.org/pdf/2511.17525v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 0
+citation_year: 2025

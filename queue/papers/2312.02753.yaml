@@ -1,0 +1,49 @@
+id: paper:arxiv:2312.02753
+status: pending
+score: 10
+track: video_image_coding
+matched:
+- ref: codec:VVC
+  count: 1
+  weight: 3
+- ref: impl:C3
+  count: 1
+  weight: 3
+- ref: impl:VTM
+  count: 1
+  weight: 3
+- ref: dataset:UVG
+  count: 1
+  weight: 1
+meta:
+  title: 'C3: High-performance and low-complexity neural compression from a single image or video'
+  authors:
+  - Hyunjik Kim
+  - Matthias Bauer
+  - Lucas Theis
+  - Jonathan Richard Schwarz
+  - Emilien Dupont
+  published: '2023-12-05'
+  updated: '2023-12-05'
+  categories:
+  - eess.IV
+  - cs.CV
+  - cs.LG
+  - stat.ML
+  abstract: Most neural compression models are trained on large datasets of images or videos in order
+    to generalize to unseen data. Such generalization typically requires large and expressive architectures
+    with a high decoding complexity. Here we introduce C3, a neural compression method with strong rate-distortion
+    (RD) performance that instead overfits a small model to each image or video separately. The resulting
+    decoding complexity of C3 can be an order of magnitude lower than neural baselines with similar RD
+    performance. C3 builds on COOL-CHIC (Ladune et al.) and makes several simple and effective improvements
+    for images. We further develop new methodology to apply C3 to videos. On the CLIC2020 image benchmark,
+    we match the RD performance of VTM, the reference implementation of the H.266 codec, with less than
+    3k MACs/pixel for decoding. On the UVG video benchmark, we match the RD performance of the Video Compression
+    Transformer (Mentzer et al.), a well-established neural video codec, with less than 5k MACs/pixel
+    for decoding.
+  url: https://arxiv.org/abs/2312.02753
+  pdf_url: https://arxiv.org/pdf/2312.02753v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 108
+citation_year: 2023

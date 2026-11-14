@@ -1,0 +1,40 @@
+id: paper:arxiv:2309.03244
+status: pending
+score: 3
+track: video_image_coding
+matched:
+- ref: impl:VTM
+  count: 1
+  weight: 3
+meta:
+  title: 'EGIC: Enhanced Low-Bit-Rate Generative Image Compression Guided by Semantic Segmentation'
+  authors:
+  - Nikolai Körber
+  - Eduard Kromer
+  - Andreas Siebert
+  - Sascha Hauke
+  - Daniel Mueller-Gritschneder
+  - Björn Schuller
+  published: '2023-09-06'
+  updated: '2024-07-16'
+  categories:
+  - eess.IV
+  - cs.CV
+  - cs.LG
+  abstract: 'We introduce EGIC, an enhanced generative image compression method that allows traversing
+    the distortion-perception curve efficiently from a single model. EGIC is based on two novel building
+    blocks: i) OASIS-C, a conditional pre-trained semantic segmentation-guided discriminator, which provides
+    both spatially and semantically-aware gradient feedback to the generator, conditioned on the latent
+    image distribution, and ii) Output Residual Prediction (ORP), a retrofit solution for multi-realism
+    image compression that allows control over the synthesis process by adjusting the impact of the residual
+    between an MSE-optimized and GAN-optimized decoder output on the GAN-based reconstruction. Together,
+    EGIC forms a powerful codec, outperforming state-of-the-art diffusion and GAN-based methods (e.g.,
+    HiFiC, MS-ILLM, and DIRAC-100), while performing almost on par with VTM-20.0 on the distortion end.
+    EGIC is simple to implement, very lightweight, and provides excellent interpolation characteristics,
+    which makes it a promising candidate for practical applications targeting the low bit range.'
+  url: https://arxiv.org/abs/2309.03244
+  pdf_url: https://arxiv.org/pdf/2309.03244v3
+  version: v3
+fetched: '2026-11-14'
+citation_count: 20
+citation_year: 2023

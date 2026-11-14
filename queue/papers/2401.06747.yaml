@@ -1,0 +1,33 @@
+id: paper:arxiv:2401.06747
+status: skipped
+score: 0
+track: video_image_coding
+matched: []
+meta:
+  title: Efficient Parallel Data Optimization for Homogeneous Diffusion Inpainting of 4K Images
+  authors:
+  - Niklas Kämper
+  - Vassillen Chizhov
+  - Joachim Weickert
+  published: '2024-01-12'
+  updated: '2024-08-12'
+  categories:
+  - eess.IV
+  - math.NA
+  abstract: Homogeneous diffusion inpainting can reconstruct missing image areas with high quality from
+    a sparse subset of known pixels, provided that their location as well as their gray or color values
+    are well optimized. This property is exploited in inpainting-based image compression, which is a promising
+    alternative to classical transform-based codecs such as JPEG and JPEG2000. However, optimizing the
+    inpainting data is a challenging task. Current approaches are either fairly slow or do not produce
+    high quality results. As a remedy we propose fast spatial and tonal optimization algorithms for homogeneous
+    diffusion inpainting that efficiently utilize GPU parallelism, with a careful adaptation of some of
+    the most successful numerical concepts. We propose a densification strategy using ideas from error-map
+    dithering combined with a Delaunay triangulation for the spatial optimization. For the tonal optimization
+    we design a domain decomposition solver that solves the corresponding normal equations in a matrix-free
+    fashion and supplement it with a Voronoi-based initialization strategy. With our proposed methods
+    we are able to generate high quality inpainting masks for homogeneous diffusion and optimized tonal
+    values in a runtime that outperforms prior state-of-the-art by a wide margin.
+  url: https://arxiv.org/abs/2401.06747
+  pdf_url: https://arxiv.org/pdf/2401.06747v2
+  version: v2
+fetched: '2026-11-14'

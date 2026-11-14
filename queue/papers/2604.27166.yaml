@@ -1,0 +1,35 @@
+id: paper:arxiv:2604.27166
+status: skipped
+score: 1
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+meta:
+  title: Distributional Alignment Games for Answer-Level Fine-Tuning
+  authors:
+  - Mehryar Mohri
+  - Jon Schneider
+  - Yifan Wu
+  published: '2026-04-29'
+  updated: '2026-04-29'
+  categories:
+  - cs.LG
+  - cs.GT
+  abstract: We focus on the problem of \emph{Answer-Level Fine-Tuning} (ALFT), where the goal is to optimize
+    a language model based on the correctness or properties of its final answers, rather than the specific
+    reasoning traces used to produce them. Directly optimizing answer-level objectives is computationally
+    intractable due to the need to marginalize over the vast space of latent reasoning paths. To overcome
+    this, we propose a general game-theoretical framework that lifts the problem to a \emph{Distributional
+    Alignment Game}. We formulate ALFT as a two-player game between a Policy (the generator) and a Target
+    (an auxiliary distribution). We prove that the Nash Equilibrium of this game corresponds exactly to
+    the solution of the original answer-level optimization problem. This variational perspective transforms
+    the intractable marginalization problem into a tractable projection problem. We demonstrate that this
+    framework unifies recent approaches to diversity and self-improvement (coherence) and provide efficient
+    algorithms compatible with Group Relative Policy Optimization (GRPO), such as Coherence-GRPO, yielding
+    significant complexity gains in mathematical reasoning tasks.
+  url: https://arxiv.org/abs/2604.27166
+  pdf_url: https://arxiv.org/pdf/2604.27166v1
+  version: v1
+fetched: '2026-11-14'

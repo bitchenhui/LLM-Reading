@@ -1,0 +1,41 @@
+id: paper:arxiv:2410.18260
+status: skipped_low_citation
+score: 6
+track: video_image_coding
+matched:
+- ref: impl:x264
+  count: 1
+  weight: 3
+- ref: impl:x265
+  count: 1
+  weight: 3
+meta:
+  title: Predicting total time to compress a video corpus using online inference systems
+  authors:
+  - Xin Shu
+  - Vibhoothi Vibhoothi
+  - Anil Kokaram
+  published: '2024-10-23'
+  updated: '2024-10-23'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: Predicting the computational cost of compressing/transcoding clips in a video corpus is important
+    for resource management of cloud services and VOD (Video On Demand) providers. Currently, customers
+    of cloud video services are unaware of the cost of transcoding their files until the task is completed.
+    Previous work concentrated on predicting perclip compression time, and thus estimating the cost of
+    video compression. In this work, we propose new Machine Learning (ML) systems which predict cost for
+    the entire corpus instead. This is a more appropriate goal since users are not interested in per-clip
+    cost but instead the cost for the whole corpus. In this work, we evaluate our systems with respect
+    to two video codecs (x264, x265) and a novel high-quality video corpus. We find that the accuracy
+    of aggregate time prediction for a video corpus more than two times better than using per-clip predictions.
+    Furthermore, we present an online inference framework in which we update the ML models as files are
+    processed. A consideration of video compute overhead and appropriate choice of ML predictor for each
+    fraction of corpus completed yields a prediction error of less than 5%. This is approximately two
+    times better than previous work which proposed generalised predictors.
+  url: https://arxiv.org/abs/2410.18260
+  pdf_url: https://arxiv.org/pdf/2410.18260v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 0
+citation_year: 2024

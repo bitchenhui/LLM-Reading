@@ -1,0 +1,45 @@
+id: paper:arxiv:2608.22014
+status: pending
+score: 2
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 3
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: 'DynaContext: Self-Improving Dynamic Contextualization of Optimized Prompts for Heterogeneous
+    Parameter Extraction'
+  authors:
+  - Joe Yu
+  - Shibin Thomas Stanley Paul
+  - Sven Mayer
+  published: '2026-08-22'
+  updated: '2026-08-22'
+  categories:
+  - cs.AI
+  abstract: 'Automated prompt and skill optimization typically produces a single static instruction that
+    is reused across inference instances until the next optimization cycle. However, this approach cannot
+    adapt when the required context, constraints, and evidence vary from one instance to another. For
+    instance, parameter extraction from electronic component descriptions breaks this assumption: resistors,
+    capacitors, transistors, and connectors require different fields, unit constraints, and demonstrations,
+    and each input provides a different evidence state. We introduce DynaContext, a framework that combines
+    an offline-optimized extraction core, learned with GEPA or SkillOpt, with inference-time contextual
+    adaptation and validation-gated self-improvement. DynaContext routes each item through internal, external,
+    or fallback evidence paths and composes an item-specific prompt from the core, schema, evidence, unresolved
+    fields, and validated demonstrations. Deterministic validation and an LLM judge gate every output,
+    uncertain cases go to human review, and only human-verified corrections enter the demonstration memory.
+    On a single-category benchmark, average accuracy increases from 86.6% for the base prompt to 96.9%
+    for standalone SkillOpt and 98.6% for the best DynaContext configuration. Across 850 heterogeneous
+    gold parameter facts, average field-level F1 increases from 51.8% for an unoptimized, demonstration-free
+    control to 59.2% with dynamic demonstrations alone, 66.9% with the optimized core alone, and 71.0%
+    with both. Holding the model fixed, the full configuration outperforms the deployed static-prompting
+    pipeline by 17.3 F1 points on average.'
+  url: https://arxiv.org/abs/2608.22014
+  pdf_url: https://arxiv.org/pdf/2608.22014v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 0
+citation_year: 2026

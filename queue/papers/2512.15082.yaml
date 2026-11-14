@@ -1,0 +1,35 @@
+id: paper:arxiv:2512.15082
+status: skipped
+score: 1
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 1
+  weight: 1
+meta:
+  title: 'The Semantic Architect: How FEAML Bridges Structured Data and LLMs for Multi-Label Tasks'
+  authors:
+  - Wanfu Gao
+  - Zebin He
+  - Jun Gao
+  published: '2025-12-17'
+  updated: '2025-12-17'
+  categories:
+  - cs.LG
+  abstract: Existing feature engineering methods based on large language models (LLMs) have not yet been
+    applied to multi-label learning tasks. They lack the ability to model complex label dependencies and
+    are not specifically adapted to the characteristics of multi-label tasks. To address the above issues,
+    we propose Feature Engineering Automation for Multi-Label Learning (FEAML), an automated feature engineering
+    method for multi-label classification which leverages the code generation capabilities of LLMs. By
+    utilizing metadata and label co-occurrence matrices, LLMs are guided to understand the relationships
+    between data features and task objectives, based on which high-quality features are generated. The
+    newly generated features are evaluated in terms of model accuracy to assess their effectiveness, while
+    Pearson correlation coefficients are used to detect redundancy. FEAML further incorporates the evaluation
+    results as feedback to drive LLMs to continuously optimize code generation in subsequent iterations.
+    By integrating LLMs with a feedback mechanism, FEAML realizes an efficient, interpretable and self-improving
+    feature engineering paradigm. Empirical results on various multi-label datasets demonstrate that our
+    FEAML outperforms other feature engineering methods.
+  url: https://arxiv.org/abs/2512.15082
+  pdf_url: https://arxiv.org/pdf/2512.15082v1
+  version: v1
+fetched: '2026-11-14'

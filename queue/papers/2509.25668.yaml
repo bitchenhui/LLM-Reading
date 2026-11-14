@@ -1,0 +1,45 @@
+id: paper:arxiv:2509.25668
+status: skipped_low_citation
+score: 4
+track: video_image_coding
+matched:
+- ref: codec:ECM
+  count: 2
+  weight: 3
+- ref: metric:BD-Rate
+  count: 1
+  weight: 1
+meta:
+  title: Enhanced Template-based Intra Mode Derivation with Adaptive Block Vector Replacement
+  authors:
+  - Jiaqi Zhang
+  - Jiaye Fu
+  - Chuanmin Jia
+  - Siwei Ma
+  - Karam Naser
+  - Thierry Dumas
+  - Saurabh Puri
+  - Milos Radosavljevic
+  published: '2025-09-30'
+  updated: '2025-09-30'
+  categories:
+  - eess.IV
+  - cs.MM
+  abstract: Intra prediction is a crucial component in traditional video coding frameworks, aiming to
+    eliminate spatial redundancy within frames. In recent years, an increasing number of decoder-side
+    adaptive mode derivation methods have been adopted into Enhanced Compression Model (ECM). However,
+    these methods predominantly rely on adjacent spatial information for intra mode decision-making, overlooking
+    potential similarity patterns in non-adjacent spatial regions, thereby limiting intra prediction efficiency.
+    To address this limitation, this paper proposes a template-based intra mode derivation approach enhanced
+    by block vector-based prediction. The adaptive block vector replacement strategy effectively expands
+    the reference scope of the existing template-based intra mode derivation mode to non-adjacent spatial
+    information, thereby enhancing prediction efficiency. Extensive experiments demonstrate that our strategy
+    achieves 0.082% Bjøntegaard delta rate (BD-rate) savings for Y components under the All Intra (AI)
+    configuration compared to ECM-16.1 while maintaining identical encoding/decoding complexity, and delivers
+    an additional 0.25% BD-rate savings for Y components on screen content sequences.
+  url: https://arxiv.org/abs/2509.25668
+  pdf_url: https://arxiv.org/pdf/2509.25668v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 0
+citation_year: 2025

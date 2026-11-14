@@ -1,0 +1,58 @@
+id: paper:arxiv:2210.13890
+status: skipped_low_citation
+score: 13
+track: streaming_delivery
+matched:
+- ref: codec:AVC
+  count: 2
+  weight: 3
+- ref: codec:HEVC
+  count: 2
+  weight: 3
+- ref: impl:HM
+  count: 2
+  weight: 3
+- ref: impl:x265
+  count: 1
+  weight: 3
+- ref: concept:DASH
+  count: 3
+  weight: 1
+meta:
+  title: Fast multi-encoding to reduce the cost of video streaming
+  authors:
+  - Hadi Amirpour
+  - Vignesh V Menon
+  - Ekrem Çetinkaya
+  - Adithyan Ilangovan
+  - Christian Feldmann
+  - Martin Smole
+  - Christian Timmerer
+  published: '2022-10-25'
+  updated: '2022-10-25'
+  categories:
+  - cs.MM
+  abstract: The growth in video Internet traffic and advancements in video attributes such as framerate,
+    resolution, and bit-depth boost the demand to devise a large-scale, highly efficient video encoding
+    environment. This is even more essential for Dynamic Adaptive Streaming over HTTP (DASH)-based content
+    provisioning as it requires encoding numerous representations of the same video content. High Efficiency
+    Video Coding (HEVC) is one standard video codec that significantly improves encoding efficiency over
+    its predecessor Advanced Video Coding (AVC). This improvement is achieved at the expense of significantly
+    increased time complexity, which is a challenge for content and service providers. As various representations
+    are the same video content encoded at different bitrates or resolutions, the encoding analysis information
+    from the already encoded representations can be shared to accelerate the encoding of other representations.
+    Several state-of-the-art schemes first encode a single representation, called a reference representation.
+    During this encoding, the encoder creates analysis metadata with information such as the slicetype
+    decisions, CU, PU, TU partitioning, and the HEVC bitstream itself. The remaining representations,
+    called dependent representations, analyze the above metadata and then reuse it to skip searching some
+    partitioning, thus, reducing the computational complexity. With the emergence of cloud-based encoding
+    services, video encoding is accelerated by utilizing an increased number of resources, i.e., with
+    multi-core CPUs, multiple representations can be encoded in parallel. This paper presents an overview
+    of a wide range of multi-encoding schemes with and without the support of machine learning approaches
+    integrated into the HEVC Test Model (HM) and x265, respectively.
+  url: https://arxiv.org/abs/2210.13890
+  pdf_url: https://arxiv.org/pdf/2210.13890v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 0
+citation_year: 2022

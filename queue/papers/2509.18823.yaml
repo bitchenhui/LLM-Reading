@@ -1,0 +1,36 @@
+id: paper:arxiv:2509.18823
+status: skipped_low_citation
+score: 2
+track: audio_coding
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+- ref: concept:NeuralAudioCodec
+  count: 1
+  weight: 1
+meta:
+  title: 'Towards Evaluating Generative Audio: Insights from Neural Audio Codec Embedding Distances'
+  authors:
+  - Arijit Biswas
+  - Lars Villemoes
+  published: '2025-09-23'
+  updated: '2026-01-22'
+  categories:
+  - eess.AS
+  abstract: Neural audio codecs (NACs) achieve low-bitrate compression by learning compact audio representations,
+    which can also serve as features for perceptual quality evaluation. We introduce DACe, an enhanced,
+    higher-fidelity version of the Descript Audio Codec (DAC), trained on diverse real and synthetic tonal
+    data with balanced sampling. We systematically compare Fréchet Audio Distance (FAD) and Maximum Mean
+    Discrepancy (MMD) on MUSHRA tests across speech, music, and mixed content. FAD consistently outperforms
+    MMD, and embeddings from higher-fidelity NACs (such as DACe) show stronger correlations with human
+    judgments. While CLAP LAION Music (CLAP-M) and OpenL3 Mel128 (OpenL3-128M) embeddings achieve higher
+    correlations, NAC embeddings provide a practical zero-shot approach to audio quality assessment, requiring
+    only unencoded audio for training. These results demonstrate the dual utility of NACs for compression
+    and perceptually informed audio evaluation.
+  url: https://arxiv.org/abs/2509.18823
+  pdf_url: https://arxiv.org/pdf/2509.18823v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 3
+citation_year: 2025

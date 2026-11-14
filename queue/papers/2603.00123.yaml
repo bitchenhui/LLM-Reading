@@ -1,0 +1,41 @@
+id: paper:arxiv:2603.00123
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'CT-Flow: Orchestrating CT Interpretation Workflow with Model Context Protocol Servers'
+  authors:
+  - Yannian Gu
+  - Xizhuo Zhang
+  - Linjie Mu
+  - Yongrui Yu
+  - Zhongzhen Huang
+  - Shaoting Zhang
+  - Xiaofan Zhang
+  published: '2026-02-23'
+  updated: '2026-02-23'
+  categories:
+  - cs.CV
+  - cs.AI
+  abstract: Recent advances in Large Vision-Language Models (LVLMs) have shown strong potential for multi-modal
+    radiological reasoning, particularly in tasks like diagnostic visual question answering (VQA) and
+    radiology report generation. However, most existing approaches for 3D CT analysis largely rely on
+    static, single-pass inference. In practice, clinical interpretation is a dynamic, tool-mediated workflow
+    where radiologists iteratively review slices and use measurement, radiomics, and segmentation tools
+    to refine findings. To bridge this gap, we propose CT-Flow, an agentic framework designed for interoperable
+    volumetric interpretation. By leveraging the Model Context Protocol (MCP), CT-Flow shifts from closed-box
+    inference to an open, tool-aware paradigm. We curate CT-FlowBench, the first large-scale instruction-tuning
+    benchmark tailored for 3D CT tool-use and multi-step reasoning. Built upon this, CT-Flow functions
+    as a clinical orchestrator capable of decomposing complex natural language queries into automated
+    tool-use sequences. Experimental evaluations on CT-FlowBench and standard 3D VQA datasets demonstrate
+    that CT-Flow achieves state-of-the-art performance, surpassing baseline models by 41% in diagnostic
+    accuracy and achieving a 95% success rate in autonomous tool invocation. This work provides a scalable
+    foundation for integrating autonomous, agentic intelligence into real-world clinical radiology.
+  url: https://arxiv.org/abs/2603.00123
+  pdf_url: https://arxiv.org/pdf/2603.00123v1
+  version: v1
+fetched: '2026-11-14'

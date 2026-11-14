@@ -1,0 +1,34 @@
+id: paper:arxiv:2602.15491
+status: skipped
+score: 0
+track: audio_coding
+matched: []
+meta:
+  title: 'The Equalizer: Introducing Shape-Gain Decomposition in Neural Audio Codecs'
+  authors:
+  - Samir Sadok
+  - Laurent Girin
+  - Xavier Alameda-Pineda
+  published: '2026-02-17'
+  updated: '2026-07-27'
+  categories:
+  - cs.SD
+  - cs.AI
+  abstract: Neural audio codecs (NACs) typically encode the short-term energy (gain) and normalized structure
+    (shape) of speech/audio signals jointly within the same latent space. As a result, they are poorly
+    robust to a global variation of the input signal level in the sense that such a variation has a strong
+    influence on the embedding vectors at the output of the encoder and their quantization. This methodology
+    is inherently inefficient, leading to codebook redundancy and suboptimal bitrate-distortion performance.
+    To address these limitations, we propose to introduce shape-gain decomposition, widely used in classical
+    speech and audio coding, into the NAC framework. The principle of the proposed Equalizer methodology,
+    easily applicable to any NAC, is to decompose the input signal---before the NAC encoder---into gain
+    and normalized shape vector on a short-term basis. The shape vector is processed by the NAC, while
+    the gain is quantized with scalar quantization and transmitted separately. The output (decoded) signal
+    is reconstructed from the normalized output of the NAC and the quantized gain. Our experiments conducted
+    on speech signals with four different prominent codecs show that this general methodology enables
+    a substantial gain in bitrate-distortion performance, as well as a massive reduction in quantizer
+    complexity.
+  url: https://arxiv.org/abs/2602.15491
+  pdf_url: https://arxiv.org/pdf/2602.15491v2
+  version: v2
+fetched: '2026-11-14'

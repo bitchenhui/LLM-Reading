@@ -1,0 +1,39 @@
+id: paper:arxiv:2609.34082
+status: skipped
+score: 1
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 1
+  weight: 1
+meta:
+  title: 'K-OPSD: Verifiable On-Policy Self-Distillation for Post-Training Vision-Language Models on AEC
+    Drawings'
+  authors:
+  - Yunfei Bai
+  - Enrico Chionna
+  - Akash Amol
+  - Kawaljit Singh KC
+  - Joern Tinnemeyer
+  published: '2026-09-28'
+  updated: '2026-09-28'
+  categories:
+  - cs.AI
+  - cs.CV
+  abstract: Interpreting architecture, engineering, and construction (AEC) drawings is hard for general
+    Multimodal Large Language Models (MLLMs) and vision-language models (VLMs). We introduce K-OPSD, a
+    VLM post-training methodology for improving AEC drawing understanding. Building on On-Policy Self-Distillation
+    (OPSD) with verifiable supervision, we construct a teacher from the model's own best-of-N generations,
+    certified by a process-level verifier, and rescue failed prompts by resampling under a hint that exposes
+    the verified answer. We then perform an on-policy model update by training on verified completions
+    with a cross-entropy inner-loss, outperforming the bounded token-wise generalized Jensen-Shannon divergence
+    (JSD) used by on-policy distillation. Using K-OPSD, we fine-tune Qwen3-VL models on the AECV-Bench
+    dataset. The resulting models attain the top average judge score (0.819) and combined accuracy (0.738),
+    achieving competitive results against open-source baseline models. The recipe transfers to the out-of-domain
+    ArchCAD dataset, where the 8B model gains most. We present the verifier suite and the continual learning
+    and self-improving pipeline, our results provide preliminary evidence that verifier-guided self-distillation
+    is a promising route toward more reliable machine reading of architecture drawings.
+  url: https://arxiv.org/abs/2609.34082
+  pdf_url: https://arxiv.org/pdf/2609.34082v1
+  version: v1
+fetched: '2026-11-14'

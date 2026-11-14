@@ -1,0 +1,42 @@
+id: paper:arxiv:2601.21847
+status: skipped_low_citation
+score: 2
+track: self_improvement
+matched:
+- ref: concept:LLM
+  count: 2
+  weight: 1
+- ref: concept:EoH
+  count: 1
+  weight: 1
+meta:
+  title: 'READY: Reward Discovery for Meta-Black-Box Optimization'
+  authors:
+  - Zechuan Huang
+  - Zhiguang Cao
+  - Hongshu Guo
+  - Yue-Jiao Gong
+  - Zeyuan Ma
+  published: '2026-01-29'
+  updated: '2026-01-29'
+  categories:
+  - cs.LG
+  - cs.NE
+  abstract: Meta-Black-Box Optimization (MetaBBO) is an emerging avenue within Optimization community,
+    where algorithm design policy could be meta-learned by reinforcement learning to enhance optimization
+    performance. So far, the reward functions in existing MetaBBO works are designed by human experts,
+    introducing certain design bias and risks of reward hacking. In this paper, we use Large Language
+    Model~(LLM) as an automated reward discovery tool for MetaBBO. Specifically, we consider both effectiveness
+    and efficiency sides. On effectiveness side, we borrow the idea of evolution of heuristics, introducing
+    tailored evolution paradigm in the iterative LLM-based program search process, which ensures continuous
+    improvement. On efficiency side, we additionally introduce multi-task evolution architecture to support
+    parallel reward discovery for diverse MetaBBO approaches. Such parallel process also benefits from
+    knowledge sharing across tasks to accelerate convergence. Empirical results demonstrate that the reward
+    functions discovered by our approach could be helpful for boosting existing MetaBBO works, underscoring
+    the importance of reward design in MetaBBO. We provide READY's project at https://anonymous.4open.science/r/ICML_READY-747F.
+  url: https://arxiv.org/abs/2601.21847
+  pdf_url: https://arxiv.org/pdf/2601.21847v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 0
+citation_year: 2026

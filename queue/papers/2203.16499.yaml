@@ -1,0 +1,35 @@
+id: paper:arxiv:2203.16499
+status: skipped
+score: 1
+track: audio_coding
+matched:
+- ref: org:MPEG
+  count: 1
+  weight: 1
+meta:
+  title: Forensic Analysis and Localization of Multiply Compressed MP3 Audio Using Transformers
+  authors:
+  - Ziyue Xiang
+  - Paolo Bestagini
+  - Stefano Tubaro
+  - Edward J. Delp
+  published: '2022-03-30'
+  updated: '2022-04-28'
+  categories:
+  - cs.SD
+  - cs.MM
+  - eess.AS
+  abstract: Audio signals are often stored and transmitted in compressed formats. Among the many available
+    audio compression schemes, MPEG-1 Audio Layer III (MP3) is very popular and widely used. Since MP3
+    is lossy it leaves characteristic traces in the compressed audio which can be used forensically to
+    expose the past history of an audio file. In this paper, we consider the scenario of audio signal
+    manipulation done by temporal splicing of compressed and uncompressed audio signals. We propose a
+    method to find the temporal location of the splices based on transformer networks. Our method identifies
+    which temporal portions of a audio signal have undergone single or multiple compression at the temporal
+    frame level, which is the smallest temporal unit of MP3 compression. We tested our method on a dataset
+    of 486,743 MP3 audio clips. Our method achieved higher performance and demonstrated robustness with
+    respect to different MP3 data when compared with existing methods.
+  url: https://arxiv.org/abs/2203.16499
+  pdf_url: https://arxiv.org/pdf/2203.16499v2
+  version: v2
+fetched: '2026-11-14'

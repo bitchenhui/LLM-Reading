@@ -1,0 +1,45 @@
+id: paper:arxiv:2509.07367
+status: pending
+score: 3
+track: self_improvement
+matched:
+- ref: concept:LLM
+  count: 2
+  weight: 1
+- ref: concept:AlphaEvolve
+  count: 1
+  weight: 1
+- ref: concept:SelfImprovement
+  count: 1
+  weight: 1
+meta:
+  title: Autonomous Code Evolution Meets NP-Completeness
+  authors:
+  - Cunxi Yu
+  - Rongjian Liang
+  - Chia-Tung Ho
+  - Haoxing Ren
+  published: '2025-09-09'
+  updated: '2025-09-09'
+  categories:
+  - cs.AI
+  - cs.LG
+  - cs.LO
+  abstract: Large language models (LLMs) have recently shown strong coding abilities, enabling not only
+    static code generation but also iterative code self-evolving through agentic frameworks. Recently,
+    AlphaEvolve \cite{novikov2025alphaevolve} demonstrated that LLM-based coding agents can autonomously
+    improve algorithms and surpass human experts, with scopes limited to isolated kernels spanning hundreds
+    of lines of code. Inspired by AlphaEvolve, we present SATLUTION, the first framework to extend LLM-based
+    code evolution to the full repository scale, encompassing hundreds of files and tens of thousands
+    of lines of C/C++ code. Targeting Boolean Satisfiability (SAT), the canonical NP-complete problem
+    and a cornerstone of both theory and applications. SATLUTION orchestrates LLM agents to directly evolve
+    solver repositories under strict correctness guarantees and distributed runtime feedback, while simultaneously
+    self-evolving its own evolution policies and rules. Starting from SAT Competition 2024 codebases and
+    benchmark, SATLUTION evolved solvers that decisively outperformed the human-designed winners of the
+    SAT Competition 2025, and also surpassed both 2024 and 2025 champions on the 2024 benchmarks.
+  url: https://arxiv.org/abs/2509.07367
+  pdf_url: https://arxiv.org/pdf/2509.07367v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 28
+citation_year: 2025

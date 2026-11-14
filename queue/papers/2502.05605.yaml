@@ -1,0 +1,50 @@
+id: paper:arxiv:2502.05605
+status: skipped
+score: 1
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+meta:
+  title: Evolving LLMs' Self-Refinement Capability via Synergistic Training-Inference Optimization
+  authors:
+  - Yongcheng Zeng
+  - Xinyu Cui
+  - Xuanfa Jin
+  - Qirui Mi
+  - Guoqing Liu
+  - Zexu Sun
+  - Mengyue Yang
+  - Dong Li
+  - Weiyu Ma
+  - Ning Yang
+  - Jian Zhao
+  - Jianye Hao
+  - Haifeng Zhang
+  - Jun Wang
+  published: '2025-02-08'
+  updated: '2025-10-26'
+  categories:
+  - cs.CL
+  - cs.LG
+  abstract: Self-Refinement refers to a model's ability to revise its own responses to produce improved
+    outputs. This capability can also serve as a fundamental mechanism for Self-Improvement, for example,
+    by reconstructing datasets with refined results to enhance intrinsic model performance. However, our
+    comprehensive experiments reveal that large language models (LLMs) show no clear evidence of inherent
+    Self-Refinement and may even experience response quality degradation after Self-Refinement. To address
+    this issue, we propose EVOLVE, a simple and effective framework for eliciting and tracking the evolution
+    of Self-Refinement through iterative training. We first explore optimization methods during training
+    to activate the model's Self-Refinement capability. Then, at inference, we investigate various generation
+    strategies to further enhance and utilize Self-Refinement while supplying the necessary data for training.
+    Through synergistic optimization of training and inference stages, we continually evolve the model's
+    Self-Refinement ability, enabling it to better refine its own responses. Moreover, we demonstrate
+    the potential of leveraging Self-Refinement to achieve broader Self-Improvement of intrinsic model
+    abilities. Experiments show that the evolved Self-Refinement ability enables the Llama-3.1-8B base
+    model to surpass GPT-4o, achieving 62.3% length-controlled and 63.3% raw win rates on AlpacaEval 2,
+    and 50.3% on Arena-Hard. It also generalizes effectively to out-of-domain reasoning tasks, improving
+    performance on mathematical reasoning benchmarks such as GSM8K and MATH.
+  url: https://arxiv.org/abs/2502.05605
+  pdf_url: https://arxiv.org/pdf/2502.05605v6
+  version: v6
+fetched: '2026-11-14'

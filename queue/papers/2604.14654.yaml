@@ -1,0 +1,35 @@
+id: paper:arxiv:2604.14654
+status: skipped
+score: 0
+track: audio_coding
+matched: []
+meta:
+  title: 'ClariCodec: Optimising Neural Speech Codes for 200bps Communication using Reinforcement Learning'
+  authors:
+  - Junyi Wang
+  - Chi Zhang
+  - Jing Qian
+  - Haifeng Luo
+  - Hao Wang
+  - Zengrui Jin
+  - Chao Zhang
+  published: '2026-04-16'
+  updated: '2026-04-19'
+  categories:
+  - cs.SD
+  - eess.AS
+  abstract: In bandwidth-constrained communication such as satellite and underwater channels, speech must
+    often be transmitted at ultra-low bitrates where intelligibility is the primary objective. At such
+    extreme compression levels, codecs trained with acoustic reconstruction losses tend to allocate bits
+    to perceptual detail, leading to substantial degradation in word error rate (WER). This paper proposes
+    ClariCodec, a neural speech codec operating at 200 bit per second (bps) that reformulates quantisation
+    as a stochastic policy, enabling reinforcement learning (RL)-based optimisation of intelligibility.
+    Specifically, the encoder is fine-tuned using WER-driven rewards while the acoustic reconstruction
+    pipeline remains frozen. Even without RL, ClariCodec achieves 3.68% WER on the LibriSpeech test-clean
+    set at 200 bps, already competitive with codecs operating at higher bitrates. Further RL fine-tuning
+    reduces WER to 3.20% on test-clean and 8.93% on test-other, corresponding to a 13% relative reduction
+    while preserving perceptual quality.
+  url: https://arxiv.org/abs/2604.14654
+  pdf_url: https://arxiv.org/pdf/2604.14654v2
+  version: v2
+fetched: '2026-11-14'

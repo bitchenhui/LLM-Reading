@@ -1,0 +1,44 @@
+id: paper:arxiv:2402.16371
+status: skipped_low_citation
+score: 9
+track: video_image_coding
+matched:
+- ref: codec:AVC
+  count: 2
+  weight: 3
+- ref: codec:HEVC
+  count: 1
+  weight: 3
+- ref: codec:VVC
+  count: 1
+  weight: 3
+meta:
+  title: Adaptive Online Learning of Separable Path Graph Transforms for Intra-prediction
+  authors:
+  - Wen-Yang Lu
+  - Eduardo Pavez
+  - Antonio Ortega
+  - Xin Zhao
+  - Shan Liu
+  published: '2024-02-26'
+  updated: '2024-02-26'
+  categories:
+  - eess.IV
+  abstract: Current video coding standards, including H.264/AVC, HEVC, and VVC, employ discrete cosine
+    transform (DCT), discrete sine transform (DST), and secondary to Karhunen-Loeve transforms (KLTs)
+    decorrelate the intra-prediction residuals. However, the efficiency of these transforms in decorrelation
+    can be limited when the signal has a non-smooth and non-periodic structure, such as those occurring
+    in textures with intricate patterns. This paper introduces a novel adaptive separable path graph-based
+    transform (GBT) that can provide better decorrelation than the DCT for intra-predicted texture data.
+    The proposed GBT is learned in an online scenario with sequential K-means clustering, which groups
+    similar blocks during encoding and decoding to adaptively learn the GBT for the current block from
+    previously reconstructed areas with similar characteristics. A signaling overhead is added to the
+    bitstream of each coding block to indicate the usage of the proposed graph-based transform. We assess
+    the performance of this method combined with H.264/AVC intra-coding tools and demonstrate that it
+    can significantly outperform H.264/AVC DCT for intra-predicted texture data.
+  url: https://arxiv.org/abs/2402.16371
+  pdf_url: https://arxiv.org/pdf/2402.16371v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 6
+citation_year: 2024

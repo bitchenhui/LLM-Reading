@@ -1,0 +1,36 @@
+id: paper:arxiv:2409.13789
+status: skipped
+score: 0
+track: video_image_coding
+matched: []
+meta:
+  title: 'Reduced bit median quantization: A middle process for Efficient Image Compression'
+  authors:
+  - Fikresilase Wondmeneh Abebayew
+  published: '2024-09-20'
+  updated: '2024-10-25'
+  categories:
+  - eess.IV
+  - cs.IT
+  abstract: Image compression techniques have made remarkable progress when it comes to file size reduction
+    with a tolerable quality reduction; nonetheless, they are facing some challenges when it comes to
+    applying more compression with the same perceptible quality or in accounting for specific use cases
+    such as deep archive files and more efficient image transfers. Previous techniques have tried to solve
+    the former problem by applying one specific or a combination of different algorithms. However, none
+    of these methods were able to achieve additional file size reduction beyond a certain compression.
+    I introduce Reduced Bit Median Quantization (RBMQ), a middle-process image compression technique designed
+    to enhance file size reduction so that it can be stored with already existing file extension formats.
+    In RBMQ by applying only the first step in which the quantization of valued further file size reduction
+    can be achieved without a noticeable decrease in the image quality. Furthermore, more size reduction
+    can be achieved by reducing the representing bits for the quantized values which can be optimal for
+    deep archival storage or big-size image transfer in which the image quality is not suitable for the
+    human eye since it is dark and dim but can be much efficient to interact with network and storage
+    components later to be decoded to get the only quantized value image that almost the same quality
+    with the original one. RBMQ introduces redundancy to the pixel values to be taken advantage of by
+    existing compression techniques furthermore it introduces bit reduction from 8 to 5 bits for image
+    file extensions such as jpeg which substantially reduces the file size to be used for JPEG file transfers
+    and deep archive storage.
+  url: https://arxiv.org/abs/2409.13789
+  pdf_url: https://arxiv.org/pdf/2409.13789v2
+  version: v2
+fetched: '2026-11-14'

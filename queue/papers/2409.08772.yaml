@@ -1,0 +1,39 @@
+id: paper:arxiv:2409.08772
+status: skipped
+score: 1
+track: video_image_coding
+matched:
+- ref: dataset:UVG
+  count: 1
+  weight: 1
+meta:
+  title: The Practice of Averaging Rate-Distortion Curves over Testsets to Compare Learned Video Codecs
+    Can Cause Misleading Conclusions
+  authors:
+  - M. Akin Yilmaz
+  - Onur Keleş
+  - A. Murat Tekalp
+  published: '2024-09-13'
+  updated: '2024-12-24'
+  categories:
+  - cs.MM
+  - cs.CV
+  - eess.IV
+  abstract: This paper aims to demonstrate how the prevalent practice in the learned video compression
+    community of averaging rate-distortion (RD) curves across a test video set can lead to misleading
+    conclusions in evaluating codec performance. Through analytical analysis of a simple case and experimental
+    results with two recent learned video codecs, we show how averaged RD curves can mislead comparative
+    evaluation of different codecs, particularly when videos in a dataset have varying characteristics
+    and operating ranges. We illustrate how a single video with distinct RD characteristics from the rest
+    of the test set can disproportionately influence the average RD curve, potentially overshadowing a
+    codec's superior performance across most individual sequences. Using two recent learned video codecs
+    on the UVG dataset as a case study, we demonstrate computing performance metrics, such as the BD rate,
+    from the average RD curve suggests conclusions that contradict those reached from calculating the
+    average of per-sequence metrics. Hence, we argue that the learned video compression community should
+    also report per-sequence RD curves and performance metrics for a test set should be computed from
+    the average of per-sequence metrics, similar to the established practice in traditional video coding,
+    to ensure fair and accurate codec comparisons.
+  url: https://arxiv.org/abs/2409.08772
+  pdf_url: https://arxiv.org/pdf/2409.08772v2
+  version: v2
+fetched: '2026-11-14'

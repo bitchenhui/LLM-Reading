@@ -1,0 +1,40 @@
+id: paper:arxiv:2502.04691
+status: skipped
+score: 1
+track: streaming_delivery
+matched:
+- ref: concept:WebRTC
+  count: 1
+  weight: 1
+meta:
+  title: 'PDStream: Slashing Long-Tail Delay in Interactive Video Streaming via Pseudo-Dual Streaming'
+  authors:
+  - Xuedou Xiao
+  - Yingying Zuo
+  - Mingxuan Yan
+  - Kezhong Liu
+  - Wei Wang
+  published: '2025-02-07'
+  updated: '2025-02-07'
+  categories:
+  - cs.MM
+  - cs.NI
+  abstract: End-to-end (E2E) delay is critical for interactive video streaming (IVS) experiences, but
+    remains unsatisfactory for its long-tail distribution caused by periodic large keyframes. Conventional
+    optimization strategies, such as jitter buffer, bitrate adaptation, and customized encoding, either
+    sacrifice clarity, average delay, or compatibility. To address this issue, we propose PDStream, a
+    novel pseudo-dual streaming algorithm, aimed at minimizing E2E delay while maintaining video clarity.
+    The core idea is to split the two functions, delay-sensitive playback and delay-tolerant reference,
+    on keyframes through dual streaming. Specifically, the playback function is held by a second parallel
+    stream, which comprises much smaller non-keyframes and is allocated more immediate bandwidth for real-time
+    performance. The reference function is ensured by the first stream with keyframe preservation, allocated
+    more subsequent bandwidth to smooth out bursty traffic. Additionally, ``pseudo'' minimizes computational
+    and transmission overheads by restricting dual streams to brief activation only when keyframes appear,
+    supported by corresponding dual-stream bitrate allocation and adaptation to ensure delay and clarity.
+    We implement PDStream on a WebRTC-based IVS testbed with real-world network traces. Results show that
+    PDStream significantly outperforms prior algorithms, reducing average E2E delay by 17.5\% and slashing
+    its 97th percentile by 33.3\%, while keeping clarity under varying bandwidth.
+  url: https://arxiv.org/abs/2502.04691
+  pdf_url: https://arxiv.org/pdf/2502.04691v1
+  version: v1
+fetched: '2026-11-14'

@@ -1,0 +1,40 @@
+id: paper:arxiv:2512.15262
+status: skipped_low_citation
+score: 3
+track: video_image_coding
+matched:
+- ref: codec:VVC
+  count: 2
+  weight: 3
+meta:
+  title: Audio-Visual Cross-Modal Compression for Generative Face Video Coding
+  authors:
+  - Youmin Xu
+  - Mengxi Guo
+  - Shijie Zhao
+  - Weiqi Li
+  - Junlin Li
+  - Li Zhang
+  - Jian Zhang
+  published: '2025-12-17'
+  updated: '2025-12-17'
+  categories:
+  - eess.IV
+  - cs.MM
+  abstract: Generative face video coding (GFVC) is vital for modern applications like video conferencing,
+    yet existing methods primarily focus on video motion while neglecting the significant bitrate contribution
+    of audio. Despite the well-established correlation between audio and lip movements, this cross-modal
+    coherence has not been systematically exploited for compression. To address this, we propose an Audio-Visual
+    Cross-Modal Compression (AVCC) framework that jointly compresses audio and video streams. Our framework
+    extracts motion information from video and tokenizes audio features, then aligns them through a unified
+    audio-video diffusion process. This allows synchronized reconstruction of both modalities from a shared
+    representation. In extremely low-rate scenarios, AVCC can even reconstruct one modality from the other.
+    Experiments show that AVCC significantly outperforms the Versatile Video Coding (VVC) standard and
+    state-of-the-art GFVC schemes in rate-distortion performance, paving the way for more efficient multimodal
+    communication systems.
+  url: https://arxiv.org/abs/2512.15262
+  pdf_url: https://arxiv.org/pdf/2512.15262v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 0
+citation_year: 2025

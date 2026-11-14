@@ -1,0 +1,40 @@
+id: paper:arxiv:2605.24456
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'EgoProx: Evaluating MLLMs on Egocentric 3D Proximity Reasoning Across a Cognitive Hierarchy'
+  authors:
+  - Jinzhao Li
+  - Yinuo Chen
+  - Dongxu Piao
+  - Panwang Pan
+  - Yifan Yu
+  - Dong Wang
+  - Honglei Yan
+  - Liang Yue
+  - Shaofei Wang
+  - Yixin Chen
+  - Siyuan Huang
+  - Miao Liu
+  published: '2026-05-23'
+  updated: '2026-05-26'
+  categories:
+  - cs.CV
+  abstract: Humans constantly reason about 3D proximity, the relations between their body and surrounding
+    objects, to guide perception and action in daily life. Whether multimodal large language models (MLLMs)
+    can perform such embodied 3D reasoning remains unclear. To this end, we introduce EgoProx, a benchmark
+    for egocentric 3D proximity reasoning. We organize our tasks along a cognitive chain, covering intention,
+    exploration, exploitation, and chain-of-actions reasoning. We also design an agent based data engine
+    that produces diverse and consistent QA pairs at scale. We benchmark prevailing MLLMs on EgoProx and
+    conduct additional analyses with dataset specific and task specific instruction tuning. We observe
+    large cross-domain gains, indicating that current MLLMs contain some spatial knowledge; however, they
+    still struggle to effectively leverage it for spatial reasoning VQA.
+  url: https://arxiv.org/abs/2605.24456
+  pdf_url: https://arxiv.org/pdf/2605.24456v2
+  version: v2
+fetched: '2026-11-14'

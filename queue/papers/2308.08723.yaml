@@ -1,0 +1,40 @@
+id: paper:arxiv:2308.08723
+status: skipped
+score: 1
+track: video_image_coding
+matched:
+- ref: concept:EntropyModel
+  count: 1
+  weight: 1
+meta:
+  title: Dynamic Kernel-Based Adaptive Spatial Aggregation for Learned Image Compression
+  authors:
+  - Huairui Wang
+  - Nianxiang Fu
+  - Zhenzhong Chen
+  - Shan Liu
+  published: '2023-08-17'
+  updated: '2023-08-17'
+  categories:
+  - eess.IV
+  - cs.CV
+  - cs.MM
+  abstract: Learned image compression methods have shown superior rate-distortion performance and remarkable
+    potential compared to traditional compression methods. Most existing learned approaches use stacked
+    convolution or window-based self-attention for transform coding, which aggregate spatial information
+    in a fixed range. In this paper, we focus on extending spatial aggregation capability and propose
+    a dynamic kernel-based transform coding. The proposed adaptive aggregation generates kernel offsets
+    to capture valid information in the content-conditioned range to help transform. With the adaptive
+    aggregation strategy and the sharing weights mechanism, our method can achieve promising transform
+    capability with acceptable model complexity. Besides, according to the recent progress of entropy
+    model, we define a generalized coarse-to-fine entropy model, considering the coarse global context,
+    the channel-wise, and the spatial context. Based on it, we introduce dynamic kernel in hyper-prior
+    to generate more expressive global context. Furthermore, we propose an asymmetric spatial-channel
+    entropy model according to the investigation of the spatial characteristics of the grouped latents.
+    The asymmetric entropy model aims to reduce statistical redundancy while maintaining coding efficiency.
+    Experimental results demonstrate that our method achieves superior rate-distortion performance on
+    three benchmarks compared to the state-of-the-art learning-based methods.
+  url: https://arxiv.org/abs/2308.08723
+  pdf_url: https://arxiv.org/pdf/2308.08723v1
+  version: v1
+fetched: '2026-11-14'

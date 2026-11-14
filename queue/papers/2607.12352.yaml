@@ -1,0 +1,39 @@
+id: paper:arxiv:2607.12352
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 2
+  weight: 1
+meta:
+  title: Filtering-out poor-quality images for data preparation
+  authors:
+  - Roopdeep Kaur
+  - Gour Karmakar
+  - Muhammad Imran
+  published: '2026-07-14'
+  updated: '2026-07-14'
+  categories:
+  - cs.CV
+  abstract: Filtering noise is a fundamental part of data preparation that enhances image quality for
+    applications such as object segmentation, detection, and recognition. Various noise reduction techniques
+    are proposed in the literature, including the use of median, Gaussian, and bilateral filters. Convolutional
+    neural networks (CNNs) have gained popularity in image denoising owing to their ability to extract
+    complex patterns and features from data. CNNs are highly adaptable, making them effective tools for
+    various image-denoising tasks. One drawback of CNN-based techniques is that they require an appropriate
+    training dataset and all images to be resized. Another notable drawback of all these filtering techniques
+    is that they work for certain types of environmental and camera noises. To bridge this research gap,
+    in this paper, for the first time, instead of denoising, we propose an approach that filters out poor-quality
+    images for various environmental and camera impacts. In our approach, quality is assessed using an
+    image quality assessment metric and an optimum threshold is used to filter out poor-quality images.
+    We also ensure that a sufficient number of images remain to develop the deep learning (DL) model.
+    The results produced using real and simulated traffic and object recognition data demonstrate the
+    performance supremacy of the proposed approach compared with the state-of-the-art approaches. The
+    average recognition accuracy for our proposed approach is 93.8% for the traffic sign recognition dataset
+    and 84.9% for the object recognition dataset. This indicates our model's potential for real-life applications
+    such as autonomous vehicles.
+  url: https://arxiv.org/abs/2607.12352
+  pdf_url: https://arxiv.org/pdf/2607.12352v1
+  version: v1
+fetched: '2026-11-14'

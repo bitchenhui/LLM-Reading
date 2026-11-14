@@ -1,0 +1,43 @@
+id: paper:arxiv:2602.13479
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'GLIMPSE : Real-Time Text Recognition and Contextual Understanding for VQA in Wearables'
+  authors:
+  - Akhil Ramachandran
+  - Ankit Arun
+  - Ashish Shenoy
+  - Abhay Harpale
+  - Srihari Jayakumar
+  - Debojeet Chatterjee
+  - Mohsen Moslehpour
+  - Pierce Chuang
+  - Yichao Lu
+  - Vikas Bhardwaj
+  - Peyman Heidari
+  published: '2026-02-13'
+  updated: '2026-02-13'
+  categories:
+  - cs.CV
+  - cs.HC
+  abstract: 'Video Large Language Models (Video LLMs) have shown remarkable progress in understanding
+    and reasoning about visual content, particularly in tasks involving text recognition and text-based
+    visual question answering (Text VQA). However, deploying Text VQA on wearable devices faces a fundamental
+    tension: text recognition requires high-resolution video, but streaming high-quality video drains
+    battery and causes thermal throttling. Moreover, existing models struggle to maintain coherent temporal
+    context when processing text across multiple frames in real-time streams. We observe that text recognition
+    and visual reasoning have asymmetric resolution requirements - OCR needs fine detail while scene understanding
+    tolerates coarse features. We exploit this asymmetry with a hybrid architecture that performs selective
+    high-resolution OCR on-device while streaming low-resolution video for visual context. On a benchmark
+    of text-based VQA samples across five task categories, our system achieves 72% accuracy at 0.49x the
+    power consumption of full-resolution streaming, enabling sustained VQA sessions on resource-constrained
+    wearables without sacrificing text understanding quality.'
+  url: https://arxiv.org/abs/2602.13479
+  pdf_url: https://arxiv.org/pdf/2602.13479v1
+  version: v1
+fetched: '2026-11-14'

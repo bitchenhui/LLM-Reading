@@ -1,0 +1,41 @@
+id: paper:arxiv:2607.27628
+status: pending
+score: 2
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 4
+  weight: 1
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+meta:
+  title: 'BlindPSNR: A No-Reference Fidelity Predictor for Low-Light Image Enhancement'
+  authors:
+  - Mingzhe Lyu
+  - Jinqiang Cui
+  - Hong Zhang
+  published: '2026-07-30'
+  updated: '2026-07-30'
+  categories:
+  - cs.CV
+  abstract: Low-light image enhancement (LLIE) methods involve tunable parameters that are typically fixed,
+    often leading to performance degradation when applied across scenes. Manually selecting the best configuration,
+    however, can be time-consuming and not always practical. Peak signal-to-noise ratio (PSNR) is the
+    natural fidelity criterion for automating parameter selection, yet it requires a ground-truth reference
+    that is typically unavailable. To our knowledge, no learning-based method addresses no-reference PSNR
+    prediction for low-light image enhancement; the natural surrogate, no-reference image quality assessment
+    (NR-IQA), targets perceptual quality rather than signal fidelity, and all seven baselines we test
+    achieve 0% top-1 selection accuracy on our benchmark. With paired training data, the ground-truth
+    PSNR is analytically computable, providing exact supervision without a separate teacher network. Building
+    on this, we propose BlindPSNR, a lightweight no-reference network that fuses the enhanced image with
+    the degraded low-light input via windowed cross-attention and estimates PSNR through heteroscedastic
+    regression. While a scalar-regression baseline achieves top-1 accuracy of 54.4%, BlindPSNR raises
+    this to 89.5% with regret dropping from 1.62 dB to 0.026 dB, and generalizes to unseen datasets (SRCC
+    = 0.61-0.67).
+  url: https://arxiv.org/abs/2607.27628
+  pdf_url: https://arxiv.org/pdf/2607.27628v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 0
+citation_year: 2026

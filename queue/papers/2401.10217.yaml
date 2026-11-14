@@ -1,0 +1,38 @@
+id: paper:arxiv:2401.10217
+status: skipped
+score: 1
+track: processing_enhancement
+matched:
+- ref: concept:SuperResolution
+  count: 1
+  weight: 1
+meta:
+  title: 'Explaining the Implicit Neural Canvas: Connecting Pixels to Neurons by Tracing their Contributions'
+  authors:
+  - Namitha Padmanabhan
+  - Matthew Gwilliam
+  - Pulkit Kumar
+  - Shishira R Maiya
+  - Max Ehrlich
+  - Abhinav Shrivastava
+  published: '2024-01-18'
+  updated: '2024-07-16'
+  categories:
+  - cs.CV
+  abstract: The many variations of Implicit Neural Representations (INRs), where a neural network is trained
+    as a continuous representation of a signal, have tremendous practical utility for downstream tasks
+    including novel view synthesis, video compression, and image super-resolution. Unfortunately, the
+    inner workings of these networks are seriously under-studied. Our work, eXplaining the Implicit Neural
+    Canvas (XINC), is a unified framework for explaining properties of INRs by examining the strength
+    of each neuron's contribution to each output pixel. We call the aggregate of these contribution maps
+    the Implicit Neural Canvas and we use this concept to demonstrate that the INRs we study learn to
+    "see" the frames they represent in surprising ways. For example, INRs tend to have highly distributed
+    representations. While lacking high-level object semantics, they have a significant bias for color
+    and edges, and are almost entirely space-agnostic. We arrive at our conclusions by examining how objects
+    are represented across time in video INRs, using clustering to visualize similar neurons across layers
+    and architectures, and show that this is dominated by motion. These insights demonstrate the general
+    usefulness of our analysis framework. Our project page is available at https://namithap10.github.io/xinc.
+  url: https://arxiv.org/abs/2401.10217
+  pdf_url: https://arxiv.org/pdf/2401.10217v2
+  version: v2
+fetched: '2026-11-14'

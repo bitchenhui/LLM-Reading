@@ -1,0 +1,56 @@
+id: paper:arxiv:2506.15276
+status: pending
+score: 12
+track: video_image_coding
+matched:
+- ref: codec:VVC
+  count: 2
+  weight: 3
+- ref: codec:HEVC
+  count: 1
+  weight: 3
+- ref: impl:VTM
+  count: 1
+  weight: 3
+- ref: concept:GOP
+  count: 1
+  weight: 1
+- ref: concept:INR
+  count: 1
+  weight: 1
+- ref: dataset:UVG
+  count: 1
+  weight: 1
+meta:
+  title: 'MSNeRV: Neural Video Representation with Multi-Scale Feature Fusion'
+  authors:
+  - Jun Zhu
+  - Xinfeng Zhang
+  - Lv Tang
+  - JunHao Jiang
+  published: '2025-06-18'
+  updated: '2025-06-18'
+  categories:
+  - cs.CV
+  - cs.MM
+  - eess.IV
+  abstract: Implicit Neural representations (INRs) have emerged as a promising approach for video compression,
+    and have achieved comparable performance to the state-of-the-art codecs such as H.266/VVC. However,
+    existing INR-based methods struggle to effectively represent detail-intensive and fast-changing video
+    content. This limitation mainly stems from the underutilization of internal network features and the
+    absence of video-specific considerations in network design. To address these challenges, we propose
+    a multi-scale feature fusion framework, MSNeRV, for neural video representation. In the encoding stage,
+    we enhance temporal consistency by employing temporal windows, and divide the video into multiple
+    Groups of Pictures (GoPs), where a GoP-level grid is used for background representation. Additionally,
+    we design a multi-scale spatial decoder with a scale-adaptive loss function to integrate multi-resolution
+    and multi-frequency information. To further improve feature extraction, we introduce a multi-scale
+    feature block that fully leverages hidden features. We evaluate MSNeRV on HEVC ClassB and UVG datasets
+    for video representation and compression. Experimental results demonstrate that our model exhibits
+    superior representation capability among INR-based approaches and surpasses VTM-23.7 (Random Access)
+    in dynamic scenarios in terms of compression efficiency.
+  url: https://arxiv.org/abs/2506.15276
+  pdf_url: https://arxiv.org/pdf/2506.15276v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 5
+citation_year: 2025

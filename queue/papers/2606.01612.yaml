@@ -1,0 +1,44 @@
+id: paper:arxiv:2606.01612
+status: pending
+score: 3
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 3
+  weight: 1
+- ref: concept:TrainingFree
+  count: 1
+  weight: 1
+- ref: dataset:COCO
+  count: 1
+  weight: 1
+meta:
+  title: Self-Improving Small Object Grounding in LVLMs
+  authors:
+  - Tianze Yang
+  - Yucheng Shi
+  - Ruitong Sun
+  - Ninghao Liu
+  - Jin Sun
+  published: '2026-06-01'
+  updated: '2026-06-01'
+  categories:
+  - cs.CV
+  - cs.LG
+  abstract: 'Can internal attention patterns in Large Vision Language Models (LVLMs) identify reliable
+    small-object boxes without fine-tuning? In this work, we provide an affirmative answer. Attention
+    structure in LVLMs encodes grounding quality-a lightweight IoU regressor trained solely on attention
+    maps achieves strong IoU prediction (Pearson r > 0.67). This regressor powers the regressor-based
+    variant of our Attention-based Candidate Selection (ACS) framework, called ACS-Learned, which selects
+    the best box from multiple sampled candidates to improve object grounding. By analyzing what the regressor
+    learns, we reveal which transformer layers and heads are most critical and derive ACS-Free: a training-free
+    selector that ranks candidates by attention entropy on these discriminative heads, with no learned
+    component at inference. Experiments on COCO and Objects365 demonstrate up to 19% self-improvement
+    on small object localization, with ACS-Free ranking best among all training-free methods, demonstrating
+    that useful attention structure improves both localization reliability and interpretability in LVLMs.'
+  url: https://arxiv.org/abs/2606.01612
+  pdf_url: https://arxiv.org/pdf/2606.01612v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 0
+citation_year: 2026

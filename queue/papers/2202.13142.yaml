@@ -1,0 +1,44 @@
+id: paper:arxiv:2202.13142
+status: skipped
+score: 1
+track: processing_enhancement
+matched:
+- ref: concept:SuperResolution
+  count: 2
+  weight: 1
+meta:
+  title: Real-World Blind Super-Resolution via Feature Matching with Implicit High-Resolution Priors
+  authors:
+  - Chaofeng Chen
+  - Xinyu Shi
+  - Yipeng Qin
+  - Xiaoming Li
+  - Xiaoguang Han
+  - Tao Yang
+  - Shihui Guo
+  published: '2022-02-26'
+  updated: '2026-07-09'
+  categories:
+  - cs.CV
+  abstract: A key challenge of real-world image super-resolution (SR) is to recover the missing details
+    in low-resolution (LR) images with complex unknown degradations (e.g., downsampling, noise and compression).
+    Most previous works restore such missing details in the image space. To cope with the high diversity
+    of natural images, they either rely on the unstable GANs that are difficult to train and prone to
+    artifacts, or resort to explicit references from high-resolution (HR) images that are usually unavailable.
+    In this work, we propose Feature Matching SR (FeMaSR), which restores realistic HR images in a much
+    more compact feature space. Unlike image-space methods, our FeMaSR restores HR images by matching
+    distorted LR image features to their distortion-free HR counterparts in our pretrained HR priors,
+    and decoding the matched features to obtain realistic HR images. Specifically, our HR priors contain
+    a discrete feature codebook and its associated decoder, which are pretrained on HR images with a Vector
+    Quantized Generative Adversarial Network (VQGAN). Notably, we incorporate a novel semantic regularization
+    in VQGAN to improve the quality of reconstructed images. For the feature matching, we first extract
+    LR features with an LR encoder consisting of several Swin Transformer blocks and then follow a simple
+    nearest neighbour strategy to match them with the pretrained codebook. In particular, we equip the
+    LR encoder with residual shortcut connections to the decoder, which is critical to the optimization
+    of feature matching loss and also helps to complement the possible feature matching errors. Experimental
+    results show that our approach produces more realistic HR images than previous methods. Codes are
+    released at https://github.com/chaofengc/FeMaSR.
+  url: https://arxiv.org/abs/2202.13142
+  pdf_url: https://arxiv.org/pdf/2202.13142v3
+  version: v3
+fetched: '2026-11-14'

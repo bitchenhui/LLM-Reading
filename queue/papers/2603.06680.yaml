@@ -1,0 +1,38 @@
+id: paper:arxiv:2603.06680
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'VB: Visibility Benchmark for Visibility and Perspective Reasoning in Images'
+  authors:
+  - Neil Tripathi
+  published: '2026-03-03'
+  updated: '2026-03-03'
+  categories:
+  - cs.CV
+  - cs.AI
+  abstract: 'We present VB, a benchmark that tests whether vision-language models can determine what is
+    and is not visible in a photograph, and abstain when a human viewer cannot reliably answer. Each item
+    pairs a single photo with a short yes/no visibility claim; the model must output VISIBLY_TRUE, VISIBLY_FALSE,
+    or ABSTAIN, together with a confidence score. Items are organized into 100 families using a 2x2 design
+    that crosses a minimal image edit with a minimal text edit, yielding 300 headline evaluation cells.
+    Unlike prior unanswerable-VQA benchmarks, VB tests not only whether a question is unanswerable but
+    why (via reason codes tied to specific visibility factors), and uses controlled minimal edits to verify
+    that model judgments change when and only when the underlying evidence changes. We score models on
+    confidence-aware accuracy with abstention (CAA), minimal-edit flip rate (MEFR), confidence-ranked
+    selective prediction (SelRank), and second-order perspective reasoning (ToMAcc); all headline numbers
+    are computed on the strict XOR subset (three cells per family, 300 scored items per model). We evaluate
+    nine models spanning flagship and prior-generation closed-source systems, and open-source models from
+    8B to 12B parameters. GPT-4o and Gemini 3.1 Pro effectively tie for the best composite score (0.728
+    and 0.727), followed by Gemini 2.5 Pro (0.678). The best open-source model, Gemma 3 12B (0.505), surpasses
+    one prior-generation closed-source system. Text-flip robustness exceeds image-flip robustness for
+    six of nine models, and confidence calibration varies substantially: GPT-4o and Gemini 2.5 Pro achieve
+    similar accuracy yet differ sharply in selective prediction quality.'
+  url: https://arxiv.org/abs/2603.06680
+  pdf_url: https://arxiv.org/pdf/2603.06680v1
+  version: v1
+fetched: '2026-11-14'

@@ -1,0 +1,46 @@
+id: paper:arxiv:2605.17734
+status: pending
+score: 3
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+- ref: concept:TrainingFree
+  count: 1
+  weight: 1
+meta:
+  title: Harnessing LLM Agents with Skill Programs
+  authors:
+  - Hongjun Liu
+  - Yifei Ming
+  - Shafiq Joty
+  - Chen Zhao
+  published: '2026-05-18'
+  updated: '2026-09-28'
+  categories:
+  - cs.AI
+  abstract: 'Equipping LLM agents with reusable skills derived from past experience has become a popular
+    and successful approach for tackling complex and long-horizon tasks. However, such lessons are often
+    encoded as textual guidance that remains largely advisory, lacking explicit mechanisms for when and
+    how to intervene in the agent loop. To bridge the gap, we introduce HASP(Harnessing LLM Agents with
+    Skill Programs), a new framework that upgrades skills into executable Program Functions (PFs). Rather
+    than offering passive advice, PFs act as executable guardrails that activate on failure-prone states
+    and modify the next action or inject corrective context. HASP is highly modular: it can be applied
+    at inference time for direct agent-loop intervention, during post-training to provide structured supervision,
+    or for self-improvement by evolving validated, teacher-reviewed PFs. Empirically, HASP drives substantial
+    gains compared to both training-free and training-based methods on web-search, math reasoning, and
+    coding tasks. For example, on web-search reasoning, inference-time PFs alone improve the average performance
+    by 25% compared to (multi-loop) ReAct Agent, while post-training and controlled evolution achieve
+    a 30.4% gain over Search-R1. To provide deeper insights into HASP, our mechanism analysis reveals
+    how PFs trigger and intervene, how skills are internalized, and the requirement for stable skill library
+    evolution.'
+  url: https://arxiv.org/abs/2605.17734
+  pdf_url: https://arxiv.org/pdf/2605.17734v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 10
+citation_year: 2026

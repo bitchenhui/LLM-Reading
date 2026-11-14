@@ -1,0 +1,50 @@
+id: paper:arxiv:2510.07841
+status: pending
+score: 2
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 3
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: Self-Improving LLM Agents at Test-Time
+  authors:
+  - Emre Can Acikgoz
+  - Cheng Qian
+  - Heng Ji
+  - Dilek Hakkani-Tür
+  - Gokhan Tur
+  published: '2025-10-09'
+  updated: '2025-10-09'
+  categories:
+  - cs.LG
+  - cs.AI
+  - cs.CL
+  abstract: 'One paradigm of language model (LM) fine-tuning relies on creating large training datasets,
+    under the assumption that high quantity and diversity will enable models to generalize to novel tasks
+    after post-training. In practice, gathering large sets of data is inefficient, and training on them
+    is prohibitively expensive; worse, there is no guarantee that the resulting model will handle complex
+    scenarios or generalize better. Moreover, existing techniques rarely assess whether a training sample
+    provides novel information or is redundant with the knowledge already acquired by the model, resulting
+    in unnecessary costs. In this work, we explore a new test-time self-improvement method to create more
+    effective and generalizable agentic LMs on-the-fly. The proposed algorithm can be summarized in three
+    steps: (i) first it identifies the samples that model struggles with (self-awareness), (ii) then generates
+    similar examples from detected uncertain samples (self-data augmentation), and (iii) uses these newly
+    generated samples at test-time fine-tuning (self-improvement). We study two variants of this approach:
+    Test-Time Self-Improvement (TT-SI), where the same model generates additional training examples from
+    its own uncertain cases and then learns from them, and contrast this approach with Test-Time Distillation
+    (TT-D), where a stronger model generates similar examples for uncertain cases, enabling student to
+    adapt using distilled supervision. Empirical evaluations across different agent benchmarks demonstrate
+    that TT-SI improves the performance with +5.48% absolute accuracy gain on average across all benchmarks
+    and surpasses other standard learning methods, yet using 68x less training samples. Our findings highlight
+    the promise of TT-SI, demonstrating the potential of self-improvement algorithms at test-time as a
+    new paradigm for building more capable agents toward self-evolution.'
+  url: https://arxiv.org/abs/2510.07841
+  pdf_url: https://arxiv.org/pdf/2510.07841v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 30
+citation_year: 2025

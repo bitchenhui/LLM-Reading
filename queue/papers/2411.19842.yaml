@@ -1,0 +1,38 @@
+id: paper:arxiv:2411.19842
+status: skipped
+score: 1
+track: audio_coding
+matched:
+- ref: concept:NeuralAudioCodec
+  count: 1
+  weight: 1
+meta:
+  title: Scaling Transformers for Low-Bitrate High-Quality Speech Coding
+  authors:
+  - Julian D Parker
+  - Anton Smirnov
+  - Jordi Pons
+  - CJ Carr
+  - Zack Zukowski
+  - Zach Evans
+  - Xubo Liu
+  published: '2024-11-29'
+  updated: '2024-11-29'
+  categories:
+  - eess.AS
+  - cs.AI
+  - cs.LG
+  - cs.SD
+  - eess.SP
+  abstract: The tokenization of speech with neural audio codec models is a vital part of modern AI pipelines
+    for the generation or understanding of speech, alone or in a multimodal context. Traditionally such
+    tokenization models have concentrated on low parameter-count architectures using only components with
+    strong inductive biases. In this work we show that by scaling a transformer architecture with large
+    parameter count to this problem, and applying a flexible Finite Scalar Quantization (FSQ) based bottleneck,
+    it is possible to reach state-of-the-art speech quality at extremely low bit-rates of $400$ or $700$
+    bits-per-second. The trained models strongly out-perform existing baselines in both objective and
+    subjective tests.
+  url: https://arxiv.org/abs/2411.19842
+  pdf_url: https://arxiv.org/pdf/2411.19842v1
+  version: v1
+fetched: '2026-11-14'

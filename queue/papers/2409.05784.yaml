@@ -1,0 +1,33 @@
+id: paper:arxiv:2409.05784
+status: skipped
+score: 1
+track: audio_coding
+matched:
+- ref: concept:NeuralAudioCodec
+  count: 1
+  weight: 1
+meta:
+  title: Vector Quantized Diffusion Model Based Speech Bandwidth Extension
+  authors:
+  - Yuan Fang
+  - Jinglin Bai
+  - Jiajie Wang
+  - Xueliang Zhang
+  published: '2024-09-09'
+  updated: '2024-09-14'
+  categories:
+  - cs.SD
+  - eess.AS
+  abstract: Recent advancements in neural audio codec (NAC) unlock new potential in audio signal processing.
+    Studies have increasingly explored leveraging the latent features of NAC for various speech signal
+    processing tasks. This paper introduces the first approach to speech bandwidth extension (BWE) that
+    utilizes the discrete features obtained from NAC. By restoring high-frequency details within highly
+    compressed discrete tokens, this approach enhances speech intelligibility and naturalness. Based on
+    Vector Quantized Diffusion, the proposed framework combines the strengths of advanced NAC, diffusion
+    models, and Mamba-2 to reconstruct high-frequency speech components. Extensive experiments demonstrate
+    that this method exhibits superior performance across both log-spectral distance and ViSQOL, significantly
+    improving speech quality.
+  url: https://arxiv.org/abs/2409.05784
+  pdf_url: https://arxiv.org/pdf/2409.05784v2
+  version: v2
+fetched: '2026-11-14'

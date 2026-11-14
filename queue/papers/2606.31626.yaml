@@ -1,0 +1,41 @@
+id: paper:arxiv:2606.31626
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 3
+  weight: 1
+meta:
+  title: 'PrISM-IQA: Image Quality Assessment Made Practical for Smartphone Photography'
+  authors:
+  - Shuyan Zhai
+  - Jiaqi He
+  - Weixia Zhang
+  - Liang Wang
+  - Zhenjie Lee
+  - Zufeng Zhang
+  - Kede Ma
+  published: '2026-06-30'
+  updated: '2026-06-30'
+  categories:
+  - cs.CV
+  abstract: Existing smartphone image quality assessment (IQA) methods commonly reduce perceptual quality
+    to a single score. However, this scalar formulation is poorly aligned with practical image signal
+    processor (ISP) tuning, where engineers must identify specific quality issues, estimate their severities,
+    and determine whether they are acceptable or require intervention. In this work, we introduce a Practical
+    ISP-aware Structured Model for IQA (PrISM-IQA), which reformulates smartphone IQA as a multi-issue
+    ordinal diagnosis problem. Rather than regressing a single quality score, PrISM-IQA predicts an \textit{ordered}
+    severity level -- absent, minor, severe, or critical -- for each ISP-relevant issue, covering both
+    global image-level artifacts and local content-dependent defects. To produce logically consistent
+    predictions, PrISM-IQA combines cumulative ordinal encoding with structured inference that captures
+    within-issue monotonicity as well as cross-issue subsumption and exclusion relations. We evaluate
+    PrISM-IQA on a reconstructed SPAQ benchmark annotated with $53$ ISP-relevant quality issues and on
+    a small-scale expert-annotated real-world dataset. Experimental results demonstrate the effectiveness
+    of PrISM-IQA for practical issue-level diagnosis, reveal transferable perceptual quality representations
+    through linear probing, and further show how its predictions can support actionable and meaningful
+    ISP tuning.
+  url: https://arxiv.org/abs/2606.31626
+  pdf_url: https://arxiv.org/pdf/2606.31626v1
+  version: v1
+fetched: '2026-11-14'

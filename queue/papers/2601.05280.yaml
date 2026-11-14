@@ -1,0 +1,44 @@
+id: paper:arxiv:2601.05280
+status: skipped
+score: 1
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+meta:
+  title: 'Large Language Models are Shannon Lossy Compressors Not Solomonoff Induction Estimators: Self-improvement
+    and Singularity Are Not Near Without Symbolic Model Synthesis'
+  authors:
+  - Hector Zenil
+  - Abicumaran Uthamacumaran
+  - Luan Ozelim
+  published: '2026-01-05'
+  updated: '2026-09-28'
+  categories:
+  - cs.IT
+  - cs.AI
+  - cs.LG
+  abstract: 'We connect two questions in Algorithmic Information Theory (AIT), Machine Learning (ML) and
+    Artificial General Intelligence (AGI): whether LLMs estimate Solomonoff induction, and whether they
+    can self-improve towards an AI Singularity. We provide theoretical, methodological and empirical answers
+    in the negative but show how limits can be circumvented. Cross-entropy, negative log-likelihood and
+    related next-token objectives cannot alone implement Solomonoff induction: they fit supplied conditionals
+    rather than a program-weighted universal mixture. More computation can improve fit within a fixed
+    objective but cannot change its inductive principle without external hyperparameter or architectural
+    tuning; they alone do not deliver Solomonoff-Levin optimal prediction. For finite learners and observers,
+    theoretical boundaries become less decisive and approaches diverge. Resource-bounded estimators are
+    finite mechanism-search tools whose divergence does not violate algorithmic information conservation.
+    All 26 served language-model checkpoints across five pre-training families, 0.8-35 billion parameters
+    and 1.9-8.5 bits per weight, evaluated at their commitments over a closed alphabet, violate the dominance
+    guarantee defining a universal mixture. Against a 3.32-bit bound attained by a genuine mixture, the
+    best model trails a Krichevsky-Trofimov code by 4.5 bits, the median by 36 and the worst by 128; excess
+    grows to every stream''s end rather than settling to a constant. Served conditionals fail to form
+    a mixture over the declared class in 79 of 91 checkpoint-designs; neither scale nor post-training
+    closes the gap. Frontier developers adopt neurosymbolic approaches, including Fable and Astra, incorporating
+    model synthesis via neurosymbolic computation. They are no longer purely statistical LLMs, making
+    them better, though still limited, candidates for higher forms of induction & model synthesis.'
+  url: https://arxiv.org/abs/2601.05280
+  pdf_url: https://arxiv.org/pdf/2601.05280v6
+  version: v6
+fetched: '2026-11-14'

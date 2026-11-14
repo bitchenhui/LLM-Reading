@@ -1,0 +1,45 @@
+id: paper:arxiv:2508.13402
+status: skipped
+score: 1
+track: streaming_delivery
+matched:
+- ref: concept:ABR
+  count: 3
+  weight: 1
+meta:
+  title: 'Robust Live Streaming over LEO Satellite Constellations: Measurement, Analysis, and Handover-Aware
+    Adaptation'
+  authors:
+  - Hao Fang
+  - Haoyuan Zhao
+  - Jianxin Shi
+  - Miao Zhang
+  - Guanzhen Wu
+  - Yi Ching Chou
+  - Feng Wang
+  - Jiangchuan Liu
+  published: '2025-08-18'
+  updated: '2025-08-18'
+  categories:
+  - cs.MM
+  - eess.IV
+  abstract: Live streaming has experienced significant growth recently. Yet this rise in popularity contrasts
+    with the reality that a substantial segment of the global population still lacks Internet access.
+    The emergence of Low Earth orbit Satellite Networks (LSNs), such as SpaceX's Starlink and Amazon's
+    Project Kuiper, presents a promising solution to fill this gap. Nevertheless, our measurement study
+    reveals that existing live streaming platforms may not be able to deliver a smooth viewing experience
+    on LSNs due to frequent satellite handovers, which lead to frequent video rebuffering events. Current
+    state-of-the-art learning-based Adaptive Bitrate (ABR) algorithms, even when trained on LSNs' network
+    traces, fail to manage the abrupt network variations associated with satellite handovers effectively.
+    To address these challenges, for the first time, we introduce Satellite-Aware Rate Adaptation (SARA),
+    a versatile and lightweight middleware that can seamlessly integrate with various ABR algorithms to
+    enhance the performance of live streaming over LSNs. SARA intelligently modulates video playback speed
+    and furnishes ABR algorithms with insights derived from the distinctive network characteristics of
+    LSNs, thereby aiding ABR algorithms in making informed bitrate selections and effectively minimizing
+    rebuffering events that occur during satellite handovers. Our extensive evaluation shows that SARA
+    can effectively reduce the rebuffering time by an average of $39.41\%$ and slightly improve latency
+    by $0.65\%$ while only introducing an overall loss in bitrate by $0.13\%$.
+  url: https://arxiv.org/abs/2508.13402
+  pdf_url: https://arxiv.org/pdf/2508.13402v1
+  version: v1
+fetched: '2026-11-14'

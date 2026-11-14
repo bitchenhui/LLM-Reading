@@ -1,0 +1,58 @@
+id: paper:arxiv:2304.12852
+status: pending
+score: 4
+track: video_image_coding
+matched:
+- ref: concept:QP
+  count: 2
+  weight: 1
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+- ref: metric:SSIM
+  count: 1
+  weight: 1
+- ref: metric:VMAF
+  count: 1
+  weight: 1
+meta:
+  title: The Bjøntegaard Bible -- Why your Way of Comparing Video Codecs May Be Wrong
+  authors:
+  - Christian Herglotz
+  - Hannah Och
+  - Anna Meyer
+  - Geetha Ramasubbu
+  - Lena Eichermüller
+  - Matthias Kränzler
+  - Fabian Brand
+  - Kristian Fischer
+  - Dat Thanh Nguyen
+  - Andy Regensky
+  - André Kaup
+  published: '2023-04-25'
+  updated: '2023-12-22'
+  categories:
+  - eess.IV
+  abstract: 'In this paper, we provide an in-depth assessment on the Bjøntegaard Delta. We construct a
+    large data set of video compression performance comparisons using a diverse set of metrics including
+    PSNR, VMAF, bitrate, and processing energies. These metrics are evaluated for visual data types such
+    as classic perspective video, 360$^\circ$ video, point clouds, and screen content. As compression
+    technology, we consider multiple hybrid video codecs as well as state-of-the-art neural network based
+    compression methods. Using additional supporting points inbetween standard points defined by parameters
+    such as the quantization parameter, we assess the interpolation error of the Bjøntegaard-Delta (BD)
+    calculus and its impact on the final BD value. From the analysis, we find that the BD calculus is
+    most accurate in the standard application of rate-distortion comparisons with mean errors below 0.5
+    percentage points. For other applications and special cases, e.g., VMAF quality, energy considerations,
+    or inter-codec comparisons, the errors are higher (up to 5 percentage points), but can be halved by
+    using a higher number of supporting points. We finally come up with recommendations on how to use
+    the BD calculus such that the validity of the resulting BD-values is maximized. Main recommendations
+    are as follows: First, relative curve differences should be plotted and analyzed. Second, the logarithmic
+    domain should be used for saturating metrics such as SSIM and VMAF. Third, BD values below a certain
+    threshold indicated by the subset error should not be used to draw recommendations. Fourth, using
+    two supporting points is sufficient to obtain rough performance estimates.'
+  url: https://arxiv.org/abs/2304.12852
+  pdf_url: https://arxiv.org/pdf/2304.12852v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 35
+citation_year: 2023

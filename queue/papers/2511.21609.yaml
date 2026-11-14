@@ -1,0 +1,43 @@
+id: paper:arxiv:2511.21609
+status: skipped_low_citation
+score: 7
+track: video_image_coding
+matched:
+- ref: codec:AV1
+  count: 1
+  weight: 3
+- ref: codec:VVC
+  count: 1
+  weight: 3
+- ref: concept:EntropyModel
+  count: 1
+  weight: 1
+meta:
+  title: Entropy Coding for Non-Rectangular Transform Blocks using Partitioned DCT Dictionaries for AV1
+  authors:
+  - Priyanka Das
+  - Tim Classen
+  - Mathias Wien
+  published: '2025-11-26'
+  updated: '2025-11-27'
+  categories:
+  - eess.IV
+  abstract: Recent video codecs such as VVC and AV1 apply a Non-rectangular (NR) partitioning to combine
+    prediction signals using a smooth blending around the boundary, followed by a rectangular transform
+    on the whole block. The NR signal transformation is not yet supported. A transformation technique
+    that applies the same partitioning to the 2D Discrete Cosine Transform (DCT) bases and finds a sparse
+    representation of the NR signal in such a dictionary showed promising gains in an experimental setup
+    outside the reference software. This method uses the regular inverse transformation at the decoder
+    to reconstruct a rectangular signal and discards the signal outside the region of interest. This design
+    is appealing due to the minimal changes required at the decoder. However, current entropy coding schemes
+    are not well-suited for optimally encoding these coefficients because they are primarily designed
+    for DCT coefficients. This work introduces an entropy coding method that efficiently codes these transform
+    coefficients by effectively modeling their properties. The design offers significant theoretical rate
+    savings, estimated using conditional entropy, particularly for scenarios that are more dissimilar
+    to DCT in an experimental setup.
+  url: https://arxiv.org/abs/2511.21609
+  pdf_url: https://arxiv.org/pdf/2511.21609v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 0
+citation_year: 2025

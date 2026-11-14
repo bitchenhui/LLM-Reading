@@ -1,0 +1,47 @@
+id: paper:arxiv:2603.06700
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 3
+  weight: 1
+meta:
+  title: 'SIQA: Toward Reliable Scientific Image Quality Assessment'
+  authors:
+  - Wenzhe Li
+  - Liang Chen
+  - Junying Wang
+  - Yijing Guo
+  - Ye Shen
+  - Farong Wen
+  - Chunyi Li
+  - Zicheng Zhang
+  - Guangtao Zhai
+  published: '2026-03-05'
+  updated: '2026-03-05'
+  categories:
+  - cs.CV
+  abstract: 'Scientific images fundamentally differ from natural and AI-generated images in that they
+    encode structured domain knowledge rather than merely depict visual scenes. Assessing their quality
+    therefore requires evaluating not only perceptual fidelity but also scientific correctness and logical
+    completeness. However, existing image quality assessment (IQA) paradigms primarily focus on perceptual
+    distortions or image-text alignment, implicitly assuming that depicted content is factually valid.
+    This assumption breaks down in scientific contexts, where visually plausible figures may still contain
+    conceptual errors or incomplete reasoning. To address this gap, we introduce Scientific Image Quality
+    Assessment (SIQA), a framework that models scientific image quality along two complementary dimensions:
+    Knowledge (Scientific Validity and Scientific Completeness) and Perception (Cognitive Clarity and
+    Disciplinary Conformity). To operationalize this formulation, we design two evaluation protocols:
+    SIQA-U (Understanding), which measures semantic comprehension of scientific content through multiple-choice
+    tasks, and SIQA-S (Scoring), which evaluates alignment with expert quality judgments. We further construct
+    the SIQA Challenge, consisting of an expert-annotated benchmark and a large-scale training set. Experiments
+    across representative multimodal large language models (MLLMs) reveal a consistent discrepancy between
+    scoring alignment and scientific understanding. While models can achieve strong agreement with expert
+    ratings under SIQA-S, their performance on SIQA-U remains substantially lower. Fine-tuning improves
+    both metrics, yet gains in scoring consistently outpace improvements in understanding. These results
+    suggest that rating consistency alone may not reliably reflect scientific comprehension, underscoring
+    the necessity of multidimensional evaluation for scientific image quality assessment.'
+  url: https://arxiv.org/abs/2603.06700
+  pdf_url: https://arxiv.org/pdf/2603.06700v1
+  version: v1
+fetched: '2026-11-14'

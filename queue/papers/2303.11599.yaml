@@ -1,0 +1,39 @@
+id: paper:arxiv:2303.11599
+status: pending
+score: 3
+track: video_image_coding
+matched:
+- ref: codec:AVC
+  count: 1
+  weight: 3
+meta:
+  title: Low-complexity Deep Video Compression with A Distributed Coding Architecture
+  authors:
+  - Xinjie Zhang
+  - Jiawei Shao
+  - Jun Zhang
+  published: '2023-03-21'
+  updated: '2023-04-02'
+  categories:
+  - eess.IV
+  - cs.AI
+  - cs.CV
+  - cs.MM
+  abstract: Prevalent predictive coding-based video compression methods rely on a heavy encoder to reduce
+    temporal redundancy, which makes it challenging to deploy them on resource-constrained devices. Since
+    the 1970s, distributed source coding theory has indicated that independent encoding and joint decoding
+    with side information (SI) can achieve high-efficient compression of correlated sources. This has
+    inspired a distributed coding architecture aiming at reducing the encoding complexity. However, traditional
+    distributed coding methods suffer from a substantial performance gap to predictive coding ones. Inspired
+    by the great success of learning-based compression, we propose the first end-to-end distributed deep
+    video compression framework to improve the rate-distortion performance. A key ingredient is an effective
+    SI generation module at the decoder, which helps to effectively exploit inter-frame correlations without
+    computation-intensive encoder-side motion estimation and compensation. Experiments show that our method
+    significantly outperforms conventional distributed video coding and H.264. Meanwhile, it enjoys 6-7x
+    encoding speedup against DVC [1] with comparable compression performance. Code is released at https://github.com/Xinjie-Q/Distributed-DVC.
+  url: https://arxiv.org/abs/2303.11599
+  pdf_url: https://arxiv.org/pdf/2303.11599v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 11
+citation_year: 2023

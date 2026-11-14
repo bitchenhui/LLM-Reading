@@ -1,0 +1,49 @@
+id: paper:arxiv:2606.29752
+status: pending
+score: 2
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 4
+  weight: 1
+- ref: metric:MOS
+  count: 2
+  weight: 1
+meta:
+  title: 'LEIQ-Assessor: Multi-dimensional Quality Assessment of Low-light Enhanced Images via Multi-task
+    Learning'
+  authors:
+  - Wei Sun
+  - Yanwei Jiang
+  - Dandan Zhu
+  - Jinqiu Sang
+  - Jikai Xu
+  - Weixia Zhang
+  - Guangtao Zhai
+  published: '2026-06-29'
+  updated: '2026-06-29'
+  categories:
+  - cs.CV
+  - cs.MM
+  abstract: 'Low-light image enhancement algorithms (LIEAs) aim to improve the visibility of images captured
+    under poor illumination. However, the enhancement process often introduces artifacts such as noise
+    amplification, color shift, structural damage, and over-exposure, which degrade the perceptual quality
+    of the enhanced images. Therefore, a reliable image quality assessment (IQA) metric for evaluating
+    enhancement effects is of great importance for both the development of LIEAs and their practical applications.
+    In this paper, we present \textbf{LEIQ-Assessor}, a multi-dimensional quality assessment model for
+    low-light image enhancement based on multi-task learning, developed for the QoMEX 2026 Grand Challenge
+    on Low-light Enhanced Image Quality Assessment. Specifically, our method leverages a pre-trained SigLIP2
+    Vision Transformer as the backbone and simultaneously predicts the overall Mean Opinion Score (MOS)
+    together with six perceptual sub-attributes: lightness, color fidelity, noise level, exposure quality,
+    naturalness, and content recovery. By jointly optimizing these correlated objectives via the PLCC
+    loss, the shared representation captures richer quality-aware features than its single-task counterpart.
+    Experiments on the MLE benchmark demonstrate that LEIQ-Assessor significantly outperforms existing
+    no-reference IQA models and hand-crafted quality descriptors. Our method achieved second place in
+    the QoMEX 2026 Grand Challenge on Low-light Enhanced Image Quality Assessment. The code is available
+    at https://github.com/sunwei925/LEIQ-Assessor.'
+  url: https://arxiv.org/abs/2606.29752
+  pdf_url: https://arxiv.org/pdf/2606.29752v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 0
+citation_year: 2026

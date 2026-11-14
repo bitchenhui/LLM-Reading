@@ -1,0 +1,39 @@
+id: paper:arxiv:2602.00648
+status: skipped
+score: 0
+track: audio_coding
+matched: []
+meta:
+  title: High-Fidelity Generative Audio Compression at 0.275kbps
+  authors:
+  - Hao Ma
+  - Ruihao Jing
+  - Shansong Liu
+  - Cheng Gong
+  - Chi Zhang
+  - Xiao-Lei Zhang
+  - Xuelong Li
+  published: '2026-01-31'
+  updated: '2026-01-31'
+  categories:
+  - eess.AS
+  - cs.SD
+  abstract: High-fidelity general audio compression at ultra-low bitrates is crucial for applications
+    ranging from low-bandwidth communication to generative audio-language modeling. Traditional audio
+    compression methods and contemporary neural codecs are fundamentally designed for waveform reconstruction.
+    As a result, when operating at ultra-low bitrates, these methods degrade rapidly and often fail to
+    preserve essential information, leading to severe acoustic artifacts and pronounced semantic distortion.
+    To overcome these limitations, we introduce Generative Audio Compression (GAC), a novel paradigm shift
+    from signal fidelity to task-oriented effectiveness. Implemented within the AI Flow framework, GAC
+    is theoretically grounded in the Law of Information Capacity. These foundations posit that abundant
+    computational power can be leveraged at the receiver to offset extreme communication bottlenecks--exemplifying
+    the More Computation, Less Bandwidth philosophy. By integrating semantic understanding at the transmitter
+    with scalable generative synthesis at the receiver, GAC offloads the information burden to powerful
+    model priors. Our 1.8B-parameter model achieves high-fidelity reconstruction of 32kHz general audio
+    at an unprecedented bitrate of 0.275kbps. Even at 0.175kbps, it still preserves a strong intelligible
+    audio transmission capability, which represents an about 3000x compression ratio, significantly outperforming
+    current state-of-the-art neural codecs in maintaining both perceptual quality and semantic consistency.
+  url: https://arxiv.org/abs/2602.00648
+  pdf_url: https://arxiv.org/pdf/2602.00648v1
+  version: v1
+fetched: '2026-11-14'

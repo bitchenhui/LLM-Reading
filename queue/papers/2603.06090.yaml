@@ -1,0 +1,40 @@
+id: paper:arxiv:2603.06090
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'DeepSight: Bridging Depth Maps and Language with a Depth-Driven Multimodal Model'
+  authors:
+  - Hao Yang
+  - Hongbo Zhang
+  - Yanyan Zhao
+  - Bing Qin
+  published: '2026-03-06'
+  updated: '2026-03-06'
+  categories:
+  - cs.CV
+  - cs.CL
+  abstract: 'Multimodal large language models (MLLMs) have achieved impressive performance across various
+    tasks such as image captioning and visual question answer(VQA); however, they often struggle to accurately
+    interpret depth information inherent in visual data. In this work, we introduce DeepSight, the first
+    dedicated depth MLLM designed to enhance three-dimensional scene understanding. Unlike conventional
+    methods that align RGB image encodings with text, our approach takes advantage of the unique characteristics
+    of depth images: single-channel grayscale images where the pixel values directly reflect depth cues
+    to improve spatial reasoning. To address challenges associated with limited depth data and the inadequacy
+    of simple channel replication, we construct a novel depth image-text pair dataset and a depth instruction
+    dataset. Depth maps are generated from visual images using the GLPN model, and GPT-4 is employed to
+    curate corresponding depth instructions, an approach validated by LLaVA. Additionally, we modify the
+    ViT encoder in CLIP to incorporate local object information, thereby capturing the subtle continuous
+    variations of depth more effectively. To evaluate the performance of our model, we develop a comprehensive
+    depth question answer benchmark based on existing depth image datasets, which rigorously assesses
+    understanding in typical depth map scenarios. Experimental results demonstrate that DeepSight significantly
+    enhances depth perception and downstream task performance, marking a substantial step forward in multimodal
+    three-dimensional understanding.'
+  url: https://arxiv.org/abs/2603.06090
+  pdf_url: https://arxiv.org/pdf/2603.06090v1
+  version: v1
+fetched: '2026-11-14'

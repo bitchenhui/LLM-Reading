@@ -1,0 +1,42 @@
+id: paper:arxiv:2308.06464
+status: skipped_low_citation
+score: 3
+track: video_image_coding
+matched:
+- ref: codec:HEVC
+  count: 2
+  weight: 3
+meta:
+  title: A One-dimensional HEVC video steganalysis method using the Optimality of Predicted Motion Vectors
+  authors:
+  - Jun Li
+  - Minqing Zhang
+  - Ke Niu
+  - Yingnan Zhang
+  - Xiaoyuan Yang
+  published: '2023-08-12'
+  updated: '2023-08-12'
+  categories:
+  - cs.CR
+  - cs.LG
+  - cs.MM
+  abstract: Among steganalysis techniques, detection against motion vector (MV) domain-based video steganography
+    in High Efficiency Video Coding (HEVC) standard remains a hot and challenging issue. For the purpose
+    of improving the detection performance, this paper proposes a steganalysis feature based on the optimality
+    of predicted MVs with a dimension of one. Firstly, we point out that the motion vector prediction
+    (MVP) of the prediction unit (PU) encoded using the Advanced Motion Vector Prediction (AMVP) technique
+    satisfies the local optimality in the cover video. Secondly, we analyze that in HEVC video, message
+    embedding either using MVP index or motion vector differences (MVD) may destroy the above optimality
+    of MVP. And then, we define the optimal rate of MVP in HEVC video as a steganalysis feature. Finally,
+    we conduct steganalysis detection experiments on two general datasets for three popular steganography
+    methods and compare the performance with four state-of-the-art steganalysis methods. The experimental
+    results show that the proposed optimal rate of MVP for all cover videos is 100\%, while the optimal
+    rate of MVP for all stego videos is less than 100\%. Therefore, the proposed steganography scheme
+    can accurately distinguish between cover videos and stego videos, and it is efficiently applied to
+    practical scenarios with no model training and low computational complexity.
+  url: https://arxiv.org/abs/2308.06464
+  pdf_url: https://arxiv.org/pdf/2308.06464v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 1
+citation_year: 2023

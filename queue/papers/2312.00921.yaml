@@ -1,0 +1,33 @@
+id: paper:arxiv:2312.00921
+status: skipped
+score: 1
+track: video_image_coding
+matched:
+- ref: concept:EntropyModel
+  count: 2
+  weight: 1
+meta:
+  title: Bitstream Organization for Parallel Entropy Coding on Neural Network-based Video Codecs
+  authors:
+  - Amir Said
+  - Hoang Le
+  - Farzad Farhadzadeh
+  published: '2023-12-01'
+  updated: '2023-12-01'
+  categories:
+  - eess.IV
+  - cs.IT
+  abstract: Video compression systems must support increasing bandwidth and data throughput at low cost
+    and power, and can be limited by entropy coding bottlenecks. Efficiency can be greatly improved by
+    parallelizing coding, which can be done at much larger scales with new neural-based codecs, but with
+    some compression loss related to data organization. We analyze the bit rate overhead needed to support
+    multiple bitstreams for concurrent decoding, and for its minimization propose a method for compressing
+    parallel-decoding entry points, using bidirectional bitstream packing, and a new form of jointly optimizing
+    arithmetic coding termination. It is shown that those techniques significantly lower the overhead,
+    making it easier to reduce it to a small fraction of the average bitstream size, like, for example,
+    less than 1% and 0.1% when the average number of bitstream bytes is respectively larger than 95 and
+    1,200 bytes.
+  url: https://arxiv.org/abs/2312.00921
+  pdf_url: https://arxiv.org/pdf/2312.00921v1
+  version: v1
+fetched: '2026-11-14'

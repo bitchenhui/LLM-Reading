@@ -1,0 +1,38 @@
+id: paper:arxiv:2604.23953
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 2
+  weight: 1
+meta:
+  title: 'Viewport-Unaware Blind Omnidirectional Image Quality Assessment: A Unified and Generalized Approach'
+  authors:
+  - Jiebin Yan
+  - Kangcheng Wu
+  - Jingwen Hou
+  - Jiayu Zhang
+  - Pengfei Chen
+  - Yuming Fang
+  published: '2026-04-27'
+  updated: '2026-04-27'
+  categories:
+  - cs.CV
+  - cs.AI
+  abstract: 'Blind omnidirectional image quality assessment (BOIQA) presents a great challenge to the
+    visual quality assessment community, due to different storage formats and diverse user viewing behaviors.
+    The main paradigm of BOIQA models includes two steps, ie, viewport generation, and quality prediction,
+    which brings an extra computational burden and is hard to generalize to other visual contents (eg,
+    2D planar image). Thus, in this paper, we make an attempt to solve these issues. First, we experimentally
+    find that BOIQA can be formulated as a blind (2D planar) image quality assessment (BIQA) problem,
+    ie, the first step - viewport generation - is no longer needed, which narrows the natural gap between
+    BOIQA and BIQA. Then, we present a new BOIQA approach, which has three merits: ie, viewport-unaware
+    - it accepts an omnidirectional image in the widely used equirectangular projection format as input
+    without any transformation; unified - it can also be applied to BIQA; and generalized - it shows better
+    generalizability against other competitors. Finally, we validate its promise by held-out test, cross-database
+    validation, and the well-established gMAD competition.'
+  url: https://arxiv.org/abs/2604.23953
+  pdf_url: https://arxiv.org/pdf/2604.23953v1
+  version: v1
+fetched: '2026-11-14'

@@ -1,0 +1,44 @@
+id: paper:arxiv:2602.01639
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'ReCALL: Recalibrating Capability Degradation for MLLM-based Composed Image Retrieval'
+  authors:
+  - Tianyu Yang
+  - Chenwei He
+  - Xiangzhao Hao
+  - Tianyue Wang
+  - Jiarui Guo
+  - Haiyun Guo
+  - Leigang Qu
+  - Jinqiao Wang
+  - Tat-Seng Chua
+  published: '2026-02-02'
+  updated: '2026-03-31'
+  categories:
+  - cs.CV
+  abstract: 'Composed Image Retrieval (CIR) aims to retrieve target images based on a hybrid query comprising
+    a reference image and a modification text. Early dual-tower Vision-Language Models (VLMs) struggle
+    with cross-modality compositional reasoning required for this task. While adapting generative Multimodal
+    Large Language Models (MLLMs) for retrieval offers a promising direction, we identify that this strategy
+    overlooks a fundamental issue: compressing a generative MLLM into a single-embedding discriminative
+    retriever triggers a paradigm conflict, which leads to Capability Degradation - the deterioration
+    of native fine-grained reasoning after retrieval adaptation. To address this challenge, we propose
+    ReCALL, a model-agnostic framework that follows a diagnose-generate-refine pipeline: First, we diagnose
+    cognitive blind spots of the retriever via self-guided informative instance mining. Next, we generate
+    corrective instructions and triplets by prompting the foundation MLLM and conduct quality control
+    with VQA-based consistency filtering. Finally, we refine the retriever through continual training
+    on these triplets with a grouped contrastive scheme, thereby internalizing fine-grained visual-semantic
+    distinctions and realigning the discriminative embedding space of retriever with intrinsic compositional
+    reasoning within the MLLM. Extensive experiments on CIRR and FashionIQ show that ReCALL consistently
+    recalibrates degraded capabilities and achieves state-of-the-art performance. Code is available at
+    https://github.com/RemRico/Recall.'
+  url: https://arxiv.org/abs/2602.01639
+  pdf_url: https://arxiv.org/pdf/2602.01639v2
+  version: v2
+fetched: '2026-11-14'

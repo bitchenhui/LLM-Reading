@@ -1,0 +1,37 @@
+id: paper:arxiv:2204.11723
+status: skipped
+score: 1
+track: immersive_media
+matched:
+- ref: concept:EntropyModel
+  count: 1
+  weight: 1
+meta:
+  title: '4DAC: Learning Attribute Compression for Dynamic Point Clouds'
+  authors:
+  - Guangchi Fang
+  - Qingyong Hu
+  - Yiling Xu
+  - Yulan Guo
+  published: '2022-04-25'
+  updated: '2022-04-25'
+  categories:
+  - cs.CV
+  - eess.IV
+  abstract: With the development of the 3D data acquisition facilities, the increasing scale of acquired
+    3D point clouds poses a challenge to the existing data compression techniques. Although promising
+    performance has been achieved in static point cloud compression, it remains under-explored and challenging
+    to leverage temporal correlations within a point cloud sequence for effective dynamic point cloud
+    compression. In this paper, we study the attribute (e.g., color) compression of dynamic point clouds
+    and present a learning-based framework, termed 4DAC. To reduce temporal redundancy within data, we
+    first build the 3D motion estimation and motion compensation modules with deep neural networks. Then,
+    the attribute residuals produced by the motion compensation component are encoded by the region adaptive
+    hierarchical transform into residual coefficients. In addition, we also propose a deep conditional
+    entropy model to estimate the probability distribution of the transformed coefficients, by incorporating
+    temporal context from consecutive point clouds and the motion estimation/compensation modules. Finally,
+    the data stream is losslessly entropy coded with the predicted distribution. Extensive experiments
+    on several public datasets demonstrate the superior compression performance of the proposed approach.
+  url: https://arxiv.org/abs/2204.11723
+  pdf_url: https://arxiv.org/pdf/2204.11723v1
+  version: v1
+fetched: '2026-11-14'

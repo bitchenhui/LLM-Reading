@@ -1,0 +1,31 @@
+id: paper:arxiv:2603.03580
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: An Effective Data Augmentation Method by Asking Questions about Scene Text Images
+  authors:
+  - Xu Yao
+  - Lei Kang
+  published: '2026-03-03'
+  updated: '2026-03-03'
+  categories:
+  - cs.CV
+  abstract: Scene text recognition (STR) and handwritten text recognition (HTR) face significant challenges
+    in accurately transcribing textual content from images into machine-readable formats. Conventional
+    OCR models often predict transcriptions directly, which limits detailed reasoning about text structure.
+    We propose a VQA-inspired data augmentation framework that strengthens OCR training through structured
+    question-answering tasks. For each image-text pair, we generate natural-language questions probing
+    character-level attributes such as presence, position, and frequency, with answers derived from ground-truth
+    text. These auxiliary tasks encourage finer-grained reasoning, and the OCR model aligns visual features
+    with textual queries to jointly reason over images and questions. Experiments on WordArt and Esposalles
+    datasets show consistent improvements over baseline models, with significant reductions in both CER
+    and WER. Our code is publicly available at https://github.com/xuyaooo/DataAugOCR.
+  url: https://arxiv.org/abs/2603.03580
+  pdf_url: https://arxiv.org/pdf/2603.03580v1
+  version: v1
+fetched: '2026-11-14'

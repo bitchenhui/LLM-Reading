@@ -1,0 +1,43 @@
+id: paper:arxiv:2605.06341
+status: skipped_low_citation
+score: 2
+track: self_improvement
+matched:
+- ref: concept:LLM
+  count: 2
+  weight: 1
+- ref: concept:EoH
+  count: 1
+  weight: 1
+meta:
+  title: 'CoupleEvo: Evolving Heuristics for Coupled Optimization Problems Using Large Language Models'
+  authors:
+  - Thomas Bömer
+  - Bastian Amberg
+  - Max Disselnmeyer
+  - Anne Meyer
+  published: '2026-05-07'
+  updated: '2026-05-07'
+  categories:
+  - cs.NE
+  - cs.AI
+  - math.OC
+  abstract: 'Many real-world optimization problems consist of multiple tightly coupled subproblems whose
+    solutions must be coordinated to achieve high overall performance. However, existing large language
+    model driven automated heuristic design approaches are limited to single-problem settings. In this
+    paper, we propose CoupleEvo. CoupleEvo proposes three evolutionary coordination strategies to evolve
+    heuristics for coupled optimization problems: the sequential strategy evolves heuristics for one subproblem
+    after the other; the iterative strategy alternates the evolution of heuristics for different subproblems
+    over successive generations; and the integrated strategy evolves heuristics for all problems simultaneously.
+    The approach is evaluated on two representative coupled optimization problems. Experimental results
+    show that decomposition-based strategies (sequential and iterative) provide more stable convergence
+    and higher solution quality, while the integrated evolution strategy suffers from increased search
+    complexity and variability. These findings highlight the importance of coordinating evolutionary search
+    across interdependent subproblems and demonstrate the potential of LLM-driven heuristic design for
+    complex coupled optimization problems. The code is available: https://github.com/tb-git-kit-research/CoupleEvo.'
+  url: https://arxiv.org/abs/2605.06341
+  pdf_url: https://arxiv.org/pdf/2605.06341v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 0
+citation_year: 2026

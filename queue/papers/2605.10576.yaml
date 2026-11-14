@@ -1,0 +1,43 @@
+id: paper:arxiv:2605.10576
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 3
+  weight: 1
+meta:
+  title: 'SenseBench: A Benchmark for Remote Sensing Low-Level Visual Perception and Description in Large
+    Vision-Language Models'
+  authors:
+  - Chen Zhong
+  - Xiao An
+  - Jiaxing Sun
+  - Zihan Gui
+  - Guangyi Yang
+  - Wei He
+  published: '2026-05-11'
+  updated: '2026-05-11'
+  categories:
+  - cs.CV
+  - cs.AI
+  abstract: 'Low-level visual perception underpins reliable remote sensing (RS) image analysis, yet current
+    image quality assessment (IQA) methods output uninterpretable scalar scores rather than characterizing
+    physics-driven RS degradations, deviating markedly from the diagnostic needs of RS experts. While
+    Vision-Language Models (VLMs) present a compelling alternative by delivering language-grounded IQA,
+    their visual priors are heavily biased toward ground-level natural images. Consequently, whether VLMs
+    can overcome this domain gap to perceive and articulate RS artifacts remains insufficiently studied.
+    To bridge this gap, we propose \textbf{SenseBench}, the first dedicated diagnostic benchmark for RS
+    low-level visual perception and description. Driven by a physics-based hierarchical taxonomy that
+    unifies both non-reference and reference-based paradigms, SenseBench features over 10K meticulously
+    curated instances across 6 major and 22 fine-grained RS degradation categories. Specifically, two
+    complementary protocols are designed for evaluation: objective low-level visual \textit{perception}
+    and subjective diagnostic \textit{description}. Comprehensive evaluation of 29 state-of-the-art VLMs
+    reveals not only skewed domain priors and multi-distortion collapse, but also \textit{fluency illusion}
+    and a \textit{perception-description inversion} effect. We hope SenseBench provides a robust evaluation
+    testbed and high-quality diagnostic data to advance the development of VLMs in RS low-level perception.
+    Code and datasets are available \href{https://github.com/Zhong-Chenchen/SenseBench}{\textcolor{blue}{here}}.'
+  url: https://arxiv.org/abs/2605.10576
+  pdf_url: https://arxiv.org/pdf/2605.10576v1
+  version: v1
+fetched: '2026-11-14'

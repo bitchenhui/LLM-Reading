@@ -1,0 +1,34 @@
+id: paper:arxiv:2309.14129
+status: skipped
+score: 1
+track: audio_coding
+matched:
+- ref: concept:NeuralAudioCodec
+  count: 1
+  weight: 1
+meta:
+  title: Speaker anonymization using neural audio codec language models
+  authors:
+  - Michele Panariello
+  - Francesco Nespoli
+  - Massimiliano Todisco
+  - Nicholas Evans
+  published: '2023-09-25'
+  updated: '2024-01-12'
+  categories:
+  - eess.AS
+  - cs.SD
+  abstract: 'The vast majority of approaches to speaker anonymization involve the extraction of fundamental
+    frequency estimates, linguistic features and a speaker embedding which is perturbed to obfuscate the
+    speaker identity before an anonymized speech waveform is resynthesized using a vocoder. Recent work
+    has shown that x-vector transformations are difficult to control consistently: other sources of speaker
+    information contained within fundamental frequency and linguistic features are re-entangled upon vocoding,
+    meaning that anonymized speech signals still contain speaker information. We propose an approach based
+    upon neural audio codecs (NACs), which are known to generate high-quality synthetic speech when combined
+    with language models. NACs use quantized codes, which are known to effectively bottleneck speaker-related
+    information: we demonstrate the potential of speaker anonymization systems based on NAC language modeling
+    by applying the evaluation framework of the Voice Privacy Challenge 2022.'
+  url: https://arxiv.org/abs/2309.14129
+  pdf_url: https://arxiv.org/pdf/2309.14129v3
+  version: v3
+fetched: '2026-11-14'

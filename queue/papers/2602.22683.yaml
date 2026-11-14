@@ -1,0 +1,42 @@
+id: paper:arxiv:2602.22683
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'SUPERGLASSES: Benchmarking Vision Language Models as Intelligent Agents for AI Smart Glasses'
+  authors:
+  - Zhuohang Jiang
+  - Xu Yuan
+  - Haohao Qu
+  - Shanru Lin
+  - Kanglong Liu
+  - Wenqi Fan
+  - Qing Li
+  published: '2026-02-26'
+  updated: '2026-04-09'
+  categories:
+  - cs.CV
+  - cs.AI
+  abstract: The rapid advancement of AI-powered smart glasses-one of the hottest wearable devices-has
+    unlocked new frontiers for multimodal interaction, with Visual Question Answering (VQA) over external
+    knowledge sources emerging as a core application. Existing Vision Language Models (VLMs) adapted to
+    smart glasses are typically trained and evaluated on traditional multimodal datasets; however, these
+    datasets lack the variety and realism needed to reflect smart glasses usage scenarios and diverge
+    from their specific challenges, where accurately identifying the object of interest must precede any
+    external knowledge retrieval. To bridge this gap, we introduce SUPER- GLASSES, the first comprehensive
+    VQA benchmark built on real-world data entirely collected by smart glasses devices. SUPERGLASSES comprises
+    2,422 egocentric image-question pairs spanning 14 image domains and 8 query categories, enriched with
+    full search trajectories and reasoning annotations. We evaluate 26 representative VLMs on this benchmark,
+    revealing significant performance gaps. To address the limitations of existing models, we further
+    propose the SUPERLENS, a multimodal smart glasses agent that enables retrieval-augmented answer generation
+    by integrating automatic object detection, query decoupling, and multimodal web search. SUPERLENS
+    achieves state-of-the-art performance, outperforming GPT-4o by 2.19%, underscoring the need for task-specific
+    solutions in smart glasses VQA. Our dataset is publicly available at https://huggingface.co/datasets/xandery/SuperGlasses.
+  url: https://arxiv.org/abs/2602.22683
+  pdf_url: https://arxiv.org/pdf/2602.22683v2
+  version: v2
+fetched: '2026-11-14'

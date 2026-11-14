@@ -1,0 +1,35 @@
+id: paper:arxiv:2507.18897
+status: skipped
+score: 0
+track: audio_coding
+matched: []
+meta:
+  title: 'HH-Codec: High Compression High-fidelity Discrete Neural Codec for Spoken Language Modeling'
+  authors:
+  - Rongkun Xue
+  - Yazhe Niu
+  - Shuai Hu
+  - Zixin Yin
+  - Yongqiang Yao
+  - Jing Yang
+  published: '2025-07-25'
+  updated: '2025-07-25'
+  categories:
+  - cs.SD
+  - cs.AI
+  - eess.AS
+  abstract: Discrete speech tokenization is a fundamental component in speech codecs. However, in large-scale
+    speech-to-speech systems, the complexity of parallel streams from multiple quantizers and the computational
+    cost of high-time-dimensional codecs pose significant challenges. In this paper, we introduce HH-Codec,
+    a neural codec that achieves extreme compression at 24 tokens per second for 24 kHz audio while relying
+    on single-quantizer inference. Our approach involves a carefully designed Vector Quantization space
+    for Spoken Language Modeling, optimizing compression efficiency while minimizing information loss.
+    Building on this, we propose an asymmetric encoder-decoder architecture (Audio-VQ-Mel-Audio) that
+    leverages dual supervision and progressive training to enhance reconstruction stability and fidelity.
+    HH-Codec achieves state-of-the-art performance in speech reconstruction with an ultra-low bandwidth
+    of 0.3 kbps. We further evaluate its effectiveness in codebook utilization and generative model adaptation,
+    with extensive ablations validating the necessity of each module. HH-Codec is available at https://github.com/opendilab/HH-Codec.
+  url: https://arxiv.org/abs/2507.18897
+  pdf_url: https://arxiv.org/pdf/2507.18897v1
+  version: v1
+fetched: '2026-11-14'

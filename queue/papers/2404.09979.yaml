@@ -1,0 +1,45 @@
+id: paper:arxiv:2404.09979
+status: skipped_low_citation
+score: 6
+track: video_image_coding
+matched:
+- ref: codec:AVC
+  count: 2
+  weight: 3
+- ref: codec:HEVC
+  count: 1
+  weight: 3
+meta:
+  title: 'One-Click Upgrade from 2D to 3D: Sandwiched RGB-D Video Compression for Stereoscopic Teleconferencing'
+  authors:
+  - Yueyu Hu
+  - Onur G. Guleryuz
+  - Philip A. Chou
+  - Danhang Tang
+  - Jonathan Taylor
+  - Rus Maxham
+  - Yao Wang
+  published: '2024-04-15'
+  updated: '2024-04-15'
+  categories:
+  - cs.CV
+  - eess.IV
+  abstract: Stereoscopic video conferencing is still challenging due to the need to compress stereo RGB-D
+    video in real-time. Though hardware implementations of standard video codecs such as H.264 / AVC and
+    HEVC are widely available, they are not designed for stereoscopic videos and suffer from reduced quality
+    and performance. Specific multiview or 3D extensions of these codecs are complex and lack efficient
+    implementations. In this paper, we propose a new approach to upgrade a 2D video codec to support stereo
+    RGB-D video compression, by wrapping it with a neural pre- and post-processor pair. The neural networks
+    are end-to-end trained with an image codec proxy, and shown to work with a more sophisticated video
+    codec. We also propose a geometry-aware loss function to improve rendering quality. We train the neural
+    pre- and post-processors on a synthetic 4D people dataset, and evaluate it on both synthetic and real-captured
+    stereo RGB-D videos. Experimental results show that the neural networks generalize well to unseen
+    data and work out-of-box with various video codecs. Our approach saves about 30% bit-rate compared
+    to a conventional video coding scheme and MV-HEVC at the same level of rendering quality from a novel
+    view, without the need of a task-specific hardware upgrade.
+  url: https://arxiv.org/abs/2404.09979
+  pdf_url: https://arxiv.org/pdf/2404.09979v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 2
+citation_year: 2024

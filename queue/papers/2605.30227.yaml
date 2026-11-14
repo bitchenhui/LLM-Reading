@@ -1,0 +1,44 @@
+id: paper:arxiv:2605.30227
+status: pending
+score: 2
+track: self_improvement
+matched:
+- ref: concept:LLM
+  count: 1
+  weight: 1
+- ref: concept:SelfImprovement
+  count: 1
+  weight: 1
+meta:
+  title: Unifying Temporal and Structural Credit Assignment in LLM-Based Multi-Agent Prompt Optimization
+  authors:
+  - Wenwu Li
+  - Yuran Song
+  - Mingze Zhao
+  - Bo Jin
+  - Wenhao Li
+  published: '2026-05-28'
+  updated: '2026-05-28'
+  categories:
+  - cs.MA
+  - cs.AI
+  abstract: 'While Multi-Agent Systems (MAS) empower Large Language Models to tackle complex reasoning
+    tasks through collaborative interaction, optimizing their dynamics remains a formidable challenge
+    due to the discrete, non-differentiable nature of the computation graph and the sparsity of global
+    supervisory signals. Existing black-box optimizers struggle to attribute trajectory-level failure
+    to specific local components, resulting in inefficient, high-variance exploration. We argue that tractable
+    MAS optimization needs structural inductive biases to disentangle error signals. We propose temporal
+    and structural credit assignment, which decomposes the objective along two axes: (i) temporal credit,
+    using state-space bottlenecks to identify critical rounds, and (ii) structural credit, using stationary
+    role policies to isolate agent contributions. Leveraging these decomposed signals, we introduce a
+    discrete, verbalized block coordinate descent algorithm for iterative refinement. Rather than indiscriminate
+    global updates, it alternates between optimizing role prompts and aggregation protocols, using LLM-generated
+    "proxy gradients" to target only the identified weak links. Across diverse reasoning benchmarks, our
+    approach substantially reduces query complexity while improving performance, providing a principled
+    and interpretable path toward self-improving MAS.'
+  url: https://arxiv.org/abs/2605.30227
+  pdf_url: https://arxiv.org/pdf/2605.30227v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 4
+citation_year: 2026

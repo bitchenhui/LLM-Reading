@@ -1,0 +1,36 @@
+id: paper:arxiv:2305.07678
+status: skipped
+score: 0
+track: video_image_coding
+matched: []
+meta:
+  title: Exploring the Rate-Distortion-Complexity Optimization in Neural Image Compression
+  authors:
+  - Yixin Gao
+  - Runsen Feng
+  - Zongyu Guo
+  - Zhibo Chen
+  published: '2023-05-12'
+  updated: '2023-05-12'
+  categories:
+  - eess.IV
+  - cs.IT
+  - cs.LG
+  abstract: Despite a short history, neural image codecs have been shown to surpass classical image codecs
+    in terms of rate-distortion performance. However, most of them suffer from significantly longer decoding
+    times, which hinders the practical applications of neural image codecs. This issue is especially pronounced
+    when employing an effective yet time-consuming autoregressive context model since it would increase
+    entropy decoding time by orders of magnitude. In this paper, unlike most previous works that pursue
+    optimal RD performance while temporally overlooking the coding complexity, we make a systematical
+    investigation on the rate-distortion-complexity (RDC) optimization in neural image compression. By
+    quantifying the decoding complexity as a factor in the optimization goal, we are now able to precisely
+    control the RDC trade-off and then demonstrate how the rate-distortion performance of neural image
+    codecs could adapt to various complexity demands. Going beyond the investigation of RDC optimization,
+    a variable-complexity neural codec is designed to leverage the spatial dependencies adaptively according
+    to industrial demands, which supports fine-grained complexity adjustment by balancing the RDC tradeoff.
+    By implementing this scheme in a powerful base model, we demonstrate the feasibility and flexibility
+    of RDC optimization for neural image codecs.
+  url: https://arxiv.org/abs/2305.07678
+  pdf_url: https://arxiv.org/pdf/2305.07678v1
+  version: v1
+fetched: '2026-11-14'

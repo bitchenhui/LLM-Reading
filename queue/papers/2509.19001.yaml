@@ -1,0 +1,39 @@
+id: paper:arxiv:2509.19001
+status: skipped
+score: 1
+track: audio_coding
+matched:
+- ref: concept:LLM
+  count: 2
+  weight: 1
+meta:
+  title: 'HD-PPT: Hierarchical Decoding of Content- and Prompt-Preference Tokens for Instruction-based
+    TTS'
+  authors:
+  - Sihang Nie
+  - Xiaofen Xing
+  - Jingyuan Xing
+  - Baiji Liu
+  - Xiangmin Xu
+  published: '2025-09-23'
+  updated: '2026-03-15'
+  categories:
+  - eess.AS
+  - cs.SD
+  abstract: 'Large Language Model (LLM)-based Text-to-Speech (TTS) models have already reached a high
+    degree of naturalness. However, the precision control of TTS inference is still challenging. Although
+    instruction-based Text-to-Speech (Instruct-TTS) models are proposed, these models still lack fine-grained
+    control due to the modality gap between single-level text instructions and multilevel speech tokens.
+    To address this limitation, we propose HD-PPT, a framework that transforms speech synthesis into a
+    structured, hierarchical task. To enable fine-grained control, we introduce a novel speech codec to
+    extract distinct prompt-preference and content-preference tokens from the complex speech tokens, supervised
+    by automatic speech recognition (ASR) and cross-lingual audio-text pre-training (CLAP) objectives.
+    To bridge the modality gap of these tokens, we propose a hierarchical decoding strategy, where the
+    LLM generates tokens in a structured order: first semantic, then fine-grained style, and finally complete
+    acoustic representation. Extensive experiments demonstrate that this hierarchical paradigm significantly
+    improves instruction adherence and achieves state-of-the-art naturalness, validating our approach
+    for precise and controllable speech synthesis. Audio samples are available at https://xxh333.github.io/.'
+  url: https://arxiv.org/abs/2509.19001
+  pdf_url: https://arxiv.org/pdf/2509.19001v2
+  version: v2
+fetched: '2026-11-14'

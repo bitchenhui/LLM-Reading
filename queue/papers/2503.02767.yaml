@@ -1,0 +1,37 @@
+id: paper:arxiv:2503.02767
+status: skipped
+score: 1
+track: processing_enhancement
+matched:
+- ref: concept:SuperResolution
+  count: 2
+  weight: 1
+meta:
+  title: Undertrained Image Reconstruction for Realistic Degradation in Blind Image Super-Resolution
+  authors:
+  - Ru Ito
+  - Supatta Viriyavisuthisakul
+  - Kazuhiko Kawamoto
+  - Hiroshi Kera
+  published: '2025-03-04'
+  updated: '2025-03-04'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: Most super-resolution (SR) models struggle with real-world low-resolution (LR) images. This
+    issue arises because the degradation characteristics in the synthetic datasets differ from those in
+    real-world LR images. Since SR models are trained on pairs of high-resolution (HR) and LR images generated
+    by downsampling, they are optimized for simple degradation. However, real-world LR images contain
+    complex degradation caused by factors such as the imaging process and JPEG compression. Due to these
+    differences in degradation characteristics, most SR models perform poorly on real-world LR images.
+    This study proposes a dataset generation method using undertrained image reconstruction models. These
+    models have the property of reconstructing low-quality images with diverse degradation from input
+    images. By leveraging this property, this study generates LR images with diverse degradation from
+    HR images to construct the datasets. Fine-tuning pre-trained SR models on our generated datasets improves
+    noise removal and blur reduction, enhancing performance on real-world LR images. Furthermore, an analysis
+    of the datasets reveals that degradation diversity contributes to performance improvements, whereas
+    color differences between HR and LR images may degrade performance. 11 pages, (11 figures and 2 tables)
+  url: https://arxiv.org/abs/2503.02767
+  pdf_url: https://arxiv.org/pdf/2503.02767v1
+  version: v1
+fetched: '2026-11-14'

@@ -1,0 +1,47 @@
+id: paper:arxiv:2503.17352
+status: pending
+score: 2
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: 'OpenVLThinker: Complex Vision-Language Reasoning via Iterative SFT-RL Cycles'
+  authors:
+  - Yihe Deng
+  - Hritik Bansal
+  - Fan Yin
+  - Nanyun Peng
+  - Wei Wang
+  - Kai-Wei Chang
+  published: '2025-03-21'
+  updated: '2025-11-11'
+  categories:
+  - cs.CV
+  - cs.CL
+  abstract: We introduce OpenVLThinker, one of the first open-source large vision-language models (LVLMs)
+    to exhibit sophisticated chain-of-thought reasoning, achieving notable performance gains on challenging
+    visual reasoning tasks. While text-based reasoning models (e.g., Deepseek R1) show promising results
+    in text-only tasks, distilling their reasoning into LVLMs via supervised fine-tuning (SFT) often results
+    in performance degradation due to imprecise visual grounding. Conversely, purely reinforcement learning
+    (RL)-based methods face a large search space, hindering the emergence of reflective behaviors in smaller
+    models (e.g., 7B LVLMs). Surprisingly, alternating between SFT and RL ultimately results in significant
+    performance improvements after a few iterations. Our analysis reveals that the base model rarely exhibits
+    reasoning behaviors initially, but SFT effectively surfaces these latent actions and narrows the RL
+    search space, accelerating the development of reasoning capabilities. Each subsequent RL stage further
+    refines the model's reasoning skills, producing higher-quality SFT data for continued self-improvement.
+    OpenVLThinker-7B consistently advances performance across six benchmarks demanding mathematical and
+    general reasoning, notably improving MathVista by 3.8%, EMMA by 2.4%, and HallusionBench by 1.6%.
+    Beyond demonstrating the synergy between SFT and RL for complex reasoning tasks, our findings provide
+    early evidence towards achieving R1-style reasoning in multimodal contexts. The code, model and data
+    are held at https://github.com/yihedeng9/OpenVLThinker.
+  url: https://arxiv.org/abs/2503.17352
+  pdf_url: https://arxiv.org/pdf/2503.17352v3
+  version: v3
+fetched: '2026-11-14'
+citation_count: 69
+citation_year: 2025

@@ -1,0 +1,45 @@
+id: paper:arxiv:2112.00560
+status: pending
+score: 4
+track: processing_enhancement
+matched:
+- ref: codec:G-PCC
+  count: 2
+  weight: 3
+- ref: metric:BD-Rate
+  count: 1
+  weight: 1
+meta:
+  title: Attribute Artifacts Removal for Geometry-based Point Cloud Compression
+  authors:
+  - Xihua Sheng
+  - Li Li
+  - Dong Liu
+  - Zhiwei Xiong
+  published: '2021-12-01'
+  updated: '2022-03-01'
+  categories:
+  - cs.CV
+  - eess.IV
+  abstract: Geometry-based point cloud compression (G-PCC) can achieve remarkable compression efficiency
+    for point clouds. However, it still leads to serious attribute compression artifacts, especially under
+    low bitrate scenarios. In this paper, we propose a Multi-Scale Graph Attention Network (MS-GAT) to
+    remove the artifacts of point cloud attributes compressed by G-PCC. We first construct a graph based
+    on point cloud geometry coordinates and then use the Chebyshev graph convolutions to extract features
+    of point cloud attributes. Considering that one point may be correlated with points both near and
+    far away from it, we propose a multi-scale scheme to capture the short- and long-range correlations
+    between the current point and its neighboring and distant points. To address the problem that various
+    points may have different degrees of artifacts caused by adaptive quantization, we introduce the quantization
+    step per point as an extra input to the proposed network. We also incorporate a weighted graph attentional
+    layer into the network to pay special attention to the points with more attribute artifacts. To the
+    best of our knowledge, this is the first attribute artifacts removal method for G-PCC. We validate
+    the effectiveness of our method over various point clouds. Objective comparison results show that
+    our proposed method achieves an average of 9.74% BD-rate reduction compared with Predlift and 10.13%
+    BD-rate reduction compared with RAHT. Subjective comparison results present that visual artifacts
+    such as color shifting, blurring, and quantization noise are reduced.
+  url: https://arxiv.org/abs/2112.00560
+  pdf_url: https://arxiv.org/pdf/2112.00560v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 45
+citation_year: 2021

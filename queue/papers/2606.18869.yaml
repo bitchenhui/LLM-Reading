@@ -1,0 +1,54 @@
+id: paper:arxiv:2606.18869
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 3
+  weight: 1
+meta:
+  title: 'Learning to Distort: Weakly-Supervised Image Quality Transfer for Prostate DWI Correction'
+  authors:
+  - YuCheng Tang
+  - Wen Yan
+  - Alexander Ng
+  - Natasha Thorley
+  - Pawel Rajwa
+  - Yipei Wang
+  - Aqua Asif
+  - Clare Allen
+  - Louise Dickinson
+  - Francesco Giganti
+  - David Atkinson
+  - Shonit Punwani
+  - Daniel Alexander
+  - Shaheer Ullah Saeed
+  - Veeru Kasivisvanathan
+  - Yipeng Hu
+  published: '2026-06-17'
+  updated: '2026-06-17'
+  categories:
+  - cs.CV
+  abstract: Single-shot echo-planar prostate diffusion-weighted imaging (DWI) is frequently complicated
+    by geometric distortions, which impact the ability to derive reliable diagnoses from such images.
+    Developing automated correction methods is challenged by the absence of paired distorted and undistorted
+    clinical scans. In this paper, we first propose a novel weakly-supervised image quality transfer (IQT)
+    framework from undistorted to distorted images that utilizes image quality assessment (IQA) signals
+    to supervise the transfer process. Unlike traditional methods that require expensive, voxel-wise paired
+    data or resort to developing unpaired algorithms, our approach utilizes image-level quality labels
+    (here, distorted vs. undistorted) to establish latent quality prototypes within a pre-trained feature
+    space. Recognizing that simulating realistic distortions is more reliable than direct unpaired correction,
+    we describe a weakly-supervised prototype flow matching algorithm to explicitly regularize generative
+    trajectories towards distorted prototypes, producing realistic susceptibility artifacts that mimic
+    clinical degradations. By synthesizing these realistic pairs, we enable a second IQT model to be trained
+    in the forward direction for distortion correction. Experimental results demonstrate that our generated
+    images successfully mimic the diagnostic interference of real-world artifacts, which leads to more
+    capable distortion correction IQT models. In addition to qualitative comparisons, we also conduct
+    exhaustive quantitative evaluations that compare our approach with existing unpaired approaches (e.g.,
+    CycleGAN, UNIT-DDPM, and OT-FM) - as either forward or reverse alternatives - by assessing clinical
+    downstream task performance in PI-RADS and Gleason score classification, using both in-distribution
+    and external data sets.
+  url: https://arxiv.org/abs/2606.18869
+  pdf_url: https://arxiv.org/pdf/2606.18869v1
+  version: v1
+fetched: '2026-11-14'

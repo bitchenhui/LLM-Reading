@@ -1,0 +1,52 @@
+id: paper:arxiv:2604.23688
+status: pending
+score: 2
+track: processing_enhancement
+matched:
+- ref: concept:SuperResolution
+  count: 1
+  weight: 1
+- ref: concept:TrainingFree
+  count: 1
+  weight: 1
+meta:
+  title: Do Protective Perturbations Really Protect Portrait Privacy under Real-world Image Transformations?
+  authors:
+  - Ruiqing Sun
+  - Xingshan Yao
+  - Zhijing Wu
+  - Tian Lan
+  - Chenhao Cui
+  - Huiyang Zhao
+  - Jialing Shi
+  - Chen Yang
+  - Xianling Mao
+  published: '2026-04-26'
+  updated: '2026-08-11'
+  categories:
+  - cs.CV
+  abstract: Proactive defense methods protect portrait images from unauthorized editing or talking face
+    generation (TFG) by introducing pixel-level protective perturbations, and have attracted increasing
+    attention for privacy protection. In real-world use, images inevitably undergo sequences of benign
+    operations during display and dissemination, such as resizing and color compression, which directly
+    alter pixel values. Existing studies and robustness defenses mainly examine individual transformations
+    in isolation, while sequentially composed transformations remain underexplored. To address this gap,
+    we systematically evaluate whether representative proactive defenses against unauthorized image editing
+    using GANs and diffusion models, as well as talking face generation, remain effective under sequential
+    image transformations. The evaluated methods span general-purpose and portrait-specific defenses and
+    are assessed qualitatively and quantitatively. Experimental results show that pixel-level perturbation-based
+    defenses struggle to withstand sequences of common image transformations, posing a risk of failure
+    in real-world applications. To further demonstrate that this vulnerability can be exploited at low
+    cost, we introduce Transformation-Induced Purification via Region-wise Super-Resolution (TIP-RSR),
+    a simple training-free framework combining sequential image transformations with off-the-shelf restoration
+    models. TIP-RSR efficiently purifies protective perturbations while preserving image fidelity and
+    requiring substantially less computation than diffusion-based purification methods. These findings
+    expose a practical vulnerability in current proactive portrait defenses and highlight the need to
+    account for sequential real-world transformations when designing future protection mechanisms. Our
+    code is publicly available at https://github.com/Richen7418/TIP-RSR.
+  url: https://arxiv.org/abs/2604.23688
+  pdf_url: https://arxiv.org/pdf/2604.23688v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 2
+citation_year: 2026

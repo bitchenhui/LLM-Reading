@@ -1,0 +1,45 @@
+id: paper:arxiv:2606.04434
+status: pending
+score: 2
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+- ref: dataset:COCO
+  count: 1
+  weight: 1
+meta:
+  title: 'Hyper-ICL: Attention Calibration with Hyperbolic Anchor Distillation for Multimodal In-Context
+    Learning'
+  authors:
+  - Niloufar Alipour Talemi
+  - Hossein Kashiani
+  - Fatemeh Afghah
+  published: '2026-06-03'
+  updated: '2026-06-03'
+  categories:
+  - cs.CV
+  - cs.LG
+  abstract: Multimodal In-Context Learning (ICL) has emerged as a practical inference paradigm for Multimodal
+    Large Language Models, where a small set of interleaved image-text In-Context Demonstrations (ICDs)
+    conditions the model to solve new tasks. Despite its flexibility, multimodal ICL incurs high inference
+    latency and suffers from instability due to sensitivity to demonstration formatting, ordering, and
+    content. To address these limitations, we propose Hyper-ICL, a lightweight, training-based framework
+    for demonstration-free multimodal ICL that reconstructs demonstration effects directly without requiring
+    ICDs at inference time. Hyper-ICL learns a parameter-efficient low-rank logit-level adapter that calibrates
+    attention distributions to better match demonstration-induced attention redistribution. To capture
+    how demonstration influence varies across queries, we introduce a query-adaptive modulation mechanism
+    that adaptively controls intervention strength at token level across layers and heads based on the
+    current query. Finally, we propose a layer-wise hyperbolic anchor distillation loss that aligns intermediate
+    student features to a demonstration-conditioned teacher via Lorentz geodesic distance. This loss encourages
+    the student to reconstruct the demonstration-query relationships induced by ICDs. Extensive experiments
+    across six different multimodal benchmarks (including VQAv2, OK-VQA, and COCO Caption) demonstrate
+    that Hyper-ICL consistently improves accuracy and stability over vanilla ICL and existing state-of-the-art
+    methods.
+  url: https://arxiv.org/abs/2606.04434
+  pdf_url: https://arxiv.org/pdf/2606.04434v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 1
+citation_year: 2026

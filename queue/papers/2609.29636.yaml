@@ -1,0 +1,43 @@
+id: paper:arxiv:2609.29636
+status: skipped
+score: 1
+track: self_improvement
+matched:
+- ref: concept:FunSearch
+  count: 1
+  weight: 1
+meta:
+  title: Operator Packages, Proposer Strength, and Construction-Family Plateaus in Office-Scale Verified
+    Search
+  authors:
+  - Roberto I. Ono Filho
+  published: '2026-08-28'
+  updated: '2026-10-22'
+  categories:
+  - cs.CL
+  - cs.AI
+  - cs.LG
+  - cs.SE
+  abstract: 'Verified search, in which a language model proposes programs, a hard evaluator scores them,
+    and selection keeps the best, has recently moved mathematical records; controlled ablations of the
+    proposer-side components remain rare. We instrument a minimal FunSearch-style loop at office scale
+    (a 30B local model on a laptop, 120-600 verified samples per run) with three operator packages: a
+    schematic notebook the model writes and carries instead of verbatim elites, a named obstacle, and
+    behavioural repulsion from constructions already found. On nine construction problems from a public
+    repository, the complete 2^3 factorial with two replicates favours the primary contrast in a nominal
+    two-stage analysis: the composition closes more of the seed-to-record gap (+0.196; nominal pooled
+    p=0.023, stage-combination p~0.08; median per-problem effect +0.045). Repulsion raises construction-hash
+    diversity in eight of nine problems (one-sided p=0.0039; partly a manipulation check). The factorial
+    finds no positive memory-by-repulsion interaction (bounded to about +/-0.04); the gain decomposes
+    additively, and memory+repulsion is the only arm that never collapses (0 of 18 runs), within 0.025
+    of the full composition. A frontier proposer under the identical loop reaches in tens of samples what
+    the local model does not in hundreds; in single scoping runs its gains arrive without the operators.
+    The searches stall after closing 85-92% of the gap on the flagship problem, and a later analysis reads
+    that plateau as a resolution limit: the reference value is a continuum limit and the unaided long-run
+    finals already carry its family''s structure. In the registered family-hint test the family named
+    in words is adopted and loses; handed as code, it is optimized, but our best finite-grid encoding
+    stays below the plateau reached unaided. We release the harness, every candidate, and the dated pre-registrations.'
+  url: https://arxiv.org/abs/2609.29636
+  pdf_url: https://arxiv.org/pdf/2609.29636v2
+  version: v2
+fetched: '2026-11-14'

@@ -1,0 +1,39 @@
+id: paper:arxiv:2606.23354
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: Faithful Grounded Visual Reasoning via Learned Proxy-Tokens
+  authors:
+  - Tom Hodemon
+  - Mohamed Chaouch
+  - Aboubacar Tuo
+  - Angelique Loesch
+  published: '2026-06-22'
+  updated: '2026-06-22'
+  categories:
+  - cs.CV
+  abstract: Multimodal Large Language Models (MLLMs) have achieved remarkable success in Visual Question
+    Answering (VQA), yet their "black-box" nature hinders deployment in critical domains. Grounded Visual
+    Reasoning (GVR) approaches attempt to improve interpretability by explicitly couple textual rationales
+    with visual grounding information, which are typically textual coordinates. This mechanism lacks a
+    learnable semantic link to the visual features, often resulting in a semantic-spatial gap where the
+    model hallucinates coordinates that do not correspond to image evidences. In this work, we introduce
+    Composer, a MLLM that leverages a novel visual grounding mechanism based on learned proxy-tokens to
+    promote faithful interpretability. These discrete symbolic pointers explicitly index the image latent
+    space, allowing the model to manipulate visual regions as addressable, semantically manipulable sets.
+    To rigorously validate our novel grounding mechanism, we constructed ComposerGCoT, a dataset synthesized
+    to enable holistic assessment of reasoning consistency and grounding accuracy. Experimental results
+    indicate that Composer achieves performance parity with its coordinate-based counterpart in final
+    answer accuracy, while improving visual grounding accuracy by +9.0 points. By demonstrating that discrete
+    proxy-tokens capture spatial semantics more effectively than typical textual coordinates, we establish
+    that visual grounding mechanisms with learnable semantic links represent a promising path toward trustworthy
+    and reliable MLLMs.
+  url: https://arxiv.org/abs/2606.23354
+  pdf_url: https://arxiv.org/pdf/2606.23354v1
+  version: v1
+fetched: '2026-11-14'

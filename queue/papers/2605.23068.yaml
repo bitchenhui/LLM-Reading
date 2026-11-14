@@ -1,0 +1,35 @@
+id: paper:arxiv:2605.23068
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'RoboSurg-VQA: A Multimodal Benchmark for Surgical Segmentation-Aware Visual Question Answering'
+  authors:
+  - Chengyi Zhang
+  - Zi Ye
+  - Ziyang Wang
+  published: '2026-05-21'
+  updated: '2026-05-21'
+  categories:
+  - cs.CV
+  abstract: 'Reliable visual understanding in robot-assisted and minimally invasive surgery (RMIS/MIS)
+    demands more than accurate masks: in clinical practice, clinicians pose language-like questions about
+    procedural context, visibility, artefacts, and the presence of anatomical structures and surgical
+    instruments, often under degraded views caused by occlusion, smoke, bleeding, and specular highlights.
+    We present \textbf{RoboSurg-VQA}, a segmentation-aware visual question answering (VQA) benchmark built
+    by repurposing public surgical segmentation datasets under a shared schema. Each frame is paired with
+    a fixed set of clinically motivated questions spanning procedure context, anatomy (including region),
+    imaging modality/view, surgical artefacts, image quality, and basic visibility and spatial attributes,
+    with closed answer sets to enable consistent evaluation. To scale annotation, we generate candidate
+    answers via constrained prompting with automatic validity and consistency checks, followed by human
+    auditing to improve plausibility and label consistency. We report benchmark statistics, sanity baselines,
+    and common evaluation challenges under challenging surgical conditions. The code will be available
+    on https://github.com/ziyangwang007/Robosurg-VQA.'
+  url: https://arxiv.org/abs/2605.23068
+  pdf_url: https://arxiv.org/pdf/2605.23068v1
+  version: v1
+fetched: '2026-11-14'

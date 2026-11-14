@@ -1,0 +1,45 @@
+id: paper:arxiv:2608.12841
+status: pending
+score: 2
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 3
+  weight: 1
+- ref: concept:RSI
+  count: 2
+  weight: 1
+meta:
+  title: 'AQuA: Recursively Self-Improving Quantitative Trading Research Agents'
+  authors:
+  - Jiacheng Guo
+  - Suozhi Huang
+  - Yunlong Gao
+  - Zihao Li
+  - Jason Ge
+  - Shushu Liang
+  - Xu Kuang
+  - Mengdi Wang
+  published: '2026-08-13'
+  updated: '2026-09-28'
+  categories:
+  - cs.CL
+  - cs.AI
+  abstract: 'We study recursive self-improvement at the level of quantitative-investment research: whether
+    an autonomous system can use evidence from earlier experiments to improve the hypotheses and candidates
+    proposed in later iterations. We present AQuA, which comprises two separate language-model-driven
+    research systems: one for symbolic factor discovery and one for trainable model development. Each
+    system records experimental results and uses them to guide subsequent proposals. Each operates in
+    a fixed sandbox, which fixes the data splits, feature and label definitions, and evaluator while allowing
+    the model to act only through constrained factor expressions or configuration diffs. The factor system,
+    a manager-mediated multi-agent pipeline, discovers and combines factors into a signal that reaches
+    a combined validation information coefficient of about $0.190$ on a crypto universe. The model system,
+    a config-driven loop over a hybrid time-series architecture, reaches a per-stock information coefficient
+    of $+0.0843$ on US equities and converts it into a threshold long/short strategy with a held-out Sharpe
+    of up to $+2.50$ at a two-leg cost. The strategy is positive in every year from 2021 to 2025.'
+  url: https://arxiv.org/abs/2608.12841
+  pdf_url: https://arxiv.org/pdf/2608.12841v3
+  version: v3
+fetched: '2026-11-14'
+citation_count: 5
+citation_year: 2026

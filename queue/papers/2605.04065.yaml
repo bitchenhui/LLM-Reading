@@ -1,0 +1,45 @@
+id: paper:arxiv:2605.04065
+status: skipped_low_citation
+score: 2
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: Free Energy-Driven Reinforcement Learning with Adaptive Advantage Shaping for Unsupervised Reasoning
+    in LLMs
+  authors:
+  - Yiming Huang
+  - Zhenbo Shi
+  - Xin-Cheng Wen
+  - Jichuan Zeng
+  - Cuiyun Gao
+  - Peiyi Han
+  - Chuanyi Liu
+  published: '2026-04-11'
+  updated: '2026-05-07'
+  categories:
+  - cs.CL
+  - cs.ET
+  - cs.LG
+  abstract: 'Unsupervised reinforcement learning (RL) has emerged as a promising paradigm for enabling
+    self-improvement in large language models (LLMs). However, existing unsupervised RL-based methods
+    often lack the capacity to adapt to the model''s evolving reasoning capabilities during training.
+    Therefore, these methods can misdirect policy optimization in the absence of ground-truth supervision.
+    To address this issue, we introduce FREIA, a novel RL-based algorithm built on two key innovations:
+    (1) Free Energy-Driven Reward (FER) adapts rewards to balance consensus and exploration based on the
+    Free Energy Principle. (2) Adaptive Advantage Shaping (AAS) adaptively adjusts learning signals based
+    on the statistical characteristics of sampled rewards. Empirical evaluations on nine datasets across
+    three reasoning tasks showcase that FREIA outperforms other unsupervised RL-based baselines. Notably,
+    in mathematical reasoning tasks, FREIA surpasses other methods by an average of 0.5 to 3.5 points
+    in Pass@1 using the DeepSeek-R1-Distill-Qwen-1.5B model.'
+  url: https://arxiv.org/abs/2605.04065
+  pdf_url: https://arxiv.org/pdf/2605.04065v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 0
+citation_year: 2026

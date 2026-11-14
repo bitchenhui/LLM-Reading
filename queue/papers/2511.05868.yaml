@@ -1,0 +1,43 @@
+id: paper:arxiv:2511.05868
+status: skipped_low_citation
+score: 2
+track: processing_enhancement
+matched:
+- ref: metric:SSIM
+  count: 2
+  weight: 1
+- ref: concept:SuperResolution
+  count: 1
+  weight: 1
+meta:
+  title: 'HarmoQ: Harmonized Post-Training Quantization for High-Fidelity Image'
+  authors:
+  - Hongjun Wang
+  - Jiyuan Chen
+  - Xuan Song
+  - Yinqiang Zheng
+  published: '2025-11-08'
+  updated: '2025-11-11'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: 'Post-training quantization offers an efficient pathway to deploy super-resolution models,
+    yet existing methods treat weight and activation quantization independently, missing their critical
+    interplay. Through controlled experiments on SwinIR, we uncover a striking asymmetry: weight quantization
+    primarily degrades structural similarity, while activation quantization disproportionately affects
+    pixel-level accuracy. This stems from their distinct roles--weights encode learned restoration priors
+    for textures and edges, whereas activations carry input-specific intensity information. Building on
+    this insight, we propose HarmoQ, a unified framework that harmonizes quantization across components
+    through three synergistic steps: structural residual calibration proactively adjusts weights to compensate
+    for activation-induced detail loss, harmonized scale optimization analytically balances quantization
+    difficulty via closed-form solutions, and adaptive boundary refinement iteratively maintains this
+    balance during optimization. Experiments show HarmoQ achieves substantial gains under aggressive compression,
+    outperforming prior art by 0.46 dB on Set5 at 2-bit while delivering 3.2x speedup and 4x memory reduction
+    on A100 GPUs. This work provides the first systematic analysis of weight-activation coupling in super-resolution
+    quantization and establishes a principled solution for efficient high-quality image restoration.'
+  url: https://arxiv.org/abs/2511.05868
+  pdf_url: https://arxiv.org/pdf/2511.05868v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 0
+citation_year: 2025

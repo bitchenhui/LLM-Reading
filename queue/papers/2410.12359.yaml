@@ -1,0 +1,36 @@
+id: paper:arxiv:2410.12359
+status: skipped
+score: 0
+track: audio_coding
+matched: []
+meta:
+  title: 'ERVQ: Enhanced Residual Vector Quantization with Intra-and-Inter-Codebook Optimization for Neural
+    Audio Codecs'
+  authors:
+  - Rui-Chen Zheng
+  - Hui-Peng Du
+  - Xiao-Hang Jiang
+  - Yang Ai
+  - Zhen-Hua Ling
+  published: '2024-10-16'
+  updated: '2025-06-11'
+  categories:
+  - eess.AS
+  abstract: Current neural audio codecs typically use residual vector quantization (RVQ) to discretize
+    speech signals. However, they often experience codebook collapse, which reduces the effective codebook
+    size and leads to suboptimal performance. To address this problem, we introduce ERVQ, Enhanced Residual
+    Vector Quantization, a novel enhancement strategy for the RVQ framework in neural audio codecs. ERVQ
+    mitigates codebook collapse and boosts codec performance through both intra- and inter-codebook optimization.
+    Intra-codebook optimization incorporates an online clustering strategy and a code balancing loss to
+    ensure balanced and efficient codebook utilization. Inter-codebook optimization improves the diversity
+    of quantized features by minimizing the similarity between successive quantizations. Our experiments
+    show that ERVQ significantly enhances audio codec performance across different models, sampling rates,
+    and bitrates, achieving superior quality and generalization capabilities. It also achieves 100% codebook
+    utilization on one of the most advanced neural audio codecs. Further experiments indicate that audio
+    codecs improved by the ERVQ strategy can improve unified speech-and-text large language models (LLMs).
+    Specifically, there is a notable improvement in the naturalness of generated speech in downstream
+    zero-shot text-to-speech tasks. Audio samples are available here.
+  url: https://arxiv.org/abs/2410.12359
+  pdf_url: https://arxiv.org/pdf/2410.12359v2
+  version: v2
+fetched: '2026-11-14'

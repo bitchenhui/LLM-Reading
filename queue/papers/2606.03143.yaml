@@ -1,0 +1,43 @@
+id: paper:arxiv:2606.03143
+status: pending
+score: 2
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 3
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: 'FederatedSkill: Federated Learning for Agentic Skill Evolution'
+  authors:
+  - Jingbo Yang
+  - Guanyu Yao
+  - Yang Zhang
+  - Ramana Rao Kompella
+  - Gaowen Liu
+  - Shiyu Chang
+  published: '2026-06-02'
+  updated: '2026-06-02'
+  categories:
+  - cs.LG
+  - cs.CL
+  abstract: Modern LLM agents increasingly rely on skill libraries to handle complex tasks, making skill
+    evolution a primary driver of self-improvement. However, isolated single-user task streams lack the
+    diversity required to build comprehensive skills. While cross-user collaboration can overcome this
+    data bottleneck, current trajectory-sharing approaches compromise user privacy and impose a uniform
+    global library that fails to accommodate client heterogeneity. We introduce FederatedSkill, a privacy-preserving
+    framework for collaborative agent evolution. Moving beyond raw trajectory sharing, FederatedSkill
+    utilizes semantic skill diffs, structured patches over local libraries, as the fundamental unit of
+    communication. On the server side, an evolution agent aggregates these patches to dynamically model
+    client-specific capability boundaries, facilitating strictly personalized skill evolution rather than
+    a suboptimal global average. Evaluated across 20 distinct agent task families, FederatedSkill demonstrates
+    substantial gains over self-evolving baselines, achieving up to a 44.4% increase in success rate and
+    a 37.5% reduction in computational cost.
+  url: https://arxiv.org/abs/2606.03143
+  pdf_url: https://arxiv.org/pdf/2606.03143v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 11
+citation_year: 2026

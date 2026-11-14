@@ -1,0 +1,34 @@
+id: paper:arxiv:2204.13952
+status: skipped
+score: 0
+track: immersive_media
+matched: []
+meta:
+  title: Deep Geometry Post-Processing for Decompressed Point Clouds
+  authors:
+  - Xiaoqing Fan
+  - Ge Li
+  - Dingquan Li
+  - Yurui Ren
+  - Wei Gao
+  - Thomas H. Li
+  published: '2022-04-29'
+  updated: '2022-04-29'
+  categories:
+  - cs.CV
+  - eess.IV
+  abstract: Point cloud compression plays a crucial role in reducing the huge cost of data storage and
+    transmission. However, distortions can be introduced into the decompressed point clouds due to quantization.
+    In this paper, we propose a novel learning-based post-processing method to enhance the decompressed
+    point clouds. Specifically, a voxelized point cloud is first divided into small cubes. Then, a 3D
+    convolutional network is proposed to predict the occupancy probability for each location of a cube.
+    We leverage both local and global contexts by generating multi-scale probabilities. These probabilities
+    are progressively summed to predict the results in a coarse-to-fine manner. Finally, we obtain the
+    geometry-refined point clouds based on the predicted probabilities. Different from previous methods,
+    we deal with decompressed point clouds with huge variety of distortions using a single model. Experimental
+    results show that the proposed method can significantly improve the quality of the decompressed point
+    clouds, achieving 9.30dB BDPSNR gain on three representative datasets on average.
+  url: https://arxiv.org/abs/2204.13952
+  pdf_url: https://arxiv.org/pdf/2204.13952v1
+  version: v1
+fetched: '2026-11-14'

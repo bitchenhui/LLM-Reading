@@ -1,0 +1,35 @@
+id: paper:arxiv:2605.27564
+status: skipped
+score: 1
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+meta:
+  title: 'The Future of Facts: Tracing the Factual Generation-Verification Gap'
+  authors:
+  - Tim R. Davidson
+  - Anja Surina
+  - Caglar Gulcehre
+  published: '2026-05-26'
+  updated: '2026-05-26'
+  categories:
+  - cs.CL
+  - cs.AI
+  - cs.LG
+  abstract: 'Language models are becoming the default interface to factual knowledge, yet they often verify
+    outputs more reliably than they generate them. This generation-verification gap (GV-gap) underlies
+    many recent advances in self-improvement and reasoning, but its dynamics on factual knowledge specifically
+    remain poorly understood. We focus on the training mechanisms underlying factual GV-gaps, distinguishing
+    them from their computational and aesthetic counterparts. We trace generation and verification capabilities
+    through three training phases (acquisition, continual learning, and updating) across four open-source
+    model families at two scales each. Three findings recur across models: (i) verification is consistently
+    learned before generation; (ii) verification is more robust to continual learning than generation;
+    and (iii) factual updates can leave models in a "multi-verse" state, simultaneously verifying both
+    old and new answers as correct. Natural experiments on frontier models reproduce these dynamics at
+    scale and reveal residual verification biases on well-covered facts.'
+  url: https://arxiv.org/abs/2605.27564
+  pdf_url: https://arxiv.org/pdf/2605.27564v1
+  version: v1
+fetched: '2026-11-14'

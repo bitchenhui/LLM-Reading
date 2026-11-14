@@ -1,0 +1,39 @@
+id: paper:arxiv:2604.09579
+status: skipped
+score: 1
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+meta:
+  title: 'Help Without Being Asked: A Deployed Proactive Agent System for On-Call Support with Continuous
+    Self-Improvement'
+  authors:
+  - Fengrui Liu
+  - Xiao He
+  - Tieying Zhang
+  published: '2026-02-25'
+  updated: '2026-02-25'
+  categories:
+  - cs.AI
+  - cs.SE
+  abstract: In large-scale cloud service platforms, thousands of customer tickets are generated daily
+    and are typically handled through on-call dialogues. This high volume of on-call interactions imposes
+    a substantial workload on human support analysts. Recent studies have explored reactive agents that
+    leverage large language models as a first line of support to interact with customers directly and
+    resolve issues. However, when issues remain unresolved and are escalated to human support, these agents
+    are typically disengaged. As a result, they cannot assist with follow-up inquiries, track resolution
+    progress, or learn from the cases they fail to address. In this paper, we introduce Vigil, a novel
+    proactive agent system designed to operate throughout the entire on-call life-cycle. Unlike reactive
+    agents, Vigil focuses on providing assistance during the phase in which human support is already involved.
+    It integrates into the dialogue between the customer and the analyst, proactively offering assistance
+    without explicit user invocation. Moreover, Vigil incorporates a continuous self-improvement mechanism
+    that extracts knowledge from human-resolved cases to autonomously update its capabilities. Vigil has
+    been deployed on Volcano Engine, ByteDance's cloud platform, for over ten months, and comprehensive
+    evaluations based on this deployment demonstrate its effectiveness and practicality. The open source
+    version of this work is publicly available at https://github.com/volcengine/veaiops.
+  url: https://arxiv.org/abs/2604.09579
+  pdf_url: https://arxiv.org/pdf/2604.09579v1
+  version: v1
+fetched: '2026-11-14'

@@ -1,0 +1,41 @@
+id: paper:arxiv:2505.11824
+status: skipped
+score: 1
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+meta:
+  title: Latent Veracity Inference for Identifying Errors in Stepwise Reasoning
+  authors:
+  - Minsu Kim
+  - Jean-Pierre Falet
+  - Oliver E. Richardson
+  - Xiaoyin Chen
+  - Moksh Jain
+  - Sungjin Ahn
+  - Sungsoo Ahn
+  - Yoshua Bengio
+  published: '2025-05-17'
+  updated: '2026-02-17'
+  categories:
+  - cs.LG
+  - cs.AI
+  abstract: Chain-of-Thought (CoT) reasoning has advanced the capabilities and transparency of language
+    models (LMs); however, reasoning chains can contain inaccurate statements that reduce performance
+    and trustworthiness. To address this, we propose to augment each reasoning step in a CoT with a latent
+    veracity (or correctness) variable. To efficiently explore this expanded space, we introduce Veracity
+    Search (VS), a discrete search algorithm over veracity assignments. It performs otherwise intractable
+    inference in the posterior distribution over latent veracity values by leveraging the LM's joint likelihood
+    over veracity and the final answer as a proxy reward. This efficient inference-time verification method
+    facilitates supervised fine-tuning of an Amortized Veracity Inference (AVI) machine by providing pseudo-labels
+    for veracity. AVI generalizes VS, enabling accurate zero-shot veracity inference in novel contexts.
+    Empirical results demonstrate that VS reliably identifies errors in logical (ProntoQA), mathematical
+    (GSM8K), and commonsense (CommonsenseQA) reasoning benchmarks, with AVI achieving comparable zero-shot
+    accuracy. Finally, we demonstrate the utility of latent veracity inference for providing feedback
+    during self-correction and self-improvement.
+  url: https://arxiv.org/abs/2505.11824
+  pdf_url: https://arxiv.org/pdf/2505.11824v3
+  version: v3
+fetched: '2026-11-14'

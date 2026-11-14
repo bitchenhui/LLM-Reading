@@ -1,0 +1,44 @@
+id: paper:arxiv:2606.08539
+status: pending
+score: 2
+track: self_improvement
+matched:
+- ref: concept:LLM
+  count: 1
+  weight: 1
+- ref: concept:SelfImprovement
+  count: 1
+  weight: 1
+meta:
+  title: 'AgentTrust: A Self-Improving Trust Layer for AI-Agent Actions'
+  authors:
+  - Chenglin Yang
+  published: '2026-06-07'
+  updated: '2026-06-07'
+  categories:
+  - cs.AI
+  abstract: 'AI agents increasingly take consequential actions -- shell commands, cloud operations, and
+    arbitrary tool-calls -- so a trust layer must decide, per action, whether to allow, warn, block, or
+    escalate. We argue that the right way to reason about such a layer is by threat type. Lexical (fixed-signature)
+    threats, where danger lives in a stable token, are decidable by deterministic rules; semantic (intent-dependent)
+    threats, where a benign and a malicious action share the same surface, are out of reach for rules
+    by construction. We make this concrete with a negative proof: a determined, hand-authored cloud rule
+    pack lifts held-out accuracy only 48 to 56% overall and moves the semantic categories by 0pp (data_db
+    29 to 29, observability 59 to 59, supply_chain 50 to 50), while a strong LLM judge carries exactly
+    those categories. We give the judge a self-learning capability: on a corpus that is mainly semantic
+    attacks it nearly doubles rule accuracy (48% to 83.6-85.2%) with near-zero false-blocks, and this
+    holds across two model providers. We turn this into a self-improving dual-store system: the judge
+    distills a growing deterministic rule floor on lexical threats (cheaper over time) and feeds a guarded
+    RAG memory on semantic threats (a verdict-cache fails -- surface-twins collapse to ~58% -- so a corroboration
+    guard lifts semantic accuracy +13pp, 70 to 84). The result is what sets AgentTrust v2 apart from its
+    static v1 predecessor: a trust layer that self-evolves from its own stream of decisions -- cheaper
+    on the lexical class (it distils its own rules) and smarter on the semantic class (it accrues guarded
+    precedent), while never hard-blocking a benign action. An end-to-end online replay shows the judge-call
+    rate falling (50% to 44%) and judge-domain accuracy rising (71% to 80%), with 0 benign hard-blocks
+    across 45,000 actions.'
+  url: https://arxiv.org/abs/2606.08539
+  pdf_url: https://arxiv.org/pdf/2606.08539v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 2
+citation_year: 2026

@@ -1,0 +1,47 @@
+id: paper:arxiv:2412.08210
+status: skipped
+score: 1
+track: video_image_coding
+matched:
+- ref: concept:INR
+  count: 1
+  weight: 1
+meta:
+  title: 'Unicorn: Unified Neural Image Compression with One Number Reconstruction'
+  authors:
+  - Qi Zheng
+  - Haozhi Wang
+  - Zihao Liu
+  - Jiaming Liu
+  - Peiye Liu
+  - Zhijian Hao
+  - Yanheng Lu
+  - Dimin Niu
+  - Jinjia Zhou
+  - Minge Jing
+  - Yibo Fan
+  published: '2024-12-11'
+  updated: '2024-12-11'
+  categories:
+  - cs.CV
+  - eess.IV
+  abstract: 'Prevalent lossy image compression schemes can be divided into: 1) explicit image compression
+    (EIC), including traditional standards and neural end-to-end algorithms; 2) implicit image compression
+    (IIC) based on implicit neural representations (INR). The former is encountering impasses of either
+    leveling off bitrate reduction at a cost of tremendous complexity while the latter suffers from excessive
+    smoothing quality as well as lengthy decoder models. In this paper, we propose an innovative paradigm,
+    which we dub \textbf{Unicorn} (\textbf{U}nified \textbf{N}eural \textbf{I}mage \textbf{C}ompression
+    with \textbf{O}ne \textbf{N}number \textbf{R}econstruction). By conceptualizing the images as index-image
+    pairs and learning the inherent distribution of pairs in a subtle neural network model, Unicorn can
+    reconstruct a visually pleasing image from a randomly generated noise with only one index number.
+    The neural model serves as the unified decoder of images while the noises and indexes corresponds
+    to explicit representations. As a proof of concept, we propose an effective and efficient prototype
+    of Unicorn based on latent diffusion models with tailored model designs. Quantitive and qualitative
+    experimental results demonstrate that our prototype achieves significant bitrates reduction compared
+    with EIC and IIC algorithms. More impressively, benefitting from the unified decoder, our compression
+    ratio escalates as the quantity of images increases. We envision that more advanced model designs
+    will endow Unicorn with greater potential in image compression. We will release our codes in \url{https://github.com/uniqzheng/Unicorn-Laduree}.'
+  url: https://arxiv.org/abs/2412.08210
+  pdf_url: https://arxiv.org/pdf/2412.08210v1
+  version: v1
+fetched: '2026-11-14'

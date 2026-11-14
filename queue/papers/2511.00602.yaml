@@ -1,0 +1,44 @@
+id: paper:arxiv:2511.00602
+status: pending
+score: 2
+track: self_improvement
+matched:
+- ref: concept:LLM
+  count: 2
+  weight: 1
+- ref: concept:SelfImprovement
+  count: 1
+  weight: 1
+meta:
+  title: 'OpenSIR: Open-Ended Self-Improving Reasoner'
+  authors:
+  - Wai-Chung Kwan
+  - Joshua Ong Jun Leang
+  - Pavlos Vougiouklis
+  - Jeff Z. Pan
+  - Marco Valentino
+  - Pasquale Minervini
+  published: '2025-11-01'
+  updated: '2026-07-03'
+  categories:
+  - cs.CL
+  abstract: Recent advances in large language model (LLM) reasoning through reinforcement learning rely
+    on annotated datasets for verifiable rewards, which may limit models' ability to surpass human-level
+    performance. While self-play offers a promising alternative, prior methods yield only marginal or
+    even negative gains on post-trained models because they generate problems that cluster around familiar
+    concepts rather than discovering novel ones. We introduce Open-Ended Self-Improving Reasoner (OpenSIR),
+    a self-play framework in which a single LLM alternates teacher and student roles to generate and solve
+    novel problems without external verifiers or annotated data. Starting from a single seed problem,
+    OpenSIR sustains open-ended exploration through diversity rewards that push the model toward unfamiliar
+    concepts and difficulty calibration that keeps problems learnable. Across seven math benchmarks, OpenSIR
+    consistently improves all models, averaging +3.6 points on instruction models and +3.1 on reasoning
+    models, while recent self-play baselines yield marginal or even negative gains; starting from a single
+    trivial seed, it also surpasses GRPO baselines trained on over 7K annotated examples. Despite training
+    only on self-generated math, OpenSIR is the only self-play method that transfers to general reasoning,
+    improving by at least +4.4 points on reasoning models.
+  url: https://arxiv.org/abs/2511.00602
+  pdf_url: https://arxiv.org/pdf/2511.00602v4
+  version: v4
+fetched: '2026-11-14'
+citation_count: 5
+citation_year: 2025

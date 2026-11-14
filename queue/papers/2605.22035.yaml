@@ -1,0 +1,38 @@
+id: paper:arxiv:2605.22035
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'HyLoVQA: Dynamic Hypernetwork-Generated Low-Rank Adaptation for Continual Visual Question Answering'
+  authors:
+  - Yiran Wang
+  - Chenyi Xiong
+  - Ziyue Qin
+  - Miao Zhang
+  - Kui Xiao
+  - Zhifei Li
+  published: '2026-05-21'
+  updated: '2026-05-21'
+  categories:
+  - cs.CV
+  - cs.CL
+  abstract: Continual Visual Question Answering (VQA) requires learning from non-stationary streams of
+    visual inputs and questions while preserving past knowledge. Most prior methods adapt by updating
+    a largely shared parameter set. This often leads to cross-level task interference, hindering accurate
+    adaptation to the current task and object. To address this limitation, we propose HyLoVQA. It maintains
+    a drift-resilient memory bank of anchors. The bank stores the content of visual objects and textual
+    tasks, and they are updated using current input features. Conditioned on retrieved anchors, a hypernetwork
+    generates lightweight Low-Rank Adaptation (LoRA) adapters. This ensures parameter efficiency, allowing
+    the model to adapt to each task and object dynamically. Additionally, we formulate an alignment loss
+    that aligns semantic discrepancies in the feature space with functional changes in the parameter space,
+    thereby constraining LoRA adapters to remain focused on the current task and object. Extensive experiments
+    on VQA v2 and NExT-QA under both standard and compositional settings demonstrate the superiority of
+    HyLoVQA over prior state-of-the-art methods.
+  url: https://arxiv.org/abs/2605.22035
+  pdf_url: https://arxiv.org/pdf/2605.22035v1
+  version: v1
+fetched: '2026-11-14'

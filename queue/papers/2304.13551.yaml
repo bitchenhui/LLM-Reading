@@ -1,0 +1,41 @@
+id: paper:arxiv:2304.13551
+status: pending
+score: 3
+track: streaming_delivery
+matched:
+- ref: concept:ABR
+  count: 3
+  weight: 1
+- ref: concept:DASH
+  count: 3
+  weight: 1
+- ref: concept:QoE
+  count: 3
+  weight: 1
+meta:
+  title: Latency Target based Analysis of the DASH.js Player
+  authors:
+  - Piers O'Hanlon
+  - Adil Aslam
+  published: '2023-04-26'
+  updated: '2023-04-26'
+  categories:
+  - cs.MM
+  - cs.NI
+  - cs.PF
+  abstract: We analyse the low latency performance of the three Adaptive Bitrate (ABR) algorithms in the
+    dash.js Dynamic Adaptive Streaming over HTTP (DASH) player with respect to a range of latency targets
+    and configuration options. We perform experiments on our DASH Testbed which allows for testing with
+    a range of real world derived network profiles. Our experiments enable a better understanding of how
+    latency targets affect quality of experience (QoE), and how well the different algorithms adhere to
+    their targets. We find that with dash.js v4.5.0 the default Dynamic algorithm achieves the best overall
+    QoE. We show that whilst the other algorithms can achieve higher video quality at lower latencies,
+    they do so only at the expense of increased stalling. We analyse the poor performance of L2A-LL in
+    our tests and develop modifications which demonstrate significant improvements. We also highlight
+    how some low latency configuration settings can be detrimental to performance.
+  url: https://arxiv.org/abs/2304.13551
+  pdf_url: https://arxiv.org/pdf/2304.13551v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 12
+citation_year: 2023

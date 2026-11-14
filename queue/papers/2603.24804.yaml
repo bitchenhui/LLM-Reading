@@ -1,0 +1,41 @@
+id: paper:arxiv:2603.24804
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'GoldiCLIP: The Goldilocks Approach for Balancing Explicit Supervision for Language-Image Pretraining'
+  authors:
+  - Deen Dayal Mohan
+  - Hossein Souri
+  - Vitali Petsiuk
+  - Juhong Min
+  - Gopal Sharma
+  - Luowei Zhou
+  - Suren Kumar
+  published: '2026-03-25'
+  updated: '2026-03-25'
+  categories:
+  - cs.CV
+  - cs.AI
+  - cs.LG
+  abstract: 'Until recently, the success of large-scale vision-language models (VLMs) has primarily relied
+    on billion-sample datasets, posing a significant barrier to progress. Latest works have begun to close
+    this gap by improving supervision quality, but each addresses only a subset of the weaknesses in contrastive
+    pretraining. We present GoldiCLIP, a framework built on a Goldilocks principle of finding the right
+    balance of supervision signals. Our multifaceted training framework synergistically combines three
+    key innovations: (1) a text-conditioned self-distillation method to align both text-agnostic and text-conditioned
+    features; (2) an encoder integrated decoder with Visual Question Answering (VQA) objective that enables
+    the encoder to generalize beyond the caption-like queries; and (3) an uncertainty-based weighting
+    mechanism that automatically balances all heterogeneous losses. Trained on just 30 million images,
+    300x less data than leading methods, GoldiCLIP achieves state-of-the-art among data-efficient approaches,
+    improving over the best comparable baseline by 2.2 points on MSCOCO retrieval, 2.0 on fine-grained
+    retrieval, and 5.9 on question-based retrieval, while remaining competitive with billion-scale models.
+    Project page: https://petsi.uk/goldiclip.'
+  url: https://arxiv.org/abs/2603.24804
+  pdf_url: https://arxiv.org/pdf/2603.24804v1
+  version: v1
+fetched: '2026-11-14'

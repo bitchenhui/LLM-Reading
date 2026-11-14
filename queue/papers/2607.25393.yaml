@@ -1,0 +1,44 @@
+id: paper:arxiv:2607.25393
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'Towards Reliable Stain Transfer: An Iterative Data-Model Co-Optimization Framework Based on
+    Multimodal Expert-Guided Assessment'
+  authors:
+  - Siyuan Xu
+  - Yan Wang
+  - Haofei Song
+  - Lili Gao
+  - Jiansheng Wang
+  - Qing Zhang
+  - Dan Huang
+  - Boxiang Yun
+  - Hongkai Xiong
+  - Qingli Li
+  published: '2026-07-28'
+  updated: '2026-07-28'
+  categories:
+  - cs.CV
+  abstract: Histopathological examination primarily relies on hematoxylin and eosin (H&E) and immunohistochemistry
+    (IHC) staining. Although IHC provides critical molecular information, it is costly and requires specialized
+    expertise. Stain transfer provides an efficient alternative by computationally generating IHC from
+    H&E images, but remains challenged by unified and interpretable modeling for heterogeneous biomarkers
+    under pixel-unaligned supervision. We propose DMCoStain, a novel Data-Model Co-optimization framework
+    for Stain transfer. It iteratively co-refines training data and model capability, improving staining
+    accuracy and interpretability in both pathological and structural consistency. To refine training
+    data in a clinically meaningful manner, it incorporates the Multimodal Expert-Guided Finer Selection
+    (MEGFS) strategy, built upon a pioneering IHC-positive-expression (IPE) vision-language model (VLM)
+    that emulates pathologist reasoning. To support MEGFS, we construct ImmunoInstruction, the first large-scale
+    IPE instruction-following dataset with 150K VQA samples. Extensive experiments on multiple tissues
+    and biomarkers demonstrate that DMCoStain achieves state-of-the-art (SOTA) accuracy. This paradigm
+    offers strong practical value, and MEGFS also functions as a specialized evaluation tool for future
+    model development. Dataset, code, and more details are in https://github.com/SikangSHU/DMCoStain.
+  url: https://arxiv.org/abs/2607.25393
+  pdf_url: https://arxiv.org/pdf/2607.25393v1
+  version: v1
+fetched: '2026-11-14'

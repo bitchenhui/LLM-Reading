@@ -1,0 +1,41 @@
+id: paper:arxiv:2505.24197
+status: skipped_low_citation
+score: 2
+track: self_improvement
+matched:
+- ref: concept:LLM
+  count: 1
+  weight: 1
+- ref: concept:SelfImprovement
+  count: 1
+  weight: 1
+meta:
+  title: Learning API Functionality from In-Context Demonstrations for Tool-based Agents
+  authors:
+  - Bhrij Patel
+  - Ashish Jagmohan
+  - Aditya Vempaty
+  published: '2025-05-30'
+  updated: '2025-11-12'
+  categories:
+  - cs.AI
+  abstract: 'Digital tool-based agents, powered by Large Language Models (LLMs), that invoke external
+    Application Programming Interfaces (APIs) often rely on documentation to understand API functionality.
+    However, such documentation is frequently missing, outdated, privatized, or inconsistent-hindering
+    the development of reliable, general-purpose agents. In this work, we propose a new research direction:
+    learning of API functionality directly from in-context demonstrations. This task is a new paradigm
+    applicable in scenarios without documentation. Using API benchmarks, we collect demonstrations from
+    both expert agents and from self-exploration. To understand what information demonstrations must convey
+    for successful task completion, we extensively study how the number of demonstrations and the use
+    of LLM-generated summaries and evaluations affect the task success rate of the API-based agent. Our
+    experiments across 3 datasets and 6 models show that learning functionality from in-context demonstrations
+    remains a non-trivial challenge, even for state-of-the-art LLMs. We find that providing explicit function
+    calls and natural language critiques significantly improves the agent''s task success rate due to
+    more accurate parameter filling. We analyze failure modes, identify sources of error, and highlight
+    key open challenges for future work in documentation-free, self-improving, API-based agents.'
+  url: https://arxiv.org/abs/2505.24197
+  pdf_url: https://arxiv.org/pdf/2505.24197v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 2
+citation_year: 2025

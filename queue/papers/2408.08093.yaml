@@ -1,0 +1,41 @@
+id: paper:arxiv:2408.08093
+status: skipped
+score: 0
+track: video_image_coding
+matched: []
+meta:
+  title: 'When Video Coding Meets Multimodal Large Language Models: A Unified Paradigm for Video Coding'
+  authors:
+  - Pingping Zhang
+  - Jinlong Li
+  - Kecheng Chen
+  - Meng Wang
+  - Long Xu
+  - Haoliang Li
+  - Nicu Sebe
+  - Sam Kwong
+  - Shiqi Wang
+  published: '2024-08-15'
+  updated: '2025-02-14'
+  categories:
+  - cs.CV
+  - cs.MM
+  abstract: Existing codecs are designed to eliminate intrinsic redundancies to create a compact representation
+    for compression. However, strong external priors from Multimodal Large Language Models (MLLMs) have
+    not been explicitly explored in video compression. Herein, we introduce a unified paradigm for Cross-Modality
+    Video Coding (CMVC), which is a pioneering approach to explore multimodality representation and video
+    generative models in video coding. Specifically, on the encoder side, we disentangle a video into
+    spatial content and motion components, which are subsequently transformed into distinct modalities
+    to achieve very compact representation by leveraging MLLMs. During decoding, previously encoded components
+    and video generation models are leveraged to create multiple encoding-decoding modes that optimize
+    video reconstruction quality for specific decoding requirements, including Text-Text-to-Video (TT2V)
+    mode to ensure high-quality semantic information and Image-Text-to-Video (IT2V) mode to achieve superb
+    perceptual consistency. In addition, we propose an efficient frame interpolation model for IT2V mode
+    via Low-Rank Adaption (LoRA) tuning to guarantee perceptual quality, which allows the generated motion
+    cues to behave smoothly. Experiments on benchmarks indicate that TT2V achieves effective semantic
+    reconstruction, while IT2V exhibits competitive perceptual consistency. These results highlight potential
+    directions for future research in video coding.
+  url: https://arxiv.org/abs/2408.08093
+  pdf_url: https://arxiv.org/pdf/2408.08093v3
+  version: v3
+fetched: '2026-11-14'

@@ -1,0 +1,37 @@
+id: paper:arxiv:2402.06457
+status: skipped
+score: 1
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+meta:
+  title: 'V-STaR: Training Verifiers for Self-Taught Reasoners'
+  authors:
+  - Arian Hosseini
+  - Xingdi Yuan
+  - Nikolay Malkin
+  - Aaron Courville
+  - Alessandro Sordoni
+  - Rishabh Agarwal
+  published: '2024-02-09'
+  updated: '2024-08-14'
+  categories:
+  - cs.LG
+  - cs.AI
+  - cs.CL
+  abstract: Common self-improvement approaches for large language models (LLMs), such as STaR, iteratively
+    fine-tune LLMs on self-generated solutions to improve their problem-solving ability. However, these
+    approaches discard the large amounts of incorrect solutions generated during this process, potentially
+    neglecting valuable information in such solutions. To address this shortcoming, we propose V-STaR
+    that utilizes both the correct and incorrect solutions generated during the self-improvement process
+    to train a verifier using DPO that judges correctness of model-generated solutions. This verifier
+    is used at inference time to select one solution among many candidate solutions. Running V-STaR for
+    multiple iterations results in progressively better reasoners and verifiers, delivering a 4% to 17%
+    test accuracy improvement over existing self-improvement and verification approaches on common code
+    generation and math reasoning benchmarks with LLaMA2 models.
+  url: https://arxiv.org/abs/2402.06457
+  pdf_url: https://arxiv.org/pdf/2402.06457v2
+  version: v2
+fetched: '2026-11-14'

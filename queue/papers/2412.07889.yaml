@@ -1,0 +1,41 @@
+id: paper:arxiv:2412.07889
+status: skipped
+score: 1
+track: streaming_delivery
+matched:
+- ref: concept:QUIC
+  count: 2
+  weight: 1
+meta:
+  title: Low-Latency Scalable Streaming for Event-Based Vision
+  authors:
+  - Andrew Hamara
+  - Benjamin Kilpatrick
+  - Alex Baratta
+  - Brendon Kofink
+  - Andrew C. Freeman
+  published: '2024-12-10'
+  updated: '2024-12-13'
+  categories:
+  - cs.CV
+  - cs.MM
+  - cs.NI
+  abstract: Recently, we have witnessed the rise of novel ``event-based'' camera sensors for high-speed,
+    low-power video capture. Rather than recording discrete image frames, these sensors output asynchronous
+    ``event'' tuples with microsecond precision, only when the brightness change of a given pixel exceeds
+    a certain threshold. Although these sensors have enabled compelling new computer vision applications,
+    these applications often require expensive, power-hungry GPU systems, rendering them incompatible
+    for deployment on the low-power devices for which event cameras are optimized. Whereas receiver-driven
+    rate adaptation is a crucial feature of modern video streaming solutions, this topic is underexplored
+    in the realm of event-based vision systems. On a real-world event camera dataset, we first demonstrate
+    that a state-of-the-art object detection application is resilient to dramatic data loss, and that
+    this loss may be weighted towards the end of each temporal window. We then propose a scalable streaming
+    method for event-based data based on Media Over QUIC, prioritizing object detection performance and
+    low latency. The application server can receive complementary event data across several streams simultaneously,
+    and drop streams as needed to maintain a certain latency. With a latency target of 5 ms for end-to-end
+    transmission across a small network, we observe an average reduction in detection mAP as low as 0.36.
+    With a more relaxed latency target of 50 ms, we observe an average mAP reduction as low as 0.19.
+  url: https://arxiv.org/abs/2412.07889
+  pdf_url: https://arxiv.org/pdf/2412.07889v2
+  version: v2
+fetched: '2026-11-14'

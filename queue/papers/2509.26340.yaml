@@ -1,0 +1,43 @@
+id: paper:arxiv:2509.26340
+status: skipped_low_citation
+score: 2
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: Memory-Driven Self-Improvement for Decision Making with Large Language Models
+  authors:
+  - Xue Yan
+  - Zijing Ou
+  - Mengyue Yang
+  - Yan Song
+  - Haifeng Zhang
+  - Yingzhen Li
+  - Jun Wang
+  published: '2025-09-30'
+  updated: '2025-09-30'
+  categories:
+  - cs.LG
+  abstract: Large language models (LLMs) have emerged as effective action policies for sequential decision-making
+    (SDM) tasks due to their extensive prior knowledge. However, this broad yet general knowledge is often
+    insufficient for specific decision-making tasks with limited task-related data, making it challenging
+    to efficiently adapt LLMs to specific SDM tasks. To address this challenge, we propose a memory-driven
+    self-improvement framework that combines LLM general prior knowledge with a compact memory of domain-specific
+    experiences. Memory retains past interactions and associated Q-values, thereby capturing decision-relevant
+    knowledge that facilitates accurate value estimation and informs the LLM prior refinement. The refined
+    LLM prior, in turn, generates higher-reward trajectories that further enrich memory, forming a natural
+    self-improvement framework where memory and LLM prior mutually reinforce each other. Experiments show
+    that our memory-driven approach significantly outperforms both traditional RL and LLM-based baselines,
+    e.g., improving performance by over 40\% on in-distribution tasks and over 75\% when generalized to
+    unseen tasks in ALFWorld.
+  url: https://arxiv.org/abs/2509.26340
+  pdf_url: https://arxiv.org/pdf/2509.26340v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 1
+citation_year: 2025

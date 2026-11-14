@@ -1,0 +1,38 @@
+id: paper:arxiv:2511.23142
+status: skipped
+score: 1
+track: audio_coding
+matched:
+- ref: concept:NeuralAudioCodec
+  count: 1
+  weight: 1
+meta:
+  title: Adapting Neural Audio Codecs to EEG
+  authors:
+  - Ard Kastrati
+  - Luca Lanzendörfer
+  - Riccardo Rigoni
+  - John Staib Matilla
+  - Roger Wattenhofer
+  published: '2025-11-28'
+  updated: '2025-11-28'
+  categories:
+  - cs.LG
+  - cs.SD
+  abstract: EEG and audio are inherently distinct modalities, differing in sampling rate, channel structure,
+    and scale. Yet, we show that pretrained neural audio codecs can serve as effective starting points
+    for EEG compression, provided that the data are preprocessed to be suitable to the codec's input constraints.
+    Using DAC, a state-of-the-art neural audio codec as our base, we demonstrate that raw EEG can be mapped
+    into the codec's stride-based framing, enabling direct reuse of the audio-pretrained encoder-decoder.
+    Even without modification, this setup yields stable EEG reconstructions, and fine-tuning on EEG data
+    further improves fidelity and generalization compared to training from scratch. We systematically
+    explore compression-quality trade-offs by varying residual codebook depth, codebook (vocabulary) size,
+    and input sampling rate. To capture spatial dependencies across electrodes, we propose DAC-MC, a multi-channel
+    extension with attention-based cross-channel aggregation and channel-specific decoding, while retaining
+    the audio-pretrained initialization. Evaluations on the TUH Abnormal and Epilepsy datasets show that
+    the adapted codecs preserve clinically relevant information, as reflected in spectrogram-based reconstruction
+    loss and downstream classification accuracy.
+  url: https://arxiv.org/abs/2511.23142
+  pdf_url: https://arxiv.org/pdf/2511.23142v1
+  version: v1
+fetched: '2026-11-14'

@@ -1,0 +1,38 @@
+id: paper:arxiv:2402.12888
+status: skipped_low_citation
+score: 3
+track: video_image_coding
+matched:
+- ref: impl:TIC
+  count: 1
+  weight: 3
+meta:
+  title: Transformer-based Learned Image Compression for Joint Decoding and Denoising
+  authors:
+  - Yi-Hsin Chen
+  - Kuan-Wei Ho
+  - Shiau-Rung Tsai
+  - Guan-Hsun Lin
+  - Alessandro Gnutti
+  - Wen-Hsiao Peng
+  - Riccardo Leonardi
+  published: '2024-02-20'
+  updated: '2024-02-20'
+  categories:
+  - eess.IV
+  abstract: This work introduces a Transformer-based image compression system. It has the flexibility
+    to switch between the standard image reconstruction and the denoising reconstruction from a single
+    compressed bitstream. Instead of training separate decoders for these tasks, we incorporate two add-on
+    modules to adapt a pre-trained image decoder from performing the standard image reconstruction to
+    joint decoding and denoising. Our scheme adopts a two-pronged approach. It features a latent refinement
+    module to refine the latent representation of a noisy input image for reconstructing a noise-free
+    image. Additionally, it incorporates an instance-specific prompt generator that adapts the decoding
+    process to improve on the latent refinement. Experimental results show that our method achieves a
+    similar level of denoising quality to training a separate decoder for joint decoding and denoising
+    at the expense of only a modest increase in the decoder's model size and computational complexity.
+  url: https://arxiv.org/abs/2402.12888
+  pdf_url: https://arxiv.org/pdf/2402.12888v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 7
+citation_year: 2024

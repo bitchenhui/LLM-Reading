@@ -1,0 +1,33 @@
+id: paper:arxiv:2508.05207
+status: skipped
+score: 1
+track: audio_coding
+matched:
+- ref: concept:NeuralAudioCodec
+  count: 2
+  weight: 1
+meta:
+  title: 'SpectroStream: A Versatile Neural Codec for General Audio'
+  authors:
+  - Yunpeng Li
+  - Kehang Han
+  - Brian McWilliams
+  - Zalan Borsos
+  - Marco Tagliasacchi
+  published: '2025-08-07'
+  updated: '2025-08-07'
+  categories:
+  - cs.SD
+  - cs.AI
+  - eess.AS
+  abstract: We propose SpectroStream, a full-band multi-channel neural audio codec. Successor to the well-established
+    SoundStream, SpectroStream extends its capability beyond 24 kHz monophonic audio and enables high-quality
+    reconstruction of 48 kHz stereo music at bit rates of 4--16 kbps. This is accomplished with a new
+    neural architecture that leverages audio representation in the time-frequency domain, which leads
+    to better audio quality especially at higher sample rate. The model also uses a delayed-fusion strategy
+    to handle multi-channel audio, which is crucial in balancing per-channel acoustic quality and cross-channel
+    phase consistency.
+  url: https://arxiv.org/abs/2508.05207
+  pdf_url: https://arxiv.org/pdf/2508.05207v1
+  version: v1
+fetched: '2026-11-14'

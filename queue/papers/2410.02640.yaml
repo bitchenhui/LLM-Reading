@@ -1,0 +1,37 @@
+id: paper:arxiv:2410.02640
+status: skipped
+score: 0
+track: video_image_coding
+matched: []
+meta:
+  title: 'RDEIC: Accelerating Diffusion-Based Extreme Image Compression with Relay Residual Diffusion'
+  authors:
+  - Zhiyuan Li
+  - Yanhui Zhou
+  - Hao Wei
+  - Chenyang Ge
+  - Ajmal Mian
+  published: '2024-10-03'
+  updated: '2025-05-26'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: Diffusion-based extreme image compression methods have achieved impressive performance at
+    extremely low bitrates. However, constrained by the iterative denoising process that starts from pure
+    noise, these methods are limited in both fidelity and efficiency. To address these two issues, we
+    present Relay Residual Diffusion Extreme Image Compression (RDEIC), which leverages compressed feature
+    initialization and residual diffusion. Specifically, we first use the compressed latent features of
+    the image with added noise, instead of pure noise, as the starting point to eliminate the unnecessary
+    initial stages of the denoising process. Second, we directly derive a novel residual diffusion equation
+    from Stable Diffusion's original diffusion equation that reconstructs the raw image by iteratively
+    removing the added noise and the residual between the compressed and target latent features. In this
+    way, we effectively combine the efficiency of residual diffusion with the powerful generative capability
+    of Stable Diffusion. Third, we propose a fixed-step fine-tuning strategy to eliminate the discrepancy
+    between the training and inference phases, thereby further improving the reconstruction quality. Extensive
+    experiments demonstrate that the proposed RDEIC achieves state-of-the-art visual quality and outperforms
+    existing diffusion-based extreme image compression methods in both fidelity and efficiency. The source
+    code and pre-trained models are available at https://github.com/huai-chang/RDEIC.
+  url: https://arxiv.org/abs/2410.02640
+  pdf_url: https://arxiv.org/pdf/2410.02640v3
+  version: v3
+fetched: '2026-11-14'

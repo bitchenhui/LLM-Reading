@@ -1,0 +1,35 @@
+id: paper:arxiv:2602.07532
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: Evaluating Object-Centric Models beyond Object Discovery
+  authors:
+  - Krishnakant Singh
+  - Simone Schaub-Meyer
+  - Stefan Roth
+  published: '2026-02-07'
+  updated: '2026-02-07'
+  categories:
+  - cs.CV
+  - cs.LG
+  abstract: 'Object-centric learning (OCL) aims to learn structured scene representations that support
+    compositional generalization and robustness to out-of-distribution (OOD) data. However, OCL models
+    are often not evaluated regarding these goals. Instead, most prior work focuses on evaluating OCL
+    models solely through object discovery and simple reasoning tasks, such as probing the representation
+    via image classification. We identify two limitations in existing benchmarks: (1) They provide limited
+    insights on the representation usefulness of OCL models, and (2) localization and representation usefulness
+    are assessed using disjoint metrics. To address (1), we use instruction-tuned VLMs as evaluators,
+    enabling scalable benchmarking across diverse VQA datasets to measure how well VLMs leverage OCL representations
+    for complex reasoning tasks. To address (2), we introduce a unified evaluation task and metric that
+    jointly assess localization (where) and representation usefulness (what), thereby eliminating inconsistencies
+    introduced by disjoint evaluation. Finally, we include a simple multi-feature reconstruction baseline
+    as a reference point.'
+  url: https://arxiv.org/abs/2602.07532
+  pdf_url: https://arxiv.org/pdf/2602.07532v1
+  version: v1
+fetched: '2026-11-14'

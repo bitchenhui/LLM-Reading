@@ -1,0 +1,49 @@
+id: paper:arxiv:2605.09679
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'DeepTumorVQA: A Hierarchical 3D CT Benchmark for Stage-Wise Evaluation of Medical VLMs and Tool-Augmented
+    Agents'
+  authors:
+  - Yixiong Chen
+  - Wenjie Xiao
+  - Pedro R. A. S. Bassi
+  - Boyan Wang
+  - Liang He
+  - Xinze Zhou
+  - Sezgin Er
+  - Ibrahim Ethem Hamamci
+  - Zongwei Zhou
+  - Alan Yuille
+  published: '2026-05-10'
+  updated: '2026-05-10'
+  categories:
+  - cs.CV
+  - cs.AI
+  abstract: 'Medical vision-language models (VLMs) and AI agents have made significant progress in learning
+    to analyze and reason about clinical images. However, existing medical visual question answering (VQA)
+    benchmarks collapse model capabilities into a single accuracy score, obscuring where and why models
+    fail. We propose DeepTumorVQA, a hierarchical benchmark that follows the multi-stage evidence chain
+    in tumor diagnosis and decomposes 3D CT reasoning into four stages: recognition, measurement, visual
+    reasoning, and medical reasoning. Higher-level questions remain independently scorable, while their
+    ground-truth evidence chains are defined over lower-level primitives. The benchmark contains 476K
+    questions across 42 clinical subtypes on 9,262 3D CT volumes. In addition to a direct reasoning mode
+    for VLMs, DeepTumorVQA provides tool-interaction environments for agent evaluation, where a model
+    can call external tools, including segmentation models, measurement programs, and medical knowledge
+    modules, before answering the question. Evaluating over 30 model configurations, we find that reliable
+    quantitative measurement is the primary bottleneck, making later-stage visual and medical reasoning
+    harder for VLMs, while tool augmentation substantially mitigates this issue. When tools are available,
+    leveraging medical knowledge and tools to reason about medical images becomes a new challenge. We
+    further show that ground-truth step-by-step tool-use traces from DeepTumorVQA can supervise agents
+    and reduce tool-use and reasoning failures. This stage-wise progression from recognition to measurement
+    to visual and medical reasoning provides a concrete roadmap for future medical VLM and AI agent studies.
+    All data and code are released at https://github.com/Schuture/DeepTumorVQA.'
+  url: https://arxiv.org/abs/2605.09679
+  pdf_url: https://arxiv.org/pdf/2605.09679v1
+  version: v1
+fetched: '2026-11-14'

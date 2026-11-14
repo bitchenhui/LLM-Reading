@@ -1,0 +1,40 @@
+id: paper:arxiv:2604.13356
+status: skipped
+score: 1
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+meta:
+  title: Peer-Predictive Self-Training for Language Model Reasoning
+  authors:
+  - Shi Feng
+  - Hanlin Zhang
+  - Fan Nie
+  - Sham Kakade
+  - Yiling Chen
+  published: '2026-04-14'
+  updated: '2026-07-09'
+  categories:
+  - cs.CL
+  - cs.AI
+  - cs.GT
+  abstract: 'Mechanisms for continued self-improvement of language models without external supervision
+    remain an open challenge. We propose Peer-Predictive Self-Training (PST), a label-free fine-tuning
+    framework in which multiple language models improve collaboratively by using a cross-model aggregate
+    response as an internal training signal. Given a prompt, models generate responses sequentially; the
+    final aggregated answer, which is often more reliable than individual responses in practice, serves
+    as an internal reference for learning. We measure how informative each intermediate response is about
+    the aggregate using pointwise mutual information (PMI), and use this signal to scale self-training
+    updates: responses already aligned with the aggregate receive smaller updates, while less informative
+    or misaligned responses receive larger ones. On mathematical reasoning benchmarks, including SimulEq,
+    MATH-500-Numeric, and MultiArith, PST improves exact-match accuracy by 2.2--4.3 percentage points
+    across Gemma-2-2B, LLaMA-3.2-1B, and Qwen2.5-1.5B, and reduces the average generator--verifier gap
+    (GV-Gap) by 26--40%, while requiring no external supervision, no teacher--student hierarchy, and only
+    cross-model interactions. These results suggest that peer-predictive feedback from cross-model generations
+    can provide an effective mechanism for self-supervised language-model improvement.'
+  url: https://arxiv.org/abs/2604.13356
+  pdf_url: https://arxiv.org/pdf/2604.13356v3
+  version: v3
+fetched: '2026-11-14'

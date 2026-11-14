@@ -1,0 +1,40 @@
+id: paper:arxiv:2603.26385
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 3
+  weight: 1
+meta:
+  title: 'Restore, Assess, Repeat: A Unified Framework for Iterative Image Restoration'
+  authors:
+  - I-Hsiang Chen
+  - Isma Hadji
+  - Enrique Sanchez
+  - Adrian Bulat
+  - Sy-Yen Kuo
+  - Radu Timofte
+  - Georgios Tzimiropoulos
+  - Brais Martinez
+  published: '2026-03-27'
+  updated: '2026-03-27'
+  categories:
+  - cs.CV
+  abstract: Image restoration aims to recover high quality images from inputs degraded by various factors,
+    such as adverse weather, blur, or low light. While recent studies have shown remarkable progress across
+    individual or unified restoration tasks, they still suffer from limited generalization and inefficiency
+    when handling unknown or composite degradations. To address these limitations, we propose RAR, a Restore,
+    Assess and Repeat process, that integrates Image Quality Assessment (IQA) and Image Restoration (IR)
+    into a unified framework to iteratively and efficiently achieve high quality image restoration. Specifically,
+    we introduce a restoration process that operates entirely in the latent domain to jointly perform
+    degradation identification, image restoration, and quality verification. The resulting model is fully
+    trainable end to end and allows for an all-in-one assess and restore approach that dynamically adapts
+    the restoration process. Also, the tight integration of IQA and IR into a unified model minimizes
+    the latency and information loss that typically arises from keeping the two modules disjoint, (e.g.
+    during image and/or text decoding). Extensive experiments show that our approach consistent improvements
+    under single, unknown and composite degradations, thereby establishing a new state-of-the-art.
+  url: https://arxiv.org/abs/2603.26385
+  pdf_url: https://arxiv.org/pdf/2603.26385v1
+  version: v1
+fetched: '2026-11-14'

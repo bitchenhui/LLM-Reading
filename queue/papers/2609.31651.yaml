@@ -1,0 +1,41 @@
+id: paper:arxiv:2609.31651
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'PalmLeaf-VQA: A Multi-Script Visual Question Answering Benchmark for Historical Palm-Leaf Manuscript
+    Understanding Across Diverse Regions'
+  authors:
+  - Nimol Thuon
+  - Jun Du
+  - Panhapin Theang
+  published: '2026-09-14'
+  updated: '2026-09-14'
+  categories:
+  - cs.CV
+  - cs.AI
+  - cs.CL
+  - cs.LG
+  abstract: 'Historical manuscripts remain largely absent from modern vision-language benchmarks, leaving
+    open how well multimodal large language models (MLLMs) handle culturally diverse, degraded, and non-Latin
+    document images. We introduce \textbf{PalmLeaf-VQA}, a multi-script visual question answering benchmark
+    for historical palm-leaf manuscript understanding across South and Southeast Asian traditions. PalmLeaf-VQA
+    contains \textbf{923 curated manuscript images} and \textbf{7,384 question--answer pairs} from eight
+    collection groups: Balinese, Grantha, Jathakam, Kambaramayanam, Kannada, Khmer, Sundanese, and Tamil.
+    Unlike recognition-oriented resources, the benchmark targets manuscript-aware visual reasoning over
+    preservation-relevant cues, including physical condition, line structure, material and coating, binding
+    holes, margins, symbols, drawings, and localized visual artifacts. We evaluate recent proprietary
+    and open-weight MLLMs under open-answer and constrained-answer prompting and provide fine-grained
+    analysis across collections, question categories, and task types. The strongest evaluated model reaches
+    only \textbf{58.00\% exact-match accuracy} on the held-out test split, revealing substantial limitations
+    in current MLLMs for rare-script, degraded-layout, and preservation-oriented document understanding.
+    PalmLeaf-VQA provides a standardized benchmark for advancing culturally grounded and layout-aware
+    multimodal document analysis.'
+  url: https://arxiv.org/abs/2609.31651
+  pdf_url: https://arxiv.org/pdf/2609.31651v1
+  version: v1
+fetched: '2026-11-14'

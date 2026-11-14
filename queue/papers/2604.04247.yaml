@@ -1,0 +1,55 @@
+id: paper:arxiv:2604.04247
+status: pending
+score: 2
+track: self_improvement
+matched:
+- ref: concept:LLM
+  count: 1
+  weight: 1
+- ref: concept:SelfImprovement
+  count: 1
+  weight: 1
+meta:
+  title: 'Combee: Scaling Prompt Learning for Self-Improving Language Model Agents'
+  authors:
+  - Hanchen Li
+  - Runyuan He
+  - Qizheng Zhang
+  - Changxiu Ji
+  - Qiuyang Mang
+  - Xiaokun Chen
+  - Lakshya A Agrawal
+  - Wei-Liang Liao
+  - Eric Yang
+  - Alvin Cheung
+  - James Zou
+  - Kunle Olukotun
+  - Ion Stoica
+  - Joseph E. Gonzalez
+  published: '2026-04-05'
+  updated: '2026-09-25'
+  categories:
+  - cs.AI
+  - cs.CL
+  - cs.LG
+  abstract: Recent advances in prompt learning allow large language model agents to acquire task-relevant
+    knowledge from inference-time context without parameter changes. For example, existing methods (like
+    ACE or GEPA) can learn system prompts to improve accuracy based on previous agent runs. However, these
+    methods primarily focus on single-agent or low-parallelism settings. This fundamentally limits their
+    ability to efficiently learn from a large set of collected agentic traces. It would be efficient and
+    beneficial to run prompt learning in parallel to accommodate the growing trend of learning from many
+    agentic traces or parallel agent executions. Yet without a principled strategy for scaling, current
+    methods suffer from quality degradation with high parallelism. To improve both the efficiency and
+    quality of prompt learning, we propose Combee, a novel framework to scale parallel prompt learning
+    for self-improving agents. Combee speeds up learning and enables running many agents in parallel while
+    learning from their aggregate traces without quality degradation. To achieve this, Combee leverages
+    parallel scans and employs an augmented shuffle mechanism; Combee also introduces a dynamic batch
+    size controller to balance quality and delay. Evaluations on AppWorld, Terminal-Bench, Formula, and
+    FiNER demonstrate that Combee achieves up to 17x speedup over previous methods with comparable or
+    better accuracy and equivalent cost.
+  url: https://arxiv.org/abs/2604.04247
+  pdf_url: https://arxiv.org/pdf/2604.04247v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 10
+citation_year: 2026

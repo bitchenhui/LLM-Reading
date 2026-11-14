@@ -1,0 +1,41 @@
+id: paper:arxiv:2606.29579
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'ScAle: Attention Head Scaling as a Minimal Adapter for Spatial Reasoning in Vision Language
+    Models'
+  authors:
+  - Rahul Chowdhury
+  - Timothy A Rupprecht
+  - Xuan Shen
+  - Pu Zhao
+  - Yanzhi Wang
+  published: '2026-06-28'
+  updated: '2026-06-28'
+  categories:
+  - cs.CV
+  - cs.AI
+  - cs.LG
+  - cs.MM
+  abstract: Spatial reasoning remains a persistent challenge for many vision language models (VLMs), and
+    improving it typically requires fine-tuning with substantial additional parameters. Our preliminary
+    analysis reveals that rescaling activations in selected transformer layers-without modifying pretrained
+    weights-can significantly influence downstream performance. Motivated by this observation, we propose
+    ScAle, an ultra-lightweight adaptation method that learns a small set of scalar coefficients to modulate
+    last-token attention and MLP activations in a fully frozen backbone. We evaluate our method on the
+    synthetic spatial reasoning benchmark SpatialEval and on real-world VQA datasets (COCOQA and VGQA)
+    across multiple model families. Our method, ScAle, achieves up to 134.1% relative accuracy gains using
+    only 1K trainable parameters without requiring millions of trainable parameters as in standard PEFT
+    methods such as LoRA. Despite its extreme compactness, our approach recovers a substantial fraction
+    of standard PEFT performance while preserving strong non-spatial VQA accuracy. These results demonstrate
+    that bounded activation reweighting provides a simple, architecture-agnostic, and highly parameter-efficient
+    alternative for adapting pretrained VLMs.
+  url: https://arxiv.org/abs/2606.29579
+  pdf_url: https://arxiv.org/pdf/2606.29579v1
+  version: v1
+fetched: '2026-11-14'

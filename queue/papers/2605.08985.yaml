@@ -1,0 +1,41 @@
+id: paper:arxiv:2605.08985
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'LLaVA-UHD v4: What Makes Efficient Visual Encoding in MLLMs?'
+  authors:
+  - Kechen Fang
+  - Yihua Qin
+  - Chongyi Wang
+  - Wenshuo Ma
+  - Tianyu Yu
+  - Yuan Yao
+  published: '2026-05-09'
+  updated: '2026-05-09'
+  categories:
+  - cs.CV
+  abstract: 'Visual encoding constitutes a major computational bottleneck in Multimodal Large Language
+    Models (MLLMs), especially for high-resolution image inputs. The prevailing practice typically adopts
+    global encoding followed by post-ViT compression. Global encoding produces massive token sequences,
+    while post-ViT compression incurs the full quadratic attention cost of the ViT before any token reduction
+    takes place. In this work, we revisit this convention along two dimensions: the encoding strategy
+    and visual token compression. First, controlled experiments show that slice-based encoding outperforms
+    global encoding across benchmarks, suggesting that preserving local details through sliced views can
+    be more beneficial than applying global attention for fine-grained perception. Second, we introduce
+    intra-ViT early compression, which reduces tokens in shallow ViT layers and substantially lowers visual-encoding
+    FLOPs while preserving downstream performance. By integrating intra-ViT compression into the slice-based
+    encoding framework, we present LLaVA-UHD v4, an efficient and compute-controllable visual encoding
+    scheme tailored for high-resolution inputs. Across a diverse set of benchmarks covering document understanding,
+    OCR, and general VQA, LLaVA-UHD v4 reduces visual-encoding FLOPs by 55.8% while matching or even surpassing
+    baseline performance. These results suggest that visual-encoding efficiency can be substantially improved
+    without sacrificing downstream performance, providing a practical design direction for efficient high-resolution
+    MLLMs. All model weights and code will be publicly released to support further research.'
+  url: https://arxiv.org/abs/2605.08985
+  pdf_url: https://arxiv.org/pdf/2605.08985v1
+  version: v1
+fetched: '2026-11-14'

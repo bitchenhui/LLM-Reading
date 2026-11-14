@@ -1,0 +1,33 @@
+id: paper:arxiv:2409.07858
+status: skipped
+score: 0
+track: audio_coding
+matched: []
+meta:
+  title: Audio Decoding by Inverse Problem Solving
+  authors:
+  - Pedro J. Villasana T.
+  - Lars Villemoes
+  - Janusz Klejsa
+  - Per Hedelin
+  published: '2024-09-12'
+  updated: '2024-09-12'
+  categories:
+  - eess.AS
+  - cs.LG
+  - cs.SD
+  abstract: We consider audio decoding as an inverse problem and solve it through diffusion posterior
+    sampling. Explicit conditioning functions are developed for input signal measurements provided by
+    an example of a transform domain perceptual audio codec. Viability is demonstrated by evaluating arbitrary
+    pairings of a set of bitrates and task-agnostic prior models. For instance, we observe significant
+    improvements on piano while maintaining speech performance when a speech model is replaced by a joint
+    model trained on both speech and piano. With a more general music model, improved decoding compared
+    to legacy methods is obtained for a broad range of content types and bitrates. The noisy mean model,
+    underlying the proposed derivation of conditioning, enables a significant reduction of gradient evaluations
+    for diffusion posterior sampling, compared to methods based on Tweedie's mean. Combining Tweedie's
+    mean with our conditioning functions improves the objective performance. An audio demo is available
+    at https://dpscodec-demo.github.io/.
+  url: https://arxiv.org/abs/2409.07858
+  pdf_url: https://arxiv.org/pdf/2409.07858v1
+  version: v1
+fetched: '2026-11-14'

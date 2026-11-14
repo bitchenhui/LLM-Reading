@@ -1,0 +1,47 @@
+id: paper:arxiv:2509.17506
+status: skipped
+score: 1
+track: immersive_media
+matched:
+- ref: concept:VolumetricVideo
+  count: 2
+  weight: 1
+meta:
+  title: '4D-MoDe: Towards Editable and Scalable Volumetric Streaming via Motion-Decoupled 4D Gaussian
+    Compression'
+  authors:
+  - Houqiang Zhong
+  - Zihan Zheng
+  - Qiang Hu
+  - Yuan Tian
+  - Ning Cao
+  - Lan Xu
+  - Xiaoyun Zhang
+  - Zhengxue Cheng
+  - Li Song
+  - Wenjun Zhang
+  published: '2025-09-22'
+  updated: '2025-09-22'
+  categories:
+  - cs.CV
+  abstract: Volumetric video has emerged as a key medium for immersive telepresence and augmented/virtual
+    reality, enabling six-degrees-of-freedom (6DoF) navigation and realistic spatial interactions. However,
+    delivering high-quality dynamic volumetric content at scale remains challenging due to massive data
+    volume, complex motion, and limited editability of existing representations. In this paper, we present
+    4D-MoDe, a motion-decoupled 4D Gaussian compression framework designed for scalable and editable volumetric
+    video streaming. Our method introduces a layered representation that explicitly separates static backgrounds
+    from dynamic foregrounds using a lookahead-based motion decomposition strategy, significantly reducing
+    temporal redundancy and enabling selective background/foreground streaming. To capture continuous
+    motion trajectories, we employ a multi-resolution motion estimation grid and a lightweight shared
+    MLP, complemented by a dynamic Gaussian compensation mechanism to model emergent content. An adaptive
+    grouping scheme dynamically inserts background keyframes to balance temporal consistency and compression
+    efficiency. Furthermore, an entropy-aware training pipeline jointly optimizes the motion fields and
+    Gaussian parameters under a rate-distortion (RD) objective, while employing range-based and KD-tree
+    compression to minimize storage overhead. Extensive experiments on multiple datasets demonstrate that
+    4D-MoDe consistently achieves competitive reconstruction quality with an order of magnitude lower
+    storage cost (e.g., as low as \textbf{11.4} KB/frame) compared to state-of-the-art methods, while
+    supporting practical applications such as background replacement and foreground-only streaming.
+  url: https://arxiv.org/abs/2509.17506
+  pdf_url: https://arxiv.org/pdf/2509.17506v1
+  version: v1
+fetched: '2026-11-14'

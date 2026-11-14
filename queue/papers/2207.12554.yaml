@@ -1,0 +1,59 @@
+id: paper:arxiv:2207.12554
+status: pending
+score: 12
+track: immersive_media
+matched:
+- ref: codec:G-PCC
+  count: 2
+  weight: 3
+- ref: codec:V-PCC
+  count: 2
+  weight: 3
+- ref: codec:HEVC
+  count: 1
+  weight: 3
+- ref: metric:BD-Rate
+  count: 2
+  weight: 1
+- ref: concept:EntropyModel
+  count: 1
+  weight: 1
+- ref: org:MPEG
+  count: 1
+  weight: 1
+meta:
+  title: Inter-Frame Compression for Dynamic Point Cloud Geometry Coding
+  authors:
+  - Anique Akhtar
+  - Zhu Li
+  - Geert Van der Auwera
+  published: '2022-07-25'
+  updated: '2024-09-02'
+  categories:
+  - cs.CV
+  - cs.MM
+  - eess.IV
+  abstract: Efficient point cloud compression is essential for applications like virtual and mixed reality,
+    autonomous driving, and cultural heritage. This paper proposes a deep learning-based inter-frame encoding
+    scheme for dynamic point cloud geometry compression. We propose a lossy geometry compression scheme
+    that predicts the latent representation of the current frame using the previous frame by employing
+    a novel feature space inter-prediction network. The proposed network utilizes sparse convolutions
+    with hierarchical multiscale 3D feature learning to encode the current frame using the previous frame.
+    The proposed method introduces a novel predictor network for motion compensation in the feature domain
+    to map the latent representation of the previous frame to the coordinates of the current frame to
+    predict the current frame's feature embedding. The framework transmits the residual of the predicted
+    features and the actual features by compressing them using a learned probabilistic factorized entropy
+    model. At the receiver, the decoder hierarchically reconstructs the current frame by progressively
+    rescaling the feature embedding. The proposed framework is compared to the state-of-the-art Video-based
+    Point Cloud Compression (V-PCC) and Geometry-based Point Cloud Compression (G-PCC) schemes standardized
+    by the Moving Picture Experts Group (MPEG). The proposed method achieves more than 88% BD-Rate (Bjontegaard
+    Delta Rate) reduction against G-PCCv20 Octree, more than 56% BD-Rate savings against G-PCCv20 Trisoup,
+    more than 62% BD-Rate reduction against V-PCC intra-frame encoding mode, and more than 52% BD-Rate
+    savings against V-PCC P-frame-based inter-frame encoding mode using HEVC. These significant performance
+    gains are cross-checked and verified in the MPEG working group.
+  url: https://arxiv.org/abs/2207.12554
+  pdf_url: https://arxiv.org/pdf/2207.12554v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 74
+citation_year: 2022

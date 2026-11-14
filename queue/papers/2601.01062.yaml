@@ -1,0 +1,43 @@
+id: paper:arxiv:2601.01062
+status: skipped_low_citation
+score: 4
+track: quality_assessment
+matched:
+- ref: codec:Opus
+  count: 1
+  weight: 3
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'SPoRC-VIST: A Benchmark for Evaluating Generative Natural Narrative in Vision-Language Models'
+  authors:
+  - Yunlin Zeng
+  published: '2026-01-03'
+  updated: '2026-01-03'
+  categories:
+  - cs.LG
+  - cs.AI
+  - cs.CV
+  abstract: 'Vision-Language Models (VLMs) have achieved remarkable success in descriptive tasks such
+    as image captioning and visual question answering (VQA). However, their ability to generate engaging,
+    long-form narratives -- specifically multi-speaker podcast dialogues -- remains under-explored and
+    difficult to evaluate. Standard metrics like BLEU and ROUGE fail to capture the nuances of conversational
+    naturalness, personality, and narrative flow, often rewarding safe, repetitive outputs over engaging
+    storytelling. In this work, we present a novel pipeline for end-to-end visual podcast generation,
+    and fine-tune a Qwen3-VL-32B model on a curated dataset of 4,000 image-dialogue pairs. Crucially,
+    we use a synthetic-to-real training strategy: we train on high-quality podcast dialogues from the
+    Structured Podcast Research Corpus (SPoRC) paired with synthetically generated imagery, and evaluate
+    on real-world photo sequences from the Visual Storytelling Dataset (VIST). This rigorous setup tests
+    the model''s ability to generalize from synthetic training data to real-world visual domains. We propose
+    a comprehensive evaluation framework that moves beyond textual overlap, and use AI-as-a-judge (Gemini
+    3 Pro, Claude Opus 4.5, GPT 5.2) and novel style metrics (average turn length, speaker switch rate)
+    to assess quality. Our experiments demonstrate that our fine-tuned 32B model significantly outperforms
+    a 235B base model in conversational naturalness ($>$80\% win rate) and narrative depth (+50\% turn
+    length), while maintaining identical visual grounding capabilities (CLIPScore: 20.39).'
+  url: https://arxiv.org/abs/2601.01062
+  pdf_url: https://arxiv.org/pdf/2601.01062v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 0
+citation_year: 2026

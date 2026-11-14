@@ -1,0 +1,38 @@
+id: paper:arxiv:2508.04485
+status: skipped
+score: 1
+track: processing_enhancement
+matched:
+- ref: concept:SuperResolution
+  count: 1
+  weight: 1
+meta:
+  title: 'QuantVSR: Low-Bit Post-Training Quantization for Real-World Video Super-Resolution'
+  authors:
+  - Bowen Chai
+  - Zheng Chen
+  - Libo Zhu
+  - Wenbo Li
+  - Yong Guo
+  - Yulun Zhang
+  published: '2025-08-06'
+  updated: '2026-02-04'
+  categories:
+  - cs.CV
+  abstract: 'Diffusion models have shown superior performance in real-world video super-resolution (VSR).
+    However, the slow processing speeds and heavy resource consumption of diffusion models hinder their
+    practical application and deployment. Quantization offers a potential solution for compressing the
+    VSR model. Nevertheless, quantizing VSR models is challenging due to their temporal characteristics
+    and high fidelity requirements. To address these issues, we propose QuantVSR, a low-bit quantization
+    model for real-world VSR. We propose a spatio-temporal complexity aware (STCA) mechanism, where we
+    first utilize the calibration dataset to measure both spatial and temporal complexities for each layer.
+    Based on these statistics, we allocate layer-specific ranks to the low-rank full-precision (FP) auxiliary
+    branch. Subsequently, we jointly refine the FP and low-bit branches to achieve simultaneous optimization.
+    In addition, we propose a learnable bias alignment (LBA) module to reduce the biased quantization
+    errors. Extensive experiments on synthetic and real-world datasets demonstrate that our method obtains
+    comparable performance with the FP model and significantly outperforms recent leading low-bit quantization
+    methods. Code is available at: https://github.com/bowenchai/QuantVSR.'
+  url: https://arxiv.org/abs/2508.04485
+  pdf_url: https://arxiv.org/pdf/2508.04485v2
+  version: v2
+fetched: '2026-11-14'

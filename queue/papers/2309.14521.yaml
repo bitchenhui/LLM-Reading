@@ -1,0 +1,38 @@
+id: paper:arxiv:2309.14521
+status: pending
+score: 3
+track: audio_coding
+matched:
+- ref: codec:Opus
+  count: 2
+  weight: 3
+meta:
+  title: 'NoLACE: Improving Low-Complexity Speech Codec Enhancement Through Adaptive Temporal Shaping'
+  authors:
+  - Jan Büthe
+  - Ahmed Mustafa
+  - Jean-Marc Valin
+  - Karim Helwani
+  - Michael M. Goodwin
+  published: '2023-09-25'
+  updated: '2024-01-12'
+  categories:
+  - eess.AS
+  - cs.SD
+  abstract: Speech codec enhancement methods are designed to remove distortions added by speech codecs.
+    While classical methods are very low in complexity and add zero delay, their effectiveness is rather
+    limited. Compared to that, DNN-based methods deliver higher quality but they are typically high in
+    complexity and/or require delay. The recently proposed Linear Adaptive Coding Enhancer (LACE) addresses
+    this problem by combining DNNs with classical long-term/short-term postfiltering resulting in a causal
+    low-complexity model. A short-coming of the LACE model is, however, that quality quickly saturates
+    when the model size is scaled up. To mitigate this problem, we propose a novel adatpive temporal shaping
+    module that adds high temporal resolution to the LACE model resulting in the Non-Linear Adaptive Coding
+    Enhancer (NoLACE). We adapt NoLACE to enhance the Opus codec and show that NoLACE significantly outperforms
+    both the Opus baseline and an enlarged LACE model at 6, 9 and 12 kb/s. We also show that LACE and
+    NoLACE are well-behaved when used with an ASR system.
+  url: https://arxiv.org/abs/2309.14521
+  pdf_url: https://arxiv.org/pdf/2309.14521v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 8
+citation_year: 2023

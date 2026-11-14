@@ -1,0 +1,49 @@
+id: paper:arxiv:2605.24652
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'AVBench: Human-Aligned and Automated Evaluation Benchmark for Audio-Video Generative Models'
+  authors:
+  - Jialiang Yang
+  - Bin Xia
+  - Ruihang Chu
+  - Dingdong Wang
+  - Wanke Xia
+  - Zhun Mou
+  - Tianyang Zhong
+  - Yiting Zhao
+  - Wenming Yang
+  published: '2026-05-23'
+  updated: '2026-05-23'
+  categories:
+  - cs.AI
+  - cs.CV
+  - cs.MM
+  - cs.SD
+  abstract: 'Rapid advances in audio-video (AV) generation have enabled high-fidelity synthesis with synchronized
+    sound, particularly for human-related scenarios involving speech and interactions. Yet evaluation
+    for AV generation remains at an early stage, with only a few coarse-grained benchmarks for human-related
+    scenarios and relying on limited preset evaluations with generic multimodal LLMs, leading to inaccurate
+    assessments of model capabilities. To address these issues, we introduce AVBench, a fully automated
+    benchmark tailored for human-centric AV generation. AVBench is built on two key designs for comprehensive
+    and accurate evaluation: (i) Human-centric and fine-grained metrics. AVBench integrates ten evaluation
+    dimensions designed for human-centered real-world scenarios, covering visual quality, audio quality,
+    and multi-level consistency across modalities. These practical metrics capture human-related details
+    that existing benchmarks often overlook. (ii) Specialized evaluators via preference learning. To address
+    the lack of specialized training data, we construct large-scale supervision by transforming real-world
+    videos into diverse training pairs with controlled perturbations. After fine-tuning on this high-quality
+    dataset, the evaluators learn to reliably detect subtle cross-modal inconsistencies. Crucially, instead
+    of producing discrete textual judgment, AVBench derives continuous evaluation scores from the model''s
+    prediction confidence on binary decisions. This probabilistic scoring mechanism enables a more reliable
+    assessment than traditional VQA-style evaluation and aligns closely with human judgment. Taken together,
+    AVBench offers automated evaluation for AV generation, demonstrates strong potential for data filtering,
+    and serves as a differentiable reward signal for Reinforcement Learning from Human Feedback (RLHF).'
+  url: https://arxiv.org/abs/2605.24652
+  pdf_url: https://arxiv.org/pdf/2605.24652v1
+  version: v1
+fetched: '2026-11-14'

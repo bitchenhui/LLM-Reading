@@ -1,0 +1,30 @@
+id: paper:arxiv:2505.05654
+status: skipped
+score: 1
+track: audio_coding
+matched:
+- ref: concept:NeuralAudioCodec
+  count: 1
+  weight: 1
+meta:
+  title: Toward a Sparse and Interpretable Audio Codec
+  authors:
+  - John Vinyard
+  published: '2025-05-08'
+  updated: '2025-05-08'
+  categories:
+  - cs.SD
+  - eess.AS
+  abstract: Most widely-used modern audio codecs, such as Ogg Vorbis and MP3, as well as more recent "neural"
+    codecs like Meta's Encodec or the Descript Audio Codec are based on block-coding; audio is divided
+    into overlapping, fixed-size "frames" which are then compressed. While they often yield excellent
+    reproductions and can be used for downstream tasks such as text-to-audio, they do not produce an intuitive,
+    directly-interpretable representation. In this work, we introduce a proof-of-concept audio encoder
+    that represents audio as a sparse set of events and their times-of-occurrence. Rudimentary physics-based
+    assumptions are used to model attack and the physical resonance of both the instrument being played
+    and the room in which a performance occurs, hopefully encouraging a sparse, parsimonious, and easy-to-interpret
+    representation.
+  url: https://arxiv.org/abs/2505.05654
+  pdf_url: https://arxiv.org/pdf/2505.05654v1
+  version: v1
+fetched: '2026-11-14'

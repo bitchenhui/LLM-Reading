@@ -1,0 +1,40 @@
+id: paper:arxiv:2409.19283
+status: skipped
+score: 1
+track: audio_coding
+matched:
+- ref: concept:NeuralAudioCodec
+  count: 2
+  weight: 1
+meta:
+  title: Analyzing and Mitigating Inconsistency in Discrete Audio Tokens for Neural Codec Language Models
+  authors:
+  - Wenrui Liu
+  - Zhifang Guo
+  - Jin Xu
+  - Yuanjun Lv
+  - Yunfei Chu
+  - Zhou Zhao
+  - Junyang Lin
+  published: '2024-09-28'
+  updated: '2024-10-04'
+  categories:
+  - eess.AS
+  - cs.SD
+  abstract: Building upon advancements in Large Language Models (LLMs), the field of audio processing
+    has seen increased interest in training audio generation tasks with discrete audio token sequences.
+    However, directly discretizing audio by neural audio codecs often results in sequences that fundamentally
+    differ from text sequences. Unlike text, where text token sequences are deterministic, discrete audio
+    tokens can exhibit significant variability based on contextual factors, while still producing perceptually
+    identical audio segments. We refer to this phenomenon as \textbf{Discrete Representation Inconsistency
+    (DRI)}. This inconsistency can lead to a single audio segment being represented by multiple divergent
+    sequences, which creates confusion in neural codec language models and results in omissions and repetitions
+    during speech generation. In this paper, we quantitatively analyze the DRI phenomenon within popular
+    audio tokenizers such as EnCodec. Our approach effectively mitigates the DRI phenomenon of the neural
+    audio codec. Furthermore, extensive experiments on the neural codec language model over LibriTTS and
+    large-scale MLS datases (44,000 hours) demonstrate the effectiveness and generality of our method.
+    The demo of audio samples is available online~\footnote{\url{https://consistencyinneuralcodec.github.io}}.
+  url: https://arxiv.org/abs/2409.19283
+  pdf_url: https://arxiv.org/pdf/2409.19283v2
+  version: v2
+fetched: '2026-11-14'

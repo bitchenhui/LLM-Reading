@@ -1,0 +1,42 @@
+id: paper:arxiv:2504.00613
+status: pending
+score: 2
+track: self_improvement
+matched:
+- ref: concept:LLM
+  count: 2
+  weight: 1
+- ref: concept:FunSearch
+  count: 1
+  weight: 1
+meta:
+  title: LLM-Guided Search for Deletion-Correcting Codes
+  authors:
+  - Franziska Weindel
+  - Reinhard Heckel
+  published: '2025-04-01'
+  updated: '2026-06-05'
+  categories:
+  - cs.AI
+  - cs.IT
+  - cs.NE
+  abstract: Finding deletion-correcting codes of maximum size has been an open problem for over 70 years,
+    even for a single deletion. We adapt FunSearch, a large language model (LLM)-guided evolutionary search,
+    to discover functions that construct deletion-correcting codes at short code lengths. For a single
+    deletion, our search finds a function that we prove constructs the conjectured-optimal Varshamov-Tenengolts
+    code. For multiple deletions and quaternary edit codes, the discovered functions improve on prior
+    explicit, search-based, and neural constructions but remain empirical heuristics without new theoretical
+    insights. We study design choices for LLM-guided evolutionary search and find that, for our problem,
+    compute is better allocated to sampling more functions than to longer reasoning traces per function,
+    and that co-evolving natural language descriptions with code hurts search quality. We propose deduplicating
+    logically identical functions during evolution, which we find critical for search diversity. Our results
+    demonstrate the potential of LLM-guided evolutionary search for information theory and code design
+    and represent the first application of such methods for constructing error-correcting codes. However,
+    in our current formulation, evaluating a function scales exponentially with code length, limiting
+    the approach to short codes.
+  url: https://arxiv.org/abs/2504.00613
+  pdf_url: https://arxiv.org/pdf/2504.00613v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 5
+citation_year: 2025

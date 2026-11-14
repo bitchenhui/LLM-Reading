@@ -1,0 +1,50 @@
+id: paper:arxiv:2608.10505
+status: pending
+score: 2
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: 'RadFusion: Towards Threshold-Controllable Radiology Report Generation'
+  authors:
+  - Ying Jin
+  - Noel C. F. Codella
+  - John Corring
+  - Mu Wei
+  - Dinei Florencio
+  - Eric Horvitz
+  published: '2026-08-11'
+  updated: '2026-08-11'
+  categories:
+  - cs.AI
+  - cs.CL
+  - cs.CV
+  abstract: 'Automated radiology report generation is advancing rapidly in response to the shortage of
+    radiologists, yet unlike a perception model, existing generation models offer no control over the
+    sensitivity-specificity trade-off of their diagnostic content. Such control is essential because clinical
+    scenarios diverge: emergency triage prioritizes sensitivity to reduce missed findings, whereas confirmatory
+    interpretation emphasizes specificity to limit unnecessary interventions. A single fixed report can
+    neither adapt to these scenarios nor support the ROC-based validation widely expected for regulatory
+    clearance. We introduce RadFusion, a framework that equips report generation with threshold controllability.
+    Our method fuses a multi-label classifier, which provides per-disease confidence scores, with a VQA-based
+    report generator, which describes medical findings in detail; an LLM then rewrites the report so that
+    its stated diagnoses follow the classifier''s decisions at the selected threshold while staying grounded
+    in the generator''s descriptions. On MIMIC-CXR, the performance of RadFusion conforms to the classifier''s
+    ROC curve: sweeping the threshold and mapping the reports back to class labels reproduces the classifier''s
+    validated ROC performance. This conformance makes generated reports quantitatively evaluable through
+    ROC analysis, strengthening the case for regulatory clearance, and enables operating-point selection
+    that matches report behavior to clinical context. Moreover, combining the two model types improves
+    diagnostic accuracy over uncontrolled generation: sensitivity increases by 6.9% at matched specificity,
+    and specificity by 20.7% at matched sensitivity. These results show that RadFusion makes report generation
+    clinically adaptable, quantitatively verifiable, and diagnostically more reliable.'
+  url: https://arxiv.org/abs/2608.10505
+  pdf_url: https://arxiv.org/pdf/2608.10505v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 0
+citation_year: 2026

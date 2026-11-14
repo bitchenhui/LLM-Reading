@@ -1,0 +1,47 @@
+id: paper:arxiv:2505.18197
+status: skipped_low_citation
+score: 5
+track: immersive_media
+matched:
+- ref: codec:G-PCC
+  count: 2
+  weight: 3
+- ref: concept:3DGS
+  count: 4
+  weight: 1
+- ref: org:MPEG
+  count: 1
+  weight: 1
+meta:
+  title: A Novel Benchmark and Dataset for Efficient 3D Gaussian Splatting with Gaussian Point Cloud Compression
+  authors:
+  - Kangli Wang
+  - Shihao Li
+  - Qianxi Yi
+  - Wei Gao
+  published: '2025-05-21'
+  updated: '2025-05-21'
+  categories:
+  - cs.GR
+  abstract: Recently, immersive media and autonomous driving applications have significantly advanced
+    through 3D Gaussian Splatting (3DGS), which offers high-fidelity rendering and computational efficiency.
+    Despite these advantages, 3DGS as a display-oriented representation requires substantial storage due
+    to its numerous Gaussian attributes. Current compression methods have shown promising results but
+    typically neglect the compression of Gaussian spatial positions, creating unnecessary bitstream overhead.
+    We conceptualize Gaussian primitives as point clouds and propose leveraging point cloud compression
+    techniques for more effective storage. AI-based point cloud compression demonstrates superior performance
+    and faster inference compared to MPEG Geometry-based Point Cloud Compression (G-PCC). However, direct
+    application of existing models to Gaussian compression may yield suboptimal results, as Gaussian point
+    clouds tend to exhibit globally sparse yet locally dense geometric distributions that differ from
+    conventional point cloud characteristics. To address these challenges, we introduce GausPcgc for Gaussian
+    point cloud geometry compression along with a specialized training dataset GausPcc-1K. Our work pioneers
+    the integration of AI-based point cloud compression into Gaussian compression pipelines, achieving
+    superior compression ratios. The framework complements existing Gaussian compression methods while
+    delivering significant performance improvements. All code, data, and pre-trained models will be publicly
+    released to facilitate further research advances in this field.
+  url: https://arxiv.org/abs/2505.18197
+  pdf_url: https://arxiv.org/pdf/2505.18197v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 3
+citation_year: 2025

@@ -1,0 +1,50 @@
+id: paper:arxiv:2609.25510
+status: pending
+score: 3
+track: self_improvement
+matched:
+- ref: concept:AlphaEvolve
+  count: 1
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+- ref: org:NVIDIA
+  count: 1
+  weight: 1
+meta:
+  title: 'Hill Sampling for Test-Time Scaling: A Simple and Better Alternative to Repeated Sampling, Evolution,
+    and Training'
+  authors:
+  - Jacob Beck
+  - Philip V. Ogren
+  - Ari Kobren
+  published: '2026-09-22'
+  updated: '2026-09-25'
+  categories:
+  - cs.LG
+  - cs.AI
+  abstract: 'Large language models (LLMs) can improve solutions to verifiable scientific and algorithmic
+    problems by spending additional computation at test time. Recent systems achieve strong results with
+    increasingly elaborate evolutionary search harnesses or by updating model parameters during test-time
+    training. We ask how much of this machinery is necessary. We introduce Hill Sampling, a form of hill-climbing
+    optimization that repeatedly samples candidate programs from a frozen LLM, retains the best program
+    found so far, and conditions all subsequent samples on that program. We evaluate the method on circle
+    packing, sums and differences of sets, and Erdos'' minimum-overlap problem using three open-weight
+    models. Hill Sampling sets a new state of the art on circle packing among published methods, improves
+    over the AlphaEvolve reference on Erdos'' minimum-overlap problem, and achieves strong results on
+    sums and differences of finite sets. The circle-packing and Erdos results require only hours of wall-clock
+    time on eight NVIDIA H100 GPUs. We compare Hill Sampling against what is, to our knowledge, the largest
+    application by parameter count of evolution strategies (ES) to LLM weights at test time. Surprisingly,
+    when evaluating a method by the best program it generates, we find that learning model weights via
+    ES is worse than invoking ES with a learning rate set to zero, i.e., using random weight-space perturbations
+    to search for better models. Moreover, repeated sampling outperforms both ES methods, and Hill Sampling
+    is the strongest of all. These results suggest a simple test-time compute allocation strategy: repeatedly
+    sample edits to the best verified solution found so far before introducing additional complexity,
+    such as adding archives, diversity mechanisms, evolutionary scaffolds, or test-time parameter learning.'
+  url: https://arxiv.org/abs/2609.25510
+  pdf_url: https://arxiv.org/pdf/2609.25510v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 1
+citation_year: 2026

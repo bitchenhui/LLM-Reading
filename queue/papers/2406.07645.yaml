@@ -1,0 +1,37 @@
+id: paper:arxiv:2406.07645
+status: skipped
+score: 1
+track: video_image_coding
+matched:
+- ref: concept:EntropyModel
+  count: 1
+  weight: 1
+meta:
+  title: 'SSNVC: Single Stream Neural Video Compression with Implicit Temporal Information'
+  authors:
+  - Feng Wang
+  - Haihang Ruan
+  - Zhihuang Xie
+  - Ronggang Wang
+  - Xiangyu Yue
+  published: '2024-06-11'
+  updated: '2024-06-11'
+  categories:
+  - cs.CV
+  - cs.MM
+  abstract: Recently, Neural Video Compression (NVC) techniques have achieved remarkable performance,
+    even surpassing the best traditional lossy video codec. However, most existing NVC methods heavily
+    rely on transmitting Motion Vector (MV) to generate accurate contextual features, which has the following
+    drawbacks. (1) Compressing and transmitting MV requires specialized MV encoder and decoder, which
+    makes modules redundant. (2) Due to the existence of MV Encoder-Decoder, the training strategy is
+    complex. In this paper, we present a noval Single Stream NVC framework (SSNVC), which removes complex
+    MV Encoder-Decoder structure and uses a one-stage training strategy. SSNVC implicitly use temporal
+    information by adding previous entropy model feature to current entropy model and using previous two
+    frame to generate predicted motion information at the decoder side. Besides, we enhance the frame
+    generator to generate higher quality reconstructed frame. Experiments demonstrate that SSNVC can achieve
+    state-of-the-art performance on multiple benchmarks, and can greatly simplify compression process
+    as well as training process.
+  url: https://arxiv.org/abs/2406.07645
+  pdf_url: https://arxiv.org/pdf/2406.07645v1
+  version: v1
+fetched: '2026-11-14'

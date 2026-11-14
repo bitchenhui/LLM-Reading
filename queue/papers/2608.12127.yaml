@@ -1,0 +1,51 @@
+id: paper:arxiv:2608.12127
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'SCOPE-Router: Cost-Aware Open-Set VLM Routing for Execution-Oriented Tasks'
+  authors:
+  - Tao Yu
+  - Yifei Qu
+  - Zhiqing Cui
+  - Pengfei Zhou
+  - Zhongtian Luo
+  - Yujia Yang
+  - Shenghua Chai
+  - Haopeng Jin
+  - Zhenghao Zhang
+  - Xinming Wang
+  - Hongzhu Yi
+  - Wangbo Zhao
+  - Zhenglin Wan
+  - Yan Huang
+  - ' Yeshani'
+  - Jinwen Luo
+  - Yang You
+  published: '2026-08-12'
+  updated: '2026-08-19'
+  categories:
+  - cs.CV
+  abstract: 'Model routing aims to select the most suitable model from a candidate pool for each query,
+    balancing quality and cost. Existing VLM routing research is limited to traditional VQA evaluation,
+    lacks systematic calibration optimization for open-set scenarios, and employs training objectives
+    that dilute multi-positive signals via softmax normalization without incorporating cost. We address
+    these limitations with three contributions: (1)VLM-ExecRouterBench, the first execution-oriented VLM
+    routing benchmark covering Code, Agentic, and Search domains with 11 candidate models spanning nearly
+    two orders of magnitude in pricing; (2)SCOPE-Router, a dual-tower router that matches queries to model
+    behavior profiles constructed via hybrid calibration (random/diagnostic/diversity sampling), enabling
+    new models to join routing without retraining; (3)CRM+RCCR, an architecture-agnostic cost-aware objective
+    that encodes cost preference into continuous relevance targets through per-pair independent scoring,
+    eliminating multi-positive dilution while regularizing queries with similar routing preferences to
+    be closer in the routing space. Empirically, SCOPE-Router achieves the best Rank Score on all three
+    benchmarks, surpassing the runner-up by 1.84 points under OOD settings and by 6.75 points under doubly
+    OOD open-set evaluation. When applied to four diverse routers, CRM+RCCR improves Rank Score by 1.25--6.21
+    points.'
+  url: https://arxiv.org/abs/2608.12127
+  pdf_url: https://arxiv.org/pdf/2608.12127v2
+  version: v2
+fetched: '2026-11-14'

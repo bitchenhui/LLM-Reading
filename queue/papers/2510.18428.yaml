@@ -1,0 +1,57 @@
+id: paper:arxiv:2510.18428
+status: pending
+score: 2
+track: self_improvement
+matched:
+- ref: concept:LLM
+  count: 1
+  weight: 1
+- ref: concept:SelfImprovement
+  count: 1
+  weight: 1
+meta:
+  title: 'AlphaOPT: Formulating Optimization Programs with Self-Improving LLM Experience Library'
+  authors:
+  - Minwei Kong
+  - Ao Qu
+  - Xiaotong Guo
+  - Wenbin Ouyang
+  - Chonghe Jiang
+  - Han Zheng
+  - Yining Ma
+  - Dingyi Zhuang
+  - Yuhan Tang
+  - Junyi Li
+  - Shenhao Wang
+  - Haris Koutsopoulos
+  - Hai Wang
+  - Cathy Wu
+  - Jinhua Zhao
+  published: '2025-10-21'
+  updated: '2026-06-07'
+  categories:
+  - cs.AI
+  abstract: 'Optimization modeling underlies critical decision-making across industries, yet remains difficult
+    to automate: natural-language problem descriptions must be translated into precise mathematical formulations
+    and executable solver code. Existing LLM-based approaches typically rely on brittle prompting or costly
+    retraining, both of which offer limited generalization. Recent work suggests that large models can
+    improve via experience reuse, but how to systematically acquire, refine, and reuse such experience
+    in structurally constrained settings remains unclear. We present \textbf{AlphaOPT}, a self-improving
+    experience library that enables LLMs to learn optimization modeling knowledge from limited supervision,
+    including answer-only feedback without gold-standard programs, annotated reasoning traces, or parameter
+    updates. AlphaOPT operates in a continual two-phase cycle: a \emph{Library Learning} phase that extracts
+    solver-verified, structured insights from failed attempts, and a \emph{Library Evolution} phase that
+    refines the applicability of stored insights based on aggregate evidence across tasks. This design
+    allows the model to accumulate reusable modeling principles, improve transfer across problem instances,
+    and maintain bounded library growth over time. Evaluated on multiple optimization benchmarks, AlphaOPT
+    steadily improves as more training data become available (65\% $\rightarrow$ 72\% from 100 to 300
+    training items) and outperforms the strongest baseline by 9.1\% and 8.2\% on two out-of-distribution
+    datasets. These results demonstrate that structured experience learning, grounded in solver feedback,
+    provides a practical alternative to retraining for complex reasoning tasks requiring precise formulation
+    and execution. All code and data are available at: https://github.com/Minw913/AlphaOPT.'
+  url: https://arxiv.org/abs/2510.18428
+  pdf_url: https://arxiv.org/pdf/2510.18428v4
+  version: v4
+fetched: '2026-11-14'
+citation_count: 18
+citation_year: 2025

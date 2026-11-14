@@ -1,0 +1,43 @@
+id: paper:arxiv:2410.16128
+status: skipped
+score: 1
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+meta:
+  title: 'SMART: Self-learning Meta-strategy Agent for Reasoning Tasks'
+  authors:
+  - Rongxing Liu
+  - Kumar Shridhar
+  - Manish Prajapat
+  - Patrick Xia
+  - Mrinmaya Sachan
+  published: '2024-10-21'
+  updated: '2024-10-21'
+  categories:
+  - cs.AI
+  - cs.LG
+  abstract: 'Tasks requiring deductive reasoning, especially those involving multiple steps, often demand
+    adaptive strategies such as intermediate generation of rationales or programs, as no single approach
+    is universally optimal. While Language Models (LMs) can enhance their outputs through iterative self-refinement
+    and strategy adjustments, they frequently fail to apply the most effective strategy in their first
+    attempt. This inefficiency raises the question: Can LMs learn to select the optimal strategy in the
+    first attempt, without a need for refinement? To address this challenge, we introduce SMART (Self-learning
+    Meta-strategy Agent for Reasoning Tasks), a novel framework that enables LMs to autonomously learn
+    and select the most effective strategies for various reasoning tasks. We model the strategy selection
+    process as a Markov Decision Process and leverage reinforcement learning-driven continuous self-improvement
+    to allow the model to find the suitable strategy to solve a given task. Unlike traditional self-refinement
+    methods that rely on multiple inference passes or external feedback, SMART allows an LM to internalize
+    the outcomes of its own reasoning processes and adjust its strategy accordingly, aiming for correct
+    solutions on the first attempt. Our experiments across various reasoning datasets and with different
+    model architectures demonstrate that SMART significantly enhances the ability of models to choose
+    optimal strategies without external guidance (+15 points on the GSM8K dataset). By achieving higher
+    accuracy with a single inference pass, SMART not only improves performance but also reduces computational
+    costs for refinement-based strategies, paving the way for more efficient and intelligent reasoning
+    in LMs.'
+  url: https://arxiv.org/abs/2410.16128
+  pdf_url: https://arxiv.org/pdf/2410.16128v1
+  version: v1
+fetched: '2026-11-14'

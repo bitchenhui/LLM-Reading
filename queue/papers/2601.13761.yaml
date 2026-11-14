@@ -1,0 +1,41 @@
+id: paper:arxiv:2601.13761
+status: pending
+score: 2
+track: self_improvement
+matched:
+- ref: concept:LLM
+  count: 1
+  weight: 1
+- ref: concept:SelfImprovement
+  count: 1
+  weight: 1
+meta:
+  title: 'DARC: Decoupled Asymmetric Reasoning Curriculum for LLM Evolution'
+  authors:
+  - Shengda Fan
+  - Xuyan Ye
+  - Yankai Lin
+  published: '2026-01-20'
+  updated: '2026-01-21'
+  categories:
+  - cs.AI
+  - cs.CL
+  abstract: Self-play with large language models has emerged as a promising paradigm for achieving self-improving
+    artificial intelligence. However, existing self-play frameworks often suffer from optimization instability,
+    due to (i) non-stationary objectives induced by solver-dependent reward feedback for the Questioner,
+    and (ii) bootstrapping errors from self-generated pseudo-labels used to supervise the Solver. To mitigate
+    these challenges, we introduce DARC (Decoupled Asymmetric Reasoning Curriculum), a two-stage framework
+    that stabilizes the self-evolution process. First, we train the Questioner to synthesize difficulty-calibrated
+    questions, conditioned on explicit difficulty levels and external corpora. Second, we train the Solver
+    with an asymmetric self-distillation mechanism, where a document-augmented teacher generates high-quality
+    pseudo-labels to supervise the student Solver that lacks document access. Empirical results demonstrate
+    that DARC is model-agnostic, yielding an average improvement of 10.9 points across nine reasoning
+    benchmarks and three backbone models. Moreover, DARC consistently outperforms all baselines and approaches
+    the performance of fully supervised models without relying on human annotations. The code is available
+    at https://github.com/RUCBM/DARC.
+  url: https://arxiv.org/abs/2601.13761
+  pdf_url: https://arxiv.org/pdf/2601.13761v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 7
+citation_year: 2026

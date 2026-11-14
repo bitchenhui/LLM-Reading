@@ -1,0 +1,44 @@
+id: paper:arxiv:2405.07717
+status: skipped
+score: 1
+track: video_image_coding
+matched:
+- ref: concept:Hyperprior
+  count: 1
+  weight: 1
+meta:
+  title: On the Adversarial Robustness of Learning-based Image Compression Against Rate-Distortion Attacks
+  authors:
+  - Chenhao Wu
+  - Qingbo Wu
+  - Haoran Wei
+  - Shuai Chen
+  - Lei Wang
+  - King Ngi Ngan
+  - Fanman Meng
+  - Hongliang Li
+  published: '2024-05-13'
+  updated: '2024-07-04'
+  categories:
+  - eess.IV
+  abstract: Despite demonstrating superior rate-distortion (RD) performance, learning-based image compression
+    (LIC) algorithms have been found to be vulnerable to malicious perturbations in recent studies. However,
+    the adversarial attacks considered in existing literature remain divergent from real-world scenarios,
+    both in terms of the attack direction and bitrate. Additionally, existing methods focus solely on
+    empirical observations of the model vulnerability, neglecting to identify the origin of it. These
+    limitations hinder the comprehensive investigation and in-depth understanding of the adversarial robustness
+    of LIC algorithms. To address the aforementioned issues, this paper considers the arbitrary nature
+    of the attack direction and the uncontrollable compression ratio faced by adversaries, and presents
+    two practical rate-distortion attack paradigms, i.e., Specific-ratio Rate-Distortion Attack (SRDA)
+    and Agnostic-ratio Rate-Distortion Attack (ARDA). Using the performance variations as indicators,
+    we evaluate the adversarial robustness of eight predominant LIC algorithms against diverse attacks.
+    Furthermore, we propose two novel analytical tools for in-depth analysis, i.e., Entropy Causal Intervention
+    and Layer-wise Distance Magnify Ratio, and reveal that hyperprior significantly increases the bitrate
+    and Inverse Generalized Divisive Normalization (IGDN) significantly amplifies input perturbations
+    when under attack. Lastly, we examine the efficacy of adversarial training and introduce the use of
+    online updating for defense. By comparing their advantages and disadvantages, we provide a reference
+    for constructing more robust LIC algorithms against the rate-distortion attacks.
+  url: https://arxiv.org/abs/2405.07717
+  pdf_url: https://arxiv.org/pdf/2405.07717v2
+  version: v2
+fetched: '2026-11-14'

@@ -1,0 +1,33 @@
+id: paper:arxiv:2310.06412
+status: skipped
+score: 0
+track: video_image_coding
+matched: []
+meta:
+  title: Encoder-Decoder-Based Intra-Frame Block Partitioning Decision
+  authors:
+  - Yucheng Jiang
+  - Han Peng
+  - Yan Song
+  - Jie Yu
+  - Peng Zhang
+  - Songping Mai
+  published: '2023-10-10'
+  updated: '2023-10-10'
+  categories:
+  - cs.MM
+  abstract: The recursive intra-frame block partitioning decision process, a crucial component of the
+    next-generation video coding standards, exerts significant influence over the encoding time. In this
+    paper, we propose an encoder-decoder neural network (NN) to accelerate this process. Specifically,
+    a CNN is utilized to compress the pixel data of the largest coding unit (LCU) into a fixed-length
+    vector. Subsequently, a Transformer decoder is employed to transcribe the fixed-length vector into
+    a variable-length vector, which represents the block partitioning outcomes of the encoding LCU. The
+    vector transcription process adheres to the constraints imposed by the block partitioning algorithm.
+    By fully parallelizing the NN prediction in the intra-mode decision, substantial time savings can
+    be attained during the decision phase. The experimental results obtained from high-definition (HD)
+    sequences coding demonstrate that this framework achieves a remarkable 87.84\% reduction in encoding
+    time, with a relatively small loss (8.09\%) of coding performance compared to AVS3 HPM4.0.
+  url: https://arxiv.org/abs/2310.06412
+  pdf_url: https://arxiv.org/pdf/2310.06412v1
+  version: v1
+fetched: '2026-11-14'

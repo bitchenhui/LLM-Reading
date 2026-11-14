@@ -1,0 +1,40 @@
+id: paper:arxiv:2406.00758
+status: skipped
+score: 0
+track: video_image_coding
+matched: []
+meta:
+  title: 'Once-for-All: Controllable Generative Image Compression with Dynamic Granularity Adaptation'
+  authors:
+  - Anqi Li
+  - Feng Li
+  - Yuxi Liu
+  - Runmin Cong
+  - Yao Zhao
+  - Huihui Bai
+  published: '2024-06-02'
+  updated: '2025-07-19'
+  categories:
+  - eess.IV
+  - cs.CV
+  - cs.MM
+  abstract: Although recent generative image compression methods have demonstrated impressive potential
+    in optimizing the rate-distortion-perception trade-off, they still face the critical challenge of
+    flexible rate adaption to diverse compression necessities and scenarios. To overcome this challenge,
+    this paper proposes a Controllable Generative Image Compression framework, termed Control-GIC, the
+    first capable of fine-grained bitrate adaption across a broad spectrum while ensuring high-fidelity
+    and generality compression. Control-GIC is grounded in a VQGAN framework that encodes an image as
+    a sequence of variable-length codes (i.e. VQ-indices), which can be losslessly compressed and exhibits
+    a direct positive correlation with the bitrates. Drawing inspiration from the classical coding principle,
+    we correlate the information density of local image patches with their granular representations. Hence,
+    we can flexibly determine a proper allocation of granularity for the patches to achieve dynamic adjustment
+    for VQ-indices, resulting in desirable compression rates. We further develop a probabilistic conditional
+    decoder capable of retrieving historic encoded multi-granularity representations according to transmitted
+    codes, and then reconstruct hierarchical granular features in the formalization of conditional probability,
+    enabling more informative aggregation to improve reconstruction realism. Our experiments show that
+    Control-GIC allows highly flexible and controllable bitrate adaption where the results demonstrate
+    its superior performance over recent state-of-the-art methods. Code is available at https://github.com/lianqi1008/Control-GIC.
+  url: https://arxiv.org/abs/2406.00758
+  pdf_url: https://arxiv.org/pdf/2406.00758v4
+  version: v4
+fetched: '2026-11-14'

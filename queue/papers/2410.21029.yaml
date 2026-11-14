@@ -1,0 +1,44 @@
+id: paper:arxiv:2410.21029
+status: skipped_low_citation
+score: 2
+track: streaming_delivery
+matched:
+- ref: concept:QoE
+  count: 3
+  weight: 1
+- ref: concept:ABR
+  count: 2
+  weight: 1
+meta:
+  title: 'FairStream: Fair Multimedia Streaming Benchmark for Reinforcement Learning Agents'
+  authors:
+  - Jannis Weil
+  - Jonas Ringsdorf
+  - Julian Barthel
+  - Yi-Ping Phoebe Chen
+  - Tobias Meuser
+  published: '2024-10-28'
+  updated: '2024-10-28'
+  categories:
+  - cs.MA
+  - cs.AI
+  - cs.MM
+  abstract: 'Multimedia streaming accounts for the majority of traffic in today''s internet. Mechanisms
+    like adaptive bitrate streaming control the bitrate of a stream based on the estimated bandwidth,
+    ideally resulting in smooth playback and a good Quality of Experience (QoE). However, selecting the
+    optimal bitrate is challenging under volatile network conditions. This motivated researchers to train
+    Reinforcement Learning (RL) agents for multimedia streaming. The considered training environments
+    are often simplified, leading to promising results with limited applicability. Additionally, the QoE
+    fairness across multiple streams is seldom considered by recent RL approaches. With this work, we
+    propose a novel multi-agent environment that comprises multiple challenges of fair multimedia streaming:
+    partial observability, multiple objectives, agent heterogeneity and asynchronicity. We provide and
+    analyze baseline approaches across five different traffic classes to gain detailed insights into the
+    behavior of the considered agents, and show that the commonly used Proximal Policy Optimization (PPO)
+    algorithm is outperformed by a simple greedy heuristic. Future work includes the adaptation of multi-agent
+    RL algorithms and further expansions of the environment.'
+  url: https://arxiv.org/abs/2410.21029
+  pdf_url: https://arxiv.org/pdf/2410.21029v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 0
+citation_year: 2024

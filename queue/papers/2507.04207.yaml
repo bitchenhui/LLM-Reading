@@ -1,0 +1,40 @@
+id: paper:arxiv:2507.04207
+status: skipped_low_citation
+score: 2
+track: processing_enhancement
+matched:
+- ref: concept:SuperResolution
+  count: 1
+  weight: 1
+- ref: dataset:ImageNet
+  count: 1
+  weight: 1
+meta:
+  title: Quick Bypass Mechanism of Zero-Shot Diffusion-Based Image Restoration
+  authors:
+  - Yu-Shan Tai
+  - ' An-Yeu'
+  - ' Wu'
+  published: '2025-07-06'
+  updated: '2025-07-06'
+  categories:
+  - cs.CV
+  abstract: Recent advancements in diffusion models have demonstrated remarkable success in various image
+    generation tasks. Building upon these achievements, diffusion models have also been effectively adapted
+    to image restoration tasks, e.g., super-resolution and deblurring, aiming to recover high-quality
+    images from degraded inputs. Although existing zero-shot approaches enable pretrained diffusion models
+    to perform restoration tasks without additional fine-tuning, these methods often suffer from prolonged
+    iteration times in the denoising process. To address this limitation, we propose a Quick Bypass Mechanism
+    (QBM), a strategy that significantly accelerates the denoising process by initializing from an intermediate
+    approximation, effectively bypassing early denoising steps. Furthermore, recognizing that approximation
+    may introduce inconsistencies, we introduce a Revised Reverse Process (RRP), which adjusts the weighting
+    of random noise to enhance the stochasticity and mitigate potential disharmony. We validate proposed
+    methods on ImageNet-1K and CelebA-HQ across multiple image restoration tasks, e.g., super-resolution,
+    deblurring, and compressed sensing. Our experimental results show that the proposed methods can effectively
+    accelerate existing methods while maintaining original performance.
+  url: https://arxiv.org/abs/2507.04207
+  pdf_url: https://arxiv.org/pdf/2507.04207v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 0
+citation_year: 2025

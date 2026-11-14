@@ -1,0 +1,56 @@
+id: paper:arxiv:2605.15906
+status: pending
+score: 5
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 3
+  weight: 1
+- ref: dataset:COCO
+  count: 1
+  weight: 1
+- ref: metric:LPIPS
+  count: 1
+  weight: 1
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+- ref: metric:SSIM
+  count: 1
+  weight: 1
+meta:
+  title: A Causally Grounded Taxonomy for Image Degradation Robustness Evaluation
+  authors:
+  - Stefan Becker
+  - Simon Weiss
+  - Wolfgang Hübner
+  - Michael Arens
+  published: '2026-05-15'
+  updated: '2026-11-08'
+  categories:
+  - cs.CV
+  abstract: 'Image degradations arise throughout acquisition, processing, and transmission, altering both
+    visual appearance and downstream machine-perception performance. They are studied across synthetic
+    corruption benchmarks, perceptual image quality assessment (IQA), low-level vision, and physically
+    grounded imaging-system analysis. However, these communities rely on incompatible grouping schemes
+    and backend-specific severity definitions, making results difficult to compare across datasets, degradation
+    models, and tasks. We propose a causally grounded framework for organizing and interpreting image
+    degradations. Rather than introducing new degradations or redefining existing benchmarks, we provide
+    an interpretive representation and measurement layer that makes implicit assumptions explicit. Each
+    degradation is characterized by two orthogonal axes: its dominant causal source in the imaging pipeline
+    and its dominant perceptual effect. This dual-axis abstraction yields a compact taxonomy spanning
+    algorithmic corruptions, perceptual distortions, low-level imaging artifacts, and physically motivated
+    camera or system failures. To make severity semantics observable without modifying existing implementations,
+    we quantify each native severity level using full-reference image quality metrics: PSNR, SSIM, and
+    LPIPS. This separates causal origin, perceptual appearance, measured distortion strength, and downstream
+    task impact while preserving native parameterizations. We demonstrate the framework through COCO-Degradation,
+    a taxonomy-aligned benchmark for evaluating object detector robustness under diverse low-level imaging
+    conditions. By connecting causal source, perceptual effect, and measured severity, the proposed framework
+    supports more interpretable and reproducible evaluation of how low-level visual degradations affect
+    machine perception.'
+  url: https://arxiv.org/abs/2605.15906
+  pdf_url: https://arxiv.org/pdf/2605.15906v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 2
+citation_year: 2026

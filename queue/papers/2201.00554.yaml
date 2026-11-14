@@ -1,0 +1,40 @@
+id: paper:arxiv:2201.00554
+status: skipped
+score: 1
+track: streaming_delivery
+matched:
+- ref: concept:QoE
+  count: 3
+  weight: 1
+meta:
+  title: Efficient Steering Mechanism for Mobile Network-enabled UAVs
+  authors:
+  - H. Hellaoui
+  - A. Chelli
+  - M. Bagaa
+  - T. Taleb
+  published: '2022-01-03'
+  updated: '2022-01-03'
+  categories:
+  - cs.NI
+  abstract: HTTP Adaptive Streaming (HAS) is becoming the de-facto video delivery technology over best-effort
+    networks nowadays, thanks to the myriad advantages it brings. However, many studies have shown that
+    HAS suffers from many Quality of Experience (QoE)-related issues in the presence of competing players.
+    This is mainly caused by the selfishness of the players resulting from the decentralized intelligence
+    given to the player. Another limitation is the bottleneck link that could happen at any time during
+    the streaming session and anywhere in the network. These issues may result in wobbling bandwidth perception
+    by the players and could lead to missing the deadline for chunk downloads, which result in the most
+    annoying issue consisting of rebuffering events. In this paper, we leverage the SoftwareDefined Networking
+    paradigm to take advantage of the global view of the network and its powerful intelligence that allows
+    reacting to the network changing conditions. Ultimately, we aim at preventing the re-buffering events,
+    resulting from deadline misses, and ensuring high QoE for the accepted clients in the system. To this
+    end, we use Deterministic Network Calculus (DNC) to guarantee a maximum delay for the download of
+    the video chunks while maximizing the perceived video quality. Simulation results show that the proposed
+    solution ensures high efficiency for the accepted clients without any rebuffering events which result
+    in high user QoE. Consequently, it might be highly useful for scenarios where video chunks should
+    be strictly downloaded on-time or ensuring low delay with high user QoE such as serving video premium
+    subscribers or remote control/driving of an autonomous vehicle in future 5G mobile networks.
+  url: https://arxiv.org/abs/2201.00554
+  pdf_url: https://arxiv.org/pdf/2201.00554v1
+  version: v1
+fetched: '2026-11-14'

@@ -1,0 +1,46 @@
+id: paper:arxiv:2603.00483
+status: pending
+score: 2
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 3
+  weight: 1
+- ref: concept:TrainingFree
+  count: 1
+  weight: 1
+meta:
+  title: 'RAISE: Requirement-Adaptive Evolutionary Refinement for Training-Free Text-to-Image Alignment'
+  authors:
+  - Liyao Jiang
+  - Ruichen Chen
+  - Chao Gao
+  - Di Niu
+  published: '2026-02-28'
+  updated: '2026-02-28'
+  categories:
+  - cs.CV
+  - cs.AI
+  abstract: Recent text-to-image (T2I) diffusion models achieve remarkable realism, yet faithful prompt-image
+    alignment remains challenging, particularly for complex prompts with multiple objects, relations,
+    and fine-grained attributes. Existing training-free inference-time scaling methods rely on fixed iteration
+    budgets that cannot adapt to prompt difficulty, while reflection-tuned models require carefully curated
+    reflection datasets and extensive joint fine-tuning of diffusion and vision-language models, often
+    overfitting to reflection paths data and lacking transferability across models. We introduce RAISE
+    (Requirement-Adaptive Self-Improving Evolution), a training-free, requirement-driven evolutionary
+    framework for adaptive T2I generation. RAISE formulates image generation as a requirement-driven adaptive
+    scaling process, evolving a population of candidates at inference time through a diverse set of refinement
+    actions-including prompt rewriting, noise resampling, and instructional editing. Each generation is
+    verified against a structured checklist of requirements, enabling the system to dynamically identify
+    unsatisfied items and allocate further computation only where needed. This achieves adaptive test-time
+    scaling that aligns computational effort with semantic query complexity. On GenEval and DrawBench,
+    RAISE attains state-of-the-art alignment (0.94 overall GenEval) while incurring fewer generated samples
+    (reduced by 30-40%) and VLM calls (reduced by 80%) than prior scaling and reflection-tuned baselines,
+    demonstrating efficient, generalizable, and model-agnostic multi-round self-improvement. Code is available
+    at https://github.com/LiyaoJiang1998/RAISE.
+  url: https://arxiv.org/abs/2603.00483
+  pdf_url: https://arxiv.org/pdf/2603.00483v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 9
+citation_year: 2026

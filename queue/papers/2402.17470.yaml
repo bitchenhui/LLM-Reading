@@ -1,0 +1,52 @@
+id: paper:arxiv:2402.17470
+status: skipped_low_citation
+score: 5
+track: video_image_coding
+matched:
+- ref: codec:VVC
+  count: 1
+  weight: 3
+- ref: metric:BD-Rate
+  count: 1
+  weight: 1
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+meta:
+  title: Bit Distribution Study and Implementation of Spatial Quality Map in the JPEG-AI Standardization
+  authors:
+  - Panqi Jia
+  - Jue Mao
+  - Esin Koyuncu
+  - A. Burakhan Koyuncu
+  - Timofey Solovyev
+  - Alexander Karabutov
+  - Yin Zhao
+  - Elena Alshina
+  - Andre Kaup
+  published: '2024-02-27'
+  updated: '2024-02-27'
+  categories:
+  - cs.CV
+  - cs.LG
+  - eess.IV
+  abstract: Currently, there is a high demand for neural network-based image compression codecs. These
+    codecs employ non-linear transforms to create compact bit representations and facilitate faster coding
+    speeds on devices compared to the hand-crafted transforms used in classical frameworks. The scientific
+    and industrial communities are highly interested in these properties, leading to the standardization
+    effort of JPEG-AI. The JPEG-AI verification model has been released and is currently under development
+    for standardization. Utilizing neural networks, it can outperform the classic codec VVC intra by over
+    10% BD-rate operating at base operation point. Researchers attribute this success to the flexible
+    bit distribution in the spatial domain, in contrast to VVC intra's anchor that is generated with a
+    constant quality point. However, our study reveals that VVC intra displays a more adaptable bit distribution
+    structure through the implementation of various block sizes. As a result of our observations, we have
+    proposed a spatial bit allocation method to optimize the JPEG-AI verification model's bit distribution
+    and enhance the visual quality. Furthermore, by applying the VVC bit distribution strategy, the objective
+    performance of JPEG-AI verification mode can be further improved, resulting in a maximum gain of 0.45
+    dB in PSNR-Y.
+  url: https://arxiv.org/abs/2402.17470
+  pdf_url: https://arxiv.org/pdf/2402.17470v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 4
+citation_year: 2024

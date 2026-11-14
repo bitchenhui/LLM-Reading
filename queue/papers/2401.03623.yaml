@@ -1,0 +1,51 @@
+id: paper:arxiv:2401.03623
+status: skipped_low_citation
+score: 6
+track: video_image_coding
+matched:
+- ref: codec:ECM
+  count: 2
+  weight: 3
+- ref: concept:QP
+  count: 3
+  weight: 1
+- ref: concept:RDO
+  count: 1
+  weight: 1
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+meta:
+  title: A Video Coding Method Based on Neural Network for CLIC2024
+  authors:
+  - Zhengang Li
+  - Jingchi Zhang
+  - Yonghua Wang
+  - Xing Zeng
+  - Zhen Zhang
+  - Yunlin Long
+  - Menghu Jia
+  - Ning Wang
+  published: '2024-01-08'
+  updated: '2024-01-08'
+  categories:
+  - eess.IV
+  abstract: This paper presents a video coding scheme that combines traditional optimization methods with
+    deep learning methods based on the Enhanced Compression Model (ECM). In this paper, the traditional
+    optimization methods adaptively adjust the quantization parameter (QP). The key frame QP offset is
+    set according to the video content characteristics, and the coding tree unit (CTU) level QP of all
+    frames is also adjusted according to the spatial-temporal perception information. Block importance
+    mapping technology (BIM) is also introduced, which adjusts the QP according to the block importance.
+    Meanwhile, the deep learning methods propose a convolutional neural network-based loop filter (CNNLF),
+    which is turned on/off based on the rate-distortion optimization at the CTU and frame level. Besides,
+    intra-prediction using neural networks (NN-intra) is proposed to further improve compression quality,
+    where 8 neural networks are used for predicting blocks of different sizes. The experimental results
+    show that compared with ECM-3.0, the proposed traditional methods and adding deep learning methods
+    improve the PSNR by 0.54 dB and 1 dB at 0.05Mbps, respectively; 0.38 dB and 0.71dB at 0.5 Mbps, respectively,
+    which proves the superiority of our method.
+  url: https://arxiv.org/abs/2401.03623
+  pdf_url: https://arxiv.org/pdf/2401.03623v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 1
+citation_year: 2024

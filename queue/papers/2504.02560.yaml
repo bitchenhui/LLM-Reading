@@ -1,0 +1,43 @@
+id: paper:arxiv:2504.02560
+status: pending
+score: 6
+track: video_image_coding
+matched:
+- ref: codec:VVC
+  count: 1
+  weight: 3
+- ref: impl:VTM
+  count: 1
+  weight: 3
+meta:
+  title: 'L-LBVC: Long-Term Motion Estimation and Prediction for Learned Bi-Directional Video Compression'
+  authors:
+  - Yongqi Zhai
+  - Luyang Tang
+  - Wei Jiang
+  - Jiayu Yang
+  - Ronggang Wang
+  published: '2025-04-03'
+  updated: '2025-04-03'
+  categories:
+  - cs.CV
+  - cs.MM
+  abstract: Recently, learned video compression (LVC) has shown superior performance under low-delay configuration.
+    However, the performance of learned bi-directional video compression (LBVC) still lags behind traditional
+    bi-directional coding. The performance gap mainly arises from inaccurate long-term motion estimation
+    and prediction of distant frames, especially in large motion scenes. To solve these two critical problems,
+    this paper proposes a novel LBVC framework, namely L-LBVC. Firstly, we propose an adaptive motion
+    estimation module that can handle both short-term and long-term motions. Specifically, we directly
+    estimate the optical flows for adjacent frames and non-adjacent frames with small motions. For non-adjacent
+    frames with large motions, we recursively accumulate local flows between adjacent frames to estimate
+    long-term flows. Secondly, we propose an adaptive motion prediction module that can largely reduce
+    the bit cost for motion coding. To improve the accuracy of long-term motion prediction, we adaptively
+    downsample reference frames during testing to match the motion ranges observed during training. Experiments
+    show that our L-LBVC significantly outperforms previous state-of-the-art LVC methods and even surpasses
+    VVC (VTM) on some test datasets under random access configuration.
+  url: https://arxiv.org/abs/2504.02560
+  pdf_url: https://arxiv.org/pdf/2504.02560v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 6
+citation_year: 2025

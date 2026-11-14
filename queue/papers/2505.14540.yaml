@@ -1,0 +1,37 @@
+id: paper:arxiv:2505.14540
+status: skipped
+score: 1
+track: streaming_delivery
+matched:
+- ref: concept:WebRTC
+  count: 1
+  weight: 1
+meta:
+  title: Automated, Cross-Layer Root Cause Analysis of 5G Video-Conferencing Quality Degradation
+  authors:
+  - Fan Yi
+  - Haoran Wan
+  - Kyle Jamieson
+  - Oliver Michel
+  published: '2025-05-20'
+  updated: '2025-05-20'
+  categories:
+  - cs.NI
+  abstract: 5G wireless networks are complex, leveraging layers of scheduling, retransmission, and adaptation
+    mechanisms to maximize their efficiency. But these mechanisms interact to produce significant fluctuations
+    in uplink and downlink capacity and latency. This markedly impacts the performance of real-time applications,
+    such as video-conferencing, which are particularly sensitive to such fluctuations, resulting in lag,
+    stuttering, distorted audio, and low video quality. This paper presents a cross-layer view of 5G networks
+    and their impact on and interaction with video-conferencing applications. We conduct novel, detailed
+    measurements of both Private CBRS and commercial carrier cellular network dynamics, capturing physical-
+    and link-layer events and correlating them with their effects at the network and transport layers,
+    and the video-conferencing application itself. Our two datasets comprise days of low-rate campus-wide
+    Zoom telemetry data, and hours of high-rate, correlated WebRTC-network-5G telemetry data. Based on
+    these data, we trace performance anomalies back to root causes, identifying 24 previously unknown
+    causal event chains that degrade 5G video conferencing. Armed with this knowledge, we build Domino,
+    a tool that automates this process and is user-extensible to future wireless networks and interactive
+    applications.
+  url: https://arxiv.org/abs/2505.14540
+  pdf_url: https://arxiv.org/pdf/2505.14540v1
+  version: v1
+fetched: '2026-11-14'

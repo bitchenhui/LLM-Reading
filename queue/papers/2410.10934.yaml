@@ -1,0 +1,49 @@
+id: paper:arxiv:2410.10934
+status: pending
+score: 2
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: 'Agent-as-a-Judge: Evaluate Agents with Agents'
+  authors:
+  - Mingchen Zhuge
+  - Changsheng Zhao
+  - Dylan Ashley
+  - Wenyi Wang
+  - Dmitrii Khizbullin
+  - Yunyang Xiong
+  - Zechun Liu
+  - Ernie Chang
+  - Raghuraman Krishnamoorthi
+  - Yuandong Tian
+  - Yangyang Shi
+  - Vikas Chandra
+  - Jürgen Schmidhuber
+  published: '2024-10-14'
+  updated: '2024-10-16'
+  categories:
+  - cs.AI
+  abstract: Contemporary evaluation techniques are inadequate for agentic systems. These approaches either
+    focus exclusively on final outcomes -- ignoring the step-by-step nature of agentic systems, or require
+    excessive manual labour. To address this, we introduce the Agent-as-a-Judge framework, wherein agentic
+    systems are used to evaluate agentic systems. This is an organic extension of the LLM-as-a-Judge framework,
+    incorporating agentic features that enable intermediate feedback for the entire task-solving process.
+    We apply the Agent-as-a-Judge to the task of code generation. To overcome issues with existing benchmarks
+    and provide a proof-of-concept testbed for Agent-as-a-Judge, we present DevAI, a new benchmark of
+    55 realistic automated AI development tasks. It includes rich manual annotations, like a total of
+    365 hierarchical user requirements. We benchmark three of the popular agentic systems using Agent-as-a-Judge
+    and find it dramatically outperforms LLM-as-a-Judge and is as reliable as our human evaluation baseline.
+    Altogether, we believe that Agent-as-a-Judge marks a concrete step forward for modern agentic systems
+    -- by providing rich and reliable reward signals necessary for dynamic and scalable self-improvement.
+  url: https://arxiv.org/abs/2410.10934
+  pdf_url: https://arxiv.org/pdf/2410.10934v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 299
+citation_year: 2024

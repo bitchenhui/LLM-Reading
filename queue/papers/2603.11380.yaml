@@ -1,0 +1,44 @@
+id: paper:arxiv:2603.11380
+status: skipped_low_citation
+score: 2
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: 'DriveXQA: Cross-modal Visual Question Answering for Adverse Driving Scene Understanding'
+  authors:
+  - Mingzhe Tao
+  - Ruiping Liu
+  - Junwei Zheng
+  - Yufan Chen
+  - Kedi Ying
+  - M. Saquib Sarfraz
+  - Kailun Yang
+  - Jiaming Zhang
+  - Rainer Stiefelhagen
+  published: '2026-03-11'
+  updated: '2026-03-25'
+  categories:
+  - cs.CV
+  abstract: 'Fusing sensors with complementary modalities is crucial for maintaining a stable and comprehensive
+    understanding of abnormal driving scenes. However, Multimodal Large Language Models (MLLMs) are underexplored
+    for leveraging multi-sensor information to understand adverse driving scenarios in autonomous vehicles.
+    To address this gap, we propose the DriveXQA, a multimodal dataset for autonomous driving VQA. In
+    addition to four visual modalities, five sensor failure cases, and five weather conditions, it includes
+    $102,505$ QA pairs categorized into three types: global scene level, allocentric level, and ego-vehicle
+    centric level. Since no existing MLLM framework adopts multiple complementary visual modalities as
+    input, we design MVX-LLM, a token-efficient architecture with a Dual Cross-Attention (DCA) projector
+    that fuses the modalities to alleviate information redundancy. Experiments demonstrate that our DCA
+    achieves improved performance under challenging conditions such as foggy (GPTScore: $53.5$ vs. $25.1$
+    for the baseline).'
+  url: https://arxiv.org/abs/2603.11380
+  pdf_url: https://arxiv.org/pdf/2603.11380v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 0
+citation_year: 2026

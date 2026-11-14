@@ -1,0 +1,46 @@
+id: paper:arxiv:2510.03687
+status: pending
+score: 2
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: 'MedReflect: Teaching Medical LLMs to Self-Improve via Reflective Correction'
+  authors:
+  - Yue Huang
+  - Yanyuan Chen
+  - Dexuan Xu
+  - Chenzhuo Zhao
+  - Weihua Yue
+  - Yu Huang
+  published: '2025-10-04'
+  updated: '2026-01-16'
+  categories:
+  - cs.CL
+  - cs.AI
+  abstract: Medical problem-solving demands expert knowledge and intricate reasoning. Recent studies of
+    large language models (LLMs) attempt to ease this complexity by introducing external knowledge verification
+    through retrieval-augmented generation or by training on reasoning datasets. However, these approaches
+    suffer from drawbacks such as retrieval overhead and high annotation costs, and they heavily rely
+    on substituted external assistants to reach limited performance in medical field. In this paper, we
+    introduce MedReflect, a generalizable framework designed to inspire LLMs with a physician-like reflective
+    thinking mode. MedReflect generates a single-pass reflection chain that includes initial hypothesis
+    generation, self-questioning, self-answering and decision refinement. This self-verified and self-reflective
+    nature releases large language model's latent capability in medical problem-solving without external
+    retrieval or heavy annotation. We demonstrate that MedReflect enables cost-efficient medical dataset
+    construction. With only a minimal subset of randomly sampled training examples and lightweight fine-tuning,
+    this approach achieves notable absolute accuracy improvements across a series of medical benchmarks
+    while significantly cutting annotation requirements. Our results provide evidence that LLMs can learn
+    to solve specialized medical problems via self-reflection and self-improvement, reducing reliance
+    on external supervision and extensive task-specific fine-tuning data.
+  url: https://arxiv.org/abs/2510.03687
+  pdf_url: https://arxiv.org/pdf/2510.03687v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 9
+citation_year: 2025

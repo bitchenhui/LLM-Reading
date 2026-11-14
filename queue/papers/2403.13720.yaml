@@ -1,0 +1,40 @@
+id: paper:arxiv:2403.13720
+status: skipped_low_citation
+score: 2
+track: audio_coding
+matched:
+- ref: concept:NeuralAudioCodec
+  count: 1
+  weight: 1
+- ref: org:UTokyo
+  count: 1
+  weight: 1
+meta:
+  title: 'UTDUSS: UTokyo-SaruLab System for Interspeech2024 Speech Processing Using Discrete Speech Unit
+    Challenge'
+  authors:
+  - Wataru Nakata
+  - Kazuki Yamauchi
+  - Dong Yang
+  - Hiroaki Hyodo
+  - Yuki Saito
+  published: '2024-03-20'
+  updated: '2024-03-20'
+  categories:
+  - cs.SD
+  - eess.AS
+  abstract: 'We present UTDUSS, the UTokyo-SaruLab system submitted to Interspeech2024 Speech Processing
+    Using Discrete Speech Unit Challenge. The challenge focuses on using discrete speech unit learned
+    from large speech corpora for some tasks. We submitted our UTDUSS system to two text-to-speech tracks:
+    Vocoder and Acoustic+Vocoder. Our system incorporates neural audio codec (NAC) pre-trained on only
+    speech corpora, which makes the learned codec represent rich acoustic features that are necessary
+    for high-fidelity speech reconstruction. For the acoustic+vocoder track, we trained an acoustic model
+    based on Transformer encoder-decoder that predicted the pre-trained NAC tokens from text input. We
+    describe our strategies to build these models, such as data selection, downsampling, and hyper-parameter
+    tuning. Our system ranked in second and first for the Vocoder and Acoustic+Vocoder tracks, respectively.'
+  url: https://arxiv.org/abs/2403.13720
+  pdf_url: https://arxiv.org/pdf/2403.13720v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 3
+citation_year: 2024

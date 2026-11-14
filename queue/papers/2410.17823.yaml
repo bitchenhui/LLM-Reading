@@ -1,0 +1,44 @@
+id: paper:arxiv:2410.17823
+status: pending
+score: 2
+track: immersive_media
+matched:
+- ref: metric:BD-PSNR
+  count: 1
+  weight: 1
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+meta:
+  title: 'Att2CPC: Attention-Guided Lossy Attribute Compression of Point Clouds'
+  authors:
+  - Kai Liu
+  - Kang You
+  - Pan Gao
+  - Manoranjan Paul
+  published: '2024-10-23'
+  updated: '2024-10-23'
+  categories:
+  - cs.LG
+  - cs.CV
+  - eess.IV
+  abstract: With the great progress of 3D sensing and acquisition technology, the volume of point cloud
+    data has grown dramatically, which urges the development of efficient point cloud compression methods.
+    In this paper, we focus on the task of learned lossy point cloud attribute compression (PCAC). We
+    propose an efficient attention-based method for lossy compression of point cloud attributes leveraging
+    on an autoencoder architecture. Specifically, at the encoding side, we conduct multiple downsampling
+    to best exploit the local attribute patterns, in which effective External Cross Attention (ECA) is
+    devised to hierarchically aggregate features by intergrating attributes and geometry contexts. At
+    the decoding side, the attributes of the point cloud are progressively reconstructed based on the
+    multi-scale representation and the zero-padding upsampling tactic. To the best of our knowledge, this
+    is the first approach to introduce attention mechanism to point-based lossy PCAC task. We verify the
+    compression efficiency of our model on various sequences, including human body frames, sparse objects,
+    and large-scale point cloud scenes. Experiments show that our method achieves an average improvement
+    of 1.15 dB and 2.13 dB in BD-PSNR of Y channel and YUV channel, respectively, when comparing with
+    the state-of-the-art point-based method Deep-PCAC. Codes of this paper are available at https://github.com/I2-Multimedia-Lab/Att2CPC.
+  url: https://arxiv.org/abs/2410.17823
+  pdf_url: https://arxiv.org/pdf/2410.17823v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 7
+citation_year: 2024

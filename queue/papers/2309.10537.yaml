@@ -1,0 +1,41 @@
+id: paper:arxiv:2309.10537
+status: skipped
+score: 1
+track: audio_coding
+matched:
+- ref: concept:NeuralAudioCodec
+  count: 1
+  weight: 1
+meta:
+  title: 'FoleyGen: Visually-Guided Audio Generation'
+  authors:
+  - Xinhao Mei
+  - Varun Nagaraja
+  - Gael Le Lan
+  - Zhaoheng Ni
+  - Ernie Chang
+  - Yangyang Shi
+  - Vikas Chandra
+  published: '2023-09-19'
+  updated: '2023-09-19'
+  categories:
+  - eess.AS
+  - cs.MM
+  - cs.SD
+  abstract: Recent advancements in audio generation have been spurred by the evolution of large-scale
+    deep learning models and expansive datasets. However, the task of video-to-audio (V2A) generation
+    continues to be a challenge, principally because of the intricate relationship between the high-dimensional
+    visual and auditory data, and the challenges associated with temporal synchronization. In this study,
+    we introduce FoleyGen, an open-domain V2A generation system built on a language modeling paradigm.
+    FoleyGen leverages an off-the-shelf neural audio codec for bidirectional conversion between waveforms
+    and discrete tokens. The generation of audio tokens is facilitated by a single Transformer model,
+    which is conditioned on visual features extracted from a visual encoder. A prevalent problem in V2A
+    generation is the misalignment of generated audio with the visible actions in the video. To address
+    this, we explore three novel visual attention mechanisms. We further undertake an exhaustive evaluation
+    of multiple visual encoders, each pretrained on either single-modal or multi-modal tasks. The experimental
+    results on VGGSound dataset show that our proposed FoleyGen outperforms previous systems across all
+    objective metrics and human evaluations.
+  url: https://arxiv.org/abs/2309.10537
+  pdf_url: https://arxiv.org/pdf/2309.10537v1
+  version: v1
+fetched: '2026-11-14'

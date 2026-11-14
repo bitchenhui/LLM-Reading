@@ -1,0 +1,43 @@
+id: paper:arxiv:2409.14090
+status: pending
+score: 4
+track: video_image_coding
+matched:
+- ref: impl:VTM
+  count: 1
+  weight: 3
+- ref: metric:BD-Rate
+  count: 1
+  weight: 1
+meta:
+  title: Window-based Channel Attention for Wavelet-enhanced Learned Image Compression
+  authors:
+  - Heng Xu
+  - Bowen Hai
+  - Yushun Tang
+  - Zhihai He
+  published: '2024-09-21'
+  updated: '2025-02-10'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: Learned Image Compression (LIC) models have achieved superior rate-distortion performance
+    than traditional codecs. Existing LIC models use CNN, Transformer, or Mixed CNN-Transformer as basic
+    blocks. However, limited by the shifted window attention, Swin-Transformer-based LIC exhibits a restricted
+    growth of receptive fields, affecting the ability to model large objects for image compression. To
+    address this issue and improve the performance, we incorporate window partition into channel attention
+    for the first time to obtain large receptive fields and capture more global information. Since channel
+    attention hinders local information learning, it is important to extend existing attention mechanisms
+    in Transformer codecs to the space-channel attention to establish multiple receptive fields, being
+    able to capture global correlations with large receptive fields while maintaining detailed characterization
+    of local correlations with small receptive fields. We also incorporate the discrete wavelet transform
+    into our Spatial-Channel Hybrid (SCH) framework for efficient frequency-dependent down-sampling and
+    further enlarging receptive fields. Experiment results demonstrate that our method achieves state-of-the-art
+    performances, reducing BD-rate by 18.54%, 23.98%, 22.33%, and 24.71% on four standard datasets compared
+    to VTM-23.1.
+  url: https://arxiv.org/abs/2409.14090
+  pdf_url: https://arxiv.org/pdf/2409.14090v6
+  version: v6
+fetched: '2026-11-14'
+citation_count: 12
+citation_year: 2024

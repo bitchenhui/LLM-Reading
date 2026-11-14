@@ -1,0 +1,31 @@
+id: paper:arxiv:2404.19441
+status: skipped
+score: 0
+track: audio_coding
+matched: []
+meta:
+  title: 'ESC: Efficient Speech Coding with Cross-Scale Residual Vector Quantized Transformers'
+  authors:
+  - Yuzhe Gu
+  - Enmao Diao
+  published: '2024-04-30'
+  updated: '2024-10-03'
+  categories:
+  - cs.SD
+  - eess.AS
+  abstract: Neural speech codecs aim to compress input signals into minimal bits while maintaining content
+    quality in a low-latency manner. However, existing neural codecs often trade model complexity for
+    reconstruction performance. These codecs primarily use convolutional blocks for feature transformation,
+    which are not inherently suited for capturing the local redundancies in speech signals. To compensate,
+    they require either adversarial discriminators or a large number of model parameters to enhance audio
+    quality. In response to these challenges, we introduce the Efficient Speech Codec (ESC), a lightweight,
+    parameter-efficient speech codec based on a cross-scale residual vector quantization scheme and transformers.
+    Our model employs mirrored hierarchical window transformer blocks and performs step-wise decoding
+    from coarse-to-fine feature representations. To enhance bitrate efficiency, we propose a novel combination
+    of vector quantization techniques along with a pre-training paradigm. Extensive experiments demonstrate
+    that ESC can achieve high-fidelity speech reconstruction with significantly lower model complexity,
+    making it a promising alternative to existing convolutional audio codecs.
+  url: https://arxiv.org/abs/2404.19441
+  pdf_url: https://arxiv.org/pdf/2404.19441v3
+  version: v3
+fetched: '2026-11-14'

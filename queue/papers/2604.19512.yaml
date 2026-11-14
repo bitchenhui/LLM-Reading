@@ -1,0 +1,55 @@
+id: paper:arxiv:2604.19512
+status: pending
+score: 4
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+- ref: concept:SuperResolution
+  count: 1
+  weight: 1
+- ref: metric:LPIPS
+  count: 1
+  weight: 1
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+meta:
+  title: Defining Robust Ultrasound Quality Metrics via an Ultrasound Foundation Model
+  authors:
+  - Ziyang Huang
+  - Bingyan Li
+  - Chen Ma
+  - Tianyi Liu
+  - Yihui Zhai
+  - Hong Xu
+  - Yi Guo
+  - Zeju Li
+  - Yuanyuan Wang
+  published: '2026-04-21'
+  updated: '2026-05-21'
+  categories:
+  - eess.IV
+  abstract: 'Clinicians lack a principled framework to quantify diagnostic utility in ultrasound reconstructions.
+    Existing standards like PSNR and VGG-LPIPS are inadequate, failing to account for modality-specific
+    physics or the structural nuances of acoustic imaging. We close this gap with a TinyUSFM-based evaluation
+    framework featuring two distinct metrics: TinyUSFM-uLPIPS, a full-reference perceptual distance based
+    on multi-layer token relations, and TinyUSFM-NRQ, a deployable no-reference quality score utilizing
+    clean-manifold modeling and worst-region aggregation to detect localized harmful artifacts. We demonstrate
+    that the presented metrics have four unique advantages: 1) Task-linked quality, where TinyUSFM-uLPIPS
+    achieves superior calibration with semantic task damage, accurately reflecting Dice-score drops in
+    segmentation where VGG-based metrics fail; 2) Cross-organ comparability, maintaining stable scoring
+    scales and consistent severity rankings across diverse anatomical sites and domain-shifted data; 3)
+    PSNR-consistent sensitivity, with TinyUSFM-NRQ providing a reliable quality score without ground-truth
+    images that remains consistent with traditional fidelity benchmarks (i.e. PSNR); and 4) Clinical utility,
+    improving the prediction of expert preference from 47.2$\%$ to 72.8$\%$ accuracy and producing super-resolution
+    reconstructions preferred by sonographers. By integrating these advantages into a unified assessment
+    and optimization loop, this work establishes a modality-aligned standard that finally bridges the
+    gap between algorithmic performance and diagnostic utility. Our code is available at https://github.com/sextant-fable/US-Metrics.'
+  url: https://arxiv.org/abs/2604.19512
+  pdf_url: https://arxiv.org/pdf/2604.19512v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 2
+citation_year: 2026

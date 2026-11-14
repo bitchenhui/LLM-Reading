@@ -1,0 +1,41 @@
+id: paper:arxiv:2606.02002
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 2
+  weight: 1
+meta:
+  title: Parameter-Efficient Adaptation of a Multi-Stream Vision-Language Framework for Blind Image Quality
+    Assessment
+  authors:
+  - Bishr Omer Adam
+  - Xu Li
+  published: '2026-06-01'
+  updated: '2026-07-20'
+  categories:
+  - cs.CV
+  abstract: Blind image quality assessment (BIQA) predicts perceived image quality without access to a
+    pristine reference and is fundamental to applications such as image compression, transmission, and
+    restoration. Recent BIQA methods increasingly rely on large vision-language models (VLMs). Although
+    frozen VLMs provide an efficient alternative to computationally expensive full fine-tuning, it remains
+    unclear how much performance is sacrificed by not adapting the backbone and, more importantly, under
+    what conditions such adaptation is truly beneficial. Answering this question, however, is complicated
+    by the widespread use of image-level splitting on synthetic-distortion benchmarks, where distorted
+    versions of the same reference image can appear in both training and test partitions. This content
+    overlap artificially inflates the apparent performance of frozen representations, masking their true
+    generalization ability and potentially leading to incorrect conclusions about the value of backbone
+    adaptation. We therefore address these two issues jointly. We develop an efficient BIQA framework
+    that fuses a natural-scene-statistics descriptor with frozen SigLIP and CLIP-H embeddings through
+    a lightweight regression head, and then apply parameter-efficient Low-Rank Adaptation (LoRA) to the
+    SigLIP backbone, training only $0.23\%$ of its parameters. Evaluating both frozen and adapted models
+    across six datasets under image-level and reference-level protocols, we find that image-level splitting
+    inflates frozen-feature SROCC by up to $0.44$ and masks wide variation in true difficulty, which reference-level
+    evaluation reveals. Under this content-independent protocol, LoRA adaptation recovers performance
+    in proportion to the exposed difficulty, with the largest gains where frozen features generalize poorly
+    (up to $+0.357$ SROCC on TID2013) and little benefit where they are already strong.
+  url: https://arxiv.org/abs/2606.02002
+  pdf_url: https://arxiv.org/pdf/2606.02002v3
+  version: v3
+fetched: '2026-11-14'

@@ -1,0 +1,46 @@
+id: paper:arxiv:2604.21725
+status: pending
+score: 2
+track: self_improvement
+matched:
+- ref: concept:LLM
+  count: 1
+  weight: 1
+- ref: concept:SelfImprovement
+  count: 1
+  weight: 1
+meta:
+  title: 'AEL: Evolving Agent Harness in Open-Ended Environments'
+  authors:
+  - Wujiang Xu
+  - Jiaojiao Han
+  - Minghao Guo
+  - Kai Mei
+  - Xi Zhu
+  - Han Zhang
+  - Dimitris N. Metaxas
+  published: '2026-04-23'
+  updated: '2026-08-25'
+  categories:
+  - cs.CL
+  - cs.AI
+  - cs.CE
+  abstract: 'LLM Agents Harnesses are hand-designed and stay fixed, so agents accumulate experience but
+    never learn how to use it: which memories to retrieve, when retrieved evidence is misleading, and
+    when the retrieval strategy itself should change. We introduce Agent Evolving Learning (AEL), a two-timescale
+    framework that evolves the harness, recasting memory use as online policy selection. A fast Thompson
+    Sampling bandit selects among memory-retrieval policies episode by episode, while slow LLM reflection
+    follows a diagnose-before-prescribe principle: it first explains why performance degraded, then injects
+    a targeted new retrieval policy as a bandit arm when the current pool plateaus. AEL outperforms ten
+    self-improving and nonLLM baselines on a sequential portfolio benchmark, lifting Sharpe by 27% over
+    the strongest memory-only variant with the lowest variance among all stochastic methods, and generalizes
+    to a support-ticket routing stream, where it improves accuracy by 18% over reflectionfree Thompson
+    Sampling and by 51% over the best prior baseline. Mechanism studies further show that the gains are
+    causal: reflection helps precisely when regimes demand different retrieval behavior, and is provably
+    no-harm/nogain when the best policy is stable. Code and data: https://github.com/WujiangXu/AEL.'
+  url: https://arxiv.org/abs/2604.21725
+  pdf_url: https://arxiv.org/pdf/2604.21725v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 6
+citation_year: 2026

@@ -1,0 +1,33 @@
+id: paper:arxiv:2404.15591
+status: skipped
+score: 0
+track: video_image_coding
+matched: []
+meta:
+  title: Domain Adaptation for Learned Image Compression with Supervised Adapters
+  authors:
+  - Alberto Presta
+  - Gabriele Spadaro
+  - Enzo Tartaglione
+  - Attilio Fiandrotti
+  - Marco Grangetto
+  published: '2024-04-24'
+  updated: '2024-04-24'
+  categories:
+  - cs.CV
+  - eess.IV
+  abstract: In Learned Image Compression (LIC), a model is trained at encoding and decoding images sampled
+    from a source domain, often outperforming traditional codecs on natural images; yet its performance
+    may be far from optimal on images sampled from different domains. In this work, we tackle the problem
+    of adapting a pre-trained model to multiple target domains by plugging into the decoder an adapter
+    module for each of them, including the source one. Each adapter improves the decoder performance on
+    a specific domain, without the model forgetting about the images seen at training time. A gate network
+    computes the weights to optimally blend the contributions from the adapters when the bitstream is
+    decoded. We experimentally validate our method over two state-of-the-art pre-trained models, observing
+    improved rate-distortion efficiency on the target domains without penalties on the source domain.
+    Furthermore, the gate's ability to find similarities with the learned target domains enables better
+    encoding efficiency also for images outside them.
+  url: https://arxiv.org/abs/2404.15591
+  pdf_url: https://arxiv.org/pdf/2404.15591v1
+  version: v1
+fetched: '2026-11-14'

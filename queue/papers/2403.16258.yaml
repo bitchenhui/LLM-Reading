@@ -1,0 +1,40 @@
+id: paper:arxiv:2403.16258
+status: skipped
+score: 1
+track: video_image_coding
+matched:
+- ref: concept:EntropyModel
+  count: 1
+  weight: 1
+meta:
+  title: Laplacian-guided Entropy Model in Neural Codec with Blur-dissipated Synthesis
+  authors:
+  - Atefeh Khoshkhahtinat
+  - Ali Zafari
+  - Piyush M. Mehta
+  - Nasser M. Nasrabadi
+  published: '2024-03-24'
+  updated: '2024-03-24'
+  categories:
+  - eess.IV
+  - cs.CV
+  - cs.IT
+  - cs.LG
+  abstract: While replacing Gaussian decoders with a conditional diffusion model enhances the perceptual
+    quality of reconstructions in neural image compression, their lack of inductive bias for image data
+    restricts their ability to achieve state-of-the-art perceptual levels. To address this limitation,
+    we adopt a non-isotropic diffusion model at the decoder side. This model imposes an inductive bias
+    aimed at distinguishing between frequency contents, thereby facilitating the generation of high-quality
+    images. Moreover, our framework is equipped with a novel entropy model that accurately models the
+    probability distribution of latent representation by exploiting spatio-channel correlations in latent
+    space, while accelerating the entropy decoding step. This channel-wise entropy model leverages both
+    local and global spatial contexts within each channel chunk. The global spatial context is built upon
+    the Transformer, which is specifically designed for image compression tasks. The designed Transformer
+    employs a Laplacian-shaped positional encoding, the learnable parameters of which are adaptively adjusted
+    for each channel cluster. Our experiments demonstrate that our proposed framework yields better perceptual
+    quality compared to cutting-edge generative-based codecs, and the proposed entropy model contributes
+    to notable bitrate savings.
+  url: https://arxiv.org/abs/2403.16258
+  pdf_url: https://arxiv.org/pdf/2403.16258v1
+  version: v1
+fetched: '2026-11-14'

@@ -1,0 +1,48 @@
+id: paper:arxiv:2604.14548
+status: skipped
+score: 0
+track: audio_coding
+matched: []
+meta:
+  title: 'VoxSafeBench: Not Just What Is Said, but Who, How, and Where'
+  authors:
+  - Yuxiang Wang
+  - Hongyu Liu
+  - Yijiang Xu
+  - Qinke Ni
+  - Li Wang
+  - Wan Lin
+  - Kunyu Feng
+  - Dekun Chen
+  - Xu Tan
+  - Lei Wang
+  - Jie Shi
+  - Zhizheng Wu
+  published: '2026-04-16'
+  updated: '2026-04-20'
+  categories:
+  - cs.SD
+  - cs.LG
+  - eess.AS
+  abstract: 'As speech language models (SLMs) transition from personal devices into shared, multi-user
+    environments, their responses must account for far more than the words alone. Who is speaking, how
+    they sound, and where the conversation takes place can each turn an otherwise benign request into
+    one that is unsafe, unfair, or privacy-violating. Existing benchmarks, however, largely focus on basic
+    audio comprehension, study individual risks in isolation, or conflate content that is inherently harmful
+    with content that only becomes problematic due to its acoustic context. We introduce VoxSafeBench,
+    among the first benchmarks to jointly evaluate social alignment in SLMs across three dimensions: safety,
+    fairness, and privacy. VoxSafeBench adopts a Two-Tier design: Tier1 evaluates content-centric risks
+    using matched text and audio inputs, while Tier2 targets audio-conditioned risks in which the transcript
+    is benign but the appropriate response hinges on the speaker, paralinguistic cues, or the surrounding
+    environment. To validate Tier2, we include intermediate perception probes and confirm that frontier
+    SLMs can successfully detect these acoustic cues yet still fail to act on them appropriately. Across
+    22 tasks with bilingual coverage, we find that safeguards appearing robust on text often degrade in
+    speech: safety awareness drops for speaker- and scene-conditioned risks, fairness erodes when demographic
+    differences are conveyed vocally, and privacy protections falter when contextual cues arrive acoustically.
+    Together, these results expose a pervasive speech grounding gap: current SLMs frequently recognize
+    the relevant social norm in text but fail to apply it when the decisive cue must be grounded in speech.
+    Code and data are publicly available at: https://amphionteam.github.io/VoxSafeBench_demopage/'
+  url: https://arxiv.org/abs/2604.14548
+  pdf_url: https://arxiv.org/pdf/2604.14548v2
+  version: v2
+fetched: '2026-11-14'

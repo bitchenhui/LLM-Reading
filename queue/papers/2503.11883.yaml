@@ -1,0 +1,33 @@
+id: paper:arxiv:2503.11883
+status: skipped
+score: 0
+track: video_image_coding
+matched: []
+meta:
+  title: 'Gain-MLP: Improving HDR Gain Map Encoding via a Lightweight MLP'
+  authors:
+  - Trevor D. Canham
+  - SaiKiran Tedla
+  - Michael J. Murdoch
+  - Michael S. Brown
+  published: '2025-03-14'
+  updated: '2025-03-14'
+  categories:
+  - eess.IV
+  abstract: While most images shared on the web and social media platforms are encoded in standard dynamic
+    range (SDR), many displays now can accommodate high dynamic range (HDR) content. Additionally, modern
+    cameras can capture images in an HDR format but convert them to SDR to ensure maximum compatibility
+    with existing workflows and legacy displays. To support both SDR and HDR, new encoding formats are
+    emerging that store additional metadata in SDR images in the form of a gain map. When applied to the
+    SDR image, the gain map recovers the HDR version of the image as needed. These gain maps, however,
+    are typically down-sampled and encoded using standard image compression, such as JPEG and HEIC, which
+    can result in unwanted artifacts. In this paper, we propose to use a lightweight multi-layer perceptron
+    (MLP) network to encode the gain map. The MLP is optimized using the SDR image information as input
+    and provides superior performance in terms of HDR reconstruction. Moreover, the MLP-based approach
+    uses a fixed memory footprint (10 KB) and requires no additional adjustments to accommodate different
+    image sizes or encoding parameters. We conduct extensive experiments on various MLP based HDR embedding
+    strategies and demonstrate that our approach outperforms the current state-of-the-art.
+  url: https://arxiv.org/abs/2503.11883
+  pdf_url: https://arxiv.org/pdf/2503.11883v1
+  version: v1
+fetched: '2026-11-14'

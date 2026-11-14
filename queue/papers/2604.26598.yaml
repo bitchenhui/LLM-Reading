@@ -1,0 +1,40 @@
+id: paper:arxiv:2604.26598
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 2
+  weight: 1
+meta:
+  title: 'FunFace: Feature Utility and Norm Estimation for Face Recognition'
+  authors:
+  - Žiga Babnik
+  - Fadi Boutros
+  - Naser Damer
+  - Deepak Kumar Jain
+  - Peter Peer
+  - Vitomir Štruc
+  published: '2026-04-29'
+  updated: '2026-04-29'
+  categories:
+  - cs.CV
+  abstract: Face Recognition (FR) is used in a variety of application domains, from entertainment and
+    banking to security and surveillance. Such applications rely on the FR model to be robust and perform
+    well in a variety of settings. To achieve this, state-of-the-art FR models typically use expressive
+    adaptive margin loss functions, which tie the feature norm to concepts related to sample quality,
+    such as recognizability and perceptual image quality. Recently, through the development of Face Image
+    Quality Assessment (FIQA) techniques, biometric utility has become the preferred measure of face-image
+    quality and has been shown to be a better predictor of the usefulness of samples for face recognition
+    compared to more human-centric aspects, such as resolution, blur, and lighting, tied to general image
+    quality. While image quality expressed through feature norms exhibits a certain level of correlation
+    with biometric utility, it does not fully encapsulate all aspects of utility. To address this point,
+    we propose a new adaptive margin loss, FunFace (Face Recognition Through Utility and Norm Estimation),
+    which incorporates biometric utility, estimated by the Certainty Ratio, into the adaptive margin,
+    taking inspiration from AdaFace. We show that FunFace (when used to train a face recognition model)
+    achieves competitive results to other state-of-the-art FR models on benchmarks containing high-quality
+    samples, while surpassing them on low quality benchmarks.
+  url: https://arxiv.org/abs/2604.26598
+  pdf_url: https://arxiv.org/pdf/2604.26598v1
+  version: v1
+fetched: '2026-11-14'

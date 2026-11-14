@@ -1,0 +1,39 @@
+id: paper:arxiv:2211.10916
+status: pending
+score: 3
+track: immersive_media
+matched:
+- ref: codec:ECM
+  count: 1
+  weight: 3
+meta:
+  title: 'ECM-OPCC: Efficient Context Model for Octree-based Point Cloud Compression'
+  authors:
+  - Yiqi Jin
+  - Ziyu Zhu
+  - Tongda Xu
+  - Yuhuan Lin
+  - Yan Wang
+  published: '2022-11-20'
+  updated: '2023-12-09'
+  categories:
+  - cs.CV
+  - eess.IV
+  abstract: Recently, deep learning methods have shown promising results in point cloud compression. For
+    octree-based point cloud compression, previous works show that the information of ancestor nodes and
+    sibling nodes are equally important for predicting current node. However, those works either adopt
+    insufficient context or bring intolerable decoding complexity (e.g. >600s). To address this problem,
+    we propose a sufficient yet efficient context model and design an efficient deep learning codec for
+    point clouds. Specifically, we first propose a window-constrained multi-group coding strategy to exploit
+    the autoregressive context while maintaining decoding efficiency. Then, we propose a dual transformer
+    architecture to utilize the dependency of current node on its ancestors and siblings. We also propose
+    a random-masking pre-train method to enhance our model. Experimental results show that our approach
+    achieves state-of-the-art performance for both lossy and lossless point cloud compression. Moreover,
+    our multi-group coding strategy saves 98% decoding time compared with previous octree-based compression
+    method.
+  url: https://arxiv.org/abs/2211.10916
+  pdf_url: https://arxiv.org/pdf/2211.10916v4
+  version: v4
+fetched: '2026-11-14'
+citation_count: 21
+citation_year: 2022

@@ -1,0 +1,37 @@
+id: paper:arxiv:2605.11782
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: Urban Risk-Aware Navigation via VQA-Based Event Maps for People with Low Vision
+  authors:
+  - Antoni Valls
+  - Jordi Sanchez-Riera
+  published: '2026-05-12'
+  updated: '2026-05-12'
+  categories:
+  - cs.CV
+  abstract: Visual impairment affects hundreds of millions of people worldwide, severely limiting their
+    ability to navigate urban environments safely and independently. While wearable assistive devices
+    offer a promising platform for real-time hazard detection, existing approaches rely on task-specific
+    vision pipelines that lack flexibility and generalizability. In this work, we propose an event map
+    framework based on visual question answering that leverages Vision-Language Models (VLMs) for pedestrian
+    scene description and hazard identification across diverse real-world environments, using a three-level
+    hierarchical query structure to enable fine-grained scene understanding without task-specific retraining.
+    Model responses are aggregated into a weighted risk scoring system that maps street segments into
+    four discrete safety categories, producing navigable risk-aware event maps for route planning. To
+    support evaluation and future research, we introduce a geographically diverse dataset spanning 20
+    cities across six continents, comprising over 800 annotated images and 18,000 answered questions.
+    We benchmark four VQA architectures -ViLT, LLaVA, InstructBLIP, and Qwen-VL- and find that generative
+    Multimodal Large Language Models (MLLMs) substantially outperform classification-based approaches,
+    with Qwen-VL achieving the best overall balance of precision and recall. These results demonstrate
+    the viability of MLLMs as a flexible and generalizable foundation for assistive navigation systems
+    for visually impaired people.
+  url: https://arxiv.org/abs/2605.11782
+  pdf_url: https://arxiv.org/pdf/2605.11782v1
+  version: v1
+fetched: '2026-11-14'

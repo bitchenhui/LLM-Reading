@@ -1,0 +1,49 @@
+id: paper:arxiv:2604.25231
+status: skipped_low_citation
+score: 4
+track: quality_assessment
+matched:
+- ref: codec:Opus
+  count: 1
+  weight: 3
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'DRAGON: A Benchmark for Evidence-Grounded Visual Reasoning over Diagrams'
+  authors:
+  - Anirudh Iyengar Kaniyar Narayana Iyengar
+  - Tampu Ravi Kumar
+  - Gaurav Najpande
+  - Manan Suri
+  - Dinesh Manocha
+  - Puneet Mathur
+  - Vivek Gupta
+  published: '2026-04-28'
+  updated: '2026-09-27'
+  categories:
+  - cs.CV
+  - cs.AI
+  - cs.CL
+  abstract: 'Diagram question answering (DQA) requires models to interpret structured visual representations
+    such as charts, maps, infographics, circuit schematics, and scientific diagrams. Recent vision-language
+    models (VLMs) often achieve high answer accuracy on these tasks, yet correct answers do not guarantee
+    that models ground their reasoning in the diagram regions that support the prediction. Models may
+    instead rely on textual correlations or dataset artifacts without identifying the visual evidence
+    required to verify the answer. This limitation prevents reliable evaluation of diagram reasoning and
+    reduces interpretability. We introduce DRAGON, a benchmark for evaluating evidence-grounded visual
+    reasoning in diagrams. Given a diagram, a question, and the correct answer, a model must predict bounding
+    boxes that correspond to the visual elements required to justify the answer. These evidence regions
+    may include answer-bearing components, textual labels, legends, axes, connectors, and other supporting
+    structures involved in the reasoning process. The DRAGON dataset contains 11,664 annotated question
+    instances from six diagram QA datasets: ChartQA, Circuit-VQA, InfographicsVQA, MapIQ, MapWise, and
+    AI2D, with a 2,445-instance test set carrying human-verified evidence annotations and a standardized
+    evaluation framework. Our evaluation on recent VLMs reveals that even Claude Opus 4.6 achieves a Grounding
+    IoU of only 23.8% on AI2D, showing that faithful visual grounding remains an open challenge. DRAGON
+    supports future research on models that ground their predictions in visual evidence.'
+  url: https://arxiv.org/abs/2604.25231
+  pdf_url: https://arxiv.org/pdf/2604.25231v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 0
+citation_year: 2026

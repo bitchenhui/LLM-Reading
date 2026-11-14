@@ -1,0 +1,36 @@
+id: paper:arxiv:2508.15805
+status: skipped
+score: 1
+track: self_improvement
+matched:
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: 'ALAS: Autonomous Learning Agent for Self-Updating Language Models'
+  authors:
+  - Dhruv Atreja
+  published: '2025-08-14'
+  updated: '2025-08-14'
+  categories:
+  - cs.CL
+  - cs.AI
+  - cs.LG
+  abstract: 'Large language models (LLMs) often have a fixed knowledge cutoff, limiting their accuracy
+    on emerging information. We present ALAS (Autonomous Learning Agent System), a modular pipeline that
+    continuously updates an LLM''s knowledge with minimal human intervention. ALAS autonomously generates
+    a learning curriculum for a target domain, retrieves up-to-date information from the web (with citations),
+    distills this into question-answer training data, and fine-tunes the model through supervised fine-tuning
+    (SFT) and direct preference optimization (DPO). It iteratively evaluates performance and revises the
+    curriculum, enabling long-term continual learning. We demonstrate ALAS''s ability to self-improve
+    a model on rapidly evolving domains (e.g., new Python releases, latest security CVEs, academic trends),
+    significantly boosting post-cutoff question answering accuracy (from 15% to 90% on average) without
+    manual dataset curation. The system emphasizes modularity and reproducibility: each component (planning,
+    retrieval, distillation, memory, fine-tuning) is interchangeable and built on standard APIs. We discuss
+    comparative baselines (e.g., retrieval-augmented generation vs. fine-tuning) and show that ALAS achieves
+    90% accuracy on knowledge-updated queries with minimal engineering overhead. Finally, we outline limitations
+    (cost, dependency on source quality) and future directions for autonomous lifelong learning in LLMs.'
+  url: https://arxiv.org/abs/2508.15805
+  pdf_url: https://arxiv.org/pdf/2508.15805v1
+  version: v1
+fetched: '2026-11-14'

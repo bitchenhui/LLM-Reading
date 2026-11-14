@@ -1,0 +1,37 @@
+id: paper:arxiv:2504.18157
+status: skipped
+score: 1
+track: audio_coding
+matched:
+- ref: concept:NeuralAudioCodec
+  count: 1
+  weight: 1
+meta:
+  title: 'DOSE : Drum One-Shot Extraction from Music Mixture'
+  authors:
+  - Suntae Hwang
+  - Seonghyeon Kang
+  - Kyungsu Kim
+  - Semin Ahn
+  - Kyogu Lee
+  published: '2025-04-25'
+  updated: '2025-04-25'
+  categories:
+  - eess.AS
+  - cs.SD
+  abstract: Drum one-shot samples are crucial for music production, particularly in sound design and electronic
+    music. This paper introduces Drum One-Shot Extraction, a task in which the goal is to extract drum
+    one-shots that are present in the music mixture. To facilitate this, we propose the Random Mixture
+    One-shot Dataset (RMOD), comprising large-scale, randomly arranged music mixtures paired with corresponding
+    drum one-shot samples. Our proposed model, Drum One- Shot Extractor (DOSE), leverages neural audio
+    codec language models for end-to-end extraction, bypassing traditional source separation steps. Additionally,
+    we introduce a novel onset loss, designed to encourage accurate prediction of the initial transient
+    of drum one-shots, which is essential for capturing timbral characteristics. We compare this approach
+    against a source separation-based extraction method as a baseline. The results, evaluated using Frechet
+    Audio Distance (FAD) and Multi-Scale Spectral loss (MSS), demonstrate that DOSE, enhanced with onset
+    loss, outperforms the baseline, providing more accurate and higher-quality drum one-shots from music
+    mixtures. The code, model checkpoint, and audio examples are available at https://github.com/HSUNEH/DOSE
+  url: https://arxiv.org/abs/2504.18157
+  pdf_url: https://arxiv.org/pdf/2504.18157v1
+  version: v1
+fetched: '2026-11-14'

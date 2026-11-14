@@ -1,0 +1,35 @@
+id: paper:arxiv:2409.13216
+status: skipped
+score: 0
+track: audio_coding
+matched: []
+meta:
+  title: 'MuCodec: Ultra Low-Bitrate Music Codec'
+  authors:
+  - Yaoxun Xu
+  - Hangting Chen
+  - Jianwei Yu
+  - Wei Tan
+  - Rongzhi Gu
+  - Shun Lei
+  - Zhiwei Lin
+  - Zhiyong Wu
+  published: '2024-09-20'
+  updated: '2025-07-11'
+  categories:
+  - cs.SD
+  - eess.AS
+  abstract: 'Music codecs are a vital aspect of audio codec research, and ultra low-bitrate compression
+    holds significant importance for music transmission and generation. Due to the complexity of music
+    backgrounds and the richness of vocals, solely relying on modeling semantic or acoustic information
+    cannot effectively reconstruct music with both vocals and backgrounds. To address this issue, we propose
+    MuCodec, specifically targeting music compression and reconstruction tasks at ultra low bitrates.
+    MuCodec employs MuEncoder to extract both acoustic and semantic features, discretizes them with RVQ,
+    and obtains Mel-VAE features via flow-matching. The music is then reconstructed using a pre-trained
+    MEL-VAE decoder and HiFi-GAN. MuCodec can reconstruct high-fidelity music at ultra low (0.35kbps)
+    or high bitrates (1.35kbps), achieving the best results to date in both subjective and objective metrics.
+    Code and Demo: https://xuyaoxun.github.io/MuCodec_demo/.'
+  url: https://arxiv.org/abs/2409.13216
+  pdf_url: https://arxiv.org/pdf/2409.13216v3
+  version: v3
+fetched: '2026-11-14'

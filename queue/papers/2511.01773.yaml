@@ -1,0 +1,30 @@
+id: paper:arxiv:2511.01773
+status: skipped
+score: 1
+track: audio_coding
+matched:
+- ref: concept:NeuralAudioCodec
+  count: 1
+  weight: 1
+meta:
+  title: 'ADNAC: Audio Denoiser using Neural Audio Codec'
+  authors:
+  - Daniel Jimon
+  - Mircea Vaida
+  - Adriana Stan
+  published: '2025-11-03'
+  updated: '2025-11-03'
+  categories:
+  - cs.SD
+  - cs.LG
+  abstract: Audio denoising is critical in signal processing, enhancing intelligibility and fidelity for
+    applications like restoring musical recordings. This paper presents a proof-of-concept for adapting
+    a state-of-the-art neural audio codec, the Descript Audio Codec (DAC), for music denoising. This work
+    overcomes the limitations of traditional architectures like U-Nets by training the model on a large-scale,
+    custom-synthesized dataset built from diverse sources. Training is guided by a multi objective loss
+    function that combines time-domain, spectral, and signal-level fidelity metrics. Ultimately, this
+    paper aims to present a PoC for high-fidelity, generative audio restoration.
+  url: https://arxiv.org/abs/2511.01773
+  pdf_url: https://arxiv.org/pdf/2511.01773v1
+  version: v1
+fetched: '2026-11-14'

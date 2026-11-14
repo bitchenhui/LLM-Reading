@@ -1,0 +1,43 @@
+id: paper:arxiv:2506.17983
+status: skipped
+score: 0
+track: video_image_coding
+matched: []
+meta:
+  title: 'LVPNet: A Latent-variable-based Prediction-driven End-to-end Framework for Lossless Compression
+    of Medical Images'
+  authors:
+  - Chenyue Song
+  - Chen Hui
+  - Qing Lin
+  - Wei Zhang
+  - Siqiao Li
+  - Haiqi Zhu
+  - Zhixuan Li
+  - Shengping Zhang
+  - Shaohui Liu
+  - Feng Jiang
+  - Xiang Li
+  published: '2025-06-22'
+  updated: '2025-06-25'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: Autoregressive Initial Bits is a framework that integrates sub-image autoregression and latent
+    variable modeling, demonstrating its advantages in lossless medical image compression. However, in
+    existing methods, the image segmentation process leads to an even distribution of latent variable
+    information across each sub-image, which in turn causes posterior collapse and inefficient utilization
+    of latent variables. To deal with these issues, we propose a prediction-based end-to-end lossless
+    medical image compression method named LVPNet, leveraging global latent variables to predict pixel
+    values and encoding predicted probabilities for lossless compression. Specifically, we introduce the
+    Global Multi-scale Sensing Module (GMSM), which extracts compact and informative latent representations
+    from the entire image, effectively capturing spatial dependencies within the latent space. Furthermore,
+    to mitigate the information loss introduced during quantization, we propose the Quantization Compensation
+    Module (QCM), which learns the distribution of quantization errors and refines the quantized features
+    to compensate for quantization loss. Extensive experiments on challenging benchmarks demonstrate that
+    our method achieves superior compression efficiency compared to state-of-the-art lossless image compression
+    approaches, while maintaining competitive inference speed. The code is at https://github.com/scy-Jackel/LVPNet.
+  url: https://arxiv.org/abs/2506.17983
+  pdf_url: https://arxiv.org/pdf/2506.17983v2
+  version: v2
+fetched: '2026-11-14'

@@ -1,0 +1,31 @@
+id: paper:arxiv:2602.08975
+status: skipped
+score: 1
+track: streaming_delivery
+matched:
+- ref: concept:WebRTC
+  count: 1
+  weight: 1
+meta:
+  title: Lightweight Call Signaling and Peer-to-Peer Control of WebRTC Video Conferencing
+  authors:
+  - Kundan Singh
+  published: '2026-02-09'
+  updated: '2026-02-09'
+  categories:
+  - cs.MM
+  - cs.NI
+  abstract: We present the software architecture and implementation of our web-based multiparty video
+    conference application. It does not use a media server. For call signaling, it either piggybacks on
+    existing push notifications via a lightweight notification server, or utilizes email messages to further
+    remove that server dependency. For conference control and data storage, it creates a peer-to-peer
+    network of the clients participating in the call. Our prototype client web app can be installed as
+    a browser extension, or a progressive web app on desktop and mobile. It uses WebRTC data channels
+    and media streams for the control and media paths in implementing a full featured video conferencing
+    with audio, video, text and screen sharing. The challenges faced and the techniques used in creating
+    our lightweight or serverless system are useful to other low-end WebRTC applications that intend to
+    save cost on server maintenance or paid subscriptions for multiparty video calls.
+  url: https://arxiv.org/abs/2602.08975
+  pdf_url: https://arxiv.org/pdf/2602.08975v1
+  version: v1
+fetched: '2026-11-14'

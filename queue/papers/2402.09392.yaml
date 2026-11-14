@@ -1,0 +1,43 @@
+id: paper:arxiv:2402.09392
+status: skipped_low_citation
+score: 2
+track: streaming_delivery
+matched:
+- ref: concept:ABR
+  count: 3
+  weight: 1
+- ref: concept:QoE
+  count: 3
+  weight: 1
+meta:
+  title: 'LL-GABR: Energy Efficient Live Video Streaming Using Reinforcement Learning'
+  authors:
+  - Adithya Raman
+  - Bekir Turkkan
+  - Tevfik Kosar
+  published: '2024-02-14'
+  updated: '2024-02-14'
+  categories:
+  - cs.MM
+  - cs.AI
+  abstract: Over the recent years, research and development in adaptive bitrate (ABR) algorithms for live
+    video streaming have been successful in improving users' quality of experience (QoE) by reducing latency
+    to near real-time levels while delivering higher bitrate videos with minimal rebuffering time. However,
+    the QoE models used by these ABR algorithms do not take into account that a large portion of live
+    video streaming clients use mobile devices where a higher bitrate does not necessarily translate into
+    higher perceived quality. Ignoring perceived quality results in playing videos at higher bitrates
+    without a significant increase in perceptual video quality and becomes a burden for battery-constrained
+    mobile devices due to higher energy consumption. In this paper, we propose LL-GABR, a deep reinforcement
+    learning approach that models the QoE using perceived video quality instead of bitrate and uses energy
+    consumption along with other metrics like latency, rebuffering events, and smoothness. LL-GABR makes
+    no assumptions about the underlying video, environment, or network settings and can operate flexibly
+    on different video titles, each having a different bitrate encoding ladder without additional re-training,
+    unlike existing learning-based ABRs. Trace-driven experimental results show that LL-GABR outperforms
+    the state-of-the-art approaches by up to 44% in terms of perceptual QoE and a 73% increase in energy
+    efficiency as a result of reducing net energy consumption by 11%.
+  url: https://arxiv.org/abs/2402.09392
+  pdf_url: https://arxiv.org/pdf/2402.09392v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 3
+citation_year: 2024

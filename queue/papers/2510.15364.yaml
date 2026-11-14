@@ -1,0 +1,39 @@
+id: paper:arxiv:2510.15364
+status: skipped_low_citation
+score: 4
+track: audio_coding
+matched:
+- ref: codec:Opus
+  count: 1
+  weight: 3
+- ref: concept:NeuralAudioCodec
+  count: 1
+  weight: 1
+meta:
+  title: 'LDCodec: A high quality neural audio codec with low-complexity decoder'
+  authors:
+  - Jiawei Jiang
+  - Linping Xu
+  - Dejun Zhang
+  - Qingbo Huang
+  - Xianjun Xia
+  - Yijian Xiao
+  published: '2025-10-17'
+  updated: '2025-10-17'
+  categories:
+  - eess.AS
+  abstract: Neural audio coding has been shown to outperform classical audio coding at extremely low bitrates.
+    However, the practical application of neural audio codecs is still limited by their elevated complexity.
+    To address this challenge, we have developed a high-quality neural audio codec with a low-complexity
+    decoder, named LDCodec (Low-complexity Decoder Neural Audio Codec), specifically designed for on-demand
+    streaming media clients, such as smartphones. Specifically, we introduced a novel residual unit combined
+    with Long-term and Short-term Residual Vector Quantization (LSRVQ), subband-fullband frequency discriminators,
+    and perceptual loss functions. This combination results in high-quality audio reconstruction with
+    lower complexity. Both our subjective and objective tests demonstrated that our proposed LDCodec at
+    6kbps outperforms Opus at 12kbps.
+  url: https://arxiv.org/abs/2510.15364
+  pdf_url: https://arxiv.org/pdf/2510.15364v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 2
+citation_year: 2025

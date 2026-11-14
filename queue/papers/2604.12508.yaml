@@ -1,0 +1,35 @@
+id: paper:arxiv:2604.12508
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'From Attenuation to Attention: Variational Information Flow Manipulation for Fine-Grained Visual
+    Perception'
+  authors:
+  - Jilong Zhu
+  - Yang Feng
+  published: '2026-04-14'
+  updated: '2026-04-14'
+  categories:
+  - cs.CV
+  abstract: 'While Multimodal Large Language Models (MLLMs) have demonstrated impressive capabilities
+    in general visual understanding, they frequently falter in fine-grained perception tasks that require
+    identifying tiny objects or discerning subtle visual relationships. We attribute this limitation to
+    Visual Attenuation: a phenomenon where sparse fine-grained visual signals are prematurely suppressed
+    or diluted by dominant textual tokens during network propagation, resulting in a "loss of focus" during
+    the deep-level decision-making process. Existing input-centric solutions fail to fundamentally reverse
+    this intrinsic mechanism of information loss. To address this challenge, we propose the Variational
+    Information Flow (VIF) framework. Adopting a probabilistic perspective, VIF leverages a Conditional
+    Variational Autoencoder (CVAE) to model the visual saliency relevant to the question-answer pair as
+    a latent distribution. As a plug-and-play module, VIF can be integrated into existing architectures.
+    Extensive evaluations across diverse benchmarks, covering General VQA, fine-grained perception, and
+    visual grounding, demonstrate that VIF yields competitive improvements over previous methods, validating
+    its effectiveness in enhancing the fine-grained perception of MLLMs.'
+  url: https://arxiv.org/abs/2604.12508
+  pdf_url: https://arxiv.org/pdf/2604.12508v1
+  version: v1
+fetched: '2026-11-14'

@@ -1,0 +1,40 @@
+id: paper:arxiv:2603.00511
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: Multimodal Adaptive Retrieval Augmented Generation through Internal Representation Learning
+  authors:
+  - Ruoshuang Du
+  - Xin Sun
+  - Qiang Liu
+  - Bowen Song
+  - Zhongqi Chen
+  - Weiqiang Wang
+  - Liang Wang
+  published: '2026-02-28'
+  updated: '2026-02-28'
+  categories:
+  - cs.CV
+  - cs.LG
+  abstract: Visual Question Answering systems face reliability issues due to hallucinations, where models
+    generate answers misaligned with visual input or factual knowledge. While Retrieval Augmented Generation
+    frameworks mitigate this issue by incorporating external knowledge, static retrieval often introduces
+    irrelevant or conflicting content, particularly in visual RAG settings where visually similar but
+    semantically incorrect evidence may be retrieved. To address this, we propose Multimodal Adaptive
+    RAG (MMA-RAG), which dynamically assesses the confidence in the internal knowledge of the model to
+    decide whether to incorporate the retrieved external information into the generation process. Central
+    to MMA-RAG is a decision classifier trained through a layer-wise analysis, which leverages joint internal
+    visual and textual representations to guide the use of reverse image retrieval. Experiments demonstrated
+    that the model achieves a significant improvement in response performance in three VQA datasets. Meanwhile,
+    ablation studies highlighted the importance of internal representations in adaptive retrieval decisions.
+    In general, the experimental results demonstrated that MMA-RAG effectively balances external knowledge
+    utilization and inference robustness in diverse multimodal scenarios.
+  url: https://arxiv.org/abs/2603.00511
+  pdf_url: https://arxiv.org/pdf/2603.00511v1
+  version: v1
+fetched: '2026-11-14'

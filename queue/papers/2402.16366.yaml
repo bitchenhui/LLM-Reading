@@ -1,0 +1,37 @@
+id: paper:arxiv:2402.16366
+status: skipped
+score: 1
+track: video_image_coding
+matched:
+- ref: concept:NeRF
+  count: 2
+  weight: 1
+meta:
+  title: 'SPC-NeRF: Spatial Predictive Compression for Voxel Based Radiance Field'
+  authors:
+  - Zetian Song
+  - Wenhong Duan
+  - Yuhuai Zhang
+  - Shiqi Wang
+  - Siwei Ma
+  - Wen Gao
+  published: '2024-02-26'
+  updated: '2024-02-26'
+  categories:
+  - cs.CV
+  - cs.MM
+  abstract: Representing the Neural Radiance Field (NeRF) with the explicit voxel grid (EVG) is a promising
+    direction for improving NeRFs. However, the EVG representation is not efficient for storage and transmission
+    because of the terrific memory cost. Current methods for compressing EVG mainly inherit the methods
+    designed for neural network compression, such as pruning and quantization, which do not take full
+    advantage of the spatial correlation of voxels. Inspired by prosperous digital image compression techniques,
+    this paper proposes SPC-NeRF, a novel framework applying spatial predictive coding in EVG compression.
+    The proposed framework can remove spatial redundancy efficiently for better compression performance.Moreover,
+    we model the bitrate and design a novel form of the loss function, where we can jointly optimize compression
+    ratio and distortion to achieve higher coding efficiency. Extensive experiments demonstrate that our
+    method can achieve 32% bit saving compared to the state-of-the-art method VQRF on multiple representative
+    test datasets, with comparable training time.
+  url: https://arxiv.org/abs/2402.16366
+  pdf_url: https://arxiv.org/pdf/2402.16366v1
+  version: v1
+fetched: '2026-11-14'

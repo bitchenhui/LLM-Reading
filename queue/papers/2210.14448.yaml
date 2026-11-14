@@ -1,0 +1,40 @@
+id: paper:arxiv:2210.14448
+status: skipped_low_citation
+score: 2
+track: audio_coding
+matched:
+- ref: concept:MoE
+  count: 1
+  weight: 1
+- ref: concept:NPU
+  count: 1
+  weight: 1
+meta:
+  title: The NPU-ASLP System for The ISCSLP 2022 Magichub Code-Swiching ASR Challenge
+  authors:
+  - Yuhao Liang
+  - Peikun Chen
+  - Fan Yu
+  - Xinfa Zhu
+  - Tianyi Xu
+  - Lei Xie
+  published: '2022-10-26'
+  updated: '2022-10-26'
+  categories:
+  - cs.SD
+  - eess.AS
+  abstract: This paper describes our NPU-ASLP system submitted to the ISCSLP 2022 Magichub Code-Switching
+    ASR Challenge. In this challenge, we first explore several popular end-to-end ASR architectures and
+    training strategies, including bi-encoder, language-aware encoder (LAE) and mixture of experts (MoE).
+    To improve our system's language modeling ability, we further attempt the internal language model
+    as well as the long context language model. Given the limited training data in the challenge, we further
+    investigate the effects of data augmentation, including speed perturbation, pitch shifting, speech
+    codec, SpecAugment and synthetic data from text-to-speech (TTS). Finally, we explore ROVER-based score
+    fusion to make full use of complementary hypotheses from different models. Our submitted system achieves
+    16.87% on mix error rate (MER) on the test set and comes to the 2nd place in the challenge ranking.
+  url: https://arxiv.org/abs/2210.14448
+  pdf_url: https://arxiv.org/pdf/2210.14448v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 2
+citation_year: 2022

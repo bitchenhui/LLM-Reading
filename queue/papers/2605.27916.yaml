@@ -1,0 +1,55 @@
+id: paper:arxiv:2605.27916
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'OphIn-500K: Curating Web-Scale Visual Instructions for Scaling Ophthalmic Multimodal Large Language
+    Models'
+  authors:
+  - Xuanzhao Dong
+  - Wenhui Zhu
+  - Xiwen Chen
+  - Hao Wang
+  - Xin Li
+  - Yujian Xiong
+  - Jiajun Cheng
+  - Jingjing Wang
+  - Xiaobing Yu
+  - Haiyu Wu
+  - Shao Tang
+  - Zhipeng Wang
+  - Langechuan Liu
+  - Shan Lin
+  - Oana Dumitrascu
+  - Yalin Wang
+  published: '2026-05-27'
+  updated: '2026-05-27'
+  categories:
+  - cs.CV
+  - cs.CL
+  abstract: The advancement of general medical Multimodal Large Language Models (MLLMs) has shown great
+    potential for building conversational assistants to support clinical diagnosis. However, their adaptation
+    to highly specialized domains such as ophthalmology remains underexplored, primarily due to the scarcity
+    of large-scale, domain-specific instruction-tuning data. Existing ophthalmic datasets for conversational
+    agents are often limited in scale and largely rely on images from established public benchmarks, limiting
+    the scalability of ophthalmic MLLMs and their ability to capture real-world clinical complexity. To
+    address this gap, we propose $\textbf{OphIn-Engine}$, an ophthalmology-specific instruction data curation
+    pipeline that constructs high-quality instruction data from open-access ophthalmology web-scale videos.
+    The pipeline integrates multimodal transcription for extracting image-transcript pairs, visual cue
+    separation and scoring for identifying clinically relevant visual descriptions, and instruction synthesis
+    with quality control for generating accurate and diverse clinical dialogues. Using this engine, we
+    introduce $\textbf{OphIn-500K}$, a large-scale multimodal ophthalmology instruction-tuning dataset
+    containing over 500,000 instruction instances and more than 151,000 unique images from over 29,000
+    video clips, formatted as visual question answering (VQA), multi-turn conversational interactions,
+    and chain-of-thought (CoT) reasoning. Built upon this dataset, we further develop $\textbf{OphIn-VL}$,
+    an ophthalmology-specific MLLM with advanced visual understanding and conversational capabilities.
+    Comprehensive experiments and case studies demonstrate that OphIn-VL achieves superior performance
+    compared with state-of-the-art general medical and domain-specific MLLMs.
+  url: https://arxiv.org/abs/2605.27916
+  pdf_url: https://arxiv.org/pdf/2605.27916v1
+  version: v1
+fetched: '2026-11-14'

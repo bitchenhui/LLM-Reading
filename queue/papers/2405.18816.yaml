@@ -1,0 +1,41 @@
+id: paper:arxiv:2405.18816
+status: skipped
+score: 1
+track: processing_enhancement
+matched:
+- ref: concept:SuperResolution
+  count: 1
+  weight: 1
+meta:
+  title: Flow Priors for Linear Inverse Problems via Iterative Corrupted Trajectory Matching
+  authors:
+  - Yasi Zhang
+  - Peiyu Yu
+  - Yaxuan Zhu
+  - Yingshan Chang
+  - Feng Gao
+  - Ying Nian Wu
+  - Oscar Leong
+  published: '2024-05-29'
+  updated: '2025-01-03'
+  categories:
+  - cs.CV
+  - cs.LG
+  abstract: Generative models based on flow matching have attracted significant attention for their simplicity
+    and superior performance in high-resolution image synthesis. By leveraging the instantaneous change-of-variables
+    formula, one can directly compute image likelihoods from a learned flow, making them enticing candidates
+    as priors for downstream tasks such as inverse problems. In particular, a natural approach would be
+    to incorporate such image probabilities in a maximum-a-posteriori (MAP) estimation problem. A major
+    obstacle, however, lies in the slow computation of the log-likelihood, as it requires backpropagating
+    through an ODE solver, which can be prohibitively slow for high-dimensional problems. In this work,
+    we propose an iterative algorithm to approximate the MAP estimator efficiently to solve a variety
+    of linear inverse problems. Our algorithm is mathematically justified by the observation that the
+    MAP objective can be approximated by a sum of $N$ ``local MAP'' objectives, where $N$ is the number
+    of function evaluations. By leveraging Tweedie's formula, we show that we can perform gradient steps
+    to sequentially optimize these objectives. We validate our approach for various linear inverse problems,
+    such as super-resolution, deblurring, inpainting, and compressed sensing, and demonstrate that we
+    can outperform other methods based on flow matching. Code is available at https://github.com/YasminZhang/ICTM.
+  url: https://arxiv.org/abs/2405.18816
+  pdf_url: https://arxiv.org/pdf/2405.18816v4
+  version: v4
+fetched: '2026-11-14'

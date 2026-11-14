@@ -1,0 +1,45 @@
+id: paper:arxiv:2505.06975
+status: skipped_low_citation
+score: 2
+track: processing_enhancement
+matched:
+- ref: concept:SuperResolution
+  count: 1
+  weight: 1
+- ref: concept:TrainingFree
+  count: 1
+  weight: 1
+meta:
+  title: High-Frequency Prior-Driven Adaptive Masking for Accelerating Image Super-Resolution
+  authors:
+  - Wei Shang
+  - Dongwei Ren
+  - Wanying Zhang
+  - Pengfei Zhu
+  - Qinghua Hu
+  - Wangmeng Zuo
+  published: '2025-05-11'
+  updated: '2025-05-11'
+  categories:
+  - cs.CV
+  abstract: The primary challenge in accelerating image super-resolution lies in reducing computation
+    while maintaining performance and adaptability. Motivated by the observation that high-frequency regions
+    (e.g., edges and textures) are most critical for reconstruction, we propose a training-free adaptive
+    masking module for acceleration that dynamically focuses computation on these challenging areas. Specifically,
+    our method first extracts high-frequency components via Gaussian blur subtraction and adaptively generates
+    binary masks using K-means clustering to identify regions requiring intensive processing. Our method
+    can be easily integrated with both CNNs and Transformers. For CNN-based architectures, we replace
+    standard $3 \times 3$ convolutions with an unfold operation followed by $1 \times 1$ convolutions,
+    enabling pixel-wise sparse computation guided by the mask. For Transformer-based models, we partition
+    the mask into non-overlapping windows and selectively process tokens based on their average values.
+    During inference, unnecessary pixels or windows are pruned, significantly reducing computation. Moreover,
+    our method supports dilation-based mask adjustment to control the processing scope without retraining,
+    and is robust to unseen degradations (e.g., noise, compression). Extensive experiments on benchmarks
+    demonstrate that our method reduces FLOPs by 24--43% for state-of-the-art models (e.g., CARN, SwinIR)
+    while achieving comparable or better quantitative metrics. The source code is available at https://github.com/shangwei5/AMSR
+  url: https://arxiv.org/abs/2505.06975
+  pdf_url: https://arxiv.org/pdf/2505.06975v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 0
+citation_year: 2025

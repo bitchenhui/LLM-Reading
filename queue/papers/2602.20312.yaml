@@ -1,0 +1,30 @@
+id: paper:arxiv:2602.20312
+status: skipped
+score: 0
+track: immersive_media
+matched: []
+meta:
+  title: 'N4MC: Neural 4D Mesh Compression'
+  authors:
+  - Guodong Chen
+  - Huanshuo Dong
+  - Mallesham Dasari
+  published: '2026-02-23'
+  updated: '2026-02-23'
+  categories:
+  - cs.CV
+  abstract: 'We present N4MC, the first 4D neural compression framework to efficiently compress time-varying
+    mesh sequences by exploiting their temporal redundancy. Unlike prior neural mesh compression methods
+    that treat each mesh frame independently, N4MC takes inspiration from inter-frame compression in 2D
+    video codecs, and learns motion compensation in long mesh sequences. Specifically, N4MC converts consecutive
+    irregular mesh frames into regular 4D tensors to provide a uniform and compact representation. These
+    tensors are then condensed using an auto-decoder, which captures both spatial and temporal correlations
+    for redundancy removal. To enhance temporal coherence, we introduce a transformer-based interpolation
+    model that predicts intermediate mesh frames conditioned on latent embeddings derived from tracked
+    volume centers, eliminating motion ambiguities. Extensive evaluations show that N4MC outperforms state-of-the-art
+    in rate-distortion performance, while enabling real-time decoding of 4D mesh sequences. The implementation
+    of our method is available at: https://github.com/frozzzen3/N4MC.'
+  url: https://arxiv.org/abs/2602.20312
+  pdf_url: https://arxiv.org/pdf/2602.20312v1
+  version: v1
+fetched: '2026-11-14'

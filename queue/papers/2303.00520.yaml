@@ -1,0 +1,36 @@
+id: paper:arxiv:2303.00520
+status: skipped
+score: 0
+track: processing_enhancement
+matched: []
+meta:
+  title: Valid Information Guidance Network for Compressed Video Quality Enhancement
+  authors:
+  - Xuan Sun
+  - Ziyue Zhang
+  - Guannan Chen
+  - Dan Zhu
+  published: '2023-02-28'
+  updated: '2023-02-28'
+  categories:
+  - cs.CV
+  - cs.MM
+  abstract: In recent years deep learning methods have shown great superiority in compressed video quality
+    enhancement tasks. Existing methods generally take the raw video as the ground truth and extract practical
+    information from consecutive frames containing various artifacts. However, they do not fully exploit
+    the valid information of compressed and raw videos to guide the quality enhancement for compressed
+    videos. In this paper, we propose a unique Valid Information Guidance scheme (VIG) to enhance the
+    quality of compressed videos by mining valid information from both compressed videos and raw videos.
+    Specifically, we propose an efficient framework, Compressed Redundancy Filtering (CRF) network, to
+    balance speed and enhancement. After removing the redundancy by filtering the information, CRF can
+    use the valid information of the compressed video to reconstruct the texture. Furthermore, we propose
+    a progressive Truth Guidance Distillation (TGD) strategy, which does not need to design additional
+    teacher models and distillation loss functions. By only using the ground truth as input to guide the
+    model to aggregate the correct spatio-temporal correspondence across the raw frames, TGD can significantly
+    improve the enhancement effect without increasing the extra training cost. Extensive experiments show
+    that our method achieves the state-of-the-art performance of compressed video quality enhancement
+    in terms of accuracy and efficiency.
+  url: https://arxiv.org/abs/2303.00520
+  pdf_url: https://arxiv.org/pdf/2303.00520v1
+  version: v1
+fetched: '2026-11-14'

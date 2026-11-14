@@ -1,0 +1,37 @@
+id: paper:arxiv:2603.25924
+status: skipped_low_citation
+score: 2
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+- ref: dataset:COCO
+  count: 1
+  weight: 1
+meta:
+  title: 'Good Scores, Bad Data: A Metric for Multimodal Coherence'
+  authors:
+  - Vasundra Srinivasan
+  published: '2026-03-26'
+  updated: '2026-10-24'
+  categories:
+  - cs.CV
+  - cs.AI
+  - cs.IR
+  abstract: Multimodal AI systems are evaluated by downstream task accuracy, but high accuracy does not
+    mean the underlying data is coherent. A model can score well on Visual Question Answering (VQA) while
+    its inputs contradict each other. We introduce the Multimodal Coherence Score (MCS), a metric that
+    evaluates fusion quality independent of any downstream model. MCS decomposes coherence into four dimensions,
+    identity, spatial, semantic, and decision, with weights learned via Nelder-Mead optimization. We evaluate
+    on 1,000 Visual Genome images using DETR, CLIP, and ViLT, and validate on 150 COCO images with no
+    retraining. Across three fusion architectures, MCS discriminates quality with higher sensitivity than
+    task accuracy alone (Spearman rho = 0.093 vs. 0.071). Perturbation experiments confirm each dimension
+    responds independently to its failure mode with zero cross-talk. MCS is lightweight, requires no human
+    annotation, and tells you not just that something broke, but what broke.
+  url: https://arxiv.org/abs/2603.25924
+  pdf_url: https://arxiv.org/pdf/2603.25924v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 0
+citation_year: 2026

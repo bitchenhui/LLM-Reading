@@ -1,0 +1,46 @@
+id: paper:arxiv:2604.12833
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: Challenging Vision-Language Models with Physically Deployable Multimodal Semantic Lighting Attacks
+  authors:
+  - Yingying Zhao
+  - Chengyin Hu
+  - Qike Zhang
+  - Xin Li
+  - Xin Wang
+  - Yiwei Wei
+  - Jiujiang Guo
+  - Jiahuan Long
+  - Tingsong Jiang
+  - Wen Yao
+  published: '2026-04-14'
+  updated: '2026-04-14'
+  categories:
+  - cs.CV
+  abstract: Vision-Language Models (VLMs) have shown remarkable performance, yet their security remains
+    insufficiently understood. Existing adversarial studies focus almost exclusively on the digital setting,
+    leaving physical-world threats largely unexplored. As VLMs are increasingly deployed in real environments,
+    this gap becomes critical, since adversarial perturbations must be physically realizable. Despite
+    this practical relevance, physical attacks against VLMs have not been systematically studied. Such
+    attacks may induce recognition failures and further disrupt multimodal reasoning, leading to severe
+    semantic misinterpretation in downstream tasks. Therefore, investigating physical attacks on VLMs
+    is essential for assessing their real-world security risks. To address this gap, we propose Multimodal
+    Semantic Lighting Attacks (MSLA), the first physically deployable adversarial attack framework against
+    VLMs. MSLA uses controllable adversarial lighting to disrupt multimodal semantic understanding in
+    real scenes, attacking semantic alignment rather than only task-specific outputs. Consequently, it
+    degrades zero-shot classification performance of mainstream CLIP variants while inducing severe semantic
+    hallucinations in advanced VLMs such as LLaVA and BLIP across image captioning and visual question
+    answering (VQA). Extensive experiments in both digital and physical domains demonstrate that MSLA
+    is effective, transferable, and practically realizable. Our findings provide the first evidence that
+    VLMs are highly vulnerable to physically deployable semantic attacks, exposing a previously overlooked
+    robustness gap and underscoring the urgent need for physical-world robustness evaluation of VLMs.
+  url: https://arxiv.org/abs/2604.12833
+  pdf_url: https://arxiv.org/pdf/2604.12833v1
+  version: v1
+fetched: '2026-11-14'

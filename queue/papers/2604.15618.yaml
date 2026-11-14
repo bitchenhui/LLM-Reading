@@ -1,0 +1,31 @@
+id: paper:arxiv:2604.15618
+status: skipped
+score: 1
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+meta:
+  title: Majority Voting for Code Generation
+  authors:
+  - Tim Launer
+  - Jonas Hübotter
+  - Marco Bagatella
+  - Ido Hakimi
+  - Andreas Krause
+  published: '2026-04-17'
+  updated: '2026-04-17'
+  categories:
+  - cs.LG
+  abstract: We investigate Functional Majority Voting (FMV), a method based on functional consensus for
+    code generation with Large Language Models, which identifies a representative solution from multiple
+    generations using their runtime execution signatures on test inputs. We find that FMV is an effective
+    test-time inference strategy, substantially boosting performance on LiveCodeBench without a large
+    compute overhead. Furthermore, we extend the utility of functional consensus and apply it as an aggregation
+    strategy for label-free Test-Time Reinforcement Learning. We demonstrate that this increases pass@1
+    on holdout tasks, but find no evidence of self-improvement beyond the base model's performance ceiling.
+  url: https://arxiv.org/abs/2604.15618
+  pdf_url: https://arxiv.org/pdf/2604.15618v1
+  version: v1
+fetched: '2026-11-14'

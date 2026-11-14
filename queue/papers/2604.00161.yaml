@@ -1,0 +1,45 @@
+id: paper:arxiv:2604.00161
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'Q-Mask: Query-driven Causal Masks for Text Anchoring in OCR-Oriented Vision-Language Models'
+  authors:
+  - Longwei Xu
+  - Feng Feng
+  - Shaojie Zhang
+  - Xin Chen
+  - Hang Li
+  - Anan Du
+  - Hailong Yu
+  - Pei Fu
+  - Zhenbo Luo
+  - Jian Luan
+  published: '2026-03-31'
+  updated: '2026-04-21'
+  categories:
+  - cs.CV
+  abstract: Optical Character Recognition (OCR) is increasingly regarded as a foundational capability
+    for modern vision-language models (VLMs), enabling them not only to read text in images but also to
+    support downstream reasoning in real-world visual question answering (VQA). However, practical applications
+    further require reliable text anchors, i.e., accurately grounding queried text to its corresponding
+    spatial region. To systematically evaluate this capability, we introduce TextAnchor-Bench (TABench),
+    a benchmark for fine-grained text-region grounding, which reveals that both general-purpose and OCR-specific
+    VLMs still struggle to establish accurate and stable text anchors. To address this limitation, we
+    propose Q-Mask, a precise OCR framework built upon a causal query-driven mask decoder (CQMD). Inspired
+    by chain-of-thought reasoning, Q-Mask performs causal visual decoding that sequentially generates
+    query-conditioned visual masks before producing the final OCR output. This visual CoT paradigm disentangles
+    where the text is from what the text is, enforcing grounded evidence acquisition prior to recognition
+    and enabling explicit text anchor construction during inference. To train CQMD, we construct TextAnchor-26M,
+    a large-scale dataset of image-text pairs annotated with fine-grained masks corresponding to specific
+    textual elements, encouraging stable text-region correspondences and injecting strong spatial priors
+    into VLM training. Extensive experiments demonstrate that Q-Mask substantially improves text anchoring
+    and understanding across diverse visual scenes.
+  url: https://arxiv.org/abs/2604.00161
+  pdf_url: https://arxiv.org/pdf/2604.00161v2
+  version: v2
+fetched: '2026-11-14'

@@ -1,0 +1,39 @@
+id: paper:arxiv:2602.16138
+status: skipped_low_citation
+score: 2
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+- ref: concept:TrainingFree
+  count: 1
+  weight: 1
+meta:
+  title: 'IRIS: Intent Resolution via Inference-time Saccades for Open-Ended VQA in Large Vision-Language
+    Models'
+  authors:
+  - Parsa Madinei
+  - Srijita Karmakar
+  - Russell Cohen Hoffing
+  - Felix Gervitz
+  - Miguel P. Eckstein
+  published: '2026-02-18'
+  updated: '2026-05-05'
+  categories:
+  - cs.CV
+  abstract: We introduce IRIS (Intent Resolution via Inference-time Saccades), a novel training-free approach
+    that uses eye-tracking data in real-time to resolve ambiguity in open-ended VQA. Through a comprehensive
+    user study with 500 unique image-question pairs, we demonstrate that fixations closest to the time
+    participants start verbally asking their questions are the most informative for disambiguation in
+    Large VLMs, more than doubling the accuracy of responses on ambiguous questions (from 35.2% to 77.2%)
+    while maintaining performance on unambiguous queries. We evaluate our approach across state-of-the-art
+    VLMs, showing consistent improvements when gaze data is incorporated in ambiguous image-question pairs,
+    regardless of architectural differences. We release a new benchmark dataset to use eye movement data
+    for disambiguated VQA, a novel real-time interactive protocol, and an evaluation suite.
+  url: https://arxiv.org/abs/2602.16138
+  pdf_url: https://arxiv.org/pdf/2602.16138v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 1
+citation_year: 2026

@@ -1,0 +1,44 @@
+id: paper:arxiv:2608.20814
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: Enhancing Localized Reasoning for Long Video Understanding via Efficient Segment-to-Video Supervision
+  authors:
+  - Beibei Zhang
+  - Chao Xu
+  - Jun Lan
+  - Zongyi Li
+  - Lai Wei
+  - Huijia Zhu
+  - Tongwei Ren
+  published: '2026-08-21'
+  updated: '2026-08-21'
+  categories:
+  - cs.CV
+  abstract: 'Though Multimodal Large Language Models (MLLMs) have shown impressive potential in video
+    understanding, long video understanding (LVU) remains challenging since distracting noise in complex
+    and lengthy contexts can obscure localized details, misleading MLLMs to produce incorrect answers.
+    Recent works mitigate these issues by incentivizing deep reasoning to include relevant evidence. However,
+    these methods have two main problems: First, the reinforcement fine-tuning framework (RFT) they leveraged
+    incurs substantial training overheads, including high annotation costs and complicated reward designs.
+    Second, the self-reflective and iterative-perception mechanism in some methods causes lengthy outputs
+    and high inference latency. To alleviate these problems, we propose a novel Segment-to-Video Supervision}
+    method (S2V) to efficiently enhance fine-grained reasoning in LVU. Specifically, we generate question
+    answer pairs (VQA) based on localized segments, and then transfer these segment-based VQA back to
+    the whole video for training. Due to focusing on short segments, segment-based VQA can naturally notice
+    details which tend to be overlooked from a whole-video perspective. Training on such data can enforce
+    MLLMs to correctly associate fine-grained details with QA while avoiding distracting noise in the
+    whole video. The S2V training involves just reinforcement learning (RL) with a simple accuracy reward
+    based on only 10K VQA samples and the resulting S2V model predicts answer using a single forward pass
+    with limited output tokens. Experimental results demonstrate that S2V can consistently improve LVU
+    performance across multiple LVU benchmarks, outperforming both general MLLMs and reasoning-based methods
+    not only in LVU accuracy but also in training and inference efficiency.'
+  url: https://arxiv.org/abs/2608.20814
+  pdf_url: https://arxiv.org/pdf/2608.20814v1
+  version: v1
+fetched: '2026-11-14'

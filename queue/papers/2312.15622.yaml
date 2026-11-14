@@ -1,0 +1,50 @@
+id: paper:arxiv:2312.15622
+status: pending
+score: 4
+track: video_image_coding
+matched:
+- ref: codec:VVC
+  count: 2
+  weight: 3
+- ref: concept:DiffusionPrior
+  count: 1
+  weight: 1
+meta:
+  title: 'Scalable Face Image Coding via StyleGAN Prior: Towards Compression for Human-Machine Collaborative
+    Vision'
+  authors:
+  - Qi Mao
+  - Chongyu Wang
+  - Meng Wang
+  - Shiqi Wang
+  - Ruijie Chen
+  - Libiao Jin
+  - Siwei Ma
+  published: '2023-12-25'
+  updated: '2023-12-25'
+  categories:
+  - cs.CV
+  - cs.AI
+  - cs.MM
+  abstract: The accelerated proliferation of visual content and the rapid development of machine vision
+    technologies bring significant challenges in delivering visual data on a gigantic scale, which shall
+    be effectively represented to satisfy both human and machine requirements. In this work, we investigate
+    how hierarchical representations derived from the advanced generative prior facilitate constructing
+    an efficient scalable coding paradigm for human-machine collaborative vision. Our key insight is that
+    by exploiting the StyleGAN prior, we can learn three-layered representations encoding hierarchical
+    semantics, which are elaborately designed into the basic, middle, and enhanced layers, supporting
+    machine intelligence and human visual perception in a progressive fashion. With the aim of achieving
+    efficient compression, we propose the layer-wise scalable entropy transformer to reduce the redundancy
+    between layers. Based on the multi-task scalable rate-distortion objective, the proposed scheme is
+    jointly optimized to achieve optimal machine analysis performance, human perception experience, and
+    compression ratio. We validate the proposed paradigm's feasibility in face image compression. Extensive
+    qualitative and quantitative experimental results demonstrate the superiority of the proposed paradigm
+    over the latest compression standard Versatile Video Coding (VVC) in terms of both machine analysis
+    as well as human perception at extremely low bitrates ($<0.01$ bpp), offering new insights for human-machine
+    collaborative compression.
+  url: https://arxiv.org/abs/2312.15622
+  pdf_url: https://arxiv.org/pdf/2312.15622v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 30
+citation_year: 2023

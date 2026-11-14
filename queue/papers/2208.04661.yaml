@@ -1,0 +1,37 @@
+id: paper:arxiv:2208.04661
+status: skipped_low_citation
+score: 3
+track: processing_enhancement
+matched:
+- ref: codec:HEVC
+  count: 1
+  weight: 3
+meta:
+  title: 'OL-DN: Online learning based dual-domain network for HEVC intra frame quality enhancement'
+  authors:
+  - Renwei Yang
+  - Shuyuan Zhu
+  - Xiaozhen Zheng
+  - Bing Zeng
+  published: '2022-08-09'
+  updated: '2022-08-09'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: Convolution neural network (CNN) based methods offer effective solutions for enhancing the
+    quality of compressed image and video. However, these methods ignore using the raw data to enhance
+    the quality. In this paper, we adopt the raw data in the quality enhancement for the HEVC intra-coded
+    image by proposing an online learning-based method. When quality enhancement is demanded, we online
+    train our proposed model at encoder side and then use the parameters to update the model of decoder
+    side. This method not only improves model performance, but also makes one model adoptable to multiple
+    coding scenarios. Besides, quantization error in discrete cosine transform (DCT) coefficients is the
+    root cause of various HEVC compression artifacts. Thus, we combine frequency domain priors to assist
+    image reconstruction. We design a DCT based convolution layer, to produce DCT coefficients that are
+    suitable for CNN learning. Experimental results show that our proposed online learning based dual-domain
+    network (OL-DN) has achieved superior performance, compared with the state-of-the-art methods.
+  url: https://arxiv.org/abs/2208.04661
+  pdf_url: https://arxiv.org/pdf/2208.04661v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 1
+citation_year: 2022

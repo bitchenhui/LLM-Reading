@@ -1,0 +1,38 @@
+id: paper:arxiv:2604.08243
+status: skipped
+score: 1
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+meta:
+  title: 'Self-Debias: Self-correcting for Debiasing Large Language Models'
+  authors:
+  - Xuan Feng
+  - Shuai Zhao
+  - Luwei Xiao
+  - Tianlong Gu
+  - Bo An
+  published: '2026-04-09'
+  updated: '2026-05-09'
+  categories:
+  - cs.CL
+  abstract: Although Large Language Models (LLMs) demonstrate remarkable reasoning capabilities, inherent
+    social biases often cascade throughout the Chain-of-Thought (CoT) process, leading to continuous "Bias
+    Propagation". Existing debiasing methods primarily focus on static constraints or external interventions,
+    failing to identify and interrupt this propagation once triggered. To address this limitation, we
+    introduce Self-Debias, a progressive framework designed to instill intrinsic self-correction capabilities.
+    Specifically, we reformulate the debiasing process as a strategic resource redistribution problem,
+    treating the model's output probability mass as a limited resource to be reallocated from biased heuristics
+    to unbiased reasoning paths. Unlike standard preference optimization which applies broad penalties,
+    Self-Debias employs a fine-grained trajectory-level objective subject to dynamic debiasing constraints.
+    This enables the model to selectively revise biased reasoning suffixes while preserving valid contextual
+    prefixes. Furthermore, we integrate an online self-improvement mechanism utilizing consistency filtering
+    to autonomously synthesize supervision signals. With merely 20k annotated samples, Self-Debias activates
+    efficient self-correction, achieving superior debiasing performance while preserving general reasoning
+    capabilities without continuous external oversight.
+  url: https://arxiv.org/abs/2604.08243
+  pdf_url: https://arxiv.org/pdf/2604.08243v2
+  version: v2
+fetched: '2026-11-14'

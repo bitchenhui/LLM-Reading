@@ -1,0 +1,43 @@
+id: paper:arxiv:2307.06091
+status: skipped_low_citation
+score: 7
+track: video_image_coding
+matched:
+- ref: codec:VVC
+  count: 2
+  weight: 3
+- ref: impl:VTM
+  count: 1
+  weight: 3
+- ref: concept:EntropyModel
+  count: 1
+  weight: 1
+meta:
+  title: 'AICT: An Adaptive Image Compression Transformer'
+  authors:
+  - Ahmed Ghorbel
+  - Wassim Hamidouche
+  - Luce Morin
+  published: '2023-07-12'
+  updated: '2023-07-12'
+  categories:
+  - cs.CV
+  - eess.IV
+  abstract: Motivated by the efficiency investigation of the Tranformer-based transform coding framework,
+    namely SwinT-ChARM, we propose to enhance the latter, as first, with a more straightforward yet effective
+    Tranformer-based channel-wise auto-regressive prior model, resulting in an absolute image compression
+    transformer (ICT). Current methods that still rely on ConvNet-based entropy coding are limited in
+    long-range modeling dependencies due to their local connectivity and an increasing number of architectural
+    biases and priors. On the contrary, the proposed ICT can capture both global and local contexts from
+    the latent representations and better parameterize the distribution of the quantized latents. Further,
+    we leverage a learnable scaling module with a sandwich ConvNeXt-based pre/post-processor to accurately
+    extract more compact latent representation while reconstructing higher-quality images. Extensive experimental
+    results on benchmark datasets showed that the proposed adaptive image compression transformer (AICT)
+    framework significantly improves the trade-off between coding efficiency and decoder complexity over
+    the versatile video coding (VVC) reference encoder (VTM-18.0) and the neural codec SwinT-ChARM.
+  url: https://arxiv.org/abs/2307.06091
+  pdf_url: https://arxiv.org/pdf/2307.06091v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 7
+citation_year: 2023

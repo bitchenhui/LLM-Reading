@@ -1,0 +1,35 @@
+id: paper:arxiv:2203.15578
+status: skipped
+score: 1
+track: audio_coding
+matched:
+- ref: concept:NeuralAudioCodec
+  count: 1
+  weight: 1
+meta:
+  title: Disentangling speech from surroundings with neural embeddings
+  authors:
+  - Ahmed Omran
+  - Neil Zeghidour
+  - Zalán Borsos
+  - Félix de Chaumont Quitry
+  - Malcolm Slaney
+  - Marco Tagliasacchi
+  published: '2022-03-29'
+  updated: '2023-06-04'
+  categories:
+  - cs.SD
+  - cs.LG
+  - eess.AS
+  abstract: We present a method to separate speech signals from noisy environments in the embedding space
+    of a neural audio codec. We introduce a new training procedure that allows our model to produce structured
+    encodings of audio waveforms given by embedding vectors, where one part of the embedding vector represents
+    the speech signal, and the rest represent the environment. We achieve this by partitioning the embeddings
+    of different input waveforms and training the model to faithfully reconstruct audio from mixed partitions,
+    thereby ensuring each partition encodes a separate audio attribute. As use cases, we demonstrate the
+    separation of speech from background noise or from reverberation characteristics. Our method also
+    allows for targeted adjustments of the audio output characteristics.
+  url: https://arxiv.org/abs/2203.15578
+  pdf_url: https://arxiv.org/pdf/2203.15578v2
+  version: v2
+fetched: '2026-11-14'

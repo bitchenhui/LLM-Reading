@@ -1,0 +1,47 @@
+id: paper:arxiv:2504.02871
+status: skipped_low_citation
+score: 2
+track: self_improvement
+matched:
+- ref: concept:LLM
+  count: 1
+  weight: 1
+- ref: concept:SelfImprovement
+  count: 1
+  weight: 1
+meta:
+  title: Synthesized Annotation Guidelines are Knowledge-Lite Boosters for Clinical Information Extraction
+  authors:
+  - Enshuo Hsu
+  - Martin Ugbala
+  - Krishna Kumar Kookal
+  - Zouaidi Kawtar
+  - Nicholas L. Rider
+  - Muhammad F. Walji
+  - Kirk Roberts
+  published: '2025-04-01'
+  updated: '2025-04-01'
+  categories:
+  - cs.CL
+  - cs.AI
+  - cs.IR
+  abstract: Generative information extraction using large language models, particularly through few-shot
+    learning, has become a popular method. Recent studies indicate that providing a detailed, human-readable
+    guideline-similar to the annotation guidelines traditionally used for training human annotators can
+    significantly improve performance. However, constructing these guidelines is both labor- and knowledge-intensive.
+    Additionally, the definitions are often tailored to meet specific needs, making them highly task-specific
+    and often non-reusable. Handling these subtle differences requires considerable effort and attention
+    to detail. In this study, we propose a self-improving method that harvests the knowledge summarization
+    and text generation capacity of LLMs to synthesize annotation guidelines while requiring virtually
+    no human input. Our zero-shot experiments on the clinical named entity recognition benchmarks, 2012
+    i2b2 EVENT, 2012 i2b2 TIMEX, 2014 i2b2, and 2018 n2c2 showed 25.86%, 4.36%, 0.20%, and 7.75% improvements
+    in strict F1 scores from the no-guideline baseline. The LLM-synthesized guidelines showed equivalent
+    or better performance compared to human-written guidelines by 1.15% to 4.14% in most tasks. In conclusion,
+    this study proposes a novel LLM self-improving method that requires minimal knowledge and human input
+    and is applicable to multiple biomedical domains.
+  url: https://arxiv.org/abs/2504.02871
+  pdf_url: https://arxiv.org/pdf/2504.02871v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 2
+citation_year: 2025

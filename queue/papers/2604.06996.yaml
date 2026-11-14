@@ -1,0 +1,45 @@
+id: paper:arxiv:2604.06996
+status: pending
+score: 3
+track: self_improvement
+matched:
+- ref: concept:RSI
+  count: 2
+  weight: 1
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: Self-Preference Bias in Rubric-Based Evaluation of Large Language Models
+  authors:
+  - José Pombal
+  - Ricardo Rei
+  - André F. T. Martins
+  published: '2026-04-08'
+  updated: '2026-08-03'
+  categories:
+  - cs.CL
+  - cs.AI
+  abstract: 'LLM-as-a-judge has become the de facto approach for evaluating LLM outputs. However, judges
+    are known to exhibit self-preference bias (SPB): they tend to favor outputs produced by themselves
+    or by models from their own family. This skews evaluations and, thus, hinders model development, especially
+    in settings of recursive self-improvement. We present the first study of SPB in rubric-based evaluation,
+    an increasingly popular benchmarking paradigm where judges issue binary verdicts on individual evaluation
+    criteria, instead of assigning holistic scores or rankings. Using IFEval and LiveCodeBench, benchmarks
+    with programmatically verifiable rubrics, we show that SPB persists even when evaluation criteria
+    are entirely objective: among rubrics where generators fail, judges can be more than 50% more likely
+    to incorrectly mark them as satisfied when the output is their own. We also find that, similarly to
+    other evaluation paradigms, ensembling multiple judges helps mitigate SPB, but without fully eliminating
+    it. On HealthBench, a medical chat benchmark with subjective rubrics, we observe that SPB skews model
+    scores by up to 10 points, a potentially decisive margin when ranking frontier models. We analyze
+    the factors that drive SPB in this setting, finding that negative rubrics and subjective topics like
+    communication and emergency referrals are particularly susceptible.'
+  url: https://arxiv.org/abs/2604.06996
+  pdf_url: https://arxiv.org/pdf/2604.06996v3
+  version: v3
+fetched: '2026-11-14'
+citation_count: 20
+citation_year: 2026

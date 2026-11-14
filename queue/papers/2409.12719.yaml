@@ -1,0 +1,42 @@
+id: paper:arxiv:2409.12719
+status: skipped_low_citation
+score: 3
+track: video_image_coding
+matched:
+- ref: codec:VVC
+  count: 1
+  weight: 3
+meta:
+  title: Multi-Scale Feature Prediction with Auxiliary-Info for Neural Image Compression
+  authors:
+  - Chajin Shin
+  - Sangjin Lee
+  - Sangyoun Lee
+  published: '2024-09-19'
+  updated: '2024-09-19'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: Recently, significant improvements in rate-distortion performance of image compression have
+    been achieved with deep-learning techniques. A key factor in this success is the use of additional
+    bits to predict an approximation of the latent vector, which is the output of the encoder, through
+    another neural network. Then, only the difference between the prediction and the latent vector is
+    coded into the bitstream, along with its estimated probability distribution. We introduce a new predictive
+    structure consisting of the auxiliary coarse network and the main network, inspired by neural video
+    compression. The auxiliary coarse network encodes the auxiliary information and predicts the approximation
+    of the original image as multi-scale features. The main network encodes the residual between the predicted
+    feature from the auxiliary coarse network and the feature of the original image. To further leverage
+    our new structure, we propose Auxiliary info-guided Feature Prediction (AFP) module that uses global
+    correlation to predict more accurate predicted features. Moreover, we present Context Junction module
+    that refines the auxiliary feature from AFP module and produces the residuals between the refined
+    features and the original image features. Finally, we introduce Auxiliary info-guided Parameter Estimation
+    (APE) module, which predicts the approximation of the latent vector and estimates the probability
+    distribution of these residuals. We demonstrate the effectiveness of the proposed modules by various
+    ablation studies. Under extensive experiments, our model outperforms other neural image compression
+    models and achieves a 19.49\% higher rate-distortion performance than VVC on Tecnick dataset.
+  url: https://arxiv.org/abs/2409.12719
+  pdf_url: https://arxiv.org/pdf/2409.12719v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 0
+citation_year: 2024

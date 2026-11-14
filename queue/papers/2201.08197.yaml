@@ -1,0 +1,46 @@
+id: paper:arxiv:2201.08197
+status: pending
+score: 3
+track: processing_enhancement
+matched:
+- ref: concept:QoE
+  count: 3
+  weight: 1
+- ref: concept:ABR
+  count: 1
+  weight: 1
+- ref: concept:SuperResolution
+  count: 1
+  weight: 1
+meta:
+  title: 'Enhancement or Super-Resolution: Learning-based Adaptive Video Streaming with Client-Side Video
+    Processing'
+  authors:
+  - Junyan Yang
+  - Yang Jiang
+  - Shuoyao Wang
+  published: '2022-01-20'
+  updated: '2022-01-20'
+  categories:
+  - eess.SY
+  - eess.IV
+  abstract: The rapid development of multimedia and communication technology has resulted in an urgent
+    need for high-quality video streaming. However, robust video streaming under fluctuating network conditions
+    and heterogeneous client computing capabilities remains a challenge. In this paper, we consider an
+    enhancement-enabled video streaming network under a time-varying wireless network and limited computation
+    capacity. "Enhancement" means that the client can improve the quality of the downloaded video segments
+    via image processing modules. We aim to design a joint bitrate adaptation and client-side enhancement
+    algorithm toward maximizing the quality of experience (QoE). We formulate the problem as a Markov
+    decision process (MDP) and propose a deep reinforcement learning (DRL)-based framework, named ENAVS.
+    As video streaming quality is mainly affected by video compression, we demonstrate that the video
+    enhancement algorithm outperforms the super-resolution algorithm in terms of signal-to-noise ratio
+    and frames per second, suggesting a better solution for client processing in video streaming. Ultimately,
+    we implement ENAVS and demonstrate extensive testbed results under real-world bandwidth traces and
+    videos. The simulation shows that ENAVS is capable of delivering 5%-14% more QoE under the same bandwidth
+    and computing power conditions as conventional ABR streaming.
+  url: https://arxiv.org/abs/2201.08197
+  pdf_url: https://arxiv.org/pdf/2201.08197v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 9
+citation_year: 2022

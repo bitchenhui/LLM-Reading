@@ -1,0 +1,38 @@
+id: paper:arxiv:2604.20350
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 3
+  weight: 1
+meta:
+  title: 'X-PCR: A Benchmark for Cross-modality Progressive Clinical Reasoning in Ophthalmic Diagnosis'
+  authors:
+  - Gui Wang
+  - Zehao Zhong
+  - YongSong Zhou
+  - Yudong Li
+  - Ende Wu
+  - Wooi Ping Cheah
+  - Rong Qu
+  - Jianfeng Ren
+  - Linlin Shen
+  published: '2026-04-22'
+  updated: '2026-04-22'
+  categories:
+  - cs.CV
+  abstract: 'Despite significant progress in Multi-modal Large Language Models (MLLMs), their clinical
+    reasoning capacity for multi-modal diagnosis remains largely unexamined. Current benchmarks, mostly
+    single-modality data, can''t evaluate progressive reasoning and cross-modal integration essential
+    for clinical practice. We introduce the Cross-Modality Progressive Clinical Reasoning (X-PCR) benchmark,
+    the first comprehensive evaluation of MLLMs through a complete ophthalmology diagnostic workflow,
+    with two reasoning tasks: 1) a six-stage progressive reasoning chain spanning image quality assessment
+    to clinical decision-making, and 2) a cross-modality reasoning task integrating six imaging modalities.
+    The benchmark comprises 26,415 images and 177,868 expert-verified VQA pairs curated from 51 public
+    datasets, covering 52 ophthalmic diseases. Evaluation of 21 MLLMs reveals critical gaps in progressive
+    reasoning and cross-modal integration. Dataset and code: https://github.com/CVI-SZU/X-PCR.'
+  url: https://arxiv.org/abs/2604.20350
+  pdf_url: https://arxiv.org/pdf/2604.20350v1
+  version: v1
+fetched: '2026-11-14'

@@ -1,0 +1,44 @@
+id: paper:arxiv:2604.09757
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'MedLVR: Latent Visual Reasoning for Reliable Medical Visual Question Answering'
+  authors:
+  - Suyang Xi
+  - Songtao Hu
+  - Yuxiang Lai
+  - Wangyun Dan
+  - Yaqi Liu
+  - Shansong Wang
+  - Xiaofeng Yang
+  published: '2026-04-10'
+  updated: '2026-07-19'
+  categories:
+  - cs.CV
+  - cs.AI
+  abstract: 'Medical vision--language models (VLMs) have shown strong potential for medical visual question
+    answering (VQA), yet their reasoning remains largely text-centric: images are encoded once as static
+    context, and subsequent inference is dominated by language. This paradigm is fundamentally limited
+    in clinical scenarios, where accurate answers often depend on subtle, localized visual evidence that
+    cannot be reliably preserved in static embeddings. We propose \textsc{MedLVR}, a latent visual reasoning
+    framework that introduces an explicit visual evidence state into autoregressive decoding. Instead
+    of relying solely on text-based intermediate reasoning, \textsc{MedLVR} interleaves a short latent
+    reasoning segment within the decoder by reusing hidden states as continuous latent steps, enabling
+    iterative preservation and refinement of query-relevant visual evidence before answer generation.
+    To support effective visual supervision, we adopt a two-stage training strategy: region of interest
+    (ROI)-supervised fine-tuning aligns latent states with clinically relevant image evidence, and Visual-Latent
+    Policy Optimization (VLPO) further optimizes latent reasoning and answer generation under outcome-level
+    rewards. Experiments on OmniMedVQA and five external medical VQA benchmarks show that \textsc{MedLVR}
+    consistently outperforms recent reasoning baselines and improves the average score over the Qwen2.5-VL-7B
+    backbone from 48.3\% to 53.4\%. These results show that latent visual reasoning provides an effective
+    mechanism for preserving diagnostically relevant visual evidence and improving the reliability of
+    medical VQA.'
+  url: https://arxiv.org/abs/2604.09757
+  pdf_url: https://arxiv.org/pdf/2604.09757v2
+  version: v2
+fetched: '2026-11-14'

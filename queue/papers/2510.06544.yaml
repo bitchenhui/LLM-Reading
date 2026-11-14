@@ -1,0 +1,39 @@
+id: paper:arxiv:2510.06544
+status: skipped
+score: 0
+track: audio_coding
+matched: []
+meta:
+  title: Benchmarking Fake Voice Detection in the Fake Voice Generation Arms Race
+  authors:
+  - Xutao Mao
+  - Ke Li
+  - Cameron Baird
+  - Ezra Xuanru Tao
+  - Dan Lin
+  published: '2025-10-08'
+  updated: '2025-10-17'
+  categories:
+  - cs.SD
+  - cs.CR
+  - eess.AS
+  abstract: 'The rapid advancement of fake voice generation technology has ignited a race with detection
+    systems, creating an urgent need to secure the audio ecosystem. However, existing benchmarks suffer
+    from a critical limitation: they typically aggregate diverse fake voice samples into a single dataset
+    for evaluation. This practice masks method-specific artifacts and obscures the varying performance
+    of detectors against different generation paradigms, preventing a nuanced understanding of their true
+    vulnerabilities. To address this gap, we introduce the first ecosystem-level benchmark that systematically
+    evaluates the interplay between 17 state-of-the-art fake voice generators and 8 leading detectors
+    through a novel one-to-one evaluation protocol. This fine-grained analysis exposes previously hidden
+    vulnerabilities and sensitivities that are missed by traditional aggregated testing. We also propose
+    unified scoring systems to quantify both the evasiveness of generators and the robustness of detectors,
+    enabling fair and direct comparisons. Our extensive cross-domain evaluation reveals that modern generators,
+    particularly those based on neural audio codecs and flow matching, consistently evade top-tier detectors.
+    We found that no single detector is universally robust; their effectiveness varies dramatically depending
+    on the generator''s architecture, highlighting a significant generalization gap in current defenses.
+    This work provides a more realistic assessment of the threat landscape and offers actionable insights
+    for building the next generation of detection systems.'
+  url: https://arxiv.org/abs/2510.06544
+  pdf_url: https://arxiv.org/pdf/2510.06544v2
+  version: v2
+fetched: '2026-11-14'

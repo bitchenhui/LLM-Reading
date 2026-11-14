@@ -1,0 +1,41 @@
+id: paper:arxiv:2506.21851
+status: skipped
+score: 1
+track: video_image_coding
+matched:
+- ref: concept:EntropyModel
+  count: 1
+  weight: 1
+meta:
+  title: End-to-End RGB-IR Joint Image Compression With Channel-wise Cross-modality Entropy Model
+  authors:
+  - Haofeng Wang
+  - Fangtao Zhou
+  - Qi Zhang
+  - Zeyuan Chen
+  - Enci Zhang
+  - Zhao Wang
+  - Xiaofeng Huang
+  - Siwei Ma
+  published: '2025-06-27'
+  updated: '2025-06-27'
+  categories:
+  - cs.CV
+  - cs.MM
+  - eess.IV
+  abstract: RGB-IR(RGB-Infrared) image pairs are frequently applied simultaneously in various applications
+    like intelligent surveillance. However, as the number of modalities increases, the required data storage
+    and transmission costs also double. Therefore, efficient RGB-IR data compression is essential. This
+    work proposes a joint compression framework for RGB-IR image pair. Specifically, to fully utilize
+    cross-modality prior information for accurate context probability modeling within and between modalities,
+    we propose a Channel-wise Cross-modality Entropy Model (CCEM). Among CCEM, a Low-frequency Context
+    Extraction Block (LCEB) and a Low-frequency Context Fusion Block (LCFB) are designed for extracting
+    and aggregating the global low-frequency information from both modalities, which assist the model
+    in predicting entropy parameters more accurately. Experimental results demonstrate that our approach
+    outperforms existing RGB-IR image pair and single-modality compression methods on LLVIP and KAIST
+    datasets. For instance, the proposed framework achieves a 23.1% bit rate saving on LLVIP dataset compared
+    to the state-of-the-art RGB-IR image codec presented at CVPR 2022.
+  url: https://arxiv.org/abs/2506.21851
+  pdf_url: https://arxiv.org/pdf/2506.21851v1
+  version: v1
+fetched: '2026-11-14'

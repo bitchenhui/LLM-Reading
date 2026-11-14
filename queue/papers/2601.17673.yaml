@@ -1,0 +1,37 @@
+id: paper:arxiv:2601.17673
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'Uni-RS: A Spatially Faithful Unified Understanding and Generation Model for Remote Sensing'
+  authors:
+  - Weiyu Zhang
+  - Yuan Hu
+  - Yong Li
+  - Yu Liu
+  published: '2026-01-25'
+  updated: '2026-10-13'
+  categories:
+  - cs.CV
+  - cs.AI
+  abstract: 'Unified remote sensing multimodal models exhibit a pronounced spatial reversal curse: Although
+    they can accurately recognize and describe object locations in images, they often fail to faithfully
+    execute the same spatial relations during text-to-image generation, where such relations constitute
+    core semantic information in remote sensing. Motivated by this observation, we propose Uni-RS, the
+    first unified multimodal model tailored for remote sensing, to explicitly address the spatial asymmetry
+    between understanding and generation. Specifically, we first introduce explicit Spatial-Layout Planning
+    to transform textual instructions into spatial layout plans, decoupling geometric planning from visual
+    synthesis. We then impose Spatial-Aware Query Supervision to bias learnable queries toward spatial
+    relations explicitly specified in the instruction. Finally, we develop Image-Caption Spatial Layout
+    Variation to expose the model to systematic geometry-consistent spatial transformations. Extensive
+    experiments across multiple benchmarks show that our approach substantially improves spatial faithfulness
+    in text-to-image generation, while maintaining strong performance on multimodal understanding tasks
+    like image captioning, visual grounding, and VQA tasks.'
+  url: https://arxiv.org/abs/2601.17673
+  pdf_url: https://arxiv.org/pdf/2601.17673v2
+  version: v2
+fetched: '2026-11-14'

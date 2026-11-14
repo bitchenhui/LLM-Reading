@@ -1,0 +1,40 @@
+id: paper:arxiv:2205.14377
+status: skipped
+score: 1
+track: processing_enhancement
+matched:
+- ref: concept:SuperResolution
+  count: 1
+  weight: 1
+meta:
+  title: Enhancing Quality of Pose-varied Face Restoration with Local Weak Feature Sensing and GAN Prior
+  authors:
+  - Kai Hu
+  - Yu Liu
+  - Renhe Liu
+  - Wei Lu
+  - Gang Yu
+  - Bin Fu
+  published: '2022-05-28'
+  updated: '2023-06-15'
+  categories:
+  - cs.CV
+  abstract: Facial semantic guidance (including facial landmarks, facial heatmaps, and facial parsing
+    maps) and facial generative adversarial networks (GAN) prior have been widely used in blind face restoration
+    (BFR) in recent years. Although existing BFR methods have achieved good performance in ordinary cases,
+    these solutions have limited resilience when applied to face images with serious degradation and pose-varied
+    (e.g., looking right, looking left, laughing, etc.) in real-world scenarios. In this work, we propose
+    a well-designed blind face restoration network with generative facial prior. The proposed network
+    is mainly comprised of an asymmetric codec and a StyleGAN2 prior network. In the asymmetric codec,
+    we adopt a mixed multi-path residual block (MMRB) to gradually extract weak texture features of input
+    images, which can better preserve the original facial features and avoid excessive fantasy. The MMRB
+    can also be plug-and-play in other networks. Furthermore, thanks to the affluent and diverse facial
+    priors of the StyleGAN2 model, we adopt it as the primary generator network in our proposed method
+    and specially design a novel self-supervised training strategy to fit the distribution closer to the
+    target and flexibly restore natural and realistic facial details. Extensive experiments on synthetic
+    and real-world datasets demonstrate that our model performs superior to the prior art for face restoration
+    and face super-resolution tasks.
+  url: https://arxiv.org/abs/2205.14377
+  pdf_url: https://arxiv.org/pdf/2205.14377v3
+  version: v3
+fetched: '2026-11-14'

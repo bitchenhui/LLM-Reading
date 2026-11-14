@@ -1,0 +1,48 @@
+id: paper:arxiv:2606.00622
+status: pending
+score: 2
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+- ref: concept:TrainingFree
+  count: 1
+  weight: 1
+meta:
+  title: 'MM-Snowball: Evaluating and Mitigating Hallucination Snowballing in Multimodal Multi-Turn Dialogue'
+  authors:
+  - Yue Jiang
+  - Xue Jiang
+  - Lihua Zhang
+  - Zhiqiang Wang
+  - Yuhang Lu
+  - Peng Wang
+  - Bo Han
+  - Feng Zheng
+  - Dingkang Yang
+  published: '2026-05-30'
+  updated: '2026-05-30'
+  categories:
+  - cs.CV
+  abstract: 'Multimodal large language models (MLLMs) demonstrate remarkable visual understanding, yet
+    their reliability in interactive settings is severely undermined by hallucination snowballing: a phenomenon
+    where initial errors amplify across conversational turns, leading to a collapse in coherence. This
+    failure reveals a fundamental vulnerability where models progressively neglect visual grounding in
+    favor of over-relying on polluted textual history. Existing benchmarks are predominantly confined
+    to single-turn VQA, which fail to capture the complex dynamics of error propagation in long-horizon
+    interactions. To address this, we introduce MM-Snowball, the first benchmark for fine-grained diagnosis
+    of hallucination snowballing within dialogues. Extensive evaluation shows that our benchmark poses
+    a significant challenge even to advanced MLLMs and reveals the inefficacy of existing mitigation methods
+    designed for single-turn VQA. To counteract this degradation, we propose Conflict-Aware Visual Rectification
+    (CAVR). This training-free method mitigates snowballing through a synergistic dual-mechanism that
+    refreshes visual grounding at the representation level and rectifies output distributions at the logit
+    level, effectively re-anchoring the model to visual facts. Experiments demonstrate that CAVR achieves
+    state-of-the-art performance, offering a promising path toward more reliable interactive AI. Data
+    and code are available at: https://frenkie-chiang.github.io/MM-Snowball'
+  url: https://arxiv.org/abs/2606.00622
+  pdf_url: https://arxiv.org/pdf/2606.00622v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 3
+citation_year: 2026

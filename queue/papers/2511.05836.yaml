@@ -1,0 +1,48 @@
+id: paper:arxiv:2511.05836
+status: skipped_low_citation
+score: 4
+track: video_image_coding
+matched:
+- ref: concept:ICM
+  count: 3
+  weight: 1
+- ref: concept:Hyperprior
+  count: 1
+  weight: 1
+- ref: concept:TrainingFree
+  count: 1
+  weight: 1
+- ref: metric:BD-Rate
+  count: 1
+  weight: 1
+meta:
+  title: Training-Free Adaptive Quantization for Variable Rate Image Coding for Machines
+  authors:
+  - Yui Tatsumi
+  - Ziyue Zeng
+  - Hiroshi Watanabe
+  published: '2025-11-08'
+  updated: '2026-01-05'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: Image Coding for Machines (ICM) has become increasingly important with the rapid integration
+    of computer vision technology into real-world applications. However, most neural network-based ICM
+    frameworks operate at a fixed rate, thus requiring individual training for each target bitrate. This
+    limitation may restrict their practical usage. Existing variable rate image compression approaches
+    mitigate this issue but often rely on additional training, which increases computational costs and
+    complicates deployment. Moreover, variable rate control has not been thoroughly explored for ICM.
+    To address these challenges, we propose a training-free framework for quantization strength control
+    which enables flexible bitrate adjustment. By exploiting the scale parameter predicted by the hyperprior
+    network, the proposed method adaptively modulates quantization step sizes across both channel and
+    spatial dimensions. This allows the model to preserve semantically important regions while coarsely
+    quantizing less critical areas. Our architectural design further enables continuous bitrate control
+    through a single parameter. Experimental results demonstrate the effectiveness of our proposed method,
+    achieving up to 11.07% BD-rate savings over the non-adaptive variable rate baseline. The code is available
+    at https://github.com/qwert-top/AQVR-ICM.
+  url: https://arxiv.org/abs/2511.05836
+  pdf_url: https://arxiv.org/pdf/2511.05836v3
+  version: v3
+fetched: '2026-11-14'
+citation_count: 1
+citation_year: 2025

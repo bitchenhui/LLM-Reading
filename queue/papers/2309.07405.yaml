@@ -1,0 +1,36 @@
+id: paper:arxiv:2309.07405
+status: skipped
+score: 1
+track: audio_coding
+matched:
+- ref: concept:NeuralAudioCodec
+  count: 2
+  weight: 1
+meta:
+  title: 'FunCodec: A Fundamental, Reproducible and Integrable Open-source Toolkit for Neural Speech Codec'
+  authors:
+  - Zhihao Du
+  - Shiliang Zhang
+  - Kai Hu
+  - Siqi Zheng
+  published: '2023-09-14'
+  updated: '2023-10-07'
+  categories:
+  - cs.SD
+  - cs.AI
+  - eess.AS
+  abstract: This paper presents FunCodec, a fundamental neural speech codec toolkit, which is an extension
+    of the open-source speech processing toolkit FunASR. FunCodec provides reproducible training recipes
+    and inference scripts for the latest neural speech codec models, such as SoundStream and Encodec.
+    Thanks to the unified design with FunASR, FunCodec can be easily integrated into downstream tasks,
+    such as speech recognition. Along with FunCodec, pre-trained models are also provided, which can be
+    used for academic or generalized purposes. Based on the toolkit, we further propose the frequency-domain
+    codec models, FreqCodec, which can achieve comparable speech quality with much lower computation and
+    parameter complexity. Experimental results show that, under the same compression ratio, FunCodec can
+    achieve better reconstruction quality compared with other toolkits and released models. We also demonstrate
+    that the pre-trained models are suitable for downstream tasks, including automatic speech recognition
+    and personalized text-to-speech synthesis. This toolkit is publicly available at https://github.com/alibaba-damo-academy/FunCodec.
+  url: https://arxiv.org/abs/2309.07405
+  pdf_url: https://arxiv.org/pdf/2309.07405v2
+  version: v2
+fetched: '2026-11-14'

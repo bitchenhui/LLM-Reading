@@ -1,0 +1,41 @@
+id: paper:arxiv:2602.00181
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'CamReasoner: Reinforcing Camera Movement Understanding via Structured Spatial Reasoning'
+  authors:
+  - Hang Wu
+  - Yujun Cai
+  - Zehao Li
+  - Haonan Ge
+  - Bowen Sun
+  - Junsong Yuan
+  - Yiwei Wang
+  published: '2026-01-30'
+  updated: '2026-04-14'
+  categories:
+  - cs.CV
+  - cs.AI
+  abstract: Understanding camera dynamics is a fundamental pillar of video spatial intelligence. However,
+    existing multimodal models predominantly treat this task as a black-box classification, often confusing
+    physically distinct motions by relying on superficial visual patterns rather than geometric cues.
+    We present \textbf{CamReasoner}, a framework that reformulates camera movement understanding as a
+    structured inference process to bridge the gap between perception and cinematic logic. Our approach
+    centers on the Observation-Thinking-Answer (O-T-A) paradigm, which compels the model to articulate
+    spatio-temporal observations and reason about motion patterns within an explicit reasoning block.
+    To instill this capability, we construct a Large-scale Inference Trajectory Suite comprising 18k SFT
+    reasoning chains and 38k RL feedback samples. To the best of our knowledge, \textbf{we are the first
+    to employ RL for logical alignment in camera movement understanding}, ensuring motion inferences are
+    grounded in structured visual reasoning rather than contextual guesswork. Built upon Qwen2.5-VL-7B,
+    CamReasoner-7B improves binary classification accuracy from 73.8\% to 78.4\% and VQA accuracy from
+    60.9\% to 74.5\% over its backbone, consistently outperforming both proprietary and open-source baselines
+    across multiple benchmarks.
+  url: https://arxiv.org/abs/2602.00181
+  pdf_url: https://arxiv.org/pdf/2602.00181v3
+  version: v3
+fetched: '2026-11-14'

@@ -1,0 +1,35 @@
+id: paper:arxiv:2608.29800
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'Source-Dependent Deference in Medical Imaging Agents Under Falsified Findings: A Pilot Audit'
+  authors:
+  - Ridam Roy
+  - Md Shahriar Rashid
+  - Md. Rajib Mia
+  published: '2026-08-30'
+  updated: '2026-08-30'
+  categories:
+  - cs.CV
+  abstract: 'Tool-using agents are being proposed for medical imaging, and their behaviour when a tool
+    returns a false finding is largely unmeasured. We audit whether a ReAct-style tool-calling agent abandons
+    an answer it has already given correctly once a falsified finding arrives, and whether that depends
+    on how the finding is presented. On 20 VQA-RAD closed questions across four vendor-designated model
+    tiers, the agent commits to an answer from the image alone; a negated finding is then delivered either
+    as JSON from an analyze_image tool the agent invokes itself, or as quoted prose attributed to a radiologist.
+    Our outcome is the commission-error rate over cases answered correctly without any tool. Deference
+    is much higher under the prose-attributed claim: at the strongest tier the agent revised its correct
+    answer in 10 of 13 cases against 1 of 13 under the tool (exact McNemar p=0.0039, Holm-adjusted 0.012).
+    We do not claim this isolates the source label. Attribution travels with the delivery channel in our
+    design, and exposure differs because the tool claim reaches the agent only when it calls the tool.
+    The finding is a joint source-and-delivery asymmetry from a small-scale pilot whose pre-specified
+    stopping rule was not met.'
+  url: https://arxiv.org/abs/2608.29800
+  pdf_url: https://arxiv.org/pdf/2608.29800v1
+  version: v1
+fetched: '2026-11-14'

@@ -1,0 +1,39 @@
+id: paper:arxiv:2106.12236
+status: pending
+score: 4
+track: immersive_media
+matched:
+- ref: codec:G-PCC
+  count: 2
+  weight: 3
+- ref: org:MPEG
+  count: 1
+  weight: 1
+meta:
+  title: Lossless Point Cloud Attribute Compression with Normal-based Intra Prediction
+  authors:
+  - Qian Yin
+  - Qingshan Ren
+  - Lili Zhao
+  - Wenyi Wang
+  - Jianwen Chen
+  published: '2021-06-23'
+  updated: '2021-06-23'
+  categories:
+  - eess.IV
+  abstract: The sparse LiDAR point clouds become more and more popular in various applications, e.g.,
+    the autonomous driving. However, for this type of data, there exists much under-explored space in
+    the corresponding compression framework proposed by MPEG, i.e., geometry-based point cloud compression
+    (G-PCC). In G-PCC, only the distance-based similarity is considered in the intra prediction for the
+    attribute compression. In this paper, we propose a normal-based intra prediction scheme, which provides
+    a more efficient lossless attribute compression by introducing the normals of point clouds. The angle
+    between normals is used to further explore accurate local similarity, which optimizes the selection
+    of predictors. We implement our method into the G-PCC reference software. Experimental results over
+    LiDAR acquired datasets demonstrate that our proposed method is able to deliver better compression
+    performance than the G-PCC anchor, with $2.1\%$ gains on average for lossless attribute coding.
+  url: https://arxiv.org/abs/2106.12236
+  pdf_url: https://arxiv.org/pdf/2106.12236v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 13
+citation_year: 2021

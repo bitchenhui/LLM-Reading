@@ -1,0 +1,53 @@
+id: paper:arxiv:2310.09570
+status: pending
+score: 11
+track: video_image_coding
+matched:
+- ref: codec:AVC
+  count: 2
+  weight: 3
+- ref: codec:HEVC
+  count: 2
+  weight: 3
+- ref: codec:AV1
+  count: 1
+  weight: 3
+- ref: metric:VMAF
+  count: 1
+  weight: 1
+- ref: org:AOMedia
+  count: 1
+  weight: 1
+meta:
+  title: Energy-Efficient Multi-Codec Bitrate-Ladder Estimation for Adaptive Video Streaming
+  authors:
+  - Vignesh V Menon
+  - Reza Farahani
+  - Prajit T Rajendran
+  - Samira Afzal
+  - Klaus Schoeffmann
+  - Christian Timmerer
+  published: '2023-10-14'
+  updated: '2023-10-14'
+  categories:
+  - cs.MM
+  abstract: With the emergence of multiple modern video codecs, streaming service providers are forced
+    to encode, store, and transmit bitrate ladders of multiple codecs separately, consequently suffering
+    from additional energy costs for encoding, storage, and transmission. To tackle this issue, we introduce
+    an online energy-efficient Multi-Codec Bitrate ladder Estimation scheme (MCBE) for adaptive video
+    streaming applications. In MCBE, quality representations within the bitrate ladder of new-generation
+    codecs (e.g., High Efficiency Video Coding (HEVC), Alliance for Open Media Video 1 (AV1)) that lie
+    below the predicted rate-distortion curve of the Advanced Video Coding (AVC) codec are removed. Moreover,
+    perceptual redundancy between representations of the bitrate ladders of the considered codecs is also
+    minimized based on a Just Noticeable Difference (JND) threshold. Therefore, random forest-based models
+    predict the VMAF score of bitrate ladder representations of each codec. In a live streaming session
+    where all clients support the decoding of AVC, HEVC, and AV1, MCBE achieves impressive results, reducing
+    cumulative encoding energy by 56.45%, storage energy usage by 94.99%, and transmission energy usage
+    by 77.61% (considering a JND of six VMAF points). These energy reductions are in comparison to a baseline
+    bitrate ladder encoding based on current industry practice.
+  url: https://arxiv.org/abs/2310.09570
+  pdf_url: https://arxiv.org/pdf/2310.09570v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 11
+citation_year: 2023

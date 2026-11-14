@@ -1,0 +1,33 @@
+id: paper:arxiv:2410.15749
+status: skipped
+score: 0
+track: audio_coding
+matched: []
+meta:
+  title: Optimizing Neural Speech Codec for Low-Bitrate Compression via Multi-Scale Encoding
+  authors:
+  - Peiji Yang
+  - Fengping Wang
+  - Yicheng Zhong
+  - Huawei Wei
+  - Zhisheng Wang
+  published: '2024-10-21'
+  updated: '2024-10-21'
+  categories:
+  - cs.SD
+  - eess.AS
+  abstract: Neural speech codecs have demonstrated their ability to compress high-quality speech and audio
+    by converting them into discrete token representations. Most existing methods utilize Residual Vector
+    Quantization (RVQ) to encode speech into multiple layers of discrete codes with uniform time scales.
+    However, this strategy overlooks the differences in information density across various speech features,
+    leading to redundant encoding of sparse information, which limits the performance of these methods
+    at low bitrate. This paper proposes MsCodec, a novel multi-scale neural speech codec that encodes
+    speech into multiple layers of discrete codes, each corresponding to a different time scale. This
+    encourages the model to decouple speech features according to their diverse information densities,
+    consequently enhancing the performance of speech compression. Furthermore, we incorporate mutual information
+    loss to augment the diversity among speech codes across different layers. Experimental results indicate
+    that our proposed method significantly improves codec performance at low bitrate.
+  url: https://arxiv.org/abs/2410.15749
+  pdf_url: https://arxiv.org/pdf/2410.15749v1
+  version: v1
+fetched: '2026-11-14'

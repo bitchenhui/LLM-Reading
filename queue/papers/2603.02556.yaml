@@ -1,0 +1,50 @@
+id: paper:arxiv:2603.02556
+status: pending
+score: 2
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+- ref: concept:SelfImprovement
+  count: 1
+  weight: 1
+meta:
+  title: 'Through the Lens of Contrast: Self-Improving Visual Reasoning in VLMs'
+  authors:
+  - Zhiyu Pan
+  - Yizheng Wu
+  - Jiashen Hua
+  - Junyi Feng
+  - Shaotian Yan
+  - Bing Deng
+  - Zhiguo Cao
+  - Jieping Ye
+  published: '2026-03-03'
+  updated: '2026-03-03'
+  categories:
+  - cs.CV
+  - cs.AI
+  - cs.CL
+  - cs.LG
+  abstract: 'Reasoning has emerged as a key capability of large language models. In linguistic tasks,
+    this capability can be enhanced by self-improving techniques that refine reasoning paths for subsequent
+    finetuning. However, extending these language-based self-improving approaches to vision language models
+    (VLMs) presents a unique challenge:~visual hallucinations in reasoning paths cannot be effectively
+    verified or rectified. Our solution starts with a key observation about visual contrast: when presented
+    with a contrastive VQA pair, i.e., two visually similar images with synonymous questions, VLMs identify
+    relevant visual cues more precisely. Motivated by this observation, we propose Visual Contrastive
+    Self-Taught Reasoner (VC-STaR), a novel self-improving framework that leverages visual contrast to
+    mitigate hallucinations in model-generated rationales. We collect a diverse suite of VQA datasets,
+    curate contrastive pairs according to multi-modal similarity, and generate rationales using VC-STaR.
+    Consequently, we obtain a new visual reasoning dataset, VisCoR-55K, which is then used to boost the
+    reasoning capability of various VLMs through supervised finetuning. Extensive experiments show that
+    VC-STaR not only outperforms existing self-improving approaches but also surpasses models finetuned
+    on the SoTA visual reasoning datasets, demonstrating that the inherent contrastive ability of VLMs
+    can bootstrap their own visual reasoning. Project at: https://github.com/zhiyupan42/VC-STaR.'
+  url: https://arxiv.org/abs/2603.02556
+  pdf_url: https://arxiv.org/pdf/2603.02556v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 12
+citation_year: 2026

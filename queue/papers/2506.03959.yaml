@@ -1,0 +1,40 @@
+id: paper:arxiv:2506.03959
+status: skipped
+score: 0
+track: audio_coding
+matched: []
+meta:
+  title: 'From Spikes to Speech: NeuroVoc -- A Biologically Plausible Vocoder Framework for Auditory Perception
+    and Cochlear Implant Simulation'
+  authors:
+  - Jacob de Nobel
+  - Jeroen J. Briaire
+  - Thomas H. W. Baeck
+  - Anna V. Kononova
+  - Johan H. M. Frijns
+  published: '2025-06-04'
+  updated: '2025-06-04'
+  categories:
+  - cs.SD
+  - eess.AS
+  - q-bio.NC
+  abstract: 'We present NeuroVoc, a flexible model-agnostic vocoder framework that reconstructs acoustic
+    waveforms from simulated neural activity patterns using an inverse Fourier transform. The system applies
+    straightforward signal processing to neurogram representations, time-frequency binned outputs from
+    auditory nerve fiber models. Crucially, the model architecture is modular, allowing for easy substitution
+    or modification of the underlying auditory models. This flexibility eliminates the need for speech-coding-strategy-specific
+    vocoder implementations when simulating auditory perception in cochlear implant (CI) users. It also
+    allows direct comparisons between normal hearing (NH) and electrical hearing (EH) models, as demonstrated
+    in this study. The vocoder preserves distinctive features of each model; for example, the NH model
+    retains harmonic structure more faithfully than the EH model. We evaluated perceptual intelligibility
+    in noise using an online Digits-in-Noise (DIN) test, where participants completed three test conditions:
+    one with standard speech, and two with vocoded speech using the NH and EH models. Both the standard
+    DIN test and the EH-vocoded groups were statistically equivalent to clinically reported data for NH
+    and CI listeners. On average, the NH and EH vocoded groups increased SRT compared to the standard
+    test by 2.4 dB and 7.1 dB, respectively. These findings show that, although some degradation occurs,
+    the vocoder can reconstruct intelligible speech under both hearing models and accurately reflects
+    the reduced speech-in-noise performance experienced by CI users.'
+  url: https://arxiv.org/abs/2506.03959
+  pdf_url: https://arxiv.org/pdf/2506.03959v1
+  version: v1
+fetched: '2026-11-14'

@@ -1,0 +1,41 @@
+id: paper:arxiv:2108.04051
+status: pending
+score: 3
+track: audio_coding
+matched:
+- ref: codec:EVS
+  count: 1
+  weight: 3
+meta:
+  title: A Streamwise GAN Vocoder for Wideband Speech Coding at Very Low Bit Rate
+  authors:
+  - Ahmed Mustafa
+  - Jan Büthe
+  - Srikanth Korse
+  - Kishan Gupta
+  - Guillaume Fuchs
+  - Nicola Pia
+  published: '2021-08-09'
+  updated: '2021-08-09'
+  categories:
+  - eess.AS
+  - cs.LG
+  - cs.SD
+  - eess.SP
+  abstract: Recently, GAN vocoders have seen rapid progress in speech synthesis, starting to outperform
+    autoregressive models in perceptual quality with much higher generation speed. However, autoregressive
+    vocoders are still the common choice for neural generation of speech signals coded at very low bit
+    rates. In this paper, we present a GAN vocoder which is able to generate wideband speech waveforms
+    from parameters coded at 1.6 kbit/s. The proposed model is a modified version of the StyleMelGAN vocoder
+    that can run in frame-by-frame manner, making it suitable for streaming applications. The experimental
+    results show that the proposed model significantly outperforms prior autoregressive vocoders like
+    LPCNet for very low bit rate speech coding, with computational complexity of about 5 GMACs, providing
+    a new state of the art in this domain. Moreover, this streamwise adversarial vocoder delivers quality
+    competitive to advanced speech codecs such as EVS at 5.9 kbit/s on clean speech, which motivates further
+    usage of feed-forward fully-convolutional models for low bit rate speech coding.
+  url: https://arxiv.org/abs/2108.04051
+  pdf_url: https://arxiv.org/pdf/2108.04051v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 25
+citation_year: 2021

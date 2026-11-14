@@ -1,0 +1,45 @@
+id: paper:arxiv:2511.12063
+status: pending
+score: 2
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 3
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: 'TextBO: Bayesian Optimization in Language Space for Eval-Efficient Self-Improving AI'
+  authors:
+  - Enoch Hyunwook Kang
+  - Hema Yoganarasimhan
+  published: '2025-11-15'
+  updated: '2026-01-06'
+  categories:
+  - cs.AI
+  abstract: 'Large Language Models (LLMs) have enabled self-improving AI systems that iteratively generate,
+    evaluate, and refine their outcomes. Recent studies show that prompt-optimization-based self-improvement
+    can outperform state-of-the-art reinforcement-learning fine-tuning of LLMs, but performance is typically
+    measured by generation efficiency. However, in many applications, the constraint is evaluation efficiency:
+    obtaining reliable feedback is far more costly than generating candidates. To optimize for evaluation
+    efficiency, we extend Upper Confidence Bound-Bayesian Optimization (UCB-BO), a framework known for
+    optimal evaluation-efficiency guarantees, to the language domain. Doing so is challenging for two
+    reasons: (i) gradients needed for UCB-BO are ill-defined in discrete prompt space; and (ii) UCB-style
+    exploration relies on a surrogate model and acquisition function, which only live implicitly in the
+    LLM. We overcome these challenges by proving that combining simple textual gradients (LLM-proposed
+    local edits) with the Best-of-N selection strategy statistically emulates ascent along the gradient
+    of the canonical UCB acquisition function. Based on this result, we propose TextBO, a simple, evaluation-efficient
+    self-improving algorithm that operates purely in language space without explicit surrogates or calibrated
+    uncertainty models. We empirically validate TextBO on automated ad-alignment tasks using a persona-induced
+    preference distribution, demonstrating superior performance per evaluation compared to strong baselines
+    such as Best-of-N and GEPA. We also evaluate TextBO''s Best-of-N multi-step textual-gradient mechanism
+    on agentic AI benchmarks by augmenting GEPA with it and show that it significantly outperforms standard
+    GEPA. In sum, TextBO is a simple and principled framework for AI self-improving system design that
+    bridges prompt optimization with classical Bayesian optimization.'
+  url: https://arxiv.org/abs/2511.12063
+  pdf_url: https://arxiv.org/pdf/2511.12063v3
+  version: v3
+fetched: '2026-11-14'
+citation_count: 3
+citation_year: 2025

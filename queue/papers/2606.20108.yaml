@@ -1,0 +1,37 @@
+id: paper:arxiv:2606.20108
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 2
+  weight: 1
+meta:
+  title: 'EFIQA: Explainable Fundus Image Quality Assessment via Anatomical Priors'
+  authors:
+  - Pengwei Wang
+  - José Morano
+  - Qian Wan
+  - Hrvoje Bogunović
+  published: '2026-06-18'
+  updated: '2026-06-18'
+  categories:
+  - cs.CV
+  - cs.LG
+  abstract: 'Image quality control is vital for a wide range of downstream applications. Deep learning-based
+    image quality assessment methods typically train classifiers on dataset-specific quality labels, inheriting
+    two limitations: (1) generalization is tied to the labeling criteria of the training set and (2) these
+    methods cannot provide spatial feedback on where the quality is degraded, lacking explainability.
+    In this work, we propose EFIQA, a framework that requires no quality-related supervision and produces
+    spatial quality maps by design. Rather than learning ``what is degradation" from human-annotated labels,
+    EFIQA learns ``what should be there" by leveraging anatomical priors. For fundus photography, we instantiate
+    this as a two-stage approach, by first training an unsupervised anomaly detector via masked anatomical
+    inpainting to identify regions of missing vasculature, and then distilling this prior knowledge into
+    a shallow adapter mapping features of a frozen foundation model to precise quality maps. External-dataset
+    evaluation demonstrates that this label-free approach with minimal adaptation achieves better performance
+    and explainability compared with supervised methods across benchmarks with different quality criteria,
+    highlighting its potential for real-world applications.'
+  url: https://arxiv.org/abs/2606.20108
+  pdf_url: https://arxiv.org/pdf/2606.20108v1
+  version: v1
+fetched: '2026-11-14'

@@ -1,0 +1,41 @@
+id: paper:arxiv:2407.17060
+status: pending
+score: 3
+track: video_image_coding
+matched:
+- ref: codec:VVC
+  count: 1
+  weight: 3
+meta:
+  title: High Efficiency Image Compression for Large Visual-Language Models
+  authors:
+  - Binzhe Li
+  - Shurun Wang
+  - Shiqi Wang
+  - Yan Ye
+  published: '2024-07-24'
+  updated: '2024-07-24'
+  categories:
+  - cs.CV
+  - cs.AI
+  - cs.CL
+  - eess.IV
+  abstract: In recent years, large visual language models (LVLMs) have shown impressive performance and
+    promising generalization capability in multi-modal tasks, thus replacing humans as receivers of visual
+    information in various application scenarios. In this paper, we pioneer to propose a variable bitrate
+    image compression framework consisting of a pre-editing module and an end-to-end codec to achieve
+    promising rate-accuracy performance for different LVLMs. In particular, instead of optimizing an adaptive
+    pre-editing network towards a particular task or several representative tasks, we propose a new optimization
+    strategy tailored for LVLMs, which is designed based on the representation and discrimination capability
+    with token-level distortion and rank. The pre-editing module and the variable bitrate end-to-end image
+    codec are jointly trained by the losses based on semantic tokens of the large model, which introduce
+    enhanced generalization capability for various data and tasks. {Experimental results demonstrate that
+    the proposed framework could efficiently achieve much better rate-accuracy performance compared to
+    the state-of-the-art coding standard, Versatile Video Coding.} Meanwhile, experiments with multi-modal
+    tasks have revealed the robustness and generalization capability of the proposed framework.
+  url: https://arxiv.org/abs/2407.17060
+  pdf_url: https://arxiv.org/pdf/2407.17060v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 22
+citation_year: 2024

@@ -1,0 +1,59 @@
+id: paper:arxiv:2505.09324
+status: skipped_low_citation
+score: 16
+track: video_image_coding
+matched:
+- ref: codec:AV1
+  count: 1
+  weight: 3
+- ref: codec:AV2
+  count: 1
+  weight: 3
+- ref: codec:AVC
+  count: 1
+  weight: 3
+- ref: codec:HEVC
+  count: 1
+  weight: 3
+- ref: codec:VVC
+  count: 1
+  weight: 3
+- ref: concept:3DGS
+  count: 1
+  weight: 1
+meta:
+  title: Neural Video Compression using 2D Gaussian Splatting
+  authors:
+  - Lakshya Gupta
+  - Imran N. Junejo
+  published: '2025-05-14'
+  updated: '2025-05-14'
+  categories:
+  - cs.CV
+  - cs.AI
+  - cs.LG
+  - eess.IV
+  abstract: The computer vision and image processing research community has been involved in standardizing
+    video data communications for the past many decades, leading to standards such as AVC, HEVC, VVC,
+    AV1, AV2, etc. However, recent groundbreaking works have focused on employing deep learning-based
+    techniques to replace the traditional video codec pipeline to a greater affect. Neural video codecs
+    (NVC) create an end-to-end ML-based solution that does not rely on any handcrafted features (motion
+    or edge-based) and have the ability to learn content-aware compression strategies, offering better
+    adaptability and higher compression efficiency than traditional methods. This holds a great potential
+    not only for hardware design, but also for various video streaming platforms and applications, especially
+    video conferencing applications such as MS-Teams or Zoom that have found extensive usage in classrooms
+    and workplaces. However, their high computational demands currently limit their use in real-time applications
+    like video conferencing. To address this, we propose a region-of-interest (ROI) based neural video
+    compression model that leverages 2D Gaussian Splatting. Unlike traditional codecs, 2D Gaussian Splatting
+    is capable of real-time decoding and can be optimized using fewer data points, requiring only thousands
+    of Gaussians for decent quality outputs as opposed to millions in 3D scenes. In this work, we designed
+    a video pipeline that speeds up the encoding time of the previous Gaussian splatting-based image codec
+    by 88% by using a content-aware initialization strategy paired with a novel Gaussian inter-frame redundancy-reduction
+    mechanism, enabling Gaussian splatting to be used for a video-codec solution, the first of its kind
+    solution in this neural video codec space.
+  url: https://arxiv.org/abs/2505.09324
+  pdf_url: https://arxiv.org/pdf/2505.09324v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 3
+citation_year: 2025

@@ -1,0 +1,37 @@
+id: paper:arxiv:2503.11231
+status: skipped
+score: 1
+track: video_image_coding
+matched:
+- ref: concept:EntropyModel
+  count: 1
+  weight: 1
+meta:
+  title: Deep Lossless Image Compression via Masked Sampling and Coarse-to-Fine Auto-Regression
+  authors:
+  - Tiantian Li
+  - Qunbing Xia
+  - Yue Li
+  - Ruixiao Guo
+  - Gaobo Yang
+  published: '2025-03-14'
+  updated: '2025-03-14'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: 'Learning-based lossless image compression employs pixel-based or subimage-based auto-regression
+    for probability estimation, which achieves desirable performances. However, the existing works only
+    consider context dependencies in one direction, namely, those symbols that appear before the current
+    symbol in raster order. We believe that the dependencies between the current and future symbols should
+    be further considered. In this work, we propose a deep lossless image compression via masked sampling
+    and coarse-to-fine auto-regression. It combines lossy reconstruction and progressive residual compression,
+    which fuses contexts from various directions and is more consistent with human perception. Specifically,
+    the residuals are decomposed via $T$ iterative masked sampling, and each sampling consists of three
+    steps: 1) probability estimation, 2) mask computation, and 3) arithmetic coding. The iterative process
+    progressively refines our prediction and gradually presents a real image. Extensive experimental results
+    show that compared with the existing traditional and learned lossless compression, our method achieves
+    comparable compression performance on extensive datasets with competitive coding speed and more flexibility.'
+  url: https://arxiv.org/abs/2503.11231
+  pdf_url: https://arxiv.org/pdf/2503.11231v1
+  version: v1
+fetched: '2026-11-14'

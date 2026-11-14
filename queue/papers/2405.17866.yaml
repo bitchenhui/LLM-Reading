@@ -1,0 +1,44 @@
+id: paper:arxiv:2405.17866
+status: skipped_low_citation
+score: 10
+track: video_image_coding
+matched:
+- ref: impl:VVenC
+  count: 1
+  weight: 3
+- ref: impl:x264
+  count: 1
+  weight: 3
+- ref: impl:x265
+  count: 1
+  weight: 3
+- ref: metric:BD-Rate
+  count: 1
+  weight: 1
+meta:
+  title: 'Towards Video Codec Performance Evaluation: A Rate-Energy-Distortion Perspective'
+  authors:
+  - Geetha Ramasubbu
+  - André Kaup
+  - Christian Herglotz
+  published: '2024-05-28'
+  updated: '2024-10-02'
+  categories:
+  - eess.IV
+  abstract: The Bjøntegaard Delta rate (BD-rate) objectively assesses the coding efficiency of video codecs
+    using the rate-distortion (R-D) performance but overlooks encoding energy, which is crucial in practical
+    applications, especially for those on handheld devices. Although R-D analysis can be extended to incorporate
+    encoding energy as energy-distortion (E-D), it fails to integrate all three parameters seamlessly.
+    This work proposes a novel approach to address this limitation by introducing a 3D representation
+    of rate, encoding energy, and distortion through surface fitting. In addition, we evaluate various
+    surface fitting techniques based on their accuracy and investigate the proposed 3D representation
+    and its projections. The overlapping areas in projections help in encoder selection and recommend
+    avoiding the slow presets of the older encoders (x264, x265), as the recent encoders (x265, VVenC)
+    offer higher quality for the same bitrate-energy performance and provide a lower rate for the same
+    energy-distortion performance.
+  url: https://arxiv.org/abs/2405.17866
+  pdf_url: https://arxiv.org/pdf/2405.17866v4
+  version: v4
+fetched: '2026-11-14'
+citation_count: 4
+citation_year: 2024

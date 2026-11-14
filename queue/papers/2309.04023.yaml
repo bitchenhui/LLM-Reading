@@ -1,0 +1,46 @@
+id: paper:arxiv:2309.04023
+status: pending
+score: 2
+track: streaming_delivery
+matched:
+- ref: concept:ABR
+  count: 3
+  weight: 1
+- ref: concept:QoE
+  count: 1
+  weight: 1
+meta:
+  title: 'BOLA360: Near-optimal View and Bitrate Adaptation for 360-degree Video Streaming'
+  authors:
+  - Ali Zeynali
+  - Mahsa Sahebdel
+  - Mohammad Hajiesmaili
+  - Ramesh K. Sitaraman
+  published: '2023-09-07'
+  updated: '2024-10-01'
+  categories:
+  - cs.MM
+  abstract: Recent advances in omnidirectional cameras and AR/VR headsets have spurred the adoption of
+    360-degree videos that are widely believed to be the future of online video streaming. 360-degree
+    videos allow users to wear a head-mounted display (HMD) and experience the video as if they are physically
+    present in the scene. Streaming high-quality 360-degree videos at scale is an unsolved problem that
+    is more challenging than traditional (2D) video delivery. The data rate required to stream 360-degree
+    videos is an order of magnitude more than traditional videos. Further, the penalty for rebuffering
+    events where the video freezes or displays a blank screen is more severe as it may cause cybersickness.
+    We propose an online adaptive bitrate (ABR) algorithm for 360-degree videos called BOLA360 that runs
+    inside the client's video player and orchestrates the download of video segments from the server so
+    as to maximize the quality-of-experience (QoE) of the user. BOLA360 conserves bandwidth by downloading
+    only those video segments that are likely to fall within the field-of-view (FOV) of the user. In addition,
+    BOLA360 continually adapts the bitrate of the downloaded video segments so as to enable a smooth playback
+    without rebuffering. We prove that BOLA360 is near-optimal with respect to an optimal offline algorithm
+    that maximizes QoE. Further, we evaluate BOLA360 on a wide range of network and user head movement
+    profiles and show that it provides $13.6\%$ to $372.5\%$ more QoE than state-of-the-art algorithms.
+    While ABR algorithms for traditional (2D) videos have been well-studied over the last decade, our
+    work is the first ABR algorithm for 360-degree videos with both theoretical and empirical guarantees
+    on its performance.
+  url: https://arxiv.org/abs/2309.04023
+  pdf_url: https://arxiv.org/pdf/2309.04023v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 23
+citation_year: 2023

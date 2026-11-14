@@ -1,0 +1,36 @@
+id: paper:arxiv:2511.16126
+status: skipped
+score: 1
+track: audio_coding
+matched:
+- ref: concept:NeuralAudioCodec
+  count: 1
+  weight: 1
+meta:
+  title: 'SUNAC: Source-aware Unified Neural Audio Codec'
+  authors:
+  - Ryo Aihara
+  - Yoshiki Masuyama
+  - Francesco Paissan
+  - François G. Germain
+  - Gordon Wichern
+  - Jonathan Le Roux
+  published: '2025-11-20'
+  updated: '2025-11-20'
+  categories:
+  - eess.AS
+  - eess.SP
+  abstract: Neural audio codecs (NACs) provide compact representations that can be leveraged in many downstream
+    applications, in particular large language models. Yet most NACs encode mixtures of multiple sources
+    in an entangled manner, which may impede efficient downstream processing in applications that need
+    access to only a subset of the sources (e.g., analysis of a particular type of sound, transcription
+    of a given speaker, etc). To address this, we propose a source-aware codec that encodes individual
+    sources directly from mixtures, conditioned on source type prompts. This enables user-driven selection
+    of which source(s) to encode, including separately encoding multiple sources of the same type (e.g.,
+    multiple speech signals). Experiments show that our model achieves competitive resynthesis and separation
+    quality relative to a cascade of source separation followed by a conventional NAC, with lower computational
+    cost.
+  url: https://arxiv.org/abs/2511.16126
+  pdf_url: https://arxiv.org/pdf/2511.16126v1
+  version: v1
+fetched: '2026-11-14'

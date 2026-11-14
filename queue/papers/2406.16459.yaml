@@ -1,0 +1,50 @@
+id: paper:arxiv:2406.16459
+status: skipped
+score: 1
+track: processing_enhancement
+matched:
+- ref: concept:SuperResolution
+  count: 1
+  weight: 1
+meta:
+  title: Suppressing Uncertainties in Degradation Estimation for Blind Super-Resolution
+  authors:
+  - Junxiong Lin
+  - Zeng Tao
+  - Xuan Tong
+  - Xinji Mai
+  - Haoran Wang
+  - Boyang Wang
+  - Yan Wang
+  - Qing Zhao
+  - Jiawen Yu
+  - Yuxuan Lin
+  - Shaoqi Yan
+  - Shuyong Gao
+  - Wenqiang Zhang
+  published: '2024-06-24'
+  updated: '2024-06-24'
+  categories:
+  - cs.CV
+  abstract: 'The problem of blind image super-resolution aims to recover high-resolution (HR) images from
+    low-resolution (LR) images with unknown degradation modes. Most existing methods model the image degradation
+    process using blur kernels. However, this explicit modeling approach struggles to cover the complex
+    and varied degradation processes encountered in the real world, such as high-order combinations of
+    JPEG compression, blur, and noise. Implicit modeling for the degradation process can effectively overcome
+    this issue, but a key challenge of implicit modeling is the lack of accurate ground truth labels for
+    the degradation process to conduct supervised training. To overcome this limitations inherent in implicit
+    modeling, we propose an \textbf{U}ncertainty-based degradation representation for blind \textbf{S}uper-\textbf{R}esolution
+    framework (\textbf{USR}). By suppressing the uncertainty of local degradation representations in images,
+    USR facilitated self-supervised learning of degradation representations. The USR consists of two components:
+    Adaptive Uncertainty-Aware Degradation Extraction (AUDE) and a feature extraction network composed
+    of Variable Depth Dynamic Convolution (VDDC) blocks. To extract Uncertainty-based Degradation Representation
+    from LR images, the AUDE utilizes the Self-supervised Uncertainty Contrast module with Uncertainty
+    Suppression Loss to suppress the inherent model uncertainty of the Degradation Extractor. Furthermore,
+    VDDC block integrates degradation information through dynamic convolution. Rhe VDDC also employs an
+    Adaptive Intensity Scaling operation that adaptively adjusts the degradation representation according
+    to the network hierarchy, thereby facilitating the effective integration of degradation information.
+    Quantitative and qualitative experiments affirm the superiority of our approach.'
+  url: https://arxiv.org/abs/2406.16459
+  pdf_url: https://arxiv.org/pdf/2406.16459v1
+  version: v1
+fetched: '2026-11-14'

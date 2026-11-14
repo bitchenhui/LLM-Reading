@@ -1,0 +1,42 @@
+id: paper:arxiv:2511.16831
+status: skipped_low_citation
+score: 3
+track: immersive_media
+matched:
+- ref: concept:3DGS
+  count: 4
+  weight: 1
+- ref: concept:VolumetricVideo
+  count: 2
+  weight: 1
+- ref: metric:FPS
+  count: 1
+  weight: 1
+meta:
+  title: 'Vorion: A RISC-V GPU with Hardware-Accelerated 3D Gaussian Rendering and Training'
+  authors:
+  - Yipeng Wang
+  - Mengtian Yang
+  - Chieh-pu Lo
+  - Jaydeep P. Kulkarni
+  published: '2025-11-20'
+  updated: '2025-11-20'
+  categories:
+  - cs.AR
+  - cs.GR
+  abstract: 3D Gaussian Splatting (3DGS) has recently emerged as a foundational technique for real-time
+    neural rendering, 3D scene generation, volumetric video (4D) capture. However, its rendering and training
+    impose massive computation, making real-time rendering on edge devices and real-time 4D reconstruction
+    on workstations currently infeasible. Given its fixed-function nature and similarity with traditional
+    rasterization, 3DGS presents a strong case for dedicated hardware in the graphics pipeline of next-generation
+    GPUs. This work, Vorion, presents the first GPGPU prototype with hardware-accelerated 3DGS rendering
+    and training. Vorion features scalable architecture, minimal hardware change to traditional rasterizers,
+    z-tiling to increase parallelism, and Gaussian/pixel-centric hybrid dataflow. We prototype the minimal
+    system (8 SIMT cores, 2 Gaussian rasterizer) using TSMC 16nm FinFET technology, which achieves 19
+    FPS for rendering. The scaled design with 16 rasterizers achieves 38.6 iterations/s for training.
+  url: https://arxiv.org/abs/2511.16831
+  pdf_url: https://arxiv.org/pdf/2511.16831v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 1
+citation_year: 2025

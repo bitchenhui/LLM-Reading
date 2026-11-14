@@ -1,0 +1,41 @@
+id: paper:arxiv:2605.09764
+status: pending
+score: 2
+track: self_improvement
+matched:
+- ref: concept:AlphaEvolve
+  count: 1
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: 'LEVI: Stronger Search Architectures Can Substitute for Larger LLMs in Evolutionary Search'
+  authors:
+  - Temoor Tanveer
+  published: '2026-05-10'
+  updated: '2026-05-10'
+  categories:
+  - cs.NE
+  - cs.AI
+  abstract: 'LLM-guided evolutionary methods such as AlphaEvolve have proven effective in domains like
+    math, systems research, and algorithmic discovery, but their reliance on frontier models makes each
+    run expensive. We argue this is largely an artifact of how existing frameworks allocate search: archives
+    that fail to preserve solution diversity force compensation through stronger mutation models; blind
+    model use spends frontier dollars on local edits a smaller model could handle; and full-set evaluation
+    wastes rollouts on redundant examples. We introduce LEVI, a harness-first evolutionary framework built
+    on the bet that stronger search architectures can substitute for or even outperform larger LLMs in
+    evolutionary search. LEVI improves on three core components of evolutionary search: a solution database
+    that establishes diversity from the beginning, and then maintains it throughout the run; a smarter
+    mutation router that plays into the strengths of large and small LLMs; and a rank-preserving proxy
+    benchmark for rollout-heavy settings. Across systems-research benchmarks LEVI attains the highest
+    score on a budget 3.3-6.7x smaller than the published frontier-model runs of existing frameworks like
+    ShinkaEvolve, GEPA, and AdaEvolve; on one problem, LEVI matches the existing best at a 35x lower cost.
+    On prompt optimization, LEVI matches or exceeds GEPA at less than half of its rollout budget on four
+    different benchmarks. LEVI is available as an open-source framework at https://github.com/ttanv/levi.'
+  url: https://arxiv.org/abs/2605.09764
+  pdf_url: https://arxiv.org/pdf/2605.09764v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 8
+citation_year: 2026

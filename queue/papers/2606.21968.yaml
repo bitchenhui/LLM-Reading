@@ -1,0 +1,44 @@
+id: paper:arxiv:2606.21968
+status: pending
+score: 2
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+- ref: concept:TrainingFree
+  count: 1
+  weight: 1
+meta:
+  title: 'Look Before You Zoom: Adaptive Routing for the Resolution-Context Trade-off in Visual RAG'
+  authors:
+  - Oanh N. Tran
+  - Thanh Quoc Hung Le
+  - Oscar Chew
+  - Kuan-Hao Huang
+  - Khoa D. Doan
+  published: '2026-06-20'
+  updated: '2026-06-20'
+  categories:
+  - cs.CV
+  - cs.CL
+  abstract: 'Vision-Language Models (VLMs) struggle as query-relevant objects become smaller. To address
+    this, recent training-free approaches dynamically retrieve and zoom into local image regions. However,
+    we show that indiscriminately applying retrieval ignores a critical vulnerability: the resolution-context
+    trade-off. Patch-based zooming recovers details for small targets, but can split large objects and
+    destroy global spatial context; attention-based retrieval better preserves large objects, but remains
+    less reliable on tiny details; and global perception is often fastest when retrieval is unnecessary.
+    Motivated by these failure modes, we introduce ViRGo (Visual Retrieval or Global Perception), a lightweight
+    framework that formulates visual retrieval as an adaptive routing problem. ViRGo estimates object
+    scale from the VLM''s intrinsic localization heads during the initial forward pass and combines it
+    with semantic token confidence to select between global perception, patch-based retrieval, and attention-based
+    retrieval with minimal additional computation. Experiments across multiple VQA benchmarks and object-size
+    groups show that ViRGo improves the accuracy-efficiency trade-off: it matches patch retrieval on small
+    details, leverages attention-based retrieval for larger objects, and reduces inference time by routing
+    to the global baseline when zooming is unnecessary.'
+  url: https://arxiv.org/abs/2606.21968
+  pdf_url: https://arxiv.org/pdf/2606.21968v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 0
+citation_year: 2026

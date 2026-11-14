@@ -1,0 +1,40 @@
+id: paper:arxiv:2506.23618
+status: skipped
+score: 1
+track: processing_enhancement
+matched:
+- ref: concept:SuperResolution
+  count: 2
+  weight: 1
+meta:
+  title: 'TurboVSR: Fantastic Video Upscalers and Where to Find Them'
+  authors:
+  - Zhongdao Wang
+  - Guodongfang Zhao
+  - Jingjing Ren
+  - Bailan Feng
+  - Shifeng Zhang
+  - Wenbo Li
+  published: '2025-06-30'
+  updated: '2025-06-30'
+  categories:
+  - cs.CV
+  abstract: 'Diffusion-based generative models have demonstrated exceptional promise in the video super-resolution
+    (VSR) task, achieving a substantial advancement in detail generation relative to prior methods. However,
+    these approaches face significant computational efficiency challenges. For instance, current techniques
+    may require tens of minutes to super-resolve a mere 2-second, 1080p video. In this paper, we present
+    TurboVSR, an ultra-efficient diffusion-based video super-resolution model. Our core design comprises
+    three key aspects: (1) We employ an autoencoder with a high compression ratio of 32$\times$32$\times$8
+    to reduce the number of tokens. (2) Highly compressed latents pose substantial challenges for training.
+    We introduce factorized conditioning to mitigate the learning complexity: we first learn to super-resolve
+    the initial frame; subsequently, we condition the super-resolution of the remaining frames on the
+    high-resolution initial frame and the low-resolution subsequent frames. (3) We convert the pre-trained
+    diffusion model to a shortcut model to enable fewer sampling steps, further accelerating inference.
+    As a result, TurboVSR performs on par with state-of-the-art VSR methods, while being 100+ times faster,
+    taking only 7 seconds to process a 2-second long 1080p video. TurboVSR also supports image resolution
+    by considering image as a one-frame video. Our efficient design makes SR beyond 1080p possible, results
+    on 4K (3648$\times$2048) image SR show surprising fine details.'
+  url: https://arxiv.org/abs/2506.23618
+  pdf_url: https://arxiv.org/pdf/2506.23618v1
+  version: v1
+fetched: '2026-11-14'

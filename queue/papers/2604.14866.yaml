@@ -1,0 +1,52 @@
+id: paper:arxiv:2604.14866
+status: pending
+score: 2
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: 'MetaDent: Labeling Clinical Images for Vision-Language Models in Dentistry'
+  authors:
+  - Meng-Xun Li
+  - Wen-Hui Deng
+  - Zhi-Xing Wu
+  - Chun-Xiao Jin
+  - Jia-Min Wu
+  - Yue Han
+  - James Kit Hon Tsoi
+  - Gui-Song Xia
+  - Cui Huang
+  published: '2026-04-16'
+  updated: '2026-04-16'
+  categories:
+  - cs.CV
+  - cs.AI
+  abstract: 'Vision-Language Models (VLMs) have demonstrated significant potential in medical image analysis,
+    yet their application in intraoral photography remains largely underexplored due to the lack of fine-grained,
+    annotated datasets and comprehensive benchmarks. To address this, we present MetaDent, a comprehensive
+    resource that includes (1) a novel and large-scale dentistry image dataset collected from clinical,
+    public, and web sources; (2) a semi-structured annotation framework designed to capture the hierarchical
+    and clinically nuanced nature of dental photography; and (3) comprehensive benchmark suites for evaluating
+    state-of-the-art VLMs on clinical image understanding. Our labeling approach combines a high-level
+    image summary with point-by-point, free-text descriptions of abnormalities. This method enables rich,
+    scalable, and task-agnostic representations. We curated 60,669 dental images from diverse sources
+    and annotated a representative subset of 2,588 images using this meta-labeling scheme. Leveraging
+    Large Language Models (LLMs), we derive standardized benchmarks: approximately 15K Visual Question
+    Answering (VQA) pairs and an 18-class multi-label classification dataset, which we validated with
+    human review and error analysis to justify that the LLM-driven transition reliably preserves fidelity
+    and semantic accuracy. We then evaluate state-of-the-art VLMs across VQA, classification, and image
+    captioning tasks. Quantitative results reveal that even the most advanced models struggle with a fine-grained
+    understanding of intraoral scenes, achieving moderate accuracy and producing inconsistent or incomplete
+    descriptions in image captioning. We publicly release our dataset, annotations, and tools to foster
+    reproducible research and accelerate the development of vision-language systems for dental applications.'
+  url: https://arxiv.org/abs/2604.14866
+  pdf_url: https://arxiv.org/pdf/2604.14866v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 4
+citation_year: 2026

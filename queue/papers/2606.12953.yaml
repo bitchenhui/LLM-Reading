@@ -1,0 +1,33 @@
+id: paper:arxiv:2606.12953
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'OpenMedQ: Broad Open Pretraining for Medical Vision-Language Models'
+  authors:
+  - Ibrahim Gulluk
+  - Max Van Puyvelde
+  - Olivier Gevaert
+  published: '2026-06-11'
+  updated: '2026-06-11'
+  categories:
+  - cs.AI
+  - cs.CV
+  - cs.LG
+  - eess.IV
+  abstract: 'We present OpenMedQ, a medical vision-language model pretrained on the broadest fully-open
+    medical mix to date: 14 datasets totaling ~3.35M pretraining samples spanning pathology, radiology,
+    microscopy, and text-only clinical QA. OpenMedQ reaches state-of-the-art BLEU-1 on PathVQA (75.9),
+    beating Med-PaLM M variants up to 562B parameters (~80x larger), and matches the best reported VQA-MED
+    BLEU-1 (64.5). Its vision encoder, transferred to 8 unseen medical classification benchmarks under
+    an identical downstream recipe, obtains the highest average macro-F1 (0.757) among BiomedCLIP (0.745),
+    PMC-CLIP (0.745), PubMedCLIP (0.746), and a from-scratch baseline (0.616). We release our code and
+    an interactive demo is publicly available as a reproducible baseline for the community.'
+  url: https://arxiv.org/abs/2606.12953
+  pdf_url: https://arxiv.org/pdf/2606.12953v1
+  version: v1
+fetched: '2026-11-14'

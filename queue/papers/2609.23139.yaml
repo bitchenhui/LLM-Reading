@@ -1,0 +1,41 @@
+id: paper:arxiv:2609.23139
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'QwenVLConnector: A Fast, Unified Medical VLM Chatbot for Fine-Grained Clinical Perception and
+    Text Generation'
+  authors:
+  - Le Thien Phuc Nguyen
+  - Thien Nguyen
+  - Thanh-Huy Nguyen
+  - Gia Minh Hoang
+  - Anh Mai Vu
+  - Ulas Bagci
+  published: '2026-09-19'
+  updated: '2026-09-19'
+  categories:
+  - cs.CV
+  - cs.AI
+  abstract: Most medical vision-language models (VLMs) excel at open-ended report generation and VQA but
+    provide limited support for structured, fine-grained clinical perception within a unified interface.
+    We present QwenVLConnector, a Qwen2.5-VL-based medical chatbot that unifies classification, multi-label
+    classification, textualized detection, counting, regression, and free-form report generation under
+    a single next-token objective. Our key component is a lightweight dense multi-layer Connector that
+    aggregates low- and high-level visual features, aligns them through the pretrained vision Merger,
+    and fuses them with the final visual representation without increasing sequence length. This design
+    enriches visual tokens with complementary spatial and semantic cues while preserving efficiency. On
+    FLARE-2D, QwenVLConnector improves detection F1 from 0.55 to 0.85, raises single-label classification
+    from 0.37 to 0.51, and boosts report-generation GREEN by up to 18.3 points over the Qwen2.5-VL baseline.
+    We further explore multimodal in-context learning for report generation, showing additional improvements
+    without updating model parameters. Overall, QwenVLConnector offers a unified and efficient framework
+    for combining structured medical perception with open-ended clinical text generation. Our code can
+    be found at https://github.com/plnguyen2908/QwenConnector.
+  url: https://arxiv.org/abs/2609.23139
+  pdf_url: https://arxiv.org/pdf/2609.23139v1
+  version: v1
+fetched: '2026-11-14'

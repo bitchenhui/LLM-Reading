@@ -1,0 +1,51 @@
+id: paper:arxiv:2412.10433
+status: skipped_low_citation
+score: 7
+track: immersive_media
+matched:
+- ref: codec:G-PCC
+  count: 1
+  weight: 3
+- ref: codec:V-PCC
+  count: 1
+  weight: 3
+- ref: concept:INR
+  count: 1
+  weight: 1
+meta:
+  title: Implicit Neural Compression of Point Clouds
+  authors:
+  - Hongning Ruan
+  - Yulin Shao
+  - Qianqian Yang
+  - Liang Zhao
+  - Zhaoyang Zhang
+  - Dusit Niyato
+  published: '2024-12-11'
+  updated: '2025-10-21'
+  categories:
+  - cs.CV
+  - cs.LG
+  - eess.SP
+  abstract: 'Point clouds have gained prominence across numerous applications due to their ability to
+    accurately represent 3D objects and scenes. However, efficiently compressing unstructured, high-precision
+    point cloud data remains a significant challenge. In this paper, we propose NeRC$^3$, a novel point
+    cloud compression framework that leverages implicit neural representations (INRs) to encode both geometry
+    and attributes of dense point clouds. Our approach employs two coordinate-based neural networks: one
+    maps spatial coordinates to voxel occupancy, while the other maps occupied voxels to their attributes,
+    thereby implicitly representing the geometry and attributes of a voxelized point cloud. The encoder
+    quantizes and compresses network parameters alongside auxiliary information required for reconstruction,
+    while the decoder reconstructs the original point cloud by inputting voxel coordinates into the neural
+    networks. Furthermore, we extend our method to dynamic point cloud compression through techniques
+    that reduce temporal redundancy, including a 4D spatio-temporal representation termed 4D-NeRC$^3$.
+    Experimental results validate the effectiveness of our approach: For static point clouds, NeRC$^3$
+    outperforms octree-based G-PCC standard and existing INR-based methods. For dynamic point clouds,
+    4D-NeRC$^3$ achieves superior geometry compression performance compared to the latest G-PCC and V-PCC
+    standards, while matching state-of-the-art learning-based methods. It also demonstrates competitive
+    performance in joint geometry and attribute compression.'
+  url: https://arxiv.org/abs/2412.10433
+  pdf_url: https://arxiv.org/pdf/2412.10433v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 4
+citation_year: 2024

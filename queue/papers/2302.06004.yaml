@@ -1,0 +1,48 @@
+id: paper:arxiv:2302.06004
+status: pending
+score: 3
+track: streaming_delivery
+matched:
+- ref: concept:ABR
+  count: 3
+  weight: 1
+- ref: concept:QoE
+  count: 3
+  weight: 1
+- ref: concept:DASH
+  count: 1
+  weight: 1
+meta:
+  title: Improving UE Energy Efficiency through Network-aware Video Streaming over 5G
+  authors:
+  - Basabdatta Palit
+  - Argha Sen
+  - Abhijit Mondal
+  - Ayan Zunaid
+  - Jay Jayatheerthan
+  - Sandip Chakraborty
+  published: '2023-02-12'
+  updated: '2023-02-12'
+  categories:
+  - cs.NI
+  abstract: Adaptive Bitrate (ABR) Streaming over the cellular networks has been well studied in the literature;
+    however, existing ABR algorithms primarily focus on improving the end-users' Quality of Experience
+    (QoE) while ignoring the resource consumption aspect of the underlying device. Consequently, proactive
+    attempts to download video data to maintain the user's QoE often impact the battery life of the underlying
+    device unless the download attempts are synchronized with the network's channel condition. In this
+    work, we develop EnDASH-5G -- a wrapper over the popular DASH-based ABR streaming algorithm, which
+    establishes this synchronization by utilizing a network-aware video data download mechanism. EnDASH-5G
+    utilizes a novel throughput prediction mechanism for 5G mmWave networks by upgrading the existing
+    throughput prediction models with a transfer learning-based approach leveraging publicly available
+    5G datasets. It then exploits deep reinforcement learning to dynamically decide the playback buffer
+    length and the video bitrate using the predicted throughput. This ensures that the data download attempts
+    get synchronized with the underlying network condition, thus saving the device's battery power. From
+    a thorough evaluation of EnDASH-5G, we observe that it achieves a near $30.5\%$ decrease in the maximum
+    energy consumption than the state-of-the-art Pensieve ABR algorithm while performing almost at par
+    in QoE.
+  url: https://arxiv.org/abs/2302.06004
+  pdf_url: https://arxiv.org/pdf/2302.06004v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 11
+citation_year: 2023

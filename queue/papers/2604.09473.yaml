@@ -1,0 +1,54 @@
+id: paper:arxiv:2604.09473
+status: pending
+score: 2
+track: immersive_media
+matched:
+- ref: concept:VolumetricVideo
+  count: 2
+  weight: 1
+- ref: metric:FPS
+  count: 1
+  weight: 1
+meta:
+  title: 'Realizing Immersive Volumetric Video: A Multimodal Framework for 6-DoF VR Engagement'
+  authors:
+  - Zhengxian Yang
+  - Shengqi Wang
+  - Shi Pan
+  - Hongshuai Li
+  - Haoxiang Wang
+  - Lin Li
+  - Guanjun Li
+  - Zhengqi Wen
+  - Borong Lin
+  - Jianhua Tao
+  - Tao Yu
+  published: '2026-04-10'
+  updated: '2026-04-10'
+  categories:
+  - cs.CV
+  abstract: Fully immersive experiences that tightly integrate 6-DoF visual and auditory interaction are
+    essential for virtual and augmented reality. While such experiences can be achieved through computer-generated
+    content, constructing them directly from real-world captured videos remains largely unexplored. We
+    introduce Immersive Volumetric Videos, a new volumetric media format designed to provide large 6-DoF
+    interaction spaces, audiovisual feedback, and high-resolution, high-frame-rate dynamic content. To
+    support IVV construction, we present ImViD, a multi-view, multi-modal dataset built upon a space-oriented
+    capture philosophy. Our custom capture rig enables synchronized multi-view video-audio acquisition
+    during motion, facilitating efficient capture of complex indoor and outdoor scenes with rich foreground--background
+    interactions and challenging dynamics. The dataset provides 5K-resolution videos at 60 FPS with durations
+    of 1-5 minutes, offering richer spatial, temporal, and multimodal coverage than existing benchmarks.
+    Leveraging this dataset, we develop a dynamic light field reconstruction framework built upon a Gaussian-based
+    spatio-temporal representation, incorporating flow-guided sparse initialization, joint camera temporal
+    calibration, and multi-term spatio-temporal supervision for robust and accurate modeling of complex
+    motion. We further propose, to our knowledge, the first method for sound field reconstruction from
+    such multi-view audiovisual data. Together, these components form a unified pipeline for immersive
+    volumetric video production. Extensive benchmarks and immersive VR experiments demonstrate that our
+    pipeline generates high-quality, temporally stable audiovisual volumetric content with large 6-DoF
+    interaction spaces. This work provides both a foundational definition and a practical construction
+    methodology for immersive volumetric videos.
+  url: https://arxiv.org/abs/2604.09473
+  pdf_url: https://arxiv.org/pdf/2604.09473v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 2
+citation_year: 2026

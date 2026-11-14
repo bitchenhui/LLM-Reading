@@ -1,0 +1,38 @@
+id: paper:arxiv:2609.04180
+status: skipped
+score: 1
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+meta:
+  title: Knowledge Acquisition During Pre-training? Large Language Models Learn Better With Auxiliary
+    Views
+  authors:
+  - Joseph Lee
+  - Yidi Huang
+  - Dokyoon Kim
+  - Shu Yang
+  - Li Shen
+  published: '2026-09-03'
+  updated: '2026-10-20'
+  categories:
+  - cs.CL
+  - cs.AI
+  abstract: Gaps remain in our understanding of how large language models (LLMs) acquire knowledge during
+    pre-training. We find that auxiliary views, conceptual reformulations, are key to this process. We
+    design controlled experiments to isolate this. First, holding the token budget fixed, allocating tokens
+    from paraphrases to auxiliary views improves learning even for factual recall, which we use near-verbatim
+    sentences from the original document to test. Second, the effectiveness of auxiliary views is not
+    contingent on the strength of the model that generates them. Third, we establish that paraphrasing
+    is helpful but only at smaller batch sizes. Fourth, we identify types of knowledge that aid learning
+    in the presence of prior knowledge gaps. Finally, we examine how these effects manifest mechanistically
+    via layer-wise biases and compression. Together, our findings suggest that auxiliary representations
+    of knowledge are a key factor in the success of pre-training, and explains why data diversity matters.
+    Further, our results provide clear recipes for synthetic data augmentation along with implications
+    on the self-improvement in LLMs.
+  url: https://arxiv.org/abs/2609.04180
+  pdf_url: https://arxiv.org/pdf/2609.04180v2
+  version: v2
+fetched: '2026-11-14'

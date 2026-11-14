@@ -1,0 +1,46 @@
+id: paper:arxiv:2602.16928
+status: pending
+score: 2
+track: self_improvement
+matched:
+- ref: concept:AlphaEvolve
+  count: 1
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: Discovering Multiagent Learning Algorithms with Large Language Models
+  authors:
+  - Zun Li
+  - John Schultz
+  - Daniel Hennes
+  - Marc Lanctot
+  published: '2026-02-18'
+  updated: '2026-05-07'
+  categories:
+  - cs.GT
+  - cs.AI
+  - cs.MA
+  abstract: 'Much of the advancement in Multi-Agent Reinforcement Learning (MARL) for imperfect-information
+    games has historically depended on the manual, iterative refinement of algorithmic baselines. Recently,
+    evolutionary coding agents powered by Large Language Models (LLMs) have emerged as powerful tools
+    to automate this discovery process. In this work, we deploy one of such agentic frameworks, AlphaEvolve,
+    to navigate the design spaces of two distinct game-theoretic paradigms: counterfactual regret minimization
+    (CFR) and policy-space response oracles (PSRO). This automated search yielded two algorithms: Volatility-Adaptive
+    Discounted (VAD-) CFR and Smoothed Hybrid Optimistic Regret (SHOR-) PSRO, which are consistently competitive
+    with state-of-the-art human-designed baselines across an 18-game evaluation suite spanning Poker,
+    Goofspiel, Liar''s Dice, Blotto, and Battleship variants. However, because the LLM optimizes for fitness
+    on a specific training set, it often constructs highly synergistic, complex mechanisms tailored to
+    those environments. Through systematic ablation studies, we demonstrate that while these mechanisms
+    are tightly coupled, the true driver of generalization lies in a minimal algorithmic core. By distilling
+    the LLM''s discoveries down to their most fundamental principles, we produce two minimal solvers:
+    Warm-started Optimistic Predictive (WOP-)CFR and Projection Matching (PM-)PSRO. These distilled versions
+    achieve superior performance on generalization with greatly reduced structural complexity, providing
+    a clear methodology for using LLMs in algorithmic discovery.'
+  url: https://arxiv.org/abs/2602.16928
+  pdf_url: https://arxiv.org/pdf/2602.16928v3
+  version: v3
+fetched: '2026-11-14'
+citation_count: 4
+citation_year: 2026

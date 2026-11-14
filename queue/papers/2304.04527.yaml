@@ -1,0 +1,41 @@
+id: paper:arxiv:2304.04527
+status: skipped_low_citation
+score: 2
+track: streaming_delivery
+matched:
+- ref: concept:ABR
+  count: 3
+  weight: 1
+- ref: concept:QoE
+  count: 3
+  weight: 1
+meta:
+  title: Deep Reinforcement Learning with Importance Weighted A3C for QoE enhancement in Video Delivery
+    Services
+  authors:
+  - Mandan Naresh
+  - Paresh Saxena
+  - Manik Gupta
+  published: '2023-04-10'
+  updated: '2023-04-10'
+  categories:
+  - cs.MM
+  abstract: 'Adaptive bitrate (ABR) algorithms are used to adapt the video bitrate based on the network
+    conditions to improve the overall video quality of experience (QoE). Recently, reinforcement learning
+    (RL) and asynchronous advantage actor-critic (A3C) methods have been used to generate adaptive bit
+    rate algorithms and they have been shown to improve the overall QoE as compared to fixed rule ABR
+    algorithms. However, a common issue in the A3C methods is the lag between behaviour policy and target
+    policy. As a result, the behaviour and the target policies are no longer synchronized which results
+    in suboptimal updates. In this work, we present ALISA: An Actor-Learner Architecture with Importance
+    Sampling for efficient learning in ABR algorithms. ALISA incorporates importance sampling weights
+    to give more weightage to relevant experience to address the lag issues with the existing A3C methods.
+    We present the design and implementation of ALISA, and compare its performance to state-of-the-art
+    video rate adaptation algorithms including vanilla A3C implemented in the Pensieve framework and other
+    fixed-rule schedulers like BB, BOLA, and RB. Our results show that ALISA improves average QoE by up
+    to 25%-48% higher average QoE than Pensieve, and even more when compared to fixed-rule schedulers.'
+  url: https://arxiv.org/abs/2304.04527
+  pdf_url: https://arxiv.org/pdf/2304.04527v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 5
+citation_year: 2023

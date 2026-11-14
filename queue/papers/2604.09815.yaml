@@ -1,0 +1,45 @@
+id: paper:arxiv:2604.09815
+status: pending
+score: 2
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 3
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: 'EE-MCP: Self-Evolving MCP-GUI Agents via Automated Environment Generation and Experience Learning'
+  authors:
+  - Tiantian He
+  - Yihang Chen
+  - Keyue Jiang
+  - Ka Yiu Lee
+  - Kaiwen Zhou
+  - Kun Shao
+  - Shuai Wang
+  published: '2026-04-10'
+  updated: '2026-04-10'
+  categories:
+  - cs.AI
+  abstract: 'Computer-use agents that combine GUI interaction with structured API calls via the Model
+    Context Protocol (MCP) show promise for automating software tasks. However, existing approaches lack
+    a principled understanding of how agents should balance these two modalities and how to enable iterative
+    self-improvement across diverse applications. We formulate MCP-GUI interplay as a unified hybrid policy
+    learning problem where the agent learns when each modality provides complementary advantages, and
+    show that distillation and experience augmentation target fundamentally different failure modes -
+    requiring application-aware mechanism selection. Built on this formulation, we propose a self-evolving
+    framework with a fully automatic pipeline that orchestrates automatic environment generation and validation,
+    trajectory collection, gap-driven task synthesis, and quality-filtered training - all without manual
+    intervention. A key innovation is our experience bank, which accumulates LLM-learned rules from trajectory
+    comparison, enabling inference-time improvement without fine-tuning. Systematic \textbf{cross-application
+    analysis} across three desktop applications reveals that the optimal strategy depends on MCP-GUI composition:
+    distillation achieves 77.8\% pass rate on MCP-dominant tasks (+17.8pp), while the experience bank
+    excels on GUI-intensive tasks (+10.0pp).'
+  url: https://arxiv.org/abs/2604.09815
+  pdf_url: https://arxiv.org/pdf/2604.09815v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 5
+citation_year: 2026

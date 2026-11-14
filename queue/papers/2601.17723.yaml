@@ -1,0 +1,50 @@
+id: paper:arxiv:2601.17723
+status: skipped_low_citation
+score: 3
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 3
+  weight: 1
+- ref: concept:INR
+  count: 2
+  weight: 1
+- ref: concept:SuperResolution
+  count: 1
+  weight: 1
+meta:
+  title: 'Implicit Neural Representation-Based Continuous Single Image Super-Resolution: An Empirical
+    Benchmark'
+  authors:
+  - Tayyab Nasir
+  - Daochang Liu
+  - Ajmal Mian
+  published: '2026-01-25'
+  updated: '2026-08-25'
+  categories:
+  - cs.CV
+  abstract: 'Implicit neural representation (INR) has become the standard approach for arbitrary-scale
+    image super-resolution (ASSR). However, no systematic empirical study has examined the effectiveness
+    of existing methods under consistent conditions, nor investigated the effects of different training
+    recipes, such as objective design, optimization strategies, and scaling behavior. A rigorous empirical
+    analysis is essential not only for benchmarking performance and revealing true gains but also for
+    establishing the current state of ASSR, identifying saturation limits, and highlighting promising
+    directions. We fill this gap by training 6 INR-based ASSR methods under 9 controlled training recipes
+    and evaluating them across 7 datasets and 7 image quality assessment (IQA) metrics, presenting aggregated
+    performance results through a unified ranking framework that enables more reliable interpretation
+    of performance comparisons and evaluation claims. Furthermore, we investigate the impact of carefully
+    controlled training configurations on perceptual image quality and analyze the role of auxiliary objectives
+    in preserving edges, textures, and fine details during training. Our analysis yields the following
+    insights, previously overlooked: (1) Recent, more complex INR methods provide only marginal improvements
+    over earlier methods, indicating architectural saturation on existing benchmarks. (2) Model performance
+    is strongly correlated with training configurations, a factor neglected in prior comparisons. (3)
+    Auxiliary objectives consistently enhance texture fidelity across architectures compared to standard
+    L1-Loss, emphasizing the role of objective design for targeted perceptual gains. (4) INR-based ASSR
+    exhibits consistent, monotonic scaling behavior across model capacity, training compute, and data
+    diversity, though with diminishing returns as complexity grows.'
+  url: https://arxiv.org/abs/2601.17723
+  pdf_url: https://arxiv.org/pdf/2601.17723v3
+  version: v3
+fetched: '2026-11-14'
+citation_count: 0
+citation_year: 2026

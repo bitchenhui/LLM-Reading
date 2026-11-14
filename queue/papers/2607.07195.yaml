@@ -1,0 +1,37 @@
+id: paper:arxiv:2607.07195
+status: skipped
+score: 1
+track: processing_enhancement
+matched:
+- ref: concept:QP
+  count: 1
+  weight: 1
+meta:
+  title: 'DiffCVE: Diffusion-based Compressed Video Enhancement'
+  authors:
+  - Wenqiang Xiao
+  - Wenzhuo Ma
+  - Junxi Zhang
+  - Zhenzhong Chen
+  published: '2026-07-08'
+  updated: '2026-11-12'
+  categories:
+  - cs.CV
+  abstract: Perceptual quality enhancement of severely compressed videos remains challenging due to complex
+    artifact patterns and substantial information loss. Recent diffusion models have demonstrated strong
+    generative capability for visual restoration, but directly applying them to compressed video often
+    ignores compression degradation characteristics and may introduce structure-inconsistent hallucinations.
+    To address this issue, this paper presents a diffusion-based compressed video enhancement method,
+    named DiffCVE. Coding Prior-enhanced Dual Conditioning (CPDC) branches are designed to jointly model
+    compressed video and coding prior conditions, where coding priors including residuals and motion vectors
+    provide complementary structural and motion guidance during the diffusion denoising process. To make
+    the diffusion process aware of compression severity, a Compression Degradation Semantic Prompting
+    (CDSP) mechanism is introduced to leverage QP-conditioned textual prompts together with LoRA fine-tuning.
+    In addition, a Coding Prior-guided Weighted Fusion (CPWF) module is incorporated into the VAE decoder
+    to fuse VAE encoder and coding prior encoder features with QP-predicted weights. Extensive experiments
+    demonstrate the effectiveness of the proposed method in improving perceptual quality, especially under
+    severe compression settings. The project page and code are available at https://wqmaker.github.io/projects/DiffCVE/.
+  url: https://arxiv.org/abs/2607.07195
+  pdf_url: https://arxiv.org/pdf/2607.07195v2
+  version: v2
+fetched: '2026-11-14'

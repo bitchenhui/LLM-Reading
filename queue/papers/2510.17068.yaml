@@ -1,0 +1,41 @@
+id: paper:arxiv:2510.17068
+status: skipped_low_citation
+score: 2
+track: immersive_media
+matched:
+- ref: metric:BD-Rate
+  count: 1
+  weight: 1
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+meta:
+  title: 'ProDAT: Progressive Density-Aware Tail-Drop for Point Cloud Coding'
+  authors:
+  - Zhe Luo
+  - Wenjing Jia
+  - Stuart Perry
+  published: '2025-10-20'
+  updated: '2025-10-20'
+  categories:
+  - cs.CV
+  abstract: Three-dimensional (3D) point clouds are becoming increasingly vital in applications such as
+    autonomous driving, augmented reality, and immersive communication, demanding real-time processing
+    and low latency. However, their large data volumes and bandwidth constraints hinder the deployment
+    of high-quality services in resource-limited environments. Progres- sive coding, which allows for
+    decoding at varying levels of detail, provides an alternative by allowing initial partial decoding
+    with subsequent refinement. Although recent learning-based point cloud geometry coding methods have
+    achieved notable success, their fixed latent representation does not support progressive decoding.
+    To bridge this gap, we propose ProDAT, a novel density-aware tail-drop mechanism for progressive point
+    cloud coding. By leveraging density information as a guidance signal, latent features and coordinates
+    are decoded adaptively based on their significance, therefore achieving progressive decoding at multiple
+    bitrates using one single model. Experimental results on benchmark datasets show that the proposed
+    ProDAT not only enables progressive coding but also achieves superior coding efficiency compared to
+    state-of-the-art learning-based coding techniques, with over 28.6% BD-rate improvement for PSNR- D2
+    on SemanticKITTI and over 18.15% for ShapeNet
+  url: https://arxiv.org/abs/2510.17068
+  pdf_url: https://arxiv.org/pdf/2510.17068v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 0
+citation_year: 2025

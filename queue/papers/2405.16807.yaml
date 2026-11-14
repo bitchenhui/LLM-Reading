@@ -1,0 +1,37 @@
+id: paper:arxiv:2405.16807
+status: skipped
+score: 1
+track: video_image_coding
+matched:
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+meta:
+  title: Extreme Compression of Adaptive Neural Images
+  authors:
+  - Leo Hoshikawa
+  - Marcos V. Conde
+  - Takeshi Ohashi
+  - Atsushi Irie
+  published: '2024-05-27'
+  updated: '2025-10-14'
+  categories:
+  - cs.CV
+  - cs.AI
+  - cs.GR
+  - cs.MM
+  abstract: Implicit Neural Representations (INRs) and Neural Fields are a novel paradigm for signal representation,
+    from images and audio to 3D scenes and videos. The fundamental idea is to represent a signal as a
+    continuous and differentiable neural network. This new approach poses new theoretical questions and
+    challenges. Considering a neural image as a 2D image represented as a neural network, we aim to explore
+    novel neural image compression. In this work, we present a novel analysis on compressing neural fields,
+    with focus on images and introduce Adaptive Neural Images (ANI), an efficient neural representation
+    that enables adaptation to different inference or transmission requirements. Our proposed method allows
+    us to reduce the bits-per-pixel (bpp) of the neural image by 8 times, without losing sensitive details
+    or harming fidelity. Our work offers a new framework for developing compressed neural fields. We achieve
+    a new state-of-the-art in terms of PSNR/bpp trade-off thanks to our successful implementation of 4-bit
+    neural representations.
+  url: https://arxiv.org/abs/2405.16807
+  pdf_url: https://arxiv.org/pdf/2405.16807v3
+  version: v3
+fetched: '2026-11-14'

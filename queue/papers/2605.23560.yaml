@@ -1,0 +1,49 @@
+id: paper:arxiv:2605.23560
+status: pending
+score: 2
+track: streaming_delivery
+matched:
+- ref: concept:ABR
+  count: 3
+  weight: 1
+- ref: concept:QoE
+  count: 3
+  weight: 1
+meta:
+  title: 'SafeSABR: Risk-Calibrated Adaptive Bitrate Streaming over Starlink Networks'
+  authors:
+  - Hongjun Xie
+  - Jiahang Zhu
+  - Zhiming Shao
+  - Chao Fan
+  - Zenghui Zhang
+  - Genke Yang
+  - Pengcheng Luo
+  published: '2026-05-22'
+  updated: '2026-05-27'
+  categories:
+  - eess.SY
+  - cs.NI
+  abstract: 'Starlink, as a representative low Earth orbit (LEO) satellite broadband system, makes high-bitrate
+    video streaming possible in regions where terrestrial broadband is unavailable. However, its access
+    links exhibit rapid throughput fluctuations caused by satellite mobility and handovers. Existing learned
+    adaptive bitrate (ABR) algorithms can achieve high average quality of experience (QoE), yet high-bitrate
+    Starlink streaming exposes severe session-level rebuffering that is not captured by average QoE alone.
+    To address it, this paper proposes SafeSABR, a risk-calibrated learned ABR framework for Starlink
+    networks. SafeSABR formulates Starlink ABR as a QoE--severe-risk tradeoff and follows a three-stage
+    design: behavior-cloning pretraining learns a high-QoE ABR prior, risk-calibrated reinforcement learning
+    (RL) fine-tuning reduces severe-tail action tendencies, and a runtime safety auditor uses safe-capacity
+    lower bounds to check policy-requested bitrates before execution. Experiments on real Starlink traces
+    compare SafeSABR with online, prediction-assisted, and learned ABR baselines. Compared with advanced
+    methods, SafeSABR reduces severe-stall sessions from 22.8% to 7.2% and worst-5% session rebuffering
+    from 54.30 s to 22.68 s, with a 1.8% QoE cost. Component analyses further show that risk-calibrated
+    fine-tuning and safe-capacity auditing reduce unsafe bitrate decisions and downstream severe-session
+    rebuffering. These results show that combining risk-calibrated policy learning with decision-aware
+    safe throughput forecasting can move learned ABR toward a safer QoE--severe-risk operating point under
+    volatile Starlink networks.'
+  url: https://arxiv.org/abs/2605.23560
+  pdf_url: https://arxiv.org/pdf/2605.23560v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 2
+citation_year: 2026

@@ -1,0 +1,42 @@
+id: paper:arxiv:2308.16215
+status: skipped_low_citation
+score: 4
+track: video_image_coding
+matched:
+- ref: codec:AVC
+  count: 1
+  weight: 3
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: Deep Video Codec Control for Vision Models
+  authors:
+  - Christoph Reich
+  - Biplob Debnath
+  - Deep Patel
+  - Tim Prangemeier
+  - Daniel Cremers
+  - Srimat Chakradhar
+  published: '2023-08-30'
+  updated: '2024-04-16'
+  categories:
+  - eess.IV
+  - cs.CV
+  - cs.LG
+  - cs.MM
+  abstract: Standardized lossy video coding is at the core of almost all real-world video processing pipelines.
+    Rate control is used to enable standard codecs to adapt to different network bandwidth conditions
+    or storage constraints. However, standard video codecs (e.g., H.264) and their rate control modules
+    aim to minimize video distortion w.r.t. human quality assessment. We demonstrate empirically that
+    standard-coded videos vastly deteriorate the performance of deep vision models. To overcome the deterioration
+    of vision performance, this paper presents the first end-to-end learnable deep video codec control
+    that considers both bandwidth constraints and downstream deep vision performance, while adhering to
+    existing standardization. We demonstrate that our approach better preserves downstream deep vision
+    performance than traditional standard video coding.
+  url: https://arxiv.org/abs/2308.16215
+  pdf_url: https://arxiv.org/pdf/2308.16215v6
+  version: v6
+fetched: '2026-11-14'
+citation_count: 4
+citation_year: 2023

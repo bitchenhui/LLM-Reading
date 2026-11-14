@@ -1,0 +1,60 @@
+id: paper:arxiv:2605.25940
+status: pending
+score: 11
+track: quality_assessment
+matched:
+- ref: codec:AV1
+  count: 1
+  weight: 3
+- ref: impl:DCVC-RT
+  count: 1
+  weight: 3
+- ref: concept:IQA
+  count: 1
+  weight: 1
+- ref: concept:SuperResolution
+  count: 1
+  weight: 1
+- ref: metric:DISTS
+  count: 1
+  weight: 1
+- ref: metric:LPIPS
+  count: 1
+  weight: 1
+- ref: metric:VMAF
+  count: 1
+  weight: 1
+meta:
+  title: How Accurate are Video Quality Models for Diffusion-Based Video Super-Resolution?
+  authors:
+  - Benjamin Herb
+  - Steve Göring
+  - Alexander Raake
+  - Rakesh Rao Ramachandra Rao
+  published: '2026-05-25'
+  updated: '2026-05-25'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: Recent video super-resolution (VSR) approaches use deep neural networks to enhance low-quality
+    input videos and recover visual detail, with diffusion-based methods in particular showing promising
+    results. In this paper, we investigate whether existing video quality models can be used to assess
+    the performance of these diffusion-based VSR methods, by comparing model predictions with results
+    from a subjective test. The study compares six upscaling methods (Lanczos, Rhea, SCST, DOVE, SeedVR2,
+    Starlight Mini) applied to both compressed (AV1 and DCVC-RT) and uncompressed low-resolution videos
+    considering the play-out on a UHD-1/4K screen. A range of full- and no-reference quality models are
+    used to assess their applicability to this new type of quality degradation, focusing on within-sequence
+    performance. The results highlight that CNN-based full-reference models, such as LPIPS, DISTS, and
+    CVQA-FR show significantly higher correlation coefficients than both conventional full- as well as
+    the tested no-reference models. Most overestimate the overly sharp results of SCST, with VMAF mainly
+    failing due to spatial inconsistencies introduced by Starlight Mini. None of the tested video quality
+    models reach sufficient accuracy so as to replace complementary subjective testing. The reference,
+    degraded and upscaled videos, as well as the user ratings and model scores are made available with
+    the paper at https://github.com/Telecommunication-Telemedia-Assessment/AVT-VQDB-UHD-1-VSR as open
+    data.
+  url: https://arxiv.org/abs/2605.25940
+  pdf_url: https://arxiv.org/pdf/2605.25940v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 2
+citation_year: 2026

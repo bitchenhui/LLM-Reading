@@ -1,0 +1,43 @@
+id: paper:arxiv:2606.27537
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'MemoBench: Benchmarking World Modeling in Dynamically Changing Environments'
+  authors:
+  - Haoyu Chen
+  - Kaichen Zhou
+  - Hang Hua
+  - Kaile Zhang
+  - Jingwen Qian
+  - Wufei Ma
+  - Haonan Chen
+  - Chunjiang Liu
+  - Yizhou Zhao
+  - Xiaoyuan Wang
+  - Weiyue Li
+  - Alan Yuille
+  - Paul Pu Liang
+  - Yilun Du
+  published: '2026-06-25'
+  updated: '2026-07-19'
+  categories:
+  - cs.CV
+  abstract: 'Video generation models aspire to simulate dynamic environments, and several benchmarks now
+    evaluate memory consistency across frames. However, most assess consistency only while the target
+    remains in view, and the few that force objects out of view evaluate static scenes where nothing changes
+    during occlusion. To bridge this gap, we introduce MemoBench, a diagnostic benchmark built around
+    the disappear-and-reappear paradigm in dynamically changing environments: a target object undergoes
+    a physical process, disappears from view, and must be correctly recovered in its updated state upon
+    reappearance. We curate 360 ground-truth clips spanning synthetic and real-world scenes, and design
+    an evaluation suite combining automated metrics with VQA-based assessment across four diagnostic pillars.
+    Evaluation of eight state-of-the-art models reveals key insights and open challenges regarding memory
+    consistency under the disappear-and-reappear paradigm.'
+  url: https://arxiv.org/abs/2606.27537
+  pdf_url: https://arxiv.org/pdf/2606.27537v6
+  version: v6
+fetched: '2026-11-14'

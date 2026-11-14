@@ -1,0 +1,45 @@
+id: paper:arxiv:2111.09013
+status: pending
+score: 3
+track: processing_enhancement
+matched:
+- ref: concept:SuperResolution
+  count: 1
+  weight: 1
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+- ref: metric:SSIM
+  count: 1
+  weight: 1
+meta:
+  title: Image Super-Resolution Using T-Tetromino Pixels
+  authors:
+  - Simon Grosche
+  - Andy Regensky
+  - Jürgen Seiler
+  - André Kaup
+  published: '2021-11-17'
+  updated: '2023-03-22'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: For modern high-resolution imaging sensors, pixel binning is performed in low-lighting conditions
+    and in case high frame rates are required. To recover the original spatial resolution, single-image
+    super-resolution techniques can be applied for upscaling. To achieve a higher image quality after
+    upscaling, we propose a novel binning concept using tetromino-shaped pixels. It is embedded into the
+    field of compressed sensing and the coherence is calculated to motivate the sensor layouts used. Next,
+    we investigate the reconstruction quality using tetromino pixels for the first time in literature.
+    Instead of using different types of tetrominoes as proposed elsewhere, we show that using a small
+    repeating cell consisting of only four T-tetrominoes is sufficient. For reconstruction, we use a locally
+    fully connected reconstruction (LFCR) network as well as two classical reconstruction methods from
+    the field of compressed sensing. Using the LFCR network in combination with the proposed tetromino
+    layout, we achieve superior image quality in terms of PSNR, SSIM, and visually compared to conventional
+    single-image super-resolution using the very deep super-resolution (VDSR) network. For PSNR, a gain
+    of up to \SI[retain-explicit-plus]{+1.92}{dB} is achieved.
+  url: https://arxiv.org/abs/2111.09013
+  pdf_url: https://arxiv.org/pdf/2111.09013v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 8
+citation_year: 2021

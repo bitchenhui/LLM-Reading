@@ -1,0 +1,44 @@
+id: paper:arxiv:2602.18434
+status: skipped_low_citation
+score: 3
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+- ref: concept:MoE
+  count: 1
+  weight: 1
+- ref: concept:TrainingFree
+  count: 1
+  weight: 1
+meta:
+  title: 'Going Down Memory Lane: Scaling Tokens for Video Stream Understanding with Dynamic KV-Cache
+    Memory'
+  authors:
+  - Vatsal Agarwal
+  - Saksham Suri
+  - Matthew Gwilliam
+  - Pulkit Kumar
+  - Abhinav Shrivastava
+  published: '2026-02-20'
+  updated: '2026-02-20'
+  categories:
+  - cs.CV
+  abstract: 'Streaming video understanding requires models to robustly encode, store, and retrieve information
+    from a continuous video stream to support accurate video question answering (VQA). Existing state-of-the-art
+    approaches rely on key-value caching to accumulate frame-level information over time, but use a limited
+    number of tokens per frame, leading to the loss of fine-grained visual details. In this work, we propose
+    scaling the token budget to enable more granular spatiotemporal understanding and reasoning. First,
+    we find that current methods are ill-equipped to handle dense streams: their feature encoding causes
+    query-frame similarity scores to increase over time, biasing retrieval toward later frames. To address
+    this, we introduce an adaptive selection strategy that reduces token redundancy while preserving local
+    spatiotemporal information. We further propose a training-free retrieval mixture-of-experts that leverages
+    external models to better identify relevant frames. Our method, MemStream, achieves +8.0% on CG-Bench,
+    +8.5% on LVBench, and +2.4% on VideoMME (Long) over ReKV with Qwen2.5-VL-7B.'
+  url: https://arxiv.org/abs/2602.18434
+  pdf_url: https://arxiv.org/pdf/2602.18434v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 1
+citation_year: 2026

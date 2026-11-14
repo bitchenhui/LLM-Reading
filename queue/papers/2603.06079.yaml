@@ -1,0 +1,36 @@
+id: paper:arxiv:2603.06079
+status: skipped
+score: 1
+track: audio_coding
+matched:
+- ref: concept:NeuralAudioCodec
+  count: 1
+  weight: 1
+meta:
+  title: 'StreamVoiceAnon+: Emotion-Preserving Streaming Speaker Anonymization via Frame-Level Acoustic
+    Distillation'
+  authors:
+  - Nikita Kuzmin
+  - Kong Aik Lee
+  - Eng Siong Chng
+  published: '2026-03-06'
+  updated: '2026-03-06'
+  categories:
+  - eess.AS
+  - cs.AI
+  - eess.SP
+  abstract: 'We address the challenge of preserving emotional content in streaming speaker anonymization
+    (SA). Neural audio codec language models trained for audio continuation tend to degrade source emotion:
+    content tokens discard emotional information, and the model defaults to dominant acoustic patterns
+    rather than preserving paralinguistic attributes. We propose supervised finetuning with neutral-emotion
+    utterance pairs from the same speaker, combined with frame-level emotion distillation on acoustic
+    token hidden states. All modifications are confined to finetuning, which takes less than 2 hours on
+    4 GPUs and adds zero inference latency overhead, while maintaining a competitive 180ms streaming latency.
+    On the VoicePrivacy 2024 protocol, our approach achieves a 49.2% UAR (emotion preservation) with 5.77%
+    WER (intelligibility), a +24% relative UAR improvement over the baseline (39.7%->49.2%) and +10% over
+    the emotion-prompt variant (44.6% UAR), while maintaining strong privacy (EER 49.0%). Demo and code
+    are available: https://anonymous3842031239.github.io/'
+  url: https://arxiv.org/abs/2603.06079
+  pdf_url: https://arxiv.org/pdf/2603.06079v1
+  version: v1
+fetched: '2026-11-14'

@@ -1,0 +1,40 @@
+id: paper:arxiv:2603.14575
+status: skipped
+score: 1
+track: self_improvement
+matched:
+- ref: concept:AlphaEvolve
+  count: 1
+  weight: 1
+meta:
+  title: 'CausalEvolve: Towards Open-Ended Discovery with Causal Scratchpad'
+  authors:
+  - Yongqiang Chen
+  - Chenxi Liu
+  - Zhenhao Chen
+  - Tongliang Liu
+  - Bo Han
+  - Kun Zhang
+  published: '2026-03-15'
+  updated: '2026-03-29'
+  categories:
+  - cs.LG
+  - cs.CL
+  - stat.ML
+  abstract: Evolve-based agent such as AlphaEvolve is one of the notable successes in using Large Language
+    Models (LLMs) to build AI Scientists. These agents tackle open-ended scientific problems by iteratively
+    improving and evolving programs, leveraging the prior knowledge and reasoning capabilities of LLMs.
+    Despite the success, existing evolve-based agents lack targeted guidance for evolution and effective
+    mechanisms for organizing and utilizing knowledge acquired from past evolutionary experience. Consequently,
+    they suffer from decreasing evolution efficiency and exhibit oscillatory behavior when approaching
+    known performance boundaries. To mitigate the gap, we develop CausalEvolve, equipped with a causal
+    scratchpad that leverages LLMs to identify and reason about guiding factors for evolution. At the
+    beginning, CausalEvolve first identifies outcome-level factors that offer complementary inspirations
+    in improving the target objective. During the evolution, CausalEvolve also inspects surprise patterns
+    during the evolution and abductive reasoning to hypothesize new factors, which in turn offer novel
+    directions. Through comprehensive experiments, we show that CausalEvolve effectively improves the
+    evolutionary efficiency and discovers better solutions in 4 challenging open-ended scientific tasks.
+  url: https://arxiv.org/abs/2603.14575
+  pdf_url: https://arxiv.org/pdf/2603.14575v2
+  version: v2
+fetched: '2026-11-14'

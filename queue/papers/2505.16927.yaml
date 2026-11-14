@@ -1,0 +1,38 @@
+id: paper:arxiv:2505.16927
+status: skipped
+score: 1
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+meta:
+  title: Latent Principle Discovery for Language Model Self-Improvement
+  authors:
+  - Keshav Ramji
+  - Tahira Naseem
+  - Ramón Fernandez Astudillo
+  published: '2025-05-22'
+  updated: '2025-11-14'
+  categories:
+  - cs.CL
+  - cs.AI
+  - cs.LG
+  abstract: When language model (LM) users aim to improve the quality of its generations, it is crucial
+    to specify concrete behavioral attributes that the model should strive to reflect. However, curating
+    such principles across many domains, even non-exhaustively, requires a labor-intensive annotation
+    process. To automate this process, we propose eliciting these latent attributes that guide model reasoning
+    toward human-preferred responses by explicitly modeling them in a self-correction setting. Our approach
+    mines new principles from the LM itself and compresses the discovered elements to an interpretable
+    set via clustering. Specifically, we employ a form of posterior-regularized Monte Carlo Expectation-Maximization
+    to both identify a condensed set of the most effective latent principles and teach the LM to strategically
+    invoke them in order to intrinsically refine its responses. We demonstrate that bootstrapping our
+    algorithm over multiple iterations enables smaller language models (7-8B parameters) to self-improve,
+    achieving +8-10% in AlpacaEval win-rate, an average of +0.3 on MT-Bench, and +19-23% in principle-following
+    win-rate on IFEval. We also show that clustering the principles yields interpretable and diverse model-generated
+    constitutions while retaining model performance. The gains that our method achieves highlight the
+    potential of automated, principle-driven post-training recipes toward continual self-improvement.
+  url: https://arxiv.org/abs/2505.16927
+  pdf_url: https://arxiv.org/pdf/2505.16927v2
+  version: v2
+fetched: '2026-11-14'

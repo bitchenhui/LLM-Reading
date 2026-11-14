@@ -1,0 +1,42 @@
+id: paper:arxiv:2602.05688
+status: skipped
+score: 1
+track: self_improvement
+matched:
+- ref: concept:AlphaEvolve
+  count: 1
+  weight: 1
+meta:
+  title: Mining Generalizable Activation Functions
+  authors:
+  - Alex Vitvitskyi
+  - Michael Boratko
+  - Matej Grcic
+  - Razvan Pascanu
+  - Deep Shah
+  - Petar Veličković
+  published: '2026-02-05'
+  updated: '2026-02-05'
+  categories:
+  - cs.LG
+  - cs.AI
+  abstract: The choice of activation function is an active area of research, with different proposals
+    aimed at improving optimization, while maintaining expressivity. Additionally, the activation function
+    can significantly alter the implicit inductive bias of the architecture, controlling its non-linear
+    behavior. In this paper, in line with previous work, we argue that evolutionary search provides a
+    useful framework for finding new activation functions, while we also make two novel observations.
+    The first is that modern pipelines, such as AlphaEvolve, which relies on frontier LLMs as a mutator
+    operator, allows for a much wider and flexible search space; e.g., over all possible python functions
+    within a certain FLOP budget, eliminating the need for manually constructed search spaces. In addition,
+    these pipelines will be biased towards meaningful activation functions, given their ability to represent
+    common knowledge, leading to a potentially more efficient search of the space. The second observation
+    is that, through this framework, one can target not only performance improvements but also activation
+    functions that encode particular inductive biases. This can be done by using performance on out-of-distribution
+    data as a fitness function, reflecting the degree to which the architecture respects the inherent
+    structure in the data in a manner independent of distribution shifts. We carry an empirical exploration
+    of this proposal and show that relatively small scale synthetic datasets can be sufficient for AlphaEvolve
+    to discover meaningful activations.
+  url: https://arxiv.org/abs/2602.05688
+  pdf_url: https://arxiv.org/pdf/2602.05688v1
+  version: v1
+fetched: '2026-11-14'

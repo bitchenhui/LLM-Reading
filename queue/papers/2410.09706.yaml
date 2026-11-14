@@ -1,0 +1,41 @@
+id: paper:arxiv:2410.09706
+status: pending
+score: 6
+track: video_image_coding
+matched:
+- ref: impl:DCVC-FM
+  count: 1
+  weight: 3
+- ref: impl:VTM
+  count: 1
+  weight: 3
+meta:
+  title: 'ECVC: Exploiting Non-Local Correlations in Multiple Frames for Contextual Video Compression'
+  authors:
+  - Wei Jiang
+  - Junru Li
+  - Kai Zhang
+  - Li Zhang
+  published: '2024-10-13'
+  updated: '2025-07-24'
+  categories:
+  - eess.IV
+  abstract: In Learned Video Compression (LVC), improving inter prediction, such as enhancing temporal
+    context mining and mitigating accumulated errors, is crucial for boosting rate-distortion performance.
+    Existing LVCs mainly focus on mining the temporal movements while neglecting non-local correlations
+    among frames. Additionally, current contextual video compression models use a single reference frame,
+    which is insufficient for handling complex movements. To address these issues, we propose leveraging
+    non-local correlations across multiple frames to enhance temporal priors, significantly boosting rate-distortion
+    performance. To mitigate error accumulation, we introduce a partial cascaded fine-tuning strategy
+    that supports fine-tuning on full-length sequences with constrained computational resources. This
+    method reduces the train-test mismatch in sequence lengths and significantly decreases accumulated
+    errors. Based on the proposed techniques, we present a video compression scheme ECVC. Experiments
+    demonstrate that our ECVC achieves state-of-the-art performance, reducing 10.5% and 11.5% more bit-rates
+    than previous SOTA method DCVC-FM over VTM-13.2 low delay B (LDB) under the intra period (IP) of 32
+    and -1, respectively.
+  url: https://arxiv.org/abs/2410.09706
+  pdf_url: https://arxiv.org/pdf/2410.09706v4
+  version: v4
+fetched: '2026-11-14'
+citation_count: 42
+citation_year: 2024

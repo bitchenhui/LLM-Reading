@@ -1,0 +1,43 @@
+id: paper:arxiv:2601.08987
+status: skipped
+score: 1
+track: immersive_media
+matched:
+- ref: concept:VolumetricVideo
+  count: 2
+  weight: 1
+meta:
+  title: 'ABE-VVS: Attribute-Based Encrypted Volumetric Video Streaming'
+  authors:
+  - Mohammad Waquas Usmani
+  - Susmit Shannigrahi
+  - Michael Zink
+  published: '2026-01-13'
+  updated: '2026-06-25'
+  categories:
+  - cs.CR
+  - cs.MM
+  - cs.NI
+  - eess.IV
+  abstract: This work introduces ABE-VVS, a framework that performs attribute based selective coordinate
+    encryption for point cloud based volumetric video streaming, enabling lightweight yet effective digital
+    rights management (DRM). Rather than encrypting entire point cloud frames, our approach encrypts only
+    selected subsets of coordinates ($X, Y, Z$, or combinations), lowering computational overhead and
+    latency while still producing strong visual distortion that prevents meaningful unauthorized viewing.
+    Our experiments show that encrypting only the $X$ coordinates achieves effective obfuscation while
+    reducing encryption and decryption times by up to 50% and 80%, respectively, compared to full-frame
+    encryption. To our knowledge, this is the first work to provide a novel end-to-end evaluation of a
+    DRM-enabled secure point cloud streaming system. We deployed a point cloud video streaming setup on
+    the CloudLab testbed and evaluated three HTTP-based Attribute-Based Encryption (ABE) granularities
+    - ABE-XYZ (encrypting all $X,Y,Z$ coordinates), ABE-XY, and ABE-X against conventional HTTPS/TLS secure
+    streaming as well as an HTTP-only baseline without any security. Our streaming evaluation demonstrates
+    that ABE-based schemes reduce server-side CPU load by up to 80% and cache CPU load by up to 63%, comparable
+    to HTTP-only, while maintaining similar cache hit rates. Moreover, ABE-XYZ and ABE-XY exhibit lower
+    client-side rebuffering than HTTPS, and ABE-X achieves zero rebuffering comparable to HTTP-only. Although
+    ABE-VVS increases client-side CPU usage, the overhead is not large enough to affect streaming quality
+    and is offset by its broader benefits, including simplified key revocation, elimination of per-client
+    encryption, and reduced server and cache load.
+  url: https://arxiv.org/abs/2601.08987
+  pdf_url: https://arxiv.org/pdf/2601.08987v2
+  version: v2
+fetched: '2026-11-14'

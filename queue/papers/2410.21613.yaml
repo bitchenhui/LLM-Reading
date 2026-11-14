@@ -1,0 +1,44 @@
+id: paper:arxiv:2410.21613
+status: skipped_low_citation
+score: 5
+track: immersive_media
+matched:
+- ref: codec:G-PCC
+  count: 1
+  weight: 3
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+- ref: org:MPEG
+  count: 1
+  weight: 1
+meta:
+  title: Quality Analysis of the Coding Bitrate Tradeoff Between Geometry and Attributes for Colored Point
+    Clouds
+  authors:
+  - Joao Prazeres
+  - Rafael Rodrigues
+  - Manuela Pereira
+  - Antonio M. G. Pinheiro
+  published: '2024-10-28'
+  updated: '2024-10-28'
+  categories:
+  - eess.IV
+  abstract: Typically, point cloud encoders allocate a similar bitrate for geometry and attributes (usually
+    RGB color components) information coding. This paper reports a quality study considering different
+    coding bitrate tradeoff between geometry and attributes. A set of five point clouds, representing
+    different characteristics and types of content was encoded with the MPEG standard Geometry Point Cloud
+    Compression (G-PCC), using octree to encode geometry information, and both the Region Adaptive Hierarchical
+    Transform and the Prediction Lifting transform for attributes. Furthermore, the JPEG Pleno Point Cloud
+    Verification Model was also tested. Five different attributes/geometry bitrate tradeoffs were considered,
+    notably 70%/30%, 60%/40%, 50%/50%, 40%/60%, 30%/70%. Three point cloud objective metrics were selected
+    to assess the quality of the reconstructed point clouds, notably the PSNR YUV, the Point Cloud Quality
+    Metric, and GraphSIM. Furthermore, for each encoder, the Bjonteegaard Deltas were computed for each
+    tradeoff, using the 50%/50% tradeoff as a reference. The reported results indicate that using a higher
+    bitrate allocation for attribute encoding usually yields slightly better results.
+  url: https://arxiv.org/abs/2410.21613
+  pdf_url: https://arxiv.org/pdf/2410.21613v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 1
+citation_year: 2024

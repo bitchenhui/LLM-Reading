@@ -1,0 +1,49 @@
+id: paper:arxiv:2511.07922
+status: pending
+score: 2
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 3
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: 'SERL: Self-Examining Reinforcement Learning on Open-Domain'
+  authors:
+  - Weixuan Ou
+  - Yanzhao Zheng
+  - Shuoshuo Sun
+  - Wei Zhang
+  - Baohua Dong
+  - Hangcheng Zhu
+  - Ruohui Huang
+  - Gang Yu
+  - Pengwei Yan
+  - Yifan Qiao
+  published: '2025-11-11'
+  updated: '2026-02-25'
+  categories:
+  - cs.LG
+  abstract: 'Reinforcement Learning (RL) has been shown to improve the capabilities of large language
+    models (LLMs). However, applying RL to open-domain tasks faces two key challenges: (1) the inherent
+    subjectivity of these tasks prevents the verifiable rewards as required by Reinforcement Learning
+    with Verifiable Rewards (RLVR); (2) Reinforcement Learning from Human Feedback (RLHF) relies on external
+    reward mechanisms. To overcome these limitations, we propose Self-Examining Reinforcement Learning
+    (SERL), a novel self-improving framework where the LLM serves as both Actor and Judge. SERL introduces
+    two synergistic reward mechanisms without any external signals. On the one hand, to improve the Actor''s
+    capability, we derive rewards from Copeland-style pairwise comparison judgments across a group of
+    generated responses. On the other hand, a self-consistency reward that encourages coherent judgments
+    is proposed to improve the Judge''s reliability. This process refines the Judge''s capability, which
+    in turn provides a more robust reward for Actor. Experiments show that our method outperforms existing
+    self-improvement training methods. SERL improves the LC win rate of Qwen3-8B on AlpacaEval 2 from
+    52.37% to 59.90%. To the best of our knowledge, our method achieves state-of-the-art performance among
+    self-improving approaches. Furthermore, it achieves a performance comparable to significantly larger
+    models like Qwen3-32B, demonstrating superior effectiveness and robustness on open-domain tasks.'
+  url: https://arxiv.org/abs/2511.07922
+  pdf_url: https://arxiv.org/pdf/2511.07922v3
+  version: v3
+fetched: '2026-11-14'
+citation_count: 5
+citation_year: 2025

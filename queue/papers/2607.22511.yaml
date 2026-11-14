@@ -1,0 +1,44 @@
+id: paper:arxiv:2607.22511
+status: pending
+score: 2
+track: self_improvement
+matched:
+- ref: concept:LLM
+  count: 2
+  weight: 1
+- ref: concept:SelfImprovement
+  count: 1
+  weight: 1
+meta:
+  title: 'CausalSmith: A Formally Grounded, Self-Improving Agentic Framework for Automated Research in
+    Causal Inference'
+  authors:
+  - Jiyuan Tan
+  - Vasilis Syrgkanis
+  published: '2026-07-24'
+  updated: '2026-09-15'
+  categories:
+  - stat.ML
+  - cs.AI
+  - cs.LG
+  - econ.EM
+  abstract: 'Automating theoretical research requires generating candidate results and evaluating them
+    reliably. Models keep getting better at the first, while the second remains hard. A common approach
+    asks one large language model (LLM) to review what another produced, yet such reviewers are empirically
+    unreliable: they may accept fabricated papers and catch the fabrication at close to chance rates~\citep{badscientist2025}.
+    We present \textsc{CausalSmith}, a framework for automated theoretical research in causal inference
+    built on the Lean proof assistant, where a proof is checked by a program rather than read by a referee.
+    \textsc{CausalSmith} rests on \textsc{Causalean}, a foundational Lean library for causal inference
+    holding 8,179 machine-checked definitions and theorems, developed with language-model assistance under
+    human design and review. Around it, we build a self-improving agentic pipeline that selects research
+    topics, proposes results, formalizes statements, constructs proofs, and presents the resulting artifacts
+    for human inspection. Moreover, the pipeline pairs Lean verification with a statement audit that compares
+    each formal theorem against the informal claim behind it. We evaluate the system using artifacts produced
+    by completed autonomous research runs. The source code, formal library, and run records are available
+    at https://github.com/Jiyuan-Tan/CausalSmith.'
+  url: https://arxiv.org/abs/2607.22511
+  pdf_url: https://arxiv.org/pdf/2607.22511v4
+  version: v4
+fetched: '2026-11-14'
+citation_count: 3
+citation_year: 2026

@@ -1,0 +1,35 @@
+id: paper:arxiv:2505.17366
+status: skipped
+score: 1
+track: video_image_coding
+matched:
+- ref: concept:ICM
+  count: 3
+  weight: 1
+meta:
+  title: Low-Rank Adaptation of Pre-trained Vision Backbones for Energy-Efficient Image Coding for Machine
+  authors:
+  - Yichi Zhang
+  - Zhihao Duan
+  - Yuning Huang
+  - Fengqing Zhu
+  published: '2025-05-23'
+  updated: '2025-05-29'
+  categories:
+  - eess.IV
+  abstract: 'Image Coding for Machines (ICM) focuses on optimizing image compression for AI-driven analysis
+    rather than human perception. Existing ICM frameworks often rely on separate codecs for specific tasks,
+    leading to significant storage requirements, training overhead, and computational complexity. To address
+    these challenges, we propose an energy-efficient framework that leverages pre-trained vision backbones
+    to extract robust and versatile latent representations suitable for multiple tasks. We introduce a
+    task-specific low-rank adaptation mechanism, which refines the pre-trained features to be both compressible
+    and tailored to downstream applications. This design minimizes trainable parameters and reduces energy
+    costs for multi-task scenarios. By jointly optimizing task performance and entropy minimization, our
+    method enables efficient adaptation to diverse tasks and datasets without full fine-tuning, achieving
+    high coding efficiency. Extensive experiments demonstrate that our framework significantly outperforms
+    traditional codecs and pre-processors, offering an energy-efficient and effective solution for ICM
+    applications. The code and the supplementary materials will be available at: https://gitlab.com/viper-purdue/efficient-compression.'
+  url: https://arxiv.org/abs/2505.17366
+  pdf_url: https://arxiv.org/pdf/2505.17366v2
+  version: v2
+fetched: '2026-11-14'

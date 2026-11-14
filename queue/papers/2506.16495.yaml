@@ -1,0 +1,40 @@
+id: paper:arxiv:2506.16495
+status: skipped
+score: 0
+track: video_image_coding
+matched: []
+meta:
+  title: 'DT-UFC: Universal Large Model Feature Coding via Peaky-to-Balanced Distribution Transformation'
+  authors:
+  - Changsheng Gao
+  - Zijie Liu
+  - Li Li
+  - Dong Liu
+  - Xiaoyan Sun
+  - Weisi Lin
+  published: '2025-06-19'
+  updated: '2025-09-02'
+  categories:
+  - cs.MM
+  - cs.CV
+  abstract: Like image coding in visual data transmission, feature coding is essential for the distributed
+    deployment of large models by significantly reducing transmission and storage burden. However, prior
+    studies have mostly targeted task- or model-specific scenarios, leaving the challenge of universal
+    feature coding across diverse large models largely unexplored. In this paper, we present the first
+    systematic study on universal feature coding for large models. The key challenge lies in the inherently
+    diverse and distributionally incompatible nature of features extracted from different models. For
+    example, features from DINOv2 exhibit highly peaky, concentrated distributions, while those from Stable
+    Diffusion 3 (SD3) are more dispersed and uniform. This distributional heterogeneity severely hampers
+    both compression efficiency and cross-model generalization. To address this, we propose a learned
+    peaky-to-balanced distribution transformation, which reshapes highly skewed feature distributions
+    into a common, balanced target space. This transformation is non-uniform, data-driven, and plug-and-play,
+    enabling effective alignment of heterogeneous distributions without modifying downstream codecs. With
+    this alignment, a universal codec trained on the balanced target distribution can effectively generalize
+    to features from different models and tasks. We validate our approach on three representative large
+    models (LLaMA3, DINOv2, and SD3) across multiple tasks and modalities. Extensive experiments show
+    that our method achieves notable improvements in both compression efficiency and cross-model generalization
+    over task-specific baselines. All source code has been made available at https://github.com/chansongoal/DT-UFC.
+  url: https://arxiv.org/abs/2506.16495
+  pdf_url: https://arxiv.org/pdf/2506.16495v2
+  version: v2
+fetched: '2026-11-14'

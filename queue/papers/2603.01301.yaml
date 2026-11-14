@@ -1,0 +1,38 @@
+id: paper:arxiv:2603.01301
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: When Does RL Help Medical VLMs? Disentangling Vision, SFT, and RL Gains
+  authors:
+  - Ahmadreza Jeddi
+  - Kimia Shaban
+  - Negin Baghbanzadeh
+  - Natasha Sharan
+  - Abhishek Moturu
+  - Elham Dolatabadi
+  - Babak Taati
+  published: '2026-03-01'
+  updated: '2026-03-01'
+  categories:
+  - cs.CV
+  abstract: 'Reinforcement learning (RL) is increasingly used to post-train medical Vision-Language Models
+    (VLMs), yet it remains unclear whether RL improves medical visual reasoning or mainly sharpens behaviors
+    already induced by supervised fine-tuning (SFT). We present a controlled study that disentangles these
+    effects along three axes: vision, SFT, and RL. Using MedMNIST as a multi-modality testbed, we probe
+    visual perception by benchmarking VLM vision towers against vision-only baselines, quantify reasoning
+    support and sampling efficiency via Accuracy@1 versus Pass@K, and evaluate when RL closes the support
+    gap and how gains transfer across modalities. We find that RL is most effective when the model already
+    has non-trivial support (high Pass@K): it primarily sharpens the output distribution, improving Acc@1
+    and sampling efficiency, while SFT expands support and makes RL effective. Based on these findings,
+    we propose a boundary-aware recipe and instantiate it by RL post-training an OctoMed-initialized model
+    on a small, balanced subset of PMC multiple-choice VQA, achieving strong average performance across
+    six medical VQA benchmarks.'
+  url: https://arxiv.org/abs/2603.01301
+  pdf_url: https://arxiv.org/pdf/2603.01301v1
+  version: v1
+fetched: '2026-11-14'

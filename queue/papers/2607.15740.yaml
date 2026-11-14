@@ -1,0 +1,48 @@
+id: paper:arxiv:2607.15740
+status: pending
+score: 2
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: Debiasing Text-to-Image Evaluation via Implicit Cultural Alignment Reward Modeling
+  authors:
+  - Bo-An Chang
+  - Yu-Chih Chen
+  published: '2026-07-17'
+  updated: '2026-09-16'
+  categories:
+  - cs.CV
+  - cs.AI
+  - cs.LG
+  - cs.MM
+  abstract: As Text-to-Image (T2I) systems rapidly advance, evaluating the cultural authenticity of synthesized
+    content has become increasingly important for fair and trustworthy generative AI. Existing T2I evaluation
+    metrics and multimodal judges often rely on visual-semantic representations that underrepresent implicit
+    cultural norms, leading to biased preference judgments and the omission of fine-grained cultural cues.
+    In addition, visual question answering (VQA)-based evaluators typically depend on autoregressive text
+    generation, which limits their scalability for real-time reward modeling. To address these limitations,
+    we introduce an Implicit Cultural Alignment Reward Model built upon a lightweight 4.2-billion-parameter
+    Multimodal Large Language Model (MLLM). Our framework integrates an Implicit Cultural Probe with a
+    Skip-connection Cross-Attention (SkipCA) mechanism, enabling late-stage semantic features to directly
+    attend to early-stage visual representations and better preserve culturally salient details. Evaluations
+    on 3,323 challenging and carefully curated image pairs from the CulturalFrames benchmark show that
+    our approach achieves 83.49% pairwise accuracy, with Pearson and Kendall correlation coefficients
+    of 0.5268 and 0.3749, respectively, outperforming representative vision-language metrics and MLLM-based
+    evaluators. Moreover, by bypassing autoregressive text generation, our model processes each evaluation
+    in 0.21 seconds under our local inference setup, achieving a $10\times$ speedup over standard VQA-based
+    evaluators. These results suggest that the proposed reward model can provide an efficient and culturally
+    aware scalar signal for preference optimization pipelines such as Reinforcement Learning from Human
+    Feedback and Direct Preference Optimization. Additional resources are available on our project page
+    at https://bensonch1214.github.io/Implicit_Cultural_Alignment/.
+  url: https://arxiv.org/abs/2607.15740
+  pdf_url: https://arxiv.org/pdf/2607.15740v3
+  version: v3
+fetched: '2026-11-14'
+citation_count: 1
+citation_year: 2026

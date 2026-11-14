@@ -1,0 +1,41 @@
+id: paper:arxiv:2604.17074
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 3
+  weight: 1
+meta:
+  title: 'Comparison Drives Preference: Reference-Aware Modeling for AI-Generated Video Quality Assessment'
+  authors:
+  - Minghao Zou
+  - Gen Liu
+  - Guanghui Yue
+  - Baoquan Zhao
+  - Zhihua Wang
+  - Paul L. Rosin
+  - Hantao Liu
+  - Wei Zhou
+  published: '2026-04-18'
+  updated: '2026-04-18'
+  categories:
+  - cs.CV
+  abstract: The rapid advancement of generative models has led to a growing volume of AI-generated videos,
+    making the automatic quality assessment of such videos increasingly important. Existing AI-generated
+    content video quality assessment (AIGC-VQA) methods typically estimate visual quality by analyzing
+    each video independently, ignoring potential relationships among videos. In this work, we revisit
+    AIGC-VQA from an inter-video perspective and formulate it as a reference-aware evaluation problem.
+    Through this formulation, quality assessment is guided not only by intrinsic video characteristics
+    but also by comparisons with related videos, which is more consistent with human perception. To validate
+    its effectiveness, we propose Reference-aware Video Quality Assessment (RefVQA), which utilizes a
+    query-centered reference graph to organize semantically related samples and performs graph-guided
+    difference aggregation from the reference nodes to the query node. Experiments on existing datasets
+    demonstrate that our proposed RefVQA outperforms state-of-the-art methods across multiple quality
+    dimensions, with strong generalization ability validated by cross-dataset evaluation. These results
+    highlight the effectiveness of the proposed reference-based formulation and suggest its potential
+    to advance AIGC-VQA.
+  url: https://arxiv.org/abs/2604.17074
+  pdf_url: https://arxiv.org/pdf/2604.17074v1
+  version: v1
+fetched: '2026-11-14'

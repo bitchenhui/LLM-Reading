@@ -1,0 +1,37 @@
+id: paper:arxiv:2410.09768
+status: skipped_low_citation
+score: 3
+track: video_image_coding
+matched:
+- ref: codec:ECM
+  count: 2
+  weight: 3
+meta:
+  title: 'Tokenizing Motion: A Generative Approach for Scene Dynamics Compression'
+  authors:
+  - Shanzhi Yin
+  - Zihan Zhang
+  - Bolin Chen
+  - Shiqi Wang
+  - Yan Ye
+  published: '2024-10-13'
+  updated: '2025-12-10'
+  categories:
+  - cs.CV
+  - eess.IV
+  abstract: This paper proposes a novel generative video compression framework that leverages motion pattern
+    priors, derived from subtle dynamics in common scenes (e.g., swaying flowers or a boat drifting on
+    water), rather than relying on video content priors (e.g., talking faces or human bodies). These compact
+    motion priors enable a new approach to ultra-low bitrate communication while achieving high-quality
+    reconstruction across diverse scene contents. At the encoder side, motion priors can be streamlined
+    into compact representations via a dense-to-sparse transformation. At the decoder side, these priors
+    facilitate the reconstruction of scene dynamics using an advanced flow-driven diffusion model. Experimental
+    results illustrate that the proposed method can achieve superior rate-distortion-performance and outperform
+    the state-of-the-art conventional-video codec Enhanced Compression Model (ECM) on-scene dynamics sequences.
+    The project page can be found at-https://github.com/xyzysz/GNVDC.
+  url: https://arxiv.org/abs/2410.09768
+  pdf_url: https://arxiv.org/pdf/2410.09768v4
+  version: v4
+fetched: '2026-11-14'
+citation_count: 3
+citation_year: 2024

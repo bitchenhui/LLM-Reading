@@ -1,0 +1,41 @@
+id: paper:arxiv:2604.22884
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: Can Multimodal Large Language Models Truly Understand Small Objects?
+  authors:
+  - Fujun Han
+  - Junan Chen
+  - Xintong Zhu
+  - Jingqi Ye
+  - Xuanjie Mao
+  - Tao Chen
+  - Peng Ye
+  published: '2026-04-24'
+  updated: '2026-04-24'
+  categories:
+  - cs.CV
+  - cs.AI
+  abstract: 'Multimodal Large Language Models (MLLMs) have shown promising potential in diverse understanding
+    tasks, e.g., image and video analysis, math and physics olympiads. However, they remain blank and
+    unexplored for Small Object Understanding (SOU) tasks. To fill this gap, we introduce SOUBench, the
+    first and comprehensive benchmark for exploring the small objects understanding capability of existing
+    MLLMs. Specifically, we first design an effective and automatic visual question-answer generation
+    strategy, constructing a new SOU-VQA evaluation dataset, with 18,204 VQA pairs, six relevant sub-tasks,
+    and three dominant scenarios (i.e., Driving, Aerial, and Underwater). Then, we conduct a comprehensive
+    evaluation on 15 state-of-the-art MLLMs and reveal their weak capabilities in small object understanding.
+    Furthermore, we develop SOU-Train, a multimodal training dataset with 11,226 VQA pairs, to improve
+    the SOU capabilities of MLLMs. Through supervising fine-tuning of the latest MLLM, we demonstrate
+    that SOU-Train can effectively enhance the latest MLLM''s ability to understand small objects. Comprehensive
+    experimental results demonstrate that, the proposed SOUBench, along with the SOU-VQA and SOU-Train
+    datasets, provides a crucial empirical foundation to the community for further developing models with
+    enhanced small object understanding capabilities. Datasets and Code: https://github.com/Hanfj-X/SOU.'
+  url: https://arxiv.org/abs/2604.22884
+  pdf_url: https://arxiv.org/pdf/2604.22884v1
+  version: v1
+fetched: '2026-11-14'

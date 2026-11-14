@@ -1,0 +1,37 @@
+id: paper:arxiv:2603.18359
+status: skipped
+score: 1
+track: audio_coding
+matched:
+- ref: concept:NeuralAudioCodec
+  count: 1
+  weight: 1
+meta:
+  title: 'Towards Interpretable Framework for Neural Audio Codecs via Sparse Autoencoders: A Case Study
+    on Accent Information'
+  authors:
+  - Shih-Heng Wang
+  - Tiantian Feng
+  - Aditya Kommineni
+  - Thanathai Lertpetchpun
+  - Bowen Yi
+  - Xuan Shi
+  - Shrikanth Narayanan
+  published: '2026-03-18'
+  updated: '2026-07-06'
+  categories:
+  - cs.SD
+  abstract: Neural Audio Codecs (NACs) are widely adopted in modern speech systems, yet how they encode
+    linguistic and paralinguistic information remains unclear. Improving the interpretability of NAC representations
+    is critical for understanding and deploying them in sensitive applications. Hence, we employ Sparse
+    Autoencoders (SAEs) to decompose dense NAC representations into sparse, interpretable activations.
+    In this work, we focus on a challenging paralinguistic attribute-accent-and propose a framework to
+    quantify NAC interpretability. We evaluate four NAC models under 16 SAE configurations using a relative
+    performance index. Our results show that DAC and SpeechTokenizer achieve the highest interpretability.
+    We further reveal that acoustic-oriented NACs encode accent information primarily in activation magnitudes
+    of sparse representations, whereas phonetic-oriented NACs rely more on activation positions, and that
+    low-bitrate EnCodec variants show higher interpretability.
+  url: https://arxiv.org/abs/2603.18359
+  pdf_url: https://arxiv.org/pdf/2603.18359v2
+  version: v2
+fetched: '2026-11-14'

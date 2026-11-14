@@ -1,0 +1,38 @@
+id: paper:arxiv:2501.17578
+status: skipped
+score: 0
+track: audio_coding
+matched: []
+meta:
+  title: 'Music2Latent2: Audio Compression with Summary Embeddings and Autoregressive Decoding'
+  authors:
+  - Marco Pasini
+  - Stefan Lattner
+  - George Fazekas
+  published: '2025-01-29'
+  updated: '2025-01-29'
+  categories:
+  - cs.SD
+  - cs.AI
+  - cs.LG
+  - eess.AS
+  abstract: Efficiently compressing high-dimensional audio signals into a compact and informative latent
+    space is crucial for various tasks, including generative modeling and music information retrieval
+    (MIR). Existing audio autoencoders, however, often struggle to achieve high compression ratios while
+    preserving audio fidelity and facilitating efficient downstream applications. We introduce Music2Latent2,
+    a novel audio autoencoder that addresses these limitations by leveraging consistency models and a
+    novel approach to representation learning based on unordered latent embeddings, which we call summary
+    embeddings. Unlike conventional methods that encode local audio features into ordered sequences, Music2Latent2
+    compresses audio signals into sets of summary embeddings, where each embedding can capture distinct
+    global features of the input sample. This enables to achieve higher reconstruction quality at the
+    same compression ratio. To handle arbitrary audio lengths, Music2Latent2 employs an autoregressive
+    consistency model trained on two consecutive audio chunks with causal masking, ensuring coherent reconstruction
+    across segment boundaries. Additionally, we propose a novel two-step decoding procedure that leverages
+    the denoising capabilities of consistency models to further refine the generated audio at no additional
+    cost. Our experiments demonstrate that Music2Latent2 outperforms existing continuous audio autoencoders
+    regarding audio quality and performance on downstream tasks. Music2Latent2 paves the way for new possibilities
+    in audio compression.
+  url: https://arxiv.org/abs/2501.17578
+  pdf_url: https://arxiv.org/pdf/2501.17578v1
+  version: v1
+fetched: '2026-11-14'

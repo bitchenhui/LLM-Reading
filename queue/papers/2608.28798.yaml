@@ -1,0 +1,42 @@
+id: paper:arxiv:2608.28798
+status: pending
+score: 2
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 3
+  weight: 1
+- ref: concept:QoE
+  count: 2
+  weight: 1
+meta:
+  title: Blind Stereoscopic Omnidirectional Image Quality Assessment Using Predictive Coding Hierarchy
+  authors:
+  - Wei Zhou
+  - André Kaup
+  published: '2026-08-28'
+  updated: '2026-08-28'
+  categories:
+  - cs.CV
+  abstract: Stereoscopic omnidirectional images (SOIs) have provided users with newly immersive quality
+    of experience in virtual reality environments. However, developing efficient and accurate perceptual
+    quality assessment metrics for SOIs remains challenging due to many factors such as freely changeable
+    field of views and binocular vision. In this paper, based on the characteristics of the human visual
+    system (HVS), we propose a Predictive Coding Hierarchy-inspired metric (PCH) for blind/no-reference
+    stereoscopic omnidirectional image quality assessment. Motivated by the viewing process of SOIs, the
+    proposed PCH includes a local cyclopean perception module, a global predictive perception module,
+    and a visual quality regressor. First, observers browse different spherical sceneries from viewports,
+    and aggregate the local visual information to infer the perceptual quality of SOIs. Therefore, we
+    extract various viewports, followed by cyclopean conversion and saliency detection to approach the
+    perception and attention of the human brain. After the local aggregation, viewers then infer the global
+    scene in their minds. Based on the binocular mechanism, we fuse left and right views to perform predictive
+    coding hierarchy modelling. Finally, the visual quality regressor is exploited to obtain the ultimate
+    quality score related to both local and global perceptual cues. Extensive experiments demonstrate
+    that the proposed PCH achieves competitive and consistently improved performance compared with state-of-the-art
+    quality assessment methods.
+  url: https://arxiv.org/abs/2608.28798
+  pdf_url: https://arxiv.org/pdf/2608.28798v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 0
+citation_year: 2026

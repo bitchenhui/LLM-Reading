@@ -1,0 +1,45 @@
+id: paper:arxiv:2406.10520
+status: skipped
+score: 1
+track: immersive_media
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: Full reference point cloud quality assessment using support vector regression
+  authors:
+  - Ryosuke Watanabe
+  - Shashank N. Sridhara
+  - Haoran Hong
+  - Eduardo Pavez
+  - Keisuke Nonaka
+  - Tatsuya Kobayashi
+  - Antonio Ortega
+  published: '2024-06-15'
+  updated: '2024-06-15'
+  categories:
+  - cs.CV
+  - eess.IV
+  - eess.SP
+  abstract: Point clouds are a general format for representing realistic 3D objects in diverse 3D applications.
+    Since point clouds have large data sizes, developing efficient point cloud compression methods is
+    crucial. However, excessive compression leads to various distortions, which deteriorates the point
+    cloud quality perceived by end users. Thus, establishing reliable point cloud quality assessment (PCQA)
+    methods is essential as a benchmark to develop efficient compression methods. This paper presents
+    an accurate full-reference point cloud quality assessment (FR-PCQA) method called full-reference quality
+    assessment using support vector regression (FRSVR) for various types of degradations such as compression
+    distortion, Gaussian noise, and down-sampling. The proposed method demonstrates accurate PCQA by integrating
+    five FR-based metrics covering various types of errors (e.g., considering geometric distortion, color
+    distortion, and point count) using support vector regression (SVR). Moreover, the proposed method
+    achieves a superior trade-off between accuracy and calculation speed because it includes only the
+    calculation of these five simple metrics and SVR, which can perform fast prediction. Experimental
+    results with three types of open datasets show that the proposed method is more accurate than conventional
+    FR-PCQA methods. In addition, the proposed method is faster than state-of-the-art methods that utilize
+    complicated features such as curvature and multi-scale features. Thus, the proposed method provides
+    excellent performance in terms of the accuracy of PCQA and processing speed. Our method is available
+    from https://github.com/STAC-USC/FRSVR-PCQA.
+  url: https://arxiv.org/abs/2406.10520
+  pdf_url: https://arxiv.org/pdf/2406.10520v1
+  version: v1
+fetched: '2026-11-14'

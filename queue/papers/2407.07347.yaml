@@ -1,0 +1,39 @@
+id: paper:arxiv:2407.07347
+status: skipped
+score: 1
+track: video_image_coding
+matched:
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+meta:
+  title: 'MNeRV: A Multilayer Neural Representation for Videos'
+  authors:
+  - Qingling Chang
+  - Haohui Yu
+  - Shuxuan Fu
+  - Zhiqiang Zeng
+  - Chuangquan Chen
+  published: '2024-07-10'
+  updated: '2024-07-10'
+  categories:
+  - cs.CV
+  - eess.IV
+  abstract: As a novel video representation method, Neural Representations for Videos (NeRV) has shown
+    great potential in the fields of video compression, video restoration, and video interpolation. In
+    the process of representing videos using NeRV, each frame corresponds to an embedding, which is then
+    reconstructed into a video frame sequence after passing through a small number of decoding layers
+    (E-NeRV, HNeRV, etc.). However, this small number of decoding layers can easily lead to the problem
+    of redundant model parameters due to the large proportion of parameters in a single decoding layer,
+    which greatly restricts the video regression ability of neural network models. In this paper, we propose
+    a multilayer neural representation for videos (MNeRV) and design a new decoder M-Decoder and its matching
+    encoder M-Encoder. MNeRV has more encoding and decoding layers, which effectively alleviates the problem
+    of redundant model parameters caused by too few layers. In addition, we design MNeRV blocks to perform
+    more uniform and effective parameter allocation between decoding layers. In the field of video regression
+    reconstruction, we achieve better reconstruction quality (+4.06 PSNR) with fewer parameters. Finally,
+    we showcase MNeRV performance in downstream tasks such as video restoration and video interpolation.
+    The source code of MNeRV is available at https://github.com/Aaronbtb/MNeRV.
+  url: https://arxiv.org/abs/2407.07347
+  pdf_url: https://arxiv.org/pdf/2407.07347v1
+  version: v1
+fetched: '2026-11-14'

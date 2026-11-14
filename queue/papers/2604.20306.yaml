@@ -1,0 +1,45 @@
+id: paper:arxiv:2604.20306
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'Dual Causal Inference: Integrating Backdoor Adjustment and Instrumental Variable Learning for
+    Medical VQA'
+  authors:
+  - Zibo Xu
+  - Qiang Li
+  - Ke Lu
+  - Jin Wang
+  - Weizhi Nie
+  - Yuting Su
+  published: '2026-04-22'
+  updated: '2026-04-22'
+  categories:
+  - cs.CV
+  - cs.AI
+  abstract: Medical Visual Question Answering (MedVQA) aims to generate clinically reliable answers conditioned
+    on complex medical images and questions. However, existing methods often overfit to superficial cross-modal
+    correlations, neglecting the intrinsic biases embedded in multimodal medical data. Consequently, models
+    become vulnerable to cross-modal confounding effects, severely hindering their ability to provide
+    trustworthy diagnostic reasoning. To address this limitation, we propose a novel Dual Causal Inference
+    (DCI) framework for MedVQA. To the best of our knowledge, DCI is the first unified architecture that
+    integrates Backdoor Adjustment (BDA) and Instrumental Variable (IV) learning to jointly tackle both
+    observable and unobserved confounders. Specifically, we formulate a Structural Causal Model (SCM)
+    where observable cross-modal biases (e.g., frequent visual and textual co-occurrences) are mitigated
+    via BDA, while unobserved confounders are compensated using an IV learned from a shared latent space.
+    To guarantee the validity of the IV, we design mutual information constraints that maximize its dependence
+    on the fused multimodal representations while minimizing its associations with the unobserved confounders
+    and target answers. Through this dual mechanism, DCI extracts deconfounded representations that capture
+    genuine causal relationships. Extensive experiments on four benchmark datasets, SLAKE, SLAKE-CP, VQA-RAD,
+    and PathVQA, demonstrate that our method consistently outperforms existing approaches, particularly
+    in out-of-distribution (OOD) generalization. Furthermore, qualitative analyses confirm that DCI significantly
+    enhances the interpretability and robustness of cross-modal reasoning by explicitly disentangling
+    true causal effects from spurious cross-modal shortcuts.
+  url: https://arxiv.org/abs/2604.20306
+  pdf_url: https://arxiv.org/pdf/2604.20306v1
+  version: v1
+fetched: '2026-11-14'

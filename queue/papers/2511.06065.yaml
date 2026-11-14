@@ -1,0 +1,41 @@
+id: paper:arxiv:2511.06065
+status: skipped_low_citation
+score: 2
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: 'ScRPO: From Errors to Insights'
+  authors:
+  - Lianrui Li
+  - Dakuan Lu
+  - Jiawei Shao
+  - Xuelong Li
+  published: '2025-11-08'
+  updated: '2026-01-05'
+  categories:
+  - cs.AI
+  - cs.CL
+  abstract: 'We introduce Self-correction Relative Policy Optimization (ScRPO), a novel reinforcement
+    learning framework designed to empower large language models with advanced mathematical reasoning
+    capabilities through iterative self-reflection and error correction. The ScRPO framework operates
+    in two distinct phases: (1) Trial-and-error learning stage, where the model is trained via GRPO, and
+    incorrect responses are collected to form an "error pool"; and (2) Self-correction learning stage,
+    which guides the model to introspectively analyze and rectify the reasoning flaws behind its previous
+    errors. Extensive evaluations across challenging mathematical benchmarks, including AIME, AMC, Olympiad,
+    MATH-500, and GSM8k, validate the efficacy of our approach. Using DeepSeek-R1-Distill-Qwen-1.5B and
+    7B as backbones, ScRPO achieves average accuracies of 64.8% and 77.8%, respectively. This represents
+    a significant improvement of 6.0% and 3.2% over vanilla baselines, consistently outperforming strong
+    post-training methods such as DAPO and GRPO. These findings establish ScRPO as a robust paradigm for
+    enabling autonomous self-improvement in AI systems, particularly in tasks with limited external feedback.'
+  url: https://arxiv.org/abs/2511.06065
+  pdf_url: https://arxiv.org/pdf/2511.06065v3
+  version: v3
+fetched: '2026-11-14'
+citation_count: 1
+citation_year: 2025

@@ -1,0 +1,41 @@
+id: paper:arxiv:2606.03713
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: Investigating Adversarial Robustness of Multi-modal Large Language Models
+  authors:
+  - Hashmat Shadab Malik
+  - Muzammal Naseer
+  - Salman Khan
+  published: '2026-06-02'
+  updated: '2026-08-11'
+  categories:
+  - cs.CV
+  abstract: Multi-modal Large Language Models (MLLMs) achieve strong performance on vision-language tasks,
+    but incorporating visual inputs through a vision encoder (e.g., CLIP) substantially expands the attack
+    surface, making these models vulnerable to visual adversarial perturbations. Prior defenses typically
+    preserve compatibility with pretrained MLLMs by enforcing strict alignment to CLIP's original embedding
+    space during adversarial fine-tuning; while practical, this constraint fundamentally limits achievable
+    robustness. We present a systematic investigation of adversarial robustness in MLLMs. We first introduce
+    a diagnostic CLIP-alignment protocol that predicts, prior to full MLLM training, which robust vision
+    encoders will transfer effectively to the multimodal setting, revealing that large-scale multimodal
+    adversarial pretraining, rather than unimodal scale alone, is the critical factor for strong robustness
+    transfer. Integrating such encoders into MLLMs via end-to-end multimodal training yields average gains
+    of 28 CIDEr points on captioning and 11.7% VQA accuracy under strong adversarial attacks compared
+    to constrained plug-and-play baselines. We further show that adversarial training applied directly
+    to a standard non-robust MLLM degrades both clean and adversarial performance, establishing robust
+    visual representations as a strict prerequisite, while end-to-end adversarial training from a robust
+    backbone delivers additional gains of 1.9 CIDEr points and 4.3% VQA accuracy. Beyond training-time
+    defenses, lightweight test-time visual stochastic transformations serve as an effective black-box
+    defense for non-robust MLLMs, elevating adversarial performance from near-zero to levels comparable
+    with robust models. Finally, we show that our robust models substantially reduce toxic generation
+    under white-box visual jailbreak attacks. Code and pretrained weights will be released publicly.
+  url: https://arxiv.org/abs/2606.03713
+  pdf_url: https://arxiv.org/pdf/2606.03713v2
+  version: v2
+fetched: '2026-11-14'

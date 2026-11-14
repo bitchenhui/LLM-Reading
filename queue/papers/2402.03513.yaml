@@ -1,0 +1,57 @@
+id: paper:arxiv:2402.03513
+status: skipped_low_citation
+score: 7
+track: streaming_delivery
+matched:
+- ref: impl:x265
+  count: 1
+  weight: 3
+- ref: concept:HLS
+  count: 2
+  weight: 1
+- ref: concept:SuperResolution
+  count: 1
+  weight: 1
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+- ref: metric:VMAF
+  count: 1
+  weight: 1
+meta:
+  title: Video Super-Resolution for Optimized Bitrate and Green Online Streaming
+  authors:
+  - Vignesh V Menon
+  - Prajit T Rajendran
+  - Amritha Premkumar
+  - Benjamin Bross
+  - Detlev Marpe
+  published: '2024-02-05'
+  updated: '2024-02-05'
+  categories:
+  - cs.MM
+  abstract: Conventional per-title encoding schemes strive to optimize encoding resolutions to deliver
+    the utmost perceptual quality for each bitrate ladder representation. Nevertheless, maintaining encoding
+    time within an acceptable threshold is equally imperative in online streaming applications. Furthermore,
+    modern client devices are equipped with the capability for fast deep-learning-based video super-resolution
+    (VSR) techniques, enhancing the perceptual quality of the decoded bitstream. This suggests that opting
+    for lower resolutions in representations during the encoding process can curtail the overall energy
+    consumption without substantially compromising perceptual quality. In this context, this paper introduces
+    a video super-resolution-based latency-aware optimized bitrate encoding scheme (ViSOR) designed for
+    online adaptive streaming applications. ViSOR determines the encoding resolution for each target bitrate,
+    ensuring the highest achievable perceptual quality after VSR within the bound of a maximum acceptable
+    latency. Random forest-based prediction models are trained to predict the perceptual quality after
+    VSR and the encoding time for each resolution using the spatiotemporal features extracted for each
+    video segment. Experimental results show that ViSOR targeting fast super-resolution convolutional
+    neural network (FSRCNN) achieves an overall average bitrate reduction of 24.65 % and 32.70 % to maintain
+    the same PSNR and VMAF, compared to the HTTP Live Streaming (HLS) bitrate ladder encoding of 4 s segments
+    using the x265 encoder, when the maximum acceptable latency for each representation is set as two
+    seconds. Considering a just noticeable difference (JND) of six VMAF points, the average cumulative
+    storage consumption and encoding energy for each segment is reduced by 79.32 % and 68.21 %, respectively,
+    contributing towards greener streaming.
+  url: https://arxiv.org/abs/2402.03513
+  pdf_url: https://arxiv.org/pdf/2402.03513v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 5
+citation_year: 2024

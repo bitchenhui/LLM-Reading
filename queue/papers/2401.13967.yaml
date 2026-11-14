@@ -1,0 +1,35 @@
+id: paper:arxiv:2401.13967
+status: skipped
+score: 2
+track: video_image_coding
+matched:
+- ref: concept:EntropyModel
+  count: 1
+  weight: 1
+- ref: metric:LPIPS
+  count: 1
+  weight: 1
+meta:
+  title: Perceptual-oriented Learned Image Compression with Dynamic Kernel
+  authors:
+  - Nianxiang Fu
+  - Junxi Zhang
+  - Huairui Wang
+  - Zhenzhong Chen
+  published: '2024-01-25'
+  updated: '2024-02-07'
+  categories:
+  - cs.MM
+  abstract: In this paper, we extend our prior research named DKIC and propose the perceptual-oriented
+    learned image compression method, PO-DKIC. Specifically, DKIC adopts a dynamic kernel-based dynamic
+    residual block group to enhance the transform coding and an asymmetric space-channel context entropy
+    model to facilitate the estimation of gaussian parameters. Based on DKIC, PO-DKIC introduces PatchGAN
+    and LPIPS loss to enhance visual quality. Furthermore, to maximize the overall perceptual quality
+    under a rate constraint, we formulate this challenge into a constrained programming problem and use
+    the Linear Integer Programming method for resolution. The experiments demonstrate that our proposed
+    method can generate realistic images with richer textures and finer details when compared to state-of-the-art
+    image compression techniques.
+  url: https://arxiv.org/abs/2401.13967
+  pdf_url: https://arxiv.org/pdf/2401.13967v3
+  version: v3
+fetched: '2026-11-14'

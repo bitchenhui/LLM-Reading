@@ -1,0 +1,49 @@
+id: paper:arxiv:2202.12987
+status: pending
+score: 3
+track: streaming_delivery
+matched:
+- ref: concept:QoE
+  count: 3
+  weight: 1
+- ref: concept:DASH
+  count: 2
+  weight: 1
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: A Brief Survey on Adaptive Video Streaming Quality Assessment
+  authors:
+  - Wei Zhou
+  - Xiongkuo Min
+  - Hong Li
+  - Qiuping Jiang
+  published: '2022-02-25'
+  updated: '2022-02-25'
+  categories:
+  - cs.MM
+  - cs.CV
+  abstract: Quality of experience (QoE) assessment for adaptive video streaming plays a significant role
+    in advanced network management systems. It is especially challenging in case of dynamic adaptive streaming
+    schemes over HTTP (DASH) which has increasingly complex characteristics including additional playback
+    issues. In this paper, we provide a brief overview of adaptive video streaming quality assessment.
+    Upon our review of related works, we analyze and compare different variations of objective QoE assessment
+    models with or without using machine learning techniques for adaptive video streaming. Through the
+    performance analysis, we observe that hybrid models perform better than both quality-of-service (QoS)
+    driven QoE approaches and signal fidelity measurement. Moreover, the machine learning-based model
+    slightly outperforms the model without using machine learning for the same setting. In addition, we
+    find that existing video streaming QoE assessment models still have limited performance, which makes
+    it difficult to be applied in practical communication systems. Therefore, based on the success of
+    deep learned feature representations for traditional video quality prediction, we also apply the off-the-shelf
+    deep convolutional neural network (DCNN) to evaluate the perceptual quality of streaming videos, where
+    the spatio-temporal properties of streaming videos are taken into consideration. Experiments demonstrate
+    its superiority, which sheds light on the future development of specifically designed deep learning
+    frameworks for adaptive video streaming quality assessment. We believe this survey can serve as a
+    guideline for QoE assessment of adaptive video streaming.
+  url: https://arxiv.org/abs/2202.12987
+  pdf_url: https://arxiv.org/pdf/2202.12987v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 24
+citation_year: 2022

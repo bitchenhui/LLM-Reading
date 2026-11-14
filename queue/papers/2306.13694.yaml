@@ -1,0 +1,39 @@
+id: paper:arxiv:2306.13694
+status: skipped_low_citation
+score: 7
+track: video_image_coding
+matched:
+- ref: codec:VVC
+  count: 2
+  weight: 3
+- ref: impl:VTM
+  count: 1
+  weight: 3
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+meta:
+  title: Motion Plane Adaptive Motion Modeling for Spherical Video Coding in H.266/VVC
+  authors:
+  - Andy Regensky
+  - Christian Herglotz
+  - André Kaup
+  published: '2023-06-23'
+  updated: '2023-06-23'
+  categories:
+  - eess.IV
+  abstract: Motion compensation is one of the key technologies enabling the high compression efficiency
+    of modern video coding standards. To allow compression of spherical video content, special mapping
+    functions are required to project the video to the 2D image plane. Distortions inevitably occurring
+    in these mappings impair the performance of classical motion models. In this paper, we propose a novel
+    motion plane adaptive motion modeling technique (MPA) for spherical video that allows to perform motion
+    compensation on different motion planes in 3D space instead of having to work on the - in theory arbitrarily
+    mapped - 2D image representation directly. The integration of MPA into the state-of-the-art H.266/VVC
+    video coding standard shows average Bjøntegaard Delta rate savings of 1.72\% with a peak of 3.37\%
+    based on PSNR and 1.55\% with a peak of 2.92\% based on WS-PSNR compared to VTM-14.2.
+  url: https://arxiv.org/abs/2306.13694
+  pdf_url: https://arxiv.org/pdf/2306.13694v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 6
+citation_year: 2023

@@ -1,0 +1,48 @@
+id: paper:arxiv:2507.11900
+status: skipped
+score: 1
+track: video_image_coding
+matched:
+- ref: concept:IQA
+  count: 4
+  weight: 1
+meta:
+  title: 'CompressedVQA-HDR: Generalized Full-reference and No-reference Quality Assessment Models for
+    Compressed High Dynamic Range Videos'
+  authors:
+  - Wei Sun
+  - Linhan Cao
+  - Kang Fu
+  - Dandan Zhu
+  - Jun Jia
+  - Menghan Hu
+  - Xiongkuo Min
+  - Guangtao Zhai
+  published: '2025-07-16'
+  updated: '2025-07-16'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: Video compression is a standard procedure applied to all videos to minimize storage and transmission
+    demands while preserving visual quality as much as possible. Therefore, evaluating the visual quality
+    of compressed videos is crucial for guiding the practical usage and further development of video compression
+    algorithms. Although numerous compressed video quality assessment (VQA) methods have been proposed,
+    they often lack the generalization capability needed to handle the increasing diversity of video types,
+    particularly high dynamic range (HDR) content. In this paper, we introduce CompressedVQA-HDR, an effective
+    VQA framework designed to address the challenges of HDR video quality assessment. Specifically, we
+    adopt the Swin Transformer and SigLip 2 as the backbone networks for the proposed full-reference (FR)
+    and no-reference (NR) VQA models, respectively. For the FR model, we compute deep structural and textural
+    similarities between reference and distorted frames using intermediate-layer features extracted from
+    the Swin Transformer as its quality-aware feature representation. For the NR model, we extract the
+    global mean of the final-layer feature maps from SigLip 2 as its quality-aware representation. To
+    mitigate the issue of limited HDR training data, we pre-train the FR model on a large-scale standard
+    dynamic range (SDR) VQA dataset and fine-tune it on the HDRSDR-VQA dataset. For the NR model, we employ
+    an iterative mixed-dataset training strategy across multiple compressed VQA datasets, followed by
+    fine-tuning on the HDRSDR-VQA dataset. Experimental results show that our models achieve state-of-the-art
+    performance compared to existing FR and NR VQA models. Moreover, CompressedVQA-HDR-FR won first place
+    in the FR track of the Generalizable HDR & SDR Video Quality Measurement Grand Challenge at IEEE ICME
+    2025. The code is available at https://github.com/sunwei925/CompressedVQA-HDR.
+  url: https://arxiv.org/abs/2507.11900
+  pdf_url: https://arxiv.org/pdf/2507.11900v1
+  version: v1
+fetched: '2026-11-14'

@@ -1,0 +1,41 @@
+id: paper:arxiv:2606.19950
+status: pending
+score: 2
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: 'Confidence Calibration for Multimodal LLMs: An Empirical Study through Medical VQA'
+  authors:
+  - Yuetian Du
+  - Yucheng Wang
+  - Ming Kong
+  - Tian Liang
+  - Qiang Long
+  - Bingdi Chen
+  - Qiang Zhu
+  published: '2026-06-18'
+  updated: '2026-06-18'
+  categories:
+  - cs.CV
+  - cs.AI
+  abstract: Multimodal Large Language Models (MLLMs) show great potential in medical tasks, but their
+    elicited confidence often misaligns with actual accuracy, potentially leading to misdiagnosis or overlooking
+    correct advice. This study presents the first comprehensive analysis of the relationship between accuracy
+    and confidence in medical MLLMs. It proposes a novel method that combines Multi-Strategy Fusion-Based
+    Interrogation (MS-FBI) with auxiliary expert LLM assessment, aiming to improve confidence calibration
+    in Medical Visual Question Answering (VQA). Experiments demonstrate that our method reduces the Expected
+    Calibration Error (ECE) by an average of 40\% across three Medical VQA datasets, significantly enhancing
+    MLLMs' reliability. The findings highlight the importance of domain-specific calibration for MLLMs
+    in healthcare, offering a more trustworthy solution for AI-assisted diagnosis.
+  url: https://arxiv.org/abs/2606.19950
+  pdf_url: https://arxiv.org/pdf/2606.19950v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 12
+citation_year: 2026

@@ -1,0 +1,32 @@
+id: paper:arxiv:2601.21804
+status: skipped
+score: 0
+track: self_improvement
+matched: []
+meta:
+  title: Distribution-Aware Reward Estimation for Test-Time Reinforcement Learning
+  authors:
+  - Bodong Du
+  - Xuanqi Huang
+  - Xiaomeng Li
+  published: '2026-01-29'
+  updated: '2026-01-29'
+  categories:
+  - cs.CL
+  abstract: 'Test-time reinforcement learning (TTRL) enables large language models (LLMs) to self-improve
+    on unlabeled inputs, but its effectiveness critically depends on how reward signals are estimated
+    without ground-truth supervision. Most existing TTRL methods rely on majority voting (MV) over rollouts
+    to produce deterministic rewards, implicitly assuming that the majority rollout provides a reliable
+    learning signal. We show that this assumption is fragile: MV reduces the rollout distribution into
+    a single outcome, discarding information about non-majority but correct actions candidates, and yields
+    systematically biased reward estimates. To address this, we propose Distribution-AwareReward Estimation
+    (DARE), which shifts reward estimation from a single majority outcome to the full empirical rollout
+    distribution. DARE further augments this distribution-based reward with an exploration bonus and a
+    distribution pruning mechanism for non-majority rollout exploration and reward denoise, yielding a
+    more informative and robust reward estimation. Extensive experiments on challenging reasoning benchmarks
+    show that DARE improves optimization stability and final performance over recent baselines, achieving
+    relative improvements of 25.3% on challenging AIME 2024 and 5.3% on AMC.'
+  url: https://arxiv.org/abs/2601.21804
+  pdf_url: https://arxiv.org/pdf/2601.21804v1
+  version: v1
+fetched: '2026-11-14'

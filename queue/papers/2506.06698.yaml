@@ -1,0 +1,47 @@
+id: paper:arxiv:2506.06698
+status: pending
+score: 3
+track: self_improvement
+matched:
+- ref: concept:LLM
+  count: 2
+  weight: 1
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+- ref: concept:TrainingFree
+  count: 1
+  weight: 1
+meta:
+  title: Contextual Experience Replay for Self-Improvement of Language Agents
+  authors:
+  - Yitao Liu
+  - Chenglei Si
+  - Karthik Narasimhan
+  - Shunyu Yao
+  published: '2025-06-07'
+  updated: '2025-06-07'
+  categories:
+  - cs.AI
+  - cs.CL
+  - cs.CV
+  - cs.LG
+  abstract: Large language model (LLM) agents have been applied to sequential decision-making tasks such
+    as web navigation, but without any environment-specific experiences, they often fail in these complex
+    tasks. Moreover, current LLM agents are not designed to continually learn from past experiences during
+    inference time, which could be crucial for them to gain these environment-specific experiences. To
+    address this, we propose Contextual Experience Replay (CER), a training-free framework to enable efficient
+    self-improvement for language agents in their context window. Specifically, CER accumulates and synthesizes
+    past experiences into a dynamic memory buffer. These experiences encompass environment dynamics and
+    common decision-making patterns, allowing the agents to retrieve and augment themselves with relevant
+    knowledge in new tasks, enhancing their adaptability in complex environments. We evaluate CER on the
+    challenging WebArena and VisualWebArena benchmarks. On VisualWebArena, CER achieves a competitive
+    performance of 31.9%. On WebArena, CER also gets a competitive average success rate of 36.7%, relatively
+    improving the success rate of the GPT-4o agent baseline by 51.0%. We also conduct a comprehensive
+    analysis on it to prove its efficiency, validity and understand it better.
+  url: https://arxiv.org/abs/2506.06698
+  pdf_url: https://arxiv.org/pdf/2506.06698v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 64
+citation_year: 2025

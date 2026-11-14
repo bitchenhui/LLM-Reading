@@ -1,0 +1,43 @@
+id: paper:arxiv:2405.09291
+status: skipped
+score: 1
+track: video_image_coding
+matched:
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+meta:
+  title: Sensitivity Decouple Learning for Image Compression Artifacts Reduction
+  authors:
+  - Li Ma
+  - Yifan Zhao
+  - Peixi Peng
+  - Yonghong Tian
+  published: '2024-05-15'
+  updated: '2024-05-15'
+  categories:
+  - cs.CV
+  - cs.AI
+  - eess.IV
+  abstract: With the benefit of deep learning techniques, recent researches have made significant progress
+    in image compression artifacts reduction. Despite their improved performances, prevailing methods
+    only focus on learning a mapping from the compressed image to the original one but ignore the intrinsic
+    attributes of the given compressed images, which greatly harms the performance of downstream parsing
+    tasks. Different from these methods, we propose to decouple the intrinsic attributes into two complementary
+    features for artifacts reduction,ie, the compression-insensitive features to regularize the high-level
+    semantic representations during training and the compression-sensitive features to be aware of the
+    compression degree. To achieve this, we first employ adversarial training to regularize the compressed
+    and original encoded features for retaining high-level semantics, and we then develop the compression
+    quality-aware feature encoder for compression-sensitive features. Based on these dual complementary
+    features, we propose a Dual Awareness Guidance Network (DAGN) to utilize these awareness features
+    as transformation guidance during the decoding phase. In our proposed DAGN, we develop a cross-feature
+    fusion module to maintain the consistency of compression-insensitive features by fusing compression-insensitive
+    features into the artifacts reduction baseline. Our method achieves an average 2.06 dB PSNR gains
+    on BSD500, outperforming state-of-the-art methods, and only requires 29.7 ms to process one image
+    on BSD500. Besides, the experimental results on LIVE1 and LIU4K also demonstrate the efficiency, effectiveness,
+    and superiority of the proposed method in terms of quantitative metrics, visual quality, and downstream
+    machine vision tasks.
+  url: https://arxiv.org/abs/2405.09291
+  pdf_url: https://arxiv.org/pdf/2405.09291v1
+  version: v1
+fetched: '2026-11-14'

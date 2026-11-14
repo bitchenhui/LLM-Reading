@@ -1,0 +1,54 @@
+id: paper:arxiv:2608.14621
+status: pending
+score: 3
+track: self_improvement
+matched:
+- ref: concept:RSI
+  count: 2
+  weight: 1
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: 'AutoMem: A Text-Gradient Recursive Self-Improvement Framework for Automated Memory Architectures
+    Search'
+  authors:
+  - Lin Du
+  - Jie Zhou
+  - Yuxuan Cai
+  - Kai Chen
+  - Qin Chen
+  - Xin Li
+  - Bo Zhang
+  - Wei Li
+  - Liang He
+  published: '2026-07-14'
+  updated: '2026-07-14'
+  categories:
+  - cs.CL
+  - cs.AI
+  abstract: 'Long-term memory is increasingly central to LLM agents, yet memory design remains a highly
+    coupled architecture problem: what to encode, how to store it, how to retrieve it, and how to manage
+    it can vary substantially across tasks and backbone models. We construct a discrete search space with
+    5 encoders, 5 stores, 6 retrievers, and 4 managers, and show that no single memory architecture consistently
+    dominates: different tasks favor different module combinations, leading to substantial performance
+    gaps. Motivated by this, we propose \textsc{AutoMem}, a text-gradient recursive self-improvement framework
+    for task-adaptive memory architecture search. \textsc{AutoMem} optimizes over the factored space through
+    two components: Experience-Guided Architecture Search, which proposes candidate architectures from
+    historical search trajectories and accumulated reflections, and Failure-Guided Module Diagnosis, which
+    localizes memory-related failures to specific modules and converts them into targeted textual feedback.
+    Experiments on GAIA, WebWalkerQA, and xBench-DeepSearch across two LLM backbones show that \textsc{AutoMem}
+    consistently discovers task-adaptive memory architectures that outperform the strongest human-designed
+    memory baselines, improving accuracy by $2.8$ points on average across six benchmark-backbone settings.
+    Further analysis shows that \textsc{AutoMem} achieves a favorable accuracy-efficiency trade-off, reducing
+    token cost by $14.3\%$ over the strongest accuracy baselines under Qwen3.5-122B-A10B, while also finding
+    stronger architectures than substantially larger random searches within only a few guided iterations.'
+  url: https://arxiv.org/abs/2608.14621
+  pdf_url: https://arxiv.org/pdf/2608.14621v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 2
+citation_year: 2026

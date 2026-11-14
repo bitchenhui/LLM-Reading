@@ -1,0 +1,55 @@
+id: paper:arxiv:2510.15347
+status: skipped_low_citation
+score: 7
+track: video_image_coding
+matched:
+- ref: codec:VVC
+  count: 2
+  weight: 3
+- ref: impl:VTM
+  count: 1
+  weight: 3
+- ref: concept:ICM
+  count: 1
+  weight: 1
+meta:
+  title: Symmetric Entropy-Constrained Video Coding for Machines
+  authors:
+  - Yuxiao Sun
+  - Meiqin Liu
+  - Chao Yao
+  - Qi Tang
+  - Jian Jin
+  - Weisi Lin
+  - Frederic Dufaux
+  - Yao Zhao
+  published: '2025-10-17'
+  updated: '2026-06-25'
+  categories:
+  - eess.IV
+  - cs.MM
+  abstract: As video transmission increasingly serves machine vision systems (MVS) instead of human vision
+    systems (HVS), video coding for machines (VCM) has become a critical research topic. Existing VCM
+    methods often bind codecs to specific downstream models, requiring retraining or supervised data,
+    thus limiting generalization in multi-task scenarios. Recently, unified VCM frameworks have employed
+    visual backbones (VB) and visual foundation models (VFM) to support multiple video understanding tasks
+    with a single codec. They mainly utilize VB/VFM to maintain semantic consistency or suppress non-semantic
+    information, but seldom explore how to directly link video coding with understanding under VB/VFM
+    guidance. Hence, we propose a Symmetric Entropy-Constrained Video Coding framework for Machines (SEC-VCM).
+    It establishes a symmetric alignment between the video codec and VB, allowing the codec to leverage
+    VB's representation capabilities to preserve semantics and discard MVS-irrelevant information. Specifically,
+    a bi-directional entropy-constraint (BiEC) mechanism ensures symmetry between the process of video
+    decoding and VB encoding by suppressing conditional entropy. This helps the codec to explicitly handle
+    semantic information beneficial to MVS while squeezing useless information. Furthermore, a semantic-pixel
+    dual-path fusion (SPDF) module injects pixel-level priors into the final reconstruction. Through semantic-pixel
+    fusion, it suppresses artifacts harmful to MVS and improves machine-oriented reconstruction quality.
+    Experimental results on classical video understanding tasks and MLLM-based tasks show SOTA rate-task
+    performance. It achieves significant bitrate savings over H.266/VVC reference software VTM on video
+    instance segmentation (37.4%), video object segmentation (29.8%), object detection (46.2%), multiple
+    object tracking (44.9%), and MLLM-based video grounding (97.6%).
+  url: https://arxiv.org/abs/2510.15347
+  pdf_url: https://arxiv.org/pdf/2510.15347v4
+  version: v4
+fetched: '2026-11-14'
+citation_count: 2
+citation_year: 2025

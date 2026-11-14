@@ -1,0 +1,45 @@
+id: paper:arxiv:2608.08648
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: Agentic Visual Reasoning in Whole-Slide Pathology Images via Active Perception
+  authors:
+  - Jingyun Chen
+  - Fengchun Liu
+  - Linghan Cai
+  - Songhan Jiang
+  - Shenjin Huang
+  - Hongpeng Wang
+  - Lequan Yu
+  - Yongbing Zhang
+  published: '2026-08-09'
+  updated: '2026-08-09'
+  categories:
+  - cs.CV
+  abstract: Whole-slide visual reasoning requires identifying sparse diagnostic evidence in gigapixel
+    pathology slides and integrating observations across spatial scales. Existing WSI methods either compress
+    densely sampled patches into global representations or use pretrained vision-language models with
+    heuristic region selection, weakening links between predictions and morphology or lacking pathology-trained
+    observation policies. We present AdaptivePath, an active-perception framework that formulates WSI
+    evidence acquisition as sequential decision making. The Navigator learns question-agnostic abnormality-driven
+    navigation from pathologist-reviewed labels to select observation locations and spatial extents, avoiding
+    costly question-specific trajectory annotations. We train this policy through alternating representation
+    learning and proximal policy optimization, followed by fine-tuning with geometric and appearance consistency
+    objectives to stabilize focus trajectories. During inference, the Navigator hierarchically acquires
+    sparse observations from low to high magnification under a limited ROI budget. A Morphology Interpreter
+    converts observations into question-conditioned evidence, while the Deliberator evaluates evidence
+    and revises intermediate answers across magnifications. The Arbiter integrates deliberation history
+    to produce final answers. AdaptivePath achieves state-of-the-art zero-shot performance on WSI and
+    region pathology VQA benchmarks and reaches 80.14% accuracy for cancer subtype classification across
+    six TCGA cohorts. In a blinded diagnostic-utility study, pathologists using AdaptivePath-selected
+    observation sequences achieve 82.9% accuracy. These results demonstrate that learned active perception
+    enables effective and traceable visual reasoning over gigapixel pathology slides.
+  url: https://arxiv.org/abs/2608.08648
+  pdf_url: https://arxiv.org/pdf/2608.08648v1
+  version: v1
+fetched: '2026-11-14'

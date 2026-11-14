@@ -1,0 +1,32 @@
+id: paper:arxiv:2404.10346
+status: skipped
+score: 1
+track: self_improvement
+matched:
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: 'Self-Explore: Enhancing Mathematical Reasoning in Language Models with Fine-grained Rewards'
+  authors:
+  - Hyeonbin Hwang
+  - Doyoung Kim
+  - Seungone Kim
+  - Seonghyeon Ye
+  - Minjoon Seo
+  published: '2024-04-16'
+  updated: '2024-10-03'
+  categories:
+  - cs.CL
+  abstract: Training on large amounts of rationales (i.e., CoT Fine-tuning) is effective at improving
+    the reasoning capabilities of large language models (LLMs). However, acquiring human-authored rationales
+    or augmenting rationales from proprietary models is costly and not scalable. In this paper, we study
+    the problem of whether LLMs could self-improve their reasoning capabilities. To this end, we propose
+    Self-Explore, where the LLM is tasked to explore the first wrong step (i.e., the first pit) within
+    the rationale and use such signals as fine-grained rewards for further improvement. On the GSM8K and
+    MATH test set, Self-Explore achieves 11.57% and 2.89% improvement on average across three LLMs compared
+    to supervised fine-tuning (SFT). Our code is available at https://github.com/hbin0701/Self-Explore.
+  url: https://arxiv.org/abs/2404.10346
+  pdf_url: https://arxiv.org/pdf/2404.10346v4
+  version: v4
+fetched: '2026-11-14'

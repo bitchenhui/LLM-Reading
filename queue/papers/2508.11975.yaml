@@ -1,0 +1,32 @@
+id: paper:arxiv:2508.11975
+status: skipped
+score: 1
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 1
+  weight: 1
+meta:
+  title: 'Chart-CoCa: Self-Improving Chart Understanding of Vision LMs via Code-Driven Synthesis and Candidate-Conditioned
+    Answering'
+  authors:
+  - Gongyao Jiang
+  - Qiong Luo
+  published: '2025-08-16'
+  updated: '2025-08-16'
+  categories:
+  - cs.AI
+  abstract: Vision Language Models (VLMs) often struggle with chart understanding tasks, particularly
+    in accurate chart description and complex reasoning. Synthetic data generation is a promising solution,
+    while usually facing the challenge of noise labels. To address this challenge, we first introduce
+    a chart synthesis pipeline that generates aligned chart-question-answer triplets through code generation
+    and execution, ensuring the reliability of synthetic data without human intervention. Furthermore,
+    inspired by test-time scaling that increases inference budget and thereby improves performance, we
+    design a candidate-conditioned answering process. The VLM first generates multiple responses per query,
+    and then synthesizes the final answer by contextualizing these candidates. Experiments demonstrate
+    significant improvements, with up to 15.50 points accuracy gain over the initial VLM, in a fully self-improving
+    paradigm without either human-labeled data or external models.
+  url: https://arxiv.org/abs/2508.11975
+  pdf_url: https://arxiv.org/pdf/2508.11975v1
+  version: v1
+fetched: '2026-11-14'

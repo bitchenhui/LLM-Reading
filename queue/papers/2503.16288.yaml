@@ -1,0 +1,46 @@
+id: paper:arxiv:2503.16288
+status: pending
+score: 4
+track: video_image_coding
+matched:
+- ref: codec:VVC
+  count: 1
+  weight: 3
+- ref: metric:BD-Rate
+  count: 1
+  weight: 1
+meta:
+  title: Overview of Variable Rate Coding in JPEG AI
+  authors:
+  - Panqi Jia
+  - Fabian Brand
+  - Dequan Yu
+  - Alexander Karabutov
+  - Elena Alshina
+  - Andre Kaup
+  published: '2025-03-20'
+  updated: '2025-03-20'
+  categories:
+  - eess.IV
+  abstract: 'Empirical evidence has demonstrated that learning-based image compression can outperform
+    classical compression frameworks. This has led to the ongoing standardization of learned-based image
+    codecs, namely Joint Photographic Experts Group (JPEG) AI. The objective of JPEG AI is to enhance
+    compression efficiency and provide a software and hardwarefriendly solution. Based on our research,
+    JPEG AI represents the first standardization that can facilitate the implementation of a learned image
+    codec on a mobile device. This article presents an overview of the variable rate coding functionality
+    in JPEG AI, which includes three variable rate adaptations: a threedimensional quality map, a fast
+    bit rate matching algorithm, and a training strategy. The variable rate adaptations offer a continuous
+    rate function up to 2.0 bpp, exhibiting a high level of performance, a flexible bit allocation between
+    different color components, and a region of interest function for the specified use case. The evaluation
+    of performance encompasses both objective and subjective results. With regard to the objective bit
+    rate matching, the main profile with low complexity yielded a 13.1% BD-rate gain over VVC intra, while
+    the high profile with high complexity achieved a 19.2% BD-rate gain over VVC intra. The BD-rate result
+    is calculated as the mean of the seven perceptual metrics defined in the JPEG AI common test conditions.
+    With respect to subjective results, the example of improving the quality of the region of interest
+    is illustrated.'
+  url: https://arxiv.org/abs/2503.16288
+  pdf_url: https://arxiv.org/pdf/2503.16288v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 7
+citation_year: 2025

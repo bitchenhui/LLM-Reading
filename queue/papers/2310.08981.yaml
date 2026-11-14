@@ -1,0 +1,35 @@
+id: paper:arxiv:2310.08981
+status: skipped
+score: 0
+track: audio_coding
+matched: []
+meta:
+  title: Low-latency Speech Enhancement via Speech Token Generation
+  authors:
+  - Huaying Xue
+  - Xiulian Peng
+  - Yan Lu
+  published: '2023-10-13'
+  updated: '2024-01-23'
+  categories:
+  - cs.SD
+  - cs.MM
+  - eess.AS
+  abstract: Existing deep learning based speech enhancement mainly employ a data-driven approach, which
+    leverage large amounts of data with a variety of noise types to achieve noise removal from noisy signal.
+    However, the high dependence on the data limits its generalization on the unseen complex noises in
+    real-life environment. In this paper, we focus on the low-latency scenario and regard speech enhancement
+    as a speech generation problem conditioned on the noisy signal, where we generate clean speech instead
+    of identifying and removing noises. Specifically, we propose a conditional generative framework for
+    speech enhancement, which models clean speech by acoustic codes of a neural speech codec and generates
+    the speech codes conditioned on past noisy frames in an auto-regressive way. Moreover, we propose
+    an explicit-alignment approach to align noisy frames with the generated speech tokens to improve the
+    robustness and scalability to different input lengths. Different from other methods that leverage
+    multiple stages to generate speech codes, we leverage a single-stage speech generation approach based
+    on the TF-Codec neural codec to achieve high speech quality with low latency. Extensive results on
+    both synthetic and real-recorded test set show its superiority over data-driven approaches in terms
+    of noise robustness and temporal speech coherence.
+  url: https://arxiv.org/abs/2310.08981
+  pdf_url: https://arxiv.org/pdf/2310.08981v3
+  version: v3
+fetched: '2026-11-14'

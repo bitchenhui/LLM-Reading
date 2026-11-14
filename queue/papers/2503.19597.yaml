@@ -1,0 +1,33 @@
+id: paper:arxiv:2503.19597
+status: skipped
+score: 0
+track: audio_coding
+matched: []
+meta:
+  title: 'QINCODEC: Neural Audio Compression with Implicit Neural Codebooks'
+  authors:
+  - Zineb Lahrichi
+  - Gaëtan Hadjeres
+  - Gael Richard
+  - Geoffroy Peeters
+  published: '2025-03-19'
+  updated: '2025-03-19'
+  categories:
+  - cs.SD
+  - eess.SP
+  abstract: Neural audio codecs, neural networks which compress a waveform into discrete tokens, play
+    a crucial role in the recent development of audio generative models. State-of-the-art codecs rely
+    on the end-to-end training of an autoencoder and a quantization bottleneck. However, this approach
+    restricts the choice of the quantization methods as it requires to define how gradients propagate
+    through the quantizer and how to update the quantization parameters online. In this work, we revisit
+    the common practice of joint training and propose to quantize the latent representations of a pre-trained
+    autoencoder offline, followed by an optional finetuning of the decoder to mitigate degradation from
+    quantization. This strategy allows to consider any off-the-shelf quantizer, especially state-of-the-art
+    trainable quantizers with implicit neural codebooks such as QINCO2. We demonstrate that with the latter,
+    our proposed codec termed QINCODEC, is competitive with baseline codecs while being notably simpler
+    to train. Finally, our approach provides a general framework that amortizes the cost of autoencoder
+    pretraining, and enables more flexible codec design.
+  url: https://arxiv.org/abs/2503.19597
+  pdf_url: https://arxiv.org/pdf/2503.19597v1
+  version: v1
+fetched: '2026-11-14'

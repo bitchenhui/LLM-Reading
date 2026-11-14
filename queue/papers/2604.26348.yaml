@@ -1,0 +1,41 @@
+id: paper:arxiv:2604.26348
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 4
+  weight: 1
+meta:
+  title: 'ACPO: Anchor-Constrained Perceptual Optimization for Diffusion Models with No-Reference Quality
+    Guidance'
+  authors:
+  - Yang Yang
+  - Feifan Meng
+  - Han Fang
+  - Weiming Zhang
+  published: '2026-04-29'
+  updated: '2026-04-29'
+  categories:
+  - cs.CV
+  - cs.AI
+  abstract: Diffusion models have achieved remarkable success in image generation, yet their training
+    is predominantly driven by full-reference objectives that enforce pixel-wise similarity to ground-truth
+    images.Such supervision, while effective for fidelity, may insufficient in terms of subjective visual
+    perception quality and text-image semantic consistency. In this work, we investigate the problem of
+    incorporating no-reference perceptual quality into diffusion training. A key challenge is that directly
+    optimizing perceptual signals, such as those provided by no-reference image quality assessment (NR-IQA)
+    models, introduces a mismatch with the original diffusion objective, leading to training instability
+    and distributional drift during fine-tuning. To address this issue, we propose an anchor-constrained
+    optimization framework that enables stable perceptual adaptation. Specifically, we leverage a learned
+    NR-IQA model as a perceptual guidance signal, while introducing an anchor-based regularization that
+    enforces consistency with the base diffusion model in terms of noise prediction. This design effectively
+    balances perceptual quality improvement and generative fidelity, allowing controlled adaptation toward
+    perceptually favorable outputs without compromising the original generative behavior. Extensive experiments
+    demonstrate that our method consistently enhances perceptual quality while preserving generation diversity
+    and training stability, highlighting the effectiveness of anchor-constrained perceptual optimization
+    for diffusion models.
+  url: https://arxiv.org/abs/2604.26348
+  pdf_url: https://arxiv.org/pdf/2604.26348v1
+  version: v1
+fetched: '2026-11-14'

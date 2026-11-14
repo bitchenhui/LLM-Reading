@@ -1,0 +1,47 @@
+id: paper:arxiv:2510.09987
+status: pending
+score: 3
+track: video_image_coding
+matched:
+- ref: concept:RDO
+  count: 1
+  weight: 1
+- ref: metric:DISTS
+  count: 1
+  weight: 1
+- ref: metric:LPIPS
+  count: 1
+  weight: 1
+meta:
+  title: Generative Latent Video Compression
+  authors:
+  - Zongyu Guo
+  - Zhaoyang Jia
+  - Jiahao Li
+  - Xiaoyi Zhang
+  - Bin Li
+  - Yan Lu
+  published: '2025-10-11'
+  updated: '2025-10-11'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: Perceptual optimization is widely recognized as essential for neural compression, yet balancing
+    the rate-distortion-perception tradeoff remains challenging. This difficulty is especially pronounced
+    in video compression, where frame-wise quality fluctuations often cause perceptually optimized neural
+    video codecs to suffer from flickering artifacts. In this paper, inspired by the success of latent
+    generative models, we present Generative Latent Video Compression (GLVC), an effective framework for
+    perceptual video compression. GLVC employs a pretrained continuous tokenizer to project video frames
+    into a perceptually aligned latent space, thereby offloading perceptual constraints from the rate-distortion
+    optimization. We redesign the codec architecture explicitly for the latent domain, drawing on extensive
+    insights from prior neural video codecs, and further equip it with innovations such as unified intra/inter
+    coding and a recurrent memory mechanism. Experimental results across multiple benchmarks show that
+    GLVC achieves state-of-the-art performance in terms of DISTS and LPIPS metrics. Notably, our user
+    study confirms GLVC rivals the latest neural video codecs at nearly half their rate while maintaining
+    stable temporal coherence, marking a step toward practical perceptual video compression.
+  url: https://arxiv.org/abs/2510.09987
+  pdf_url: https://arxiv.org/pdf/2510.09987v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 12
+citation_year: 2025

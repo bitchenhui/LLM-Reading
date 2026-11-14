@@ -1,0 +1,46 @@
+id: paper:arxiv:2603.00938
+status: skipped_low_citation
+score: 3
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 3
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+- ref: metric:MOS
+  count: 1
+  weight: 1
+meta:
+  title: 'Seeing Beyond 8bits: Subjective and Objective Quality Assessment of HDR-UGC Videos'
+  authors:
+  - Shreshth Saini
+  - Bowen Chen
+  - Neil Birkbeck
+  - Yilin Wang
+  - Balu Adsumilli
+  - Alan C. Bovik
+  published: '2026-03-01'
+  updated: '2026-03-01'
+  categories:
+  - cs.CV
+  - cs.AI
+  abstract: High Dynamic Range (HDR) user-generated (UGC) videos are rapidly proliferating across social
+    platforms, yet most perceptual video quality assessment (VQA) systems remain tailored to Standard
+    Dynamic Range (SDR). HDR has a higher bit depth, wide color gamut, and elevated luminance range, exposing
+    distortions such as near-black crushing, highlight clipping, banding, and exposure flicker that amplify
+    UGC artifacts and challenge SDR models. To catalyze progress, we curate Beyond8Bits, a large-scale
+    subjective dataset of 44K videos from 6.5K sources with over 1.5M crowd ratings, spanning diverse
+    scenes, capture conditions, and compression settings. We further introduce HDR-Q, the first Multimodal
+    Large Language Model (MLLM) for HDR-UGC VQA. We propose (i) a novel HDR-aware vision encoder to produce
+    HDR-sensitive embeddings, and (ii) HDR-Aware Policy Optimization (HAPO), an RL finetuning framework
+    that anchors reasoning to HDR cues. HAPO augments GRPO via an HDR-SDR contrastive KL that encourages
+    token reliance on HDR inputs and a Gaussian weighted regression reward for fine-grained MOS calibration.
+    Across Beyond8Bits and public HDR-VQA benchmarks, HDR-Q delivers state-of-the-art performance.
+  url: https://arxiv.org/abs/2603.00938
+  pdf_url: https://arxiv.org/pdf/2603.00938v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 1
+citation_year: 2026

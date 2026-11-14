@@ -1,0 +1,36 @@
+id: paper:arxiv:2507.20181
+status: skipped
+score: 1
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 1
+  weight: 1
+meta:
+  title: 'SGPO: Self-Generated Preference Optimization based on Self-Improver'
+  authors:
+  - Hyeonji Lee
+  - Daejin Jo
+  - Seohwan Yun
+  - Sungwoong Kim
+  published: '2025-07-27'
+  updated: '2025-07-27'
+  categories:
+  - cs.CL
+  - cs.AI
+  abstract: Large language models (LLMs), despite their extensive pretraining on diverse datasets, require
+    effective alignment to human preferences for practical and reliable deployment. Conventional alignment
+    methods typically employ off-policy learning and depend on human-annotated datasets, which limits
+    their broad applicability and introduces distribution shift issues during training. To address these
+    challenges, we propose Self-Generated Preference Optimization based on Self-Improver (SGPO), an innovative
+    alignment framework that leverages an on-policy self-improving mechanism. Specifically, the improver
+    refines responses from a policy model to self-generate preference data for direct preference optimization
+    (DPO) of the policy model. Here, the improver and policy are unified into a single model, and in order
+    to generate higher-quality preference data, this self-improver learns to make incremental yet discernible
+    improvements to the current responses by referencing supervised fine-tuning outputs. Experimental
+    results on AlpacaEval 2.0 and Arena-Hard show that the proposed SGPO significantly improves performance
+    over DPO and baseline self-improving methods without using external preference data.
+  url: https://arxiv.org/abs/2507.20181
+  pdf_url: https://arxiv.org/pdf/2507.20181v1
+  version: v1
+fetched: '2026-11-14'

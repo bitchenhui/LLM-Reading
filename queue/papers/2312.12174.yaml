@@ -1,0 +1,39 @@
+id: paper:arxiv:2312.12174
+status: skipped_low_citation
+score: 6
+track: video_image_coding
+matched:
+- ref: codec:HEVC
+  count: 2
+  weight: 3
+- ref: impl:HM
+  count: 2
+  weight: 3
+meta:
+  title: Low-Consumption Partial Transcoding by HEVC
+  authors:
+  - Mohsen Abdoli
+  - Félix Henry
+  - Gordon Clare
+  published: '2023-12-19'
+  updated: '2023-12-19'
+  categories:
+  - cs.MM
+  abstract: A transcoding scheme for the High Efficiency Video Coding (HEVC) is proposed that allows any
+    partial frame modification to be followed by a partial re-compression of only the modified areas,
+    while guaranteeing identical reconstruction of non-modified areas. To this end, first, syntax elements
+    of all Coding Units (CU) in the frame are parsed and decoded according to their scan order. Then CUs
+    that are collocated with a replaced area are re-encoded with new content to generate a partial set
+    of new syntax elements. In order to avoid spatial propagation of the decoding mismatch due to the
+    new content, CUs on the border of the replaced area are losslessly coded such that reconstruction
+    of immediately neighboring CUs in the scan order are protected from the modification. The proposed
+    method has been implemented on top of the HEVC test Model (HM) in All-Intra (AI) coding configuration
+    and experiments show that, depending on the test parameters, it can offer both a bitrate saving (up
+    to 4% in terms of BD-BR) and a transcoding acceleration (up to 83%) compared to a full transcoding
+    scheme.
+  url: https://arxiv.org/abs/2312.12174
+  pdf_url: https://arxiv.org/pdf/2312.12174v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 2
+citation_year: 2023

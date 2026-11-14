@@ -1,0 +1,38 @@
+id: paper:arxiv:2208.05010
+status: skipped_low_citation
+score: 5
+track: processing_enhancement
+matched:
+- ref: codec:G-PCC
+  count: 1
+  weight: 3
+- ref: concept:SuperResolution
+  count: 1
+  weight: 1
+- ref: org:MPEG
+  count: 1
+  weight: 1
+meta:
+  title: G-PCC Post-Processing Using Fractional Super-Resolution
+  authors:
+  - Renan U. B. Ferreira
+  - Tomas M. Borges
+  - Diogo C. Garcia
+  - Ricardo L. de Queiroz
+  published: '2022-08-09'
+  updated: '2022-08-09'
+  categories:
+  - eess.IV
+  abstract: We present a method for post-processing point clouds' geometric information by applying a
+    previously proposed fractional super-resolution technique to clouds compressed and decoded with MPEG's
+    G-PCC codec. In some sense, this is a continuation of that previous work, which requires only a down-scaled
+    point cloud and a scaling factor, both of which are provided by the G-PCC codec. For non-solid point
+    clouds, an a priori down-scaling is required for improved efficiency. The method is compared to the
+    GPCC itself, as well as machine-learning-based techniques. Results show a great improvement in quality
+    over GPCC and comparable performance to the latter techniques, with the
+  url: https://arxiv.org/abs/2208.05010
+  pdf_url: https://arxiv.org/pdf/2208.05010v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 1
+citation_year: 2022

@@ -1,0 +1,34 @@
+id: paper:arxiv:2609.16567
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: Counterfactual Reasoning for Robust Visual Question Answering
+  authors:
+  - Truong-Binh Duong
+  - Thanh-Ngan Tran
+  - Ngoc-Thao Nguyen
+  - Bac Le
+  published: '2026-09-15'
+  updated: '2026-09-15'
+  categories:
+  - cs.CV
+  abstract: 'Modern Visual Question Answering (VQA) models often exploit spurious correlations in training
+    data, leading to poor out-of-distribution (OOD) generalization due to language bias. Although counterfactual
+    learning has shown promise, existing methods can be improved to better guide attention toward causal
+    evidence and strengthen feature discrimination. To address this, we propose a novel training framework
+    that enhances counterfactual contrastive learning for VQA. Our framework introduces three key contributions:
+    (1) a three-stage curriculum for stable multi-objective optimization, (2) an enhanced Batch-Contrastive
+    loss for more discriminative feature learning, and (3) two novel regularizers, Answer-Contrastive
+    (AC) loss to refine the prediction space and Gradient-Discrepancy (GD) loss to enforce causal visual
+    grounding. Our model achieves a competitive accuracy of 61.64% on the bias-sensitive VQA-CP v2 benchmark
+    while maintaining 62.80% on the standard VQA v2 dataset, yielding a small generalization gap of 1.16%.
+    This demonstrates a strong balance between OOD robustness and in-distribution performance.'
+  url: https://arxiv.org/abs/2609.16567
+  pdf_url: https://arxiv.org/pdf/2609.16567v1
+  version: v1
+fetched: '2026-11-14'

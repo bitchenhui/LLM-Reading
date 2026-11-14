@@ -1,0 +1,42 @@
+id: paper:arxiv:2602.18394
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: Self-Aware Object Detection via Degradation Manifolds
+  authors:
+  - Stefan Becker
+  - Simon Weiss
+  - Wolfgang Hübner
+  - Michael Arens
+  published: '2026-02-20'
+  updated: '2026-11-08'
+  categories:
+  - cs.CV
+  abstract: 'Object detectors achieve strong performance under nominal imaging conditions but can fail
+    silently when exposed to blur, noise, compression, adverse weather, or resolution changes. In safety-critical
+    settings, it is therefore insufficient to produce predictions without assessing whether the input
+    remains within the detector''s nominal operating regime, which we refer to as self-aware object detection.
+    We introduce a degradation-aware framework based on degradation manifolds, which structure a detector''s
+    feature space according to image degradation rather than semantic content. Our method augments a standard
+    detection backbone with a lightweight embedding head trained via multi-layer contrastive learning,
+    where images sharing the same degradation composition are pulled together while differing configurations
+    are separated. Unlike prior contrastive IQA approaches, our method performs detector-aligned input-fidelity
+    monitoring: it uses task-backbone features and a nominal prototype to detect degradation-induced shifts,
+    rather than estimating perceptual image quality in a standalone representation. To anchor the representation,
+    we estimate a pristine prototype from clean training embeddings, defining a nominal operating point
+    in feature space. Self-awareness is then derived as geometric deviation from this reference, providing
+    an intrinsic image-level signal of degradation-induced shift that is independent of detection confidence.
+    Experiments on synthetic corruptions, cross-dataset zero-shot transfer, and natural weather-induced
+    shifts show strong pristine-degraded separability, consistent behavior across detector architectures,
+    and robust generalization across datasets with substantial content variation. These results suggest
+    that degradation-aware detector representations provide a reliable signal for monitoring input-fidelity
+    shifts.'
+  url: https://arxiv.org/abs/2602.18394
+  pdf_url: https://arxiv.org/pdf/2602.18394v2
+  version: v2
+fetched: '2026-11-14'

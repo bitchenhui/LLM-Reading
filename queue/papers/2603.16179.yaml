@@ -1,0 +1,44 @@
+id: paper:arxiv:2603.16179
+status: pending
+score: 2
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+- ref: concept:TrainingFree
+  count: 1
+  weight: 1
+meta:
+  title: '360° Image Perception with MLLMs: A Comprehensive Benchmark and a Training-Free Method'
+  authors:
+  - Huyen T. T. Tran
+  - Van-Quang Nguyen
+  - Farros Alferro
+  - Kang-Jun Liu
+  - Takayuki Okatani
+  published: '2026-03-17'
+  updated: '2026-03-26'
+  categories:
+  - cs.CV
+  - cs.AI
+  abstract: Multimodal Large Language Models (MLLMs) have shown impressive abilities in understanding
+    and reasoning over conventional images. However, their perception of 360° images remains largely underexplored.
+    Unlike conventional images, 360° images capture the entire surrounding environment, enabling holistic
+    spatial reasoning but introducing challenges such as geometric distortion and complex spatial relations.
+    To comprehensively assess MLLMs' capabilities to perceive 360° images, we introduce 360Bench, a Visual
+    Question Answering (VQA) benchmark featuring 7K-resolution 360° images, seven representative (sub)tasks
+    with annotations carefully curated by human annotators. Using 360Bench, we systematically evaluate
+    seven MLLMs and six enhancement methods, revealing their shortcomings in 360° image perception. To
+    address these challenges, we propose Free360, a training-free scene-graph-based framework for high-resolution
+    360° VQA. Free360 decomposes the reasoning process into modular steps, applies adaptive spherical
+    image transformations to 360° images tailored to each step, and seamlessly integrates the resulting
+    information into a unified graph representation for answer generation. Experiments show that Free360
+    consistently improves its base MLLM and provides a strong training-free solution for 360° VQA tasks.
+    The source code and dataset will be publicly released upon acceptance.
+  url: https://arxiv.org/abs/2603.16179
+  pdf_url: https://arxiv.org/pdf/2603.16179v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 4
+citation_year: 2026

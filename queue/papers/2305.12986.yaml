@@ -1,0 +1,38 @@
+id: paper:arxiv:2305.12986
+status: skipped
+score: 0
+track: video_image_coding
+matched: []
+meta:
+  title: Sparsity and Coefficient Permutation Based Two-Domain AMP for Image Block Compressed Sensing
+  authors:
+  - Junhui Li
+  - Xingsong Hou
+  - Huake Wang
+  - Shuhao Bi
+  published: '2023-05-22'
+  updated: '2023-08-17'
+  categories:
+  - cs.CV
+  - cs.MM
+  - eess.IV
+  abstract: 'The learned denoising-based approximate message passing (LDAMP) algorithm has attracted great
+    attention for image compressed sensing (CS) tasks. However, it has two issues: first, its global measurement
+    model severely restricts its applicability to high-dimensional images, and its block-based measurement
+    method exhibits obvious block artifacts; second, the denoiser in the LDAMP is too simple, and existing
+    denoisers have limited ability in detail recovery. In this paper, to overcome the issues and develop
+    a high-performance LDAMP method for image block compressed sensing (BCS), we propose a novel sparsity
+    and coefficient permutation-based AMP (SCP-AMP) method consisting of the block-based sampling and
+    the two-domain reconstruction modules. In the sampling module, SCP-AMP adopts a discrete cosine transform
+    (DCT) based sparsity strategy to reduce the impact of the high-frequency coefficient on the reconstruction,
+    followed by a coefficient permutation strategy to avoid block artifacts. In the reconstruction module,
+    a two-domain AMP method with DCT domain noise correction and pixel domain denoising is proposed for
+    iterative reconstruction. Regarding the denoiser, we proposed a multi-level deep attention network
+    (MDANet) to enhance the texture details by employing multi-level features and multiple attention mechanisms.
+    Extensive experiments demonstrated that the proposed SCP-AMP method achieved better reconstruction
+    accuracy than other state-of-the-art BCS algorithms in terms of both visual perception and objective
+    metrics.'
+  url: https://arxiv.org/abs/2305.12986
+  pdf_url: https://arxiv.org/pdf/2305.12986v2
+  version: v2
+fetched: '2026-11-14'

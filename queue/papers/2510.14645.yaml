@@ -1,0 +1,42 @@
+id: paper:arxiv:2510.14645
+status: skipped_low_citation
+score: 6
+track: video_image_coding
+matched:
+- ref: codec:VVC
+  count: 2
+  weight: 3
+- ref: impl:VVenC
+  count: 1
+  weight: 3
+meta:
+  title: Block-Partitioning Strategies for Accelerated Multi-rate Encoding in Adaptive VVC Streaming
+  authors:
+  - Vignesh V Menon
+  - Adam Wieckowski
+  - Yiquin Liu
+  - Benjamin Bross
+  - Detlev Marpe
+  published: '2025-10-16'
+  updated: '2025-10-16'
+  categories:
+  - cs.MM
+  abstract: The demand for efficient multi-rate encoding techniques has surged with the increasing prevalence
+    of ultra-high-definition (UHD) video content, particularly in adaptive streaming scenarios where a
+    single video must be encoded at multiple bitrates to accommodate diverse network conditions. While
+    Versatile Video Coding (VVC) significantly improves compression efficiency, it introduces considerable
+    computational complexity, making multi-rate encoding a resource-intensive task. This paper examines
+    coding unit (CU) partitioning strategies to minimize redundant computations in VVC while preserving
+    high video quality. We propose single- and double-bound approaches, leveraging CU depth constraints
+    from reference encodes to guide dependent encodes across multiple QPs. These methods are evaluated
+    using VVenC with various presets, demonstrating consistent improvements in encoding efficiency. Our
+    methods achieve up to 11.69 % reduction in encoding time with minimal bitrate overhead (<0.6 %). Comparative
+    Pareto-front (PF) analysis highlights the superior performance of multi-rate approaches over existing
+    configurations. These findings validate the potential of CU-guided strategies for scalable multi-rate
+    encoding in adaptive streaming.
+  url: https://arxiv.org/abs/2510.14645
+  pdf_url: https://arxiv.org/pdf/2510.14645v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 1
+citation_year: 2025

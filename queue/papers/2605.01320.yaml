@@ -1,0 +1,33 @@
+id: paper:arxiv:2605.01320
+status: skipped
+score: 0
+track: immersive_media
+matched: []
+meta:
+  title: 'PACE: Post-Causal Entropy Modeling for Learned LiDAR Point Cloud Compression'
+  authors:
+  - Jiahao Zhu
+  - Kang You
+  - Dandan Ding
+  - Zhan Ma
+  published: '2026-05-02'
+  updated: '2026-06-06'
+  categories:
+  - cs.CV
+  abstract: 'LiDAR point cloud compression is vital for autonomous systems to handle massive data from
+    high-resolution sensors. While learned entropy modeling built upon octree structures yields high compression
+    gains, it faces two critical bottlenecks: 1) prohibitive latency, particularly during decoding, caused
+    by causal, multi-stage context modeling; and 2) a rigid performance-latency trade-off, preventing
+    a single model from adapting to varying constraints. These limitations stem from the tight coupling
+    between the context aggregation backbone and probability prediction. To address this, we propose PACE,
+    a new framework that reformulates ancestral context aggregation as a non-causal backbone and confines
+    causality to a lightweight, stage-scalable predictor, eliminating repetitive backbone executions and
+    reducing computational overhead. The predictor supports an arbitrary number of prediction stages,
+    enabling seamless adaptation across diverse performance-latency trade-offs without reloading parameters.
+    Experiments demonstrate that PACE sets a new state-of-the-art in compression efficiency, achieving
+    notable BD-BR savings and reducing decoding latency by over 90\% in autoregressive mode, making it
+    attractive for practical applications.'
+  url: https://arxiv.org/abs/2605.01320
+  pdf_url: https://arxiv.org/pdf/2605.01320v2
+  version: v2
+fetched: '2026-11-14'

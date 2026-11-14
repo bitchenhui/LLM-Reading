@@ -1,0 +1,44 @@
+id: paper:arxiv:2603.20638
+status: skipped
+score: 1
+track: audio_coding
+matched:
+- ref: concept:NeuralAudioCodec
+  count: 1
+  weight: 1
+meta:
+  title: 'OmniCodec: Low Frame Rate Universal Audio Codec with Semantic-Acoustic Disentanglement'
+  authors:
+  - Jingbin Hu
+  - Haoyu Zhang
+  - Dake Guo
+  - Qirui Zhan
+  - Wenhao Li
+  - Huakang Chen
+  - Guobin Ma
+  - Hanke Xie
+  - Chengyou Wang
+  - Pengyuan Xie
+  - Chuan Xie
+  - Qiang Zhang
+  - Lei Xie
+  published: '2026-03-21'
+  updated: '2026-03-21'
+  categories:
+  - eess.AS
+  abstract: Large Language Models (LLMs) have advanced audio generation through discrete representation
+    learning. However, most existing neural codecs focus on speech and emphasize reconstruction fidelity,
+    overlooking unified low frame rate modeling across diverse audio domains, including speech, music,
+    and general sound. Moreover, high reconstruction quality does not necessarily yield semantically informative
+    representations, limiting effectiveness in downstream generation tasks. We propose OmniCodec, a universal
+    neural audio codec tailored for low frame rate. It adopts a hierarchical multi-codebook design with
+    semantic-acoustic decoupling by leveraging the audio encoder of the pre-trained understanding model,
+    along with a self-guidance strategy to improve codebook utilization and reconstruction. Compared with
+    the Mimi codec, experiments show that OmniCodec achieves outstanding performance at the same bitrate,
+    delivering superior reconstruction quality while also providing more semantically informative representations
+    that benefit downstream generation tasks. Our model and code will be open-sourced. Our demo page is
+    available.
+  url: https://arxiv.org/abs/2603.20638
+  pdf_url: https://arxiv.org/pdf/2603.20638v1
+  version: v1
+fetched: '2026-11-14'

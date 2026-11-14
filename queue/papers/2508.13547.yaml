@@ -1,0 +1,43 @@
+id: paper:arxiv:2508.13547
+status: skipped_low_citation
+score: 3
+track: video_image_coding
+matched:
+- ref: codec:VVC
+  count: 2
+  weight: 3
+meta:
+  title: A Lightweight Dual-Mode Optimization for Generative Face Video Coding
+  authors:
+  - Zihan Zhang
+  - Shanzhi Yin
+  - Bolin Chen
+  - Ru-Ling Liao
+  - Shiqi Wang
+  - Yan Ye
+  published: '2025-08-19'
+  updated: '2025-08-19'
+  categories:
+  - cs.CV
+  - eess.IV
+  abstract: 'Generative Face Video Coding (GFVC) achieves superior rate-distortion performance by leveraging
+    the strong inference capabilities of deep generative models. However, its practical deployment is
+    hindered by large model parameters and high computational costs. To address this, we propose a lightweight
+    GFVC framework that introduces dual-mode optimization -- combining architectural redesign and operational
+    refinement -- to reduce complexity whilst preserving reconstruction quality. Architecturally, we replace
+    traditional 3 x 3 convolutions with slimmer and more efficient layers, reducing complexity without
+    compromising feature expressiveness. Operationally, we develop a two-stage adaptive channel pruning
+    strategy: (1) soft pruning during training identifies redundant channels via learnable thresholds,
+    and (2) hard pruning permanently eliminates these channels post-training using a derived mask. This
+    dual-phase approach ensures both training stability and inference efficiency. Experimental results
+    demonstrate that the proposed lightweight dual-mode optimization for GFVC can achieve 90.4% parameter
+    reduction and 88.9% computation saving compared to the baseline, whilst achieving superior performance
+    compared to state-of-the-art video coding standard Versatile Video Coding (VVC) in terms of perceptual-level
+    quality metrics. As such, the proposed method is expected to enable efficient GFVC deployment in resource-constrained
+    environments such as mobile edge devices.'
+  url: https://arxiv.org/abs/2508.13547
+  pdf_url: https://arxiv.org/pdf/2508.13547v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 0
+citation_year: 2025

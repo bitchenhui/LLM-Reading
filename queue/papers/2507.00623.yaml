@@ -1,0 +1,47 @@
+id: paper:arxiv:2507.00623
+status: pending
+score: 6
+track: streaming_delivery
+matched:
+- ref: impl:FFmpeg
+  count: 1
+  weight: 3
+- ref: concept:DASH
+  count: 3
+  weight: 1
+- ref: concept:QUIC
+  count: 1
+  weight: 1
+- ref: concept:WebRTC
+  count: 1
+  weight: 1
+meta:
+  title: 'Remote Rendering for Virtual Reality: performance comparison of multimedia frameworks and protocols'
+  authors:
+  - Daniel Mejías
+  - Inhar Yeregui
+  - Roberto Viola
+  - Miguel Fernández
+  - Mario Montagud
+  published: '2025-07-01'
+  updated: '2025-07-01'
+  categories:
+  - cs.NI
+  abstract: The increasing complexity of Extended Reality (XR) applications demands substantial processing
+    power and high bandwidth communications, often unavailable on lightweight devices. Remote rendering
+    consists of offloading processing tasks to a remote node with a powerful GPU, delivering the rendered
+    content to the end device. The delivery is usually performed through popular streaming protocols such
+    as Web Real-Time Communications (WebRTC), offering a data channel for interactions, or Dynamic Adaptive
+    Streaming over HTTP (DASH), better suitable for scalability. Moreover, new streaming protocols based
+    on QUIC are emerging as potential replacements for WebRTC and DASH and offer benefits like connection
+    migration, stream multiplexing and multipath delivery. This work describes the integration of the
+    two most popular multimedia frameworks, GStreamer and FFmpeg, with a rendering engine acting as a
+    Remote Renderer, and analyzes their performance when offering different protocols for delivering the
+    rendered content to the end device over WIFI or 5G. This solution constitutes a beyond state-of-the-art
+    testbed to conduct cutting-edge research in the XR field.
+  url: https://arxiv.org/abs/2507.00623
+  pdf_url: https://arxiv.org/pdf/2507.00623v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 5
+citation_year: 2025

@@ -1,0 +1,39 @@
+id: paper:arxiv:2405.06342
+status: skipped
+score: 0
+track: processing_enhancement
+matched: []
+meta:
+  title: Compression-Realized Deep Structural Network for Video Quality Enhancement
+  authors:
+  - Hanchi Sun
+  - Xiaohong Liu
+  - Xinyang Jiang
+  - Yifei Shen
+  - Dongsheng Li
+  - Xiongkuo Min
+  - Guangtao Zhai
+  published: '2024-05-10'
+  updated: '2024-08-20'
+  categories:
+  - cs.CV
+  - eess.IV
+  abstract: This paper focuses on the task of quality enhancement for compressed videos. Although deep
+    network-based video restorers achieve impressive progress, most of the existing methods lack a structured
+    design to optimally leverage the priors within compression codecs. Since the quality degradation of
+    the video is primarily induced by the compression algorithm, a new paradigm is urgently needed for
+    a more ``conscious'' process of quality enhancement. As a result, we propose the Compression-Realized
+    Deep Structural Network (CRDS), introducing three inductive biases aligned with the three primary
+    processes in the classic compression codec, merging the strengths of classical encoder architecture
+    with deep network capabilities. Inspired by the residual extraction and domain transformation process
+    in the codec, a pre-trained Latent Degradation Residual Auto-Encoder is proposed to transform video
+    frames into a latent feature space, and the mutual neighborhood attention mechanism is integrated
+    for precise motion estimation and residual extraction. Furthermore, drawing inspiration from the quantization
+    noise distribution of the codec, CRDS proposes a novel Progressive Denoising framework with intermediate
+    supervision that decomposes the quality enhancement into a series of simpler denoising sub-tasks.
+    Experimental results on datasets like LDV 2.0 and MFQE 2.0 indicate our approach surpasses state-of-the-art
+    models.
+  url: https://arxiv.org/abs/2405.06342
+  pdf_url: https://arxiv.org/pdf/2405.06342v4
+  version: v4
+fetched: '2026-11-14'

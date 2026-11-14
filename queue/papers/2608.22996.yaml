@@ -1,0 +1,37 @@
+id: paper:arxiv:2608.22996
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'ENCORE: Entropy-Guided Cropping and Attention Regularization for Robust Vision--Language Understanding'
+  authors:
+  - Yuanhao Sun
+  - Huawei Ji
+  - Jiaxin Ding
+  - Luoyi Fu
+  - Xinbing Wang
+  published: '2026-08-24'
+  updated: '2026-08-24'
+  categories:
+  - cs.CV
+  abstract: 'Vision-Language Models (VLMs) perform well on diverse vision-language tasks, but transformer-based
+    visual encoders split images into fixed-resolution sub-images, compromising object integrity in lightweight
+    VLMs. Existing methods only focus on the visual modality and fail to dynamically preserve the integrity
+    of prompt-relevant regions, limiting performance. In this work, we observe that the early-layer image-text
+    entropy of cross-modal attention strongly correlates with answer grounding quality and task accuracy.
+    Building on this finding, we propose \textbf{ENCORE}, an entropy-guided framework with two components:
+    At inference, an \textbf{Entropy-based Cropping Strategy} (ECS) evaluates a small set of candidate
+    crops and selects the one with minimal entropy, preserving contiguous regions relevant to the prompt.
+    At training, \textbf{Entropy Regularization Training} (ERT) augments next-token prediction with an
+    entropy term that sharpens attention on key visual tokens while down-weighting irrelevant ones. Experiments
+    on ten VQA benchmarks show that ENCORE, fine-tuning only 0.14\% of parameters, achieves an average
+    1.43\% accuracy gain and state-of-the-art performance among recent 2B-parameter VLMs. Our code is
+    released in https://github.com/baokou-fw2/ENCORE.'
+  url: https://arxiv.org/abs/2608.22996
+  pdf_url: https://arxiv.org/pdf/2608.22996v1
+  version: v1
+fetched: '2026-11-14'

@@ -1,0 +1,39 @@
+id: paper:arxiv:2601.16473
+status: skipped
+score: 1
+track: processing_enhancement
+matched:
+- ref: concept:SuperResolution
+  count: 1
+  weight: 1
+meta:
+  title: 'DeMark: A Query-Free Black-Box Attack on Deepfake Watermarking Defenses'
+  authors:
+  - Wei Song
+  - Zhenchang Xing
+  - Liming Zhu
+  - Yulei Sui
+  - Jingling Xue
+  published: '2026-01-23'
+  updated: '2026-01-23'
+  categories:
+  - cs.CR
+  - cs.AI
+  - cs.CV
+  abstract: The rapid proliferation of realistic deepfakes has raised urgent concerns over their misuse,
+    motivating the use of defensive watermarks in synthetic images for reliable detection and provenance
+    tracking. However, this defense paradigm assumes such watermarks are inherently resistant to removal.
+    We challenge this assumption with DeMark, a query-free black-box attack framework that targets defensive
+    image watermarking schemes for deepfakes. DeMark exploits latent-space vulnerabilities in encoder-decoder
+    watermarking models through a compressive sensing based sparsification process, suppressing watermark
+    signals while preserving perceptual and structural realism appropriate for deepfakes. Across eight
+    state-of-the-art watermarking schemes, DeMark reduces watermark detection accuracy from 100% to 32.9%
+    on average while maintaining natural visual quality, outperforming existing attacks. We further evaluate
+    three defense strategies, including image super resolution, sparse watermarking, and adversarial training,
+    and find them largely ineffective. These results demonstrate that current encoder decoder watermarking
+    schemes remain vulnerable to latent-space manipulations, underscoring the need for more robust watermarking
+    methods to safeguard against deepfakes.
+  url: https://arxiv.org/abs/2601.16473
+  pdf_url: https://arxiv.org/pdf/2601.16473v1
+  version: v1
+fetched: '2026-11-14'

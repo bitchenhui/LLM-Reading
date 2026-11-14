@@ -1,0 +1,41 @@
+id: paper:arxiv:2507.22746
+status: skipped
+score: 0
+track: audio_coding
+matched: []
+meta:
+  title: Next Tokens Denoising for Speech Synthesis
+  authors:
+  - Yanqing Liu
+  - Ruiqing Xue
+  - Chong Zhang
+  - Yufei Liu
+  - Gang Wang
+  - Bohan Li
+  - Yao Qian
+  - Lei He
+  - Shujie Liu
+  - Sheng Zhao
+  published: '2025-07-30'
+  updated: '2025-08-01'
+  categories:
+  - cs.SD
+  - cs.CL
+  - eess.AS
+  abstract: While diffusion and autoregressive (AR) models have significantly advanced generative modeling,
+    they each present distinct limitations. AR models, which rely on causal attention, cannot exploit
+    future context and suffer from slow generation speeds. Conversely, diffusion models struggle with
+    key-value (KV) caching. To overcome these challenges, we introduce Dragon-FM, a novel text-to-speech
+    (TTS) design that unifies AR and flow-matching. This model processes 48 kHz audio codec tokens in
+    chunks at a compact rate of 12.5 tokens per second. This design enables AR modeling across chunks,
+    ensuring global coherence, while parallel flow-matching within chunks facilitates fast iterative denoising.
+    Thus, the model leverages KV-cache across chunks and utilizes bidirectional context within each chunk.
+    Furthermore, it bridges continuous and discrete feature modeling, demonstrating that continuous AR
+    flow-matching can predict discrete tokens with finite scalar quantizers. This efficient codec and
+    fast chunk-autoregressive architecture also make the model highly effective for generating long-form
+    content, such as podcasts. Experiments on podcast datasets demonstrate its capability to efficiently
+    generate high-quality zero-shot podcasts.
+  url: https://arxiv.org/abs/2507.22746
+  pdf_url: https://arxiv.org/pdf/2507.22746v2
+  version: v2
+fetched: '2026-11-14'

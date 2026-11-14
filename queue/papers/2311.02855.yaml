@@ -1,0 +1,49 @@
+id: paper:arxiv:2311.02855
+status: skipped
+score: 1
+track: video_image_coding
+matched:
+- ref: concept:EntropyModel
+  count: 2
+  weight: 1
+meta:
+  title: Neural-based Compression Scheme for Solar Image Data
+  authors:
+  - Ali Zafari
+  - Atefeh Khoshkhahtinat
+  - Jeremy A. Grajeda
+  - Piyush M. Mehta
+  - Nasser M. Nasrabadi
+  - Laura E. Boucheron
+  - Barbara J. Thompson
+  - Michael S. F. Kirk
+  - Daniel da Silva
+  published: '2023-11-06'
+  updated: '2023-11-06'
+  categories:
+  - eess.IV
+  - cs.CV
+  - cs.IT
+  abstract: Studying the solar system and especially the Sun relies on the data gathered daily from space
+    missions. These missions are data-intensive and compressing this data to make them efficiently transferable
+    to the ground station is a twofold decision to make. Stronger compression methods, by distorting the
+    data, can increase data throughput at the cost of accuracy which could affect scientific analysis
+    of the data. On the other hand, preserving subtle details in the compressed data requires a high amount
+    of data to be transferred, reducing the desired gains from compression. In this work, we propose a
+    neural network-based lossy compression method to be used in NASA's data-intensive imagery missions.
+    We chose NASA's SDO mission which transmits 1.4 terabytes of data each day as a proof of concept for
+    the proposed algorithm. In this work, we propose an adversarially trained neural network, equipped
+    with local and non-local attention modules to capture both the local and global structure of the image
+    resulting in a better trade-off in rate-distortion (RD) compared to conventional hand-engineered codecs.
+    The RD variational autoencoder used in this work is jointly trained with a channel-dependent entropy
+    model as a shared prior between the analysis and synthesis transforms to make the entropy coding of
+    the latent code more effective. Our neural image compression algorithm outperforms currently-in-use
+    and state-of-the-art codecs such as JPEG and JPEG-2000 in terms of the RD performance when compressing
+    extreme-ultraviolet (EUV) data. As a proof of concept for use of this algorithm in SDO data analysis,
+    we have performed coronal hole (CH) detection using our compressed images, and generated consistent
+    segmentations, even at a compression rate of $\sim0.1$ bits per pixel (compared to 8 bits per pixel
+    on the original data) using EUV data from SDO.
+  url: https://arxiv.org/abs/2311.02855
+  pdf_url: https://arxiv.org/pdf/2311.02855v1
+  version: v1
+fetched: '2026-11-14'

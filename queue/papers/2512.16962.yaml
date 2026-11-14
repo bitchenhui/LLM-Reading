@@ -1,0 +1,46 @@
+id: paper:arxiv:2512.16962
+status: pending
+score: 2
+track: self_improvement
+matched:
+- ref: concept:LLM
+  count: 2
+  weight: 1
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+meta:
+  title: 'MemoryGraft: Persistent Compromise of LLM Agents via Poisoned Experience Retrieval'
+  authors:
+  - Saksham Sahai Srivastava
+  - Haoyu He
+  published: '2025-12-18'
+  updated: '2025-12-18'
+  categories:
+  - cs.CR
+  - cs.AI
+  - cs.LG
+  abstract: Large Language Model (LLM) agents increasingly rely on long-term memory and Retrieval-Augmented
+    Generation (RAG) to persist experiences and refine future performance. While this experience learning
+    capability enhances agentic autonomy, it introduces a critical, unexplored attack surface, i.e., the
+    trust boundary between an agent's reasoning core and its own past. In this paper, we introduce MemoryGraft.
+    It is a novel indirect injection attack that compromises agent behavior not through immediate jailbreaks,
+    but by implanting malicious successful experiences into the agent's long-term memory. Unlike traditional
+    prompt injections that are transient, or standard RAG poisoning that targets factual knowledge, MemoryGraft
+    exploits the agent's semantic imitation heuristic which is the tendency to replicate patterns from
+    retrieved successful tasks. We demonstrate that an attacker who can supply benign ingestion-level
+    artifacts that the agent reads during execution can induce it to construct a poisoned RAG store where
+    a small set of malicious procedure templates is persisted alongside benign experiences. When the agent
+    later encounters semantically similar tasks, union retrieval over lexical and embedding similarity
+    reliably surfaces these grafted memories, and the agent adopts the embedded unsafe patterns, leading
+    to persistent behavioral drift across sessions. We validate MemoryGraft on MetaGPT's DataInterpreter
+    agent with GPT-4o and find that a small number of poisoned records can account for a large fraction
+    of retrieved experiences on benign workloads, turning experience-based self-improvement into a vector
+    for stealthy and durable compromise. To facilitate reproducibility and future research, our code and
+    evaluation data are available at https://github.com/Jacobhhy/Agent-Memory-Poisoning.
+  url: https://arxiv.org/abs/2512.16962
+  pdf_url: https://arxiv.org/pdf/2512.16962v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 87
+citation_year: 2025

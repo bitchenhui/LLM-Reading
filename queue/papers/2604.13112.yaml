@@ -1,0 +1,37 @@
+id: paper:arxiv:2604.13112
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 4
+  weight: 1
+meta:
+  title: A Lightweight Global-Target Framework for Multi-Domain No-Reference Image Quality Assessment
+    in UAV Imagery
+  authors:
+  - Koffi Titus Sergio Aglin
+  - Anthony K. Muchiri
+  - Celestin Nkundineza
+  published: '2026-04-12'
+  updated: '2026-11-11'
+  categories:
+  - cs.CV
+  abstract: Reliable image quality assessment is essential in applications where large volumes of images
+    are acquired automatically and must be filtered before further analysis. In many practical scenarios,
+    a pristine reference image is unavailable, making no reference image quality assessment (NR-IQA) particularly
+    important. This paper introduces Multi-Metric Image Quality Assessment (MM-IQA), a lightweight multi-metric
+    framework for NR-IQA. It combines interpretable cues related to blur, edge structure, low resolution
+    artifacts, exposure imbalance, noise, haze, and frequency content to produce a single quality score
+    in the range [0,100].MM-IQA was evaluated on five benchmark datasets (KonIQ-10k, LIVE Challenge, KADID-10k,
+    TID2013, and BIQ2021) and achieved SRCC values ranging from 0.647 to 0.830. Additional experiments
+    on a synthetic agricultural dataset showed consistent behavior of the designed cues. The Python/OpenCV
+    implementation required about 1.97 s per image. This method also has modest memory requirements because
+    it stores only a limited number of intermediate grayscale, filtered, and frequency-domain representations,
+    resulting in memory usage that scales linearly with image size. The results show that MM-IQA can be
+    used for fast image quality screening with explicit distortion aware cues and modest computational
+    cost.
+  url: https://arxiv.org/abs/2604.13112
+  pdf_url: https://arxiv.org/pdf/2604.13112v5
+  version: v5
+fetched: '2026-11-14'

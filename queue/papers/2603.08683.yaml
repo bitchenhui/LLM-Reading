@@ -1,0 +1,32 @@
+id: paper:arxiv:2603.08683
+status: skipped
+score: 0
+track: audio_coding
+matched: []
+meta:
+  title: Benchmarking Language Modeling for Lossless Compression of Full-Fidelity Audio
+  authors:
+  - Phillip Long
+  - Zachary Novack
+  - Chris Donahue
+  published: '2026-03-09'
+  updated: '2026-10-31'
+  categories:
+  - cs.SD
+  - cs.AI
+  - cs.LG
+  - eess.AS
+  abstract: Autoregressive "language" models (LMs) trained on raw waveforms can be repurposed for lossless
+    audio compression, but prior work is limited to 8-bit audio, leaving open whether such approaches
+    work for practical settings (16/24-bit) and can compete with existing codecs. We benchmark LM-based
+    compression on full-fidelity audio across diverse domains (music, speech, bioacoustics), sampling
+    rates (16kHz-48kHz), and bit depths (8, 16, 24-bit). Standard sample-level tokenization becomes intractable
+    at higher bit depths due to vocabulary size (65K for 16-bit; 16.7M for 24-bit). We propose Trilobyte,
+    a byte-level tokenization schema for full resolution audio, improving vocabulary scaling from $O(2^{b})$
+    to $O(1)$ and enabling the first tractable 24-bit LM-based lossless compression. While LMs consistently
+    outperform FLAC and yield state-of-the-art compression at 8-bit and 16-bit, we observe that compression
+    gains become more modest as bit depth increases beyond 8-bit.
+  url: https://arxiv.org/abs/2603.08683
+  pdf_url: https://arxiv.org/pdf/2603.08683v3
+  version: v3
+fetched: '2026-11-14'

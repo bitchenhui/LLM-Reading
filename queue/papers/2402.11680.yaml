@@ -1,0 +1,37 @@
+id: paper:arxiv:2402.11680
+status: skipped
+score: 0
+track: video_image_coding
+matched: []
+meta:
+  title: 3D Point Cloud Compression with Recurrent Neural Network and Image Compression Methods
+  authors:
+  - Till Beemelmanns
+  - Yuchen Tao
+  - Bastian Lampe
+  - Lennart Reiher
+  - Raphael van Kempen
+  - Timo Woopen
+  - Lutz Eckstein
+  published: '2024-02-18'
+  updated: '2024-02-18'
+  categories:
+  - cs.CV
+  - cs.AI
+  - eess.IV
+  abstract: Storing and transmitting LiDAR point cloud data is essential for many AV applications, such
+    as training data collection, remote control, cloud services or SLAM. However, due to the sparsity
+    and unordered structure of the data, it is difficult to compress point cloud data to a low volume.
+    Transforming the raw point cloud data into a dense 2D matrix structure is a promising way for applying
+    compression algorithms. We propose a new lossless and calibrated 3D-to-2D transformation which allows
+    compression algorithms to efficiently exploit spatial correlations within the 2D representation. To
+    compress the structured representation, we use common image compression methods and also a self-supervised
+    deep compression approach using a recurrent neural network. We also rearrange the LiDAR's intensity
+    measurements to a dense 2D representation and propose a new metric to evaluate the compression performance
+    of the intensity. Compared to approaches that are based on generic octree point cloud compression
+    or based on raw point cloud data compression, our approach achieves the best quantitative and visual
+    performance. Source code and dataset are available at https://github.com/ika-rwth-aachen/Point-Cloud-Compression.
+  url: https://arxiv.org/abs/2402.11680
+  pdf_url: https://arxiv.org/pdf/2402.11680v1
+  version: v1
+fetched: '2026-11-14'

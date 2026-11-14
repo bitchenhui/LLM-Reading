@@ -1,0 +1,56 @@
+id: paper:arxiv:2307.15421
+status: pending
+score: 7
+track: video_image_coding
+matched:
+- ref: impl:VTM
+  count: 1
+  weight: 3
+- ref: concept:EntropyModel
+  count: 1
+  weight: 1
+- ref: dataset:Kodak
+  count: 1
+  weight: 1
+- ref: metric:BD-Rate
+  count: 1
+  weight: 1
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+meta:
+  title: 'MLIC++: Linear Complexity Multi-Reference Entropy Modeling for Learned Image Compression'
+  authors:
+  - Wei Jiang
+  - Jiayu Yang
+  - Yongqi Zhai
+  - Feng Gao
+  - Ronggang Wang
+  published: '2023-07-28'
+  updated: '2025-02-17'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: The latent representation in learned image compression encompasses channel-wise, local spatial,
+    and global spatial correlations, which are essential for the entropy model to capture for conditional
+    entropy minimization. Efficiently capturing these contexts within a single entropy model, especially
+    in high-resolution image coding, presents a challenge due to the computational complexity of existing
+    global context modules. To address this challenge, we propose the Linear Complexity Multi-Reference
+    Entropy Model (MEM$^{++}$). Specifically, the latent representation is partitioned into multiple slices.
+    For channel-wise contexts, previously compressed slices serve as the context for compressing a particular
+    slice. For local contexts, we introduce a shifted-window-based checkerboard attention module. This
+    module ensures linear complexity without sacrificing performance. For global contexts, we propose
+    a linear complexity attention mechanism. It captures global correlations by decomposing the softmax
+    operation, enabling the implicit computation of attention maps from previously decoded slices. Using
+    MEM$^{++}$ as the entropy model, we develop the image compression method MLIC$^{++}$. Extensive experimental
+    results demonstrate that MLIC$^{++}$ achieves state-of-the-art performance, reducing BD-rate by $13.39\%$
+    on the Kodak dataset compared to VTM-17.0 in Peak Signal-to-Noise Ratio (PSNR). Furthermore, MLIC$^{++}$
+    exhibits linear computational complexity and memory consumption with resolution, making it highly
+    suitable for high-resolution image coding. Code and pre-trained models are available at https://github.com/JiangWeibeta/MLIC.
+    Training dataset is available at https://huggingface.co/datasets/Whiteboat/MLIC-Train-100K.
+  url: https://arxiv.org/abs/2307.15421
+  pdf_url: https://arxiv.org/pdf/2307.15421v11
+  version: v11
+fetched: '2026-11-14'
+citation_count: 137
+citation_year: 2023

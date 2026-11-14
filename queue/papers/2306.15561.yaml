@@ -1,0 +1,45 @@
+id: paper:arxiv:2306.15561
+status: skipped
+score: 0
+track: video_image_coding
+matched: []
+meta:
+  title: You Can Mask More For Extremely Low-Bitrate Image Compression
+  authors:
+  - Anqi Li
+  - Feng Li
+  - Jiaxin Han
+  - Huihui Bai
+  - Runmin Cong
+  - Chunjie Zhang
+  - Meng Wang
+  - Weisi Lin
+  - Yao Zhao
+  published: '2023-06-27'
+  updated: '2023-06-27'
+  categories:
+  - cs.CV
+  - cs.MM
+  - eess.IV
+  abstract: Learned image compression (LIC) methods have experienced significant progress during recent
+    years. However, these methods are primarily dedicated to optimizing the rate-distortion (R-D) performance
+    at medium and high bitrates (> 0.1 bits per pixel (bpp)), while research on extremely low bitrates
+    is limited. Besides, existing methods fail to explicitly explore the image structure and texture components
+    crucial for image compression, treating them equally alongside uninformative components in networks.
+    This can cause severe perceptual quality degradation, especially under low-bitrate scenarios. In this
+    work, inspired by the success of pre-trained masked autoencoders (MAE) in many downstream tasks, we
+    propose to rethink its mask sampling strategy from structure and texture perspectives for high redundancy
+    reduction and discriminative feature representation, further unleashing the potential of LIC methods.
+    Therefore, we present a dual-adaptive masking approach (DA-Mask) that samples visible patches based
+    on the structure and texture distributions of original images. We combine DA-Mask and pre-trained
+    MAE in masked image modeling (MIM) as an initial compressor that abstracts informative semantic context
+    and texture representations. Such a pipeline can well cooperate with LIC networks to achieve further
+    secondary compression while preserving promising reconstruction quality. Consequently, we propose
+    a simple yet effective masked compression model (MCM), the first framework that unifies MIM and LIC
+    end-to-end for extremely low-bitrate image compression. Extensive experiments have demonstrated that
+    our approach outperforms recent state-of-the-art methods in R-D performance, visual quality, and downstream
+    applications, at very low bitrates. Our code is available at https://github.com/lianqi1008/MCM.git.
+  url: https://arxiv.org/abs/2306.15561
+  pdf_url: https://arxiv.org/pdf/2306.15561v1
+  version: v1
+fetched: '2026-11-14'

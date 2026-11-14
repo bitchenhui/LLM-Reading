@@ -1,0 +1,38 @@
+id: paper:arxiv:2512.22463
+status: skipped
+score: 1
+track: immersive_media
+matched:
+- ref: concept:EntropyModel
+  count: 2
+  weight: 1
+meta:
+  title: 'MEGA-PCC: A Mamba-based Efficient Approach for Joint Geometry and Attribute Point Cloud Compression'
+  authors:
+  - Kai-Hsiang Hsieh
+  - Monyneath Yim
+  - Wen-Hsiao Peng
+  - Jui-Chiu Chiang
+  published: '2025-12-27'
+  updated: '2025-12-27'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: Joint compression of point cloud geometry and attributes is essential for efficient 3D data
+    representation. Existing methods often rely on post-hoc recoloring procedures and manually tuned bitrate
+    allocation between geometry and attribute bitstreams in inference, which hinders end-to-end optimization
+    and increases system complexity. To overcome these limitations, we propose MEGA-PCC, a fully end-to-end,
+    learning-based framework featuring two specialized models for joint compression. The main compression
+    model employs a shared encoder that encodes both geometry and attribute information into a unified
+    latent representation, followed by dual decoders that sequentially reconstruct geometry and then attributes.
+    Complementing this, the Mamba-based Entropy Model (MEM) enhances entropy coding by capturing spatial
+    and channel-wise correlations to improve probability estimation. Both models are built on the Mamba
+    architecture to effectively model long-range dependencies and rich contextual features. By eliminating
+    the need for recoloring and heuristic bitrate tuning, MEGA-PCC enables data-driven bitrate allocation
+    during training and simplifies the overall pipeline. Extensive experiments demonstrate that MEGA-PCC
+    achieves superior rate-distortion performance and runtime efficiency compared to both traditional
+    and learning-based baselines, offering a powerful solution for AI-driven point cloud compression.
+  url: https://arxiv.org/abs/2512.22463
+  pdf_url: https://arxiv.org/pdf/2512.22463v1
+  version: v1
+fetched: '2026-11-14'

@@ -1,0 +1,39 @@
+id: paper:arxiv:2403.10575
+status: skipped
+score: 1
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 1
+  weight: 1
+meta:
+  title: Exploring Language Model's Code Generation Ability with Auxiliary Functions
+  authors:
+  - Seonghyeon Lee
+  - Sanghwan Jang
+  - Seongbo Jang
+  - Dongha Lee
+  - Hwanjo Yu
+  published: '2024-03-15'
+  updated: '2024-03-15'
+  categories:
+  - cs.SE
+  - cs.AI
+  - cs.CL
+  abstract: Auxiliary function is a helpful component to improve language model's code generation ability.
+    However, a systematic exploration of how they affect has yet to be done. In this work, we comprehensively
+    evaluate the ability to utilize auxiliary functions encoded in recent code-pretrained language models.
+    First, we construct a human-crafted evaluation set, called HumanExtension, which contains examples
+    of two functions where one function assists the other. With HumanExtension, we design several experiments
+    to examine their ability in a multifaceted way. Our evaluation processes enable a comprehensive understanding
+    of including auxiliary functions in the prompt in terms of effectiveness and robustness. An additional
+    implementation style analysis captures the models' various implementation patterns when they access
+    the auxiliary function. Through this analysis, we discover the models' promising ability to utilize
+    auxiliary functions including their self-improving behavior by implementing the two functions step-by-step.
+    However, our analysis also reveals the model's underutilized behavior to call the auxiliary function,
+    suggesting the future direction to enhance their implementation by eliciting the auxiliary function
+    call ability encoded in the models. We release our code and dataset to facilitate this research direction.
+  url: https://arxiv.org/abs/2403.10575
+  pdf_url: https://arxiv.org/pdf/2403.10575v1
+  version: v1
+fetched: '2026-11-14'

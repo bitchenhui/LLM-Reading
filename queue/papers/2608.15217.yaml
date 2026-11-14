@@ -1,0 +1,44 @@
+id: paper:arxiv:2608.15217
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 2
+  weight: 1
+meta:
+  title: Self-Supervised Topologically Invariant Manifold Learning for Railway Image Quality Assessment
+  authors:
+  - Tingqiong Cui
+  - Yibu Yang
+  - Yang Li
+  - Jiahao Fu
+  - Xiaoliu Luo
+  - Xu Wang
+  - Mengzhu Wang
+  - Siyuan Liu
+  - Guanghui Huang
+  published: '2026-08-15'
+  updated: '2026-08-15'
+  categories:
+  - cs.CV
+  abstract: Existing blind image quality assessment (BIQA) methods typically rely on synthetic distortions
+    and subjective annotations, limiting generalization in real-world domains. To address this, we propose
+    a fully self-supervised BIQA framework based on topologically invariant manifold learning under boundary
+    constraints, which constructs a stable quality reference without manual labels. The framework generates
+    progressive background dilution scales via repeated random cropping around each target; exploiting
+    the monotonic degradation of target information density across these scales, it establishes a self-constrained
+    quality manifold. A linearized spatial moment projection eliminates geometric distortions from random
+    cropping; then a monotonicity divergence filter prunes background-sensitive evaluators, isolating
+    an elite pool \(\mathcal{M}_{\text{elite}}\). A robust M-estimator with a principal component stabilizer
+    fuses the metrics into an asymptotically efficient pseudo-ground truth \(q_{\text{PGT}}\), contracting
+    variance toward the Cramér-Rao lower bound. Extensive evaluations demonstrate that the elite evaluator
+    pool, distilled from 11 baseline metrics, secures superior zero-shot transferability across standard
+    synthetic and wild benchmarks (CSIQ, LIVEC, LIVE-2). Concurrently, deployments on the CQU Railway
+    Rolling Stock Surveillance Dataset (2,797 images) yield a manifold cosine similarity \(>0.999\) and
+    a 100.0\% survival rate under industrial extreme stresses, robustly validating its cross-paradigm
+    decoupling and topological resilience.
+  url: https://arxiv.org/abs/2608.15217
+  pdf_url: https://arxiv.org/pdf/2608.15217v1
+  version: v1
+fetched: '2026-11-14'

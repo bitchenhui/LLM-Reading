@@ -1,0 +1,34 @@
+id: paper:arxiv:2603.14035
+status: skipped
+score: 0
+track: audio_coding
+matched: []
+meta:
+  title: Probing neural audio codecs for distinctions among English nuclear tunes
+  authors:
+  - Juan Pablo Vigneaux
+  - Jennifer Cole
+  published: '2026-03-14'
+  updated: '2026-03-14'
+  categories:
+  - cs.SD
+  - cs.CL
+  abstract: 'State-of-the-art spoken dialogue models (Défossez et al. 2024; Schalkwyk et al. 2025) use
+    neural audio codecs to "tokenize" audio signals into a lower-frequency stream of vectorial latent
+    representations, each quantized using a hierarchy of vector codebooks. A transformer layer allows
+    these representations to reflect some time- and context-dependent patterns. We train probes on labeled
+    audio data from Cole et al. (2023) to test whether the pitch trajectories that characterize English
+    phrase-final (nuclear) intonational tunes are among these patterns. Results: Linear probes trained
+    on the unquantized latents or some of the associated codewords yield above-chance accuracy in distinguishing
+    eight phonologically specified nuclear tunes with monotonal pitch accents (top average test accuracy
+    (TATA): 0.31) and the five clusters of these tunes that are robust in human speech production and
+    perception (TATA: 0.45). Greater accuracy (TATAs: 0.74-0.89) is attained for binary distinctions between
+    classes of rising vs. falling tunes, respectively used for questions and assertions. Information about
+    tunes is spread among all codebooks, which calls into question a distinction between ''semantic''
+    and ''acoustic'' codebooks found in the literature. Accuracies improve with nonlinear probes, but
+    discrimination among the five clusters remains far from human performance, suggesting a fundamental
+    limitation of current codecs.'
+  url: https://arxiv.org/abs/2603.14035
+  pdf_url: https://arxiv.org/pdf/2603.14035v1
+  version: v1
+fetched: '2026-11-14'

@@ -1,0 +1,48 @@
+id: paper:arxiv:2501.11999
+status: skipped_low_citation
+score: 3
+track: audio_coding
+matched:
+- ref: concept:EntropyModel
+  count: 1
+  weight: 1
+- ref: concept:WebRTC
+  count: 1
+  weight: 1
+- ref: metric:BD-Rate
+  count: 1
+  weight: 1
+meta:
+  title: Rate-Aware Learned Speech Compression
+  authors:
+  - Jun Xu
+  - Zhengxue Cheng
+  - Guangchuan Chi
+  - Yuhan Liu
+  - Yuelin Hu
+  - Li Song
+  published: '2025-01-21'
+  updated: '2025-01-21'
+  categories:
+  - eess.AS
+  - cs.SD
+  abstract: 'The rapid rise of real-time communication and large language models has significantly increased
+    the importance of speech compression. Deep learning-based neural speech codecs have outperformed traditional
+    signal-level speech codecs in terms of rate-distortion (RD) performance. Typically, these neural codecs
+    employ an encoder-quantizer-decoder architecture, where audio is first converted into latent code
+    feature representations and then into discrete tokens. However, this architecture exhibits insufficient
+    RD performance due to two main drawbacks: (1) the inadequate performance of the quantizer, challenging
+    training processes, and issues such as codebook collapse; (2) the limited representational capacity
+    of the encoder and decoder, making it difficult to meet feature representation requirements across
+    various bitrates. In this paper, we propose a rate-aware learned speech compression scheme that replaces
+    the quantizer with an advanced channel-wise entropy model to improve RD performance, simplify training,
+    and avoid codebook collapse. We employ multi-scale convolution and linear attention mixture blocks
+    to enhance the representational capacity and flexibility of the encoder and decoder. Experimental
+    results demonstrate that the proposed method achieves state-of-the-art RD performance, obtaining 53.51%
+    BD-Rate bitrate saving in average, and achieves 0.26 BD-VisQol and 0.44 BD-PESQ gains.'
+  url: https://arxiv.org/abs/2501.11999
+  pdf_url: https://arxiv.org/pdf/2501.11999v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 3
+citation_year: 2025

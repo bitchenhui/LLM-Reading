@@ -1,0 +1,41 @@
+id: paper:arxiv:2608.00743
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'LUT: Latent Utility Training for Visual Reasoning'
+  authors:
+  - Jiaxuan Kang
+  - Siyu Chen
+  - Mingda Li
+  - Mingjie Liu
+  - Tianyue Wang
+  - Zhaoyang Wei
+  - Yongheng Zhang
+  - Yanchao Hao
+  - Zheng Wei
+  published: '2026-08-01'
+  updated: '2026-08-01'
+  categories:
+  - cs.CV
+  abstract: Multimodal large language models have advanced visual understanding, yet perception-intensive
+    reasoning remains challenging. Recent latent visual reasoning methods introduce hidden-space computation
+    before answering, but they often rely on costly intermediate supervision, such as bounding boxes,
+    sketches, or interleaved rationales. These strategies focus on how latent states should be shaped,
+    but do not explicitly assess whether the latent is useful for the final answer. We propose LUT, a
+    latent reasoning framework trained with only standard VQA pairs. LUT centers training on Latent Utility
+    at two levels. At the trajectory level, we propose Utility-Aware Latent Distillation SFT, which explores
+    answer-relevant latent trajectories, selects qualified trajectories by their information gain, and
+    distills more reliable and learnable supervision through curriculum learning. At the step level, we
+    propose Latent Attribution Policy Optimization, which uses answer-to-latent attribution to differentially
+    optimize latent steps during reinforcement learning. Experiments on perception-intensive visual reasoning
+    benchmarks show that LUT outperforms previous latent reasoning methods and remains competitive with
+    latent-text interleaved methods with lower annotation cost.
+  url: https://arxiv.org/abs/2608.00743
+  pdf_url: https://arxiv.org/pdf/2608.00743v1
+  version: v1
+fetched: '2026-11-14'

@@ -1,0 +1,40 @@
+id: paper:arxiv:2606.03979
+status: skipped
+score: 1
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+meta:
+  title: 'Language Models Need Sleep: Learning to Self-Modify and Consolidate Memories'
+  authors:
+  - Ali Behrouz
+  - Farnoosh Hashemi
+  - Adel Javanmard
+  - Vahab Mirrokni
+  published: '2026-06-02'
+  updated: '2026-07-10'
+  categories:
+  - cs.LG
+  - cs.AI
+  abstract: 'The past few decades have witnessed significant advances in the design of machine learning
+    algorithms, from early studies on task-specific shallow models to more general deep Large Language
+    Models (LLMs). Despite showing promising results in tasks that require instant prediction or in-context
+    learning, existing models lack the ability to continually learn and effectively transfer their temporal
+    in-context knowledge to their long-term parameters. Inspired by human learning process, we introduce
+    a ''''Sleep'''' paradigm that allows the models to continually learn, distill their short-term fragile
+    memories into stable long-term knowledge with replay, and recursively improve themselves with ''''Dreaming''''
+    process. In more detail, sleep consists of two stages: (1) Memory Consolidation: an upward distillation
+    process, called Knowledge Seeding, where the memories of a smaller-self are distilled into a larger
+    network to provide more capacity while preserving the knowledge. As a proof of concept, we present
+    a new Generalized Distillation process for {Knowledge Seeding} (i.e., the combination of on-policy
+    distillation with Reinforcement Learning (RL)-based imitation learning); (2) Dreaming: a self-improvement
+    phase, where the model uses RL to generate a curriculum of synthetic data to rehearse new knowledge
+    and refine existing capabilities without human supervision. Our experiments on long-horizon, continual
+    learning, knowledge incorporation, and few-shot generalization tasks support the importance of the
+    sleep stage.'
+  url: https://arxiv.org/abs/2606.03979
+  pdf_url: https://arxiv.org/pdf/2606.03979v2
+  version: v2
+fetched: '2026-11-14'

@@ -1,0 +1,38 @@
+id: paper:arxiv:2305.10453
+status: skipped_low_citation
+score: 4
+track: video_image_coding
+matched:
+- ref: codec:VVC
+  count: 1
+  weight: 3
+- ref: concept:ICM
+  count: 1
+  weight: 1
+meta:
+  title: 'VVC+M: Plug and Play Scalable Image Coding for Humans and Machines'
+  authors:
+  - Alon Harell
+  - Yalda Foroutan
+  - Ivan V. Bajic
+  published: '2023-05-17'
+  updated: '2023-05-17'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: Compression for machines is an emerging field, where inputs are encoded while optimizing the
+    performance of downstream automated analysis. In scalable coding for humans and machines, the compressed
+    representation used for machines is further utilized to enable input reconstruction. Often performed
+    by jointly optimizing the compression scheme for both machine task and human perception, this results
+    in sub-optimal rate-distortion (RD) performance for the machine side. We focus on the case of images,
+    proposing to utilize the pre-existing residual coding capabilities of video codecs such as VVC to
+    create a scalable codec from any image compression for machines (ICM) scheme. Using our approach we
+    improve an existing scalable codec to achieve superior RD performance on the machine task, while remaining
+    competitive for human perception. Moreover, our approach can be trained post-hoc for any given ICM
+    scheme, and without creating a coupling between the quality of the machine analysis and human vision.
+  url: https://arxiv.org/abs/2305.10453
+  pdf_url: https://arxiv.org/pdf/2305.10453v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 6
+citation_year: 2023

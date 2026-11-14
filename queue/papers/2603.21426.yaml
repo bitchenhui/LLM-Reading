@@ -1,0 +1,37 @@
+id: paper:arxiv:2603.21426
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: Uncertainty-Aware Knowledge Distillation for Multimodal Large Language Models
+  authors:
+  - Jingchen Sun
+  - Shaobo Han
+  - Deep Patel
+  - Wataru Kohno
+  - Can Jin
+  - Changyou Chen
+  published: '2026-03-22'
+  updated: '2026-03-22'
+  categories:
+  - cs.CV
+  abstract: Knowledge distillation establishes a learning paradigm that leverages both data supervision
+    and teacher guidance. However, determining the optimal balance between learning from data and learning
+    from the teacher is challenging, as some samples may be noisy while others are subject to teacher
+    uncertainty. This motivates the need for adaptively balancing data and teacher supervision. We propose
+    Beta-weighted Knowledge Distillation (Beta-KD), an uncertainty-aware distillation framework that adaptively
+    modulates how much the student relies on teacher guidance. Specifically, we formulate teacher--student
+    learning from a unified Bayesian perspective and interpret teacher supervision as a Gibbs prior over
+    student activations. This yields a closed-form, uncertainty-aware weighting mechanism and supports
+    arbitrary distillation objectives and their combinations. Extensive experiments on multimodal VQA
+    benchmarks demonstrate that distilling student Vision-Language Models from a large teacher VLM consistently
+    improves performance. The results show that Beta-KD outperforms existing knowledge distillation methods.
+    The code is available at https://github.com/Jingchensun/beta-kd.
+  url: https://arxiv.org/abs/2603.21426
+  pdf_url: https://arxiv.org/pdf/2603.21426v1
+  version: v1
+fetched: '2026-11-14'

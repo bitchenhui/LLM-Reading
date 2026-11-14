@@ -1,0 +1,38 @@
+id: paper:arxiv:2602.00104
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'R3G: A Reasoning-Retrieval-Reranking Framework for Vision-Centric Answer Generation'
+  authors:
+  - Zhuohong Chen
+  - Zhengxian Wu
+  - Zirui Liao
+  - Shenao Jiang
+  - Hangrui Xu
+  - Yang Chen
+  - Chaokui Su
+  - Xiaoyu Liu
+  - Haoqian Wang
+  published: '2026-01-25'
+  updated: '2026-08-31'
+  categories:
+  - cs.CV
+  - cs.AI
+  abstract: Vision-centric retrieval for VQA requires retrieving images to supply missing visual cues
+    and integrating them into the reasoning process. However, selecting the right images and integrating
+    them effectively into the model's reasoning remains challenging. To address this challenge, we propose
+    R3G, a modular Reasoning-Retrieval-Reranking framework. It first produces a brief reasoning plan that
+    specifies the required visual cues, then adopts a two-stage strategy, with coarse retrieval followed
+    by fine-grained reranking, to select evidence images. On MRAG-Bench, R3G improves accuracy across
+    six MLLM backbones and nine sub-scenarios, achieving state-of-the-art overall performance. Ablations
+    show that sufficiency-aware reranking and reasoning steps are complementary, helping the model both
+    choose the right images and use them well. We release code and data at https://github.com/czh24/R3G.
+  url: https://arxiv.org/abs/2602.00104
+  pdf_url: https://arxiv.org/pdf/2602.00104v4
+  version: v4
+fetched: '2026-11-14'

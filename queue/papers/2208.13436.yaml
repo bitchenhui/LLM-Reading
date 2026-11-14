@@ -1,0 +1,48 @@
+id: paper:arxiv:2208.13436
+status: pending
+score: 3
+track: processing_enhancement
+matched:
+- ref: concept:SuperResolution
+  count: 2
+  weight: 1
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+- ref: metric:SSIM
+  count: 1
+  weight: 1
+meta:
+  title: Joint Learning Content and Degradation Aware Feature for Blind Super-Resolution
+  authors:
+  - Yifeng Zhou
+  - Chuming Lin
+  - Donghao Luo
+  - Yong Liu
+  - Ying Tai
+  - Chengjie Wang
+  - Mingang Chen
+  published: '2022-08-29'
+  updated: '2022-08-29'
+  categories:
+  - cs.CV
+  abstract: 'To achieve promising results on blind image super-resolution (SR), some attempts leveraged
+    the low resolution (LR) images to predict the kernel and improve the SR performance. However, these
+    Supervised Kernel Prediction (SKP) methods are impractical due to the unavailable real-world blur
+    kernels. Although some Unsupervised Degradation Prediction (UDP) methods are proposed to bypass this
+    problem, the \textit{inconsistency} between degradation embedding and SR feature is still challenging.
+    By exploring the correlations between degradation embedding and SR feature, we observe that jointly
+    learning the content and degradation aware feature is optimal. Based on this observation, a Content
+    and Degradation aware SR Network dubbed CDSR is proposed. Specifically, CDSR contains three newly-established
+    modules: (1) a Lightweight Patch-based Encoder (LPE) is applied to jointly extract content and degradation
+    features; (2) a Domain Query Attention based module (DQA) is employed to adaptively reduce the inconsistency;
+    (3) a Codebook-based Space Compress module (CSC) that can suppress the redundant information. Extensive
+    experiments on several benchmarks demonstrate that the proposed CDSR outperforms the existing UDP
+    models and achieves competitive performance on PSNR and SSIM even compared with the state-of-the-art
+    SKP methods.'
+  url: https://arxiv.org/abs/2208.13436
+  pdf_url: https://arxiv.org/pdf/2208.13436v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 18
+citation_year: 2022

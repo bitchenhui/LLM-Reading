@@ -1,0 +1,45 @@
+id: paper:arxiv:2508.05835
+status: pending
+score: 2
+track: audio_coding
+matched:
+- ref: concept:LLM
+  count: 1
+  weight: 1
+- ref: metric:FPS
+  count: 1
+  weight: 1
+meta:
+  title: 'NanoCodec: Towards High-Quality Ultra Fast Speech LLM Inference'
+  authors:
+  - Edresson Casanova
+  - Paarth Neekhara
+  - Ryan Langman
+  - Shehzeen Hussain
+  - Subhankar Ghosh
+  - Xuesong Yang
+  - Ante Jukić
+  - Jason Li
+  - Boris Ginsburg
+  published: '2025-08-07'
+  updated: '2025-08-07'
+  categories:
+  - eess.AS
+  - cs.CL
+  - cs.SD
+  abstract: Large Language Models (LLMs) have significantly advanced audio processing by leveraging audio
+    codecs to discretize audio into tokens, enabling the application of language modeling techniques to
+    speech data. However, existing audio codecs often operate at high frame rates, leading to slow training
+    and inference, particularly for autoregressive models. To address this, there is growing interest
+    in low frame-rate audio codecs, which reduce the number of autoregressive steps required to generate
+    one second of audio. In this paper, we conduct ablation studies to examine the impact of frame rate,
+    bitrate, and causality on codec reconstruction quality. Based on our findings, we introduce NanoCodec,
+    a state-of-the-art audio codec that achieves high-quality compression at just 12.5 frames per second
+    (FPS). NanoCodec outperforms related works across various bitrate ranges, establishing a new benchmark
+    for low-latency and efficient Speech LLM training and inference.
+  url: https://arxiv.org/abs/2508.05835
+  pdf_url: https://arxiv.org/pdf/2508.05835v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 25
+citation_year: 2025

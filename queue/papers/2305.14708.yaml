@@ -1,0 +1,39 @@
+id: paper:arxiv:2305.14708
+status: skipped
+score: 1
+track: processing_enhancement
+matched:
+- ref: concept:SuperResolution
+  count: 1
+  weight: 1
+meta:
+  title: 'EgoVSR: Towards High-Quality Egocentric Video Super-Resolution'
+  authors:
+  - Yichen Chi
+  - Junhao Gu
+  - Jiamiao Zhang
+  - Wenming Yang
+  - Yapeng Tian
+  published: '2023-05-24'
+  updated: '2023-07-26'
+  categories:
+  - cs.CV
+  abstract: Due to the limitations of capture devices and scenarios, egocentric videos frequently have
+    low visual quality, mainly caused by high compression and severe motion blur. With the increasing
+    application of egocentric videos, there is an urgent need to enhance the quality of these videos through
+    super-resolution. However, existing Video Super-Resolution (VSR) works, focusing on third-person view
+    videos, are actually unsuitable for handling blurring artifacts caused by rapid ego-motion and object
+    motion in egocentric videos. To this end, we propose EgoVSR, a VSR framework specifically designed
+    for egocentric videos. We explicitly tackle motion blurs in egocentric videos using a Dual Branch
+    Deblur Network (DB$^2$Net) in the VSR framework. Meanwhile, a blurring mask is introduced to guide
+    the DB$^2$Net learning, and can be used to localize blurred areas in video frames. We also design
+    a MaskNet to predict the mask, as well as a mask loss to optimize the mask estimation. Additionally,
+    an online motion blur synthesis model for common VSR training data is proposed to simulate motion
+    blurs as in egocentric videos. In order to validate the effectiveness of our proposed method, we introduce
+    an EgoVSR dataset containing a large amount of fast-motion egocentric video sequences. Extensive experiments
+    demonstrate that our EgoVSR model can efficiently super-resolve low-quality egocentric videos and
+    outperform strong comparison baselines. Our code, pre-trained models and data can be found at https://github.com/chiyich/EGOVSR/.
+  url: https://arxiv.org/abs/2305.14708
+  pdf_url: https://arxiv.org/pdf/2305.14708v2
+  version: v2
+fetched: '2026-11-14'

@@ -1,0 +1,41 @@
+id: paper:arxiv:2510.17427
+status: skipped_low_citation
+score: 6
+track: video_image_coding
+matched:
+- ref: codec:AV1
+  count: 1
+  weight: 3
+- ref: codec:HEVC
+  count: 1
+  weight: 3
+meta:
+  title: AV1 Motion Vector Fidelity and Application for Efficient Optical Flow
+  authors:
+  - Julien Zouein
+  - Vibhoothi Vibhoothi
+  - Anil Kokaram
+  published: '2025-10-20'
+  updated: '2025-10-20'
+  categories:
+  - eess.IV
+  - cs.MM
+  abstract: This paper presents a comprehensive analysis of motion vectors extracted from AV1-encoded
+    video streams and their application in accelerating optical flow estimation. We demonstrate that motion
+    vectors from AV1 video codec can serve as a high-quality and computationally efficient substitute
+    for traditional optical flow, a critical but often resource-intensive component in many computer vision
+    pipelines. Our primary contributions are twofold. First, we provide a detailed comparison of motion
+    vectors from both AV1 and HEVC against ground-truth optical flow, establishing their fidelity. In
+    particular we show the impact of encoder settings on motion estimation fidelity and make recommendations
+    about the optimal settings. Second, we show that using these extracted AV1 motion vectors as a "warm-start"
+    for a state-of-the-art deep learning-based optical flow method, RAFT, significantly reduces the time
+    to convergence while achieving comparable accuracy. Specifically, we observe a four-fold speedup in
+    computation time with only a minor trade- off in end-point error. These findings underscore the potential
+    of reusing motion vectors from compressed video as a practical and efficient method for a wide range
+    of motion-aware computer vision applications.
+  url: https://arxiv.org/abs/2510.17427
+  pdf_url: https://arxiv.org/pdf/2510.17427v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 2
+citation_year: 2025

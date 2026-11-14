@@ -1,0 +1,38 @@
+id: paper:arxiv:2412.04912
+status: skipped
+score: 0
+track: video_image_coding
+matched: []
+meta:
+  title: 'UniMIC: Towards Universal Multi-modality Perceptual Image Compression'
+  authors:
+  - Yixin Gao
+  - Xin Li
+  - Xiaohan Pan
+  - Runsen Feng
+  - Zongyu Guo
+  - Yiting Lu
+  - Yulin Ren
+  - Zhibo Chen
+  published: '2024-12-06'
+  updated: '2024-12-09'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: We present UniMIC, a universal multi-modality image compression framework, intending to unify
+    the rate-distortion-perception (RDP) optimization for multiple image codecs simultaneously through
+    excavating cross-modality generative priors. Unlike most existing works that need to design and optimize
+    image codecs from scratch, our UniMIC introduces the visual codec repository, which incorporates amounts
+    of representative image codecs and directly uses them as the basic codecs for various practical applications.
+    Moreover, we propose multi-grained textual coding, where variable-length content prompt and compression
+    prompt are designed and encoded to assist the perceptual reconstruction through the multi-modality
+    conditional generation. In particular, a universal perception compensator is proposed to improve the
+    perception quality of decoded images from all basic codecs at the decoder side by reusing text-assisted
+    diffusion priors from stable diffusion. With the cooperation of the above three strategies, our UniMIC
+    achieves a significant improvement of RDP optimization for different compression codecs, e.g., traditional
+    and learnable codecs, and different compression costs, e.g., ultra-low bitrates. The code will be
+    available in https://github.com/Amygyx/UniMIC .
+  url: https://arxiv.org/abs/2412.04912
+  pdf_url: https://arxiv.org/pdf/2412.04912v2
+  version: v2
+fetched: '2026-11-14'

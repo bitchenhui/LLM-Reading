@@ -1,0 +1,58 @@
+id: paper:arxiv:2512.15481
+status: skipped_low_citation
+score: 5
+track: streaming_delivery
+matched:
+- ref: concept:ABR
+  count: 2
+  weight: 1
+- ref: metric:LPIPS
+  count: 1
+  weight: 1
+- ref: metric:MS-SSIM
+  count: 1
+  weight: 1
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+- ref: metric:SSIM
+  count: 1
+  weight: 1
+meta:
+  title: GenAI-enabled Residual Motion Estimation for Energy-Efficient Semantic Video Communication
+  authors:
+  - Shavbo Salehi
+  - Pedro Enrique Iturria-Rivera
+  - Medhat Elsayed
+  - Majid Bavand
+  - Yigit Ozcan
+  - Melike Erol-Kantarci
+  published: '2025-12-17'
+  updated: '2025-12-17'
+  categories:
+  - cs.NI
+  abstract: Semantic communication addresses the limitations of the Shannon paradigm by focusing on transmitting
+    meaning rather than exact representations, thereby reducing unnecessary resource consumption. This
+    is particularly beneficial for video, which dominates network traffic and demands high bandwidth and
+    power, making semantic approaches ideal for conserving resources while maintaining quality. In this
+    paper, we propose a Predictability-aware and Entropy-adaptive Neural Motion Estimation (PENME) method
+    to address challenges related to high latency, high bitrate, and power consumption in video transmission.
+    PENME makes per-frame decisions to select a residual motion extraction model, convolutional neural
+    network, vision transformer, or optical flow, using a five-step policy based on motion strength, global
+    motion consistency, peak sharpness, heterogeneity, and residual error. The residual motions are then
+    transmitted to the receiver, where the frames are reconstructed via motion-compensated updates. Next,
+    a selective diffusion-based refinement, the Latent Consistency Model (LCM-4), is applied on frames
+    that trigger refinement due to low predictability or large residuals, while predictable frames skip
+    refinement. PENME also allocates radio resource blocks with awareness of residual motion and channel
+    state, reducing power consumption and bandwidth usage while maintaining high semantic similarity.
+    Our simulation results on the Vimeo90K dataset demonstrate that the proposed PENME method handles
+    various types of video, outperforming traditional communication, hybrid, and adaptive bitrate semantic
+    communication techniques, achieving 40% lower latency, 90% less transmitted data, and 35% higher throughput.
+    For semantic communication metrics, PENME improves PSNR by about 40%, increases MS-SSIM by roughly
+    19%, and reduces LPIPS by nearly 35%, compared with the baseline methods.
+  url: https://arxiv.org/abs/2512.15481
+  pdf_url: https://arxiv.org/pdf/2512.15481v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 0
+citation_year: 2025

@@ -1,0 +1,36 @@
+id: paper:arxiv:2410.03298
+status: skipped
+score: 0
+track: audio_coding
+matched: []
+meta:
+  title: Textless Streaming Speech-to-Speech Translation using Semantic Speech Tokens
+  authors:
+  - Jinzheng Zhao
+  - Niko Moritz
+  - Egor Lakomkin
+  - Ruiming Xie
+  - Zhiping Xiu
+  - Katerina Zmolikova
+  - Zeeshan Ahmed
+  - Yashesh Gaur
+  - Duc Le
+  - Christian Fuegen
+  published: '2024-10-04'
+  updated: '2024-10-04'
+  categories:
+  - eess.AS
+  abstract: Cascaded speech-to-speech translation systems often suffer from the error accumulation problem
+    and high latency, which is a result of cascaded modules whose inference delays accumulate. In this
+    paper, we propose a transducer-based speech translation model that outputs discrete speech tokens
+    in a low-latency streaming fashion. This approach eliminates the need for generating text output first,
+    followed by machine translation (MT) and text-to-speech (TTS) systems. The produced speech tokens
+    can be directly used to generate a speech signal with low latency by utilizing an acoustic language
+    model (LM) to obtain acoustic tokens and an audio codec model to retrieve the waveform. Experimental
+    results show that the proposed method outperforms other existing approaches and achieves state-of-the-art
+    results for streaming translation in terms of BLEU, average latency, and BLASER 2.0 scores for multiple
+    language pairs using the CVSS-C dataset as a benchmark.
+  url: https://arxiv.org/abs/2410.03298
+  pdf_url: https://arxiv.org/pdf/2410.03298v1
+  version: v1
+fetched: '2026-11-14'

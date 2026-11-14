@@ -1,0 +1,33 @@
+id: paper:arxiv:2308.09110
+status: skipped
+score: 0
+track: processing_enhancement
+matched: []
+meta:
+  title: JPEG Quantized Coefficient Recovery via DCT Domain Spatial-Frequential Transformer
+  authors:
+  - Mingyu Ouyang
+  - Zhenzhong Chen
+  published: '2023-08-17'
+  updated: '2024-05-03'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: JPEG compression adopts the quantization of Discrete Cosine Transform (DCT) coefficients for
+    effective bit-rate reduction, whilst the quantization could lead to a significant loss of important
+    image details. Recovering compressed JPEG images in the frequency domain has recently garnered increasing
+    interest, complementing the multitude of restoration techniques established in the pixel domain. However,
+    existing DCT domain methods typically suffer from limited effectiveness in handling a wide range of
+    compression quality factors or fall short in recovering sparse quantized coefficients and the components
+    across different colorspaces. To address these challenges, we propose a DCT domain spatial-frequential
+    Transformer, namely DCTransformer, for JPEG quantized coefficient recovery. Specifically, a dual-branch
+    architecture is designed to capture both spatial and frequential correlations within the collocated
+    DCT coefficients. Moreover, we incorporate the operation of quantization matrix embedding, which effectively
+    allows our single model to handle a wide range of quality factors, and a luminance-chrominance alignment
+    head that produces a unified feature map to align different-sized luminance and chrominance components.
+    Our proposed DCTransformer outperforms the current state-of-the-art JPEG artifact removal techniques,
+    as demonstrated by our extensive experiments.
+  url: https://arxiv.org/abs/2308.09110
+  pdf_url: https://arxiv.org/pdf/2308.09110v2
+  version: v2
+fetched: '2026-11-14'

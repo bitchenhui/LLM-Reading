@@ -1,0 +1,46 @@
+id: paper:arxiv:2409.12724
+status: skipped_low_citation
+score: 5
+track: immersive_media
+matched:
+- ref: codec:G-PCC
+  count: 1
+  weight: 3
+- ref: concept:EntropyModel
+  count: 1
+  weight: 1
+- ref: org:MPEG
+  count: 1
+  weight: 1
+meta:
+  title: 'PVContext: Hybrid Context Model for Point Cloud Compression'
+  authors:
+  - Guoqing Zhang
+  - Wenbo Zhao
+  - Jian Liu
+  - Yuanchao Bai
+  - Junjun Jiang
+  - Xianming Liu
+  published: '2024-09-19'
+  updated: '2024-09-19'
+  categories:
+  - cs.CV
+  - eess.IV
+  abstract: 'Efficient storage of large-scale point cloud data has become increasingly challenging due
+    to advancements in scanning technology. Recent deep learning techniques have revolutionized this field;
+    However, most existing approaches rely on single-modality contexts, such as octree nodes or voxel
+    occupancy, limiting their ability to capture information across large regions. In this paper, we propose
+    PVContext, a hybrid context model for effective octree-based point cloud compression. PVContext comprises
+    two components with distinct modalities: the Voxel Context, which accurately represents local geometric
+    information using voxels, and the Point Context, which efficiently preserves global shape information
+    from point clouds. By integrating these two contexts, we retain detailed information across large
+    areas while controlling the context size. The combined context is then fed into a deep entropy model
+    to accurately predict occupancy. Experimental results demonstrate that, compared to G-PCC, our method
+    reduces the bitrate by 37.95\% on SemanticKITTI LiDAR point clouds and by 48.98\% and 36.36\% on dense
+    object point clouds from MPEG 8i and MVUB, respectively.'
+  url: https://arxiv.org/abs/2409.12724
+  pdf_url: https://arxiv.org/pdf/2409.12724v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 1
+citation_year: 2024

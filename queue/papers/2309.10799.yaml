@@ -1,0 +1,39 @@
+id: paper:arxiv:2309.10799
+status: skipped
+score: 1
+track: video_image_coding
+matched:
+- ref: concept:EntropyModel
+  count: 1
+  weight: 1
+meta:
+  title: Multi-Context Dual Hyper-Prior Neural Image Compression
+  authors:
+  - Atefeh Khoshkhahtinat
+  - Ali Zafari
+  - Piyush M. Mehta
+  - Mohammad Akyash
+  - Hossein Kashiani
+  - Nasser M. Nasrabadi
+  published: '2023-09-19'
+  updated: '2023-09-19'
+  categories:
+  - eess.IV
+  - cs.CV
+  - cs.LG
+  abstract: Transform and entropy models are the two core components in deep image compression neural
+    networks. Most existing learning-based image compression methods utilize convolutional-based transform,
+    which lacks the ability to model long-range dependencies, primarily due to the limited receptive field
+    of the convolution operation. To address this limitation, we propose a Transformer-based nonlinear
+    transform. This transform has the remarkable ability to efficiently capture both local and global
+    information from the input image, leading to a more decorrelated latent representation. In addition,
+    we introduce a novel entropy model that incorporates two different hyperpriors to model cross-channel
+    and spatial dependencies of the latent representation. To further improve the entropy model, we add
+    a global context that leverages distant relationships to predict the current latent more accurately.
+    This global context employs a causal attention mechanism to extract long-range information in a content-dependent
+    manner. Our experiments show that our proposed framework performs better than the state-of-the-art
+    methods in terms of rate-distortion performance.
+  url: https://arxiv.org/abs/2309.10799
+  pdf_url: https://arxiv.org/pdf/2309.10799v1
+  version: v1
+fetched: '2026-11-14'

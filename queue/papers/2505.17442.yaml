@@ -1,0 +1,39 @@
+id: paper:arxiv:2505.17442
+status: skipped
+score: 0
+track: immersive_media
+matched: []
+meta:
+  title: Reflectance Prediction-based Knowledge Distillation for Robust 3D Object Detection in Compressed
+    Point Clouds
+  authors:
+  - Hao Jing
+  - Anhong Wang
+  - Yifan Zhang
+  - Donghan Bu
+  - Junhui Hou
+  published: '2025-05-23'
+  updated: '2025-11-02'
+  categories:
+  - cs.CV
+  abstract: Regarding intelligent transportation systems, low-bitrate transmission via lossy point cloud
+    compression is vital for facilitating real-time collaborative perception among connected agents, such
+    as vehicles and infrastructures, under restricted bandwidth. In existing compression transmission
+    systems, the sender lossily compresses point coordinates and reflectance to generate a transmission
+    code stream, which faces transmission burdens from reflectance encoding and limited detection robustness
+    due to information loss. To address these issues, this paper proposes a 3D object detection framework
+    with reflectance prediction-based knowledge distillation (RPKD). We compress point coordinates while
+    discarding reflectance during low-bitrate transmission, and feed the decoded non-reflectance compressed
+    point clouds into a student detector. The discarded reflectance is then reconstructed by a geometry-based
+    reflectance prediction (RP) module within the student detector for precise detection. A teacher detector
+    with the same structure as the student detector is designed for performing reflectance knowledge distillation
+    (RKD) and detection knowledge distillation (DKD) from raw to compressed point clouds. Our cross-source
+    distillation training strategy (CDTS) equips the student detector with robustness to low-quality compressed
+    data while preserving the accuracy benefits of raw data through transferred distillation knowledge.
+    Experimental results on the KITTI and DAIR-V2X-V datasets demonstrate that our method can boost detection
+    accuracy for compressed point clouds across multiple code rates. We will release the code publicly
+    at https://github.com/HaoJing-SX/RPKD.
+  url: https://arxiv.org/abs/2505.17442
+  pdf_url: https://arxiv.org/pdf/2505.17442v2
+  version: v2
+fetched: '2026-11-14'

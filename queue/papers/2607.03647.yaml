@@ -1,0 +1,41 @@
+id: paper:arxiv:2607.03647
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: Do Medical Vision Language Models Actually See? A Counterfactual Grounding Framework and Hard-Negative
+    Contrastive Training for Visually-Reliant Medical VLMs
+  authors:
+  - Anas Zafar
+  - Leema Krishna Murali
+  - Siddhant Bharadwaj
+  - Ashish Vashist
+  - Jia Wu
+  published: '2026-07-04'
+  updated: '2026-07-04'
+  categories:
+  - cs.CV
+  abstract: Large vision language models (VLMs) report strong accuracy on medical question-answering,
+    yet it remains unclear whether they reason from visual evidence or exploit textual shortcuts. We introduce
+    a counterfactual evaluation framework that decouples visual and textual contributions by substituting
+    input images with controlled surrogates blank, pixel-shuffled, image-absent, and CLIP-retrieved hard
+    negatives and derive a suite of grounding metrics including the Visual Reliance Score (VRS) and Visual
+    Hallucination Rate (VHR). We further introduce CORAL (COntrastive Retrieval-Augmented Learning), a
+    7B-parameter LoRA fine-tune of Qwen2.5-VL-7B trained with a Contrastive Grounding Objective (CGO)
+    that penalises answer invariance under hard-negative image swaps. On a paired controlled evaluation
+    across four closed-form medical VQA benchmarks (PathVQA, PMC-VQA, SLAKE, VQA-RAD; n=400 total), CORAL
+    improves macro accuracy by +6.7 pp (P(Delta>0)=0.988) and reduces VHR by 8.0 pp (P<0.001) over the
+    matched Qwen2.5-VL-7B base; neither MedVLThinker RL variant achieves a significant gain on either
+    metric. Cross-domain diagnostics further reveal that image substitution costs only <=6.5 pp on medical
+    benchmarks versus 48-61 pp on general-domain tasks, situating the grounding gap that CGO targets.
+    We discuss evaluation limitations openly including train/eval benchmark overlap and underpowered secondary
+    metrics and release our framework, training code, and model weights to support reproducible grounding
+    audits of medical VLMs.
+  url: https://arxiv.org/abs/2607.03647
+  pdf_url: https://arxiv.org/pdf/2607.03647v1
+  version: v1
+fetched: '2026-11-14'

@@ -1,0 +1,29 @@
+id: paper:arxiv:2607.04195
+status: skipped
+score: 0
+track: audio_coding
+matched: []
+meta:
+  title: Noisy Environment Adaptation of Neural Speech Codec via Focal Mask and Noise Feature Separation
+  authors:
+  - Shaokai Li
+  - Weiping Tu
+  - Yuhong Yang
+  published: '2026-07-05'
+  updated: '2026-07-05'
+  categories:
+  - eess.AS
+  abstract: Neural speech codec has attracted extensive attention for high-quality reconstruction at low-bitrate.
+    However, real-world noise severely degrades its performance and hinders high-quality clean speech
+    reconstruction. To tackle this problem, we propose FocalSE, a novel speech enhancement method that
+    performs feature denoising, noise feature separation and noise recognition in the continuous embedding
+    space of neural speech codecs. Specifically, we develop focal modulation-based compression and decompression
+    to capture global context and local mutual information, and generate focal masks to recover clean
+    feature embeddings. We then separate noise embeddings from noisy embeddings to improve denoising performance.
+    Finally, we use ResNet1D-18 to recognize noise categories for better separation effectiveness. Extensive
+    experiments on two standard datasets, LibriTTS and ESC50, demonstrate that our method outperforms
+    state-of-the-art approaches under low-bitrate and low-SNR conditions.
+  url: https://arxiv.org/abs/2607.04195
+  pdf_url: https://arxiv.org/pdf/2607.04195v1
+  version: v1
+fetched: '2026-11-14'

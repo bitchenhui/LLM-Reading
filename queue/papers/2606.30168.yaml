@@ -1,0 +1,37 @@
+id: paper:arxiv:2606.30168
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: Latent Noise Mask for Reducing Visual Redundancy in Multimodal Large Language Models
+  authors:
+  - Kai Jiang
+  - Ruishu Zhu
+  - Siqi Huang
+  - Hongyuan Zhang
+  - Xuelong Li
+  published: '2026-06-29'
+  updated: '2026-06-29'
+  categories:
+  - cs.CV
+  abstract: Multimodal large language models (MLLMs) often fail in fine-grained visual reasoning, as question-relevant
+    visual cues are diluted by dense and redundant image tokens. Recent multimodal reasoning methods usually
+    extend chain-of-thought from language models into visual or latent spaces, seeking to add intermediate
+    reasoning states while overlooking the negative impact of redundant visual tokens. We propose LatEnt
+    Noise maSk (Lens), a question-conditioned visual evidence purification framework that empowers MLLMs
+    to reason with cleaner visual cues in latent space. Lens introduces a lightweight Lens Evidence Token
+    (LET) to score which visual tokens support the current question and preserve them during decoding.
+    Guided by the LET scores, it injects adaptive latent noise into low-relevance tokens, softly suppressing
+    distractors without changing the model backbone or token sequence. With only one temporary learnable
+    control token and a lightweight noise generator, Lens adds minimal overhead while improving the base
+    MLLM by 2.4-6.4 points on most VQA datasets and by 4.1-6.4 points on grounding tasks. These results
+    show that multimodal reasoning can benefit more directly from cleaner question-relevant visual evidence
+    than from simply extending the reasoning trace.
+  url: https://arxiv.org/abs/2606.30168
+  pdf_url: https://arxiv.org/pdf/2606.30168v1
+  version: v1
+fetched: '2026-11-14'

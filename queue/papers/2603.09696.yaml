@@ -1,0 +1,43 @@
+id: paper:arxiv:2603.09696
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'TemporalDoRA: Temporal PEFT for Robust Surgical Video Question Answering'
+  authors:
+  - Luca Carlini
+  - Chiara Lena
+  - Cesare Hassan
+  - Danail Stoyanov
+  - Elena De Momi
+  - Sophia Bano
+  - Mobarak I. Hoque
+  published: '2026-03-10'
+  updated: '2026-03-10'
+  categories:
+  - cs.CV
+  abstract: Surgical Video Question Answering (VideoQA) requires accurate temporal grounding while remaining
+    robust to natural variation in how clinicians phrase questions, where linguistic bias can arise. Standard
+    Parameter Efficient Fine Tuning (PEFT) methods adapt pretrained projections without explicitly modeling
+    frame-to-frame interactions within the adaptation pathway, limiting their ability to exploit sparse
+    temporal evidence. We introduce TemporalDoRA, a video-specific PEFT formulation that extends Weight-Decomposed
+    Low-Rank Adaptation by (i) inserting lightweight temporal Multi-Head Attention (MHA) inside the low-rank
+    bottleneck of the vision encoder and (ii) selectively applying weight decomposition only to the trainable
+    low-rank branch rather than the full adapted weight. This design enables temporally-aware updates
+    while preserving a frozen backbone and stable scaling. By mixing information across frames within
+    the adaptation subspace, TemporalDoRA steers updates toward temporally consistent visual cues and
+    improves robustness with minimal parameter overhead. To benchmark this setting, we present REAL-Colon-VQA,
+    a colonoscopy VideoQA dataset with 6,424 clip--question pairs, including paired rephrased Out-of-Template
+    questions to evaluate sensitivity to linguistic variation. TemporalDoRA improves Out-of-Template performance,
+    and ablation studies confirm that temporal mixing inside the low-rank branch is the primary driver
+    of these gains. We also validate on EndoVis18-VQA adapted to short clips and observe consistent improvements
+    on the Out-of-Template split. Code and dataset available at~\href{https://anonymous.4open.science/r/TemporalDoRA-BFC8/}{Anonymous
+    GitHub}.
+  url: https://arxiv.org/abs/2603.09696
+  pdf_url: https://arxiv.org/pdf/2603.09696v1
+  version: v1
+fetched: '2026-11-14'

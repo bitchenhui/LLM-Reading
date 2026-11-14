@@ -1,0 +1,32 @@
+id: paper:arxiv:2505.24015
+status: skipped
+score: 1
+track: video_image_coding
+matched:
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+meta:
+  title: Semantics-Guided Generative Image Compression
+  authors:
+  - Cheng-Lin Wu
+  - Hyomin Choi
+  - Ivan V. Bajić
+  published: '2025-05-29'
+  updated: '2025-05-29'
+  categories:
+  - eess.IV
+  abstract: Advancements in text-to-image generative AI with large multimodal models are spreading into
+    the field of image compression, creating high-quality representation of images at extremely low bit
+    rates. This work introduces novel components to the existing multimodal image semantic compression
+    (MISC) approach, enhancing the quality of the generated images in terms of PSNR and perceptual metrics.
+    The new components include semantic segmentation guidance for the generative decoder, as well as content-adaptive
+    diffusion, which controls the number of diffusion steps based on image characteristics. The results
+    show that our newly introduced methods significantly improve the baseline MISC model while also decreasing
+    the complexity. As a result, both the encoding and decoding time are reduced by more than 36%. Moreover,
+    the proposed compression framework outperforms mainstream codecs in terms of perceptual similarity
+    and quality. The code and visual examples are available.
+  url: https://arxiv.org/abs/2505.24015
+  pdf_url: https://arxiv.org/pdf/2505.24015v1
+  version: v1
+fetched: '2026-11-14'

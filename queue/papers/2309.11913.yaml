@@ -1,0 +1,51 @@
+id: paper:arxiv:2309.11913
+status: skipped_low_citation
+score: 4
+track: video_image_coding
+matched:
+- ref: impl:VTM
+  count: 1
+  weight: 3
+- ref: metric:BD-Rate
+  count: 1
+  weight: 1
+meta:
+  title: Spatial-Temporal Transformer based Video Compression Framework
+  authors:
+  - Yanbo Gao
+  - Wenjia Huang
+  - Shuai Li
+  - Hui Yuan
+  - Mao Ye
+  - Siwei Ma
+  published: '2023-09-21'
+  updated: '2023-09-21'
+  categories:
+  - eess.IV
+  - cs.CV
+  - cs.MM
+  abstract: Learned video compression (LVC) has witnessed remarkable advancements in recent years. Similar
+    as the traditional video coding, LVC inherits motion estimation/compensation, residual coding and
+    other modules, all of which are implemented with neural networks (NNs). However, within the framework
+    of NNs and its training mechanism using gradient backpropagation, most existing works often struggle
+    to consistently generate stable motion information, which is in the form of geometric features, from
+    the input color features. Moreover, the modules such as the inter-prediction and residual coding are
+    independent from each other, making it inefficient to fully reduce the spatial-temporal redundancy.
+    To address the above problems, in this paper, we propose a novel Spatial-Temporal Transformer based
+    Video Compression (STT-VC) framework. It contains a Relaxed Deformable Transformer (RDT) with Uformer
+    based offsets estimation for motion estimation and compensation, a Multi-Granularity Prediction (MGP)
+    module based on multi-reference frames for prediction refinement, and a Spatial Feature Distribution
+    prior based Transformer (SFD-T) for efficient temporal-spatial joint residual compression. Specifically,
+    RDT is developed to stably estimate the motion information between frames by thoroughly investigating
+    the relationship between the similarity based geometric motion feature extraction and self-attention.
+    MGP is designed to fuse the multi-reference frame information by effectively exploring the coarse-grained
+    prediction feature generated with the coded motion information. SFD-T is to compress the residual
+    information by jointly exploring the spatial feature distributions in both residual and temporal prediction
+    to further reduce the spatial-temporal redundancy. Experimental results demonstrate that our method
+    achieves the best result with 13.5% BD-Rate saving over VTM.
+  url: https://arxiv.org/abs/2309.11913
+  pdf_url: https://arxiv.org/pdf/2309.11913v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 2
+citation_year: 2023

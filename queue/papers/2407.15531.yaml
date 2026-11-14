@@ -1,0 +1,38 @@
+id: paper:arxiv:2407.15531
+status: skipped
+score: 1
+track: immersive_media
+matched:
+- ref: org:MPEG
+  count: 1
+  weight: 1
+meta:
+  title: A Double Deep Learning-based Solution for Efficient Event Data Coding and Classification
+  authors:
+  - Abdelrahman Seleem
+  - André F. R. Guarda
+  - Nuno M. M. Rodrigues
+  - Fernando Pereira
+  published: '2024-07-22'
+  updated: '2025-03-31'
+  categories:
+  - cs.CV
+  abstract: Event cameras have the ability to capture asynchronous per-pixel brightness changes, called
+    "events", offering advantages over traditional frame-based cameras for computer vision applications.
+    Efficiently coding event data is critical for transmission and storage, given the significant volume
+    of events. This paper proposes a novel double deep learning-based architecture for both event data
+    coding and classification, using a point cloud-based representation for events. In this context, the
+    conversions from events to point clouds and back to events are key steps in the proposed solution,
+    and therefore its impact is evaluated in terms of compression and classification performance. Experimental
+    results show that it is possible to achieve a classification performance of compressed events which
+    is similar to one of the original events, even after applying a lossy point cloud codec, notably the
+    recent learning-based JPEG Pleno Point Cloud Coding standard, with a clear rate reduction. Experimental
+    results also demonstrate that events coded using JPEG PCC achieve better classification performance
+    than those coded using the conventional lossy MPEG Geometry-based Point Cloud Coding standard. Furthermore,
+    the adoption of learning-based coding offers high potential for performing computer vision tasks in
+    the compressed domain, which allows skipping the decoding stage while mitigating the impact of coding
+    artifacts.
+  url: https://arxiv.org/abs/2407.15531
+  pdf_url: https://arxiv.org/pdf/2407.15531v2
+  version: v2
+fetched: '2026-11-14'

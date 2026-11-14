@@ -1,0 +1,43 @@
+id: paper:arxiv:2602.04416
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'Med-MMFL: A Multimodal Federated Learning Benchmark in Healthcare'
+  authors:
+  - Aavash Chhetri
+  - Bibek Niroula
+  - Pratik Shrestha
+  - Yash Raj Shrestha
+  - Lesley A Anderson
+  - Prashnna K Gyawali
+  - Loris Bazzani
+  - Binod Bhattarai
+  published: '2026-02-04'
+  updated: '2026-02-04'
+  categories:
+  - cs.CV
+  - cs.AI
+  abstract: Federated learning (FL) enables collaborative model training across decentralized medical
+    institutions while preserving data privacy. However, medical FL benchmarks remain scarce, with existing
+    efforts focusing mainly on unimodal or bimodal modalities and a limited range of medical tasks. This
+    gap underscores the need for standardized evaluation to advance systematic understanding in medical
+    MultiModal FL (MMFL). To this end, we introduce Med-MMFL, the first comprehensive MMFL benchmark for
+    the medical domain, encompassing diverse modalities, tasks, and federation scenarios. Our benchmark
+    evaluates six representative state-of-the-art FL algorithms, covering different aggregation strategies,
+    loss formulations, and regularization techniques. It spans datasets with 2 to 4 modalities, comprising
+    a total of 10 unique medical modalities, including text, pathology images, ECG, X-ray, radiology reports,
+    and multiple MRI sequences. Experiments are conducted across naturally federated, synthetic IID, and
+    synthetic non-IID settings to simulate real-world heterogeneity. We assess segmentation, classification,
+    modality alignment (retrieval), and VQA tasks. To support reproducibility and fair comparison of future
+    multimodal federated learning (MMFL) methods under realistic medical settings, we release the complete
+    benchmark implementation, including data processing and partitioning pipelines, at https://github.com/bhattarailab/Med-MMFL-Benchmark
+    .
+  url: https://arxiv.org/abs/2602.04416
+  pdf_url: https://arxiv.org/pdf/2602.04416v1
+  version: v1
+fetched: '2026-11-14'

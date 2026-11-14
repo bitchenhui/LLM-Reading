@@ -1,0 +1,48 @@
+id: paper:arxiv:2307.02273
+status: skipped_low_citation
+score: 7
+track: video_image_coding
+matched:
+- ref: codec:VVC
+  count: 2
+  weight: 3
+- ref: impl:VTM
+  count: 1
+  weight: 3
+- ref: concept:EntropyModel
+  count: 1
+  weight: 1
+meta:
+  title: Joint Hierarchical Priors and Adaptive Spatial Resolution for Efficient Neural Image Compression
+  authors:
+  - Ahmed Ghorbel
+  - Wassim Hamidouche
+  - Luce Morin
+  published: '2023-07-05'
+  updated: '2024-01-22'
+  categories:
+  - cs.CV
+  - eess.IV
+  abstract: Recently, the performance of neural image compression (NIC) has steadily improved thanks to
+    the last line of study, reaching or outperforming state-of-the-art conventional codecs. Despite significant
+    progress, current NIC methods still rely on ConvNet-based entropy coding, limited in modeling long-range
+    dependencies due to their local connectivity and the increasing number of architectural biases and
+    priors, resulting in complex underperforming models with high decoding latency. Motivated by the efficiency
+    investigation of the Tranformer-based transform coding framework, namely SwinT-ChARM, we propose to
+    enhance the latter, as first, with a more straightforward yet effective Tranformer-based channel-wise
+    auto-regressive prior model, resulting in an absolute image compression transformer (ICT). Through
+    the proposed ICT, we can capture both global and local contexts from the latent representations and
+    better parameterize the distribution of the quantized latents. Further, we leverage a learnable scaling
+    module with a sandwich ConvNeXt-based pre-/post-processor to accurately extract more compact latent
+    codes while reconstructing higher-quality images. Extensive experimental results on benchmark datasets
+    showed that the proposed framework significantly improves the trade-off between coding efficiency
+    and decoder complexity over the versatile video coding (VVC) reference encoder (VTM-18.0) and the
+    neural codec SwinT-ChARM. Moreover, we provide model scaling studies to verify the computational efficiency
+    of our approach and conduct several objective and subjective analyses to bring to the fore the performance
+    gap between the adaptive image compression transformer (AICT) and the neural codec SwinT-ChARM.
+  url: https://arxiv.org/abs/2307.02273
+  pdf_url: https://arxiv.org/pdf/2307.02273v4
+  version: v4
+fetched: '2026-11-14'
+citation_count: 1
+citation_year: 2023

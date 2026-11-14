@@ -1,0 +1,39 @@
+id: paper:arxiv:2511.06150
+status: skipped
+score: 1
+track: audio_coding
+matched:
+- ref: concept:NeuralAudioCodec
+  count: 1
+  weight: 1
+meta:
+  title: 'BSCodec: A Band-Split Neural Codec for High-Quality Universal Audio Reconstruction'
+  authors:
+  - Haoran Wang
+  - Jiatong Shi
+  - Jinchuan Tian
+  - Bohan Li
+  - Kai Yu
+  - Shinji Watanabe
+  published: '2025-11-08'
+  updated: '2025-11-08'
+  categories:
+  - eess.AS
+  abstract: 'Neural audio codecs have recently enabled high-fidelity reconstruction at high compression
+    rates, especially for speech. However, speech and non-speech audio exhibit fundamentally different
+    spectral characteristics: speech energy concentrates in narrow bands around pitch harmonics (80-400
+    Hz), while non-speech audio requires faithful reproduction across the full spectrum, particularly
+    preserving higher frequencies that define timbre and texture. This poses a challenge: speech-optimized
+    neural codecs suffer degradation on music or sound. Treating the full spectrum holistically is suboptimal:
+    frequency bands have vastly different information density and perceptual importance by content type,
+    yet full-band approaches apply uniform capacity across frequencies without accounting for these acoustic
+    structures. To address this gap, we propose BSCodec (Band-Split Codec), a novel neural audio codec
+    architecture that splits the spectral dimension into separate bands and compresses each band independently.
+    Experimental results demonstrate that BSCodec achieves superior reconstruction over baselines across
+    sound and music, while maintaining competitive quality in the speech domain, when trained on the same
+    combined dataset of speech, music and sound. Downstream benchmark tasks further confirm that BSCodec
+    shows strong potential for use in downstream applications.'
+  url: https://arxiv.org/abs/2511.06150
+  pdf_url: https://arxiv.org/pdf/2511.06150v1
+  version: v1
+fetched: '2026-11-14'

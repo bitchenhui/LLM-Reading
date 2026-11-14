@@ -1,0 +1,37 @@
+id: paper:arxiv:2505.00046
+status: skipped
+score: 2
+track: video_image_coding
+matched:
+- ref: concept:SuperResolution
+  count: 2
+  weight: 1
+- ref: concept:INR
+  count: 1
+  weight: 1
+meta:
+  title: 'SR-NeRV: Improving Embedding Efficiency of Neural Video Representation via Super-Resolution'
+  authors:
+  - Taiga Hayami
+  - Kakeru Koizumi
+  - Hiroshi Watanabe
+  published: '2025-04-30'
+  updated: '2025-07-24'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: Implicit Neural Representations (INRs) have garnered significant attention for their ability
+    to model complex signals in various domains. Recently, INR-based frameworks have shown promise in
+    neural video compression by embedding video content into compact neural networks. However, these methods
+    often struggle to reconstruct high-frequency details under stringent constraints on model size, which
+    are critical in practical compression scenarios. To address this limitation, we propose an INR-based
+    video representation framework that integrates a general-purpose super-resolution (SR) network. This
+    design is motivated by the observation that high-frequency components tend to exhibit low temporal
+    redundancy across frames. By offloading the reconstruction of fine details to a dedicated SR network
+    pre-trained on natural images, the proposed method improves visual fidelity. Experimental results
+    demonstrate that the proposed method outperforms conventional INR-based baselines in reconstruction
+    quality, while maintaining a comparable model size.
+  url: https://arxiv.org/abs/2505.00046
+  pdf_url: https://arxiv.org/pdf/2505.00046v2
+  version: v2
+fetched: '2026-11-14'

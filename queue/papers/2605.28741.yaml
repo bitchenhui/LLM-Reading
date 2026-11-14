@@ -1,0 +1,43 @@
+id: paper:arxiv:2605.28741
+status: pending
+score: 2
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+- ref: concept:TrainingFree
+  count: 1
+  weight: 1
+meta:
+  title: Self-Prophetic Decoding to Unlock Visual Search in LVLMs
+  authors:
+  - Zhendong He
+  - Qiyuan Dai
+  - Guanbin Li
+  - Liang Lin
+  - Sibei Yang
+  published: '2026-05-27'
+  updated: '2026-05-27'
+  categories:
+  - cs.CV
+  abstract: 'Large Vision-Language Models (LVLMs) are rapidly evolving toward true multimodal reasoning,
+    with visual search representing a concrete instantiation of the thinking-with-images paradigm. However,
+    LVLM visual search faces two key challenges: incompatibility among intrinsic capabilities after post-training,
+    and interference in long multi-step reasoning contexts. To address these, we identify two novel insights.
+    First, self-regulation between pre- and post-training LVLMs leverages the intrinsic single-step capabilities
+    of the pre-training model to mitigate capability deterioration and long-context interference. Second,
+    probability-based prophetic sampling, replacing naive prompting, provides a probabilistic interface
+    where the pre-training model acts as a prophet and the post-training model selectively accepts prophetic
+    tokens under its output distribution, preserving coherent multi-step reasoning. Building on these
+    insights, we introduce SeProD, a self-prophetic decoding framework that leverages intrinsic single-step
+    capabilities to enable coherent multi-step reasoning in a training-free, plug-and-play manner. Experiments
+    show that SeProD consistently improves multiple visual-search LVLMs across all 12 splits of 4 visual
+    search benchmarks, as well as across general VQA benchmarks, without added computational overhead,
+    thanks to its parallel prophetic acceptance mechanism.'
+  url: https://arxiv.org/abs/2605.28741
+  pdf_url: https://arxiv.org/pdf/2605.28741v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 1
+citation_year: 2026

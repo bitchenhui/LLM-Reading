@@ -1,0 +1,42 @@
+id: paper:arxiv:2510.18409
+status: skipped_low_citation
+score: 3
+track: video_image_coding
+matched:
+- ref: codec:AVC
+  count: 1
+  weight: 3
+meta:
+  title: 'How2Compress: Scalable and Efficient Edge Video Analytics via Adaptive Granular Video Compression'
+  authors:
+  - Yuheng Wu
+  - Thanh-Tung Nguyen
+  - Lucas Liebe
+  - Quang Tau
+  - Pablo Espinosa Campos
+  - Jinghan Cheng
+  - Dongman Lee
+  published: '2025-10-21'
+  updated: '2025-10-21'
+  categories:
+  - cs.MM
+  - cs.NI
+  abstract: With the rapid proliferation of the Internet of Things, video analytics has become a cornerstone
+    application in wireless multimedia sensor networks. To support such applications under bandwidth constraints,
+    learning-based adaptive quantization for video compression have demonstrated strong potential in reducing
+    bitrate while maintaining analytical accuracy. However, existing frameworks often fail to fully exploit
+    the fine-grained quality control enabled by modern blockbased video codecs, leaving significant compression
+    efficiency untapped. In this paper, we present How2Compress, a simple yet effective framework designed
+    to enhance video compression efficiency through precise, fine-grained quality control at the macroblock
+    level. How2Compress is a plug-and-play module and can be seamlessly integrated into any existing edge
+    video analytics pipelines. We implement How2Compress on the H.264 codec and evaluate its performance
+    across diverse real-world scenarios. Experimental results show that How2Compress achieves up to $50.4\%$
+    bitrate savings and outperforms baselines by up to $3.01\times$ without compromising accuracy, demonstrating
+    its practical effectiveness and efficiency. Code is available at https://github.com/wyhallenwu/how2compress
+    and a reproducible docker image at https://hub.docker.com/r/wuyuheng/how2compress.
+  url: https://arxiv.org/abs/2510.18409
+  pdf_url: https://arxiv.org/pdf/2510.18409v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 3
+citation_year: 2025

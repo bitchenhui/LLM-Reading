@@ -1,0 +1,49 @@
+id: paper:arxiv:2503.00073
+status: skipped
+score: 1
+track: immersive_media
+matched:
+- ref: concept:VolumetricVideo
+  count: 2
+  weight: 1
+meta:
+  title: Forecasting Whole-Brain Neuronal Activity from Volumetric Video
+  authors:
+  - Alexander Immer
+  - Jan-Matthis Lueckmann
+  - Alex Bo-Yuan Chen
+  - Peter H. Li
+  - Mariela D. Petkova
+  - Nirmala A. Iyer
+  - Aparna Dev
+  - Gudrun Ihrke
+  - Woohyun Park
+  - Alyson Petruncio
+  - Aubrey Weigel
+  - Wyatt Korff
+  - Florian Engert
+  - Jeff W. Lichtman
+  - Misha B. Ahrens
+  - Viren Jain
+  - Michał Januszewski
+  published: '2025-02-27'
+  updated: '2025-02-27'
+  categories:
+  - cs.CV
+  - cs.LG
+  - q-bio.NC
+  abstract: Large-scale neuronal activity recordings with fluorescent calcium indicators are increasingly
+    common, yielding high-resolution 2D or 3D videos. Traditional analysis pipelines reduce this data
+    to 1D traces by segmenting regions of interest, leading to inevitable information loss. Inspired by
+    the success of deep learning on minimally processed data in other domains, we investigate the potential
+    of forecasting neuronal activity directly from volumetric videos. To capture long-range dependencies
+    in high-resolution volumetric whole-brain recordings, we design a model with large receptive fields,
+    which allow it to integrate information from distant regions within the brain. We explore the effects
+    of pre-training and perform extensive model selection, analyzing spatio-temporal trade-offs for generating
+    accurate forecasts. Our model outperforms trace-based forecasting approaches on ZAPBench, a recently
+    proposed benchmark on whole-brain activity prediction in zebrafish, demonstrating the advantages of
+    preserving the spatial structure of neuronal activity.
+  url: https://arxiv.org/abs/2503.00073
+  pdf_url: https://arxiv.org/pdf/2503.00073v1
+  version: v1
+fetched: '2026-11-14'

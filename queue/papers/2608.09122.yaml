@@ -1,0 +1,46 @@
+id: paper:arxiv:2608.09122
+status: pending
+score: 2
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 3
+  weight: 1
+- ref: concept:LLM
+  count: 2
+  weight: 1
+meta:
+  title: Visual Distortion Detection in UGC Images Using Large Multimodal Models
+  authors:
+  - Ziheng Jia
+  - Yingji Liang
+  - Jiaying Qian
+  - Xiongkuo Min
+  published: '2026-08-10'
+  updated: '2026-08-10'
+  categories:
+  - cs.CV
+  - cs.AI
+  abstract: The localized depiction of perceptual quality has long been a crucial, yet underexplored,
+    challenge in image quality assessment (IQA). Existing approaches based on large multimodal models
+    (LMMs) predominantly rely on text-driven supervised fine-tuning (SFT). However, this training paradigm
+    exhibits notable limitations in detection accuracy. Moreover, synthetically distorted images, which
+    are often used as the primary training data source, show a significant generalization gap when deployed
+    in real-world scenarios; thus, the \textbf{synthetic-to-authentic (\textit{S2A})} problem represents
+    a critical challenge. Motivated by these issues, we propose \textbf{\textit{VIGIL}}, which leverages
+    the LMM architecture for precise visual distortion detection. From a candidate pool of over 1000K
+    samples, we construct the \textbf{\textit{VIGIL-140K}} training set, which consists of over 140K distorted
+    images. These images are obtained through rigorous quality filtering and carefully crafted distortion
+    injection, covering 8 major synthetic distortion categories. Our model leverages different layers
+    of the large language model (LLM) decoder, treating them as \textit{multiple detectors} that perform
+    synchronous distortion detection using multi-level features. Additionally, we retain distortion cues
+    from predictions assigned to the non-distortion class, which helps mitigate the ambiguous foreground-background
+    (\textit{FG-BG}) separation commonly encountered in the \textit{S2A} problem. After post-processing,
+    our model consistently outperforms strong baselines on both in-domain synthetic distortion detection
+    and \textit{S2A} tasks.
+  url: https://arxiv.org/abs/2608.09122
+  pdf_url: https://arxiv.org/pdf/2608.09122v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 0
+citation_year: 2026

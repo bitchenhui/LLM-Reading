@@ -1,0 +1,50 @@
+id: paper:arxiv:2605.07346
+status: skipped_low_citation
+score: 2
+track: immersive_media
+matched:
+- ref: concept:VolumetricVideo
+  count: 4
+  weight: 1
+- ref: concept:RDO
+  count: 1
+  weight: 1
+meta:
+  title: 'SoLAR: Error-Resilient Streamable Long-Horizon Free-Viewpoint Video Reconstruction with Anchor
+    Activation and Latent Recalibration'
+  authors:
+  - Haotian Zhang
+  - Xu Mo
+  - Yixin Yu
+  - Guanhua Zhu
+  - Jian Xue
+  - Tongda Xu
+  - Yan Wang
+  - Jiaqi Zhang
+  - Siwei Ma
+  - Wen Gao
+  published: '2026-05-08'
+  updated: '2026-05-08'
+  categories:
+  - cs.CV
+  abstract: Free-Viewpoint Video (FVV) has emerged as a cornerstone of next-generation immersive media
+    systems and attracted widespread attention. Previous methods primarily focus on short video sequences
+    and suffer from significant performance degradation when processing long-horizon free-viewpoint video
+    (LFVV). Motivated by bit allocation theory, we analyze dynamic-anchor-based volumetric video representation
+    within a rate-distortion optimization framework and propose \textbf{SoLAR}, which is the first error-resilient
+    streamable FVV framework that maintains stable reconstruction quality on long sequences without requiring
+    group-of-pictures partitioning. We propose the Anchor Activation Dynamics (AAD), which enables dynamic
+    anchors to model non-rigid transformations by dynamically activating informative anchors and suppressing
+    redundant ones. Furthermore, we introduce Latent Discrepancy Aware Recalibration (LaDAR), which is
+    a mechanism to identify discrepancies between latent representations and recalibrate the correspondences
+    encoded in the network, effectively mitigating error propagation in LFVV without compromising real-time
+    performance or storage compactness. Extensive experiments demonstrate that \textbf{SoLAR} achieves
+    state-of-the-art reconstruction performance while maintaining minimum storage overhead, which provides
+    a new direction for LFVV reconstruction and advances the practical deployment of immersive systems.
+    Demo free-viewpoint videos are provided in the supplementary material.
+  url: https://arxiv.org/abs/2605.07346
+  pdf_url: https://arxiv.org/pdf/2605.07346v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 0
+citation_year: 2026

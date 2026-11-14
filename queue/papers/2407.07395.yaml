@@ -1,0 +1,55 @@
+id: paper:arxiv:2407.07395
+status: skipped_low_citation
+score: 7
+track: video_image_coding
+matched:
+- ref: codec:VVC
+  count: 1
+  weight: 3
+- ref: dataset:JVET-CTC
+  count: 1
+  weight: 1
+- ref: dataset:UVG
+  count: 1
+  weight: 1
+- ref: metric:BD-Rate
+  count: 1
+  weight: 1
+- ref: org:AOMedia
+  count: 1
+  weight: 1
+meta:
+  title: Standard compliant video coding using low complexity, switchable neural wrappers
+  authors:
+  - Yueyu Hu
+  - Chenhao Zhang
+  - Onur G. Guleryuz
+  - Debargha Mukherjee
+  - Yao Wang
+  published: '2024-07-10'
+  updated: '2024-07-10'
+  categories:
+  - cs.CV
+  - cs.MM
+  - eess.IV
+  abstract: The proliferation of high resolution videos posts great storage and bandwidth pressure on
+    cloud video services, driving the development of next-generation video codecs. Despite great progress
+    made in neural video coding, existing approaches are still far from economical deployment considering
+    the complexity and rate-distortion performance tradeoff. To clear the roadblocks for neural video
+    coding, in this paper we propose a new framework featuring standard compatibility, high performance,
+    and low decoding complexity. We employ a set of jointly optimized neural pre- and post-processors,
+    wrapping a standard video codec, to encode videos at different resolutions. The rate-distorion optimal
+    downsampling ratio is signaled to the decoder at the per-sequence level for each target rate. We design
+    a low complexity neural post-processor architecture that can handle different upsampling ratios. The
+    change of resolution exploits the spatial redundancy in high-resolution videos, while the neural wrapper
+    further achieves rate-distortion performance improvement through end-to-end optimization with a codec
+    proxy. Our light-weight post-processor architecture has a complexity of 516 MACs / pixel, and achieves
+    9.3% BD-Rate reduction over VVC on the UVG dataset, and 6.4% on AOM CTC Class A1. Our approach has
+    the potential to further advance the performance of the latest video coding standards using neural
+    processing with minimal added complexity.
+  url: https://arxiv.org/abs/2407.07395
+  pdf_url: https://arxiv.org/pdf/2407.07395v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 4
+citation_year: 2024

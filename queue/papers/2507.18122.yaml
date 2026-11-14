@@ -1,0 +1,31 @@
+id: paper:arxiv:2507.18122
+status: skipped
+score: 0
+track: self_improvement
+matched: []
+meta:
+  title: Maximizing Prefix-Confidence at Test-Time Efficiently Improves Mathematical Reasoning
+  authors:
+  - Matthias Otth
+  - Jonas Hübotter
+  - Ido Hakimi
+  - Andreas Krause
+  published: '2025-07-24'
+  updated: '2025-07-24'
+  categories:
+  - cs.LG
+  abstract: 'Recent work has shown that language models can self-improve by maximizing their own confidence
+    in their predictions, without relying on external verifiers or reward signals. In this work, we study
+    the test-time scaling of language models for mathematical reasoning tasks, where the model''s own
+    confidence is used to select the most promising attempts. Surprisingly, we find that we can achieve
+    significant performance gains by continuing only the most promising attempt, selected by the model''s
+    prefix-confidence. We systematically evaluate prefix-confidence scaling on five mathematical reasoning
+    datasets: the school-level GSM8K and MATH500, and the competition-level AMC23, AIME24, and AIME25.
+    We find that prefix-confidence scaling with prefixes of only 32 tokens achieves a better accuracy-compute
+    trade-off than majority voting. Moreover, prefix-confidence scaling appears less susceptible than
+    BoN to length biases. Finally, we also evaluate test-time training with prefix-confidence and find
+    that, while outperforming the base model, it does not improve over prefix-confidence scaling.'
+  url: https://arxiv.org/abs/2507.18122
+  pdf_url: https://arxiv.org/pdf/2507.18122v1
+  version: v1
+fetched: '2026-11-14'

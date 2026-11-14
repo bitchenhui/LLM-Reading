@@ -1,0 +1,39 @@
+id: paper:arxiv:2508.20549
+status: skipped
+score: 1
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 1
+  weight: 1
+meta:
+  title: 'MedGR$^2$: Breaking the Data Barrier for Medical Reasoning via Generative Reward Learning'
+  authors:
+  - Weihai Zhi
+  - Jiayan Guo
+  - Shangyang Li
+  published: '2025-08-28'
+  updated: '2025-12-08'
+  categories:
+  - cs.LG
+  - cs.AI
+  abstract: The application of Vision-Language Models (VLMs) in medicine is critically hampered by the
+    scarcity of high-quality, expert-annotated data. Supervised Fine-Tuning (SFT) on existing datasets
+    often leads to poor generalization on unseen modalities and tasks, while Reinforcement Learning (RL),
+    a promising alternative, is stymied by the lack of reliable reward signals in this data-scarce domain.
+    To break this impasse, we introduce Generative Reward Learning for Medical Reasoning (MedGR$^2$),
+    a novel framework that creates a self-improving virtuous cycle. MedGR$^2$ co-develops a data generator
+    and a reward model, enabling the automated, continuous creation of high-quality, multi-modal medical
+    data that serves as both a superior training source for SFT and RL. Our experiments demonstrate that
+    SFT with MedGR$^2$-produced data already surpasses baselines trained on large-scale, human-curated
+    datasets. Crucially, when leveraging this data for RL via Group Relative Policy Optimization (GRPO),
+    our model achieves state-of-the-art cross-modality and cross-task generalization, significantly outperforming
+    specialized RL-based methods. Furthermore, our compact model, empowered by MedGR$^2$, achieves performance
+    competitive with foundation models possessing over 10 times more parameters. MedGR$^2$ presents a
+    new paradigm for data-efficient learning in high-stakes domains, transforming the problem from data
+    scarcity to data generation and unlocking the full potential of RL for building truly generalizable
+    medical AI.
+  url: https://arxiv.org/abs/2508.20549
+  pdf_url: https://arxiv.org/pdf/2508.20549v2
+  version: v2
+fetched: '2026-11-14'

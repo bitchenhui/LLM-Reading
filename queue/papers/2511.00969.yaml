@@ -1,0 +1,65 @@
+id: paper:arxiv:2511.00969
+status: pending
+score: 17
+track: video_image_coding
+matched:
+- ref: codec:AV1
+  count: 1
+  weight: 3
+- ref: codec:VVC
+  count: 1
+  weight: 3
+- ref: impl:DCVC-FM
+  count: 1
+  weight: 3
+- ref: impl:DCVC-RT
+  count: 1
+  weight: 3
+- ref: concept:IQA
+  count: 2
+  weight: 1
+- ref: concept:QP
+  count: 1
+  weight: 1
+- ref: metric:FPS
+  count: 1
+  weight: 1
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+- ref: metric:VMAF
+  count: 1
+  weight: 1
+meta:
+  title: Evaluating Video Quality Metrics for Neural and Traditional Codecs using 4K/UHD-1 Videos
+  authors:
+  - Benjamin Herb
+  - Rakesh Rao Ramachandra Rao
+  - Steve Göring
+  - Alexander Raake
+  published: '2025-11-02'
+  updated: '2025-11-02'
+  categories:
+  - eess.IV
+  abstract: With neural video codecs (NVCs) emerging as promising alternatives for traditional compression
+    methods, it is increasingly important to determine whether existing quality metrics remain valid for
+    evaluating their performance. However, few studies have systematically investigated this using well-designed
+    subjective tests. To address this gap, this paper presents a subjective quality assessment study using
+    two traditional (AV1 and VVC) and two variants of a neural video codec (DCVC-FM and DCVC-RT). Six
+    source videos (8-10 seconds each, 4K/UHD-1, 60 fps) were encoded at four resolutions (360p to 2160p)
+    using nine different QP values, resulting in 216 sequences that were rated in a controlled environment
+    by 30 participants. These results were used to evaluate a range of full-reference, hybrid, and no-reference
+    quality metrics to assess their applicability to the induced quality degradations. The objective quality
+    assessment results show that VMAF and AVQBits|H0|f demonstrate strong Pearson correlation, while FasterVQA
+    performed best among the tested no-reference metrics. Furthermore, PSNR shows the highest Spearman
+    rank order correlation for within-sequence comparisons across the different codecs. Importantly, no
+    significant performance differences in metric reliability are observed between traditional and neural
+    video codecs across the tested metrics. The dataset, consisting of source videos, encoded videos,
+    and both subjective and quality metric scores will be made publicly available following an open-science
+    approach (https://github.com/Telecommunication-Telemedia-Assessment/AVT-VQDB-UHD-1-NVC).
+  url: https://arxiv.org/abs/2511.00969
+  pdf_url: https://arxiv.org/pdf/2511.00969v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 5
+citation_year: 2025

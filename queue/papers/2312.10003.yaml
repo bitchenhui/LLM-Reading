@@ -1,0 +1,48 @@
+id: paper:arxiv:2312.10003
+status: pending
+score: 2
+track: self_improvement
+matched:
+- ref: concept:LLM
+  count: 2
+  weight: 1
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+meta:
+  title: 'ReST meets ReAct: Self-Improvement for Multi-Step Reasoning LLM Agent'
+  authors:
+  - Renat Aksitov
+  - Sobhan Miryoosefi
+  - Zonglin Li
+  - Daliang Li
+  - Sheila Babayan
+  - Kavya Kopparapu
+  - Zachary Fisher
+  - Ruiqi Guo
+  - Sushant Prakash
+  - Pranesh Srinivasan
+  - Manzil Zaheer
+  - Felix Yu
+  - Sanjiv Kumar
+  published: '2023-12-15'
+  updated: '2023-12-15'
+  categories:
+  - cs.CL
+  abstract: Answering complex natural language questions often necessitates multi-step reasoning and integrating
+    external information. Several systems have combined knowledge retrieval with a large language model
+    (LLM) to answer such questions. These systems, however, suffer from various failure cases, and we
+    cannot directly train them end-to-end to fix such failures, as interaction with external knowledge
+    is non-differentiable. To address these deficiencies, we define a ReAct-style LLM agent with the ability
+    to reason and act upon external knowledge. We further refine the agent through a ReST-like method
+    that iteratively trains on previous trajectories, employing growing-batch reinforcement learning with
+    AI feedback for continuous self-improvement and self-distillation. Starting from a prompted large
+    model and after just two iterations of the algorithm, we can produce a fine-tuned small model that
+    achieves comparable performance on challenging compositional question-answering benchmarks with two
+    orders of magnitude fewer parameters.
+  url: https://arxiv.org/abs/2312.10003
+  pdf_url: https://arxiv.org/pdf/2312.10003v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 96
+citation_year: 2023

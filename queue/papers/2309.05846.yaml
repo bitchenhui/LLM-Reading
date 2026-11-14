@@ -1,0 +1,58 @@
+id: paper:arxiv:2309.05846
+status: pending
+score: 6
+track: video_image_coding
+matched:
+- ref: impl:VTM
+  count: 1
+  weight: 3
+- ref: org:JVET
+  count: 2
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+- ref: metric:BD-Rate
+  count: 1
+  weight: 1
+meta:
+  title: Designs and Implementations in Neural Network-based Video Coding
+  authors:
+  - Yue Li
+  - Junru Li
+  - Chaoyi Lin
+  - Kai Zhang
+  - Li Zhang
+  - Franck Galpin
+  - Thierry Dumas
+  - Hongtao Wang
+  - Muhammed Coban
+  - Jacob Ström
+  - Du Liu
+  - Kenneth Andersson
+  published: '2023-09-11'
+  updated: '2023-09-13'
+  categories:
+  - eess.IV
+  abstract: 'The past decade has witnessed the huge success of deep learning in well-known artificial
+    intelligence applications such as face recognition, autonomous driving, and large language model like
+    ChatGPT. Recently, the application of deep learning has been extended to a much wider range, with
+    neural network-based video coding being one of them. Neural network-based video coding can be performed
+    at two different levels: embedding neural network-based (NN-based) coding tools into a classical video
+    compression framework or building the entire compression framework upon neural networks. This paper
+    elaborates some of the recent exploration efforts of JVET (Joint Video Experts Team of ITU-T SG 16
+    WP 3 and ISO/IEC JTC 1/SC29) in the name of neural network-based video coding (NNVC), falling in the
+    former category. Specifically, this paper discusses two major NN-based video coding technologies,
+    i.e. neural network-based intra prediction and neural network-based in-loop filtering, which have
+    been investigated for several meeting cycles in JVET and finally adopted into the reference software
+    of NNVC. Extensive experiments on top of the NNVC have been conducted to evaluate the effectiveness
+    of the proposed techniques. Compared with VTM-11.0_nnvc, the proposed NN-based coding tools in NNVC-4.0
+    could achieve {11.94%, 21.86%, 22.59%}, {9.18%, 19.76%, 20.92%}, and {10.63%, 21.56%, 23.02%} BD-rate
+    reductions on average for {Y, Cb, Cr} under random-access, low-delay, and all-intra configurations
+    respectively.'
+  url: https://arxiv.org/abs/2309.05846
+  pdf_url: https://arxiv.org/pdf/2309.05846v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 9
+citation_year: 2023

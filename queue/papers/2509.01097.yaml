@@ -1,0 +1,33 @@
+id: paper:arxiv:2509.01097
+status: skipped
+score: 0
+track: immersive_media
+matched: []
+meta:
+  title: 'PVINet: Point-Voxel Interlaced Network for Point Cloud Compression'
+  authors:
+  - Xuan Deng
+  - Xingtao Wang
+  - Xiandong Meng
+  - Xiaopeng Fan
+  - Debin Zhao
+  published: '2025-09-01'
+  updated: '2025-09-01'
+  categories:
+  - cs.CV
+  abstract: In point cloud compression, the quality of a reconstructed point cloud relies on both the
+    global structure and the local context, with existing methods usually processing global and local
+    information sequentially and lacking communication between these two types of information. In this
+    paper, we propose a point-voxel interlaced network (PVINet), which captures global structural features
+    and local contextual features in parallel and performs interactions at each scale to enhance feature
+    perception efficiency. Specifically, PVINet contains a voxel-based encoder (Ev) for extracting global
+    structural features and a point-based encoder (Ep) that models local contexts centered at each voxel.
+    Particularly, a novel conditional sparse convolution is introduced, which applies point embeddings
+    to dynamically customize kernels for voxel feature extraction, facilitating feature interactions from
+    Ep to Ev. During decoding, a voxel-based decoder employs conditional sparse convolutions to incorporate
+    point embeddings as guidance to reconstruct the point cloud. Experiments on benchmark datasets show
+    that PVINet delivers competitive performance compared to state-of-the-art methods.
+  url: https://arxiv.org/abs/2509.01097
+  pdf_url: https://arxiv.org/pdf/2509.01097v1
+  version: v1
+fetched: '2026-11-14'

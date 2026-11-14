@@ -1,0 +1,37 @@
+id: paper:arxiv:2606.16464
+status: pending
+score: 2
+track: audio_coding
+matched:
+- ref: concept:NeuralAudioCodec
+  count: 1
+  weight: 1
+- ref: metric:MOS
+  count: 1
+  weight: 1
+meta:
+  title: Towards Robust Generative Speech Enhancement Using Vector Quantisation-Based Neural Audio Codec
+  authors:
+  - Haixin Zhao
+  - Nilesh Madhu
+  published: '2026-06-15'
+  updated: '2026-06-15'
+  categories:
+  - eess.AS
+  - cs.SD
+  abstract: This work investigates modelling strategies in continuous and discrete latent spaces in the
+    vector quantisation (VQ)-based neural audio codec (NAC) speech enhancement (SE), along with the role
+    of VQ regularisation. We propose cNAC-SE and dNAC-SE frameworks that predict continuous representations
+    and discrete tokens in latent space, respectively. Theoretical analysis and visualisations in latent
+    space are performed to exhibit their inherent modelling mechanisms. Experimental results show that
+    the fully fine-tuned cNAC-SE model consistently outperforms all dNAC-SE variants across diverse test
+    conditions and achieves leading performance among established generative approaches in DNS-MOS metrics.
+    Comparison with the discriminative counterpart shows that VQ enhances robustness through an intrinsic
+    effect of clean-prior-constrained regularisation, independent of discrete token processing. This highlights
+    the transferable value of VQ regularisation to other continuous modelling methods.
+  url: https://arxiv.org/abs/2606.16464
+  pdf_url: https://arxiv.org/pdf/2606.16464v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 0
+citation_year: 2026

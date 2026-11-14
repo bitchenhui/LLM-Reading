@@ -1,0 +1,30 @@
+id: paper:arxiv:2402.01571
+status: skipped
+score: 0
+track: audio_coding
+matched: []
+meta:
+  title: 'Spiking Music: Audio Compression with Event Based Auto-encoders'
+  authors:
+  - Martim Lisboa
+  - Guillaume Bellec
+  published: '2024-02-02'
+  updated: '2024-02-02'
+  categories:
+  - cs.SD
+  - cs.LG
+  - cs.NE
+  - eess.AS
+  abstract: Neurons in the brain communicate information via punctual events called spikes. The timing
+    of spikes is thought to carry rich information, but it is not clear how to leverage this in digital
+    systems. We demonstrate that event-based encoding is efficient for audio compression. To build this
+    event-based representation we use a deep binary auto-encoder, and under high sparsity pressure, the
+    model enters a regime where the binary event matrix is stored more efficiently with sparse matrix
+    storage algorithms. We test this on the large MAESTRO dataset of piano recordings against vector quantized
+    auto-encoders. Not only does our "Spiking Music compression" algorithm achieve a competitive compression/reconstruction
+    trade-off, but selectivity and synchrony between encoded events and piano key strikes emerge without
+    supervision in the sparse regime.
+  url: https://arxiv.org/abs/2402.01571
+  pdf_url: https://arxiv.org/pdf/2402.01571v1
+  version: v1
+fetched: '2026-11-14'

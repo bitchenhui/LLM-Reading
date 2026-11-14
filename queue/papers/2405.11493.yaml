@@ -1,0 +1,42 @@
+id: paper:arxiv:2405.11493
+status: pending
+score: 3
+track: immersive_media
+matched:
+- ref: codec:G-PCC
+  count: 1
+  weight: 3
+meta:
+  title: 'Point Cloud Compression with Implicit Neural Representations: A Unified Framework'
+  authors:
+  - Hongning Ruan
+  - Yulin Shao
+  - Qianqian Yang
+  - Liang Zhao
+  - Dusit Niyato
+  published: '2024-05-19'
+  updated: '2024-05-19'
+  categories:
+  - cs.CV
+  - cs.IT
+  - eess.SP
+  abstract: Point clouds have become increasingly vital across various applications thanks to their ability
+    to realistically depict 3D objects and scenes. Nevertheless, effectively compressing unstructured,
+    high-precision point cloud data remains a significant challenge. In this paper, we present a pioneering
+    point cloud compression framework capable of handling both geometry and attribute components. Unlike
+    traditional approaches and existing learning-based methods, our framework utilizes two coordinate-based
+    neural networks to implicitly represent a voxelized point cloud. The first network generates the occupancy
+    status of a voxel, while the second network determines the attributes of an occupied voxel. To tackle
+    an immense number of voxels within the volumetric space, we partition the space into smaller cubes
+    and focus solely on voxels within non-empty cubes. By feeding the coordinates of these voxels into
+    the respective networks, we reconstruct the geometry and attribute components of the original point
+    cloud. The neural network parameters are further quantized and compressed. Experimental results underscore
+    the superior performance of our proposed method compared to the octree-based approach employed in
+    the latest G-PCC standards. Moreover, our method exhibits high universality when contrasted with existing
+    learning-based techniques.
+  url: https://arxiv.org/abs/2405.11493
+  pdf_url: https://arxiv.org/pdf/2405.11493v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 12
+citation_year: 2024

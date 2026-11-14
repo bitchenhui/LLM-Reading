@@ -1,0 +1,39 @@
+id: paper:arxiv:2405.20884
+status: skipped
+score: 1
+track: audio_coding
+matched:
+- ref: org:Intel
+  count: 1
+  weight: 1
+meta:
+  title: Effects of Dataset Sampling Rate for Noise Cancellation through Deep Learning
+  authors:
+  - Brandon Colelough
+  - Andrew Zheng
+  published: '2024-05-30'
+  updated: '2024-05-30'
+  categories:
+  - cs.SD
+  - cs.AI
+  - eess.AS
+  abstract: 'Background: Active noise cancellation has been a subject of research for decades. Traditional
+    techniques, like the Fast Fourier Transform, have limitations in certain scenarios. This research
+    explores the use of deep neural networks (DNNs) as a superior alternative. Objective: The study aims
+    to determine the effect sampling rate within training data has on lightweight, efficient DNNs that
+    operate within the processing constraints of mobile devices. Methods: We chose the ConvTasNET network
+    for its proven efficiency in speech separation and enhancement. ConvTasNET was trained on datasets
+    such as WHAM!, LibriMix, and the MS-2023 DNS Challenge. The datasets were sampled at rates of 8kHz,
+    16kHz, and 48kHz to analyze the effect of sampling rate on noise cancellation efficiency and effectiveness.
+    The model was tested on a core-i7 Intel processor from 2023, assessing the network''s ability to produce
+    clear audio while filtering out background noise. Results: Models trained at higher sampling rates
+    (48kHz) provided much better evaluation metrics against Total Harmonic Distortion (THD) and Quality
+    Prediction For Generative Neural Speech Codecs (WARP-Q) values, indicating improved audio quality.
+    However, a trade-off was noted with the processing time being longer for higher sampling rates. Conclusions:
+    The Conv-TasNET network, trained on datasets sampled at higher rates like 48kHz, offers a robust solution
+    for mobile devices in achieving noise cancellation through speech separation and enhancement. Future
+    work involves optimizing the model''s efficiency further and testing on mobile devices.'
+  url: https://arxiv.org/abs/2405.20884
+  pdf_url: https://arxiv.org/pdf/2405.20884v1
+  version: v1
+fetched: '2026-11-14'

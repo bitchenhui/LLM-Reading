@@ -1,0 +1,49 @@
+id: paper:arxiv:2601.00269
+status: skipped_low_citation
+score: 2
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: 'FaithSCAN: Model-Driven Single-Pass Hallucination Detection for Faithful Visual Question Answering'
+  authors:
+  - Chaodong Tong
+  - Qi Zhang
+  - Chen Li
+  - Lei Jiang
+  - Yanbing Liu
+  published: '2026-01-01'
+  updated: '2026-01-31'
+  categories:
+  - cs.CV
+  - cs.AI
+  abstract: 'Faithfulness hallucinations in VQA occur when vision-language models produce fluent yet visually
+    ungrounded answers, severely undermining their reliability in safety-critical applications. Existing
+    detection methods mainly fall into two categories: external verification approaches relying on auxiliary
+    models or knowledge bases, and uncertainty-driven approaches using repeated sampling or uncertainty
+    estimates. The former suffer from high computational overhead and are limited by external resource
+    quality, while the latter capture only limited facets of model uncertainty and fail to sufficiently
+    explore the rich internal signals associated with the diverse failure modes. Both paradigms thus have
+    inherent limitations in efficiency, robustness, and detection performance. To address these challenges,
+    we propose FaithSCAN: a lightweight network that detects hallucinations by exploiting rich internal
+    signals of VLMs, including token-level decoding uncertainty, intermediate visual representations,
+    and cross-modal alignment features. These signals are fused via branch-wise evidence encoding and
+    uncertainty-aware attention. We also extend the LLM-as-a-Judge paradigm to VQA hallucination and propose
+    a low-cost strategy to automatically generate model-dependent supervision signals, enabling supervised
+    training without costly human labels while maintaining high detection accuracy. Experiments on multiple
+    VQA benchmarks show that FaithSCAN significantly outperforms existing methods in both effectiveness
+    and efficiency. In-depth analysis shows hallucinations arise from systematic internal state variations
+    in visual perception, cross-modal reasoning, and language decoding. Different internal signals provide
+    complementary diagnostic cues, and hallucination patterns vary across VLM architectures, offering
+    new insights into the underlying causes of multimodal hallucinations.'
+  url: https://arxiv.org/abs/2601.00269
+  pdf_url: https://arxiv.org/pdf/2601.00269v3
+  version: v3
+fetched: '2026-11-14'
+citation_count: 1
+citation_year: 2026

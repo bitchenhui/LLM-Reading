@@ -1,0 +1,52 @@
+id: paper:arxiv:2404.18058
+status: skipped_low_citation
+score: 8
+track: video_image_coding
+matched:
+- ref: codec:VVC
+  count: 2
+  weight: 3
+- ref: impl:VTM
+  count: 1
+  weight: 3
+- ref: metric:BD-Rate
+  count: 1
+  weight: 1
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+meta:
+  title: Joint Reference Frame Synthesis and Post Filter Enhancement for Versatile Video Coding
+  authors:
+  - Weijie Bao
+  - Yuantong Zhang
+  - Jianghao Jia
+  - Zhenzhong Chen
+  - Shan Liu
+  published: '2024-04-28'
+  updated: '2024-04-28'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: This paper presents the joint reference frame synthesis (RFS) and post-processing filter enhancement
+    (PFE) for Versatile Video Coding (VVC), aiming to explore the combination of different neural network-based
+    video coding (NNVC) tools to better utilize the hierarchical bi-directional coding structure of VVC.
+    Both RFS and PFE utilize the Space-Time Enhancement Network (STENet), which receives two input frames
+    with artifacts and produces two enhanced frames with suppressed artifacts, along with an intermediate
+    synthesized frame. STENet comprises two pipelines, the synthesis pipeline and the enhancement pipeline,
+    tailored for different purposes. During RFS, two reconstructed frames are sent into STENet's synthesis
+    pipeline to synthesize a virtual reference frame, similar to the current to-be-coded frame. The synthesized
+    frame serves as an additional reference frame inserted into the reference picture list (RPL). During
+    PFE, two reconstructed frames are fed into STENet's enhancement pipeline to alleviate their artifacts
+    and distortions, resulting in enhanced frames with reduced artifacts and distortions. To reduce inference
+    complexity, we propose joint inference of RFS and PFE (JISE), achieved through a single execution
+    of STENet. Integrated into the VVC reference software VTM-15.0, RFS, PFE, and JISE are coordinated
+    within a novel Space-Time Enhancement Window (STEW) under Random Access (RA) configuration. The proposed
+    method could achieve -7.34%/-17.21%/-16.65% PSNR-based BD-rate on average for three components under
+    RA configuration.
+  url: https://arxiv.org/abs/2404.18058
+  pdf_url: https://arxiv.org/pdf/2404.18058v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 6
+citation_year: 2024

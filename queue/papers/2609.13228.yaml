@@ -1,0 +1,37 @@
+id: paper:arxiv:2609.13228
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'Don''t Just Look, Intervene: Perturbation Based Region Labeling for VQA Images'
+  authors:
+  - Marko Jojic
+  - Zhaonan Li
+  - Ben Zhou
+  published: '2026-09-01'
+  updated: '2026-09-01'
+  categories:
+  - cs.CV
+  abstract: 'Vision Language Models (VLMs) should rely on visual evidence that directly determines the
+    correct answer, but supervision for grounding visual reasoning is often expensive to obtain manually
+    or tied to dataset-specific annotation primitives. We instead introduce model-causal visual evidence
+    as an annotation target, defined as the set of image regions whose counterfactual intervention changes
+    a model''s answer distribution for a given image-question pair. Based on this principle, we introduce
+    Counterfactual Search for Grounding Regions (CSGR). CSGR is a scalable pipeline that proposes candidate
+    regions, perturbs them, measures their effect on answer sensitivity, and aggregates this evidence
+    across multiple judges to approximate answer-critical regions in VQA data. To assess whether CSGR
+    annotations contain a useful supervision signal, we plug them into three existing grounding-aware
+    training routines: attention steering, Visual CoTfinetuning, and latent visual reasoning. These experiments
+    test whether the proposed annotation scheme can provide a useful supervision signal across multiple
+    ways of consuming region labels, rather than introducing a new way of using them. Across competing
+    automatic region-labeling mechanisms, CSGR annotations provide the most consistent gains over Cross
+    Entropy-only finetuning in both in-domain and out-of-domain evaluations, indicating that the proposed
+    labeling scheme captures useful region-level information.'
+  url: https://arxiv.org/abs/2609.13228
+  pdf_url: https://arxiv.org/pdf/2609.13228v1
+  version: v1
+fetched: '2026-11-14'

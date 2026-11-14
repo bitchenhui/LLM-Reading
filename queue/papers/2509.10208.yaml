@@ -1,0 +1,40 @@
+id: paper:arxiv:2509.10208
+status: skipped_low_citation
+score: 2
+track: self_improvement
+matched:
+- ref: concept:LLM
+  count: 1
+  weight: 1
+- ref: concept:SelfImprovement
+  count: 1
+  weight: 1
+meta:
+  title: 'SI-FACT: Mitigating Knowledge Conflict via Self-Improving Faithfulness-Aware Contrastive Tuning'
+  authors:
+  - Shengqiang Fu
+  published: '2025-09-12'
+  updated: '2025-09-12'
+  categories:
+  - cs.CL
+  - cs.AI
+  abstract: Large Language Models often generate unfaithful responses in knowledge intensive tasks due
+    to knowledge conflict,that is,a preference for relying on internal parametric knowledge rather than
+    the provided context.To address this issue,we propose a novel self improving framework,Self Improving
+    Faithfulness Aware Contrastive Tuning.The framework uses a self instruct mechanism that allows the
+    base LLM to automatically generate high quality,structured contrastive learning data,including anchor
+    samples,semantically equivalent positive samples,and negative samples simulating unfaithful scenarios.This
+    approach significantly reduces the cost of manual annotation.Subsequently,contrastive learning is
+    applied to train the model,enabling it to pull faithful responses closer and push unfaithful responses
+    farther apart in the representation space.Experiments on knowledge conflict evaluation benchmarks
+    ECARE KRE and COSE KRE show that the SI FACT model based on Llama3 8B Instruct improves the Contextual
+    Recall Rate by 6.2% over the best baseline method,while significantly reducing dependence on internal
+    memory.The results indicate that SI FACT provides strong effectiveness and high data efficiency in
+    enhancing the contextual faithfulness of LLMs,offering a practical pathway toward building more proactive
+    and trustworthy language models.
+  url: https://arxiv.org/abs/2509.10208
+  pdf_url: https://arxiv.org/pdf/2509.10208v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 1
+citation_year: 2025

@@ -1,0 +1,48 @@
+id: paper:arxiv:2603.04763
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'Evaluating GPT-5 as a Multimodal Clinical Reasoner: A Landscape Commentary'
+  authors:
+  - Alexandru Florea
+  - Shansong Wang
+  - Mingzhe Hu
+  - Qiang Li
+  - Zach Eidex
+  - Luke del Balzo
+  - Mojtaba Safari
+  - Xiaofeng Yang
+  published: '2026-03-05'
+  updated: '2026-03-05'
+  categories:
+  - cs.CV
+  - cs.AI
+  - cs.LG
+  abstract: The transition from task-specific artificial intelligence toward general-purpose foundation
+    models raises fundamental questions about their capacity to support the integrated reasoning required
+    in clinical medicine, where diagnosis demands synthesis of ambiguous patient narratives, laboratory
+    data, and multimodal imaging. This landscape commentary provides the first controlled, cross-sectional
+    evaluation of the GPT-5 family (GPT-5, GPT-5 Mini, GPT-5 Nano) against its predecessor GPT-4o across
+    a diverse spectrum of clinically grounded tasks, including medical education examinations, text-based
+    reasoning benchmarks, and visual question-answering in neuroradiology, digital pathology, and mammography
+    using a standardized zero-shot chain-of-thought protocol. GPT-5 demonstrated substantial gains in
+    expert-level textual reasoning, with absolute improvements exceeding 25 percentage-points on MedXpertQA.
+    When tasked with multimodal synthesis, GPT-5 effectively leveraged this enhanced reasoning capacity
+    to ground uncertain clinical narratives in concrete imaging evidence, achieving state-of-the-art or
+    competitive performance across most VQA benchmarks and outperforming GPT-4o by margins of 10-40% in
+    mammography tasks requiring fine-grained lesion characterization. However, performance remained moderate
+    in neuroradiology (44% macro-average accuracy) and lagged behind domain-specific models in mammography,
+    where specialized systems exceed 80% accuracy compared to GPT-5's 52-64%. These findings indicate
+    that while GPT-5 represents a meaningful advance toward integrated multimodal clinical reasoning,
+    mirroring the clinician's cognitive process of biasing uncertain information with objective findings,
+    generalist models are not yet substitutes for purpose-built systems in highly specialized, perception-critical
+    tasks.
+  url: https://arxiv.org/abs/2603.04763
+  pdf_url: https://arxiv.org/pdf/2603.04763v1
+  version: v1
+fetched: '2026-11-14'

@@ -1,0 +1,44 @@
+id: paper:arxiv:2602.19188
+status: skipped_low_citation
+score: 2
+track: quality_assessment
+matched:
+- ref: concept:LLM
+  count: 2
+  weight: 1
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'PositionOCR: Augmenting Positional Awareness in Multi-Modal Models via Hybrid Specialist Integration'
+  authors:
+  - Chen Duan
+  - Zhentao Guo
+  - Pei Fu
+  - Zining Wang
+  - Kai Zhou
+  - Pengfei Yan
+  published: '2026-02-22'
+  updated: '2026-02-22'
+  categories:
+  - cs.CV
+  abstract: 'In recent years, Multi-modal Large Language Models (MLLMs) have achieved strong performance
+    in OCR-centric Visual Question Answering (VQA) tasks, illustrating their capability to process heterogeneous
+    data and exhibit adaptability across varied contexts. However, these MLLMs rely on a Large Language
+    Model (LLM) as the decoder, which is primarily designed for linguistic processing, and thus inherently
+    lacks the positional reasoning required for precise visual tasks, such as text spotting and text grounding.
+    Additionally, the extensive parameters of MLLMs necessitate substantial computational resources and
+    large-scale data for effective training. Conversely, text spotting specialists achieve state-of-the-art
+    coordinate predictions but lack semantic reasoning capabilities. This dichotomy motivates our key
+    research question: Can we synergize the efficiency of specialists with the contextual power of LLMs
+    to create a positionally-accurate MLLM? To overcome these challenges, we introduce PositionOCR, a
+    parameter-efficient hybrid architecture that seamlessly integrates a text spotting model''s positional
+    strengths with an LLM''s contextual reasoning. Comprising 131M trainable parameters, this framework
+    demonstrates outstanding multi-modal processing capabilities, particularly excelling in tasks such
+    as text grounding and text spotting, consistently surpassing traditional MLLMs.'
+  url: https://arxiv.org/abs/2602.19188
+  pdf_url: https://arxiv.org/pdf/2602.19188v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 0
+citation_year: 2026

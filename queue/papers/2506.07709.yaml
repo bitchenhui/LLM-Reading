@@ -1,0 +1,55 @@
+id: paper:arxiv:2506.07709
+status: skipped_low_citation
+score: 6
+track: video_image_coding
+matched:
+- ref: codec:VVC
+  count: 2
+  weight: 3
+- ref: concept:EntropyModel
+  count: 1
+  weight: 1
+- ref: concept:Hyperprior
+  count: 1
+  weight: 1
+- ref: metric:BD-Rate
+  count: 1
+  weight: 1
+meta:
+  title: Fine-Grained Motion Compression and Selective Temporal Fusion for Neural B-Frame Video Coding
+  authors:
+  - Xihua Sheng
+  - Peilin Chen
+  - Meng Wang
+  - Li Zhang
+  - Shiqi Wang
+  - Dapeng Oliver Wu
+  published: '2025-06-09'
+  updated: '2026-02-23'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: With the remarkable progress in neural P-frame video coding, neural B-frame coding has recently
+    emerged as a critical research direction. However, most existing neural B-frame codecs directly adopt
+    P-frame coding tools without adequately addressing the unique challenges of B-frame compression, leading
+    to suboptimal performance. To bridge this gap, we propose novel enhancements for motion compression
+    and temporal fusion for neural B-frame coding. First, we design a fine-grained motion compression
+    method. This method incorporates an interactive dual-branch motion auto-encoder with per-branch adaptive
+    quantization steps, which enables fine-grained compression of bi-directional motion vectors while
+    accommodating their asymmetric bitrate allocation and reconstruction quality requirements. Furthermore,
+    this method involves an interactive motion entropy model that exploits correlations between bi-directional
+    motion latent representations by interactively leveraging partitioned latent segments as directional
+    priors. Second, we propose a selective temporal fusion method that predicts bi-directional fusion
+    weights to achieve discriminative utilization of bi-directional multi-scale temporal contexts with
+    varying qualities. Additionally, this method introduces a hyperprior-based implicit alignment mechanism
+    for contextual entropy modeling. By treating the hyperprior as a surrogate for the contextual latent
+    representation, this mechanism implicitly mitigates the misalignment in the fused bi-directional temporal
+    priors. Extensive experiments demonstrate that our proposed codec achieves an average BD-rate reduction
+    of approximately 10% compared to the state-of-the-art neural B-frame codec, DCVC-B, and delivers comparable
+    or even superior compression performance to the H.266/VVC reference software under random-access configurations.
+  url: https://arxiv.org/abs/2506.07709
+  pdf_url: https://arxiv.org/pdf/2506.07709v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 4
+citation_year: 2025

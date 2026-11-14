@@ -1,0 +1,48 @@
+id: paper:arxiv:2604.01678
+status: skipped_low_citation
+score: 2
+track: immersive_media
+matched:
+- ref: concept:VolumetricVideo
+  count: 2
+  weight: 1
+- ref: concept:3DGS
+  count: 1
+  weight: 1
+meta:
+  title: 'Director: Instance-aware Gaussian Splatting for Dynamic Scene Modeling and Understanding'
+  authors:
+  - Yuheng Jiang
+  - Yiwen Cai
+  - Zihao Wang
+  - Yize Wu
+  - Sicheng Li
+  - Zhuo Su
+  - Shaohui Jiao
+  - Lan Xu
+  published: '2026-04-02'
+  updated: '2026-04-02'
+  categories:
+  - cs.CV
+  abstract: Volumetric video seeks to model dynamic scenes as temporally coherent 4D representations.
+    While recent Gaussian-based approaches achieve impressive rendering fidelity, they primarily emphasize
+    appearance but are largely agnostic to instance-level structure, limiting stable tracking and semantic
+    reasoning in highly dynamic scenarios. In this paper, we present Director, a unified spatio-temporal
+    Gaussian representation that jointly models human performance, high-fidelity rendering, and instance-level
+    semantics. Our key insight is that embedding instance-consistent semantics naturally complements 4D
+    modeling, enabling more accurate scene decomposition while supporting robust dynamic scene understanding.
+    To this end, we leverage temporally aligned instance masks and sentence embeddings derived from Multimodal
+    Large Language Models to supervise the learnable semantic features of each Gaussian via two MLP decoders,
+    enabling language-aligned 4D representations and enforcing identity consistency over time. To enhance
+    temporal stability, we bridge 2D optical flow with 4D Gaussians and finetune their motions, yielding
+    reliable initialization and reducing drift. For the training, we further introduce a geometry-aware
+    SDF constraints, along with regularization terms that enforces surface continuity, enhancing temporal
+    coherence in dynamic foreground modeling. Experiments demonstrate that Director achieves temporally
+    coherent 4D reconstructions while simultaneously enabling instance segmentation and open-vocabulary
+    querying.
+  url: https://arxiv.org/abs/2604.01678
+  pdf_url: https://arxiv.org/pdf/2604.01678v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 1
+citation_year: 2026

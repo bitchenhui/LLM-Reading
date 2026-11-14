@@ -1,0 +1,44 @@
+id: paper:arxiv:2407.03181
+status: pending
+score: 2
+track: self_improvement
+matched:
+- ref: concept:LLM
+  count: 2
+  weight: 1
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+meta:
+  title: Fine-Tuning on Diverse Reasoning Chains Drives Within-Inference CoT Refinement in LLMs
+  authors:
+  - Haritz Puerto
+  - Tilek Chubakov
+  - Xiaodan Zhu
+  - Harish Tayyar Madabushi
+  - Iryna Gurevych
+  published: '2024-07-03'
+  updated: '2025-05-27'
+  categories:
+  - cs.CL
+  abstract: Requiring a large language model (LLM) to generate intermediary reasoning steps, known as
+    Chain of Thought (CoT), has been shown to be an effective way of boosting performance. Previous approaches
+    have focused on generating multiple independent CoTs, combining them through ensembling or other post-hoc
+    strategies to enhance reasoning. In this work, we introduce a novel approach where LLMs are fine-tuned
+    to generate a sequence of Diverse Chains of Thought (DCoT) within a single inference step, which is
+    fundamentally different from prior work that primarily operate on parallel CoT generations. DCoT allows
+    LLMs to gain the ability to perform within-inference refinement of reasoning chains without requiring
+    external feedback. Through a rigorous set of experiments spanning a wide range of tasks that require
+    various reasoning types, we show that fine-tuning on DCoT improves performance over the CoT baseline
+    across model families and scales (1.3B to 70B). These improvements are particularly impactful for
+    tasks with a large result state space, such as those involving numeric answers. Our work is also significant
+    because both quantitative analyses and manual evaluations reveal the observed gains stem from the
+    models' ability to refine an initial reasoning chain by generating a second, improved chain within
+    the same inference step, demonstrating previously elusive self-improvement. Our code and data are
+    publicly available at https://github.com/UKPLab/acl2025-diverse-cot.
+  url: https://arxiv.org/abs/2407.03181
+  pdf_url: https://arxiv.org/pdf/2407.03181v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 19
+citation_year: 2024

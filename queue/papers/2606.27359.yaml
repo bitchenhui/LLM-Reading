@@ -1,0 +1,35 @@
+id: paper:arxiv:2606.27359
+status: skipped
+score: 1
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+meta:
+  title: When are likely answers right? On Sequence Probability and Correctness in LLMs
+  authors:
+  - Johannes Zenn
+  - Jonas Geiping
+  published: '2026-06-25'
+  updated: '2026-06-25'
+  categories:
+  - stat.ML
+  - cs.LG
+  abstract: 'Many decoding methods for large language models can be understood as shifting probability
+    mass toward outputs that are more likely under the model, either locally at the token level or globally
+    at the sequence level. Therefore, their success depends on a fundamental question: when does sequence
+    probability, that is, the conditional probability of a continuation given a prompt, actually align
+    with correctness? In this paper, we set out to quantify this relationship across decoding methods,
+    models, and benchmarks at four levels: across decoding methods, across hyperparameters within a method,
+    across prompt-answer pairs within a dataset, and across repeated responses to the same prompt. We
+    find that higher sequence probability is often predictive of correctness across prompt-answer pairs
+    within a fixed dataset. However, this relationship does not generally transfer to decoding decisions:
+    increasing sequence probability by changing hyperparameters or methods does not reliably improve accuracy.
+    Further, sequence probability is not a good indicator of correctness for responses to the same prompt.
+    These findings clarify when decoding can and cannot be expected to improve correctness, and provide
+    practical guidance for decoding, self-consistency, and verifier-free self-improvement.'
+  url: https://arxiv.org/abs/2606.27359
+  pdf_url: https://arxiv.org/pdf/2606.27359v1
+  version: v1
+fetched: '2026-11-14'

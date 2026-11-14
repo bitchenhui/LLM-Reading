@@ -1,0 +1,49 @@
+id: paper:arxiv:2604.18484
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'XEmbodied: A Foundation Model with Enhanced Geometric and Physical Cues for Large-Scale Embodied
+    Environments'
+  authors:
+  - Kangan Qian
+  - ChuChu Xie
+  - Yang Zhong
+  - Jingrui Pang
+  - Siwen Jiao
+  - Sicong Jiang
+  - Zilin Huang
+  - Yunlong Wang
+  - Kun Jiang
+  - Mengmeng Yang
+  - Hao Ye
+  - Guanghao Zhang
+  - Hangjun Ye
+  - Guang Chen
+  - Long Chen
+  - Diange Yang
+  published: '2026-04-20'
+  updated: '2026-09-30'
+  categories:
+  - cs.CV
+  - cs.MM
+  - cs.RO
+  abstract: Vision-Language-Action (VLA) models drive next-generation autonomous systems, but training
+    them requires scalable, high-quality annotations from complex environments. Current cloud pipelines
+    rely on generic vision-language models (VLMs) that lack geometric reasoning and domain semantics due
+    to their 2D image-text pretraining. To address this mismatch, we propose XEmbodied, a cloud-side foundation
+    model that endows VLMs with intrinsic 3D geometric awareness and interaction with physical cues (e.g.,
+    occupancy grids, 3D boxes). Instead of treating geometry as auxiliary input, XEmbodied integrates
+    geometric representations via a structured 3D Adapter and distills physical signals into context tokens
+    using an Efficient Image-Embodied Adapter. Through progressive domain curriculum and reinforcement
+    learning post-training, XEmbodied preserves general capabilities while demonstrating robust performance
+    across 18 public benchmarks. It significantly improves spatial reasoning, traffic semantics, embodied
+    affordance, and out-of-distribution generalization for large-scale scenario mining and embodied VQA.
+  url: https://arxiv.org/abs/2604.18484
+  pdf_url: https://arxiv.org/pdf/2604.18484v2
+  version: v2
+fetched: '2026-11-14'

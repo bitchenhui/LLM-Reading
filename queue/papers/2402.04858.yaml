@@ -1,0 +1,46 @@
+id: paper:arxiv:2402.04858
+status: pending
+score: 2
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 3
+  weight: 1
+- ref: org:Qualcomm
+  count: 1
+  weight: 1
+meta:
+  title: 'CodeIt: Self-Improving Language Models with Prioritized Hindsight Replay'
+  authors:
+  - Natasha Butt
+  - Blazej Manczak
+  - Auke Wiggers
+  - Corrado Rainone
+  - David W. Zhang
+  - Michaël Defferrard
+  - Taco Cohen
+  published: '2024-02-07'
+  updated: '2024-07-01'
+  categories:
+  - cs.AI
+  - cs.CL
+  - cs.LG
+  abstract: Large language models are increasingly solving tasks that are commonly believed to require
+    human-level reasoning ability. However, these models still perform very poorly on benchmarks of general
+    intelligence such as the Abstraction and Reasoning Corpus (ARC). In this paper, we approach ARC as
+    a programming-by-examples problem, and introduce a novel and scalable method for language model self-improvement
+    called Code Iteration (CodeIt). Our method iterates between 1) program sampling and hindsight relabeling,
+    and 2) learning from prioritized experience replay. By relabeling the goal of an episode (i.e., the
+    target program output given input) to the realized output produced by the sampled program, our method
+    effectively deals with the extreme sparsity of rewards in program synthesis. Applying CodeIt to the
+    ARC dataset, we demonstrate that prioritized hindsight replay, along with pre-training and data-augmentation,
+    leads to successful inter-task generalization. CodeIt is the first neuro-symbolic approach that scales
+    to the full ARC evaluation dataset. Our method solves 15% of ARC evaluation tasks, achieving state-of-the-art
+    performance and outperforming existing neural and symbolic baselines. Our code is available at https://github.com/Qualcomm-AI-research/codeit
+    .
+  url: https://arxiv.org/abs/2402.04858
+  pdf_url: https://arxiv.org/pdf/2402.04858v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 35
+citation_year: 2024

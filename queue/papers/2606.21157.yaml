@@ -1,0 +1,30 @@
+id: paper:arxiv:2606.21157
+status: skipped
+score: 0
+track: audio_coding
+matched: []
+meta:
+  title: 'SDP-Codec: A Speaker-Decoupled Speech Codec with Pitch Injection for Low-Bitrate Coding and
+    Zero-Shot Voice Conversion'
+  authors:
+  - Hounsu Kim
+  - Juhan Nam
+  published: '2026-06-19'
+  updated: '2026-06-19'
+  categories:
+  - cs.SD
+  - eess.AS
+  abstract: 'Speaker-decoupled speech codecs can reduce bitrate by separating global speaker attributes
+    from local content and prosody, while supporting voice conversion. Existing speaker-decoupled codecs
+    face a trade-off: methods that explicitly suppress speaker leakage often rely on multi-stage or auxiliary
+    training, whereas simpler designs can leave residual speaker information in local tokens. We propose
+    SDP-Codec, a speaker-decoupled, pitch-injected codec trained with a single-stage optimization pipeline.
+    SDP-Codec derives local tokens from continuous pre-quantization features of a pretrained self-supervised
+    encoder and injects normalized F0 via a pitch encoder-decoder with global-conditioned denormalization
+    and soft-label pitch reconstruction objective. Across 16 kHz and 24 kHz settings, SDP-Codec achieves
+    competitive reconstruction and strong zero-shot voice conversion at comparable bitrates, with the
+    lowest speaker-probing accuracy among compared systems, suggesting reduced speaker leakage.'
+  url: https://arxiv.org/abs/2606.21157
+  pdf_url: https://arxiv.org/pdf/2606.21157v1
+  version: v1
+fetched: '2026-11-14'

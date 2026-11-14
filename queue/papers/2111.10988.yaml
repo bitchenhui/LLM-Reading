@@ -1,0 +1,35 @@
+id: paper:arxiv:2111.10988
+status: skipped
+score: 1
+track: processing_enhancement
+matched:
+- ref: concept:SuperResolution
+  count: 1
+  weight: 1
+meta:
+  title: Local-Selective Feature Distillation for Single Image Super-Resolution
+  authors:
+  - SeongUk Park
+  - Nojun Kwak
+  published: '2021-11-22'
+  updated: '2021-11-22'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: Recent improvements in convolutional neural network (CNN)-based single image super-resolution
+    (SISR) methods rely heavily on fabricating network architectures, rather than finding a suitable training
+    algorithm other than simply minimizing the regression loss. Adapting knowledge distillation (KD) can
+    open a way for bringing further improvement for SISR, and it is also beneficial in terms of model
+    efficiency. KD is a model compression method that improves the performance of Deep Neural Networks
+    (DNNs) without using additional parameters for testing. It is getting the limelight recently for its
+    competence at providing a better capacity-performance tradeoff. In this paper, we propose a novel
+    feature distillation (FD) method which is suitable for SISR. We show the limitations of the existing
+    FitNet-based FD method that it suffers in the SISR task, and propose to modify the existing FD algorithm
+    to focus on local feature information. In addition, we propose a teacher-student-difference-based
+    soft feature attention method that selectively focuses on specific pixel locations to extract feature
+    information. We call our method local-selective feature distillation (LSFD) and verify that our method
+    outperforms conventional FD methods in SISR problems.
+  url: https://arxiv.org/abs/2111.10988
+  pdf_url: https://arxiv.org/pdf/2111.10988v1
+  version: v1
+fetched: '2026-11-14'

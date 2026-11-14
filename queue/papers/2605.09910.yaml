@@ -1,0 +1,37 @@
+id: paper:arxiv:2605.09910
+status: skipped
+score: 0
+track: streaming_delivery
+matched: []
+meta:
+  title: 'CloudEmu: A Trace-Driven Cloud-Native Emulation Testbed for Vehicle Video Uplink over Cellular
+    Networks'
+  authors:
+  - Takashi Torii
+  - Soto Anno
+  - Masaki Okada
+  - Takuma Tsubaki
+  - Nobuhiro Azuma
+  - Takuya Tojo
+  published: '2026-05-11'
+  updated: '2026-05-11'
+  categories:
+  - cs.NI
+  abstract: We present CloudEmu, a trace-driven, cloud-native cellular-emulation testbed for vehicle video
+    uplink communication. Reliable, low-latency video uplink over cellular networks is essential for remote
+    monitoring of autonomous vehicles. However, existing testbeds fall into two extremes. Physical-vehicle
+    platforms provide realism but are costly and make validation under identical network conditions difficult,
+    whereas simulations are inexpensive and reproducible but generally cannot replay field-measured end-to-end
+    performance dynamics without substantial calibration or readily run production video-uplink stacks.
+    A software-defined, cloud-native emulation approach can combine the fidelity of trace-driven replay
+    with the agility and scalability that network softwarization principles offer. To this end, we propose
+    CloudEmu that replays time-synchronized cellular and position traces, collected once from vehicles,
+    on commodity Linux-based virtual vehicle and video-receiver nodes. A Linux-based emulation framework
+    couples traffic replay with position replay, tying network dynamics to each point along the route
+    and enabling repeatable, route-aware experiments without repeated on-road trials. Our demo deploys
+    a production-grade video-uplink stack on CloudEmu, allowing attendees to experience low-cost, repeatable
+    trials and controlled comparisons under identical replayed network conditions.
+  url: https://arxiv.org/abs/2605.09910
+  pdf_url: https://arxiv.org/pdf/2605.09910v1
+  version: v1
+fetched: '2026-11-14'

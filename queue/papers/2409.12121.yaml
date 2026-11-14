@@ -1,0 +1,39 @@
+id: paper:arxiv:2409.12121
+status: skipped
+score: 1
+track: audio_coding
+matched:
+- ref: concept:NeuralAudioCodec
+  count: 1
+  weight: 1
+meta:
+  title: 'WMCodec: End-to-End Neural Speech Codec with Deep Watermarking for Authenticity Verification'
+  authors:
+  - Junzuo Zhou
+  - Jiangyan Yi
+  - Yong Ren
+  - Jianhua Tao
+  - Tao Wang
+  - Chu Yuan Zhang
+  published: '2024-09-18'
+  updated: '2024-12-27'
+  categories:
+  - cs.SD
+  - eess.AS
+  abstract: Recent advances in speech spoofing necessitate stronger verification mechanisms in neural
+    speech codecs to ensure authenticity. Current methods embed numerical watermarks before compression
+    and extract them from reconstructed speech for verification, but face limitations such as separate
+    training processes for the watermark and codec, and insufficient cross-modal information integration,
+    leading to reduced watermark imperceptibility, extraction accuracy, and capacity. To address these
+    issues, we propose WMCodec, the first neural speech codec to jointly train compression-reconstruction
+    and watermark embedding-extraction in an end-to-end manner, optimizing both imperceptibility and extractability
+    of the watermark. Furthermore, We design an iterative Attention Imprint Unit (AIU) for deeper feature
+    integration of watermark and speech, reducing the impact of quantization noise on the watermark. Experimental
+    results show WMCodec outperforms AudioSeal with Encodec in most quality metrics for watermark imperceptibility
+    and consistently exceeds both AudioSeal with Encodec and reinforced TraceableSpeech in extraction
+    accuracy of watermark. At bandwidth of 6 kbps with a watermark capacity of 16 bps, WMCodec maintains
+    over 99% extraction accuracy under common attacks, demonstrating strong robustness.
+  url: https://arxiv.org/abs/2409.12121
+  pdf_url: https://arxiv.org/pdf/2409.12121v3
+  version: v3
+fetched: '2026-11-14'

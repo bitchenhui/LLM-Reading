@@ -1,0 +1,38 @@
+id: paper:arxiv:2511.01590
+status: skipped_low_citation
+score: 4
+track: video_image_coding
+matched:
+- ref: impl:HM
+  count: 1
+  weight: 3
+- ref: metric:BD-Rate
+  count: 1
+  weight: 1
+meta:
+  title: 'EV-NVC: Efficient Variable bitrate Neural Video Compression'
+  authors:
+  - Yongcun Hu
+  - Yingzhen Zhai
+  - Jixiang Luo
+  - Wenrui Dai
+  - Dell Zhang
+  - Hongkai Xiong
+  - Xuelong Li
+  published: '2025-11-03'
+  updated: '2025-11-03'
+  categories:
+  - cs.MM
+  abstract: Training neural video codec (NVC) with variable rate is a highly challenging task due to its
+    complex training strategies and model structure. In this paper, we train an efficient variable bitrate
+    neural video codec (EV-NVC) with the piecewise linear sampler (PLS) to improve the rate-distortion
+    performance in high bitrate range, and the long-short-term feature fusion module (LSTFFM) to enhance
+    the context modeling. Besides, we introduce mixed-precision training and discuss the different training
+    strategies for each stage in detail to fully evaluate its effectiveness. Experimental results show
+    that our approach reduces the BD-rate by 30.56% compared to HM-16.25 within low-delay mode.
+  url: https://arxiv.org/abs/2511.01590
+  pdf_url: https://arxiv.org/pdf/2511.01590v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 1
+citation_year: 2025

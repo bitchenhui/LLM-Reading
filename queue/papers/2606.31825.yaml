@@ -1,0 +1,47 @@
+id: paper:arxiv:2606.31825
+status: pending
+score: 2
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: 'Breaking Failure Cascades: Step-Aware Reinforcement Learning for Medical Multimodal Reasoning'
+  authors:
+  - Junha Jung
+  - Minbyul Jeong
+  - Suhyeon Lim
+  - Sungwook Jung
+  - Jaehoon Yun
+  - Taeyun Roh
+  - Mujeen Sung
+  - Jaewoo Kang
+  published: '2026-06-30'
+  updated: '2026-09-24'
+  categories:
+  - cs.CV
+  - cs.AI
+  abstract: Recent multimodal large language models have shown great promise in clinical image reasoning,
+    but existing post-training pipelines remain predominantly outcome-centric, relying on final answer
+    correctness or sequence-level preferences. This suffers from sparse credit assignment, making it difficult
+    to optimize the reasoning process essential for clinical applications. Our analysis reveals that cascading
+    errors from early-stage reasoning failures are a leading cause of incorrect predictions in medical
+    visual question answering (VQA) benchmarks. Motivated by this, we propose Medical Reasoning-aware
+    Policy Optimization (MRPO), an RL algorithm that incorporates step-wise process rewards. When the
+    final answer is incorrect, MRPO assigns exponentially larger penalties to tokens in earlier invalid
+    reasoning steps, breaking failure cascades without compromising successful paths. Across four multimodal
+    LLM backbones, MRPO consistently outperforms standard GRPO and a recent RL baseline, and on Qwen3-VL-8B-Thinking
+    even surpasses substantially larger medical MLLMs such as HuatuoGPT-Vision-34B by 4.59 points. Moreover,
+    MRPO reduces early-stage reasoning failures from 58.6% to 13.4%, showing that targeted mitigation
+    of cascading failures improves both reasoning quality and final answer accuracy. Our code is available
+    at https://github.com/dmis-lab/MRPO
+  url: https://arxiv.org/abs/2606.31825
+  pdf_url: https://arxiv.org/pdf/2606.31825v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 4
+citation_year: 2026

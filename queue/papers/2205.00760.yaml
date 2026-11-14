@@ -1,0 +1,33 @@
+id: paper:arxiv:2205.00760
+status: skipped
+score: 1
+track: immersive_media
+matched:
+- ref: concept:EntropyModel
+  count: 1
+  weight: 1
+meta:
+  title: Point Cloud Compression with Sibling Context and Surface Priors
+  authors:
+  - Zhili Chen
+  - Zian Qian
+  - Sukai Wang
+  - Qifeng Chen
+  published: '2022-05-02'
+  updated: '2022-05-02'
+  categories:
+  - cs.CV
+  abstract: We present a novel octree-based multi-level framework for large-scale point cloud compression,
+    which can organize sparse and unstructured point clouds in a memory-efficient way. In this framework,
+    we propose a new entropy model that explores the hierarchical dependency in an octree using the context
+    of siblings' children, ancestors, and neighbors to encode the occupancy information of each non-leaf
+    octree node into a bitstream. Moreover, we locally fit quadratic surfaces with a voxel-based geometry-aware
+    module to provide geometric priors in entropy encoding. These strong priors empower our entropy framework
+    to encode the octree into a more compact bitstream. In the decoding stage, we apply a two-step heuristic
+    strategy to restore point clouds with better reconstruction quality. The quantitative evaluation shows
+    that our method outperforms state-of-the-art baselines with a bitrate improvement of 11-16% and 12-14%
+    on the KITTI Odometry and nuScenes datasets, respectively.
+  url: https://arxiv.org/abs/2205.00760
+  pdf_url: https://arxiv.org/pdf/2205.00760v1
+  version: v1
+fetched: '2026-11-14'

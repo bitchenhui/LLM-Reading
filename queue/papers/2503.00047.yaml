@@ -1,0 +1,51 @@
+id: paper:arxiv:2503.00047
+status: pending
+score: 4
+track: processing_enhancement
+matched:
+- ref: codec:G-PCC
+  count: 2
+  weight: 3
+- ref: metric:BD-Rate
+  count: 1
+  weight: 1
+meta:
+  title: 'PCE-GAN: A Generative Adversarial Network for Point Cloud Attribute Quality Enhancement based
+    on Optimal Transport'
+  authors:
+  - Tian Guo
+  - Hui Yuan
+  - Qi Liu
+  - Honglei Su
+  - Raouf Hamzaoui
+  - Sam Kwong
+  published: '2025-02-26'
+  updated: '2025-02-26'
+  categories:
+  - eess.IV
+  - cs.CV
+  - eess.SP
+  abstract: Point cloud compression significantly reduces data volume but sacrifices reconstruction quality,
+    highlighting the need for advanced quality enhancement techniques. Most existing approaches focus
+    primarily on point-to-point fidelity, often neglecting the importance of perceptual quality as interpreted
+    by the human visual system. To address this issue, we propose a generative adversarial network for
+    point cloud quality enhancement (PCE-GAN), grounded in optimal transport theory, with the goal of
+    simultaneously optimizing both data fidelity and perceptual quality. The generator consists of a local
+    feature extraction (LFE) unit, a global spatial correlation (GSC) unit and a feature squeeze unit.
+    The LFE unit uses dynamic graph construction and a graph attention mechanism to efficiently extract
+    local features, placing greater emphasis on points with severe distortion. The GSC unit uses the geometry
+    information of neighboring patches to construct an extended local neighborhood and introduces a transformer-style
+    structure to capture long-range global correlations. The discriminator computes the deviation between
+    the probability distributions of the enhanced point cloud and the original point cloud, guiding the
+    generator to achieve high quality reconstruction. Experimental results show that the proposed method
+    achieves state-of-the-art performance. Specifically, when applying PCE-GAN to the latest geometry-based
+    point cloud compression (G-PCC) test model, it achieves an average BD-rate of -19.2% compared with
+    the PredLift coding configuration and -18.3% compared with the RAHT coding configuration. Subjective
+    comparisons show a significant improvement in texture clarity and color transitions, revealing finer
+    details and more natural color gradients.
+  url: https://arxiv.org/abs/2503.00047
+  pdf_url: https://arxiv.org/pdf/2503.00047v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 16
+citation_year: 2025

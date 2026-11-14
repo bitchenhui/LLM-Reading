@@ -1,0 +1,41 @@
+id: paper:arxiv:2603.05887
+status: skipped
+score: 1
+track: audio_coding
+matched:
+- ref: concept:NeuralAudioCodec
+  count: 1
+  weight: 1
+meta:
+  title: 'Reconstruct! Don''t Encode: Self-Supervised Representation Reconstruction Loss for High-Intelligibility
+    and Low-Latency Streaming Neural Audio Codec'
+  authors:
+  - Junhyeok Lee
+  - Xiluo He
+  - Jihwan Lee
+  - Helin Wang
+  - Shrikanth Narayanan
+  - Thomas Thebaud
+  - Laureano Moro-Velazquez
+  - Jesús Villalba
+  - Najim Dehak
+  published: '2026-03-06'
+  updated: '2026-09-01'
+  categories:
+  - eess.AS
+  - cs.AI
+  abstract: Neural audio codecs optimized for mel-spectrogram reconstruction often fail to preserve intelligibility.
+    While semantic encoder distillation improves encoded representations, it does not guarantee content
+    preservation in reconstructed speech. In this work, we demonstrate that self-supervised representation
+    reconstruction (SSRR) loss fundamentally improves codec training and performance. First, SSRR significantly
+    accelerates convergence, enabling competitive results after 300k training steps on a single H200 GPU.
+    Second, it enhances intelligibility by reconstructing distilled self-supervised representations from
+    codec outputs. Third, SSRR enables high intelligibility without additional lookahead in streaming
+    Transformer-based codecs, allowing a zero-lookahead architecture for real-time deployment. On LibriSpeech
+    test-clean, JHCodec achieves the best WER and CER among the evaluated codecs while maintaining zero
+    lookahead and low end-to-end latency. We open-source the full implementation, training pipeline, and
+    demo on GitHubh ttps://github.com/jhcodec843/jhcodec.
+  url: https://arxiv.org/abs/2603.05887
+  pdf_url: https://arxiv.org/pdf/2603.05887v2
+  version: v2
+fetched: '2026-11-14'

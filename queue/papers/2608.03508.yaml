@@ -1,0 +1,39 @@
+id: paper:arxiv:2608.03508
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: From Multi-Resolution Cells to Gigapixel Whole Slide Images Foundation Model for Computational
+    Pathology
+  authors:
+  - Basit Alawode
+  - Moshira Ali Abdalla
+  - Dwarikanath Mahapatra
+  - Muzammal Naseer
+  - Sajid Javed
+  published: '2026-08-04'
+  updated: '2026-08-13'
+  categories:
+  - cs.CV
+  abstract: Vision Transformers (ViTs) and their hierarchical variants have achieved strong performance
+    in Computational Pathology (CPath). However, most are pre-trained on single-resolution Whole Slide
+    Images (WSIs), limiting their generalization across arbitrary resolutions. Gigapixel WSIs inherently
+    contain diagnostic patterns at multiple scales, including cellular morphologies, tissue architectures,
+    and global context, mirroring how expert pathologists examine WSIs. We introduce Multi-Resolution
+    Pyramid Transformer (MRPT), a model that hierarchically aggregates multi-resolution information from
+    cellular to tissue and WSI levels. MRPT employs a biologically meaningful Consecutive Cross-Resolution
+    Attention (CCRA) mechanism to capture scale-independent interactions and enforces multi-resolution
+    semantic consistency by aligning embeddings across resolutions, yielding robust and generalizable
+    WSI representations. Pre-trained in a multi-resolution self-supervised manner on 624M patches, 2.4M
+    regions, and 36K WSIs, MRPT learns rich coarse-to-fine histopathology features. Extensive experiments
+    on 34 diverse datasets show that MRPT surpasses recent foundation models and Multimodal Large Language
+    Models (MLLMs) in cancer subtype classification, tissue phenotyping, and Visual Question Answering
+    (VQA) for WSI understanding.
+  url: https://arxiv.org/abs/2608.03508
+  pdf_url: https://arxiv.org/pdf/2608.03508v2
+  version: v2
+fetched: '2026-11-14'

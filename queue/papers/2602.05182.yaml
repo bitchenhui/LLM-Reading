@@ -1,0 +1,38 @@
+id: paper:arxiv:2602.05182
+status: skipped
+score: 1
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 1
+  weight: 1
+meta:
+  title: The Single-Multi Evolution Loop for Self-Improving Model Collaboration Systems
+  authors:
+  - Shangbin Feng
+  - Kishan Panaganti
+  - Yulia Tsvetkov
+  - Wenhao Yu
+  published: '2026-02-05'
+  updated: '2026-02-23'
+  categories:
+  - cs.CL
+  abstract: 'Model collaboration -- systems where multiple language models (LMs) collaborate -- combines
+    the strengths of diverse models with cost in loading multiple LMs. We improve efficiency while preserving
+    the strengths of collaboration by distilling collaborative patterns into a single model, where the
+    model is trained on the outputs of the model collaboration system. At inference time, only the distilled
+    model is employed: it imitates the collaboration while only incurring the cost of a single model.
+    Furthermore, we propose the single-multi evolution loop: multiple LMs collaborate, each distills from
+    the collaborative outputs, and these post-distillation improved LMs collaborate again, forming a collective
+    evolution ecosystem where models evolve and self-improve by interacting with an environment of other
+    models. Extensive experiments with 7 collaboration strategies and 15 tasks (QA, reasoning, factuality,
+    etc.) demonstrate that: 1) individual models improve by 8.0% on average, absorbing the strengths of
+    collaboration while reducing the cost to a single model; 2) the collaboration also benefits from the
+    stronger and more synergistic LMs after distillation, improving over initial systems without evolution
+    by 14.9% on average. Analysis reveals that the single-multi evolution loop outperforms various existing
+    evolutionary AI methods, is compatible with diverse model/collaboration/distillation settings, and
+    helps solve problems where the initial model/system struggles to.'
+  url: https://arxiv.org/abs/2602.05182
+  pdf_url: https://arxiv.org/pdf/2602.05182v2
+  version: v2
+fetched: '2026-11-14'

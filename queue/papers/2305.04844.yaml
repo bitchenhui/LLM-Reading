@@ -1,0 +1,50 @@
+id: paper:arxiv:2305.04844
+status: pending
+score: 13
+track: video_image_coding
+matched:
+- ref: codec:AV1
+  count: 1
+  weight: 3
+- ref: codec:AVC
+  count: 1
+  weight: 3
+- ref: codec:HEVC
+  count: 1
+  weight: 3
+- ref: codec:VVC
+  count: 1
+  weight: 3
+- ref: concept:SuperResolution
+  count: 2
+  weight: 1
+meta:
+  title: 'SR+Codec: a Benchmark of Super-Resolution for Video Compression Bitrate Reduction'
+  authors:
+  - Evgeney Bogatyrev
+  - Ivan Molodetskikh
+  - Dmitriy Vatolin
+  published: '2023-05-08'
+  updated: '2024-12-04'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: 'In recent years, there has been significant interest in Super-Resolution (SR), which focuses
+    on generating a high-resolution image from a low-resolution input. Deep learning-based methods for
+    super-resolution have been particularly popular and have shown impressive results on various benchmarks.
+    However, research indicates that these methods may not perform as well on strongly compressed videos.
+    We developed a super-resolution benchmark to analyze SR''s capacity to upscale compressed videos.
+    Our dataset employed video codecs based on five widely-used compression standards: H.264, H.265, H.266,
+    AV1, and AVS3. We assessed 19 popular SR models using our benchmark and evaluated their ability to
+    restore details and their susceptibility to compression artifacts. To get an accurate perceptual ranking
+    of SR models, we conducted a crowd-sourced side-by-side comparison of their outputs. We found that
+    some SR models, combined with compression, allow us to reduce the video bitrate without significant
+    loss of quality. We also compared a range of image and video quality metrics with subjective scores
+    to evaluate their accuracy on super-resolved compressed videos. The benchmark is publicly available
+    at https://videoprocessing.ai/benchmarks/super-resolution-for-video-compression.html'
+  url: https://arxiv.org/abs/2305.04844
+  pdf_url: https://arxiv.org/pdf/2305.04844v3
+  version: v3
+fetched: '2026-11-14'
+citation_count: 9
+citation_year: 2023

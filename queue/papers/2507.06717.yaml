@@ -1,0 +1,41 @@
+id: paper:arxiv:2507.06717
+status: skipped
+score: 1
+track: video_image_coding
+matched:
+- ref: concept:QoE
+  count: 3
+  weight: 1
+meta:
+  title: QoE Optimization for Semantic Self-Correcting Video Transmission in Multi-UAV Networks
+  authors:
+  - Xuyang Chen
+  - Chong Huang
+  - Daquan Feng
+  - Lei Luo
+  - Yao Sun
+  - Xiang-Gen Xia
+  published: '2025-07-09'
+  updated: '2025-07-09'
+  categories:
+  - eess.IV
+  - cs.MM
+  abstract: Real-time unmanned aerial vehicle (UAV) video streaming is essential for time-sensitive applications,
+    including remote surveillance, emergency response, and environmental monitoring. However, it faces
+    challenges such as limited bandwidth, latency fluctuations, and high packet loss. To address these
+    issues, we propose a novel semantic self-correcting video transmission framework with ultra-fine bitrate
+    granularity (SSCV-G). In SSCV-G, video frames are encoded into a compact semantic codebook space,
+    and the transmitter adaptively sends a subset of semantic indices based on bandwidth availability,
+    enabling fine-grained bitrate control for improved bandwidth efficiency. At the receiver, a spatio-temporal
+    vision transformer (ST-ViT) performs multi-frame joint decoding to reconstruct dropped semantic indices
+    by modeling intra- and inter-frame dependencies. To further improve performance under dynamic network
+    conditions, we integrate a multi-user proximal policy optimization (MUPPO) reinforcement learning
+    scheme that jointly optimizes communication resource allocation and semantic bitrate selection to
+    maximize user Quality of Experience (QoE). Extensive experiments demonstrate that the proposed SSCV-G
+    significantly outperforms state-of-the-art video codecs in coding efficiency, bandwidth adaptability,
+    and packet loss robustness. Moreover, the proposed MUPPO-based QoE optimization consistently surpasses
+    existing benchmarks.
+  url: https://arxiv.org/abs/2507.06717
+  pdf_url: https://arxiv.org/pdf/2507.06717v1
+  version: v1
+fetched: '2026-11-14'

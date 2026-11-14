@@ -1,0 +1,44 @@
+id: paper:arxiv:2502.08297
+status: skipped
+score: 1
+track: immersive_media
+matched:
+- ref: concept:VolumetricVideo
+  count: 2
+  weight: 1
+meta:
+  title: 'BEAM: Bridging Physically-based Rendering and Gaussian Modeling for Relightable Volumetric Video'
+  authors:
+  - Yu Hong
+  - Yize Wu
+  - Zhehao Shen
+  - Chengcheng Guo
+  - Yuheng Jiang
+  - Yingliang Zhang
+  - Jingyi Yu
+  - Lan Xu
+  published: '2025-02-12'
+  updated: '2025-09-09'
+  categories:
+  - cs.GR
+  - cs.CV
+  abstract: Volumetric video enables immersive experiences by capturing dynamic 3D scenes, enabling diverse
+    applications for virtual reality, education, and telepresence. However, traditional methods struggle
+    with fixed lighting conditions, while neural approaches face trade-offs in efficiency, quality, or
+    adaptability for relightable scenarios. To address these limitations, we present BEAM, a novel pipeline
+    that bridges 4D Gaussian representations with physically-based rendering (PBR) to produce high-quality,
+    relightable volumetric videos from multi-view RGB footage. BEAM recovers detailed geometry and PBR
+    properties via a series of available Gaussian-based techniques. It first combines Gaussian-based human
+    performance tracking with geometry-aware rasterization in a coarse-to-fine optimization framework
+    to recover spatially and temporally consistent geometries. We further enhance Gaussian attributes
+    by incorporating PBR properties step by step. We generate roughness via a multi-view-conditioned diffusion
+    model, and then derive AO and base color using a 2D-to-3D strategy, incorporating a tailored Gaussian-based
+    ray tracer for efficient visibility computation. Once recovered, these dynamic, relightable assets
+    integrate seamlessly into traditional CG pipelines, supporting real-time rendering with deferred shading
+    and offline rendering with ray tracing. By offering realistic, lifelike visualizations under diverse
+    lighting conditions, BEAM opens new possibilities for interactive entertainment, storytelling, and
+    creative visualization.
+  url: https://arxiv.org/abs/2502.08297
+  pdf_url: https://arxiv.org/pdf/2502.08297v2
+  version: v2
+fetched: '2026-11-14'

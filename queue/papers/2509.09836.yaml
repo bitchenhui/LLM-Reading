@@ -1,0 +1,35 @@
+id: paper:arxiv:2509.09836
+status: skipped
+score: 0
+track: audio_coding
+matched: []
+meta:
+  title: 'CoDiCodec: Unifying Continuous and Discrete Compressed Representations of Audio'
+  authors:
+  - Marco Pasini
+  - Stefan Lattner
+  - George Fazekas
+  published: '2025-09-11'
+  updated: '2025-09-11'
+  categories:
+  - cs.SD
+  - cs.AI
+  - cs.LG
+  - eess.AS
+  abstract: Efficiently representing audio signals in a compressed latent space is critical for latent
+    generative modelling. However, existing autoencoders often force a choice between continuous embeddings
+    and discrete tokens. Furthermore, achieving high compression ratios while maintaining audio fidelity
+    remains a challenge. We introduce CoDiCodec, a novel audio autoencoder that overcomes these limitations
+    by both efficiently encoding global features via summary embeddings, and by producing both compressed
+    continuous embeddings at ~ 11 Hz and discrete tokens at a rate of 2.38 kbps from the same trained
+    model, offering unprecedented flexibility for different downstream generative tasks. This is achieved
+    through Finite Scalar Quantization (FSQ) and a novel FSQ-dropout technique, and does not require additional
+    loss terms beyond the single consistency loss used for end-to-end training. CoDiCodec supports both
+    autoregressive decoding and a novel parallel decoding strategy, with the latter achieving superior
+    audio quality and faster decoding. CoDiCodec outperforms existing continuous and discrete autoencoders
+    at similar bitrates in terms of reconstruction audio quality. Our work enables a unified approach
+    to audio compression, bridging the gap between continuous and discrete generative modelling paradigms.
+  url: https://arxiv.org/abs/2509.09836
+  pdf_url: https://arxiv.org/pdf/2509.09836v1
+  version: v1
+fetched: '2026-11-14'

@@ -1,0 +1,47 @@
+id: paper:arxiv:2409.10101
+status: pending
+score: 2
+track: processing_enhancement
+matched:
+- ref: concept:3DGS
+  count: 1
+  weight: 1
+- ref: concept:SuperResolution
+  count: 1
+  weight: 1
+meta:
+  title: Adaptive Segmentation-Based Initialization for Steered Mixture of Experts Image Regression
+  authors:
+  - Yi-Hsin Li
+  - Sebastian Knorr
+  - Mårten Sjöström
+  - Thomas Sikora
+  published: '2024-09-16'
+  updated: '2024-09-16'
+  categories:
+  - cs.CV
+  abstract: Kernel image regression methods have shown to provide excellent efficiency in many image processing
+    task, such as image and light-field compression, Gaussian Splatting, denoising and super-resolution.
+    The estimation of parameters for these methods frequently employ gradient descent iterative optimization,
+    which poses significant computational burden for many applications. In this paper, we introduce a
+    novel adaptive segmentation-based initialization method targeted for optimizing Steered-Mixture-of
+    Experts (SMoE) gating networks and Radial-Basis-Function (RBF) networks with steering kernels. The
+    novel initialization method allocates kernels into pre-calculated image segments. The optimal number
+    of kernels, kernel positions, and steering parameters are derived per segment in an iterative optimization
+    and kernel sparsification procedure. The kernel information from "local" segments is then transferred
+    into a "global" initialization, ready for use in iterative optimization of SMoE, RBF, and related
+    kernel image regression methods. Results show that drastic objective and subjective quality improvements
+    are achievable compared to widely used regular grid initialization, "state-of-the-art" K-Means initialization
+    and previously introduced segmentation-based initialization methods, while also drastically improving
+    the sparsity of the regression models. For same quality, the novel initialization results in models
+    with around 50% reduction of kernels. In addition, a significant reduction of convergence time is
+    achieved, with overall run-time savings of up to 50%. The segmentation-based initialization strategy
+    itself admits heavy parallel computation; in theory, it may be divided into as many tasks as there
+    are segments in the images. By accessing only four parallel GPUs, run-time savings of already 50%
+    for initialization are achievable.
+  url: https://arxiv.org/abs/2409.10101
+  pdf_url: https://arxiv.org/pdf/2409.10101v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 8
+citation_year: 2024

@@ -1,0 +1,43 @@
+id: paper:arxiv:2505.05870
+status: skipped
+score: 1
+track: video_image_coding
+matched:
+- ref: concept:DiffusionPrior
+  count: 1
+  weight: 1
+meta:
+  title: 'FaSDiff: Balancing Perception and Semantics in Face Compression via Stable Diffusion Priors'
+  authors:
+  - Yimin Zhou
+  - Yichong Xia
+  - Bin Chen
+  - Mingyao Hong
+  - Jiawei Li
+  - Zhi Wang
+  - Yaowei Wang
+  published: '2025-05-09'
+  updated: '2025-11-11'
+  categories:
+  - cs.CV
+  - cs.AI
+  - eess.IV
+  abstract: With the increasing deployment of facial image data across a wide range of applications, efficient
+    compression tailored to facial semantics has become critical for both storage and transmission. While
+    recent learning-based face image compression methods have achieved promising results, they often suffer
+    from degraded reconstruction quality at low bit rates. Directly applying diffusion-based generative
+    priors to this task leads to suboptimal performance in downstream machine vision tasks, primarily
+    due to poor preservation of high-frequency details. In this work, we propose FaSDiff (\textbf{Fa}cial
+    Image Compression with a \textbf{S}table \textbf{Diff}usion Prior), a novel diffusion-driven compression
+    framework designed to enhance both visual fidelity and semantic consistency. FaSDiff incorporates
+    a high-frequency-sensitive compressor to capture fine-grained details and generate robust visual prompts
+    for guiding the diffusion model. To address low-frequency degradation, we further introduce a hybrid
+    low-frequency enhancement module that disentangles and preserves semantic structures, enabling stable
+    modulation of the diffusion prior during reconstruction. By jointly optimizing perceptual quality
+    and semantic preservation, FaSDiff effectively balances human visual fidelity and machine vision accuracy.
+    Extensive experiments demonstrate that FaSDiff outperforms state-of-the-art methods in both perceptual
+    metrics and downstream task performance.
+  url: https://arxiv.org/abs/2505.05870
+  pdf_url: https://arxiv.org/pdf/2505.05870v2
+  version: v2
+fetched: '2026-11-14'

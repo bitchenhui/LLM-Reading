@@ -1,0 +1,44 @@
+id: paper:arxiv:2504.12216
+status: pending
+score: 2
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: 'd1: Scaling Reasoning in Diffusion Large Language Models via Reinforcement Learning'
+  authors:
+  - Siyan Zhao
+  - Devaansh Gupta
+  - Qinqing Zheng
+  - Aditya Grover
+  published: '2025-04-16'
+  updated: '2025-06-03'
+  categories:
+  - cs.CL
+  - cs.LG
+  abstract: 'Recent large language models (LLMs) have demonstrated strong reasoning capabilities that
+    benefits from online reinforcement learning (RL). These capabilities have primarily been demonstrated
+    within the left-to-right autoregressive (AR) generation paradigm. In contrast, non-autoregressive
+    paradigms based on diffusion generate text in a coarse-to-fine manner. Although recent diffusion-based
+    large language models (dLLMs) have achieved competitive language modeling performance compared to
+    their AR counterparts, it remains unclear if dLLMs can also leverage recent advances in LLM reasoning.
+    To this end, we propose d1, a framework to adapt pre-trained masked dLLMs into reasoning models via
+    a combination of supervised finetuning (SFT) and RL. Specifically, we develop and extend techniques
+    to improve reasoning in pretrained dLLMs: (a) we utilize a masked SFT technique to distill knowledge
+    and instill self-improvement behavior directly from existing datasets, and (b) we introduce a novel
+    critic-free, policy-gradient based RL algorithm called diffu-GRPO, the first integration of policy
+    gradient methods to masked dLLMs. Through empirical studies, we investigate the performance of different
+    post-training recipes on multiple mathematical and planning benchmarks. We find that d1 yields the
+    best performance and significantly improves performance of a state-of-the-art dLLM. Our code is released
+    at https://dllm-reasoning.github.io/.'
+  url: https://arxiv.org/abs/2504.12216
+  pdf_url: https://arxiv.org/pdf/2504.12216v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 210
+citation_year: 2025

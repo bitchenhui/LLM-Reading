@@ -1,0 +1,45 @@
+id: paper:arxiv:2411.06742
+status: skipped
+score: 2
+track: video_image_coding
+matched:
+- ref: concept:QoE
+  count: 3
+  weight: 1
+- ref: concept:WebRTC
+  count: 1
+  weight: 1
+meta:
+  title: Loss-tolerant neural video codec aware congestion control for real time video communication
+  authors:
+  - Zhengxu Xia
+  - Hanchen Li
+  - Junchen Jiang
+  published: '2024-11-11'
+  updated: '2025-03-17'
+  categories:
+  - cs.NI
+  - cs.MM
+  abstract: Because of reinforcement learning's (RL) ability to automatically create more adaptive controlling
+    logics beyond the hand-crafted heuristics, numerous effort has been made to apply RL to congestion
+    control (CC) design for real time video communication (RTC) applications and has successfully shown
+    promising benefits over the rule-based RTC CCs. Online reinforcement learning is often adopted to
+    train the RL models so the models can directly adapt to real network environments. However, its trail-and-error
+    manner can also cause catastrophic degradation of the quality of experience (QoE) of RTC application
+    at run time. Thus, safeguard strategies such as falling back to hand-crafted heuristics can be used
+    to run along with RL models to guarantee the actions explored in the training sensible, despite that
+    these safeguard strategies interrupt the learning process and make it more challenging to discover
+    optimal RL policies. The recent emergence of loss-tolerant neural video codecs (NVC) naturally provides
+    a layer of protection for the online learning of RL-based congestion control because of its resilience
+    to packet losses, but such packet loss resilience have not been fully exploited in prior works yet.
+    In this paper, we present a reinforcement learning (RL) based congestion control which can be aware
+    of and takes advantage of packet loss tolerance characteristic of NVCs via reward in online RL learning.
+    Through extensive evaluation on various videos and network traces in a simulated environment, we demonstrate
+    that our NVC-aware CC running with the loss-tolerant NVC reduces the training time by 41\% compared
+    to other prior RL-based CCs. It also boosts the mean video quality by 0.3 to 1.6dB, lower the tail
+    frame delay by 3 to 200ms, and reduces the video stalls by 20\% to 77\% in comparison with other baseline
+    RTC CCs.
+  url: https://arxiv.org/abs/2411.06742
+  pdf_url: https://arxiv.org/pdf/2411.06742v2
+  version: v2
+fetched: '2026-11-14'

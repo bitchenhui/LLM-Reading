@@ -1,0 +1,38 @@
+id: paper:arxiv:2603.20785
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 3
+  weight: 1
+meta:
+  title: 'ME-IQA: Memory-Enhanced Image Quality Assessment via Re-Ranking'
+  authors:
+  - Kanglong Fan
+  - Tianhe Wu
+  - Wen Wen
+  - Jianzhao Liu
+  - Le Yang
+  - Yabin Zhang
+  - Yiting Liao
+  - Junlin Li
+  - Li Zhang
+  published: '2026-03-21'
+  updated: '2026-07-16'
+  categories:
+  - cs.CV
+  abstract: Reasoning-induced vision-language models (VLMs) advance image quality assessment (IQA) with
+    textual reasoning, yet their scalar scores often lack sensitivity and collapse to a few values, so-called
+    discrete collapse. We introduce ME-IQA, a plug-and-play, test-time memory-enhanced re-ranking framework.
+    It (i) builds a memory bank and retrieves semantically and perceptually aligned neighbors using reasoning
+    summaries, (ii) reframes the VLM as a probabilistic comparator to obtain pairwise preference probabilities
+    and fuse this ordinal evidence with the initial score under Thurstone's Case V model, and (iii) performs
+    gated reflection and consolidates memory to improve future decisions. This yields denser, distortion-sensitive
+    predictions and mitigates discrete collapse. Experiments across multiple IQA benchmarks show consistent
+    gains over strong reasoning-induced VLM baselines, existing non-reasoning IQA methods, and test-time
+    scaling alternatives.
+  url: https://arxiv.org/abs/2603.20785
+  pdf_url: https://arxiv.org/pdf/2603.20785v2
+  version: v2
+fetched: '2026-11-14'

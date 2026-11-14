@@ -1,0 +1,36 @@
+id: paper:arxiv:2203.04382
+status: skipped
+score: 1
+track: processing_enhancement
+matched:
+- ref: concept:SuperResolution
+  count: 1
+  weight: 1
+meta:
+  title: Regularized Training of Intermediate Layers for Generative Models for Inverse Problems
+  authors:
+  - Sean Gunn
+  - Jorio Cocola
+  - Paul Hand
+  published: '2022-03-08'
+  updated: '2022-03-08'
+  categories:
+  - cs.LG
+  - cs.CV
+  - eess.IV
+  abstract: 'Generative Adversarial Networks (GANs) have been shown to be powerful and flexible priors
+    when solving inverse problems. One challenge of using them is overcoming representation error, the
+    fundamental limitation of the network in representing any particular signal. Recently, multiple proposed
+    inversion algorithms reduce representation error by optimizing over intermediate layer representations.
+    These methods are typically applied to generative models that were trained agnostic of the downstream
+    inversion algorithm. In our work, we introduce a principle that if a generative model is intended
+    for inversion using an algorithm based on optimization of intermediate layers, it should be trained
+    in a way that regularizes those intermediate layers. We instantiate this principle for two notable
+    recent inversion algorithms: Intermediate Layer Optimization and the Multi-Code GAN prior. For both
+    of these inversion algorithms, we introduce a new regularized GAN training algorithm and demonstrate
+    that the learned generative model results in lower reconstruction errors across a wide range of under
+    sampling ratios when solving compressed sensing, inpainting, and super-resolution problems.'
+  url: https://arxiv.org/abs/2203.04382
+  pdf_url: https://arxiv.org/pdf/2203.04382v1
+  version: v1
+fetched: '2026-11-14'

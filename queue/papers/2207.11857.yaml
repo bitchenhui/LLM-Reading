@@ -1,0 +1,37 @@
+id: paper:arxiv:2207.11857
+status: skipped
+score: 1
+track: streaming_delivery
+matched:
+- ref: concept:WebRTC
+  count: 1
+  weight: 1
+meta:
+  title: 'SQP: Congestion Control for Low-Latency Interactive Video Streaming'
+  authors:
+  - Devdeep Ray
+  - Connor Smith
+  - Teng Wei
+  - David Chu
+  - Srinivasan Seshan
+  published: '2022-07-25'
+  updated: '2022-07-25'
+  categories:
+  - cs.NI
+  - cs.MM
+  abstract: This paper presents the design and evaluation of SQP, a congestion control algorithm (CCA)
+    for interactive video streaming applications that need to stream high-bitrate compressed video with
+    very low end-to-end frame delay (eg. AR streaming, cloud gaming). SQP uses frame-coupled, paced packet
+    trains to sample the network bandwidth, and uses an adaptive one-way delay measurement to recover
+    from queuing, for low, bounded queuing delay. SQP rapidly adapts to changes in the link bandwidth,
+    ensuring high utilization and low frame delay, and also achieves competitive bandwidth shares when
+    competing with queue-building flows within an acceptable delay envelope. SQP has good fairness properties,
+    and works well on links with shallow buffers. In real-world A/B testing of SQP against Copa in Google's
+    AR streaming platform, SQP achieves 27% and 15% more sessions with high bitrate and low frame delay
+    for LTE and Wi-Fi, respectively. When competing with queue-building traffic like Cubic and BBR, SQP
+    achieves 2-3X higher bandwidth compared to GoogCC (WebRTC), Sprout, and PCC-Vivace, and comparable
+    performance to Copa (with mode switching).
+  url: https://arxiv.org/abs/2207.11857
+  pdf_url: https://arxiv.org/pdf/2207.11857v1
+  version: v1
+fetched: '2026-11-14'

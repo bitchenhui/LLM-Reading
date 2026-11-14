@@ -1,0 +1,37 @@
+id: paper:arxiv:2509.19025
+status: skipped
+score: 1
+track: audio_coding
+matched:
+- ref: concept:NeuralAudioCodec
+  count: 1
+  weight: 1
+meta:
+  title: Enhancing Noise Robustness for Neural Speech Codecs through Resource-Efficient Progressive Quantization
+    Perturbation Simulation
+  authors:
+  - Rui-Chen Zheng
+  - Yang Ai
+  - Hui-Peng Du
+  - Li-Rong Dai
+  published: '2025-09-23'
+  updated: '2025-10-13'
+  categories:
+  - eess.AS
+  abstract: 'Noise robustness remains a critical challenge for deploying neural speech codecs in real-world
+    acoustic scenarios where background noise is often inevitable. A key observation we make is that even
+    slight input noise perturbations can cause unintended shifts in quantized codewords, thereby degrading
+    the quality of reconstructed speech. Motivated by this finding, we propose a novel and resource-efficient
+    training strategy to enhance the noise robustness of speech codecs by simulating such perturbations
+    directly at the quantization level. Our approach introduces two core mechanisms: (1) a distance-weighted
+    probabilistic top-K sampling strategy that replaces the conventional deterministic nearest-neighbor
+    selection in residual vector quantization (RVQ); and (2) a progressive training scheme that introduces
+    perturbations from the last to the first quantizer in a controlled manner. Crucially, our method is
+    trained exclusively on clean speech, eliminating the need for any paired noisy-clean data. Experiments
+    on two advanced neural speech codecs, Encodec and WavTokenizer, demonstrate that the proposed strategy
+    substantially improves robustness under noisy conditions-for example, boosting UTMOS from 3.475 to
+    3.586 at 15 dB SNR on Encodec-while also enhancing coding quality for clean speech.'
+  url: https://arxiv.org/abs/2509.19025
+  pdf_url: https://arxiv.org/pdf/2509.19025v2
+  version: v2
+fetched: '2026-11-14'

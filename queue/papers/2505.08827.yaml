@@ -1,0 +1,45 @@
+id: paper:arxiv:2505.08827
+status: pending
+score: 2
+track: self_improvement
+matched:
+- ref: concept:LLM
+  count: 2
+  weight: 1
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+meta:
+  title: 'RLSR: Reinforcement Learning from Self Reward'
+  authors:
+  - Toby Simonds
+  - Kevin Lopez
+  - Akira Yoshiyama
+  - Dominique Garmier
+  published: '2025-05-12'
+  updated: '2025-08-06'
+  categories:
+  - cs.LG
+  - cs.AI
+  abstract: Large language models can generate solutions to complex problems, but training them with reinforcement
+    learning typically requires verifiable rewards that are expensive to create and not possible for all
+    domains. We demonstrate that LLMs can effectively self-improve through self-judging without reference
+    solutions, leveraging the inherent asymmetry between generating and verifying solutions. Our experiments
+    show that models can provide reliable reward signals without ground truth answers, enabling reinforcement
+    learning in domains where verifiable rewards are impractical. By implementing self-judging across
+    Countdown puzzles and integration problems, we achieve performance comparable to formal verification
+    without ground truth solutions. Most notably, Qwen 2.5 7B DeepSeek Distilled trained with self-rewards
+    qualifies for the prestigious MIT Integration Bee competition, performance through self-supervised
+    improvement. When combined with synthetic question generation, we establish a complete self-improvement
+    loop where models generate practice problems, solve them, and evaluate their own performance without
+    any external validation. Our findings demonstrate that LLM judges can provide effective reward signals
+    for training, unlocking reinforcement learning in countless domains previously limited by reward engineering
+    challenges. This work represents a significant step toward autonomous AI systems that continuously
+    improve through self-directed learning rather than human-guided training, potentially accelerating
+    progress across domains where training data is scarce or evaluation is complex.
+  url: https://arxiv.org/abs/2505.08827
+  pdf_url: https://arxiv.org/pdf/2505.08827v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 5
+citation_year: 2025

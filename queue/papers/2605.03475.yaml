@@ -1,0 +1,52 @@
+id: paper:arxiv:2605.03475
+status: pending
+score: 4
+track: quality_assessment
+matched:
+- ref: metric:SSIM
+  count: 3
+  weight: 1
+- ref: concept:IQA
+  count: 1
+  weight: 1
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+- ref: org:BT
+  count: 1
+  weight: 1
+meta:
+  title: 'WorldJen: An End-to-End Multi-Dimensional Benchmark for Generative Video Models'
+  authors:
+  - Karthik Inbasekar
+  - Guy Rom
+  - Omer Shlomovits
+  published: '2026-05-05'
+  updated: '2026-05-06'
+  categories:
+  - cs.CV
+  abstract: 'Evaluating generative video models remains an open problem. Reference-based metrics such
+    as Structural Similarity Index Measure (SSIM) and Peak Signal to Noise Ratio (PSNR) reward pixel fidelity
+    over semantic correctness, while Frechet Video Distance (FVD) favors distributional textures over
+    physical plausibility. Binary Visual Question Answering (VQA) based benchmarks like VBench~2.0 are
+    prone to yes-bias and rely on low-resolution auditors that miss temporal failures. Moreover, their
+    prompts target a single dimension at a time, multiplying the number of videos required while still
+    not guaranteeing reliable results. WorldJen addresses these limitations directly. Binary VQA is replaced
+    with Likert-scale questionnaires graded by a VLM that receives frames at native video resolution.
+    Video generation costs are addressed by using adversarially curated prompts that are designed to exercise
+    up to 16 quality dimensions simultaneously. The framework is built around two interlocking contributions.
+    First, A blind human preference study is conducted, accumulating (2,696 pairwise annotations from
+    7 annotators with 100% pair coverage over 50 of the curated prompts $\times$ 6 state-of-the-art video
+    models. A mean inter-annotator agreement of 66.9% is achieved and the study establishes a human ground-truth
+    Bradley-Terry (BT) rating with a three-tier structure. Second, A VLM-as-a-judge evaluation engine
+    using prompt-specific, dimension-specific Likert questionnaires (10 questions per dimension, 47,160
+    scored responses) judges the videos and reproduces the human-established three-tier BT rating structure
+    independently. The VLM achieves a Spearman $\hatρ=1.000,~p=0.0014$ that is interpreted as tier agreement
+    with the human results. Six focused ablation studies validate the robustness of the VLM evaluation
+    framework. Project page: https://moonmath.ai/worldjen/'
+  url: https://arxiv.org/abs/2605.03475
+  pdf_url: https://arxiv.org/pdf/2605.03475v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 4
+citation_year: 2026

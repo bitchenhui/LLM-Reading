@@ -1,0 +1,36 @@
+id: paper:arxiv:2501.16976
+status: pending
+score: 4
+track: video_image_coding
+matched:
+- ref: codec:HEVC
+  count: 1
+  weight: 3
+- ref: concept:RDO
+  count: 1
+  weight: 1
+meta:
+  title: Improved Encoding for Overfitted Video Codecs
+  authors:
+  - Thomas Leguay
+  - Théo Ladune
+  - Pierrick Philippe
+  - Olivier Deforges
+  published: '2025-01-28'
+  updated: '2025-03-26'
+  categories:
+  - eess.IV
+  abstract: Overfitted neural video codecs offer a decoding complexity orders of magnitude smaller than
+    their autoencoder counterparts. Yet, this low complexity comes at the cost of limited compression
+    efficiency, in part due to their difficulty capturing accurate motion information. This paper proposes
+    to guide motion information learning with an optical flow estimator. A joint rate-distortion optimization
+    is also introduced to improve rate distribution across the different frames. These contributions maintain
+    a low decoding complexity of 1300 multiplications per pixel while offering compression performance
+    close to the conventional codec HEVC and outperforming other overfitted codecs. This work is made
+    open-source at https://orange-opensource.github.io/Cool-Chic/
+  url: https://arxiv.org/abs/2501.16976
+  pdf_url: https://arxiv.org/pdf/2501.16976v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 8
+citation_year: 2025

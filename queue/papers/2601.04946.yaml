@@ -1,0 +1,38 @@
+id: paper:arxiv:2601.04946
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: Prototypicality Bias Reveals Blindspots in Multimodal Evaluation Metrics
+  authors:
+  - Subhadeep Roy
+  - Gagan Bhatia
+  - Steffen Eger
+  published: '2026-01-08'
+  updated: '2026-06-01'
+  categories:
+  - cs.CV
+  - cs.AI
+  abstract: 'Automatic metrics are widely used to evaluate text-to-image models, often replacing human
+    judgment in benchmarking, model selection, and large-scale data filtering. Yet they may reward images
+    that look plausible or prototypical rather than images that faithfully satisfy the prompt. We identify
+    prototypicality bias as a systematic blindspot in multimodal evaluation: metrics can prefer a semantically
+    incorrect but visually or socially prototypical image over a correct but less prototypical one. We
+    introduce PROTOBIAS, a controlled diagnostic benchmark across Animals, Objects, and Demography, where
+    semantically correct images are contrasted with plausible prototypical adversaries containing a single
+    controlled semantic violation. Grounded in prototype theory and social-category prototypicality, PROTOBIAS
+    is constructed with multiple prompt generators, image generators, and independent VLM filters, and
+    validated through prompt-quality, human-annotation, and image-quality controls. Using PROTOBIAS, we
+    show that widely used embedding, reward, VQA-based, and VLM-as-judge metrics frequently fail these
+    contrasts, while human judgments remain more faithful to semantic correctness. We further introduce
+    PROTOSCORE, a lightweight contrastively trained evaluator, as an initial mitigation baseline. PROTOBIAS
+    provides a focused benchmark for measuring prototypicality-driven metric failures and developing more
+    semantically faithful T2I evaluators.'
+  url: https://arxiv.org/abs/2601.04946
+  pdf_url: https://arxiv.org/pdf/2601.04946v3
+  version: v3
+fetched: '2026-11-14'

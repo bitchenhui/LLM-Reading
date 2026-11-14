@@ -1,0 +1,46 @@
+id: paper:arxiv:2604.05818
+status: skipped_low_citation
+score: 2
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: 'WikiSeeker: Rethinking the Role of Vision-Language Models in Knowledge-Based Visual Question
+    Answering'
+  authors:
+  - Yingjian Zhu
+  - Xinming Wang
+  - Kun Ding
+  - Ying Wang
+  - Bin Fan
+  - Shiming Xiang
+  published: '2026-04-07'
+  updated: '2026-04-14'
+  categories:
+  - cs.CV
+  - cs.CL
+  - cs.IR
+  abstract: 'Multi-modal Retrieval-Augmented Generation (RAG) has emerged as a highly effective paradigm
+    for Knowledge-Based Visual Question Answering (KB-VQA). Despite recent advancements, prevailing methods
+    still primarily depend on images as the retrieval key, and often overlook or misplace the role of
+    Vision-Language Models (VLMs), thereby failing to leverage their potential fully. In this paper, we
+    introduce WikiSeeker, a novel multi-modal RAG framework that bridges these gaps by proposing a multi-modal
+    retriever and redefining the role of VLMs. Rather than serving merely as answer generators, we assign
+    VLMs two specialized agents: a Refiner and an Inspector. The Refiner utilizes the capability of VLMs
+    to rewrite the textual query according to the input image, significantly improving the performance
+    of the multimodal retriever. The Inspector facilitates a decoupled generation strategy by selectively
+    routing reliable retrieved context to another LLM for answer generation, while relying on the VLM''s
+    internal knowledge when retrieval is unreliable. Extensive experiments on EVQA, InfoSeek, and M2KR
+    demonstrate that WikiSeeker achieves state-of-the-art performance, with substantial improvements in
+    both retrieval accuracy and answer quality. Our code will be released on https://github.com/zhuyjan/WikiSeeker.'
+  url: https://arxiv.org/abs/2604.05818
+  pdf_url: https://arxiv.org/pdf/2604.05818v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 0
+citation_year: 2026

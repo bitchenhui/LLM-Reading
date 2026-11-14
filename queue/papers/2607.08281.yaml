@@ -1,0 +1,45 @@
+id: paper:arxiv:2607.08281
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 2
+  weight: 1
+meta:
+  title: 'Enhancing the KidSat Model: Integrating Geographical Encoding and Data Quality Assessment for
+    Childhood Poverty Prediction'
+  authors:
+  - Hou Hin Ip
+  - Ka Nam Lam
+  - Joshua Man Yu Ng
+  - Makkunda Sharma
+  - Seth Flaxman
+  - Codie Gerlach-Wood
+  - H Juliette T Unwin
+  published: '2026-07-09'
+  updated: '2026-07-09'
+  categories:
+  - cs.CV
+  - stat.AP
+  abstract: Accurate poverty mapping using satellite imagery is often hindered by (i) noisy and sparse
+    survey-derived supervision, (ii) image quality issues such as cloud cover and image corruption, and
+    (iii) lack of explicit spatial structure in image-only models. Building on the KidSat framework, we
+    develop an enhanced pipeline that improves predictive accuracy via refined data preprocessing, systematic
+    image quality assessment, and mathematically defined geographic encoding. First, we refine the fine-tuning
+    target matrix by resolving high-cardinality sparsity and reducing one-hot dimensionality from 103
+    to 51 via DHS re-aggregation. Second, we introduce a simple two-stage quality-screening procedure
+    to filter heavily clouded or corrupted observations. Third, we fuse DINOv2 visual embeddings with
+    Spherical Harmonics (SH) location features. Across extensive experiments, these changes reduce MAE
+    from 0.2167 to 0.1759, corresponding to an 18.83% relative reduction on the cluster-level severe-deprivation
+    proportion scale. When extended from 16 to 33 African countries, the best-performing configuration
+    achieves an overall MAE of 0.1658. We find that SH features consistently improve performance over
+    the image-only backbone, whereas higher-capacity coordinate Multi Layer Perception augmentation (SH+SIREN)
+    can underperform without carefully designed objectives. Finally, gradient-boosted tree heads (XGBoost/LightGBM)
+    most effectively exploit nonlinear interactions in the fused visual-geographic representation. These
+    findings provide a scalable and principled recipe for improving satellite-based socioeconomic predictions
+    using only publicly accessible data.
+  url: https://arxiv.org/abs/2607.08281
+  pdf_url: https://arxiv.org/pdf/2607.08281v1
+  version: v1
+fetched: '2026-11-14'

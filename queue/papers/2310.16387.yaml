@@ -1,0 +1,46 @@
+id: paper:arxiv:2310.16387
+status: pending
+score: 5
+track: video_image_coding
+matched:
+- ref: impl:VTM
+  count: 1
+  weight: 3
+- ref: dataset:Kodak
+  count: 1
+  weight: 1
+- ref: metric:BD-Rate
+  count: 1
+  weight: 1
+meta:
+  title: Frequency-Aware Transformer for Learned Image Compression
+  authors:
+  - Han Li
+  - Shaohui Li
+  - Wenrui Dai
+  - Chenglin Li
+  - Junni Zou
+  - Hongkai Xiong
+  published: '2023-10-25'
+  updated: '2024-12-16'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: Learned image compression (LIC) has gained traction as an effective solution for image storage
+    and transmission in recent years. However, existing LIC methods are redundant in latent representation
+    due to limitations in capturing anisotropic frequency components and preserving directional details.
+    To overcome these challenges, we propose a novel frequency-aware transformer (FAT) block that for
+    the first time achieves multiscale directional ananlysis for LIC. The FAT block comprises frequency-decomposition
+    window attention (FDWA) modules to capture multiscale and directional frequency components of natural
+    images. Additionally, we introduce frequency-modulation feed-forward network (FMFFN) to adaptively
+    modulate different frequency components, improving rate-distortion performance. Furthermore, we present
+    a transformer-based channel-wise autoregressive (T-CA) model that effectively exploits channel dependencies.
+    Experiments show that our method achieves state-of-the-art rate-distortion performance compared to
+    existing LIC methods, and evidently outperforms latest standardized codec VTM-12.1 by 14.5%, 15.1%,
+    13.0% in BD-rate on the Kodak, Tecnick, and CLIC datasets.
+  url: https://arxiv.org/abs/2310.16387
+  pdf_url: https://arxiv.org/pdf/2310.16387v4
+  version: v4
+fetched: '2026-11-14'
+citation_count: 140
+citation_year: 2023

@@ -1,0 +1,40 @@
+id: paper:arxiv:2505.13504
+status: skipped_low_citation
+score: 2
+track: self_improvement
+matched:
+- ref: concept:LLM
+  count: 2
+  weight: 1
+- ref: concept:SelfImprovement
+  count: 1
+  weight: 1
+meta:
+  title: An agentic system with reinforcement-learned subsystem improvements for parsing form-like documents
+  authors:
+  - Ayesha Amjad
+  - Saurav Sthapit
+  - Tahir Qasim Syed
+  published: '2025-05-16'
+  updated: '2025-05-16'
+  categories:
+  - cs.IR
+  - cs.AI
+  - cs.MA
+  abstract: Extracting alphanumeric data from form-like documents such as invoices, purchase orders, bills,
+    and financial documents is often performed via vision (OCR) and learning algorithms or monolithic
+    pipelines with limited potential for systemic improvements. We propose an agentic AI system that leverages
+    Large Language Model (LLM) agents and a reinforcement learning (RL) driver agent to automate consistent,
+    self-improving extraction under LLM inference uncertainty. Our work highlights the limitations of
+    monolithic LLM-based extraction and introduces a modular, multi-agent framework with task-specific
+    prompts and an RL policy of rewards and penalties to guide a meta-prompting agent to learn from past
+    errors and improve prompt-based actor agents. This self-corrective adaptive system handles diverse
+    documents, file formats, layouts, and LLMs, aiming to automate accurate information extraction without
+    the need for human intervention. Results as reported on two benchmark datasets of SOIRE, and CORD,
+    are promising for the agentic AI framework.
+  url: https://arxiv.org/abs/2505.13504
+  pdf_url: https://arxiv.org/pdf/2505.13504v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 4
+citation_year: 2025

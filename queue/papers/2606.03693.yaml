@@ -1,0 +1,38 @@
+id: paper:arxiv:2606.03693
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: Does Language Shift Break Medical Vision-Language Models? Indonesian Radiology Visual Question
+    Answering Case Study
+  authors:
+  - Pieter Christy Yan Yudhistira
+  - Dzaki Rafif Malik
+  - Novanto Yudistira
+  published: '2026-06-02'
+  updated: '2026-06-02'
+  categories:
+  - cs.CL
+  - cs.CV
+  abstract: Medical Vision-Language Models (VLMs) are typically evaluated on English radiology visual
+    question answering benchmarks, leaving their robustness under non-English clinical language largely
+    unexplored. We introduce IndoRad-VQA, an Indonesian adaptation of VQA-RAD, to assess whether medical
+    VLMs retain radiology reasoning ability when questions are asked in Bahasa Indonesia. Radiology question-answer
+    pairs are translated into Indonesian with self-evaluation-based quality control to preserve clinical
+    meaning, terminology consistency, and answer equivalence. We evaluate general-purpose, Southeast Asian
+    multilingual, and medical-specific VLMs under English and Indonesian prompting settings. Beyond accuracy,
+    we quantify the language robustness gap between English and Indonesian inputs. We also conduct an
+    error analysis to identify failure modes of question answering, such as yes/no flips, laterality errors,
+    and output-language mismatches. Our findings show that strong performance on English medical VQA benchmarks
+    does not necessarily translate to robust behavior in Indonesian clinical contexts. We observe a performance
+    gap of 8 to 25 percent between the English and Indonesian settings, depending on the evaluation metric.
+    These results highlight the need for more inclusive multilingual evaluation of medical multimodal
+    foundation models. The dataset is available at https://huggingface.co/datasets/Lab-IS/IndoRad-VQA.
+  url: https://arxiv.org/abs/2606.03693
+  pdf_url: https://arxiv.org/pdf/2606.03693v1
+  version: v1
+fetched: '2026-11-14'

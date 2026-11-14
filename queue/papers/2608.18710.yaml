@@ -1,0 +1,39 @@
+id: paper:arxiv:2608.18710
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 4
+  weight: 1
+meta:
+  title: 'CamWorldQA: Perceptual Quality Assessment of Camera-Controlled World Video Generation'
+  authors:
+  - Yunhe Li
+  - Likun Wu
+  - Sijing Wu
+  - Xinyu Tian
+  - Huiyu Duan
+  - Yixuan Gao
+  - Yunhao Li
+  - Guangtao Zhai
+  published: '2026-08-19'
+  updated: '2026-08-19'
+  categories:
+  - cs.CV
+  abstract: Recent advances in generative video models have enabled camera-controlled world video generation,
+    allowing models to synthesize videos under user-defined camera trajectories. However, existing video
+    quality assessment (VQA) methods are mainly developed for natural videos and fail to capture the unique
+    perceptual characteristics of camera-controlled generation, such as viewpoint consistency, motion
+    coherence, and content preservation. In this work, we introduce CamWorldQA, the first benchmark for
+    perceptual quality assessment of camera-controlled world video generation. CamWorldQA contains 720
+    generated videos produced by 6 representative generation methods from 20 diverse source videos under
+    6 camera trajectories, where each video is annotated with a human-rated perceptual quality score through
+    subjective experiments. Furthermore, we propose CWQA, a no-reference quality assessment network with
+    three complementary branches that extract spatial features, temporal motion features and optical flow
+    features to jointly predict quality scores. Extensive experiments demonstrate that CWQA achieves superior
+    performance over existing quality assessment methods on the CamWorldQA dataset.
+  url: https://arxiv.org/abs/2608.18710
+  pdf_url: https://arxiv.org/pdf/2608.18710v1
+  version: v1
+fetched: '2026-11-14'

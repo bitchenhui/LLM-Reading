@@ -1,0 +1,30 @@
+id: paper:arxiv:2606.10591
+status: skipped
+score: 0
+track: audio_coding
+matched: []
+meta:
+  title: 'ContextCodec: Content-Focused Context Guidance for Ultra-Low Bitrate Speech Coding'
+  authors:
+  - Chengbin Liang
+  - Wenqi Guo
+  - Hao Cao
+  - Zhijin Qin
+  published: '2026-06-09'
+  updated: '2026-06-09'
+  categories:
+  - cs.SD
+  abstract: Neural speech codecs enable low-bitrate speech communication, yet at ultra-low bitrates (<
+    1000 bps) preserving perceptual quality and intelligibility is challenging. Existing designs often
+    prioritize acoustic details, leaving limited capacity for the core linguistic message under tight
+    bitrate constraints. To address this, we propose ContextCodec, a codec that transmits content-focused
+    context features to explicitly guide reconstruction. ContextCodec adopts a dual-branch encoder that
+    decouples acoustic details from content-focused context. The context branch is trained with a CLIP-style
+    contrastive loss that aligns context features with phoneme indices, reducing paralinguistic leakage.
+    During decoding, these features are injected at each decoding stage for explicit guidance. In addition,
+    we introduce a lightweight autoregressive latent refinement module. Experiments show a strong quality-intelligibility
+    trade-off down to 500 bps, with an RTF of 0.4886 on a typical mobile CPU.
+  url: https://arxiv.org/abs/2606.10591
+  pdf_url: https://arxiv.org/pdf/2606.10591v1
+  version: v1
+fetched: '2026-11-14'

@@ -1,0 +1,35 @@
+id: paper:arxiv:2601.13566
+status: skipped
+score: 1
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+meta:
+  title: 'Self-Improvement as Coherence Optimization: A Theoretical Account'
+  authors:
+  - Tianyi Qiu
+  - Ahmed Hani Ismail
+  - Zhonghao He
+  - Shi Feng
+  published: '2026-01-20'
+  updated: '2026-09-23'
+  categories:
+  - cs.LG
+  - cs.AI
+  - cs.CL
+  abstract: Can language models improve their accuracy without external supervision? Methods such as debate,
+    bootstrap, and internal coherence maximization achieve this surprising feat, even matching golden
+    finetuning performance. Yet why they work remains theoretically unclear. We show that they can all
+    be understood as coherence optimization, the search for a context-to-behavior mapping that is most
+    compressible and jointly predictable, with debate an exact instance and bootstrap and internal coherence
+    maximization closely related to it. We prove that coherence optimization is equivalent to description-length
+    regularization, and that among all such regularization schemes, coherence regularization with a prior
+    derived from a pretrained model optimizes a lower bound of worst-case accuracy for semi-supervised
+    learning. Our theory, supported by preliminary experiments, explains why feedback-free self-improvement
+    works and predicts when it should succeed or fail.
+  url: https://arxiv.org/abs/2601.13566
+  pdf_url: https://arxiv.org/pdf/2601.13566v2
+  version: v2
+fetched: '2026-11-14'

@@ -1,0 +1,36 @@
+id: paper:arxiv:2509.23341
+status: skipped_low_citation
+score: 4
+track: immersive_media
+matched:
+- ref: codec:G-PCC
+  count: 1
+  weight: 3
+- ref: org:MPEG
+  count: 1
+  weight: 1
+meta:
+  title: On the Impact of LiDAR Point Cloud Compression on Remote Semantic Segmentation
+  authors:
+  - Tiago de S. Fernandes
+  - Ricardo L. de Queiroz
+  published: '2025-09-27'
+  updated: '2025-09-27'
+  categories:
+  - eess.IV
+  abstract: Autonomous vehicles rely on LiDAR sensors to generate 3D point clouds for accurate segmentation
+    and object detection. In a context of a smart city framework, we would like to understand the effect
+    that transmission (compression) can have on remote (cloud) segmentation, instead of local processing.
+    In this short paper, we try to understand the impact of point cloud compression on semantic segmentation
+    performance and to estimate the necessary bandwidth requirements. We developed a new (suitable) distortion
+    metric to evaluate such an impact. Two of MPEG's compression algorithms (GPCC and L3C2) and two leading
+    semantic segmentation algorithms (2DPASS and PVKD) were tested over the Semantic KITTI dataset. Results
+    indicate that high segmentation quality requires communication throughput of approximately 0.6 MB/s
+    for G-PCC and 2.8 MB/s for L3C2. These results are important in order to plan infrastructure resources
+    for autonomous navigation.
+  url: https://arxiv.org/abs/2509.23341
+  pdf_url: https://arxiv.org/pdf/2509.23341v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 0
+citation_year: 2025

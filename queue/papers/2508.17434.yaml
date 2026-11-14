@@ -1,0 +1,40 @@
+id: paper:arxiv:2508.17434
+status: skipped
+score: 1
+track: processing_enhancement
+matched:
+- ref: concept:SuperResolution
+  count: 2
+  weight: 1
+meta:
+  title: 'TinySR: Pruning Diffusion for Real-World Image Super-Resolution'
+  authors:
+  - Linwei Dong
+  - Qingnan Fan
+  - Yuhang Yu
+  - Qi Zhang
+  - Jinwei Chen
+  - Yawei Luo
+  - Changqing Zou
+  published: '2025-08-24'
+  updated: '2026-06-25'
+  categories:
+  - cs.CV
+  abstract: Real-world image super-resolution (Real-ISR) focuses on recovering high-quality images from
+    low-resolution inputs that suffer from complex degradations like noise, blur, and compression. Recently,
+    diffusion models (DMs) have shown great potential in this area by leveraging strong generative priors
+    to restore fine details. However, their iterative denoising process incurs high computational overhead,
+    posing challenges for real-time applications. Although one-step distillation methods, such as OSEDiff
+    and TSD-SR, offer faster inference, they remain fundamentally constrained by their large, over-parameterized
+    model architectures. In this work, we present TinySR, a compact yet effective diffusion model specifically
+    designed for Real-ISR that achieves real-time performance while maintaining perceptual quality. We
+    introduce a Dynamic Inter-block Activation and an Expansion-Corrosion Strategy to facilitate more
+    effective decision-making in depth pruning. We achieve VAE compression through channel pruning, attention
+    removal and lightweight SepConv. We eliminate time- and prompt-related modules and perform pre-caching
+    techniques to further speed up the model. TinySR significantly reduces computational cost and model
+    size, achieving up to 5.68x speedup and 83% parameter reduction compared to its teacher TSD-SR, while
+    still providing high quality results.
+  url: https://arxiv.org/abs/2508.17434
+  pdf_url: https://arxiv.org/pdf/2508.17434v3
+  version: v3
+fetched: '2026-11-14'

@@ -1,0 +1,41 @@
+id: paper:arxiv:2605.27276
+status: skipped
+score: 1
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 1
+  weight: 1
+meta:
+  title: 'SIA: Self Improving AI with Harness & Weight Updates'
+  authors:
+  - Prannay Hebbar
+  - Yogendra Manawat
+  - Samuel Verboomen
+  - Alesia Ivanova
+  - Selvam Palanimalai
+  - Kunal Bhatia
+  - Vignesh Baskaran
+  published: '2026-05-26'
+  updated: '2026-05-28'
+  categories:
+  - cs.AI
+  - cs.CL
+  abstract: 'Humans are the bottleneck in building and improving AI. Both the models and the agents that
+    wrap them are written, tuned, and corrected by people. The long-horizon goal of an AI that can figure
+    out how to improve itself remains open. Two largely disjoint research lines attack this bottleneck.
+    The harness-update school has a meta-agent rewrite the scaffold of a task-specific agent (its tools,
+    prompts, retry logic, and search procedure) while the model weights are held fixed. The test-time
+    training school uses hand-written RL pipelines to update the model''s own weights on task feedback
+    while the harness is held fixed. These two silos operate in isolation. We propose SIA, a self-improving
+    loop in which a language-model agent (the Feedback-Agent) updates both the harness and the weights
+    of a task-specific agent. We evaluate across three contrasting domains: Chinese legal charge classification,
+    low-level GPU kernel optimisation, and single-cell RNA denoising. Combining both levers outperforms
+    scaffold iteration alone on all three benchmarks. SIA-W+H achieves 25.1% over prior SOTA on LawBench,
+    12.4% faster GPU kernels than prior SOTA (1,017 vs 1,161 μs), and 20.4% over prior SOTA on denoising.
+    Harness updates make the model agentic, shaping how it searches and acts, while weight updates build
+    the domain intuition that no prompt or scaffold can instil.'
+  url: https://arxiv.org/abs/2605.27276
+  pdf_url: https://arxiv.org/pdf/2605.27276v2
+  version: v2
+fetched: '2026-11-14'

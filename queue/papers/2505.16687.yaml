@@ -1,0 +1,44 @@
+id: paper:arxiv:2505.16687
+status: pending
+score: 4
+track: video_image_coding
+matched:
+- ref: impl:OneDC
+  count: 1
+  weight: 3
+- ref: concept:Hyperprior
+  count: 1
+  weight: 1
+meta:
+  title: One-Step Diffusion-Based Image Compression with Semantic Distillation
+  authors:
+  - Naifu Xue
+  - Zhaoyang Jia
+  - Jiahao Li
+  - Bin Li
+  - Yuan Zhang
+  - Yan Lu
+  published: '2025-05-22'
+  updated: '2025-11-26'
+  categories:
+  - cs.CV
+  - eess.IV
+  abstract: 'While recent diffusion-based generative image codecs have shown impressive performance, their
+    iterative sampling process introduces unpleasing latency. In this work, we revisit the design of a
+    diffusion-based codec and argue that multi-step sampling is not necessary for generative compression.
+    Based on this insight, we propose OneDC, a One-step Diffusion-based generative image Codec -- that
+    integrates a latent compression module with a one-step diffusion generator. Recognizing the critical
+    role of semantic guidance in one-step diffusion, we propose using the hyperprior as a semantic signal,
+    overcoming the limitations of text prompts in representing complex visual content. To further enhance
+    the semantic capability of the hyperprior, we introduce a semantic distillation mechanism that transfers
+    knowledge from a pretrained generative tokenizer to the hyperprior codec. Additionally, we adopt a
+    hybrid pixel- and latent-domain optimization to jointly enhance both reconstruction fidelity and perceptual
+    realism. Extensive experiments demonstrate that OneDC achieves SOTA perceptual quality even with one-step
+    generation, offering over 39% bitrate reduction and 20x faster decoding compared to prior multi-step
+    diffusion-based codecs. Project: https://onedc-codec.github.io/'
+  url: https://arxiv.org/abs/2505.16687
+  pdf_url: https://arxiv.org/pdf/2505.16687v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 40
+citation_year: 2025

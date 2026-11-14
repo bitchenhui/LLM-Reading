@@ -1,0 +1,35 @@
+id: paper:arxiv:2411.15759
+status: skipped
+score: 0
+track: video_image_coding
+matched: []
+meta:
+  title: Advanced Learning-Based Inter Prediction for Future Video Coding
+  authors:
+  - Yanchen Zhao
+  - Wenhong Duan
+  - Chuanmin Jia
+  - Shanshe Wang
+  - Siwei Ma
+  published: '2024-11-24'
+  updated: '2024-11-24'
+  categories:
+  - cs.MM
+  - cs.CV
+  abstract: In the fourth generation Audio Video coding Standard (AVS4), the Inter Prediction Filter (INTERPF)
+    reduces discontinuities between prediction and adjacent reconstructed pixels in inter prediction.
+    The paper proposes a low complexity learning-based inter prediction (LLIP) method to replace the traditional
+    INTERPF. LLIP enhances the filtering process by leveraging a lightweight neural network model, where
+    parameters can be exported for efficient inference. Specifically, we extract pixels and coordinates
+    utilized by the traditional INTERPF to form the training dataset. Subsequently, we export the weights
+    and biases of the trained neural network model and implement the inference process without any third-party
+    dependency, enabling seamless integration into video codec without relying on Libtorch, thus achieving
+    faster inference speed. Ultimately, we replace the traditional handcraft filtering parameters in INTERPF
+    with the learned optimal filtering parameters. This practical solution makes the combination of deep
+    learning encoding tools with traditional video encoding schemes more efficient. Experimental results
+    show that our approach achieves 0.01%, 0.31%, and 0.25% coding gain for the Y, U, and V components
+    under the random access (RA) configuration on average.
+  url: https://arxiv.org/abs/2411.15759
+  pdf_url: https://arxiv.org/pdf/2411.15759v1
+  version: v1
+fetched: '2026-11-14'

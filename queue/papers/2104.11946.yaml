@@ -1,0 +1,36 @@
+id: paper:arxiv:2104.11946
+status: skipped
+score: 0
+track: audio_coding
+matched: []
+meta:
+  title: Aligned Contrastive Predictive Coding
+  authors:
+  - Jan Chorowski
+  - Grzegorz Ciesielski
+  - Jarosław Dzikowski
+  - Adrian Łańcucki
+  - Ricard Marxer
+  - Mateusz Opala
+  - Piotr Pusz
+  - Paweł Rychlikowski
+  - Michał Stypułkowski
+  published: '2021-04-24'
+  updated: '2021-06-22'
+  categories:
+  - cs.LG
+  - cs.SD
+  - eess.AS
+  abstract: We investigate the possibility of forcing a self-supervised model trained using a contrastive
+    predictive loss to extract slowly varying latent representations. Rather than producing individual
+    predictions for each of the future representations, the model emits a sequence of predictions shorter
+    than that of the upcoming representations to which they will be aligned. In this way, the prediction
+    network solves a simpler task of predicting the next symbols, but not their exact timing, while the
+    encoding network is trained to produce piece-wise constant latent codes. We evaluate the model on
+    a speech coding task and demonstrate that the proposed Aligned Contrastive Predictive Coding (ACPC)
+    leads to higher linear phone prediction accuracy and lower ABX error rates, while being slightly faster
+    to train due to the reduced number of prediction heads.
+  url: https://arxiv.org/abs/2104.11946
+  pdf_url: https://arxiv.org/pdf/2104.11946v3
+  version: v3
+fetched: '2026-11-14'

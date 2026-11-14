@@ -1,0 +1,47 @@
+id: paper:arxiv:2605.08904
+status: pending
+score: 2
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: 'OPT-BENCH: Evaluating the Iterative Self-Optimization of LLM Agents in Large-Scale Search Spaces'
+  authors:
+  - Xiaozhe Li
+  - Jixuan Chen
+  - Xinyu Fang
+  - Shengyuan Ding
+  - Haodong Duan
+  - Qingwen Liu
+  - Kai Chen
+  published: '2026-05-09'
+  updated: '2026-05-09'
+  categories:
+  - cs.AI
+  abstract: Large Language Models (LLMs) have demonstrated remarkable capabilities in reasoning and tool
+    use. However, the fundamental cognitive faculties essential for problem solving, including perception,
+    reasoning, and memory, remain the stable core of intelligence. Unlike memorizing specific patterns,
+    humans succeed in novel environments by applying these intrinsic faculties to adapt and optimize.
+    Yet, whether LLMs possess this essential capacity, namely the ability to continuously refine solutions
+    in response to dynamic environmental feedback, remains underexplored. To address this challenge, we
+    introduce OPT-BENCH, a benchmark for evaluating self-improvement capabilities in large-scale search
+    spaces. By combining 20 machine learning tasks with 10 classic NP-hard problems, OPT-BENCH provides
+    a rigorous setting to assess whether agents can adapt through intrinsic self-reflection rather than
+    rote tool application. We further propose OPT-Agent, a framework that emulates human-like cognitive
+    adaptation. It operates through a general perception, memory, and reasoning loop, iteratively refining
+    solutions based on environmental feedback. Through extensive experiments on 19 LLMs from 7 model families,
+    including reasoning models, general models, and open-source models ranging from 3B to 235B parameters,
+    we demonstrate that stronger models are more effective at leveraging feedback signals for self-improvement.
+    However, this upper-bound adaptability remains fundamentally constrained by the models' base capacity,
+    and even the most advanced LLMs still fall short of human expert performance.
+  url: https://arxiv.org/abs/2605.08904
+  pdf_url: https://arxiv.org/pdf/2605.08904v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 2
+citation_year: 2026

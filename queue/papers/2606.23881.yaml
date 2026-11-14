@@ -1,0 +1,47 @@
+id: paper:arxiv:2606.23881
+status: pending
+score: 2
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+- ref: concept:TrainingFree
+  count: 1
+  weight: 1
+meta:
+  title: 'Ground Then Rank: Revisiting Knowledge-Based VQA with Training-Free Entity Identification'
+  authors:
+  - Qian Ma
+  - Qiong Wu
+  - Zhengyi Zhou
+  - Yao Ma
+  published: '2026-06-22'
+  updated: '2026-06-22'
+  categories:
+  - cs.CL
+  - cs.CV
+  - cs.IR
+  abstract: Knowledge-Based Visual Question Answering (KB-VQA) requires grounding visual queries to external
+    knowledge beyond directly observable content in images. While recent multi modal large language models
+    (MLLMs) show strong perceptual abilities, they struggle on KB-VQA tasks requiring groundings from
+    both fine-grained entity and evidence levels. Most existing multi-modal retrieval augmented generation
+    (MM-RAG) methods tightly couple entity discrimination and section-level evidence ranking into a single
+    re-ranking stage, leading to high cost and limited generalization. In this work, we revisit existing
+    MM-RAG solutions from a workflow perspective and argue both entity-level and fact-level groundings
+    are key bottlenecks. We observe that although MLLMs often fail under open-ended entity naming, they
+    can better identify the correct entity when selecting from a small set of candidate names. Based on
+    this insight, we propose a simple and training-free identify-before-answer IBA framework that decouples
+    entity identification from section-level re-ranking. Our approach prompts an MLLM to select high-confidence
+    entities using only candidate names, followed by an off-the-shelf textual re-ranker for evidence selection.
+    Experiments on Encyclopedic-VQA and InfoSeek show that our method consistently outperforms fine-tuned
+    multi-modal re-ranking baselines while reducing training and inference complexity. Additional analyses
+    reveal that the improvements arise not only from better entity identification, but also from selecting
+    more informative evidence once correct entity is fixed. Our implementation is made public to ease
+    reproducibility.
+  url: https://arxiv.org/abs/2606.23881
+  pdf_url: https://arxiv.org/pdf/2606.23881v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 1
+citation_year: 2026

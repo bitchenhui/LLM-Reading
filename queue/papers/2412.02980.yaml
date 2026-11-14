@@ -1,0 +1,61 @@
+id: paper:arxiv:2412.02980
+status: skipped
+score: 1
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+meta:
+  title: Surveying the Effects of Quality, Diversity, and Complexity in Synthetic Data From Large Language
+    Models
+  authors:
+  - Alex Havrilla
+  - Andrew Dai
+  - Laura O'Mahony
+  - Koen Oostermeijer
+  - Vera Zisler
+  - Alon Albalak
+  - Fabrizio Milo
+  - Sharath Chandra Raparthy
+  - Kanishk Gandhi
+  - Baber Abbasi
+  - Duy Phung
+  - Maia Iyer
+  - Dakota Mahan
+  - Chase Blagden
+  - Srishti Gureja
+  - Mohammed Hamdy
+  - Wen-Ding Li
+  - Giovanni Paolini
+  - Pawan Sasanka Ammanamanchi
+  - Elliot Meyerson
+  published: '2024-12-04'
+  updated: '2024-12-09'
+  categories:
+  - cs.LG
+  - cs.AI
+  - cs.CL
+  abstract: Synthetic data generation with Large Language Models is a promising paradigm for augmenting
+    natural data over a nearly infinite range of tasks. Given this variety, direct comparisons among synthetic
+    data generation algorithms are scarce, making it difficult to understand where improvement comes from
+    and what bottlenecks exist. We propose to evaluate algorithms via the makeup of synthetic data generated
+    by each algorithm in terms of data quality, diversity, and complexity. We choose these three characteristics
+    for their significance in open-ended processes and the impact each has on the capabilities of downstream
+    models. We find quality to be essential for in-distribution model generalization, diversity to be
+    essential for out-of-distribution generalization, and complexity to be beneficial for both. Further,
+    we emphasize the existence of Quality-Diversity trade-offs in training data and the downstream effects
+    on model performance. We then examine the effect of various components in the synthetic data pipeline
+    on each data characteristic. This examination allows us to taxonomize and compare synthetic data generation
+    algorithms through the components they utilize and the resulting effects on data QDC composition.
+    This analysis extends into a discussion on the importance of balancing QDC in synthetic data for efficient
+    reinforcement learning and self-improvement algorithms. Analogous to the QD trade-offs in training
+    data, often there exist trade-offs between model output quality and output diversity which impact
+    the composition of synthetic data. We observe that many models are currently evaluated and optimized
+    only for output quality, thereby limiting output diversity and the potential for self-improvement.
+    We argue that balancing these trade-offs is essential to the development of future self-improvement
+    algorithms and highlight a number of works making progress in this direction.
+  url: https://arxiv.org/abs/2412.02980
+  pdf_url: https://arxiv.org/pdf/2412.02980v2
+  version: v2
+fetched: '2026-11-14'

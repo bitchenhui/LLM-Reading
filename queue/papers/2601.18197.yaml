@@ -1,0 +1,51 @@
+id: paper:arxiv:2601.18197
+status: skipped_low_citation
+score: 5
+track: self_improvement
+matched:
+- ref: impl:TIC
+  count: 1
+  weight: 3
+- ref: concept:ICM
+  count: 1
+  weight: 1
+- ref: concept:SelfImprovement
+  count: 1
+  weight: 1
+meta:
+  title: 'GAIA: A Data Flywheel System for Training GUI Test-Time Scaling Critic Models'
+  authors:
+  - Shaokang Wang
+  - Pei Fu
+  - Ruoceng Zhang
+  - Shaojie Zhang
+  - Xiuwen Xi
+  - Jiahui Yang
+  - Bin Qin
+  - Ying Huang
+  - Zhenbo Luo
+  - Jian Luan
+  published: '2026-01-26'
+  updated: '2026-06-26'
+  categories:
+  - cs.AI
+  abstract: 'While Large Vision-Language Models (LVLMs) have significantly advanced GUI agents'' capabilities
+    in parsing textual instructions, interpreting screen content, and executing tasks, a critical challenge
+    persists: the irreversibility of agent operations-where a single erroneous action can trigger catastrophic
+    deviations. To address this, we propose the \textbf{G}UI \textbf{A}ction Cr\textbf{i}tic''s Dat\textbf{a}
+    Flywheel System (GAIA), a training framework that enables the models to have iterative critic capabilities,
+    which are used to improve the Test-Time Scaling (TTS) of basic GUI agents'' performance. Specifically,
+    we train an \textbf{Intuitive Critic Model} (ICM) using positive and negative action examples from
+    a base agent first. This critic evaluates the immediate correctness of the agent''s intended actions,
+    thereby selecting operations with higher success probability. Then, the initial critic guides agent
+    actions to collect refined positive/negative samples, initiating the self-improving cycle. The augmented
+    data then trains a second-round critic with enhanced discernment capability. We conduct experiments
+    on various datasets and demonstrate that the proposed ICM can improve the test-time performance of
+    various closed-source and open-source models, and the performance can be gradually improved as the
+    data is recycled. The code, dataset, and accompanying datasheet will be publicly released at https://github.com/SeerRay-Lab/GAIA.'
+  url: https://arxiv.org/abs/2601.18197
+  pdf_url: https://arxiv.org/pdf/2601.18197v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 2
+citation_year: 2026

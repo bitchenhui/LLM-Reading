@@ -1,0 +1,40 @@
+id: paper:arxiv:2412.20504
+status: skipped
+score: 1
+track: video_image_coding
+matched:
+- ref: concept:TrainingFree
+  count: 1
+  weight: 1
+meta:
+  title: 'ReTaKe: Reducing Temporal and Knowledge Redundancy for Long Video Understanding'
+  authors:
+  - Xiao Wang
+  - Qingyi Si
+  - Jianlong Wu
+  - Shiyu Zhu
+  - Li Cao
+  - Liqiang Nie
+  published: '2024-12-29'
+  updated: '2025-03-24'
+  categories:
+  - cs.CV
+  - cs.CL
+  - cs.MM
+  abstract: Video Large Language Models (VideoLLMs) have made significant strides in video understanding
+    but struggle with long videos due to the limitations of their backbone LLMs. Existing solutions rely
+    on length extrapolation, which is memory-constrained, or visual token compression, which primarily
+    leverages low-level temporal redundancy while overlooking the more effective high-level knowledge
+    redundancy. To address this, we propose $\textbf{ReTaKe}$, a training-free method with two novel modules
+    DPSelect and PivotKV, to jointly reduce both temporal visual redundancy and knowledge redundancy for
+    video compression. To align with the way of human temporal perception, DPSelect identifies keyframes
+    based on inter-frame distance peaks. To leverage LLMs' learned prior knowledge, PivotKV marks the
+    keyframes as pivots and compress non-pivot frames by pruning low-attention tokens in their KV cache.
+    ReTaKe enables VideoLLMs to process 8 times longer frames (up to 2048), outperforming similar-sized
+    models by 3-5% and even rivaling much larger ones on VideoMME, MLVU, LongVideoBench, and LVBench.
+    Moreover, by overlapping compression operations with prefilling, ReTaKe introduces only ~10% prefilling
+    latency overhead while reducing decoding latency by ~20%. Our code is available at https://github.com/SCZwangxiao/video-ReTaKe.
+  url: https://arxiv.org/abs/2412.20504
+  pdf_url: https://arxiv.org/pdf/2412.20504v5
+  version: v5
+fetched: '2026-11-14'

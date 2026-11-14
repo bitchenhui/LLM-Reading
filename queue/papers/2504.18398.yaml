@@ -1,0 +1,43 @@
+id: paper:arxiv:2504.18398
+status: pending
+score: 4
+track: video_image_coding
+matched:
+- ref: codec:VVC
+  count: 2
+  weight: 3
+- ref: concept:QP
+  count: 2
+  weight: 1
+meta:
+  title: Partition Map-Based Fast Block Partitioning for VVC Inter Coding
+  authors:
+  - Xinmin Feng
+  - Zhuoyuan Li
+  - Li Li
+  - Dong Liu
+  - Feng Wu
+  published: '2025-04-25'
+  updated: '2025-07-15'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: Among the new techniques of Versatile Video Coding (VVC), the quadtree with nested multi-type
+    tree (QT+MTT) block structure yields significant coding gains by providing more flexible block partitioning
+    patterns. However, the recursive partition search in the VVC encoder increases the encoder complexity
+    substantially. To address this issue, we propose a partition map-based algorithm to pursue fast block
+    partitioning in inter coding. Based on our previous work on partition map-based methods for intra
+    coding, we analyze the characteristics of VVC inter coding, and thus improve the partition map by
+    incorporating an MTT mask for early termination. Next, we develop a neural network that uses both
+    spatial and temporal features to predict the partition map. It consists of several special designs
+    including stacked top-down and bottom-up processing, quantization parameter modulation layers, and
+    partitioning-adaptive warping. Furthermore, we present a dual-threshold decision scheme to achieve
+    a fine-grained trade-off between complexity reduction and rate-distortion (RD) performance loss. The
+    experimental results demonstrate that the proposed method achieves an average 51.30% encoding time
+    saving with a 2.12% Bjontegaard Delta Bit Rate (BDBR) under the random access configuration.
+  url: https://arxiv.org/abs/2504.18398
+  pdf_url: https://arxiv.org/pdf/2504.18398v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 6
+citation_year: 2025

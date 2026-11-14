@@ -1,0 +1,50 @@
+id: paper:arxiv:2503.23772
+status: pending
+score: 7
+track: video_image_coding
+matched:
+- ref: codec:AVC
+  count: 2
+  weight: 3
+- ref: codec:HEVC
+  count: 2
+  weight: 3
+- ref: concept:ICM
+  count: 1
+  weight: 1
+meta:
+  title: 'TransVFC: A Transformable Video Feature Compression Framework for Machines'
+  authors:
+  - Yuxiao Sun
+  - Yao Zhao
+  - Meiqin Liu
+  - Chao Yao
+  - Huihui Bai
+  - Chunyu Lin
+  - Weisi Lin
+  published: '2025-03-31'
+  updated: '2025-10-17'
+  categories:
+  - eess.IV
+  abstract: Nowadays, more and more video transmissions primarily aim at downstream machine vision tasks
+    rather than humans. While widely deployed Human Visual System (HVS) oriented video coding standards
+    like H.265/HEVC and H.264/AVC are efficient, they are not the optimal approaches for Video Coding
+    for Machines (VCM) scenarios, leading to unnecessary bitrate expenditure. The academic and technical
+    exploration within the VCM domain has led to the development of several strategies, and yet, conspicuous
+    limitations remain in their adaptability for multi-task scenarios. To address the challenge, we propose
+    a Transformable Video Feature Compression (TransVFC) framework. It offers a compress-then-transfer
+    solution and includes a video feature codec and Feature Space Transform (FST) modules. In particular,
+    the temporal redundancy of video features is squeezed by the codec through the scheme-based inter-prediction
+    module. Then, the codec implements perception-guided conditional coding to minimize spatial redundancy
+    and help the reconstructed features align with downstream machine perception.After that, the reconstructed
+    features are transferred to new feature spaces for diverse downstream tasks by FST modules. To accommodate
+    a new downstream task, it only requires training one lightweight FST module, avoiding retraining and
+    redeploying the upstream codec and downstream task networks. Experiments show that TransVFC achieves
+    high rate-task performance for diverse tasks of different granularities. We expect our work can provide
+    valuable insights for video feature compression in multi-task scenarios. The codes are at https://github.com/Ws-Syx/TransVFC.
+  url: https://arxiv.org/abs/2503.23772
+  pdf_url: https://arxiv.org/pdf/2503.23772v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 8
+citation_year: 2025

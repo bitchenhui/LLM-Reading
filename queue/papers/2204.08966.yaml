@@ -1,0 +1,37 @@
+id: paper:arxiv:2204.08966
+status: skipped_low_citation
+score: 4
+track: streaming_delivery
+matched:
+- ref: codec:AVC
+  count: 1
+  weight: 3
+- ref: concept:ABR
+  count: 2
+  weight: 1
+meta:
+  title: Per-clip adaptive Lagrangian multiplier optimisation with low-resolution proxies
+  authors:
+  - Daniel J. Ringis
+  - François Pitié
+  - Anil Kokaram
+  published: '2022-04-19'
+  updated: '2022-04-19'
+  categories:
+  - eess.IV
+  - cs.MM
+  abstract: This work focuses on reducing the computational cost of repeated video encodes by using a
+    lower resolution clip as a proxy. Features extracted from the low resolution clip are used to learn
+    an optimal lagrange multiplier for rate control on the original resolution clip. In addition to reducing
+    the computational cost and encode time by using lower resolution clips, we also investigate the use
+    of older, but faster codecs such as H.264 to create proxies. This work shows that the computational
+    load is reduced by 22 times using 144p proxies. Our tests are based on the YouTube UGC dataset, hence
+    our results are based on a practical instance of the adaptive bitrate encoding problem. Further improvements
+    are possible, by optimising the placement and sparsity of operating points required for the rate distortion
+    curves.
+  url: https://arxiv.org/abs/2204.08966
+  pdf_url: https://arxiv.org/pdf/2204.08966v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 6
+citation_year: 2020

@@ -1,0 +1,44 @@
+id: paper:arxiv:2601.02763
+status: pending
+score: 2
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 3
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: 'ClearAIR: A Human-Visual-Perception-Inspired All-in-One Image Restoration'
+  authors:
+  - Xu Zhang
+  - Huan Zhang
+  - Guoli Wang
+  - Qian Zhang
+  - Lefei Zhang
+  published: '2026-01-06'
+  updated: '2026-03-21'
+  categories:
+  - cs.CV
+  abstract: All-in-One Image Restoration (AiOIR) has advanced significantly, offering promising solutions
+    for complex real-world degradations. However, most existing approaches rely heavily on degradation-specific
+    representations, often resulting in oversmoothing and artifacts. To address this, we propose ClearAIR,
+    a novel AiOIR framework inspired by Human Visual Perception (HVP) and designed with a hierarchical,
+    coarse-to-fine restoration strategy. First, leveraging the global priority of early HVP, we employ
+    a Multimodal Large Language Model (MLLM)-based Image Quality Assessment (IQA) model for overall evaluation.
+    Unlike conventional IQA, our method integrates cross-modal understanding to more accurately characterize
+    complex, composite degradations. Building upon this overall assessment, we then introduce a region
+    awareness and task recognition pipeline. A semantic cross-attention, leveraging semantic guidance
+    unit, first produces coarse semantic prompts. Guided by this regional context, a degradation-aware
+    module implicitly captures region-specific degradation characteristics, enabling more precise local
+    restoration. Finally, to recover fine details, we propose an internal clue reuse mechanism. It operates
+    in a self-supervised manner to mine and leverage the intrinsic information of the image itself, substantially
+    enhancing detail restoration. Experimental results show that ClearAIR achieves superior performance
+    across diverse synthetic and real-world datasets.
+  url: https://arxiv.org/abs/2601.02763
+  pdf_url: https://arxiv.org/pdf/2601.02763v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 24
+citation_year: 2026

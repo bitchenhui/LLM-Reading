@@ -1,0 +1,51 @@
+id: paper:arxiv:2507.17131
+status: pending
+score: 2
+track: self_improvement
+matched:
+- ref: concept:LLM
+  count: 2
+  weight: 1
+- ref: concept:SelfImprovement
+  count: 1
+  weight: 1
+meta:
+  title: Enabling Self-Improving Agents to Learn at Test Time With Human-In-The-Loop Guidance
+  authors:
+  - Yufei He
+  - Ruoyu Li
+  - Alex Chen
+  - Yue Liu
+  - Yulin Chen
+  - Yuan Sui
+  - Cheng Chen
+  - Yi Zhu
+  - Luca Luo
+  - Frank Yang
+  - Bryan Hooi
+  published: '2025-07-23'
+  updated: '2025-10-10'
+  categories:
+  - cs.LG
+  - cs.AI
+  abstract: Large language model (LLM) agents often struggle in environments where rules and required
+    domain knowledge frequently change, such as regulatory compliance and user risk screening. Current
+    approaches, like offline fine-tuning and standard prompting, are insufficient because they cannot
+    effectively adapt to new knowledge during actual operation. To address this limitation, we propose
+    the Adaptive Reflective Interactive Agent (ARIA), an LLM agent framework designed specifically to
+    continuously learn updated domain knowledge at test time. ARIA assesses its own uncertainty through
+    structured self-dialogue, proactively identifying knowledge gaps and requesting targeted explanations
+    or corrections from human experts. It then systematically updates an internal, timestamped knowledge
+    repository with provided human guidance, detecting and resolving conflicting or outdated knowledge
+    through comparisons and clarification queries. We evaluate ARIA on the realistic customer due diligence
+    name screening task on TikTok Pay, alongside publicly available dynamic knowledge tasks. Results demonstrate
+    significant improvements in adaptability and accuracy compared to baselines using standard offline
+    fine-tuning and existing self-improving agents. ARIA is deployed within TikTok Pay serving over 150
+    million monthly active users, confirming its practicality and effectiveness for operational use in
+    rapidly evolving environments.
+  url: https://arxiv.org/abs/2507.17131
+  pdf_url: https://arxiv.org/pdf/2507.17131v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 20
+citation_year: 2025

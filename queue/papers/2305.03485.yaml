@@ -1,0 +1,43 @@
+id: paper:arxiv:2305.03485
+status: pending
+score: 2
+track: processing_enhancement
+matched:
+- ref: concept:MoE
+  count: 1
+  weight: 1
+- ref: concept:SuperResolution
+  count: 1
+  weight: 1
+meta:
+  title: Steered Mixture-of-Experts Autoencoder Design for Real-Time Image Modelling and Denoising
+  authors:
+  - Elvira Fleig
+  - Erik Bochinski
+  - Thomas Sikora
+  published: '2023-05-05'
+  updated: '2023-05-05'
+  categories:
+  - eess.IV
+  - eess.SP
+  abstract: Research in the past years introduced Steered Mixture-of-Experts (SMoE) as a framework to
+    form sparse, edge-aware models for 2D- and higher dimensional pixel data, applicable to compression,
+    denoising, and beyond, and capable to compete with state-of-the-art compression methods. To circumvent
+    the computationally demanding, iterative optimization method used in prior works an autoencoder design
+    is introduced that reduces the run-time drastically while simultaneously improving reconstruction
+    quality for block-based SMoE approaches. Coupling a deep encoder network with a shallow, parameter-free
+    SMoE decoder enforces an efficent and explainable latent representation. Our initial work on the autoencoder
+    design presented a simple model, with limited applicability to compression and beyond. In this paper,
+    we build on the foundation of the first autoencoder design and improve the reconstruction quality
+    by expanding it to models of higher complexity and different block sizes. Furthermore, we improve
+    the noise robustness of the autoencoder for SMoE denoising applications. Our results reveal that the
+    newly adapted autoencoders allow ultra-fast estimation of parameters for complex SMoE models with
+    excellent reconstruction quality, both for noise free input and under severe noise. This enables the
+    SMoE image model framework for a wide range of image processing applications, including compression,
+    noise reduction, and super-resolution.
+  url: https://arxiv.org/abs/2305.03485
+  pdf_url: https://arxiv.org/pdf/2305.03485v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 9
+citation_year: 2023

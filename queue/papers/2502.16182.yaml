@@ -1,0 +1,35 @@
+id: paper:arxiv:2502.16182
+status: skipped
+score: 1
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+meta:
+  title: 'IPO: Your Language Model is Secretly a Preference Classifier'
+  authors:
+  - Shivank Garg
+  - Ayush Singh
+  - Shweta Singh
+  - Paras Chopra
+  published: '2025-02-22'
+  updated: '2025-03-20'
+  categories:
+  - cs.CL
+  abstract: Reinforcement learning from human feedback (RLHF) has emerged as the primary method for aligning
+    large language models (LLMs) with human preferences. While it enables LLMs to achieve human-level
+    alignment, it often incurs significant computational and financial costs due to its reliance on training
+    external reward models or human-labeled preferences. In this work, we propose Implicit Preference
+    Optimization (IPO), an alternative approach that leverages generative LLMs as preference classifiers,
+    thereby reducing the dependence on external human feedback or reward models to obtain preferences.
+    We conduct a comprehensive evaluation on the preference classification ability of LLMs using RewardBench,
+    assessing models across different sizes, architectures, and training levels to validate our hypothesis.
+    Furthermore, we investigate the self-improvement capabilities of LLMs by generating multiple responses
+    for a given instruction and employing the model itself as a preference classifier for Direct Preference
+    Optimization (DPO)-based training. Our findings demonstrate that models trained through IPO achieve
+    performance comparable to those utilizing state-of-the-art reward models for obtaining preferences.
+  url: https://arxiv.org/abs/2502.16182
+  pdf_url: https://arxiv.org/pdf/2502.16182v2
+  version: v2
+fetched: '2026-11-14'

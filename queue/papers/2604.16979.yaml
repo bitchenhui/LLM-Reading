@@ -1,0 +1,37 @@
+id: paper:arxiv:2604.16979
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'DOSE: Data Selection for Multi-Modal LLMs via Off-the-Shelf Models'
+  authors:
+  - Biao Wu
+  - Yiwu Zhong
+  - Meng Fang
+  - Ling Chen
+  published: '2026-04-18'
+  updated: '2026-04-18'
+  categories:
+  - cs.CV
+  - cs.CL
+  abstract: High-quality and diverse multimodal data are essential for improving vision-language models
+    (VLMs), yet existing datasets often contain noisy, redundant, and poorly aligned samples. To address
+    these problems, data filtering is commonly used to enhance the efficiency and performance of multimodal
+    learning, but it introduces extra computational cost because filtering models are usually trained
+    on the same data they are meant to screen. To reduce this cost, we study DOSE, which explores whether
+    off-the-shelf pretrained models that have never seen the target data can be used to select training
+    samples for larger and stronger multimodal models without any task-specific training. Even without
+    fine-tuning, these models can effectively assess text quality and image-text alignment to guide data
+    selection. Based on this, we build a joint quality-alignment distribution and apply adaptive weighted
+    sampling to select informative samples while maintaining long-tail diversity. This approach enhances
+    data diversity, enabling models trained on DOSE-filtered data to match or surpass those trained on
+    the full dataset on standard VQA and math benchmarks. Extensive experiments demonstrate its effectiveness,
+    efficiency, and scalability.
+  url: https://arxiv.org/abs/2604.16979
+  pdf_url: https://arxiv.org/pdf/2604.16979v1
+  version: v1
+fetched: '2026-11-14'

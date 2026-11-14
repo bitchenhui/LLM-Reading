@@ -1,0 +1,49 @@
+id: paper:arxiv:2604.16634
+status: skipped_low_citation
+score: 4
+track: streaming_delivery
+matched:
+- ref: concept:DASH
+  count: 2
+  weight: 1
+- ref: concept:QUIC
+  count: 1
+  weight: 1
+- ref: concept:QoE
+  count: 1
+  weight: 1
+- ref: org:MPEG
+  count: 1
+  weight: 1
+meta:
+  title: End-to-End Performance of Video Streaming With MPEG-DASH Over Satellite 5G IAB Networks
+  authors:
+  - Muhammad Adeel Zahid
+  - Ekram Hossain
+  - Peng Hu
+  published: '2026-04-17'
+  updated: '2026-04-17'
+  categories:
+  - cs.NI
+  abstract: We present an end-to-end performance evaluation of MPEG-DASH video streaming over a Low-Earth
+    Orbit (LEO) satellite-based 5G Integrated Access and Backhaul (IAB) network. Our objective is to investigate
+    how modern transport protocols and congestion control algorithms affect adaptive video delivery in
+    an integrated satellite-terrestrial network (ISTN), where latency, throughput variation, and playback
+    continuity jointly shape the user Quality-of-Experience (QoE). We implement a simulation framework
+    in ns-3 by adapting open-source modules for the 5G radio access network, LEOS backhaul, transport
+    layer protocols, and MPEG-DASH application behavior. Within this framework, TCP and QUIC are evaluated
+    with multiple congestion control algorithms, including CUBIC, NewReno, and BBR. Performance is assessed
+    using application-level and transport-level metrics, including playback duration, interruption duration,
+    stall count, playback bitrate, throughput, latency, and fairness. The results show that no single
+    configuration is uniformly optimal across all metrics. However, clear tradeoffs are observed among
+    throughput, latency, playback continuity, and fairness. In particular, QUIC-BBR provides the most
+    balanced overall behavior from a streaming QoE perspective, combining adequate playback duration with
+    fewer interruptions and substantially lower latency than other alternatives. These findings highlight
+    the importance of jointly considering transport design and congestion control when evaluating adaptive
+    video streaming over ISTNs.
+  url: https://arxiv.org/abs/2604.16634
+  pdf_url: https://arxiv.org/pdf/2604.16634v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 0
+citation_year: 2026

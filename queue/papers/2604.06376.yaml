@@ -1,0 +1,45 @@
+id: paper:arxiv:2604.06376
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'MTA-Agent: An Open Recipe for Multimodal Deep Search Agents'
+  authors:
+  - Xiangyu Peng
+  - Can Qin
+  - An Yan
+  - Xinyi Yang
+  - Zeyuan Chen
+  - Ran Xu
+  - Chien-Sheng Wu
+  published: '2026-04-07'
+  updated: '2026-04-07'
+  categories:
+  - cs.CV
+  abstract: 'Multimodal large language models (MLLMs) have demonstrated strong capabilities in visual
+    understanding, yet they remain limited in complex, multi-step reasoning that requires deep searching
+    and integrating visual evidence with external knowledge. In this work, we address this challenge by
+    constructing high-quality, verified multi-hop vision-language training data for multimodal deep-search
+    agents. We propose a Multi-hop Tool-Augmented Agent for Evidence-based QA Synthesis (MTA-Agent), which
+    automatically selects tools and their parameters to retrieve and validate evidence from both visual
+    and textual sources and generates structured multi-hop question-answer trajectories. Starting from
+    diverse VQA seed datasets, our pipeline produces a large-scale training dataset, MTA-Vision-DeepSearch,
+    containing 21K high-quality multi-hop examples. The data is filtered through a multi-stage verification
+    process to ensure factual consistency and answer uniqueness. Using MTA-Vision-DeepSearch, a 32B open-source
+    multimodal search agent achieves state-of-the-art performance, reaching an average of 54.63\% across
+    six challenging benchmarks, outperforming GPT-5 (51.86\%), Gemini-2.5-Pro (50.98\%), and Gemini-3-Pro
+    (54.46\%) under the same tool settings. We further show that training on our data improves both reasoning
+    depth and tool-use behavior, increasing the average number of steps from 2.27 to 4.28, and leading
+    to more systematic and persistent search strategies. Additionally, we demonstrate that training can
+    be performed without real-time tool calls by replaying cached interactions, significantly reducing
+    training cost. Importantly, we present MTA-Agent as a fully open recipe for multimodal deep search:
+    we release the entire dataset, training trajectories, and implementation details to enable reproducibility
+    and future research on open multimodal search agents.'
+  url: https://arxiv.org/abs/2604.06376
+  pdf_url: https://arxiv.org/pdf/2604.06376v1
+  version: v1
+fetched: '2026-11-14'

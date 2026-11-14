@@ -1,0 +1,42 @@
+id: paper:arxiv:2604.07146
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'Learning to Search: A Decision-Based Agent for Knowledge-Based Visual Question Answering'
+  authors:
+  - Zhuohong Chen
+  - Zhenxian Wu
+  - Yunyao Yu
+  - Hangrui Xu
+  - Zirui Liao
+  - Zhifang Liu
+  - Xiangwen Deng
+  - Pen Jiao
+  - Haoqian Wang
+  published: '2026-04-08'
+  updated: '2026-08-31'
+  categories:
+  - cs.CV
+  abstract: Knowledge-based visual question answering (KB-VQA) requires vision-language models to understand
+    images and use external knowledge, especially for rare entities and long-tail facts. Most existing
+    retrieval-augmented generation (RAG) methods adopt a fixed pipeline that sequentially retrieves information,
+    filters it, and then produces an answer. Such a design makes it difficult to adapt to diverse question
+    types. Moreover, it separates retrieval from reasoning, making it hard for the model to decide when
+    to search, how to refine queries, or when to stop. As a result, the retrieved evidence is often poorly
+    aligned with the question. To address these limitations, we reformulate KB-VQA as a search-agent problem
+    and model the solving process as a multi-step decision-making procedure. At each step, the agent selects
+    one of four actions-Answer, Image Retrieval, Text Retrieval, and Caption-based on its current information
+    state. We further design an automated pipeline to collect multi-step trajectories that record the
+    agent's reasoning process, tool usage, and intermediate decisions. These trajectories are then used
+    as supervision for fine-tuning. Experiments on InfoSeek and E-VQA demonstrate that our method achieves
+    state-of-the-art performance, consistently outperforming prior baselines and confirming the effectiveness
+    of our framework.
+  url: https://arxiv.org/abs/2604.07146
+  pdf_url: https://arxiv.org/pdf/2604.07146v3
+  version: v3
+fetched: '2026-11-14'

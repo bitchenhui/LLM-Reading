@@ -1,0 +1,32 @@
+id: paper:arxiv:2411.19249
+status: skipped
+score: 0
+track: video_image_coding
+matched: []
+meta:
+  title: Upsampling Improvement for Overfitted Neural Coding
+  authors:
+  - Pierrick Philippe
+  - Théo Ladune
+  - Gordon Clare
+  - Félix Henry
+  - Théophile Blard
+  - Thomas Leguay
+  published: '2024-11-28'
+  updated: '2024-11-28'
+  categories:
+  - eess.IV
+  abstract: Neural image compression, based on auto-encoders and overfitted representations, relies on
+    a latent representation of the coded signal. This representation needs to be compact and uses low
+    resolution feature maps. In the decoding process, those latents are upsampled and filtered using stacks
+    of convolution filters and non linear elements to recover the decoded image. Therefore, the upsampling
+    process is crucial in the design of a neural coding scheme and is of particular importance for overfitted
+    codecs where the network parameters, including the upsampling filters, are part of the representation.
+    This paper addresses the improvement of the upsampling process in order to reduce its complexity and
+    limit the number of parameters. A new upsampling structure is presented whose improvements are illustrated
+    within the Cool-Chic overfitted image coding framework. The proposed approach offers a rate reduction
+    of 4.7%. The code is provided.
+  url: https://arxiv.org/abs/2411.19249
+  pdf_url: https://arxiv.org/pdf/2411.19249v1
+  version: v1
+fetched: '2026-11-14'

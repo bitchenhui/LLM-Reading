@@ -1,0 +1,36 @@
+id: paper:arxiv:2303.06519
+status: skipped
+score: 1
+track: immersive_media
+matched:
+- ref: org:MPEG
+  count: 1
+  weight: 1
+meta:
+  title: Lossless Point Cloud Geometry and Attribute Compression Using a Learned Conditional Probability
+    Model
+  authors:
+  - Dat Thanh Nguyen
+  - Andre Kaup
+  published: '2023-03-11'
+  updated: '2024-03-20'
+  categories:
+  - eess.IV
+  - cs.LG
+  abstract: In recent years, we have witnessed the presence of point cloud data in many aspects of our
+    life, from immersive media, autonomous driving to healthcare, although at the cost of a tremendous
+    amount of data. In this paper, we present an efficient lossless point cloud compression method that
+    uses sparse tensor-based deep neural networks to learn point cloud geometry and color probability
+    distributions. Our method represents a point cloud with both occupancy feature and three attribute
+    features at different bit depths in a unified sparse representation. This allows us to efficiently
+    exploit feature-wise and point-wise dependencies within point clouds using a sparse tensor-based neural
+    network and thus build an accurate auto-regressive context model for an arithmetic coder. To the best
+    of our knowledge, this is the first learning-based lossless point cloud geometry and attribute compression
+    approach. Compared with the-state-of-the-art lossless point cloud compression method from Moving Picture
+    Experts Group (MPEG), our method achieves 22.6% reduction in total bitrate on a diverse set of test
+    point clouds while having 49.0% and 18.3% rate reduction on geometry and color attribute component,
+    respectively.
+  url: https://arxiv.org/abs/2303.06519
+  pdf_url: https://arxiv.org/pdf/2303.06519v2
+  version: v2
+fetched: '2026-11-14'

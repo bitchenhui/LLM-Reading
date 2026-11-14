@@ -1,0 +1,36 @@
+id: paper:arxiv:2605.21882
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'Thermo-VL: Extending Vision-Language Models to Thermal Infrared Perception'
+  authors:
+  - Rusiru Thushara
+  - Yasiru Ranasinghe
+  - Jay Paranjape
+  - Vishal M. Patel
+  published: '2026-05-21'
+  updated: '2026-05-21'
+  categories:
+  - cs.CV
+  abstract: 'Vision-language models (VLMs) often fail under low illumination because their visual grounding
+    is learned predominantly from RGB imagery, whereas thermal infrared preserves complementary scene
+    structure when visible cues degrade. We present Thermo-VL, a wavelength-aware VLM that augments a
+    frozen Molmo-7B backbone with a trainable thermal encoder and a text-guided dual-attention fusion
+    module. Given aligned RGB tokens, thermal tokens, and prompt embeddings, the fusion module conditions
+    thermal features on both language and RGB context, then injects a gated residual into the frozen RGB
+    stream so thermal evidence can be incorporated without disrupting Molmo''s pretrained RGB-language
+    interface. We train the model with the standard language-modeling objective together with auxiliary
+    alignment and regularization losses that improve cross-modal grounding and reduce over-reliance on
+    RGB. We also introduce a pixel-aligned RGB-thermal instruction-tuning dataset and Thermo-VL-Bench,
+    a manually screened RGB-thermal VQA benchmark for low-light and cross-spectrum reasoning. Experiments
+    show strong gains on challenging thermal-only and RGB+thermal reasoning tasks, highlighting the value
+    of prompt-conditioned multispectral fusion. Our dataset and code are publicly available at: https://thusharakart.github.io/Thermo-VL'
+  url: https://arxiv.org/abs/2605.21882
+  pdf_url: https://arxiv.org/pdf/2605.21882v1
+  version: v1
+fetched: '2026-11-14'

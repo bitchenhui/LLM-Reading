@@ -1,0 +1,39 @@
+id: paper:arxiv:2412.01053
+status: skipped
+score: 1
+track: audio_coding
+matched:
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: 'FreeCodec: A disentangled neural speech codec with fewer tokens'
+  authors:
+  - Youqiang Zheng
+  - Weiping Tu
+  - Yueteng Kang
+  - Jie Chen
+  - Yike Zhang
+  - Li Xiao
+  - Yuhong Yang
+  - Long Ma
+  published: '2024-12-02'
+  updated: '2025-06-28'
+  categories:
+  - cs.SD
+  - eess.AS
+  abstract: 'Neural speech codecs have gained great attention for their outstanding reconstruction with
+    discrete token representations. It is a crucial component in generative tasks such as speech coding
+    and large language models (LLM). However, most works based on residual vector quantization perform
+    worse with fewer tokens due to low coding efficiency for modeling complex coupled information. In
+    this paper, we propose a neural speech codec named FreeCodec which employs a more effective encoding
+    framework by decomposing intrinsic properties of speech into different components: 1) a global vector
+    is extracted as the timbre information, 2) a prosody encoder with a long stride level is used to model
+    the prosody information, 3) the content information is from a content encoder. Using different training
+    strategies, FreeCodec achieves state-of-the-art performance in reconstruction and disentanglement
+    scenarios. Results from subjective and objective experiments demonstrate that our framework outperforms
+    existing methods.'
+  url: https://arxiv.org/abs/2412.01053
+  pdf_url: https://arxiv.org/pdf/2412.01053v3
+  version: v3
+fetched: '2026-11-14'

@@ -1,0 +1,41 @@
+id: paper:arxiv:2206.07893
+status: skipped
+score: 1
+track: processing_enhancement
+matched:
+- ref: concept:QP
+  count: 1
+  weight: 1
+meta:
+  title: 'PeQuENet: Perceptual Quality Enhancement of Compressed Video with Adaptation- and Attention-based
+    Network'
+  authors:
+  - Saiping Zhang
+  - Luis Herranz
+  - Marta Mrak
+  - Marc Gorriz Blanch
+  - Shuai Wan
+  - Fuzheng Yang
+  published: '2022-06-16'
+  updated: '2022-06-16'
+  categories:
+  - cs.CV
+  - cs.MM
+  - eess.IV
+  abstract: In this paper we propose a generative adversarial network (GAN) framework to enhance the perceptual
+    quality of compressed videos. Our framework includes attention and adaptation to different quantization
+    parameters (QPs) in a single model. The attention module exploits global receptive fields that can
+    capture and align long-range correlations between consecutive frames, which can be beneficial for
+    enhancing perceptual quality of videos. The frame to be enhanced is fed into the deep network together
+    with its neighboring frames, and in the first stage features at different depths are extracted. Then
+    extracted features are fed into attention blocks to explore global temporal correlations, followed
+    by a series of upsampling and convolution layers. Finally, the resulting features are processed by
+    the QP-conditional adaptation module which leverages the corresponding QP information. In this way,
+    a single model can be used to enhance adaptively to various QPs without requiring multiple models
+    specific for every QP value, while having similar performance. Experimental results demonstrate the
+    superior performance of the proposed PeQuENet compared with the state-of-the-art compressed video
+    quality enhancement algorithms.
+  url: https://arxiv.org/abs/2206.07893
+  pdf_url: https://arxiv.org/pdf/2206.07893v1
+  version: v1
+fetched: '2026-11-14'

@@ -1,0 +1,40 @@
+id: paper:arxiv:2603.03890
+status: skipped
+score: 0
+track: immersive_media
+matched: []
+meta:
+  title: Point Cloud Feature Coding for Object Detection over an Error-Prone Cloud-Edge Collaborative
+    System
+  authors:
+  - Chongzhen Tian
+  - Hui Yuan
+  - Pan Zhao
+  - Chang Sun
+  - Raouf Hamzaoui
+  - Sam Kwong
+  published: '2026-03-04'
+  updated: '2026-03-04'
+  categories:
+  - eess.IV
+  abstract: 'Cloud-edge collaboration enhances machine perception by combining the strengths of edge and
+    cloud computing. Edge devices capture raw data (e.g., 3D point clouds) and extract salient features,
+    which are sent to the cloud for deeper analysis and data fusion. However, efficiently and reliably
+    transmitting features between cloud and edge devices remains a challenging problem. We focus on point
+    cloud-based object detection and propose a task-driven point cloud compression and reliable transmission
+    framework based on source and channel coding. To meet the low-latency and low-power requirements of
+    edge devices, we design a lightweight yet effective feature compaction module that compresses the
+    deepest feature among multi-scale representations by removing task-irrelevant regions and applying
+    channel-wise dimensionality reduction to task-relevant areas. Then, a signal-to-noise ratio (SNR)-adaptive
+    channel encoder dynamically encodes the attribute information of the compacted features, while a Low-Density
+    Parity-Check (LDPC) encoder ensures reliable transmission of geometric information. At the cloud side,
+    an SNR-adaptive channel decoder guides the decoding of attribute information, and the LDPC decoder
+    corrects geometry errors. Finally, a feature decompaction module restores the channel-wise dimensionality,
+    and a diffusion-based feature upsampling module reconstructs shallow-layer features, enabling multi-scale
+    feature reconstruction. On the KITTI dataset, our method achieved a 172-fold reduction in feature
+    size with 3D average precision scores of 93.17%, 86.96%, and 77.25% for easy, moderate, and hard objects,
+    respectively, over a 0 dB SNR wireless channel. Our source code will be released on GitHub at: https://github.com/yuanhui0325/T-PCFC.'
+  url: https://arxiv.org/abs/2603.03890
+  pdf_url: https://arxiv.org/pdf/2603.03890v1
+  version: v1
+fetched: '2026-11-14'

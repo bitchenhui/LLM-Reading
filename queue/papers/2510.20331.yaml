@@ -1,0 +1,34 @@
+id: paper:arxiv:2510.20331
+status: skipped
+score: 0
+track: immersive_media
+matched: []
+meta:
+  title: 'AnyPcc: Compressing Any Point Cloud with a Single Universal Model'
+  authors:
+  - Kangli Wang
+  - Qianxi Yi
+  - Yuqi Ye
+  - Shihao Li
+  - Wei Gao
+  published: '2025-10-23'
+  updated: '2026-03-08'
+  categories:
+  - cs.CV
+  abstract: 'Generalization remains a critical challenge in deep learning-based point cloud geometry compression.
+    While existing methods perform well on standard benchmarks, their performance collapses in real-world
+    scenarios due to two fundamental limitations: the lack of context models that are robust across diverse
+    data densities, and the inability to efficiently adapt to out-of-distribution (OOD) data. To overcome
+    both challenges, we introduce AnyPcc, a universal point cloud compression framework. AnyPcc first
+    employs a Universal Context Model that leverages coarse-grained spatial priors with fine-grained channel
+    priors to ensure robust context modeling across the entire density spectrum. Second, our novel Instance-Adaptive
+    Fine-Tuning (IAFT) strategy tackles OOD data by synergizing explicit and implicit compression paradigms.
+    For each instance, it fine-tunes a small subset of network weights and transmits them within the bitstream.
+    The minimal bitrate overhead from these weights is significantly outweighed by the resulting gains
+    in geometry compression. Extensive experiments on a benchmark of 15 diverse datasets confirm that
+    AnyPcc sets a new state-of-the-art in point cloud compression while maintaining low complexity. Our
+    code and datasets have been released to encourage reproducible research.'
+  url: https://arxiv.org/abs/2510.20331
+  pdf_url: https://arxiv.org/pdf/2510.20331v2
+  version: v2
+fetched: '2026-11-14'

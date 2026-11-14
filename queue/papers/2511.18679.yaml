@@ -1,0 +1,45 @@
+id: paper:arxiv:2511.18679
+status: skipped
+score: 1
+track: processing_enhancement
+matched:
+- ref: concept:SuperResolution
+  count: 1
+  weight: 1
+meta:
+  title: Neural Geometry Image-Based Representations with Optimal Transport (OT)
+  authors:
+  - Xiang Gao
+  - Yuanpeng Liu
+  - Xinmu Wang
+  - Jiazhi Li
+  - Minghao Guo
+  - Yu Guo
+  - Xiyun Song
+  - Heather Yu
+  - Zhiqiang Lao
+  - Xianfeng David Gu
+  published: '2025-11-24'
+  updated: '2025-11-24'
+  categories:
+  - cs.CV
+  abstract: Neural representations for 3D meshes are emerging as an effective solution for compact storage
+    and efficient processing. Existing methods often rely on neural overfitting, where a coarse mesh is
+    stored and progressively refined through multiple decoder networks. While this can restore high-quality
+    surfaces, it is computationally expensive due to successive decoding passes and the irregular structure
+    of mesh data. In contrast, images have a regular structure that enables powerful super-resolution
+    and restoration frameworks, but applying these advantages to meshes is difficult because their irregular
+    connectivity demands complex encoder-decoder architectures. Our key insight is that a geometry image-based
+    representation transforms irregular meshes into a regular image grid, making efficient image-based
+    neural processing directly applicable. Building on this idea, we introduce our neural geometry image-based
+    representation, which is decoder-free, storage-efficient, and naturally suited for neural processing.
+    It stores a low-resolution geometry-image mipmap of the surface, from which high-quality meshes are
+    restored in a single forward pass. To construct geometry images, we leverage Optimal Transport (OT),
+    which resolves oversampling in flat regions and undersampling in feature-rich regions, and enables
+    continuous levels of detail (LoD) through geometry-image mipmapping. Experimental results demonstrate
+    state-of-the-art storage efficiency and restoration accuracy, measured by compression ratio (CR),
+    Chamfer distance (CD), and Hausdorff distance (HD).
+  url: https://arxiv.org/abs/2511.18679
+  pdf_url: https://arxiv.org/pdf/2511.18679v1
+  version: v1
+fetched: '2026-11-14'

@@ -1,0 +1,44 @@
+id: paper:arxiv:2411.15824
+status: skipped_low_citation
+score: 3
+track: video_image_coding
+matched:
+- ref: codec:VVC
+  count: 1
+  weight: 3
+meta:
+  title: Variable-size Symmetry-based Graph Fourier Transforms for image compression
+  authors:
+  - Alessandro Gnutti
+  - Fabrizio Guerrini
+  - Riccardo Leonardi
+  - Antonio Ortega
+  published: '2024-11-24'
+  updated: '2024-11-24'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: Modern compression systems use linear transformations in their encoding and decoding processes,
+    with transforms providing compact signal representations. While multiple data-dependent transforms
+    for image/video coding can adapt to diverse statistical characteristics, assembling large datasets
+    to learn each transform is challenging. Also, the resulting transforms typically lack fast implementation,
+    leading to significant computational costs. Thus, despite many papers proposing new transform families,
+    the most recent compression standards predominantly use traditional separable sinusoidal transforms.
+    This paper proposes integrating a new family of Symmetry-based Graph Fourier Transforms (SBGFTs) of
+    variable sizes into a coding framework, focusing on the extension from our previously introduced 8x8
+    SBGFTs to the general case of NxN grids. SBGFTs are non-separable transforms that achieve sparse signal
+    representation while maintaining low computational complexity thanks to their symmetry properties.
+    Their design is based on our proposed algorithm, which generates symmetric graphs on the grid by adding
+    specific symmetrical connections between nodes and does not require any data-dependent adaptation.
+    Furthermore, for video intra-frame coding, we exploit the correlations between optimal graphs and
+    prediction modes to reduce the cardinality of the transform sets, thus proposing a low-complexity
+    framework. Experiments show that SBGFTs outperform the primary transforms integrated in the explicit
+    Multiple Transform Selection (MTS) used in the latest VVC intra-coding, providing a bit rate saving
+    percentage of 6.23%, with only a marginal increase in average complexity. A MATLAB implementation
+    of the proposed algorithm is available online at [1].
+  url: https://arxiv.org/abs/2411.15824
+  pdf_url: https://arxiv.org/pdf/2411.15824v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 3
+citation_year: 2024

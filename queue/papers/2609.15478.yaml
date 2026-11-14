@@ -1,0 +1,52 @@
+id: paper:arxiv:2609.15478
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'BVB: Benchmarking Agentic Video Understanding via Programmatic Reconstruction in Blender'
+  authors:
+  - Yolo Y. Tang
+  - Daiki Shimada
+  - Jiayue Meng
+  - Jing Bi
+  - Pinxin Liu
+  - Yicheng Wang
+  - Yunzhong Xiao
+  - Zhangyun Tan
+  - Zeliang Zhang
+  - Chao Huang
+  - Susan Liang
+  - Qianxiang Shen
+  - Luchuan Song
+  - Ali Vosoughi
+  - Mingqian Feng
+  - Melika Filvantorkaman
+  - Chenliang Xu
+  published: '2026-09-14'
+  updated: '2026-09-26'
+  categories:
+  - cs.CV
+  abstract: 'Multimodal agents can create complex videos in software such as Blender by writing code instead
+    of using diffusion models. Yet video understanding benchmarks still evaluate models mainly through
+    question answering. If an agent truly understands a video, it can reconstruct it programmatically.
+    We introduce BVB, Blender-VideoBench, a benchmark that tests this ability by asking agents to reconstruct
+    real-world videos as animated Blender scenes. To ensure fair comparison, each agent programs the reconstruction
+    through a lightweight harness, Mini-BVB, in an identical sandbox under a shared cost limit. The benchmark
+    renders each reconstruction from its animated camera and evaluates it on two axes: (1) Dual VQA measures
+    how many spatiotemporal facts the reconstruction preserves. (2) Latent Similarity measures how closely
+    the reconstruction matches the source video perceptually. Our overall score, a square-root mean, favors
+    balanced performance. We evaluate 51 configurations from 10 model families and analyze semantic retention,
+    perceptual similarity, reasoning effort, and cost. The best model reaches 88.6 Latent Similarity but
+    retains only 53.7% of the spatiotemporal facts from the source video. Additional reasoning improves
+    perceptual similarity but does not close this gap. In a blind study with 15 raters and five configurations,
+    Latent Similarity correlates strongly with human preference. These results show that programmatic
+    reconstruction is a viable test of agentic video understanding, and that semantic retention remains
+    the main challenge.'
+  url: https://arxiv.org/abs/2609.15478
+  pdf_url: https://arxiv.org/pdf/2609.15478v3
+  version: v3
+fetched: '2026-11-14'

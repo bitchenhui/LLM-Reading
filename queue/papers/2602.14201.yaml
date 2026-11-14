@@ -1,0 +1,44 @@
+id: paper:arxiv:2602.14201
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'GeoEyes: On-Demand Visual Focusing for Evidence-Grounded Understanding of Ultra-High-Resolution
+    Remote Sensing Imagery'
+  authors:
+  - Fengxiang Wang
+  - Mingshuo Chen
+  - Yueying Li
+  - Yajie Yang
+  - Yifan Zhang
+  - Long Lan
+  - Xue Yang
+  - Hongda Sun
+  - Yulin Wang
+  - Di Wang
+  - Jun Song
+  - Jing Zhang
+  - Bo Du
+  published: '2026-02-15'
+  updated: '2026-02-20'
+  categories:
+  - cs.CV
+  - cs.AI
+  abstract: 'The "thinking-with-images" paradigm enables multimodal large language models (MLLMs) to actively
+    explore visual scenes via zoom-in tools. This is essential for ultra-high-resolution (UHR) remote
+    sensing VQA, where task-relevant cues are sparse and tiny. However, we observe a consistent failure
+    mode in existing zoom-enabled MLLMs: Tool Usage Homogenization, where tool calls collapse into task-agnostic
+    patterns, limiting effective evidence acquisition. To address this, we propose GeoEyes, a staged training
+    framework consisting of (1) a cold-start SFT dataset, UHR Chain-of-Zoom (UHR-CoZ), which covers diverse
+    zooming regimes, and (2) an agentic reinforcement learning method, AdaZoom-GRPO, that explicitly rewards
+    evidence gain and answer improvement during zoom interactions. The resulting model learns on-demand
+    zooming with proper stopping behavior and achieves substantial improvements on UHR remote sensing
+    benchmarks, with 54.23% accuracy on XLRS-Bench.'
+  url: https://arxiv.org/abs/2602.14201
+  pdf_url: https://arxiv.org/pdf/2602.14201v2
+  version: v2
+fetched: '2026-11-14'

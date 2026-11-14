@@ -1,0 +1,52 @@
+id: paper:arxiv:2604.02190
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'UniDriveVLA: Unifying Understanding, Perception, and Action Planning for Autonomous Driving'
+  authors:
+  - Yongkang Li
+  - Lijun Zhou
+  - Sixu Yan
+  - Bencheng Liao
+  - Tianyi Yan
+  - Kaixin Xiong
+  - Long Chen
+  - Hongwei Xie
+  - Bing Wang
+  - Guang Chen
+  - Hangjun Ye
+  - Wenyu Liu
+  - Haiyang Sun
+  - Xinggang Wang
+  published: '2026-04-02'
+  updated: '2026-04-02'
+  categories:
+  - cs.CV
+  - cs.RO
+  abstract: 'Vision-Language-Action (VLA) models have recently emerged in autonomous driving, with the
+    promise of leveraging rich world knowledge to improve the cognitive capabilities of driving systems.
+    However, adapting such models for driving tasks currently faces a critical dilemma between spatial
+    perception and semantic reasoning. Consequently, existing VLA systems are forced into suboptimal compromises:
+    directly adopting 2D Vision-Language Models yields limited spatial perception, whereas enhancing them
+    with 3D spatial representations often impairs the native reasoning capacity of VLMs. We argue that
+    this dilemma largely stems from the coupled optimization of spatial perception and semantic reasoning
+    within shared model parameters. To overcome this, we propose UniDriveVLA, a Unified Driving Vision-Language-Action
+    model based on Mixture-of-Transformers that addresses the perception-reasoning conflict via expert
+    decoupling. Specifically, it comprises three experts for driving understanding, scene perception,
+    and action planning, which are coordinated through masked joint attention. In addition, we combine
+    a sparse perception paradigm with a three-stage progressive training strategy to improve spatial perception
+    while maintaining semantic reasoning capability. Extensive experiments show that UniDriveVLA achieves
+    state-of-the-art performance in open-loop evaluation on nuScenes and closed-loop evaluation on Bench2Drive.
+    Moreover, it demonstrates strong performance across a broad range of perception, prediction, and understanding
+    tasks, including 3D detection, online mapping, motion forecasting, and driving-oriented VQA, highlighting
+    its broad applicability as a unified model for autonomous driving. Code and model have been released
+    at https://github.com/xiaomi-research/unidrivevla'
+  url: https://arxiv.org/abs/2604.02190
+  pdf_url: https://arxiv.org/pdf/2604.02190v1
+  version: v1
+fetched: '2026-11-14'

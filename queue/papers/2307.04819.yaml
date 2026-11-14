@@ -1,0 +1,41 @@
+id: paper:arxiv:2307.04819
+status: pending
+score: 2
+track: streaming_delivery
+matched:
+- ref: concept:ABR
+  count: 2
+  weight: 1
+- ref: concept:QoE
+  count: 1
+  weight: 1
+meta:
+  title: A Kalman Filter based Low Complexity Throughput Prediction Algorithm for 5G Cellular Networks
+  authors:
+  - Mayukh Biswas
+  - Ayan Chakraborty
+  - Basabdatta Palit
+  published: '2023-07-10'
+  updated: '2023-11-26'
+  categories:
+  - cs.NI
+  abstract: Throughput Prediction is one of the primary preconditions for the uninterrupted operation
+    of several network-aware mobile applications, namely video streaming. Recent works have advocated
+    using Machine Learning (ML) and Deep Learning (DL) for cellular network throughput prediction. In
+    contrast, this work has proposed a low computationally complex simple solution which models the future
+    throughput as a multiple linear regression of several present network parameters and present throughput.
+    It then feeds the variance of prediction error and measurement error, which is inherent in any measurement
+    setup but unaccounted for in existing works, to a Kalman filter-based prediction-correction approach
+    to obtain the optimal estimates of the future throughput. Extensive experiments across seven publicly
+    available 5G throughput datasets for different prediction window lengths have shown that the proposed
+    method outperforms the baseline ML and DL algorithms by delivering more accurate results within a
+    shorter timeframe for inferencing and retraining. Furthermore, in comparison to its ML and DL counterparts,
+    the proposed throughput prediction method is also found to deliver higher QoE to both streaming and
+    live video users when used in conjunction with popular Model Predictive Control (MPC) based adaptive
+    bitrate streaming algorithms.
+  url: https://arxiv.org/abs/2307.04819
+  pdf_url: https://arxiv.org/pdf/2307.04819v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 14
+citation_year: 2023

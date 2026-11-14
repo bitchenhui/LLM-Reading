@@ -1,0 +1,36 @@
+id: paper:arxiv:2412.00446
+status: skipped
+score: 0
+track: video_image_coding
+matched: []
+meta:
+  title: Hybrid Local-Global Context Learning for Neural Video Compression
+  authors:
+  - Yongqi Zhai
+  - Jiayu Yang
+  - Wei Jiang
+  - Chunhui Yang
+  - Luyang Tang
+  - Ronggang Wang
+  published: '2024-11-30'
+  updated: '2024-11-30'
+  categories:
+  - cs.MM
+  - cs.CV
+  abstract: In neural video codecs, current state-of-the-art methods typically adopt multi-scale motion
+    compensation to handle diverse motions. These methods estimate and compress either optical flow or
+    deformable offsets to reduce inter-frame redundancy. However, flow-based methods often suffer from
+    inaccurate motion estimation in complicated scenes. Deformable convolution-based methods are more
+    robust but have a higher bit cost for motion coding. In this paper, we propose a hybrid context generation
+    module, which combines the advantages of the above methods in an optimal way and achieves accurate
+    compensation at a low bit cost. Specifically, considering the characteristics of features at different
+    scales, we adopt flow-guided deformable compensation at largest-scale to produce accurate alignment
+    in detailed regions. For smaller-scale features, we perform flow-based warping to save the bit cost
+    for motion coding. Furthermore, we design a local-global context enhancement module to fully explore
+    the local-global information of previous reconstructed signals. Experimental results demonstrate that
+    our proposed Hybrid Local-Global Context learning (HLGC) method can significantly enhance the state-of-the-art
+    methods on standard test datasets.
+  url: https://arxiv.org/abs/2412.00446
+  pdf_url: https://arxiv.org/pdf/2412.00446v1
+  version: v1
+fetched: '2026-11-14'

@@ -1,0 +1,48 @@
+id: paper:arxiv:2510.12380
+status: skipped_low_citation
+score: 7
+track: video_image_coding
+matched:
+- ref: codec:AV1
+  count: 1
+  weight: 3
+- ref: impl:SVT-AV1
+  count: 1
+  weight: 3
+- ref: org:Intel
+  count: 1
+  weight: 1
+meta:
+  title: An Empirical Study of Reducing AV1 Decoder Complexity and Energy Consumption via Encoder Parameter
+    Tuning
+  authors:
+  - Vibhoothi Vibhoothi
+  - Julien Zouein
+  - Shanker Shreejith
+  - Jean-Baptiste Kempf
+  - Anil Kokaram
+  published: '2025-10-14'
+  updated: '2025-10-14'
+  categories:
+  - eess.IV
+  - cs.MM
+  - cs.SE
+  abstract: The widespread adoption of advanced video codecs such as AV1 is often hindered by their high
+    decoding complexity, posing a challenge for battery-constrained devices. While encoders can be configured
+    to produce bitstreams that are decoder-friendly, estimating the decoding complexity and energy overhead
+    for a given video is non-trivial. In this study, we systematically analyse the impact of disabling
+    various coding tools and adjusting coding parameters in two AV1 encoders, libaom-av1 and SVT-AV1.
+    Using system-level energy measurement tools like RAPL (Running Average Power Limit), Intel SoC Watch
+    (integrated with VTune profiler), we quantify the resulting trade-offs between decoding complexity,
+    energy consumption, and compression efficiency for decoding a bitstream. Our results demonstrate that
+    specific encoder configurations can substantially reduce decoding complexity with minimal perceptual
+    quality degradation. For libaom-av1, disabling CDEF, an in-loop filter gives us a mean reduction in
+    decoding cycles by 10%. For SVT-AV1, using the in-built, fast-decode=2 preset achieves a more substantial
+    24% reduction in decoding cycles. These findings provide strategies for content providers to lower
+    the energy footprint of AV1 video streaming.
+  url: https://arxiv.org/abs/2510.12380
+  pdf_url: https://arxiv.org/pdf/2510.12380v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 0
+citation_year: 2025

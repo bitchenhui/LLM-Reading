@@ -1,0 +1,41 @@
+id: paper:arxiv:2603.16934
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: 'AgriChat: A Multimodal Large Language Model for Agriculture Image Understanding'
+  authors:
+  - Abderrahmene Boudiaf
+  - Irfan Hussain
+  - Sajid Javed
+  published: '2026-03-14'
+  updated: '2026-03-14'
+  categories:
+  - cs.CV
+  - cs.AI
+  abstract: 'The deployment of Multimodal Large Language Models (MLLMs) in agriculture is currently stalled
+    by a critical trade-off: the existing literature lacks the large-scale agricultural datasets required
+    for robust model development and evaluation, while current state-of-the-art models lack the verified
+    domain expertise necessary to reason across diverse taxonomies. To address these challenges, we propose
+    the Vision-to-Verified-Knowledge (V2VK) pipeline, a novel generative AI-driven annotation framework
+    that integrates visual captioning with web-augmented scientific retrieval to autonomously generate
+    the AgriMM benchmark, effectively eliminating biological hallucinations by grounding training data
+    in verified phytopathological literature. The AgriMM benchmark contains over 3,000 agricultural classes
+    and more than 607k VQAs spanning multiple tasks, including fine-grained plant species identification,
+    plant disease symptom recognition, crop counting, and ripeness assessment. Leveraging this verifiable
+    data, we present AgriChat, a specialized MLLM that presents broad knowledge across thousands of agricultural
+    classes and provides detailed agricultural assessments with extensive explanations. Extensive evaluation
+    across diverse tasks, datasets, and evaluation conditions reveals both the capabilities and limitations
+    of current agricultural MLLMs, while demonstrating AgriChat''s superior performance over other open-source
+    models, including internal and external benchmarks. The results validate that preserving visual detail
+    combined with web-verified knowledge constitutes a reliable pathway toward robust and trustworthy
+    agricultural AI. The code and dataset are publicly available at https://github.com/boudiafA/AgriChat
+    .'
+  url: https://arxiv.org/abs/2603.16934
+  pdf_url: https://arxiv.org/pdf/2603.16934v1
+  version: v1
+fetched: '2026-11-14'

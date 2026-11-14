@@ -1,0 +1,42 @@
+id: paper:arxiv:2608.28496
+status: pending
+score: 2
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: 'Ladders in Chaos: When, How, (and Perhaps Why) Does Test-Time Scaling Improve LLM Machine Translation'
+  authors:
+  - Di Wu
+  - Sergey Troshin
+  - Christof Monz
+  - Antske Fokkens
+  - Vlad Niculae
+  published: '2026-08-28'
+  updated: '2026-08-31'
+  categories:
+  - cs.CL
+  abstract: 'Two forms of test-time scaling for Large Language Models (LLMs) have emerged as effective
+    and widely adopted paradigms: sequential, in which later answer attempts depend on earlier ones, and
+    parallel, such as i.i.d. sampling with reranking. In this study, we investigate their properties in
+    translation. First, our study shows that sequential sampling has a higher performance ceiling, providing
+    a more diverse and effective pool of samples, particularly under smaller sampling budgets. Second,
+    we interrogate the nature of test-time scaling through a multidimensional manual analysis. Human analysis
+    of the Best-of-N translations demonstrates that sequential sampling substantially improves translation
+    fluency and naturalness, but can degrade accuracy when inference budgets are large. Finally, we suggest
+    an explanation of the mechanism through which sequential scaling improves machine translation. Our
+    controlled analysis partially attributes the success of sequential self-improvement to the model''s
+    access to a larger target-side context. Ablation experiments on sequential sampling demonstrate its
+    robustness across different sampling temperatures, while also revealing sensitivity to context construction,
+    suggesting directions for future improvement.'
+  url: https://arxiv.org/abs/2608.28496
+  pdf_url: https://arxiv.org/pdf/2608.28496v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 2
+citation_year: 2026

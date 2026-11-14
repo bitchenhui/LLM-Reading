@@ -1,0 +1,43 @@
+id: paper:arxiv:2406.04632
+status: skipped
+score: 1
+track: streaming_delivery
+matched:
+- ref: concept:ABR
+  count: 3
+  weight: 1
+meta:
+  title: 'StreamOptix: A Cross-layer Adaptive Video Delivery Scheme'
+  authors:
+  - Mufan Liu
+  - Le Yang
+  - Yifan Wang
+  - Yiling Xu
+  - Ye-Kui Wang
+  - Yunfeng Guan
+  published: '2024-06-07'
+  updated: '2024-06-07'
+  categories:
+  - cs.MM
+  abstract: This paper presents a cross-layer video delivery scheme, StreamOptix, and proposes a joint
+    optimization algorithm for video delivery that leverages the characteristics of the physical (PHY),
+    medium access control (MAC), and application (APP) layers. Most existing methods for optimizing video
+    transmission over different layers were developed individually. Realizing a cross-layer design has
+    always been a significant challenge, mainly due to the complex interactions and mismatches in timescales
+    between layers, as well as the presence of distinct objectives in different layers. To address these
+    complications, we take a divide-and-conquer approach and break down the formulated cross-layer optimization
+    problem for video delivery into three sub-problems. We then propose a three-stage closedloop optimization
+    framework, which consists of 1) an adaptive bitrate (ABR) strategy based on the link capacity information
+    from PHY, 2) a video-aware resource allocation scheme accounting for the APP bitrate constraint, and
+    3) a link adaptation technique utilizing the soft acknowledgment feedback (soft-ACK). The proposed
+    framework also supports the collections of the distorted bitstreams transmitted across the link. This
+    allows a more reasonable assessment of video quality compared to many existing ABR methods that simply
+    neglect the distortions occurring in the PHY layer. Experiments conducted under various network settings
+    demonstrate the effectiveness and superiority of the new cross-layer optimization strategy. A byproduct
+    of this study is the development of more comprehensive performance metrics on video delivery, which
+    lays down the foundation for extending our system to multimodal communications in the future. Code
+    for reproducing the experimental results is available at https://github.com/Evan-sudo/StreamOptix.
+  url: https://arxiv.org/abs/2406.04632
+  pdf_url: https://arxiv.org/pdf/2406.04632v1
+  version: v1
+fetched: '2026-11-14'

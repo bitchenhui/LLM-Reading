@@ -1,0 +1,58 @@
+id: paper:arxiv:2603.12746
+status: pending
+score: 4
+track: quality_assessment
+matched:
+- ref: impl:TCM
+  count: 1
+  weight: 3
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'Thinking in Dynamics: How Multimodal Large Language Models Perceive, Track, and Reason Dynamics
+    in Physical 4D World'
+  authors:
+  - Yuzhi Huang
+  - Kairun Wen
+  - Rongxin Gao
+  - Dongxuan Liu
+  - Yibin Lou
+  - Jie Wu
+  - Jing Xu
+  - Jian Zhang
+  - Zheng Yang
+  - Yunlong Lin
+  - Chenxin Li
+  - Panwang Pan
+  - Junbin Lu
+  - Jingyan Jiang
+  - Xinghao Ding
+  - Yue Huang
+  - Zhi Wang
+  published: '2026-03-13'
+  updated: '2026-03-13'
+  categories:
+  - cs.CV
+  abstract: Humans inhabit a physical 4D world where geometric structure and semantic content evolve over
+    time, constituting a dynamic 4D reality (spatial with temporal dimension). While current Multimodal
+    Large Language Models (MLLMs) excel in static visual understanding, can they also be adept at "thinking
+    in dynamics", i.e., perceive, track and reason about spatio-temporal dynamics in evolving scenes?
+    To systematically assess their spatio-temporal reasoning and localized dynamics perception capabilities,
+    we introduce Dyn-Bench, a large-scale benchmark built from diverse real-world and synthetic video
+    datasets, enabling robust and scalable evaluation of spatio-temporal understanding. Through multi-stage
+    filtering from massive 2D and 4D data sources, Dyn-Bench provides a high-quality collection of dynamic
+    scenes, comprising 1k videos, 7k visual question answering (VQA) pairs, and 3k dynamic object grounding
+    pairs. We probe general, spatial and region-level MLLMs to express how they think in dynamics both
+    linguistically and visually, and find that existing models cannot simultaneously maintain strong performance
+    in both spatio-temporal reasoning and dynamic object grounding, often producing inconsistent interpretations
+    of motion and interaction. Notably, conventional prompting strategies (e.g., chain-of-thought or caption-based
+    hints) provide limited improvement, whereas structured integration approaches, including Mask-Guided
+    Fusion and Spatio-Temporal Textual Cognitive Map (ST-TCM), significantly enhance MLLMs' dynamics perception
+    and spatio-temporal reasoning in the physical 4D world. Code and benchmark are available at https://dyn-bench.github.io/.
+  url: https://arxiv.org/abs/2603.12746
+  pdf_url: https://arxiv.org/pdf/2603.12746v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 18
+citation_year: 2026

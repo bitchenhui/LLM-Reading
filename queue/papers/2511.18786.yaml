@@ -1,0 +1,38 @@
+id: paper:arxiv:2511.18786
+status: skipped
+score: 1
+track: processing_enhancement
+matched:
+- ref: concept:SuperResolution
+  count: 1
+  weight: 1
+meta:
+  title: 'STCDiT: Spatio-Temporally Consistent Diffusion Transformer for High-Quality Video Super-Resolution'
+  authors:
+  - Junyang Chen
+  - Jiangxin Dong
+  - Long Sun
+  - Yixin Yang
+  - Jinshan Pan
+  published: '2025-11-24'
+  updated: '2025-11-24'
+  categories:
+  - cs.CV
+  abstract: We present STCDiT, a video super-resolution framework built upon a pre-trained video diffusion
+    model, aiming to restore structurally faithful and temporally stable videos from degraded inputs,
+    even under complex camera motions. The main challenges lie in maintaining temporal stability during
+    reconstruction and preserving structural fidelity during generation. To address these challenges,
+    we first develop a motion-aware VAE reconstruction method that performs segment-wise reconstruction,
+    with each segment clip exhibiting uniform motion characteristic, thereby effectively handling videos
+    with complex camera motions. Moreover, we observe that the first-frame latent extracted by the VAE
+    encoder in each clip, termed the anchor-frame latent, remains unaffected by temporal compression and
+    retains richer spatial structural information than subsequent frame latents. We further develop an
+    anchor-frame guidance approach that leverages structural information from anchor frames to constrain
+    the generation process and improve structural fidelity of video features. Coupling these two designs
+    enables the video diffusion model to achieve high-quality video super-resolution. Extensive experiments
+    show that STCDiT outperforms state-of-the-art methods in terms of structural fidelity and temporal
+    consistency.
+  url: https://arxiv.org/abs/2511.18786
+  pdf_url: https://arxiv.org/pdf/2511.18786v1
+  version: v1
+fetched: '2026-11-14'

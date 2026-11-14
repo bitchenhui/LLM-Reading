@@ -1,0 +1,40 @@
+id: paper:arxiv:2604.11970
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'INDOTABVQA: A Benchmark for Cross-Lingual Table Understanding in Bahasa Indonesia Documents'
+  authors:
+  - Somraj Gautam
+  - Anathapindika Dravichi
+  - Gaurav Harit
+  published: '2026-04-13'
+  updated: '2026-04-13'
+  categories:
+  - cs.CV
+  - cs.AI
+  - cs.CL
+  - cs.LG
+  abstract: 'We introduce INDOTABVQA, a benchmark for evaluating cross-lingual Table Visual Question Answering
+    (VQA) on real-world document images in Bahasa Indonesia. The dataset comprises 1,593 document images
+    across three visual styles (bordered, borderless, and colorful) with one or more than one tables,
+    and 1,593 question-answer sets in four languages: Bahasa Indonesia, English, Hindi, and Arabic. This
+    enables evaluation of Vision-Language Models (VLMs) in both monolingual (Bahasa documents with Bahasa
+    questions) and cross-lingual settings (Bahasa documents with questions in other languages). We benchmark
+    leading open-source VLMs (Qwen2.5-VL, Gemma-3, LLaMA-3.2) and GPT-4o and reveal substantial performance
+    gaps, particularly on structurally complex tables and in low-resource languages. Fine-tuning a compact
+    3B and LoRA-finetuned 7B model on our dataset yields 11.6% and 17.8% improvements in accuracy. Providing
+    explicit table region coordinates as additional input further improves performance by 4-7%, demonstrating
+    the value of Spatial priors for table-based reasoning. Our findings underscore the importance of language-diverse,
+    domain-specific datasets and demonstrate that targeted fine-tuning can significantly enhance VLM performance
+    on specialized document understanding tasks. INDOTABVQA provides a valuable resource for advancing
+    research in cross-lingual, structure-aware document understanding, especially in underrepresented
+    regions of the world. Full dataset can be accessed in huggingface at: https://huggingface.co/datasets/NusaBharat/INDOTABVQA}'
+  url: https://arxiv.org/abs/2604.11970
+  pdf_url: https://arxiv.org/pdf/2604.11970v1
+  version: v1
+fetched: '2026-11-14'

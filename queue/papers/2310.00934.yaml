@@ -1,0 +1,37 @@
+id: paper:arxiv:2310.00934
+status: skipped_low_citation
+score: 2
+track: streaming_delivery
+matched:
+- ref: concept:ABR
+  count: 3
+  weight: 1
+- ref: concept:QoE
+  count: 3
+  weight: 1
+meta:
+  title: A control-theoretic simplification of adaptive bitrate (ABR) video streaming
+  authors:
+  - Michel Fliess
+  - Cédric Join
+  published: '2023-10-02'
+  updated: '2026-03-23'
+  categories:
+  - eess.SY
+  - cs.NI
+  - math.OC
+  abstract: 'Adaptive bitrate streaming (ABR) over the HyperText Transfer Protocol (HTTP), which raises
+    numerous delicate questions, is nowadays almost the only approach to video streaming. This paper presents
+    elementary solutions to three key issues: 1) A straightforward feedforward control strategy for the
+    bitrate and the buffer level via flatness-based control. 2) Closing the loop permits mitigating unavoidable
+    mismatches and disturbances, such as Internet fluctuations. This is adapted from the new HEOL setting,
+    which mixes model-free and flatness-based controls. 3) An easily implementable closed-form estimate
+    of the bandwidth via algebraic identification techniques is derived, perhaps for the first time. It
+    permits handling severe variations in channel capacity. Several computer experiments and metrics for
+    evaluating the Quality of Experience (QoE) are displayed and discussed.'
+  url: https://arxiv.org/abs/2310.00934
+  pdf_url: https://arxiv.org/pdf/2310.00934v3
+  version: v3
+fetched: '2026-11-14'
+citation_count: 0
+citation_year: 2023

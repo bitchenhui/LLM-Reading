@@ -1,0 +1,41 @@
+id: paper:arxiv:2412.04917
+status: skipped
+score: 1
+track: audio_coding
+matched:
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: Continuous Speech Tokens Makes LLMs Robust Multi-Modality Learners
+  authors:
+  - Ze Yuan
+  - Yanqing Liu
+  - Shujie Liu
+  - Sheng Zhao
+  published: '2024-12-06'
+  updated: '2024-12-06'
+  categories:
+  - cs.SD
+  - eess.AS
+  - eess.SP
+  abstract: Recent advances in GPT-4o like multi-modality models have demonstrated remarkable progress
+    for direct speech-to-speech conversation, with real-time speech interaction experience and strong
+    speech understanding ability. However, current research focuses on discrete speech tokens to align
+    with discrete text tokens for language modelling, which depends on an audio codec with residual connections
+    or independent group tokens, such a codec usually leverages large scale and diverse datasets training
+    to ensure that the discrete speech codes have good representation for varied domain, noise, style
+    data reconstruction as well as a well-designed codec quantizer and encoder-decoder architecture for
+    discrete token language modelling. This paper introduces Flow-Omni, a continuous speech token based
+    GPT-4o like model, capable of real-time speech interaction and low streaming latency. Specifically,
+    first, instead of cross-entropy loss only, we combine flow matching loss with a pretrained autoregressive
+    LLM and a small MLP network to predict the probability distribution of the continuous-valued speech
+    tokens from speech prompt. second, we incorporated the continuous speech tokens to Flow-Omni multi-modality
+    training, thereby achieving robust speech-to-speech performance with discrete text tokens and continuous
+    speech tokens together. Experiments demonstrate that, compared to discrete text and speech multi-modality
+    training and its variants, the continuous speech tokens mitigate robustness issues by avoiding the
+    inherent flaws of discrete speech code's representation loss for LLM.
+  url: https://arxiv.org/abs/2412.04917
+  pdf_url: https://arxiv.org/pdf/2412.04917v1
+  version: v1
+fetched: '2026-11-14'

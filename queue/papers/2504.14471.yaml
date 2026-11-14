@@ -1,0 +1,46 @@
+id: paper:arxiv:2504.14471
+status: skipped_low_citation
+score: 4
+track: immersive_media
+matched:
+- ref: concept:EntropyModel
+  count: 1
+  weight: 1
+- ref: concept:INR
+  count: 1
+  weight: 1
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+- ref: org:MPEG
+  count: 1
+  weight: 1
+meta:
+  title: Efficient Implicit Neural Compression of Point Clouds via Learnable Activation in Latent Space
+  authors:
+  - Yichi Zhang
+  - Qianqian Yang
+  published: '2025-04-20'
+  updated: '2025-04-20'
+  categories:
+  - cs.CV
+  abstract: 'Implicit Neural Representations (INRs), also known as neural fields, have emerged as a powerful
+    paradigm in deep learning, parameterizing continuous spatial fields using coordinate-based neural
+    networks. In this paper, we propose \textbf{PICO}, an INR-based framework for static point cloud compression.
+    Unlike prevailing encoder-decoder paradigms, we decompose the point cloud compression task into two
+    separate stages: geometry compression and attribute compression, each with distinct INR optimization
+    objectives. Inspired by Kolmogorov-Arnold Networks (KANs), we introduce a novel network architecture,
+    \textbf{LeAFNet}, which leverages learnable activation functions in the latent space to better approximate
+    the target signal''s implicit function. By reformulating point cloud compression as neural parameter
+    compression, we further improve compression efficiency through quantization and entropy coding. Experimental
+    results demonstrate that \textbf{LeAFNet} outperforms conventional MLPs in INR-based point cloud compression.
+    Furthermore, \textbf{PICO} achieves superior geometry compression performance compared to the current
+    MPEG point cloud compression standard, yielding an average improvement of $4.92$ dB in D1 PSNR. In
+    joint geometry and attribute compression, our approach exhibits highly competitive results, with an
+    average PCQM gain of $2.7 \times 10^{-3}$.'
+  url: https://arxiv.org/abs/2504.14471
+  pdf_url: https://arxiv.org/pdf/2504.14471v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 1
+citation_year: 2025

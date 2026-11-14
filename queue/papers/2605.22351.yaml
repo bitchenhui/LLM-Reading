@@ -1,0 +1,48 @@
+id: paper:arxiv:2605.22351
+status: pending
+score: 2
+track: processing_enhancement
+matched:
+- ref: concept:SuperResolution
+  count: 2
+  weight: 1
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+meta:
+  title: 'QuantSR+: Pushing the Limit of Quantized Image Super-Resolution Networks'
+  authors:
+  - Haotong Qin
+  - Xudong Ma
+  - Xianglong Liu
+  - Jie Luo
+  - Jinyang Guo
+  - Michele Magno
+  - Yulun Zhang
+  published: '2026-05-21'
+  updated: '2026-05-21'
+  categories:
+  - cs.CV
+  abstract: 'Low-bit quantization is widely used to compress super-resolution (SR) models and reduce storage
+    and computation costs for deployment on resource-limited devices. However, when SR models are pushed
+    to ultra-low precision (2-4 bits), performance can drop sharply due to diminished representational
+    capacity and the detail-sensitive nature of SR. To address these issues, we propose QuantSR+, a unified
+    framework that improves quantization operators, network design, and training optimization, achieving
+    better trade-offs between accuracy and efficiency than prior low-bit SR methods. QuantSR+ mainly relies
+    on three technical contributions: (1) Redistribution-driven Bit Determination (RBD), which reshapes
+    quantization distributions in both forward and backward passes to preserve representation fidelity;
+    (2) Quantized Slimmable Architecture (QSA), which begins with an over-parameterized model and progressively
+    prunes less critical blocks to meet efficiency budgets while pushing the accuracy performance; and
+    (3) Slimming-guided Function-localized Distillation (SFD), which enforces block-aware feature alignment
+    via a direct loss and a progressive, function-local training schedule to capture quantization effects
+    better and speed up convergence. Extensive experiments show that QuantSR+ achieves state-of-the-art
+    performance against both specialized quantized SR methods and generic quantization approaches. For
+    SwinIR-S on Urban100 (x4), it improves PSNR by 0.29 dB over the 2-bit SOTA baseline. Meanwhile, it
+    delivers strong efficiency gains at 2-bit, reducing operations by up to 87.9% and storage by 89.4%.
+    QuantSR+ is effective for both convolutional and transformer-based SR models, indicating broad applicability.'
+  url: https://arxiv.org/abs/2605.22351
+  pdf_url: https://arxiv.org/pdf/2605.22351v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 2
+citation_year: 2026

@@ -1,0 +1,40 @@
+id: paper:arxiv:2306.09839
+status: skipped
+score: 1
+track: processing_enhancement
+matched:
+- ref: concept:SuperResolution
+  count: 1
+  weight: 1
+meta:
+  title: Super-Resolution Radar Imaging with Sparse Arrays Using a Deep Neural Network Trained with Enhanced
+    Virtual Data
+  authors:
+  - Christian Schuessler
+  - Marcel Hoffmann
+  - Martin Vossiek
+  published: '2023-06-16'
+  updated: '2023-06-16'
+  categories:
+  - eess.SP
+  - cs.CV
+  - cs.RO
+  abstract: This paper introduces a method based on a deep neural network (DNN) that is perfectly capable
+    of processing radar data from extremely thinned radar apertures. The proposed DNN processing can provide
+    both aliasing-free radar imaging and super-resolution. The results are validated by measuring the
+    detection performance on realistic simulation data and by evaluating the Point-Spread-function (PSF)
+    and the target-separation performance on measured point-like targets. Also, a qualitative evaluation
+    of a typical automotive scene is conducted. It is shown that this approach can outperform state-of-the-art
+    subspace algorithms and also other existing machine learning solutions. The presented results suggest
+    that machine learning approaches trained with sufficiently sophisticated virtual input data are a
+    very promising alternative to compressed sensing and subspace approaches in radar signal processing.
+    The key to this performance is that the DNN is trained using realistic simulation data that perfectly
+    mimic a given sparse antenna radar array hardware as the input. As ground truth, ultra-high resolution
+    data from an enhanced virtual radar are simulated. Contrary to other work, the DNN utilizes the complete
+    radar cube and not only the antenna channel information at certain range-Doppler detections. After
+    training, the proposed DNN is capable of sidelobe- and ambiguity-free imaging. It simultaneously delivers
+    nearly the same resolution and image quality as would be achieved with a fully occupied array.
+  url: https://arxiv.org/abs/2306.09839
+  pdf_url: https://arxiv.org/pdf/2306.09839v1
+  version: v1
+fetched: '2026-11-14'

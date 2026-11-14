@@ -1,0 +1,45 @@
+id: paper:arxiv:2311.17350
+status: skipped
+score: 2
+track: video_image_coding
+matched:
+- ref: concept:FeatureGrid
+  count: 2
+  weight: 1
+- ref: concept:INR
+  count: 2
+  weight: 1
+meta:
+  title: Implicit-explicit Integrated Representations for Multi-view Video Compression
+  authors:
+  - Chen Zhu
+  - Guo Lu
+  - Bing He
+  - Rong Xie
+  - Li Song
+  published: '2023-11-29'
+  updated: '2023-11-29'
+  categories:
+  - cs.CV
+  - cs.MM
+  abstract: With the increasing consumption of 3D displays and virtual reality, multi-view video has become
+    a promising format. However, its high resolution and multi-camera shooting result in a substantial
+    increase in data volume, making storage and transmission a challenging task. To tackle these difficulties,
+    we propose an implicit-explicit integrated representation for multi-view video compression. Specifically,
+    we first use the explicit representation-based 2D video codec to encode one of the source views. Subsequently,
+    we propose employing the implicit neural representation (INR)-based codec to encode the remaining
+    views. The implicit codec takes the time and view index of multi-view video as coordinate inputs and
+    generates the corresponding implicit reconstruction frames.To enhance the compressibility, we introduce
+    a multi-level feature grid embedding and a fully convolutional architecture into the implicit codec.
+    These components facilitate coordinate-feature and feature-RGB mapping, respectively. To further enhance
+    the reconstruction quality from the INR codec, we leverage the high-quality reconstructed frames from
+    the explicit codec to achieve inter-view compensation. Finally, the compensated results are fused
+    with the implicit reconstructions from the INR to obtain the final reconstructed frames. Our proposed
+    framework combines the strengths of both implicit neural representation and explicit 2D codec. Extensive
+    experiments conducted on public datasets demonstrate that the proposed framework can achieve comparable
+    or even superior performance to the latest multi-view video compression standard MIV and other INR-based
+    schemes in terms of view compression and scene modeling.
+  url: https://arxiv.org/abs/2311.17350
+  pdf_url: https://arxiv.org/pdf/2311.17350v1
+  version: v1
+fetched: '2026-11-14'

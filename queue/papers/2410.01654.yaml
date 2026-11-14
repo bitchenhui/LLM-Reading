@@ -1,0 +1,39 @@
+id: paper:arxiv:2410.01654
+status: skipped
+score: 1
+track: video_image_coding
+matched:
+- ref: concept:INR
+  count: 2
+  weight: 1
+meta:
+  title: Releasing the Parameter Latency of Neural Representation for High-Efficiency Video Compression
+  authors:
+  - Gai Zhang
+  - Xinfeng Zhang
+  - Lv Tang
+  - Yue Li
+  - Kai Zhang
+  - Li Zhang
+  published: '2024-10-02'
+  updated: '2024-10-03'
+  categories:
+  - eess.IV
+  - cs.CV
+  - cs.MM
+  abstract: For decades, video compression technology has been a prominent research area. Traditional
+    hybrid video compression framework and end-to-end frameworks continue to explore various intra- and
+    inter-frame reference and prediction strategies based on discrete transforms and deep learning techniques.
+    However, the emerging implicit neural representation (INR) technique models entire videos as basic
+    units, automatically capturing intra-frame and inter-frame correlations and obtaining promising performance.
+    INR uses a compact neural network to store video information in network parameters, effectively eliminating
+    spatial and temporal redundancy in the original video. However, in this paper, our exploration and
+    verification reveal that current INR video compression methods do not fully exploit their potential
+    to preserve information. We investigate the potential of enhancing network parameter storage through
+    parameter reuse. By deepening the network, we designed a feasible INR parameter reuse scheme to further
+    improve compression performance. Extensive experimental results show that our method significantly
+    enhances the rate-distortion performance of INR video compression.
+  url: https://arxiv.org/abs/2410.01654
+  pdf_url: https://arxiv.org/pdf/2410.01654v2
+  version: v2
+fetched: '2026-11-14'

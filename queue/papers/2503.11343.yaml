@@ -1,0 +1,38 @@
+id: paper:arxiv:2503.11343
+status: skipped
+score: 2
+track: video_image_coding
+matched:
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+- ref: org:MPEG
+  count: 1
+  weight: 1
+meta:
+  title: 'FG-DFPN: Flow Guided Deformable Frame Prediction Network'
+  authors:
+  - M. Akın Yılmaz
+  - Ahmet Bilican
+  - A. Murat Tekalp
+  published: '2025-03-14'
+  updated: '2025-03-14'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: 'Video frame prediction remains a fundamental challenge in computer vision with direct implications
+    for autonomous systems, video compression, and media synthesis. We present FG-DFPN, a novel architecture
+    that harnesses the synergy between optical flow estimation and deformable convolutions to model complex
+    spatio-temporal dynamics. By guiding deformable sampling with motion cues, our approach addresses
+    the limitations of fixed-kernel networks when handling diverse motion patterns. The multi-scale design
+    enables FG-DFPN to simultaneously capture global scene transformations and local object movements
+    with remarkable precision. Our experiments demonstrate that FG-DFPN achieves state-of-the-art performance
+    on eight diverse MPEG test sequences, outperforming existing methods by 1dB PSNR while maintaining
+    competitive inference speeds. The integration of motion cues with adaptive geometric transformations
+    makes FG-DFPN a promising solution for next-generation video processing systems that require high-fidelity
+    temporal predictions. The model and instructions to reproduce our results will be released at: https://github.com/KUIS-AI-Tekalp-Research
+    Group/frame-prediction'
+  url: https://arxiv.org/abs/2503.11343
+  pdf_url: https://arxiv.org/pdf/2503.11343v1
+  version: v1
+fetched: '2026-11-14'

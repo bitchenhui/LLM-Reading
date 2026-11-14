@@ -1,0 +1,38 @@
+id: paper:arxiv:2506.19297
+status: skipped
+score: 1
+track: video_image_coding
+matched:
+- ref: metric:BD-Rate
+  count: 1
+  weight: 1
+meta:
+  title: Explicit Residual-Based Scalable Image Coding for Humans and Machines
+  authors:
+  - Yui Tatsumi
+  - Ziyue Zeng
+  - Hiroshi Watanabe
+  published: '2025-06-24'
+  updated: '2025-08-29'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: 'Scalable image compression is a technique that progressively reconstructs multiple versions
+    of an image for different requirements. In recent years, images have increasingly been consumed not
+    only by humans but also by image recognition models. This shift has drawn growing attention to scalable
+    image compression methods that serve both machine and human vision (ICMH). Many existing models employ
+    neural network-based codecs, known as learned image compression, and have made significant strides
+    in this field by carefully designing the loss functions. In some cases, however, models are overly
+    reliant on their learning capacity, and their architectural design is not sufficiently considered.
+    In this paper, we enhance the coding efficiency and interpretability of ICMH framework by integrating
+    an explicit residual compression mechanism, which is commonly employed in resolution scalable coding
+    methods such as JPEG2000. Specifically, we propose two complementary methods: Feature Residual-based
+    Scalable Coding (FR-ICMH) and Pixel Residual-based Scalable Coding (PR-ICMH). These proposed methods
+    are applicable to various machine vision tasks. Moreover, they provide flexibility to choose between
+    encoder complexity and compression performance, making it adaptable to diverse application requirements.
+    Experimental results demonstrate the effectiveness of our proposed methods, with PR-ICMH achieving
+    up to 29.57% BD-rate savings over the previous work.'
+  url: https://arxiv.org/abs/2506.19297
+  pdf_url: https://arxiv.org/pdf/2506.19297v2
+  version: v2
+fetched: '2026-11-14'

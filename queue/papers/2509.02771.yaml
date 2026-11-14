@@ -1,0 +1,41 @@
+id: paper:arxiv:2509.02771
+status: skipped_low_citation
+score: 4
+track: audio_coding
+matched:
+- ref: codec:Opus
+  count: 1
+  weight: 3
+- ref: concept:NeuralAudioCodec
+  count: 1
+  weight: 1
+meta:
+  title: Analysis of Speaker Verification Performance Trade-offs with Neural Audio Codec Transmission
+  authors:
+  - Nirmalya Mallick Thakur
+  - Jia Qi Yip
+  - Eng Siong Chng
+  published: '2025-09-02'
+  updated: '2025-09-02'
+  categories:
+  - cs.SD
+  - eess.AS
+  abstract: Neural audio codecs (NACs) have made significant advancements in recent years and are rapidly
+    being adopted in many audio processing pipelines. However, they can introduce audio distortions which
+    degrade speaker verification (SV) performance. This study investigates the impact of both traditional
+    and neural audio codecs at varying bitrates on three state of-the-art SV models evaluated on the VoxCeleb1
+    dataset. Our findings reveal a consistent degradation in SV performance across all models and codecs
+    as bitrates decrease. Notably, NACs do not fundamentally break SV performance when compared to traditional
+    codecs. They outperform Opus by 6-8% at low-bitrates (< 12 kbps) and remain marginally behind at higher
+    bitrates ($\approx$ 24 kbps), with an EER increase of only 0.4-0.7%. The disparity at higher bitrates
+    is likely due to the primary optimization of NACs for perceptual quality, which can inadvertently
+    discard critical speaker-discriminative features, unlike Opus which was designed to preserve vocal
+    characteristics. Our investigation suggests that NACs are a feasible alternative to traditional codecs,
+    especially under bandwidth limitations. To bridge the gap at higher bitrates, future work should focus
+    on developing speaker-aware NACs or retraining and adapting SV models.
+  url: https://arxiv.org/abs/2509.02771
+  pdf_url: https://arxiv.org/pdf/2509.02771v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 0
+citation_year: 2025

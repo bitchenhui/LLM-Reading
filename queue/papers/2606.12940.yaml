@@ -1,0 +1,37 @@
+id: paper:arxiv:2606.12940
+status: skipped
+score: 1
+track: audio_coding
+matched:
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: 'Self-Guidance: Enhancing Neural Codecs via Decoder Manifold Alignment'
+  authors:
+  - Xiang Li
+  - Yixuan Zhou
+  - Jingran Xie
+  - Zhiyong Wu
+  - Hui Wang
+  published: '2026-06-11'
+  updated: '2026-06-11'
+  categories:
+  - cs.SD
+  - cs.LG
+  abstract: Neural speech codecs based on Vector-Quantized VAEs (VQ-VAEs) are core audio tokenizers for
+    speech LLMs, yet their reconstruction fidelity is bottlenecked by quantization error. Modifying the
+    quantizer or increasing model capacity are common fixes, but they complicate downstream language modeling.
+    Our core idea is to align the decoder's internal feature manifolds when processing both the quantized
+    tokens and their original continuous embeddings, using a lightweight feature-mapping loss. This requires
+    minimal training overhead and no inference-time changes. Applied to XCodec2, self-guidance improves
+    all reconstruction metrics, achieving state-of-the-art low-bitrate performance. Notably, it enables
+    a 4x codebook reduction without fidelity loss, which downstream TTS experiments show significantly
+    improves LLM-based synthesis by simplifying the token modeling space. Multiple statistical observations
+    and visualizations corroborate the enhanced internal manifold alignment in the decoder. Extensive
+    experiments confirm its generality across various inductive biases. Self-guidance thus establishes
+    an efficient, broadly applicable method for high-fidelity neural audio coding.
+  url: https://arxiv.org/abs/2606.12940
+  pdf_url: https://arxiv.org/pdf/2606.12940v1
+  version: v1
+fetched: '2026-11-14'

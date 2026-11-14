@@ -1,0 +1,31 @@
+id: paper:arxiv:2204.05043
+status: skipped
+score: 1
+track: immersive_media
+matched:
+- ref: org:MPEG
+  count: 1
+  weight: 1
+meta:
+  title: Learning-based Lossless Point Cloud Geometry Coding using Sparse Tensors
+  authors:
+  - Dat Thanh Nguyen
+  - Andre Kaup
+  published: '2022-04-11'
+  updated: '2022-06-22'
+  categories:
+  - eess.IV
+  abstract: Most point cloud compression methods operate in the voxel or octree domain which is not the
+    original representation of point clouds. Those representations either remove the geometric information
+    or require high computational power for processing. In this paper, we propose a context-based lossless
+    point cloud geometry compression that directly processes the point representation. Operating on a
+    point representation allows us to preserve geometry correlation between points and thus to obtain
+    an accurate context model while significantly reduce the computational cost. Specifically, our method
+    uses a sparse convolution neural network to estimate the voxel occupancy sequentially from the x,y,z
+    input data. Experimental results show that our method outperforms the state-of-the-art geometry compression
+    standard from MPEG with average rate savings of 52% on a diverse set of point clouds from four different
+    datasets.
+  url: https://arxiv.org/abs/2204.05043
+  pdf_url: https://arxiv.org/pdf/2204.05043v2
+  version: v2
+fetched: '2026-11-14'

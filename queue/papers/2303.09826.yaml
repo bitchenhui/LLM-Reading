@@ -1,0 +1,39 @@
+id: paper:arxiv:2303.09826
+status: skipped
+score: 1
+track: processing_enhancement
+matched:
+- ref: concept:SuperResolution
+  count: 2
+  weight: 1
+meta:
+  title: Learning Data-Driven Vector-Quantized Degradation Model for Animation Video Super-Resolution
+  authors:
+  - Zixi Tuo
+  - Huan Yang
+  - Jianlong Fu
+  - Yujie Dun
+  - Xueming Qian
+  published: '2023-03-17'
+  updated: '2023-09-20'
+  categories:
+  - cs.CV
+  abstract: Existing real-world video super-resolution (VSR) methods focus on designing a general degradation
+    pipeline for open-domain videos while ignoring data intrinsic characteristics which strongly limit
+    their performance when applying to some specific domains (eg., animation videos). In this paper, we
+    thoroughly explore the characteristics of animation videos and leverage the rich priors in real-world
+    animation data for a more practical animation VSR model. In particular, we propose a multi-scale Vector-Quantized
+    Degradation model for animation video Super-Resolution (VQD-SR) to decompose the local details from
+    global structures and transfer the degradation priors in real-world animation videos to a learned
+    vector-quantized codebook for degradation modeling. A rich-content Real Animation Low-quality (RAL)
+    video dataset is collected for extracting the priors. We further propose a data enhancement strategy
+    for high-resolution (HR) training videos based on our observation that existing HR videos are mostly
+    collected from the Web which contains conspicuous compression artifacts. The proposed strategy is
+    valid to lift the upper bound of animation VSR performance, regardless of the specific VSR model.
+    Experimental results demonstrate the superiority of the proposed VQD-SR over state-of-the-art methods,
+    through extensive quantitative and qualitative evaluations of the latest animation video super-resolution
+    benchmark. The code and pre-trained models can be downloaded at https://github.com/researchmm/VQD-SR.
+  url: https://arxiv.org/abs/2303.09826
+  pdf_url: https://arxiv.org/pdf/2303.09826v2
+  version: v2
+fetched: '2026-11-14'

@@ -1,0 +1,43 @@
+id: paper:arxiv:2402.16599
+status: skipped
+score: 1
+track: video_image_coding
+matched:
+- ref: concept:NeRF
+  count: 1
+  weight: 1
+meta:
+  title: Resolution-Agnostic Neural Compression for High-Fidelity Portrait Video Conferencing via Implicit
+    Radiance Fields
+  authors:
+  - Yifei Li
+  - Xiaohong Liu
+  - Yicong Peng
+  - Guangtao Zhai
+  - Jun Zhou
+  published: '2024-02-26'
+  updated: '2024-02-26'
+  categories:
+  - cs.CV
+  - eess.IV
+  abstract: Video conferencing has caught much more attention recently. High fidelity and low bandwidth
+    are two major objectives of video compression for video conferencing applications. Most pioneering
+    methods rely on classic video compression codec without high-level feature embedding and thus can
+    not reach the extremely low bandwidth. Recent works instead employ model-based neural compression
+    to acquire ultra-low bitrates using sparse representations of each frame such as facial landmark information,
+    while these approaches can not maintain high fidelity due to 2D image-based warping. In this paper,
+    we propose a novel low bandwidth neural compression approach for high-fidelity portrait video conferencing
+    using implicit radiance fields to achieve both major objectives. We leverage dynamic neural radiance
+    fields to reconstruct high-fidelity talking head with expression features, which are represented as
+    frame substitution for transmission. The overall system employs deep model to encode expression features
+    at the sender and reconstruct portrait at the receiver with volume rendering as decoder for ultra-low
+    bandwidth. In particular, with the characteristic of neural radiance fields based model, our compression
+    approach is resolution-agnostic, which means that the low bandwidth achieved by our approach is independent
+    of video resolution, while maintaining fidelity for higher resolution reconstruction. Experimental
+    results demonstrate that our novel framework can (1) construct ultra-low bandwidth video conferencing,
+    (2) maintain high fidelity portrait and (3) have better performance on high-resolution video compression
+    than previous works.
+  url: https://arxiv.org/abs/2402.16599
+  pdf_url: https://arxiv.org/pdf/2402.16599v1
+  version: v1
+fetched: '2026-11-14'

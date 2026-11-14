@@ -1,0 +1,46 @@
+id: paper:arxiv:2107.07127
+status: skipped_low_citation
+score: 5
+track: streaming_delivery
+matched:
+- ref: codec:AVC
+  count: 1
+  weight: 3
+- ref: concept:QoE
+  count: 3
+  weight: 1
+- ref: concept:DASH
+  count: 2
+  weight: 1
+meta:
+  title: 'NeuSaver: Neural Adaptive Power Consumption Optimization for Mobile Video Streaming'
+  authors:
+  - Kyoungjun Park
+  - Myungchul Kim
+  - Laihyuk Park
+  published: '2021-07-15'
+  updated: '2021-07-15'
+  categories:
+  - cs.LG
+  - cs.MM
+  - eess.SP
+  abstract: Video streaming services strive to support high-quality videos at higher resolutions and frame
+    rates to improve the quality of experience (QoE). However, high-quality videos consume considerable
+    amounts of energy on mobile devices. This paper proposes NeuSaver, which reduces the power consumption
+    of mobile devices when streaming videos by applying an adaptive frame rate to each video chunk without
+    compromising user experience. NeuSaver generates an optimal policy that determines the appropriate
+    frame rate for each video chunk using reinforcement learning (RL). The RL model automatically learns
+    the policy that maximizes the QoE goals based on previous observations. NeuSaver also uses an asynchronous
+    advantage actor-critic algorithm to reinforce the RL model quickly and robustly. Streaming servers
+    that support NeuSaver preprocesses videos into segments with various frame rates, which is similar
+    to the process of creating videos with multiple bit rates in dynamic adaptive streaming over HTTP.
+    NeuSaver utilizes the commonly used H.264 video codec. We evaluated NeuSaver in various experiments
+    and a user study through four video categories along with the state-of-the-art model. Our experiments
+    showed that NeuSaver effectively reduces the power consumption of mobile devices when streaming video
+    by an average of 16.14% and up to 23.12% while achieving high QoE.
+  url: https://arxiv.org/abs/2107.07127
+  pdf_url: https://arxiv.org/pdf/2107.07127v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 4
+citation_year: 2021

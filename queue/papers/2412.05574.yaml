@@ -1,0 +1,44 @@
+id: paper:arxiv:2412.05574
+status: pending
+score: 4
+track: immersive_media
+matched:
+- ref: codec:G-PCC
+  count: 3
+  weight: 3
+- ref: org:MPEG
+  count: 1
+  weight: 1
+meta:
+  title: Rate-Distortion Optimized Skip Coding of Region Adaptive Hierarchical Transform Coefficients
+    for MPEG G-PCC
+  authors:
+  - Zehan Wang
+  - Yuxuan Wei
+  - Hui Yuan
+  - Wei Zhang
+  - Peng Li
+  published: '2024-12-07'
+  updated: '2024-12-07'
+  categories:
+  - cs.CV
+  abstract: Three-dimensional (3D) point clouds are becoming more and more popular for representing 3D
+    objects and scenes. Due to limited network bandwidth, efficient compression of 3D point clouds is
+    crucial. To tackle this challenge, the Moving Picture Experts Group (MPEG) is actively developing
+    the Geometry-based Point Cloud Compression (G-PCC) standard, incorporating innovative methods to optimize
+    compression, such as the Region-Adaptive Hierarchical Transform (RAHT) nestled within a layer-by-layer
+    octree-tree structure. Nevertheless, a notable problem still exists in RAHT, i.e., the proportion
+    of zero residuals in the last few RAHT layers leads to unnecessary bitrate consumption. To address
+    this problem, we propose an adaptive skip coding method for RAHT, which adaptively determines whether
+    to encode the residuals of the last several layers or not, thereby improving the coding efficiency.
+    In addition, we propose a rate-distortion cost calculation method associated with an adaptive Lagrange
+    multiplier. Experimental results demonstrate that the proposed method achieves average Bjøntegaard
+    rate improvements of -3.50%, -5.56%, and -4.18% for the Luma, Cb, and Cr components, respectively,
+    on dynamic point clouds, when compared with the state-of-the-art G-PCC reference software under the
+    common test conditions recommended by MPEG.
+  url: https://arxiv.org/abs/2412.05574
+  pdf_url: https://arxiv.org/pdf/2412.05574v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 16
+citation_year: 2024

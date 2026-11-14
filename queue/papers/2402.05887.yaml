@@ -1,0 +1,40 @@
+id: paper:arxiv:2402.05887
+status: skipped
+score: 0
+track: video_image_coding
+matched: []
+meta:
+  title: 'Sandwiched Compression: Repurposing Standard Codecs with Neural Network Wrappers'
+  authors:
+  - Onur G. Guleryuz
+  - Philip A. Chou
+  - Berivan Isik
+  - Hugues Hoppe
+  - Danhang Tang
+  - Ruofei Du
+  - Jonathan Taylor
+  - Philip Davidson
+  - Sean Fanello
+  published: '2024-02-08'
+  updated: '2025-02-20'
+  categories:
+  - eess.IV
+  - cs.MM
+  abstract: We propose sandwiching standard image and video codecs between pre- and post-processing neural
+    networks. The networks are jointly trained through a differentiable codec proxy to minimize a given
+    rate-distortion loss. This sandwich architecture not only improves the standard codec's performance
+    on its intended content, but more importantly, adapts the codec to other types of image/video content
+    and to other distortion measures. The sandwich learns to transmit ``neural code images'' that optimize
+    and improve overall rate-distortion performance, with the improvements becoming significant especially
+    when the overall problem is well outside of the scope of the codec's design. We apply the sandwich
+    architecture to standard codecs with mismatched sources transporting different numbers of channels,
+    higher resolution, higher dynamic range, computer graphics, and with perceptual distortion measures.
+    The results demonstrate substantial improvements (up to 9 dB gains or up to 30\% bitrate reductions)
+    compared to alternative adaptations. We establish optimality properties for sandwiched compression
+    and design differentiable codec proxies approximating current standard codecs. We further analyze
+    model complexity, visual quality under perceptual metrics, as well as sandwich configurations that
+    offer interesting potentials in video compression and streaming.
+  url: https://arxiv.org/abs/2402.05887
+  pdf_url: https://arxiv.org/pdf/2402.05887v2
+  version: v2
+fetched: '2026-11-14'

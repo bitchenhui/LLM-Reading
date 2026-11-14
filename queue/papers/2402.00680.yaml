@@ -1,0 +1,38 @@
+id: paper:arxiv:2402.00680
+status: pending
+score: 3
+track: video_image_coding
+matched:
+- ref: impl:TCM
+  count: 1
+  weight: 3
+meta:
+  title: 'LVC-LGMC: Joint Local and Global Motion Compensation for Learned Video Compression'
+  authors:
+  - Wei Jiang
+  - Junru Li
+  - Kai Zhang
+  - Li Zhang
+  published: '2024-02-01'
+  updated: '2024-03-11'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: Existing learned video compression models employ flow net or deformable convolutional networks
+    (DCN) to estimate motion information. However, the limited receptive fields of flow net and DCN inherently
+    direct their attentiveness towards the local contexts. Global contexts, such as large-scale motions
+    and global correlations among frames are ignored, presenting a significant bottleneck for capturing
+    accurate motions. To address this issue, we propose a joint local and global motion compensation module
+    (LGMC) for leaned video coding. More specifically, we adopt flow net for local motion compensation.
+    To capture global context, we employ the cross attention in feature domain for motion compensation.
+    In addition, to avoid the quadratic complexity of vanilla cross attention, we divide the softmax operations
+    in attention into two independent softmax operations, leading to linear complexity. To validate the
+    effectiveness of our proposed LGMC, we integrate it with DCVC-TCM and obtain learned video compression
+    with joint local and global motion compensation (LVC-LGMC). Extensive experiments demonstrate that
+    our LVC-LGMC has significant rate-distortion performance improvements over baseline DCVC-TCM.
+  url: https://arxiv.org/abs/2402.00680
+  pdf_url: https://arxiv.org/pdf/2402.00680v3
+  version: v3
+fetched: '2026-11-14'
+citation_count: 8
+citation_year: 2024

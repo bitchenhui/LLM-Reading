@@ -1,0 +1,41 @@
+id: paper:arxiv:2503.23337
+status: skipped
+score: 2
+track: video_image_coding
+matched:
+- ref: concept:3DGS
+  count: 4
+  weight: 1
+- ref: concept:EntropyModel
+  count: 1
+  weight: 1
+meta:
+  title: Enhancing 3D Gaussian Splatting Compression via Spatial Condition-based Prediction
+  authors:
+  - Jingui Ma
+  - Yang Hu
+  - Luyang Tang
+  - Jiayu Yang
+  - Yongqi Zhai
+  - Ronggang Wang
+  published: '2025-03-30'
+  updated: '2025-03-30'
+  categories:
+  - cs.CV
+  - cs.MM
+  abstract: Recently, 3D Gaussian Spatting (3DGS) has gained widespread attention in Novel View Synthesis
+    (NVS) due to the remarkable real-time rendering performance. However, the substantial cost of storage
+    and transmission of vanilla 3DGS hinders its further application (hundreds of megabytes or even gigabytes
+    for a single scene). Motivated by the achievements of prediction in video compression, we introduce
+    the prediction technique into the anchor-based Gaussian representation to effectively reduce the bit
+    rate. Specifically, we propose a spatial condition-based prediction module to utilize the grid-captured
+    scene information for prediction, with a residual compensation strategy designed to learn the missing
+    fine-grained information. Besides, to further compress the residual, we propose an instance-aware
+    hyper prior, developing a structure-aware and instance-aware entropy model. Extensive experiments
+    demonstrate the effectiveness of our prediction-based compression framework and each technical component.
+    Even compared with SOTA compression method, our framework still achieves a bit rate savings of 24.42
+    percent. Code is to be released!
+  url: https://arxiv.org/abs/2503.23337
+  pdf_url: https://arxiv.org/pdf/2503.23337v1
+  version: v1
+fetched: '2026-11-14'

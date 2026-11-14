@@ -1,0 +1,35 @@
+id: paper:arxiv:2310.08068
+status: skipped
+score: 1
+track: video_image_coding
+matched:
+- ref: metric:BD-Rate
+  count: 1
+  weight: 1
+meta:
+  title: Frequency-Aware Re-Parameterization for Over-Fitting Based Image Compression
+  authors:
+  - Yun Ye
+  - Yanjie Pan
+  - Qually Jiang
+  - Ming Lu
+  - Xiaoran Fang
+  - Beryl Xu
+  published: '2023-10-12'
+  updated: '2023-10-12'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: Over-fitting-based image compression requires weights compactness for compression and fast
+    convergence for practical use, posing challenges for deep convolutional neural networks (CNNs) based
+    methods. This paper presents a simple re-parameterization method to train CNNs with reduced weights
+    storage and accelerated convergence. The convolution kernels are re-parameterized as a weighted sum
+    of discrete cosine transform (DCT) kernels enabling direct optimization in the frequency domain. Combined
+    with L1 regularization, the proposed method surpasses vanilla convolutions by achieving a significantly
+    improved rate-distortion with low computational cost. The proposed method is verified with extensive
+    experiments of over-fitting-based image restoration on various datasets, achieving up to -46.12% BD-rate
+    on top of HEIF with only 200 iterations.
+  url: https://arxiv.org/abs/2310.08068
+  pdf_url: https://arxiv.org/pdf/2310.08068v1
+  version: v1
+fetched: '2026-11-14'

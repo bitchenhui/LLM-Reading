@@ -1,0 +1,45 @@
+id: paper:arxiv:2603.01124
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'ClinCoT: Clinical-Aware Visual Chain-of-Thought for Medical Vision Language Models'
+  authors:
+  - Xiwei Liu
+  - Yulong Li
+  - Xinlin Zhuang
+  - Xuhui Li
+  - Jianxu Chen
+  - Haolin Yang
+  - Imran Razzak
+  - Yutong Xie
+  published: '2026-03-01'
+  updated: '2026-03-01'
+  categories:
+  - cs.CV
+  - cs.AI
+  abstract: Medical Vision-Language Models have shown promising potential in clinical decision support,
+    yet they remain prone to factual hallucinations due to insufficient grounding in localized pathological
+    evidence. Existing medical alignment methods primarily operate at the response level through preference
+    optimization, improving output correctness but leaving intermediate reasoning weakly connected to
+    visual regions. Although chain-of-thought (CoT) enhances multimodal reasoning, it remains largely
+    text-centric, limiting effective integration of clinical visual cues. To address this gap, we propose
+    ClinCoT, a clinical-aware visual chain-of-thought framework that transforms preference optimization
+    from response-level correction to visual-driven reasoning. We introduce an automatic data generation
+    pipeline that constructs clinically grounded preference pairs through reasoning with hypotheses-driven
+    region proposals. Multiple Med-LLMs evaluators rank and assign scores to each response, and these
+    rankings serve as supervision to train the target model. We further introduce a scoring-based margin-aware
+    optimization strategy that incorporates both preference ranking and score difference to refine region-level
+    reasoning trajectories. To maintain alignment as the model's policy evolves during training, we adopt
+    an iterative learning scheme that dynamically regenerates preference data. Extensive experiments on
+    three medical VQA and report generation benchmarks demonstrate that ClinCoT consistently improves
+    factual grounding and achieves superior performance compared with existing preference-based alignment
+    methods.
+  url: https://arxiv.org/abs/2603.01124
+  pdf_url: https://arxiv.org/pdf/2603.01124v1
+  version: v1
+fetched: '2026-11-14'

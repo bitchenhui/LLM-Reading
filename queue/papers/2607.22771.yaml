@@ -1,0 +1,40 @@
+id: paper:arxiv:2607.22771
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: When Do Cheap Probes Predict Expensive Training? Probing 3D-CT Encoders for Text Generation
+  authors:
+  - Renjie Liang
+  - Zijian Xu
+  - Jinqian Pan
+  - Chengkun Sun
+  - Zhengkang Fan
+  - Shawn Li
+  - You Qin
+  - Mei Liu
+  - Jie Xu
+  published: '2026-07-24'
+  updated: '2026-09-25'
+  categories:
+  - cs.CV
+  - cs.AI
+  abstract: Building a 3D CT vision language model begins with a choice of which image encoder to build
+    on. Today that choice is made by fine-tuning every candidate through the full language model and comparing
+    downstream scores, an enormously expensive search. A cheap probe on the encoder's representation promises
+    a way out, but whether it forecasts the expensive outcome has never been tested. We test this with
+    CheapCT on report generation and on MeasureVQA, a new VQA dataset we build. MeasureVQA scores the
+    outcome one capability at a time, its answers measured from segmentation masks and Hounsfield units.
+    Report generation scores the whole report at once and reflects mostly disease. CheapCT forecasts expensive
+    training across every capability. The forecast survives changing the probe readout and the language-model
+    backbone. The rank agreement between CheapCT and fine-tuning stays high throughout, from rho = 0.90
+    to 0.97. Used to choose an encoder, CheapCT picks one nearly as good as the best while fine-tuning
+    a single candidate, at orders of magnitude less compute. We release the code and MeasureVQA at https://github.com/renjie-liang/CheapCT.
+  url: https://arxiv.org/abs/2607.22771
+  pdf_url: https://arxiv.org/pdf/2607.22771v3
+  version: v3
+fetched: '2026-11-14'

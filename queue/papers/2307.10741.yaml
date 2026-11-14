@@ -1,0 +1,43 @@
+id: paper:arxiv:2307.10741
+status: skipped_low_citation
+score: 4
+track: immersive_media
+matched:
+- ref: codec:G-PCC
+  count: 2
+  weight: 3
+- ref: org:MPEG
+  count: 1
+  weight: 1
+meta:
+  title: Aggressive saliency-aware point cloud compression
+  authors:
+  - Eleftheria Psatha
+  - Dimitrios Laskos
+  - Gerasimos Arvanitis
+  - Konstantinos Moustakas
+  published: '2023-07-20'
+  updated: '2023-07-20'
+  categories:
+  - eess.IV
+  - eess.SP
+  abstract: The increasing demand for accurate representations of 3D scenes, combined with immersive technologies
+    has led point clouds to extensive popularity. However, quality point clouds require a large amount
+    of data and therefore the need for compression methods is imperative. In this paper, we present a
+    novel, geometry-based, end-to-end compression scheme, that combines information on the geometrical
+    features of the point cloud and the user's position, achieving remarkable results for aggressive compression
+    schemes demanding very small bit rates. After separating visible and non-visible points, four saliency
+    maps are calculated, utilizing the point cloud's geometry and distance from the user, the visibility
+    information, and the user's focus point. A combination of these maps results in a final saliency map,
+    indicating the overall significance of each point and therefore quantizing different regions with
+    a different number of bits during the encoding process. The decoder reconstructs the point cloud making
+    use of delta coordinates and solving a sparse linear system. Evaluation studies and comparisons with
+    the geometry-based point cloud compression (G-PCC) algorithm by the Moving Picture Experts Group (MPEG),
+    carried out for a variety of point clouds, demonstrate that the proposed method achieves significantly
+    better results for small bit rates.
+  url: https://arxiv.org/abs/2307.10741
+  pdf_url: https://arxiv.org/pdf/2307.10741v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 2
+citation_year: 2023

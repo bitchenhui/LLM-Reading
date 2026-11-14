@@ -1,0 +1,44 @@
+id: paper:arxiv:2412.18158
+status: skipped
+score: 1
+track: video_image_coding
+matched:
+- ref: concept:LLM
+  count: 2
+  weight: 1
+meta:
+  title: Semantics Disentanglement and Composition for Universal Image Coding with Efficiently LLM Reasoning
+    and Generative Diffusion
+  authors:
+  - Jinming Liu
+  - Yuntao Wei
+  - Junyan Lin
+  - Shengyang Zhao
+  - Heming Sun
+  - Zhibo Chen
+  - Wenjun Zeng
+  - Xin Jin
+  published: '2024-12-24'
+  updated: '2026-05-18'
+  categories:
+  - cs.CV
+  - eess.IV
+  abstract: 'Learned image compression methods have shown impressive performance but are often highly
+    specialized for either human perception or specific machine vision tasks. This specialization limits
+    their versatility and requires costly retraining for new applications. To address this, we introduce
+    UniCodec, a universal codec built on a novel paradigm of semantic disentanglement at the encoder and
+    compositional generation at the decoder. This framework is designed to simultaneously serve both human
+    and machine needs, eliminating the need for task-specific retraining. At the encoder, UniCodec leverages
+    pre-generated, task-specific label codebooks created by a Large Language Model (LLM). For any given
+    task, a grounding model uses the corresponding codebook to perform task-aware disentanglement, compressing
+    only the most relevant image regions. This mechanism not only saves significant bits but is also the
+    key to our system''s rapid, zero-retraining adaptation: switching to a new task is as simple as selecting
+    a new codebook. The decoder then performs compositional generation: it combines the compact, disentangled
+    components with powerful priors from a generative diffusion model. This process reconstructs a high-quality,
+    complete image optimized with rich detail for human perception and precise features for machine vision
+    tasks. Extensive experiments demonstrate that UniCodec consistently outperforms existing methods,
+    effectively bridging the gap between human-centric and machine-centric compression.'
+  url: https://arxiv.org/abs/2412.18158
+  pdf_url: https://arxiv.org/pdf/2412.18158v2
+  version: v2
+fetched: '2026-11-14'

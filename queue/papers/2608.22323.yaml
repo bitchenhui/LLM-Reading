@@ -1,0 +1,42 @@
+id: paper:arxiv:2608.22323
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'MedReaMM: Evaluating Large Multimodal Models on Expert-Level Clinical Diagnostic Synthesis'
+  authors:
+  - Lai Wei
+  - Yuchao Chen
+  - Zhenbiao Cao
+  - Xiaojin Zhang
+  - Zhongyu Wei
+  - Bangting Wang
+  - Wei Chen
+  - Xiang Bai
+  published: '2026-08-23'
+  updated: '2026-08-23'
+  categories:
+  - cs.CV
+  abstract: The application of Large Language Models (LLMs) to diagnostic decision-making has garnered
+    growing interest. However, existing benchmarks largely focus on textual reasoning or isolated visual
+    question-answering (VQA) tasks, lacking holistic integration of clinical narratives and medical imaging,
+    and thus failing to assess the multimodal diagnostic synthesis capability central to expert clinical
+    judgment. To bridge this gap, we introduce MedReaMM, a benchmark specifically designed to evaluate
+    models' ability to synthesize heterogeneous clinical evidence consisting of detailed patient histories
+    alongside multiple medical images into accurate differential diagnoses under a complete-information
+    paradigm. Constructed from case reports sourced from top-tier medical journals and curated clinical
+    case databases, MedReaMM comprises 625 expert-validated cases with an average of 2.79 medical images
+    per case and a total of 1,042 standardized diagnoses annotated with ICD-11 codes. These cases predominantly
+    represent rare, atypical, or multi-system presentations that demand expert-level evidence integration
+    beyond routine pattern recognition. We evaluate 23 Large Multimodal Models (LMMs) and find that most
+    achieve diagnostic accuracy scores below 50%, underscoring a substantial gap in multimodal diagnostic
+    synthesis capability. Further analysis reveals that medical knowledge proficiency, medical image understanding,
+    and evidence integration are all highly correlated with diagnostic performance.
+  url: https://arxiv.org/abs/2608.22323
+  pdf_url: https://arxiv.org/pdf/2608.22323v1
+  version: v1
+fetched: '2026-11-14'

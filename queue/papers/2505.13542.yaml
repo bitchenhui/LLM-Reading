@@ -1,0 +1,52 @@
+id: paper:arxiv:2505.13542
+status: skipped_low_citation
+score: 7
+track: video_image_coding
+matched:
+- ref: codec:AVC
+  count: 1
+  weight: 3
+- ref: dataset:ImageNet
+  count: 1
+  weight: 1
+- ref: metric:FID
+  count: 1
+  weight: 1
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+- ref: metric:SSIM
+  count: 1
+  weight: 1
+meta:
+  title: 'GANCompress: GAN-Enhanced Neural Image Compression with Binary Spherical Quantization'
+  authors:
+  - Karthik Sivakoti
+  published: '2025-05-19'
+  updated: '2025-05-19'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: 'The exponential growth of visual data in digital communications has intensified the need
+    for efficient compression techniques that balance rate-distortion performance with computational feasibility.
+    While recent neural compression approaches have shown promise, they still struggle with fundamental
+    challenges: preserving perceptual quality at high compression ratios, computational efficiency, and
+    adaptability to diverse visual content. This paper introduces GANCompress, a novel neural compression
+    framework that synergistically combines Binary Spherical Quantization (BSQ) with Generative Adversarial
+    Networks (GANs) to address these challenges. Our approach employs a transformer-based autoencoder
+    with an enhanced BSQ bottleneck that projects latent representations onto a hypersphere, enabling
+    efficient discretization with bounded quantization error. This is followed by a specialized GAN architecture
+    incorporating frequency-domain attention and color consistency optimization. Experimental results
+    demonstrate that GANCompress achieves substantial improvement in compression efficiency -- reducing
+    file sizes by up to 100x with minimal visual distortion. Our method outperforms traditional codecs
+    like H.264 by 12-15% in perceptual metrics while maintaining comparable PSNR/SSIM values, with 2.4x
+    faster encoding and decoding speeds. On standard benchmarks including ImageNet-1k and COCO2017, GANCompress
+    sets a new state-of-the-art, reducing FID from 0.72 to 0.41 (43% improvement) compared to previous
+    methods while maintaining higher throughput. This work presents a significant advancement in neural
+    compression technology with promising applications for real-time visual communication systems.'
+  url: https://arxiv.org/abs/2505.13542
+  pdf_url: https://arxiv.org/pdf/2505.13542v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 2
+citation_year: 2025

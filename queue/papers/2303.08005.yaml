@@ -1,0 +1,34 @@
+id: paper:arxiv:2303.08005
+status: skipped
+score: 1
+track: audio_coding
+matched:
+- ref: org:MPEG
+  count: 1
+  weight: 1
+meta:
+  title: Native Multi-Band Audio Coding within Hyper-Autoencoded Reconstruction Propagation Networks
+  authors:
+  - Darius Petermann
+  - Inseon Jang
+  - Minje Kim
+  published: '2023-03-14'
+  updated: '2023-03-14'
+  categories:
+  - eess.AS
+  - cs.SD
+  abstract: Spectral sub-bands do not portray the same perceptual relevance. In audio coding, it is therefore
+    desirable to have independent control over each of the constituent bands so that bitrate assignment
+    and signal reconstruction can be achieved efficiently. In this work, we present a novel neural audio
+    coding network that natively supports a multi-band coding paradigm. Our model extends the idea of
+    compressed skip connections in the U-Net-based codec, allowing for independent control over both core
+    and high band-specific reconstructions and bit allocation. Our system reconstructs the full-band signal
+    mainly from the condensed core-band code, therefore exploiting and showcasing its bandwidth extension
+    capabilities to its fullest. Meanwhile, the low-bitrate high-band code helps the high-band reconstruction
+    similarly to MPEG audio codecs' spectral bandwidth replication. MUSHRA tests show that the proposed
+    model not only improves the quality of the core band by explicitly assigning more bits to it but retains
+    a good quality in the high-band as well.
+  url: https://arxiv.org/abs/2303.08005
+  pdf_url: https://arxiv.org/pdf/2303.08005v1
+  version: v1
+fetched: '2026-11-14'

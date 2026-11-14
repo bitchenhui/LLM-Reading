@@ -1,0 +1,37 @@
+id: paper:arxiv:2407.12295
+status: skipped
+score: 1
+track: video_image_coding
+matched:
+- ref: concept:EntropyModel
+  count: 1
+  weight: 1
+meta:
+  title: Exploiting Inter-Image Similarity Prior for Low-Bitrate Remote Sensing Image Compression
+  authors:
+  - Junhui Li
+  - Xingsong Hou
+  published: '2024-07-17'
+  updated: '2024-07-17'
+  categories:
+  - cs.CV
+  - eess.IV
+  abstract: Deep learning-based methods have garnered significant attention in remote sensing (RS) image
+    compression due to their superior performance. Most of these methods focus on enhancing the coding
+    capability of the compression network and improving entropy model prediction accuracy. However, they
+    typically compress and decompress each image independently, ignoring the significant inter-image similarity
+    prior. In this paper, we propose a codebook-based RS image compression (Code-RSIC) method with a generated
+    discrete codebook, which is deployed at the decoding end of a compression algorithm to provide inter-image
+    similarity prior. Specifically, we first pretrain a high-quality discrete codebook using the competitive
+    generation model VQGAN. We then introduce a Transformer-based prediction model to align the latent
+    features of the decoded images from an existing compression algorithm with the frozen high-quality
+    codebook. Finally, we develop a hierarchical prior integration network (HPIN), which mainly consists
+    of Transformer blocks and multi-head cross-attention modules (MCMs) that can query hierarchical prior
+    from the codebook, thus enhancing the ability of the proposed method to decode texture-rich RS images.
+    Extensive experimental results demonstrate that the proposed Code-RSIC significantly outperforms state-of-the-art
+    traditional and learning-based image compression algorithms in terms of perception quality. The code
+    will be available at \url{https://github.com/mlkk518/Code-RSIC/
+  url: https://arxiv.org/abs/2407.12295
+  pdf_url: https://arxiv.org/pdf/2407.12295v1
+  version: v1
+fetched: '2026-11-14'

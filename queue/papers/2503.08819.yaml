@@ -1,0 +1,45 @@
+id: paper:arxiv:2503.08819
+status: skipped_low_citation
+score: 5
+track: video_image_coding
+matched:
+- ref: codec:HEVC
+  count: 1
+  weight: 3
+- ref: dataset:MCL-JCV
+  count: 1
+  weight: 1
+- ref: dataset:UVG
+  count: 1
+  weight: 1
+meta:
+  title: Residual Learning and Filtering Networks for End-to-End Lossless Video Compression
+  authors:
+  - Md baharul Islam
+  - Afsana Ahsan Jeny
+  published: '2025-03-11'
+  updated: '2025-03-11'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: Existing learning-based video compression methods still face challenges related to inaccurate
+    motion estimates and inadequate motion compensation structures. These issues result in compression
+    errors and a suboptimal rate-distortion trade-off. To address these challenges, this work presents
+    an end-to-end video compression method that incorporates several key operations. Specifically, we
+    propose an autoencoder-type network with a residual skip connection to efficiently compress motion
+    information. Additionally, we design motion vector and residual frame filtering networks to mitigate
+    compression errors in the video compression system. To improve the effectiveness of the motion compensation
+    network, we utilize powerful nonlinear transforms, such as the Parametric Rectified Linear Unit (PReLU),
+    to delve deeper into the motion compensation architecture. Furthermore, a buffer is introduced to
+    fine-tune the previous reference frames, thereby enhancing the reconstructed frame quality. These
+    modules are combined with a carefully designed loss function that assesses the trade-off and enhances
+    the overall video quality of the decoded output. Experimental results showcase the competitive performance
+    of our method on various datasets, including HEVC (sequences B, C, and D), UVG, VTL, and MCL-JCV.
+    The proposed approach tackles the challenges of accurate motion estimation and motion compensation
+    in video compression, and the results highlight its competitive performance compared to existing methods.
+  url: https://arxiv.org/abs/2503.08819
+  pdf_url: https://arxiv.org/pdf/2503.08819v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 0
+citation_year: 2025

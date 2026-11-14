@@ -1,0 +1,45 @@
+id: paper:arxiv:2605.08664
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 2
+  weight: 1
+meta:
+  title: 'IPAD-CLIP: Teaching CLIP to Detect Image Local Perceptual Artifacts'
+  authors:
+  - Juan Wang
+  - Xinyu Sun
+  - Ke Zhang
+  - Jin Wang
+  - Bing Li
+  - Weiming Hu
+  - Liang Wang
+  published: '2026-05-09'
+  updated: '2026-05-09'
+  categories:
+  - cs.CV
+  abstract: Current image quality assessment methods are heavily biased towards global distortions (e.g.,
+    noise, blur), neglecting local perceptual artifacts such as ghosting, lens flare, and moire effects.
+    Although significant progress has been made in artifact removal, the fundamental problem of automatic
+    artifact detection remains largely unexplored. In this paper, we formalize the Image Perceptual Artifact
+    Detection (IPAD) task to address this gap. We contribute a benchmark dataset comprising 3,520 artifact
+    images, including 520 real-captured and 3,000 synthetic samples, each paired with pixel-level masks
+    across three representative artifact categories. The core challenge of IPAD lies in the localized,
+    subtle, and semantically weak nature of these artifacts, which makes them prone to missed detection.
+    To overcome this, we introduce IPAD-CLIP, a novel framework built upon CLIP that enhances artifact
+    discrimination in both textual and visual spaces while preserving generalization capabilities. Our
+    key insight is that local artifacts often exhibit strong correlations with specific semantic contexts.
+    Accordingly, we learn artifact-aware text embeddings to explicitly model the object-artifact relationships,
+    resulting in enhanced representations that clear differentiate between clean and artifact prompts.
+    These text embeddings are then used as anchors to shift the visual encoder's attention from high-level
+    semantics to subtle, low-level artifacts. Extensive experiments demonstrate that IPAD-CLIP offers
+    a resource-efficient adaptation of CLIP for detection, significantly outperforming advanced image
+    anomaly detection and manipulation detection methods on our benchmark. To the best of our knowledge,
+    this is the first study addressing multi-class local perceptual artifact detection in terms of both
+    dataset and model.
+  url: https://arxiv.org/abs/2605.08664
+  pdf_url: https://arxiv.org/pdf/2605.08664v1
+  version: v1
+fetched: '2026-11-14'

@@ -1,0 +1,40 @@
+id: paper:arxiv:2607.26196
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'Rad-JEPA 3D: Radiology Joint-Embedding Predictive Model for 3D Computed Tomography'
+  authors:
+  - Quoc-Huy Trinh
+  - Minh-Van Nguyen
+  - Ulas Bagci
+  published: '2026-07-28'
+  updated: '2026-07-28'
+  categories:
+  - cs.CV
+  abstract: 'Self-supervised pretraining is central to 3D medical image analysis, where unlabeled CT volumes
+    are abundant but expert annotations are scarce. Yet existing volumetric encoders often fail to preserve
+    the coarse spatial and geometric structure that downstream reasoning depends on, limiting their performance
+    on organ disentanglement, abnormality detection, and spatial understanding when paired with language
+    models. We introduce Rad-JEPA 3D, a joint-embedding predictive framework that learns volumetric CT
+    representations by predicting the latent features of a complete scan from a masked view. At its core
+    is a hybrid H-Mamba encoder that fuses a Mamba state-space branch, which models inter-slice continuity
+    through sequential scanning, with a grouped-query attention branch, which captures cross-plane spatial
+    context, combined through a lightweight per-token router. To improve the quality of intermediate representations,
+    we further propose Hidden States Orthogonal Regularization (HSOR), which aligns student-teacher hidden
+    states and reduces feature redundancy throughout the encoder. This layer-wise regularization produces
+    more consistent and discriminative volumetric representations, leading to improved performance on
+    organ recognition and spatial reasoning tasks. Pretrained on approximately 120,000 CT scans, Rad-JEPA
+    3D attains state-of-the-art results despite its compact size: with only 4.0B total parameters, it
+    achieves competitive results with state-of-the-art on closed-ended VQA and the best average spatial-reasoning
+    score on the Spatial-Med benchmark. Ablation studies confirm that the hybrid block and HSOR contribute
+    complementary gains, and that the induced spatial structure can substitute for raw language-model
+    scale on volumetric reasoning tasks.'
+  url: https://arxiv.org/abs/2607.26196
+  pdf_url: https://arxiv.org/pdf/2607.26196v1
+  version: v1
+fetched: '2026-11-14'

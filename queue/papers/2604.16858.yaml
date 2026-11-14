@@ -1,0 +1,47 @@
+id: paper:arxiv:2604.16858
+status: skipped_low_citation
+score: 2
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 3
+  weight: 1
+- ref: concept:TrainingFree
+  count: 1
+  weight: 1
+meta:
+  title: 'Q-DeepSight: Incentivizing Thinking with Images for Image Quality Assessment and Refinement'
+  authors:
+  - Xudong Li
+  - Jiaxi Tan
+  - Ziyin Zhou
+  - Yan Zhong
+  - Zihao Huang
+  - Jingyuan Zheng
+  - Yan Zhang
+  - Xiawu Zheng
+  - Rongrong Ji
+  published: '2026-04-18'
+  updated: '2026-04-18'
+  categories:
+  - cs.CV
+  abstract: 'Image Quality Assessment (IQA) models are increasingly deployed as perceptual critics to
+    guide generative models and image restoration. This role demands not only accurate scores but also
+    actionable, localized feedback. However, current MLLM-based methods adopt a single-look, language-only
+    paradigm, which departs from human evidence-seeking judgment and yields weakly grounded rationales,
+    limiting their reliability for in-the-loop refinement. We propose Q-DeepSight, a think-with-image
+    framework that emulates this human-like process. It performs interleaved Multimodal Chain-of-Thought
+    (iMCoT) with tool-augmented evidence acquisition (e.g., crop-and-zoom) to explicitly determine where
+    quality degrades and why. To train these long iMCoT trajectories via reinforcement learning, we introduce
+    two techniques: Perceptual Curriculum Reward (PCR) to mitigate reward sparsity and Evidence Gradient
+    Filtering (EGF) to improve credit assignment for visually-grounded reasoning. Q-DeepSight achieves
+    state-of-the-art performance across diverse benchmarks, including natural, restored, and AI-generated
+    content. Furthermore, we demonstrate its practical value with Perceptual-in-Generation (PiG), a training-free
+    framework where Q-DeepSight''s diagnoses guide iterative image enhancement, effectively closing the
+    loop between assessment and refinement.'
+  url: https://arxiv.org/abs/2604.16858
+  pdf_url: https://arxiv.org/pdf/2604.16858v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 0
+citation_year: 2026

@@ -1,0 +1,46 @@
+id: paper:arxiv:2506.07468
+status: pending
+score: 2
+track: self_improvement
+matched:
+- ref: concept:LLM
+  count: 2
+  weight: 1
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+meta:
+  title: Chasing Moving Targets with Online Self-Play Reinforcement Learning for Safer Language Models
+  authors:
+  - Mickel Liu
+  - Liwei Jiang
+  - Yancheng Liang
+  - Simon Shaolei Du
+  - Yejin Choi
+  - Tim Althoff
+  - Natasha Jaques
+  published: '2025-06-09'
+  updated: '2026-07-06'
+  categories:
+  - cs.LG
+  - cs.CL
+  - cs.MA
+  abstract: 'Conventional large language model (LLM) safety alignment relies on a reactive, disjoint loop:
+    attackers exploit a static model, then defenders patch exposed vulnerabilities. This sequential setup
+    leads to attackers overfitting obsolete exploits while defenders perpetually lag behind emerging threats.
+    To address this, we introduce Self-RedTeam, the first fully online self-play multi-agent reinforcement
+    learning (MARL) algorithm that continuously co-evolves attacker and defender for robust safety alignment.
+    A single policy self-plays as both attacker and defender, generating adversarial prompts and defending
+    against them, with a reward model adjudicating outcomes. Each role uses hidden chain-of-thought for
+    strategic planning. Grounded in two-player zero-sum game theory, we establish a theoretical safety
+    guarantee: if the game converges to Nash Equilibrium, the defender produces safe responses against
+    any adversarial input. Empirically, Self-RedTeam generalizes across five models from the Llama and
+    Qwen families, uncovering more diverse attacks (+17.80% SBERT) and improving safety of RLHF-trained
+    models by up to 95% across 14 benchmarks. Our work motivates a shift from reactive patching to proactive
+    co-evolution, enabling LLM safety self-improvement via online self-play MARL. Link to code: https://github.com/mickelliu/selfplay-redteaming'
+  url: https://arxiv.org/abs/2506.07468
+  pdf_url: https://arxiv.org/pdf/2506.07468v4
+  version: v4
+fetched: '2026-11-14'
+citation_count: 48
+citation_year: 2025

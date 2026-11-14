@@ -1,0 +1,40 @@
+id: paper:arxiv:2501.10325
+status: skipped
+score: 1
+track: processing_enhancement
+matched:
+- ref: concept:SuperResolution
+  count: 1
+  weight: 1
+meta:
+  title: 'DiffStereo: High-Frequency Aware Diffusion Model for Stereo Image Restoration'
+  authors:
+  - Huiyun Cao
+  - Yuan Shi
+  - Bin Xia
+  - Xiaoyu Jin
+  - Wenming Yang
+  published: '2025-01-17'
+  updated: '2025-01-17'
+  categories:
+  - cs.CV
+  abstract: Diffusion models (DMs) have achieved promising performance in image restoration but haven't
+    been explored for stereo images. The application of DM in stereo image restoration is confronted with
+    a series of challenges. The need to reconstruct two images exacerbates DM's computational cost. Additionally,
+    existing latent DMs usually focus on semantic information and remove high-frequency details as redundancy
+    during latent compression, which is precisely what matters for image restoration. To address the above
+    problems, we propose a high-frequency aware diffusion model, DiffStereo for stereo image restoration
+    as the first attempt at DM in this domain. Specifically, DiffStereo first learns latent high-frequency
+    representations (LHFR) of HQ images. DM is then trained in the learned space to estimate LHFR for
+    stereo images, which are fused into a transformer-based stereo image restoration network providing
+    beneficial high-frequency information of corresponding HQ images. The resolution of LHFR is kept the
+    same as input images, which preserves the inherent texture from distortion. And the compression in
+    channels alleviates the computational burden of DM. Furthermore, we devise a position encoding scheme
+    when integrating the LHFR into the restoration network, enabling distinctive guidance in different
+    depths of the restoration network. Comprehensive experiments verify that by combining generative DM
+    and transformer, DiffStereo achieves both higher reconstruction accuracy and better perceptual quality
+    on stereo super-resolution, deblurring, and low-light enhancement compared with state-of-the-art methods.
+  url: https://arxiv.org/abs/2501.10325
+  pdf_url: https://arxiv.org/pdf/2501.10325v1
+  version: v1
+fetched: '2026-11-14'

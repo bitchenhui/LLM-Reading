@@ -1,0 +1,46 @@
+id: paper:arxiv:2606.29333
+status: pending
+score: 2
+track: immersive_media
+matched:
+- ref: concept:VolumetricVideo
+  count: 2
+  weight: 1
+- ref: concept:3DGS
+  count: 1
+  weight: 1
+meta:
+  title: 'HiReFF: High-Resolution Feedforward Human Reconstruction from Uncalibrated Sparse-View Video'
+  authors:
+  - Yiming Jiang
+  - Hanzhang Tu
+  - Wenfeng Song
+  - Siyou Lin
+  - Liang An
+  - Shuai Li
+  - Aimin Hao
+  - Yebin Liu
+  published: '2026-06-28'
+  updated: '2026-06-28'
+  categories:
+  - cs.CV
+  abstract: 'Uncalibrated volumetric video streaming for human reconstruction is essential for holographic
+    communication and AR/VR, yet remains challenging due to the need for temporal consistency and computational
+    efficiency from sparse-view inputs. Existing methods rely on per-scene optimization or calibrated
+    cameras, while recent feed-forward models are limited to low-resolution (0.5K) single-frame synthesis.
+    We present HiReFF, a feed-forward method for 2K-resolution 360° human video reconstruction from uncalibrated
+    sparse-view videos. Our framework decomposes the problem into two key tasks: foreground 3D Gaussian
+    reconstruction from sparse-view videos (four views separated by 90°) and computationally efficient
+    high-resolution synthesis. To enable the former, we propose Scale-synchronized Camera Calibration
+    to resolve scale ambiguity for multi-view supervision, and Gaussian-wise Foreground Masking to reconstruct
+    clean foregrounds by modulating Gaussian parameters. For efficient high-resolution synthesis, our
+    High-resolution Side-tuning achieves 2K rendering by augmenting the Gaussian head with supplementary
+    features while keeping the backbone at 0.5K, drastically reducing computational overhead. Experiments
+    demonstrate that HiReFF significantly outperforms existing methods in high-resolution streaming volumetric
+    video reconstruction. https://iridescentjiang.github.io/HiReFF'
+  url: https://arxiv.org/abs/2606.29333
+  pdf_url: https://arxiv.org/pdf/2606.29333v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 1
+citation_year: 2026

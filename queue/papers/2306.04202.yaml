@@ -1,0 +1,40 @@
+id: paper:arxiv:2306.04202
+status: skipped
+score: 2
+track: video_image_coding
+matched:
+- ref: metric:BD-Rate
+  count: 1
+  weight: 1
+- ref: metric:FPS
+  count: 1
+  weight: 1
+meta:
+  title: Video Compression with Arbitrary Rescaling Network
+  authors:
+  - Mengxi Guo
+  - Shijie Zhao
+  - Hao Jiang
+  - Junlin Li
+  - Li Zhang
+  published: '2023-06-07'
+  updated: '2023-06-07'
+  categories:
+  - cs.MM
+  - cs.CV
+  - eess.IV
+  abstract: Most video platforms provide video streaming services with different qualities, and the quality
+    of the services is usually adjusted by the resolution of the videos. So high-resolution videos need
+    to be downsampled for compression. In order to solve the problem of video coding at different resolutions,
+    we propose a rate-guided arbitrary rescaling network (RARN) for video resizing before encoding. To
+    help the RARN be compatible with standard codecs and generate compression-friendly results, an iteratively
+    optimized transformer-based virtual codec (TVC) is introduced to simulate the key components of video
+    encoding and perform bitrate estimation. By iteratively training the TVC and the RARN, we achieved
+    5%-29% BD-Rate reduction anchored by linear interpolation under different encoding configurations
+    and resolutions, exceeding the previous methods on most test videos. Furthermore, the lightweight
+    RARN structure can process FHD (1080p) content at real-time speed (91 FPS) and obtain a considerable
+    rate reduction.
+  url: https://arxiv.org/abs/2306.04202
+  pdf_url: https://arxiv.org/pdf/2306.04202v1
+  version: v1
+fetched: '2026-11-14'

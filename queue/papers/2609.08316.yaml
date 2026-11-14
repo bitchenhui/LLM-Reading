@@ -1,0 +1,45 @@
+id: paper:arxiv:2609.08316
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 3
+  weight: 1
+meta:
+  title: 'From Glance to Scrutiny: Progressive Distortion Reasoning for Fine-Grained Image Quality Assessment'
+  authors:
+  - Aoting Zhang
+  - Mingze Gao
+  - Dongbao Yang
+  - Longyi Chen
+  - Daoxin Zhang
+  - Yi Wu
+  - Yao Hu
+  - Yu Zhou
+  published: '2026-09-08'
+  updated: '2026-09-08'
+  categories:
+  - cs.CV
+  abstract: 'Multi-modal large language models (MLLMs) have demonstrated significant potential in image
+    quality assessment (IQA) by bridging visual perception with descriptive evaluations. However, existing
+    approaches mainly focus on holistic quality prediction, often functioning as black boxes that provide
+    limited insight into where distortions occur and how they affect perceived quality, hindering fine-grained
+    analysis of localized and heterogeneous degradations. We propose GS-IQA, a framework that reformulates
+    IQA as a progressive Where--What--How diagnosis, emulating the human perceptual process from an initial
+    glance to closer scrutiny. Since a severity judgment is meaningful only for a correctly localized
+    and recognized region, we realize this progression through a two-stage reinforcement learning paradigm
+    that respects such dependencies: the glance stage uses a perception-gated reward to establish where
+    degradations lie and what they are, activating severity feedback only once both are correct, while
+    the scrutiny stage introduces online reward-conditioned degradation generation to synthesize hard
+    examples targeted at the model''s perceptual bottlenecks, sharpening its discrimination of subtle
+    severity variations. To enable systematic evaluation, we construct Diag-Bench, a region-level IQA
+    benchmark of about 25K curated samples spanning 12 distortion types and five ordinal severity levels.
+    Extensive experiments show that GS-IQA consistently surpasses state-of-the-art methods in distortion
+    localization, recognition, and severity estimation, and that its diagnostic representations transfer
+    effectively to conventional global quality prediction across diverse external benchmarks. Code and
+    data will be released.'
+  url: https://arxiv.org/abs/2609.08316
+  pdf_url: https://arxiv.org/pdf/2609.08316v1
+  version: v1
+fetched: '2026-11-14'

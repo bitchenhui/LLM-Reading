@@ -1,0 +1,37 @@
+id: paper:arxiv:2509.04575
+status: skipped
+score: 1
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+meta:
+  title: Bootstrapping Task Spaces for Self-Improvement
+  authors:
+  - Minqi Jiang
+  - Andrei Lupu
+  - Yoram Bachrach
+  published: '2025-09-04'
+  updated: '2026-02-22'
+  categories:
+  - cs.LG
+  abstract: Progress in many task domains emerges from repeated revisions to previous solution attempts.
+    Training agents that can reliably self-improve over such sequences at inference-time is a natural
+    target for reinforcement learning (RL), yet the naive approach assumes a fixed maximum iteration depth,
+    which can be both costly and arbitrary. We present Exploratory Iteration (ExIt), a family of autocurriculum
+    RL methods that directly exploits the recurrent structure of self-improvement tasks to train LLMs
+    to perform multi-step self-improvement at inference-time while only training on the most informative
+    single-step iterations. ExIt grows a task space by selectively sampling the most informative intermediate,
+    partial histories encountered during an episode for continued iteration, treating these starting points
+    as new self-iteration task instances to train a self-improvement policy. ExIt can further pair with
+    explicit exploration mechanisms to sustain greater task diversity. Across several domains, encompassing
+    competition math, multi-turn tool-use, and machine learning engineering, we demonstrate that ExIt
+    strategies, starting from either a single or many task instances, can produce policies exhibiting
+    strong inference-time self-improvement on held-out task instances, and the ability to iterate towards
+    higher performance over a step budget extending beyond the average iteration depth encountered during
+    training.
+  url: https://arxiv.org/abs/2509.04575
+  pdf_url: https://arxiv.org/pdf/2509.04575v3
+  version: v3
+fetched: '2026-11-14'

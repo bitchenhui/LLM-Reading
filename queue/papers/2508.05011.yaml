@@ -1,0 +1,51 @@
+id: paper:arxiv:2508.05011
+status: skipped
+score: 1
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+meta:
+  title: 'Towards Hallucination-Free Music: A Reinforcement Learning Preference Optimization Framework
+    for Reliable Song Generation'
+  authors:
+  - Huaicheng Zhang
+  - Wei Tan
+  - Guangzheng Li
+  - Yixuan Zhang
+  - Hangting Chen
+  - Shun Lei
+  - Chenyu Yang
+  - Zhiyong Wu
+  - Shuai Wang
+  - Qijun Huang
+  - Dong Yu
+  published: '2025-08-07'
+  updated: '2025-08-07'
+  categories:
+  - cs.SD
+  - cs.AI
+  - eess.AS
+  abstract: 'Recent advances in audio-based generative language models have accelerated AI-driven lyric-to-song
+    generation. However, these models frequently suffer from content hallucination, producing outputs
+    misaligned with the input lyrics and undermining musical coherence. Current supervised fine-tuning
+    (SFT) approaches, limited by passive label-fitting, exhibit constrained self-improvement and poor
+    hallucination mitigation. To address this core challenge, we propose a novel reinforcement learning
+    (RL) framework leveraging preference optimization for hallucination control. Our key contributions
+    include: (1) Developing a robust hallucination preference dataset constructed via phoneme error rate
+    (PER) computation and rule-based filtering to capture alignment with human expectations; (2) Implementing
+    and evaluating three distinct preference optimization strategies within the RL framework: Direct Preference
+    Optimization (DPO), Proximal Policy Optimization (PPO), and Group Relative Policy Optimization (GRPO).
+    DPO operates off-policy to enhance positive token likelihood, achieving a significant 7.4% PER reduction.
+    PPO and GRPO employ an on-policy approach, training a PER-based reward model to iteratively optimize
+    sequences via reward maximization and KL-regularization, yielding PER reductions of 4.9% and 4.7%,
+    respectively. Comprehensive objective and subjective evaluations confirm that our methods effectively
+    suppress hallucinations while preserving musical quality. Crucially, this work presents a systematic,
+    RL-based solution to hallucination control in lyric-to-song generation. The framework''s transferability
+    also unlocks potential for music style adherence and musicality enhancement, opening new avenues for
+    future generative song research.'
+  url: https://arxiv.org/abs/2508.05011
+  pdf_url: https://arxiv.org/pdf/2508.05011v1
+  version: v1
+fetched: '2026-11-14'

@@ -1,0 +1,49 @@
+id: paper:arxiv:2401.12587
+status: skipped
+score: 2
+track: video_image_coding
+matched:
+- ref: concept:INR
+  count: 2
+  weight: 1
+- ref: concept:Hyperprior
+  count: 1
+  weight: 1
+meta:
+  title: An Efficient Implicit Neural Representation Image Codec Based on Mixed Autoregressive Model for
+    Low-Complexity Decoding
+  authors:
+  - Xiang Liu
+  - Jiahong Chen
+  - Bin Chen
+  - Zimo Liu
+  - Baoyi An
+  - Shu-Tao Xia
+  - Zhi Wang
+  published: '2024-01-23'
+  updated: '2024-06-07'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: 'Displaying high-quality images on edge devices, such as augmented reality devices, is essential
+    for enhancing the user experience. However, these devices often face power consumption and computing
+    resource limitations, making it challenging to apply many deep learning-based image compression algorithms
+    in this field. Implicit Neural Representation (INR) for image compression is an emerging technology
+    that offers two key benefits compared to cutting-edge autoencoder models: low computational complexity
+    and parameter-free decoding. It also outperforms many traditional and early neural compression methods
+    in terms of quality. In this study, we introduce a new Mixed AutoRegressive Model (MARM) to significantly
+    reduce the decoding time for the current INR codec, along with a new synthesis network to enhance
+    reconstruction quality. MARM includes our proposed AutoRegressive Upsampler (ARU) blocks, which are
+    highly computationally efficient, and ARM from previous work to balance decoding time and reconstruction
+    quality. We also propose enhancing ARU''s performance using a checkerboard two-stage decoding strategy.
+    Moreover, the ratio of different modules can be adjusted to maintain a balance between quality and
+    speed. Comprehensive experiments demonstrate that our method significantly improves computational
+    efficiency while preserving image quality. With different parameter settings, our method can achieve
+    over a magnitude acceleration in decoding time without industrial level optimization, or achieve state-of-the-art
+    reconstruction quality compared with other INR codecs. To the best of our knowledge, our method is
+    the first INR-based codec comparable with Hyperprior in both decoding speed and quality while maintaining
+    low complexity.'
+  url: https://arxiv.org/abs/2401.12587
+  pdf_url: https://arxiv.org/pdf/2401.12587v2
+  version: v2
+fetched: '2026-11-14'

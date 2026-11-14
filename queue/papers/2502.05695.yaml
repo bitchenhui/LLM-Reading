@@ -1,0 +1,49 @@
+id: paper:arxiv:2502.05695
+status: pending
+score: 5
+track: streaming_delivery
+matched:
+- ref: impl:FFmpeg
+  count: 1
+  weight: 3
+- ref: concept:QoE
+  count: 3
+  weight: 1
+- ref: concept:ABR
+  count: 2
+  weight: 1
+meta:
+  title: Semantic-Aware Adaptive Video Streaming Using Latent Diffusion Models for Wireless Networks
+  authors:
+  - Zijiang Yan
+  - Jianhua Pei
+  - Hongda Wu
+  - Hina Tabassum
+  - Ping Wang
+  published: '2025-02-08'
+  updated: '2025-08-01'
+  categories:
+  - cs.MM
+  - cs.AI
+  - cs.CV
+  - cs.LG
+  - eess.IV
+  abstract: This paper proposes a novel Semantic Communication (SemCom) framework for real-time adaptive-bitrate
+    video streaming by integrating Latent Diffusion Models (LDMs) within the FFmpeg techniques. This solution
+    addresses the challenges of high bandwidth usage, storage inefficiencies, and quality of experience
+    (QoE) degradation associated with traditional Constant Bitrate Streaming (CBS) and Adaptive Bitrate
+    Streaming (ABS). The proposed approach leverages LDMs to compress I-frames into a latent space, offering
+    significant storage and semantic transmission savings without sacrificing high visual quality. While
+    retaining B-frames and P-frames as adjustment metadata to support efficient refinement of video reconstruction
+    at the user side, the proposed framework further incorporates state-of-the-art denoising and Video
+    Frame Interpolation (VFI) techniques. These techniques mitigate semantic ambiguity and restore temporal
+    coherence between frames, even in noisy wireless communication environments. Experimental results
+    demonstrate the proposed method achieves high-quality video streaming with optimized bandwidth usage,
+    outperforming state-of-the-art solutions in terms of QoE and resource efficiency. This work opens
+    new possibilities for scalable real-time video streaming in 5G and future post-5G networks.
+  url: https://arxiv.org/abs/2502.05695
+  pdf_url: https://arxiv.org/pdf/2502.05695v3
+  version: v3
+fetched: '2026-11-14'
+citation_count: 19
+citation_year: 2025

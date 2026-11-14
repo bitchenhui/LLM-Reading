@@ -1,0 +1,37 @@
+id: paper:arxiv:2511.08440
+status: skipped
+score: 1
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+meta:
+  title: Coherence Mechanisms for Provable Self-Improvement
+  authors:
+  - Mehryar Mohri
+  - Jon Schneider
+  - Yifan Wu
+  published: '2025-11-11'
+  updated: '2025-11-11'
+  categories:
+  - cs.LG
+  abstract: Self-improvement is a critical capability for large language models and other intelligent
+    systems, enabling them to refine their behavior and internal consistency without external supervision.
+    Despite its importance, prior approaches largely rely on empirical heuristics and lack formal guarantees.
+    In this paper, we propose a principled framework for self-improvement based on the concept of \emph{coherence},
+    which requires that a model's outputs remain consistent under task-preserving transformations of the
+    input. We formalize this concept using projection-based mechanisms that update a baseline model to
+    be coherent while remaining as close as possible to its original behavior. We provide rigorous theoretical
+    guarantees that these mechanisms achieve \emph{monotonic improvement}, measured by a reduction in
+    expected Bregman divergence. Our analysis is comprehensive, covering both \emph{direct} and \emph{two-step}
+    projection methods, and robustly extends these guarantees to non-realizable settings, empirical (finite-sample)
+    distributions, and relaxed coherence constraints. Furthermore, we establish a general \emph{characterization
+    theorem}, showing that any mechanism with similar provable improvement guarantees must inherently
+    conform to a coherence-based structure. This culminates in rigidity results under the demand for universal
+    improvement, establishing coherence as a fundamental and, in a formal sense, necessary principle for
+    provable self-improvement.
+  url: https://arxiv.org/abs/2511.08440
+  pdf_url: https://arxiv.org/pdf/2511.08440v1
+  version: v1
+fetched: '2026-11-14'

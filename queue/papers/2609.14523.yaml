@@ -1,0 +1,41 @@
+id: paper:arxiv:2609.14523
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: Selective Tool Use for Agentic Change Visual Question Answering in Remote Sensing
+  authors:
+  - Yakoub Bazi
+  - Mohamad M. Al Rahhal
+  - Mohamed A. Mekhtiche
+  - Mansour Zuair
+  published: '2026-09-13'
+  updated: '2026-09-13'
+  categories:
+  - cs.CV
+  abstract: Change visual question answering (Change VQA) requires understanding semantic changes across
+    bi-temporal remote sensing images. Although vision language models (VLMs) have shown promising performance
+    on this task, they remain unreliable when answering questions that require explicit transition statistics,
+    area measurements, or spatial information. To address this limitation, we propose a selective tool
+    use framework in which a single VLM either answers directly or invokes a deterministic change analysis
+    tool to obtain question specific evidence. Specifically, the selected tool operates on bi-temporal
+    semantic maps and returns a structured observation, which the same VLM uses to generate its final
+    answer. To support this framework, we construct a tool augmented extension of CDVQA covering eight
+    question families and three tools for transition, spatial, and temporal analysis. Tool use supervision
+    and observations are derived automatically from the original semantic annotations, without additional
+    manual labeling. We then adapt Qwen3.5-4B using Low Rank Adaptation (LoRA) to jointly learn direct
+    answering, tool invocation, and evidence conditioned answering. Experiments on 7,164 test questions
+    show that selective tool use with reference semantic maps improves overall accuracy from 73.77% to
+    88.79% and average family accuracy from 69.11% to 89.65%. When the semantic maps are predicted automatically,
+    the framework achieves 77.47% overall accuracy and 75.06% average family accuracy. These results demonstrate
+    the benefit of question-specific semantic evidence for Change VQA, while highlighting the influence
+    of semantic prediction quality on the resulting performance. Code and tool-augmented annotations will
+    be made publicly available at https://github.com/yakoubbazi/ToolChangeVQA.
+  url: https://arxiv.org/abs/2609.14523
+  pdf_url: https://arxiv.org/pdf/2609.14523v1
+  version: v1
+fetched: '2026-11-14'

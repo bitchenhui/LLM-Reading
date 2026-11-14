@@ -1,0 +1,37 @@
+id: paper:arxiv:2509.21968
+status: skipped
+score: 1
+track: audio_coding
+matched:
+- ref: concept:NeuralAudioCodec
+  count: 1
+  weight: 1
+meta:
+  title: 'AUV: Teaching Audio Universal Vector Quantization with Single Nested Codebook'
+  authors:
+  - Yushen Chen
+  - Kai Hu
+  - Long Zhou
+  - Shulin Feng
+  - Xusheng Yang
+  - Hangting Chen
+  - Xie Chen
+  published: '2025-09-26'
+  updated: '2025-09-26'
+  categories:
+  - eess.AS
+  - cs.SD
+  abstract: We propose AUV, a unified neural audio codec with a single codebook, which enables a favourable
+    reconstruction of speech and further extends to general audio, including vocal, music, and sound.
+    AUV is capable of tackling any 16 kHz mixed-domain audio segment at bit rates around 700 bps. To accomplish
+    this, we guide the matryoshka codebook with nested domain-specific partitions, assigned with corresponding
+    teacher models to perform distillation, all in a single-stage training. A conformer-style encoder-decoder
+    architecture with STFT features as audio representation is employed, yielding better audio quality.
+    Comprehensive evaluations demonstrate that AUV exhibits comparable audio reconstruction ability to
+    state-of-the-art domain-specific single-layer quantizer codecs, showcasing the potential of audio
+    universal vector quantization with a single codebook. The pre-trained model and demo samples are available
+    at https://swivid.github.io/AUV/.
+  url: https://arxiv.org/abs/2509.21968
+  pdf_url: https://arxiv.org/pdf/2509.21968v1
+  version: v1
+fetched: '2026-11-14'

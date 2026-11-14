@@ -1,0 +1,40 @@
+id: paper:arxiv:2503.17907
+status: skipped
+score: 1
+track: video_image_coding
+matched:
+- ref: concept:ICM
+  count: 3
+  weight: 1
+meta:
+  title: Guided Diffusion for the Extension of Machine Vision to Human Visual Perception
+  authors:
+  - Takahiro Shindo
+  - Yui Tatsumi
+  - Taiju Watanabe
+  - Hiroshi Watanabe
+  published: '2025-03-23'
+  updated: '2025-03-23'
+  categories:
+  - cs.CV
+  - eess.IV
+  abstract: Image compression technology eliminates redundant information to enable efficient transmission
+    and storage of images, serving both machine vision and human visual perception. For years, image coding
+    focused on human perception has been well-studied, leading to the development of various image compression
+    standards. On the other hand, with the rapid advancements in image recognition models, image compression
+    for AI tasks, known as Image Coding for Machines (ICM), has gained significant importance. Therefore,
+    scalable image coding techniques that address the needs of both machines and humans have become a
+    key area of interest. Additionally, there is increasing demand for research applying the diffusion
+    model, which can generate human-viewable images from a small amount of data to image compression methods
+    for human vision. Image compression methods that use diffusion models can partially reconstruct the
+    target image by guiding the generation process with a small amount of conditioning information. Inspired
+    by the diffusion model's potential, we propose a method for extending machine vision to human visual
+    perception using guided diffusion. Utilizing the diffusion model guided by the output of the ICM method,
+    we generate images for human perception from random noise. Guided diffusion acts as a bridge between
+    machine vision and human vision, enabling transitions between them without any additional bitrate
+    overhead. The generated images then evaluated based on bitrate and image quality, and we compare their
+    compression performance with other scalable image coding methods for humans and machines.
+  url: https://arxiv.org/abs/2503.17907
+  pdf_url: https://arxiv.org/pdf/2503.17907v1
+  version: v1
+fetched: '2026-11-14'

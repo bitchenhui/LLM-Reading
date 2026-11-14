@@ -1,0 +1,55 @@
+id: paper:arxiv:2606.25905
+status: pending
+score: 2
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: 'SurgAtlas: A Large-Scale Surgical Video-Language Dataset with 2,391 Hours of Open and Minimally
+    Invasive Surgery'
+  authors:
+  - Filippos Bellos
+  - Andre S. Gala-Garza
+  - Miaowei Wang
+  - Alyssa M. Hardin
+  - Ahmad M. Hider
+  - Li Yayuan
+  - Jing Bi
+  - Susan Liang
+  - Chenliang Xu
+  - Donald S. Likosky
+  - Jason J. Corso
+  published: '2026-06-24'
+  updated: '2026-09-02'
+  categories:
+  - cs.CV
+  abstract: 'We introduce SurgAtlas, the largest surgical video-language dataset to date, comprising 15,291
+    videos (2,391 hours) spanning 18 surgical specialties and over 5,000 procedure types, sourced entirely
+    from publicly available YouTube content. SurgAtlas is also the first surgical video-language dataset
+    to include open surgery at scale, with 6,182 open procedure videos alongside over 9,000 minimally
+    invasive recordings, and the first to establish standardized benchmarks for open-surgery video understanding.
+    We additionally provide an expert-validated subset with verified visual question-answer pairs across
+    diverse open and minimally invasive procedures, serving as a clinically grounded benchmark for surgical
+    reasoning. Compared with existing surgical video-language datasets, SurgAtlas provides one of the
+    most diverse annotation schemas, combining segment-level captions, step- and phase-level descriptions,
+    video-level surgical descriptions, and reasoning-oriented question-answer pairs organized within a
+    hierarchical taxonomy. These annotations are constructed through an automated multi-tier pipeline
+    with LLM-based enrichment and a staged VQA generation framework with explicit groundedness verification.
+    The scale and diversity of SurgAtlas enable training surgical foundation models with broad procedural
+    coverage: we finetune Qwen3-VL-8B through a two-stage captioning-then-instruction pipeline and achieve
+    competitive or state-of-the-art results on multiple established surgical benchmarks, including phase
+    recognition, triplet detection, and reasoning question answering. More broadly, SurgAtlas provides
+    a large native public video corpus that can support future large-scale pretraining of multimodal surgical
+    AI systems and contribute to the development of next-generation foundation models for surgery. Dataset
+    publicly available at https://huggingface.co/datasets/filbel/SurgAtlas'
+  url: https://arxiv.org/abs/2606.25905
+  pdf_url: https://arxiv.org/pdf/2606.25905v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 4
+citation_year: 2026

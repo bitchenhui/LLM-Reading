@@ -1,0 +1,50 @@
+id: paper:arxiv:2503.23052
+status: pending
+score: 5
+track: video_image_coding
+matched:
+- ref: codec:VVC
+  count: 1
+  weight: 3
+- ref: concept:EntropyModel
+  count: 1
+  weight: 1
+- ref: metric:BD-Rate
+  count: 1
+  weight: 1
+meta:
+  title: 'ShiftLIC: Lightweight Learned Image Compression with Spatial-Channel Shift Operations'
+  authors:
+  - Youneng Bao
+  - Wen Tan
+  - Chuanmin Jia
+  - Mu Li
+  - Yongsheng Liang
+  - Yonghong Tian
+  published: '2025-03-29'
+  updated: '2025-03-29'
+  categories:
+  - eess.IV
+  abstract: Learned Image Compression (LIC) has attracted considerable attention due to their outstanding
+    rate-distortion (R-D) performance and flexibility. However, the substantial computational cost poses
+    challenges for practical deployment. The issue of feature redundancy in LIC is rarely addressed. Our
+    findings indicate that many features within the LIC backbone network exhibit similarities. This paper
+    introduces ShiftLIC, a novel and efficient LIC framework that employs parameter-free shift operations
+    to replace large-kernel convolutions, significantly reducing the model's computational burden and
+    parameter count. Specifically, we propose the Spatial Shift Block (SSB), which combines shift operations
+    with small-kernel convolutions to replace large-kernel. This approach maintains feature extraction
+    efficiency while reducing both computational complexity and model size. To further enhance the representation
+    capability in the channel dimension, we propose a channel attention module based on recursive feature
+    fusion. This module enhances feature interaction while minimizing computational overhead. Additionally,
+    we introduce an improved entropy model integrated with the SSB module, making the entropy estimation
+    process more lightweight and thereby comprehensively reducing computational costs. Experimental results
+    demonstrate that ShiftLIC outperforms leading compression methods, such as VVC Intra and GMM, in terms
+    of computational cost, parameter count, and decoding latency. Additionally, ShiftLIC sets a new SOTA
+    benchmark with a BD-rate gain per MACs/pixel of -102.6\%, showcasing its potential for practical deployment
+    in resource-constrained environments. The code is released at https://github.com/baoyu2020/ShiftLIC.
+  url: https://arxiv.org/abs/2503.23052
+  pdf_url: https://arxiv.org/pdf/2503.23052v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 13
+citation_year: 2025

@@ -1,0 +1,45 @@
+id: paper:arxiv:2609.13296
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: Harnessing Image Question Dependence for Better VLM Test-time Reinforcement Learning
+  authors:
+  - Xinrui He
+  - Ting-Wei Li
+  - Junting Wang
+  - Mengting Ai
+  - Xinyu He
+  - Hanghang Tong
+  - Jingrui He
+  published: '2026-09-09'
+  updated: '2026-09-09'
+  categories:
+  - cs.CV
+  - cs.LG
+  abstract: Test-time reinforcement learning can adapt vision-language models (VLMs) to unlabeled target
+    data, but its effectiveness is fundamentally limited by the reliability of self-generated learning
+    signals. To assess the reliability of consensus-based learning signals, we analyze VLM test-time reinforcement
+    learning across diverse VQA datasets and model sizes, revealing two limitations. First, gains from
+    consensus-based test-time training largely come from answer normalization rather than content correction.
+    Second, many initial VLM responses are incorrect due to the model's limited ability to jointly use
+    the image and the question; consensus rewards derived from these outputs may preserve the resulting
+    grounding errors rather than correct them. Motivated by these, we propose TTIQ, a test-time reinforcement
+    learning framework that harnesses image-question dependence for better vlm adaptation. TTIQ teacher-forces
+    each sampled response under the original image-question pair and its image- and question-ablated variants,
+    using the resulting token-level likelihood changes to estimate dependence on each input. It combines
+    image and question dependence with calibrated confidence to construct a response-level reward that
+    favors jointly grounded responses, and uses the token-level signals to assign greater positive policy
+    credit to tokens supported by both inputs. This design favors responses that are jointly grounded
+    in the image and the question and sufficiently confident, rather than merely popular. Experiments
+    across eight VQA datasets and multiple VLM sizes show that TTIQ achieves the best average performance
+    at every model scale. It further generalizes across VLM families, while models trained on one dataset
+    improve performance on unseen datasets without further training.
+  url: https://arxiv.org/abs/2609.13296
+  pdf_url: https://arxiv.org/pdf/2609.13296v1
+  version: v1
+fetched: '2026-11-14'

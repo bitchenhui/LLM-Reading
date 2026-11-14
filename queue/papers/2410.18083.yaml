@@ -1,0 +1,47 @@
+id: paper:arxiv:2410.18083
+status: skipped_low_citation
+score: 3
+track: video_image_coding
+matched:
+- ref: concept:SuperResolution
+  count: 2
+  weight: 1
+- ref: metric:BD-Rate
+  count: 1
+  weight: 1
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+meta:
+  title: 'FIPER: Factorized Features for Robust Image Super-Resolution and Compression'
+  authors:
+  - Yang-Che Sun
+  - Cheng Yu Yeo
+  - Ernie Chu
+  - Jun-Cheng Chen
+  - Yu-Lun Liu
+  published: '2024-10-23'
+  updated: '2025-11-01'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: 'In this work, we propose using a unified representation, termed Factorized Features, for
+    low-level vision tasks, where we test on Single Image Super-Resolution (SISR) and \textbf{Image Compression}.
+    Motivated by the shared principles between these tasks, they require recovering and preserving fine
+    image details, whether by enhancing resolution for SISR or reconstructing compressed data for Image
+    Compression. Unlike previous methods that mainly focus on network architecture, our proposed approach
+    utilizes a basis-coefficient decomposition as well as an explicit formulation of frequencies to capture
+    structural components and multi-scale visual features in images, which addresses the core challenges
+    of both tasks. We replace the representation of prior models from simple feature maps with Factorized
+    Features to validate the potential for broad generalizability. In addition, we further optimize the
+    compression pipeline by leveraging the mergeable-basis property of our Factorized Features, which
+    consolidates shared structures on multi-frame compression. Extensive experiments show that our unified
+    representation delivers state-of-the-art performance, achieving an average relative improvement of
+    204.4% in PSNR over the baseline in Super-Resolution (SR) and 9.35% BD-rate reduction in Image Compression
+    compared to the previous SOTA. Project page: https://jayisaking.github.io/FIPER/'
+  url: https://arxiv.org/abs/2410.18083
+  pdf_url: https://arxiv.org/pdf/2410.18083v4
+  version: v4
+fetched: '2026-11-14'
+citation_count: 1
+citation_year: 2024

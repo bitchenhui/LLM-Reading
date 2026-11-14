@@ -1,0 +1,47 @@
+id: paper:arxiv:2507.14454
+status: pending
+score: 3
+track: streaming_delivery
+matched:
+- ref: concept:3DGS
+  count: 4
+  weight: 1
+- ref: concept:ABR
+  count: 2
+  weight: 1
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'Adaptive 3D Gaussian Splatting Video Streaming: Visual Saliency-Aware Tiling and Meta-Learning-Based
+    Bitrate Adaptation'
+  authors:
+  - Han Gong
+  - Qiyue Li
+  - Jie Li
+  - Zhi Liu
+  published: '2025-07-19'
+  updated: '2025-07-19'
+  categories:
+  - cs.CV
+  - cs.MM
+  - eess.IV
+  abstract: 3D Gaussian splatting video (3DGS) streaming has recently emerged as a research hotspot in
+    both academia and industry, owing to its impressive ability to deliver immersive 3D video experiences.
+    However, research in this area is still in its early stages, and several fundamental challenges, such
+    as tiling, quality assessment, and bitrate adaptation, require further investigation. In this paper,
+    we tackle these challenges by proposing a comprehensive set of solutions. Specifically, we propose
+    an adaptive 3DGS tiling technique guided by saliency analysis, which integrates both spatial and temporal
+    features. Each tile is encoded into versions possessing dedicated deformation fields and multiple
+    quality levels for adaptive selection. We also introduce a novel quality assessment framework for
+    3DGS video that jointly evaluates spatial-domain degradation in 3DGS representations during streaming
+    and the quality of the resulting 2D rendered images. Additionally, we develop a meta-learning-based
+    adaptive bitrate algorithm specifically tailored for 3DGS video streaming, achieving optimal performance
+    across varying network conditions. Extensive experiments demonstrate that our proposed approaches
+    significantly outperform state-of-the-art methods.
+  url: https://arxiv.org/abs/2507.14454
+  pdf_url: https://arxiv.org/pdf/2507.14454v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 4
+citation_year: 2025

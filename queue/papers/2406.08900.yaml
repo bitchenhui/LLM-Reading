@@ -1,0 +1,35 @@
+id: paper:arxiv:2406.08900
+status: skipped
+score: 0
+track: audio_coding
+matched: []
+meta:
+  title: On Improving Error Resilience of Neural End-to-End Speech Coders
+  authors:
+  - Kishan Gupta
+  - Nicola Pia
+  - Srikanth Korse
+  - Andreas Brendel
+  - Guillaume Fuchs
+  - Markus Multrus
+  published: '2024-06-13'
+  updated: '2024-06-13'
+  categories:
+  - eess.AS
+  - cs.SD
+  - eess.SP
+  abstract: Error resilient tools like Packet Loss Concealment (PLC) and Forward Error Correction (FEC)
+    are essential to maintain a reliable speech communication for applications like Voice over Internet
+    Protocol (VoIP), where packets are frequently delayed and lost. In recent times, end-to-end neural
+    speech codecs have seen a significant rise, due to their ability to transmit speech signal at low
+    bitrates but few considerations were made about their error resilience in a real system. Recently
+    introduced Neural End-to-End Speech Codec (NESC) can reproduce high quality natural speech at low
+    bitrates. We extend its robustness to packet losses by adding a low complexity network to predict
+    the codebook indices in latent space. Furthermore, we propose a method to add an in-band FEC at an
+    additional bitrate of 0.8 kbps. Both subjective and objective assessment indicate the effectiveness
+    of proposed methods, and demonstrate that coupling PLC and FEC provide significant robustness against
+    packet losses.
+  url: https://arxiv.org/abs/2406.08900
+  pdf_url: https://arxiv.org/pdf/2406.08900v1
+  version: v1
+fetched: '2026-11-14'

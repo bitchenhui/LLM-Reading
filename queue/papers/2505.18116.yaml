@@ -1,0 +1,51 @@
+id: paper:arxiv:2505.18116
+status: pending
+score: 2
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: 'NFT: Bridging Supervised Learning and Reinforcement Learning in Math Reasoning'
+  authors:
+  - Huayu Chen
+  - Kaiwen Zheng
+  - Qinsheng Zhang
+  - Ganqu Cui
+  - Lifan Yuan
+  - Yin Cui
+  - Haotian Ye
+  - Tsung-Yi Lin
+  - Ming-Yu Liu
+  - Jun Zhu
+  - Haoxiang Wang
+  published: '2025-05-23'
+  updated: '2026-03-01'
+  categories:
+  - cs.LG
+  - cs.CL
+  abstract: Reinforcement Learning (RL) has played a central role in the recent surge of LLMs' math abilities
+    by enabling self-improvement through binary verifier signals. In contrast, Supervised Learning (SL)
+    is rarely considered for such verification-driven training, largely due to its heavy reliance on reference
+    answers and inability to reflect on mistakes. In this work, we challenge the prevailing notion that
+    self-improvement is exclusive to RL and propose Negative-aware Fine-Tuning (NFT) -- a supervised approach
+    that enables LLMs to reflect on their failures and improve autonomously with no external teachers.
+    In online training, instead of throwing away self-generated negative answers, NFT constructs an implicit
+    negative policy to model them. This implicit policy is parameterized with the same positive LLM we
+    target to optimize on positive data, enabling direct policy optimization on all LLMs' generations.
+    We conduct experiments on 7B and 32B models in math reasoning tasks. Results consistently show that
+    through the additional leverage of negative feedback, NFT significantly improves over SL baselines
+    like Rejection sampling Fine-Tuning, matching or even surpassing leading RL algorithms like GRPO and
+    DAPO. Furthermore, we demonstrate that NFT and GRPO are actually equivalent in strict-on-policy training,
+    even though they originate from entirely different theoretical foundations. Our experiments and theoretical
+    findings bridge the gap between SL and RL methods in binary-feedback learning systems.
+  url: https://arxiv.org/abs/2505.18116
+  pdf_url: https://arxiv.org/pdf/2505.18116v3
+  version: v3
+fetched: '2026-11-14'
+citation_count: 44
+citation_year: 2025

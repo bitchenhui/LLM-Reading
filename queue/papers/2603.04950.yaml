@@ -1,0 +1,33 @@
+id: paper:arxiv:2603.04950
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: Location-Aware Pretraining for Medical Difference Visual Question Answering
+  authors:
+  - Denis Musinguzi
+  - Caren Han
+  - Prasenjit Mitra
+  published: '2026-03-05'
+  updated: '2026-04-22'
+  categories:
+  - cs.CV
+  - cs.AI
+  abstract: Differential medical VQA models compare multiple images to identify clinically meaningful
+    changes and rely on vision encoders to capture fine-grained visual differences that reflect radiologists'
+    comparative diagnostic workflows. However, vision encoders trained using standard contrastive or classification
+    objectives often fail to capture the subtle variations needed to distinguish true disease progression
+    from acquisition-related variability. To address this limitation, we introduce a location-aware pretraining
+    framework that incorporates automatic referring expressions (AREF), grounded captioning (GCAP), and
+    conditional automatic referring expressions (CAREF). These tasks promote the learning of fine-grained,
+    spatially grounded visual representations. When integrated with a language model, our approach achieves
+    state-of-the-art performance on medical difference VQA by accurately identifying and reasoning about
+    clinically relevant changes in chest X-ray images.
+  url: https://arxiv.org/abs/2603.04950
+  pdf_url: https://arxiv.org/pdf/2603.04950v2
+  version: v2
+fetched: '2026-11-14'

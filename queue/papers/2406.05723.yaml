@@ -1,0 +1,40 @@
+id: paper:arxiv:2406.05723
+status: skipped
+score: 1
+track: processing_enhancement
+matched:
+- ref: concept:SuperResolution
+  count: 2
+  weight: 1
+meta:
+  title: Binarized Diffusion Model for Image Super-Resolution
+  authors:
+  - Zheng Chen
+  - Haotong Qin
+  - Yong Guo
+  - Xiongfei Su
+  - Xin Yuan
+  - Linghe Kong
+  - Yulun Zhang
+  published: '2024-06-09'
+  updated: '2024-10-31'
+  categories:
+  - cs.CV
+  abstract: 'Advanced diffusion models (DMs) perform impressively in image super-resolution (SR), but
+    the high memory and computational costs hinder their deployment. Binarization, an ultra-compression
+    algorithm, offers the potential for effectively accelerating DMs. Nonetheless, due to the model structure
+    and the multi-step iterative attribute of DMs, existing binarization methods result in significant
+    performance degradation. In this paper, we introduce a novel binarized diffusion model, BI-DiffSR,
+    for image SR. First, for the model structure, we design a UNet architecture optimized for binarization.
+    We propose the consistent-pixel-downsample (CP-Down) and consistent-pixel-upsample (CP-Up) to maintain
+    dimension consistent and facilitate the full-precision information transfer. Meanwhile, we design
+    the channel-shuffle-fusion (CS-Fusion) to enhance feature fusion in skip connection. Second, for the
+    activation difference across timestep, we design the timestep-aware redistribution (TaR) and activation
+    function (TaA). The TaR and TaA dynamically adjust the distribution of activations based on different
+    timesteps, improving the flexibility and representation alability of the binarized module. Comprehensive
+    experiments demonstrate that our BI-DiffSR outperforms existing binarization methods. Code is released
+    at: https://github.com/zhengchen1999/BI-DiffSR.'
+  url: https://arxiv.org/abs/2406.05723
+  pdf_url: https://arxiv.org/pdf/2406.05723v4
+  version: v4
+fetched: '2026-11-14'

@@ -1,0 +1,33 @@
+id: paper:arxiv:2510.26299
+status: skipped
+score: 1
+track: audio_coding
+matched:
+- ref: concept:NeuralAudioCodec
+  count: 1
+  weight: 1
+meta:
+  title: Modeling strategies for speech enhancement in the latent space of a neural audio codec
+  authors:
+  - Sofiene Kammoun
+  - Xavier Alameda-Pineda
+  - Simon Leglaive
+  published: '2025-10-30'
+  updated: '2026-03-11'
+  categories:
+  - cs.SD
+  - eess.AS
+  abstract: 'Neural audio codecs (NACs) provide compact latent speech representations in the form of sequences
+    of continuous vectors or discrete tokens. In this work, we investigate how these two types of speech
+    representations compare when used as training targets for supervised speech enhancement. We consider
+    both autoregressive and non-autoregressive speech enhancement models based on the Conformer architecture,
+    as well as a simple baseline where the NAC encoder is simply fine-tuned for speech enhancement. Our
+    experiments reveal three key findings: predicting continuous latent representations consistently outperforms
+    discrete token prediction; autoregressive models achieve higher quality but at the expense of intelligibility
+    and efficiency, making non-autoregressive models more attractive in practice; and adding encoder fine-tuning
+    yields the strongest enhancement metrics overall, though at the cost of degraded codec reconstruction.
+    The code and audio samples are available online.'
+  url: https://arxiv.org/abs/2510.26299
+  pdf_url: https://arxiv.org/pdf/2510.26299v3
+  version: v3
+fetched: '2026-11-14'

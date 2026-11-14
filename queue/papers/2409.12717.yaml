@@ -1,0 +1,39 @@
+id: paper:arxiv:2409.12717
+status: skipped
+score: 1
+track: audio_coding
+matched:
+- ref: concept:NeuralAudioCodec
+  count: 2
+  weight: 1
+meta:
+  title: 'NDVQ: Robust Neural Audio Codec with Normal Distribution-Based Vector Quantization'
+  authors:
+  - Zhikang Niu
+  - Sanyuan Chen
+  - Long Zhou
+  - Ziyang Ma
+  - Xie Chen
+  - Shujie Liu
+  published: '2024-09-19'
+  updated: '2024-09-19'
+  categories:
+  - eess.AS
+  - cs.SD
+  abstract: Built upon vector quantization (VQ), discrete audio codec models have achieved great success
+    in audio compression and auto-regressive audio generation. However, existing models face substantial
+    challenges in perceptual quality and signal distortion, especially when operating in extremely low
+    bandwidth, rooted in the sensitivity of the VQ codebook to noise. This degradation poses significant
+    challenges for several downstream tasks, such as codec-based speech synthesis. To address this issue,
+    we propose a novel VQ method, Normal Distribution-based Vector Quantization (NDVQ), by introducing
+    an explicit margin between the VQ codes via learning a variance. Specifically, our approach involves
+    mapping the waveform to a latent space and quantizing it by selecting the most likely normal distribution,
+    with each codebook entry representing a unique normal distribution defined by its mean and variance.
+    Using these distribution-based VQ codec codes, a decoder reconstructs the input waveform. NDVQ is
+    trained with additional distribution-related losses, alongside reconstruction and discrimination losses.
+    Experiments demonstrate that NDVQ outperforms existing audio compression baselines, such as EnCodec,
+    in terms of audio quality and zero-shot TTS, particularly in very low bandwidth scenarios.
+  url: https://arxiv.org/abs/2409.12717
+  pdf_url: https://arxiv.org/pdf/2409.12717v1
+  version: v1
+fetched: '2026-11-14'

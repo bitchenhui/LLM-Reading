@@ -1,0 +1,49 @@
+id: paper:arxiv:2602.23040
+status: skipped_low_citation
+score: 2
+track: immersive_media
+matched:
+- ref: concept:VolumetricVideo
+  count: 2
+  weight: 1
+- ref: concept:3DGS
+  count: 1
+  weight: 1
+meta:
+  title: 'PackUV: Packed Gaussian UV Maps for 4D Volumetric Video'
+  authors:
+  - Aashish Rai
+  - Angela Xing
+  - Anushka Agarwal
+  - Xiaoyan Cong
+  - Zekun Li
+  - Tao Lu
+  - Aayush Prakash
+  - Srinath Sridhar
+  published: '2026-02-26'
+  updated: '2026-03-06'
+  categories:
+  - cs.CV
+  abstract: Volumetric videos offer immersive 4D experiences, but remain difficult to reconstruct, store,
+    and stream at scale. Existing Gaussian Splatting based methods achieve high-quality reconstruction
+    but break down on long sequences, temporal inconsistency, and fail under large motions and disocclusions.
+    Moreover, their outputs are typically incompatible with conventional video coding pipelines, preventing
+    practical applications. We introduce PackUV, a novel 4D Gaussian representation that maps all Gaussian
+    attributes into a sequence of structured, multi-scale UV atlas, enabling compact, image-native storage.
+    To fit this representation from multi-view videos, we propose PackUV-GS, a temporally consistent fitting
+    method that directly optimizes Gaussian parameters in the UV domain. A flow-guided Gaussian labeling
+    and video keyframing module identifies dynamic Gaussians, stabilizes static regions, and preserves
+    temporal coherence even under large motions and disocclusions. The resulting UV atlas format is the
+    first unified volumetric video representation compatible with standard video codecs (e.g., FFV1) without
+    losing quality, enabling efficient streaming within existing multimedia infrastructure. To evaluate
+    long-duration volumetric capture, we present PackUV-2B, the largest multi-view video dataset to date,
+    featuring more than 50 synchronized cameras, substantial motion, and frequent disocclusions across
+    100 sequences and 2B (billion) frames. Extensive experiments demonstrate that our method surpasses
+    existing baselines in rendering fidelity while scaling to sequences up to 30 minutes with consistent
+    quality.
+  url: https://arxiv.org/abs/2602.23040
+  pdf_url: https://arxiv.org/pdf/2602.23040v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 2
+citation_year: 2026

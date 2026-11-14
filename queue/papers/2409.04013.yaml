@@ -1,0 +1,37 @@
+id: paper:arxiv:2409.04013
+status: skipped
+score: 1
+track: video_image_coding
+matched:
+- ref: concept:3DGS
+  count: 3
+  weight: 1
+meta:
+  title: '3D-LMVIC: Learning-based Multi-View Image Coding with 3D Gaussian Geometric Priors'
+  authors:
+  - Yujun Huang
+  - Bin Chen
+  - Niu Lian
+  - Baoyi An
+  - Shu-Tao Xia
+  published: '2024-09-06'
+  updated: '2025-03-18'
+  categories:
+  - cs.CV
+  - cs.IT
+  - cs.MM
+  abstract: Existing multi-view image compression methods often rely on 2D projection-based similarities
+    between views to estimate disparities. While effective for small disparities, such as those in stereo
+    images, these methods struggle with the more complex disparities encountered in wide-baseline multi-camera
+    systems, commonly found in virtual reality and autonomous driving applications. To address this limitation,
+    we propose 3D-LMVIC, a novel learning-based multi-view image compression framework that leverages
+    3D Gaussian Splatting to derive geometric priors for accurate disparity estimation. Furthermore, we
+    introduce a depth map compression model to minimize geometric redundancy across views, along with
+    a multi-view sequence ordering strategy based on a defined distance measure between views to enhance
+    correlations between adjacent views. Experimental results demonstrate that 3D-LMVIC achieves superior
+    performance compared to both traditional and learning-based methods. Additionally, it significantly
+    improves disparity estimation accuracy over existing two-view approaches.
+  url: https://arxiv.org/abs/2409.04013
+  pdf_url: https://arxiv.org/pdf/2409.04013v2
+  version: v2
+fetched: '2026-11-14'

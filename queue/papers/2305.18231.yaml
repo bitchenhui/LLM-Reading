@@ -1,0 +1,35 @@
+id: paper:arxiv:2305.18231
+status: skipped
+score: 1
+track: video_image_coding
+matched:
+- ref: metric:FID
+  count: 1
+  weight: 1
+meta:
+  title: High-Fidelity Image Compression with Score-based Generative Models
+  authors:
+  - Emiel Hoogeboom
+  - Eirikur Agustsson
+  - Fabian Mentzer
+  - Luca Versari
+  - George Toderici
+  - Lucas Theis
+  published: '2023-05-26'
+  updated: '2024-03-07'
+  categories:
+  - eess.IV
+  - cs.CV
+  - cs.LG
+  - stat.ML
+  abstract: Despite the tremendous success of diffusion generative models in text-to-image generation,
+    replicating this success in the domain of image compression has proven difficult. In this paper, we
+    demonstrate that diffusion can significantly improve perceptual quality at a given bit-rate, outperforming
+    state-of-the-art approaches PO-ELIC and HiFiC as measured by FID score. This is achieved using a simple
+    but theoretically motivated two-stage approach combining an autoencoder targeting MSE followed by
+    a further score-based decoder. However, as we will show, implementation details matter and the optimal
+    design decisions can differ greatly from typical text-to-image models.
+  url: https://arxiv.org/abs/2305.18231
+  pdf_url: https://arxiv.org/pdf/2305.18231v3
+  version: v3
+fetched: '2026-11-14'

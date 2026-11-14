@@ -1,0 +1,40 @@
+id: paper:arxiv:2305.02660
+status: skipped
+score: 1
+track: video_image_coding
+matched:
+- ref: concept:SuperResolution
+  count: 2
+  weight: 1
+meta:
+  title: Expanding Synthetic Real-World Degradations for Blind Video Super Resolution
+  authors:
+  - Mehran Jeelani
+  - ' Sadbhawna'
+  - Noshaba Cheema
+  - Klaus Illgner-Fehns
+  - Philipp Slusallek
+  - Sunil Jaiswal
+  published: '2023-05-04'
+  updated: '2023-05-04'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: Video super-resolution (VSR) techniques, especially deep-learning-based algorithms, have drastically
+    improved over the last few years and shown impressive performance on synthetic data. However, their
+    performance on real-world video data suffers because of the complexity of real-world degradations
+    and misaligned video frames. Since obtaining a synthetic dataset consisting of low-resolution (LR)
+    and high-resolution (HR) frames are easier than obtaining real-world LR and HR images, in this paper,
+    we propose synthesizing real-world degradations on synthetic training datasets. The proposed synthetic
+    real-world degradations (SRWD) include a combination of the blur, noise, downsampling, pixel binning,
+    and image and video compression artifacts. We then propose using a random shuffling-based strategy
+    to simulate these degradations on the training datasets and train a single end-to-end deep neural
+    network (DNN) on the proposed larger variation of realistic synthesized training data. Our quantitative
+    and qualitative comparative analysis shows that the proposed training strategy using diverse realistic
+    degradations improves the performance by 7.1 % in terms of NRQM compared to RealBasicVSR and by 3.34
+    % compared to BSRGAN on the VideoLQ dataset. We also introduce a new dataset that contains high-resolution
+    real-world videos that can serve as a common ground for bench-marking.
+  url: https://arxiv.org/abs/2305.02660
+  pdf_url: https://arxiv.org/pdf/2305.02660v1
+  version: v1
+fetched: '2026-11-14'

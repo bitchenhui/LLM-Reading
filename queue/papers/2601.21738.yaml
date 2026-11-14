@@ -1,0 +1,51 @@
+id: paper:arxiv:2601.21738
+status: pending
+score: 2
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 3
+  weight: 1
+- ref: metric:MOS
+  count: 2
+  weight: 1
+meta:
+  title: 'From Global to Granular: Revealing IQA Model Performance via Correlation Surface'
+  authors:
+  - Baoliang Chen
+  - Danni Huang
+  - Hanwei Zhu
+  - Lingyu Zhu
+  - Wei Zhou
+  - Shiqi Wang
+  - Yuming Fang
+  - Weisi Lin
+  published: '2026-01-29'
+  updated: '2026-07-07'
+  categories:
+  - cs.CV
+  - cs.AI
+  abstract: 'Evaluation of Image Quality Assessment (IQA) models has long been dominated by global correlation
+    metrics, such as Pearson Linear Correlation Coefficient (PLCC) and Spearman Rank-Order Correlation
+    Coefficient (SRCC). While widely adopted, these metrics reduce performance to a single scalar, failing
+    to capture how ranking consistency varies across the local quality spectrum. For example, two IQA
+    models may achieve identical SRCC values, yet one ranks high-quality images (related to high Mean
+    Opinion Score, MOS) more reliably, while the other better discriminates image pairs with small quality/MOS
+    differences (related to $|Δ$MOS$|$). Such complementary behaviors are invisible under global metrics.
+    Moreover, SRCC and PLCC are sensitive to test-sample quality distributions, yielding unstable comparisons
+    across test sets. To address these limitations, we propose \textbf{Granularity-Modulated Correlation
+    (GMC)}, which provides a structured, fine-grained analysis of IQA performance. GMC includes: (1) a
+    \textbf{Granularity Modulator} that applies Gaussian-weighted correlations conditioned on absolute
+    MOS values and pairwise MOS differences ($|Δ$MOS$|$) to examine local performance variations, and
+    (2) a \textbf{Distribution Regulator} that regularizes correlations to mitigate biases from non-uniform
+    quality distributions. The resulting \textbf{correlation surface} maps correlation values as a joint
+    function of MOS and $|Δ$MOS$|$, providing a 3D representation of IQA performance. Experiments on standard
+    benchmarks show that GMC reveals performance characteristics invisible to scalar metrics, offering
+    a more informative and reliable paradigm for analyzing, comparing, and deploying IQA models. Codes
+    are available at https://github.com/Dniaaa/GMC.'
+  url: https://arxiv.org/abs/2601.21738
+  pdf_url: https://arxiv.org/pdf/2601.21738v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 5
+citation_year: 2026

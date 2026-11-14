@@ -1,0 +1,45 @@
+id: paper:arxiv:2404.02702
+status: skipped
+score: 1
+track: audio_coding
+matched:
+- ref: metric:SSIM
+  count: 3
+  weight: 1
+meta:
+  title: 'PSCodec: A Series of High-Fidelity Low-bitrate Neural Speech Codecs Leveraging Prompt Encoders'
+  authors:
+  - Yu Pan
+  - Xiang Zhang
+  - Yuguang Yang
+  - Jixun Yao
+  - Yanni Hu
+  - Jianhao Ye
+  - Hongbin Zhou
+  - Lei Ma
+  - Jianjun Zhao
+  published: '2024-04-03'
+  updated: '2024-11-21'
+  categories:
+  - cs.SD
+  - cs.AI
+  abstract: Neural speech codecs have recently emerged as a focal point in the fields of speech compression
+    and generation. Despite this progress, achieving high-quality speech reconstruction under low-bitrate
+    scenarios remains a significant challenge. In this paper, we propose PSCodec, a series of neural speech
+    codecs based on prompt encoders, comprising PSCodec-Base, PSCodec-DRL-ICT, and PSCodec-CasAN, which
+    are capable of delivering high-performance speech reconstruction with low bandwidths. Specifically,
+    we first introduce PSCodec-Base, which leverages a pretrained speaker verification model-based prompt
+    encoder (VPP-Enc) and a learnable Mel-spectrogram-based prompt encoder (MelP-Enc) to effectively disentangle
+    and integrate voiceprint and Mel-related features in utterances. To further enhance feature utilization
+    efficiency, we propose PSCodec-DRL-ICT, incorporating a structural similarity (SSIM) based disentangled
+    representation loss (DRL) and an incremental continuous training (ICT) strategy. While PSCodec-DRL-ICT
+    demonstrates impressive performance, its reliance on extensive hyperparameter tuning and multi-stage
+    training makes it somewhat labor-intensive. To circumvent these limitations, we propose PSCodec-CasAN,
+    utilizing an advanced cascaded attention network (CasAN) to enhance representational capacity of the
+    entire system. Extensive experiments show that our proposed PSCodec-Base, PSCodec-DRL-ICT, and PSCodec-CasAN
+    all significantly outperform several state-of-the-art neural codecs, exhibiting substantial improvements
+    in both speech reconstruction quality and speaker similarity under low-bitrate conditions.
+  url: https://arxiv.org/abs/2404.02702
+  pdf_url: https://arxiv.org/pdf/2404.02702v3
+  version: v3
+fetched: '2026-11-14'

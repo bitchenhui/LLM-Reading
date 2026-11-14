@@ -1,0 +1,42 @@
+id: paper:arxiv:2602.02919
+status: pending
+score: 2
+track: self_improvement
+matched:
+- ref: concept:AlphaEvolve
+  count: 1
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: 'DeltaEvolve: Accelerating Scientific Discovery through Momentum-Driven Evolution'
+  authors:
+  - Jiachen Jiang
+  - Tianyu Ding
+  - Zhihui Zhu
+  published: '2026-02-02'
+  updated: '2026-02-02'
+  categories:
+  - cs.AI
+  - cs.LG
+  abstract: LLM-driven evolutionary systems have shown promise for automated science discovery, yet existing
+    approaches such as AlphaEvolve rely on full-code histories that are context-inefficient and potentially
+    provide weak evolutionary guidance. In this work, we first formalize the evolutionary agents as a
+    general Expectation-Maximization framework, where the language model samples candidate programs (E-step)
+    and the system updates the control context based on evaluation feedback (M-step). Under this view,
+    constructing context via full-code snapshots constitutes a suboptimal M-step, as redundant implement
+    details dilutes core algorithmic ideas, making it difficult to provide clear inspirations for evolution.
+    To address this, we propose DeltaEvolve, a momentum-driven evolutionary framework that replaces full-code
+    history with structured semantic delta capturing how and why modifications between successive nodes
+    affect performance. As programs are often decomposable, semantic delta usually contains many effective
+    components which are transferable and more informative to drive improvement. By organizing semantic
+    delta through multi-level database and progressive disclosure mechanism, input tokens are further
+    reduced. Empirical evaluations on tasks across diverse scientific domains show that our framework
+    can discover better solution with less token consumption over full-code-based evolutionary agents.
+  url: https://arxiv.org/abs/2602.02919
+  pdf_url: https://arxiv.org/pdf/2602.02919v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 31
+citation_year: 2026

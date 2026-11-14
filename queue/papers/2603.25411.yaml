@@ -1,0 +1,40 @@
+id: paper:arxiv:2603.25411
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'HiSpatial: Taming Hierarchical 3D Spatial Understanding in Vision-Language Models'
+  authors:
+  - Huizhi Liang
+  - Yichao Shen
+  - Yu Deng
+  - Sicheng Xu
+  - Zhiyuan Feng
+  - Tong Zhang
+  - Yaobo Liang
+  - Jiaolong Yang
+  published: '2026-03-26'
+  updated: '2026-03-26'
+  categories:
+  - cs.CV
+  abstract: Achieving human-like spatial intelligence for vision-language models (VLMs) requires inferring
+    3D structures from 2D observations, recognizing object properties and relations in 3D space, and performing
+    high-level spatial reasoning. In this paper, we propose a principled hierarchical framework that decomposes
+    the learning of 3D spatial understanding in VLMs into four progressively complex levels, from geometric
+    perception to abstract spatial reasoning. Guided by this framework, we construct an automated pipeline
+    that processes approximately 5M images with over 45M objects to generate 3D spatial VQA pairs across
+    diverse tasks and scenes for VLM supervised fine-tuning. We also develop an RGB-D VLM incorporating
+    metric-scale point maps as auxiliary inputs to further enhance spatial understanding. Extensive experiments
+    demonstrate that our approach achieves state-of-the-art performance on multiple spatial understanding
+    and reasoning benchmarks, surpassing specialized spatial models and large proprietary systems such
+    as Gemini-2.5-pro and GPT-5. Moreover, our analysis reveals clear dependencies among hierarchical
+    task levels, offering new insights into how multi-level task design facilitates the emergence of 3D
+    spatial intelligence.
+  url: https://arxiv.org/abs/2603.25411
+  pdf_url: https://arxiv.org/pdf/2603.25411v1
+  version: v1
+fetched: '2026-11-14'

@@ -1,0 +1,46 @@
+id: paper:arxiv:2605.29212
+status: pending
+score: 2
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 2
+  weight: 1
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+meta:
+  title: 'MetaRanker: Human-in-the-loop Active Ranking for Metalens Image Quality'
+  authors:
+  - Yujin Park
+  - Haejun Chung
+  - Ikbeom Jang
+  published: '2026-05-28'
+  updated: '2026-06-29'
+  categories:
+  - cs.CV
+  - cs.HC
+  abstract: Image quality in modern imaging systems emerges from the coupled effects of the sensor, optics,
+    and computational reconstruction. Ultra-thin metalenses offer a path toward substantial miniaturization
+    of optical modules, but practical designs often exhibit pronounced chromatic and field-dependent aberrations
+    that necessitate computational reconstruction. In current metalens pipelines, reconstruction models
+    are commonly trained and selected using distortion-based fidelity objectives, such as PSNR, yet these
+    proxies can be weakly correlated with human preference and downstream utility, reflecting the well-known
+    perception--distortion trade-off. We introduce MetaRanker, a human-in-the-loop active ranking framework
+    that formalizes metalens image quality in terms of semantic interpretability, defined as the degree
+    to which humans can reliably recognize objects and structures in the presence of optical artifacts.
+    MetaRanker combines a probabilistic preference model with uncertainty-aware query selection, and leverages
+    vision--language models to provide lightweight semantic priors. Importantly, these priors are used
+    only to guide the sampling of informative comparisons; human judgments remain the primary supervision
+    signal throughout. Across real-world and synthetic metalens datasets with distinct degradation profiles,
+    MetaRanker produces rankings that align most closely with human assessments, while reducing the number
+    of pairwise annotations required by approximately 80% relative to exhaustive pairwise evaluation.
+    Finally, we show that standard image quality assessment metrics exhibit limited alignment with human
+    interpretability in the metalens domain, positioning MetaRanker as a practical step toward perceptually
+    grounded metalens evaluation and co-design.
+  url: https://arxiv.org/abs/2605.29212
+  pdf_url: https://arxiv.org/pdf/2605.29212v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 1
+citation_year: 2026

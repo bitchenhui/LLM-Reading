@@ -1,0 +1,42 @@
+id: paper:arxiv:2603.22815
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'Focus, Don''t Prune: Identifying Instruction-Relevant Regions for Information-Rich Image Understanding'
+  authors:
+  - Mincheol Kwon
+  - Minseung Lee
+  - Seonga Choi
+  - Miso Choi
+  - Kyeong-Jin Oh
+  - Hyunyoung Lee
+  - Cheonyoung Park
+  - Yongho Song
+  - Seunghyun Park
+  - Jinkyu Kim
+  published: '2026-03-24'
+  updated: '2026-03-24'
+  categories:
+  - cs.CV
+  - cs.AI
+  abstract: 'Large Vision-Language Models (LVLMs) have shown strong performance across various multimodal
+    tasks by leveraging the reasoning capabilities of Large Language Models (LLMs). However, processing
+    visually complex and information-rich images, such as infographics or document layouts, requires these
+    models to generate a large number of visual tokens, leading to significant computational overhead.
+    To address this, we propose PinPoint, a novel two-stage framework that first identifies instruction-relevant
+    image regions and then refines them to extract fine-grained visual features for improved reasoning
+    and efficiency. Central to our approach is the Instruction-Region Alignment, which localizes relevant
+    regions using both visual input and textual instructions. We further introduce new annotations that
+    provide richer ground-truth supervision for instruction-relevant regions across challenging VQA benchmarks:
+    InfographicVQA, MultiPageDocVQA, and SinglePageDocVQA. Experimental results show that PinPoint not
+    only achieves superior accuracy compared to existing methods but also reduces computational overhead
+    by minimizing irrelevant visual tokens.'
+  url: https://arxiv.org/abs/2603.22815
+  pdf_url: https://arxiv.org/pdf/2603.22815v1
+  version: v1
+fetched: '2026-11-14'

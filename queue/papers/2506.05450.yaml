@@ -1,0 +1,39 @@
+id: paper:arxiv:2506.05450
+status: skipped
+score: 1
+track: processing_enhancement
+matched:
+- ref: concept:SuperResolution
+  count: 1
+  weight: 1
+meta:
+  title: Degradation-Aware Image Enhancement via Vision-Language Classification
+  authors:
+  - Jie Cai
+  - Kangning Yang
+  - Jiaming Ding
+  - Lan Fu
+  - Ling Ouyang
+  - Jiang Li
+  - Jinglin Shen
+  - Zibo Meng
+  published: '2025-06-05'
+  updated: '2025-06-05'
+  categories:
+  - cs.CV
+  abstract: 'Image degradation is a prevalent issue in various real-world applications, affecting visual
+    quality and downstream processing tasks. In this study, we propose a novel framework that employs
+    a Vision-Language Model (VLM) to automatically classify degraded images into predefined categories.
+    The VLM categorizes an input image into one of four degradation types: (A) super-resolution degradation
+    (including noise, blur, and JPEG compression), (B) reflection artifacts, (C) motion blur, or (D) no
+    visible degradation (high-quality image). Once classified, images assigned to categories A, B, or
+    C undergo targeted restoration using dedicated models tailored for each specific degradation type.
+    The final output is a restored image with improved visual quality. Experimental results demonstrate
+    the effectiveness of our approach in accurately classifying image degradations and enhancing image
+    quality through specialized restoration models. Our method presents a scalable and automated solution
+    for real-world image enhancement tasks, leveraging the capabilities of VLMs in conjunction with state-of-the-art
+    restoration techniques.'
+  url: https://arxiv.org/abs/2506.05450
+  pdf_url: https://arxiv.org/pdf/2506.05450v1
+  version: v1
+fetched: '2026-11-14'

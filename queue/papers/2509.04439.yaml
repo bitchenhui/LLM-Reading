@@ -1,0 +1,51 @@
+id: paper:arxiv:2509.04439
+status: pending
+score: 2
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: 'ArcMemo: Abstract Reasoning Composition with Lifelong LLM Memory'
+  authors:
+  - Matthew Ho
+  - Chen Si
+  - Zhaoxiang Feng
+  - Fangxu Yu
+  - Yichi Yang
+  - Zhijian Liu
+  - Zhiting Hu
+  - Lianhui Qin
+  published: '2025-09-04'
+  updated: '2025-10-04'
+  categories:
+  - cs.AI
+  - cs.CL
+  - cs.LG
+  abstract: 'While inference-time scaling enables LLMs to carry out increasingly long and capable reasoning
+    traces, the patterns and insights uncovered during these traces are immediately discarded once the
+    context window is reset for a new query. External memory is a natural way to persist these discoveries,
+    and recent work has shown clear benefits for reasoning-intensive tasks. We see an opportunity to make
+    such memories more broadly reusable and scalable by moving beyond instance-based memory entries (e.g.
+    exact query/response pairs, or summaries tightly coupled with the original problem context) toward
+    concept-level memory: reusable, modular abstractions distilled from solution traces and stored in
+    natural language. For future queries, relevant concepts are selectively retrieved and integrated into
+    the prompt, enabling test-time continual learning without weight updates. Our design introduces new
+    strategies for abstracting takeaways from rollouts and retrieving entries for new queries, promoting
+    reuse and allowing memory to expand with additional experiences. We evaluate on ARC-AGI, a benchmark
+    that stresses compositional generalization and abstract reasoning, making it a natural fit for concept
+    memory. Our method yields a 7.5% relative gain over a strong no-memory baseline with performance continuing
+    to scale with inference compute. We find abstract concepts to be the most consistent memory design,
+    outscoring the baseline at all tested inference compute scales. Moreover, dynamically updating memory
+    during test-time outperforms fixed settings, supporting the hypothesis that accumulating and abstracting
+    patterns enables further solutions in a form of self-improvement. Code is available at https://github.com/matt-seb-ho/arc_memo.'
+  url: https://arxiv.org/abs/2509.04439
+  pdf_url: https://arxiv.org/pdf/2509.04439v3
+  version: v3
+fetched: '2026-11-14'
+citation_count: 26
+citation_year: 2025

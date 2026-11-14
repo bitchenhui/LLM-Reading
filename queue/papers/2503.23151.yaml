@@ -1,0 +1,34 @@
+id: paper:arxiv:2503.23151
+status: skipped
+score: 1
+track: video_image_coding
+matched:
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+meta:
+  title: Improved Motion Plane Adaptive 360-Degree Video Compression Using Affine Motion Models
+  authors:
+  - Marina Ritthaler
+  - Andy Regensky
+  - André Kaup
+  published: '2025-03-29'
+  updated: '2025-03-29'
+  categories:
+  - eess.IV
+  abstract: Efficient compression of 360-degree video content requires the application of advanced motion
+    models for interframe prediction. The Motion Plane Adaptive (MPA) motion model projects the frames
+    on multiple perspective planes in the 3D space. It improves the motion compensation by estimating
+    the motion on those planes with a translational diamond search. In this work, we enhance this motion
+    model with an affine parameterization and motion estimation method. Thereby, we find a feasible trade-off
+    between the quality of the reconstructed frames and the computational cost. The affine motion estimation
+    is hereby done with the inverse compositional Lucas-Kanade algorithm. With the proposed method, it
+    is possible to improve the motion compensation significantly, so that the motion compensated frame
+    has a Weighted-to-Spherically-uniform Peak Signal-to-Noise Ratio (WS-PSNR) which is about 1.6 dB higher
+    than with the conventional MPA. In a basic video codec, the improved inter prediction can lead to
+    Bjøntegaard Delta (BD) rate savings between 9 % and 35 % depending on the block size (BS) and number
+    of motion parameters.
+  url: https://arxiv.org/abs/2503.23151
+  pdf_url: https://arxiv.org/pdf/2503.23151v1
+  version: v1
+fetched: '2026-11-14'

@@ -1,0 +1,43 @@
+id: paper:arxiv:2411.18222
+status: skipped
+score: 1
+track: audio_coding
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'Towards Improved Objective Perceptual Audio Quality Assessment -- Part 1: A Novel Data-Driven
+    Cognitive Model'
+  authors:
+  - Pablo M. Delgado
+  - Jürgen Herre
+  published: '2024-11-27'
+  updated: '2024-11-27'
+  categories:
+  - eess.AS
+  - cs.SD
+  - eess.SP
+  abstract: Efficient audio quality assessment is vital for streamlining audio codec development. Objective
+    assessment tools have been developed over time to algorithmically predict quality ratings from subjective
+    assessments, the gold standard for quality judgment. Many of these tools use perceptual auditory models
+    to extract audio features that are mapped to a basic audio quality score prediction using machine
+    learning algorithms and subjective scores as training data. However, existing tools struggle with
+    generalization in quality prediction, especially when faced with unknown signal and distortion types.
+    This is particularly evident in the presence of signals coded using non-waveform-preserving parametric
+    techniques. Addressing these challenges, this two-part work proposes extensions to the Perceptual
+    Evaluation of Audio Quality (PEAQ - ITU-R BS.1387-1) recommendation. Part 1 focuses on increasing
+    generalization, while Part 2 targets accurate spatial audio quality measurement in audio coding. To
+    enhance prediction generalization, this paper (Part 1) introduces a novel machine learning approach
+    that uses subjective data to model cognitive aspects of audio quality perception. The proposed method
+    models the perceived severity of audible distortions by adaptively weighting different distortion
+    metrics. The weights are determined using an interaction cost function that captures relationships
+    between distortion salience and cognitive effects. Compared to other machine learning methods and
+    established tools, the proposed architecture achieves higher prediction accuracy on large databases
+    of previously unseen subjective quality scores. The perceptually-motivated model offers a more manageable
+    alternative to general-purpose machine learning algorithms, allowing potential extensions and improvements
+    to multi-dimensional quality measurement without complete retraining.
+  url: https://arxiv.org/abs/2411.18222
+  pdf_url: https://arxiv.org/pdf/2411.18222v1
+  version: v1
+fetched: '2026-11-14'

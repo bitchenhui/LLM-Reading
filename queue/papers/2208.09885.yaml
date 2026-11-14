@@ -1,0 +1,48 @@
+id: paper:arxiv:2208.09885
+status: pending
+score: 3
+track: processing_enhancement
+matched:
+- ref: concept:SuperResolution
+  count: 2
+  weight: 1
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+- ref: org:USTC
+  count: 1
+  weight: 1
+meta:
+  title: 'HST: Hierarchical Swin Transformer for Compressed Image Super-resolution'
+  authors:
+  - Bingchen Li
+  - Xin Li
+  - Yiting Lu
+  - Sen Liu
+  - Ruoyu Feng
+  - Zhibo Chen
+  published: '2022-08-21'
+  updated: '2022-12-02'
+  categories:
+  - cs.CV
+  - eess.IV
+  abstract: Compressed Image Super-resolution has achieved great attention in recent years, where images
+    are degraded with compression artifacts and low-resolution artifacts. Since the complex hybrid distortions,
+    it is hard to restore the distorted image with the simple cooperation of super-resolution and compression
+    artifacts removing. In this paper, we take a step forward to propose the Hierarchical Swin Transformer
+    (HST) network to restore the low-resolution compressed image, which jointly captures the hierarchical
+    feature representations and enhances each-scale representation with Swin transformer, respectively.
+    Moreover, we find that the pretraining with Super-resolution (SR) task is vital in compressed image
+    super-resolution. To explore the effects of different SR pretraining, we take the commonly-used SR
+    tasks (e.g., bicubic and different real super-resolution simulations) as our pretraining tasks, and
+    reveal that SR plays an irreplaceable role in the compressed image super-resolution. With the cooperation
+    of HST and pre-training, our HST achieves the fifth place in AIM 2022 challenge on the low-quality
+    compressed image super-resolution track, with the PSNR of 23.51dB. Extensive experiments and ablation
+    studies have validated the effectiveness of our proposed methods. The code and models are available
+    at https://github.com/USTC-IMCL/HST-for-Compressed-Image-SR.
+  url: https://arxiv.org/abs/2208.09885
+  pdf_url: https://arxiv.org/pdf/2208.09885v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 41
+citation_year: 2022

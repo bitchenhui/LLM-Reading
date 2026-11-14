@@ -1,0 +1,33 @@
+id: paper:arxiv:2505.05309
+status: skipped
+score: 0
+track: video_image_coding
+matched: []
+meta:
+  title: Augmented Deep Contexts for Spatially Embedded Video Coding
+  authors:
+  - Yifan Bian
+  - Chuanbo Tang
+  - Li Li
+  - Dong Liu
+  published: '2025-05-08'
+  updated: '2025-05-08'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: Most Neural Video Codecs (NVCs) only employ temporal references to generate temporal-only
+    contexts and latent prior. These temporal-only NVCs fail to handle large motions or emerging objects
+    due to limited contexts and misaligned latent prior. To relieve the limitations, we propose a Spatially
+    Embedded Video Codec (SEVC), in which the low-resolution video is compressed for spatial references.
+    Firstly, our SEVC leverages both spatial and temporal references to generate augmented motion vectors
+    and hybrid spatial-temporal contexts. Secondly, to address the misalignment issue in latent prior
+    and enrich the prior information, we introduce a spatial-guided latent prior augmented by multiple
+    temporal latent representations. At last, we design a joint spatial-temporal optimization to learn
+    quality-adaptive bit allocation for spatial references, further boosting rate-distortion performance.
+    Experimental results show that our SEVC effectively alleviates the limitations in handling large motions
+    or emerging objects, and also reduces 11.9% more bitrate than the previous state-of-the-art NVC while
+    providing an additional low-resolution bitstream. Our code and model are available at https://github.com/EsakaK/SEVC.
+  url: https://arxiv.org/abs/2505.05309
+  pdf_url: https://arxiv.org/pdf/2505.05309v1
+  version: v1
+fetched: '2026-11-14'

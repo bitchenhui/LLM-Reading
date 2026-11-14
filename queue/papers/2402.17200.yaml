@@ -1,0 +1,35 @@
+id: paper:arxiv:2402.17200
+status: skipped
+score: 0
+track: processing_enhancement
+matched: []
+meta:
+  title: Enhancing Quality of Compressed Images by Mitigating Enhancement Bias Towards Compression Domain
+  authors:
+  - Qunliang Xing
+  - Mai Xu
+  - Shengxi Li
+  - Xin Deng
+  - Meisong Zheng
+  - Huaida Liu
+  - Ying Chen
+  published: '2024-02-27'
+  updated: '2024-03-19'
+  categories:
+  - cs.CV
+  - eess.IV
+  abstract: Existing quality enhancement methods for compressed images focus on aligning the enhancement
+    domain with the raw domain to yield realistic images. However, these methods exhibit a pervasive enhancement
+    bias towards the compression domain, inadvertently regarding it as more realistic than the raw domain.
+    This bias makes enhanced images closely resemble their compressed counterparts, thus degrading their
+    perceptual quality. In this paper, we propose a simple yet effective method to mitigate this bias
+    and enhance the quality of compressed images. Our method employs a conditional discriminator with
+    the compressed image as a key condition, and then incorporates a domain-divergence regularization
+    to actively distance the enhancement domain from the compression domain. Through this dual strategy,
+    our method enables the discrimination against the compression domain, and brings the enhancement domain
+    closer to the raw domain. Comprehensive quality evaluations confirm the superiority of our method
+    over other state-of-the-art methods without incurring inference overheads.
+  url: https://arxiv.org/abs/2402.17200
+  pdf_url: https://arxiv.org/pdf/2402.17200v3
+  version: v3
+fetched: '2026-11-14'

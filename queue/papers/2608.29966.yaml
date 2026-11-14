@@ -1,0 +1,46 @@
+id: paper:arxiv:2608.29966
+status: pending
+score: 2
+track: self_improvement
+matched:
+- ref: concept:RSI
+  count: 2
+  weight: 1
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+meta:
+  title: 'DataFoundry: Evolving Data Preparators via Recursive Self-Improvement'
+  authors:
+  - Cehao Yang
+  - Xiaojun Wu
+  - Xueyuan Lin
+  - Chengjin Xu
+  - Xuhui Jiang
+  - Hui Xiong
+  - Jian Guo
+  published: '2026-08-30'
+  updated: '2026-08-30'
+  categories:
+  - cs.CL
+  abstract: 'Domain adaptation of large language models increasingly depends on constructing high-quality
+    training data, yet existing data-preparation pipelines typically address quality only after generation
+    through post-hoc filtering. This creates a fundamental mismatch: data-quality issues often originate
+    from the construction process itself, while quality control is applied only to its outputs. We introduce
+    \textsc{DataFoundry}, a framework for \textbf{evolving data preparators through recursive self-improvement}
+    before large-scale data production. \textsc{DataFoundry} represents a data preparator as an evolvable
+    runtime specification and instantiates its evolution with a \textsc{Skills-as-Modules} architecture,
+    in which a central \textsc{Controller} orchestrates modular skills to compile executable runtimes,
+    diagnose deficiencies on small pilot sets using domain-appropriate criteria, and translate diagnostic
+    feedback into adapters that revise individual preparation components while preserving stable interfaces.
+    We evaluate \textsc{DataFoundry} on DataPrep-Bench across mathematics, finance, law, and medicine,
+    and find that recursively evolved preparators produce training data with higher downstream utility
+    than baselines. Experiments across different backbones further demonstrate that these improvements
+    are not tied to a particular model, while analyses and case studies further reveal the framework''s
+    optimization dynamics and illustrate how its evolution unfolds in practice.'
+  url: https://arxiv.org/abs/2608.29966
+  pdf_url: https://arxiv.org/pdf/2608.29966v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 5
+citation_year: 2026

@@ -1,0 +1,46 @@
+id: paper:arxiv:2608.03135
+status: pending
+score: 2
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+- ref: concept:TrainingFree
+  count: 1
+  weight: 1
+meta:
+  title: 'Rectify Then Diffuse: Disentangling Concepts Before Denoising Trajectory Unfolds'
+  authors:
+  - Ning Zhu
+  - An Chen
+  - Mengfei Zhao
+  - Juntao Xu
+  - Jingze Liang
+  - Boyuan Gu
+  - Liang-Jian Deng
+  published: '2026-08-04'
+  updated: '2026-08-04'
+  categories:
+  - cs.CV
+  - cs.AI
+  abstract: 'Text-to-image diffusion models can generate individual concepts well, but they often omit
+    or merge concepts incorrectly with multiple concepts. We trace these failures to an early coordination
+    bottleneck: before denoising begins, prompt-conditioned attention may allocate different concepts
+    to strongly overlapping spatial support, which can keep their attention coupled as denoising proceeds.
+    This observation motivates treating compositional generation as a boundary-condition problem rather
+    than repeatedly controlling the evolving trajectory. To this end, we propose Rectify-then-Diffuse
+    (RTD), a training-free framework that rectifies the initial allocation once before standard denoising.
+    Firstly, we propose Soft-Overlap Disentanglement (SOD), which converts normalized overlap between
+    pilot concept maps into a differentiable and layout-agnostic separation objective. Secondly, we introduce
+    Isotropic Gradient Rectification (IGR), which normalizes the SOD gradient and applies a bounded latent
+    displacement with a consistent scale across prompts and initializations. Extensive experiments show
+    that RTD achieves state-of-the-art compositional fidelity and robust gains. On the AE-Bench object
+    pair subset, RTD improves BLIP-VQA by 45.8% and ImageReward by 19.6% over CO3 while running 2.3$\times$
+    faster. Code will be released at https://github.com/Z-yiwei/rectify-then-diffuse'
+  url: https://arxiv.org/abs/2608.03135
+  pdf_url: https://arxiv.org/pdf/2608.03135v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 1
+citation_year: 2026

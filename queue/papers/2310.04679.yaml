@@ -1,0 +1,41 @@
+id: paper:arxiv:2310.04679
+status: pending
+score: 4
+track: video_image_coding
+matched:
+- ref: codec:VVC
+  count: 1
+  weight: 3
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+meta:
+  title: High Visual-Fidelity Learned Video Compression
+  authors:
+  - Meng Li
+  - Yibo Shi
+  - Jing Wang
+  - Yunqi Huang
+  published: '2023-10-07'
+  updated: '2023-10-07'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: With the growing demand for video applications, many advanced learned video compression methods
+    have been developed, outperforming traditional methods in terms of objective quality metrics such
+    as PSNR. Existing methods primarily focus on objective quality but tend to overlook perceptual quality.
+    Directly incorporating perceptual loss into a learned video compression framework is nontrivial and
+    raises several perceptual quality issues that need to be addressed. In this paper, we investigated
+    these issues in learned video compression and propose a novel High Visual-Fidelity Learned Video Compression
+    framework (HVFVC). Specifically, we design a novel confidence-based feature reconstruction method
+    to address the issue of poor reconstruction in newly-emerged regions, which significantly improves
+    the visual quality of the reconstruction. Furthermore, we present a periodic compensation loss to
+    mitigate the checkerboard artifacts related to deconvolution operation and optimization. Extensive
+    experiments have shown that the proposed HVFVC achieves excellent perceptual quality, outperforming
+    the latest VVC standard with only 50% required bitrate.
+  url: https://arxiv.org/abs/2310.04679
+  pdf_url: https://arxiv.org/pdf/2310.04679v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 16
+citation_year: 2023

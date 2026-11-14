@@ -1,0 +1,40 @@
+id: paper:arxiv:2601.20094
+status: skipped
+score: 0
+track: audio_coding
+matched: []
+meta:
+  title: 'T-Mimi: A Transformer-based Mimi Decoder for Real-Time On-Phone TTS'
+  authors:
+  - Haibin Wu
+  - Bach Viet Do
+  - Naveen Suda
+  - Julian Chan
+  - Madhavan C R
+  - Gene-Ping Yang
+  - Yi-Chiao Wu
+  - Naoyuki Kanda
+  - Yossef Adi
+  - Xin Lei
+  - Yue Liu
+  - Florian Metze
+  - Yuzong Liu
+  published: '2026-01-27'
+  updated: '2026-01-27'
+  categories:
+  - eess.AS
+  abstract: 'Neural audio codecs provide promising acoustic features for speech synthesis, with representative
+    streaming codecs like Mimi providing high-quality acoustic features for real-time Text-to-Speech (TTS)
+    applications. However, Mimi''s decoder, which employs a hybrid transformer and convolution architecture,
+    introduces significant latency bottlenecks on edge devices due to the the compute intensive nature
+    of deconvolution layers which are not friendly for mobile-CPUs, such as the most representative framework
+    XNNPACK. This paper introduces T-Mimi, a novel modification of the Mimi codec decoder that replaces
+    its convolutional components with a purely transformer-based decoder, inspired by the TS3-Codec architecture.
+    This change dramatically reduces on-device TTS latency from 42.1ms to just 4.4ms. Furthermore, we
+    conduct quantization aware training and derive a crucial finding: the final two transformer layers
+    and the concluding linear layers of the decoder, which are close to the waveform, are highly sensitive
+    to quantization and must be preserved at full precision to maintain audio quality.'
+  url: https://arxiv.org/abs/2601.20094
+  pdf_url: https://arxiv.org/pdf/2601.20094v1
+  version: v1
+fetched: '2026-11-14'

@@ -1,0 +1,50 @@
+id: paper:arxiv:2403.01248
+status: pending
+score: 2
+track: self_improvement
+matched:
+- ref: concept:LLM
+  count: 2
+  weight: 1
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+meta:
+  title: 'SceneCraft: An LLM Agent for Synthesizing 3D Scene as Blender Code'
+  authors:
+  - Ziniu Hu
+  - Ahmet Iscen
+  - Aashi Jain
+  - Thomas Kipf
+  - Yisong Yue
+  - David A. Ross
+  - Cordelia Schmid
+  - Alireza Fathi
+  published: '2024-03-02'
+  updated: '2024-03-02'
+  categories:
+  - cs.CV
+  - cs.AI
+  - cs.CL
+  - cs.LG
+  abstract: This paper introduces SceneCraft, a Large Language Model (LLM) Agent converting text descriptions
+    into Blender-executable Python scripts which render complex scenes with up to a hundred 3D assets.
+    This process requires complex spatial planning and arrangement. We tackle these challenges through
+    a combination of advanced abstraction, strategic planning, and library learning. SceneCraft first
+    models a scene graph as a blueprint, detailing the spatial relationships among assets in the scene.
+    SceneCraft then writes Python scripts based on this graph, translating relationships into numerical
+    constraints for asset layout. Next, SceneCraft leverages the perceptual strengths of vision-language
+    foundation models like GPT-V to analyze rendered images and iteratively refine the scene. On top of
+    this process, SceneCraft features a library learning mechanism that compiles common script functions
+    into a reusable library, facilitating continuous self-improvement without expensive LLM parameter
+    tuning. Our evaluation demonstrates that SceneCraft surpasses existing LLM-based agents in rendering
+    complex scenes, as shown by its adherence to constraints and favorable human assessments. We also
+    showcase the broader application potential of SceneCraft by reconstructing detailed 3D scenes from
+    the Sintel movie and guiding a video generative model with generated scenes as intermediary control
+    signal.
+  url: https://arxiv.org/abs/2403.01248
+  pdf_url: https://arxiv.org/pdf/2403.01248v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 187
+citation_year: 2024

@@ -1,0 +1,39 @@
+id: paper:arxiv:2410.06016
+status: skipped
+score: 0
+track: audio_coding
+matched: []
+meta:
+  title: Variable Bitrate Residual Vector Quantization for Audio Coding
+  authors:
+  - Yunkee Chae
+  - Woosung Choi
+  - Yuhta Takida
+  - Junghyun Koo
+  - Yukara Ikemiya
+  - Zhi Zhong
+  - Kin Wai Cheuk
+  - Marco A. Martínez-Ramírez
+  - Kyogu Lee
+  - Wei-Hsiang Liao
+  - Yuki Mitsufuji
+  published: '2024-10-08'
+  updated: '2025-04-27'
+  categories:
+  - cs.SD
+  - cs.LG
+  - eess.AS
+  abstract: Recent state-of-the-art neural audio compression models have progressively adopted residual
+    vector quantization (RVQ). Despite this success, these models employ a fixed number of codebooks per
+    frame, which can be suboptimal in terms of rate-distortion tradeoff, particularly in scenarios with
+    simple input audio, such as silence. To address this limitation, we propose variable bitrate RVQ (VRVQ)
+    for audio codecs, which allows for more efficient coding by adapting the number of codebooks used
+    per frame. Furthermore, we propose a gradient estimation method for the non-differentiable masking
+    operation that transforms from the importance map to the binary importance mask, improving model training
+    via a straight-through estimator. We demonstrate that the proposed training framework achieves superior
+    results compared to the baseline method and shows further improvement when applied to the current
+    state-of-the-art codec.
+  url: https://arxiv.org/abs/2410.06016
+  pdf_url: https://arxiv.org/pdf/2410.06016v3
+  version: v3
+fetched: '2026-11-14'

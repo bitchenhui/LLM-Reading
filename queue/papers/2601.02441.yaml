@@ -1,0 +1,34 @@
+id: paper:arxiv:2601.02441
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 2
+  weight: 1
+meta:
+  title: Understanding Pure Textual Reasoning for Blind Image Quality Assessment
+  authors:
+  - Yuan Li
+  - Shin'ya Nishida
+  published: '2026-01-05'
+  updated: '2026-03-25'
+  categories:
+  - cs.CV
+  - cs.AI
+  abstract: 'Textual reasoning has recently been widely adopted in Blind Image Quality Assessment (BIQA).
+    However, it remains unclear how textual information contributes to quality prediction and to what
+    extent text can represent the score-related image contents. This work addresses these questions from
+    an information-flow perspective by comparing existing BIQA models with three paradigms designed to
+    learn the image-text-score relationship: Chain-of-Thought, Self-Consistency, and Autoencoder. Our
+    experiments show that the score prediction performance of the existing model significantly drops when
+    only textual information is used for prediction. Whereas the Chain-of-Thought paradigm introduces
+    little improvement in BIQA performance, the Self-Consistency paradigm significantly reduces the gap
+    between image- and text-conditioned predictions, narrowing the PLCC/SRCC difference to 0.02/0.03.
+    The Autoencoder-like paradigm is less effective in closing the image-text gap, yet it reveals a direction
+    for further optimization. These findings provide insights into how to improve the textual reasoning
+    for BIQA and high-level vision tasks.'
+  url: https://arxiv.org/abs/2601.02441
+  pdf_url: https://arxiv.org/pdf/2601.02441v2
+  version: v2
+fetched: '2026-11-14'

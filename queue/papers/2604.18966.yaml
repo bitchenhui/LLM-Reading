@@ -1,0 +1,43 @@
+id: paper:arxiv:2604.18966
+status: skipped
+score: 1
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 1
+  weight: 1
+meta:
+  title: Self-Improving Tabular Language Models via Iterative Reward-Guided Post-Training
+  authors:
+  - Yunbo Long
+  - Tejumade Afonja
+  - Guangya Hao
+  - Alexandra Brintrup
+  - Mario Fritz
+  published: '2026-04-21'
+  updated: '2026-05-17'
+  categories:
+  - cs.LG
+  - cs.AI
+  abstract: Tabular language models can generate synthetic tables by modeling rows as token sequences,
+    but they are typically trained once with supervised fine-tuning and then used as static synthesizers.
+    This is limiting because next-token likelihood does not directly optimize the distributional, utility,
+    and indistinguishability properties used to evaluate synthetic data. We study iterative reward-guided
+    post-training for tabular language models through a generate--score--align protocol, where a generator
+    samples synthetic rows, a task-specified reward ranks them, and the model is updated relative to a
+    fixed supervised reference. Within this protocol, we propose \textbf{TabGRAA} (\textbf{Tab}ular \textbf{G}roup-\textbf{R}elative
+    \textbf{A}dvantage \textbf{A}lignment), a group-relative alignment method that compares high- and
+    low-reward generated groups using group-averaged policy/reference log-ratios rather than one-to-one
+    preference pairs. Across five mixed-type benchmarks, TabGRAA improves a GReaT backbone beyond additional
+    supervised fine-tuning and achieves the strongest average trade-off among adapted DPO, KTO, and NPO
+    baselines on fidelity and downstream utility, while maintaining empirical privacy diagnostics near
+    the supervised baseline. Ablations show that the gains depend on meaningful reward ranking and stable
+    group-level updates rather than extra training alone. Reward-substitution and scorer-separation studies
+    further show that the post-training loop can use both classifier-based and classifier-free rewards,
+    and that proper scorer separation is important for preserving the fidelity--utility--privacy trade-off.
+    These results position TabGRAA as a self-improving post-training method for tabular language-model
+    generators, complementary to strong static tabular synthesizers.
+  url: https://arxiv.org/abs/2604.18966
+  pdf_url: https://arxiv.org/pdf/2604.18966v2
+  version: v2
+fetched: '2026-11-14'

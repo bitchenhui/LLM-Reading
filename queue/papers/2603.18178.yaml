@@ -1,0 +1,52 @@
+id: paper:arxiv:2603.18178
+status: pending
+score: 3
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+- ref: org:NVIDIA
+  count: 1
+  weight: 1
+meta:
+  title: 'VLM-AutoDrive: Post-Training Vision-Language Models for Safety-Critical Autonomous Driving Events'
+  authors:
+  - Mohammad Qazim Bhat
+  - Yufan Huang
+  - Niket Agarwal
+  - Hao Wang
+  - Michael Woods
+  - John Kenyon
+  - Tsung-Yi Lin
+  - Xiaodong Yang
+  - Ming-Yu Liu
+  - Kevin Xie
+  published: '2026-03-18'
+  updated: '2026-05-15'
+  categories:
+  - cs.CV
+  - cs.AI
+  abstract: The rapid growth of ego-centric dashcam footage presents a major challenge for detecting safety-critical
+    events such as collisions and near-collisions, scenarios that are brief, rare, and difficult for generic
+    vision models to capture. While multimodal large language models (MLLMs) demonstrate strong general
+    reasoning ability, they underperform in driving contexts due to domain and temporal misalignment.
+    We introduce VLM-AutoDrive, a modular post-training framework for adapting pretrained Vision-Language
+    Models (VLMs) to high-fidelity anomaly detection. The framework integrates metadata-derived captions,
+    LLM-generated descriptions, visual question answering (VQA) pairs, and chain-of-thought (CoT) reasoning
+    supervision to enable domain-aligned and interpretable learning. Off-the-shelf VLMs such as NVIDIA's
+    Cosmos-Reason1 7B (CR1) exhibit near-zero Collision recall in zero-shot settings; fine-tuning with
+    VLM-AutoDrive improves Collision F1 from 0.00 to 0.69 and overall accuracy from 35.35% to 77.27%.
+    VLM-AutoDrive offers a scalable recipe for adapting general-purpose VLMs to safety-critical, temporally
+    localized perception tasks. Evaluated on real-world Nexar dashcam videos, it achieves substantial
+    gains in Collision and Near-Collision detection while producing interpretable reasoning traces, bridging
+    the gap between perception, causality, and decision reasoning in autonomous driving.
+  url: https://arxiv.org/abs/2603.18178
+  pdf_url: https://arxiv.org/pdf/2603.18178v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 5
+citation_year: 2026

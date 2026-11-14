@@ -1,0 +1,51 @@
+id: paper:arxiv:2507.10628
+status: pending
+score: 2
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: 'GHPO: Adaptive Guidance for Stable and Efficient LLM Reinforcement Learning'
+  authors:
+  - Ziru Liu
+  - Cheng Gong
+  - Xinyu Fu
+  - Yaofang Liu
+  - Ran Chen
+  - Shoubo Hu
+  - Suiyun Zhang
+  - Rui Liu
+  - Qingfu Zhang
+  - Dandan Tu
+  published: '2025-07-14'
+  updated: '2025-07-16'
+  categories:
+  - cs.LG
+  - cs.AI
+  abstract: Reinforcement Learning with Verifiable Rewards (RLVR) has recently emerged as a powerful paradigm
+    for facilitating the self-improvement of large language models (LLMs), particularly in the domain
+    of complex reasoning tasks. However, prevailing on-policy RL methods often contend with significant
+    training instability and inefficiency. This is primarily due to a capacity-difficulty mismatch, where
+    the complexity of training data frequently outpaces the model's current capabilities, leading to critically
+    sparse reward signals and stalled learning progress. This challenge is particularly acute for smaller,
+    more resource-efficient LLMs. To overcome this, we introduce the Guided Hybrid Policy Optimization
+    (GHPO), a novel difficulty-aware reinforcement learning framework. GHPO dynamically calibrates task
+    difficulty by employing adaptive prompt refinement to provide targeted guidance. This unique approach
+    adaptively balances direct imitation learning for problems currently beyond the model's reach with
+    exploration-based reinforcement learning for more manageable tasks, effectively creating a smooth
+    and optimized learning curriculum. Extensive experiments demonstrate that GHPO achieves an average
+    performance gain of approximately 5% across six challenging mathematics benchmarks, consistently outperforming
+    strong on-policy reinforcement learning and curriculum learning baselines. Further analysis confirms
+    that our framework significantly enhances both training stability and final reasoning performance,
+    thus offering a scalable and efficient solution for developing powerful and robust reasoning models.
+  url: https://arxiv.org/abs/2507.10628
+  pdf_url: https://arxiv.org/pdf/2507.10628v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 35
+citation_year: 2025

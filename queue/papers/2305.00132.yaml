@@ -1,0 +1,41 @@
+id: paper:arxiv:2305.00132
+status: skipped
+score: 1
+track: processing_enhancement
+matched:
+- ref: concept:SuperResolution
+  count: 1
+  weight: 1
+meta:
+  title: 'LD-GAN: Low-Dimensional Generative Adversarial Network for Spectral Image Generation with Variance
+    Regularization'
+  authors:
+  - Emmanuel Martinez
+  - Roman Jacome
+  - Alejandra Hernandez-Rojas
+  - Henry Arguello
+  published: '2023-04-29'
+  updated: '2023-04-29'
+  categories:
+  - cs.CV
+  - eess.IV
+  abstract: Deep learning methods are state-of-the-art for spectral image (SI) computational tasks. However,
+    these methods are constrained in their performance since available datasets are limited due to the
+    highly expensive and long acquisition time. Usually, data augmentation techniques are employed to
+    mitigate the lack of data. Surpassing classical augmentation methods, such as geometric transformations,
+    GANs enable diverse augmentation by learning and sampling from the data distribution. Nevertheless,
+    GAN-based SI generation is challenging since the high-dimensionality nature of this kind of data hinders
+    the convergence of the GAN training yielding to suboptimal generation. To surmount this limitation,
+    we propose low-dimensional GAN (LD-GAN), where we train the GAN employing a low-dimensional representation
+    of the {dataset} with the latent space of a pretrained autoencoder network. Thus, we generate new
+    low-dimensional samples which are then mapped to the SI dimension with the pretrained decoder network.
+    Besides, we propose a statistical regularization to control the low-dimensional representation variance
+    for the autoencoder training and to achieve high diversity of samples generated with the GAN. We validate
+    our method LD-GAN as data augmentation strategy for compressive spectral imaging, SI super-resolution,
+    and RBG to spectral tasks with improvements varying from 0.5 to 1 [dB] in each task respectively.
+    We perform comparisons against the non-data augmentation training, traditional DA, and with the same
+    GAN adjusted and trained to generate the full-sized SIs. The code of this paper can be found in https://github.com/romanjacome99/LD_GAN.git
+  url: https://arxiv.org/abs/2305.00132
+  pdf_url: https://arxiv.org/pdf/2305.00132v1
+  version: v1
+fetched: '2026-11-14'

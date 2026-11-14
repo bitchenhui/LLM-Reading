@@ -1,0 +1,48 @@
+id: paper:arxiv:2308.15791
+status: skipped_low_citation
+score: 4
+track: video_image_coding
+matched:
+- ref: codec:VVC
+  count: 2
+  weight: 3
+- ref: metric:BD-Rate
+  count: 1
+  weight: 1
+meta:
+  title: Neural Video Compression with Temporal Layer-Adaptive Hierarchical B-frame Coding
+  authors:
+  - Yeongwoong Kim
+  - Suyong Bahk
+  - Seungeon Kim
+  - Won Hee Lee
+  - Dokwan Oh
+  - Hui Yong Kim
+  published: '2023-08-30'
+  updated: '2023-09-05'
+  categories:
+  - cs.CV
+  - eess.IV
+  abstract: Neural video compression (NVC) is a rapidly evolving video coding research area, with some
+    models achieving superior coding efficiency compared to the latest video coding standard Versatile
+    Video Coding (VVC). In conventional video coding standards, the hierarchical B-frame coding, which
+    utilizes a bidirectional prediction structure for higher compression, had been well-studied and exploited.
+    In NVC, however, limited research has investigated the hierarchical B scheme. In this paper, we propose
+    an NVC model exploiting hierarchical B-frame coding with temporal layer-adaptive optimization. We
+    first extend an existing unidirectional NVC model to a bidirectional model, which achieves -21.13%
+    BD-rate gain over the unidirectional baseline model. However, this model faces challenges when applied
+    to sequences with complex or large motions, leading to performance degradation. To address this, we
+    introduce temporal layer-adaptive optimization, incorporating methods such as temporal layer-adaptive
+    quality scaling (TAQS) and temporal layer-adaptive latent scaling (TALS). The final model with the
+    proposed methods achieves an impressive BD-rate gain of -39.86% against the baseline. It also resolves
+    the challenges in sequences with large or complex motions with up to -49.13% more BD-rate gains than
+    the simple bidirectional extension. This improvement is attributed to the allocation of more bits
+    to lower temporal layers, thereby enhancing overall reconstruction quality with smaller bits. Since
+    our method has little dependency on a specific NVC model architecture, it can serve as a general tool
+    for extending unidirectional NVC models to the ones with hierarchical B-frame coding.
+  url: https://arxiv.org/abs/2308.15791
+  pdf_url: https://arxiv.org/pdf/2308.15791v3
+  version: v3
+fetched: '2026-11-14'
+citation_count: 4
+citation_year: 2023

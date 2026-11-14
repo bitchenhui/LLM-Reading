@@ -1,0 +1,37 @@
+id: paper:arxiv:2110.10491
+status: skipped
+score: 0
+track: audio_coding
+matched: []
+meta:
+  title: A Study On Data Augmentation In Voice Anti-Spoofing
+  authors:
+  - Ariel Cohen
+  - Inbal Rimon
+  - Eran Aflalo
+  - Haim Permuter
+  published: '2021-10-20'
+  updated: '2021-10-20'
+  categories:
+  - cs.SD
+  - cs.CR
+  - eess.AS
+  abstract: In this paper, we perform an in-depth study of how data augmentation techniques improve synthetic
+    or spoofed audio detection. Specifically, we propose methods to deal with channel variability, different
+    audio compressions, different band-widths, and unseen spoofing attacks, which have all been shown
+    to significantly degrade the performance of audio-based systems and Anti-Spoofing systems. Our results
+    are based on the ASVspoof 2021 challenge, in the Logical Access (LA) and Deep Fake (DF) categories.
+    Our study is Data-Centric, meaning that the models are fixed and we significantly improve the results
+    by making changes in the data. We introduce two forms of data augmentation - compression augmentation
+    for the DF part, compression & channel augmentation for the LA part. In addition, a new type of online
+    data augmentation, SpecAverage, is introduced in which the audio features are masked with their average
+    value in order to improve generalization. Furthermore, we introduce a Log spectrogram feature design
+    that improved the results. Our best single system and fusion scheme both achieve state-of-the-art
+    performance in the DF category, with an EER of 15.46% and 14.46% respectively. Our best system for
+    the LA task reduced the best baseline EER by 50% and the min t-DCF by 16%. Our techniques to deal
+    with spoofed data from a wide variety of distributions can be replicated and can help anti-spoofing
+    and speech-based systems enhance their results.
+  url: https://arxiv.org/abs/2110.10491
+  pdf_url: https://arxiv.org/pdf/2110.10491v1
+  version: v1
+fetched: '2026-11-14'

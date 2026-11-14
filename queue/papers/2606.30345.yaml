@@ -1,0 +1,55 @@
+id: paper:arxiv:2606.30345
+status: skipped
+score: 1
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+meta:
+  title: 'DRIFT: Difficulty Routing Self-DIstillation with Rhythm-Gated Exploration and Success BuFfer
+    Training'
+  authors:
+  - Haisen Luo
+  - Yiwei Liu
+  - Haoning Wang
+  - Dan Liu
+  - Junxi Yin
+  - Haotian Wang
+  - Lei Zhang
+  - Xiaoyu Tian
+  - Shuaiting Chen
+  - Yuansheng Song
+  - Baoyan Guo
+  - Xiongfei Yan
+  - Bolan Yang
+  - Chengwei Liu
+  - Ming Cui
+  - Jiong Chen
+  published: '2026-06-29'
+  updated: '2026-08-10'
+  categories:
+  - cs.LG
+  - cs.AI
+  abstract: Enabling large language models to achieve stable self-improvement without external expert
+    supervision remains a central challenge in complex reasoning tasks. Existing self-distillation and
+    reinforcement learning methods lack explicit mechanisms for tracking problem-level learning progress
+    and adapting optimization strategies accordingly. Consequently, training may over-optimize easy problems,
+    receive weak supervision from hard problems, and fail to sufficiently explore borderline cases. To
+    resolve these issues, we propose DRIFT, an online self-evolution policy optimization framework for
+    large language models. DRIFT regulates the model's self-improvement process through the joint use
+    of Difficulty Routing and Rhythm Gating. The former identifies the model's learning state at the problem
+    level and dynamically allocates self-distillation and reinforcement learning signals, while the latter
+    refines policy updates at the token level, concentrating exploration on critical reasoning positions.
+    By further incorporating a success buffer and a two-stage curriculum learning strategy, DRIFT preserves
+    high-quality historical experience while progressively guiding the model from reliable behavior acquisition
+    toward stable policy evolution. Evaluated across five benchmarks and three model scales, DRIFT surpasses
+    the peak performance of both GRPO and SDPO across all evaluated metrics. On the average score over
+    the five benchmarks, DRIFT achieves 79.5$\%$, outperforming GRPO by 9.5$\%$ and SDPO by 7.5$\%$, establishing
+    a new state-of-the-art result. Notably, on ToolUse, DRIFT reaches an accuracy of 79.2$\%$, improving
+    over GRPO by 13.5$\%$ and SDPO by 10.7$\%$, setting a new state-of-the-art and substantially outperforming
+    all concurrent methods.
+  url: https://arxiv.org/abs/2606.30345
+  pdf_url: https://arxiv.org/pdf/2606.30345v4
+  version: v4
+fetched: '2026-11-14'

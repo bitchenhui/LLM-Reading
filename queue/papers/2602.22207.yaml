@@ -1,0 +1,42 @@
+id: paper:arxiv:2602.22207
+status: pending
+score: 2
+track: self_improvement
+matched:
+- ref: concept:LLM
+  count: 2
+  weight: 1
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+meta:
+  title: 'Recovered in Translation: Efficient Pipeline for Automated Translation of Benchmarks and Datasets'
+  authors:
+  - Hanna Yukhymenko
+  - Anton Alexandrov
+  - Martin Vechev
+  published: '2026-02-25'
+  updated: '2026-02-25'
+  categories:
+  - cs.CL
+  - cs.AI
+  - cs.LG
+  abstract: The reliability of multilingual Large Language Model (LLM) evaluation is currently compromised
+    by the inconsistent quality of translated benchmarks. Existing resources often suffer from semantic
+    drift and context loss, which can lead to misleading performance metrics. In this work, we present
+    a fully automated framework designed to address these challenges by enabling scalable, high-quality
+    translation of datasets and benchmarks. We demonstrate that adapting test-time compute scaling strategies,
+    specifically Universal Self-Improvement (USI) and our proposed multi-round ranking method, T-RANK,
+    allows for significantly higher quality outputs compared to traditional pipelines. Our framework ensures
+    that benchmarks preserve their original task structure and linguistic nuances during localization.
+    We apply this approach to translate popular benchmarks and datasets into eight Eastern and Southern
+    European languages (Ukrainian, Bulgarian, Slovak, Romanian, Lithuanian, Estonian, Turkish, Greek).
+    Evaluations using both reference-based metrics and LLM-as-a-judge show that our translations surpass
+    existing resources, resulting in more accurate downstream model assessment. We release both the framework
+    and the improved benchmarks to facilitate robust and reproducible multilingual AI development.
+  url: https://arxiv.org/abs/2602.22207
+  pdf_url: https://arxiv.org/pdf/2602.22207v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 4
+citation_year: 2026

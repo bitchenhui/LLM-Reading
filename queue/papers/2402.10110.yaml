@@ -1,0 +1,43 @@
+id: paper:arxiv:2402.10110
+status: pending
+score: 2
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: 'Selective Reflection-Tuning: Student-Selected Data Recycling for LLM Instruction-Tuning'
+  authors:
+  - Ming Li
+  - Lichang Chen
+  - Jiuhai Chen
+  - Shwai He
+  - Jiuxiang Gu
+  - Tianyi Zhou
+  published: '2024-02-15'
+  updated: '2024-06-07'
+  categories:
+  - cs.CL
+  - cs.AI
+  - cs.LG
+  abstract: Instruction tuning is critical to large language models (LLMs) for achieving better instruction
+    following and task adaptation capabilities but its success heavily relies on the training data quality.
+    Many recent methods focus on improving the data quality but often overlook the compatibility of the
+    data with the student model being finetuned. This paper introduces Selective Reflection-Tuning, a
+    novel paradigm that synergizes a teacher LLM's reflection and introspection for improving existing
+    data quality with the data selection capability of the student LLM, to automatically refine existing
+    instruction-tuning data. This teacher-student collaboration produces high-quality and student-compatible
+    instruction-response pairs, resulting in sample-efficient instruction tuning and LLMs of superior
+    performance. Selective Reflection-Tuning is a data augmentation and synthesis that generally improves
+    LLM finetuning and self-improvement without collecting brand-new data. We apply our method to Alpaca
+    and WizardLM data and achieve much stronger and top-tier 7B and 13B LLMs.
+  url: https://arxiv.org/abs/2402.10110
+  pdf_url: https://arxiv.org/pdf/2402.10110v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 97
+citation_year: 2024

@@ -1,0 +1,37 @@
+id: paper:arxiv:2607.00416
+status: pending
+score: 2
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 3
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: 'DroneIQA-VLE: Multi-Task Drone Image Quality Assessment via Vision-Language Ensemble'
+  authors:
+  - Wei Sun
+  - Weixia Zhang
+  - Hongjian Zhan
+  - Mingkai Lu
+  - Yixuan Gao
+  - Guangtao Zhai
+  published: '2026-07-01'
+  updated: '2026-07-01'
+  categories:
+  - cs.CV
+  abstract: 'We present DroneIQA-VLE, our solution to the ICME 2026 Drone-IQA Grand Challenge on Target-aware
+    Image Quality Assessment for Low-altitude UAV Images. The framework jointly predicts global, target,
+    and background quality scores by ensembling two complementary pipelines: (1) SigLIP2 vision encoders
+    with multi-task regression heads, and (2) a LoRA-adapted Qwen3.5-9B multimodal large language model
+    for quality score regression. The final global quality prediction is obtained by arithmetically averaging
+    the outputs of both pipelines. Our method achieves 2nd place in the challenge, demonstrating its effectiveness.
+    The code is available at https://github.com/sunwei925/DroneIQA-VLE.'
+  url: https://arxiv.org/abs/2607.00416
+  pdf_url: https://arxiv.org/pdf/2607.00416v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 1
+citation_year: 2026

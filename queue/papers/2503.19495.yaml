@@ -1,0 +1,38 @@
+id: paper:arxiv:2503.19495
+status: skipped
+score: 1
+track: video_image_coding
+matched:
+- ref: concept:ICM
+  count: 1
+  weight: 1
+meta:
+  title: End-to-End Semantic Preservation in Text-Aware Image Compression Systems
+  authors:
+  - Stefano Della Fiore
+  - Alessandro Gnutti
+  - Marco Dalai
+  - Pierangelo Migliorati
+  - Riccardo Leonardi
+  published: '2025-03-25'
+  updated: '2025-10-15'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: Traditional image compression methods aim to reconstruct images for human perception, prioritizing
+    visual fidelity over task relevance. In contrast, Coding for Machines focuses on preserving information
+    essential for automated understanding. Building on this principle, we present an end-to-end compression
+    framework that retains text-specific features for Optical Character Recognition (OCR). The encoder
+    operates at roughly half the computational cost of the OCR module, making it suitable for resource-limited
+    devices. When on-device OCR is infeasible, images can be efficiently compressed and later decoded
+    to recover textual content. Experiments show significant improvements in text extraction accuracy
+    at low bitrates, even outperforming OCR on uncompressed images. We further extend this study to general-purpose
+    encoders, exploring their capacity to preserve hidden semantics under extreme compression. Instead
+    of optimizing for visual fidelity, we examine whether compact, visually degraded representations can
+    retain recoverable meaning through learned enhancement and recognition modules. Results demonstrate
+    that semantic information can persist despite severe compression, bridging text-oriented compression
+    and general-purpose semantic preservation in machine-centered image coding.
+  url: https://arxiv.org/abs/2503.19495
+  pdf_url: https://arxiv.org/pdf/2503.19495v2
+  version: v2
+fetched: '2026-11-14'

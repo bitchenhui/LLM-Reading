@@ -1,0 +1,36 @@
+id: paper:arxiv:2602.04032
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 4
+  weight: 1
+meta:
+  title: 'MS-SCANet: A Multiscale Transformer-Based Architecture with Dual Attention for No-Reference
+    Image Quality Assessment'
+  authors:
+  - Mayesha Maliha R. Mithila
+  - Mylene C. Q. Farias
+  published: '2026-02-03'
+  updated: '2026-02-03'
+  categories:
+  - eess.IV
+  - cs.CV
+  - cs.MM
+  abstract: We present the Multi-Scale Spatial Channel Attention Network (MS-SCANet), a transformer-based
+    architecture designed for no-reference image quality assessment (IQA). MS-SCANet features a dual-branch
+    structure that processes images at multiple scales, effectively capturing both fine and coarse details,
+    an improvement over traditional single-scale methods. By integrating tailored spatial and channel
+    attention mechanisms, our model emphasizes essential features while minimizing computational complexity.
+    A key component of MS-SCANet is its cross-branch attention mechanism, which enhances the integration
+    of features across different scales, addressing limitations in previous approaches. We also introduce
+    two new consistency loss functions, Cross-Branch Consistency Loss and Adaptive Pooling Consistency
+    Loss, which maintain spatial integrity during feature scaling, outperforming conventional linear and
+    bilinear techniques. Extensive evaluations on datasets like KonIQ-10k, LIVE, LIVE Challenge, and CSIQ
+    show that MS-SCANet consistently surpasses state-of-the-art methods, offering a robust framework with
+    stronger correlations with subjective human scores.
+  url: https://arxiv.org/abs/2602.04032
+  pdf_url: https://arxiv.org/pdf/2602.04032v1
+  version: v1
+fetched: '2026-11-14'

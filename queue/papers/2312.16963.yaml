@@ -1,0 +1,38 @@
+id: paper:arxiv:2312.16963
+status: skipped
+score: 0
+track: video_image_coding
+matched: []
+meta:
+  title: 'FFCA-Net: Stereo Image Compression via Fast Cascade Alignment of Side Information'
+  authors:
+  - Yichong Xia
+  - Yujun Huang
+  - Bin Chen
+  - Haoqian Wang
+  - Yaowei Wang
+  published: '2023-12-28'
+  updated: '2023-12-29'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: Multi-view compression technology, especially Stereo Image Compression (SIC), plays a crucial
+    role in car-mounted cameras and 3D-related applications. Interestingly, the Distributed Source Coding
+    (DSC) theory suggests that efficient data compression of correlated sources can be achieved through
+    independent encoding and joint decoding. This motivates the rapidly developed deep-distributed SIC
+    methods in recent years. However, these approaches neglect the unique characteristics of stereo-imaging
+    tasks and incur high decoding latency. To address this limitation, we propose a Feature-based Fast
+    Cascade Alignment network (FFCA-Net) to fully leverage the side information on the decoder. FFCA adopts
+    a coarse-to-fine cascaded alignment approach. In the initial stage, FFCA utilizes a feature domain
+    patch-matching module based on stereo priors. This module reduces redundancy in the search space of
+    trivial matching methods and further mitigates the introduction of noise. In the subsequent stage,
+    we utilize an hourglass-based sparse stereo refinement network to further align inter-image features
+    with a reduced computational cost. Furthermore, we have devised a lightweight yet high-performance
+    feature fusion network, called a Fast Feature Fusion network (FFF), to decode the aligned features.
+    Experimental results on InStereo2K, KITTI, and Cityscapes datasets demonstrate the significant superiority
+    of our approach over traditional and learning-based SIC methods. In particular, our approach achieves
+    significant gains in terms of 3 to 10-fold faster decoding speed than other methods.
+  url: https://arxiv.org/abs/2312.16963
+  pdf_url: https://arxiv.org/pdf/2312.16963v2
+  version: v2
+fetched: '2026-11-14'

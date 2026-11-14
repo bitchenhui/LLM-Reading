@@ -1,0 +1,48 @@
+id: paper:arxiv:2105.09999
+status: pending
+score: 4
+track: streaming_delivery
+matched:
+- ref: concept:ABR
+  count: 2
+  weight: 1
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+- ref: metric:SSIM
+  count: 1
+  weight: 1
+- ref: metric:VMAF
+  count: 1
+  weight: 1
+meta:
+  title: Convolutional Block Design for Learned Fractional Downsampling
+  authors:
+  - Li-Heng Chen
+  - Christos G. Bampis
+  - Zhi Li
+  - Chao Chen
+  - Alan C. Bovik
+  published: '2021-05-20'
+  updated: '2021-05-20'
+  categories:
+  - eess.IV
+  - cs.MM
+  abstract: The layers of convolutional neural networks (CNNs) can be used to alter the resolution of
+    their inputs, but the scaling factors are limited to integer values. However, in many image and video
+    processing applications, the ability to resize by a fractional factor would be advantageous. One example
+    is conversion between resolutions standardized for video compression, such as from 1080p to 720p.
+    To solve this problem, we propose an alternative building block, formulated as a conventional convolutional
+    layer followed by a differentiable resizer. More concretely, the convolutional layer preserves the
+    resolution of the input, while the resizing operation is fully handled by the resizer. In this way,
+    any CNN architecture can be adapted for non-integer resizing. As an application, we replace the resizing
+    convolutional layer of a modern deep downsampling model by the proposed building block, and apply
+    it to an adaptive bitrate video streaming scenario. Our experimental results show that an improvement
+    in coding efficiency over the conventional Lanczos algorithm is attained, in terms of PSNR, SSIM,
+    and VMAF on test videos.
+  url: https://arxiv.org/abs/2105.09999
+  pdf_url: https://arxiv.org/pdf/2105.09999v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 12
+citation_year: 2021

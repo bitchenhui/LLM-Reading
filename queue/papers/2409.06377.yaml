@@ -1,0 +1,53 @@
+id: paper:arxiv:2409.06377
+status: pending
+score: 5
+track: self_improvement
+matched:
+- ref: impl:CausalForcing
+  count: 1
+  weight: 3
+- ref: concept:LLM
+  count: 1
+  weight: 1
+- ref: concept:SelfImprovement
+  count: 1
+  weight: 1
+meta:
+  title: 'MoRE: A Mixture of Reflectors Framework for Large Language Model-Based Sequential Recommendation'
+  authors:
+  - Weicong Qin
+  - Yi Xu
+  - Weijie Yu
+  - Chenglei Shen
+  - Xiao Zhang
+  - Ming He
+  - Jianping Fan
+  - Jun Xu
+  published: '2024-09-10'
+  updated: '2025-07-13'
+  categories:
+  - cs.IR
+  - cs.CL
+  abstract: 'Large language models (LLMs) have emerged as a cutting-edge approach in sequential recommendation,
+    leveraging historical interactions to model dynamic user preferences. Current methods mainly focus
+    on learning processed recommendation data in the form of sequence-to-sequence text. While effective,
+    they exhibit three key limitations: 1) failing to decouple intra-user explicit features (e.g., product
+    titles) from implicit behavioral patterns (e.g., brand loyalty) within interaction histories; 2) underutilizing
+    cross-user collaborative filtering (CF) signals; and 3) relying on inefficient reflection update strategies.
+    To address this, We propose MoRE (Mixture of REflectors), which introduces three perspective-aware
+    offline reflection processes to address these gaps. This decomposition directly resolves Challenges
+    1 (explicit/implicit ambiguity) and 2 (CF underutilization). Furthermore, MoRE''s meta-reflector employs
+    a self-improving strategy and a dynamic selection mechanism (Challenge 3) to adapt to evolving user
+    preferences. First, two intra-user reflectors decouple explicit and implicit patterns from a user''s
+    interaction sequence, mimicking traditional recommender systems'' ability to distinguish surface-level
+    and latent preferences. A third cross-user reflector captures CF signals by analyzing user similarity
+    patterns from multiple users'' interactions. To optimize reflection quality, MoRE''s meta-reflector
+    employs a offline self-improving strategy that evaluates reflection impacts through comparisons of
+    presence/absence and iterative refinement of old/new versions, with a online contextual bandit mechanism
+    dynamically selecting the optimal perspective for recommendation for each user. Code: https://github.com/E-qin/MoRE-Rec.'
+  url: https://arxiv.org/abs/2409.06377
+  pdf_url: https://arxiv.org/pdf/2409.06377v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 9
+citation_year: 2024

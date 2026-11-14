@@ -1,0 +1,46 @@
+id: paper:arxiv:2504.19935
+status: pending
+score: 7
+track: processing_enhancement
+matched:
+- ref: codec:VVC
+  count: 3
+  weight: 3
+- ref: codec:HEVC
+  count: 1
+  weight: 3
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+meta:
+  title: Enhancing Quality for VVC Compressed Videos with Omniscient Quality Enhancement Model
+  authors:
+  - Xiem HoangVan
+  - Hieu Bui Minh
+  - Sang NguyenQuang
+  - Wen-Hsiao Peng
+  published: '2025-04-28'
+  updated: '2025-04-28'
+  categories:
+  - cs.CV
+  abstract: The latest video coding standard H.266/VVC has shown its great improvement in terms of compression
+    performance when compared to its predecessor HEVC standard. Though VVC was implemented with many advanced
+    techniques, it still met the same challenges as its predecessor due to the need for even higher perceptual
+    quality demand at the decoder side as well as the compression performance at the encoder side. The
+    advancement of Artificial Intelligence (AI) technology, notably the deep learning-based video quality
+    enhancement methods, was shown to be a promising approach to improving the perceptual quality experience.
+    In this paper, we propose a novel Omniscient video quality enhancement Network for VVC compressed
+    Videos. The Omniscient Network for compressed video quality enhancement was originally designed for
+    HEVC compressed videos in which not only the spatial-temporal features but also cross-frequencies
+    information were employed to augment the visual quality. Inspired by this work, we propose a modification
+    of the OVQE model and integrate it into the lasted STD-VVC (Standard Versatile Video Coding) decoder
+    architecture. As assessed in a rich set of test conditions, the proposed OVQE-VVC solution is able
+    to achieve significant PSNR improvement, notably around 0.74 dB and up to 1.2 dB with respect to the
+    original STD-VVC codec. This also corresponds to around 19.6% of bitrate saving while keeping a similar
+    quality observation.
+  url: https://arxiv.org/abs/2504.19935
+  pdf_url: https://arxiv.org/pdf/2504.19935v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 6
+citation_year: 2024

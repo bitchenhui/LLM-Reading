@@ -1,0 +1,35 @@
+id: paper:arxiv:2606.17279
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: Training LLMs with Reinforcement Learning over Digital Twin Representations for Reasoning-Intensive
+    Surgical VideoQA
+  authors:
+  - Yiqing Shen
+  - Han Zhang
+  - Mathias Unberath
+  published: '2026-06-15'
+  updated: '2026-06-15'
+  categories:
+  - cs.CV
+  abstract: Surgical video question answering requires multi-step reasoning across semantic, spatial,
+    and temporal dimensions. Existing methods architecturally compress videos into discrete token representations
+    and couple visual perception with reasoning. This approach fragments continuous spatial-temporal relationships
+    and has been shown to restrict multi-step reasoning capabilities. We introduce a reinforcement learning
+    (RL) framework that trains large language models (LLMs) to decouple perception from reasoning by operating
+    over digital twin representations constructed from surgical foundation models. Additionally, we introduce
+    hierarchical representations across frame, temporal window, and procedure levels with probabilistic
+    uncertainty estimates. Finally, we propose a novel reward that combines format validation with accuracy
+    assessment through clinical plausibility evaluation and uncertainty-aware calibration for training.
+    To demonstrate the capabilities of this approach, we introduce REAL-Colon-Reason, a colonoscopic benchmark
+    with 2000 question-answer pairs across three complexity levels. We achieve state-of-the-art performance
+    on REAL-Colon-Reason and two existing surgical VideoQA benchmarks REAL-Colon-VQA and EndoVis18-VQA.
+  url: https://arxiv.org/abs/2606.17279
+  pdf_url: https://arxiv.org/pdf/2606.17279v1
+  version: v1
+fetched: '2026-11-14'

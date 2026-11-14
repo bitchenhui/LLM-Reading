@@ -1,0 +1,55 @@
+id: paper:arxiv:2411.13362
+status: pending
+score: 7
+track: processing_enhancement
+matched:
+- ref: codec:AV1
+  count: 1
+  weight: 3
+- ref: concept:SuperResolution
+  count: 2
+  weight: 1
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+- ref: metric:SSIM
+  count: 1
+  weight: 1
+- ref: metric:VMAF
+  count: 1
+  weight: 1
+meta:
+  title: 'RTSR: A Real-Time Super-Resolution Model for AV1 Compressed Content'
+  authors:
+  - Yuxuan Jiang
+  - Jakub Nawała
+  - Chen Feng
+  - Fan Zhang
+  - Xiaoqing Zhu
+  - Joel Sole
+  - David Bull
+  published: '2024-11-20'
+  updated: '2024-11-20'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: Super-resolution (SR) is a key technique for improving the visual quality of video content
+    by increasing its spatial resolution while reconstructing fine details. SR has been employed in many
+    applications including video streaming, where compressed low-resolution content is typically transmitted
+    to end users and then reconstructed with a higher resolution and enhanced quality. To support real-time
+    playback, it is important to implement fast SR models while preserving reconstruction quality; however
+    most existing solutions, in particular those based on complex deep neural networks, fail to do so.
+    To address this issue, this paper proposes a low-complexity SR method, RTSR, designed to enhance the
+    visual quality of compressed video content, focusing on resolution up-scaling from a) 360p to 1080p
+    and from b) 540p to 4K. The proposed approach utilizes a CNN-based network architecture, which was
+    optimized for AV1 (SVT)-encoded content at various quantization levels based on a dual-teacher knowledge
+    distillation method. This method was submitted to the AIM 2024 Video Super-Resolution Challenge, specifically
+    targeting the Efficient/Mobile Real-Time Video Super-Resolution competition. It achieved the best
+    trade-off between complexity and coding performance (measured in PSNR, SSIM and VMAF) among all six
+    submissions. The code will be available soon.
+  url: https://arxiv.org/abs/2411.13362
+  pdf_url: https://arxiv.org/pdf/2411.13362v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 9
+citation_year: 2024

@@ -1,0 +1,45 @@
+id: paper:arxiv:2601.07107
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'MEDVISTAGYM: A Scalable Training Environment for Thinking with Medical Images via Tool-Integrated
+    Reinforcement Learning'
+  authors:
+  - Meng Lu
+  - Yuxing Lu
+  - Yuchen Zhuang
+  - Megan Mullins
+  - Yang Xie
+  - Guanghua Xiao
+  - Charles Fleming
+  - Wenqi Shi
+  - Xuan Wang
+  published: '2026-01-12'
+  updated: '2026-01-12'
+  categories:
+  - cs.CV
+  - cs.AI
+  abstract: Vision language models (VLMs) achieve strong performance on general image understanding but
+    struggle to think with medical images, especially when performing multi-step reasoning through iterative
+    visual interaction. Medical VLMs often rely on static visual embeddings and single-pass inference,
+    preventing models from re-examining, verifying, or refining visual evidence during reasoning. While
+    tool-integrated reasoning offers a promising path forward, open-source VLMs lack the training infrastructure
+    to learn effective tool selection, invocation, and coordination in multi-modal medical reasoning.
+    We introduce MedVistaGym, a scalable and interactive training environment that incentivizes tool-integrated
+    visual reasoning for medical image analysis. MedVistaGym equips VLMs to determine when and which tools
+    to invoke, localize task-relevant image regions, and integrate single or multiple sub-image evidence
+    into interleaved multimodal reasoning within a unified, executable interface for agentic training.
+    Using MedVistaGym, we train MedVistaGym-R1 to interleave tool use with agentic reasoning through trajectory
+    sampling and end-to-end reinforcement learning. Across six medical VQA benchmarks, MedVistaGym-R1-8B
+    exceeds comparably sized tool-augmented baselines by 19.10% to 24.21%, demonstrating that structured
+    agentic training--not tool access alone--unlocks effective tool-integrated reasoning for medical image
+    analysis.
+  url: https://arxiv.org/abs/2601.07107
+  pdf_url: https://arxiv.org/pdf/2601.07107v1
+  version: v1
+fetched: '2026-11-14'

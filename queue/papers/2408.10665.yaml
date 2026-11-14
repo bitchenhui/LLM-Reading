@@ -1,0 +1,39 @@
+id: paper:arxiv:2408.10665
+status: skipped_low_citation
+score: 2
+track: immersive_media
+matched:
+- ref: org:MPEG
+  count: 1
+  weight: 1
+- ref: org:Microsoft
+  count: 1
+  weight: 1
+meta:
+  title: End-to-end learned Lossy Dynamic Point Cloud Attribute Compression
+  authors:
+  - Dat Thanh Nguyen
+  - Daniel Zieger
+  - Marc Stamminger
+  - Andre Kaup
+  published: '2024-08-20'
+  updated: '2024-08-20'
+  categories:
+  - eess.IV
+  - cs.LG
+  abstract: Recent advancements in point cloud compression have primarily emphasized geometry compression
+    while comparatively fewer efforts have been dedicated to attribute compression. This study introduces
+    an end-to-end learned dynamic lossy attribute coding approach, utilizing an efficient high-dimensional
+    convolution to capture extensive inter-point dependencies. This enables the efficient projection of
+    attribute features into latent variables. Subsequently, we employ a context model that leverage previous
+    latent space in conjunction with an auto-regressive context model for encoding the latent tensor into
+    a bitstream. Evaluation of our method on widely utilized point cloud datasets from the MPEG and Microsoft
+    demonstrates its superior performance compared to the core attribute compression module Region-Adaptive
+    Hierarchical Transform method from MPEG Geometry Point Cloud Compression with 38.1% Bjontegaard Delta-rate
+    saving in average while ensuring a low-complexity encoding/decoding.
+  url: https://arxiv.org/abs/2408.10665
+  pdf_url: https://arxiv.org/pdf/2408.10665v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 6
+citation_year: 2024

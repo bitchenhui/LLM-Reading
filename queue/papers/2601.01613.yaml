@@ -1,0 +1,38 @@
+id: paper:arxiv:2601.01613
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 3
+  weight: 1
+meta:
+  title: 'CAP-IQA: Context-Aware Prompt-Guided CT Image Quality Assessment'
+  authors:
+  - Kazi Ramisa Rifa
+  - Jie Zhang
+  - Abdullah Imran
+  published: '2026-01-04'
+  updated: '2026-01-04'
+  categories:
+  - cs.CV
+  abstract: Prompt-based methods, which encode medical priors through descriptive text, have been only
+    minimally explored for CT Image Quality Assessment (IQA). While such prompts can embed prior knowledge
+    about diagnostic quality, they often introduce bias by reflecting idealized definitions that may not
+    hold under real-world degradations such as noise, motion artifacts, or scanner variability. To address
+    this, we propose the Context-Aware Prompt-guided Image Quality Assessment (CAP-IQA) framework, which
+    integrates text-level priors with instance-level context prompts and applies causal debiasing to separate
+    idealized knowledge from factual, image-specific degradations. Our framework combines a CNN-based
+    visual encoder with a domain-specific text encoder to assess diagnostic visibility, anatomical clarity,
+    and noise perception in abdominal CT images. The model leverages radiology-style prompts and context-aware
+    fusion to align semantic and perceptual representations. On the 2023 LDCTIQA challenge benchmark,
+    CAP-IQA achieves an overall correlation score of 2.8590 (sum of PLCC, SROCC, and KROCC), surpassing
+    the top-ranked leaderboard team (2.7427) by 4.24%. Moreover, our comprehensive ablation experiments
+    confirm that prompt-guided fusion and the simplified encoder-only design jointly enhance feature alignment
+    and interpretability. Furthermore, evaluation on an in-house dataset of 91,514 pediatric CT images
+    demonstrates the true generalizability of CAP-IQA in assessing perceptual fidelity in a different
+    patient population.
+  url: https://arxiv.org/abs/2601.01613
+  pdf_url: https://arxiv.org/pdf/2601.01613v1
+  version: v1
+fetched: '2026-11-14'

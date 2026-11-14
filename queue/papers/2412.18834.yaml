@@ -1,0 +1,39 @@
+id: paper:arxiv:2412.18834
+status: skipped
+score: 1
+track: video_image_coding
+matched:
+- ref: concept:GOP
+  count: 1
+  weight: 1
+meta:
+  title: Adaptive Rate Control for Deep Video Compression with Rate-Distortion Prediction
+  authors:
+  - Bowen Gu
+  - Hao Chen
+  - Ming Lu
+  - Jie Yao
+  - Zhan Ma
+  published: '2024-12-25'
+  updated: '2025-05-08'
+  categories:
+  - cs.MM
+  - cs.CV
+  - cs.IT
+  abstract: Deep video compression has made significant progress in recent years, achieving rate-distortion
+    performance that surpasses that of traditional video compression methods. However, rate control schemes
+    tailored for deep video compression have not been well studied. In this paper, we propose a neural
+    network-based $λ$-domain rate control scheme for deep video compression, which determines the coding
+    parameter $λ$ for each to-be-coded frame based on the rate-distortion-$λ$ (R-D-$λ$) relationships
+    directly learned from uncompressed frames, achieving high rate control accuracy efficiently without
+    the need for pre-encoding. Moreover, this content-aware scheme is able to mitigate inter-frame quality
+    fluctuations and adapt to abrupt changes in video content. Specifically, we introduce two neural network-based
+    predictors to estimate the relationship between bitrate and $λ$, as well as the relationship between
+    distortion and $λ$ for each frame. Then we determine the coding parameter $λ$ for each frame to achieve
+    the target bitrate. Experimental results demonstrate that our approach achieves high rate control
+    accuracy at the mini-GOP level with low time overhead and mitigates inter-frame quality fluctuations
+    across video content of varying resolutions.
+  url: https://arxiv.org/abs/2412.18834
+  pdf_url: https://arxiv.org/pdf/2412.18834v2
+  version: v2
+fetched: '2026-11-14'

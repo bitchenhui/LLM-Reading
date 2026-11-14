@@ -1,0 +1,43 @@
+id: paper:arxiv:2602.02709
+status: skipped_low_citation
+score: 2
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: 'ATLAS: A Multi-LLM Training Framework for EvoDPO with Adaptive Reference Evolution'
+  authors:
+  - Ujin Jeon
+  - Jiyong Kwon
+  - Madison Ann Sullivan
+  - Caleb Eunho Lee
+  - Guang Lin
+  published: '2026-02-02'
+  updated: '2026-05-21'
+  categories:
+  - cs.AI
+  abstract: Recent multi-LLM agent systems have shown promising capabilities for automated problem-solving,
+    yet they predominantly rely on frozen agents or static fine-tuning pipelines. To address this limitation,
+    our primary contribution is ATLAS (Adaptive Task-distributed Learning for Agentic Self-evolution),
+    a multi-agent framework where specialized meta-agents collaboratively train and refine an active agent
+    toward a domain-specific policy. A core challenge in iterative preference learning within these pipelines
+    is the reliance on fixed reference models, which typically leads to overly conservative updates or
+    training stagnation. To overcome this, the framework's algorithmic engine utilizes Evolving Direct
+    Preference Optimization (EvoDPO). EvoDPO employs an inspection agent to perform adaptive, proxy-KL
+    gated reference policy updates based on continuous training telemetry. We evaluate this full framework
+    across a diverse set of challenging environments-including non-stationary contextual bandits, partial
+    differential equations (PINNs), and combinatorial optimization tasks (TSP, Bin Packing). Through comparison
+    against fixed-reference, adaptive-reference, and external automated-discovery baselines, our results
+    suggest that ATLAS combines supporter-driven exploration with EvoDPO-driven stability to improve long-horizon
+    evaluator-driven self-improvement.
+  url: https://arxiv.org/abs/2602.02709
+  pdf_url: https://arxiv.org/pdf/2602.02709v3
+  version: v3
+fetched: '2026-11-14'
+citation_count: 0
+citation_year: 2026

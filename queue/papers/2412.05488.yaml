@@ -1,0 +1,36 @@
+id: paper:arxiv:2412.05488
+status: skipped
+score: 1
+track: processing_enhancement
+matched:
+- ref: concept:SuperResolution
+  count: 1
+  weight: 1
+meta:
+  title: Enhancing Sample Generation of Diffusion Models using Noise Level Correction
+  authors:
+  - Abulikemu Abuduweili
+  - Chenyang Yuan
+  - Changliu Liu
+  - Frank Permenter
+  published: '2024-12-07'
+  updated: '2025-06-02'
+  categories:
+  - cs.CV
+  - cs.LG
+  - eess.IV
+  abstract: The denoising process of diffusion models can be interpreted as an approximate projection
+    of noisy samples onto the data manifold. Moreover, the noise level in these samples approximates their
+    distance to the underlying manifold. Building on this insight, we propose a novel method to enhance
+    sample generation by aligning the estimated noise level with the true distance of noisy samples to
+    the manifold. Specifically, we introduce a noise level correction network, leveraging a pre-trained
+    denoising network, to refine noise level estimates during the denoising process. Additionally, we
+    extend this approach to various image restoration tasks by integrating task-specific constraints,
+    including inpainting, deblurring, super-resolution, colorization, and compressed sensing. Experimental
+    results demonstrate that our method significantly improves sample quality in both unconstrained and
+    constrained generation scenarios. Notably, the proposed noise level correction framework is compatible
+    with existing denoising schedulers (e.g., DDIM), offering additional performance improvements.
+  url: https://arxiv.org/abs/2412.05488
+  pdf_url: https://arxiv.org/pdf/2412.05488v3
+  version: v3
+fetched: '2026-11-14'

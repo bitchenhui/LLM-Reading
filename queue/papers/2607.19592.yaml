@@ -1,0 +1,49 @@
+id: paper:arxiv:2607.19592
+status: pending
+score: 2
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 3
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: Knowledge-Centric Self-Improvement
+  authors:
+  - Xuefei Julie Wang
+  - Lauren Hyoseo Yoon
+  - Chengrui Qu
+  - Amanda Zichang Wang
+  - Atharva Sehgal
+  - Eric Mazumdar
+  - Yisong Yue
+  published: '2026-07-21'
+  updated: '2026-07-21'
+  categories:
+  - cs.AI
+  - cs.CL
+  - cs.LG
+  - cs.MA
+  abstract: 'Self-improving AI systems typically treat the agent as the object that improves, by optimizing
+    prompts, workflows, harnesses, or even the agent''s own code. This agent-centric view can make improvements
+    expensive to maintain and difficult to transfer, because gains become tied to a particular agent design,
+    task distribution, or adaptation run. We study a complementary paradigm: knowledge-centric self-improvement,
+    in which agents remain generic and disposable while the persistent object is a curated knowledge base
+    that agents can leverage for future tasks. We conduct controlled case studies to operationalize this
+    idea via a simple protocol. Agents attempt one task, then contribute evidence-grounded insights to
+    a shared knowledge base via task-level and cross-task forums, followed by knowledge distillation.
+    Because self-improvement is contained in the knowledge rather than the agent, improvement can be more
+    inspectable, transferable, and portable. Across abstract reasoning, coding, and terminal benchmarks,
+    this protocol improves solve rates while reducing dollar cost relative to agent-centric baselines.
+    The resulting distilled knowledge also transfers to held-out tasks and across LLM families, indicating
+    that the improvement is not merely an LLM- or run-specific behavior. These results support a new view
+    of self-improving agentic systems: progress can be driven primarily by the curated persistent knowledge.
+    Code is available at https://github.com/recursive-knowledge/KSI.'
+  url: https://arxiv.org/abs/2607.19592
+  pdf_url: https://arxiv.org/pdf/2607.19592v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 2
+citation_year: 2026

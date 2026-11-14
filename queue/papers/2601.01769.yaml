@@ -1,0 +1,41 @@
+id: paper:arxiv:2601.01769
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'CTIS-QA: Clinical Template-Informed Slide-level Question Answering for Pathology'
+  authors:
+  - Hao Lu
+  - Ziniu Qian
+  - Yifu Li
+  - Yang Zhou
+  - Bingzheng Wei
+  - Yan Xu
+  published: '2026-01-05'
+  updated: '2026-01-05'
+  categories:
+  - cs.CV
+  abstract: In this paper, we introduce a clinical diagnosis template-based pipeline to systematically
+    collect and structure pathological information. In collaboration with pathologists and guided by the
+    the College of American Pathologists (CAP) Cancer Protocols, we design a Clinical Pathology Report
+    Template (CPRT) that ensures comprehensive and standardized extraction of diagnostic elements from
+    pathology reports. We validate the effectiveness of our pipeline on TCGA-BRCA. First, we extract pathological
+    features from reports using CPRT. These features are then used to build CTIS-Align, a dataset of 80k
+    slide-description pairs from 804 WSIs for vision-language alignment training, and CTIS-Bench, a rigorously
+    curated VQA benchmark comprising 977 WSIs and 14,879 question-answer pairs. CTIS-Bench emphasizes
+    clinically grounded, closed-ended questions (e.g., tumor grade, receptor status) that reflect real
+    diagnostic workflows, minimize non-visual reasoning, and require genuine slide understanding. We further
+    propose CTIS-QA, a Slide-level Question Answering model, featuring a dual-stream architecture that
+    mimics pathologists' diagnostic approach. One stream captures global slide-level context via clustering-based
+    feature aggregation, while the other focuses on salient local regions through attention-guided patch
+    perception module. Extensive experiments on WSI-VQA, CTIS-Bench, and slide-level diagnostic tasks
+    show that CTIS-QA consistently outperforms existing state-of-the-art models across multiple metrics.
+    Code and data are available at https://github.com/HLSvois/CTIS-QA.
+  url: https://arxiv.org/abs/2601.01769
+  pdf_url: https://arxiv.org/pdf/2601.01769v1
+  version: v1
+fetched: '2026-11-14'

@@ -1,0 +1,31 @@
+id: paper:arxiv:2509.02244
+status: skipped
+score: 0
+track: audio_coding
+matched: []
+meta:
+  title: 'Spectrogram Patch Codec: A 2D Block-Quantized VQ-VAE and HiFi-GAN for Neural Speech Coding'
+  authors:
+  - Luis Felipe Chary
+  - Miguel Arjona Ramirez
+  published: '2025-09-02'
+  updated: '2025-09-02'
+  categories:
+  - cs.SD
+  - cs.CL
+  - eess.AS
+  abstract: We present a neural speech codec that challenges the need for complex residual vector quantization
+    (RVQ) stacks by introducing a simpler, single-stage quantization approach. Our method operates directly
+    on the mel-spectrogram, treating it as a 2D data and quantizing non-overlapping 4x4 patches into a
+    single, shared codebook. This patchwise design simplifies the architecture, enables low-latency streaming,
+    and yields a discrete latent grid. To ensure high-fidelity synthesis, we employ a late-stage adversarial
+    fine-tuning for the VQ-VAE and train a HiFi-GAN vocoder from scratch on the codec's reconstructed
+    spectrograms. Operating at approximately 7.5 kbits/s for 16 kHz speech, our system was evaluated against
+    several state-of-the-art neural codecs using objective metrics such as STOI, PESQ, MCD, and ViSQOL.
+    The results demonstrate that our simplified, non-residual architecture achieves competitive perceptual
+    quality and intelligibility, validating it as an effective and open foundation for future low-latency
+    codec designs.
+  url: https://arxiv.org/abs/2509.02244
+  pdf_url: https://arxiv.org/pdf/2509.02244v1
+  version: v1
+fetched: '2026-11-14'

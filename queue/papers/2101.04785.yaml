@@ -1,0 +1,30 @@
+id: paper:arxiv:2101.04785
+status: skipped
+score: 0
+track: audio_coding
+matched: []
+meta:
+  title: 'MP3net: coherent, minute-long music generation from raw audio with a simple convolutional GAN'
+  authors:
+  - Korneel van den Broek
+  published: '2021-01-12'
+  updated: '2021-01-12'
+  categories:
+  - cs.SD
+  - cs.LG
+  - eess.AS
+  abstract: We present a deep convolutional GAN which leverages techniques from MP3/Vorbis audio compression
+    to produce long, high-quality audio samples with long-range coherence. The model uses a Modified Discrete
+    Cosine Transform (MDCT) data representation, which includes all phase information. Phase generation
+    is hence integral part of the model. We leverage the auditory masking and psychoacoustic perception
+    limit of the human ear to widen the true distribution and stabilize the training process. The model
+    architecture is a deep 2D convolutional network, where each subsequent generator model block increases
+    the resolution along the time axis and adds a higher octave along the frequency axis. The deeper layers
+    are connected with all parts of the output and have the context of the full track. This enables generation
+    of samples which exhibit long-range coherence. We use MP3net to create 95s stereo tracks with a 22kHz
+    sample rate after training for 250h on a single Cloud TPUv2. An additional benefit of the CNN-based
+    model architecture is that generation of new songs is almost instantaneous.
+  url: https://arxiv.org/abs/2101.04785
+  pdf_url: https://arxiv.org/pdf/2101.04785v1
+  version: v1
+fetched: '2026-11-14'

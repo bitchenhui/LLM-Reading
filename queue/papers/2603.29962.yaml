@@ -1,0 +1,54 @@
+id: paper:arxiv:2603.29962
+status: skipped_low_citation
+score: 2
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: 'SurgTEMP: Temporal-Aware Surgical Video Question Answering with Text-guided Visual Memory for
+    Laparoscopic Cholecystectomy'
+  authors:
+  - Shi Li
+  - Vinkle Srivastav
+  - Shih-Min Yin
+  - Nicolas Chanel
+  - Saurav Sharma
+  - Nabani Banik
+  - Lorenzo Arboit
+  - Kun Yuan
+  - Pietro Mascagni
+  - Nicolas Padoy
+  published: '2026-03-31'
+  updated: '2026-09-07'
+  categories:
+  - cs.CV
+  abstract: 'Surgical procedures are inherently complex and risky, requiring extensive expertise and constant
+    focus to navigate evolving intraoperative scenes. Computer-assisted systems such as surgical visual
+    question answering (VQA) offer promises for education and intraoperative support. Current surgical
+    VQA research largely focuses on static frame analysis, overlooking rich temporal semantics. Surgical
+    video question answering is further challenged by low visual contrast, its highly knowledge-driven
+    nature, diverse analytical needs spanning scattered temporal windows, and the hierarchy from basic
+    perception to high-level intraoperative assessment. To address these challenges, we propose SurgTEMP,
+    a multimodal LLM framework featuring (i) a query-guided token selection module that builds hierarchical
+    visual memory (spatial and temporal memory banks) and (ii) a Surgical Competency Progression (SCP)
+    training scheme. Together, they enable effective modeling of variable-length surgical videos while
+    preserving procedure-relevant cues and temporal coherence, and better support diverse downstream assessment
+    tasks. To support model development, we introduce CholeVidQA-32K, a surgical video question answering
+    dataset comprising 32K open-ended QA pairs and 3,855 video segments (approximately 128 h total) from
+    laparoscopic cholecystectomy. The dataset is organized into a three-level hierarchy -- Perception,
+    Assessment, and Reasoning -- spanning 11 tasks from instrument/action/anatomy perception to Critical
+    View of Safety (CVS), intraoperative difficulty, skill proficiency, and adverse event assessment.
+    In comprehensive evaluations against state-of-the-art open-source multimodal and video LLMs (fine-tuned
+    and zero-shot), SurgTEMP achieves substantial performance improvements, advancing the state of video-based
+    surgical VQA. The project page is available at: https://camma-public.github.io/SurgTEMP/'
+  url: https://arxiv.org/abs/2603.29962
+  pdf_url: https://arxiv.org/pdf/2603.29962v5
+  version: v5
+fetched: '2026-11-14'
+citation_count: 1
+citation_year: 2026

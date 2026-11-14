@@ -1,0 +1,39 @@
+id: paper:arxiv:2503.21197
+status: skipped
+score: 1
+track: video_image_coding
+matched:
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+meta:
+  title: 'WVSC: Wireless Video Semantic Communication with Multi-frame Compensation'
+  authors:
+  - Bingyan Xie
+  - Yongpeng Wu
+  - Yuxuan Shi
+  - Biqian Feng
+  - Wenjun Zhang
+  - Jihong Park
+  - Tony Q. S. Quek
+  published: '2025-03-27'
+  updated: '2026-01-19'
+  categories:
+  - cs.MM
+  - cs.CV
+  abstract: Existing wireless video transmission schemes directly conduct video coding in pixel level,
+    while neglecting the inner semantics contained in videos. In this paper, we propose a wireless video
+    semantic communication framework, abbreviated as WVSC, which integrates the idea of semantic communication
+    into wireless video transmission scenarios. WVSC first encodes original video frames as semantic frames
+    and then conducts video coding based on such compact representations, enabling the video coding in
+    semantic level rather than pixel level. Moreover, to further reduce the communication overhead, a
+    reference semantic frame is introduced to substitute motion vectors of each frame in common video
+    coding methods. At the receiver, multi-frame compensation (MFC) is proposed to produce compensated
+    current semantic frame with a multi-frame fusion attention module. With both the reference frame transmission
+    and MFC, the bandwidth efficiency improves with satisfying video transmission performance. Experimental
+    results verify the performance gain of WVSC over other DL-based methods e.g. DVSC about 1 dB and traditional
+    schemes about 2 dB in terms of PSNR.
+  url: https://arxiv.org/abs/2503.21197
+  pdf_url: https://arxiv.org/pdf/2503.21197v2
+  version: v2
+fetched: '2026-11-14'

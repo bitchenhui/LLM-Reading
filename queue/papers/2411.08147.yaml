@@ -1,0 +1,39 @@
+id: paper:arxiv:2411.08147
+status: skipped
+score: 1
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+meta:
+  title: Large Language Models Can Self-Improve in Long-context Reasoning
+  authors:
+  - Siheng Li
+  - Cheng Yang
+  - Zesen Cheng
+  - Lemao Liu
+  - Mo Yu
+  - Yujiu Yang
+  - Wai Lam
+  published: '2024-11-12'
+  updated: '2024-11-12'
+  categories:
+  - cs.CL
+  - cs.AI
+  abstract: 'Large language models (LLMs) have achieved substantial progress in processing long contexts
+    but still struggle with long-context reasoning. Existing approaches typically involve fine-tuning
+    LLMs with synthetic data, which depends on annotations from human experts or advanced models like
+    GPT-4, thus restricting further advancements. To address this issue, we investigate the potential
+    for LLMs to self-improve in long-context reasoning and propose \ours, an approach specifically designed
+    for this purpose. This approach is straightforward: we sample multiple outputs for each question,
+    score them with Minimum Bayes Risk, and then apply supervised fine-tuning or preference optimization
+    based on these outputs. Extensive experiments on several leading LLMs demonstrate the effectiveness
+    of \ours, with an absolute improvement of $4.2$ points for Llama-3.1-8B-Instruct. Furthermore, \ours
+    achieves superior performance compared to prior approaches that depend on data produced by human experts
+    or advanced models. We anticipate that this work will open new avenues for self-improvement techniques
+    in long-context scenarios, which are essential for the continual advancement of LLMs.'
+  url: https://arxiv.org/abs/2411.08147
+  pdf_url: https://arxiv.org/pdf/2411.08147v1
+  version: v1
+fetched: '2026-11-14'

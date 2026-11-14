@@ -1,0 +1,40 @@
+id: paper:arxiv:2308.02620
+status: skipped
+score: 1
+track: video_image_coding
+matched:
+- ref: concept:EntropyModel
+  count: 1
+  weight: 1
+meta:
+  title: Frequency Disentangled Features in Neural Image Compression
+  authors:
+  - Ali Zafari
+  - Atefeh Khoshkhahtinat
+  - Piyush Mehta
+  - Mohammad Saeed Ebrahimi Saadabadi
+  - Mohammad Akyash
+  - Nasser M. Nasrabadi
+  published: '2023-08-04'
+  updated: '2023-08-04'
+  categories:
+  - eess.IV
+  - cs.CV
+  - cs.IT
+  abstract: The design of a neural image compression network is governed by how well the entropy model
+    matches the true distribution of the latent code. Apart from the model capacity, this ability is indirectly
+    under the effect of how close the relaxed quantization is to the actual hard quantization. Optimizing
+    the parameters of a rate-distortion variational autoencoder (R-D VAE) is ruled by this approximated
+    quantization scheme. In this paper, we propose a feature-level frequency disentanglement to help the
+    relaxed scalar quantization achieve lower bit rates by guiding the high entropy latent features to
+    include most of the low-frequency texture of the image. In addition, to strengthen the de-correlating
+    power of the transformer-based analysis/synthesis transform, an augmented self-attention score calculation
+    based on the Hadamard product is utilized during both encoding and decoding. Channel-wise autoregressive
+    entropy modeling takes advantage of the proposed frequency separation as it inherently directs high-informational
+    low-frequency channels to the first chunks and conditions the future chunks on it. The proposed network
+    not only outperforms hand-engineered codecs, but also neural network-based codecs built on computation-heavy
+    spatially autoregressive entropy models.
+  url: https://arxiv.org/abs/2308.02620
+  pdf_url: https://arxiv.org/pdf/2308.02620v1
+  version: v1
+fetched: '2026-11-14'

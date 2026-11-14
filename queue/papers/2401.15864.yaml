@@ -1,0 +1,51 @@
+id: paper:arxiv:2401.15864
+status: pending
+score: 6
+track: video_image_coding
+matched:
+- ref: codec:VVC
+  count: 2
+  weight: 3
+- ref: metric:MS-SSIM
+  count: 1
+  weight: 1
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+- ref: metric:SSIM
+  count: 1
+  weight: 1
+meta:
+  title: Spatial Decomposition and Temporal Fusion based Inter Prediction for Learned Video Compression
+  authors:
+  - Xihua Sheng
+  - Li Li
+  - Dong Liu
+  - Houqiang Li
+  published: '2024-01-29'
+  updated: '2024-01-29'
+  categories:
+  - cs.CV
+  - eess.IV
+  abstract: Video compression performance is closely related to the accuracy of inter prediction. It tends
+    to be difficult to obtain accurate inter prediction for the local video regions with inconsistent
+    motion and occlusion. Traditional video coding standards propose various technologies to handle motion
+    inconsistency and occlusion, such as recursive partitions, geometric partitions, and long-term references.
+    However, existing learned video compression schemes focus on obtaining an overall minimized prediction
+    error averaged over all regions while ignoring the motion inconsistency and occlusion in local regions.
+    In this paper, we propose a spatial decomposition and temporal fusion based inter prediction for learned
+    video compression. To handle motion inconsistency, we propose to decompose the video into structure
+    and detail (SDD) components first. Then we perform SDD-based motion estimation and SDD-based temporal
+    context mining for the structure and detail components to generate short-term temporal contexts. To
+    handle occlusion, we propose to propagate long-term temporal contexts by recurrently accumulating
+    the temporal information of each historical reference feature and fuse them with short-term temporal
+    contexts. With the SDD-based motion model and long short-term temporal contexts fusion, our proposed
+    learned video codec can obtain more accurate inter prediction. Comprehensive experimental results
+    demonstrate that our codec outperforms the reference software of H.266/VVC on all common test datasets
+    for both PSNR and MS-SSIM.
+  url: https://arxiv.org/abs/2401.15864
+  pdf_url: https://arxiv.org/pdf/2401.15864v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 67
+citation_year: 2024

@@ -1,0 +1,49 @@
+id: paper:arxiv:2111.14474
+status: pending
+score: 6
+track: processing_enhancement
+matched:
+- ref: impl:x265
+  count: 1
+  weight: 3
+- ref: metric:MS-SSIM
+  count: 1
+  weight: 1
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+- ref: metric:SSIM
+  count: 1
+  weight: 1
+meta:
+  title: Learning-Based Video Coding with Joint Deep Compression and Enhancement
+  authors:
+  - Tiesong Zhao
+  - Weize Feng
+  - Hongji Zeng
+  - Yuzhen Niu
+  - Jiaying Liu
+  published: '2021-11-29'
+  updated: '2022-04-30'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: The end-to-end learning-based video compression has attracted substantial attentions by paving
+    another way to compress video signals as stacked visual features. This paper proposes an efficient
+    end-to-end deep video codec with jointly optimized compression and enhancement modules (JCEVC). First,
+    we propose a dual-path generative adversarial network (DPEG) to reconstruct video details after compression.
+    An $α$-path facilitates the structure information reconstruction with a large receptive field and
+    multi-frame references, while a $β$-path facilitates the reconstruction of local textures. Both paths
+    are fused and co-trained within a generative-adversarial process. Second, we reuse the DPEG network
+    in both motion compensation and quality enhancement modules, which are further combined with other
+    necessary modules to formulate our JCEVC framework. Third, we employ a joint training of deep video
+    compression and enhancement that further improves the rate-distortion (RD) performance of compression.
+    Compared with x265 LDP very fast mode, our JCEVC reduces the average bit-per-pixel (bpp) by 39.39\%/54.92\%
+    at the same PSNR/MS-SSIM, which outperforms the state-of-the-art deep video codecs by a considerable
+    margin.
+  url: https://arxiv.org/abs/2111.14474
+  pdf_url: https://arxiv.org/pdf/2111.14474v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 30
+citation_year: 2021

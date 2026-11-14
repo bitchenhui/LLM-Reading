@@ -1,0 +1,46 @@
+id: paper:arxiv:2412.02617
+status: skipped
+score: 1
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+meta:
+  title: Improving Dynamic Object Interactions in Text-to-Video Generation with AI Feedback
+  authors:
+  - Hiroki Furuta
+  - Heiga Zen
+  - Dale Schuurmans
+  - Aleksandra Faust
+  - Yutaka Matsuo
+  - Percy Liang
+  - Sherry Yang
+  published: '2024-12-03'
+  updated: '2026-04-17'
+  categories:
+  - cs.LG
+  - cs.AI
+  - cs.CV
+  abstract: 'Large text-to-video models hold immense potential for a wide range of downstream applications.
+    However, they struggle to accurately depict dynamic object interactions, often resulting in unrealistic
+    movements and frequent violations of real-world physics. One solution inspired by large language models
+    is to align generated outputs with desired outcomes using external feedback. In this work, we investigate
+    the use of feedback to enhance the quality of object dynamics in text-to-video models. We aim to answer
+    a critical question: what types of feedback, paired with which specific self-improvement algorithms,
+    can most effectively overcome movement misalignment and realistic object interactions? We first point
+    out that offline RL-finetuning algorithms for text-to-video models can be equivalent as derived from
+    a unified probabilistic objective. This perspective highlights that there is no algorithmically dominant
+    method in principle; rather, we should care about the property of reward and data. While human feedback
+    is less scalable, vision-language models could notice the video scenes as humans do. We then propose
+    leveraging vision-language models to provide perceptual feedback specifically tailored to object dynamics
+    in videos. Compared to popular video quality metrics measuring alignment or dynamics, the experiments
+    demonstrate that our approach with binary AI feedback drives the most significant improvements in
+    the quality of interaction scenes in video, as confirmed by AI, human, and quality metric evaluations.
+    Notably, we observe substantial gains when using signals from vision language models, particularly
+    in scenarios involving complex interactions between multiple objects and realistic depictions of objects
+    falling.'
+  url: https://arxiv.org/abs/2412.02617
+  pdf_url: https://arxiv.org/pdf/2412.02617v2
+  version: v2
+fetched: '2026-11-14'

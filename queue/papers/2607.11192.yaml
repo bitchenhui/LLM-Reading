@@ -1,0 +1,39 @@
+id: paper:arxiv:2607.11192
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'GDP.pdf: Benchmarking Grounded Multimodal Reasoning over Professional PDF Documents'
+  authors:
+  - Suhaas Garre
+  - Emily Ritchie
+  - Sushant Mehta
+  - Edwin Chen
+  published: '2026-07-13'
+  updated: '2026-07-15'
+  categories:
+  - cs.CV
+  abstract: 'A large share of day-to-day work in professional domains happens inside PDF files: benefits
+    packets, leases, datasheets, clinical guidelines, construction plans. Benchmarks for document AI have
+    generally measured the required capabilities in isolation: OCR, layout analysis, chart reasoning,
+    table QA, document VQA. A high score on any one of them does not necessarily reveal whether a model
+    can answer a realistic question that someone in the field would actually ask about a specific PDF.
+    GDP_pdf is a benchmark built to measure this directly. It consists of question-document pairs authored
+    by working professionals in ten fields, and a candidate question was kept only when at least two frontier
+    multimodal models failed it in a way that mattered: a wrong answer, missed decisive evidence, or a
+    fabricated claim, rather than a superficial difference such as style. Each item comes with a rubric
+    of atomic criteria, so we can report a graded rubric score as well as a strict task-level pass rate,
+    and each item is tagged against a taxonomy of eleven capabilities in three tiers, spanning text extraction
+    and grounding, table and chart comprehension, cross-referencing, spatial reasoning, and abstention
+    on unsupported queries. We report results for seventeen frontier models on the 100-item benchmark:
+    the best model passes only 30.7% of the items and the worst passes 2%. Most errors trace back to a
+    small set of recurring loss patterns: misaligned tables, misread charts, skipped footnotes and exclusions,
+    miscounted floor-plan symbols, scan noise, and amendments that supersede earlier text.'
+  url: https://arxiv.org/abs/2607.11192
+  pdf_url: https://arxiv.org/pdf/2607.11192v3
+  version: v3
+fetched: '2026-11-14'

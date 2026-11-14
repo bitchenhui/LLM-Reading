@@ -1,0 +1,48 @@
+id: paper:arxiv:2603.18309
+status: skipped_low_citation
+score: 3
+track: processing_enhancement
+matched:
+- ref: concept:SuperResolution
+  count: 1
+  weight: 1
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+- ref: metric:SSIM
+  count: 1
+  weight: 1
+meta:
+  title: Unrolled Reconstruction with Integrated Super-Resolution for Accelerated 3D LGE MRI
+  authors:
+  - Md Hasibul Husain Hisham
+  - Shireen Elhabian
+  - Ganesh Adluru
+  - Jason Mendes
+  - Andrew Arai
+  - Eugene Kholmovski
+  - Ravi Ranjan
+  - Edward DiBella
+  published: '2026-03-18'
+  updated: '2026-03-18'
+  categories:
+  - cs.CV
+  abstract: Accelerated 3D late gadolinium enhancement (LGE) MRI requires robust reconstruction methods
+    to recover thin atrial structures from undersampled k-space data. While unrolled model-based networks
+    effectively integrate physics-driven data consistency with learned priors, they operate at the acquired
+    resolution and may fail to fully recover high-frequency detail. We propose a hybrid unrolled reconstruction
+    framework in which an Enhanced Deep Super-Resolution (EDSR) network replaces the proximal operator
+    within each iteration of the optimization loop, enabling joint super-resolution enhancement and data
+    consistency enforcement. The model is trained end-to-end on retrospectively undersampled preclinical
+    3D LGE datasets and compared against compressed sensing, Model-Based Deep Learning (MoDL), and self-guided
+    Deep Image Prior (DIP) baselines. Across acceleration factors, the proposed method consistently improves
+    PSNR and SSIM over standard unrolled reconstruction and better preserves fine cardiac structures,
+    leading to improved LA (left atrium) segmentation performance. These results demonstrate that integrating
+    super-resolution priors directly within model-based reconstruction provides measurable gains in accelerated
+    3D LGE MRI.
+  url: https://arxiv.org/abs/2603.18309
+  pdf_url: https://arxiv.org/pdf/2603.18309v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 0
+citation_year: 2026

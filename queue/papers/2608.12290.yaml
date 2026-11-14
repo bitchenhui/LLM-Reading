@@ -1,0 +1,48 @@
+id: paper:arxiv:2608.12290
+status: pending
+score: 2
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: 'Beyond Trial-and-Error: Agentic Optimization for Image-to-Video Adherence'
+  authors:
+  - Aman Tyagi
+  - Hemanth Boinpally
+  - Jonathan Chen
+  - Douglas Gebert
+  - Steven Hickson
+  published: '2026-08-12'
+  updated: '2026-10-26'
+  categories:
+  - cs.CV
+  - cs.AI
+  - cs.MM
+  abstract: 'Modern black-box Image-to-Video (I2V) models offer powerful capabilities in automated content
+    creation, yet their lack of fine-grained control and reliability presents significant challenges in
+    professional workflows. Their inherent stochasticity causes minor variations in textual prompts or
+    hyperparameters to yield drastically different outputs often necessitating inefficient, brute-force
+    trial-and-error processes. To address these limitations, we introduce the ``Agentic Self-Improvement"
+    framework, which reframes video synthesis into a closed-loop, goal-directed optimization. Our framework
+    systematically navigates the generation parameter space using a novel two-stage approach. In the first
+    stage, an iterative prompt optimization loop uses a multimodal Large Language Model (mLLM) to refine
+    the input prompt. This refinement implements two automated evaluations: Davidsonian Scene Graph (DSG)
+    queries ensure semantic adherence, and Common Mistake Questions (CMQ) for artifact detection. At the
+    second stage, we use Bayesian optimization to efficiently co-optimize stochastic seeds and CFG scales.
+    This search is guided by a suite of quality metrics, including the novel Video-Text Adherence (VTA)
+    score derived from the DSG and CMQ evaluations. Our framework significantly outperforms unguided search
+    methods: in human preference studies, videos generated via our agentic approach were strongly preferred
+    over baseline outputs, achieving win rates up to 69\%. This work provides a practical and extensible
+    methodology for enhancing the predictability and control of state-of-the-art video generation models,
+    moving the field beyond speculative curiosities toward reliable, production-ready tools.'
+  url: https://arxiv.org/abs/2608.12290
+  pdf_url: https://arxiv.org/pdf/2608.12290v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 1
+citation_year: 2026

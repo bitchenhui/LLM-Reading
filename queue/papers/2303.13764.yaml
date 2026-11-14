@@ -1,0 +1,49 @@
+id: paper:arxiv:2303.13764
+status: pending
+score: 5
+track: processing_enhancement
+matched:
+- ref: codec:G-PCC
+  count: 2
+  weight: 3
+- ref: metric:BD-Rate
+  count: 1
+  weight: 1
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+meta:
+  title: 'GQE-Net: A Graph-based Quality Enhancement Network for Point Cloud Color Attribute'
+  authors:
+  - Jinrui Xing
+  - Hui Yuan
+  - Raouf Hamzaoui
+  - Hao Liu
+  - Junhui Hou
+  published: '2023-03-24'
+  updated: '2023-11-07'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: In recent years, point clouds have become increasingly popular for representing three-dimensional
+    (3D) visual objects and scenes. To efficiently store and transmit point clouds, compression methods
+    have been developed, but they often result in a degradation of quality. To reduce color distortion
+    in point clouds, we propose a graph-based quality enhancement network (GQE-Net) that uses geometry
+    information as an auxiliary input and graph convolution blocks to extract local features efficiently.
+    Specifically, we use a parallel-serial graph attention module with a multi-head graph attention mechanism
+    to focus on important points or features and help them fuse together. Additionally, we design a feature
+    refinement module that takes into account the normals and geometry distance between points. To work
+    within the limitations of GPU memory capacity, the distorted point cloud is divided into overlap-allowed
+    3D patches, which are sent to GQE-Net for quality enhancement. To account for differences in data
+    distribution among different color components, three models are trained for the three color components.
+    Experimental results show that our method achieves state-of-the-art performance. For example, when
+    implementing GQE-Net on a recent test model of the geometry-based point cloud compression (G-PCC)
+    standard, 0.43 dB, 0.25 dB, and 0.36 dB Bjontegaard delta (BD)-peak-signal-to-noise ratio (PSNR),
+    corresponding to 14.0%, 9.3%, and 14.5% BD-rate savings can be achieved on dense point clouds for
+    the Y, Cb, and Cr components, respectively. The source code of our method is available at https://github.com/xjr998/GQE-Net.
+  url: https://arxiv.org/abs/2303.13764
+  pdf_url: https://arxiv.org/pdf/2303.13764v3
+  version: v3
+fetched: '2026-11-14'
+citation_count: 76
+citation_year: 2023

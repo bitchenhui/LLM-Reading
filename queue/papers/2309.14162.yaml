@@ -1,0 +1,39 @@
+id: paper:arxiv:2309.14162
+status: skipped
+score: 1
+track: processing_enhancement
+matched:
+- ref: concept:SuperResolution
+  count: 2
+  weight: 1
+meta:
+  title: Data Upcycling Knowledge Distillation for Image Super-Resolution
+  authors:
+  - Yun Zhang
+  - Wei Li
+  - Simiao Li
+  - Hanting Chen
+  - Zhijun Tu
+  - Wenjia Wang
+  - Bingyi Jing
+  - Shaohui Lin
+  - Jie Hu
+  published: '2023-09-25'
+  updated: '2024-04-28'
+  categories:
+  - cs.CV
+  - cs.AI
+  abstract: Knowledge distillation (KD) compresses deep neural networks by transferring task-related knowledge
+    from cumbersome pre-trained teacher models to compact student models. However, current KD methods
+    for super-resolution (SR) networks overlook the nature of SR task that the outputs of the teacher
+    model are noisy approximations to the ground-truth distribution of high-quality images (GT), which
+    shades the teacher model's knowledge to result in limited KD effects. To utilize the teacher model
+    beyond the GT upper-bound, we present the Data Upcycling Knowledge Distillation (DUKD), to transfer
+    the teacher model's knowledge to the student model through the upcycled in-domain data derived from
+    training data. Besides, we impose label consistency regularization to KD for SR by the paired invertible
+    augmentations to improve the student model's performance and robustness. Comprehensive experiments
+    demonstrate that the DUKD method significantly outperforms previous arts on several SR tasks.
+  url: https://arxiv.org/abs/2309.14162
+  pdf_url: https://arxiv.org/pdf/2309.14162v4
+  version: v4
+fetched: '2026-11-14'

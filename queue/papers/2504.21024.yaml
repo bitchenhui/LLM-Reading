@@ -1,0 +1,47 @@
+id: paper:arxiv:2504.21024
+status: pending
+score: 2
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 3
+  weight: 1
+- ref: concept:LLM
+  count: 2
+  weight: 1
+meta:
+  title: 'WebEvolver: Enhancing Web Agent Self-Improvement with Coevolving World Model'
+  authors:
+  - Tianqing Fang
+  - Hongming Zhang
+  - Zhisong Zhang
+  - Kaixin Ma
+  - Wenhao Yu
+  - Haitao Mi
+  - Dong Yu
+  published: '2025-04-23'
+  updated: '2025-08-21'
+  categories:
+  - cs.CL
+  abstract: 'Agent self-improvement, where the backbone Large Language Model (LLM) of the agent are trained
+    on trajectories sampled autonomously based on their own policies, has emerged as a promising approach
+    for enhancing performance. Recent advancements, particularly in web environments, face a critical
+    limitation: their performance will reach a stagnation point during autonomous learning cycles, hindering
+    further improvement. We argue that this stems from limited exploration of the web environment and
+    insufficient exploitation of pre-trained web knowledge in LLMs. To improve the performance of self-improvement,
+    we propose a novel framework that introduces a co-evolving World Model LLM. This world model predicts
+    the next observation based on the current observation and action within the web environment. Leveraging
+    LLMs'' pretrained knowledge of abundant web content, the World Model serves dual roles: (1) as a virtual
+    web server generating self-instructed training data to continuously refine the agent''s policy, and
+    (2) as an imagination engine during inference, enabling look-ahead simulation to guide action selection
+    for the agent LLM. Experiments in real-world web environments (Mind2Web-Live, WebVoyager, and GAIA-web)
+    show a 10% performance gain over existing self-evolving agents, demonstrating the efficacy and generalizability
+    of our approach, without using any distillation from more powerful close-sourced models. Our work
+    establishes the necessity of integrating world models into autonomous agent frameworks to unlock sustained
+    adaptability. Code is available at https://github.com/Tencent/SelfEvolvingAgent'
+  url: https://arxiv.org/abs/2504.21024
+  pdf_url: https://arxiv.org/pdf/2504.21024v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 72
+citation_year: 2025

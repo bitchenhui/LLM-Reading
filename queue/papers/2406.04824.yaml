@@ -1,0 +1,45 @@
+id: paper:arxiv:2406.04824
+status: pending
+score: 2
+track: self_improvement
+matched:
+- ref: concept:FunSearch
+  count: 1
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: 'FunBO: Discovering Acquisition Functions for Bayesian Optimization with FunSearch'
+  authors:
+  - Virginia Aglietti
+  - Ira Ktena
+  - Jessica Schrouff
+  - Eleni Sgouritsa
+  - Francisco J. R. Ruiz
+  - Alan Malek
+  - Alexis Bellot
+  - Silvia Chiappa
+  published: '2024-06-07'
+  updated: '2024-07-01'
+  categories:
+  - cs.LG
+  - stat.ML
+  abstract: The sample efficiency of Bayesian optimization algorithms depends on carefully crafted acquisition
+    functions (AFs) guiding the sequential collection of function evaluations. The best-performing AF
+    can vary significantly across optimization problems, often requiring ad-hoc and problem-specific choices.
+    This work tackles the challenge of designing novel AFs that perform well across a variety of experimental
+    settings. Based on FunSearch, a recent work using Large Language Models (LLMs) for discovery in mathematical
+    sciences, we propose FunBO, an LLM-based method that can be used to learn new AFs written in computer
+    code by leveraging access to a limited number of evaluations for a set of objective functions. We
+    provide the analytic expression of all discovered AFs and evaluate them on various global optimization
+    benchmarks and hyperparameter optimization tasks. We show how FunBO identifies AFs that generalize
+    well in and out of the training distribution of functions, thus outperforming established general-purpose
+    AFs and achieving competitive performance against AFs that are customized to specific function types
+    and are learned via transfer-learning algorithms.
+  url: https://arxiv.org/abs/2406.04824
+  pdf_url: https://arxiv.org/pdf/2406.04824v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 34
+citation_year: 2024

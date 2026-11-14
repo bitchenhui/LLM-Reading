@@ -1,0 +1,50 @@
+id: paper:arxiv:2601.09823
+status: pending
+score: 2
+track: processing_enhancement
+matched:
+- ref: concept:DiffusionPrior
+  count: 1
+  weight: 1
+- ref: concept:SuperResolution
+  count: 1
+  weight: 1
+meta:
+  title: 'NanoSD: Edge Efficient Foundation Model for Real Time Image Restoration'
+  authors:
+  - Subhajit Sanyal
+  - Srinivas Soumitri Miriyala
+  - Akshay Janardan Bankar
+  - Manjunath Arveti
+  - Sowmya Vajrala
+  - Shreyas Pandith
+  - Sravanth Kodavanti
+  - Abhishek Ameta
+  - ' Harshit'
+  - Amit Satish Unde
+  published: '2026-01-14'
+  updated: '2026-01-16'
+  categories:
+  - cs.CV
+  abstract: Latent diffusion models such as Stable Diffusion 1.5 offer strong generative priors that are
+    highly valuable for image restoration, yet their full pipelines remain too computationally heavy for
+    deployment on edge devices. Existing lightweight variants predominantly compress the denoising U-Net
+    or reduce the diffusion trajectory, which disrupts the underlying latent manifold and limits generalization
+    beyond a single task. We introduce NanoSD, a family of Pareto-optimal diffusion foundation models
+    distilled from Stable Diffusion 1.5 through network surgery, feature-wise generative distillation,
+    and structured architectural scaling jointly applied to the U-Net and the VAE encoder-decoder. This
+    full-pipeline co-design preserves the generative prior while producing models that occupy distinct
+    operating points along the accuracy-latency-size frontier (e.g., 130M-315M parameters, achieving real-time
+    inference down to 20ms on mobile-class NPUs). We show that parameter reduction alone does not correlate
+    with hardware efficiency, and we provide an analysis revealing how architectural balance, feature
+    routing, and latent-space preservation jointly shape true on-device latency. When used as a drop-in
+    backbone, NanoSD enables state-of-the-art performance across image super-resolution, image deblurring,
+    face restoration, and monocular depth estimation, outperforming prior lightweight diffusion models
+    in both perceptual quality and practical deployability. NanoSD establishes a general-purpose diffusion
+    foundation model family suitable for real-time visual generation and restoration on edge devices.
+  url: https://arxiv.org/abs/2601.09823
+  pdf_url: https://arxiv.org/pdf/2601.09823v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 3
+citation_year: 2026

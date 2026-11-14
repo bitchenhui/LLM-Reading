@@ -1,0 +1,40 @@
+id: paper:arxiv:2605.03485
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'MHPR: Multidimensional Human Perception and Reasoning Benchmark for Large Vision-Languate Models'
+  authors:
+  - Kangkang Wang
+  - Qinting Jiang
+  - Wanping Zhang
+  - Bowen Ren
+  - Shengzhao Wen
+  published: '2026-05-05'
+  updated: '2026-05-05'
+  categories:
+  - cs.CV
+  - cs.AI
+  abstract: 'Multidimensional human understanding is essential for real-world applications such as film
+    analysis and virtual digital humans, yet current LVLM benchmarks largely focus on single-task settings
+    and lack fine-grained, human-centric evaluation. In this work, we introduce MHPR, a comprehensive
+    benchmark for joint perception-reasoning over human-centric scenes spanning individual, multi-person,
+    and human-object interaction dimensions. MHPR comprises a multi-level data design-Captioned Raw Data
+    (C-RD), Supervised Fine-Tuning Data (SFT-D), Reinforcement Learning Data (RL-D), and Test Data (T-D)-together
+    with an automated caption/VQA generation pipeline (ACVG) that performs category-wise attribute decomposition,
+    attribute-specific rewriting, and multi-model voting to ensure high-quality, scalable annotations.
+    We evaluate state-of-the-art vision-language models on fine-grained attributes (appearance, clothing,
+    pose, parts) and high-level semantics (social relations, action semantics, spatial relations, intent
+    and functionality). Our findings show that: 1) format-aligned SFT data substantially improves instruction
+    following and stability; 2) challenge-focused RL data derived from bad-case analysis further enhances
+    perception and reasoning on difficult instances; and 3) training Qwen2.5-VL-7B with MHPR yields significant
+    gains, achieving near-parity with considerably larger models. We release ACVG and MHPR to facilitate
+    reproducible, extensible research on human-centric perception and reasoning.'
+  url: https://arxiv.org/abs/2605.03485
+  pdf_url: https://arxiv.org/pdf/2605.03485v1
+  version: v1
+fetched: '2026-11-14'

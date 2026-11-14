@@ -1,0 +1,31 @@
+id: paper:arxiv:2601.00885
+status: skipped
+score: 1
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+meta:
+  title: Counterfactual Self-Questioning for Stable Policy Optimization in Language Models
+  authors:
+  - Mandar Parab
+  published: '2025-12-31'
+  updated: '2025-12-31'
+  categories:
+  - cs.AI
+  abstract: Recent work on language model self-improvement shows that models can refine their own reasoning
+    through reflection, verification, debate, or self-generated rewards. However, most existing approaches
+    rely on external critics, learned reward models, or ensemble sampling, which increases complexity
+    and training instability. We propose Counterfactual Self-Questioning, a framework in which a single
+    language model generates and evaluates counterfactual critiques of its own reasoning. The method produces
+    an initial reasoning trace, formulates targeted questions that challenge potential failure points,
+    and generates alternative reasoning trajectories that expose incorrect assumptions or invalid steps.
+    These counterfactual trajectories provide structured relative feedback that can be directly used for
+    policy optimization without auxiliary models. Experiments on multiple mathematical reasoning benchmarks
+    show that counterfactual self-questioning improves accuracy and training stability, particularly for
+    smaller models, enabling scalable self-improvement using internally generated supervision alone.
+  url: https://arxiv.org/abs/2601.00885
+  pdf_url: https://arxiv.org/pdf/2601.00885v1
+  version: v1
+fetched: '2026-11-14'

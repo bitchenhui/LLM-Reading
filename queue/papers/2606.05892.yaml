@@ -1,0 +1,32 @@
+id: paper:arxiv:2606.05892
+status: skipped
+score: 0
+track: audio_coding
+matched: []
+meta:
+  title: 'VoCodec: A Low-bitrate Streamable Neural Speech Codec with Voicing-driven Quantization'
+  authors:
+  - Xiao-Hang Jiang
+  - Yang Ai
+  - Rui-Chen Zheng
+  - Li-Rong Dai
+  - Zhen-Hua Ling
+  - Ji Wu
+  published: '2026-06-04'
+  updated: '2026-06-04'
+  categories:
+  - eess.AS
+  abstract: Neural speech codecs are key to speech transmission and storage, but most use uniform quantization
+    across frames, allocating the same bitrate regardless of content and wasting bits. We propose VoCodec,
+    a low-bitrate streamable neural speech codec with voicing-driven quantization that assigns higher
+    bitrate to voiced frames and lower bitrate to unvoiced frames according to perceptual sensitivity.
+    VoCodec embeds a voicing detector in a fully causal encoder-quantizer-decoder neural coding framework,
+    using residual scalar-vector quantization for voiced frames and simple scalar quantization for unvoiced
+    ones. Experiments show that on the LibriTTS dataset at a 16 kHz sampling rate, VoCodec outperforms
+    baseline neural speech codecs even at a bitrate as low as 1.1 kbps. Our further experiments also confirm
+    that introducing voicing-driven quantization can effectively reduce the bitrate by approximately 27%
+    compared with uniform quantization strategy.
+  url: https://arxiv.org/abs/2606.05892
+  pdf_url: https://arxiv.org/pdf/2606.05892v1
+  version: v1
+fetched: '2026-11-14'

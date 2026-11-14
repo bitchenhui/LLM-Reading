@@ -1,0 +1,42 @@
+id: paper:arxiv:2606.12671
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'SalArt-VQA: Diagnosing Whether VLMs Understand Salient Artifacts in Generated Images'
+  authors:
+  - Ruotian Zhang
+  - Xiaoxiao Sun
+  - Junzhe Huang
+  - James Burgess
+  - Serena Yeung-Levy
+  published: '2026-06-10'
+  updated: '2026-10-06'
+  categories:
+  - cs.CV
+  abstract: 'Vision-language models (VLMs) are increasingly used to detect whether AI-generated images
+    contain visible artifacts, yet their ability to analyze such artifacts remains poorly understood.
+    A correct image-level decision can still hide important failures: a model may correctly flag an artifact
+    while relying on the wrong visual cue, selecting the wrong region, or describing a defect that the
+    image does not support. To evaluate these behaviors directly, we introduce SalArt-VQA, a diagnostic
+    benchmark for fine-grained SALient ARTifact understanding in AI-generated images. SalArt-VQA contains
+    950 images and 3,681 human-authored multiple-choice questions spanning artifact images, matched real
+    reference images, and paired generated reference images. Four aligned question types evaluate presence
+    detection, semantic localization, spatial grounding, and evidence-grounded defect identification,
+    while the reference splits test calibration and abstention when the annotated defect is absent. Across
+    20 VLMs, SalArt-VQA reveals failures that image-level detection accuracy hides: the strongest model
+    reaches 99.37% detection recall on artifact images but answers all four artifact-side questions correctly
+    on only 53.26% of images. Comparing artifact images with artifact-free references reveals a sensitivity-calibration
+    tradeoff: sensitive models often make unsupported artifact claims, while conservative models avoid
+    false alarms largely by missing real artifacts. These results show that high artifact detection accuracy
+    alone does not imply grounded artifact understanding. SalArt-VQA exposes these hidden failure modes
+    and provides a fine-grained evaluation of whether VLM artifact claims are supported by local visual
+    evidence.'
+  url: https://arxiv.org/abs/2606.12671
+  pdf_url: https://arxiv.org/pdf/2606.12671v2
+  version: v2
+fetched: '2026-11-14'

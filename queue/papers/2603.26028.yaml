@@ -1,0 +1,37 @@
+id: paper:arxiv:2603.26028
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'Learning to Trim: End-to-End Causal Graph Pruning with Dynamic Anatomical Feature Banks for
+    Medical VQA'
+  authors:
+  - Zibo Xu
+  - Qiang Li
+  - Weizhi Nie
+  - Yuting Su
+  published: '2026-03-27'
+  updated: '2026-05-31'
+  categories:
+  - cs.CV
+  abstract: Medical Visual Question Answering (MedVQA) models often exhibit limited generalization due
+    to reliance on dataset-specific correlations, such as recurring anatomical patterns or question-type
+    regularities, rather than genuine diagnostic evidence. Existing causal approaches are typically implemented
+    as static adjustments or post-hoc corrections. To address this issue, we propose a Learnable Causal
+    Trimming (LCT) framework that integrates causal pruning into end-to-end optimization. We introduce
+    a Dynamic Anatomical Feature Bank (DAFB), updated via a momentum mechanism, to capture global prototypes
+    of frequent anatomical and linguistic patterns, serving as an approximation of dataset-level regularities.
+    We further design a differentiable trimming module that estimates the dependency between instance-level
+    representations and the global feature bank. Features highly correlated with global prototypes are
+    softly suppressed, while instance-specific evidence is emphasized. This learnable mechanism encourages
+    the model to prioritize causal signals over spurious correlations adaptively. Experiments on VQA-RAD,
+    SLAKE, SLAKE-CP and PathVQA demonstrate that LCT consistently improves robustness and generalization
+    over existing debiasing strategies.
+  url: https://arxiv.org/abs/2603.26028
+  pdf_url: https://arxiv.org/pdf/2603.26028v2
+  version: v2
+fetched: '2026-11-14'

@@ -1,0 +1,59 @@
+id: paper:arxiv:2507.12197
+status: skipped
+score: 0
+track: audio_coding
+matched: []
+meta:
+  title: 'Quantize More, Lose Less: Autoregressive Generation from Residually Quantized Speech Representations'
+  authors:
+  - Yichen Han
+  - Xiaoyang Hao
+  - Keming Chen
+  - Weibo Xiong
+  - Jun He
+  - Ruonan Zhang
+  - Junjie Cao
+  - Yue Liu
+  - Bowen Li
+  - Dongrui Zhang
+  - Hui Xia
+  - Huilei Fu
+  - Kai Jia
+  - Kaixuan Guo
+  - Mingli Jin
+  - Qingyun Meng
+  - Ruidong Ma
+  - Ruiqian Fang
+  - Shaotong Guo
+  - Xuhui Li
+  - Yang Xiang
+  - Ying Zhang
+  - Yulong Liu
+  - Yunfeng Li
+  - Yuyi Zhang
+  - Yuze Zhou
+  - Zhen Wang
+  - Zhaowen Chen
+  published: '2025-07-16'
+  updated: '2025-07-16'
+  categories:
+  - cs.SD
+  - cs.AI
+  abstract: 'Text-to-speech (TTS) synthesis has seen renewed progress under the discrete modeling paradigm.
+    Existing autoregressive approaches often rely on single-codebook representations, which suffer from
+    significant information loss. Even with post-hoc refinement techniques such as flow matching, these
+    methods fail to recover fine-grained details (e.g., prosodic nuances, speaker-specific timbres), especially
+    in challenging scenarios like singing voice or music synthesis. We propose QTTS, a novel TTS framework
+    built upon our new audio codec, QDAC. The core innovation of QDAC lies in its end-to-end training
+    of an ASR-based auto-regressive network with a GAN, which achieves superior semantic feature disentanglement
+    for scalable, near-lossless compression. QTTS models these discrete codes using two innovative strategies:
+    the Hierarchical Parallel architecture, which uses a dual-AR structure to model inter-codebook dependencies
+    for higher-quality synthesis, and the Delay Multihead approach, which employs parallelized prediction
+    with a fixed delay to accelerate inference speed. Our experiments demonstrate that the proposed framework
+    achieves higher synthesis quality and better preserves expressive content compared to baseline. This
+    suggests that scaling up compression via multi-codebook modeling is a promising direction for high-fidelity,
+    general-purpose speech and audio generation.'
+  url: https://arxiv.org/abs/2507.12197
+  pdf_url: https://arxiv.org/pdf/2507.12197v1
+  version: v1
+fetched: '2026-11-14'

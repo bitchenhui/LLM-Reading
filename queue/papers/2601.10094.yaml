@@ -1,0 +1,39 @@
+id: paper:arxiv:2601.10094
+status: skipped
+score: 1
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 3
+  weight: 1
+meta:
+  title: 'V-Zero: Self-Improving Multimodal Reasoning with Zero Annotation'
+  authors:
+  - Han Wang
+  - Yi Yang
+  - Jingyuan Hu
+  - Minfeng Zhu
+  - Wei Chen
+  published: '2026-01-15'
+  updated: '2026-01-15'
+  categories:
+  - cs.CV
+  - cs.AI
+  - cs.LG
+  abstract: 'Recent advances in multimodal learning have significantly enhanced the reasoning capabilities
+    of vision-language models (VLMs). However, state-of-the-art approaches rely heavily on large-scale
+    human-annotated datasets, which are costly and time-consuming to acquire. To overcome this limitation,
+    we introduce V-Zero, a general post-training framework that facilitates self-improvement using exclusively
+    unlabeled images. V-Zero establishes a co-evolutionary loop by instantiating two distinct roles: a
+    Questioner and a Solver. The Questioner learns to synthesize high-quality, challenging questions by
+    leveraging a dual-track reasoning reward that contrasts intuitive guesses with reasoned results. The
+    Solver is optimized using pseudo-labels derived from majority voting over its own sampled responses.
+    Both roles are trained iteratively via Group Relative Policy Optimization (GRPO), driving a cycle
+    of mutual enhancement. Remarkably, without a single human annotation, V-Zero achieves consistent performance
+    gains on Qwen2.5-VL-7B-Instruct, improving visual mathematical reasoning by +1.7 and general vision-centric
+    by +2.6, demonstrating the potential of self-improvement in multimodal systems. Code is available
+    at https://github.com/SatonoDia/V-Zero'
+  url: https://arxiv.org/abs/2601.10094
+  pdf_url: https://arxiv.org/pdf/2601.10094v1
+  version: v1
+fetched: '2026-11-14'

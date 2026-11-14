@@ -1,0 +1,41 @@
+id: paper:arxiv:2512.23760
+status: skipped
+score: 1
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 3
+  weight: 1
+meta:
+  title: Audited Skill-Graph Self-Improvement for Agentic LLMs via Verifiable Rewards, Experience Synthesis,
+    and Continual Memory
+  authors:
+  - Ken Huang
+  - Jerry Huang
+  published: '2025-12-28'
+  updated: '2025-12-28'
+  categories:
+  - cs.CR
+  - cs.AI
+  abstract: 'Reinforcement learning is increasingly used to transform large language models into agentic
+    systems that act over long horizons, invoke tools, and manage memory under partial observability.
+    While recent work has demonstrated performance gains through tool learning, verifiable rewards, and
+    continual training, deployed self-improving agents raise unresolved security and governance challenges:
+    optimization pressure can incentivize reward hacking, behavioral drift is difficult to audit or reproduce,
+    and improvements are often entangled in opaque parameter updates rather than reusable, verifiable
+    artifacts. This paper proposes Audited Skill-Graph Self-Improvement (ASG-SI), a framework that treats
+    self-improvement as iterative compilation of an agent into a growing, auditable skill graph. Each
+    candidate improvement is extracted from successful trajectories, normalized into a skill with an explicit
+    interface, and promoted only after passing verifier-backed replay and contract checks. Rewards are
+    decomposed into reconstructible components derived from replayable evidence, enabling independent
+    audit of promotion decisions and learning signals. ASG-SI further integrates experience synthesis
+    for scalable stress testing and continual memory control to preserve long-horizon performance under
+    bounded context. We present a complete system architecture, threat model, and security analysis, and
+    provide a fully runnable reference implementation that demonstrates verifier-backed reward construction,
+    skill compilation, audit logging, and measurable improvement under continual task streams. ASG-SI
+    reframes agentic self-improvement as accumulation of verifiable, reusable capabilities, offering a
+    practical path toward reproducible evaluation and operational governance of self-improving AI agents.'
+  url: https://arxiv.org/abs/2512.23760
+  pdf_url: https://arxiv.org/pdf/2512.23760v1
+  version: v1
+fetched: '2026-11-14'

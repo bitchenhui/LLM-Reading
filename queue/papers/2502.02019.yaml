@@ -1,0 +1,33 @@
+id: paper:arxiv:2502.02019
+status: skipped
+score: 1
+track: audio_coding
+matched:
+- ref: concept:NeuralAudioCodec
+  count: 1
+  weight: 1
+meta:
+  title: 'ComplexDec: A Domain-robust High-fidelity Neural Audio Codec with Complex Spectrum Modeling'
+  authors:
+  - Yi-Chiao Wu
+  - Dejan Marković
+  - Steven Krenn
+  - Israel D. Gebru
+  - Alexander Richard
+  published: '2025-02-04'
+  updated: '2025-02-04'
+  categories:
+  - eess.AS
+  - cs.SD
+  abstract: Neural audio codecs have been widely adopted in audio-generative tasks because their compact
+    and discrete representations are suitable for both large-language-model-style and regression-based
+    generative models. However, most neural codecs struggle to model out-of-domain audio, resulting in
+    error propagations to downstream generative tasks. In this paper, we first argue that information
+    loss from codec compression degrades out-of-domain robustness. Then, we propose full-band 48~kHz ComplexDec
+    with complex spectral input and output to ease the information loss while adopting the same 24~kbps
+    bitrate as the baseline AuidoDec and ScoreDec. Objective and subjective evaluations demonstrate the
+    out-of-domain robustness of ComplexDec trained using only the 30-hour VCTK corpus.
+  url: https://arxiv.org/abs/2502.02019
+  pdf_url: https://arxiv.org/pdf/2502.02019v1
+  version: v1
+fetched: '2026-11-14'

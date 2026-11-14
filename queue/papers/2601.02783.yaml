@@ -1,0 +1,48 @@
+id: paper:arxiv:2601.02783
+status: pending
+score: 2
+track: quality_assessment
+matched:
+- ref: concept:LLM
+  count: 2
+  weight: 1
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'EarthVL: A Progressive Earth Vision-Language Understanding and Generation Framework'
+  authors:
+  - Junjue Wang
+  - Yanfei Zhong
+  - Zihang Chen
+  - Zhuo Zheng
+  - Ailong Ma
+  - Liangpei Zhang
+  published: '2026-01-06'
+  updated: '2026-01-06'
+  categories:
+  - cs.CV
+  abstract: 'Earth vision has achieved milestones in geospatial object recognition but lacks exploration
+    in object-relational reasoning, limiting comprehensive scene understanding. To address this, a progressive
+    Earth vision-language understanding and generation framework is proposed, including a multi-task dataset
+    (EarthVLSet) and a semantic-guided network (EarthVLNet). Focusing on city planning applications, EarthVLSet
+    includes 10.9k sub-meter resolution remote sensing images, land-cover masks, and 761.5k textual pairs
+    involving both multiple-choice and open-ended visual question answering (VQA) tasks. In an object-centric
+    way, EarthVLNet is proposed to progressively achieve semantic segmentation, relational reasoning,
+    and comprehensive understanding. The first stage involves land-cover segmentation to generate object
+    semantics for VQA guidance. Guided by pixel-wise semantics, the object awareness based large language
+    model (LLM) performs relational reasoning and knowledge summarization to generate the required answers.
+    As for optimization, the numerical difference loss is proposed to dynamically add difference penalties,
+    addressing the various objects'' statistics. Three benchmarks, including semantic segmentation, multiple-choice,
+    and open-ended VQA demonstrated the superiorities of EarthVLNet, yielding three future directions:
+    1) segmentation features consistently enhance VQA performance even in cross-dataset scenarios; 2)
+    multiple-choice tasks show greater sensitivity to the vision encoder than to the language decoder;
+    and 3) open-ended tasks necessitate advanced vision encoders and language decoders for an optimal
+    performance. We believe this dataset and method will provide a beneficial benchmark that connects
+    ''''image-mask-text'''', advancing geographical applications for Earth vision.'
+  url: https://arxiv.org/abs/2601.02783
+  pdf_url: https://arxiv.org/pdf/2601.02783v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 11
+citation_year: 2026

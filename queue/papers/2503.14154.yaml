@@ -1,0 +1,42 @@
+id: paper:arxiv:2503.14154
+status: skipped
+score: 1
+track: immersive_media
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'RBFIM: Perceptual Quality Assessment for Compressed Point Clouds Using Radial Basis Function
+    Interpolation'
+  authors:
+  - Zhang Chen
+  - Shuai Wan
+  - Siyu Ren
+  - Fuzheng Yang
+  - Mengting Yu
+  - Junhui Hou
+  published: '2025-03-18'
+  updated: '2025-03-18'
+  categories:
+  - cs.CV
+  - cs.MM
+  - eess.IV
+  abstract: 'One of the main challenges in point cloud compression (PCC) is how to evaluate the perceived
+    distortion so that the codec can be optimized for perceptual quality. Current standard practices in
+    PCC highlight a primary issue: while single-feature metrics are widely used to assess compression
+    distortion, the classic method of searching point-to-point nearest neighbors frequently fails to adequately
+    build precise correspondences between point clouds, resulting in an ineffective capture of human perceptual
+    features. To overcome the related limitations, we propose a novel assessment method called RBFIM,
+    utilizing radial basis function (RBF) interpolation to convert discrete point features into a continuous
+    feature function for the distorted point cloud. By substituting the geometry coordinates of the original
+    point cloud into the feature function, we obtain the bijective sets of point features. This enables
+    an establishment of precise corresponding features between distorted and original point clouds and
+    significantly improves the accuracy of quality assessments. Moreover, this method avoids the complexity
+    caused by bidirectional searches. Extensive experiments on multiple subjective quality datasets of
+    compressed point clouds demonstrate that our RBFIM excels in addressing human perception tasks, thereby
+    providing robust support for PCC optimization efforts.'
+  url: https://arxiv.org/abs/2503.14154
+  pdf_url: https://arxiv.org/pdf/2503.14154v1
+  version: v1
+fetched: '2026-11-14'

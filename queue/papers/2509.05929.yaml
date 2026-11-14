@@ -1,0 +1,37 @@
+id: paper:arxiv:2509.05929
+status: skipped
+score: 0
+track: video_image_coding
+matched: []
+meta:
+  title: Application Space and the Rate-Distortion-Complexity Analysis of Neural Video CODECs
+  authors:
+  - Ricardo L. de Queiroz
+  - Diogo C. Garcia
+  - Yi-Hsin Chen
+  - Ruhan Conceição
+  - Wen-Hsiao Peng
+  - Luciano V. Agostini
+  published: '2025-09-07'
+  updated: '2025-09-07'
+  categories:
+  - eess.IV
+  abstract: We study the decision-making process for choosing video compression systems through a rate-distortion-complexity
+    (RDC) analysis. We discuss the 2D Bjontegaard delta (BD) metric and formulate generalizations in an
+    attempt to extend its notions to the 3D RDC volume. We follow that discussion with another one on
+    the computation of metrics in the RDC volume, and on how to define and measure the cost of a coder-decoder
+    (codec) pair, where the codec is characterized by a cloud of points in the RDC space. We use a Lagrangian
+    cost $D+λR + γC$, such that choosing the best video codec among a number of candidates for an application
+    demands selecting appropriate $(λ, γ)$ values. Thus, we argue that an application may be associated
+    with a $(λ, γ)$ point in the application space. An example streaming application was given as a case
+    study to set a particular point in the $(λ, γ)$ plane. The result is that we can compare Lagrangian
+    costs in an RDC volume for different codecs for a given application. Furthermore, we can span the
+    plane and compare codecs for the entire application space filled with different $(λ, γ)$ choices.
+    We then compared several state-of-the-art neural video codecs using the proposed metrics. Results
+    are informative and surprising. We found that, within our RDC computation constraints, only four neural
+    video codecs came out as the best suited for any application, depending on where its desirable $(λ,
+    γ)$ lies.
+  url: https://arxiv.org/abs/2509.05929
+  pdf_url: https://arxiv.org/pdf/2509.05929v1
+  version: v1
+fetched: '2026-11-14'

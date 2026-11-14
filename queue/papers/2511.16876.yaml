@@ -1,0 +1,53 @@
+id: paper:arxiv:2511.16876
+status: skipped_low_citation
+score: 5
+track: video_image_coding
+matched:
+- ref: codec:AVC
+  count: 1
+  weight: 3
+- ref: concept:QP
+  count: 1
+  weight: 1
+- ref: metric:BD-Rate
+  count: 1
+  weight: 1
+meta:
+  title: Avoiding Quality Saturation in UGC Compression Using Denoised References
+  authors:
+  - Xin Xiong
+  - Samuel Fernández-Menduiña
+  - Eduardo Pavez
+  - Antonio Ortega
+  - Neil Birkbeck
+  - Balu Adsumilli
+  published: '2025-11-21'
+  updated: '2025-11-21'
+  categories:
+  - eess.IV
+  - cs.MM
+  abstract: 'Video-sharing platforms must re-encode large volumes of noisy user-generated content (UGC)
+    to meet streaming demands. However, conventional codecs, which aim to minimize the mean squared error
+    (MSE) between the compressed and input videos, can cause quality saturation (QS) when applied to UGC,
+    i.e., increasing the bitrate preserves input artifacts without improving visual quality. A direct
+    approach to solve this problem is to detect QS by repeatedly evaluating a non-reference metric (NRM)
+    on videos compressed with multiple codec parameters, which is inefficient. In this paper, we re-frame
+    UGC compression and QS detection from the lens of noisy source coding theory: rather than using a
+    NRM, we compute the MSE with respect to the denoised UGC, which serves as an alternative reference
+    (D-MSE). Unlike MSE measured between the UGC input and the compressed UGC, D-MSE saturates at non-zero
+    values as bitrates increase, a phenomenon we term distortion saturation (DS). Since D-MSE can be computed
+    at the block level in the transform domain, we can efficiently detect D-MSE without coding and decoding
+    with various parameters. We propose two methods for DS detection: distortion saturation detection
+    (DSD), which relies on an input-dependent threshold derived from the D-MSE of the input UGC, and rate-distortion
+    saturation detection (RDSD), which estimates the Lagrangian at the saturation point using a low-complexity
+    compression method. Both methods work as a pre-processing step that can help standard-compliant codecs
+    avoid QS in UGC compression. Experiments with AVC show that preventing encoding in the saturation
+    region, i.e., avoiding encoding at QPs that result in QS according to our methods, achieves BD-rate
+    savings of 8%-20% across multiple different NRMs, compared to a naïve baseline that encodes at the
+    given input QP while ignoring QS.'
+  url: https://arxiv.org/abs/2511.16876
+  pdf_url: https://arxiv.org/pdf/2511.16876v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 0
+citation_year: 2025

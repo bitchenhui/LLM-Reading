@@ -1,0 +1,47 @@
+id: paper:arxiv:2603.27112
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'RailVQA: A Benchmark and Framework for Efficient Interpretable Visual Cognition in Automatic
+    Train Operation'
+  authors:
+  - Sen Zhang
+  - Runmei Li
+  - Shizhuang Deng
+  - Zhichao Zheng
+  - Yuhe Zhang
+  - Jiani Li
+  - Kailun Zhang
+  - Tao Zhang
+  - Wenjun Wu
+  - Qunbo Wang
+  published: '2026-03-28'
+  updated: '2026-04-23'
+  categories:
+  - cs.CV
+  abstract: As Automatic Train Operation (ATO) advances toward GoA4 and beyond, it increasingly depends
+    on efficient, reliable cab-view visual perception and decision-oriented inference to ensure safe operation
+    in complex and dynamic railway environments. However, existing approaches focus primarily on basic
+    perception and often generalize poorly to rare yet safety-critical corner cases. They also lack the
+    high-level reasoning and planning capabilities required for operational decision-making. Although
+    recent Large Multi-modal Models (LMMs) show strong generalization and cognitive capabilities, their
+    use in safety-critical ATO is hindered by high computational cost and hallucination risk. Meanwhile,
+    reliable domain-specific benchmarks for systematically evaluating cognitive capabilities are still
+    lacking. To address these gaps, we introduce RailVQA-bench, the first VQA benchmark for cab-view visual
+    cognition in ATO, comprising 20,000 single-frame and 1,168 video based QA pairs to evaluate cognitive
+    generalization and interpretability in both static and dynamic scenarios. Furthermore, we propose
+    RailVQA-CoM, a collaborative large-small model framework that combines small-model efficiency with
+    large-model cognition via a transparent three-module architecture and adaptive temporal sampling,
+    improving perceptual generalization and enabling more efficient reasoning and planning. Experiments
+    demonstrate that the proposed approach substantially improves performance, enhances interpretability,
+    improves efficiency, and strengthens cross-domain generalization in autonomous driving systems. Code
+    and datasets will be available at https://cybereye-bjtu.github.io/RailVQA.html.
+  url: https://arxiv.org/abs/2603.27112
+  pdf_url: https://arxiv.org/pdf/2603.27112v2
+  version: v2
+fetched: '2026-11-14'

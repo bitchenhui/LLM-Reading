@@ -1,0 +1,46 @@
+id: paper:arxiv:2505.24496
+status: skipped
+score: 0
+track: audio_coding
+matched: []
+meta:
+  title: Speech Token Prediction via Compressed-to-fine Language Modeling for Speech Generation
+  authors:
+  - Wenrui Liu
+  - Qian Chen
+  - Wen Wang
+  - Yafeng Chen
+  - Jin Xu
+  - Zhifang Guo
+  - Guanrou Yang
+  - Weiqin Li
+  - Xiaoda Yang
+  - Tao Jin
+  - Minghui Fang
+  - Jialong Zuo
+  - Bai Jionghao
+  - Zemin Liu
+  published: '2025-05-30'
+  updated: '2025-05-30'
+  categories:
+  - eess.AS
+  abstract: 'Neural audio codecs, used as speech tokenizers, have demonstrated remarkable potential in
+    the field of speech generation. However, to ensure high-fidelity audio reconstruction, neural audio
+    codecs typically encode audio into long sequences of speech tokens, posing a significant challenge
+    for downstream language models in long-context modeling. We observe that speech token sequences exhibit
+    short-range dependency: due to the monotonic alignment between text and speech in text-to-speech (TTS)
+    tasks, the prediction of the current token primarily relies on its local context, while long-range
+    tokens contribute less to the current token prediction and often contain redundant information. Inspired
+    by this observation, we propose a \textbf{compressed-to-fine language modeling} approach to address
+    the challenge of long sequence speech tokens within neural codec language models: (1) \textbf{Fine-grained
+    Initial and Short-range Information}: Our approach retains the prompt and local tokens during prediction
+    to ensure text alignment and the integrity of paralinguistic information; (2) \textbf{Compressed Long-range
+    Context}: Our approach compresses long-range token spans into compact representations to reduce redundant
+    information while preserving essential semantics. Extensive experiments on various neural audio codecs
+    and downstream language models validate the effectiveness and generalizability of the proposed approach,
+    highlighting the importance of token compression in improving speech generation within neural codec
+    language models. The demo of audio samples will be available at https://anonymous.4open.science/r/SpeechTokenPredictionViaCompressedToFinedLM.'
+  url: https://arxiv.org/abs/2505.24496
+  pdf_url: https://arxiv.org/pdf/2505.24496v1
+  version: v1
+fetched: '2026-11-14'

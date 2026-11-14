@@ -1,0 +1,39 @@
+id: paper:arxiv:2403.11556
+status: skipped
+score: 1
+track: video_image_coding
+matched:
+- ref: concept:QP
+  count: 1
+  weight: 1
+meta:
+  title: Hierarchical Frequency-based Upsampling and Refining for Compressed Video Quality Enhancement
+  authors:
+  - Qianyu Zhang
+  - Bolun Zheng
+  - Xinying Chen
+  - Quan Chen
+  - Zhunjie Zhu
+  - Canjin Wang
+  - Zongpeng Li
+  - Chengang Yan
+  published: '2024-03-18'
+  updated: '2024-03-18'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: 'Video compression artifacts arise due to the quantization operation in the frequency domain.
+    The goal of video quality enhancement is to reduce compression artifacts and reconstruct a visually-pleasant
+    result. In this work, we propose a hierarchical frequency-based upsampling and refining neural network
+    (HFUR) for compressed video quality enhancement. HFUR consists of two modules: implicit frequency
+    upsampling module (ImpFreqUp) and hierarchical and iterative refinement module (HIR). ImpFreqUp exploits
+    DCT-domain prior derived through implicit DCT transform, and accurately reconstructs the DCT-domain
+    loss via a coarse-to-fine transfer. Consequently, HIR is introduced to facilitate cross-collaboration
+    and information compensation between the scales, thus further refine the feature maps and promote
+    the visual quality of the final output. We demonstrate the effectiveness of the proposed modules via
+    ablation experiments and visualized results. Extensive experiments on public benchmarks show that
+    HFUR achieves state-of-the-art performance for both constant bit rate and constant QP modes.'
+  url: https://arxiv.org/abs/2403.11556
+  pdf_url: https://arxiv.org/pdf/2403.11556v1
+  version: v1
+fetched: '2026-11-14'

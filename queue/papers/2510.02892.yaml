@@ -1,0 +1,31 @@
+id: paper:arxiv:2510.02892
+status: skipped
+score: 1
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 1
+  weight: 1
+meta:
+  title: 'RoiRL: Efficient, Self-Supervised Reasoning with Offline Iterative Reinforcement Learning'
+  authors:
+  - Aleksei Arzhantsev
+  - Otmane Sakhi
+  - Flavian Vasile
+  published: '2025-10-03'
+  updated: '2025-10-03'
+  categories:
+  - cs.LG
+  abstract: 'Reinforcement learning (RL) is central to improving reasoning in large language models (LLMs)
+    but typically requires ground-truth rewards. Test-Time Reinforcement Learning (TTRL) removes this
+    need by using majority-vote rewards, but relies on heavy online RL and incurs substantial computational
+    cost. We propose RoiRL: Reasoning with offline iterative Reinforcement Learning, a family of lightweight
+    offline learning alternatives that can target the same regularized optimal policies. Unlike TTRL,
+    RoiRL eliminates the need to maintain a reference model and instead optimizes weighted log-likelihood
+    objectives, enabling stable training with significantly lower memory and compute requirements. Experimental
+    results show that RoiRL trains to 2.5x faster and consistently outperforms TTRL on reasoning benchmarks,
+    establishing a scalable path to self-improving LLMs without labels.'
+  url: https://arxiv.org/abs/2510.02892
+  pdf_url: https://arxiv.org/pdf/2510.02892v1
+  version: v1
+fetched: '2026-11-14'

@@ -1,0 +1,34 @@
+id: paper:arxiv:2509.09550
+status: skipped
+score: 0
+track: audio_coding
+matched: []
+meta:
+  title: Finite Scalar Quantization Enables Redundant and Transmission-Robust Neural Audio Compression
+    at Low Bit-rates
+  authors:
+  - Harry Julian
+  - Rachel Beeson
+  - Lohith Konathala
+  - Johanna Ulin
+  - Jiameng Gao
+  published: '2025-09-11'
+  updated: '2025-09-12'
+  categories:
+  - cs.SD
+  - cs.LG
+  abstract: Neural Audio Codecs (NACs) have become increasingly adopted in speech processing tasks due
+    to their excellent rate-distortion performance and compatibility with Large Language Models (LLMs)
+    as discrete feature representations for audio generation. While most existing codecs rely on Residual
+    Vector Quantization (RVQ), Finite Scalar Quantization (FSQ) has recently emerged as a compelling alternative
+    that simplifies training and natively supports single codebooks. We introduce NeuCodec, an FSQ-based
+    NAC, and show that FSQ encodes baked-in redundancy which produces an encoding which is robust when
+    transmitted through noisy channels. First, through an encoder distillation experiment, we show that
+    two different encoders can learn to encode identical audio into vastly different code sequences whilst
+    maintaining comparable reconstruction quality with the same quantizer and decoder. Second, we demonstrate
+    that FSQ has vastly superior bit-level perturbation robustness by comparing the performance of RVQ
+    and FSQ codecs when simulating the transmission of code sequences through a noisy channel.
+  url: https://arxiv.org/abs/2509.09550
+  pdf_url: https://arxiv.org/pdf/2509.09550v2
+  version: v2
+fetched: '2026-11-14'

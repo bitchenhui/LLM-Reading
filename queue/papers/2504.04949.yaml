@@ -1,0 +1,38 @@
+id: paper:arxiv:2504.04949
+status: skipped
+score: 1
+track: audio_coding
+matched:
+- ref: concept:NeuralAudioCodec
+  count: 1
+  weight: 1
+meta:
+  title: 'L3AC: Towards a Lightweight and Lossless Audio Codec'
+  authors:
+  - Linwei Zhai
+  - Han Ding
+  - Cui Zhao
+  - fei wang
+  - Ge Wang
+  - Wang Zhi
+  - Wei Xi
+  published: '2025-04-07'
+  updated: '2025-08-15'
+  categories:
+  - cs.SD
+  - cs.AI
+  abstract: Neural audio codecs have recently gained traction for their ability to compress high-fidelity
+    audio and provide discrete tokens for generative modeling. However, leading approaches often rely
+    on resource-intensive models and complex multi-quantizer architectures, limiting their practicality
+    in real-world applications. In this work, we introduce L3AC, a lightweight neural audio codec that
+    addresses these challenges by leveraging a single quantizer and a highly efficient architecture. To
+    enhance reconstruction fidelity while minimizing model complexity, L3AC explores streamlined convolutional
+    networks and local Transformer modules, alongside TConv--a novel structure designed to capture acoustic
+    variations across multiple temporal scales. Despite its compact design, extensive experiments across
+    diverse datasets demonstrate that L3AC matches or exceeds the reconstruction quality of leading codecs
+    while reducing computational overhead by an order of magnitude. The single-quantizer design further
+    enhances its adaptability for downstream tasks. The source code is publicly available at https://github.com/zhai-lw/L3AC.
+  url: https://arxiv.org/abs/2504.04949
+  pdf_url: https://arxiv.org/pdf/2504.04949v2
+  version: v2
+fetched: '2026-11-14'

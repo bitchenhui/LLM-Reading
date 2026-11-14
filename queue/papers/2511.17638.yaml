@@ -1,0 +1,38 @@
+id: paper:arxiv:2511.17638
+status: skipped
+score: 1
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 1
+  weight: 1
+meta:
+  title: 'Model-to-Model Knowledge Transmission (M2KT): A Data-Free Framework for Cross-Model Understanding
+    Transfer'
+  authors:
+  - Pratham Sorte
+  published: '2025-11-19'
+  updated: '2025-11-19'
+  categories:
+  - cs.LG
+  - cs.AI
+  abstract: 'Modern artificial intelligence systems depend heavily on large datasets for both training
+    and transferring knowledge between models. Knowledge distillation, transfer learning, and dataset
+    distillation have made such transfers more efficient, yet they remain fundamentally data-driven: a
+    teacher must produce examples, logits, or gradients for a student to learn. In this work, we introduce
+    Model-to-Model Knowledge Transmission (M2KT), a novel paradigm for data-free conceptual transfer between
+    neural networks. M2KT enables models to exchange knowledge packets that encapsulate structured concept
+    embeddings, abstraction graphs, reasoning traces, and provenance metadata. Unlike classical distillation,
+    M2KT operates primarily in concept space rather than example space, and it does not require labeled
+    datasets or teacher-generated outputs during transfer. We formalize the notion of concept manifolds,
+    introduce an inter-model alignment mapping between teacher and student latent spaces, and derive a
+    composite loss that enforces geometric, structural, and reasoning consistency together with explicit
+    safety constraints. We further present algorithmic procedures for teacher-side packet generation and
+    student-side ingestion and verification. Experiments on symbolic reasoning with large language models
+    show that M2KT can achieve approximately 85 to 90 percent of teacher performance while reducing data
+    usage by over 98 percent compared to standard knowledge distillation. This work establishes a theoretical
+    and practical foundation for data-free AI-to-AI knowledge transfer and self-improving model ecosystems.'
+  url: https://arxiv.org/abs/2511.17638
+  pdf_url: https://arxiv.org/pdf/2511.17638v1
+  version: v1
+fetched: '2026-11-14'

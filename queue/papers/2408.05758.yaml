@@ -1,0 +1,51 @@
+id: paper:arxiv:2408.05758
+status: skipped
+score: 0
+track: audio_coding
+matched: []
+meta:
+  title: 'VQ-CTAP: Cross-Modal Fine-Grained Sequence Representation Learning for Speech Processing'
+  authors:
+  - Chunyu Qiang
+  - Wang Geng
+  - Yi Zhao
+  - Ruibo Fu
+  - Tao Wang
+  - Cheng Gong
+  - Tianrui Wang
+  - Qiuyu Liu
+  - Jiangyan Yi
+  - Zhengqi Wen
+  - Chen Zhang
+  - Hao Che
+  - Longbiao Wang
+  - Jianwu Dang
+  - Jianhua Tao
+  published: '2024-08-11'
+  updated: '2025-05-28'
+  categories:
+  - eess.AS
+  - cs.AI
+  - cs.CL
+  - cs.SD
+  abstract: Deep learning has brought significant improvements to the field of cross-modal representation
+    learning. For tasks such as text-to-speech (TTS), voice conversion (VC), and automatic speech recognition
+    (ASR), a cross-modal fine-grained (frame-level) sequence representation is desired, emphasizing the
+    semantic content of the text modality while de-emphasizing the paralinguistic information of the speech
+    modality. We propose a method called "Vector Quantized Contrastive Token-Acoustic Pre-training (VQ-CTAP)",
+    which uses the cross-modal aligned sequence transcoder to bring text and speech into a joint multimodal
+    space, learning how to connect text and speech at the frame level. The proposed VQ-CTAP is a paradigm
+    for cross-modal sequence representation learning, offering a promising solution for fine-grained generation
+    and recognition tasks in speech processing. The VQ-CTAP can be directly applied to VC and ASR tasks
+    without fine-tuning or additional structures. We propose a sequence-aware semantic connector, which
+    connects multiple frozen pre-trained modules for the TTS task, exhibiting a plug-and-play capability.
+    We design a stepping optimization strategy to ensure effective model convergence by gradually injecting
+    and adjusting the influence of various loss components. Furthermore, we propose a semantic-transfer-wise
+    paralinguistic consistency loss to enhance representational capabilities, allowing the model to better
+    generalize to unseen data and capture the nuances of paralinguistic information. In addition, VQ-CTAP
+    achieves high-compression speech coding at a rate of 25Hz from 24kHz input waveforms, which is a 960-fold
+    reduction in the sampling rate. The audio demo is available at https://qiangchunyu.github.io/VQCTAP/
+  url: https://arxiv.org/abs/2408.05758
+  pdf_url: https://arxiv.org/pdf/2408.05758v2
+  version: v2
+fetched: '2026-11-14'

@@ -1,0 +1,41 @@
+id: paper:arxiv:2410.06149
+status: skipped
+score: 0
+track: video_image_coding
+matched: []
+meta:
+  title: 'Toward Scalable Image Feature Compression: A Content-Adaptive and Diffusion-Based Approach'
+  authors:
+  - Sha Guo
+  - Zhuo Chen
+  - Yang Zhao
+  - Ning Zhang
+  - Xiaotong Li
+  - Lingyu Duan
+  published: '2024-10-08'
+  updated: '2024-10-08'
+  categories:
+  - cs.CV
+  - cs.MM
+  - eess.IV
+  abstract: Traditional image codecs emphasize signal fidelity and human perception, often at the expense
+    of machine vision tasks. Deep learning methods have demonstrated promising coding performance by utilizing
+    rich semantic embeddings optimized for both human and machine vision. However, these compact embeddings
+    struggle to capture fine details such as contours and textures, resulting in imperfect reconstructions.
+    Furthermore, existing learning-based codecs lack scalability. To address these limitations, this paper
+    introduces a content-adaptive diffusion model for scalable image compression. The proposed method
+    encodes fine textures through a diffusion process, enhancing perceptual quality while preserving essential
+    features for machine vision tasks. The approach employs a Markov palette diffusion model combined
+    with widely used feature extractors and image generators, enabling efficient data compression. By
+    leveraging collaborative texture-semantic feature extraction and pseudo-label generation, the method
+    accurately captures texture information. A content-adaptive Markov palette diffusion model is then
+    applied to represent both low-level textures and high-level semantic content in a scalable manner.
+    This framework offers flexible control over compression ratios by selecting intermediate diffusion
+    states, eliminating the need for retraining deep learning models at different operating points. Extensive
+    experiments demonstrate the effectiveness of the proposed framework in both image reconstruction and
+    downstream machine vision tasks such as object detection, segmentation, and facial landmark detection,
+    achieving superior perceptual quality compared to state-of-the-art methods.
+  url: https://arxiv.org/abs/2410.06149
+  pdf_url: https://arxiv.org/pdf/2410.06149v1
+  version: v1
+fetched: '2026-11-14'

@@ -1,0 +1,53 @@
+id: paper:arxiv:2502.15188
+status: skipped_low_citation
+score: 4
+track: video_image_coding
+matched:
+- ref: metric:SSIM
+  count: 3
+  weight: 1
+- ref: dataset:Kodak
+  count: 1
+  weight: 1
+- ref: metric:MS-SSIM
+  count: 1
+  weight: 1
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+meta:
+  title: Interleaved Block-based Learned Image Compression with Feature Enhancement and Quantization Error
+    Compensation
+  authors:
+  - Shiqi Jiang
+  - Hui Yuan
+  - Shuai Li
+  - Raouf Hamzaoui
+  - Xu Wang
+  - Junyan Huo
+  published: '2025-02-21'
+  updated: '2025-02-21'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: In recent years, learned image compression (LIC) methods have achieved significant performance
+    improvements. However, obtaining a more compact latent representation and reducing the impact of quantization
+    errors remain key challenges in the field of LIC. To address these challenges, we propose a feature
+    extraction module, a feature refinement module, and a feature enhancement module. Our feature extraction
+    module shuffles the pixels in the image, splits the resulting image into sub-images, and extracts
+    coarse features from the sub-images. Our feature refinement module stacks the coarse features and
+    uses an attention refinement block composed of concatenated three-dimensional convolution residual
+    blocks to learn more compact latent features by exploiting correlations across channels, within sub-images
+    (intra-sub-image correlations), and across sub-images (inter-sub-image correlations). Our feature
+    enhancement module reduces information loss in the decoded features following quantization. We also
+    propose a quantization error compensation module that mitigates the quantization mismatch between
+    training and testing. Our four modules can be readily integrated into state-of-the-art LIC methods.
+    Experiments show that combining our modules with Tiny-LIC outperforms existing LIC methods and image
+    compression standards in terms of peak signal-to-noise ratio (PSNR) and multi-scale structural similarity
+    (MS-SSIM) on the Kodak dataset and the CLIC dataset.
+  url: https://arxiv.org/abs/2502.15188
+  pdf_url: https://arxiv.org/pdf/2502.15188v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 0
+citation_year: 2025

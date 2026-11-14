@@ -1,0 +1,35 @@
+id: paper:arxiv:2604.23665
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'HAC: Parameter-Efficient Hyperbolic Adaptation of CLIP for Zero-Shot VQA'
+  authors:
+  - Francesco Dibitonto
+  - Cigdem Beyan
+  - Vittorio Murino
+  published: '2026-04-26'
+  updated: '2026-04-26'
+  categories:
+  - cs.CV
+  abstract: Recent advances in representation learning have shown that hyperbolic geometry can offer a
+    more expressive alternative to the Euclidean embeddings used in CLIP models, capturing hierarchical
+    structures and leading to better-organized representations. However, current hyperbolic CLIP variants
+    are trained entirely from scratch, which is computationally expensive and resource-intensive. In this
+    work, we propose HAC (Hyperbolic Adaptation of CLIP), a parameter-efficient framework that enables
+    pretrained CLIP models to transition into hyperbolic space via lightweight fine-tuning. We apply HAC
+    to Visual Question Answering (VQA), where models must interpret visual elements and align them with
+    textual queries. Notably, HAC's training is performed on a dataset with no overlap with any VQA benchmark,
+    resulting in a strict zero-shot evaluation paradigm that underscores HAC's task-agnostic adaptability.
+    We evaluate HAC across a diverse suite of VQA benchmarks spanning General, Reasoning, and OCR categories.
+    Both HAC-S (small) and HAC-B (medium) consistently surpass Euclidean baselines and prior hyperbolic
+    approaches, with HAC-B delivering up to a +1.9 point average improvement over CLIP-B on reasoning-intensive
+    tasks. Our code is available at https://github.com/fdibiton/HAC
+  url: https://arxiv.org/abs/2604.23665
+  pdf_url: https://arxiv.org/pdf/2604.23665v1
+  version: v1
+fetched: '2026-11-14'

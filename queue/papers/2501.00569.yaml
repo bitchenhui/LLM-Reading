@@ -1,0 +1,41 @@
+id: paper:arxiv:2501.00569
+status: pending
+score: 2
+track: self_improvement
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+- ref: concept:SelfImprovement
+  count: 1
+  weight: 1
+meta:
+  title: Probing Visual Language Priors in VLMs
+  authors:
+  - Tiange Luo
+  - Ang Cao
+  - Gunhee Lee
+  - Justin Johnson
+  - Honglak Lee
+  published: '2024-12-31'
+  updated: '2025-04-12'
+  categories:
+  - cs.CV
+  - cs.LG
+  abstract: 'Despite recent advances in Vision-Language Models (VLMs), they may over-rely on visual language
+    priors existing in their training data rather than true visual reasoning. To investigate this, we
+    introduce ViLP, a benchmark featuring deliberately out-of-distribution images synthesized via image
+    generation models and out-of-distribution Q&A pairs. Each question in ViLP is coupled with three potential
+    answers and three corresponding images: one that can be resolved by text priors alone and two that
+    demand visual reasoning. Although, humans achieve near-perfect accuracy, modern VLMs falter; for instance,
+    GPT-4 achieves only 66.17% on ViLP. To alleviate this, we propose a self-improving framework in which
+    models generate new VQA data, then apply pixel-level and semantic corruptions to form "good-bad" image
+    pairs for self-training. Our training objectives compel VLMs to focus more on the actual visual inputs,
+    and we demonstrate their effectiveness in boosting the performance of open-source VLMs, including
+    LLaVA-v1.5 and Cambrian.'
+  url: https://arxiv.org/abs/2501.00569
+  pdf_url: https://arxiv.org/pdf/2501.00569v4
+  version: v4
+fetched: '2026-11-14'
+citation_count: 55
+citation_year: 2024

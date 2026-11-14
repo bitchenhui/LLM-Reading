@@ -1,0 +1,48 @@
+id: paper:arxiv:2604.03117
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'Revealing Physical-World Semantic Vulnerabilities: Universal Adversarial Patch for Infrared
+    Vision-Language Models'
+  authors:
+  - Chengyin Hu
+  - Yuxian Dong
+  - Yikun Guo
+  - Xiang Chen
+  - Qike Zhang
+  - Junqi Wu
+  - Jiahuan Long
+  - Jiujiang Guo
+  - Yiwei Wei
+  - Tingsong Jiang
+  - Wen Yao
+  published: '2026-04-03'
+  updated: '2026-07-18'
+  categories:
+  - cs.CV
+  abstract: 'Infrared vision-language models (IR-VLMs) are becoming important for semantic perception
+    in low-visibility environments, yet their robustness to physical semantic attacks remains underexplored.
+    Existing adversarial patch methods are mainly designed for red-green-blue (RGB) images or closed-set
+    infrared detectors and do not directly address open-ended IR-VLM tasks, where one deployable artifact
+    can affect classification, captioning, and visual question answering (VQA) simultaneously. We propose
+    Universal Curved-Grid Patch, abbreviated UCGP, a universal physical adversarial patch framework tailored
+    to IR-VLMs. UCGP represents the patch as a deployable low-frequency curved grid and optimizes it with
+    a representation-driven objective over subspace departure, topology disruption, and local appearance
+    regularization. Meta Differential Evolution (MetaDE) searches for patch parameters with two physical
+    robustness augmentations: Expectation over Transformation (EOT) capture sampling for imaging variations
+    and thin-plate spline (TPS) patch-deformation modeling for non-rigid local shape changes. Rather than
+    manipulating labels or prompts, UCGP disrupts the clean-category manifold in visual representation
+    space, which later appears as degraded cross-modal outputs. Experiments show that a single shared
+    patch degrades classification, captioning, and VQA across diverse IR-VLM architectures while retaining
+    measurable cross-model transfer, cross-dataset generalization, cross-category extensibility, and real-scene
+    physical effectiveness under the evaluated conditions. These results reveal a robustness blind spot
+    in current infrared multimodal systems. Code and reproducibility assets are available at https://github.com/dyx6663/UCGP.'
+  url: https://arxiv.org/abs/2604.03117
+  pdf_url: https://arxiv.org/pdf/2604.03117v2
+  version: v2
+fetched: '2026-11-14'

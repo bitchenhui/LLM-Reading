@@ -1,0 +1,49 @@
+id: paper:arxiv:2604.20136
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'IMPACT-CYCLE: A Contract-Based Multi-Agent System for Claim-Level Supervisory Correction of
+    Long-Video Semantic Memory'
+  authors:
+  - Weitong Kong
+  - Di Wen
+  - Kunyu Peng
+  - David Schneider
+  - Zeyun Zhong
+  - Alexander Jaus
+  - Zdravko Marinov
+  - Jiale Wei
+  - Ruiping Liu
+  - Junwei Zheng
+  - Yufan Chen
+  - Lei Qi
+  - Rainer Stiefelhagen
+  published: '2026-04-22'
+  updated: '2026-04-22'
+  categories:
+  - cs.CV
+  - cs.AI
+  abstract: 'Correcting errors in long-video understanding is disproportionately costly: existing multimodal
+    pipelines produce opaque, end-to-end outputs that expose no intermediate state for inspection, forcing
+    annotators to revisit raw video and reconstruct temporal logic from scratch. The core bottleneck is
+    not generation quality alone, but the absence of a supervisory interface through which human effort
+    can be proportional to the scope of each error. We present IMPACT-CYCLE, a supervisory multi-agent
+    system that reformulates long-video understanding as iterative claim-level maintenance of a shared
+    semantic memory -- a structured, versioned state encoding typed claims, a claim dependency graph,
+    and a provenance log. Role-specialized agents operating under explicit authority contracts decompose
+    verification into local object-relation correctness, cross-temporal consistency, and global semantic
+    coherence, with corrections confined to structurally dependent claims. When automated evidence is
+    insufficient, the system escalates to human arbitration as the supervisory authority with final override
+    rights; dependency-closure re-verification then ensures correction cost remains proportional to error
+    scope. Experiments on VidOR show substantially improved downstream reasoning (VQA: 0.71 to 0.79) and
+    a 4.8x reduction in human arbitration cost, with workload significantly lower than manual annotation.
+    Code will be released at https://github.com/MKong17/IMPACT_CYCLE.'
+  url: https://arxiv.org/abs/2604.20136
+  pdf_url: https://arxiv.org/pdf/2604.20136v1
+  version: v1
+fetched: '2026-11-14'

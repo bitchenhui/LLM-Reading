@@ -1,0 +1,34 @@
+id: paper:arxiv:2601.17517
+status: skipped
+score: 0
+track: audio_coding
+matched: []
+meta:
+  title: 'EuleroDec: A Complex-Valued RVQ-VAE for Efficient and Robust Audio Coding'
+  authors:
+  - Luca Cerovaz
+  - Michele Mancusi
+  - Emanuele Rodolà
+  published: '2026-01-24'
+  updated: '2026-01-27'
+  categories:
+  - cs.SD
+  - cs.LG
+  - eess.AS
+  abstract: Audio codecs power discrete music generative modelling, music streaming and immersive media
+    by shrinking PCM audio to bandwidth-friendly bit-rates. Recent works have gravitated towards processing
+    in the spectral domain; however, spectrogram-domains typically struggle with phase modeling which
+    is naturally complex-valued. Most frequency-domain neural codecs either disregard phase information
+    or encode it as two separate real-valued channels, limiting spatial fidelity. This entails the need
+    to introduce adversarial discriminators at the expense of convergence speed and training stability
+    to compensate for the inadequate representation power of the audio signal. In this work we introduce
+    an end-to-end complex-valued RVQ-VAE audio codec that preserves magnitude-phase coupling across the
+    entire analysis-quantization-synthesis pipeline and removes adversarial discriminators and diffusion
+    post-filters. Without GANs or diffusion we match or surpass much longer-trained baselines in-domain
+    and reach SOTA out-of-domain performance. Compared to standard baselines that train for hundreds of
+    thousands of steps, our model reducing training budget by an order of magnitude is markedly more compute-efficient
+    while preserving high perceptual quality.
+  url: https://arxiv.org/abs/2601.17517
+  pdf_url: https://arxiv.org/pdf/2601.17517v2
+  version: v2
+fetched: '2026-11-14'

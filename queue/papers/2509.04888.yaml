@@ -1,0 +1,43 @@
+id: paper:arxiv:2509.04888
+status: skipped
+score: 1
+track: video_image_coding
+matched:
+- ref: concept:INR
+  count: 2
+  weight: 1
+meta:
+  title: INR meets Multi-Contrast MRI Reconstruction
+  authors:
+  - Natascha Niessen
+  - Carolin M. Pirkl
+  - Ana Beatriz Solana
+  - Hannah Eichhorn
+  - Veronika Spieker
+  - Wenqi Huang
+  - Tim Sprenger
+  - Marion I. Menzel
+  - Julia A. Schnabel
+  published: '2025-09-05'
+  updated: '2025-09-05'
+  categories:
+  - eess.IV
+  abstract: Multi-contrast MRI sequences allow for the acquisition of images with varying tissue contrast
+    within a single scan. The resulting multi-contrast images can be used to extract quantitative information
+    on tissue microstructure. To make such multi-contrast sequences feasible for clinical routine, the
+    usually very long scan times need to be shortened e.g. through undersampling in k-space. However,
+    this comes with challenges for the reconstruction. In general, advanced reconstruction techniques
+    such as compressed sensing or deep learning-based approaches can enable the acquisition of high-quality
+    images despite the acceleration. In this work, we leverage redundant anatomical information of multi-contrast
+    sequences to achieve even higher acceleration rates. We use undersampling patterns that capture the
+    contrast information located at the k-space center, while performing complementary undersampling across
+    contrasts for high frequencies. To reconstruct this highly sparse k-space data, we propose an implicit
+    neural representation (INR) network that is ideal for using the complementary information acquired
+    across contrasts as it jointly reconstructs all contrast images. We demonstrate the benefits of our
+    proposed INR method by applying it to multi-contrast MRI using the MPnRAGE sequence, where it outperforms
+    the state-of-the-art parallel imaging compressed sensing (PICS) reconstruction method, even at higher
+    acceleration factors.
+  url: https://arxiv.org/abs/2509.04888
+  pdf_url: https://arxiv.org/pdf/2509.04888v1
+  version: v1
+fetched: '2026-11-14'

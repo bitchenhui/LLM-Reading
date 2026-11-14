@@ -1,0 +1,37 @@
+id: paper:arxiv:2607.22752
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 2
+  weight: 1
+meta:
+  title: 'Beyond Error-vs-Discard Characteristic: Toward Stable and Reliable Evaluation for Face Image
+    Quality Assessment'
+  authors:
+  - Bhavesh Wani
+  - Žiga Babnik
+  - Vitomir Štruc
+  - Philipp Terhörst
+  published: '2026-07-23'
+  updated: '2026-07-23'
+  categories:
+  - cs.CV
+  - cs.LG
+  abstract: 'Face Image Quality Assessment (FIQA) aims to estimate the utility of facial images for reliable
+    recognition. The evaluation of FIQA methods is predominantly based on the Error-versus-Discard Characteristic
+    (EDC), which evaluates performance by progressively discarding low-quality samples and measuring recognition
+    error on the retained subset. In this work, we demonstrate that the widely used EDC protocol has fundamental
+    limitations: Test-Set Divergence and Threshold Drift, which together limit the reliability and comparability
+    of FIQA methods. To address this, we propose discard-based EDC variants and a rank-based Rank Consistency
+    Evaluation (RCE) metric that operates on the entire test set without discarding samples, using a fixed
+    decision threshold. Extensive experiments on five datasets, four face recognition models, and 15 state-of-the-art
+    FIQA methods demonstrate both the limitations of EDC and the effectiveness of the proposed approaches
+    in enabling a more reliable and comparable evaluation. Despite evaluated on face images only, the
+    limitations arise from the EDC protocol rather than the biometric modality, suggesting a broader applicability
+    to biometric quality assessment in general.'
+  url: https://arxiv.org/abs/2607.22752
+  pdf_url: https://arxiv.org/pdf/2607.22752v1
+  version: v1
+fetched: '2026-11-14'

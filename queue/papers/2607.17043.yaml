@@ -1,0 +1,38 @@
+id: paper:arxiv:2607.17043
+status: skipped
+score: 1
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 1
+  weight: 1
+meta:
+  title: Learning from Synthetic Data without Model Collapse in Iterative Instruction Tuning
+  authors:
+  - Xiaonan Luo
+  - Yue Huang
+  - Kehan Guo
+  - Ping He
+  - Chuan Zou
+  - Ting Hua
+  - Xiangliang Zhang
+  published: '2026-07-19'
+  updated: '2026-07-19'
+  categories:
+  - cs.CL
+  abstract: 'Model collapse is a central challenge in learning from synthetic data: as later-generation
+    large language models (LLMs) are trained on an increasing proportion of model-generated data, performance
+    can degrade due to narrowed coverage and accumulated bias. Existing work mainly studies how to bound
+    this degradation. In iterative model evolution, however, the more meaningful objective is to ensure
+    that each successive model improves over its predecessor, which requires diagnosing collapse at a
+    granularity that is actionable for data curation. We study this problem in synthetic data self-improving
+    for instruction tuning. We show that collapse in this setting is not simply uniform performance degradation,
+    but can appear as a polarization of competence, where synthetic training reinforces already strong
+    skills while further degrading weak ones. Motivated by this observation, we propose KITE (Knowledge-boundary
+    Instruction Tuning via Exploration), a two-stage framework that combines failure-guided data generation
+    with boundary-aware uncertainty curation. Experiments across several datasets and multiple open-source
+    LLMs show that KITE yields more stable improvement than strong synthetic-data baselines.'
+  url: https://arxiv.org/abs/2607.17043
+  pdf_url: https://arxiv.org/pdf/2607.17043v1
+  version: v1
+fetched: '2026-11-14'

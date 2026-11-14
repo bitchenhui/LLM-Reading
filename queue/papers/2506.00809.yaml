@@ -1,0 +1,33 @@
+id: paper:arxiv:2506.00809
+status: skipped
+score: 1
+track: audio_coding
+matched:
+- ref: concept:NeuralAudioCodec
+  count: 1
+  weight: 1
+meta:
+  title: 'FUSE: Universal Speech Enhancement using Multi-Stage Fusion of Sparse Compression and Token
+    Generation Models for the URGENT 2025 Challenge'
+  authors:
+  - Nabarun Goswami
+  - Tatsuya Harada
+  published: '2025-06-01'
+  updated: '2025-06-01'
+  categories:
+  - cs.SD
+  - eess.AS
+  abstract: We propose a multi-stage framework for universal speech enhancement, designed for the Interspeech
+    2025 URGENT Challenge. Our system first employs a Sparse Compression Network to robustly separate
+    sources and extract an initial clean speech estimate from noisy inputs. This is followed by an efficient
+    generative model that refines speech quality by leveraging self-supervised features and optimizing
+    a masked language modeling objective on acoustic tokens derived from a neural audio codec. In the
+    final stage, a fusion network integrates the outputs of the first two stages with the original noisy
+    signal, achieving a balanced improvement in both signal fidelity and perceptual quality. Additionally,
+    a shift trick that aggregates multiple time-shifted predictions, along with output blending, further
+    boosts performance. Experimental results on challenging multilingual datasets with variable sampling
+    rates and diverse distortion types validate the effectiveness of our approach.
+  url: https://arxiv.org/abs/2506.00809
+  pdf_url: https://arxiv.org/pdf/2506.00809v1
+  version: v1
+fetched: '2026-11-14'

@@ -1,0 +1,42 @@
+id: paper:arxiv:2605.22192
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 3
+  weight: 1
+meta:
+  title: Ultra-High-Definition Image Quality Assessment via Graph Representation Learning
+  authors:
+  - Shaode Yu
+  - Enqi Chen
+  - Ming Huang
+  - Xuemin Ren
+  - Songnan Zhao
+  - Zhicheng Zhang
+  - Qiurui Sun
+  published: '2026-05-21'
+  updated: '2026-05-21'
+  categories:
+  - cs.CV
+  abstract: Blind image quality assessment (BIQA) for ultrahighdefinition (UHD) images remains challenging
+    because native-resolution inference is computationally expensive, whereas aggressive resizing or isolated
+    cropping may suppress scale-sensitive distortions and weaken the relationship between local artifacts
+    and global scene context. This paper aims to improve UHD-BIQA by explicitly modeling the structural
+    dependencies among sampled image regions rather than treating them as independent views, and a graph
+    representation learning framework UHD-GCN-BIQA is proposed. The framework samples aspect-ratio-aligned
+    patches from each UHD image, encodes them as graph nodes, and constructs a hybrid k-nearest-neighbor
+    graph using spatial proximity and feature similarity. Residual graph convolution is used to propagate
+    contextual information across regions, and gated attention pooling aggregates patchlevel evidence
+    into an imagelevel quality prediction. An exponential moving average normalized multiobjective loss
+    function is adopted to stabilize the joint optimization of regression, correlation, and ranking objectives.
+    Experiments on the UHD-IQA benchmark show that UHD-GCN-BIQA achieves PLCC = 0.7784, SRCC = 0.8019,
+    and RMSE = 0.0519, obtaining competitive correlation performance and the lowest RMSE among the compared
+    methods. These results indicate that graph-based region relation modeling is effective for UHD image
+    quality assessment, particularly for improving absolute quality score estimation under high-resolution
+    visual content.
+  url: https://arxiv.org/abs/2605.22192
+  pdf_url: https://arxiv.org/pdf/2605.22192v1
+  version: v1
+fetched: '2026-11-14'

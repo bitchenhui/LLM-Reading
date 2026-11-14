@@ -1,0 +1,34 @@
+id: paper:arxiv:2606.02463
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'MASER: Modality-Adaptive Specialist Routing for Embodied 3D Spatial Intelligence'
+  authors:
+  - Hilton Raj
+  - Vishnuram AV
+  published: '2026-06-01'
+  updated: '2026-06-01'
+  categories:
+  - cs.CV
+  - cs.AI
+  abstract: In 3D environments, Embodied Agents answer spatially relevant questions through reasoning
+    from a mixture of modalities including natural language, RGB images, point clouds, depth maps and
+    camera poses. Existing Vision-Language models (VLMs) are fine-tuned over a single modality. This completely
+    ignores the question semantics which may favor a different modality than the finetuned modality. To
+    address this, we propose MASER (Modality-Adaptive SpEcialist Routing), a lightweight framework that
+    trains five different modality adapters of a shared VLM backbone and learns a neural routing policy
+    that selects the best adapter based on the question during inference. We encode each question with
+    a frozen sentence transformer and pass the embedding through a small Multi-layer Perceptron (MLP)
+    trained on oracle adapter-accuracy labels. We evaluate our methodology over the Open3D-VQA benchmark
+    and our evaluations show that no single modality is universally optimal -- point-cloud answers are
+    best in 51.5% of cases. MASER routes with 51.3% oracle agreement, outperforming a Random-Forest ablation
+    (43.5%), with only a single adapter call per question.
+  url: https://arxiv.org/abs/2606.02463
+  pdf_url: https://arxiv.org/pdf/2606.02463v1
+  version: v1
+fetched: '2026-11-14'

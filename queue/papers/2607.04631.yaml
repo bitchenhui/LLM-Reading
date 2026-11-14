@@ -1,0 +1,49 @@
+id: paper:arxiv:2607.04631
+status: pending
+score: 5
+track: self_improvement
+matched:
+- ref: codec:Opus
+  count: 1
+  weight: 3
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: 'Formal Disco: Scalable Open-Ended Generation of Formally Verified Programs'
+  authors:
+  - Gabriel Poesia
+  - Simon Henniger
+  - Tzu-Han Hsu
+  - Yilun Du
+  - Nada Amin
+  published: '2026-07-06'
+  updated: '2026-07-06'
+  categories:
+  - cs.AI
+  abstract: 'The cost of producing code is rapidly diminishing with increasingly capable AI agents, while
+    quality assurance of generated programs has not kept pace. Formal verification provides the strongest
+    possible guarantees, but the ability of AI models to work with verification-aware languages is hindered
+    by the scarcity of human-written examples of programs in those languages. To tackle this prevalent
+    data scarcity issue, we propose Formal Disco: a distributed system for coordination of LLM-based workers
+    that can be easily applied to open-ended synthetic data generation at scale. We use Formal Disco to
+    share tasks and programs between three classes of workers: "initiators", which read random READMEs
+    from open-source repositories and documentation snippets to sketch a related verified program, "fixers"
+    which take compiler and verifier feedback and attempt to resolve issues, and "extenders" that take
+    working programs and propose patches to expand them. Formal Disco records all agent-generated traces
+    and uses them both for initial distillation from a stronger model as well as self-improvement. We
+    also propose a principle of maximum entropy for synthetic program generation, and use entropy maximization
+    via iterative supervised fine-tuning to learn to generate increasingly diverse programs over time.
+    We release large datasets of synthetic verified programs in three languages - Dafny, Verus, and Frama-C
+    -, and fine-tune open models for verification-relevant tasks, often matching or exceeding the performance
+    of Claude Opus 4.5. Overall, our work offers a path to create synthetic data at scale for formal reasoning
+    domains and overcome the long-standing data barrier.'
+  url: https://arxiv.org/abs/2607.04631
+  pdf_url: https://arxiv.org/pdf/2607.04631v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 1
+citation_year: 2026

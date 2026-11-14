@@ -1,0 +1,45 @@
+id: paper:arxiv:2401.08194
+status: skipped_low_citation
+score: 5
+track: video_image_coding
+matched:
+- ref: codec:VVC
+  count: 2
+  weight: 3
+- ref: metric:MS-SSIM
+  count: 1
+  weight: 1
+- ref: metric:SSIM
+  count: 1
+  weight: 1
+meta:
+  title: End-to-End Optimized Image Compression with the Frequency-Oriented Transform
+  authors:
+  - Yuefeng Zhang
+  - Kai Lin
+  published: '2024-01-16'
+  updated: '2024-01-16'
+  categories:
+  - cs.CV
+  - cs.AI
+  - cs.MM
+  abstract: 'Image compression constitutes a significant challenge amidst the era of information explosion.
+    Recent studies employing deep learning methods have demonstrated the superior performance of learning-based
+    image compression methods over traditional codecs. However, an inherent challenge associated with
+    these methods lies in their lack of interpretability. Following an analysis of the varying degrees
+    of compression degradation across different frequency bands, we propose the end-to-end optimized image
+    compression model facilitated by the frequency-oriented transform. The proposed end-to-end image compression
+    model consists of four components: spatial sampling, frequency-oriented transform, entropy estimation,
+    and frequency-aware fusion. The frequency-oriented transform separates the original image signal into
+    distinct frequency bands, aligning with the human-interpretable concept. Leveraging the non-overlapping
+    hypothesis, the model enables scalable coding through the selective transmission of arbitrary frequency
+    components. Extensive experiments are conducted to demonstrate that our model outperforms all traditional
+    codecs including next-generation standard H.266/VVC on MS-SSIM metric. Moreover, visual analysis tasks
+    (i.e., object detection and semantic segmentation) are conducted to verify the proposed compression
+    method could preserve semantic fidelity besides signal-level precision.'
+  url: https://arxiv.org/abs/2401.08194
+  pdf_url: https://arxiv.org/pdf/2401.08194v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 7
+citation_year: 2024

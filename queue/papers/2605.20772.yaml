@@ -1,0 +1,40 @@
+id: paper:arxiv:2605.20772
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'VIHD: Visual Intervention-based Hallucination Detection for Medical Visual Question Answering'
+  authors:
+  - Jiayi Chen
+  - Benteng Ma
+  - Zehui Liao
+  - Winston Chong
+  - Yasmeen George
+  - Jianfei Cai
+  published: '2026-05-20'
+  updated: '2026-05-25'
+  categories:
+  - cs.CV
+  abstract: While medical Multimodal Large Language Models (MLLMs) have shown promise in assisting diagnosis,
+    they still frequently generate hallucinated responses that appear linguistically plausible but lack
+    visual evidence. Such hallucinations pose risks to clinical decision-making and necessitate effective
+    detection. Existing introspective detection methods primarily perform uncertainty estimation or logical
+    verification by analyzing model responses conditioned on original or perturbed inputs. However, such
+    external perturbations are often heuristic and context-agnostic, which overlooks the internal cross-modal
+    dependency between generated tokens and related visual tokens during decoding. To address this issue,
+    we propose VIHD, a Visual Intervention-based Hallucination Detection method that leverages targeted
+    visual token masking to calibrate semantic entropy for more effective hallucination detection. VIHD
+    locates visually dominant decoder layers via Visual Dependency Probing (VDP), executes Visual Intervention
+    Decoding (VID) via token masking to calibrate the semantic distribution, and quantifies the resulting
+    Calibrated Semantic Entropy (CSE) as a reliable hallucination signal. Extensive experiments on three
+    medical VQA benchmarks with two medical MLLMs demonstrate that VIHD consistently outperforms state-of-the-art
+    methods, underscoring the importance of fine-grained visual dependency for hallucination detection.
+    The code will be available at https://github.com/Jiayi-Chen-AU/VIHD
+  url: https://arxiv.org/abs/2605.20772
+  pdf_url: https://arxiv.org/pdf/2605.20772v2
+  version: v2
+fetched: '2026-11-14'

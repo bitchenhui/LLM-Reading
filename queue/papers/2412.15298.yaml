@@ -1,0 +1,44 @@
+id: paper:arxiv:2412.15298
+status: pending
+score: 2
+track: self_improvement
+matched:
+- ref: concept:LLM
+  count: 2
+  weight: 1
+- ref: concept:SelfImprovement
+  count: 1
+  weight: 1
+meta:
+  title: A Comparative Study of DSPy Teleprompter Algorithms for Aligning Large Language Models Evaluation
+    Metrics to Human Evaluation
+  authors:
+  - Bhaskarjit Sarmah
+  - Kriti Dutta
+  - Anna Grigoryan
+  - Sachin Tiwari
+  - Stefano Pasquali
+  - Dhagash Mehta
+  published: '2024-12-19'
+  updated: '2024-12-19'
+  categories:
+  - cs.CL
+  - cs.AI
+  - cs.LG
+  - q-fin.ST
+  - stat.ME
+  abstract: We argue that the Declarative Self-improving Python (DSPy) optimizers are a way to align the
+    large language model (LLM) prompts and their evaluations to the human annotations. We present a comparative
+    analysis of five teleprompter algorithms, namely, Cooperative Prompt Optimization (COPRO), Multi-Stage
+    Instruction Prompt Optimization (MIPRO), BootstrapFewShot, BootstrapFewShot with Optuna, and K-Nearest
+    Neighbor Few Shot, within the DSPy framework with respect to their ability to align with human evaluations.
+    As a concrete example, we focus on optimizing the prompt to align hallucination detection (using LLM
+    as a judge) to human annotated ground truth labels for a publicly available benchmark dataset. Our
+    experiments demonstrate that optimized prompts can outperform various benchmark methods to detect
+    hallucination, and certain telemprompters outperform the others in at least these experiments.
+  url: https://arxiv.org/abs/2412.15298
+  pdf_url: https://arxiv.org/pdf/2412.15298v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 10
+citation_year: 2024

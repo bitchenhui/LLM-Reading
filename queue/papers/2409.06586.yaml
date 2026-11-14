@@ -1,0 +1,32 @@
+id: paper:arxiv:2409.06586
+status: skipped
+score: 1
+track: video_image_coding
+matched:
+- ref: metric:SSIM
+  count: 1
+  weight: 1
+meta:
+  title: Universal End-to-End Neural Network for Lossy Image Compression
+  authors:
+  - Bouzid Arezki
+  - Fangchen Feng
+  - Anissa Mokraoui
+  published: '2024-09-10'
+  updated: '2024-09-10'
+  categories:
+  - eess.IV
+  abstract: This paper presents variable bitrate lossy image compression using a VAE-based neural network.
+    An adaptable image quality adjustment strategy is proposed. The key innovation involves adeptly adjusting
+    the input scale exclusively during the inference process, resulting in an exceptionally efficient
+    rate-distortion mechanism. Through extensive experimentation, across diverse VAE-based compression
+    architectures (CNN, ViT) and training methodologies (MSE, SSIM), our approach exhibits remarkable
+    universality. This success is attributed to the inherent generalization capacity of neural networks.
+    Unlike methods that adjust model architecture or loss functions, our approach emphasizes simplicity,
+    reducing computational complexity and memory requirements. The experiments not only highlight the
+    effectiveness of our approach but also indicate its potential to drive advancements in variable-rate
+    neural network lossy image compression methodologies.
+  url: https://arxiv.org/abs/2409.06586
+  pdf_url: https://arxiv.org/pdf/2409.06586v1
+  version: v1
+fetched: '2026-11-14'

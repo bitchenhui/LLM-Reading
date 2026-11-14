@@ -1,0 +1,40 @@
+id: paper:arxiv:2609.29604
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'PROVE: Proof-guided Regime-aware Operator Verification for Hallucination Detection in Medical
+    Visual Question Answering'
+  authors:
+  - Keyang Zhou
+  - Siyi Li
+  - Zhongnan Shi
+  - Qichao Ying
+  - Wei Tang
+  - Zhenxing Qian
+  published: '2026-08-28'
+  updated: '2026-08-28'
+  categories:
+  - cs.CV
+  - cs.MM
+  abstract: In medical visual question answering (VQA), hallucinations of vision-language models (VLMs)
+    may lead to confident but incorrect responses, raising the risk of diagnostic errors. Existing hallucination
+    detection methods uniformly estimate the reliability of VLM outputs from response consistency or visual
+    evidence. However, such uniform verification across questions ignores question-specific characteristics,
+    resulting in missed overconfident errors and false alarms from over-verification. We present PROVE
+    (Proof-guided Regime-aware Operator Verification), a black-box detector that adapts verification strategy
+    to the evidential structure of each question. PROVE classifies questions into three verification regimes
+    based on what kind of visual proof they demand, activates a regime-specific subset of five complementary
+    operators, and adjusts operator importance per question through a lightweight calibration layer conditioned
+    on deterministic question-answer features. PROVE uses question-specific evidence to reweight operators
+    and produce a calibrated risk score. Evaluated on 8048 test samples across three medical VQA benchmarks
+    and four frontier VLMs, PROVE achieves 0.821 AUROC, outperforming the strongest baseline by +0.159,
+    with consistent gains across all models and benchmarks.
+  url: https://arxiv.org/abs/2609.29604
+  pdf_url: https://arxiv.org/pdf/2609.29604v1
+  version: v1
+fetched: '2026-11-14'

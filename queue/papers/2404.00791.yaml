@@ -1,0 +1,34 @@
+id: paper:arxiv:2404.00791
+status: skipped
+score: 0
+track: audio_coding
+matched: []
+meta:
+  title: Personalized Neural Speech Codec
+  authors:
+  - Inseon Jang
+  - Haici Yang
+  - Wootaek Lim
+  - Seungkwon Beack
+  - Minje Kim
+  published: '2024-03-31'
+  updated: '2024-03-31'
+  categories:
+  - cs.SD
+  - eess.AS
+  abstract: In this paper, we propose a personalized neural speech codec, envisioning that personalization
+    can reduce the model complexity or improve perceptual speech quality. Despite the common usage of
+    speech codecs where only a single talker is involved on each side of the communication, personalizing
+    a codec for the specific user has rarely been explored in the literature. First, we assume speakers
+    can be grouped into smaller subsets based on their perceptual similarity. Then, we also postulate
+    that a group-specific codec can focus on the group's speech characteristics to improve its perceptual
+    quality and computational efficiency. To this end, we first develop a Siamese network that learns
+    the speaker embeddings from the LibriSpeech dataset, which are then grouped into underlying speaker
+    clusters. Finally, we retrain the LPCNet-based speech codec baselines on each of the speaker clusters.
+    Subjective listening tests show that the proposed personalization scheme introduces model compression
+    while maintaining speech quality. In other words, with the same model complexity, personalized codecs
+    produce better speech quality.
+  url: https://arxiv.org/abs/2404.00791
+  pdf_url: https://arxiv.org/pdf/2404.00791v1
+  version: v1
+fetched: '2026-11-14'

@@ -1,0 +1,34 @@
+id: paper:arxiv:2407.06164
+status: skipped
+score: 2
+track: video_image_coding
+matched:
+- ref: concept:INR
+  count: 1
+  weight: 1
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+meta:
+  title: Implicit Neural Representation for Videos Based on Residual Connection
+  authors:
+  - Taiga Hayami
+  - Hiroshi Watanabe
+  published: '2024-06-15'
+  updated: '2024-06-15'
+  categories:
+  - cs.CV
+  - eess.IV
+  abstract: Video compression technology is essential for transmitting and storing videos. Many video
+    compression methods reduce information in videos by removing high-frequency components and utilizing
+    similarities between frames. Alternatively, the implicit neural representations (INRs) for videos,
+    which use networks to represent and compress videos through model compression. A conventional method
+    improves the quality of reconstruction by using frame features. However, the detailed representation
+    of the frames can be improved. To improve the quality of reconstructed frames, we propose a method
+    that uses low-resolution frames as residual connection that is considered effective for image reconstruction.
+    Experimental results show that our method outperforms the existing method, HNeRV, in PSNR for 46 of
+    the 49 videos.
+  url: https://arxiv.org/abs/2407.06164
+  pdf_url: https://arxiv.org/pdf/2407.06164v1
+  version: v1
+fetched: '2026-11-14'

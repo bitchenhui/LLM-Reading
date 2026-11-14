@@ -1,0 +1,51 @@
+id: paper:arxiv:2606.30049
+status: pending
+score: 3
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 2
+  weight: 1
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+- ref: metric:SSIM
+  count: 1
+  weight: 1
+meta:
+  title: 'Bridging the Gap Between Image Restoration and Navigational Safety in Hazy Conditions: A New
+    Visibility Estimation Metric for Maritime Surveillance'
+  authors:
+  - Wentao Feng
+  - Guobei Peng
+  - Wengang Mao
+  - Ryan Wen Liu
+  published: '2026-06-29'
+  updated: '2026-06-29'
+  categories:
+  - cs.CV
+  - cs.LG
+  abstract: Visibility distance is critical to maritime navigational safety because it determines the
+    effective observation range of shipborne and shore-based monitoring systems. Under hazy conditions,
+    degraded visual information shortens observable distance and increases navigational risks and economic
+    losses. Although numerous image dehazing methods have been developed, conventional image quality assessment
+    metrics, such as PSNR, SSIM, FSIM, FADE, and NIQE, cannot establish a physically interpretable relationship
+    between restoration quality and practical visibility thresholds. To address this limitation, this
+    work proposes a visibility-oriented evaluation framework that links dehazing performance with visible-distance
+    estimation. First, a Maritime Simulated Visibility Dataset (MSVD) is constructed using Unity3D to
+    simulate maritime traffic scenes under graded visibility conditions. The dataset provides paired hazy
+    and clear images with precise visibility annotations, enabling quantitative analysis of visibility
+    restoration. Second, a dehazing visibility evaluation metric is developed by using object detection
+    accuracy as an intermediate indicator. By establishing a mapping between visibility distance and detection
+    performance, the proposed metric converts image restoration improvements into measurable visibility
+    gains. Six representative dehazing methods are evaluated using both conventional image quality metrics
+    and the proposed visibility metric. Experimental results under different imaging conditions demonstrate
+    that MSVD provides a reliable benchmark for evaluating dehazing performance across graded visibility
+    levels, while the proposed metric enables interpretable and reliable visible-distance estimation,
+    thereby supporting the assessment of navigational safety and operational efficiency.
+  url: https://arxiv.org/abs/2606.30049
+  pdf_url: https://arxiv.org/pdf/2606.30049v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 3
+citation_year: 2026

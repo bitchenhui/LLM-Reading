@@ -1,0 +1,46 @@
+id: paper:arxiv:2407.15870
+status: skipped
+score: 0
+track: video_image_coding
+matched: []
+meta:
+  title: 'CIC: Circular Image Compression'
+  authors:
+  - Honggui Li
+  - Sinan Chen
+  - Dingtai Li
+  - Zhengyang Zhang
+  - Nahid Md Lokman Hossain
+  - Xinfeng Xu
+  - Yinlu Qin
+  - Ruobing Wang
+  - Maria Trocan
+  - Dimitri Galayko
+  - Amara Amara
+  - Mohamad Sawan
+  published: '2024-07-18'
+  updated: '2026-01-02'
+  categories:
+  - eess.IV
+  - cs.CV
+  - cs.LG
+  abstract: Learned image compression (LIC) is currently the cutting-edge method. However, the inherent
+    difference between testing and training images of LIC results in performance degradation to some extent.
+    Especially for out-of-sample, out-of-distribution, or out-of-domain testing images, the performance
+    of LIC degrades significantly. Classical LIC is a serial image compression (SIC) approach that utilizes
+    an open-loop architecture with serial encoding and decoding units. Nevertheless, according to the
+    principles of automatic control systems, a closed-loop architecture holds the potential to improve
+    the dynamic and static performance of LIC. Therefore, a circular image compression (CIC) approach
+    with closed-loop encoding and decoding elements is proposed to minimize the gap between testing and
+    training images and upgrade the capability of LIC. The proposed CIC establishes a nonlinear loop equation
+    and proves that steady-state error between reconstructed and original images is close to zero by Taylor
+    series expansion. The proposed CIC method possesses the property of Post-Training and Plug-and-Play
+    which can be built on any existing advanced SIC methods. Experimental results including rate-distortion
+    curves on five public image compression datasets demonstrate that the proposed CIC outperforms eight
+    competing state-of-the-art open-source SIC algorithms in reconstruction capacity. Experimental results
+    further show that the proposed method is suitable for out-of-sample testing images with dark backgrounds,
+    sharp edges, high contrast, grid shapes, or complex patterns.
+  url: https://arxiv.org/abs/2407.15870
+  pdf_url: https://arxiv.org/pdf/2407.15870v4
+  version: v4
+fetched: '2026-11-14'

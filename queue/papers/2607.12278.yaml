@@ -1,0 +1,39 @@
+id: paper:arxiv:2607.12278
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: Auditing Data Leakage in Whole-Slide Image Multimodal Benchmarks
+  authors:
+  - Wenhao Zhang
+  - Zhongliang Zhou
+  - John Kang
+  - Sheng Li
+  published: '2026-07-14'
+  updated: '2026-07-14'
+  categories:
+  - cs.CV
+  - cs.LG
+  abstract: 'Recent vision-language models (VLMs) for computational pathology report striking zero-shot
+    performance on whole-slide image (WSI) visual question answering (VQA) benchmarks. We audit these
+    claims and find them fundamentally compromised by data leakage at two hierarchical levels: patient-level
+    leakage, where slides from the same case appear in both training and test folds, and institutional-level
+    leakage, where different cases nonetheless share staining-batch and scanner signatures through a common
+    Tissue Source Site (TSS). By tracing canonical slide, case, and TSS identifiers across major public
+    resources, we document case level train test overlaps of 92.3~100% on TCGA-derived benchmarks, together
+    with near-complete TSS overlap. We further demonstrate that both leakage levels are linearly decodable
+    from foundation-model feature space, that they induce a measurable accuracy gap between leaked and
+    audit-clean cases on a published checkpoint, and that across multiple published WSI VLMs, peak reported
+    accuracies concentrate on the most heavily contaminated benchmarks. Therefore, the current WSI VQA
+    evaluation cannot distinguish genuine multimodal reasoning from nearest-neighbor retrieval over memorized
+    institutional and patient-specific artifacts. Finally, we outline concrete recommendations for contamination-free
+    evaluation. By addressing benchmark construction, provenance disclosure, and automated overlap auditing,
+    we aim to guide future research toward verifiable claims of progress.'
+  url: https://arxiv.org/abs/2607.12278
+  pdf_url: https://arxiv.org/pdf/2607.12278v1
+  version: v1
+fetched: '2026-11-14'

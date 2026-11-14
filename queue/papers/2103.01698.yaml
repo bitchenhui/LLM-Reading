@@ -1,0 +1,43 @@
+id: paper:arxiv:2103.01698
+status: skipped
+score: 1
+track: processing_enhancement
+matched:
+- ref: concept:SuperResolution
+  count: 1
+  weight: 1
+meta:
+  title: Super-resolving Compressed Images via Parallel and Series Integration of Artifact Reduction and
+    Resolution Enhancement
+  authors:
+  - Hongming Luo
+  - Fei Zhou
+  - Guangsen Liao
+  - Guoping Qiu
+  published: '2021-03-02'
+  updated: '2022-11-22'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: 'In real-world applications, such as sharing photos on social media platforms, images are
+    always not only sub-sampled but also heavily compressed thus often containing various artefacts. Simple
+    methods for enhancing the resolution of such images will exacerbate the artefacts, rendering them
+    visually objectionable. In spite of its high practical values, super-resolving compressed images is
+    not well studied in the literature. In this paper, we propose a novel compressed image super resolution
+    (CISR) framework based on parallel and series integration of artefacts removal and resolution enhancement.
+    Based on a mathematical inference model for estimating a clean low-resolution (LR) image and a clean
+    high-resolution (HR) image from a down-sampled and compressed observation, we have designed a CISR
+    architecture consisting of two deep neural network modules: the artefacts removal module (ARM) and
+    the resolution enhancement module (REM). The ARM and the REM work in parallel with both taking the
+    compressed LR image as their inputs, at the same time they also work in series with the REM taking
+    the output of the ARM as one of its inputs and the ARM taking the output of the REM as its other input.
+    A technique called unfolding is introduced to recursively suppress the compression artefacts and restore
+    the image resolution. A unique feature of our CISR system is that it exploits the parallel and series
+    connections between the ARM and the REM, and recursive optimization to reduce the model''s dependency
+    on specific types of degradation thus making it possible to train a single model to super-resolve
+    images compressed by different methods to different qualities. Codes and datasets are available at
+    https://github.com/luohongming/CISR_PSI.git'
+  url: https://arxiv.org/abs/2103.01698
+  pdf_url: https://arxiv.org/pdf/2103.01698v4
+  version: v4
+fetched: '2026-11-14'

@@ -1,0 +1,41 @@
+id: paper:arxiv:2606.03075
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'TGV-KV: Text-Grounded KV Eviction for Vision-Language Models'
+  authors:
+  - Jizhihui Liu
+  - Ruizi Han
+  - Miao Zhang
+  - Rui Shao
+  - Xuebo Liu
+  - Weili Guan
+  - Yaowei Wang
+  published: '2026-06-02'
+  updated: '2026-06-02'
+  categories:
+  - cs.CV
+  abstract: 'Vision-Language Models (VLMs) inherit the auto-regressive generation paradigm and cache the
+    keys and values (KV) of all previous tokens to accelerate inference, resulting in memory consumption
+    that scales linearly with context length. This issue is particularly pronounced in VLMs due to substantial
+    redundancy in the visual modality. Although KV cache eviction approaches can effectively reduce inference
+    memory, they often incur significant performance degradation in VLMs, as most are designed for language
+    models and overlook the inherent gap between text and vision. By systematically analyzing the modality
+    gap in VLMs in this work, we argue that the importance of visual information should be grounded in
+    textual guidance and accordingly propose a Text-Grounded KV Eviction method for VLMs (TGV-KV). TGV-KV
+    comprises three submodules: (1) Text-Vision Budgeting (TVB) assigns budget to each layer based on
+    the mutual information interaction. (2) Text-Weighted Ranking (TWR) assesses the priority of text
+    and ranks vision importance based on weighted text-image attention. (3) Text-Prioritised Retention
+    (TPR) policy strategically preserves text KV to avoid acute information loss. We evaluate TGV-KV across
+    five models with different sizes and architectures, showing that TGV-KV preserves 99.2% full-KV accuracy
+    on the VizWiz-VQA task with LLaVA-NeXT and boosts end-to-end throughput by 52.6% with an extreme retention
+    budget of 5%. Code is available at https://github.com/Danielement321/TGV-KV.'
+  url: https://arxiv.org/abs/2606.03075
+  pdf_url: https://arxiv.org/pdf/2606.03075v1
+  version: v1
+fetched: '2026-11-14'

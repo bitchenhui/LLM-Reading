@@ -1,0 +1,38 @@
+id: paper:arxiv:2412.09492
+status: skipped
+score: 0
+track: video_image_coding
+matched: []
+meta:
+  title: 'Video Seal: Open and Efficient Video Watermarking'
+  authors:
+  - Pierre Fernandez
+  - Hady Elsahar
+  - I. Zeki Yalniz
+  - Alexandre Mourachko
+  published: '2024-12-12'
+  updated: '2024-12-12'
+  categories:
+  - cs.MM
+  - cs.AI
+  - cs.CV
+  abstract: The proliferation of AI-generated content and sophisticated video editing tools has made it
+    both important and challenging to moderate digital platforms. Video watermarking addresses these challenges
+    by embedding imperceptible signals into videos, allowing for identification. However, the rare open
+    tools and methods often fall short on efficiency, robustness, and flexibility. To reduce these gaps,
+    this paper introduces Video Seal, a comprehensive framework for neural video watermarking and a competitive
+    open-sourced model. Our approach jointly trains an embedder and an extractor, while ensuring the watermark
+    robustness by applying transformations in-between, e.g., video codecs. This training is multistage
+    and includes image pre-training, hybrid post-training and extractor fine-tuning. We also introduce
+    temporal watermark propagation, a technique to convert any image watermarking model to an efficient
+    video watermarking model without the need to watermark every high-resolution frame. We present experimental
+    results demonstrating the effectiveness of the approach in terms of speed, imperceptibility, and robustness.
+    Video Seal achieves higher robustness compared to strong baselines especially under challenging distortions
+    combining geometric transformations and video compression. Additionally, we provide new insights such
+    as the impact of video compression during training, and how to compare methods operating on different
+    payloads. Contributions in this work - including the codebase, models, and a public demo - are open-sourced
+    under permissive licenses to foster further research and development in the field.
+  url: https://arxiv.org/abs/2412.09492
+  pdf_url: https://arxiv.org/pdf/2412.09492v1
+  version: v1
+fetched: '2026-11-14'

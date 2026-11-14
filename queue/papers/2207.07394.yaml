@@ -1,0 +1,40 @@
+id: paper:arxiv:2207.07394
+status: skipped
+score: 1
+track: streaming_delivery
+matched:
+- ref: concept:QoE
+  count: 3
+  weight: 1
+meta:
+  title: 'FRAS: Federated Reinforcement Learning empowered Adaptive Point Cloud Video Streaming'
+  authors:
+  - Yu Gao
+  - Pengyuan Zhou
+  - Zhi Liu
+  - Bo Han
+  - Pan Hui
+  published: '2022-07-15'
+  updated: '2023-01-04'
+  categories:
+  - cs.MM
+  abstract: 'Point cloud video transmission is challenging due to high encoding/decoding complexity, high
+    video bitrate, and low latency requirement. Consequently, conventional adaptive streaming methodologies
+    often find themselves unsatisfactory to meet the requirements in threefold: 1) current algorithms
+    reuse existing quality of experience (QoE) definitions while overlooking the unique features of point
+    cloud video thus failing to provide optimal user experience, 2) most deep learning approaches require
+    long-span data collections to learn sufficiently varied network conditions and result in long training
+    periods and capacity occupation, 3) cloud training approaches pose privacy risks caused by leakage
+    of user reported service usage and networking conditions. To overcome the limitations, we present
+    FRAS, the first federated reinforcement learning framework, to the best of our knowledge, for adaptive
+    point cloud video streaming. We define a new QoE model which takes the unique features of point cloud
+    video into account. Each client uses reinforcement learning (RL) to train video quality selection
+    with the objective of optimizing the user''s QoE under multiple constraints. Then, a federated learning
+    framework is integrated with the RL algorithm to enhance training performance with privacy preservation.
+    Extensive simulations using real point cloud videos and network traces reveal the superiority of the
+    proposed scheme over baseline schemes. We also implement a prototype that demonstrates the performance
+    of FRAS via real-world tests.'
+  url: https://arxiv.org/abs/2207.07394
+  pdf_url: https://arxiv.org/pdf/2207.07394v4
+  version: v4
+fetched: '2026-11-14'

@@ -1,0 +1,38 @@
+id: paper:arxiv:2409.18236
+status: skipped
+score: 0
+track: streaming_delivery
+matched: []
+meta:
+  title: 'Spatial Visibility and Temporal Dynamics: Revolutionizing Field of View Prediction in Adaptive
+    Point Cloud Video Streaming'
+  authors:
+  - Chen Li
+  - Tongyu Zong
+  - Yueyu Hu
+  - Yao Wang
+  - Yong Liu
+  published: '2024-09-26'
+  updated: '2024-10-01'
+  categories:
+  - cs.CV
+  - cs.LG
+  - cs.MM
+  - eess.IV
+  abstract: Field-of-View (FoV) adaptive streaming significantly reduces bandwidth requirement of immersive
+    point cloud video (PCV) by only transmitting visible points in a viewer's FoV. The traditional approaches
+    often focus on trajectory-based 6 degree-of-freedom (6DoF) FoV predictions. The predicted FoV is then
+    used to calculate point visibility. Such approaches do not explicitly consider video content's impact
+    on viewer attention, and the conversion from FoV to point visibility is often error-prone and time-consuming.
+    We reformulate the PCV FoV prediction problem from the cell visibility perspective, allowing for precise
+    decision-making regarding the transmission of 3D data at the cell level based on the predicted visibility
+    distribution. We develop a novel spatial visibility and object-aware graph model that leverages the
+    historical 3D visibility data and incorporates spatial perception, neighboring cell correlation, and
+    occlusion information to predict the cell visibility in the future. Our model significantly improves
+    the long-term cell visibility prediction, reducing the prediction MSE loss by up to 50% compared to
+    the state-of-the-art models while maintaining real-time performance (more than 30fps) for point cloud
+    videos with over 1 million points.
+  url: https://arxiv.org/abs/2409.18236
+  pdf_url: https://arxiv.org/pdf/2409.18236v2
+  version: v2
+fetched: '2026-11-14'

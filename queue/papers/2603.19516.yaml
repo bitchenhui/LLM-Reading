@@ -1,0 +1,42 @@
+id: paper:arxiv:2603.19516
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'Gastric-X: A Multimodal Multi-Phase Benchmark Dataset for Advancing Vision-Language Models in
+    Gastric Cancer Analysis'
+  authors:
+  - Sheng Lu
+  - Hao Chen
+  - Rui Yin
+  - Juyan Ba
+  - Yu Zhang
+  - Yuanzhe Li
+  published: '2026-03-19'
+  updated: '2026-03-26'
+  categories:
+  - cs.CV
+  - cs.AI
+  abstract: 'Recent vision-language models (VLMs) have shown strong generalization and multimodal reasoning
+    abilities in natural domains. However, their application to medical diagnosis remains limited by the
+    lack of comprehensive and structured datasets that capture real clinical workflows. To advance the
+    development of VLMs for clinical applications, particularly in gastric cancer, we introduce Gastric-X,
+    a large-scale multimodal benchmark for gastric cancer analysis providing 1.7K cases. Each case in
+    Gastric-X includes paired resting and dynamic CT scans, endoscopic image, a set of structured biochemical
+    indicators, expert-authored diagnostic notes, and bounding box annotations of tumor regions, reflecting
+    realistic clinical conditions. We systematically examine the capability of recent VLMs on five core
+    tasks: Visual Question Answering (VQA), report generation, cross-modal retrieval, disease classification,
+    and lesion localization. These tasks simulate critical stages of clinical workflow, from visual understanding
+    and reasoning to multimodal decision support. Through this evaluation, we aim not only to assess model
+    performance but also to probe the nature of VLM understanding: Can current VLMs meaningfully correlate
+    biochemical signals with spatial tumor features and textual reports? We envision Gastric-X as a step
+    toward aligning machine intelligence with the cognitive and evidential reasoning processes of physicians,
+    and as a resource to inspire the development of next-generation medical VLMs.'
+  url: https://arxiv.org/abs/2603.19516
+  pdf_url: https://arxiv.org/pdf/2603.19516v2
+  version: v2
+fetched: '2026-11-14'

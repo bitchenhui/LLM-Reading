@@ -1,0 +1,49 @@
+id: paper:arxiv:2601.18195
+status: pending
+score: 2
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 2
+  weight: 1
+- ref: concept:TrainingFree
+  count: 1
+  weight: 1
+meta:
+  title: 'QualiRAG: Retrieval-Augmented Generation for Visual Quality Understanding'
+  authors:
+  - Linhan Cao
+  - Wei Sun
+  - Weixia Zhang
+  - Xiangyang Zhu
+  - Kaiwei Zhang
+  - Jun Jia
+  - Dandan Zhu
+  - Guangtao Zhai
+  - Xiongkuo Min
+  published: '2026-01-26'
+  updated: '2026-01-26'
+  categories:
+  - cs.CV
+  abstract: 'Visual quality assessment (VQA) is increasingly shifting from scalar score prediction toward
+    interpretable quality understanding -- a paradigm that demands \textit{fine-grained spatiotemporal
+    perception} and \textit{auxiliary contextual information}. Current approaches rely on supervised fine-tuning
+    or reinforcement learning on curated instruction datasets, which involve labor-intensive annotation
+    and are prone to dataset-specific biases. To address these challenges, we propose \textbf{QualiRAG},
+    a \textit{training-free} \textbf{R}etrieval-\textbf{A}ugmented \textbf{G}eneration \textbf{(RAG)}
+    framework that systematically leverages the latent perceptual knowledge of large multimodal models
+    (LMMs) for visual quality perception. Unlike conventional RAG that retrieves from static corpora,
+    QualiRAG dynamically generates auxiliary knowledge by decomposing questions into structured requests
+    and constructing four complementary knowledge sources: \textit{visual metadata}, \textit{subject localization},
+    \textit{global quality summaries}, and \textit{local quality descriptions}, followed by relevance-aware
+    retrieval for evidence-grounded reasoning. Extensive experiments show that QualiRAG achieves substantial
+    improvements over open-source general-purpose LMMs and VQA-finetuned LMMs on visual quality understanding
+    tasks, and delivers competitive performance on visual quality comparison tasks, demonstrating robust
+    quality assessment capabilities without any task-specific training. The code will be publicly available
+    at https://github.com/clh124/QualiRAG.'
+  url: https://arxiv.org/abs/2601.18195
+  pdf_url: https://arxiv.org/pdf/2601.18195v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 4
+citation_year: 2026

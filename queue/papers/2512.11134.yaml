@@ -1,0 +1,40 @@
+id: paper:arxiv:2512.11134
+status: skipped
+score: 2
+track: video_image_coding
+matched:
+- ref: concept:ICM
+  count: 1
+  weight: 1
+- ref: org:MPEG
+  count: 1
+  weight: 1
+meta:
+  title: Feature Compression for Machines with Range-Based Channel Truncation and Frame Packing
+  authors:
+  - Juan Merlos
+  - Fabien Racapé
+  - Hyomin Choi
+  - Mateen Ulhaq
+  - Hari Kalva
+  published: '2025-12-11'
+  updated: '2025-12-11'
+  categories:
+  - eess.IV
+  abstract: This paper proposes a method that enhances the compression performance of the current model
+    under development for the upcoming MPEG standard on Feature Coding for Machines (FCM). This standard
+    aims at providing inter-operable compressed bitstreams of features in the context of split computing,
+    i.e., when the inference of a large computer vision neural-network (NN)-based model is split between
+    two devices. Intermediate features can consist of multiple 3D tensors that can be reduced and entropy
+    coded to limit the required bandwidth of such transmission. In the envisioned design for the MPEG-FCM
+    standard, intermediate feature tensors may be reduced using Neural layers before being converted into
+    2D video frames that can be coded using existing video compression standards. This paper introduces
+    an additional channel truncation and packing method which enables the system to preserve the relevant
+    channels, depending on the statistics of the features at inference time, while preserving the computer
+    vision task performance at the receiver. Implemented within the MPEG-FCM test model, the proposed
+    method yields an average reduction in rate by 10.59% for a given accuracy on multiple computer vision
+    tasks and datasets.
+  url: https://arxiv.org/abs/2512.11134
+  pdf_url: https://arxiv.org/pdf/2512.11134v1
+  version: v1
+fetched: '2026-11-14'

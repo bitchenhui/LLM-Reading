@@ -1,0 +1,41 @@
+id: paper:arxiv:2303.08336
+status: skipped
+score: 1
+track: streaming_delivery
+matched:
+- ref: concept:VolumetricVideo
+  count: 2
+  weight: 1
+meta:
+  title: Progressive Frame Patching for FoV-based Point Cloud Video Streaming
+  authors:
+  - Tongyu Zong
+  - Yixiang Mao
+  - Chen Li
+  - Yong Liu
+  - Yao Wang
+  published: '2023-03-15'
+  updated: '2024-10-02'
+  categories:
+  - cs.MM
+  - eess.IV
+  abstract: Many XR applications require the delivery of volumetric video to users with six degrees of
+    freedom (6-DoF) movements. Point Cloud has become a popular volumetric video format. A dense point
+    cloud consumes much higher bandwidth than a 2D/360 degree video frame. User Field of View (FoV) is
+    more dynamic with 6-DoF movement than 3-DoF movement. To save bandwidth, FoV-adaptive streaming predicts
+    a user's FoV and only downloads point cloud data falling in the predicted FoV. However, it is vulnerable
+    to FoV prediction errors, which can be significant when a long buffer is utilized for smoothed streaming.
+    In this work, we propose a multi-round progressive refinement framework for point cloud video streaming.
+    Instead of sequentially downloading point cloud frames, our solution simultaneously downloads/patches
+    multiple frames falling into a sliding time-window, leveraging the inherent scalability of octree-based
+    point-cloud coding. The optimal rate allocation among all tiles of active frames are solved analytically
+    using the heterogeneous tile rate-quality functions calibrated by the predicted user FoV. Multi-frame
+    downloading/patching simultaneously takes advantage of the streaming smoothness resulting from long
+    buffer and the FoV prediction accuracy at short buffer length. We evaluate our streaming solution
+    using simulations driven by real point cloud videos, real bandwidth traces, and 6-DoF FoV traces of
+    real users. Our solution is robust against the bandwidth/FoV prediction errors, and can deliver high
+    and smooth view quality in the face of bandwidth variations and dynamic user and point cloud movements.
+  url: https://arxiv.org/abs/2303.08336
+  pdf_url: https://arxiv.org/pdf/2303.08336v3
+  version: v3
+fetched: '2026-11-14'

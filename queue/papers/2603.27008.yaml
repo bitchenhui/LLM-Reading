@@ -1,0 +1,41 @@
+id: paper:arxiv:2603.27008
+status: skipped_low_citation
+score: 2
+track: self_improvement
+matched:
+- ref: concept:LLM
+  count: 1
+  weight: 1
+- ref: concept:SelfImprovement
+  count: 1
+  weight: 1
+meta:
+  title: 'RASPRef: Retrieval-Augmented Self-Supervised Prompt Refinement for Large Reasoning Models'
+  authors:
+  - Rahul Soni
+  published: '2026-03-27'
+  updated: '2026-03-27'
+  categories:
+  - cs.CL
+  abstract: Recent reasoning-focused language models such as DeepSeek R1 and OpenAI o1 have demonstrated
+    strong performance on structured reasoning benchmarks including GSM8K, MATH, and multi-hop question
+    answering tasks. However, their performance remains highly sensitive to prompt formulation, and designing
+    effective prompts is typically a manual and iterative process that does not scale well across tasks
+    or domains. To address this limitation, we introduce Retrieval-Augmented Self-Supervised Prompt Refinement
+    (RASPRef), a framework that improves prompts without requiring human annotations or task-specific
+    supervision. The approach retrieves relevant examples and previously generated reasoning trajectories,
+    and leverages signals such as multi-sample consistency, verifier feedback, and model-generated critiques
+    to iteratively refine the prompt. Unlike prior approaches that focus primarily on improving model
+    outputs, RASPRef directly treats the prompt as the optimization target and improves it through an
+    iterative retrieval-guided refinement process. Experiments on GSM8K-style mathematical reasoning tasks
+    show that retrieval-guided prompting improves performance compared with a static prompting baseline.
+    We further discuss how retrieval quality, trajectory selection, and self-supervised feedback signals
+    may influence the effectiveness of prompt refinement. These findings suggest that prompt design remains
+    a critical factor for reasoning-oriented language models, and that self-improving prompts offer a
+    practical and scalable strategy for improving reasoning performance.
+  url: https://arxiv.org/abs/2603.27008
+  pdf_url: https://arxiv.org/pdf/2603.27008v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 0
+citation_year: 2026

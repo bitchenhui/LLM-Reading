@@ -1,0 +1,40 @@
+id: paper:arxiv:2306.06814
+status: skipped
+score: 1
+track: audio_coding
+matched:
+- ref: concept:NeuralAudioCodec
+  count: 1
+  weight: 1
+meta:
+  title: 'HiddenSinger: High-Quality Singing Voice Synthesis via Neural Audio Codec and Latent Diffusion
+    Models'
+  authors:
+  - Ji-Sang Hwang
+  - Sang-Hoon Lee
+  - Seong-Whan Lee
+  published: '2023-06-12'
+  updated: '2023-06-12'
+  categories:
+  - eess.AS
+  - cs.AI
+  - cs.SD
+  - eess.SP
+  abstract: Recently, denoising diffusion models have demonstrated remarkable performance among generative
+    models in various domains. However, in the speech domain, the application of diffusion models for
+    synthesizing time-varying audio faces limitations in terms of complexity and controllability, as speech
+    synthesis requires very high-dimensional samples with long-term acoustic features. To alleviate the
+    challenges posed by model complexity in singing voice synthesis, we propose HiddenSinger, a high-quality
+    singing voice synthesis system using a neural audio codec and latent diffusion models. To ensure high-fidelity
+    audio, we introduce an audio autoencoder that can encode audio into an audio codec as a compressed
+    representation and reconstruct the high-fidelity audio from the low-dimensional compressed latent
+    vector. Subsequently, we use the latent diffusion models to sample a latent representation from a
+    musical score. In addition, our proposed model is extended to an unsupervised singing voice learning
+    framework, HiddenSinger-U, to train the model using an unlabeled singing voice dataset. Experimental
+    results demonstrate that our model outperforms previous models in terms of audio quality. Furthermore,
+    the HiddenSinger-U can synthesize high-quality singing voices of speakers trained solely on unlabeled
+    data.
+  url: https://arxiv.org/abs/2306.06814
+  pdf_url: https://arxiv.org/pdf/2306.06814v1
+  version: v1
+fetched: '2026-11-14'

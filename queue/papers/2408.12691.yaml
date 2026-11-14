@@ -1,0 +1,47 @@
+id: paper:arxiv:2408.12691
+status: skipped
+score: 2
+track: video_image_coding
+matched:
+- ref: dataset:ImageNet
+  count: 1
+  weight: 1
+- ref: dataset:Kodak
+  count: 1
+  weight: 1
+meta:
+  title: Quantization-aware Matrix Factorization for Low Bit Rate Image Compression
+  authors:
+  - Pooya Ashtari
+  - Pourya Behmandpoor
+  - Fateme Nateghi Haredasht
+  - Jonathan H. Chen
+  - Panagiotis Patrinos
+  - Sabine Van Huffel
+  published: '2024-08-22'
+  updated: '2025-03-27'
+  categories:
+  - eess.IV
+  - cs.CV
+  - math.OC
+  abstract: Lossy image compression is essential for efficient transmission and storage. Traditional compression
+    methods mainly rely on discrete cosine transform (DCT) or singular value decomposition (SVD), both
+    of which represent image data in continuous domains and, therefore, necessitate carefully designed
+    quantizers. Notably, these methods consider quantization as a separate step, where quantization errors
+    cannot be incorporated into the compression process. The sensitivity of these methods, especially
+    SVD-based ones, to quantization errors significantly degrades reconstruction quality. To address this
+    issue, we introduce a quantization-aware matrix factorization (QMF) to develop a novel lossy image
+    compression method. QMF provides a low-rank representation of the image data as a product of two smaller
+    factor matrices, with elements constrained to bounded integer values, thereby effectively integrating
+    quantization with low-rank approximation. We propose an efficient, provably convergent iterative algorithm
+    for QMF using a block coordinate descent (BCD) scheme, with subproblems having closed-form solutions.
+    Our experiments on the Kodak and CLIC 2024 datasets demonstrate that our QMF compression method consistently
+    outperforms JPEG at low bit rates below 0.25 bits per pixel (bpp) and remains comparable at higher
+    bit rates. We also assessed our method's capability to preserve visual semantics by evaluating an
+    ImageNet pre-trained classifier on compressed images. Remarkably, our method improved top-1 accuracy
+    by over 5 percentage points compared to JPEG at bit rates under 0.25 bpp. The project is available
+    at https://github.com/pashtari/lrf .
+  url: https://arxiv.org/abs/2408.12691
+  pdf_url: https://arxiv.org/pdf/2408.12691v2
+  version: v2
+fetched: '2026-11-14'

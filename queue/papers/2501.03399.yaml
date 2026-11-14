@@ -1,0 +1,37 @@
+id: paper:arxiv:2501.03399
+status: skipped
+score: 1
+track: video_image_coding
+matched:
+- ref: concept:3DGS
+  count: 3
+  weight: 1
+meta:
+  title: Compression of 3D Gaussian Splatting with Optimized Feature Planes and Standard Video Codecs
+  authors:
+  - Soonbin Lee
+  - Fangwen Shu
+  - Yago Sanchez
+  - Thomas Schierl
+  - Cornelius Hellge
+  published: '2025-01-06'
+  updated: '2025-01-06'
+  categories:
+  - cs.CV
+  - cs.MM
+  abstract: 3D Gaussian Splatting is a recognized method for 3D scene representation, known for its high
+    rendering quality and speed. However, its substantial data requirements present challenges for practical
+    applications. In this paper, we introduce an efficient compression technique that significantly reduces
+    storage overhead by using compact representation. We propose a unified architecture that combines
+    point cloud data and feature planes through a progressive tri-plane structure. Our method utilizes
+    2D feature planes, enabling continuous spatial representation. To further optimize these representations,
+    we incorporate entropy modeling in the frequency domain, specifically designed for standard video
+    codecs. We also propose channel-wise bit allocation to achieve a better trade-off between bitrate
+    consumption and feature plane representation. Consequently, our model effectively leverages spatial
+    correlations within the feature planes to enhance rate-distortion performance using standard, non-differentiable
+    video codecs. Experimental results demonstrate that our method outperforms existing methods in data
+    compactness while maintaining high rendering quality. Our project page is available at https://fraunhoferhhi.github.io/CodecGS
+  url: https://arxiv.org/abs/2501.03399
+  pdf_url: https://arxiv.org/pdf/2501.03399v1
+  version: v1
+fetched: '2026-11-14'

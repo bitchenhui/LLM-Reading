@@ -1,0 +1,44 @@
+id: paper:arxiv:2301.05688
+status: pending
+score: 2
+track: streaming_delivery
+matched:
+- ref: concept:ABR
+  count: 2
+  weight: 1
+- ref: concept:QoE
+  count: 1
+  weight: 1
+meta:
+  title: 'CANE: A Cascade-Control Approach for Network-Assisted Video QoE Management'
+  authors:
+  - Mehdi Hosseinzadeh
+  - Karthick Shankar
+  - Maria Apostolaki
+  - Jay Ramachandran
+  - Steven Adams
+  - Vyas Sekar
+  - Bruno Sinopoli
+  published: '2023-01-13'
+  updated: '2023-01-13'
+  categories:
+  - math.OC
+  - cs.NI
+  - eess.SY
+  abstract: 'Prior efforts have shown that network-assisted schemes can improve the Quality-of-Experience
+    (QoE) and QoE fairness when multiple video players compete for bandwidth. However, realizing network-assisted
+    schemes in practice is challenging, as: i) the network has limited visibility into the client players''
+    internal state and actions; ii) players'' actions may nullify or negate the network''s actions; and
+    iii) the players'' objectives might be conflicting. To address these challenges, we formulate network-assisted
+    QoE optimization through a cascade control abstraction. This informs the design of CANE, a practical
+    network-assisted QoE framework. CANE uses machine learning techniques to approximate each player''s
+    behavior as a black-box model and model predictive control to achieve a near-optimal solution. We
+    evaluate CANE through realistic simulations and show that CANE improves multiplayer QoE fairness by
+    ~50% compared to pure client-side adaptive bitrate algorithms and by ~20% compared to uniform traffic
+    shaping.'
+  url: https://arxiv.org/abs/2301.05688
+  pdf_url: https://arxiv.org/pdf/2301.05688v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 9
+citation_year: 2023

@@ -1,0 +1,55 @@
+id: paper:arxiv:2510.10970
+status: skipped_low_citation
+score: 12
+track: video_image_coding
+matched:
+- ref: codec:VVC
+  count: 2
+  weight: 3
+- ref: codec:AV1
+  count: 1
+  weight: 3
+- ref: metric:SSIM
+  count: 3
+  weight: 1
+- ref: concept:QP
+  count: 1
+  weight: 1
+- ref: dataset:Kodak
+  count: 1
+  weight: 1
+- ref: metric:BD-Rate
+  count: 1
+  weight: 1
+- ref: metric:MS-SSIM
+  count: 1
+  weight: 1
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+meta:
+  title: Bit Allocation Transfer for Perceptual Quality Enhancement of VVC Intra Coding
+  authors:
+  - Runyu Yang
+  - Ivan V. Bajić
+  published: '2025-10-13'
+  updated: '2025-10-15'
+  categories:
+  - eess.IV
+  abstract: Mainstream image and video coding standards -- including state-of-the-art codecs like H.266/VVC,
+    AVS3, and AV1 -- adopt a block-based hybrid coding framework. While this framework facilitates straightforward
+    optimization for Peak Signal-to-Noise Ratio (PSNR), it struggles to effectively optimize perceptually-aligned
+    metrics such as Multi-Scale Structural Similarity (MS-SSIM). To address this challenge, this paper
+    proposes a low-complexity method to enhance perceptual quality in VVC intra coding by transferring
+    bit allocation knowledge from end-to-end image compression. We introduce a lightweight model trained
+    with perceptual losses to generate a quantization step map. This map implicitly captures block-level
+    perceptual importance, enabling efficient derivation of a QP map for VVC. Experiments on Kodak and
+    CLIC datasets demonstrate significant advantages, both in execution time and perceptual metric performance,
+    with more than 11% BD-rate reduction in terms of MS-SSIM. Our scheme provides an efficient, practical
+    pathway for perceptual enhancement of traditional codecs.
+  url: https://arxiv.org/abs/2510.10970
+  pdf_url: https://arxiv.org/pdf/2510.10970v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 2
+citation_year: 2025

@@ -1,0 +1,46 @@
+id: paper:arxiv:2402.14809
+status: pending
+score: 2
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: 'CriticBench: Benchmarking LLMs for Critique-Correct Reasoning'
+  authors:
+  - Zicheng Lin
+  - Zhibin Gou
+  - Tian Liang
+  - Ruilin Luo
+  - Haowei Liu
+  - Yujiu Yang
+  published: '2024-02-22'
+  updated: '2024-06-01'
+  categories:
+  - cs.CL
+  - cs.AI
+  - cs.LG
+  abstract: 'The ability of Large Language Models (LLMs) to critique and refine their reasoning is crucial
+    for their application in evaluation, feedback provision, and self-improvement. This paper introduces
+    CriticBench, a comprehensive benchmark designed to assess LLMs'' abilities to critique and rectify
+    their reasoning across a variety of tasks. CriticBench encompasses five reasoning domains: mathematical,
+    commonsense, symbolic, coding, and algorithmic. It compiles 15 datasets and incorporates responses
+    from three LLM families. Utilizing CriticBench, we evaluate and dissect the performance of 17 LLMs
+    in generation, critique, and correction reasoning, i.e., GQC reasoning. Our findings reveal: (1) a
+    linear relationship in GQC capabilities, with critique-focused training markedly enhancing performance;
+    (2) a task-dependent variation in correction effectiveness, with logic-oriented tasks being more amenable
+    to correction; (3) GQC knowledge inconsistencies that decrease as model size increases; and (4) an
+    intriguing inter-model critiquing dynamic, where stronger models are better at critiquing weaker ones,
+    while weaker models can surprisingly surpass stronger ones in their self-critique. We hope these insights
+    into the nuanced critique-correct reasoning of LLMs will foster further research in LLM critique and
+    self-improvement.'
+  url: https://arxiv.org/abs/2402.14809
+  pdf_url: https://arxiv.org/pdf/2402.14809v4
+  version: v4
+fetched: '2026-11-14'
+citation_count: 113
+citation_year: 2024

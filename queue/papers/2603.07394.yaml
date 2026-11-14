@@ -1,0 +1,39 @@
+id: paper:arxiv:2603.07394
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'AQuA: Toward Strategic Response Generation for Ambiguous Visual Questions'
+  authors:
+  - Jihyoung Jang
+  - Hyounghun Kim
+  published: '2026-03-08'
+  updated: '2026-03-08'
+  categories:
+  - cs.CV
+  - cs.AI
+  - cs.CL
+  abstract: Visual Question Answering (VQA) is a core task for evaluating the capabilities of Vision-Language
+    Models (VLMs). Existing VQA benchmarks primarily feature clear and unambiguous image-question pairs,
+    whereas real-world scenarios often involve varying degrees of ambiguity that require nuanced reasoning
+    and context-appropriate response strategies. Although recent studies have begun to address ambiguity
+    in VQA, they lack (1) a systematic categorization of ambiguity levels and (2) datasets and models
+    that support strategy-aware responses. In this paper, we introduce Ambiguous Visual Question Answering
+    (AQuA), a fine-grained dataset that classifies ambiguous VQA instances into four levels according
+    to the nature and degree of ambiguity, along with the optimal response strategy for each case. Our
+    evaluation of diverse open-source and proprietary VLMs shows that most models fail to adapt their
+    strategy to the ambiguity type, frequently producing overconfident answers rather than seeking clarification
+    or acknowledging uncertainty. To address this challenge, we fine-tune VLMs on AQuA, enabling them
+    to adaptively choose among multiple response strategies, such as directly answering, inferring intent
+    from contextual cues, listing plausible alternatives, or requesting clarification. VLMs trained on
+    AQuA achieve strategic response generation for ambiguous VQA, demonstrating the ability to recognize
+    ambiguity, manage uncertainty, and respond with context-appropriate strategies, while outperforming
+    both open-source and closed-source baselines.
+  url: https://arxiv.org/abs/2603.07394
+  pdf_url: https://arxiv.org/pdf/2603.07394v1
+  version: v1
+fetched: '2026-11-14'

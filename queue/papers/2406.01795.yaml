@@ -1,0 +1,49 @@
+id: paper:arxiv:2406.01795
+status: skipped_low_citation
+score: 6
+track: video_image_coding
+matched:
+- ref: codec:AV1
+  count: 1
+  weight: 3
+- ref: org:AOMedia
+  count: 2
+  weight: 1
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+- ref: metric:VMAF
+  count: 1
+  weight: 1
+meta:
+  title: Video Coding with Cross-Component Sample Offset
+  authors:
+  - Han Gao
+  - Xin Zhao
+  - Tianqi Liu
+  - Shan Liu
+  published: '2024-06-03'
+  updated: '2024-06-03'
+  categories:
+  - eess.IV
+  abstract: Beyond the exploration of traditional spatial, temporal and subjective visual signal redundancy
+    in image and video compression, recent research has focused on leveraging cross-color component redundancy
+    to enhance coding efficiency. Cross-component coding approaches are motivated by the statistical correlations
+    among different color components, such as those in the Y'CbCr color space, where luma (Y) color component
+    typically exhibits finer details than chroma (Cb/Cr) color components. Inspired by previous cross-component
+    coding algorithms, this paper introduces a novel in-loop filtering approach named Cross-Component
+    Sample Offset (CCSO). CCSO utilizes co-located and neighboring luma samples to generate correction
+    signals for both luma and chroma reconstructed samples. It is a multiplication-free, non-linear mapping
+    process implemented using a look-up-table. The input to the mapping is a group of reconstructed luma
+    samples, and the output is an offset value applied on the center luma or co-located chroma sample.
+    Experimental results demonstrate that the proposed CCSO can be applied to both image and video coding,
+    resulting in improved coding efficiency and visual quality. The method has been adopted into an experimental
+    next-generation video codec beyond AV1 developed by the Alliance for Open Media (AOMedia), achieving
+    significant objective coding gains up to 3.5\,\% and 1.8\,\% for PSNR and VMAF quality metrics, respectively,
+    under random access configuration. Additionally, CCSO notably improves the subjective visual quality.
+  url: https://arxiv.org/abs/2406.01795
+  pdf_url: https://arxiv.org/pdf/2406.01795v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 4
+citation_year: 2024

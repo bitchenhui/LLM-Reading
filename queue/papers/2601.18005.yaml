@@ -1,0 +1,45 @@
+id: paper:arxiv:2601.18005
+status: pending
+score: 2
+track: self_improvement
+matched:
+- ref: concept:AlphaEvolve
+  count: 1
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: Flow-based Extremal Mathematical Structure Discovery
+  authors:
+  - Gergely Bérczi
+  - Baran Hashemi
+  - Jonas Klüver
+  published: '2026-01-25'
+  updated: '2026-01-25'
+  categories:
+  - math.CO
+  - cs.LG
+  abstract: 'The discovery of extremal structures in mathematics requires navigating vast and nonconvex
+    landscapes where analytical methods offer little guidance and brute-force search becomes intractable.
+    We introduce FlowBoost, a closed-loop generative framework that learns to discover rare and extremal
+    geometric structures by combining three components: (i) a geometry-aware conditional flow-matching
+    model that learns to sample high-quality configurations, (ii) reward-guided policy optimization with
+    action exploration that directly optimizes the generation process toward the objective while maintaining
+    diversity, and (iii) stochastic local search for both training-data generation and final refinement.
+    Unlike prior open-loop approaches, such as PatternBoost that retrains on filtered discrete samples,
+    or AlphaEvolve which relies on frozen Large Language Models (LLMs) as evolutionary mutation operators,
+    FlowBoost enforces geometric feasibility during sampling, and propagates reward signal directly into
+    the generative model, closing the optimization loop and requiring much smaller training sets and shorter
+    training times, and reducing the required outer-loop iterations by orders of magnitude, while eliminating
+    dependence on LLMs. We demonstrate the framework on four geometric optimization problems: sphere packing
+    in hypercubes, circle packing maximizing sum of radii, the Heilbronn triangle problem, and star discrepancy
+    minimization. In several cases, FlowBoost discovers configurations that match or exceed the best known
+    results. For circle packings, we improve the best known lower bounds, surpassing the LLM-based system
+    AlphaEvolve while using substantially fewer computational resources.'
+  url: https://arxiv.org/abs/2601.18005
+  pdf_url: https://arxiv.org/pdf/2601.18005v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 4
+citation_year: 2026

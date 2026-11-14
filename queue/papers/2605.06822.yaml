@@ -1,0 +1,46 @@
+id: paper:arxiv:2605.06822
+status: pending
+score: 2
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: 'SHARP: A Self-Evolving Human-Auditable Rubric Policy for Financial Trading Agents'
+  authors:
+  - Xiwen Chen
+  - Wenhui Zhu
+  - Songzhu Zheng
+  - Kashif Rasul
+  - Yueyue Deng
+  - Huayu Li
+  published: '2026-05-07'
+  updated: '2026-05-07'
+  categories:
+  - cs.LG
+  abstract: 'Large language models (LLMs) are increasingly deployed for autonomous financial trading,
+    a domain requiring continuous adaptation to noisy, non-stationary markets. Existing self-improving
+    agents typically address this through unbounded free-form prompt optimization. However, in low signal-to-noise
+    environments with delayed scalar rewards (P\&L), this unstructured approach exacerbates the fundamental
+    credit assignment problem: optimizers cannot reliably distinguish systematic logic flaws from stochastic
+    market variance, inevitably leading to policy drift. To overcome this bottleneck, we introduce the
+    Self-Evolving Human-Auditable Rubric Policy (SHARP), a neuro-symbolic framework that replaces unconstrained
+    text mutation with structured, symbolic policy optimization. SHARP confines the agent''s reasoning
+    to a bounded, human-readable rubric of explicit condition-action rules. When sub-optimal trades occur,
+    an attribution agent employs cross-sample reasoning across multiple samples to isolate specific rule
+    failures. This enables targeted, atomic policy edits that are subsequently regularized through strict
+    walk-forward validation. Evaluated across three diverse equity sectors and four LLM backbones, SHARP
+    consistently transforms generic initial heuristics into highly robust strategies, lifting the empirical
+    performance of compact models by 10 to 20 percentage points on average (e.g., GPT-4o-mini). Ultimately,
+    SHARP demonstrates that LLMs can achieve dynamic and efficient adaptation while significantly enhancing
+    the structural transparency and auditability demanded by institutional finance.'
+  url: https://arxiv.org/abs/2605.06822
+  pdf_url: https://arxiv.org/pdf/2605.06822v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 5
+citation_year: 2026

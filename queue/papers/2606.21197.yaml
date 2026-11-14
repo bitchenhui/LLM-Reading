@@ -1,0 +1,40 @@
+id: paper:arxiv:2606.21197
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: Extraction and Analysis of Multimodal Concepts in Vision Language Models through Sparse Autoencoders
+  authors:
+  - Sergio Lanza
+  - Jae Hee Lee
+  - Stefan Wermter
+  published: '2026-06-19'
+  updated: '2026-06-19'
+  categories:
+  - cs.CV
+  - cs.AI
+  - cs.LG
+  abstract: Vision Language Models (VLMs) have demonstrated impressive performance in tasks requiring
+    joint understanding of images and text, such as image captioning and Visual Question Answering (VQA),
+    but our understanding of their internal processes remains limited. Recently, Sparse Autoencoders (SAEs)
+    have emerged as a promising tool to support the interpretation of concepts encoded in VLMs. However,
+    most SAE-based approaches focus only on textual or visual concepts separately, ignoring multimodal
+    concepts. This limitation hinders a comprehensive understanding of VLMs, since concepts that integrate
+    both modalities can be misclassified. Moreover, previous visual approaches often produce low-quality
+    visual concept descriptions that are vague or incomplete, limiting their usefulness for understanding
+    model reasoning. We propose a framework based on SAEs to extract and analyze visual, textual, and
+    multimodal concepts from VLMs. For each neuron, we propose a candidate human-interpretable concept
+    and compute the alignment between the concept and the dataset samples using cosine similarity scores.
+    Experiments on a VQA dataset (LLaVA-NeXT) demonstrate that our framework improves visual concept quality
+    by up to 45\% compared to existing SAE-based methods, while maintaining high textual concept quality
+    and enabling systematic identification of multimodal concepts. This work contributes new insights
+    into the conceptual space of VLMs, providing a structured approach to distinguish between visual,
+    textual, and multimodal concepts. The code is available at https://github.com/PHDLanza/Multidata_SAE
+  url: https://arxiv.org/abs/2606.21197
+  pdf_url: https://arxiv.org/pdf/2606.21197v1
+  version: v1
+fetched: '2026-11-14'

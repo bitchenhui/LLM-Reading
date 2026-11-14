@@ -1,0 +1,42 @@
+id: paper:arxiv:2608.21713
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'The Plan, Not the Decoder: Diagnosing and Repairing Compositional Failure in Reasoning-Augmented
+    Text-to-Image Generation'
+  authors:
+  - Ashritha Gonuguntla
+  published: '2026-08-22'
+  updated: '2026-08-22'
+  categories:
+  - cs.CV
+  - cs.CL
+  - cs.LG
+  abstract: 'Reasoning-augmented text-to-image models such as GoT-R1 emit an explicit textual plan - object
+    names, attributes, and bounding boxes - before generating image tokens. When such a model fails a
+    compositional prompt, is the plan wrong, or is the plan right and the decoder unfaithful? Because
+    the plan is machine-readable it can be edited before decoding, which makes the two separable. We first
+    validate the ruler. Swapping the two bounding boxes inside the model''s own chain demonstrably flips
+    the generated layout: detector-based accuracy falls 0.75 -> 0.48 (p<1e-3), while a widely used VQA-based
+    spatial metric rises. A five-rater human study agrees with the detector on 81% of items and with the
+    VQA judge on 57%. All spatial results therefore use geometric scoring. Under sound measurement the
+    decoder is a faithful executor: 94% of generated layouts realize the planned relation, and object-box
+    binding survives reordering of the plan''s object segments. The planner is the bottleneck. It writes
+    wrong relations for phrasing-dependent reasons - 98% accuracy on "left" against 54% on "right" for
+    semantically identical layouts, a raster-order bias we isolate with a mention-order control - and
+    cluttered geometry that the decoder faithfully reproduces. Editing the plan therefore fixes the image
+    without retraining: symbolic verification with resampling gives +5.0 points (p<1e-3), minimal in-place
+    repair +6.0 (p=.02), rewriting only box geometry +10.7 (p<1e-4), and replacing the plan outright +13.3
+    (p=1e-4). Gains are indifferent to the plan''s prose style and to its likelihood under the planner,
+    but not to its geometry. Modular planner-decoder designs are therefore viable, provided the plan is
+    internally consistent: box-text contradictions induce object duplication and identity fusion. We release
+    the plan-fidelity evaluation protocol, all plans, and 12k generated images.'
+  url: https://arxiv.org/abs/2608.21713
+  pdf_url: https://arxiv.org/pdf/2608.21713v1
+  version: v1
+fetched: '2026-11-14'

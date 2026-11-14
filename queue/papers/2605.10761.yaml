@@ -1,0 +1,44 @@
+id: paper:arxiv:2605.10761
+status: pending
+score: 2
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: 'RadThinking: A Dataset for Longitudinal Clinical Reasoning in Radiology'
+  authors:
+  - Wenxuan Li
+  - Pedro R. A. S. Bassi
+  - Xinze Zhou
+  - Jakob Wasserthal
+  - Alan L. Yuille
+  - Zongwei Zhou
+  published: '2026-05-11'
+  updated: '2026-05-11'
+  categories:
+  - cs.CV
+  abstract: Cancer screening is a reasoning task. A radiologist observes findings, compares them to prior
+    scans, integrates clinical context, and reaches a diagnostic conclusion confirmed by pathology. We
+    present RadThinking, a Visual Question Answering (VQA) dataset that makes this reasoning explicit
+    and trainable. RadThinking releases VQA pairs at three difficulty tiers. Foundation VQAs are atomic
+    perception questions. Single-step reasoning VQAs apply one clinical rule. Compositional VQAs require
+    multi-step chain-of-thought to reach a guideline category such as LI-RADS-5. For every compositional
+    VQA, we release the chain of foundation VQAs that solves it. The chain follows the rules of the governing
+    clinical reporting standard. The dataset spans 20,362 CT scans from 9,131 patients across 43 cancer
+    groups, plus 2,077 verified healthy controls with >1-year follow-up. To our knowledge, RadThinking
+    is the first cancer-screening VQA corpus that stratifies questions by reasoning depth and grounds
+    compositions in clinical reporting standards. The foundation tier supplies atomic perception supervision.
+    The compositional tier supplies chain-of-thought data and verifiable rewards for reinforcement-learning
+    recipes such as DeepSeek-R1 and OpenAI o1. RadThinking enables systematic training and evaluation
+    of whether AI systems can reason about cancer, not merely detect it.
+  url: https://arxiv.org/abs/2605.10761
+  pdf_url: https://arxiv.org/pdf/2605.10761v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 5
+citation_year: 2026

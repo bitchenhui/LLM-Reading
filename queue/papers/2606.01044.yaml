@@ -1,0 +1,39 @@
+id: paper:arxiv:2606.01044
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'Ask4VG: Risk-Aware Question Selection for Reducing Prior-Driven Answers in Medical VQA'
+  authors:
+  - Xiaorong Zhu
+  - Qiang Li
+  - Zibo Xu
+  - Weijie Wang
+  - Weizhi Nie
+  published: '2026-05-31'
+  updated: '2026-05-31'
+  categories:
+  - cs.CV
+  abstract: 'Medical visual question answering requires models to ground their responses in image evidence,
+    because visually unsupported answers can mislead downstream interpretation. However, many medical
+    VQA questions are generic, template-like, or highly similar in form, which can encourage models to
+    learn question-answer shortcuts instead of image-dependent reasoning and thereby increase the risk
+    of hallucinated responses. We propose Ask4VG, a label-free pilot framework for risk-aware question
+    selection. Ask4VG estimates question-induced hallucination risk through counterfactual visual probing:
+    the same question is asked under the original image, a perturbed image, a blank image, and a mismatched
+    image, and the resulting answer relations are converted into weak supervision for a counterfactual
+    risk estimator. The learned estimator then reranks candidate question rewrites to favor intent-preserving
+    questions that are less invariant to missing or mismatched visual evidence before final answer generation.
+    On VQA-RAD with Qwen2-VL-2B-Instruct, prompt-only rewriting increases counterfactual risk, whereas
+    predicted-risk reranking reduces held-out risk from 0.658 to 0.623 and improves exact accuracy from
+    0.337 to 0.356. A 300-sample PMC-VQA external check shows the same direction of risk reduction with
+    a small accuracy gain. These results suggest that question selection is a promising complement to
+    response-level hallucination mitigation for reliable medical VQA.'
+  url: https://arxiv.org/abs/2606.01044
+  pdf_url: https://arxiv.org/pdf/2606.01044v1
+  version: v1
+fetched: '2026-11-14'

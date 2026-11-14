@@ -1,0 +1,42 @@
+id: paper:arxiv:2304.03076
+status: skipped_low_citation
+score: 4
+track: video_image_coding
+matched:
+- ref: codec:VVC
+  count: 2
+  weight: 3
+- ref: concept:QP
+  count: 1
+  weight: 1
+meta:
+  title: Fast QTMT Partition for VVC Intra Coding Using U-Net Framework
+  authors:
+  - Zhao Zan
+  - Leilei Huang
+  - ShuShi Chen
+  - Xiantao Zhang
+  - Zhenghui Zhao
+  - Haibing Yin
+  - Yibo Fan
+  published: '2023-04-06'
+  updated: '2023-04-06'
+  categories:
+  - eess.IV
+  - cs.MM
+  abstract: Versatile Video Coding (VVC) has significantly increased encoding efficiency at the expense
+    of numerous complex coding tools, particularly the flexible Quad-Tree plus Multi-type Tree (QTMT)
+    block partition. This paper proposes a deep learning-based algorithm applied in fast QTMT partition
+    for VVC intra coding. Our solution greatly reduces encoding time by early termination of less-likely
+    intra prediction and partitions with negligible BD-BR increase. Firstly, a redesigned U-Net is recommended
+    as the network's fundamental framework. Next, we design a Quality Parameter (QP) fusion network to
+    regulate the effect of QPs on the partition results. Finally, we adopt a refined post-processing strategy
+    to better balance encoding performance and complexity. Experimental results demonstrate that our solution
+    outperforms the state-of-the-art works with a complexity reduction of 44.74% to 68.76% and a BD-BR
+    increase of 0.60% to 2.33%.
+  url: https://arxiv.org/abs/2304.03076
+  pdf_url: https://arxiv.org/pdf/2304.03076v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 4
+citation_year: 2023

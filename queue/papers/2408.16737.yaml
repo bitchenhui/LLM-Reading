@@ -1,0 +1,42 @@
+id: paper:arxiv:2408.16737
+status: pending
+score: 2
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: 'Smaller, Weaker, Yet Better: Training LLM Reasoners via Compute-Optimal Sampling'
+  authors:
+  - Hritik Bansal
+  - Arian Hosseini
+  - Rishabh Agarwal
+  - Vinh Q. Tran
+  - Mehran Kazemi
+  published: '2024-08-29'
+  updated: '2024-10-07'
+  categories:
+  - cs.CL
+  - cs.AI
+  abstract: 'Training on high-quality synthetic data from strong language models (LMs) is a common strategy
+    to improve the reasoning performance of LMs. In this work, we revisit whether this strategy is compute-optimal
+    under a fixed inference budget (e.g., FLOPs). To do so, we investigate the trade-offs between generating
+    synthetic data using a stronger but more expensive (SE) model versus a weaker but cheaper (WC) model.
+    We evaluate the generated data across three key metrics: coverage, diversity, and false positive rate,
+    and show that the data from WC models may have higher coverage and diversity, but also exhibit higher
+    false positive rates. We then finetune LMs on data from SE and WC models in different settings: knowledge
+    distillation, self-improvement, and a novel weak-to-strong improvement setup where a weaker LM teaches
+    reasoning to a stronger LM. Our findings reveal that models finetuned on WC-generated data consistently
+    outperform those trained on SE-generated data across multiple benchmarks and multiple choices of WC
+    and SE models. These results challenge the prevailing practice of relying on SE models for synthetic
+    data generation, suggesting that WC may be the compute-optimal approach for training advanced LM reasoners.'
+  url: https://arxiv.org/abs/2408.16737
+  pdf_url: https://arxiv.org/pdf/2408.16737v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 78
+citation_year: 2024

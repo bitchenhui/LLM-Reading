@@ -1,0 +1,40 @@
+id: paper:arxiv:2403.06700
+status: skipped
+score: 2
+track: video_image_coding
+matched:
+- ref: dataset:Kodak
+  count: 1
+  weight: 1
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+meta:
+  title: Enhancing Adversarial Training with Prior Knowledge Distillation for Robust Image Compression
+  authors:
+  - Zhi Cao
+  - Youneng Bao
+  - Fanyang Meng
+  - Chao Li
+  - Wen Tan
+  - Genhong Wang
+  - Yongsheng Liang
+  published: '2024-03-11'
+  updated: '2024-03-16'
+  categories:
+  - eess.IV
+  abstract: Deep neural network-based image compression (NIC) has achieved excellent performance, but
+    NIC method models have been shown to be susceptible to backdoor attacks. Adversarial training has
+    been validated in image compression models as a common method to enhance model robustness. However,
+    the improvement effect of adversarial training on model robustness is limited. In this paper, we propose
+    a prior knowledge-guided adversarial training framework for image compression models. Specifically,
+    first, we propose a gradient regularization constraint for training robust teacher models. Subsequently,
+    we design a knowledge distillation based strategy to generate a priori knowledge from the teacher
+    model to the student model for guiding adversarial training. Experimental results show that our method
+    improves the reconstruction quality by about 9dB when the Kodak dataset is elected as the backdoor
+    attack object for psnr attack. Compared with Ma2023, our method has a 5dB higher PSNR output at high
+    bitrate points.
+  url: https://arxiv.org/abs/2403.06700
+  pdf_url: https://arxiv.org/pdf/2403.06700v2
+  version: v2
+fetched: '2026-11-14'

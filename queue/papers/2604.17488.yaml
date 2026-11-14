@@ -1,0 +1,42 @@
+id: paper:arxiv:2604.17488
+status: skipped_low_citation
+score: 2
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+- ref: concept:SelfImprovement
+  count: 1
+  weight: 1
+meta:
+  title: 'AutoVQA-G: Self-Improving Agentic Framework for Automated Visual Question Answering and Grounding
+    Annotation'
+  authors:
+  - Rongsheng Hu
+  - Runwei Guan
+  - Yicheng Di
+  - Jiayu Bao
+  - Yuan Liu
+  published: '2026-04-19'
+  updated: '2026-04-19'
+  categories:
+  - cs.CV
+  abstract: 'Manual annotation of high-quality visual question answering with grounding (VQA-G) datasets,
+    which pair visual questions with evidential grounding, is crucial for advancing vision-language models
+    (VLMs), but remains unscalable. Existing automated methods are often hindered by two key issues: (1)
+    inconsistent data fidelity due to model hallucinations; (2) brittle verification mechanisms based
+    on simple heuristics. To address these limitations, we introduce AutoVQA-G, a self-improving agentic
+    framework for automated VQA-G annotation. AutoVQA-G employs an iterative refinement loop where a Consistency
+    Evaluation module uses Chain-of-Thought (CoT) reasoning for fine-grained visual verification. Based
+    on this feedback, a memory-augmented Prompt Optimization agent analyzes critiques from failed samples
+    to progressively refine generation prompts. Our experiments show that AutoVQA-G generates VQA-G datasets
+    with superior visual grounding accuracy compared to leading multimodal LLMs, offering a promising
+    approach for creating high-fidelity data to facilitate more robust VLM training and evaluation. Code:
+    https://github.com/rohnson1999/AutoVQA-G'
+  url: https://arxiv.org/abs/2604.17488
+  pdf_url: https://arxiv.org/pdf/2604.17488v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 0
+citation_year: 2026

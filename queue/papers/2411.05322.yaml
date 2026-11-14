@@ -1,0 +1,54 @@
+id: paper:arxiv:2411.05322
+status: pending
+score: 4
+track: immersive_media
+matched:
+- ref: concept:NeRF
+  count: 2
+  weight: 1
+- ref: concept:VolumetricVideo
+  count: 2
+  weight: 1
+- ref: concept:EntropyModel
+  count: 1
+  weight: 1
+- ref: metric:BD-Rate
+  count: 1
+  weight: 1
+meta:
+  title: Rate-aware Compression for NeRF-based Volumetric Video
+  authors:
+  - Zhiyu Zhang
+  - Guo Lu
+  - Huanxiong Liang
+  - Zhengxue Cheng
+  - Anni Tang
+  - Li Song
+  published: '2024-11-08'
+  updated: '2024-11-08'
+  categories:
+  - cs.MM
+  - cs.CV
+  abstract: The neural radiance fields (NeRF) have advanced the development of 3D volumetric video technology,
+    but the large data volumes they involve pose significant challenges for storage and transmission.
+    To address these problems, the existing solutions typically compress these NeRF representations after
+    the training stage, leading to a separation between representation training and compression. In this
+    paper, we try to directly learn a compact NeRF representation for volumetric video in the training
+    stage based on the proposed rate-aware compression framework. Specifically, for volumetric video,
+    we use a simple yet effective modeling strategy to reduce temporal redundancy for the NeRF representation.
+    Then, during the training phase, an implicit entropy model is utilized to estimate the bitrate of
+    the NeRF representation. This entropy model is then encoded into the bitstream to assist in the decoding
+    of the NeRF representation. This approach enables precise bitrate estimation, thereby leading to a
+    compact NeRF representation. Furthermore, we propose an adaptive quantization strategy and learn the
+    optimal quantization step for the NeRF representations. Finally, the NeRF representation can be optimized
+    by using the rate-distortion trade-off. Our proposed compression framework can be used for different
+    representations and experimental results demonstrate that our approach significantly reduces the storage
+    size with marginal distortion and achieves state-of-the-art rate-distortion performance for volumetric
+    video on the HumanRF and ReRF datasets. Compared to the previous state-of-the-art method TeTriRF,
+    we achieved an approximately -80% BD-rate on the HumanRF dataset and -60% BD-rate on the ReRF dataset.
+  url: https://arxiv.org/abs/2411.05322
+  pdf_url: https://arxiv.org/pdf/2411.05322v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 10
+citation_year: 2024

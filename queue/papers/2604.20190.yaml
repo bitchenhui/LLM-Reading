@@ -1,0 +1,46 @@
+id: paper:arxiv:2604.20190
+status: skipped_low_citation
+score: 2
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: 'WildFireVQA: A Large-Scale Radiometric Thermal VQA Benchmark for Aerial Wildfire Monitoring'
+  authors:
+  - Mobin Habibpour
+  - Niloufar Alipour Talemi
+  - John Spodnik
+  - Camren J. Khoury
+  - Fatemeh Afghah
+  published: '2026-04-22'
+  updated: '2026-04-22'
+  categories:
+  - cs.CV
+  - cs.LG
+  abstract: Wildfire monitoring requires timely, actionable situational awareness from airborne platforms,
+    yet existing aerial visual question answering (VQA) benchmarks do not evaluate wildfire-specific multimodal
+    reasoning grounded in thermal measurements. We introduce WildFireVQA, a large-scale VQA benchmark
+    for aerial wildfire monitoring that integrates RGB imagery with radiometric thermal data. WildFireVQA
+    contains 6,097 RGB-thermal samples, where each sample includes an RGB image, a color-mapped thermal
+    visualization, and a radiometric thermal TIFF, and is paired with 34 questions, yielding a total of
+    207,298 multiple-choice questions spanning presence and detection, classification, distribution and
+    segmentation, localization and direction, cross-modal reasoning, and flight planning for operational
+    wildfire intelligence. To improve annotation reliability, we combine multimodal large language model
+    (MLLM)-based answer generation with sensor-driven deterministic labeling, manual verification, and
+    intra-frame and inter-frame consistency checks. We further establish a comprehensive evaluation protocol
+    for representative MLLMs under RGB, Thermal, and retrieval-augmented settings using radiometric thermal
+    statistics. Experiments show that across task categories, RGB remains the strongest modality for current
+    models, while retrieved thermal context yields gains for stronger MLLMs, highlighting both the value
+    of temperature-grounded reasoning and the limitations of existing MLLMs in safety-critical wildfire
+    scenarios. The dataset and benchmark code are open-source at https://github.com/mobiiin/WildFire_VQA.
+  url: https://arxiv.org/abs/2604.20190
+  pdf_url: https://arxiv.org/pdf/2604.20190v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 1
+citation_year: 2026

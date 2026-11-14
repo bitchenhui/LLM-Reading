@@ -1,0 +1,32 @@
+id: paper:arxiv:2606.04418
+status: skipped
+score: 0
+track: audio_coding
+matched: []
+meta:
+  title: 'CleanCodec: Efficient and Robust Speech Tokenization via Perceptually Guided Encoding'
+  authors:
+  - Eugene Kwek
+  - Feng Liu
+  - Rui Zhang
+  - Wenpeng Yin
+  published: '2026-06-03'
+  updated: '2026-06-03'
+  categories:
+  - cs.SD
+  - cs.CL
+  - eess.AS
+  abstract: Neural audio codecs are a key component of speech processing pipelines, compressing audio
+    into discrete tokens for downstream modeling. However, existing codecs struggle to balance reconstruction
+    quality with token efficiency, often encoding perceptually irrelevant information such as background
+    noise and recording artifacts at the expense of linguistically and acoustically meaningful content.
+    We reframe audio tokenization as a selective information bottleneck problem and propose CleanCodec,
+    a denoising audio codec which learns to encode only perceptually important features and discard imperceptible
+    information. At just 12.5 tokens per second, CleanCodec achieves state-of-the-art tokenization efficiency,
+    substantially outperforming existing codecs in speaker similarity and speech intelligibility. Evaluations
+    on downstream text-to-speech and voice conversion tasks further demonstrate improved performance and
+    up to 17x faster inference, highlighting significant efficiency gains.
+  url: https://arxiv.org/abs/2606.04418
+  pdf_url: https://arxiv.org/pdf/2606.04418v1
+  version: v1
+fetched: '2026-11-14'

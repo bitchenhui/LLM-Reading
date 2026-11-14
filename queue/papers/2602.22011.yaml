@@ -1,0 +1,31 @@
+id: paper:arxiv:2602.22011
+status: skipped
+score: 1
+track: streaming_delivery
+matched:
+- ref: concept:WebRTC
+  count: 2
+  weight: 1
+meta:
+  title: A Generic Web Component for WebRTC Pub-Sub
+  authors:
+  - Kundan Singh
+  published: '2026-02-25'
+  updated: '2026-02-25'
+  categories:
+  - cs.MM
+  - cs.NI
+  abstract: We present video-io, a generic web component to publish or subscribe to a media stream in
+    WebRTC (web real-time communication) applications. Unlike a call or conference room abstraction of
+    existing video conferencing services, it uses a named stream abstraction, which is useful in many
+    scenarios beyond just a call or conference. It keeps most of the application logic in the endpoint
+    using the extensive application interface of this component, and keeps any vendor specific access
+    control or signaling negotiation in a service-specific connector implementation. This allows an app
+    developer to write once, and be able to run the web app on different servers or services. We also
+    demonstrate its flexibility by implementing the connector for ten different existing systems and services.
+    Decoupling the app from the hosted vendor service promotes innovation in the endpoint beyond what
+    a single vendor locked client app can offer.
+  url: https://arxiv.org/abs/2602.22011
+  pdf_url: https://arxiv.org/pdf/2602.22011v1
+  version: v1
+fetched: '2026-11-14'

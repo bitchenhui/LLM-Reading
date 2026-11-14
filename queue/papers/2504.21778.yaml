@@ -1,0 +1,33 @@
+id: paper:arxiv:2504.21778
+status: skipped
+score: 1
+track: video_image_coding
+matched:
+- ref: metric:kMAC-per-pixel
+  count: 1
+  weight: 1
+meta:
+  title: 'LoC-LIC: Low Complexity Learned Image Coding Using Hierarchical Feature Transforms'
+  authors:
+  - Ayman A. Ameen
+  - Thomas Richter
+  - André Kaup
+  published: '2025-04-30'
+  updated: '2025-04-30'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: Current learned image compression models typically exhibit high complexity, which demands
+    significant computational resources. To overcome these challenges, we propose an innovative approach
+    that employs hierarchical feature extraction transforms to significantly reduce complexity while preserving
+    bit rate reduction efficiency. Our novel architecture achieves this by using fewer channels for high
+    spatial resolution inputs/feature maps. On the other hand, feature maps with a large number of channels
+    have reduced spatial dimensions, thereby cutting down on computational load without sacrificing performance.
+    This strategy effectively reduces the forward pass complexity from \(1256 \, \text{kMAC/Pixel}\) to
+    just \(270 \, \text{kMAC/Pixel}\). As a result, the reduced complexity model can open the way for
+    learned image compression models to operate efficiently across various devices and pave the way for
+    the development of new architectures in image compression technology.
+  url: https://arxiv.org/abs/2504.21778
+  pdf_url: https://arxiv.org/pdf/2504.21778v1
+  version: v1
+fetched: '2026-11-14'

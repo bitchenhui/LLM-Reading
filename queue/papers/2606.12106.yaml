@@ -1,0 +1,40 @@
+id: paper:arxiv:2606.12106
+status: pending
+score: 2
+track: quality_assessment
+matched:
+- ref: concept:LLM
+  count: 2
+  weight: 1
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'MSUE: Multi-Modal Soccer Understanding Expert'
+  authors:
+  - Litao Li
+  - Yibo Yu
+  - Yufeng Hu
+  - Zhuo Yang
+  - Jiali Wen
+  - Yixin Chen
+  - Yixi Zhou
+  published: '2026-06-10'
+  updated: '2026-06-10'
+  categories:
+  - cs.CV
+  - cs.AI
+  abstract: This paper presents our solution to the 2026 SoccerNet VQA Challenge. We first develop a cost-effective
+    data synthesis pipeline driven by a Vision-Language Model (VLM), which systematically restructures
+    raw domain data into diverse VQA samples, including concise answers and long-form responses. Second,
+    we propose MSUE, a multi-expert question answering architecture that employs a Large Language Model
+    (LLM) to dynamically dispatch questions to text, image, and video experts. These experts are instantiated
+    as a strong text baseline Gemini3-Flash, a fine-tuned Qwen3-VL, and an external knowledge base, respectively,
+    working collaboratively to enhance VQA performance. MSUE achieves an accuracy of \textbf{0.95} on
+    the challenge benchmark, securing third place in the leaderboard.
+  url: https://arxiv.org/abs/2606.12106
+  pdf_url: https://arxiv.org/pdf/2606.12106v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 0
+citation_year: 2026

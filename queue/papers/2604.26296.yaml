@@ -1,0 +1,36 @@
+id: paper:arxiv:2604.26296
+status: skipped
+score: 0
+track: audio_coding
+matched: []
+meta:
+  title: 'SPG-Codec: Exploring the Role and Boundaries of Semantic Priors in Ultra-Low-Bitrate Neural
+    Speech Coding'
+  authors:
+  - Mingyu Zhao
+  - Zijian Lin
+  - Kun Wei
+  - Zhiyong Wu
+  published: '2026-04-29'
+  updated: '2026-04-29'
+  categories:
+  - eess.AS
+  abstract: 'Conventional neural speech codecs suffer from severe intelligibility degradation at ultra-low
+    bitrates, where the bottleneck transitions from acoustic distortion to semantic loss. To address this
+    issue, this paper conducts a systematic investigation into the role and fundamental limits of integrating
+    frozen semantic priors -- specifically HuBERT and Whisper -- into neural speech coding. We introduce
+    and quantitatively validate a novel Semantic Retirement phenomenon: while semantic constraints reduce
+    the Word Error Rate (WER) by up to ~10% relatively at 1.5 kbps, their benefits rapidly diminish beyond
+    6 kbps, indicating a practical capacity boundary. We further uncover a clear trade-off between different
+    prior types: acoustic-rich priors (HuBERT) better preserve prosodic and timbral details, whereas high-level
+    linguistic priors (Whisper) effectively suppress phonetic hallucinations in noisy environments (reducing
+    hallucination rates by 26 percent) and substantially narrow the generalization gap for unseen speakers.
+    Building on these findings, we propose a bitrate-aware regulation strategy that dynamically adjusts
+    prior strength to optimize the trade-off between semantic consistency and perceptual naturalness.
+    Extensive experimental evaluations confirm that our approach achieves competitive intelligibility
+    and noise robustness compared to existing baselines, offering a principled pathway toward ultra-low-bitrate
+    generative speech coding.'
+  url: https://arxiv.org/abs/2604.26296
+  pdf_url: https://arxiv.org/pdf/2604.26296v1
+  version: v1
+fetched: '2026-11-14'

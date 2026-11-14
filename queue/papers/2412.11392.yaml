@@ -1,0 +1,41 @@
+id: paper:arxiv:2412.11392
+status: skipped_low_citation
+score: 7
+track: audio_coding
+matched:
+- ref: codec:EVS
+  count: 2
+  weight: 3
+- ref: codec:Opus
+  count: 1
+  weight: 3
+- ref: org:3GPP
+  count: 1
+  weight: 1
+meta:
+  title: A lightweight and robust method for blind wideband-to-fullband extension of speech
+  authors:
+  - Jan Büthe
+  - Jean-Marc Valin
+  published: '2024-12-16'
+  updated: '2025-07-18'
+  categories:
+  - eess.AS
+  - cs.SD
+  abstract: Reducing the bandwidth of speech is common practice in resource constrained environments like
+    low-bandwidth speech transmission or low-complexity vocoding. We propose a lightweight and robust
+    method for extending the bandwidth of wideband speech signals that is inspired by classical methods
+    developed in the speech coding context. The resulting model has just ~370K parameters and a complexity
+    of ~140 MFLOPS (or ~70 MMACS). With a frame size of 10 ms and a lookahead of only 0.27 ms, the model
+    is well-suited for use with common wideband speech codecs. We evaluate the model's robustness by pairing
+    it with the Opus SILK speech codec (1.5 release) and verify in a P.808 DCR listening test that it
+    significantly improves quality from 6 to 12 kb/s. We also demonstrate that Opus 1.5 together with
+    the proposed bandwidth extension at 9 kb/s meets the quality of 3GPP EVS at 9.6 kb/s and that of Opus
+    1.4 at 18 kb/s showing that the blind bandwidth extension can meet the quality of classical guided
+    bandwidth extensions thus providing a way for backward-compatible quality improvement.
+  url: https://arxiv.org/abs/2412.11392
+  pdf_url: https://arxiv.org/pdf/2412.11392v4
+  version: v4
+fetched: '2026-11-14'
+citation_count: 3
+citation_year: 2024

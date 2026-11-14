@@ -1,0 +1,43 @@
+id: paper:arxiv:2603.18465
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 3
+  weight: 1
+meta:
+  title: 'MedQ-UNI: Toward Unified Medical Image Quality Assessment and Restoration via Vision-Language
+    Modeling'
+  authors:
+  - Jiyao Liu
+  - Junzhi Ning
+  - Wanying Qu
+  - Lihao Liu
+  - Chenglong Ma
+  - Junjun He
+  - Ningsheng Xu
+  published: '2026-03-19'
+  updated: '2026-03-19'
+  categories:
+  - cs.CV
+  abstract: 'Existing medical image restoration (Med-IR) methods are typically modality-specific or degradation-specific,
+    failing to generalize across the heterogeneous degradations encountered in clinical practice. We argue
+    this limitation stems from the isolation of Med-IR from medical image quality assessment (Med-IQA),
+    as restoration models without explicit quality understanding struggle to adapt to diverse degradation
+    types across modalities. To address these challenges, we propose MedQ-UNI, a unified vision-language
+    model that follows an assess-then-restore paradigm, explicitly leveraging Med-IQA to guide Med-IR
+    across arbitrary modalities and degradation types. MedQ-UNI adopts a multimodal autoregressive dual-expert
+    architecture with shared attention: a quality assessment expert first identifies degradation issues
+    through structured natural language descriptions, and a restoration expert then conditions on these
+    descriptions to perform targeted image restoration. To support this paradigm, we construct a large-scale
+    dataset of approximately 50K paired samples spanning three imaging modalities and five restoration
+    tasks, each annotated with structured quality descriptions for joint Med-IQA and Med-IR training,
+    along with a 2K-sample benchmark for evaluation. Extensive experiments demonstrate that a single MedQ-UNI
+    model, without any task-specific adaptation, achieves state-of-the-art restoration performance across
+    all tasks while generating superior descriptions, confirming that explicit quality understanding meaningfully
+    improves restoration fidelity and interpretability.'
+  url: https://arxiv.org/abs/2603.18465
+  pdf_url: https://arxiv.org/pdf/2603.18465v1
+  version: v1
+fetched: '2026-11-14'

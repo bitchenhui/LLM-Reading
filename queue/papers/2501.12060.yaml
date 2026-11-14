@@ -1,0 +1,53 @@
+id: paper:arxiv:2501.12060
+status: pending
+score: 8
+track: video_image_coding
+matched:
+- ref: codec:AV1
+  count: 1
+  weight: 3
+- ref: codec:VVC
+  count: 1
+  weight: 3
+- ref: concept:3DGS
+  count: 1
+  weight: 1
+- ref: metric:FPS
+  count: 1
+  weight: 1
+meta:
+  title: 'GSVC: Efficient Video Representation and Compression Through 2D Gaussian Splatting'
+  authors:
+  - Longan Wang
+  - Yuang Shi
+  - Wei Tsang Ooi
+  published: '2025-01-21'
+  updated: '2026-10-28'
+  categories:
+  - cs.CV
+  - cs.MM
+  abstract: 'In this work, we explore 2D Gaussian splat as a new primitive for representing and compressing
+    videos, showing its promise as an alternative to traditional signal-based primitives. We introduce
+    GSVC, a new Gaussian splatting-based video codec that incorporates common techniques used in classical
+    video codecs to exploit temporal redundancy between nearby frames. In GSVC, each frame is represented
+    by a set of overlapping Gaussian splats, which, when rendered together, approximate the original frame.
+    Gaussian splats for the first frame and subsequent frames following scene changes (called anchor frames)
+    are learned from scratch, while the remaining frames (called propagation frames) are initialized from
+    the Gaussian splats of their previous frames and then fine-tuned. Scene changes are detected through
+    loss differences during the training process. To capture large motion or newly appeared objects, we
+    randomly add Gaussian splats to propagation frames before fine-tuning. GSVC supports a knob for rate-distortion
+    trade-offs through controlling the number of Gaussian splats for each frame. Gaussian splats with
+    low contributions to the frame quality can be removed during training. GSVC supports two-pass encoding
+    by propagating the Gaussian splats from a future propagation frame back to an anchor frame, further
+    improving the video quality for challenging video scenes. To achieve efficient compression, GSVC uses
+    a residual-based Gaussian splats quantization framework that encodes only changes to the Gaussian
+    parameters between frames. Experimental results show that GSVC achieves rate-distortion performance
+    comparable to state-of-the-art video codec implementations for AV1 and VVC. GSVC inherits the advantages
+    of Gaussian splatting in rendering, allowing it to achieve the rendering speed of 1500 fps for a $1920\times
+    1080$ video. Project page: https://longanwang-cs.github.io/gsvc/.'
+  url: https://arxiv.org/abs/2501.12060
+  pdf_url: https://arxiv.org/pdf/2501.12060v3
+  version: v3
+fetched: '2026-11-14'
+citation_count: 12
+citation_year: 2025

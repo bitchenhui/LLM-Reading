@@ -1,0 +1,42 @@
+id: paper:arxiv:2603.24639
+status: pending
+score: 2
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 3
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: Experiential Reflective Learning for Self-Improving LLM Agents
+  authors:
+  - Marc-Antoine Allard
+  - Arnaud Teinturier
+  - Victor Xing
+  - Gautier Viaud
+  published: '2026-03-25'
+  updated: '2026-03-31'
+  categories:
+  - cs.LG
+  - cs.AI
+  abstract: Recent advances in large language models (LLMs) have enabled the development of autonomous
+    agents capable of complex reasoning and multi-step problem solving. However, these agents struggle
+    to adapt to specialized environments and do not leverage past interactions, approaching each new task
+    from scratch regardless of their accumulated experience. We introduce Experiential Reflective Learning
+    (ERL), a simple self-improvement framework that enables rapid environment adaptation through experiential
+    learning. ERL reflects on task trajectories and outcomes to generate heuristics, capturing actionable
+    lessons that transfer across tasks. At test time, relevant heuristics are retrieved based on the current
+    task and injected into the agent's context to guide execution. On the Gaia2 benchmark, ERL improves
+    success rate by 7.8% over a ReAct baseline, with large gains in task completion reliability, and outperforms
+    prior experiential learning methods. Through systematic ablations, we find that selective retrieval
+    is essential and that heuristics provide more transferable abstractions than few-shot trajectory prompting.
+    These results demonstrate that reflecting on single-attempt experiences to extract transferable heuristics
+    enables effective agent self-improvement.
+  url: https://arxiv.org/abs/2603.24639
+  pdf_url: https://arxiv.org/pdf/2603.24639v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 15
+citation_year: 2026

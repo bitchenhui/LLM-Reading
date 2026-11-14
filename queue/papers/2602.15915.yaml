@@ -1,0 +1,40 @@
+id: paper:arxiv:2602.15915
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'MaS-VQA: A Mask-and-Select Framework for Knowledge-Based Visual Question Answering'
+  authors:
+  - Xianwei Mao
+  - Kai Ye
+  - Sheng Zhou
+  - Nan Zhang
+  - Haikuan Huang
+  - Bin Li
+  - Jiajun Bu
+  published: '2026-02-17'
+  updated: '2026-02-17'
+  categories:
+  - cs.CV
+  - cs.AI
+  abstract: Knowledge-based Visual Question Answering (KB-VQA) requires models to answer questions by
+    integrating visual information with external knowledge. However, retrieved knowledge is often noisy,
+    partially irrelevant, or misaligned with the visual content, while internal model knowledge is difficult
+    to control and interpret. Naive aggregation of these sources limits reasoning effectiveness and reduces
+    answer accuracy. To address this, we propose MaS-VQA, a selection-driven framework that tightly couples
+    explicit knowledge filtering with implicit knowledge reasoning. MaS-VQA first retrieves candidate
+    passages and applies a Mask-and-Select mechanism to jointly prune irrelevant image regions and weakly
+    relevant knowledge fragments, producing compact, high-signal multimodal knowledge . This filtered
+    knowledge then guides the activation of internal knowledge in a constrained semantic space, enabling
+    complementary co-modeling of explicit and implicit knowledge for robust answer prediction. Experiments
+    on Encyclopedic-VQA and InfoSeek demonstrate consistent performance gains across multiple MLLM backbones,
+    and ablations verify that the selection mechanism effectively reduces noise and enhances knowledge
+    utilization.
+  url: https://arxiv.org/abs/2602.15915
+  pdf_url: https://arxiv.org/pdf/2602.15915v1
+  version: v1
+fetched: '2026-11-14'

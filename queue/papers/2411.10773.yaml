@@ -1,0 +1,40 @@
+id: paper:arxiv:2411.10773
+status: skipped
+score: 0
+track: video_image_coding
+matched: []
+meta:
+  title: An End-to-End Real-World Camera Imaging Pipeline
+  authors:
+  - Kepeng Xu
+  - Zijia Ma
+  - Li Xu
+  - Gang He
+  - Yunsong Li
+  - Wenxin Yu
+  - Taichu Han
+  - Cheng Yang
+  published: '2024-11-16'
+  updated: '2024-11-16'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: Recent advances in neural camera imaging pipelines have demonstrated notable progress. Nevertheless,
+    the real-world imaging pipeline still faces challenges including the lack of joint optimization in
+    system components, computational redundancies, and optical distortions such as lens shading.In light
+    of this, we propose an end-to-end camera imaging pipeline (RealCamNet) to enhance real-world camera
+    imaging performance. Our methodology diverges from conventional, fragmented multi-stage image signal
+    processing towards end-to-end architecture. This architecture facilitates joint optimization across
+    the full pipeline and the restoration of coordinate-biased distortions. RealCamNet is designed for
+    high-quality conversion from RAW to RGB and compact image compression. Specifically, we deeply analyze
+    coordinate-dependent optical distortions, e.g., vignetting and dark shading, and design a novel Coordinate-Aware
+    Distortion Restoration (CADR) module to restore coordinate-biased distortions. Furthermore, we propose
+    a Coordinate-Independent Mapping Compression (CIMC) module to implement tone mapping and redundant
+    information compression. Existing datasets suffer from misalignment and overly idealized conditions,
+    making them inadequate for training real-world imaging pipelines. Therefore, we collected a real-world
+    imaging dataset. Experiment results show that RealCamNet achieves the best rate-distortion performance
+    with lower inference latency.
+  url: https://arxiv.org/abs/2411.10773
+  pdf_url: https://arxiv.org/pdf/2411.10773v1
+  version: v1
+fetched: '2026-11-14'

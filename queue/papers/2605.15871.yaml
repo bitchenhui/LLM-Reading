@@ -1,0 +1,57 @@
+id: paper:arxiv:2605.15871
+status: pending
+score: 6
+track: self_improvement
+matched:
+- ref: codec:Opus
+  count: 1
+  weight: 3
+- ref: concept:RSI
+  count: 2
+  weight: 1
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: 'Agentic Discovery of Neural Architectures: AIRA-Compose and AIRA-Design'
+  authors:
+  - Alberto Pepe
+  - Chien-Yu Lin
+  - Despoina Magka
+  - Bilge Acun
+  - Thomas Simon Foster
+  - Yannan Nellie Wu
+  - Anton Protopopov
+  - Carole-Jean Wu
+  - Yoram Bachrach
+  published: '2026-05-15'
+  updated: '2026-10-07'
+  categories:
+  - cs.AI
+  abstract: 'Toward recursive self-improvement, we investigate LLM agents autonomously designing foundation
+    models beyond standard Transformers. We introduce a dual-framework approach: AIRA-Compose for high-level
+    architecture search, and AIRA-Design for low-level mechanistic implementation. AIRA-Compose uses 11
+    agents to explore fundamental computational primitives under a 24-hour budget. Agents evaluate million-parameter
+    candidates, extrapolating top designs to 350M, 1B, and 3B scales. This yields 14 architectures across
+    two families: AIRAformers (Transformer-based) and AIRAhybrids (Transformer-Mamba). Pre-trained at
+    1B scale, these consistently outperform Llama 3.2 and Composer-found baselines. On downstream tasks,
+    AIRAformer-D and AIRAhybrid-D improve accuracy by 2.4% and 3.8% over Llama 3.2. Furthermore, AIRA-Compose
+    finds models with highly efficient scaling frontiers: AIRAformer-C scales 54% and 71% faster than
+    Llama 3.2 and Composer''s best Transformer, while AIRAhybrid-C outscales Nemotron-2 by 23% and Composer''s
+    best hybrid by 37%. AIRA-Design tasks 20 agents with writing novel attention mechanisms for long-range
+    dependencies and high-performing training scripts. On the Long Range Arena benchmark, agent-designed
+    architectures reach within 2.3% and 2.6% of human state-of-the-art on document matching and text classification.
+    On the Autoresearch benchmark, Greedy Opus 4.5 achieves 0.968 validation bits-per-byte under a fixed
+    time budget, surpassing the published minimum. Together, these frameworks show AI agents can autonomously
+    discover architectures and algorithmic optimizations matching or surpassing hand-designed baselines.
+    This establishes a powerful paradigm for discovering next-generation foundation models, marking a
+    clear step toward recursive self-improvement.'
+  url: https://arxiv.org/abs/2605.15871
+  pdf_url: https://arxiv.org/pdf/2605.15871v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 6
+citation_year: 2026

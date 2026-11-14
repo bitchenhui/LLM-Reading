@@ -1,0 +1,46 @@
+id: paper:arxiv:2605.29440
+status: pending
+score: 2
+track: self_improvement
+matched:
+- ref: concept:LLM
+  count: 1
+  weight: 1
+- ref: concept:SelfImprovement
+  count: 1
+  weight: 1
+meta:
+  title: 'SkillBrew: Multi-Objective Curation of Skill Banks for LLM Agents'
+  authors:
+  - Wentao Hu
+  - Zhendong Chu
+  - Yiming Zhang
+  - Junda Wu
+  - Ming Jin
+  - Xiangyu Zhao
+  - Yilei Shao
+  - Yanfeng Wang
+  - Qingsong Wen
+  published: '2026-05-28'
+  updated: '2026-05-28'
+  categories:
+  - cs.CL
+  - cs.AI
+  - cs.IR
+  abstract: 'Retrieval-augmented LLM agents increasingly rely on curated skill banks: collections of reusable
+    textual principles that guide decision making on complex tasks. Existing approaches typically expand
+    these banks in an append-only fashion, continuously adding new skills without removing redundant,
+    outdated, or harmful ones, resulting in inefficient and poorly curated repositories. In this paper,
+    we formulate the skill bank curation as a constrained multi-objective problem: a desirable bank must
+    be useful for the agent, diverse in its content, and provide good coverage of the query distribution.
+    To this end, we introduce SkillBrew, a multi-objective curation framework that formalizes skill bank
+    curation as Pareto-aware optimization under a utility constraint, and solves it via a bi-level propose-then-verify
+    loop. We evaluate our approach on two public benchmarks. Our findings suggest that treating skill
+    banks as objects of principled curation, rather than ever-growing append-only logs, is an important
+    step toward building self-improving LLM agents.'
+  url: https://arxiv.org/abs/2605.29440
+  pdf_url: https://arxiv.org/pdf/2605.29440v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 6
+citation_year: 2026

@@ -1,0 +1,42 @@
+id: paper:arxiv:2604.11052
+status: skipped
+score: 0
+track: audio_coding
+matched: []
+meta:
+  title: 'LaDA-Band: Language Diffusion Models for Vocal-to-Accompaniment Generation'
+  authors:
+  - Qi Wang
+  - Zhexu Shen
+  - Meng Chen
+  - Guoxin Yu
+  - Chaoxu Pang
+  - Weifeng Zhao
+  - Wenjiang Zhou
+  published: '2026-04-13'
+  updated: '2026-07-23'
+  categories:
+  - cs.SD
+  abstract: 'Vocal-to-accompaniment (V2A) generation, which aims to transform a raw vocal recording into
+    a fully arranged accompaniment, inherently requires jointly addressing an accompaniment trilemma:
+    preserving acoustic authenticity, maintaining global coherence with the vocal track, and producing
+    dynamic orchestration across a full song. Existing open-source approaches typically make compromises
+    among these goals. Continuous-latent generation models can capture long musical spans but often struggle
+    to preserve fine-grained acoustic detail. In contrast, discrete autoregressive models retain local
+    fidelity but suffer from unidirectional generation and error accumulation in extended contexts. We
+    present LaDA-Band, an end-to-end framework that introduces Discrete Masked Diffusion to the V2A task.
+    Our approach formulates V2A generation as Discrete Masked Diffusion, i.e., a global, non-autoregressive
+    denoising formulation that combines the representational advantages of discrete audio codec tokens
+    with full-sequence bidirectional context modeling. This design improves long-range structural consistency
+    and temporal synchronization while preserving crisp acoustic details. Built on this formulation, LaDA-Band
+    further introduces a dual-track prefix-conditioning architecture, an auxiliary replaced-token detection
+    objective for weakly anchored accompaniment regions, and a two-stage progressive curriculum to scale
+    Discrete Masked Diffusion to full-song vocal-to-accompaniment generation. Extensive experiments on
+    both academic and real-world benchmarks show that LaDA-Band consistently improves acoustic authenticity,
+    global coherence, and dynamic orchestration over existing baselines, while maintaining strong performance
+    even without auxiliary reference audio. Codes and audio samples are available at https://github.com/Duoluoluos/TME-LaDA-Band
+    .'
+  url: https://arxiv.org/abs/2604.11052
+  pdf_url: https://arxiv.org/pdf/2604.11052v2
+  version: v2
+fetched: '2026-11-14'

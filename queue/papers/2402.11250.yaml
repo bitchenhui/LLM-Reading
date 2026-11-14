@@ -1,0 +1,44 @@
+id: paper:arxiv:2402.11250
+status: pending
+score: 5
+track: processing_enhancement
+matched:
+- ref: codec:G-PCC
+  count: 2
+  weight: 3
+- ref: concept:SuperResolution
+  count: 1
+  weight: 1
+- ref: org:MPEG
+  count: 1
+  weight: 1
+meta:
+  title: Hierarchical Prior-based Super Resolution for Point Cloud Geometry Compression
+  authors:
+  - Dingquan Li
+  - Kede Ma
+  - Jing Wang
+  - Ge Li
+  published: '2024-02-17'
+  updated: '2024-02-17'
+  categories:
+  - eess.IV
+  - cs.CV
+  - cs.MM
+  abstract: The Geometry-based Point Cloud Compression (G-PCC) has been developed by the Moving Picture
+    Experts Group to compress point clouds. In its lossy mode, the reconstructed point cloud by G-PCC
+    often suffers from noticeable distortions due to the naïve geometry quantization (i.e., grid downsampling).
+    This paper proposes a hierarchical prior-based super resolution method for point cloud geometry compression.
+    The content-dependent hierarchical prior is constructed at the encoder side, which enables coarse-to-fine
+    super resolution of the point cloud geometry at the decoder side. A more accurate prior generally
+    yields improved reconstruction performance, at the cost of increased bits required to encode this
+    side information. With a proper balance between prior accuracy and bit consumption, the proposed method
+    demonstrates substantial Bjontegaard-delta bitrate savings on the MPEG Cat1A dataset, surpassing the
+    octree-based and trisoup-based G-PCC v14. We provide our implementations for reproducible research
+    at https://github.com/lidq92/mpeg-pcc-tmc13.
+  url: https://arxiv.org/abs/2402.11250
+  pdf_url: https://arxiv.org/pdf/2402.11250v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 16
+citation_year: 2024

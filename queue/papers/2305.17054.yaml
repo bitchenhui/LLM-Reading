@@ -1,0 +1,36 @@
+id: paper:arxiv:2305.17054
+status: skipped
+score: 0
+track: video_image_coding
+matched: []
+meta:
+  title: Extremely weakly-supervised blood vessel segmentation with physiologically based synthesis and
+    domain adaptation
+  authors:
+  - Peidi Xu
+  - Olga Sosnovtseva
+  - Charlotte Mehlin Sørensen
+  - Kenny Erleben
+  - Sune Darkner
+  published: '2023-05-26'
+  updated: '2023-05-26'
+  categories:
+  - eess.IV
+  - cs.CV
+  - cs.LG
+  abstract: Accurate analysis and modeling of renal functions require a precise segmentation of the renal
+    blood vessels. Micro-CT scans provide image data at higher resolutions, making more small vessels
+    near the renal cortex visible. Although deep-learning-based methods have shown state-of-the-art performance
+    in automatic blood vessel segmentations, they require a large amount of labeled training data. However,
+    voxel-wise labeling in micro-CT scans is extremely time-consuming given the huge volume sizes. To
+    mitigate the problem, we simulate synthetic renal vascular trees physiologically while generating
+    corresponding scans of the simulated trees by training a generative model on unlabeled scans. This
+    enables the generative model to learn the mapping implicitly without the need for explicit functions
+    to emulate the image acquisition process. We further propose an additional segmentation branch over
+    the generative model trained on the generated scans. We demonstrate that the model can directly segment
+    blood vessels on real scans and validate our method on both 3D micro-CT scans of rat kidneys and a
+    proof-of-concept experiment on 2D retinal images. Code and 3D results are available at https://github.com/miccai2023anony/RenalVesselSeg
+  url: https://arxiv.org/abs/2305.17054
+  pdf_url: https://arxiv.org/pdf/2305.17054v1
+  version: v1
+fetched: '2026-11-14'

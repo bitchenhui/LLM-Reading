@@ -1,0 +1,43 @@
+id: paper:arxiv:2603.02581
+status: skipped
+score: 1
+track: processing_enhancement
+matched:
+- ref: concept:SuperResolution
+  count: 1
+  weight: 1
+meta:
+  title: 'ATD: Improved Transformer with Adaptive Token Dictionary for Image Restoration'
+  authors:
+  - Leheng Zhang
+  - Wei Long
+  - Yawei Li
+  - Xingyu Zhou
+  - Xiaorui Zhao
+  - Shuhang Gu
+  published: '2026-03-03'
+  updated: '2026-03-03'
+  categories:
+  - cs.CV
+  abstract: Recently, Transformers have gained significant popularity in image restoration tasks such
+    as image super-resolution and denoising, owing to their superior performance. However, balancing performance
+    and computational burden remains a long-standing problem for transformer-based architectures. Due
+    to the quadratic complexity of self-attention, existing methods often restrict attention to local
+    windows, resulting in limited receptive field and suboptimal performance. To address this issue, we
+    propose Adaptive Token Dictionary (ATD), a novel transformer-based architecture for image restoration
+    that enables global dependency modeling with linear complexity relative to image size. The ATD model
+    incorporates a learnable token dictionary, which summarizes external image priors (i.e., typical image
+    structures) during the training process. To utilize this information, we introduce a token dictionary
+    cross-attention (TDCA) mechanism that enhances the input features via interaction with the learned
+    dictionary. Furthermore, we exploit the category information embedded in the TDCA attention maps to
+    group input features into multiple categories, each representing a cluster of similar features across
+    the image and serving as an attention group. We also integrate the learned category information into
+    the feed-forward network to further improve feature fusion. ATD and its lightweight version ATD-light,
+    achieve state-of-the-art performance on multiple image super-resolution benchmarks. Moreover, we develop
+    ATD-U, a multi-scale variant of ATD, to address other image restoration tasks, including image denoising
+    and JPEG compression artifacts removal. Extensive experiments demonstrate the superiority of out proposed
+    models, both quantitatively and qualitatively.
+  url: https://arxiv.org/abs/2603.02581
+  pdf_url: https://arxiv.org/pdf/2603.02581v1
+  version: v1
+fetched: '2026-11-14'

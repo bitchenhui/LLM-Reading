@@ -1,0 +1,50 @@
+id: paper:arxiv:2412.04130
+status: skipped_low_citation
+score: 2
+track: processing_enhancement
+matched:
+- ref: concept:SuperResolution
+  count: 1
+  weight: 1
+- ref: concept:TrainingFree
+  count: 1
+  weight: 1
+meta:
+  title: Deep priors for satellite image restoration with accurate uncertainties
+  authors:
+  - Biquard Maud
+  - Marie Chabert
+  - Florence Genin
+  - Christophe Latry
+  - Thomas Oberlin
+  published: '2024-12-05'
+  updated: '2025-12-15'
+  categories:
+  - cs.CV
+  - eess.IV
+  - physics.optics
+  abstract: Satellite optical images, upon their on-ground receipt, offer a distorted view of the observed
+    scene. Their restoration, including denoising, deblurring, and sometimes super-resolution, is required
+    before their exploitation. Moreover, quantifying the uncertainties related to this restoration helps
+    to reduce the risks of misinterpreting the image content. Deep learning methods are now state-of-the-art
+    for satellite image restoration. Among them, direct inversion methods train a specific network for
+    each sensor, and generally provide a point estimation of the restored image without the associated
+    uncertainties. Alternatively, deep regularization (DR) methods learn a deep prior on target images
+    before plugging it, as the regularization term, into a model-based optimization scheme. This allows
+    for restoring images from several sensors with a single network and possibly for estimating associated
+    uncertainties. In this paper, we introduce VBLE-xz, a DR method that solves the inverse problem in
+    the latent space of a variational compressive autoencoder (CAE). We adapt the regularization strength
+    by modulating the bitrate of the trained CAE with a training-free approach. Then, VBLE-xz estimates
+    relevant uncertainties jointly in the latent and in the image spaces by sampling an explicit posterior
+    estimated within variational inference. This enables fast posterior sampling, unlike state-of-the-art
+    DR methods that use Markov chains or diffusion-based approaches. We conduct a comprehensive set of
+    experiments on very high-resolution simulated and real Pléiades images, asserting the performance,
+    robustness and scalability of the proposed method. They demonstrate that VBLE-xz represents a compelling
+    alternative to direct inversion methods when uncertainty quantification is required. The code associated
+    to this paper is available in https://github.com/MaudBqrd/VBLExz.
+  url: https://arxiv.org/abs/2412.04130
+  pdf_url: https://arxiv.org/pdf/2412.04130v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 3
+citation_year: 2024

@@ -1,0 +1,43 @@
+id: paper:arxiv:2608.07861
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: How Much Does It Cost to Answer My Question? Benchmarking Cloud VLM-based VQA Systems
+  authors:
+  - Henri Vanhuynegem
+  - Weitao Xu
+  - Yiran Shen
+  - Guohao Lan
+  published: '2026-08-08'
+  updated: '2026-08-08'
+  categories:
+  - cs.CV
+  - cs.HC
+  - cs.IR
+  - cs.MM
+  abstract: 'Vision-language models (VLMs) are becoming a practical backend for mobile visual question
+    answering (VQA) systems, enabling smartphones and smart glasses to answer users'' questions about
+    the physical world. Since modern VLMs remain difficult to run on mobile and edge devices, VQA systems
+    increasingly offload inference to cloud-based VLMs. This gives mobile devices access to stronger computation,
+    but it also makes visual input preparation a key system variable: how the image is prepared before
+    offloading affects not only answer quality but also payload size, token cost, and system latency.
+    Proprietary APIs expose little control over model internals or serving behavior, leaving client-side
+    preprocessing as the main practical optimization space for downstream developers. Many such techniques
+    have been proposed for visual offloading, yet their cost-quality impact on commercial cloud VLMs has
+    never been studied. To fill this gap, we present VQABench, the first systematic benchmark that treats
+    client-side input preprocessing as a controlled variable for cloud-VLM-based VQA. We evaluate 12 preprocessing
+    techniques across three VQA datasets and four commercial VLMs from three providers, totaling 95,168
+    API calls. Our results show that preprocessing is not universally beneficial: its effectiveness depends
+    on the target model, API paradigm, provider token-accounting rule, and task formulation. A poorly
+    selected preprocessing strategy can increase deployment cost or latency while degrading answer accuracy.
+    Overall, our benchmark clarifies when preprocessing helps, when it fails, and why, providing insights
+    to guide future research and real-world deployment of VQA systems.'
+  url: https://arxiv.org/abs/2608.07861
+  pdf_url: https://arxiv.org/pdf/2608.07861v1
+  version: v1
+fetched: '2026-11-14'

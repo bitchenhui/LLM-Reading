@@ -1,0 +1,45 @@
+id: paper:arxiv:2307.05092
+status: pending
+score: 3
+track: video_image_coding
+matched:
+- ref: codec:VVC
+  count: 2
+  weight: 3
+meta:
+  title: Offline and Online Optical Flow Enhancement for Deep Video Compression
+  authors:
+  - Chuanbo Tang
+  - Xihua Sheng
+  - Zhuoyuan Li
+  - Haotian Zhang
+  - Li Li
+  - Dong Liu
+  published: '2023-07-11'
+  updated: '2023-07-11'
+  categories:
+  - cs.CV
+  - eess.IV
+  abstract: 'Video compression relies heavily on exploiting the temporal redundancy between video frames,
+    which is usually achieved by estimating and using the motion information. The motion information is
+    represented as optical flows in most of the existing deep video compression networks. Indeed, these
+    networks often adopt pre-trained optical flow estimation networks for motion estimation. The optical
+    flows, however, may be less suitable for video compression due to the following two factors. First,
+    the optical flow estimation networks were trained to perform inter-frame prediction as accurately
+    as possible, but the optical flows themselves may cost too many bits to encode. Second, the optical
+    flow estimation networks were trained on synthetic data, and may not generalize well enough to real-world
+    videos. We address the twofold limitations by enhancing the optical flows in two stages: offline and
+    online. In the offline stage, we fine-tune a trained optical flow estimation network with the motion
+    information provided by a traditional (non-deep) video compression scheme, e.g. H.266/VVC, as we believe
+    the motion information of H.266/VVC achieves a better rate-distortion trade-off. In the online stage,
+    we further optimize the latent features of the optical flows with a gradient descent-based algorithm
+    for the video to be compressed, so as to enhance the adaptivity of the optical flows. We conduct experiments
+    on a state-of-the-art deep video compression scheme, DCVC. Experimental results demonstrate that the
+    proposed offline and online enhancement together achieves on average 12.8% bitrate saving on the tested
+    videos, without increasing the model or computational complexity of the decoder side.'
+  url: https://arxiv.org/abs/2307.05092
+  pdf_url: https://arxiv.org/pdf/2307.05092v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 45
+citation_year: 2023

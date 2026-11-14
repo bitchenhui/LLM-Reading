@@ -1,0 +1,35 @@
+id: paper:arxiv:2512.08492
+status: skipped
+score: 1
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+meta:
+  title: 'Autonomous Issue Resolver: Towards Zero-Touch Code Maintenance'
+  authors:
+  - Aliaksei Kaliutau
+  published: '2025-12-09'
+  updated: '2026-03-27'
+  categories:
+  - cs.AI
+  abstract: Recent advances in Large Language Models have revolutionized function-level code generation;
+    however, repository-scale Automated Program Repair (APR) remains a significant challenge. Current
+    approaches typically employ a control-centric paradigm, forcing agents to navigate complex directory
+    structures and irrelevant control logic. In this paper, we propose a paradigm shift from the standard
+    Code Property Graphs (CPGs) to the concept of Data Transformation Graph (DTG) that inverts the topology
+    by modeling data states as nodes and functions as edges, enabling agents to trace logic defects through
+    data lineage rather than control flow. We introduce a multi-agent framework that reconciles data integrity
+    navigation with control flow logic. Our theoretical analysis and case studies demonstrate that this
+    approach resolves the "Semantic Trap" inherent in standard RAG systems in modern coding agents. We
+    provide a comprehensive implementation in the form of Autonomous Issue Resolver (AIR), a self-improvement
+    system for zero-touch code maintenance that utilizes neuro-symbolic reasoning and uses the DTG structure
+    for scalable logic repair. Our approach has demonstrated good results on several SWE benchmarks, reaching
+    a resolution rate of 87.1% on SWE-Verified benchmark. Our approach directly addresses the core limitations
+    of current AI code-assistant tools and tackles the critical need for a more robust foundation for
+    our increasingly software-dependent world.
+  url: https://arxiv.org/abs/2512.08492
+  pdf_url: https://arxiv.org/pdf/2512.08492v3
+  version: v3
+fetched: '2026-11-14'

@@ -1,0 +1,47 @@
+id: paper:arxiv:2605.13457
+status: skipped_low_citation
+score: 2
+track: processing_enhancement
+matched:
+- ref: concept:SuperResolution
+  count: 2
+  weight: 1
+- ref: org:NVIDIA
+  count: 1
+  weight: 1
+meta:
+  title: 'OP4KSR: One-Step Patch-Free 4K Super-Resolution with Periodic Artifact Suppression'
+  authors:
+  - Chengyan Deng
+  - Pengbin Yu
+  - Zhentao Chen
+  - Wei Shen
+  - Kai Zhang
+  - Meng Li
+  - Lunxi Yuan
+  - Xue Zhou
+  - Li Yu
+  published: '2026-05-13'
+  updated: '2026-05-13'
+  categories:
+  - cs.CV
+  abstract: Diffusion-based real-world image super-resolution (Real-ISR) has achieved remarkable perceptual
+    quality; however, directly super-resolving images to 4K remains limited by extreme memory consumption.
+    Consequently, prior methods adopt patch-based inference, sacrificing global context and introducing
+    semantic confusion, spatial inconsistency, and severe latency. We propose OP4KSR, a one-step patch-free
+    4K SR approach built upon the powerful Flux backbone. By leveraging the extreme-compression F16 VAE,
+    OP4KSR makes 4K SR inference tractable under practical GPU budgets, preserving global spatial-semantic
+    coherence while enabling highly efficient inference. However, adapting this one-step architecture
+    intrinsically triggers severe periodic artifacts. We trace this to a RoPE base frequency allocation
+    mismatch and intra-token spatial ambiguity, both exacerbated by the lack of iterative refinement.
+    To suppress these artifacts, we couple RoPE base frequency rescaling (RFR) with an autocorrelation-based
+    periodicity loss ($\mathcal{L}_\text{AP}$). Furthermore, we curate a dedicated training dataset alongside
+    three benchmarks (one synthetic and two real-world) to advance 4K SR research. Extensive experiments
+    demonstrate that OP4KSR achieves competitive perceptual quality with efficient inference, generating
+    a $4096\times4096$ output in only 5.75 seconds on a single NVIDIA H20 GPU.
+  url: https://arxiv.org/abs/2605.13457
+  pdf_url: https://arxiv.org/pdf/2605.13457v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 1
+citation_year: 2026

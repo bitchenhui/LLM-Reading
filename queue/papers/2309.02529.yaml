@@ -1,0 +1,62 @@
+id: paper:arxiv:2309.02529
+status: pending
+score: 8
+track: video_image_coding
+matched:
+- ref: codec:VVC
+  count: 2
+  weight: 3
+- ref: concept:EntropyModel
+  count: 1
+  weight: 1
+- ref: dataset:Kodak
+  count: 1
+  weight: 1
+- ref: metric:MS-SSIM
+  count: 1
+  weight: 1
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+- ref: metric:SSIM
+  count: 1
+  weight: 1
+meta:
+  title: Fast and High-Performance Learned Image Compression With Improved Checkerboard Context Model,
+    Deformable Residual Module, and Knowledge Distillation
+  authors:
+  - Haisheng Fu
+  - Feng Liang
+  - Jie Liang
+  - Yongqiang Wang
+  - Guohe Zhang
+  - Jingning Han
+  published: '2023-09-05'
+  updated: '2023-09-05'
+  categories:
+  - eess.IV
+  abstract: Deep learning-based image compression has made great progresses recently. However, many leading
+    schemes use serial context-adaptive entropy model to improve the rate-distortion (R-D) performance,
+    which is very slow. In addition, the complexities of the encoding and decoding networks are quite
+    high and not suitable for many practical applications. In this paper, we introduce four techniques
+    to balance the trade-off between the complexity and performance. We are the first to introduce deformable
+    convolutional module in compression framework, which can remove more redundancies in the input image,
+    thereby enhancing compression performance. Second, we design a checkerboard context model with two
+    separate distribution parameter estimation networks and different probability models, which enables
+    parallel decoding without sacrificing the performance compared to the sequential context-adaptive
+    model. Third, we develop an improved three-step knowledge distillation and training scheme to achieve
+    different trade-offs between the complexity and the performance of the decoder network, which transfers
+    both the final and intermediate results of the teacher network to the student network to help its
+    training. Fourth, we introduce $L_{1}$ regularization to make the numerical values of the latent representation
+    more sparse. Then we only encode non-zero channels in the encoding and decoding process, which can
+    greatly reduce the encoding and decoding time. Experiments show that compared to the state-of-the-art
+    learned image coding scheme, our method can be about 20 times faster in encoding and 70-90 times faster
+    in decoding, and our R-D performance is also $2.3 \%$ higher. Our method outperforms the traditional
+    approach in H.266/VVC-intra (4:4:4) and some leading learned schemes in terms of PSNR and MS-SSIM
+    metrics when testing on Kodak and Tecnick-40 datasets.
+  url: https://arxiv.org/abs/2309.02529
+  pdf_url: https://arxiv.org/pdf/2309.02529v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 27
+citation_year: 2023

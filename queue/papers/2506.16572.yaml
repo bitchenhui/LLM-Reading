@@ -1,0 +1,32 @@
+id: paper:arxiv:2506.16572
+status: skipped
+score: 0
+track: video_image_coding
+matched: []
+meta:
+  title: Single-step Diffusion for Image Compression at Ultra-Low Bitrates
+  authors:
+  - Chanung Park
+  - Joo Chan Lee
+  - Jong Hwan Ko
+  published: '2025-06-19'
+  updated: '2025-09-22'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: 'Although there have been significant advancements in image compression techniques, such as
+    standard and learned codecs, these methods still suffer from severe quality degradation at extremely
+    low bits per pixel. While recent diffusion-based models provided enhanced generative performance at
+    low bitrates, they often yields limited perceptual quality and prohibitive decoding latency due to
+    multiple denoising steps. In this paper, we propose the single-step diffusion model for image compression
+    that delivers high perceptual quality and fast decoding at ultra-low bitrates. Our approach incorporates
+    two key innovations: (i) Vector-Quantized Residual (VQ-Residual) training, which factorizes a structural
+    base code and a learned residual in latent space, capturing both global geometry and high-frequency
+    details; and (ii) rate-aware noise modulation, which tunes denoising strength to match the desired
+    bitrate. Extensive experiments show that ours achieves comparable compression performance to state-of-the-art
+    methods while improving decoding speed by about 50x compared to prior diffusion-based methods, greatly
+    enhancing the practicality of generative codecs.'
+  url: https://arxiv.org/abs/2506.16572
+  pdf_url: https://arxiv.org/pdf/2506.16572v2
+  version: v2
+fetched: '2026-11-14'

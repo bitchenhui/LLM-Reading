@@ -1,0 +1,36 @@
+id: paper:arxiv:2412.09231
+status: skipped
+score: 0
+track: video_image_coding
+matched: []
+meta:
+  title: Versatile Volumetric Medical Image Coding for Human-Machine Vision
+  authors:
+  - Jietao Chen
+  - Weijie Chen
+  - Qianjian Xing
+  - Feng Yu
+  published: '2024-12-12'
+  updated: '2024-12-12'
+  categories:
+  - eess.IV
+  abstract: Neural image compression (NIC) has received considerable attention due to its significant
+    advantages in feature representation and data optimization. However, most existing NIC methods for
+    volumetric medical images focus solely on improving human-oriented perception. For these methods,
+    data need to be decoded back to pixels for downstream machine learning analytics, which is a process
+    that lowers the efficiency of diagnosis and treatment in modern digital healthcare scenarios. In this
+    paper, we propose a Versatile Volumetric Medical Image Coding (VVMIC) framework for both human and
+    machine vision, enabling various analytics of coded representations directly without decoding them
+    into pixels. Considering the specific three-dimensional structure distinguished from natural frame
+    images, a Versatile Volumetric Autoencoder (VVAE) module is crafted to learn the inter-slice latent
+    representations to enhance the expressiveness of the current-slice latent representations, and to
+    produce intermediate decoding features for downstream reconstruction and segmentation tasks. To further
+    improve coding performance, a multi-dimensional context model is assembled by aggregating the inter-slice
+    latent context with the spatial-channel context and the hierarchical hypercontext. Experimental results
+    show that our VVMIC framework maintains high-quality image reconstruction for human vision while achieving
+    accurate segmentation results for machine-vision tasks compared to a number of reported traditional
+    and neural methods.
+  url: https://arxiv.org/abs/2412.09231
+  pdf_url: https://arxiv.org/pdf/2412.09231v1
+  version: v1
+fetched: '2026-11-14'

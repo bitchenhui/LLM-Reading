@@ -1,0 +1,51 @@
+id: paper:arxiv:2602.10744
+status: skipped_low_citation
+score: 2
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 3
+  weight: 1
+- ref: concept:SuperResolution
+  count: 2
+  weight: 1
+meta:
+  title: Self-Supervised Image Super-Resolution Quality Assessment based on Content-Free Multi-Model Oriented
+    Representation Learning
+  authors:
+  - Kian Majlessi
+  - Amir Masoud Soltani
+  - Mohammad Ebrahim Mahdavi
+  - Aurelien Gourrier
+  - Peyman Adibi
+  published: '2026-02-11'
+  updated: '2026-02-11'
+  categories:
+  - cs.CV
+  - cs.AI
+  - cs.LG
+  abstract: Super-resolution (SR) applied to real-world low-resolution (LR) images often results in complex,
+    irregular degradations that stem from the inherent complexity of natural scene acquisition. In contrast
+    to SR artifacts arising from synthetic LR images created under well-defined scenarios, those distortions
+    are highly unpredictable and vary significantly across different real-life contexts. Consequently,
+    assessing the quality of SR images (SR-IQA) obtained from realistic LR, remains a challenging and
+    underexplored problem. In this work, we introduce a no-reference SR-IQA approach tailored for such
+    highly ill-posed realistic settings. The proposed method enables domain-adaptive IQA for real-world
+    SR applications, particularly in data-scarce domains. We hypothesize that degradations in super-resolved
+    images are strongly dependent on the underlying SR algorithms, rather than being solely determined
+    by image content. To this end, we introduce a self-supervised learning (SSL) strategy that first pretrains
+    multiple SR model oriented representations in a pretext stage. Our contrastive learning framework
+    forms positive pairs from images produced by the same SR model and negative pairs from those generated
+    by different methods, independent of image content. The proposed approach S3 RIQA, further incorporates
+    targeted preprocessing to extract complementary quality information and an auxiliary task to better
+    handle the various degradation profiles associated with different SR scaling factors. To this end,
+    we constructed a new dataset, SRMORSS, to support unsupervised pretext training; it includes a wide
+    range of SR algorithms applied to numerous real LR images, which addresses a gap in existing datasets.
+    Experiments on real SR-IQA benchmarks demonstrate that S3 RIQA consistently outperforms most state-of-the-art
+    relevant metrics.
+  url: https://arxiv.org/abs/2602.10744
+  pdf_url: https://arxiv.org/pdf/2602.10744v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 1
+citation_year: 2026

@@ -1,0 +1,41 @@
+id: paper:arxiv:2603.22641
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 3
+  weight: 1
+meta:
+  title: 'Q-Tacit: Image Quality Assessment via Latent Visual Reasoning'
+  authors:
+  - Yuxuan Jiang
+  - Yixuan Li
+  - Hanwei Zhu
+  - Siyue Teng
+  - Fan Zhang
+  - David Bull
+  published: '2026-03-23'
+  updated: '2026-03-23'
+  categories:
+  - cs.CV
+  abstract: 'Vision-Language Model (VLM)-based image quality assessment (IQA) has been significantly advanced
+    by incorporating Chain-of-Thought (CoT) reasoning. Recent work has refined image quality reasoning
+    by applying reinforcement learning (RL) and leveraging active visual tools. However, such strategies
+    are typically language-centric, with visual information being treated as static preconditions. Quality-related
+    visual cues often cannot be abstracted into text in extenso due to the gap between discrete textual
+    tokens and quality perception space, which in turn restricts the reasoning effectiveness for visually
+    intensive IQA tasks. In this paper, we revisit this by asking the question, "Is natural language the
+    ideal space for quality reasoning?" and, as a consequence, we propose Q-Tacit, a new paradigm that
+    elicits VLMs to reason beyond natural language in the latent quality space. Our approach follows a
+    synergistic two-stage process: (i) injecting structural visual quality priors into the latent space,
+    and (ii) calibrating latent reasoning trajectories to improve quality assessment ability. Extensive
+    experiments demonstrate that Q-Tacit can effectively perform quality reasoning with significantly
+    fewer tokens than previous reasoning-based methods, while achieving strong overall performance. This
+    paper validates the proposition that language is not the only compact representation suitable for
+    visual quality, opening possibilities for further exploration of effective latent reasoning paradigms
+    for IQA. Source code will be released to support future research.'
+  url: https://arxiv.org/abs/2603.22641
+  pdf_url: https://arxiv.org/pdf/2603.22641v1
+  version: v1
+fetched: '2026-11-14'

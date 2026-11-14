@@ -1,0 +1,41 @@
+id: paper:arxiv:2405.04274
+status: skipped
+score: 1
+track: video_image_coding
+matched:
+- ref: concept:GOP
+  count: 2
+  weight: 1
+meta:
+  title: Group-aware Parameter-efficient Updating for Content-Adaptive Neural Video Compression
+  authors:
+  - Zhenghao Chen
+  - Luping Zhou
+  - Zhihao Hu
+  - Dong Xu
+  published: '2024-05-07'
+  updated: '2024-09-04'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: 'Content-adaptive compression is crucial for enhancing the adaptability of the pre-trained
+    neural codec for various contents. Although these methods have been very practical in neural image
+    compression (NIC), their application in neural video compression (NVC) is still limited due to two
+    main aspects: 1), video compression relies heavily on temporal redundancy, therefore updating just
+    one or a few frames can lead to significant errors accumulating over time; 2), NVC frameworks are
+    generally more complex, with many large components that are not easy to update quickly during encoding.
+    To address the previously mentioned challenges, we have developed a content-adaptive NVC technique
+    called Group-aware Parameter-Efficient Updating (GPU). Initially, to minimize error accumulation,
+    we adopt a group-aware approach for updating encoder parameters. This involves adopting a patch-based
+    Group of Pictures (GoP) training strategy to segment a video into patch-based GoPs, which will be
+    updated to facilitate a globally optimized domain-transferable solution. Subsequently, we introduce
+    a parameter-efficient delta-tuning strategy, which is achieved by integrating several light-weight
+    adapters into each coding component of the encoding process by both serial and parallel configuration.
+    Such architecture-agnostic modules stimulate the components with large parameters, thereby reducing
+    both the update cost and the encoding time. We incorporate our GPU into the latest NVC framework and
+    conduct comprehensive experiments, whose results showcase outstanding video compression efficiency
+    across four video benchmarks and adaptability of one medical image benchmark.'
+  url: https://arxiv.org/abs/2405.04274
+  pdf_url: https://arxiv.org/pdf/2405.04274v2
+  version: v2
+fetched: '2026-11-14'

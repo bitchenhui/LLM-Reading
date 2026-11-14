@@ -1,0 +1,59 @@
+id: paper:arxiv:2602.03302
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 2
+  weight: 1
+meta:
+  title: Full end-to-end diagnostic workflow automation of 3D OCT via foundation model-driven AI for retinal
+    diseases
+  authors:
+  - Jinze Zhang
+  - Jian Zhong
+  - Li Lin
+  - Jiaxiong Li
+  - Ke Ma
+  - Naiyang Li
+  - Meng Li
+  - Yuan Pan
+  - Zeyu Meng
+  - Mengyun Zhou
+  - Shang Huang
+  - Shilong Yu
+  - Zhengyu Duan
+  - Sutong Li
+  - Honghui Xia
+  - Juping Liu
+  - Dan Liang
+  - Yantao Wei
+  - Xiaoying Tang
+  - Jin Yuan
+  - Peng Xiao
+  published: '2026-02-03'
+  updated: '2026-02-03'
+  categories:
+  - cs.CV
+  - cs.AI
+  abstract: 'Optical coherence tomography (OCT) has revolutionized retinal disease diagnosis with its
+    high-resolution and three-dimensional imaging nature, yet its full diagnostic automation in clinical
+    practices remains constrained by multi-stage workflows and conventional single-slice single-task AI
+    models. We present Full-process OCT-based Clinical Utility System (FOCUS), a foundation model-driven
+    framework enabling end-to-end automation of 3D OCT retinal disease diagnosis. FOCUS sequentially performs
+    image quality assessment with EfficientNetV2-S, followed by abnormality detection and multi-disease
+    classification using a fine-tuned Vision Foundation Model. Crucially, FOCUS leverages a unified adaptive
+    aggregation method to intelligently integrate 2D slices-level predictions into comprehensive 3D patient-level
+    diagnosis. Trained and tested on 3,300 patients (40,672 slices), and externally validated on 1,345
+    patients (18,498 slices) across four different-tier centers and diverse OCT devices, FOCUS achieved
+    high F1 scores for quality assessment (99.01%), abnormally detection (97.46%), and patient-level diagnosis
+    (94.39%). Real-world validation across centers also showed stable performance (F1: 90.22%-95.24%).
+    In human-machine comparisons, FOCUS matched expert performance in abnormality detection (F1: 95.47%
+    vs 90.91%) and multi-disease diagnosis (F1: 93.49% vs 91.35%), while demonstrating better efficiency.
+    FOCUS automates the image-to-diagnosis pipeline, representing a critical advance towards unmanned
+    ophthalmology with a validated blueprint for autonomous screening to enhance population scale retinal
+    care accessibility and efficiency.'
+  url: https://arxiv.org/abs/2602.03302
+  pdf_url: https://arxiv.org/pdf/2602.03302v1
+  version: v1
+fetched: '2026-11-14'

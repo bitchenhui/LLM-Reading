@@ -1,0 +1,38 @@
+id: paper:arxiv:2409.13382
+status: skipped
+score: 1
+track: audio_coding
+matched:
+- ref: concept:NeuralAudioCodec
+  count: 1
+  weight: 1
+meta:
+  title: Audio Codec Augmentation for Robust Collaborative Watermarking of Speech Synthesis
+  authors:
+  - Lauri Juvela
+  - Xin Wang
+  published: '2024-09-20'
+  updated: '2024-09-20'
+  categories:
+  - cs.SD
+  - cs.AI
+  - eess.AS
+  abstract: Automatic detection of synthetic speech is becoming increasingly important as current synthesis
+    methods are both near indistinguishable from human speech and widely accessible to the public. Audio
+    watermarking and other active disclosure methods of are attracting research activity, as they can
+    complement traditional deepfake defenses based on passive detection. In both active and passive detection,
+    robustness is of major interest. Traditional audio watermarks are particularly susceptible to removal
+    attacks by audio codec application. Most generated speech and audio content released into the wild
+    passes through an audio codec purely as a distribution method. We recently proposed collaborative
+    watermarking as method for making generated speech more easily detectable over a noisy but differentiable
+    transmission channel. This paper extends the channel augmentation to work with non-differentiable
+    traditional audio codecs and neural audio codecs and evaluates transferability and effect of codec
+    bitrate over various configurations. The results show that collaborative watermarking can be reliably
+    augmented by black-box audio codecs using a waveform-domain straight-through-estimator for gradient
+    approximation. Furthermore, that results show that channel augmentation with a neural audio codec
+    transfers well to traditional codecs. Listening tests demonstrate collaborative watermarking incurs
+    negligible perceptual degradation with high bitrate codecs or DAC at 8kbps.
+  url: https://arxiv.org/abs/2409.13382
+  pdf_url: https://arxiv.org/pdf/2409.13382v1
+  version: v1
+fetched: '2026-11-14'

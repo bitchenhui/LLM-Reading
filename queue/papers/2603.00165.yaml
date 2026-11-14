@@ -1,0 +1,41 @@
+id: paper:arxiv:2603.00165
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'ConFoThinking: Consolidated Focused Attention Driven Thinking for Visual Question Answering'
+  authors:
+  - Zhaodong Wu
+  - Haochen Xue
+  - Qi Cao
+  - Wenqi Mo
+  - Yu Pei
+  - Wenqi Xu
+  - Jionglong Su
+  - Yang Liu
+  published: '2026-02-26'
+  updated: '2026-02-26'
+  categories:
+  - cs.CV
+  abstract: 'Thinking with Images improves fine-grained VQA for MLLMs by emphasizing visual cues. However,
+    tool-augmented methods depend on the capacity of grounding, which remains unreliable for MLLMs. In
+    parallel, attention-driven methods to crop the Region of Interest (ROIs) are proposed but they are
+    constrained by (1) fragmented attention signals scattered across layers, leading to suboptimal localization
+    and (2) relying on question- or redundant-text-conditioned attention extraction. Our analysis reveals
+    three patterns: MLLMs may attend to the correct region yet generate incorrect coordinates, where-to-look
+    attention is often fragmented across layers, and attention extraction is query-sensitive. Motivated
+    by these, We propose ConFoThinking, a Consolidated-Focused-Attention-Driven Thinking framework that
+    learns to aggregate attention into a designated intermediate layer, from which we mine and zoom in
+    salient regions for downstream visual understanding. Moreover, we extract attention using concise
+    semantic cues of what to look into, which mitigates the semantic noise introduced by question- or
+    redundant-text-based attention extraction. Experiments across five VQA benchmarks demonstrate ConFoThinking
+    significantly improves perception performance. The code, checkpoints, and dataset will be released
+    after being accepted.'
+  url: https://arxiv.org/abs/2603.00165
+  pdf_url: https://arxiv.org/pdf/2603.00165v1
+  version: v1
+fetched: '2026-11-14'

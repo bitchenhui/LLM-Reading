@@ -1,0 +1,38 @@
+id: paper:arxiv:2604.12335
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'SynMulti: Synthetic-to-Real Learning for Multimodal Video Understanding'
+  authors:
+  - Tanzila Rahman
+  - Renjie Liao
+  - Leonid Sigal
+  published: '2026-04-14'
+  updated: '2026-08-31'
+  categories:
+  - cs.CV
+  - cs.LG
+  abstract: 'Training multimodal large language models (MLLMs) for video understanding requires large-scale
+    annotated data spanning diverse tasks such as object counting, question answering, and segmentation.
+    However, collecting and annotating multimodal video data in real-world is costly, slow, and inherently
+    limited in diversity and coverage. To address this challenge, we propose~\textbf{SynMulti} dataset,
+    along with a unified synthetic data generation pipeline capable of automatically producing unlimited
+    multimodal video data with rich and diverse supervision. Our framework supports multiple task formats
+    within a single pipeline, enabling scalable and consistent data creation across tasks. To further
+    enhance reasoning ability, we introduce a VQA-based fine-tuning strategy that trains models to answer
+    structured questions about visual content rather than relying solely on captions or simple instructions.
+    This formulation encourages deeper visual grounding and reasoning. We evaluate our approach in three
+    challenging tasks: video object counting, video-based visual question answering, and video object
+    segmentation. Experimental results demonstrate that models trained predominantly on synthetic data
+    generalize effectively to real-world datasets, often outperforming traditionally trained counterparts.
+    Our findings highlight the potential of unified synthetic data pipelines as a scalable alternative
+    to expensive real-world annotation for multimodal video understanding.'
+  url: https://arxiv.org/abs/2604.12335
+  pdf_url: https://arxiv.org/pdf/2604.12335v2
+  version: v2
+fetched: '2026-11-14'

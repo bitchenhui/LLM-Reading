@@ -1,0 +1,43 @@
+id: paper:arxiv:2512.05395
+status: pending
+score: 4
+track: video_image_coding
+matched:
+- ref: impl:VTM
+  count: 1
+  weight: 3
+- ref: org:3GPP
+  count: 1
+  weight: 1
+meta:
+  title: Image Semantic Communication with Quadtree Partition-based Coding
+  authors:
+  - Yinhuan Huang
+  - Zhijin Qin
+  published: '2025-12-05'
+  updated: '2025-12-05'
+  categories:
+  - eess.IV
+  abstract: Deep learning based semantic communication (DeepSC) system has emerged as a promising paradigm
+    for efficient wireless transmission. However, existing image DeepSC methods, frequently encounter
+    challenges in balancing rate-distortion performance and computational complexity, and often exhibit
+    inferior performance compared to traditional schemes, especially on high-resolution datasets. To address
+    these limitations, we propose a novel image DeepSC system, using quadtree partition-based joint semantic-channel
+    coding, named Quad-DeepSC, which maintains low complexity while achieving state-of-the-art transmission
+    performance. Based on maturing learned image compression technologies, we establish a unified DeepSC
+    system design and training pipeline. The proposed Quad-DeepSC integrates quadtree partition-based
+    entropy estimation and feature coding modules with lightweight feature extraction and reconstruction
+    networks to form an end-to-end architecture. During training, all components except the feature coding
+    modules are jointly optimized as a compact learned image codec, Quad-LIC, for source compression tasks.
+    The pretrained Quad-LIC is then embedded into Quad-DeepSC and fine-tuned end-to-end over wireless
+    channels. Extensive experimental results demonstrate that Quad-DeepSC is the first DeepSC system to
+    surpass conventional communication systems, which employ VTM for source coding and adopt the optimal
+    MCS index under 3GPP standards for channel coding and digital modulation, in performance across datasets
+    of varying resolutions. Notably, both Quad-DeepSC and Quad-LIC exhibit minimal latency, rendering
+    them well-suited for deployment in real-time wireless communication systems.
+  url: https://arxiv.org/abs/2512.05395
+  pdf_url: https://arxiv.org/pdf/2512.05395v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 4
+citation_year: 2025

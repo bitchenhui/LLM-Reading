@@ -1,0 +1,47 @@
+id: paper:arxiv:2509.10486
+status: pending
+score: 2
+track: streaming_delivery
+matched:
+- ref: concept:ABR
+  count: 3
+  weight: 1
+- ref: concept:QoE
+  count: 3
+  weight: 1
+meta:
+  title: 'SABR: A Stable Adaptive Bitrate Framework Using Behavior Cloning Pretraining and Reinforcement
+    Learning Fine-Tuning'
+  authors:
+  - Pengcheng Luo
+  - Yunyang Zhao
+  - Bowen Zhang
+  - Genke Yang
+  - Boon-Hee Soong
+  - Chau Yuen
+  published: '2025-08-30'
+  updated: '2025-08-30'
+  categories:
+  - cs.NI
+  - cs.AI
+  - cs.LG
+  - cs.MM
+  abstract: With the advent of 5G, the internet has entered a new video-centric era. From short-video
+    platforms like TikTok to long-video platforms like Bilibili, online video services are reshaping user
+    consumption habits. Adaptive Bitrate (ABR) control is widely recognized as a critical factor influencing
+    Quality of Experience (QoE). Recent learning-based ABR methods have attracted increasing attention.
+    However, most of them rely on limited network trace sets during training and overlook the wide-distribution
+    characteristics of real-world network conditions, resulting in poor generalization in out-of-distribution
+    (OOD) scenarios. To address this limitation, we propose SABR, a training framework that combines behavior
+    cloning (BC) pretraining with reinforcement learning (RL) fine-tuning. We also introduce benchmarks,
+    ABRBench-3G and ABRBench-4G+, which provide wide-coverage training traces and dedicated OOD test sets
+    for assessing robustness to unseen network conditions. Experimental results demonstrate that SABR
+    achieves the best average rank compared with Pensieve, Comyco, and NetLLM across the proposed benchmarks.
+    These results indicate that SABR enables more stable learning across wide distributions and improves
+    generalization to unseen network conditions.
+  url: https://arxiv.org/abs/2509.10486
+  pdf_url: https://arxiv.org/pdf/2509.10486v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 6
+citation_year: 2025

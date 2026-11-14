@@ -1,0 +1,46 @@
+id: paper:arxiv:2509.15194
+status: skipped
+score: 1
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+meta:
+  title: 'Evolving Language Models without Labels: Majority Drives Selection, Novelty Promotes Variation'
+  authors:
+  - Yujun Zhou
+  - Zhenwen Liang
+  - Haolin Liu
+  - Wenhao Yu
+  - Kishan Panaganti
+  - Linfeng Song
+  - Dian Yu
+  - Xiangliang Zhang
+  - Haitao Mi
+  - Dong Yu
+  published: '2025-09-18'
+  updated: '2026-10-24'
+  categories:
+  - cs.LG
+  - cs.CL
+  abstract: 'Large language models (LLMs) can improve through reinforcement learning with verifiable rewards
+    (RLVR), but many settings lack reference answers or external verifiers. Label-free self-improvement
+    instead constructs training signals from the model''s own outputs. Because the same policy generates
+    both the candidate responses and the signals derived from them, each update also changes the candidates
+    available for future training, creating a self-reinforcing feedback loop. We identify a failure mode
+    of this loop, which we call selection-induced diversity collapse: repeated self-selection can progressively
+    narrow the candidate pool and make alternative correct solutions harder to sample. To address this
+    problem, we propose EVOL-RL, which balances selection and variation. Majority voting provides a stable
+    selection signal, while embedding-based novelty refines credit among responses with the same selection
+    status; entropy regularization and asymmetric clipping further support this process by maintaining
+    diverse rollouts and preserving rare, high-advantage updates. Across multiple training distributions,
+    model scales, backbones, and matched label-free baselines, EVOL-RL consistently improves pass@n while
+    generally maintaining or improving pass@1. For example, when trained without labels on AIME24, Qwen3-4B-Base
+    improves over TTRL on held-out AIME25 from 4.6% to 17.1% in pass@1 and from 18.5% to 42.0% in pass@16.
+    Training analyses further show that when the current majority is wrong, EVOL-RL better preserves alternative
+    correct solutions. The code is available at: https://github.com/YujunZhou/EVOL-RL.'
+  url: https://arxiv.org/abs/2509.15194
+  pdf_url: https://arxiv.org/pdf/2509.15194v4
+  version: v4
+fetched: '2026-11-14'

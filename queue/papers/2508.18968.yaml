@@ -1,0 +1,41 @@
+id: paper:arxiv:2508.18968
+status: skipped_low_citation
+score: 4
+track: video_image_coding
+matched:
+- ref: codec:HEVC
+  count: 1
+  weight: 3
+- ref: concept:EntropyModel
+  count: 1
+  weight: 1
+meta:
+  title: Lossless 4:2:0 Screen Content Coding Using Luma-Guided Soft Context Formation
+  authors:
+  - Hannah Och
+  - André Kaup
+  published: '2025-08-26'
+  updated: '2025-08-26'
+  categories:
+  - eess.IV
+  - cs.MM
+  - eess.SP
+  abstract: The soft context formation coder is a pixel-wise state-of-the-art lossless screen content
+    coder using pattern matching and color palette coding in combination with arithmetic coding. It achieves
+    excellent compression performance on screen content images in RGB 4:4:4 format with few distinct colors.
+    In contrast to many other lossless compression methods, it codes entire color pixels at once, i.e.,
+    all color components of one pixel are coded together. Consequently, it does not natively support image
+    formats with downsampled chroma, such as YCbCr 4:2:0, which is an often used chroma format in video
+    compression. In this paper, we extend the soft context formation coding capabilities to 4:2:0 image
+    compression, by successively coding Y and CbCr planes based on an analysis of normalized mutual information
+    between image planes. Additionally, we propose an enhancement to the chroma prediction based on the
+    luminance plane. Furthermore, we propose to transmit side-information about occurring luma-chroma
+    combinations to improve chroma probability distribution modelling. Averaged over a large screen content
+    image dataset, our proposed method outperforms HEVC-SCC, with HEVC-SCC needing 5.66% more bitrate
+    compared to our method.
+  url: https://arxiv.org/abs/2508.18968
+  pdf_url: https://arxiv.org/pdf/2508.18968v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 2
+citation_year: 2025

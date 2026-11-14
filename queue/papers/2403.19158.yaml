@@ -1,0 +1,32 @@
+id: paper:arxiv:2403.19158
+status: skipped
+score: 0
+track: video_image_coding
+matched: []
+meta:
+  title: Uncertainty-Aware Deep Video Compression with Ensembles
+  authors:
+  - Wufei Ma
+  - Jiahao Li
+  - Bin Li
+  - Yan Lu
+  published: '2024-03-28'
+  updated: '2024-03-28'
+  categories:
+  - cs.CV
+  - eess.IV
+  abstract: Deep learning-based video compression is a challenging task, and many previous state-of-the-art
+    learning-based video codecs use optical flows to exploit the temporal correlation between successive
+    frames and then compress the residual error. Although these two-stage models are end-to-end optimized,
+    the epistemic uncertainty in the motion estimation and the aleatoric uncertainty from the quantization
+    operation lead to errors in the intermediate representations and introduce artifacts in the reconstructed
+    frames. This inherent flaw limits the potential for higher bit rate savings. To address this issue,
+    we propose an uncertainty-aware video compression model that can effectively capture the predictive
+    uncertainty with deep ensembles. Additionally, we introduce an ensemble-aware loss to encourage the
+    diversity among ensemble members and investigate the benefits of incorporating adversarial training
+    in the video compression task. Experimental results on 1080p sequences show that our model can effectively
+    save bits by more than 20% compared to DVC Pro.
+  url: https://arxiv.org/abs/2403.19158
+  pdf_url: https://arxiv.org/pdf/2403.19158v1
+  version: v1
+fetched: '2026-11-14'

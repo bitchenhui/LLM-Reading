@@ -1,0 +1,31 @@
+id: paper:arxiv:2110.09109
+status: skipped
+score: 0
+track: immersive_media
+matched: []
+meta:
+  title: Patch-Based Deep Autoencoder for Point Cloud Geometry Compression
+  authors:
+  - Kang You
+  - Pan Gao
+  published: '2021-10-18'
+  updated: '2021-10-18'
+  categories:
+  - cs.CV
+  - cs.MM
+  - eess.IV
+  abstract: The ever-increasing 3D application makes the point cloud compression unprecedentedly important
+    and needed. In this paper, we propose a patch-based compression process using deep learning, focusing
+    on the lossy point cloud geometry compression. Unlike existing point cloud compression networks, which
+    apply feature extraction and reconstruction on the entire point cloud, we divide the point cloud into
+    patches and compress each patch independently. In the decoding process, we finally assemble the decompressed
+    patches into a complete point cloud. In addition, we train our network by a patch-to-patch criterion,
+    i.e., use the local reconstruction loss for optimization, to approximate the global reconstruction
+    optimality. Our method outperforms the state-of-the-art in terms of rate-distortion performance, especially
+    at low bitrates. Moreover, the compression process we proposed can guarantee to generate the same
+    number of points as the input. The network model of this method can be easily applied to other point
+    cloud reconstruction problems, such as upsampling.
+  url: https://arxiv.org/abs/2110.09109
+  pdf_url: https://arxiv.org/pdf/2110.09109v1
+  version: v1
+fetched: '2026-11-14'

@@ -1,0 +1,49 @@
+id: paper:arxiv:2409.13648
+status: pending
+score: 2
+track: immersive_media
+matched:
+- ref: concept:VolumetricVideo
+  count: 2
+  weight: 1
+- ref: concept:3DGS
+  count: 1
+  weight: 1
+meta:
+  title: 'V^3: Viewing Volumetric Videos on Mobiles via Streamable 2D Dynamic Gaussians'
+  authors:
+  - Penghao Wang
+  - Zhirui Zhang
+  - Liao Wang
+  - Kaixin Yao
+  - Siyuan Xie
+  - Jingyi Yu
+  - Minye Wu
+  - Lan Xu
+  published: '2024-09-20'
+  updated: '2024-09-23'
+  categories:
+  - cs.CV
+  - cs.GR
+  abstract: Experiencing high-fidelity volumetric video as seamlessly as 2D videos is a long-held dream.
+    However, current dynamic 3DGS methods, despite their high rendering quality, face challenges in streaming
+    on mobile devices due to computational and bandwidth constraints. In this paper, we introduce V^3
+    (Viewing Volumetric Videos), a novel approach that enables high-quality mobile rendering through the
+    streaming of dynamic Gaussians. Our key innovation is to view dynamic 3DGS as 2D videos, facilitating
+    the use of hardware video codecs. Additionally, we propose a two-stage training strategy to reduce
+    storage requirements with rapid training speed. The first stage employs hash encoding and shallow
+    MLP to learn motion, then reduces the number of Gaussians through pruning to meet the streaming requirements,
+    while the second stage fine tunes other Gaussian attributes using residual entropy loss and temporal
+    loss to improve temporal continuity. This strategy, which disentangles motion and appearance, maintains
+    high rendering quality with compact storage requirements. Meanwhile, we designed a multi-platform
+    player to decode and render 2D Gaussian videos. Extensive experiments demonstrate the effectiveness
+    of V^3, outperforming other methods by enabling high-quality rendering and streaming on common devices,
+    which is unseen before. As the first to stream dynamic Gaussians on mobile devices, our companion
+    player offers users an unprecedented volumetric video experience, including smooth scrolling and instant
+    sharing. Our project page with source code is available at https://authoritywang.github.io/v3/.
+  url: https://arxiv.org/abs/2409.13648
+  pdf_url: https://arxiv.org/pdf/2409.13648v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 64
+citation_year: 2024

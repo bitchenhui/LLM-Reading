@@ -1,0 +1,44 @@
+id: paper:arxiv:2603.08561
+status: pending
+score: 2
+track: self_improvement
+matched:
+- ref: concept:LLM
+  count: 2
+  weight: 1
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+meta:
+  title: 'RetroAgent: From Solving to Evolving via Retrospective Dual Intrinsic Feedback'
+  authors:
+  - Xiaoying Zhang
+  - Zichen Liu
+  - Yipeng Zhang
+  - Xia Hu
+  - Wenqi Shao
+  published: '2026-03-09'
+  updated: '2026-06-09'
+  categories:
+  - cs.AI
+  abstract: 'Standard reinforcement learning (RL) for large language model (LLM) agents primarily optimizes
+    extrinsic task rewards, often favoring isolated task completion over continual adaptation. This paradigm
+    can cause premature convergence to suboptimal policies and leaves useful experience only implicitly
+    encoded in model parameters, limiting its retrieval and reuse for future decisions. We introduce RetroAgent,
+    an online RL framework that trains agents to master interactive environments not merely by solving
+    tasks, but by evolving across episodes. Inspired by human retrospective self-improvement, RetroAgent
+    augments extrinsic rewards with hindsight-generated dual intrinsic feedback: (1) Intrinsic Numerical
+    Feedback, which rewards beneficial exploration by measuring incremental subtask progress relative
+    to prior attempts; and (2) Intrinsic Language Feedback which distills successes and failures into
+    reusable textual lessons for explicit experience reuse. To leverage these lessons effectively, we
+    propose Similarity & Utility-Aware Upper Confidence Bound (SimUtil-UCB), a retrieval strategy that
+    balances semantic relevance, historical utility, and exploration. Across four challenging agentic
+    benchmarks, RetroAgent achieves new state-of-the-art performance, outperforming GRPO by +18.3% on
+    ALFWorld, +15.4% on WebShop, +27.1% on Sokoban, and +8.9% on MineSweeper, while demonstrating strong
+    test-time adaptation and out-of-distribution generalization.'
+  url: https://arxiv.org/abs/2603.08561
+  pdf_url: https://arxiv.org/pdf/2603.08561v6
+  version: v6
+fetched: '2026-11-14'
+citation_count: 18
+citation_year: 2026

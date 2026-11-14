@@ -1,0 +1,51 @@
+id: paper:arxiv:2402.17487
+status: skipped_low_citation
+score: 4
+track: video_image_coding
+matched:
+- ref: codec:VVC
+  count: 1
+  weight: 3
+- ref: metric:BD-Rate
+  count: 1
+  weight: 1
+meta:
+  title: Bit Rate Matching Algorithm Optimization in JPEG-AI Verification Model
+  authors:
+  - Panqi Jia
+  - A. Burakhan Koyuncu
+  - Jue Mao
+  - Ze Cui
+  - Yi Ma
+  - Tiansheng Guo
+  - Timofey Solovyev
+  - Alexander Karabutov
+  - Yin Zhao
+  - Jing Wang
+  - Elena Alshina
+  - Andre Kaup
+  published: '2024-02-27'
+  updated: '2024-02-27'
+  categories:
+  - cs.CV
+  - cs.LG
+  - eess.IV
+  abstract: The research on neural network (NN) based image compression has shown superior performance
+    compared to classical compression frameworks. Unlike the hand-engineered transforms in the classical
+    frameworks, NN-based models learn the non-linear transforms providing more compact bit representations,
+    and achieve faster coding speed on parallel devices over their classical counterparts. Those properties
+    evoked the attention of both scientific and industrial communities, resulting in the standardization
+    activity JPEG-AI. The verification model for the standardization process of JPEG-AI is already in
+    development and has surpassed the advanced VVC intra codec. To generate reconstructed images with
+    the desired bits per pixel and assess the BD-rate performance of both the JPEG-AI verification model
+    and VVC intra, bit rate matching is employed. However, the current state of the JPEG-AI verification
+    model experiences significant slowdowns during bit rate matching, resulting in suboptimal performance
+    due to an unsuitable model. The proposed methodology offers a gradual algorithmic optimization for
+    matching bit rates, resulting in a fourfold acceleration and over 1% improvement in BD-rate at the
+    base operation point. At the high operation point, the acceleration increases up to sixfold.
+  url: https://arxiv.org/abs/2402.17487
+  pdf_url: https://arxiv.org/pdf/2402.17487v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 6
+citation_year: 2024

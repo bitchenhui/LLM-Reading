@@ -1,0 +1,36 @@
+id: paper:arxiv:2305.07783
+status: skipped
+score: 2
+track: video_image_coding
+matched:
+- ref: dataset:COCO
+  count: 1
+  weight: 1
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+meta:
+  title: ROI-based Deep Image Compression with Swin Transformers
+  authors:
+  - Binglin Li
+  - Jie Liang
+  - Haisheng Fu
+  - Jingning Han
+  published: '2023-05-12'
+  updated: '2023-05-12'
+  categories:
+  - cs.CV
+  - eess.IV
+  abstract: Encoding the Region Of Interest (ROI) with better quality than the background has many applications
+    including video conferencing systems, video surveillance and object-oriented vision tasks. In this
+    paper, we propose a ROI-based image compression framework with Swin transformers as main building
+    blocks for the autoencoder network. The binary ROI mask is integrated into different layers of the
+    network to provide spatial information guidance. Based on the ROI mask, we can control the relative
+    importance of the ROI and non-ROI by modifying the corresponding Lagrange multiplier $ λ$ for different
+    regions. Experimental results show our model achieves higher ROI PSNR than other methods and modest
+    average PSNR for human evaluation. When tested on models pre-trained with original images, it has
+    superior object detection and instance segmentation performance on the COCO validation dataset.
+  url: https://arxiv.org/abs/2305.07783
+  pdf_url: https://arxiv.org/pdf/2305.07783v1
+  version: v1
+fetched: '2026-11-14'

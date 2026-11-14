@@ -1,0 +1,36 @@
+id: paper:arxiv:2603.24578
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 3
+  weight: 1
+meta:
+  title: Evaluating Vision-Language Models for Image Quality Assessment using Psychophysical Data
+  authors:
+  - Imran Mehmood
+  - Imad Ali Shah
+  - Ming Ronnier Luo
+  - Brian Deegan
+  published: '2026-03-25'
+  updated: '2026-09-05'
+  categories:
+  - cs.CV
+  - eess.IV
+  abstract: 'Psychophysical experiments remain the most reliable approach for perceptual image quality
+    assessment (IQA), yet their cost and limited scalability motivate automated alternatives. This paper
+    investigates whether Vision-Language Models (VLMs) can assist in assessing perceived image appearance
+    and quality. We introduce a psychophysics-inspired framework to probe VLM perceptual sensitivity through
+    controlled pairwise image comparisons of contrast, colorfulness, and overall preference. Six VLMs
+    (four proprietary and two open-weight models) are compared against psychophysical data. Results reveal
+    strong attribute-dependent variability: Claude exhibits the highest internal consistency, whereas
+    GPT achieves the strongest agreement for overall preference. Claude and Qwen show the strongest alignment
+    for colorfulness, while Qwen performs best for contrast. However, no model consistently matches human
+    perception across all attributes. High self-consistency does not necessarily imply perceptual validity,
+    and VLM--human agreement generally improves when perceptual differences among renderings are more
+    pronounced.'
+  url: https://arxiv.org/abs/2603.24578
+  pdf_url: https://arxiv.org/pdf/2603.24578v2
+  version: v2
+fetched: '2026-11-14'

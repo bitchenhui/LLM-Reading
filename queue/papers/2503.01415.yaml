@@ -1,0 +1,45 @@
+id: paper:arxiv:2503.01415
+status: skipped_low_citation
+score: 9
+track: video_image_coding
+matched:
+- ref: codec:VVC
+  count: 2
+  weight: 3
+- ref: codec:HEVC
+  count: 1
+  weight: 3
+- ref: impl:VVenC
+  count: 1
+  weight: 3
+meta:
+  title: Improving the Efficiency of VVC using Partitioning of Reference Frames
+  authors:
+  - Kamran Qureshi
+  - Hadi Amirpour
+  - Christian Timmerer
+  published: '2025-03-03'
+  updated: '2025-03-03'
+  categories:
+  - cs.MM
+  abstract: In response to the growing demand for high-quality videos, Versatile Video Coding (VVC) was
+    released in 2020, building on the hybrid coding architecture of its predecessor, HEVC, achieving about
+    50% bitrate reduction for the same visual quality. It introduces more flexible block partitioning,
+    enhancing compression efficiency at the cost of increased encoding complexity. To make efficient use
+    of VVC in practical applications, optimization is essential. VVenC, an optimized open-source VVC encoder,
+    introduces multiple presets to address the trade-off between compression efficiency and encoder complexity.
+    Although an optimized set of encoding tools has been selected for each preset, the rate-distortion
+    (RD) search space in the encoder presets still poses a challenge for efficient encoder implementations.
+    In this paper, we propose Early Termination using Reference Frames (ETRF), which improves the trade-off
+    between encoding efficiency and time complexity and positions itself as a new preset between medium
+    and fast presets. The CTU partitioning map of the reference frames in lower temporal layers is employed
+    to accelerate the encoding of frames in higher temporal layers. The results show a reduction in the
+    encoding time of around 21% compared to the medium preset. Specifically, for videos with high spatial
+    and temporal complexities, which typically require longer encoding times, the proposed method achieves
+    a better trade-off between bitrate savings and encoding time compared to the fast preset.
+  url: https://arxiv.org/abs/2503.01415
+  pdf_url: https://arxiv.org/pdf/2503.01415v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 3
+citation_year: 2025

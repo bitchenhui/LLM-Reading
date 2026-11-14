@@ -1,0 +1,35 @@
+id: paper:arxiv:2409.00933
+status: skipped
+score: 0
+track: audio_coding
+matched: []
+meta:
+  title: 'SoCodec: A Semantic-Ordered Multi-Stream Speech Codec for Efficient Language Model Based Text-to-Speech
+    Synthesis'
+  authors:
+  - Haohan Guo
+  - Fenglong Xie
+  - Kun Xie
+  - Dongchao Yang
+  - Dake Guo
+  - Xixin Wu
+  - Helen Meng
+  published: '2024-09-02'
+  updated: '2024-09-02'
+  categories:
+  - cs.SD
+  - eess.AS
+  abstract: The long speech sequence has been troubling language models (LM) based TTS approaches in terms
+    of modeling complexity and efficiency. This work proposes SoCodec, a semantic-ordered multi-stream
+    speech codec, to address this issue. It compresses speech into a shorter, multi-stream discrete semantic
+    sequence with multiple tokens at each frame. Meanwhile, the ordered product quantization is proposed
+    to constrain this sequence into an ordered representation. It can be applied with a multi-stream delayed
+    LM to achieve better autoregressive generation along both time and stream axes in TTS. The experimental
+    result strongly demonstrates the effectiveness of the proposed approach, achieving superior performance
+    over baseline systems even if compressing the frameshift of speech from 20ms to 240ms (12x). The ablation
+    studies further validate the importance of learning the proposed ordered multi-stream semantic representation
+    in pursuing shorter speech sequences for efficient LM-based TTS.
+  url: https://arxiv.org/abs/2409.00933
+  pdf_url: https://arxiv.org/pdf/2409.00933v1
+  version: v1
+fetched: '2026-11-14'

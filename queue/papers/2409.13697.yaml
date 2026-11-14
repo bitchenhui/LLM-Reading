@@ -1,0 +1,48 @@
+id: paper:arxiv:2409.13697
+status: skipped_low_citation
+score: 2
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: Prompt Baking
+  authors:
+  - Aman Bhargava
+  - Cameron Witkowski
+  - Alexander Detkov
+  - Matt Thomson
+  published: '2024-09-04'
+  updated: '2024-09-04'
+  categories:
+  - cs.CL
+  - cs.AI
+  abstract: Two primary ways to change LLM behavior are prompting and weight updates (e.g., fine-tuning).
+    Prompting LLMs is simple and effective, specifying the desired changes explicitly in natural language,
+    whereas weight updates provide more expressive and permanent behavior changes, specified implicitly
+    via training on large datasets. We present a technique for "baking" prompts into the weights of an
+    LLM. Prompt Baking converts a prompt $u$ and initial weights $θ$ to a new set of weights $θ_u$ such
+    that new "baked" LLM behaves like the original prompted LLM. Mathematically, we minimize the KL divergence
+    between $P_θ(\cdot | u)$ and $P_{θ_u}(\cdot)$, where $P$ is the LLM's probability distribution over
+    token sequences. Across all our experiments, we find prompts can be readily baked into weight updates.
+    Baking chain-of-thought prompts improves zero-shot performance on GSM8K, ASDiv, MBPP, ARC-Easy, ARC-Challenge,
+    and CommonsenseQA benchmarks. Baking news headlines directly updates an LLM's knowledge. And baking
+    instructions & personas alleviates "prompt forgetting" over long sequences. Furthermore, stopping
+    baking early creates "half-baked" models, continuously scaling prompt strength. Baked models retain
+    their sensitivity to further prompting and baking, including re-prompting with the baked-in prompt.
+    Surprisingly, the re-prompted models yield further performance gains in instruction following, as
+    well as math reasoning and coding benchmarks. Taking re-prompting and re-baking to the limit yields
+    a form of iterative self-improvement we call Prompt Pursuit, and preliminary results on instruction
+    following exhibit dramatic performance gains. Finally, we discuss implications for AI safety, continuous
+    model updating, enhancing real-time learning capabilities in LLM-based agents, and generating more
+    stable AI personas.
+  url: https://arxiv.org/abs/2409.13697
+  pdf_url: https://arxiv.org/pdf/2409.13697v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 5
+citation_year: 2024

@@ -1,0 +1,34 @@
+id: paper:arxiv:2311.08746
+status: skipped_low_citation
+score: 3
+track: processing_enhancement
+matched:
+- ref: codec:HEVC
+  count: 1
+  weight: 3
+meta:
+  title: A Diffusion Model Based Quality Enhancement Method for HEVC Compressed Video
+  authors:
+  - Zheng Liu
+  - Honggang Qi
+  published: '2023-11-15'
+  updated: '2023-11-15'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: Video post-processing methods can improve the quality of compressed videos at the decoder
+    side. Most of the existing methods need to train corresponding models for compressed videos with different
+    quantization parameters to improve the quality of compressed videos. However, in most cases, the quantization
+    parameters of the decoded video are unknown. This makes existing methods have their limitations in
+    improving video quality. To tackle this problem, this work proposes a diffusion model based post-processing
+    method for compressed videos. The proposed method first estimates the feature vectors of the compressed
+    video and then uses the estimated feature vectors as the prior information for the quality enhancement
+    model to adaptively enhance the quality of compressed video with different quantization parameters.
+    Experimental results show that the quality enhancement results of our proposed method on mixed datasets
+    are superior to existing methods.
+  url: https://arxiv.org/abs/2311.08746
+  pdf_url: https://arxiv.org/pdf/2311.08746v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 1
+citation_year: 2023

@@ -1,0 +1,50 @@
+id: paper:arxiv:2601.02443
+status: skipped_low_citation
+score: 2
+track: quality_assessment
+matched:
+- ref: concept:LLM
+  count: 2
+  weight: 1
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'Evaluating the Diagnostic Classification Ability of Multimodal Large Language Models: Insights
+    from the Osteoarthritis Initiative'
+  authors:
+  - Li Wang
+  - Xi Chen
+  - XiangWen Deng
+  - HuaHui Yi
+  - ZeKun Jiang
+  - Kang Li
+  - Jian Li
+  published: '2026-01-05'
+  updated: '2026-01-05'
+  categories:
+  - cs.CV
+  - cs.AI
+  - eess.IV
+  abstract: Multimodal large language models (MLLMs) show promising performance on medical visual question
+    answering (VQA) and report generation, but these generation and explanation abilities do not reliably
+    transfer to disease-specific classification. We evaluated MLLM architectures on knee osteoarthritis
+    (OA) radiograph classification, which remains underrepresented in existing medical MLLM benchmarks,
+    even though knee OA affects an estimated 300 to 400 million people worldwide. Through systematic ablation
+    studies manipulating the vision encoder, the connector, and the large language model (LLM) across
+    diverse training strategies, we measured each component's contribution to diagnostic accuracy. In
+    our classification task, a trained vision encoder alone could outperform full MLLM pipelines in classification
+    accuracy and fine-tuning the LLM provided no meaningful improvement over prompt-based guidance. And
+    LoRA fine-tuning on a small, class-balanced dataset (500 images) gave better results than training
+    on a much larger but class-imbalanced set (5,778 images), indicating that data balance and quality
+    can matter more than raw scale for this task. These findings suggest that for domain-specific medical
+    classification, LLMs are more effective as interpreters and report generators rather than as primary
+    classifiers. Therefore, the MLLM architecture appears less suitable for medical image diagnostic classification
+    tasks that demand high certainty. We recommend prioritizing vision encoder optimization and careful
+    dataset curation when developing clinically applicable systems.
+  url: https://arxiv.org/abs/2601.02443
+  pdf_url: https://arxiv.org/pdf/2601.02443v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 1
+citation_year: 2026

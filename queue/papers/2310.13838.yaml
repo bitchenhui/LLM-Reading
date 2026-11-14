@@ -1,0 +1,58 @@
+id: paper:arxiv:2310.13838
+status: skipped_low_citation
+score: 9
+track: video_image_coding
+matched:
+- ref: codec:HEVC
+  count: 2
+  weight: 3
+- ref: codec:VVC
+  count: 2
+  weight: 3
+- ref: concept:RDO
+  count: 2
+  weight: 1
+- ref: metric:BD-Rate
+  count: 1
+  weight: 1
+- ref: org:JVET
+  count: 1
+  weight: 1
+meta:
+  title: CNN-based Prediction of Partition Path for VVC Fast Inter Partitioning Using Motion Fields
+  authors:
+  - Yiqun Liu
+  - Marc Riviere
+  - Thomas Guionnet
+  - Aline Roumy
+  - Christine Guillemot
+  published: '2023-10-20'
+  updated: '2023-10-20'
+  categories:
+  - cs.MM
+  - cs.AI
+  - cs.LG
+  abstract: The Versatile Video Coding (VVC) standard has been recently finalized by the Joint Video Exploration
+    Team (JVET). Compared to the High Efficiency Video Coding (HEVC) standard, VVC offers about 50% compression
+    efficiency gain, in terms of Bjontegaard Delta-Rate (BD-rate), at the cost of a 10-fold increase in
+    encoding complexity. In this paper, we propose a method based on Convolutional Neural Network (CNN)
+    to speed up the inter partitioning process in VVC. Firstly, a novel representation for the quadtree
+    with nested multi-type tree (QTMT) partition is introduced, derived from the partition path. Secondly,
+    we develop a U-Net-based CNN taking a multi-scale motion vector field as input at the Coding Tree
+    Unit (CTU) level. The purpose of CNN inference is to predict the optimal partition path during the
+    Rate-Distortion Optimization (RDO) process. To achieve this, we divide CTU into grids and predict
+    the Quaternary Tree (QT) depth and Multi-type Tree (MT) split decisions for each cell of the grid.
+    Thirdly, an efficient partition pruning algorithm is introduced to employ the CNN predictions at each
+    partitioning level to skip RDO evaluations of unnecessary partition paths. Finally, an adaptive threshold
+    selection scheme is designed, making the trade-off between complexity and efficiency scalable. Experiments
+    show that the proposed method can achieve acceleration ranging from 16.5% to 60.2% under the RandomAccess
+    Group Of Picture 32 (RAGOP32) configuration with a reasonable efficiency drop ranging from 0.44% to
+    4.59% in terms of BD-rate, which surpasses other state-of-the-art solutions. Additionally, our method
+    stands out as one of the lightest approaches in the field, which ensures its applicability to other
+    encoders.
+  url: https://arxiv.org/abs/2310.13838
+  pdf_url: https://arxiv.org/pdf/2310.13838v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 3
+citation_year: 2023

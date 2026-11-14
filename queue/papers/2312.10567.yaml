@@ -1,0 +1,56 @@
+id: paper:arxiv:2312.10567
+status: pending
+score: 12
+track: video_image_coding
+matched:
+- ref: codec:HEVC
+  count: 2
+  weight: 3
+- ref: codec:VVC
+  count: 2
+  weight: 3
+- ref: impl:VTM
+  count: 2
+  weight: 3
+- ref: concept:RDO
+  count: 1
+  weight: 1
+- ref: metric:BD-Rate
+  count: 1
+  weight: 1
+- ref: org:JVET
+  count: 1
+  weight: 1
+meta:
+  title: Light-weight CNN-based VVC Inter Partitioning Acceleration
+  authors:
+  - Yiqun Liu
+  - Mohsen Abdoli
+  - Thomas Guionnet
+  - Christine Guillemot
+  - Aline Roumy
+  published: '2023-12-17'
+  updated: '2023-12-17'
+  categories:
+  - eess.IV
+  - cs.AI
+  - cs.LG
+  - cs.MM
+  abstract: The Versatile Video Coding (VVC) standard has been finalized by Joint Video Exploration Team
+    (JVET) in 2020. Compared to the High Efficiency Video Coding (HEVC) standard, VVC offers about 50%
+    compression efficiency gain, in terms of Bjontegaard Delta-Rate (BD-rate), at the cost of about 10x
+    more encoder complexity. In this paper, we propose a Convolutional Neural Network (CNN)-based method
+    to speed up inter partitioning in VVC. Our method operates at the Coding Tree Unit (CTU) level, by
+    splitting each CTU into a fixed grid of 8x8 blocks. Then each cell in this grid is associated with
+    information about the partitioning depth within that area. A lightweight network for predicting this
+    grid is employed during the rate-distortion optimization to limit the Quaternary Tree (QT)-split search
+    and avoid partitions that are unlikely to be selected. Experiments show that the proposed method can
+    achieve acceleration ranging from 17% to 30% in the RandomAccess Group Of Picture 32 (RAGOP32) mode
+    of VVC Test Model (VTM)10 with a reasonable efficiency drop ranging from 0.37% to 1.18% in terms of
+    BD-rate increase.
+  url: https://arxiv.org/abs/2312.10567
+  pdf_url: https://arxiv.org/pdf/2312.10567v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 19
+citation_year: 2022

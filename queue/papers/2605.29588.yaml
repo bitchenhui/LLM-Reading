@@ -1,0 +1,43 @@
+id: paper:arxiv:2605.29588
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'Brain-IT-VQA: From Brain Signals to Answers'
+  authors:
+  - Roman Beliy
+  - Matias Cosarinsky
+  - Oliver Heinimann
+  - Navve Wasserman
+  - Michal Irani
+  published: '2026-05-28'
+  updated: '2026-10-02'
+  categories:
+  - cs.CV
+  - cs.AI
+  - q-bio.NC
+  abstract: Decoding visual content from fMRI signals recorded while a person views images, and specifically
+    answering questions about the seen images, is a long-standing challenge. While significant progress
+    has been made in recent years in visual question answering (VQA) from fMRI, performance remains limited.
+    Moreover, although recent models can make increasingly accurate predictions, they have rarely been
+    used as tools for understanding the structure of visual representations in the brain. We present Brain-IT-VQA,
+    a framework for visual question answering from fMRI. Unlike previous methods, which extract a fixed
+    representation from the fMRI signal, our extraction is conditioned on the question itself, so what
+    is decoded from brain activity depends on what is being asked. Our model substantially outperforms
+    previous fMRI-based captioning and VQA approaches. We further introduce NSD-VQA, a new dataset and
+    benchmark for visual question answering from fMRI. Unlike existing image-fMRI VQA datasets, which
+    typically provide only a few broad and weakly controlled questions per image, NSD-VQA provides on
+    average 20 question-answer pairs per image across 20 controlled question categories that disentangle
+    multiple levels of visual understanding. This enables more reliable and interpretable evaluation despite
+    limited fMRI test data. Together, Brain-IT-VQA and NSD-VQA provide both a strong predictive framework
+    and a tool for studying brain representations. Using this benchmark, we quantify which forms of visual
+    and semantic information can be reliably decoded from fMRI responses to natural images. We further
+    analyze the contributions of different brain regions across question types.
+  url: https://arxiv.org/abs/2605.29588
+  pdf_url: https://arxiv.org/pdf/2605.29588v3
+  version: v3
+fetched: '2026-11-14'

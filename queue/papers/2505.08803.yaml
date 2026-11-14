@@ -1,0 +1,36 @@
+id: paper:arxiv:2505.08803
+status: skipped
+score: 1
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 1
+  weight: 1
+meta:
+  title: 'Multi-modal Synthetic Data Training and Model Collapse: Insights from VLMs and Diffusion Models'
+  authors:
+  - Zizhao Hu
+  - Mohammad Rostami
+  - Jesse Thomason
+  published: '2025-05-10'
+  updated: '2025-05-10'
+  categories:
+  - cs.LG
+  - cs.AI
+  abstract: Recent research has highlighted the risk of generative model collapse, where performance progressively
+    degrades when continually trained on self-generated data. However, existing exploration on model collapse
+    is limited to single, unimodal models, limiting our understanding in more realistic scenarios, such
+    as diverse multi-modal AI agents interacting autonomously through synthetic data and continually evolving.
+    We expand the synthetic data training and model collapse study to multi-modal vision-language generative
+    systems, such as vision-language models (VLMs) and text-to-image diffusion models, as well as recursive
+    generate-train loops with multiple models. We find that model collapse, previously observed in single-modality
+    generative models, exhibits distinct characteristics in the multi-modal context, such as improved
+    vision-language alignment and increased variance in VLM image-captioning task. Additionally, we find
+    that general approaches such as increased decoding budgets, greater model diversity, and relabeling
+    with frozen models can effectively mitigate model collapse. Our findings provide initial insights
+    and practical guidelines for reducing the risk of model collapse in self-improving multi-agent AI
+    systems and curating robust multi-modal synthetic datasets.
+  url: https://arxiv.org/abs/2505.08803
+  pdf_url: https://arxiv.org/pdf/2505.08803v1
+  version: v1
+fetched: '2026-11-14'

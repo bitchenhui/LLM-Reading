@@ -1,0 +1,48 @@
+id: paper:arxiv:2407.10632
+status: pending
+score: 4
+track: video_image_coding
+matched:
+- ref: concept:EntropyModel
+  count: 2
+  weight: 1
+- ref: metric:MS-SSIM
+  count: 1
+  weight: 1
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+- ref: metric:SSIM
+  count: 1
+  weight: 1
+meta:
+  title: Bidirectional Stereo Image Compression with Cross-Dimensional Entropy Model
+  authors:
+  - Zhening Liu
+  - Xinjie Zhang
+  - Jiawei Shao
+  - Zehong Lin
+  - Jun Zhang
+  published: '2024-07-15'
+  updated: '2024-10-26'
+  categories:
+  - eess.IV
+  - cs.AI
+  - cs.CV
+  abstract: With the rapid advancement of stereo vision technologies, stereo image compression has emerged
+    as a crucial field that continues to draw significant attention. Previous approaches have primarily
+    employed a unidirectional paradigm, where the compression of one view is dependent on the other, resulting
+    in imbalanced compression. To address this issue, we introduce a symmetric bidirectional stereo image
+    compression architecture, named BiSIC. Specifically, we propose a 3D convolution based codec backbone
+    to capture local features and incorporate bidirectional attention blocks to exploit global features.
+    Moreover, we design a novel cross-dimensional entropy model that integrates various conditioning factors,
+    including the spatial context, channel context, and stereo dependency, to effectively estimate the
+    distribution of latent representations for entropy coding. Extensive experiments demonstrate that
+    our proposed BiSIC outperforms conventional image/video compression standards, as well as state-of-the-art
+    learning-based methods, in terms of both PSNR and MS-SSIM.
+  url: https://arxiv.org/abs/2407.10632
+  pdf_url: https://arxiv.org/pdf/2407.10632v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 14
+citation_year: 2024

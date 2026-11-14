@@ -1,0 +1,44 @@
+id: paper:arxiv:2209.03143
+status: skipped
+score: 1
+track: audio_coding
+matched:
+- ref: concept:NeuralAudioCodec
+  count: 1
+  weight: 1
+meta:
+  title: 'AudioLM: a Language Modeling Approach to Audio Generation'
+  authors:
+  - Zalán Borsos
+  - Raphaël Marinier
+  - Damien Vincent
+  - Eugene Kharitonov
+  - Olivier Pietquin
+  - Matt Sharifi
+  - Dominik Roblek
+  - Olivier Teboul
+  - David Grangier
+  - Marco Tagliasacchi
+  - Neil Zeghidour
+  published: '2022-09-07'
+  updated: '2023-07-26'
+  categories:
+  - cs.SD
+  - cs.LG
+  - eess.AS
+  abstract: We introduce AudioLM, a framework for high-quality audio generation with long-term consistency.
+    AudioLM maps the input audio to a sequence of discrete tokens and casts audio generation as a language
+    modeling task in this representation space. We show how existing audio tokenizers provide different
+    trade-offs between reconstruction quality and long-term structure, and we propose a hybrid tokenization
+    scheme to achieve both objectives. Namely, we leverage the discretized activations of a masked language
+    model pre-trained on audio to capture long-term structure and the discrete codes produced by a neural
+    audio codec to achieve high-quality synthesis. By training on large corpora of raw audio waveforms,
+    AudioLM learns to generate natural and coherent continuations given short prompts. When trained on
+    speech, and without any transcript or annotation, AudioLM generates syntactically and semantically
+    plausible speech continuations while also maintaining speaker identity and prosody for unseen speakers.
+    Furthermore, we demonstrate how our approach extends beyond speech by generating coherent piano music
+    continuations, despite being trained without any symbolic representation of music.
+  url: https://arxiv.org/abs/2209.03143
+  pdf_url: https://arxiv.org/pdf/2209.03143v2
+  version: v2
+fetched: '2026-11-14'

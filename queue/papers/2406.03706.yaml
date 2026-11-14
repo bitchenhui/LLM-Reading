@@ -1,0 +1,37 @@
+id: paper:arxiv:2406.03706
+status: skipped
+score: 1
+track: audio_coding
+matched:
+- ref: concept:LLM
+  count: 2
+  weight: 1
+meta:
+  title: Improving Audio Codec-based Zero-Shot Text-to-Speech Synthesis with Multi-Modal Context and Large
+    Language Model
+  authors:
+  - Jinlong Xue
+  - Yayue Deng
+  - Yicheng Han
+  - Yingming Gao
+  - Ya Li
+  published: '2024-06-06'
+  updated: '2024-06-06'
+  categories:
+  - cs.SD
+  - cs.CL
+  - eess.AS
+  abstract: Recent advances in large language models (LLMs) and development of audio codecs greatly propel
+    the zero-shot TTS. They can synthesize personalized speech with only a 3-second speech of an unseen
+    speaker as acoustic prompt. However, they only support short speech prompts and cannot leverage longer
+    context information, as required in audiobook and conversational TTS scenarios. In this paper, we
+    introduce a novel audio codec-based TTS model to adapt context features with multiple enhancements.
+    Inspired by the success of Qformer, we propose a multi-modal context-enhanced Qformer (MMCE-Qformer)
+    to utilize additional multi-modal context information. Besides, we adapt a pretrained LLM to leverage
+    its understanding ability to predict semantic tokens, and use a SoundStorm to generate acoustic tokens
+    thereby enhancing audio quality and speaker similarity. The extensive objective and subjective evaluations
+    show that our proposed method outperforms baselines across various context TTS scenarios.
+  url: https://arxiv.org/abs/2406.03706
+  pdf_url: https://arxiv.org/pdf/2406.03706v1
+  version: v1
+fetched: '2026-11-14'

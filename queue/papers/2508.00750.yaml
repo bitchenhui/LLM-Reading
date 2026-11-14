@@ -1,0 +1,49 @@
+id: paper:arxiv:2508.00750
+status: skipped_low_citation
+score: 4
+track: processing_enhancement
+matched:
+- ref: concept:SuperResolution
+  count: 2
+  weight: 1
+- ref: metric:LPIPS
+  count: 1
+  weight: 1
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+- ref: metric:SSIM
+  count: 1
+  weight: 1
+meta:
+  title: 'SU-ESRGAN: Semantic and Uncertainty-Aware ESRGAN for Super-Resolution of Satellite and Drone
+    Imagery with Fine-Tuning for Cross Domain Evaluation'
+  authors:
+  - Prerana Ramkumar
+  published: '2025-08-01'
+  updated: '2025-08-01'
+  categories:
+  - cs.CV
+  - cs.LG
+  - eess.IV
+  abstract: Generative Adversarial Networks (GANs) have achieved realistic super-resolution (SR) of images
+    however, they lack semantic consistency and per-pixel confidence, limiting their credibility in critical
+    remote sensing applications such as disaster response, urban planning and agriculture. This paper
+    introduces Semantic and Uncertainty-Aware ESRGAN (SU-ESRGAN), the first SR framework designed for
+    satellite imagery to integrate the ESRGAN, segmentation loss via DeepLabv3 for class detail preservation
+    and Monte Carlo dropout to produce pixel-wise uncertainty maps. The SU-ESRGAN produces results (PSNR,
+    SSIM, LPIPS) comparable to the Baseline ESRGAN on aerial imagery. This novel model is valuable in
+    satellite systems or UAVs that use wide field-of-view (FoV) cameras, trading off spatial resolution
+    for coverage. The modular design allows integration in UAV data pipelines for on-board or post-processing
+    SR to enhance imagery resulting due to motion blur, compression and sensor limitations. Further, the
+    model is fine-tuned to evaluate its performance on cross domain applications. The tests are conducted
+    on two drone based datasets which differ in altitude and imaging perspective. Performance evaluation
+    of the fine-tuned models show a stronger adaptation to the Aerial Maritime Drone Dataset, whose imaging
+    characteristics align with the training data, highlighting the importance of domain-aware training
+    in SR-applications.
+  url: https://arxiv.org/abs/2508.00750
+  pdf_url: https://arxiv.org/pdf/2508.00750v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 1
+citation_year: 2025

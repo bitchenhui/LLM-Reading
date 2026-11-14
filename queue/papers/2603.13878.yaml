@@ -1,0 +1,44 @@
+id: paper:arxiv:2603.13878
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'Step-CoT: Stepwise Visual Chain-of-Thought for Medical Visual Question Answering'
+  authors:
+  - Lin Fan
+  - Yafei Ou
+  - Zhipeng Deng
+  - Pengyu Dai
+  - Hou Chongxian
+  - Jiale Yan
+  - Yaqian Li
+  - Kaiwen Long
+  - Xun Gong
+  - Masayuki Ikebe
+  - Yefeng Zheng
+  published: '2026-03-14'
+  updated: '2026-03-14'
+  categories:
+  - cs.CV
+  - cs.AI
+  - cs.CL
+  abstract: 'Chain-of-thought (CoT) reasoning has advanced medical visual question answering (VQA), yet
+    most existing CoT rationales are free-form and fail to capture the structured reasoning process clinicians
+    actually follow. This work asks: Can traceable, multi-step reasoning supervision improve reasoning
+    accuracy and the interpretability of Medical VQA? To this end, we introduce Step-CoT, a large-scale
+    medical reasoning dataset with expert-curated, structured multi-step CoT aligned to clinical diagnostic
+    workflows, implicitly grounding the model''s reasoning in radiographic evidence. Step-CoT comprises
+    more than 10K real clinical cases and 70K VQA pairs organized around diagnostic workflows, providing
+    supervised intermediate steps that guide models to follow valid reasoning trajectories. To effectively
+    learn from Step-CoT, we further introduce a teacher-student framework with a dynamic graph-structured
+    focusing mechanism that prioritizes diagnostically informative steps while filtering out less relevant
+    contexts. Our experiments show that using Step-CoT can improve reasoning accuracy and interpretability.
+    Benchmark: github.com/hahaha111111/Step-CoT. Dataset Card: huggingface.co/datasets/fl-15o/Step-CoT'
+  url: https://arxiv.org/abs/2603.13878
+  pdf_url: https://arxiv.org/pdf/2603.13878v1
+  version: v1
+fetched: '2026-11-14'

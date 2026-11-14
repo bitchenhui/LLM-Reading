@@ -1,0 +1,44 @@
+id: paper:arxiv:2509.20562
+status: pending
+score: 2
+track: self_improvement
+matched:
+- ref: concept:LLM
+  count: 1
+  weight: 1
+- ref: concept:SelfImprovement
+  count: 1
+  weight: 1
+meta:
+  title: 'SAMULE: Self-Learning Agents Enhanced by Multi-level Reflection'
+  authors:
+  - Yubin Ge
+  - Salvatore Romeo
+  - Jason Cai
+  - Monica Sunkara
+  - Yi Zhang
+  published: '2025-09-24'
+  updated: '2025-09-24'
+  categories:
+  - cs.AI
+  abstract: 'Despite the rapid advancements in LLM agents, they still face the challenge of generating
+    meaningful reflections due to inadequate error analysis and a reliance on rare successful trajectories,
+    especially in complex tasks. In this work, we propose SAMULE, a new framework for self-learning agents
+    powered by a retrospective language model that is trained based on Multi-Level Reflection Synthesis.
+    It first synthesizes high-quality reflections across three complementary levels: Single-Trajectory
+    Learning (micro-level) for detailed error correction; Intra-Task Learning (meso-level) to build error
+    taxonomies across multiple trials of the same task, and Inter-Task Learning (macro-level) to extract
+    transferable insights based on same typed errors from diverse task failures. Then we fine-tune a language
+    model serving as the retrospective model to generate reflections during inference. We further extend
+    our framework to interactive settings through a foresight-based reflection mechanism, enabling agents
+    to proactively reflect and adapt during user interactions by comparing predicted and actual responses.
+    Extensive experiments on three challenging benchmarks - TravelPlanner, NATURAL PLAN, and Tau-bench
+    - demonstrate that our approach significantly outperforms reflection-based baselines. Our results
+    highlight the critical role of well-designed reflection synthesis and failure-centric learning in
+    building self-improving LLM agents.'
+  url: https://arxiv.org/abs/2509.20562
+  pdf_url: https://arxiv.org/pdf/2509.20562v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 17
+citation_year: 2025

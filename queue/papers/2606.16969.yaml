@@ -1,0 +1,30 @@
+id: paper:arxiv:2606.16969
+status: skipped
+score: 0
+track: audio_coding
+matched: []
+meta:
+  title: Probing Low Frame Rate Degradation in Neural Audio Codecs
+  authors:
+  - Alex Gichamba
+  - Moise Busogi
+  published: '2026-06-15'
+  updated: '2026-06-15'
+  categories:
+  - cs.SD
+  - cs.AI
+  - eess.AS
+  abstract: 'Low frame rates in neural audio codecs are attractive for autoregressive speech synthesis,
+    where the generation cost scales linearly with the sequence length. Recent work has demonstrated that
+    codecs can operate at 12.5 Hz and below, but the mechanisms underlying low frame rate degradation
+    remain insufficiently understood. We investigate these mechanisms through a controlled frame rate
+    ablation. We reproduce a quality cliff at 6.25 Hz reported in previous works and evaluate candidate
+    explanations: phonemic collisions and codebook saturation, neither of which shows evidence of a fundamental
+    barrier. The cliff is instead caused by suboptimal training configuration: fixed clip duration during
+    training yields too few tokens at low frame rates, starving the decoder of inter-token context. Once
+    corrected, WER degrades smoothly with phonemic load down to 3.1 Hz and 1.6 Hz, suggesting the inference-time
+    efficiency gains of low frame rate codecs are more accessible than previously assumed.'
+  url: https://arxiv.org/abs/2606.16969
+  pdf_url: https://arxiv.org/pdf/2606.16969v1
+  version: v1
+fetched: '2026-11-14'

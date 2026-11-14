@@ -1,0 +1,37 @@
+id: paper:arxiv:2603.19481
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: Narrative Aligned Long Form Video Question Answering
+  authors:
+  - Rahul Jain
+  - Keval Doshi
+  - Burak Uzkent
+  - Garin Kessler
+  published: '2026-03-19'
+  updated: '2026-03-19'
+  categories:
+  - cs.CV
+  abstract: Recent progress in multimodal large language models (MLLMs) has led to a surge of benchmarks
+    for long-video reasoning. However, most existing benchmarks rely on localized cues and fail to capture
+    narrative reasoning, the ability to track intentions, connect distant events, and reconstruct causal
+    chains across an entire movie. We introduce NA-VQA, a benchmark designed to evaluate deep temporal
+    and narrative reasoning in long-form videos. NA-VQA contains 88 full-length movies and 4.4K open-ended
+    question-answer pairs, each grounded in multiple evidence spans labeled as Short, Medium, or Far to
+    assess long-range dependencies. By requiring generative, multi-scene answers, NA-VQA tests whether
+    models can integrate dispersed narrative information rather than rely on shallow pattern matching.
+    To address the limitations of existing approaches, we propose Video-NaRA, a narrative-centric framework
+    that builds event-level chains and stores them in a structured memory for retrieval during reasoning.
+    Extensive experiments show that state-of-the-art MLLMs perform poorly on questions requiring far-range
+    evidence, highlighting the need for explicit narrative modeling. Video-NaRA improves long-range reasoning
+    performance by up to 3 percent, demonstrating its effectiveness in handling complex narrative structures.
+    We will release NA-VQA upon publication.
+  url: https://arxiv.org/abs/2603.19481
+  pdf_url: https://arxiv.org/pdf/2603.19481v1
+  version: v1
+fetched: '2026-11-14'

@@ -1,0 +1,37 @@
+id: paper:arxiv:2502.14354
+status: skipped
+score: 1
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 3
+  weight: 1
+meta:
+  title: 'Self-Improvement Towards Pareto Optimality: Mitigating Preference Conflicts in Multi-Objective
+    Alignment'
+  authors:
+  - Moxin Li
+  - Yuantao Zhang
+  - Wenjie Wang
+  - Wentao Shi
+  - Zhuo Liu
+  - Fuli Feng
+  - Tat-Seng Chua
+  published: '2025-02-20'
+  updated: '2025-12-08'
+  categories:
+  - cs.LG
+  - cs.CL
+  abstract: Multi-Objective Alignment (MOA) aims to align LLMs' responses with multiple human preference
+    objectives, with Direct Preference Optimization (DPO) emerging as a prominent approach. However, we
+    find that DPO-based MOA approaches suffer from widespread preference conflicts in the data, where
+    different objectives favor different responses. This results in conflicting optimization directions,
+    hindering the optimization on the Pareto Front. To address this, we propose to construct Pareto-optimal
+    responses to resolve preference conflicts. To efficiently obtain and utilize such responses, we propose
+    a self-improving DPO framework that enables LLMs to self-generate and select Pareto-optimal responses
+    for self-supervised preference alignment. Extensive experiments on two datasets demonstrate the superior
+    Pareto Front achieved by our framework compared to various baselines. Code is available at https://github.com/zyttt-coder/SIPO.
+  url: https://arxiv.org/abs/2502.14354
+  pdf_url: https://arxiv.org/pdf/2502.14354v3
+  version: v3
+fetched: '2026-11-14'

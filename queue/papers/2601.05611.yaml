@@ -1,0 +1,40 @@
+id: paper:arxiv:2601.05611
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'FLARE: Learning Future-Aware Latent Representations from Vision-Language Models for Autonomous
+    Driving'
+  authors:
+  - Chengen Xie
+  - Chonghao Sima
+  - Tianyu Li
+  - Bin Sun
+  - Junjie Wu
+  - Zhihui Hao
+  - Hongyang Li
+  published: '2026-01-09'
+  updated: '2026-03-09'
+  categories:
+  - cs.CV
+  abstract: While Vision-Language Models (VLMs) offer rich world knowledge for end-to-end autonomous driving,
+    current approaches heavily rely on labor-intensive language annotations (e.g., VQA) to bridge perception
+    and control. This paradigm suffers from a fundamental mismatch between discrete linguistic tokens
+    and continuous driving trajectories, often leading to suboptimal control policies and inefficient
+    utilization of pre-trained knowledge. To address these challenges, we propose FLARE (Future-aware
+    LAtent REpresentation), a novel framework that activates the visual-semantic capabilities of pre-trained
+    VLMs without requiring language supervision. Instead of aligning with text, we introduce a self-supervised
+    future feature prediction objective. This mechanism compels the model to anticipate scene dynamics
+    and ego-motion directly in the latent space, enabling the learning of robust driving representations
+    from large-scale unlabeled trajectory data. Furthermore, we integrate Group Relative Policy Optimization
+    (GRPO) into the planning process to refine decision-making quality. Extensive experiments on the NAVSIM
+    benchmark demonstrate that FLARE achieves state-of-the-art performance, validating the effectiveness
+    of leveraging VLM knowledge via predictive self-supervision rather than explicit language generation.
+  url: https://arxiv.org/abs/2601.05611
+  pdf_url: https://arxiv.org/pdf/2601.05611v2
+  version: v2
+fetched: '2026-11-14'

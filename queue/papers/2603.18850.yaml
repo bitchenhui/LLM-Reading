@@ -1,0 +1,37 @@
+id: paper:arxiv:2603.18850
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'HORNet: Task-Guided Frame Selection for Video Question Answering with Vision-Language Models'
+  authors:
+  - Xiangyu Bai
+  - Bishoy Galoaa
+  - Sarah Ostadabbas
+  published: '2026-03-19'
+  updated: '2026-03-19'
+  categories:
+  - cs.CV
+  abstract: Video question answering (VQA) with vision-language models (VLMs) depends critically on which
+    frames are selected from the input video, yet most systems rely on uniform or heuristic sampling that
+    cannot be optimized for downstream answering quality. We introduce \textbf{HORNet}, a lightweight
+    frame selection policy trained with Group Relative Policy Optimization (GRPO) to learn which frames
+    a frozen VLM needs to answer questions correctly. With fewer than 1M trainable parameters, HORNet
+    reduces input frames by up to 99\% and VLM processing time by up to 93\%, while improving answer quality
+    on short-form benchmarks (+1.7\% F1 on MSVD-QA) and achieving strong performance on temporal reasoning
+    tasks (+7.3 points over uniform sampling on NExT-QA). We formalize this as Select Any Frames (SAF),
+    a task that decouples visual input curation from VLM reasoning, and show that GRPO-trained selection
+    generalizes better out-of-distribution than supervised and PPO alternatives. HORNet's policy further
+    transfers across VLM answerers without retraining, yielding an additional 8.5\% relative gain when
+    paired with a stronger model. Evaluated across six benchmarks spanning 341,877 QA pairs and 114.2
+    hours of video, our results demonstrate that optimizing \emph{what} a VLM sees is a practical and
+    complementary alternative to optimizing what it generates while improving efficiency. Code is available
+    at https://github.com/ostadabbas/HORNet.
+  url: https://arxiv.org/abs/2603.18850
+  pdf_url: https://arxiv.org/pdf/2603.18850v1
+  version: v1
+fetched: '2026-11-14'

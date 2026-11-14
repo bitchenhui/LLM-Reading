@@ -1,0 +1,44 @@
+id: paper:arxiv:2505.15104
+status: skipped_low_citation
+score: 4
+track: video_image_coding
+matched:
+- ref: codec:VVC
+  count: 1
+  weight: 3
+- ref: org:AOMedia
+  count: 2
+  weight: 1
+meta:
+  title: Joint Optimization of Primary and Secondary Transforms Using Rate-Distortion Optimized Transform
+    Design
+  authors:
+  - Darukeesan Pakiyarajah
+  - Eduardo Pavez
+  - Antonio Ortega
+  - Debargha Mukherjee
+  - Onur Guleryuz
+  - Keng-Shih Lu
+  - Kruthika Koratti Sivakumar
+  published: '2025-05-21'
+  updated: '2025-05-21'
+  categories:
+  - eess.IV
+  abstract: Data-dependent transforms are increasingly being incorporated into next-generation video coding
+    systems such as AVM, a codec under development by the Alliance for Open Media (AOM), and VVC. To circumvent
+    the computational complexities associated with implementing non-separable data-dependent transforms,
+    combinations of separable primary transforms and non-separable secondary transforms have been studied
+    and integrated into video coding standards. These codecs often utilize rate-distortion optimized transforms
+    (RDOT) to ensure that the new transforms complement existing transforms like the DCT and the ADST.
+    In this work, we propose an optimization framework for jointly designing primary and secondary transforms
+    from data through a rate-distortion optimized clustering. Primary transforms are assumed to follow
+    a path-graph model, while secondary transforms are non-separable. We empirically evaluate our proposed
+    approach using AVM residual data and demonstrate that 1) the joint clustering method achieves lower
+    total RD cost in the RDOT design framework, and 2) jointly optimized separable path-graph transforms
+    (SPGT) provide better coding efficiency compared to separable KLTs obtained from the same data.
+  url: https://arxiv.org/abs/2505.15104
+  pdf_url: https://arxiv.org/pdf/2505.15104v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 3
+citation_year: 2025

@@ -1,0 +1,37 @@
+id: paper:arxiv:2609.12168
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'USPLIT-VQA: U-Shaped Split Learning for Visual Question Answering with Contribution-Aware Weighted
+    Aggregation'
+  authors:
+  - Md Khalid Syfullah
+  - Alvi Ataur Khalil
+  published: '2026-09-10'
+  updated: '2026-09-10'
+  categories:
+  - cs.CV
+  - cs.AI
+  abstract: Visual Question Answering (VQA) systems, jointly interpreting images and natural language
+    queries, hold significant promise across many domains, yet the privacy-sensitive nature of user data
+    creates a fundamental barrier. Centralized training requires access to all data, while federated learning
+    requires each client to host the full model. We propose USPLIT-VQA, a U-shaped split learning framework
+    for privacy-preserving VQA in which each client retains the initial layers and the classification
+    head while the server hosts the computationally heavy intermediate layers, keeping raw inputs and
+    labels on the client device. We further introduce Contribution-Aware Weighted Aggregation (CAWA),
+    a gradientsimilarity-based client scoring mechanism designed to reduce the influence of malicious
+    updates. Experiments on four VQA datasets (VQA-RAD, SLAKE, PathVQA, and VizWiz) with two backbones
+    show accuracy gains over Federated Learning for the Custom model and reduced accuracy for BiomedCLIP
+    under the evaluated fixed split, alongside client memory reductions of up to 5.8X and communication
+    reductions of up to 10.8X. With one malicious client, CAWA reduces the attacker's influence by over
+    98%, while experiments at higher corruption levels identify its limitations. Reconstruction experiments
+    further show lower inversion quality under the evaluated attacks.
+  url: https://arxiv.org/abs/2609.12168
+  pdf_url: https://arxiv.org/pdf/2609.12168v1
+  version: v1
+fetched: '2026-11-14'

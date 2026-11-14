@@ -1,0 +1,41 @@
+id: paper:arxiv:2606.23717
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'SpaCE: Rethinking Spatial Capacity and Generalization in Multi-Frame Multimodal Large Language
+    Models'
+  authors:
+  - Mariana Costa
+  - Camila Ferreira
+  - Alberlucia Rafael Soarez
+  - Alejandro Torres
+  published: '2026-06-16'
+  updated: '2026-06-16'
+  categories:
+  - eess.IV
+  abstract: Multi-modal large language models (MLLMs) have achieved remarkable empirical progress in spatial
+    understanding through large-scale training on spatial visual question answering datasets. However,
+    the theoretical foundations of multi-frame spatial reasoning remain entirely unexplored. We present
+    SpaCE, a rigorous theoretical framework that characterizes the spatial reasoning capacity, sample
+    complexity, and generalization guarantees of MLLMs operating on multi-frame inputs. We establish four
+    main results. First, we prove an information-theoretic upper bound on spatial reasoning accuracy in
+    terms of the mutual information between multi-frame observations and spatial targets. Second, we derive
+    a sample complexity bound of order $Θ(d_{\mathrm{eff}} \cdot K_{\max} / (\varepsilon^2 \cdot δ))$,
+    where $d_{\mathrm{eff}}$ is the effective spatial dimension and $K_{\max}$ bounds the KL divergence
+    of the learned posterior. Third, we provide a PAC-Bayes generalization bound for multi-frame spatial
+    reasoning under distribution shift. Fourth, we formally characterize the bias-variance trade-off between
+    explicit 3D representations and implicit reasoning approaches, identifying the crossover conditions
+    under which each paradigm is provably preferable. We validate our theoretical predictions on the MultiSPA,
+    CA-VQA, and SpatialRGPT benchmarks, demonstrating that our bounds are empirically tight and that frame
+    complementarity is the key driver of multi-frame spatial capacity. Our framework provides the first
+    principled theoretical foundation for understanding when, why, and how multi-frame spatial reasoning
+    in MLLs succeeds.
+  url: https://arxiv.org/abs/2606.23717
+  pdf_url: https://arxiv.org/pdf/2606.23717v1
+  version: v1
+fetched: '2026-11-14'

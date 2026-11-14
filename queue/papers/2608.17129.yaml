@@ -1,0 +1,47 @@
+id: paper:arxiv:2608.17129
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'MG-VQA: Manipulation Grounded Visual Question Answering with VLMs'
+  authors:
+  - Vineet Bhat
+  - Mikaela Angelina Uy
+  - Siyi Chen
+  - Chan Hee Song
+  - Alex Zook
+  - Xuning Yang
+  - Stan Birchfield
+  - Valts Blukis
+  - Jonathan Tremblay
+  published: '2026-08-17'
+  updated: '2026-10-12'
+  categories:
+  - cs.CV
+  - cs.RO
+  abstract: 'Vision-language models (VLMs) have shown promising spatial reasoning capabilities from static
+    visual inputs, where the evidence needed to answer a question is available in the provided views.
+    However, in cluttered environments, answer-relevant evidence may be occluded rather than absent: an
+    object may lie beneath a pile, be covered by another object, or have identifying information facing
+    away from the camera. Answering such questions requires physical interaction to reveal the hidden
+    evidence. We formalize this setting as Manipulation-Grounded Visual Question Answering (MG-VQA), where
+    an agent answers a question about an initially cluttered scene by using manipulation as an intermediate
+    evidence-gathering operation. We introduce MG-VQA-Bench, comprising 600 human-verified questions across
+    four spatial reasoning tasks, and evaluate it in a cluttered tabletop interactive environment. Eight
+    VLMs are evaluated under three levels of environment access: Direct (image only), Perception (pointing,
+    segmentation, and scene graphs), and Manipulation (perception, grasping, and pushing). Across all
+    models, Direct and Perception achieve average success rates of 36.2% and 37.6%, respectively, only
+    slightly above an image-blind chance baseline of 32.7%. In contrast, Manipulation raises average success
+    to 56.8% (40.8-83.0% across models). Stronger tool-calling VLMs, GPT~6~Astra (83.0%) and Gemini~3.8~Flash
+    (69.3%), search persistently and re-ground after unsuccessful interactions, while weaker models often
+    answer without gathering sufficient evidence or stop prematurely after failed actions. Our results
+    highlight the need for VLM agents that use manipulation for persistent, physically grounded evidence
+    gathering and recovery. Code and benchmark is available here: https://github.com/vineet2104/MG-VQA'
+  url: https://arxiv.org/abs/2608.17129
+  pdf_url: https://arxiv.org/pdf/2608.17129v3
+  version: v3
+fetched: '2026-11-14'

@@ -1,0 +1,50 @@
+id: paper:arxiv:2511.06953
+status: pending
+score: 4
+track: processing_enhancement
+matched:
+- ref: concept:3DGS
+  count: 4
+  weight: 1
+- ref: metric:BD-Rate
+  count: 1
+  weight: 1
+- ref: metric:FID
+  count: 1
+  weight: 1
+- ref: metric:LPIPS
+  count: 1
+  weight: 1
+meta:
+  title: 'GFix: Perceptually Enhanced Gaussian Splatting Video Compression'
+  authors:
+  - Siyue Teng
+  - Ge Gao
+  - Duolikun Danier
+  - Yuxuan Jiang
+  - Fan Zhang
+  - Thomas Davis
+  - Zoe Liu
+  - David Bull
+  published: '2025-11-10'
+  updated: '2025-11-10'
+  categories:
+  - cs.CV
+  abstract: 3D Gaussian Splatting (3DGS) enhances 3D scene reconstruction through explicit representation
+    and fast rendering, demonstrating potential benefits for various low-level vision tasks, including
+    video compression. However, existing 3DGS-based video codecs generally exhibit more noticeable visual
+    artifacts and relatively low compression ratios. In this paper, we specifically target the perceptual
+    enhancement of 3DGS-based video compression, based on the assumption that artifacts from 3DGS rendering
+    and quantization resemble noisy latents sampled during diffusion training. Building on this premise,
+    we propose a content-adaptive framework, GFix, comprising a streamlined, single-step diffusion model
+    that serves as an off-the-shelf neural enhancer. Moreover, to increase compression efficiency, We
+    propose a modulated LoRA scheme that freezes the low-rank decompositions and modulates the intermediate
+    hidden states, thereby achieving efficient adaptation of the diffusion backbone with highly compressible
+    updates. Experimental results show that GFix delivers strong perceptual quality enhancement, outperforming
+    GSVC with up to 72.1% BD-rate savings in LPIPS and 21.4% in FID.
+  url: https://arxiv.org/abs/2511.06953
+  pdf_url: https://arxiv.org/pdf/2511.06953v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 4
+citation_year: 2025

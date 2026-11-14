@@ -1,0 +1,44 @@
+id: paper:arxiv:2603.10098
+status: pending
+score: 2
+track: self_improvement
+matched:
+- ref: concept:AlphaEvolve
+  count: 1
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: 'Code-Space Response Oracles: Generating Interpretable Multi-Agent Policies with Large Language
+    Models'
+  authors:
+  - Daniel Hennes
+  - Zun Li
+  - John Schultz
+  - Marc Lanctot
+  published: '2026-03-10'
+  updated: '2026-03-10'
+  categories:
+  - cs.GT
+  - cs.AI
+  - cs.LG
+  abstract: 'Recent advances in multi-agent reinforcement learning, particularly Policy-Space Response
+    Oracles (PSRO), have enabled the computation of approximate game-theoretic equilibria in increasingly
+    complex domains. However, these methods rely on deep reinforcement learning oracles that produce `black-box''
+    neural network policies, making them difficult to interpret, trust or debug. We introduce Code-Space
+    Response Oracles (CSRO), a novel framework that addresses this challenge by replacing RL oracles with
+    Large Language Models (LLMs). CSRO reframes the best response computation as a code generation task,
+    prompting an LLM to generate policies directly as human-readable code. This approach not only yields
+    inherently interpretable policies but also leverages the LLM''s pretrained knowledge to discover complex,
+    human-like strategies. We explore multiple ways to construct and enhance an LLM-based oracle: zero-shot
+    prompting, iterative refinement and \emph{AlphaEvolve}, a distributed LLM-based evolutionary system.
+    We demonstrate that CSRO achieves performance competitive with baselines while producing a diverse
+    set of explainable policies. Our work presents a new perspective on multi-agent learning, shifting
+    the focus from optimizing opaque policy parameters to synthesizing interpretable algorithmic behavior.'
+  url: https://arxiv.org/abs/2603.10098
+  pdf_url: https://arxiv.org/pdf/2603.10098v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 3
+citation_year: 2026

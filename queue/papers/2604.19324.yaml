@@ -1,0 +1,38 @@
+id: paper:arxiv:2604.19324
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: PLaMo 2.1-VL Technical Report
+  authors:
+  - Tommi Kerola
+  - Yuya Masuda
+  - Takashi Masuko
+  - Toshiki Nakanishi
+  - Daisuke Nishino
+  - Kuniyuki Takahashi
+  - Hanqin Wang
+  - Yoshihiro Yamada
+  published: '2026-04-21'
+  updated: '2026-04-21'
+  categories:
+  - cs.CV
+  - cs.AI
+  abstract: 'We introduce PLaMo 2.1-VL, a lightweight Vision Language Model (VLM) for autonomous devices,
+    available in 8B and 2B variants and designed for local and edge deployment with Japanese-language
+    operation. Focusing on Visual Question Answering (VQA) and Visual Grounding as its core capabilities,
+    we develop and evaluate the models for two real-world application scenarios: factory task analysis
+    via tool recognition, and infrastructure anomaly detection. We also develop a large-scale synthetic
+    data generation pipeline and comprehensive Japanese training and evaluation resources. PLaMo 2.1-VL
+    outperforms comparable open models on Japanese and English benchmarks, achieving 61.5 ROUGE-L on JA-VG-VQA-500
+    and 85.2% accuracy on Japanese Ref-L4. For the two application scenarios, it achieves 53.9% zero-shot
+    accuracy on factory task analysis, and fine-tuning on power plant data improves anomaly detection
+    bbox + label F1-score from 39.7 to 64.9.'
+  url: https://arxiv.org/abs/2604.19324
+  pdf_url: https://arxiv.org/pdf/2604.19324v1
+  version: v1
+fetched: '2026-11-14'

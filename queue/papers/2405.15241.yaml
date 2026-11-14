@@ -1,0 +1,40 @@
+id: paper:arxiv:2405.15241
+status: skipped
+score: 1
+track: processing_enhancement
+matched:
+- ref: concept:SuperResolution
+  count: 1
+  weight: 1
+meta:
+  title: 'Blaze3DM: Marry Triplane Representation with Diffusion for 3D Medical Inverse Problem Solving'
+  authors:
+  - Jia He
+  - Bonan Li
+  - Ge Yang
+  - Ziwen Liu
+  published: '2024-05-24'
+  updated: '2024-05-24'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: Solving 3D medical inverse problems such as image restoration and reconstruction is crucial
+    in modern medical field. However, the curse of dimensionality in 3D medical data leads mainstream
+    volume-wise methods to suffer from high resource consumption and challenges models to successfully
+    capture the natural distribution, resulting in inevitable volume inconsistency and artifacts. Some
+    recent works attempt to simplify generation in the latent space but lack the capability to efficiently
+    model intricate image details. To address these limitations, we present Blaze3DM, a novel approach
+    that enables fast and high-fidelity generation by integrating compact triplane neural field and powerful
+    diffusion model. In technique, Blaze3DM begins by optimizing data-dependent triplane embeddings and
+    a shared decoder simultaneously, reconstructing each triplane back to the corresponding 3D volume.
+    To further enhance 3D consistency, we introduce a lightweight 3D aware module to model the correlation
+    of three vertical planes. Then, diffusion model is trained on latent triplane embeddings and achieves
+    both unconditional and conditional triplane generation, which is finally decoded to arbitrary size
+    volume. Extensive experiments on zero-shot 3D medical inverse problem solving, including sparse-view
+    CT, limited-angle CT, compressed-sensing MRI, and MRI isotropic super-resolution, demonstrate that
+    Blaze3DM not only achieves state-of-the-art performance but also markedly improves computational efficiency
+    over existing methods (22~40x faster than previous work).
+  url: https://arxiv.org/abs/2405.15241
+  pdf_url: https://arxiv.org/pdf/2405.15241v1
+  version: v1
+fetched: '2026-11-14'

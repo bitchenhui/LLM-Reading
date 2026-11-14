@@ -1,0 +1,44 @@
+id: paper:arxiv:2306.05704
+status: skipped
+score: 2
+track: video_image_coding
+matched:
+- ref: concept:Hyperprior
+  count: 1
+  weight: 1
+- ref: dataset:Kodak
+  count: 1
+  weight: 1
+meta:
+  title: Exploring Effective Mask Sampling Modeling for Neural Image Compression
+  authors:
+  - Lin Liu
+  - Mingming Zhao
+  - Shanxin Yuan
+  - Wenlong Lyu
+  - Wengang Zhou
+  - Houqiang Li
+  - Yanfeng Wang
+  - Qi Tian
+  published: '2023-06-09'
+  updated: '2023-06-09'
+  categories:
+  - cs.CV
+  - cs.MM
+  - eess.IV
+  abstract: Image compression aims to reduce the information redundancy in images. Most existing neural
+    image compression methods rely on side information from hyperprior or context models to eliminate
+    spatial redundancy, but rarely address the channel redundancy. Inspired by the mask sampling modeling
+    in recent self-supervised learning methods for natural language processing and high-level vision,
+    we propose a novel pretraining strategy for neural image compression. Specifically, Cube Mask Sampling
+    Module (CMSM) is proposed to apply both spatial and channel mask sampling modeling to image compression
+    in the pre-training stage. Moreover, to further reduce channel redundancy, we propose the Learnable
+    Channel Mask Module (LCMM) and the Learnable Channel Completion Module (LCCM). Our plug-and-play CMSM,
+    LCMM, LCCM modules can apply to both CNN-based and Transformer-based architectures, significantly
+    reduce the computational cost, and improve the quality of images. Experiments on the public Kodak
+    and Tecnick datasets demonstrate that our method achieves competitive performance with lower computational
+    complexity compared to state-of-the-art image compression methods.
+  url: https://arxiv.org/abs/2306.05704
+  pdf_url: https://arxiv.org/pdf/2306.05704v1
+  version: v1
+fetched: '2026-11-14'

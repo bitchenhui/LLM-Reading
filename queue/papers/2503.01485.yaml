@@ -1,0 +1,37 @@
+id: paper:arxiv:2503.01485
+status: skipped
+score: 0
+track: audio_coding
+matched: []
+meta:
+  title: 'FlowDec: A flow-based full-band general audio codec with high perceptual quality'
+  authors:
+  - Simon Welker
+  - Matthew Le
+  - Ricky T. Q. Chen
+  - Wei-Ning Hsu
+  - Timo Gerkmann
+  - Alexander Richard
+  - Yi-Chiao Wu
+  published: '2025-03-03'
+  updated: '2025-03-03'
+  categories:
+  - cs.SD
+  - cs.LG
+  - eess.AS
+  - eess.SP
+  abstract: We propose FlowDec, a neural full-band audio codec for general audio sampled at 48 kHz that
+    combines non-adversarial codec training with a stochastic postfilter based on a novel conditional
+    flow matching method. Compared to the prior work ScoreDec which is based on score matching, we generalize
+    from speech to general audio and move from 24 kbit/s to as low as 4 kbit/s, while improving output
+    quality and reducing the required postfilter DNN evaluations from 60 to 6 without any fine-tuning
+    or distillation techniques. We provide theoretical insights and geometric intuitions for our approach
+    in comparison to ScoreDec as well as another recent work that uses flow matching, and conduct ablation
+    studies on our proposed components. We show that FlowDec is a competitive alternative to the recent
+    GAN-dominated stream of neural codecs, achieving FAD scores better than those of the established GAN-based
+    codec DAC and listening test scores that are on par, and producing qualitatively more natural reconstructions
+    for speech and harmonic structures in music.
+  url: https://arxiv.org/abs/2503.01485
+  pdf_url: https://arxiv.org/pdf/2503.01485v1
+  version: v1
+fetched: '2026-11-14'

@@ -1,0 +1,52 @@
+id: paper:arxiv:2505.12565
+status: skipped
+score: 0
+track: self_improvement
+matched: []
+meta:
+  title: 'mCLM: A Modular Chemical Language Model that Generates Functional and Makeable Molecules'
+  authors:
+  - Carl Edwards
+  - Chi Han
+  - Gawon Lee
+  - Thao Nguyen
+  - Sara Szymkuć
+  - Chetan Kumar Prasad
+  - Bowen Jin
+  - Jiawei Han
+  - Ying Diao
+  - Ge Liu
+  - Hao Peng
+  - Bartosz A. Grzybowski
+  - Martin D. Burke
+  - Heng Ji
+  published: '2025-05-18'
+  updated: '2026-03-01'
+  categories:
+  - cs.AI
+  - cs.CL
+  - cs.LG
+  - q-bio.QM
+  abstract: Despite their ability to understand chemical knowledge, large language models (LLMs) remain
+    limited in their capacity to propose novel molecules with desired functions (e.g., drug-like properties).
+    In addition, the molecules that LLMs propose can often be challenging to make, and are almost never
+    compatible with automated synthesis approaches. To better enable the discovery of functional small
+    molecules, LLMs need to learn a new molecular language that is more effective in predicting properties
+    and inherently synced with automated synthesis technology. Current molecule LLMs are limited by representing
+    molecules based on atoms. In this paper, we argue that just like tokenizing texts into meaning-bearing
+    (sub-)word tokens instead of characters, molecules should be tokenized at the level of functional
+    building blocks, i.e., parts of molecules that bring unique functions and serve as effective building
+    blocks for real-world automated laboratory synthesis. This motivates us to propose mCLM, a modular
+    Chemical-Language Model that comprises a bilingual language model that understands both natural language
+    descriptions of functions and molecular blocks. mCLM front-loads synthesizability considerations while
+    improving the predicted functions of molecules in a principled manner. Experiments on FDA-approved
+    drugs showed that mCLM is capable of significantly improving chemical functions. mCLM, with only 3B
+    parameters, also achieves improvements in synthetic accessibility relative to 7 other leading generative
+    AI methods including GPT-5. When tested on 122 out-of-distribution medicines using only building blocks/tokens
+    that are compatible with automated modular synthesis, mCLM outperforms all baselines in property scores
+    and synthetic accessibility. mCLM can also reason on multiple functions and iteratively self-improve
+    to rescue drug candidates that failed late in clinical trials ("fallen angels").
+  url: https://arxiv.org/abs/2505.12565
+  pdf_url: https://arxiv.org/pdf/2505.12565v3
+  version: v3
+fetched: '2026-11-14'

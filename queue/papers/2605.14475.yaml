@@ -1,0 +1,42 @@
+id: paper:arxiv:2605.14475
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'GeoVista: Visually Grounded Active Perception for Vision-Language Understanding of Ultra-High-Resolution
+    Remote Sensing Images'
+  authors:
+  - Jiashun Zhu
+  - Ronghao Fu
+  - Jiasen Hu
+  - Jing Huang
+  - Nachuan Xing
+  - Bo Yang
+  published: '2026-05-14'
+  updated: '2026-06-21'
+  categories:
+  - cs.CV
+  abstract: Interpreting ultra-high-resolution (UHR) remote sensing images requires models to search for
+    sparse and tiny visual evidence across large-scale scenes. Existing remote sensing vision-language
+    models can inspect local regions with zooming and cropping tools, but most exploration strategies
+    follow either a one-shot focus or a single sequential trajectory. Such single-path exploration can
+    lose global context, leave scattered regions unvisited, and revisit or count the same evidence multiple
+    times. To this end, we propose GeoVista, a planning-driven active perception framework for UHR remote
+    sensing interpretation. Instead of committing to one zooming path, GeoVista first builds a global
+    exploration plan, then verifies multiple candidate regions through branch-wise local inspection, while
+    maintaining an explicit evidence state for cross-region aggregation and de-duplication. To enable
+    this behavior, we introduce APE-GRO, a cold-start supervised trajectory corpus that reformulates diverse
+    UHR tasks as Global-Region-Object interactive reasoning processes with a unified, scale-invariant
+    spatial representation. We further design an Observe-Plan-Track mechanism for global observation,
+    adaptive region inspection, and evidence tracking, and align the model with a GRPO-based strategy
+    using step-wise rewards for planning, localization, and final answer correctness. Experiments on RSHR-Bench,
+    XLRS-Bench, and LRS-VQA show that GeoVista achieves state-of-the-art performance. Code and dataset
+    are available at https://github.com/ryan6073/GeoVista.
+  url: https://arxiv.org/abs/2605.14475
+  pdf_url: https://arxiv.org/pdf/2605.14475v2
+  version: v2
+fetched: '2026-11-14'

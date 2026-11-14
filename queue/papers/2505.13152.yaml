@@ -1,0 +1,44 @@
+id: paper:arxiv:2505.13152
+status: skipped_low_citation
+score: 3
+track: video_image_coding
+matched:
+- ref: metric:FID
+  count: 1
+  weight: 1
+- ref: metric:LPIPS
+  count: 1
+  weight: 1
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+meta:
+  title: Higher fidelity perceptual image and video compression with a latent conditioned residual denoising
+    diffusion model
+  authors:
+  - Jonas Brenig
+  - Radu Timofte
+  published: '2025-05-19'
+  updated: '2025-05-19'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: Denoising diffusion models achieved impressive results on several image generation tasks often
+    outperforming GAN based models. Recently, the generative capabilities of diffusion models have been
+    employed for perceptual image compression, such as in CDC. A major drawback of these diffusion-based
+    methods is that, while producing impressive perceptual quality images they are dropping in fidelity/increasing
+    the distortion to the original uncompressed images when compared with other traditional or learned
+    image compression schemes aiming for fidelity. In this paper, we propose a hybrid compression scheme
+    optimized for perceptual quality, extending the approach of the CDC model with a decoder network in
+    order to reduce the impact on distortion metrics such as PSNR. After using the decoder network to
+    generate an initial image, optimized for distortion, the latent conditioned diffusion model refines
+    the reconstruction for perceptual quality by predicting the residual. On standard benchmarks, we achieve
+    up to +2dB PSNR fidelity improvements while maintaining comparable LPIPS and FID perceptual scores
+    when compared with CDC. Additionally, the approach is easily extensible to video compression, where
+    we achieve similar results.
+  url: https://arxiv.org/abs/2505.13152
+  pdf_url: https://arxiv.org/pdf/2505.13152v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 3
+citation_year: 2025

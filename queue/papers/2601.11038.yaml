@@ -1,0 +1,42 @@
+id: paper:arxiv:2601.11038
+status: skipped_low_citation
+score: 2
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: Budget-Aware Anytime Reasoning with LLM-Synthesized Preference Data
+  authors:
+  - Xuanming Zhang
+  - Shwan Ashrafi
+  - Aziza Mirsaidova
+  - Amir H. Rezaeian
+  - Miguel Ballesteros
+  - Lydia B. Chilton
+  - Zhou Yu
+  - Dan Roth
+  published: '2026-01-16'
+  updated: '2026-04-19'
+  categories:
+  - cs.CL
+  abstract: We study the reasoning behavior of large language models (LLMs) under limited computation
+    budgets. In such settings, producing useful partial solutions quickly is often more practical than
+    exhaustive reasoning, which incurs high inference costs. Many real-world tasks, such as trip planning,
+    require models to deliver the best possible output within a fixed reasoning budget. We introduce an
+    anytime reasoning framework and the Anytime Index, a metric that quantifies how effectively solution
+    quality improves as reasoning tokens increase. To further enhance efficiency, we propose an inference-time
+    self-improvement method using LLM-synthesized preference data, where models learn from their own reasoning
+    comparisons to produce better intermediate solutions. Experiments on NaturalPlan (Trip), AIME, and
+    GPQA datasets show consistent gains across Grok-3, GPT-oss, GPT-4.1/4o, and LLaMA models, improving
+    both reasoning quality and efficiency under budget constraints.
+  url: https://arxiv.org/abs/2601.11038
+  pdf_url: https://arxiv.org/pdf/2601.11038v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 1
+citation_year: 2026

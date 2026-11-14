@@ -1,0 +1,40 @@
+id: paper:arxiv:2504.06561
+status: pending
+score: 2
+track: audio_coding
+matched:
+- ref: concept:NeuralAudioCodec
+  count: 1
+  weight: 1
+- ref: concept:WebRTC
+  count: 1
+  weight: 1
+meta:
+  title: A Streamable Neural Audio Codec with Residual Scalar-Vector Quantization for Real-Time Communication
+  authors:
+  - Xiao-Hang Jiang
+  - Yang Ai
+  - Rui-Chen Zheng
+  - Zhen-Hua Ling
+  published: '2025-04-09'
+  updated: '2025-04-09'
+  categories:
+  - cs.SD
+  abstract: This paper proposes StreamCodec, a streamable neural audio codec designed for real-time communication.
+    StreamCodec adopts a fully causal, symmetric encoder-decoder structure and operates in the modified
+    discrete cosine transform (MDCT) domain, aiming for low-latency inference and real-time efficient
+    generation. To improve codebook utilization efficiency and compensate for the audio quality loss caused
+    by structural causality, StreamCodec introduces a novel residual scalar-vector quantizer (RSVQ). The
+    RSVQ sequentially connects scalar quantizers and improved vector quantizers in a residual manner,
+    constructing coarse audio contours and refining acoustic details, respectively. Experimental results
+    confirm that the proposed StreamCodec achieves decoded audio quality comparable to advanced non-streamable
+    neural audio codecs. Specifically, on the 16 kHz LibriTTS dataset, StreamCodec attains a ViSQOL score
+    of 4.30 at 1.5 kbps. It has a fixed latency of only 20 ms and achieves a generation speed nearly 20
+    times real-time on a CPU, with a lightweight model size of just 7M parameters, making it highly suitable
+    for real-time communication applications.
+  url: https://arxiv.org/abs/2504.06561
+  pdf_url: https://arxiv.org/pdf/2504.06561v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 9
+citation_year: 2025

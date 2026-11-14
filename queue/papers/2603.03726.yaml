@@ -1,0 +1,38 @@
+id: paper:arxiv:2603.03726
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 2
+  weight: 1
+meta:
+  title: 'QD-PCQA: Quality-Aware Domain Adaptation for Point Cloud Quality Assessment'
+  authors:
+  - Guohua Zhang
+  - Jian Jin
+  - Meiqin Liu
+  - Chao Yao
+  - Weisi Lin
+  published: '2026-03-04'
+  updated: '2026-03-16'
+  categories:
+  - cs.CV
+  abstract: 'No-Reference Point Cloud Quality Assessment (NR-PCQA) still struggles with generalization,
+    primarily due to the scarcity of annotated point cloud datasets. Since the Human Visual System (HVS)
+    drives perceptual quality assessment independently of media types, prior knowledge on quality learned
+    from images can be repurposed for point clouds. This insight motivates adopting Unsupervised Domain
+    Adaptation (UDA) to transfer quality-relevant priors from labeled images to unlabeled point clouds.
+    However, existing UDA-based PCQA methods often overlook key characteristics of perceptual quality,
+    such as sensitivity to quality ranking and quality-aware feature alignment, thereby limiting their
+    effectiveness. To address these issues, we propose a novel Quality-aware Domain adaptation framework
+    for PCQA, termed QD-PCQA. The framework comprises two main components: i) a Rank-weighted Conditional
+    Alignment (RCA) strategy that aligns features under consistent quality levels and adaptively emphasizes
+    misranked samples to reinforce perceptual quality ranking awareness; and ii) a Quality-guided Feature
+    Augmentation (QFA) strategy, which includes quality-guided style mixup, multi-layer extension, and
+    dual-domain augmentation modules to augment perceptual feature alignment. Extensive cross-domain experiments
+    demonstrate that QD-PCQA significantly improves generalization in NR-PCQA tasks.'
+  url: https://arxiv.org/abs/2603.03726
+  pdf_url: https://arxiv.org/pdf/2603.03726v2
+  version: v2
+fetched: '2026-11-14'

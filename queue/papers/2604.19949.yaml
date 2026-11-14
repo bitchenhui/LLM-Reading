@@ -1,0 +1,48 @@
+id: paper:arxiv:2604.19949
+status: pending
+score: 4
+track: audio_coding
+matched:
+- ref: impl:CausalForcing
+  count: 1
+  weight: 3
+- ref: concept:NeuralAudioCodec
+  count: 1
+  weight: 1
+meta:
+  title: 'Indic-CodecFake meets SATYAM: Towards Detecting Neural Audio Codec Synthesized Speech Deepfakes
+    in Indic Languages'
+  authors:
+  - ' Girish'
+  - Mohd Mujtaba Akhtar
+  - Orchid Chetia Phukan
+  - Arun Balaji Buduru
+  published: '2026-04-21'
+  updated: '2026-04-21'
+  categories:
+  - eess.AS
+  abstract: The rapid advancement of Audio Large Language Models (ALMs), driven by Neural Audio Codecs
+    (NACs), has led to the emergence of highly realistic speech deepfakes, commonly referred to as CodecFakes
+    (CFs). Consequently, CF detection has attracted increasing attention from the research community.
+    However, existing studies predominantly focus on English or Chinese, leaving the vulnerability of
+    Indic languages largely unexplored. To bridge this gap, we introduce Indic-CodecFake (ICF) dataset,
+    the first large-scale benchmark comprising real and NAC-synthesized speech across multiple Indic languages,
+    diverse speaker profiles, and multiple NAC types. We use IndicSUPERB as the real speech corpus for
+    generation of ICF dataset. Our experiments demonstrate that state-of-the-art (SOTA) CF detectors trained
+    on English-centric datasets fail to generalize to ICF, underscoring the challenges posed by phonetic
+    diversity and prosodic variability in Indic speech. Further, we present systematic evaluation of SOTA
+    ALMs in a zero-shot setting on ICF dataset. We evaluate these ALMs as they have shown effectiveness
+    for different speech tasks. However, our findings reveal that current ALMs exhibit consistently poor
+    performance. To address this, we propose SATYAM, a novel hyperbolic ALM tailored for CF detection
+    in Indic languages. SATYAM integrates semantic representations from Whisper and prosodic representations
+    from TRILLsson using through Bhattacharya distance in hyperbolic space and subsequently performs the
+    same alignment procedure between the fused speech representation and an input conditioning prompt.
+    This dual-stage fusion framework enables SATYAM to effectively model hierarchical relationships both
+    within speech (semantic-prosodic) and across modalities (speech-text). Extensive evaluations show
+    that SATYAM consistently outperforms competitive end-to-end and ALM-based baselines on the ICF benchmark.
+  url: https://arxiv.org/abs/2604.19949
+  pdf_url: https://arxiv.org/pdf/2604.19949v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 2
+citation_year: 2026

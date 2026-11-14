@@ -1,0 +1,34 @@
+id: paper:arxiv:2503.20221
+status: skipped
+score: 1
+track: immersive_media
+matched:
+- ref: concept:3DGS
+  count: 4
+  weight: 1
+meta:
+  title: 'TC-GS: Tri-plane based compression for 3D Gaussian Splatting'
+  authors:
+  - Taorui Wang
+  - Zitong Yu
+  - Yong Xu
+  published: '2025-03-26'
+  updated: '2025-03-26'
+  categories:
+  - cs.CV
+  abstract: Recently, 3D Gaussian Splatting (3DGS) has emerged as a prominent framework for novel view
+    synthesis, providing high fidelity and rapid rendering speed. However, the substantial data volume
+    of 3DGS and its attributes impede its practical utility, requiring compression techniques for reducing
+    memory cost. Nevertheless, the unorganized shape of 3DGS leads to difficulties in compression. To
+    formulate unstructured attributes into normative distribution, we propose a well-structured tri-plane
+    to encode Gaussian attributes, leveraging the distribution of attributes for compression. To exploit
+    the correlations among adjacent Gaussians, K-Nearest Neighbors (KNN) is used when decoding Gaussian
+    distribution from the Tri-plane. We also introduce Gaussian position information as a prior of the
+    position-sensitive decoder. Additionally, we incorporate an adaptive wavelet loss, aiming to focus
+    on the high-frequency details as iterations increase. Our approach has achieved results that are comparable
+    to or surpass that of SOTA 3D Gaussians Splatting compression work in extensive experiments across
+    multiple datasets. The codes are released at https://github.com/timwang2001/TC-GS.
+  url: https://arxiv.org/abs/2503.20221
+  pdf_url: https://arxiv.org/pdf/2503.20221v1
+  version: v1
+fetched: '2026-11-14'

@@ -1,0 +1,42 @@
+id: paper:arxiv:2409.01029
+status: skipped
+score: 2
+track: video_image_coding
+matched:
+- ref: org:JVET
+  count: 1
+  weight: 1
+- ref: org:MPEG
+  count: 1
+  weight: 1
+meta:
+  title: Multi-Reference Generative Face Video Compression with Contrastive Learning
+  authors:
+  - Goluck Konuko
+  - Giuseppe Valenzise
+  published: '2024-09-02'
+  updated: '2024-09-02'
+  categories:
+  - cs.MM
+  abstract: Generative face video coding (GFVC) has been demonstrated as a potential approach to low-latency,
+    low bitrate video conferencing. GFVC frameworks achieve an extreme gain in coding efficiency with
+    over 70% bitrate savings when compared to conventional codecs at bitrates below 10kbps. In recent
+    MPEG/JVET standardization efforts, all the information required to reconstruct video sequences using
+    GFVC frameworks are adopted as part of the supplemental enhancement information (SEI) in existing
+    compression pipelines. In light of this development, we aim to address a challenge that has been weakly
+    addressed in prior GFVC frameworks, i.e., reconstruction drift as the distance between the reference
+    and target frames increases. This challenge creates the need to update the reference buffer more frequently
+    by transmitting more Intra-refresh frames, which are the most expensive element of the GFVC bitstream.
+    To overcome this problem, we propose instead multiple reference animation as a robust approach to
+    minimizing reconstruction drift, especially when used in a bi-directional prediction mode. Further,
+    we propose a contrastive learning formulation for multi-reference animation. We observe that using
+    a contrastive learning framework enhances the representation capabilities of the animation generator.
+    The resulting framework, MRDAC (Multi-Reference Deep Animation Codec) can therefore be used to compress
+    longer sequences with fewer reference frames or achieve a significant gain in reconstruction accuracy
+    at comparable bitrates to previous frameworks. Quantitative and qualitative results show significant
+    coding and reconstruction quality gains compared to previous GFVC methods, and more accurate animation
+    quality in presence of large pose and facial expression changes.
+  url: https://arxiv.org/abs/2409.01029
+  pdf_url: https://arxiv.org/pdf/2409.01029v1
+  version: v1
+fetched: '2026-11-14'

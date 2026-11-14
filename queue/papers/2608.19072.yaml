@@ -1,0 +1,53 @@
+id: paper:arxiv:2608.19072
+status: pending
+score: 3
+track: self_improvement
+matched:
+- ref: concept:RSI
+  count: 3
+  weight: 1
+- ref: concept:LLM
+  count: 2
+  weight: 1
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+meta:
+  title: 'What is Missing from AI Post-Training AI: An Empirical Analysis'
+  authors:
+  - Joy Jia Yin Lim
+  - Xin Huang
+  - Hao Peng
+  - Yaxi Lu
+  - Xin Cong
+  - Zhong Zhang
+  - Maosong Sun
+  - Yankai Lin
+  published: '2026-08-19'
+  updated: '2026-09-28'
+  categories:
+  - cs.AI
+  - cs.CL
+  - cs.LG
+  abstract: 'Large language model (LLM) agents can now post-train an LLM end-to-end, raising the prospect
+    of recursive self-improvement (RSI). Yet this progress is measured by aggregate benchmark scores,
+    which cannot tell whether an agent executes a fixed plan well or strategically revises the plan when
+    it fails. We separate these two capabilities: execution-level capability, iterating within an established
+    training strategy, and strategy-level capability, revising that strategy as experimental evidence
+    accumulates. Analyzing 1,338 post-training trajectories of frontier agents, we find that agents reliably
+    execute post-training but lock into a default strategy, which follows the agent rather than the task,
+    and only 2.1% of transitions between adjacent training runs ever change strategy. We then test whether
+    the agent lacks experience, reasoning, or the decision to switch. (1) Experience improves execution
+    but not the strategy. (2) Additional reasoning compute yields front-loaded gains on easier tasks but
+    refines, rather than revises, the committed strategy. (3) Human review before training changes which
+    strategy the agent locks into, not whether it locks in, whereas a single mid-run instruction outperforms
+    the agent''s own continuation by up to 17.44 points under the same budget. In conclusion, what the
+    agent lacks is the decision to reopen a committed strategy and try another one. Realizing RSI therefore
+    calls for interaction protocols and training signals that make strategy revision an explicit, rewarded
+    decision.'
+  url: https://arxiv.org/abs/2608.19072
+  pdf_url: https://arxiv.org/pdf/2608.19072v2
+  version: v2
+fetched: '2026-11-14'
+citation_count: 4
+citation_year: 2026

@@ -1,0 +1,41 @@
+id: paper:arxiv:2401.10345
+status: skipped_low_citation
+score: 4
+track: video_image_coding
+matched:
+- ref: codec:VVC
+  count: 1
+  weight: 3
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+meta:
+  title: Attack and Defense Analysis of Learned Image Compression
+  authors:
+  - Tianyu Zhu
+  - Heming Sun
+  - Xiankui Xiong
+  - Xuanpeng Zhu
+  - Yong Gong
+  - Minge jing
+  - Yibo Fan
+  published: '2024-01-18'
+  updated: '2024-03-27'
+  categories:
+  - eess.IV
+  abstract: Learned image compression (LIC) is becoming more and more popular these years with its high
+    efficiency and outstanding compression quality. Still, the practicality against modified inputs added
+    with specific noise could not be ignored. White-box attacks such as FGSM and PGD use only gradient
+    to compute adversarial images that mislead LIC models to output unexpected results. Our experiments
+    compare the effects of different dimensions such as attack methods, models, qualities, and targets,
+    concluding that in the worst case, there is a 61.55% decrease in PSNR or a 19.15 times increase in
+    bpp under the PGD attack. To improve their robustness, we conduct adversarial training by adding adversarial
+    images into the training datasets, which obtains a 95.52% decrease in the R-D cost of the most vulnerable
+    LIC model. We further test the robustness of H.266, whose better performance on reconstruction quality
+    extends its possibility to defend one-step or iterative adversarial attacks.
+  url: https://arxiv.org/abs/2401.10345
+  pdf_url: https://arxiv.org/pdf/2401.10345v3
+  version: v3
+fetched: '2026-11-14'
+citation_count: 7
+citation_year: 2024

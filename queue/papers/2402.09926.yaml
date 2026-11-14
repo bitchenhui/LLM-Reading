@@ -1,0 +1,34 @@
+id: paper:arxiv:2402.09926
+status: skipped
+score: 0
+track: video_image_coding
+matched: []
+meta:
+  title: Energy Demand Prediction for Hardware Video Decoders Using Software Profiling
+  authors:
+  - Matthias Kränzler
+  - Christian Herglotz
+  - André Kaup
+  published: '2024-02-15'
+  updated: '2024-12-12'
+  categories:
+  - eess.IV
+  abstract: Energy efficiency for video communications is essential for mobile devices with a limited
+    battery capacity. Therefore, hardware decoder implementations are commonly used to significantly reduce
+    the energetic load of video playback. The energy consumption of such a hardware implementation largely
+    depends on a previously published specification of a video coding standard that defines which coding
+    tools and methods are included. However, during the standardization of a video coding standard, the
+    energy demand of a hardware implementation is unknown. Hence, the hardware complexity of coding tools
+    is judged subjectively by experts from the field of hardware programming without using standardized
+    assessment procedures. To solve this problem, we propose a method that accurately models the energy
+    demand of existing hardware decoders with an average error of 1.79% by exploiting information from
+    software decoder profiling. Motivated by the low estimation error, we propose a hardware decoding
+    energy metric that can predict and estimate the energy demand of an unknown hardware implementation
+    using information from existing hardware decoder implementations and available software implementations
+    of the future video decoder. By using multiple video coding standards for model training, we can predict
+    the relative energy demand of an unknown hardware decoder with a minimum error of 4.54% without using
+    the corresponding hardware decoder for training.
+  url: https://arxiv.org/abs/2402.09926
+  pdf_url: https://arxiv.org/pdf/2402.09926v3
+  version: v3
+fetched: '2026-11-14'

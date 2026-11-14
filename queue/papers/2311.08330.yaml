@@ -1,0 +1,31 @@
+id: paper:arxiv:2311.08330
+status: skipped
+score: 0
+track: audio_coding
+matched: []
+meta:
+  title: Generative De-Quantization for Neural Speech Codec via Latent Diffusion
+  authors:
+  - Haici Yang
+  - Inseon Jang
+  - Minje Kim
+  published: '2023-11-14'
+  updated: '2023-11-15'
+  categories:
+  - eess.AS
+  - cs.SD
+  abstract: In low-bitrate speech coding, end-to-end speech coding networks aim to learn compact yet expressive
+    features and a powerful decoder in a single network. A challenging problem as such results in unwelcome
+    complexity increase and inferior speech quality. In this paper, we propose to separate the representation
+    learning and information reconstruction tasks. We leverage an end-to-end codec for learning low-dimensional
+    discrete tokens and employ a latent diffusion model to de-quantize coded features into a high-dimensional
+    continuous space, relieving the decoder's burden of de-quantizing and upsampling. To mitigate the
+    issue of over-smooth generation, we introduce midway-infilling with less noise reduction and stronger
+    conditioning. In ablation studies, we investigate the hyperparameters for midway-infilling and latent
+    diffusion space with different dimensions. Subjective listening tests show that our model outperforms
+    the state-of-the-art at two low bitrates, 1.5 and 3 kbps. Codes and samples of this work are available
+    on our webpage.
+  url: https://arxiv.org/abs/2311.08330
+  pdf_url: https://arxiv.org/pdf/2311.08330v2
+  version: v2
+fetched: '2026-11-14'

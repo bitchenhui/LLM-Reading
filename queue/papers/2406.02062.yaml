@@ -1,0 +1,41 @@
+id: paper:arxiv:2406.02062
+status: skipped
+score: 1
+track: streaming_delivery
+matched:
+- ref: concept:WebRTC
+  count: 2
+  weight: 1
+meta:
+  title: 'Towards Railways Remote Driving: Analysis of Video Streaming Latency and Adaptive Rate Control'
+  authors:
+  - Daniel Mejias
+  - Zaloa Fernandez
+  - Roberto Viola
+  - Ander Aramburu
+  - Igor Lopez
+  - Andoni Diaz
+  published: '2024-06-04'
+  updated: '2024-06-04'
+  categories:
+  - cs.NI
+  - cs.MM
+  abstract: Remote driving aims to improve transport systems by promoting efficiency, sustainability,
+    and accessibility. In the railway sector, remote driving makes it possible to increase flexibility,
+    as the driver no longer has to be in the cab. However, this brings several challenges, as it has to
+    provide at least the same level of safety obtained when the driver is in the cab. To achieve it, wireless
+    networks and video streaming technologies gain importance as they should provide real-time track visualization
+    and obstacle detection capabilities to the remote driver. Low latency camera capture, onboard media
+    processing devices, and streaming protocols adapted for wireless links are the necessary enablers
+    to be developed and integrated into the railway infrastructure. This paper compares video streaming
+    protocols such as Real-Time Streaming Protocol (RTSP) and Web Real-Time Communication (WebRTC), as
+    they are the main alternatives based on Real-time Transport Protocol (RTP) protocol to enable low
+    latency. As latency is the main performance metric, this paper also provides a solution to calculate
+    the End-to-End video streaming latency analytically. Finally, the paper proposes a rate control algorithm
+    to adapt the video stream depending on the network capacity. The objective is to keep the latency
+    as low as possible while avoiding any visual artifacts. The proposed solutions are tested in different
+    setups and scenarios to prove their effectiveness before the planned field testing.
+  url: https://arxiv.org/abs/2406.02062
+  pdf_url: https://arxiv.org/pdf/2406.02062v1
+  version: v1
+fetched: '2026-11-14'

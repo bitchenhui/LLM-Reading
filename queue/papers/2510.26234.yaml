@@ -1,0 +1,37 @@
+id: paper:arxiv:2510.26234
+status: skipped
+score: 1
+track: streaming_delivery
+matched:
+- ref: concept:QUIC
+  count: 2
+  weight: 1
+meta:
+  title: 'From req/res to pub/sub: Exploring Media over QUIC Transport for DNS'
+  authors:
+  - Mathis Engelbart
+  - Mike Kosek
+  - Lars Eggert
+  - Jörg Ott
+  published: '2025-10-30'
+  updated: '2025-10-30'
+  categories:
+  - cs.NI
+  abstract: 'The DNS is a key component of the Internet. Originally designed to facilitate the resolution
+    of host names to IP addresses, its scope has continuously expanded over the years, today covering
+    use cases such as load balancing or service discovery. While DNS was initially conceived as a rather
+    static directory service in which resource records (RR) only change rarely, we have seen a number
+    of use cases over the years where a DNS flavor that isn''t purely based upon requesting and caching
+    RRs, but rather on an active distribution of updates for all resolvers that showed interest in the
+    respective records in the past, would be preferable. In this paper, we thus explore a publish-subscribe
+    variant of DNS based on the Media-over-QUIC architecture, where we devise a strawman system and protocol
+    proposal to enable pushing RR updates. We provide a prototype implementation, finding that DNS can
+    benefit from a publish-subscribe variant: next to limiting update traffic, it can considerably reduce
+    the time it takes for a resolver to receive the latest version of a record, thereby supporting use
+    cases such as load balancing in content distribution networks. The publish-subscribe architecture
+    also brings new challenges to the DNS, including a higher overhead for endpoints due to additional
+    state management, and increased query latencies on first lookup, due to session establishment latencies.'
+  url: https://arxiv.org/abs/2510.26234
+  pdf_url: https://arxiv.org/pdf/2510.26234v1
+  version: v1
+fetched: '2026-11-14'

@@ -1,0 +1,44 @@
+id: paper:arxiv:2511.14927
+status: skipped
+score: 2
+track: video_image_coding
+matched:
+- ref: concept:VolumetricVideo
+  count: 2
+  weight: 1
+- ref: concept:WebRTC
+  count: 1
+  weight: 1
+meta:
+  title: 'CPSL: Representing Volumetric Video via Content-Promoted Scene Layers'
+  authors:
+  - Kaiyuan Hu
+  - Yili Jin
+  - Junhua Liu
+  - Xize Duan
+  - Hong Kang
+  - Xue Liu
+  published: '2025-11-18'
+  updated: '2025-11-18'
+  categories:
+  - cs.CV
+  - cs.MM
+  abstract: Volumetric video enables immersive and interactive visual experiences by supporting free viewpoint
+    exploration and realistic motion parallax. However, existing volumetric representations from explicit
+    point clouds to implicit neural fields, remain costly in capture, computation, and rendering, which
+    limits their scalability for on-demand video and reduces their feasibility for real-time communication.
+    To bridge this gap, we propose Content-Promoted Scene Layers (CPSL), a compact 2.5D video representation
+    that brings the perceptual benefits of volumetric video to conventional 2D content. Guided by per-frame
+    depth and content saliency, CPSL decomposes each frame into a small set of geometry-consistent layers
+    equipped with soft alpha bands and an edge-depth cache that jointly preserve occlusion ordering and
+    boundary continuity. These lightweight, 2D-encodable assets enable parallax-corrected novel-view synthesis
+    via depth-weighted warping and front-to-back alpha compositing, bypassing expensive 3D reconstruction.
+    Temporally, CPSL maintains inter-frame coherence using motion-guided propagation and per-layer encoding,
+    supporting real-time playback with standard video codecs. Across multiple benchmarks, CPSL achieves
+    superior perceptual quality and boundary fidelity compared with layer-based and neural-field baselines
+    while reducing storage and rendering cost by several folds. Our approach offer a practical path from
+    2D video to scalable 2.5D immersive media.
+  url: https://arxiv.org/abs/2511.14927
+  pdf_url: https://arxiv.org/pdf/2511.14927v1
+  version: v1
+fetched: '2026-11-14'

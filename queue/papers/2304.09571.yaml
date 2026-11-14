@@ -1,0 +1,60 @@
+id: paper:arxiv:2304.09571
+status: pending
+score: 9
+track: video_image_coding
+matched:
+- ref: impl:TCM
+  count: 1
+  weight: 3
+- ref: impl:VTM
+  count: 1
+  weight: 3
+- ref: concept:EntropyModel
+  count: 1
+  weight: 1
+- ref: dataset:Kodak
+  count: 1
+  weight: 1
+- ref: metric:BD-Rate
+  count: 1
+  weight: 1
+meta:
+  title: 'LLIC: Large Receptive Field Transform Coding with Adaptive Weights for Learned Image Compression'
+  authors:
+  - Wei Jiang
+  - Peirong Ning
+  - Jiayu Yang
+  - Yongqi Zhai
+  - Feng Gao
+  - Ronggang Wang
+  published: '2023-04-19'
+  updated: '2024-06-21'
+  categories:
+  - cs.CV
+  - cs.MM
+  - eess.IV
+  abstract: The effective receptive field (ERF) plays an important role in transform coding, which determines
+    how much redundancy can be removed during transform and how many spatial priors can be utilized to
+    synthesize textures during inverse transform. Existing methods rely on stacks of small kernels, whose
+    ERFs remain insufficiently large, or heavy non-local attention mechanisms, which limit the potential
+    of high-resolution image coding. To tackle this issue, we propose Large Receptive Field Transform
+    Coding with Adaptive Weights for Learned Image Compression (LLIC). Specifically, for the first time
+    in the learned image compression community, we introduce a few large kernelbased depth-wise convolutions
+    to reduce more redundancy while maintaining modest complexity. Due to the wide range of image diversity,
+    we further propose a mechanism to augment convolution adaptability through the self-conditioned generation
+    of weights. The large kernels cooperate with non-linear embedding and gate mechanisms for better expressiveness
+    and lighter pointwise interactions. Our investigation extends to refined training methods that unlock
+    the full potential of these large kernels. Moreover, to promote more dynamic inter-channel interactions,
+    we introduce an adaptive channel-wise bit allocation strategy that autonomously generates channel
+    importance factors in a self-conditioned manner. To demonstrate the effectiveness of the proposed
+    transform coding, we align the entropy model to compare with existing transform methods and obtain
+    models LLIC-STF, LLIC-ELIC, and LLIC-TCM. Extensive experiments demonstrate that our proposed LLIC
+    models have significant improvements over the corresponding baselines and reduce the BD-Rate by 9.49%,
+    9.47%, 10.94% on Kodak over VTM-17.0 Intra, respectively. Our LLIC models achieve state-of-the-art
+    performances and better trade-offs between performance and complexity.
+  url: https://arxiv.org/abs/2304.09571
+  pdf_url: https://arxiv.org/pdf/2304.09571v9
+  version: v9
+fetched: '2026-11-14'
+citation_count: 19
+citation_year: 2023

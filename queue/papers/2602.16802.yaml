@@ -1,0 +1,48 @@
+id: paper:arxiv:2602.16802
+status: skipped_low_citation
+score: 2
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: References Improve LLM Alignment in Non-Verifiable Domains
+  authors:
+  - Kejian Shi
+  - Yixin Liu
+  - Peifeng Wang
+  - Alexander R. Fabbri
+  - Shafiq Joty
+  - Arman Cohan
+  published: '2026-02-18'
+  updated: '2026-02-18'
+  categories:
+  - cs.CL
+  - cs.AI
+  - cs.LG
+  abstract: While Reinforcement Learning with Verifiable Rewards (RLVR) has shown strong effectiveness
+    in reasoning tasks, it cannot be directly applied to non-verifiable domains lacking ground-truth verifiers,
+    such as LLM alignment. In this work, we investigate whether reference-guided LLM-evaluators can bridge
+    this gap by serving as soft "verifiers". First, we design evaluation protocols that enhance LLM-based
+    evaluators for LLM alignment using reference outputs. Through comprehensive experiments, we show that
+    a reference-guided approach substantially improves the accuracy of less capable LLM-judges using references
+    from frontier models; stronger LLM-judges can also be enhanced by high-quality (i.e., human-written)
+    references. Building on these improved judges, we demonstrate the utility of high-quality references
+    in alignment tuning, where LLMs guided with references are used as judges to self-improve. We show
+    that reference-guided self-improvement yields clear gains over both direct SFT on reference outputs
+    and self-improvement with reference-free judges, achieving performance comparable to training with
+    ArmoRM, a strong finetuned reward model. Specifically, our method achieves 73.1% and 58.7% on AlpacaEval
+    and Arena-Hard with Llama-3-8B-Instruct, and 70.0% and 74.1% with Qwen2.5-7B, corresponding to average
+    absolute gains of +20.2 / +17.1 points over SFT distillation and +5.3 / +3.6 points over reference-free
+    self-improvement on AlpacaEval / Arena-Hard. These results highlight the potential of using reference-guided
+    LLM-evaluators to enable effective LLM post-training in non-verifiable domains.
+  url: https://arxiv.org/abs/2602.16802
+  pdf_url: https://arxiv.org/pdf/2602.16802v1
+  version: v1
+fetched: '2026-11-14'
+citation_count: 2
+citation_year: 2026

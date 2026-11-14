@@ -1,0 +1,36 @@
+id: paper:arxiv:2304.03412
+status: skipped
+score: 2
+track: video_image_coding
+matched:
+- ref: concept:IQA
+  count: 2
+  weight: 1
+- ref: metric:VMAF
+  count: 1
+  weight: 1
+meta:
+  title: 'One Transform To Compute Them All: Efficient Fusion-Based Full-Reference Video Quality Assessment'
+  authors:
+  - Abhinau K. Venkataramanan
+  - Cosmin Stejerean
+  - Ioannis Katsavounidis
+  - Alan C. Bovik
+  published: '2023-04-06'
+  updated: '2023-11-18'
+  categories:
+  - eess.IV
+  abstract: The Visual Multimethod Assessment Fusion (VMAF) algorithm has recently emerged as a state-of-the-art
+    approach to video quality prediction, that now pervades the streaming and social media industry. However,
+    since VMAF requires the evaluation of a heterogeneous set of quality models, it is computationally
+    expensive. Given other advances in hardware-accelerated encoding, quality assessment is emerging as
+    a significant bottleneck in video compression pipelines. Towards alleviating this burden, we propose
+    a novel Fusion of Unified Quality Evaluators (FUNQUE) framework, by enabling computation sharing and
+    by using a transform that is sensitive to visual perception to boost accuracy. Further, we expand
+    the FUNQUE framework to define a collection of improved low-complexity fused-feature models that advance
+    the state-of-the-art of video quality performance with respect to both accuracy, by 4.2\% to 5.3\%,
+    and computational efficiency, by factors of 3.8 to 11 times!
+  url: https://arxiv.org/abs/2304.03412
+  pdf_url: https://arxiv.org/pdf/2304.03412v2
+  version: v2
+fetched: '2026-11-14'

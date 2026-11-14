@@ -1,0 +1,38 @@
+id: paper:arxiv:2608.10628
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'InSight-doc: Agentic Visual Perception for Long-Document Understanding'
+  authors:
+  - Kaican Li
+  - Weiyan Xie
+  - Lewei Yao
+  - Jiannan Wu
+  - Lanqing Hong
+  - Yongxiang Huang
+  - Nevin L. Zhang
+  published: '2026-08-11'
+  updated: '2026-08-11'
+  categories:
+  - cs.CV
+  - cs.CL
+  - cs.LG
+  abstract: Long-document understanding often requires reasoning over many visually rich pages, making
+    inference costly and prone to context rot. In this work, we propose InSight-doc, an agentic visual
+    perception framework that treats visual resolution as an adaptive reasoning-time resource. InSight-doc
+    starts from low resolution and selectively zooms into high-resolution regions for finer evidence,
+    without relying on any external retriever. To train such an agent, we construct an active-perception
+    corpus of 17.9K high-quality SFT examples with region-level zoom-in trajectories, accompanied by 19.2K
+    hard RL examples. Through SFT+RL, InSight-doc-8B improves the baseline by 4.3--16.4 accuracy points
+    over document VQA benchmarks. On long documents, it reduces hallucination by more than 40% and inference
+    latency by 41%--68% while maintaining an accuracy lead. Our code, datasets, and model are released
+    at https://github.com/m-Just/InSight-doc .
+  url: https://arxiv.org/abs/2608.10628
+  pdf_url: https://arxiv.org/pdf/2608.10628v1
+  version: v1
+fetched: '2026-11-14'

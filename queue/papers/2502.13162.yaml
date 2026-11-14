@@ -1,0 +1,38 @@
+id: paper:arxiv:2502.13162
+status: skipped
+score: 1
+track: self_improvement
+matched:
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+meta:
+  title: 'ShieldLearner: A New Paradigm for Jailbreak Attack Defense in LLMs'
+  authors:
+  - Ziyi Ni
+  - Hao Wang
+  - Huacan Wang
+  published: '2025-02-16'
+  updated: '2025-02-16'
+  categories:
+  - cs.CR
+  - cs.AI
+  - cs.CL
+  abstract: Large Language Models (LLMs) have achieved remarkable success in various domains but remain
+    vulnerable to adversarial jailbreak attacks. Existing prompt-defense strategies, including parameter-modifying
+    and parameter-free approaches, face limitations in adaptability, interpretability, and customization,
+    constraining their effectiveness against evolving threats. To address these challenges, we propose
+    ShieldLearner, a novel paradigm that mimics human learning in defense. Through trial and error, it
+    autonomously distills attack signatures into a Pattern Atlas and synthesizes defense heuristics into
+    a Meta-analysis Framework, enabling systematic and interpretable threat detection. Furthermore, we
+    introduce Adaptive Adversarial Augmentation to generate adversarial variations of successfully defended
+    prompts, enabling continuous self-improvement without model retraining. In addition to standard benchmarks,
+    we create a hard test set by curating adversarial prompts from the Wildjailbreak dataset, emphasizing
+    more concealed malicious intent. Experimental results show that ShieldLearner achieves a significantly
+    higher defense success rate than existing baselines on both conventional and hard test sets, while
+    also operating with lower computational overhead, making it a practical and efficient solution for
+    real-world adversarial defense.
+  url: https://arxiv.org/abs/2502.13162
+  pdf_url: https://arxiv.org/pdf/2502.13162v1
+  version: v1
+fetched: '2026-11-14'

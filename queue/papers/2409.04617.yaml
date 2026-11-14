@@ -1,0 +1,41 @@
+id: paper:arxiv:2409.04617
+status: pending
+score: 2
+track: self_improvement
+matched:
+- ref: concept:LLM
+  count: 2
+  weight: 1
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+meta:
+  title: Sparse Rewards Can Self-Train Dialogue Agents
+  authors:
+  - Barrett Martin Lattimer
+  - Varun Gangal
+  - Ryan McDonald
+  - Yi Yang
+  published: '2024-09-06'
+  updated: '2025-07-18'
+  categories:
+  - cs.CL
+  abstract: Recent advancements in state-of-the-art (SOTA) Large Language Model (LLM) agents, especially
+    in multi-turn dialogue tasks, have been primarily driven by supervised fine-tuning and high-quality
+    human feedback. However, as base LLM models continue to improve, acquiring meaningful human feedback
+    has become increasingly challenging and costly. In certain domains, base LLM agents may eventually
+    exceed human capabilities, making traditional feedback-driven methods impractical. In this paper,
+    we introduce a novel self-improvement paradigm that empowers LLM agents to autonomously enhance their
+    performance without external human feedback. Our method, Juxtaposed Outcomes for Simulation Harvesting
+    (JOSH), is a self-alignment algorithm that leverages a sparse reward simulation environment to extract
+    ideal behaviors and further train the LLM on its own outputs. We present ToolWOZ, a sparse reward
+    tool-calling simulation environment derived from MultiWOZ. We demonstrate that models trained with
+    JOSH, both small and frontier, significantly improve tool-based interactions while preserving general
+    model capabilities across diverse benchmarks. Our code and data are publicly available on GitHub at
+    https://github.com/asappresearch/josh-llm-simulation-training
+  url: https://arxiv.org/abs/2409.04617
+  pdf_url: https://arxiv.org/pdf/2409.04617v3
+  version: v3
+fetched: '2026-11-14'
+citation_count: 7
+citation_year: 2024

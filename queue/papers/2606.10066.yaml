@@ -1,0 +1,39 @@
+id: paper:arxiv:2606.10066
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: Measuring Pretraining Contamination in Public Medical Vision-Language Benchmarks
+  authors:
+  - Bruce Changlong Xu
+  - Lan Wu
+  - Alexander Ryu
+  published: '2026-06-08'
+  updated: '2026-10-21'
+  categories:
+  - cs.CV
+  - cs.AI
+  - cs.LG
+  abstract: 'Medical vision-language models (VLMs) are evaluated on public benchmarks whose images and
+    question-answer pairs have been freely available for years, yet reported accuracy assumes that these
+    examples were not in the training data. We test this assumption for open VLMs on SLAKE-En, PathVQA,
+    and VQA-RAD, and on a public mirror of OmniMedVQA, using four detectors: image near-neighbour search
+    against PMC-OA-beta, canonical-order exchangeability, cohort-relative Min-K%++ tail enrichment, and
+    cross-model top-K overlap. On the image side, 19.8% of SLAKE-En images have an unusually close neighbour
+    in PMC-OA-beta under SigLIP-B-16 (4.2% under SigLIP-SO400M), while out-of-domain control images produce
+    no flags. Manual inspection shows that these are images of the same modality and view from different
+    patients, not exact copies, so we read the signal as overlap in image sources rather than memorization
+    of individual images. On the text side, Qwen2.5-VL shows an exchangeability signal on SLAKE-En that
+    survives an ordering ablation and two non-medical baseline models, and on the OmniMedVQA mirror exchangeability
+    fires for five medical and general VLMs while BLIP-2 does not. The other two detectors fail a simple
+    control: BLIP-2, which has no plausible exposure to medical VQA data, reproduces their apparent positive
+    signals. Cohort-relative Min-K%++ and top-K overlap are therefore unreliable as standalone contamination
+    signals for small groups of medical VLMs and should be checked against an outside baseline model.'
+  url: https://arxiv.org/abs/2606.10066
+  pdf_url: https://arxiv.org/pdf/2606.10066v2
+  version: v2
+fetched: '2026-11-14'
