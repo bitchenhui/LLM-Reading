@@ -1,0 +1,35 @@
+id: standard_proposal:jvet:m188-X0196
+type: standard_proposal
+title: 'JVET-X0196: Crosscheck of JVET-X0144 (EE2: Encoder partitioning optimization for ECM and crosscheck
+  of EE2-1.1)'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2021-10-Teleconference@JVET-X0196
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=11206
+time:
+  published: '2021-10-06'
+  collected: '2026-11-14'
+entities:
+- ref: codec:ECM
+  role: subject
+- ref: org:JVET
+  role: subject
+claims:
+- statement: 该文档是对ECM探索实验EE2-1.1（编码器划分优化）的交叉检验报告，用于独立验证原始提案JVET-X0144所声称的压缩性能与编码器行为，其结果将影响该工具在ECM下一轮评估中的取舍。
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 由HHI对ECM探索实验EE2-1.1编码器划分优化提案进行独立交叉检验，复核其声称的编码性能收益。
+  abstract_zh: 该文档处于ECM探索实验（EE）评估环节，是2021年10月JVET会议上对JVET-X0144所提EE2编码器划分优化结果的交叉检验报告。交叉检验为探索性工具进入后续ECM集成测试提供独立验证依据，是标准化过程中承上启下的技术验证记录。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 该文档为ECM探索实验EE2（编码器划分优化）结果的第三方交叉检验，属探索实验验证环节，直接影响JVET-X0144声称收益的可信度与后续采纳判断。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-X0196: 对JVET-X0144的交叉检验（EE2：面向ECM的编码器划分优化）及EE2-1.1交叉检验'

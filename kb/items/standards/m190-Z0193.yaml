@@ -1,0 +1,35 @@
+id: standard_proposal:jvet:m190-Z0193
+type: standard_proposal
+title: 'JVET-Z0193: Crosscheck of JVET-Z0111 (Adaptively bypass affine ME in VTM)'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2022-04-Teleconference@JVET-Z0193
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=11643
+time:
+  published: '2022-04-20'
+  collected: '2026-11-14'
+entities:
+- ref: impl:VTM
+  role: subject
+- ref: org:JVET
+  role: subject
+claims:
+- statement: 该文档为对 JVET-Z0111 提案（VTM 中自适应旁路仿射运动估计）的交叉验证，属工具集成实验的验证性技术贡献
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 快手对 JVET-Z0111 提案在 VTM 中自适应旁路仿射运动估计结果的交叉验证报告。
+  abstract_zh: 该文档是 2022 年 4 月 JVET 电视电话会议上的交叉验证（crosscheck）贡献，针对 Kwai 提出的 JVET-Z0111（在 VTM 参考软件中自适应旁路仿射运动估计）的集成实验结果进行独立复核，属于
+    VVC/VTM 工具采纳流程中的验证类技术输入。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 具体技术提案类：对另一提案（自适应旁路仿射ME）的交叉验证，属常规集成验证输入而非重大节点
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-Z0193: JVET-Z0111（VTM 中自适应旁路仿射运动估计）的交叉验证'

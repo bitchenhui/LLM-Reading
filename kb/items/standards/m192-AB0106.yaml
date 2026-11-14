@@ -1,0 +1,37 @@
+id: standard_proposal:jvet:m192-AB0106
+type: standard_proposal
+title: 'JVET-AB0106: Crosscheck of JVET-AB0077 (EE1-2.2: CNN Filter for Super-Resolution with RPR functionality
+  in VVC)'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2022-10-Mainz@JVET-AB0106
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=12033
+time:
+  published: '2022-10-20'
+  collected: '2026-11-14'
+entities:
+- ref: codec:VVC
+  role: subject
+- ref: concept:SuperResolution
+  role: subject
+- ref: org:JVET
+  role: subject
+claims:
+- statement: 该文档是对JVET-AB0077（EE1-2.2：VVC中具备RPR功能的CNN超分辨率滤波）提案的交叉验证，体现JVET探索实验阶段由其他方对提案者自测结果进行独立核查的标准做法
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 对VVC中结合参考图像重采样（RPR）的CNN超分辨滤波方案（EE1-2.2）实验结果进行交叉核查。
+  abstract_zh: 该文档为腾讯在2022年10月美因茨JVET会议提交的交叉验证（crosscheck）报告，核查提案JVET-AB0077即探索实验EE1-2.2的结果。其主题方向是在VVC框架下验证采用CNN滤波实现超分辨率并具备参考图像重采样（RPR）功能的技术方案，属于VVC后续增强探索中神经网络工具研读流程的独立验证环节。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 针对具体探索实验（EE1-2.2）的技术交叉验证提案，非CfP/验证测试等重大节点，按具体技术提案作摘要级收录。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-AB0106: JVET-AB0077的交叉验证（EE1-2.2：VVC中具备RPR功能的超分辨率CNN滤波器）'

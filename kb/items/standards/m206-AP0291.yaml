@@ -1,0 +1,37 @@
+id: standard_proposal:jvet:m206-AP0291
+type: standard_proposal
+title: 'JVET-AP0291: AHG9: Crosscheck of JVET-AP0223/m76700 Software implementation and results of the
+  GSI SEI message with HM, HM-SCM, and VTM'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2026-04-SantaEularia@JVET-AP0291
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=16974
+time:
+  published: '2026-04-24'
+  collected: '2026-11-14'
+entities:
+- ref: impl:HM
+  role: evaluated_on
+- ref: impl:VTM
+  role: evaluated_on
+- ref: org:JVET
+  role: subject
+claims:
+- statement: 该文档为AHG9对GSI SEI消息软件实现（JVET-AP0223/m76700）在HM、HM-SCM与VTM测试模型上的交叉验证报告，反映该SEI消息正经历多模型一致性核验的标准进程
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: AHG9报告：对GSI SEI消息软件实现在HM、HM-SCM与VTM上的结果进行交叉验证。
+  abstract_zh: 本文档为JVET AHG9的进展性报告，针对m76700/JVET-AP0223提出的GSI SEI消息软件实现，在HM、HM-SCM与VTM三个测试模型上开展结果交叉验证，属于SEI元数据标准化进入多模型集成检验阶段的环节。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 属AHG9过程性交叉验证报告，对既有SEI消息软件实现在多个测试模型上的结果进行核对，非重大标准节点
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-AP0291: AHG9：GSI SEI消息软件实现（JVET-AP0223/m76700）与HM、HM-SCM、VTM的交叉验证'

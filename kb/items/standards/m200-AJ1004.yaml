@@ -1,0 +1,40 @@
+id: standard_proposal:jvet:m200-AJ1004
+type: standard_proposal
+title: 'JVET-AJ1004: Errata report items for VVC, VSEI, HEVC, AVC, and Video CIC'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2024-11-Kemer@JVET-AJ1004
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=14989
+time:
+  published: '2024-11-01'
+  collected: '2026-11-14'
+entities:
+- ref: codec:VVC
+  role: subject
+- ref: codec:HEVC
+  role: subject
+- ref: codec:AVC
+  role: subject
+claims:
+- statement: 该文档汇总了针对已发布标准（含 VVC、HEVC、AVC 及 VSEI、Video CIC 补充规范）文本的勘误修正条目，属于标准发布后的例行维护活动，对实现一致性具有参考价值
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+- statement: 文档由相关标准的主编辑作者联合署名，是标准维护流程中的权威输入记录
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 主编团队汇总已发布标准 VVC/HEVC/AVC 及相关补充规范的勘误修正条目
+  abstract_zh: 该文档为 2024 年 11 月 Kemer 会议提交的勘误汇总报告（MPEG m70632），由 Bross、Sullivan 等各标准主编联合提出，汇总对已发布标准 VVC、VSEI、HEVC、AVC
+    与 Video CIC 规范文本的勘误修正条目。其性质为对现行已定稿规范的例行维护与纠错记录，而非新工具或新实验内容。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 标题为已发布标准的勘误维护报告，属标准线的权威过程记录而非新工具提案或重大节点
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-AJ1004: VVC、VSEI、HEVC、AVC 与 Video CIC 的勘误报告条目'

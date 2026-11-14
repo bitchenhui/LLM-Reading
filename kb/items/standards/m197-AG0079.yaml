@@ -1,0 +1,35 @@
+id: standard_proposal:jvet:m197-AG0079
+type: standard_proposal
+title: 'JVET-AG0079: AHG2/AHG9: VUI extension mechanism and picture modality information for AVC and HEVC'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2024-01-Teleconference@JVET-AG0079
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=13635
+time:
+  published: '2024-01-17'
+  collected: '2026-11-14'
+entities:
+- ref: codec:AVC
+  role: subject
+- ref: codec:HEVC
+  role: subject
+claims:
+- statement: 该文档在 AVC/HEVC 标准维护框架下提出 VUI 扩展机制与图像模态信息信令的技术方向，经由 JVET AHG2/AHG9 讨论推进，可能影响后续 AVC/HEVC 元数据相关修订。
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出面向 AVC/HEVC 的 VUI 扩展机制与图像模态信息（画面来源/类型）信令，供 AHG 讨论推进。
+  abstract_zh: 该文档为 Panasonic 在 2024 年 1 月 JVET 电话会议上提交给 AHG2/AHG9 的技术输入，探讨在 AVC 与 HEVC 中扩展 VUI（视频可用性信息）的机制并引入图像模态信息的信令方向，属于对既有标准元数据框架的维护性扩展讨论，反映
+    AI 生成内容时代对画面来源类型标识的标准化关注。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 这是提交给 AHG2/AHG9 的具体技术提案（VUI 扩展机制与图像模态信息信令），而非 AHG 进展报告，按具体技术提案收录为 summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-AG0079: AHG2/AHG9：面向 AVC 与 HEVC 的 VUI 扩展机制与图像模态信息'

@@ -1,0 +1,34 @@
+id: standard_proposal:jvet:m190-Z0150
+type: standard_proposal
+title: 'JVET-Z0150: Memory usage report on VTM / ECM'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2022-04-Teleconference@JVET-Z0150
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=11599
+time:
+  published: '2022-04-20'
+  collected: '2026-11-14'
+entities:
+- ref: codec:ECM
+  role: subject
+- ref: impl:VTM
+  role: subject
+claims:
+- statement: 该文档聚焦 VTM 与 ECM 参考软件的内存使用情况，为 ECM 工具的资源开销与硬件可实现性讨论提供数据支撑。
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 夏普报告 VTM 与 ECM 参考软件的内存使用情况测量与分析。
+  abstract_zh: 该文档为 JVET 2022年4月远程会议上的参考软件资源消耗分析报告，主题为 VTM 与 ECM 的内存占用测量，属于 ECM 工具复杂度与可实现性评估类的过程性记录。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 参考软件内存占用的具体分析报告，非重大标准节点，属实现资源评估类过程记录。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-Z0150: VTM / ECM 内存使用报告'

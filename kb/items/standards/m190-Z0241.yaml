@@ -1,0 +1,34 @@
+id: standard_proposal:jvet:m190-Z0241
+type: standard_proposal
+title: 'JVET-Z0241: Cross check of JVET-Z0118 (AHG7: GDR implementation for ECM 4.0)'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2022-04-Teleconference@JVET-Z0241
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=11692
+time:
+  published: '2022-04-20'
+  collected: '2026-11-14'
+entities:
+- ref: codec:ECM
+  role: subject
+- ref: org:JVET
+  role: subject
+claims:
+- statement: 该文档针对AHG7提交的GDR在ECM 4.0中的实现进行交叉检验，是ECM软件演进过程中第三方验证环节的记录。
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: Qualcomm对AHG7报告中GDR在ECM 4.0软件中实现情况的交叉检验确认。
+  abstract_zh: 该文档是Qualcomm对JVET-Z0118（AHG7关于渐进解码刷新GDR在ECM 4.0中实现的报告）的交叉检验结果，属于JVET ECM软件开发流程中的验证性过程记录。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 对AHG7关于ECM 4.0中GDR实现报告的交叉检验，属标准开发中的验证性过程记录而非重大节点
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-Z0241: JVET-Z0118（AHG7：面向ECM 4.0的GDR实现）的交叉检验'

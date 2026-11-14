@@ -1,0 +1,35 @@
+id: standard_proposal:jvet:m190-Z1008
+type: standard_proposal
+title: 'JVET-Z1008: Additional colour type identifiers for AVC and HEVC (Draft 1)'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2022-04-Teleconference@JVET-Z1008
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=11708
+time:
+  published: '2022-04-20'
+  collected: '2026-11-14'
+entities:
+- ref: codec:AVC
+  role: subject
+- ref: codec:HEVC
+  role: subject
+claims:
+- statement: 该文档提出为 AVC 和 HEVC 增补额外的色彩类型标识符，并以 Draft 1 形式给出修订草案文本，反映 JVET 对已发布成熟标准在色彩表示能力上的维护性扩展工作。
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 为已发布的 AVC 与 HEVC 标准增补色彩类型标识符的修订草案文本。
+  abstract_zh: 该文档由 Sullivan 与 Tourapis 在 2022 年 4 月 JVET 电话会议提交，是面向 AVC 与 HEVC 两代既有标准增补色彩类型标识符的第一稿修订文本，推测与色彩表示扩展（如
+    ICC 色彩配置类支持）的标准维护修订进程相关。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 标题含明确技术增补（色彩类型标识符）并附 Draft 1 修订文本，属具体技术提案而非 AHG 报告或重大节点。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-Z1008: AVC 与 HEVC 的附加色彩类型标识符（草案 1）'

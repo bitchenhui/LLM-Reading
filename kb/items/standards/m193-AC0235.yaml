@@ -1,0 +1,37 @@
+id: standard_proposal:jvet:m193-AC0235
+type: standard_proposal
+title: 'JVET-AC0235: Cross-check of JVET-AC0123 &quot;MTT maximum depth correction for class B sequences
+  at QP 22 in ECM&quot;'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2023-01-Teleconference@JVET-AC0235
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=12439
+time:
+  published: '2023-01-11'
+  collected: '2026-11-14'
+entities:
+- ref: codec:ECM
+  role: subject
+- ref: concept:QP
+  role: evaluated_on
+- ref: org:JVET
+  role: subject
+claims:
+- statement: 该文档是ECM标准化流程中对JVET-AC0123（MTT最大深度校正，限定B类序列与QP 22条件）的交叉检查，属于工具采纳前的结果核实环节。
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 针对B类序列QP 22条件下MTT最大深度校正提案的交叉验证报告。
+  abstract_zh: 该文档属ECM（VVC后继参考软件）开发周期中的采纳验证环节，由Xiaomi对JVET-AC0123提出的MTT最大深度校正工具在B类序列、QP 22测试条件下的结果进行交叉检查。此类cross-check用于核实提案报告的编码收益，为工具是否进入ECM主线提供验证依据。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 针对具体编码工具提案的交叉验证（cross-check）文档，属ECM采纳验证环节的常规技术贡献，非重大标准节点。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-AC0235: 对JVET-AC0123《ECM中B类序列在QP 22下MTT最大深度校正》的交叉检查'

@@ -1,0 +1,39 @@
+id: standard_proposal:jvet:m208-AR0052
+type: standard_proposal
+title: 'JVET-AR0052: AHG2/AHG9: On SeiExtensionEnabledFlag and SeiExtensionBitsPresentFlag in VSEI, VVC,
+  HEVC, and AVC'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2026-10-Hangzhou@JVET-AR0052
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=17246
+time:
+  published: '2026-10-17'
+  collected: '2026-11-14'
+entities:
+- ref: codec:VVC
+  role: subject
+- ref: codec:HEVC
+  role: subject
+- ref: codec:AVC
+  role: subject
+claims:
+- statement: 该文档围绕 SeiExtensionEnabledFlag 与 SeiExtensionBitsPresentFlag 在 VSEI 及 VVC/HEVC/AVC 中的语义和规范表述提出讨论意见，属于跨代标准
+    SEI 语法细节的维护方向，推断不涉及新编码工具或验证测试。
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 针对多代视频标准 SEI 扩展标志语义与跨规范一致性问题的规范文本讨论贡献。
+  abstract_zh: 该文档为字节跳动提交至 JVET AHG2/AHG9 的技术意见，聚焦 VSEI（ISO/IEC 23002-7|H.274）及 VVC、HEVC、AVC 中 SEI 扩展使能与扩展位存在标志的定义与一致性，属于标准文本细节的规范维护类贡献。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 面向 AHG2/AHG9 的具体标准文本技术意见，讨论跨代标准中 SEI 扩展标志的定义与一致性，属常规技术提案而非重大节点。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-AR0052: AHG2/AHG9：关于 VSEI、VVC、HEVC 与 AVC 中 SeiExtensionEnabledFlag 与 SeiExtensionBitsPresentFlag
+  的探讨'

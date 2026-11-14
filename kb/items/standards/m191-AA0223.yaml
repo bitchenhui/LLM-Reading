@@ -1,0 +1,37 @@
+id: standard_proposal:jvet:m191-AA0223
+type: standard_proposal
+title: 'JVET-AA0223: Cross-check of JVET-AA0085 (EE1-1.1: The Performance of Single-Model Filter Trained
+  on the VTM and ECM Reconstruction)'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2022-07-Teleconference@JVET-AA0223
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=11913
+time:
+  published: '2022-07-13'
+  collected: '2026-11-14'
+entities:
+- ref: codec:ECM
+  role: subject
+- ref: impl:VTM
+  role: subject
+- ref: org:JVET
+  role: subject
+claims:
+- statement: 该文档是对探索实验EE1-1.1（单模型滤波器分别在VTM与ECM重建上训练的性能）结果的交叉验证，用于确认原报告JVET-AA0085结论的可复现性，为ECM滤波工具的探索提供核验依据。
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 对EE1-1.1中基于VTM与ECM重建训练的单模型滤波器性能结果进行独立交叉检验。
+  abstract_zh: 该文档是JVET面向ECM探索的探索实验（EE1-1.1，单模型滤波器）结果的交叉检验（cross-check）报告，由第三方对原提案JVET-AA0085的实验结果进行独立复核，属于标准探索阶段的验证性过程记录。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: ECM探索实验EE1-1.1结果的交叉验证报告，属标准探索线上的实验结果核验记录，具有权威性。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-AA0223: 对JVET-AA0085的交叉检验（EE1-1.1：在VTM与ECM重建上训练的单模型滤波器性能）'

@@ -1,0 +1,36 @@
+id: standard_proposal:jvet:m188-X1004
+type: standard_proposal
+title: 'JVET-X1004: Errata report items for VVC, VSEI, HEVC, AVC, Video CICP, and CP usage TR'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2021-10-Teleconference@JVET-X1004
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=11223
+time:
+  published: '2021-10-06'
+  collected: '2026-11-14'
+entities:
+- ref: codec:VVC
+  role: subject
+- ref: codec:HEVC
+  role: subject
+- ref: codec:AVC
+  role: subject
+claims:
+- statement: 该文档是对 VVC、HEVC、AVC 等已发布标准及 CICP/CP 使用相关技术报告的文本勘误维护，反映标准发布后的纠错流程，而非新技术方案或版本修订节点
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 汇总 VVC、HEVC、AVC 等已发布标准文本及相关 TR 的勘误条目。
+  abstract_zh: 该文档由 VVC/HEVC 等标准的核心主编团队提交，向会议报告已发布规范文本的勘误项，属于标准出版后维护阶段的编辑性更正记录，不涉及新编码工具或实验验证。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 由主编团队提交的已发布标准文本勘误汇总，属标准维护性权威记录而非新工具提案或重大节点
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-X1004: VVC、VSEI、HEVC、AVC、视频CICP及CP使用TR的勘误报告条目'

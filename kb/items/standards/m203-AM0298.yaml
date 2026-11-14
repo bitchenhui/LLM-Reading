@@ -1,0 +1,36 @@
+id: standard_proposal:jvet:m203-AM0298
+type: standard_proposal
+title: 'JVET-AM0298: Ultra-low latency demo: Ressource-constrained VVC and HEVC software encoding up to
+  4K'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2025-06-Daejeon@JVET-AM0298
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=15966
+time:
+  published: '2025-06-26'
+  collected: '2026-11-14'
+entities:
+- ref: codec:VVC
+  role: subject
+- ref: codec:HEVC
+  role: subject
+claims:
+- statement: 该文档以演示形式展示 VVC 与 HEVC 软件编码器在资源受限条件下可达到 4K 超低延迟实时编码，反映标准生态系统在低延迟落地实现层面的进展，但不构成对标准工具或文本的技术贡献
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 演示资源受限条件下 VVC 与 HEVC 软件编码器实现最高 4K 分辨率的超低延迟实时编码
+  abstract_zh: 这是提交给 JVET 大田会议的现场演示文档，由 HHI 与 Spin Digital Labs 联合展示其在资源受限（非高端硬件）平台上运行的 VVC 与 HEVC 软件编码器，实现直至
+    4K 分辨率的超低延迟实时编码。该文档属于编码器实现生态的能力展示，而非对标准文本或工具的技术提案。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 展示类演示文档，呈现现有 VVC/HEVC 软件编码器的超低延迟能力，非标准技术贡献或重大节点
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-AM0298: 超低延迟演示：资源受限条件下的 VVC 与 HEVC 软件编码，最高支持 4K'

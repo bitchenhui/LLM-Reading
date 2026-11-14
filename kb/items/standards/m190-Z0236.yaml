@@ -1,0 +1,35 @@
+id: standard_proposal:jvet:m190-Z0236
+type: standard_proposal
+title: 'JVET-Z0236: Crosscheck of JVET-Z0063 (AHG12: Fix for parsing of MHP information in ECM)'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2022-04-Teleconference@JVET-Z0236
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=11687
+time:
+  published: '2022-04-20'
+  collected: '2026-11-14'
+entities:
+- ref: codec:ECM
+  role: subject
+- ref: org:JVET
+  role: subject
+claims:
+- statement: 该文档是对 ECM 语法解析修正提案的第三方交叉校验，属于 ECM 工作草案文本修正过程中的验证性技术输入
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: Qualcomm 对 ECM 中 MHP 信息解析修正提案（JVET-Z0063）的交叉校验验证报告
+  abstract_zh: 该文档为 2022 年 4 月 JVET 电话会议的交叉校验（crosscheck）类输入，针对 AHG12 提交的 ECM 中 MHP 信息解析修正提案 JVET-Z0063
+    进行独立验证与评审。它处于 ECM 文本修正流程的同行校验环节，用于支撑 ECM 规范文本解析相关修正的确认。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 针对 ECM 解析修正提案的交叉校验类技术输入，属具体技术贡献而非重大节点或行政事务
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-Z0236: 对 JVET-Z0063 的交叉校验（AHG12：ECM 中 MHP 信息解析的修正）'

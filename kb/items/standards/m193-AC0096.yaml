@@ -1,0 +1,36 @@
+id: standard_proposal:jvet:m193-AC0096
+type: standard_proposal
+title: 'JVET-AC0096: AHG10/12: Suggestion for new CTC for RPR in VTM and ECM'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2023-01-Teleconference@JVET-AC0096
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=12298
+time:
+  published: '2023-01-11'
+  collected: '2026-11-14'
+entities:
+- ref: codec:ECM
+  role: subject
+- ref: impl:VTM
+  role: subject
+- ref: dataset:JVET-CTC
+  role: subject
+claims:
+- statement: 该提案建议对VTM与ECM参考软件中RPR工具的JVET通用测试条件（CTC）进行调整或新增配置，属标准评估流程层面的过程性建议，其采纳与否不影响主体标准文本。
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 爱立信建议在VTM与ECM参考软件的通用测试条件中为参考图像重采样（RPR）新增测试配置。
+  abstract_zh: 该文档是爱立信在2023年1月JVET电话会议上提交给AHG10/12的建议类提案，主张为VVC/ECM中的参考图像重采样（RPR）工具在VTM与ECM参考软件的通用测试条件（CTC）中设立新的测试配置。其属于标准化评估流程层面的工具测试条件调整建议，而非新编码工具提案。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 向AHG10/12提交的具体建议类提案（为RPR调整测试条件），非CfP/验证测试等重大节点，按技术提案作摘要收录。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-AC0096: AHG10/12：关于在VTM与ECM中为RPR设立新通用测试条件（CTC）的建议'

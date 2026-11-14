@@ -1,0 +1,40 @@
+id: standard_proposal:jvet:m206-AP0229
+type: standard_proposal
+title: 'JVET-AP0229: AHG9: Signaling options for alpha plane metadata in non-auxiliary picture context
+  in AVC, HEVC and VVC'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2026-04-SantaEularia@JVET-AP0229
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=16893
+time:
+  published: '2026-04-24'
+  collected: '2026-11-14'
+entities:
+- ref: codec:AVC
+  role: subject
+- ref: codec:HEVC
+  role: subject
+- ref: codec:VVC
+  role: subject
+claims:
+- statement: 该文档为 AHG9 报告，主题是针对非辅助图像语境下的 alpha 平面元数据，在 AVC、HEVC 和 VVC 中提出或讨论信令选项。
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+- statement: 该讨论可能关联系统层元数据与编解码码流语法/SEI 的衔接，属标准维护与演进过程中的过程性输入。
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 汇报在 AVC/HEVC/VVC 中以非辅助图像承载 alpha 平面元数据的信令选项探讨。
+  abstract_zh: 这是 JVET AHG9（专题组）的进展报告，聚焦于当 alpha 平面不以辅助图像（auxiliary picture）形式存在时，如何在 AVC、HEVC 与 VVC 中对其进行元数据信令的问题。属于跨三代编解码标准的系统/元数据信令方向的过程性技术讨论。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: AHG9 专题组报告，讨论具体信令选项而非重大节点文档，按 AHG 报告收录为摘要级。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-AP0229: AHG9：AVC、HEVC 和 VVC 中非辅助图像语境下 alpha 平面元数据的信令选项'

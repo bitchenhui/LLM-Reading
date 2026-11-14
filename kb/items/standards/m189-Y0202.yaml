@@ -1,0 +1,34 @@
+id: standard_proposal:jvet:m189-Y0202
+type: standard_proposal
+title: 'JVET-Y0202: Crosscheck of JVET-Y0085 (AHG10: Report of Deblocking filter setting for VTM)'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2022-01-Teleconference@JVET-Y0202
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=11409
+time:
+  published: '2022-01-12'
+  collected: '2026-11-14'
+entities:
+- ref: impl:VTM
+  role: subject
+- ref: org:JVET
+  role: subject
+claims:
+- statement: 该文档是对 AHG10 去块滤波设置报告（JVET-Y0085）的交叉校验，属于 JVET 标准维护中的结果复核类过程文档，而非新增工具提案。
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 对 AHG10 报告中 VTM 去块滤波器设置的交叉校验与结果复核。
+  abstract_zh: 该文档属于 VVC/VTM 标准化维护进程中的交叉校验（crosscheck）环节，由快手对 JVET-Y0085（AHG10 关于 VTM 去块滤波设置的 AHG 报告）的内容进行独立验证，方向聚焦环路内去块滤波工具。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 对 AHG10 去块滤波设置报告的交叉校验文档，属工具验证类过程记录，非 CfP/验证测试等重大节点。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-Y0202: 对 JVET-Y0085 的交叉校验（AHG10：VTM 去块滤波器设置报告）'

@@ -1,0 +1,38 @@
+id: standard_proposal:jvet:m206-AP0230
+type: standard_proposal
+title: 'JVET-AP0230: AHG9: Signaling options for depth map metadata in non-auxiliary picture context in
+  AVC, HEVC and VVC'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2026-04-SantaEularia@JVET-AP0230
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=16894
+time:
+  published: '2026-04-24'
+  collected: '2026-11-14'
+entities:
+- ref: codec:AVC
+  role: subject
+- ref: codec:HEVC
+  role: subject
+- ref: codec:VVC
+  role: subject
+claims:
+- statement: 该文档梳理了深度图元数据在非辅助图像上下文中的信令选项，覆盖 AVC、HEVC 与 VVC，是 AHG9 对该议题的进展性记录，尚非标准文本修订
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 探讨在 AVC/HEVC/VVC 中以非辅助图像方式承载深度图并对其元数据进行信令的候选方案。
+  abstract_zh: 本文为 JVET 2026 年 4 月会议上 AHG9 相关的专题组文档，主题是让深度图不以辅助图像（SEI/auxiliary picture）形式、而作为常规图像承载时，如何在
+    AVC、HEVC 和 VVC 三代标准中信令其元数据。属于标准演进中面向深度图/机器数据承载的探索性过程记录。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: AHG9 专题组输出报告，属标准线过程记录而非重大节点，方向为小众的深度图元数据信令
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-AP0230: AHG9：AVC、HEVC 与 VVC 中非辅助图像上下文下深度图元数据的信令选项'

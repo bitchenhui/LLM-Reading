@@ -1,0 +1,37 @@
+id: standard_proposal:jvet:m189-Y0112
+type: standard_proposal
+title: 'JVET-Y0112: [AHG3] Merged VTM and HM CTC for SD 4:2:0 10-bit video'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2022-01-Teleconference@JVET-Y0112
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=11306
+time:
+  published: '2022-01-12'
+  collected: '2026-11-14'
+entities:
+- ref: dataset:JVET-CTC
+  role: subject
+- ref: impl:VTM
+  role: subject
+- ref: impl:HM
+  role: subject
+claims:
+- statement: 该文档提议针对 SD 4:2:0 10-bit 视频将 VTM 与 HM 的通用测试条件合并为统一配置，属 JVET 对评估基础设施一致性的常规维护进程（据标题推断）
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出将 VTM 与 HM 的通用测试条件针对 SD 4:2:0 10-bit 视频内容进行合并统一。
+  abstract_zh: 该文档为 JVET 2022 年 1 月电话会议上由 AHG3（软件与测试模型专题组）提出的测试条件类贡献，方向是统一 VTM 与 HM 在 SD 4:2:0 10-bit
+    内容类别下的 CTC 配置，供会议审议以更新基准评估条件。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: AHG3 提出的针对 SD 4:2:0 10-bit 内容的 VTM/HM 通用测试条件合并提案，属具体测试配置贡献而非重大标准节点
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-Y0112: [AHG3] 面向 SD 4:2:0 10-bit 视频的 VTM 与 HM 合并通用测试条件（CTC）'

@@ -1,0 +1,37 @@
+id: standard_proposal:jvet:m190-Z0228
+type: standard_proposal
+title: 'JVET-Z0228: Crosscheck of RPR enabling fix in JVET-Z0062 (AHG12: RPR luma filter modifications
+  and RPR enabling fixes in ECM), JVET-Z0067 (Non-EE2: RPR bug fixes and new results of RPR with luma-only
+  re-scaling) and JVET-Z0079(Non-EE2: Support RPR on E'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2022-04-Teleconference@JVET-Z0228
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=11679
+time:
+  published: '2022-04-20'
+  collected: '2026-11-14'
+entities:
+- ref: codec:ECM
+  role: subject
+- ref: org:JVET
+  role: subject
+claims:
+- statement: 该文档为 ECM 探索阶段对 RPR 使能修复、亮度滤波器修改及缺陷修复类提案的交叉验证报告，属于后续标准工具评估与集成过程中的验证性技术贡献。
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: Qualcomm 对 ECM 探索阶段多篇 RPR 使能修复与亮度重采样相关提案进行交叉验证核查。
+  abstract_zh: 该文档是 ECM 探索阶段的技术交叉验证（crosscheck）报告，对 AHG12 与 Non-EE2 提交中围绕参考图像重采样（RPR）的滤波器修改、缺陷修复与使能修复进行独立复核，属于标准化工具验证与集成过程中的常规技术贡献。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 针对多篇 RPR 提案使能修复与缺陷修复的交叉验证，属于 ECM 探索阶段的具体技术提案而非重大节点文档。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-Z0228: 对 JVET-Z0062（AHG12：RPR 亮度滤波器修改与 ECM 中的 RPR 使能修复）、JVET-Z0067（Non-EE2：RPR 缺陷修复与仅亮度重采样的
+  RPR 新结果）及 JVET-Z0079（Non-EE2：支持 E…）中 RPR 使能修复的交叉验证'

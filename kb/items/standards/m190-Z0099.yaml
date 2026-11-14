@@ -1,0 +1,35 @@
+id: standard_proposal:jvet:m190-Z0099
+type: standard_proposal
+title: 'JVET-Z0099: AHG10: Deblocking in RDO and beta offset minus 2 for VTM'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2022-04-Teleconference@JVET-Z0099
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=11546
+time:
+  published: '2022-04-20'
+  collected: '2026-11-14'
+entities:
+- ref: impl:VTM
+  role: subject
+- ref: concept:RDO
+  role: uses
+claims:
+- statement: 该文档主题为在 VTM 的 RDO 中考虑去块效应并调整 beta 偏移参数（减 2），属工具细化类提案；其具体实验设置与增益结论需查阅正文确认。
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提议在 VTM 的 RDO 过程中纳入去块滤波，并将 beta 偏移参数减 2。
+  abstract_zh: 该文档为 Ericsson 于 2022 年 4 月 JVET Teleconference 向 AHG10 提交的具体技术提案，方向是将去块滤波纳入率失真优化并在 VVC
+    测试模型（VTM）中调整 beta 偏移参数，属于 VVC 参考软件工具细化层面的贡献。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 标题含明确工具与参数调整（RDO 中去块、beta 偏移减 2），属具体技术提案而非里程碑或 AHG 进展报告。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-Z0099: AHG10：VTM 中 RDO 内去块滤波与 beta 偏移减 2'

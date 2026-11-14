@@ -1,0 +1,36 @@
+id: standard_proposal:jvet:m197-AG0071
+type: standard_proposal
+title: 'JVET-AG0071: Informal Subjective Evaluation of Low Complexity Enhancement Video Codec (LCEVC)
+  with VVC on SDR UHD (4K) Content'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2024-01-Teleconference@JVET-AG0071
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=13627
+time:
+  published: '2024-01-17'
+  collected: '2026-11-14'
+entities:
+- ref: codec:LCEVC
+  role: subject
+- ref: codec:VVC
+  role: compared_against
+claims:
+- statement: 该文档报告 LCEVC 对 VVC 编码的 SDR UHD（4K）内容进行增强后的主观质量表现，为 VVC 生态中增强层方案的竞争力提供实验数据；因仅有标题，具体测试方法与结论无法确认。
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: MediaTek 提交 LCEVC 作为 VVC 增强层在 SDR 4K 内容上的主观质量评估结果。
+  abstract_zh: 该文档为 MediaTek 在 JVET 2024 年 1 月远程会议上提交的实验性贡献，主题是以 MPEG-5 Part 2（LCEVC）增强 VVC 基准码流并在 SDR
+    UHD（4K）内容上进行非正式主观质量评估。其定位是跨编解码器增强方案的生态性能数据点，而非 JVET 核心工具开发或正式验证测试。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 标题明确指向一次具体实验（LCEVC 结合 VVC 的非正式主观评估），属具体技术/实验性贡献而非 CfP、验证测试等标准进程重大节点，且'非正式'性质区别于正式验证测试。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-AG0071: 低复杂度增强视频编解码器（LCEVC）结合 VVC 在 SDR UHD（4K）内容上的非正式主观评估'

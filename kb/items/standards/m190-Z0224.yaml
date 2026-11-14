@@ -1,0 +1,39 @@
+id: standard_proposal:jvet:m190-Z0224
+type: standard_proposal
+title: 'JVET-Z0224: Crosscheck of JVET-Z0150 (Memory usage report on VTM / ECM)'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2022-04-Teleconference@JVET-Z0224
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=11675
+time:
+  published: '2022-04-20'
+  collected: '2026-11-14'
+entities:
+- ref: codec:ECM
+  role: subject
+- ref: impl:VTM
+  role: subject
+- ref: org:JVET
+  role: subject
+claims:
+- statement: 该文档是对JVET-Z0150（VTM/ECM内存使用报告）的交叉核对，旨在验证参考软件内存占用数据的准确性
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+- statement: 文档属于ECM标准化过程中的实现分析环节，为复杂度/内存评估讨论提供核对依据
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 对VTM与ECM参考软件内存占用报告进行交叉核对与验证。
+  abstract_zh: 该文档为ECM开发阶段对JVET-Z0150内存使用报告的交叉核对文档，属于参考软件（VTM/ECM）实现特性分析类贡献，用于验证内存占用数据的准确性，不涉及新编码工具提案。
+assessment:
+  relevance: low
+  decision: summary_only
+  reason: 对既有内存使用报告的交叉核对，属于具体技术核对类贡献，非重大标准节点
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-Z0224: 对JVET-Z0150（VTM/ECM内存使用报告）的交叉核对'

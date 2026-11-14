@@ -1,0 +1,39 @@
+id: standard_proposal:jvet:m196-AF0277
+type: standard_proposal
+title: 'JVET-AF0277: Crosscheck of JVET-AF0075 (Evaluation results of Low Complexity Enhancement Video
+  Codec (LCEVC) with HM and VTM on 4K content)'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2023-10-Hannover@JVET-AF0277
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=13541
+time:
+  published: '2023-10-13'
+  collected: '2026-11-14'
+entities:
+- ref: codec:LCEVC
+  role: subject
+- ref: impl:HM
+  role: evaluated_on
+- ref: impl:VTM
+  role: evaluated_on
+- ref: org:JVET
+  role: subject
+claims:
+- statement: 文档主题为对先前提案所报 LCEVC 在 HM/VTM 平台、4K 内容条件下评估结果的交叉校验，用于确认数据的可复现性与正确性
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 对 LCEVC 在 HM/VTM 参考平台上 4K 内容评估结果的独立交叉校验。
+  abstract_zh: 该文档为 Qualcomm 对 JVET-AF0075 所报 LCEVC（低复杂度增强视频编码，VVC 第5部分）结合 HM、VTM 参考软件在 4K 内容上评估结果的交叉校验，属标准化进程中核验既有评估数据可信性的环节。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 属对既有 LCEVC 评估提案结果的独立交叉校验，是结果核验类常规技术贡献，而非新工具提案或正式验证测试里程碑。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-AF0277: JVET-AF0075 的交叉校验：LCEVC 与 HM、VTM 在 4K 内容上的评估结果'

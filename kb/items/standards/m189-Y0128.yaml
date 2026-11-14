@@ -1,0 +1,35 @@
+id: standard_proposal:jvet:m189-Y0128
+type: standard_proposal
+title: 'JVET-Y0128: Non-EE2: Fixing issues for RPR enabling and non-CTC configuration in ECM'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2022-01-Teleconference@JVET-Y0128
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=11322
+time:
+  published: '2022-01-12'
+  collected: '2026-11-14'
+entities:
+- ref: codec:ECM
+  role: subject
+- ref: dataset:JVET-CTC
+  role: uses
+claims:
+- statement: 该文档针对 ECM 中 RPR 工具启用与非 CTC 配置的具体问题提出修复方案，属于 ECM 标准开发过程中的工具修正与配置完善类贡献。
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 针对 ECM 中参考图像重采样（RPR）启用与非 CTC 配置问题的技术修复提案。
+  abstract_zh: 该文档为 ECM 开发进程中的 Non-EE2 类具体技术提案，由 Qualcomm 与 InterDigital 联合提出，聚焦参考图像重采样（RPR）工具启用及超出 JVET-CTC
+    的配置方式中存在问题的修正。属于标准开发过程中的工具完善类贡献，而非验证测试或版本文本等重大节点。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 标题表明这是针对 ECM 中 RPR 启用与非 CTC 配置问题的具体技术修复提案，非重大节点。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-Y0128: Non-EE2：修复 ECM 中 RPR 启用及非 CTC 配置的相关问题'

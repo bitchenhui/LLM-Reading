@@ -1,0 +1,37 @@
+id: standard_proposal:jvet:m196-AF0228
+type: standard_proposal
+title: 'JVET-AF0228: Crosscheck of JVET-AF0075 (Evaluation results of Low Complexity Enhancement Video
+  Codec with HM and VTM on 4K content)'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2023-10-Hannover@JVET-AF0228
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=13491
+time:
+  published: '2023-10-13'
+  collected: '2026-11-14'
+entities:
+- ref: impl:HM
+  role: compared_against
+- ref: impl:VTM
+  role: compared_against
+- ref: org:JVET
+  role: subject
+claims:
+- statement: 该文档对 JVET-AF0075 报告的 LCEVC 在 4K 内容上相对 HM/VTM 的评测结果进行独立复核，为标准进程中对探索性增强编码评估数据的校验性证据
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: Broadcom 对 LCEVC 在 4K 内容上对比 HM/VTM 评测结果的交叉验证报告。
+  abstract_zh: 该文档是 JVET 会议中的交叉验证（crosscheck）类贡献，针对另一提案对 LCEVC 与 HM、VTM 锚点在 4K 内容上的评测结果进行复核，属于增强编码技术评估数据可信度校验的过程性环节。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 属对既有评测结果（JVET-AF0075）的交叉复核类技术贡献，非正式验证测试或标准节点，按具体技术内容处理
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-AF0228: 对 JVET-AF0075（低复杂度增强视频编解码器在 4K 内容上与 HM 和 VTM 的评测结果）的交叉验证'

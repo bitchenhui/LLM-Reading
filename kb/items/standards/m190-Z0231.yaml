@@ -1,0 +1,34 @@
+id: standard_proposal:jvet:m190-Z0231
+type: standard_proposal
+title: 'JVET-Z0231: Crosscheck of JVET-Z0069 (AHG12: Longer chroma filters for RPR in ECM)'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2022-04-Teleconference@JVET-Z0231
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=11682
+time:
+  published: '2022-04-20'
+  collected: '2026-11-14'
+entities:
+- ref: codec:ECM
+  role: subject
+- ref: org:JVET
+  role: subject
+claims:
+- statement: 该文档对 JVET-Z0069（AHG12 框架下 ECM 中 RPR 更长色度滤波器提案）进行交叉验证，为 ECM 探索实验中滤波器工具的评估提供独立核验结果
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 高通对 ECM 中 RPR 更长色度滤波器提案 JVET-Z0069 的独立交叉验证。
+  abstract_zh: 该文档是 ECM 探索阶段 AHG12 活动下的一份交叉验证（crosscheck）贡献，对另一提案 JVET-Z0069 提出的参考图重采样（RPR）更长色度滤波器进行独立复现核对，属于工具采纳前的验证性技术记录。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 针对具体工具提案（ECM 中 RPR 更长色度滤波器）的交叉验证实验，属常规技术贡献而非重大节点
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-Z0231: 对 JVET-Z0069 的交叉验证（AHG12：ECM 中用于 RPR 的更长色度滤波器）'

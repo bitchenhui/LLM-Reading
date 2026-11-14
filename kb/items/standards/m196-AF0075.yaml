@@ -1,0 +1,37 @@
+id: standard_proposal:jvet:m196-AF0075
+type: standard_proposal
+title: 'JVET-AF0075: Evaluation results of Low Complexity Enhancement Video Codec (LCEVC) with HM and
+  VTM on 4K content'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2023-10-Hannover@JVET-AF0075
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=13323
+time:
+  published: '2023-10-13'
+  collected: '2026-11-14'
+entities:
+- ref: codec:LCEVC
+  role: subject
+- ref: impl:HM
+  role: uses
+- ref: impl:VTM
+  role: uses
+claims:
+- statement: 该文档为主题明确的评估实验报告：在HM与VTM参考软件之上评估LCEVC增强编码在4K内容上的表现，属具体技术贡献而非标准进程节点文件
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: MediaTek报告LCEVC增强编码叠加HM/VTM参考软件在4K内容上的性能评估结果
+  abstract_zh: 该文档为MediaTek在2023年10月Hannover会议上提交的评估类提案，报告MPEG-5 Part 2增强编解码器LCEVC以HM与VTM为基础参考软件、在4K内容上的性能评估结果。此类跨编解码器评估为编码生态中增强编码方向的探索讨论提供实验依据。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 标题明确的评估类技术贡献，报告LCEVC在参考软件上的具体实验结果，但非CfP、验证测试或新版本文本等标准线节点
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-AF0075: 低复杂度增强视频编解码器（LCEVC）结合HM与VTM在4K内容上的评估结果'

@@ -1,0 +1,35 @@
+id: standard_proposal:jvet:m203-AM0269
+type: standard_proposal
+title: 'JVET-AM0269: AHG17 ECM/VTM performance under CfE requirement'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2025-06-Daejeon@JVET-AM0269
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=15936
+time:
+  published: '2025-06-26'
+  collected: '2026-11-14'
+entities:
+- ref: codec:ECM
+  role: subject
+- ref: impl:VTM
+  role: subject
+claims:
+- statement: 该文档主题为在 CfE 需求约束下考察 ECM/VTM 的性能表现，反映当前参考软件相对下一代标准探索需求的基准状态
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 报告 ECM 与 VTM 在 CfE 需求条件下的压缩性能表现，为 VVC 后续标准探索提供锚点参考
+  abstract_zh: 该文档为 InterDigital 在 2025 年 6 月大田会议向 AHG17 提交的报告，方向为在 MPEG 下一代编码 Call for Evidence（CfE）需求条件下评估
+    ECM/VTM 的性能。属于 VVC 之后标准探索进程中的锚点基准类过程记录。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 属 AHG 专题组报告（标准线权威过程记录），虽关联下一代标准 CfE 需求但非 CfE 本身或验证测试等重大节点文本
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-AM0269: AHG17：Call for Evidence 需求条件下的 ECM/VTM 性能'

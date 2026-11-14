@@ -1,0 +1,34 @@
+id: standard_proposal:jvet:m193-AC2002
+type: standard_proposal
+title: 'JVET-AC2002: Algorithm description for Versatile Video Coding and Test Model 19 (VTM 19)'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2023-01-Teleconference@JVET-AC2002
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=12572
+time:
+  published: '2023-01-11'
+  collected: '2026-11-14'
+entities:
+- ref: codec:VVC
+  role: subject
+- ref: impl:VTM
+  role: subject
+claims:
+- statement: 该文档为 VVC 参考软件 VTM 第 19 版的算法描述文本，标志测试模型的一次版本更新，可作为理解 VVC 编码工具实现细节的权威依据。
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 系统描述 VVC 参考软件 VTM 第19版所含编码工具与算法配置的权威文本。
+  abstract_zh: 该文档是 JVET 于 2023 年 1 月会议上发布的 VVC 测试模型 VTM 19 版算法描述，属参考软件新版本文本，是 VVC 标准生态中记录编码工具实现与配置的权威过程文档。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: VVC 测试模型 VTM 19 新版算法描述文本，属参考软件新版本文本的重大节点，建议深读。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-AC2002: 多功能视频编码与测试模型19（VTM 19）算法描述'

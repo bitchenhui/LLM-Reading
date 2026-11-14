@@ -1,0 +1,39 @@
+id: standard_proposal:jvet:m193-AC0329
+type: standard_proposal
+title: 'JVET-AC0329: Crosscheck of JVET-AC0096 (AHG10/12: Suggestion for new CTC for RPR in VTM and ECM)'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2023-01-Teleconference@JVET-AC0329
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=12534
+time:
+  published: '2023-01-11'
+  collected: '2026-11-14'
+entities:
+- ref: codec:ECM
+  role: subject
+- ref: impl:VTM
+  role: subject
+- ref: dataset:JVET-CTC
+  role: evaluated_on
+- ref: org:JVET
+  role: subject
+claims:
+- statement: 该文档对 AHG10/12 提出的 RPR 新 CTC 建议进行交叉校验，是通用测试条件修订讨论过程中的验证性技术输入。
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 对参考图像重采样（RPR）新 CTC 建议提案的交叉校验，覆盖 VTM 与 ECM 测试设置。
+  abstract_zh: 该文档是 2023 年 1 月 JVET 会议上对提案 JVET-AC0096（AHG10/12 建议为 RPR 设立新 CTC）的交叉校验报告，属 CTC 修订讨论中的验证性输入，方向涉及
+    VTM 与 ECM 下的参考图像重采样测试条件。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 对 AHG 提案（RPR 新 CTC 建议）的交叉校验属具体技术验证贡献，非标准重大节点或 AHG 进展报告本身。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-AC0329: 对 JVET-AC0096 的交叉校验（AHG10/12：关于在 VTM 与 ECM 中为 RPR 设立新通用测试条件的建议）'

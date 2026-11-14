@@ -1,0 +1,36 @@
+id: standard_proposal:jvet:m194-AD1004
+type: standard_proposal
+title: 'JVET-AD1004: Errata report items for VVC, VSEI, HEVC, AVC, and Video CICP'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2023-04-Antalya@JVET-AD1004
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=12971
+time:
+  published: '2023-04-21'
+  collected: '2026-11-14'
+entities:
+- ref: codec:VVC
+  role: subject
+- ref: codec:HEVC
+  role: subject
+- ref: codec:AVC
+  role: subject
+claims:
+- statement: 该文档为针对 VVC、VSEI、HEVC、AVC 及视频 CICP 已发布标准文本的勘误条目报告，由主编团队维护，用于后续正式文本修订
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 汇报 VVC、VSEI、HEVC、AVC 及视频 CICP 标准文本的勘误条目
+  abstract_zh: 该文档由标准主编（Bross、Sullivan、Wang、Rosewarne 等）提交，汇总对已发布的 VVC、VSEI、HEVC、AVC 及视频 CICP 规范文本的勘误更正条目。此类勘误报告是正式标准文本修订的权威维护输入，反映系列核心编解码标准的持续维护进程。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 由 VVC/HEVC 主编团队提交的已发布标准文本勘误条目汇总，属标准线的权威维护记录而非新技术提案或新版本文本节点
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-AD1004: VVC、VSEI、HEVC、AVC 与视频 CICP 的勘误报告条目'

@@ -1,0 +1,36 @@
+id: standard_proposal:jvet:m191-AA1004
+type: standard_proposal
+title: 'JVET-AA1004: Errata report items for VVC, VSEI, HEVC, AVC, Video CICP, and CP usage TR'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2022-07-Teleconference@JVET-AA1004
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=11943
+time:
+  published: '2022-07-13'
+  collected: '2026-11-14'
+entities:
+- ref: codec:VVC
+  role: subject
+- ref: codec:HEVC
+  role: subject
+- ref: codec:AVC
+  role: subject
+claims:
+- statement: 该文档汇总多项已发布编解码标准及相关补充规范（VSEI、CICP、CP 使用 TR）的勘误条目，反映标准文本发布后的纠错与维护进程
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 汇总针对 VVC、VSEI、HEVC、AVC、视频 CICP 与 CP 使用 TR 的勘误条目报告
+  abstract_zh: 该文档由多位标准主编联合提交，汇集 VVC、VSEI、HEVC、AVC 及编码独立码点（CICP）相关技术报告的勘误条目，属于已发布标准的维护性权威记录；勘误内容最终将并入后续版本文本。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 对 VVC、HEVC、AVC 等多项已发布标准的勘误汇总，属标准维护线的权威过程记录，而非新版本文本或技术提案
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-AA1004: VVC、VSEI、HEVC、AVC、视频 CICP 及 CP 使用 TR 的勘误报告条目'

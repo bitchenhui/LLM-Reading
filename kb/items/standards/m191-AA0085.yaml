@@ -1,0 +1,34 @@
+id: standard_proposal:jvet:m191-AA0085
+type: standard_proposal
+title: 'JVET-AA0085: EE1-1.1: The Performance of Single-Model Filter Trained on the VTM and ECM Reconstruction'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2022-07-Teleconference@JVET-AA0085
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=11761
+time:
+  published: '2022-07-13'
+  collected: '2026-11-14'
+entities:
+- ref: codec:ECM
+  role: subject
+- ref: impl:VTM
+  role: subject
+claims:
+- statement: 该文档报告在 VTM 与 ECM 重建上训练的单模型滤波器性能，是 ECM 探索实验框架下神经网络滤波方向的输入提案
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 报告在 VTM 与 ECM 重建数据上训练的单模型滤波器的压缩性能。
+  abstract_zh: 该文档是腾讯在 2022 年 7 月 JVET 电话会议提交的 ECM 探索实验 EE1-1.1 输入，主题为训练于 VTM 与 ECM 重建的单模型滤波器性能，服务于后续标准神经网络滤波工具方向的探索评估。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 标题指向具体的单模型滤波器实验及其在 VTM/ECM 上的性能测试，属公司提交的具体技术提案而非汇总性 EE 里程碑报告。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-AA0085: EE1-1.1：在 VTM 与 ECM 重建上训练的单模型滤波器的性能'

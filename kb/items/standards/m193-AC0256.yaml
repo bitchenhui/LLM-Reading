@@ -1,0 +1,36 @@
+id: standard_proposal:jvet:m193-AC0256
+type: standard_proposal
+title: 'JVET-AC0256: Cross-check of JVET-AC0137:On Affine AMVR setting for VTM CTC'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2023-01-Teleconference@JVET-AC0256
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=12461
+time:
+  published: '2023-01-11'
+  collected: '2026-11-14'
+entities:
+- ref: impl:VTM
+  role: subject
+- ref: dataset:JVET-CTC
+  role: evaluated_on
+- ref: org:JVET
+  role: subject
+claims:
+- statement: 该文档对 JVET-AC0137 关于 VTM CTC 下仿射 AMVR 设置的提案进行交叉审校，反映 JVET 对参考软件工具配置的同行验证流程
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 对仿射运动矢量分辨率（AMVR）在 VTM 通用测试条件下配置方案的交叉校验提案。
+  abstract_zh: 该文档为 VVC 参考软件深化阶段的具体技术交叉审校，针对 JVET-AC0137 提出的仿射 AMVR 在 VTM CTC 下的设置进行独立验证，属编码工具细节调优环节。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 对具体技术提案（仿射AMVR在VTM CTC下的设置）的交叉审校，属常规技术验证文档而非重大节点
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-AC0256: JVET-AC0137 交叉审校：面向 VTM 通用测试条件（CTC）的仿射 AMVR 设置'

@@ -1,0 +1,39 @@
+id: standard_proposal:jvet:m202-AL2010
+type: standard_proposal
+title: 'JVET-AL2010: VTM and HM common test conditions and software reference configurations for SDR 4:2:0
+  10 bit video'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2025-03-Teleconference@JVET-AL2010
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=15680
+time:
+  published: '2025-03-26'
+  collected: '2026-11-14'
+entities:
+- ref: impl:VTM
+  role: subject
+- ref: impl:HM
+  role: subject
+claims:
+- statement: 该文档为 SDR 4:2:0 10bit 视频定义 VTM 与 HM 的公共测试条件及软件参考配置，用于生成标准化评测锚点
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+- statement: 作为每次会议例行更新的 CTC 文档，它是 JVET 工具提案 BD-rate 评估的权威基准记录
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 规定 VTM 与 HM 在 SDR 4:2:0 10bit 下的公共测试条件与编码参考配置，作为性能评测锚点。
+  abstract_zh: 该文档是 JVET 生态中的公共测试条件（CTC）更新文档，由 Bossen 等参考软件负责人维护，定义 VTM（VVC 测试模型）与 HM（HEVC 测试模型）在 SDR
+    4:2:0 10bit 内容下的编码器配置与锚点生成方法。它是 JVET 所有工具提案性能对比（BD-rate 等）的共同基准依据，处于标准评测线的基石位置。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: JVET 例行更新的公共测试条件与参考软件配置文档，是 VVC/HEVC 性能评测锚点的权威基准，属标准线核心节点
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-AL2010: VTM 与 HM 公共测试条件及面向 SDR 4:2:0 10 比特视频的软件参考配置'

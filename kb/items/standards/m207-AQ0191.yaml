@@ -1,0 +1,36 @@
+id: standard_proposal:jvet:m207-AQ0191
+type: standard_proposal
+title: 'JVET-AQ0191: Browser-based VVC player supporting CMAF/DASH streaming on Android'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2026-07-Geneva@JVET-AQ0191
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=17169
+time:
+  published: '2026-07-07'
+  collected: '2026-11-14'
+entities:
+- ref: codec:VVC
+  role: subject
+- ref: concept:CMAF
+  role: uses
+- ref: concept:DASH
+  role: uses
+claims:
+- statement: 该提案展示VVC内容可在Android浏览器环境下以CMAF/DASH方式进行流式播放，反映VVC向浏览器与移动端部署生态扩展的努力
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: NHK提出在Android浏览器中结合CMAF/DASH实现VVC流式播放的播放器方案。
+  abstract_zh: 该文档为2026年7月日内瓦JVET会议的生态实现类输入提案，方向为浏览器环境下的VVC解码播放及CMAF/DASH自适应流分发，属VVC端到端部署与互操作层面的贡献，而非编码工具本身。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 属于具体实现类技术提案（Android浏览器端VVC播放器与CMAF/DASH流媒体支持），非编码工具或重大标准节点
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-AQ0191: 支持CMAF/DASH流媒体的Android平台浏览器端VVC播放器'

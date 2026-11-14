@@ -1,0 +1,40 @@
+id: standard_proposal:jvet:m197-AG0280
+type: standard_proposal
+title: 'JVET-AG0280: Crosscheck of JVET-AG0055 (AhG10: CTU-Level Lagrange Multiplier and QP Adaptation
+  for VVC Low-Delay Configuration)'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2024-01-Teleconference@JVET-AG0280
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=13853
+time:
+  published: '2024-01-17'
+  collected: '2026-11-14'
+entities:
+- ref: codec:VVC
+  role: subject
+- ref: concept:QP
+  role: subject
+- ref: org:JVET
+  role: subject
+claims:
+- statement: 该文档是对AhG10范围内CTU级拉格朗日乘子与QP自适应工具提案的交叉校验，用于支撑该具体工具提案在JVET收录流程中的评估
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+- statement: 技术方向为VVC低时延配置下的量化参数与率失真权衡自适应，属具体工具层面贡献而非标准版本级节点
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 对CTU级拉格朗日乘子与QP自适应提案在VVC低时延配置下的交叉校验
+  abstract_zh: 该文档为2024年1月JVET电信会议上对AG0055提案的交叉校验（crosscheck）报告，属于具体编码工具提案的验证审阅环节。主题方向为AhG10下的VVC低时延配置中CTU级拉格朗日乘子与QP自适应。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 具体技术提案（QP自适应工具）的交叉校验报告，属常规收录审阅流程，非CfP/验证测试等重大节点
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-AG0280: JVET-AG0055交叉校验（AhG10：面向VVC低时延配置的CTU级拉格朗日乘子与QP自适应）'

@@ -1,0 +1,40 @@
+id: standard_proposal:jvet:m188-X0116
+type: standard_proposal
+title: 'JVET-X0116: AHG10: Suggestion to enable GOP-based temporal filtering for low-delay configurations
+  in CTC for HM and VTM'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2021-10-Teleconference@JVET-X0116
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=11109
+time:
+  published: '2021-10-06'
+  collected: '2026-11-14'
+entities:
+- ref: concept:GOP
+  role: subject
+- ref: dataset:JVET-CTC
+  role: subject
+- ref: impl:HM
+  role: subject
+- ref: impl:VTM
+  role: subject
+claims:
+- statement: 提案主题为在 HM 与 VTM 参考软件的 CTC 低时延配置中启用基于 GOP 的时域滤波，属于对公共测试条件基线的修改建议；若获 AHG 通过，将调整低时延配置的锚点生成，进而影响后续性能评估的对比基准。
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 建议在 HM/VTM 参考软件的 JVET CTC 低时延配置中启用基于 GOP 的时域滤波。
+  abstract_zh: 该文档是爱立信向 JVET（2021 年 10 月远程会议）AHG10 提交的测试条件修改建议，主张对 HM 与 VTM 参考软件的 CTC 低时延配置启用 GOP 基时域滤波。若被
+    AHG 采纳，将改变低时延场景下测试锚点的生成方式，影响后续工具评估的基线。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 面向 AHG10 的具体技术配置提案（低时延 CTC 启用 GOP 时域滤波），非重大节点亦非行政事务。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-X0116: AHG10：建议在 HM 与 VTM 的 CTC 低时延配置中启用基于 GOP 的时域滤波'

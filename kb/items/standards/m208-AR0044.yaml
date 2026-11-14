@@ -1,0 +1,36 @@
+id: standard_proposal:jvet:m208-AR0044
+type: standard_proposal
+title: 'JVET-AR0044: AHG2: Errata items for AVC, HEVC, and VVC'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2026-10-Hangzhou@JVET-AR0044
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=17237
+time:
+  published: '2026-10-17'
+  collected: '2026-11-14'
+entities:
+- ref: codec:AVC
+  role: subject
+- ref: codec:HEVC
+  role: subject
+- ref: codec:VVC
+  role: subject
+claims:
+- statement: 该文档为 AHG 常规勘误报告，涉及对 AVC/HEVC/VVC 三项标准规范性文本的更正，不构成新技术提案或标准重大节点，但对跟踪标准文本的准确性具有权威参考价值
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 报告 AVC、HEVC、VVC 三项标准规范文本的勘误修正条目。
+  abstract_zh: 该文档为 JVET 中 AHG2（相关标准维护专题组）的勘误报告，汇集对已发布 AVC、HEVC、VVC 规范文本的更正条目，属标准维护的权威过程记录，供全会审议并纳入后续版本文本。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: AHG2 专题组关于三项已发布标准勘误条目的常规维护性报告，属权威过程记录而非重大技术节点
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-AR0044: AHG2：AVC、HEVC 与 VVC 的勘误条目'

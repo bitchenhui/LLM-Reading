@@ -1,0 +1,37 @@
+id: standard_proposal:jvet:m189-Y0177
+type: standard_proposal
+title: 'JVET-Y0177: AHG 10: Enhanced deblocking settings for VTM CTC'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2022-01-Teleconference@JVET-Y0177
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=11384
+time:
+  published: '2022-01-12'
+  collected: '2026-11-14'
+entities:
+- ref: impl:VTM
+  role: subject
+- ref: dataset:JVET-CTC
+  role: evaluated_on
+claims:
+- statement: 该文档主题为增强去块滤波设置在 VTM 通用测试条件下的应用与评估，属 AHG 10 专题组的技术探索性进展记录
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+- statement: 此类设置级改进可能影响后续 VTM 锚点性能与未来标准探索参考配置，但具体效果需待正文验证
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 报告探索优化 VTM 通用测试条件下的去块滤波设置，属环内滤波配置的改进尝试
+  abstract_zh: 该文档为 2022 年 1 月 JVET 电信会议上爱立信提交的 AHG 10 报告，主题是面向 VTM 通用测试条件（CTC）增强去块滤波（deblocking）设置，属于去块工具配置探索与验证环节的过程记录。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: AHG 10 报告，记录针对 VTM 通用测试条件的去块滤波设置改进，属标准线的常规技术进展记录
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-Y0177: AHG 10：针对 VTM 通用测试条件的增强去块滤波设置'

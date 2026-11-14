@@ -1,0 +1,37 @@
+id: standard_proposal:jvet:m192-AB2029
+type: standard_proposal
+title: 'JVET-AB2029: Visual quality comparison of ECM/VTM encoding'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2022-10-Mainz@JVET-AB2029
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=12225
+time:
+  published: '2022-10-20'
+  collected: '2026-11-14'
+entities:
+- ref: codec:ECM
+  role: subject
+- ref: impl:VTM
+  role: compared_against
+claims:
+- statement: 该文档对 ECM 与 VTM 的编码输出进行视觉质量比较，属于对测试模型间增益的感知有效性评估实验
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+- statement: 该比较结果可能为 ECM 增益的持续验证及下一代编码标准制定进程提供参考依据
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 对 ECM 与 VTM 编码结果进行视觉（主观）质量对比评估，检验压缩增益的感知意义。
+  abstract_zh: 该文档由 Baroncini、Ohm、Wien 等 JVET/MPEG 核心专家提交，报告对 ECM（下一代编码探索测试模型）与 VTM（VVC 测试模型）编码结果的视觉质量比较，属于测试模型演进过程中的评估性实验报告，处于下一代视频编码标准论证的关键阶段。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: ECM 与 VTM 编码输出的视觉质量比较属于下一代标准制定前的验证/评估性实验结果，由标准化核心人物提交，为压缩增益的感知有效性提供权威依据。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-AB2029: ECM/VTM 编码的视觉质量比较'

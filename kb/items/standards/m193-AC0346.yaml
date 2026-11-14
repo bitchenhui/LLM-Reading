@@ -1,0 +1,39 @@
+id: standard_proposal:jvet:m193-AC0346
+type: standard_proposal
+title: 'JVET-AC0346: Draft Errata report items for VVC, VSEI, HEVC, AVC, Video CICP, and CP Usage TR'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2023-01-Teleconference@JVET-AC0346
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=12551
+time:
+  published: '2023-01-11'
+  collected: '2026-11-14'
+entities:
+- ref: codec:VVC
+  role: subject
+- ref: codec:HEVC
+  role: subject
+- ref: codec:AVC
+  role: subject
+claims:
+- statement: 该文档为已发布的VVC、VSEI、HEVC、AVC及CICP相关技术报告汇集勘误修正条目，属于标准发布后的规范性文本维护环节
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+- statement: 由Bross、Sullivan、Rosewarne等标准主编联合提交，表明其为标准线的权威勘误过程记录而非技术实验提案
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 汇总VVC、VSEI、HEVC、AVC等已发布标准及技术报告的勘误条目草案
+  abstract_zh: 该文档是JVET对已发布标准文本的勘误维护记录，汇集针对VVC、VSEI、HEVC、AVC、视频CICP及CP使用技术报告的勘误条目草案，属标准发布后的文本修订流程产出，由多位主编级专家联合提交。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 已发布核心标准（VVC/VSEI/HEVC/AVC/CICP等）的勘误条目草案，属标准文本维护流程记录，非重大节点或新技术提案
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-AC0346: VVC、VSEI、HEVC、AVC、视频CICP及CP使用TR的勘误报告条目草案'

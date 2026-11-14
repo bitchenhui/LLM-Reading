@@ -1,0 +1,34 @@
+id: standard_proposal:jvet:m198-AH0049
+type: standard_proposal
+title: 'JVET-AH0049: AHG9: Modality Information SEI for AVC and HEVC'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2024-04-Rennes@JVET-AH0049
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=13931
+time:
+  published: '2024-04-17'
+  collected: '2026-11-14'
+entities:
+- ref: codec:AVC
+  role: subject
+- ref: codec:HEVC
+  role: subject
+claims:
+- statement: 该文档记录 AHG9 关于为 AVC 与 HEVC 定义模态信息 SEI 消息的工作进展，属于 SEI 语法扩展类标准过程记录。
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: AHG9 报告针对 AVC 与 HEVC 制定模态信息 SEI 消息的相关进展。
+  abstract_zh: 这是 JVET/MPEG 联合体系中 AHG9 专题组的进展报告，主题方向为在 AVC 与 HEVC 比特流中扩展模态信息类 SEI 消息，以在传统编解码标准框架下携带模态相关的辅助信令信息。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: AHG9 专题组进展报告，属标准线的权威过程记录而非重大节点，无需深读。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-AH0049: AHG9：面向 AVC 与 HEVC 的模态信息 SEI'

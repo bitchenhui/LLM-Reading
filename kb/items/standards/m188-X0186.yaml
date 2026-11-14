@@ -1,0 +1,36 @@
+id: standard_proposal:jvet:m188-X0186
+type: standard_proposal
+title: 'JVET-X0186: Subjective Quality Assessment of VVC and HEVC Standards for 8K Video Resolution'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2021-10-Teleconference@JVET-X0186
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=11196
+time:
+  published: '2021-10-06'
+  collected: '2026-11-14'
+entities:
+- ref: codec:VVC
+  role: subject
+- ref: codec:HEVC
+  role: compared_against
+- ref: concept:IQA
+  role: uses
+claims:
+- statement: 该文档通过主观质量评估实验对比VVC与HEVC在8K视频分辨率下的表现，为VVC相对前代标准的感知压缩增益提供验证类证据。
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 对VVC与HEVC在8K超高清分辨率下的压缩性能进行主观质量评估，提供感知层面的标准对比证据。
+  abstract_zh: 该文档出现于VVC定稿（2020年）后的JVET-X会议，属于对已发布标准的独立主观质量评估实验，聚焦8K超高清场景下VVC相对HEVC的感知质量表现，是支撑VVC压缩增益声明的验证类实验结果。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 标题为对VVC与HEVC在8K分辨率下的主观质量评估实验，属支撑标准性能声明的验证/评估类实验结果，达到深读门槛。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-X0186: 面向8K视频分辨率的VVC与HEVC标准主观质量评估'

@@ -1,0 +1,40 @@
+id: standard_proposal:jvet:m192-AB1004
+type: standard_proposal
+title: 'JVET-AB1004: Errata report items for VVC, VSEI, HEVC, AVC, Video CICP, and CP usage TR'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2022-10-Mainz@JVET-AB1004
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=12211
+time:
+  published: '2022-10-20'
+  collected: '2026-11-14'
+entities:
+- ref: codec:VVC
+  role: subject
+- ref: codec:HEVC
+  role: subject
+- ref: codec:AVC
+  role: subject
+claims:
+- statement: 该文档为多代视频编码标准（VVC、HEVC、AVC）及相关配套规范（VSEI、Video CICP、CP usage TR）的文本勘误汇总，反映主编团队对已发布标准持续维护的标准进程环节。
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+- statement: 文档由各标准的核心编辑成员（Bross、Sullivan、Rosewarne 等）署名，表明勘误条目具有对标准文本解释与修订的权威性。
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 汇总 VVC、VSEI、HEVC、AVC 及 CICP/CP 使用 TR 的标准文本勘误条目，属标准维护记录。
+  abstract_zh: 该文档由 Bross、Sullivan、Rosewarne 等各标准主编在 2022 年 10 月美因茨会议上提交，汇总针对已发布标准 VVC、VSEI、HEVC、AVC 以及
+    Video CICP 与 CP 使用技术报告的勘误条目。它是标准文本维护进程的权威记录，勘误项通常将被纳入后续版本或修正文本。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 由主编团队汇总已发布标准（VVC/VSEI/HEVC/AVC 等）文本勘误条目，属标准维护的权威过程记录，非重大节点或新技术提案，摘要收录即可。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-AB1004: VVC、VSEI、HEVC、AVC、视频 CICP 与 CP 使用 TR 的勘误报告条目'

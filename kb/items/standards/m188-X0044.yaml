@@ -1,0 +1,36 @@
+id: standard_proposal:jvet:m188-X0044
+type: standard_proposal
+title: 'JVET-X0044: Update on open, optimized VVC implementations VVenC and VVdeC'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2021-10-Teleconference@JVET-X0044
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=11037
+time:
+  published: '2021-10-06'
+  collected: '2026-11-14'
+entities:
+- ref: impl:VVenC
+  role: subject
+- ref: impl:VVdec
+  role: subject
+- ref: codec:VVC
+  role: subject
+claims:
+- statement: 该文档的主题是开源 VVC 实现软件 VVenC 与 VVdeC 的更新，反映 VVC 开源生态工具链的持续演进
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: HHI 报告开源 VVC 编码器 VVenC 与解码器 VVdeC 的功能与性能更新进展。
+  abstract_zh: 该文档为 HHI 团队向 JVET 会议提交的软件贡献，报告其开源 VVC 快速实现 VVenC（编码器）与 VVdeC（解码器）的更新情况，属于 VVC 开源软件生态的阶段性进展记录。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 属于开源 VVC 实现软件的阶段性更新报告，非新标准重大节点，按工具进展类归为 summary_only
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-X0044: 开源优化的 VVC 实现 VVenC 与 VVdeC 更新进展'

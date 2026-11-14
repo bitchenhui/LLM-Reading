@@ -1,0 +1,38 @@
+id: standard_proposal:jvet:m190-Z0046
+type: standard_proposal
+title: 'JVET-Z0046: VTM Software Implementation for GREEN-MPEG SEI Messaging'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2022-04-Teleconference@JVET-Z0046
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=11480
+time:
+  published: '2022-04-20'
+  collected: '2026-11-14'
+entities:
+- ref: impl:VTM
+  role: subject
+- ref: org:MPEG
+  role: subject
+claims:
+- statement: 该提案的主题是在 VTM 参考软件中实现 GREEN-MPEG SEI 消息，属于能效元数据信令在 VVC 测试平台上的软件集成工作
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+- statement: 该工作服务于 MPEG GREEN-MPEG 活动的标准化验证，属于跨组织（MPEG-JVET）的过程性技术贡献，而非新编码工具提案
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 在 VTM 参考软件中实现 GREEN-MPEG SEI 消息，为能效元数据信令提供软件实现基础。
+  abstract_zh: 该文档是 MPEG GREEN-MPEG（媒体能效）活动向 JVET 提交的软件实现提案（m59334），方向是在 VTM 参考软件中集成 GREEN-MPEG SEI 消息的信令。它体现了
+    JVET 与 MPEG 生态在能耗感知编码元数据上的协作，但非核心编码工具或标准文本节点。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 标题含明确工具与实现内容（VTM 上的 GREEN-MPEG SEI 消息集成），属具体技术提案而非重大标准节点
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-Z0046: GREEN-MPEG SEI 消息的 VTM 软件实现'

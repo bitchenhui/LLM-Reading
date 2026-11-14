@@ -1,0 +1,34 @@
+id: standard_proposal:jvet:m205-AO0201
+type: standard_proposal
+title: 'JVET-AO0201: Dual layer scalable VVC coding with external HEVC base layer'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2026-01-Teleconference@JVET-AO0201
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=16565
+time:
+  published: '2026-01-14'
+  collected: '2026-11-14'
+entities:
+- ref: codec:VVC
+  role: subject
+- ref: codec:HEVC
+  role: uses
+claims:
+- statement: 该提案提出以外部 HEVC 基本层搭配 VVC 增强层构成双层可分级编码方案，反映 JVET 对可分级扩展与跨代兼容编码架构的持续探索
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出以外置 HEVC 基本层配合 VVC 增强层实现双层可分级编码的方案。
+  abstract_zh: 该文档为 2026 年 1 月 JVET 远程会议上的具体技术提案，方向属 VVC 可分级扩展探索：以外部 HEVC 基本层实现双层结构，同时涉及向后兼容性议题。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 标题含明确技术方案（外部 HEVC 基本层 + VVC 增强层的双层可分级编码），属具体技术提案而非重大节点或 AHG 报告。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-AO0201: 使用外部 HEVC 基本层的双层可分级 VVC 编码'

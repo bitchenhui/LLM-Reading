@@ -1,0 +1,35 @@
+id: standard_proposal:jvet:m189-Y0200
+type: standard_proposal
+title: 'JVET-Y0200: Crosscheck of JVET-Y0163 (AHG 7: GDR without encoder constraints for ECM)'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2022-01-Teleconference@JVET-Y0200
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=11407
+time:
+  published: '2022-01-12'
+  collected: '2026-11-14'
+entities:
+- ref: codec:ECM
+  role: subject
+- ref: org:JVET
+  role: subject
+claims:
+- statement: 该文档针对 JVET-Y0163 提出的面向 ECM 的无编码器约束 GDR 方案进行交叉验证，表明该工具在 ECM 探索进程中接受独立实验复核以支撑采纳讨论。
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: InterDigital 对 ECM 无编码器约束 GDR 提案（JVET-Y0163）的独立交叉验证
+  abstract_zh: 该文档是 ECM 探索阶段由 InterDigital 出具的交叉验证报告，复核 JVET-Y0163 提出的'无编码器约束的渐进解码刷新（GDR）'方案结果，属 AHG 7
+    相关贡献的独立复核记录，为该工具的后续讨论与潜在采纳提供依据。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 对 ECM 无编码器约束 GDR 具体技术提案（JVET-Y0163）的交叉验证，属含明确工具与实验复核的具体提案类文档，非重大节点。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-Y0200: 对 JVET-Y0163（AHG 7：面向 ECM 的无编码器约束 GDR）的交叉验证'

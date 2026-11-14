@@ -1,0 +1,36 @@
+id: standard_proposal:jvet:m189-Y0223
+type: standard_proposal
+title: 'JVET-Y0223: On luma/chroma BD-rate balance in ECM: tests combining JVET-Y0102 and JVET-Y0113'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2022-01-Teleconference@JVET-Y0223
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=11432
+time:
+  published: '2022-01-12'
+  collected: '2026-11-14'
+entities:
+- ref: codec:ECM
+  role: subject
+- ref: metric:BD-Rate
+  role: evaluated_on
+- ref: org:JVET
+  role: subject
+claims:
+- statement: 该文档报告在 ECM 测试框架下组合 JVET-Y0102 与 JVET-Y0113 两项提案的实验，用于评估其对亮度与色度 BD-rate 平衡的影响，属于 ECM 工具集成阶段的性能评估贡献
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 在 ECM 中将两项已提工具组合进行编码测试，评估对亮度与色度 BD-rate 平衡的影响。
+  abstract_zh: 该文档是 ECM 开发中的具体技术测试提案，由 InterDigital 与 Xiaomi 联合提交，将 JVET-Y0102 与 JVET-Y0113 两项工具组合开展编码实验，考察其对亮度/色度压缩增益平衡的影响，属于工具集成与性能评估层面的贡献。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 标题指向 ECM 中组合两项既有提案的具体编码测试，属具体技术提案而非标准化节点文件。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-Y0223: 关于 ECM 中亮度/色度 BD-rate 平衡：组合 JVET-Y0102 与 JVET-Y0113 的测试'

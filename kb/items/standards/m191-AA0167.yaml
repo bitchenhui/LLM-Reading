@@ -1,0 +1,35 @@
+id: standard_proposal:jvet:m191-AA0167
+type: standard_proposal
+title: 'JVET-AA0167: Crosscheck of JVET-AA0097: ECM fix for block-level out-of-bound checking'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2022-07-Teleconference@JVET-AA0167
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=11855
+time:
+  published: '2022-07-13'
+  collected: '2026-11-14'
+entities:
+- ref: codec:ECM
+  role: subject
+- ref: org:JVET
+  role: subject
+claims:
+- statement: 该文档针对 ECM 探索软件中块级越界检查的修正提案（JVET-AA0097）开展交叉核查，反映 ECM 开发过程中的正确性校验环节，而非标准文本的实质新工具引入。
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 对 JVET-AA0097 提出的 ECM 块级越界检查修正进行交叉验证的核查提案。
+  abstract_zh: 该文档是 JVET 2022 年 7 月电话会议上的 ECM 探索阶段具体技术提案，由快手研究者对另一提案 JVET-AA0097 中块级越界检查的修正进行交叉核查，属于 VVC
+    之后 ECM 软件维护与校验类工作。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 属 ECM 探索软件中的具体技术核查提案（对另一提案的块级越界检查修正做交叉验证），非重大节点或行政事务。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-AA0167: JVET-AA0097 交叉核查：ECM 块级越界检查修正'

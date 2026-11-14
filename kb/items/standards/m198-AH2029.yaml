@@ -1,0 +1,35 @@
+id: standard_proposal:jvet:m198-AH2029
+type: standard_proposal
+title: 'JVET-AH2029: Visual quality comparison of ECM/VTM encoding'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2024-04-Rennes@JVET-AH2029
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=14274
+time:
+  published: '2024-04-17'
+  collected: '2026-11-14'
+entities:
+- ref: codec:ECM
+  role: subject
+- ref: impl:VTM
+  role: compared_against
+claims:
+- statement: 该文档的主题是 ECM 与 VTM 编码结果的视觉质量对比，属 ECM 开发线中对新一代编码主观性能的探索性/验证性评测，可能为后续 ECM 验证测试与最终定版提供主观证据
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 对比 ECM 与 VTM 编码输出的视觉质量，评估新一代编码相对 VVC 参考模型的主观画质增益。
+  abstract_zh: 该文档为 2024 年 4 月 Rennes 会议上由 Baroncini、Ohm、Wien 等资深标准化负责人提交的评估类输入，方向是对 ECM 与 VVC 测试模型 VTM
+    的编码结果进行视觉（主观）质量对比。它属于 ECM 增强开发线上验证新一代工具主观增益的探索/评测性工作，可视为 ECM 验证测试链条中的过程性参照记录。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 标题为 ECM 与 VTM 编码的视觉质量对比，属 ECM 开发线上主观增益的探索/验证类评测结果，由资深标准化负责人提交，是标准进程的关键评估节点
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-AH2029: ECM/VTM 编码的视觉质量对比'

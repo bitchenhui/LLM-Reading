@@ -1,0 +1,36 @@
+id: standard_proposal:jvet:m195-AE0266
+type: standard_proposal
+title: 'JVET-AE0266: Update on open, optimized VVC implementations VVenC and VVdeC'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2023-07-Geneva@JVET-AE0266
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=13229
+time:
+  published: '2023-07-11'
+  collected: '2026-11-14'
+entities:
+- ref: codec:VVC
+  role: subject
+- ref: impl:VVenC
+  role: subject
+- ref: impl:VVdec
+  role: subject
+claims:
+- statement: 该文档为HHI对其开源优化VVC编码器VVenC与解码器VVdeC的进展更新，反映VVC开源生态工具的持续维护与优化；具体更新细节需以正文为准。
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: HHI汇报开源快速VVC编码器VVenC与解码器VVdeC的最新优化进展。
+  abstract_zh: 该文档是HHI在JVET会议上对其开源优化VVC实现VVenC（编码器）与VVdeC（解码器）的例行进展更新，属于VVC开源工具与生态部署方向，而非标准文本修订或验证类节点。具体更新内容（性能提升、新特性）需正文确认。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 标题为HHI对开源VVC实现VVenC/VVdeC的例行进展更新，含明确工具但不属重大节点或AHG报告，按具体技术方向归为summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-AE0266: 开源优化的VVC实现软件VVenC与VVdeC进展更新'

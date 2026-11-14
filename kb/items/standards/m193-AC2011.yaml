@@ -1,0 +1,34 @@
+id: standard_proposal:jvet:m193-AC2011
+type: standard_proposal
+title: 'JVET-AC2011: VTM and HM common test conditions and evaluation procedures for HDR/WCG video'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2023-01-Teleconference@JVET-AC2011
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=12575
+time:
+  published: '2023-01-11'
+  collected: '2026-11-14'
+entities:
+- ref: impl:VTM
+  role: subject
+- ref: impl:HM
+  role: subject
+claims:
+- statement: 该文档定义HDR/WCG内容在VTM与HM参考软件上的通用测试条件与评估程序，属标准评估流程类文件，为后续HDR/WCG相关编码实验提供统一基准
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 规定基于VTM与HM参考软件的HDR/WCG视频通用测试条件与评估流程。
+  abstract_zh: 该文档为2023年1月JVET远程会议上的测试条件类文档，针对HDR/WCG视频在VTM与HM参考软件下规定通用测试条件（CTC）与评估流程，服务于锚点生成与编码性能比较。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 属于具体技术性文档，定义VTM/HM参考软件下HDR/WCG视频的通用测试条件与评估流程，非CfP或验证测试等重大节点
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-AC2011: 面向HDR/WCG视频的VTM与HM通用测试条件及评估流程'
