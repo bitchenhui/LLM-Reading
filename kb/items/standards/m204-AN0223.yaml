@@ -1,0 +1,35 @@
+id: standard_proposal:jvet:m204-AN0223
+type: standard_proposal
+title: 'JVET-AN0223: AHG7: On bin to bit ratio in ECM'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2025-10-Geneva@JVET-AN0223
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=16207
+time:
+  published: '2025-10-03'
+  collected: '2026-11-14'
+entities:
+- ref: codec:ECM
+  role: subject
+claims:
+- statement: 该文档针对 ECM 的算术熵编码环节，研究 bin 数量与实际编码 bit 数之间的比率关系，属于 AHG7 框架下对 ECM 工具特性的分析性贡献。
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+- statement: 此类 bin/bit 比率分析可能为 ECM 后续迭代中熵编码复杂度与压缩效率的权衡提供参考，但基于标题无法确认具体结论。
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 分析 ECM 算术编码中语法元素 bin 与输出 bit 的比率特性，支撑熵编码效率讨论。
+  abstract_zh: 该文档为提交给 JVET 第 7 专题组（AHG7）的 ECM 探索类文稿，围绕 ECM 熵编码中 bin 到 bit 的比率展开分析，属于 ECM 迭代开发过程中的技术讨论材料。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 属提交至 AHG7 的 ECM 熵编码技术分析文稿，非 CfP/验证测试等重大节点，按专题组技术材料作摘要级处理。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-AN0223: AHG7：关于 ECM 中 bin 与 bit 比值的研究'

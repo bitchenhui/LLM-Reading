@@ -1,0 +1,33 @@
+id: standard_proposal:jvet:m207-AQ0187
+type: standard_proposal
+title: 'JVET-AQ0187: Consolidating the HEVC Reference Software: Adding SHVC Support to the dev-multiview444
+  Branch'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2026-07-Geneva@JVET-AQ0187
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=17165
+time:
+  published: '2026-07-07'
+  collected: '2026-11-14'
+entities:
+- ref: codec:HEVC
+  role: subject
+claims:
+- statement: 该提案的主题是在HEVC参考软件的dev-multiview444分支中加入SHVC可伸缩扩展支持，属于对既有参考软件的功能整合与维护贡献；其对标准文本本身无直接影响，推断为HEVC工具链完善类工作
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 苹果提议在HEVC参考软件dev-multiview444开发分支中集成SHVC可伸缩扩展支持
+  abstract_zh: 该文档为Apple团队向JVET会议提交的具体技术贡献（m77479），属于HEVC参考软件（HM）维护与整合工作，方向是为多视图4:4:4开发分支补齐SHVC可伸缩编码支持，以完善HEVC生态工具链而非推进新一代标准线。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 标题含明确工具与分支改动（HEVC参考软件dev-multiview444分支加入SHVC支持），属具体技术提案而非重大节点或行政事务
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-AQ0187: HEVC参考软件整合：为dev-multiview444分支添加SHVC支持'

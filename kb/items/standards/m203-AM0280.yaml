@@ -1,0 +1,32 @@
+id: standard_proposal:jvet:m203-AM0280
+type: standard_proposal
+title: 'JVET-AM0280: AHG3: VTM decoder memory print'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2025-06-Daejeon@JVET-AM0280
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=15947
+time:
+  published: '2025-06-26'
+  collected: '2026-11-14'
+entities:
+- ref: impl:VTM
+  role: subject
+claims:
+- statement: 该文档是 AHG3 专题组向 JVET 汇报 VTM 解码器内存占用情况的进展记录，反映参考软件实现复杂度方面的跟踪工作，未涉及新的编码工具或标准化节点
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: TCL 报告 VTM 参考软件解码器内存占用情况，属实现层面的专题组过程记录。
+  abstract_zh: 该文档为 JVET 大田会议 AHG3 专题组的进展报告，聚焦 VTM 参考软件解码器的内存占用（memory print）这一实现复杂度议题。其性质是标准线上的权威过程记录，用于跟踪参考软件在实现开销方面的状态。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: AHG3 专题组关于 VTM 解码器内存占用的进展报告，属参考软件实现层面的过程记录而非重大节点或新工具提案
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-AM0280: AHG3 报告：VTM 解码器内存占用'

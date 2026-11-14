@@ -1,0 +1,33 @@
+id: standard_proposal:jvet:m207-AQ0190
+type: standard_proposal
+title: 'JVET-AQ0190: Prototype VVC decoder supporting dynamic layer switching during multi-layer bitstream
+  playback'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2026-07-Geneva@JVET-AQ0190
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=17168
+time:
+  published: '2026-07-07'
+  collected: '2026-11-14'
+entities:
+- ref: codec:VVC
+  role: subject
+claims:
+- statement: 该提案构建了支持多层码流播放中动态层切换的原型 VVC 解码器，反映 JVET 围绕多层/可分级 VVC 播放能力的原型验证类工作方向
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: NHK 展示可在多层 VVC 码流播放中动态切换层的原型解码器实现。
+  abstract_zh: 该文档为具体技术提案，报告一个支持多层码流播放时动态层切换的原型 VVC 解码器，属多层/可分级 VVC 扩展方向的可行性演示。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 标题指向含明确原型工具的具体技术提案（多层码流动态层切换解码器），未达 CfP/验证测试等重大节点级别
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-AQ0190: 支持多层码流播放期间动态层切换的原型 VVC 解码器'

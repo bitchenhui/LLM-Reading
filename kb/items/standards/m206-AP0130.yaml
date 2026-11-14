@@ -1,0 +1,32 @@
+id: standard_proposal:jvet:m206-AP0130
+type: standard_proposal
+title: 'JVET-AP0130: AHG3/AHG9: Public source code release of real-time NNPF implementation in VVdeC'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2026-04-SantaEularia@JVET-AP0130
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=16794
+time:
+  published: '2026-04-24'
+  collected: '2026-11-14'
+entities:
+- ref: impl:VVdec
+  role: subject
+claims:
+- statement: 在 VVdeC 开源解码器中实现了可实时运行的神经网络后滤波（NNPF）并公开发布源代码，为 AI 工具在 VVC 生态中的工程化验证与部署提供参考实现
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: Nokia 报告已在开源 VVC 解码器 VVdeC 中实现并公开实时神经网络后滤波（NNPF）代码。
+  abstract_zh: 该文档为 AHG3（AI 工具）与 AHG9 的联合进展报告，通报基于 VVdeC 的实时 NNPF 开源实现发布，反映下一代编码 AI 工具从研究走向工程化与可部署实现的过程节点。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: AHG3/AHG9 联合进展报告，通报开源 VVC 解码器 VVdeC 中实时 NNPF 实现的公开代码发布，属权威过程记录而非重大节点或新实验提案。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-AP0130: AHG3/AHG9：VVdeC 中实时神经网络后滤波（NNPF）实现的开源代码发布'

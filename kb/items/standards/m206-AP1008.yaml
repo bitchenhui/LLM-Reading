@@ -1,0 +1,35 @@
+id: standard_proposal:jvet:m206-AP1008
+type: standard_proposal
+title: 'JVET-AP1008: Conformance testing for HEVC multiview extended and monochrome profiles (Draft 2)'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2026-04-SantaEularia@JVET-AP1008
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=16987
+time:
+  published: '2026-04-24'
+  collected: '2026-11-14'
+entities:
+- ref: codec:HEVC
+  role: subject
+claims:
+- statement: 该文档是针对 HEVC 多视点扩展与单色档位的一致性测试规范第二版草案，标志着这两类档位的一致性定义进入版本化定稿阶段
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+- statement: 一致性测试文本的更新将为上述档位的实现互操作验证提供规范性依据
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 将 HEVC 多视点扩展与单色档位的一致性测试规范推进至第二版草案。
+  abstract_zh: 该文档为 HEVC 一致性测试规范中多视点扩展与单色档位部分的 Draft 2，属于规范性文本的版本化推进节点，用于界定符合这些档位的码流与解码器一致性要求。
+assessment:
+  relevance: medium
+  decision: deep_read
+  reason: 一致性测试规范 Draft 2 属版本化规范性文本，是相关 HEVC 档位定稿与互操作性认证的关键节点。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-AP1008: HEVC 多视点扩展与单色档位的一致性测试（第二版草案）'

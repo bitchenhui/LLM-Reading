@@ -1,0 +1,32 @@
+id: standard_proposal:jvet:m204-AN0293
+type: standard_proposal
+title: 'JVET-AN0293: Multiview 4:4:4 profiles for HEVC'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2025-10-Geneva@JVET-AN0293
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=16297
+time:
+  published: '2025-10-03'
+  collected: '2026-11-14'
+entities:
+- ref: codec:HEVC
+  role: subject
+claims:
+- statement: 该文档的主题是为HEVC引入多视角与4:4:4色度组合的新档次，可能服务于专业制作或沉浸式内容等对色度采样和多视点有要求的应用场景；其标准进程含义为对既有HEVC档次体系的具体扩展提案，推断为供会议讨论后续纳入修订或互操作点。
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提议为HEVC定义结合多视角与4:4:4色度采样的新档次，服务专业与沉浸式应用。
+  abstract_zh: Apple向2025年10月日内瓦会议提交的档次扩展提案，建议在HEVC框架内增设同时支持多视角与4:4:4色度的规范档次，属于对既有标准档次体系的具体增补方向。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 标题为面向HEVC新增多视角4:4:4档次的具体技术扩展提案，非CfP/验证测试等重大节点。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-AN0293: 面向HEVC的多视角4:4:4档次提案'

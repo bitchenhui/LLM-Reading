@@ -1,0 +1,33 @@
+id: standard_proposal:jvet:m207-AQ0188
+type: standard_proposal
+title: 'JVET-AQ0188: Subpicture support in HEVC'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2026-07-Geneva@JVET-AQ0188
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=17166
+time:
+  published: '2026-07-07'
+  collected: '2026-11-14'
+entities:
+- ref: codec:HEVC
+  role: subject
+claims:
+- statement: 该文档主题为在 HEVC 中引入子图支持，属于对既有编码标准的功能扩展提案，可能关联低延迟/流媒体用例并成为后续 HEVC 修订的输入。
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: Apple 提案为 HEVC 引入子图支持，对标 VVC 子图能力，面向低延迟流媒体场景。
+  abstract_zh: 该文档为 2026-07 日内瓦会议上的技术提案（JVET-AQ0188 / m77480），主题是在 HEVC 标准中增加子图支持。若获采纳，可能成为 HEVC 修订案的前期输入，使其具备
+    VVC 中已用于低延迟、视口自适应流媒体的子图特性。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 具体技术提案（为 HEVC 引入子图支持），非 CfP/验证测试等重大节点，按具体工具提案收录为 summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-AQ0188: HEVC 中的子图（Subpicture）支持'

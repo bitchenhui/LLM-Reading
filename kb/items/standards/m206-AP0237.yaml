@@ -1,0 +1,32 @@
+id: standard_proposal:jvet:m206-AP0237
+type: standard_proposal
+title: 'JVET-AP0237: AHG17: Improved VTM configuration for 0.2x runtime target'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2026-04-SantaEularia@JVET-AP0237
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=16920
+time:
+  published: '2026-04-24'
+  collected: '2026-11-14'
+entities:
+- ref: impl:VTM
+  role: subject
+claims:
+- statement: 该文档是AHG17专题组报告，主题为VTM参考软件的配置改进，目标是提供约0.2倍运行时间的快速配置，属于参考软件与测试条件演进的标准化过程记录
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: AHG17报告针对VTM参考软件提出改进配置，目标是将编码运行时间降至约0.2倍
+  abstract_zh: 本文档为JVET AHG17专题组的会议报告，主题是VVC测试模型VTM的配置优化，面向约0.2倍运行时间的快速档配置。此类报告构成参考软件演进及后续公共测试条件更新的过程记录。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: AHG17专题组会议报告，记录VTM参考软件面向0.2倍运行时间目标的配置改进，属标准线的权威过程记录而非重大节点
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-AP0237: AHG17：面向0.2倍运行时间目标的VTM配置改进'

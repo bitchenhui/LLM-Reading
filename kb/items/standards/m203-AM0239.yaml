@@ -1,0 +1,32 @@
+id: standard_proposal:jvet:m203-AM0239
+type: standard_proposal
+title: 'JVET-AM0239: VVdeC with multi-layer decoding capability'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2025-06-Daejeon@JVET-AM0239
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=15886
+time:
+  published: '2025-06-26'
+  collected: '2026-11-14'
+entities:
+- ref: impl:VVdec
+  role: subject
+claims:
+- statement: 该提案拟为 VVdeC 增加多层解码能力，从而支持 VVC 可分级比特流的解码，服务于可分级应用（如分层广播）场景下的生态需求；具体实现细节与验证情况未知。
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提议为开源 VVC 解码器 VVdeC 增加多层比特流解码能力，以支持可分级码流。
+  abstract_zh: 该文档是 2025 年 6 月大田会议上的实现类贡献，方向为扩展开源 VVC 解码器 VVdeC 以支持多层（可分级）码流解码。属于生态工具演进的具体技术提案，而非标准文本修订或验证测试节点。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 标题为明确工具改进提案（为开源解码器 VVdeC 增加多层解码能力），非 AHG 报告或重大节点，按基准列为 summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-AM0239: 具备多层解码能力的 VVdeC'

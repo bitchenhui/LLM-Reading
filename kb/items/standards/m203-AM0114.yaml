@@ -1,0 +1,32 @@
+id: standard_proposal:jvet:m203-AM0114
+type: standard_proposal
+title: 'JVET-AM0114: EE1-3.1: RA/LDB Unified Reference Frame Synthesis for VVC Inter Coding'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2025-06-Daejeon@JVET-AM0114
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=15761
+time:
+  published: '2025-06-26'
+  collected: '2026-11-14'
+entities:
+- ref: codec:VVC
+  role: subject
+claims:
+- statement: 该文档报告EE1-3.1测试项的实验结果，主题为在VVC帧间编码中统一RA与LDB配置的参考帧合成工具，属于JVET为下一代标准开展的工具探索与验证环节
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 探索在VVC帧间编码中统一随机接入（RA）与低时延B（LDB）配置下的参考帧合成工具。
+  abstract_zh: 该文档是2025年6月大田JVET会议的探索实验报告（EE1测试项3.1），针对VVC帧间编码提出跨RA与LDB配置统一的参考帧合成方法。此类EE实验结果用于评估新工具的潜在增益，是下一代编码标准工具筛选进程中的具体实验记录。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 该文档为JVET探索实验EE1的正式实验结果，属面向下一代标准的关键探索节点，值得深读。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-AM0114: EE1-3.1：面向VVC帧间编码的RA/LDB统一参考帧合成'

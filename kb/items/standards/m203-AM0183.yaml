@@ -1,0 +1,32 @@
+id: standard_proposal:jvet:m203-AM0183
+type: standard_proposal
+title: 'JVET-AM0183: Non-EE2: Look-up table based loop filtering for ECM'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2025-06-Daejeon@JVET-AM0183
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=15830
+time:
+  published: '2025-06-26'
+  collected: '2026-11-14'
+entities:
+- ref: codec:ECM
+  role: subject
+claims:
+- statement: 该文档针对ECM环路滤波模块提出基于查找表的具体工具方案，属ECM持续探索阶段的技术贡献
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出在ECM中采用查找表方式实现环路滤波的具体编码工具提案。
+  abstract_zh: 该文档是2025年6月大田JVET会议的一篇具体技术提案（标注为Non-EE2，即不属于EE2探索实验框架），由UESTC与Transsion团队提交，方向为在ECM增强压缩模型中引入基于查找表（LUT）的环路滤波工具。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 标题为面向ECM的具体环路滤波工具提案（基于查找表），属常规技术贡献而非重大节点或行政事务
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-AM0183: 非EE2提案：面向ECM的基于查找表的环路滤波'

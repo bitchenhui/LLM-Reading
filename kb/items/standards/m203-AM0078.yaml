@@ -1,0 +1,32 @@
+id: standard_proposal:jvet:m203-AM0078
+type: standard_proposal
+title: 'JVET-AM0078: AHG17: Suggestion to enable DMVR encoder control for VTM anchor'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2025-06-Daejeon@JVET-AM0078
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=15725
+time:
+  published: '2025-06-26'
+  collected: '2026-11-14'
+entities:
+- ref: impl:VTM
+  role: subject
+claims:
+- statement: 该文档提出为 VTM 锚点启用 DMVR 编码器端控制，属针对参考软件锚点配置的 AHG 技术建议，而非测试报告或新版本文本。
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 建议在 VTM 锚点配置中开放 DMVR 的编码器控制开关，影响锚点码流生成设置。
+  abstract_zh: 本文档为爱立信向 JVET AHG17 提交的建议，主张在 VVC 测试模型（VTM）锚点配置中允许编码器控制 DMVR（解码端运动矢量细化）的使用。该议题关系到锚点基准的生成方式，可能影响后续性能对比与验证测试的基准设置。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: AHG17 输入中针对 VTM 锚点 DMVR 编码器控制的具体配置建议，属明确技术提案而非行政事务或重大节点。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-AM0078: AHG17：建议为 VTM 锚点启用 DMVR 编码器端控制'

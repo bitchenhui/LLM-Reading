@@ -1,0 +1,32 @@
+id: standard_proposal:jvet:m204-AN0178
+type: standard_proposal
+title: 'JVET-AN0178: VVC multilayer extension for an external base layer'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2025-10-Geneva@JVET-AN0178
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=16162
+time:
+  published: '2025-10-03'
+  collected: '2026-11-14'
+entities:
+- ref: codec:VVC
+  role: subject
+claims:
+- statement: 该提案针对VVC提出多层扩展，使增强层可利用外部提供的基础层码流，属于具体工具类技术提案，可能为VVC后续扩展标准化的讨论提供输入（基于标题的推断）
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出VVC多层编码扩展，使增强层可参考外部来源的基础层码流进行编码
+  abstract_zh: InterDigital在2025年10月日内瓦JVET会议上提交的具体技术提案，探讨VVC的多层扩展以支持外部基础层作为参考，指向VVC在可分级编码及与其他码流/系统互操作场景下的扩展标准化方向。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 标题指向明确的多层扩展工具提案，属具体技术提案而非AHG报告或重大标准节点，按基准定为summary_only
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-AN0178: 支持外部基础层的VVC多层扩展'

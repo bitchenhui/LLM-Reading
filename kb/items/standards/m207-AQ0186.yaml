@@ -1,0 +1,33 @@
+id: standard_proposal:jvet:m207-AQ0186
+type: standard_proposal
+title: 'JVET-AQ0186: MV-HEVC Conformance Bitstreams for the Multiview Monochrome 10/12 and Multiview 4:4:4
+  10/12 Profiles'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2026-07-Geneva@JVET-AQ0186
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=17164
+time:
+  published: '2026-07-07'
+  collected: '2026-11-14'
+entities:
+- ref: codec:HEVC
+  role: subject
+claims:
+- statement: 该文档为MV-HEVC新定义的多视图单色10/12位与多视图4:4:4 10/12位档位提供一致性比特流，表明这些扩展档位已进入符合性验证阶段，标准文本接近定稿。
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 为MV-HEVC新增多视图单色与4:4:4档位提供一致性测试比特流。
+  abstract_zh: 该文档处于MV-HEVC扩展标准化后期的符合性与验证环节，为新定义的多视图单色10/12位及多视图4:4:4 10/12位档位提交一致性比特流，用于检验解码器实现的符合性。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 为新定义的MV-HEVC多视图档位制作一致性比特流，属于标准验证测试阶段的关键节点材料。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-AQ0186: 面向多视图单色10/12位与多视图4:4:4 10/12位档位的MV-HEVC一致性比特流'
