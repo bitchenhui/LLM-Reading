@@ -1,0 +1,56 @@
+id: paper:arxiv:2608.01730
+type: paper
+title: 'Learning Where to Look and How to Judge: Resolution-agnostic Image Quality Assessment with Quality-aware
+  Saliency'
+domain: quality_assessment
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2608.01730v1
+  url: https://arxiv.org/abs/2608.01730
+  pdf_url: https://arxiv.org/pdf/2608.01730v1
+  venue: arXiv preprint
+time:
+  published: '2026-08-03'
+  collected: '2026-11-15'
+entities:
+- ref: concept:IQA
+  role: subject
+- ref: metric:MOS
+  role: measured_by
+claims:
+- statement: ReLIQS是分辨率无关的模型，直接在包含原始分辨率在内的多个尺度上采样patch，保留原始分辨率下的质量线索，避免激进缩放导致的信息丢失。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: ReLIQS支持在量表不匹配的多个异构主观IQA数据集上联合训练，并能跨真实失真、合成失真与AIGC基准泛化。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在跨分辨率、跨失真类型的多个基准上，ReLIQS以相当或更低的计算成本取得优于CNN、CLIP及MLLM基线的泛化性能。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 架构由感知重要性估计器（预测IQA专用显著性/重要性图以选择少量信息性patch）与潜在质量轴模块（聚合patch嵌入输出整图分数）构成，兼具预算自适应性。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出基于CLIP的分辨率无关无参考IQA模型ReLIQS，联合学习'看哪里'与'如何评判'，跨数据集跨分辨率泛化更优。
+  abstract_zh: 针对现有SOTA无参考IQA系统普遍存在的激进缩放丢失质量线索、跨分辨率泛化差、难以在MOS量表不一致的异构主观数据集上联合训练、计算开销大等问题，作者提出ReLIQS。该模型为基于CLIP视觉骨干的多尺度patch驱动架构：在包括原始分辨率在内的多个尺度上采样固定大小patch，由轻量的感知重要性估计器预测IQA专用重要性图以筛选信息量大的patch，再由潜在质量轴模块将patch嵌入聚合为整图质量分数。模型可在多个主观研究数据集上联合训练并保持计算高效、预算可调。在真实失真、合成失真及AIGC基准上，ReLIQS以相当或更低的计算成本取得优于CNN、CLIP及MLLM基线的泛化性能。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 无参考图像质量评估（IQA）工作，属于质量评估类域，按基准规则只能 summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 学习看哪里与如何评判：基于质量感知显著性的分辨率无关图像质量评估
+relations:
+- type: same_topic
+  ref: paper:arxiv:2602.09531
+  note: 同为无参考盲图像质量评估方法研究
+- type: same_topic
+  ref: paper:arxiv:2601.08311
+  note: 同为提升图像质量评估（含LMM类模型）的IQA方向工作
+- type: same_topic
+  ref: paper:arxiv:2410.08534
+  note: 本文评测覆盖AIGC图像/视频质量基准，与该AI生成内容质量预测工作主题相关
