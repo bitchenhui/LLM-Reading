@@ -1,0 +1,53 @@
+id: paper:arxiv:2508.05004
+type: paper
+title: 'R-Zero: Self-Evolving Reasoning LLM from Zero Data'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2508.05004v4
+  url: https://arxiv.org/abs/2508.05004
+  pdf_url: https://arxiv.org/pdf/2508.05004v4
+  venue: arXiv preprint
+time:
+  published: '2025-08-07'
+  collected: '2026-11-14'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: R-Zero无需任何已有任务与标签，仅从单一基础LLM出发，通过Challenger与Solver两模型独立优化、协同进化，自动生成针对性的自改进训练课程。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: R-Zero在不同骨干LLM上均显著提升推理能力，以Qwen3-4B-Base为例，数学推理基准提升+6.49，通用领域推理基准提升+7.54。
+  confidence: reported
+  metrics:
+  - name: 数学推理基准提升
+    value: '+6.49'
+    scope: Qwen3-4B-Base，math-reasoning benchmarks
+  - name: 通用领域推理基准提升
+    value: '+7.54'
+    scope: Qwen3-4B-Base，general-domain reasoning benchmarks
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出Challenger-Solver双模型协同进化框架，无需任何人工任务与标签即可自生成课程数据并提升LLM推理能力
+  abstract_zh: 现有自进化LLM训练方法仍依赖大量人工策划的任务与标签，构成迈向超越人类智能的根本瓶颈。R-Zero提出完全自主框架，从单一基础LLM出发初始化两个角色独立的模型：Challenger与Solver，两者分别优化并通过交互共同进化——Challenger因提出贴近Solver能力边缘的任务而获得奖励，Solver因解决日益困难的新任务而获得奖励，从而在无既有任务与标签的条件下产生针对性的自改进课程。实验表明R-Zero在多个骨干LLM上显著提升推理能力，例如Qwen3-4B-Base在数学推理基准上提升+6.49，在通用领域推理基准上提升+7.54。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: LLM从零自生成数据的自我改进框架，属self_improvement域核心工作，与音视频编码无关，按非核心域规则给summary_only
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: R-Zero：从零数据自进化的推理大语言模型
+relations:
+- type: same_topic
+  ref: paper:arxiv:2210.11610
+  note: 同属LLM自我改进研究线，Self-Improve是该方向的奠基性工作
+- type: same_topic
+  ref: paper:arxiv:2610.11345
+  note: 同为自进化LLM通过多agent协同（强化学习）合成训练数据的自改进工作

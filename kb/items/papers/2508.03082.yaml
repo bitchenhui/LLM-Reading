@@ -1,0 +1,61 @@
+id: paper:arxiv:2508.03082
+type: paper
+title: 'EoH-S: Evolution of Heuristic Set using LLMs for Automated Heuristic Design'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2508.03082v2
+  url: https://arxiv.org/abs/2508.03082
+  pdf_url: https://arxiv.org/pdf/2508.03082v2
+  venue: arXiv preprint
+time:
+  published: '2025-08-05'
+  collected: '2026-11-14'
+entities:
+- ref: concept:EoH
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: EoH-S 在三个自动启发式设计任务上持续优于现有最先进 AHD 方法，性能提升最高达 60%。
+  confidence: reported
+  metrics:
+  - name: 性能提升
+    value: 60%
+    scope: 三个 AHD 任务、不同规模与分布实例上相对 SOTA AHD 方法的最高改进
+  evidence: abstract（初筛，未读全文）
+- statement: AHSD 的目标函数被证明是单调且超模的，为启发式集合优化提供了理论基础。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 互补种群管理与互补感知模因搜索两种机制使 EoH-S 能生成高质量且互补的启发式集合。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出自动启发式集合设计（AHSD）新范式与 EoH-S 算法，用 LLM 演化互补启发式集合覆盖多样实例，性能最高提升 60%。
+  abstract_zh: 现有 LLM 驱动的自动启发式设计（AHD）方法通常只设计单一启发式服务所有问题实例，在不同分布或设置下泛化较差。本文提出自动启发式集合设计（AHSD）这一新问题形式，目标是自动生成一小组互补启发式，使每个问题实例至少被集合中某一个启发式优化，并证明
+    AHSD 的目标函数是单调且超模的。基于此提出 EoH-S 算法，引入互补种群管理与互补感知模因搜索两种新机制，有效生成高质量且互补的启发式集合。在三个 AHD 任务、跨越不同规模与分布的多样实例上的实验表明，EoH-S
+    持续优于现有最先进 AHD 方法，性能提升最高达 60%。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: EoH 同团队的集合化扩展，属 self_improvement 域核心谱系（AHD/LLM 演化），按规则不给 deep_read，仅摘要收录。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: EoH-S：基于大语言模型演化启发式集合的自动启发式设计
+relations:
+- type: same_topic
+  ref: paper:arxiv:2401.02051
+  note: EoH-S 是 EoH（本库已收录，作者团队重叠）的集合化扩展，同属 LLM 驱动自动启发式设计
+- type: same_topic
+  ref: paper:arxiv:2412.20694
+  note: QUBE 同属 LLM 驱动自动启发式设计（AHD）改进方向
+- type: same_topic
+  ref: paper:arxiv:2505.12285
+  note: CALM 同属算法与大语言模型协同演化做自动启发式设计
+- type: same_topic
+  ref: paper:arxiv:2412.14995
+  note: HSEvo 同属基于 LLM 的自动启发式设计演化方法

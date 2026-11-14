@@ -1,0 +1,48 @@
+id: paper:arxiv:2505.19855
+type: paper
+title: 'Editing as Unlearning: Are Knowledge Editing Methods Strong Baselines for Large Language Model
+  Unlearning?'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2505.19855v1
+  url: https://arxiv.org/abs/2505.19855
+  pdf_url: https://arxiv.org/pdf/2505.19855v1
+  venue: arXiv preprint
+time:
+  published: '2025-05-26'
+  collected: '2026-11-14'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:SelfImprovement
+  role: uses
+claims:
+- statement: 将LLM遗忘概念化为一种特殊的知识编辑情形，即把目标信息修改为拒绝或"空集∅"响应以表示其被移除。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 评测表明WISE与AlphaEdit等知识编辑方法可作为LLM遗忘的有效基线，尤其对预训练知识效果突出，并能生成与人类预期一致的拒绝式回答。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 提出self-improvement与query merging两个实用配方：前者利用LLM自身上下文学习能力构造更符合人类预期的遗忘目标，后者使ROME和MEMIT在遗忘较长样本序列时表现良好。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 将LLM遗忘视为把知识编辑为拒绝/空集响应的特殊编辑任务，验证WISE、AlphaEdit等编辑方法可作为有效遗忘基线并提出self-improvement与query merging实用配方。
+  abstract_zh: LLM遗忘旨在从模型中选择性移除信息，而知识编辑旨在修改模型知识；本文将遗忘概念化为一种特殊编辑——把目标信息改为拒绝或"空集∅"响应。作者在预训练与微调知识上，将ROME、MEMIT、GRACE、WISE、AlphaEdit等SOTA编辑方法与现有遗忘方法进行对比评测。结果显示WISE与AlphaEdit等方法可作为有效遗忘基线，尤其对预训练知识表现突出，且能生成与人类预期一致的拒绝式回答。为适配编辑方法用于遗忘场景，论文提出self-improvement（利用LLM自身上下文学习能力构造更符合人类预期的遗忘目标）与query
+    merging（使ROME和MEMIT胜任较长样本序列的遗忘）两个实用方案。作者建议遗忘研究社区采用SOTA编辑方法作为基线，并从编辑视角研究LLM记忆控制。
+assessment:
+  relevance: low
+  decision: summary_only
+  reason: LLM遗忘与知识编辑研究，仅附带提出self-improvement配方，非核心音视频域，按边缘主题初筛收录
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 编辑即遗忘：知识编辑方法是大语言模型遗忘的强基线吗？
+relations:
+- type: same_topic
+  ref: paper:arxiv:2210.08229
+  note: 同属LLM自我改进研究线，本文以self-improvement配方辅助构造遗忘目标

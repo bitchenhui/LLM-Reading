@@ -1,0 +1,53 @@
+id: paper:arxiv:2502.05121
+type: paper
+title: Refining Integration-by-Parts Reduction of Feynman Integrals with Machine Learning
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2502.05121v1
+  url: https://arxiv.org/abs/2502.05121
+  pdf_url: https://arxiv.org/pdf/2502.05121v1
+  venue: arXiv preprint
+time:
+  published: '2025-02-07'
+  collected: '2026-11-14'
+entities:
+- ref: concept:FunSearch
+  role: subject
+- ref: concept:LLM
+  role: builds_on
+claims:
+- statement: FunSearch（基于 LLM 代码生成的遗传编程）能够重新发现近期并入 IBP 求解器的最先进启发式规则。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 强类型遗传编程作为后续精化手段，同样能收敛到最先进启发式，二者互为补充。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在一个算例中，进化搜索得到的启发式对现有最先进方法取得小幅改进。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 用 FunSearch 与强类型遗传编程自动搜索分部积分约化启发式，复现最优策略并小幅超越。
+  abstract_zh: 分部积分（IBP）约化是理论粒子物理与引力波计算中的常见瓶颈，其性能高度依赖选择 IBP 恒等式的启发式规则。作者采用基于大语言模型代码生成的遗传编程变体 FunSearch
+    探索候选启发式，再用强类型遗传编程聚焦收敛到有效解。两种方法都重新发现了近期并入 IBP 求解器的最先进启发式策略；在一个算例中还取得了对该最优方法的小幅改进。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 该文用 FunSearch（LLM 代码生成遗传编程）自动发现费曼积分 IBP 约化启发式，属自我改进 AI 域，与音视频无关，仅作摘要收录。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 用机器学习改进费曼积分的分部积分约化
+relations:
+- type: same_topic
+  ref: paper:arxiv:2406.04824
+  note: 同为 FunSearch 用于自动发现优化组件的应用（贝叶斯优化采集函数）
+- type: same_topic
+  ref: paper:arxiv:2401.02051
+  note: 同为 LLM 驱动的启发式自动设计（EoH）
+- type: same_topic
+  ref: paper:arxiv:2412.14995
+  note: 同为基于 LLM 进化搜索的自动启发式设计（HSEvo）

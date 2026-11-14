@@ -1,0 +1,57 @@
+id: paper:arxiv:2404.09905
+type: paper
+title: Quality of Experience Oriented Cross-layer Optimization for Real-time XR Video Transmission
+domain: streaming_delivery
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2404.09905v1
+  url: https://arxiv.org/abs/2404.09905
+  pdf_url: https://arxiv.org/pdf/2404.09905v1
+  venue: arXiv preprint
+time:
+  published: '2024-04-15'
+  collected: '2026-11-14'
+entities:
+- ref: concept:QoE
+  role: subject
+- ref: concept:ABR
+  role: uses
+claims:
+- statement: 跨层框架下TPPO+MS-DQN组合策略可将实时XR视频传输的用户QoE提升3.6%至37.8%
+  confidence: reported
+  metrics:
+  - name: QoE提升幅度
+    value: 3.6%-37.8%
+    scope: 实时XR视频传输实验，TPPO+MS-DQN对比基线
+  evidence: abstract（初筛，未读全文）
+- statement: MS-DQN帧优先级无线资源调度策略单独可将传输质量提升49.9%至80.2%
+  confidence: reported
+  metrics:
+  - name: 传输质量提升幅度
+    value: 49.9%-80.2%
+    scope: MS-DQN无线资源调度策略实验对比
+  evidence: abstract（初筛，未读全文）
+- statement: 通过解耦时间尺度不匹配的调度与码率调整子问题，分别用MS-DQN与基于Transformer的PPO求解，可避免联合优化困难
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出基站与XR服务器信息交互的跨层框架，用MS-DQN无线调度加Transformer PPO码率自适应提升实时XR视频QoE。
+  abstract_zh: 针对实时XR视频逐帧传输对动态网络环境高度敏感的问题，论文设计了基站与XR服务器间进行简单信息交互的跨层传输框架，联合进行自适应码率调节与无线资源调度。利用跨层信息将用户QoE最大化建模为寻找最优调度与码率调整策略的问题，并因两类策略时间尺度不匹配而将原问题解耦为多智能体子问题分别求解。具体提出多步深度Q网络（MS-DQN）学习帧优先级无线资源调度策略，以及基于Transformer的近端策略优化（TPPO）完成视频码率自适应。实验表明TPPO+MS-DQN组合可将QoE提升3.6%至37.8%，其中MS-DQN单独将传输质量提升49.9%至80.2%。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 面向实时XR视频传输的QoE跨层优化与ABR/无线调度，属流媒体传输域，非核心编码域故不深读。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 面向体验质量的实时XR视频传输跨层优化
+relations:
+- type: same_topic
+  ref: paper:arxiv:2304.03505
+  note: 同为实时视频通信的跨层优化传输研究
+- type: same_topic
+  ref: paper:arxiv:2304.04637
+  note: 同为多智能体强化学习驱动的ABR码率自适应流媒体工作

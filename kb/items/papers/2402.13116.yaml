@@ -1,0 +1,52 @@
+id: paper:arxiv:2402.13116
+type: paper
+title: A Survey on Knowledge Distillation of Large Language Models
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2402.13116v4
+  url: https://arxiv.org/abs/2402.13116
+  pdf_url: https://arxiv.org/pdf/2402.13116v4
+  venue: arXiv preprint
+time:
+  published: '2024-02-20'
+  collected: '2026-11-14'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:SelfImprovement
+  role: uses
+claims:
+- statement: 知识蒸馏是将GPT-4等领先专有LLM的先进能力迁移到LLaMA、Mistral等开源模型的关键方法。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 知识蒸馏在开源LLM的模型压缩与自我改进（模型以自身为教师）中发挥关键作用。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 数据增强是KD框架内的强大范式，通过生成上下文丰富、技能特定的训练数据提升开源LLM的上下文适应性、伦理对齐与语义能力。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 系统综述LLM知识蒸馏的算法、技能与垂直化三大支柱，及其在模型压缩与自我改进中的作用。
+  abstract_zh: 该综述围绕算法、技能、垂直化三大支柱，系统梳理大语言模型知识蒸馏的机制、特定认知能力增强及跨领域应用。指出KD是将GPT-4等专有LLM的先进能力迁移至LLaMA、Mistral等开源模型的关键方法，同时在模型压缩和以模型自身为教师的自我改进中发挥重要作用。重点分析数据增强（DA）与KD的相互作用：利用DA生成上下文丰富、技能特定的训练数据，使开源模型逼近专有模型在上下文适应性、伦理对齐与深层语义方面的能力。并倡导遵守LLM使用法律条款，附有GitHub资源仓库。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: LLM知识蒸馏综述，明确覆盖以自身为教师的模型自我改进，与音视频技术无直接关联但属自我改进AI范围。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 大语言模型知识蒸馏综述
+relations:
+- type: same_topic
+  ref: paper:arxiv:2210.11610
+  note: 均涉及LLM自我改进；本综述将模型以自身为教师的自蒸馏列为KD的重要角色
+- type: same_topic
+  ref: paper:arxiv:2305.14483
+  note: 均涉及LLM自我改进技术路线
+- type: same_topic
+  ref: paper:arxiv:2310.11716
+  note: 均涉及LLM指令微调数据优化与蒸馏式数据再利用

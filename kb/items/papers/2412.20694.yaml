@@ -1,0 +1,56 @@
+id: paper:arxiv:2412.20694
+type: paper
+title: 'QUBE: Enhancing Automatic Heuristic Design via Quality-Uncertainty Balanced Evolution'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2412.20694v4
+  url: https://arxiv.org/abs/2412.20694
+  pdf_url: https://arxiv.org/pdf/2412.20694v4
+  venue: arXiv preprint
+time:
+  published: '2024-12-30'
+  collected: '2026-11-14'
+entities:
+- ref: concept:FunSearch
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: QUBE在FunSearch框架内以Quality-Uncertainty Trade-off Criterion（QUTC）替代原有优先级准则，基于作者提出的含不确定性质量指标来评估与引导进化过程
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在NP完全问题基准上，QUBE相对FunSearch及基线方法取得显著性能提升（摘要未给出具体数值）
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: QUBE的核心机制是在LLM+EA启发式设计中更好地平衡利用与探索
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 用质量-不确定性权衡准则（QUTC）重定义FunSearch的选择标准，提升LLM+进化算法自动启发式设计性能
+  abstract_zh: 针对NP难问题的启发式人工设计难题，该文提出QUBE方法，在FunSearch框架内重新定义个体选择与进化优先级准则。核心是引入基于'含不确定性质量'指标的Quality-Uncertainty
+    Trade-off Criterion（QUTC），在利用与探索之间取得平衡以指导LLM+EA的进化过程。在多个NP完全问题上的大量实验表明，QUBE相对FunSearch及基线方法取得显著性能提升。代码已开源。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: LLM+进化算法自动启发式设计工作，直接改进FunSearch框架，属自我改进AI核心追踪主题，但非音视频核心域，仅摘要收录
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: QUBE：通过质量-不确定性平衡进化增强自动启发式设计
+relations:
+- type: same_topic
+  ref: paper:arxiv:2401.02051
+  note: 同属LLM驱动的自动启发式设计/算法进化研究线
+- type: same_topic
+  ref: paper:arxiv:2412.14995
+  note: 同为基于LLM的自动启发式设计方法（HSEvo），与QUBE直接同题
+- type: same_topic
+  ref: paper:arxiv:2406.04824
+  note: 同样以FunSearch为基础进行方法扩展的研究
+- type: same_topic
+  ref: paper:arxiv:2509.07367
+  note: 同属代码进化方法求解NP完全问题的研究线

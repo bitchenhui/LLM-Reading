@@ -1,0 +1,52 @@
+id: paper:arxiv:2412.03704
+type: paper
+title: Scaling Inference-Time Search with Vision Value Model for Improved Visual Comprehension
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2412.03704v3
+  url: https://arxiv.org/abs/2412.03704
+  pdf_url: https://arxiv.org/pdf/2412.03704v3
+  venue: arXiv preprint
+time:
+  published: '2024-12-04'
+  collected: '2026-11-14'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: builds_on
+claims:
+- statement: VisVM引导的推理时搜索相比贪心解码及采用其他视觉奖励信号的搜索方法，能生成视觉细节更丰富、幻觉更少的描述性字幕。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 以VisVM引导生成的字幕对VLM进行自训练，可在广泛的多模态基准上提升性能，表明自我改进VLM的可行性。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: VisVM通过同时评估当前句子质量并预估后续句子的长期价值，引导VLM避开易幻觉或细节不足的生成路径。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出VisVM价值模型引导VLM推理时搜索，减少幻觉、丰富视觉细节，并支持自训练自我改进。
+  abstract_zh: 论文提出视觉价值模型（VisVM），用于引导视觉语言模型（VLM）在推理阶段进行搜索，生成视觉理解质量更高的回答。VisVM不仅评估当前搜索步骤所生成句子的质量，还预估后续句子可能达到的质量，从而提供长期价值信号，引导VLM避开易产生幻觉或细节不足的生成路径。实验表明，与贪心解码及采用其他视觉奖励信号的搜索方法相比，VisVM引导的搜索显著提升了描述性字幕的视觉细节丰富度并减少幻觉。作者进一步发现，用VisVM引导生成的字幕对模型进行自训练，可在广泛的多模态基准上提升VLM性能，展示了构建自我改进VLM的潜力。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 属VLM推理时搜索与自我改进AI工作，与音视频编码无直接关系，仅作初筛摘要收录。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 扩展推理时搜索：面向更优视觉理解的视觉价值模型
+relations:
+- type: same_topic
+  ref: paper:arxiv:2210.08229
+  note: 同属LLM自我改进方向，本文明确引用'推理时计算扩展是迈向自我改进模型的核心步骤'这一LLM研究脉络
+- type: same_topic
+  ref: paper:arxiv:2404.12253
+  note: 同属通过搜索与价值/批评信号实现模型自我改进的方法族
+- type: same_topic
+  ref: paper:arxiv:2609.37950
+  note: 同为面向视频/视觉理解的自我改进（RSI类）研究

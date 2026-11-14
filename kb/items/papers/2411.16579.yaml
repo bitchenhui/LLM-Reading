@@ -1,0 +1,59 @@
+id: paper:arxiv:2411.16579
+type: paper
+title: Enhancing LLM Reasoning via Critique Models with Test-Time and Training-Time Supervision
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2411.16579v1
+  url: https://arxiv.org/abs/2411.16579
+  pdf_url: https://arxiv.org/pdf/2411.16579v1
+  venue: arXiv preprint
+time:
+  published: '2024-11-25'
+  collected: '2026-11-14'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: subject
+claims:
+- statement: 提出AutoMathCritique自动化可扩展框架，收集到76,321条响应及配套步级反馈的批评数据集，微调后模型可为数学推理生成自然语言反馈。
+  confidence: reported
+  metrics:
+  - name: 批评数据集规模
+    value: 76,321
+    scope: AutoMathCritique收集的响应+步级反馈样本对数量
+  evidence: abstract（初筛，未读全文）
+- statement: 测试时以批评模型提供步级监督可稳定提升难题上的推理表现，且扩大推理时计算量时收益更明显。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 将批评监督引入自训练形成critique-in-the-loop自我改进方法，可提升演员模型的探索效率与解的多样性，尤其在困难查询上。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 初步探索了用批评监督训练self-talk（自我对话）推理模型，展示了可行性。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 构建批评模型为推理模型提供步级反馈，实现测试时与训练时双重监督的LLM自我改进。
+  abstract_zh: 论文提出双角色范式，将推理模型与批评模型分离，批评模型在测试时和训练时为推理模型提供步级反馈。作者设计了AutoMathCritique自动化框架，收集了76,321条响应及其步级反馈构成批评数据集，微调后可生成自然语言数学推理反馈。实验表明测试时引入批评反馈可稳定提升难题上的表现，且随推理计算量扩展收益更大。据此提出批评驱动的循环自训练方法，提升演员模型的探索效率与解的多样性，并初步探索了用批评监督训练自我对话推理模型。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 属LLM推理自我改进方向（批评模型驱动的测试时/训练时监督与自训练循环），与音视频技术无关，按收录基准仅作摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 通过批评模型以测试时与训练时监督增强大语言模型推理
+relations:
+- type: same_topic
+  ref: paper:arxiv:2210.08229
+  note: 同属LLM自我改进/自训练提升推理能力方向
+- type: same_topic
+  ref: paper:arxiv:2404.12253
+  note: 同为利用批评（criticizing）信号改进LLM推理的自我改进方法
+- type: same_topic
+  ref: paper:arxiv:2407.19594
+  note: 同为以LLM裁判/批评信号驱动的模型自我改进

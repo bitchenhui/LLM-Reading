@@ -1,0 +1,50 @@
+id: paper:arxiv:2408.02479
+type: paper
+title: 'From LLMs to LLM-based Agents for Software Engineering: A Survey of Current, Challenges and Future'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2408.02479v2
+  url: https://arxiv.org/abs/2408.02479
+  pdf_url: https://arxiv.org/pdf/2408.02479v2
+  venue: arXiv preprint
+time:
+  published: '2024-08-05'
+  collected: '2026-11-14'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:SelfImprovement
+  role: subject
+claims:
+- statement: 该综述将 LLM 与 LLM 智能体在软件工程中的研究归纳为需求工程、代码生成、自主决策、软件设计、测试生成与软件维护六个关键主题，并对比其任务、基准与评估指标的异同。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 基于 LLM 的智能体以 LLM 为决策与行动核心，可弥补 LLM 缺乏自主性与自我改进等内在局限，被视为具有通向 AGI 潜力的新技术。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 软件工程领域目前缺乏明确区分 LLM 与 LLM 智能体的统一标准与基准，将 LLM 方案认定为智能体的资格评价体系仍处早期阶段。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 综述LLM及其智能体在软件工程六大主题中的应用、基准与评估，辨析二者差异并指出自我改进等能力增益。
+  abstract_zh: 该综述系统调查了大语言模型（LLM）与基于 LLM 的智能体在软件工程中的现有实践与解决方案。作者归纳出六个关键主题：需求工程、代码生成、自主决策、软件设计、测试生成与软件维护，并区分两者在各任务、基准与评估指标上的异同。综述指出，目前尚缺乏界定
+    LLM 方案是否构成智能体的统一标准与基准，该领域仍处早期阶段。文章认为，以 LLM 为决策与行动核心的智能体可缓解 LLM 缺乏自主性与自我改进等内在局限，为通向 AGI 的研究指明方向。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 软件工程领域 LLM 智能体综述，涉及自我改进与自主决策主题，属自我改进 AI 追踪范围但与音视频核心技术无关，按非核心域仅初筛收录。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 从大语言模型到基于LLM的软件工程智能体：现状、挑战与未来综述
+relations:
+- type: same_topic
+  ref: paper:arxiv:2210.11610
+  note: 综述将自我改进列为 LLM 智能体相较纯 LLM 的核心能力增益，与 LLM 自我改进主线同题
+- type: same_topic
+  ref: paper:arxiv:2312.10003
+  note: 均研究 LLM 智能体的构建、自主决策与自我改进，属同一研究脉络

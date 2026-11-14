@@ -1,0 +1,64 @@
+id: paper:arxiv:2410.04380
+type: paper
+title: 'HALL-E: Hierarchical Neural Codec Language Model for Minute-Long Zero-Shot Text-to-Speech Synthesis'
+domain: audio_coding
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2410.04380v1
+  url: https://arxiv.org/abs/2410.04380
+  pdf_url: https://arxiv.org/pdf/2410.04380v1
+  venue: arXiv preprint
+time:
+  published: '2024-10-06'
+  collected: '2026-11-14'
+entities:
+- ref: concept:NeuralAudioCodec
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: MReQ后训练框架可将预训练神经音频编解码模型的帧率最低降至8Hz
+  confidence: reported
+  metrics:
+  - name: 帧率
+    value: 8 Hz
+    scope: 对VALL-E应用MReQ后训练，多分辨率重量化后
+  evidence: abstract（初筛，未读全文）
+- statement: HALL-E可在单次自回归推理中稳定合成分钟级（最长180秒）零样本文本到语音
+  confidence: reported
+  metrics:
+  - name: 合成时长上限
+    value: 180 s
+    scope: MinutesSpeech评测范围3s–180s，VALL-E后训练设置
+  evidence: abstract（初筛，未读全文）
+- statement: 发布MinutesSpeech基准数据集用于长时语音合成训练与评测
+  confidence: reported
+  metrics:
+  - name: 数据规模
+    value: 40k hours
+    scope: 过滤后语音数据，覆盖3s至180s片段
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出MReQ后训练重量化框架与HALL-E模型，将神经音频编解码帧率降至8Hz，实现单次推理合成分钟级语音。
+  abstract_zh: 针对基于LLM的TTS模型因神经音频编解码(NAC)高帧率导致音频token序列过长、难以自回归生成长时语音的问题，论文提出两项后训练方法。其一是多分辨率重量化(MReQ)框架，通过师生蒸馏引入多分辨率残差向量量化(MRVQ)模块，分层重组预训练NAC的离散音频token以降低帧率；其二是HALL-E模型，利用MRVQ子模块从预训练LLM-TTS继续训练以预测分层token。作者还发布40k小时的MinutesSpeech基准数据集，覆盖3秒至180秒的语音合成训练与评测。实验将MReQ/HALL-E应用于VALL-E，帧率最低降至8Hz，实现单次推理稳定合成分钟级语音。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 基于神经音频编解码与LLM的TTS长时语音合成工作，属音频/语音编码域而非核心视频编码域，按规则给summary_only
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: HALL-E：面向分钟级零样本文本到语音合成的分层神经编解码语言模型
+relations:
+- type: same_topic
+  ref: paper:arxiv:2409.12117
+  note: 同为面向语音LLM的低帧率语音编解码器方向，均以降低音频token帧率为目标
+- type: same_topic
+  ref: paper:arxiv:2107.03312
+  note: 同为基于RVQ的端到端神经音频编解码路线
+- type: same_topic
+  ref: paper:arxiv:2207.03067
+  note: 同属通过分层/跨尺度向量量化实现可扩展神经语音编码

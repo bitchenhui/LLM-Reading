@@ -1,0 +1,72 @@
+id: paper:arxiv:2506.06923
+type: paper
+title: Boosting LLM Reasoning via Spontaneous Self-Correction
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2506.06923v1
+  url: https://arxiv.org/abs/2506.06923
+  pdf_url: https://arxiv.org/pdf/2506.06923v1
+  venue: arXiv preprint
+time:
+  published: '2025-06-07'
+  collected: '2026-11-14'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:SelfImprovement
+  role: uses
+claims:
+- statement: SPOC使LLM在单次推理过程中交替生成解答与验证，并根据验证结果动态终止生成，从而有效扩展推理时算力，区别于依赖额外提示的事后修正方法。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: SPOC显著提升Llama-3.1-8B和70B Instruct在数学推理基准上的准确率。
+  confidence: reported
+  metrics:
+  - name: MATH500准确率增益
+    value: 8.8%
+    scope: Llama-3.1-8B Instruct，SPOC vs 基线
+  - name: MATH500准确率增益
+    value: 11.6%
+    scope: Llama-3.1-70B Instruct，SPOC vs 基线
+  - name: AMC23准确率增益
+    value: 10.0%
+    scope: Llama-3.1-8B Instruct，SPOC vs 基线
+  - name: AMC23准确率增益
+    value: 20.0%
+    scope: Llama-3.1-70B Instruct，SPOC vs 基线
+  - name: AIME24准确率增益
+    value: 3.3%
+    scope: Llama-3.1-8B Instruct，SPOC vs 基线
+  - name: AIME24准确率增益
+    value: 6.7%
+    scope: Llama-3.1-70B Instruct，SPOC vs 基线
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: SPOC让LLM在单次推理中交替生成解答与验证并动态终止，实现自发自我纠错，显著提升数学推理准确率。
+  abstract_zh: 现有LLM自我纠错方法多为事后独立修正，依赖额外提示与系统设计。本文提出SPOC，使模型在单次推理中交替生成解答与验证，并根据验证结果动态终止生成，从而有效扩展推理时算力。方法采用多智能体视角，为同一模型赋予解答提议者与验证者双重角色，先用简单有效的合成数据微调赋予自验证与协作能力，再通过在线强化学习进一步提升解答与验证精度。在数学推理基准上，SPOC使Llama-3.1-8B与70B
+    Instruct在MATH500、AMC23、AIME24上分别取得显著增益。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: LLM自发自我纠错与推理时算力扩展的自我改进工作，属self_improvement域而非音视频核心域，按基准给初筛摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 通过自发自我纠正提升大语言模型推理能力
+relations:
+- type: same_topic
+  ref: paper:arxiv:2408.03314
+  note: 同属推理时算力扩展（test-time compute scaling）方向，SPOC通过动态终止生成实现算力自适应分配
+- type: same_topic
+  ref: paper:arxiv:2404.12253
+  note: 同为LLM自提升/自我批评-修正循环，SPOC强调单次推理内的自发自纠错
+- type: same_topic
+  ref: paper:arxiv:2210.11610
+  note: LLM自我提升的基础性工作，SPOC是其自我纠错分支的后续演进
+- type: same_topic
+  ref: paper:arxiv:2502.02508
+  note: 均通过强化学习训练具备自我验证/自纠错能力的推理模型

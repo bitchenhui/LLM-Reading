@@ -1,0 +1,55 @@
+id: paper:arxiv:2405.14452
+type: paper
+title: 'JointRF: End-to-End Joint Optimization for Dynamic Neural Radiance Field Representation and Compression'
+domain: immersive_media
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2405.14452v2
+  url: https://arxiv.org/abs/2405.14452
+  pdf_url: https://arxiv.org/pdf/2405.14452v2
+  venue: arXiv preprint
+time:
+  published: '2024-05-23'
+  collected: '2026-11-14'
+entities:
+- ref: concept:NeRF
+  role: subject
+- ref: concept:FeatureGrid
+  role: uses
+claims:
+- statement: JointRF首次（据文所述）将动态NeRF表示与压缩子网络进行端到端联合训练，在多个数据集上压缩性能优于先前方法。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 采用紧凑残差特征网格与系数特征网格的组合表示动态NeRF，可在处理大运动的同时降低时间冗余。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 引入顺序特征压缩子网络以进一步降低表示的时空冗余。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出JointRF端到端联合优化动态NeRF表示与压缩，显著提升体视频压缩效率与质量。
+  abstract_zh: 针对动态长序列辐射场表示数据量巨大、难以渲染的问题，提出JointRF——动态NeRF表示与压缩的端到端联合优化方案。方法采用紧凑残差特征网格与系数特征网格表示动态NeRF，在不牺牲质量的前提下处理大运动并降低时间冗余。同时引入顺序特征压缩子网络进一步消除时空冗余，并将表示与压缩子网络端到端联合训练。大量实验表明JointRF在多个数据集上取得优于先前方法的压缩性能。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 动态NeRF体视频表示与压缩属于沉浸式媒体核心工作，非编码核心域故仅收录摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: JointRF：动态神经辐射场表示与压缩的端到端联合优化
+relations:
+- type: same_topic
+  ref: paper:arxiv:2202.06088
+  note: 同为神经体视频（NeRF）表示与压缩方向
+- type: same_topic
+  ref: paper:arxiv:2411.05322
+  note: 同为NeRF体视频压缩，均做率-失真优化
+- type: same_topic
+  ref: paper:arxiv:2412.11362
+  note: 同为可变速率NeRF体视频压缩工作
+- type: same_topic
+  ref: paper:arxiv:2409.07414
+  note: 同为神经视频表示压缩（INR编码）路线

@@ -1,0 +1,62 @@
+id: paper:arxiv:2504.00613
+type: paper
+title: LLM-Guided Search for Deletion-Correcting Codes
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2504.00613v2
+  url: https://arxiv.org/abs/2504.00613
+  pdf_url: https://arxiv.org/pdf/2504.00613v2
+  venue: arXiv preprint
+time:
+  published: '2025-04-01'
+  collected: '2026-11-14'
+entities:
+- ref: concept:FunSearch
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: 单删除情形下，搜索发现的函数被证明可构造猜想最优的 Varshamov–Tenengolts 码。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 多删除与四进制编辑码情形下，发现的构造函数优于已有显式构造、搜索式构造与神经构造，但仍是经验启发式，无新理论洞见。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 对该研究问题，算力分配上采样更多函数优于对每个函数使用更长推理链。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 进化过程中让自然语言描述与代码共同进化会损害搜索质量。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 提出在进化中对逻辑相同的函数去重，该方法对维持搜索多样性至关重要。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 当前公式化下单个函数的评估代价随码长指数增长，方法目前局限于短码。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 将 FunSearch 式 LLM 进化搜索用于删除纠错码设计，单删除情形下证明可构造最优 VT 码。
+  abstract_zh: 该工作将 FunSearch（LLM 引导的进化搜索）改造用于发现短码长下删除纠错码的构造函数。针对单删除情形，搜索找到一个函数，作者证明其可构造猜想最优的 Varshamov–Tenengolts（VT）码。在多删除与四进制编辑码情形下，发现的函数优于已有显式构造、搜索式构造与神经构造，但仍属经验启发式，未带来新理论洞见。作者还研究了
+    LLM 进化搜索的设计选择：算力用于采样更多函数比拉长单函数推理更划算，代码与自然语言描述共同进化会损害搜索质量，而进化中去除逻辑重复函数对保持搜索多样性至关重要。当前公式化下函数评估代价随码长指数增长，方法目前局限于短码。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 属 FunSearch 式 LLM 进化搜索（自我改进域）在纠错码设计上的应用与搜索方法论研究，非音视频核心技术，按非核心域仅初筛。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: LLM 引导搜索发现删除纠错码
+relations:
+- type: same_topic
+  ref: paper:arxiv:2406.04824
+  note: 同属 FunSearch 方法的领域应用（FunBO 用 FunSearch 发现贝叶斯优化采集函数）
+- type: same_topic
+  ref: paper:arxiv:2603.02787
+  note: 同讨论 LLM 自动算法设计中的代码相似性/去重问题，与本文去重结论相关
+- type: same_topic
+  ref: paper:arxiv:2412.14995
+  note: 同属基于 LLM 的启发式进化搜索方法研究（HSEvo）

@@ -1,0 +1,52 @@
+id: paper:arxiv:2411.00750
+type: paper
+title: Mitigating Tail Narrowing in LLM Self-Improvement via Socratic-Guided Sampling
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2411.00750v2
+  url: https://arxiv.org/abs/2411.00750
+  pdf_url: https://arxiv.org/pdf/2411.00750v2
+  venue: arXiv preprint
+time:
+  published: '2024-11-01'
+  collected: '2026-11-14'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: subject
+claims:
+- statement: LLM自我改进过程中存在采样失衡：模型在简单问题上过采样、在尚未掌握的难题上欠采样，随迭代加剧形成长尾分布，难题解几乎消失，限制了自我改进的性能增益。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 暴力（brute-force）采样可平衡难题样本分布，但会显著增加计算成本。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: GSI（Guided Self-Improvement）利用苏格拉底式引导信号辅助LLM推理复杂查询，降低探索努力与计算开销。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在四个模型、多样数学任务上的实验表明，GSI在性能与效率之间取得平衡，且在held-out任务上依然有效。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出GSI策略：用苏格拉底式引导信号辅助难题采样，缓解LLM自我改进的长尾失衡并降低计算开销。
+  abstract_zh: 自我改进方法让大语言模型自行生成解题过程并在过滤后的高质量推理数据上迭代训练，但性能很快进入平台期。作者深入分析发现，模型倾向于对简单问题过采样、对尚未掌握的难题欠采样，且随迭代推进失衡不断加剧，导致难题的解几乎消失，形成长尾分布。暴力采样虽可平衡分布，但会显著推高计算成本。论文提出引导式自我改进（GSI）策略，利用苏格拉底式引导信号辅助LLM推理复杂问题，减少探索开销。在四个模型与多样数学任务上的实验显示，GSI在性能与效率之间取得平衡，并在held-out任务上同样有效。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 论文研究LLM自我改进中的采样失衡（长尾收窄）并提出引导采样策略，属自我改进AI域，按收录基准给summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 通过苏格拉底式引导采样缓解大语言模型自我改进中的尾部收窄
+relations:
+- type: same_topic
+  ref: paper:arxiv:2609.34975
+  note: 'Teach to Learn: Hint Annealing for Self-improving LLM Reasoning——同以提示/引导信号缓解自我改进中的难题欠采样问题'
+- type: same_topic
+  ref: paper:arxiv:2210.11610
+  note: Large Language Models Can Self-Improve——LLM自我改进的基础范式，本文针对其迭代后性能平台期提出改进

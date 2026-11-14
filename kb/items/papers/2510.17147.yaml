@@ -1,0 +1,55 @@
+id: paper:arxiv:2510.17147
+type: paper
+title: 'Mamba4Net: Distilled Hybrid Mamba Large Language Models For Networking'
+domain: streaming_delivery
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2510.17147v1
+  url: https://arxiv.org/abs/2510.17147
+  pdf_url: https://arxiv.org/pdf/2510.17147v1
+  venue: arXiv preprint
+time:
+  published: '2025-10-20'
+  collected: '2026-11-14'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:ABR
+  role: evaluated_on
+claims:
+- statement: 相比直接应用基于Transformer的LLM方案，Mamba4Net吞吐量提升3.96倍
+  confidence: reported
+  metrics:
+  - name: 吞吐量
+    value: 3.96×
+    scope: 相对先前基于Transformer LLM的网络方案
+  evidence: abstract（初筛，未读全文）
+- statement: Mamba4Net存储占用仅为先前LLM方案的5.48%
+  confidence: reported
+  metrics:
+  - name: 存储占用
+    value: 5.48%
+    scope: 相对先前LLM-based网络方案
+  evidence: abstract（初筛，未读全文）
+- statement: 在视点预测、ABR流媒体和集群作业调度三类任务上优于不使用LLM的现有方法
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 跨架构蒸馏将Transformer LLM网络知识迁移至线性复杂度Mamba学生模型，在ABR等任务上吞吐提升3.96倍、存储仅5.48%。
+  abstract_zh: 论文提出Mamba4Net，一种跨架构知识蒸馏框架，借鉴DeepSeek-R1在蒸馏范式中的表现，将基于Transformer的大语言模型中的网络领域知识迁移到具有线性时间复杂度的Mamba架构学生模型。该设计相较Transformer的二次复杂度显著提升计算效率，更小的模型规模进一步降低资源开销。在视点预测、自适应码率（ABR）流媒体和集群作业调度三类网络任务上评估，相比不使用LLM的现有方法取得更优任务性能；相比直接应用Transformer
+    LLM的方案，吞吐量提高3.96倍，存储占用仅为5.48%。源代码已开源。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 属网络LLM效率蒸馏框架，视点预测与ABR流媒体为其评估任务，与流媒体传输相关但非编解码核心，按非核心域给summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: Mamba4Net：面向网络的蒸馏式混合 Mamba 大语言模型
+relations:
+- type: same_topic
+  ref: paper:arxiv:2402.02338
+  note: 同为将LLM适配到网络任务（NetLLM），本文效率与性能对比锚点即此类Transformer LLM网络方案

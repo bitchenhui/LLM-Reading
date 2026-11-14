@@ -1,0 +1,47 @@
+id: paper:arxiv:2503.11061
+type: paper
+title: Generative Modeling for Mathematical Discovery
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2503.11061v2
+  url: https://arxiv.org/abs/2503.11061
+  pdf_url: https://arxiv.org/pdf/2503.11061v2
+  venue: arXiv preprint
+time:
+  published: '2025-03-14'
+  collected: '2026-11-14'
+entities:
+- ref: concept:FunSearch
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: 提出一个面向数学家的 FunSearch 新实现，应用新问题仅需修改一小段 Python 代码并选择第三方 LLM，无需机器学习专长或高性能计算资源。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 该实现已在三个不同的数学问题上完成基准测试，产出可为后续新问题应用提供参考的指标。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 实验表明 FunSearch 在多种组合与数论设定下能够成功学习，且某些情境下学到的原则可泛化到原训练问题之外。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 推出面向数学家的 FunSearch 易用实现，无需机器学习专长与高性能计算，在组合与数论问题上验证其学习能力。
+  abstract_zh: 作者提出一个新的 LLM 驱动遗传算法 FunSearch 实现，目标是生成数学家感兴趣的例子，此前该方法在极值组合问题上已有成功案例。该实现面向实际使用的数学工作者设计，不要求机器学习专业知识或高性能计算资源，将其应用到新问题只需修改一小段
+    Python 代码并从多个第三方供应商中选择 LLM。作者在三个不同问题上对实现做了基准测试，获得可为新问题应用提供参考的指标。结果表明 FunSearch 在多种组合与数论设定下均能成功学习，某些情境下还能学到可泛化到原训练问题之外的原则。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 论文是对 FunSearch（LLM 驱动的遗传式程序搜索）面向数学发现的新实现，属自我改进 AI 域，与音视频技术无关。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 面向数学发现的生成式建模
+relations:
+- type: same_topic
+  ref: paper:arxiv:2406.04824
+  note: FunBO 同样以 FunSearch 为基础框架进行数学/优化目标的自动发现，属同一研究线

@@ -1,0 +1,66 @@
+id: paper:arxiv:2506.07468
+type: paper
+title: Chasing Moving Targets with Online Self-Play Reinforcement Learning for Safer Language Models
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2506.07468v4
+  url: https://arxiv.org/abs/2506.07468
+  pdf_url: https://arxiv.org/pdf/2506.07468v4
+  venue: arXiv preprint
+time:
+  published: '2025-06-09'
+  collected: '2026-11-14'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:SelfImprovement
+  role: subject
+claims:
+- statement: Self-RedTeam是首个完全在线的自博弈MARL安全对齐算法，单一策略同时扮演攻防双方并持续共演化，区别于静态模型的被动补丁式对齐。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 基于二人零和博弈论建立理论安全保证：若博弈收敛到纳什均衡，防御者可对任意对抗输入产生安全响应。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: Self-RedTeam发现的对抗攻击更多样，攻击多样性显著提升。
+  confidence: reported
+  metrics:
+  - name: 攻击多样性提升(SBERT)
+    value: +17.80%
+    scope: 相对基线的攻击多样性（SBERT嵌入度量）
+  evidence: abstract（初筛，未读全文）
+- statement: Self-RedTeam在14个安全基准上提升RLHF训练模型的安全性，最大提升达95%。
+  confidence: reported
+  metrics:
+  - name: 安全性提升
+    value: 95%
+    scope: 14个安全基准上RLHF训练模型的最大提升（up to）
+  evidence: abstract（初筛，未读全文）
+- statement: 方法在Llama与Qwen系列共5个模型上均有效，具备跨模型家族泛化性。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出Self-RedTeam，首个全在线自博弈MARL算法，攻防角色持续共演化实现LLM安全自改进
+  abstract_zh: 传统LLM安全对齐是被动的割裂循环：攻击者攻破静态模型后防御者再修补漏洞，导致攻击者过拟合旧漏洞、防御者长期滞后。本文提出Self-RedTeam，首个完全在线的自博弈多智能体强化学习算法，由单一策略同时扮演攻击者与防御者并持续共演化，两角色均使用隐藏思维链做策略规划，由奖励模型裁决攻防结果。方法基于二人零和博弈论，给出理论保证：若博弈收敛到纳什均衡，防御者可对任意对抗输入产生安全响应。实验覆盖Llama与Qwen系列共5个模型，攻击多样性提升17.80%（SBERT），并在14个基准上将RLHF训练模型的安全性最多提升95%。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: LLM安全对齐的在线自博弈MARL自改进（Self-RedTeam）属自我改进AI域，非核心编码域，按规则给summary_only
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 追逐移动目标：基于在线自博弈强化学习的更安全语言模型
+relations:
+- type: same_topic
+  ref: paper:arxiv:2608.30207
+  note: '同属自改进红队/LLM安全自提升方向（SIR: Self-improving Red-teaming）'
+- type: same_topic
+  ref: paper:arxiv:2610.11433
+  note: 同属基于多智能体强化学习的LLM自演化（SynCo）
+- type: same_topic
+  ref: paper:arxiv:2407.19594
+  note: 同属自改进安全/对齐闭环，均以自评/裁决机制驱动迭代

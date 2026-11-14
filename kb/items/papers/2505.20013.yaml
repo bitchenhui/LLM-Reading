@@ -1,0 +1,51 @@
+id: paper:arxiv:2505.20013
+type: paper
+title: 'WebCoT: Enhancing Web Agent Reasoning by Reconstructing Chain-of-Thought in Reflection, Branching,
+  and Rollback'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2505.20013v2
+  url: https://arxiv.org/abs/2505.20013
+  pdf_url: https://arxiv.org/pdf/2505.20013v2
+  venue: arXiv preprint
+time:
+  published: '2025-05-26'
+  collected: '2026-11-14'
+entities:
+- ref: concept:LLM
+  role: uses
+- ref: concept:SelfImprovement
+  role: subject
+claims:
+- statement: 论文识别出 Web 智能体的三项关键推理技能：反思与前瞻（reflection & lookahead）、分支（branching）、回滚（rollback）。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 将智能体推理时算法重构为思维链轨迹数据并经简单微调蒸馏入骨干 LLM，即可实质性提升其表现。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 该方法在 OpenWebVoyager 自改进基准上验证，并在 WebVoyager、Mind2web-live、SimpleQA（网页搜索）等多个基准上取得显著提升。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 将 Web 智能体的反思/前瞻、分支、回滚推理重构为思维链数据并微调 LLM，多基准显著提升。
+  abstract_zh: 论文指出基于 LLM 的 Web 智能体在不确定、动态的网页环境中推理能力有限，归纳出反思与前瞻（reflection & lookahead）、分支（branching）、回滚（rollback）三项关键推理技能。作者将智能体推理时使用的推理算法重构为思维链（CoT）理据，构建出体现这些能力的轨迹数据。通过简单微调将显著推理模式蒸馏进骨干
+    LLM，并在自改进基准 OpenWebVoyager 上进行实验验证。方法在 WebVoyager、Mind2web-live、SimpleQA（网页搜索）等多个基准上带来显著性能提升。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 属 LLM 智能体自改进主题（在自改进基准 OpenWebVoyager 上做轨迹重构与微调蒸馏），但与音视频技术无关，按规则仅收录 summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: WebCoT：通过重构反思、分支与回滚的思维链增强 Web 智能体推理
+relations:
+- type: same_topic
+  ref: paper:arxiv:2504.21024
+  note: 同为 Web 智能体自改进方向，WebEvolver 提出/关联 OpenWebVoyager 自改进基准，与本文实验平台直接相关
+- type: same_topic
+  ref: paper:arxiv:2312.10003
+  note: 同为面向多步推理 LLM 智能体的自改进研究，均通过轨迹/数据迭代提升智能体能力

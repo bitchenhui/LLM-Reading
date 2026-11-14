@@ -1,0 +1,46 @@
+id: paper:arxiv:2404.04286
+type: paper
+title: 'Bias Amplification in Language Model Evolution: An Iterated Learning Perspective'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2404.04286v2
+  url: https://arxiv.org/abs/2404.04286
+  pdf_url: https://arxiv.org/pdf/2404.04286v2
+  venue: arXiv preprint
+time:
+  published: '2024-04-04'
+  collected: '2026-11-14'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:SelfImprovement
+  role: subject
+claims:
+- statement: LLM多轮自改进与多智能体交互可类比人类文化演化，细微偏好在迭代学习过程中被逐步放大
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 贝叶斯迭代学习框架对智能体行为的关键预测在多种LLM上获得实验验证，可用于预测和引导LLM演化方向
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 借认知科学的贝叶斯迭代学习框架，解释并预测LLM自改进迭代中细微偏好的放大。
+  abstract_zh: 随着多轮自改进方法（LLM生成新数据训练后续模型）与多智能体LLM系统的普及，LLM将进入类似演化的迭代过程。作者类比人类文化演化研究，引入贝叶斯迭代学习（IL）框架来解释LLM的迭代行为。该框架刻画了智能体行为的若干关键特性，包括细微偏好在迭代中逐步被放大的预测。作者用多种LLM进行了实验验证，预测与实验结果一致。该理论框架可用于更有效地预测并引导LLM朝期望方向演化。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 研究LLM迭代自改进与多智能体演化中偏见放大机制的理论框架论文，属自我改进AI主题，非核心编码域故不给deep_read
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 语言模型演化中的偏见放大：一个迭代学习视角
+relations:
+- type: same_topic
+  ref: paper:arxiv:2210.11610
+  note: 同属LLM自改进（self-improvement）主题，本文为其迭代演化行为提供理论解释
+- type: same_topic
+  ref: paper:arxiv:2607.25886
+  note: 均关注递归自改进的数据与迭代训练动力学研究

@@ -1,0 +1,57 @@
+id: paper:arxiv:2410.05434
+type: paper
+title: 'Better than Your Teacher: LLM Agents that learn from Privileged AI Feedback'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2410.05434v1
+  url: https://arxiv.org/abs/2410.05434
+  pdf_url: https://arxiv.org/pdf/2410.05434v1
+  venue: arXiv preprint
+time:
+  published: '2024-10-07'
+  collected: '2026-11-14'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: LEAP在文本游戏ALFWorld、网页导航WebShop和交互式编码Intercode Bash三个决策基准上均优于行为克隆与ReAct基线。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: LEAP使弱学生模型Llama3-8B在任务表现上超过其强教师模型GPT-4o，实现'青出于蓝'。
+  confidence: reported
+  metrics:
+  - name: 学生vs教师性能对比
+    value: Llama3-8B > GPT-4o
+    scope: LEAP训练后的Llama3-8B学生与GPT-4o教师在ALFWorld/WebShop/Intercode基准上的对比
+  evidence: abstract（初筛，未读全文）
+- statement: 弱模型可利用特权版自身作为教师完成自我改进，且理论分析表明成功关键在于特权信息与学生可实现性的平衡。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出LEAP迭代微调框架，用训练期特权状态的AI专家反馈持续改进LLM智能体，弱学生可超越强教师。
+  abstract_zh: 论文提出LEAP，一个利用AI专家教师反馈对LLM智能体进行迭代微调、实现持续自我改进的框架。其核心洞见是为专家配备'特权状态'——训练时可见但测试时隐藏的信息，使弱专家也能提供精确指导。在ALFWorld、WebShop、Intercode
+    Bash三个决策基准上的实验显示：LEAP优于行为克隆与ReAct基线；使弱学生模型Llama3-8B超越强教师GPT-4o；弱模型还可借助特权版自身实现自改进。作者并给出理论分析，证明LEAP的成功取决于特权信息量与学生模型可实现性之间的平衡，并经实验验证。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: LLM智能体自改进核心论文：提出特权AI反馈驱动的迭代微调框架LEAP，属自我改进AI域，按基准仅收录摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 青出于蓝：借助特权AI反馈学习的LLM智能体
+relations:
+- type: same_topic
+  ref: paper:arxiv:2312.10003
+  note: 同为多步推理LLM智能体自改进，且共享ReAct基线对比
+- type: same_topic
+  ref: paper:arxiv:2210.11610
+  note: LLM自我改进主题的早期代表工作
+- type: same_topic
+  ref: paper:arxiv:2309.00267
+  note: 同属AI反馈（RLAIF）驱动的模型改进路线

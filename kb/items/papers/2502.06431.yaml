@@ -1,0 +1,56 @@
+id: paper:arxiv:2502.06431
+type: paper
+title: 'FCVSR: A Frequency-aware Method for Compressed Video Super-Resolution'
+domain: processing_enhancement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2502.06431v2
+  url: https://arxiv.org/abs/2502.06431
+  pdf_url: https://arxiv.org/pdf/2502.06431v2
+  venue: arXiv preprint
+time:
+  published: '2025-02-10'
+  collected: '2026-11-14'
+entities:
+- ref: concept:SuperResolution
+  role: subject
+- ref: metric:PSNR
+  role: measured_by
+claims:
+- statement: FCVSR由运动引导自适应对齐（MGAA）网络与多频特征精化（MFFR）模块构成，通过空间区分频率子带并捕获时域频率动态改进压缩视频超分效果
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在三个公开压缩视频超分数据集上，FCVSR的PSNR较次优模型最多提升0.14dB，且复杂度具竞争力
+  confidence: reported
+  metrics:
+  - name: PSNR增益
+    value: 0.14dB
+    scope: 相对次优模型的最大提升，三个公开压缩视频超分数据集
+  evidence: abstract（初筛，未读全文）
+- statement: 提出的频率感知对比损失用于训练FCVSR，可帮助重建更精细的空间细节
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出频率感知的压缩视频超分模型FCVSR，含运动引导对齐与多频特征精化模块，PSNR较次优最多提升0.14dB
+  abstract_zh: 压缩视频超分辨率旨在从低分辨率压缩视频重建高分辨率视频，现有频域方法未在空间上区分各频率子带，也未捕获时域频率动态，结果次优。本文提出深度频率压缩视频超分模型FCVSR，由运动引导自适应对齐（MGAA）网络与多频特征精化（MFFR）模块组成，并引入频率感知对比损失以重建更精细的空间细节。在三个公开压缩视频超分数据集上的实验表明，其超分性能优于现有方法（PSNR较次优模型最多提升0.14dB），并在复杂度上具竞争力。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 压缩视频超分辨率属编码链路后处理增强方向，非核心编码域，按规则仅摘要收录
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: FCVSR：一种面向压缩视频超分辨率的频率感知方法
+relations:
+- type: same_topic
+  ref: paper:arxiv:2210.08229
+  note: 同为压缩视频超分辨率方法，可能为对比基线之一
+- type: same_topic
+  ref: paper:arxiv:2106.08147
+  note: 同为压缩视频超分辨率方向的工作
+- type: same_topic
+  ref: paper:arxiv:2104.13371
+  note: 视频超分辨率对齐与传播机制演进路线（BasicVSR++），FCVSR的运动引导对齐属同一问题域

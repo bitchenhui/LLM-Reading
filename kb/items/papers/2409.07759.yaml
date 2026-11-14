@@ -1,0 +1,59 @@
+id: paper:arxiv:2409.07759
+type: paper
+title: 'SwinGS: Sliding Window Gaussian Splatting for Volumetric Video Streaming with Arbitrary Length'
+domain: immersive_media
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2409.07759v3
+  url: https://arxiv.org/abs/2409.07759
+  pdf_url: https://arxiv.org/pdf/2409.07759v3
+  venue: arXiv preprint
+time:
+  published: '2024-09-12'
+  collected: '2026-11-14'
+entities:
+- ref: concept:3DGS
+  role: subject
+- ref: concept:VolumetricVideo
+  role: uses
+claims:
+- statement: SwinGS相比先前工作将体积视频流式传输成本降低83.6%。
+  confidence: reported
+  metrics:
+  - name: 传输成本降低
+    value: 83.6%
+    scope: 相对先前动态3DGS/体积视频流式方案，多数据集与场景实验
+  evidence: abstract（初筛，未读全文）
+- statement: SwinGS可将体积视频流式传输扩展至任意长度，且所需GPU资源不随长度增加。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 开发的WebGL交互查看器可在大多数现代浏览器（含智能手机与平板）上实时播放体积视频。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出SwinGS框架，以滑动窗口时空高斯+MCMC实现任意长度体积视频的实时流式训练与传输，传输成本降低83.6%。
+  abstract_zh: 针对动态3DGS模型体积过大、视频时长受限与内容漂移导致流式性差的问题，提出SwinGS，用于体积视频的实时训练、传输与渲染。该方法将时空高斯与马尔可夫链蒙特卡洛（MCMC）结合以适配跨帧的多样3D场景，并用滑动窗口以累积方式捕获每帧的高斯快照。作者实现原型系统并在多数据集与场景上验证流式能力，还开发了基于WebGL的交互查看器，可在含手机与平板在内的现代浏览器上实时播放体积视频。实验表明，相比先前工作传输成本降低83.6%，且可扩展至任意长度体积视频而无需增加GPU资源。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 面向体积视频流式传输的3DGS系统工作（非视频编码核心域），按规则最高仅给 summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: SwinGS：面向任意长度体积视频流式传输的滑动窗口高斯泼溅
+relations:
+- type: same_topic
+  ref: paper:arxiv:2408.14823
+  note: 同属3DGS自适应流式传输方向（LapisGS分层渐进3DGS流式）
+- type: same_topic
+  ref: paper:arxiv:2507.14454
+  note: 同为3DGS视频流式传输系统，涉及切片与码率自适应
+- type: same_topic
+  ref: paper:arxiv:2412.04469
+  note: 同为动态高斯自由视点视频流式编码（QUEEN量化高效编码）
+- type: same_topic
+  ref: paper:arxiv:2309.05026
+  note: 同属体积视频自适应流式传输研究线

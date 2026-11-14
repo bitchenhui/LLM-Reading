@@ -1,0 +1,49 @@
+id: paper:arxiv:2410.04444
+type: paper
+title: 'Gödel Agent: A Self-Referential Agent Framework for Recursive Self-Improvement'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2410.04444v4
+  url: https://arxiv.org/abs/2410.04444
+  pdf_url: https://arxiv.org/pdf/2410.04444v4
+  venue: arXiv preprint
+time:
+  published: '2024-10-06'
+  collected: '2026-11-14'
+entities:
+- ref: concept:RSI
+  role: subject
+- ref: concept:SelfImprovement
+  role: subject
+claims:
+- statement: Gödel Agent 可通过递归修改自身逻辑与行为实现持续自我改进，不依赖预定义流程或固定优化算法。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在数学推理与复杂智能体任务上，Gödel Agent 在性能、效率和泛化性方面超越人工设计的智能体。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 现有基于固定流水线或预定义元学习框架的智能体系统受人为组件限制，无法搜索完整智能体设计空间，可能错失全局最优设计。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 受哥德尔机器启发的自指框架，让LLM智能体递归修改自身逻辑，实现持续自我改进。
+  abstract_zh: 论文提出 Gödel Agent，一个受哥德尔机器启发的自进化智能体框架。不同于固定流水线或预定义元学习框架，它不依赖人为设计的组件与固定优化算法，仅凭高层目标提示，让LLM动态修改自身逻辑与行为，从而在完整的智能体设计空间中递归自我改进。在数学推理与复杂智能体任务上的实验显示，该方法可持续自我提升，在性能、效率与泛化性上超越人工精心设计的智能体。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: LLM智能体递归自我改进的自指框架，属自我改进AI核心议题而非音视频技术，按基准仅给初筛摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 哥德尔智能体：一种面向递归自我改进的自指智能体框架
+relations:
+- type: same_topic
+  ref: paper:arxiv:2310.02304
+  note: 同为递归自我改进（RSI）方向，STOP 通过递归代码生成自我改进
+- type: same_topic
+  ref: paper:arxiv:2210.11610
+  note: LLM 自我改进的基础性工作，与本文 RSI 主题同域

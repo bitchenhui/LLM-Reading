@@ -1,0 +1,72 @@
+id: paper:arxiv:2504.18116
+type: paper
+title: 'Think, Prune, Train, Improve: Scaling Reasoning without Scaling Models'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2504.18116v1
+  url: https://arxiv.org/abs/2504.18116
+  pdf_url: https://arxiv.org/pdf/2504.18116v1
+  venue: arXiv preprint
+time:
+  published: '2025-04-25'
+  collected: '2026-11-14'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:SelfImprovement
+  role: uses
+claims:
+- statement: Think, Prune, Train 迭代微调显著提升小模型推理能力：Gemma2-2B 在 GSM8K 上 Pass@1 从 41.9% 升至 57.6%
+  confidence: reported
+  metrics:
+  - name: Pass@1
+    value: 57.6%
+    scope: GSM8K，Gemma2-2B 经 Think-Prune-Train 训练后（基线 41.9%）
+  - name: Pass@1 基线
+    value: 41.9%
+    scope: GSM8K，Gemma2-2B 未训练基线
+  evidence: abstract（初筛，未读全文）
+- statement: Gemma2-9B 经训练达到 82% Pass@1，可媲美约 8 倍大的 LLaMA-3.1-70B
+  confidence: reported
+  metrics:
+  - name: Pass@1
+    value: 82%
+    scope: GSM8K，Gemma2-9B，对比锚点 LLaMA-3.1-70B
+  evidence: abstract（初筛，未读全文）
+- statement: LLaMA-3.1-70B 经自我改进达到 91% Pass@1，超过 GPT-4o
+  confidence: reported
+  metrics:
+  - name: Pass@1
+    value: 91%
+    scope: GSM8K，LLaMA-3.1-70B，对比锚点 GPT-4o
+  evidence: abstract（初筛，未读全文）
+- statement: 真值剪枝（ground-truth pruning）是保证自生成训练数据质量、支撑自我改进闭环的关键机制
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出 Think-Prune-Train 框架，用带真值剪枝的自生成推理轨迹迭代微调，让小模型推理媲美大模型。
+  abstract_zh: 论文研究影响合成数据微调效果的因素（模型规模、合成数据量、剪枝策略、微调轮数），探索 LLM 自我改进的成立条件。提出 Think, Prune, Train 可扩展框架：模型在自身推理轨迹上迭代微调，并以真值答案剪枝保证训练数据质量。在
+    GSM8K 上，Gemma2-2B 的 Pass@1 从 41.9% 提升至 57.6%；Gemma2-9B 达到 82%，与 LLaMA-3.1-70B 持平；LLaMA-3.1-70B 达到
+    91%，甚至超过 GPT-4o，验证了自生成推理与系统性数据选择的有效性。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: LLM 自我改进核心工作（自生成推理轨迹+真值剪枝迭代微调），非音视频领域，按规则仅初筛摘要、不给 deep_read。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 思考、剪枝、训练、改进：不扩大模型规模而扩展推理能力
+relations:
+- type: same_topic
+  ref: paper:arxiv:2210.11610
+  note: 同属 LLM 自我改进：均以模型自生成数据迭代训练提升自身能力
+- type: same_topic
+  ref: paper:arxiv:2609.34975
+  note: 同属 LLM 推理自我改进：均通过迭代训练策略提升数学推理表现
+- type: same_topic
+  ref: paper:arxiv:2502.13441
+  note: 均考察自我改进/合成数据自举的成立条件与边界

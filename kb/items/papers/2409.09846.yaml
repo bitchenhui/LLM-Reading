@@ -1,0 +1,60 @@
+id: paper:arxiv:2409.09846
+type: paper
+title: A Global Perspective on the Past, Present, and Future of Video Streaming over Starlink
+domain: streaming_delivery
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2409.09846v1
+  url: https://arxiv.org/abs/2409.09846
+  pdf_url: https://arxiv.org/pdf/2409.09846v1
+  venue: arXiv preprint
+time:
+  published: '2024-09-15'
+  collected: '2026-11-14'
+entities:
+- ref: concept:ABR
+  role: subject
+- ref: concept:QoE
+  role: measured_by
+claims:
+- statement: Starlink上点播视频的整体视频质量与传统网络相当，但LEO链路固有的吞吐量波动和丢包导致码率切换与重缓冲增多。
+  confidence: reported
+  metrics:
+  - name: 测量覆盖家庭数
+    value: over one million
+    scope: 全球85个国家的LEO卫星网络视频流媒体分析
+  - name: 覆盖国家数
+    value: '85'
+    scope: 全球LEO视频流媒体测量范围
+  evidence: abstract（初筛，未读全文）
+- statement: 通过仿真与真实A/B测试修改现有拥塞控制和ABR算法，结果强调流媒体与拥塞控制算法需适应快速演变的网络环境。
+  confidence: reported
+  metrics:
+  - name: A/B测试部署家庭数
+    value: over one million
+    scope: 真实线上A/B实验部署规模
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 首个对LEO卫星（Starlink）视频流媒体的全球测量：整体质量比肩传统网络，但链路波动致码率切换与卡顿增多。
+  abstract_zh: 该研究首次对低地球轨道（LEO）卫星网络上的点播视频流媒体进行全球分析，数据覆盖85个国家超过一百万家庭，凸显Starlink作为主要LEO服务商对欠服务地区的连接增强作用。研究发现Starlink上的整体视频质量与传统网络相当，但LEO链路固有的吞吐量波动与丢包导致码率切换和重缓冲明显增多。作者通过仿真以及在超过一百万家庭上部署的真实A/B测试，对现有拥塞控制和自适应码率（ABR）算法进行修改与实验。结果表明，视频流媒体与拥塞控制算法必须适应快速演变的网络环境，才能在多样且动态的网络类型上保证高质量体验。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 首个覆盖85国百万家庭的Starlink低轨卫星视频流媒体全局测量与ABR/QoE优化研究，属流媒体与传输域，按基准不给deep_read。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 星链视频流媒体的过去、现在与未来：一个全球视角
+relations:
+- type: same_topic
+  ref: paper:arxiv:2611.05832
+  note: 均研究Starlink卫星网络上的视频流媒体，可互为脉络
+- type: same_topic
+  ref: paper:arxiv:2505.21769
+  note: 同属视频流媒体传输的大规模网络测量研究
+- type: same_topic
+  ref: paper:arxiv:2603.13597
+  note: 均涉及自适应视频流媒体的码率决策（ABR/码率阶梯）优化

@@ -1,0 +1,64 @@
+id: paper:arxiv:2402.04760
+type: paper
+title: Subjective performance evaluation of bitrate allocation strategies for MPEG and JPEG Pleno point
+  cloud compression
+domain: immersive_media
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2402.04760v3
+  url: https://arxiv.org/abs/2402.04760
+  pdf_url: https://arxiv.org/pdf/2402.04760v3
+  venue: arXiv preprint
+time:
+  published: '2024-02-07'
+  collected: '2026-11-14'
+entities:
+- ref: org:MPEG
+  role: subject
+- ref: concept:IQA
+  role: measured_by
+claims:
+- statement: 该研究声称是首个将JPEG Pleno点云压缩标准与MPEG点云压缩标准进行主观性能对比的工作。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 研究基于客观指标分析为每个编解码器定义了三种码率分配策略，并在四个目标码率下生成失真点云集。
+  confidence: reported
+  metrics:
+  - name: 码率分配策略数
+    value: '3'
+    scope: 每个编解码器（MPEG与JPEG Pleno各三种）
+  - name: 目标码率档数
+    value: '4'
+    scope: 全部测试点云的压缩码率点
+  evidence: abstract（初筛，未读全文）
+- statement: 失真点云集按照两种主观质量评估协议进行主观评测，用于对比标准间感知性能并提炼最佳编码实践。
+  confidence: reported
+  metrics:
+  - name: 主观评估协议数
+    value: '2'
+    scope: 失真点云集的主观质量实验
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 通过客观指标分析码率分配策略并以两种主观评估协议，首次对比MPEG与JPEG Pleno点云压缩标准的感知性能。
+  abstract_zh: 该研究对MPEG与JPEG Pleno点云压缩标准进行了系统性性能评估，首次将JPEG Pleno标准与MPEG标准进行主观对比。作者先用客观质量指标分析不同配置参数对编解码器性能的影响，据此为每个编解码器定义三种码率分配策略，并在四个目标码率下压缩一组点云。随后按照两种主观质量评估协议对失真点云集进行主观评测，最终比较各压缩标准的性能并总结最佳编码实践。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 点云压缩属沉浸式媒体（非核心视频/图像编码域），为MPEG与JPEG Pleno点云标准的主观质量对比评估，重要但按基准仅收录初筛。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: MPEG与JPEG Pleno点云压缩码率分配策略的主观性能评估
+relations:
+- type: same_topic
+  ref: paper:arxiv:2208.02716
+  note: 同为JPEG Pleno点云编码标准相关工作，本文为其后续主观性能评估
+- type: same_topic
+  ref: paper:arxiv:2602.08613
+  note: 同为点云压缩标准（AVS vs MPEG）的概览与对比研究
+- type: same_topic
+  ref: paper:arxiv:2412.05574
+  note: 同为MPEG G-PCC点云压缩的率失真优化研究

@@ -1,0 +1,53 @@
+id: paper:arxiv:2510.01527
+type: paper
+title: 'Round-trip Reinforcement Learning: Self-Consistent Training for Better Chemical LLMs'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2510.01527v2
+  url: https://arxiv.org/abs/2510.01527
+  pdf_url: https://arxiv.org/pdf/2510.01527v2
+  venue: arXiv preprint
+time:
+  published: '2025-10-01'
+  collected: '2026-11-14'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: subject
+claims:
+- statement: 化学 LLM 普遍缺乏往返一致性（如能生成分子描述却无法从该文本重建分子结构），且模型往返一致性与主要任务性能存在强相关，可将一致性转化为直接优化目标。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: RTRL 以往返变换成功作为奖励信号训练化学 LLM，在有监督、自监督与合成数据三种数据情形下均显著超越强基线，同时提升任务性能与往返一致性。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: RTRL 的迭代变体中正向与反向映射交替互相训练形成自改进循环，数据高效，尤其适合利用化学领域常见的海量无标注数据。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出 RTRL 框架，以往返变换成功为奖励训练化学大模型，正反向映射交替互训形成自改进循环，显著提升性能与一致性。
+  abstract_zh: 化学大语言模型在反应预测、逆合成等双向任务上往往缺乏往返一致性，例如能生成分子描述文本却无法从自己生成的文本重建原分子结构，说明模型学到的是单向记忆而非灵活掌握。已有研究表明往返一致性与主要任务性能强相关，作者据此提出往返强化学习（RTRL），把往返变换是否成功作为奖励信号来训练模型提升一致性。其迭代变体让正向与反向映射交替互相训练，构成自改进循环，对化学领域常见的海量无标注数据高度数据高效。实验显示
+    RTRL 在有监督、自监督与合成数据三种情形下均显著超越强基线，同时提升性能与一致性。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: LLM 自改进领域论文（往返一致性奖励驱动的自改进循环），属被跟踪的 self_improvement 域但应用场景为计算化学，非音视频核心域，按规则仅收录摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 往返强化学习：自一致训练打造更强的化学大语言模型
+relations:
+- type: same_topic
+  ref: paper:arxiv:2210.11610
+  note: 同为 LLM 自改进（self-improvement）主题，本工作将其扩展到化学领域并以往返一致性作为自改进信号
+- type: same_topic
+  ref: paper:arxiv:2305.14483
+  note: 同为基于强化学习的 LLM 自改进方法，RTRL 以往返变换成功作为奖励与本路线同属 RL 驱动自改进
+- type: same_topic
+  ref: paper:arxiv:2505.08827
+  note: 均采用自我产生的奖励信号（自奖励/往返成功奖励）驱动 LLM 自改进，无外部标注依赖

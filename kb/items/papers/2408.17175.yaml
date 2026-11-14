@@ -1,0 +1,52 @@
+id: paper:arxiv:2408.17175
+type: paper
+title: 'Codec Does Matter: Exploring the Semantic Shortcoming of Codec for Audio Language Model'
+domain: audio_coding
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2408.17175v3
+  url: https://arxiv.org/abs/2408.17175
+  pdf_url: https://arxiv.org/pdf/2408.17175v3
+  venue: arXiv preprint
+time:
+  published: '2024-08-30'
+  collected: '2026-11-14'
+entities:
+- ref: concept:NeuralAudioCodec
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: 为音频压缩设计的声学编解码器（如EnCodec）用于音频语言模型令牌化时存在语义缺陷，导致VALL-E类模型声学令牌生成出现词跳过与词错误率升高。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: X-Codec在RVQ量化前引入预训练语义编码器特征、RVQ后增加语义重建损失，可显著降低语音合成任务的词错误率（WER）。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 语义增强的收益可从语音扩展到音乐续写与文本到音效等非语音音频生成任务，整体提升语言模型生成性能。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出X-Codec，在RVQ前注入预训练语义特征、RVQ后加语义重建损失，提升编解码器语义能力并显著降低语音合成WER。
+  abstract_zh: 现有音频语言模型普遍沿用为音频压缩设计的声学编解码器（如EnCodec）进行音频令牌化，语义保持能力不足，导致VALL-E等模型在声学令牌生成中出现词跳过、内容错误与WER升高。论文提出X-Codec：在残差向量量化（RVQ）之前引入预训练语义编码器的语义特征，并在RVQ之后增加语义重建损失，增强编解码器的语义表征能力。在文本到语音任务中，该方法显著降低了合成语音的词错误率（WER）。收益还扩展到音乐续写与文本到音效等非语音生成任务，证明注入语义信息可整体提升语言模型的音频生成表现。代码与演示已开源。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 音频编码域论文：针对音频LLM令牌化用声学编解码器语义不足提出X-Codec，属神经音频编解码器重要工作，按非核心域规则仅收录摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 编解码器很重要：探索面向音频语言模型的编解码器语义缺陷
+relations:
+- type: same_topic
+  ref: paper:arxiv:2107.03312
+  note: 同为RVQ端到端神经音频编解码器技术脉络，X-Codec以其类架构为基础改进语义能力
+- type: same_topic
+  ref: paper:arxiv:2404.04947
+  note: 同为面向生成/语言模型场景的神经音频编解码器工作
+- type: same_topic
+  ref: paper:arxiv:2406.07422
+  note: 同为面向语音生成的编解码器设计，关注令牌化对语音生成质量的影响

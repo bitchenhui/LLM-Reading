@@ -1,0 +1,78 @@
+id: paper:arxiv:2504.20965
+type: paper
+title: 'AegisLLM: Scaling Agentic Systems for Self-Reflective Defense in LLM Security'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2504.20965v2
+  url: https://arxiv.org/abs/2504.20965
+  pdf_url: https://arxiv.org/pdf/2504.20965v2
+  venue: arXiv preprint
+time:
+  published: '2025-04-29'
+  collected: '2026-11-14'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:SelfImprovement
+  role: uses
+claims:
+- statement: AegisLLM 在 WMDP unlearning 基准上仅用 20 个训练样本和少于 300 次语言模型调用即实现近完美遗忘。
+  confidence: reported
+  metrics:
+  - name: 训练样本数
+    value: '20'
+    scope: WMDP unlearning 基准
+  - name: LM 调用次数
+    value: <300
+    scope: WMDP unlearning 基准全流程
+  - name: unlearning 效果
+    value: 近乎完美
+    scope: WMDP 基准（作者报告）
+  evidence: abstract（初筛，未读全文）
+- statement: 在 StrongReject 越狱基准上，AegisLLM 相对基线模型提升 51%。
+  confidence: reported
+  metrics:
+  - name: 提升幅度
+    value: 51%
+    scope: StrongReject 越狱基准，对比基线模型
+  evidence: abstract（初筛，未读全文）
+- statement: AegisLLM 在 PHTest 上错误拒绝率仅 7.9%，显著低于可比方法的 18-55%。
+  confidence: reported
+  metrics:
+  - name: 错误拒绝率
+    value: 7.9%
+    scope: PHTest，AegisLLM
+  - name: 错误拒绝率（对比方法）
+    value: 18-55%
+    scope: PHTest，可比防御方法
+  evidence: abstract（初筛，未读全文）
+- statement: 在测试时扩展智能体推理（增加角色+DSPy 自动提示优化）可在不损害模型效用的前提下增强鲁棒性，且无需模型重训练。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出编排者/偏转者/应答者/评估者四角色多智能体防御框架，经提示优化在测试时自改进，免重训练即可提升LLM安全鲁棒性。
+  abstract_zh: AegisLLM 是一个协作式多智能体 LLM 安全防御系统，由编排者、偏转者、应答者与评估者构成结构化工作流，共同保证输出安全合规并抵御越狱攻击与信息泄露。系统通过自动化提示优化（如
+    DSPy）随时间自改进，并可通过增加智能体角色在测试时扩展推理规模。该方法无需模型重训练即可实时适应演化的攻击。实验显示在 WMDP unlearning 基准上仅用 20 个训练样本、少于 300
+    次 LM 调用即达近完美遗忘效果；StrongReject 越狱防御较基线提升 51%，PHTest 错误拒绝率仅 7.9%（可比方法为 18-55%）。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: LLM 安全防御方向的多智能体自改进工作（DSPy 提示优化+测试时扩展），属自改进 AI 但非音视频核心域，按规则不给 deep_read。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: AegisLLM：面向LLM安全的自反思防御智能体系统扩展
+relations:
+- type: same_topic
+  ref: paper:arxiv:2309.16797
+  note: 均属提示层面自我改进（prompt evolution / DSPy 提示优化）路线
+- type: same_topic
+  ref: paper:arxiv:2412.15298
+  note: 同样使用 DSPy 提示优化框架进行自动优化
+- type: same_topic
+  ref: paper:arxiv:2408.03314
+  note: 均探讨测试时计算扩展相对模型参数扩展的有效性

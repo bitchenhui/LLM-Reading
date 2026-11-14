@@ -1,0 +1,61 @@
+id: paper:arxiv:2409.13648
+type: paper
+title: 'V^3: Viewing Volumetric Videos on Mobiles via Streamable 2D Dynamic Gaussians'
+domain: immersive_media
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2409.13648v2
+  url: https://arxiv.org/abs/2409.13648
+  pdf_url: https://arxiv.org/pdf/2409.13648v2
+  venue: arXiv preprint
+time:
+  published: '2024-09-20'
+  collected: '2026-11-14'
+entities:
+- ref: concept:VolumetricVideo
+  role: subject
+- ref: concept:3DGS
+  role: builds_on
+claims:
+- statement: V³将动态3DGS视作2D视频，从而可利用硬件视频编解码器进行流式传输，在移动端实现高质量渲染。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 两阶段训练策略：先以哈希编码与浅层MLP学习运动并剪枝高斯数量以满足流式需求，再用残差熵损失与时间损失微调其余属性，解耦运动与外观，以紧凑存储保持高渲染质量。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 据作者称，该工作是首个在移动设备上流式传输动态高斯的方案，配套多平台播放器支持流畅滑动与即时分享。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 实验表明V³在常见设备上实现高质量渲染与流式传输，效果优于对比方法。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 将动态3DGS视作2D视频以复用硬件视频编解码器，首次实现移动端高质量体积视频流式渲染与播放。
+  abstract_zh: 该文提出V³系统，将动态3D高斯泼溅（3DGS）视作2D视频处理，从而直接调用硬件视频编解码器实现流式传输与移动端高质量渲染。方法采用两阶段训练：第一阶段用哈希编码加浅层MLP学习运动，并通过剪枝削减高斯数量以满足流式要求；第二阶段以残差熵损失和时间损失微调其余高斯属性，提升时间连续性。这种运动—外观解耦策略在紧凑存储下保持高渲染质量。作者还设计了多平台播放器用于解码与渲染2D高斯视频，支持流畅滑动与即时分享；实验显示该方法在常见设备上实现高质量渲染与流式播放，优于现有方法，并号称首个在移动端流式传输动态高斯的工作。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 动态3D高斯体积视频的移动端流式渲染与播放，属沉浸式媒体（3DGS）域重要工作，按规则最高给summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: V³：借助可流式2D动态高斯在移动端观看体积视频
+relations:
+- type: same_topic
+  ref: paper:arxiv:2412.04469
+  note: 同为动态高斯用于自由视点/体积视频流式编码（QUEEN量化动态高斯）
+- type: same_topic
+  ref: paper:arxiv:2501.12060
+  note: 同为基于2D高斯泼溅的视频表示与压缩（GSVC）
+- type: same_topic
+  ref: paper:arxiv:2610.21121
+  note: 同为面向移动端体积视频流式传输的高斯泼溅方案（ResStreamGS）
+- type: same_topic
+  ref: paper:arxiv:2310.08205
+  note: 同为体积视频流式系统（LiveVV直播体积视频）
+- type: same_topic
+  ref: paper:arxiv:2409.07759
+  note: 同为高斯泼溅体积视频流式传输（SwinGS滑动窗口）

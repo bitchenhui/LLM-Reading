@@ -1,0 +1,57 @@
+id: paper:arxiv:2505.08827
+type: paper
+title: 'RLSR: Reinforcement Learning from Self Reward'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2505.08827v2
+  url: https://arxiv.org/abs/2505.08827
+  pdf_url: https://arxiv.org/pdf/2505.08827v2
+  venue: arXiv preprint
+time:
+  published: '2025-05-12'
+  collected: '2026-11-14'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:SelfImprovement
+  role: subject
+claims:
+- statement: LLM 可在无标准答案（ground truth）情况下通过自我评判提供可靠奖励信号，使强化学习在可验证奖励难以构造的领域可行
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 经自我奖励训练的 Qwen 2.5 7B DeepSeek Distilled 模型达到 MIT Integration Bee 竞赛参赛资格水平
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在 Countdown 谜题与积分问题上，自评奖励训练性能与形式化验证奖励相当
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 自我评判与合成题目生成结合可构成出题—解题—自评的完整自改进闭环，无需任何外部验证
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: LLM 利用生成与验证的不对称性自评奖励实现无参考答案的 RL 自改进，7B 模型达 MIT 积分赛资格。
+  abstract_zh: 该工作提出让 LLM 在没有标准答案的情况下通过自我评判生成可靠奖励信号，从而在可验证奖励不可行的领域实施强化学习。在 Countdown 谜题和积分问题上，自评奖励训练达到与形式化验证相当的效果；经自我奖励训练的
+    Qwen 2.5 7B DeepSeek Distilled 模型达到 MIT Integration Bee 竞赛参赛资格。结合合成题目生成，作者构建了出题、解题、自评的完整自改进闭环，全程无需外部验证。结果表明
+    LLM 裁判可有效充当奖励信号，是迈向自主持续自改进 AI 系统的重要一步。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: LLM 自我奖励强化学习与自改进闭环的核心域工作，按规则仅给 summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: RLSR：基于自我奖励的强化学习
+relations:
+- type: same_topic
+  ref: paper:arxiv:2210.11610
+  note: 同属 LLM 自我改进主线，RLSR 将自改进扩展为自奖励 RL 训练
+- type: same_topic
+  ref: paper:arxiv:2407.19594
+  note: 同以 LLM-as-Judge 自评作为奖励信号驱动模型自改进对齐
+- type: same_topic
+  ref: paper:arxiv:2309.00267
+  note: 同研究用 AI 反馈替代人工/可验证奖励进行强化学习训练

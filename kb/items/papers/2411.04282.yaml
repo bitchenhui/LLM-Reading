@@ -1,0 +1,59 @@
+id: paper:arxiv:2411.04282
+type: paper
+title: 'Language Models are Hidden Reasoners: Unlocking Latent Reasoning Capabilities via Self-Rewarding'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2411.04282v2
+  url: https://arxiv.org/abs/2411.04282
+  pdf_url: https://arxiv.org/pdf/2411.04282v2
+  venue: arXiv preprint
+time:
+  published: '2024-11-06'
+  collected: '2026-11-14'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:SelfImprovement
+  role: subject
+claims:
+- statement: LaTRO在GSM8K上将零样本准确率平均较基础模型提升12.5%、较监督微调提升9.6%（跨Phi-3.5-mini、Mistral-7B、Llama-3.1-8B三种架构）
+  confidence: reported
+  metrics:
+  - name: 零样本准确率提升
+    value: 12.5%
+    scope: GSM8K，相对基础模型的平均提升，跨Phi-3.5-mini/Mistral-7B/Llama-3.1-8B
+  - name: 零样本准确率提升
+    value: 9.6%
+    scope: GSM8K，相对监督微调（SFT）的平均提升，跨三种模型架构
+  evidence: abstract（初筛，未读全文）
+- statement: LaTRO无需外部反馈或奖励模型，可在训练中同时提升LLM的推理过程与其对推理质量的评估能力
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 预训练LLM本身蕴含潜在推理能力，可通过LaTRO的变分优化以自我改进方式解锁并增强（另在ARC-Challenge上验证有效）
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出LaTRO框架，将推理视为潜在分布采样并用变分方法优化，以自我奖励方式无需外部反馈地提升LLM推理
+  abstract_zh: LaTRO将LLM推理形式化为从潜在分布中采样，并用变分方法联合优化推理过程与对推理质量的自我评估能力，无需外部反馈或奖励模型。作者在GSM8K和ARC-Challenge数据集上，用Phi-3.5-mini、Mistral-7B和Llama-3.1-8B三种模型架构进行验证。在GSM8K上，LaTRO零样本准确率平均较基础模型提升12.5%，较监督微调提升9.6%。结果表明预训练LLM本身具备可被解锁和增强的潜在推理能力，可按自我改进的方式加以训练。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: LaTRO是以自我奖励（无需外部奖励模型）解锁LLM潜在推理能力的自我改进框架，与SelfImprovement/LLM概念强匹配，属自我改进域，按基准给summary_only
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 语言模型是隐藏的推理者：通过自我奖励解锁潜在推理能力
+relations:
+- type: same_topic
+  ref: paper:arxiv:2210.11610
+  note: 同属LLM自我改进路线：Large Language Models Can Self-Improve与LaTRO均研究以模型自身信号提升推理能力
+- type: same_topic
+  ref: paper:arxiv:2407.19594
+  note: 同为自我奖励（self-rewarding）方向的LLM自我改进工作，LaTRO亦不依赖外部奖励模型
+- type: same_topic
+  ref: paper:arxiv:2305.14483
+  note: 同属无需外部奖励、以强化学习方式实现LLM推理自我改进的工作

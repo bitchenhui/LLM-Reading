@@ -1,0 +1,52 @@
+id: paper:arxiv:2402.02338
+type: paper
+title: 'NetLLM: Adapting Large Language Models for Networking'
+domain: streaming_delivery
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2402.02338v3
+  url: https://arxiv.org/abs/2402.02338
+  pdf_url: https://arxiv.org/pdf/2402.02338v3
+  venue: arXiv preprint
+time:
+  published: '2024-02-04'
+  collected: '2026-11-14'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:ABR
+  role: evaluated_on
+claims:
+- statement: NetLLM适配的LLM在视点预测、自适应码率流媒体和集群作业调度三个网络任务上显著优于现有最先进算法
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: NetLLM通过多模态网络数据处理、任务专用答案生成与低成本微调三方面设计，降低将LLM适配网络任务的工程与训练开销
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 相比为每个网络任务手工设计DNN的现有范式，NetLLM主张以预训练LLM为基础模型实现跨任务复用与更强未见分布泛化
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 首个LLM网络适配框架NetLLM，在视点预测、ABR流媒体与集群调度上显著超越现有SOTA算法。
+  abstract_zh: 该文提出NetLLM，首个将大语言模型统一适配到网络任务的框架，旨在借助预训练知识实现"一个模型服务多任务"并获得更强泛化能力。框架设计了网络多模态数据的编码处理方式与任务专用答案生成机制，并通过低成本微调显著降低领域知识适配开销。在视点预测、自适应码率流媒体（ABR）和集群作业调度三个用例上，NetLLM适配的LLM显著优于现有最先进算法。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: LLM网络适配通用框架，视点预测与ABR为三大用例之二，属流媒体决策算法而非编码核心域，按规则仅收摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: NetLLM：将大语言模型适配于网络任务
+relations:
+- type: same_topic
+  ref: paper:arxiv:2308.03643
+  note: 同为ABR自适应码率决策算法研究（Mamba多维ABR）
+- type: same_topic
+  ref: paper:arxiv:2304.04637
+  note: 同为ABR码率自适应算法（多智能体强化学习短视频ABR）
+- type: same_topic
+  ref: paper:arxiv:2309.04023
+  note: 涉及视点预测与360度视频码率自适应，对应本文视点预测用例

@@ -1,0 +1,59 @@
+id: paper:arxiv:2506.13131
+type: paper
+title: 'AlphaEvolve: A coding agent for scientific and algorithmic discovery'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2506.13131v1
+  url: https://arxiv.org/abs/2506.13131
+  pdf_url: https://arxiv.org/pdf/2506.13131v1
+  venue: arXiv preprint
+time:
+  published: '2025-06-16'
+  collected: '2026-11-14'
+entities:
+- ref: concept:AlphaEvolve
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: AlphaEvolve找到以48次标量乘法完成4×4复数矩阵相乘的过程，是56年来对Strassen算法在该设定下的首次改进。
+  confidence: reported
+  metrics:
+  - name: 标量乘法次数
+    value: '48'
+    scope: 4×4复数矩阵乘法
+  - name: 超越Strassen间隔
+    value: '56'
+    scope: 自Strassen算法提出后该复数矩阵乘法设定的首次改进（年）
+  evidence: abstract（初筛，未读全文）
+- statement: 在Google大规模计算栈上，AlphaEvolve给出更高效的数据中心调度算法、硬件加速器电路的功能等效简化，并加速了其自身底层LLM的训练。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: AlphaEvolve在数学与计算机科学的一系列问题上发现了可证明正确、超越现有最优解的新算法，显著扩展了FunSearch等先前自动化发现方法的范围。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 谷歌的进化式LLM编码智能体，迭代改写代码自动发现新算法，首次突破Strassen矩阵乘法纪录。
+  abstract_zh: AlphaEvolve是一个进化式编码智能体，编排由LLM组成的自主流水线，通过直接修改代码并持续接收评估器反馈来迭代改进算法，从而产生新的科学与实践发现。应用于Google大规模计算栈时，它给出了更高效的数据中心调度算法、找到硬件加速器电路设计中功能等效的简化，并加速了支撑自身的底层LLM的训练。在数学与计算机科学的一系列问题上，它发现了可证明正确、超越现有最优解的新算法，显著扩展了先前自动化发现方法（Romera-Paredes等，2023）的适用范围。其中它找到的搜索过程能以48次标量乘法完成4×4复数矩阵相乘，是56年来Strassen算法在该设定下的首次改进。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 自我改进AI方向的奠基性白皮书（进化式LLM编码智能体），非音视频核心域，按基准仅作初筛摘要收录。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: AlphaEvolve：面向科学与算法发现的编码智能体
+relations:
+- type: same_topic
+  ref: paper:arxiv:2510.14150
+  note: CodeEvolve是延续AlphaEvolve范式的开源进化式编码智能体，同一技术路线
+- type: same_topic
+  ref: paper:arxiv:2310.02304
+  note: STOP同为递归自我改进的代码生成/自动改码方向
+- type: same_topic
+  ref: paper:arxiv:2412.14995
+  note: HSEvo同为LLM驱动的自动启发式与算法演化设计，属同谱系自动化发现方法

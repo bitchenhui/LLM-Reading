@@ -1,0 +1,61 @@
+id: paper:arxiv:2510.09988
+type: paper
+title: 'Unifying Tree Search Algorithm and Reward Design for LLM Reasoning: A Survey'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2510.09988v1
+  url: https://arxiv.org/abs/2510.09988
+  pdf_url: https://arxiv.org/pdf/2510.09988v1
+  venue: arXiv preprint
+time:
+  published: '2025-10-11'
+  collected: '2026-11-14'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:SelfImprovement
+  role: subject
+claims:
+- statement: 审议式树搜索是统一测试时扩展与自我改进两大LLM研究前沿的单一范式，可推动从暴力扩展转向算法效率优化。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 该综述提出将树搜索算法解构为搜索机制、奖励形式化与转移函数三个核心组件的统一框架。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 论文形式化区分了用于测试时扩展的瞬态'搜索引导'与用于自我改进的持久'参数化奖励建模'，解决了奖励信号角色模糊的问题。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 基于统一形式化，作者提出以组件为中心的分类体系并规划了通向自主自我改进智能体的研究路线图。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出统一框架将LLM推理树搜索解构为搜索机制、奖励形式化与转移函数，区分瞬态搜索引导与持久参数化奖励建模。
+  abstract_zh: 该综述指出LLM推理领域的审议式树搜索统一了两大前沿：按需部署计算的测试时扩展（TTS）与利用搜索生成数据持久增强模型参数的自我改进，但该领域碎片化且缺乏共同形式化体系。论文将搜索算法解构为搜索机制、奖励形式化与转移函数三个核心组件，并形式化区分了服务于TTS的瞬态'搜索引导'与服务于自我改进的持久'参数化奖励建模'。基于该形式化，作者提出以组件为中心的分类体系，综合梳理了当前最先进方法，并规划了面向自主自我改进智能体的研究路线图。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: LLM推理树搜索与奖励设计的统一综述，横跨测试时扩展与自我改进两大前沿，属self_improvement域重要综述，按规则仅初筛摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 统一树搜索算法与奖励设计以支持LLM推理：一项综述
+relations:
+- type: same_topic
+  ref: paper:arxiv:2412.14352
+  note: 同为LLM推理时自我改进综述，覆盖TTS与自改进交叉主题
+- type: same_topic
+  ref: paper:arxiv:2410.06508
+  note: MCTS驱动的LLM自我改进，对应本综述的树搜索+奖励主题
+- type: same_topic
+  ref: paper:arxiv:2405.00451
+  note: MCTS与迭代偏好学习结合提升推理，属搜索机制+奖励形式化实例
+- type: same_topic
+  ref: paper:arxiv:2210.11610
+  note: LLM自我改进的奠基性工作，为本综述自我改进分支的重要锚点
+- type: same_topic
+  ref: paper:arxiv:2609.25510
+  note: 测试时扩展的采样方法，对应本综述TTS搜索引导分支

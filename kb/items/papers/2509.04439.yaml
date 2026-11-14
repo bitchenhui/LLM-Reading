@@ -1,0 +1,56 @@
+id: paper:arxiv:2509.04439
+type: paper
+title: 'ArcMemo: Abstract Reasoning Composition with Lifelong LLM Memory'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2509.04439v3
+  url: https://arxiv.org/abs/2509.04439
+  pdf_url: https://arxiv.org/pdf/2509.04439v3
+  venue: arXiv preprint
+time:
+  published: '2025-09-04'
+  collected: '2026-11-14'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:SelfImprovement
+  role: builds_on
+claims:
+- statement: ArcMemo在ARC-AGI上相对强无记忆基线取得7.5%相对增益，且性能随推理算力增加持续提升。
+  confidence: reported
+  metrics:
+  - name: 相对增益
+    value: 7.5%
+    scope: ARC-AGI，相对强无记忆基线
+  evidence: abstract（初筛，未读全文）
+- statement: 抽象概念级记忆在所有测试的推理算力档位上均优于无记忆基线，是最一致的记忆设计。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 测试期动态更新记忆优于固定记忆设置，支持通过积累与抽象规律实现自我改进的假设。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出概念级终身记忆ArcMemo，将推理轨迹蒸馏为可复用抽象概念供测试时检索，在ARC-AGI较无记忆基线相对提升7.5%。
+  abstract_zh: 针对推理轨迹在上下文重置后即被丢弃的问题，作者提出ArcMemo，将解题轨迹抽象为自然语言表达的概念级记忆条目，替代与原问题强绑定的实例级记忆。新查询到来时选择性检索相关概念并注入提示，实现无需权重更新的测试时持续学习，记忆可随经验动态扩充。在ARC-AGI上相对强无记忆基线取得7.5%相对增益，且性能随推理算力持续扩展。消融显示抽象概念记忆在所有测试算力档位均优于基线，测试期动态更新记忆优于固定记忆设置，支持'积累并抽象规律即自我改进'的假设。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: LLM概念级终身记忆与测试期持续学习（自我改进）工作，属self_improvement域，非音视频核心域，按规则仅summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: ArcMemo：基于终身记忆的抽象推理组合
+relations:
+- type: same_topic
+  ref: paper:arxiv:2507.14172
+  note: 同以ARC-AGI评测LLM自我改进/记忆复用式推理
+- type: same_topic
+  ref: paper:arxiv:2402.04858
+  note: 均为基于经验回放/记忆的LLM自我改进，且都在ARC类任务上验证
+- type: same_topic
+  ref: paper:arxiv:2611.14326
+  note: 同研究LLM代理记忆驱动的自我演化机制

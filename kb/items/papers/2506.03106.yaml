@@ -1,0 +1,68 @@
+id: paper:arxiv:2506.03106
+type: paper
+title: 'Critique-GRPO: Advancing LLM Reasoning with Natural Language and Numerical Feedback'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2506.03106v7
+  url: https://arxiv.org/abs/2506.03106
+  pdf_url: https://arxiv.org/pdf/2506.03106v7
+  venue: arXiv preprint
+time:
+  published: '2025-06-03'
+  collected: '2026-11-14'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:SelfImprovement
+  role: uses
+claims:
+- statement: Critique-GRPO优于所有对比的监督与RL微调方法，Qwen系列模型在8个推理任务上平均Pass@1提升约+15.0-21.6%。
+  confidence: reported
+  metrics:
+  - name: Pass@1平均提升
+    value: +15.0-21.6%
+    scope: 多个Qwen模型、8个推理任务，相对监督/RL微调基线
+  evidence: abstract（初筛，未读全文）
+- statement: 在Llama-3.2-3B-Instruct上8个推理任务平均Pass@1提升+7.3%。
+  confidence: reported
+  metrics:
+  - name: Pass@1平均提升
+    value: +7.3%
+    scope: Llama-3.2-3B-Instruct，8个推理任务
+  evidence: abstract（初筛，未读全文）
+- statement: 通过自我批评实现有效的自我改进，相对GRPO在AIME 2024上Pass@1提升+16.7%。
+  confidence: reported
+  metrics:
+  - name: Pass@1提升
+    value: +16.7%
+    scope: AIME 2024，相对GRPO基线
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出Critique-GRPO在线RL框架，融合自然语言批评与数值奖励优化LLM推理，实现自我批评式自我改进。
+  abstract_zh: 论文指出纯数值奖励强化学习的三大局限：性能停滞、自发的自我反思无效、失败无法持续纠正，并发现停滞的RL模型在获得自然语言批评后能成功修正失败解。据此提出Critique-GRPO在线强化学习框架，将自然语言批评与数值奖励结合进行策略优化，使模型同时从初始回答和批评引导的改进回答中学习。实验显示该方法超越所有对比的监督微调与RL微调方法：Qwen系列模型在8个困难推理任务上平均Pass@1提升约+15.0-21.6%，Llama-3.2-3B-Instruct提升+7.3%。通过自我批评实现有效的自我改进，在AIME
+    2024上相对GRPO取得+16.7%的Pass@1提升，代码与模型已开源。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: LLM推理自我改进方法论文（批评引导的RL自改进），属自我改进AI跟踪域，非音视频核心域，按基准只做summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: Critique-GRPO：以自然语言与数值双重反馈推进LLM推理
+relations:
+- type: same_topic
+  ref: paper:arxiv:2407.19594
+  note: 同为以LLM批评/评判反馈驱动的语言模型自我改进
+- type: same_topic
+  ref: paper:arxiv:2305.14483
+  note: 同为基于强化学习的LLM自我改进
+- type: same_topic
+  ref: paper:arxiv:2411.16579
+  note: 同为利用批评模型增强LLM推理的方法
+- type: same_topic
+  ref: paper:arxiv:2609.34975
+  note: 同为提示/批评辅助下LLM推理的自我改进

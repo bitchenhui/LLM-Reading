@@ -1,0 +1,55 @@
+id: paper:arxiv:2503.12854
+type: paper
+title: 'Enhancing LLM Reasoning with Iterative DPO: A Comprehensive Empirical Investigation'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2503.12854v3
+  url: https://arxiv.org/abs/2503.12854
+  pdf_url: https://arxiv.org/pdf/2503.12854v3
+  venue: arXiv preprint
+time:
+  published: '2025-03-17'
+  collected: '2026-11-14'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:SelfImprovement
+  role: subject
+claims:
+- statement: 单轮带粗过滤的DPO即可显著提升LLM数学推理性能，对强基座模型效果尤为突出。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 所设计的迭代框架使生成器与奖励模型通过多轮DPO在线交互实现相互增强。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 模型DPO-VP仅用简单可验证奖励即达到RL级推理性能，且计算开销显著更低。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: DPO是LLM推理增强中RL的可扩展、低成本替代方案，适用于资源受限场景。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 实证表明单轮粗过滤DPO即可显著提升数学推理，迭代框架使生成器与奖励模型共同进化，以更低算力达到RL级性能。
+  abstract_zh: 该研究系统考察DPO作为LLM推理自我改进后训练范式的有效性，发现单轮带粗过滤的DPO即可显著提升数学推理性能，对强基座模型尤为明显。作者进一步设计了生成器与奖励模型（RM）共同增强的迭代框架，通过多轮DPO在线交互实现两者相互提升。最终模型DPO-VP仅借助简单可验证奖励即达到RL级性能，且计算开销显著更低。结论指出DPO是RL的可扩展、低成本替代方案，适合资源受限场景。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 属于LLM自我改进（迭代DPO后训练）方向，非音视频核心域，按收录基准仅做初筛摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 用迭代DPO增强LLM推理：一项全面的实证研究
+relations:
+- type: same_topic
+  ref: paper:arxiv:2405.00451
+  note: 同为迭代偏好学习增强LLM推理的自我改进工作
+- type: same_topic
+  ref: paper:arxiv:2407.19594
+  note: 同为含奖励模型迭代的LLM自我改进对齐研究
+- type: same_topic
+  ref: paper:arxiv:2210.11610
+  note: 同属LLM自我改进能力研究脉络

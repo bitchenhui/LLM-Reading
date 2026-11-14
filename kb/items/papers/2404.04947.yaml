@@ -1,0 +1,57 @@
+id: paper:arxiv:2404.04947
+type: paper
+title: 'Gull: A Generative Multifunctional Audio Codec'
+domain: audio_coding
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2404.04947v2
+  url: https://arxiv.org/abs/2404.04947
+  pdf_url: https://arxiv.org/pdf/2404.04947v2
+  venue: arXiv preprint
+time:
+  published: '2024-04-07'
+  collected: '2026-11-14'
+entities:
+- ref: concept:SuperResolution
+  role: subject
+claims:
+- statement: Gull 在主观与客观评测中，跨多种采样率、码率和模型复杂度，性能达到持平或优于现有传统与神经音频编解码器。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: Gull 内建音频超分辨率能力，且不增加码率。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 弹性解码器网络允许用户在推理阶段自定义模型规模与复杂度。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: Gull 采用受音频源分离启发的子带建模实现通用采样率建模，并结合传统编解码器启发的增益-形状表示与改进的残差向量量化模块。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 通用神经音频压缩模型，支持全采样率建模、弹性解码器与内建音频超分，性能持平或优于现有传统与神经编解码器
+  abstract_zh: Gull 是一个通用神经音频压缩/解压缩模型，可服务于实时通信、音频超分辨率和编解码语言模型等多种任务。其关键组件包括：借鉴音频源分离进展的子带建模以实现通用采样率建模、受传统音频编解码器启发的增益-形状表示、改进的残差向量量化模块、允许用户在推理时自定义模型规模与复杂度的弹性解码器，以及不增加码率的内建音频超分辨率能力。与现有传统和神经音频编解码器的对比显示，Gull
+    在主观与客观评测指标上，跨各种采样率、码率与模型复杂度均达到持平或更优的性能。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 生成式多功能神经音频编解码器，属音频编码非核心域，按收录基准仅做摘要级处理
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: Gull：一种生成式多功能音频编解码器
+relations:
+- type: same_topic
+  ref: paper:arxiv:2107.03312
+  note: 同属端到端神经音频编解码器方向，SoundStream 为该线代表性工作，Gull 为其后续生成式多功能扩展
+- type: same_topic
+  ref: paper:arxiv:2207.03067
+  note: 均围绕神经语音/音频编码中的向量量化与可扩展码率设计，Gull 采用改进残差向量量化
+- type: same_topic
+  ref: paper:arxiv:2103.14776
+  note: 同属神经语音编码（混合式设计）研究方向
+- type: same_topic
+  ref: paper:arxiv:2609.09866
+  note: 同属流式神经音频编码与残差向量量化方向，均面向实时通信场景的多采样率音频压缩

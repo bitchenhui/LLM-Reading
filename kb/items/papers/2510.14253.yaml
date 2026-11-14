@@ -1,0 +1,62 @@
+id: paper:arxiv:2510.14253
+type: paper
+title: Towards Agentic Self-Learning LLMs in Search Environment
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2510.14253v2
+  url: https://arxiv.org/abs/2510.14253
+  pdf_url: https://arxiv.org/pdf/2510.14253v2
+  venue: arXiv preprint
+time:
+  published: '2025-10-16'
+  collected: '2026-11-14'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:SelfImprovement
+  role: subject
+claims:
+- statement: 生成式奖励模型（GRM）给出的奖励在开放域学习上优于刚性规则奖励，且GRM与策略共同进化可进一步提升性能。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 增加智能体任务数据量（即使数据为合成生成）可显著增强智能体能力。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: ASL框架实现逐轮稳定增益，超越趋于平台化或退化的强RLVR基线（如Search-R1）。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: ASL在零标注数据条件下仍持续改进，表明其样本效率与鲁棒性优于基线。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: GRM验证容量是自学习的主要瓶颈：冻结GRM会诱发奖励攻击并使进展停滞；对演化数据分布持续训练GRM可缓解该问题，后期少量真实验证数据注入可抬高性能上限。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出ASL闭环多角色自学习框架：任务生成、策略执行与生成式奖励模型共进化，零标注数据下LLM智能体持续自我改进
+  abstract_zh: 该论文研究在不依赖人工策展数据与预定义规则奖励的条件下，自学习能否规模化扩展基于LLM的智能体能力。搜索智能体受控实验表明，奖励信号来源与智能体任务数据规模是可扩展训练的两个关键决定因素：生成式奖励模型（GRM）的奖励优于刚性规则信号，与策略共同进化可进一步提升性能，且合成生成的任务数据量增加能显著增强智能体能力。据此提出Agentic
+    Self-Learning（ASL），一个全闭环多角色强化学习框架，将任务生成、策略执行与评估统一在共享工具环境和LLM主干中，协调提示生成器、策略模型与GRM形成更难任务设定、更锐利验证与更强求解的良性循环。实验显示ASL逐轮稳定增益，超越趋于平台化或退化的RLVR基线（如Search-R1），并在零标注数据条件下持续改进；进一步发现GRM验证能力是主要瓶颈——冻结GRM会引发奖励攻击并停滞进展，对演化数据分布持续训练GRM可缓解，后期少量真实验证数据注入可抬高性能上限。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 研究LLM智能体在搜索环境中不依赖人工数据的多角色闭环自学习与GRM共进化，属自我改进AI核心主题，但非音视频技术域，按基准仅初筛收录
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 迈向搜索环境中的智能体自学习大语言模型
+relations:
+- type: same_topic
+  ref: paper:arxiv:2609.37968
+  note: 同为搜索环境中自改进LLM智能体研究（SelfSearch：无奖励搜索的自改进智能体）
+- type: same_topic
+  ref: paper:arxiv:2610.11464
+  note: 同为验证器/评审模型与自改进智能体共进化主题（Who Verifies the Verifier?）
+- type: same_topic
+  ref: paper:arxiv:2508.05004
+  note: 同为无外部数据驱动的LLM自进化/自学习训练范式（R-Zero）
+- type: same_topic
+  ref: paper:arxiv:2312.10003
+  note: 同为多步推理LLM智能体的自改进（ReST meets ReAct）

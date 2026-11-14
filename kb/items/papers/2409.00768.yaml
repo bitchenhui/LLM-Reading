@@ -1,0 +1,55 @@
+id: paper:arxiv:2409.00768
+type: paper
+title: Rethinking Image Super-Resolution from Training Data Perspectives
+domain: processing_enhancement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2409.00768v1
+  url: https://arxiv.org/abs/2409.00768
+  pdf_url: https://arxiv.org/pdf/2409.00768v1
+  venue: arXiv preprint
+time:
+  published: '2024-09-01'
+  collected: '2026-11-14'
+entities:
+- ref: concept:SuperResolution
+  role: subject
+- ref: dataset:ImageNet
+  role: uses
+claims:
+- statement: 训练数据集中低压缩伪影正向影响SR模型性能
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 图内多样性高（以图内不同物体数量衡量）的训练数据正向影响SR性能
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 采用ImageNet或PASS等大规模数据集的大量图像可提升SR性能
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 现有SR方法通常在DIV2K、DF2K等常用数据集上开发与基准测试
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出自动化图像评估流水线，证明低压缩伪影、高图内多样性与大规模数据（ImageNet/PASS）可提升SR性能。
+  abstract_zh: 该工作系统研究了长期被忽视的SR训练数据因素，质疑仅在DIV2K/DF2K等常用数据集上训练与评测SR的惯例。作者提出自动化图像评估流水线，对现有高分辨率数据集及ImageNet、PASS等更大规模数据集按质量与多样性进行分层并对比训练效果。结果表明：低压缩伪影、高图内多样性（以不同物体数量衡量）以及来自ImageNet或PASS的大量图像均正向影响SR性能。作者期望该简单有效的数据筛选流水线能指导未来SR数据集构建，从而产出更好的模型。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 图像超分辨率训练数据的系统性研究，属编码链路增强（超分）方向但非视频/图像编码核心域，按规则仅作初筛摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 从训练数据视角重新思考图像超分辨率
+relations:
+- type: same_topic
+  ref: paper:arxiv:2110.14638
+  note: 同属图像超分辨率性能改进研究
+- type: same_topic
+  ref: paper:arxiv:2305.04844
+  note: 超分辨率用于视频压缩比特率降低的基准，同属SR方向
+- type: same_topic
+  ref: paper:arxiv:2605.14847
+  note: SR伪影感知评估协议，与本文的数据质量/评估流水线主题相关

@@ -1,0 +1,58 @@
+id: paper:arxiv:2505.22453
+type: paper
+title: 'First SFT, Second RL, Third UPT: Continual Improving Multi-Modal LLM Reasoning via Unsupervised
+  Post-Training'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2505.22453v2
+  url: https://arxiv.org/abs/2505.22453
+  pdf_url: https://arxiv.org/pdf/2505.22453v2
+  venue: arXiv preprint
+time:
+  published: '2025-05-28'
+  collected: '2026-11-14'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:SelfImprovement
+  role: uses
+claims:
+- statement: MM-UPT在无ground truth标签的标准数据集上对Qwen2.5-VL-7B进行无监督后训练，可显著提升多模态推理能力。
+  confidence: reported
+  metrics:
+  - name: MathVista准确率
+    value: 66.3%→72.9%
+    scope: Qwen2.5-VL-7B，MM-UPT无监督后训练前后对比
+  - name: We-Math准确率
+    value: 62.9%→68.7%
+    scope: Qwen2.5-VL-7B，MM-UPT无监督后训练前后对比
+  evidence: abstract（初筛，未读全文）
+- statement: 以多数投票自奖励机制替代外部奖励信号、基于GRPO的无监督后训练，可作为SFT与RL之后的第三训练阶段，在缺乏人工标注数据时实现持续自我改进。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 将框架扩展到数据自生成设定，用两种策略促使模型自行合成新训练样本，与无监督训练结合可进一步提升性能，指向可扩展的自我改进。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出MM-UPT无监督后训练框架，用多数投票自奖励替代外部奖励，在SFT与RL之后持续提升多模态LLM推理能力。
+  abstract_zh: 论文提出MM-UPT，一个简单有效的多模态大语言模型（MLLM）无监督后训练框架，作为SFT与RL之后的第三阶段，无需任何外部监督即可持续自我改进。其训练方法基于GRPO，用对多次采样响应进行多数投票的自奖励机制替代传统奖励信号。实验表明该方法无需ground
+    truth标签即可有效提升Qwen2.5-VL-7B的推理能力：MathVista从66.3%升至72.9%，We-Math从62.9%升至68.7%。作者进一步扩展到数据自生成设定，设计两种策略让模型自行合成新训练样本，与无监督训练结合可带来额外性能增益，展示了可扩展自我改进的路径。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 多模态LLM无监督自奖励后训练的持续自我改进工作，属自我改进AI领域而非音视频核心域，按规则只给 summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 先SFT，再RL，后UPT：通过无监督后训练持续改进多模态大语言模型推理能力
+relations:
+- type: same_topic
+  ref: paper:arxiv:2505.08827
+  note: 同为基于自奖励（self-reward）的RL后训练自我改进，本文用多数投票自奖励替代外部奖励
+- type: same_topic
+  ref: paper:arxiv:2210.11610
+  note: 同属LLM自我改进范式，本文将该思想扩展至多模态LLM的无监督后训练

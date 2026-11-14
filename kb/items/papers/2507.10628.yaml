@@ -1,0 +1,60 @@
+id: paper:arxiv:2507.10628
+type: paper
+title: 'GHPO: Adaptive Guidance for Stable and Efficient LLM Reinforcement Learning'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2507.10628v2
+  url: https://arxiv.org/abs/2507.10628
+  pdf_url: https://arxiv.org/pdf/2507.10628v2
+  venue: arXiv preprint
+time:
+  published: '2025-07-14'
+  collected: '2026-11-14'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: subject
+claims:
+- statement: GHPO在六个数学基准上平均取得约5%的性能提升，持续优于on-policy强化学习与课程学习基线。
+  confidence: reported
+  metrics:
+  - name: 平均性能增益
+    value: 约5%
+    scope: 六个数学推理基准上相对强on-policy RL与课程学习基线
+  evidence: abstract（初筛，未读全文）
+- statement: GHPO通过自适应提示细化动态校准任务难度，对超出模型能力的问题采用直接模仿学习、对可解任务采用探索式RL，缓解能力-难度错配导致的奖励稀疏与训练停滞。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: GHPO显著提升训练稳定性与最终推理性能，为资源受限的小型LLM提供可扩展高效的训练方案。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出难度感知的引导式混合策略优化GHPO，自适应混合模仿与探索式强化学习，稳定高效提升LLM推理自改进。
+  abstract_zh: 论文针对RLVR范式下on-policy强化学习训练不稳定、低效的问题，指出根源在于训练数据难度与模型当前能力的错配，导致奖励信号稀疏、学习停滞。作者提出引导式混合策略优化GHPO，通过自适应提示细化动态校准任务难度：对超出模型能力的问题采用直接模仿学习，对可解任务保留探索式强化学习，形成平滑优化的学习课程。在六个数学基准上平均取得约5%的性能提升，持续优于强on-policy
+    RL与课程学习基线，并显著增强训练稳定性，为资源受限的小型LLM提供可扩展的高效训练方案。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 属LLM推理自改进（RLVR）方法论文，落在自我改进AI域但与音视频技术无关联，按基准仅初筛摘要收录。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: GHPO：面向稳定高效LLM强化学习的自适应引导
+relations:
+- type: same_topic
+  ref: paper:arxiv:2609.34975
+  note: 同为通过提示引导/提示退火应对LLM推理自改进中难度失配的RL方法，机制高度相近
+- type: same_topic
+  ref: paper:arxiv:2410.06508
+  note: 同属LLM自改进+课程式学习的推理强化学习路线
+- type: same_topic
+  ref: paper:arxiv:2305.14483
+  note: 同为基于强化学习的语言模型自改进方法
+- type: same_topic
+  ref: paper:arxiv:2502.02508
+  note: 同属RLVR驱动的LLM推理能力提升工作

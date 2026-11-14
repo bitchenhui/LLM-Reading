@@ -1,0 +1,50 @@
+id: paper:arxiv:2501.00569
+type: paper
+title: Probing Visual Language Priors in VLMs
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2501.00569v4
+  url: https://arxiv.org/abs/2501.00569
+  pdf_url: https://arxiv.org/pdf/2501.00569v4
+  venue: arXiv preprint
+time:
+  published: '2024-12-31'
+  collected: '2026-11-14'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+claims:
+- statement: 人类在 ViLP 基准上接近满分，而 GPT-4 仅取得 66.17% 的准确率，表明现代 VLM 存在过度依赖语言先验、视觉推理不足的问题。
+  confidence: reported
+  metrics:
+  - name: 准确率
+    value: 66.17%
+    scope: GPT-4 在 ViLP 基准上
+  - name: 人类准确率
+    value: 接近满分（near-perfect）
+    scope: 人类受试者在 ViLP 基准上
+  evidence: abstract（初筛，未读全文）
+- statement: 基于模型自生成 VQA 数据并施加像素级与语义级破坏构成'好-坏'图像对的自改进训练，能有效提升 LLaVA-v1.5 与 Cambrian 等开源 VLM 的视觉推理表现。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出 ViLP 基准揭示 VLM 过度依赖语言先验，并用自生成好坏图像对自训练提升视觉推理能力。
+  abstract_zh: 该工作指出 VLM 可能过度依赖训练数据中的视觉语言先验而非真正的视觉推理，为此构建 ViLP 基准，利用图像生成模型合成分布外图像与分布外问答对；每个问题配三个候选答案与三张对应图像，其中一张仅靠文本先验即可解答，两张必须依赖视觉推理。人类在该基准上接近满分，而
+    GPT-4 仅取得 66.17%。为缓解该问题，作者提出自改进框架：模型自生成新的 VQA 数据，并施加像素级与语义级破坏构成'好-坏'图像对进行自训练，训练目标促使 VLM 更关注真实视觉输入。实验证明该框架能有效提升
+    LLaVA-v1.5 与 Cambrian 等开源 VLM 的性能。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 核心贡献是 VLM 视觉推理基准与自改进训练框架，属自改进 AI 范畴，与音视频编码/传输链路无直接关系，按规则给 summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 探测视觉语言模型中的视觉语言先验
+relations:
+- type: same_topic
+  ref: paper:arxiv:2611.00053
+  note: 同为 VLM 自改进框架，本文以好-坏图像对自训练，SIMIT 以测试时想象自改进

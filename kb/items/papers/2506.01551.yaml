@@ -1,0 +1,55 @@
+id: paper:arxiv:2506.01551
+type: paper
+title: 'EvolveNav: Empowering LLM-Based Vision-Language Navigation via Self-Improving Embodied Reasoning'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2506.01551v3
+  url: https://arxiv.org/abs/2506.01551
+  pdf_url: https://arxiv.org/pdf/2506.01551v3
+  venue: arXiv preprint
+time:
+  published: '2025-06-02'
+  collected: '2026-11-14'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:SelfImprovement
+  role: builds_on
+claims:
+- statement: 两阶段训练（形式化 CoT 监督微调激活推理能力 + 自反思后训练以自身输出迭代作为 CoT 标签）可在 R2R、REVERIE、CVDN、SOON 基准上一致优于先前 LLM-based
+    VLN 方法
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 导航任务复杂导致完美 CoT 标签不可得，纯 CoT 监督微调易过拟合，用模型自身推理输出作为自富集标签可增强监督多样性
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 自反思辅助任务通过让模型对比正确与错误推理模式来学习正确推理方式
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出形式化CoT微调+自反思后训练的两阶段自改进范式，提升LLM视觉语言导航的精度与可解释性
+  abstract_zh: 针对现有 LLM 视觉语言导航（VLN）方法采用直接输入-输出映射导致决策难以学习且不可解释的问题，提出 EvolveNav 自改进具身推理范式。第一阶段以整理的形式化 Chain-of-Thought
+    标签做监督微调，激活模型导航推理能力并提升推理速度。第二阶段自反思后训练，将模型自身推理输出迭代用作自富集 CoT 标签以增强监督多样性，并设计自反思辅助任务，通过与错误推理对比学习正确推理模式。在任务特定与跨任务两种训练范式下，EvolveNav
+    在 R2R、REVERIE、CVDN、SOON 等基准上均一致优于已有 LLM-based VLN 方法。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 论文属 LLM 智能体自改进范式研究（自反思后训练提升具身导航推理），符合 self_improvement 域但与音视频编码核心无关，故仅初筛收录。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: EvolveNav：通过自改进具身推理增强基于 LLM 的视觉语言导航
+relations:
+- type: same_topic
+  ref: paper:arxiv:2312.10003
+  note: 同为多步推理 LLM 智能体的自改进训练（ReST 式迭代 + 推理链）
+- type: same_topic
+  ref: paper:arxiv:2609.37950
+  note: 同为具身/视频智能体的自改进范式（自反思与迭代训练提升下游任务）
+- type: same_topic
+  ref: paper:arxiv:2502.02508
+  note: 同为通过思维链推理自改进提升 LLM 推理能力的方法

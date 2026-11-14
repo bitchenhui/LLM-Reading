@@ -1,0 +1,54 @@
+id: paper:arxiv:2507.17131
+type: paper
+title: Enabling Self-Improving Agents to Learn at Test Time With Human-In-The-Loop Guidance
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2507.17131v2
+  url: https://arxiv.org/abs/2507.17131
+  pdf_url: https://arxiv.org/pdf/2507.17131v2
+  venue: arXiv preprint
+time:
+  published: '2025-07-23'
+  collected: '2026-11-14'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:SelfImprovement
+  role: subject
+claims:
+- statement: ARIA通过结构化自对话评估不确定性、获取人类专家指导，可在测试时持续更新带时间戳的知识库，并检测、化解冲突或过时知识。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在TikTok Pay客户尽调名单筛查任务及公开动态知识任务上，ARIA的适应性与准确率显著优于离线微调和现有自我改进智能体基线。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: ARIA已部署于TikTok Pay生产环境并实际运营。
+  confidence: reported
+  metrics:
+  - name: 月活跃用户规模
+    value: over 150 million
+    scope: TikTok Pay生产部署服务覆盖的月活用户数
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出ARIA框架：LLM智能体通过结构化自对话识别知识缺口、请求人类专家指导，在测试时持续更新带时间戳的知识库并化解冲突知识。
+  abstract_zh: 该文面向规则与领域知识频繁变化的环境（如监管合规、用户风险筛查），提出自适应反思交互智能体ARIA。ARIA通过结构化自对话评估自身不确定性，主动发现知识缺口并向人类专家请求针对性解释或纠错，随后将人类指导系统性写入带时间戳的内部知识库，并通过对比与澄清查询检测、化解冲突或过时知识。在TikTok
+    Pay真实客户尽调名单筛查任务及公开动态知识任务上的评估显示，其适应性与准确率显著优于离线微调和现有自我改进智能体基线。该系统已在TikTok Pay上线，服务超1.5亿月活跃用户。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 属LLM智能体测试时自我改进+人机协同知识更新的self_improvement核心选题（TikTok Pay生产部署），非音视频编码核心域，按规则仅摘要收录。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 借助人在回路指导使自我改进智能体在测试时学习
+relations:
+- type: same_topic
+  ref: paper:arxiv:2505.19475
+  note: 同属LLM在测试时（test-time）持续自我改进/持续学习方向
+- type: same_topic
+  ref: paper:arxiv:2312.10003
+  note: 同为LLM智能体自我改进框架，ARIA摘要中声明与现有自我改进智能体基线对比

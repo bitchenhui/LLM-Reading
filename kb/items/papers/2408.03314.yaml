@@ -1,0 +1,60 @@
+id: paper:arxiv:2408.03314
+type: paper
+title: Scaling LLM Test-Time Compute Optimally can be More Effective than Scaling Model Parameters
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2408.03314v1
+  url: https://arxiv.org/abs/2408.03314
+  pdf_url: https://arxiv.org/pdf/2408.03314v1
+  venue: arXiv preprint
+time:
+  published: '2024-08-06'
+  collected: '2026-11-14'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:SelfImprovement
+  role: subject
+claims:
+- statement: 按提示难度自适应分配推理计算的compute-optimal策略相比best-of-N基线可将测试时计算效率提升超过4倍
+  confidence: reported
+  metrics:
+  - name: 测试时计算效率提升倍数
+    value: '>4x'
+    scope: compute-optimal扩展策略 vs best-of-N基线
+  evidence: abstract（初筛，未读全文）
+- statement: 在FLOPs匹配评测下，当较小基座模型成功率非平凡时，施加测试时计算可使其性能超越14倍大的模型
+  confidence: reported
+  metrics:
+  - name: 模型规模倍数
+    value: 14x
+    scope: FLOPs匹配评测：小模型+测试时计算 vs 大模型
+  evidence: abstract（初筛，未读全文）
+- statement: 不同测试时计算扩展方法的有效性随提示难度显著变化，固定策略并非对所有难度最优
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出compute-optimal测试时计算扩展策略，效率较best-of-N提升逾4倍，小模型加推理计算可胜过14倍大的模型。
+  abstract_zh: 该论文系统研究LLM推理时（测试时）计算的扩展规律，回答在固定但非平凡的推理计算预算下模型在困难提示上能提升多少。作者分析了两类主要扩展机制：针对密集过程奖励验证器的搜索，以及测试时根据提示自适应更新模型响应分布。研究发现两类方法的有效性随提示难度显著变化，据此提出按提示难度自适应分配推理计算的compute-optimal扩展策略。该策略相比best-of-N基线将测试时计算效率提升超过4倍；在FLOPs匹配评测中，当较小基座模型成功率非平凡时，测试时计算可使其超越14倍大的模型。这一工作对预训练与推理计算的权衡具有指导意义，也是构建通用自改进智能体的关键一步。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 测试时计算扩展的开创性工作，明确面向通用自改进智能体，属self_improvement域重要文献；非核心域故按基准给summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 最优地扩展LLM测试时计算可以比扩展模型参数更有效
+relations:
+- type: same_topic
+  ref: paper:arxiv:2609.25510
+  note: 同为LLM测试时计算扩展方法研究（Hill Sampling vs 重复采样/训练）
+- type: same_topic
+  ref: paper:arxiv:2210.11610
+  note: 同属LLM自改进研究线，本文是测试时计算视角的基础工作
+- type: same_topic
+  ref: paper:arxiv:2404.12253
+  note: 同属LLM自改进与搜索-验证机制方向

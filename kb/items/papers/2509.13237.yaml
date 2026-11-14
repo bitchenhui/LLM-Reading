@@ -1,0 +1,60 @@
+id: paper:arxiv:2509.13237
+type: paper
+title: 'Metacognitive Reuse: Turning Recurring LLM Reasoning Into Concise Behaviors'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2509.13237v1
+  url: https://arxiv.org/abs/2509.13237
+  pdf_url: https://arxiv.org/pdf/2509.13237v1
+  venue: arXiv preprint
+time:
+  published: '2025-09-16'
+  collected: '2026-11-14'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:SelfImprovement
+  role: subject
+claims:
+- statement: 在推理时以上下文方式向LLM提供相关'行为'，可在精度持平或更优的前提下将推理token最多减少46%。
+  confidence: reported
+  metrics:
+  - name: 推理token减少
+    value: up to 46%
+    scope: behavior-conditioned inference vs 基线推理
+  evidence: abstract（初筛，未读全文）
+- statement: 无需任何参数更新，模型利用自身历史解题得到的行为改进后续推理，精度较朴素critique-and-revise基线最高提升10%。
+  confidence: reported
+  metrics:
+  - name: 精度提升
+    value: up to 10%
+    scope: behavior-guided self-improvement vs naive critique-and-revise 基线
+  evidence: abstract（初筛，未读全文）
+- statement: 在行为条件化推理轨迹上做监督微调（SFT），比在普通推理轨迹上做SFT更有效地把非推理模型转化为推理模型。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 对既往推理轨迹做元认知分析，将重复推理片段提炼为可复用'行为'，推理token最多省46%且精度持平或提升。
+  abstract_zh: 大模型在多步推理中反复重新推导相同的中间步骤，膨胀token用量与延迟。该工作让模型对自身历史推理轨迹做元认知分析，将反复出现的推理片段浓缩为'名称+指令'形式的可复用行为，存入'行为手册'。推理时上下文注入相关行为可减少最多46%推理token且精度持平或提升；无需参数更新，模型借助自身历史解题行为实现自我改进，精度较朴素critique-and-revise基线最高提升10%。此外，在行为条件化推理轨迹上做SFT比普通SFT更有效地将非推理模型转化为推理模型。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 属于LLM自我改进核心工作：将重复推理提炼为可复用行为以实现无参数更新的自我改进，但非音视频核心域，按基准仅收录摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 元认知复用：将循环出现的LLM推理转化为简洁行为
+relations:
+- type: same_topic
+  ref: paper:arxiv:2210.11610
+  note: 同属LLM推理自我改进研究线，本工作是其'行为复用'方向的延续
+- type: same_topic
+  ref: paper:arxiv:2609.34975
+  note: 同以'将内部推理转化为可复用提示/行为'改进LLM推理为核心思路
+- type: same_topic
+  ref: paper:arxiv:2509.04439
+  note: 同属从历史解题轨迹中抽象并复用推理经验以支持终身自我改进

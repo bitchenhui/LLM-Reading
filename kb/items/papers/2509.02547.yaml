@@ -1,0 +1,54 @@
+id: paper:arxiv:2509.02547
+type: paper
+title: 'The Landscape of Agentic Reinforcement Learning for LLMs: A Survey'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2509.02547v5
+  url: https://arxiv.org/abs/2509.02547
+  pdf_url: https://arxiv.org/pdf/2509.02547v5
+  venue: arXiv preprint
+time:
+  published: '2025-09-02'
+  collected: '2026-11-14'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:SelfImprovement
+  role: subject
+claims:
+- statement: Agentic RL将LLM的建模基础从退化的单步MDP（LLM RL）扩展为时序延展、部分可观测的POMDP，使LLM成为嵌入复杂动态环境的自主决策智能体。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 该综述综合了五百余篇近期工作，构建了围绕核心智能体能力（规划、工具使用、记忆、推理、自我改进、感知）与应用任务领域的双维分类法。
+  confidence: reported
+  metrics:
+  - name: 综合文献数
+    value: 500+
+    scope: 作者自述'synthesizing over five hundred recent works'，即该综述覆盖的近期相关工作规模
+  evidence: abstract（初筛，未读全文）
+- statement: 强化学习被视为将智能体核心能力从静态启发式模块转化为自适应、鲁棒行为的关键机制；综述还汇编了面向该领域的开源环境、基准与框架资源清单。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 系统综述Agentic RL如何将LLM从被动序列生成器升级为自主决策智能体，给出能力与应用双维分类法及资源汇编。
+  abstract_zh: 该综述提出智能体强化学习（Agentic RL）标志着相对于传统LLM强化学习（LLM RL）的范式转变，将LLM从被动的序列生成器重塑为嵌入复杂动态环境中的自主决策智能体。作者通过对比LLM
+    RL退化的单步MDP与Agentic RL时序延展的部分可观测MDP（POMDP），形式化了这一概念转变。在此基础上提出双维分类法：一维围绕规划、工具使用、记忆、推理、自我改进与感知六大核心智能体能力，另一维围绕其在多任务领域的应用。核心论点是强化学习是将这些能力从静态启发式模块转化为自适应、鲁棒智能体行为的关键机制。综述综合了五百余篇近期工作，并汇编了开源环境、基准与框架的实用资源清单，以支撑可扩展通用AI智能体的后续研究。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 该综述以LLM智能体强化学习为对象，自我改进（self-improvement）为其六大核心能力分类之一，属自我改进AI域，按收录基准最高仅给summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 面向大语言模型的智能体强化学习全景综述
+relations:
+- type: same_topic
+  ref: paper:arxiv:2412.14352
+  note: 同为LLM自我改进主题的综述，本研究将自我改进列为六大核心智能体能力之一，主题高度相关
+- type: same_topic
+  ref: paper:arxiv:2210.11610
+  note: LLM自我改进的代表性奠基工作，属本综述'自我改进'能力分类所覆盖的研究脉络

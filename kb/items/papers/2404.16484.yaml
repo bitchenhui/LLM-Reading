@@ -1,0 +1,60 @@
+id: paper:arxiv:2404.16484
+type: paper
+title: Real-Time 4K Super-Resolution of Compressed AVIF Images. AIS 2024 Challenge Survey
+domain: processing_enhancement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2404.16484v1
+  url: https://arxiv.org/abs/2404.16484
+  pdf_url: https://arxiv.org/pdf/2404.16484v1
+  venue: arXiv preprint
+time:
+  published: '2024-04-25'
+  collected: '2026-11-14'
+entities:
+- ref: concept:SuperResolution
+  role: subject
+- ref: metric:PSNR
+  role: measured_by
+claims:
+- statement: 所有参赛方法在PSNR保真度上均优于Lanczos插值基线。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 提交方案可在商用GPU上完成540p→4K（4x）实时超分，单帧处理时间低于10ms。
+  confidence: reported
+  metrics:
+  - name: 处理时延
+    value: <10 ms
+    scope: 商用GPU上540p→4K 4x超分单帧
+  evidence: abstract（初筛，未读全文）
+- statement: 本次挑战赛共有160名参与者，其中25支队伍提交了代码与模型。
+  confidence: reported
+  metrics:
+  - name: 提交队伍数
+    value: '25'
+    scope: 共160名参与者
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: AIS 2024实时超分挑战赛综述：AVIF压缩540p图像实时4x上采样至4K，25队方案优于Lanczos且耗时<10ms。
+  abstract_zh: 该文是AIS 2024实时图像超分辨率（RTSR）挑战赛的基准介绍与优胜方案综述，任务为将AVIF压缩的540p图像在商用GPU上以4倍因子实时上采样至4K。测试集涵盖数字艺术、游戏与摄影等多样4K内容，并采用现代AVIF编解码器替代JPEG进行压缩。挑战赛共吸引160名参与者，25支队伍提交了代码与模型，方案针对内存效率与边缘设备运行时提出了新颖架构设计。所有方法在PSNR保真度上均超过Lanczos插值，单帧处理时间低于10ms。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 压缩图像的实时超分属于编码链路处理与增强（超分方向），非核心编码域，按基准仅收录摘要级。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 压缩AVIF图像的实时4K超分辨率：AIS 2024挑战赛综述
+relations:
+- type: same_topic
+  ref: paper:arxiv:2411.13362
+  note: 同为针对AV1压缩内容的实时超分辨率模型工作
+- type: same_topic
+  ref: paper:arxiv:2305.04844
+  note: 同为超分辨率与编解码器协同降码率的基准评测
+- type: same_topic
+  ref: paper:arxiv:2308.06570
+  note: 同为UHD分辨率下基于机器学习超分辨率的编码增强

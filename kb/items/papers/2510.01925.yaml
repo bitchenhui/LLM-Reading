@@ -1,0 +1,52 @@
+id: paper:arxiv:2510.01925
+type: paper
+title: 'Enhancing Large Language Model Reasoning with Reward Models: An Analytical Survey'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2510.01925v3
+  url: https://arxiv.org/abs/2510.01925
+  pdf_url: https://arxiv.org/pdf/2510.01925v3
+  venue: arXiv preprint
+time:
+  published: '2025-10-02'
+  collected: '2026-11-14'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:SelfImprovement
+  role: subject
+claims:
+- statement: 奖励模型在增强LLM推理中起关键作用：可在强化学习微调中提供训练信号，并在推理时从多个候选答案中优选最佳输出。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: RM的关键应用涵盖三个方面：推理时引导生成与最优输出选择、通过数据合成促进LLM迭代自改进、在RL微调中提供训练信号。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: RM在模型选择、泛化能力、评估方法与增强手段方面仍存在关键开放问题，作者基于既有研究与自身实证结果给出分析。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 系统梳理奖励模型的架构、训练与评估，及其在推理优选、数据合成自改进与RL微调训练信号中的应用与开放问题。
+  abstract_zh: 该综述系统介绍奖励模型（RM）的基础概念，包括其架构、训练方法与评估技术。进而梳理RM在LLM推理中的三类关键应用：推理时引导生成并从多候选中优选输出、支撑数据合成与LLM迭代自改进、在基于强化学习的微调中提供训练信号。作者结合已有研究与自身实证发现，讨论RM的选择、泛化、评估与增强等开放问题。分析旨在为RM的有效部署与进一步发展提供可操作建议。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 综述奖励模型增强LLM推理，其中数据合成与迭代自改进属自我改进AI域；非音视频编码核心域，按基准仅给初筛摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 利用奖励模型增强大语言模型推理：分析性综述
+relations:
+- type: same_topic
+  ref: paper:arxiv:2411.16579
+  note: 同属评判/奖励模型在测试时与训练时监督下增强LLM推理的主题
+- type: same_topic
+  ref: paper:arxiv:2407.19594
+  note: 均涉及以奖励模型（含LLM-as-a-Meta-Judge）驱动的自改进对齐
+- type: same_topic
+  ref: paper:arxiv:2412.14352
+  note: 同为LLM自改进综述，本篇聚焦奖励模型视角，二者互补

@@ -1,0 +1,74 @@
+id: paper:arxiv:2410.03608
+type: paper
+title: 'TICKing All the Boxes: Generated Checklists Improve LLM Evaluation and Generation'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2410.03608v1
+  url: https://arxiv.org/abs/2410.03608
+  pdf_url: https://arxiv.org/pdf/2410.03608v1
+  venue: arXiv preprint
+time:
+  published: '2024-10-04'
+  collected: '2026-11-14'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:SelfImprovement
+  role: uses
+claims:
+- statement: TICK 基于生成的指令专用检查表进行结构化评估，比 LLM 直接打分显著提升与人类偏好的一致性。
+  confidence: reported
+  metrics:
+  - name: LLM 判定与人类偏好完全一致率
+    value: 46.4% → 52.2%
+    scope: TICK 检查表评估 vs LLM 直接打分
+  evidence: abstract（初筛，未读全文）
+- statement: STICK 自细化可提升 LLM 推理生成质量。
+  confidence: reported
+  metrics:
+  - name: 绝对增益
+    value: +7.8%
+    scope: STICK 自细化，LiveBench 推理任务
+  evidence: abstract（初筛，未读全文）
+- statement: 基于 STICK 的 Best-of-N 选择可提升真实指令场景下的生成质量。
+  confidence: reported
+  metrics:
+  - name: 绝对提升
+    value: +6.3%
+    scope: STICK Best-of-N 选择，WildBench 数据集
+  evidence: abstract（初筛，未读全文）
+- statement: 向人类评估者提供 LLM 生成的检查表可提高标注者间一致性。
+  confidence: reported
+  metrics:
+  - name: 标注者间一致性
+    value: 0.194 → 0.256
+    scope: WildBench 指令上对 LLM 回复直接打分任务
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出TICK自动生成指令专用YES/NO检查表改进LLM评估，并经STICK自细化与Best-of-N选择提升生成质量。
+  abstract_zh: 针对偏好排序将多维度评估压缩为单一排名、且 LLM 判官可靠性不足的问题，提出 TICK：由 LLM 针对每条指令自动生成将其分解为一系列 YES/NO 问题的检查表，进行全自动、可解释的结构化评估。相比
+    LLM 直接打分，TICK 使 LLM 判断与人类偏好完全一致率从 46.4% 提升到 52.2%。进一步提出 STICK（Self-TICK）用于自我改进：自细化在 LiveBench 推理任务上获得
+    +7.8% 绝对提升，Best-of-N 选择在 WildBench 真实指令数据集上获得 +6.3% 绝对提升。此外，将检查表提供给人类评估者后，WildBench 标注者间一致性从 0.194
+    提升到 0.256，表明结构化、多维度自我改进是推进 LLM 能力的有效途径。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: LLM 评估协议与自细化改进工作，属自我改进 AI 域，非音视频核心域，按基准仅收录摘要级。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 逐项勾选：生成式检查表提升 LLM 评估与生成
+relations:
+- type: same_topic
+  ref: paper:arxiv:2608.24231
+  note: 同为基于评分标准/检查表约束的 LLM 判官自评估工作
+- type: same_topic
+  ref: paper:arxiv:2404.12253
+  note: 同属通过自我批评与细化实现 LLM 自我改进
+- type: same_topic
+  ref: paper:arxiv:2408.02666
+  note: 同属 LLM 自动化评估器/判官研究

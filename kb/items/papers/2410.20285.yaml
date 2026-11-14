@@ -1,0 +1,54 @@
+id: paper:arxiv:2410.20285
+type: paper
+title: 'SWE-Search: Enhancing Software Agents with Monte Carlo Tree Search and Iterative Refinement'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2410.20285v6
+  url: https://arxiv.org/abs/2410.20285
+  pdf_url: https://arxiv.org/pdf/2410.20285v6
+  venue: arXiv preprint
+time:
+  published: '2024-10-26'
+  collected: '2026-11-14'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: builds_on
+claims:
+- statement: SWE-Search在SWE-bench基准上相较无MCTS的标准开源智能体取得显著性能提升。
+  confidence: reported
+  metrics:
+  - name: 相对性能提升
+    value: 23%
+    scope: SWE-bench，五个模型相对无MCTS开源智能体基线
+  evidence: abstract（初筛，未读全文）
+- statement: 性能随推理时计算量（更深搜索）增加而扩展，提供无需更大模型或额外训练数据的改进路径。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 混合价值函数结合LLM数值估计与定性评估，可实现基于量化与自然语言双重反馈的策略迭代精炼。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 将MCTS与自改进机制结合的多智能体框架，在SWE-bench上使软件智能体性能相对提升23%。
+  abstract_zh: 论文提出SWE-Search，一个融合蒙特卡洛树搜索（MCTS）与自改进机制的多智能体框架，用于解决现有LLM软件智能体线性执行、无法回溯探索替代方案的问题。该框架扩展传统MCTS，引入混合价值函数，利用LLM同时进行数值价值估计与定性评估，形成基于定量与自然语言反馈的自我反馈循环。框架由SWE-Agent（自适应探索）、Value
+    Agent（迭代反馈）和Discriminator Agent（多智能体辩论协作决策）三个组件构成。在SWE-bench基准上，相较无MCTS的标准开源智能体，五个模型取得23%的相对性能提升。分析还表明性能随推理时算力增加（更深搜索）而扩展，无需更大模型或额外训练数据。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: LLM软件智能体的MCTS搜索与自改进框架，属self_improvement域而非音视频核心域，按基准仅收录摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: SWE-Search：用蒙特卡洛树搜索与迭代精炼增强软件智能体
+relations:
+- type: same_topic
+  ref: paper:arxiv:2410.06508
+  note: 同为MCTS驱动的LLM自改进方法
+- type: same_topic
+  ref: paper:arxiv:2405.00451
+  note: 同为MCTS增强LLM推理/迭代学习

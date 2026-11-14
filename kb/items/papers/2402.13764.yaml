@@ -1,0 +1,59 @@
+id: paper:arxiv:2402.13764
+type: paper
+title: 'CriticEval: Evaluating Large Language Model as Critic'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2402.13764v5
+  url: https://arxiv.org/abs/2402.13764
+  pdf_url: https://arxiv.org/pdf/2402.13764v5
+  venue: arXiv preprint
+time:
+  published: '2024-02-21'
+  collected: '2026-11-14'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:SelfImprovement
+  role: builds_on
+claims:
+- statement: CriticEval从四个维度、九类任务场景评测LLM批评能力，兼顾标量型与文本型批评并覆盖不同质量的回答
+  confidence: reported
+  metrics:
+  - name: 评测维度数
+    value: '4'
+    scope: CriticEval基准覆盖的批评维度
+  - name: 任务场景数
+    value: '9'
+    scope: CriticEval基准覆盖的任务场景
+  evidence: abstract（初筛，未读全文）
+- statement: 通过大规模人工标注的批评参考文本，GPT-4可可靠地评估文本型批评；实验验证了评测可靠性并显示开源LLM在批评能力上的潜力及批评数据集的有效性
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 批评能力与任务类型、回答质量和批评维度之间存在系统性关联
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出CriticEval基准，从四个维度、九类任务全面可靠地评测LLM识别并纠正回答缺陷的批评能力。
+  abstract_zh: 该文指出批评能力（LLM识别并纠正回答中缺陷的能力）对自我改进与可扩展监督至关重要，并提出CriticEval基准以全面、可靠地评测该能力。基准从四个维度、九类任务场景展开，同时评测标量型与文本型批评，并覆盖不同质量的回答。为保证可靠性，作者标注了大量批评参考文本，使GPT-4能够可靠地评判文本式批评。对开源与闭源LLM的大规模评测验证了该评测设置的可靠性，结果显示开源模型颇具潜力、批评数据集有效，且批评能力与任务类型、回答质量及批评维度之间存在值得关注的关联。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 面向LLM批评能力的评测基准，服务自我改进与可扩展监督，属自我改进域非核心成果，摘要级收录
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: CriticEval：将大语言模型作为批评者的评测基准
+relations:
+- type: same_topic
+  ref: paper:arxiv:2210.11610
+  note: 同为LLM自我改进主题，CriticEval评测的批评能力是自我改进循环中的关键环节
+- type: same_topic
+  ref: paper:arxiv:2604.06996
+  note: 同涉及LLM作为评估者/批评者的评测方法与可靠性问题
+- type: same_topic
+  ref: paper:arxiv:2608.24231
+  note: 同针对LLM判断者/批评类能力的评估与改进

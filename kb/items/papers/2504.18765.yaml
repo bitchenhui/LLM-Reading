@@ -1,0 +1,47 @@
+id: paper:arxiv:2504.18765
+type: paper
+title: A Vision for Auto Research with LLM Agents
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2504.18765v3
+  url: https://arxiv.org/abs/2504.18765
+  pdf_url: https://arxiv.org/pdf/2504.18765v3
+  venue: arXiv preprint
+time:
+  published: '2025-04-26'
+  collected: '2026-11-14'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: 提出Agent-Based Auto Research多智能体框架，用LLM与模块化智能体协作覆盖文献综述、构思、方法规划、实验、论文写作、审稿回复与成果传播的科研全流程
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 框架针对科研工作流碎片化、方法论专业能力不均与研究者认知过载三类问题提供系统化、可扩展的解决方案
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 初步探索显示Auto Research作为自我改进、AI驱动的科研范式可行，但论文未给出系统性实证结果
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出多智能体自动化科研框架，以LLM覆盖科研全生命周期，指向自我改进的AI驱动科研范式
+  abstract_zh: 论文提出Agent-Based Auto Research，一个结构化的多智能体框架，旨在自动化、协调并优化科学研究全生命周期。系统依托大语言模型与模块化智能体协作，覆盖文献综述、构思、方法规划、实验、论文写作、审稿回复与成果传播等主要科研阶段。框架针对工作流碎片化、方法论专业能力参差与认知过载等问题，提供系统化、可扩展的科研路径。初步探索表明Auto
+    Research作为自我改进、AI驱动的科研范式具有可行性与潜力。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 面向科研全流程的LLM多智能体自我改进愿景论文，与音视频技术无直接关联，非核心域故仅初筛收录
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 基于LLM智能体的自动化科研愿景
+relations:
+- type: same_topic
+  ref: paper:arxiv:2610.24454
+  note: 同为面向科学发现全流程的多智能体递归自我改进框架（MELD）

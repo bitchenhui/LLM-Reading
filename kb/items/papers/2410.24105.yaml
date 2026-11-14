@@ -1,0 +1,52 @@
+id: paper:arxiv:2410.24105
+type: paper
+title: 'Matchmaker: Self-Improving Large Language Model Programs for Schema Matching'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2410.24105v1
+  url: https://arxiv.org/abs/2410.24105
+  pdf_url: https://arxiv.org/pdf/2410.24105v1
+  venue: arXiv preprint
+time:
+  published: '2024-10-31'
+  collected: '2026-11-14'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: Matchmaker在真实医疗模式匹配基准上优于先前基于ML的模式匹配方法。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: Matchmaker通过构建合成上下文示范（synthetic in-context demonstrations）的优化方法，在无需标注示范的情况下实现零样本自改进。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: Matchmaker是由候选生成、精炼与置信度打分三部分组成的组合式语言模型程序。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 组合式LLM程序通过合成上下文示范实现零样本自改进的跨数据源模式匹配。
+  abstract_zh: 模式匹配旨在发现不同表结构与层级的异构数据源之间的属性对应关系，是构建可互操作ML就绪数据的关键，在医疗、金融、电商等领域应用广泛。由于模式间的结构与语义异构性，已有ML自动化方法要么依赖大量标注数据，要么零样本性能不佳。Matchmaker是由候选生成、精炼与置信度打分构成的组合式语言模型程序，并通过一种新的优化方法构建合成上下文示范来引导LLM推理过程，在无需标注示范的情况下实现零样本自改进。在真实医疗模式匹配基准上，Matchmaker的性能优于已有基于ML的方法。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 面向schema matching的LLM程序零样本自改进方法，属自我改进AI域，但与音视频技术无直接关联，按非核心域仅初筛收录。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: Matchmaker：面向模式匹配的自改进大语言模型程序
+relations:
+- type: same_topic
+  ref: paper:arxiv:2311.08921
+  note: 同为面向零样本结构化预测任务（该文NER、本文schema matching）的LLM自改进，均不依赖标注示范
+- type: same_topic
+  ref: paper:arxiv:2210.11610
+  note: 同属LLM自改进研究线，本文将自改进机制应用于组合式语言模型程序
+- type: same_topic
+  ref: paper:arxiv:2312.10003
+  note: 同为LLM程序/代理层面的自改进方法研究

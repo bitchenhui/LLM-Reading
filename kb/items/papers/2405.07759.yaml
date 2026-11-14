@@ -1,0 +1,53 @@
+id: paper:arxiv:2405.07759
+type: paper
+title: MADRL-Based Rate Adaptation for 360° Video Streaming with Multi-Viewpoint Prediction
+domain: streaming_delivery
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2405.07759v2
+  url: https://arxiv.org/abs/2405.07759
+  pdf_url: https://arxiv.org/pdf/2405.07759v2
+  venue: arXiv preprint
+time:
+  published: '2024-05-13'
+  collected: '2026-11-14'
+entities:
+- ref: concept:ABR
+  role: subject
+- ref: concept:QoE
+  role: measured_by
+claims:
+- statement: 结合多视点预测的MADRL（MAPPO/CTDE）ABR算法相比现有ABR方法显著提升QoE指标。
+  confidence: reported
+  metrics:
+  - name: QoE提升幅度
+    value: 85.5%
+    scope: 相对现有ABR方法的最高提升，口径为论文自定义QoE指标
+  evidence: abstract（初筛，未读全文）
+- statement: 将360°视频ABR问题形式化为Dec-POMDP，采用集中训练-分散执行的MAPPO算法求解。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 提出多模态时空注意力Transformer，将视点预测建模为分类问题，由历史轨迹生成多条带概率的视点轨迹以应对用户头部突变运动。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出多视点预测与MAPPO结合的MADRL码率自适应方法，360°视频QoE较现有ABR最高提升85.5%。
+  abstract_zh: 针对头部运动不确定性导致单一视点预测失效的问题，本文提出多模态时空注意力Transformer，将视点预测建模为分类问题，依据历史轨迹生成多条带概率的视点轨迹。在此基础上，将ABR问题形式化为去中心化部分可观测马尔可夫决策过程（Dec-POMDP），提出基于集中训练-分散执行（CTDE）框架的MAPPO多智能体强化学习码率自适应算法，在不同网络条件下最大化不同QoE目标。实验表明，相比现有ABR方法，所提方法将定义的QoE指标最高提升85.5%。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 360°视频ABR码率自适应属流媒体传输域，非核心编码域，按基准仅收summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 基于多智能体深度强化学习的360°视频流多视点预测码率自适应
+relations:
+- type: same_topic
+  ref: paper:arxiv:2309.04023
+  note: 同为360°视频视点与码率联合自适应（ABR）研究
+- type: same_topic
+  ref: paper:arxiv:2304.04637
+  note: 同为基于多智能体强化学习的ABR码率自适应方法

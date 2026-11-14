@@ -1,0 +1,59 @@
+id: paper:arxiv:2504.21024
+type: paper
+title: 'WebEvolver: Enhancing Web Agent Self-Improvement with Coevolving World Model'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2504.21024v2
+  url: https://arxiv.org/abs/2504.21024
+  pdf_url: https://arxiv.org/pdf/2504.21024v2
+  venue: arXiv preprint
+time:
+  published: '2025-04-23'
+  collected: '2026-11-14'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: 现有多数网络智能体自我改进方法在自主学习循环中会到达性能停滞点，根因在于网络环境探索不足与LLM预训练网页知识利用不充分
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 协同进化的世界模型LLM在真实网络环境中较现有自我进化智能体取得约10%的性能提升
+  confidence: reported
+  metrics:
+  - name: 性能提升
+    value: 10%
+    scope: Mind2Web-Live、WebVoyager、GAIA-web三个真实网络环境上相对现有自我进化智能体
+  evidence: abstract（初筛，未读全文）
+- statement: 世界模型LLM承担双重角色：作为虚拟网络服务器自生成指令式训练数据持续改进智能体策略，以及作为推理时的想象引擎通过前瞻模拟引导动作选择
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 该框架在不使用更强闭源模型蒸馏的情况下实现提升，且作者主张将世界模型集成进自主智能体框架是获得持续适应能力的必要条件
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 引入协同进化的世界模型LLM，兼任虚拟网络服务器与推理想象引擎，突破网络智能体自我改进的性能停滞。
+  abstract_zh: 针对网络智能体自我改进在自主学习循环中性能停滞的问题，作者提出引入与智能体协同进化的世界模型LLM。该世界模型基于当前观测与动作预测下一观测，一方面充当虚拟网络服务器自生成指令式训练数据以持续优化智能体策略，另一方面在推理时作为想象引擎进行前瞻模拟引导动作选择。在Mind2Web-Live、WebVoyager和GAIA-web三个真实网络环境中，相比现有自我进化智能体取得约10%的性能提升，且不依赖来自更强闭源模型的蒸馏。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: LLM网络智能体自我改进与协同进化世界模型，属self_improvement域而非核心编码域，按规则给summary_only
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: WebEvolver：用协同进化的世界模型增强网络智能体自我改进
+relations:
+- type: same_topic
+  ref: paper:arxiv:2210.11610
+  note: 同属LLM自我改进主题（Large Language Models Can Self-Improve），本文将其扩展到网络智能体场景
+- type: same_topic
+  ref: paper:arxiv:2610.28945
+  note: 同为世界模型辅助自我改进智能体的研究（Self-Improving Agents with World Model Predictive Paths）
+- type: same_topic
+  ref: paper:arxiv:2610.12789
+  note: 同为面向自我改进LLM智能体的世界模型研究（EvoBelief：可证伪世界模型）

@@ -1,0 +1,53 @@
+id: paper:arxiv:2401.03078
+type: paper
+title: 'StreamVC: Real-Time Low-Latency Voice Conversion'
+domain: audio_coding
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2401.03078v1
+  url: https://arxiv.org/abs/2401.03078
+  pdf_url: https://arxiv.org/pdf/2401.03078v1
+  venue: arXiv preprint
+time:
+  published: '2024-01-05'
+  collected: '2026-11-14'
+entities:
+- ref: concept:NeuralAudioCodec
+  role: subject
+claims:
+- statement: StreamVC 能在保留源语音内容与韵律的同时，将输出音色匹配为任意目标语音的音色。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: StreamVC 可在移动平台上以低延迟直接从输入信号生成波形，使通话、视频会议等实时通信场景中的语音匿名化成为可能。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 论文论证了以因果（流式）方式学习软语音单元的可行性。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 向模型提供白化处理的基频（F0）信息可在不泄露源语音音色信息的情况下提升音高稳定性。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 借鉴SoundStream神经音频编解码架构，实现移动端可运行、低延迟流式语音转换，支持通话中匿名化等场景。
+  abstract_zh: 论文提出StreamVC，一种流式语音转换方案，可在保留源语音内容与韵律的同时匹配任意目标语音的音色。与以往方法不同，它能在移动平台上以低延迟从输入信号直接生成目标波形，适用于通话、视频会议等实时通信场景，并可用于语音匿名化。设计上复用SoundStream神经音频编解码器的架构与训练策略，实现轻量高质量语音合成。作者验证了因果式学习软语音单元的可行性，并证明输入白化的基频（F0）信息可在不泄露源音色的前提下提升音高稳定性。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 基于神经音频编解码器的实时语音转换，属音频/语音编码相关应用域，非视频/图像编码核心域，按规则仅收录摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: StreamVC：实时低延迟语音转换
+relations:
+- type: same_topic
+  ref: paper:arxiv:2107.03312
+  note: StreamVC 明确复用 SoundStream 神经音频编解码器的架构与训练策略，属同一技术脉络
+- type: same_topic
+  ref: paper:arxiv:2305.05152
+  note: 同属语音转换（voice conversion）研究方向
+- type: same_topic
+  ref: paper:arxiv:2207.03067
+  note: 同属神经语音编码/合成相关研究

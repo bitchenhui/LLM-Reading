@@ -1,0 +1,46 @@
+id: paper:arxiv:2412.14841
+type: paper
+title: Helping LLMs Improve Code Generation Using Feedback from Testing and Static Analysis
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2412.14841v2
+  url: https://arxiv.org/abs/2412.14841
+  pdf_url: https://arxiv.org/pdf/2412.14841v2
+  venue: arXiv preprint
+time:
+  published: '2024-12-19'
+  collected: '2026-11-14'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:SelfImprovement
+  role: uses
+claims:
+- statement: 通用开源LLM生成的C代码经常不正确，且可能包含安全漏洞，而模型对错误与漏洞的自行检出能力都很差
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在提供失败测试或潜在漏洞报告作为反馈时，LLM展现出对缺陷代码的可观修复能力
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出用基准测试与静态分析反馈引导LLM自改进生成C代码的框架，发现其自查能力弱但据反馈修复能力可观
+  abstract_zh: 该框架首先让通用开源LLM生成C代码解决编程任务，再用基准测试评估生成代码的正确性，并用静态分析工具检测潜在安全漏洞。随后考察模型自我评估生成代码、发现错误与漏洞的能力，最后以失败测试报告与漏洞报告作为反馈，考察模型修复缺陷代码的能力。结果显示模型经常生成不正确代码且可能含安全问题，而对这两类问题的自行检出能力都很差。积极方面是，在提供失败测试或潜在漏洞信息时，模型展现出可观的修复能力，为提升LLM代码生成安全性指出了有前景的方向。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: LLM代码生成领域的测试/静态分析反馈自改进研究，属self_improvement收录域但与音视频技术无直接关联，按基准仅给summary_only
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 利用测试与静态分析反馈帮助大语言模型改进代码生成
+relations:
+- type: same_topic
+  ref: paper:arxiv:2310.02304
+  note: 同为面向代码生成的自我改进，STOP聚焦递归自改进代码生成，本文用测试与静态分析反馈引导迭代修复
+- type: same_topic
+  ref: paper:arxiv:2402.04858
+  note: 均利用执行反馈迭代提升LLM代码生成质量，同属反馈驱动自改进代码生成的技术路线

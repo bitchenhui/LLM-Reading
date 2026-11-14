@@ -1,0 +1,64 @@
+id: paper:arxiv:2409.10101
+type: paper
+title: Adaptive Segmentation-Based Initialization for Steered Mixture of Experts Image Regression
+domain: video_image_coding
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2409.10101v1
+  url: https://arxiv.org/abs/2409.10101
+  pdf_url: https://arxiv.org/pdf/2409.10101v1
+  venue: arXiv preprint
+time:
+  published: '2024-09-16'
+  collected: '2026-11-14'
+entities:
+- ref: concept:3DGS
+  role: subject
+- ref: concept:SuperResolution
+  role: uses
+claims:
+- statement: 同等重建质量下，新初始化方法所得模型的核数量较基线约减少50%。
+  confidence: reported
+  metrics:
+  - name: kernel数量削减
+    value: ~50%
+    scope: 同等质量下相比规则网格/K-Means/已有分割初始化
+  evidence: abstract（初筛，未读全文）
+- statement: 相比现有初始化方法，整体运行时间最多节省50%。
+  confidence: reported
+  metrics:
+  - name: 整体运行时间节省
+    value: up to 50%
+    scope: 相对现有初始化流程
+  evidence: abstract（初筛，未读全文）
+- statement: 初始化策略可按分割数高度并行，4块并行GPU即可实现初始化阶段50%的运行时间节省。
+  confidence: reported
+  metrics:
+  - name: 初始化阶段运行时间节省
+    value: 50%
+    scope: 4块并行GPU并行计算
+  evidence: abstract（初筛，未读全文）
+- statement: 客观与主观质量均显著优于规则网格初始化、K-Means初始化及已有分割初始化方法。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出自适应分割初始化为SMoE/RBF核回归配置核，较规则网格与K-Means初始化显著提升质量与稀疏度并加速收敛。
+  abstract_zh: 核图像回归方法（SMoE门控网络与带导向核的RBF网络）广泛应用于图像/光场压缩、Gaussian Splatting、去噪与超分，但其参数估计依赖梯度下降迭代优化，计算负担大。本文提出自适应分割初始化：将核分配到预计算的图像分割片段中，在每个片段内经迭代优化与核稀疏化推导最优核数量、位置与导向参数，再将局部片段信息聚合成可用于迭代优化的全局初始化。结果显示，相比广泛使用的规则网格初始化、K-Means初始化及已有分割初始化方法，客观与主观质量均大幅提升，模型稀疏度显著改善：同等质量下核数量约减少50%。整体运行时间最多节省50%，且该初始化策略可按分割数高度并行，4块并行GPU即可再获初始化阶段50%的运行时间节省。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 核图像回归（SMoE/RBF）初始化优化，服务于图像/光场压缩、3DGS、超分等核心编码链路任务，属核心域但为方法改进型工作，收summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 面向导向混合专家（SMoE）图像回归的自适应分割初始化方法
+relations:
+- type: same_topic
+  ref: paper:arxiv:2305.03485
+  note: 同属SMoE核图像回归研究线（实时图像建模与去噪的自编码设计）
+- type: same_topic
+  ref: paper:arxiv:2103.04201
+  note: SMoE是光场压缩代表性核回归方法，与基于VVC的光场图像编码同属光场压缩主题

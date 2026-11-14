@@ -1,0 +1,60 @@
+id: paper:arxiv:2503.17352
+type: paper
+title: 'OpenVLThinker: Complex Vision-Language Reasoning via Iterative SFT-RL Cycles'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2503.17352v3
+  url: https://arxiv.org/abs/2503.17352
+  pdf_url: https://arxiv.org/pdf/2503.17352v3
+  venue: arXiv preprint
+time:
+  published: '2025-03-21'
+  collected: '2026-11-14'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:SelfImprovement
+  role: uses
+claims:
+- statement: OpenVLThinker-7B在六个要求数学与通用推理的基准上稳定提升性能
+  confidence: reported
+  metrics:
+  - name: MathVista提升
+    value: 3.8%
+    scope: OpenVLThinker-7B相对基线，视觉数学推理基准
+  - name: EMMA提升
+    value: 2.4%
+    scope: OpenVLThinker-7B相对基线
+  - name: HallusionBench提升
+    value: 1.6%
+    scope: OpenVLThinker-7B相对基线
+  evidence: abstract（初筛，未读全文）
+- statement: 直接以SFT从文本推理模型蒸馏会因视觉定位不精确导致LVLM性能下降，而纯RL在7B级LVLM上因搜索空间过大难以涌现反思行为；交替SFT-RL能协同解决两者局限，其中SFT激发潜在推理行为并缩小RL搜索空间
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 交替SFT与强化学习的迭代循环使开源视觉语言模型涌现R1式思维链推理并形成持续自我改进。
+  abstract_zh: 论文提出OpenVLThinker，是首批展现复杂思维链推理能力的开源大型视觉语言模型（LVLM）之一。作者发现直接从文本推理模型（如DeepSeek R1）经SFT蒸馏到LVLM会因视觉定位不精确导致性能下降，而纯RL方法搜索空间过大，难以在7B级模型中涌现反思行为；
+    surprising的是，交替执行SFT与RL数轮迭代后取得显著提升。分析表明SFT有效激发基座模型潜在的推理行为并缩小RL搜索空间，后续RL阶段进一步精炼推理能力，同时产出更高质量的SFT数据用于继续自我改进。OpenVLThinker-7B在六个数学与通用推理基准上稳定提升，其中MathVista提高3.8%、EMMA提高2.4%、HallusionBench提高1.6%。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 通过迭代SFT-RL循环实现视觉语言模型的R1式推理与持续自我改进，属自我改进AI方向，但与音视频编码传输链路无直接技术关联。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: OpenVLThinker：通过迭代SFT-RL循环实现复杂视觉语言推理
+relations:
+- type: same_topic
+  ref: paper:arxiv:2210.08229
+  note: 同属LLM自我改进研究线：OpenVLThinker的SFT-RL循环通过自产数据实现持续自我提升
+- type: same_topic
+  ref: paper:arxiv:2411.04282
+  note: 同为激发模型潜在推理能力的自我改进方法：OpenVLThinker用SFT激发潜在推理行为，该文用Self-Rewarding解锁潜在推理
+- type: same_topic
+  ref: paper:arxiv:2410.02108
+  note: 同属通过自我改进将LLM/LVLM培养为推理泛化模型的研究

@@ -1,0 +1,49 @@
+id: paper:arxiv:2507.15675
+type: paper
+title: 'P3: Prompts Promote Prompting'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2507.15675v1
+  url: https://arxiv.org/abs/2507.15675
+  pdf_url: https://arxiv.org/pdf/2507.15675v1
+  venue: arXiv preprint
+time:
+  published: '2025-07-21'
+  collected: '2026-11-14'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:SelfImprovement
+  role: uses
+claims:
+- statement: 同时优化系统提示与用户提示的联合迭代策略优于仅单独优化任一组件的单边方法
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 离线优化得到的提示可进一步用于查询相关的在线提示优化，提升LLM在线表现
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: P3在Arena-hard、Alpaca-eval等通用任务及GSM8K、GPQA等推理任务上超越现有自动提示优化方法
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出P3自改进框架，迭代联合优化系统与用户提示，并以查询相关方式促进在线提示优化
+  abstract_zh: LLM应用常采用包含系统提示与用户提示的多组件提示，而现有自动优化工作多只单独优化其中一方，因两组件相互依赖而易致次优结果。本文提出P3自改进框架，通过迭代过程同时优化系统提示与用户提示。离线优化得到的提示进一步用于在线提示阶段，实现查询相关的提示优化。在通用任务（Arena-hard、Alpaca-eval）与推理任务（GSM8K、GPQA）上的大量实验表明，P3在自动提示优化领域取得更优性能，验证了整体性优化策略的有效性。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 论文属LLM自改进与自动提示优化方向，命中self_improvement领域，但与音视频核心域无关，按规则仅作初筛摘要
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: P3：提示促进提示
+relations:
+- type: same_topic
+  ref: paper:arxiv:2309.16797
+  note: 同为基于LLM的提示自改进/自动提示优化工作，与Promptbreeder的提示进化路线主题一致
+- type: same_topic
+  ref: paper:arxiv:2210.11610
+  note: 同属LLM自我改进研究方向

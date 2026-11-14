@@ -1,0 +1,55 @@
+id: paper:arxiv:2310.02304
+type: paper
+title: 'Self-Taught Optimizer (STOP): Recursively Self-Improving Code Generation'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2310.02304v3
+  url: https://arxiv.org/abs/2310.02304
+  pdf_url: https://arxiv.org/pdf/2310.02304v3
+  venue: arXiv preprint
+time:
+  published: '2023-10-03'
+  collected: '2026-11-14'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:RSI
+  role: uses
+claims:
+- statement: 以多轮查询LLM、按效用函数返回最优解的种子改进器对自身运行改进后，改进版改进器在多个下游任务上生成的程序性能显著优于种子改进器。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 语言模型在自改进过程中自发提出了多种策略，包括束搜索、遗传算法和模拟退火。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 由于语言模型本身未被修改，STOP并非完全递归自我改进，但证明了GPT-4具备编写'调用自身以改进自身'代码的能力。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 作者评估了生成代码绕过沙箱的频率，并讨论自我改进技术发展的安全关切。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 用注入LLM的脚手架程序改进自身，生成比种子改进器显著更优的下游任务程序。
+  abstract_zh: 论文提出STOP（Self-Taught Optimizer）：以一个种子'改进器'程序为起点，该程序通过多次查询语言模型（GPT-4）按给定效用函数改进输入程序并返回最优解。随后运行该种子改进器去改进它自身，在多个下游任务上，改进后的改进器生成的程序性能显著优于种子改进器。语言模型自发提出了多种自改进策略，包括束搜索、遗传算法和模拟退火。由于语言模型权重本身未被修改，作者强调这并非完全的递归自我改进，但证明了GPT-4能编写调用自身以改进自身的代码；论文同时讨论了自我改进技术的风险，并评估了生成代码绕过沙箱的频率。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 自我改进AI（RSI）领域的标志性工作，提出LLM脚手架程序递归自改进STOP框架，非音视频核心域故仅收录摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 自学优化器（STOP）：递归自改进的代码生成
+relations:
+- type: same_topic
+  ref: paper:arxiv:2309.16797
+  note: 同为LLM自指式自我改进工作，STOP在代码脚手架层面、Promptbreeder在提示层面实现递归自改进
+- type: same_topic
+  ref: paper:arxiv:2210.11610
+  note: 同属LLM自我改进主题，但该文通过模型自身训练改进，STOP仅改进外部代码脚手架而不改权重
+- type: same_topic
+  ref: paper:arxiv:2607.25886
+  note: RSI基准研究延续STOP开创的代码级递归自我改进范式

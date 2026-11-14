@@ -1,0 +1,49 @@
+id: paper:arxiv:2402.16181
+type: paper
+title: How Can LLM Guide RL? A Value-Based Approach
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2402.16181v1
+  url: https://arxiv.org/abs/2402.16181
+  pdf_url: https://arxiv.org/pdf/2402.16181v1
+  venue: arXiv preprint
+time:
+  published: '2024-02-25'
+  collected: '2026-11-14'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:SelfImprovement
+  role: subject
+claims:
+- statement: LINVIT将LLM引导作为正则化因子纳入价值型RL，可显著减少学习所需交互数据，尤其当理想策略与LLM先验策略差距较小时效果明显。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: SLINVIT简化价值函数构建并利用子目标降低搜索复杂度，是LINVIT的实用化版本。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在ALFWorld、InterCode、BlocksWorld三个交互环境上，该方法取得SOTA成功率，样本效率超过先前RL与LLM方法。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出LINVIT/SLINVIT，将LLM策略先验作为正则融入价值型RL，显著提升样本效率并在代理环境取得SOTA成功率。
+  abstract_zh: 该论文研究LLM提供的策略先验如何增强强化学习算法的样本效率。提出LINVIT算法，将LLM引导作为正则化因子纳入基于价值的RL，当理想策略与LLM先验策略差距较小时可大幅减少学习所需数据。进一步提出实用算法SLINVIT，简化价值函数构建并用子目标降低搜索复杂度。在ALFWorld、InterCode和BlocksWorld三个交互环境中，该方法取得SOTA成功率，样本效率也超过以往RL与LLM方法。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 研究LLM策略先验引导价值型RL以提升代理样本效率，属LLM代理自改进方向，与音视频核心技术无关，按非核心域仅摘要收录。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: LLM如何引导强化学习？一种基于价值的方法
+relations:
+- type: same_topic
+  ref: paper:arxiv:2305.14483
+  note: 同属利用强化学习改进语言模型自改进能力的研究方向
+- type: same_topic
+  ref: paper:arxiv:2312.10003
+  note: 同属多步推理LLM代理的自改进/反馈驱动迭代方法

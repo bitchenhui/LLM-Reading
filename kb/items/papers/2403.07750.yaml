@@ -1,0 +1,53 @@
+id: paper:arxiv:2403.07750
+type: paper
+title: 'Synth$^2$: Boosting Visual-Language Models with Synthetic Captions and Image Embeddings'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2403.07750v2
+  url: https://arxiv.org/abs/2403.07750
+  pdf_url: https://arxiv.org/pdf/2403.07750v2
+  venue: arXiv preprint
+time:
+  published: '2024-03-12'
+  collected: '2026-11-14'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: 在LLM生成字幕+文生图模型合成的图像嵌入数据上微调的VLM，可达到与仅用人工标注数据训练的模型相当的性能，且所需数据量显著更少
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 字幕的语义多样性与平衡性是决定下游性能的关键因素
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在图像嵌入空间合成图像比在像素空间合成快25%
+  confidence: reported
+  metrics:
+  - name: 合成速度提升
+    value: 25%
+    scope: 图像嵌入空间合成 vs 像素空间合成
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 用LLM生成字幕、文生图模型在嵌入空间合成图像，构造合成图文对训练VLM，性能可比人工标注数据且更省数据
+  abstract_zh: 针对高质量人工标注图文数据瓶颈，该方法先用LLM生成字幕，再用预训练文生图模型从字幕合成图像嵌入，构建合成图文对用于VLM微调。由于图像生成器能创造新的组合，合成嵌入可超越原始数据集的覆盖范围。实验表明，仅在合成数据上微调的VLM可达到与纯人工标注数据训练相当的下游性能，且所需数据量显著更少；对字幕的分析显示语义多样性与平衡性是关键因素。在图像嵌入空间合成比在像素空间合成快25%，作者认为该工作为自改进多模态模型开辟了方向。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 论文用LLM合成字幕与图像嵌入训练VLM，作者定位为自我改进多模态模型的探索，归入self_improvement域按规则仅给初筛摘要
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: Synth²：利用合成字幕与图像嵌入增强视觉-语言模型
+relations:
+- type: same_topic
+  ref: paper:arxiv:2210.11610
+  note: 同属通过模型自生成数据实现自我改进的研究方向（LLM自改进 vs 多模态合成数据训练）
+- type: same_topic
+  ref: paper:arxiv:2610.11345
+  note: 均以合成数据驱动模型自我进化/自训练

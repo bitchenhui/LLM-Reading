@@ -1,0 +1,46 @@
+id: paper:arxiv:2406.04824
+type: paper
+title: 'FunBO: Discovering Acquisition Functions for Bayesian Optimization with FunSearch'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2406.04824v2
+  url: https://arxiv.org/abs/2406.04824
+  pdf_url: https://arxiv.org/pdf/2406.04824v2
+  venue: arXiv preprint
+time:
+  published: '2024-06-07'
+  collected: '2026-11-14'
+entities:
+- ref: concept:FunSearch
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: FunBO基于FunSearch框架，利用LLM在仅能获取一组目标函数少量评估的条件下，学习以计算机代码表示的新型采集函数。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: FunBO发现的采集函数在训练函数分布之内和之外均能良好泛化，超越既有通用采集函数，并与针对特定函数类型定制或经迁移学习算法学得的采集函数性能相当。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 论文公开了所有被发现的采集函数的解析表达式，评估覆盖全局优化基准与超参数优化任务。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 基于FunSearch的LLM方法FunBO，从少量函数评估中自动发现可泛化的贝叶斯优化采集函数代码。
+  abstract_zh: 贝叶斯优化的样本效率高度依赖精心设计的采集函数（AF），而最优AF随优化问题差异显著，常需临时且针对问题的选择。该工作提出FunBO，一种基于FunSearch的LLM方法，利用对一组目标函数的少量函数评估，学习以计算机代码表示的新型采集函数。作者给出了所有被发现的采集函数的解析表达式，并在多个全局优化基准与超参数优化任务上评估。结果表明FunBO发现的AF在训练函数分布内外均泛化良好，性能超越成熟的通用采集函数，并与针对特定函数类型定制或经迁移学习算法学得的AF具有竞争力。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 典型的FunSearch系LLM算法自发现工作（自动设计贝叶斯优化采集函数），属自我改进AI域而非音视频核心域，按规则仅收录为初筛摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: FunBO：基于FunSearch发现贝叶斯优化的采集函数
+relations:
+- type: same_topic
+  ref: paper:arxiv:2401.02051
+  note: 同属LLM驱动的自动算法/启发式设计：EoH与FunBO均由LLM生成可执行算法代码并在基准任务上评估

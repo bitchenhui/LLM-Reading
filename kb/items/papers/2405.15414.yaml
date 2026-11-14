@@ -1,0 +1,55 @@
+id: paper:arxiv:2405.15414
+type: paper
+title: 'Luban: Building Open-Ended Creative Agents via Autonomous Embodied Verification'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2405.15414v1
+  url: https://arxiv.org/abs/2405.15414
+  pdf_url: https://arxiv.org/pdf/2405.15414v1
+  venue: arXiv preprint
+time:
+  published: '2024-05-24'
+  collected: '2026-11-14'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:SelfImprovement
+  role: subject
+claims:
+- statement: Luban 通过两级自主具身验证（3D 结构视觉验证 + 环境相关功能程序语用验证）弥合抽象评判标准与任务执行之间的反馈鸿沟，为开放式创意任务奠定自我改进基础。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在提出的 Minecraft 创意建造基准上，Luban 在可视性与实用性两方面均优于其他基线。
+  confidence: reported
+  metrics:
+  - name: 相对基线提升幅度
+    value: 33%-100%
+    scope: 多维人类评估与 Elo 评分，可视性与实用性维度，对比其他基线方法
+  evidence: abstract（初筛，未读全文）
+- statement: 真实机械臂上的额外演示验证了 Luban 生成物在物理世界的可迁移性。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出 Luban 智能体，用视觉与语用两级自主具身验证为 Minecraft 开放式创意建造任务提供自我改进反馈。
+  abstract_zh: 现有 LLM 智能体擅长目标明确的长程任务，但难以应对目标开放、评判标准抽象的创意任务，缺乏自我改进所需的反馈信号。为此提出面向 Minecraft 创意建造的 Luban
+    智能体，引入两级自主具身验证：其一，对智能体合成的 CAD 建模程序所产生的 3D 结构猜测进行视觉验证；其二，基于抽象标准生成并验证与环境相关的功能程序进行语用验证。多维人类评估与 Elo 评分显示，Luban
+    能在其提出的基准上完成多样化创意建造任务，在可视性与实用性维度上比其他基线高出 33% 到 100%。在真实机械臂上的演示进一步展示了其创造能力向物理世界迁移的潜力。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 论文属于 LLM 智能体自主具身验证与开放式创意任务自我改进方向（非音视频核心域），按非核心域默认收录为 summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: Luban：通过自主具身验证构建开放式创意智能体
+relations:
+- type: same_topic
+  ref: paper:arxiv:2403.01248
+  note: 同为 LLM 智能体通过生成程序合成/验证 3D 场景结构的研究
+- type: same_topic
+  ref: paper:arxiv:2312.10003
+  note: 同为面向多步任务 LLM 智能体的自我改进研究

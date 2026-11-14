@@ -1,0 +1,92 @@
+id: paper:arxiv:2509.18057
+type: paper
+title: 'Reinforced Generation of Combinatorial Structures: Hardness of Approximation'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2509.18057v7
+  url: https://arxiv.org/abs/2509.18057
+  pdf_url: https://arxiv.org/pdf/2509.18057v7
+  venue: arXiv preprint
+time:
+  published: '2025-09-22'
+  collected: '2026-11-14'
+entities:
+- ref: concept:AlphaEvolve
+  role: subject
+- ref: concept:LLM
+  role: builds_on
+claims:
+- statement: 证明 MAX-4-CUT 在 0.987 因子内近似为 NP 难，改进此前 SOTA 0.9883，gadget 归约由 AlphaEvolve 发现
+  confidence: reported
+  metrics:
+  - name: 不可近似因子
+    value: '0.987'
+    scope: MAX-4-CUT，NP难假设下，本文新界
+  - name: 此前SOTA不可近似因子
+    value: '0.9883'
+    scope: MAX-4-CUT，改进前最优结果
+  evidence: abstract（初筛，未读全文）
+- statement: 证明 MAX-3-CUT 在 0.9649 因子内近似为 NP 难，超过此前最优 gadget 归约结果 0.9853，但不及依赖定制 PCP 的 SOTA 16/17
+  confidence: reported
+  metrics:
+  - name: 不可近似因子
+    value: '0.9649'
+    scope: MAX-3-CUT，基于Håstad式标准PCP的gadget归约，本文新界
+  - name: 此前最优gadget结果
+    value: '0.9853'
+    scope: MAX-3-CUT，gadget归约类方法
+  - name: 总体SOTA不可近似因子
+    value: 16/17
+    scope: MAX-3-CUT，基于定制PCP
+  evidence: abstract（初筛，未读全文）
+- statement: 证明度量 TSP 最小代价环游在 111/110 因子内近似为 NP 难，改进 SOTA 117/116，新 gadget 由 AlphaEvolve 发现
+  confidence: reported
+  metrics:
+  - name: 不可近似因子
+    value: 111/110
+    scope: 度量TSP，NP难假设下，本文新界
+  - name: 此前SOTA不可近似因子
+    value: 117/116
+    scope: 度量TSP，改进前最优结果
+  evidence: abstract（初筛，未读全文）
+- statement: 改进 Kunisky-Yu 结果，对随机 3/4 正则图上 MAX-CUT 与 MAX-独立集的认证算法给出近乎最优的上界与（条件性）下界，下界基于构造多达 163 个顶点的近极值
+    Ramanujan 图
+  confidence: reported
+  metrics:
+  - name: 构造图顶点数
+    value: '163'
+    scope: 近极值Ramanujan图构造规模上限
+  evidence: abstract（初筛，未读全文）
+- statement: 用 AlphaEvolve 自身演化验证程序以降低候选构造的验证代价，部分 gadget 验证提速达一万倍
+  confidence: reported
+  metrics:
+  - name: 验证加速倍数
+    value: 10,000x
+    scope: 部分gadget的验证程序经AlphaEvolve演化后的提速上限
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 用 AlphaEvolve 演化出新 gadget 归约，改进 MAX-3/4-CUT 与度量 TSP 不可近似界，并自我演化出千倍加速的验证程序
+  abstract_zh: 论文证明 AI 方法可以推动复杂性理论进展：利用 AlphaEvolve（LLM 代码变异智能体）在三个方向获得新结果。其一，改进 Kunisky-Yu 的结论，对随机 3/4
+    正则图上 MAX-CUT 与 MAX-独立集的认证算法给出近乎最优的上界与（条件性）下界，其中下界靠构造多达 163 个顶点的近极值 Ramanujan 图；其二，用 AlphaEvolve 发现新
+    gadget 归约，证明 MAX-4-CUT 与 MAX-3-CUT 分别在 0.987 与 0.9649 因子内近似为 NP 难（前者超过 SOTA 0.9883，后者超过最优 gadget 结果
+    0.9853 但不及基于定制 PCP 的 16/17）；其三，证明度量 TSP 最小代价环游在 111/110 因子内近似为 NP 难，改进 SOTA 117/116。针对 AlphaEvolve
+    候选构造验证代价高昂的问题，作者用 AlphaEvolve 自身演化出更快的验证程序，部分 gadget 加速达 1 万倍，并给出可独立复用的模块化可靠性/完备性论证。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 以 AlphaEvolve（LLM 代码演化智能体）驱动数学/复杂性理论发现并自我演化验证程序，属自我改进AI域且为高价值代表作，非核心编码域故给 summary_only
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 组合结构的强化生成：不可近似性
+relations:
+- type: same_topic
+  ref: paper:arxiv:2509.07367
+  note: 同为自主代码演化与 NP 难度/复杂性理论交叉的研究
+- type: same_topic
+  ref: paper:arxiv:2401.02051
+  note: 同属 LLM 驱动的演化式算法/启发式自动设计研究线

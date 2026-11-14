@@ -1,0 +1,56 @@
+id: paper:arxiv:2509.20562
+type: paper
+title: 'SAMULE: Self-Learning Agents Enhanced by Multi-level Reflection'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2509.20562v1
+  url: https://arxiv.org/abs/2509.20562
+  pdf_url: https://arxiv.org/pdf/2509.20562v1
+  venue: arXiv preprint
+time:
+  published: '2025-09-24'
+  collected: '2026-11-14'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: SAMULE通过单轨迹（微观）、任务内（中观）、任务间（宏观）三级互补的反思合成训练回顾式语言模型，可在推理时生成高质量反思
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在TravelPlanner、NATURAL PLAN和Tau-bench三个基准上，SAMULE显著优于反思类基线方法
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 基于预见的反思机制使智能体能在交互场景中通过比较预测响应与实际响应来主动反思和适应
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 以失败为中心的学习与高质量反思合成是构建自改进LLM智能体的关键
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出基于回顾式语言模型的多级反思合成框架，让LLM智能体以失败为中心进行自我学习改进
+  abstract_zh: 针对LLM智能体因错误分析不足、依赖稀缺成功轨迹而难以生成有意义反思的问题，提出SAMULE自学习框架。其核心是多级反思合成训练的回顾式语言模型，涵盖三个互补层级：单轨迹学习（微观级纠错）、任务内学习（中观级跨多次尝试构建错误分类体系）、任务间学习（宏观级从同类错误中提取可迁移洞见），并微调该模型在推理时生成反思。框架进一步通过基于预见的反思机制扩展到交互场景，使智能体在用户交互中通过比较预测与实际响应来主动反思和适应。在TravelPlanner、NATURAL
+    PLAN和Tau-bench三个挑战性基准上显著优于反思类基线，凸显了精心设计的反思合成与以失败为中心的学习对构建自改进智能体的关键作用。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: LLM智能体自我改进领域的多级反思学习框架，属自我改进AI核心主题但与音视频技术无关，按非核心域规则仅作摘要收录
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: SAMULE：通过多级反思增强的自学习智能体
+relations:
+- type: same_topic
+  ref: paper:arxiv:2312.10003
+  note: 同为LLM多步推理智能体的自我改进研究
+- type: same_topic
+  ref: paper:arxiv:2609.38288
+  note: 同为通过长程反思任务推进自改进智能体的工作
+- type: same_topic
+  ref: paper:arxiv:2506.06698
+  note: 同为语言智能体基于经验复盘的自我改进方法

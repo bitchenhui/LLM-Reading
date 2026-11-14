@@ -1,0 +1,56 @@
+id: paper:arxiv:2402.10110
+type: paper
+title: 'Selective Reflection-Tuning: Student-Selected Data Recycling for LLM Instruction-Tuning'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2402.10110v2
+  url: https://arxiv.org/abs/2402.10110
+  pdf_url: https://arxiv.org/pdf/2402.10110v2
+  venue: arXiv preprint
+time:
+  published: '2024-02-15'
+  collected: '2026-11-14'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:SelfImprovement
+  role: uses
+claims:
+- statement: 教师LLM反思改进数据与学生LLM按兼容性选择样本的协同，可产生样本高效的指令微调数据
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 该方法作为数据增强与合成范式，无需收集全新数据即可普遍改进LLM微调与自改进
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 将该方法应用于Alpaca与WizardLM指令数据，训练得到更强、达顶级水平的7B和13B模型
+  confidence: reported
+  metrics:
+  - name: 模型规模
+    value: 7B
+    scope: Alpaca/WizardLM数据微调所得模型
+  - name: 模型规模
+    value: 13B
+    scope: Alpaca/WizardLM数据微调所得模型
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 教师LLM反思改进数据质量、学生LLM选择兼容样本，实现样本高效的指令微调与自改进。
+  abstract_zh: 论文提出Selective Reflection-Tuning范式，将教师LLM的反思与自省（用于提升既有数据质量）与学生LLM的数据选择能力结合，自动精炼已有指令微调数据，生成高质量且与学生模型兼容的指令-响应对。该教师-学生协同带来样本高效的指令微调，并作为数据增强与合成手段，无需收集全新数据即可改进LLM微调与自改进。作者在Alpaca和WizardLM数据上应用该方法，训练出更强且达到顶级水平的7B和13B模型。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: LLM指令微调数据回收与选择方法，属LLM自改进数据范式，非音视频核心技术，按非核心域收录。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 选择性反思微调：面向LLM指令微调的学生模型自选数据回收
+relations:
+- type: same_topic
+  ref: paper:arxiv:2310.11716
+  note: 本文为Reflection-Tuning（数据回收改进LLM指令微调）的选择性扩展版本，同一系列工作
+- type: same_topic
+  ref: paper:arxiv:2210.08229
+  note: 同属LLM自改进方向，利用模型自身生成/筛选数据提升模型能力

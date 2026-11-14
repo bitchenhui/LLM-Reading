@@ -1,0 +1,63 @@
+id: paper:arxiv:2508.14029
+type: paper
+title: 'Beyond Pass@1: Self-Play with Variational Problem Synthesis Sustains RLVR'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2508.14029v4
+  url: https://arxiv.org/abs/2508.14029
+  pdf_url: https://arxiv.org/pdf/2508.14029v4
+  venue: arXiv preprint
+time:
+  published: '2025-08-19'
+  collected: '2026-11-14'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: 普通RLVR训练在提升Pass@1的同时会消耗策略熵、降低生成多样性，从而限制代表推理能力上限的Pass@k表现。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: SvS在竞赛级AIME24基准上使Pass@32较标准RLVR取得18.3%的绝对增益。
+  confidence: reported
+  metrics:
+  - name: Pass@32绝对增益
+    value: 18.3%
+    scope: 竞赛级AIME24基准，对比标准RLVR
+  evidence: abstract（初筛，未读全文）
+- statement: SvS在竞赛级AIME25基准上使Pass@32较标准RLVR取得22.8%的绝对增益。
+  confidence: reported
+  metrics:
+  - name: Pass@32绝对增益
+    value: 22.8%
+    scope: 竞赛级AIME25基准，对比标准RLVR
+  evidence: abstract（初筛，未读全文）
+- statement: SvS在3B至32B模型规模的12个推理基准（含代码生成任务）上均一致有效，能维持策略熵并持续改进Pass@k。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出SvS自我博弈策略，在线合成参考答案不变的变分问题以维持策略熵，显著提升RLVR的Pass@k推理上限。
+  abstract_zh: 针对普通RLVR训练提升Pass@1的同时导致策略熵坍缩、生成多样性下降并限制Pass@k（推理能力上限）的问题，作者从训练题目视角分析，发现增广和更新训练问题有助于缓解熵坍缩。据此提出在线自我博弈变分问题合成策略SvS：利用策略自身的正确解答合成变体题目，并保证其参考答案与原题一致。该自我改进策略在训练中有效维持策略熵，Pass@k相比标准RLVR大幅提升并可持续改进，在竞赛级AIME24与AIME25上Pass@32分别取得18.3%和22.8%的绝对增益，并在代码生成任务上同样有效。在3B至32B不同规模模型的12个推理基准上的实验一致验证了方法的泛化性与稳健性。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: LLM自我改进/RLVR训练范式的重要工作（非视频编码核心域），按规则仅收录为初筛摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 超越Pass@1：基于变分问题合成的自我博弈持续支撑RLVR训练
+relations:
+- type: same_topic
+  ref: paper:arxiv:2210.11610
+  note: 同属LLM自我改进方向：均研究不依赖外部监督的LLM自我提升机制
+- type: same_topic
+  ref: paper:arxiv:2508.05004
+  note: 同为通过自生成训练问题/数据支撑推理LLM自我进化的方法（R-Zero零数据自我进化 vs SvS变分问题合成）
+- type: same_topic
+  ref: paper:arxiv:2609.34975
+  note: 同为自我改进LLM推理能力的研究，均关注推理训练的持续性与增益

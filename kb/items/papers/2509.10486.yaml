@@ -1,0 +1,57 @@
+id: paper:arxiv:2509.10486
+type: paper
+title: 'SABR: A Stable Adaptive Bitrate Framework Using Behavior Cloning Pretraining and Reinforcement
+  Learning Fine-Tuning'
+domain: streaming_delivery
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2509.10486v1
+  url: https://arxiv.org/abs/2509.10486
+  pdf_url: https://arxiv.org/pdf/2509.10486v1
+  venue: arXiv preprint
+time:
+  published: '2025-08-30'
+  collected: '2026-11-14'
+entities:
+- ref: concept:ABR
+  role: subject
+- ref: concept:QoE
+  role: measured_by
+claims:
+- statement: SABR采用行为克隆预训练加强化学习微调的两阶段训练，在宽分布网络轨迹上学习比仅用有限轨迹训练的现有方法更稳定。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在自建ABRBench-3G和ABRBench-4G+基准（含专用OOD测试集）上，SABR相对Pensieve、Comyco、NetLLM取得最佳平均排名。
+  confidence: reported
+  metrics:
+  - name: 平均排名
+    value: 最佳（best average rank）
+    scope: ABRBench-3G/ABRBench-4G+，对比Pensieve、Comyco、NetLLM
+  evidence: abstract（初筛，未读全文）
+- statement: 现有学习型ABR方法因训练轨迹分布有限，在分布外（OOD）网络场景下泛化差。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出BC预训练+RL微调的ABR训练框架与宽分布基准，提升对未见网络条件的泛化稳定性。
+  abstract_zh: 针对现有学习型ABR方法依赖有限网络轨迹训练、在分布外（OOD）真实网络下泛化差的问题，提出SABR训练框架，采用行为克隆（BC）预训练结合强化学习（RL）微调。同时构建ABRBench-3G与ABRBench-4G+基准，提供宽覆盖训练轨迹和专用OOD测试集用于评估鲁棒性。实验表明，在所提基准上SABR相对Pensieve、Comyco、NetLLM取得最佳平均排名，说明该框架能在宽分布网络条件下更稳定地学习，并提升对未见网络条件的泛化能力。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 学习型ABR码率自适应研究，属流媒体传输域（非核心编码域），按基准给summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: SABR：基于行为克隆预训练与强化学习微调的稳定自适应码率框架
+relations:
+- type: same_topic
+  ref: paper:arxiv:2402.02338
+  note: NetLLM是SABR实验中的直接对比基线，同属网络自适应学习决策
+- type: same_topic
+  ref: paper:arxiv:2304.04637
+  note: 同为强化学习驱动的ABR码率自适应研究
+- type: same_topic
+  ref: paper:arxiv:2308.03643
+  note: 均面向ABR自适应码率控制，主题同属流媒体传输

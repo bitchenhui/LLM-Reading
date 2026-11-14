@@ -1,0 +1,61 @@
+id: paper:arxiv:2410.00037
+type: paper
+title: 'Moshi: a speech-text foundation model for real-time dialogue'
+domain: audio_coding
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2410.00037v2
+  url: https://arxiv.org/abs/2410.00037
+  pdf_url: https://arxiv.org/pdf/2410.00037v2
+  venue: arXiv preprint
+time:
+  published: '2024-09-17'
+  collected: '2026-11-14'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:NeuralAudioCodec
+  role: uses
+claims:
+- statement: Moshi 是首个实时全双工语音大语言模型，将口语对话直接建模为语音到语音生成。
+  confidence: reported
+  metrics:
+  - name: 理论延迟
+    value: 160ms
+    scope: Moshi 全双工语音对话系统的理论交互延迟
+  - name: 实测延迟
+    value: 200ms
+    scope: 实际运行下的端到端交互延迟
+  evidence: abstract（初筛，未读全文）
+- statement: Inner Monologue 方法先预测时间对齐的文本 token 作为音频 token 前缀，显著提升生成语音的语言质量，并可同时支持流式语音识别与文本到语音合成。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 以语音到语音生成取代 VAD+ASR+对话+TTS 级联流水线，并用并行流分别建模自身与用户语音，免除显式说话人轮次分割，可建模重叠语音、打断与插话等任意对话动态。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 首个实时全双工语音对话基础模型，以神经音频编解码器 token 做语音到语音生成，实测延迟约 200ms。
+  abstract_zh: Moshi 将口语对话重新建模为语音到语音的生成任务，取代 VAD、语音识别、文本对话与 TTS 的级联流水线，消除多秒级交互延迟。模型以文本语言模型为骨干，从神经音频编解码器的残差量化器直接生成语音
+    token，并用并行流分别建模自身与用户语音，从而无需显式说话人轮次分割，可处理重叠语音、打断与插话等任意对话动态。作者进一步提出 Inner Monologue 方法，先预测时间对齐的文本 token
+    作为音频 token 前缀，显著提升生成语音的语言质量，并可同时提供流式语音识别与文本到语音合成。最终模型是首个实时全双工语音大语言模型，理论延迟 160ms、实测约 200ms，并已开源发布。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 以神经音频编解码器残差量化 token 为基础做实时全双工语音对话生成，属语音编码/语音处理域而非核心视频编码域，按规则仅收录摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: Moshi：面向实时对话的语音-文本基础模型
+relations:
+- type: same_topic
+  ref: paper:arxiv:2107.03312
+  note: Moshi 从神经音频编解码器的残差量化器生成语音 token，与 SoundStream 同属端到端 RVQ 音频 token 化路线
+- type: same_topic
+  ref: paper:arxiv:2409.12117
+  note: 同为面向语音 LLM 训练与推理的神经语音编解码器方向
+- type: same_topic
+  ref: paper:arxiv:2401.03078
+  note: 同为实时低延迟语音生成/处理系统方向

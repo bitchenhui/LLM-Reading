@@ -1,0 +1,47 @@
+id: paper:arxiv:2505.12348
+type: paper
+title: 'Reasoning-CV: Fine-tuning Powerful Reasoning LLMs for Knowledge-Assisted Claim Verification'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2505.12348v1
+  url: https://arxiv.org/abs/2505.12348
+  pdf_url: https://arxiv.org/pdf/2505.12348v1
+  venue: arXiv preprint
+time:
+  published: '2025-05-18'
+  collected: '2026-11-14'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:SelfImprovement
+  role: uses
+claims:
+- statement: CoT-Verify范式通过为原始复杂声明生成思维链验证路径，规避了Decompose-Then-Verify范式在声明分解过程中引入的错误
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: Reasoning-CV仅基于8B预训练LLM微调，即可在知识辅助声明验证上超越现有Decompose-Then-Verify方法以及GPT-4o+CoT、o1-preview等黑盒大模型
+  confidence: reported
+  metrics:
+  - name: 基座模型参数量
+    value: 8B
+    scope: Reasoning-CV所微调的预训练LLM
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出CoT-Verify范式与Reasoning-CV两阶段微调（SFT+自我改进DPO），8B模型声明验证超越GPT-4o+CoT与o1-preview
+  abstract_zh: 针对现有LLM声明验证普遍采用的'分解再验证'范式在子声明分解环节易引入错误的问题，作者提出CoT-Verify范式：利用LLM推理能力为原始复杂声明生成思维链验证路径，无需拆分为子声明并分步验证。基于该范式提出Reasoning-CV微调方法，包含监督微调（SFT）与自我改进直接偏好优化（DPO）两个阶段。仅使用8B预训练LLM，Reasoning-CV在知识辅助声明验证任务上超越现有Decompose-Then-Verify方法及GPT-4o+CoT、o1-preview等强大黑盒模型。代码已开源。
+assessment:
+  relevance: low
+  decision: summary_only
+  reason: 属LLM自我改进（SFT+自我改进DPO）方法论文，但任务为声明验证/反虚假信息，与音视频技术无直接关联，仅初筛收录
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: Reasoning-CV：微调强大推理大语言模型以实现知识辅助声明验证
+relations:
+- type: same_topic
+  ref: paper:arxiv:2210.08229
+  note: 同属LLM自我改进研究线，本文以自我改进DPO阶段提升模型验证能力

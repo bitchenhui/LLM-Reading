@@ -1,0 +1,69 @@
+id: paper:arxiv:2402.14809
+type: paper
+title: 'CriticBench: Benchmarking LLMs for Critique-Correct Reasoning'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2402.14809v4
+  url: https://arxiv.org/abs/2402.14809
+  pdf_url: https://arxiv.org/pdf/2402.14809v4
+  venue: arXiv preprint
+time:
+  published: '2024-02-22'
+  collected: '2026-11-14'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:SelfImprovement
+  role: subject
+claims:
+- statement: CriticBench 涵盖五个推理域、汇编 15 个数据集、纳入 3 个 LLM 家族的回答，并用其评估了 17 个 LLM 的生成-批评-纠正（GQC）推理能力。
+  confidence: reported
+  metrics:
+  - name: 推理域数量
+    value: '5'
+    scope: CriticBench 覆盖数学、常识、符号、代码、算法五个推理域
+  - name: 数据集数量
+    value: '15'
+    scope: CriticBench 汇编的数据集总数
+  - name: 评估模型数量
+    value: '17'
+    scope: 使用 CriticBench 评测的 LLM 数量
+  - name: LLM 家族数量
+    value: '3'
+    scope: 纳入基准回答来源的 LLM 家族数
+  evidence: abstract（初筛，未读全文）
+- statement: GQC 三种能力之间呈线性关系，批评导向训练可显著提升模型整体表现。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 纠正有效性因任务类型而异，逻辑导向任务更易通过批评得到修正。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: GQC 知识不一致性随模型规模增大而降低。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 存在跨模型批评不对称现象：更强模型更善于批评更弱模型，但弱模型在自批评上有时可超越更强的模型。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出 CriticBench 基准，系统评估 17 个 LLM 在五大推理域的生成-批评-纠正（GQC）能力及相互批评规律。
+  abstract_zh: 论文提出 CriticBench，一个评估 LLM 批评并修正自身推理能力的综合基准，涵盖数学、常识、符号、代码与算法五个推理域，汇编 15 个数据集并纳入三个 LLM 家族的回答。作者用该基准评测
+    17 个 LLM 的生成、批评、纠正（GQC）三类推理。研究发现 GQC 能力之间存在线性关系，批评导向训练能显著提升表现；纠正有效性因任务而异，逻辑导向任务更易被纠正。此外，GQC 知识不一致性随模型规模增大而降低；强模型更善于批评弱模型，而弱模型在自批评上有时反而胜过更强的模型。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: LLM 批评-纠正（GQC）推理基准，直接支撑批评驱动自我改进研究，属自我改进域而非音视频核心域。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: CriticBench：面向批评-纠正推理的 LLM 基准测试
+relations:
+- type: same_topic
+  ref: paper:arxiv:2402.13764
+  note: 同为评估 LLM 批评能力的基准（CriticEval），主题直接相关
+- type: same_topic
+  ref: paper:arxiv:2210.11610
+  note: 均属 LLM 自我改进研究方向，批评-纠正是自我改进的关键环节

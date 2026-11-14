@@ -1,0 +1,70 @@
+id: paper:arxiv:2506.07081
+type: paper
+title: Streaming Endpointer for Spoken Dialogue using Neural Audio Codecs and Label-Delayed Training
+domain: audio_coding
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2506.07081v2
+  url: https://arxiv.org/abs/2506.07081
+  pdf_url: https://arxiv.org/pdf/2506.07081v2
+  venue: arXiv preprint
+time:
+  published: '2025-06-08'
+  collected: '2026-11-14'
+entities:
+- ref: concept:NeuralAudioCodec
+  role: subject
+- ref: concept:LLM
+  role: builds_on
+claims:
+- statement: 在固定160ms中位延迟下，采用NAC特征并结合标签延迟训练的端点检测器，相对基线在单流配置中实现42.7%的相对截断错误降低。
+  confidence: reported
+  metrics:
+  - name: 相对截断错误降低
+    value: 42.7%
+    scope: 单流端点检测器 vs 基线，固定中位延迟160ms
+  - name: 中位延迟
+    value: 160 ms
+    scope: 评估固定的运行点
+  evidence: abstract（初筛，未读全文）
+- statement: 双流端点检测配置下，NAC与标签延迟组合方法相对基线实现37.5%的相对截断错误降低。
+  confidence: reported
+  metrics:
+  - name: 相对截断错误降低
+    value: 37.5%
+    scope: 双流配置 vs 基线，固定中位延迟160ms
+  evidence: abstract（初筛，未读全文）
+- statement: 将所提端点检测器与基于编解码器的预训练语音大语言模型集成后，系统中位响应时间缩短1200ms，截断错误降低35%。
+  confidence: reported
+  metrics:
+  - name: 中位响应时间改善
+    value: 1200 ms
+    scope: 集成基于编解码器的预训练语音LLM的端到端对话系统
+  - name: 截断错误降低
+    value: 35%
+    scope: 集成语音LLM的端到端对话系统
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 用流式低码率神经音频编解码器特征与标签延迟训练，实现低延迟、低截断错误的多轮对话端点检测。
+  abstract_zh: 论文提出面向多轮对话系统的实时语音端点检测方法，以流式低比特率神经音频编解码器（NAC）特征替代传统基于频谱的音频特征。为降低截断错误，进一步引入新的标签延迟训练方案。在固定160ms中位延迟下，NAC结合标签延迟的方法相对基线在单流配置中取得42.7%的相对截断错误降低，双流配置取得37.5%。该方法还可高效集成到基于编解码器的预训练语音大语言模型中，使其中位响应时间缩短1200ms、截断错误降低35%。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 语音对话端点检测属于音频/语音编码域（基于神经音频编解码器特征），非核心视频图像编码域，按基准仅初筛收录。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 基于神经音频编解码器与标签延迟训练的语音对话流式端点检测器
+relations:
+- type: same_topic
+  ref: paper:arxiv:2107.03312
+  note: SoundStream为端到端神经音频编解码器代表工作，本文基于NAC特征做端点检测，同属神经音频编解码器方向
+- type: same_topic
+  ref: paper:arxiv:2409.12117
+  note: 低帧率语音编解码器面向语音LLM训练与推理，与本文服务语音LLM对话系统的NAC端点检测场景相关
+- type: same_topic
+  ref: paper:arxiv:2410.00037
+  note: Moshi为基于编解码器的实时语音对话基础模型，与本文低延迟语音对话端点检测应用场景相关

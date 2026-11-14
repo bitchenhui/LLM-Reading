@@ -1,0 +1,56 @@
+id: paper:arxiv:2403.01248
+type: paper
+title: 'SceneCraft: An LLM Agent for Synthesizing 3D Scene as Blender Code'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2403.01248v1
+  url: https://arxiv.org/abs/2403.01248
+  pdf_url: https://arxiv.org/pdf/2403.01248v1
+  venue: arXiv preprint
+time:
+  published: '2024-03-02'
+  collected: '2026-11-14'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:SelfImprovement
+  role: uses
+claims:
+- statement: SceneCraft可通过场景图蓝图、数值约束布局与视觉反馈迭代，渲染包含多达一百个3D资产的复杂场景。
+  confidence: reported
+  metrics:
+  - name: 单场景3D资产数量上限
+    value: '100'
+    scope: 单次渲染场景内可控资产规模
+  evidence: abstract（初筛，未读全文）
+- statement: 库学习机制将常用脚本函数编译为可复用库，使系统在不进行昂贵LLM参数调优的情况下实现持续自我改进。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在约束遵从度与人类主观评估上，SceneCraft优于现有基于LLM的场景合成智能体。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 系统可从Sintel电影重建细节丰富的3D场景，并将生成场景作为中间控制信号引导视频生成模型。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出LLM智能体SceneCraft，将文本转为Blender脚本生成复杂3D场景，借助函数库学习实现无需参数调优的持续自我改进。
+  abstract_zh: SceneCraft是一个LLM智能体，将文本描述转换为可执行的Blender Python脚本，渲染包含多达一百个3D资产的复杂场景。系统先将场景图建模为蓝图，刻画资产间空间关系，再将关系翻译为布局数值约束并生成代码，随后利用GPT-V等视觉-语言基础模型分析渲染图像、迭代修正场景。其库学习机制将常用脚本函数编译为可复用库，在无需昂贵LLM参数调优的情况下实现持续自我改进。评估显示其在约束遵从度和人类评估上优于现有LLM智能体，并展示了从Sintel电影重建3D场景、以生成场景为控制信号引导视频生成模型的应用潜力。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: LLM智能体通过函数库学习实现持续自我改进的3D场景代码合成工作，属自改进AI域但与音视频核心链路关联较弱。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: SceneCraft：将3D场景合成为Blender代码的LLM智能体
+relations:
+- type: same_topic
+  ref: paper:arxiv:2402.04858
+  note: 同属LLM通过代码生成与经验复用实现自我改进的智能体研究（CodeIt的自我改进代码生成）
+- type: same_topic
+  ref: paper:arxiv:2310.02304
+  note: 同为递归自改进代码生成路线（STOP），SceneCraft的库学习机制与之主题相近

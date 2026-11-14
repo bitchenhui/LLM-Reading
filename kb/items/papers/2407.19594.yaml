@@ -1,0 +1,61 @@
+id: paper:arxiv:2407.19594
+type: paper
+title: 'Meta-Rewarding Language Models: Self-Improving Alignment with LLM-as-a-Meta-Judge'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2407.19594v2
+  url: https://arxiv.org/abs/2407.19594
+  pdf_url: https://arxiv.org/pdf/2407.19594v2
+  venue: arXiv preprint
+time:
+  published: '2024-07-28'
+  collected: '2026-11-14'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: 在自我改进流程中加入Meta-Rewarding环节（模型评判自己的评判结果），可同时提升模型的评判能力与指令遵循能力，且无需人工监督。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: Llama-3-8B-Instruct 经 Meta-Rewarding 迭代训练后，在 AlpacaEval 2 上的胜率从 22.9% 提升至 39.4%。
+  confidence: reported
+  metrics:
+  - name: AlpacaEval 2 win rate
+    value: 22.9%→39.4%
+    scope: Llama-3-8B-Instruct，AlpacaEval 2 基准，自我改进迭代前后对比
+  evidence: abstract（初筛，未读全文）
+- statement: Llama-3-8B-Instruct 经 Meta-Rewarding 迭代训练后，在 Arena-Hard 上的胜率从 20.6% 提升至 29.1%。
+  confidence: reported
+  metrics:
+  - name: Arena-Hard win rate
+    value: 20.6%→29.1%
+    scope: Llama-3-8B-Instruct，Arena-Hard 基准，自我改进迭代前后对比
+  evidence: abstract（初筛，未读全文）
+- statement: 仅改进回复生成而忽视评判能力提升的现有 self-rewarding 方法会在迭代训练中快速饱和，Meta-Rewarding 旨在解决该问题。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出Meta-Rewarding：模型对自身评判再作评判，无监督下同时提升评判与指令遵循能力。
+  abstract_zh: 现有self-rewarding方法让LLM评判自身回复并以此作为奖励训练，但只关注回复生成能力，导致迭代训练快速饱和。本文在自我改进流程中引入Meta-Rewarding环节，模型对自己生成的评判再进行评判，并利用该反馈改进评判技能。这一无监督方法同时提升了模型的评判能力和指令遵循能力：Llama-3-8B-Instruct在AlpacaEval
+    2上的胜率从22.9%提升至39.4%，在Arena-Hard上从20.6%提升至29.1%。结果强烈表明无需人工监督的自我改进具有可行性。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: LLM 元裁判式自我改进对齐的代表性工作（Meta-Rewarding），属自我改进 AI 核心主题，但非音视频编码核心域，按基准给 summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 元奖励语言模型：基于LLM元裁判的自我改进对齐
+relations:
+- type: same_topic
+  ref: paper:arxiv:2210.08229
+  note: 同为LLM自我改进主题：Large Language Models Can Self-Improve 与本文Meta-Rewarding同属无监督LLM自提升路线
+- type: same_topic
+  ref: paper:arxiv:2309.00267
+  note: RLAIF vs. RLHF 探讨AI反馈替代人工反馈做对齐，与本文用LLM元裁判生成奖励信号同属AI反馈对齐方向

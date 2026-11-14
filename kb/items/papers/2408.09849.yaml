@@ -1,0 +1,60 @@
+id: paper:arxiv:2408.09849
+type: paper
+title: Importance Weighting Can Help Large Language Models Self-Improve
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2408.09849v2
+  url: https://arxiv.org/abs/2408.09849
+  pdf_url: https://arxiv.org/pdf/2408.09849v2
+  venue: arXiv preprint
+time:
+  published: '2024-08-19'
+  collected: '2026-11-14'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:SelfImprovement
+  role: subject
+claims:
+- statement: 在按答案正确性过滤之外，剔除'正确但分布偏移程度(DSE)高'的自生成样本也能改善LLM自我改进结果。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 借鉴重要性加权提出DS weight指标近似DSE，并与自一致性结合，综合过滤自生成训练样本。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 仅需很小的验证集计算DS weight即可显著提升现有LLM自我改进方法的推理能力。
+  confidence: reported
+  metrics:
+  - name: 有效集规模
+    value: up to 5%
+    scope: 占训练集的比例，用于计算DS weight
+  evidence: abstract（初筛，未读全文）
+- statement: 该方法性能与依赖预训练奖励模型外部监督的方法相当。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出DS weight近似分布偏移程度，与自一致性结合过滤自生成样本，提升LLM自我改进的推理能力。
+  abstract_zh: LLM自我改进范式在自生成数据上微调模型，但数据质量不稳定，现有工作主要按答案正确性过滤。本文证明过滤掉'正确但分布偏移程度(DSE)高'的样本同样能改善自我改进效果。由于真实样本分布通常不可得，作者借鉴重要性加权方法提出DS
+    weight指标来近似DSE，并与自一致性结合综合过滤自生成样本。实验显示仅需不超过训练集5%规模的小验证集计算DS weight，即可显著提升现有LLM自我改进方法的推理能力，性能与依赖预训练奖励模型外部监督的方法相当。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: LLM自我改进方向的典型工作（自生成数据过滤+重要性加权），属自我改进AI域，按收录基准仅给summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 重要性加权可以帮助大语言模型自我改进
+relations:
+- type: same_topic
+  ref: paper:arxiv:2210.11610
+  note: 同属LLM自我改进（Large Language Models Can Self-Improve）主题脉络
+- type: same_topic
+  ref: paper:arxiv:2305.14483
+  note: 同为语言模型自我改进方法研究
+- type: same_topic
+  ref: paper:arxiv:2404.12253
+  note: 同属LLM自我改进（想象/搜索/批评式数据利用）方向

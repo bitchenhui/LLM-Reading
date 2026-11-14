@@ -1,0 +1,63 @@
+id: paper:arxiv:2504.17967
+type: paper
+title: LLM Agent Swarm for Hypothesis-Driven Drug Discovery
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2504.17967v1
+  url: https://arxiv.org/abs/2504.17967
+  pdf_url: https://arxiv.org/pdf/2504.17967v1
+  venue: arXiv preprint
+time:
+  published: '2025-04-24'
+  collected: '2026-11-14'
+entities:
+- ref: concept:LLM
+  role: uses
+- ref: concept:SelfImprovement
+  role: subject
+claims:
+- statement: 药物研发中超过90%的候选分子在临床评估阶段失败，单个获批疗法的开发成本常超过10亿美元。
+  confidence: reported
+  metrics:
+  - name: 临床失败率
+    value: '>90%'
+    scope: 候选分子在临床评估中的失败比例（摘要背景陈述）
+  - name: 开发成本
+    value: '>10亿美元'
+    scope: 每个获批疗法的研发成本（摘要背景陈述）
+  evidence: abstract（初筛，未读全文）
+- statement: PharmaSwarm通过共享记忆层沉淀已验证洞见并随时间微调底层子模型，形成自改进系统。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 中央Evaluator LLM依据生物学合理性、新颖性、in silico疗效与安全性对智能体提案持续排序。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 作者设计了四层验证流程：回溯基准测试、独立计算实验、实验测试与专家用户研究，以保证透明性与可复现性。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出PharmaSwarm多LLM智能体框架，协同提出并验证药物靶点与先导化合物假设，借共享记忆与子模型微调实现自改进。
+  abstract_zh: 提出PharmaSwarm统一多智能体框架，编排专业化LLM智能体对新型药物靶点与先导化合物进行假设提出、验证与迭代精炼。各智能体配备基因组/表达自动分析、生物医学知识图谱、通路富集与网络仿真、可解释结合亲和力预测等专属工具，中央Evaluator
+    LLM按生物学合理性、新颖性、计算疗效与安全性持续排序提案。共享记忆层沉淀已验证洞见并随时间微调底层子模型，构成自改进系统；框架可部署于低代码平台或Kubernetes微服务，支持文献驱动发现、组学靶点识别与市场导向药物重定位。作者另提出四层验证流程（回溯基准、独立计算实验、湿实验测试、专家用户研究）以保障透明性与可复现性；文中未报告定量实验结果，属框架/立场性工作。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 药物发现领域的自改进LLM多智能体框架，符合自我改进AI域收录口径但与音视频核心技术无关，按非核心域默认仅初筛摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 面向假设驱动药物发现的LLM智能体集群（PharmaSwarm）
+relations:
+- type: same_topic
+  ref: paper:arxiv:2610.24454
+  note: 同为多智能体科学发现中的递归自改进框架
+- type: same_topic
+  ref: paper:arxiv:2506.06698
+  note: 均通过记忆/经验沉淀机制实现LLM智能体自改进
+- type: same_topic
+  ref: paper:arxiv:2610.33046
+  note: 同属面向科学发现的自改进LLM智能体系统

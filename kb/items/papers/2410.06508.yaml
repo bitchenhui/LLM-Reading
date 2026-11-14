@@ -1,0 +1,50 @@
+id: paper:arxiv:2410.06508
+type: paper
+title: 'Towards Self-Improvement of LLMs via MCTS: Leveraging Stepwise Knowledge with Curriculum Preference
+  Learning'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2410.06508v1
+  url: https://arxiv.org/abs/2410.06508
+  pdf_url: https://arxiv.org/pdf/2410.06508v1
+  venue: arXiv preprint
+time:
+  published: '2024-10-09'
+  collected: '2026-11-14'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:SelfImprovement
+  role: subject
+claims:
+- statement: AlphaLLM-CPL通过构建搜索树中共享同一父节点的子节点间轨迹对，为MCTS行为蒸馏提供步级（step-level）信息，提升蒸馏效率。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 引入课程偏好学习，动态调整各离线训练epoch中轨迹对的训练顺序，优先关键学习步骤并缓解过拟合。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在数学推理任务上，AlphaLLM-CPL显著优于既有MCTS行为蒸馏方法（如SFT/DPO类蒸馏），大幅提升LLM推理能力。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出AlphaLLM-CPL框架，利用MCTS轨迹的步级偏好对与课程式训练序列实现LLM推理自我改进。
+  abstract_zh: 该论文提出AlphaLLM-CPL，一个通过MCTS行为蒸馏实现LLM自我改进的成对（pairwise）训练框架。其核心创新一是在搜索树中利用共享同一父节点的子节点构建步级轨迹对，为蒸馏提供步级信息，克服以往方法对MCTS丰富轨迹信息利用不足的问题。二是引入课程偏好学习，动态调整每个离线训练epoch中轨迹对的训练顺序，优先关键学习步骤并缓解过拟合。在数学推理任务上的实验表明，AlphaLLM-CPL显著优于既有MCTS行为蒸馏方法，大幅提升LLM推理能力。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 属于LLM自我改进域（MCTS行为蒸馏+课程偏好学习），非核心编码域，按规则仅收录摘要级。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 基于MCTS的LLM自我改进：利用步级知识与课程偏好学习
+relations:
+- type: same_topic
+  ref: paper:arxiv:2404.12253
+  note: 同为AlphaLLM系列的LLM自我改进方法（MCTS搜索+批评蒸馏），本文为该路线的后续改进（步级偏好+课程学习）。
+- type: same_topic
+  ref: paper:arxiv:2405.00451
+  note: 同属MCTS驱动的迭代偏好学习提升LLM推理，本文的对比锚点方法族（MCTS+DPO蒸馏）。

@@ -1,0 +1,53 @@
+id: paper:arxiv:2507.03836
+type: paper
+title: 'F-Hash: Feature-Based Hash Design for Time-Varying Volume Visualization via Multi-Resolution Tesseract
+  Encoding'
+domain: immersive_media
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2507.03836v1
+  url: https://arxiv.org/abs/2507.03836
+  pdf_url: https://arxiv.org/pdf/2507.03836v1
+  venue: arXiv preprint
+time:
+  published: '2025-07-04'
+  collected: '2026-11-14'
+entities:
+- ref: concept:INR
+  role: subject
+- ref: concept:SuperResolution
+  role: uses
+claims:
+- statement: F-Hash多级无冲突哈希映射动态4D多分辨率嵌入网格、无桶浪费，以紧凑编码参数实现高编码容量，相较现有输入编码方法显著提升时变体数据INR训练收敛速度，达到SOTA收敛速度
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 该编码对时变特征检测方法不可知（agnostic），可作为特征跟踪与演化可视化的统一编码方案
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 提出自适应光线步进算法优化样本流式加载，加速时变神经表示的渲染
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出无冲突多级4D哈希编码F-Hash，大幅加速时变体数据INR训练收敛并优化渲染采样。
+  abstract_zh: 为解决大规模时变体数据隐式神经表示（INR）训练收敛慢的问题，作者提出基于特征的多分辨率Tesseract（4D超立方体）编码架构F-Hash。该方法采用多级无冲突哈希函数映射动态4D多分辨率嵌入网格，避免桶浪费，以紧凑编码参数获得高编码容量。该编码与具体特征检测方法无关，可统一服务于特征跟踪与演化可视化，并同时支撑时空域的压缩、渲染与超分辨率。实验显示F-Hash在多类时变体数据集、多种特征上取得最先进的训练收敛速度；另提出自适应光线步进算法优化样本流式加载，加快神经表示渲染。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 面向科学时变体（4D）数据的INR编码加速与可视化，属三维/4D神经表示范畴，与核心视频编码相邻但非其核心议题
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: F-Hash：基于特征的多分辨率四维超立方体编码的时变体可视化哈希设计
+relations:
+- type: same_topic
+  ref: paper:arxiv:2202.06088
+  note: 同为INR建模时变/体数据的表示、渲染与编辑
+- type: same_topic
+  ref: paper:arxiv:2506.15276
+  note: 同为基于INR的视频/时序数据神经表示，均关注多尺度特征编码提升表示效率
+- type: same_topic
+  ref: paper:arxiv:2402.01596
+  note: 同为INR驱动的动态/沉浸式视觉数据压缩表示

@@ -1,0 +1,50 @@
+id: paper:arxiv:2412.17171
+type: paper
+title: Enhancing Item Tokenization for Generative Recommendation through Self-Improvement
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2412.17171v1
+  url: https://arxiv.org/abs/2412.17171
+  pdf_url: https://arxiv.org/pdf/2412.17171v1
+  venue: arXiv preprint
+time:
+  published: '2024-12-22'
+  collected: '2026-11-14'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: 所提出的自我改进物品tokenization方法在多个数据集、多种初始tokenization策略下平均提升推荐性能8%。
+  confidence: reported
+  metrics:
+  - name: 推荐性能平均提升
+    value: 8%
+    scope: 多数据集、多种初始tokenization策略下的平均值
+  evidence: abstract（初筛，未读全文）
+- statement: 该方法实现简单，可作为即插即用增强集成到现有生成式推荐系统中，无需外部token分配模型与LLM内部理解保持一致。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出让LLM在训练中自我改进物品tokenization的即插即用方法，推荐性能平均提升8%。
+  abstract_zh: 生成式推荐系统以token序列建模物品并由LLM生成推荐，但现有外部tokenization方案（文本描述、数字串或新定义的离散token）常与LLM内部预训练分词模式不一致，导致性能下降。作者提出一种自我改进的物品tokenization方法：从任意外部模型的初始tokenization出发，在训练过程中周期性地依据LLM自身学到的模式调整tokenization，使其与模型对物品的内部理解保持一致。该方法实现简单，可作为即插即用增强集成到现有生成式推荐系统。在多个数据集和多种初始tokenization策略上的实验显示，推荐性能平均提升8%。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: LLM自我改进机制在生成式推荐物品tokenization上的应用，属self_improvement域但与音视频技术无直接关联。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 通过自我改进增强生成式推荐的物品分词（Tokenization）
+relations:
+- type: same_topic
+  ref: paper:arxiv:2210.08229
+  note: 同属LLM自我改进方向，本文将自改进应用于推荐物品tokenization
+- type: same_topic
+  ref: paper:arxiv:2506.06698
+  note: 均为语言模型/智能体自我改进机制研究，但应用场景不同

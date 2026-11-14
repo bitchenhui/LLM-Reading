@@ -1,0 +1,58 @@
+id: paper:arxiv:2502.13441
+type: paper
+title: 'The Self-Improvement Paradox: Can Language Models Bootstrap Reasoning Capabilities without External
+  Scaffolding?'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2502.13441v1
+  url: https://arxiv.org/abs/2502.13441
+  pdf_url: https://arxiv.org/pdf/2502.13441v1
+  venue: arXiv preprint
+time:
+  published: '2025-02-19'
+  collected: '2026-11-14'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: subject
+claims:
+- statement: Crescent 可在零外部监督（无种子数据、无第三方模型辅助）条件下完全自主地生成高质量合成问答数据，用于 LLM 自我改进。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: Crescent 生成的问答对能提升 LLM 数学推理能力，同时保持其通用性能（尤其在 0-shot 设置下）。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 相比基于种子数据集增强的现有方法，Crescent 生成的问答对能更有效地将 LLM 知识蒸馏到更弱的模型。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: Crescent 的三步流程为：诱饵提示生成原始问题、基于拒绝采样的自我去重实现问题多样化、多数投票收集答案。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出 Crescent 框架，零外部监督下自主生成问答数据，实现 LLM 数学推理自我改进。
+  abstract_zh: 现有 LLM 自我改进方法通常依赖种子数据或第三方模型等外部监督信号。Crescent 框架分三步实现完全自主的合成数据生成：先用'诱饵提示'引导 LLM 生成原始问题，再通过基于拒绝采样的自我去重实现问题多样化，最后将问题反馈给
+    LLM 并以多数投票收集答案。实验表明 Crescent 生成的问答对可在零外部监督下提升 LLM 的数学推理能力，同时保持其通用性能（尤其在 0-shot 设置下），并比基于种子数据集增强的方法更有效地将
+    LLM 知识蒸馏到更弱模型。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: LLM 自我改进核心方法论文（零外部监督合成数据），属追踪的自改进域但与音视频技术无直接关联，按规则仅 summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 自我改进悖论：语言模型能否在没有外部脚手架的情况下引导出推理能力？
+relations:
+- type: same_topic
+  ref: paper:arxiv:2210.11610
+  note: 同属 LLM 自我改进方向：均以模型自身生成的数据微调自身以提升推理能力
+- type: same_topic
+  ref: paper:arxiv:2404.12253
+  note: 同为 LLM 数学推理自我改进方法，Crescent 进一步强调摆脱种子数据等外部监督
+- type: same_topic
+  ref: paper:arxiv:2410.02108
+  note: 同属通过自生成数据引导 LLM 推理泛化的自我改进研究线

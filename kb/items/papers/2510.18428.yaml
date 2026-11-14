@@ -1,0 +1,61 @@
+id: paper:arxiv:2510.18428
+type: paper
+title: 'AlphaOPT: Formulating Optimization Programs with Self-Improving LLM Experience Library'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2510.18428v4
+  url: https://arxiv.org/abs/2510.18428
+  pdf_url: https://arxiv.org/pdf/2510.18428v4
+  venue: arXiv preprint
+time:
+  published: '2025-10-21'
+  collected: '2026-11-14'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: AlphaOPT 随训练数据增加而稳步提升，且库规模保持有界增长，无需重训练或参数更新。
+  confidence: reported
+  metrics:
+  - name: 准确率
+    value: 65%→72%
+    scope: 训练样本从 100 条增至 300 条
+  evidence: abstract（初筛，未读全文）
+- statement: 在两个分布外数据集上超过最强基线。
+  confidence: reported
+  metrics:
+  - name: 相对最强基线的提升
+    value: 9.1%
+    scope: 分布外数据集之一
+  - name: 相对最强基线的提升
+    value: 8.2%
+    scope: 分布外数据集之二
+  evidence: abstract（初筛，未读全文）
+- statement: 训练仅依赖 answer-only 反馈（求解器验证），不需要金标准程序、标注推理轨迹或参数更新。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 以求解器验证的经验库两阶段循环（学习+进化），让 LLM 无需重训练即持续提升优化建模能力。
+  abstract_zh: 提出 AlphaOPT，一个自改进经验库框架，使 LLM 仅凭答案级反馈（无需金标准程序、标注推理轨迹或参数更新）即可学习优化建模知识。框架持续运行两阶段循环：库学习阶段从失败尝试中提取经求解器验证的结构化洞见，库进化阶段基于跨任务聚合证据细化各洞见的适用条件。该设计使模型积累可复用的建模原则、增强跨实例迁移，并保持库规模有界增长。在多个优化基准上，训练数据从
+    100 条增至 300 条时准确率由 65% 升至 72%，并在两个分布外数据集上分别超过最强基线 9.1% 和 8.2%。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 典型的 LLM 经验库式自改进工作（求解器反馈驱动的持续学习），属自我改进 AI 域，与音视频核心技术无直接关联，按非核心域只做初筛摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: AlphaOPT：用自改进 LLM 经验库自动构建优化问题模型
+relations:
+- type: same_topic
+  ref: paper:arxiv:2506.13131
+  note: 同为 LLM 编码智能体通过经验/进化循环做算法与程序发现（AlphaEvolve），方法论同源
+- type: same_topic
+  ref: paper:arxiv:2506.06698
+  note: 同为面向语言智能体的经验库持续积累与自改进（Contextual Experience Replay）

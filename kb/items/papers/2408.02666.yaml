@@ -1,0 +1,66 @@
+id: paper:arxiv:2408.02666
+type: paper
+title: Self-Taught Evaluators
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2408.02666v2
+  url: https://arxiv.org/abs/2408.02666
+  pdf_url: https://arxiv.org/pdf/2408.02666v2
+  venue: arXiv preprint
+time:
+  published: '2024-08-05'
+  collected: '2026-11-14'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: subject
+claims:
+- statement: Self-Taught Evaluator 无需人工偏好标注数据，即可将 Llama3-70B-Instruct 作为 LLM-as-a-Judge 的 RewardBench
+    表现从 75.4 提升到 88.3。
+  confidence: reported
+  metrics:
+  - name: RewardBench 得分
+    value: '88.3'
+    scope: Llama3-70B-Instruct 自改进后，仅用合成训练数据
+  - name: RewardBench 基线
+    value: '75.4'
+    scope: Llama3-70B-Instruct 自改进前
+  evidence: abstract（初筛，未读全文）
+- statement: 采用多数投票可进一步提升 RewardBench 得分至 88.7。
+  confidence: reported
+  metrics:
+  - name: RewardBench 得分（多数投票）
+    value: '88.7'
+    scope: Llama3-70B-Instruct，majority vote
+  evidence: abstract（初筛，未读全文）
+- statement: 该自改进评估器优于 GPT-4 等常用 LLM 评审，并匹敌使用人工标注样本训练的顶级奖励模型。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 仅用合成数据迭代自改进 LLM-as-a-Judge，无需人工偏好标注即在 RewardBench 从 75.4 提升至 88.3。
+  abstract_zh: 该工作提出一种无需人工标注的评估器自改进方法：从无标注指令出发，迭代生成对比性模型输出，并训练 LLM-as-a-Judge 产出推理链与最终判定，每轮用改进后的预测重复训练。在
+    RewardBench 上，Self-Taught Evaluator 将 Llama3-70B-Instruct 从 75.4 提升至 88.3，采用多数投票可达 88.7。其表现优于常用的 GPT-4
+    等 LLM 评审，并匹敌使用人工标注样本训练的顶级奖励模型。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 纯 LLM 评审模型迭代自改进工作，仅用合成数据免人工标注训练 LLM-as-a-Judge，属自我改进 AI 域，非音视频核心域，只给 summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 自学习评估器
+relations:
+- type: same_topic
+  ref: paper:arxiv:2407.19594
+  note: 同为 LLM-as-a-Judge/奖励模型的自我改进对齐方法，评估器参与自改进闭环
+- type: same_topic
+  ref: paper:arxiv:2309.00267
+  note: 同属以 AI 反馈替代人工标注的评估训练路线
+- type: same_topic
+  ref: paper:arxiv:2210.11610
+  note: 同为 LLM 无标注自改进范式的基础工作

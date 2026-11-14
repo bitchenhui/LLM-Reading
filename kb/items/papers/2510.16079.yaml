@@ -1,0 +1,56 @@
+id: paper:arxiv:2510.16079
+type: paper
+title: 'EvolveR: Self-Evolving LLM Agents through an Experience-Driven Lifecycle'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2510.16079v3
+  url: https://arxiv.org/abs/2510.16079
+  pdf_url: https://arxiv.org/pdf/2510.16079v3
+  venue: arXiv preprint
+time:
+  published: '2025-10-17'
+  collected: '2026-11-14'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:SelfImprovement
+  role: subject
+claims:
+- statement: EvolveR通过离线自蒸馏与在线交互两个阶段构成的闭环经验生命周期实现LLM智能体自我改进，并以策略强化机制迭代更新智能体。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 智能体的交互轨迹被合成为结构化的抽象可复用策略原则库，在线阶段智能体主动检索这些原则指导决策。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在复杂多跳问答基准上，EvolveR性能优于强智能体基线方法。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出离线自蒸馏加在线交互的闭环框架EvolveR，让LLM智能体从自身轨迹提炼可复用策略原则实现自我改进。
+  abstract_zh: 论文提出EvolveR框架，使LLM智能体通过完整的闭环经验生命周期实现自我提升。生命周期含两个关键阶段：(1) 离线自蒸馏，将智能体的交互轨迹合成为抽象、可复用的策略原则库；(2)
+    在线交互，智能体执行任务时主动检索蒸馏出的原则指导决策，并累积多样化行为轨迹。该循环采用策略强化机制，依据智能体表现迭代更新其策略。在复杂多跳问答基准上，EvolveR取得优于强智能体基线的性能，展示了智能体既能从外部数据也能从自身行为后果中学习的蓝图。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 提出LLM智能体经验闭环自我进化框架EvolveR，属自我改进AI方向，非核心编码域故仅收录摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: EvolveR：通过经验驱动生命周期实现自我进化的LLM智能体
+relations:
+- type: same_topic
+  ref: paper:arxiv:2606.15363
+  note: 同为从智能体经验中提取可复用原则以驱动自我进化的框架（APEX原则提取 vs EvolveR策略原则库）
+- type: same_topic
+  ref: paper:arxiv:2607.05297
+  note: 同为经验驱动的LLM智能体自我进化框架
+- type: same_topic
+  ref: paper:arxiv:2506.06698
+  note: 同属利用历史经验闭环改进语言智能体的自我改进研究
+- type: same_topic
+  ref: paper:arxiv:2312.10003
+  note: 同属针对多步推理LLM智能体的自我改进研究

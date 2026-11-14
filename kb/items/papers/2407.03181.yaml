@@ -1,0 +1,53 @@
+id: paper:arxiv:2407.03181
+type: paper
+title: Fine-Tuning on Diverse Reasoning Chains Drives Within-Inference CoT Refinement in LLMs
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2407.03181v2
+  url: https://arxiv.org/abs/2407.03181
+  pdf_url: https://arxiv.org/pdf/2407.03181v2
+  venue: arXiv preprint
+time:
+  published: '2024-07-03'
+  collected: '2026-11-14'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:SelfImprovement
+  role: subject
+claims:
+- statement: 在多样化思维链（DCoT）上微调可让LLM在单次推理内顺序生成多条思维链，并在无需外部反馈的情况下实现推理链自精化。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: DCoT微调相对CoT基线在多个模型家族和1.3B至70B的规模范围上均带来性能提升。
+  confidence: reported
+  metrics:
+  - name: 模型规模范围
+    value: 1.3B至70B
+    scope: 实验覆盖的模型参数规模
+  evidence: abstract（初筛，未读全文）
+- statement: 性能增益对数值答案等大结果状态空间任务尤为显著；定量分析与人工评估显示增益源于模型在推理内生成第二条更优推理链的自我改进能力。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 微调LLM在单次推理内生成多样化思维链，实现无需外部反馈的推理链自精化并提升推理性能。
+  abstract_zh: 论文提出多样化思维链（DCoT）方法：微调大语言模型使其在单次推理步骤内顺序生成多条不同的思维链，区别于以往并行生成多条独立CoT再做集成或事后组合的路线。在覆盖多种推理类型的广泛任务实验中，DCoT微调在1.3B到70B多规模、多模型家族上均优于CoT基线，对数值答案等大结果状态空间任务收益尤为显著。定量分析与人工评估表明增益来自模型在推理内生成第二条更优推理链的自精化能力，无需外部反馈，展示了一种此前难以实现的自我改进。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 属于LLM自我改进/推理链精化主题（DCoT微调实现推理内自改进），与音视频编码核心域无关，仅作初筛摘要收录。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 在多样化推理链上微调驱动LLM推理内思维链精化
+relations:
+- type: same_topic
+  ref: paper:arxiv:2210.08229
+  note: 均研究LLM自我改进，本文通过推理内多样化思维链精化实现自我改进
+- type: same_topic
+  ref: paper:arxiv:2609.34975
+  note: 均为通过微调/训练策略提升LLM推理并实现自改进的工作

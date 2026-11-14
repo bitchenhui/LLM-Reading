@@ -1,0 +1,50 @@
+id: paper:arxiv:2502.02534
+type: paper
+title: Adaptive Self-improvement LLM Agentic System for ML Library Development
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2502.02534v2
+  url: https://arxiv.org/abs/2502.02534
+  pdf_url: https://arxiv.org/pdf/2502.02534v2
+  venue: arXiv preprint
+time:
+  published: '2025-02-04'
+  collected: '2026-11-14'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: 提出的自适应自我改进智能体系统在典型ML库ASPL代码生成基准上，相较单个LLM基线取得最高3.9倍的改进。
+  confidence: reported
+  metrics:
+  - name: 性能提升倍数
+    value: 3.9x
+    scope: 相对基线单LLM，自建典型ML库基准上的最佳结果
+  evidence: abstract（初筛，未读全文）
+- statement: 该系统使LLM能够在数据有限（ASPL代码示例稀缺）的条件下完成复杂推理以生成架构专用代码。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出自适应自我改进智能体系统，用LLM为专用架构生成ML库ASPL代码，较单LLM基线最高提升3.9倍。
+  abstract_zh: 高性能ML库通常以面向特定领域架构的架构专用编程语言（ASPL）编写，撰写需要ML算法与ASPL的双重专家知识，且ASPL深奥、演化快导致可用代码示例稀缺。针对LLM在该任务上需在有限数据下进行复杂推理的挑战，作者提出一个自适应自我改进智能体系统。他们构建了一个典型ML库的基准，并用开源与闭源LLM在该基准上生成ASPL代码进行评估。结果显示，该系统相较单个LLM基线最高取得3.9倍提升。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 属LLM自我改进智能体方向（ML库ASPL代码生成），非核心音视频编码域，按基准仅作初筛收录。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 面向机器学习库开发的自适应自我改进LLM智能体系统
+relations:
+- type: same_topic
+  ref: paper:arxiv:2210.11610
+  note: 同属LLM自我改进研究线：本文将LLM自我改进用于专用架构ML库代码生成
+- type: same_topic
+  ref: paper:arxiv:2506.06698
+  note: 同属LLM智能体自我改进方向，均为通过迭代改进机制提升agent任务表现

@@ -1,0 +1,50 @@
+id: paper:arxiv:2410.20749
+type: paper
+title: 'Matryoshka Pilot: Learning to Drive Black-Box LLMs with LLMs'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2410.20749v4
+  url: https://arxiv.org/abs/2410.20749
+  pdf_url: https://arxiv.org/pdf/2410.20749v4
+  venue: arXiv preprint
+time:
+  published: '2024-10-28'
+  collected: '2026-11-14'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:SelfImprovement
+  role: subject
+claims:
+- statement: M-Pilot 作为轻量白盒 LLM 控制器，可将复杂任务分解为中间提示序列，在不访问黑盒 LLM 参数的情况下引导其完成复杂、长时程任务。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 把黑盒 LLM 建模为环境、控制器作为策略进行迭代交互训练，使 M-Pilot 能在优化中间引导过程中实现自我改进，并支持可控的多轮生成。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在多个多样化任务上的实证评估显示，该方法能有效增强黑盒 LLM 的推理、规划与个性化等能力。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出轻量白盒控制器 M-Pilot，将黑盒 LLM 视为环境并分解任务生成中间提示，实现可控多轮生成与引导策略自我改进。
+  abstract_zh: 针对黑盒大模型内部不可见、难以通过领域微调增强推理与规划能力的问题，作者提出轻量白盒 LLM 控制器 M-Pilot。该方法将黑盒 LLM 视为环境、控制器作为策略，把复杂任务分解为一系列中间输出（提示），在多轮交互中引导黑盒生成器。M-Pilot
+    在迭代交互中训练，使黑盒 LLM 输出与人类偏好对齐，从而支持可控的多轮生成，并在优化中间引导的过程中实现自我改进。在多样化任务上的实验表明，该方法能有效提升黑盒 LLM 在复杂、长时程任务上的表现，代码已开源。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 论文提出以 LLM 控制器引导黑盒 LLM 并实现中间引导的自我改进，属自我改进 AI 领域，与音视频技术无直接关联，按非核心域收录为初筛摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 套娃领航员：学习用 LLM 驾驭黑盒 LLM
+relations:
+- type: same_topic
+  ref: paper:arxiv:2210.11610
+  note: 同为 LLM 自我改进主题，本文针对黑盒模型提出引导式自改进控制器
+- type: same_topic
+  ref: paper:arxiv:2312.10003
+  note: 同为 LLM/agent 自我改进与迭代引导优化的研究路线

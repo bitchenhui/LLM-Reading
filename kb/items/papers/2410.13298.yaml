@@ -1,0 +1,56 @@
+id: paper:arxiv:2410.13298
+type: paper
+title: Advancing Large Language Model Attribution through Self-Improving
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2410.13298v1
+  url: https://arxiv.org/abs/2410.13298
+  pdf_url: https://arxiv.org/pdf/2410.13298v1
+  venue: arXiv preprint
+time:
+  published: '2024-10-17'
+  collected: '2026-11-14'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:SelfImprovement
+  role: uses
+claims:
+- statement: START框架在不依赖人工标注和更强外部模型的情况下，在三个开放域问答数据集上平均性能提升25.13%。
+  confidence: reported
+  metrics:
+  - name: 平均性能提升
+    value: 25.13%
+    scope: 三个开放域问答数据集（含长文本问答与多步推理）平均，无人工标注条件
+  evidence: abstract（初筛，未读全文）
+- statement: START通过模型自构合成数据预热并结合细粒度偏好监督信号进行迭代自我改进，其中偏好信号由模型自身采样响应构建。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 分析显示START在跨多个证据来源的信息聚合上表现优异。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出START自教学归因框架，经合成数据预热与细粒度偏好信号迭代自我改进LLM引用能力，平均提升25.13%。
+  abstract_zh: 论文提出START（Self-Taught AttRibuTion）框架，通过自我改进迭代提升大语言模型生成带证据引用文本的能力，以缓解幻觉并增强可验证性。为避免初始监督信号不足导致模型停滞，START先让模型自构合成训练数据进行预热。随后利用从模型自身采样响应中构建的细粒度偏好监督信号，迭代强化归因能力，促进稳健、全面且可归因的生成。在三个开放域问答数据集（涵盖长文本问答与多步推理）上，框架平均性能提升25.13%，且不依赖人工标注或更强的外部模型。进一步分析表明START在跨多来源信息聚合方面表现突出。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: LLM自我改进域论文（自教学归因框架START），与音视频核心域无关，按非核心域规则仅摘要收录。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 通过自我改进推进大语言模型的归因能力
+relations:
+- type: same_topic
+  ref: paper:arxiv:2210.08229
+  note: 同属LLM自我改进方向，本文明确受此类自我改进进展启发
+- type: same_topic
+  ref: paper:arxiv:2404.12253
+  note: 同为通过自我搜索与批评信号实现LLM自我改进的工作，机制相近
+- type: same_topic
+  ref: paper:arxiv:2305.14483
+  note: 同属语言模型自我改进（自监督/自我反馈迭代）研究线

@@ -1,0 +1,52 @@
+id: paper:arxiv:2406.08943
+type: paper
+title: Neural NeRF Compression
+domain: immersive_media
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2406.08943v1
+  url: https://arxiv.org/abs/2406.08943
+  pdf_url: https://arxiv.org/pdf/2406.08943v1
+  venue: arXiv preprint
+time:
+  published: '2024-06-13'
+  collected: '2026-11-14'
+entities:
+- ref: concept:NeRF
+  role: subject
+- ref: concept:EntropyModel
+  role: uses
+claims:
+- statement: 基于非线性变换编码范式的免编码器端到端优化方法（轻量解码器）可有效压缩网格化NeRF的特征网格，缓解存储开销问题。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 重要性加权率失真目标与采用掩码机制的稀疏熵模型能够利用潜在特征网格的空间非均匀性，提升压缩效果。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 实验表明该方法在网格化NeRF压缩效率与重建质量上超越已有工作。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出免编码器、端到端优化的非线性变换编码方法压缩网格化NeRF特征网格，降低存储开销并提升重建质量。
+  abstract_zh: 近期NeRF利用特征网格提升渲染质量与速度，但引入了显著的存储开销。本文提出一种基于非线性变换编码范式的神经压缩方法来压缩网格化NeRF的特征网格。由于缺乏大量独立同分布场景的训练数据，作者设计了免编码器、针对单个场景端到端优化并使用轻量解码器的方案。为利用潜在特征网格的空间非均匀性，引入重要性加权率失真目标与采用掩码机制的稀疏熵模型。实验结果表明，该方法在网格化NeRF压缩效率与重建质量方面均超越现有工作。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 面向网格化NeRF的神经压缩，属沉浸式媒体表示压缩，与音视频技术生态相关但非视频/图像编码核心域。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 神经NeRF压缩
+relations:
+- type: same_topic
+  ref: paper:arxiv:2411.05322
+  note: 同为NeRF（体积视频）压缩的码率感知方法
+- type: same_topic
+  ref: paper:arxiv:2407.08165
+  note: 面向显式NeRF模型压缩的质量评估数据库，与本压缩工作形成评价侧关联
+- type: same_topic
+  ref: paper:arxiv:2405.14452
+  note: 同为神经辐射场表示与压缩的端到端联合优化

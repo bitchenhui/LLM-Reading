@@ -1,0 +1,56 @@
+id: paper:arxiv:2402.04858
+type: paper
+title: 'CodeIt: Self-Improving Language Models with Prioritized Hindsight Replay'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2402.04858v2
+  url: https://arxiv.org/abs/2402.04858
+  pdf_url: https://arxiv.org/pdf/2402.04858v2
+  venue: arXiv preprint
+time:
+  published: '2024-02-07'
+  collected: '2026-11-14'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: org:Qualcomm
+  role: affiliation
+claims:
+- statement: CodeIt解决了ARC评测数据集15%的任务，达到当时最先进水平，优于现有神经与符号基线方法。
+  confidence: reported
+  metrics:
+  - name: ARC评测集解题率
+    value: 15%
+    scope: 完整ARC evaluation dataset，对比神经/符号基线
+  evidence: abstract（初筛，未读全文）
+- statement: CodeIt是首个可扩展到完整ARC评测数据集的神经符号方法。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 通过将回合目标重标注为采样程序实际输出（事后重标注）结合优先级经验回放，有效应对程序合成中奖励极端稀疏的问题；配合预训练与数据增强实现跨任务泛化。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出CodeIt自改进框架，以程序采样加事后重标注与优先经验回放迭代训练，在ARC评测集解出15%任务达当时SOTA。
+  abstract_zh: 该文将抽象与推理语料库（ARC）视为示例编程问题，提出可扩展的语言模型自我改进方法CodeIt。方法在“程序采样并进行事后重标注（将回合目标重标为采样程序实际产生的输出）”与“基于优先级经验回放的学习”之间迭代，从而缓解程序合成中奖励极端稀疏的问题。结合预训练与数据增强，CodeIt实现了跨任务泛化，是首个可扩展到完整ARC评测集的神经符号方法。结果显示其解决了ARC评测集15%的任务，取得当时最先进性能，优于现有神经与符号基线。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: LLM自我改进方法论文（事后重标注+优先经验回放求解ARC），属自我改进AI域，非核心编码域故仅初筛收录。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: CodeIt：基于优先事后重放的语言模型自我改进
+relations:
+- type: same_topic
+  ref: paper:arxiv:2210.11610
+  note: 同属LLM自我改进研究方向
+- type: same_topic
+  ref: paper:arxiv:2310.02304
+  note: 同属递归/迭代式自改进代码生成方法
+- type: same_topic
+  ref: paper:arxiv:2312.10003
+  note: 同属面向多步推理LLM agent的自我改进

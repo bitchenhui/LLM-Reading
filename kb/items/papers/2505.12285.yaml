@@ -1,0 +1,60 @@
+id: paper:arxiv:2505.12285
+type: paper
+title: 'CALM: Co-evolution of Algorithms and Language Model for Automatic Heuristic Design'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2505.12285v1
+  url: https://arxiv.org/abs/2505.12285
+  pdf_url: https://arxiv.org/pdf/2505.12285v1
+  venue: arXiv preprint
+time:
+  published: '2025-05-18'
+  collected: '2026-11-14'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:EoH
+  role: builds_on
+claims:
+- statement: CALM混合框架（语言引导+RL数值引导）在多种优化任务上超越现有SOTA启发式自动设计基线
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 仅用7B模型INT4量化、单张24GB GPU本地运行，即可超越使用显著更强API模型的纯语言引导方法
+  confidence: reported
+  metrics:
+  - name: 模型规模
+    value: 7B
+    scope: 本地部署的开源LLM
+  - name: GPU显存
+    value: 24GB
+    scope: 单卡本地运行需求
+  - name: 量化精度
+    value: INT4
+    scope: 部署量化方案
+  evidence: abstract（初筛，未读全文）
+- statement: 数值引导通过基于生成启发式质量的强化学习微调LLM实现，使LLM与启发式搜索过程协同进化
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 语言引导与RL数值引导结合，使LLM与启发式搜索协同进化；7B本地模型超越依赖更强API模型的纯语言引导方法
+  abstract_zh: 针对复杂优化问题的启发式设计，现有LLM+进化搜索方法主要依赖语言（提示词）引导，而不调整底层模型。CALM提出混合框架，将语言引导与数值引导结合，后者通过基于所生成启发式质量的强化学习对LLM进行微调，实现联合优化，使LLM与搜索过程协同进化。方法在多种优化任务上超越SOTA基线，仅需7B模型INT4量化、单张24GB
+    GPU本地运行，并胜过使用显著更强API模型的纯语言引导方法。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 属自我改进AI域：LLM与进化搜索协同进化的自动启发式设计（EoH路线延伸），非核心音视频域，按基准收录为summary_only
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: CALM：算法与语言模型协同进化的启发式自动设计
+relations:
+- type: same_topic
+  ref: paper:arxiv:2401.02051
+  note: EoH是LLM自动启发式设计路线代表作，CALM针对其纯语言引导局限引入RL数值引导协同进化
+- type: same_topic
+  ref: paper:arxiv:2412.20694
+  note: QUBE同属LLM自动启发式设计的进化框架改进工作

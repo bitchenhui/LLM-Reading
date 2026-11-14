@@ -1,0 +1,50 @@
+id: paper:arxiv:2409.04617
+type: paper
+title: Sparse Rewards Can Self-Train Dialogue Agents
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2409.04617v3
+  url: https://arxiv.org/abs/2409.04617
+  pdf_url: https://arxiv.org/pdf/2409.04617v3
+  venue: arXiv preprint
+time:
+  published: '2024-09-06'
+  collected: '2026-11-14'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:SelfImprovement
+  role: uses
+claims:
+- statement: JOSH是一种自对齐算法，利用稀疏奖励仿真环境从模拟结果中提取理想行为，并用模型自身输出进行进一步训练，无需外部人工反馈。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 作者构建了ToolWOZ，一个源自MultiWOZ的稀疏奖励工具调用仿真环境。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 经JOSH训练的小型与前沿模型均在工具调用交互上显著改进，同时在多样化基准上保持通用模型能力。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出JOSH自对齐算法与ToolWOZ稀疏奖励仿真环境，使LLM智能体无需人工反馈即可自我训练工具调用能力。
+  abstract_zh: 论文指出SOTA LLM智能体在多轮对话任务上的进步主要依赖监督微调与高质量人工反馈，但随着基座模型能力增强，获取有意义的人工反馈变得愈发昂贵甚至不可行。作者提出JOSH（Juxtaposed
+    Outcomes for Simulation Harvesting）自对齐算法，利用稀疏奖励仿真环境提取理想行为，再用模型自身输出继续训练。同时构建了源自MultiWOZ的稀疏奖励工具调用仿真环境ToolWOZ。实验表明，经JOSH训练的小型与前沿模型在工具交互上显著提升，同时在多样化基准上保持通用能力，代码与数据已开源。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 属于LLM智能体自我改进（稀疏奖励自对齐）方向，与音视频编码无直接关联，按非核心域收录为summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 稀疏奖励可以让对话智能体自我训练
+relations:
+- type: same_topic
+  ref: paper:arxiv:2312.10003
+  note: 同为LLM智能体自我改进（自训练/self-improvement）方向
+- type: same_topic
+  ref: paper:arxiv:2210.11610
+  note: 同属LLM自我改进范式研究

@@ -1,0 +1,57 @@
+id: paper:arxiv:2508.05835
+type: paper
+title: 'NanoCodec: Towards High-Quality Ultra Fast Speech LLM Inference'
+domain: audio_coding
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2508.05835v1
+  url: https://arxiv.org/abs/2508.05835
+  pdf_url: https://arxiv.org/pdf/2508.05835v1
+  venue: arXiv preprint
+time:
+  published: '2025-08-07'
+  collected: '2026-11-14'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: metric:FPS
+  role: measured_by
+claims:
+- statement: NanoCodec 仅以 12.5 FPS 的低帧率即可实现高质量音频压缩，减少自回归生成的步数
+  confidence: reported
+  metrics:
+  - name: 帧率
+    value: 12.5 FPS
+    scope: NanoCodec 工作帧率
+  evidence: abstract（初筛，未读全文）
+- statement: NanoCodec 在多种码率范围内优于相关音频编解码工作，建立低帧率语音编码新基准
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 消融实验表明帧率、码率与因果性共同决定编解码器重建质量，低帧率设计有利于语音 LLM 快速训练与推理
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出仅 12.5 FPS 的低帧率音频编解码器 NanoCodec，加速语音 LLM 训练与推理并优于相关工作。
+  abstract_zh: 在基于音频编解码器将语音离散化为 token 的大模型范式中，现有编解码器帧率过高，导致自回归语音 LLM 训练与推理缓慢。论文通过消融实验系统考察帧率、码率与因果性对编解码器重建质量的影响。基于研究结论，作者提出低帧率音频编解码器
+    NanoCodec，仅以 12.5 FPS 帧率实现高质量压缩。NanoCodec 在多种码率范围内优于相关工作，为低延迟、高效率的语音 LLM 训练与推理建立了新基准。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 面向语音 LLM 推理加速的低帧率神经音频编解码器（NanoCodec，12.5 FPS），属音频编码域，按规则仅摘要级收录。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: NanoCodec：面向高质量超快速语音 LLM 推理
+relations:
+- type: same_topic
+  ref: paper:arxiv:2409.12117
+  note: 同为面向语音 LLM 快速训练推理的低帧率语音编解码器，直接相关前作
+- type: same_topic
+  ref: paper:arxiv:2107.03312
+  note: 端到端神经音频编解码（SoundStream），同类神经语音编码脉络
+- type: same_topic
+  ref: paper:arxiv:2606.11631
+  note: 神经语音压缩的率失真评测基准，可与低帧率语音编解码器对比

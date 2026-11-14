@@ -1,0 +1,57 @@
+id: paper:arxiv:2501.12273
+type: paper
+title: 'Condor: Enhance LLM Alignment with Knowledge-Driven Data Synthesis and Refinement'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2501.12273v1
+  url: https://arxiv.org/abs/2501.12273
+  pdf_url: https://arxiv.org/pdf/2501.12273v1
+  venue: arXiv preprint
+time:
+  published: '2025-01-21'
+  collected: '2026-11-14'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: subject
+claims:
+- statement: 仅用20K条Condor生成的样本对基础模型进行SFT微调，即可取得优于同类的性能。
+  confidence: reported
+  metrics:
+  - name: SFT样本数
+    value: 20K
+    scope: Condor合成样本微调基础模型并与同类方法对比
+  evidence: abstract（初筛，未读全文）
+- statement: 额外的自反思精炼阶段使LLM能够在多个模型规模上实现迭代自改进。
+  confidence: reported
+  metrics:
+  - name: 验证规模上限
+    value: 72B
+    scope: 精炼阶段验证迭代自改进的模型参数规模上限
+  evidence: abstract（初筛，未读全文）
+- statement: 对后训练阶段合成数据规模化的研究表明仍存在大量未开发的性能提升潜力。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出两阶段合成数据框架Condor（世界知识树+自反思精炼），20K样本即可超越同类，并支持至72B规模的LLM迭代自改进。
+  abstract_zh: 高质量SFT数据是提升LLM对话能力的关键，但随着模型进步，人工标注数据日益稀缺，合成数据成为必然选择。论文提出Condor两阶段合成数据生成框架：第一阶段以'世界知识树'组织知识驱动的大规模数据生成，第二阶段以'自反思精炼'提升数据质量。实验表明，仅用20K条Condor生成的样本微调基础模型即可优于同类方法。额外的精炼阶段使各规模（最高72B）的LLM实现迭代自改进；对后训练中合成数据规模化的分析还揭示了可观的性能提升空间。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 论文属LLM合成SFT数据生成与迭代自改进方向，与音视频技术无关，归入非核心的self_improvement域，按规则仅摘要收录。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: Condor：基于知识驱动的数据合成与精炼增强LLM对齐
+relations:
+- type: same_topic
+  ref: paper:arxiv:2310.11716
+  note: 同属SFT/指令数据质量提升与数据精炼方向
+- type: same_topic
+  ref: paper:arxiv:2210.11610
+  note: 同属LLM自改进研究路线，Condor进一步验证至72B规模

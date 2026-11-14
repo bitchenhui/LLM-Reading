@@ -1,0 +1,57 @@
+id: paper:arxiv:2510.06652
+type: paper
+title: Aligning Large Language Models via Fully Self-Synthetic Data
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2510.06652v1
+  url: https://arxiv.org/abs/2510.06652
+  pdf_url: https://arxiv.org/pdf/2510.06652v1
+  venue: arXiv preprint
+time:
+  published: '2025-10-08'
+  collected: '2026-11-14'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: subject
+claims:
+- statement: SAO 框架下全部训练数据——包括提示（用户查询）、回复与偏好对——均由 LLM 自身生成，摆脱对人工标注数据集的依赖
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: SAO 无需外部奖励模型或 GPT-4 等专有模型来标注偏好对，区别于传统 RLAIF 的高成本数据流程
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: SAO 在 AlpacaEval 2.0 等标准基准上有效提升模型对话能力，同时在问答、数学推理等下游客观任务上保持性能不退化
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出 SAO 框架，由 LLM 自生成提示、回复与偏好数据完成自对齐，无需人工标注或外部奖励模型
+  abstract_zh: 论文提出 Self-Alignment Optimization（SAO），一个完全自合成的 LLM 对齐框架：训练数据中的提示（用户查询）、回复和偏好标注均由模型自身生成。具体流程为先让
+    LLM 通过人格角色扮演生成多样化提示与回复，再由模型自我评估构造偏好对用于偏好优化。与传统 RLHF 依赖昂贵人工标注、RLAIF 依赖外部奖励模型或 GPT-4 等专有模型标注不同，SAO 无需任何外部数据与标注器。实验表明
+    SAO 在 AlpacaEval 2.0 等标准基准上有效提升模型的对话能力，同时在问答、数学推理等下游任务上保持强劲性能，为 LLM 自我改进对齐提供了实用方案。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: LLM 全自合成数据自对齐框架 SAO，属自我改进 AI 核心主题的重要工作，按收录基准仅作初筛摘要
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 通过完全自合成数据对齐大语言模型
+relations:
+- type: same_topic
+  ref: paper:arxiv:2309.00267
+  note: SAO 针对的 RLAIF 高成本问题正是该文研究的 RLHF 与 AI 反馈对比议题
+- type: same_topic
+  ref: paper:arxiv:2407.19594
+  note: 同属 LLM 自我改进对齐：由模型自身承担评判/偏好标注角色
+- type: same_topic
+  ref: paper:arxiv:2508.05004
+  note: 同为从模型自生成数据出发的自我演进训练路线
+- type: same_topic
+  ref: paper:arxiv:2210.11610
+  note: LLM 自我改进的早期代表工作，SAO 属该方向在自对齐任务上的延伸

@@ -1,0 +1,60 @@
+id: paper:arxiv:2410.17823
+type: paper
+title: 'Att2CPC: Attention-Guided Lossy Attribute Compression of Point Clouds'
+domain: immersive_media
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2410.17823v1
+  url: https://arxiv.org/abs/2410.17823
+  pdf_url: https://arxiv.org/pdf/2410.17823v1
+  venue: arXiv preprint
+time:
+  published: '2024-10-23'
+  collected: '2026-11-14'
+entities:
+- ref: metric:BD-PSNR
+  role: subject
+- ref: metric:PSNR
+  role: measured_by
+claims:
+- statement: Att2CPC声称是首个将注意力机制引入基于点的有损点云属性压缩（PCAC）任务的方法。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在人体帧、稀疏物体和大规模点云场景等多种序列上，Att2CPC相比SOTA基于点的方法Deep-PCAC取得平均BD-PSNR增益。
+  confidence: reported
+  metrics:
+  - name: BD-PSNR
+    value: 1.15 dB
+    scope: Y通道，相对Deep-PCAC的平均提升
+  - name: BD-PSNR
+    value: 2.13 dB
+    scope: YUV通道，相对Deep-PCAC的平均提升
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 首个将注意力机制引入基于点的有损点云属性压缩，较Deep-PCAC平均提升Y通道BD-PSNR 1.15 dB。
+  abstract_zh: 论文针对点云属性有损压缩（PCAC）任务，提出基于自编码器架构的注意力压缩模型Att2CPC。编码端通过多次下采样挖掘局部属性模式，并设计外部交叉注意力（ECA）模块融合属性与几何上下文进行分层特征聚合。解码端基于多尺度表示与零填充上采样策略渐进重建点云属性。作者称其为首个将注意力机制引入基于点的有损PCAC的方法。在人体帧、稀疏物体及大规模点云场景等多种序列上，相比SOTA方法Deep-PCAC，Y通道与YUV通道BD-PSNR平均分别提升1.15
+    dB和2.13 dB，代码已开源。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 点云属性有损压缩属沉浸式媒体核心议题，但非视频/图像编码核心域，按规则仅收录为摘要级。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: Att2CPC：注意力引导的点云有损属性压缩
+relations:
+- type: same_topic
+  ref: paper:arxiv:2106.12236
+  note: 同为点云属性压缩（PCAC）研究，Att2CPC为其有损对应方向
+- type: same_topic
+  ref: paper:arxiv:2209.08276
+  note: 同为基于神经网络的点云属性处理工作
+- type: same_topic
+  ref: paper:arxiv:2308.12535
+  note: 同为学习式点云压缩方法
+- type: same_topic
+  ref: paper:arxiv:2405.11493
+  note: 同为学习式点云压缩统一框架方向

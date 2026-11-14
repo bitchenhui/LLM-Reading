@@ -1,0 +1,59 @@
+id: paper:arxiv:2509.25604
+type: paper
+title: 'RFG: Self-Improving Diffusion Large Language Models with Reward-Free Guidance'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2509.25604v2
+  url: https://arxiv.org/abs/2509.25604
+  pdf_url: https://arxiv.org/pdf/2509.25604v2
+  venue: arXiv preprint
+time:
+  published: '2025-09-29'
+  collected: '2026-11-14'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:TrainingFree
+  role: uses
+claims:
+- statement: RFG仅凭后训练策略模型与其参考模型的检查点，即可为扩散LLM部分掩码中间状态构造引导信号，实现无需额外训练、数据或奖励模型的推理时自改进。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: RFG一致提升最先进的后训练扩散大语言模型推理性能。
+  confidence: reported
+  metrics:
+  - name: 性能提升
+    value: 16.1%
+    scope: state-of-the-art后训练dLLM上的最大相对提升（摘要口径上限）
+  evidence: abstract（初筛，未读全文）
+- statement: 尽管完全免训练，RFG带来的增益媲美甚至超过资源密集的强化学习后训练技术。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出免训练推理时自改进框架RFG，仅凭检查点似然比引导扩散LLM，最多提升16.1%。
+  abstract_zh: 扩散大语言模型(dLLM)已展现较强推理能力，但进一步提升通常依赖昂贵的后训练、额外数据与监督。作者提出Reward-Free Guidance(RFG)，一种免训练框架，仅在推理时利用已有检查点实现dLLM自改进。理论上证明针对部分掩码中间状态的奖励信号可由后训练策略dLLM与其参考模型的对数似然比参数化，实践中用现成检查点即可获得该信号。大量实验表明RFG一致提升最先进的后训练dLLM，最高提升16.1%，且虽完全免训练，效果媲美甚至超过资源密集的强化学习技术。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 扩散大语言模型的推理时免训练自改进方法，属自我改进AI域而非音视频核心，按规则给summary_only
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: RFG：基于无奖励引导的扩散大语言模型自改进
+relations:
+- type: same_topic
+  ref: paper:arxiv:2504.12216
+  note: 同属扩散大语言模型推理能力提升路线，RFG可作为d1等RL后训练dLLM的免训练推理时增强方案
+- type: same_topic
+  ref: paper:arxiv:2210.11610
+  note: 同属大语言模型自改进研究线，RFG将自改进推进到扩散LLM推理时免训练场景
+- type: same_topic
+  ref: paper:arxiv:2412.14352
+  note: RFG属于LLM推理时自改进综述所覆盖的免训练/无奖励引导类方法
+- type: same_topic
+  ref: paper:arxiv:2609.37968
+  note: 同为reward-free的self-improving方法，均不依赖奖励模型的自我提升信号

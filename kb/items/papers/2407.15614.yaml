@@ -1,0 +1,51 @@
+id: paper:arxiv:2407.15614
+type: paper
+title: Experimenting with Adaptive Bitrate Algorithms for Virtual Reality Streaming over Wi-Fi
+domain: streaming_delivery
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2407.15614v3
+  url: https://arxiv.org/abs/2407.15614
+  pdf_url: https://arxiv.org/pdf/2407.15614v3
+  venue: arXiv preprint
+time:
+  published: '2024-07-22'
+  collected: '2026-11-14'
+entities:
+- ref: concept:ABR
+  role: subject
+- ref: concept:QoE
+  role: measured_by
+claims:
+- statement: 在开源 VR 串流方案 ALVR 上扩展实现了一整套网络性能指标，可对 Wi-Fi 网络状态进行稳健刻画，实验验证了这些指标测量的准确性。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 提出的网络感知分级式 ABR 算法 NeSt-VR 展现出面向 VR 串流的视频码率自适应能力。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 在开源 ALVR 上扩展网络性能指标并提出 NeSt-VR 算法，实现 Wi-Fi 下 VR 串流的码率自适应。
+  abstract_zh: 交互式 VR 在 Wi-Fi 上串流面临信道竞争与用户移动导致的带宽波动挑战。自适应码率（ABR）算法根据可用网络容量动态调整视频编码码率，以最大化画质、缓解拥塞并保障用户体验质量（QoE）。本文基于开源
+    VR 串流方案 Air Light VR（ALVR）开展 ABR 算法实验，为其扩展了一整套网络性能指标，实现对网络状态的稳健刻画，从而支撑更有依据的码率调整。为验证这些指标的效用，作者设计并测试了面向
+    VR 串流的网络感知分级式 ABR 算法 NeSt-VR。实验结果验证了新实现网络指标的准确性，并证明 NeSt-VR 具备有效的视频码率自适应能力。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 属流媒体传输域的 VR over Wi-Fi 自适应码率（ABR）实验研究，非核心编码域，按基准给 summary_only
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 面向 Wi-Fi 上虚拟现实串流的自适应码率算法实验研究
+relations:
+- type: same_topic
+  ref: paper:arxiv:2308.03643
+  note: 同为 ABR 码率自适应算法研究（多维度 ABR 与 WebRTC）
+- type: same_topic
+  ref: paper:arxiv:2402.00540
+  note: 同为 Wi-Fi 上交互式 VR/云渲染串流的实验评估
+- type: same_topic
+  ref: paper:arxiv:2309.04023
+  note: 同为面向 360°/VR 流媒体的码率与视角自适应

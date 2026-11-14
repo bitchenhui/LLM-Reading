@@ -1,0 +1,54 @@
+id: paper:arxiv:2508.17778
+type: paper
+title: 'AgentRAN: An Agentic AI Architecture for Autonomous Control of Open 6G Networks'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2508.17778v2
+  url: https://arxiv.org/abs/2508.17778
+  pdf_url: https://arxiv.org/pdf/2508.17778v2
+  venue: arXiv preprint
+time:
+  published: '2025-08-25'
+  collected: '2026-11-14'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: AgentRAN智能体层级将复杂意图按亚毫秒到分钟的时间尺度、单小区到全网的空间域以及PHY/MAC至RRC协议层分解编排
+  confidence: reported
+  metrics:
+  - name: 控制时间尺度跨度
+    value: sub-millisecond到minutes
+    scope: 智能体层级设计范围，实时5G实验平台
+  evidence: abstract（初筛，未读全文）
+- statement: AI-RAN Factory基于运行数据持续生成改进的智能体与算法，无需初始训练数据即可自举网络智能
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 实时5G实验验证系统在功率控制与调度任务中对运营商意图变化的动态适应，且全部智能体推理过程可审计
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 用LLM智能体解析自然语言意图并自组织编排6G网络控制环路，AI-RAN Factory持续生成更优智能体实现网络智能自进化。
+  abstract_zh: 提出AgentRAN，一个AI原生、对齐Open RAN的智能体框架：LLM驱动的智能体解析自然语言意图、通过结构化对话协商策略，并在网络中编排分布式控制环路。系统构建跨时间尺度、空间域和协议层的自组织智能体层级，将复杂意图逐层分解。核心创新AI-RAN
+    Factory基于运行数据持续生成改进的智能体与算法，无需初始训练数据即可自举。实时5G实验验证了在功率控制与调度任务上对运营商意图变化的动态适应，且所有智能体推理可审计。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: LLM智能体驱动的Open RAN自主控制框架，含AI-RAN Factory持续自改进闭环，属自我改进AI域，但应用场景为无线网络而非音视频本体
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: AgentRAN：面向开放6G网络自主控制的智能体AI架构
+relations:
+- type: same_topic
+  ref: paper:arxiv:2402.02338
+  note: 同属LLM驱动的网络控制与自适应优化方向
+- type: same_topic
+  ref: paper:arxiv:2610.16226
+  note: 同为AI（RL/LLM智能体）驱动的网络决策控制工作

@@ -1,0 +1,59 @@
+id: paper:arxiv:2402.00540
+type: paper
+title: Experimental Evaluation of Interactive Edge/Cloud Virtual Reality Gaming over Wi-Fi using Unity
+  Render Streaming
+domain: streaming_delivery
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2402.00540v2
+  url: https://arxiv.org/abs/2402.00540
+  pdf_url: https://arxiv.org/pdf/2402.00540v2
+  venue: arXiv preprint
+time:
+  published: '2024-02-01'
+  collected: '2026-11-14'
+entities:
+- ref: concept:WebRTC
+  role: subject
+- ref: metric:FPS
+  role: measured_by
+claims:
+- statement: 基于 Unity Render Streaming + WebRTC 的边缘 VR 游戏串流在 Wi-Fi 6 上于 60 与 90 fps 帧率下均保持稳定网络性能，RTT 与抖动极小。
+  confidence: reported
+  metrics:
+  - name: 测试帧率条件
+    value: 60 fps / 90 fps
+    scope: Wi-Fi 6 边缘服务器 VR 串流 QoS 评估
+  evidence: abstract（初筛，未读全文）
+- statement: WebRTC 类视频服务呈现系统性打包、按固定时间间隔成批发送视频帧的传输模式，且该批次间隔与目标帧率无关。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 间隔式批量传输使不同视频帧率下的视频包延迟保持一致，但导致 Wi-Fi 空口时间占用增加；缩短批间隔有利于提升 Wi-Fi 效率并降低整帧交付时延。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 用 Unity Render Streaming 经 WebRTC 在 Wi-Fi 6 边缘串流 VR 游戏，评估 QoS 并揭示 WebRTC 按固定间隔批量发包的传输特性。
+  abstract_zh: 该研究采用 Unity Render Streaming 经 WebRTC 在 Wi-Fi 6 上从紧邻用户的边缘服务器实时串流交互式 VR 游戏内容，结合实测数据与 Wi-Fi
+    仿真器评估 QoS。结果表明系统在 60 与 90 fps 下均维持稳定网络性能，RTT 与抖动极小。研究揭示了 WebRTC 类服务特有的视频传输模式：视频帧被系统性打包后按固定时间间隔成批发送，与目标帧率无关。该间隔式传输策略使不同帧率下的视频包延迟保持一致，但会增加
+    Wi-Fi 空口时间占用；缩短批间隔可提升 Wi-Fi 效率并降低整帧交付时延。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 属流媒体传输域（WebRTC/Wi-Fi 边缘 VR 串流 QoS 与流量特性评估），非核心编码域，按规则仅摘要级收录。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 基于 Unity Render Streaming 的 Wi-Fi 边缘/云端交互式 VR 游戏串流实验评估
+relations:
+- type: same_topic
+  ref: paper:arxiv:2507.00623
+  note: 同为 VR 远程渲染串流的传输框架与协议性能评估
+- type: same_topic
+  ref: paper:arxiv:2306.01194
+  note: 均关注 WebRTC 视频流的传输特性与 QoS/QoE
+- type: same_topic
+  ref: paper:arxiv:2308.03643
+  note: 均涉及 WebRTC 实时视频传输与自适应优化

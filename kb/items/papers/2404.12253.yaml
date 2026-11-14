@@ -1,0 +1,55 @@
+id: paper:arxiv:2404.12253
+type: paper
+title: Toward Self-Improvement of LLMs via Imagination, Searching, and Criticizing
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2404.12253v2
+  url: https://arxiv.org/abs/2404.12253
+  pdf_url: https://arxiv.org/pdf/2404.12253v2
+  venue: arXiv preprint
+time:
+  published: '2024-04-18'
+  collected: '2026-11-14'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: subject
+claims:
+- statement: AlphaLLM将蒙特卡洛树搜索（MCTS）与大语言模型结合，建立自我改进循环，在不引入额外标注数据的情况下提升LLM能力。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: AlphaLLM由提示词合成组件、专为语言任务设计的高效MCTS方法以及三个用于精确反馈的评论家模型组成，以应对数据稀缺、语言任务搜索空间庞大和反馈主观性三大挑战。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在数学推理任务上的实验表明，AlphaLLM显著提升了LLM性能，验证了LLM自我改进路径的可行性。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出AlphaLLM，将MCTS与LLM结合形成自我改进闭环，无需额外标注即可提升数学推理能力。
+  abstract_zh: 该论文提出AlphaLLM，借鉴AlphaGo的成功经验，将蒙特卡洛树搜索（MCTS）与大语言模型结合，构建一个自我改进循环，在无需额外标注的情况下增强LLM的复杂推理与规划能力。系统针对语言任务的独特挑战（数据稀缺、搜索空间庞大、反馈主观性）设计了提示词合成组件、面向语言任务的高效MCTS方法，以及三个用于精确反馈的评论家（critic）模型。在数学推理任务上的实验表明，AlphaLLM在无额外标注的条件下显著提升了LLM性能，展示了LLM自我改进的潜力。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 典型的LLM自我改进工作（AlphaLLM：MCTS+批判模型构建无标注自改进闭环），属自我改进AI域，非核心编码域故只作摘要收录。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 迈向通过想象、搜索与批判实现大语言模型自我改进
+relations:
+- type: same_topic
+  ref: paper:arxiv:2210.11610
+  note: 同属LLM自我改进方向（Large Language Models Can Self-Improve），本文为MCTS驱动的后续扩展
+- type: same_topic
+  ref: paper:arxiv:2305.14483
+  note: 同为利用自评估奖励进行语言模型自改进的工作
+- type: same_topic
+  ref: paper:arxiv:2312.10003
+  note: 同属面向推理/Agent的LLM自改进研究线
+- type: same_topic
+  ref: paper:arxiv:2405.00451
+  note: 同属MCTS增强LLM推理的研究方向

@@ -1,0 +1,46 @@
+id: paper:arxiv:2504.11301
+type: paper
+title: 'Learning to Be A Doctor: Searching for Effective Medical Agent Architectures'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2504.11301v2
+  url: https://arxiv.org/abs/2504.11301
+  pdf_url: https://arxiv.org/pdf/2504.11301v2
+  venue: arXiv preprint
+time:
+  published: '2025-04-15'
+  collected: '2026-11-14'
+entities:
+- ref: concept:LLM
+  role: uses
+- ref: concept:SelfImprovement
+  role: subject
+claims:
+- statement: 论文提出首个完全自动化的医疗智能体架构设计框架，通过分层搜索空间在节点、结构与框架三级进行修改，实现工作流动态适配。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 以诊断反馈引导的迭代自改进在皮肤病诊断任务上能有效演化工作流结构并显著提升诊断准确率。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出首个全自动医疗智能体架构设计框架，经分层搜索与诊断反馈驱动的自改进，在皮肤病诊断上显著提升准确率。
+  abstract_zh: 针对现有医疗智能体依赖静态人工工作流、难以适配多样诊断需求的问题，论文受AutoML启发提出医疗智能体架构自动化设计框架。该框架定义分层且表达力强的智能体搜索空间，可在节点、结构与框架三个层级进行结构化修改，实现工作流动态自适应。框架将医疗智能体建模为由多种功能节点组成的图结构架构，并以诊断反馈为引导进行迭代自改进。在皮肤病诊断任务上，该方法能有效演化工作流结构并随时间显著提升诊断准确率，论文称之为首个完全自动化的医疗智能体架构设计框架。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 医疗智能体架构自动搜索与迭代自改进，属自我改进AI方向而非音视频核心域，按基准收录为初筛摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 学会当医生：搜索有效的医疗智能体架构
+relations:
+- type: same_topic
+  ref: paper:arxiv:2312.10003
+  note: 均为LLM多步推理智能体的自改进与工作流演化研究
+- type: same_topic
+  ref: paper:arxiv:2210.11610
+  note: 同属LLM自改进方向，本文将其机制扩展到医疗智能体架构搜索

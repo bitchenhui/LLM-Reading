@@ -1,0 +1,49 @@
+id: paper:arxiv:2506.18260
+type: paper
+title: Advanced For-Loop for QML algorithm search
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2506.18260v1
+  url: https://arxiv.org/abs/2506.18260
+  pdf_url: https://arxiv.org/pdf/2506.18260v1
+  venue: arXiv preprint
+time:
+  published: '2025-06-23'
+  collected: '2026-11-14'
+entities:
+- ref: concept:FunSearch
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: 提出受FunSearch启发的LLMMA框架，可在抽象层面迭代生成并精炼经典ML算法（MLP、forward-forward、反向传播）的量子变换，实现QML算法的自动搜索与优化。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 该工作仅为概念验证，摘要未报告任何量化性能指标；作者称未来需引入规划机制与搜索空间优化策略。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 受FunSearch启发，用LLM多智能体系统在抽象层面自动搜索并优化量子机器学习算法（概念验证）。
+  abstract_zh: 本文提出一个受Google DeepMind FunSearch启发的框架，利用基于大语言模型的多智能体系统（LLMMA）自动搜索和优化量子机器学习（QML）算法。该系统在抽象概念层面迭代生成并精炼经典机器学习算法（如多层感知机、forward-forward与反向传播）的量子变换。作为概念验证，该工作展示了智能体框架系统地探索经典机器学习概念并将其适配到量子计算的潜力，为量子增强机器学习算法的自动化开发铺路。未来方向包括引入规划机制与搜索空间优化策略。
+assessment:
+  relevance: low
+  decision: summary_only
+  reason: 受FunSearch启发的LLM多智能体量子机器学习算法搜索概念验证，属自我改进AI域但非音视频核心且无量化结果。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 面向量子机器学习算法搜索的高级For-循环框架
+relations:
+- type: same_topic
+  ref: paper:arxiv:2406.04824
+  note: 同为FunSearch启发的LLM驱动自动算法发现工作
+- type: same_topic
+  ref: paper:arxiv:2506.13131
+  note: 同属FunSearch谱系的LLM编码智能体做算法/科学发现
+- type: same_topic
+  ref: paper:arxiv:2606.06473
+  note: 同为LLM驱动的自动化机器学习算法发现框架

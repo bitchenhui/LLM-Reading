@@ -1,0 +1,63 @@
+id: paper:arxiv:2510.07841
+type: paper
+title: Self-Improving LLM Agents at Test-Time
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2510.07841v1
+  url: https://arxiv.org/abs/2510.07841
+  pdf_url: https://arxiv.org/pdf/2510.07841v1
+  venue: arXiv preprint
+time:
+  published: '2025-10-09'
+  collected: '2026-11-14'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: TT-SI方法在多个agent基准上平均绝对准确率提升5.48%，并超过其他标准学习方法。
+  confidence: reported
+  metrics:
+  - name: 平均绝对准确率提升
+    value: +5.48%
+    scope: 跨所有agent基准的平均值（摘要报告）
+  evidence: abstract（初筛，未读全文）
+- statement: TT-SI仅需其他标准学习方法约1/68的训练样本即达到更好性能，凸显数据效率优势。
+  confidence: reported
+  metrics:
+  - name: 训练样本缩减倍数
+    value: 68x
+    scope: 相对其他标准学习方法所需训练样本量
+  evidence: abstract（初筛，未读全文）
+- statement: 测试时蒸馏变体TT-D由更强模型为不确定样本生成相似示例，供学生模型借助蒸馏监督进行适应。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出TT-SI测试时自我改进：自识别困难样本、自生成数据、测试时微调，平均提升5.48%且训练样本减少68倍。
+  abstract_zh: 该工作提出一种测试时自我改进算法，分三步：(i) 自我感知——识别模型难以处理的样本；(ii) 自我数据增强——从不确定样本生成相似新样本；(iii) 自我改进——用新样本进行测试时微调。作者研究了两种变体：TT-SI由同一模型自生成训练样本并学习；TT-D（测试时蒸馏）则由更强模型为不确定样本生成相似样本供学生模型蒸馏适应。在多个agent基准上，TT-SI平均绝对准确率提升5.48%，并以68倍更少的训练样本超过其他标准学习方法，展示了测试时自我改进作为构建自进化智能体新范式的潜力。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: LLM智能体测试时自我改进方法研究，属自我改进AI域而非音视频核心域，按基准仅初筛摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 测试时自我改进的大语言模型智能体
+relations:
+- type: same_topic
+  ref: paper:arxiv:2210.11610
+  note: 同为LLM自我改进方法研究
+- type: same_topic
+  ref: paper:arxiv:2505.19475
+  note: 同为基于测试时训练的LLM持续自我改进
+- type: same_topic
+  ref: paper:arxiv:2312.10003
+  note: 同为多步推理LLM智能体的自我改进
+- type: same_topic
+  ref: paper:arxiv:2412.14352
+  note: 同属LLM推理时自我改进研究方向

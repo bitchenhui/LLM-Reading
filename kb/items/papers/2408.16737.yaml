@@ -1,0 +1,49 @@
+id: paper:arxiv:2408.16737
+type: paper
+title: 'Smaller, Weaker, Yet Better: Training LLM Reasoners via Compute-Optimal Sampling'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2408.16737v2
+  url: https://arxiv.org/abs/2408.16737
+  pdf_url: https://arxiv.org/pdf/2408.16737v2
+  venue: arXiv preprint
+time:
+  published: '2024-08-29'
+  collected: '2026-11-14'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:SelfImprovement
+  role: uses
+claims:
+- statement: 在固定推理计算预算下，用弱而便宜（WC）模型生成的数据微调的LLM推理器，在多个基准和多种WC/SE模型组合上一致优于用强而昂贵（SE）模型数据训练的模型。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: WC模型生成的数据在覆盖率与多样性上高于SE模型数据，但误报率（false positive rate）更高。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 提出弱到强（weak-to-strong）提升设定：较弱的LM可教更强的LM推理，且该设定下WC数据同样优于SE数据。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 固定计算预算下，用弱而便宜的模型生成合成数据微调LLM，推理性能反而优于强而昂贵模型的数据。
+  abstract_zh: 论文在固定推理计算预算（如FLOPs）下，重新审视用强模型生成合成数据训练LLM推理的常见做法，比较强而昂贵（SE）与弱而便宜（WC）两类数据生成模型的权衡。作者从覆盖率、多样性与误报率三个维度评估生成数据：WC模型数据覆盖率和多样性更高，但误报率也更高。随后在知识蒸馏、自我改进以及新提出的弱到强提升三种设定下微调语言模型。结果显示，用WC数据训练的模型在多个基准、多种WC/SE组合下一致优于SE数据训练的模型，挑战了依赖强模型做合成数据的主流实践。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 非音视频域，属于LLM推理自我改进与计算最优合成数据方向的重要工作，按规则收录为 summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 更小、更弱、却更好：通过计算最优采样训练LLM推理器
+relations:
+- type: same_topic
+  ref: paper:arxiv:2408.03314
+  note: 同属LLM推理的计算最优缩放主题，本文从推理预算角度研究采样最优性
+- type: same_topic
+  ref: paper:arxiv:2210.11610
+  note: 同为LLM自我改进方向的代表性工作，本文将自我改进作为三种微调设定之一

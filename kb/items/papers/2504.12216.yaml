@@ -1,0 +1,53 @@
+id: paper:arxiv:2504.12216
+type: paper
+title: 'd1: Scaling Reasoning in Diffusion Large Language Models via Reinforcement Learning'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2504.12216v2
+  url: https://arxiv.org/abs/2504.12216
+  pdf_url: https://arxiv.org/pdf/2504.12216v2
+  venue: arXiv preprint
+time:
+  published: '2025-04-16'
+  collected: '2026-11-14'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:SelfImprovement
+  role: uses
+claims:
+- statement: diffu-GRPO是首个将策略梯度强化学习方法应用于掩码扩散大语言模型的算法，且不依赖critic模型。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 掩码SFT可从既有数据集向dLLM蒸馏知识并注入自我改进行为，与diffu-GRPO组合构成d1框架。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在多个数学与规划基准上，d1后训练配方显著提升了最先进dLLM的推理性能，优于所比较的其他后训练方案。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出d1框架，用掩码SFT与无critic的策略梯度算法diffu-GRPO将预训练掩码扩散大语言模型转变为推理模型。
+  abstract_zh: 论文提出d1框架，将预训练掩码扩散大语言模型（dLLM）通过监督微调与在线强化学习相结合改造为推理模型。方法上：(a) 采用掩码SFT从既有数据集蒸馏知识并注入自我改进行为；(b)
+    提出无critic、基于策略梯度的强化学习算法diffu-GRPO，这是策略梯度方法首次与掩码dLLM结合。研究在多个数学与规划基准上比较了不同后训练配方，发现d1取得最优性能，并显著提升了一个最先进dLLM的表现。代码已开源。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 通过SFT+强化学习将扩散大语言模型改造为推理模型并注入自我改进行为，属自我改进AI方向，与音视频核心技术无直接关联，仅摘要收录。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: d1：通过强化学习扩展扩散大语言模型的推理能力
+relations:
+- type: same_topic
+  ref: paper:arxiv:2305.14483
+  note: 同属用强化学习提升LLM推理/自我改进的路线
+- type: same_topic
+  ref: paper:arxiv:2210.11610
+  note: 同属LLM自我改进能力研究，d1显式注入自我改进行为
+- type: same_topic
+  ref: paper:arxiv:2502.02508
+  note: 同属RL扩展LLM推理能力，但该工作面向自回归模型，d1面向扩散模型

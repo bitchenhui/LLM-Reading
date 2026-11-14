@@ -1,0 +1,65 @@
+id: paper:arxiv:2505.19475
+type: paper
+title: Continuous Self-Improvement of Large Language Models by Test-time Training with Verifier-Driven
+  Sample Selection
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2505.19475v2
+  url: https://arxiv.org/abs/2505.19475
+  pdf_url: https://arxiv.org/pdf/2505.19475v2
+  venue: arXiv preprint
+time:
+  published: '2025-05-26'
+  collected: '2026-11-14'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:SelfImprovement
+  role: uses
+claims:
+- statement: VDS-TTT在三个多样化基准和三个SOTA LLM上相比基础模型最高取得32.29%的相对改进。
+  confidence: reported
+  metrics:
+  - name: 相对改进
+    value: 32.29%
+    scope: 对比基础模型，三个基准×三个SOTA LLM，取上限
+  evidence: abstract（初筛，未读全文）
+- statement: 相比不带测试时训练的验证器方法，VDS-TTT取得6.66%的增益。
+  confidence: reported
+  metrics:
+  - name: 增益
+    value: 6.66%
+    scope: 对比仅验证器筛选（无TTT）的方法
+  evidence: abstract（初筛，未读全文）
+- statement: 该框架是首个合成验证器驱动测试时训练数据以实现模型持续自我改进的自监督方法。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 仅微调低秩LoRA适配器参数，保证适应效率与快速收敛。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出VDS-TTT框架，用学习到的验证器筛选高置信伪标签样本做测试时训练，使LLM在无标签分布外数据上持续自我改进。
+  abstract_zh: 论文提出VDS-TTT框架：对每个输入查询让LLM生成N个候选答案，由学习到的验证器为各答案打可靠性分数，选取最高置信且超过固定阈值的答案与其查询配对，作为测试时训练（TTT）的伪标签数据，仅微调低秩LoRA适配器参数以保证适应效率与快速收敛。作者称这是首个以验证器驱动方式合成测试时训练数据、实现模型持续自我改进的自监督框架。在三个多样化基准和三个SOTA
+    LLM上的实验显示，VDS-TTT相比基础模型相对提升最高32.29%，相比不带测试时训练的验证器方法提升6.66%。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: LLM测试时训练+验证器筛选样本的持续自我改进框架，属于自我改进AI域，非核心编码域故仅初筛。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 基于验证器驱动样本选择的测试时训练实现大语言模型持续自我改进
+relations:
+- type: same_topic
+  ref: paper:arxiv:2210.11610
+  note: 同属LLM自我改进方向：VDS-TTT沿用自生成伪标签数据自我改进范式，并引入验证器筛选与测试时训练
+- type: same_topic
+  ref: paper:arxiv:2412.14352
+  note: 同属LLM推理时自我改进综述覆盖的测试时改进路线，本文以验证器驱动TTT实现持续适应
+- type: same_topic
+  ref: paper:arxiv:2610.12002
+  note: 同为测试时训练（TTT）方向工作，本文聚焦验证器驱动样本选择而非策略训练

@@ -1,0 +1,60 @@
+id: paper:arxiv:2502.13550
+type: paper
+title: 'STaR-SQL: Self-Taught Reasoner for Text-to-SQL'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2502.13550v1
+  url: https://arxiv.org/abs/2502.13550
+  pdf_url: https://arxiv.org/pdf/2502.13550v1
+  venue: arXiv preprint
+time:
+  published: '2025-02-19'
+  collected: '2026-11-14'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: STaR-SQL在Spider基准上达到86.6%的执行准确率
+  confidence: reported
+  metrics:
+  - name: 执行准确率
+    value: 86.6%
+    scope: Spider基准
+  evidence: abstract（初筛，未读全文）
+- statement: STaR-SQL比少样本基线提升31.6%，比直接预测答案的微调基线提升18.0%
+  confidence: reported
+  metrics:
+  - name: 执行准确率相对提升
+    value: 31.6%
+    scope: 对比Spider少样本基线
+  - name: 执行准确率相对提升
+    value: 18.0%
+    scope: 对比直接预测答案的微调基线
+  evidence: abstract（初筛，未读全文）
+- statement: STaR-SQL超过使用GPT-4等更强闭源模型的代理式提示方法
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 将SQL生成重构为思维链推理过程，用正确结果筛选的推理微调LLM并辅以ORM验证器，Spider执行准确率达86.6%
+  abstract_zh: 论文提出STaR-SQL，将文本到SQL生成重构为推理驱动过程：先提示LLM为SQL查询生成逐步思维链推理，再用能导出正确执行结果的推理样本对模型微调。该方法在推理时投入额外测试时计算，将LLM定位为自发推理器而非纯提示代理。为进一步扩展推理规模，引入结果监督奖励模型（ORM）作为验证器以提升SQL查询准确率。在Spider基准上执行准确率达86.6%，比少样本基线高31.6%，比直接预测答案的微调基线高18.0%，并超过使用GPT-4等闭源模型的代理式提示方法。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 属LLM自举推理自改进（STaR类）工作，与音视频核心技术无直接关联，仅做初筛摘要
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: STaR-SQL：面向文本到SQL的自学推理器
+relations:
+- type: same_topic
+  ref: paper:arxiv:2210.08229
+  note: 均为LLM自我改进方向：用自身生成并通过结果筛选的推理样本微调模型
+- type: same_topic
+  ref: paper:arxiv:2310.02304
+  note: 同属基于正确性筛选自生成样本实现LLM自改进的研究线（STOP代码生成 vs STaR-SQL文本到SQL）

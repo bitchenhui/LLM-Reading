@@ -1,0 +1,47 @@
+id: paper:arxiv:2412.15298
+type: paper
+title: A Comparative Study of DSPy Teleprompter Algorithms for Aligning Large Language Models Evaluation
+  Metrics to Human Evaluation
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2412.15298v1
+  url: https://arxiv.org/abs/2412.15298
+  pdf_url: https://arxiv.org/pdf/2412.15298v1
+  venue: arXiv preprint
+time:
+  published: '2024-12-19'
+  collected: '2026-11-14'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:SelfImprovement
+  role: uses
+claims:
+- statement: DSPy优化器可将LLM提示词及LLM-as-judge评估对齐到人工标注，优化后的提示在公开幻觉检测基准上优于多种基准方法。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: COPRO、MIPRO、BootstrapFewShot、BootstrapFewShot+Optuna与KNN Few-Shot五种teleprompter算法在对齐人工评估的能力上存在差异，部分算法在这些实验中优于其余算法。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 比较DSPy框架下五种提示优化算法将LLM幻觉检测评估对齐人工标注的效果，优化后提示优于多种基线。
+  abstract_zh: 论文主张DSPy（Declarative Self-improving Python）优化器是对齐LLM提示词及LLM评估与人工标注的有效途径。作者在DSPy框架内比较了五种teleprompter算法：COPRO、MIPRO、BootstrapFewShot、BootstrapFewShot+Optuna以及K近邻Few-Shot。具体任务为优化提示词，使LLM-as-judge的幻觉检测对齐公开基准数据集上的人工标注真值。实验表明优化后的提示词在幻觉检测上可超越多种基准方法，且部分teleprompter算法在这些实验中表现优于其他算法。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 属LLM提示优化与评估对齐（自我改进AI范畴），与音视频编码核心技术无直接关联，按非核心域仅收录摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: DSPy Teleprompter算法对齐大语言模型评估指标与人工评估的比较研究
+relations:
+- type: same_topic
+  ref: paper:arxiv:2309.16797
+  note: 同属LLM提示词自动优化/自我改进方向，均研究自动化提示改进机制
+- type: same_topic
+  ref: paper:arxiv:2604.06996
+  note: 均涉及LLM-as-judge评估校准问题（本文化对齐人工标注，该文研究评审自偏好偏差）

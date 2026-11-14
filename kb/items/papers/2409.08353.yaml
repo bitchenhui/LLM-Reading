@@ -1,0 +1,59 @@
+id: paper:arxiv:2409.08353
+type: paper
+title: Robust Dual Gaussian Splatting for Immersive Human-centric Volumetric Videos
+domain: immersive_media
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2409.08353v1
+  url: https://arxiv.org/abs/2409.08353
+  pdf_url: https://arxiv.org/pdf/2409.08353v1
+  venue: arXiv preprint
+time:
+  published: '2024-09-12'
+  collected: '2026-11-14'
+entities:
+- ref: concept:VolumetricVideo
+  role: subject
+- ref: concept:3DGS
+  role: builds_on
+claims:
+- statement: DualGS用皮肤高斯与关节高斯分别表示外观与运动，显式解耦可显著降低运动冗余并增强时序一致性。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: DualGS实现最高120倍压缩比，每帧仅需约350KB存储，并在VR头显上支持实时高保真自由视点播放。
+  confidence: reported
+  metrics:
+  - name: 压缩比
+    value: 120倍
+    scope: 上限值，相对原始体积视频资产
+  - name: 每帧存储量
+    value: 约350KB
+    scope: 运动熵编码+外观编解码压缩后
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: DualGS以皮肤/关节双高斯分离运动与外观，实现人体体积视频120倍压缩与VR实时自由视点播放。
+  abstract_zh: 该文提出DualGS，一种面向以人为中心体积视频的双高斯表示，核心思想是用关节高斯表示运动、皮肤高斯表示外观，首帧将皮肤高斯锚定于关节高斯，从而显式解耦运动与外观、降低运动冗余并增强时序一致性。方法采用由粗到细的逐帧训练策略：先粗对齐预测整体运动，再进行细粒度优化以实现鲁棒跟踪与高保真渲染。压缩环节对运动采用熵编码、对外观采用编解码器压缩并配合持久码本。结果显示压缩比最高达120倍，每帧仅需约350KB存储，可在VR头显上实现照片级实时自由视点观看体验。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 以3DGS为核心的以人为中心体积视频表示与压缩，属沉浸式媒体非核心域，按规则仅初筛摘要
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 面向沉浸式以人为中心体积视频的鲁棒双高斯泼溅
+relations:
+- type: same_topic
+  ref: paper:arxiv:2202.06088
+  note: 同为神经表示的体积视频建模与沉浸式渲染
+- type: same_topic
+  ref: paper:arxiv:2310.08205
+  note: 同为以人为中心的体积视频流媒体系统
+- type: same_topic
+  ref: paper:arxiv:2409.07759
+  note: 同为面向体积视频流媒体的高斯泼溅表示
+- type: same_topic
+  ref: paper:arxiv:2412.04469
+  note: 同为动态高斯量化压缩以支持自由视点视频流

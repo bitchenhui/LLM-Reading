@@ -1,0 +1,59 @@
+id: paper:arxiv:2510.04618
+type: paper
+title: 'Agentic Context Engineering: Evolving Contexts for Self-Improving Language Models'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2510.04618v3
+  url: https://arxiv.org/abs/2510.04618
+  pdf_url: https://arxiv.org/pdf/2510.04618v3
+  venue: arXiv preprint
+time:
+  published: '2025-10-06'
+  collected: '2026-11-14'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:SelfImprovement
+  role: subject
+claims:
+- statement: ACE通过结构化增量更新使上下文像策略手册一样积累与精炼，同时规避了简洁性偏差与迭代改写导致的上下文坍缩。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: ACE在智能体与金融领域基准上均优于强基线，并显著降低适配时延与rollout成本。
+  confidence: reported
+  metrics:
+  - name: 智能体基准提升
+    value: +10.6%
+    scope: 相对强基线，agent benchmarks
+  - name: 金融领域提升
+    value: +8.6%
+    scope: 相对强基线，金融领域基准
+  evidence: abstract（初筛，未读全文）
+- statement: ACE无需标注监督，仅利用自然执行反馈即可有效完成上下文适配。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在AppWorld排行榜上，ACE以更小的开源模型追平排名第一的生产级智能体总体均值，并在更难的test-challenge划分上实现超越。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出ACE框架，将上下文视为可增量演化的策略手册，通过生成-反思-策展实现LLM自改进并避免上下文坍缩。
+  abstract_zh: LLM应用（智能体、领域推理）日益依赖以指令/策略/证据改写输入的上下文适配，而非权重更新；既有方法存在简洁性偏差（丢失领域洞察）与上下文坍缩（迭代改写侵蚀细节）两大缺陷。ACE将上下文视为不断演化的策略手册，通过生成、反思、策展的模块化流程做结构化增量更新，保留细粒度领域知识并可随长上下文模型扩展。该框架支持离线（系统提示词）与在线（智能体记忆）两类适配，在智能体基准上相对强基线提升+10.6%，在金融领域提升+8.6%，同时显著降低适配时延与rollout成本，且可仅凭自然执行反馈在无标注监督下完成适配。在AppWorld排行榜上，ACE使用更小的开源模型即追平排名第一的生产级智能体的总体均值，并在更难的test-challenge划分上实现超越。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 自我改进AI核心代表作：提出ACE上下文演化框架实现LLM免权重更新的自改进，但非音视频核心域，按基准仅做初筛摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 智能体上下文工程：面向自改进语言模型的上下文演化
+relations:
+- type: same_topic
+  ref: paper:arxiv:2506.06698
+  note: 同为基于上下文/经验积累的语言智能体自改进
+- type: same_topic
+  ref: paper:arxiv:2312.10003
+  note: 同为多步推理LLM智能体的自改进路线

@@ -1,0 +1,55 @@
+id: paper:arxiv:2506.06303
+type: paper
+title: 'Reward Is Enough: LLMs Are In-Context Reinforcement Learners'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2506.06303v6
+  url: https://arxiv.org/abs/2506.06303
+  pdf_url: https://arxiv.org/pdf/2506.06303v6
+  venue: arXiv preprint
+time:
+  published: '2025-05-21'
+  collected: '2026-11-14'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:SelfImprovement
+  role: subject
+claims:
+- statement: LLM 在推理阶段可涌现上下文强化学习（ICRL）行为：仅凭历史响应与标量奖励拼接的上下文即可优化输出质量，无需参数更新。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: ICRL prompting 在 Game of 24、创意写作、ScienceWorld 及 AIME/HMMT 奥数任务上显著超越 Self-Refine 与 Reflexion
+    等基线方法。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 即使奖励信号由同一 LLM 自身生成，ICRL prompting 仍能带来性能提升，为测试时扩展提供了一种新范式。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出 ICRL 提示框架，让 LLM 在推理时依据标量奖励反馈进行上下文强化学习式自我提升。
+  abstract_zh: 本文证明强化学习可在 LLM 推理阶段涌现，作者称之为上下文强化学习（ICRL）。其提出的 ICRL prompting 是一个简单的多轮提示框架：模型每轮生成响应后获得标量奖励反馈，下一轮将所有历史响应与对应奖励拼接进上下文再次提示
+    LLM，以在推理时对给定任务进行自我改进。实验观察到随上下文增长响应质量持续提升，表明 LLM 能在推理时优化标量奖励信号，表现出类似强化学习的行为。在 Game of 24、创意写作、ScienceWorld
+    及 AIME/HMMT 奥数任务上评估，显著优于 Self-Refine 和 Reflexion 等基线；即使奖励由同一 LLM 自身生成仍有效，展示了测试时扩展的新范式。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 提出 ICRL 提示框架证明 LLM 在推理时涌现上下文强化学习以实现自我改进，属自我改进 AI 的重要工作，但非音视频核心域，仅给 summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 奖励即足够：大语言模型是上下文强化学习者
+relations:
+- type: same_topic
+  ref: paper:arxiv:2412.14352
+  note: 同属 LLM 推理时自我改进方向
+- type: same_topic
+  ref: paper:arxiv:2305.14483
+  note: 均利用强化学习信号驱动 LLM 自我改进
+- type: same_topic
+  ref: paper:arxiv:2210.11610
+  note: 同属 LLM 自我改进能力研究

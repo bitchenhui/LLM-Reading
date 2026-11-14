@@ -1,0 +1,52 @@
+id: paper:arxiv:2505.13259
+type: paper
+title: 'From Automation to Autonomy: A Survey on Large Language Models in Scientific Discovery'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2505.13259v3
+  url: https://arxiv.org/abs/2505.13259
+  pdf_url: https://arxiv.org/pdf/2505.13259v3
+  venue: arXiv preprint
+time:
+  published: '2025-05-19'
+  collected: '2026-11-14'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:SelfImprovement
+  role: subject
+claims:
+- statement: 综述提出工具、分析者、科学家三级分类体系，按自主性与职责递进刻画LLM在研究生命周期中的角色变迁
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 论文将LLM在科学发现中的范式转变概括为：从任务专用自动化工具演进为日益自主的智能体，重新定义研究流程与人机协作
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 综述识别出机器人自动化、自我改进与伦理治理为AI驱动科学发现领域的核心挑战与未来研究轨迹
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出工具-分析者-科学家三级自主性分类，系统梳理LLM在科学发现中的角色演进、挑战与自我改进方向
+  abstract_zh: 该综述以科学方法为视角，系统梳理大语言模型在科学发现领域的快速演进。作者提出工具、分析者、科学家三级分类体系，刻画LLM在研究生命周期中自主性与职责的递进升级。论文指出LLM正从任务专用自动化工具转变为日益自主的智能体，从根本上重新定义研究流程与人机协作模式。作者识别出机器人自动化、自我改进与伦理治理等关键挑战和未来研究方向。综述同时提供概念架构与战略展望，并附带持续维护的GitHub资源库。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 系统梳理LLM在科学发现中从自动化到自主化的演进，明确将自我改进列为核心研究轨迹，属自我改进AI域综述，按基准仅summary_only
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 从自动化到自主性：大语言模型在科学发现中的应用综述
+relations:
+- type: same_topic
+  ref: paper:arxiv:2610.33046
+  note: 该工作研究面向科学发现的递归自我改进智能体，与综述中自我改进×科学发现主题直接对应
+- type: same_topic
+  ref: paper:arxiv:2412.14352
+  note: 同为LLM自我改进方向综述，主题高度相关
+- type: same_topic
+  ref: paper:arxiv:2312.10003
+  note: LLM多步推理智能体自我改进，属综述覆盖的智能体自改进脉络

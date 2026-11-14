@@ -1,0 +1,50 @@
+id: paper:arxiv:2507.14172
+type: paper
+title: 'Self-Improving Language Models for Evolutionary Program Synthesis: A Case Study on ARC-AGI'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2507.14172v2
+  url: https://arxiv.org/abs/2507.14172
+  pdf_url: https://arxiv.org/pdf/2507.14172v2
+  venue: arXiv preprint
+time:
+  published: '2025-07-10'
+  collected: '2026-11-14'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: SOAR通过'进化搜索+事后学习'交替循环实现LLM自改进，搜索尝试被转化为问题-解对用于微调，使后续迭代搜索更有效。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在测试时适应下，SOAR能解决ARC-AGI公开测试集52%的任务，且改进随模型规模和迭代轮次显著提升。
+  confidence: reported
+  metrics:
+  - name: ARC-AGI公开测试集解决率
+    value: 52%
+    scope: SOAR测试时适应后，ARC-AGI公开测试集
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出SOAR，交替进行LLM进化搜索与事后学习微调实现自改进，在ARC-AGI公开测试集解决52%任务。
+  abstract_zh: 论文提出SOAR方法，将语言模型整合进自改进的进化循环：第一阶段用LLM采样并精炼候选程序解（进化搜索），第二阶段将搜索尝试转化为有效的'问题-解'训练对（事后学习），用于微调LLM的采样与精炼能力，从而在后续迭代中获得更强的搜索能力。在具有挑战性的ARC-AGI基准上，SOAR在不同模型规模和迭代轮次下均取得显著性能提升，并利用采样与精炼两类微调任务间的正向迁移。这些改进可延续到测试时适应阶段，使SOAR在ARC-AGI公开测试集上解决52%的任务。代码已开源（github.com/flowersteam/SOAR）。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: SOAR将LLM嵌入进化搜索+事后学习自改进循环并在ARC-AGI公开测试集解决52%，是自我改进AI领域的重要代表工作，非核心编码域故仅summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 面向进化程序合成的自改进语言模型：ARC-AGI案例研究
+relations:
+- type: same_topic
+  ref: paper:arxiv:2402.04858
+  note: 同为LLM自改进程序合成路线，均以事后（hindsight）方式将搜索尝试转为训练信号，且都在ARC类基准上验证
+- type: same_topic
+  ref: paper:arxiv:2210.08229
+  note: 同属LLM自改进（self-improve）主题，本工作将其扩展到进化搜索与程序合成场景

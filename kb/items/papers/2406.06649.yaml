@@ -1,0 +1,66 @@
+id: paper:arxiv:2406.06649
+type: paper
+title: '2DQuant: Low-bit Post-Training Quantization for Image Super-Resolution'
+domain: processing_enhancement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2406.06649v1
+  url: https://arxiv.org/abs/2406.06649
+  pdf_url: https://arxiv.org/pdf/2406.06649v1
+  venue: arXiv preprint
+time:
+  published: '2024-06-10'
+  collected: '2026-11-14'
+entities:
+- ref: concept:SuperResolution
+  role: subject
+- ref: metric:PSNR
+  role: measured_by
+claims:
+- statement: 2DQuant在2比特量化下于Set5 (x2)上PSNR较SOTA提升4.52dB
+  confidence: reported
+  metrics:
+  - name: PSNR提升
+    value: 4.52dB
+    scope: Set5数据集、x2缩放、2-bit量化，相比SOTA
+  evidence: abstract（初筛，未读全文）
+- statement: 2DQuant实现3.60倍模型压缩比与5.08倍推理加速比
+  confidence: reported
+  metrics:
+  - name: 压缩比
+    value: 3.60x
+    scope: 量化模型相对全精度模型
+  - name: 加速比
+    value: 5.08x
+    scope: 量化模型相对全精度模型
+  evidence: abstract（初筛，未读全文）
+- statement: 第一阶段DOBI单独使用即可达到SOTA，经DQC蒸馏校准后在指标与视觉效果上超越现有PTQ方法
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出双阶段PTQ方法2DQuant，经分布导向边界初始化与蒸馏校准，在2比特量化下大幅超越现有超分量化的SOTA。
+  abstract_zh: 该工作针对图像超分辨率（SR）模型的低比特部署问题，提出双阶段后训练量化方法2DQuant。作者分析发现SR模型的权重与激活分布呈现对称/非对称共存和长尾特征，第一阶段提出分布导向边界初始化（DOBI），采用不同搜索策略为量化器粗搜边界；第二阶段提出蒸馏量化校准（DQC），通过让量化模型向全精度模型蒸馏来精调量化器参数。实验表明仅DOBI即可达到SOTA，两阶段结合后在各比特位与缩放因子下指标与视觉效果均超越现有PTQ方法。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 面向边缘部署的超分模型低比特后训练量化，属编码链路增强侧的模型压缩工作，与核心编码域关联中等。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 2DQuant：面向图像超分辨率的低比特后训练量化
+relations:
+- type: same_topic
+  ref: paper:arxiv:2203.03844
+  note: 同为超低精度（量化）超分辨率网络的工作
+- type: same_topic
+  ref: paper:arxiv:2208.14839
+  note: 同为面向超分辨率的量化友好架构搜索
+- type: same_topic
+  ref: paper:arxiv:2212.09501
+  note: 同为端侧高效超分辨率部署的量化工作
+- type: same_topic
+  ref: paper:arxiv:2105.11683
+  note: 同为基于蒸馏的紧凑型单图超分辨率

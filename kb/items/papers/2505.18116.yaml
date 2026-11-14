@@ -1,0 +1,56 @@
+id: paper:arxiv:2505.18116
+type: paper
+title: 'NFT: Bridging Supervised Learning and Reinforcement Learning in Math Reasoning'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2505.18116v3
+  url: https://arxiv.org/abs/2505.18116
+  pdf_url: https://arxiv.org/pdf/2505.18116v3
+  venue: arXiv preprint
+time:
+  published: '2025-05-23'
+  collected: '2026-11-14'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:SelfImprovement
+  role: subject
+claims:
+- statement: NFT在在线训练中构建隐式负策略建模自生成负答案，该隐式策略与待优化的正向LLM共享同一参数化，可在全部生成数据上直接进行策略优化，无需外部教师。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在数学推理实验中，NFT借助负反馈显著超越拒绝采样微调（RFT）等SL基线，并匹配甚至超越GRPO与DAPO等领先RL算法。
+  confidence: reported
+  metrics:
+  - name: 模型规模
+    value: 7B/32B
+    scope: 实验所用LLM
+  evidence: abstract（初筛，未读全文）
+- statement: 理论上证明在严格在线策略训练下NFT与GRPO等价，尽管二者源自完全不同的理论基础。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出负感知微调NFT，让SL利用自生成负样本实现LLM自改进，严格在线策略下与GRPO等价
+  abstract_zh: 强化学习通过二元验证器信号实现自改进，推动了近期LLM数学能力的跃升，而监督学习因依赖参考答案、无法反思错误而很少被用于验证驱动训练。本文提出负感知微调（NFT），在在线训练中不再丢弃自生成的负答案，而是构建一个与待优化正向LLM共享同一参数化的隐式负策略对其建模，从而无需外部教师即可在全部生成数据上直接进行策略优化。在7B与32B模型的数学推理任务上，NFT显著超越拒绝采样微调等SL基线，匹配甚至超越GRPO、DAPO等领先RL算法。理论上证明在严格在线策略训练下NFT与GRPO等价，弥合了二元反馈学习系统中SL与RL方法的鸿沟。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 提出NFT证明监督学习也能实现LLM自改进并在严格在线策略下与GRPO等价，属自我改进AI重要工作，但非音视频核心域，按基准收录为summary_only
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: NFT：在数学推理中弥合监督学习与强化学习
+relations:
+- type: same_topic
+  ref: paper:arxiv:2210.11610
+  note: 均研究LLM自我提升；本文将SL路径纳入自改进框架，拓展'LLM可自改进'的结论
+- type: same_topic
+  ref: paper:arxiv:2305.14483
+  note: RL驱动的LLM自改进方法；本文证明SL方法NFT在严格在线策略下与GRPO等价，与RL路径形成对照
+- type: same_topic
+  ref: paper:arxiv:2408.09849
+  note: 同属探索以监督学习手段实现LLM自改进的研究方向

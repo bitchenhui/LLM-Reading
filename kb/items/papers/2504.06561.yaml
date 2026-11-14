@@ -1,0 +1,72 @@
+id: paper:arxiv:2504.06561
+type: paper
+title: A Streamable Neural Audio Codec with Residual Scalar-Vector Quantization for Real-Time Communication
+domain: audio_coding
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2504.06561v1
+  url: https://arxiv.org/abs/2504.06561
+  pdf_url: https://arxiv.org/pdf/2504.06561v1
+  venue: arXiv preprint
+time:
+  published: '2025-04-09'
+  collected: '2026-11-14'
+entities:
+- ref: concept:NeuralAudioCodec
+  role: subject
+claims:
+- statement: StreamCodec在16 kHz LibriTTS数据集上以1.5 kbps码率达到ViSQOL 4.30，解码音质与先进非流式神经音频编解码器相当。
+  confidence: reported
+  metrics:
+  - name: ViSQOL
+    value: '4.30'
+    scope: 16 kHz LibriTTS，1.5 kbps
+  - name: 码率
+    value: 1.5 kbps
+    scope: 16 kHz LibriTTS测试
+  evidence: abstract（初筛，未读全文）
+- statement: StreamCodec具有仅20 ms的固定延迟，适合实时通信场景。
+  confidence: reported
+  metrics:
+  - name: 延迟
+    value: 20 ms
+    scope: 固定算法延迟
+  evidence: abstract（初筛，未读全文）
+- statement: StreamCodec在CPU上的生成速度接近20倍实时，模型参数量仅7M。
+  confidence: reported
+  metrics:
+  - name: 生成速度
+    value: 近20倍实时
+    scope: CPU推理
+  - name: 参数量
+    value: 7M
+    scope: 模型规模
+  evidence: abstract（初筛，未读全文）
+- statement: 残差标量-矢量量化器（RSVQ）通过标量量化器构造粗轮廓、矢量量化器细化细节，可提升码本利用效率并补偿全因果结构导致的音质损失。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: StreamCodec以全因果对称结构在MDCT域编码，用残差标量-矢量量化实现1.5 kbps下ViSQOL 4.30、20ms延迟、CPU近20倍实时的高质量可流式音频编码。
+  abstract_zh: 论文提出StreamCodec，一种面向实时通信的可流式神经音频编解码器，采用全因果、对称的编码器-解码器结构并在修正离散余弦变换（MDCT）域运行，以实现低延迟推理与实时高效生成。为提升码本利用效率并补偿结构性因果化带来的音质损失，提出新型残差标量-矢量量化器（RSVQ），以残差方式依次串联标量量化器与改进的矢量量化器，分别构建音频粗轮廓并细化声学细节。实验表明其解码音质可与先进的非流式神经音频编解码器相当：在16
+    kHz LibriTTS数据集上1.5 kbps码率取得ViSQOL 4.30。该模型仅7M参数，固定延迟20 ms，CPU上生成速度近20倍实时，非常适合实时通信应用。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 面向实时通信的可流式神经音频编码工作，属音频编码域，按收录基准不给 deep_read。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 一种采用残差标量-矢量量化、面向实时通信的可流式神经音频编解码器
+relations:
+- type: same_topic
+  ref: paper:arxiv:2107.03312
+  note: 同属端到端神经音频编解码器研究线，StreamCodec与SoundStream主题一致
+- type: same_topic
+  ref: paper:arxiv:2207.03067
+  note: 同为基于矢量量化改进的可扩展神经语音编码工作
+- type: same_topic
+  ref: paper:arxiv:2212.04583
+  note: 同样在MDCT域进行高质量神经音频编码

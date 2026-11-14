@@ -1,0 +1,54 @@
+id: paper:arxiv:2412.02674
+type: paper
+title: 'Mind the Gap: Examining the Self-Improvement Capabilities of Large Language Models'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2412.02674v2
+  url: https://arxiv.org/abs/2412.02674
+  pdf_url: https://arxiv.org/pdf/2412.02674v2
+  venue: arXiv preprint
+time:
+  published: '2024-12-03'
+  collected: '2026-11-14'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: subject
+claims:
+- statement: LLM自改进过程（自我验证、数据过滤/重加权、蒸馏）在很大程度上由形式化为'生成-验证差距'的量所支配
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 存在自改进的标度现象：生成-验证差距的某一变体随模型预训练算力单调增长，跨多个模型家族与任务成立
+  confidence: reported
+  metrics:
+  - name: 生成-验证差距标度关系
+    value: 随预训练flops单调增长
+    scope: 多模型家族、多任务实验观测
+  evidence: abstract（初筛，未读全文）
+- statement: 论文给出了自改进可行的条件判定，并考察迭代式自改进流程及提升其性能的方法
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 形式化LLM自改进中的生成-验证差距，发现其随预训练算力单调增长的标度现象
+  abstract_zh: 该文对LLM自改进机制（模型自我验证输出、据此过滤或重加权数据、再蒸馏）开展模块化、可控的系统研究，给出自改进的数学形式化刻画，指出其主要由'生成-验证差距'（generation-verification
+    gap）这一量支配。在多个模型家族与任务上的实验发现自改进存在标度现象：生成-验证差距的变体随模型预训练算力（flops）单调增长。论文还分析了自改进可行的条件、提出迭代式自改进流程及提升其性能的途径。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: LLM自改进的奠基性理论工作，形式化生成-验证差距并揭示其随预训练算力的标度规律；非核心编码域故按规则仅给summary_only
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 注意差距：考察大语言模型的自改进能力
+relations:
+- type: same_topic
+  ref: paper:arxiv:2210.11610
+  note: 同属LLM自改进研究，本文是对该类自验证-过滤-蒸馏自改进流程的系统理论考察
+- type: same_topic
+  ref: paper:arxiv:2408.09849
+  note: 同属LLM自改进机制分析，均研究自我验证与数据重加权在自改进中的作用

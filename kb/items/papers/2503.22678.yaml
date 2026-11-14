@@ -1,0 +1,55 @@
+id: paper:arxiv:2503.22678
+type: paper
+title: Self-Evolving Multi-Agent Simulations for Realistic Clinical Interactions
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2503.22678v2
+  url: https://arxiv.org/abs/2503.22678
+  pdf_url: https://arxiv.org/pdf/2503.22678v2
+  venue: arXiv preprint
+time:
+  published: '2025-03-28'
+  collected: '2026-11-14'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:SelfImprovement
+  role: uses
+claims:
+- statement: MedAgentSim通过医生、患者与测量智能体的多轮交互模拟真实临床诊断流程，医生智能体可主动申请体格检查与影像学检查结果。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 结合多智能体讨论、思维链推理与基于经验的知识检索的自我改进机制，可使医生智能体随病例积累实现渐进式学习并提升诊断表现。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 该工作同时提出了评估LLM动态、上下文感知诊断交互能力的基准，并支持全自动与用户控制两种运行模式。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在多种模拟诊断场景上的综合评估显示该框架对LLM诊断能力有提升效果。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出开源临床模拟环境MedAgentSim，医生-患者-测量多智能体多轮交互，结合自我改进机制迭代提升LLM诊断能力。
+  abstract_zh: 该工作提出MedAgentSim，一个开源临床模拟环境，包含医生、患者和测量智能体，用于评估和提升LLM在动态诊断场景中的表现。医生智能体通过多轮对话主动向患者问诊，并向测量智能体申请检查（如体温、血压、心电图）和影像结果（如MRI、X光），模拟真实诊断流程。框架引入自我改进机制使模型迭代优化诊断策略，并结合多智能体讨论、思维链推理与基于经验的知识检索，随医生智能体接触更多患者实现渐进式学习。作者还提出评估LLM动态、上下文感知诊断交互能力的基准，系统支持全自动与人工控制两种模式。在多种模拟诊断场景中的综合评估验证了方法有效性，代码与仿真工具已开源。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 医学诊断场景下的LLM多智能体模拟与自我改进研究，属自我改进AI域但与音视频技术无关，仅记录摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 面向真实临床交互的自演化多智能体模拟
+relations:
+- type: same_topic
+  ref: paper:arxiv:2312.10003
+  note: 同为LLM多步推理智能体的自我改进研究，均采用经验积累驱动的迭代优化
+- type: same_topic
+  ref: paper:arxiv:2506.06698
+  note: 均基于经验回放/知识检索实现语言智能体自我改进
+- type: same_topic
+  ref: paper:arxiv:2210.11610
+  note: LLM自我改进方向的代表性工作，与本文自改进机制同属一个研究线

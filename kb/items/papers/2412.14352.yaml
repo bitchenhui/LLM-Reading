@@ -1,0 +1,55 @@
+id: paper:arxiv:2412.14352
+type: paper
+title: A Survey on LLM Inference-Time Self-Improvement
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2412.14352v1
+  url: https://arxiv.org/abs/2412.14352
+  pdf_url: https://arxiv.org/pdf/2412.14352v1
+  venue: arXiv preprint
+time:
+  published: '2024-12-18'
+  collected: '2026-11-14'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: subject
+claims:
+- statement: LLM推理时自改进可分为三类：独立自改进（解码/采样方法增强）、上下文感知自改进（利用额外上下文或数据存储）、模型辅助自改进（通过模型协作实现改进）。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 测试时增加计算量（inference-time computation）已成为提升LLM推理性能、与扩展模型参数互补的一类重要技术路线。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 该综述提供了该领域深入的分类体系，并系统讨论了现有方法的挑战、局限与未来研究方向。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 从独立解码/采样、上下文感知、模型协作三视角系统综述LLM推理时自改进技术并给出分类法。
+  abstract_zh: 该综述聚焦通过增加测试时计算量来提升大语言模型推理效果的自改进技术。作者从三个视角组织现有工作：独立自改进（基于解码或采样方法的增强）、上下文感知自改进（利用额外上下文或外部数据存储）、以及模型辅助自改进（通过模型协作实现提升）。综述对近期相关研究进行了全面回顾，构建了深入的分类体系（taxonomy），并讨论了当前方法的挑战与局限。文章最后为未来研究方向提供了见解。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: LLM推理时自改进领域的重要综述，属于self_improvement域，按基准仅给summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: LLM推理时自改进综述
+relations:
+- type: same_topic
+  ref: paper:arxiv:2210.11610
+  note: LLM自改进奠基性工作，属该综述研究范畴
+- type: same_topic
+  ref: paper:arxiv:2408.03314
+  note: 测试时计算扩展是该综述'独立自改进'视角的核心相关主题
+- type: same_topic
+  ref: paper:arxiv:2609.25510
+  note: 测试时采样扩展方法，对应综述中解码/采样类自改进
+- type: same_topic
+  ref: paper:arxiv:2607.25886
+  note: 递归自改进数据侧基准研究，同属LLM自改进研究线

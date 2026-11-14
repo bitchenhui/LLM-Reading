@@ -1,0 +1,66 @@
+id: paper:arxiv:2505.16637
+type: paper
+title: 'SSR-Zero: Simple Self-Rewarding Reinforcement Learning for Machine Translation'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2505.16637v4
+  url: https://arxiv.org/abs/2505.16637
+  pdf_url: https://arxiv.org/pdf/2505.16637v4
+  venue: arXiv preprint
+time:
+  published: '2025-05-22'
+  collected: '2026-11-14'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: 仅用13K单语样本和Qwen-2.5-7B骨干训练，SSR-Zero-7B在WMT23、WMT24和Flores200英中互译任务上超越TowerInstruct-13B、GemmaX-28-9B及Qwen2.5-32B-Instruct等更大模型。
+  confidence: reported
+  metrics:
+  - name: 训练数据量
+    value: 13K
+    scope: 单语样本条数，SSR训练全程唯一监督来源
+  - name: 模型规模
+    value: 7B
+    scope: 骨干为Qwen-2.5-7B
+  - name: 对比模型规模
+    value: 13B/28-9B/32B
+    scope: TowerInstruct-13B、GemmaX-28-9B、Qwen2.5-32B-Instruct
+  evidence: abstract（初筛，未读全文）
+- statement: 结合COMET外部监督的SSR-X-Zero-7B取得英中翻译SOTA，超越所有72B以下开源模型，甚至胜过闭源模型。
+  confidence: reported
+  metrics:
+  - name: 超越开源模型规模上限
+    value: 72B
+    scope: 所有72B参数以下开源模型
+  evidence: abstract（初筛，未读全文）
+- statement: 分析表明自奖励机制在MT中优于外部LLM-as-a-judge方法，且与训练的奖励模型互补。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 仅用自判奖励与1.3万单语样本在线RL训练7B模型，英中翻译超越更大模型并达SOTA。
+  abstract_zh: 论文提出SSR强化学习框架用于机器翻译，特点是免参考、全在线、仅依赖自判奖励信号。以Qwen-2.5-7B为骨干、仅用1.3万条单语样本训练，SSR-Zero-7B在WMT23、WMT24和Flores200英中互译基准上超越TowerInstruct-13B、GemmaX-28-9B等MT专用LLM以及更大的Qwen2.5-32B-Instruct。结合COMET外部监督得到的SSR-X-Zero-7B取得英中翻译SOTA，超越所有72B以下开源模型，甚至胜过闭源模型。分析表明自奖励机制优于外部LLM-as-a-judge，且与训练的奖励模型互补，为自改进RL方法提供了有价值的洞见。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 提出仅靠自判奖励的在线自奖励强化学习框架，属于LLM自我改进方向，但非音视频编码核心域，按规则仅做摘要收录。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: SSR-Zero：面向机器翻译的简单自奖励强化学习
+relations:
+- type: same_topic
+  ref: paper:arxiv:2505.08827
+  note: 同属自奖励强化学习（RL from Self Reward）方向
+- type: same_topic
+  ref: paper:arxiv:2407.19594
+  note: 均研究LLM自判奖励/自评judge驱动的自我改进
+- type: same_topic
+  ref: paper:arxiv:2210.08229
+  note: 同属LLM自我改进（LLMs Can Self-Improve）研究线

@@ -1,0 +1,56 @@
+id: paper:arxiv:2406.07422
+type: paper
+title: 'Single-Codec: Single-Codebook Speech Codec towards High-Performance Speech Generation'
+domain: audio_coding
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2406.07422v1
+  url: https://arxiv.org/abs/2406.07422
+  pdf_url: https://arxiv.org/pdf/2406.07422v1
+  venue: arXiv preprint
+time:
+  published: '2024-06-11'
+  collected: '2026-11-14'
+entities:
+- ref: concept:NeuralAudioCodec
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: Single-Codec相比多码本编解码器（如EnCodec、TiCodec）以更低带宽取得更高语音重建质量。
+  confidence: reported
+  metrics:
+  - name: 码率
+    value: 304bps
+    scope: Single-Codec单码本离散序列带宽，低于对比的EnCodec/TiCodec
+  evidence: abstract（初筛，未读全文）
+- statement: 单码本单序列设计避免多码本编解码器的多序列预测瓶颈，从而提升基于LLM的TTS的效率与鲁棒性。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: LLM-TTS实验验证Single-Codec相比多码本编解码器可提升合成语音的自然度与可懂度。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出单码本单序列语音编解码器Single-Codec，以304bps实现优于多码本编解码器的重建质量并提升LLM-TTS效果。
+  abstract_zh: 多码本语音编解码器虽使LLM得以应用于TTS，但多序列预测带来效率与鲁棒性瓶颈。该文提出单码本单序列编解码器Single-Codec，采用解耦VQ-VAE将语音分解为时不变嵌入和音素丰富的离散序列。编码器通过BLSTM上下文建模利用时序信息、混合采样模块缓解上下采样失真、重采样模块促使离散单元承载更多音素信息。与EnCodec、TiCodec等多码本编解码器相比，Single-Codec在仅304bps的更低带宽下取得更高重建质量；LLM-TTS实验进一步显示自然度与可懂度提升。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 神经语音编解码论文，属音频编码域而非核心视频/图像编码域，按收录规则只给 summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: Single-Codec：面向高性能语音生成的单码本语音编解码器
+relations:
+- type: same_topic
+  ref: paper:arxiv:2107.03312
+  note: 同属端到端神经音频编解码器研究线，Single-Codec对比的EnCodec即SoundStream谱系工作
+- type: same_topic
+  ref: paper:arxiv:2207.03067
+  note: 同为神经语音编码中的向量量化离散表示研究
+- type: same_topic
+  ref: paper:arxiv:2404.04947
+  note: 同为面向语音生成场景的神经音频编解码器

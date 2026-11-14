@@ -1,0 +1,64 @@
+id: paper:arxiv:2409.12117
+type: paper
+title: 'Low Frame-rate Speech Codec: a Codec Designed for Fast High-quality Speech LLM Training and Inference'
+domain: audio_coding
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2409.12117v1
+  url: https://arxiv.org/abs/2409.12117
+  pdf_url: https://arxiv.org/pdf/2409.12117v1
+  venue: arXiv preprint
+time:
+  published: '2024-09-18'
+  collected: '2026-11-14'
+entities:
+- ref: concept:NeuralAudioCodec
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: LFSC在实现高质量音频压缩的同时将帧率降至21.5帧/秒，码率为1.89 kbps。
+  confidence: reported
+  metrics:
+  - name: 码率
+    value: 1.89 kbps
+    scope: LFSC编解码器工作点
+  - name: 帧率
+    value: 21.5 frames per second
+    scope: LFSC离散token帧率
+  evidence: abstract（初筛，未读全文）
+- statement: 基于LFSC的LLM文本转语音模型推理速度较此前方案提升约3倍。
+  confidence: reported
+  metrics:
+  - name: 推理加速
+    value: ~3x
+    scope: LLM-based TTS推理，相对此前编解码器
+  evidence: abstract（初筛，未读全文）
+- statement: LFSC在提升语音可懂度的同时，合成质量与此前模型相当。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出LFSC低帧率神经语音编解码器（1.89 kbps、21.5 fps），使LLM语音合成推理提速约3倍且可懂度更优。
+  abstract_zh: 针对音频编解码器通常帧率过高、导致自回归LLM训练与推理缓慢的问题，作者提出低帧率语音编解码器LFSC。该方法将有限标量量化与基于大型语音语言模型的对抗训练相结合，实现高质量音频压缩。LFSC在1.89
+    kbps码率下仅产生21.5帧/秒的离散token序列。实验表明，采用LFSC的LLM文本转语音模型推理速度提升约3倍，同时可懂度改善、合成质量与此前的编解码器方案相当。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 面向语音LLM的低帧率神经音频编解码器，属音频编码域重要工作但非视频/图像编码核心域，按规则仅收录为摘要级。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 低帧率语音编解码器：面向语音LLM快速高质量训练与推理的编解码器
+relations:
+- type: same_topic
+  ref: paper:arxiv:2103.14776
+  note: 同为低码率神经语音编码研究方向
+- type: same_topic
+  ref: paper:arxiv:2406.07422
+  note: 同为面向语音生成的低复杂度语音编解码器（少码本/低帧率token）
+- type: same_topic
+  ref: paper:arxiv:2404.04947
+  note: 同为生成式多功能神经音频编解码器

@@ -1,0 +1,64 @@
+id: paper:arxiv:2511.00602
+type: paper
+title: 'OpenSIR: Open-Ended Self-Improving Reasoner'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2511.00602v4
+  url: https://arxiv.org/abs/2511.00602
+  pdf_url: https://arxiv.org/pdf/2511.00602v4
+  venue: arXiv preprint
+time:
+  published: '2025-11-01'
+  collected: '2026-11-14'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:SelfImprovement
+  role: uses
+claims:
+- statement: OpenSIR在七个数学基准上使指令模型平均提升3.6分、推理模型平均提升3.1分，而近期自博弈基线增益微弱甚至为负。
+  confidence: reported
+  metrics:
+  - name: 平均提升
+    value: '+3.6'
+    scope: 七个数学基准，指令模型平均
+  - name: 平均提升
+    value: '+3.1'
+    scope: 七个数学基准，推理模型平均
+  evidence: abstract（初筛，未读全文）
+- statement: 从单个平凡种子问题出发，OpenSIR的性能超过用超过7000个标注样本训练的GRPO基线。
+  confidence: reported
+  metrics:
+  - name: GRPO基线标注样本量
+    value: 7K+
+    scope: 对比锚点：GRPO监督训练所用标注示例数量
+  evidence: abstract（初筛，未读全文）
+- statement: 仅在自生成数学数据上训练，OpenSIR是唯一能迁移到通用推理的自博弈方法，在推理模型上至少提升4.4分。
+  confidence: reported
+  metrics:
+  - name: 通用推理迁移提升
+    value: '+4.4'
+    scope: 推理模型通用推理基准，最低提升幅度
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 单一LLM交替担任教师与学生角色进行自博弈，无外部验证器与标注数据即可持续生成并解决新问题以提升推理能力。
+  abstract_zh: 针对依赖标注数据可验证奖励的强化学习推理训练限制模型超越人类水平的问题，提出OpenSIR自博弈框架：单个LLM在教师与学生角色间交替，自主生成并求解新颖问题，无需外部验证器或标注数据。通过多样性奖励推动模型探索陌生概念，结合难度校准保证问题可学习，从单个种子问题出发维持开放式探索。在七个数学基准上，OpenSIR使指令模型平均提升+3.6分、推理模型平均提升+3.1分，而近期自博弈基线增益微弱甚至为负；从单个平凡种子出发，其性能超过用7000多个标注样本训练的GRPO基线。尽管仅在自生成数学数据上训练，OpenSIR是唯一能迁移到通用推理的自博弈方法，在推理模型上至少提升+4.4分。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: LLM自博弈开放式自我改进推理框架，属自我改进AI核心方向但非音视频核心域，按基准收录为summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: OpenSIR：开放式自我改进推理器
+relations:
+- type: same_topic
+  ref: paper:arxiv:2508.05004
+  note: 同为无需外部数据的自博弈问题生成式LLM推理自我改进方法（R-Zero）
+- type: same_topic
+  ref: paper:arxiv:2508.14029
+  note: 同属自博弈问题合成以维持RLVR的LLM推理自我改进研究路线

@@ -1,0 +1,56 @@
+id: paper:arxiv:2410.02108
+type: paper
+title: 'ReGenesis: LLMs can Grow into Reasoning Generalists via Self-Improvement'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2410.02108v2
+  url: https://arxiv.org/abs/2410.02108
+  pdf_url: https://arxiv.org/pdf/2410.02108v2
+  venue: arXiv preprint
+time:
+  published: '2024-10-03'
+  collected: '2026-11-14'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: subject
+claims:
+- statement: ReGenesis无需人工或更强模型的额外监督，通过'通用指南→任务专属指南→推理结构→推理路径'的由抽象到具体流程自合成后训练数据
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在六个OOD推理任务上，先前自合成方法（如STaR）后训练后平均性能下降约4.6%，ReGenesis平均提升约6.1%
+  confidence: reported
+  metrics:
+  - name: OOD平均性能变化
+    value: -4.6%
+    scope: 六个OOD任务，STaR类方法后训练前后对比
+  - name: OOD平均性能变化
+    value: 6.1%
+    scope: 六个OOD任务，ReGenesis后训练前后对比
+  evidence: abstract（初筛，未读全文）
+- statement: ReGenesis在所有域内与域外测试设置上均优于现有自合成推理方法，且在不同LLM与设计选择下均有效
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出ReGenesis：无需外部监督自合成推理路径数据，六项OOD任务平均提升约6.1%，显著改善推理泛化
+  abstract_zh: 现有自合成推理数据方法（如STaR）生成的推理路径过于任务特异，缺乏通用推理指导，导致域外泛化差。ReGenesis按由抽象到具体的流程自合成后训练数据：先将通用推理指南转化为任务专属指南，再生成推理结构，最后将结构实例化为具体推理路径，全程无需人工设计的任务示例或更强模型的监督。实验显示ReGenesis在所有域内与域外设置上均优于现有方法；在六个OOD任务上，先前方法后训练后平均下降约4.6%，而ReGenesis平均提升约6.1%。该方法在不同LLM与设计选择下均保持有效。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: LLM自我改进推理方法的核心论文（无监督自合成推理路径数据），属自我改进AI域而非音视频核心域，按基准仅摘要收录。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: ReGenesis：大语言模型可通过自我改进成长为推理通才
+relations:
+- type: same_topic
+  ref: paper:arxiv:2210.11610
+  note: 同属LLM无外部监督自我改进、自生成数据提升推理能力的方法线
+- type: same_topic
+  ref: paper:arxiv:2404.12253
+  note: 同属LLM推理自我改进方法，均针对自训练数据质量与泛化问题

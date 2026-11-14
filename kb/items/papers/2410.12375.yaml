@@ -1,0 +1,63 @@
+id: paper:arxiv:2410.12375
+type: paper
+title: 'PRefLexOR: Preference-based Recursive Language Modeling for Exploratory Optimization of Reasoning
+  and Agentic Thinking'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2410.12375v1
+  url: https://arxiv.org/abs/2410.12375
+  pdf_url: https://arxiv.org/pdf/2410.12375v1
+  venue: arXiv preprint
+time:
+  published: '2024-10-16'
+  collected: '2026-11-14'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:SelfImprovement
+  role: uses
+claims:
+- statement: PRefLexOR通过多阶段偏好优化（对数几率对齐+拒绝采样就地生成训练数据）实现模型的递归自我教学式推理改进，可直接融入任意预训练LLM。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 该方法在仅30亿参数的小模型上实现，表明小模型也能通过迭代自我教学获得更深、更具反思性的推理能力。
+  confidence: reported
+  metrics:
+  - name: 模型参数量
+    value: 3 billion
+    scope: 所实现演示模型规模
+  evidence: abstract（初筛，未读全文）
+- statement: 训练中通过随机文本片段生成问题并进行检索增强，动态构建知识图谱以引入全语料上下文。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 基于思考与反思模态构建多智能体递归自我改进推理流程，在推理阶段通过重复采样逐轮改进响应。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 将偏好优化与递归推理反馈结合，让小模型自我教学式迭代深化推理，并构建多智能体递归自我改进推理框架。
+  abstract_zh: 论文提出PRefLexOR，将偏好优化与强化学习概念结合，使模型通过迭代推理改进实现自我教学，在训练与推理阶段多步重访和精炼中间推理步骤。第一阶段通过优化偏好与非偏好响应之间的对数几率对齐推理路径，同时从随机文本片段生成问题并借助检索增强构建动态知识图谱；第二阶段利用拒绝采样在屏蔽推理步骤的同时持续生成就地训练数据，以偏好优化精炼推理质量。在思考token框架内引入递归反馈回路，使推理更具连贯性、一致性与适应性；仅在30亿参数的小模型上即可实现，方法可直接嵌入任意预训练LLM。示例聚焦生物材料科学，覆盖域内与跨域应用，并基于思考与反思模态构建多智能体递归自我改进推理方法，在推理时通过重复采样逐轮提升回答质量。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 属于LLM递归自我改进与偏好优化推理的代表性工作（非音视频核心域），按规则仅做初筛摘要收录。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: PRefLexOR：基于偏好的递归语言建模，用于推理与智能体思维的探索性优化
+relations:
+- type: same_topic
+  ref: paper:arxiv:2210.11610
+  note: 同为LLM自我改进（self-improvement）主题
+- type: same_topic
+  ref: paper:arxiv:2405.00451
+  note: 同为迭代偏好学习驱动LLM推理提升
+- type: same_topic
+  ref: paper:arxiv:2407.19594
+  note: 同为LLM自我改进对齐（self-improving alignment）
+- type: same_topic
+  ref: paper:arxiv:2312.10003
+  note: 同为面向多步推理LLM智能体的自我改进

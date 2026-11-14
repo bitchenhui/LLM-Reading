@@ -1,0 +1,64 @@
+id: paper:arxiv:2405.14822
+type: paper
+title: 'PaGoDA: Progressive Growing of a One-Step Generator from a Low-Resolution Diffusion Teacher'
+domain: processing_enhancement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2405.14822v2
+  url: https://arxiv.org/abs/2405.14822
+  pdf_url: https://arxiv.org/pdf/2405.14822v2
+  venue: arXiv preprint
+time:
+  published: '2024-05-23'
+  collected: '2026-11-14'
+entities:
+- ref: concept:SuperResolution
+  role: subject
+- ref: dataset:ImageNet
+  role: evaluated_on
+claims:
+- statement: 在8倍降采样数据上训练扩散模型，配合所提三阶段流水线可将训练成本降低64倍。
+  confidence: reported
+  metrics:
+  - name: 训练成本降低倍数
+    value: 64×
+    scope: 8倍降采样数据上的扩散模型训练，相对原分辨率训练
+  evidence: abstract（初筛，未读全文）
+- statement: 推理时单步采样即在 ImageNet 从64×64到512×512的所有分辨率上达到 SOTA。
+  confidence: reported
+  metrics:
+  - name: 采样步数
+    value: '1'
+    scope: 单步生成器推理
+  - name: 评测分辨率范围
+    value: 64×64–512×512
+    scope: ImageNet 类条件图像生成
+  evidence: abstract（初筛，未读全文）
+- statement: 该流水线可直接应用于潜空间，在预训练 LDM（如 Stable Diffusion）自编码器之上叠加压缩能力，并支持文生图。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 低分辨率扩散教师经蒸馏与渐进超分得到单步生成器，训练成本降64倍，ImageNet全分辨率SOTA
+  abstract_zh: 扩散模型生成高维内容表现出色但训练计算开销大。PaGoDA 提出三阶段流水线：先在8倍降采样数据上训练扩散模型，再蒸馏预训练扩散模型得到单步生成器，最后通过渐进超分恢复高分辨率。该方案使8倍降采样数据上的扩散模型训练成本降低64倍；推理时单步采样即在
+    ImageNet 64×64 至 512×512 全部分辨率及文生图任务上达到当时最优。流水线可直接作用于潜空间，在 LDM（如 Stable Diffusion）预训练自编码器之外叠加额外压缩。代码已开源。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 核心为低分辨率扩散蒸馏+渐进超分的单步生成管线，非编码核心域，但与编码链路超分及生成式压缩相关，按规则仅初筛摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: PaGoDA：由低分辨率扩散教师渐进生长的单步生成器
+relations:
+- type: same_topic
+  ref: paper:arxiv:2310.12004
+  note: 同为基于潜空间扩散的图像超分/生成增强方向
+- type: same_topic
+  ref: paper:arxiv:2609.02036
+  note: 同为少步扩散生成结合分辨率渐进提升（分辨率过渡自恢复加速）
+- type: same_topic
+  ref: paper:arxiv:2506.21977
+  note: 同为单步扩散生成器，且 PaGoDA 潜空间压缩主张与极致图像压缩应用相关

@@ -1,0 +1,49 @@
+id: paper:arxiv:2509.10704
+type: paper
+title: 'Maestro: Self-Improving Text-to-Image Generation via Agent Orchestration'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2509.10704v1
+  url: https://arxiv.org/abs/2509.10704
+  pdf_url: https://arxiv.org/pdf/2509.10704v1
+  venue: arXiv preprint
+time:
+  published: '2025-09-12'
+  collected: '2026-11-14'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: Maestro通过自批判（MLLM批评者+验证者整合）与自进化（MLLM-as-a-judge两两比较并演化提示词候选）的迭代机制，在复杂T2I任务上显著优于初始提示与SOTA自动方法
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: Maestro的改进效果随所用MLLM组件能力增强而扩展
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: Maestro可直接作用于黑盒T2I模型，无需访问模型内部参数
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 用多模态LLM智能体编排实现文生图自我改进：自批判发现图像弱点、自进化迭代优化提示词，仅凭初始提示即可提升生成质量。
+  abstract_zh: Maestro是一个自进化图像生成系统，仅用初始提示即可让文本到图像（T2I）模型通过提示词迭代演化自主改进生成图像。其两大创新是：1）自批判——由多模态LLM'批评者'智能体识别生成图像的弱点、纠正欠规范提示并给出可解释的编辑信号，再由'验证者'智能体在保留用户意图的前提下整合这些信号；2）自进化——利用MLLM-as-a-judge对迭代生成的图像进行两两比较、剔除问题图像，并演化出符合用户意图的创意提示词候选。在黑盒T2I模型上的复杂任务实验表明，Maestro显著优于初始提示与现有SOTA自动方法，且效果随MLLM组件能力增强而提升，为自我改进的T2I生成提供了可解释的路径。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 基于多模态LLM智能体编排的自我改进文生图系统，属于自我改进AI域，与音视频编码核心技术无直接关联，按规则不给deep_read。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: Maestro：通过智能体编排实现自我改进的文本到图像生成
+relations:
+- type: same_topic
+  ref: paper:arxiv:2309.16797
+  note: 同属提示词演化驱动的自我改进：Promptbreeder自指提示进化 vs Maestro的提示词自进化
+- type: same_topic
+  ref: paper:arxiv:2410.10934
+  note: 同属以模型作为裁判的智能体评估改进：Agent-as-a-Judge vs Maestro的MLLM-as-a-judge两两比较机制
