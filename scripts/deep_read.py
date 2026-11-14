@@ -158,7 +158,15 @@ def main() -> int:
              if (d["assessment"]["decision"] == "deep_read"
                  or d["assessment"]["relevance"] == "high")
              and not d["summaries"].get("deep_dive")]
-    cands.sort(key=lambda d: ({"high": 0, "medium": 1, "low": 2}[d["assessment"]["relevance"]],
+    # 引用量优先（5 年回补的"只读高引精华"策略），引用缺失按 0 处理
+    for d in cands:
+        q = ROOT / "queue" / "papers" / f"{d['id'].split(':')[-1]}.yaml"
+        try:
+            d["_cit"] = (yaml.safe_load(open(q, encoding="utf-8")) or {}).get("citation_count") or 0
+        except Exception:  # noqa: BLE001
+            d["_cit"] = 0
+    cands.sort(key=lambda d: (d["_cit"],
+                              {"high": 0, "medium": 1, "low": 2}[d["assessment"]["relevance"]],
                               d["time"]["published"]), reverse=True)
     cands = cands[: args.limit]
     print(f"deep_read 候选 {len(cands)} 篇（本次处理）\n")
@@ -203,6 +211,7 @@ def main() -> int:
         item["time"]["updated"] = today
         item.pop("_authors", None)
         item.pop("_path", None)
+        item.pop("_cit", None)
         yaml.safe_dump(item, open(ITEMS / f"{arxiv_id}.yaml", "w", encoding="utf-8"),
                        allow_unicode=True, sort_keys=False, width=100)
         n_ok += 1
