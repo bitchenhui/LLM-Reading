@@ -70,6 +70,16 @@ RELEASE_INSTRUCTIONS = """你是音视频/图像编码领域信息引擎的版�
 正式版与 rc → summary_only；重大版本（架构级变化、新标准支持）→ deep_read；
 纯噪声（仅 CI/拼写/打包修复、无内容预发布）→ skip。"""
 
+JVET_INSTRUCTIONS = """你是视频编码标准化（JVET/VVC/AV2 生态）的信息审阅器。
+对 JVET 会议提案/AHG 报告判定收录级别并写中文摘要。只有标题与作者可用（无正文），
+摘要基于标题的技术方向作克制推断，不编造结论。只输出 JSON 本体。
+
+收录基准：
+- AHG 报告（专题组进展）→ summary_only（标准线的权威过程记录）
+- 重大节点（CfP/验证测试/新版本文本/探索实验结果/新标准启动）→ deep_read
+- 具体技术提案（标题含明确工具/实验）→ summary_only
+- 行政事务（议程/会议安排/名单/后勤）→ skip"""
+
 
 def build_prompt(rec: dict, entities: dict, known_items: list[tuple[str, str]]) -> str:
     meta = rec["meta"]
@@ -142,6 +152,37 @@ Release 说明:
 }}
 claims 从 release notes 提取有信息量的要点（性能数字/新特性/兼容性变化）；
 notes 无实质内容时 claims 只留一条「发布该版本」。"""
+
+
+def build_jvet_prompt(rec: dict, entities: dict) -> str:
+    meta = rec["meta"]
+    ent_list = "\n".join(f"  {eid}  [{entities[eid]['type']}]" for eid in
+                         sorted({m["ref"] for m in rec.get("matched", [])} & entities.keys()))
+    kind = "AHG 报告（专题组进展汇总）" if meta.get("is_ahg") else "技术提案"
+    return f"""JVET 标准化文档（{kind}）：
+编号: {meta['docnum']}（MPEG: {meta.get('mpeg_num') or '—'}）
+会议: {meta['meeting']}（{meta['meeting_date']}）
+标题: {meta['title']}
+作者/单位: {meta.get('authors') or '—'}
+
+标题命中的实体（只能从中选择挂接）:
+{ent_list}
+
+输出 JSON：
+{{
+ "domain": "standards_ecosystem",
+ "decision": "deep_read|summary_only|skip",
+ "relevance": "high|medium|low",
+ "reason": "一句话中文理由",
+ "title_zh": "中文标题",
+ "one_liner_zh": "一句话总结（基于标题方向的克制概括，≤50字）",
+ "abstract_zh": "1-2 句：该文档在标准进程中的位置与主题方向",
+ "research_lines": [],
+ "entities": [{{"ref": "…", "role": "subject"}}],
+ "claims": [{{"statement": "该文档的主题与标准进程含义", "confidence": "inferred"}}],
+ "relations": []
+}}
+角色词表: subject=涉及的标准/工具主体 uses=涉及技术 evaluated_on=测试条件 compared_against=对比对象。"""
 
 
 # ---------- LLM 客户端（Responses / chat-completions 自适应） ----------
@@ -432,6 +473,34 @@ def build_release_item(rec: dict, s: dict, today: str, model: str) -> dict:
     return item
 
 
+def build_jvet_item(rec: dict, s: dict, today: str, model: str) -> dict:
+    meta = rec["meta"]
+    item = {
+        "id": rec["id"],
+        "type": "standard_proposal",
+        "title": f"{meta['docnum']}: {meta['title']}",
+        "domain": "standards_ecosystem",
+        "research_lines": [],
+        "source": {
+            "channel": "jvet",
+            "external_id": f"{meta['meeting']}@{meta['docnum']}",
+            "url": meta["url"],
+        },
+        "time": {"published": meta.get("meeting_date") or today, "collected": today},
+        "entities": s["entities"],
+        "claims": s["claims"],
+        "summaries": {"one_liner_zh": s["one_liner"], "abstract_zh": s["abstract_zh"]},
+        "assessment": {
+            "relevance": s["relevance"], "decision": s["decision"],
+            "reason": s["reason"], "reviewer": f"{model}(llm_review)",
+        },
+        "provenance": {"created": today, "actor": "pipeline-v0", "pipeline": "llm_review"},
+    }
+    if s["title_zh"]:
+        item["title_zh"] = f"{meta['docnum']}: {s['title_zh']}"
+    return item
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--limit", type=int, default=0, help="本次最多处理条数（0=全部）")
@@ -483,7 +552,7 @@ def main() -> int:
     for p in sorted((ROOT / "queue").glob("*/*.yaml")):
         d = yaml.safe_load(open(p, encoding="utf-8"))
         if d.get("status") == "pending":
-            d["_kind"] = d.get("kind", "paper") if p.parent.name == "repos" else "paper"
+            d["_kind"] = d.get("kind", "paper")
             pendings.append(d)
     pendings.sort(key=lambda d: -d.get("score", 0))
     if args.limit:
@@ -493,14 +562,17 @@ def main() -> int:
     today = date.today().isoformat()
     n_item = n_skip = n_fail = 0
     for rec in pendings:
-        is_release = rec["_kind"] == "release"
-        label = rec["meta"]["repo"] + " " + rec["meta"]["tag"] if is_release \
-            else rec["meta"]["title"][:60]
+        kind = rec["_kind"]
+        label = (rec["meta"].get("repo", "") + " " + rec["meta"].get("tag", "")).strip() \
+            if kind == "release" else rec["meta"].get("title", "")[:60]
         print(f"[{rec['id'].split(':')[-1]}] score={rec.get('score')} {label}")
         try:
-            if is_release:
+            if kind == "release":
                 raw = llm.chat(build_release_prompt(rec, entities),
                                instructions=RELEASE_INSTRUCTIONS)
+            elif kind == "jvet":
+                raw = llm.chat(build_jvet_prompt(rec, entities),
+                               instructions=JVET_INSTRUCTIONS)
             else:
                 raw = llm.chat(build_prompt(rec, entities, known_items))
             out = parse_llm_json(raw)
@@ -510,8 +582,9 @@ def main() -> int:
             continue
         s = sanitize(out, rec, entities, known_ids, today)
         stem = f"{rec['id'].split(':')[-1]}.yaml"
-        qpath = (ROOT / "queue" / "repos" / stem) if is_release else (QUEUE / stem)
-        out_dir = KB / "items" / ("releases" if is_release else "papers")
+        kind_dir = {"release": "repos", "jvet": "jvet"}.get(kind)
+        qpath = (ROOT / "queue" / kind_dir / stem) if kind_dir else (QUEUE / stem)
+        out_dir = KB / "items" / {"release": "releases", "jvet": "standards"}.get(kind, "papers")
         out_dir.mkdir(parents=True, exist_ok=True)
         if s is None:
             n_skip += 1
@@ -525,8 +598,10 @@ def main() -> int:
                                allow_unicode=True, sort_keys=False, width=100)
             continue
         n_item += 1
-        if is_release:
+        if kind == "release":
             item = build_release_item(rec, s, today, llm.models["review"])
+        elif kind == "jvet":
+            item = build_jvet_item(rec, s, today, llm.models["review"])
         else:
             item = build_item(rec, s, today, llm.models["review"])
         print(f"    → {s['decision']} / {s['relevance']}｜{s['one_liner'][:50]}")

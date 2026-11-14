@@ -157,6 +157,7 @@ def main() -> int:
     ap.add_argument("--days", type=int, help="回看天数（覆盖 config 的 default_days）")
     ap.add_argument("--since", type=str, help="起始日 YYYYMMDD（优先于 --days）")
     ap.add_argument("--max-results", type=int, default=200, help="本次最多处理条数")
+    ap.add_argument("--per-track", type=int, default=0, help="单 track 上限（0=用配置；5年回补时调大）")
     args = ap.parse_args()
 
     cfg = load_yaml(CONFIG)
@@ -175,7 +176,7 @@ def main() -> int:
     # 多 track（领域分类）检索；兼容旧版单 search_query 配置
     tracks = cfg.get("tracks") or [{"name": "video_image_coding", "core": True,
                                     "search_query": cfg["search_query"]}]
-    per_track_max = cfg.get("per_track_max", args.max_results)
+    per_track_max = args.per_track or cfg.get("per_track_max", args.max_results)
 
     print(f"窗口 {since[:8]}..{until[:8]}，已处理 {len(seen)} 篇")
     entries: list[dict] = []
