@@ -37,10 +37,12 @@ jobs:
         env:
           ZHIPU_API_KEY: ${{ secrets.ZHIPU_API_KEY }}
 
-      - name: 检索（arXiv 增量 + 仓库 releases）
+      - name: 检索（arXiv 增量 + 仓库 releases + 标准线）
         run: |
           uv run --with pyyaml python scripts/fetch_arxiv.py
           uv run --with pyyaml python scripts/fetch_releases.py
+          uv run --with pyyaml python scripts/fetch_jvet.py || true
+          uv run --with pyyaml --with certifi python scripts/fetch_viala.py || true
 
       - name: 审阅入库
         run: uv run --with pyyaml python scripts/llm_review.py
