@@ -1,0 +1,32 @@
+id: standard_proposal:jvet:m199-AI0089
+type: standard_proposal
+title: 'JVET-AI0089: AHG11: RA/LDB Unified Reference Frame Synthesis for VVC Inter Coding'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2024-07-Sapporo@JVET-AI0089
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=14331
+time:
+  published: '2024-07-12'
+  collected: '2026-11-14'
+entities:
+- ref: codec:VVC
+  role: subject
+claims:
+- statement: 该文档主题为 VVC 帧间编码中的参考帧合成工具，主张在 RA/LDB 配置间统一实现；作为 AHG 渠道的技术输入，其意义在于为后续标准草案的工具候选或进一步测试提供素材
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出在 RA 与 LDB 配置下统一的参考帧合成工具，用于增强 VVC 帧间编码。
+  abstract_zh: 2024 年 7 月札幌会议上经 AHG11 提交的具体技术提案，方向是为 VVC 帧间编码设计在 Random Access 与 Low Delay B 两种配置下通用的参考帧合成方法；因仅有标题，具体内容与实验结果待正文确认。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: AHG11 渠道下的具体编码工具提案（非 CfP/验证测试等重大节点），按基准归为摘要级收录。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-AI0089: AHG11：面向 VVC 帧间编码的 RA/LDB 统一参考帧合成'

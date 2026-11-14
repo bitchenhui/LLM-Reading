@@ -1,0 +1,33 @@
+id: standard_proposal:jvet:m198-AH0048
+type: standard_proposal
+title: 'JVET-AH0048: AHG4: ECM test results on some 8K HDR sequences'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2024-04-Rennes@JVET-AH0048
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=13930
+time:
+  published: '2024-04-17'
+  collected: '2026-11-14'
+entities:
+- ref: codec:ECM
+  role: subject
+claims:
+- statement: 该文档为 JVET AHG4 进展报告，主题是 ECM 测试模型在部分 8K HDR 序列上的测试结果，服务于 ECM 向下一代标准演进的探索与评估过程
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 报告 ECM 测试模型在部分 8K HDR 序列上的编码测试结果，供 ECM 演进参考
+  abstract_zh: 该文档是 2024 年 4 月雷恩 JVET 会议的 AHG4 进展报告，由华为等单位提交，报告 ECM（增强压缩模型）在若干 8K HDR 测试序列上的测试表现，属 VVC
+    之后下一代压缩模型探索过程中的内容针对性评估记录。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 属AHG专题组进展报告，报告ECM在特定8K HDR序列上的测试结果，为标准线的权威过程记录而非重大验证节点
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-AH0048: AHG4：ECM 在部分 8K HDR 序列上的测试结果'

@@ -1,0 +1,32 @@
+id: standard_proposal:jvet:m200-AJ0148
+type: standard_proposal
+title: 'JVET-AJ0148: EE1 Related: Transformer-Based Reference Frame Synthesis for VVC Inter Coding'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2024-11-Kemer@JVET-AJ0148
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=14753
+time:
+  published: '2024-11-01'
+  collected: '2026-11-14'
+entities:
+- ref: codec:VVC
+  role: subject
+claims:
+- statement: 该提案面向VVC帧间编码，提出基于Transformer的参考帧合成工具，作为EE1探索实验的输入，反映下一代标准探索期对神经帧间工具的关注
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出用Transformer神经网络合成参考帧以改进VVC帧间编码的EE1探索性技术提案
+  abstract_zh: 该文档是2024年11月Kemer会议（JVET-AJ）上提交的EE1探索实验相关技术提案，处于VVC之后下一代编码标准的探索阶段。方向为利用Transformer网络合成参考帧以增强帧间预测，属个人单位贡献而非官方EE结果报告。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 具体技术提案，标题含明确工具（Transformer参考帧合成），属个人贡献而非官方探索实验结果报告
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-AJ0148: EE1相关：面向VVC帧间编码的基于Transformer的参考帧合成'

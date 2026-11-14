@@ -1,0 +1,32 @@
+id: standard_proposal:jvet:m199-AI2028
+type: standard_proposal
+title: 'JVET-AI2028: Additional conformance bitstreams for VVC multilayer configurations'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2024-07-Sapporo@JVET-AI2028
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=14621
+time:
+  published: '2024-07-12'
+  collected: '2026-11-14'
+entities:
+- ref: codec:VVC
+  role: subject
+claims:
+- statement: 文档主题是为VVC多层配置新增一致性测试码流，为多层扩展的实现一致性与互操作性验证提供测试素材。
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提议为VVC多层配置补充一致性测试码流，支撑多层扩展的解码一致性验证。
+  abstract_zh: 该文档是VVC标准生态中的一致性保障类提案，针对多层配置提供额外的一致性码流，处于VVC多层扩展落地与验证支撑环节，而非新的工具设计。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 属VVC一致性测试码流的具体补充提案，非验证测试或新版本文本等重大节点。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-AI2028: 用于VVC多层配置的附加一致性码流'

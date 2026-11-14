@@ -1,0 +1,32 @@
+id: standard_proposal:jvet:m201-AK0077
+type: standard_proposal
+title: 'JVET-AK0077: EE1-2.1: RA/LDB Unified Reference Frame Synthesis for VVC Inter Coding'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2025-01-Geneva@JVET-AK0077
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=15048
+time:
+  published: '2025-01-14'
+  collected: '2026-11-14'
+entities:
+- ref: codec:VVC
+  role: subject
+claims:
+- statement: 该文档为EE1-2.1探索实验提案，方向是将参考帧合成方法统一适配随机接入（RA）与低时延（LDB）配置，以增强VVC帧间编码，其结果可能纳入后续标准工具演进的评估基础。
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 探索将参考帧合成统一应用于随机接入与低时延两种配置，以改进VVC帧间编码性能。
+  abstract_zh: 该文档是2025年1月日内瓦JVET会议EE1探索实验下的技术提案（JVET-AK0077/m70803），主题为在RA与LDB编码配置下统一进行参考帧合成，属于VVC之后下一代工具探索的过程性成果。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 该文档为探索实验EE1-2.1的成果提案，属于标准进程中影响后续工具演进的重大节点，应深入审阅。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-AK0077: EE1-2.1：面向VVC帧间编码的RA/LDB统一参考帧合成'

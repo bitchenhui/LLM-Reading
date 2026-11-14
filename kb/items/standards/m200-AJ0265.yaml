@@ -1,0 +1,32 @@
+id: standard_proposal:jvet:m200-AJ0265
+type: standard_proposal
+title: 'JVET-AJ0265: 4K 120fps VVC playback with Ali266 on Snapdragon X Elite AI PC'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2024-11-Kemer@JVET-AJ0265
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=14872
+time:
+  published: '2024-11-01'
+  collected: '2026-11-14'
+entities:
+- ref: codec:VVC
+  role: subject
+claims:
+- statement: 该文档展示Ali266解码器在骁龙X Elite AI PC上对4K 120fps VVC内容的实时播放能力，反映VVC解码软件优化及在AI PC等消费终端上的部署进展
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 阿里Ali266解码器在高通骁龙X Elite AI PC上实现4K 120fps VVC实时播放演示。
+  abstract_zh: 该文档为Alibaba与Qualcomm联合提交的实现展示类输入，报告Ali266软件解码器在骁龙X Elite AI PC平台上达成4K 120fps VVC实时播放，属于VVC解码优化与终端落地部署的生态进展记录，而非标准工具提案。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 属具体实现展示类输入（软件解码器在终端平台的性能演示），非重大标准节点或新工具提案，按具体技术提案归为 summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-AJ0265: 基于骁龙X Elite AI PC的Ali266实现4K 120fps VVC播放'

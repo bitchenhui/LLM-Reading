@@ -1,0 +1,33 @@
+id: standard_proposal:jvet:m199-AI0256
+type: standard_proposal
+title: 'JVET-AI0256: Subpicture support in HEVC'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2024-07-Sapporo@JVET-AI0256
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=14515
+time:
+  published: '2024-07-12'
+  collected: '2026-11-14'
+entities:
+- ref: codec:HEVC
+  role: subject
+claims:
+- statement: 该提案主张在 HEVC 中支持子图功能，属于对成熟 HEVC 标准的功能扩展方向的标准化输入，其具体技术方案与是否被采纳需以正文为准。
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提议在 HEVC 标准中引入子图支持，方向为子图提取/独立编解码能力的扩展。
+  abstract_zh: 该文档是 2024 年 7 月仙台后继会议（Sapporo）上 Apple 团队提交的 HEVC 技术提案，主题是把子图相关能力纳入 HEVC。此类工作通常服务于低延迟流媒体、区域独立编解码等应用场景，属于对既有
+    HEVC 标准的功能扩展提案。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 标题指向将 VVC 引入的子图（subpicture）工具扩展至 HEVC 的具体技术提案，非重大节点文档，按具体工具提案归为 summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-AI0256: HEVC 中的子图支持'

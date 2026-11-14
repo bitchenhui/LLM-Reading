@@ -1,0 +1,33 @@
+id: standard_proposal:jvet:m200-AJ0099
+type: standard_proposal
+title: 'JVET-AJ0099: EE1-3.1: RA/LDB Unified Reference Frame Synthesis for VVC Inter Coding'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2024-11-Kemer@JVET-AJ0099
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=14703
+time:
+  published: '2024-11-01'
+  collected: '2026-11-14'
+entities:
+- ref: codec:VVC
+  role: subject
+claims:
+- statement: 该文档作为 EE1-3.1 探索实验贡献，提出跨 Random Access 与 Low Delay B 配置统一的参考帧合成工具，属于 VVC 后续标准化探索中帧间预测工具方向的具体实验提案。
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出在 RA 与 LDB 两种配置下统一的参考帧合成工具，用于增强 VVC 帧间预测。
+  abstract_zh: 该文档是 JVET-AJ 会议上探索实验 EE1-3.1 的一项具体技术提案，属于 VVC 后续探索阶段针对帧间编码参考帧合成（参考帧生成/增强类工具）的工具类贡献，需在统一测试条件下报告
+    RA 与 LDB 的编码性能。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 具体技术提案：针对 VVC 帧间编码提出 RA/LDB 统一参考帧合成工具并作为 EE1-3.1 探索实验贡献，属工具类单点贡献而非重大节点。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-AJ0099: EE1-3.1：面向 VVC 帧间编码的 RA/LDB 统一参考帧合成'

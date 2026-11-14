@@ -1,0 +1,32 @@
+id: standard_proposal:jvet:m199-AI0257
+type: standard_proposal
+title: 'JVET-AI0257: Derived chroma formats using layered HEVC'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2024-07-Sapporo@JVET-AI0257
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=14516
+time:
+  published: '2024-07-12'
+  collected: '2026-11-14'
+entities:
+- ref: codec:HEVC
+  role: subject
+claims:
+- statement: 该提案主题为基于分层HEVC结构推导色度格式，可能涉及亮度/色度分层处理的工具探索；其在标准进程中的具体作用与结局仅凭标题无法确认
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出借助分层HEVC编码结构推导色度格式的编码方案
+  abstract_zh: 该文档为Apple在JVET/MPEG会议提交的具体技术输入，方向是利用分层HEVC（layered/scalable结构）推导色度格式，属于编解码工具探索类提案。仅凭标题可判断其技术路线，无法确认实验细节或采纳结果。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 标题指向利用分层HEVC结构推导色度格式的具体技术提案，非AHG报告、重大节点或行政事务
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-AI0257: 使用分层HEVC推导色度格式'

@@ -1,0 +1,32 @@
+id: standard_proposal:jvet:m201-AK0078
+type: standard_proposal
+title: 'JVET-AK0078: EE1-2.2: Transformer-Based Reference Frame Synthesis for VVC Inter Coding'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2025-01-Geneva@JVET-AK0078
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=15049
+time:
+  published: '2025-01-14'
+  collected: '2026-11-14'
+entities:
+- ref: codec:VVC
+  role: subject
+claims:
+- statement: 该提案响应JVET EE1-2.2探索课题，提出基于Transformer的参考帧合成工具并针对VVC帧间编码进行测试；其具体性能增益与采用建议需待正文及EE汇总报告确认。
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 针对EE1-2.2课题提出以Transformer合成参考帧、增强VVC帧间编码的探索提案，效果待正文验证。
+  abstract_zh: 该文档是JVET AK次会议EE1探索实验（AI工具方向）下EE1-2.2课题的具体技术提案，方向为用神经网络（Transformer）生成/合成参考帧以提升VVC帧间预测性能。属VVC智能化编码工具的早期探索贡献，非标准文本或验证测试等重大节点文档。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 属于EE1探索实验下的具体技术提案，标题含明确工具（Transformer参考帧合成）与实验设置，未达重大节点级别。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-AK0078: EE1-2.2：基于Transformer的参考帧合成用于VVC帧间编码'

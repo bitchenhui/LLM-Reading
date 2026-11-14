@@ -1,0 +1,32 @@
+id: standard_proposal:jvet:m199-AI0146
+type: standard_proposal
+title: 'JVET-AI0146: AHG9: Moving the SPO and PON SEI messages from VVC to VSEI'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2024-07-Sapporo@JVET-AI0146
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=14405
+time:
+  published: '2024-07-12'
+  collected: '2026-11-14'
+entities:
+- ref: codec:VVC
+  role: subject
+claims:
+- statement: 该文档为 AHG9 报告，主题是将 SPO 与 PON 两种 SEI 消息从 VVC 规范迁移至 VSEI 规范，属标准归属调整与生态系统协调动作
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 建议把现规定于 VVC 的 SPO、PON 两类 SEI 消息迁移至 VSEI 规范，统一辅助信息归属
+  abstract_zh: JVET AHG9 过程报告，提出将 VVC（H.266）中定义的 SPO 与 PON SEI 消息移至 VSEI（ITU-T H.274/ISO/IEC 23002-7）框架，属于标准文本维护与元数据体系对齐的讨论记录，非核心编码工具提案。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: AHG9 专题组过程报告，处理 SEI 消息在 VVC 与 VSEI 规范间的归属迁移，属标准维护议题而非新技术实验
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-AI0146: AHG9：将 SPO 与 PON SEI 消息从 VVC 移至 VSEI'

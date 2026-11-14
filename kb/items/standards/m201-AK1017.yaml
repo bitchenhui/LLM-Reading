@@ -1,0 +1,34 @@
+id: standard_proposal:jvet:m201-AK1017
+type: standard_proposal
+title: 'JVET-AK1017: Support for additional SEI messages in AVC (draft 1)'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2025-01-Geneva@JVET-AK1017
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=15334
+time:
+  published: '2025-01-14'
+  collected: '2026-11-14'
+entities:
+- ref: codec:AVC
+  role: subject
+claims:
+- statement: 该文档为 AVC 引入附加 SEI 消息支持的标准文本草案初稿，表明 AVC 的维护修订已在 JVET 进入正式起草节点，推断将把较新标准中定义的 SEI 消息适配纳入 AVC
+    语法。
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 面向 AVC 的补充 SEI 消息支持标准草案文本初稿。
+  abstract_zh: 该文档是提交至 JVET（2025 年 1 月日内瓦会议）的 AVC 补充 SEI 消息支持首版草案文本，属于对既有 AVC 标准的扩展修订起草工作，由 VVC 主要编辑团队操刀。它标志着将新式
+    SEI 消息机制回移至 AVC 的标准化进程进入正式文本起草阶段。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 该文档是向 AVC 引入附加 SEI 消息支持的首版标准草案文本（draft 1），属新版本文本类重大节点，且由 Bross、Boyce、Sullivan、Wang 等主编级专家起草。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-AK1017: 在 AVC 中支持附加 SEI 消息（草案 1）'

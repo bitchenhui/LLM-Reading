@@ -1,0 +1,32 @@
+id: standard_proposal:jvet:m200-AJ2003
+type: standard_proposal
+title: 'JVET-AJ2003: Guidelines for VTM-based software development'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2024-11-Kemer@JVET-AJ2003
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=14993
+time:
+  published: '2024-11-01'
+  collected: '2026-11-14'
+entities:
+- ref: impl:VTM
+  role: subject
+claims:
+- statement: 该文档为基于 VTM 参考软件开展开发工作的指南性规范，反映 JVET 对参考软件维护与贡献流程的权威约定，但不涉及具体技术工具或实验结论。
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 由 VTM 维护者提供的参考软件开发与贡献规范，属 VVC 软件生态的过程性参考文档。
+  abstract_zh: 该文档由 VTM 参考软件维护者（Bossen、Li、Sühring）提交，方向为规定基于 VTM 进行软件开发与补丁贡献的规范流程，属 VVC 标准生态中的软件工程过程文档，而非具体编码工具或实验提案。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: VTM 参考软件的开发规范类过程文档，非技术提案或标准里程碑，作摘要级收录。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-AJ2003: 基于 VTM 的软件开发指南'

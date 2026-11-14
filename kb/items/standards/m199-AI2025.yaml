@@ -1,0 +1,33 @@
+id: standard_proposal:jvet:m199-AI2025
+type: standard_proposal
+title: 'JVET-AI2025: Algorithm description of Enhanced Compression Model 14 (ECM 14)'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2024-07-Sapporo@JVET-AI2025
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=14619
+time:
+  published: '2024-07-12'
+  collected: '2026-11-14'
+entities:
+- ref: codec:ECM
+  role: subject
+claims:
+- statement: 该文档为 ECM 14 版参考软件的算法描述，是 ECM 迭代开发过程中权威的新版本文本，可用于评估 ECM 相对 VVC 的压缩性能进展。
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: ECM 参考软件第 14 版的官方算法描述文本。
+  abstract_zh: 该文档是 JVET 在 2024 年 7 月札幌会议上发布的 ECM 14 算法描述，作为 ECM 参考软件新版本文本，系统记录该版本相对前一版本的编码工具与算法变更，是 ECM
+    作为未来视频编码标准核心测试模型演进的关键节点文档。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: ECM 14 算法描述属参考软件新版本文本，是 ECM 演进中的权威性重大节点文档。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-AI2025: 增强压缩模型 14（ECM 14）算法描述'

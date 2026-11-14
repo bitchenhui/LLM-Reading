@@ -1,0 +1,32 @@
+id: standard_proposal:jvet:m200-AJ1011
+type: standard_proposal
+title: 'JVET-AJ1011: White paper on HEVC'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2024-11-Kemer@JVET-AJ1011
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=14991
+time:
+  published: '2024-11-01'
+  collected: '2026-11-14'
+entities:
+- ref: codec:HEVC
+  role: subject
+claims:
+- statement: 该文档是对 HEVC 标准技术体系的权威综述，由 HEVC 主要编辑维护，作为标准生态的官方参考资料
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: HEVC 核心团队维护的权威技术综述白皮书，系统梳理 HEVC 标准的编码工具与设计原理
+  abstract_zh: 该文档是 JVET 输出中的 HEVC 参考白皮书，由 Bross、Ohm、Sullivan、Wang 等主编撰写，作为对 HEVC 标准技术体系的权威概述。它在标准生态中扮演背景参考与知识沉淀的角色，而非提出新工具或新实验。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 由 HEVC 主编团队撰写的权威参考白皮书，属标准线的权威技术综述而非具体技术提案，适合作摘要级收录
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-AJ1011: HEVC 白皮书'

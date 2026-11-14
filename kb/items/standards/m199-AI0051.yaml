@@ -1,0 +1,32 @@
+id: standard_proposal:jvet:m199-AI0051
+type: standard_proposal
+title: 'JVET-AI0051: Template Matching Picture Boundary Padding for ECM'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2024-07-Sapporo@JVET-AI0051
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=14292
+time:
+  published: '2024-07-12'
+  collected: '2026-11-14'
+entities:
+- ref: codec:ECM
+  role: subject
+claims:
+- statement: 该文档是提交至 ECM 探索进程的具体工具提案，方向为基于模板匹配的图像边界填充，预期用于改善图像边界处参考样本的可用性与预测质量，非验证测试或新版本文本等重大节点
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出以模板匹配实现 ECM 图像边界填充的方案，改进边界参考样本生成与预测
+  abstract_zh: 该文档为 2024 年 7 月札幌 JVET 会议上提交的 ECM 技术贡献，由 RWTH 亚琛工业大学提出，主题是将模板匹配应用于图像边界填充，属于 ECM 探索进程中的工具级具体提案。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 标题含明确技术工具（模板匹配图像边界填充）并直接针对 ECM，属具体技术提案而非验证测试或重大节点
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-AI0051: 面向 ECM 的模板匹配图像边界填充'

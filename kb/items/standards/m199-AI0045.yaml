@@ -1,0 +1,32 @@
+id: standard_proposal:jvet:m199-AI0045
+type: standard_proposal
+title: 'JVET-AI0045: 4:4:4 MV-HEVC profiles'
+domain: standards_ecosystem
+research_lines: []
+source:
+  channel: jvet
+  external_id: 2024-07-Sapporo@JVET-AI0045
+  url: https://jvet-experts.org/doc_end_user/current_document.php?id=14284
+time:
+  published: '2024-07-12'
+  collected: '2026-11-14'
+entities:
+- ref: codec:HEVC
+  role: subject
+claims:
+- statement: 该提案聚焦在 MV-HEVC 之上扩展 4:4:4 档位定义，属于标准生态中对既有 HEVC 多视图能力的增量扩展方向；其对空间视频产业应用的具体影响需待正文确认。
+  confidence: inferred
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 苹果提议在 MV-HEVC 框架下新增支持 4:4:4 色度采样的档位，面向高质量多视图/立体内容编码。
+  abstract_zh: 该文档为提交至 JVET 的具体技术提案（MPEG m68322），建议为 HEVC 的多视图扩展 MV-HEVC 定义 4:4:4 色度采样档位，呼应空间视频/专业立体内容对更高色度保真度的需求。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 标题指向具体技术提案（为 MV-HEVC 定义 4:4:4 新档位），属明确工具/规范类提案而非重大节点或行政事务，故按具体提案归为 summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-14'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 'JVET-AI0045: 4:4:4 MV-HEVC 档位提案'
