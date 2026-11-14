@@ -1,0 +1,71 @@
+id: paper:arxiv:2607.27628
+type: paper
+title: 'BlindPSNR: A No-Reference Fidelity Predictor for Low-Light Image Enhancement'
+domain: quality_assessment
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2607.27628v1
+  url: https://arxiv.org/abs/2607.27628
+  pdf_url: https://arxiv.org/pdf/2607.27628v1
+  venue: arXiv preprint
+time:
+  published: '2026-07-30'
+  collected: '2026-11-15'
+entities:
+- ref: metric:PSNR
+  role: subject
+- ref: concept:IQA
+  role: compared_against
+claims:
+- statement: BlindPSNR将top-1参数选择精度从标量回归基线的54.4%提升至89.5%，参数选择遗憾从1.62 dB降至0.026 dB
+  confidence: reported
+  metrics:
+  - name: top-1选择精度
+    value: 89.5%
+    scope: BlindPSNR，作者基准测试
+  - name: top-1选择精度
+    value: 54.4%
+    scope: 标量回归基线，同一基准
+  - name: 选择遗憾
+    value: 0.026 dB
+    scope: BlindPSNR，作者基准测试
+  - name: 选择遗憾
+    value: 1.62 dB
+    scope: 标量回归基线，同一基准
+  evidence: abstract（初筛，未读全文）
+- statement: 七个NR-IQA基线在其基准上top-1选择精度均为0%，因NR-IQA面向感知质量而非信号保真度
+  confidence: reported
+  metrics:
+  - name: top-1选择精度
+    value: 0%
+    scope: 全部七个NR-IQA基线，作者基准
+  evidence: abstract（初筛，未读全文）
+- statement: BlindPSNR可泛化到未见数据集
+  confidence: reported
+  metrics:
+  - name: SRCC
+    value: 0.61-0.67
+    scope: 未见（unseen）数据集
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出BlindPSNR，用窗口交叉注意力融合增强图与低照度输入，无参考预测PSNR以自动化LLIE参数选择。
+  abstract_zh: 低照度图像增强（LLIE）方法的可调参数通常固定，跨场景易性能退化，而自动参数选择需要保真度准则，但PSNR依赖通常不可得的真值参考。作者指出NR-IQA以感知质量为目标而非信号保真度，其测试的七个NR-IQA基线在其基准上top-1选择精度均为0%。利用配对训练数据可解析计算真值PSNR，从而提供精确监督而无需教师网络。基于此提出轻量无参考网络BlindPSNR，通过窗口交叉注意力融合增强图与退化的低照度输入，并以异方差回归估计PSNR，将top-1精度从标量回归基线的54.4%提升至89.5%，遗憾从1.62
+    dB降至0.026 dB，且在未见数据集上SRCC为0.61-0.67。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 提出面向低照度增强的无参考PSNR保真度预测，属IQA/VQA质量评估类工作，非视频编码核心域
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: BlindPSNR：面向低照度图像增强的无参考保真度预测器
+relations:
+- type: same_topic
+  ref: paper:arxiv:2606.29752
+  note: 同为低照度增强图像的质量/保真度评估方向
+- type: same_topic
+  ref: paper:arxiv:2602.09531
+  note: 同为无参考（盲）图像质量/失真预测方法

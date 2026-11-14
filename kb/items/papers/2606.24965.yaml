@@ -1,0 +1,50 @@
+id: paper:arxiv:2606.24965
+type: paper
+title: 'Project Auto-World: Towards Automated Benchmarking of Neural Relational Reasoners'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2606.24965v1
+  url: https://arxiv.org/abs/2606.24965
+  pdf_url: https://arxiv.org/pdf/2606.24965v1
+  venue: arXiv preprint
+time:
+  published: '2026-06-23'
+  collected: '2026-11-15'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:FunSearch
+  role: builds_on
+claims:
+- statement: 结合基于FunSearch的LLM进化搜索与自主agentic搜索，可端到端地自动发现产生更难问题实例的采样函数，用于神经关系推理基准的自动生成
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 利用自动生成的难例数据训练可改进Edge Transformer，使其对进一步的数据扰动也能良好泛化
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 同一机制可应用于由LLM自行提出的全新世界，为神经关系推理领域的自主研究开辟路径
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 用基于FunSearch的LLM进化搜索自动生成更难的关系推理基准实例，并改进Edge Transformer的泛化能力
+  abstract_zh: 神经模型在系统性运用所学知识处理比训练更难的问题实例上仍面临挑战，而评估这种泛化能力的瓶颈在于事先难以判断实例难度。该工作提出用LLM自动化生成基准：给定由Datalog规则参数化的世界并以Edge
+    Transformer作为推理评估器，采用基于FunSearch的LLM进化搜索与自主agentic搜索来发现能产生更难实例的采样函数。作者证明利用这些难例数据可改进Edge Transformer，使其对进一步的数据扰动具备良好泛化。最后，同一机制可应用于由LLM提出的全新世界，为神经关系推理的自主研究打开大门。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 属于自我改进AI域：用基于FunSearch的LLM进化搜索自动生成更难基准并反哺推理模型，非音视频核心域，按基准给summary_only
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: Project Auto-World：迈向神经关系推理器的自动化基准测试
+relations:
+- type: same_topic
+  ref: paper:arxiv:2406.04824
+  note: 同属基于FunSearch的LLM进化搜索自动发现方法类工作
+- type: same_topic
+  ref: paper:arxiv:2609.35025
+  note: 同属agent自动生成基准/数据以驱动自我改进回路的研究方向

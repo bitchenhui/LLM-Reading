@@ -1,0 +1,51 @@
+id: paper:arxiv:2607.14396
+type: paper
+title: 'CatalogAgent: A Supervisor-mediated Self-Learning System Enabling Context Engineering for GenAI
+  Models'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2607.14396v1
+  url: https://arxiv.org/abs/2607.14396
+  pdf_url: https://arxiv.org/pdf/2607.14396v1
+  venue: arXiv preprint
+time:
+  published: '2026-07-15'
+  collected: '2026-11-15'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: 通过上下文工程注入监督者沉淀的学习经验，CatalogAgent使Generator与Evaluator LLM性能分别提升15.24%与13.98%，无需人工干预。
+  confidence: reported
+  metrics:
+  - name: Generator性能提升
+    value: 15.24%
+    scope: 相对基线，经上下文工程注入学习经验后
+  - name: Evaluator性能提升
+    value: 13.98%
+    scope: 相对基线，经上下文工程注入学习经验后
+  evidence: abstract（初筛，未读全文）
+- statement: 提出监督者智能体中介的自学习系统新范式：当LLM生成器与评估器内部冲突或收到卖家外部反馈时，由监督者调解裁决，并将经验存入记忆库供后续案例复用。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出CatalogAgent：监督者智能体调解生成-评估冲突并沉淀经验，经上下文工程使生成器与评估器分别提升15.24%和13.98%。
+  abstract_zh: 针对电商商品目录中结构化属性（如材质、颜色、形状）缺失的问题，作者提出CatalogAgent智能体系统，采用LLM生成器-评估器框架预测属性值。当生成器与评估器内部冲突或卖家外部反馈出现分歧时，监督者智能体介入调解并做最终裁决。系统引入记忆库与记忆摘要器，将监督者的个案处理聚合为经验学习，并通过上下文工程将学习成果注入工作模型，无需人工干预实现自我改进。实验显示生成器与评估器性能分别提升15.24%与13.98%，提出了监督者中介式自学习系统的新范式。
+assessment:
+  relevance: low
+  decision: summary_only
+  reason: 属于LLM智能体自我改进与上下文工程方向，与音视频技术无直接关联，按自我改进类仅作摘要收录。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: CatalogAgent：由监督者中介的自学习系统，为生成式AI模型实现上下文工程
+relations:
+- type: same_topic
+  ref: paper:arxiv:2510.04618
+  note: 同为通过上下文/经验演化实现LLM自我改进的智能体系统

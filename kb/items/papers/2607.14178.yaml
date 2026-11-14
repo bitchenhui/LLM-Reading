@@ -1,0 +1,57 @@
+id: paper:arxiv:2607.14178
+type: paper
+title: 'ReasFlow: Assisting Reasoning-Centric Scientific Discovery in Applied Mathematics via a Knowledge-Based
+  Multi-Agent System'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2607.14178v3
+  url: https://arxiv.org/abs/2607.14178
+  pdf_url: https://arxiv.org/pdf/2607.14178v3
+  venue: arXiv preprint
+time:
+  published: '2026-07-15'
+  collected: '2026-11-15'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: builds_on
+claims:
+- statement: ReasFlow能从极简提示端到端自主生成包含严格理论与实证内容的完整研究论文，共5篇。
+  confidence: reported
+  metrics:
+  - name: 自主生成完整论文数
+    value: '5'
+    scope: 从最小化提示端到端生成，含理论与实证内容
+  evidence: abstract（初筛，未读全文）
+- statement: 在人工设计的基于LLM的评审标准下，ReasFlow在开放获取SOTA基线中持续取得最高评估分数。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 自动知识检索与自我改进机制可主动挖掘陈述性事实与被忽视的程序性启发式知识，显著减少专家干预。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出知识驱动的多智能体系统ReasFlow，以专家任PI、智能体任研究生的模式自动完成理论推导与论文撰写。
+  abstract_zh: 针对现有自动科研系统偏重经验驱动、量化基准领域，而理论驱动、需严格证明的数学学科发现探索不足的问题，提出端到端自主智能体系统ReasFlow。系统采用人类专家担任首席研究员、智能体担任研究生的协作范式，将文献综合、算法设计、定理证明、实验与论文撰写统一于单一系统。其核心机制包括在人工检查前审计逻辑一致性并纠错的内部验证回路，以及自动知识检索与自我改进机制，主动挖掘陈述性事实与被忽视的程序性启发式知识，显著减少专家干预。系统从极简提示自主生成了5篇含严格理论与实证内容的完整研究论文，在基于LLM的评审标准下取得开放获取SOTA基线中的最高评分，并通过ReasLab平台公开提供AI辅助理论研究的协作工作区。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 面向应用数学推理型科学发现的LLM多智能体自我改进系统，属自我改进AI领域，非核心音视频域，按基准仅作初筛摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: ReasFlow：基于知识库多智能体系统辅助应用数学中以推理为中心的科学发现
+relations:
+- type: same_topic
+  ref: paper:arxiv:2506.13131
+  note: 同属LLM智能体驱动的科学/算法自动发现系统（AlphaEvolve）
+- type: same_topic
+  ref: paper:arxiv:2610.24454
+  note: 同属多智能体递归自我改进的科学发现系统（MELD）
+- type: same_topic
+  ref: paper:arxiv:2505.13259
+  note: 同属LLM自动科学发现研究线，本文为其理论推理型代表工作

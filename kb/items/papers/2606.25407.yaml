@@ -1,0 +1,47 @@
+id: paper:arxiv:2606.25407
+type: paper
+title: 'Teach-to-Reason: Competition-Guided Reasoning with a Self-Improving Teacher'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2606.25407v1
+  url: https://arxiv.org/abs/2606.25407
+  pdf_url: https://arxiv.org/pdf/2606.25407v1
+  venue: arXiv preprint
+time:
+  published: '2026-06-24'
+  collected: '2026-11-15'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+claims:
+- statement: T2R通过自我竞争迭代的Teacher与竞争引导的Reasoner引入比较式监督，可在答案级奖励失效（组级优势坍缩为零）时恢复有效训练信号
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: case-wise奖励设计在原始奖励信息充分时保留其正负划分，在奖励退化时从竞争分数恢复监督
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在多个CXR开放式VQA基准上，T2R持续优于强基线方法
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出T2R框架，以自竞争强化的Teacher与竞争引导的Reasoner为链式推理提供比较式监督，在CXR VQA上优于强基线
+  abstract_zh: 胸部X光视觉问答（CXR VQA）要求模型除给出正确答案外还需产出可靠的医学推理，但现有强化学习训练多依赖答案级奖励，对思维链（CoT）质量提升过粗，且当组级优势坍缩为零时失效。T2R框架将基于比较的监督引入CoT优化：Teacher通过自我竞争迭代强化，Reasoner则针对逐步变强的Teacher生成参考进行优化。进一步设计case-wise奖励，在原奖励信息充分时保留其正负划分，当原奖励退化时从竞争分数恢复监督。在多个CXR开放式VQA基准上，T2R持续优于强基线，表明受控的比较式监督能为推理优化提供更有效的训练信号。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 核心是自我改进教师（自博弈迭代强化）驱动的推理训练，属自我改进AI，但应用于胸部X光VQA，与音视频技术仅弱相关，不给deep_read
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 教会推理：基于自我改进教师的竞争引导推理
+relations:
+- type: same_topic
+  ref: paper:arxiv:2609.34975
+  note: 同为教师引导的自改进LLM推理训练（Teach to Learn的hint退火 vs T2R的自我改进教师+竞争监督）
+- type: same_topic
+  ref: paper:arxiv:2407.19594
+  note: 同属自我改进 judges/teacher 生成监督信号的RL训练范式（LLM-as-meta-judge vs 自竞争Teacher）

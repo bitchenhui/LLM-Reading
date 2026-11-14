@@ -1,0 +1,50 @@
+id: paper:arxiv:2608.29481
+type: paper
+title: 'SIC-Agents: Benchmarking and Building an Adaptive Simulator for Pediatric Serious Illness Communication
+  Training'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2608.29481v1
+  url: https://arxiv.org/abs/2608.29481
+  pdf_url: https://arxiv.org/pdf/2608.29481v1
+  venue: arXiv preprint
+time:
+  published: '2026-08-30'
+  collected: '2026-11-15'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:SelfImprovement
+  role: uses
+claims:
+- statement: 自改进框架SIC-Agents在儿科重症沟通的家长模拟任务上优于静态专家提示
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 提出首个面向儿科重症沟通训练的基准套件PitfallBench与DialogueBench，分别在回合级与整段对话层面评估模拟器
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: SIC-Agents通过生成临床医生可编辑的技能文档实现自我改进，针对现有模拟器只优化通用对话质量而非课程依赖行为的缺陷
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出儿科重症沟通训练首个基准套件与自改进LLM模拟框架SIC-Agents，优于静态专家提示
+  abstract_zh: 儿科重症疾病沟通（SIC）训练缺乏可扩展方案，且较一般对话模拟面临多方交互、应对家长强烈情绪及依赖反馈动态等额外挑战。作者与教育者和儿科临床医生合作，提出首个面向儿科SIC训练的基准套件PitfallBench与DialogueBench，分别在回合级与整段对话层面评估模拟器。进一步提出自改进框架SIC-Agents，通过生成临床医生可编辑的技能文档引导模拟器的课程依赖行为。实验表明SIC-Agents优于静态专家提示，基准已开源。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 提出自改进LLM对话模拟框架与基准套件，属自改进AI域在医疗训练场景的应用，非音视频核心，仅初筛收录
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: SIC-Agents：面向儿科重症疾病沟通训练的基准测试与自适应模拟器构建
+relations:
+- type: same_topic
+  ref: paper:arxiv:2503.22678
+  note: 均为自进化/自改进LLM智能体在临床交互模拟场景的应用
+- type: same_topic
+  ref: paper:arxiv:2510.03687
+  note: 均为医疗领域LLM自我改进方法研究

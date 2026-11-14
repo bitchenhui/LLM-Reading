@@ -1,0 +1,62 @@
+id: paper:arxiv:2608.12841
+type: paper
+title: 'AQuA: Recursively Self-Improving Quantitative Trading Research Agents'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2608.12841v3
+  url: https://arxiv.org/abs/2608.12841
+  pdf_url: https://arxiv.org/pdf/2608.12841v3
+  venue: arXiv preprint
+time:
+  published: '2026-08-13'
+  collected: '2026-11-15'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:RSI
+  role: subject
+claims:
+- statement: AQuA 的因子发现系统（管理者中介的多智能体流水线）在加密货币标的上将所发现因子组合为合成信号，达到验证信息系数约 0.190
+  confidence: reported
+  metrics:
+  - name: 验证信息系数 IC
+    value: 约0.190
+    scope: 加密货币标的、组合信号、验证集
+  evidence: abstract（初筛，未读全文）
+- statement: 模型系统通过配置驱动的混合时序架构迭代，在美股实现每股 +0.0843 的信息系数，转化为双腿成本下样本外夏普最高 +2.50 的阈值多空策略，且 2021–2025 每年收益为正
+  confidence: reported
+  metrics:
+  - name: 每股信息系数 IC
+    value: '+0.0843'
+    scope: 美股、混合时序架构模型
+  - name: 夏普比率 Sharpe
+    value: 最高+2.50
+    scope: 持有样本外、双腿交易成本、阈值多空策略
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 用实验证据驱动的递归自我改进研究智能体，在加密货币因子发现与美股模型开发中取得稳健的预测与交易表现
+  abstract_zh: 论文研究量化投资研究层面的递归自我改进：自主系统能否利用早期实验证据改进后续迭代提出的假设与候选方案。AQuA 包含两个独立的语言模型驱动研究系统：符号化因子发现系统和可训练模型开发系统，各自记录实验结果并据此指导后续提案，且都在固定沙箱中运行——固定数据划分、特征与标签定义及评估器，模型只能通过受限的因子表达式或配置差异进行操作。因子系统（管理者中介的多智能体流水线）在加密货币标的上组合出验证信息系数约
+    0.190 的合成信号。模型系统（配置驱动的混合时序架构迭代循环）在美股达到每股 +0.0843 的信息系数，并转化为双腿交易成本下持有样本外夏普比率最高 +2.50 的阈值多空策略，该策略在 2021
+    至 2025 年每年均为正收益。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 属递归自我改进智能体研究（研究循环式RSI在量化投资场景的实证），非核心视频编码域，按基准仅摘要级收录
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: AQuA：递归自我改进的量化交易研究智能体
+relations:
+- type: same_topic
+  ref: paper:arxiv:2506.13131
+  note: 同为LLM驱动、以实验反馈迭代改进的科研发现智能体（AlphaEvolve），研究范式同属自改进/自动发现循环
+- type: same_topic
+  ref: paper:arxiv:2605.06822
+  note: 同为金融交易场景的自进化智能体（SHARP），均以LLM代理迭代改进交易相关产出
+- type: same_topic
+  ref: paper:arxiv:2607.22511
+  note: 同为面向自动化科学研究、带自我改进循环的智能体框架（CausalSmith），均为领域内RSI实证

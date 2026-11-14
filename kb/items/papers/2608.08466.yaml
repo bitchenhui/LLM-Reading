@@ -1,0 +1,77 @@
+id: paper:arxiv:2608.08466
+type: paper
+title: 'Hierarchical Self-Improvement: A Framework for Task-Specific Evolvable Agent Harnesses'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2608.08466v1
+  url: https://arxiv.org/abs/2608.08466
+  pdf_url: https://arxiv.org/pdf/2608.08466v1
+  venue: arXiv preprint
+time:
+  published: '2026-08-09'
+  collected: '2026-11-15'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: 在BALROG基准上以DeepSeek-V4-Flash-Preview为冻结骨干，HSI在中难度任务上相对初始harness取得一致增益。
+  confidence: reported
+  metrics:
+  - name: Progress提升
+    value: '+39.3'
+    scope: BALROG BabyAI，相对初始harness，原始% Progress
+  - name: Progress提升
+    value: '+33.0'
+    scope: BALROG Crafter，相对初始harness，原始% Progress
+  - name: Progress提升
+    value: '+25.0'
+    scope: BALROG TextWorld，相对初始harness，原始% Progress
+  - name: Progress提升
+    value: '+15.0'
+    scope: BALROG MiniHack，相对初始harness，原始% Progress
+  evidence: abstract（初筛，未读全文）
+- statement: HSI在BabaIsAI子套件的20%未见划分上取得强held-out泛化。
+  confidence: reported
+  metrics:
+  - name: best-test
+    value: '0.98'
+    scope: BabaIsAI BreakStop子套件，20%未见划分
+  - name: best-test
+    value: '1.00'
+    scope: BabaIsAI GoTo子套件，20%未见划分
+  evidence: abstract（初筛，未读全文）
+- statement: 当任务超出冻结骨干能力（NLE）时，harness进化不再带来改进，实证验证骨干能力界的存在。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: HSI的改进上界由反馈保真度界（进化依赖有信息量的奖励信号）与骨干能力界（harness重设计无法克服冻结模型固有限制）共同约束。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: HSI框架：冻结LLM经evolver与meta-evolver三层结构迭代重写任务harness，中难度任务稳定增益，超骨干能力则无效。
+  abstract_zh: 论文提出分层自我改进（HSI）框架：单个冻结LLM在三层结构中运行——任务harness执行任务、evolver依据环境反馈重写harness、meta-evolver在冻结外锚约束下重写evolver的策略代码，各任务族通过固定任务注入接缝热插拔专属harness。thinking-on/off设计在任务执行时关闭推理、在自我修改时开启，以隔离harness进化的贡献。框架受反馈保真度界与骨干能力界双重约束。在BALROG上以DeepSeek-V4-Flash-Preview为冻结骨干，HSI在中难度任务取得稳定增益（BabyAI
+    +39.3、Crafter +33.0、TextWorld +25.0、MiniHack +15.0，原始% Progress），并在BabaIsAI子套件20%未见划分上表现出强泛化（BreakStop
+    0.98、GoTo 1.00）；超出骨干能力的NLE任务则无改进。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 提出冻结LLM智能体的分层harness自我改进框架，属自我改进AI核心方向，按非核心域基准收summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 分层自我改进：面向任务特定可进化智能体支架（Harness）的框架
+relations:
+- type: same_topic
+  ref: paper:arxiv:2604.21725
+  note: 同属LLM智能体harness进化与自我改进方向
+- type: same_topic
+  ref: paper:arxiv:2609.24972
+  note: 同为agent harness递归自我改进，探讨其改进机制与边界
+- type: same_topic
+  ref: paper:arxiv:2310.02304
+  note: 同属递归自我改进（RSI）经典脉络，均以代码/脚手架自修改实现能力提升

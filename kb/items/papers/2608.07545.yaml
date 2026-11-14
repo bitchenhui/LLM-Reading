@@ -1,0 +1,82 @@
+id: paper:arxiv:2608.07545
+type: paper
+title: 'DarwinX: Evolving Agent Harnesses Through Natural Selection'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2608.07545v1
+  url: https://arxiv.org/abs/2608.07545
+  pdf_url: https://arxiv.org/pdf/2608.07545v1
+  venue: arXiv preprint
+time:
+  published: '2026-07-31'
+  collected: '2026-11-15'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: 一轮外壳进化在四个基准上平均带来约17分提升，且进化所得为通用能力，可在任务、验证器与基座模型变更下保持。
+  confidence: reported
+  metrics:
+  - name: 平均提升
+    value: 约+17分
+    scope: 四个基准、一轮进化平均
+  evidence: abstract（初筛，未读全文）
+- statement: Terminal-Bench 2.1 上提升+7.7个百分点至83.2%（匹配基座），更强基座上达84.7%的已验证前沿水平。
+  confidence: reported
+  metrics:
+  - name: 成功率
+    value: 83.2%
+    scope: Terminal-Bench 2.1，匹配基座
+  - name: 提升
+    value: '+7.7'
+    scope: Terminal-Bench 2.1，匹配基座
+  - name: 成功率
+    value: 84.7%
+    scope: Terminal-Bench 2.1，更强基座（验证前沿）
+  evidence: abstract（初筛，未读全文）
+- statement: TerminalWorld 留出集上达68.3%，超过所有现成智能体。
+  confidence: reported
+  metrics:
+  - name: 成功率
+    value: 68.3%
+    scope: TerminalWorld 留出集（held-out split）
+  evidence: abstract（初筛，未读全文）
+- statement: WebArena-Infinity 真实任务 pass@1 从43.5%提升至93.0%，且结果经审计干净。
+  confidence: reported
+  metrics:
+  - name: pass@1
+    value: 43.5%→93.0%
+    scope: WebArena-Infinity 真实任务，审计干净
+  evidence: abstract（初筛，未读全文）
+- statement: 在 Terminal-Bench 2.1 上进化的外壳可不作修改直接迁移到 SWE-bench Verified。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 以种群自然选择在冻结模型上进化智能体外壳，四基准平均提升约17分并可跨基准迁移。
+  abstract_zh: DarwinX 将智能体自改进建模为对外壳（提示词、工具、技能与控制流）的种群级自然选择，模型权重保持冻结。其机制包括：只接纳扩展覆盖且不回退变体的保留-扩展契约、保存替代谱系供重组的档案库，以及失败、教师与自我证据共用的统一编辑接口。适应度完全由各基准自身的验证器给出，不依赖金标答案或人工挑选。在四个逐步分离进化信号与测试的基准上，一轮进化平均提升约17分：Terminal-Bench
+    2.1 匹配基座上升+7.7至83.2%，更强基座达84.7%验证前沿；TerminalWorld 留出集达68.3%；WebArena-Infinity 真实任务 pass@1 从43.5%升至93.0%且审计干净。进化所得为通用智能体能力而非基准特化补丁，Terminal-Bench
+    2.1 外壳可原样迁移至 SWE-bench Verified。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 论文研究冻结模型下智能体外壳的种群进化自改进，属自我改进AI领域，非音视频核心域。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: DarwinX：通过自然选择进化智能体外壳
+relations:
+- type: same_topic
+  ref: paper:arxiv:2609.24972
+  note: 同为智能体外壳层的递归自改进工作（RRSI）
+- type: same_topic
+  ref: paper:arxiv:2604.21725
+  note: 同为开放环境中进化智能体外壳（AEL）
+- type: same_topic
+  ref: paper:arxiv:2309.16797
+  note: Promptbreeder 为单谱系提示词进化，DarwinX 将其推广为种群选择

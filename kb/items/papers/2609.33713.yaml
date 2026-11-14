@@ -1,0 +1,53 @@
+id: paper:arxiv:2609.33713
+type: paper
+title: 'BIRD: Distilling Decision Boundaries into Rationales for MLLM Adaptation'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2609.33713v1
+  url: https://arxiv.org/abs/2609.33713
+  pdf_url: https://arxiv.org/pdf/2609.33713v1
+  venue: arXiv preprint
+time:
+  published: '2026-09-27'
+  collected: '2026-11-15'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+claims:
+- statement: BIRD以目标MLLM自身的表示空间检索近邻并按答案偏好选出最易混淆样本，将模型混淆作为定位未解决局部决策边界的信号
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: BIRD生成不泄露答案的候选视觉差异证据，并用功能性验证筛选最能强化模型对正确答案偏好、同时避免样本对间不当迁移的证据，再蒸馏为单样本理据进行监督微调
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在医疗VQA和图表VQA任务上，BIRD在两个目标MLLM上的表现优于对比的理据增强方法
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 进一步分析显示BIRD产生对易混淆答案更清晰的分离，且与目标模型匹配的监督带来更强增益
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 自改进框架BIRD借模型混淆定位决策边界，经功能验证的证据蒸馏为理据以微调MLLM
+  abstract_zh: 论文提出BIRD，一个自改进的边界感知理据蒸馏框架，用于将通用多模态大语言模型（MLLM）适配到医疗VQA、图表VQA等专业领域。其核心思路是：利用目标模型自身的表示空间检索最易混淆的候选近邻，从二者视觉差异中生成不泄露答案的候选证据，再通过功能性验证筛选最能强化模型对正确答案偏好且避免不当迁移的证据。验证后的证据被蒸馏为单样本理据，用于标准监督微调。在医疗与图表VQA上，BIRD在两个目标MLLM上均优于现有理据增强方法，并展现出对易混淆答案更清晰的区分能力，模型匹配的监督带来更强增益。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 自改进理据蒸馏框架用于MLLM适配，属self_improvement域（非核心），按基准给summary_only；规则匹配的IQA为噪声——文中VQA指视觉问答而非图像质量评估，应剔除
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: BIRD：将决策边界蒸馏为推理依据的多模态大模型适配方法
+relations:
+- type: same_topic
+  ref: paper:arxiv:2608.03733
+  note: 同为利用模型失败/混淆信号驱动多模态大语言模型自改进的数据生成方法
+- type: same_topic
+  ref: paper:arxiv:2603.02556
+  note: 同为基于对比/样本间比较信号的VLM视觉推理自改进
+- type: same_topic
+  ref: paper:arxiv:2606.01612
+  note: 同为面向大型视觉语言模型特定子任务的自改进适配方法

@@ -1,0 +1,53 @@
+id: paper:arxiv:2609.06490
+type: paper
+title: 'OracleZoom: On-Policy Self-Distillation Inspired Reference-Constrained Recursive Image Super Resolution'
+domain: processing_enhancement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2609.06490v1
+  url: https://arxiv.org/abs/2609.06490
+  pdf_url: https://arxiv.org/pdf/2609.06490v1
+  venue: arXiv preprint
+time:
+  published: '2026-09-06'
+  collected: '2026-11-15'
+entities:
+- ref: concept:SuperResolution
+  role: subject
+- ref: concept:IQA
+  role: measured_by
+claims:
+- statement: OracleZoom在七个数据集的各放大尺度上取得SOTA超分质量，平均CLIPIQA为0.713，且在更深层尺度上增益更大。
+  confidence: reported
+  metrics:
+  - name: CLIPIQA
+    value: '0.713'
+    scope: 七数据集、跨放大尺度平均
+  evidence: abstract（初筛，未读全文）
+- statement: 递归超分中深层预测因所需源分辨率几何增长而缺乏真值监督，OracleZoom通过参考约束监督+KL约束隐空间先验+EMA一致性显著减少幻觉。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 无参考质量目标被用于引导监督边界之外的不可验证细尺度细节。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出参考约束+策略内自蒸馏的递归超分框架OracleZoom，七数据集SOTA并显著减少幻觉。
+  abstract_zh: 论文研究递归超分辨率（Recursive SR），通过反复将预测结果回送至同一模型实现极限放大，但深层预测缺乏真值监督。OracleZoom采用受策略内自蒸馏启发的参考约束框架，在训练自身轨迹的同时将最后一个真值证据携带到监督边界之外，以直接与跨尺度监督约束可验证内容，用无参考质量目标引导细尺度细节，并用KL约束的预训练隐空间先验和EMA一致性抑制质量漂移与稳定监督边界。在七个数据集上，OracleZoom在各放大尺度上取得SOTA超分质量，平均CLIPIQA达0.713，且在更深层尺度上增益更大，同时显著减少幻觉。代码、数据与模型已开源。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 纯图像递归超分辨率方法创新（非编码链路工作），按非核心域仅做初筛摘要收录。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: OracleZoom：受策略内自蒸馏启发的参考约束递归图像超分辨率
+relations:
+- type: same_topic
+  ref: paper:arxiv:2104.02322
+  note: 超分辨率用于压缩/分辨率转换链路的同类技术研究
+- type: same_topic
+  ref: paper:arxiv:2409.00768
+  note: 图像超分辨率训练策略与数据视角的相关研究

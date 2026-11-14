@@ -1,0 +1,53 @@
+id: paper:arxiv:2606.31825
+type: paper
+title: 'Breaking Failure Cascades: Step-Aware Reinforcement Learning for Medical Multimodal Reasoning'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2606.31825v2
+  url: https://arxiv.org/abs/2606.31825
+  pdf_url: https://arxiv.org/pdf/2606.31825v2
+  venue: arXiv preprint
+time:
+  published: '2026-06-30'
+  collected: '2026-11-15'
+entities:
+- ref: concept:LLM
+  role: subject
+claims:
+- statement: MRPO在四个多模态LLM骨干上一致优于标准GRPO和近期RL基线，且在Qwen3-VL-8B-Thinking上超过HuatuoGPT-Vision-34B 4.59分。
+  confidence: reported
+  metrics:
+  - name: 相对HuatuoGPT-Vision-34B的提升
+    value: 4.59 points
+    scope: Qwen3-VL-8B-Thinking+MRPO 对比 HuatuoGPT-Vision-34B
+  evidence: abstract（初筛，未读全文）
+- statement: MRPO将早期推理失败率从58.6%降至13.4%，表明针对性缓解级联失败可同时提升推理质量与最终答案准确率。
+  confidence: reported
+  metrics:
+  - name: 早期推理失败率
+    value: 58.6%→13.4%
+    scope: MRPO训练前后对比
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出步骤级过程奖励的RL算法MRPO，切断早期推理失败引发的级联错误，提升医学多模态VQA准确率。
+  abstract_zh: 现有医学多模态大模型后训练以结果为中心，依赖最终答案正确性，信用分配稀疏，早期推理失败会级联导致错误预测。作者提出MRPO（Medical Reasoning-aware Policy
+    Optimization），当最终答案错误时对早期无效推理步骤中的token施加指数级放大的惩罚，在不破坏成功路径的前提下切断失败级联。在四个多模态LLM骨干上，MRPO持续优于标准GRPO和近期RL基线；在Qwen3-VL-8B-Thinking上比体量大得多的医学模型HuatuoGPT-Vision-34B高出4.59分。MRPO还将早期推理失败率从58.6%降至13.4%，表明针对性缓解级联失败可同时提升推理质量与最终准确率。
+assessment:
+  relevance: low
+  decision: summary_only
+  reason: 医学多模态VQA的强化学习后训练与步骤级过程奖励设计，属LLM推理改进跟踪范畴但与音视频技术无直接关联，仅作初筛摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 打破失败级联：面向医学多模态推理的步骤感知强化学习
+relations:
+- type: same_topic
+  ref: paper:arxiv:2506.03106
+  note: 同为超越结果奖励的细粒度反馈式LLM推理RL（Critique-GRPO的自然语言+数值反馈 vs MRPO的步骤级过程奖励）
+- type: same_topic
+  ref: paper:arxiv:2510.03687
+  note: 同属医学LLM推理能力改进（MedReflect的反思纠错 vs MRPO的RL过程奖励）

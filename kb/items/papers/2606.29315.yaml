@@ -1,0 +1,54 @@
+id: paper:arxiv:2606.29315
+type: paper
+title: Hierarchical Experimentalist Agents
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2606.29315v2
+  url: https://arxiv.org/abs/2606.29315
+  pdf_url: https://arxiv.org/pdf/2606.29315v2
+  venue: arXiv preprint
+time:
+  published: '2026-06-28'
+  collected: '2026-11-15'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: 在Interphyre最难任务上，HExA可使前沿LLM（如GPT-6 Astra，单独使用时失败）接近100%成功率。
+  confidence: reported
+  metrics:
+  - name: 任务成功率
+    value: ≈100%
+    scope: HExA加持的前沿LLM在Interphyre最具挑战任务上的成功率（前沿模型裸跑基线失败）
+  evidence: abstract（初筛，未读全文）
+- statement: HExA相比朴素智能体基线与记忆基线具有更高的token效率。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: HExA为上下文内框架，无需外部监督、oracle解或离线数据，且可通过分层技能迁移将从易任务学到的技能泛化到更难任务。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出以主动实验与分层技能蒸馏为核心的LLM自我改进框架HExA，在Interphyre物理任务上使前沿模型接近100%成功率。
+  abstract_zh: 现有LLM智能体多依赖模仿获得的参数化知识，在新领域或需要先验之外信息的复杂查询上表现不佳。作者提出HExA，一个上下文内、以实验为中心的自我改进框架：迭代设计与优化与查询相关的实验，将交互经验增量蒸馏为可复用、可组合的技能，并整合实验证据来行动或作答；可配合任意LLM（含前沿黑盒模型），无需外部监督、oracle解或离线数据。作者同时发布Interphyre——一组支持工具调用与干预API的高难度程序化物理任务基准，当前前沿LLM（含GPT-6
+    Astra）均告失败。实验覆盖多步推理、部分可观测交互游戏与物理定律发现任务：在Interphyre最难任务上HExA使模型接近100%成功率，且较朴素智能体与记忆基线提升token效率，并可通过分层技能迁移从易任务泛化到难任务。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: LLM智能体主动实验式自我改进框架，属自我改进AI追踪域但与音视频技术无直接关联，按非核心域摘要收录。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 分层实验家智能体（HExA）
+relations:
+- type: same_topic
+  ref: paper:arxiv:2510.07841
+  note: 同为LLM智能体测试时自我改进工作，HExA属于上下文内自改进范式
+- type: same_topic
+  ref: paper:arxiv:2512.17102
+  note: 同属基于技能库的自我改进智能体研究，HExA强调经验蒸馏为可复用可组合技能

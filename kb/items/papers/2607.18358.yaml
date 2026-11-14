@@ -1,0 +1,53 @@
+id: paper:arxiv:2607.18358
+type: paper
+title: 'A Classifier That Teaches Itself: Self-Improving, Frozen-gate Training (SIFT) for Dynamic Document
+  Classification'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2607.18358v2
+  url: https://arxiv.org/abs/2607.18358
+  pdf_url: https://arxiv.org/pdf/2607.18358v2
+  venue: arXiv preprint
+time:
+  published: '2026-07-20'
+  collected: '2026-11-15'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: SIFT以SPLADE稀疏编码器+LightGBM的廉价CPU管线服务分类，仅将低置信度少数页面升级给LLM裁判，裁判判定写回标注语料库，形成昂贵模型持续教学廉价模型的自反馈循环，升级率下降且精度随使用复合提升。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 接入新文档家族只需声明式配置包（标签空间、锚点短语、裁判术语表），无需预先开展标注工程。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 安全机制为两重晋升门：关键标签F1回归检查加上模型从不参与训练的冻结黄金回归集，任一门均可否决模型晋升，使无人值守的月度自动再训练变得常规化。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 该自改进循环使分类器的边际标注成本随生产流量增长趋向于零。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: SIFT用廉价SPLADE+LightGBM管线分类文档，LLM裁判判定回流标注语料驱动自再训练，冻结黄金回归集门控保障安全晋升。
+  abstract_zh: SIFT是一种动态文档分类服务，采用刻意廉价的CPU管线（SPLADE稀疏编码器+LightGBM分类头）服务分类，仅将低置信度少数页面升级给LLM裁判裁决。裁判判定结果写回标注语料库，使昂贵模型持续教学廉价模型，升级率随使用下降、语料库从生产流量自然增长、精度随使用复合提升。接入新文档家族仅需声明式配置包（标签空间、锚点短语、裁判术语表），无需前期标注工程。针对自主再训练可能静默退化的风险，SIFT设计双重晋升门——关键标签F1回归检查加上永不参与训练的冻结黄金回归集，任一门可否决晋升，使无人值守的月度再训练成为常规，且边际标注成本趋向于零。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 企业级文档分类的自我改进训练系统，含冻结晋升门等安全自再训练机制，属自改进AI域但与音视频核心域无关，仅初筛摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 一个会自我教学的分类器：面向动态文档分类的自我改进、冻结门训练（SIFT）
+relations:
+- type: same_topic
+  ref: paper:arxiv:2611.10787
+  note: 均为以验证/门控保障自我改进安全性的系统（本文用冻结黄金回归集作晋升门，后者研究RSI的统计保证）
+- type: same_topic
+  ref: paper:arxiv:2610.38392
+  note: 均关注自改进系统中的晋升/接受门机制；本文提出双重否决式晋升门以防止静默退化

@@ -1,0 +1,49 @@
+id: paper:arxiv:2608.28798
+type: paper
+title: Blind Stereoscopic Omnidirectional Image Quality Assessment Using Predictive Coding Hierarchy
+domain: quality_assessment
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2608.28798v1
+  url: https://arxiv.org/abs/2608.28798
+  pdf_url: https://arxiv.org/pdf/2608.28798v1
+  venue: arXiv preprint
+time:
+  published: '2026-08-28'
+  collected: '2026-11-15'
+entities:
+- ref: concept:IQA
+  role: subject
+- ref: concept:QoE
+  role: subject
+claims:
+- statement: 提出的PCH指标为盲/无参考的立体全景图像质量评估方法，由局部双眼感知模块、全局预测感知模块与视觉质量回归器三部分组成。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在大量实验中，PCH相较现有最先进的质量评估方法取得有竞争力且持续改进的性能。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 方法模拟人类观看SOI的过程：通过视口提取、cyclopean转换与显著性检测聚合局部质量信息，再基于双眼机制融合左右视图进行全局预测编码层级建模。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出受预测编码层级启发的无参考立体全景图像质量评估指标PCH，性能持续优于现有SOTA。
+  abstract_zh: 针对虚拟现实环境中的立体全景图像（SOI），基于人类视觉系统特性提出受预测编码层级（PCH）启发的盲/无参考质量评估指标。方法模拟SOI观看流程：先提取多个视口并进行双眼融合（cyclopean转换）与显著性检测以聚合局部感知信息；随后基于双眼机制融合左右视图进行预测编码层级建模以推断全局场景；最后由视觉质量回归器结合局部与全局感知线索输出质量分数。大量实验表明，PCH相较最先进的质量评估方法取得有竞争力且持续提升的性能。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 属于沉浸式全景图像质量评估（IQA/QoE）方法研究，与音视频质量评估相关但非核心编码域，按基准给 summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 基于预测编码层级的盲立体全景图像质量评估
+relations:
+- type: same_topic
+  ref: paper:arxiv:2602.09531
+  note: 同为盲/无参考图像质量评估方法研究
+- type: same_topic
+  ref: paper:arxiv:2603.16179
+  note: 同涉及360°全景图像的感知与质量评估

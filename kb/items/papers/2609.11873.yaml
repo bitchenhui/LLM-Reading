@@ -1,0 +1,53 @@
+id: paper:arxiv:2609.11873
+type: paper
+title: 'The Last AI Built by Humans: Toward Genuine Recursive Self-Improvement'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2609.11873v3
+  url: https://arxiv.org/abs/2609.11873
+  pdf_url: https://arxiv.org/pdf/2609.11873v3
+  venue: arXiv preprint
+time:
+  published: '2026-09-10'
+  collected: '2026-11-15'
+entities:
+- ref: concept:RSI
+  role: subject
+- ref: concept:SelfImprovement
+  role: subject
+claims:
+- statement: 论文提出用 Headroom-Closed Index（HCI）来量化并揭示现有 LLM 在自我改进能力上的不足。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 论文给出 RSI 五阶段发展路线图：改进执行自主 → 改进策略自主 → 经验获取自主 → 环境适应自主 → 递归元改进。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: RSI 在科学发现、具身智能、软件工程等场景中具有不同需求和不同发展速度。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 结合产业实践与初步实证证据，作者识别出实现真正 RSI 的若干关键挑战。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出HCI指标诊断现有LLM短板，给出从改进执行自主到递归元改进的RSI发展路线图。
+  abstract_zh: 该文首先提出 Headroom-Closed Index（HCI）指标，用以揭示现有 LLM 在自我改进方面的局限。随后系统阐述递归自我改进（RSI）的概念与发展路线图：从改进执行自主、改进策略自主、经验获取自主、环境适应自主，最终递进到递归元改进。文章进一步考察
+    RSI 在科学发现、具身智能、软件工程等不同场景下的差异化需求与发展速度。结合产业实践与初步实证证据，作者将 RSI 研究与实际系统相连，并指出实现真正 RSI 所面临的关键挑战。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 直接聚焦递归自我改进（RSI）主题的立场/综述论文，属自我改进域，按收录基准仅给摘要级。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 人类构建的最后一个AI：迈向真正的递归自我改进
+relations:
+- type: same_topic
+  ref: paper:arxiv:2410.04444
+  note: Gödel Agent 是自指式递归自我改进 agent 框架，与本文 RSI 主题一致
+- type: same_topic
+  ref: paper:arxiv:2506.13131
+  note: AlphaEvolve 对应本文讨论的软件工程/科学发现场景下的自我改进实践

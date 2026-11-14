@@ -1,0 +1,53 @@
+id: paper:arxiv:2608.07243
+type: paper
+title: 'Recipes for Creativity: Iterative Generation and Evaluation in Large Language Models'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2608.07243v1
+  url: https://arxiv.org/abs/2608.07243
+  pdf_url: https://arxiv.org/pdf/2608.07243v1
+  venue: arXiv preprint
+time:
+  published: '2026-08-07'
+  collected: '2026-11-15'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:FunSearch
+  role: uses
+claims:
+- statement: 迭代生成-选择流程可产出与人类基准创造性相当的食谱（以 TTCT 为基础的 LLM 评估计）
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 单纯增加迭代次数并不能提升创造性得分
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 循环内选择评分器是影响最大的因素：更小的评分器在多数 TTCT 维度上得分显著更高，评估器设计是一阶设计变量
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 生成器温度对创造性影响有限，仅在原创性（originality）维度上有可见作用
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 将 FunSearch 改造用于烘焙食谱创作，发现循环内评估器设计是创造性搜索的一阶变量。
+  abstract_zh: 该试点研究将 FunSearch 框架改编用于 2024 年 Pillsbury 烘焙大赛的食谱生成任务，并用基于 TTCT 的 LLM 评估方法与人类基准进行对比。在两组实验中考察迭代次数、生成器温度以及循环内选择评分器的模型规模。结果表明：迭代生成-选择可以产生与人类基准创造性相当的食谱，但单纯增加迭代次数并不能提升创造性。循环内评估器的影响最大——更小的选择评分器在多数
+    TTCT 创造性维度上得分显著更高，温度仅在原创性维度上有一定作用，说明评估器设计是主观创造性搜索中的首要设计变量。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: FunSearch 在食谱创作上的改编试点，属 LLM 迭代生成-评估/自我改进研究线，与音视频核心技术无直接关联。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 大语言模型创造性的配方：迭代生成与评估
+relations:
+- type: same_topic
+  ref: paper:arxiv:2406.04824
+  note: 同为 FunSearch 框架的改编与应用研究（FunBO 用于贝叶斯优化采集函数发现）
+- type: same_topic
+  ref: paper:arxiv:2506.13131
+  note: 同属基于 LLM 的迭代生成-评估式进化搜索研究线（AlphaEvolve）

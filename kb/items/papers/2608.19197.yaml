@@ -1,0 +1,63 @@
+id: paper:arxiv:2608.19197
+type: paper
+title: 'SPADE: Self-Play in Adaptive Synthetic Executable Environments'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2608.19197v3
+  url: https://arxiv.org/abs/2608.19197
+  pdf_url: https://arxiv.org/pdf/2608.19197v3
+  venue: arXiv preprint
+time:
+  published: '2026-08-19'
+  collected: '2026-11-15'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: SPADE 使环境设计本身成为可学习组件，在 30B 参数规模下于八个 held-out 数学、科学、代码与推理基准上平均超过最强固定环境基线 5.3 分
+  confidence: reported
+  metrics:
+  - name: 平均提升（基准分数）
+    value: '+5.3'
+    scope: 30B 模型，8 个 held-out 基准 vs 最强固定环境基线
+  evidence: abstract（初筛，未读全文）
+- statement: SPADE 显著提升多轮工具使用能力
+  confidence: reported
+  metrics:
+  - name: BFCL-v4 多轮提升
+    value: '+5.7'
+    scope: 30B 模型工具使用设定
+  - name: ACEBench-Agent 提升
+    value: '+13.9'
+    scope: 30B 模型工具使用设定
+  evidence: abstract（初筛，未读全文）
+- statement: 游戏设定下 SPADE 相对最强基线的领先幅度随模型规模增长而扩大
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 以有/无特权提示的奖励差距估计推理智能体遗憾值，驱动环境设计者将环境瞄准能力边缘并保持可行性；文档接地与环境记忆是成功的关键组件
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 单LLM兼任环境设计者与推理智能体，自我博弈生成可执行训练环境，迈向开放式自我改进
+  abstract_zh: SPADE提出一种自我博弈强化学习框架，让单个LLM同时扮演两个角色：环境设计者编写带reset()/step()接口的完整长程可执行训练环境（含状态转移、奖励函数与验证代码），推理智能体在这些环境中学习行动。框架用智能体在有/无特权提示下的奖励差距估计其遗憾值，据此训练环境设计者将环境瞄准智能体能力边缘并保持可行。实验发现两个关键组件：用大规模预训练语料采样的文档为环境设计者提供接地，以及为其积累环境记忆。扩展到30B参数模型时，SPADE在八个held-out数学、科学、代码与推理基准上平均超过最强固定环境基线5.3分，BFCL-v4多轮工具使用提升5.7，ACEBench-Agent提升13.9，游戏设定下优势随模型规模扩大。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 单一LLM自我博弈生成可执行训练环境以实现开放式自我改进，属self_improvement域的代表性工作，非音视频核心域故按规则仅收录为summary_only
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: SPADE：自适应合成可执行环境中的自我博弈
+relations:
+- type: same_topic
+  ref: paper:arxiv:2508.14029
+  note: 同为通过自我博弈式问题合成维持 RLVR 训练信号、避免目标分布固定的 LLM 自我改进工作
+- type: same_topic
+  ref: paper:arxiv:2508.05004
+  note: 同为零数据/自生成环境下求解器与出题方协同进化实现 LLM 自我进化

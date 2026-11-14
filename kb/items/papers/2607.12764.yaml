@@ -1,0 +1,50 @@
+id: paper:arxiv:2607.12764
+type: paper
+title: 'EvoGraph-R1: Self-Evolving Multimodal Knowledge Hypergraphs for Agentic Retrieval'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2607.12764v1
+  url: https://arxiv.org/abs/2607.12764
+  pdf_url: https://arxiv.org/pdf/2607.12764v1
+  venue: arXiv preprint
+time:
+  published: '2026-07-14'
+  collected: '2026-11-15'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+claims:
+- statement: EvoGraph-R1将检索建模为MDP，智能体通过GraphRetrieve、WebSearch、GraphEdit、Answer四类动作在闭环中重塑超图结构，使知识图可整合新证据并自我纠错。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在多模态VQA与文本QA基准上，该自进化GraphRAG框架相较现有RAG基线在准确率、覆盖度与可追溯性上取得显著提升。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 作者声称自进化知识图可成为跨模态的基础范式，突破离线静态知识图的局限。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 将知识超图重构为由智能体交互驱动的动态环境，以MDP建模检索实现自进化GraphRAG，提升多模态问答表现。
+  abstract_zh: 该文指出GraphRAG将知识图视为离线构建、单次查询的静态结构，存在跨模态割裂、结构冻结、检索刚性三大瓶颈。EvoGraph-R1将知识超图重构为通过智能体交互塑形的动态环境，并把检索形式化为马尔可夫决策过程（MDP）。智能体可执行查询（GraphRetrieve）、扩展（WebSearch）、修正（GraphEdit）、终止（Answer）等动作，重塑超图结构并产生反馈信号驱动后续进化，从而整合新证据、纠正错误并支持多跳推理。在多模态VQA与文本QA基准上，该框架在准确率、覆盖度与可追溯性方面显著超越现有RAG基线。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 多模态RAG检索中知识超图经智能体闭环交互自进化，属自进化智能体方向而非音视频核心域，按非核心域初筛收录。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: EvoGraph-R1：面向智能体检索的自进化多模态知识超图
+relations:
+- type: same_topic
+  ref: paper:arxiv:2504.21024
+  note: 同为智能体与外部状态（知识图/世界模型）协同进化的自改进智能体框架
+- type: same_topic
+  ref: paper:arxiv:2609.37968
+  note: 同属自改进智能体借助搜索类动作迭代增强的范式
+- type: same_topic
+  ref: paper:arxiv:2510.14253
+  note: 均将智能体置于可交互的搜索环境中实现自我进化

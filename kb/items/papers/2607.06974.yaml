@@ -1,0 +1,58 @@
+id: paper:arxiv:2607.06974
+type: paper
+title: 'MILES: Modular Instruction Memory with Learnable Selection for Self-Improving LLM Reasoning'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2607.06974v1
+  url: https://arxiv.org/abs/2607.06974
+  pdf_url: https://arxiv.org/pdf/2607.06974v1
+  venue: arXiv preprint
+time:
+  published: '2026-07-08'
+  collected: '2026-11-15'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:SelfImprovement
+  role: subject
+claims:
+- statement: MILES在多个推理基准上与既有记忆式自改进方法持平或更优，同时取得更优的精度-效率权衡。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 由子目标嵌入-子指令非对称对构成的模块化记忆单元加可学习选择头，可在记忆增量扩展、监督有限的测试时条件下实现正确性优化的记忆组合。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 粗到细两阶段检索有效：粗层完成记忆扩展并从高置信样本收集训练监督，细层以选择头重排候选、为不确定样本提供推理引导。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: MILES具备鲁棒性与跨任务可迁移性（摘要级声明，具体数值见正文）。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出MILES框架，以子目标-子指令模块化记忆单元配合可学习选择头，在测试时逐步积累经验自改进LLM推理。
+  abstract_zh: 论文提出MILES框架，针对顺序到达的问题逐步累积可复用经验以改进LLM推理，克服已有方法存整解模板泛化差、启发式步级选择不优化最终正确性的局限。其维护模块化记忆单元，每个单元由子目标嵌入与子指令构成非对称对并关联一个可学习选择头，支持正确性优化的记忆组合。机制采用粗到细检索：粗层负责记忆增量扩展并从高置信样本收集监督信号训练选择头，细层用学到的选择头重排粗层候选并引导不确定样本的推理。实验显示MILES与既有方法持平或更优，取得更好的精度-效率权衡，并具备鲁棒性与可迁移性。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 属LLM测试时自改进与记忆式经验复用方向，命中self_improvement域，但非音视频核心编码域，按基准仅做初筛摘要收录。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: MILES：面向自改进大语言模型推理的模块化指令记忆与可学习选择
+relations:
+- type: same_topic
+  ref: paper:arxiv:2412.14352
+  note: 同属LLM推理时(inference-time)自改进研究线，MILES为该方向的记忆选择类具体方法
+- type: same_topic
+  ref: paper:arxiv:2505.19475
+  note: 同样针对问题顺序到达场景的测试时连续自改进，MILES以模块化记忆替代验证器驱动的样本选择
+- type: same_topic
+  ref: paper:arxiv:2509.13237
+  note: 均为将已积累推理经验沉淀为可复用单元（行为/子指令）以增强后续推理的工作
+- type: same_topic
+  ref: paper:arxiv:2510.07841
+  note: 同属测试时自改进LLM/agent方向，聚焦测试时约束下的经验利用

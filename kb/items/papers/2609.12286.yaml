@@ -1,0 +1,62 @@
+id: paper:arxiv:2609.12286
+type: paper
+title: 'T-GADE: Thermodynamical Generative-AI-Driven Evolution of LLM Artifacts'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2609.12286v2
+  url: https://arxiv.org/abs/2609.12286
+  pdf_url: https://arxiv.org/pdf/2609.12286v2
+  venue: arXiv preprint
+time:
+  published: '2026-09-10'
+  collected: '2026-11-15'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:EoH
+  role: compared_against
+claims:
+- statement: 带HoxLM的T-GADE以比EoH更少的LLM总调用达到更低的装箱超出量。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在400次LLM总调用的预注册比较中，T-GADE（HoxLM配置）在10组种子配对里赢9组，中位超出量优于EoH。
+  confidence: reported
+  metrics:
+  - name: 种子配对胜局
+    value: 9/10
+    scope: 400次LLM总调用预注册比较，在线装箱任务
+  - name: 中位超出量（T-GADE）
+    value: 0.836%
+    scope: T-GADE HoxLM配置 @400次调用
+  - name: 中位超出量（EoH基线）
+    value: 3.912%
+    scope: EoH @400次调用
+  evidence: abstract（初筛，未读全文）
+- statement: 温度T在代际与稳态两种更新方式下均控制保留种群的散布；小的正温度在代际玻色型方案中优于T=0的塌缩点。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 以热力学自由能最小化统一LLM工件进化的存活选择，在线装箱任务上以更少调用胜过EoH。
+  abstract_zh: 该工作受热力学遗传算法（TDGA）启发，提出T-GADE框架：保留种群与遗传算子概念，以LLM生成的结构化工件为个体，交叉与变异由LLM算子实现。框架引入HoxLM在评估后、存活选择前对个体尝试自修复，支持代际与稳态两种更新方式，并以费米型/玻色型占据规则界定解的同一性与重复许可。存活选择统一为最小化自由能F_T=⟨E⟩−TH，温度T显式调节质量与多样性的平衡。在按EoH对齐的在线装箱任务上，带HoxLM的配置以更少LLM总调用取得更低超出量：预注册的400次调用比较中10组种子配对赢9组，中位超出量0.836%对EoH的3.912%。温度在两种更新方式下均控制保留种群散布，小的正温度优于代际玻色型方案中T=0的塌缩点，进化出的启发式呈可读的评分规则。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 非音视频核心域，但属自我改进AI中LLM驱动的自动启发式设计（EoH谱系），按规则仅作初筛摘要收录。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: T-GADE：热力学启发的生成式AI驱动LLM工件进化
+relations:
+- type: same_topic
+  ref: paper:arxiv:2401.02051
+  note: 实现示例与EoH对齐，并在在线装箱任务上直接对比EoH
+- type: same_topic
+  ref: paper:arxiv:2508.03082
+  note: 同属基于LLM的EoH谱系自动启发式设计研究
+- type: same_topic
+  ref: paper:arxiv:2412.14995
+  note: 同属LLM驱动、进化算法辅助的自动启发式设计方向

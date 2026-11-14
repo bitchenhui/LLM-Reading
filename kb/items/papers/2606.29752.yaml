@@ -1,0 +1,55 @@
+id: paper:arxiv:2606.29752
+type: paper
+title: 'LEIQ-Assessor: Multi-dimensional Quality Assessment of Low-light Enhanced Images via Multi-task
+  Learning'
+domain: quality_assessment
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2606.29752v1
+  url: https://arxiv.org/abs/2606.29752
+  pdf_url: https://arxiv.org/pdf/2606.29752v1
+  venue: arXiv preprint
+time:
+  published: '2026-06-29'
+  collected: '2026-11-15'
+entities:
+- ref: concept:IQA
+  role: subject
+- ref: metric:MOS
+  role: measured_by
+claims:
+- statement: LEIQ-Assessor以SigLIP2 ViT为骨干，通过多任务学习同时预测总体MOS与六个感知子属性（亮度、色彩保真度、噪声水平、曝光质量、自然度、内容恢复），并以PLCC损失联合优化。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在MLE基准上，LEIQ-Assessor显著优于现有无参考IQA模型与手工质量描述子。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 该方法在QoMEX 2026低照度增强图像质量评估挑战赛中获得第二名。
+  confidence: reported
+  metrics:
+  - name: 挑战赛排名
+    value: 第2名
+    scope: QoMEX 2026 Grand Challenge on Low-light Enhanced Image Quality Assessment
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出基于SigLIP2骨干与多任务学习的LEIQ-Assessor，联合预测MOS及六个感知子属性，获QoMEX 2026挑战赛第二名。
+  abstract_zh: 论文针对低照度图像增强算法（LIEA）输出中常见的噪声放大、色偏、结构损伤和过曝等失真，提出面向低照度增强图像的多维质量评估模型LEIQ-Assessor，为QoMEX 2026低照度增强图像质量评估挑战赛开发。方法以预训练的SigLIP2
+    Vision Transformer为骨干，通过多任务学习同时预测总体MOS与六个感知子属性（亮度、色彩保真度、噪声水平、曝光质量、自然度、内容恢复），并以PLCC损失联合优化这些相关目标，使共享表征比单任务模型捕捉更丰富的质量特征。在MLE基准上的实验表明，LEIQ-Assessor显著优于现有无参考IQA模型与手工质量描述子，并在挑战赛中取得第二名，代码已开源。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 属于低照度增强图像质量评估（IQA）工作，为QoMEX 2026挑战赛参赛方案，非视频/图像编码核心域，按基准仅收录为summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: LEIQ-Assessor：基于多任务学习的低照度增强图像多维质量评估
+relations:
+- type: same_topic
+  ref: paper:arxiv:2605.24553
+  note: 同属无参考图像质量评估（IQA）模型研究，均面向图像感知质量预测
+- type: same_topic
+  ref: paper:arxiv:2601.18195
+  note: 同属图像质量评估/理解方向，聚焦视觉质量的自动预测与评估

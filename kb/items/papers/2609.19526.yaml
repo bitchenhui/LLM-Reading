@@ -1,0 +1,59 @@
+id: paper:arxiv:2609.19526
+type: paper
+title: Self Improvement via Fast Tree-search
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2609.19526v1
+  url: https://arxiv.org/abs/2609.19526
+  pdf_url: https://arxiv.org/pdf/2609.19526v1
+  venue: arXiv preprint
+time:
+  published: '2026-09-17'
+  collected: '2026-11-15'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: SIFT通过LLM-as-a-judge成对比较加正则化Bradley-Terry聚合的评审信号引导树搜索，将昂贵评估只留给最有希望的节点，从而在严格预算约束下显著提升编码性能。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: SIFT在完整Polyglot基准上优于现有基于树搜索的自进化框架，CPU小时、墙钟时间与API成本等资源需求显著更低。
+  confidence: reported
+  metrics:
+  - name: 基准
+    value: Polyglot（完整版）
+    scope: 自我改进性能评估的评测集
+  - name: 资源维度
+    value: CPU小时/墙钟时间/API成本均低于对比框架
+    scope: 与现有树搜索自进化框架对比
+  evidence: abstract（初筛，未读全文）
+- statement: 现有自我改进方法的主要运行时瓶颈是候选自修改的评估（需用修改后的智能体重跑基准任务子集），SIFT将其识别为优化切入点。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出SIFT，用LLM评审信号与Bradley-Terry聚合驱动轻量解耦树搜索，在严格算力预算下高效自我改进编码智能体。
+  abstract_zh: 针对编码智能体自我改进中候选补丁评估依赖重跑基准任务、耗时过长的瓶颈，提出SIFT框架。方法上引入LLM-as-a-judge对候选补丁做成对比较，胜负记录经正则化Bradley-Terry模型聚合为强度分数，分数进而驱动轻量解耦树搜索中基于排名的父节点采样。昂贵的下游任务评估仅保留给最有希望的节点，评审分数提供了不受慢评估限制的中间信号。实验显示SIFT在完整Polyglot基准上超越现有基于树搜索的自进化框架，且CPU小时、墙钟时间与API成本显著更低。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 编码智能体递归自我改进的RSI框架，属于自我改进AI核心主题，但非音视频核心域，按规则仅收录摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 通过快速树搜索实现自我改进（SIFT）
+relations:
+- type: same_topic
+  ref: paper:arxiv:2410.06508
+  note: 同为基于MCTS/树搜索的LLM自我改进方法，SIFT是该路线的解耦树搜索变体
+- type: same_topic
+  ref: paper:arxiv:2310.02304
+  note: 同为编码智能体递归自我改进（RSI）工作，均关注自我修改代码的评估开销
+- type: same_topic
+  ref: paper:arxiv:2506.13131
+  note: 同为编码智能体驱动的自进化发现框架，共享LLM引导进化搜索范式

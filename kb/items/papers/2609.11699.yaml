@@ -1,0 +1,58 @@
+id: paper:arxiv:2609.11699
+type: paper
+title: 'Negative Self-Distillation: Learning to Reason by Avoiding Flaws'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2609.11699v1
+  url: https://arxiv.org/abs/2609.11699
+  pdf_url: https://arxiv.org/pdf/2609.11699v1
+  venue: arXiv preprint
+time:
+  published: '2026-09-10'
+  collected: '2026-11-15'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:SelfImprovement
+  role: builds_on
+claims:
+- statement: OPSD强迫学生模仿基于特权信息的过度自信推理轨迹，会抑制不确定性表达并惩罚探索性自我纠错行为，在复杂推理任务上严重损害LLM性能。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: NSD让模型自身为每个问题生成负向条件教师（如"粗心推理者"），并将学生分布推离该教师，全程不使用标准答案或外部监督。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 直接用遗忘目标实现分布偏分会无差别惩罚基础语言token，NSD通过动态门控机制自动识别推理关键token、只对缺陷token施加梯度更新，从而保住语言先验。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在无标签、自举式强化学习设定下，NSD在复杂推理任务上持续优于OPSD及其他同类基线。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出NSD框架，让LLM远离自生成的缺陷推理教师而非模仿特权解答，并用动态门控保护语言能力，推理表现优于OPSD等无标签自提升基线。
+  abstract_zh: 针对在线策略自蒸馏（OPSD）在复杂推理任务上会压制不确定性表达、惩罚探索性自我纠错行为从而导致性能退化的问题，作者提出负向自蒸馏（NSD）。NSD不依赖标准答案或外部监督，而是让模型自己生成针对问题的负向条件（如扮演"粗心推理者"），并将学生分布推离这一自生成的负向教师。由于缺陷推理token与基础语言token混杂，直接套用遗忘目标会损害语言能力，论文设计了动态门控机制自动识别并隔离推理关键token，使梯度更新只作用于行为缺陷。实验表明NSD在无标签、自举式强化学习设定下持续优于OPSD及其他基线。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: LLM自我改进方向核心工作：提出负向自蒸馏NSD替代OPSD，属自我改进AI范畴而非音视频核心域，按基准给summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 负向自蒸馏：通过规避缺陷学习推理
+relations:
+- type: same_topic
+  ref: paper:arxiv:2305.14483
+  note: 同为LLM无外部监督的自我改进/自举式RL推理训练
+- type: same_topic
+  ref: paper:arxiv:2505.08827
+  note: 同为无标签自我奖励式RL提升LLM推理
+- type: same_topic
+  ref: paper:arxiv:2502.13441
+  note: 同探讨语言模型无外部脚手架下自举推理能力的问题
+- type: same_topic
+  ref: paper:arxiv:2609.36695
+  note: 同为LLM自蒸馏训练范式（选择性自蒸馏 vs 负向自蒸馏）

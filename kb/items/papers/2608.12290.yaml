@@ -1,0 +1,56 @@
+id: paper:arxiv:2608.12290
+type: paper
+title: 'Beyond Trial-and-Error: Agentic Optimization for Image-to-Video Adherence'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2608.12290v2
+  url: https://arxiv.org/abs/2608.12290
+  pdf_url: https://arxiv.org/pdf/2608.12290v2
+  venue: arXiv preprint
+time:
+  published: '2026-08-12'
+  collected: '2026-11-15'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: 两阶段'智能体自改进'框架（mLLM提示词迭代优化配合DSG语义检查与CMQ伪影检测，再经贝叶斯优化联合搜索种子与CFG尺度并引入VTA分数）显著优于无引导搜索方法。
+  confidence: reported
+  metrics:
+  - name: 人类偏好胜率
+    value: 69%
+    scope: 人评研究中智能体方法生成视频相对基线输出的偏好胜率上限
+  evidence: abstract（初筛，未读全文）
+- statement: 框架将视频合成从试错式生成重构为闭环目标导向优化，可提升最先进视频生成模型的可预测性与可控性。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出Agentic Self-Improvement框架，用mLLM提示词迭代优化加贝叶斯参数搜索提升黑盒I2V生成与文本一致性。
+  abstract_zh: 针对黑盒图生视频（I2V）模型缺乏细粒度控制、随机性导致暴力试错的问题，提出'智能体自改进'框架，将视频合成重构为闭环目标导向优化。第一阶段用多模态大语言模型迭代优化输入提示词，通过Davidsonian场景图（DSG）查询保障语义一致性，用常见错误问题（CMQ）检测伪影。第二阶段用贝叶斯优化联合搜索随机种子与CFG尺度，搜索由新提出的视频-文本一致性（VTA）分数等质量指标引导。人评研究显示该方法生成的视频显著优于无引导搜索，偏好胜率最高达69%，为视频生成模型走向可预测、可控制的生产级工具提供了实用方法。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 提出'智能体自改进'闭环优化框架，直接命中自改进AI域，但应用对象是黑盒I2V生成控制而非编码核心链路，按规则仅初筛收录。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 超越试错法：面向图像到视频一致性的智能体优化
+relations:
+- type: same_topic
+  ref: paper:arxiv:2509.10704
+  note: 同属智能体自改进用于生成模型输出优化的方向（Maestro自改进文生图，本文为图生视频对应工作）
+- type: same_topic
+  ref: paper:arxiv:2210.11610
+  note: 同属LLM自改进研究线，本文将其扩展至多模态生成参数空间搜索
+- type: same_topic
+  ref: paper:arxiv:2412.14352
+  note: 本文为推理期（测试时）自改进闭环优化在视频生成任务上的实例
+- type: same_topic
+  ref: paper:arxiv:2607.16742
+  note: 均涉及AI生成视频的质量评估与一致性度量

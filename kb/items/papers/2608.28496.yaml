@@ -1,0 +1,56 @@
+id: paper:arxiv:2608.28496
+type: paper
+title: 'Ladders in Chaos: When, How, (and Perhaps Why) Does Test-Time Scaling Improve LLM Machine Translation'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2608.28496v2
+  url: https://arxiv.org/abs/2608.28496
+  pdf_url: https://arxiv.org/pdf/2608.28496v2
+  venue: arXiv preprint
+time:
+  published: '2026-08-28'
+  collected: '2026-11-15'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:SelfImprovement
+  role: subject
+claims:
+- statement: 在机器翻译任务中，序列采样（后次尝试依赖前次结果）比并行 i.i.d. 采样加重排序具有更高的性能上限，尤其在较小采样预算下能提供更多样、更有效的样本池。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 对 Best-of-N 翻译的人工多维分析显示，序列采样显著改善翻译流畅性与自然度，但当推理预算较大时可能损害翻译准确性。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 受控分析将序列自改进的成功部分归因于模型在序列过程中可访问更大的目标侧上下文。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 消融实验表明序列采样对不同采样温度具有稳健性，但对上下文构建方式敏感。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 比较序列与并行两类测试时扩展在 LLM 机器翻译中的表现，发现序列采样上限更高但大预算下可能损害准确性。
+  abstract_zh: 该研究在机器翻译场景下系统考察两类测试时扩展范式：序列采样（后续尝试依赖先前结果）与并行采样（i.i.d. 采样加重排序）。结果显示序列采样具有更高的性能上限，能在较小采样预算下提供更多样且更有效的候选样本池。对
+    Best-of-N 翻译的多维人工分析表明，序列采样显著提升翻译流畅性与自然度，但在推理预算较大时可能降低准确性。受控分析将序列自改进的成功部分归因于模型能访问更大的目标侧上下文；消融实验显示其对采样温度稳健，但对上下文构建方式敏感。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 非音视频核心域，属 LLM 推理时自改进/测试时扩展研究（对象为机器翻译），按规则仅收录为 summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 混沌中的阶梯：测试时扩展何时、如何（以及为何）提升 LLM 机器翻译
+relations:
+- type: same_topic
+  ref: paper:arxiv:2412.14352
+  note: 同属 LLM 推理时（测试时）自改进研究范畴
+- type: same_topic
+  ref: paper:arxiv:2502.18080
+  note: 同研究测试时算力扩展的最优使用问题
+- type: same_topic
+  ref: paper:arxiv:2505.16637
+  note: 同为面向 LLM 机器翻译的自改进方法研究

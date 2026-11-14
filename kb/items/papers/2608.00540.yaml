@@ -1,0 +1,56 @@
+id: paper:arxiv:2608.00540
+type: paper
+title: 'DiffuseAgent-MI: Distributionally-Grounded,Tool-Integrated Self-Evolving Agents for Faithful Visual
+  Reasoning'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2608.00540v1
+  url: https://arxiv.org/abs/2608.00540
+  pdf_url: https://arxiv.org/pdf/2608.00540v1
+  venue: arXiv preprint
+time:
+  published: '2026-08-01'
+  collected: '2026-11-15'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+claims:
+- statement: 在GeoQA、SciVis、VQA-v2及内部多模态推理集上，DiffuseAgent-MI的准确率较此前自进化智能体最高提升5.1点。
+  confidence: reported
+  metrics:
+  - name: 准确率提升
+    value: +5.1 points
+    scope: GeoQA/SciVis/VQA-v2及内部多模态推理集，对比先前自进化智能体（报告中最高值）
+  evidence: abstract（初筛，未读全文）
+- statement: 互信息忠实度（与人类可解释性一致度）相比基线提升超过一倍。
+  confidence: reported
+  metrics:
+  - name: 互信息忠实度提升
+    value: '>2×（超过一倍）'
+    scope: 与既有自进化智能体基线相比
+  evidence: abstract（初筛，未读全文）
+- statement: 能量项与验证器互补：前者保证分布级忠实度，后者保证轨迹级忠实度，仅二者结合能同时弥合两类差距。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 用KL最小能量模型+验证器奖励驱动自进化视觉推理智能体，同时提升准确率与推理忠实度。
+  abstract_zh: 论文提出DiffuseAgent-MI，一个工具集成的自进化视觉语言智能体，其感知锚定由特征单元上的KL最小能量模型控制，为视觉机制可解释性提供分布视角。能量地形对生成样本施加软约束，使其贴近所选可解释单元条件下的原生先验，缩小解释与内部表征之间的差距；验证器提供轨迹级忠实度奖励，当检测到不忠实步骤时由修复分支对能量模型重新条件化。在GeoQA、SciVis、VQA-v2及内部多模态推理集上，准确率较既有自进化智能体最高提升5.1点，互信息忠实度与人类可解释性一致度提升超过一倍。分析表明能量项保证分布级忠实、验证器保证轨迹级忠实，二者互补，只有结合才能同时弥合两类差距。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 自进化视觉推理智能体研究，属自我改进AI域（非编码核心域），按基准仅做摘要收录。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: DiffuseAgent-MI：面向忠实视觉推理的分布约束、工具集成自进化智能体
+relations:
+- type: same_topic
+  ref: paper:arxiv:2603.02556
+  note: 同为VLM视觉推理的自进化/自改进智能体研究
+- type: same_topic
+  ref: paper:arxiv:2601.15808
+  note: 同为验证器引导的自进化智能体（verifier驱动忠实度/质量提升）

@@ -1,0 +1,53 @@
+id: paper:arxiv:2607.15314
+type: paper
+title: 'Cura 1T: Healthcare Foundation Model via Recursive Self-Improvement'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2607.15314v3
+  url: https://arxiv.org/abs/2607.15314
+  pdf_url: https://arxiv.org/pdf/2607.15314v3
+  venue: arXiv preprint
+time:
+  published: '2026-07-15'
+  collected: '2026-11-15'
+entities:
+- ref: concept:RSI
+  role: subject
+- ref: concept:SelfImprovement
+  role: uses
+claims:
+- statement: Cura 1T 通过逐轮'跑基准—评估轨迹定位能力缺口—合成数据修正训练混合'的RSI循环完成医疗基础模型训练。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在6个医疗基准评测中，Cura 1T 在其中5个（MedAgentBench、HealthBench Professional、HealthBench Hard、MedXpertQA
+    text、AgentClinic）上得分最高，MedXpertQA 多模态上排第二。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: RSI 训练未损害域外能力，Cura 1T 在 AIME、GPQA-Diamond、τ²-Bench 等域外推理与智能体基准上保持原有性能。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 用递归自我改进（RSI）循环训练的医疗基础模型，在多个医疗基准上夺冠且保持域外通用能力。
+  abstract_zh: 论文提出通过递归自我改进（RSI）训练的医疗基础模型 Cura 1T，覆盖患者问诊、临床文本与图像推理、交互式诊断和电子病历（EHR）工具调用等高利害场景。每轮 RSI 中，RSI
+    harness 在医疗基准上运行当前模型，评估轨迹以定位能力缺口，并通过合成训练数据修正训练混合，避免单一任务的窄更新损害其他能力。在6个医疗基准中，Cura 1T 在 MedAgentBench、HealthBench
+    Professional、HealthBench Hard、MedXpertQA text 和 AgentClinic 上得分最高，在 MedXpertQA 多模态上排第二。同时它在 AIME、GPQA-Diamond
+    和 τ²-Bench 等域外推理与智能体基准上保持性能不退化。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 属自我改进AI域的重要工作（RSI训练医疗基础模型），非视频/图像编码核心域，按规则最高给 summary_only
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: Cura 1T：基于递归自我改进的医疗基础模型
+relations:
+- type: same_topic
+  ref: paper:arxiv:2510.03687
+  note: 同属医疗LLM自我改进主题（MedReflect 通过反思修正自我提升医疗LLM）
+- type: same_topic
+  ref: paper:arxiv:2609.37950
+  note: 均采用 RSI harness 循环自我改进范式（Video-RSI 面向视频理解智能体）

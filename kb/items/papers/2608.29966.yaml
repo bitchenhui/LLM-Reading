@@ -1,0 +1,54 @@
+id: paper:arxiv:2608.29966
+type: paper
+title: 'DataFoundry: Evolving Data Preparators via Recursive Self-Improvement'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2608.29966v1
+  url: https://arxiv.org/abs/2608.29966
+  pdf_url: https://arxiv.org/pdf/2608.29966v1
+  venue: arXiv preprint
+time:
+  published: '2026-08-30'
+  collected: '2026-11-15'
+entities:
+- ref: concept:RSI
+  role: subject
+- ref: concept:SelfImprovement
+  role: uses
+claims:
+- statement: 在大规模数据生产之前对数据制备器做递归自我改进，其产出的训练数据比基线具有更高的下游效用。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: Skills-as-Modules 架构可将试点集上的诊断反馈转化为对单个制备组件的修订，同时保持组件接口稳定。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 改进效果跨不同骨干模型均成立，不绑定于特定模型。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 评估覆盖 DataPrep-Bench 的数学、金融、法律、医学四个领域。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出 DataFoundry 框架，在大规模数据生产前通过递归自我改进演化数据制备器，提升训练数据的下游效用。
+  abstract_zh: 针对 LLM 领域自适应中训练数据质量问题常源自构建过程本身、而质量控制只在事后过滤的错配问题，作者提出 DataFoundry，将数据制备器表示为可演化的运行时规范。其采用
+    Skills-as-Modules 架构，由中央 Controller 编排模块化技能以编译可执行运行时，在小规模试点集上用领域适配标准诊断缺陷，并将诊断反馈转化为适配器去修订单个制备组件，同时保持稳定接口。在
+    DataPrep-Bench 的数学、金融、法律、医学四个领域上评估，递归演化后的制备器产出的训练数据比基线具有更高的下游效用；跨多个骨干模型的实验表明改进不依赖特定模型，案例研究还揭示了框架的优化演化动态。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 论文核心是用递归自我改进（RSI）演化数据制备器，属 self_improvement 域且非音视频核心域，按规则只给 summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: DataFoundry：通过递归自我改进演化数据制备器
+relations:
+- type: same_topic
+  ref: paper:arxiv:2607.25886
+  note: 同属面向递归自我改进的数据中心研究（RSIBench-Data 基准）
+- type: same_topic
+  ref: paper:arxiv:2609.35025
+  note: 同关注由智能体制备/生成数据来供给自我改进闭环（AutoDataBench）

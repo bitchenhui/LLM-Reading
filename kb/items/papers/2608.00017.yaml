@@ -1,0 +1,70 @@
+id: paper:arxiv:2608.00017
+type: paper
+title: Memory Reward Inflation in Self-Improving LLM Agents
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2608.00017v1
+  url: https://arxiv.org/abs/2608.00017
+  pdf_url: https://arxiv.org/pdf/2608.00017v1
+  venue: arXiv preprint
+time:
+  published: '2026-06-29'
+  collected: '2026-11-15'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: subject
+claims:
+- statement: 免答案去虚高算法 LUCID 在 BIRD text-to-SQL 基准上取得 56.9% 执行精度，全面优于基线。
+  confidence: reported
+  metrics:
+  - name: execution accuracy
+    value: 56.9%
+    scope: LUCID，BIRD text-to-SQL
+  - name: execution accuracy
+    value: 54.0%
+    scope: Memento 式自评分记忆型基线
+  - name: execution accuracy
+    value: 52.4%
+    scope: 同架构无记忆智能体
+  - name: mean gain
+    value: +2.9 points
+    scope: LUCID 相对 Memento 式基线，跨种子平均
+  evidence: abstract（初筛，未读全文）
+- statement: 记忆型自改进智能体存在 Echo Gap 失败模式：错误经验获得虚高奖励，且误差经记忆复合而非平均抵消，确认型评审因误差与自评分偏置相关而无法识别被高估的记忆。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 误差独立性假设（EIA）被证明是纠正奖励虚高的必要条件：可用信号须追踪真值且其误差与记忆偏置去相关，可回收收益是这两个量的闭式函数。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 奖励虚高在按存储分数检索与普通相似度检索（部署所用机制）两种情形下均会复合放大。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 揭示记忆型自改进 LLM 智能体的奖励虚高失败模式（Echo Gap），提出 EIA 必要条件与免答案去虚高算法 LUCID。
+  abstract_zh: 本文研究不更新权重、依赖外部记忆学习的自改进 LLM 智能体：每轮经验存入记忆并被打分，作为隐式非参数策略的代理奖励。由于部署中真值标签不可得，奖励只能由 LLM 评估产生，导致
+    Echo Gap 失败模式——错误经验获得虚高奖励，智能体倾向复用自己最有信心的错误，且误差经记忆复合而非平均抵消，确认型评审的误差又与原始自评分偏置相关而无法识别被高估的记忆。作者形式化误差独立性假设（EIA），证明它是纠正虚高的必要条件：可用信号须追踪真值且其误差与记忆偏置去相关，可回收收益是这两量的闭式函数；虚高不仅在按分数检索时复合，在部署所用的普通相似度检索下同样存在。提出的免答案去虚高算法
+    LUCID 在 BIRD text-to-SQL 基准上将执行精度提升至 56.9%，高于 Memento 式自评分智能体（54.0%，跨种子平均 +2.9 点）与同架构无记忆智能体（52.4%）。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 研究记忆型自改进 LLM 智能体的奖励虚高失败模式与纠偏算法，属自我改进 AI 域，非核心编码域故仅初筛收录。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 自改进 LLM 智能体中的记忆奖励虚高
+relations:
+- type: same_topic
+  ref: paper:arxiv:2605.12978
+  note: 同研究 LLM 智能体记忆被错误更新/污染导致性能退化的问题
+- type: same_topic
+  ref: paper:arxiv:2610.27406
+  note: 同关注记忆型 LLM 智能体中错误经记忆复现与放大的失败模式
+- type: same_topic
+  ref: paper:arxiv:2510.07841
+  note: 同属测试时（不更新权重）记忆驱动的 LLM 智能体自改进

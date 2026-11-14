@@ -1,0 +1,59 @@
+id: paper:arxiv:2606.31270
+type: paper
+title: 'Learning from Failure: Inference-Time Self-Improvement for Computer-Use Agents'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2606.31270v1
+  url: https://arxiv.org/abs/2606.31270
+  pdf_url: https://arxiv.org/pdf/2606.31270v1
+  venue: arXiv preprint
+time:
+  published: '2026-06-30'
+  collected: '2026-11-15'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: 失败驱动的推理时自我改进（LLM诊断失败模式并生成代码补丁）在OSWorld基准上将OpenCUA-72B的成功率从42.3%提升至48.9%，无需额外训练成本，仅有适度的推理开销。
+  confidence: reported
+  metrics:
+  - name: 成功率（基线）
+    value: 42.3%
+    scope: OSWorld基准，OpenCUA-72B原始表现
+  - name: 成功率（改进后）
+    value: 48.9%
+    scope: OSWorld基准，OpenCUA-72B应用失败驱动补丁后
+  - name: 绝对提升
+    value: 6.6 个百分点
+    scope: OSWorld成功率的提升幅度
+  evidence: abstract（初筛，未读全文）
+- statement: 主流自我改进循环只利用成功轨迹进行微调而丢弃失败轨迹，而失败轨迹携带关于模型弱点的丰富信息，可作为互补的改进信号。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出失败驱动的推理时自我改进循环，用LLM诊断失败模式并生成补丁升级计算机操作智能体。
+  abstract_zh: 针对计算机使用智能体（基于多模态大模型操作电脑）开发中高质量轨迹数据稀缺的问题，论文提出一种与主流'仅用成功轨迹微调'互补的失败驱动自我改进范式。方法上由LLM诊断失败轨迹中的失败模式、提出推理时解决方案并生成代码补丁（仅经人工轻量校验），以此升级智能体而无需重新训练。在OSWorld基准上以SOTA模型OpenCUA-72B验证，成功率从42.3%提升至48.9%，提高6.6个百分点，且无额外训练成本、推理开销适中。结果表明失败驱动自我改进是成功导向流水线的可行补充。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 面向计算机操作智能体的失败驱动推理时自我改进研究，属于自我改进AI领域但与音视频技术无关，按基准仅收录为初筛摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 从失败中学习：面向计算机使用智能体的推理时自我改进
+relations:
+- type: same_topic
+  ref: paper:arxiv:2510.07841
+  note: 同为测试/推理时LLM智能体自我改进方向
+- type: same_topic
+  ref: paper:arxiv:2412.14352
+  note: LLM推理时自我改进综述，覆盖该文的推理时自改进范式
+- type: same_topic
+  ref: paper:arxiv:2603.29848
+  note: 同为从失败检测到修复建议的智能体系统改进路线

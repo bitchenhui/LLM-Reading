@@ -1,0 +1,55 @@
+id: paper:arxiv:2608.28490
+type: paper
+title: 'LLM-Based Agents for Software and Systems Security: Approaches, Applications, and Assessment'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2608.28490v1
+  url: https://arxiv.org/abs/2608.28490
+  pdf_url: https://arxiv.org/pdf/2608.28490v1
+  venue: arXiv preprint
+time:
+  published: '2026-08-28'
+  collected: '2026-11-15'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:SelfImprovement
+  role: uses
+claims:
+- statement: 该论文是对2023-2026年间LLM安全智能体文献的系统性综述，技术路径维度涵盖架构、感知、记忆、推理与规划、动作空间、编排和自改进
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 综述核心结论：现有LLM安全智能体已'能行动'，但尚未实现权限受限（authority bounded）或行为可审计（auditable）
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 该领域存在三大问题：'智能体'术语使用不一致、不同安全应用风险差异悬殊、评估协议彼此不可比
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 自改进（self-improvement）被列为LLM安全智能体技术路径的组成部分之一，与架构、记忆、编排等维度并列综述
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 系统综述2023-2026年LLM安全智能体的架构、应用与评估，指出现有智能体能行动但缺乏权限约束与可审计性。
+  abstract_zh: 该文对2023至2026年间同行评审文献进行系统性综述，梳理LLM安全智能体的技术路径，包括架构、感知、记忆、推理与规划、动作空间、编排以及自改进，并按所服务的安全任务梳理应用，按数据集、结果与轨迹指标、安全措施和基线梳理评估协议。综述指出领域存在'智能体'术语使用不一致、应用风险差异悬殊、评估协议不可比等问题。核心发现是：现有工作已构建能够自主行动的安全智能体，但尚缺乏权限受限、行为可审计的智能体。作者还总结了当前方法、应用与评估设计的局限与挑战，并展望未来研究方向。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 论文主体为软件安全领域综述，但系统覆盖LLM智能体自改进等架构维度，可作自改进研究线索的跨领域参考，非核心域故仅summary_only
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 面向软件与系统安全的LLM智能体：方法、应用与评估
+relations:
+- type: same_topic
+  ref: paper:arxiv:2605.26195
+  note: CyberEvolver研究网络安全智能体自进化，属本综述所覆盖的LLM安全智能体应用方向
+- type: same_topic
+  ref: paper:arxiv:2408.02479
+  note: 同为LLM智能体系统性综述（面向软件工程领域），与本综述在智能体技术路径维度可互参
+- type: same_topic
+  ref: paper:arxiv:2312.10003
+  note: ReST+ReAct研究多步推理LLM智能体自改进，对应本综述中自改进技术维度

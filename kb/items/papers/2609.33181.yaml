@@ -1,0 +1,55 @@
+id: paper:arxiv:2609.33181
+type: paper
+title: 'SeOPD: Self-Evolving LLMs via Online Policy Distillation from Self-Generated Chain-of-Thought'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2609.33181v2
+  url: https://arxiv.org/abs/2609.33181
+  pdf_url: https://arxiv.org/pdf/2609.33181v2
+  venue: arXiv preprint
+time:
+  published: '2026-09-27'
+  collected: '2026-11-15'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:SelfImprovement
+  role: subject
+claims:
+- statement: 现有在线策略自蒸馏（OPSD）依赖人工标注或外部环境反馈等外部特权信息，限制了可扩展性
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 单个LLM可支持深度思考与非思考等多种推理模式，深度思考模式能在推理过程中产生额外信息
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: SeOPD将自生成的思维链作为特权信息，对非思考模式的回答提供token级监督，把推理中推断的新信息内化进共享参数，同时提升非思考与深度思考能力，且无需外部特权信息
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在多个LLM与多项任务上的实验验证了SeOPD的有效性
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出SeOPD，将自身深度思考生成的思维链作为特权信息对非思考模式做在线策略蒸馏，无需外部标注即可自我改进。
+  abstract_zh: 现有在线策略自蒸馏（OPSD）依赖人工标注或外部环境反馈等特权信息（PI），获取成本高、可扩展性受限。作者观察到单个LLM可支持深度思考与非思考等多种推理模式，且深度思考在推理过程中会产生额外信息。据此提出SeOPD：先以深度思考模式生成思维链（CoT），再以非思考模式生成回答，并将自生成的CoT作为PI对非思考回答施加token级监督，使推理中新推断的信息被内化到共享模型参数中。在多个LLM与任务上的广泛实验表明该方法能同时提升非思考与深度思考能力。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 提出无需外部特权信息的LLM在线策略自蒸馏方法SeOPD，属于自我改进AI核心议题
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: SeOPD：通过自生成思维链的在线策略蒸馏实现LLM自我进化
+relations:
+- type: same_topic
+  ref: paper:arxiv:2210.11610
+  note: 同属LLM自我改进研究线，本文探索摆脱外部PI的自我提升
+- type: same_topic
+  ref: paper:arxiv:2410.05434
+  note: 均涉及利用特权信息（PI）指导模型学习，本文将PI来源由外部AI反馈改为自身CoT
+- type: same_topic
+  ref: paper:arxiv:2609.36695
+  note: 均属基于模型内部信息流的自我蒸馏/自监督式自我改进

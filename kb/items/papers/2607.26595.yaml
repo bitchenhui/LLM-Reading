@@ -1,0 +1,52 @@
+id: paper:arxiv:2607.26595
+type: paper
+title: 'SpatialQ: Understanding 3D Gaussian Splatting Scene Quality via Visual-based MLLM'
+domain: quality_assessment
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2607.26595v1
+  url: https://arxiv.org/abs/2607.26595
+  pdf_url: https://arxiv.org/pdf/2607.26595v1
+  venue: arXiv preprint
+time:
+  published: '2026-07-29'
+  collected: '2026-11-15'
+entities:
+- ref: concept:3DGS
+  role: subject
+- ref: concept:IQA
+  role: compared_against
+claims:
+- statement: 3DGS场景质量由渲染视角的感知保真度与空间结构、跨视角一致性等场景级因素共同决定，仅靠2D感知线索的传统IQA方法不足以覆盖后者
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 通用多模态大语言模型并非为稳定质量回归设计，直接用于3DGS质量判断会产生不可靠结果，需要专用的质量表示学习与接地推理机制
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: SpatialQ通过VGGT编码器加质量头学习结构感知质量表示，并将图像、深度图、点云渲染与相机参数联合输入Qwen MLLM实现多模态质量理解
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出SpatialQ框架，用VGGT编码器+质量头学习结构感知的3DGS场景质量表示，并结合Qwen多模态大模型进行接地推理评估。
+  abstract_zh: 论文指出3DGS场景质量不仅取决于渲染视角的感知保真度，还取决于空间结构与跨视角一致性等场景级因素，而现有IQA方法依赖2D感知线索、通用MLLM难以稳定完成质量回归。为此提出3D感知质量表示学习框架：在VGGT编码器上增加专用质量头，将多视角图像编码为视角特征并聚合以捕捉跨视角一致性，并通过联合建模深度与点云相关结构信息引入几何线索，学习超越外观驱动的结构感知质量表示。同时构建接地的多模态推理机制，将原始图像、深度图、点云渲染图与相机参数联合输入基于Qwen的MLLM。摘要未给出具体定量实验结果。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 3DGS场景质量评估属于质量评估域而非核心编码域，按收录基准只给summary_only
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: SpatialQ：基于视觉多模态大模型的3D高斯泼溅场景质量理解
+relations:
+- type: same_topic
+  ref: paper:arxiv:2611.04498
+  note: 同为3DGS（视频）质量评估的基准与客观模型研究
+- type: same_topic
+  ref: paper:arxiv:2610.00195
+  note: 同属压缩3DGS质量度量方向，关注参数域质量指标
+- type: same_topic
+  ref: paper:arxiv:2407.08165
+  note: 同属沉浸式三维表示（NeRF/3DGS类）质量评估数据集与模型工作

@@ -1,0 +1,60 @@
+id: paper:arxiv:2609.22942
+type: paper
+title: An Evolutionary Agentic Approach for Open-ended Image Quality Perception
+domain: quality_assessment
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2609.22942v1
+  url: https://arxiv.org/abs/2609.22942
+  pdf_url: https://arxiv.org/pdf/2609.22942v1
+  venue: arXiv preprint
+time:
+  published: '2026-09-19'
+  collected: '2026-11-15'
+entities:
+- ref: concept:IQA
+  role: subject
+- ref: concept:TrainingFree
+  role: uses
+claims:
+- statement: PACE 在传统 IQA、结构保真度、上下文感知美学及新定义开放式维度上持续提升其 MLLM 骨干的表现
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: PACE 将整体覆盖率（Holistic Override Rate）从 44.4% 大幅降至 8.6%，缓解整体偏置问题
+  confidence: reported
+  metrics:
+  - name: Holistic Override Rate (HOR)
+    value: 44.4% → 8.6%
+    scope: 基线（复用通用质量先验）→PACE 框架，开放式维度评分
+  evidence: abstract（初筛，未读全文）
+- statement: PACE 评估协议校准仅需极少量人工标注，每维度 4 张图像即可完成
+  confidence: reported
+  metrics:
+  - name: 人工标注图像数
+    value: 4 张/维度
+    scope: 每维度协议校准所需标注量
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: PACE：免训练多智能体框架，以可验证VQA探针构建开放式IQA评估协议，将整体偏置率从44.4%降至8.6%。
+  abstract_zh: 生成式模型将图像质量评估扩展到物理合理性与文字渲染正确性等新维度，但现有 IQA 模型依赖固定定义与重度监督，难以扩展到开放式感知维度。论文指出整体偏置（holistic bias）是关键局限：模型评分未见维度时复用通用质量先验，导致评分错误与排序颠倒。为此提出
+    PACE（Perceptual Agentic Collaborative Evolution），一个免训练多智能体框架，将开放式 IQA 形式化为显式协议构建，由协作智能体构造由可验证 VQA
+    探针组成的评估协议，使评估基于具体视觉证据而非整体印象。协议仅用每维度 4 张人工标注图像校准，并以双轨评分机制对齐模型感知与人类评分尺度。在传统 IQA、结构保真度、上下文感知美学及新定义的开放式维度上，PACE
+    持续提升其 MLLM 骨干，将整体覆盖率（HOR）从 44.4% 降至 8.6%。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 属图像质量评估（IQA）域，非视频/图像编码核心域，按收录规则仅给 summary_only
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 面向开放式图像质量感知的进化式智能体方法
+relations:
+- type: same_topic
+  ref: paper:arxiv:2605.24553
+  note: 同为图像质量评估（IQA）研究，涉及推理与多粒度质量评估
+- type: same_topic
+  ref: paper:arxiv:2601.08311
+  note: 同为基于多模态大模型（LMM/MLLM）增强图像质量评估能力

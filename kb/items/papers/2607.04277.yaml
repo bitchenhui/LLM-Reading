@@ -1,0 +1,58 @@
+id: paper:arxiv:2607.04277
+type: paper
+title: 'Self-Reference in Large Language Models: The Introspection Threshold for Recursive Self-Improvement'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2607.04277v2
+  url: https://arxiv.org/abs/2607.04277
+  pdf_url: https://arxiv.org/pdf/2607.04277v2
+  venue: arXiv preprint
+time:
+  published: '2026-07-05'
+  collected: '2026-11-15'
+entities:
+- ref: concept:RSI
+  role: subject
+- ref: concept:SelfImprovement
+  role: subject
+claims:
+- statement: 可持续（而非退化）的LLM递归自我改进需要一个功能类似物：内省，即系统模拟自身操作并定位修改目标的能力，对应冯·诺依曼自复制自动机的复杂度阈值。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 基于Kleene第二递归定理，此类内省程序在理论上存在。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 当前LLM仅表现出准内省（部分元认知），未达到真正的内省，因而尚难实现可持续RSI。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 阻碍真内省的结构瓶颈包括：缺乏完整自我访问、Transformer的前馈本质、以及阻止不动点迭代的计算类约束。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 论文提出跨越该复杂度阈值的架构改进路径，并指出内省能力增强伴随安全影响需同步考量。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 类比冯·诺依曼自复制自动机并援引Kleene第二递归定理，论证可持续LLM递归自我改进需跨过内省复杂度阈值，当前LLM仅具准内省。
+  abstract_zh: 论文将冯·诺依曼自复制自动机的复杂度阈值类比引入LLM递归自我改进（RSI），主张可持续而非退化的自我改进需要一个功能类似物——内省，即系统模拟自身运行并定位修改目标的能力。作者基于Kleene第二递归定理证明此类内省程序在理论上存在。实证综述表明当前LLM仅有准内省（部分元认知），受三重结构瓶颈制约：缺乏对自身的完整访问、Transformer的前馈特性、以及阻碍不动点迭代的计算类约束。文章最后提出跨越该复杂度阈值的架构路径，并讨论相应的安全影响。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 属自我改进AI域的RSI理论工作（内省阈值分析），非核心编码域，按收录基准给summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 大语言模型中的自我参照：递归自我改进的内省阈值
+relations:
+- type: same_topic
+  ref: paper:arxiv:2410.04444
+  note: 同为LLM自我参照与递归自我改进主题：Gödel Agent提出自指RSI智能体框架，本文为其提供内省阈值的理论基础分析
+- type: same_topic
+  ref: paper:arxiv:2502.13441
+  note: 同问何时LLM自我改进可持续：Self-Improvement Paradox实证考察自举推理能力，本文从冯·诺依曼阈值与递归定理角度给出理论论证
+- type: same_topic
+  ref: paper:arxiv:2310.02304
+  note: 同为递归自我改进可行性研究：STOP用代码生成实现递归自改代码，本文界定可持续RSI所需的内省结构条件

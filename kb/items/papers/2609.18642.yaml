@@ -1,0 +1,53 @@
+id: paper:arxiv:2609.18642
+type: paper
+title: 'STRETCH the Boundaries: A Unified Self-Taught Framework for Progressive LLM Evolution'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2609.18642v1
+  url: https://arxiv.org/abs/2609.18642
+  pdf_url: https://arxiv.org/pdf/2609.18642v1
+  venue: arXiv preprint
+time:
+  published: '2026-09-16'
+  collected: '2026-11-15'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:SelfImprovement
+  role: subject
+claims:
+- statement: STRETCH通过动态Stretch Zone机制持续将问题难度与模型解题能力对齐，缓解自改进训练中的能力停滞
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在单一参数空间内交替执行Scaffolder（生成自适应挑战）与Learner（强化学习优化求解轨迹）的双环共进化，可稳定训练并缓解reward hacking
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: STRETCH在谈判与运筹学基准上一致优于强提示与领域专用基线
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: Scaffolder配置分析表明，动态难度对齐是持续能力提升与推理同步进化的关键条件
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出STRETCH框架，用动态难度对齐的拉伸区与Scaffolder-Learner双环共进化实现LLM渐进式推理自改进。
+  abstract_zh: 针对自改进训练中因难度固定导致的能力停滞问题，提出受认知脚手架理论启发的统一框架STRETCH。框架引入动态Stretch Zone机制，持续将问题难度与模型当前解题能力对齐。在单一参数空间内，模型交替扮演生成自适应边界挑战的Scaffolder与通过强化学习优化求解轨迹的Learner，形成双环共进化，从而稳定训练、缓解reward
+    hacking并促进推理能力渐进增长。在谈判与运筹学两个基准上，STRETCH一致优于强提示与领域专用基线；对Scaffolder配置的分析表明，动态难度对齐是持续能力提升与推理同步进化的关键。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: LLM自改进训练方法论文，属自我改进AI域，非核心编码域，按基准仅收录为初筛摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: STRETCH：面向渐进式LLM进化的统一自学框架
+relations:
+- type: same_topic
+  ref: paper:arxiv:2508.05004
+  note: 同为模型自生成训练问题、自进化推理能力的LLM自改进工作
+- type: same_topic
+  ref: paper:arxiv:2601.13761
+  note: 同为课程式难度调节驱动的LLM推理进化框架

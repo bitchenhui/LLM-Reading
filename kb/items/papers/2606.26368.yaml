@@ -1,0 +1,53 @@
+id: paper:arxiv:2606.26368
+type: paper
+title: An Evaluation of ABR Switching for Time-Shifted Clients in MoQ
+domain: streaming_delivery
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2606.26368v1
+  url: https://arxiv.org/abs/2606.26368
+  pdf_url: https://arxiv.org/pdf/2606.26368v1
+  venue: arXiv preprint
+time:
+  published: '2026-06-24'
+  collected: '2026-11-15'
+entities:
+- ref: concept:ABR
+  role: subject
+- ref: concept:QUIC
+  role: builds_on
+claims:
+- statement: 标准ABR算法无需修改即可直接应用于MoQ时移播放场景，且能获得显著更高的吞吐量。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在Mininet仿真中，订阅端经历rebuffering后整体吞吐量可能反而提升。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: MoQ默认码率切换语义在网络拥塞期间存在引入播放间隙的风险，进行中的SWITCH规范旨在为MoQ传输提供更顺畅的速率自适应。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 在Mininet仿真中评估MoQ的SWITCH式ABR，验证标准ABR算法可直接用于时移播放并获得更高吞吐。
+  abstract_zh: Media over QUIC（MoQ）基于QUIC实现超低延迟视频流，但其默认码率切换语义在网络拥塞时可能引入播放间隙，进行中的SWITCH规范旨在简化MoQ传输的速率自适应。作者在Mininet模拟拓扑上刻画了SWITCH式ABR对直播与时移两类客户端的性能。结果表明标准ABR算法无需修改即可直接应用于时移播放，并获得显著更高的吞吐量。研究还发现订阅端在经历rebuffering后整体吞吐量可能提升，并指出了MoQ
+    ABR切换的进一步优化方向。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 属流媒体与传输域的MoQ自适应码率实验评估，非核心编码域，按基准给summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: MoQ中时移客户端ABR切换的性能评估
+relations:
+- type: same_topic
+  ref: paper:arxiv:2505.21769
+  note: 同为QUIC承载视频流传输的系统研究
+- type: same_topic
+  ref: paper:arxiv:2608.06102
+  note: 同属Media over QUIC（MoQ）传输与自适应方向
+- type: same_topic
+  ref: paper:arxiv:2308.03643
+  note: 同为实时流媒体ABR码率自适应研究

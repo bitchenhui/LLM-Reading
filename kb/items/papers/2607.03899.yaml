@@ -1,0 +1,50 @@
+id: paper:arxiv:2607.03899
+type: paper
+title: 'DICT: Data Injection and Contrastive Trajectory Refinement for Conditional Image Generation with
+  Diffusion Models'
+domain: processing_enhancement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2607.03899v1
+  url: https://arxiv.org/abs/2607.03899
+  pdf_url: https://arxiv.org/pdf/2607.03899v1
+  venue: arXiv preprint
+time:
+  published: '2026-07-04'
+  collected: '2026-11-15'
+entities:
+- ref: concept:SuperResolution
+  role: subject
+- ref: concept:TrainingFree
+  role: subject
+claims:
+- statement: DICT是一种免训练的推理时方法，无需引入任务相关架构即可统一增强多种条件图像生成任务
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 数据注入机制在早期去噪阶段整合噪声扰动的条件信号，通过对注入信号执行引导去噪来自适应筛选任务相关信息，缓解损失引导造成的信息瓶颈与采样误差累积
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在风格迁移、图像超分辨率与图像去模糊等任务上，DICT相较于代表性任务特定方法与损失引导基线在保真度与感知质量上一致提升
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出免训练推理方法DICT，以数据注入与对比轨迹细化统一提升风格迁移、超分、去模糊等条件生成任务质量。
+  abstract_zh: 扩散模型已成为条件图像生成的主流范式，但现有方法或依赖任务特定设计而限制泛化，或将丰富条件压缩为标量损失逐步引导，造成信息瓶颈与采样轨迹上的误差累积。DICT是一种免训练的推理时方法：在早期去噪阶段注入受噪声扰动的条件信号，通过对其进行引导去噪，自适应地筛选并蒸馏任务相关信息，保持空间丰富性并确保条件与生成结果的精确对齐。该方法还引入对比轨迹细化，对相邻去噪状态进行成对比较以逐步改善样本质量。在风格迁移、图像超分辨率与图像去模糊等任务上的大量实验表明，DICT相较于代表性任务特定方法与损失引导基线，在保真度与感知质量上均取得一致提升，同时保持推理简洁并具备跨任务迁移能力。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 扩散模型条件生成的免训练推理增强框架，实验覆盖图像超分与去模糊等增强任务，与编码链路增强相关但非编码核心域，按基准仅给初筛摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: DICT：面向扩散模型条件图像生成的数据注入与对比轨迹细化方法
+relations:
+- type: same_topic
+  ref: paper:arxiv:2310.12004
+  note: 同为基于扩散模型的图像超分辨率方法，属扩散条件生成/图像增强方向
+- type: same_topic
+  ref: paper:arxiv:2609.33582
+  note: 同为基于扩散模型的图像超分复原方法，任务口径重叠

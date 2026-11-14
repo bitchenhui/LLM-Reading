@@ -1,0 +1,60 @@
+id: paper:arxiv:2609.15137
+type: paper
+title: SparseTalk - Sparsifying 3D Gaussian Language Fields for Efficient 3D Visual Question Answering
+domain: immersive_media
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2609.15137v1
+  url: https://arxiv.org/abs/2609.15137
+  pdf_url: https://arxiv.org/pdf/2609.15137v1
+  venue: arXiv preprint
+time:
+  published: '2026-09-14'
+  collected: '2026-11-15'
+entities:
+- ref: concept:3DGS
+  role: subject
+claims:
+- statement: 3D高斯语言场的密集语义嵌入存在大量冗余，仅数百个语义嵌入（不足原始表示1%）即可保持较强的3D VQA性能
+  confidence: reported
+  metrics:
+  - name: 语义嵌入占比
+    value: <1%
+    scope: 相对完整嵌入表示，ScanQA/MV-ScanQA上保持强VQA性能
+  evidence: abstract（初筛，未读全文）
+- statement: 对象级稀疏化在256 token预算下性能变化有限，且相较SplatTalk与密集高斯场实现极端压缩比
+  confidence: reported
+  metrics:
+  - name: 推理输入保留率
+    value: 0.80%
+    scope: 256 token预算 vs SplatTalk的32,076-token推理输入
+  - name: 高斯场占比
+    value: 0.332%
+    scope: 相对平均77,207个高斯的密集场
+  evidence: abstract（初筛，未读全文）
+- statement: SparseTalk在大幅压缩表示的同时降低解码特征内存并提升推理吞吐
+  confidence: reported
+  metrics:
+  - name: 解码特征内存降低倍数
+    value: 125倍
+    scope: 256 token预算下的解码特征内存
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 系统稀疏化3D高斯语言场语义嵌入，仅数百token即可保持3D视觉问答性能并大幅降低内存与推理成本。
+  abstract_zh: 该文考察3D视觉问答（VQA）中3D高斯语言场密集语义嵌入的必要性，将嵌入系统稀疏化至低于单帧等效块、低至8个视觉token的极端区间。作者比较随机、几何、语义及空间-语义联合选择策略，并提出基于检测对象分配token预算、同时保留背景上下文的对象级稀疏化方法。在ScanQA与MV-ScanQA上的实验表明密集高斯语言场存在大量冗余：仅数百个语义嵌入（不足原始表示的1%）即可保持较强的VQA性能。对象级选择在低至256
+    token时性能变化有限，此时保留SplatTalk 32,076-token推理输入的0.80%、平均77,207高斯密集场的0.332%，解码特征内存降低125倍并提升推理吞吐。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 属3DGS三维表示的语义稀疏化与3D VQA效率研究，与音视频编码核心链路关联较弱，按非核心域基准仅摘要收录。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: SparseTalk——稀疏化3D高斯语言场以实现高效3D视觉问答
+relations:
+- type: same_topic
+  ref: paper:arxiv:2408.14823
+  note: 同以3D高斯泼溅表示为核心（LapisGS面向自适应流式，本工作面向3D VQA的语义嵌入稀疏化）

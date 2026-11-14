@@ -1,0 +1,56 @@
+id: paper:arxiv:2607.19592
+type: paper
+title: Knowledge-Centric Self-Improvement
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2607.19592v1
+  url: https://arxiv.org/abs/2607.19592
+  pdf_url: https://arxiv.org/pdf/2607.19592v1
+  venue: arXiv preprint
+time:
+  published: '2026-07-21'
+  collected: '2026-11-15'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: 知识中心协议在抽象推理、编程与终端基准上相对智能体中心基线同时提升解题率并降低美元成本。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 蒸馏后的知识库可迁移到保留任务（held-out tasks）以及跨 LLM 家族，说明改进不依赖特定模型或单次运行。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 将自我改进固化在知识而非智能体中，可使改进更可检视、可迁移、可移植。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出知识中心型自我改进：智能体通用可弃换，改进持久驻留在共享策展知识库中。
+  abstract_zh: 论文针对智能体中心式自我改进中改进与特定智能体设计、任务分布绑定、难维护难迁移的问题，提出互补的知识中心范式：智能体保持通用且可弃换，持续对象是策展的知识库。实验通过简单协议操作化该想法：智能体先尝试一个任务，再经任务级与跨任务论坛向共享知识库贡献有证据支撑的洞见，随后进行知识蒸馏。在抽象推理、编程与终端基准上，该协议相对智能体中心基线在降低美元成本的同时提升解题率。蒸馏知识可迁移到保留任务和不同
+    LLM 家族，表明改进并非 LLM 或运行实例特定，支持由持久策展知识驱动自我改进系统进展的新视角。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 论文提出以策展知识库为持续改进载体的自我改进新范式，属于自我改进 AI 域且非核心视频编码域，按规则收录为 summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 以知识为中心的自我改进
+relations:
+- type: same_topic
+  ref: paper:arxiv:2604.16625
+  note: 同属多智能体间洞见/知识共享以提升推理的范式，与本文共享知识库论坛机制相关
+- type: same_topic
+  ref: paper:arxiv:2510.04618
+  note: 均通过演进持久化的上下文/知识而非修改智能体本身实现自我改进
+- type: same_topic
+  ref: paper:arxiv:2509.13237
+  note: 均将重复出现的推理经验蒸馏为可复用的知识/行为以支撑后续任务
+- type: same_topic
+  ref: paper:arxiv:2210.11610
+  note: 同为 LLM 自我改进方向的代表性工作，本文为其提供了知识中心的新视角

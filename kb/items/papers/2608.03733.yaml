@@ -1,0 +1,52 @@
+id: paper:arxiv:2608.03733
+type: paper
+title: Failure-Informed Image Self-Augmentation for Multimodal Large Language Model Self-Improvement
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2608.03733v1
+  url: https://arxiv.org/abs/2608.03733
+  pdf_url: https://arxiv.org/pdf/2608.03733v1
+  venue: arXiv preprint
+time:
+  published: '2026-08-04'
+  collected: '2026-11-15'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: subject
+claims:
+- statement: FISA从模型自身失败案例构建增强图像，在视觉问答基准的分布内与分布外设置下均持续提升性能
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: FISA与现有文本自我增强方法兼容，可叠加使用
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: FISA合成样本的数据效率优于通用图像增强基线，且双保真过滤策略可有效避免语义失真
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出FISA框架，从模型自身失败案例生成保答案的困难图像样本，实现MLLM自我改进并提升VQA性能。
+  abstract_zh: 针对多模态大语言模型（MLLM）依赖大规模高质量标注数据、且现有自我增强方法以文本为中心的问题，提出失败感知图像自增强框架FISA。该方法从模型的失败案例出发，生成具有视觉挑战性但保持答案不变的图像复杂化样本，通过自检验证样本效用，并用双重保真过滤避免语义失真。在视觉问答基准上，该方法在分布内和分布外设置下均带来持续性能提升；实验还验证了其与文本自增强方法的兼容性，以及合成样本相对通用图像增强基线的更高数据效率。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 属于多模态大模型自我改进（图像自增强+失败感知数据合成），与音视频技术链路无直接关联，按自我改进域收录为初筛摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 面向多模态大语言模型自我改进的失败感知图像自增强
+relations:
+- type: same_topic
+  ref: paper:arxiv:2604.18320
+  note: 同为MLLM自我改进/自我进化，且均以视觉变换生成训练样本为核心手段
+- type: same_topic
+  ref: paper:arxiv:2210.11610
+  note: LLM自我改进的奠基性工作，FISA是其思想向图像模态自增强的扩展
+- type: same_topic
+  ref: paper:arxiv:2603.02556
+  note: 同属视觉推理模型的自我改进研究，与本文MLLM自增强方向一致

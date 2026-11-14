@@ -1,0 +1,57 @@
+id: paper:arxiv:2609.27389
+type: paper
+title: 'EvoAudio: Recursive Self-Improvement for Audio Understanding'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2609.27389v1
+  url: https://arxiv.org/abs/2609.27389
+  pdf_url: https://arxiv.org/pdf/2609.27389v1
+  venue: arXiv preprint
+time:
+  published: '2026-09-23'
+  collected: '2026-11-15'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:RSI
+  role: uses
+claims:
+- statement: EvoAudio据称是首个在单一闭环中同时演化模型、波形、问题与难度的音频理解递归自我改进系统。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在13轮演化中，EvoAudio使五种不同音频编码器与语言骨干的模型在MMSU、MMAU-Pro、MMAR三个基准上均取得最高平均成绩。
+  confidence: reported
+  metrics:
+  - name: 演化轮数
+    value: '13'
+    scope: 递归自我改进闭环总轮数，覆盖5个骨干模型
+  evidence: abstract（初筛，未读全文）
+- statement: EvoAudio整体性能最多提升6.3分，且提升随逐轮演化展开，每轮更强的模型会启动下一轮演化。
+  confidence: reported
+  metrics:
+  - name: 整体性能提升
+    value: 6.3 points
+    scope: 五个骨干模型在MMSU/MMAU-Pro/MMAR上的最大平均提升
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: EvoAudio：首个在闭环中同时演化模型、波形、问题与难度的音频理解递归自我改进系统。
+  abstract_zh: 音频语言模型对“说了什么”的理解远强于“声音如何呈现”，而精细声学标注成本高、借强模型标注会继承其错误、固定数据无法随学习者进步而调整。EvoAudio提出首个在单一闭环中同时演化模型、波形、问题与难度的递归自我改进系统：用当前模型表现设定下一轮训练数据的重点与难度，由音频工具库构造答案可从音频生成方式推导的问题，从而提供无需新人工标注的可验证监督。随后用强化学习更新模型，并通过验证决定其是否进入下一轮演化。在13轮演化中，EvoAudio改进了五种采用不同音频编码器与语言骨干的模型，在MMSU、MMAU-Pro与MMAR上每个骨干均取得最高平均分，整体性能最多提升6.3分，每轮更强的模型会启动下一轮演化。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 论文核心是用递归自我改进（RSI）闭环提升音频语言模型的理解能力，属自我改进AI域而非编码核心域，按基准仅初筛收录。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: EvoAudio：面向音频理解的递归自我改进
+relations:
+- type: same_topic
+  ref: paper:arxiv:2609.37950
+  note: 同为递归自我改进用于感知理解任务：本文面向音频语言模型，Video-RSI面向视频理解代理
+- type: same_topic
+  ref: paper:arxiv:2508.14029
+  note: 均在RL自我改进循环中合成并演化问题与难度，以持续供给可验证训练数据

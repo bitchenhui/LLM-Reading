@@ -1,0 +1,59 @@
+id: paper:arxiv:2609.35897
+type: paper
+title: 'Self-discovering RL in the Era of Experience: Is Learning History an Asset or a Burden?'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2609.35897v1
+  url: https://arxiv.org/abs/2609.35897
+  pdf_url: https://arxiv.org/pdf/2609.35897v1
+  venue: arXiv preprint
+time:
+  published: '2026-09-27'
+  collected: '2026-11-15'
+entities:
+- ref: concept:RSI
+  role: subject
+- ref: concept:SelfImprovement
+  role: subject
+claims:
+- statement: 算法自发现产出的RL更新规则Disco103在基准测试上超越PPO达到SOTA性能，其内部更新机制此前未被审计
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 循环历史主动扩展可用奖励尺度：保留循环历史时可持续维持6个数量级的奖励尺度窗口，而零固定条件下仅3个数量级
+  confidence: reported
+  metrics:
+  - name: 可用奖励尺度窗口
+    value: 6个数量级
+    scope: 保留循环历史（Disco103）条件
+  - name: 可用奖励尺度窗口
+    value: 3个数量级
+    scope: 零固定（zero-pinning）条件
+  evidence: abstract（初筛，未读全文）
+- statement: 将历史内容与其维护机制解耦后发现，不匹配历史的惩罚源于对导入状态的持续钳制；允许导入状态自然演化可显著减轻该负担
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 环境变化实验中，控制重放数据保留率可逆转自发现规则相对DQN的表观适应优势，表明外部数据更替会混淆对内部可塑性的评估
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 审计方法经能力阈值验证并可移植到第二条自发现规则（OPEN），为下一代自进化RL算法确立了审计标准
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 首次对自发现RL规则Disco103进行因果机制审计，检验学习历史何时为资产、何时为负担
+  abstract_zh: 该文围绕'体验时代'五大支柱（长时域、接地奖励、持续学习流、生命周期内变化、探索深度），对算法自发现产出的RL更新规则Disco103（基准性能超PPO达SOTA）进行首次因果机制审计。方法上在固定元参数的同时，对循环状态执行精确固定、冻结与移植操作，检验学习历史的作用。结果显示：循环历史将可用奖励尺度窗口从零固定下的3个数量级扩展至6个数量级；历史内容与维护机制解耦后，不匹配历史的惩罚源于持续钳制，允许导入状态自然演化可减轻负担。在环境变化下，控制重放保留率可逆转相对DQN的表观适应优势，说明外部数据更替会混淆对内部可塑性的判断；结论经能力阈值验证并移植到第二条规则（OPEN），为自进化RL算法建立审计标准。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 属自我改进AI核心线：首次对自发现RL更新规则做因果机制审计、为RSI奠定微观学习动力学基础，但非核心域故仅给summary_only
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 体验时代中的自发现强化学习：学习历史是资产还是负担？
+relations:
+- type: same_topic
+  ref: paper:arxiv:2602.16928
+  note: 同属学习算法自动发现主题：本论文审计自发现RL规则，该论文用LLM发现多智能体学习算法

@@ -1,0 +1,48 @@
+id: paper:arxiv:2608.06959
+type: paper
+title: 'Summarize First, Download Later: Onboard VLMs for Bandwidth-Efficient Earth Observation'
+domain: streaming_delivery
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2608.06959v1
+  url: https://arxiv.org/abs/2608.06959
+  pdf_url: https://arxiv.org/pdf/2608.06959v1
+  venue: arXiv preprint
+time:
+  published: '2026-08-07'
+  collected: '2026-11-15'
+entities:
+- ref: org:NVIDIA
+  role: subject
+claims:
+- statement: 提出'先摘要后下载'三阶段协议：星载量化VLM生成自然语言摘要先行下传，地面操作员用VQA查询验证场景相关性，确认关键信息后才下载全分辨率影像，将下行链路从被动批量传输转变为语义感知的主动对话。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 系统在资源受限的NVIDIA Jetson边缘平台上实现，在多样遥感场景上的实验显示该策略显著降低带宽消耗并加快时间敏感任务的time-to-insight。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 卫星用量化VLM先下传自然语言摘要，地面经VQA确认场景价值后再回传全分辨率影像，大幅节省下行带宽。
+  abstract_zh: 对地观测卫星的先进传感器产生海量高分辨率多光谱数据，但下行链路容量是关键瓶颈，常导致显著延迟或在有限接触窗口内丢失宝贵观测。论文提出'先摘要后下载'范式：星载量化VLM首先生成简洁的自然语言摘要传回地面；地面操作员随后发起针对性VQA查询以验证场景相关性（如野火或海上异常）；仅在确认关键信息后才下载全分辨率影像，从而将下行链路从被动批量传输转变为语义感知的主动对话。系统在资源受限的NVIDIA
+    Jetson平台上实现并评估，在多样遥感场景上的实验表明该策略显著降低带宽消耗，同时加快时间敏感任务的信息获取速度（time-to-insight）。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 属卫星图像下行链路的语义化带宽节省传输方案，与音视频语义通信相关但非编码核心域
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 先摘要后下载：面向带宽高效对地观测的星载视觉语言模型
+relations:
+- type: same_topic
+  ref: paper:arxiv:2308.00531
+  note: 同为无线受限链路上以语义内容替代原始码流、面向带宽效率的语义通信方案
+- type: same_topic
+  ref: paper:arxiv:2406.10469
+  note: 同为基于对象/语义表示的视频语义通信，用语义信息替代原始数据传输
+- type: same_topic
+  ref: paper:arxiv:2605.19397
+  note: 同为感知/语义驱动的视频通信范式，按语义价值选择性传输以节省带宽

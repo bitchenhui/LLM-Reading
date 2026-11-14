@@ -1,0 +1,63 @@
+id: paper:arxiv:2609.22792
+type: paper
+title: 'SelfOp: An Optimization Algorithm for Self-Improving Security Agents'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2609.22792v1
+  url: https://arxiv.org/abs/2609.22792
+  pdf_url: https://arxiv.org/pdf/2609.22792v1
+  venue: arXiv preprint
+time:
+  published: '2026-09-19'
+  collected: '2026-11-15'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: SelfOp在不动模型权重与执行框架的前提下，通过链式法则式文本梯度下降自动优化冻结安全智能体的任务上下文（指令、技能、参考文档）。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在CyberGym漏洞复现基准上，少于200个训练样本即让GPT-5.4-mini（配Codex）自我改进17点，足以超越前沿GPT-5.4基线6点。
+  confidence: reported
+  metrics:
+  - name: 自我改进提升
+    value: 17 points
+    scope: CyberGym，GPT-5.4-mini（配Codex），训练样本<200
+  - name: 相对前沿基线超越幅度
+    value: 6 points
+    scope: 优化后GPT-5.4-mini vs 前沿GPT-5.4基线，CyberGym
+  evidence: abstract（初筛，未读全文）
+- statement: 对GPT-5.4本身应用SelfOp可获得18.5点自我改进。
+  confidence: reported
+  metrics:
+  - name: 自我改进提升
+    value: 18.5 points
+    scope: CyberGym，GPT-5.4，训练样本<200
+  evidence: abstract（初筛，未读全文）
+- statement: SelfOp优化的技能可跨模型迁移，说明学到的是可泛化的任务知识而非模型特定模式；收敛检测器依据梯度信号本身停止，无需留出验证数据。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: SelfOp用链式法则式文本梯度下降自动优化冻结安全智能体的任务上下文，在CyberGym上实现最高18.5点自我改进。
+  abstract_zh: 论文提出SelfOp，一种自动改进冻结安全智能体任务上下文（指令、技能、参考文档）的算法，不修改执行框架与模型权重。该方法将上下文优化建模为受链式法则启发的文本梯度下降：从单实例结果出发，误差信号经评估器、智能体轨迹反向传播到塑造其行为的上下文产物，得到逐实例文本梯度。梯度经聚类、排序、过滤跨实例累积，仅在跨实例共识下提交，并由收敛检测器监测梯度信号本身、无需留出验证集即停止。在真实漏洞复现基准CyberGym上，少于200个训练样本使GPT-5.4-mini（配Codex）自我改进17点并超越前沿GPT-5.4基线6点，GPT-5.4本身提升18.5点；优化后的技能可跨模型迁移，表明学到的是可泛化任务知识。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 提出冻结LLM安全智能体的上下文自我改进算法（文本梯度下降），属自我改进AI域，与音视频技术无关，按规则仅初筛收录。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: SelfOp：一种用于自我改进安全智能体的优化算法
+relations:
+- type: same_topic
+  ref: paper:arxiv:2510.04618
+  note: 同为演化智能体上下文（指令/技能/文档）以实现自我改进、不改模型权重的路线
+- type: same_topic
+  ref: paper:arxiv:2605.26195
+  note: 同为面向网络安全任务（漏洞方向）的智能体自我进化方法

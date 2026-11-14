@@ -1,0 +1,55 @@
+id: paper:arxiv:2608.08326
+type: paper
+title: 'StructReward: Efficient Structured Process Rewards for Self-Correcting Multimodal Reasoning'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2608.08326v2
+  url: https://arxiv.org/abs/2608.08326
+  pdf_url: https://arxiv.org/pdf/2608.08326v2
+  venue: arXiv preprint
+time:
+  published: '2026-08-08'
+  collected: '2026-11-15'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: StructReward用轻量数值/符号/词法匹配规则实现步骤级对齐，过程奖励在线计算，无需额外训练验证器或外部LLM评判器，大幅降低多模态强化学习计算开销。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 密集过程奖励与最终答案一致性、输出有效性奖励通过门控GRPO目标组合，为推理中间步骤提供细粒度强化信号。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 策略rollout被回收用作响应比较与反思性自我纠正的补充监督，并用强LLM将正确轨迹改写为反思导向训练实例以强化策略的评估与自我修正能力。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 实验表明结构化过程监督与rollout回收共同构成通往自改进多模态推理的高效路径。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: StructReward用轻量步骤级对齐生成密集过程奖励，结合门控GRPO与rollout回收，实现高效自改进多模态推理。
+  abstract_zh: 针对RLVR仅以最终答案二值奖励评估整体响应、丢弃中间推理监督的问题，作者提出StructReward框架：将生成解表示为推理步骤序列，用轻量的数值、符号与词法匹配规则与带过程标注的参考步骤对齐，聚合成密集过程奖励，并通过门控GRPO目标与最终答案一致性、输出有效性奖励结合。该方法进一步将策略rollout回收为响应比较与反思性自我纠正的补充监督，并用强LLM把采样的正确轨迹改写为反思导向训练实例。由于奖励在线计算、无需额外训练的验证器或外部LLM评判器，计算开销显著降低；实验表明结构化过程监督与rollout回收为自改进多模态推理提供了高效路径。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 该文属于自我改进AI范畴（多模态推理RLVR/过程奖励/自纠正），非视频图像编码核心域，按规则收录为summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: StructReward：面向自纠正多模态推理的高效结构化过程奖励
+relations:
+- type: same_topic
+  ref: paper:arxiv:2603.02556
+  note: 同属VLM/多模态视觉推理的自我改进（对比式自改进）方向
+- type: same_topic
+  ref: paper:arxiv:2506.03106
+  note: 同属基于GRPO与批评/反馈信号提升LLM推理的研究线
+- type: same_topic
+  ref: paper:arxiv:2510.01925
+  note: 同属用奖励模型增强推理的过verification/PRM监督方向

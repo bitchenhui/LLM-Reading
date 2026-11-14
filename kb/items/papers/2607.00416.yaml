@@ -1,0 +1,59 @@
+id: paper:arxiv:2607.00416
+type: paper
+title: 'DroneIQA-VLE: Multi-Task Drone Image Quality Assessment via Vision-Language Ensemble'
+domain: quality_assessment
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2607.00416v1
+  url: https://arxiv.org/abs/2607.00416
+  pdf_url: https://arxiv.org/pdf/2607.00416v1
+  venue: arXiv preprint
+time:
+  published: '2026-07-01'
+  collected: '2026-11-15'
+entities:
+- ref: concept:IQA
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: 该方法在ICME 2026 Drone-IQA挑战赛（低空无人机图像目标感知质量评估）中获得第二名。
+  confidence: reported
+  metrics:
+  - name: 挑战赛排名
+    value: 2nd place
+    scope: ICME 2026 Drone-IQA Grand Challenge
+  evidence: abstract（初筛，未读全文）
+- statement: 框架由带多任务回归头的SigLIP2视觉编码器与LoRA适配的Qwen3.5-9B多模态大模型两条流水线集成，最终全局质量分数为两路输出的算术平均。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 模型联合预测全局质量、目标区域质量与背景质量三类分数，面向目标感知的无人机图像质量评估任务。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 融合SigLIP2与LoRA微调的Qwen3.5-9B多模态大模型，多任务预测无人机图像全局/目标/背景质量，获ICME 2026挑战赛第二名。
+  abstract_zh: 本文提出DroneIQA-VLE，是ICME 2026低空无人机图像目标感知质量评估挑战赛的参赛方案，联合预测全局、目标与背景三类质量分数。框架集成两条互补流水线：一条为带多任务回归头的SigLIP2视觉编码器，另一条为经LoRA适配的Qwen3.5-9B多模态大语言模型用于质量分数回归。最终全局质量分数取两条流水线输出的算术平均。该方法在挑战赛中取得第二名，验证了有效性，代码已开源。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 质量评估（IQA）类竞赛方案，属非核心域，应用现有视觉-语言模型做无人机图像质量回归，默认仅摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: DroneIQA-VLE：基于视觉-语言集成的多任务无人机图像质量评估
+relations:
+- type: same_topic
+  ref: paper:arxiv:2611.06203
+  note: 同属目标特定图像质量评估（target-aware IQA）研究线
+- type: same_topic
+  ref: paper:arxiv:2602.09531
+  note: 同属图像质量评估（盲IQA）领域
+- type: same_topic
+  ref: paper:arxiv:2601.08311
+  note: 同属基于多模态大模型（LMM/MLLM）的图像质量评估方向
+- type: same_topic
+  ref: paper:arxiv:2605.24553
+  note: 同属多粒度图像质量评估与质量推理方向

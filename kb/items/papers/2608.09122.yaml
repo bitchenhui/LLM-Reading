@@ -1,0 +1,59 @@
+id: paper:arxiv:2608.09122
+type: paper
+title: Visual Distortion Detection in UGC Images Using Large Multimodal Models
+domain: quality_assessment
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2608.09122v1
+  url: https://arxiv.org/abs/2608.09122
+  pdf_url: https://arxiv.org/pdf/2608.09122v1
+  venue: arXiv preprint
+time:
+  published: '2026-08-10'
+  collected: '2026-11-15'
+entities:
+- ref: concept:IQA
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: 构建的VIGIL-140K训练集包含超过14万张失真图像，覆盖8大类合成失真
+  confidence: reported
+  metrics:
+  - name: 训练集规模
+    value: '>140K'
+    scope: VIGIL-140K失真图像数量
+  - name: 候选样本池
+    value: '>1000K'
+    scope: 构建训练集的初始候选样本总量
+  - name: 失真类别数
+    value: '8'
+    scope: 合成失真大类数量
+  evidence: abstract（初筛，未读全文）
+- statement: 经后处理后，模型在域内合成失真检测与S2A任务上一致优于强基线
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出VIGIL模型，将LMM解码器多层特征作为多检测器实现UGC图像失真精准定位，并缓解合成到真实(S2A)泛化鸿沟。
+  abstract_zh: 论文针对现有基于LMM的IQA方法依赖文本驱动SFT导致检测精度不足、以及合成失真图像在真实场景部署存在泛化差距（S2A问题）的局限，提出失真检测框架VIGIL。作者从超100万候选样本池经严格质量筛选与精心失真注入，构建了包含超过14万张失真图像的VIGIL-140K训练集，覆盖8大类合成失真。模型将LLM解码器不同层视为多个检测器，利用多层级特征同步执行失真检测，并保留被预测为非失真类中的失真线索，以缓解S2A问题中常见的模糊前景-背景分离。经后处理后，模型在域内合成失真检测与S2A任务上均稳定超越强基线。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 属于IQA领域的UGC图像失真定位检测工作，非核心编码域，按收录基准仅作初筛摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 基于大型多模态模型的UGC图像视觉失真检测
+relations:
+- type: same_topic
+  ref: paper:arxiv:2601.08311
+  note: 同为基于LMM增强图像质量评估能力的工作
+- type: same_topic
+  ref: paper:arxiv:2605.24553
+  note: 同属IQA失真定位/grounding类研究
+- type: same_topic
+  ref: paper:arxiv:2602.09531
+  note: 同为失真感知的盲图像质量评估方向

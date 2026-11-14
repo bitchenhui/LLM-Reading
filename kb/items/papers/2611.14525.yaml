@@ -1,0 +1,49 @@
+id: paper:arxiv:2611.14525
+type: paper
+title: 'EasyFoam: Skill-Oriented OpenFOAM Agents with Evidence-Driven Evolution'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2611.14525v1
+  url: https://arxiv.org/abs/2611.14525
+  pdf_url: https://arxiv.org/pdf/2611.14525v1
+  venue: arXiv preprint
+time:
+  published: '2026-09-27'
+  collected: '2026-11-15'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: 现有OpenFOAM智能体评估以教程级案例和执行导向指标为主，掩盖了可执行性与可接受性之间的差距：成功执行的仿真往往不满足预设的数值或QoI标准。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: EasyFoam将CFD专业知识解耦为模块化外置技能，执行环用结构化仿真证据诊断失败并定向修复，演化环通过配对评估将任务经验蒸馏为可复用技能更新。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在ExtFoamBench上，EasyFoam的任务接受率显著高于基线智能体。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出ExtFoamBench基准与EasyFoam框架，将CFD专业知识外化为可复用技能，经执行-演化双环实现自改进的OpenFOAM智能体。
+  abstract_zh: 现有LLM智能体自动化OpenFOAM工作流的评估多停留在教程级案例与执行导向指标，掩盖了可执行性-可接受性差距：成功运行的仿真常不满足预设的数值或感兴趣量（QoI）标准，且领域知识与特定智能体架构紧耦合难以复用。论文提出覆盖五类工作流变化维度的ExtFoamBench基准，分别评估执行完成度、数值合理性与QoI满足度。同时提出EasyFoam框架，将CFD专业知识解耦为模块化、外置的技能，由双环机制驱动：执行环依据显式任务需求构建工作流，用结构化仿真证据诊断失败并定向修复；演化环通过配对评估筛选技能更新，将任务经验蒸馏为可复用技能。实验显示EasyFoam的任务接受率显著高于基线智能体，为自我改进CFD智能体研究提供起点。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 与音视频技术无直接关联，但属于自我改进LLM智能体（技能外化+证据驱动经验演化）追踪域，按非核心域给summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: EasyFoam：面向技能的、证据驱动演化的OpenFOAM智能体
+relations:
+- type: same_topic
+  ref: paper:arxiv:2604.08618
+  note: 同为面向特定领域（SkillForge为云技术支持、本文为CFD）的技能驱动自演化LLM智能体
+- type: same_topic
+  ref: paper:arxiv:2510.18428
+  note: 同为经验蒸馏入可复用库（AlphaOPT经验库、本文技能更新）的自改进LLM智能体框架

@@ -1,0 +1,56 @@
+id: paper:arxiv:2606.31524
+type: paper
+title: On the Convergence of Self-Improving Online LLM Alignment
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2606.31524v1
+  url: https://arxiv.org/abs/2606.31524
+  pdf_url: https://arxiv.org/pdf/2606.31524v1
+  venue: arXiv preprint
+time:
+  published: '2026-06-30'
+  collected: '2026-11-15'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: subject
+claims:
+- statement: 标准SAIL目标函数因Hessian的不利性质不保证强凹，存在理论收敛性缺口。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 引入反向KL散度惩罚的SAIL-RevKL目标在有界参数空间内满足Polyak-Lojasiewicz（PL）条件。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: SAIL-RevKL建立全局收敛保证，达到近线性样本复杂度。
+  confidence: reported
+  metrics:
+  - name: 样本复杂度
+    value: 近线性
+    scope: SAIL-RevKL全局收敛保证，有界参数空间内
+  evidence: abstract（初筛，未读全文）
+- statement: SAIL-RevKL在MuJoCo基准和LLM对齐任务上的性能与稳定性优于原始SAIL。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出带反向KL正则的SAIL-RevKL，证明满足PL条件并获得近线性样本复杂度的全局收敛保证。
+  abstract_zh: SAIL算法通过将双层优化化为单层方法来应对在线LLM对齐中的分布漂移，但一直缺乏收敛性理论分析。作者指出标准SAIL目标因其Hessian的不利性质而不保证强凹，这是核心理论障碍。为此提出引入反向KL散度惩罚的正则化目标SAIL-RevKL，以改善优化景观。核心理论贡献是证明该正则化目标在有界参数空间内满足Polyak-Lojasiewicz（PL）条件，从而建立近线性样本复杂度的全局收敛保证。在MuJoCo基准和LLM对齐任务上的实验验证了其有效性与稳定性，性能优于原始SAIL。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: LLM自改进对齐的理论收敛性分析，直接补充库中SAIL算法的理论基础，属self_improvement域，按规则最高给summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 论自我改进在线LLM对齐的收敛性
+relations:
+- type: same_topic
+  ref: paper:arxiv:2406.15567
+  note: 本文是对SAIL算法的收敛性理论分析，直接对应库中SAIL论文
+- type: same_topic
+  ref: paper:arxiv:2407.19594
+  note: 同为LLM自改进对齐（self-improving alignment）方向工作

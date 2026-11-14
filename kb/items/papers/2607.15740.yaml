@@ -1,0 +1,68 @@
+id: paper:arxiv:2607.15740
+type: paper
+title: Debiasing Text-to-Image Evaluation via Implicit Cultural Alignment Reward Modeling
+domain: quality_assessment
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2607.15740v3
+  url: https://arxiv.org/abs/2607.15740
+  pdf_url: https://arxiv.org/pdf/2607.15740v3
+  venue: arXiv preprint
+time:
+  published: '2026-07-17'
+  collected: '2026-11-15'
+entities:
+- ref: concept:LLM
+  role: subject
+claims:
+- statement: 基于4.2B参数多模态大模型的隐式文化对齐奖励模型在CulturalFrames基准上取得83.49%成对准确率，优于代表性视觉-语言指标与MLLM评估器。
+  confidence: reported
+  metrics:
+  - name: pairwise accuracy
+    value: 83.49%
+    scope: CulturalFrames基准3,323对精选图像对
+  evidence: abstract（初筛，未读全文）
+- statement: 该奖励模型与人类偏好的相关性：Pearson 0.5268、Kendall 0.3749。
+  confidence: reported
+  metrics:
+  - name: Pearson correlation
+    value: '0.5268'
+    scope: CulturalFrames基准图像对评估
+  - name: Kendall correlation
+    value: '0.3749'
+    scope: CulturalFrames基准图像对评估
+  evidence: abstract（初筛，未读全文）
+- statement: 绕过自回归文本生成后，模型单次评估耗时0.21秒，较标准VQA式评估器约10倍加速，可服务RLHF/DPO偏好优化管线。
+  confidence: reported
+  metrics:
+  - name: inference latency
+    value: 0.21 s
+    scope: 本地推理、单条评估
+  - name: speedup
+    value: 10x
+    scope: 相对标准VQA式评估器
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 构建基于轻量多模态大模型的隐式文化对齐奖励模型，高效评估文生图文化真实性并支撑偏好优化。
+  abstract_zh: 现有文生图评估指标与多模态裁判依赖的视觉-语义表征难以捕捉隐式文化规范，导致偏好判断有偏；基于VQA的评估器又依赖自回归文本生成，扩展性受限。作者提出基于42亿参数轻量多模态大模型的隐式文化对齐奖励模型，引入隐式文化探针与跳跃连接交叉注意力（SkipCA）机制，使后期语义特征直接关注早期视觉表征以保留文化显著细节。在CulturalFrames基准3,323对精选图像对上，成对准确率达83.49%，Pearson与Kendall相关系数分别为0.5268和0.3749，优于代表性视觉-语言指标与MLLM评估器。绕过自回归文本生成后，单次评估仅需0.21秒，较标准VQA式评估器约10倍加速，可为RLHF/DPO等偏好优化流程提供高效的文化感知标量奖励信号。
+assessment:
+  relevance: low
+  decision: summary_only
+  reason: 文生图文化真实性评估与奖励建模，属生成图像评估类工作，与音视频编码/传输核心链路无直接关联，按非核心域仅初筛记录
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 通过隐式文化对齐奖励建模为文生图评估去偏
+relations:
+- type: same_topic
+  ref: paper:arxiv:2410.08534
+  note: 同为面向AI生成图像的自动化评估研究，可作为生成内容评估线参照
+- type: same_topic
+  ref: paper:arxiv:2609.27110
+  note: 同为基于VLM/MLLM的图像评估裁判，输出标量评估信号
+- type: same_topic
+  ref: paper:arxiv:2603.00483
+  note: RAISE同样面向文生图与意图对齐，可互为奖励/评估信号参照

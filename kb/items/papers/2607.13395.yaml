@@ -1,0 +1,52 @@
+id: paper:arxiv:2607.13395
+type: paper
+title: 'Self-Improving is Often Sudden: Enlightenment-style Finetuning for Large-Scale Models'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2607.13395v1
+  url: https://arxiv.org/abs/2607.13395
+  pdf_url: https://arxiv.org/pdf/2607.13395v1
+  venue: arXiv preprint
+time:
+  published: '2026-07-15'
+  collected: '2026-11-15'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:TrainingFree
+  role: uses
+claims:
+- statement: Enlightenment 是一种免训练的后调优范式，通过修改关键模块/层的捷径实现能力提升，全程不更新模型权重；区别于现有主要操纵注意力权重的免训练方法。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 面向大语言模型的实例化方案为注意力头混合捷径：将首个注意力头输出连接到所有其他目标头以重新校准注意力权重，并采用自适应缩放因子初始化策略进行调制。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 面向视觉-语言模型的实例化方案为在解码器层残差连接上施加轻量标量调制因子，用以调控信息流。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 实验显示该方法能有效解锁预训练网络的潜在能力，在多种基准测试和多个模型上均取得显著性能改进。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出免训练后调范式 Enlightenment，通过修改注意力头混合捷径与残差缩放因子，无需更新权重即可激发大模型'顿悟'式能力跃升。
+  abstract_zh: 受人类大脑'顿悟/aha时刻'启发，作者假设大规模模型存在类似的潜在突变式能力提升现象，并提出 Enlightenment——一种无需训练的后调优范式。该方法通过修改关键模块/层的'捷径'实现性能提升而不更新权重，区别于现有主要操纵注意力权重的免训练方法。针对大语言模型，提出注意力头混合捷径，将首个注意力头的输出连接到其他所有目标头并用自适应缩放因子初始化策略调制；针对视觉-语言模型，在解码器层残差连接上施加轻量标量调制因子以调控信息流。大量实验表明该方法能有效释放预训练网络的潜在能力，在多种基准和模型上取得显著性能提升。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 论文提出免训练后调范式 Enlightenment 激发大模型顿悟式能力跃升，属自我改进AI域，非音视频核心域，按规则仅收录为摘要级。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 自我改进往往是突变的：面向大规模模型的'顿悟'式微调
+relations:
+- type: same_topic
+  ref: paper:arxiv:2210.11610
+  note: 同属大语言模型自我改进研究，本文为免训练后调路径，后者为经典LLM自我改进工作
+- type: same_topic
+  ref: paper:arxiv:2412.02674
+  note: 均考察大语言模型自我改进能力的表现与条件，本文强调能力提升的突变性（顿悟现象）

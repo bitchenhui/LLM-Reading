@@ -1,0 +1,70 @@
+id: paper:arxiv:2606.29333
+type: paper
+title: 'HiReFF: High-Resolution Feedforward Human Reconstruction from Uncalibrated Sparse-View Video'
+domain: immersive_media
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2606.29333v1
+  url: https://arxiv.org/abs/2606.29333
+  pdf_url: https://arxiv.org/pdf/2606.29333v1
+  venue: arXiv preprint
+time:
+  published: '2026-06-28'
+  collected: '2026-11-15'
+entities:
+- ref: concept:VolumetricVideo
+  role: subject
+- ref: concept:3DGS
+  role: uses
+claims:
+- statement: HiReFF实现2K分辨率360°人体视频的前馈式重建，而此前前馈模型仅支持0.5K单帧合成。
+  confidence: reported
+  metrics:
+  - name: 渲染分辨率
+    value: 2K
+    scope: HiReFF输出（360°人体视频重建）
+  - name: 既有前馈模型分辨率上限
+    value: 0.5K
+    scope: 先前前馈方法单帧合成
+  evidence: abstract（初筛，未读全文）
+- statement: 方法使用四个相隔90°的无标定稀疏视角作为输入，并通过尺度同步相机标定解决尺度歧义。
+  confidence: reported
+  metrics:
+  - name: 输入视角数
+    value: '4'
+    scope: 稀疏视角视频输入，视角间隔90°
+  evidence: abstract（初筛，未读全文）
+- statement: 高分辨率侧调在0.5K骨干上增广高斯头补充特征实现2K渲染，大幅降低计算开销；实验显示在高分辨率体视频重建上显著优于现有方法。
+  confidence: reported
+  metrics:
+  - name: 骨干分辨率
+    value: 0.5K
+    scope: 侧调时保持不变的backbone
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 前馈式方法从无标定四视角稀疏视频实现2K分辨率360°人体体视频重建。
+  abstract_zh: 面向全息通信与AR/VR所需的体视频流式人体重建，提出前馈方法HiReFF，从无标定稀疏视角视频（四个相隔90°的视角）实现2K分辨率360°人体视频重建，突破现有前馈模型仅0.5K单帧合成的限制。框架将问题分解为两个任务：稀疏视角前景3D高斯重建，以及计算高效的高分辨率合成。为此提出尺度同步相机标定以解决多视角监督中的尺度歧义，并提出高斯级前景掩蔽以调制高斯参数重建干净前景。通过高分辨率侧调（Side-tuning）在保持0.5K骨干的同时为高斯头增广补充特征实现2K渲染，大幅降低计算开销。实验表明HiReFF在高分辨率流式体视频重建上显著优于现有方法。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 属沉浸式媒体域的3DGS前馈式体视频人体重建工作，按规则仅收录为初筛摘要，不进深度阅读。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: HiReFF：基于无标定稀疏视角视频的高分辨率前馈式人体重建
+relations:
+- type: same_topic
+  ref: paper:arxiv:2409.07759
+  note: 同为基于Gaussian Splatting的体视频流式重建/传输
+- type: same_topic
+  ref: paper:arxiv:2409.08353
+  note: 同为以人为中心的沉浸式体视频高斯重建
+- type: same_topic
+  ref: paper:arxiv:2310.08205
+  note: 同为体视频流式系统主题，本研究面向体视频重建的上游捕获/重建环节
+- type: same_topic
+  ref: paper:arxiv:2409.13648
+  note: 同为面向移动/流式场景的动态高斯体视频表示

@@ -1,0 +1,53 @@
+id: paper:arxiv:2606.29574
+type: paper
+title: Stateless Network-Aware Adaptive Bitrate Streaming over IPFS
+domain: streaming_delivery
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2606.29574v1
+  url: https://arxiv.org/abs/2606.29574
+  pdf_url: https://arxiv.org/pdf/2606.29574v1
+  venue: arXiv preprint
+time:
+  published: '2026-06-28'
+  collected: '2026-11-15'
+entities:
+- ref: concept:ABR
+  role: subject
+- ref: concept:QoE
+  role: measured_by
+claims:
+- statement: 提出的无状态网络感知ABR策略仅用请求时本地可观测信号计算分段码率，并将适配状态嵌入HTTP头部，从而消除消费者与提供者间的状态同步。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在故障条件下，该无状态方案相较现有网络感知ABR方案能保持高QoE并取得大幅提升。
+  confidence: reported
+  metrics:
+  - name: QoE相对提升
+    value: up to roughly 6x
+    scope: 故障条件下与现有（有状态）网络感知ABR方案相比
+  evidence: abstract（初筛，未读全文）
+- statement: 消除跨提供者状态同步使框架对故障和网络重配置更鲁棒，并简化了大规模部署。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出IPFS上的无状态网络感知ABR策略，客户端将适配状态嵌入HTTP头，免除跨提供者状态同步，故障下QoE最高提升约6倍。
+  abstract_zh: 论文针对IPFS去中心化环境中性能波动导致传统ABR流媒体QoE下降的问题展开研究，指出现有网络感知ABR依赖消费者与提供者间持续同步的状态，在节点漂移、提供者迁移、网络分区及内容分布变化下易失效。作者提出一种无状态网络感知ABR策略，仅利用客户端在请求时本地可观测的信号为每个视频分段重新计算码率；为保留适配上下文，客户端将自身适配状态嵌入HTTP头部随请求透明携带。该设计消除了跨提供者的状态同步，提升了对故障与网络重配置的鲁棒性并简化大规模部署。早期实验显示，该方案在故障条件下仍保持高QoE，相较现有方案最高提升约6倍。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 属流媒体传输域的去中心化ABR方案，与音视频技术相关但非核心编码工作，按基准仅收录摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 基于IPFS的无状态网络感知自适应码率流媒体传输
+relations:
+- type: same_topic
+  ref: paper:arxiv:2605.23560
+  note: 同属ABR码率自适应策略研究，均在非传统/高波动传输网络（Starlink vs IPFS）下改进ABR
+- type: same_topic
+  ref: paper:arxiv:2308.03643
+  note: 同属ABR码率自适应策略研究，针对特定流媒体环境（WebRTC vs IPFS）的多维ABR适配

@@ -1,0 +1,60 @@
+id: paper:arxiv:2607.27066
+type: paper
+title: 'SciFigAlign: Scoring Scientific Figures by Fine-tuned Alignment of Visuals with Manuscript Evidence'
+domain: quality_assessment
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2607.27066v1
+  url: https://arxiv.org/abs/2607.27066
+  pdf_url: https://arxiv.org/pdf/2607.27066v1
+  venue: arXiv preprint
+time:
+  published: '2026-07-29'
+  collected: '2026-11-15'
+entities:
+- ref: concept:IQA
+  role: subject
+- ref: concept:LLM
+  role: compared_against
+claims:
+- statement: SciFigAlign 在论文级划分的测试集上取得 macro MAE 0.3524，论文内成对排序准确率 81.64%，相比最佳 LLM-as-judge 基线相对误差降低 59%。
+  confidence: reported
+  metrics:
+  - name: macro MAE
+    value: '0.3524'
+    scope: 论文级划分测试集（n=396）
+  - name: 论文内成对准确率
+    value: 81.64%
+    scope: 同篇论文图表两两比较，测试集 n=396
+  - name: 相对误差降低
+    value: 59%
+    scope: 对比最佳 LLM-as-judge 基线（MAE 0.864）
+  evidence: abstract（初筛，未读全文）
+- statement: 构建了面向同行评审的科研图表评估数据集，按四个维度对每张图表进行人工评分。
+  confidence: reported
+  metrics:
+  - name: 数据集规模
+    value: 3857 张科学图表
+    scope: 来自同行评审会议论文
+  - name: 评估维度
+    value: 4 个（清晰度/相关性/信息量/结构）
+    scope: 同行评审导向标注
+  evidence: abstract（初筛，未读全文）
+- statement: 消融实验表明稿件证据输入、引用上下文去噪和论文内排序监督均对性能至关重要，说明科研图表评估需要学习式视觉-稿件对齐而非纯提示词驱动。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 微调CLIP+SciBERT多模态评分器，以稿件证据为锚评估科研图表，显著优于LLM判分基线。
+  abstract_zh: 论文指出科研图表评估不同于一般图像质量评价：图表需清晰可读、忠实支撑论文论点并具备清晰的视觉层级，经典IQA模型、CLIP图文匹配与零样本LLM/VLM判分均各有局限。作者构建了包含3857张同行评审会议论文图表的数据集，按清晰度、相关性、信息量、结构四个维度评分。提出的SciFigAlign端到端微调CLIP与SciBERT，采用逐模态交叉注意力与CubeMLP融合，联合优化SmoothL1回归和论文内排序hinge损失。在论文级划分测试集上取得macro
+    MAE 0.3524、论文内成对准确率81.64%（n=396），较最佳LLM-as-judge基线（MAE 0.864）相对误差降低59%，消融证明稿件证据输入、引用上下文去噪与排序监督均不可或缺。
+assessment:
+  relevance: low
+  decision: summary_only
+  reason: 研究对象是同行评审中的科研图表质量评估，属 IQA 的外延任务而非音视频核心链路，按非核心域仅做初筛摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: SciFigAlign：基于微调图文对齐与稿件证据的科研图表质量评分

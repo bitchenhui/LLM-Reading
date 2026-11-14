@@ -1,0 +1,53 @@
+id: paper:arxiv:2608.30426
+type: paper
+title: Learning to Reason and Use Tools through Unsupervised Fine-Tuning in Task-Oriented Dialog Systems
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2608.30426v1
+  url: https://arxiv.org/abs/2608.30426
+  pdf_url: https://arxiv.org/pdf/2608.30426v1
+  venue: arXiv preprint
+time:
+  published: '2026-08-31'
+  collected: '2026-11-15'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:SelfImprovement
+  role: uses
+claims:
+- statement: 在SIMMC数据集上，基于ReAct的对话系统因推理与工具使用能力更强而优于基线
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 微调后的8B模型性能超过70B的in-context系统
+  confidence: reported
+  metrics:
+  - name: 参数规模对比
+    value: 8B 超越 70B
+    scope: SIMMC数据集，微调8B模型 vs in-context 70B系统
+  evidence: abstract（初筛，未读全文）
+- statement: 无监督自改进循环中，改进后的checkpoint生成的更优轨迹用于后续微调迭代，持续提升模型表现
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 将ReAct适配任务型对话并提出无监督自改进微调流程，微调后8B模型超越70B上下文系统
+  abstract_zh: 针对对话系统动态信息检索不足导致幻觉与准确性下降的问题，作者将ReAct框架适配到任务型对话，使LLM能够调用外部知识生成事实性回复。方法上提出无监督微调流程：通过上下文学习推理采集推理轨迹，并用LLM裁判过滤高质量样本构建训练集。在此基础上引入无监督自改进循环，由性能提升后的checkpoint生成更优轨迹供后续微调迭代使用。在SIMMC数据集上的实验表明ReAct系统凭借更强的推理与工具使用优于基线，微调后的8B模型超过70B的in-context系统；论文还给出误差分析、场景复杂度影响与跨域泛化实验。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 属LLM智能体无监督自改进与工具使用研究，与音视频技术无直接关联，非核心域按规则仅摘要收录
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 在任务型对话系统中通过无监督微调学习推理与工具使用
+relations:
+- type: same_topic
+  ref: paper:arxiv:2312.10003
+  note: 同为面向多步推理LLM智能体的ReAct式自改进研究，方法路线相近
+- type: same_topic
+  ref: paper:arxiv:2210.11610
+  note: 同属LLM无监督自改进范式：自生成训练样本迭代提升模型能力

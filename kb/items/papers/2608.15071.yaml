@@ -1,0 +1,55 @@
+id: paper:arxiv:2608.15071
+type: paper
+title: 'Evo-Harness: Context-to-Harness Skill Compilation for Self-Evolving Agents'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2608.15071v2
+  url: https://arxiv.org/abs/2608.15071
+  pdf_url: https://arxiv.org/pdf/2608.15071v2
+  venue: arXiv preprint
+time:
+  published: '2026-08-15'
+  collected: '2026-11-15'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: 提出'在线harness学习'形式化：冻结智能体通过在序列任务上持续更新结构化harness实现自改进，且改进不依赖模型参数更新。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: '''上下文到harness技能编译''能将单次执行产生的高噪声上下文蒸馏为可复用技能harness，支持跨域与主题级适配。'
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: Evo-Harness在五个真实基准（TerminalBench2、SWE-bench、CL-Bench、WebArena-Infinity等）上验证有效，并提供自改进关键驱动因素的系统性分析。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 形式化'在线harness学习'，将单次噪声执行上下文编译为可复用技能harness，使冻结LLM智能体跨任务持续自改进。
+  abstract_zh: 现有自改进方法多从积累轨迹中经反思、记忆或技能提取知识，但真实环境中的智能体常仅有单次执行机会，且产生的上下文噪声高、通用经验与任务特异信息纠缠。作者形式化'在线harness学习'：冻结的智能体通过在顺序任务上持续更新结构化harness获得改进，并以Evo-Harness系统研究自改进的关键因素。核心机制为'上下文到harness技能编译'，将一次性噪声执行蒸馏为可跨域与主题级适配的技能harness。在TerminalBench2、SWE-bench、CL-Bench、WebArena-Infinity等五个真实基准上验证了方法有效性。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 提出在线harness学习与上下文到技能编译的智能体自改进框架，属自我改进AI核心议题但非音视频编码核心域。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: Evo-Harness：面向自进化智能体的上下文到Harness技能编译
+relations:
+- type: same_topic
+  ref: paper:arxiv:2506.06698
+  note: 同为语言智能体从经验上下文中在线学习实现自改进
+- type: same_topic
+  ref: paper:arxiv:2604.21725
+  note: 同为开放环境中agent harness的进化/自改进
+- type: same_topic
+  ref: paper:arxiv:2610.14224
+  note: 同为递归harness改进方向，将harness作为可进化表面
+- type: same_topic
+  ref: paper:arxiv:2609.37950
+  note: 同为通过harness进化实现递归自改进，可关联音视频智能体应用

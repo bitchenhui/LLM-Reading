@@ -1,0 +1,60 @@
+id: paper:arxiv:2607.26115
+type: paper
+title: 'GPT-Red: Automated Red Teaming via Self-Play at Scale'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2607.26115v1
+  url: https://arxiv.org/abs/2607.26115
+  pdf_url: https://arxiv.org/pdf/2607.26115v1
+  venue: arXiv preprint
+time:
+  published: '2026-07-28'
+  collected: '2026-11-15'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:SelfImprovement
+  role: builds_on
+claims:
+- statement: GPT-Red 能稳定攻破截至 GPT-5.5 的 OpenAI 历史模型（针对提示注入攻击）
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: GPT-Red 发现的成功攻击数量多于人类红队成员
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: GPT-Red 可泛化到训练时未见过的环境、防御模型与测试框架（harness）
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 其训练算力规模与作者部分最大规模 RL 后训练运行相当，作者称为有记录以来最大的单一 LLM 安全训练运行
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: GPT-Red 被用于对抗训练 GPT-5.6，使其成为迄今对提示注入最鲁棒的模型
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 作者预期：每代 GPT 鲁棒性提升将为更强的红队智能体提供更好的学习信号，解锁自我改进飞轮
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 通过自博弈RL训练的自动化红队agent，发现针对前沿LLM的提示注入攻击，并形成安全自我改进飞轮。
+  abstract_zh: GPT-Red 是一个自动化红队智能体，采用可扩展的自博弈算法训练，负责攻击同时训练的多样化防御智能体群体，以发现针对前沿LLM的新型提示注入攻击。该模型以与作者最大规模RL后训练相当的算力进行训练，被称为有记录以来最大规模的LLM安全训练运行。结果显示
+    GPT-Red 能稳定攻破截至 GPT-5.5 的历史模型，发现的成功攻击多于人类红队成员，并能泛化到留出的环境、防御模型与测试框架。作者用它对抗训练出更抗提示注入的 GPT-5.6，并预期每代
+    GPT 鲁棒性提升将反哺更强的红队智能体，形成自我改进飞轮。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 基于大规模自博弈对抗训练的LLM自动化红队agent，明确构建安全域自我改进飞轮，属自我改进AI域而非核心编码域。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: GPT-Red：大规模自博弈驱动的自动化红队测试
+relations:
+- type: same_topic
+  ref: paper:arxiv:2506.07468
+  note: 同为面向LLM安全的在线自博弈强化学习，与GPT-Red的自博弈红队训练同属安全自我改进方向
+- type: same_topic
+  ref: paper:arxiv:2608.30207
+  note: 同为自我改进红队（self-improving red-teaming）工作，与本论文主题直接相关

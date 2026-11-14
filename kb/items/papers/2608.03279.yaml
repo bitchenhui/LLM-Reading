@@ -1,0 +1,75 @@
+id: paper:arxiv:2608.03279
+type: paper
+title: '3DGSI-Assessor: A Large-Scale Dataset and An LMM-based Method for 3D Gaussian Splatting Image
+  Quality Assessment'
+domain: quality_assessment
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2608.03279v1
+  url: https://arxiv.org/abs/2608.03279
+  pdf_url: https://arxiv.org/pdf/2608.03279v1
+  venue: arXiv preprint
+time:
+  published: '2026-08-04'
+  collected: '2026-11-15'
+entities:
+- ref: concept:3DGS
+  role: subject
+- ref: concept:IQA
+  role: uses
+claims:
+- statement: 提出3DGS-IEval-15K+：面向压缩3DGS的大规模多维IQA数据集，覆盖10个场景、6种代表性3DGS算法、20个视角，标注45,600个总体/几何/颜色三维度MOS。
+  confidence: reported
+  metrics:
+  - name: 数据集图像数
+    value: 15,200
+    scope: 3DGS-IEval-15K+数据集渲染图像总量
+  - name: MOS标注数
+    value: 45,600
+    scope: 总体/几何/颜色三维度主观分
+  - name: 场景数
+    value: '10'
+    scope: 数据集覆盖的3DGS场景
+  - name: 3DGS算法数
+    value: '6'
+    scope: 数据集采用的代表性3DGS训练/压缩算法
+  - name: 视角数
+    value: '20'
+    scope: 每场景系统选取的训练视角与新视角
+  evidence: abstract（初筛，未读全文）
+- statement: 提出3DGSI-Assessor，在LMM中融合全局语义与维度特定局部特征，单次前向即可同时预测总体、几何、颜色三个质量维度。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 3DGSI-Assessor在3DGS-IEval-15K+上达到SOTA，并在其他NVS基准上表现出有竞争力的泛化能力。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 传统IQA指标无法捕捉3DGS训练与压缩特有的悬浮伪影、表面散射等失真，且现有指标无法分别诊断几何与颜色解耦失真。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 构建大规模压缩3DGS图像质量数据集3DGS-IEval-15K+，并提出基于LMM的一次前向预测总体/几何/颜色三维质量的评估框架。
+  abstract_zh: 针对3DGS训练与压缩引入的悬浮伪影、表面散射等表征特有失真，传统IQA指标无法有效捕捉，且几何与颜色属性独立压缩产生的解耦失真需要分别诊断，现有指标仅给出单一总分。作者构建了3DGS-IEval-15K+数据集：来自10个场景、6种代表性3DGS算法在系统设计的压缩级别下渲染，覆盖20个训练视角与挑战性新视角，共15,200张图像并标注45,600个总体/几何/颜色三维度MOS。提出3DGSI-Assessor框架，在大多模态模型（LMM）中融合全局语义与维度特定局部特征，单次前向即可预测三个质量维度。该方法在自建数据集上取得SOTA，并在其他NVS基准上表现出有竞争力的泛化能力。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 针对压缩3DGS渲染图像的质量评估，构建大规模IQA数据集并提出LMM多维质量评估方法，属质量评估域重要工作，按基准仅收录摘要级。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 3DGSI-Assessor：面向3D高斯泼溅图像质量评估的大规模数据集与基于LMM的方法
+relations:
+- type: same_topic
+  ref: paper:arxiv:2611.04498
+  note: 同为3DGS压缩内容的多维质量评估数据集与评估模型工作
+- type: same_topic
+  ref: paper:arxiv:2607.26595
+  note: 同用视觉多模态大模型对3DGS场景质量进行评估
+- type: same_topic
+  ref: paper:arxiv:2407.08165
+  note: 同为显式3D表征（NeRF）压缩质量评估数据集工作
+- type: same_topic
+  ref: paper:arxiv:2610.00195
+  note: 同为压缩3DGS质量度量研究

@@ -1,0 +1,64 @@
+id: paper:arxiv:2608.14022
+type: paper
+title: 'ForgeWM: Progressive Causal Training for Few-Step Action-Conditioned Video World Models'
+domain: video_image_coding
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2608.14022v1
+  url: https://arxiv.org/abs/2608.14022
+  pdf_url: https://arxiv.org/pdf/2608.14022v1
+  venue: arXiv preprint
+time:
+  published: '2026-08-14'
+  collected: '2026-11-15'
+entities:
+- ref: metric:LPIPS
+  role: subject
+claims:
+- statement: ForgeWM 学生模型支持 1、2、4 步稳态去噪预算的少步动作条件视频生成，并通过双路径部署协议兼顾低延迟交互与回放期精修。
+  confidence: reported
+  metrics:
+  - name: 去噪步数
+    value: 1/2/4
+    scope: 学生模型稳态去噪预算
+  evidence: abstract（初筛，未读全文）
+- statement: 在成对 Minecraft 轨迹上，ForgeWM 在成像质量、参考对齐运动轮廓一致性、动作符号准确率与鼠标控制精度上领先被评估系统，并取得最低参考 LPIPS。
+  confidence: reported
+  metrics:
+  - name: LPIPS
+    value: 最低（被评估系统中最优）
+    scope: 成对 Minecraft 轨迹、参考 LPIPS 对比
+  evidence: abstract（初筛，未读全文）
+- statement: 回放期精修在匹配四步参考质量的同时，与实际经验轨迹的贴合度比从噪声重新生成约高 3 倍。
+  confidence: reported
+  metrics:
+  - name: 轨迹贴合度优势倍数
+    value: 约3×
+    scope: 相对从噪声重新生成；以匹配四步参考质量为口径
+  evidence: abstract（初筛，未读全文）
+- statement: 同一四阶段训练配方可迁移至手柄控制的第一人称射击游戏玩法。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 以四阶段渐进因果蒸馏将双向动作条件视频生成器转为1/2/4步交互世界模型，Minecraft上画质与控制精度领先。
+  abstract_zh: ForgeWM 通过域适配、教师强制因果训练、因果一致性蒸馏以及与双向教师进行在策略分布匹配的四阶段渐进训练，将双向动作条件视频生成器转化为高效的少步世界模型。学生模型在 1、2、4
+    步稳态去噪预算下运行，并支持'低延迟交互 + 回放期精修'的双路径部署，其中一步学生可对保存草稿重新加噪并精修。在成对 Minecraft 轨迹上，ForgeWM 在成像质量、参考对齐运动轮廓一致性、动作符号准确率与鼠标控制精度上领先被评估系统，并取得最低参考
+    LPIPS；同一配方可迁移至手柄控制的 FPS（第一人称射击）游戏。回放期精修在达到四步参考质量的同时，与经验轨迹的贴合度比从噪声重新生成约高 3 倍。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 该文属动作条件视频世界模型（视频生成而非压缩编码），按初筛摘要收录；规则匹配的 FPS 实体为'第一人称射击游戏'语境噪声，已剔除，仅保留 LPIPS。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: ForgeWM：面向少步动作条件视频世界模型的渐进式因果训练
+relations:
+- type: same_topic
+  ref: paper:arxiv:2605.03475
+  note: 同为生成式视频模型研究：ForgeWM 属动作条件交互视频生成，WorldJen 为生成式视频模型评测基准
+- type: same_topic
+  ref: paper:arxiv:2609.34725
+  note: 同属少步/生成式视频合成技术族，均依托扩散生成先验（Gen2-VC 面向视频压缩应用）

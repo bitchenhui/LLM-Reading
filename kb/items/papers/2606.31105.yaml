@@ -1,0 +1,49 @@
+id: paper:arxiv:2606.31105
+type: paper
+title: 'Attacking UTMOS: Probing the Robustness of a Speech Quality Assessment Model'
+domain: quality_assessment
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2606.31105v2
+  url: https://arxiv.org/abs/2606.31105
+  pdf_url: https://arxiv.org/pdf/2606.31105v2
+  venue: arXiv preprint
+time:
+  published: '2026-06-30'
+  collected: '2026-11-15'
+entities:
+- ref: concept:IQA
+  role: subject
+- ref: concept:NeuralAudioCodec
+  role: uses
+claims:
+- statement: 保分攻击对UTMOS有效：可以在降低语音感知质量的同时使模型预测分数保持不变，暴露其评分与真实质量脱钩的失效模式。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 保质攻击（维持感知质量的同时压低预测分数）更难完美实现，但在EnCodec潜空间中优化输入提供了最高的成功机会。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 研究比较了三种攻击输入空间：原始波形、带HiFi-GAN声码器的梅尔谱、以及神经音频编解码器EnCodec的潜空间，其中潜空间优化效果最佳。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 通过保分攻击与保质攻击系统探查语音质量评估模型UTMOS的鲁棒性，EnCodec潜空间优化成功率最高。
+  abstract_zh: 该文以语音处理研究中广泛使用的深度神经网络语音质量评估指标UTMOS为攻击对象，从高质量语音出发沿两个方向优化输入：保分攻击（降低感知质量的同时维持预测分数）与保质攻击（压低预测分数的同时维持感知质量）。攻击在三种输入空间上进行优化：原始波形、经HiFi-GAN声码器生成的梅尔谱，以及神经音频编解码器EnCodec的潜空间。实验结果表明保分攻击对UTMOS十分有效，即感知质量已明显退化而模型评分仍保持不变；保质攻击更难完美实现，其中在EnCodec潜空间内的优化提供了最佳成功机会。这些结果揭示了UTMOS的失效模式，凸显了对DNN质量评估指标开展鲁棒性分析的重要性。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 针对常用语音质量评估指标UTMOS的对抗鲁棒性研究，属质量评估域而非核心编码域，按基准仅做初筛摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 攻击UTMOS：探究语音质量评估模型的鲁棒性
+relations:
+- type: same_topic
+  ref: paper:arxiv:2609.03283
+  note: 同属语音质量/MOS预测研究线，本文从对抗鲁棒性角度探查SQA模型的可靠性
+- type: same_topic
+  ref: paper:arxiv:2603.14328
+  note: 同为神经编解码器语音的MOS/质量评估基准方向，均关注神经编解码语音的质量度量

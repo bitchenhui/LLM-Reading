@@ -1,0 +1,82 @@
+id: paper:arxiv:2609.02217
+type: paper
+title: 'SkillGLoW: Procedural-Family Skill Consolidation for Self-Improving Agents on Long-Horizon Task
+  Streams'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2609.02217v1
+  url: https://arxiv.org/abs/2609.02217
+  pdf_url: https://arxiv.org/pdf/2609.02217v1
+  venue: arXiv preprint
+time:
+  published: '2026-09-02'
+  collected: '2026-11-15'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: SkillGLoW的过程族先验相对无技能基线平均提升17.2点（hard任务），且12次持续改进运行全部为正增益。
+  confidence: reported
+  metrics:
+  - name: 成功率增益
+    value: 17.2 points
+    scope: 四个基准×三个模型、hard任务平均，相对no-skill基线
+  - name: 正增益运行数
+    value: 12/12
+    scope: 全部持续改进（continual-improvement）运行
+  evidence: abstract（初筛，未读全文）
+- statement: 加入本地再生成后，平均增益进一步提升至18.0点。
+  confidence: reported
+  metrics:
+  - name: 成功率增益
+    value: 18.0 points
+    scope: 先验+本地再生成（local regeneration）配置
+  evidence: abstract（初筛，未读全文）
+- statement: 技能库每个过程族仅保留一条先验，存储紧凑度比按任务扁平池高3.6倍。
+  confidence: reported
+  metrics:
+  - name: 库紧凑度
+    value: 3.6x
+    scope: 相对per-task技能池
+  evidence: abstract（初筛，未读全文）
+- statement: 同一评测协议下，GLoW在21个对比格中的15个领先已发表的单文档优化器。
+  confidence: reported
+  metrics:
+  - name: 领先对比格数
+    value: 15/21
+    scope: 与已发表single-document optimizer对比
+  evidence: abstract（初筛，未读全文）
+- statement: 不改库直接迁移时，ALFWorld未见任务成功率从73.9%提升至83.9%，表明技能库传递的是过程而非任务记忆。
+  confidence: reported
+  metrics:
+  - name: 任务成功率
+    value: 73.9%→83.9%
+    scope: ALFWorld未见任务
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出SkillGLoW，将任务本地技能聚合为过程族并压缩为去实例化全局先验，配合执行验证的提交门控，在长程任务流上实现更高效紧凑的智能体自改进。
+  abstract_zh: LLM智能体通过书写与复用文本技能实现自我改进，但单一全局文档易坍缩为泛化规条，按任务的扁平技能池则不断膨胀且条目与具体实例绑定。SkillGLoW以'求解过程'为复用单元：将任务从自身执行中写出的本地技能聚合为过程族，压缩为去实例化的全局先验，实例细节按需再生成而非存储；提交门控仅在真实执行证明不降低已部署库性能时才接纳新先验。在数学推理、终端自动化、软件修复与具身控制四个基准、三个模型上，先验相对无技能基线平均提升17.2点（困难任务），12次持续改进运行全部正增益，加入本地再生成后达18.0点。技能库每个过程族仅保留一条先验，比按任务池紧凑3.6倍，同协议下在21个对比格中15个领先已发表的单文档优化器；在未见过的ALFWorld任务上成功率从73.9%升至83.9%，说明迁移的是过程而非任务记忆。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: LLM智能体技能库自改进论文，属自我改进AI域但与音视频技术无直接关联，按规则只做摘要级收录。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: SkillGLoW：面向长程任务流上自我改进智能体的过程族技能整合
+relations:
+- type: same_topic
+  ref: paper:arxiv:2510.18428
+  note: 同属LLM自改进经验/技能库构建与复用（AlphaOPT的Experience Library与SkillGLoW的过程族先验库）
+- type: same_topic
+  ref: paper:arxiv:2605.29440
+  note: 同属面向LLM智能体的技能库/技能银行整理与去重主题
+- type: same_topic
+  ref: paper:arxiv:2605.29668
+  note: 同属自改进LLM智能体的技能生成与接纳机制研究

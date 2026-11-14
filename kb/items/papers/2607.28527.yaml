@@ -1,0 +1,56 @@
+id: paper:arxiv:2607.28527
+type: paper
+title: 'MANTA: Multi-Agent Network Topology Adaptation for Self-Evolving Multi-Agent Systems'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2607.28527v1
+  url: https://arxiv.org/abs/2607.28527
+  pdf_url: https://arxiv.org/pdf/2607.28527v1
+  venue: arXiv preprint
+time:
+  published: '2026-07-30'
+  collected: '2026-11-15'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: builds_on
+claims:
+- statement: MANTA在推理时对多智能体通信拓扑施加有界结构更新，可修改智能体角色、通信链路、执行顺序、信息可见性与验证通路，同时保持任务接口与智能体预算不变。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: MANTA在五个基准上取得最高平均分74.0，超过最强基线5.8个百分点，并在PlanCraft上取得最佳结果。
+  confidence: reported
+  metrics:
+  - name: 平均得分
+    value: '74.0'
+    scope: 五个基准（信息检索/工具使用/规划/工作流执行/数学推理）平均分
+  - name: 相对最强基线提升
+    value: 5.8个百分点
+    scope: 五基准平均分对比最强基线
+  evidence: abstract（初筛，未读全文）
+- statement: 推理时自我改进可扩展至智能体协作架构本身。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: MANTA框架使LLM多智能体通信拓扑在推理时自我演化，五基准平均74.0分领先基线5.8个百分点。
+  abstract_zh: 针对现有LLM多智能体系统将通信拓扑视为固定设计或离线优化目标的问题，MANTA在推理前基于既往结构经验初始化任务条件化拓扑。部署过程中监测协作轨迹，当当前组织不足时施加有界结构更新，可修改智能体角色、通信链路、执行顺序、信息可见性与验证通路，同时保持任务接口与智能体预算不变。在信息检索、工具使用、规划、工作流执行与数学推理五个基准上，MANTA取得最高平均分74.0，超过最强基线5.8个百分点，并在PlanCraft上取得最佳成绩。结果表明推理时自我改进可扩展到协作架构本身。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: LLM多智能体推理时拓扑自进化，属自我改进AI核心工作，按收录规则非核心域最高给summary_only
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: MANTA：面向自进化多智能体系统的多智能体网络拓扑自适应
+relations:
+- type: same_topic
+  ref: paper:arxiv:2609.38662
+  note: 两者均研究多智能体协作结构的自我改进（CollabFlow针对协作流程递归自改进）
+- type: same_topic
+  ref: paper:arxiv:2510.07841
+  note: 均为测试/推理时自我改进的LLM智能体方法

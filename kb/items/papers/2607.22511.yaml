@@ -1,0 +1,54 @@
+id: paper:arxiv:2607.22511
+type: paper
+title: 'CausalSmith: A Formally Grounded, Self-Improving Agentic Framework for Automated Research in Causal
+  Inference'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2607.22511v4
+  url: https://arxiv.org/abs/2607.22511
+  pdf_url: https://arxiv.org/pdf/2607.22511v4
+  venue: arXiv preprint
+time:
+  published: '2026-07-24'
+  collected: '2026-11-15'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: Causalean是面向因果推断的Lean基础库，含8,179个机器检查的定义与定理，在人类设计与审查下借助LLM辅助开发。
+  confidence: reported
+  metrics:
+  - name: 机器检查的定义与定理数
+    value: 8,179
+    scope: Causalean Lean库全量
+  evidence: abstract（初筛，未读全文）
+- statement: 用单个LLM评审另一个LLM产出的做法经验上不可靠：可能接受伪造论文，发现伪造的能力接近随机水平。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: CausalSmith将Lean机器验证与陈述审计配对，代理流程自动完成选题、提出结果、形式化与构造证明，产物供人工检视，并以完成的自主研究运行产物进行了评估。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 以Lean证明助手为根基构建Causalean库与自我改进代理流程，实现因果推断理论研究的自动化生成与机器验证。
+  abstract_zh: 论文指出自动化理论研究的瓶颈在于可靠评估而非候选结果生成，单一LLM互相评审经验上不可靠、可能接受伪造论文且以接近随机率才发现伪造。为此提出CausalSmith框架，以Lean证明助手为核心，让证明由程序检查而非由裁判阅读；其基础是Causalean因果推断Lean库，含8,179个机器检查的定义与定理，在人类设计审查下借助LLM辅助开发。围绕该库构建自我改进代理流程，自动选择研究主题、提出结果、形式化陈述并构造证明，并配合陈述审计比对每条形式化定理与其背后的非形式化声明。系统以已完成自主研究运行的产物进行评估，源代码、形式化库与运行记录均已开源。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 自我改进LLM代理驱动自动化理论研究的代表性工作，属self_improvement域，非音视频核心域故仅summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-15'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: CausalSmith：形式化扎根的因果推断自动化研究自我改进代理框架
+relations:
+- type: same_topic
+  ref: paper:arxiv:2506.13131
+  note: 同为LLM代理驱动的自动化科学/算法发现框架
+- type: same_topic
+  ref: paper:arxiv:2610.35595
+  note: 同为LLM代理结合Lean形式化证明的自动化理论研究
