@@ -12,6 +12,7 @@ source:
 time:
   published: '2024-02-05'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: codec:AVC
   role: subject
@@ -43,6 +44,7 @@ summaries:
   one_liner_zh: 在过拟合图像编解码器Cool-chic上加入帧间编码，构建仅800参数、每像素900次乘法的超轻量神经视频编解码器。
   abstract_zh: 本文在过拟合图像编解码器Cool-chic的基础上补充帧间编码模块以利用视频的时间冗余，提出超轻量学习型视频编解码器Cool-chic video。整个模型仅含约800个参数，解码时每个像素仅需约900次乘法，是解码复杂度最低的神经视频编解码器之一。系统支持低延迟（low-delay）与随机访问（random
     access）两种配置，率失真性能接近AVC。与FFNeRV等其他过拟合编解码器相比性能更优，且系统已开源。
+  deep_dive: docs/auto/2402.03179.md
 assessment:
   relevance: high
   decision: deep_read

@@ -12,6 +12,7 @@ source:
 time:
   published: '2023-09-14'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: dataset:VCD
   role: subject
@@ -41,6 +42,7 @@ claims:
 summaries:
   one_liner_zh: 微软发布首个面向视频会议场景的编码评测数据集VCD，评测H.264/H.265/H.266/AV1低延迟压缩效率并开源。
   abstract_zh: 论文指出常用视频编码评测数据集源质量普遍很高，不能代表视频会议场景的真实视频，据此提出首个面向视频会议的编码评测数据集VCD。VCD覆盖多种摄像头质量与空间、时间信息多样性，包含桌面与移动两类场景以及两种视频背景处理。作者在低延迟设置下报告了H.264、H.265、H.266与AV1在VCD上的压缩效率，并与UVC、MLC-JVC、HEVC等非会议数据集对比。结果显示源质量与场景对所有编解码器的压缩效率均有显著影响，VCD可用于针对该场景的编码评测与调优。数据集已在GitHub开源。
+  deep_dive: docs/auto/2309.07376.md
 assessment:
   relevance: high
   decision: deep_read

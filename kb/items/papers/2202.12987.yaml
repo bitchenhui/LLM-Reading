@@ -12,6 +12,7 @@ source:
 time:
   published: '2022-02-25'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: concept:QoE
   role: subject
@@ -35,6 +36,7 @@ claims:
 summaries:
   one_liner_zh: 综述DASH自适应流媒体QoE客观评估：混合模型优于纯QoS方法，并用DCNN时空特征提升流视频质量预测。
   abstract_zh: 该综述回顾了自适应视频流媒体（尤其是DASH）体验质量（QoE）评估的相关研究，比较了使用与不使用机器学习的各类客观QoE模型。性能分析表明，混合模型同时优于纯QoS驱动的QoE方法和信号保真度测量；在相同设置下，基于机器学习的模型略优于不使用机器学习的模型。作者指出现有流媒体QoE评估模型性能仍有限，难以直接应用于实际通信系统。为此，论文将现成的深度卷积神经网络（DCNN）应用于流视频感知质量评估并考虑其时空特性，实验证明其优越性，为面向自适应流媒体的专用深度学习质量评估框架指明方向。
+  deep_dive: docs/auto/2202.12987.md
 assessment:
   relevance: high
   decision: summary_only

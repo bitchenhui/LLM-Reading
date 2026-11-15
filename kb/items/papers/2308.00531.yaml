@@ -12,6 +12,7 @@ source:
 time:
   published: '2023-08-01'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: concept:ABR
   role: subject
@@ -36,6 +37,7 @@ summaries:
   one_liner_zh: 提出结合Swin Transformer语义编解码与Actor-Critic自适应码率算法的视频语义通信系统ABRVSC，兼顾低时延与高语义精度。
   abstract_zh: 面向自动驾驶等边缘视频感知场景，论文提出自适应码率视频语义通信（ABRVSC）系统，让视频感知设备依据无线网络状况动态调整语义信息码率，避免固定码率导致的高时延或低语义精度。作者定义了视频语义通信的QoE，提出考虑QoE影响的Swin
     Transformer语义编解码器，并设计基于Actor-Critic的ABR算法以增强网络波动下的鲁棒性。仿真显示，低码率下所提方案的MIoU约为传统方案的近两倍；相比固定码率方案与传统ABR方案，该方案QoE提升36.57%，且对网络变化更鲁棒。
+  deep_dive: docs/auto/2308.00531.md
 assessment:
   relevance: high
   decision: summary_only

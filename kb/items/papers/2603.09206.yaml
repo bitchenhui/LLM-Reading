@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-03-10'
   collected: '2026-11-15'
+  updated: '2026-11-15'
 entities:
 - ref: concept:SelfImprovement
   role: subject
@@ -33,6 +34,7 @@ claims:
 summaries:
   one_liner_zh: 首个RL驱动的VLM零数据自进化框架，以Proposer-Coder-Solver三角色协同提升多模态推理能力。
   abstract_zh: 提出MM-Zero，首个基于强化学习实现视觉语言模型（VLM）推理零数据自进化的框架。超越以往Proposer-Solver双角色范式，引入三个专门角色：Proposer生成抽象视觉概念并构造问题，Coder将概念翻译为可执行代码（如Python、SVG）以渲染视觉图像，Solver对生成的视觉内容执行多模态推理。三个角色均从同一基础模型初始化，并使用组相对策略优化（GRPO）训练，奖励机制整合了执行反馈、视觉验证与难度平衡。实验表明MM-Zero在广泛的多模态基准上提升了VLM推理性能，为多模态模型的自进化多模型系统建立了可扩展路径。
+  deep_dive: docs/auto/2603.09206.md
 assessment:
   relevance: high
   decision: summary_only

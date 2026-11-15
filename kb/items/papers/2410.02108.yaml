@@ -12,6 +12,7 @@ source:
 time:
   published: '2024-10-03'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: concept:SelfImprovement
   role: subject
@@ -37,6 +38,7 @@ claims:
 summaries:
   one_liner_zh: 提出ReGenesis：无需外部监督自合成推理路径数据，六项OOD任务平均提升约6.1%，显著改善推理泛化
   abstract_zh: 现有自合成推理数据方法（如STaR）生成的推理路径过于任务特异，缺乏通用推理指导，导致域外泛化差。ReGenesis按由抽象到具体的流程自合成后训练数据：先将通用推理指南转化为任务专属指南，再生成推理结构，最后将结构实例化为具体推理路径，全程无需人工设计的任务示例或更强模型的监督。实验显示ReGenesis在所有域内与域外设置上均优于现有方法；在六个OOD任务上，先前方法后训练后平均下降约4.6%，而ReGenesis平均提升约6.1%。该方法在不同LLM与设计选择下均保持有效。
+  deep_dive: docs/auto/2410.02108.md
 assessment:
   relevance: high
   decision: summary_only
