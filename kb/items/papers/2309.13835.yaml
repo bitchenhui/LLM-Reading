@@ -12,6 +12,7 @@ source:
 time:
   published: '2023-09-25'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: codec:VVC
   role: subject
@@ -30,6 +31,7 @@ claims:
 summaries:
   one_liner_zh: 提出插值驱动的学习型B帧压缩IBVC，以免码率插值式MEMC替代光流编码，码率优于H.266/VTM随机接入。
   abstract_zh: 针对现有学习型B帧压缩直接沿用P帧编解码器导致量化运动不准、运动补偿低效的问题，提出仅含视频帧插值与伪影削减压缩两大操作的IBVC。该方法基于插值实现免码率的运动估计与补偿（MEMC），规避光流量化及附加压缩失真；并部署残差引导掩码编码器，借助插值多尺度依赖自适应筛选有效上下文，降低重复码率消耗。同时提出条件时空解码器替代MEMC编码以消除位置误差与伪影。B帧编码实验表明IBVC显著优于相关SOTA方法，且相比H.266（VTM）随机接入（RA）配置可节省码率，代码将开源。
+  deep_dive: docs/auto/2309.13835.md
 assessment:
   relevance: high
   decision: deep_read

@@ -14,6 +14,7 @@ source:
 time:
   published: '2023-06-25'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: concept:EntropyModel
   role: subject
@@ -51,6 +52,7 @@ summaries:
   one_liner_zh: 提出eContextformer高效自回归上下文模型，解码提速约210倍、模型复杂度降约145倍，较VTM 16.2帧内编码最多省17%码率。
   abstract_zh: 学习式图像压缩中，基于Transformer的熵模型压缩性能好但计算开销大。论文提出eContextformer，融合patch级、棋盘格与通道级分组技术实现并行上下文建模，并引入移位窗口空域-通道注意力机制，同时探索更优的训练策略与架构设计。解码阶段通过动态缩放注意力跨度并缓存先前注意力计算，大幅降低模型与运行时复杂度。相比非并行方法，模型复杂度降低约145倍、解码速度提升约210倍，且在Kodak、CLIC2020、Tecnick上取得更高的平均码率节省。低复杂度使其可启用在线率失真算法进一步提升性能，相对VVC测试模型VTM
     16.2帧内编码最多节省17%码率，并超越多种学习式压缩模型。
+  deep_dive: docs/auto/2306.14287.md
 assessment:
   relevance: high
   decision: deep_read

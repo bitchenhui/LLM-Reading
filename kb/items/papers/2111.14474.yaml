@@ -13,6 +13,7 @@ source:
 time:
   published: '2021-11-29'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: impl:x265
   role: subject
@@ -41,6 +42,7 @@ summaries:
   one_liner_zh: 提出压缩-增强联合优化的端到端深度视频编码器JCEVC，双路径GAN重建细节，bpp较x265最多降低54.92%。
   abstract_zh: 该文提出联合优化压缩与增强模块的端到端深度视频编码框架JCEVC。首先设计双路径生成对抗网络DPEG用于压缩后细节重建：α路径以大感受野和多帧参考恢复结构信息，β路径重建局部纹理，两路径融合并在对抗过程中协同训练。其次将DPEG网络复用于运动补偿与质量增强模块，并结合其他必要模块构成完整编解码框架。通过压缩与增强的联合训练进一步提升率失真性能。在相同PSNR/MS-SSIM下，JCEVC较x265
     LDP very fast模式平均降低bpp 39.39%/54.92%，明显优于现有深度视频编码器。
+  deep_dive: docs/auto/2111.14474.md
 assessment:
   relevance: high
   decision: deep_read

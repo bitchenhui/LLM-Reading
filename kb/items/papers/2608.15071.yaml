@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-08-15'
   collected: '2026-11-15'
+  updated: '2026-11-15'
 entities:
 - ref: concept:SelfImprovement
   role: subject
@@ -30,6 +31,7 @@ claims:
 summaries:
   one_liner_zh: 形式化'在线harness学习'，将单次噪声执行上下文编译为可复用技能harness，使冻结LLM智能体跨任务持续自改进。
   abstract_zh: 现有自改进方法多从积累轨迹中经反思、记忆或技能提取知识，但真实环境中的智能体常仅有单次执行机会，且产生的上下文噪声高、通用经验与任务特异信息纠缠。作者形式化'在线harness学习'：冻结的智能体通过在顺序任务上持续更新结构化harness获得改进，并以Evo-Harness系统研究自改进的关键因素。核心机制为'上下文到harness技能编译'，将一次性噪声执行蒸馏为可跨域与主题级适配的技能harness。在TerminalBench2、SWE-bench、CL-Bench、WebArena-Infinity等五个真实基准上验证了方法有效性。
+  deep_dive: docs/auto/2608.15071.md
 assessment:
   relevance: high
   decision: summary_only

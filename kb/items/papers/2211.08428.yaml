@@ -12,6 +12,7 @@ source:
 time:
   published: '2022-11-15'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: concept:SuperResolution
   role: subject
@@ -36,6 +37,7 @@ summaries:
   one_liner_zh: 首次编码器-解码器协同的编解码器感知扩散建模：编码端联合降分辨率与色彩位深省码率，解码端条件扩散恢复高质量视频。
   abstract_zh: 针对神经增强视频流（NVS）中现有超分增强方法码率节省与质量恢复失衡的问题，论文提出编解码器感知扩散建模 CaDM，首次实现编码器-解码器（编解码器）协同设计。编码端同时降低视频帧的分辨率与色彩位深以提升压缩效率；解码端则利用感知编码器分辨率-色彩条件的去噪扩散恢复实现高质量增强。在基于
     OpenMMLab 基准的公有云服务评估中，CaDM 在常见视频标准基础上节省高达 5.12–21.44 倍码率，并以 FID 0.61 的恢复质量显著优于现有神经增强方法。
+  deep_dive: docs/auto/2211.08428.md
 assessment:
   relevance: high
   decision: deep_read

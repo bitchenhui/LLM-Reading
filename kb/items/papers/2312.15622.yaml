@@ -13,6 +13,7 @@ source:
 time:
   published: '2023-12-25'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: codec:VVC
   role: subject
@@ -34,6 +35,7 @@ summaries:
   one_liner_zh: 用StyleGAN先验构建三层可伸缩表示，在<0.01bpp极低码率下同时超越VVC的机器分析与人类感知性能。
   abstract_zh: 该工作面向人机协同视觉，利用StyleGAN生成先验学习三层分级语义表示，设计为基本层、中间层与增强层，以渐进方式同时服务机器智能与人类视觉感知。为提升压缩效率，提出逐层可伸缩熵Transformer以降低层间冗余，并基于多任务可伸缩率失真目标对整个方案进行联合优化。在人脸图像压缩上验证了该范式的可行性。定性与定量实验表明，在极低码率（<0.01
     bpp）下，该方法在机器分析与人类感知两方面均优于最新压缩标准VVC，为人机协同压缩提供了新思路。
+  deep_dive: docs/auto/2312.15622.md
 assessment:
   relevance: high
   decision: deep_read

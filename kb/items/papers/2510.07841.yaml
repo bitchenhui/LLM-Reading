@@ -12,6 +12,7 @@ source:
 time:
   published: '2025-10-09'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: concept:SelfImprovement
   role: subject
@@ -38,6 +39,7 @@ claims:
 summaries:
   one_liner_zh: 提出TT-SI测试时自我改进：自识别困难样本、自生成数据、测试时微调，平均提升5.48%且训练样本减少68倍。
   abstract_zh: 该工作提出一种测试时自我改进算法，分三步：(i) 自我感知——识别模型难以处理的样本；(ii) 自我数据增强——从不确定样本生成相似新样本；(iii) 自我改进——用新样本进行测试时微调。作者研究了两种变体：TT-SI由同一模型自生成训练样本并学习；TT-D（测试时蒸馏）则由更强模型为不确定样本生成相似样本供学生模型蒸馏适应。在多个agent基准上，TT-SI平均绝对准确率提升5.48%，并以68倍更少的训练样本超过其他标准学习方法，展示了测试时自我改进作为构建自进化智能体新范式的潜力。
+  deep_dive: docs/auto/2510.07841.md
 assessment:
   relevance: high
   decision: summary_only
