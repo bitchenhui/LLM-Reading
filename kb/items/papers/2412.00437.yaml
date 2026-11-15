@@ -13,6 +13,7 @@ source:
 time:
   published: '2024-11-30'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: concept:EntropyModel
   role: subject
@@ -36,6 +37,7 @@ claims:
 summaries:
   one_liner_zh: 提出细粒度可伸缩学习图像压缩框架DeepFGS，一次编码生成连续可伸缩码流，PSNR与MS-SSIM优于现有方法。
   abstract_zh: 针对现有可伸缩压缩方法压缩性能下降与可伸缩性不足两大问题，论文提出学习型细粒度可伸缩图像压缩框架DeepFGS。该方法引入特征分离骨干网络，将图像信息划分为基础特征与可伸缩特征，并通过逐通道信息重排策略重新分配特征，实现一次编码即可生成连续可伸缩码流。熵编码环节设计了互熵模型，以充分挖掘基础特征与可伸缩特征之间的相关性。此外复用解码器以降低参数量与计算复杂度。实验表明，DeepFGS在PSNR与MS-SSIM指标上优于既有基于学习的可伸缩图像压缩模型及传统可伸缩图像编码器。
+  deep_dive: docs/auto/2412.00437.md
 assessment:
   relevance: high
   decision: deep_read

@@ -13,6 +13,7 @@ source:
 time:
   published: '2023-10-18'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: concept:SuperResolution
   role: subject
@@ -40,6 +41,7 @@ claims:
 summaries:
   one_liner_zh: 提出频率补偿模块与采样空间MoE的潜在扩散图像超分框架，缓解重建失真并提升模型容量。
   abstract_zh: 针对基于潜在空间的扩散超分存在的两大问题——潜在空间压缩导致重建失真、巨大计算成本限制扩散模型规模——本文提出频率补偿模块，增强从潜在空间到像素空间的频率分量，显著降低（尤其高频信息的）重建失真。进一步提出采样空间专家混合（SS-MoE），在不显著增加推理成本的情况下稳定提升模型容量。这些设计在广泛研究的4×盲超分基准上带来性能提升，并可扩展到8×大倍率图像超分基准。代码已开源。
+  deep_dive: docs/auto/2310.12004.md
 assessment:
   relevance: high
   decision: summary_only

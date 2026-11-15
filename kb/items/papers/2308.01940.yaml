@@ -12,6 +12,7 @@ source:
 time:
   published: '2023-08-03'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: concept:IQA
   role: subject
@@ -53,6 +54,7 @@ claims:
 summaries:
   one_liner_zh: 腾讯发布TSMD静态网格质量评估数据集：42个参考网格、210个压缩失真样本与74人MOS，客观指标相关性仅约0.75。
   abstract_zh: 腾讯构建了包含42个具有丰富视觉特征参考网格的静态网格数据集TSMD，失真样本（210个）由AOMedia体积视觉媒体组发布的静态网格编码提案征集（CfP）配套的有损压缩方案生成。团队将失真网格渲染为处理后视频序列（PVS），开展大规模众包主观实验，收集74位观看者的MOS评分，并通过分析验证了样本多样性与MOS精度，确认数据集的异质性与可靠性。在新数据集上评估最先进客观指标，Pearson与Spearman相关系数约0.75，明显偏离在异质性较弱数据集上的典型结果，表明亟需更鲁棒的网格质量指标。数据集（含网格、PVS、码流与MOS）已公开发布。
+  deep_dive: docs/auto/2308.01940.md
 assessment:
   relevance: high
   decision: summary_only

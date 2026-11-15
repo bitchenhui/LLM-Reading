@@ -12,6 +12,7 @@ source:
 time:
   published: '2025-07-23'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: concept:LLM
   role: subject
@@ -35,6 +36,7 @@ summaries:
   one_liner_zh: 提出ARIA框架：LLM智能体通过结构化自对话识别知识缺口、请求人类专家指导，在测试时持续更新带时间戳的知识库并化解冲突知识。
   abstract_zh: 该文面向规则与领域知识频繁变化的环境（如监管合规、用户风险筛查），提出自适应反思交互智能体ARIA。ARIA通过结构化自对话评估自身不确定性，主动发现知识缺口并向人类专家请求针对性解释或纠错，随后将人类指导系统性写入带时间戳的内部知识库，并通过对比与澄清查询检测、化解冲突或过时知识。在TikTok
     Pay真实客户尽调名单筛查任务及公开动态知识任务上的评估显示，其适应性与准确率显著优于离线微调和现有自我改进智能体基线。该系统已在TikTok Pay上线，服务超1.5亿月活跃用户。
+  deep_dive: docs/auto/2507.17131.md
 assessment:
   relevance: high
   decision: summary_only

@@ -12,6 +12,7 @@ source:
 time:
   published: '2025-09-12'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: concept:SelfImprovement
   role: subject
@@ -30,6 +31,7 @@ claims:
 summaries:
   one_liner_zh: 用多模态LLM智能体编排实现文生图自我改进：自批判发现图像弱点、自进化迭代优化提示词，仅凭初始提示即可提升生成质量。
   abstract_zh: Maestro是一个自进化图像生成系统，仅用初始提示即可让文本到图像（T2I）模型通过提示词迭代演化自主改进生成图像。其两大创新是：1）自批判——由多模态LLM'批评者'智能体识别生成图像的弱点、纠正欠规范提示并给出可解释的编辑信号，再由'验证者'智能体在保留用户意图的前提下整合这些信号；2）自进化——利用MLLM-as-a-judge对迭代生成的图像进行两两比较、剔除问题图像，并演化出符合用户意图的创意提示词候选。在黑盒T2I模型上的复杂任务实验表明，Maestro显著优于初始提示与现有SOTA自动方法，且效果随MLLM组件能力增强而提升，为自我改进的T2I生成提供了可解释的路径。
+  deep_dive: docs/auto/2509.10704.md
 assessment:
   relevance: high
   decision: summary_only

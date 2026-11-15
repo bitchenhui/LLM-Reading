@@ -12,6 +12,7 @@ source:
 time:
   published: '2025-11-25'
   collected: '2026-11-15'
+  updated: '2026-11-15'
 entities:
 - ref: concept:SelfImprovement
   role: subject
@@ -59,6 +60,7 @@ summaries:
   one_liner_zh: 将LLM改造为自我改进的AutoML引擎，统一集成零样本架构合成、超参优化、精度预测、NN-RAG与强化学习五条流水线。
   abstract_zh: NNGPT是一个开源框架，将大语言模型转变为面向神经网络开发（主要针对计算机视觉）的自我改进AutoML引擎。它通过生成、评估与自我改进的闭环系统扩展神经网络数据集并持续微调LLM，在统一工作流中集成零样本架构合成、超参优化（HPO）、代码感知精度/早停预测、NN-RAG检索增强PyTorch模块合成与强化学习五条协同流水线。系统基于经审计、指标可复现的LEMUR数据集，单次提示即可生成并端到端执行、验证网络架构、预处理代码与超参数，并从结果中学习。实验上，NN-RAG在1,289个目标上达到73%可执行率，HPO在LEMUR上RMSE
     0.60优于Optuna的0.64，代码感知预测器RMSE 0.14且Pearson r=0.78，一次预测性能与基于搜索的AutoML相当。系统已生成超过5,000个验证模型，证明其作为自主AutoML引擎的能力。
+  deep_dive: docs/auto/2511.20333.md
 assessment:
   relevance: high
   decision: summary_only

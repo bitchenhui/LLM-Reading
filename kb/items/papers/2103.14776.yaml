@@ -12,6 +12,7 @@ source:
 time:
   published: '2021-03-27'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: codec:Opus
   role: subject
@@ -48,6 +49,7 @@ summaries:
   one_liner_zh: 提出LPC与神经波形编解码混合的语音编码器，跨模块残差学习覆盖12–32kbps，低中码率质量媲美AMR-WB与Opus。
   abstract_zh: 该工作将语音压缩建模为自编码任务，用CNN前馈实现神经波形编解码（NWC），并把量化与熵编码定义为可训练模块，使编码失真与码率控制在优化过程中统一处理。为提升效率，模型引入门控残差网络和深度可分离卷积等紧凑组件。作者提出跨模块残差学习（CMRL）可扩展架构，将多个NWC自编码模块残差级联以覆盖宽码率范围，并在低码率端以线性预测编码（LPC）作为首个自编码器，通过将LPC量化可微化实现端到端训练。解码器在12–20
     kbps仅用一个0.12M参数的NWC、32 kbps用两个NWC；解码复杂度虽仍高于传统编解码器，但较WaveNet声码器类方案显著降低。在TIMIT测试语音上，系统于低中码率达到与AMR-WB和Opus相当或更优的宽频语音质量，并可扩展至更高码率实现近透明性能。
+  deep_dive: docs/auto/2103.14776.md
 assessment:
   relevance: high
   decision: summary_only

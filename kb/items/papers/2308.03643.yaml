@@ -12,6 +12,7 @@ source:
 time:
   published: '2023-08-07'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: concept:ABR
   role: subject
@@ -34,6 +35,7 @@ claims:
 summaries:
   one_liner_zh: 提出基于多智能体强化学习的端到端多维ABR，联合调控QP/分辨率/帧率以提升WebRTC视频会议QoE。
   abstract_zh: 针对WebRTC实时视频通信中网络侧目标码率决策与编码器码率控制互不协调、且忽略不当分辨率与帧率设置影响的问题，提出端到端多维ABR算法Mamba。该算法基于多智能体强化学习（MARL），依据网络状况与视频复杂度等观测状态，自适应且协同地调整量化参数（QP）、分辨率和帧率，以最大化用户QoE。同时引入课程学习提升MARL的训练效率。实验室与真实网络环境评估均验证了Mamba的显著效果。
+  deep_dive: docs/auto/2308.03643.md
 assessment:
   relevance: high
   decision: summary_only

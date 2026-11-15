@@ -13,6 +13,7 @@ source:
 time:
   published: '2023-09-06'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: impl:VTM
   role: subject
@@ -35,6 +36,7 @@ claims:
 summaries:
   one_liner_zh: 以语义分割引导判别器和输出残差预测增强的轻量生成式图像压缩，低码率下超越HiFiC等并接近VTM-20.0。
   abstract_zh: EGIC是一种面向低码率的生成式图像压缩方法，可在单个模型内高效遍历失真-感知曲线。其核心包含两个新组件：一是OASIS-C，一个条件化于潜在图像分布的预训练语义分割引导判别器，为生成器提供空间与语义双重感知的梯度反馈；二是输出残差预测（ORP），通过调节MSE优化解码输出与GAN优化解码输出之间残差的影响来控制重建合成过程，实现多真实感控制。两者组合使EGIC超越HiFiC、MS-ILLM、DIRAC-100等最先进的扩散与GAN生成式压缩方法，并在失真端几乎与VTM-20.0持平。该编解码器实现简单、非常轻量且插值特性优异，是面向低码率实际应用的有力候选。
+  deep_dive: docs/auto/2309.03244.md
 assessment:
   relevance: high
   decision: deep_read
