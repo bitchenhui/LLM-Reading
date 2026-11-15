@@ -231,7 +231,7 @@ class LLM:
         """SSE 流式：分块持续到达，避免长推理（深读 5-15 分钟）触发读超时。"""
         data = json.dumps(payload).encode()
         last = None
-        for attempt in range(1, 4):
+        for attempt in range(1, 6):
             try:
                 req = urllib.request.Request(url, data=data, headers={
                     "Authorization": f"Bearer {self.key}",

@@ -43,7 +43,7 @@ SYNTH_INSTRUCTIONS = """你是音视频技术领域的首席研究员，为一�
 - 量化结论保留条目里的口径。中文，技术密度高，markdown 输出。"""
 
 
-def pack_domain(items: list[dict]) -> str:
+def pack_domain(items: list[dict], with_notes: bool = True) -> str:
     lines = []
     for d in sorted(items, key=lambda x: x["time"]["published"]):
         claims = "".join(
@@ -52,12 +52,12 @@ def pack_domain(items: list[dict]) -> str:
                      f"{'，'+m['scope'] if m.get('scope') else ''}]" for m in c.get("metrics", [])))
             for c in d.get("claims", [])[:4])
         note = ""
-        deep = d["summaries"].get("deep_dive")
+        deep = d["summaries"].get("deep_dive") if with_notes else None
         if deep and (ROOT / deep).exists():
             text = (ROOT / deep).read_text(encoding="utf-8")
             # 去掉自动生成头两行，取笔记开头的方法动机部分
             body = "\n".join(text.split("\n")[2:])
-            note = f"\n  精读摘录: {body[:900]}…"
+            note = f"\n  精读摘录: {body[:500]}…"
         lines.append(f"[{d['time']['published']}] {d['id']}｜{d.get('title_zh') or d['title']}"
                      f"\n  摘要: {d['summaries'].get('one_liner_zh','')}{claims}{note}")
     return "\n".join(lines)
@@ -66,6 +66,7 @@ def pack_domain(items: list[dict]) -> str:
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--only", type=str, default="", help="只合成指定 domain（逗号分隔）")
+    ap.add_argument("--no-notes", action="store_true", help="跳过精读摘录（排障用）")
     args = ap.parse_args()
 
     llm = LLM(yaml.safe_load(open(CONFIG, encoding="utf-8")))
@@ -87,7 +88,7 @@ def main() -> int:
         items = by_domain[dom]
         prompt = (f"领域：{DOMAIN_NAMES[dom]}（{dom}）\n"
                   f"数据截止：{today}，共 {len(items)} 条（论文+版本动态）。\n\n"
-                  f"条目资料：\n{pack_domain(items)}\n\n"
+                  f"条目资料：\n{pack_domain(items, with_notes=not args.no_notes)}\n\n"
                   f"请撰写该领域综述（四节结构）。")
         print(f"[{dom}] {len(items)} 条，合成中…", flush=True)
         try:
