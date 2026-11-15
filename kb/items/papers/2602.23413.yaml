@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-02-26'
   collected: '2026-11-15'
+  updated: '2026-11-15'
 entities:
 - ref: concept:LLM
   role: subject
@@ -34,6 +35,7 @@ claims:
 summaries:
   one_liner_zh: 提出元进化方法EvoX，联合进化候选解与搜索策略，在近200个任务上多数胜过AlphaEvolve等。
   abstract_zh: 受AlphaEvolve等LLM驱动进化优化范式启发，该文指出既有方法多依赖固定搜索策略与预设参数（如探索-利用比例），难以跨任务乃至在同一任务内随搜索空间变化而自适应。EvoX提出元进化机制，同时进化候选解与生成它们的搜索策略，根据优化进展持续更新先验解的选取与变异方式，使系统在优化过程中动态切换搜索策略。在近200个真实世界优化任务上，EvoX在多数任务上优于AlphaEvolve、OpenEvolve、GEPA和ShinkaEvolve等现有AI驱动进化方法。
+  deep_dive: docs/auto/2602.23413.md
 assessment:
   relevance: high
   decision: summary_only

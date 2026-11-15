@@ -12,6 +12,7 @@ source:
 time:
   published: '2022-07-25'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: codec:G-PCC
   role: subject
@@ -62,6 +63,7 @@ summaries:
   abstract_zh: 该文提出一种面向动态点云几何的有损帧间压缩框架，利用前一帧通过特征空间帧间预测网络预测当前帧的潜在表示。编码端采用稀疏卷积与层次化多尺度3D特征学习，并设计特征域运动补偿预测器，将前一帧潜在表示映射为对当前帧特征嵌入的预测。预测特征与实际特征的残差经学习的因子化熵模型压缩后传输，解码端分层渐进重建当前帧。实验表明相对
     MPEG 标准：对 G-PCCv20 Octree 降低超过88% BD-Rate，对 G-PCCv20 Trisoup 超过56%，对 V-PCC 帧内模式超过62%，对基于 HEVC 的 V-PCC
     P帧帧间模式超过52%，且结果已在 MPEG 工作组交叉核验。
+  deep_dive: docs/auto/2207.12554.md
 assessment:
   relevance: high
   decision: summary_only

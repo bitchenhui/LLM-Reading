@@ -12,6 +12,7 @@ source:
 time:
   published: '2025-11-28'
   collected: '2026-11-15'
+  updated: '2026-11-15'
 entities:
 - ref: concept:AlphaEvolve
   role: builds_on
@@ -41,6 +42,7 @@ claims:
 summaries:
   one_liner_zh: 开源ThetaEvolve以单一小型LLM结合测试时上下文学习与RL，在圆填充等开放问题上刷新已知最优界。
   abstract_zh: 针对AlphaEvolve依赖前沿LLM集成且为纯推理系统、无法内化演化策略的局限，作者提出开源框架ThetaEvolve，在测试时同时扩展上下文学习与强化学习，使模型能从改进开放优化问题的经验中持续学习。框架特性包括单一LLM、大型程序数据库增强探索、批量采样提升吞吐、惰性惩罚抑制停滞输出以及可选奖励塑形稳定训练信号。ThetaEvolve首次让小型开源模型DeepSeek-R1-0528-Qwen3-8B在AlphaEvolve提到的圆填充与一阶自相关不等式两个开放问题上取得新的已知最优界。在两个模型和四个开放任务上，测试时RL版本一致优于仅推理基线；RL训练后的检查点在目标任务及未见任务上均表现出更快进步与更好最终性能，证明模型确实学到了演化能力。代码已开源。
+  deep_dive: docs/auto/2511.23473.md
 assessment:
   relevance: high
   decision: summary_only

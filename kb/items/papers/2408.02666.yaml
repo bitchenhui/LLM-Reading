@@ -12,6 +12,7 @@ source:
 time:
   published: '2024-08-05'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: concept:SelfImprovement
   role: subject
@@ -44,6 +45,7 @@ summaries:
   abstract_zh: 该工作提出一种无需人工标注的评估器自改进方法：从无标注指令出发，迭代生成对比性模型输出，并训练 LLM-as-a-Judge 产出推理链与最终判定，每轮用改进后的预测重复训练。在
     RewardBench 上，Self-Taught Evaluator 将 Llama3-70B-Instruct 从 75.4 提升至 88.3，采用多数投票可达 88.7。其表现优于常用的 GPT-4
     等 LLM 评审，并匹敌使用人工标注样本训练的顶级奖励模型。
+  deep_dive: docs/auto/2408.02666.md
 assessment:
   relevance: high
   decision: summary_only

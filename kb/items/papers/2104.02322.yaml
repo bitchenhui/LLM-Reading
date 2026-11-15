@@ -12,6 +12,7 @@ source:
 time:
   published: '2021-04-06'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: concept:SuperResolution
   role: subject
@@ -50,6 +51,7 @@ summaries:
   one_liner_zh: SRVC以低分辨率码流加轻量内容自适应超分模型流实现压缩，同等PSNR下码率仅为H.265慢速模式的16%。
   abstract_zh: SRVC将视频编码为两条码流：内容流用现有编解码器压缩下采样的低分辨率视频，模型流周期性传输针对短片段定制的轻量超分网络更新。解码端将解压后的低分辨率帧依次通过时变超分模型重建高分辨率视频。相比纯深度学习压缩方案，该方法大幅降低了计算与功耗开销。达到相同PSNR时，SRVC每像素比特数仅为H.265慢速模式的16%、深度视频压缩DVC的2%，并在NVIDIA
     V100 GPU上以90fps运行。
+  deep_dive: docs/auto/2104.02322.md
 assessment:
   relevance: high
   decision: deep_read

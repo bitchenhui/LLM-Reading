@@ -12,6 +12,7 @@ source:
 time:
   published: '2024-06-11'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: concept:NeuralAudioCodec
   role: subject
@@ -34,6 +35,7 @@ claims:
 summaries:
   one_liner_zh: 提出单码本单序列语音编解码器Single-Codec，以304bps实现优于多码本编解码器的重建质量并提升LLM-TTS效果。
   abstract_zh: 多码本语音编解码器虽使LLM得以应用于TTS，但多序列预测带来效率与鲁棒性瓶颈。该文提出单码本单序列编解码器Single-Codec，采用解耦VQ-VAE将语音分解为时不变嵌入和音素丰富的离散序列。编码器通过BLSTM上下文建模利用时序信息、混合采样模块缓解上下采样失真、重采样模块促使离散单元承载更多音素信息。与EnCodec、TiCodec等多码本编解码器相比，Single-Codec在仅304bps的更低带宽下取得更高重建质量；LLM-TTS实验进一步显示自然度与可懂度提升。
+  deep_dive: docs/auto/2406.07422.md
 assessment:
   relevance: high
   decision: summary_only

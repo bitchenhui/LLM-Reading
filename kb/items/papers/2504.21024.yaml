@@ -12,6 +12,7 @@ source:
 time:
   published: '2025-04-23'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: concept:SelfImprovement
   role: subject
@@ -37,6 +38,7 @@ claims:
 summaries:
   one_liner_zh: 引入协同进化的世界模型LLM，兼任虚拟网络服务器与推理想象引擎，突破网络智能体自我改进的性能停滞。
   abstract_zh: 针对网络智能体自我改进在自主学习循环中性能停滞的问题，作者提出引入与智能体协同进化的世界模型LLM。该世界模型基于当前观测与动作预测下一观测，一方面充当虚拟网络服务器自生成指令式训练数据以持续优化智能体策略，另一方面在推理时作为想象引擎进行前瞻模拟引导动作选择。在Mind2Web-Live、WebVoyager和GAIA-web三个真实网络环境中，相比现有自我进化智能体取得约10%的性能提升，且不依赖来自更强闭源模型的蒸馏。
+  deep_dive: docs/auto/2504.21024.md
 assessment:
   relevance: high
   decision: summary_only

@@ -12,6 +12,7 @@ source:
 time:
   published: '2023-03-24'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: codec:G-PCC
   role: subject
@@ -57,6 +58,7 @@ summaries:
   one_liner_zh: 提出图注意力网络GQE-Net，利用几何信息增强G-PCC压缩点云的颜色属性，稠密点云最高可省14.0%码率。
   abstract_zh: 针对点云压缩造成的颜色失真，论文提出基于图卷积的质量增强网络GQE-Net，以几何信息作为辅助输入，用图卷积模块高效提取局部特征。网络设计了并行-串行多头图注意力模块以聚焦并融合重要点与特征，并引入考虑法线与点间几何距离的特征精化模块。为适应GPU显存限制，将失真点云划分为允许重叠的3D块送入网络处理，并针对Y/Cb/Cr三个颜色分量的数据分布差异分别训练三个模型。在G-PCC最新测试模型上，稠密点云Y、Cb、Cr分量分别取得0.43
     dB、0.25 dB、0.36 dB的BD-PSNR增益，对应14.0%、9.3%、14.5%的BD-rate节省，达到当时最优水平，源代码已开源。
+  deep_dive: docs/auto/2303.13764.md
 assessment:
   relevance: high
   decision: summary_only
