@@ -12,6 +12,7 @@ source:
 time:
   published: '2025-05-20'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: codec:VVC
   role: subject
@@ -39,6 +40,7 @@ summaries:
   one_liner_zh: 提出流导向与上下文补偿的上下文调制NVC，较H.266/VVC省22.7%、较DCVC-FM省10.1%码率
   abstract_zh: 高效视频编码高度依赖时域冗余利用，条件编码式神经视频编解码器（NVC）的时域上下文传播机制难以充分利用参考信息，限制了性能提升。本文分两步用参考帧调制时域上下文：先提出流导向（flow
     orientation）挖掘参考帧与预测帧间的相互关联，生成附加的导向时域上下文；再引入上下文补偿，用导向上下文调制由传播参考特征生成的时域上下文。通过协同机制与解耦损失监督，有效消除无关传播信息，实现更好的上下文建模。实验表明该编解码器较H.266/VVC平均降低22.7%码率，较此前最先进的DCVC-FM平均节省10.1%码率，代码已开源（DCMVC）。
+  deep_dive: docs/auto/2505.14541.md
 assessment:
   relevance: high
   decision: deep_read

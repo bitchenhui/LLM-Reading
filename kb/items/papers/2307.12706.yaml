@@ -12,6 +12,7 @@ source:
 time:
   published: '2023-07-24'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: codec:HEVC
   role: subject
@@ -42,6 +43,7 @@ claims:
 summaries:
   one_liner_zh: 将解码器参数对每张图像过拟合，实现每像素仅2300次乘法的神经图像编码，媲美自编码器并超越HEVC。
   abstract_zh: 该工作提出对每张输入图像单独过拟合解码器参数的神经图像编解码器（Cool-Chic），从而免去推理型自编码器的庞大解码网络。所提方法每像素仅需约2300次乘法，而典型自编码器解码高达每像素约一百万次乘法；在保持与自编码器相当性能的同时，在多种编码条件下超越HEVC。通过附加轻量模块和改进训练流程，相对此前过拟合编解码器码率降低14%，复杂度保持相近。代码已开源。
+  deep_dive: docs/auto/2307.12706.md
 assessment:
   relevance: high
   decision: deep_read

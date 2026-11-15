@@ -12,6 +12,7 @@ source:
 time:
   published: '2025-05-29'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: codec:HEVC
   role: subject
@@ -30,6 +31,7 @@ summaries:
   one_liner_zh: 分析HEVC帧内递归滤波机理，提出按预测模式与块大小组合非滤波/平滑参考样本的非递归预测，AI配置下较HEVC平均省2.0%码率。
   abstract_zh: HEVC帧内预测可通过递归二维滤波改善预测值，但会显著阻碍像素预测的并行计算。本文分析递归滤波有效的内在机理，并据此推导出性能更优的非递归预测器集合。所提方法依据预测模式和块大小，自适应组合基于非滤波与滤波（平滑）参考样本的预测值。在HEVC通用测试条件下，All
     Intra（AI）配置相对HEVC平均码率降低2.0%。
+  deep_dive: docs/auto/2505.23672.md
 assessment:
   relevance: high
   decision: deep_read

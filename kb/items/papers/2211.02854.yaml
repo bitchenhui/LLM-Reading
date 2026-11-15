@@ -13,6 +13,7 @@ source:
 time:
   published: '2022-11-05'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: concept:RDO
   role: subject
@@ -34,6 +35,7 @@ claims:
 summaries:
   one_liner_zh: 提出RDO-PTQ：以率失真损失为目标逐层确定量化参数，将LIC模型从FP32转INT8定点，免重训练、即插即用。
   abstract_zh: 该工作针对学习型图像压缩（LIC）模型的定点化问题，指出用后训练量化（PTQ）处理现成预训练模型可避免耗时的重训练。作者从理论上证明，以最小化权重、偏置、激活等参数量化均方误差为目标的PTQ对压缩任务是次优的，据此提出率失真优化PTQ（RDO-PTQ）。该方法逐层确定量化参数，将FP32模型转换为INT8定点表示，优化时仅需压缩一个很小的校准图像集以最小化率失真损失。实验显示在多种LIC模型上，量化后的编码性能与其浮点版本最为接近；方法轻量、即插即用，只调整量化参数而不重训练模型参数。该任务导向PTQ进一步推广到流行的超分辨率与图像分类模型，性能损失可忽略，验证了方法论的可泛化性。
+  deep_dive: docs/auto/2211.02854.md
 assessment:
   relevance: high
   decision: deep_read

@@ -14,6 +14,7 @@ source:
 time:
   published: '2023-04-05'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: concept:EntropyModel
   role: subject
@@ -34,6 +35,7 @@ claims:
 summaries:
   one_liner_zh: 提出按块选择多模式预测与密度自适应熵编码的学习视频压缩框架，PSNR/MS-SSIM优于或接近SOTA与标准编码器。
   abstract_zh: 论文提出多模式视频压缩框架MMVC，将特征空间划分为空间块，在特征域按块从ConvLSTM特征域预测、光流条件化特征域预测与特征传播三种模式中择优，以适配从无明显运动的静态场景到相机运动的动态场景。熵编码采用由二值密度图引导的双模式方案：对稠密与稀疏的量化残差分别处理，稀疏残差可进一步施加游程编码，码率节省超过传输二值选择图的额外开销。在主流基准数据集上与SOTA学习式视频压缩方案及标准编码器对比，以PSNR和MS-SSIM衡量取得更好或具竞争力的结果。
+  deep_dive: docs/auto/2304.02273.md
 assessment:
   relevance: high
   decision: deep_read

@@ -12,6 +12,7 @@ source:
 time:
   published: '2024-02-07'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: concept:SelfImprovement
   role: subject
@@ -34,6 +35,7 @@ claims:
 summaries:
   one_liner_zh: 提出CodeIt自改进框架，以程序采样加事后重标注与优先经验回放迭代训练，在ARC评测集解出15%任务达当时SOTA。
   abstract_zh: 该文将抽象与推理语料库（ARC）视为示例编程问题，提出可扩展的语言模型自我改进方法CodeIt。方法在“程序采样并进行事后重标注（将回合目标重标为采样程序实际产生的输出）”与“基于优先级经验回放的学习”之间迭代，从而缓解程序合成中奖励极端稀疏的问题。结合预训练与数据增强，CodeIt实现了跨任务泛化，是首个可扩展到完整ARC评测集的神经符号方法。结果显示其解决了ARC评测集15%的任务，取得当时最先进性能，优于现有神经与符号基线。
+  deep_dive: docs/auto/2402.04858.md
 assessment:
   relevance: high
   decision: summary_only

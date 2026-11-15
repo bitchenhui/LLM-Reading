@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-07-28'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: concept:RSI
   role: subject
@@ -41,6 +42,7 @@ summaries:
   one_liner_zh: 在固定后训练栈下评测 LLM 智能体作为数据中心研究者迭代改进模型的能力，发现可改进但不稳定。
   abstract_zh: 该工作提出 RSIBench-Data，一个控制变量式的基准，将 LLM 智能体置于固定的后训练栈中（Tinker 训练与服务、Harbor 与 E2B 沙箱官方评测、统一预算），要求其迭代修订固定目标模型的训练数据策略，从而把研究决策能力与优化、部署、系统实现解耦。作者在软件工程、终端操作、科学问答与数学四个领域的六个基准上评测四个前沿智能体。结果显示，58.33%
     的设定中智能体能依据反馈细化策略并超越首次有效尝试，但改进并不一致：在观察到最佳分数后继续搜索的运行中，78.26% 以更低分数的尝试收尾，其余仅持平峰值。轨迹分析归纳出更强运行的四种模式：准确假设、经实验验证约束的监督信号、与目标行为对齐的数据、以及对强检查点的保留。
+  deep_dive: docs/auto/2607.25886.md
 assessment:
   relevance: high
   decision: summary_only
