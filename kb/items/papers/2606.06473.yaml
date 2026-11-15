@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-06-04'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: concept:SelfImprovement
   role: subject
@@ -34,6 +35,7 @@ summaries:
   one_liner_zh: 基于 LLM 的自进化多智能体框架，用渐进 MCGS 与回顾记忆实现端到端机器学习算法自动发现。
   abstract_zh: 提出 MLEvolve，一个基于 LLM 的自进化多智能体框架，用于端到端机器学习算法发现。方法上将树搜索扩展为渐进式 MCGS，借助图引用边实现跨分支信息流动，并以熵启发的渐进调度使搜索从广泛探索逐步转向聚焦开发。引入回顾记忆（冷启动领域知识库加动态全局记忆）实现任务经验的检索复用，并将策略规划与代码生成解耦以稳定长程迭代。在
     MLE-Bench 上，MLEvolve 于 12 小时预算（标准时长一半）下在平均奖牌率、有效提交率等多个维度达到 SOTA。在数学算法优化任务上还优于 AlphaEvolve 等专用算法发现方法，显示较强跨域泛化能力。
+  deep_dive: docs/auto/2606.06473.md
 assessment:
   relevance: high
   decision: summary_only

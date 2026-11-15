@@ -13,6 +13,7 @@ source:
 time:
   published: '2026-01-22'
   collected: '2026-11-15'
+  updated: '2026-11-15'
 entities:
 - ref: concept:SelfImprovement
   role: subject
@@ -52,6 +53,7 @@ summaries:
   abstract_zh: 作者提出与后训练不同的范式：依据自动构建的 DRA 失败分类学（5 大类、13 子类）生成量规，通过迭代验证策略模型输出实现智能体自我演化。DeepVerifier 是基于量规的结果奖励验证器，利用验证的不对称性，在元评估
     F1 上超越 vanilla agent-as-judge 与 LLM judge 基线 12%-48%。该验证器作为即插即用模块在测试时产生详细量规反馈，驱动智能体迭代 bootstrapping、无需额外训练即可精炼回答，在
     GAIA 与 XBench-DeepSearch 困难子集上（由闭源强 LLM 驱动）带来 8%-11% 准确率提升。同时发布 DeepVerifier-4K 监督微调数据集（4,646 条高质量智能体验证步骤），帮助开源模型建立反思与自我批判能力。
+  deep_dive: docs/auto/2601.15808.md
 assessment:
   relevance: high
   decision: summary_only

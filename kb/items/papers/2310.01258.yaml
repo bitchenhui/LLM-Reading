@@ -13,6 +13,7 @@ source:
 time:
   published: '2023-10-02'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: codec:HEVC
   role: subject
@@ -49,6 +50,7 @@ summaries:
   abstract_zh: 神经视频编解码器在低时延场景已可与HEVC等标准编解码器竞争，但多为大浮点网络且依赖像素级密集warping，难以部署到移动端，此前仅实现720p RGB实时解码。该工作提出MobileNVC，是首个能在移动设备上实时解码1080p
     YUV420视频的神经视频编解码器。方法上采用基于块的运动补偿算法以利用移动加速器warping核心，并将模型量化到整数精度；解码管线将神经网络组件、熵编码和warping分别并行调度到神经信号处理器、移动GPU和warping核心上。结果上，相较此前的端侧编解码器最多节省48%
     BD-rate，同时接收端MAC计算量降低10倍，并通过消融实验验证了所提运动补偿方案与模型量化的有效性。
+  deep_dive: docs/auto/2310.01258.md
 assessment:
   relevance: high
   decision: deep_read

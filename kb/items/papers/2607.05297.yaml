@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-07-06'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: concept:SelfImprovement
   role: subject
@@ -42,6 +43,7 @@ summaries:
     s 与分支局部元技能 m=(ψ,σ,α,π,ε)，后者参数化改进流水线中的 Analyzer、Retriever、Allocator、Proposer、Evolver 五个智能体。任务技能在快循环上进化，元技能在慢循环上用同一流水线对自身进化，无需额外模型或目标函数，五个流水线智能体共享单一冻结骨干。在
     OfficeQA、SealQA、ALFWorld 三个智能体基准上，方法优于无技能、静态技能与单层进化基线，held-out 测试准确率较原始骨干分别提升 +23.54、+16.09、+1.92
     个百分点。
+  deep_dive: docs/auto/2607.05297.md
 assessment:
   relevance: high
   decision: summary_only

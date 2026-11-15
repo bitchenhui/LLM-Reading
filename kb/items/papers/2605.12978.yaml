@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-05-13'
   collected: '2026-11-15'
+  updated: '2026-11-15'
 entities:
 - ref: concept:SelfImprovement
   role: subject
@@ -42,6 +43,7 @@ summaries:
   one_liner_zh: LLM持续整合记忆会覆盖关键证据致性能退化，保留原始情节记忆并显式门控整合更可靠
   abstract_zh: 该文对比代理记忆系统中两类记忆形式：原始轨迹式情节记忆与经LLM重写整合的抽象经验记忆。作者发现当前LLM整合出的记忆即使源自有用经验也常出错：随持续整合，记忆效用先升后降，甚至可低于无记忆基线；即便从标准答案整合，GPT-5.4也在54%此前已解决的ARC-AGI问题上失败，回归溯源表明问题出在整合步骤而非底层经验本身。在暴露Retain/Delete/Consolidate操作的ARC-AGI
     Stream环境中，默认保留原始情节的智能体准确率是强制整合对手的两倍，仅做情节管理（完全关闭整合）即可达到该自动模式水平。论文主张将原始情节视为一等证据并显式门控整合，而非每次交互后都触发整合。
+  deep_dive: docs/auto/2605.12978.md
 assessment:
   relevance: high
   decision: summary_only

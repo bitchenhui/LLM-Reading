@@ -12,6 +12,7 @@ source:
 time:
   published: '2024-10-17'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: concept:LLM
   role: subject
@@ -34,6 +35,7 @@ claims:
 summaries:
   one_liner_zh: 提出START自教学归因框架，经合成数据预热与细粒度偏好信号迭代自我改进LLM引用能力，平均提升25.13%。
   abstract_zh: 论文提出START（Self-Taught AttRibuTion）框架，通过自我改进迭代提升大语言模型生成带证据引用文本的能力，以缓解幻觉并增强可验证性。为避免初始监督信号不足导致模型停滞，START先让模型自构合成训练数据进行预热。随后利用从模型自身采样响应中构建的细粒度偏好监督信号，迭代强化归因能力，促进稳健、全面且可归因的生成。在三个开放域问答数据集（涵盖长文本问答与多步推理）上，框架平均性能提升25.13%，且不依赖人工标注或更强的外部模型。进一步分析表明START在跨多来源信息聚合方面表现突出。
+  deep_dive: docs/auto/2410.13298.md
 assessment:
   relevance: high
   decision: summary_only

@@ -12,6 +12,7 @@ source:
 time:
   published: '2025-09-09'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: concept:SelfImprovement
   role: subject
@@ -30,6 +31,7 @@ summaries:
   one_liner_zh: 受AlphaEvolve启发的SATLUTION将LLM代码进化扩展至仓库级，自动演化出的SAT求解器超越人类设计的竞赛冠军。
   abstract_zh: 受AlphaEvolve启发，作者提出SATLUTION，首个将LLM驱动的代码进化从孤立内核扩展到完整仓库规模（数百个文件、数万行C/C++代码）的框架。该工作面向NP完全问题布尔可满足性（SAT），编排LLM智能体在严格正确性保障与分布式运行时反馈下直接演化求解器仓库，并同时自演化其自身的进化策略与规则。从SAT
     Competition 2024的代码库与基准出发，演化出的求解器在SAT Competition 2025上决定性地超越了人类设计的冠军，并在2024年基准上同时超过2024与2025两届冠军。
+  deep_dive: docs/auto/2509.07367.md
 assessment:
   relevance: high
   decision: summary_only

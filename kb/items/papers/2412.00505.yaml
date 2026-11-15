@@ -13,6 +13,7 @@ source:
 time:
   published: '2024-11-30'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: impl:C3
   role: subject
@@ -45,6 +46,7 @@ summaries:
   abstract_zh: 受生成式图像压缩启发，近期学习型压缩聚焦于更好地建模自然图像分布，但解码计算量比商用编解码器高出数个数量级，难以实用。本文转向建模视觉感知本身，将过拟合图像编解码器 C3 以
     Wasserstein 失真（WD）为优化目标进行训练。人类评分研究表明，作为优化目标 WD 明显优于 LPIPS。该方法在与 HiFiC 等生成式压缩相当的感知质量-码率权衡下，解码所需乘加运算（MACs）不足其
     1%。此外，WD 作为人类评分预测指标优于 LPIPS、DISTS、MS-SSIM，与 Elo 分数的 Pearson 相关系数超过 94%。
+  deep_dive: docs/auto/2412.00505.md
 assessment:
   relevance: high
   decision: deep_read

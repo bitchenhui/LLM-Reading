@@ -13,6 +13,7 @@ source:
 time:
   published: '2024-10-09'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: concept:LLM
   role: subject
@@ -31,6 +32,7 @@ claims:
 summaries:
   one_liner_zh: 提出AlphaLLM-CPL框架，利用MCTS轨迹的步级偏好对与课程式训练序列实现LLM推理自我改进。
   abstract_zh: 该论文提出AlphaLLM-CPL，一个通过MCTS行为蒸馏实现LLM自我改进的成对（pairwise）训练框架。其核心创新一是在搜索树中利用共享同一父节点的子节点构建步级轨迹对，为蒸馏提供步级信息，克服以往方法对MCTS丰富轨迹信息利用不足的问题。二是引入课程偏好学习，动态调整每个离线训练epoch中轨迹对的训练顺序，优先关键学习步骤并缓解过拟合。在数学推理任务上的实验表明，AlphaLLM-CPL显著优于既有MCTS行为蒸馏方法，大幅提升LLM推理能力。
+  deep_dive: docs/auto/2410.06508.md
 assessment:
   relevance: high
   decision: summary_only
