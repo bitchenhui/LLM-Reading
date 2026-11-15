@@ -12,6 +12,7 @@ source:
 time:
   published: '2024-09-20'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: concept:VolumetricVideo
   role: subject
@@ -33,6 +34,7 @@ claims:
 summaries:
   one_liner_zh: 将动态3DGS视作2D视频以复用硬件视频编解码器，首次实现移动端高质量体积视频流式渲染与播放。
   abstract_zh: 该文提出V³系统，将动态3D高斯泼溅（3DGS）视作2D视频处理，从而直接调用硬件视频编解码器实现流式传输与移动端高质量渲染。方法采用两阶段训练：第一阶段用哈希编码加浅层MLP学习运动，并通过剪枝削减高斯数量以满足流式要求；第二阶段以残差熵损失和时间损失微调其余高斯属性，提升时间连续性。这种运动—外观解耦策略在紧凑存储下保持高渲染质量。作者还设计了多平台播放器用于解码与渲染2D高斯视频，支持流畅滑动与即时分享；实验显示该方法在常见设备上实现高质量渲染与流式播放，优于现有方法，并号称首个在移动端流式传输动态高斯的工作。
+  deep_dive: docs/auto/2409.13648.md
 assessment:
   relevance: high
   decision: summary_only

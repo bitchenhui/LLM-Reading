@@ -12,6 +12,7 @@ source:
 time:
   published: '2024-11-06'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: concept:LLM
   role: subject
@@ -37,6 +38,7 @@ claims:
 summaries:
   one_liner_zh: 提出LaTRO框架，将推理视为潜在分布采样并用变分方法优化，以自我奖励方式无需外部反馈地提升LLM推理
   abstract_zh: LaTRO将LLM推理形式化为从潜在分布中采样，并用变分方法联合优化推理过程与对推理质量的自我评估能力，无需外部反馈或奖励模型。作者在GSM8K和ARC-Challenge数据集上，用Phi-3.5-mini、Mistral-7B和Llama-3.1-8B三种模型架构进行验证。在GSM8K上，LaTRO零样本准确率平均较基础模型提升12.5%，较监督微调提升9.6%。结果表明预训练LLM本身具备可被解锁和增强的潜在推理能力，可按自我改进的方式加以训练。
+  deep_dive: docs/auto/2411.04282.md
 assessment:
   relevance: high
   decision: summary_only

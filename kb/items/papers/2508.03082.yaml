@@ -12,6 +12,7 @@ source:
 time:
   published: '2025-08-05'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: concept:EoH
   role: subject
@@ -36,6 +37,7 @@ summaries:
   abstract_zh: 现有 LLM 驱动的自动启发式设计（AHD）方法通常只设计单一启发式服务所有问题实例，在不同分布或设置下泛化较差。本文提出自动启发式集合设计（AHSD）这一新问题形式，目标是自动生成一小组互补启发式，使每个问题实例至少被集合中某一个启发式优化，并证明
     AHSD 的目标函数是单调且超模的。基于此提出 EoH-S 算法，引入互补种群管理与互补感知模因搜索两种新机制，有效生成高质量且互补的启发式集合。在三个 AHD 任务、跨越不同规模与分布的多样实例上的实验表明，EoH-S
     持续优于现有最先进 AHD 方法，性能提升最高达 60%。
+  deep_dive: docs/auto/2508.03082.md
 assessment:
   relevance: high
   decision: summary_only

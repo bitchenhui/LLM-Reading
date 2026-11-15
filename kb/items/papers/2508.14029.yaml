@@ -12,6 +12,7 @@ source:
 time:
   published: '2025-08-19'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: concept:SelfImprovement
   role: subject
@@ -41,6 +42,7 @@ claims:
 summaries:
   one_liner_zh: 提出SvS自我博弈策略，在线合成参考答案不变的变分问题以维持策略熵，显著提升RLVR的Pass@k推理上限。
   abstract_zh: 针对普通RLVR训练提升Pass@1的同时导致策略熵坍缩、生成多样性下降并限制Pass@k（推理能力上限）的问题，作者从训练题目视角分析，发现增广和更新训练问题有助于缓解熵坍缩。据此提出在线自我博弈变分问题合成策略SvS：利用策略自身的正确解答合成变体题目，并保证其参考答案与原题一致。该自我改进策略在训练中有效维持策略熵，Pass@k相比标准RLVR大幅提升并可持续改进，在竞赛级AIME24与AIME25上Pass@32分别取得18.3%和22.8%的绝对增益，并在代码生成任务上同样有效。在3B至32B不同规模模型的12个推理基准上的实验一致验证了方法的泛化性与稳健性。
+  deep_dive: docs/auto/2508.14029.md
 assessment:
   relevance: high
   decision: summary_only

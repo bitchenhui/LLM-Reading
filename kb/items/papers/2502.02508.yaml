@@ -13,6 +13,7 @@ source:
 time:
   published: '2025-02-04'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: concept:LLM
   role: subject
@@ -34,6 +35,7 @@ claims:
 summaries:
   one_liner_zh: 提出COAT推理格式与两阶段自改进训练，用强化学习把搜索能力内化进单个7B LLM，数学推理达SOTA并泛化到域外任务。
   abstract_zh: 该工作提出新问题：能否把原本依赖外部验证器的测试时搜索能力内化到单个LLM中，从根本上增强其推理能力。作者提出行动思维链（COAT）推理格式，使模型在扩展的推理过程中进行自我反思与新策略的自我探索，实现自回归搜索。训练采用两阶段范式：先小规模格式调优使模型内化COAT格式，再进行大规模基于强化学习的自我改进。由此得到基于开源模型与数据训练的7B模型Satori，在数学推理基准上达到当前最优性能，并对域外任务表现出强泛化能力；代码、数据与模型全部开源。
+  deep_dive: docs/auto/2502.02508.md
 assessment:
   relevance: high
   decision: summary_only

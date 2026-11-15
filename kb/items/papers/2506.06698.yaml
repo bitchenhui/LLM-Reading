@@ -12,6 +12,7 @@ source:
 time:
   published: '2025-06-07'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: concept:SelfImprovement
   role: subject
@@ -43,6 +44,7 @@ claims:
 summaries:
   one_liner_zh: 提出免训练CER框架，将历史经验合成动态记忆缓冲区，使LLM智能体在推理期自我改进。
   abstract_zh: 论文提出Contextual Experience Replay（CER），一个免训练框架，使LLM语言智能体能够在上下文窗口内实现高效自我改进。CER将过去的经验累积并合成为动态记忆缓冲区，经验涵盖环境动态与常见决策模式，智能体在新任务中检索相关知识增强自身适应性。在VisualWebArena上CER取得31.9%的竞争性成功率；在WebArena上平均成功率为36.7%，相较GPT-4o智能体基线相对提升51.0%。作者还进行了全面分析以验证其效率与有效性。
+  deep_dive: docs/auto/2506.06698.md
 assessment:
   relevance: high
   decision: summary_only

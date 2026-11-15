@@ -12,6 +12,7 @@ source:
 time:
   published: '2023-05-21'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: concept:QoE
   role: subject
@@ -52,6 +53,7 @@ claims:
 summaries:
   one_liner_zh: 提出抗丢包神经视频编解码器GRACE，编解码器联合训练应对丢包，大幅降低不可解码帧与卡顿时长。
   abstract_zh: 实时视频通信中高延迟网络下无法重传丢失数据包，现有手段分为编码端FEC与解码端错误掩盖，前者冗余度难以预先确定，后者分区独立编码损害压缩效率且解码端难以恢复。GRACE通过一种新型神经视频编解码器解决该问题，核心是在多种模拟丢包场景下对神经编码器与解码器进行联合训练。无损场景下GRACE质量与传统编解码器（如H.265）相当；丢包率升高时质量下降更平缓，持续优于其他抗丢包方案。在多种视频与真实网络轨迹上的评测显示，相比FEC不可解码帧减少95%、卡顿时长减少90%；240名众包参与者、960个主观评分的用户研究中，MOS比基线高38%。
+  deep_dive: docs/auto/2305.12333.md
 assessment:
   relevance: high
   decision: deep_read

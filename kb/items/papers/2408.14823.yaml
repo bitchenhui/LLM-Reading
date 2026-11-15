@@ -12,6 +12,7 @@ source:
 time:
   published: '2024-08-27'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: concept:3DGS
   role: subject
@@ -39,6 +40,7 @@ claims:
 summaries:
   one_liner_zh: 提出分层渐进式3DGS表示LapisGS，支持带宽感知的自适应流式传输与连续质量渐进渲染。
   abstract_zh: 针对XR对三维在线世界高效流式传输的需求，论文提出LapisGS——一种支持自适应流媒体与渐进式渲染的分层3DGS表示。方法构建层叠累积式分层结构，引入动态不透明度优化以维持视觉保真度，并利用占用图高效管理高斯泼溅点。实验表明该方法在视觉质量与模型紧凑度之间取得良好平衡：仅用原始模型23%的体积，SSIM最高提升50.71%，LPIPS最高提升286.53%，适合带宽自适应的3D流式传输与渲染应用。
+  deep_dive: docs/auto/2408.14823.md
 assessment:
   relevance: high
   decision: summary_only
