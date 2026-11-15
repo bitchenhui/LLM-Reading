@@ -13,6 +13,7 @@ source:
 time:
   published: '2024-02-01'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: concept:WebRTC
   role: subject
@@ -37,6 +38,7 @@ summaries:
   abstract_zh: 该研究采用 Unity Render Streaming 经 WebRTC 在 Wi-Fi 6 上从紧邻用户的边缘服务器实时串流交互式 VR 游戏内容，结合实测数据与 Wi-Fi
     仿真器评估 QoS。结果表明系统在 60 与 90 fps 下均维持稳定网络性能，RTT 与抖动极小。研究揭示了 WebRTC 类服务特有的视频传输模式：视频帧被系统性打包后按固定时间间隔成批发送，与目标帧率无关。该间隔式传输策略使不同帧率下的视频包延迟保持一致，但会增加
     Wi-Fi 空口时间占用；缩短批间隔可提升 Wi-Fi 效率并降低整帧交付时延。
+  deep_dive: docs/auto/2402.00540.md
 assessment:
   relevance: high
   decision: summary_only

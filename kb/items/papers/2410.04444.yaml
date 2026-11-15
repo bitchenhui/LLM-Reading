@@ -12,6 +12,7 @@ source:
 time:
   published: '2024-10-06'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: concept:RSI
   role: subject
@@ -30,6 +31,7 @@ claims:
 summaries:
   one_liner_zh: 受哥德尔机器启发的自指框架，让LLM智能体递归修改自身逻辑，实现持续自我改进。
   abstract_zh: 论文提出 Gödel Agent，一个受哥德尔机器启发的自进化智能体框架。不同于固定流水线或预定义元学习框架，它不依赖人为设计的组件与固定优化算法，仅凭高层目标提示，让LLM动态修改自身逻辑与行为，从而在完整的智能体设计空间中递归自我改进。在数学推理与复杂智能体任务上的实验显示，该方法可持续自我提升，在性能、效率与泛化性上超越人工精心设计的智能体。
+  deep_dive: docs/auto/2410.04444.md
 assessment:
   relevance: high
   decision: summary_only

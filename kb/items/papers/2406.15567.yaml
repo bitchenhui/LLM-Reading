@@ -12,6 +12,7 @@ source:
 time:
   published: '2024-06-21'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: concept:LLM
   role: subject
@@ -30,6 +31,7 @@ claims:
 summaries:
   one_liner_zh: 将在线LLM对齐归结为双层优化并约化为单层一阶方法SAIL，实现在线自改进对齐
   abstract_zh: 现有DPO、IPO、SLiC等离线对齐方法依赖固定偏好数据集，易导致次优表现，而新兴在线RLHF方法缺乏统一概念表述且受分布偏移困扰。作者论证在线LLM对齐在概念上由双层优化支撑，并利用奖励-策略等价性将其约化为高效的单层一阶方法SAIL。该方法在线生成新样本、探索回复并调节偏好标签，以在线自改进方式迭代精化模型对齐，并将已有在线RLHF方法统一为特例。与最先进的迭代RLHF方法相比，SAIL在开源数据集上以极小计算开销显著提升对齐性能。
+  deep_dive: docs/auto/2406.15567.md
 assessment:
   relevance: high
   decision: summary_only

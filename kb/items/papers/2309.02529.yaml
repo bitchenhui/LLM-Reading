@@ -14,6 +14,7 @@ source:
 time:
   published: '2023-09-05'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: concept:EntropyModel
   role: subject
@@ -51,6 +52,7 @@ claims:
 summaries:
   one_liner_zh: 棋盘并行上下文+可变形卷积+三步知识蒸馏+稀疏隐编码，解码提速70-90倍且R-D超越VVC-intra
   abstract_zh: 针对串行上下文自适应熵模型解码慢、编解码网络复杂度高的问题，论文提出四项技术：首次在压缩框架中引入可变形卷积模块以去除输入图像冗余；设计带两个独立分布参数估计网络的棋盘上下文模型，在不损失性能的前提下实现并行解码；提出三步知识蒸馏训练方案，在教师网络最终与中间结果监督下获得不同复杂度-性能权衡的解码器；并用L1正则化稀疏隐表示，仅编码非零通道以大幅缩短编解码时间。实验显示，相较SOTA学习图像编码方案，编码快约20倍、解码快70-90倍，R-D性能高2.3%，在Kodak与Tecnick-40上的PSNR与MS-SSIM超越H.266/VVC-intra(4:4:4)及部分领先学习方案。
+  deep_dive: docs/auto/2309.02529.md
 assessment:
   relevance: high
   decision: deep_read

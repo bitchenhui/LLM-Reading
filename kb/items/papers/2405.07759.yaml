@@ -12,6 +12,7 @@ source:
 time:
   published: '2024-05-13'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: concept:ABR
   role: subject
@@ -34,6 +35,7 @@ claims:
 summaries:
   one_liner_zh: 提出多视点预测与MAPPO结合的MADRL码率自适应方法，360°视频QoE较现有ABR最高提升85.5%。
   abstract_zh: 针对头部运动不确定性导致单一视点预测失效的问题，本文提出多模态时空注意力Transformer，将视点预测建模为分类问题，依据历史轨迹生成多条带概率的视点轨迹。在此基础上，将ABR问题形式化为去中心化部分可观测马尔可夫决策过程（Dec-POMDP），提出基于集中训练-分散执行（CTDE）框架的MAPPO多智能体强化学习码率自适应算法，在不同网络条件下最大化不同QoE目标。实验表明，相比现有ABR方法，所提方法将定义的QoE指标最高提升85.5%。
+  deep_dive: docs/auto/2405.07759.md
 assessment:
   relevance: high
   decision: summary_only

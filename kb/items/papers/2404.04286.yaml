@@ -12,6 +12,7 @@ source:
 time:
   published: '2024-04-04'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: concept:LLM
   role: subject
@@ -27,6 +28,7 @@ claims:
 summaries:
   one_liner_zh: 借认知科学的贝叶斯迭代学习框架，解释并预测LLM自改进迭代中细微偏好的放大。
   abstract_zh: 随着多轮自改进方法（LLM生成新数据训练后续模型）与多智能体LLM系统的普及，LLM将进入类似演化的迭代过程。作者类比人类文化演化研究，引入贝叶斯迭代学习（IL）框架来解释LLM的迭代行为。该框架刻画了智能体行为的若干关键特性，包括细微偏好在迭代中逐步被放大的预测。作者用多种LLM进行了实验验证，预测与实验结果一致。该理论框架可用于更有效地预测并引导LLM朝期望方向演化。
+  deep_dive: docs/auto/2404.04286.md
 assessment:
   relevance: high
   decision: summary_only

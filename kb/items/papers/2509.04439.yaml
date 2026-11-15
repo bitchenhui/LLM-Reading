@@ -12,6 +12,7 @@ source:
 time:
   published: '2025-09-04'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: concept:LLM
   role: subject
@@ -34,6 +35,7 @@ claims:
 summaries:
   one_liner_zh: 提出概念级终身记忆ArcMemo，将推理轨迹蒸馏为可复用抽象概念供测试时检索，在ARC-AGI较无记忆基线相对提升7.5%。
   abstract_zh: 针对推理轨迹在上下文重置后即被丢弃的问题，作者提出ArcMemo，将解题轨迹抽象为自然语言表达的概念级记忆条目，替代与原问题强绑定的实例级记忆。新查询到来时选择性检索相关概念并注入提示，实现无需权重更新的测试时持续学习，记忆可随经验动态扩充。在ARC-AGI上相对强无记忆基线取得7.5%相对增益，且性能随推理算力持续扩展。消融显示抽象概念记忆在所有测试算力档位均优于基线，测试期动态更新记忆优于固定记忆设置，支持'积累并抽象规律即自我改进'的假设。
+  deep_dive: docs/auto/2509.04439.md
 assessment:
   relevance: high
   decision: summary_only

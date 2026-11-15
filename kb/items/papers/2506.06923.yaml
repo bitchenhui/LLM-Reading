@@ -12,6 +12,7 @@ source:
 time:
   published: '2025-06-07'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: concept:LLM
   role: subject
@@ -47,6 +48,7 @@ summaries:
   one_liner_zh: SPOC让LLM在单次推理中交替生成解答与验证并动态终止，实现自发自我纠错，显著提升数学推理准确率。
   abstract_zh: 现有LLM自我纠错方法多为事后独立修正，依赖额外提示与系统设计。本文提出SPOC，使模型在单次推理中交替生成解答与验证，并根据验证结果动态终止生成，从而有效扩展推理时算力。方法采用多智能体视角，为同一模型赋予解答提议者与验证者双重角色，先用简单有效的合成数据微调赋予自验证与协作能力，再通过在线强化学习进一步提升解答与验证精度。在数学推理基准上，SPOC使Llama-3.1-8B与70B
     Instruct在MATH500、AMC23、AIME24上分别取得显著增益。
+  deep_dive: docs/auto/2506.06923.md
 assessment:
   relevance: high
   decision: summary_only

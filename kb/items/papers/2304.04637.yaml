@@ -13,6 +13,7 @@ source:
 time:
   published: '2023-04-10'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: concept:ABR
   role: subject
@@ -35,6 +36,7 @@ claims:
 summaries:
   one_liner_zh: 提出Incendio框架，以专家引导的多智能体强化学习解耦短视频预取选择与码率决策，效用分较SOTA提升53.2%
   abstract_zh: 针对为长视频调优的传统ABR算法在短视频流媒体场景下会出现灾难性失效的问题，本文提出Incendio框架，采用带专家引导的多智能体强化学习（MARL），将视频ID选择与码率适配解耦为缓冲管理智能体和码率适配智能体两个决策单元，最大化由QoE与带宽浪费指标复合构成的系统级效用分。训练分两阶段：先通过模仿人工专家规则进行初始化，再用MARL微调。大量实验表明，Incendio在效用分上较现有最先进SABR算法提升53.2%，同时保持较低的训练复杂度与推理时延。
+  deep_dive: docs/auto/2304.04637.md
 assessment:
   relevance: high
   decision: summary_only
