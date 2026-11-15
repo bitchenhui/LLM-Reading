@@ -13,6 +13,7 @@ source:
 time:
   published: '2024-03-01'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: impl:VTM
   role: subject
@@ -36,6 +37,7 @@ summaries:
   one_liner_zh: 提出以类无关分割掩码为特权信息的区域自适应变换，推理零开销，较VTM-17.0省约8.2%码率
   abstract_zh: 针对现有学习型图像压缩的CNN/自注意力变换不区分图像区域的问题，本文引入无类别标签的类无关分割掩码来提取区域自适应上下文信息。所提出的Region-Adaptive Transform模块在掩码引导下对不同区域施加自适应卷积，并配合即插即用的Scale
     Affine Layer融合多区域上下文。关键设计是将掩码作为特权信息：训练阶段可用而推理阶段无需，避免额外码率开销，作者称系首次以类无关掩码作特权信息用于图像压缩。实验表明该方法在PSNR等像素保真度指标上优于既有表现良好的方法，较VTM-17.0节省约8.2%码率，源码已开源。
+  deep_dive: docs/auto/2403.00628.md
 assessment:
   relevance: high
   decision: deep_read

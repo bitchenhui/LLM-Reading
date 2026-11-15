@@ -12,6 +12,7 @@ source:
 time:
   published: '2025-09-16'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: concept:LLM
   role: subject
@@ -38,6 +39,7 @@ claims:
 summaries:
   one_liner_zh: 对既往推理轨迹做元认知分析，将重复推理片段提炼为可复用'行为'，推理token最多省46%且精度持平或提升。
   abstract_zh: 大模型在多步推理中反复重新推导相同的中间步骤，膨胀token用量与延迟。该工作让模型对自身历史推理轨迹做元认知分析，将反复出现的推理片段浓缩为'名称+指令'形式的可复用行为，存入'行为手册'。推理时上下文注入相关行为可减少最多46%推理token且精度持平或提升；无需参数更新，模型借助自身历史解题行为实现自我改进，精度较朴素critique-and-revise基线最高提升10%。此外，在行为条件化推理轨迹上做SFT比普通SFT更有效地将非推理模型转化为推理模型。
+  deep_dive: docs/auto/2509.13237.md
 assessment:
   relevance: high
   decision: summary_only

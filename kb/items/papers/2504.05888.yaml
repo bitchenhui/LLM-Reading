@@ -12,6 +12,7 @@ source:
 time:
   published: '2025-04-08'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: concept:VolumetricVideo
   role: subject
@@ -56,6 +57,7 @@ summaries:
   abstract_zh: 本文发布开源点云数据集 UVG-VPC，用于 MPEG 视觉体视频编码（V3C）技术的开发、评估与验证。数据集包含 12 条特性各异的点云测试视频序列，在运动、RGB 纹理、3D
     几何与表面遮挡方面具有多样性。每条序列时长 10 秒、共 250 帧（25 fps），体素化几何精度为 9 至 12 比特，颜色属性采用 8 比特 RGB 表示。数据集还附带法线信息，使其更适合点云压缩方案的评估，并以独立的非商业许可开放发布，目标是推动
     V3C 技术发展。
+  deep_dive: docs/auto/2504.05888.md
 assessment:
   relevance: high
   decision: summary_only

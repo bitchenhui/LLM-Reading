@@ -12,6 +12,7 @@ source:
 time:
   published: '2023-04-05'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: codec:HEVC
   role: subject
@@ -47,6 +48,7 @@ claims:
 summaries:
   one_liner_zh: 免运动编码的两层CANF分层B帧压缩：低分辨率基层替代运动压缩，RD略逊B-CANF但编解码MACs大幅降低。
   abstract_zh: 论文提出一种基于两层条件增强归一化流（CANF）的分层B帧视频编码架构，其突出特点是不传输任何运动信息。基层采用低分辨率图像压缩器替代全分辨率运动压缩器，其解码图像与运动补偿后的高分辨率参考图合并，作为增强层全分辨率图像编码的条件信号。该架构省去运动压缩模块，显著降低计算复杂度，并引入skip模式编码减少传输的latent样本。实验显示其率失真性能略低于当前最优的学习型B帧编码器B-CANF，但优于其他学习型B帧方案；相比B-CANF，编码MACs节省45%，解码MACs节省27%。
+  deep_dive: docs/auto/2304.02690.md
 assessment:
   relevance: high
   decision: deep_read

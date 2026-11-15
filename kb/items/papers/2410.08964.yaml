@@ -12,6 +12,7 @@ source:
 time:
   published: '2024-10-11'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: concept:LLM
   role: subject
@@ -38,6 +39,7 @@ claims:
 summaries:
   one_liner_zh: 利用LLM内部主导与非主导语言的能力失衡作为奖励信号，迭代DPO实现多语言自我改进。
   abstract_zh: 大语言模型的进展主要惠及英语、中文等“一等”语言，其他语言代表性不足，这种语言间失衡天然形成了能力偏好排序。作者提出“语言失衡驱动奖励”，将模型内主导语言与非主导语言之间的性能差异作为奖励信号，通过迭代DPO训练提升多语言能力。该方法不仅改善非主导语言表现，也同步提升主导语言能力，从而生成新的迭代奖励信号。对Meta-Llama-3-8B-Instruct进行两轮迭代微调后，在指令遵循与算术推理任务上持续改进：X-AlpacaEval榜单平均胜率提升7.46%，MGSM基准准确率提升13.9%。
+  deep_dive: docs/auto/2410.08964.md
 assessment:
   relevance: high
   decision: summary_only

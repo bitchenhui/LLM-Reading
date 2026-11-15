@@ -12,6 +12,7 @@ source:
 time:
   published: '2022-09-21'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: concept:SuperResolution
   role: subject
@@ -42,6 +43,7 @@ summaries:
   one_liner_zh: 基于高频条件超分的多尺度神经压缩系统，在极低码率下实现720p级实时视频会议。
   abstract_zh: 视频会议在劣化网络下体验差，因传统编解码器无法在极低码率工作；已有基于人脸关键点等稀疏表示的神经方案在大运动、遮挡场景下重建质量差且难以扩展到高分辨率。Gemino提出新颖的高频条件超分管线，对每帧极低分辨率版本进行上采样，并利用单张高分辨率参考图提取的信息增强皮肤纹理、头发等高频细节。采用多尺度架构使模型各组件在不同分辨率上运行，可扩展至约720p分辨率，并通过个性化训练学习每个人的特定细节以提升低码率保真度。系统基于开源Python
     WebRTC实现aiortc落地，在Titan X GPU上对1024x1024视频实时运行，同等感知质量下码率比传统编解码器低2.2-5倍。
+  deep_dive: docs/auto/2209.10507.md
 assessment:
   relevance: high
   decision: deep_read
