@@ -13,6 +13,7 @@ source:
 time:
   published: '2024-07-16'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: codec:VVC
   role: subject
@@ -40,6 +41,7 @@ summaries:
   one_liner_zh: 提出匀加速运动模型UAMM并集成进VVC的Merge/MMVD/CIIP模式，VTM 12.0上低延迟P配置平均节省0.13% BD-rate
   abstract_zh: 帧间预测是消除视频时间冗余的关键技术，但VVC现有方法假设帧间匀速运动并采用线性运动估计/补偿模型，难以刻画真实视频中多目标变速运动形成的复杂运动场。本文提出匀加速运动模型（UAMM），利用运动物体间的速度与加速度信息辅助帧间预测：首先给出UAMM的理论基础，随后提出编码过程中基于UAMM的参数推导与外推方案，最后将其集成到Merge、MMVD、CIIP等现有帧间预测模式以提升预测精度。方法实现于VVC参考软件VTM
     12.0，在Low-delay P配置下相比VTM锚点最高取得0.38%、平均0.13%的BD-rate节省，编解码两端时间复杂度仅轻微增加。
+  deep_dive: docs/auto/2407.11541.md
 assessment:
   relevance: high
   decision: deep_read

@@ -12,6 +12,7 @@ source:
 time:
   published: '2023-10-12'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: concept:VolumetricVideo
   role: subject
@@ -44,6 +45,7 @@ claims:
 summaries:
   one_liner_zh: 首个端到端实时体视频直播系统，集成轻量采集、场景复用与VABR，实现24fps、<350ms延迟。
   abstract_zh: 论文提出LiveVV，据称是首个面向实时场景的整体性体视频（volumetric video）直播系统，覆盖多视角采集、场景分割与复用、自适应传输与渲染全链路。系统采用无需预先准备即可部署的轻量级体积采集模块；将静态与动态体积内容分离处理，复用低视差的静态数据并削减低视觉显著性数据以降低带宽消耗。针对网络波动，系统集成体积视频自适应码率算法（VABR），以最大化体验质量（QoE）实现流畅播放。真实环境实验显示，LiveVV可在24fps帧率与低于350ms的延迟下完成实时体视频直播。
+  deep_dive: docs/auto/2310.08205.md
 assessment:
   relevance: high
   decision: summary_only

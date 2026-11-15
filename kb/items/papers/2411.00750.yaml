@@ -12,6 +12,7 @@ source:
 time:
   published: '2024-11-01'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: concept:SelfImprovement
   role: subject
@@ -33,6 +34,7 @@ claims:
 summaries:
   one_liner_zh: 提出GSI策略：用苏格拉底式引导信号辅助难题采样，缓解LLM自我改进的长尾失衡并降低计算开销。
   abstract_zh: 自我改进方法让大语言模型自行生成解题过程并在过滤后的高质量推理数据上迭代训练，但性能很快进入平台期。作者深入分析发现，模型倾向于对简单问题过采样、对尚未掌握的难题欠采样，且随迭代推进失衡不断加剧，导致难题的解几乎消失，形成长尾分布。暴力采样虽可平衡分布，但会显著推高计算成本。论文提出引导式自我改进（GSI）策略，利用苏格拉底式引导信号辅助LLM推理复杂问题，减少探索开销。在四个模型与多样数学任务上的实验显示，GSI在性能与效率之间取得平衡，并在held-out任务上同样有效。
+  deep_dive: docs/auto/2411.00750.md
 assessment:
   relevance: high
   decision: summary_only

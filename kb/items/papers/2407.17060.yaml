@@ -12,6 +12,7 @@ source:
 time:
   published: '2024-07-24'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: codec:VVC
   role: subject
@@ -28,6 +29,7 @@ claims:
 summaries:
   one_liner_zh: 提出预编辑+端到端可变码率图像压缩框架，按LVLM语义token损失联合训练，率-准确率显著优于VVC。
   abstract_zh: 论文提出由预编辑模块与端到端可变码率编解码器构成的图像压缩框架，目标是在不同LVLM上取得优异的率-准确率（rate-accuracy）性能。预编辑网络不针对特定任务优化，而是基于token级失真与排序（rank）所刻画的表示与判别能力，设计了专为LVLM定制的新优化策略。预编辑模块与可变码率端到端编码器通过基于大模型语义token的损失联合训练，从而获得对多样化数据与任务的泛化能力。实验表明该框架的率-准确率性能显著优于最新编码标准VVC，并在多模态任务中展现出鲁棒性与泛化性。
+  deep_dive: docs/auto/2407.17060.md
 assessment:
   relevance: high
   decision: deep_read

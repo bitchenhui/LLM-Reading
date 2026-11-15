@@ -12,6 +12,7 @@ source:
 time:
   published: '2023-07-24'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: codec:HEVC
   role: subject
@@ -33,6 +34,7 @@ claims:
 summaries:
   one_liner_zh: 提出条件残差编码，从信息论出发缓解条件式视频编码预测路径的信息瓶颈，兼顾残差编码与条件编码双方优势。
   abstract_zh: 条件编码是神经网络压缩 enabling 的新视频编码范式，理论上优于 HEVC/VVC 等传统标准广泛采用的残差编码。但作者指出条件编码器的预测路径存在信息瓶颈：由于数据处理不等式，预测信号中的信息无法完全传递到重建信号，损害编码性能。论文从信息论性质推导出条件残差编码概念，显著减弱瓶颈影响，同时保持条件编码的理论性能上限。理论分析与实际实验表明，条件残差编码器既消除条件编码的缺陷，又保留其相对残差编码的优势，是两种范式之间的'两全其美'方案。
+  deep_dive: docs/auto/2307.12864.md
 assessment:
   relevance: high
   decision: deep_read
