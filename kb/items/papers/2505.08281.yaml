@@ -12,6 +12,7 @@ source:
 time:
   published: '2025-05-13'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: metric:BD-Rate
   role: subject
@@ -37,6 +38,7 @@ claims:
 summaries:
   one_liner_zh: 提出ResULIC框架，将残差信号融入语义检索与扩散生成过程，实现超低码率图像压缩。
   abstract_zh: 针对现有多模态大模型图像压缩框架中语义检索、隐变量压缩与生成模型割裂集成导致的重建保真度与编码效率欠佳问题，提出残差引导的超低码率图像压缩方法ResULIC。引入语义残差编码（SRC）捕捉原始图像与其压缩隐表示之间的语义差异，并结合感知保真度优化器提升重建质量。进一步提出压缩感知扩散模型（CDM），在码率与扩散时间步之间建立最优对齐，增强压缩-重建协同。实验表明，相比最先进的扩散式压缩方法，ResULIC在LPIPS和FID上分别取得-80.7%与-66.3%的BD-rate节省，客观与主观质量均更优。
+  deep_dive: docs/auto/2505.08281.md
 assessment:
   relevance: high
   decision: deep_read

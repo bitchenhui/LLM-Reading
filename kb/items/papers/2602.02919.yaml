@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-02-02'
   collected: '2026-11-15'
+  updated: '2026-11-15'
 entities:
 - ref: concept:AlphaEvolve
   role: subject
@@ -35,6 +36,7 @@ summaries:
   abstract_zh: 该文将 LLM 驱动的进化智能体形式化为通用期望最大化（EM）框架：语言模型采样候选程序为 E 步，系统依据评估反馈更新控制上下文为 M 步。在此视角下，用全代码快照构建上下文是次优的
     M 步，冗余实现细节稀释核心算法思想、难以提供清晰的进化启发。作者据此提出 DeltaEvolve，以记录相邻节点间'如何改、为何改'及其性能影响的结构化语义增量替代全代码历史，并利用多级数据库与渐进披露机制进一步降低输入
     token。因程序可分解，语义增量中大量有效组件可迁移、信息量更高。跨多个科学领域任务的实验表明，相较基于全代码的进化智能体，该框架能以更少 token 消耗发现更优解。
+  deep_dive: docs/auto/2602.02919.md
 assessment:
   relevance: high
   decision: summary_only

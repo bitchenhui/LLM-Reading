@@ -12,6 +12,7 @@ source:
 time:
   published: '2024-09-15'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: concept:ABR
   role: subject
@@ -38,6 +39,7 @@ claims:
 summaries:
   one_liner_zh: 首个对LEO卫星（Starlink）视频流媒体的全球测量：整体质量比肩传统网络，但链路波动致码率切换与卡顿增多。
   abstract_zh: 该研究首次对低地球轨道（LEO）卫星网络上的点播视频流媒体进行全球分析，数据覆盖85个国家超过一百万家庭，凸显Starlink作为主要LEO服务商对欠服务地区的连接增强作用。研究发现Starlink上的整体视频质量与传统网络相当，但LEO链路固有的吞吐量波动与丢包导致码率切换和重缓冲明显增多。作者通过仿真以及在超过一百万家庭上部署的真实A/B测试，对现有拥塞控制和自适应码率（ABR）算法进行修改与实验。结果表明，视频流媒体与拥塞控制算法必须适应快速演变的网络环境，才能在多样且动态的网络类型上保证高质量体验。
+  deep_dive: docs/auto/2409.09846.md
 assessment:
   relevance: high
   decision: summary_only

@@ -13,6 +13,7 @@ source:
 time:
   published: '2025-05-28'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: concept:LLM
   role: subject
@@ -39,6 +40,7 @@ summaries:
   one_liner_zh: 提出MM-UPT无监督后训练框架，用多数投票自奖励替代外部奖励，在SFT与RL之后持续提升多模态LLM推理能力。
   abstract_zh: 论文提出MM-UPT，一个简单有效的多模态大语言模型（MLLM）无监督后训练框架，作为SFT与RL之后的第三阶段，无需任何外部监督即可持续自我改进。其训练方法基于GRPO，用对多次采样响应进行多数投票的自奖励机制替代传统奖励信号。实验表明该方法无需ground
     truth标签即可有效提升Qwen2.5-VL-7B的推理能力：MathVista从66.3%升至72.9%，We-Math从62.9%升至68.7%。作者进一步扩展到数据自生成设定，设计两种策略让模型自行合成新训练样本，与无监督训练结合可带来额外性能增益，展示了可扩展自我改进的路径。
+  deep_dive: docs/auto/2505.22453.md
 assessment:
   relevance: high
   decision: summary_only

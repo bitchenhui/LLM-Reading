@@ -12,6 +12,7 @@ source:
 time:
   published: '2024-10-07'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: concept:SelfImprovement
   role: subject
@@ -35,6 +36,7 @@ summaries:
   one_liner_zh: 提出LEAP迭代微调框架，用训练期特权状态的AI专家反馈持续改进LLM智能体，弱学生可超越强教师。
   abstract_zh: 论文提出LEAP，一个利用AI专家教师反馈对LLM智能体进行迭代微调、实现持续自我改进的框架。其核心洞见是为专家配备'特权状态'——训练时可见但测试时隐藏的信息，使弱专家也能提供精确指导。在ALFWorld、WebShop、Intercode
     Bash三个决策基准上的实验显示：LEAP优于行为克隆与ReAct基线；使弱学生模型Llama3-8B超越强教师GPT-4o；弱模型还可借助特权版自身实现自改进。作者并给出理论分析，证明LEAP的成功取决于特权信息量与学生模型可实现性之间的平衡，并经实验验证。
+  deep_dive: docs/auto/2410.05434.md
 assessment:
   relevance: high
   decision: summary_only

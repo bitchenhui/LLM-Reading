@@ -13,6 +13,7 @@ source:
 time:
   published: '2026-03-05'
   collected: '2026-11-15'
+  updated: '2026-11-15'
 entities:
 - ref: concept:SelfImprovement
   role: subject
@@ -38,6 +39,7 @@ claims:
 summaries:
   one_liner_zh: 提出EvoTool无梯度自进化框架，将工具使用策略分解为四模块，经故障归因变异与多样性选择迭代优化LLM智能体。
   abstract_zh: 该文提出EvoTool，一种基于无梯度进化范式的自进化框架，用于优化LLM智能体的模块化工具使用策略。框架将策略分解为Planner、Selector、Caller与Synthesizer四个模块，并在自改进循环中迭代提升。三项核心机制包括：基于轨迹诊断的故障归因将失败定位到具体模块、基于自然语言批评的反馈引导定向变异仅编辑该模块、以及多样性感知的种群选择保留互补候选解。在四个基准上，EvoTool在GPT-4.1与Qwen3-8B上均超过强基线5分以上，同时具备更优的效率与可迁移性。
+  deep_dive: docs/auto/2603.04900.md
 assessment:
   relevance: high
   decision: summary_only

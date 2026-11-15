@@ -12,6 +12,7 @@ source:
 time:
   published: '2025-09-29'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: concept:LLM
   role: subject
@@ -41,6 +42,7 @@ claims:
 summaries:
   one_liner_zh: Teacher/Generator/Solver三智能体闭环协同进化，从100道种子题自动生成课程训练数据，8B模型在7个数学推理基准上较既有数据合成方法平均提升20.2个百分点
   abstract_zh: 论文提出Socratic-Zero，一个完全自主的框架，通过Teacher、Solver、Generator三个智能体的协同进化，从极少量种子样例生成高质量训练数据：Solver从成功与失败轨迹的偏好反馈中持续优化推理，Teacher依据Solver的弱点自适应构造更有挑战性的题目，Generator蒸馏Teacher的出题策略以实现可扩展的高保真课程生成。该闭环系统无需任何既有任务或标签即可产生自改进的课程。仅用100道种子问题，Socratic-Solver-8B在AMC23、AIME24-25、Olympiad、MATH-500、Minerva、GSM8K等七个数学推理基准上，较既有数据合成方法平均提升20.2个百分点，并在Qwen3与GLM4系列模型上保持一致增益。Socratic-Generator-32B合成的数据训练出的学生模型在这些基准上超越了Qwen3-235B-A22B、DeepSeek-V3.1-671B、GPT-5、Gemini-2.5-Pro、Grok-4、Claude-4.1-Opus等SOTA商用LLM。
+  deep_dive: docs/auto/2509.24726.md
 assessment:
   relevance: high
   decision: summary_only
