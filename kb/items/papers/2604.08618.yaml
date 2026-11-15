@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-04-09'
   collected: '2026-11-15'
+  updated: '2026-11-15'
 entities:
 - ref: concept:SelfImprovement
   role: subject
@@ -41,6 +42,7 @@ summaries:
   one_liner_zh: 提出 SkillForge 闭环框架，使 LLM 智能体技能在云支持场景中基于部署反馈持续自进化。
   abstract_zh: 论文提出 SkillForge，一个面向云技术支持的自进化框架，闭合技能端到端的创建-评估-精炼循环。领域上下文化技能创建器以知识库和历史支持工单为依据合成初始技能，其产出显著优于通用技能创建器（以与专家参考回答的一致性衡量）。三阶段流水线（失败分析器、技能诊断器、技能优化器）批量诊断执行失败、定位技能缺陷并重写技能，迭代运行实现自优化。在覆盖
     1,883 张工单、3,737 项任务的五个真实云支持场景上，自进化循环可从专家编写、领域创建、通用等多种起点逐轮提升技能质量，表明自动化进化可超越人工整理的专家知识。
+  deep_dive: docs/auto/2604.08618.md
 assessment:
   relevance: high
   decision: summary_only

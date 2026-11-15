@@ -12,6 +12,7 @@ source:
 time:
   published: '2024-11-25'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: concept:SelfImprovement
   role: subject
@@ -37,6 +38,7 @@ claims:
 summaries:
   one_liner_zh: 构建批评模型为推理模型提供步级反馈，实现测试时与训练时双重监督的LLM自我改进。
   abstract_zh: 论文提出双角色范式，将推理模型与批评模型分离，批评模型在测试时和训练时为推理模型提供步级反馈。作者设计了AutoMathCritique自动化框架，收集了76,321条响应及其步级反馈构成批评数据集，微调后可生成自然语言数学推理反馈。实验表明测试时引入批评反馈可稳定提升难题上的表现，且随推理计算量扩展收益更大。据此提出批评驱动的循环自训练方法，提升演员模型的探索效率与解的多样性，并初步探索了用批评监督训练自我对话推理模型。
+  deep_dive: docs/auto/2411.16579.md
 assessment:
   relevance: high
   decision: summary_only

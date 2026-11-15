@@ -13,6 +13,7 @@ source:
 time:
   published: '2025-05-22'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: impl:GLC-Video
   role: subject
@@ -48,6 +49,7 @@ summaries:
   one_liner_zh: 提出在VQ-VAE潜空间做变换编码的GLC模型，超低码率下兼顾高真实感与高保真度的图像视频压缩。
   abstract_zh: 现有图像/视频压缩多在像素空间进行变换编码，像素失真与人眼感知不对齐，超低码率下难以兼顾高真实感与高保真度。本文提出生成式潜空间编码（GLC），在生成式VQ-VAE的潜空间中执行变换编码，该潜空间更稀疏、语义更丰富且与人眼感知更对齐。GLC-image引入空间类别超先验模块，GLC-Video引入时空类别超先验模块，并提出基于码预测的损失函数以增强语义一致性。实验表明，GLC-image在CLIC
     2020测试集上以低于0.04 bpp的码率达到与此前SOTA模型MS-ILLM相同的FID且码率减少45%；GLC-Video在DISTS指标上相对PLVC节省65.3%码率。
+  deep_dive: docs/auto/2505.16177.md
 assessment:
   relevance: high
   decision: deep_read

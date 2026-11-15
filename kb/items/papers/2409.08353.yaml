@@ -12,6 +12,7 @@ source:
 time:
   published: '2024-09-12'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: concept:VolumetricVideo
   role: subject
@@ -34,6 +35,7 @@ claims:
 summaries:
   one_liner_zh: DualGS以皮肤/关节双高斯分离运动与外观，实现人体体积视频120倍压缩与VR实时自由视点播放。
   abstract_zh: 该文提出DualGS，一种面向以人为中心体积视频的双高斯表示，核心思想是用关节高斯表示运动、皮肤高斯表示外观，首帧将皮肤高斯锚定于关节高斯，从而显式解耦运动与外观、降低运动冗余并增强时序一致性。方法采用由粗到细的逐帧训练策略：先粗对齐预测整体运动，再进行细粒度优化以实现鲁棒跟踪与高保真渲染。压缩环节对运动采用熵编码、对外观采用编解码器压缩并配合持久码本。结果显示压缩比最高达120倍，每帧仅需约350KB存储，可在VR头显上实现照片级实时自由视点观看体验。
+  deep_dive: docs/auto/2409.08353.md
 assessment:
   relevance: high
   decision: summary_only

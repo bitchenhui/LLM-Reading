@@ -12,6 +12,7 @@ source:
 time:
   published: '2025-06-09'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: concept:LLM
   role: subject
@@ -44,6 +45,7 @@ claims:
 summaries:
   one_liner_zh: 提出Self-RedTeam，首个全在线自博弈MARL算法，攻防角色持续共演化实现LLM安全自改进
   abstract_zh: 传统LLM安全对齐是被动的割裂循环：攻击者攻破静态模型后防御者再修补漏洞，导致攻击者过拟合旧漏洞、防御者长期滞后。本文提出Self-RedTeam，首个完全在线的自博弈多智能体强化学习算法，由单一策略同时扮演攻击者与防御者并持续共演化，两角色均使用隐藏思维链做策略规划，由奖励模型裁决攻防结果。方法基于二人零和博弈论，给出理论保证：若博弈收敛到纳什均衡，防御者可对任意对抗输入产生安全响应。实验覆盖Llama与Qwen系列共5个模型，攻击多样性提升17.80%（SBERT），并在14个基准上将RLHF训练模型的安全性最多提升95%。
+  deep_dive: docs/auto/2506.07468.md
 assessment:
   relevance: high
   decision: summary_only

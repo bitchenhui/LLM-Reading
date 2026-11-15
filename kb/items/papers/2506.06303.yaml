@@ -12,6 +12,7 @@ source:
 time:
   published: '2025-05-21'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: concept:LLM
   role: subject
@@ -33,6 +34,7 @@ summaries:
   abstract_zh: 本文证明强化学习可在 LLM 推理阶段涌现，作者称之为上下文强化学习（ICRL）。其提出的 ICRL prompting 是一个简单的多轮提示框架：模型每轮生成响应后获得标量奖励反馈，下一轮将所有历史响应与对应奖励拼接进上下文再次提示
     LLM，以在推理时对给定任务进行自我改进。实验观察到随上下文增长响应质量持续提升，表明 LLM 能在推理时优化标量奖励信号，表现出类似强化学习的行为。在 Game of 24、创意写作、ScienceWorld
     及 AIME/HMMT 奥数任务上评估，显著优于 Self-Refine 和 Reflexion 等基线；即使奖励由同一 LLM 自身生成仍有效，展示了测试时扩展的新范式。
+  deep_dive: docs/auto/2506.06303.md
 assessment:
   relevance: high
   decision: summary_only

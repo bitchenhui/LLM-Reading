@@ -12,6 +12,7 @@ source:
 time:
   published: '2023-06-01'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: concept:WebRTC
   role: subject
@@ -50,6 +51,7 @@ summaries:
   abstract_zh: 视频会议应用（VCA）的端用户QoE对网络运营商至关重要，但运营商通常无法访问客户端，而传统被动测量依赖应用层RTP头；Zoom等自定义RTP或遗留测量系统又使RTP头常常不可得。该文提出一种仅利用IP/UDP头的方法，将流统计特征（如吞吐量）与基于VCA视频帧分片机制推导的特征相结合，用机器学习逐秒估计帧率、分辨率等关键QoE指标。在Google
     Meet、Microsoft Teams、Cisco Webex三个WebRTC应用上，使用实验室受控条件与15个家庭真实网络共54,696秒数据评估。结果显示仅用IP/UDP数据即可达到与RTP头方法相当的精度：真实网络数据中83.05%的秒级区间FPS估计误差在2
     FPS内，仅比使用应用层RTP头低1.76%。
+  deep_dive: docs/auto/2306.01194.md
 assessment:
   relevance: high
   decision: summary_only

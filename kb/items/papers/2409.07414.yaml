@@ -14,6 +14,7 @@ source:
 time:
   published: '2024-09-11'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: impl:NVRC
   role: subject
@@ -50,6 +51,7 @@ summaries:
   one_liner_zh: 首个端到端优化的INR视频压缩框架NVRC，UVG上PSNR较VVC VTM RA平均增益24%
   abstract_zh: 本文提出NVRC（Neural Video Representation Compression）框架，与多数改进INR表示架构的工作不同，其目标是压缩表示本身。基于新提出的熵编码与量化模型，NVRC首次实现了INR视频编解码器的完全端到端优化。为进一步降低熵模型引入的码率开销，论文还提出分层模型压缩框架，对网络、量化及熵模型参数统一进行分层编码。实验表明NVRC优于多种传统与学习型基准编解码器，在UVG数据集上以PSNR衡量，较VVC
     VTM（Random Access）平均取得24%编码增益，作者称这是INR视频编解码器首次达到该性能水平，实现将开源。
+  deep_dive: docs/auto/2409.07414.md
 assessment:
   relevance: high
   decision: deep_read
