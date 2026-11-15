@@ -13,6 +13,7 @@ source:
 time:
   published: '2024-10-13'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: impl:DCVC-FM
   role: subject
@@ -38,6 +39,7 @@ claims:
 summaries:
   one_liner_zh: 提出ECVC，利用多帧非局部相关性增强时序先验并以级联微调抑制误差累积，较DCVC-FM再省码率10.5%/11.5%。
   abstract_zh: 针对现有学习视频压缩（LVC）主要挖掘时序运动而忽视帧间非局部相关、且上下文模型仅使用单一参考帧难以应对复杂运动的问题，ECVC利用多帧间的非局部相关性来增强时序先验，显著提升率失真性能。为缓解误差累积，提出部分级联微调策略，在受限计算资源下支持全长序列微调，降低训练与测试序列长度失配并明显减少累积误差。基于上述技术构建的视频压缩方案ECVC达到SOTA：在VTM-13.2低延迟B（LDB）配置下，帧内周期IP=32与IP=-1时较此前SOTA方法DCVC-FM分别再降低10.5%和11.5%码率。
+  deep_dive: docs/auto/2410.09706.md
 assessment:
   relevance: high
   decision: deep_read

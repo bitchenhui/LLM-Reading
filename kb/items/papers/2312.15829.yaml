@@ -13,6 +13,7 @@ source:
 time:
   published: '2023-12-25'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: concept:Hyperprior
   role: subject
@@ -41,6 +42,7 @@ summaries:
   one_liner_zh: 提出逐像素软掩码融合条件编码与条件残差编码的Transformer视频压缩方法，性能媲美甚至超越VTM-17.0低时延P配置。
   abstract_zh: 条件编码已成为学习型视频压缩的主流路线，但在出现信息瓶颈时可能劣于残差编码；而条件残差编码依赖『残差帧熵率低于帧内帧』的假设，该假设在遮挡显现（dis-occlusion）或运动估计不可靠时并不总成立。为此，论文提出掩码条件残差编码方案，通过学习的软掩码逐像素自适应地混合条件编码与条件残差编码。方法上引入基于Transformer的条件自编码器，系统探索了多种对Transformer自编码器进行条件化的帧间编码策略，并提出通道变换模块（CTM）沿通道维解耦图像隐变量，使简单hyperprior熵模型逼近通道自回归模型的压缩性能。实验表明MaskCRT同时优于条件编码与条件残差编码；在常用数据集上，其PSNR-RGB
     BD-rate与VTM-17.0低时延P配置相当，MS-SSIM-RGB上则优于VTM-17.0。
+  deep_dive: docs/auto/2312.15829.md
 assessment:
   relevance: high
   decision: deep_read

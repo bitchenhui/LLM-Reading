@@ -12,6 +12,7 @@ source:
 time:
   published: '2024-12-05'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: concept:VolumetricVideo
   role: subject
@@ -45,6 +46,7 @@ summaries:
   one_liner_zh: 用动态3D高斯泼溅逐帧学习属性残差并结合量化-稀疏化框架，实现在线自由视点视频的高质量、小体积、实时编码。
   abstract_zh: 该工作面向在线自由视点视频（FVV）流式传输，提出基于3D高斯泼溅（3D-GS）的QUEEN框架，在每个时间步直接学习相邻帧间的高斯属性残差，不对结构施加约束，从而保证重建质量与泛化性。为高效存储残差，作者设计了量化-稀疏框架：用一个可学习的隐变量解码器量化除位置外的属性残差，并用可学习的门控模块稀疏化位置残差。进一步提出以高斯视空间梯度差分向量作为信号分离场景静态与动态内容，用于引导稀疏性学习并加速训练。在多个FVV基准上QUEEN在所有指标上均超越现有在线FVV方法；对若干高动态场景，每帧模型仅约0.7
     MB，训练用时不到5秒，渲染速度达350 FPS。
+  deep_dive: docs/auto/2412.04469.md
 assessment:
   relevance: high
   decision: summary_only

@@ -12,6 +12,7 @@ source:
 time:
   published: '2022-08-21'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: concept:SuperResolution
   role: subject
@@ -37,6 +38,7 @@ summaries:
   one_liner_zh: 提出层级Swin Transformer网络恢复压缩+低分辨率混合退化图像，证实SR预训练关键，AIM 2022赛道第五。
   abstract_zh: 针对压缩图像同时受压缩伪影与低分辨率退化的复杂混合失真问题，提出层级Swin Transformer（HST）网络，分层捕获特征表示并在各尺度上用Swin Transformer增强表示。研究发现以超分（SR）任务做预训练对压缩图像超分至关重要，并系统比较了bicubic及多种真实SR模拟预训练任务的作用。结合HST与预训练，该方法在AIM
     2022低质量压缩图像超分赛道以23.51dB PSNR获得第五名。大量实验与消融研究验证了方法有效性，代码与模型已开源。
+  deep_dive: docs/auto/2208.09885.md
 assessment:
   relevance: high
   decision: summary_only
