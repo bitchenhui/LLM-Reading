@@ -242,12 +242,14 @@ class LLM:
                 with urllib.request.urlopen(req, timeout=300) as resp:
                     parts: list[str] = []
                     usage: dict = {}
+                    completed = False
                     for raw in resp:
                         line = raw.decode("utf-8", errors="replace").strip()
                         if not line.startswith("data:"):
                             continue
                         body = line[5:].strip()
                         if body == "[DONE]":
+                            completed = True
                             break
                         try:
                             ev = json.loads(body)
@@ -259,11 +261,16 @@ class LLM:
                                 parts.append(ev.get("delta", ""))
                             elif t == "response.completed":
                                 usage = (ev.get("response") or {}).get("usage") or usage
+                                completed = True
                         else:
                             if ev.get("usage"):
                                 usage = ev["usage"]
+                            if ev.get("choices") and ev["choices"][-1].get("finish_reason"):
+                                completed = True
                             for ch in ev.get("choices", []):
                                 parts.append((ch.get("delta") or {}).get("content") or "")
+                    if not completed:
+                        raise RuntimeError("SSE 流提前结束（无终止事件，输出可能被截断）")
                     self._track(usage)
                     out = "".join(parts)
                     if not out:

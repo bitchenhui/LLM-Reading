@@ -46,7 +46,8 @@ def main() -> int:
     cutoff = (date.today() - timedelta(days=args.days)).isoformat()
     items = [load(p) for p in sorted(ITEMS.glob("*.yaml"))]
 
-    fresh = [d for d in items if d["time"]["collected"] >= cutoff]
+    # 按「发表日」开窗（回补的存量论文 collected 是近期，不能算"本周新成果"）
+    fresh = [d for d in items if d["time"]["published"] >= cutoff]
     if not fresh:
         print(f"最近 {args.days} 天无新入库 items，不生成 digest")
         return 0
