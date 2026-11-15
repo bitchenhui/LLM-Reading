@@ -1,0 +1,54 @@
+name: weekly-synthesis
+
+# 每周日凌晨重写八域领域综述：增量信息持续沉淀进知识库的综述层。
+# 依赖 daily 的积累；综述写回 kb/synthesis/ 后 Pages 随 push 自动更新。
+
+on:
+  schedule:
+    - cron: "0 18 * * 6"   # UTC 周六 18:00 = 北京 周日 02:00
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  synthesize:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+
+      - name: 写入 LLM 配置
+        run: |
+          cat > config/llm.local.yaml <<EOF
+          base_url: https://open.bigmodel.cn/api/v1
+          api_key: ${ZHIPU_API_KEY}
+          wire: responses
+          models:
+            review: glm-5.3-flash
+            deep: glm-5.3
+          request:
+            review_reasoning: high
+            deep_reasoning: max
+            max_output_tokens: 8000
+          EOF
+        env:
+          ZHIPU_API_KEY: ${{ secrets.ZHIPU_API_KEY }}
+
+      - name: 重写八域综述（断流自动重试；个别域失败不影响其余）
+        run: |
+          set +e
+          for dom in video_image_coding self_improvement standards_ecosystem audio_coding streaming_delivery quality_assessment processing_enhancement immersive_media; do
+            echo "=== $dom ==="
+            uv run --with pyyaml python scripts/synthesize_kb.py --only $dom || echo "$dom failed (kept previous version)"
+          done
+
+      - name: 校验并提交
+        run: |
+          uv run --with pyyaml python scripts/validate_kb.py
+          git config user.name "engine-bot"
+          git config user.email "engine-bot@users.noreply.github.com"
+          git add kb/synthesis/
+          git diff --cached --quiet || git commit -m "data: weekly domain synthesis refresh $(date -u +%F)"
+          git push
