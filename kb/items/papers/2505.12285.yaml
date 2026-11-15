@@ -12,6 +12,7 @@ source:
 time:
   published: '2025-05-18'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: concept:LLM
   role: subject
@@ -41,6 +42,7 @@ summaries:
   one_liner_zh: 语言引导与RL数值引导结合，使LLM与启发式搜索协同进化；7B本地模型超越依赖更强API模型的纯语言引导方法
   abstract_zh: 针对复杂优化问题的启发式设计，现有LLM+进化搜索方法主要依赖语言（提示词）引导，而不调整底层模型。CALM提出混合框架，将语言引导与数值引导结合，后者通过基于所生成启发式质量的强化学习对LLM进行微调，实现联合优化，使LLM与搜索过程协同进化。方法在多种优化任务上超越SOTA基线，仅需7B模型INT4量化、单张24GB
     GPU本地运行，并胜过使用显著更强API模型的纯语言引导方法。
+  deep_dive: docs/auto/2505.12285.md
 assessment:
   relevance: high
   decision: summary_only

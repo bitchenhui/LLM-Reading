@@ -12,6 +12,7 @@ source:
 time:
   published: '2025-07-10'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: concept:SelfImprovement
   role: subject
@@ -31,6 +32,7 @@ claims:
 summaries:
   one_liner_zh: 提出SOAR，交替进行LLM进化搜索与事后学习微调实现自改进，在ARC-AGI公开测试集解决52%任务。
   abstract_zh: 论文提出SOAR方法，将语言模型整合进自改进的进化循环：第一阶段用LLM采样并精炼候选程序解（进化搜索），第二阶段将搜索尝试转化为有效的'问题-解'训练对（事后学习），用于微调LLM的采样与精炼能力，从而在后续迭代中获得更强的搜索能力。在具有挑战性的ARC-AGI基准上，SOAR在不同模型规模和迭代轮次下均取得显著性能提升，并利用采样与精炼两类微调任务间的正向迁移。这些改进可延续到测试时适应阶段，使SOAR在ARC-AGI公开测试集上解决52%的任务。代码已开源（github.com/flowersteam/SOAR）。
+  deep_dive: docs/auto/2507.14172.md
 assessment:
   relevance: high
   decision: summary_only

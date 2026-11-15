@@ -12,6 +12,7 @@ source:
 time:
   published: '2025-05-23'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: concept:LLM
   role: subject
@@ -34,6 +35,7 @@ claims:
 summaries:
   one_liner_zh: 提出负感知微调NFT，让SL利用自生成负样本实现LLM自改进，严格在线策略下与GRPO等价
   abstract_zh: 强化学习通过二元验证器信号实现自改进，推动了近期LLM数学能力的跃升，而监督学习因依赖参考答案、无法反思错误而很少被用于验证驱动训练。本文提出负感知微调（NFT），在在线训练中不再丢弃自生成的负答案，而是构建一个与待优化正向LLM共享同一参数化的隐式负策略对其建模，从而无需外部教师即可在全部生成数据上直接进行策略优化。在7B与32B模型的数学推理任务上，NFT显著超越拒绝采样微调等SL基线，匹配甚至超越GRPO、DAPO等领先RL算法。理论上证明在严格在线策略训练下NFT与GRPO等价，弥合了二元反馈学习系统中SL与RL方法的鸿沟。
+  deep_dive: docs/auto/2505.18116.md
 assessment:
   relevance: high
   decision: summary_only

@@ -12,6 +12,7 @@ source:
 time:
   published: '2022-06-14'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: concept:SuperResolution
   role: subject
@@ -32,6 +33,7 @@ summaries:
   one_liner_zh: 提出可学习退化算子与高效多尺度网络，从真实低质量动画视频中学退化分布并高效超分恢复。
   abstract_zh: 论文研究动画视频的真实世界视频超分辨率（VSR）问题，提出三项关键改进。其一，以往真实世界超分多依赖模糊、噪声、压缩等无学习能力的基本算子模拟退化，本文改为从真实低质量动画视频中学习神经网络化的基础退化算子并纳入退化生成管线，以更好拟合真实退化分布。其二，构建大规模高质量动画视频数据集
     AVC，支撑动画超分的全面训练与评估。其三，设计高效多尺度网络结构，兼顾单向循环网络的效率与滑窗方法的有效性。由此得到的 AnimeSR 能高效有效地恢复真实低质量动画视频，性能优于既有最先进方法，代码与模型已开源。
+  deep_dive: docs/auto/2206.07038.md
 assessment:
   relevance: high
   decision: summary_only

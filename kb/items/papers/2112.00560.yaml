@@ -12,6 +12,7 @@ source:
 time:
   published: '2021-12-01'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: codec:G-PCC
   role: subject
@@ -39,6 +40,7 @@ summaries:
   one_liner_zh: 提出多尺度图注意力网络 MS-GAT 去除 G-PCC 属性压缩伪影，较 Predlift/RAHT 平均降约 10% BD-rate。
   abstract_zh: G-PCC 在低码率下会对点云属性引入严重压缩伪影，该文提出首个针对 G-PCC 的属性伪影去除方法——多尺度图注意力网络 MS-GAT。方法基于点云几何坐标构建图并用切比雪夫图卷积提取属性特征，通过多尺度方案同时捕获当前点与近邻点及远距点之间的短/长程相关性。针对自适应量化导致各点伪影程度不同的问题，将每点量化步长作为网络额外输入，并引入加权图注意力层重点关注伪影更严重的点。客观结果显示相比
     Predlift 平均降低 9.74% BD-rate、相比 RAHT 降低 10.13% BD-rate；主观上色偏、模糊与量化噪声等视觉伪影明显减少。
+  deep_dive: docs/auto/2112.00560.md
 assessment:
   relevance: high
   decision: summary_only

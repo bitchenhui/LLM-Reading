@@ -12,6 +12,7 @@ source:
 time:
   published: '2025-06-27'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: dataset:Kodak
   role: subject
@@ -41,6 +42,7 @@ summaries:
   one_liner_zh: 单步扩散实现超低码率（低至0.005bpp）高保真高真实感图像压缩，解码速度接近主流变换编码。
   abstract_zh: 扩散式图像压缩借助预训练文生图模型的生成先验，可在低于0.05 bpp的超低码率下实现高真实感重建，但现有方法解码端需要大量去噪步数且难以保证像素级保真。StableCodec提出深度压缩潜在编解码器，仅需传输带噪潜在表示即可供单步去噪使用；并设计双分支编码结构（辅助编码器-解码器对）增强重建保真度，采用码率与像素级约束的端到端联合优化。在CLIC
     2020、DIV2K与Kodak数据集上，StableCodec在FID、KID、DISTS上以显著优势超越现有方法，最低评测码率可低至0.005 bpp，同时保持较强保真度，推理速度与主流变换编码方案相当。全部源代码已开源。
+  deep_dive: docs/auto/2506.21977.md
 assessment:
   relevance: high
   decision: deep_read

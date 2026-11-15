@@ -12,6 +12,7 @@ source:
 time:
   published: '2025-03-21'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: codec:G-PCC
   role: subject
@@ -41,6 +42,7 @@ summaries:
   one_liner_zh: 提出集成于G-PCC编解码管线的高效维纳滤波器，显著提升动态点云属性的率失真性能。
   abstract_zh: 针对G-PCC有损压缩在低码率下重建质量较低的问题，提出一种可集成于其编解码器管线的高效维纳滤波器。该方法先构建基础维纳滤波器，再通过系数继承与基于方差的点分类（针对亮度分量）加以改进。同时提出基于Morton码的快速最近邻搜索算法，降低滤波系数计算中最近邻搜索的复杂度。在无损几何-有损属性配置下，相比最新G-PCC测试平台（v7.0
     rc2），Luma、Cb、Cr的平均BD-rate分别为-6.1%、-7.3%、-8.0%，且计算复杂度可承受。
+  deep_dive: docs/auto/2503.17467.md
 assessment:
   relevance: high
   decision: summary_only
