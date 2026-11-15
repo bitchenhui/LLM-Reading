@@ -12,6 +12,7 @@ source:
 time:
   published: '2024-06-15'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: codec:HEVC
   role: subject
@@ -31,6 +32,7 @@ claims:
 summaries:
   one_liner_zh: 用对象-属性-关系（OAR）语义序列表示视频实现低码率生成式重建，并与JSCC结合，低码率下优于H.265。
   abstract_zh: 论文针对语义通信中JSCC端到端训练方法缺乏可解释语义表示、下游任务适配性差的问题，提出以对象-属性-关系（OAR）作为视频语义框架。OAR序列既用于视频的低码率表示，也用于生成式视频重建。作者还将OAR融入图像JSCC模型，使通信资源向对下游任务更关键的区域倾斜。在交通监控视频数据集上的实验表明，该OAR视频编码方法在低码率下优于H.265，并与JSCC协同实现鲁棒高效的视频传输。
+  deep_dive: docs/auto/2406.10469.md
 assessment:
   relevance: high
   decision: deep_read

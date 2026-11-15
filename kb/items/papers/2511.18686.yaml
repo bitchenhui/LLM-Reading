@@ -12,6 +12,7 @@ source:
 time:
   published: '2025-11-24'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: codec:HEVC
   role: subject
@@ -47,6 +48,7 @@ claims:
 summaries:
   one_liner_zh: 多代NVIDIA/Intel GPU与高通SoC硬件编码器实测：实时场景RD性能可匹敌软件编码器，代际间RD提升甚微。
   abstract_zh: 本文系统评测了多代NVIDIA、Intel GPU以及高通骁龙移动SoC内置的硬件视频编码器，聚焦4K/8K超高清直播的实时编码需求，考察RD性能、编码速度与功耗三个维度。评测对象覆盖HEVC、VP9、AV1及最新H.266/VVC的硬件与软件编码器，并采用PSNR、SSIM和基于机器学习的VMAF等指标进行量化对比。结果显示，在实时编码场景下现代GPU硬件编码器的RD性能已可达到软件编码器水平；新一代硬件编码速度有所提升，但硬件代际之间的RD性能改进基本可忽略。论文还计算了各硬件编码器达到YouTube转码质量所需的码率，为实际部署提供参考。
+  deep_dive: docs/auto/2511.18686.md
 assessment:
   relevance: high
   decision: summary_only

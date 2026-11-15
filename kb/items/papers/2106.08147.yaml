@@ -12,6 +12,7 @@ source:
 time:
   published: '2021-06-15'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: concept:SuperResolution
   role: subject
@@ -40,6 +41,7 @@ summaries:
   abstract_zh: 论文针对视频编码中的空间分辨率自适应（低分辨率编码、解码端上采样重建）路线，提出感知驱动的超分辨率方法 M-SRGAN。该方法采用改进的 CNN 模型，通过生成对抗网络（GAN）在压缩内容上以感知损失函数训练，替代传统上采样滤波器，以克服
     MSE 类像素损失与主观质量相关性差的问题。方法集成到 HEVC HM 16.20，并在 JVET 通用测试条件（UHD 测试序列）的 Random Access 配置下评估。结果显示相对原始 HM
     16.20 感知质量明显提升，以 VMAF 衡量的 Bjøntegaard Delta 平均码率节省达 35.6%。
+  deep_dive: docs/auto/2106.08147.md
 assessment:
   relevance: high
   decision: deep_read

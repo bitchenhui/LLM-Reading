@@ -12,6 +12,7 @@ source:
 time:
   published: '2024-05-23'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: concept:NeRF
   role: subject
@@ -30,6 +31,7 @@ claims:
 summaries:
   one_liner_zh: 提出JointRF端到端联合优化动态NeRF表示与压缩，显著提升体视频压缩效率与质量。
   abstract_zh: 针对动态长序列辐射场表示数据量巨大、难以渲染的问题，提出JointRF——动态NeRF表示与压缩的端到端联合优化方案。方法采用紧凑残差特征网格与系数特征网格表示动态NeRF，在不牺牲质量的前提下处理大运动并降低时间冗余。同时引入顺序特征压缩子网络进一步消除时空冗余，并将表示与压缩子网络端到端联合训练。大量实验表明JointRF在多个数据集上取得优于先前方法的压缩性能。
+  deep_dive: docs/auto/2405.14452.md
 assessment:
   relevance: high
   decision: summary_only

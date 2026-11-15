@@ -13,6 +13,7 @@ source:
 time:
   published: '2023-04-19'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: impl:TCM
   role: subject
@@ -53,6 +54,7 @@ summaries:
   one_liner_zh: 提出大核深度卷积加自适应权重生成的变换编码LLIC，在Kodak上较VTM-17.0 Intra节省约9.5-10.9%码率。
   abstract_zh: 针对现有变换编码有效感受野不足的问题，论文首次在学习图像压缩中引入少量大核深度卷积，在不显著增加复杂度的前提下扩大感受野以去除更多冗余、辅助纹理合成。为适应图像多样性，提出自条件生成权重的自适应机制，并配合非线性嵌入与门控实现轻量逐点交互；同时引入自条件的通道级自适应比特分配策略增强通道间动态交互。研究还探索了释放大核潜力的精化训练方法，并通过统一对齐熵模型构建LLIC-STF、LLIC-ELIC、LLIC-TCM三个模型与既有变换方法公平对比。实验显示三个模型在Kodak上相对VTM-17.0
     Intra分别降低BD-Rate 9.49%、9.47%、10.94%，取得SOTA性能与更优的性能-复杂度权衡。
+  deep_dive: docs/auto/2304.09571.md
 assessment:
   relevance: high
   decision: deep_read

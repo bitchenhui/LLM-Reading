@@ -13,6 +13,7 @@ source:
 time:
   published: '2021-07-28'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: codec:VVC
   role: subject
@@ -47,6 +48,7 @@ summaries:
   abstract_zh: VVC 是 ITU-T 与 ISO/IEC 联合制定的最新国际视频编码标准，2020 年 7 月定稿，在相同主观质量下相比 HEVC 可降低约 50% 码率。论文介绍了一套开源软件包，在标准定稿仅一年后即可搭建完整的
     VVC 端到端工具链，包括 Fraunhofer HHI 的快速高效编码库 VVenC 和实时解码库 VVdeC。通过实验性集成 GPAC 工具与 FFmpeg 媒体框架，支持将 VVenC 等编码的
     VVC 码流封装为 MP4 并用 DASH 进行内容创建与流媒体传输。VVdeC 的集成使接收端可完成播放，论文还提供了“文件编码+播放”与“基于 DASH 的自适应流媒体”两个应用场景的逐步教程。
+  deep_dive: docs/auto/2107.13385.md
 assessment:
   relevance: high
   decision: deep_read

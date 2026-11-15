@@ -12,6 +12,7 @@ source:
 time:
   published: '2021-05-12'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: codec:VVC
   role: subject
@@ -42,6 +43,7 @@ summaries:
   one_liner_zh: 以帧内/帧间预测信息作训练先验与输入的CNN质量增强框架，在VTM-10上较默认CNN QE滤波器再降1.52% BD-BR。
   abstract_zh: 该文提出利用编码端规范决策信息（重点是帧内与帧间预测信号）的CNN质量增强框架：预测相关信息既参与训练阶段也作为网络输入，使模型能学习各编码类型特有的失真。为降低内存需求，所有QP共用单一模型并通过QP-map适配，且亮度与色度共享该模型。除后处理（PP）外还考虑了环路滤波（ILF）的编码器集成方式，并利用GoP特性提升性能。框架实现于VTM-10之上，实验表明在同等网络复杂度下，预测感知设计较默认CNN
     QE滤波器额外带来1.52%的BD-BR编码效率增益。
+  deep_dive: docs/auto/2105.05658.md
 assessment:
   relevance: high
   decision: summary_only

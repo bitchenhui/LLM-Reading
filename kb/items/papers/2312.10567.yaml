@@ -13,6 +13,7 @@ source:
 time:
   published: '2023-12-17'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: codec:VVC
   role: subject
@@ -52,6 +53,7 @@ summaries:
   one_liner_zh: 提出轻量CNN在CTU级预测8×8网格划分深度以剪枝VVC帧间QT搜索，VTM10 RA下提速17–30%，BD-rate仅增0.37–1.18%
   abstract_zh: 针对VVC较HEVC带来约50% BD-rate增益但编码复杂度约10倍的问题，作者提出一种轻量级CNN方法加速VVC帧间划分决策。方法将每个CTU划分为固定的8×8网格，用小型网络为每个单元预测其划分深度信息，并在率失真优化过程中据此限制QT分割搜索、剪除
     unlikely 的划分候选。在VTM10的RandomAccess GOP32配置下，该方法取得17%–30%的编码加速，BD-rate仅上升0.37%–1.18%，实现了速度与压缩效率的良好权衡。
+  deep_dive: docs/auto/2312.10567.md
 assessment:
   relevance: high
   decision: deep_read

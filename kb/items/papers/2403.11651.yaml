@@ -12,6 +12,7 @@ source:
 time:
   published: '2024-03-18'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: codec:HEVC
   role: subject
@@ -45,6 +46,7 @@ claims:
 summaries:
   one_liner_zh: 缩短Cool-chic训练以降低编解码复杂度，300乘法/像素微型解码器仍优于HEVC
   abstract_zh: 过拟合式图像编解码器通过为每张图像过拟合一个轻量解码器，在压缩性能与解码复杂度间取得良好平衡，其代表Cool-chic可在约2000次乘法/像素的解码代价下达到与VVC相当的图像编码性能。本文进一步降低Cool-chic的编码与解码复杂度：通过缩短训练时长来削减编码开销，直至完全不做逐图过拟合。实验表明，一个每像素仅需约300次乘法的微型神经解码器性能仍优于HEVC。作者还发布了该解码器的近实时CPU实现（开源）。
+  deep_dive: docs/auto/2403.11651.md
 assessment:
   relevance: high
   decision: deep_read
