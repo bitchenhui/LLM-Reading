@@ -12,6 +12,7 @@ source:
 time:
   published: '2024-08-29'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: concept:LLM
   role: subject
@@ -30,6 +31,7 @@ claims:
 summaries:
   one_liner_zh: 固定计算预算下，用弱而便宜的模型生成合成数据微调LLM，推理性能反而优于强而昂贵模型的数据。
   abstract_zh: 论文在固定推理计算预算（如FLOPs）下，重新审视用强模型生成合成数据训练LLM推理的常见做法，比较强而昂贵（SE）与弱而便宜（WC）两类数据生成模型的权衡。作者从覆盖率、多样性与误报率三个维度评估生成数据：WC模型数据覆盖率和多样性更高，但误报率也更高。随后在知识蒸馏、自我改进以及新提出的弱到强提升三种设定下微调语言模型。结果显示，用WC数据训练的模型在多个基准、多种WC/SE组合下一致优于SE数据训练的模型，挑战了依赖强模型做合成数据的主流实践。
+  deep_dive: docs/auto/2408.16737.md
 assessment:
   relevance: high
   decision: summary_only

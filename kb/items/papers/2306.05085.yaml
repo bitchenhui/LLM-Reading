@@ -13,6 +13,7 @@ source:
 time:
   published: '2023-06-08'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: impl:TIC
   role: subject
@@ -30,6 +31,7 @@ summaries:
   one_liner_zh: 无需微调编解码器，借助实例级与任务级提示将Transformer图像压缩迁移至多种机器感知任务。
   abstract_zh: 该工作提出TransTIC框架，旨在不微调编解码器的前提下，将基于Transformer的图像压缩编解码器从人类感知迁移到机器感知。受视觉提示调优（visual prompt
     tuning）启发，框架采用实例级提示生成器，向编码器注入实例相关提示、向解码器注入任务相关提示。大量实验表明该方法能将基础编解码器迁移到多种机器任务，并显著优于竞争方法。作者声称这是首次将提示机制应用于低层图像压缩任务。
+  deep_dive: docs/auto/2306.05085.md
 assessment:
   relevance: high
   decision: deep_read

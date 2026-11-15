@@ -12,6 +12,7 @@ source:
 time:
   published: '2023-05-23'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: concept:SelfImprovement
   role: subject
@@ -39,6 +40,7 @@ summaries:
   one_liner_zh: 提出 SIRLC 无监督方法：LLM 兼任学生与教师，以自我评分作 RL 奖励，无需外部标签即可提升推理与翻译性能。
   abstract_zh: 该文提出一种不依赖外部标签的无监督 LLM 自我改进方法 SIRLC。其出发点是语言模型评估文本质量比生成文本更容易，因此让 LLM 兼任两个角色：作为学生对无标注问题生成答案，作为教师对生成文本进行评估打分。模型参数通过强化学习更新，以最大化自我评估分数。实验表明
     SIRLC 可应用于推理、文本生成与机器翻译等多种 NLP 任务：推理任务答题准确率提升 5.6%，翻译任务 BERTScore 从 0.82 升至 0.86，且方法适用于不同规模的模型，展现了广泛适用性。
+  deep_dive: docs/auto/2305.14483.md
 assessment:
   relevance: high
   decision: summary_only

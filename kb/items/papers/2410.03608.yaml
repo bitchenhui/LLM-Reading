@@ -12,6 +12,7 @@ source:
 time:
   published: '2024-10-04'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: concept:LLM
   role: subject
@@ -52,6 +53,7 @@ summaries:
     LLM 直接打分，TICK 使 LLM 判断与人类偏好完全一致率从 46.4% 提升到 52.2%。进一步提出 STICK（Self-TICK）用于自我改进：自细化在 LiveBench 推理任务上获得
     +7.8% 绝对提升，Best-of-N 选择在 WildBench 真实指令数据集上获得 +6.3% 绝对提升。此外，将检查表提供给人类评估者后，WildBench 标注者间一致性从 0.194
     提升到 0.256，表明结构化、多维度自我改进是推进 LLM 能力的有效途径。
+  deep_dive: docs/auto/2410.03608.md
 assessment:
   relevance: high
   decision: summary_only

@@ -12,6 +12,7 @@ source:
 time:
   published: '2024-09-13'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: org:USTC
   role: subject
@@ -47,6 +48,7 @@ summaries:
   one_liner_zh: 提出含40张4K图像与10个1080p视频的USTC-TD编码测试数据集，并用PSNR/MS-SSIM/VMAF/MOS为标准化与学习型编码方案建立基准。
   abstract_zh: 论文提出图像/视频编码测试数据集USTC-TD，包含40张4K空间分辨率图像和10个1080p分辨率视频序列，内容覆盖场景类型、纹理、运动、视角等环境因素以及光照、镜头、阴影等专门设计的成像因素。该数据集已被IEEE
     VCIP 2022与2023端到端图像/视频编码挑战赛实际采用。作者定量评估了数据集在空间、时间、色彩、亮度等特征维度上的表现，并与既有测试数据集对比，验证其对现有数据集短板的补足作用。论文进一步在USTC-TD上使用客观指标（PSNR、MS-SSIM、VMAF）与主观指标（MOS）对经典标准化编码和近期学习型图像/视频编码方案进行广泛基准评测，据此分析各方案性能并展望编码研发方向，全部数据已在线公开。
+  deep_dive: docs/auto/2409.08481.md
 assessment:
   relevance: high
   decision: deep_read

@@ -12,6 +12,7 @@ source:
 time:
   published: '2024-12-03'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: concept:SelfImprovement
   role: subject
@@ -35,6 +36,7 @@ summaries:
   one_liner_zh: 形式化LLM自改进中的生成-验证差距，发现其随预训练算力单调增长的标度现象
   abstract_zh: 该文对LLM自改进机制（模型自我验证输出、据此过滤或重加权数据、再蒸馏）开展模块化、可控的系统研究，给出自改进的数学形式化刻画，指出其主要由'生成-验证差距'（generation-verification
     gap）这一量支配。在多个模型家族与任务上的实验发现自改进存在标度现象：生成-验证差距的变体随模型预训练算力（flops）单调增长。论文还分析了自改进可行的条件、提出迭代式自改进流程及提升其性能的途径。
+  deep_dive: docs/auto/2412.02674.md
 assessment:
   relevance: high
   decision: summary_only
