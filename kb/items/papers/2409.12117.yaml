@@ -12,6 +12,7 @@ source:
 time:
   published: '2024-09-18'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: concept:NeuralAudioCodec
   role: subject
@@ -42,6 +43,7 @@ summaries:
   one_liner_zh: 提出LFSC低帧率神经语音编解码器（1.89 kbps、21.5 fps），使LLM语音合成推理提速约3倍且可懂度更优。
   abstract_zh: 针对音频编解码器通常帧率过高、导致自回归LLM训练与推理缓慢的问题，作者提出低帧率语音编解码器LFSC。该方法将有限标量量化与基于大型语音语言模型的对抗训练相结合，实现高质量音频压缩。LFSC在1.89
     kbps码率下仅产生21.5帧/秒的离散token序列。实验表明，采用LFSC的LLM文本转语音模型推理速度提升约3倍，同时可懂度改善、合成质量与此前的编解码器方案相当。
+  deep_dive: docs/auto/2409.12117.md
 assessment:
   relevance: high
   decision: summary_only

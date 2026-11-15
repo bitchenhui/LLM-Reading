@@ -12,6 +12,7 @@ source:
 time:
   published: '2025-12-30'
   collected: '2026-11-15'
+  updated: '2026-11-15'
 entities:
 - ref: concept:SelfImprovement
   role: subject
@@ -34,6 +35,7 @@ claims:
 summaries:
   one_liner_zh: LoongFlow用计划-执行-总结认知范式与混合进化记忆构建自进化智能体，进化效率较OpenEvolve等基线最高提升60%。
   abstract_zh: 论文提出LoongFlow，一个自进化智能体框架，将LLM嵌入认知「计划-执行-总结」(PES)范式，把进化搜索转化为以推理为主的过程，以替代盲目的变异算子。为保持长期架构连贯性，其混合进化记忆系统融合多岛模型、MAP-Elites与自适应玻尔兹曼选择，在理论上平衡探索-利用权衡并维持多样行为生态位，防止优化停滞与过早收敛。框架实例化为通用算法发现Agent与ML流水线优化Agent。在AlphaEvolve基准与Kaggle竞赛上的评测显示，LoongFlow相对OpenEvolve、ShinkaEvolve等领先基线进化效率最高提升60%，并能发现更优解，显著降低计算开销。
+  deep_dive: docs/auto/2512.24077.md
 assessment:
   relevance: high
   decision: summary_only

@@ -12,6 +12,7 @@ source:
 time:
   published: '2023-09-07'
   collected: '2026-11-14'
+  updated: '2026-11-15'
 entities:
 - ref: concept:ABR
   role: subject
@@ -37,6 +38,7 @@ claims:
 summaries:
   one_liner_zh: 客户端运行的360度视频ABR算法BOLA360，仅取FOV内片段并证明近最优，QoE较SOTA提升13.6%–372.5%。
   abstract_zh: 针对360度视频码率需求比传统视频高一个数量级、卡顿易引发晕眩等挑战，提出运行于客户端播放器内的在线ABR算法BOLA360。算法仅下载可能落入用户视场（FOV）的视频片段以节省带宽，并持续自适应调整片段码率以避免卡顿、最大化QoE。理论上证明BOLA360相对最大化QoE的离线最优算法具有近最优性。在广泛的网络条件与用户头部运动轨迹评估中，QoE较SOTA算法提升13.6%至372.5%，是首个兼具理论与实证保证的360度视频ABR算法。
+  deep_dive: docs/auto/2309.04023.md
 assessment:
   relevance: high
   decision: summary_only
