@@ -42,6 +42,27 @@ SYNTH_INSTRUCTIONS = """你是音视频技术领域的首席研究员，为一�
 - 结构固定为四节：## 发展历程（按时间阶段，含版本里程碑）；## 技术主线与代表工作；## 当前关键问题（具体到技术点，这是最重要的部分）；## 趋势与展望。
 - 量化结论保留条目里的口径。中文，技术密度高，markdown 输出。"""
 
+INCREMENTAL_INSTRUCTIONS = """你是音视频技术领域的首席研究员，在维护一个垂类知识库的领域综述（增量修订模式）。
+你会拿到：上一版综述 + 自那以后新入库的条目。请输出更新后的完整综述：
+- 四节结构不变（发展历程/技术主线/关键问题/趋势），融合新信息，主动修订过时表述——
+  新证据刷新了旧结论的地方要改写，不要保留已知过时的说法。
+- 引用新增条目时标 item id；无据推断标「〔综述推断〕」；量化结论保留口径。
+- 四节之后追加一节「## 本周演进」：这次新信息带来的具体认知变化清单——哪些结论被
+  强化/修正/新增、出现了什么新问题，逐条引用新 item id。没有实质变化就写「无实质演进」。
+- 中文，技术密度高，markdown 输出。"""
+
+DELTA_MAX = 150   # 增量超过此数则回退全量重写（避免巨大的增量包）
+
+
+def prev_cutoff(dom: str) -> str | None:
+    """旧综述头部的数据截止日期；无旧版返回 None。"""
+    p = OUT_DIR / f"{dom}.md"
+    if not p.exists():
+        return None
+    import re
+    m = re.search(r"数据截止 (\d{4}-\d{2}-\d{2})", p.read_text(encoding="utf-8")[:300])
+    return m.group(1) if m else None
+
 
 def pack_domain(items: list[dict], with_notes: bool = True) -> str:
     lines = []
@@ -67,6 +88,7 @@ def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--only", type=str, default="", help="只合成指定 domain（逗号分隔）")
     ap.add_argument("--no-notes", action="store_true", help="跳过精读摘录（排障用）")
+    ap.add_argument("--full", action="store_true", help="强制全量重写（忽略旧版综述）")
     args = ap.parse_args()
 
     llm = LLM(yaml.safe_load(open(CONFIG, encoding="utf-8")))
@@ -86,13 +108,31 @@ def main() -> int:
         if only and dom not in only:
             continue
         items = by_domain[dom]
-        prompt = (f"领域：{DOMAIN_NAMES[dom]}（{dom}）\n"
-                  f"数据截止：{today}，共 {len(items)} 条（论文+版本动态）。\n\n"
-                  f"条目资料：\n{pack_domain(items, with_notes=not args.no_notes)}\n\n"
-                  f"请撰写该领域综述（四节结构）。")
-        print(f"[{dom}] {len(items)} 条，合成中…", flush=True)
+        instructions, mode = SYNTH_INSTRUCTIONS, "全量"
+        cutoff = None if args.full else prev_cutoff(dom)
+        delta = [d for d in items
+                 if cutoff and d["time"]["collected"] > cutoff] if cutoff else []
+        if cutoff and not delta and not args.full:
+            print(f"[{dom}] 自 {cutoff} 无新增，保留旧版")
+            continue
+
+        if cutoff and 0 < len(delta) <= DELTA_MAX:
+            old = (OUT_DIR / f"{dom}.md").read_text(encoding="utf-8")
+            prompt = (f"领域：{DOMAIN_NAMES[dom]}（{dom}）\n"
+                      f"上一版综述（数据截止 {cutoff}，全库共 {len(items)} 条）：\n\n{old}\n\n"
+                      f"—— 自 {cutoff} 以来新入库 {len(delta)} 条：\n\n"
+                      f"{pack_domain(delta, with_notes=not args.no_notes)}\n\n"
+                      f"请按增量修订模式输出更新后的完整综述（四节 + 本周演进）。")
+            instructions, mode = INCREMENTAL_INSTRUCTIONS, f"增量（+{len(delta)} 条）"
+        else:
+            prompt = (f"领域：{DOMAIN_NAMES[dom]}（{dom}）\n"
+                      f"数据截止：{today}，共 {len(items)} 条（论文+版本动态）。\n\n"
+                      f"条目资料：\n{pack_domain(items, with_notes=not args.no_notes)}\n\n"
+                      f"请撰写该领域综述（四节结构）。")
+
+        print(f"[{dom}] {len(items)} 条，{mode}，合成中…", flush=True)
         try:
-            md = llm.chat(prompt, tier="deep", instructions=SYNTH_INSTRUCTIONS,
+            md = llm.chat(prompt, tier="deep", instructions=instructions,
                           max_tokens=24000)
         except Exception as e:  # noqa: BLE001
             print(f"  ✗ 失败: {e}")

@@ -24,10 +24,31 @@ import yaml
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
 from fetch_arxiv import entity_patterns, load_entities  # noqa: E402
-from llm_review import LLM  # noqa: E402
+from llm_review import DOMAIN_MARKERS, LLM  # noqa: E402
+
+SYNTH_DIR = ROOT / "kb" / "synthesis"
 
 KB_ITEMS = ROOT / "kb" / "items"
 CONFIG = ROOT / "config" / "llm.local.yaml"
+
+# 域名/中文关键词 → 领域（问题没命中实体时的域识别）；具体域先于核心域判断
+DOMAIN_KEYWORDS = [
+    ("streaming_delivery", ["流媒体", "传输", "低延迟", "DASH", "WebRTC", "ABR"]),
+    ("audio_coding", ["音频", "语音", "音频编码"]),
+    ("quality_assessment", ["质量评估", "VQA", "IQA", "QoE", "画质"]),
+    ("processing_enhancement", ["超分", "后滤波", "增强"]),
+    ("immersive_media", ["沉浸", "点云", "NeRF", "3DGS", "三维", "光场"]),
+    ("standards_ecosystem", ["标准", "专利", "许可", "JVET", "提案"]),
+    ("self_improvement", ["自我改进", "自改进", "RSI", "EoH", "self-improvement"]),
+    ("video_image_coding", ["编码", "压缩", "codec", "视频", "图像"]),
+]
+
+
+def detect_domain(question: str) -> str | None:
+    for dom, kws in DOMAIN_KEYWORDS:
+        if any(k in question for k in kws):
+            return dom
+    return None
 
 ASK_INSTRUCTIONS = """你是音视频/图像编码领域的专家助手，回答基于给定的「基底资料」。
 要求：
@@ -59,15 +80,18 @@ def rank(question: str, items: list[dict], entities: dict, pats) -> tuple[list[d
     q_ents = {eid for pat, eid in pats if pat.search(question)}
     line_hit = next((l for k, l in LINE_KEYWORDS.items() if k in question), None)
     today = date.today()
-    # 意图感知：问版本/发布 → release 加权；问论文/方法 → paper 加权
+    # 意图感知：问版本/发布 → release 加权；问论文/方法 → paper 加权；问题点名领域 → 该域加权
     rel_intent = any(k in question for k in ("版本", "发布", "更新", "release", "上线", "changelog"))
     paper_intent = any(k in question for k in ("论文", "原理", "方法", "研究", "提出"))
+    dom_hint = detect_domain(question)
 
     def score(d: dict) -> tuple:
         overlap = d["_ents"] & q_ents
         w = sum(3 if entities.get(e, {}).get("type") in STRONG_TYPES else 1 for e in overlap)
         s = w * 3
         s += {"high": 4, "medium": 2, "low": 0}.get(d["assessment"]["relevance"], 0)
+        if dom_hint and d.get("domain") == dom_hint:
+            s += 3
         pub = d["time"]["published"]
         if (today.isoformat() > pub) and (int(today.strftime("%Y%m%d")) - int(pub.replace("-", "")) < 270):
             s += 2
@@ -100,7 +124,7 @@ def rank(question: str, items: list[dict], entities: dict, pats) -> tuple[list[d
                 break
         return picked or ranked[:k]
 
-    if q_ents or line_hit:
+    if q_ents or line_hit or dom_hint:
         ranked = sorted(items, key=score, reverse=True)
         picked = diverse([d for d in ranked if score(d)[0] > 2], 8) or diverse(ranked, 5)
     else:  # 无信号：近期高相关兜底
@@ -131,15 +155,38 @@ def pack_context(picked: list[dict]) -> str:
     return "\n\n".join(blocks)
 
 
+def domain_synthesis(question: str, q_ents: set[str]) -> str | None:
+    """问题 → 领域（先按中文关键词，再按命中实体）→ 对应领域的综述背景。"""
+    dom = detect_domain(question)
+    if dom is None:
+        from llm_review import CORE_DOMAIN
+        for d, markers in DOMAIN_MARKERS:
+            if q_ents & markers:
+                dom = d
+                break
+        if dom is None and q_ents:
+            dom = CORE_DOMAIN
+    if not dom:
+        return None
+    p = SYNTH_DIR / f"{dom}.md"
+    if p.exists():
+        text = p.read_text(encoding="utf-8")
+        return f"【领域综述背景（引擎合成，供全局背景，具体论断仍以下面条目为准）】\n{text[:12000]}\n"
+    return None
+
+
 def answer_question(question: str) -> dict:
     """检索 + 作答。供 CLI 与 serve.py 复用。"""
     entities = load_entities()
     pats = entity_patterns(entities)
     items = load_items()
     picked, q_ents = rank(question, items, entities, pats)
+    background = domain_synthesis(question, set(q_ents))
     context = pack_context(picked)
     llm = LLM(yaml.safe_load(open(CONFIG, encoding="utf-8")))
-    prompt = f"问题：{question}\n\n基底资料：\n{context}"
+    prompt = (f"问题：{question}\n\n"
+              + (background + "\n" if background else "")
+              + f"【条目资料】\n{context}")
     answer = llm.chat(prompt, tier="deep", instructions=ASK_INSTRUCTIONS, max_tokens=8000)
     return {
         "answer": answer,
