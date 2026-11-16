@@ -12,6 +12,7 @@ source:
 time:
   published: '2025-10-21'
   collected: '2026-11-14'
+  updated: '2026-11-16'
 entities:
 - ref: concept:SelfImprovement
   role: subject
@@ -42,6 +43,7 @@ summaries:
   one_liner_zh: 以求解器验证的经验库两阶段循环（学习+进化），让 LLM 无需重训练即持续提升优化建模能力。
   abstract_zh: 提出 AlphaOPT，一个自改进经验库框架，使 LLM 仅凭答案级反馈（无需金标准程序、标注推理轨迹或参数更新）即可学习优化建模知识。框架持续运行两阶段循环：库学习阶段从失败尝试中提取经求解器验证的结构化洞见，库进化阶段基于跨任务聚合证据细化各洞见的适用条件。该设计使模型积累可复用的建模原则、增强跨实例迁移，并保持库规模有界增长。在多个优化基准上，训练数据从
     100 条增至 300 条时准确率由 65% 升至 72%，并在两个分布外数据集上分别超过最强基线 9.1% 和 8.2%。
+  deep_dive: docs/auto/2510.18428.md
 assessment:
   relevance: high
   decision: summary_only

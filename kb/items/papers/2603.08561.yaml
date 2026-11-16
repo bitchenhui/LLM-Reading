@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-03-09'
   collected: '2026-11-15'
+  updated: '2026-11-16'
 entities:
 - ref: concept:LLM
   role: subject
@@ -48,6 +49,7 @@ summaries:
   abstract_zh: 针对标准 RL 只优化外在任务奖励、易过早收敛且经验隐式困在参数中的问题，RetroAgent 在外在奖励之外引入事后生成的双重内在反馈：数值型内在反馈度量相对既往尝试的子任务增量进展以奖励有益探索，语言型内在反馈将成败蒸馏为可复用的文本经验教训。为高效利用教训，提出
     SimUtil-UCB 检索策略，平衡语义相关性、历史效用与探索。在四个交互式智能体基准上取得新 SOTA，相对 GRPO 分别在 ALFWorld 提升 18.3%、WebShop 提升 15.4%、Sokoban
     提升 27.1%、MineSweeper 提升 8.9%，并表现出较强的测试时适应与分布外泛化能力。
+  deep_dive: docs/auto/2603.08561.md
 assessment:
   relevance: high
   decision: summary_only

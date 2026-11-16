@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-01-26'
   collected: '2026-11-15'
+  updated: '2026-11-16'
 entities:
 - ref: concept:LLM
   role: subject
@@ -41,6 +42,7 @@ claims:
 summaries:
   one_liner_zh: PrefixRL以成功离策略轨迹前缀为条件做在策略RL补全，加速困难问题上LLM推理RL并构成自我改进闭环。
   abstract_zh: 针对LLM推理RL在困难问题上正确在策略轨迹稀少、策略梯度消失的问题，作者提出PrefixRL：以成功离策略轨迹的前缀为条件，再运行在策略RL来完成剩余部分，规避标准离策略监督的不稳定性。理论证明该目标与标准RL目标一致且样本效率更高；通过前缀长度可调制问题难度以增强学习信号。实验发现“反向泛化”：仅在带前缀问题上训练即可泛化到无前缀的分布外表现，且学到的策略常与前缀不同。以基模型拒绝采样提供离策略轨迹形成自我改进闭环，在困难推理问题上达到相同训练奖励比最强基线（先SFT后RL）快2倍（已计入拒绝采样开销），最终奖励提升3倍，收益可迁移至held-out基准，且离策略轨迹来自不同模型家族时依然有效。
+  deep_dive: docs/auto/2601.18795.md
 assessment:
   relevance: high
   decision: summary_only
