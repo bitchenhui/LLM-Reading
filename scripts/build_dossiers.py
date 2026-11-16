@@ -106,6 +106,8 @@ def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--only", type=str, default="", help="只生成指定实体（逗号分隔的 entity id）")
     ap.add_argument("--full", action="store_true", help="强制全量重写")
+    ap.add_argument("--low-effort", action="store_true",
+                    help="深读用低推理档（大档案防 token 速率墙；汇总类内容够用）")
     args = ap.parse_args()
 
     cfg = load_yaml(DOS_CONFIG) if DOS_CONFIG.exists() else {}
@@ -135,6 +137,8 @@ def main() -> int:
 
     print(f"实体档案目标 {len(targets)} 个（阈值 ≥{min_items} 条，上限 {max_entities}）")
     llm = LLM(load_yaml(CONFIG))
+    if args.low_effort:
+        llm.req["deep_reasoning"] = "low"
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     today = date.today().isoformat()
 
@@ -153,8 +157,10 @@ def main() -> int:
                       f"请输出更新后的完整档案（三节 + 近期变化）。")
             instructions, mode = DOSSIER_INCREMENTAL_INSTRUCTIONS, f"增量（+{len(delta)}）"
         else:
+            # 大档案（>200 条）自动去掉精读摘录：摘录包过大易触发服务端断流
+            use_notes = len(items) <= 200
             prompt = (f"实体：{entities[eid]['name']}（{eid}）\n\n注册表静态信息：\n{entity_static(entities[eid])}\n\n"
-                      f"挂接条目 {len(items)} 条：\n{pack_items(items)}\n\n"
+                      f"挂接条目 {len(items)} 条：\n{pack_items(items, with_notes=use_notes)}\n\n"
                       f"请生成实体档案（三节结构）。")
         print(f"[{eid}] {len(items)} 条，{mode}，生成中…", flush=True)
         try:
