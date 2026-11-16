@@ -44,11 +44,14 @@ jobs:
             uv run --with pyyaml python scripts/synthesize_kb.py --only $dom || echo "$dom failed (kept previous version)"
           done
 
+      - name: 刷新实体档案（增量）
+        run: uv run --with pyyaml python scripts/build_dossiers.py || echo "dossiers failed (kept previous versions)"
+
       - name: 校验并提交
         run: |
           uv run --with pyyaml python scripts/validate_kb.py
           git config user.name "engine-bot"
           git config user.email "engine-bot@users.noreply.github.com"
-          git add kb/synthesis/
-          git diff --cached --quiet || git commit -m "data: weekly domain synthesis refresh $(date -u +%F)"
+          git add kb/synthesis/ kb/dossiers/
+          git diff --cached --quiet || git commit -m "data: weekly synthesis + entity dossier refresh $(date -u +%F)"
           git push

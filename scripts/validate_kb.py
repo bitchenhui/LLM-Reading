@@ -28,7 +28,7 @@ ENTITY_PREFIX_TYPE = {
 }
 ROLES = {"subject", "uses", "builds_on", "evaluated_on", "measured_by",
          "compared_against", "affiliation", "platform"}
-RELATION_TYPES = {"cites", "builds_on", "improves_on", "compares_with",
+RELATION_TYPES = {"cites", "builds_on", "improves_on", "supersedes", "compares_with",
                   "same_topic", "complements", "contrasts_with"}
 CONFIDENCE = {"reported", "verified", "inferred"}
 RELEVANCE = {"high", "medium", "low"}

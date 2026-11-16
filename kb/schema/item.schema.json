@@ -107,7 +107,7 @@
         "required": ["type", "ref"],
         "additionalProperties": false,
         "properties": {
-          "type": { "enum": ["cites", "builds_on", "improves_on", "compares_with", "same_topic", "complements", "contrasts_with"] },
+          "type": { "enum": ["cites", "builds_on", "improves_on", "supersedes", "compares_with", "same_topic", "complements", "contrasts_with"] },
           "ref": { "type": "string", "description": "目标信息项 ID" },
           "note": { "type": "string" }
         }

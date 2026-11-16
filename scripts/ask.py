@@ -29,6 +29,7 @@ from llm_review import DOMAIN_MARKERS, LLM  # noqa: E402
 SYNTH_DIR = ROOT / "kb" / "synthesis"
 
 KB_ITEMS = ROOT / "kb" / "items"
+DOSSIER_DIR = ROOT / "kb" / "dossiers"
 CONFIG = ROOT / "config" / "llm.local.yaml"
 
 # 域名/中文关键词 → 领域（问题没命中实体时的域识别）；具体域先于核心域判断
@@ -175,16 +176,30 @@ def domain_synthesis(question: str, q_ents: set[str]) -> str | None:
     return None
 
 
+def entity_dossiers(q_ents: set[str], limit: int = 2) -> str:
+    """问题命中的实体 → 优先取实体档案（最高浓度的单实体知识）。"""
+    parts = []
+    for ref in sorted(q_ents, key=lambda r: (0 if r.startswith(("codec:", "impl:")) else 1)):
+        p = DOSSIER_DIR / f"{ref.replace(':', '_')}.md"
+        if p.exists():
+            parts.append(f"【实体档案：{ref}（引擎维护的滚动档案）】\n{p.read_text(encoding='utf-8')[:8000]}\n")
+        if len(parts) >= limit:
+            break
+    return "\n".join(parts)
+
+
 def answer_question(question: str) -> dict:
     """检索 + 作答。供 CLI 与 serve.py 复用。"""
     entities = load_entities()
     pats = entity_patterns(entities)
     items = load_items()
     picked, q_ents = rank(question, items, entities, pats)
+    dossiers = entity_dossiers(set(q_ents))
     background = domain_synthesis(question, set(q_ents))
     context = pack_context(picked)
     llm = LLM(yaml.safe_load(open(CONFIG, encoding="utf-8")))
     prompt = (f"问题：{question}\n\n"
+              + (dossiers + "\n" if dossiers else "")
               + (background + "\n" if background else "")
               + f"【条目资料】\n{context}")
     answer = llm.chat(prompt, tier="deep", instructions=ASK_INSTRUCTIONS, max_tokens=8000)

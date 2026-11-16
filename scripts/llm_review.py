@@ -37,7 +37,7 @@ CONFIG = ROOT / "config" / "llm.local.yaml"
 
 ROLES = ["subject", "uses", "builds_on", "evaluated_on", "measured_by",
          "compared_against", "affiliation", "platform"]
-RELATION_TYPES = ["cites", "builds_on", "improves_on", "compares_with",
+RELATION_TYPES = ["cites", "builds_on", "improves_on", "supersedes", "compares_with",
                   "same_topic", "complements", "contrasts_with"]
 RESEARCH_LINES = ["traditional_codec_opt", "learned_codec", "coding_for_machines",
                   "generative_compression", "inr_representation", "systems_deployment"]
@@ -104,7 +104,8 @@ arXiv 分类: {', '.join(meta['categories'])}
 {ent_list}
 
 角色词表: subject=研究对象 uses=使用 builds_on=基于 evaluated_on=数据集 measured_by=指标 compared_against=对比锚点 affiliation=作者机构 platform=硬件平台
-已有信息项（relations 只能引用下列 id，仅在确有联系时给）:
+已有信息项（relations 只能引用下列 id，仅在确有联系时给；
+若新工作在相同基准上明确超越某已有条目，用 supersedes）:
 {item_list}
 
 输出 JSON：

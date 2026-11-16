@@ -41,6 +41,17 @@ def load(p: Path):
     return yaml.safe_load(open(p, encoding="utf-8"))
 
 
+def entity_display_names() -> dict[str, str]:
+    """实体 id → 人类可读名（优先中文别名，回退规范名）。"""
+    out = {}
+    for p in sorted((ROOT / "kb" / "entities").glob("*.yaml")):
+        for e in load(p):
+            zh = next((a for a in e.get("aliases", [])
+                       if any("\u4e00" <= c <= "\u9fff" for c in a)), None)
+            out[e["id"]] = zh or e["name"]
+    return out
+
+
 def build_data() -> dict:
     cutoff = (date.today() - timedelta(days=WEEK_DAYS)).isoformat()
     all_items = []
@@ -76,6 +87,27 @@ def build_data() -> dict:
         for p in sorted(SYNTH.glob("*.md")):
             synthesis[p.stem] = p.read_text(encoding="utf-8")
 
+    # 实体档案层：头部一行含名称与统计，卡片直接用
+    dossiers = []
+    doss_dir = ROOT / "kb" / "dossiers"
+    if doss_dir.exists():
+        for p in sorted(doss_dir.glob("*.md")):
+            text = p.read_text(encoding="utf-8")
+            first = text.split("\n", 1)[0].lstrip("# ").strip()
+            sub = text.split("\n")[2][:60] if len(text.split("\n")) > 2 else ""
+            dossiers.append({"id": p.stem, "title": first, "meta": sub, "md": text})
+
+    # 时间线事实层（近 180 天）
+    timeline = []
+    tl_path = ROOT / "kb" / "timeline.yaml"
+    if tl_path.exists():
+        tdata = load(tl_path)
+        ents_map = entity_display_names()
+        cutoff = (date.today() - timedelta(days=180)).isoformat()
+        timeline = [f for f in (tdata.get("facts") or []) if f.get("date", "") >= cutoff][:300]
+        for f in timeline:
+            f["entity_name"] = ents_map.get(f["entity"], f["entity"])
+
     return {
         "generated": date.today().isoformat(),
         "cutoff": cutoff,
@@ -94,6 +126,8 @@ def build_data() -> dict:
         "items_by_domain": {k: items_by_domain.get(k, []) for k in
                             [CORE] + [d for d in DOMAIN_ORDER if d != CORE]},
         "synthesis": synthesis,
+        "dossiers": dossiers,
+        "timeline": timeline,
     }
 
 
@@ -210,6 +244,10 @@ footer a { color: var(--dim); }
   </div>
   <div class="note">八大类领域综述（发展历程 · 技术主线 · 关键问题），由引擎基于全量条目合成：</div>
   <div id="synList"></div>
+  <div class="note" style="margin-top:22px">关键实体档案（"关于 X 我们都知道什么"，随数据滚动更新）：</div>
+  <div id="dossList"></div>
+  <div class="note" style="margin-top:22px">技术时间线（近 180 天：版本发布 · 高相关研究 · 标准提案；点击实体名过滤）：</div>
+  <div id="tlList"></div>
 </div>
 
 <footer id="foot"></footer>
@@ -333,6 +371,44 @@ for (const [dom, items] of Object.entries(DATA.items_by_domain)) {
   </div>`;
 }
 sl.innerHTML = synHTML || '<div class="empty">领域综述生成中（scripts/synthesize_kb.py）</div>';
+
+const dl = document.getElementById("dossList");
+let dossHTML = "";
+for (const d of DATA.dossiers) {
+  dossHTML += `<div class="syn">
+    <div class="head" onclick="this.parentElement.classList.toggle('open')">
+      <h3>${d.title}</h3>
+      <span class="arrow">${d.meta} · 展开/收起</span>
+    </div>
+    <div class="body">${md2html(d.md)}</div>
+  </div>`;
+}
+dl.innerHTML = dossHTML || '<div class="empty">实体档案生成中（scripts/build_dossiers.py）</div>';
+
+const KIND_ZH = { release: ["版本", "b-rel"], research: ["研究", "b-read"], standard: ["标准", "b-dom"] };
+let tlEnt = "";
+window.tlFilter = (name) => { tlEnt = (tlEnt === name ? "" : name); renderTL(); };
+function renderTL() {
+  const tl = document.getElementById("tlList");
+  const facts = DATA.timeline.filter(f => !tlEnt || f.entity_name === tlEnt);
+  let html = tlEnt ? `<div class="note">实体过滤：<b style="cursor:pointer" onclick="tlFilter('${tlEnt}')">${tlEnt} ✕</b>（${facts.length} 条）</div>` : "";
+  let month = "";
+  for (const f of facts) {
+    if (f.date.slice(0, 7) !== month) {
+      month = f.date.slice(0, 7);
+      html += `<h2 class="sec">${month}<span class="n"></span></h2>`;
+    }
+    const k = KIND_ZH[f.kind] || [f.kind, "b-sum"];
+    html += `<div class="row-item">
+      <div class="l1"><span class="d">${f.date}</span>
+        <span class="badge ${k[1]}">${k[0]}</span>
+        <span class="ent" style="cursor:pointer" onclick="tlFilter('${f.entity_name}')">${f.entity_name}</span>
+        ${f.url ? `<a href="${f.url}" target="_blank">${f.fact}</a>` : f.fact}</div>
+    </div>`;
+  }
+  tl.innerHTML = html || '<div class="empty">该实体近期无时间线事实</div>';
+}
+renderTL();
 
 function showTab(t) {
   document.getElementById("view-week").style.display = t === "week" ? "" : "none";
