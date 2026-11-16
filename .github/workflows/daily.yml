@@ -50,10 +50,11 @@ jobs:
       - name: 深读（每日 3 篇增量消化 deep_read 积压）
         run: uv run --with pyyaml --with pymupdf python scripts/deep_read.py --limit 3
 
-      - name: 周报、语料与校验
+      - name: 周报、语料、时间线与校验
         run: |
           uv run --with pyyaml python scripts/make_digest.py --days 7
           uv run --with pyyaml python scripts/export_corpus.py
+          uv run --with pyyaml python scripts/build_timeline.py
           uv run --with pyyaml python scripts/validate_kb.py
 
       - name: 提交推送
