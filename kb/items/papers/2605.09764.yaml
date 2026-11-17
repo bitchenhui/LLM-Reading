@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-05-10'
   collected: '2026-11-15'
+  updated: '2026-11-18'
 entities:
 - ref: concept:AlphaEvolve
   role: subject
@@ -45,6 +46,7 @@ claims:
 summaries:
   one_liner_zh: LEVI以多样性解库、大小LLM变异路由与保序代理基准，用更小预算替代前沿大模型完成进化搜索
   abstract_zh: LLM引导的进化搜索方法（如AlphaEvolve）在数学、系统研究和算法发现中有效，但依赖前沿大模型导致运行昂贵。作者认为这源于现有框架的搜索分配方式：解存档丢失多样性、把前沿模型浪费在小模型可完成的局部编辑、全量评估浪费rollout。LEVI提出三项改进：从起点建立并持续维护多样性的解数据库、发挥大小LLM各自优势的变异路由器、面向rollout密集场景的保序代理基准。在系统研究基准上，LEVI以比ShinkaEvolve、GEPA、AdaEvolve等已发表前沿模型运行小3.3-6.7倍的预算取得最高分，且在一个问题上以35倍更低成本达到既有最佳；在提示词优化上以不到一半的rollout预算在四个基准上持平或超过GEPA，框架已开源。
+  deep_dive: docs/auto/2605.09764.md
 assessment:
   relevance: high
   decision: summary_only

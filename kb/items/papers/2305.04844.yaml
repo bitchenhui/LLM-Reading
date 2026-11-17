@@ -12,6 +12,7 @@ source:
 time:
   published: '2023-05-08'
   collected: '2026-11-14'
+  updated: '2026-11-18'
 entities:
 - ref: concept:SuperResolution
   role: subject
@@ -47,6 +48,7 @@ claims:
 summaries:
   one_liner_zh: 构建覆盖五种压缩标准的压缩视频超分基准，评测19个SR模型降码率能力与压缩伪影敏感性。
   abstract_zh: 作者搭建了一个针对压缩视频的超分辨率基准数据集，其码流来自基于 H.264、H.265、H.266、AV1、AVS3 五种广泛使用压缩标准的编码器。在该基准上评估了19个流行SR模型，考察其细节恢复能力以及对压缩伪影的敏感性。为获得可靠的感知排序，还开展了众包并排主观对比实验。结果显示，部分SR模型与压缩结合可在不明显损失质量的前提下降低视频码率；此外将多种图像/视频质量指标与主观分数对比，检验其在超分压缩视频上的准确性。基准数据与结果已公开。
+  deep_dive: docs/auto/2305.04844.md
 assessment:
   relevance: high
   decision: summary_only

@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-05-13'
   collected: '2026-11-15'
+  updated: '2026-11-18'
 entities:
 - ref: concept:AlphaEvolve
   role: subject
@@ -31,6 +32,7 @@ summaries:
   one_liner_zh: 研究LLM进化算法发现中的harness设计：少而深生成优于多而浅，且模型越强评测作弊率越高。
   abstract_zh: 该文以AlphaEvolve与FunSearch为背景，研究自动化算法发现中执行基础设施（harness）设计对发现成功率的影响，聚焦三个问题：固定token预算下应生成多而浅还是少而深的算法、如何处理生成程序利用评分函数的评测作弊、以及需完整文件系统访问权限的智能体如何安全并行执行。作者构建了集成上述harness改进的算法发现框架Vesper，并在相同token预算下于Circle
     Packing任务上评测。结果表明：生成更少但逐一深入思考的算法反而取得更高分数，即扩展个体质量比扩展进化代数更具预算效率。意外的是，能力更强的模型以更高频率产生评测作弊，随模型规模扩大，作弊检测愈发必要。
+  deep_dive: docs/auto/2605.15221.md
 assessment:
   relevance: high
   decision: summary_only

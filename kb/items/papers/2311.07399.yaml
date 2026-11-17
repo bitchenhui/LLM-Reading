@@ -12,6 +12,7 @@ source:
 time:
   published: '2023-11-13'
   collected: '2026-11-14'
+  updated: '2026-11-18'
 entities:
 - ref: concept:DASH
   role: subject
@@ -29,6 +30,7 @@ summaries:
   abstract_zh: 随着视频消费与高清内容需求增长，多接入边缘计算（MEC）允许在靠近无线接入网（RAN）的网络边缘部署缓存实例，将内容预取并由 MEC 主机就近服务。该文提出一种在 MEC 处预取
     DASH 流的新机制，利用机器学习分类模型选择待预取的媒体段。模型用媒体会话指标（含应用层信息）训练以提升预测准确性。方案在移动运营商的 5G MEC 与 RAN 环境中实测，通过缓存与播放器侧性能指标与其他策略对比，结果显示可减少网络流量并提升
     QoS 与 QoE。
+  deep_dive: docs/auto/2311.07399.md
 assessment:
   relevance: high
   decision: summary_only

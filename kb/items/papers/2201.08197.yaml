@@ -13,6 +13,7 @@ source:
 time:
   published: '2022-01-20'
   collected: '2026-11-14'
+  updated: '2026-11-18'
 entities:
 - ref: concept:ABR
   role: subject
@@ -38,6 +39,7 @@ claims:
 summaries:
   one_liner_zh: 提出DRL框架ENAVS联合优化ABR码率决策与客户端视频增强，较传统ABR提升5%-14% QoE。
   abstract_zh: 面向时变无线网络与受限客户端算力下的高质量视频流，论文将码率自适应与客户端视频增强（对下载分段做图像处理提升质量）的联合决策建模为马尔可夫决策过程，提出基于深度强化学习的ENAVS框架。作者论证了视频压缩是流媒体质量的主要影响因素，并表明视频增强算法在信噪比与帧率（FPS）两方面均优于超分辨率算法，是客户端处理更优的方案。在真实带宽轨迹与视频上的测试床实验显示，在相同带宽与算力条件下，ENAVS比传统ABR流多交付5%-14%的QoE。
+  deep_dive: docs/auto/2201.08197.md
 assessment:
   relevance: high
   decision: summary_only

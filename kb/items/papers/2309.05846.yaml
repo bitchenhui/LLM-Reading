@@ -12,6 +12,7 @@ source:
 time:
   published: '2023-09-11'
   collected: '2026-11-14'
+  updated: '2026-11-18'
 entities:
 - ref: org:JVET
   role: subject
@@ -47,6 +48,7 @@ claims:
 summaries:
   one_liner_zh: 总结JVET NNVC中NN帧内预测与NN环路滤波的设计实现，NNVC-4.0较VTM-11.0_nnvc平均BD-rate节省约9%–23%。
   abstract_zh: 本文系统阐述JVET在'基于神经网络的视频编码'（NNVC）框架下的探索工作，采用将神经网络编码工具嵌入经典视频压缩框架的技术路线。论文重点讨论两大技术：神经网络帧内预测与神经网络环路滤波，二者经多轮JVET会议评估最终被采纳进NNVC参考软件。在NNVC上的大量实验表明，相比VTM-11.0_nnvc，NNVC-4.0中提出的NN编码工具在随机接入、低延迟与全帧内三种配置下均取得显著的Y/Cb/Cr平均BD-rate降低。
+  deep_dive: docs/auto/2309.05846.md
 assessment:
   relevance: high
   decision: deep_read
