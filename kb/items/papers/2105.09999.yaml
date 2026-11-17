@@ -12,6 +12,7 @@ source:
 time:
   published: '2021-05-20'
   collected: '2026-11-14'
+  updated: '2026-11-18'
 entities:
 - ref: concept:ABR
   role: subject
@@ -34,6 +35,7 @@ claims:
 summaries:
   one_liner_zh: 提出卷积层+可微重采样器的构建块，使CNN支持非整数倍下采样，应用于ABR流媒体，编码效率优于Lanczos。
   abstract_zh: 传统CNN卷积层只能实现整数倍的分辨率改变，而视频压缩应用中常需在1080p与720p等标准化分辨率之间进行非整数转换。该文提出一种新构建块：由保持输入分辨率的常规卷积层加一个可微重采样器（resizer）组成，缩放操作完全交给重采样器处理，从而使任意CNN架构都能适配非整数缩放。作者将该块替换一个现代深度下采样模型中的缩放卷积层，并应用于自适应码率（ABR）视频流媒体场景。实验结果表明，在测试视频上其编码效率以PSNR、SSIM和VMAF衡量均优于传统Lanczos算法。
+  deep_dive: docs/auto/2105.09999.md
 assessment:
   relevance: high
   decision: deep_read

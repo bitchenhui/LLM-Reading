@@ -12,6 +12,7 @@ source:
 time:
   published: '2024-05-19'
   collected: '2026-11-14'
+  updated: '2026-11-18'
 entities:
 - ref: codec:G-PCC
   role: subject
@@ -34,6 +35,7 @@ claims:
 summaries:
   one_liner_zh: 用两个坐标神经网络分别隐式表示点云几何与属性的统一压缩框架，性能优于最新G-PCC八叉树方法。
   abstract_zh: 论文提出一个同时处理点云几何与属性分量的压缩框架，用两个基于坐标的神经网络隐式表示体素化点云：第一个网络预测体素的占据状态，第二个网络预测被占据体素的属性。为应对体空间中海量体素，作者将空间划分为更小的立方体并仅处理非空立方体内的体素，将体素坐标输入相应网络即可重建原始点云的几何与属性。网络参数进一步量化并压缩。实验表明该方法性能优于最新G-PCC标准采用的八叉树方法，且与现有学习方法相比具有较高通用性。
+  deep_dive: docs/auto/2405.11493.md
 assessment:
   relevance: high
   decision: summary_only

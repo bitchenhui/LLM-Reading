@@ -12,6 +12,7 @@ source:
 time:
   published: '2025-01-21'
   collected: '2026-11-14'
+  updated: '2026-11-18'
 entities:
 - ref: concept:3DGS
   role: subject
@@ -45,6 +46,7 @@ summaries:
   one_liner_zh: 提出以2D高斯泼溅为基元的视频编解码器GSVC，RD性能媲美AV1/VVC，1080p渲染达1500fps。
   abstract_zh: 该工作探索以二维高斯泼溅作为视频表示与压缩的新基元，提出编解码器GSVC，将经典编码器利用帧间时间冗余的思想引入高斯泼溅框架。每帧由一组重叠高斯泼溅渲染近似：场景变化后的锚帧从零学习，其余传播帧以前帧高斯初始化后微调，通过训练中的损失差异检测场景切换，并随机新增高斯以应对大运动和新出现物体。系统通过控制每帧高斯数量提供码率-失真调节旋钮，训练中剔除低贡献高斯，支持从未来传播帧回传高斯的两遍编码以提升困难场景质量，并采用基于残差的量化框架仅编码帧间高斯参数变化。实验显示其RD性能与AV1、VVC的最先进实现相当，且1920×1080视频渲染速度达1500
     fps。
+  deep_dive: docs/auto/2501.12060.md
 assessment:
   relevance: high
   decision: deep_read

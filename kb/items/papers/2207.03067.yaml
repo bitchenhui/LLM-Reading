@@ -12,6 +12,7 @@ source:
 time:
   published: '2022-07-07'
   collected: '2026-11-14'
+  updated: '2026-11-18'
 entities:
 - ref: codec:Opus
   role: subject
@@ -36,6 +37,7 @@ summaries:
   one_liner_zh: 提出跨尺度矢量量化 CSVQ，实现单模型多码率可伸缩语音编码，3 kbps 质量超过 9 kbps 的 Opus。
   abstract_zh: 针对现有神经音频编解码器需按目标码率分别训练的问题，提出跨尺度可伸缩矢量量化方案 CSVQ，通过逐步特征融合与精化对多尺度特征进行渐进编码。仅接收部分码流即可重建粗级信号，随着比特增加质量渐进提升。该方案可灵活套用于任意具有镜像自编码器结构的神经音频编码网络，且单一模型即可覆盖多码率，降低收发端内存占用与转码需求。主观测试显示其优于带可伸缩性的经典残差
     VQ（RVQ），且 3 kbps 的 CSVQ 超过 9 kbps 的 Opus 与 3 kbps 的 Lyra，随码率提升呈现平滑的质量增益。
+  deep_dive: docs/auto/2207.03067.md
 assessment:
   relevance: high
   decision: summary_only

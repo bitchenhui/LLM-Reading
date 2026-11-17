@@ -13,6 +13,7 @@ source:
 time:
   published: '2024-09-21'
   collected: '2026-11-14'
+  updated: '2026-11-18'
 entities:
 - ref: impl:VTM
   role: subject
@@ -45,6 +46,7 @@ summaries:
   one_liner_zh: 提出窗口划分通道注意力与离散小波下采样结合的SCH框架，突破Swin感受野限制，实现SOTA学习图像压缩。
   abstract_zh: 针对Swin-Transformer基学习图像压缩（LIC）中移位窗口注意力导致感受野受限、难以建模大对象的问题，本文首次将窗口划分融入通道注意力，以获得大感受野并捕获全局信息。鉴于通道注意力会削弱局部信息学习，作者进一步将注意力机制扩展为空间-通道联合注意力（SCH框架），建立多个感受野，在捕获全局相关性的同时保持局部细节表征。框架中还引入离散小波变换进行频率自适应下采样，进一步扩大感受野。实验显示，该方法在四个标准数据集上相对VTM-23.1分别降低BD-rate
     18.54%、23.98%、22.33%和24.71%，达到当前最优性能。
+  deep_dive: docs/auto/2409.14090.md
 assessment:
   relevance: high
   decision: deep_read

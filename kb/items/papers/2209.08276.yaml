@@ -12,6 +12,7 @@ source:
 time:
   published: '2022-09-17'
   collected: '2026-11-14'
+  updated: '2026-11-18'
 entities:
 - ref: codec:G-PCC
   role: subject
@@ -31,6 +32,7 @@ claims:
 summaries:
   one_liner_zh: 提出双阶段稀疏卷积网络CARNet作为G-PCC环路滤波工具，消除属性压缩伪影，主客观质量显著提升。
   abstract_zh: 针对G-PCC（基于几何的点云压缩）标准属性压缩产生的伪影，提出学习型自适应环路滤波器CARNet。方法分两阶段：先以双流网络（直接空间嵌入与频率依赖嵌入）结合稀疏卷积建模局部邻域变化，从稀疏不规则分布的点中聚合信息，生成多个最可能样本偏移（MPSO）作为压缩失真的近似；再以最小二乘误差为指导在线求解线性加权系数进行伪影消除。加权系数封装进码流，码率开销可忽略。实验表明相对最新G-PCC在主观与客观质量上均取得显著改进。
+  deep_dive: docs/auto/2209.08276.md
 assessment:
   relevance: high
   decision: summary_only

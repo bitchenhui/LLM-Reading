@@ -12,6 +12,7 @@ source:
 time:
   published: '2024-10-28'
   collected: '2026-11-14'
+  updated: '2026-11-18'
 entities:
 - ref: concept:LLM
   role: subject
@@ -31,6 +32,7 @@ summaries:
   one_liner_zh: 提出轻量白盒控制器 M-Pilot，将黑盒 LLM 视为环境并分解任务生成中间提示，实现可控多轮生成与引导策略自我改进。
   abstract_zh: 针对黑盒大模型内部不可见、难以通过领域微调增强推理与规划能力的问题，作者提出轻量白盒 LLM 控制器 M-Pilot。该方法将黑盒 LLM 视为环境、控制器作为策略，把复杂任务分解为一系列中间输出（提示），在多轮交互中引导黑盒生成器。M-Pilot
     在迭代交互中训练，使黑盒 LLM 输出与人类偏好对齐，从而支持可控的多轮生成，并在优化中间引导的过程中实现自我改进。在多样化任务上的实验表明，该方法能有效提升黑盒 LLM 在复杂、长时程任务上的表现，代码已开源。
+  deep_dive: docs/auto/2410.20749.md
 assessment:
   relevance: high
   decision: summary_only

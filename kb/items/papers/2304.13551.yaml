@@ -12,6 +12,7 @@ source:
 time:
   published: '2023-04-26'
   collected: '2026-11-14'
+  updated: '2026-11-18'
 entities:
 - ref: concept:DASH
   role: subject
@@ -36,6 +37,7 @@ summaries:
   one_liner_zh: 在真实网络测试床上评估dash.js三种ABR算法于不同延迟目标下的QoE表现与目标贴合度。
   abstract_zh: 论文在自建DASH测试床上，针对一系列延迟目标与配置选项，分析了dash.js播放器中三种自适应码率（ABR）算法的低延迟性能，测试采用源自真实世界的网络配置文件。实验结果表明，dash.js
     v4.5.0默认的Dynamic算法在整体QoE上表现最佳；其他算法虽能在更低延迟下取得更高视频质量，但以卡顿增加为代价。作者剖析了L2A-LL算法在测试中表现不佳的原因，提出修改方案并展示了显著改进，同时指出部分低延迟配置设置反而会损害性能。
+  deep_dive: docs/auto/2304.13551.md
 assessment:
   relevance: high
   decision: summary_only
