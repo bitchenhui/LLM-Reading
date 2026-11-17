@@ -15,6 +15,7 @@ import argparse
 import json
 import re
 import sys
+import time
 from collections import defaultdict
 from datetime import date
 from pathlib import Path
@@ -92,8 +93,9 @@ def extract_phase(llm: LLM, rebuild: bool) -> dict:
                            for m in c["metrics"])
             batch.append(f"{d['id']} | {c['statement']} | {ms}")
             batch_ids.append(d["id"])
-        if len(batch) >= 25:
+        if len(batch) >= 12:
             flush(); batch, batch_ids = [], []
+            time.sleep(12)  # 节流：压低 token/分钟，防服务端掐流
     flush()
 
     RAW.write_text(yaml.safe_dump(cache, allow_unicode=True, sort_keys=False, width=120),
@@ -108,6 +110,7 @@ def main() -> int:
     args = ap.parse_args()
 
     llm = LLM(yaml.safe_load(open(CONFIG, encoding="utf-8")))
+    llm.req["review_reasoning"] = "low"  # 结构化抽取不需要高推理；同时降低 token 吞吐防 TPM 掐流
     cache = extract_phase(llm, args.rebuild)
 
     titles = {}
