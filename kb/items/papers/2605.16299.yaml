@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-04-17'
   collected: '2026-11-15'
+  updated: '2026-11-18'
 entities:
 - ref: concept:SelfImprovement
   role: subject
@@ -37,6 +38,7 @@ claims:
 summaries:
   one_liner_zh: 提出solver-adversary自进化代码生成框架，以对抗性单元测试的执行结果作为监督信号实现LLM自改进
   abstract_zh: ACE是一个基于solver-adversary架构的自进化代码生成框架，通过执行中心的监督优先主动发现剩余失败模式，而非仅确认语义正确性。单一LLM在生成候选程序与生成经优化的对抗性单元测试输入之间交替，测试输入旨在诱发运行时错误、异常或非终止等执行级失败。监督信号完全来自执行结果：鲁棒程序被选用于监督微调，对抗性测试通过Kahneman-Tversky优化利用执行衍生偏好进行训练。整个训练循环无需真实参考代码或外部奖励模型。在CodeContests、MBPP和LiveCodeBench上的实验显示，ACE持续超越强solver-verifier基线，pass@1获得3-7%绝对提升，且在分布外基准上改进更大，推理效率保持竞争性或有改进。
+  deep_dive: docs/auto/2605.16299.md
 assessment:
   relevance: high
   decision: summary_only

@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-01-20'
   collected: '2026-11-15'
+  updated: '2026-11-18'
 entities:
 - ref: concept:LLM
   role: subject
@@ -31,6 +32,7 @@ claims:
 summaries:
   one_liner_zh: 提出两阶段自博弈框架DARC，以难度校准出题与非对称自蒸馏稳定LLM推理自进化。
   abstract_zh: 针对现有LLM自博弈框架中提问者奖励反馈非平稳与求解者自生成伪标签自举错误导致的优化不稳定问题，提出DARC两阶段框架。第一阶段训练提问者基于显式难度条件与外部语料合成难度校准的问题；第二阶段采用非对称自蒸馏，由可访问文档的教师模型生成高质量伪标签，监督无文档权限的学生求解器。DARC与模型无关，在9个推理基准、3个骨干模型上平均提升10.9分，持续优于所有基线并接近全监督模型性能，且无需人工标注。
+  deep_dive: docs/auto/2601.13761.md
 assessment:
   relevance: high
   decision: summary_only

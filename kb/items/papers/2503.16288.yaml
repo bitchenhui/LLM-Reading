@@ -12,6 +12,7 @@ source:
 time:
   published: '2025-03-20'
   collected: '2026-11-14'
+  updated: '2026-11-18'
 entities:
 - ref: codec:VVC
   role: subject
@@ -50,6 +51,7 @@ summaries:
   abstract_zh: 本文系统综述正在标准化的学习式图像编码器 JPEG AI 中的变码率功能，包含三个自适应机制：三维质量图、快速码率匹配算法及配套训练策略。该机制可提供最高至 2.0 bpp
     的连续码率函数，支持色度分量间的灵活比特分配以及感兴趣区域（ROI）质量控制。客观评测以 JPEG AI 通用测试条件中七个感知指标的 BD-rate 均值计算，主档低复杂度配置相对 VVC intra
     获 13.1% 码率增益，高档高复杂度配置获 19.2% 增益。作者认为 JPEG AI 是首个可在移动设备上落地实现的学习式图像编码标准，文中还展示了主观评测下 ROI 质量提升的实例。
+  deep_dive: docs/auto/2503.16288.md
 assessment:
   relevance: high
   decision: deep_read

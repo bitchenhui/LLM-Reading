@@ -12,6 +12,7 @@ source:
 time:
   published: '2025-05-26'
   collected: '2026-11-14'
+  updated: '2026-11-18'
 entities:
 - ref: codec:G-PCC
   role: subject
@@ -34,6 +35,7 @@ summaries:
   abstract_zh: 针对激光雷达点云数据量巨大、现有学习方法未利用激光雷达固有角分辨率且忽略不同码率下几何相关性差异的问题，作者提出学习型预测编码方法 LPCM。LPCM 将点云转换到球面坐标系构建预测树：高码率模式下用轻量
     LSTM 预测模块（LSTM-P）捕获不同坐标间的长期几何相关性以预测并压缩仰角；低码率模式下几何相关性退化，引入变分半径压缩（VRC）模块直接压缩点半径。作者分析了球坐标量化与笛卡尔坐标量化的差异，提出基于差分进化（DE）的量化参数选择方法，在不增加编码时间的前提下提升率失真性能。在
     SemanticKITTI 与 MPEG 指定的 Ford 数据集上的实验表明，LPCM 优于 G-PCC 及其他基于学习的方法。
+  deep_dive: docs/auto/2505.20059.md
 assessment:
   relevance: high
   decision: summary_only

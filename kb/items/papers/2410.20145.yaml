@@ -12,6 +12,7 @@ source:
 time:
   published: '2024-10-26'
   collected: '2026-11-14'
+  updated: '2026-11-18'
 entities:
 - ref: codec:HEVC
   role: subject
@@ -40,6 +41,7 @@ summaries:
   one_liner_zh: 以SSF编解码器为例，提出超先验解码路径静态量化，解决神经视频编解码器跨平台浮点失配问题。
   abstract_zh: 论文指出，学习型视频编解码器（如SSF）在编码端与解码端运行于不同机器时，因浮点舍入误差产生编解码失配，严重时导致画质大幅退化，不适合真实应用。为此，作者提出对超先验（hyper
     prior）解码路径进行静态量化，量化参数通过对PyTorch观测器与量化方案的所有可能组合穷举搜索确定。在跨机器编解码场景下，该方案有效缓解失配问题，避免严重画质退化并改善压缩效率。在同机编解码场景下，其代价为平均BD-rate增加9.93%（UVG序列）和9.02%（HEVC-B序列）。
+  deep_dive: docs/auto/2410.20145.md
 assessment:
   relevance: high
   decision: deep_read
