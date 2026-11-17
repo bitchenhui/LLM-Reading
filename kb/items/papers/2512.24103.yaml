@@ -12,6 +12,7 @@ source:
 time:
   published: '2025-12-30'
   collected: '2026-11-15'
+  updated: '2026-11-18'
 entities:
 - ref: concept:SelfImprovement
   role: subject
@@ -33,6 +34,7 @@ claims:
 summaries:
   one_liner_zh: LLM无外部验证器地对自身答案迭代自我批判修正，在Blocksworld等规划基准上显著超越强基线并刷新同类模型SOTA。
   abstract_zh: 论文提出让LLM对自身答案进行内在自我批判（intrinsic self-critique）以提升规划性能的方法，不依赖验证器等外部资源。基线采用few-shot学习并渐进扩展至many-shot，在其上通过迭代修正与精炼流程获得进一步大幅提升。在Blocksworld规划数据集上取得显著增益，并在Logistics与Mini-grid数据集上同样超越强基线准确率，针对2024年10月的LLM检查点类别创下新的SOTA。作者强调该内在自我改进能力与具体模型版本无关，并可推广至更复杂的搜索技术与更强模型。
+  deep_dive: docs/auto/2512.24103.md
 assessment:
   relevance: high
   decision: summary_only

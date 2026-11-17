@@ -13,6 +13,7 @@ source:
 time:
   published: '2025-01-28'
   collected: '2026-11-14'
+  updated: '2026-11-18'
 entities:
 - ref: codec:HEVC
   role: subject
@@ -41,6 +42,7 @@ claims:
 summaries:
   one_liner_zh: 以光流引导运动学习与联合率失真优化改进过拟合神经视频编码，解码仅约1300乘法/像素且性能逼近HEVC。
   abstract_zh: 过拟合神经视频编解码器的解码复杂度比自编码器方案低数个量级，但压缩效率受限，主要原因是难以精确捕捉运动信息。本文提出用光流估计器引导运动信息的学习，并引入联合率失真优化以改善各帧间的码率分配。所提方法保持每像素约1300次乘法的低解码复杂度，压缩性能接近传统编码器HEVC，且优于其他过拟合编解码器。相关工作已基于Cool-Chic项目开源。
+  deep_dive: docs/auto/2501.16976.md
 assessment:
   relevance: high
   decision: deep_read

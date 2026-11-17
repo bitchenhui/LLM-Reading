@@ -12,6 +12,7 @@ source:
 time:
   published: '2025-03-14'
   collected: '2026-11-14'
+  updated: '2026-11-18'
 entities:
 - ref: concept:FunSearch
   role: subject
@@ -31,6 +32,7 @@ summaries:
   one_liner_zh: 推出面向数学家的 FunSearch 易用实现，无需机器学习专长与高性能计算，在组合与数论问题上验证其学习能力。
   abstract_zh: 作者提出一个新的 LLM 驱动遗传算法 FunSearch 实现，目标是生成数学家感兴趣的例子，此前该方法在极值组合问题上已有成功案例。该实现面向实际使用的数学工作者设计，不要求机器学习专业知识或高性能计算资源，将其应用到新问题只需修改一小段
     Python 代码并从多个第三方供应商中选择 LLM。作者在三个不同问题上对实现做了基准测试，获得可为新问题应用提供参考的指标。结果表明 FunSearch 在多种组合与数论设定下均能成功学习，某些情境下还能学到可泛化到原训练问题之外的原则。
+  deep_dive: docs/auto/2503.11061.md
 assessment:
   relevance: high
   decision: summary_only

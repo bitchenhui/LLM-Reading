@@ -12,6 +12,7 @@ source:
 time:
   published: '2025-05-27'
   collected: '2026-11-14'
+  updated: '2026-11-18'
 entities:
 - ref: codec:HEVC
   role: subject
@@ -33,6 +34,7 @@ claims:
 summaries:
   one_liner_zh: 提出参数化低复杂度不可分离变换HyGT，在HEVC上实现平均6%码率节省且内存占用比KLT少6.8倍。
   abstract_zh: 信号自适应变换编码因矩阵方案计算复杂度过高，数十年来难以应用于视频压缩。本文提出参数化方法：不再直接搜索完整变换矩阵，而是搜索定义一类新变换HyGT（低复杂度、易并行实现）的最优参数。HyGT作为HEVC扩展实现，综合实验表明其取得平均6%的码率降低编码增益，同时内存占用比KLT矩阵少6.8倍。
+  deep_dive: docs/auto/2505.21728.md
 assessment:
   relevance: high
   decision: deep_read

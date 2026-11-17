@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-03-06'
   collected: '2026-11-15'
+  updated: '2026-11-18'
 entities:
 - ref: concept:SelfImprovement
   role: subject
@@ -30,6 +31,7 @@ claims:
 summaries:
   one_liner_zh: 提出MACRO：从已验证执行轨迹自主发现并合成可复用复合工具，配图像特征记忆与类GRPO训练，实现医学影像LLM智能体的闭环自我改进。
   abstract_zh: 现有LLM医学智能体在部署后工具集与调用策略静态固定，在域偏移与任务演化下易失效。MACRO从经核验的执行轨迹中自主识别反复有效的高效多步工具序列，将其合成为可复用的复合工具并注册为新高层原语，持续扩展行为库。轻量图像特征记忆将工具选择锚定于视觉-临床上下文，类GRPO的训练回路强化对已发现复合工具的可靠调用，实现最少监督下的闭环自我改进。在多个医学影像数据集与任务上的实验表明，自主复合工具发现在多步编排精度与跨域泛化上持续优于强基线与最新智能体方法。
+  deep_dive: docs/auto/2603.05860.md
 assessment:
   relevance: high
   decision: summary_only

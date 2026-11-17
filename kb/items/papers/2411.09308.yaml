@@ -14,6 +14,7 @@ source:
 time:
   published: '2024-11-14'
   collected: '2026-11-14'
+  updated: '2026-11-18'
 entities:
 - ref: concept:ICM
   role: subject
@@ -40,6 +41,7 @@ claims:
 summaries:
   one_liner_zh: 提出深度Transformer的JRD预测模型DT-JRD用于机器视觉编码，较VVC平均节省29.58%码率且保持目标检测精度。
   abstract_zh: 论文将机器视觉可识别的最小视觉差异（JRD）预测建模为多分类问题，提出集成改进嵌入、内容与失真特征提取、多分类头及新型学习策略的DT-JRD模型。基于机器视觉在JRD附近对失真响应相似的感知特性，提出以高斯分布软标签（GDSL）实现的渐进式JRD损失，显著扩展训练标签数量并放宽分类边界。进而构建基于DT-JRD预测的VCM编码框架，在保持目标检测精度的同时降低编码码率。实验显示DT-JRD预测JRD的平均绝对误差为5.574，较当时最优JRD预测模型提升13.1%；编码实验中相比VVC平均节省29.58%码率且目标检测精度不变。
+  deep_dive: docs/auto/2411.09308.md
 assessment:
   relevance: high
   decision: deep_read
