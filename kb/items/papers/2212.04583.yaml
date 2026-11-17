@@ -12,6 +12,7 @@ source:
 time:
   published: '2022-12-08'
   collected: '2026-11-14'
+  updated: '2026-11-17'
 entities:
 - ref: codec:Opus
   role: subject
@@ -40,6 +41,7 @@ summaries:
   one_liner_zh: 提出运行于感知加权自适应MDCT域的RNN生成模型MDCTNet，24 kb/s VBR音质与倍码率Opus相当。
   abstract_zh: 论文提出神经音频生成模型MDCTNet，工作在自适应修正离散余弦变换（MDCT）的感知加权域中。模型采用循环神经网络（RNN）沿时间与频率两个方向捕捉信号相关性。系统以感知音频编码器为条件，在48
     kHz采样的多样化全带单声道音频上训练，构成完整的音频编码系统。在10个跨内容类型、且对两种编解码器均有压力的片段构成的主观听音测试中，所提系统24 kb/s可变码率（VBR）的平均表现与倍码率下的Opus相近。
+  deep_dive: docs/auto/2212.04583.md
 assessment:
   relevance: high
   decision: summary_only

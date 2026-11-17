@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-07-28'
   collected: '2026-11-15'
+  updated: '2026-11-17'
 entities:
 - ref: concept:LLM
   role: subject
@@ -41,6 +42,7 @@ summaries:
   abstract_zh: GPT-Red 是一个自动化红队智能体，采用可扩展的自博弈算法训练，负责攻击同时训练的多样化防御智能体群体，以发现针对前沿LLM的新型提示注入攻击。该模型以与作者最大规模RL后训练相当的算力进行训练，被称为有记录以来最大规模的LLM安全训练运行。结果显示
     GPT-Red 能稳定攻破截至 GPT-5.5 的历史模型，发现的成功攻击多于人类红队成员，并能泛化到留出的环境、防御模型与测试框架。作者用它对抗训练出更抗提示注入的 GPT-5.6，并预期每代
     GPT 鲁棒性提升将反哺更强的红队智能体，形成自我改进飞轮。
+  deep_dive: docs/auto/2607.26115.md
 assessment:
   relevance: high
   decision: summary_only

@@ -12,6 +12,7 @@ source:
 time:
   published: '2025-05-14'
   collected: '2026-11-14'
+  updated: '2026-11-17'
 entities:
 - ref: codec:VVC
   role: subject
@@ -43,6 +44,7 @@ summaries:
   abstract_zh: 针对学习型双向视频压缩（B帧编码）落后于前向预测方法、上下文提取单一且缺乏自适应抑制机制的问题，提出 BiECVC 框架。局部上下文增强通过复用低层高质量特征并用已解码运动矢量对齐，不引入额外运动开销；非局部依赖采用线性注意力机制以平衡性能与复杂度。借鉴自回归语言模型中的数据依赖衰减，引入双向上下文门控，根据条件编码结果动态过滤快运动或遮挡引起的有害上下文。实验表明，在
     Random Access 配置（intra period 32/64）下相较 VTM 13.2 分别节省 13.4% 和 15.7% 码率，作者称其为首个在所有标准测试数据集上超越 VTM 13.2
     RA 的学习型视频编解码器。
+  deep_dive: docs/auto/2505.09193.md
 assessment:
   relevance: high
   decision: deep_read

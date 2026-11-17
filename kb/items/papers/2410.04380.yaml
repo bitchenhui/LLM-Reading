@@ -12,6 +12,7 @@ source:
 time:
   published: '2024-10-06'
   collected: '2026-11-14'
+  updated: '2026-11-17'
 entities:
 - ref: concept:NeuralAudioCodec
   role: subject
@@ -42,6 +43,7 @@ claims:
 summaries:
   one_liner_zh: 提出MReQ后训练重量化框架与HALL-E模型，将神经音频编解码帧率降至8Hz，实现单次推理合成分钟级语音。
   abstract_zh: 针对基于LLM的TTS模型因神经音频编解码(NAC)高帧率导致音频token序列过长、难以自回归生成长时语音的问题，论文提出两项后训练方法。其一是多分辨率重量化(MReQ)框架，通过师生蒸馏引入多分辨率残差向量量化(MRVQ)模块，分层重组预训练NAC的离散音频token以降低帧率；其二是HALL-E模型，利用MRVQ子模块从预训练LLM-TTS继续训练以预测分层token。作者还发布40k小时的MinutesSpeech基准数据集，覆盖3秒至180秒的语音合成训练与评测。实验将MReQ/HALL-E应用于VALL-E，帧率最低降至8Hz，实现单次推理稳定合成分钟级语音。
+  deep_dive: docs/auto/2410.04380.md
 assessment:
   relevance: high
   decision: summary_only

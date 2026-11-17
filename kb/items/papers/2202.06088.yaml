@@ -12,6 +12,7 @@ source:
 time:
   published: '2022-02-12'
   collected: '2026-11-14'
+  updated: '2026-11-17'
 entities:
 - ref: concept:VolumetricVideo
   role: subject
@@ -37,6 +38,7 @@ summaries:
   one_liner_zh: 将动态NeRF高效编码为可实时渲染、可编辑的体视频基元，首次实现VR头显中的沉浸式体视频观看与时空编辑。
   abstract_zh: 论文提出神经体视频技术NeuVV，将动态神经辐射场（NeRF）高效编码为可渲染、可编辑的基元，实现照片级真实感实时渲染。方法引入两种分解：超球面谐波（HH）分解建模时空平滑的颜色变化，可学习基表示建模运动引起的密度与颜色突变；并将分解集成到类PlenOctree的Video
     Octree（VOctree）以显著加速训练、降低内存开销。基于将每个VOctree视为基元的体级深度排序与alpha混合，NeuVV支持时空内容合成编辑，如同一表演在不同位置/时序复用、服装换色、聚光灯阴影与距离衰减光照等，均以交互速度运行。作者进一步开发神经-光栅化混合渲染框架，首次在消费级VR头显中实现体视频的沉浸式观看与编辑。
+  deep_dive: docs/auto/2202.06088.md
 assessment:
   relevance: high
   decision: summary_only

@@ -12,6 +12,7 @@ source:
 time:
   published: '2023-04-07'
   collected: '2026-11-14'
+  updated: '2026-11-17'
 entities:
 - ref: concept:ABR
   role: subject
@@ -48,6 +49,7 @@ claims:
 summaries:
   one_liner_zh: 提出Palette：基于强化学习的跨层ABR方案，统一网络与编码层直接最大化实时视频通信QoE。
   abstract_zh: 现有ABR方法将网络带宽估计与视频编码器控制解耦，仅追求带宽利用率最大化，难以保证实时视频通信（RTVC）的QoE。本文提出Palette，一种基于强化学习的ABR方案，将网络层与视频应用层统一处理，直接最大化由视频质量、卡顿率与时延加权构成的QoE目标。其跨层优化模块利用网络状态、视频编码参数与内容复杂度等跨层观测，为即将编码的帧推导细粒度压缩因子，缓解网络与编码器不协调问题。真实环境测试显示，相比最先进方案，Palette将卡顿率降低3.1%–46.3%，时延降低20.2%–50.8%，并在带宽消耗相当的前提下提升视频质量0.2%–7.2%。
+  deep_dive: docs/auto/2304.03505.md
 assessment:
   relevance: high
   decision: summary_only

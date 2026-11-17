@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-08-19'
   collected: '2026-11-15'
+  updated: '2026-11-17'
 entities:
 - ref: concept:SelfImprovement
   role: subject
@@ -44,6 +45,7 @@ claims:
 summaries:
   one_liner_zh: 单LLM兼任环境设计者与推理智能体，自我博弈生成可执行训练环境，迈向开放式自我改进
   abstract_zh: SPADE提出一种自我博弈强化学习框架，让单个LLM同时扮演两个角色：环境设计者编写带reset()/step()接口的完整长程可执行训练环境（含状态转移、奖励函数与验证代码），推理智能体在这些环境中学习行动。框架用智能体在有/无特权提示下的奖励差距估计其遗憾值，据此训练环境设计者将环境瞄准智能体能力边缘并保持可行。实验发现两个关键组件：用大规模预训练语料采样的文档为环境设计者提供接地，以及为其积累环境记忆。扩展到30B参数模型时，SPADE在八个held-out数学、科学、代码与推理基准上平均超过最强固定环境基线5.3分，BFCL-v4多轮工具使用提升5.7，ACEBench-Agent提升13.9，游戏设定下优势随模型规模扩大。
+  deep_dive: docs/auto/2608.19197.md
 assessment:
   relevance: high
   decision: summary_only
