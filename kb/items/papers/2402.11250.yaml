@@ -12,6 +12,7 @@ source:
 time:
   published: '2024-02-17'
   collected: '2026-11-14'
+  updated: '2026-11-17'
 entities:
 - ref: concept:SuperResolution
   role: subject
@@ -31,6 +32,7 @@ summaries:
   one_liner_zh: 提出编码端构建层级先验、解码端由粗到细超分的点云几何压缩方法，在MPEG Cat1A上超越G-PCC v14。
   abstract_zh: MPEG开发的G-PCC在有损模式下因朴素的几何量化（网格下采样）导致重建点云出现明显失真。本文提出一种基于层级先验的超分辨率方法：编码端构建内容相关的层级先验并作为边信息传输，解码端据此对点云几何进行由粗到细的超分辨率重建。更精确的先验可改善重建性能，但需消耗更多比特编码该边信息，方法在先验精度与码率开销之间取得平衡。在MPEG
     Cat1A数据集上，该方法取得显著Bjontegaard-delta码率节省，超越基于八叉树和trisoup的G-PCC v14。作者开源了实现以支持可复现研究。
+  deep_dive: docs/auto/2402.11250.md
 assessment:
   relevance: high
   decision: summary_only

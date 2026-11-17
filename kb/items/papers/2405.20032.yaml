@@ -12,6 +12,7 @@ source:
 time:
   published: '2024-05-30'
   collected: '2026-11-14'
+  updated: '2026-11-17'
 entities:
 - ref: codec:HEVC
   role: subject
@@ -57,6 +58,7 @@ claims:
 summaries:
   one_liner_zh: 用提示词流替代视频流传输，接收端以Stable Diffusion生成视频，较H.265节省4倍以上带宽。
   abstract_zh: 论文提出Promptus，一种颠覆性的语义通信系统：将真实视频帧表示为一系列"提示词"进行传输，接收端用Stable Diffusion生成视频。为保证生成视频与原始视频像素对齐，提出基于梯度下降的提示词拟合框架；并引入基于低秩分解的码率控制算法实现自适应码率，针对帧间压缩提出插值感知拟合算法。实验显示，与H.265相比，Promptus在保持同等感知质量下可实现4倍以上带宽降低；在极低码率下，其LPIPS相比VAE与H.265分别改善0.139和0.118，严重失真帧比例分别下降89.3%与91.7%。
+  deep_dive: docs/auto/2405.20032.md
 assessment:
   relevance: high
   decision: deep_read

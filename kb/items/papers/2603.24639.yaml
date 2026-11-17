@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-03-25'
   collected: '2026-11-15'
+  updated: '2026-11-17'
 entities:
 - ref: concept:SelfImprovement
   role: subject
@@ -34,6 +35,7 @@ claims:
 summaries:
   one_liner_zh: 提出ERL框架：反思任务轨迹生成可迁移启发式并在测试时检索注入上下文，Gaia2上较ReAct成功率提升7.8%。
   abstract_zh: 论文提出经验反思学习（ERL），一种简洁的LLM智能体自改进框架，通过经验学习实现对新环境的快速适应。ERL对任务轨迹与结果进行反思，提炼出可跨任务迁移的启发式经验；测试时依据当前任务检索相关启发式并注入智能体上下文以引导执行。在Gaia2基准上，ERL较ReAct基线成功率提升7.8%，任务完成可靠性大幅提高，并优于既有经验学习方法。系统消融实验表明选择性检索不可或缺，且启发式比少样本轨迹提示提供更可迁移的抽象，证明从单次尝试经验中提取启发式即可实现有效的智能体自改进。
+  deep_dive: docs/auto/2603.24639.md
 assessment:
   relevance: high
   decision: summary_only

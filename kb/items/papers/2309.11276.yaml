@@ -12,6 +12,7 @@ source:
 time:
   published: '2023-09-20'
   collected: '2026-11-14'
+  updated: '2026-11-17'
 entities:
 - ref: codec:HEVC
   role: subject
@@ -48,6 +49,7 @@ summaries:
   one_liner_zh: 提出校准传输机制与轻量模型的跨平台实时神经视频编解码器，720P解码25FPS，PSNR较H.265最多省24.2%码率。
   abstract_zh: 针对神经视频编解码器实用化的两大障碍——跨平台浮点运算误差导致的码流解码不一致，以及编解码计算复杂度过高难以实时，本文提出实时跨平台神经视频编解码器。编码端识别可能在编解码两侧跨越量化边界的熵参数，将其坐标经辅助码流传输，解码端据此正确处理；并用分段高斯约束规整熵参数分布以降低辅助码流开销。同时设计轻量化模型及一系列效率优化技术。最终模型可在消费级NVIDIA
     RTX 2080 GPU上以25 FPS实时解码其他平台编码的720P码流，PSNR口径相对H.265锚点最多取得24.2%的BD-rate增益。
+  deep_dive: docs/auto/2309.11276.md
 assessment:
   relevance: high
   decision: deep_read

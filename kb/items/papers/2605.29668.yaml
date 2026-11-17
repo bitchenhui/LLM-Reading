@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-05-28'
   collected: '2026-11-15'
+  updated: '2026-11-17'
 entities:
 - ref: concept:SelfImprovement
   role: subject
@@ -47,6 +48,7 @@ claims:
 summaries:
   one_liner_zh: 将LLM代理自我改进建模为有界技能库的门控编辑序列，仅在保留探针净改进且不超硬回归预算时接受新技能。
   abstract_zh: 先前自我改进方法累积自然语言指导时不校验每条新经验是否保持既有正确行为，修复一条轨迹的建议可能悄悄损害另一条。GRASP把代理改进视为对有界技能库的一系列编辑，仅当候选技能在平衡保留探针上带来净改进并满足硬回归预算时才接纳。在两个基于FHIR的临床基准上对五个基础模型评估，MedAgentBench上gpt-oss-120b从40.6%升至88.8%，超过五个自我改进基线中最强者21.0个百分点，其余基础模型提升17.2至40.3个百分点。消融显示增益来自对比式提议生成、接受门与硬回归预算而非技能写作本身，且该机制仅在任务重复、结构可验证的环境有效，冻结技能库可跨模型与共享工具调用约定的基准迁移，接口不匹配时退化。
+  deep_dive: docs/auto/2605.29668.md
 assessment:
   relevance: high
   decision: summary_only

@@ -12,6 +12,7 @@ source:
 time:
   published: '2024-08-06'
   collected: '2026-11-14'
+  updated: '2026-11-17'
 entities:
 - ref: org:AOMedia
   role: subject
@@ -49,6 +50,7 @@ summaries:
   abstract_zh: 深度学习方法广泛用于增强传统混合视频编解码器，其模型泛化与编码性能高度依赖多样且具代表性的训练数据，而现有数据集或内容变化有限，或许可条款仅限研究用途。为此，作者提出新训练集
     BVI-AOM，包含 956 条未压缩序列，分辨率覆盖 270p 至 2160p，覆盖广泛的内容与纹理类型，并提供更灵活的许可条款。实验以两种流行网络架构、两种不同编码工具为载体，结果表明以 BVI-AOM
     为训练集时，相比广泛使用的 BVI-DVC，可带来最高 0.29 个百分点（PSNR-Y）与 2.98 个百分点（VMAF）的额外码率节省。数据集已在 GitHub 开源。
+  deep_dive: docs/auto/2408.03265.md
 assessment:
   relevance: high
   decision: deep_read

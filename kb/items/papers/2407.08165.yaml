@@ -12,6 +12,7 @@ source:
 time:
   published: '2024-07-11'
   collected: '2026-11-14'
+  updated: '2026-11-17'
 entities:
 - ref: concept:NeRF
   role: subject
@@ -53,6 +54,7 @@ claims:
 summaries:
   one_liner_zh: 构建22物体×4模型×5参数级的显式NeRF压缩质量数据库，主客观评测揭示无参考指标性能不足
   abstract_zh: 论文构建了Explicit-NeRF-QA数据库，用22个几何、纹理与材质多样的3D物体训练四种典型显式NeRF模型，并通过哈希表大小（InstantNGP）和体素分辨率（Plenoxels）等关键参数在五个级别引入有损压缩。将NeRF样本渲染为处理后视频序列（PVS）后，在实验室环境下开展21名观众的大规模主观实验收集MOS。结果展示数据库的内容多样性、MOS精度及NeRF失真特性；全参考客观指标最高Pearson相关约0.85，而所有无参考指标仅0.4-0.6，凸显开发更鲁棒无参考指标的必要性。数据集（NeRF样本、源3D物体、多视角图像、PVS、MOS）已开源。
+  deep_dive: docs/auto/2407.08165.md
 assessment:
   relevance: high
   decision: summary_only
