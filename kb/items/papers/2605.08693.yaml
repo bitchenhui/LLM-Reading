@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-05-09'
   collected: '2026-11-15'
+  updated: '2026-11-18'
 entities:
 - ref: concept:LLM
   role: subject
@@ -38,6 +39,7 @@ claims:
 summaries:
   one_liner_zh: 训练LLM智能体自主创建、精炼与选择技能，在ALFWorld/WebShop上较SOTA成功率提升8.8%/9.3%。
   abstract_zh: 提出SkillMaster训练框架，使LLM智能体学会创建新技能、精炼已有技能并在任务求解中选择积累的技能。方法包含三项设计：基于轨迹的技能回顾（依据完成回合的证据提出、更新或保留技能）、以候选技能编辑在相关探测任务上的反事实效用作为直接学习信号、以及DualAdv-GRPO（对任务求解动作与技能编辑决策分别估计优势以稳定联合训练）。在ALFWorld与WebShop上，整体成功率较SOTA基线分别提升8.8%与9.3%，为所有对比方法中最优。分析表明训练后的智能体能识别技能失败、从轨迹证据精炼程序性知识，并以少量技能库编辑将改进迁移至未来任务。
+  deep_dive: docs/auto/2605.08693.md
 assessment:
   relevance: high
   decision: summary_only

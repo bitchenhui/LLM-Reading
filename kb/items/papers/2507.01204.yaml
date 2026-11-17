@@ -14,6 +14,7 @@ source:
 time:
   published: '2025-07-01'
   collected: '2026-11-14'
+  updated: '2026-11-18'
 entities:
 - ref: impl:VTM
   role: subject
@@ -32,6 +33,7 @@ summaries:
   abstract_zh: 论文提出并验证'彩票编解码器假设'：随机初始化网络中未经训练的子网络可作为过拟合图像压缩的合成网络，率失真性能可与训练后的网络相当，从而形成将图像统计信息编码进网络子结构的新范式。在此基础上，LotteryCodec
     针对单幅图像过拟合一个二值掩码，编解码两端共享同一超参数化随机初始化网络，无需传输或训练合成网络权重。为应对过参数化挑战并简化子网搜索，作者提出回退调制机制以提升率失真性能。实验显示 LotteryCodec
     超越 VTM（VVC 测试模型），创下单图像压缩新SOTA；掩码比例可调，使解码复杂度能自适应不同设备约束与应用需求。
+  deep_dive: docs/auto/2507.01204.md
 assessment:
   relevance: high
   decision: deep_read

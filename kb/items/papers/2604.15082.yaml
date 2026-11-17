@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-04-16'
   collected: '2026-11-15'
+  updated: '2026-11-18'
 entities:
 - ref: concept:SelfImprovement
   role: subject
@@ -35,6 +36,7 @@ summaries:
   one_liner_zh: 首个自进化逻辑综合框架：LLM智能体团队自主改写ABC源码，在百万行规模上持续提升综合QoR
   abstract_zh: 该文提出首个自进化逻辑综合框架，利用LLM智能体团队自主改进广泛使用的逻辑综合系统ABC的源码，作用于整个集成代码库且保持单一二进制执行模型与命令接口。初始演化周期以现有开源综合组件（流程调优、逻辑最小化、工艺映射）引导启动，未手动注入新启发式。智能体团队按编程指导提示，在统一的正确性与QoR驱动评估循环中迭代改写ABC子组件：每轮提出代码修改、编译集成二进制、验证正确性，并在ISCAS
     85/89/99、VTR、EPFL、IWLS 2005多套基准上评估QoR。经持续反馈，系统发现了超越人类设计启发式的优化，学会新的综合策略并提升QoR，展示了在百万行规模EDA工具上实现自主渐进改进的可行性。
+  deep_dive: docs/auto/2604.15082.md
 assessment:
   relevance: high
   decision: summary_only

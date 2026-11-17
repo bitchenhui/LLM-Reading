@@ -12,6 +12,7 @@ source:
 time:
   published: '2024-10-03'
   collected: '2026-11-14'
+  updated: '2026-11-18'
 entities:
 - ref: codec:HEVC
   role: subject
@@ -28,6 +29,7 @@ claims:
 summaries:
   one_liner_zh: 提出基于k近邻增强注意力的图注意力模块GABIC，减少特征冗余以提升学习式图像压缩性能。
   abstract_zh: 论文指出，将视觉Transformer注意力机制引入学习式图像压缩（LIC）虽能提升压缩效率，但常以聚合冗余特征为代价。作者提出GABIC，一种基于k近邻增强注意力机制的图注意力模块，用以降低特征冗余。实验显示GABIC优于同类对比方法，尤其在高码率下压缩性能提升明显。
+  deep_dive: docs/auto/2410.02981.md
 assessment:
   relevance: high
   decision: deep_read

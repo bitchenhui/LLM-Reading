@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-06-07'
   collected: '2026-11-15'
+  updated: '2026-11-18'
 entities:
 - ref: concept:LLM
   role: subject
@@ -33,6 +34,7 @@ claims:
 summaries:
   one_liner_zh: 以rubric为统一框架，系统综述其在LLM评估、强化学习训练与自我改进中的构建、优化与可靠性。
   abstract_zh: 该综述将评分细则（rubric）定义为把复杂质量判断转化为结构化、可执行标准的显式准则集合，并论证其在LLM评估、强化学习与安全对齐等独立研究脉络中的反复出现并非巧合。论文系统组织现有rubric设计，考察其构建与优化，并指出rubric在三个递进层面发挥作用：评估层面将整体判断分解为可验证维度，训练层面作为密集反馈信号提供标量奖励无法覆盖的过程级指导，内在层面则从模型行为中动态涌现并驱动自我改进。作者进一步从生成质量、执行保真度、理论约束与安全威胁四个方面评估rubric的可靠性，并盘点跨领域基于rubric的基准。总体上，rubric将人类价值期望转化为机器可学习信号，充当人类意图与机器行为之间的桥梁。
+  deep_dive: docs/auto/2606.08625.md
 assessment:
   relevance: high
   decision: summary_only

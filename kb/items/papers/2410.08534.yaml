@@ -12,6 +12,7 @@ source:
 time:
   published: '2024-10-11'
   collected: '2026-11-14'
+  updated: '2026-11-18'
 entities:
 - ref: concept:IQA
   role: subject
@@ -35,6 +36,7 @@ claims:
 summaries:
   one_liner_zh: 综述AI生成与增强内容的IQA/VQA质量评估现状、局限与未来方向
   abstract_zh: 该综述聚焦文生图、图生图、图生视频等AI生成内容，以及超分辨率、插帧、去噪、压缩等AI增强内容的视觉质量评估问题。作者指出多数现有IQA/VQA模型以原始参考内容为基准衡量'重建'保真度，并非为评估'生成式'伪影而设计。新近提出的指标又受限于数据集规模过小、内容或失真代表性不足，且缺少能准确衡量GenAI质量评估模型有效性的性能测度。论文梳理了面向终端用户感知质量（QoE）的开放问题，并给出GenAI质量评估领域的未来研究建议。
+  deep_dive: docs/auto/2410.08534.md
 assessment:
   relevance: high
   decision: summary_only
