@@ -12,6 +12,7 @@ source:
 time:
   published: '2025-04-25'
   collected: '2026-11-14'
+  updated: '2026-11-18'
 entities:
 - ref: concept:LLM
   role: subject
@@ -50,6 +51,7 @@ summaries:
   abstract_zh: 论文研究影响合成数据微调效果的因素（模型规模、合成数据量、剪枝策略、微调轮数），探索 LLM 自我改进的成立条件。提出 Think, Prune, Train 可扩展框架：模型在自身推理轨迹上迭代微调，并以真值答案剪枝保证训练数据质量。在
     GSM8K 上，Gemma2-2B 的 Pass@1 从 41.9% 提升至 57.6%；Gemma2-9B 达到 82%，与 LLaMA-3.1-70B 持平；LLaMA-3.1-70B 达到
     91%，甚至超过 GPT-4o，验证了自生成推理与系统性数据选择的有效性。
+  deep_dive: docs/auto/2504.18116.md
 assessment:
   relevance: high
   decision: summary_only

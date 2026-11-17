@@ -13,6 +13,7 @@ source:
 time:
   published: '2024-11-11'
   collected: '2026-11-14'
+  updated: '2026-11-18'
 entities:
 - ref: codec:HEVC
   role: subject
@@ -42,6 +43,7 @@ summaries:
   one_liner_zh: 提出三类神经图像压缩伪影的检测、定位与量化方法，基于HM-18.0构建46,440条经主观验证的JPEG AI伪影数据集。
   abstract_zh: 论文针对学习型图像压缩可能引入的视觉伪影，提出分别检测纹理与边界退化、颜色变化、文字损坏三类失真的方法，可定位受影响区域并量化伪影强度。判定口径为：仅统计神经网络压缩造成失真、而传统编解码器在相近码率下能正常恢复的区域。作者将方法应用于
     JPEG AI 验证模型，以 H.265 参考软件 HM-18.0 为对比基准，处理 Open Images 数据集约 35 万张图像的多种压缩质量版本，构建了 46,440 条伪影样本的数据集，并经众包主观评估验证。方法源代码与数据集均已开源，可用于测试神经图像编解码器、定位缺陷并提升其性能。
+  deep_dive: docs/auto/2411.06810.md
 assessment:
   relevance: high
   decision: deep_read

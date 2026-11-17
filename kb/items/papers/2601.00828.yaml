@@ -12,6 +12,7 @@ source:
 time:
   published: '2025-12-24'
   collected: '2026-11-15'
+  updated: '2026-11-18'
 entities:
 - ref: concept:LLM
   role: subject
@@ -59,6 +60,7 @@ claims:
 summaries:
   one_liner_zh: 将LLM内在自我纠错分解为检错、定位、纠错三能力，发现弱模型纠错率反而更高并提出错误深度假说。
   abstract_zh: 该文将LLM内在自我纠错系统分解为错误检测、错误定位与错误修正三个子能力，在GSM8K-Complex（每模型500样本、共346处错误）上对三个主流大模型进行跨模型实验。研究发现显著的准确率-纠错悖论：较弱的GPT-3.5（准确率66%）内在纠错率达26.8%，比较强的DeepSeek（准确率94%、纠错率16.7%）高1.6倍。据此提出错误深度假说：更强模型犯的错误更少但更深，因而难以自我纠正。错误检测率在架构间差异巨大（10%至82%），且检测能力不能预测纠错成功——Claude仅检出10%错误却内在纠正29%；意外的是，提供错误位置提示反而损害所有模型表现。
+  deep_dive: docs/auto/2601.00828.md
 assessment:
   relevance: high
   decision: summary_only

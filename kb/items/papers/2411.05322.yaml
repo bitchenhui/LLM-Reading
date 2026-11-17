@@ -12,6 +12,7 @@ source:
 time:
   published: '2024-11-08'
   collected: '2026-11-14'
+  updated: '2026-11-18'
 entities:
 - ref: concept:VolumetricVideo
   role: subject
@@ -42,6 +43,7 @@ claims:
 summaries:
   one_liner_zh: 在训练阶段直接学习紧凑NeRF表示的码率感知压缩框架，大幅降低体积视频存储与码率。
   abstract_zh: 针对NeRF体积视频数据量大、现有方案将表示训练与压缩割裂的问题，本文提出码率感知压缩框架，在训练阶段直接学习紧凑的NeRF表示。方法上先用简单建模策略降低时间冗余，训练时引入隐式熵模型估计表示的码率并将熵模型编入码流辅助解码，实现精确码率估计；同时提出自适应量化策略学习最优量化步长，最终以率失真权衡优化表示。该框架可适配不同的NeRF表示，在HumanRF和ReRF数据集上以极小失真显著缩减存储并取得SOTA率失真性能：相比此前最优方法TeTriRF，HumanRF上BD-rate约-80%，ReRF上约-60%。
+  deep_dive: docs/auto/2411.05322.md
 assessment:
   relevance: high
   decision: summary_only

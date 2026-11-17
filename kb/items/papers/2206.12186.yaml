@@ -13,6 +13,7 @@ source:
 time:
   published: '2022-06-24'
   collected: '2026-11-14'
+  updated: '2026-11-18'
 entities:
 - ref: codec:V-PCC
   role: subject
@@ -46,6 +47,7 @@ claims:
 summaries:
   one_liner_zh: 提出率失真最优的变换系数选择方法填充V-PCC未占用像素区域，全intra下几何/纹理码率节省超4%/6%。
   abstract_zh: 该文针对基于视频的点云压缩（V-PCC）中同时包含占用与未占用像素的编码块，提出一种率失真最优的变换系数确定方法。方法利用广义频率选择性外推（FSE）框架，对二维DCT与DST的全部基函数迭代求解率失真最优系数值，以填充未占用像素区域。算法仅修改变换系数取值，所得码流完全符合V-PCC标准，并在HEVC编码框架下实现。实验显示，全intra编码下几何误差度量码率节省超过4%、纹理误差度量节省超过6%，均为文献对比方法的两倍以上；随机访问配置下相比竞争V-PCC方法再获得超过0.5%的增益。
+  deep_dive: docs/auto/2206.12186.md
 assessment:
   relevance: high
   decision: summary_only

@@ -13,6 +13,7 @@ source:
 time:
   published: '2025-09-27'
   collected: '2026-11-14'
+  updated: '2026-11-18'
 entities:
 - ref: concept:SelfImprovement
   role: subject
@@ -31,6 +32,7 @@ claims:
 summaries:
   one_liner_zh: 提出语义投票，用轻量句嵌入软匹配替代自我评估，为不可验证开放式任务的LLM自改进生成伪标签，效率与性能双优。
   abstract_zh: 监督数据获取成本上升推动LLM自我改进研究，但多数投票等无监督信号仅适用于可验证任务，难以处理翻译等开放式不可验证任务。现有方法依赖自我评估机制（自我评判、熵最小化）生成伪标签，存在计算开销大与内在偏置导致的过度自信问题。本文提出无自我评估的语义投票机制，将硬匹配（精确匹配）放宽为软匹配（语义相似度），借助轻量句子嵌入模型量化相似度。跨多种模型架构与任务的实验表明，该方法在计算效率上取得大幅提升，整体性能优于自我评估方法。
+  deep_dive: docs/auto/2509.23067.md
 assessment:
   relevance: high
   decision: summary_only

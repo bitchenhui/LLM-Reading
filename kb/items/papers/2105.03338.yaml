@@ -12,6 +12,7 @@ source:
 time:
   published: '2021-05-07'
   collected: '2026-11-14'
+  updated: '2026-11-18'
 entities:
 - ref: codec:VVC
   role: subject
@@ -41,6 +42,7 @@ summaries:
   one_liner_zh: 面向VVC提出预测感知CNN后滤波与帧/块级模型选择策略，在VTM-10.0 RA下合计约-1.8% BD-BR增益。
   abstract_zh: 该文针对VVC编码码流提出一种CNN后处理算法，同时适用于帧内与帧间帧，用于去除压缩伪影。方法按帧类型利用规范预测信号，将其与重建信号和量化参数（QP）图一并作为CNN的附加输入。进一步引入可选的模型选择（MS）策略，由编码端从若干已训练模型中挑选最佳模型并向解码端发送信号，支持帧级与块级两种粒度。在VTM-10.0随机访问（RA）配置下的实验表明，预测感知设计相对不含预测信息的版本额外取得-1.3%
     BD-BR增益，MS策略在其上再叠加-0.5% BD-BR增益。
+  deep_dive: docs/auto/2105.03338.md
 assessment:
   relevance: high
   decision: summary_only

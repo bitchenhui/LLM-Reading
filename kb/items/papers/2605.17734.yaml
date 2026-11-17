@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-05-18'
   collected: '2026-11-14'
+  updated: '2026-11-18'
 entities:
 - ref: concept:LLM
   role: subject
@@ -41,6 +42,7 @@ summaries:
   one_liner_zh: HASP将经验技能升级为可执行程序函数，在易错状态主动干预LLM智能体，支持推理时干预、后训练与自我改进演化。
   abstract_zh: 论文提出HASP框架，将智能体从过往经验提炼的技能从被动文本建议升级为可执行的程序函数（PFs）。PFs作为可执行护栏，在易失败状态被触发，直接修改下一步动作或注入纠正性上下文以干预智能体循环。该框架高度模块化，可用于推理时直接干预、后训练时的结构化监督，以及通过演化经教师审核的PFs实现自我改进。实验表明HASP在网页搜索、数学推理与编程任务上显著优于免训练和训练类方法：推理时PFs较多循环ReAct
     Agent平均提升25%，后训练与受控演化较Search-R1提升30.4%。机制分析进一步揭示了PFs的触发与干预方式、技能内化过程及稳定技能库演化的必要条件。
+  deep_dive: docs/auto/2605.17734.md
 assessment:
   relevance: high
   decision: summary_only
