@@ -55,6 +55,7 @@ jobs:
           uv run --with pyyaml python scripts/make_digest.py --days 7
           uv run --with pyyaml python scripts/export_corpus.py
           uv run --with pyyaml python scripts/build_timeline.py
+          uv run --with pyyaml python scripts/build_sota.py || true
           uv run --with pyyaml python scripts/validate_kb.py
 
       - name: 提交推送
