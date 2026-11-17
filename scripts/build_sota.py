@@ -104,6 +104,39 @@ def extract_phase(llm: LLM, rebuild: bool) -> dict:
     return cache
 
 
+def norm_anchor(a: str) -> str:
+    """锚点归一：去版本号/口径后缀，统一到标准名。"""
+    a = str(a).strip()
+    rules = [
+        ("VTM", r"VTM[ -]?\d*"), ("VVenC", r"VVenC[ -]?\d*"), ("VVdec", r"VVde?[Cc]\d*"),
+        ("HEVC", r"HEVC(?!-)"), ("VVC", r"VVC(?!-)"), ("AV1", r"\bAV1\b"),
+        ("x265", r"x265.*"), ("x264", r"x264.*"), ("HM", r"\bHM\b[ -]?\d*"),
+        ("ECM", r"\bECM\b[ -]?\d*"), ("JPEG AI", r"JPEG[ -]?AI"), ("VTM", r"参考模型.*"),
+    ]
+    for name, pat in rules:
+        if re.match(pat, a, re.I):
+            return name
+    return a.split(",")[0].split("(")[0].strip()[:20] or "—"
+
+
+def norm_dataset(ds: str) -> str:
+    """数据集归一：合并同义写法。"""
+    d = str(ds).strip()
+    rules = [
+        ("Kodak", r"Kodak"), ("CLIC", r"CLIC"), ("Tecnick", r"Tecnick"),
+        ("UVG", r"UVG.*(?!4K)"), ("UVG-4K", r"UVG[ -]?4K"),
+        ("MCL-JCV", r"MCL[ -]?JCV"), ("VCD", r"VCD"),
+        ("JVET CTC", r"(JVET )?(CTC|通用测试序列|标准测试序列|CTC 全类|全类)"),
+        ("JVET CTC A", r"CTC.{0,3}A[12]|Class A"),
+        ("JVET CTC B", r"CTC.{0,3}B|Class B|HEVC ?B"), ("JVET CTC D", r"CTC.{0,3}D|Class D|HEVC ?D"),
+        ("HEVC 测试集", r"HEVC (测试|B~D)"),
+    ]
+    for name, pat in rules:
+        if re.search(pat, d, re.I):
+            return name
+    return d[:24] or "—"
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--rebuild", action="store_true", help="忽略缓存全量重抽")
@@ -123,12 +156,14 @@ def main() -> int:
     groups: dict[tuple, list] = defaultdict(list)
     for iid, rows in cache.items():
         for r in rows:
-            key = (str(r.get("dataset", "")).strip(), str(r.get("anchor", "")).strip(),
-                   str(r.get("metric", "BD-Rate")).strip())
-            if not key[0] or not key[1]:
+            ds, an = norm_dataset(r.get("dataset", "")), norm_anchor(r.get("anchor", ""))
+            met = str(r.get("metric", "BD-Rate")).strip().upper().replace(" ", "")
+            if "BDRATE" in met or "BD-RATE" in met.replace("-", ""):
+                met = "BD-Rate"
+            if ds == "—" or an == "—":
                 continue
-            groups[key].append({"date": dates.get(iid, ""), "method": titles.get(iid, iid)[:70],
-                                "value": r["value"], "item": iid})
+            groups[(ds, an, met)].append({"date": dates.get(iid, ""), "method": titles.get(iid, iid)[:70],
+                                          "value": r["value"], "item": iid})
 
     out_groups = []
     for (ds, an, met), entries in sorted(groups.items()):

@@ -1,11 +1,11 @@
 generated: '2026-11-17'
 note: value 数值口径见原条目；BD-Rate 负值=省码率；best 为组内数值最优，跨组不可比
 groups:
-- dataset: 通用测试序列
-  anchor: VTM 12.0
-  metric: BD-Rate
-  n: 6
-  best: -1.98
+- dataset: JVET CTC
+  anchor: VTM
+  metric: BD-RATE
+  n: 14
+  best: -24.41
   entries:
   - date: '2024-03-18'
     method: 面向多功能视频编码的目标分割辅助帧间预测
@@ -31,7 +31,121 @@ groups:
     method: 面向多功能视频编码的目标分割辅助帧间预测
     value: -0.79
     item: paper:arxiv:2403.11694
-- dataset: UVG与HEVC测试集平均
+  - date: '2024-07-16'
+    method: 面向帧间预测的匀加速运动模型
+    value: -0.38
+    item: paper:arxiv:2407.11541
+  - date: '2024-07-16'
+    method: 面向帧间预测的匀加速运动模型
+    value: -0.13
+    item: paper:arxiv:2407.11541
+  - date: '2026-09-29'
+    method: CASR：基于低秩过拟合的通用视频编码内容自适应神经超分后处理滤波器
+    value: -10.93
+    item: paper:arxiv:2609.37328
+  - date: '2026-09-29'
+    method: CASR：基于低秩过拟合的通用视频编码内容自适应神经超分后处理滤波器
+    value: -15.39
+    item: paper:arxiv:2609.37328
+  - date: '2026-09-29'
+    method: CASR：基于低秩过拟合的通用视频编码内容自适应神经超分后处理滤波器
+    value: -24.41
+    item: paper:arxiv:2609.37328
+  - date: '2026-09-29'
+    method: CASR：基于低秩过拟合的通用视频编码内容自适应神经超分后处理滤波器
+    value: -13.43
+    item: paper:arxiv:2609.37328
+  - date: '2026-09-29'
+    method: CASR：基于低秩过拟合的通用视频编码内容自适应神经超分后处理滤波器
+    value: -5.75
+    item: paper:arxiv:2609.37328
+  - date: '2026-09-29'
+    method: CASR：基于低秩过拟合的通用视频编码内容自适应神经超分后处理滤波器
+    value: -22.94
+    item: paper:arxiv:2609.37328
+- dataset: Kodak
+  anchor: VTM
+  metric: BD-RATE
+  n: 8
+  best: -20.46
+  entries:
+  - date: '2023-07-28'
+    method: MLIC++：面向学习型图像压缩的线性复杂度多参考熵模型
+    value: -13.39
+    item: paper:arxiv:2307.15421
+  - date: '2023-10-25'
+    method: 面向学习型图像压缩的频率感知Transformer
+    value: -14.5
+    item: paper:arxiv:2310.16387
+  - date: '2025-04-27'
+    method: MLICv2：面向学习式图像压缩的增强多参考熵建模
+    value: -16.54
+    item: paper:arxiv:2504.19119
+  - date: '2025-04-27'
+    method: MLICv2：面向学习式图像压缩的增强多参考熵建模
+    value: -20.46
+    item: paper:arxiv:2504.19119
+  - date: '2026-03-06'
+    method: HiDE：面向学习式图像压缩的分层字典熵建模
+    value: -18.5
+    item: paper:arxiv:2603.06766
+  - date: '2026-06-19'
+    method: MoECodec：基于 MoE 的人机联合感知图像压缩
+    value: 15.44
+    item: paper:arxiv:2606.21033
+  - date: '2026-06-19'
+    method: MoECodec：基于 MoE 的人机联合感知图像压缩
+    value: -11.54
+    item: paper:arxiv:2606.21033
+  - date: '2026-06-19'
+    method: MoECodec：基于 MoE 的人机联合感知图像压缩
+    value: -11.87
+    item: paper:arxiv:2606.21033
+- dataset: CLIC
+  anchor: VTM
+  metric: BD-RATE
+  n: 4
+  best: -21.99
+  entries:
+  - date: '2023-10-25'
+    method: 面向学习型图像压缩的频率感知Transformer
+    value: -13.0
+    item: paper:arxiv:2310.16387
+  - date: '2025-04-27'
+    method: MLICv2：面向学习式图像压缩的增强多参考熵建模
+    value: -16.05
+    item: paper:arxiv:2504.19119
+  - date: '2025-04-27'
+    method: MLICv2：面向学习式图像压缩的增强多参考熵建模
+    value: -19.14
+    item: paper:arxiv:2504.19119
+  - date: '2026-03-06'
+    method: HiDE：面向学习式图像压缩的分层字典熵建模
+    value: -21.99
+    item: paper:arxiv:2603.06766
+- dataset: Tecnick
+  anchor: VTM
+  metric: BD-RATE
+  n: 4
+  best: -24.35
+  entries:
+  - date: '2023-10-25'
+    method: 面向学习型图像压缩的频率感知Transformer
+    value: -15.1
+    item: paper:arxiv:2310.16387
+  - date: '2025-04-27'
+    method: MLICv2：面向学习式图像压缩的增强多参考熵建模
+    value: -21.61
+    item: paper:arxiv:2504.19119
+  - date: '2025-04-27'
+    method: MLICv2：面向学习式图像压缩的增强多参考熵建模
+    value: -24.35
+    item: paper:arxiv:2504.19119
+  - date: '2026-03-06'
+    method: HiDE：面向学习式图像压缩的分层字典熵建模
+    value: -24.01
+    item: paper:arxiv:2603.06766
+- dataset: UVG
   anchor: 目标码率
   metric: 平均码率误差
   n: 4
@@ -71,24 +185,6 @@ groups:
     method: 面向高效自适应VVC流媒体的多目标帕累托前沿优化
     value: 6.38
     item: paper:arxiv:2601.10607
-- dataset: Kodak
-  anchor: VTM-17.1, PSNR
-  metric: BD-Rate
-  n: 3
-  best: -11.87
-  entries:
-  - date: '2026-06-19'
-    method: MoECodec：基于 MoE 的人机联合感知图像压缩
-    value: 15.44
-    item: paper:arxiv:2606.21033
-  - date: '2026-06-19'
-    method: MoECodec：基于 MoE 的人机联合感知图像压缩
-    value: -11.54
-    item: paper:arxiv:2606.21033
-  - date: '2026-06-19'
-    method: MoECodec：基于 MoE 的人机联合感知图像压缩
-    value: -11.87
-    item: paper:arxiv:2606.21033
 stats:
   items_covered: 208
-  groups: 4
+  groups: 6
