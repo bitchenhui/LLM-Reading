@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-02-04'
   collected: '2026-11-15'
+  updated: '2026-11-18'
 entities:
 - ref: concept:LLM
   role: subject
@@ -40,6 +41,7 @@ claims:
 summaries:
   one_liner_zh: 提出'上下文拖累'现象：上下文中的失败尝试使 LLM 后续生成偏向结构相似错误，致 10-20% 性能下降且难以消除。
   abstract_zh: 论文研究了'上下文拖累'现象：上下文中存在的失败尝试会使 LLM 后续生成偏向结构相似错误。在 11 个闭源与开源权重模型、8 个推理任务上，该效应造成 10-20% 的性能下降，严重时迭代自我精修会崩溃为自我恶化。基于树编辑距离的结构分析表明，后续推理轨迹会从上下文继承结构相似错误模式。外部反馈与成功的自我验证均无法消除该效应；回退行为微调与上下文去噪等缓解策略仅带来部分改善，无法恢复基线性能，表明这是当前推理架构的持久性失效模式。
+  deep_dive: docs/auto/2602.04288.md
 assessment:
   relevance: high
   decision: summary_only

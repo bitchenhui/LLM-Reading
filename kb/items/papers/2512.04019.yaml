@@ -14,6 +14,7 @@ source:
 time:
   published: '2025-12-03'
   collected: '2026-11-14'
+  updated: '2026-11-18'
 entities:
 - ref: concept:INR
   role: subject
@@ -63,6 +64,7 @@ claims:
 summaries:
   one_liner_zh: 将NVRC扩展为轻量版，用高分辨率多尺度特征网格与八叉树上下文熵编码，在低复杂度下超越C3并大幅加速编解码。
   abstract_zh: 该工作将端到端压缩INR的视频编码框架NVRC推向轻量化，提出NVRC-Lite。其一，在轻量神经表示中引入多尺度特征网格，高分辨率网格显著提升低复杂度下的INR性能；其二，针对现有INR常用自回归熵编码速度过慢的问题，提出面向高维特征网格的八叉树上下文模型以加速熵编码。实验显示，NVRC-Lite以PSNR和MS-SSIM衡量，相比最优轻量INR视频编码器之一C3最多节省21.03%和23.06%的BD-rate，同时获得8.4倍编码与2.5倍解码加速。实现将开源。
+  deep_dive: docs/auto/2512.04019.md
 assessment:
   relevance: high
   decision: deep_read

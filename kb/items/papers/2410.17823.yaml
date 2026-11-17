@@ -12,6 +12,7 @@ source:
 time:
   published: '2024-10-23'
   collected: '2026-11-14'
+  updated: '2026-11-18'
 entities:
 - ref: metric:BD-PSNR
   role: subject
@@ -35,6 +36,7 @@ summaries:
   one_liner_zh: 首个将注意力机制引入基于点的有损点云属性压缩，较Deep-PCAC平均提升Y通道BD-PSNR 1.15 dB。
   abstract_zh: 论文针对点云属性有损压缩（PCAC）任务，提出基于自编码器架构的注意力压缩模型Att2CPC。编码端通过多次下采样挖掘局部属性模式，并设计外部交叉注意力（ECA）模块融合属性与几何上下文进行分层特征聚合。解码端基于多尺度表示与零填充上采样策略渐进重建点云属性。作者称其为首个将注意力机制引入基于点的有损PCAC的方法。在人体帧、稀疏物体及大规模点云场景等多种序列上，相比SOTA方法Deep-PCAC，Y通道与YUV通道BD-PSNR平均分别提升1.15
     dB和2.13 dB，代码已开源。
+  deep_dive: docs/auto/2410.17823.md
 assessment:
   relevance: high
   decision: summary_only

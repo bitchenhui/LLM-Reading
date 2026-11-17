@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-01-08'
   collected: '2026-11-15'
+  updated: '2026-11-18'
 entities:
 - ref: concept:SelfImprovement
   role: subject
@@ -31,6 +32,7 @@ summaries:
   one_liner_zh: 把智能体当可交付制品，将自改进外化为感知回归的发布流水线，改进稳定、回归更少且全程可审计。
   abstract_zh: 该文将LLM智能体的自我改进重构为发布工程：智能体被视为可交付制品，改进过程外化到一个感知回归的发布流水线中。AgentDevel 迭代运行当前智能体，从执行轨迹中产生实现盲的症状级质量信号，通过可执行诊断合成单一发布候选（RC），并以翻转为中心的门控决定晋升。三项核心设计包括不访问智能体内部实现的LLM评审器、基于脚本的可执行诊断，以及将'通过→失败'回归作为一等证据的门控机制。与基于种群的搜索或智能体内自精炼不同，AgentDevel
     维护单一规范版本线并以不回归为首要目标。在偏重执行的基准上的实验表明，其改进稳定、回归显著减少，并产出可复现、可审计的制品。
+  deep_dive: docs/auto/2601.04620.md
 assessment:
   relevance: high
   decision: summary_only

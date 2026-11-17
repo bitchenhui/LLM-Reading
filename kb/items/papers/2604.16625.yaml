@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-04-17'
   collected: '2026-11-15'
+  updated: '2026-11-18'
 entities:
 - ref: concept:SelfImprovement
   role: subject
@@ -42,6 +43,7 @@ summaries:
   one_liner_zh: 提出AdaExplore代理框架，以失败驱动自适应与保多样性树搜索实现Triton内核生成自我改进，KernelBench上最高加速3.11倍。
   abstract_zh: 针对LLM代理自我改进中各问题独立处理、缺乏可复用知识积累，且Triton等领域语言在预训练中稀缺、约束严格导致朴素生成与局部精化不可靠的问题，提出AdaExplore框架。自适应阶段通过任务合成将反复出现的失败转化为可复用的有效性规则记忆，使后续生成保持在可行集内；搜索阶段将候选内核组织为树，在小幅局部精化与结构性重新生成之间交替，以探索超出局部最优的优化地形。全程无需额外微调或外部知识。在内核运行时优化基准上，100步内在KernelBench
     Level-2和Level-3分别取得3.11倍和1.62倍加速，且随计算量增加持续改进。
+  deep_dive: docs/auto/2604.16625.md
 assessment:
   relevance: high
   decision: summary_only

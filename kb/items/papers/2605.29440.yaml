@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-05-28'
   collected: '2026-11-15'
+  updated: '2026-11-18'
 entities:
 - ref: concept:LLM
   role: subject
@@ -30,6 +31,7 @@ claims:
 summaries:
   one_liner_zh: 将LLM智能体技能库整理形式化为效用约束下的多目标Pareto优化，经双层提议-验证循环精选技能。
   abstract_zh: 检索增强型LLM智能体依赖精选的技能库，即指导复杂任务决策的可复用文本原则集合。现有方法通常以append-only方式只增不删，使冗余、过时甚至有害技能不断累积，导致库低效且整理不善。论文将技能库整理形式化为效用约束下的多目标问题，要求技能库对智能体有用、内容多样且覆盖查询分布，并提出SkillBrew框架，通过Pareto感知优化与双层"提议-验证"循环求解。在两个公开基准上的评估表明，将技能库作为需原则化整理的对象而非无限追加的日志，是构建自改进LLM智能体的重要一步。
+  deep_dive: docs/auto/2605.29440.md
 assessment:
   relevance: high
   decision: summary_only

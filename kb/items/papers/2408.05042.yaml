@@ -13,6 +13,7 @@ source:
 time:
   published: '2024-08-09'
   collected: '2026-11-14'
+  updated: '2026-11-18'
 entities:
 - ref: codec:VVC
   role: subject
@@ -57,6 +58,7 @@ summaries:
     的 libaom(AV1) 与 AVM，以及神经编码器 DCVC-DC 与 DCVC-FM。评测基于 AOM 与 MPEG 通用测试条件（CTC）定义的测试序列，统一在 YCbCr 4:2:0 色彩空间下进行以保证公平。结果显示
     JVET ECM 在所有被测编码器中综合表现最佳：按 PSNR 计算，BD-rate 相对 AOM AVM 平均节省 16.1%，相对 DCVC-FM 节省 11.0%。研究还观察到 DCVC-DC
     与 DCVC-FM 在具有大背景运动的测试内容上表现不一致，暴露出学习型编码器对内容特性的敏感性问题。
+  deep_dive: docs/auto/2408.05042.md
 assessment:
   relevance: high
   decision: deep_read
