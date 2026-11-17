@@ -13,6 +13,7 @@ source:
 time:
   published: '2025-04-27'
   collected: '2026-11-14'
+  updated: '2026-11-18'
 entities:
 - ref: codec:VVC
   role: subject
@@ -63,6 +64,7 @@ summaries:
     启发的轻量 token mixing 模块增强变换容量，提出超先验引导的全局相关预测以在潜表示初始切片中提取全局上下文，并辅以通道重加权模块动态突出信息量大的通道；进一步探索增强位置嵌入、引导选择性压缩以及随机
     Gumbel 退火（SGA）的实例级优化。实验表明 MLICv2 与 MLICv2+ 相比 VTM-17.0 Intra 分别在 Kodak、Tecnick、CLIC Pro Val 上取得 16.54%/21.61%/16.05%
     与 20.46%/24.35%/19.14% 的 BD-rate 节省，达到 SOTA。
+  deep_dive: docs/auto/2504.19119.md
 assessment:
   relevance: high
   decision: deep_read

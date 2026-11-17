@@ -12,6 +12,7 @@ source:
 time:
   published: '2025-04-09'
   collected: '2026-11-14'
+  updated: '2026-11-18'
 entities:
 - ref: concept:NeuralAudioCodec
   role: subject
@@ -50,6 +51,7 @@ summaries:
   one_liner_zh: StreamCodec以全因果对称结构在MDCT域编码，用残差标量-矢量量化实现1.5 kbps下ViSQOL 4.30、20ms延迟、CPU近20倍实时的高质量可流式音频编码。
   abstract_zh: 论文提出StreamCodec，一种面向实时通信的可流式神经音频编解码器，采用全因果、对称的编码器-解码器结构并在修正离散余弦变换（MDCT）域运行，以实现低延迟推理与实时高效生成。为提升码本利用效率并补偿结构性因果化带来的音质损失，提出新型残差标量-矢量量化器（RSVQ），以残差方式依次串联标量量化器与改进的矢量量化器，分别构建音频粗轮廓并细化声学细节。实验表明其解码音质可与先进的非流式神经音频编解码器相当：在16
     kHz LibriTTS数据集上1.5 kbps码率取得ViSQOL 4.30。该模型仅7M参数，固定延迟20 ms，CPU上生成速度近20倍实时，非常适合实时通信应用。
+  deep_dive: docs/auto/2504.06561.md
 assessment:
   relevance: high
   decision: summary_only

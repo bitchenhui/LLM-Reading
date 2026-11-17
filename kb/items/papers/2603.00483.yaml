@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-02-28'
   collected: '2026-11-15'
+  updated: '2026-11-18'
 entities:
 - ref: concept:SelfImprovement
   role: subject
@@ -43,6 +44,7 @@ summaries:
   abstract_zh: RAISE（Requirement-Adaptive Self-Improving Evolution）是一个免训练、需求驱动的进化式文本到图像对齐框架，将图像生成建模为需求驱动的自适应扩展过程。它在推理时演化候选图像种群，通过提示重写、噪声重采样、指令编辑等精炼动作迭代改进，并用结构化需求清单逐项校验，仅在未满足项处追加计算，使算力消耗与提示语义复杂度匹配，实现自适应测试时扩展。在
     GenEval 与 DrawBench 上，RAISE 取得 0.94 的 GenEval 总体 SOTA 对齐分数，生成样本数较已有 scaling 与 reflection-tuned 基线减少
     30-40%，VLM 调用减少 80%。该方法无需构建反射数据集或对扩散与视觉语言模型联合微调，具备可泛化、模型无关的多轮自改进能力。
+  deep_dive: docs/auto/2603.00483.md
 assessment:
   relevance: high
   decision: summary_only

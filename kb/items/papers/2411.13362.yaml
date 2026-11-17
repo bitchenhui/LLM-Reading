@@ -12,6 +12,7 @@ source:
 time:
   published: '2024-11-20'
   collected: '2026-11-14'
+  updated: '2026-11-18'
 entities:
 - ref: concept:SuperResolution
   role: subject
@@ -37,6 +38,7 @@ summaries:
   one_liner_zh: 提出低复杂度CNN实时超分模型RTSR，经双教师蒸馏针对AV1编码内容优化，在AIM 2024实时视频超分赛中取得复杂度-质量最佳折中。
   abstract_zh: 论文提出低复杂度超分辨率方法RTSR，用于增强压缩视频的视觉质量，支持360p→1080p和540p→4K两组升分辨率任务。该方法采用CNN网络架构，并通过双教师知识蒸馏在不同量化等级下针对AV1（SVT）编码内容进行优化。模型提交至AIM
     2024视频超分辨率挑战赛的Efficient/Mobile Real-Time Video Super-Resolution赛道。在全部六支参赛提交中，RTSR在模型复杂度与编码质量（以PSNR、SSIM、VMAF衡量）之间取得最佳折中。代码即将开源。
+  deep_dive: docs/auto/2411.13362.md
 assessment:
   relevance: high
   decision: summary_only

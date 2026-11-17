@@ -12,6 +12,7 @@ source:
 time:
   published: '2024-12-23'
   collected: '2026-11-14'
+  updated: '2026-11-18'
 entities:
 - ref: codec:VVC
   role: subject
@@ -33,6 +34,7 @@ summaries:
   one_liner_zh: 提出非对称轻量级学习图像压缩AsymLLIC，解码器仅51.47 GMACs/19.65M参数且性能媲美VVC
   abstract_zh: 学习图像压缩（LIC）通常采用对称的编解码网络架构，不可避免地推高了解码耗时，而实际场景要求解码端低复杂度、编码端可承担更高复杂度。为此，本文提出非对称轻量级学习图像压缩架构AsymLLIC，并设计新的训练方案，使复杂的解码模块在训练中被逐步替换为更简单的模块。作者还系统比较了不同解码器网络结构，以在复杂度与压缩性能间取得更优折中。实验表明该方法性能可与VVC媲美，同时解码器仅需51.47
     GMACs计算量与19.65M参数；且该设计方法可便捷迁移到任意LIC模型，促进LIC技术落地部署。
+  deep_dive: docs/auto/2412.17270.md
 assessment:
   relevance: high
   decision: deep_read

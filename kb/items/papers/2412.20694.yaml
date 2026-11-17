@@ -12,6 +12,7 @@ source:
 time:
   published: '2024-12-30'
   collected: '2026-11-14'
+  updated: '2026-11-18'
 entities:
 - ref: concept:FunSearch
   role: subject
@@ -31,6 +32,7 @@ summaries:
   one_liner_zh: 用质量-不确定性权衡准则（QUTC）重定义FunSearch的选择标准，提升LLM+进化算法自动启发式设计性能
   abstract_zh: 针对NP难问题的启发式人工设计难题，该文提出QUBE方法，在FunSearch框架内重新定义个体选择与进化优先级准则。核心是引入基于'含不确定性质量'指标的Quality-Uncertainty
     Trade-off Criterion（QUTC），在利用与探索之间取得平衡以指导LLM+EA的进化过程。在多个NP完全问题上的大量实验表明，QUBE相对FunSearch及基线方法取得显著性能提升。代码已开源。
+  deep_dive: docs/auto/2412.20694.md
 assessment:
   relevance: high
   decision: summary_only

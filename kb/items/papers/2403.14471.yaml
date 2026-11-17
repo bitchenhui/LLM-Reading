@@ -14,6 +14,7 @@ source:
 time:
   published: '2024-03-21'
   collected: '2026-11-14'
+  updated: '2026-11-18'
 entities:
 - ref: concept:EntropyModel
   role: subject
@@ -40,6 +41,7 @@ summaries:
   one_liner_zh: 提出ACGC切片式棋盘并行熵模型与残差SwinV2变换的S2LIC，性能超VTM-17.1且编解码更快。
   abstract_zh: 论文针对现有熵模型仅侧重通道与空间一维关联的问题，提出自适应通道内与全局间注意力上下文（ACGC）熵模型：将隐表示划分为多个切片，在并行棋盘上下文中执行，实现切片间与切片内双重特征聚合并加快解码速度；同时用可变形注意力基于真实空间关系动态细化跨切片全局特征的注意力权重。主变换结构中引入残差SwinV2
     Transformer捕捉全局特征，并以密集块网络作为特征增强模块提升非线性表达能力。实验表明该方法在PSNR和MS-SSIM两指标上均优于VTM-17.1及近期学习式图像压缩方法，且编码解码速度更快。
+  deep_dive: docs/auto/2403.14471.md
 assessment:
   relevance: high
   decision: deep_read
