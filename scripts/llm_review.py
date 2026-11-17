@@ -222,6 +222,12 @@ class LLM:
         try:
             return self._post_stream(url, payload)
         except RuntimeError as e:
+            if "INCOMPLETE_OUTPUT" in str(e) and max_tok < 60000:
+                # max_output_tokens 含推理 token；推理吃光预算时自动升档重试一次
+                bumped = min(max_tok * 2, 60000)
+                print(f"    [输出预算不足({e})] {max_tok} → {bumped} 重试", flush=True)
+                payload["max_output_tokens"] = bumped
+                return self._post_stream(url, payload)
             if self.wire == "responses" and ("404" in str(e) or "400" in str(e)):
                 print("    [wire] responses 不可用，切换 chat/completions", flush=True)
                 self.wire = "chat"
@@ -244,6 +250,7 @@ class LLM:
                     parts: list[str] = []
                     usage: dict = {}
                     completed = False
+                    incomplete_reason = None
                     for raw in resp:
                         line = raw.decode("utf-8", errors="replace").strip()
                         if not line.startswith("data:"):
@@ -263,6 +270,12 @@ class LLM:
                             elif t == "response.completed":
                                 usage = (ev.get("response") or {}).get("usage") or usage
                                 completed = True
+                            elif t == "response.incomplete":
+                                r = ev.get("response") or {}
+                                incomplete_reason = ((r.get("incomplete_details") or {})
+                                                     .get("reason") or "unknown")
+                                usage = r.get("usage") or usage
+                                completed = True  # 正常终态（预算耗尽），不是断流
                         else:
                             if ev.get("usage"):
                                 usage = ev["usage"]
@@ -273,6 +286,8 @@ class LLM:
                     if not completed:
                         raise RuntimeError("SSE 流提前结束（无终止事件，输出可能被截断）")
                     self._track(usage)
+                    if incomplete_reason:
+                        raise RuntimeError(f"INCOMPLETE_OUTPUT:{incomplete_reason}")
                     out = "".join(parts)
                     if not out:
                         raise RuntimeError(f"流式响应无文本输出（wire={self.wire}）")
@@ -287,6 +302,8 @@ class LLM:
                     continue
                 raise RuntimeError(f"HTTP {e.code}: {body}") from e
             except Exception as e:  # noqa: BLE001
+                if "INCOMPLETE_OUTPUT" in str(e):
+                    raise  # 输出预算问题：同预算重试无意义，交 chat() 升档处理
                 wait = 15 * attempt
                 print(f"    [流中断 {type(e).__name__}] 退避 {wait}s", flush=True)
                 time.sleep(wait)
