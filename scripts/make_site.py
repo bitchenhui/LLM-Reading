@@ -11,6 +11,7 @@ from __future__ import annotations
 
 import json
 import sys
+from collections import defaultdict
 from datetime import date, timedelta
 from pathlib import Path
 
@@ -50,6 +51,76 @@ def entity_display_names() -> dict[str, str]:
                        if any("\u4e00" <= c <= "\u9fff" for c in a)), None)
             out[e["id"]] = zh or e["name"]
     return out
+
+
+def build_graph(min_count: int = 3) -> dict:
+    """实体共现图：节点=实体（挂接≥min_count），边=同条目共现。python 侧力导向布局。"""
+    import math
+    import random
+
+    linked: dict[str, int] = {}
+    cooc: dict[tuple, int] = {}
+    for p in sorted(ITEMS.glob("*/*.yaml")):
+        d = load(p)
+        refs = sorted({e["ref"] for e in d.get("entities", [])})
+        for r in refs:
+            linked[r] = linked.get(r, 0) + 1
+        for i, a in enumerate(refs):
+            for b in refs[i + 1:]:
+                cooc[(a, b)] = cooc.get((a, b), 0) + 1
+
+    keep = {e for e, c in linked.items() if c >= min_count}
+    edges = [(a, b, w) for (a, b), w in cooc.items() if a in keep and b in keep and w >= 2]
+    edges.sort(key=lambda x: -x[2])
+    edges = edges[:240]
+    nodes = sorted(keep)
+    names = entity_display_names()
+
+    # 力导向布局（确定性）
+    random.seed(7)
+    W, H = 880, 620
+    pos = {n: [W / 2 + 260 * math.cos(i / max(1, len(nodes)) * 2 * math.pi),
+               H / 2 + 200 * math.sin(i / max(1, len(nodes)) * 2 * math.pi)] for i, n in enumerate(nodes)}
+    adj = defaultdict(dict)
+    for a, b, w in edges:
+        adj[a][b] = w
+        adj[b][a] = w
+    for _ in range(300):
+        disp = {n: [0.0, 0.0] for n in nodes}
+        for i, a in enumerate(nodes):
+            for b in nodes[i + 1:]:
+                dx, dy = pos[a][0] - pos[b][0], pos[a][1] - pos[b][1]
+                d2 = dx * dx + dy * dy or 1.0
+                f = 22000.0 / d2
+                dx, dy = dx / math.sqrt(d2), dy / math.sqrt(d2)
+                disp[a][0] += dx * f; disp[a][1] += dy * f
+                disp[b][0] -= dx * f; disp[b][1] -= dy * f
+        for a, nbrs in adj.items():
+            for b, w in nbrs.items():
+                if a < b:
+                    dx, dy = pos[b][0] - pos[a][0], pos[b][1] - pos[a][1]
+                    dist = math.sqrt(dx * dx + dy * dy) or 1.0
+                    f = (dist - max(30.0, 140 - w * 8)) * 0.02
+                    dx, dy = dx / dist, dy / dist
+                    disp[a][0] += dx * f; disp[a][1] += dy * f
+                    disp[b][0] -= dx * f; disp[b][1] -= dy * f
+        for n in nodes:
+            disp[n][0] += (W / 2 - pos[n][0]) * 0.004
+            disp[n][1] += (H / 2 - pos[n][1]) * 0.004
+            m = math.sqrt(disp[n][0] ** 2 + disp[n][1] ** 2) or 1.0
+            step = min(m, 6.0)
+            pos[n][0] = max(30, min(W - 30, pos[n][0] + disp[n][0] / m * step))
+            pos[n][1] = max(24, min(H - 24, pos[n][1] + disp[n][1] / m * step))
+
+    type_color = {"codec": "#5b9dff", "impl": "#4cc38a", "concept": "#b18cff",
+                  "metric": "#f5a623", "dataset": "#8b93a7", "org": "#e5534b"}
+    return {
+        "nodes": [{"id": n, "name": names.get(n, n), "type": n.split(":")[0],
+                   "count": linked[n], "x": round(pos[n][0]), "y": round(pos[n][1])}
+                  for n in nodes],
+        "edges": [{"a": a, "b": b, "w": w} for a, b, w in edges],
+        "colors": type_color,
+    }
 
 
 def build_data() -> dict:
@@ -108,6 +179,23 @@ def build_data() -> dict:
         for f in timeline:
             f["entity_name"] = ents_map.get(f["entity"], f["entity"])
 
+    # 调研报告 / SOTA 追踪 / 知识图谱
+    reports = []
+    rep_dir = ROOT / "docs" / "reports"
+    if rep_dir.exists():
+        for p in sorted(rep_dir.glob("*.md"), reverse=True):
+            text = p.read_text(encoding="utf-8")
+            title = next((l.lstrip("# ").strip() for l in text.split("\n") if l.startswith("# ")),
+                         p.stem)
+            first_para = next((l for l in text.split("\n") if l.strip() and not l.startswith("#")
+                               and not l.startswith(">")), "")[:80]
+            reports.append({"title": title, "sub": first_para, "md": text})
+    sota = []
+    sota_path = ROOT / "kb" / "sota.yaml"
+    if sota_path.exists():
+        sota = (load(sota_path).get("groups") or [])[:12]
+    graph = build_graph()
+
     return {
         "generated": date.today().isoformat(),
         "cutoff": cutoff,
@@ -128,6 +216,9 @@ def build_data() -> dict:
         "synthesis": synthesis,
         "dossiers": dossiers,
         "timeline": timeline,
+        "reports": reports,
+        "sota": sota,
+        "graph": graph,
     }
 
 
@@ -248,6 +339,12 @@ footer a { color: var(--dim); }
   <div id="dossList"></div>
   <div class="note" style="margin-top:22px">技术时间线（近 180 天：版本发布 · 高相关研究 · 标准提案；点击实体名过滤）：</div>
   <div id="tlList"></div>
+  <div class="note" style="margin-top:22px">SOTA 追踪（基准×锚点 成绩序列，由结构化论断自动聚合；点击表头排序之外的能力去问问答）：</div>
+  <div id="sotaList"></div>
+  <div class="note" style="margin-top:22px">知识图谱（实体共现；节点大小=挂接条目数，颜色=类型；点击节点过滤时间线）：</div>
+  <div id="graphBox"></div>
+  <div class="note" style="margin-top:22px">调研报告（Deep Research：主题→全引用长文）：</div>
+  <div id="repList"></div>
 </div>
 
 <footer id="foot"></footer>
@@ -409,6 +506,57 @@ function renderTL() {
   tl.innerHTML = html || '<div class="empty">该实体近期无时间线事实</div>';
 }
 renderTL();
+
+// SOTA 追踪表
+const sl2 = document.getElementById("sotaList");
+let sotaHTML = "";
+for (const g of DATA.sota) {
+  const rows = g.entries.map(e => {
+    const best = e.value === g.best;
+    return `<tr${best ? ' style="color:var(--green);font-weight:600"' : ""}>
+      <td style="white-space:nowrap">${e.date}</td>
+      <td>${e.method}</td><td style="text-align:right">${e.value}${best ? " ★" : ""}</td></tr>`;
+  }).join("");
+  sotaHTML += `<div class="syn"><div class="head" onclick="this.parentElement.classList.toggle('open')">
+    <h3>${g.dataset} × ${g.anchor}</h3>
+    <span class="arrow">${g.metric} · ${g.n} 条 · best ${g.best} · 展开/收起</span></div>
+    <div class="body">
+      <table style="width:100%"><tr><th>日期</th><th>方法</th><th>${g.metric}</th></tr>${rows}</table></div></div>`;
+}
+sl2.innerHTML = sotaHTML || '<div class="empty">SOTA 追踪生成中（scripts/build_sota.py）</div>';
+
+// 知识图谱（python 预布局，SVG 渲染；点击节点过滤时间线）
+const gp = DATA.graph;
+if (gp && gp.nodes.length) {
+  const pos = Object.fromEntries(gp.nodes.map(n => [n.id, n]));
+  const edges = gp.edges.filter(e => pos[e.a] && pos[e.b]).map(e =>
+    `<line x1="${pos[e.a].x}" y1="${pos[e.a].y}" x2="${pos[e.b].x}" y2="${pos[e.b].y}"
+      stroke="#2a3040" stroke-opacity="${Math.min(0.15 + e.w * 0.08, 0.6)}" stroke-width="${Math.min(1 + e.w * 0.3, 3)}"/>`).join("");
+  const maxC = Math.max(...gp.nodes.map(n => n.count));
+  const nodes = gp.nodes.map(n => {
+    const r = 4 + 14 * Math.sqrt(n.count / maxC);
+    const color = gp.colors[n.type] || "#8b93a7";
+    const label = n.count >= maxC * 0.15
+      ? `<text x="${n.x}" y="${n.y - r - 4}" text-anchor="middle" fill="#c6cdbe" font-size="${Math.min(11, 8 + r / 3)}">${n.name}</text>` : "";
+    return `<g data-n="${n.name}" style="cursor:pointer" onclick="tlFilter(this.dataset.n)">
+      <circle cx="${n.x}" cy="${n.y}" r="${r}" fill="${color}" fill-opacity="0.85" stroke="#0f1115"><title>${n.name} · ${n.count} 条</title></circle>${label}</g>`;
+  }).join("");
+  document.getElementById("graphBox").innerHTML =
+    `<svg viewBox="0 0 880 620" style="width:100%;background:var(--panel);border:1px solid var(--border);border-radius:12px">
+     ${edges}${nodes}</svg>`;
+} else {
+  document.getElementById("graphBox").innerHTML = '<div class="empty">图谱数据不足</div>';
+}
+
+// 调研报告
+const rl = document.getElementById("repList");
+let repHTML = "";
+for (const r of DATA.reports) {
+  repHTML += `<div class="syn"><div class="head" onclick="this.parentElement.classList.toggle('open')">
+    <h3>${r.title}</h3><span class="arrow">${r.sub}… · 展开/收起</span></div>
+    <div class="body">${md2html(r.md)}</div></div>`;
+}
+rl.innerHTML = repHTML || '<div class="empty">尚无调研报告（scripts/research_report.py "主题"）</div>';
 
 function showTab(t) {
   document.getElementById("view-week").style.display = t === "week" ? "" : "none";
