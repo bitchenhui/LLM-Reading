@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-08-12'
   collected: '2026-11-15'
+  updated: '2026-11-17'
 entities:
 - ref: concept:LLM
   role: subject
@@ -35,6 +36,7 @@ summaries:
   abstract_zh: 提出 DIVE 框架，使冻结的大语言模型从任务经验与验证器反馈中进化持久自然语言技能，技能编码可复用推理流程、验证策略、常见失败模式与输出约束，由同一底层模型执行和修订，无需教师模型。针对单条技能轨迹进化属随机非凸搜索、易过拟合或陷入次优的问题，DIVE
     从引导式经验独立进化多个技能种群，经多样变换自适应精炼，并联合选出一组互补技能。在六项数学与逻辑推理任务和多个模型家族上，DIVE 持续优于现有推理方法、提示优化方法（GEPA）、技能开发框架与记忆型基线。相比
     SFT、GRPO 等参数化方法，DIVE 以更少的 rollout 获得显著更大的增益；进化出的技能可跨模型规模与家族迁移，使 GPT-5-nano 在常规提示下匹配甚至超越 GPT-5。
+  deep_dive: docs/auto/2608.12486.md
 assessment:
   relevance: high
   decision: summary_only

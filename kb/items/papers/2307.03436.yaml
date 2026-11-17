@@ -12,6 +12,7 @@ source:
 time:
   published: '2023-07-07'
   collected: '2026-11-14'
+  updated: '2026-11-17'
 entities:
 - ref: concept:ABR
   role: subject
@@ -45,6 +46,7 @@ summaries:
   abstract_zh: 内容提供商在实时视频通信中越来越多地用可变码率（VBR）编码替代恒定码率以提升画质，但 VBR 带来的大幅频繁码率波动削弱了现有自适应码率（ABR）方法的效率。Anableps
     联合考虑网络动态与 VBR 编码诱发的码率波动来部署最优 ABR 策略：先用发送端历史信息预测即将到来的帧的码率区间，再结合接收端观测，由基于强化学习的 ABR 模型为编码器设定合适的码率目标。在真实网络轨迹驱动的测试床上开展的大量实验表明，相比
     GCC，Anableps 视频质量提升 1.88 倍、码率消耗减少 57%、卡顿减少 85%、交互延迟缩短 74%。
+  deep_dive: docs/auto/2307.03436.md
 assessment:
   relevance: high
   decision: summary_only

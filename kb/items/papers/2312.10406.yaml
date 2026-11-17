@@ -13,6 +13,7 @@ source:
 time:
   published: '2023-12-16'
   collected: '2026-11-14'
+  updated: '2026-11-17'
 entities:
 - ref: codec:VVC
   role: subject
@@ -31,6 +32,7 @@ summaries:
   one_liner_zh: 对 VTM 的编码单元尺寸与帧间编码模式进行统计分析，为 VVC 编码器加速方法设计提供依据。
   abstract_zh: VVC 相比 HEVC 在压缩效率上有显著提升，但代价是明显增加的编码端复杂度，可能阻碍其产业化落地。尽管已有大量 VVC 加速工作，但要设计更好的加速方法，仍需深入理解 VVC
     的复杂度来源，尤其是新增划分结构与编码工具的贡献。为此，作者在 VVC 测试模型 VTM 上开展了统计分析，重点聚焦编码单元（CU）尺寸分布与帧间编码模式的使用情况。该分析旨在揭示复杂度开销与新工具/新划分的关联，为后续加速算法设计提供实证依据。
+  deep_dive: docs/auto/2312.10406.md
 assessment:
   relevance: high
   decision: deep_read

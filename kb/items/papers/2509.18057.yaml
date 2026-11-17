@@ -12,6 +12,7 @@ source:
 time:
   published: '2025-09-22'
   collected: '2026-11-14'
+  updated: '2026-11-17'
 entities:
 - ref: concept:AlphaEvolve
   role: subject
@@ -73,6 +74,7 @@ summaries:
     gadget 归约，证明 MAX-4-CUT 与 MAX-3-CUT 分别在 0.987 与 0.9649 因子内近似为 NP 难（前者超过 SOTA 0.9883，后者超过最优 gadget 结果
     0.9853 但不及基于定制 PCP 的 16/17）；其三，证明度量 TSP 最小代价环游在 111/110 因子内近似为 NP 难，改进 SOTA 117/116。针对 AlphaEvolve
     候选构造验证代价高昂的问题，作者用 AlphaEvolve 自身演化出更快的验证程序，部分 gadget 加速达 1 万倍，并给出可独立复用的模块化可靠性/完备性论证。
+  deep_dive: docs/auto/2509.18057.md
 assessment:
   relevance: high
   decision: summary_only

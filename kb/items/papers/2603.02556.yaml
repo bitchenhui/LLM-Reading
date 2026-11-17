@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-03-03'
   collected: '2026-11-15'
+  updated: '2026-11-17'
 entities:
 - ref: concept:SelfImprovement
   role: subject
@@ -34,6 +35,7 @@ summaries:
   abstract_zh: 语言任务中的推理能力可通过自我改进精炼推理路径再微调来提升，但扩展到 VLM 时，推理路径中的视觉幻觉难以验证与纠正。作者观察到：向 VLM 呈现对比 VQA 对（两张视觉相似图像配同义问题）时，模型能更精确地识别相关视觉线索。据此提出
     VC-STaR 框架，利用视觉对比抑制自举生成推理路径中的幻觉，从多样化 VQA 数据集中筛选对比对并生成推理路径，得到 VisCoR-55K 视觉推理数据集。该数据集经监督微调提升多种 VLM
     的推理能力，实验显示 VC-STaR 不仅优于现有自我改进方法，也超过在 SoTA 视觉推理数据集上微调的模型。
+  deep_dive: docs/auto/2603.02556.md
 assessment:
   relevance: high
   decision: summary_only

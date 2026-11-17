@@ -13,6 +13,7 @@ source:
 time:
   published: '2025-10-11'
   collected: '2026-11-14'
+  updated: '2026-11-17'
 entities:
 - ref: concept:RDO
   role: subject
@@ -37,6 +38,7 @@ claims:
 summaries:
   one_liner_zh: 提出GLVC框架，用预训练连续tokenizer将视频帧映射到感知对齐潜空间并在潜域重设计编解码器，实现感知视频压缩SOTA。
   abstract_zh: 针对神经视频压缩中率-失真-感知权衡困难、逐帧质量波动引发闪烁伪影的问题，GLVC采用预训练连续tokenizer将视频帧投影到感知对齐的潜空间，把感知约束从率失真优化中剥离。作者借鉴先前神经视频编解码器的经验，为潜域重新设计编解码器架构，并引入统一帧内/帧间编码与循环记忆机制。多基准测试显示GLVC在DISTS与LPIPS指标上达到当前最优；用户研究证实其以约一半码率媲美最新神经视频编解码器且保持稳定时间一致性。
+  deep_dive: docs/auto/2510.09987.md
 assessment:
   relevance: high
   decision: deep_read

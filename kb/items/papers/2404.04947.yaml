@@ -12,6 +12,7 @@ source:
 time:
   published: '2024-04-07'
   collected: '2026-11-14'
+  updated: '2026-11-17'
 entities:
 - ref: concept:SuperResolution
   role: subject
@@ -32,6 +33,7 @@ summaries:
   one_liner_zh: 通用神经音频压缩模型，支持全采样率建模、弹性解码器与内建音频超分，性能持平或优于现有传统与神经编解码器
   abstract_zh: Gull 是一个通用神经音频压缩/解压缩模型，可服务于实时通信、音频超分辨率和编解码语言模型等多种任务。其关键组件包括：借鉴音频源分离进展的子带建模以实现通用采样率建模、受传统音频编解码器启发的增益-形状表示、改进的残差向量量化模块、允许用户在推理时自定义模型规模与复杂度的弹性解码器，以及不增加码率的内建音频超分辨率能力。与现有传统和神经音频编解码器的对比显示，Gull
     在主观与客观评测指标上，跨各种采样率、码率与模型复杂度均达到持平或更优的性能。
+  deep_dive: docs/auto/2404.04947.md
 assessment:
   relevance: high
   decision: summary_only

@@ -13,6 +13,7 @@ source:
 time:
   published: '2025-03-29'
   collected: '2026-11-14'
+  updated: '2026-11-17'
 entities:
 - ref: codec:VVC
   role: subject
@@ -39,6 +40,7 @@ summaries:
   abstract_zh: 针对学习图像压缩（LIC）计算开销大、骨干网络特征冗余的问题，本文提出轻量级框架 ShiftLIC。其核心是空间移位块（SSB），用移位操作结合小核卷积替代大核卷积，在保持特征提取能力的同时显著降低计算复杂度与参数量；并引入基于递归特征融合的通道注意力模块以低成本增强通道间特征交互。此外，将
     SSB 集成进熵模型，使熵估计过程更加轻量。实验显示 ShiftLIC 在计算成本、参数量与解码延迟上优于 VVC Intra、GMM 等主流方法，并在每像素 MACs 归一化的 BD-rate
     上取得 -102.6% 的 SOTA 增益，适合资源受限环境部署，代码已开源。
+  deep_dive: docs/auto/2503.23052.md
 assessment:
   relevance: high
   decision: deep_read
