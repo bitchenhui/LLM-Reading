@@ -12,6 +12,7 @@ source:
 time:
   published: '2022-12-11'
   collected: '2026-11-14'
+  updated: '2026-11-18'
 entities:
 - ref: codec:G-PCC
   role: subject
@@ -28,6 +29,7 @@ claims:
 summaries:
   one_liner_zh: 将空间分块并用共享网络加逐块潜码表示点云几何，经率失真优化后超越八叉树G-PCC。
   abstract_zh: 针对动态点云稀疏性多样、维度高、时域变化大导致的压缩难题，论文将空间划分为小立方体，用共享神经网络与逐块潜码表示每个非空立方体的几何。网络在单帧或多帧的所有立方体间共享，以利用空间与时间冗余；通过对网络参数与潜码的熵及重建失真建模，得到率失真（R-D）最优表示。实验表明该编码方案的R-D性能优于基于八叉树的G-PCC，尤其在多帧点云视频上优势明显，代码已开源。
+  deep_dive: docs/auto/2212.05589.md
 assessment:
   relevance: high
   decision: summary_only

@@ -13,6 +13,7 @@ source:
 time:
   published: '2023-11-29'
   collected: '2026-11-14'
+  updated: '2026-11-18'
 entities:
 - ref: impl:TIC
   role: subject
@@ -32,6 +33,7 @@ claims:
 summaries:
   one_liner_zh: 提出基于Transformer的角到中心并行上下文模型C³M，以对数预测顺序与长程交叉注意力提升学习图像压缩率失真性能。
   abstract_zh: 针对并行上下文模型因因果上下文不完整导致的性能退化问题，论文从上下文预测与解码所用信息的数量和质量两方面展开分析，提出基于Transformer的角到中心上下文模型C³M。该方法采用对数式预测顺序，从角落到中心渐进式预测更多上下文特征；同时在编解码端变换中引入长程交叉注意力模块LCAM，通过在不同通道分配不同窗口形状扩大感受野以捕获长程语义信息。大量实验表明所提方法在率失真性能上优于现有最先进的并行上下文方法；主观分析进一步表明增强Transformer图像压缩中的细节表达是值得探索的方向。
+  deep_dive: docs/auto/2311.18103.md
 assessment:
   relevance: high
   decision: deep_read

@@ -12,6 +12,7 @@ source:
 time:
   published: '2023-09-25'
   collected: '2026-11-14'
+  updated: '2026-11-18'
 entities:
 - ref: codec:Opus
   role: subject
@@ -39,6 +40,7 @@ summaries:
   one_liner_zh: 提出带自适应时间整形模块的NoLACE，以因果低复杂度方式增强Opus解码语音，在6/9/12 kb/s下显著优于Opus与放大版LACE。
   abstract_zh: 语音编解码器增强旨在去除编解码器引入的失真：经典方法零延迟、复杂度极低但效果有限，而DNN方法质量更高却复杂度高或需引入延迟。LACE（线性自适应编码增强器）通过将DNN与经典长时/短时后滤波结合，构成因果低复杂度模型，但其模型规模扩大时质量会快速饱和。本文提出新颖的自适应时间整形模块，为LACE提供高时间分辨率，得到非线性版本NoLACE。将NoLACE适配到Opus编解码器后，在6、9和12
     kb/s三个码率点均显著优于Opus基线和放大的LACE模型；且LACE与NoLACE在与ASR系统级联时表现良好。
+  deep_dive: docs/auto/2309.14521.md
 assessment:
   relevance: high
   decision: summary_only

@@ -13,6 +13,7 @@ source:
 time:
   published: '2023-12-13'
   collected: '2026-11-14'
+  updated: '2026-11-18'
 entities:
 - ref: codec:VVC
   role: subject
@@ -41,6 +42,7 @@ claims:
 summaries:
   one_liner_zh: 复用最低码率参考表征的划分结构加速VVC多码率编码，从属表征编码时间平均降40%，VMAF仅降0.43。
   abstract_zh: 针对流媒体中同一内容需编码为多个码率表征、VVC编码开销高的痛点，提出基于参考表征编码图（encoding map）的快速多码率编码方法。为保证与并行处理兼容，将最低码率表征指定为参考表征，并复用其划分结构来加速其余从属表征的编码决策。实验基于开源优化的VVC编码器VVenC进行。结果显示从属表征编码时间平均降低40%，而VMAF质量平均仅下降0.43，在几乎无损质量的前提下大幅削减多码率编码成本。
+  deep_dive: docs/auto/2312.08330.md
 assessment:
   relevance: high
   decision: deep_read

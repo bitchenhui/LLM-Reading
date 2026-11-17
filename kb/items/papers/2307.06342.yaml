@@ -12,6 +12,7 @@ source:
 time:
   published: '2023-07-12'
   collected: '2026-11-14'
+  updated: '2026-11-18'
 entities:
 - ref: codec:VVC
   role: subject
@@ -45,6 +46,7 @@ summaries:
     ConvNeXt 构建变换网络，并搭配计算高效的通道自回归先验（ChARM），从超先验与量化隐表示中同时捕获全局与局部上下文。框架可端到端优化，提取紧凑隐表示并重建更高质量图像。在四个常用数据集上，平均
     BD-rate（PSNR）较 VVC 参考编码器 VTM-18.0 降低 5.24%，较 SOTA 学习图像压缩方法 SwinT-ChARM 降低 1.22%。此外通过模型缩放实验验证计算效率，并以客观与主观分析揭示
     ConvNeXt 相对 Swin Transformer 的性能优势。
+  deep_dive: docs/auto/2307.06342.md
 assessment:
   relevance: high
   decision: deep_read

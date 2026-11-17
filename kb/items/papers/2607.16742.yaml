@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-07-18'
   collected: '2026-11-14'
+  updated: '2026-11-18'
 entities:
 - ref: concept:IQA
   role: subject
@@ -48,6 +49,7 @@ claims:
 summaries:
   one_liner_zh: 发布最大规模AI生成人像视频质量评估数据集HVEval+，并提出统一多维打分、成对比较与问答的MoE-Rater多模态大模型
   abstract_zh: 该工作将此前HVEval扩展为HVEval+，基于综合分类体系构建1千条提示词，由24个文生视频模型生成2万个以人为中心的视频。数据集包含跨空间质量、时间质量、文生视频对应性3个维度的6万条MOS评分与6万对偏好标注，以及2万条类别相关问答对，构成目前最大的AI生成人像视频整体质量评估数据集。方法上提出受MoE启发、基于多模态大语言模型的MoE-Rater统一模型，引入投影专家混合（MoPE）与LoRA专家混合（MoLE）。采用任务感知预训练、任务特定适配与自适应路由优化三阶段训练策略，在单一模型内统一多维质量打分、成对比较与类别问答任务。实验显示其在HVEval+与Human-AGVQA数据集上均取得优越性能，可促进T2V模型的评估与优化。
+  deep_dive: docs/auto/2607.16742.md
 assessment:
   relevance: high
   decision: summary_only

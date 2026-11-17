@@ -13,6 +13,7 @@ source:
 time:
   published: '2023-08-12'
   collected: '2026-11-14'
+  updated: '2026-11-18'
 entities:
 - ref: codec:VVC
   role: subject
@@ -40,6 +41,7 @@ summaries:
   one_liner_zh: 提出4K下采样编码+ML超分辨率重建的编码链，低码率下较VVC参考软件最高取得18% BD-rate增益。
   abstract_zh: 针对4K超高清视频数据量激增的问题，论文提出将新一代VVC编码器与基于机器学习的单图像超分辨率算法相结合的空间下采样-编码-上采样编码链：4K内容先下采样再进行VVC编码，解码端用ML超分辨率恢复至原始分辨率。实验表明，该编码链在低码率场景下质量优于常规VVC参考软件。多组测试显示，当QP大于34和42时，编码4K序列平均可分别获得最高12%和18%的Bjontegaard
     delta率增益。视觉示例还说明下采样+超分辨率方案有助于减少细节损失和压缩伪影。
+  deep_dive: docs/auto/2308.06570.md
 assessment:
   relevance: high
   decision: deep_read
