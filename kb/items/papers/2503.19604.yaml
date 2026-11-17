@@ -13,6 +13,7 @@ source:
 time:
   published: '2025-03-25'
   collected: '2026-11-14'
+  updated: '2026-11-17'
 entities:
 - ref: concept:INR
   role: subject
@@ -55,6 +56,7 @@ summaries:
   one_liner_zh: 提出生成式隐式视频压缩框架GIViC，是首个在RA配置下BD-rate超越VVC VTM的INR视频编码器。
   abstract_zh: 针对现有基于隐式神经表示（INR）的视频编解码器性能不及传统或自编码器类编解码器的问题，提出生成式隐式视频压缩框架GIViC。该框架借鉴INR与大型语言模型、扩散模型在长程依赖建模上的共性，设计隐式扩散过程，沿由粗到细的时空分解进行扩散采样，从全序列级扩散逐步过渡到逐token级扩散。同时引入分层门控线性注意力transformer（HGLA），沿尺度与序列两条轴对全局依赖建模进行双重分解。在随机访问（RA）配置（YUV
     4:2:0，GOPSize=32）下，GIViC相对VVC VTM、DCVC-FM和NVRC分别取得15.94%、22.46%和8.52%的BD-rate节省；据作者所知，这是首个在RA配置下超越VTM的INR视频编解码器，源代码将开源。
+  deep_dive: docs/auto/2503.19604.md
 assessment:
   relevance: high
   decision: deep_read

@@ -12,6 +12,7 @@ source:
 time:
   published: '2025-07-15'
   collected: '2026-11-14'
+  updated: '2026-11-17'
 entities:
 - ref: concept:LLM
   role: subject
@@ -42,6 +43,7 @@ summaries:
   one_liner_zh: 提出AgentOps框架：以六阶段自动化流水线观测、分析并优化LLM智能体系统，驯服不确定性以支撑自我改进。
   abstract_zh: 论文提出AgentOps愿景框架，用于对LLM驱动的智能体AI系统进行观测、分析、优化与自动化运维。作者指出此类系统因概率推理、演化的记忆状态与动态执行路径产生新型不确定性，传统软件可观测性与运维实践难以应对。框架区分开发者、测试者、SRE与业务用户四类角色在生命周期不同节点的差异化需求。核心是六阶段AgentOps
     Automation Pipeline：行为观测、指标采集、问题检测、根因分析、优化建议与运行时自动化。全文强调自动化在管理不确定性、支撑安全的自我改进AI系统中的关键作用——不是消除不确定性，而是驯服它。
+  deep_dive: docs/auto/2507.11277.md
 assessment:
   relevance: high
   decision: summary_only

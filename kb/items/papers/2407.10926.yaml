@@ -12,6 +12,7 @@ source:
 time:
   published: '2024-07-15'
   collected: '2026-11-14'
+  updated: '2026-11-17'
 entities:
 - ref: codec:VVC
   role: subject
@@ -55,6 +56,7 @@ summaries:
   abstract_zh: 该文提出以查找表（LUT）替代深度神经网络在线推理的环路滤波方案：在固定滤波参考范围内训练DNN，离线遍历全部可能输入并将其滤波输出缓存为LUT；编码时通过定位待滤波像素及其参考像素、插值缓存值生成滤波像素。为在有限存储下支持较大参考范围，引入增强索引机制，并在训练中采用裁剪/微调机制。方法实现于VVC参考软件VTM-11.0：ultrafast/very
     fast/fast三档在AI配置下平均降低BD-rate 0.13%/0.34%/0.51%，RA配置下降低0.10%/0.27%/0.39%。时间仅增加101%/102%-104%/108%，计算量0.13-0.93
     kMACs/pixel，单模型存储164-1148 KB，展示了实用化NN编码工具的可行路径。
+  deep_dive: docs/auto/2407.10926.md
 assessment:
   relevance: high
   decision: deep_read

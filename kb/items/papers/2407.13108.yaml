@@ -12,6 +12,7 @@ source:
 time:
   published: '2024-07-18'
   collected: '2026-11-14'
+  updated: '2026-11-17'
 entities:
 - ref: concept:SuperResolution
   role: subject
@@ -47,6 +48,7 @@ summaries:
   one_liner_zh: 首个通用压缩图像超分框架UCIP，用动态提示统一应对JPEG/HEVC/VVC/HIFIC等任意编解码器的混合压缩失真。
   abstract_zh: 论文提出首个通用压缩图像超分辨率（CSR）框架UCIP，通过动态提示学习联合支持任意压缩编解码器/模式产生的混合失真。设计仅需空间尺寸1×1提示的高效动态提示策略，挖掘内容与空间感知的任务自适应上下文信息。骨干采用类MLP结构，首次将Active
     Token Mixer（ATM）适配到CSR任务，仅在水平与垂直方向结合偏移预测建模全局信息。作者还构建了覆盖JPEG、HEVC、VVC、HIFIC等6种传统与学习型编解码器、23种常见退化的all-in-one基准数据集。实验表明UCIP在通用CSR任务上取得一致且优异的性能。
+  deep_dive: docs/auto/2407.13108.md
 assessment:
   relevance: high
   decision: summary_only

@@ -12,6 +12,7 @@ source:
 time:
   published: '2023-03-01'
   collected: '2026-11-14'
+  updated: '2026-11-17'
 entities:
 - ref: concept:SuperResolution
   role: subject
@@ -36,6 +37,7 @@ claims:
 summaries:
   one_liner_zh: 提出卷积+查找表混合模型与MoE-LUT模块，应对流媒体动态退化，720P视频SR约100FPS
   abstract_zh: 在线流媒体受带宽与算力限制，且WebRTC等协议会在时空维度动态调整视频质量，带来多样且动态的退化，加之严格的延迟要求，使现有视频超分方法难以直接适用。论文基于真实在线流媒体系统构建了新基准数据集LDV-WebRTC。方法上提出卷积与查找表（LUT）混合模型以改善性能-延迟权衡，并设计混合专家LUT（MoE-LUT）模块，构建针对不同退化的LUT集合并自适应组合以应对变化的退化。实验表明该方法实现720P视频超分约100FPS，显著优于现有LUT方法，并与高效CNN方法性能相当。
+  deep_dive: docs/auto/2303.00334.md
 assessment:
   relevance: high
   decision: summary_only

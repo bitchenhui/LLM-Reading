@@ -13,6 +13,7 @@ source:
 time:
   published: '2023-09-26'
   collected: '2026-11-14'
+  updated: '2026-11-17'
 entities:
 - ref: impl:VTM
   role: subject
@@ -37,6 +38,7 @@ summaries:
   one_liner_zh: 通过率-失真-计算(RDC)前沿研究提出新型神经图像压缩架构，以相近计算量取得SOTA率失真性能。
   abstract_zh: 神经图像压缩的率失真性能已超越非学习类编码器，但因缺乏在多样消费硬件上高效可行的模型而难以广泛部署，且缺少标准基准平台导致方法比较困难。本文的率-失真-计算(RDC)研究表明，FLOPs和运行时任何单一指标都不足以准确排序神经压缩方法。作者探索RDC前沿，得到一族计算需求与RD性能最佳折中的模型架构。最终提出的新型架构在码率上较BPG节省23.1%（较VTM节省7.0%、较ELIC节省3.0%），达到SOTA
     RD性能，且FLOPs未显著高于其他学习型编解码器。
+  deep_dive: docs/auto/2311.12821.md
 assessment:
   relevance: high
   decision: deep_read

@@ -12,6 +12,7 @@ source:
 time:
   published: '2024-05-23'
   collected: '2026-11-14'
+  updated: '2026-11-17'
 entities:
 - ref: codec:VVC
   role: subject
@@ -37,6 +38,7 @@ claims:
 summaries:
   one_liner_zh: 统一帧内/帧间神经视频压缩框架，用扩散反演参考特征实现隐式帧间对齐，感知性能较VTM提升58.4%。
   abstract_zh: 该论文提出I²VC框架，用单一时空编解码器同时处理I/P/B帧，将跨帧依赖转化为条件编码方案，从而统一帧内与帧间压缩。针对缺乏显式运动数据的难题，引入隐式帧间对齐机制：以预训练扩散去噪过程中的扩散反演参考特征（而非随机噪声）作为压缩初始状态，依据解码特征对运动丰富区域进行选择性去噪，无需显式运动估计与补偿即可完成精确对齐。编解码器按内容重要性引导特征压缩速率。在AI、LD、RA多种配置与各类帧型上的实验表明，I²VC优于当前最先进的感知型学习编码器，感知重建性能较H.266/VVC标准参考软件VTM提升58.4%。
+  deep_dive: docs/auto/2405.14336.md
 assessment:
   relevance: high
   decision: deep_read

@@ -12,6 +12,7 @@ source:
 time:
   published: '2022-07-25'
   collected: '2026-11-14'
+  updated: '2026-11-17'
 entities:
 - ref: concept:MoE
   role: subject
@@ -35,6 +36,7 @@ claims:
 summaries:
   one_liner_zh: 用边缘感知自编码器直接映射像素块到SMoE模型参数，编码器加速500-1000倍实现实时图像压缩且RD性能提升。
   abstract_zh: Steered-Mixtures-of-Experts（SMoE）模型可提供稀疏的边缘感知表示，已用于图像压缩并能达到与SOTA相当的性能，但其编码端的迭代建模过程计算开销极大。本文提出一种新的边缘感知自编码器（AE）策略，借鉴算法"展开"（unfolding）思想，将像素块直接映射为SMoE模型参数，从而免去耗时的迭代优化，同时与既有SMoE框架完全兼容。即插即用的AE编码器使编码运行时间降低500至1000倍，图像重建质量反而有所提升，实现具备实时特性的图像压缩，RD性能较作者先前工作亦有改进。
+  deep_dive: docs/auto/2207.12348.md
 assessment:
   relevance: high
   decision: deep_read
