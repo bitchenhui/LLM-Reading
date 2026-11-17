@@ -12,6 +12,7 @@ source:
 time:
   published: '2024-06-13'
   collected: '2026-11-14'
+  updated: '2026-11-18'
 entities:
 - ref: concept:NeRF
   role: subject
@@ -30,6 +31,7 @@ claims:
 summaries:
   one_liner_zh: 提出免编码器、端到端优化的非线性变换编码方法压缩网格化NeRF特征网格，降低存储开销并提升重建质量。
   abstract_zh: 近期NeRF利用特征网格提升渲染质量与速度，但引入了显著的存储开销。本文提出一种基于非线性变换编码范式的神经压缩方法来压缩网格化NeRF的特征网格。由于缺乏大量独立同分布场景的训练数据，作者设计了免编码器、针对单个场景端到端优化并使用轻量解码器的方案。为利用潜在特征网格的空间非均匀性，引入重要性加权率失真目标与采用掩码机制的稀疏熵模型。实验结果表明，该方法在网格化NeRF压缩效率与重建质量方面均超越现有工作。
+  deep_dive: docs/auto/2406.08943.md
 assessment:
   relevance: high
   decision: summary_only

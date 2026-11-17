@@ -12,6 +12,7 @@ source:
 time:
   published: '2024-03-01'
   collected: '2026-11-14'
+  updated: '2026-11-18'
 entities:
 - ref: concept:SuperResolution
   role: subject
@@ -41,6 +42,7 @@ claims:
 summaries:
   one_liner_zh: 发布含HEVC压缩伪影的200条全景视频数据集ODVista，填补360°视频超分与质量增强研究的数据空白。
   abstract_zh: 针对360°视频在VR/XR及UAV等移动流媒体场景中因降分辨率与压缩导致的质量退化问题，论文指出现有公开全景视频超分数据集缺少压缩伪影，限制了该方向研究。为此提出ODVista数据集，包含200条高分辨率高质量视频，经降采样后用HEVC/H.265在四个码率范围编码。数据集覆盖丰富多样的场景和不同内容复杂度层级，有利于训练在真实场景中稳健泛化的方案。作者在验证集与测试集上从质量和运行时间两方面评估了两种手工设计与两种基于机器学习的超分模型。
+  deep_dive: docs/auto/2403.00604.md
 assessment:
   relevance: high
   decision: summary_only

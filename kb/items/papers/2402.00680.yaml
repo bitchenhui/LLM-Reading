@@ -13,6 +13,7 @@ source:
 time:
   published: '2024-02-01'
   collected: '2026-11-14'
+  updated: '2026-11-18'
 entities:
 - ref: impl:TCM
   role: subject
@@ -29,6 +30,7 @@ claims:
 summaries:
   one_liner_zh: 提出联合局部光流与线性复杂度全局交叉注意力的运动补偿模块LGMC，集成DCVC-TCM后显著提升率失真性能。
   abstract_zh: 现有学习式视频压缩依赖光流网络或可变形卷积（DCN）估计运动，感受野受限导致只关注局部上下文，忽略大尺度运动与帧间全局相关性。该文提出局部-全局联合运动补偿模块LGMC：用光流网络承担局部运动补偿，用特征域交叉注意力捕获全局上下文，并将注意力中的softmax拆分为两个独立softmax以将二次复杂度降为线性。作者将LGMC集成到DCVC-TCM基线，得到LVC-LGMC编解码器。大量实验表明其相对DCVC-TCM取得显著率失真性能提升。
+  deep_dive: docs/auto/2402.00680.md
 assessment:
   relevance: high
   decision: deep_read

@@ -12,6 +12,7 @@ source:
 time:
   published: '2024-08-21'
   collected: '2026-11-14'
+  updated: '2026-11-18'
 entities:
 - ref: concept:IQA
   role: subject
@@ -60,6 +61,7 @@ claims:
 summaries:
   one_liner_zh: ECCV 2024 AIM研讨会压缩视频VQA挑战赛总结：459条14种编解码器压缩视频上评测方法并公开基准。
   abstract_zh: 该文报告了与ECCV 2024 AIM研讨会联合举办的压缩视频质量评估挑战赛。挑战赛在459条视频的测试集上评测VQA方法，视频由覆盖AVC/H.264、HEVC/H.265、AV1与VVC/H.266标准的14种编解码器压缩，包含丰富的压缩伪影。方法性能通过其预测与传统相关系数（与主观分的相关性）衡量，主观分来自大规模众包成对比较。训练采用此前构建的CVQAD数据集（1022条视频）；30支队伍注册，最终6支队伍提交了有效方案及可复现代码。论文还给出了当前先进VQA方法在该数据集上的基准表现，数据集、结果与在线排行榜均已公开。
+  deep_dive: docs/auto/2408.11982.md
 assessment:
   relevance: high
   decision: summary_only

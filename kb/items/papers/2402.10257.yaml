@@ -12,6 +12,7 @@ source:
 time:
   published: '2024-02-15'
   collected: '2026-11-14'
+  updated: '2026-11-18'
 entities:
 - ref: codec:VVC
   role: subject
@@ -34,6 +35,7 @@ claims:
 summaries:
   one_liner_zh: 系统评估多代NVC在360度视频下的投影格式增益：ACP/ECP最优，WS-PSNR码率节省超55%，且高于VVC。
   abstract_zh: 该论文首次系统研究360度投影格式重采样对神经视频压缩网络（NVC）压缩性能的影响，覆盖多代NVC与大量投影格式，并与传统混合编码器H.266/VVC的投影增益进行对比。结果表明，从常规等距柱状投影（ERP）重采样到其他投影格式同样能为NVC带来显著压缩增益。其中调整立方体贴图投影（ACP）与赤道圆柱投影（ECP）表现最佳，对最新一代NVC而言，基于WS-PSNR相比ERP可实现超过55%的码率节省。值得注意的是，NVC所获码率节省幅度高于H.266/VVC，说明投影格式重采样对NVC尤为重要。
+  deep_dive: docs/auto/2402.10257.md
 assessment:
   relevance: high
   decision: deep_read

@@ -12,6 +12,7 @@ source:
 time:
   published: '2024-05-14'
   collected: '2026-11-14'
+  updated: '2026-11-18'
 entities:
 - ref: codec:HEVC
   role: subject
@@ -34,6 +35,7 @@ summaries:
   one_liner_zh: 借鉴参数高效微调思想，用轻量适配器对预训练神经视频编解码器做实例自适应微调，显著提升RD性能并降低编码时间。
   abstract_zh: 学习式神经视频编解码器（NVC）性能与泛化仍不足，而现有实例自适应方法需对整个编解码网络做测试序列微调，计算代价高、增加码率且训练不稳定。作者借鉴大模型的参数高效微调（PEFT）思路，提出在预训练NVC上挂接轻量适配器模块，仅对测试视频微调适配器参数。该框架显著提升压缩性能、降低编码时间，且微调过程更稳定、更易实用。在UVG、MCL-JVC及HEVC标准测试序列上的实验显示，相较基线NVC的RD曲线最高提升约5
     dB PSNR，BD-rate亦显著改善，代码已开源（PEVC）。
+  deep_dive: docs/auto/2405.08530.md
 assessment:
   relevance: high
   decision: deep_read

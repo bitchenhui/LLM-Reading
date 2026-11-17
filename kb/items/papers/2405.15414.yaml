@@ -12,6 +12,7 @@ source:
 time:
   published: '2024-05-24'
   collected: '2026-11-14'
+  updated: '2026-11-18'
 entities:
 - ref: concept:LLM
   role: subject
@@ -36,6 +37,7 @@ summaries:
   abstract_zh: 现有 LLM 智能体擅长目标明确的长程任务，但难以应对目标开放、评判标准抽象的创意任务，缺乏自我改进所需的反馈信号。为此提出面向 Minecraft 创意建造的 Luban
     智能体，引入两级自主具身验证：其一，对智能体合成的 CAD 建模程序所产生的 3D 结构猜测进行视觉验证；其二，基于抽象标准生成并验证与环境相关的功能程序进行语用验证。多维人类评估与 Elo 评分显示，Luban
     能在其提出的基准上完成多样化创意建造任务，在可视性与实用性维度上比其他基线高出 33% 到 100%。在真实机械臂上的演示进一步展示了其创造能力向物理世界迁移的潜力。
+  deep_dive: docs/auto/2405.15414.md
 assessment:
   relevance: high
   decision: summary_only
