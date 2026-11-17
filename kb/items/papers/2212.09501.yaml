@@ -12,6 +12,7 @@ source:
 time:
   published: '2022-12-15'
   collected: '2026-11-14'
+  updated: '2026-11-18'
 entities:
 - ref: concept:SuperResolution
   role: subject
@@ -55,6 +56,7 @@ summaries:
   one_liner_zh: 以混合精度量化与运行时神经图像编解码器，在移动NPU上高效执行超分，较现有端上SR系统最高加速7.9倍且提升PSNR。
   abstract_zh: 图像与视频分发系统日益采用深度学习超分以提升视觉质量并降低对网络条件的依赖，但SR模型的高计算量与内存占用使移动端部署仍具挑战。NAWQ-SR提出新型混合精度量化技术与运行时神经图像编解码器，利用现代移动NPU的多精度能力，在满足用户指定质量约束下最小化推理延迟。该框架在运行时自适应选择各层算术精度，赋予SR网络更宽的表示能力，使NPU上可达到的视觉质量超越此前水平。实验显示，相比异构处理器方案MobiSR、CPU方案SplitSR与NPU方案XLSR分别平均加速7.9倍、3倍与1.91倍；相比INT8
     NPU设计平均加速3.2倍、PSNR提升0.39 dB，并有效缓解量化对视觉质量的负面影响，刷新NPU超分质量纪录。
+  deep_dive: docs/auto/2212.09501.md
 assessment:
   relevance: high
   decision: summary_only

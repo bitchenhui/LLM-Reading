@@ -12,6 +12,7 @@ source:
 time:
   published: '2023-06-29'
   collected: '2026-11-14'
+  updated: '2026-11-18'
 entities:
 - ref: codec:VVC
   role: subject
@@ -40,6 +41,7 @@ claims:
 summaries:
   one_liner_zh: 用低复杂度视频分析加随机森林模型替代VVC全帧内两遍码控的第一遍，VVenC faster档编码时间降约32%，BD-rate仅升约2%。
   abstract_zh: VVC相对其前代HEVC带来可观的压缩效率提升，但编码运行时复杂度显著增加，因此探索所有可用的耗时缩减手段十分重要。本文提出一种面向全帧内（all-intra）配置两遍码率控制的全新第一遍方法：通过低复杂度视频分析提取特征，并用随机森林（RF）机器学习模型推导驱动第二遍码控所需的数据。该方法在开源优化的VVC编码器VVenC上进行验证。与VVenC默认的两遍码控算法相比，所提方法在faster预设下编码时间约降低32%，平均BD-rate仅增加约2%，且码控精度相当。
+  deep_dive: docs/auto/2306.16786.md
 assessment:
   relevance: high
   decision: deep_read

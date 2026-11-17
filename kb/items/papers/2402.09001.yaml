@@ -12,6 +12,7 @@ source:
 time:
   published: '2024-02-14'
   collected: '2026-11-14'
+  updated: '2026-11-18'
 entities:
 - ref: codec:AV1
   role: subject
@@ -54,6 +55,7 @@ summaries:
   abstract_zh: 该综述对 AVC、VP9、HEVC、AV1、VVC、AVM 六种视频编码格式的压缩效率与解码能耗进行系统评测，评估参考与优化软件解码器实现，并分析 SIMD 指令对能耗的影响。软件解码方面，AV1
     是优化实现的甜点：相比 VP9 能耗增加 16.55%，同时码率节省 43.95%。硬件解码评测显示 AV1 相比 VP9 能耗增加 117.50%，而 HEVC 仅增加 6.06%，是硬件解码的能耗甜点。总体而言，硬件解码器的能耗不足优化软件解码器的
     9%。
+  deep_dive: docs/auto/2402.09001.md
 assessment:
   relevance: high
   decision: deep_read

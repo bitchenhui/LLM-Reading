@@ -12,6 +12,7 @@ source:
 time:
   published: '2024-04-09'
   collected: '2026-11-14'
+  updated: '2026-11-18'
 entities:
 - ref: codec:HEVC
   role: subject
@@ -39,6 +40,7 @@ claims:
 summaries:
   one_liner_zh: 提出利用HEVC编码器/量化/运动轻量特征的压缩视频质量指标，相关性优于VMAF与P.1204.3，可实时计算并随码流传输。
   abstract_zh: 针对自适应码率流媒体中编码优化对质量指标的依赖，作者将多个主观质量数据集合并，构建面向视频压缩与缩放场景的指标训练与评测数据。提出一组轻量级HEVC特征（编码器、量化、运动信息）用于增强质量指标性能。该指标可在与编码过程紧耦合的条件下以约4%的额外计算量获得，也可在解码端实时计算，并支持随码流进行实时质量传输。分布内与跨数据集测试显示其相关性优于VMAF和P.1204.3，且可外推到不同动态范围（SDR/HDR）。该工作可支撑客户端自适应启发式、实时分段优化、动态码率封顶以及按质量切换后处理神经网络等应用。
+  deep_dive: docs/auto/2404.06620.md
 assessment:
   relevance: high
   decision: summary_only

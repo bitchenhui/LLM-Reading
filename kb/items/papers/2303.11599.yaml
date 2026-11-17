@@ -12,6 +12,7 @@ source:
 time:
   published: '2023-03-21'
   collected: '2026-11-14'
+  updated: '2026-11-18'
 entities:
 - ref: codec:AVC
   role: subject
@@ -32,6 +33,7 @@ claims:
 summaries:
   one_liner_zh: 首个端到端分布式深度视频压缩框架：解码端生成侧信息，编码提速6-7倍且优于H.264。
   abstract_zh: 预测编码类视频压缩依赖重量级编码器消除时域冗余，难以部署在资源受限设备上。受分布式信源编码理论启发，论文提出首个端到端分布式深度视频压缩框架，核心是在解码端设计有效的侧信息（SI）生成模块，无需编码端计算密集的运动估计与补偿即可利用帧间相关性。实验表明该方法显著优于传统分布式视频编码与H.264（AVC），并在与DVC压缩性能相当的条件下获得6-7倍编码加速。代码已开源。
+  deep_dive: docs/auto/2303.11599.md
 assessment:
   relevance: high
   decision: deep_read

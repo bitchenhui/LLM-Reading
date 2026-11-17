@@ -12,6 +12,7 @@ source:
 time:
   published: '2023-10-14'
   collected: '2026-11-14'
+  updated: '2026-11-18'
 entities:
 - ref: codec:HEVC
   role: subject
@@ -41,6 +42,7 @@ claims:
 summaries:
   one_liner_zh: 提出MCBE方案，剔除低于AVC率失真曲线的HEVC/AV1表示并按JND去冗余，大幅降低流媒体编码、存储与传输能耗。
   abstract_zh: 针对流媒体服务商需为多个现代编解码器分别编码、存储与传输码率阶梯导致能耗激增的问题，提出在线高能效多编解码器码率阶梯估计方案MCBE。该方法剔除新一代编解码器（HEVC、AV1）码率阶梯中位于AVC预测率失真曲线之下的质量表示，并基于恰好可察觉差异（JND）阈值最小化各编解码器表示间的感知冗余，同时用随机森林模型预测各表示的VMAF分数。在所有客户端均支持AVC、HEVC和AV1解码的直播场景中，相比当前工业实践基线码率阶梯编码，MCBE在JND为6个VMAF点时将累计编码能耗降低56.45%、存储能耗降低94.99%、传输能耗降低77.61%。
+  deep_dive: docs/auto/2310.09570.md
 assessment:
   relevance: high
   decision: summary_only

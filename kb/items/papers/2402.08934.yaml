@@ -12,6 +12,7 @@ source:
 time:
   published: '2024-02-14'
   collected: '2026-11-14'
+  updated: '2026-11-18'
 entities:
 - ref: codec:AVC
   role: subject
@@ -41,6 +42,7 @@ summaries:
   one_liner_zh: 解码端用预训练条件扩散模型自回归预测后续帧，实现低至0.02 bpp、感知质量优于H.264/H.265的极限视频压缩。
   abstract_zh: 该文提出一种利用预训练扩散生成模型预测能力的极限视频压缩方法：解码端的条件扩散模型以若干神经压缩帧为条件，自回归地生成后续帧，当重建质量低于设定阈值时编码新帧以重启预测。整段视频按此方式顺序编码，以LPIPS、FVD等感知质量指标驱动码率与感知质量的权衡。实验表明，所提方案在极低码率区间（最低约0.02
     bpp）的重建感知质量优于H.264和H.265等标准编解码器，展示了用生成模型挖掘视频时间相关性的潜力。代码已开源。
+  deep_dive: docs/auto/2402.08934.md
 assessment:
   relevance: high
   decision: deep_read
