@@ -12,6 +12,7 @@ source:
 time:
   published: '2024-01-21'
   collected: '2026-11-14'
+  updated: '2026-11-17'
 entities:
 - ref: codec:VVC
   role: subject
@@ -41,6 +42,7 @@ summaries:
   one_liner_zh: 提出基于上下文聚类的学习图像编码CLIC，MSE优化下较VVC节省约10% BD-Rate，MS-SSIM下超50%。
   abstract_zh: 论文提出CLIC（Contextual Clustering based LIC），以聚类操作与局部注意力替代LIC中广泛使用的卷积与自注意力进行相关性刻画与紧凑表示。聚类使簇内特征聚合的感受野扩展至全图，随后特征重排回原始空间位置并经局部注意力单元完成簇间嵌入。作者还引入引导式反量化滤波（GuidedPQF），在解码初期有效抑制量化误差的传播与累积。MSE优化时CLIC在三个常用基准数据集上较VVC节省约10%
     BD-Rate；MS-SSIM优化时较VVC节省超过50% BD-Rate，为LIC发展提供了新方向。
+  deep_dive: docs/auto/2401.11615.md
 assessment:
   relevance: high
   decision: deep_read

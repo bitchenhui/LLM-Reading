@@ -12,6 +12,7 @@ source:
 time:
   published: '2025-05-22'
   collected: '2026-11-14'
+  updated: '2026-11-17'
 entities:
 - ref: concept:SelfImprovement
   role: subject
@@ -44,6 +45,7 @@ claims:
 summaries:
   one_liner_zh: 仅用自判奖励与1.3万单语样本在线RL训练7B模型，英中翻译超越更大模型并达SOTA。
   abstract_zh: 论文提出SSR强化学习框架用于机器翻译，特点是免参考、全在线、仅依赖自判奖励信号。以Qwen-2.5-7B为骨干、仅用1.3万条单语样本训练，SSR-Zero-7B在WMT23、WMT24和Flores200英中互译基准上超越TowerInstruct-13B、GemmaX-28-9B等MT专用LLM以及更大的Qwen2.5-32B-Instruct。结合COMET外部监督得到的SSR-X-Zero-7B取得英中翻译SOTA，超越所有72B以下开源模型，甚至胜过闭源模型。分析表明自奖励机制优于外部LLM-as-a-judge，且与训练的奖励模型互补，为自改进RL方法提供了有价值的洞见。
+  deep_dive: docs/auto/2505.16637.md
 assessment:
   relevance: high
   decision: summary_only

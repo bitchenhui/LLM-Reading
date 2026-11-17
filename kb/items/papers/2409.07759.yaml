@@ -12,6 +12,7 @@ source:
 time:
   published: '2024-09-12'
   collected: '2026-11-14'
+  updated: '2026-11-17'
 entities:
 - ref: concept:3DGS
   role: subject
@@ -34,6 +35,7 @@ claims:
 summaries:
   one_liner_zh: 提出SwinGS框架，以滑动窗口时空高斯+MCMC实现任意长度体积视频的实时流式训练与传输，传输成本降低83.6%。
   abstract_zh: 针对动态3DGS模型体积过大、视频时长受限与内容漂移导致流式性差的问题，提出SwinGS，用于体积视频的实时训练、传输与渲染。该方法将时空高斯与马尔可夫链蒙特卡洛（MCMC）结合以适配跨帧的多样3D场景，并用滑动窗口以累积方式捕获每帧的高斯快照。作者实现原型系统并在多数据集与场景上验证流式能力，还开发了基于WebGL的交互查看器，可在含手机与平板在内的现代浏览器上实时播放体积视频。实验表明，相比先前工作传输成本降低83.6%，且可扩展至任意长度体积视频而无需增加GPU资源。
+  deep_dive: docs/auto/2409.07759.md
 assessment:
   relevance: high
   decision: summary_only

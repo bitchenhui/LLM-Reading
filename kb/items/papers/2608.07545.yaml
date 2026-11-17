@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-07-31'
   collected: '2026-11-15'
+  updated: '2026-11-17'
 entities:
 - ref: concept:SelfImprovement
   role: subject
@@ -60,6 +61,7 @@ summaries:
   abstract_zh: DarwinX 将智能体自改进建模为对外壳（提示词、工具、技能与控制流）的种群级自然选择，模型权重保持冻结。其机制包括：只接纳扩展覆盖且不回退变体的保留-扩展契约、保存替代谱系供重组的档案库，以及失败、教师与自我证据共用的统一编辑接口。适应度完全由各基准自身的验证器给出，不依赖金标答案或人工挑选。在四个逐步分离进化信号与测试的基准上，一轮进化平均提升约17分：Terminal-Bench
     2.1 匹配基座上升+7.7至83.2%，更强基座达84.7%验证前沿；TerminalWorld 留出集达68.3%；WebArena-Infinity 真实任务 pass@1 从43.5%升至93.0%且审计干净。进化所得为通用智能体能力而非基准特化补丁，Terminal-Bench
     2.1 外壳可原样迁移至 SWE-bench Verified。
+  deep_dive: docs/auto/2608.07545.md
 assessment:
   relevance: high
   decision: summary_only

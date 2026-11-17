@@ -13,6 +13,7 @@ source:
 time:
   published: '2025-05-26'
   collected: '2026-11-14'
+  updated: '2026-11-17'
 entities:
 - ref: concept:LLM
   role: subject
@@ -43,6 +44,7 @@ summaries:
   one_liner_zh: 提出VDS-TTT框架，用学习到的验证器筛选高置信伪标签样本做测试时训练，使LLM在无标签分布外数据上持续自我改进。
   abstract_zh: 论文提出VDS-TTT框架：对每个输入查询让LLM生成N个候选答案，由学习到的验证器为各答案打可靠性分数，选取最高置信且超过固定阈值的答案与其查询配对，作为测试时训练（TTT）的伪标签数据，仅微调低秩LoRA适配器参数以保证适应效率与快速收敛。作者称这是首个以验证器驱动方式合成测试时训练数据、实现模型持续自我改进的自监督框架。在三个多样化基准和三个SOTA
     LLM上的实验显示，VDS-TTT相比基础模型相对提升最高32.29%，相比不带测试时训练的验证器方法提升6.66%。
+  deep_dive: docs/auto/2505.19475.md
 assessment:
   relevance: high
   decision: summary_only
