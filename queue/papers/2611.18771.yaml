@@ -1,0 +1,39 @@
+id: paper:arxiv:2611.18771
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'Agri-MRAG: Parameter-Enhanced Multimodal Retrieval-Augmented Generation for Agricultural Visual
+    Question Answering'
+  authors:
+  - Fuyong Liu
+  - Xiantao Lei
+  - Xining Zhang
+  published: '2026-11-12'
+  updated: '2026-11-12'
+  categories:
+  - cs.CV
+  abstract: Multimodal Retrieval-Augmented Generation (MRAG) has shown promise for Agricultural Visual
+    Question Answering (Agri-VQA), but existing methods still face challenges in retrieving relevant knowledge
+    while avoiding redundancy and in integrating retrieved evidence beyond simple prompt concatenation.
+    To address these issues, we propose Agri-MRAG, a multimodal retrieval-augmented framework for agricultural
+    VQA. Specifically, we first introduce a semantic-consistency-guided clustering mechanism that combines
+    multimodal clustering and weighted relevance scoring to select high-confidence knowledge subsets and
+    adaptively determine the retrieval size $k$. We then design a parameterized knowledge injection strategy,
+    where retrieved agricultural knowledge is encoded into LoRA adapters and merged into the feed-forward
+    network (FFN) layers of the MLLM, allowing external knowledge to influence generation through parameter-level
+    adaptation. In addition, a perplexity-guided (PPL-guided) routing mechanism is employed to switch
+    between implicit parametric reasoning and explicit retrieval-assisted generation according to model
+    uncertainty, balancing inference efficiency and answer reliability. For evaluation, we use PlantVillageVQA
+    as a broad agricultural benchmark and construct PlantVQA, a region-specific forestry and fruit crop
+    VQA dataset containing 7,514 images and 15,028 expert-verified question-answer pairs. Experiments
+    show that Agri-MRAG achieves ROUGE-L scores of 41.21 and 46.58 on the two datasets, outperforming
+    mRAG by 11.70 and 4.51 points, and VisRAG by 8.80 and 3.39 points, respectively.
+  url: https://arxiv.org/abs/2611.18771
+  pdf_url: https://arxiv.org/pdf/2611.18771v1
+  version: v1
+fetched: '2026-11-17'

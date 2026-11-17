@@ -13,6 +13,7 @@ source:
 time:
   published: '2023-05-03'
   collected: '2026-11-14'
+  updated: '2026-11-17'
 entities:
 - ref: concept:Hyperprior
   role: subject
@@ -31,6 +32,7 @@ claims:
 summaries:
   one_liner_zh: 提出ProgDTD训练法，将CNN基非渐进学习图像压缩模型改造为无需额外参数的渐进压缩模型。
   abstract_zh: 渐进式压缩让图像先以低分辨率开始加载、随数据接收逐渐变清晰，可改善弱网环境下的用户体验。作者观察到压缩模型瓶颈中存储的信息重要性不一，提出ProgDTD训练方法：通过修改训练步骤强制模型按优先级在瓶颈中排序存储信息，再按排序索引顺序传输数据实现渐进压缩。该方法面向CNN结构的学习图像压缩模型，不引入额外参数，渐进范围可定制。在最具代表性的hyperprior结构上实验，ProgDTD在MS-SSIM与准确率上与非渐进对应模型及其他SOTA渐进模型表现相当。
+  deep_dive: docs/auto/2305.02145.md
 assessment:
   relevance: high
   decision: deep_read

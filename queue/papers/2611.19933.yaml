@@ -1,0 +1,51 @@
+id: paper:arxiv:2611.19933
+status: reviewed
+score: 3
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+- ref: concept:SelfImprovement
+  count: 1
+  weight: 1
+- ref: concept:TrainingFree
+  count: 1
+  weight: 1
+meta:
+  title: 'SAGE-VQA: A Training-Free, Self-Evolving Agentic Framework with Grounded Evidence for Knowledge-Based
+    Visual Question Answering'
+  authors:
+  - Ruirui Shen
+  - Jianqi Gao
+  - Xiangfeng Luo
+  - Yonggang Zhang
+  - Muran Yu
+  - Barney Haoyun Miao
+  - Hang Yu
+  - Yike Guo
+  published: '2026-11-15'
+  updated: '2026-11-15'
+  categories:
+  - cs.CV
+  abstract: 'Knowledge-based visual question answering (KB-VQA) aims to combine visual information with
+    external knowledge to answer user questions. Existing methods face two main bottlenecks: visual perception
+    errors can propagate into hallucinations, and generalization across scenarios remains limited. To
+    address these issues, we propose SAGE-VQA (Self-evolving Agent framework with Grounded Evidence),
+    a training-free agentic framework that combines evidence verification with experience evolution. Our
+    key insight is to explore an Evidence-Driven Adaptive Reasoning (EDAR) strategy. It accurately acquires
+    and verifies question-relevant fine-grained visual information. It also extracts and refines reusable
+    experience to support robust reasoning across tasks. Specifically, we design a Co-verified Visual
+    Grounding module that verifies question-relevant visual information and provides grounded evidence
+    for subsequent reasoning. We further introduce a Self-evolving Hierarchical Memory (SHM) mechanism.
+    SHM organizes experiences into declarative and procedural memories based on their nature. These memories
+    can be reused in subsequent reasoning and continually refined through feedback, without updating model
+    parameters. Experimental results show that our method outperforms competing methods based on lightweight
+    open-source vision-language models (VLMs) as well as those based on closed-source VLMs. Moreover,
+    our method can serve as a plug-and-play reasoning framework for existing VLMs without modifying their
+    architectures.'
+  url: https://arxiv.org/abs/2611.19933
+  pdf_url: https://arxiv.org/pdf/2611.19933v1
+  version: v1
+fetched: '2026-11-17'
+llm_decision: summary_only

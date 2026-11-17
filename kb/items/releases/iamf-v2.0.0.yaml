@@ -1,0 +1,48 @@
+id: repo_release:github:iamf-v2.0.0
+type: repo_release
+title: v2.0.0
+domain: audio_coding
+research_lines: []
+source:
+  channel: github
+  external_id: AOMediaCodec/iamf@v2.0.0
+  url: https://github.com/AOMediaCodec/iamf/releases/tag/v2.0.0
+time:
+  published: '2026-11-16'
+  collected: '2026-11-17'
+entities:
+- ref: codec:IAMF
+  role: subject
+claims:
+- statement: v2.0.0 新增 OBJECT_BASED 音频元素类型
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 规范新增新扬声器布局（loudspeaker layouts）的定义文本
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 新增单位置（single position）参数定义及对应参数块
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: FLAC 引用更新为 RFC-9639
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 澄清 OBU 头中 num_samples_to_trim_at_end/start 字段的存在性
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 规范文本自 3 月 10 日起转换为 WGD（工作组草案），并更新批准日期与版本 URL
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: IAMF v2.0.0 新增 OBJECT_BASED 音频元素类型、新扬声器布局与单位置参数定义。
+  abstract_zh: IAMF 规范 v2.0.0 为重大版本更新，核心变更包括新增 OBJECT_BASED 音频元素类型、新扬声器布局的规范文本以及单位置（single position）参数定义与参数块。此外将
+    FLAC 引用更新为 RFC-9639，并澄清 OBU 头中 num_samples_to_trim_at_end/start 字段的存在性。版本已转入 WGD（工作组草案）流程并更新批准日期。
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: IAMF 规范重大版本 v2.0.0，新增 OBJECT_BASED 音频元素类型、新扬声器布局与单位置参数定义等实质性标准变更
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-17'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: IAMF 发布 v2.0.0 规范

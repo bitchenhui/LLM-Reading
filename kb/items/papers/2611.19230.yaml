@@ -1,0 +1,81 @@
+id: paper:arxiv:2611.19230
+type: paper
+title: 'CompoundingKernel: Self-Improving from Zero to First'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2611.19230v1
+  url: https://arxiv.org/abs/2611.19230
+  pdf_url: https://arxiv.org/pdf/2611.19230v1
+  venue: arXiv preprint
+time:
+  published: '2026-11-14'
+  collected: '2026-11-17'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: uses
+- ref: org:NVIDIA
+  role: platform
+claims:
+- statement: 生成的GPU内核在SOL-ExecBench（NVIDIA B200）公开L1、L2与量化榜单均排名第一，L1自2026-10-27起保持第一（2026-11-07曾短暂丢失）。
+  confidence: reported
+  metrics:
+  - name: 榜单排名
+    value: 第1名
+    scope: SOL-ExecBench公开L1/L2/Quantization榜单，NVIDIA B200，截至2026-11-11
+  evidence: abstract（初筛，未读全文）
+- statement: 全部235个问题均有经站点验证的正确内核，在209个公开榜单问题上比基准参考实现快4.40倍。
+  confidence: reported
+  metrics:
+  - name: 加速比
+    value: 4.40x
+    scope: SOL-ExecBench 209个公开榜单问题，相对基准参考内核
+  - name: 站点验证正确内核覆盖
+    value: '235'
+    scope: 全部问题
+  evidence: abstract（初筛，未读全文）
+- statement: 相同墙钟时间内击败编码的UCB式树搜索：38个问题中胜出35个，正确尝试次数多2.4倍。
+  confidence: reported
+  metrics:
+  - name: 胜出问题数
+    value: 35/38
+    scope: 与UCB式树搜索等墙钟时间对比
+  - name: 正确尝试倍数
+    value: 2.4x
+    scope: 相同墙钟时间
+  evidence: abstract（初筛，未读全文）
+- statement: 一次warm restart修复使超千个并行代理的评估速率提升3.6倍。
+  confidence: reported
+  metrics:
+  - name: 评估速率提升
+    value: 3.6x
+    scope: 超过一千个并行代理，warm restart修复后
+  evidence: abstract（初筛，未读全文）
+- statement: 限制此类搜索扩展规模的是可靠测量的速率，而非代理数量。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 自我改进智能体通过搜索编写GPU内核，在SOL-ExecBench（B200）公开L1/L2/量化榜单全部登顶。
+  abstract_zh: CompoundingKernel是一个通过搜索编写GPU内核的自我改进智能体系统：每个问题仅给定PyTorch定义，不提供参考内核或官方分数；模型外的归档保存每个正确内核及其谱系，LLM控制器读取归档后选择父代或全新设计，并为并行子代理各分配一个方向，正确性由模型外检查判定。截至2026-11-11，其生成的内核在SOL-ExecBench（NVIDIA
+    B200）公开L1、L2与量化榜单均排名第一，L1自2026-10-27起保持第一。全部235个问题均有经站点验证的正确内核，在209个公开榜单问题上比基准参考实现快4.40倍。相同墙钟时间内，该系统在38个问题中的35个上击败编码的UCB式树搜索，正确尝试次数多2.4倍；一次warm
+    restart修复使千级并发代理的评估速率提升3.6倍。作者发现限制此类搜索规模的是可靠测量的速率，而非代理数量。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 非核心域的自我改进智能体工作：通过搜索生成GPU内核并登顶SOL-ExecBench，是自我改进方向的重要成果，按规则仅给summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-17'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: CompoundingKernel：从零开始自我改进直至登顶
+relations:
+- type: same_topic
+  ref: paper:arxiv:2511.15915
+  note: 同为自我改进LLM智能体系统用于AI加速器内核优化
+- type: same_topic
+  ref: paper:arxiv:2506.13131
+  note: 同为LLM驱动的编码智能体通过搜索/演化做算法与内核发现

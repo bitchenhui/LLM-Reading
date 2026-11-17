@@ -1,0 +1,68 @@
+id: paper:arxiv:2611.20430
+type: paper
+title: 'TrainExplorer: Autonomous LLM Post-Training via Plan-and-Decouple Exploration'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2611.20430v1
+  url: https://arxiv.org/abs/2611.20430
+  pdf_url: https://arxiv.org/pdf/2611.20430v1
+  venue: arXiv preprint
+time:
+  published: '2026-11-16'
+  collected: '2026-11-17'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:RSI
+  role: builds_on
+- ref: concept:SelfImprovement
+  role: builds_on
+claims:
+- statement: TrainExplorer 在 PostTrainBench 上取得加权总分 39.02，比使用同一 LLM 的 Claude Code 高 7.32 分。
+  confidence: reported
+  metrics:
+  - name: 加权总分
+    value: '39.02'
+    scope: PostTrainBench，TrainExplorer
+  - name: 相对 Claude Code 提升幅度
+    value: '7.32'
+    scope: PostTrainBench，同一 LLM 下与 Claude Code 对比
+  evidence: abstract（初筛，未读全文）
+- statement: TrainExplorer 超过由 GPT-5.6 Sol 驱动的 Codex（后者得 36.23）。
+  confidence: reported
+  metrics:
+  - name: 加权总分
+    value: '36.23'
+    scope: PostTrainBench，GPT-5.6 Sol Codex
+  evidence: abstract（初筛，未读全文）
+- statement: 该框架通过文献驱动的候选训练策略搜索空间构建（策略规划）与支持单组件干预和归因的解耦执行，缓解现有自主后训练方法中策略锁定与耦合执行两大问题。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出多智能体框架 TrainExplorer，以策略规划和执行解耦实现自主 LLM 后训练，PostTrainBench 加权总分 39.02，超过 GPT-5.6 Sol
+    驱动的 Codex（36.23）。
+  abstract_zh: 面向 LLM 智能体自动化模型后训练以加速递归自我改进，针对现有方法的两大挑战——策略锁定（难以跳出初始训练策略）与耦合执行（难以归因单项修改）——提出 TrainExplorer
+    框架。其策略规划模块借鉴科学文献构建候选训练策略搜索空间，解耦执行模块支持单组件干预并利用归因引导策略探索。在 PostTrainBench 上，TrainExplorer 加权总分达 39.02，比使用相同
+    LLM 的 Claude Code 高 7.32 分，并超过 GPT-5.6 Sol 驱动的 Codex（36.23）。代码将开源。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 论文属于 LLM 智能体自主后训练/递归自我改进（RSI）方向，是 self_improvement 域核心工作，按收录基准只给 summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-17'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: TrainExplorer：基于"规划-解耦"探索的自主 LLM 后训练框架
+relations:
+- type: same_topic
+  ref: paper:arxiv:2611.03698
+  note: 同属"训练 LLM 智能体自动化 LLM 后训练"的 RSI-Dojo 工作线
+- type: same_topic
+  ref: paper:arxiv:2608.19072
+  note: 同属 AI 后训练 AI（自主模型训练改进）实证研究线
+- type: same_topic
+  ref: paper:arxiv:2610.32026
+  note: 同属面向模型训练的 RSI 优化智能体方向

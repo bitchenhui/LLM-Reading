@@ -1,0 +1,36 @@
+id: paper:arxiv:2611.20278
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: Visual Marking as a Native Reasoning Capability for Multimodal LLMs
+  authors:
+  - Jiazhen Liu
+  - Yanghao Wang
+  - Chaolei Tan
+  - Long Chen
+  published: '2026-11-15'
+  updated: '2026-11-15'
+  categories:
+  - cs.CV
+  abstract: Visual reasoning often requires maintaining intermediate spatial states that are difficult
+    to express in text. Existing approaches either rely on external drawing tools or image generators,
+    or encode these states in latent tokens without explicit spatial correspondence to the input image.
+    We introduce SelfMark, which enables MLLMs to construct and use visual marks directly in their native
+    visual feature space. By treating the visual token grid as a canvas, SelfMark establishes explicit
+    spatial correspondence between marks and images. This is achieved through a locate-mark-read procedure,
+    where the model identifies relevant locations, constructs task-dependent mark features, and reads
+    the resulting visual features to guide its reasoning. We jointly train a single model on spatial planning,
+    dense counting, high-resolution VQA, and line tracing. Across six benchmarks, SelfMark outperforms
+    state-of-the-art MLLM-based methods specialized for individual tasks. These improvements also persist
+    with a stronger backbone, demonstrating the effectiveness of visual marking across different model
+    capabilities. Overall, SelfMark provides a unified approach to visual reasoning by integrating spatially
+    grounded marks directly into the visual feature space of MLLMs.
+  url: https://arxiv.org/abs/2611.20278
+  pdf_url: https://arxiv.org/pdf/2611.20278v1
+  version: v1
+fetched: '2026-11-17'

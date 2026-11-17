@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-05-11'
   collected: '2026-11-15'
+  updated: '2026-11-17'
 entities:
 - ref: concept:SelfImprovement
   role: subject
@@ -30,6 +31,7 @@ claims:
 summaries:
   one_liner_zh: 提出无验证器的共进化自博弈框架G-Zero，以Hint-δ内在奖励在不可验证的开放式任务上实现LLM零数据自我改进。
   abstract_zh: 针对自进化LLM在开放式任务中依赖代理评判器引发能力瓶颈与奖励劫持的问题，作者提出无验证器、共进化的自主自我改进框架G-Zero。核心创新Hint-δ是一种内在奖励，量化Generator在无辅助响应与基于自生成提示响应之间的预测偏移。Proposer模型经GRPO训练，通过合成挑战性查询和信息性提示持续瞄准Generator的盲区，Generator则经DPO并行优化以内化提示引导的改进。理论上为理想化标准DPO版本的G-Zero证明了最优迭代次优性保证，前提是Proposer诱导充分探索覆盖且数据过滤将伪标签分数噪声保持在低位。该方法完全从内部分布动态导出监督信号，绕开外部评判器的能力天花板，为不可验证域的LLM持续自我进化提供可扩展路径。
+  deep_dive: docs/auto/2605.09959.md
 assessment:
   relevance: high
   decision: summary_only

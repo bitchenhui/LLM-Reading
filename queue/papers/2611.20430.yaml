@@ -1,0 +1,50 @@
+id: paper:arxiv:2611.20430
+status: reviewed
+score: 3
+track: self_improvement
+matched:
+- ref: concept:RSI
+  count: 2
+  weight: 1
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+- ref: concept:LLM
+  count: 1
+  weight: 1
+meta:
+  title: 'TrainExplorer: Autonomous LLM Post-Training via Plan-and-Decouple Exploration'
+  authors:
+  - Xuannan Liu
+  - Tian Lan
+  - Zekun Li
+  - Xing Cui
+  - Zhengfeng Yu
+  - Feihu Jiang
+  - Qianghuai Jia
+  - Longyue Wang
+  - Zhao Xu
+  - Weihua Luo
+  - Peipei Li
+  - Ran He
+  published: '2026-11-16'
+  updated: '2026-11-16'
+  categories:
+  - cs.LG
+  - cs.CL
+  abstract: 'LLM-based agents can automate model post-training, accelerating progress toward recursive
+    self-improvement. Despite their promise, existing approaches remain under-explored and face two main
+    challenges: (1) strategy lock-in that limits exploration beyond the initial strategy; and (2) coupled
+    execution that obscures the effects of individual modifications. To address these challanges, we propose
+    TrainExplorer, a multi-agent framework for autonomous post-training, that incorporates strategy planning
+    and execution decoupling, to achieve broaden strategy exploration. First, strategy planning draws
+    on scientific literature to construct a candidate search space of training strategies. Then, decoupled
+    execution enables single-component interventions and attribution to guide strategy exploration. Extensive
+    experiments on PostTrainBench demonstrate that TrainExplorer achieves a weighted aggregate score of
+    39.02, outperforming Claude Code using the same LLM by 7.32 and surpassing GPT-5.6 Sol-powered Codex,
+    which scores 36.23. Code will be available.'
+  url: https://arxiv.org/abs/2611.20430
+  pdf_url: https://arxiv.org/pdf/2611.20430v1
+  version: v1
+fetched: '2026-11-17'
+llm_decision: summary_only

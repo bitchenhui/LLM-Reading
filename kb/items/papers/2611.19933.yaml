@@ -1,0 +1,54 @@
+id: paper:arxiv:2611.19933
+type: paper
+title: 'SAGE-VQA: A Training-Free, Self-Evolving Agentic Framework with Grounded Evidence for Knowledge-Based
+  Visual Question Answering'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2611.19933v1
+  url: https://arxiv.org/abs/2611.19933
+  pdf_url: https://arxiv.org/pdf/2611.19933v1
+  venue: arXiv preprint
+time:
+  published: '2026-11-15'
+  collected: '2026-11-17'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:TrainingFree
+  role: uses
+claims:
+- statement: 提出证据驱动自适应推理（EDAR）策略，通过协同校验视觉定位模块获取并验证问题相关细粒度视觉信息，为推理提供接地证据以抑制视觉感知误差传播成幻觉
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 提出自进化分层记忆（SHM）机制，将经验分为陈述性与程序性两类，并经反馈持续精炼复用，全程不更新模型参数
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 实验表明该方法优于基于轻量开源 VLM 以及基于闭源 VLM 的竞争方法，且可作为即插即用推理框架接入现有 VLM 而无需修改架构
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 免训练自进化智能体框架，以证据校验与分层经验记忆提升知识型视觉问答表现
+  abstract_zh: 论文提出 SAGE-VQA，一个免训练的智能体框架，将证据校验与经验演化结合，用于知识型视觉问答（KB-VQA）。其核心为证据驱动自适应推理（EDAR）策略：通过协同校验的视觉定位模块获取并验证与问题相关的细粒度视觉信息，为后续推理提供接地证据，抑制感知误差引发的幻觉。同时引入自进化分层记忆（SHM）机制，将经验按陈述性与程序性两类组织，通过反馈在不更新模型参数的情况下持续精炼复用。实验显示该方法优于基于轻量开源
+    VLM 与闭源 VLM 的竞争方法，并可作为即插即用推理框架接入现有 VLM 而无需修改其架构。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 自进化智能体结合分层经验记忆属自我改进AI范畴，但任务为视觉问答而非音视频核心域，按基准仅给summary_only
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-17'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: SAGE-VQA：面向知识型视觉问答的免训练、自进化智能体框架（含接地证据）
+relations:
+- type: same_topic
+  ref: paper:arxiv:2510.16079
+  note: 同为经验生命周期驱动的自进化智能体框架
+- type: same_topic
+  ref: paper:arxiv:2506.06698
+  note: 同样通过复用历史经验实现智能体自我改进且不更新模型参数
+- type: same_topic
+  ref: paper:arxiv:2509.04439
+  note: 同为基于分层/终身记忆的推理经验抽象复用机制
