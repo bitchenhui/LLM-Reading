@@ -13,6 +13,7 @@ source:
 time:
   published: '2025-12-05'
   collected: '2026-11-14'
+  updated: '2026-11-18'
 entities:
 - ref: impl:VTM
   role: subject
@@ -31,6 +32,7 @@ claims:
 summaries:
   one_liner_zh: 提出四叉树划分联合语义-信道编码系统Quad-DeepSC，成为首个超越VTM+3GPP最优MCS传统方案的DeepSC。
   abstract_zh: 针对图像深度学习语义通信（DeepSC）难以兼顾率失真性能与计算复杂度、在高分辨率数据上逊于传统方案的问题，作者提出Quad-DeepSC：基于成熟的学习式图像压缩技术建立统一的DeepSC系统设计与训练流程。系统将四叉树划分的熵估计与特征编码模块和轻量特征提取/重建网络整合为端到端架构；训练时先联合优化为紧凑学习式图像编解码器Quad-LIC完成源压缩任务，再将预训练的Quad-LIC嵌入Quad-DeepSC并在无线信道上端到端微调。实验显示，Quad-DeepSC是首个在多种分辨率数据集上超越采用VTM源编码、3GPP标准下最优MCS信道编码与数字调制的传统通信系统的DeepSC系统，且Quad-DeepSC与Quad-LIC均时延极低，适合实时无线通信部署。
+  deep_dive: docs/auto/2512.05395.md
 assessment:
   relevance: high
   decision: deep_read

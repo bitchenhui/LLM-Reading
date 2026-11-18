@@ -12,6 +12,7 @@ source:
 time:
   published: '2025-11-10'
   collected: '2026-11-14'
+  updated: '2026-11-18'
 entities:
 - ref: concept:3DGS
   role: subject
@@ -43,6 +44,7 @@ summaries:
   abstract_zh: 针对现有 3DGS 视频编解码器伪影明显、压缩率偏低的问题，论文提出内容自适应的感知增强框架 GFix。其核心假设是 3DGS 渲染与量化产生的伪影类似于扩散训练中采样的含噪隐变量，因此用一个精简的单步扩散模型作为即插即用的神经增强器。为提高压缩效率，提出调制式
     LoRA 方案：冻结低秩分解、仅调制中间隐状态，实现对扩散骨干的高效适配且更新量高度可压缩。实验显示 GFix 感知质量提升显著，在 LPIPS 上相对 GSVC 最多节省 72.1% BD-rate，在
     FID 上节省 21.4%。
+  deep_dive: docs/auto/2511.06953.md
 assessment:
   relevance: high
   decision: summary_only

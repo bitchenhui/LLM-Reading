@@ -13,6 +13,7 @@ source:
 time:
   published: '2025-05-01'
   collected: '2026-11-14'
+  updated: '2026-11-18'
 entities:
 - ref: concept:INR
   role: subject
@@ -70,6 +71,7 @@ claims:
 summaries:
   one_liner_zh: 提出NVTM，将视频分解为带流信息的2D网格集合，实现比NeRV系快3倍以上的INR视频编码并显著提升质量与参数效率。
   abstract_zh: 针对现有网格型参数编码忽略视频动态特性、参数冗余且码率偏高的问题，提出时序一致调制的神经视频表示框架NVTM。NVTM将时空3D视频分解为一组携带流信息的2D网格，可一次性处理时间上对应的像素，从而快速学习视频表示并高效利用参数。相比NeRV类方法，编码速度提升3倍以上；相比以往网格类方法，在UVG(Dynamic)上PSNR/LPIPS平均提升1.54dB/0.019（参数还少10%），在MCL-JCV(Dynamic)上提升1.84dB/0.013。扩展到压缩任务时性能与H.264、HEVC及近期INR视频压缩方法相当，并在超分辨率、帧插值与视频修复任务上展现优越性。
+  deep_dive: docs/auto/2505.00335.md
 assessment:
   relevance: high
   decision: deep_read

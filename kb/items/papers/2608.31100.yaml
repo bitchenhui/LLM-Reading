@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-08-31'
   collected: '2026-11-15'
+  updated: '2026-11-18'
 entities:
 - ref: concept:SelfImprovement
   role: subject
@@ -33,6 +34,7 @@ claims:
 summaries:
   one_liner_zh: 提出S3Gym交互基准，在七个文本游戏中评估LLM自测试、自判断与自我改进三能力的耦合表现。
   abstract_zh: S3Gym是一个评估LLM自我改进的交互式基准，将宽松探索与严格的留出评估分离，并在七个带可执行环境验证器的文本游戏中实例化该协议。论文比较了三种引入交互经验的路径：直接历史ICL、得分条件化的摘要记忆与参数训练。实验发现自我改进既非自动也非一致：上下文级经验对若干模型-游戏组合有效，但最优路径强依赖任务结构——经验可压缩为可复用策略规则时摘要记忆有益，而成功依赖精确状态相关信息时原始历史往往更优。参数训练在部分任务带来显著增益，但在其他任务上改进不稳定且出现严重负迁移，表明识别成功动作不足，智能体还须把反馈转化为可执行、可迁移的策略。
+  deep_dive: docs/auto/2608.31100.md
 assessment:
   relevance: high
   decision: summary_only

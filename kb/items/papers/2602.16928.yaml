@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-02-18'
   collected: '2026-11-15'
+  updated: '2026-11-18'
 entities:
 - ref: concept:LLM
   role: subject
@@ -35,6 +36,7 @@ summaries:
   one_liner_zh: 用AlphaEvolve自动搜索CFR与PSRO设计空间，发现并蒸馏出两个极简博弈求解算法，泛化性能更优。
   abstract_zh: 该工作部署LLM进化编码智能体框架AlphaEvolve，在反事实遗憾最小化（CFR）与策略空间响应预言机（PSRO）两大博弈论算法设计空间中自动搜索，得到VAD-CFR与SHOR-PSRO两个新算法，在覆盖扑克、Goofspiel、Liar's
     Dice、Blotto与Battleship变体的18局游戏评测套件上持续与人类设计的SOTA基线竞争。由于LLM针对训练集适应度进行优化，常构造出高度协同耦合的复杂机制；系统消融实验表明泛化的真正驱动因素是最小算法核心。据此将LLM的发现蒸馏为最小求解器WOP-CFR与PM-PSRO，二者在泛化上表现更优且结构复杂度大幅降低，为LLM用于算法发现提供了清晰方法论。
+  deep_dive: docs/auto/2602.16928.md
 assessment:
   relevance: high
   decision: summary_only

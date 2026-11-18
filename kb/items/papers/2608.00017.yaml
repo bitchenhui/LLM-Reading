@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-06-29'
   collected: '2026-11-15'
+  updated: '2026-11-18'
 entities:
 - ref: concept:SelfImprovement
   role: subject
@@ -48,6 +49,7 @@ summaries:
   abstract_zh: 本文研究不更新权重、依赖外部记忆学习的自改进 LLM 智能体：每轮经验存入记忆并被打分，作为隐式非参数策略的代理奖励。由于部署中真值标签不可得，奖励只能由 LLM 评估产生，导致
     Echo Gap 失败模式——错误经验获得虚高奖励，智能体倾向复用自己最有信心的错误，且误差经记忆复合而非平均抵消，确认型评审的误差又与原始自评分偏置相关而无法识别被高估的记忆。作者形式化误差独立性假设（EIA），证明它是纠正虚高的必要条件：可用信号须追踪真值且其误差与记忆偏置去相关，可回收收益是这两量的闭式函数；虚高不仅在按分数检索时复合，在部署所用的普通相似度检索下同样存在。提出的免答案去虚高算法
     LUCID 在 BIRD text-to-SQL 基准上将执行精度提升至 56.9%，高于 Memento 式自评分智能体（54.0%，跨种子平均 +2.9 点）与同架构无记忆智能体（52.4%）。
+  deep_dive: docs/auto/2608.00017.md
 assessment:
   relevance: high
   decision: summary_only
