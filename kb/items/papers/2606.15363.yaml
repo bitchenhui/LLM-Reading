@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-06-13'
   collected: '2026-11-14'
+  updated: '2026-11-18'
 entities:
 - ref: concept:SelfImprovement
   role: subject
@@ -62,6 +63,7 @@ summaries:
   one_liner_zh: 提出三层协同进化框架，同时演化harness、行为原则与工作流拓扑，生产级Agent健康分单次进化提升90%。
   abstract_zh: 现有最优的Self-Harness框架仅优化prompt harness单一维度，通过挖掘失败簇修补agent，在Terminal-Bench-2.0上提升14–21%。论文提出APEX三层协同进化框架：L1经失败模式修补演化harness，L2经成功轨迹蒸馏演化行为原则，L3经结构适应度选择演化工作流拓扑。作者在基于NVIDIA
     Nemotron构建的生产级超级Agent Joe上实现该方法，其管理15节点计算集群，使用18天收集的114条真实任务轨迹。单次进化运行使健康分从0.300升至0.570（+90%），蒸馏出6条可复用新原则，并选出得分0.900（+20%）的研究优先工作流拓扑，成本仅为本地qwen2.5-coder:32b上的4次LLM调用（约270秒）。
+  deep_dive: docs/auto/2606.15363.md
 assessment:
   relevance: high
   decision: summary_only

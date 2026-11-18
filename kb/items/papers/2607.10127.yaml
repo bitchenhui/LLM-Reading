@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-07-11'
   collected: '2026-11-15'
+  updated: '2026-11-18'
 entities:
 - ref: concept:SelfImprovement
   role: subject
@@ -30,6 +31,7 @@ claims:
 summaries:
   one_liner_zh: 图结构嵌入+RL元控制器+在线GRPO微调LLM变异算子的进化搜索框架，在振荡系统符号回归上取得SOTA分布外性能。
   abstract_zh: GAE针对LLM驱动进化程序搜索的三大瓶颈（结构盲的父代选择、稀疏的全程序评估奖励、静态变异算子）提出三支柱耦合框架。首先用关系型图神经网络将程序解析为类型化计算图以获得结构感知嵌入；其次用RL优化的元控制器基于奖励历史有向地选择最优父代与变异方向，替代盲目进化采样；再通过在线GRPO微调循环在测试时持续更新LLM变异算子，使其生成分布对齐高适应度结构编辑。在非线性振荡系统的符号回归任务上，GAE能高效发现闭式物理方程，持续匹配或优于静态LLM驱动基线，并取得SOTA的分布外性能。
+  deep_dive: docs/auto/2607.10127.md
 assessment:
   relevance: high
   decision: summary_only

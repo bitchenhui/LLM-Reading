@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-07-29'
   collected: '2026-11-15'
+  updated: '2026-11-18'
 entities:
 - ref: concept:FunSearch
   role: subject
@@ -36,6 +37,7 @@ summaries:
   abstract_zh: 该文指出学习优化（L2O）流程中关键却长期被忽视的特征函数设计依赖手工构造且跨域固定，提出 FunL2O——首个通过 LLM 驱动程序进化自动设计 L2O 特征的统一框架。在
     FunSearch 式循环中，LLM 提出可执行的特征函数，固定评估流程重新训练原 L2O 模型并度量下游优化性能。评估覆盖连续与离散优化：线性/二次规划的解预测与热启动，以及混合整数优化中 GNN
     引导 backdoor 分支与 Predict-and-Search。在四个 LLM 上，进化特征均一致优于手工表示，确立了 LLM 驱动特征进化作为 L2O 表示自动设计的通用有效途径。
+  deep_dive: docs/auto/2607.27389.md
 assessment:
   relevance: high
   decision: summary_only

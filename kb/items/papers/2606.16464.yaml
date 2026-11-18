@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-06-15'
   collected: '2026-11-15'
+  updated: '2026-11-18'
 entities:
 - ref: concept:NeuralAudioCodec
   role: subject
@@ -30,6 +31,7 @@ claims:
 summaries:
   one_liner_zh: 提出cNAC-SE与dNAC-SE框架，揭示VQ正则化经干净先验约束提升语音增强鲁棒性并取得领先DNS-MOS
   abstract_zh: 该工作研究基于向量量化(VQ)的神经音频编解码器(NAC)在语音增强中连续与离散潜空间的建模策略，以及VQ正则化的作用。作者提出cNAC-SE与dNAC-SE两个框架，分别预测连续表示与离散token，并通过理论分析与潜空间可视化揭示其内在建模机制。实验表明，全量微调的cNAC-SE在多种测试条件下持续优于所有dNAC-SE变体，并在DNS-MOS指标上处于已有生成式方法的领先水平。与判别式基线对比显示，VQ通过干净先验约束正则化的内在效应增强鲁棒性，与离散token处理无关，其价值可迁移到其他连续建模方法。
+  deep_dive: docs/auto/2606.16464.md
 assessment:
   relevance: high
   decision: summary_only

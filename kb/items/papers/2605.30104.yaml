@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-05-28'
   collected: '2026-11-15'
+  updated: '2026-11-18'
 entities:
 - ref: concept:LLM
   role: subject
@@ -36,6 +37,7 @@ summaries:
   abstract_zh: 针对主流语言模型基准日益饱和、前沿系统得分几乎并列而标准指标无法区分的问题，本文不构造更难的基准，而是改进对同一批候选输出的评测方式。提出的 SEAL（Seeded Elimination
     with Adaptive LLM-as-a-Meta-Judge）将候选输出组织成单场淘汰赛，每场比赛用任务级原则加自改进的清单式标准进行评判。该方法在代码生成、数学推理、知识密集型问答和工具使用智能体等多个饱和基准上验证。结果显示
     SEAL 与全成对评审的 Spearman 一致性达 0.83–1.00、top-1 一致率 4/4，且每任务仅需 11.89 次调用，远低于全成对评审的 28.00 次。
+  deep_dive: docs/auto/2605.30104.md
 assessment:
   relevance: high
   decision: summary_only

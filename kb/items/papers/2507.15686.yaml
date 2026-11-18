@@ -12,6 +12,7 @@ source:
 time:
   published: '2025-07-21'
   collected: '2026-11-14'
+  updated: '2026-11-18'
 entities:
 - ref: concept:INR
   role: subject
@@ -46,6 +47,7 @@ summaries:
   one_liner_zh: 提出首个基于隐式神经表示的无损点云几何压缩方法，MVUB上码率较G-PCC降低约21%。
   abstract_zh: 现有AI点云压缩方法依赖特定训练数据分布，INR方法通过将过拟合网络参数写入码流实现了分布无关压缩，但受编码时间和解码器规模限制，此前仅支持有损几何压缩。本文提出LINR-PCGC，首个基于INR的无损点云几何压缩方法，采用点云组级编码框架与有效的网络初始化策略，编码时间减少约60%。其轻量化网络基于多尺度SparseConv，包含尺度上下文提取、子节点预测与模型压缩模块，实现快速推理与紧凑解码器。实验表明该方法持续超越传统与AI方法：在MVUB数据集收敛时间下，码流较G-PCC
     TMC13v23降低约21.21%，较SparsePCGC降低约21.95%。
+  deep_dive: docs/auto/2507.15686.md
 assessment:
   relevance: high
   decision: summary_only

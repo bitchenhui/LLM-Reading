@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-07-15'
   collected: '2026-11-15'
+  updated: '2026-11-18'
 entities:
 - ref: concept:RSI
   role: subject
@@ -34,6 +35,7 @@ summaries:
     harness 在医疗基准上运行当前模型，评估轨迹以定位能力缺口，并通过合成训练数据修正训练混合，避免单一任务的窄更新损害其他能力。在6个医疗基准中，Cura 1T 在 MedAgentBench、HealthBench
     Professional、HealthBench Hard、MedXpertQA text 和 AgentClinic 上得分最高，在 MedXpertQA 多模态上排第二。同时它在 AIME、GPQA-Diamond
     和 τ²-Bench 等域外推理与智能体基准上保持性能不退化。
+  deep_dive: docs/auto/2607.15314.md
 assessment:
   relevance: high
   decision: summary_only
