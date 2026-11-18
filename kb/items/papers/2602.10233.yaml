@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-02-10'
   collected: '2026-11-15'
+  updated: '2026-11-18'
 entities:
 - ref: concept:AlphaEvolve
   role: subject
@@ -48,6 +49,7 @@ claims:
 summaries:
   one_liner_zh: 将LLM进化搜索拆解为初始化/局部改进/扰动三算子并驱动盆地跳跃，刷新装箱、自相关不等式与球面码纪录
   abstract_zh: 针对AlphaEvolve等让LLM端到端演化单个完整程序的做法，本文提出ImprovEvolve：只让LLM演化三个专用算子——初始化、局部改进与强度调度的扰动，再以盆地跳跃方式迭代逼近最优，大幅降低LLM认知负担。在六边形装箱问题上，发现11、12、15、16个六边形的全新最优装填，经少量人工微调代码后进一步覆盖14、17、23个六边形。在二阶自相关不等式问题上，将下界从0.96102推至0.96258。在球面码问题上，对90个随机选取的SOTA球面码中的多数降低了已知最大内积余弦，相对改进最高达2.4%。
+  deep_dive: docs/auto/2602.10233.md
 assessment:
   relevance: high
   decision: summary_only

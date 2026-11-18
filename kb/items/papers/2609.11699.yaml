@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-09-10'
   collected: '2026-11-15'
+  updated: '2026-11-18'
 entities:
 - ref: concept:LLM
   role: subject
@@ -33,6 +34,7 @@ claims:
 summaries:
   one_liner_zh: 提出NSD框架，让LLM远离自生成的缺陷推理教师而非模仿特权解答，并用动态门控保护语言能力，推理表现优于OPSD等无标签自提升基线。
   abstract_zh: 针对在线策略自蒸馏（OPSD）在复杂推理任务上会压制不确定性表达、惩罚探索性自我纠错行为从而导致性能退化的问题，作者提出负向自蒸馏（NSD）。NSD不依赖标准答案或外部监督，而是让模型自己生成针对问题的负向条件（如扮演"粗心推理者"），并将学生分布推离这一自生成的负向教师。由于缺陷推理token与基础语言token混杂，直接套用遗忘目标会损害语言能力，论文设计了动态门控机制自动识别并隔离推理关键token，使梯度更新只作用于行为缺陷。实验表明NSD在无标签、自举式强化学习设定下持续优于OPSD及其他基线。
+  deep_dive: docs/auto/2609.11699.md
 assessment:
   relevance: high
   decision: summary_only

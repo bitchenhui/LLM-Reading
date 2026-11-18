@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-06-30'
   collected: '2026-11-15'
+  updated: '2026-11-18'
 entities:
 - ref: concept:SelfImprovement
   role: subject
@@ -37,6 +38,7 @@ claims:
 summaries:
   one_liner_zh: 提出失败驱动的推理时自我改进循环，用LLM诊断失败模式并生成补丁升级计算机操作智能体。
   abstract_zh: 针对计算机使用智能体（基于多模态大模型操作电脑）开发中高质量轨迹数据稀缺的问题，论文提出一种与主流'仅用成功轨迹微调'互补的失败驱动自我改进范式。方法上由LLM诊断失败轨迹中的失败模式、提出推理时解决方案并生成代码补丁（仅经人工轻量校验），以此升级智能体而无需重新训练。在OSWorld基准上以SOTA模型OpenCUA-72B验证，成功率从42.3%提升至48.9%，提高6.6个百分点，且无额外训练成本、推理开销适中。结果表明失败驱动自我改进是成功导向流水线的可行补充。
+  deep_dive: docs/auto/2606.31270.md
 assessment:
   relevance: high
   decision: summary_only

@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-04-20'
   collected: '2026-11-15'
+  updated: '2026-11-18'
 entities:
 - ref: concept:SelfImprovement
   role: subject
@@ -30,6 +31,7 @@ summaries:
   abstract_zh: 针对多模态大模型自进化中伪标签方法随预测漂移而质量递减、模板方法变换静态受限两大痛点，提出 EVE 框架，完全绕开伪标签，以持续丰富多样性与复杂度的可执行视觉变换构造训练分布。框架采用
     Challenger-Solver 双策略架构：Challenger 维护并逐步扩展视觉变换代码示例队列，合成 Python 脚本执行动态视觉变换，从而产出具有执行验证绝对真值答案的 VQA 问题，无需模型生成监督。融合语义多样性与动态难度校准的多维奖励引导
     Challenger 丰富代码队列、逐步加大任务难度，防止模式坍塌并促成双策略共同进化。大量实验表明 EVE 一致超越现有自进化方法，为可验证的 MLLM 自进化提供了稳健可扩展的范式。
+  deep_dive: docs/auto/2604.18320.md
 assessment:
   relevance: high
   decision: summary_only

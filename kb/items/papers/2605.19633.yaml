@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-05-19'
   collected: '2026-11-15'
+  updated: '2026-11-18'
 entities:
 - ref: concept:LLM
   role: subject
@@ -63,6 +64,7 @@ summaries:
   one_liner_zh: 基于LLM搜索的通用文本优化框架，单系统在六大任务达SOTA并超越AlphaEvolve圆填充结果
   abstract_zh: 该工作（GEPA项目）将优化问题统一表述为'改进由评分函数评估的文本工件'，构建了支持单任务搜索、多任务跨问题迁移和未见输入泛化的LLM优化系统，并在六个差异巨大的任务上达到SOTA。具体包括：发现的agent架构将Gemini
     Flash的ARC-AGI准确率从32.5%提升至89.5%（近三倍）、找到降低云成本40%的调度算法、87%生成的CUDA内核达到或超过PyTorch水平、在n=26圆填充问题上超越AlphaEvolve的公开结果。消融实验表明可执行的辅助信息比纯分数反馈收敛更快、终分显著更高；同等单问题预算下多任务搜索凭借跨任务迁移优于独立优化，收益随相关任务数增加而扩大。作者首次论证基于LLM搜索的文本优化是通用问题求解范式，并开源了支持多后端的optimize_anything。
+  deep_dive: docs/auto/2605.19633.md
 assessment:
   relevance: high
   decision: summary_only

@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-04-10'
   collected: '2026-11-15'
+  updated: '2026-11-18'
 entities:
 - ref: concept:SelfImprovement
   role: subject
@@ -44,6 +45,7 @@ claims:
 summaries:
   one_liner_zh: 提出MCP与GUI混合策略学习框架及全自动自进化管线，经验库支持免微调的推理时提升。
   abstract_zh: 论文将结合GUI操作与MCP结构化API调用的计算机使用智能体建模为统一的混合策略学习问题，并证明蒸馏与经验增强针对本质不同的失败模式，需要按应用选择机制。基于该建模提出完全自动化的自进化管线：自动生成并验证环境、采集轨迹、按能力差距合成任务、质量过滤后训练，全程无需人工干预。核心创新是经验库，从轨迹对比中积累LLM习得的规则，可在不做微调的情况下于推理时改进。跨三个桌面应用的系统分析显示最优策略取决于MCP-GUI构成：蒸馏在MCP主导任务上取得77.8%通过率（+17.8pp），经验库在GUI密集任务上提升+10.0pp。
+  deep_dive: docs/auto/2604.09815.md
 assessment:
   relevance: high
   decision: summary_only

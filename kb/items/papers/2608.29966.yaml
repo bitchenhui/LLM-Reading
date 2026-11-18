@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-08-30'
   collected: '2026-11-15'
+  updated: '2026-11-18'
 entities:
 - ref: concept:RSI
   role: subject
@@ -35,6 +36,7 @@ summaries:
   abstract_zh: 针对 LLM 领域自适应中训练数据质量问题常源自构建过程本身、而质量控制只在事后过滤的错配问题，作者提出 DataFoundry，将数据制备器表示为可演化的运行时规范。其采用
     Skills-as-Modules 架构，由中央 Controller 编排模块化技能以编译可执行运行时，在小规模试点集上用领域适配标准诊断缺陷，并将诊断反馈转化为适配器去修订单个制备组件，同时保持稳定接口。在
     DataPrep-Bench 的数学、金融、法律、医学四个领域上评估，递归演化后的制备器产出的训练数据比基线具有更高的下游效用；跨多个骨干模型的实验表明改进不依赖特定模型，案例研究还揭示了框架的优化演化动态。
+  deep_dive: docs/auto/2608.29966.md
 assessment:
   relevance: high
   decision: summary_only

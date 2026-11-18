@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-02-18'
   collected: '2026-11-15'
+  updated: '2026-11-18'
 entities:
 - ref: concept:AlphaEvolve
   role: subject
@@ -35,6 +36,7 @@ summaries:
   one_liner_zh: 基于AlphaEvolve的LLM程序进化框架，从BM25等种子自动进化出更强的词法检索排序算法。
   abstract_zh: 论文提出RankEvolve，一种基于AlphaEvolve的程序进化设置：候选排序算法被表示为可执行代码，在大语言模型引导下通过变异、重组与基于检索性能的选择进行迭代进化。系统以BM25和带狄利克雷平滑的查询似然为两个种子程序，在BEIR与BRIGHT的12个IR数据集上评估适应度。进化得到的算法新颖且有效，并能较好迁移到完整的BEIR、BRIGHT基准以及TREC
     DL 19/20。结果表明评估器引导的LLM程序进化是自动发现新型排序算法的可行路径。
+  deep_dive: docs/auto/2602.16932.md
 assessment:
   relevance: high
   decision: summary_only

@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-06-05'
   collected: '2026-11-15'
+  updated: '2026-11-18'
 entities:
 - ref: concept:LLM
   role: subject
@@ -33,6 +34,7 @@ claims:
 summaries:
   one_liner_zh: Q-Evolve将自动过程奖励标注与策略学习统一于分布内强化学习，实现LLM智能体的稳定自进化。
   abstract_zh: 论文提出Q-Evolve，一个面向LLM智能体的自进化框架，将自动过程奖励标注与策略学习统一到分布内强化学习范式中，以解决稀疏延迟奖励下的信用分配难题。每次进化迭代中，方法从专家演示与智能体自生成轨迹组成的混合离线数据集学习分布内评论家，通过加权隐式Q学习目标稳定稀疏奖励下的Bellman备份。学习到的价值函数经优势估计推导步级过程奖励，提供密集可靠监督，无需环境回溯或人工标注。随后执行行为近端策略优化，在与过程奖励标注相同的数据上演化策略，避免加剧分布偏移。在AlfWorld、WebShop和ScienceWorld上的实验表明，Q-Evolve在样本效率、鲁棒性和整体任务性能上均优于强基线。
+  deep_dive: docs/auto/2606.07367.md
 assessment:
   relevance: high
   decision: summary_only
