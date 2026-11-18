@@ -19,6 +19,17 @@ entities:
   role: measured_by
 - ref: metric:VMAF
   role: measured_by
+retest:
+  slug: inter-4k
+  dataset: Inter-4K
+  baseline: Fixedladder（HLS 固定码率与分辨率配对，每档搜索 QP 以达到目标码率）
+  encoding: VVenC medium，帧内周期 1 秒，4 线程，QP 10–50（步长 2）
+  decoding: VVdeC，4 线程；统计用户态 CPU 时间，含上采样至 4K
+  setup_url: https://arxiv.org/html/2601.10607v1#S4
+  configurations:
+    cc3b4ae62203: JQT-PF · α_J=2.5
+    032cdc0cf07f: JQT-PF · α_J=0.5
+    5fb78e51d38e: JRQT-PF · α_M=0.75（XPSNR 单调）
 claims:
 - id: 'cc3b4ae62203'
   statement: Inter-4K 上，JQT-PF（α_J=2.5）相对固定码率梯子在同等 XPSNR 下平均节省 11.76% 码率，解码时间降低 0.29%。

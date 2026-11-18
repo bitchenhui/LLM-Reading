@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>复测实验单 · 音视频信息引擎</title>
+<style>
+:root { color-scheme:dark; --bg:#0f1115; --panel:#191d25; --line:#343c49; --text:#edf0f5; --muted:#aeb8c8; --link:#91bbff }
+* { box-sizing:border-box }
+body { margin:0; background:var(--bg); color:var(--text); font:15px/1.6 system-ui,sans-serif }
+main { max-width:850px; margin:auto; padding:24px 20px 55px }
+a { color:var(--link) }
+h1,h2,p { margin:0 } h1 { font-size:clamp(24px,4vw,32px); margin:16px 0 8px } h2 { font-size:18px; margin-bottom:8px }
+section { margin:25px 0 } nav,.hint,dt { color:var(--muted); font-size:14px }
+select,input { min-width:0; max-width:100%; width:100%; font:inherit; padding:7px 10px; color:var(--text); background:#11151d; border:1px solid #576273; border-radius:5px }
+select { width:auto } label { display:block }
+dl { display:grid; grid-template-columns:max-content 1fr; gap:5px 16px; margin:10px 0 }
+dd { margin:0 } table { width:100%; border-collapse:collapse; table-layout:fixed; font-variant-numeric:tabular-nums }
+th,td { text-align:left; border-bottom:1px solid var(--line); padding:8px 10px; overflow-wrap:anywhere }
+thead th { font-size:14px; color:var(--muted) } tbody th { font-weight:500 } .values { background:var(--panel) }
+.extra { display:grid; grid-template-columns:2fr 1fr; gap:12px; margin-top:10px }
+.hint,#status { margin-top:8px } #status { color:var(--muted); font-size:13px }
+@media(max-width:540px) { main { padding:16px 12px 40px } .extra { grid-template-columns:1fr } th,td { padding:6px 4px } }
+</style>
+</head>
+<body><main>
+<nav><a id="back">返回成绩表</a></nav>
+<h1 id="title">复测实验单</h1>
+<label for="config">论文配置</label> <select id="config"></select>
+<section aria-label="实验条件">
+<dl><dt>数据集</dt><dd id="dataset"></dd><dt>基线</dt><dd id="baseline"></dd>
+<dt>编码设置</dt><dd id="encoding"></dd><dt>解码计时</dt><dd id="decoding"></dd></dl>
+<nav><a id="setup">论文实验设置</a> · <a id="claim">对应论断</a> · <a id="source"></a></nav>
+</section>
+<section>
+<h2>我的测量</h2>
+<p class="hint">在同一片源、设备和片段时长下分别测量基线与所选方案。</p>
+<table><thead><tr><th scope="col">运行</th><th scope="col">码率（Mbps）</th><th scope="col">解码时间（秒）</th></tr></thead>
+<tbody>
+<tr><th scope="row">固定梯子基线</th><td><input type="number" step="any" min="0" id="baseRate" aria-label="基线码率（Mbps）"></td><td><input type="number" step="any" min="0" id="baseTime" aria-label="基线解码时间（秒）"></td></tr>
+<tr><th scope="row">所选方案</th><td><input type="number" step="any" min="0" id="testRate" aria-label="方案码率（Mbps）"></td><td><input type="number" step="any" min="0" id="testTime" aria-label="方案解码时间（秒）"></td></tr>
+</tbody></table>
+<div class="extra">
+<label>片源、设备与运行参数（选填）<input id="context" placeholder="片源编号、解码器版本、线程数等"></label>
+<label>同 XPSNR 的 BD-Rate（%，选填）<input id="bd" type="number" step="any" placeholder="填入多点曲线计算结果"></label>
+</div>
+<p id="status" role="status"></p>
+</section>
+<section><h2>结果对照</h2>
+<table class="values"><thead><tr><th scope="col">相对基线的变化</th><th scope="col">论文表 2</th><th scope="col">我的复测</th></tr></thead><tbody>
+<tr><th scope="row">BD-Rate（XPSNR）</th><td id="paperRate"></td><td id="myBd"></td></tr>
+<tr><th scope="row">单点码率变化</th><td>—</td><td id="myRate"></td></tr>
+<tr><th scope="row">解码时间变化</th><td id="paperTime"></td><td id="myTime"></td></tr>
+</tbody></table>
+<p class="hint">负值表示降低。单点变化按（方案值 ÷ 基线值 − 1）× 100% 计算。与论文 BD-Rate 对照时，请填写基于多组码率和 XPSNR 计算的结果。</p>
+</section></main>
+<script>
+const protocol = __PROTOCOL__;
+const el = id => document.getElementById(id);
+const cases = protocol.configurations;
+const fields = ["baseRate","baseTime","testRate","testTime","context","bd"];
+const emptyStatus = "按配置自动保存在当前浏览器，每个配置保留一份记录。";
+let active, storageKey;
+const percent = n => Number.isFinite(n) ? (n > 0 ? "+" : "") + n.toFixed(2) + "%" : "—";
+function num(id) {
+  return el(id).valueAsNumber;
+}
+function change(base, value) {
+  return base > 0 && value > 0 ? percent(100 * (value / base - 1)) : "—";
+}
+function compare() {
+  el("myRate").textContent = change(num("baseRate"), num("testRate"));
+  el("myTime").textContent = change(num("baseTime"), num("testTime"));
+  el("myBd").textContent = percent(num("bd"));
+}
+function readRecord() {
+  return JSON.parse(localStorage.getItem(storageKey) || "{}") || {};
+}
+function restore() {
+  let record = {};
+  try {
+    record = readRecord();
+    el("status").textContent = emptyStatus;
+  } catch {
+    el("status").textContent = "当前浏览器无法读取记录，本页仍可计算。";
+  }
+  for (const id of fields) el(id).value = typeof record[id] === "string" ? record[id] : "";
+  compare();
+}
+function selectCase() {
+  const key = location.hash.slice(1);
+  active = Object.hasOwn(cases, key) ? key : Object.keys(cases)[0];
+  const entry = cases[active];
+  storageKey = "llm-reading:retest:v1:" + protocol.item + "/" + active;
+  el("config").value = active;
+  el("source").textContent = entry.sourceLabel;
+  el("source").href = entry.source;
+  el("claim").href = entry.claim;
+  el("paperRate").textContent = percent(entry.rate);
+  el("paperTime").textContent = percent(entry.time);
+  restore();
+}
+el("title").textContent = protocol.dataset + " 复测实验单";
+document.title = el("title").textContent;
+el("back").href = "index.html?benchmark=" + encodeURIComponent(protocol.dataset);
+el("setup").href = protocol.setup_url;
+for (const id of ["dataset","baseline","encoding","decoding"]) el(id).textContent = protocol[id];
+for (const [key, entry] of Object.entries(cases)) el("config").add(new Option(entry.label,key));
+el("config").addEventListener("change", () => { location.hash = el("config").value; });
+window.addEventListener("hashchange", selectCase);
+window.addEventListener("storage", event => { if (event.key === storageKey || event.key === null) restore(); });
+for (const id of fields) {
+  const input = el(id);
+  input.addEventListener("input", () => {
+    compare();
+    if (input.validity.badInput || (id !== "bd" && input.type === "number" && input.value !== "" && !(num(id) > 0))) {
+      el("status").textContent = "请输入有效数字，码率和时长须大于零。当前字段尚未保存。";
+      return;
+    }
+    try {
+      const record = readRecord();
+      record[id] = input.value;
+      localStorage.setItem(storageKey, JSON.stringify(record));
+      el("status").textContent = "已保存到当前浏览器。";
+    } catch {
+      el("status").textContent = "当前浏览器无法保存，离开前请另行记录。";
+    }
+  });
+}
+selectCase();
+</script>
+</body></html>

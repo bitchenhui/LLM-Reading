@@ -46,7 +46,7 @@ class Handler(BaseHTTPRequestHandler):
         path = self.path.split("?")[0]
         if path in ("/", "/index.html"):
             self._send(200, (SITE / "index.html").read_bytes(), "text/html; charset=utf-8")
-        elif re.fullmatch(r"/details/[0-9a-f]\.html", path) and (SITE / path[1:]).is_file():
+        elif re.fullmatch(r"/(?:details/[0-9a-f]|retest-[a-z0-9-]+)\.html", path) and (SITE / path[1:]).is_file():
             self._send(200, (SITE / path[1:]).read_bytes(), "text/html; charset=utf-8")
         else:
             self._send(404, b"not found", "text/plain")

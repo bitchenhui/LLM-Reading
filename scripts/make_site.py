@@ -19,6 +19,7 @@ from pathlib import Path
 import yaml
 
 from site_details import detail_url, write_details
+from site_retest import write_sheets
 
 ROOT = Path(__file__).resolve().parent.parent
 ITEMS = ROOT / "kb" / "items"
@@ -543,8 +544,10 @@ for (const g of DATA.sota) {
     const value = esc(String(e.value) + (c.unit || ""));
     const result = item && e.claim_id
       ? `<a href="${item.detail}/${encodeURIComponent(e.claim_id)}">${value}</a>` : value;
+    const sheet = DATA.sheets[e.item]?.[e.claim_id];
+    const retest = sheet ? `<br><a href="${sheet}">复测实验单</a>` : "";
     return `<tr><td>${e.date}</td><td>${method}<br><small>${esc(scope)}</small></td>
-      <td>${result}${best ? " ★ 最优" : ""}</td></tr>`;
+      <td>${result}${best ? " ★ 最优" : ""}${retest}</td></tr>`;
   }).join("");
   sotaHTML += `<div class="syn${benchmark === g.dataset ? " open" : ""}"><div class="head" onclick="this.parentElement.classList.toggle('open')">
     <h3>${esc(g.dataset)} × ${esc(g.anchor)}</h3>
@@ -675,6 +678,7 @@ def main() -> int:
     items = [load(p) for p in sorted(ITEMS.glob("*/*.yaml"))]
     data = build_data(items, datetime.now(ZoneInfo("Asia/Shanghai")).date())
     write_details(items, SITE, REPO_URL)
+    data["sheets"] = write_sheets(items, SITE)
     payload = json.dumps(data, ensure_ascii=False).replace("</", "<\\/")
     html = TEMPLATE.replace("__DATA__", payload)
     SITE.mkdir(exist_ok=True)

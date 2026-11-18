@@ -1,6 +1,7 @@
 from copy import deepcopy
 from datetime import date
 from pathlib import Path
+import json
 from tempfile import TemporaryDirectory
 import sys
 import unittest
@@ -11,6 +12,7 @@ import yaml
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 import make_site
 from build_sota import rank_best, source_fields
+from site_retest import write_sheets
 
 
 class ReadingSiteTests(unittest.TestCase):
@@ -40,6 +42,21 @@ class ReadingSiteTests(unittest.TestCase):
         for claims in [[claim, claim | {"id": "other"}], [claim | {"evidence_url": ""}],
                        [claim | {"id": ""}], [claim | {"metrics": [metric | {"value": 11.76}]}]]:
             self.assertNotIn("claim_id", source_fields({"claims": claims}, row))
+
+    def test_inter4k_sheet_links_each_score_to_its_own_signed_reference(self):
+        paper = yaml.safe_load((make_site.ITEMS / "papers/2601.10607.yaml").read_text())
+        with TemporaryDirectory() as directory:
+            site = Path(directory)
+            links = write_sheets([paper], site)[paper["id"]]
+            page = (site / "retest-inter-4k.html").read_text()
+        protocol, _ = json.JSONDecoder().raw_decode(page.split("const protocol = ", 1)[1])
+        cases = protocol["configurations"]
+        self.assertEqual({(c["rate"], c["time"]) for c in cases.values()},
+                         {(-11.76, -0.29), (-27.88, 52.16), (-6.38, -6.17)})
+        for claim in paper["claims"][:3]:
+            key = claim["id"]
+            self.assertEqual(links[key], f"retest-inter-4k.html#{key}")
+            self.assertEqual(cases[key]["source"], claim["evidence_url"])
 
     def test_best_requires_known_direction_and_identical_complete_conditions(self):
         protocol = dict(dataset="CTC B", anchor="fixed QP", unit="%", setup="VVenC 1.7.0 RA faster",
