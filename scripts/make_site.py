@@ -5,17 +5,20 @@
 - 页签二「知识库」：领域问答（本地 serve.py 提供 /api/ask）+ 八大类领域综述
   （kb/synthesis/*.md，glm-5.3 基于全量条目合成的"发展历程/技术主线/关键问题"）
 
-零依赖单文件；重新生成：uv run --with pyyaml python scripts/make_site.py
+纯静态站点；重新生成：uv run --with pyyaml python scripts/make_site.py
 """
 from __future__ import annotations
 
 import json
 import sys
 from collections import defaultdict
-from datetime import date, timedelta
+from datetime import date, datetime, timedelta
+from zoneinfo import ZoneInfo
 from pathlib import Path
 
 import yaml
+
+from site_details import detail_url, write_details
 
 ROOT = Path(__file__).resolve().parent.parent
 ITEMS = ROOT / "kb" / "items"
@@ -39,7 +42,7 @@ WEEK_DAYS = 7
 
 
 def load(p: Path):
-    return yaml.safe_load(open(p, encoding="utf-8"))
+    return yaml.safe_load(p.read_text(encoding="utf-8"))
 
 
 def entity_display_names() -> dict[str, str]:
@@ -53,15 +56,14 @@ def entity_display_names() -> dict[str, str]:
     return out
 
 
-def build_graph(min_count: int = 3) -> dict:
+def build_graph(items: list[dict], min_count: int = 3) -> dict:
     """实体共现图：节点=实体（挂接≥min_count），边=同条目共现。python 侧力导向布局。"""
     import math
     import random
 
     linked: dict[str, int] = {}
     cooc: dict[tuple, int] = {}
-    for p in sorted(ITEMS.glob("*/*.yaml")):
-        d = load(p)
+    for d in items:
         refs = sorted({e["ref"] for e in d.get("entities", [])})
         for r in refs:
             linked[r] = linked.get(r, 0) + 1
@@ -123,11 +125,11 @@ def build_graph(min_count: int = 3) -> dict:
     }
 
 
-def build_data() -> dict:
-    cutoff = (date.today() - timedelta(days=WEEK_DAYS)).isoformat()
+def build_data(items: list[dict], today: date) -> dict:
+    week_start = (today - timedelta(days=WEEK_DAYS - 1)).isoformat()
+    end = today.isoformat()
     all_items = []
-    for p in sorted(ITEMS.glob("*/*.yaml")):
-        d = load(p)
+    for d in items:
         deep = d["summaries"].get("deep_dive")
         all_items.append({
             "id": d["id"],
@@ -136,12 +138,14 @@ def build_data() -> dict:
             "title": d.get("title_zh") or d["title"],
             "orig_title": d["title"] if d.get("title_zh") else "",
             "published": d["time"]["published"],
+            "detail": detail_url(d["id"]),
+            "entities": [e["ref"] for e in d["entities"]],
             "url": d["source"]["url"],
             "one_liner": d["summaries"].get("one_liner_zh", ""),
             "deep": f"{REPO_URL}/blob/main/{deep}" if deep else None,
         })
 
-    week = [i for i in all_items if i["published"] >= cutoff]
+    week = [i for i in all_items if week_start <= i["published"] <= end]
     week.sort(key=lambda x: x["published"], reverse=True)
     by_domain = {}
     for i in week:
@@ -174,8 +178,8 @@ def build_data() -> dict:
     if tl_path.exists():
         tdata = load(tl_path)
         ents_map = entity_display_names()
-        cutoff = (date.today() - timedelta(days=180)).isoformat()
-        timeline = [f for f in (tdata.get("facts") or []) if f.get("date", "") >= cutoff][:300]
+        timeline_start = (today - timedelta(days=179)).isoformat()
+        timeline = [f for f in (tdata.get("facts") or []) if timeline_start <= f.get("date", "") <= end][:300]
         for f in timeline:
             f["entity_name"] = ents_map.get(f["entity"], f["entity"])
 
@@ -194,11 +198,16 @@ def build_data() -> dict:
     sota_path = ROOT / "kb" / "sota.yaml"
     if sota_path.exists():
         sota = (load(sota_path).get("groups") or [])[:12]
-    graph = build_graph()
+    graph = build_graph(items)
+    aliases = {}
+    for p in sorted((ROOT / "kb" / "entities").glob("*.yaml")):
+        for e in load(p):
+            aliases[e["id"]] = " ".join(filter(None, [e["name"], e.get("full_name"), *e.get("aliases", [])]))
 
     return {
-        "generated": date.today().isoformat(),
-        "cutoff": cutoff,
+        "generated": end,
+        "cutoff": week_start,
+        "aliases": aliases,
         "repo_url": REPO_URL,
         "domain_names": DOMAIN_NAMES,
         "domain_order": DOMAIN_ORDER,
@@ -206,6 +215,7 @@ def build_data() -> dict:
         "stats": {
             "total": len(all_items),
             "week": len(week),
+            "collected": sum(week_start <= d["time"]["collected"] <= end for d in items),
             "domains": {k: sum(1 for i in all_items if i["domain"] == k)
                         for k in DOMAIN_ORDER},
         },
@@ -240,6 +250,7 @@ body { background: var(--bg); color: var(--text);
 .wrap { max-width: 900px; margin: 0 auto; padding: 28px 20px 80px; }
 header h1 { font-size: 21px; }
 header .sub { color: var(--dim); font-size: 13px; margin-top: 3px; }
+.tabs[hidden] { display:none; }
 .tabs { display: flex; gap: 8px; margin: 18px 0 16px; }
 .tab { border: 1px solid var(--border); background: var(--panel); color: var(--dim);
   border-radius: 10px; padding: 8px 18px; font-size: 14px; cursor: pointer; }
@@ -302,6 +313,10 @@ h2.sec .core-tag { font-size: 11px; color: var(--green); border: 1px solid var(-
 .body code { background: var(--panel); border-radius: 4px; padding: 1px 5px; font-size: 12px; }
 .body table { border-collapse: collapse; margin: 8px 0; font-size: 12.5px; }
 .body th, .body td { border: 1px solid var(--border); padding: 4px 8px; }
+.search { margin: 16px 0; }
+.search label { display:block; margin-bottom:6px; font-weight:600; }
+.search input { min-width:0; }
+#searchResults a,.body table a { color:var(--accent); }
 footer { color: var(--dim); font-size: 12px; margin-top: 36px; text-align: center; }
 footer a { color: var(--dim); }
 </style>
@@ -312,9 +327,15 @@ footer a { color: var(--dim); }
   <h1>音视频信息引擎</h1>
   <div class="sub">8 个技术方向 · 论文与版本动态自动追踪 · AI 审阅精读 · 知识库问答</div>
 </header>
+<form class="qa search" role="search" method="get">
+  <label for="searchQuery">站内搜索</label>
+  <div class="row"><input id="searchQuery" name="q" type="search" placeholder="搜索标题、实体或关键词，如 VVenC" required>
+  <button>搜索</button></div>
+</form>
+<div id="searchResults" hidden></div>
 <div class="tabs">
-  <div class="tab on" id="tab-week" onclick="showTab('week')">本周新成果</div>
-  <div class="tab" id="tab-kb" onclick="showTab('kb')">知识库 · 问答</div>
+  <button class="tab on" id="tab-week" onclick="showTab('week')">近七日发表</button>
+  <button class="tab" id="tab-kb" onclick="showTab('kb')">知识库 · 问答</button>
 </div>
 
 <div id="view-week">
@@ -339,7 +360,7 @@ footer a { color: var(--dim); }
   <div id="dossList"></div>
   <div class="note" style="margin-top:22px">技术时间线（近 180 天：版本发布 · 高相关研究 · 标准提案；点击实体名过滤）：</div>
   <div id="tlList"></div>
-  <div class="note" style="margin-top:22px">SOTA 追踪（基准×锚点 成绩序列，由结构化论断自动聚合；点击表头排序之外的能力去问问答）：</div>
+  <div class="note" style="margin-top:22px">实验成绩（按数据集与锚点浏览，仅在实验条件一致时标注最优）</div>
   <div id="sotaList"></div>
   <div class="note" style="margin-top:22px">知识图谱（实体共现；节点大小=挂接条目数，颜色=类型；点击节点过滤时间线）：</div>
   <div id="graphBox"></div>
@@ -354,7 +375,7 @@ const DATA = __DATA__;
 const DN = DATA.domain_names;
 
 document.getElementById("weekNote").innerHTML =
-  `最近 7 天（自 ${DATA.cutoff}）新增 <b>${DATA.stats.week}</b> 条 · 基底累计 ${DATA.stats.total} 条 · 更新 ${DATA.generated}`;
+  `近七日（${DATA.cutoff} 至 ${DATA.generated}）发表 <b>${DATA.stats.week}</b> 条 · 同期收录 ${DATA.stats.collected} 条 · 累计 ${DATA.stats.total} 条`;
 
 function badge(it) {
   let b = it.type === "repo_release" ? '<span class="badge b-rel">版本动态</span>'
@@ -366,8 +387,8 @@ function itemHTML(it) {
     .concat(it.deep ? [`<a href="${it.deep}" target="_blank">精读笔记 ↗</a>`] : []).join("");
   return `<div class="item${it.deep ? " read" : ""}">
     <div class="meta"><span>${it.published}</span>${badge(it)}</div>
-    <h3><a href="${it.url}" target="_blank">${it.title}</a></h3>
-    <div class="oneliner">${it.one_liner}</div>
+    <h3><a href="${it.detail}">${esc(it.title)}</a></h3>
+    <div class="oneliner">${esc(it.one_liner)}</div>
     <div class="links">${links}</div>
   </div>`;
 }
@@ -381,7 +402,7 @@ for (const [dom, items] of Object.entries(DATA.week_by_domain)) {
     <span class="n">${items.length} 条</span></h2>`;
   html += items.map(itemHTML).join("");
 }
-wl.innerHTML = html || `<div class="empty">最近 7 天无新增（引擎每日 09:30 自动拉取）</div>`;
+wl.innerHTML = html || `<div class="empty">最近 7 天无发表条目（引擎每日 09:30 自动拉取）</div>`;
 
 function esc(s){ return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;"); }
 function md2html(md) {
@@ -432,11 +453,11 @@ function md2html(md) {
 }
 
 function rowHTML(it, visible) {
-  const links = [`<a href="${it.url}" target="_blank">${it.title}</a>`]
+  const links = [`<a href="${it.detail}">${esc(it.title)}</a>`]
     .concat(it.deep ? [`<a href="${it.deep}" target="_blank" style="font-weight:400;font-size:12px;color:var(--accent);">精读笔记↗</a>`] : []).join(" ");
   return `<div class="row-item"${visible ? "" : ' style="display:none"'}>
     <div class="l1"><span class="d">${it.published}</span>${badge(it)}${links}</div>
-    <div class="ol">${it.one_liner}</div>
+    <div class="ol">${esc(it.one_liner)}</div>
   </div>`;
 }
 window.showAll = (el, dom) => {
@@ -510,18 +531,22 @@ renderTL();
 // SOTA 追踪表
 const sl2 = document.getElementById("sotaList");
 let sotaHTML = "";
+const itemById = new Map(Object.values(DATA.items_by_domain).flat().map(it => [it.id, it]));
 for (const g of DATA.sota) {
   const rows = g.entries.map(e => {
-    const best = e.value === g.best;
-    return `<tr${best ? ' style="color:var(--green);font-weight:600"' : ""}>
-      <td style="white-space:nowrap">${e.date}</td>
-      <td>${e.method}</td><td style="text-align:right">${e.value}${best ? " ★" : ""}</td></tr>`;
+    const best = g.best != null && e.conditions && e.value === g.best;
+    const c = e.conditions || {};
+    const scope = [e.scope, c.dataset, c.anchor, c.setup, c.basis, c.statistic].filter(Boolean).join(" · ");
+    const item = itemById.get(e.item);
+    const method = item ? `<a href="${item.detail}">${esc(e.method)}</a>` : esc(e.method);
+    return `<tr><td>${e.date}</td><td>${method}<br><small>${esc(scope)}</small></td>
+      <td>${e.value}${esc(c.unit || "")}${best ? " ★ 最优" : ""}</td></tr>`;
   }).join("");
   sotaHTML += `<div class="syn"><div class="head" onclick="this.parentElement.classList.toggle('open')">
-    <h3>${g.dataset} × ${g.anchor}</h3>
-    <span class="arrow">${g.metric} · ${g.n} 条 · best ${g.best} · 展开/收起</span></div>
+    <h3>${esc(g.dataset)} × ${esc(g.anchor)}</h3>
+    <span class="arrow">${esc(g.metric)} · ${g.n} 条 · ${g.best != null && g.entries.every(e => e.conditions) ? "同条件最优 " + g.best : "仅列结果"} · 展开/收起</span></div>
     <div class="body">
-      <table style="width:100%"><tr><th>日期</th><th>方法</th><th>${g.metric}</th></tr>${rows}</table></div></div>`;
+      <table style="width:100%"><tr><th>日期</th><th>方法</th><th>${esc(g.metric)}</th></tr>${rows}</table></div></div>`;
 }
 sl2.innerHTML = sotaHTML || '<div class="empty">SOTA 追踪生成中（scripts/build_sota.py）</div>';
 
@@ -557,6 +582,41 @@ for (const r of DATA.reports) {
     <div class="body">${md2html(r.md)}</div></div>`;
 }
 rl.innerHTML = repHTML || '<div class="empty">尚无调研报告（scripts/research_report.py "主题"）</div>';
+
+const query = (new URLSearchParams(location.search).get("q") || "").trim();
+if (query) {
+  document.getElementById("searchQuery").value = query;
+  const terms = query.toLowerCase().split(/\\s+/);
+  const matches = [];
+  for (const item of Object.values(DATA.items_by_domain).flat()) {
+    const title = [item.title, item.orig_title, item.id].join(" ").toLowerCase();
+    const entities = item.entities.map(id => id + " " + (DATA.aliases[id] || "")).join(" ").toLowerCase();
+    const summary = item.one_liner.toLowerCase();
+    const scores = terms.map(t => title.includes(t) ? 8 : entities.includes(t) ? 3 : summary.includes(t) ? 1 : 0);
+    if (scores.every(Boolean)) matches.push({item, score: scores.reduce((a,b) => a+b, 0)});
+  }
+  matches.sort((a,b) => b.score - a.score || Number(!!b.item.deep) - Number(!!a.item.deep)
+    || b.item.published.localeCompare(a.item.published));
+  const results = document.getElementById("searchResults");
+  results.hidden = false;
+  results.innerHTML = '<h2 class="sec">搜索结果 · ' + matches.length + ' 条</h2>'
+    + '<p class="note"><a href="index.html">返回首页</a></p><div id="hits"></div>';
+  let shown = 0;
+  const more = document.createElement("button");
+  more.className = "tab";
+  more.textContent = "更多结果";
+  function nextPage() {
+    const page = matches.slice(shown, shown + 20);
+    document.getElementById("hits").insertAdjacentHTML("beforeend", page.map(hit => rowHTML(hit.item, true)).join(""));
+    shown += page.length;
+    more.hidden = shown >= matches.length;
+  }
+  results.append(more);
+  more.onclick = nextPage;
+  nextPage();
+  document.querySelector(".tabs").hidden = true;
+  document.getElementById("view-week").hidden = true;
+}
 
 function showTab(t) {
   document.getElementById("view-week").style.display = t === "week" ? "" : "none";
@@ -600,7 +660,9 @@ document.getElementById("foot").innerHTML =
 
 
 def main() -> int:
-    data = build_data()
+    items = [load(p) for p in sorted(ITEMS.glob("*/*.yaml"))]
+    data = build_data(items, datetime.now(ZoneInfo("Asia/Shanghai")).date())
+    write_details(items, SITE, REPO_URL)
     payload = json.dumps(data, ensure_ascii=False).replace("</", "<\\/")
     html = TEMPLATE.replace("__DATA__", payload)
     SITE.mkdir(exist_ok=True)

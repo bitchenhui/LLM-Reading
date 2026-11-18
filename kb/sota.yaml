@@ -1,190 +1,412 @@
-generated: '2026-11-17'
-note: value 数值口径见原条目；BD-Rate 负值=省码率；best 为组内数值最优，跨组不可比
+generated: '2026-11-18'
+note: 仅对原始数据集、锚点、单位、配置、质量基准与统计方式一致且方向明确的组标注最优
 groups:
 - dataset: JVET CTC
   anchor: VTM
-  metric: BD-RATE
+  metric: BD-Rate
   n: 14
-  best: -24.41
+  best: null
   entries:
   - date: '2024-03-18'
     method: 面向多功能视频编码的目标分割辅助帧间预测
     value: -0.82
     item: paper:arxiv:2403.11694
+    scope: ''
+    conditions:
+      dataset: 通用测试序列
+      anchor: VTM 12.0
+      metric: BD-Rate
+      unit: '%'
   - date: '2024-03-18'
     method: 面向多功能视频编码的目标分割辅助帧间预测
     value: -1.98
     item: paper:arxiv:2403.11694
+    scope: ''
+    conditions:
+      dataset: 通用测试序列
+      anchor: VTM 12.0
+      metric: BD-Rate
+      unit: '%'
   - date: '2024-03-18'
     method: 面向多功能视频编码的目标分割辅助帧间预测
     value: -0.49
     item: paper:arxiv:2403.11694
+    scope: ''
+    conditions:
+      dataset: 通用测试序列
+      anchor: VTM 12.0
+      metric: BD-Rate
+      unit: '%'
   - date: '2024-03-18'
     method: 面向多功能视频编码的目标分割辅助帧间预测
     value: -1.14
     item: paper:arxiv:2403.11694
+    scope: ''
+    conditions:
+      dataset: 通用测试序列
+      anchor: VTM 12.0
+      metric: BD-Rate
+      unit: '%'
   - date: '2024-03-18'
     method: 面向多功能视频编码的目标分割辅助帧间预测
     value: -0.37
     item: paper:arxiv:2403.11694
+    scope: ''
+    conditions:
+      dataset: 通用测试序列
+      anchor: VTM 12.0
+      metric: BD-Rate
+      unit: '%'
   - date: '2024-03-18'
     method: 面向多功能视频编码的目标分割辅助帧间预测
     value: -0.79
     item: paper:arxiv:2403.11694
+    scope: ''
+    conditions:
+      dataset: 通用测试序列
+      anchor: VTM 12.0
+      metric: BD-Rate
+      unit: '%'
   - date: '2024-07-16'
     method: 面向帧间预测的匀加速运动模型
     value: -0.38
     item: paper:arxiv:2407.11541
+    scope: ''
+    conditions:
+      dataset: VTM 12.0 CTC 测试序列
+      anchor: VTM 12.0 锚点
+      metric: BD-Rate
+      unit: '%'
   - date: '2024-07-16'
     method: 面向帧间预测的匀加速运动模型
     value: -0.13
     item: paper:arxiv:2407.11541
+    scope: ''
+    conditions:
+      dataset: VTM 12.0 CTC 测试序列
+      anchor: VTM 12.0 锚点
+      metric: BD-Rate
+      unit: '%'
   - date: '2026-09-29'
     method: CASR：基于低秩过拟合的通用视频编码内容自适应神经超分后处理滤波器
     value: -10.93
     item: paper:arxiv:2609.37328
+    scope: 对比VTM21，随机访问配置，Y分量，JVET CTC A1/A2序列
+    conditions:
+      dataset: JVET CTC A1/A2序列
+      anchor: VTM21（随机访问配置，Y分量）
+      metric: BD-Rate
+      unit: '%'
   - date: '2026-09-29'
     method: CASR：基于低秩过拟合的通用视频编码内容自适应神经超分后处理滤波器
     value: -15.39
     item: paper:arxiv:2609.37328
+    scope: 对比VTM21，随机访问配置，U分量，JVET CTC A1/A2序列
+    conditions:
+      dataset: JVET CTC A1/A2序列
+      anchor: VTM21（随机访问配置，U分量）
+      metric: BD-Rate
+      unit: '%'
   - date: '2026-09-29'
     method: CASR：基于低秩过拟合的通用视频编码内容自适应神经超分后处理滤波器
     value: -24.41
     item: paper:arxiv:2609.37328
+    scope: 对比VTM21，随机访问配置，V分量，JVET CTC A1/A2序列
+    conditions:
+      dataset: JVET CTC A1/A2序列
+      anchor: VTM21（随机访问配置，V分量）
+      metric: BD-Rate
+      unit: '%'
   - date: '2026-09-29'
     method: CASR：基于低秩过拟合的通用视频编码内容自适应神经超分后处理滤波器
     value: -13.43
     item: paper:arxiv:2609.37328
+    scope: 对比VTM21，全帧内配置，Y分量，JVET CTC A1/A2序列
+    conditions:
+      dataset: JVET CTC A1/A2序列
+      anchor: VTM21（全帧内配置，Y分量）
+      metric: BD-Rate
+      unit: '%'
   - date: '2026-09-29'
     method: CASR：基于低秩过拟合的通用视频编码内容自适应神经超分后处理滤波器
     value: -5.75
     item: paper:arxiv:2609.37328
+    scope: 对比VTM21，全帧内配置，U分量，JVET CTC A1/A2序列
+    conditions:
+      dataset: JVET CTC A1/A2序列
+      anchor: VTM21（全帧内配置，U分量）
+      metric: BD-Rate
+      unit: '%'
   - date: '2026-09-29'
     method: CASR：基于低秩过拟合的通用视频编码内容自适应神经超分后处理滤波器
     value: -22.94
     item: paper:arxiv:2609.37328
+    scope: 对比VTM21，全帧内配置，V分量，JVET CTC A1/A2序列
+    conditions:
+      dataset: JVET CTC A1/A2序列
+      anchor: VTM21（全帧内配置，V分量）
+      metric: BD-Rate
+      unit: '%'
 - dataset: Kodak
   anchor: VTM
-  metric: BD-RATE
+  metric: BD-Rate
   n: 8
-  best: -20.46
+  best: null
   entries:
   - date: '2023-07-28'
     method: MLIC++：面向学习型图像压缩的线性复杂度多参考熵模型
     value: -13.39
     item: paper:arxiv:2307.15421
+    scope: ''
+    conditions:
+      dataset: Kodak
+      anchor: VTM-17.0
+      metric: BD-Rate
+      unit: '%'
   - date: '2023-10-25'
     method: 面向学习型图像压缩的频率感知Transformer
     value: -14.5
     item: paper:arxiv:2310.16387
+    scope: ''
+    conditions:
+      dataset: Kodak
+      anchor: VTM-12.1
+      metric: BD-Rate
+      unit: '%'
   - date: '2025-04-27'
     method: MLICv2：面向学习式图像压缩的增强多参考熵建模
     value: -16.54
     item: paper:arxiv:2504.19119
+    scope: ''
+    conditions:
+      dataset: Kodak
+      anchor: VTM-17.0 Intra
+      metric: BD-Rate
+      unit: '%'
   - date: '2025-04-27'
     method: MLICv2：面向学习式图像压缩的增强多参考熵建模
     value: -20.46
     item: paper:arxiv:2504.19119
+    scope: ''
+    conditions:
+      dataset: Kodak
+      anchor: VTM-17.0 Intra
+      metric: BD-Rate
+      unit: '%'
   - date: '2026-03-06'
     method: HiDE：面向学习式图像压缩的分层字典熵建模
     value: -18.5
     item: paper:arxiv:2603.06766
+    scope: ''
+    conditions:
+      dataset: Kodak
+      anchor: VTM-12.1
+      metric: BD-Rate
+      unit: '%'
   - date: '2026-06-19'
     method: MoECodec：基于 MoE 的人机联合感知图像压缩
     value: 15.44
     item: paper:arxiv:2606.21033
+    scope: ''
+    conditions:
+      dataset: Kodak
+      anchor: VTM-17.1, PSNR
+      metric: BD-Rate
+      unit: '%'
   - date: '2026-06-19'
     method: MoECodec：基于 MoE 的人机联合感知图像压缩
     value: -11.54
     item: paper:arxiv:2606.21033
+    scope: TinyLIC+MoECodec, Kodak
+    conditions:
+      dataset: Kodak
+      anchor: VTM-17.1, PSNR
+      metric: BD-Rate
+      unit: '%'
   - date: '2026-06-19'
     method: MoECodec：基于 MoE 的人机联合感知图像压缩
     value: -11.87
     item: paper:arxiv:2606.21033
+    scope: TCM+MoECodec, Kodak
+    conditions:
+      dataset: Kodak
+      anchor: VTM-17.1, PSNR
+      metric: BD-Rate
+      unit: '%'
 - dataset: CLIC
   anchor: VTM
-  metric: BD-RATE
+  metric: BD-Rate
   n: 4
-  best: -21.99
+  best: null
   entries:
   - date: '2023-10-25'
     method: 面向学习型图像压缩的频率感知Transformer
     value: -13.0
     item: paper:arxiv:2310.16387
+    scope: ''
+    conditions:
+      dataset: CLIC
+      anchor: VTM-12.1
+      metric: BD-Rate
+      unit: '%'
   - date: '2025-04-27'
     method: MLICv2：面向学习式图像压缩的增强多参考熵建模
     value: -16.05
     item: paper:arxiv:2504.19119
+    scope: ''
+    conditions:
+      dataset: CLIC Pro Val
+      anchor: VTM-17.0 Intra
+      metric: BD-Rate
+      unit: '%'
   - date: '2025-04-27'
     method: MLICv2：面向学习式图像压缩的增强多参考熵建模
     value: -19.14
     item: paper:arxiv:2504.19119
+    scope: ''
+    conditions:
+      dataset: CLIC Pro Val
+      anchor: VTM-17.0 Intra
+      metric: BD-Rate
+      unit: '%'
   - date: '2026-03-06'
     method: HiDE：面向学习式图像压缩的分层字典熵建模
     value: -21.99
     item: paper:arxiv:2603.06766
+    scope: ''
+    conditions:
+      dataset: CLIC
+      anchor: VTM-12.1
+      metric: BD-Rate
+      unit: '%'
 - dataset: Tecnick
   anchor: VTM
-  metric: BD-RATE
+  metric: BD-Rate
   n: 4
-  best: -24.35
+  best: null
   entries:
   - date: '2023-10-25'
     method: 面向学习型图像压缩的频率感知Transformer
     value: -15.1
     item: paper:arxiv:2310.16387
+    scope: ''
+    conditions:
+      dataset: Tecnick
+      anchor: VTM-12.1
+      metric: BD-Rate
+      unit: '%'
   - date: '2025-04-27'
     method: MLICv2：面向学习式图像压缩的增强多参考熵建模
     value: -21.61
     item: paper:arxiv:2504.19119
+    scope: ''
+    conditions:
+      dataset: Tecnick
+      anchor: VTM-17.0 Intra
+      metric: BD-Rate
+      unit: '%'
   - date: '2025-04-27'
     method: MLICv2：面向学习式图像压缩的增强多参考熵建模
     value: -24.35
     item: paper:arxiv:2504.19119
+    scope: ''
+    conditions:
+      dataset: Tecnick
+      anchor: VTM-17.0 Intra
+      metric: BD-Rate
+      unit: '%'
   - date: '2026-03-06'
     method: HiDE：面向学习式图像压缩的分层字典熵建模
     value: -24.01
     item: paper:arxiv:2603.06766
-- dataset: UVG
+    scope: ''
+    conditions:
+      dataset: Tecnick
+      anchor: VTM-12.1
+      metric: BD-Rate
+      unit: '%'
+- dataset: UVG与HEVC测试集平均
   anchor: 目标码率
   metric: 平均码率误差
   n: 4
-  best: 2.13
+  best: null
   entries:
   - date: '2026-04-22'
     method: 面向学习式视频压缩的反馈驱动码率控制
     value: 2.88
     item: paper:arxiv:2604.20104
+    scope: DCVC，UVG与HEVC测试集平均
+    conditions:
+      dataset: UVG与HEVC测试集平均
+      anchor: 目标码率
+      metric: 平均码率误差
+      unit: '%'
   - date: '2026-04-22'
     method: 面向学习式视频压缩的反馈驱动码率控制
     value: 2.95
     item: paper:arxiv:2604.20104
+    scope: DCVC-TCM，UVG与HEVC测试集平均
+    conditions:
+      dataset: UVG与HEVC测试集平均
+      anchor: 目标码率
+      metric: 平均码率误差
+      unit: '%'
   - date: '2026-04-22'
     method: 面向学习式视频压缩的反馈驱动码率控制
     value: 2.13
     item: paper:arxiv:2604.20104
+    scope: DCVC，加GRU调节控制器后
+    conditions:
+      dataset: UVG与HEVC测试集平均
+      anchor: 目标码率
+      metric: 平均码率误差
+      unit: '%'
   - date: '2026-04-22'
     method: 面向学习式视频压缩的反馈驱动码率控制
     value: 2.24
     item: paper:arxiv:2604.20104
+    scope: DCVC-TCM，加GRU调节控制器后
+    conditions:
+      dataset: UVG与HEVC测试集平均
+      anchor: 目标码率
+      metric: 平均码率误差
+      unit: '%'
 - dataset: Inter-4K
   anchor: 固定码率梯子
   metric: 码率节省
   n: 3
-  best: 6.38
+  best: null
   entries:
   - date: '2026-01-15'
     method: 面向高效自适应VVC流媒体的多目标帕累托前沿优化
     value: 11.76
     item: paper:arxiv:2601.10607
+    scope: JQT-PF对比固定梯子，同XPSNR，Inter-4K数据集
+    conditions:
+      dataset: Inter-4K
+      anchor: 固定码率梯子
+      metric: 码率节省
+      unit: '%'
   - date: '2026-01-15'
     method: 面向高效自适应VVC流媒体的多目标帕累托前沿优化
     value: 27.88
     item: paper:arxiv:2601.10607
+    scope: JQT-PF激进配置，Inter-4K数据集
+    conditions:
+      dataset: Inter-4K
+      anchor: 固定码率梯子
+      metric: 码率节省
+      unit: '%'
   - date: '2026-01-15'
     method: 面向高效自适应VVC流媒体的多目标帕累托前沿优化
     value: 6.38
     item: paper:arxiv:2601.10607
+    scope: JRQT-PF，Inter-4K数据集
+    conditions:
+      dataset: Inter-4K
+      anchor: 固定码率梯子
+      metric: 码率节省
+      unit: '%'
 stats:
   items_covered: 208
   groups: 6

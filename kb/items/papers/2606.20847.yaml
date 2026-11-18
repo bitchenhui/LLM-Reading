@@ -43,13 +43,17 @@ claims:
     = weighted_PSNR / (1+H_QP) / log(1+total_bits)，隐式抑制 QP 抖动并自适应内容。
   evidence: docs/01_LLM-VVenC-QP.md §3
   confidence: reported
-- statement: 相对 VVenC-1.7.0 faster 固定 QP，CTC B 类平均 BD-Rate -1.73%（YUV-PSNR）。
+- id: ctc-b-bd-rate
+  statement: 相对 VVenC-1.7.0 faster 固定 QP，CTC B 类平均 BD-Rate -1.73%（YUV-PSNR）。
   metrics:
   - ref: metric:BD-Rate
     value: -1.73
     unit: '%'
     scope: CTC B 平均, vs 固定QP, YUV-PSNR, VVenC-1.7.0 faster/RA
-  evidence: docs/01_LLM-VVenC-QP.md §4
+  evidence: 原论文第 4 页 Table I
+  evidence_url: https://arxiv.org/pdf/2606.20847v1#page=4
+  note_section: 4-实验结果
+  confidence: reported
 - statement: UVG 平均 -1.00%、MCL-JCV 平均 -1.06%；三库总平均约省 1.26% 码率。
   metrics:
   - ref: metric:BD-Rate

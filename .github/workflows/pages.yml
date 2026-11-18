@@ -6,7 +6,7 @@ name: pages
 on:
   push:
     branches: [main]
-    paths: ["kb/**", "scripts/make_site.py", ".github/workflows/pages.yml"]
+    paths: ["kb/**", "scripts/make_site.py", "scripts/site_details.py", ".github/workflows/pages.yml"]
   workflow_dispatch:
 
 permissions:

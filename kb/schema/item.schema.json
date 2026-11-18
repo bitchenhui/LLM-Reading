@@ -77,6 +77,9 @@
         "required": ["statement"],
         "additionalProperties": false,
         "properties": {
+          "id": { "type": "string", "pattern": "^[a-z0-9-]+$", "description": "条目内稳定论断锚点" },
+          "evidence_url": { "type": "string", "format": "uri" },
+          "note_section": { "type": "string", "description": "精读笔记的章节锚点" },
           "statement": { "type": "string", "description": "论断本身（中文）" },
           "metrics": {
             "type": "array",
