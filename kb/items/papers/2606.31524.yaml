@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-06-30'
   collected: '2026-11-15'
+  updated: '2026-11-18'
 entities:
 - ref: concept:SelfImprovement
   role: subject
@@ -37,6 +38,7 @@ claims:
 summaries:
   one_liner_zh: 提出带反向KL正则的SAIL-RevKL，证明满足PL条件并获得近线性样本复杂度的全局收敛保证。
   abstract_zh: SAIL算法通过将双层优化化为单层方法来应对在线LLM对齐中的分布漂移，但一直缺乏收敛性理论分析。作者指出标准SAIL目标因其Hessian的不利性质而不保证强凹，这是核心理论障碍。为此提出引入反向KL散度惩罚的正则化目标SAIL-RevKL，以改善优化景观。核心理论贡献是证明该正则化目标在有界参数空间内满足Polyak-Lojasiewicz（PL）条件，从而建立近线性样本复杂度的全局收敛保证。在MuJoCo基准和LLM对齐任务上的实验验证了其有效性与稳定性，性能优于原始SAIL。
+  deep_dive: docs/auto/2606.31524.md
 assessment:
   relevance: high
   decision: summary_only

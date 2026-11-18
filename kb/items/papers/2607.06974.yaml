@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-07-08'
   collected: '2026-11-15'
+  updated: '2026-11-18'
 entities:
 - ref: concept:LLM
   role: subject
@@ -33,6 +34,7 @@ claims:
 summaries:
   one_liner_zh: 提出MILES框架，以子目标-子指令模块化记忆单元配合可学习选择头，在测试时逐步积累经验自改进LLM推理。
   abstract_zh: 论文提出MILES框架，针对顺序到达的问题逐步累积可复用经验以改进LLM推理，克服已有方法存整解模板泛化差、启发式步级选择不优化最终正确性的局限。其维护模块化记忆单元，每个单元由子目标嵌入与子指令构成非对称对并关联一个可学习选择头，支持正确性优化的记忆组合。机制采用粗到细检索：粗层负责记忆增量扩展并从高置信样本收集监督信号训练选择头，细层用学到的选择头重排粗层候选并引导不确定样本的推理。实验显示MILES与既有方法持平或更优，取得更好的精度-效率权衡，并具备鲁棒性与可迁移性。
+  deep_dive: docs/auto/2607.06974.md
 assessment:
   relevance: high
   decision: summary_only

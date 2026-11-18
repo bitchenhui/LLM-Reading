@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-05-20'
   collected: '2026-11-15'
+  updated: '2026-11-18'
 entities:
 - ref: concept:SuperResolution
   role: subject
@@ -47,6 +48,7 @@ claims:
 summaries:
   one_liner_zh: 提出6.3万张超分图像、6类伪影像素级标注的SR-Ground数据集，训练可定位伪影的IQA模型用于可解释质量评估与SR伪影抑制。
   abstract_zh: 针对扩散式超分（SR）模型引入的新型视觉伪影，现有IQA方法只给整体分数、缺乏可解释性且无法区分伪影类型，作者构建了SR-Ground大规模数据集，对多种SOTA超分模型的输出进行多类伪影的像素级分割标注。研究通过1,062名参与者的大规模众包验证并修正自动生成的分割，最终形成覆盖6类伪影的63,000张图像数据集。实验表明在该数据集上训练具备grounding能力的IQA模型可显著提升下游任务表现，并提出利用该grounding模型微调SR模型以减少可感知伪影的流程。在包含5种未见超分方法1,000个输出的独立基准上，低分辨率参考（LR-referenced）grounding模型在显著度对齐上显著优于无参考版本，并在无HR真值的真实低分辨率图像数据集上取得最佳表现。
+  deep_dive: docs/auto/2605.21244.md
 assessment:
   relevance: high
   decision: summary_only

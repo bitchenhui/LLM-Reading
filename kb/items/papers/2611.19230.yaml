@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-11-14'
   collected: '2026-11-17'
+  updated: '2026-11-18'
 entities:
 - ref: concept:SelfImprovement
   role: subject
@@ -62,6 +63,7 @@ summaries:
   abstract_zh: CompoundingKernel是一个通过搜索编写GPU内核的自我改进智能体系统：每个问题仅给定PyTorch定义，不提供参考内核或官方分数；模型外的归档保存每个正确内核及其谱系，LLM控制器读取归档后选择父代或全新设计，并为并行子代理各分配一个方向，正确性由模型外检查判定。截至2026-11-11，其生成的内核在SOL-ExecBench（NVIDIA
     B200）公开L1、L2与量化榜单均排名第一，L1自2026-10-27起保持第一。全部235个问题均有经站点验证的正确内核，在209个公开榜单问题上比基准参考实现快4.40倍。相同墙钟时间内，该系统在38个问题中的35个上击败编码的UCB式树搜索，正确尝试次数多2.4倍；一次warm
     restart修复使千级并发代理的评估速率提升3.6倍。作者发现限制此类搜索规模的是可靠测量的速率，而非代理数量。
+  deep_dive: docs/auto/2611.19230.md
 assessment:
   relevance: high
   decision: summary_only

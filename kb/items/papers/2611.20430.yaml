@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-11-16'
   collected: '2026-11-17'
+  updated: '2026-11-18'
 entities:
 - ref: concept:LLM
   role: subject
@@ -46,6 +47,7 @@ summaries:
   abstract_zh: 面向 LLM 智能体自动化模型后训练以加速递归自我改进，针对现有方法的两大挑战——策略锁定（难以跳出初始训练策略）与耦合执行（难以归因单项修改）——提出 TrainExplorer
     框架。其策略规划模块借鉴科学文献构建候选训练策略搜索空间，解耦执行模块支持单组件干预并利用归因引导策略探索。在 PostTrainBench 上，TrainExplorer 加权总分达 39.02，比使用相同
     LLM 的 Claude Code 高 7.32 分，并超过 GPT-5.6 Sol 驱动的 Codex（36.23）。代码将开源。
+  deep_dive: docs/auto/2611.20430.md
 assessment:
   relevance: high
   decision: summary_only

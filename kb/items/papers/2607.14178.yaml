@@ -13,6 +13,7 @@ source:
 time:
   published: '2026-07-15'
   collected: '2026-11-15'
+  updated: '2026-11-18'
 entities:
 - ref: concept:SelfImprovement
   role: subject
@@ -35,6 +36,7 @@ claims:
 summaries:
   one_liner_zh: 提出知识驱动的多智能体系统ReasFlow，以专家任PI、智能体任研究生的模式自动完成理论推导与论文撰写。
   abstract_zh: 针对现有自动科研系统偏重经验驱动、量化基准领域，而理论驱动、需严格证明的数学学科发现探索不足的问题，提出端到端自主智能体系统ReasFlow。系统采用人类专家担任首席研究员、智能体担任研究生的协作范式，将文献综合、算法设计、定理证明、实验与论文撰写统一于单一系统。其核心机制包括在人工检查前审计逻辑一致性并纠错的内部验证回路，以及自动知识检索与自我改进机制，主动挖掘陈述性事实与被忽视的程序性启发式知识，显著减少专家干预。系统从极简提示自主生成了5篇含严格理论与实证内容的完整研究论文，在基于LLM的评审标准下取得开放获取SOTA基线中的最高评分，并通过ReasLab平台公开提供AI辅助理论研究的协作工作区。
+  deep_dive: docs/auto/2607.14178.md
 assessment:
   relevance: high
   decision: summary_only

@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-06-28'
   collected: '2026-11-15'
+  updated: '2026-11-18'
 entities:
 - ref: concept:VolumetricVideo
   role: subject
@@ -45,6 +46,7 @@ claims:
 summaries:
   one_liner_zh: 前馈式方法从无标定四视角稀疏视频实现2K分辨率360°人体体视频重建。
   abstract_zh: 面向全息通信与AR/VR所需的体视频流式人体重建，提出前馈方法HiReFF，从无标定稀疏视角视频（四个相隔90°的视角）实现2K分辨率360°人体视频重建，突破现有前馈模型仅0.5K单帧合成的限制。框架将问题分解为两个任务：稀疏视角前景3D高斯重建，以及计算高效的高分辨率合成。为此提出尺度同步相机标定以解决多视角监督中的尺度歧义，并提出高斯级前景掩蔽以调制高斯参数重建干净前景。通过高分辨率侧调（Side-tuning）在保持0.5K骨干的同时为高斯头增广补充特征实现2K渲染，大幅降低计算开销。实验表明HiReFF在高分辨率流式体视频重建上显著优于现有方法。
+  deep_dive: docs/auto/2606.29333.md
 assessment:
   relevance: high
   decision: summary_only
