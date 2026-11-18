@@ -106,6 +106,8 @@ def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--only", type=str, default="", help="只生成指定实体（逗号分隔的 entity id）")
     ap.add_argument("--full", action="store_true", help="强制全量重写")
+    ap.add_argument("--with-notes", action="store_true",
+                    help="强制包含精读摘录（覆盖大档案自动降级；预算自动升档兜底）")
     ap.add_argument("--low-effort", action="store_true",
                     help="深读用低推理档（大档案防 token 速率墙；汇总类内容够用）")
     args = ap.parse_args()
@@ -157,8 +159,8 @@ def main() -> int:
                       f"请输出更新后的完整档案（三节 + 近期变化）。")
             instructions, mode = DOSSIER_INCREMENTAL_INSTRUCTIONS, f"增量（+{len(delta)}）"
         else:
-            # 大档案（>200 条）自动去掉精读摘录：摘录包过大易触发服务端断流
-            use_notes = len(items) <= 200
+            # 大档案（>200 条）默认去掉精读摘录防大包；--with-notes 强制开启（预算自动升档兜底）
+            use_notes = args.with_notes or len(items) <= 200
             prompt = (f"实体：{entities[eid]['name']}（{eid}）\n\n注册表静态信息：\n{entity_static(entities[eid])}\n\n"
                       f"挂接条目 {len(items)} 条：\n{pack_items(items, with_notes=use_notes)}\n\n"
                       f"请生成实体档案（三节结构）。")
