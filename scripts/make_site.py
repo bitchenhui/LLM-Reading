@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""站点生成器 v3：两页式前端（用户定义的形态）。
+"""站点生成器：查证据优先的音视频知识库。
 
-- 页签一「本周新成果」：最近 7 天新条目，按八大类分组
-- 页签二「知识库」：领域问答（本地 serve.py 提供 /api/ask）+ 八大类领域综述
-  （kb/synthesis/*.md，glm-5.3 基于全量条目合成的"发展历程/技术主线/关键问题"）
+- 查问题与证据：技术名/关键词检索论断、口径与原文位置
+- 浏览技术主题、实验成绩、最新进展按任务分开
+- 本地 serve.py 显式声明问答能力后，才显示生成式问答入口
 
 纯静态站点；重新生成：uv run --with pyyaml python scripts/make_site.py
 """
@@ -18,7 +18,7 @@ from pathlib import Path
 
 import yaml
 
-from site_details import detail_url, write_details
+from site_details import claim_id, detail_url, write_details
 from site_retest import write_sheets
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -143,6 +143,9 @@ def build_data(items: list[dict], today: date) -> dict:
             "entities": [e["ref"] for e in d["entities"]],
             "url": d["source"]["url"],
             "one_liner": d["summaries"].get("one_liner_zh", ""),
+            "claims": [dict(c, id=claim_id(c)) for c in d.get("claims", [])],
+            "protocol": {k: v for k, v in d.get("retest", {}).items()
+                         if k in {"dataset", "baseline", "encoding", "decoding"}},
             "deep": f"{REPO_URL}/blob/main/{deep}" if deep else None,
         })
 
@@ -201,14 +204,19 @@ def build_data(items: list[dict], today: date) -> dict:
         sota = (load(sota_path).get("groups") or [])[:12]
     graph = build_graph(items)
     aliases = {}
+    topics = []
     for p in sorted((ROOT / "kb" / "entities").glob("*.yaml")):
         for e in load(p):
             aliases[e["id"]] = " ".join(filter(None, [e["name"], e.get("full_name"), *e.get("aliases", [])]))
+            topics.append({"id": e["id"], "name": e["name"],
+                           "terms": list(filter(None, [e["name"], e.get("full_name"), *e.get("aliases", [])])),
+                           "description": e.get("notes", "")})
 
     return {
         "generated": end,
         "cutoff": week_start,
         "aliases": aliases,
+        "topics": topics,
         "repo_url": REPO_URL,
         "domain_names": DOMAIN_NAMES,
         "domain_order": DOMAIN_ORDER,
@@ -238,7 +246,7 @@ TEMPLATE = """<!DOCTYPE html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>音视频信息引擎</title>
+<title>音视频知识库 · 查问题与证据</title>
 <style>
 :root {
   --bg: #0f1115; --panel: #171a21; --card: #1c2029; --border: #2a3040;
@@ -320,54 +328,67 @@ h2.sec .core-tag { font-size: 11px; color: var(--green); border: 1px solid var(-
 #searchResults a,.body table a { color:var(--accent); }
 footer { color: var(--dim); font-size: 12px; margin-top: 36px; text-align: center; }
 footer a { color: var(--dim); }
+__DISCOVERY_CSS__
 </style>
 </head>
 <body>
 <div class="wrap">
 <header>
-  <h1>音视频信息引擎</h1>
-  <div class="sub">8 个技术方向 · 论文与版本动态自动追踪 · AI 审阅精读 · 知识库问答</div>
+  <a class="brand" href="index.html">音视频知识库</a>
+  <div class="sub">从技术问题出发，找到结论、适用条件与原文依据。</div>
 </header>
+<nav class="tabs" aria-label="主导航">
+  <a class="tab" id="tab-discover" href="index.html">查问题与证据</a>
+  <a class="tab" id="tab-kb" href="?view=kb">浏览技术主题</a>
+  <a class="tab" id="tab-compare" href="?view=compare">实验成绩</a>
+  <a class="tab" id="tab-week" href="?view=week">最新进展</a>
+</nav>
 <form class="qa search" role="search" method="get">
-  <label for="searchQuery">站内搜索</label>
-  <div class="row"><input id="searchQuery" name="q" type="search" placeholder="搜索标题、实体或关键词，如 VVenC" required>
-  <button>搜索</button></div>
+  <label for="searchQuery">你想了解哪项技术？</label>
+  <div class="row"><input id="searchQuery" name="q" type="search" placeholder="例如：VVenC 怎么优化，或 Inter-4K" required aria-describedby="searchHint">
+  <button>查找证据</button></div>
+  <p class="hint" id="searchHint">按技术名和关键词检索已收录的论断与实验条件；结果来自知识库，不生成回答。</p>
 </form>
-<div id="searchResults" hidden></div>
-<div class="tabs">
-  <button class="tab on" id="tab-week" onclick="showTab('week')">近七日发表</button>
-  <button class="tab" id="tab-kb" onclick="showTab('kb')">知识库 · 问答</button>
-</div>
-
-<div id="view-week">
-  <div class="note" id="weekNote"></div>
-  <div id="weekList"></div>
-</div>
-
-<div id="view-kb" style="display:none">
-  <div class="qa">
-    <div class="hint">基于 8 大类知识库回答（引用条目 id，无据处会标注）。
-      线上静态版不能携带密钥——问答需本地运行：<code>uv run --with pyyaml python scripts/serve.py</code> 后访问 127.0.0.1:8931</div>
-    <div class="row">
-      <input id="q" placeholder="例如：跨平台 NPU 部署的神经视频编码做到什么水平了？"
-             onkeydown="if(event.key==='Enter')ask()">
-      <button id="askBtn" onclick="ask()">提问</button>
+<main>
+<section id="view-discover">
+  <div id="discoveryHome">
+    <div class="intro"><span class="eyebrow">从这里开始</span>
+      <h1>先找到有依据的技术结论</h1>
+      <p>选择一个问题，阅读相关结论，再核对实验条件与原文。需要验证时，从具体成绩进入实验单。</p>
     </div>
-    <div class="ans" id="ans"></div>
+    <div class="question-grid">
+      <a class="question-card" href="?q=VVenC+怎么优化"><span>编码优化</span><h2>VVenC 有哪些优化方向？</h2><p>查找相关研究，了解压缩效率与计算开销的取舍。</p><b>查看相关证据 →</b></a>
+      <a class="question-card" href="?q=Inter-4K"><span>码率与解码开销</span><h2>4K 视频省码率的代价是什么？</h2><p>从 Inter-4K 的论文结果开始，对照收益、基线与解码时间。</p><b>查看实验依据 →</b></a>
+      <a class="question-card" href="?q=神经音频编码"><span>音频技术</span><h2>神经音频编码有哪些研究？</h2><p>了解已收录的技术结论，继续阅读论文与精读笔记。</p><b>查看相关研究 →</b></a>
+    </div>
+    <div class="reading-guide"><h2>怎样使用这些证据？</h2><p><b>读结论</b>，判断与问题是否相关 → <b>看条件</b>，确认数据集、基线与指标 → <b>查出处</b>，回到论文核实。</p><p class="note">“来源报告”表示原文给出的结果；“已复测”表示独立验证；“推断”需要结合所列依据判断。</p></div>
+    <div id="coverage" class="note"></div>
   </div>
-  <div class="note">八大类领域综述（发展历程 · 技术主线 · 关键问题），由引擎基于全量条目合成：</div>
-  <div id="synList"></div>
-  <div class="note" style="margin-top:22px">关键实体档案（"关于 X 我们都知道什么"，随数据滚动更新）：</div>
-  <div id="dossList"></div>
-  <div class="note" style="margin-top:22px">技术时间线（近 180 天：版本发布 · 高相关研究 · 标准提案；点击实体名过滤）：</div>
-  <div id="tlList"></div>
-  <div class="note" style="margin-top:22px">实验成绩（按数据集与锚点浏览，仅在实验条件一致时标注最优）</div>
-  <div id="sotaList"></div>
-  <div class="note" style="margin-top:22px">知识图谱（实体共现；节点大小=挂接条目数，颜色=类型；点击节点过滤时间线）：</div>
-  <div id="graphBox"></div>
-  <div class="note" style="margin-top:22px">调研报告（Deep Research：主题→全引用长文）：</div>
-  <div id="repList"></div>
-</div>
+  <div id="searchResults" hidden aria-live="polite"></div>
+  <details id="localQA" class="reading-guide" hidden><summary>基于知识库提问</summary>
+    <div class="qa"><p class="hint">由本地问答服务检索资料并生成回答，请核对引用。</p>
+      <div class="row"><input id="q" aria-label="向知识库提问" placeholder="输入你的技术问题" onkeydown="if(event.key==='Enter')ask()"><button id="askBtn" onclick="ask()">提问</button></div><div class="ans" id="ans"></div>
+    </div>
+  </details>
+</section>
+<section id="view-week" hidden>
+  <h1>最新进展</h1><p class="note">关注近期发表的研究，以及已有技术的版本演进。</p>
+  <div class="note" id="weekNote"></div><div id="weekList"></div>
+  <details class="reading-guide" id="timelineSection"><summary>技术时间线 · 近 180 天</summary><div id="tlList"></div></details>
+</section>
+<section id="view-kb" hidden>
+  <h1>浏览技术主题</h1><p class="note">选择熟悉的技术名查看证据，或展开领域综述建立背景认识。</p>
+  <div id="topicLinks" class="topic-links"></div>
+  <h2 class="sec">按领域了解技术路线</h2><div id="synList"></div>
+  <details class="reading-guide"><summary>技术档案 · 深入阅读</summary><div id="dossList"></div></details>
+  <details class="reading-guide"><summary>专题调研报告</summary><div id="repList"></div></details>
+  <details class="reading-guide"><summary>探索技术关联</summary><p class="note">图中连线表示共同出现在条目中；点击节点查看相关动态。</p><div id="graphBox"></div></details>
+</section>
+<section id="view-compare" hidden>
+  <h1>实验成绩</h1><p class="note">用于寻找候选方案。先确认数据集、基线与实验条件，再比较数字；仅在条件一致时标注最优。</p>
+  <p class="note">点击数字查看对应论断和原文依据。复测实验单用于记录你在外部运行的实验，不会自动执行编解码。</p><div id="sotaList"></div>
+</section>
+</main>
 
 <footer id="foot"></footer>
 </div>
@@ -405,7 +426,7 @@ for (const [dom, items] of Object.entries(DATA.week_by_domain)) {
 }
 wl.innerHTML = html || `<div class="empty">最近 7 天无发表条目（引擎每日 09:30 自动拉取）</div>`;
 
-function esc(s){ return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;"); }
+function esc(s){ return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;").replace(/'/g,"&#39;"); }
 function md2html(md) {
   const lines = md.split("\\n");
   let out = [], inList = null, tableRows = [];
@@ -506,7 +527,7 @@ dl.innerHTML = dossHTML || '<div class="empty">实体档案生成中（scripts/b
 
 const KIND_ZH = { release: ["版本", "b-rel"], research: ["研究", "b-read"], standard: ["标准", "b-dom"] };
 let tlEnt = "";
-window.tlFilter = (name) => { tlEnt = (tlEnt === name ? "" : name); renderTL(); };
+window.tlFilter = (name) => { tlEnt = (tlEnt === name ? "" : name); renderTL(); showTab("week"); document.getElementById("timelineSection").open = true; document.getElementById("timelineSection").scrollIntoView(); };
 function renderTL() {
   const tl = document.getElementById("tlList");
   const facts = DATA.timeline.filter(f => !tlEnt || f.entity_name === tlEnt);
@@ -590,54 +611,28 @@ for (const r of DATA.reports) {
 }
 rl.innerHTML = repHTML || '<div class="empty">尚无调研报告（scripts/research_report.py "主题"）</div>';
 
-const query = (new URLSearchParams(location.search).get("q") || "").trim();
-if (query) {
-  document.getElementById("searchQuery").value = query;
-  const terms = query.toLowerCase().split(/\\s+/);
-  const matches = [];
-  for (const item of Object.values(DATA.items_by_domain).flat()) {
-    const title = [item.title, item.orig_title, item.id].join(" ").toLowerCase();
-    const entities = item.entities.map(id => id + " " + (DATA.aliases[id] || "")).join(" ").toLowerCase();
-    const summary = item.one_liner.toLowerCase();
-    const scores = terms.map(t => title.includes(t) ? 8 : entities.includes(t) ? 3 : summary.includes(t) ? 1 : 0);
-    if (scores.every(Boolean)) matches.push({item, score: scores.reduce((a,b) => a+b, 0)});
-  }
-  matches.sort((a,b) => b.score - a.score || Number(!!b.item.deep) - Number(!!a.item.deep)
-    || b.item.published.localeCompare(a.item.published));
-  const results = document.getElementById("searchResults");
-  results.hidden = false;
-  results.innerHTML = '<h2 class="sec">搜索结果 · ' + matches.length + ' 条</h2>'
-    + '<p class="note"><a href="index.html">返回首页</a></p><div id="hits"></div>';
-  let shown = 0;
-  const more = document.createElement("button");
-  more.className = "tab";
-  more.textContent = "更多结果";
-  function nextPage() {
-    const page = matches.slice(shown, shown + 20);
-    document.getElementById("hits").insertAdjacentHTML("beforeend", page.map(hit => rowHTML(hit.item, true)).join(""));
-    shown += page.length;
-    more.hidden = shown >= matches.length;
-  }
-  results.append(more);
-  more.onclick = nextPage;
-  nextPage();
-  document.querySelector(".tabs").hidden = true;
-  document.getElementById("view-week").hidden = true;
-}
+__DISCOVERY_JS__
 
 function showTab(t) {
-  document.getElementById("view-week").style.display = t === "week" ? "" : "none";
-  document.getElementById("view-kb").style.display = t === "kb" ? "" : "none";
-  document.getElementById("tab-week").classList.toggle("on", t === "week");
-  document.getElementById("tab-kb").classList.toggle("on", t === "kb");
-}
-
-if (benchmark && !query) {
-  const group = sl2.querySelector(".syn.open");
-  if (group) {
-    showTab("kb");
-    group.scrollIntoView();
+  const selected = ["discover", "kb", "compare", "week"].includes(t) ? t : "discover";
+  for (const name of ["discover", "kb", "compare", "week"]) {
+    document.getElementById("view-" + name).hidden = name !== selected;
+    const tab = document.getElementById("tab-" + name);
+    tab.classList.toggle("on", name === selected);
+    if (name === selected) tab.setAttribute("aria-current", "page");
+    else tab.removeAttribute("aria-current");
   }
+}
+const params = new URLSearchParams(location.search);
+const query = (params.get("q") || "").trim();
+showTab(query ? "discover" : benchmark ? "compare" : params.get("view"));
+renderDiscovery(query);
+if (benchmark && !query) sl2.querySelector(".syn.open")?.scrollIntoView();
+// Only the local server explicitly advertises the question-answering capability.
+if (["localhost", "127.0.0.1", "[::1]"].includes(location.hostname)) {
+  fetch("/api/capabilities").then(r => r.ok ? r.json() : {}).then(c => {
+    document.getElementById("localQA").hidden = c.ask !== true;
+  }).catch(() => {});
 }
 
 async function ask() {
@@ -656,11 +651,12 @@ async function ask() {
     if (!r.ok) throw new Error("HTTP " + r.status);
     const d = await r.json();
     ans.innerHTML = md2html(d.answer) +
-      `<div class="used">引用 ${d.used.length} 条：${d.used.join(" · ")}</div>`;
+      `<div class="used">引用 ${d.used.length} 条：${d.used.map(id => {
+        const item = itemById.get(id);
+        return item ? `<a href="${esc(item.detail)}">${esc(item.title)}</a>` : esc(id);
+      }).join(" · ")}</div>`;
   } catch (e) {
-    ans.innerHTML = `<b>问答服务不可达</b>（${e.message}）。线上静态页不带密钥——
-      本地运行 <code>uv run --with pyyaml python scripts/serve.py</code> 后访问
-      <code>http://127.0.0.1:8931</code> 即可提问；下方领域综述始终可读。`;
+    ans.textContent = "问答服务暂时不可用。你仍可使用上方搜索查找论断与原文，或浏览技术主题。";
   } finally {
     btn.disabled = false;
   }
@@ -680,7 +676,9 @@ def main() -> int:
     write_details(items, SITE, REPO_URL)
     data["sheets"] = write_sheets(items, SITE)
     payload = json.dumps(data, ensure_ascii=False).replace("</", "<\\/")
-    html = TEMPLATE.replace("__DATA__", payload)
+    html = (TEMPLATE.replace("__DATA__", payload)
+            .replace("__DISCOVERY_CSS__", (ROOT / "scripts/site_discovery.css").read_text())
+            .replace("__DISCOVERY_JS__", (ROOT / "scripts/site_discovery.js").read_text()))
     SITE.mkdir(exist_ok=True)
     out = SITE / "index.html"
     out.write_text(html, encoding="utf-8")

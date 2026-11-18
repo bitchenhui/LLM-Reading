@@ -6,6 +6,10 @@ from pathlib import Path
 from urllib.parse import quote, urlsplit
 
 
+def claim_id(claim: dict) -> str:
+    return claim.get("id") or sha256(claim["statement"].encode()).hexdigest()[:12]
+
+
 def detail_url(item_id: str) -> str:
     bucket = sha256(item_id.encode()).hexdigest()[0]
     return f"details/{bucket}.html#{quote(item_id, safe=':')}"
@@ -19,7 +23,7 @@ def link(url: str, label: str) -> str:
 
 def claim_html(item: dict, claim: dict, repo_url: str) -> str:
     statement = claim["statement"]
-    key = claim.get("id") or sha256(statement.encode()).hexdigest()[:12]
+    key = claim_id(claim)
     anchor = escape(f"{item['id']}/{key}", quote=True)
     lines = []
     for metric in claim.get("metrics", []):

@@ -6,7 +6,7 @@
 
     uv run --with pyyaml python scripts/serve.py     # http://127.0.0.1:8931
 
-前端自动探测同源 /api/ask；Pages 上访问时提示改用本地服务。
+前端在本机通过 /api/capabilities 探测问答配置；Pages 版提供静态证据检索。
 """
 from __future__ import annotations
 
@@ -44,7 +44,10 @@ class Handler(BaseHTTPRequestHandler):
 
     def do_GET(self):
         path = self.path.split("?")[0]
-        if path in ("/", "/index.html"):
+        if path == "/api/capabilities":
+            self._send(200, json.dumps({"ask": (ROOT / "config/llm.local.yaml").is_file()}).encode(),
+                       "application/json")
+        elif path in ("/", "/index.html"):
             self._send(200, (SITE / "index.html").read_bytes(), "text/html; charset=utf-8")
         elif re.fullmatch(r"/(?:details/[0-9a-f]|retest-[a-z0-9-]+)\.html", path) and (SITE / path[1:]).is_file():
             self._send(200, (SITE / path[1:]).read_bytes(), "text/html; charset=utf-8")
