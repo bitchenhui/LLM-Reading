@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-09-22'
   collected: '2026-11-15'
+  updated: '2026-11-18'
 entities:
 - ref: concept:SelfImprovement
   role: subject
@@ -43,6 +44,7 @@ summaries:
   abstract_zh: 现代 LLM 智能体围绕 agent loop 构建，但长期记忆与自我改进通常需要 loop 之外的专用系统。作者构建了 JAZ 框架，仅暴露一个 LLM 原语 invoke：LLM
     可编写包含递归 invoke 的任意可执行代码，且其可见的一切输入与交互历史都是代码环境中的变量。作者从第一性原理出发，将 invoke 视为一种每次调用时由 LLM 在运行时提供实现的函数语言原语。在无需任何手工设计的工具、harness
     或外部系统的条件下，JAZ 在 StuLife 召回密集任务上以一半成本超越 Letta (MemGPT) 8%；在 AppWorld 持续自我改进任务上以更低成本超越 ACE 4%。
+  deep_dive: docs/auto/2609.26891.md
 assessment:
   relevance: high
   decision: summary_only

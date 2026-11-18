@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-05-13'
   collected: '2026-11-15'
+  updated: '2026-11-18'
 entities:
 - ref: concept:LLM
   role: uses
@@ -45,6 +46,7 @@ claims:
 summaries:
   one_liner_zh: 提出反思式经验框架R²-Mem，使记忆搜索智能体从历史轨迹蒸馏经验以实现免强化学习自我改进
   abstract_zh: 论文针对深度搜索型记忆智能体反复犯历史错误、无法区分高低质量搜索轨迹的问题，提出反思式经验框架R²-Mem。离线阶段由基于评分准则的评估器对历史轨迹中的低质量与高质量步骤打分，再由自反思学习器蒸馏出抽象经验；在线推理阶段检索到的经验引导后续搜索动作，避免重复错误并保持高质量行为。实验显示相较强基线F1最高提升22.6%，token消耗降低12.9%，搜索迭代减少20.2%，验证其为免强化学习、低成本的LLM智能体自我改进方案。
+  deep_dive: docs/auto/2605.13486.md
 assessment:
   relevance: high
   decision: summary_only

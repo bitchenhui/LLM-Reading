@@ -13,6 +13,7 @@ source:
 time:
   published: '2026-09-27'
   collected: '2026-11-14'
+  updated: '2026-11-18'
 entities:
 - ref: concept:LLM
   role: subject
@@ -60,6 +61,7 @@ summaries:
     的候选级确认结合，Anchor Synthesis Loop 负责生成并修订自定义行为规范。基准采用决策点续接式评估：在记录的决策点用行为专属评分规则评估 LLM 的下一回合输出，无需参考答案或环境重放。在编码与通用工具使用领域，系统基于
     252,557 个会话构建了 107 个基准共 4,125 个实例，满足 95.3% 的构建目标请求；抽样实例中 84% 经人工标注确认所请求行为，自动评分器与人工 pass/fail 判断的一致性接近标注者之间的一致性。九个前沿
     LLM 平均通过率仅 26.7%，显示其在被评估决策点上仍难以恰当回应。
+  deep_dive: docs/auto/2609.33295.md
 assessment:
   relevance: high
   decision: summary_only

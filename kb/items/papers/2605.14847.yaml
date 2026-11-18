@@ -13,6 +13,7 @@ source:
 time:
   published: '2026-05-14'
   collected: '2026-11-14'
+  updated: '2026-11-18'
 entities:
 - ref: concept:SuperResolution
   role: subject
@@ -45,6 +46,7 @@ summaries:
   abstract_zh: 论文提出'伪影显著度'（artifact prominence）作为超分辨率伪影的评估目标，定义为判定某高亮区域含可察觉伪影的观看者比例，并设计了众包标注协议。基于该协议构建SR-Prominence数据集套件，含3935个来自DeSRA、Open
     Images、Urban100及无真值的Urban100-HR设置的伪影掩码。重新标注DeSRA发现其48.2%的实验室二值伪影并未被多数观看者察觉。跨数据集审计显示，经典全参考指标（尤其SSIM与DISTS）提供了
     surprisingly 强的局部显著度信号，而无参考IQA方法与专用伪影检测器常难以跨数据集与参考设置泛化。数据集附带客观评分协议，可在无需再次众包的情况下对新指标进行基准测试。
+  deep_dive: docs/auto/2605.14847.md
 assessment:
   relevance: high
   decision: summary_only

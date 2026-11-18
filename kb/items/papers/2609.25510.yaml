@@ -13,6 +13,7 @@ source:
 time:
   published: '2026-09-22'
   collected: '2026-11-14'
+  updated: '2026-11-18'
 entities:
 - ref: concept:LLM
   role: subject
@@ -48,6 +49,7 @@ summaries:
   abstract_zh: 论文提出 Hill Sampling，一种爬山式测试时优化：从冻结的 LLM 反复采样候选程序，保留迄今最优程序，并让后续所有采样以其为条件。方法在圆盘填充、集合和差与 Erdős
     最小重叠三个可验证算法问题上用三个开源权重模型评估，在圆盘填充上刷新已发表方法的最优记录，在 Erdős 最小重叠问题上超越 AlphaEvolve 参考结果。与按参数量计规模最大之一的测试时进化策略（ES）权重学习对比发现：以生成最优程序评估时，ES
     学习权重反而劣于学习率为零的 ES（即随机权重扰动搜索），重复采样又优于两种 ES，Hill Sampling 最强。圆盘填充与 Erdős 结果仅需 8 块 NVIDIA H100 GPU 上数小时墙钟时间。
+  deep_dive: docs/auto/2609.25510.md
 assessment:
   relevance: high
   decision: summary_only

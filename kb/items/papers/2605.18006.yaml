@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-05-18'
   collected: '2026-11-14'
+  updated: '2026-11-18'
 entities:
 - ref: codec:G-PCC
   role: subject
@@ -30,6 +31,7 @@ claims:
 summaries:
   one_liner_zh: 在球面坐标系下提出学习型LiDAR点云帧间预测编码，利用帧间相关性去除几何冗余并对比G-PCC PredGeom。
   abstract_zh: 针对G-PCC PredGeom帧间模式仅依赖简单线性模型、而现有球面域学习方法未利用帧间相关性的两点局限，作者提出Inter-LPCM。方位角采用基于预设角分辨率的增量（delta）编码，半径引入同时利用当前帧与配准参考帧邻点的帧间半径预测模型（Inter-RP），仰角则用轻量注意力预测模型（LAEP）捕获跨坐标的长程几何相关性。量化环节提出球面坐标系下率失真优化的量化步长选择方法；熵编码为三个球面坐标分量分别设计适配各自统计先验的模型，以提升概率估计精度。源代码已在GitHub公开。
+  deep_dive: docs/auto/2605.18006.md
 assessment:
   relevance: high
   decision: summary_only

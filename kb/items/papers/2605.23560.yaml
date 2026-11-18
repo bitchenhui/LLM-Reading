@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-05-22'
   collected: '2026-11-15'
+  updated: '2026-11-18'
 entities:
 - ref: concept:ABR
   role: subject
@@ -42,6 +43,7 @@ summaries:
   one_liner_zh: 提出面向Starlink网络的QoE-严重风险折中ABR框架，显著降低会话级严重卡顿。
   abstract_zh: Starlink低轨卫星宽带使地面宽带不可用地区的高码率视频流成为可能，但其接入链路因卫星移动与切换导致吞吐快速波动，学习型ABR虽平均QoE高却暴露出平均QoE无法刻画的会话级严重重缓冲。论文提出SafeSABR，将Starlink
     ABR建模为QoE与严重风险的折中，采用三阶段设计：行为克隆预训练学习高QoE的ABR先验，风险校准的强化学习微调降低严重尾部动作倾向，运行时安全审计器用安全容量下界在执行前校验策略请求的码率。在真实Starlink轨迹上的实验显示，与在线、预测辅助及学习型ABR基线相比，严重卡顿会话占比从22.8%降至7.2%，最差5%会话重缓冲时长从54.30秒降至22.68秒，QoE仅付出1.8%的代价。组件分析表明风险校准微调与安全容量审计可减少不安全码率决策及下游严重会话重缓冲。
+  deep_dive: docs/auto/2605.23560.md
 assessment:
   relevance: high
   decision: summary_only

@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-05-09'
   collected: '2026-11-15'
+  updated: '2026-11-18'
 entities:
 - ref: concept:SelfImprovement
   role: subject
@@ -47,6 +48,7 @@ claims:
 summaries:
   one_liner_zh: 提出含20个ML任务与10个NP难问题的OPT-BENCH基准及OPT-Agent认知循环框架，评测19个LLM的迭代自优化能力。
   abstract_zh: 该工作针对LLM能否依据动态环境反馈持续改进解的内在自我改进能力提出评测基准OPT-BENCH，将20个机器学习任务与10个经典NP难问题组合成大规模搜索空间。同时提出OPT-Agent框架，通过感知—记忆—推理的类人认知循环，基于环境反馈迭代精化解决方案，强调依赖内在自我反思而非死记工具应用。作者在来自7个模型家族、参数量3B至235B的19个LLM（含推理模型、通用模型与开源模型）上开展实验。结果表明：越强的模型越能有效利用反馈信号实现自我改进，但这一适应上限受模型基础能力约束，即使最先进的LLM仍落后于人类专家水平。
+  deep_dive: docs/auto/2605.08904.md
 assessment:
   relevance: high
   decision: summary_only
