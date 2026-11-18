@@ -13,6 +13,7 @@ source:
 time:
   published: '2026-08-03'
   collected: '2026-11-15'
+  updated: '2026-11-18'
 entities:
 - ref: concept:IQA
   role: subject
@@ -34,6 +35,7 @@ claims:
 summaries:
   one_liner_zh: 提出基于CLIP的分辨率无关无参考IQA模型ReLIQS，联合学习'看哪里'与'如何评判'，跨数据集跨分辨率泛化更优。
   abstract_zh: 针对现有SOTA无参考IQA系统普遍存在的激进缩放丢失质量线索、跨分辨率泛化差、难以在MOS量表不一致的异构主观数据集上联合训练、计算开销大等问题，作者提出ReLIQS。该模型为基于CLIP视觉骨干的多尺度patch驱动架构：在包括原始分辨率在内的多个尺度上采样固定大小patch，由轻量的感知重要性估计器预测IQA专用重要性图以筛选信息量大的patch，再由潜在质量轴模块将patch嵌入聚合为整图质量分数。模型可在多个主观研究数据集上联合训练并保持计算高效、预算可调。在真实失真、合成失真及AIGC基准上，ReLIQS以相当或更低的计算成本取得优于CNN、CLIP及MLLM基线的泛化性能。
+  deep_dive: docs/auto/2608.01730.md
 assessment:
   relevance: high
   decision: summary_only

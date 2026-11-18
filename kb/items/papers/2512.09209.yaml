@@ -13,6 +13,7 @@ source:
 time:
   published: '2025-12-10'
   collected: '2026-11-14'
+  updated: '2026-11-18'
 entities:
 - ref: concept:LLM
   role: subject
@@ -36,6 +37,7 @@ claims:
 summaries:
   one_liner_zh: 提出用单一LLM对群智能优化算法与引导提示词协同进化的框架，在NP问题上超越EoH、FunSearch等自动设计方法。
   abstract_zh: 本文指出EoH、FunSearch、Reevo等自动算法设计框架只进化算法本身而忽视引导它们的提示词，并以群智能优化作为更普适、更有原则的自动设计基础，提出基于单个LLM的算法与提示词协同进化新框架，同时给出高效可解释的提示词模板评估方法。在多类NP问题上的评估显示，该框架优于多种最先进的自动设计方法；在GPT-4o-mini、Qwen3-32B、GPT-5等不同LLM上，生成的提示词进化轨迹显著分化，凸显结构化协同进化框架的必要性。方法跨模型保持领先性能，降低对最强LLM的依赖，实现更低成本部署；消融实验与分析进一步证明算法与提示词协同进化对达到最优性能不可或缺。
+  deep_dive: docs/auto/2512.09209.md
 assessment:
   relevance: high
   decision: summary_only

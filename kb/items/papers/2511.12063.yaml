@@ -12,6 +12,7 @@ source:
 time:
   published: '2025-11-15'
   collected: '2026-11-15'
+  updated: '2026-11-18'
 entities:
 - ref: concept:SelfImprovement
   role: subject
@@ -34,6 +35,7 @@ summaries:
   one_liner_zh: 将UCB-贝叶斯优化扩展到语言空间，提出纯语言空间、评估高效的LLM自我改进算法TextBO
   abstract_zh: 针对自我改进AI系统中'获取可靠反馈比生成候选更昂贵'的评估效率瓶颈，作者将具有评估效率最优性保证的UCB-贝叶斯优化扩展到离散提示空间。理论上证明：将LLM提出的简单文本局部编辑（文本梯度）与Best-of-N选择结合，可统计上模拟沿UCB采集函数梯度的上升。据此提出TextBO，一种纯语言空间运行、无需显式代理模型或校准不确定性模型的评估高效自我改进算法。在基于persona诱导偏好分布的自动化广告对齐任务上，TextBO每次评估的性能优于Best-of-N与GEPA等强基线；将TextBO的Best-of-N多步文本梯度机制叠加到GEPA后，在agentic
     AI基准上显著超越标准GEPA。
+  deep_dive: docs/auto/2511.12063.md
 assessment:
   relevance: high
   decision: summary_only

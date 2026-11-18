@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-07-30'
   collected: '2026-11-15'
+  updated: '2026-11-18'
 entities:
 - ref: concept:SelfImprovement
   role: subject
@@ -37,6 +38,7 @@ claims:
 summaries:
   one_liner_zh: MANTA框架使LLM多智能体通信拓扑在推理时自我演化，五基准平均74.0分领先基线5.8个百分点。
   abstract_zh: 针对现有LLM多智能体系统将通信拓扑视为固定设计或离线优化目标的问题，MANTA在推理前基于既往结构经验初始化任务条件化拓扑。部署过程中监测协作轨迹，当当前组织不足时施加有界结构更新，可修改智能体角色、通信链路、执行顺序、信息可见性与验证通路，同时保持任务接口与智能体预算不变。在信息检索、工具使用、规划、工作流执行与数学推理五个基准上，MANTA取得最高平均分74.0，超过最强基线5.8个百分点，并在PlanCraft上取得最佳成绩。结果表明推理时自我改进可扩展到协作架构本身。
+  deep_dive: docs/auto/2607.28527.md
 assessment:
   relevance: high
   decision: summary_only

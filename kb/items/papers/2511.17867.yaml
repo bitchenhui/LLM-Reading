@@ -13,6 +13,7 @@ source:
 time:
   published: '2025-11-22'
   collected: '2026-11-14'
+  updated: '2026-11-18'
 entities:
 - ref: codec:VVC
   role: subject
@@ -40,6 +41,7 @@ summaries:
     GBST 家族），提出联合估计行列图的图学习算法；并利用 DTT+ 的渐进结构将变换核分解为基准 DTT 与结构化 Cauchy 矩阵，经低复杂度整数 DTT 与 Cauchy 矩阵稀疏化构建整数近似
     INT-DTT+。相比可分离 KLT，INT-DTT+ 在性能损失极小的前提下显著降低计算与内存复杂度。在 VVC 显式多变换选择（MTS）框架下按率失真优化变换（RDOT）思路集成，相对 VVC
     MTS 基线取得超过 3% 的 BD-rate 节省，且基准 DTT 系数就绪后复杂度与整数 DCT-2 相当。
+  deep_dive: docs/auto/2511.17867.md
 assessment:
   relevance: high
   decision: deep_read

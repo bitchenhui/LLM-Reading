@@ -12,6 +12,7 @@ source:
 time:
   published: '2025-07-21'
   collected: '2026-11-14'
+  updated: '2026-11-18'
 entities:
 - ref: concept:LLM
   role: subject
@@ -30,6 +31,7 @@ claims:
 summaries:
   one_liner_zh: 提出P3自改进框架，迭代联合优化系统与用户提示，并以查询相关方式促进在线提示优化
   abstract_zh: LLM应用常采用包含系统提示与用户提示的多组件提示，而现有自动优化工作多只单独优化其中一方，因两组件相互依赖而易致次优结果。本文提出P3自改进框架，通过迭代过程同时优化系统提示与用户提示。离线优化得到的提示进一步用于在线提示阶段，实现查询相关的提示优化。在通用任务（Arena-hard、Alpaca-eval）与推理任务（GSM8K、GPQA）上的大量实验表明，P3在自动提示优化领域取得更优性能，验证了整体性优化策略的有效性。
+  deep_dive: docs/auto/2507.15675.md
 assessment:
   relevance: high
   decision: summary_only

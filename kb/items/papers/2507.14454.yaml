@@ -13,6 +13,7 @@ source:
 time:
   published: '2025-07-19'
   collected: '2026-11-14'
+  updated: '2026-11-18'
 entities:
 - ref: concept:3DGS
   role: subject
@@ -36,6 +37,7 @@ claims:
 summaries:
   one_liner_zh: 提出显著性感知3DGS分块、3DGS视频质量评估框架与元学习码率自适应的完整3DGS视频流传输方案。
   abstract_zh: 3DGS视频流传输仍处早期，面临分块、质量评估与码率自适应等基础挑战，论文提出一套完整解决方案。其提出由空间与时间显著性特征引导的自适应3DGS分块技术，每个瓦片编码为具备专用形变场与多质量级别的版本以供自适应选择。同时引入联合评估3DGS表示在流传输中空间域退化与渲染2D图像质量的3DGS视频质量评估框架。还提出专为3DGS视频定制的元学习码率自适应算法，可在不同网络条件下取得最优性能。大量实验表明所提方法显著优于现有SOTA。
+  deep_dive: docs/auto/2507.14454.md
 assessment:
   relevance: high
   decision: summary_only

@@ -12,6 +12,7 @@ source:
 time:
   published: '2025-12-20'
   collected: '2026-11-15'
+  updated: '2026-11-18'
 entities:
 - ref: concept:SelfImprovement
   role: subject
@@ -39,6 +40,7 @@ summaries:
   one_liner_zh: 提出System 3元层与持久智能体框架Sophia，以叙事记忆、混合奖励等机制为LLM智能体实现持续自我改进。
   abstract_zh: 论文提出在LLM智能体的感知（System 1）与深思（System 2）之上引入System 3元层，负责维护叙事身份、校验推理并使短期行动与长期适应对齐。框架将心理学构念映射为具体计算模块，核心机制包括过程监督思维搜索、叙事记忆、用户与自我建模及混合奖励系统。Sophia作为"持久智能体"封装，可将持续自我改进闭环嫁接到任意LLM中心的System
     1/2架构之上。工程原型显示，重复操作的推理步数减少80%，元认知持久化使高复杂度任务成功率提升40%；定性上System 3表现出连贯的叙事身份与自发任务组织能力。论文以概念框架为主，结合轻量强化学习内核，为人工生命提出可实践的技术路径。
+  deep_dive: docs/auto/2512.18202.md
 assessment:
   relevance: high
   decision: summary_only

@@ -13,6 +13,7 @@ source:
 time:
   published: '2026-07-24'
   collected: '2026-11-15'
+  updated: '2026-11-18'
 entities:
 - ref: concept:SelfImprovement
   role: subject
@@ -35,6 +36,7 @@ claims:
 summaries:
   one_liner_zh: 以Lean证明助手为根基构建Causalean库与自我改进代理流程，实现因果推断理论研究的自动化生成与机器验证。
   abstract_zh: 论文指出自动化理论研究的瓶颈在于可靠评估而非候选结果生成，单一LLM互相评审经验上不可靠、可能接受伪造论文且以接近随机率才发现伪造。为此提出CausalSmith框架，以Lean证明助手为核心，让证明由程序检查而非由裁判阅读；其基础是Causalean因果推断Lean库，含8,179个机器检查的定义与定理，在人类设计审查下借助LLM辅助开发。围绕该库构建自我改进代理流程，自动选择研究主题、提出结果、形式化陈述并构造证明，并配合陈述审计比对每条形式化定理与其背后的非形式化声明。系统以已完成自主研究运行的产物进行评估，源代码、形式化库与运行记录均已开源。
+  deep_dive: docs/auto/2607.22511.md
 assessment:
   relevance: high
   decision: summary_only
