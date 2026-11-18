@@ -1,0 +1,67 @@
+id: paper:arxiv:2611.23068
+type: paper
+title: 'The Resolution Hypothesis: Agent Evolution''s Key Is Identifying Improvements'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2611.23068v1
+  url: https://arxiv.org/abs/2611.23068
+  pdf_url: https://arxiv.org/pdf/2611.23068v1
+  venue: arXiv preprint
+time:
+  published: '2026-11-17'
+  collected: '2026-11-18'
+  updated: '2026-11-18'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: 分辨率假说：智能体进化停滞的根源是噪声评估无法可靠识别更优候选工件，而非无法提出更优工件。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在候选层面，选择机制在区分有益与有害候选工件时的表现不优于随机，错误跨轮累积导致进化失败。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在方法层面，同一进化方法两次独立运行之间的差异，大于论文间典型报告的几个百分点差距，因此已发表的方法排名常依赖运气。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 该假说在跨7种进化方法、6个模型的大规模实验中得到支持。
+  confidence: reported
+  metrics:
+  - name: LLM调用次数
+    value: 10M+
+    scope: 7种进化方法×6个模型全部实验累计
+  - name: 进化方法数
+    value: '7'
+    scope: 对照实验覆盖的方法
+  - name: 模型数
+    value: '6'
+    scope: 对照实验覆盖的模型
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 大规模实证表明：智能体进化的瓶颈是噪声评估无法可靠识别改进，而非无法提出改进。
+  abstract_zh: 论文提出分辨率假说：智能体进化循环（提议者生成提示、技能、记忆等候选工件，选择机制保留得分更高者）停滞的原因并非提不出更优工件，而是带噪声的评估无法可靠识别它们。作者跨7种进化方法与6个模型、累计超过1000万次LLM调用进行验证。在候选层面，有益的候选工件确实存在，但选择机制在区分有益与有害工件时并不优于随机，误差因此跨轮累积；在方法层面，论文间典型的几个百分点差距小于同一方法两次独立运行之间的差异，故已发表的方法排名往往靠运气。研究呼吁将自改进智能体的研发与评测重心从设计更多候选改进系统，转向让真实改进可被检测与累积。
+  deep_dive: docs/auto/2611.23068.md
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 智能体自改进的实证研究（分辨率假说），属自我改进AI域，按规则不进核心域深度阅读。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-18'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 分辨率假说：智能体进化的关键在于识别改进
+relations:
+- type: same_topic
+  ref: paper:arxiv:2610.09239
+  note: 同研究自改进循环中的选择噪声与接受规则问题，主题高度相关
+- type: same_topic
+  ref: paper:arxiv:2309.16797
+  note: 同属提示等工件进化驱动的LLM自改进研究脉络，本文以其类方法为研究对象
+- type: same_topic
+  ref: paper:arxiv:2210.11610
+  note: 同属LLM自改进基础主题

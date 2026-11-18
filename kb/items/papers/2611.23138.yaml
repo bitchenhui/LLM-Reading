@@ -1,0 +1,56 @@
+id: paper:arxiv:2611.23138
+type: paper
+title: 'RSI-Prime: Training Models to Train Models'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2611.23138v1
+  url: https://arxiv.org/abs/2611.23138
+  pdf_url: https://arxiv.org/pdf/2611.23138v1
+  venue: arXiv preprint
+time:
+  published: '2026-11-17'
+  collected: '2026-11-18'
+  updated: '2026-11-18'
+entities:
+- ref: concept:RSI
+  role: subject
+- ref: concept:SelfImprovement
+  role: subject
+claims:
+- statement: 在PostTrainBench上，用RSI-Prime训练后的GLM-5.3相比原始GLM-5.3整体性能相对提升31.95%。
+  confidence: reported
+  metrics:
+  - name: 整体性能相对提升
+    value: 31.95%
+    scope: PostTrainBench，RSI-Prime训练后GLM-5.3 vs 原始GLM-5.3
+  evidence: abstract（初筛，未读全文）
+- statement: RSI-Prime数据集包含覆盖7类任务的350条完整实验轨迹，通过决策级损失掩码屏蔽低质量行为的监督信号。
+  confidence: reported
+  metrics:
+  - name: 实验轨迹数
+    value: '350'
+    scope: RSI-Prime数据集，7类任务
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 构建含350条实验轨迹的RSI-Prime数据集提升LLM自主训练模型的能力，为递归自我改进奠基。
+  abstract_zh: 该工作研究LLM从'被训练'角色向'执行训练'角色扩展的问题，系统提升其模型训练能力。作者构建了模型训练能力改进数据集RSI-Prime，涵盖7类任务共350条完整实验轨迹。方法上对实验决策进行细粒度识别与质量标注，并采用决策级损失掩码排除对低质量行为的监督，帮助LLM从训练实践中学会做出高质量实验决策。在自主后训练基准PostTrainBench上，经RSI-Prime训练的GLM-5.3相比原始模型整体性能相对提升31.95%，展示了模型自主持续自我提升的RSI路径。
+  deep_dive: docs/auto/2611.23138.md
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 面向递归自我改进的核心工作（训练LLM执行模型训练），属自我改进域，按基准给 summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-18'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: RSI-Prime：训练模型来训练模型
+relations:
+- type: same_topic
+  ref: paper:arxiv:2611.03698
+  note: 同属'LLM智能体自动化执行LLM后训练'的RSI方向，均以自主训练模型能力为核心
+- type: same_topic
+  ref: paper:arxiv:2610.32026
+  note: 同为面向模型训练的递归自我改进智能体工作，主题一致

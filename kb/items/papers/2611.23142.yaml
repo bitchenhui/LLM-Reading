@@ -1,0 +1,67 @@
+id: paper:arxiv:2611.23142
+type: paper
+title: 'Mind the Gap: A Deployed Multi-Agent System for Documentation Maintenance'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2611.23142v1
+  url: https://arxiv.org/abs/2611.23142
+  pdf_url: https://arxiv.org/pdf/2611.23142v1
+  venue: arXiv preprint
+time:
+  published: '2026-11-17'
+  collected: '2026-11-18'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: 系统在43天影子模式运行中分流499张支持工单并识别出92处文档缺口
+  confidence: reported
+  metrics:
+  - name: 分流工单数
+    value: '499'
+    scope: 43天影子模式运行
+  - name: 发现文档缺口数
+    value: '92'
+    scope: 43天影子模式运行
+  evidence: abstract（初筛，未读全文）
+- statement: 独立模型家族的LLM评审团判定TriAgent可验证论断正确率达81.1%，盲评总体偏好其回答优于人类工程师
+  confidence: reported
+  metrics:
+  - name: 论断正确率
+    value: 81.1%
+    scope: 302条可验证论断中245条正确，三评审多数决
+  - name: 配对偏好率
+    value: 70.5%
+    scope: 长度可比配对中评审团偏好TriAgent回答，人类工程师为23.2%
+  evidence: abstract（初筛，未读全文）
+- statement: 修复文档缺口能可度量地改善代理后续回答，形成自改进闭环
+  confidence: reported
+  metrics:
+  - name: 修复后偏好率
+    value: 71.4%
+    scope: 盲评评审团对修复后重答同一工单的回答，n=35
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 部署多智能体系统TriAgent，从工单与代码-文档差异中持续发现并修复文档缺口，构成可度量的自改进闭环。
+  abstract_zh: 该论文部署了一套围绕分流智能体TriAgent构建的多智能体系统，持续从已解决的支持工单与代码-文档不一致中提取信号，识别并修复文档漂移。在43天影子模式运行中，系统分流499张工单并发现92处文档缺口。由独立模型家族的LLM评审团评估，TriAgent可验证论断正确率81.1%（245/302），在长度可比的对比中70.5%的评审偏好其回答，优于人类工程师的23.2%。修复文档缺口后，代理重答同一工单时，盲评在71.4%的情况下（n=35）偏好修复后的回答，人类盲审亦证实该自改进机制有效。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 非音视频核心域，属LLM智能体自改进的工业部署类工作，按收录基准仅给summary_only
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-18'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: Mind the Gap：一个已部署的文档维护多智能体系统
+relations:
+- type: same_topic
+  ref: paper:arxiv:2510.04618
+  note: 同为以演化上下文/知识载体驱动LLM自改进的智能体系统
+- type: same_topic
+  ref: paper:arxiv:2607.19592
+  note: 同属知识为中心的自改进：将外部知识缺口转化为改进信号

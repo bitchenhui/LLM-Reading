@@ -1,0 +1,38 @@
+id: paper:arxiv:2611.22620
+status: skipped
+score: 0
+track: audio_coding
+matched: []
+meta:
+  title: Personalized Causal Low-Bitrate Coded Speech Restoration with Speaker Embeddings
+  authors:
+  - Eray Özgünay
+  - Christian Rollwage
+  - Kishan Gupta
+  - Andreas Brendel
+  - Xavier Domont
+  - Mattes Ohlenbusch
+  - Jan Rennies
+  - Simon Doclo
+  published: '2026-11-17'
+  updated: '2026-11-17'
+  categories:
+  - eess.AS
+  - eess.SP
+  abstract: 'Legacy low-bitrate speech codecs such as AMR-NB remain widely used in telephony, where they
+    restrict speech bandwidth and degrade listening quality. Coded speech restoration (CSR) aims to restore
+    the speech bandwidth while improving the overall quality of coded speech, but typically without adapting
+    to different speakers. In this paper, we systematically investigate personalization for restoration
+    of speech coded at low bitrates, using a causal, low-complexity Universal Bandwidth Extension Generative
+    Adversarial Network (UBGAN) model as the basis. We propose two personalization methods based on speaker
+    embeddings, which incur little additional computational cost at inference: (i) conditioning a single
+    CSR model on speaker embeddings, and (ii) cluster-based model selection, where multiple personalized
+    models are trained on clusters of acoustically similar speakers. Experiments are performed on AMR-NB
+    coded speech at 4.75 kbps. Experimental results with disjoint seen- and unseen-speaker test sets show
+    that cluster-based model selection does not consistently outperform the non-personalized UBGAN baseline,
+    whereas embedding conditioning significantly improves ViSQOL and WB-PESQ scores for both seen and
+    unseen speakers.'
+  url: https://arxiv.org/abs/2611.22620
+  pdf_url: https://arxiv.org/pdf/2611.22620v1
+  version: v1
+fetched: '2026-11-18'

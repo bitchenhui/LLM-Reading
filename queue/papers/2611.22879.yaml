@@ -1,0 +1,47 @@
+id: paper:arxiv:2611.22879
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'SlideJev: Order-Stable and Tissue-Grounded Jev Decisions for Whole-Slide Pathology'
+  authors:
+  - Lei Wu
+  - Jiashuai Liu
+  - Di Zhang
+  - Chunze Yang
+  - Jiusong Ge
+  - Junbo Lu
+  - Yongqi Liang
+  - Wenjie Zhao
+  - Ni Zhang
+  - Chen Li
+  - Zeyu Gao
+  - Qidong Liu
+  published: '2026-11-17'
+  updated: '2026-11-17'
+  categories:
+  - cs.CV
+  abstract: 'Whole-slide visual question answering (VQA) offers a natural-language interface to pathology,
+    allowing diagnostic and phenotypic questions to be answered directly from tissue slides. However,
+    current vision-language models (VLMs) rely heavily on linguistic priors: their answers are sensitive
+    to the order of the candidate answers, and can be reached through shortcuts that bypass the tissue
+    evidence. To address these challenges, we introduce SlideJev, a framework that separately verifies
+    candidate answers against the slide and learns to ground these judgments in tissue evidence. To connect
+    parallel candidate evaluation with visual evidence learning, we adopt Jev and score each candidate
+    by the difference between support and rejection log-likelihoods from the original language-model head.
+    We compute these scores in parallel using separate prompts with the same format and no option-position
+    labels, then normalize them for answer selection. To ground these scores in tissue evidence, candidate-conditioned
+    reading and comparison guide gated updates to visual tokens across decoder layers. With the backbone
+    frozen, we train these visual modules through the same scores using question-answer and paired-image
+    supervision. Across three whole-slide pathology VQA benchmarks, SlideJev achieves the highest mean
+    overall accuracy and 100% answer consistency across four option orders. Image-control experiments
+    further show that SlideJev achieves the largest average accuracy gains from correct images over mismatched
+    and image-free inputs across the three datasets. Our code is publicly available at https://github.com/leowu-ai/SlideJev.'
+  url: https://arxiv.org/abs/2611.22879
+  pdf_url: https://arxiv.org/pdf/2611.22879v1
+  version: v1
+fetched: '2026-11-18'

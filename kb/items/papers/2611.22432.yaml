@@ -1,0 +1,57 @@
+id: paper:arxiv:2611.22432
+type: paper
+title: 'Think Once, Act Fast: Cost-Effective Recursive Self-Improvement for Decision Model Harness'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2611.22432v1
+  url: https://arxiv.org/abs/2611.22432
+  pdf_url: https://arxiv.org/pdf/2611.22432v1
+  venue: arXiv preprint
+time:
+  published: '2026-11-17'
+  collected: '2026-11-18'
+entities:
+- ref: concept:RSI
+  role: subject
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: JevRSI 在三个数据集上持续提升决策质量，在若干设置中达到或超越 LLM 智能体
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: JevRSI 保持低延迟执行，具备有利的性能-成本权衡
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 随 harness 演化，System-2 开发干预次数递减，持续改进可摊薄 System-2 的推理与计算成本
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出 JevRSI：System-1 模型低延迟执行、System-2 LLM 异步递归改进模块化 harness，兼顾性能与成本
+  abstract_zh: 论文提出 JevRSI，一个 System-1/System-2 协作框架，将 LLM 推理转化为可迁移的决策支持，并通过递归 harness 改进实现自我提升。Jev 风格的
+    System-1 模型负责低延迟动作选择，异步的 System-2 LLM 开发模块化 harness，集成过程、状态记忆与世界模型，为决策提供覆盖过去、现在与未来的上下文。效用驱动检索依据上下文相关性与历史任务效用选取模块，环境反馈引导针对性修订，从而实现递归自改进。在三个数据集上的实验显示，JevRSI
+    持续提升决策质量，在若干设置中达到或超越 LLM 智能体，同时保持低延迟执行与更优的性能-成本权衡。随着 harness 演化，System-2 开发干预逐渐减少，持续改进摊薄了 System-2
+    成本。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 属于 LLM 智能体递归自改进（RSI）方向，非音视频核心域，按收录基准给 summary_only。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-18'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 思考一次，快速行动：面向决策模型 Harness 的低成本递归自改进
+relations:
+- type: same_topic
+  ref: paper:arxiv:2609.24972
+  note: 同为智能体 Harness 的递归自改进（RSI）框架研究
+- type: same_topic
+  ref: paper:arxiv:2610.28945
+  note: 同为将世界模型集成进自改进智能体的 harness 设计
+- type: same_topic
+  ref: paper:arxiv:2608.08466
+  note: 同为任务特定可演化 agent harness 框架

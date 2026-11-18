@@ -1,0 +1,40 @@
+id: paper:arxiv:2611.23138
+status: reviewed
+score: 2
+track: self_improvement
+matched:
+- ref: concept:RSI
+  count: 3
+  weight: 1
+- ref: concept:SelfImprovement
+  count: 2
+  weight: 1
+meta:
+  title: 'RSI-Prime: Training Models to Train Models'
+  authors:
+  - Dewu Zheng
+  - Yang Ye
+  - Hongyu Zhang
+  - Jun Yu
+  - Yanlin Wang
+  published: '2026-11-17'
+  updated: '2026-11-17'
+  categories:
+  - cs.AI
+  - cs.LG
+  abstract: Enabling large language models (LLMs) to autonomously conduct training and improve target
+    models is an important foundation for recursive self-improvement (RSI). As LLMs expand their role
+    from being trained to conducting training, their model-training capability warrants dedicated study
+    and systematic development. To this end, we construct RSI-Prime, a dataset for improving model-training
+    capability, comprising 350 complete experimental trajectories across seven task categories. To help
+    LLMs learn to make high-quality experimental decisions from training practice, we perform fine-grained
+    decision identification and quality annotation, then apply decision-level loss masking to exclude
+    supervision on low-quality behavior. Experiments with GLM-5.3 on PostTrainBench, a benchmark for autonomous
+    post-training, show that training on RSI-Prime yields a 31.95% relative improvement in overall performance
+    over the original GLM-5.3, highlighting a path toward future RSI systems in which models autonomously
+    sustain their own advancement.
+  url: https://arxiv.org/abs/2611.23138
+  pdf_url: https://arxiv.org/pdf/2611.23138v1
+  version: v1
+fetched: '2026-11-18'
+llm_decision: summary_only
