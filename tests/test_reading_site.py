@@ -10,7 +10,7 @@ import yaml
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 import make_site
-from build_sota import rank_best
+from build_sota import rank_best, source_fields
 
 
 class ReadingSiteTests(unittest.TestCase):
@@ -28,6 +28,18 @@ class ReadingSiteTests(unittest.TestCase):
             data = make_site.build_data(items, date(2026, 1, 1))
         self.assertEqual(data["cutoff"], "2025-12-26")
         self.assertEqual((data["stats"]["week"], data["stats"]["collected"]), (2, 4))
+
+    def test_score_link_requires_one_matching_sourced_claim(self):
+        metric = {"name": "码率节省", "value": "11.76%", "scope": "Inter-4K"}
+        claim = {"id": "jqt", "evidence_url": "https://example.org/#table", "metrics": [metric]}
+        row = {"metric": "码率节省", "value": 11.76, "unit": "%"}
+        item = {"claims": [claim]}
+        self.assertEqual(source_fields(item, row), {"scope": "Inter-4K", "claim_id": "jqt"})
+        for change in [{"unit": "ms"}, {"metric": "解码时间降低"}, {"value": 6.38}]:
+            self.assertNotIn("claim_id", source_fields(item, row | change))
+        for claims in [[claim, claim | {"id": "other"}], [claim | {"evidence_url": ""}],
+                       [claim | {"id": ""}], [claim | {"metrics": [metric | {"value": 11.76}]}]]:
+            self.assertNotIn("claim_id", source_fields({"claims": claims}, row))
 
     def test_best_requires_known_direction_and_identical_complete_conditions(self):
         protocol = dict(dataset="CTC B", anchor="fixed QP", unit="%", setup="VVenC 1.7.0 RA faster",

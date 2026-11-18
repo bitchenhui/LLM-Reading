@@ -11,7 +11,7 @@ source:
 time:
   published: '2026-01-15'
   collected: '2026-11-12'
-  updated: '2026-11-12'
+  updated: '2026-11-18'
 entities:
 - ref: codec:VVC
   role: subject
@@ -20,33 +20,42 @@ entities:
 - ref: metric:VMAF
   role: measured_by
 claims:
-- statement: JQT-PF策略在保持相同XPSNR质量的前提下，相对广泛使用的固定码率梯子平均节省11.76%码率，同时解码时间平均降低0.29%。
+- id: 'cc3b4ae62203'
+  statement: Inter-4K 上，JQT-PF（α_J=2.5）相对固定码率梯子在同等 XPSNR 下平均节省 11.76% 码率，解码时间降低 0.29%。
   confidence: reported
   metrics:
   - name: 码率节省
     value: 11.76%
-    scope: JQT-PF对比固定梯子，同XPSNR，Inter-4K数据集
+    scope: Inter-4K，JQT-PF（α_J=2.5），相对 Fixedladder，同等 XPSNR，平均 BD-Rate 为 −11.76%
   - name: 解码时间降低
     value: 0.29%
-    scope: JQT-PF对比固定梯子，同XPSNR，Inter-4K数据集
-  evidence: abstract（初筛，未读全文）
-- statement: 更激进的配置最高可实现27.88%的码率节省，但代价是解码复杂度增加。
+    scope: 同配置相对 Fixedladder 的解码时间变化 ΔT_D 为 −0.29%
+  evidence: 原论文表 2 · JQT-PF（α_J=2.5）· BDR_X 列
+  evidence_url: https://arxiv.org/html/2601.10607v1#S5.T2.6.1.19.3
+- id: '032cdc0cf07f'
+  statement: Inter-4K 上，JQT-PF（α_J=0.5）相对固定码率梯子在同等 XPSNR 下平均节省 27.88% 码率，解码时间增加 52.16%。
   confidence: reported
   metrics:
   - name: 码率节省
     value: 27.88%
-    scope: JQT-PF激进配置，Inter-4K数据集
-  evidence: abstract（初筛，未读全文）
-- statement: JRQT-PF策略提供更可控的权衡，实现6.38%码率节省与6.17%解码时间降低。
+    scope: Inter-4K，JQT-PF（α_J=0.5），相对 Fixedladder，同等 XPSNR，平均 BD-Rate 为 −27.88%
+  - name: 解码时间增加
+    value: 52.16%
+    scope: 同配置相对 Fixedladder 的解码时间变化 ΔT_D 为 +52.16%
+  evidence: 原论文表 2 · JQT-PF（α_J=0.5）· BDR_X 列
+  evidence_url: https://arxiv.org/html/2601.10607v1#S5.T2.6.1.22.3
+- id: '5fb78e51d38e'
+  statement: Inter-4K 上，XPSNR 单调的 JRQT-PF（α_M=0.75）相对固定码率梯子在同等 XPSNR 下平均节省 6.38% 码率，解码时间降低 6.17%。
   confidence: reported
   metrics:
   - name: 码率节省
     value: 6.38%
-    scope: JRQT-PF，Inter-4K数据集
+    scope: Inter-4K，JRQT-PF（α_M=0.75，XPSNR 单调），相对 Fixedladder，同等 XPSNR，平均 BD-Rate 为 −6.38%
   - name: 解码时间降低
     value: 6.17%
-    scope: JRQT-PF，Inter-4K数据集
-  evidence: abstract（初筛，未读全文）
+    scope: 同配置相对 Fixedladder 的解码时间变化 ΔT_D 为 −6.17%
+  evidence: 原论文表 2 · JRQT-PF†（α_M=0.75）· BDR_X 列
+  evidence_url: https://arxiv.org/html/2601.10607v1#S5.T2.6.1.14.3
 - statement: 该帕累托前沿框架在码率-质量-复杂度权衡上优于固定梯子、基于VMAF和XPSNR的动态分辨率选择方法以及复杂度感知基准。
   confidence: reported
   evidence: abstract（初筛，未读全文）

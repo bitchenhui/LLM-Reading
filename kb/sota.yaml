@@ -381,7 +381,8 @@ groups:
     method: 面向高效自适应VVC流媒体的多目标帕累托前沿优化
     value: 11.76
     item: paper:arxiv:2601.10607
-    scope: JQT-PF对比固定梯子，同XPSNR，Inter-4K数据集
+    scope: Inter-4K，JQT-PF（α_J=2.5），相对 Fixedladder，同等 XPSNR，平均 BD-Rate 为 −11.76%
+    claim_id: cc3b4ae62203
     conditions:
       dataset: Inter-4K
       anchor: 固定码率梯子
@@ -391,7 +392,8 @@ groups:
     method: 面向高效自适应VVC流媒体的多目标帕累托前沿优化
     value: 27.88
     item: paper:arxiv:2601.10607
-    scope: JQT-PF激进配置，Inter-4K数据集
+    scope: Inter-4K，JQT-PF（α_J=0.5），相对 Fixedladder，同等 XPSNR，平均 BD-Rate 为 −27.88%
+    claim_id: 032cdc0cf07f
     conditions:
       dataset: Inter-4K
       anchor: 固定码率梯子
@@ -401,7 +403,8 @@ groups:
     method: 面向高效自适应VVC流媒体的多目标帕累托前沿优化
     value: 6.38
     item: paper:arxiv:2601.10607
-    scope: JRQT-PF，Inter-4K数据集
+    scope: Inter-4K，JRQT-PF（α_M=0.75，XPSNR 单调），相对 Fixedladder，同等 XPSNR，平均 BD-Rate 为 −6.38%
+    claim_id: 5fb78e51d38e
     conditions:
       dataset: Inter-4K
       anchor: 固定码率梯子

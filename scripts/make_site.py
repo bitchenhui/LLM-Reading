@@ -532,6 +532,7 @@ renderTL();
 const sl2 = document.getElementById("sotaList");
 let sotaHTML = "";
 const itemById = new Map(Object.values(DATA.items_by_domain).flat().map(it => [it.id, it]));
+const benchmark = new URLSearchParams(location.search).get("benchmark");
 for (const g of DATA.sota) {
   const rows = g.entries.map(e => {
     const best = g.best != null && e.conditions && e.value === g.best;
@@ -539,10 +540,13 @@ for (const g of DATA.sota) {
     const scope = [e.scope, c.dataset, c.anchor, c.setup, c.basis, c.statistic].filter(Boolean).join(" · ");
     const item = itemById.get(e.item);
     const method = item ? `<a href="${item.detail}">${esc(e.method)}</a>` : esc(e.method);
+    const value = esc(String(e.value) + (c.unit || ""));
+    const result = item && e.claim_id
+      ? `<a href="${item.detail}/${encodeURIComponent(e.claim_id)}">${value}</a>` : value;
     return `<tr><td>${e.date}</td><td>${method}<br><small>${esc(scope)}</small></td>
-      <td>${e.value}${esc(c.unit || "")}${best ? " ★ 最优" : ""}</td></tr>`;
+      <td>${result}${best ? " ★ 最优" : ""}</td></tr>`;
   }).join("");
-  sotaHTML += `<div class="syn"><div class="head" onclick="this.parentElement.classList.toggle('open')">
+  sotaHTML += `<div class="syn${benchmark === g.dataset ? " open" : ""}"><div class="head" onclick="this.parentElement.classList.toggle('open')">
     <h3>${esc(g.dataset)} × ${esc(g.anchor)}</h3>
     <span class="arrow">${esc(g.metric)} · ${g.n} 条 · ${g.best != null && g.entries.every(e => e.conditions) ? "同条件最优 " + g.best : "仅列结果"} · 展开/收起</span></div>
     <div class="body">
@@ -623,6 +627,14 @@ function showTab(t) {
   document.getElementById("view-kb").style.display = t === "kb" ? "" : "none";
   document.getElementById("tab-week").classList.toggle("on", t === "week");
   document.getElementById("tab-kb").classList.toggle("on", t === "kb");
+}
+
+if (benchmark && !query) {
+  const group = sl2.querySelector(".syn.open");
+  if (group) {
+    showTab("kb");
+    group.scrollIntoView();
+  }
 }
 
 async function ask() {

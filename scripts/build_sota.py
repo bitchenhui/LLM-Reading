@@ -155,19 +155,33 @@ def rank_best(entries: list[dict], metric: str) -> float | None:
     return min(values) if DIRECTIONS[metric] == "min" else max(values)
 
 
-def source_scope(item: dict, row: dict) -> str:
-    scopes = set()
+def source_fields(item: dict, row: dict) -> dict:
+    """Link only a unique metric with the same name, numeric value and unit."""
+    unit = str(row.get("unit") or "").strip()
+    matches = []
     for claim in item["claims"]:
-        for m in claim.get("metrics", []):
-            name = m.get("name") or m.get("ref", "").removeprefix("metric:")
-            value = str(m["value"]).strip().removesuffix(str(row.get("unit") or "")).strip()
+        for metric in claim.get("metrics", []):
+            name = metric.get("name") or metric.get("ref", "").removeprefix("metric:")
+            if name.casefold() != str(row.get("metric") or "").casefold():
+                continue
+            value = str(metric["value"]).strip()
+            declared_unit = str(metric.get("unit") or "").strip()
+            if declared_unit and declared_unit != unit:
+                continue
+            unit_matches = declared_unit == unit or (unit and value.endswith(unit))
             try:
-                matches = float(value) == row["value"]
+                same_value = float(value.removesuffix(unit).strip()) == row["value"]
             except ValueError:
                 continue
-            if matches and name.casefold() == str(row.get("metric") or "").casefold() and m.get("scope"):
-                scopes.add(m["scope"])
-    return scopes.pop() if len(scopes) == 1 else ""
+            if same_value:
+                matches.append((claim, metric.get("scope") or "", unit_matches))
+    scopes = {scope for _, scope, _ in matches if scope}
+    fields = {"scope": scopes.pop() if len(scopes) == 1 else ""}
+    if len(matches) == 1:
+        claim, _, unit_matches = matches[0]
+        if unit_matches and claim.get("id") and claim.get("evidence_url"):
+            fields["claim_id"] = claim["id"]
+    return fields
 
 
 def aggregate(cache: dict, items: dict) -> list:
@@ -187,7 +201,7 @@ def aggregate(cache: dict, items: dict) -> list:
                           for k in CONDITION_FIELDS if r.get(k)}
             groups[(ds, an, met)].append({
                 "date": item["time"]["published"], "method": item.get("title_zh") or item["title"],
-                "value": r["value"], "item": iid, "scope": source_scope(item, r), "conditions": conditions,
+                "value": r["value"], "item": iid, **source_fields(item, r), "conditions": conditions,
             })
 
     out_groups = []
