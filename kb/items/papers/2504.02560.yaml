@@ -12,6 +12,7 @@ source:
 time:
   published: '2025-04-03'
   collected: '2026-11-14'
+  updated: '2026-11-18'
 entities:
 - ref: codec:VVC
   role: subject
@@ -27,6 +28,7 @@ claims:
 summaries:
   one_liner_zh: 提出自适应长期运动估计与预测的LBVC框架L-LBVC，随机访问配置下部分测试集超越VVC(VTM)。
   abstract_zh: 针对学习型双向视频压缩(LBVC)因远距离帧长期运动估计与预测不准而落后于传统双向编码的问题，提出L-LBVC框架。其自适应运动估计模块对相邻帧及小运动非相邻帧直接估计光流，对大运动非相邻帧递归累积相邻帧局部光流以获得长期光流；自适应运动预测模块则大幅降低运动编码比特开销，并在测试时自适应下采样参考帧以匹配训练时的运动范围。实验显示L-LBVC显著优于既有SOTA学习型视频压缩方法，甚至在随机访问配置下部分测试数据集上超越VVC(VTM)。
+  deep_dive: docs/auto/2504.02560.md
 assessment:
   relevance: high
   decision: deep_read

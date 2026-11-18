@@ -13,6 +13,7 @@ source:
 time:
   published: '2025-08-30'
   collected: '2026-11-14'
+  updated: '2026-11-18'
 entities:
 - ref: concept:ABR
   role: subject
@@ -35,6 +36,7 @@ claims:
 summaries:
   one_liner_zh: 提出BC预训练+RL微调的ABR训练框架与宽分布基准，提升对未见网络条件的泛化稳定性。
   abstract_zh: 针对现有学习型ABR方法依赖有限网络轨迹训练、在分布外（OOD）真实网络下泛化差的问题，提出SABR训练框架，采用行为克隆（BC）预训练结合强化学习（RL）微调。同时构建ABRBench-3G与ABRBench-4G+基准，提供宽覆盖训练轨迹和专用OOD测试集用于评估鲁棒性。实验表明，在所提基准上SABR相对Pensieve、Comyco、NetLLM取得最佳平均排名，说明该框架能在宽分布网络条件下更稳定地学习，并提升对未见网络条件的泛化能力。
+  deep_dive: docs/auto/2509.10486.md
 assessment:
   relevance: high
   decision: summary_only

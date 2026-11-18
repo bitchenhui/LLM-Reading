@@ -13,6 +13,7 @@ source:
 time:
   published: '2025-10-08'
   collected: '2026-11-14'
+  updated: '2026-11-18'
 entities:
 - ref: impl:DCVC-FM
   role: subject
@@ -35,6 +36,7 @@ claims:
 summaries:
   one_liner_zh: 提出模型无关的内容自适应推理框架，通过自适应下采样控制运动向量尺度，使DCVC-FM在单视频上BD-rate最高提升41%。
   abstract_zh: 近期学习型视频编码器在常见基准上平均性能已超越传统编码器，但对含复杂/大运动视频的提升远小于简单运动场景，原因是编码器模型无法泛化到训练集中未见的运动向量范围，导致光流编码与帧预测性能下降。作者提出一个通用（模型无关）的推理期框架，通过自适应下采样帧来缩放场景中的运动向量，使其范围近似匹配训练分布，从而同时改善光流估计与光流压缩效率。该框架无需任何模型微调，即可使最先进低延迟编码器DCVC-FM在个别视频上BD-rate提升最高41%。消融研究进一步表明，运动量与场景复杂度度量可用于预测该框架的适用效果。
+  deep_dive: docs/auto/2510.07283.md
 assessment:
   relevance: high
   decision: deep_read

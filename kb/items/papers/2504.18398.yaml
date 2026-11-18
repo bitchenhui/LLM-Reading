@@ -13,6 +13,7 @@ source:
 time:
   published: '2025-04-25'
   collected: '2026-11-14'
+  updated: '2026-11-18'
 entities:
 - ref: codec:VVC
   role: subject
@@ -38,6 +39,7 @@ claims:
 summaries:
   one_liner_zh: 提出基于划分图的神经网络方法加速VVC帧间编码划分决策，随机访问配置下节省51.30%编码时间，BDBR仅增2.12%。
   abstract_zh: VVC的QT+MTT嵌套块结构带来显著编码增益，但其递归划分搜索大幅增加编码器复杂度。该工作在作者此前帧内编码划分图方法基础上，针对帧间编码特性引入MTT掩码以实现提前终止，并开发融合空间与时域特征的神经网络预测划分图，网络包含堆叠的自顶向下与自底向上处理、量化参数（QP）调制层以及划分自适应对齐等专门设计。此外提出双阈值决策方案，实现复杂度缩减与率失真（RD）性能损失之间的细粒度权衡。实验表明，在随机访问配置下方法平均节省51.30%编码时间，BDBR仅2.12%。
+  deep_dive: docs/auto/2504.18398.md
 assessment:
   relevance: high
   decision: deep_read

@@ -12,6 +12,7 @@ source:
 time:
   published: '2025-09-23'
   collected: '2026-11-14'
+  updated: '2026-11-18'
 entities:
 - ref: concept:LLM
   role: subject
@@ -35,6 +36,7 @@ summaries:
   one_liner_zh: 提出即插即用的言语强化记忆层 MemOrb，以策略反思记忆提升冻结 LLM 客服智能体的成功率与稳定性
   abstract_zh: 针对电商客服场景中 LLM 智能体跨会话遗忘、重复出错、缺乏持续自我改进机制的问题，论文提出 MemOrb——一个轻量级、即插即用的言语强化记忆层。该方法将多轮交互蒸馏为紧凑的策略反思，存入共享记忆库，在决策时检索以指导智能体行为，全程无需微调。实验同时考察任务成功率与
     Pass^k 一致性两类指标，结果显示 MemOrb 将多轮任务成功率最高提升 63 个百分点，并在多次重复试验中表现更稳定。结论是结构化反思是增强冻结 LLM 智能体长期可靠性的有力机制。
+  deep_dive: docs/auto/2509.18713.md
 assessment:
   relevance: high
   decision: summary_only

@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-09-23'
   collected: '2026-11-15'
+  updated: '2026-11-18'
 entities:
 - ref: concept:SelfImprovement
   role: subject
@@ -38,6 +39,7 @@ claims:
 summaries:
   one_liner_zh: EvoAudio：首个在闭环中同时演化模型、波形、问题与难度的音频理解递归自我改进系统。
   abstract_zh: 音频语言模型对“说了什么”的理解远强于“声音如何呈现”，而精细声学标注成本高、借强模型标注会继承其错误、固定数据无法随学习者进步而调整。EvoAudio提出首个在单一闭环中同时演化模型、波形、问题与难度的递归自我改进系统：用当前模型表现设定下一轮训练数据的重点与难度，由音频工具库构造答案可从音频生成方式推导的问题，从而提供无需新人工标注的可验证监督。随后用强化学习更新模型，并通过验证决定其是否进入下一轮演化。在13轮演化中，EvoAudio改进了五种采用不同音频编码器与语言骨干的模型，在MMSU、MMAU-Pro与MMAR上每个骨干均取得最高平均分，整体性能最多提升6.3分，每轮更强的模型会启动下一轮演化。
+  deep_dive: docs/auto/2609.27389.md
 assessment:
   relevance: high
   decision: summary_only
