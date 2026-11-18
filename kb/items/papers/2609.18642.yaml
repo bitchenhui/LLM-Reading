@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-09-16'
   collected: '2026-11-15'
+  updated: '2026-11-18'
 entities:
 - ref: concept:LLM
   role: subject
@@ -34,6 +35,7 @@ summaries:
   one_liner_zh: 提出STRETCH框架，用动态难度对齐的拉伸区与Scaffolder-Learner双环共进化实现LLM渐进式推理自改进。
   abstract_zh: 针对自改进训练中因难度固定导致的能力停滞问题，提出受认知脚手架理论启发的统一框架STRETCH。框架引入动态Stretch Zone机制，持续将问题难度与模型当前解题能力对齐。在单一参数空间内，模型交替扮演生成自适应边界挑战的Scaffolder与通过强化学习优化求解轨迹的Learner，形成双环共进化，从而稳定训练、缓解reward
     hacking并促进推理能力渐进增长。在谈判与运筹学两个基准上，STRETCH一致优于强提示与领域专用基线；对Scaffolder配置的分析表明，动态难度对齐是持续能力提升与推理同步进化的关键。
+  deep_dive: docs/auto/2609.18642.md
 assessment:
   relevance: high
   decision: summary_only

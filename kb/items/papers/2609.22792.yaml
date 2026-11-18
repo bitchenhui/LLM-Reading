@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-09-19'
   collected: '2026-11-15'
+  updated: '2026-11-18'
 entities:
 - ref: concept:SelfImprovement
   role: subject
@@ -44,6 +45,7 @@ claims:
 summaries:
   one_liner_zh: SelfOp用链式法则式文本梯度下降自动优化冻结安全智能体的任务上下文，在CyberGym上实现最高18.5点自我改进。
   abstract_zh: 论文提出SelfOp，一种自动改进冻结安全智能体任务上下文（指令、技能、参考文档）的算法，不修改执行框架与模型权重。该方法将上下文优化建模为受链式法则启发的文本梯度下降：从单实例结果出发，误差信号经评估器、智能体轨迹反向传播到塑造其行为的上下文产物，得到逐实例文本梯度。梯度经聚类、排序、过滤跨实例累积，仅在跨实例共识下提交，并由收敛检测器监测梯度信号本身、无需留出验证集即停止。在真实漏洞复现基准CyberGym上，少于200个训练样本使GPT-5.4-mini（配Codex）自我改进17点并超越前沿GPT-5.4基线6点，GPT-5.4本身提升18.5点；优化后的技能可跨模型迁移，表明学到的是可泛化任务知识。
+  deep_dive: docs/auto/2609.22792.md
 assessment:
   relevance: high
   decision: summary_only

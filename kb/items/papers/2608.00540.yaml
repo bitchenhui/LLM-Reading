@@ -13,6 +13,7 @@ source:
 time:
   published: '2026-08-01'
   collected: '2026-11-15'
+  updated: '2026-11-18'
 entities:
 - ref: concept:SelfImprovement
   role: subject
@@ -37,6 +38,7 @@ claims:
 summaries:
   one_liner_zh: 用KL最小能量模型+验证器奖励驱动自进化视觉推理智能体，同时提升准确率与推理忠实度。
   abstract_zh: 论文提出DiffuseAgent-MI，一个工具集成的自进化视觉语言智能体，其感知锚定由特征单元上的KL最小能量模型控制，为视觉机制可解释性提供分布视角。能量地形对生成样本施加软约束，使其贴近所选可解释单元条件下的原生先验，缩小解释与内部表征之间的差距；验证器提供轨迹级忠实度奖励，当检测到不忠实步骤时由修复分支对能量模型重新条件化。在GeoQA、SciVis、VQA-v2及内部多模态推理集上，准确率较既有自进化智能体最高提升5.1点，互信息忠实度与人类可解释性一致度提升超过一倍。分析表明能量项保证分布级忠实、验证器保证轨迹级忠实，二者互补，只有结合才能同时弥合两类差距。
+  deep_dive: docs/auto/2608.00540.md
 assessment:
   relevance: high
   decision: summary_only

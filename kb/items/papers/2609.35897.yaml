@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-09-27'
   collected: '2026-11-15'
+  updated: '2026-11-18'
 entities:
 - ref: concept:RSI
   role: subject
@@ -43,6 +44,7 @@ claims:
 summaries:
   one_liner_zh: 首次对自发现RL规则Disco103进行因果机制审计，检验学习历史何时为资产、何时为负担
   abstract_zh: 该文围绕'体验时代'五大支柱（长时域、接地奖励、持续学习流、生命周期内变化、探索深度），对算法自发现产出的RL更新规则Disco103（基准性能超PPO达SOTA）进行首次因果机制审计。方法上在固定元参数的同时，对循环状态执行精确固定、冻结与移植操作，检验学习历史的作用。结果显示：循环历史将可用奖励尺度窗口从零固定下的3个数量级扩展至6个数量级；历史内容与维护机制解耦后，不匹配历史的惩罚源于持续钳制，允许导入状态自然演化可减轻负担。在环境变化下，控制重放保留率可逆转相对DQN的表观适应优势，说明外部数据更替会混淆对内部可塑性的判断；结论经能力阈值验证并移植到第二条规则（OPEN），为自进化RL算法建立审计标准。
+  deep_dive: docs/auto/2609.35897.md
 assessment:
   relevance: high
   decision: summary_only

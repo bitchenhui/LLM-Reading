@@ -13,6 +13,7 @@ source:
 time:
   published: '2026-09-07'
   collected: '2026-11-14'
+  updated: '2026-11-18'
 entities:
 - ref: concept:IQA
   role: subject
@@ -36,6 +37,7 @@ claims:
 summaries:
   one_liner_zh: 提出SCODA，用场景流形分布建模替代显式参考对比，实现3DGS/NeRF渲染视图的轻量客观质量评估。
   abstract_zh: 3DGS等辐射场表示可支持高质量新视角合成，但其重建、渲染与压缩会引入复杂的视角相关伪影，而现有全参考指标依赖对齐参考图像，跨参考指标在宽基线与任意轨迹下难以选取可靠参考。为此作者提出SCODA，一种轻量级场景条件客观QA方法，将质量评估从图像对图像比较转向场景流形建模：以深度特征空间中的多元高斯分布表征场景的高质量观测，得到衡量偏离程度的语义保真度分数。同时引入弱监督失真感知patch判别器提供互补的真实感信号，二者经无监督有界融合策略组合。多基准实验显示SCODA与人类主观判断高度一致，并在GS与NeRF生成视图及轨迹上具有稳健泛化性，代码已开源。
+  deep_dive: docs/auto/2609.07346.md
 assessment:
   relevance: high
   decision: summary_only

@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-08-10'
   collected: '2026-11-15'
+  updated: '2026-11-18'
 entities:
 - ref: concept:IQA
   role: subject
@@ -37,6 +38,7 @@ claims:
 summaries:
   one_liner_zh: 提出VIGIL模型，将LMM解码器多层特征作为多检测器实现UGC图像失真精准定位，并缓解合成到真实(S2A)泛化鸿沟。
   abstract_zh: 论文针对现有基于LMM的IQA方法依赖文本驱动SFT导致检测精度不足、以及合成失真图像在真实场景部署存在泛化差距（S2A问题）的局限，提出失真检测框架VIGIL。作者从超100万候选样本池经严格质量筛选与精心失真注入，构建了包含超过14万张失真图像的VIGIL-140K训练集，覆盖8大类合成失真。模型将LLM解码器不同层视为多个检测器，利用多层级特征同步执行失真检测，并保留被预测为非失真类中的失真线索，以缓解S2A问题中常见的模糊前景-背景分离。经后处理后，模型在域内合成失真检测与S2A任务上均稳定超越强基线。
+  deep_dive: docs/auto/2608.09122.md
 assessment:
   relevance: high
   decision: summary_only

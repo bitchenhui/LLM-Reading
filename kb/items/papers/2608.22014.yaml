@@ -13,6 +13,7 @@ source:
 time:
   published: '2026-08-22'
   collected: '2026-11-15'
+  updated: '2026-11-18'
 entities:
 - ref: concept:SelfImprovement
   role: subject
@@ -61,6 +62,7 @@ claims:
 summaries:
   one_liner_zh: 将离线优化的提取核心与推理时动态上下文组装及验证门控自改进结合，提升异构参数提取精度。
   abstract_zh: 论文提出DynaContext框架，将经GEPA或SkillOpt离线优化的提取核心，与推理时的上下文自适应及验证门控自改进相结合。框架按条目路由到内部、外部或回退证据路径，并由核心、模式、证据、未解决字段与已验证演示动态组装条目专属提示。确定性验证与LLM评审对每个输出进行门控，不确定案例转人工审核，仅人工核实的修正进入演示记忆。在单类别基准上平均准确率从基础提示的86.6%升至独立SkillOpt的96.9%和最佳DynaContext配置的98.6%；在850个异构金标参数事实上，字段级F1从对照的51.8%经动态演示（59.2%）、优化核心（66.9%）提升到两者结合的71.0%，完整配置比部署的静态提示流程平均高17.3个F1点。
+  deep_dive: docs/auto/2608.22014.md
 assessment:
   relevance: high
   decision: summary_only

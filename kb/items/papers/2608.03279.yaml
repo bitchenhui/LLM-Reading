@@ -13,6 +13,7 @@ source:
 time:
   published: '2026-08-04'
   collected: '2026-11-15'
+  updated: '2026-11-18'
 entities:
 - ref: concept:3DGS
   role: subject
@@ -50,6 +51,7 @@ claims:
 summaries:
   one_liner_zh: 构建大规模压缩3DGS图像质量数据集3DGS-IEval-15K+，并提出基于LMM的一次前向预测总体/几何/颜色三维质量的评估框架。
   abstract_zh: 针对3DGS训练与压缩引入的悬浮伪影、表面散射等表征特有失真，传统IQA指标无法有效捕捉，且几何与颜色属性独立压缩产生的解耦失真需要分别诊断，现有指标仅给出单一总分。作者构建了3DGS-IEval-15K+数据集：来自10个场景、6种代表性3DGS算法在系统设计的压缩级别下渲染，覆盖20个训练视角与挑战性新视角，共15,200张图像并标注45,600个总体/几何/颜色三维度MOS。提出3DGSI-Assessor框架，在大多模态模型（LMM）中融合全局语义与维度特定局部特征，单次前向即可预测三个质量维度。该方法在自建数据集上取得SOTA，并在其他NVS基准上表现出有竞争力的泛化能力。
+  deep_dive: docs/auto/2608.03279.md
 assessment:
   relevance: high
   decision: summary_only

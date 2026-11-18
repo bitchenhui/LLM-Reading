@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-09-27'
   collected: '2026-11-15'
+  updated: '2026-11-18'
 entities:
 - ref: concept:LLM
   role: subject
@@ -33,6 +34,7 @@ claims:
 summaries:
   one_liner_zh: 提出SeOPD，将自身深度思考生成的思维链作为特权信息对非思考模式做在线策略蒸馏，无需外部标注即可自我改进。
   abstract_zh: 现有在线策略自蒸馏（OPSD）依赖人工标注或外部环境反馈等特权信息（PI），获取成本高、可扩展性受限。作者观察到单个LLM可支持深度思考与非思考等多种推理模式，且深度思考在推理过程中会产生额外信息。据此提出SeOPD：先以深度思考模式生成思维链（CoT），再以非思考模式生成回答，并将自生成的CoT作为PI对非思考回答施加token级监督，使推理中新推断的信息被内化到共享模型参数中。在多个LLM与任务上的广泛实验表明该方法能同时提升非思考与深度思考能力。
+  deep_dive: docs/auto/2609.33181.md
 assessment:
   relevance: high
   decision: summary_only
