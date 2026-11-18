@@ -12,6 +12,7 @@ source:
 time:
   published: '2025-11-11'
   collected: '2026-11-14'
+  updated: '2026-11-18'
 entities:
 - ref: concept:LLM
   role: subject
@@ -38,6 +39,7 @@ summaries:
   one_liner_zh: 提出LLM同时担任Actor与Judge的SERL自审查强化学习框架，无需外部奖励即可在开放域任务上自我改进。
   abstract_zh: 针对开放域任务因主观性无法使用可验证奖励（RLVR）、且RLHF依赖外部奖励机制这两个问题，提出自我改进框架SERL，让LLM同时充当Actor与Judge。为提升Actor能力，从一组生成回答的Copeland式两两比较评判中导出奖励；同时提出自一致性奖励以提升Judge评判的可靠性，Judge改进后又反过来为Actor提供更稳健的奖励。整个流程不使用任何外部信号。实验表明SERL优于现有自我改进训练方法：将Qwen3-8B在AlpacaEval
     2上的LC胜率从52.37%提升至59.90%，在自我改进方法中达到最优，且性能可与显著更大的Qwen3-32B相当。
+  deep_dive: docs/auto/2511.07922.md
 assessment:
   relevance: high
   decision: summary_only

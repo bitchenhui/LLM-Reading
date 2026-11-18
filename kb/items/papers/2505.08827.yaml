@@ -12,6 +12,7 @@ source:
 time:
   published: '2025-05-12'
   collected: '2026-11-14'
+  updated: '2026-11-18'
 entities:
 - ref: concept:LLM
   role: subject
@@ -35,6 +36,7 @@ summaries:
   abstract_zh: 该工作提出让 LLM 在没有标准答案的情况下通过自我评判生成可靠奖励信号，从而在可验证奖励不可行的领域实施强化学习。在 Countdown 谜题和积分问题上，自评奖励训练达到与形式化验证相当的效果；经自我奖励训练的
     Qwen 2.5 7B DeepSeek Distilled 模型达到 MIT Integration Bee 竞赛参赛资格。结合合成题目生成，作者构建了出题、解题、自评的完整自改进闭环，全程无需外部验证。结果表明
     LLM 裁判可有效充当奖励信号，是迈向自主持续自改进 AI 系统的重要一步。
+  deep_dive: docs/auto/2505.08827.md
 assessment:
   relevance: high
   decision: summary_only

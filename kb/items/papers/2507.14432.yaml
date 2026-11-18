@@ -12,6 +12,7 @@ source:
 time:
   published: '2025-07-19'
   collected: '2026-11-14'
+  updated: '2026-11-18'
 entities:
 - ref: concept:3DGS
   role: subject
@@ -31,6 +32,7 @@ summaries:
   one_liner_zh: 提出基于高斯形变场构建与混合显著性分块的3DGS体视频流式传输框架，兼顾压缩效率与带宽适应。
   abstract_zh: 3DGS显著提升了体视频的表示质量，但其数据量远大于传统体视频，压缩与传输复杂度也更高，给流式传输带来挑战。为此作者提出一套3DGS体视频流式传输框架，设计了基于高斯形变场的3DGS视频构建方法。通过混合显著性分块（hybrid
     saliency tiling）与差异化质量建模，在保证高传输质量的同时实现高效数据压缩并适应带宽波动。作者搭建了完整的3DGS视频流式系统并验证传输性能，实验表明该方法在视频质量、压缩效果与传输速率等多方面优于现有方案。
+  deep_dive: docs/auto/2507.14432.md
 assessment:
   relevance: high
   decision: summary_only

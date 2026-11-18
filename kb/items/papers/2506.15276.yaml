@@ -13,6 +13,7 @@ source:
 time:
   published: '2025-06-18'
   collected: '2026-11-14'
+  updated: '2026-11-18'
 entities:
 - ref: concept:INR
   role: subject
@@ -45,6 +46,7 @@ summaries:
   abstract_zh: 针对现有 INR 视频压缩方法难以表达细节密集与快速变化内容的问题，提出多尺度特征融合框架 MSNeRV。编码阶段利用时间窗增强时序一致性，将视频划分为多个 GoP 并以 GoP
     级网格进行背景表示；设计带尺度自适应损失的多尺度空间解码器以融合多分辨率、多频率信息，并引入多尺度特征块充分利用网络隐藏特征。在 HEVC ClassB 和 UVG 数据集上的实验表明，其表示能力在
     INR 类方法中最优，且在动态场景下的压缩效率超越 VTM-23.7（Random Access）。
+  deep_dive: docs/auto/2506.15276.md
 assessment:
   relevance: high
   decision: deep_read

@@ -12,6 +12,7 @@ source:
 time:
   published: '2025-11-01'
   collected: '2026-11-14'
+  updated: '2026-11-18'
 entities:
 - ref: concept:LLM
   role: subject
@@ -45,6 +46,7 @@ claims:
 summaries:
   one_liner_zh: 单一LLM交替担任教师与学生角色进行自博弈，无外部验证器与标注数据即可持续生成并解决新问题以提升推理能力。
   abstract_zh: 针对依赖标注数据可验证奖励的强化学习推理训练限制模型超越人类水平的问题，提出OpenSIR自博弈框架：单个LLM在教师与学生角色间交替，自主生成并求解新颖问题，无需外部验证器或标注数据。通过多样性奖励推动模型探索陌生概念，结合难度校准保证问题可学习，从单个种子问题出发维持开放式探索。在七个数学基准上，OpenSIR使指令模型平均提升+3.6分、推理模型平均提升+3.1分，而近期自博弈基线增益微弱甚至为负；从单个平凡种子出发，其性能超过用7000多个标注样本训练的GRPO基线。尽管仅在自生成数学数据上训练，OpenSIR是唯一能迁移到通用推理的自博弈方法，在推理模型上至少提升+4.4分。
+  deep_dive: docs/auto/2511.00602.md
 assessment:
   relevance: high
   decision: summary_only

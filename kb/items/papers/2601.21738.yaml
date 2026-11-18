@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-01-29'
   collected: '2026-11-15'
+  updated: '2026-11-18'
 entities:
 - ref: concept:IQA
   role: subject
@@ -33,6 +34,7 @@ claims:
 summaries:
   one_liner_zh: 提出粒度调制相关GMC，以MOS与|ΔMOS|联合函数构成相关曲面，细粒度刻画IQA模型局部性能并校正分布偏置。
   abstract_zh: 论文指出PLCC、SRCC等全局相关指标将IQA模型性能压缩为单一标量，无法反映排序一致性在局部质量谱段上的变化，且对测试样本质量分布敏感，导致跨测试集比较不稳定。为此提出粒度调制相关GMC：粒度调制器以绝对MOS值与成对MOS差|ΔMOS|为条件施加高斯加权相关，分布调节器则正则化相关值以缓解非均匀质量分布带来的偏置。由此将相关值表示为MOS与|ΔMOS|的联合函数，形成IQA性能的三维相关曲面。标准基准实验显示，GMC能揭示标量指标不可见的性能特征，为IQA模型的分析、比较与部署提供更有信息量且更可靠的范式。
+  deep_dive: docs/auto/2601.21738.md
 assessment:
   relevance: high
   decision: summary_only

@@ -12,6 +12,7 @@ source:
 time:
   published: '2025-10-08'
   collected: '2026-11-14'
+  updated: '2026-11-18'
 entities:
 - ref: concept:SelfImprovement
   role: subject
@@ -32,6 +33,7 @@ summaries:
   abstract_zh: 论文提出 Self-Alignment Optimization（SAO），一个完全自合成的 LLM 对齐框架：训练数据中的提示（用户查询）、回复和偏好标注均由模型自身生成。具体流程为先让
     LLM 通过人格角色扮演生成多样化提示与回复，再由模型自我评估构造偏好对用于偏好优化。与传统 RLHF 依赖昂贵人工标注、RLAIF 依赖外部奖励模型或 GPT-4 等专有模型标注不同，SAO 无需任何外部数据与标注器。实验表明
     SAO 在 AlpacaEval 2.0 等标准基准上有效提升模型的对话能力，同时在问答、数学推理等下游任务上保持强劲性能，为 LLM 自我改进对齐提供了实用方案。
+  deep_dive: docs/auto/2510.06652.md
 assessment:
   relevance: high
   decision: summary_only
