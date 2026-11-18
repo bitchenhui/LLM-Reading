@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-07-05'
   collected: '2026-11-15'
+  updated: '2026-11-18'
 entities:
 - ref: concept:RSI
   role: subject
@@ -36,6 +37,7 @@ claims:
 summaries:
   one_liner_zh: 类比冯·诺依曼自复制自动机并援引Kleene第二递归定理，论证可持续LLM递归自我改进需跨过内省复杂度阈值，当前LLM仅具准内省。
   abstract_zh: 论文将冯·诺依曼自复制自动机的复杂度阈值类比引入LLM递归自我改进（RSI），主张可持续而非退化的自我改进需要一个功能类似物——内省，即系统模拟自身运行并定位修改目标的能力。作者基于Kleene第二递归定理证明此类内省程序在理论上存在。实证综述表明当前LLM仅有准内省（部分元认知），受三重结构瓶颈制约：缺乏对自身的完整访问、Transformer的前馈特性、以及阻碍不动点迭代的计算类约束。文章最后提出跨越该复杂度阈值的架构路径，并讨论相应的安全影响。
+  deep_dive: docs/auto/2607.04277.md
 assessment:
   relevance: high
   decision: summary_only

@@ -13,6 +13,7 @@ source:
 time:
   published: '2026-05-23'
   collected: '2026-11-15'
+  updated: '2026-11-18'
 entities:
 - ref: concept:IQA
   role: subject
@@ -35,6 +36,7 @@ summaries:
   one_liner_zh: 首个将推理、像素级定位与区域指涉统一到单一 LMM 框架的多粒度可解释图像质量评估方法。
   abstract_zh: 该文提出 IQA-Spider，是首个将推理、定位与指涉统一到单一 LMM 框架的图像质量评估方法，实现多粒度质量理解。针对现有多任务支持不全的问题，作者制定了涵盖全局与局部质量描述、像素级定位、区域级指涉的严格四任务范式，并配套构建了可扩展自动标注的
     IQA 数据集。方法采用无冲突两阶段设计：第一阶段为模型注入多 IQA 任务的细粒度文本级推理能力，第二阶段引入免训练的 text-to-point 定位范式，将 token logits 映射为空间坐标以衔接文本语义与像素感知。多基准实验表明该框架在统一多粒度质量感知上性能强劲且通用。
+  deep_dive: docs/auto/2605.24553.md
 assessment:
   relevance: high
   decision: summary_only

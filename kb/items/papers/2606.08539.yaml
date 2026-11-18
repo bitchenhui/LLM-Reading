@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-06-07'
   collected: '2026-11-15'
+  updated: '2026-11-18'
 entities:
 - ref: concept:SelfImprovement
   role: subject
@@ -61,6 +62,7 @@ claims:
 summaries:
   one_liner_zh: 按威胁类型分层的自改进信任层：LLM裁决器蒸馏词法规则、以带护栏RAG记忆处理语义威胁，45,000动作零良性硬拦截。
   abstract_zh: 论文提出AgentTrust，对智能体的shell命令、云操作与工具调用按动作逐条判定放行/警告/拦截/升级，并将威胁分为词法（固定签名、可规则判定）与语义（意图相关、规则先天不可判定）两类。负面对照实验显示，手写云规则包仅将held-out总体准确率从48%提到56%，语义类别提升为0，而强LLM裁决器恰好覆盖这些语义类别。系统让裁决器具备自学习能力：在以语义攻击为主的语料上将规则准确率几乎翻倍（48%到83.6-85.2%）且近零误拦，并在两个模型提供商上均成立。最终形成自改进双存储系统：裁决器在词法威胁上蒸馏不断增长的确定性规则底座以降成本，在语义威胁上写入带佐证护栏的RAG记忆（纯verdict-cache因表层孪生样本塌缩至约58%而失败，佐证护栏使语义准确率提升13个百分点，70到84）。端到端在线回放显示judge调用率由50%降至44%、judge域准确率由71%升至80%，45,000个动作中零良性硬拦截。
+  deep_dive: docs/auto/2606.08539.md
 assessment:
   relevance: high
   decision: summary_only

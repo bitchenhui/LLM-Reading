@@ -13,6 +13,7 @@ source:
 time:
   published: '2026-07-14'
   collected: '2026-11-14'
+  updated: '2026-11-18'
 entities:
 - ref: concept:RSI
   role: subject
@@ -44,6 +45,7 @@ claims:
 summaries:
   one_liner_zh: 提出AutoMem，用文本梯度递归自我改进自动搜索LLM智能体的任务自适应记忆架构，平均提升准确率2.8点并降低14.3% token成本。
   abstract_zh: 论文针对LLM智能体长期记忆设计高度耦合的问题，构建了由5种编码器、5种存储、6种检索器和4种管理器组成的离散搜索空间，并证明没有单一记忆架构在所有任务上一致占优。据此提出AutoMem框架，包含两个组件：经验引导架构搜索（EGAS），从历史搜索轨迹与积累反思中提出候选架构；失败引导模块诊断（FGMD），将记忆相关失败定位到具体模块并转化为针对性文本反馈。在GAIA、WebWalkerQA和xBench-DeepSearch三个基准、两个LLM骨干上，AutoMem发现的任务自适应记忆架构优于最强人工设计基线，六个benchmark-骨干设置平均准确率提升2.8点。分析显示其在Qwen3.5-122B-A10B上相对最强准确率基线降低14.3%的token成本，且仅用少量引导迭代即超越规模大得多的随机搜索。
+  deep_dive: docs/auto/2608.14621.md
 assessment:
   relevance: high
   decision: summary_only

@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-07-26'
   collected: '2026-11-15'
+  updated: '2026-11-18'
 entities:
 - ref: concept:SelfImprovement
   role: subject
@@ -30,6 +31,7 @@ claims:
 summaries:
   one_liner_zh: 提出RLSVR范式，借'谁是卧底'自博弈（SpyRL）把可验证奖励强化学习扩展至开放式LLM自我改进任务。
   abstract_zh: RLVR虽推动了推理型LLM的大规模优化，但局限于数学、编码等可确定性验证的领域；开放式任务通常依赖人类偏好、奖励模型或LLM裁判，带来评测偏见、裁判能力瓶颈与额外推理成本。作者借鉴自监督学习的思想，提出RLSVR：将开放式任务转换为可验证的代理环境，由其内部规则与交互结果自动生成奖励信号。其实例化SpyRL受社交推理游戏'谁是卧底'启发，智能体接收非对称信息、完成同一目标任务并投票识别预设间谍，投票结果提供完全可验证的奖励。在文本摘要、创意写作与数学推理实验中，SpyRL在非可验证任务上优于现有自我改进方法，并在可验证推理任务上取得一致增益。
+  deep_dive: docs/auto/2607.23802.md
 assessment:
   relevance: high
   decision: summary_only

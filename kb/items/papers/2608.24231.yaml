@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-08-25'
   collected: '2026-11-14'
+  updated: '2026-11-18'
 entities:
 - ref: concept:LLM
   role: subject
@@ -44,6 +45,7 @@ summaries:
     RecurSE。方法上，Pass 1 让可训练裁判按逐条规则评估候选回答，Pass 2 由同步的策略副本检查器依元规则审计裁判推理并给出标量过程奖励；接口解耦将检查器标量分数与裁判判定 token
     结构性隔离，消除膨胀自奖励的 token 复制捷径。针对无锚定递归学习天然有界的问题，提出 Pairwise Advantage Validity（PAV）作为无偏验证监视器，联合跟踪裁判准确率与检查器保真度以定位最优早停窗口。在
     Qwen3.5-9B、Gemma-4-E4B-it、Qwen3.6-27B 上，RecurSE 在医学、成对比较、摘要与专业等留出基准上取得一致泛化收益；消融显示同步裁判-检查器协同进化优于冻结检查器、外部元裁判、自一致性与规模化教师蒸馏，其裁判筛选的偏好对还可增强下游策略对齐。
+  deep_dive: docs/auto/2608.24231.md
 assessment:
   relevance: high
   decision: summary_only

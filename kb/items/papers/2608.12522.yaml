@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-08-12'
   collected: '2026-11-14'
+  updated: '2026-11-18'
 entities:
 - ref: concept:AlphaEvolve
   role: subject
@@ -50,6 +51,7 @@ claims:
 summaries:
   one_liner_zh: 提出ε-MemEvo，将成功算法策略存为任务无关记忆并经自适应注入门控实现LLM程序进化的跨任务迁移，8个基准平均提升8.7%。
   abstract_zh: 针对FunSearch、AlphaEvolve等LLM程序进化系统逐任务孤立优化、搜索经验即弃的问题，提出ε-MemEvo跨任务知识迁移框架。该框架将历史经验存为任务无关的策略记忆——成功算法策略的紧凑自然语言摘要而非原始代码，从而可在不同API与评估器的任务间迁移；并用自适应注入门控决定检索记忆是否注入及注入强度，避免语义不匹配记忆导致的负迁移。在横跨数学优化与系统工程的8个基准上按内容级留一协议评估：GPT-5骨干下，ε-MemEvo在全部8个任务的AUCC指标上超越AdaEvolve，平均相对增益+8.7%，早期收敛平均提升+9.4%，开销<1%。消融显示朴素记忆注入可能灾难性失败，而自适应门控在5个消融任务上保持安全；数据更新的后验可解释，在改进期倾向skip，在早/晚期平台期由skip转向hint。
+  deep_dive: docs/auto/2608.12522.md
 assessment:
   relevance: high
   decision: summary_only

@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-07-21'
   collected: '2026-11-15'
+  updated: '2026-11-18'
 entities:
 - ref: concept:SelfImprovement
   role: subject
@@ -31,6 +32,7 @@ summaries:
   one_liner_zh: 提出知识中心型自我改进：智能体通用可弃换，改进持久驻留在共享策展知识库中。
   abstract_zh: 论文针对智能体中心式自我改进中改进与特定智能体设计、任务分布绑定、难维护难迁移的问题，提出互补的知识中心范式：智能体保持通用且可弃换，持续对象是策展的知识库。实验通过简单协议操作化该想法：智能体先尝试一个任务，再经任务级与跨任务论坛向共享知识库贡献有证据支撑的洞见，随后进行知识蒸馏。在抽象推理、编程与终端基准上，该协议相对智能体中心基线在降低美元成本的同时提升解题率。蒸馏知识可迁移到保留任务和不同
     LLM 家族，表明改进并非 LLM 或运行实例特定，支持由持久策展知识驱动自我改进系统进展的新视角。
+  deep_dive: docs/auto/2607.19592.md
 assessment:
   relevance: high
   decision: summary_only
