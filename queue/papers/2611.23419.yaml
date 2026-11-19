@@ -1,0 +1,63 @@
+id: paper:arxiv:2611.23419
+status: reviewed
+score: 8
+track: video_image_coding
+matched:
+- ref: impl:VTM
+  count: 2
+  weight: 3
+- ref: dataset:Kodak
+  count: 1
+  weight: 1
+- ref: metric:BD-Rate
+  count: 1
+  weight: 1
+- ref: metric:MS-SSIM
+  count: 1
+  weight: 1
+- ref: metric:PSNR
+  count: 1
+  weight: 1
+- ref: metric:SSIM
+  count: 1
+  weight: 1
+meta:
+  title: 'LIC-Audit: How Comparable Are Reported Gains in Learned Image Compression?'
+  authors:
+  - Haisheng Fu
+  - Jie Liang
+  - Runyu Yang
+  - Feng Ding
+  - Xin Dong
+  - Zixiao Jin
+  - Jingning Han
+  published: '2026-11-17'
+  updated: '2026-11-17'
+  categories:
+  - eess.IV
+  - cs.CV
+  - stat.AP
+  abstract: 'Learned image compression (LIC) papers often report BD-rate improvements of only a few percent.
+    They are measured against VTM reference software whose version keeps changing: the claims we audit
+    name 7 versions, 5 in 2025 papers alone. But how comparable are these numbers across papers, and what
+    evidence should future papers give for such small gains? We introduce LIC-Audit, an analysis of 353
+    released rate-distortion curves from 36 repositories, and a controlled re-evaluation of eight public
+    codec releases with 28,193 encode-decode records. We identify three problems. First, different VTM
+    reference runs change BD-rates by up to 3.56 percentage points, and on CLIC Pro published numbers
+    order 10 of 55 method pairs differently from a common computation; comparing codecs directly over
+    a fixed quality range removes this dependence. Second, releases use different and mostly undocumented
+    conventions for counting bits, computing PSNR, and padding images. Under consistent measurement, the
+    GLIC method''s 1.00% lead over the HPCM method on Tecnick becomes a 1.43% deficit, changing only the
+    padding reverses the comparison of HPCM and CMIC, and most gaps narrow when MS-SSIM replaces PSNR.
+    Third, average curves hide how much results vary from image to image, so whether a small gain is statistically
+    significant depends on the assumed variation. An optimistic assumption calls 12.0% of comparisons
+    between equally good codecs significant on test sets as small as Kodak, instead of 5%; a cautious
+    one leaves 18 of 45 differences between recent codecs undecided, yet per-image results show 12 of
+    them to be significant. Beyond auditing past results, LIC-Audit provides a versioned evaluation protocol,
+    a public leaderboard website with a scoring tool, source-linked benchmark data, per-image measurements,
+    and reporting guidelines, to help future LIC papers make comparable and verifiable claims of progress.'
+  url: https://arxiv.org/abs/2611.23419
+  pdf_url: https://arxiv.org/pdf/2611.23419v1
+  version: v1
+fetched: '2026-11-19'
+llm_decision: deep_read

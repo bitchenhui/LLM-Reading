@@ -1,0 +1,51 @@
+id: paper:arxiv:2611.23357
+type: paper
+title: A Survey on RLOps for Large Language Models
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2611.23357v1
+  url: https://arxiv.org/abs/2611.23357
+  pdf_url: https://arxiv.org/pdf/2611.23357v1
+  venue: arXiv preprint
+time:
+  published: '2026-11-17'
+  collected: '2026-11-19'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:RSI
+  role: subject
+claims:
+- statement: 该综述将现有LLM RLOps方法系统组织为训练设置、经验采集、奖励计算、策略优化与模型评估五个阶段，并逐阶段考察运维关切、管理技术与评估证据。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 论文识别出训练过程可观测性、跨阶段协调、可泛化RLOps、多轮次管理以及面向递归自我改进的RLOps五类开放挑战与未来方向。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: RL训练规模化会在分布式执行、反馈计算与学习动态上暴露故障，导致算力浪费、训练变慢并损害模型改进，这是催生LLM RLOps技术体系的动因。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 系统综述LLM强化学习训练全生命周期的运维技术，按五阶段组织方法并指出面向递归自我改进的RLOps等未来方向。
+  abstract_zh: 该综述系统梳理面向大语言模型的强化学习运维（RLOps）技术，动因是RL训练规模化会在分布式执行、反馈计算与学习动态上暴露故障，浪费算力、拖慢训练并削弱模型改进。作者将现有方法组织为训练设置、经验采集、奖励计算、策略优化与模型评估五个阶段，逐一考察各阶段的运维关切、管理技术与评估证据。基于该分类体系，论文识别出训练过程可观测性、跨阶段协调、可泛化RLOps、多轮次管理以及面向递归自我改进（RSI）的RLOps等开放挑战与未来方向。这些方向旨在把运维管理从单次训练运行扩展到多样化训练设置、共享基础设施与持续改进循环，作者并维护了索引相关论文与开放资源的GitHub仓库。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: LLM强化学习训练运维（RLOps）综述，仅在未来方向中涉及面向递归自我改进的RLOps，非音视频核心域，按非核心域摘要收录。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-19'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 大语言模型强化学习运维（RLOps）综述
+relations:
+- type: same_topic
+  ref: paper:arxiv:2509.02547
+  note: 同为LLM强化学习主题综述；本篇聚焦训练全生命周期的运维（RLOps）层面而非智能体RL方法全景
+- type: same_topic
+  ref: paper:arxiv:2605.02913
+  note: LLM强化学习rollout策略综述的内容对应本综述'经验采集'阶段的管理技术范畴

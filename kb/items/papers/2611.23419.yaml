@@ -1,0 +1,115 @@
+id: paper:arxiv:2611.23419
+type: paper
+title: 'LIC-Audit: How Comparable Are Reported Gains in Learned Image Compression?'
+domain: video_image_coding
+research_lines:
+- traditional_codec_opt
+source:
+  channel: arxiv
+  external_id: 2611.23419v1
+  url: https://arxiv.org/abs/2611.23419
+  pdf_url: https://arxiv.org/pdf/2611.23419v1
+  venue: arXiv preprint
+time:
+  published: '2026-11-17'
+  collected: '2026-11-19'
+  updated: '2026-11-19'
+entities:
+- ref: impl:VTM
+  role: subject
+- ref: dataset:Kodak
+  role: evaluated_on
+- ref: metric:BD-Rate
+  role: measured_by
+- ref: metric:PSNR
+  role: measured_by
+- ref: metric:MS-SSIM
+  role: measured_by
+claims:
+- statement: 不同 VTM 参考运行的 BD-rate 结果差异最高可达 3.56 个百分点，跨论文直接比较这些数字不可靠
+  confidence: reported
+  metrics:
+  - name: BD-Rate 漂移
+    value: '3.56'
+    scope: 不同 VTM 参考运行之间，百分点
+  evidence: abstract（初筛，未读全文）
+- statement: 在 CLIC Pro 上，已发表数字对 55 个方法对中的 10 个给出与统一计算不同的排序
+  confidence: reported
+  metrics:
+  - name: 排序不一致方法对数
+    value: 10/55
+    scope: CLIC Pro，已发表数字 vs 统一 BD-rate 计算
+  evidence: abstract（初筛，未读全文）
+- statement: 统一测量约定后，GLIC 在 Tecnick 上对 HPCM 的 1.00% 领先变为 1.43% 落后；仅改变图像填充即反转 HPCM 与 CMIC 的比较
+  confidence: reported
+  metrics:
+  - name: GLIC 相对 HPCM BD-Rate
+    value: 1.00% -> -1.43%
+    scope: Tecnick，统一测量前后
+  - name: 受控编解码记录数
+    value: 28,193
+    scope: 8 个公开编解码器发布
+  evidence: abstract（初筛，未读全文）
+- statement: 以 MS-SSIM 替代 PSNR 时，多数方法间差距收窄，表明 PSNR 口径下的部分增益可能被夸大
+  confidence: reported
+  metrics:
+  - name: 指标替换影响
+    value: MS-SSIM vs PSNR
+    scope: 统一测量下的方法对比较
+  evidence: abstract（初筛，未读全文）
+- statement: 平均曲线掩盖逐图差异：乐观方差假设使 Kodak 规模测试集上 12.0% 的同等性能编解码器比较被判为显著（真实误报率应约 5%）；谨慎假设下 45 个近期编解码器差异中 18
+    个无法定论，而逐图结果显示其中 12 个实为显著
+  confidence: reported
+  metrics:
+  - name: 虚假显著比较比例
+    value: 12.0%
+    scope: 同等性能编解码器对，乐观假设，Kodak 规模测试集
+  - name: 名义显著比例（5% 水平）
+    value: 5%
+    scope: 同等性能编解码器对
+  - name: 未定差异
+    value: 18/45
+    scope: 近期编解码器，谨慎方差假设
+  - name: 逐图可判显著数
+    value: '12'
+    scope: 18 个未定差异中
+  evidence: abstract（初筛，未读全文）
+- statement: 项目规模：审计 36 个仓库的 353 条率失真曲线，被审计论文共引用 7 个 VTM 版本，其中 5 个出现在 2025 年论文中
+  confidence: reported
+  metrics:
+  - name: 率失真曲线数
+    value: '353'
+    scope: 36 个仓库
+  - name: VTM 版本数
+    value: '7'
+    scope: 被审计 LIC 论文引用，2025 年论文占 5 个
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 审计36个仓库353条RD曲线与28193条编码记录，揭示VTM版本漂移、测量惯例不一与统计显著性问题如何扭曲LIC的BD-rate结论
+  abstract_zh: 学习图像压缩（LIC）论文常以不断更换版本的 VTM 参考软件为锚点报告百分之几的 BD-rate 改进，被审计论文共提及 7 个 VTM 版本。作者分析了 36 个仓库的
+    353 条率失真曲线，并对 8 个公开编解码器发布做了 28,193 条编解码记录的受控重评估。结果发现三类问题：不同 VTM 参考运行使 BD-rate 波动高达 3.56 个百分点，CLIC
+    Pro 上 55 个方法对中 10 个的排序与统一计算不一致；各发布在比特计数、PSNR 计算和图像填充上采用大量未记录的不同惯例，统一测量后 GLIC 在 Tecnick 上对 HPCM 的 1.00%
+    领先变为 1.43% 落后，仅改变填充即反转 HPCM 与 CMIC 的比较，而以 MS-SSIM 取代 PSNR 时多数差距收窄；平均曲线掩盖逐图差异，显著性高度依赖方差假设——乐观假设使 Kodak
+    规模测试集上 12.0% 的同等性能编解码器比较被判为显著（本应约 5%），谨慎假设则让 45 个近期编解码器差异中 18 个悬而未决、而逐图结果显示其中 12 个实为显著。项目提供版本化评测协议、公开排行榜与打分工具、源链接基准数据、逐图测量及报告指南，以使未来
+    LIC 论文的进展声明可比较、可验证。
+  deep_dive: docs/auto/2611.23419.md
+assessment:
+  relevance: high
+  decision: deep_read
+  reason: 核心域学习方法图像压缩的评测方法论审计，系统揭示跨论文 BD-rate 不可比问题并提供可复现评测协议，值得深入研读
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-19'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: LIC-Audit：学习图像压缩论文报告的性能增益有多大可比性？
+relations:
+- type: same_topic
+  ref: paper:arxiv:2304.12852
+  note: 同属编解码器 BD-rate 比较方法论批判：Bjøntegaard Bible 指出视频编解码比较方式易错，本文将类似审计延伸到学习图像压缩领域
+- type: same_topic
+  ref: paper:arxiv:2401.04039
+  note: BD 指标的教程综述讨论该指标演化与挑战，本文以系统审计量化了 BD-rate 跨版本报告的实际不可比性
+- type: same_topic
+  ref: paper:arxiv:2606.23545
+  note: UI-LIC 提出统一的 LIC 模型评测框架，与本文推动 LIC 报告可比性、标准化评测协议的目标一致

@@ -1,0 +1,62 @@
+id: paper:arxiv:2611.23702
+type: paper
+title: 'KnowMe Paper Radar: Lightweight Discovery of Promising Papers in the Age of Autoresearch'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2611.23702v1
+  url: https://arxiv.org/abs/2611.23702
+  pdf_url: https://arxiv.org/pdf/2611.23702v1
+  venue: arXiv preprint
+time:
+  published: '2026-11-18'
+  collected: '2026-11-19'
+entities:
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:RSI
+  role: uses
+claims:
+- statement: 在 174,640 条获取记录规模上，图缓存复用使重复上下文准备较基线流程提速三倍以上。
+  confidence: reported
+  metrics:
+  - name: 重复上下文准备提速
+    value: 3倍以上
+    scope: 174,640 条获取记录，启用图缓存复用
+  evidence: abstract（初筛，未读全文）
+- statement: 启用摘要缓存后，专家评判检索任务的排序质量 NDCG@10 从 0.412 提升至 0.598。
+  confidence: reported
+  metrics:
+  - name: NDCG@10
+    value: '0.412'
+    scope: 专家评判检索任务，无摘要缓存基线
+  - name: NDCG@10
+    value: '0.598'
+    scope: 专家评判检索任务，启用缓存摘要
+  evidence: abstract（初筛，未读全文）
+- statement: 系统在常规使用中不依赖 LLM 推理，通过暴露各评分组件及来源保持可解释性，并通过浏览器与 CLI 同时服务人类研究者与研究智能体。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 融合主题相关性、时效、作者研究历史与合作网络的多源证据论文发现工具，定位为文献知情 RSI 工作流的上游组件。
+  abstract_zh: 该工具让用户指定主题、优先级、排除项与日期范围，系统整合主题相关性、时效性、作者研究历史、合作路径与方向性机构上下文，生成个性化阅读优先级，并公开各评分组件及其支撑来源。自动获取、版本合并与图缓存复用使常规使用无需大语言模型（LLM）推理。在
+    174,640 条获取记录上的实验显示，重复上下文准备提速三倍以上；启用缓存摘要后，专家评判检索任务的 NDCG@10 从 0.412 提升至 0.598。配套累积记录还支持语义检索、研究历史建模与文献知情规划等分析，并通过浏览器界面与结构化
+    CLI 同时服务研究者与研究智能体。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 论文发现/文献优先级排序工具而非音视频技术，但其明确定位为文献知情递归自我改进（RSI）工作流的上游组件，故归入 self_improvement 并仅做初筛摘要。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-19'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: KnowMe 论文雷达：自研究时代的轻量级有前景论文发现工具
+relations:
+- type: same_topic
+  ref: paper:arxiv:2607.25886
+  note: 均关注为递归自我改进（RSI）工作流提供数据/文献层面的支撑环节
+- type: same_topic
+  ref: paper:arxiv:2504.18765
+  note: 同属自研究（autoresearch）/LLM 研究智能体基础设施方向

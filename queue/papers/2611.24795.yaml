@@ -1,0 +1,41 @@
+id: paper:arxiv:2611.24795
+status: skipped
+score: 0
+track: quality_assessment
+matched: []
+meta:
+  title: 'Ultimate3D: Teaching Multimodal LLMs 3D Camera-Object Relations by Large-Scale Visual Instruction
+    Data'
+  authors:
+  - Liu He
+  - Yizhi Song
+  - Ruiqi Xu
+  - Baris Sarper Tezcan
+  - Xiao Zeng
+  - Albert Y. C. Chen
+  - Lu Xia
+  - Shashwat Verma
+  - Sankalp Dayal
+  - Min Sun
+  - Cheng-Hao Kuo
+  - Daniel Aliaga
+  published: '2026-11-18'
+  updated: '2026-11-18'
+  categories:
+  - cs.CV
+  abstract: Multimodal Large Language Models (MLLMs) struggle with accurately capturing camera-object
+    relations, especially for object orientation, camera viewpoint, and camera shots. This stems from
+    the fact that existing MLLMs are trained on images with limited diverse camera-object relations and
+    corresponding textual descriptions. To address this, we propose a synthetic generation pipeline to
+    create large-scale 3D visual instruction datasets. Our framework takes 3D assets as input and uses
+    rendering and diffusion-based image generation models to create photorealistic images preserving precise
+    camera-object relations. Additionally, large language models (LLMs) are used to generate text prompts
+    for guiding visual instruction tuning and controlling image generation. We create Ultimate3D, a large-scale
+    3D-grounded 2D visual instruction dataset. Ultimate3D consists of 240K VQAs with precise camera-object
+    annotations, and corresponding benchmark. MLLMs fine-tuned on our proposed dataset outperform commercial
+    models by a large margin, achieving an average accuracy improvement of 29.7% on camera-object relation
+    recognition tasks. Our code, dataset, and benchmark will contribute to broad MLLM applications.
+  url: https://arxiv.org/abs/2611.24795
+  pdf_url: https://arxiv.org/pdf/2611.24795v1
+  version: v1
+fetched: '2026-11-19'

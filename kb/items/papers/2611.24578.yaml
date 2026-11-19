@@ -1,0 +1,71 @@
+id: paper:arxiv:2611.24578
+type: paper
+title: 'BaseRSI: Recursive Self-Improvement of a Base Vision-Language Model via Training-Free Harness
+  Internalization'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2611.24578v1
+  url: https://arxiv.org/abs/2611.24578
+  pdf_url: https://arxiv.org/pdf/2611.24578v1
+  venue: arXiv preprint
+time:
+  published: '2026-11-18'
+  collected: '2026-11-19'
+  updated: '2026-11-19'
+entities:
+- ref: concept:RSI
+  role: subject
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:TrainingFree
+  role: uses
+claims:
+- statement: BaseRSI提出递归Harness内化范式：基础模型改进自身harness后，通过免训练编辑将harness增益写入自身权重，解决harness-bound增益留在模型外、黑盒监督、编辑位置与强度预先固定三大问题
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: ReGap机制以harness在每个transformer块单独引起的高维激活差异作为监督信号，驱动该块权重沿低维子空间更新
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: ReKey算法通过回归将ReGap信号写入每个块的少量key-value神经元，并在模型自身响应上度量编辑的位置与强度；不同位置的编辑可组合进单一检查点而无需重新拟合，整个递归仅靠前向传播完成
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在十个视觉推理基准上，BaseRSI持续提升基础视觉-语言模型在分布内与held-out基准上的表现
+  confidence: reported
+  metrics:
+  - name: 评测基准数
+    value: '10'
+    scope: 视觉推理基准（含分布内与held-out）
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出BaseRSI范式：基础VLM将自身harness通过免训练编辑写入权重，在10个视觉推理基准上持续提升
+  abstract_zh: 论文针对现有RSI的三大挑战（harness增益停留在基础模型之外、黑盒监督只读输出、编辑位置与强度预先固定），提出递归Harness内化（Recursive Harness
+    Internalization）范式BaseRSI：基础模型先改进自身harness，再通过免训练编辑把harness带来的能力写入自身权重，并在自身响应上逐轮递归。为支撑该范式，提出ReGap机制，以harness在每个transformer块单独引入的高维激活差异作为监督信号，在低维子空间沿该信号更新块权重。进一步提出ReKey算法，通过回归将该信号写入每个块的少量key-value神经元，并在模型自身响应上度量每次编辑的位置与强度，不同位置的编辑可组合进单一检查点而无需重新拟合；整个递归仅靠前向传播即可由基础模型独立完成各角色。在十个视觉推理基准上，BaseRSI持续提升基础VLM在分布内与held-out基准上的表现。
+  deep_dive: docs/auto/2611.24578.md
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 属于自我改进AI（RSI）主题：提出免训练harness内化的递归自我改进新范式，但非视频/图像编码核心域，按规则仅summary_only
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-19'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: BaseRSI：通过免训练Harness内化实现基础视觉-语言模型的递归自我改进
+relations:
+- type: same_topic
+  ref: paper:arxiv:2609.37950
+  note: 同为RSI的harness进化方向，且均针对视觉模型（Video-RSI作用于视频理解harness，BaseRSI作用于VLM并内化harness入权重）
+- type: same_topic
+  ref: paper:arxiv:2603.02556
+  note: 同为VLM视觉推理的自我改进工作，评测均面向视觉推理能力提升
+- type: same_topic
+  ref: paper:arxiv:2609.24972
+  note: 同为harness层面的递归自我改进（RRSI对agent harness正则化，BaseRSI将harness内化进模型权重）
+- type: same_topic
+  ref: paper:arxiv:2610.28201
+  note: 同为以harness为改进对象的RSI框架（MaD-RSI的Model-as-Data与BaseRSI的递归harness内化同主题）
+- type: same_topic
+  ref: paper:arxiv:2410.04444
+  note: 同属递归自我改进（RSI）研究线，Gödel Agent为自指agent框架，BaseRSI聚焦harness权重内化

@@ -1026,3 +1026,36 @@ paper:arxiv:2607.10478:
   metric: BD-Rate
   value: -15.3
   unit: '%'
+paper:arxiv:2611.23419:
+- dataset: CLIC Pro
+  anchor: 统一 BD-rate 计算
+  metric: 排序不一致方法对数
+  unit: ''
+  setup: ''
+  basis: 已发表数字 vs 统一 BD-rate 计算
+  statistic: 55 个方法对中的不一致数
+  value: 10.0
+- dataset: Kodak 规模测试集
+  anchor: 真实误报率约 5%
+  metric: 虚假显著比较比例
+  unit: '%'
+  setup: 乐观方差假设
+  basis: 同等性能编解码器对的显著性检验
+  statistic: 被判为显著的比例
+  value: 12.0
+- dataset: ''
+  anchor: 逐图结果
+  metric: 未定差异
+  unit: ''
+  setup: 谨慎方差假设
+  basis: 45 个近期编解码器差异
+  statistic: 45 个差异中无法定论的个数
+  value: 18.0
+- dataset: ''
+  anchor: 谨慎方差假设下的未定差异
+  metric: 逐图可判显著数
+  unit: ''
+  setup: ''
+  basis: 逐图结果
+  statistic: 18 个未定差异中实为显著的个数
+  value: 12.0

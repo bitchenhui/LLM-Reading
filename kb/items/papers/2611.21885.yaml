@@ -1,0 +1,70 @@
+id: paper:arxiv:2611.21885
+type: paper
+title: Language Models Can Rewrite Their Own Weights
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2611.21885v2
+  url: https://arxiv.org/abs/2611.21885
+  pdf_url: https://arxiv.org/pdf/2611.21885v2
+  venue: arXiv preprint
+time:
+  published: '2026-11-16'
+  collected: '2026-11-19'
+entities:
+- ref: concept:RSI
+  role: subject
+- ref: concept:SelfImprovement
+  role: subject
+claims:
+- statement: 27B开放语言模型通过自改写，在从未见过的题目上准确率提升6.6个百分点，全程无梯度、无训练、仅前向传播。
+  confidence: reported
+  metrics:
+  - name: 准确率提升
+    value: +6.6 points
+    scope: 未见题目，自改写编辑后 vs 原模型
+  evidence: abstract（初筛，未读全文）
+- statement: 模型在连续八轮自改写会话中准确率只升不降，每轮编辑经实践题验证后择优提交。
+  confidence: reported
+  metrics:
+  - name: 连续改进会话数
+    value: '8'
+    scope: 连续自改写会话
+  evidence: abstract（初筛，未读全文）
+- statement: 模型可修复受损副本：不重训且不读取原始权重，将其恢复至原模型80%以上的图像任务准确率。
+  confidence: reported
+  metrics:
+  - name: 修复后准确率恢复比例
+    value: '>80%'
+    scope: 未见图像任务，受损副本修复后 vs 原始模型
+  evidence: abstract（初筛，未读全文）
+- statement: 自改写能力随模型规模涌现：同一模型家族中较小模型不编辑或损坏自身，仅最大模型能改进并自修复。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 与测试时扩展不同，自改写将收益写入权重、无逐题推理开销；作者认为其是迈向递归自我改进（RSI）的必要步骤。
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出自改写范式：27B语言模型通过自身推理无梯度改写自身权重，实现持续自我提升与受损自修复。
+  abstract_zh: 论文提出自改写（self-rewriting）方法：开放27B语言模型在获得自身权重、分级答案与自运行能力后，仅凭前向传播诊断自身失败并改写对应权重，全程无梯度、无训练。其自我编辑使模型在从未见过的题目上准确率提升6.6个百分点，并在八轮连续自改写会话中准确率持续上升。模型还能修复受损副本：在既不重训也不读取原始权重的条件下，将几乎失效的副本恢复至原模型80%以上的图像任务准确率。该能力随规模涌现，同一家族中仅最大模型能改进与自修复；作者认为这是迈向递归自我改进（RSI）的必要一步，收益写入权重，区别于测试时扩展。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 自我改进AI领域标志性工作：LLM首次无梯度改写自身权重实现持续自我提升，是迈向RSI的关键一步，非音视频核心域故仅初筛。
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-19'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 语言模型能够改写自身权重
+relations:
+- type: same_topic
+  ref: paper:arxiv:2210.11610
+  note: 同为LLM自我改进方向的代表性工作，本文将自我改进从推理层面推进到权重改写层面
+- type: same_topic
+  ref: paper:arxiv:2611.07319
+  note: 同样围绕权重空间编程与实验反馈闭环修改模型权重
+- type: same_topic
+  ref: paper:arxiv:2610.23344
+  note: 同属'语言模型改进语言模型'主题，均由模型自身承担优化器角色

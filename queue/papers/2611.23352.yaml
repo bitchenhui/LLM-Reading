@@ -1,0 +1,47 @@
+id: paper:arxiv:2611.23352
+status: skipped
+score: 2
+track: video_image_coding
+matched:
+- ref: metric:BD-Rate
+  count: 1
+  weight: 1
+- ref: metric:DISTS
+  count: 1
+  weight: 1
+meta:
+  title: Streaming Generative Video Compression with Embedding Alignment and In-Context Propagation
+  authors:
+  - Zhitao Wang
+  - Hengyu Man
+  - Han Liu
+  - Wenrui Li
+  - Debin Zhao
+  - Xiaopeng Fan
+  published: '2026-11-17'
+  updated: '2026-11-17'
+  categories:
+  - eess.IV
+  - cs.CV
+  - cs.MM
+  abstract: 'Video compression at ultra-low bitrates presents substantial challenges in preserving perceptual
+    quality. Although pretrained video diffusion transformers (DiTs) provide powerful generative priors,
+    existing generative video compression (GVC) methods built on them typically rely on computationally
+    expensive VAE decoders to reconstruct video frames. Moreover, jointly refining multiple frames to
+    exploit the inherent spatiotemporal modeling capabilities of video DiTs introduces additional buffering
+    delay. To address these challenges, we propose SGVC, a streaming generative video compression framework
+    that adapts a pretrained latent video DiT into a causal pixel-space refiner. Specifically, SGVC projects
+    decoded features from a contextual pixel codec directly into the DiT input embedding space. To bridge
+    the representation gap between codec-derived embeddings and pretrained DiT embeddings, we introduce
+    Embedding Alignment, which aligns the projected embeddings with input embeddings extracted from the
+    original frames during training. The refined DiT hidden states are then mapped directly to the pixel
+    domain through a lightweight reconstruction path, bypassing the pretrained VAE decoder. To further
+    exploit the spatiotemporal priors of the video DiT while maintaining causal decoding, we introduce
+    In-Context Propagation, which reuses layer-wise K/V states across frames to exploit historical generative
+    context, improving temporal consistency without requiring clip-wise buffering. Extensive experiments
+    demonstrate that SGVC achieves competitive rate-perception performance, with average BD-rate savings
+    of 71.97% over S$^2$VC in terms of DISTS. Project Page: https://chigland.github.io/SGVC/'
+  url: https://arxiv.org/abs/2611.23352
+  pdf_url: https://arxiv.org/pdf/2611.23352v1
+  version: v1
+fetched: '2026-11-19'

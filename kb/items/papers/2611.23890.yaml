@@ -1,0 +1,63 @@
+id: paper:arxiv:2611.23890
+type: paper
+title: 'EVA-RSI: Recursive Self-Improvement of Video Evaluators for Judging Temporal Quality'
+domain: self_improvement
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2611.23890v1
+  url: https://arxiv.org/abs/2611.23890
+  pdf_url: https://arxiv.org/pdf/2611.23890v1
+  venue: arXiv preprint
+time:
+  published: '2026-11-18'
+  collected: '2026-11-19'
+  updated: '2026-11-19'
+entities:
+- ref: concept:RSI
+  role: subject
+- ref: concept:SelfImprovement
+  role: subject
+- ref: concept:LLM
+  role: uses
+claims:
+- statement: EVA-RSI从Qwen3-VL-8B出发提升运动评估能力，其中平滑度维度的增益最大，且增益可迁移到自我改进运行中从未见过的缺陷类型
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在公开基准的dynamics子集上，EVA-RSI评估器在全部受测模型中取得最高观测分数
+  confidence: reported
+  metrics:
+  - name: 受测模型总数
+    value: '21'
+    scope: 公开基准dynamics子集上的对比评估器/模型数量
+  evidence: abstract（初筛，未读全文）
+- statement: 将EVA-RSI评估器用作RL奖励可增加生成视频的运动幅度并获得人类偏好，嵌入数据选择管线也能增加生成运动
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 该框架通过可控视频编辑（时间倒放、丢帧等）构造无需人工标注的代理考试，并用少量人工标注真实视频锚定人类判断，缓解视频评估缺少显式验证器的问题
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出多智能体RSI框架EVA-RSI，用代理考试与纳什议价规则递归改进视频评估器的运动/时序质量判断。
+  abstract_zh: 该文提出EVA-RSI，一个在'无验证器'且需同时评判物理、平滑度、运动等多维目标的约束下探索递归自我改进的多智能体框架。通过对视频施加时间倒放、丢帧等可控编辑构造固定代理考试，无需人工标注即可提供监督，并用少量人工标注的真实视频将考试锚定到人类判断；每个质量维度由一个LLM智能体提出改进，leader智能体协调，纳什议价规则选出跨维度平衡的更新，人类负责设计考试、审核候选改动并在阶段间修订课程。从Qwen3-VL-8B出发，EVA-RSI提升运动评估能力且平滑度维度增益最大，增益可迁移到运行中未见过的缺陷类型。在公开基准dynamics子集上，该评估器在21个受测模型中取得最高观测分数；作为RL奖励可增加生成运动的幅度并赢得人类偏好，纳入数据选择管线同样能增加生成运动。
+  deep_dive: docs/auto/2611.23890.md
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 将递归自我改进（RSI）扩展到无验证器、多目标约束的视频质量评估器，是自我改进AI域与音视频质量评估的交叉核心工作
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-19'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: EVA-RSI：面向时序质量评判的视频评估器递归自我改进
+relations:
+- type: same_topic
+  ref: paper:arxiv:2609.37950
+  note: 同为RSI应用于视频领域的工作（Video-RSI针对视频理解agent的harness进化，本文针对视频评估器）
+- type: same_topic
+  ref: paper:arxiv:2609.27389
+  note: 同为RSI在音视频模态上的应用（EvoAudio针对音频理解）
+- type: same_topic
+  ref: paper:arxiv:2607.16742
+  note: 同属AI生成视频的多维质量评估主题（运动/时序质量评判）
