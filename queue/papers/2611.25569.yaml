@@ -1,0 +1,35 @@
+id: paper:arxiv:2611.25569
+status: skipped
+score: 0
+track: audio_coding
+matched: []
+meta:
+  title: 'UMelCodec: An Ultra-Low-Bitrate and Lightweight Mel-Domain Neural Speech Codec'
+  authors:
+  - Hui-Peng Du
+  - Yang Ai
+  - Zhen-Hua Ling
+  published: '2026-11-19'
+  updated: '2026-11-19'
+  categories:
+  - eess.AS
+  abstract: Ultra-low-bitrate speech coding is crucial for bandwidth-constrained communication and compact
+    storage, but preserving intelligibility, naturalness, and fine-grained acoustic details at bitrates
+    of only a few hundred bps remains challenging. Existing purely acoustic codecs generally operate at
+    relatively high bitrates, whereas incorporating semantic representations can reduce the bitrate, but
+    at the cost of increased complexity. Therefore, we propose UMelCodec, a purely acoustic neural speech
+    codec operating in the mel domain at an ultra-low bitrate of 325 bps with a lightweight architecture.
+    UMelCodec consists of two stages. In the first mel-domain coding stage, alias-free Snake-ConvNeXt
+    (AF-SC) encoder-decoder backbones model temporal and harmonic structures, a factorized single-codebook
+    vector quantizer (VQ) enables ultra-low-bitrate quantization, and a multi-scale mel-spectrogram discriminator
+    (MSMD) improves mel-spectrogram reconstruction. In the second waveform synthesis stage, a lightweight
+    modified discrete cosine transform (MDCT)-based neural vocoder predicts the MDCT spectrum from the
+    reconstructed mel spectrogram and recovers the waveform through inverse MDCT. Experiments on LibriTTS
+    dataset demonstrate that UMelCodec outperforms strong baselines across most objective reconstruction
+    metrics while maintaining competitive subjective naturalness. In terms of model complexity and inference
+    efficiency, UMelCodec has only 19.67 M parameters, requires 1.93 G MACs, and supports real-time inference
+    on both GPU and CPU platforms.
+  url: https://arxiv.org/abs/2611.25569
+  pdf_url: https://arxiv.org/pdf/2611.25569v1
+  version: v1
+fetched: '2026-11-20'

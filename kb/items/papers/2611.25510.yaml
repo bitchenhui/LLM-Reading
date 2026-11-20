@@ -1,0 +1,49 @@
+id: paper:arxiv:2611.25510
+type: paper
+title: 'Life-IQA+: Boosting Blind Image Quality Assessment via GCN-enhanced Layer Interaction and Flexible
+  Hierarchical Expert Specialization'
+domain: quality_assessment
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2611.25510v1
+  url: https://arxiv.org/abs/2611.25510
+  pdf_url: https://arxiv.org/pdf/2611.25510v1
+  venue: arXiv preprint
+time:
+  published: '2026-11-19'
+  collected: '2026-11-20'
+  updated: '2026-11-20'
+entities:
+- ref: concept:IQA
+  role: subject
+- ref: concept:MoE
+  role: uses
+claims:
+- statement: Life-IQA+用GCN精炼的最深层特征作质量查询、次深层特征作键值的交叉注意力层间交互，替代无差别多阶段特征聚合，改进质量表征解码
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 分层MoE架构（密集激活共享专家层+稀疏激活路由专家层）配合对部分共享专家施加失真类型/质量等级辅助分类监督，可增强专家表征多样性与预测能力
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 在合成与真实失真基准及专家配置/监督策略消融上，Life-IQA+取得有竞争力的预测精度且精度-计算成本平衡良好
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出GCN层间交互+分层MoE专家专精的盲图像质量评估框架，兼顾精度与计算成本
+  abstract_zh: 针对现有盲图像质量评估（BIQA）方法聚合多阶段骨干特征时未区分各层对质量预测贡献差异、以及统一监督所有专家限制表征多样性的问题，提出质量表征解码框架Life-IQA+。其层间交互模块用GCN精炼的最深层特征构建质量查询，以次深层特征作键值，通过交叉注意力实现跨层表征交互；并引入由密集激活共享专家层与稀疏激活路由专家层组成的灵活分层混合专家（MoE）架构。对部分共享专家施加辅助分类监督（合成失真数据用失真类型标签、真实数据用离散化质量等级标签）以增强专家多样性与能力。在合成与真实失真基准及消融实验中，Life-IQA+取得有竞争力的预测精度，并在精度与计算成本间达到良好平衡，代码已开源。
+  deep_dive: docs/auto/2611.25510.md
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 图像质量评估领域工作，属非核心域按规则仅收录摘要级
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-20'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: Life-IQA+：通过GCN增强层间交互与灵活分层专家专精提升盲图像质量评估
+relations:
+- type: same_topic
+  ref: paper:arxiv:2602.09531
+  note: 同为盲图像质量评估工作且均采用专家（MoE）机制做失真感知建模

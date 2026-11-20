@@ -1,0 +1,46 @@
+id: paper:arxiv:2611.25437
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'Wearable Logo, Silent Hijack: Stealthy Cross-Modal Semantic Attacks on Visible--Infrared Vision-Language
+    Models'
+  authors:
+  - Qike Zhang
+  - Jiaju Han
+  - Xuelian Shi
+  - Xiang Chen
+  - Dehe Zhao
+  - Banglong Nong
+  - Wenhao Zheng
+  - Lei Wang
+  - Jiahuan Long
+  - Jiujiang Guo
+  - Chengyin Hu
+  published: '2026-11-19'
+  updated: '2026-11-19'
+  categories:
+  - cs.CV
+  abstract: Logos appear naturally on clothing and daily necessities, where their recognizable shapes
+    and semantic associations make them familiar visual cues. This familiarity helps them blend into real-world
+    environments and remain visually inconspicuous. We ask whether an existing logo can serve as a carrier
+    for coordinated targeted semantic attacks on visible-infrared (VIS-IR) vision-language models (VLMs)
+    without changing its original outline. This setting requires expressive adversarial variation within
+    a fixed shape while accounting for different appearance characteristics and model responses across
+    modalities. We propose Logo-guided Semantic Attack (LoSA), a score-based black-box framework that
+    optimizes a logo's interior appearance and placement while preserving its silhouette. LoSA uses a
+    contour field and low-frequency graph spectral modes to structure the interior color layout, a frozen
+    appearance adapter to couple VIS and IR appearances, and particle swarm optimization to jointly optimize
+    shared design parameters. Experiments across four datasets demonstrate that LoSA consistently outperforms
+    the evaluated baselines in simultaneous Top-1 targeted success. Cross-architecture experiments, visual
+    naturalness ratings, and captioning/VQA transfer analyses further characterize its effectiveness and
+    limitations. These findings reveal that familiar visual symbols from real-world environments can serve
+    as shape-preserving carriers for coordinated targeted semantic attacks across imaging modalities.
+  url: https://arxiv.org/abs/2611.25437
+  pdf_url: https://arxiv.org/pdf/2611.25437v1
+  version: v1
+fetched: '2026-11-20'

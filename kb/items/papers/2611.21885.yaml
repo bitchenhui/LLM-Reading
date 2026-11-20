@@ -12,6 +12,7 @@ source:
 time:
   published: '2026-11-16'
   collected: '2026-11-19'
+  updated: '2026-11-20'
 entities:
 - ref: concept:RSI
   role: subject
@@ -48,6 +49,7 @@ claims:
 summaries:
   one_liner_zh: 提出自改写范式：27B语言模型通过自身推理无梯度改写自身权重，实现持续自我提升与受损自修复。
   abstract_zh: 论文提出自改写（self-rewriting）方法：开放27B语言模型在获得自身权重、分级答案与自运行能力后，仅凭前向传播诊断自身失败并改写对应权重，全程无梯度、无训练。其自我编辑使模型在从未见过的题目上准确率提升6.6个百分点，并在八轮连续自改写会话中准确率持续上升。模型还能修复受损副本：在既不重训也不读取原始权重的条件下，将几乎失效的副本恢复至原模型80%以上的图像任务准确率。该能力随规模涌现，同一家族中仅最大模型能改进与自修复；作者认为这是迈向递归自我改进（RSI）的必要一步，收益写入权重，区别于测试时扩展。
+  deep_dive: docs/auto/2611.21885.md
 assessment:
   relevance: high
   decision: summary_only

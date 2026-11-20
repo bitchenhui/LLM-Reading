@@ -1,0 +1,49 @@
+id: paper:arxiv:2611.25503
+type: paper
+title: Joint Language Modeling for In-the-Wild Speech-Scene Generation with Distinct Token Representations
+domain: audio_coding
+research_lines: []
+source:
+  channel: arxiv
+  external_id: 2611.25503v1
+  url: https://arxiv.org/abs/2611.25503
+  pdf_url: https://arxiv.org/pdf/2611.25503v1
+  venue: arXiv preprint
+time:
+  published: '2026-11-19'
+  collected: '2026-11-20'
+entities:
+- ref: concept:LLM
+  role: subject
+- ref: concept:NeuralAudioCodec
+  role: uses
+claims:
+- statement: 所提LLM联合建模框架在语音可懂度、场景相关性与音频质量三项指标上均优于现有语音-场景生成技术
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 源感知神经音频编解码器可从混合录音直接提取对齐的语音与环境声token，使模型无需孤立源即可在真实野外场景上适配并取得一致提升
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 可区分token表示与交错生成机制在保持源专属表示的同时实现共享生成上下文中的两条token流联合建模
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 提出源感知神经音频编解码器+LLM的语音与环境声联合token流生成框架，可直接适配真实混合录音场景
+  abstract_zh: 针对语音场景生成任务，提出基于预训练大语言模型的联合建模框架，对语音与环境声两条token流分别建模并以交错方式生成。设计源感知神经音频编解码器，直接从混合录音中提取时间对齐的语音与环境声token，因而无需孤立源录音即可适配真实野外语音场景。模型以自然语言场景描述与语音内容为条件，在共享生成上下文中保持源专属表示。实验显示该方法在语音可懂度、场景相关性与音频质量上优于现有语音-场景生成技术，真实场景适配带来一致增益。
+assessment:
+  relevance: medium
+  decision: summary_only
+  reason: 语音-声景生成属音频域而非核心视频/图像编码域，涉及神经音频编解码器token化与LLM生成，按规则给summary_only
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-20'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: 面向真实场景语音-声景生成的联合语言建模：基于可区分的token表示
+relations:
+- type: same_topic
+  ref: paper:arxiv:2107.03312
+  note: 同属神经音频编解码器token化驱动的音频建模方向
+- type: same_topic
+  ref: paper:arxiv:2404.04947
+  note: 均基于生成式音频编解码器的语音/音频生成建模

@@ -1,0 +1,45 @@
+id: paper:arxiv:2611.25680
+status: skipped
+score: 1
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 1
+  weight: 1
+meta:
+  title: 'Beyond Entity Recognition: Vision-Centric Knowledge Visual Question Answering'
+  authors:
+  - Jiatong Ma
+  - Yuchen Liu
+  - Longteng Guo
+  - Yichen Yuan
+  - Yuze Wu
+  - Dongze Hao
+  - Ru Zhen
+  - Yanhao Zhang
+  - Haonan Lu
+  - Jing Liu
+  published: '2026-11-19'
+  updated: '2026-11-19'
+  categories:
+  - cs.CV
+  - cs.AI
+  abstract: 'We propose VC-VQA, a large-scale benchmark for vision-centric knowledge reasoning, aiming
+    to systematically evaluate the capabilities of Multimodal Large Language Models (MLLMs) in fine-grained
+    visual knowledge acquisition and complex multi-stage reasoning. Unlike existing benchmarks that primarily
+    treat visual information as entity recognition and rely on text-based external knowledge, VC-VQA explicitly
+    models the role of visual information by considering both its source (internal vs. external images)
+    and stage of involvement (pre-retrieval vs. post-retrieval). Specifically, VC-VQA requires models
+    to retrieve external visual evidence, identify visual clues before retrieval, and localize, verify,
+    or match retrieved knowledge against the internal image. We further construct a controlled multimodal
+    knowledge base with traceable textual and visual evidence for each sample. We evaluate 21 representative
+    MLLMs under four settings: no external knowledge, with provided evidence, knowledge base retrieval,
+    and open-web search. Experimental results lead to three key findings: current models still struggle
+    with vision-centric knowledge reasoning; fine-grained visual knowledge acquisition remains the primary
+    bottleneck; and agentic retrieval highlights the value of multi-step planning and cross-modal knowledge
+    integration. Overall, VC-VQA provides a more challenging benchmark for evaluating vision-centric knowledge
+    reasoning in MLLMs. Our code and dataset are available at https://github.com/CASIA-IVA-Lab/VC-VQA.'
+  url: https://arxiv.org/abs/2611.25680
+  pdf_url: https://arxiv.org/pdf/2611.25680v1
+  version: v1
+fetched: '2026-11-20'

@@ -1,0 +1,50 @@
+id: paper:arxiv:2611.25510
+status: reviewed
+score: 2
+track: quality_assessment
+matched:
+- ref: concept:IQA
+  count: 3
+  weight: 1
+- ref: concept:MoE
+  count: 2
+  weight: 1
+meta:
+  title: 'Life-IQA+: Boosting Blind Image Quality Assessment via GCN-enhanced Layer Interaction and Flexible
+    Hierarchical Expert Specialization'
+  authors:
+  - Long Tang
+  - Guoquan Zheng
+  - Huiyu Duan
+  - Jie Hao
+  - Yucheng Zhu
+  - Liang Yuan
+  - Xiongkuo Min
+  - Guangtao Zhai
+  published: '2026-11-19'
+  updated: '2026-11-19'
+  categories:
+  - eess.IV
+  - cs.CV
+  abstract: 'Blind image quality assessment (BIQA) is essential for evaluating and optimizing visual experience.
+    Existing BIQA methods typically aggregate features from multiple backbone stages without accounting
+    for their unequal contributions to quality prediction. Furthermore, uniformly supervising all experts
+    may constrain their flexibility and limit the diversity of the learned quality representations. To
+    address these issues, we present Life-IQA+, a quality representation decoding framework that combines
+    graph convolutional network (GCN) enhanced layer interaction and flexible hierarchical expert specialization.
+    Specifically, the layer interaction module constructs quality queries from GCN-refined deepest-stage
+    features and uses penultimate-stage features as keys and values, thereby enabling cross-layer representation
+    interaction via the cross-attention mechanism. Building on these representations, we further introduce
+    a flexible hierarchical mixture-of-experts (MoE) architecture comprising a densely activated shared
+    expert layer and a sparsely activated routed expert layer. To enhance the representation diversity
+    and ability of experts, we apply auxiliary classification supervision to a subset of shared experts
+    using distortion-type labels for synthetic datasets and discretized quality-level labels for authentic
+    datasets. Experiments on synthetic and authentic distortion benchmarks, together with controlled ablations
+    of expert configurations and supervision strategies, show that Life-IQA+ achieves competitive prediction
+    accuracy with a favorable balance between accuracy and computational cost. The code is available at:
+    https://github.com/TANGLONG2/Life-IQA-PlusPlus.'
+  url: https://arxiv.org/abs/2611.25510
+  pdf_url: https://arxiv.org/pdf/2611.25510v1
+  version: v1
+fetched: '2026-11-20'
+llm_decision: summary_only
