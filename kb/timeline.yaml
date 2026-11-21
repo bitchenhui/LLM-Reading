@@ -1,10 +1,22 @@
-generated: '2026-11-20'
-count: 1084
+generated: '2026-11-21'
+count: 1086
 by_kind:
+  release: 55
   research: 585
-  release: 53
   standard: 446
 facts:
+- date: '2026-11-20'
+  entity: impl:VVdec
+  kind: release
+  fact: VVdeC 3.3.0 修复7项安全漏洞与SEI/胶片颗粒一致性问题，新增x86 SIMD与ARM NEON性能优化
+  evidence: repo_release:github:vvdec-v3.3.0
+  url: https://github.com/fraunhoferhhi/vvdec/releases/tag/v3.3.0
+- date: '2026-11-19'
+  entity: impl:SVT-AV1
+  kind: release
+  fact: 全面提速：VOD preset 5 CPU 降 14-15%，新增 16x16 ROI 映射与 AVX-512/Neon 内核
+  evidence: repo_release:github:SVT-AV1-v4.3.1
+  url: https://github.com/AOMediaCodec/SVT-AV1/releases/tag/v4.3.1
 - date: '2026-11-19'
   entity: concept:IQA
   kind: research
@@ -1359,7 +1371,7 @@ facts:
 - date: '2026-06-25'
   entity: org:Via-LA
   kind: research
-  fact: WIPO 与 Via LA 合作，扩展其经专利池验证的标准必要专利数据覆盖。
+  fact: WIPO与Via LA达成合作，扩充经专利池验证的标准必要专利数据。
   evidence: industry_news:viala:wipo-expands-pool-verified-sep-data-with-via-licensing-allia
   url: https://ipfray.com/wipo-expands-pool-verified-sep-data-with-via-licensing-alliance-partnership/
 - date: '2026-06-23'

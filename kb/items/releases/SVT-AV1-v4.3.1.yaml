@@ -1,0 +1,75 @@
+id: repo_release:github:SVT-AV1-v4.3.1
+type: repo_release
+title: v4.3.1
+domain: streaming_delivery
+research_lines: []
+source:
+  channel: github
+  external_id: AOMediaCodec/SVT-AV1@v4.3.1
+  url: https://github.com/AOMediaCodec/SVT-AV1/releases/tag/v4.3.1
+time:
+  published: '2026-11-19'
+  collected: '2026-11-21'
+entities:
+- ref: impl:SVT-AV1
+  role: subject
+- ref: codec:AV1
+  role: uses
+- ref: concept:QP
+  role: uses
+- ref: concept:EntropyModel
+  role: uses
+- ref: concept:WebRTC
+  role: uses
+claims:
+- statement: 随机访问 VOD preset 5 下 CPU 开销较 v4.3.0 降低约 14-15%，静图与移动端随机访问 preset 9 输出与 v4.3.0 位级一致
+  confidence: reported
+  metrics:
+  - name: CPU 降低幅度
+    value: 14-15%
+  evidence: abstract（初筛，未读全文）
+- statement: RTC（preset 7-12）与移动端随机访问（preset 9-11）场景 CPU 周期减少约 8-11%
+  confidence: reported
+  metrics:
+  - name: CPU 周期降低幅度
+    value: 8-11%
+  evidence: abstract（初筛，未读全文）
+- statement: 静图编码（preset 5-9）CPU 周期减少约 5-10%
+  confidence: reported
+  metrics:
+  - name: CPU 周期降低幅度
+    value: 5-10%
+  evidence: abstract（初筛，未读全文）
+- statement: 新增 --roi-map-block-size（roi_map_block_size）支持 16x16 ROI QP 偏移图；超过 8 个不同偏移的 ROI 图现在归并为 8 个
+    segment 而非被拒绝
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: RTC CBR 关键帧后码率控制恢复更快（更大 qindex 下降、分辨率缩放初始校正因子、30 帧加速校正）；VBR 中间时间层向基于近期叶层 qindex 的 CRF 式级联靠拢
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: x86 新增 AVX-512 内核（64x64 前向变换、开环/整像素运动搜索、半像素搜索、zone-2 帧内预测、VNNI 方差等），Arm 新增 Neon 64x64 前向
+    DCT 并全面提速整像素 SAD 搜索与 CDEF
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 公共编码 API 对空参数返回 EB_ErrorBadParameter 而非崩溃，释放空输出包变为无操作，并修复 svt_av1_enc_stream_header() 返回未初始化字段及变换深度搜索中的越界拷贝
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: CI 迁移至 GitHub Actions，覆盖 Linux、macOS、Windows、BSD、Android、musl、sanitizers 与 Valgrind，并新增 SVT_AV1_TEST_VECTORS_ONLY
+    CMake 选项
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: 全面提速：VOD preset 5 CPU 降 14-15%，新增 16x16 ROI 映射与 AVX-512/Neon 内核
+  abstract_zh: v4.3.1 在输出与 v4.3.0 基本位级一致的前提下显著降低编码 CPU 开销，覆盖 VOD、RTC 与静图场景，优化模式决策、RDOQ、TPL 与熵编码等模块。新增
+    --roi-map-block-size 支持 16x16 ROI QP 偏移映射，改进 RTC CBR 关键帧后的码率恢复与 VBR qindex 级联策略，并为 x86/Arm 添加 AVX-512
+    与 Neon 内核。同时修复多项 API 健壮性问题并将 CI 迁移至 GitHub Actions。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 正式补丁版包含大幅编码提速、ROI 新特性、SIMD 内核与 API 健壮性修复，实质内容丰富但非架构级变更
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-21'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: SVT-AV1 发布 v4.3.1

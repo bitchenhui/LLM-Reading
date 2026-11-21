@@ -1,0 +1,50 @@
+id: repo_release:github:vvdec-v3.3.0
+type: repo_release
+title: vvdec-3.3.0
+domain: video_image_coding
+research_lines:
+- traditional_codec_opt
+source:
+  channel: github
+  external_id: fraunhoferhhi/vvdec@v3.3.0
+  url: https://github.com/fraunhoferhhi/vvdec/releases/tag/v3.3.0
+time:
+  published: '2026-11-20'
+  collected: '2026-11-21'
+entities:
+- ref: impl:VVdec
+  role: subject
+claims:
+- statement: 修复7项安全漏洞（GHSA），包括SEI payload_size回绕导致堆越界写、TMVP共位图像尺寸不匹配越界读、CLVS中SPS变更引发的空指针解引用与引用缓冲区问题、Picture::fillGrey释放后写、LMCS表越界读及PPS未重新校验等
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 修复4:2:2、4:4:4、4:0:0格式及缩放因子≥128时的胶片颗粒合成，并修复scalable nesting OLS索引、omni_viewport_tilt_centre等SEI解析，payloadType>255现报告为VVDEC_SEI_UNKNOWN
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 性能改进：为帧内预测（planar、angular PDPC、水平/垂直、MIP）、CCLM、CIIP、LMCS色度缩放、色度去块、affine 4x4滤波、BDOF、缓冲拷贝新增或加速x86
+    SIMD，并优化CABAC与跨图像CU映射复用
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 新增ARM NEON实现，覆盖亮度角度帧内预测、胶片颗粒合成及部分帧间预测/变换函数
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 强化码流校验：拒绝CLVS内SPS变更、不符合当前SPS的参考图像、越界SEI计数与载荷大小等更多非法码流
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+- statement: 构建变更：不再对全工程假定SSE4.1、不全局强制-fPIE、显式要求CMake 3.15、修复WASM构建与测试套件；本版本无API变化
+  confidence: reported
+  evidence: abstract（初筛，未读全文）
+summaries:
+  one_liner_zh: VVdeC 3.3.0 修复7项安全漏洞与SEI/胶片颗粒一致性问题，新增x86 SIMD与ARM NEON性能优化
+  abstract_zh: VVdeC v3.3.0 为无API变化的维护版本，集中修复7项安全漏洞（包括SEI payload_size回绕导致的堆越界写、Picture::fillGrey释放后写等）并强化码流校验，拒绝更多非法码流。一致性方面修复多类SEI消息解析与4:2:2/4:4:4/4:0:0及缩放因子≥128的胶片颗粒合成。性能方面为帧内预测、CCLM、CIIP、LMCS、去块滤波、BDOF、CABAC等新增或加速x86
+    SIMD，并新增ARM NEON实现；同时修正构建（不再全局假定SSE4.1、显式要求CMake 3.15、修复WASM构建）。
+assessment:
+  relevance: high
+  decision: summary_only
+  reason: 参考VVC解码器正式版，含7项安全漏洞修复、一致性与胶片颗粒修正及x86 SIMD/ARM NEON性能优化，内容实质丰富但非架构级重大版本
+  reviewer: glm-5.3-flash(llm_review)
+provenance:
+  created: '2026-11-21'
+  actor: pipeline-v0
+  pipeline: llm_review
+title_zh: VVdeC 发布 v3.3.0

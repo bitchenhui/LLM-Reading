@@ -1,0 +1,77 @@
+id: repo_release:github:vvdec-v3.3.0
+kind: release
+status: reviewed
+score: 3
+matched:
+- ref: impl:VVdec
+  count: 1
+  weight: 3
+meta:
+  repo: fraunhoferhhi/vvdec
+  tag: v3.3.0
+  name: vvdec-3.3.0
+  prerelease: false
+  published: '2026-11-20'
+  url: https://github.com/fraunhoferhhi/vvdec/releases/tag/v3.3.0
+  notes: 'No API changes.
+
+
+    Security fixes:
+
+    - GHSA-ww64-v2h4-rvf9: Heap out-of-bounds write via SEI payload_size wrap-around in user-data SEI
+
+    - GHSA-x289-cp8m-g58r: Heap out-of-bounds read via collocated picture of different size in TMVP
+
+    - GHSA-g3vh-f4qw-m567: NULL pointer dereference of wrap-around reference buffer after mid-CLVS SPS
+    change
+
+    - GHSA-pw57-fxvc-2qgr: Use-after-free write in Picture::fillGrey after a picture buffer is recreated
+    as 4:0:0
+
+    - GHSA-qgqj-f693-2fqc: LMCS table out-of-bounds read after an SPS change within a CLVS
+
+    - GHSA-f7mj-r2mj-rfvh: PPS not re-validated after its SPS is replaced (NULL dereference, out-of-bounds
+    read)
+
+    - GHSA-p27c-vmfj-jh2f: Heap out-of-bounds read in vvdec_get_nal_unit_type() for short access units
+
+
+    Conformance fixes:
+
+    - fix parsing of several SEI messages (scalable nesting OLS indices, omni_viewport_tilt_centre, payloadType
+    > 255 reported as VVDEC_SEI_UNKNOWN)
+
+    - fix film grain synthesis for 4:2:2, 4:4:4 and 4:0:0, and for scaling factors of 128 and above
+
+    - disable conformance bitstream HRD_B_Fujitsu_2, which contains non-conformant SEI messages that are
+    now rejected
+
+
+    Build:
+
+    - don''t assume SSE4.1 for the whole project
+
+    - don''t force -fPIE globally
+
+    - explicitly require CMake 3.15
+
+    - fix WASM build and test suite
+
+
+    Other changes:
+
+    - reject more invalid bitstreams: SPS changes within a CLVS, reference pictures that don''t fit the
+    current SPS, out-of-range SEI counts and payload sizes
+
+    - fix misaligned stores in the AVX2 4x4 interpolation filter (undefined behaviour reported by UBSan)
+
+    - performance: new or faster x86 SIMD for intra prediction (planar, angular PDPC, horizontal/vertical,
+    MIP), CCLM, CIIP, LMCS chroma scaling, chroma deblocking, affine 4x4 filters, BDOF, buffer copies;
+    CABAC speedups; reuse of CU maps across pictures
+
+    - add ARM NEON implementations for luma angular intra prediction, film grain synthesis and some inter-prediction/transform
+    functions
+
+    - some general code cleanup'
+fetched: '2026-11-21'
+llm_decision: summary_only
